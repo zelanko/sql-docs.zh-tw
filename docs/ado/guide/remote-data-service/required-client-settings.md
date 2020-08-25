@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452020"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759378"
 ---
 # <a name="required-client-settings"></a>必要用戶端設定
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452020"
   
  指定下列設定，以使用自訂 **DataFactory** 處理常式。  
   
--   在連線物件中指定 "Provider = MS Remote"， [ (ado) ](../../../ado/reference/ado-api/connection-object-ado.md) Object [PROVIDER 屬性 (ado) ](../../../ado/reference/ado-api/provider-property-ado.md) 屬性或 **連接** 物件連接字串 "**Provider**=" 關鍵字。  
+-   在連線物件中指定 "Provider = MS Remote"， [ (ado) ](../../reference/ado-api/connection-object-ado.md) Object [PROVIDER 屬性 (ado) ](../../reference/ado-api/provider-property-ado.md) 屬性或 **連接** 物件連接字串 "**Provider**=" 關鍵字。  
   
--   將 [ [CursorLocation] 屬性 (ADO) ](../../../ado/reference/ado-api/cursorlocation-property-ado.md) ] 屬性設定為 [ **adUseClient**]。  
+-   將 [ [CursorLocation] 屬性 (ADO) ](../../reference/ado-api/cursorlocation-property-ado.md) ] 屬性設定為 [ **adUseClient**]。  
   
--   在 DataControl 物件中指定要用於物件的處理常式名稱[ (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件的**處理常式**屬性，或 (ADO) 物件的連接字串 "**handler**=" 關鍵字中的[記錄集物件](../../../ado/reference/ado-api/recordset-object-ado.md)。  (您無法在 **連接** 物件連接字串中設定處理常式。 )   
+-   在 DataControl 物件中指定要用於物件的處理常式名稱[ (RDS) ](../../reference/rds-api/datacontrol-object-rds.md)物件的**處理常式**屬性，或 (ADO) 物件的連接字串 "**handler**=" 關鍵字中的[記錄集物件](../../reference/ado-api/recordset-object-ado.md)。  (您無法在 **連接** 物件連接字串中設定處理常式。 )   
   
  RDS 在名為 MSDFMAP 的伺服器上提供預設處理常式 **。處理常式**。  (預設自訂檔案的名稱為 MSDFMAP.INI。 )   
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- 請指定 (RDS) 屬性或關鍵字的 [處理常式屬性 ](../../../ado/reference/rds-api/handler-property-rds.md) ; [Provider 屬性 (ADO) ](../../../ado/reference/ado-api/provider-property-ado.md) Property 或關鍵字;以及 *CustomerById* 和 *CustomerDatabase* 識別碼。 然後開啟 **記錄集** 物件  
+ 請指定 (RDS) 屬性或關鍵字的 [處理常式屬性 ](../../reference/rds-api/handler-property-rds.md) ; [Provider 屬性 (ADO) ](../../reference/ado-api/provider-property-ado.md) Property 或關鍵字;以及 *CustomerById* 和 *CustomerDatabase* 識別碼。 然後開啟 **記錄集** 物件  
   
  Rs。開啟 "CustomerById (4) "，"Handler = MSDFMAP。處理常式; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [瞭解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [自訂檔案連接區段](./customization-file-connect-section.md)   
+ [自訂檔案 SQL 區段](./customization-file-sql-section.md)   
+ [自訂檔案 UserList 區段](./customization-file-userlist-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定]()   
+ [瞭解自訂檔案](./understanding-the-customization-file.md)   
+ [撰寫您自己的自訂處理常式](./writing-your-own-customized-handler.md)

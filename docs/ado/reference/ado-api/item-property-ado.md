@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2581d0834325d56daa8ea1043ac3915942961eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6bea35ef148aa2f5646420a1c2b46197ce66f0d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443400"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774677"
 ---
 # <a name="item-property-ado"></a>Item 屬性 (ADO)
 以名稱或序數表示集合的特定成員。  
@@ -83,32 +83,32 @@ collection (Index)
 
 :::row:::
     :::column:::
-        [Axes 集合 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
-        [Columns 集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
-        [Dimensions 集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
-        [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
-        [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
-        [Groups 集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+        [Axes 集合 (ADO MD)](../ado-md-api/axes-collection-ado-md.md)  
+        [Columns 集合 (ADOX)](../adox-api/columns-collection-adox.md)  
+        [CubeDefs 集合 (ADO MD)](../ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions 集合 (ADO MD)](../ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors 集合 (ADO)](./errors-collection-ado.md)  
+        [Fields 集合 (ADO)](./fields-collection-ado.md)  
+        [Groups 集合 (ADOX)](../adox-api/groups-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Hierarchies 集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
-        [Indexes 集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
-        [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Levels 集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
-        [Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
-        [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+        [Hierarchies 集合 (ADO MD)](../ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes 集合 (ADOX)](../adox-api/indexes-collection-adox.md)  
+        [Keys 集合 (ADOX)](../adox-api/keys-collection-adox.md)  
+        [Levels 集合 (ADO MD)](../ado-md-api/levels-collection-ado-md.md)  
+        [Members 集合 (ADO MD)](../ado-md-api/members-collection-ado-md.md)  
+        [Parameters 集合 (ADO)](./parameters-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Positions 集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
-        [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
-        [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
-        [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Positions 集合 (ADO MD)](../ado-md-api/positions-collection-ado-md.md)  
+        [Procedures 集合 (ADOX)](../adox-api/procedures-collection-adox.md)  
+        [Properties 集合 (ADO)](./properties-collection-ado.md)  
+        [Tables 集合 (ADOX)](../adox-api/tables-collection-adox.md)  
+        [Users 集合 (ADOX)](../adox-api/users-collection-adox.md)  
+        [Views 集合 (ADOX)](../adox-api/views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [專案屬性範例 (VB) ](../../../ado/reference/ado-api/item-property-example-vb.md)   
- [Item 屬性範例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
+ [專案屬性範例 (VB) ](./item-property-example-vb.md)   
+ [Item 屬性範例 (VC++)](./item-property-example-vc.md)

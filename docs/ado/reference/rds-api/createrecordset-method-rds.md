@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439150"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768617"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
-建立空白、中斷連接的 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+建立空白、中斷連接的 [記錄集](../ado-api/recordset-object-ado.md)。  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -42,14 +42,14 @@ object.CreateRecordset(ColumnInfos)
   
 #### <a name="parameters"></a>參數  
  *Object*  
- 代表 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 或 RDS 的物件變數。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件。  
+ 代表 [RDSServer. DataFactory](./datafactory-object-rdsserver.md) 或 RDS 的物件變數。 [DataControl](./datacontrol-object-rds.md) 物件。  
   
  *ColumnsInfos*  
  屬性的 **Variant** 陣列，定義建立的 **記錄集** 內的每個資料行。 每個資料行定義都包含四個必要屬性的陣列和一個選擇性屬性。  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|名稱|欄標題的名稱。|  
+|Name|欄標題的名稱。|  
 |類型|資料類型的整數。|  
 |大小|寬度的整數（以字元為單位），不論資料類型為何。|  
 |Null 屬性|布林值。|  
@@ -60,13 +60,13 @@ object.CreateRecordset(ColumnInfos)
 ## <a name="remarks"></a>備註  
  伺服器端商務物件可以將來自非 OLE DB 資料提供者的資料填入產生的 **記錄集** ，例如包含股票報價的作業系統檔案。  
   
- 下表列出**CreateRecordset**方法所支援的[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。 列出的數位是用來定義欄位的參考編號。  
+ 下表列出**CreateRecordset**方法所支援的[DataTypeEnum](../ado-api/datatypeenum.md)值。 列出的數位是用來定義欄位的參考編號。  
   
  每個資料類型都可能是固定長度或可變長度。 固定長度類型的定義大小應為-1，因為大小是預先決定的，且仍然需要大小定義。 可變長度的資料類型允許從1到32767的大小。  
   
  針對部分變數資料類型，類型可以強制轉型為替代資料行中所注明的型別。 在建立並填入 **記錄集** 之前，您將不會看到這些替代。 然後，您可以視需要檢查實際的資料類型。  
   
-|長度|常數|Number|Substitution|  
+|長度|持續性|Number|Substitution|  
 |------------|--------------|------------|------------------|  
 |固定式|**adTinyInt**|16||  
 |固定式|**adSmallInt**|2||  
@@ -103,17 +103,14 @@ object.CreateRecordset(ColumnInfos)
 
 :::row:::
     :::column:::
-        [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [DataFactory 物件 (RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的 CreateRecordset 方法範例 ](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [ (VBScript) 的 CreateRecordset 方法範例 ](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
- [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
-
-
-
+ [ (VB) 的 CreateRecordset 方法範例 ](../ado-api/createrecordset-method-example-vb.md)   
+ [ (VBScript) 的 CreateRecordset 方法範例 ](./createrecordset-method-example-vbscript.md)   
+ [CreateObject 方法 (RDS)](./createobject-method-rds.md)

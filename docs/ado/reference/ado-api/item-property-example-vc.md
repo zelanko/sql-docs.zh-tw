@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 231c5d4858436dc1c026f53ce002561529841c35
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443380"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774637"
 ---
 # <a name="item-property-example-vc"></a>Item 屬性範例 (VC++)
-這個範例示範 [Item](../../../ado/reference/ado-api/item-property-ado.md) 屬性如何存取集合的成員。 此範例會使用參數化命令開啟***Pubs***資料庫的***作者***資料表。  
+這個範例示範 [Item](./item-property-ado.md) 屬性如何存取集合的成員。 此範例會使用參數化命令開啟***Pubs***資料庫的***作者***資料表。  
   
- 針對資料庫發出的命令中的參數會依照索引和名稱從 [命令](../../../ado/reference/ado-api/command-object-ado.md) 物件的 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 集合存取。 然後，會依據索引和名稱，從該物件的[fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合存取所傳回之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的欄位。  
+ 針對資料庫發出的命令中的參數會依照索引和名稱從 [命令](./command-object-ado.md) 物件的 [Parameters](./parameters-collection-ado.md) 集合存取。 然後，會依據索引和名稱，從該物件的[fields](./fields-collection-ado.md)集合存取所傳回之[記錄集](./recordset-object-ado.md)的欄位。  
   
 ```  
 // BeginItemCpp.cpp  
@@ -233,8 +233,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
- [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [專案屬性 (ADO) ](../../../ado/reference/ado-api/item-property-ado.md)   
- [ (ADO) 的參數集合 ](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的命令物件 ](./command-object-ado.md)   
+ [ (ADO) 的欄位集合 ](./fields-collection-ado.md)   
+ [專案屬性 (ADO) ](./item-property-ado.md)   
+ [ (ADO) 的參數集合 ](./parameters-collection-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

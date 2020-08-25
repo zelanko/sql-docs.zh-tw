@@ -1,6 +1,6 @@
 ---
 title: Linux 上的 SQL Server 安全性入門
-description: 本文描述一般的安全性動作。
+description: 逐步解說 Linux 上的 SQL Server 安全性功能，以了解需進一步研究的領域。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: d26cdde25f3431c72e1f5327db591db60b31938e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883008"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088796"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 安全性功能逐步解說
 

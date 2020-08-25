@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439080"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768437"
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
 執行要求並建立 ADO 記錄集，以便在 ADO 2.5 和更新版本中使用。  
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  表示非同步提取的型別。  
   
- 如需詳細資訊，請參閱 [FetchOptions 屬性 (RDS) ](../../../ado/reference/rds-api/fetchoptions-property-rds.md)。  
+ 如需詳細資訊，請參閱 [FetchOptions 屬性 (RDS) ](./fetchoptions-property-rds.md)。  
   
  *TableID*  
  VT_EMPTY 或 VT_BSTR 類型的 **變數** 。 如果這個值的類型為 VT_EMPTY，則會予以忽略。 如果它的類型是 VT_BSTR，則會使用 **adCmdTableDirect** 和此處指定的值來建立記錄集，並忽略 *QueryString* 參數。  
@@ -82,6 +82,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*參數可以是 null。 在此情況下，會發生什麼情況取決於 RDS 伺服器的設定方式。 "MSDFMAP" 處理常式字串表示應使用 Microsoft 提供的處理常式 ( # A0) 。 "MASDFMAP" 處理常式字串 "sample.ini" 表示應使用 Msdfmap.dll 處理常式，並將引數 "sample.ini" 傳遞給處理常式。 MSDFMAP.dll 會將引數解讀為使用 sample.ini 來檢查連接和查詢字串的方向。  
   
 ## <a name="applies-to"></a>套用至  
- [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 物件 (RDSServer)](./datafactory-object-rdsserver.md)

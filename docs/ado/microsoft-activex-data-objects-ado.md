@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451830"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760028"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -50,21 +50,19 @@ ActiveX Data Objects 是一種程式設計模型，這表示它不會相依于�
  ADOX 是核心 ADO 物件的附屬程式庫。 它會公開用於建立、修改和刪除架構物件（例如資料表和程式）的其他物件。 它也包含安全性物件，以維護使用者和群組，以及授與及撤銷物件的許可權。  
   
 ## <a name="documentation"></a>文件  
- [ADO 安全性設計問題](../ado/guide/ado-security-design-issues.md)  
+ [ADO 安全性設計問題](./guide/ado-security-design-issues.md)  
   
- [ADO 程式設計人員指南](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO 程式設計人員指南](./guide/ado-programmer-s-guide.md)  
   
  使用 ADO、RDS、ADO MD 和 ADOX 的簡介。  
   
- [ADO 程式設計人員參考](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO 程式設計人員參考](./reference/ado-programmer-s-reference.md)  
   
  ADO 檔的這一節包含每個 ADO、RDS、ADO MD 和 ADOX 物件、集合、屬性、動態屬性、方法、事件和列舉的主題。  
   
- [ADO 詞彙](../ado/ado-glossary.md)  
+ [ADO 詞彙](./ado-glossary.md)  
   
 ## <a name="support"></a>支援  
  如需 ADO 問題的免費說明，請嘗試張貼至 ADO 公用新聞群組。 此新聞群組是由 Microsoft 產品支援服務所監視 (PSS) 支援涵蓋 ADO 的專業人員，以及其他有經驗的 ADO 開發人員。  
   
  關於支援選項的進一步資訊，可於 Microsoft 說明及支援網站中找到。
-
-

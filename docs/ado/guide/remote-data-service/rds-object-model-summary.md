@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7488811326dda4228ef2f458b70d5575b33b122
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50776f67f09fabbba2282867e09db1e94a49772b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452140"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759688"
 ---
 # <a name="rds-object-model-summary"></a>RDS 物件模型摘要
 > [!IMPORTANT]
@@ -27,14 +27,12 @@ ms.locfileid: "88452140"
   
 |Object|描述|  
 |------------|-----------------|  
-|[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|此物件包含取得伺服器 proxy 的方法。 Proxy 可能是預設或自訂伺服器程式 (商務物件) 。 您可以在網際網路、內部網路、區域網路或本機動態程式庫上叫用伺服器程式。<br /><br /> 您可以安全地執行腳本處理的 **空間** 物件。|  
-|[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|此物件代表預設的伺服器程式。 它會執行預設的 RDS 資料抓取和更新行為。<br /><br /> **DataFactory**物件對腳本而言並不安全。|  
-|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|此物件可以自動叫用 **RDS。空間** 和 **RDSServer. DataFactory** 物件。<br /><br /> 使用這個物件來叫用預設的 RDS 資料抓取或更新行為。<br /><br /> 這個物件也提供視覺控制項存取傳回的 **記錄集** 物件的方法。<br /><br /> **DataControl**物件對腳本是安全的。|  
+|[RDS.DataSpace](../../reference/rds-api/dataspace-object-rds.md)|此物件包含取得伺服器 proxy 的方法。 Proxy 可能是預設或自訂伺服器程式 (商務物件) 。 您可以在網際網路、內部網路、區域網路或本機動態程式庫上叫用伺服器程式。<br /><br /> 您可以安全地執行腳本處理的 **空間** 物件。|  
+|[RDSServer.DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|此物件代表預設的伺服器程式。 它會執行預設的 RDS 資料抓取和更新行為。<br /><br /> **DataFactory**物件對腳本而言並不安全。|  
+|[RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md)|此物件可以自動叫用 **RDS。空間** 和 **RDSServer. DataFactory** 物件。<br /><br /> 使用這個物件來叫用預設的 RDS 資料抓取或更新行為。<br /><br /> 這個物件也提供視覺控制項存取傳回的 **記錄集** 物件的方法。<br /><br /> **DataControl**物件對腳本是安全的。|  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [RDS 基本概念](./rds-fundamentals.md)   
+ [RDS 案例](./rds-scenario.md)   
+ [RDS 教學課程](./rds-tutorial.md)   
+ [RDS 使用方式與安全性](./rds-usage-and-security.md)

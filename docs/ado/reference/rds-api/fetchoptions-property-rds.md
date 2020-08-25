@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439020"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768277"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
 表示非同步提取的型別。  
@@ -32,9 +32,9 @@ ms.locfileid: "88439020"
   
 |持續性|描述|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|系統會先提取 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 的所有記錄，然後再將控制權傳回給應用程式。 完整的 **記錄集會** 先提取，才能讓應用程式使用它來執行任何動作。|  
+|**adcFetchUpFront**|系統會先提取 [記錄集](../ado-api/recordset-object-ado.md) 的所有記錄，然後再將控制權傳回給應用程式。 完整的 **記錄集會** 先提取，才能讓應用程式使用它來執行任何動作。|  
 |**adcFetchBackground**|一旦提取第一個批次的記錄，控制項就可以返回應用程式。 後續的 **記錄集** 讀取嘗試存取未在第一個批次中提取的記錄，將會延遲到實際提取提取的記錄為止，此時控制權會返回應用程式。|  
-|**adcFetchAsync**|預設值。 在背景中提取記錄時，控制項會立即返回應用程式。 如果應用程式嘗試讀取尚未提取的記錄，將會讀取最接近搜尋記錄的記錄，且控制權會立即傳回，表示已達到 **記錄集** 的目前結尾。 例如，呼叫 [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) 會將目前的記錄位置移至實際提取的最後一筆記錄，即使有更多記錄仍將繼續填入 **記錄集**也是一樣。|  
+|**adcFetchAsync**|預設值。 在背景中提取記錄時，控制項會立即返回應用程式。 如果應用程式嘗試讀取尚未提取的記錄，將會讀取最接近搜尋記錄的記錄，且控制權會立即傳回，表示已達到 **記錄集** 的目前結尾。 例如，呼叫 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) 會將目前的記錄位置移至實際提取的最後一筆記錄，即使有更多記錄仍將繼續填入 **記錄集**也是一樣。|  
   
 > [!NOTE]
 >  使用這些常數的每個用戶端可執行檔都必須提供宣告。 您可以從 Adcvbs 檔案中，剪下並貼上您想要的常數宣告（位於 RDS 程式庫的預設安裝資料夾中）。  
@@ -43,10 +43,8 @@ ms.locfileid: "88439020"
  在 Web 應用程式中，您通常會想要使用 **adcFetchAsync** (預設值) ，因為它提供更好的效能。 在編譯的用戶端應用程式中，您通常會想要使用 **adcFetchBackground**。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) ](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) ](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel 方法 (RDS)](./cancel-method-rds.md)

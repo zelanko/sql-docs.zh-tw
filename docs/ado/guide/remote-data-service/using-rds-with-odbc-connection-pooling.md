@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451860"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760038"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>搭配 ODBC 連線集區使用 RDS
 如果您使用的是 ODBC 資料來源，您可以使用 Internet Information Services (IIS) 中的 [連接共用] 選項，以達到用戶端負載的高效能處理。 連接共用是連接的資源管理員，可維護常用連接的開啟狀態。  
@@ -125,26 +125,4 @@ ms.locfileid: "88451860"
 5.  按一下 [確定]，然後再按一下 [確定] 以結束公用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [RDS 基本概念](./rds-fundamentals.md)

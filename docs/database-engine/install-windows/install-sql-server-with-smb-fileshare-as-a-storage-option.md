@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883515"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091992"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>安裝 SQL Server 與 SMB 檔案共用儲存體
 
@@ -111,7 +111,7 @@ ms.locfileid: "85883515"
   
 ## <a name="known-issues"></a>已知問題  
   
--   在您卸離位於連接網路之儲存裝置上的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫之後，當您嘗試重新附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫時，可能會遇到資料庫權限問題。 [這篇知識庫文章](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) 有此問題的定義。 若要暫時解決此問題，請參閱此知識庫文件中的＜ **其他相關資訊** ＞。  
+-   在您卸離位於連接網路之儲存裝置上的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫之後，當您嘗試重新附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫時，可能會遇到資料庫權限問題。 如需詳細資訊，請參閱[錯誤 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md)。
   
 -   如果 SMB 檔案共用當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]叢集執行個體的儲存選項使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集診斷記錄預設將無法寫入檔案共用，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源 DLL 缺少此檔案共用的讀取/寫入權限。 若要解決這個問題，請嘗試下列其中一個方法：  
   

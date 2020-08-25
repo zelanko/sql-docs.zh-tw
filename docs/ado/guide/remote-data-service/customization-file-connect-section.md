@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452260"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759844"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
 處理常式的預設行為是拒絕所有連接。 **Connect**區段會指定該行為的例外狀況。 例如，如果所有 **connect** 區段都不存在或空白，則預設不會進行任何連接。  
@@ -64,13 +64,10 @@ connectionString
  如果您想要允許任何 (作用中的連接，請停用預設的處理常式行為) ，將 [**連接預設]** 區段中的存取專案設定為 `Access=ReadWrite` ，然後刪除或批註其他任何 **[連接**_識別碼_] 區段。  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [瞭解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [自訂檔案記錄區段](./customization-file-logs-section.md)   
+ [自訂檔案 SQL 區段](./customization-file-sql-section.md)   
+ [自訂檔案 UserList 區段](./customization-file-userlist-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定](./required-client-settings.md)   
+ [瞭解自訂檔案](./understanding-the-customization-file.md)   
+ [撰寫您自己的自訂處理常式](./writing-your-own-customized-handler.md)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20993c30753f87bd307d1516b7981ac6809ff2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439220"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768717"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 屬性範例 (VBScript)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 這段程式碼會示範如何在設計階段設定 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 屬性：  
+ 這段程式碼會示範如何在設計階段設定 [Connect](./connect-property-rds.md) 屬性：  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -127,25 +127,4 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connect 屬性 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Connect 屬性 (RDS)](./connect-property-rds.md)

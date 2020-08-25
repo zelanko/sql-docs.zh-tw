@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80408017"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88122482"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 
 
@@ -51,7 +51,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. 若要識別使用中交易已認可至主要複本及至少一個同步次要複本，請執行下列查詢： 
+1. 若要識別使用中交易已認可至主要複本及至少一個同步次要複本，請執行下列查詢： 
 
    ```SQL
    SELECT ag.name, 
@@ -66,7 +66,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    當 `synchronization_state_desc` 為 `SYNCHRONIZED` 時，即會同步處理次要複本。
 
-3. 將 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 更新為 1。
+1. 將 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 更新為 1。
 
    下列指令碼會將名為 `ag1` 的可用性群組上的 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 設為 1。 執行下列指令碼之前，以您的可用性群組名稱取代 `ag1`：
 
@@ -79,18 +79,18 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    >[!NOTE]
    >這項設定非容錯移轉所特定，且應該根據環境的需求進行設定。
    
-4. 將主要複本離線，以準備進行角色變更。
+1. 將主要複本離線，以準備進行角色變更。
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-5. 將目標次要複本升階為主要。 
+1. 將目標次要複本升階為主要。 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-6. 將舊的主要角色更新為 `SECONDARY`，並在裝載主要複本的 SQL Server 執行個體上執行下列命令：
+1. 將舊的主要角色更新為 `SECONDARY`，並在裝載主要複本的 SQL Server 執行個體上執行下列命令：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -99,3 +99,10 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    > [!NOTE] 
    > 若要刪除可用性群組，請使用 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)。 針對以叢集類型 NONE 或 EXTERNAL 建立的可用性群組，請在屬於可用性群組的所有複本上執行此命令。
+
+1. 繼續進行資料移動，在裝載主要複本的 SQL Server 執行個體上，針對可用性群組中的每個資料庫執行下列命令： 
+
+   ```sql
+   ALTER DATABASE [db1]
+        SET HADR RESUME
+   ```

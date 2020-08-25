@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59913c457702e39b9009cd2a8a138b2dbc5f9032
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451890"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759898"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>通訊錄應用程式的系統需求
 若要設定通訊錄範例應用程式，您必須符合下列軟體和資料庫需求：  
@@ -52,8 +52,6 @@ ms.locfileid: "88451890"
  如果您沒有許可權，您的資料庫管理員可能需要設定系統，並授與您資料庫的存取權限，或為您設定資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [正在執行通訊錄 SQL 腳本](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [執行通訊錄範例應用程式](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [正在執行通訊錄 SQL 腳本](./running-the-address-book-sql-script.md)   
+ [DataControl 物件 (RDS) ](../../reference/rds-api/datacontrol-object-rds.md)   
+ [執行通訊錄應用程式範例](./running-the-address-book-sample-application.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443560"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775047"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
-將 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的多筆記錄抓取到陣列中。  
+將 [記錄集](./recordset-object-ado.md) 物件的多筆記錄抓取到陣列中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,10 +39,10 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>參數  
  *資料列*  
- 選擇性。 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，指出要取出的記錄數目。 預設值為 **adGetRowsRest**。  
+ 選擇性。 [GetRowsOptionEnum](./getrowsoptionenum.md)值，指出要取出的記錄數目。 預設值為 **adGetRowsRest**。  
   
  *啟動*  
- 選擇性。 **字串**值或變異數，這個值或**變數**會評估為要從中開始進行**GetRows**作業之記錄的書簽。 您也可以使用 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) 值。  
+ 選擇性。 **字串**值或變異數，這個值或**變數**會評估為要從中開始進行**GetRows**作業之記錄的書簽。 您也可以使用 [BookmarkEnum](./bookmarkenum.md) 值。  
   
  *欄位*  
  選擇性。 表示單一功能變數名稱或序數位置的 **Variant** ，或是功能變數名稱或序數位置數位的陣列。 ADO 只會傳回這些欄位中的資料。  
@@ -52,15 +52,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
  如果您未指定 *Rows* 引數的值， **GetRows** 方法會自動抓取 **記錄集** 物件中的所有記錄。 如果您要求的記錄數目超過可用的數量，則 **GetRows** 只會傳回可用記錄的數目。  
   
- 如果**記錄集**物件支援書簽，您可以藉由在*Start*引數中傳遞該記錄的 [[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)] 屬性的值，指定要在哪一個記錄上，讓**GetRows**方法開始取出資料。  
+ 如果**記錄集**物件支援書簽，您可以藉由在*Start*引數中傳遞該記錄的 [[書簽](./bookmark-property-ado.md)] 屬性的值，指定要在哪一個記錄上，讓**GetRows**方法開始取出資料。  
   
  如果您想要限制 **GetRows** 呼叫傳回的欄位，您可以在 *fields* 引數中傳遞單一功能變數名稱/數位或功能變數名稱/數位的陣列。  
   
- 在您呼叫 **GetRows**之後，下一個未讀取的記錄就會變成目前的記錄，如果沒有其他記錄，則 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 屬性會設定為 **True** 。  
+ 在您呼叫 **GetRows**之後，下一個未讀取的記錄就會變成目前的記錄，如果沒有其他記錄，則 [EOF](./bof-eof-properties-ado.md) 屬性會設定為 **True** 。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的 GetRows 方法範例 ](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [GetRows 方法範例 (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
+ [ (VB) 的 GetRows 方法範例 ](./getrows-method-example-vb.md)   
+ [GetRows 方法範例 (VC++)](./getrows-method-example-vc.md)

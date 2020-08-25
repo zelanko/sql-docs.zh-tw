@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438700"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767537"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
 根據指定的排序和篩選屬性，執行用戶端 **記錄集** 的排序或篩選。  
@@ -36,15 +36,15 @@ DataControl.Reset(value)
   
 #### <a name="parameters"></a>參數  
  *DataControl*  
- 代表 RDS 的物件變數 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件。  
+ 代表 RDS 的物件變數 [。DataControl](./datacontrol-object-rds.md) 物件。  
   
  *value*  
  選擇性。 **布林**值，如果您想要篩選目前的「已篩選」資料列**集，則 (預設**) 。 **False** 表示您篩選原始資料列集，並移除任何先前的篩選選項。  
   
 ## <a name="remarks"></a>備註  
- [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)屬性提供用戶端快取上的排序和篩選功能。 排序功能會依據一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的 [記錄集會](../../../ado/reference/ado-api/recordset-object-ado.md) 保留在快取中。 **Reset**方法會執行準則，並將目前的**記錄集**取代為可更新的**記錄集**。  
+ [SortColumn](./sortcolumn-property-rds.md)、 [SortDirection](./sortdirection-property-rds.md)、 [FilterValue](./filtervalue-property-rds.md)、 [FilterCriterion](./filtercriterion-property-rds.md)和[FilterColumn](./filtercolumn-property-rds.md)屬性提供用戶端快取上的排序和篩選功能。 排序功能會依據一個資料行的值來排序記錄。 篩選功能會根據尋找準則顯示記錄的子集，而完整的 [記錄集會](../ado-api/recordset-object-ado.md) 保留在快取中。 **Reset**方法會執行準則，並將目前的**記錄集**取代為可更新的**記錄集**。  
   
- 如果原始資料有尚未提交的變更， **重設** 方法將會失敗。 首先，使用 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 方法來儲存讀取/寫入 **記錄集**內的任何變更，然後使用 **Reset** 方法來排序或篩選記錄。  
+ 如果原始資料有尚未提交的變更， **重設** 方法將會失敗。 首先，使用 [SubmitChanges](./submitchanges-method-rds.md) 方法來儲存讀取/寫入 **記錄集**內的任何變更，然後使用 **Reset** 方法來排序或篩選記錄。  
   
  如果您想要在資料列集上執行多個篩選準則，您可以使用選擇性的 *布林值* 引數搭配 **Reset** 方法。 下列範例示範如何執行：  
   
@@ -72,11 +72,8 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ```  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript) ](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
-
+ [FilterColumn、FilterCriterion、FilterValue、SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript) ](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [SubmitChanges 方法 (RDS)](./submitchanges-method-rds.md)

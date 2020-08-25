@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b25e0da0cc9fdbb622f3a844efa4c4ea784100be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440070"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770587"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 屬性 (ADOX)
 指出刪除 primary key 時所執行的動作。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定並傳回可以是其中一個[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常數的**Long**值。 預設值為 **adRINone**。  
+ 設定並傳回可以是其中一個[RuleEnum](./ruleenum.md)常數的**Long**值。 預設值為 **adRINone**。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性在已附加至集合的索引 [鍵](../../../ado/reference/adox-api/key-object-adox.md) 物件上是唯讀的。  
+ 這個屬性在已附加至集合的索引 [鍵](./key-object-adox.md) 物件上是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
- [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key 物件 (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [DeleteRule 屬性範例 (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+ [DeleteRule 屬性範例 (VB)](./deleterule-property-example-vb.md)

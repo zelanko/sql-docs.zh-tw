@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452070"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759518"
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程
 本教學課程說明如何使用 RDS 程式設計模型來查詢及更新資料來源。 首先，它會說明完成這項工作所需的步驟。 然後，本教學課程會在 Microsoft® Visual Basic Scripting Edition (採用適用于 Windows Foundation 類別的 ADO (ADO/WFC) # A3。  
@@ -45,7 +45,7 @@ ms.locfileid: "88452070"
   
 -   叫用伺服器程式。 將參數傳遞給識別資料來源的伺服器程式，以及要發出的命令。  
   
--   伺服器程式會從資料來源取得 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，通常是使用 ADO。 （選擇性）在伺服器上處理 **記錄集** 物件。  
+-   伺服器程式會從資料來源取得 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件，通常是使用 ADO。 （選擇性）在伺服器上處理 **記錄集** 物件。  
   
 -   伺服器程式會將最終的 **記錄集** 物件傳回至用戶端應用程式。  
   
@@ -55,20 +55,20 @@ ms.locfileid: "88452070"
   
  本教學課程包含下列主題。  
   
--   [步驟 1：指定伺服器程式 (RDS 教學課程)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [步驟 1：指定伺服器程式 (RDS 教學課程)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [步驟 2：叫用伺服器程式 (RDS 教學課程)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [步驟 2：叫用伺服器程式 (RDS 教學課程)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [步驟 3：伺服器取得資料錄集 (RDS 教學課程)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [步驟 3：伺服器取得資料錄集 (RDS 教學課程)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [步驟 4：伺服器傳回資料錄集 (RDS 教學課程)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [步驟 4：伺服器傳回資料錄集 (RDS 教學課程)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [步驟 5：將 DataControl 設為可用 (RDS 教學課程)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [步驟 5：將 DataControl 設為可用 (RDS 教學課程)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [步驟 6：將變更傳送到伺服器 (RDS 教學課程)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [步驟 6：將變更傳送到伺服器 (RDS 教學課程)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [RDS 教學課程 (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟1：指定伺服器程式 (RDS 教學課程) ](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [步驟1：指定伺服器程式 (RDS 教學課程) ](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [RDS 教學課程 (VBScript)](./rds-tutorial-vbscript.md)

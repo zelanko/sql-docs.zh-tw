@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4abe8e9f72ced67a23113bee61452f372bbb1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b2a106dadcb8af11dcdd5865472fce1fa2e1be2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438770"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767737"
 ---
 # <a name="rds-properties"></a>RDS 屬性
 > [!IMPORTANT]
@@ -27,40 +27,18 @@ ms.locfileid: "88438770"
   
 |屬性|描述|  
 |-|-|  
-|[連接 (RDS) ](../../../ado/reference/rds-api/connect-property-rds.md)|指出執行查詢和更新作業的資料庫名稱。|  
-|[ExecuteOptions (RDS) ](../../../ado/reference/rds-api/executeoptions-property-rds.md)|指出是否已啟用非同步執行。|  
-|[FetchOptions (RDS) ](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|表示非同步提取的型別。|  
-|[FilterColumn (RDS) ](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|表示用來評估篩選準則的資料行。|  
-|[FilterCriterion (RDS) ](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|表示要在篩選值中使用的評估運算子。|  
-|[FilterValue (RDS) ](../../../ado/reference/rds-api/filtervalue-property-rds.md)|指出篩選記錄的值。|  
-|[ (RDS) 的處理常式 ](../../../ado/reference/rds-api/handler-property-rds.md)|指出伺服器端自訂程式的名稱， (*處理常式*) 擴充 **RDSServer. DataFactory**的功能，以及 *處理常式*所使用的任何參數。|  
-|[InternetTimeout (RDS) ](../../../ado/reference/rds-api/internettimeout-property-rds.md)|表示要求超時前等待的毫秒數。|  
-|[ReadyState (RDS) ](../../../ado/reference/rds-api/readystate-property-rds.md)|表示 **DataControl** 物件在其 **記錄集** 物件中提取資料時的進度。|  
-|[記錄集和 SourceRecordset (RDS) ](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|表示從自訂商務物件傳回的 **記錄集** 物件。|  
-|[Server (RDS) ](../../../ado/reference/rds-api/server-property-rds.md)|指出 Internet Information Services (IIS) 名稱和通訊協定。|  
-|[SortColumn (RDS) ](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|指出排序記錄的資料行。|  
-|[SortDirection (RDS) ](../../../ado/reference/rds-api/sortdirection-property-rds.md)|指出排序次序為遞增或遞減。|  
-|[SQL (RDS) ](../../../ado/reference/rds-api/sql-property.md)|表示用來取出 **記錄集**的查詢字串。|  
-|[RDS)  (URL ](../../../ado/reference/rds-api/url-property-rds.md)|指出包含相對或絕對 URL 的字串。|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|[連接 (RDS) ](./connect-property-rds.md)|指出執行查詢和更新作業的資料庫名稱。|  
+|[ExecuteOptions (RDS) ](./executeoptions-property-rds.md)|指出是否已啟用非同步執行。|  
+|[FetchOptions (RDS) ](./fetchoptions-property-rds.md)|表示非同步提取的型別。|  
+|[FilterColumn (RDS) ](./filtercolumn-property-rds.md)|表示用來評估篩選準則的資料行。|  
+|[FilterCriterion (RDS) ](./filtercriterion-property-rds.md)|表示要在篩選值中使用的評估運算子。|  
+|[FilterValue (RDS) ](./filtervalue-property-rds.md)|指出篩選記錄的值。|  
+|[ (RDS) 的處理常式 ](./handler-property-rds.md)|指出伺服器端自訂程式的名稱， (*處理常式*) 擴充 **RDSServer. DataFactory**的功能，以及 *處理常式*所使用的任何參數。|  
+|[InternetTimeout (RDS) ](./internettimeout-property-rds.md)|表示要求超時前等待的毫秒數。|  
+|[ReadyState (RDS) ](./readystate-property-rds.md)|表示 **DataControl** 物件在其 **記錄集** 物件中提取資料時的進度。|  
+|[記錄集和 SourceRecordset (RDS) ](./recordset-sourcerecordset-properties-rds.md)|表示從自訂商務物件傳回的 **記錄集** 物件。|  
+|[Server (RDS) ](./server-property-rds.md)|指出 Internet Information Services (IIS) 名稱和通訊協定。|  
+|[SortColumn (RDS) ](./sortcolumn-property-rds.md)|指出排序記錄的資料行。|  
+|[SortDirection (RDS) ](./sortdirection-property-rds.md)|指出排序次序為遞增或遞減。|  
+|[SQL (RDS) ](./sql-property.md)|表示用來取出 **記錄集**的查詢字串。|  
+|[RDS)  (URL ](./url-property-rds.md)|指出包含相對或絕對 URL 的字串。|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68a7e5139be0cc317341bda05a171e0969411540
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f4e902888285f758975ffce0381a08b813152ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439250"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768807"
 ---
 # <a name="cancel-method-rds"></a>Cancel 方法 (RDS)
 取消執行暫止的非同步方法呼叫。  
@@ -35,17 +35,15 @@ RDS.DataControl.Cancel
 ```  
   
 ## <a name="remarks"></a>備註  
- 當您呼叫 **Cancel**時， [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 會自動設定為 **adcReadyStateLoaded**，而且 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 將會是空的。  
+ 當您呼叫 **Cancel**時， [ReadyState](./readystate-property-rds.md) 會自動設定為 **adcReadyStateLoaded**，而且 [記錄集](../ado-api/recordset-object-ado.md) 將會是空的。  
   
 ## <a name="applies-to"></a>套用至  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl 物件 (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Cancel 方法範例 (VBScript) ](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [ (ADO) 的 Cancel 方法 ](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [ (ADO) 的 CancelBatch 方法 ](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [ (ADO) 的 CancelUpdate 方法 ](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [RDS)  (CancelUpdate 方法 ](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [ExecuteOptions 屬性 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [Cancel 方法範例 (VBScript) ](./cancel-method-example-vbscript.md)   
+ [ (ADO) 的 Cancel 方法 ](../ado-api/cancel-method-ado.md)   
+ [ (ADO) 的 CancelBatch 方法 ](../ado-api/cancelbatch-method-ado.md)   
+ [ (ADO) 的 CancelUpdate 方法 ](../ado-api/cancelupdate-method-ado.md)   
+ [RDS)  (CancelUpdate 方法 ](./cancelupdate-method-rds.md)   
+ [ExecuteOptions 屬性 (RDS)](./executeoptions-property-rds.md)

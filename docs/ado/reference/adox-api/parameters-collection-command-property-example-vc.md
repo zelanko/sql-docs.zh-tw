@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff45d33d57d77fc3e8a3e13621cfb2bfb0af4afa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5467a8f940e6b9472012fb3bfdc83ffb225864f4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439730"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769877"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters 集合、Command 屬性範例 (VC++)
-下列程式碼示範如何搭配[command](../../../ado/reference/ado-api/command-object-ado.md)物件使用[command](../../../ado/reference/adox-api/command-property-adox.md)屬性，以抓取程式的參數資訊。  
+下列程式碼示範如何搭配[command](../ado-api/command-object-ado.md)物件使用[command](./command-property-adox.md)屬性，以抓取程式的參數資訊。  
   
 ```  
 // BeginProcedureParametersCpp.cpp  

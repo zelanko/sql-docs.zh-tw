@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 059bec9781abe0903c9a5af2d78e46d532028e04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a1cfa4cae20e2f43ae666e7bb99ae5b65b92a74
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440130"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770727"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 屬性範例 (VB)
-此範例示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)屬性。 此程式碼將會重新定義*Northwind*資料庫的**Employees**資料表中 FirstName 資料行的大小。 然後，會顯示以**Employees**資料表為基礎之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的 FirstName[欄位](../../../ado/reference/ado-api/field-object.md)值變更。 請注意，在您重新定義 **DefinedSize** 屬性之後，FirstName 欄位預設會以空格填補。  
+此範例示範資料[行](./column-object-adox.md)的[DefinedSize](./definedsize-property-adox.md)屬性。 此程式碼將會重新定義*Northwind*資料庫的**Employees**資料表中 FirstName 資料行的大小。 然後，會顯示以**Employees**資料表為基礎之[記錄集](../ado-api/recordset-object-ado.md)的 FirstName[欄位](../ado-api/field-object.md)值變更。 請注意，在您重新定義 **DefinedSize** 屬性之後，FirstName 欄位預設會以空格填補。  
   
 ```  
 ' BeginDefinedSizeVB  
@@ -151,5 +151,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行物件 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [DefinedSize 屬性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
+ [資料行物件 (ADOX) ](./column-object-adox.md)   
+ [DefinedSize 屬性 (ADOX)](./definedsize-property-adox.md)

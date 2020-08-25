@@ -1,6 +1,6 @@
 ---
 title: 使用 SSIS 在 Linux 上擷取、轉換和載入資料
-description: 本文說明適用於 Linux 電腦的 SQL Server Integration Services (SSIS)
+description: 了解如何在 Linux 上執行 SQL Server Integration Services (SSIS) 套件。 同時了解哪裡可以找到有關 SSIS 功能的詳細資訊。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882725"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088868"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>使用 SSIS 在 Linux 上擷取、轉換和載入資料
 
@@ -25,7 +25,7 @@ ms.locfileid: "85882725"
 
 如需 SSIS 功能的詳細資訊，請參閱 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要在 Linux 電腦上執行 SSIS 套件，您必須先安裝 SQL Server Integration Services。 安裝於 Linux 電腦的 SQL Server 中不包含 SSIS。 如需安裝指示，請參閱[安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "85882725"
 若要在 Linux 電腦上執行 SSIS 套件，請執行下列動作：
 
 1.  將 SSIS 套件複製到 Linux 電腦。
-2.  執行以下命令：
+2.  執行下列命令：
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```

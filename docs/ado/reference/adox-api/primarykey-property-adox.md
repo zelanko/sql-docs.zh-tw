@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab3a4f6bd28c74dadb82d7e388866b4bf6100a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b1dde4ddae2acf4a6b238489a0af56ae1ce63d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439660"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769717"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 屬性 (ADOX)
 指出索引是否代表資料表上的主鍵。  
@@ -36,11 +36,11 @@ ms.locfileid: "88439660"
 ## <a name="remarks"></a>備註  
  預設值為 **[False]** 。  
   
- 在已附加至集合的 [索引](../../../ado/reference/adox-api/index-object-adox.md) 物件上，這個屬性是唯讀的。  
+ 在已附加至集合的 [索引](./index-object-adox.md) 物件上，這個屬性是唯讀的。  
   
 ## <a name="applies-to"></a>套用至  
- [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index 物件 (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [PrimaryKey 和 Unique 屬性範例 (VB) ](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [PrimaryKey 和 Unique 屬性範例 (VB) ](./primarykey-and-unique-properties-example-vb.md)   
+ [Index 物件 (ADOX)](./index-object-adox.md)

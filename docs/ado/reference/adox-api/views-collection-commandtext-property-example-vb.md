@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 492c385252085b440c536081e569a4a732f10c32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 645dd3602c97f8ca4bb4fd7df832352bb4cdded0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439290"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768907"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Views 集合、CommandText 屬性範例 (VB)
-下列程式碼示範如何使用 [Command](../../../ado/reference/adox-api/command-property-adox.md) 屬性來更新視圖的文字。  
+下列程式碼示範如何使用 [Command](./command-property-adox.md) 屬性來更新視圖的文字。  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -78,8 +78,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX) ](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [命令屬性 (ADOX) ](../../../ado/reference/adox-api/command-property-adox.md)   
- [View Object (ADOX) ](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection 屬性 (ADOX) ](./activeconnection-property-adox.md)   
+ [ (ADOX) 的目錄物件 ](./catalog-object-adox.md)   
+ [命令屬性 (ADOX) ](./command-property-adox.md)   
+ [View Object (ADOX) ](./view-object-adox.md)   
+ [Views 集合 (ADOX)](./views-collection-adox.md)

@@ -1,4 +1,5 @@
 ---
+description: 資料行存放區索引 - 資料載入指導
 title: 資料行存放區索引 - 資料載入指導 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482713"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 
@@ -52,6 +53,8 @@ ms.locfileid: "86007534"
 -   **鎖定最佳化：** 將資料載入壓縮資料列群組時，會自動取得資料列群組的 X 鎖定。 不過，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
 如果您在資料行存放區索引上有一個非叢集 B 型樹狀結構索引，則對於索引本身而言，沒有任何鎖定或記錄最佳化，但會適用如上所述的叢集資料行存放區索引最佳化。  
+
+請注意，DML (插入、刪除、更新) 不是批次模式作業，因為其不會平行處理。
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>計畫大量載入大小使差異資料列群組降到最少
 當大部分的資料列壓縮成資料行存放區而不是位於差異資料列群組時，資料行存放區索引的執行效果最好。 最好調整載入的大小，盡量讓資料列直接進入資料行存放區，而略過差異存放區。

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452330"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758608"
 ---
 # <a name="address-book-command-buttons"></a>通訊錄命令按鈕
 通訊錄的應用程式包含下列命令按鈕：  
@@ -52,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  如果查詢成功，則具有姓氏的所有人員（包含 "Berge" 文字） (例如 Berge 和 Berger) ，而且標題中包含 "Program Manager" 單字 (例如，[程式管理員]、[先進技術) ] 會顯示在 HTML 資料方格中。  
   
 ## <a name="preparing-and-sending-the-query"></a>準備和傳送查詢  
- Find_OnClick Sub 程式的最後一個部分是由兩個語句所組成。 第一個語句會指派 RDS 的 [SQL](../../../ado/reference/rds-api/sql-property.md) 屬性 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件等於動態建立的 SQL 查詢。 第二個語句會導致 **RDS。DataControl** 物件 (`DC1`) 來查詢資料庫，然後在方格中顯示查詢的新結果。  
+ Find_OnClick Sub 程式的最後一個部分是由兩個語句所組成。 第一個語句會指派 RDS 的 [SQL](../../reference/rds-api/sql-property.md) 屬性 [。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件等於動態建立的 SQL 查詢。 第二個語句會導致 **RDS。DataControl** 物件 (`DC1`) 來查詢資料庫，然後在方格中顯示查詢的新結果。  
   
 ```vb
 Sub Find_OnClick  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>更新設定檔按鈕  
- 按一下 [ **更新設定檔** ] 按鈕會啟動 VBScript Update_OnClick Sub 程式，它會執行 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件的 (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 和 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) 方法。  
+ 按一下 [ **更新設定檔** ] 按鈕會啟動 VBScript Update_OnClick Sub 程式，它會執行 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件的 (`DC1`) [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) 和 [Refresh](../../reference/rds-api/refresh-method-rds.md) 方法。  
   
 ```vb
 Sub Update_OnClick  
@@ -75,7 +75,7 @@ End Sub
  當 `DC1.SubmitChanges` 執行時，遠端資料服務會封裝所有更新資訊，並透過 HTTP 將其傳送至伺服器。 更新為全部或不是任何專案;如果更新的一部分不成功，則不會進行任何變更，而且會傳回狀態訊息。 `DC1.Refresh` 在使用遠端資料服務進行 **SubmitChanges** 之後不需要，但可確保新的資料。  
   
 ## <a name="cancel-changes-button"></a>取消變更按鈕  
- 按一下 [ **取消變更** ] 會啟動 VBScript Cancel_OnClick Sub 程式，這會執行 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件的 (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) 方法。  
+ 按一下 [ **取消變更** ] 會啟動 VBScript Cancel_OnClick Sub 程式，這會執行 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件的 (`DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md) 方法。  
   
 ```vb
 Sub Cancel_OnClick  
@@ -86,7 +86,5 @@ End Sub
  當 `DC1.CancelUpdate` 執行時，它會在上次查詢或更新之後，捨棄使用者對資料方格上的員工記錄所做的任何編輯。 它會還原原始的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [通訊錄導覽按鈕](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [通訊錄導覽按鈕](./address-book-navigation-buttons.md)   
+ [DataControl 物件 (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

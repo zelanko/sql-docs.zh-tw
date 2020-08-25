@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bccf1feaf95417943194eed6e1faccbc83f1060
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438760"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767677"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 屬性範例 (VBScript)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列範例顯示如何讀取 RDS 的 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 屬性 [。](../../../ado/reference/rds-api/datacontrol-object-rds.md) 在 VBScript 程式碼中的執行時間 DataControl 物件。 **ReadyState** 是唯讀的屬性。  
+ 下列範例顯示如何讀取 RDS 的 [ReadyState](./readystate-property-rds.md) 屬性 [。](./datacontrol-object-rds.md) 在 VBScript 程式碼中的執行時間 DataControl 物件。 **ReadyState** 是唯讀的屬性。  
   
  若要測試此範例，請將此程式碼剪下並貼到 \<Body> 一般 HTML 檔案中的和標記之間，然後將 \</Body> 它命名為 **RDSReadySt .asp**。 使用 [ **尋找** ] 找出檔案 Adovbs，並將它放在您打算使用的目錄中。 ASP 腳本會識別您的伺服器。  
   
@@ -111,7 +111,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [ReadyState 屬性 (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+ [DataControl 物件 (RDS) ](./datacontrol-object-rds.md)   
+ [ReadyState 屬性 (RDS)](./readystate-property-rds.md)

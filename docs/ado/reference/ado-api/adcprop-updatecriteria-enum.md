@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451600"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760252"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-指定哪些欄位可以用來偵測資料來源之資料列的開放式更新與 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件之間的衝突。  
+指定哪些欄位可以用來偵測資料來源之資料列的開放式更新與 [記錄集](./recordset-object-ado.md) 物件之間的衝突。  
   
- 將這些常數與 **記錄集** 「**更新準則**」動態屬性搭配使用，這會在 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 中參考，並記載于 OLE DB 檔的 [Microsoft 資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 中。  
+ 將這些常數與 **記錄集** 「**更新準則**」動態屬性搭配使用，這會在 [ADO 動態屬性索引](./ado-dynamic-property-index.md) 中參考，並記載于 OLE DB 檔的 [Microsoft 資料指標服務](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 中。  
   
 |常數|值|描述|  
 |--------------|-----------|-----------------|  

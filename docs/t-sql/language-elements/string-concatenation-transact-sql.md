@@ -1,4 +1,5 @@
 ---
+description: + (字串串連) (Transact-SQL)
 title: + (字串串連) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3124a8e66e8ac60acc78381431181ff224d00e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422462"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (字串串連) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
  傳回優先順序最高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
- \+ (字串串連) 運算子的行為，在使用空白、長度為零的字串時，與使用 NULL 或未知的值時，各不相同。 長度為零的字元字串可以指定為兩個單引號，引號內不含任何字元。 長度為零的二進位字串可以指定為不含以十六進位常數指定之任何二進位值的 0x。 串連長度為零的字串，一律會串連兩個指定的字串。 當您使用含 Null 值的字串時，串連結果會隨著工作階段設定而不同。 正如同在 Null 值上執行的算術運算，當未知的值加上 Null 值時，結果通常是未知的值，以 Null 值來執行的字串串連作業也應該產生 Null 結果。 不過，您可以變更目前工作階段的 `CONCAT_NULL_YIELDS_NULL` 設定來變更這個行為。 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
+ + (字串串連) 運算子的行為，在使用空白、長度為零的字串時，與使用 NULL 或未知的值時，各不相同。 長度為零的字元字串可以指定為兩個單引號，引號內不含任何字元。 長度為零的二進位字串可以指定為不含以十六進位常數指定之任何二進位值的 0x。 串連長度為零的字串，一律會串連兩個指定的字串。 當您使用含 Null 值的字串時，串連結果會隨著工作階段設定而不同。 正如同在 Null 值上執行的算術運算，當未知的值加上 Null 值時，結果通常是未知的值，以 Null 值來執行的字串串連作業也應該產生 Null 結果。 不過，您可以變更目前工作階段的 `CONCAT_NULL_YIELDS_NULL` 設定來變更這個行為。 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
   
  如果字串的串連結果超出 8,000 位元組的限制，就會截斷結果。 不過，如果至少有一個串連的字串是大數值類型時，就不會截斷。  
   

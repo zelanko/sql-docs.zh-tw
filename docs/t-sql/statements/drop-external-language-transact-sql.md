@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 title: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2019
@@ -9,16 +10,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6eb00c0745555c4193c0c5831a1ef462a44c7675
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d159d4b61e9fa8a171873d7c1a8f6466452e8fe9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358454"
 ---
 # <a name="drop-external-language-transact-sql"></a>DROP EXTERNAL LANGUAGE (Transact-SQL)  
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 刪除現有的外部語言。
 
@@ -44,6 +45,8 @@ DROP EXTERNAL LANGUAGE <language_name>
 ### <a name="return-values"></a>傳回值
 
 如果陳述式執行成功，會傳回參考訊息。
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>備註
 

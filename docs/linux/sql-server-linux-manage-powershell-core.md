@@ -1,6 +1,6 @@
 ---
 title: 使用 PowerShell Core 管理 Linux 上的 SQL Server
-description: 此文章概述如何搭配 Linux 上的 SQL Server 使用 PowerShell Core。
+description: 透過逐步引導您了解如何在 macOS 與 Linux 上搭配 PowerShell Core (PS Core) 使用 SQL Server PowerShell 的幾個範例，來了解 SQL Server PowerShell。
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: 3f70d69e58d513abcba8f27bbda53ab09d5e00ab
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: fed5ca919a78f3051ba7677f46f786b7c62f9b27
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807661"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088851"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
 

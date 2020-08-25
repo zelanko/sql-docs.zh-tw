@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 887b558b3bff61a571a2333719164ba3e577782b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15fc1a65e4652b3da4774036d23449763bb3e2b7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439280"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768847"
 ---
 # <a name="views-delete-method-example-vb"></a>Views Delete 方法範例 (VB)
-下列程式碼顯示如何使用 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) 方法，從目錄中刪除視圖。  
+下列程式碼顯示如何使用 [delete](./delete-method-adox-collections.md) 方法，從目錄中刪除視圖。  
   
 ```  
 ' BeginDeleteViewVB  
@@ -55,5 +55,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADOX 集合的 Delete 方法) ](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ (ADOX 集合的 Delete 方法) ](./delete-method-adox-collections.md)   
+ [Views 集合 (ADOX)](./views-collection-adox.md)
