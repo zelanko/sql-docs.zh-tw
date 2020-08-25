@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a50a1fe5872afad4df5f7e8811c3babd139ce354
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59e4facf304f48be289d6c00c6dca3b92b04dc70
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445851"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646708"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 此函式會傳回跨越指定之 *startdate* 和 *enddate* 的指定之 *datepart* 界限的計數 (作為帶正負號的大整數值)。
   

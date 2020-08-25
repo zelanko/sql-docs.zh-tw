@@ -2,19 +2,19 @@
 title: 使用 Azure SQL 資料倉儲進行連線及查詢
 description: 本快速入門說明如何使用 Azure Data Studio 連線到 Azure SQL 資料倉儲並執行查詢
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728010"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766367"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門：使用 Azure Data Studio 來連線及查詢 Azure SQL 資料倉儲中的資料
 
@@ -23,9 +23,9 @@ ms.locfileid: "85728010"
 ## <a name="prerequisites"></a>必要條件
 若要完成本快速入門，則需要 Azure Data Studio 與 Azure SQL 資料倉儲。
 
-- [安裝 Azure Data Studio](download.md)。
+- [安裝 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
 
-如果您還沒有 SQL 資料倉儲，請參閱[建立 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
+如果您還沒有 SQL 資料倉儲，請參閱[建立 SQL 資料倉儲](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
 
 請記住伺服器名稱和登入認證！
 
@@ -52,7 +52,7 @@ ms.locfileid: "85728010"
 
    ![新增連線圖示](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 如果您伺服器的防火牆規則沒有允許 Azure Data Studio 進行連線，就會開啟 [建立新的防火牆規則] 表單。 完成表單，以便建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果您伺服器的防火牆規則沒有允許 Azure Data Studio 進行連線，就會開啟 [建立新的防火牆規則] 表單。 完成表單，以便建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](/azure/sql-database/sql-database-firewall-configure)。
 
    ![新增防火牆規則](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ ms.locfileid: "85728010"
 ## <a name="clean-up-resources"></a>清除資源
 
 此集合中的其他文章都是以本快速入門為基礎來建立。 如果您打算繼續進行後續的快速入門，請勿清除於本快速入門所建立的資源。 如果您不打算繼續進行，請使用下列步驟在 Azure 入口網站中刪除本快速入門所建立的資源。
-藉由刪除您不再需要的資源群組，即可清除資源。 如需詳細資訊，請參閱[清除資源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
+藉由刪除您不再需要的資源群組，即可清除資源。 如需詳細資訊，請參閱[清除資源](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 
 ## <a name="next-steps"></a>後續步驟

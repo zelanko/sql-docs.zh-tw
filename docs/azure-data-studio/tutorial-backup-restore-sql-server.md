@@ -2,19 +2,19 @@
 title: 備份和還原資料庫
 description: 遵循此教學課程，以了解如何使用 Azure Data Studio 備份及還原資料庫。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522422"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765797"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>使用 Azure Data Studio 備份及還原資料庫
 
@@ -32,7 +32,7 @@ ms.locfileid: "87522422"
 
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
 
-本教學課程需要連線到 SQL Server 資料庫。 Azure SQL Database 具有自動備份，因此 Azure Data Studio 不會執行 Azure SQL Database 備份及還原。 如需詳細資訊，請參閱 [Learn about automatic SQL Database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups) (了解自動 SQL Database 備份)。
+本教學課程需要連線到 SQL Server 資料庫。 Azure SQL Database 具有自動備份，因此 Azure Data Studio 不會執行 Azure SQL Database 備份及還原。 如需詳細資訊，請參閱 [Learn about automatic SQL Database backups](/azure/sql-database/sql-database-automated-backups) (了解自動 SQL Database 備份)。
 
 ## <a name="back-up-a-database"></a>備份資料庫
 

@@ -2,19 +2,19 @@
 title: 什麼是 Azure Data Studio
 description: Azure Data Studio 是在 Windows、macOS 和 Linux 上執行，以便管理 SQL Server、Azure SQL Database 和 Azure SQL 資料倉儲的免費輕量型工具。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771931"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765507"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
@@ -24,7 +24,7 @@ Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程�
 
 Azure Data Studio 及其提供者的原始程式碼根據原始程式碼 EULA 提供在 GitHub 上，該合約提供修改和使用軟體的權限，但不能在雲端服務中進行重新散發或裝載。 如需詳細資訊，請參閱 [Azure Data Studio 常見問題集](faq.md)。
 
-**[下載並安裝 Azure Data Studio](download.md)**
+**[下載並安裝 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>具備 IntelliSense 的 SQL 程式碼編輯器
 
@@ -165,7 +165,7 @@ Azure Data Studio 也提供建立自訂 SQL 程式碼片段的功能。 若要�
 
 ## <a name="next-steps"></a>後續步驟
 
-- [下載並安裝 Azure Data Studio](download.md)
+- [下載並安裝 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 - [連線及查詢 SQL Server](quickstart-sql-server.md)
 - [連線及查詢 Azure SQL Database](quickstart-sql-database.md)
 

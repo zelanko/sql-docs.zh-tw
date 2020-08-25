@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988603"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778477"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL 受控執行個體儀表板 (預覽)
 
-Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中使用 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)。 此延伸模組提供下列功能：
+Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) 中使用 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-index)。 此延伸模組提供下列功能：
 
 - 顯示 SQL 受控執行個體屬性，包括虛擬核心與已使用的儲存體
 - 監視過去兩小時內的 CPU 和儲存體使用量
@@ -29,7 +29,7 @@ Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure
 
 ## <a name="install"></a>安裝
 
-您可以安裝此延伸模組的正式發行版本。 依照 [Azure Data Studio 文件](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步驟進行。
+您可以安裝此延伸模組的正式發行版本。 依照 [Azure Data Studio 文件](./extensions.md)中的步驟進行。
 在 [延伸模組] 窗格中，搜尋「受控執行個體」，然後在該處進行安裝。 安裝完成之後，您會自動收到任何延伸模組未來更新的相關通知。
 
 安裝延伸模組之後，您會在 Azure Data Studio 中看到 [受控執行個體]  索引標籤。 您可以在這裡找到受控執行個體的特定資訊。
@@ -58,8 +58,8 @@ Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure
 - **達到儲存空間限制**。 請刪除不必要的資料，或增加執行個體儲存體大小。 達到儲存空間限制的資料庫可能無法處理甚至讀取查詢。
 - **達到執行個體輸送量限制**。 在載入接近服務層級的限制時通知您：一般用途為 22 MB/秒，關鍵業務為 48 MB/秒。 請注意，您的受控執行個體會限制您的負載，以確保可以執行備份。
 - **記憶體不足的壓力**。 頁面的預期壽命太低或大量 `PAGEIOLATCH` 等候統計資料可能指出您的執行個體正在將分頁從記憶體撤出並持續嘗試從磁碟載入分頁。
-- **記錄檔限制**。 若您的記錄檔達到[一般用途服務層級的檔案 IO 限制](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，您可能必須增加記錄檔大小以取得更好的效能。
-- **資料檔限制**。 若您的資料檔達到[一般用途服務層級的檔案 IO 限制](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，您可能必須增加檔案大小以取得更好的效能。 此問題可能會導致記憶體壓力並導致備份效能降低。
+- **記錄檔限制**。 若您的記錄檔達到[一般用途服務層級的檔案 IO 限制](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，您可能必須增加記錄檔大小以取得更好的效能。
+- **資料檔限制**。 若您的資料檔達到[一般用途服務層級的檔案 IO 限制](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier)，您可能必須增加檔案大小以取得更好的效能。 此問題可能會導致記憶體壓力並導致備份效能降低。
 - **可用性問題**。 大量的虛擬記錄檔可能會影響效能。 如果發生程序失敗，這類問題可能會導致一般用途服務層級的資料庫復原時間變長。
 
 請定期檢閱這些建議、調查根本原因，並採取矯正問題的措施。 SQL 受控執行個體延伸模組提供指令碼讓您執行，以減輕一些回報的問題。

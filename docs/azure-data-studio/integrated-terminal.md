@@ -4,17 +4,17 @@ description: 了解如何開啟整合到 Azure Data Studio 的終端。 整合�
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 127ea216dccab32a17199b2b5b9e0f3f8d577c24
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0311a5b17021796c0b879e96f55c867d1e8b05c1
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411084"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746128"
 ---
 # <a name="integrated-terminal"></a>整合式終端
 

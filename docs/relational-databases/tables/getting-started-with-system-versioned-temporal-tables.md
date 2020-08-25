@@ -12,16 +12,18 @@ ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e00e94dfb828894a7c4b8f0a30c4a333c71794b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8631fb7ab0534cedec0f9739e5e06eed117b026d
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427490"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645988"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>開始使用系統建立版本的時態表
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 根據您的案例，您可以建立新的系統建立版本的時態表，或修改現有的時態表，方法是將 temporal 屬性加入現有的資料表結構描述。 時態表中的資料修改時，系統就會建置應用程式和使用者看不到的版本歷程記錄。 如此一來，使用系統建立版本的時態表不需要對資料表的修改方法，或查詢資料的最新 (實際) 狀態的方式進行任何變更。
 

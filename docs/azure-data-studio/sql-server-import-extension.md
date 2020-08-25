@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522452"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765917"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 匯入延伸模組 (預覽)
 
 SQL Server 匯入延伸模組 (預覽) 會將 .txt 和 .csv 檔案轉換成 SQL 資料表。 此精靈利用稱為 [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) 的 Microsoft 研究架構，以最少使用者輸入的智慧方式剖析檔案。 這是用於資料整頓的強大架構，也是提供 Microsoft Excel 中快速填滿功能的相同技術
 
-若要深入了解此功能的 SSMS 版本，您可以閱讀[這篇文章](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)。
+若要深入了解此功能的 SSMS 版本，您可以閱讀[這篇文章](../relational-databases/import-export/import-flat-file-wizard.md)。
 
 
 ## <a name="install-the-sql-server-import-extension"></a>安裝 SQL Server 匯入延伸模組

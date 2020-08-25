@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920506"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767817"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>在 Azure Data Studio 中使用 Jupyter Notebook
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920506"
 
 Jupyter Notebook 是開放原始碼的 Web 應用程式，可讓您建立及共用含有即時程式碼、方程式、視覺效果和敘述文字的文件。 使用方式包含資料清理和轉換、數字模擬、統計模型、資料視覺效果和機器學習。
 
-本文描述如何在最新版本的 [**Azure Data Studio**](../azure-data-studio/download.md) 中建立新筆記本，以及如何開始使用不同的核心來撰寫自己的筆記本。
+本文描述如何在最新版本的 [**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) 中建立新筆記本，以及如何開始使用不同的核心來撰寫自己的筆記本。
 
 觀看這段簡短的 5 分鐘影片，以取得 Azure Data Studio 中的筆記本簡介：
 
@@ -51,7 +51,7 @@ Azure Data Studio 筆記本支援數種不同的核心，包括 SQL Server、Pyt
 [附加至] 提供核心的內容。 例如，如果正在使用 SQL 核心，則可附加至任何 SQL Server 執行個體。
 如果正在使用 Python3 核心，則會附加至 **localhost**，且可使用此核心來進行本機 Python 開發。
 
-SQL 核心也可用於連線到 PostgreSQL 伺服器執行個體。 如果您是 PostgreSQL 開發人員，且想要將筆記本連線到 PostgreSQL 伺服器，請在 Azure Data Studio 延伸模組市集中下載 [**PostgreSQL 延伸模組**](../azure-data-studio/postgres-extension.md)，然後連線到 PostgreSQL 伺服器。
+SQL 核心也可用於連線到 PostgreSQL 伺服器執行個體。 如果您是 PostgreSQL 開發人員，且想要將筆記本連線到 PostgreSQL 伺服器，請在 Azure Data Studio 延伸模組市集中下載 [**PostgreSQL 延伸模組**](./postgres-extension.md)，然後連線到 PostgreSQL 伺服器。
 
 如果已連線到 SQL Server 2019 巨量資料叢集，則預設的 [附加至] 將會是叢集的端點。 您可使用叢集的 Spark 計算來提交 Python、Scala 和 R 程式碼。
 

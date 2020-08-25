@@ -2,19 +2,19 @@
 title: 使用 Windows 驗證連線您的 SQL Server (Kerberos)
 description: 了解如何使用 Microsoft Kerberos 整合驗證，將 Azure Data Studio 連線到 SQL Server。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 573f78b3edace44695f73d79fba9679ba5fd4e00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411154"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778427"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>使用 Windows 驗證將 Azure Data Studio 連線到您的 SQL Server - Kerberos
 
@@ -25,7 +25,7 @@ Azure Data Studio 支援使用 Kerberos 連線到 SQL Server。
 ## <a name="prerequisites"></a>必要條件
 
 - 存取已加入網域的 Windows 電腦，以查詢您的 Kerberos 網域控制站。
-- SQL Server 應設定為允許 Kerberos 驗證。 針對在 UNIX 上執行的用戶端驅動程式，只有使用 Kerberos 才支援整合式驗證。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 針對您嘗試連線的每個 SQL Servr 執行個體，應該會註冊一個 SPN。 如需詳細資訊，請參閱[註冊服務主體名稱](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)。
+- SQL Server 應設定為允許 Kerberos 驗證。 針對在 UNIX 上執行的用戶端驅動程式，只有使用 Kerberos 才支援整合式驗證。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 針對您嘗試連線的每個 SQL Servr 執行個體，應該會註冊一個 SPN。 如需詳細資訊，請參閱[註冊服務主體名稱](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats)。
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>檢查 SQL Server 是否已設定 Kerberos

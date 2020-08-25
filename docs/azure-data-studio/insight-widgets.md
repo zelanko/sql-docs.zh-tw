@@ -4,17 +4,17 @@ description: 了解如何使用 Azure Data Studio 見解小工具，將監視伺
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3307093404ddc09b6db085f1cc275273280913d3
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: af095f23a61a40c10541b6d403ba008d04e3b181
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411104"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745948"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>在 Azure Data Studio 中使用見解小工具來管理伺服器和資料庫
 

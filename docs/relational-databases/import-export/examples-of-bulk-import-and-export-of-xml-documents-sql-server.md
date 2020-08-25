@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012449"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646052"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- 您可以將 XML 文件大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫或從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫大量匯出它們。 本主題將提供這兩種情況的範例。  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+您可以將 XML 文件大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫或從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫大量匯出它們。 本主題將提供這兩種情況的範例。
+
+若要從資料檔將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或非資料分割檢視，您可以使用下列方式：  
   
- 若要從資料檔將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或非資料分割檢視，您可以使用下列方式：  
+- **bcp** 公用程式  
+   您也可以使用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中能執行 SELECT 陳述式的任意位置 (包括資料分割檢視) 匯出資料。  
+
+- BULK INSERT  
   
--   **bcp** 公用程式  
-    您也可以使用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中能執行 SELECT 陳述式的任意位置 (包括資料分割檢視) 匯出資料。  
-  
--   BULK INSERT  
-  
--   INSERT ...SELECT * FROM OPENROWSET(BULK...)  
+- INSERT ...SELECT * FROM OPENROWSET(BULK...)  
 
 如需詳細資訊，請參閱下列主題。
 - [使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

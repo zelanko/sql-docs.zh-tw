@@ -1,5 +1,5 @@
 - name: Azure Data Studio 文件
-  href: ../azure-data-studio/index.yml
+  href: ./index.yml
 - name: 下載 Azure Data Studio
   href: download-azure-data-studio.md
 - name: 版本資訊
@@ -127,7 +127,7 @@
     - name: SQL 工具
       href: ../tools/overview-sql-tools.md
     - name: Azure 開發人員工具
-      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+      href: /azure/?product=developer-tools
 - name: 資源
   items:
     - name: 常見問題集

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882732"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746178"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>連線到 Always On 可用性群組接聽程式 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 網域系統管理員必須在 Active Directory 中設定每個可用性群組接聽程式的伺服器主體名稱 (SPN)，以便針對接聽程式的用戶端連線啟用 Kerberos。 註冊 SPN 時，您必須使用裝載可用性複本的伺服器執行個體服務帳戶。 若要讓 SPN 在所有複本上運作，相同服務帳戶必須用於裝載可用性群組之 WSFC 叢集的所有執行個體。  
   
- 您可以使用 **setspn** Windows 命令列工具來設定 SPN。  例如，若要設定 SPN 用於 `AG1listener.Adventure-Works.com` 可用性群組，而此可用性群組裝載於一組都設為使用 `corp/svclogin2`網域帳戶的 SQL Server 執行個體：  
+ 您可以使用 **setspn** Windows 命令列工具來設定 SPN。  例如，若要設定 SPN 用於 `AG1listener.Adventure-Works.com` 可用性群組，而此可用性群組裝載於一組都設為使用 `corp\svclogin2`網域帳戶的 SQL Server 執行個體：  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  如需有關為 SQL Server 手動註冊 SPN 的詳細資訊，請參閱＜ [註冊 Kerberos 連接的服務主體名稱](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  

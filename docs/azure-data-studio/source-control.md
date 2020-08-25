@@ -2,19 +2,19 @@
 title: 原始檔控制
 description: Azure Data Studio 支援以 Git 進行原始檔控制管理 (SCM)。 了解如何開啟現有的 Git 存放庫，以及如何初始化新的存放庫。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522502"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746148"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio 中的原始檔控制
 

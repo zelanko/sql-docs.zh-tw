@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920466"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766827"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Azure Data Studio 中的 kqlmagic 延伸模組
 
-**Kqlmagic** 是可在 **[Azure Data Studio 筆記本](notebooks-guidance.md)** 中擴充 Python 核心功能的命令。 您可結合 Python 和 **[Kusto 查詢語言](https://docs.microsoft.com/azure/data-explorer/kusto/query)** ，以使用與 `render` 命令整合的豐富 Plot.ly 程式庫來查詢並以視覺方式呈現資料。 Kqlmagic 可在同一個位置提供筆記本、資料分析和豐富 Python 功能的優點。 Kqlmagic 支援的資料來源包括 **[Azure 資料總管](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)** 、 **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** 及 **[Azure 監視器記錄](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)** 。
+**Kqlmagic** 是可在 **[Azure Data Studio 筆記本](notebooks-guidance.md)** 中擴充 Python 核心功能的命令。 您可結合 Python 和 **[Kusto 查詢語言](/azure/data-explorer/kusto/query)** ，以使用與 `render` 命令整合的豐富 Plot.ly 程式庫來查詢並以視覺方式呈現資料。 Kqlmagic 可在同一個位置提供筆記本、資料分析和豐富 Python 功能的優點。 Kqlmagic 支援的資料來源包括 **[Azure 資料總管](/azure/data-explorer/data-explorer-overview)** 、 **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** 及 **[Azure 監視器記錄](/azure/azure-monitor/platform/data-platform-logs)** 。
 
 本文說明如何使用 Azure 資料總管叢集的 Kqlmagic 延伸模組、Application Insights 記錄和 Azure 監視器記錄，以在 Azure Data Studio 中建立並執行筆記本。
 
@@ -114,7 +114,7 @@ ms.locfileid: "86920466"
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>針對 Azure 資料總管進行查詢與視覺化
 
-使用 [render 運算子](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)查詢資料，並使用 ploy.ly 程式庫將資料視覺化。 此查詢與視覺效果會提供使用原生 KQL 的整合式體驗。
+使用 [render 運算子](/azure/data-explorer/kusto/query/renderoperator)查詢資料，並使用 ploy.ly 程式庫將資料視覺化。 此查詢與視覺效果會提供使用原生 KQL 的整合式體驗。
 
 1. 依照狀態和頻率來分析前 10 大 Storm 事件：
 
@@ -179,7 +179,7 @@ ms.locfileid: "86920466"
 
 ### <a name="query-and-visualize-for-application-insights"></a>針對 Application Insights 進行查詢與視覺化
 
-使用 [render 運算子](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)查詢資料，並使用 ploy.ly 程式庫將資料視覺化。 此查詢與視覺效果會提供使用原生 KQL 的整合式體驗。
+使用 [render 運算子](/azure/data-explorer/kusto/query/renderoperator)查詢資料，並使用 ploy.ly 程式庫將資料視覺化。 此查詢與視覺效果會提供使用原生 KQL 的整合式體驗。
 
 1. 顯示頁面檢視：
 
@@ -234,7 +234,7 @@ ms.locfileid: "86920466"
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>針對 Azure 監視器進行查詢與視覺化
 
-使用 [render 運算子](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator)查詢資料，並使用 ploy.ly 程式庫將資料視覺化。 此查詢與視覺效果會提供使用原生 KQL 的整合式體驗。
+使用 [render 運算子](/azure/data-explorer/kusto/query/renderoperator)查詢資料，並使用 ploy.ly 程式庫將資料視覺化。 此查詢與視覺效果會提供使用原生 KQL 的整合式體驗。
 
 1. 檢視時間軸圖表：
 
@@ -251,7 +251,7 @@ ms.locfileid: "86920466"
 
 深入了解筆記本和 Kqlmagic：
 
-- [使用 Jupyter Notebook 和 Kqlmagic 延伸模組來分析 Azure 資料總管中的資料](https://docs.microsoft.com/azure/data-explorer/Kqlmagic) (機器翻譯)
+- [使用 Jupyter Notebook 和 Kqlmagic 延伸模組來分析 Azure 資料總管中的資料](/azure/data-explorer/Kqlmagic) (機器翻譯)
 - [Jupyter 筆記本和 Jupyter 實驗室的延伸模組 (Magic) 可供獲得使用 Kusto、Application Insights 和 LogAnalytics 資料的筆記本體驗](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)

@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 928c258dff70f861c33cc59125171a467eb12bf8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411224"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766217"
 ---
 # <a name="schema-compare-extension"></a>結構描述比較延伸模組
 結構描述比較延伸模組提供容易使用的體驗，比較兩項資料庫定義，並將來源的差異性套用至目標。
@@ -68,5 +68,5 @@ ms.locfileid: "87411224"
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解結構描述比較，請[參閱我們的文件](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)。
+若要深入了解結構描述比較，請[參閱我們的文件](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。
 請在[這裡](https://github.com/microsoft/azuredatastudio/issues)回報問題和功能要求。

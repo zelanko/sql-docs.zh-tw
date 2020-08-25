@@ -2,19 +2,19 @@
 title: 建立延伸模組
 description: 您可以使用延伸模組將功能新增到 Azure Data Studio。 了解如何建立延伸模組，以及如何將延伸模組發佈到延伸模組資源庫。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411124"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778417"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組來擴充功能
 
@@ -40,7 +40,7 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-如需如何開始使用延伸模組範本的詳細指引，請參閱[建立延伸模組](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15)，並遵循指示建立按鍵對應延伸模組。
+如需如何開始使用延伸模組範本的詳細指引，請參閱[建立延伸模組](./tutorial-create-extension.md?view=sql-server-ver15)，並遵循指示建立按鍵對應延伸模組。
 
 **擴充性參考**
 

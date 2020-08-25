@@ -2,19 +2,19 @@
 title: 連線與查詢 Azure SQL 資料庫
 description: 進行快速入門，使用 Azure Data Studio 連線到 Azure SQL Database 伺服器，然後建立和查詢資料庫。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411294"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766437"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入門：使用 Azure Data Studio 連線及查詢 Azure SQL 資料庫
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411294"
 
 若要完成本快速入門，則需要 Azure Data Studio 與 Azure SQL Database 伺服器。
 
-- [安裝 Azure Data Studio](download.md)
+- [安裝 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 
 如果您沒有 Azure SQL 伺服器，請完成下列其中一個 Azure SQL Database 快速入門。 請記住完整伺服器名稱和登入認證，以供後續步驟執行：
 
-- [建立 DB - 入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [建立 DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [建立 DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [建立 DB - 入口網站](/azure/sql-database/sql-database-get-started-portal)
+- [建立 DB - CLI](/azure/sql-database/sql-database-get-started-cli)
+- [建立 DB - PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>連接到 Azure SQL Database 伺服器
@@ -57,7 +57,7 @@ ms.locfileid: "87411294"
 
 3. 選取 [連接]。
 
-4. 如果您伺服器的防火牆規則沒有允許 Azure Data Studio 進行連線，就會開啟 [建立新的防火牆規則] 表單。 完成表單，以便建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+4. 如果您伺服器的防火牆規則沒有允許 Azure Data Studio 進行連線，就會開啟 [建立新的防火牆規則] 表單。 完成表單，以便建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](/azure/sql-database/sql-database-firewall-configure)。
 
    ![新增防火牆規則](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ ms.locfileid: "87411294"
 
 ## <a name="clean-up-resources"></a>清除資源
 
-稍後的快速入門文章是根據此處所建立的資源來建置。 如果您打算完成這些文章，請務必不要刪除這些資源。 否則，請在 Azure 入口網站中刪除您不再需要的資源。 如需詳細資訊，請參閱[清除資源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
+稍後的快速入門文章是根據此處所建立的資源來建置。 如果您打算完成這些文章，請務必不要刪除這些資源。 否則，請在 Azure 入口網站中刪除您不再需要的資源。 如需詳細資訊，請參閱[清除資源](/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>後續步驟
 

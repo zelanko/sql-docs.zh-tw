@@ -27,15 +27,16 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488056"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645948"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 在資料庫中建立資料行主要金鑰中繼資料物件。 代表金鑰的資料行主要金鑰中繼資料項目儲存在外部金鑰存放區中。 當您使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 時，此金鑰可保護 (加密) 資料行加密金鑰。 有多個資料行主要金鑰允許定期進行金鑰輪替，用來加強安全性。 請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [物件總管] 或 PowerShell 在金鑰存放區中建立資料行主要金鑰，並在資料庫中建立其相關的中繼資料物件。 如需詳細資訊，請參閱 [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   

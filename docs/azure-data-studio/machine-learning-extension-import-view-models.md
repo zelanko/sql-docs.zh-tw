@@ -5,17 +5,17 @@ description: 了解如何使用適用於 Azure Data Studio 的機器學習延伸
 ms.date: 06/09/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 62eb0a2c4eb4db7c86f4c5ff486a0088a20e8244
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 586136dde0c514523c96cb69aaa422fd739cf1f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352405"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778387"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-preview-for-azure-data-studio"></a>使用適用於 Azure Data Studio 的機器學習延伸模組 (預覽) 匯入或檢視模型
 
@@ -70,7 +70,6 @@ ms.locfileid: "85352405"
 - [Azure Data Studio 中的機器學習延伸模組](machine-learning-extension.md)
 - [管理資料庫中的套件](machine-learning-extension-manage-packages.md)
 - [進行預測](machine-learning-extension-predictions.md)
-- [匯入和檢視模型](machine-learning-extension-import-view-models.md)
 - [SQL 機器學習文件](../machine-learning/index.yml)
 - [Azure SQL 受控執行個體中的機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [SQL Edge (預覽) 中採用 ONNX 的機器學習和 AI](/azure/azure-sql-edge/onnx-overview)

@@ -12,16 +12,18 @@ ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 634cfc71f7b96cd5ec2acbff6c264792cfe6469a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb967e6607efa717865ad64f7673072034d852d4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419062"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646632"
 ---
 # <a name="partitioning-with-temporal-tables"></a>對時態表進行資料分割
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 您可以各自在目前的資料表和記錄資料表上使用資料分割。 不過，您無法使用資料分割來變更沒有設定系統版本的資料內容。
 

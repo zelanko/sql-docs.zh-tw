@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: a92bc4b19adc4322852f19ddabe3d98e20174e40
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: bacfbe7df36b9222a4297ced95a0ffed2733fed6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746058"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778457"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -31,7 +31,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行。
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 2020 年8 月 12 日 | 1.21.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 2020 年8 月 12 日| 1.21.0 |
 
-如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
+如需最新版本的詳細資訊，請參閱[版本資訊](./release-notes-azure-data-studio.md?view=sql-server-ver15)。
 
 ## <a name="get-azure-data-studio-for-windows"></a>取得適用於 Windows 的 Azure Data Studio
 

@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a90e0e787abdaedb4cde1a3461349fcd521c6cf9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479170"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646388"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   改變資料庫中資料行的加密金鑰，新增或卸除加密的值。 資料行加密金鑰最多可有兩個值，以便對應資料行主要金鑰能夠輪替。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[使用安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 來加密資料行時，會使用資料行加密金鑰。 在新增資料行加密金鑰值之前，您必須使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式來定義用來加密值的資料行主要金鑰。  
   

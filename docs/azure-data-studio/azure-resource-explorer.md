@@ -7,14 +7,14 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.date: 09/24/2018
-ms.openlocfilehash: 733df6ea8abf40785ccab97596a4f74d28dbdcf5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dab8425871d32641e696cc3fee2d92a45b7bdf3b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774715"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746098"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 資源總管探索和管理 Azure SQL 資源
 
