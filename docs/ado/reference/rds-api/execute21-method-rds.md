@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439050"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768397"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 執行要求，並建立 ADO 記錄集以用於 ADO 2.1。  
@@ -74,9 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*參數可以是 null。 在此情況下，會視 RDS 伺服器的設定方式而定。 "MSDFMAP" 處理常式字串表示應使用 Microsoft 提供的處理常式 ( # A0) 。 "MASDFMAP" 處理常式字串 "sample.ini" 表示應使用 Msdfmap.dll 處理常式，並將引數 "sample.ini" 傳遞給處理常式。 MSDFMAP.dll 會將引數解讀為使用 sample.ini 來檢查連接和查詢字串的方向。  
   
 > [!NOTE]
->  **Execute21**方法是[ (RDS) 的 Execute 方法](../../../ado/reference/rds-api/execute-method-rds.md)版本。 如果您需要使用 **Execute** 方法與 ADO 2.1 進行通訊，可以改為呼叫 **Execute21** 方法。 在 ADO 2.5 和更新版本中， **Execute** 方法的功能是為 ADO 2.1 中的相同方法提供的功能超集合。  
+>  **Execute21**方法是[ (RDS) 的 Execute 方法](./execute-method-rds.md)版本。 如果您需要使用 **Execute** 方法與 ADO 2.1 進行通訊，可以改為呼叫 **Execute21** 方法。 在 ADO 2.5 和更新版本中， **Execute** 方法的功能是為 ADO 2.1 中的相同方法提供的功能超集合。  
   
 ## <a name="applies-to"></a>套用至  
- [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 物件 (RDSServer)](./datafactory-object-rdsserver.md)

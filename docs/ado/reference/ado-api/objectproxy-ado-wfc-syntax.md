@@ -31,7 +31,7 @@ ms.locfileid: "88773997"
 ### <a name="call-method-adowfc-syntax"></a> (ADO/WFC 語法的 Call 方法)   
  在 ObjectProxy 所代表的伺服器上叫用方法。 （選擇性）方法引數可以傳遞為物件的陣列。  
   
-#### <a name="syntax"></a>語法  
+#### <a name="syntax"></a>Syntax  
   
 ```  
 public Object ObjectProxy.( String method )  

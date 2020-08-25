@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c24d7d5470ed4c78f74b78b38158113e3f4894
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7f994f29b41015d60912901100ac5b73c829e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440090"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770557"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 屬性範例 (VC++)
-此範例示範索引[鍵](../../../ado/reference/adox-api/key-object-adox.md)物件的[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性。 程式碼會附加新的 [資料表](../../../ado/reference/adox-api/table-object-adox.md) ，然後定義新的主要金鑰，將 **DeleteRule** 設定為 **adRICascade**。  
+此範例示範索引[鍵](./key-object-adox.md)物件的[DeleteRule](./deleterule-property-adox.md)屬性。 程式碼會附加新的 [資料表](./table-object-adox.md) ，然後定義新的主要金鑰，將 **DeleteRule** 設定為 **adRICascade**。  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -109,5 +109,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DeleteRule 屬性 (ADOX) ](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [DeleteRule 屬性 (ADOX) ](./deleterule-property-adox.md)   
+ [Key 物件 (ADOX)](./key-object-adox.md)

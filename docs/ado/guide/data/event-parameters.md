@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453430"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806857"
 ---
 # <a name="event-parameters"></a>事件參數
-每個事件處理常式都有一個狀態參數，可控制事件處理常式。 若為完整事件，此參數也會用來指出產生事件的作業成功或失敗。 大部分的完整事件也都有 error 參數，以提供可能發生之任何錯誤的相關資訊，以及一個或多個物件參數參考用來執行作業的 ADO 物件。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 事件包含 **命令**的物件參數、 **記錄集**，以及與事件相關聯的 **連接** 物件。 在下列 Microsoft® Visual Basic®範例中，您可以看到 pCommand、pRecordset 和 pConnection 物件，這些物件代表**Execute**方法所使用的**命令**、**記錄集**和**連接**物件。  
+每個事件處理常式都有一個狀態參數，可控制事件處理常式。 若為完整事件，此參數也會用來指出產生事件的作業成功或失敗。 大部分的完整事件也都有 error 參數，以提供可能發生之任何錯誤的相關資訊，以及一個或多個物件參數參考用來執行作業的 ADO 物件。 例如， [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) 事件包含 **命令**的物件參數、 **記錄集**，以及與事件相關聯的 **連接** 物件。 在下列 Microsoft® Visual Basic®範例中，您可以看到 pCommand、pRecordset 和 pConnection 物件，這些物件代表**Execute**方法所使用的**命令**、**記錄集**和**連接**物件。  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|要求取消即將進行的作業。|  
   
 ## <a name="error-parameter"></a>Error 參數  
- *Error*參數是 ADO [Error](../../../ado/reference/ado-api/error-object.md)物件的參考。 當 *Status* 參數設定為 **AdStatusErrorsOccurred**時， **Error** 物件會包含作業失敗原因的詳細資料。 如果與完整事件相關聯的事件已藉由將 *Status* 參數設定為 **adStatusCancel**來取消作業，則錯誤物件一律設定為 **adErrOperationCancelled**。  
+ *Error*參數是 ADO [Error](../../reference/ado-api/error-object.md)物件的參考。 當 *Status* 參數設定為 **AdStatusErrorsOccurred**時， **Error** 物件會包含作業失敗原因的詳細資料。 如果與完整事件相關聯的事件已藉由將 *Status* 參數設定為 **adStatusCancel**來取消作業，則錯誤物件一律設定為 **adErrOperationCancelled**。  
   
 ## <a name="object-parameter"></a>物件參數  
  每個事件都會接收一個或多個物件，代表與作業相關的物件。 例如， **ExecuteComplete** 事件會接收 **命令** 物件、 **記錄集** 物件和 **連接** 物件。  
@@ -88,7 +88,7 @@ End Sub
  相反地，您必須將 *adStatus* 設定為僅 **adStatusUnwantedEvent** 一次，以要求沒有 **adReason** 參數的事件處理常式停止接收事件通知。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO 事件具現化（依語言）](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [事件處理常式如何一起運作](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [事件種類](../../../ado/guide/data/types-of-events.md)
+ [ADO 事件處理常式摘要](./ado-event-handler-summary.md)   
+ [ADO 事件具現化（依語言）](./ado-event-instantiation-by-language.md)   
+ [事件處理常式如何一起運作](./how-event-handlers-work-together.md)   
+ [事件的類型](./types-of-events.md)

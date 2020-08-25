@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d57c984912b46e03f8e07c85d028680196cc67cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438960"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768157"
 ---
 # <a name="handler-property-example-vc"></a>Handler 屬性範例 (VC++)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 這個範例示範 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件 [處理常式](../../../ado/reference/rds-api/handler-property-rds.md) 屬性。  (如需詳細資料，請參閱 [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md) 。 )   
+ 這個範例示範 [RDS DataControl](./datacontrol-object-rds.md) 物件 [處理常式](./handler-property-rds.md) 屬性。  (如需詳細資料，請參閱 [DataFactory 自訂](../../guide/remote-data-service/datafactory-customization.md) 。 )   
   
  假設參數檔中的下列區段位於伺服器上 Msdfmap.ini：  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 您的程式碼看起來如下所示。 指派給 [SQL](../../../ado/reference/rds-api/sql-property.md) 屬性的命令將會符合 ***AuthorById*** 識別碼，並將會抓取作者 Michael O'Leary 的資料列。 雖然程式碼中的 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 屬性指定 Northwind 資料來源，但是 Msdfmap.ini *Connect* 區段將會覆寫該資料來源。 將 **DataControl** 物件 [記錄集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 屬性指派給中斷連接的 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，純粹是撰寫程式碼的便利性。  
+ 您的程式碼看起來如下所示。 指派給 [SQL](./sql-property.md) 屬性的命令將會符合 ***AuthorById*** 識別碼，並將會抓取作者 Michael O'Leary 的資料列。 雖然程式碼中的 [Connect](./connect-property-rds.md) 屬性指定 Northwind 資料來源，但是 Msdfmap.ini *Connect* 區段將會覆寫該資料來源。 將 **DataControl** 物件 [記錄集](./recordset-sourcerecordset-properties-rds.md) 屬性指派給中斷連接的 [記錄集](../ado-api/recordset-object-ado.md) 物件，純粹是撰寫程式碼的便利性。  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -130,27 +130,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler 屬性 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl 物件 (RDS) ](./datacontrol-object-rds.md)   
+ [Handler 屬性 (RDS)](./handler-property-rds.md)

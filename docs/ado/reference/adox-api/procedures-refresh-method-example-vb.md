@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9f2d7f3d8ceb8d6d62a65382ee7084059c29bf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0bc0bd69e4b184b91c1d337d6b9e1b9c490b3116
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439580"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769557"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh 方法範例 (VB)
-下列程式碼說明如何重新整理[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)的[程式](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。 這是在可以存取來自**目錄**的程式物件之前的必要[步驟](../../../ado/reference/adox-api/procedure-object-adox.md)。  
+下列程式碼說明如何重新整理[目錄](./catalog-object-adox.md)的[程式](./procedures-collection-adox.md)集合。 這是在可以存取來自**目錄**的程式物件之前的必要[步驟](./procedure-object-adox.md)。  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -56,6 +56,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADOX) 的目錄物件 ](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [程式集合 (ADOX) ](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [ (ADOX) 的目錄物件 ](./catalog-object-adox.md)   
+ [程式集合 (ADOX) ](./procedures-collection-adox.md)   
+ [Refresh 方法 (ADO)](../ado-api/refresh-method-ado.md)

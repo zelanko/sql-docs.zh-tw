@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438570"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767327"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 將指定的記錄集與連接字串所指定的資料庫同步處理，以便在 ADO 2.5 和更新版本中使用。  
@@ -68,6 +68,4 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *HandlerString*參數可以是 null。 在此情況下，會發生什麼情況取決於 RDS 伺服器的設定方式。 "MSDFMAP" 處理常式字串表示應使用 Microsoft 提供的處理常式 ( # A0) 。 "MASDFMAP" 處理常式字串 "sample.ini" 表示應使用 Msdfmap.dll 處理常式，並將引數 "sample.ini" 傳遞給處理常式。 Msdfmap.dll 接著會將引數解讀為使用 sample.ini 來檢查連接和查詢字串的方向。  
   
 ## <a name="applies-to"></a>套用至  
- [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory 物件 (RDSServer)](./datafactory-object-rdsserver.md)

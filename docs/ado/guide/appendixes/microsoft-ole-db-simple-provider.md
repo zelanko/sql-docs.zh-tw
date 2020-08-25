@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454020"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806530"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者總覽
-Microsoft OLE DB Simple Provider (OSP) 可讓 ADO 存取任何已使用 [OLE DB Simple provider (OSP) 工具](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)組撰寫提供者的資料。 簡單提供者旨在存取只需要基本 OLE DB 支援的資料來源，例如記憶體中的陣列或 XML 檔。
+Microsoft OLE DB Simple Provider (OSP) 可讓 ADO 存取任何已使用 [OLE DB Simple provider (OSP) 工具](/previous-versions/windows/desktop/ms715822(v=vs.85))組撰寫提供者的資料。 簡單提供者旨在存取只需要基本 OLE DB 支援的資料來源，例如記憶體中的陣列或 XML 檔。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到 OLE DB Simple Provider DLL，請將[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性的*Provider*引數設定為：
+ 若要連接到 OLE DB Simple Provider DLL，請將[ConnectionString](../../reference/ado-api/connectionstring-property-ado.md)屬性的*Provider*引數設定為：
 
 ```vb
 MSDAOSP
 ```
 
- 您也可以使用 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 屬性來設定或讀取這個值。
+ 您也可以使用 [Provider](../../reference/ado-api/provider-property-ado.md) 屬性來設定或讀取這個值。
 
  您可以使用已註冊的提供者名稱（由提供者寫入器所決定），連接到已註冊為完整 OLE DB 提供者的簡單提供者。
 
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO 會將額外的資料行 ($Text) 加入至階層中的每個 **記錄集** 。
 
- 如需 OLE DB 簡單提供者的詳細資訊，請參閱 [建立簡單的提供者](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 如需 OLE DB 簡單提供者的詳細資訊，請參閱 [建立簡單的提供者](/previous-versions/windows/desktop/ms721067(v=vs.85))。
 
 ## <a name="code-example"></a>程式碼範例
  下列 Visual Basic 程式碼示範如何開啟任意的 XML 檔案、建立階層式 **記錄集**，以及以遞迴方式將每個 **記錄集** 的每一筆記錄寫入至 [偵錯工具] 視窗。

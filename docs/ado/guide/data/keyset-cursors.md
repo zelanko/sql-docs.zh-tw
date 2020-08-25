@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453170"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805849"
 ---
 # <a name="keyset-cursors"></a>索引鍵集資料指標
 索引鍵集資料指標可在靜態和動態資料指標之間，提供偵測變更的功能。 如同靜態資料指標，它不一定會偵測結果集的成員資格和順序變更。 如同動態資料指標，它會偵測結果集中的資料列值變更。  
@@ -39,6 +39,6 @@ ms.locfileid: "88453170"
  索引鍵集驅動的資料指標很難正確使用，因為資料變更的敏感度取決於許多不同的情況，如上面所述。 但是，如果您的應用程式不在意並行更新，可以透過程式設計方式處理錯誤的索引鍵，而且必須直接存取某些索引資料列，索引鍵集驅動的資料指標可能會很適合您。 使用 **AdOpenKeyset CursorTypeEnum** 來指出您想要在 ADO 中使用索引鍵集資料指標。  
   
 ## <a name="see-also"></a>另請參閱  
- [順向資料指標](../../../ado/guide/data/forward-only-cursors.md)   
- [靜態資料指標](../../../ado/guide/data/static-cursors.md)   
- [動態資料指標](../../../ado/guide/data/dynamic-cursors.md)
+ [順向資料指標](./forward-only-cursors.md)   
+ [靜態資料指標](./static-cursors.md)   
+ [動態資料指標](./dynamic-cursors.md)

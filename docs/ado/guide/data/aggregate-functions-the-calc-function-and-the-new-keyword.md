@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453750"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806954"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
 資料成形支援下列功能。 指派給包含要操作之資料行的章節名稱是 *章節別名*。  
@@ -40,7 +40,7 @@ ms.locfileid: "88453750"
   
 |計算運算式|描述|  
 |---------------------------|-----------------|  
-|CALC (*運算式*) |計算任意運算式，但只在包含 CALC 函數之 **記錄集** 的資料列上。 使用這些 [Visual Basic for Applications (VBA) 函數](../../../ado/guide/data/visual-basic-for-applications-functions.md) 的任何運算式都是允許的。|  
+|CALC (*運算式*) |計算任意運算式，但只在包含 CALC 函數之 **記錄集** 的資料列上。 使用這些 [Visual Basic for Applications (VBA) 函數](./visual-basic-for-applications-functions.md) 的任何運算式都是允許的。|  
   
 |NEW 關鍵字|描述|  
 |-----------------|-----------------|  
@@ -74,6 +74,6 @@ ms.locfileid: "88453750"
  當新欄位的類型為 decimal (OLE DB、DBTYPE_DECIMAL 或在 ADO 中為 adDecimal) 時，您必須指定有效位數和小數位數的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
+ [資料成形範例](./data-shaping-example.md)   
+ [正式式圖形文法](./formal-shape-grammar.md)   
+ [一般 Shape 命令](./shape-commands-in-general.md)

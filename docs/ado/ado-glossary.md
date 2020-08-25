@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355454"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805553"
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題定義與 ADO 相關的詞彙。
@@ -133,7 +133,7 @@ ms.locfileid: "88355454"
 
  階層式記錄集：包含另一個**記錄集**的**記錄**集。 另請參閱資料成形（章節）。
 
- 如需詳細資訊，請參閱 [存取階層式記錄集中](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)的資料列。
+ 如需詳細資訊，請參閱 [存取階層式記錄集中](./guide/data/accessing-rows-in-a-hierarchical-recordset.md)的資料列。
 
  階層一般而言，階層是具有最上層層級和從屬層級的排名結構。 在 ADO 中，階層式 **記錄集** 是用來代表記錄與章節之間的父子式關聯性。 此外，在 ADO 中， **記錄** 和 **資料流程** 物件也可以用來存取階層式樹狀結構，例如資料夾和檔。 ADO MD **也包含階層** 物件，以表示 OLAP cube 中維度層級之間的關聯性。 另請參閱階層式記錄集、父子式關聯性、章節、樹狀結構。
 

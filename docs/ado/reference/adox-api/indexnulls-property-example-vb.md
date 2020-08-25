@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 527e510979afd81a5e90ea207027479cde5c5f63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba3aed53a3640ff76b2d46b221265d1505e020a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439880"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770147"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 屬性範例 (VB)
-此範例示範[索引](../../../ado/reference/adox-api/index-object-adox.md)的[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)屬性。 程式碼會建立新的索引，並根據使用者輸入 (，從名為 List1) 的清單方塊設定 **IndexNulls** 的值。 然後，**索引**會附加至*Northwind* [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)中的**Employees** [資料表](../../../ado/reference/adox-api/table-object-adox.md)。 新的**索引**會套用至以**Employees**資料表為基礎的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並開啟**記錄集**。 新記錄會新增到 **Employees** 資料表中，並在索引欄位中加上 **Null** 值。 這項新記錄是否會顯示，取決於 **IndexNulls** 屬性的設定。  
+此範例示範[索引](./index-object-adox.md)的[IndexNulls](./indexnulls-property-adox.md)屬性。 程式碼會建立新的索引，並根據使用者輸入 (，從名為 List1) 的清單方塊設定 **IndexNulls** 的值。 然後，**索引**會附加至*Northwind* [目錄](./catalog-object-adox.md)中的**Employees** [資料表](./table-object-adox.md)。 新的**索引**會套用至以**Employees**資料表為基礎的[記錄集](../ado-api/recordset-object-ado.md)，並開啟**記錄集**。 新記錄會新增到 **Employees** 資料表中，並在索引欄位中加上 **Null** 值。 這項新記錄是否會顯示，取決於 **IndexNulls** 屬性的設定。  
   
 ```  
 ' BeginIndexNullsVB  
@@ -110,5 +110,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADOX) 的索引物件 ](../../../ado/reference/adox-api/index-object-adox.md)   
- [IndexNulls 屬性 (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+ [ (ADOX) 的索引物件 ](./index-object-adox.md)   
+ [IndexNulls 屬性 (ADOX)](./indexnulls-property-adox.md)
