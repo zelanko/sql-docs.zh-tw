@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451840"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760068"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
 如果您是想要使用預設 RDS 支援的 IIS 伺服器系統管理員，但對使用者要求和存取權限有更大的控制權，您可能會想要撰寫自己的處理常式。  
@@ -30,12 +30,12 @@ ms.locfileid: "88451840"
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 介面  
- 這個介面有兩種方法： **GetRecordset** 和 **Reconnect**。 這兩種方法都需要將 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 屬性設定為 **adUseClient**。  
+ 這個介面有兩種方法： **GetRecordset** 和 **Reconnect**。 這兩種方法都需要將 [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) 屬性設定為 **adUseClient**。  
   
  這兩種方法都採用在 "**Handler =**" 關鍵字中的第一個逗號後面出現的引數。 例如， `"Handler=progid,arg1,arg2;"` 會傳遞的引數字串 `"arg1,arg2"` ，且 `"Handler=progid"` 會傳遞 null 引數。  
   
 ## <a name="getrecordset-method"></a>GetRecordset 方法  
- 這個方法會查詢資料來源，並使用提供的引數來建立新的 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件。 **記錄集**必須以**adLockBatchOptimistic**開啟，而且不得以非同步方式開啟。  
+ 這個方法會查詢資料來源，並使用提供的引數來建立新的 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件。 **記錄集**必須以**adLockBatchOptimistic**開啟，而且不得以非同步方式開啟。  
   
 ### <a name="arguments"></a>引數  
  ***conn***  連接字串。  
@@ -47,7 +47,7 @@ ms.locfileid: "88451840"
  ***ppRS***  應傳回 **記錄集** 的指標。  
   
 ## <a name="reconnect-method"></a>Reconnect 方法  
- 這個方法會更新資料來源。 它會建立新的 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件，並附加指定的 **記錄集**。  
+ 這個方法會更新資料來源。 它會建立新的 [連接](../../reference/ado-api/connection-object-ado.md) 物件，並附加指定的 **記錄集**。  
   
 ### <a name="arguments"></a>引數  
  ***conn***  連接字串。  
@@ -101,12 +101,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [了解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
-
+ [自訂檔案連接區段](./customization-file-connect-section.md)   
+ [自訂檔案記錄區段](./customization-file-logs-section.md)   
+ [自訂檔案 SQL 區段](./customization-file-sql-section.md)   
+ [自訂檔案 UserList 區段](./customization-file-userlist-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定](./required-client-settings.md)   
+ [了解自訂檔案](./understanding-the-customization-file.md)

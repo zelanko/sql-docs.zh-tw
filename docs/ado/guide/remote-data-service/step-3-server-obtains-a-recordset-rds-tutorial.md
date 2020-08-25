@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8da4957f44c481e2a89ca1c8c964880f1ca93fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22664ed2943800702bbb12afe6900c1ca9bac6bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451930"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759118"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3：伺服器取得資料錄集 (RDS 教學課程)
 伺服器程式會使用連接字串和命令文字來查詢資料來源中所需的資料列。 ADO 通常用來抓取此 **記錄集**，不過可以使用其他 Microsoft 資料存取介面（例如 OLE DB）。  
@@ -39,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟4：伺服器傳回記錄集 (RDS 教學課程) ](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
- [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [步驟4：伺服器傳回記錄集 (RDS 教學課程) ](./step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [RDS 教學課程 (VBScript)](./rds-tutorial-vbscript.md)

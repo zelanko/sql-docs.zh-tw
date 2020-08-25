@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362996"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092007"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87362996"
 > [!IMPORTANT]  
 >  在您部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之前，我們強烈建議您先閱讀本主題的每一節。  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 支援可用性群組的 .Net Hotfix  
- 根據您將搭配 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]元件和功能而定，可能會需要安裝下表中識別的其他 .Net Hotfix。 您可以依照任何順序安裝 Hotfix。  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 支援可用性群組的 .NET Hotfix  
+ 根據您將搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 元件與功能而定，可能需要安裝下表中識別的其他 .NET Hotfix。 您可以依照任何順序安裝 Hotfix。  
   
 |相依功能|Hotfix|連結|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347：[適用於 .Net 3.5 SP1 的 Hotfix 新增對 Always On 功能的支援](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .NET 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 與 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347：[適用於 .NET 3.5 SP1 的 Hotfix 新增對 Always On 功能的支援](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> 檢查清單：需求 (Windows 系統)  
@@ -162,7 +162,9 @@ ms.locfileid: "87362996"
   
     -   每個主要複本會針對每個主要資料庫使用 1 個記錄檔擷取執行緒。 此外，它會針對每個次要資料庫使用 1 個記錄檔傳送執行緒。 記錄檔傳送執行緒在 ~15 秒非使用狀態之後釋出。    
   
-    -   次要複本上的備份會在備份作業的持續時間內保留主要複本上的執行緒。  
+    -   次要複本上的備份會在備份作業的持續時間內保留主要複本上的執行緒。 
+
+-  SQL Server 2019 已針對經記憶體最佳化的可用性群組資料庫引進平行重做。 在 SQL Server 2016 與 2017 中，如果可用性群組中的資料庫也已進行記憶體最佳化，則磁碟型資料表不會使用平行重做。 
   
  如需詳細資訊，請參閱 [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式) (CCS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
   

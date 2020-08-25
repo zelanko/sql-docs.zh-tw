@@ -1,4 +1,5 @@
 ---
+description: Teradata 資料類型支援
 title: Teradata 資料類型支援 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4670d6cba5438a6e33afcd6bbfd87a230712bf7c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b6c628128423d835d90845a4ef85db28c8275ec3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425780"
 ---
 # <a name="data-type-support"></a>資料類型支援
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451880"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759886"
 ---
 # <a name="troubleshooting-rds"></a>對 RDS 進行疑難排解
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451880"
   
  如需特定錯誤或 RDS 問題的解決方案，請參閱這一節。 此章節包含下列主題。  
   
--   [在 Windows 2000 上設定 RDS](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [在 Windows 2000 上設定 RDS](./configuring-rds-on-windows-2000.md)  
   
--   [「網際網路伺服器錯誤：拒絕存取」](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   [「網際網路伺服器錯誤：拒絕存取」](./internet-server-error-access-denied.md)  
   
--   [RDS 傳回 "Stream Not Read" 錯誤](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS 傳回 "Stream Not Read" 錯誤](./rds-returns-stream-not-read-error.md)  
   
--   [具有讀取可重複隔離等級的鎖死](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [具有讀取可重複隔離等級的鎖死](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [確認 TempDB 有足夠空間](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [確認 TempDB 有足夠空間](./ensuring-sufficient-tempdb-space.md)  
   
--   [將記錄檔空間使用量降到最低](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [將記錄檔空間使用量降到最低](./minimizing-log-file-space-usage.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS 基本概念](./rds-fundamentals.md)

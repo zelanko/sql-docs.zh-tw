@@ -1,6 +1,6 @@
 ---
 title: VDI 備份規格 - Linux 上的 SQL Server
-description: SQL Server 備份虛擬裝置介面規格。
+description: 了解 Linux 上的 SQL Server 虛擬裝置介面 (VDI) 用戶端 SDK 所提供的介面。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1580977da984e84bd244166651330ab91665c774
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892282"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088973"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 用戶端 SDK 規格
 

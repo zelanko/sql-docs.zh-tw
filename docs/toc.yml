@@ -10112,8 +10112,8 @@
       items:
         - name: 教育性資源
           href: sql-server/educational-sql-resources.yml
-        - name: Microsoft Virtual Academy >>
-          href: 'https://mva.microsoft.com/product-training/sql-server'
+        - name: Microsoft Learn >>
+          href: 'https://docs.microsoft.com/learn/'
         - name: Channel 9 上的 SQL >>
           href: 'https://channel9.msdn.com/Search'
     - name: 説明

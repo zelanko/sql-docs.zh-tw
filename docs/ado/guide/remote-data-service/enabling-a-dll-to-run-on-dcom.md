@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452200"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759781"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>啟用 DLL 以在 DCOM 上執行
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452200"
   
      -或-  
   
-     將 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 物件匯入封裝中。  
+     將 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 物件匯入封裝中。  
   
 3.  **在建立者的進程** (程式庫應用程式) 中，將封裝的啟用屬性設定為。  
   
      若要使 .dll 可透過相同電腦上的 DCOM 和 IIS 來存取，您必須在 [元件服務] MMC 嵌入式管理單元中設定元件的啟用屬性。 當您 **在建立者的進程中**將屬性設為之後，您會發現登錄中的 **Inproc** 伺服器機碼已加入至元件服務的代理 .dll。  
   
  如需有關元件服務 (或 Microsoft 交易服務的詳細資訊，如果您使用 Windows NT) 以及如何執行這些步驟，請造訪 Microsoft Transaction Server 網站。
-
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2059538f43f4cc124f0841bd1d228019fa0a08e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45c57c1d91fb2919db7e5abd5de2fdd78551141e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440720"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777807"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName 屬性 (ADO MD)
 表示目前物件的明確名稱。  
@@ -37,14 +37,14 @@ ms.locfileid: "88440720"
   
 :::row:::
     :::column:::
-        [Dimension 物件 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
-        [Hierarchy 物件 (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [Dimension 物件 (ADO MD)](./dimension-object-ado-md.md)  
+        [Hierarchy 物件 (ADO MD)](./hierarchy-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Level 物件 (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
-        [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Level 物件 (ADO MD)](./level-object-ado-md.md)  
+        [Member 物件 (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>另請參閱  
- [Name 屬性 (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
+ [Name 屬性 (ADO MD)](./name-property-ado-md.md)

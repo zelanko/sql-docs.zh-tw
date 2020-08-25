@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f478a1e1c18e9182d2effe77d37c0c329ba22c54
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452250"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759832"
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案 Logs 區段
 [ **記錄** 檔] 區段包含記錄檔專案，此專案會指定在 **DataFactory**作業期間記錄錯誤之檔案的名稱。  
@@ -47,12 +47,10 @@ FileName
  記錄檔會包含每個錯誤的使用者名稱、HRESULT、日期和時間。  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [瞭解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [自訂檔案連接區段](./customization-file-connect-section.md)   
+ [自訂檔案 SQL 區段](./customization-file-sql-section.md)   
+ [自訂檔案 UserList 區段](./customization-file-userlist-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定](./required-client-settings.md)   
+ [瞭解自訂檔案](./understanding-the-customization-file.md)   
+ [撰寫您自己的自訂處理常式](./writing-your-own-customized-handler.md)

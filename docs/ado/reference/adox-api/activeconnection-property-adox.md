@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ef9ab4f077f4ec44b602a3d70d90b5b45f6b9f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ea35e9a1549c35a50ef7f15e8a3b84d1e31e056
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440648"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777767"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 屬性 (ADOX)
-指出[類別目錄](../../../ado/reference/adox-api/catalog-object-adox.md)所屬的 ADO[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
+指出[類別目錄](./catalog-object-adox.md)所屬的 ADO[連接](../ado-api/connection-object-ado.md)物件。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定 **連接** 物件或包含連接定義的 **字串** 。 傳回使用中的 **連接** 物件。  
@@ -39,18 +39,18 @@ ms.locfileid: "88440648"
  預設值為 null 物件參考。  
   
 ## <a name="applies-to"></a>套用至  
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog 物件 (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄 ActiveConnection 屬性範例 (VB) ](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [命令和 CommandText 屬性範例 (VB) ](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Connection Close 方法、Table Type 屬性範例 (VB) ](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Parameters 集合、Command 屬性範例 (VB) ](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [程式附加方法範例 (VB) ](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [程式 Delete 方法範例 (VB) ](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [程式 Refresh 方法範例 (VB) ](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Views 和 Fields 集合範例 (VB) ](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views 附加方法範例 (VB) ](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views 集合、CommandText 屬性範例 (VB) ](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views Refresh 方法範例 (VB) ](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [目錄 ActiveConnection 屬性範例 (VB) ](./catalog-activeconnection-property-example-vb.md)   
+ [命令和 CommandText 屬性範例 (VB) ](./command-and-commandtext-properties-example-vb.md)   
+ [Connection Close 方法、Table Type 屬性範例 (VB) ](./connection-close-method-table-type-property-example-vb.md)   
+ [Parameters 集合、Command 屬性範例 (VB) ](./parameters-collection-command-property-example-vb.md)   
+ [程式附加方法範例 (VB) ](./procedures-append-method-example-vb.md)   
+ [程式 Delete 方法範例 (VB) ](./procedures-delete-method-example-vb.md)   
+ [程式 Refresh 方法範例 (VB) ](./procedures-refresh-method-example-vb.md)   
+ [Views 和 Fields 集合範例 (VB) ](./views-and-fields-collections-example-vb.md)   
+ [Views 附加方法範例 (VB) ](./views-append-method-example-vb.md)   
+ [Views 集合、CommandText 屬性範例 (VB) ](./views-collection-commandtext-property-example-vb.md)   
+ [Views Refresh 方法範例 (VB) ](./views-refresh-method-example-vb.md)   
+ [Create 方法 (ADOX)](./create-method-adox.md)

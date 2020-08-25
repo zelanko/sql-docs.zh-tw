@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456813"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147739"
 ---
 # <a name="statistics"></a>統計資料
 
@@ -113,16 +113,25 @@ ORDER BY s.name;
     * 若資料表基數在評估統計資料時為 500 或更小的數值，將會在每 500 次修改之後更新。
     * 若資料表基數在評估統計資料時為超過 500 的數值，將會在每 500 + 20% 的修改次數之後更新。
 
-* 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt (1000 * 2000000) = 44721.359。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。 ?
+* 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt(1000 * 2000000) = 44721.359。 由於此變更，大型資料表上的統計資料會頻繁地更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。 ?
 
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低於 130 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低的動態統計資料更新閾值。此閾值會根據資料表中的資料列數目來進行調整。
+> 在 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，或在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 與更新版本[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)在 120 以下的資料庫中，請啟用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用遞減、動態統計資料更新閾值。
+
+您可以使用下列指導方針，在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的環境中啟用追蹤旗標 2371：
+
+ - 如果您未發現因統計資料過期造成的效能問題，則不需要啟用此追蹤旗標。
+ - 如果您是在 SAP 系統上，請啟用此追蹤旗標。  如需詳細資訊，請參閱此[部落格](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) \(英文\)。
+ - 如果您因為目前的自動更新未頻繁地觸發，而必須依賴夜間作業來更新統計資料，請考慮啟用追蹤旗標 2371 來減少閾值。
   
 在編譯查詢及執行快取查詢計劃之前，查詢最佳化工具會檢查是否有過期的統計資料。 在編譯查詢之前，查詢最佳化工具會使用查詢述詞中的資料行、資料表和索引檢視表來判斷哪些統計資料可能已過期。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。  
   
 AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。 此外，這個選項也會套用至篩選的統計資料。  
  
-如需控制 AUTO_UPDATE_STATISTICS 的詳細資訊，請參閱 [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](https://support.microsoft.com/help/2754171) \(機器翻譯\)。
+如果您希望以手動方式更新統計資料，您可以使用 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 來準確地追蹤資料表中已變更資料列的數目。
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  非同步統計資料更新選項 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項會處於關閉狀態，而查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。  

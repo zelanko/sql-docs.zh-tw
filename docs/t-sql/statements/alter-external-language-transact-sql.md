@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -9,16 +10,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67774a985646e9058bb5e2600f50c043498ea96d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a102301cfa1e168fff01473176e8b6787ade06dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479119"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 修改資料庫現有外部語言延伸模組中的內容。
 
@@ -105,6 +106,8 @@ ALTER EXTERNAL LANGUAGE language_name
 **平台**
 
 混合式作業系統案例需要此參數。 在混合式架構中，語言需要在每個平台註冊一次。 平台和語言名稱會是每種外部語言的唯一索引鍵。 如未指定任何平台，則假設為目前的作業系統。
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>備註
 

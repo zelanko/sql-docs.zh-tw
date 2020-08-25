@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0b9cf745ae30d11d85aeba1c916594e09392c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7500fd42ef02b974989488b70e668933aaa00cab
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451610"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760263"
 ---
 # <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
-指定當 [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 提供者在階層式記錄集中重新計算匯總和計算資料行時。  
+指定當 [MSDataShape](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 提供者在階層式記錄集中重新計算匯總和計算資料行時。  
   
- 這些常數只會與 **MSDataShape** 提供者和 **記錄集** 「**自動**重新計算」動態屬性搭配使用，而此屬性是在 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 中參考，並記載于適用于 OLE DB 檔的 [OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 或 [microsoft 資料成形服務的 microsoft 資料成形服務](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 中。  
+ 這些常數只會與 **MSDataShape** 提供者和 **記錄集** 「**自動**重新計算」動態屬性搭配使用，而此屬性是在 [ADO 動態屬性索引](./ado-dynamic-property-index.md) 中參考，並記載于適用于 OLE DB 檔的 [OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 或 [microsoft 資料成形服務的 microsoft 資料成形服務](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 中。  
   
 |常數|值|描述|  
 |--------------|-----------|-----------------|  

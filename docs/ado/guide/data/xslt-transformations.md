@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452480"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758958"
 ---
 # <a name="xslt-transformations"></a>XSLT 轉換
 XSLT 可以套用至產生的 XML，以將它轉換成另一種格式。 瞭解 ADO 中的 XML 格式有助於開發可將其轉換為更容易使用的格式的 XSLT 範本。  
@@ -54,4 +54,4 @@ XSLT 可以套用至產生的 XML，以將它轉換成另一種格式。 瞭解 
  XSLT 會將 ADO Save 方法所產生的 XML 資料流程轉換成 HTML 資料表，此資料表會顯示記錄集的每個欄位以及一個資料表標題。 資料表標題和資料列也會被指派不同的字型和色彩。  
   
 ## <a name="see-also"></a>另請參閱  
- [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保存記錄](./persisting-records-in-xml-format.md)

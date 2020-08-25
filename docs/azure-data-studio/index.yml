@@ -5,17 +5,17 @@ metadata:
   title: Azure Data Studio
   summary: 了解如何使用 Azure Data Studio 執行 SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook 等等。
   ms.prod: azure-data-studio
-  ms.technology: 
+  ms.technology: azure-data-studio
   ms.topic: landing-page
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: 403a4538e514b092041f39425e2b88418e8daa51
-  ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+  ms.openlocfilehash: 3f6de8718576c3bd5d29303a218d9d7fae6d7dc7
+  ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/24/2020
-  ms.locfileid: "87122354"
+  ms.lasthandoff: 08/21/2020
+  ms.locfileid: "88745958"
 landingContent:
 - title: 關於 Azure Data Studio
   linkLists:

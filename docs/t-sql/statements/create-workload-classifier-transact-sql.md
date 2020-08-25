@@ -1,4 +1,5 @@
 ---
+description: CREATE WORKLOAD 分類器 (Transact-SQL)
 title: CREATE WORKLOAD 分類器 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a130cc08ad7a8e04ca3faf0578ff1c4600783d07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444765"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 

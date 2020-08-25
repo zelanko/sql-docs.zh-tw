@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17ea6bc39986239f0dc7c16c245bc08807b3f207
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c8c47f4e5cd5235ee0289df27d31193db8a2e1d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451990"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759308"
 ---
 # <a name="running-the-address-book-sql-script"></a>執行通訊錄 SQL 指令碼
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ ms.locfileid: "88451990"
   
 3.  按一下 [ **載入 SQL 腳本** ]，然後流覽至 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
   
-4.  選取 Sampleemp 檔案。 按一下 **[開啟]** 。  
+4.  選取 Sampleemp 檔案。 按一下 [開啟]。  
   
 5.  按一下 [ **執行查詢** ] 按鈕， (工具列上的綠色箭號) 。  
   
@@ -63,13 +63,11 @@ ms.locfileid: "88451990"
   
 4.  按一下 [ **載入 SQL 腳本** ] 按鈕 (工具列上的開啟資料夾) 然後流覽至 c:\Platform SDK\Samples\DataAccess\RDS\AddressBook。  
   
-5.  選取 Sampleemp 檔案。 按一下 **[開啟]** 。  
+5.  選取 Sampleemp 檔案。 按一下 [開啟]。  
   
 6.  按一下 [ **執行查詢** ] 按鈕 (工具列上的綠色箭號) 或 **F5**。  
   
 7.  執行之後，請關閉 **查詢**、 **查詢分析器**和 **Enterprise Manager** 視窗。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行通訊錄範例應用程式](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [執行通訊錄應用程式範例](./running-the-address-book-sample-application.md)

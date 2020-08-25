@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 919ad2763a711382cc9f472f34c791807cdd29e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71bd5eb4ba0768f91ccf145933067164e668c942
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440641"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777757"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 程式碼範例：NumericScale 和 Precision 屬性範例 (VB)
-此範例示範資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件的[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[Precision](../../../ado/reference/adox-api/precision-property-adox.md)屬性。 此程式碼會顯示*Northwind*資料庫之 [**訂單詳細資料**] 資料表的值。  
+此範例示範資料[行](./column-object-adox.md)物件的[NumericScale](./numericscale-property-adox.md)和[Precision](./precision-property-adox.md)屬性。 此程式碼會顯示*Northwind*資料庫之 [**訂單詳細資料**] 資料表的值。  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -77,6 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行物件 (ADOX) ](../../../ado/reference/adox-api/column-object-adox.md)   
- [NumericScale 屬性 (ADOX) ](../../../ado/reference/adox-api/numericscale-property-adox.md)   
- [Precision 屬性 (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)
+ [資料行物件 (ADOX) ](./column-object-adox.md)   
+ [NumericScale 屬性 (ADOX) ](./numericscale-property-adox.md)   
+ [Precision 屬性 (ADOX)](./precision-property-adox.md)

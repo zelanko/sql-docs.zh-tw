@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (預覽)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807496"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091962"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -102,7 +102,7 @@ WITH
 - ADLS Gen2 的*外部位置*： https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Blob 端點適用於 ADLS Gen2，而且僅供回溯相容性之用。 將 **dfs** 端點用於 ADLS Gen2 以獲得最佳效能。
+> 為了提供回溯相容性，ADLS Gen2 可使用 Blob 端點。 使用 **Blob** 端點以獲得最佳效能。
 
 - *帳戶* - 儲存體帳戶名稱
 
@@ -139,10 +139,12 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* 會指定存取外部儲存體帳戶的驗證機制。 驗證方法為：
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure Blob 儲存體**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Azure Blob 儲存體**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*僅支援 Blob 端點
 
 使用 AAD 或公用儲存體帳戶進行驗證時，不需要指定 CREDENTIAL。 
 
@@ -397,7 +399,7 @@ WITH (
 ## <a name="faq"></a>常見問題集
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>相較於 PolyBase，COPY 命令的效能為何？
-COPY 命令是否會有更好的效能，需取決於您的工作負載。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 在預覽期間與我們的小組分享您的效能結果！ 如何：使用資料來源檢視精靈來定義資料來源檢視 (Analysis Services)sqldwcopypreview@service.microsoft.com
+COPY 命令是否會有更好的效能，需取決於您的工作負載。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 在預覽期間與我們的小組分享您的效能結果！ sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>COPY 命令載入 CSV 檔案的檔案分割指導方針為何？
 下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 如需簡單的檔案分割體驗，請參閱下列[文件](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) \(英文\)。 
@@ -429,7 +431,7 @@ COPY 命令是否會有更好的效能，需取決於您的工作負載。 為�
 COPY 命令將會在此日曆年度 (2020) 結束前正式推出。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>檔案的數目或大小是否有任何限制？
-檔案大小至少必須為 4MB。
+檔案的數目或大小沒有限制，為了獲得最佳效能，我們建議檔案至少為 4MB。
 
 
 請將任何意見反應或問題傳送至下列通訊群組清單： sqldwcopypreview@service.microsoft.com

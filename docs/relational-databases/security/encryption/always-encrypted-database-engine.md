@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472674"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216767"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 - 屬性為 `IDENTITY` 的資料行。  
 - 屬性為 `ROWGUIDCOL` 的資料行。  
 - 包含非 bin2 定序的字串 (`varchar`、`char` 等) 資料行。  
-- 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之非叢集索引金鑰的資料行。  
-- 為使用隨機加密資料行做為索引鍵資料行 (決定性加密資料行亦可) 之叢集索引金鑰的資料行。  
-- 為同時包含隨機加密與決定性加密資料行之全文檢索索引金鑰的資料行。  
+- 使用隨機化加密時，叢集和非叢集索引索引鍵的資料行 (支援確定性加密)。
+- 使用隨機化加密時，全文檢索索引索引鍵的資料行 (支援決定性加密)。  
 - 計算資料行。
 - 計算資料行所參考之資料行 (當運算式執行 Always Encrypted 不支援的作業)。  
 - 疏鬆資料行集合。  
-- 統計資料所參考的資料行。  
-- 使用別名類型的資料行。  
+- 使用隨機化加密時，統計資料所參考的資料行 (支援決定性加密)。  
+- 使用別名資料型別的資料行。  
 - 資料分割資料行。  
 - 包含預設條件約束的資料行。  
 - 使用隨機加密時，唯一條件約束所參考的資料行 (支援決定性加密)。  
 - 使用隨機加密時的主索引鍵資料行 (支援決定性加密)。  
 - 當使用隨機加密或使用決定性加密時 (如果已參考和參考資料行使用不同的索引鍵或演算法)，外部索引鍵條件約束中的參考資料行。  
 - 檢查條件約束所參考之資料行。  
-- 使用異動資料擷取之資料表中的資料行。  
+- 使用異動資料擷取來擷取/追蹤的資料行。  
 - 具有變更追蹤之資料表上的主索引鍵資料行。  
 - 已遮罩的資料行 (使用動態資料遮罩)。  
 - Stretch Database 資料表中的資料行。 (包含使用 [永遠加密] 進行加密之資料行的資料表可針對 Stretch 啟用。)  

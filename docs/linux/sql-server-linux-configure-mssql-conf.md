@@ -3,17 +3,17 @@ title: 在 Linux 上設定 SQL Server 設定
 description: 此文章說明如何使用 mssql-conf 工具，在 Linux 上設定 SQL Server 設定。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472184"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180007"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
 
@@ -42,6 +42,8 @@ ms.locfileid: "87472184"
 | [本機稽核目錄](#localaudit) | 設定目錄來新增本機稽核檔案。 |
 | [地區設定](#lcid) | 設定要針對 SQL Server 使用的地區設定。 |
 | [記憶體限制](#memorylimit) | 設定 SQL Server 的記憶體限制。 |
+| [網路設定](#network) | 適用於 SQL Server 的其他網路設定。 |
+| [Microsoft 分散式交易協調器](#msdtc) | 設定和疑難排解 Linux 上的 MSDTC。 |
 | [TCP 連接埠](#tcpport) | 變更 SQL Server 接聽連線所在的連接埠。 |
 | [TLS](#tls) | 設定傳輸層級安全性。 |
 | [追蹤旗標](#traceflags) | 設定服務即將使用的追蹤旗標。 |
@@ -72,6 +74,7 @@ ms.locfileid: "87472184"
 | [記憶體限制](#memorylimit) | 設定 SQL Server 的記憶體限制。 |
 | [Microsoft 分散式交易協調器](#msdtc) | 設定和疑難排解 Linux 上的 MSDTC。 |
 | [MLServices EULA](#mlservices-eula) | 接受適用於 mlservices 套件的 R 和 Python EULA。 只適用於 SQL Server 2019。|
+| [網路設定](#network) | 適用於 SQL Server 的其他網路設定。 |
 | [outboundnetworkaccess](#mlservices-outbound-access) |針對 [mlservices](sql-server-linux-setup-machine-learning.md) R、Python 及 Java 延伸模組啟用輸出網路存取。|
 | [TCP 連接埠](#tcpport) | 變更 SQL Server 接聽連線所在的連接埠。 |
 | [TLS](#tls) | 設定傳輸層級安全性。 |
@@ -107,6 +110,34 @@ ms.locfileid: "87472184"
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 為 Linux 上的 SQL Server 設定預設 Database Mail 設定檔
+
+**sqlpagent.databasemailprofile** 可讓您針對電子郵件警示設定預設的 DB Mail 設定檔。
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a name="sql-agent-error-logs"></a><a id="agenterrorlog"></a> SQL Agent 錯誤記錄檔
+
+**sqlpagent.errorlogfile** 和 **sqlpagent.errorlogginglevel** 設定可讓您分別設定 SQL Agent 記錄檔路徑和記錄層級。 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+SQL Agent 記錄層級是相當於各項的位元遮罩值：
+
+- 1 = 錯誤
+- 2 = 警告
+- 4 = 資訊
+
+如果您想要擷取所有層級，請使用 `7` 作為值。
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> 變更 SQL Server 定序
 
@@ -335,6 +366,7 @@ ms.locfileid: "87472184"
    sudo systemctl restart mssql-server
    ```
 
+`errorlog.numerrorlogs` 設定將可讓您指定在循環使用記錄之前所維護的錯誤記錄檔數目。
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 變更預設備份目錄位置
 
@@ -393,20 +425,13 @@ ms.locfileid: "87472184"
 
     下表列出可能的 **coredump.coredumptype** 值。
 
-    | 類型 | 說明 |
+    | 類型 | 描述 |
     |-----|-----|
     | **mini** | Mini 是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷程序中的執行緒和模組。 傾印僅包含主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或 Globals。 |
     | **miniplus** | MiniPlus 類似於 mini，但它包含額外的記憶體。 它瞭解 SQLPAL 和主機環境的內部，並將下列記憶體區域新增至傾印：</br></br> - 各種 Globals</br> - 所有高於 64TB 的記憶體</br> - 在 **/proc/$pid/maps** 中找到的所有具名區域</br> - 來自執行緒和堆疊的間接記憶體</br> - 執行緒資訊</br> - 相關聯的 Teb 和 Peb</br> - 模組資訊</br> - VMM 和 VAD 樹狀 |
     | **filtered** | Filtered 會使用以減法為基礎的設計，除非特別排除，否則會包含程序中的所有記憶體。 此設計瞭解 SQLPAL 和主機環境的內部，但不包括來自傾印的特定區域。
     | **full** | Full 是完整處理的傾印，其中包含位於 **/proc/$pid/maps** 的所有區域。 這不是由 **coredump.captureminiandfull** 設定所控制的。 |
 
-## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 為 Linux 上的 SQL Server 設定預設 Database Mail 設定檔
-
-**sqlpagent.databasemailprofile** 可讓您針對電子郵件警示設定預設的 DB Mail 設定檔。
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a name="high-availability"></a><a id="hadr"></a> 高可用性
 
 **hadr.hadrenabled** 選項會在您的 SQL Server 執行個體上啟用可用性群組。 下列命令藉由將 **hadr.hadrenabled** 設定為 1 來啟用可用性群組。 您必須重新啟動 SQL Server，才能使設定生效。
@@ -485,7 +510,14 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### <a name="additional-memory-settings"></a>其他記憶體設定
+
+下列選項可用來進行記憶體設定。
+
+|選項 |描述 |
+|--- |--- |
+| memory.disablememorypressure | SQL Server 可解除記憶體壓力。 值可以是 `true` 或 `false`。 |
+| memory.memory_optimized | 啟用或停用 SQL Server 經記憶體最佳化的功能：持續性記憶體檔案啟蒙、記憶體保護。 值可以是 `true` 或 `false`。 |
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> 設定 MSDTC
 
@@ -527,7 +559,6 @@ sudo systemctl restart mssql-server
 | distributedtransaction.tracefilepath | 應在其中儲存追蹤檔案的資料夾 |
 | distributedtransaction.turnoffrpcsecurity | 啟用或停用分散式交易的 RPC 安全性 |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> 接受 MLServices EULA
@@ -624,6 +655,22 @@ outboundnetworkaccess = 1
 
 如需使用 TLS 設定的範例，請參閱[在 Linux 上加密 SQL Server 連線](sql-server-linux-encrypted-connections.md)。
 
+## <a name="network-settings"></a><a id="network"></a> 網路設定
+
+請參閱[教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)，以取得透過 Linux 上的 SQL Server 使用 AD 驗證的完整資訊。
+
+下列選項是可使用 `mssql-conf` 來設定的其他網路設定。
+
+|選項 |描述 |
+|--- |--- |
+| network.disablesssd | 停用查詢 SSSD 的 AD 帳戶資訊並預設為 LDAP 呼叫。 值可以是 `true` 或 `false`。 |
+| network.enablekdcfromkrb5conf | 允許從 krb5.conf 查閱 KDC 資訊。 值可以是 `true` 或 `false`。 |
+| network.forcesecureldap | 強制使用 LDAPS 來連絡網域控制站。 值可以是 `true` 或 `false`。 |
+| network.ipaddress | 連入連線的 IP 位址。 |
+| network.kerberoscredupdatefrequency | 針對需要更新的 Kerberos 認證進行檢查之間的時間 (以秒為單位)。 值為整數。|
+| network.privilegedadaccount | 要用於 AD 驗證的特殊權限 AD 使用者。 值為 `<username>`。 如需詳細資訊，請參閱[教學課程：在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | 將 UNC 路徑對應到本機路徑。 例如： `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder` 。 |
+
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 啟用/停用追蹤旗標
 
 這個**追蹤旗標**選項會啟用或停用啟動 SQL Server 服務的追蹤旗標。 若要啟用/停用追蹤旗標，請使用下列命令：
@@ -676,7 +723,7 @@ outboundnetworkaccess = 1
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-請注意，此檔案中未顯示的任何設定都會使用其預設值。 下一節提供範例 **mssql.conf** 檔案。
+此檔案中未顯示的任何設定都會使用其預設值。 下一節提供範例 **mssql.conf** 檔案。
 
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf 格式

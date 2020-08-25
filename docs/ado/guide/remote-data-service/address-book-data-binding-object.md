@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9c9b8a4e64432b644b9d3bf66ce2f200f0c1de5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d2028a27c547d92903188c49e608dcc75b51fa27
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452340"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758618"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
-通訊錄的應用程式會使用 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 物件，可將 SQL Server 資料庫中的資料系結至視覺物件 (在此案例中，會在應用程式的用戶端 HTML 頁面中) DHTML 資料表。 事件驅動的 VBScript 程式邏輯使用 [RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 至：  
+通訊錄的應用程式會使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件，可將 SQL Server 資料庫中的資料系結至視覺物件 (在此案例中，會在應用程式的用戶端 HTML 頁面中) DHTML 資料表。 事件驅動的 VBScript 程式邏輯使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 至：  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -53,19 +53,17 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |參數|描述|  
 |---------------|-----------------|  
-|***CLASSID***|唯一的128位數位，可識別系統的內嵌物件類型。 此識別碼會保留在本機電腦的系統登錄中。 RDS 類別識別碼的 (**。DataControl** 物件，請參閱 [RDS。DataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 ) |  
+|***CLASSID***|唯一的128位數位，可識別系統的內嵌物件類型。 此識別碼會保留在本機電腦的系統登錄中。 RDS 類別識別碼的 (**。DataControl** 物件，請參閱 [RDS。DataControl 物件](../../reference/rds-api/datacontrol-object-rds.md)。 ) |  
 |***識別碼***|針對用來在程式碼中識別的内嵌物件，定義整個檔的識別碼。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>Rds。DataControl 標記參數  
- 下表描述 RDS 特定的參數 **。DataControl** 物件。 如需 RDS 的完整清單， (**。DataControl** 物件參數，以及執行這些參數的時機，請參閱 [RDS。DataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 )   
+ 下表描述 RDS 特定的參數 **。DataControl** 物件。 如需 RDS 的完整清單， (**。DataControl** 物件參數，以及執行這些參數的時機，請參閱 [RDS。DataControl 物件](../../reference/rds-api/datacontrol-object-rds.md)。 )   
   
 |參數|描述|  
 |---------------|-----------------|  
-|[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用的是 HTTP，此值會是前面加上的伺服器電腦名稱稱 `https://` 。|  
-|[連接](../../../ado/reference/rds-api/connect-property-rds.md)|提供 RDS 的必要連接資訊 **。DataControl** 以連接到 SQL Server。|  
-|[SQL](../../../ado/reference/rds-api/sql-property.md)|設定或傳回用來捕獲 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的查詢字串。|  
+|[伺服器](../../reference/rds-api/server-property-rds.md)|如果您使用的是 HTTP，此值會是前面加上的伺服器電腦名稱稱 `https://` 。|  
+|[CONNECT](../../reference/rds-api/connect-property-rds.md)|提供 RDS 的必要連接資訊 **。DataControl** 以連接到 SQL Server。|  
+|[SQL](../../reference/rds-api/sql-property.md)|設定或傳回用來捕獲 [記錄集](../../reference/ado-api/recordset-object-ado.md)的查詢字串。|  
   
 ## <a name="see-also"></a>另請參閱  
- [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
-
-
+ [通訊錄命令按鈕](./address-book-command-buttons.md)

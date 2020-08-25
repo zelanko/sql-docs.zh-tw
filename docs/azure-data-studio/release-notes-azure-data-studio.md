@@ -8,17 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/17/2020
-ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.date: 08/12/2020
+ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988562"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147199"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="august-2020"></a>2020 年 8 月
+
+2020 年 8 月 12 日 &nbsp; / &nbsp; 版本：1.21.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 新增 Notebook 功能 | &bull; &nbsp; 移動資料格位置 <br/> &bull; &nbsp; 將資料格轉換成文字資料格或程式碼資料格
+| Jupyter 書籍選擇器 | 使用者現在可以從 Github 版本中選擇 Jupyter 書籍，並在 Azure Data Studio 中順暢地開啟 |
+| 已將搜尋新增至 Notebooks Viewlet | 使用者可以輕鬆地在其筆記本與 Jupyter 叢書中搜尋內容 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed) \(英文\)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2020-hotfix"></a>2020 年 7月 (Hotfix)
 

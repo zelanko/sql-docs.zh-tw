@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e1e50fbfa6697f3f05a8cc9cf7a9ada98b9031
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d52b99182f34b5cefec46d210821dbcfb18388c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440700"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777877"
 ---
 # <a name="positions-collection-ado-md"></a>Positions 集合 (ADO MD)
-包含在軸上定義點的 [位置](../../../ado/reference/ado-md-api/position-object-ado-md.md) 物件。  
+包含在軸上定義點的 [位置](./position-object-ado-md.md) 物件。  
   
 ## <a name="remarks"></a>備註  
  **位置** 是標準的 ADO 集合。 使用集合的屬性和方法，您可以執行下列動作：  
   
--   使用 [Count](../../../ado/reference/ado-api/count-property-ado.md) 屬性取得集合中的物件數目。  
+-   使用 [Count](../ado-api/count-property-ado.md) 屬性取得集合中的物件數目。  
   
--   從集合中傳回具有預設 [專案](../../../ado/reference/ado-api/item-property-ado.md) 屬性的物件。  
+-   從集合中傳回具有預設 [專案](../ado-api/item-property-ado.md) 屬性的物件。  
   
--   使用 [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 方法，從提供者更新集合中的物件。  
+-   使用 [Refresh](../ado-api/refresh-method-ado.md) 方法，從提供者更新集合中的物件。  
   
  本節包含下列主題。  
   
--   [屬性、方法和事件](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
+-   [屬性、方法和事件](./positions-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的集格範例 ](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [軸物件 (ADO MD) ](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [資料格物件 (ADO MD) ](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Position 物件 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [ (VB) 的集格範例 ](./cellset-example-vb.md)   
+ [軸物件 (ADO MD) ](./axis-object-ado-md.md)   
+ [資料格物件 (ADO MD) ](./cell-object-ado-md.md)   
+ [Position 物件 (ADO MD)](./position-object-ado-md.md)

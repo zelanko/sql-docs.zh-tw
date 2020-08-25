@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452510"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758978"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式
 ADO 會針對其保存的 XML 資料流程使用 UTF-8 編碼。  
@@ -72,4 +72,4 @@ xmlns:z="#RowsetSchema">
  Data 區段有三個數據列，其中包含有關貨主的資訊。 如果是空的資料列集，資料區段可能是空的，但 \<rs:data> 必須有標記。 如果沒有任何資料，您就可以直接撰寫標記速記 \<rs:data/> 。 任何前面加上 "rs" 的標記，表示它位於 urn：架構-microsoft-com：資料列集所定義的命名空間中。  
   
 ## <a name="see-also"></a>另請參閱  
- [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [以 XML 格式保存記錄](./persisting-records-in-xml-format.md)

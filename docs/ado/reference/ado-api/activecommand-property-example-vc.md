@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451710"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759928"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 屬性範例 (VC++)
-此範例示範 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 屬性。  
+此範例示範 [ActiveCommand](./activecommand-property-ado.md) 屬性。  
   
- 會為副程式提供一個 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，而此物件的 **ActiveCommand** 屬性是用來顯示建立 **記錄集**的命令文字和參數。  
+ 會為副程式提供一個 [記錄集](./recordset-object-ado.md) 物件，而此物件的 **ActiveCommand** 屬性是用來顯示建立 **記錄集**的命令文字和參數。  
   
 ## <a name="example"></a>範例  
   
@@ -222,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 ActiveCommand 屬性 ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 ActiveCommand 屬性 ](./activecommand-property-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

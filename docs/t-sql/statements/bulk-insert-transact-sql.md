@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c76d2efccf6f9031d21b85b3bfd3aabed47708c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: d8d91f01faa2f8ce6e81579964d7027122cd8d38
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988377"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200798"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 ## <a name="logging-behavior"></a>記錄行為
 
- 如需大量匯入 SQL Server 所執行的資料列插入作業於於何時記錄到交易記錄的資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。 Azure SQL Database 不支援最低限度記錄。
+ 如需大量匯入 SQL Server 所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。 Azure SQL Database 不支援最低限度記錄。
 
 ## <a name="restrictions"></a><a name="Limitations"></a> 限制
 

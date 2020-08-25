@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452310"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758748"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "88452310"
   
 -   叫用伺服器程式。 將參數傳遞給識別資料來源的伺服器程式，以及要發出的命令。  (伺服器程式實際上是使用 ADO 來取得資料來源的存取權。 ADO 會使用其中一個指定的參數進行連接，然後發出另一個參數中所指定的命令。 )   
   
--   伺服器程式會從資料來源取得 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件。 （選擇性）在伺服器上處理 **記錄集** 物件。  
+-   伺服器程式會從資料來源取得 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件。 （選擇性）在伺服器上處理 **記錄集** 物件。  
   
 -   伺服器程式會將最終的 **記錄集** 物件傳回至用戶端應用程式。  
   
@@ -45,10 +45,8 @@ ms.locfileid: "88452310"
  最後，如果您的需求在兩者之間，則 ADO 現在支援自訂預設伺服器程式的行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 程式設計模型詳細資料](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [RDS 程式設計模型詳細資料](./rds-programming-model-in-detail.md)   
+ [RDS 案例](./rds-scenario.md)   
+ [RDS 教學課程](./rds-tutorial.md)   
+ [ (ADO) 的記錄集物件 ](../../reference/ado-api/recordset-object-ado.md)   
+ [RDS 使用方式與安全性](./rds-usage-and-security.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452280"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759876"
 ---
 # <a name="configuring-rds"></a>設定 RDS
 > [!IMPORTANT]
@@ -26,27 +26,25 @@ ms.locfileid: "88452280"
   
  若要有效率地執行 RDS，請務必熟悉您可使用的各種設定。 本章節包含 RDS 的執行安全性與擴充性的重要資訊。 請參閱下列主題，以取得設定您的電腦以使用 RDS 的相關資訊。  
   
--   [將來賓權限授與網頁伺服器電腦](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [將來賓權限授與網頁伺服器電腦](./granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [註冊自訂商務物件](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [註冊自訂商務物件](./registering-a-custom-business-object.md)  
   
--   [將商務物件標示為可安全編寫指令碼](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [將商務物件標示為可安全編寫指令碼](./marking-business-objects-as-safe-for-scripting.md)  
   
--   [在用戶端上註冊商務物件以用於 DOM](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
+-   [在用戶端上註冊商務物件以用於 DOM](./registering-business-objects-on-the-client-for-use-with-dcom.md)  
   
--   [設定 DCOM 資料流封送處理格式](../../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)  
+-   [設定 DCOM 資料流封送處理格式](./setting-dcom-stream-marshaling-format.md)  
   
--   [啟用 DLL 以在 DCOM 上執行](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)  
+-   [啟用 DLL 以在 DCOM 上執行](./enabling-a-dll-to-run-on-dcom.md)  
   
--   [在 IIS 上設定虛擬伺服器](../../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)  
+-   [在 IIS 上設定虛擬伺服器](./configuring-virtual-servers-on-iis.md)  
   
--   [保護 RDS 應用程式](../../../ado/guide/remote-data-service/securing-rds-applications.md)  
+-   [保護 RDS 應用程式](./securing-rds-applications.md)  
   
--   [為安全或不受限制模式設定 DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
+-   [為安全或不受限制模式設定 DataFactory](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [搭配 RDS 使用相關技術](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [為 RDS 疑難排解](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
-
+ [搭配 RDS 使用相關技術](./using-related-technologies-with-rds.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [對 RDS 進行疑難排解](./troubleshooting-rds.md)

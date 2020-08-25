@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440220"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770897"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close 方法、Table Type 屬性範例 (VC++)
-將 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 屬性 **設定為「不要」** ，「關閉」目錄。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件都將會是孤立的。 這些已快取之物件上的任何屬性仍可供使用，但嘗試讀取需要對提供者呼叫的屬性將會失敗。  
+將 [ActiveConnection](./activeconnection-property-adox.md) 屬性 **設定為「不要」** ，「關閉」目錄。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件都將會是孤立的。 這些已快取之物件上的任何屬性仍可供使用，但嘗試讀取需要對提供者呼叫的屬性將會失敗。  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -144,4 +144,4 @@ void CloseConnectionX() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection 屬性 (ADOX)](./activeconnection-property-adox.md)

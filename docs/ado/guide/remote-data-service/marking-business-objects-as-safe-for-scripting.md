@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 404efeb169291e8c29da95f5c4d7690ef8dfd6ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ebbf64deba331308826eb7fe31c4148fd95ad1f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452150"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759729"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>將商務物件標示為可安全編寫指令碼
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 為了協助確保安全的網際網路環境，您必須標記任何以 RDS 具現化的商務物件 [。](../../../ado/reference/rds-api/dataspace-object-rds.md) 以「安全的方式撰寫腳本」的空間物件 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 方法。 您必須確保在系統登錄的授權區域中將它們標示為如此，才可在 DCOM 中使用。  
+ 為了協助確保安全的網際網路環境，您必須標記任何以 RDS 具現化的商務物件 [。](../../reference/rds-api/dataspace-object-rds.md) 以「安全的方式撰寫腳本」的空間物件 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法。 您必須確保在系統登錄的授權區域中將它們標示為如此，才可在 DCOM 中使用。  
   
 > [!NOTE]
 >  標示為「安全的腳本」或「安全進行初始化」的商務物件可以透過網路上的任何人來具現化及初始化。 將商務物件標示為「安全的腳本」，並不會讓它安全。 請務必確定商務物件是以最高的安全性編寫程式碼，以確保這類物件不會針對機密資料呈現未受保護的存取點。  
@@ -45,5 +45,3 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  在最後一個步驟中，[應用程式安裝程式] 會建立 .htm 和 .cab 檔。 然後，您可以將這兩個檔案複製到目的電腦，然後按兩下 .htm 檔案以載入頁面，並正確地註冊伺服器。  
   
  由於商務物件預設會安裝在 Windows\System32\Occache 目錄中，因此請將它移至 Windows\System32 目錄，並變更**HKEY_CLASSES_ROOT 的 \clsid \\ **InprocServer32 登錄機 \<*MyActiveXGUID*> \\ **InprocServer32**碼，使其符合正確的路徑。
-
-

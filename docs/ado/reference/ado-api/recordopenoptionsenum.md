@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442450"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772307"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-指定用於開啟 [記錄](../../../ado/reference/ado-api/record-object-ado.md)的選項。 您可以使用或來結合這些值。  
+指定用於開啟 [記錄](./record-object-ado.md)的選項。 您可以使用或來結合這些值。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向提供者表示，一開始就不需要抓取與 **記錄** 相關聯的欄位，但在第一次嘗試存取欄位時可以取出這些欄位。 預設行為（以沒有此旗標表示）是要抓取所有 **記錄** 物件欄位。|  
 |**adDelayFetchStream**|0x4000|向提供者表示，一開始不需要抓取與 **記錄** 相關聯的預設資料流程。 預設行為（以沒有此旗標表示）是要抓取與 **記錄** 物件相關聯的預設資料流程。|  
@@ -39,4 +39,4 @@ ms.locfileid: "88442450"
  這些常數沒有 ADO/WFC 對等專案。  
   
 ## <a name="applies-to"></a>套用至  
- [Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Open 方法 (ADO Record)](./open-method-ado-record.md)

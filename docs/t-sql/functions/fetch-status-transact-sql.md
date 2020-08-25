@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;FETCH_STATUS (Transact-SQL)'
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310104"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,10 +36,12 @@ ms.locfileid: "85631715"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>傳回類型  
  **integer**  
   

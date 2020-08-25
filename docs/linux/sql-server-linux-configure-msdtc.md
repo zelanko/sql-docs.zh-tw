@@ -1,18 +1,18 @@
 ---
 title: 如何在 Linux 上設定 MSDTC
-description: 此文章提供在 Linux 上設定 MSDTC 的逐步解說。
+description: 在此文章中，了解如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSDTC)。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900112"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180014"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
 
@@ -36,15 +36,17 @@ MSDTC 針對 mssql-conf 公用程式使用兩個設定參數：
 
 如需有關這些設定及其他相關 MSDTC 設定的詳細資訊，請參閱[使用 mssql-conf 工具設定 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md)。
 
-## <a name="supported-msdtc-configurations"></a>支援的 MSDTC 設定
+## <a name="supported-transaction-standards"></a>支援的交易標準
 
 以下是支援的 MSDTC 設定：
 
-- 適用於 ODBC 提供者之針對 Linux 上 SQL Server 的 OLE-TX 分散式交易。
+| 交易標準 | 資料來源 | ODBC 驅動程式 | JDBC 驅動程式|
+|---|---|---|---|
+| OLE-TX 交易 | Linux 上的 SQL Server | 是 | 否|
+| XA 分散式交易 | 支援 XA 的 SQL Server、其他 ODBC 和 JDBC 資料來源 | 是 (需要 17.3 版或更新版本) | Yes |
+| 連結伺服器上的分散式交易 | SQL Server | 是 | 否
 
-- 使用 JDBC 和 ODBC 提供者之針對 Linux 上 SQL Server 的 XA 分散式交易。 針對要使用 ODBC 提供者來執行的 XA 交易，您必須使用 Microsoft ODBC Driver for SQL Server 17.3 版或更新版本。 如需詳細資訊，請參閱[了解 XA 交易](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)。
-
-- 連結伺服器上的分散式交易。
+如需詳細資訊，請參閱[了解 XA 交易](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC 設定步驟
 
@@ -165,7 +167,7 @@ sudo firewall-cmd --reload
 sudo netstat -tulpn | grep sqlservr
 ```
 
-您應該會看到類似以下的輸出：
+您應該會看到如下輸出：
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -200,11 +202,11 @@ Linux 上 SQL Server 的 MSDTC 預設不會在 RPC 通訊上使用驗證。 不�
 
 如果 Windows 作業系統上的用戶端需要使用 Linux 上的 SQL Server 登錄到分散式交易，它必須具有下列最低版本的 Windows 作業系統：
 
-| 作業系統 | 最小版本 | OS 組建 |
+| 作業系統 | 最小版本 | 作業系統組建 |
 |---|---|---|
 | [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 如需 Linux 上 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](sql-server-linux-overview.md)。

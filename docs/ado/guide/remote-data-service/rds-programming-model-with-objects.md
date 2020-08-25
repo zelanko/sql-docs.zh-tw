@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce5e13641afa757f2c0ccea4ec760c4fa70b3ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452110"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759638"
 ---
 # <a name="rds-programming-model-with-objects"></a>具有物件的 RDS 程式設計模型
 RDS 的目標是透過像是 IIS 的媒介來取得和更新資料來源。 程式設計模型會指定完成此目標所需的活動順序。 物件模型會指定其方法和屬性會影響程式設計模型的物件。  
@@ -29,11 +29,11 @@ RDS 的目標是透過像是 IIS 的媒介來取得和更新資料來源。 程�
   
  RDS 提供可執行下列動作順序的方法：  
   
--   指定要在伺服器上叫用的程式，並取得 (proxy) 從用戶端 (RDS 參考它的方法 [。](../../../ado/reference/rds-api/dataspace-object-rds.md)) 的空間。  
+-   指定要在伺服器上叫用的程式，並取得 (proxy) 從用戶端 (RDS 參考它的方法 [。](../../reference/rds-api/dataspace-object-rds.md)) 的空間。  
   
--   叫用伺服器程式。 將參數傳遞至識別資料來源的伺服器程式，以及要發出 (proxy 或 RDS 的命令 [。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)) 。  
+-   叫用伺服器程式。 將參數傳遞至識別資料來源的伺服器程式，以及要發出 (proxy 或 RDS 的命令 [。DataControl](../../reference/rds-api/datacontrol-object-rds.md)) 。  
   
--   伺服器程式會從資料來源取得 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，通常是使用 ADO。 （選擇性）在伺服器上處理 **記錄集** 物件 ([RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)) 。  
+-   伺服器程式會從資料來源取得 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件，通常是使用 ADO。 （選擇性）在伺服器上處理 **記錄集** 物件 ([RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)) 。  
   
 -   伺服器程式會將最終的 **記錄集** 物件傳回 (proxy) 的用戶端應用程式。  
   
@@ -42,13 +42,11 @@ RDS 的目標是透過像是 IIS 的媒介來取得和更新資料來源。 程�
 -   對 **記錄集** 物件所做的變更會傳送回伺服器，並用來更新 RDS (的資料來源 **。DataControl** 或 **RDSServer DataFactory**) 。  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 物件模型摘要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
- [DataControl 物件 (RDS) ](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory 物件 (RDSServer) ](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [ (RDS) 的空間物件 ](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [RDS 物件模型摘要](./rds-object-model-summary.md)   
+ [DataControl 物件 (RDS) ](../../reference/rds-api/datacontrol-object-rds.md)   
+ [DataFactory 物件 (RDSServer) ](../../reference/rds-api/datafactory-object-rdsserver.md)   
+ [ (RDS) 的空間物件 ](../../reference/rds-api/dataspace-object-rds.md)   
+ [RDS 案例](./rds-scenario.md)   
+ [RDS 教學課程](./rds-tutorial.md)   
+ [ (ADO) 的記錄集物件 ](../../reference/ado-api/recordset-object-ado.md)   
+ [RDS 使用方式與安全性](./rds-usage-and-security.md)

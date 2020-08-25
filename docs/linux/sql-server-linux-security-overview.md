@@ -1,6 +1,6 @@
 ---
 title: Linux 上的 SQL Server 安全性限制
-description: 本文描述 Linux 上的 SQL Server 限制。
+description: 了解 Linux 上的 SQL Server 限制，包括為何不支援使用儲存於 Azure Key Vault 中的金鑰及 Extensible Key Management。
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/12/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: f1820b54532a820a47babdaf79e28d1baa0f096b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 611afe6c02e979c7c9672d7d94f84844b8932cf6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895302"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088792"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux 上的 SQL Server 安全性限制
 

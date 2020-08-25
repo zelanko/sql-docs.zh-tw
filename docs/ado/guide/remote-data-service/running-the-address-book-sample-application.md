@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452000"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759348"
 ---
 # <a name="running-the-address-book-sample-application"></a>執行通訊錄應用程式範例
 > [!IMPORTANT]
@@ -43,8 +43,4 @@ ms.locfileid: "88452000"
 3.  然後，您可以嘗試通訊錄範例應用程式中的各種案例，例如根據他或她的電子郵件名稱搜尋人員、列出所有標題為 [Program Manager] 的人員，或編輯現有的記錄。 按一下 [ **尋找** ]，以所有可用的名稱填滿資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [通訊錄資料繫結物件](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [通訊錄資料繫結物件](./address-book-data-binding-object.md)

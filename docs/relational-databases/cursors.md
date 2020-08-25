@@ -1,4 +1,5 @@
 ---
+description: 資料指標 (SQL Server)
 title: 資料指標 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
@@ -19,12 +20,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4bec8b13cd060801e99e4c6cb842c2b0f38c25e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a26ba9a6d321de5b13277e52829286a4f3cfe13d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465489"
 ---
 # <a name="sql-server-cursors"></a>SQL Server 資料指標
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

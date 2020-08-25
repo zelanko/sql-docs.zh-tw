@@ -1,7 +1,7 @@
 ---
 title: 在雲端中開始使用 Linux 上的 SQL Server
 titleSuffix: SQL Server
-description: 本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server。
+description: 了解如何在所選擇雲端中的 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 或 Ubuntu 上安裝 SQL Server。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897540"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089024"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入門：在雲端中執行 SQL Server
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]

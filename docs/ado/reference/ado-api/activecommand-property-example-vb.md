@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451720"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759908"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 屬性範例 (VB)
-此範例示範 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 屬性。  
+此範例示範 [ActiveCommand](./activecommand-property-ado.md) 屬性。  
   
- 會為副程式提供一個 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件，而此物件的 **ActiveCommand** 屬性是用來顯示建立 **記錄集**的命令文字和參數。  
+ 會為副程式提供一個 [記錄集](./recordset-object-ado.md) 物件，而此物件的 **ActiveCommand** 屬性是用來顯示建立 **記錄集**的命令文字和參數。  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**常式僅提供**記錄集**物件，但是它必須列印建立**記錄集**的命令文字和參數。 這可以完成，因為 **記錄集** 物件的 **ActiveCommand** 屬性會產生相關聯的 [命令](../../../ado/reference/ado-api/command-object-ado.md) 物件。  
+ **ActiveCommandXprint**常式僅提供**記錄集**物件，但是它必須列印建立**記錄集**的命令文字和參數。 這可以完成，因為 **記錄集** 物件的 **ActiveCommand** 屬性會產生相關聯的 [命令](./command-object-ado.md) 物件。  
   
- **Command**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性會產生建立**記錄集**的參數化命令。 **Command**物件的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合會產生替代命令的參數預留位置 ( "**？**" 的值) 。  
+ **Command**物件的[CommandText](./commandtext-property-ado.md)屬性會產生建立**記錄集**的參數化命令。 **Command**物件的[Parameters](./parameters-collection-ado.md)集合會產生替代命令的參數預留位置 ( "**？**" 的值) 。  
   
  最後，會列印錯誤訊息或作者的名稱和識別碼。  
   
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 ActiveCommand 屬性 ](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [ (ADO) 的命令物件 ](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 ActiveCommand 屬性 ](./activecommand-property-ado.md)   
+ [ (ADO) 的命令物件 ](./command-object-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

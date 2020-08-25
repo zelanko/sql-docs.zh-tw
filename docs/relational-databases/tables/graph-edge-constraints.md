@@ -1,4 +1,5 @@
 ---
+description: 圖表邊緣條件約束
 title: 圖形邊緣條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 9a02f34464c19bd51af0e68a1385b223e1c9d669
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f1075c6128ae040b3f2b0cb80c167d77aca89e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419022"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
 
