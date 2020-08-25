@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453830"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806449"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件具現化：ADO 和 WFC
 ADO for Windows Foundation 類別 (ADO/WFC) 建基於 ADO 事件模型，並提供簡化的應用程式設計介面。 一般情況下，ADO/WFC 會攔截 ADO 事件、將事件參數合併為單一事件類別，然後呼叫您的事件處理常式。  
@@ -53,7 +53,7 @@ ADO for Windows Foundation 類別 (ADO/WFC) 建基於 ADO 事件模型，並提�
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     第一個引數是傳送事件 ([連接](../../../ado/reference/ado-api/connection-object-ado.md) 或 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)) 的物件類型，而第二個引數是 ADO/WFC 事件物件 (**ConnectionEvent** 或 **RecordsetEvent**) 。  
+     第一個引數是傳送事件 ([連接](../../reference/ado-api/connection-object-ado.md) 或 [記錄集](../../reference/ado-api/recordset-object-ado.md)) 的物件類型，而第二個引數是 ADO/WFC 事件物件 (**ConnectionEvent** 或 **RecordsetEvent**) 。  
   
      事件處理常式的簽章比 ADO 事件簡單得多。 不過，您仍然必須瞭解 ADO 事件模型，才能知道哪些參數適用于事件，以及如何回應。  
   
@@ -62,8 +62,8 @@ ADO for Windows Foundation 類別 (ADO/WFC) 建基於 ADO 事件模型，並提�
 7.  當您完成處理之後，請從 ADO/WFC 事件處理常式清單中移除處理常式。 使用具有名稱的方法，例如 **removeOn**_事件_ 名稱 (*處理常式*) 。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-WFC 語法索引](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [事件參數](../../../ado/guide/data/event-parameters.md)   
- [事件處理常式如何一起運作](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [事件種類](../../../ado/guide/data/types-of-events.md)
+ [ADO 事件處理常式摘要](./ado-event-handler-summary.md)   
+ [ADO-WFC 語法索引](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [事件參數](./event-parameters.md)   
+ [事件處理常式如何一起運作](./how-event-handlers-work-together.md)   
+ [事件的類型](./types-of-events.md)

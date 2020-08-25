@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ca7d66c7748658c5ba720b8664d824551da47bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa5ed351f150aa913a9a454f42bd11c9fcb7ac00
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453980"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806466"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 擴充功能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
- 適用于 ADO 的 Microsoft Visual C++ 延伸模組會將 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的欄位與 c/c + + 變數相關聯（或系結）。 每當系結 **記錄集** 的目前資料列變更時，就會將 **記錄集** 內的所有系結欄位複製到 C/c + + 變數。 必要時，複製的資料會轉換成 C/c + + 變數的宣告資料類型。
+ 適用于 ADO 的 Microsoft Visual C++ 延伸模組會將 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件的欄位與 c/c + + 變數相關聯（或系結）。 每當系結 **記錄集** 的目前資料列變更時，就會將 **記錄集** 內的所有系結欄位複製到 C/c + + 變數。 必要時，複製的資料會轉換成 C/c + + 變數的宣告資料類型。
 
  **IADORecordBinding**介面的**BindToRecordset**方法會將欄位系結至 c/c + + 變數。 **AddNew**方法會將新的資料列加入至系結的**記錄集**。 **Update**方法會在**記錄集**的新資料列中填入欄位，或以 C/c + + 變數的值來更新現有資料列中的欄位。
 
  **IADORecordBinding**介面是由**記錄集**物件所執行。 您不需要自行撰寫程式碼。
 
 ## <a name="binding-entries"></a>繫結項目
- 適用于 ADO 的 Visual C++ 延伸模組會將 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的欄位對應至 c/c + + 變數。 欄位和變數之間的對應定義稱為系結 *專案*。 宏提供數值、固定長度和可變長度資料的系結專案。 系結專案和 C/c + + 變數是在衍生自 Visual C++ Extensions 類別 **CADORecordBinding**的類別中宣告。 **CADORecordBinding**類別是由系結專案宏在內部定義。
+ 適用于 ADO 的 Visual C++ 延伸模組會將 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件的欄位對應至 c/c + + 變數。 欄位和變數之間的對應定義稱為系結 *專案*。 宏提供數值、固定長度和可變長度資料的系結專案。 系結專案和 C/c + + 變數是在衍生自 Visual C++ Extensions 類別 **CADORecordBinding**的類別中宣告。 **CADORecordBinding**類別是由系結專案宏在內部定義。
 
- ADO 會在內部將這些宏的參數對應至 OLE DB **DBBINDING** 結構，並建立 OLE DB **存取** 子物件來管理欄位和變數之間的資料移動和轉換。 OLE DB 定義的資料由三個部分組成：儲存資料的 *緩衝區* ;指出欄位是否成功儲存在緩衝區中，或如何將變數還原至欄位的 *狀態* 。以及資料的 *長度* 。 如需詳細資訊，請參閱 OLE DB 程式設計人員參考中的 [取得和設定資料 (OLE DB) ](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369) (。 ) 
+ ADO 會在內部將這些宏的參數對應至 OLE DB **DBBINDING** 結構，並建立 OLE DB **存取** 子物件來管理欄位和變數之間的資料移動和轉換。 OLE DB 定義的資料由三個部分組成：儲存資料的 *緩衝區* ;指出欄位是否成功儲存在緩衝區中，或如何將變數還原至欄位的 *狀態* 。以及資料的 *長度* 。 如需詳細資訊，請參閱 OLE DB 程式設計人員參考中的 [取得和設定資料 (OLE DB) ](/previous-versions/windows/desktop/ms713700(v=vs.85)) (。 ) 
 
 ## <a name="header-file"></a>標頭檔案
  在您的應用程式中包含下列檔案，以便使用適用于 ADO 的 Visual C++ 延伸模組：
@@ -55,7 +55,7 @@ ms.locfileid: "88453980"
 
 3.  在您的應用程式中，建立衍生自 **CADORecordBinding**之類別的實例。 從**記錄集**取得**IADORecordBinding**介面。 然後呼叫 **BindToRecordset** 方法，將 **記錄集** 欄位系結至 C/c + + 變數。
 
- 如需詳細資訊，請參閱 [Visual C++ 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)。
+ 如需詳細資訊，請參閱 [Visual C++ 擴充功能範例](./visual-c-extensions-example.md)。
 
 ## <a name="interface-methods"></a>介面方法
  **IADORecordBinding**介面有三個方法： **BindToRecordset**、 **AddNew**和**Update**。 每個方法的唯一引數是衍生自 **CADORecordBinding**之類別實例的指標。 因此， **AddNew** 和 **Update** 方法無法指定其 ADO 方法 namesakes 的任何參數。
@@ -67,13 +67,13 @@ ms.locfileid: "88453980"
 BindToRecordset(CADORecordBinding *binding)
 ```
 
- **AddNew**方法會叫用其同名（ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法），以將新的資料列加入至**記錄集**。
+ **AddNew**方法會叫用其同名（ADO [AddNew](../../reference/ado-api/addnew-method-ado.md)方法），以將新的資料列加入至**記錄集**。
 
 ```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
- **Update**方法會叫用其同名（ADO [Update](../../../ado/reference/ado-api/update-method.md)方法）來更新**記錄集**。
+ **Update**方法會叫用其同名（ADO [Update](../../reference/ado-api/update-method.md)方法）來更新**記錄集**。
 
 ```cpp
 Update(CADORecordBinding *binding)
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  系統會為固定長度的資料（例如 **adDate** 或 **adBoolean**）提供宏系列;數值資料，例如 **adTinyInt**、 **adInteger**或 **adDouble**;和可變長度的資料，例如 **adChar**、 **adVarChar** 或 **adVarBinary**。 除了 **adVarNumeric**以外的所有數數值型別也是固定長度的類型。 每個系列都有一組不同的參數，因此您可以排除不感興趣的系結資訊。
 
- 如需詳細資訊，請參閱 OLE DB 程式設計人員參考的 [附錄 A：資料類型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)。
+ 如需詳細資訊，請參閱 OLE DB 程式設計人員參考的 [附錄 A：資料類型](/previous-versions/windows/desktop/ms723969(v=vs.85))。
 
 ### <a name="begin-binding-entries"></a>開始系結專案
  **BEGIN_ADO_BINDING** (*類別*) 
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*類別*|定義系結專案和 C/c + + 變數的類別。|
 |*序*|與 C/c + + 變數對應之 **記錄集** 欄位的序數，從1開始計算。|
-|*DataType*|C/c + + 變數的相等 ADO 資料類型 (如需有效資料類型的清單，請參閱 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)) 。 必要時，[ **記錄集** ] 欄位的值將會轉換為此資料類型。|
+|*DataType*|C/c + + 變數的相等 ADO 資料類型 (如需有效資料類型的清單，請參閱 [DataTypeEnum](../../reference/ado-api/datatypeenum.md)) 。 必要時，[ **記錄集** ] 欄位的值將會轉換為此資料類型。|
 |*Buffer*|將儲存 **記錄集** 欄位之 C/c + + 變數的名稱。|
 |*大小*|*緩衝區*的大小上限（以位元組為單位）。 如果 *緩衝區* 將包含可變長度的字串，則允許空間供終止的零使用。|
 |*狀態*|變數的名稱，這個變數會指出 *緩衝區* 的內容是否有效，以及是否成功將欄位轉換成 *DataType* 。<br /><br /> 此變數最重要的兩個值為 **adFldOK**，表示轉換成功; **adFldNull**，這表示欄位的值會是類型 VT_Null 的變異數，而不只是空的。<br /><br /> *狀態*的可能值會在下一個表格中列出：「狀態值」。|
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  設定資料時，可能會將 *狀態* 設定為 **adFldNull** ，以指出 **記錄集** 欄位應該設定為 null。
 
-|常數|值|描述|
+|持續性|值|描述|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|傳回非 null 的域值。|
 |**adFldBadAccessor**|1|系結無效。|
@@ -147,4 +147,4 @@ Update(CADORecordBinding *binding)
 |**adFldDefault**|13|更新時，會使用預設值。|
 
 ## <a name="see-also"></a>另請參閱
- [Visual C++ 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ 延伸模組標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Visual C++ 擴充功能範例](./visual-c-extensions-example.md) [Visual C++ 延伸模組標頭](./visual-c-extensions-header.md)

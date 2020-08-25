@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442060"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777417"
 ---
 # <a name="sort-property"></a>Sort 屬性
-指出一或多個功能變數名稱（ [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 的排序依據），以及每個欄位是否以遞增或遞減順序排序。  
+指出一或多個功能變數名稱（ [記錄集](./recordset-object-ado.md) 的排序依據），以及每個欄位是否以遞增或遞減順序排序。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回 **字串** 值，這個值表示要在 **記錄集中** 排序的功能變數名稱。 每個名稱都是以逗號分隔，並選擇性地在後面加上空白和關鍵字 **ASC**，這會以遞增順序排序欄位，或 **DESC**，以遞減順序排序欄位。 依預設，如果未指定關鍵字，則會以遞增順序排序欄位。  
   
 ## <a name="remarks"></a>備註  
- 此屬性需要將 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 屬性設定為 **adUseClient**。 如果索引不存在，就會為 **Sort** 屬性中指定的每個欄位建立暫存索引。  
+ 此屬性需要將 [CursorLocation](./cursorlocation-property-ado.md) 屬性設定為 **adUseClient**。 如果索引不存在，就會為 **Sort** 屬性中指定的每個欄位建立暫存索引。  
   
  排序作業很有效率，因為資料不會實際重新排列，而是以索引所指定的順序來存取。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88442060"
  沒有欄位可以命名為 "ASC" 或 "DESC"，因為這些名稱與關鍵字 **ASC** 和 **DESC**相衝突。 您可以在傳回**記錄集**的查詢中使用**AS**關鍵字，建立具有衝突名稱之欄位的別名。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的 Sort 屬性範例 ](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort 屬性範例 (VC + +) ](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [優化屬性-動態 (ADO) ](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [SortColumn 屬性 (RDS) ](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection 屬性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [ (VB) 的 Sort 屬性範例 ](./sort-property-example-vb.md)   
+ [Sort 屬性範例 (VC + +) ](./sort-property-example-vc.md)   
+ [優化屬性-動態 (ADO) ](./optimize-property-dynamic-ado.md)   
+ [SortColumn 屬性 (RDS) ](../rds-api/sortcolumn-property-rds.md)   
+ [SortDirection 屬性 (RDS)](../rds-api/sortdirection-property-rds.md)

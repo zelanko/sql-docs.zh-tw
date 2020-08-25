@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f372951375954a4ed93213cc7cbfd7bc99ef1ecf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a047e28a701e242276255121c33c046537525bf7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453480"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806890"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>中斷並重新連線資料錄集
 ADO 中最強大的功能之一，就是從資料來源開啟用戶端記錄集，然後中斷記錄集與資料來源的連接。 當記錄集中斷連接之後，就可以關閉資料來源的連接，藉此釋放用來維護它的伺服器資源。 您可以在記錄集中斷連接時，繼續查看和編輯記錄集內的資料，稍後再重新連接到資料來源，並以批次模式傳送您的更新。  
@@ -28,4 +28,4 @@ ADO 中最強大的功能之一，就是從資料來源開啟用戶端記錄集�
  當我們討論記錄集持續性以解決需要在用戶端電腦未連線到網路的情況下，將記錄集中的資料提供給應用程式的案例時，我們將會使用此區段中的中斷連接記錄集。  
   
 ## <a name="see-also"></a>另請參閱  
- [批次模式](../../../ado/guide/data/batch-mode.md)
+ [批次模式](./batch-mode.md)

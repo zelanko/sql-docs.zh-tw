@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7772a1c8583619288177dd5115f532b6d51532d9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453700"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806372"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>以 Connection 物件方法的形式來呼叫預存程序
 您可以呼叫預存程式，就像是相關聯開啟 **連接** 物件上的原生方法一樣。 這類似于在 **連接** 物件上呼叫指名的命令。  
@@ -80,4 +80,4 @@ Set objComm = Nothing
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection 物件 (ADO)](../../reference/ado-api/connection-object-ado.md)

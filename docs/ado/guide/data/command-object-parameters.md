@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2e2cd8da9522c7aead905cc0c19debe132faf4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81fd1df9c0c7a49cc1b6b9e5bc804b905bd6294f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453670"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806339"
 ---
 # <a name="command-object-parameters"></a>Command 物件參數
-上一個主題所討論的 [是建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 在下一個範例中，已將 SQL 命令參數化，就會顯示更有趣的 [命令](../../../ado/reference/ado-api/command-object-ado.md) 物件用法。 這項修改可讓您重複使用命令，並每次傳遞不同的參數值。 因為**Command**物件上的 [[備妥屬性](../../../ado/reference/ado-api/prepared-property-ado.md)] 屬性設定為 [ **true**]，所以在第一次執行時，ADO 會要求提供者先編譯[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)中指定的命令。 它也會將編譯的命令保留在記憶體中。 這會讓命令在第一次執行時稍微變慢，因為準備它所需的額外負荷，但每次呼叫命令之後，效能就會提升。 因此，只有在使用的命令超過一段時間時，才應該準備好這些命令。  
+上一個主題所討論的 [是建立和執行簡單的命令](./creating-and-executing-a-simple-command.md)。 在下一個範例中，已將 SQL 命令參數化，就會顯示更有趣的 [命令](../../reference/ado-api/command-object-ado.md) 物件用法。 這項修改可讓您重複使用命令，並每次傳遞不同的參數值。 因為**Command**物件上的 [[備妥屬性](../../reference/ado-api/prepared-property-ado.md)] 屬性設定為 [ **true**]，所以在第一次執行時，ADO 會要求提供者先編譯[CommandText](../../reference/ado-api/commandtext-property-ado.md)中指定的命令。 它也會將編譯的命令保留在記憶體中。 這會讓命令在第一次執行時稍微變慢，因為準備它所需的額外負荷，但每次呼叫命令之後，效能就會提升。 因此，只有在使用的命令超過一段時間時，才應該準備好這些命令。  
   
 ```  
 'BeginManualParamCmd  

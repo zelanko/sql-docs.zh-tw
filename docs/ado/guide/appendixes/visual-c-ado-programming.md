@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453950"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806769"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
 ADO API 參考描述 ADO 應用程式開發介面的功能 (API) 使用類似 Microsoft Visual Basic 的語法。 雖然預期的物件是所有使用者，但 ADO 程式設計人員採用不同的語言，例如 Visual Basic、Visual C++ (，不論是否有 **#import** 指示詞) ，以及 ADO/WFC 類別封裝 (的 Visual j + +) 。  
@@ -29,7 +29,7 @@ ADO API 參考描述 ADO 應用程式開發介面的功能 (API) 使用類似 Mi
 > [!NOTE]
 > Microsoft 已結束支援2004中的 Visual c + +。
 
- 為了因應這項多樣性， [Visual C++ 語法索引的 ADO](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) 會提供 Visual C++ 的語言特定語法，其中包含 API 參考中功能、參數、例外行為等的一般描述連結。  
+ 為了因應這項多樣性， [Visual C++ 語法索引的 ADO](./using-ado-with-microsoft-visual-c.md) 會提供 Visual C++ 的語言特定語法，其中包含 API 參考中功能、參數、例外行為等的一般描述連結。  
   
  ADO 是使用 COM (元件物件模型) 介面所執行。 不過，程式設計人員可以更輕鬆地使用某些程式設計語言中的 COM，而非其他程式設計語言。 例如，幾乎所有使用 COM 的詳細資料都是以隱含方式針對 Visual Basic 程式設計人員處理，而 Visual C++ 程式設計人員必須親自參與這些細節。  
   
@@ -205,7 +205,7 @@ pRecordset->NextRecordset(NULL);
   
  請記住，這些是 ADO 錯誤：由於 ADO 作業失敗所造成。 基礎提供者所傳回的錯誤會在**連接**物件**錯誤**集合中顯示為**錯誤**物件。  
   
- **#Import**指示詞只會針對在 ADO 中宣告的方法和屬性建立錯誤處理常式。 不過，您可以藉由撰寫自己的錯誤檢查宏或內嵌函式，來利用這個相同的錯誤處理機制。 如需範例，請參閱下列各節中的主題、 [Visual C++ 擴充](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)功能或程式碼。  
+ **#Import**指示詞只會針對在 ADO 中宣告的方法和屬性建立錯誤處理常式。 不過，您可以藉由撰寫自己的錯誤檢查宏或內嵌函式，來利用這個相同的錯誤處理機制。 如需範例，請參閱下列各節中的主題、 [Visual C++ 擴充](./visual-c-extensions-for-ado.md)功能或程式碼。  
   
 ## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual C++ Visual Basic 慣例的對應專案  
  以下是 ADO 檔中數個慣例的摘要，在 Visual Basic 中撰寫程式碼，以及 Visual C++ 中的對應專案。  
@@ -327,7 +327,7 @@ End Sub
   
  下列 Visual C++ 範例示範如何使用與 **_variant_t**搭配使用的**SafeArray** 。  
   
-#### <a name="notes"></a>注意  
+#### <a name="notes"></a>備註  
  下列附注對應到程式碼範例中的批註區段。  
   
 1.  同樣地，TESTHR ( # A1 內嵌函式定義為利用現有的錯誤處理機制。  
@@ -436,7 +436,7 @@ End Sub
   
  此 Visual C++ 範例示範**Get** / **Put** / **PutRef**_屬性_。  
   
-#### <a name="notes"></a>注意  
+#### <a name="notes"></a>備註  
  下列附注對應到程式碼範例中的批註區段。  
   
 1.  這個範例會使用兩種形式的遺漏字串引數：明確的常數、 **strMissing**，以及編譯器將用來建立**開啟**方法範圍所存在之暫時 **_bstr_t**的字串。  
@@ -555,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>使用 (IDispatch * ) 轉換 ADO 物件指標  
  下列 Visual C++ 範例將示範如何使用 (IDispatch * ) 來轉換 ADO 物件指標。  
   
-#### <a name="notes"></a>注意  
+#### <a name="notes"></a>備註  
  下列附注對應到程式碼範例中的批註區段。  
   
 1.  以明確編碼的**Variant**指定開啟的**連接**物件。 將其轉換為 (IDispatch \*) ，以便叫用正確的函式。 此外，請將第二個 **_variant_t** 參數明確設定為預設值 **true**，因此當 **Recordset：： Open** 作業結束時，物件參考計數將會是正確的。  

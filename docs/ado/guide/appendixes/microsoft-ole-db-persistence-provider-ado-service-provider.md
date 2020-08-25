@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454110"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806603"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者總覽
-Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件儲存至檔案中，並在稍後從檔案還原該 **記錄集** 物件。 系統會保留架構資訊、資料和暫止的變更。
+Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件儲存至檔案中，並在稍後從檔案還原該 **記錄集** 物件。 系統會保留架構資訊、資料和暫止的變更。
 
  您可以將 **記錄集** 儲存在專屬的 Advanced Table 資料表中， (ADTG) 格式或 open 可延伸標記語言 (XML)  (XML) 格式。
 
@@ -47,9 +47,9 @@ Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../../ado/referen
 
  目前，只能儲存參數化階層式 **記錄集** 物件。
 
- 如需持續儲存 **記錄集** 物件的詳細資訊，請參閱 [記錄集持續](../../../ado/guide/data/more-about-recordset-persistence.md)性。
+ 如需持續儲存 **記錄集** 物件的詳細資訊，請參閱 [記錄集持續](../data/more-about-recordset-persistence.md)性。
 
  當資料流程用來開啟**記錄集時，** 不應該指定**Open**方法的*Source*參數以外的任何參數。
 
 ## <a name="see-also"></a>另請參閱
-[Microsoft OLE DB 持續性提供者 (ADO 服務提供者) ](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Microsoft OLE DB 持續性提供者 (ADO 服務提供者) ]()

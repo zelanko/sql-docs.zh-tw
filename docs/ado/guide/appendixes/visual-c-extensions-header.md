@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3793049d9fa1f86dd9aa6f928ffe6003882a1e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453920"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806734"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
 下列標頭 **icrsint**會詳細說明允許用戶端將欄位從 **記錄集** 取出至衍生自 **CADORecordBinding**之類別中所定義變數的介面。 您必須針對想要存取的每個欄位指定 ADO 系結宏。  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual C++ 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [使用 Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Visual C++ 擴充功能範例](./visual-c-extensions-example.md)   
+ [使用 Visual C++ Extensions](./using-visual-c-extensions.md)

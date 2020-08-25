@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453110"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805668"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業
 針對非參數化命令，會執行所有提供者命令，並在命令執行期間建立 **記錄集** 。 如果命令是以同步方式執行，則會完整填入所有 **記錄集** 。 如果選取了非同步擴展模式，則 **記錄集** 的填入狀態將取決於擴展模式和 **記錄集**的大小。  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  當您存取章節資料行中的參考時，ADO 會自動抓取參考所表示的 **記錄集** 。 請注意，在非參數化命令中，雖然已抓取整個子 **記錄集** ，但該章節只會顯示資料列的子集。  
   
- 如果附加的資料行沒有 *章節別名*，就會自動產生名稱。 資料行的 [欄位](../../../ado/reference/ado-api/field-object.md) 物件將會附加至 **記錄集** 物件的 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 集合，而且其資料類型將會是 **adChapter**。  
+ 如果附加的資料行沒有 *章節別名*，就會自動產生名稱。 資料行的 [欄位](../../reference/ado-api/field-object.md) 物件將會附加至 **記錄集** 物件的 [Fields](../../reference/ado-api/fields-collection-ado.md) 集合，而且其資料類型將會是 **adChapter**。  
   
- 如需導覽階層式 **記錄集**的詳細資訊，請參閱 [存取階層式記錄](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)集中的資料列。  
+ 如需導覽階層式 **記錄集**的詳細資訊，請參閱 [存取階層式記錄](./accessing-rows-in-a-hierarchical-recordset.md)集中的資料列。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)
+ [資料成形範例](./data-shaping-example.md)   
+ [正式式圖形文法](./formal-shape-grammar.md)   
+ [一般 Shape 命令](./shape-commands-in-general.md)

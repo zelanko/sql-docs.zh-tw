@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d0f6502ccfa58b28f0faeaf10b2670a42759a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453550"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806948"
 ---
 # <a name="data-shaping-overview"></a>資料成形概觀
-*資料成形* 表示在查詢中建立兩個或多個邏輯實體之間的階層式關聯性。 階層可以在一個記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md)記錄之間的父子式關聯性中看到，以及一或多筆記錄 (也稱為另一個 **記錄集**的章節) 。 在父子式關聯性中，父 **記錄集** 包含子 **記錄集**。 這類階層式關聯性的範例是客戶和訂單。 針對資料庫中的每個客戶，可以有零或多個訂單。 階層式關聯性可以是遞迴的，也就是說，您可以在子記錄中嵌套孫記錄。 在主體中，階層式記錄可以嵌套到任何深度。 在實務上，ADO 會將遞迴限制為最多512的 **記錄集**。  
+*資料成形* 表示在查詢中建立兩個或多個邏輯實體之間的階層式關聯性。 階層可以在一個記錄 [集](../../reference/ado-api/recordset-object-ado.md)記錄之間的父子式關聯性中看到，以及一或多筆記錄 (也稱為另一個 **記錄集**的章節) 。 在父子式關聯性中，父 **記錄集** 包含子 **記錄集**。 這類階層式關聯性的範例是客戶和訂單。 針對資料庫中的每個客戶，可以有零或多個訂單。 階層式關聯性可以是遞迴的，也就是說，您可以在子記錄中嵌套孫記錄。 在主體中，階層式記錄可以嵌套到任何深度。 在實務上，ADO 會將遞迴限制為最多512的 **記錄集**。  
   
  一般而言，圖形化 **記錄集** 的資料行可以包含資料提供者的資料，例如 Microsoft® SQL Server、另一個 **記錄集**的參考、從 **記錄集**之單一資料列的計算衍生的值，或是整個 **記錄集**之資料行上的作業所衍生的值。 資料行也可以是新的製造和空白的。  
   

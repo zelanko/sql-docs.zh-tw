@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453780"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806436"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件具現化：Visual C++
-這是如何在 Microsoft® Visual C++®中具現化 ADO 事件的圖解描述。 如需完整的說明，請參閱 [ADO 事件模型範例 (VC + +) ](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 。  
+這是如何在 Microsoft® Visual C++®中具現化 ADO 事件的圖解描述。 如需完整的說明，請參閱 [ADO 事件模型範例 (VC + +) ](../../reference/ado-api/ado-events-model-example-vc.md) 。  
   
  建立衍生自 **ConnectionEventsVt** 和 **RecordsetEventsVt** 介面的類別（位於檔案 adoint 中）。  
   
@@ -68,7 +68,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  事件類別繼承自 **IUnknown**，因此您也必須執行 **QueryInterface**、 **AddRef**和 **Release** 方法。 也可執行類別的函式和析構函數。 選擇您最熟悉的 Visual C++ 工具，以簡化工作的這個部分。  
   
- 藉由對**IConnectionPointContainer**和**IConnectionPoint**介面的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件發出**QueryInterface** ，讓它知道您的事件處理常式可以使用。 然後針對每個類別發出 **IConnectionPoint：： Advise** 。  
+ 藉由對**IConnectionPointContainer**和**IConnectionPoint**介面的[記錄集](../../reference/ado-api/recordset-object-ado.md)和[連接](../../reference/ado-api/connection-object-ado.md)物件發出**QueryInterface** ，讓它知道您的事件處理常式可以使用。 然後針對每個類別發出 **IConnectionPoint：： Advise** 。  
   
  例如，假設您使用的布耳函數會成功通知**記錄集**物件您有可用的事件處理常式，則會傳回**True** 。  
   

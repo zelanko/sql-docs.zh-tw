@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e2fe55a8aa34c6249edd2eee9666e9558a52027
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442140"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777567"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 方法和 Index 屬性範例 (VB) 
-此範例會使用 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的 [Seek](../../../ado/reference/ado-api/seek-method.md) 方法和 [Index](../../../ado/reference/ado-api/index-property.md) 屬性搭配指定的 ***員工識別碼***，以在 Nwind .mdb 資料庫的 ***Employees*** 資料表中找出員工的名稱。  
+此範例會使用 [記錄集](./recordset-object-ado.md) 物件的 [Seek](./seek-method.md) 方法和 [Index](./index-property.md) 屬性搭配指定的 ***員工識別碼***，以在 Nwind .mdb 資料庫的 ***Employees*** 資料表中找出員工的名稱。  
   
 ```  
 'BeginSeekVB  
@@ -117,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Index 屬性](../../../ado/reference/ado-api/index-property.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek 方法](../../../ado/reference/ado-api/seek-method.md)
+ [Index 屬性](./index-property.md)   
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Seek 方法](./seek-method.md)

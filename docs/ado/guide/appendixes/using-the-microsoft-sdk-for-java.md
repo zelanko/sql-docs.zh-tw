@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453970"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806483"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 
@@ -32,7 +32,7 @@ Microsoft SDK for JAVA 是 Microsoft Internet Explorer 環境的開發人員套�
   
  這種機制會讀取 ADO 類型程式庫，並產生您可以在應用程式內具現化的類別。 它會在下列位置產生這些類別： \\<windows 目錄 \> \JAVA\trustlib\msado15。  
   
- 使用 Microsoft SDK for JAVA 以 JAVA 建立 ADO 應用程式基本上是完全相同的，從原始程式碼的觀點來看，使用 JAVA 類型程式庫 Wizard。 如需範例程式碼，請參閱 [ADO JAVA 類別包裝](../../../ado/guide/appendixes/ado-java-class-wrappers.md)函式。 唯一的差異在於您如何在第一個位置產生包裝函式類別，如下列步驟所示。  
+ 使用 Microsoft SDK for JAVA 以 JAVA 建立 ADO 應用程式基本上是完全相同的，從原始程式碼的觀點來看，使用 JAVA 類型程式庫 Wizard。 如需範例程式碼，請參閱 [ADO JAVA 類別包裝](./ado-java-class-wrappers.md)函式。 唯一的差異在於您如何在第一個位置產生包裝函式類別，如下列步驟所示。  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for JAVA 建立 ADO 專案  
   
@@ -51,4 +51,4 @@ Microsoft SDK for JAVA 是 Microsoft Internet Explorer 環境的開發人員套�
 3.  若要使用這些檔案，請在 Visual j + + 中開啟您的專案。 從 [ **專案** ] 功能表中，選擇 [ **加入至專案**]。 選取 **[** 檔案]，然後加入所有。在 trustlib\msado15 目錄中為您的專案產生的 JAVA 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO Java 類別包裝函式](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [ADO Java 類別包裝函式](./ado-java-class-wrappers.md)

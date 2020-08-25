@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94c8b64518a714a824fd1d05c69ac6f54467e35f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70882984404dab2905e10344af88c2d933aceacc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443530"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774967"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法範例 (VC++)
-這個範例會使用 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 方法，從 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 取出指定的資料列數目，並將產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或 **getrows** 嘗試抓取另一位使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 此程式必須有 GetRowsOK 函數才能執行。  
+這個範例會使用 [GetRows](./getrows-method-ado.md) 方法，從 [記錄集](./recordset-object-ado.md) 取出指定的資料列數目，並將產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](./bof-eof-properties-ado.md) ，或 **getrows** 嘗試抓取另一位使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 此程式必須有 GetRowsOK 函數才能執行。  
   
 ## <a name="example"></a>範例  
   
@@ -245,6 +245,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF、EOF 屬性 (ADO) ](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [ (ADO) 的 GetRows 方法 ](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF、EOF 屬性 (ADO) ](./bof-eof-properties-ado.md)   
+ [ (ADO) 的 GetRows 方法 ](./getrows-method-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

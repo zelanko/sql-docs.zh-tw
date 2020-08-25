@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c510bd71d8b81eae9f86e48c398cc6ff7e81cea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27dd38482ffc197235b6c20c0d4ae8cb098d07b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453690"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806355"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>使用命令呼叫預存程序
 您可以使用命令來呼叫預存程式。 本主題結尾的程式碼範例參考 Northwind 範例資料庫中的預存程式，名為 CustOrdersOrders，其定義如下。  
@@ -35,13 +35,13 @@ ORDER BY OrderID
   
  如需如何定義和呼叫預存程式的詳細資訊，請參閱 SQL Server 檔。  
   
- 這個預存程式類似于 [命令物件參數](../../../ado/guide/data/command-object-parameters.md)中使用的命令。 它會取得客戶識別碼參數，並傳回該客戶訂單的相關資訊。 下列程式碼範例會使用這個預存程式做為 ADO **記錄集**的來源。  
+ 這個預存程式類似于 [命令物件參數](./command-object-parameters.md)中使用的命令。 它會取得客戶識別碼參數，並傳回該客戶訂單的相關資訊。 下列程式碼範例會使用這個預存程式做為 ADO **記錄集**的來源。  
   
  使用預存程式可讓您存取 ADO 的另一項功能： **Parameters** 集合 **Refresh** 方法。 使用這個方法，ADO 就可以在執行時間自動填入命令所需的所有參數資訊。 使用這項技術會對效能造成負面影響，因為 ADO 必須查詢資料來源以取得參數的相關資訊。  
   
- 下列程式碼範例與 [命令物件參數](../../../ado/guide/data/command-object-parameters.md)中的程式碼之間存在其他重要差異，其中參數是手動輸入的。 首先，此程式碼不會將 **備** 妥的屬性設定為 **True** ，因為它是 SQL Server 預存程式，而且是由定義先行編譯。 其次，在第二個範例中，**命令**物件的**CommandType**屬性變更為**adCmdStoredProc** ，以通知 ADO 命令是預存程式。  
+ 下列程式碼範例與 [命令物件參數](./command-object-parameters.md)中的程式碼之間存在其他重要差異，其中參數是手動輸入的。 首先，此程式碼不會將 **備** 妥的屬性設定為 **True** ，因為它是 SQL Server 預存程式，而且是由定義先行編譯。 其次，在第二個範例中，**命令**物件的**CommandType**屬性變更為**adCmdStoredProc** ，以通知 ADO 命令是預存程式。  
   
- 最後，在第二個範例中，設定值時，索引必須由索引參考，因為您可能不知道參數在設計階段的名稱。 如果您知道參數的名稱，您可以將**Command**物件的新[NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)屬性設定為 True，並參考屬性的名稱。 您可能會想知道，預存程式中所述之第一個參數的位置 (@CustomerID) 是1，而不是 0 (`objCmd(1) = "ALFKI"`) 。 這是因為參數0包含了 SQL Server 預存程式的傳回值。  
+ 最後，在第二個範例中，設定值時，索引必須由索引參考，因為您可能不知道參數在設計階段的名稱。 如果您知道參數的名稱，您可以將**Command**物件的新[NamedParameters](../../reference/ado-api/namedparameters-property-ado.md)屬性設定為 True，並參考屬性的名稱。 您可能會想知道，預存程式中所述之第一個參數的位置 (@CustomerID) 是1，而不是 0 (`objCmd(1) = "ALFKI"`) 。 這是因為參數0包含了 SQL Server 預存程式的傳回值。  
   
 ```  
 'BeginAutoParamCmd  
