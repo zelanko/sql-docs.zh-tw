@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上備份與還原 SQL Server 資料庫
-description: 了解如何在 Linux 上備份與還原 SQL Server 資料庫。
+description: 了解如何在 Linux 上備份與還原 SQL Server 資料庫。 同時了解如何使用 SQL Server Management Studio (SSMS) 進行備份和還原。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882330"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088953"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上備份與還原 SQL Server 資料庫
 
@@ -87,9 +87,9 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 
 1. 啟動 SSMS，並連線至您在 Linux 上 SQL Server 2017 中的伺服器。
 
-1. 在 [物件總管] 中，以滑鼠右鍵按一下資料庫，按一下 [工作]  ，然後按一下 [備份...]  。
+1. 在 [物件總管] 中，以滑鼠右鍵按一下資料庫，按一下 [工作]****，然後按一下 [備份...]****。
 
-1. 在 [備份資料庫]  對話方塊中，確認參數和選項，然後按一下 [確定]  。
+1. 在 [備份資料庫]**** 對話方塊中，確認參數和選項，然後按一下 [確定]****。
  
 SQL Server 完成資料庫備份。
 
@@ -97,17 +97,17 @@ SQL Server 完成資料庫備份。
 
 下列步驟會逐步引導您使用 SSMS 還原資料庫。
 
-1. 在 SSMS 中，以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [還原資料庫...]  。 
+1. 在 SSMS 中，以滑鼠右鍵按一下 [資料庫]****，然後按一下 [還原資料庫...]****。 
 
-1. 在 [來源]  下方按一下 [裝置：]  ，然後按一下省略符號 [...]。
+1. 在 [來源]**** 下方按一下 [裝置：]****，然後按一下省略符號 [...]。
 
-1. 找出您的資料庫備份檔案，然後按一下 [確定]  。 
+1. 找出您的資料庫備份檔案，然後按一下 [確定]****。 
 
-1. 在 [還原計畫]  下方，確認備份檔案和設定。 按一下 [確定]  。 
+1. 在 [還原計畫]**** 下方，確認備份檔案和設定。 按一下 [確定]。 
 
 1. SQL Server 會還原資料庫。 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [建立完整資料庫備份 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [備份交易記錄 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

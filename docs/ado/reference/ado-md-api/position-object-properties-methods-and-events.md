@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56afca8d56c44c42726dfeb718b95c513129efca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ef40a1f1e688cf2cdcd33693f9637018368149f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440760"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777867"
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
- [成員集合](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [成員集合](./members-collection-ado-md.md)  
   
- [序數屬性 (位置) ](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)  
+ [序數屬性 (位置) ](./ordinal-property-ado-md-position.md)  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -34,4 +34,4 @@ ms.locfileid: "88440760"
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [Position 物件 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [Position 物件 (ADO MD)](./position-object-ado-md.md)

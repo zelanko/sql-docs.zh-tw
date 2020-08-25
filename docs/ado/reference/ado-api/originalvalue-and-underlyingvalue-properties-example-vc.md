@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442890"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773577"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VC + +) 
-此範例示範 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 和 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 屬性，方法是在記錄 [集](../../../ado/reference/ado-api/recordset-object-ado.md) 批次更新期間，如果記錄的基礎資料變更，則顯示訊息。  
+此範例示範 [OriginalValue](./originalvalue-property-ado.md) 和 [UnderlyingValue](./underlyingvalue-property.md) 屬性，方法是在記錄 [集](./recordset-object-ado.md) 批次更新期間，如果記錄的基礎資料變更，則顯示訊息。  
   
 ## <a name="example"></a>範例  
   
@@ -221,6 +221,6 @@ void PrintComError(_com_error &e) {
 **原始值：心理學**   
 **基礎值：社會學**    
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 OriginalValue 屬性 ](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue 屬性](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [ (ADO) 的 OriginalValue 屬性 ](./originalvalue-property-ado.md)   
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [UnderlyingValue 屬性](./underlyingvalue-property.md)

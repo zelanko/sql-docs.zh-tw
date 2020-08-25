@@ -1,4 +1,5 @@
 ---
+description: '- (負) (Transact-SQL)'
 title: '- (負) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 456190fd25a3ca7ce362c276d33096afb768b941
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 873bff9e761f83f0b15493810d0c684afa189748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459234"
 ---
 # <a name="unary-operators---negative"></a>一元運算子 - 負
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "86917084"
  這是在日期和時間類別目錄以外，屬於數值資料類型類別目錄之任何資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>結果類型  
- 除了不帶正負號的 *tinyint* 運算式升級為帶正負號 **smallint** 結果，傳回 **numeric_expression** 的資料類型。  
+ 除了不帶正負號的 **tinyint** 運算式升級為帶正負號 **smallint** 結果，傳回 *numeric_expression* 的資料類型。  
   
 ## <a name="examples"></a>範例  
   
@@ -116,7 +117,7 @@ USE ssawPDW;
 SELECT TOP (1) - 17 FROM DimEmployee;  
 ```  
   
- 傳回值  
+ 傳回  
   
 ```  
 -17  
@@ -131,14 +132,14 @@ USE ssawPDW;
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
- 傳回值  
+ 傳回  
   
 ```  
 17  
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 傳回資料行的負值  
- 下列範例會傳回 `BaseRate` 資料表中每一位員工 `dimEmployee` 值的負值。  
+ 下列範例會傳回 `dimEmployee` 資料表中每一位員工 `BaseRate` 值的負值。  
   
 ```  
 USE ssawPDW;  

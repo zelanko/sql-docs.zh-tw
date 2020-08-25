@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38d48a4a6563d84c3223a599c3b6c40e30641b96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a409790fe23adb8500ab750b192a03be857dd2c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441830"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777197"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>使用 #import) 串流 (Visual C++ 語法索引
 ## <a name="methods"></a>方法  
@@ -93,4 +93,4 @@ __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream 物件 (ADO)](./stream-object-ado.md)

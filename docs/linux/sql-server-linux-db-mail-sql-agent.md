@@ -1,6 +1,6 @@
 ---
 title: 搭配 Linux 上 SQL Agent 的 DB Mail 和電子郵件警示
-description: 本文描述如何搭配 Linux 上的 SQL Server 來使用 DB Mail 和電子郵件警示
+description: 了解如何使用 DB Mail，以及如何使用 Linux 上的 SQL Server Agent (mssql-server-agent) 設定電子郵件警示。
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92306aa0c6fa28b2cd094e85f439d654605483b6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896514"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088968"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>搭配 Linux 上 SQL Agent 的 DB Mail 和電子郵件警示
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e591ca4524bbbdd13ccd934434c743e49c0b2c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e29b5d53b46248ba9ba4017692f51f2c01cbc8b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443300"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774467"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 屬性範例 (VC++)
-這個範例會使用 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 屬性來指定要將哪些資料列傳回給伺服器-所有資料列，或只傳回修改過的資料列。  
+這個範例會使用 [MarshalOptions](./marshaloptions-property-ado.md) 屬性來指定要將哪些資料列傳回給伺服器-所有資料列，或只傳回修改過的資料列。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -246,4 +246,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MarshalOptions 屬性 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions 屬性 (ADO)](./marshaloptions-property-ado.md)

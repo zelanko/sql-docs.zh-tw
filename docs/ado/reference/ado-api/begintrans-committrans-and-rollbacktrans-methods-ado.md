@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cefa913c42440d69345bfa9c8d4b8826a0bc3d84
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451190"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776567"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
-這些交易方法會管理 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件內的交易處理，如下所示：  
+這些交易方法會管理 [連接](./connection-object-ado.md) 物件內的交易處理，如下所示：  
   
 -   **BeginTrans** 開始新的交易。  
   
@@ -56,11 +56,11 @@ object.RollbackTrans
  *object*  
  **連接**物件。  
   
-## <a name="connection"></a>Connection  
+## <a name="connection"></a>連線  
  當您想要以單一單位儲存或取消一系列對來源資料所做的變更時，請使用這些方法搭配 **連接** 物件。 例如，若要在帳戶之間傳輸金額，您可以從1減去數量，並將相同的金額新增至另一個。 如果其中一項更新失敗，帳戶就不會再進行平衡。 在開放式交易內進行這些變更，可確保所有或全部變更都不會通過。  
   
 > [!NOTE]
->  並非所有提供者都支援交易。 確認提供者定義的屬性「**交易 DDL**」出現在 **連接** 物件的 [屬性](../../../ado/reference/ado-api/properties-collection-ado.md) 集合中，指出提供者支援交易。 如果提供者不支援交易，則呼叫其中一個方法將會傳回錯誤。  
+>  並非所有提供者都支援交易。 確認提供者定義的屬性「**交易 DDL**」出現在 **連接** 物件的 [屬性](./properties-collection-ado.md) 集合中，指出提供者支援交易。 如果提供者不支援交易，則呼叫其中一個方法將會傳回錯誤。  
   
  在您呼叫 **BeginTrans** 方法之後，提供者將無法立即認可您所做的變更，直到您呼叫 **CommitTrans** 或 **RollbackTrans** 來結束交易為止。  
   
@@ -68,15 +68,15 @@ object.RollbackTrans
   
  呼叫 **CommitTrans** 方法會儲存在連接上的開啟交易中所做的變更，並結束交易。 呼叫 **RollbackTrans** 方法會反轉在開啟的交易內進行的任何變更，並結束交易。 沒有開啟的交易時，呼叫任一方法會產生錯誤。  
   
- 根據 **連接** 物件的 [屬性](../../../ado/reference/ado-api/attributes-property-ado.md) 屬性，呼叫 **CommitTrans** 或 **RollbackTrans** 方法可能會自動啟動新的交易。 如果 [ **屬性** ] 屬性設定為 [ **adXactCommitRetaining**]，則提供者會在 **CommitTrans** 呼叫之後自動啟動新的交易。 如果 [ **屬性** ] 屬性設定為 [ **adXactAbortRetaining**]，則提供者會在 **RollbackTrans** 呼叫之後自動啟動新的交易。  
+ 根據 **連接** 物件的 [屬性](./attributes-property-ado.md) 屬性，呼叫 **CommitTrans** 或 **RollbackTrans** 方法可能會自動啟動新的交易。 如果 [ **屬性** ] 屬性設定為 [ **adXactCommitRetaining**]，則提供者會在 **CommitTrans** 呼叫之後自動啟動新的交易。 如果 [ **屬性** ] 屬性設定為 [ **adXactAbortRetaining**]，則提供者會在 **RollbackTrans** 呼叫之後自動啟動新的交易。  
   
 ## <a name="remote-data-service"></a>遠端資料服務  
  用戶端**連接**物件上無法使用**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法。  
   
 ## <a name="applies-to"></a>套用至  
- [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection 物件 (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [BeginTrans、CommitTrans 和 RollbackTrans 方法範例 (VB) ](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans、CommitTrans 和 RollbackTrans 方法範例 (VC + +) ](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法範例 (VB) ](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans、CommitTrans 和 RollbackTrans 方法範例 (VC + +) ](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [Attributes 屬性 (ADO)](./attributes-property-ado.md)

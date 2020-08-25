@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3ab83bb44bca7598074eb81d832ca9ed9b954d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2966868bc8f2cf9d706b4c9f2352c4f8ac5ef583
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451110"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776387"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark 屬性 (ADO)
-指出可唯一識別 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件中目前記錄的書簽，或將 **記錄集** 物件中的目前記錄設定為有效書簽所識別的記錄。  
+指出可唯一識別 [記錄集](./recordset-object-ado.md) 物件中目前記錄的書簽，或將 **記錄集** 物件中的目前記錄設定為有效書簽所識別的記錄。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回評估為有效書簽的 **Variant** 運算式。  
@@ -36,15 +36,15 @@ ms.locfileid: "88451110"
   
  使用者可能無法查看書簽的值。 此外，使用者不應該預期書簽可直接進行比較，因為兩個參考相同記錄的書簽可能會有不同的值。  
   
- 如果您使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立**記錄集**物件的複本，則原始和重複**記錄集**物件的 [**書簽**] 屬性設定都相同，而且您可以交換使用它們。 不過，您無法從不同的 **記錄集** 物件交替使用書簽，即使它們是從相同的來源或命令所建立。  
+ 如果您使用[Clone](./clone-method-ado.md)方法來建立**記錄集**物件的複本，則原始和重複**記錄集**物件的 [**書簽**] 屬性設定都相同，而且您可以交換使用它們。 不過，您無法從不同的 **記錄集** 物件交替使用書簽，即使它們是從相同的來源或命令所建立。  
   
 > [!NOTE]
 >  **遠端資料服務使用量** 在用戶端 **記錄集** 物件上使用時，[ **書簽** ] 屬性一律為可用。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF、EOF 和 Bookmark 屬性範例 (VB) ](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [ (VC + +) 的 BOF、EOF 和 Bookmark 屬性範例 ](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Supports 方法](../../../ado/reference/ado-api/supports-method.md)
+ [BOF、EOF 和 Bookmark 屬性範例 (VB) ](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [ (VC + +) 的 BOF、EOF 和 Bookmark 屬性範例 ](./bof-eof-and-bookmark-properties-example-vc.md)   
+ [Supports 方法](./supports-method.md)

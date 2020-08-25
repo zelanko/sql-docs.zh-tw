@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451124"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776397"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 屬性 (ADO)
--   **BOF** 指出目前的記錄位置是在 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件中的第一筆記錄之前。  
+-   **BOF** 指出目前的記錄位置是在 [記錄集](./recordset-object-ado.md) 物件中的第一筆記錄之前。  
   
 -   **EOF** 指出目前的記錄位置是在 **記錄集** 物件中的最後一筆記錄之後。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88451124"
   
  如果 **BOF** 或 **EOF** 屬性為 **True**，則沒有目前的記錄。  
   
- 如果您開啟不包含任何記錄的**記錄集**物件，則**BOF**和**EOF**屬性會設定為**True** (如需有關此**記錄集**之狀態的詳細資訊，請參閱[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性) 。 當您開啟至少包含一筆記錄的記錄 **集** 物件時，第一筆記錄是目前的記錄，而 **BOF** 和 **EOF** 屬性則為 **False**。  
+ 如果您開啟不包含任何記錄的**記錄集**物件，則**BOF**和**EOF**屬性會設定為**True** (如需有關此**記錄集**之狀態的詳細資訊，請參閱[RecordCount](./recordcount-property-ado.md)屬性) 。 當您開啟至少包含一筆記錄的記錄 **集** 物件時，第一筆記錄是目前的記錄，而 **BOF** 和 **EOF** 屬性則為 **False**。  
   
  如果您刪除 **記錄集** 物件中的最後一筆記錄，則在您嘗試重新放置目前記錄之前， **BOF** 和 **EOF** 屬性可能會維持 **False** 。  
   
@@ -67,8 +67,8 @@ ms.locfileid: "88451124"
 |**MoveNext**， **移動** > 0|沒有變更|設定為 **True**|  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF、EOF 和 Bookmark 屬性範例 (VB) ](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [ (VC + +) 的 BOF、EOF 和 Bookmark 屬性範例 ](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF、EOF 和 Bookmark 屬性範例 (VB) ](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [ (VC + +) 的 BOF、EOF 和 Bookmark 屬性範例 ](./bof-eof-and-bookmark-properties-example-vc.md)

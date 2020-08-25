@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441540"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776907"
 ---
 # <a name="version-property-example-vc"></a>Version 屬性範例 (VC++)
-這個範例會使用[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[Version](../../../ado/reference/ado-api/version-property-ado.md)屬性來顯示目前的 ADO 版本。 它也會使用數個動態屬性來顯示：  
+這個範例會使用[連接](./connection-object-ado.md)物件的[Version](./version-property-ado.md)屬性來顯示目前的 ADO 版本。 它也會使用數個動態屬性來顯示：  
   
 -   目前的 DBMS 名稱和版本。  
   
@@ -136,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 Connection 物件 ](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version 屬性 (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [ (ADO) 的 Connection 物件 ](./connection-object-ado.md)   
+ [Version 屬性 (ADO)](./version-property-ado.md)

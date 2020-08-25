@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb942aac538e73697435d94c77530ed1531a7325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7bbad7f16191b6ff9d1c3b5c497995733ab10b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442290"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777667"
 ---
 # <a name="resync-method-example-vb"></a>Resync 方法範例 (VB)
-此範例示範如何使用 [Resync](../../../ado/reference/ado-api/resync-method.md) 方法來重新整理靜態記錄集中的資料。  
+此範例示範如何使用 [Resync](./resync-method.md) 方法來重新整理靜態記錄集中的資料。  
   
 ```  
 'BeginResyncVB  
@@ -105,5 +105,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Resync 方法](../../../ado/reference/ado-api/resync-method.md)
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Resync 方法](./resync-method.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452230"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759812"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList 區段
 **Userlist**區段適用于具有相同區段*識別碼*參數的**connect**區段。  
@@ -41,12 +41,10 @@ ms.locfileid: "88452230"
 |**_accessRights_**|下列其中一個存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** 使用者可以讀取資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入資料來源。|  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案記錄區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [瞭解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [自訂檔案連接區段](./customization-file-connect-section.md)   
+ [自訂檔案記錄區段](./customization-file-logs-section.md)   
+ [自訂檔案 SQL 區段](./customization-file-sql-section.md)   
+ [DataFactory 自訂](./datafactory-customization.md)   
+ [必要的用戶端設定](./required-client-settings.md)   
+ [瞭解自訂檔案](./understanding-the-customization-file.md)   
+ [撰寫您自己的自訂處理常式](./writing-your-own-customized-handler.md)

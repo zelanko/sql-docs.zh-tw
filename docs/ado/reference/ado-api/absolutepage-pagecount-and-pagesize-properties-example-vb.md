@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6896f47b29b4ad65e63ba999d2699e7f92231500
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8adbe7524bbf7886744b9753eb8dfb5417a1898a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451810"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760008"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount 和 PageSize 屬性範例 (VB) 
 ```  
@@ -102,7 +102,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 AbsolutePage 屬性 ](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [ (ADO) 的 PageCount 屬性 ](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [ (ADO) 的 PageSize 屬性 ](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ (ADO) 的 AbsolutePage 屬性 ](./absolutepage-property-ado.md)   
+ [ (ADO) 的 PageCount 屬性 ](./pagecount-property-ado.md)   
+ [ (ADO) 的 PageSize 屬性 ](./pagesize-property-ado.md)   
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

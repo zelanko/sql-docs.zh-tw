@@ -1,4 +1,5 @@
 ---
+description: CREATE ASSEMBLY (Transact-SQL)
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 556cab50de2e8207eb78d829f18373213ee171b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496857"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -36,7 +37,7 @@ ms.locfileid: "83807903"
   建立一個 Managed 應用程式模組，其中所包含的類別中繼資料和 Managed 程式碼是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的一個物件。 您可以參考這個模組，在資料庫中建立 Common Language Runtime (CLR) 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別。  
   
 > [!WARNING]
->  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `sp_configure` 的 `clr strict security` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
+>  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,12 +65,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  指定身為組件擁有者的使用者或角色的名稱。 *owner_name* 必須是目前使用者所屬的角色名稱，或者目前使用者必須具有 *owner_name* 的 IMPERSONATE 權限。 若未指定，擁有權便歸目前使用者。  
   
  \<client_assembly_specifier>  
-指定正在上傳之組件所在的本機路徑或網路位置，以及對應於該組件的資訊清單檔案名稱。  \<client_assembly_specifier> 可以用變數表示為固定字串或評估為固定字串的運算式。 CREATE ASSEMBLY 不支援載入多模組組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會在同一個位置尋找這個組件的任何相依組件，同時以同一位擁有者做為根層級組件來上傳它們。 如果找不到這些相依組件，而且它們也尚未載入目前資料庫，CREATE ASSEMBLY 便會失敗。 如果相依組件已經載入到目前資料庫中，則那些組件的擁有者，必須與剛建立組件的擁有者一樣。
+指定正在上傳之組件所在的本機路徑或網路位置，以及對應於該組件的資訊清單檔案名稱。  \<client_assembly_specifier> 能用變數以固定字串或會評估為固定字串來表示。 CREATE ASSEMBLY 不支援載入多模組組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會在同一個位置尋找這個組件的任何相依組件，同時以同一位擁有者做為根層級組件來上傳它們。 如果找不到這些相依組件，而且它們也尚未載入目前資料庫，CREATE ASSEMBLY 便會失敗。 如果相依組件已經載入到目前資料庫中，則那些組件的擁有者，必須與剛建立組件的擁有者一樣。
 
 > [!IMPORTANT]
 > Azure SQL Database 不支援從檔案建立組件。
   
- 如果登入的使用者正被模擬，就不能指定 \<client_assembly_specifier>。  
+ 如果系統正在模擬登入的使用者，您就無法指定 \<client_assembly_specifier>。  
   
  \<assembly_bits>  
  這是構成組件及其相依組件的二進位值清單。 清單中的第一個值，被視為根層級組件。 對應於相依組件的值，可以採用任何順序提供。 任何不對應於根組件相依性的值，則略過不管。  
@@ -113,11 +114,11 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ## <a name="remarks"></a>備註  
  CREATE ASSEMBLY 會上傳之前從 Managed 程式碼編譯為 .dll 檔、用於 SQL Server 執行個體內部的組件。  
  
-啟用時，會在執行階段忽略 `PERMISSION_SET` 和 `CREATE ASSEMBLY` 陳述式中的 `ALTER ASSEMBLY` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
+啟用時，會在執行階段忽略 `CREATE ASSEMBLY` 和 `ALTER ASSEMBLY` 陳述式中的 `PERMISSION_SET` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許註冊具有相同名稱、文化特性及公開金鑰之不同版本的組件。  
   
-當您試圖存取 \<client_assembly_specifier> 中所指定的組件時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會模擬目前 Windows 登入的安全性內容。 由於委派限制之故，如果 \<client_assembly_specifier> 指定網路位置 (UNC 路徑)，目前登入的模擬並不會在網路位置發揮作用。 此時就得利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容來完成存取作業。 如需詳細資訊，請參閱[認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
+當您嘗試存取 \<client_assembly_specifier> 中指定的組件時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會模擬目前 Windows 登入的資訊安全內容。 由於委派限制之故，如果 \<client_assembly_specifier> 指定網路位置 (UNC 路徑)，目前登入的模擬並不會在網路位置發揮作用。 此時就得利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容來完成存取作業。 如需詳細資訊，請參閱[認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
   
  除了 *assembly_name* 所指定的根組件之外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還會嘗試上傳任何正在上傳之根組件所參考的組件。 如果因為之前 CREATE ASSEMBLY 陳述式的關係，所參考的組件已經上傳到資料庫了，就不會上傳這個組件，但是根組件仍然能夠使用它。 如果之前相依組件並未上傳，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在來源目錄找不到其資訊清單檔，CREATE ASSEMBLY 便會傳回錯誤。  
   

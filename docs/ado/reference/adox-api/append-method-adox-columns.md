@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd33dc71c9adcbe8e6ed25f965b227fbc76d96fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d17c6823acc945f50e5d8d0543448c997dadc5fe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440520"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771517"
 ---
 # <a name="append-method-adox-columns"></a>Append 方法 (ADOX Columns)
-將新的資料 [行](../../../ado/reference/adox-api/column-object-adox.md) 物件加入至資料 [行](../../../ado/reference/adox-api/columns-collection-adox.md) 集合。  
+將新的資料 [行](./column-object-adox.md) 物件加入至資料 [行](./columns-collection-adox.md) 集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +38,26 @@ Columns.Append Column [,Type] [,DefinedSize]
  *資料行*  
  要附加的資料 **行** 物件，或是要建立和附加的資料行名稱。  
   
- *型別*  
- 選擇性。 **Long**值，指定資料行的資料類型。 *Type*參數對應到資料**行**物件的[type](../../../ado/reference/adox-api/type-property-column-adox.md)屬性。  
+ *類型*  
+ 選擇性。 **Long**值，指定資料行的資料類型。 *Type*參數對應到資料**行**物件的[type](./type-property-column-adox.md)屬性。  
   
  *DefinedSize*  
- 選擇性。 **Long**值，指定資料行的大小。 *DefinedSize*參數對應至資料**行**物件的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)屬性。  
+ 選擇性。 **Long**值，指定資料行的大小。 *DefinedSize*參數對應至資料**行**物件的[DefinedSize](./definedsize-property-adox.md)屬性。  
   
 > [!NOTE]
->  如果資料行不存在於已附加至[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合的[資料表](../../../ado/reference/adox-api/table-object-adox.md)中，將資料**行**附加至[索引](../../../ado/reference/adox-api/index-object-adox.md)的資料**行**集合**時，將**會發生錯誤。  
+>  如果資料行不存在於已附加至[資料表](./tables-collection-adox.md)集合的[資料表](./table-object-adox.md)中，將資料**行**附加至[索引](./index-object-adox.md)的資料**行**集合**時，將**會發生錯誤。  
   
 ## <a name="applies-to"></a>套用至  
- [Columns 集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns 集合 (ADOX)](./columns-collection-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Columns 和 Tables Append 方法、Name 屬性範例 (VB) ](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys 附加方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VB) ](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ (VB) 的 ParentCatalog 屬性範例 ](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [將方法附加至 ADOX 群組 () ](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [附加方法 (ADOX 索引) ](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [附加方法 (ADOX 索引鍵) ](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 方法 (ADOX 程式) ](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [附加方法 (ADOX 資料表) ](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [ (ADOX 使用者的 Append 方法) ](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 方法 (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Columns 和 Tables Append 方法、Name 屬性範例 (VB) ](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys 附加方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VB) ](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ (VB) 的 ParentCatalog 屬性範例 ](./parentcatalog-property-example-vb.md)   
+ [將方法附加至 ADOX 群組 () ](./append-method-adox-groups.md)   
+ [附加方法 (ADOX 索引) ](./append-method-adox-indexes.md)   
+ [附加方法 (ADOX 索引鍵) ](./append-method-adox-keys.md)   
+ [Append 方法 (ADOX 程式) ](./append-method-adox-procedures.md)   
+ [附加方法 (ADOX 資料表) ](./append-method-adox-tables.md)   
+ [ (ADOX 使用者的 Append 方法) ](./append-method-adox-users.md)   
+ [Append 方法 (ADOX Views)](./append-method-adox-views.md)

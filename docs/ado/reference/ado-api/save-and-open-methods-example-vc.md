@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442200"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777587"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法範例 (VC + +) 
-這三個範例會示範如何搭配使用 [Save](../../../ado/reference/ado-api/save-method.md) 和 **Open** 方法。  
+這三個範例會示範如何搭配使用 [Save](./save-method.md) 和 **Open** 方法。  
   
- 假設您正在進行商務旅程，並想要從資料庫中取出資料表。 在您開始之前，請先以 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 的形式存取資料，並以可傳送的形式儲存。 當您抵達目的地時，您會存取 **記錄集** 作為本機、中斷連線的 **記錄集**。 您會對 **記錄集**進行變更，然後再次儲存。 最後，當您返回 home 時，請再次連接到資料庫，並使用您在道路上所做的變更來更新它。  
+ 假設您正在進行商務旅程，並想要從資料庫中取出資料表。 在您開始之前，請先以 [記錄集](./recordset-object-ado.md) 的形式存取資料，並以可傳送的形式儲存。 當您抵達目的地時，您會存取 **記錄集** 作為本機、中斷連線的 **記錄集**。 您會對 **記錄集**進行變更，然後再次儲存。 最後，當您返回 home 時，請再次連接到資料庫，並使用您在道路上所做的變更來更新它。  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO 記錄集的 Open 方法) ](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [ (ADO) 的記錄集物件 ](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Save 方法](../../../ado/reference/ado-api/save-method.md)
+ [ (ADO 記錄集的 Open 方法) ](./open-method-ado-recordset.md)   
+ [ (ADO) 的記錄集物件 ](./recordset-object-ado.md)   
+ [Save 方法](./save-method.md)

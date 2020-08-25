@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441920"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777307"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 屬性範例 (Recordset) (VB)
-此範例會使用 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 屬性來顯示批次更新發生之前已在批次作業中修改哪些記錄。  
+此範例會使用 [Status](./status-property-ado-recordset.md) 屬性來顯示批次更新發生之前已在批次作業中修改哪些記錄。  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -99,4 +99,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Status 屬性 (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 屬性 (ADO Recordset)](./status-property-ado-recordset.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e8c969c8e611c8e2bff76dc045a28a9c6d6ab96
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451740"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759938"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 屬性 (ADO)
-指出建立相關聯[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+指出建立相關聯[記錄集](./recordset-object-ado.md)物件的[命令](./command-object-ado.md)物件。  
   
 ## <a name="return-value"></a>傳回值  
  傳回包含**Command**物件的**Variant** 。 預設值為 null 物件參考。  
@@ -37,10 +37,10 @@ ms.locfileid: "88451740"
  當您只獲得產生的**記錄集**物件時，請使用這個屬性來尋找相關聯的**命令**物件。  
   
 ## <a name="applies-to"></a>套用至  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ (VB) 的 ActiveCommand 屬性範例 ](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [ActiveCommand 屬性範例 (JScript) ](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [ActiveCommand 屬性範例 (VC + +) ](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
- [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [ (VB) 的 ActiveCommand 屬性範例 ](./activecommand-property-example-vb.md)   
+ [ActiveCommand 屬性範例 (JScript) ](./activecommand-property-example-jscript.md)   
+ [ActiveCommand 屬性範例 (VC + +) ](./activecommand-property-example-vc.md)   
+ [Command 物件 (ADO)](./command-object-ado.md)

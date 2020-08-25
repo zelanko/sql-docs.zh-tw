@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4fd33dedfaa68b77cfb1dcb71e8931f3b8f496f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45962629fef38bc456138114eec38393c093a945
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442400"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772137"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>使用 #import) Visual C++ 語法索引的記錄集 (
 ## <a name="methods"></a>方法  
@@ -205,4 +205,4 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

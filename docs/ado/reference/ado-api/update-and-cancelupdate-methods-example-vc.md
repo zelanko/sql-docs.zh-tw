@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25347b53dbb1b489ce66deb045fec780172ad360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60f63706057acffa4e00954c6ff92d77503ec14f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441650"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777017"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 和 CancelUpdate 方法範例 (VC++)
-此範例示範如何搭配[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法使用[Update](../../../ado/reference/ado-api/update-method.md)方法。  
+此範例示範如何搭配[CancelUpdate](./cancelupdate-method-ado.md)方法使用[Update](./update-method.md)方法。  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  
@@ -311,5 +311,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的 CancelUpdate 方法 ](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Update 方法](../../../ado/reference/ado-api/update-method.md)
+ [ (ADO) 的 CancelUpdate 方法 ](./cancelupdate-method-ado.md)   
+ [Update 方法](./update-method.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1694de8b8be8d00f9117b70a3ac180e086164ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3a52b1dabc9ebfa01b29e1a026214a3a97aa3f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450920"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776197"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO - WFC 語法)
 **封裝 .com. 資料**  
@@ -84,6 +84,6 @@ public int getCount()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 收集錯誤 ](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [ (ADO) 的欄位集合 ](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [ (ADO) 收集錯誤 ](./errors-collection-ado.md)   
+ [ (ADO) 的欄位集合 ](./fields-collection-ado.md)   
+ [Parameters 集合 (ADO)](./parameters-collection-ado.md)

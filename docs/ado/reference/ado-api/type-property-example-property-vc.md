@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441680"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777057"
 ---
 # <a name="type-property-example-property-vc"></a>Type 屬性範例 (Property) (VC++)
-這個範例示範 [型](../../../ado/reference/ado-api/type-property-ado.md) 別屬性。 它是一種公用程式模型，用來列出集合的名稱和類型，例如 [屬性](../../../ado/reference/ado-api/properties-collection-ado.md)、 [欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  
+這個範例示範 [型](./type-property-ado.md) 別屬性。 它是一種公用程式模型，用來列出集合的名稱和類型，例如 [屬性](./properties-collection-ado.md)、 [欄位](./fields-collection-ado.md)等等。  
   
- 我們不需要開啟 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 來存取其 **屬性** 集合;當 **記錄集** 物件具現化時，它們就會存在。 但是，將 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 屬性設定為 **adUseClient** ，會將數個動態屬性加入至 **記錄集** 物件的 **properties** 集合，讓範例更有趣一點。 為了方便說明，我們會明確使用 [Item](../../../ado/reference/ado-api/item-property-ado.md) 屬性來存取每個 [屬性](../../../ado/reference/ado-api/property-object-ado.md) 物件。  
+ 我們不需要開啟 [記錄集](./recordset-object-ado.md) 來存取其 **屬性** 集合;當 **記錄集** 物件具現化時，它們就會存在。 但是，將 [CursorLocation](./cursorlocation-property-ado.md) 屬性設定為 **adUseClient** ，會將數個動態屬性加入至 **記錄集** 物件的 **properties** 集合，讓範例更有趣一點。 為了方便說明，我們會明確使用 [Item](./item-property-ado.md) 屬性來存取每個 [屬性](./property-object-ado.md) 物件。  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -217,5 +217,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ (ADO) 的屬性物件 ](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [ (ADO) 的屬性物件 ](./property-object-ado.md)   
+ [Type 屬性 (ADO)](./type-property-ado.md)

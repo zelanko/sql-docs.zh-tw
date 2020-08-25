@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f07bd7bc6b04dac8c5b352cc6281ce4eb851d3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443350"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774597"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
-將現有檔案的內容載入至 [資料流程](../../../ado/reference/ado-api/stream-object-ado.md)。  
+將現有檔案的內容載入至 [資料流程](./stream-object-ado.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,11 +42,11 @@ Stream.LoadFromFileFileName
   
  在呼叫**LoadFromFile**之前，**資料流程**物件必須已經開啟。 這個方法不會變更**資料流程**物件的系結。它仍會系結至原始用來開啟**資料流程**的 URL 或**記錄**所指定的物件。  
   
- **LoadFromFile** 會使用從檔案讀取的資料來覆寫 **資料流程** 物件的目前內容。 檔案的內容會覆寫 **資料流程** 中的任何現有位元組。 在**LoadFromFile**所建立的[EOS](../../../ado/reference/ado-api/eos-property.md)之後，任何先前存在和剩餘的位元組都會遭到截斷。  
+ **LoadFromFile** 會使用從檔案讀取的資料來覆寫 **資料流程** 物件的目前內容。 檔案的內容會覆寫 **資料流程** 中的任何現有位元組。 在**LoadFromFile**所建立的[EOS](./eos-property.md)之後，任何先前存在和剩餘的位元組都會遭到截斷。  
   
- 呼叫 **LoadFromFile**之後，目前的位置會設定為 **資料流程** 的開頭 ([位置](../../../ado/reference/ado-api/position-property-ado.md) 是 0) 。  
+ 呼叫 **LoadFromFile**之後，目前的位置會設定為 **資料流程** 的開頭 ([位置](./position-property-ado.md) 是 0) 。  
   
  因為可能會將2個位元組新增至資料流程的開頭以進行編碼，所以資料流程的大小可能不會完全符合載入該資料流程的檔案大小。  
   
 ## <a name="applies-to"></a>套用至  
- [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream 物件 (ADO)](./stream-object-ado.md)

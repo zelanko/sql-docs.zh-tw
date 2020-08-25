@@ -1,4 +1,5 @@
 ---
+description: SET RESULT_SET_CACHING (Transact-SQL)
 title: SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -14,12 +15,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c975242a65da5ef29374267262deb6d8bf370f25
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 28ff4d6b3a7758acbc752b50bcff9f53637c8e82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496382"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 

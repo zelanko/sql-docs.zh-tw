@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443140"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774177"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-指定 [Record](../../../ado/reference/ado-api/record-object-ado.md) 物件 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 方法的行為。  
+指定 [Record](./record-object-ado.md) 物件 [MoveRecord](./moverecord-method-ado.md) 方法的行為。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|預設值。 執行預設移動作業：如果目的地檔案或目錄已經存在，作業就會失敗，而且作業會更新超文字連結。|  
 |**adMoveOverWrite**|1|覆寫目的地檔案或目錄（即使已存在）。|  
@@ -37,4 +37,4 @@ ms.locfileid: "88443140"
  這些常數沒有 ADO/WFC 對等專案。  
   
 ## <a name="applies-to"></a>套用至  
- [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [MoveRecord 方法 (ADO)](./moverecord-method-ado.md)

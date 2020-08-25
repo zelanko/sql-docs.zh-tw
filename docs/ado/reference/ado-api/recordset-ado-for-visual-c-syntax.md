@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f411d7cc7856799e923fb75e7e1ca2ba6717d44c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7348cf06348ee9fc4588c599c584e09808bf690a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442440"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772317"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  
@@ -120,4 +120,4 @@ WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRe
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset 物件 (ADO)](./recordset-object-ado.md)

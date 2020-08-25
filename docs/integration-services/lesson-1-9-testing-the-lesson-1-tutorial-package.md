@@ -1,4 +1,5 @@
 ---
+description: 步驟 9：測試第 1 課教學課程套件
 title: 步驟 9：測試第 1 課教學課程套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13c24945715ca9b0fa1ebac06b66d777c4eadaea
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 758f5e0c312afc2a8310743f917cc00a1c43462c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462007"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>課程 1-9：測試第 1 課套件
 
@@ -47,11 +48,11 @@ ms.locfileid: "86917310"
   
 ## <a name="run-the-lesson-1-package"></a>執行第 1 課套件  
   
-1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
-    套件隨即會執行，使得 1,097 個資料列順利新增至 **AdventureWorksDW2012** 的 **NewFactCurrencyRate** 事實資料表中。 若要確認此結果，請選取 [資料流程]  索引標籤。
+    套件隨即會執行，使得 1,097 個資料列順利新增至 **AdventureWorksDW2012** 的 **NewFactCurrencyRate** 事實資料表中。 若要確認此結果，請選取 [資料流程]**** 索引標籤。
   
-2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
+2.  在套件執行完成之後，於 [偵錯]**** 功能表上，選取 [停止偵錯]****。  
   
 ## <a name="go-to-next-lesson"></a>移至下一課
 [第 2 課：使用 SSIS 來新增迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  

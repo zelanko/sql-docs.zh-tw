@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be4addb8a8a774a8128e721de9052ca5351959f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f4dd5b6fe3329e01710366b99142fa999a86cab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442520"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772637"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Record (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  
@@ -54,4 +54,4 @@ get_State(ObjectStateEnum *pState)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record 物件 (ADO)](./record-object-ado.md)

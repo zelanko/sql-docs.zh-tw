@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f581ebc43b7ab8b4deefd3a73771e2a8835f94d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44e440edb4e3f54284c17e4a5547b19c0244012c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442600"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772937"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Property 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  
- [Attributes 屬性](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes 屬性](./attributes-property-ado.md)  
   
- [Name 屬性](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Name 屬性](./name-property-ado.md)  
   
- [Type 屬性](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type 屬性](./type-property-ado.md)  
   
- [Value 屬性](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value 屬性](./value-property-ado.md)  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -37,4 +37,4 @@ ms.locfileid: "88442600"
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Property 物件 (ADO)](./property-object-ado.md)

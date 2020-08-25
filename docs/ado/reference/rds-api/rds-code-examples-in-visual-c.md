@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 122e6dc070565116bb6140464b33fdafdf4dc489
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5d39885ccc6640bb40c3e369c050fd00fb4c12d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438820"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767847"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++ 中的 RDS 程式碼範例
 使用下列程式碼範例，瞭解如何在 Microsoft Visual C++ 中撰寫時使用 RDS 屬性。  
@@ -32,8 +32,6 @@ ms.locfileid: "88438820"
 > [!NOTE]
 >  將完整的程式碼範例從開頭到結尾貼入您的程式碼編輯器。 如果使用部分範例或遺失段落格式，此範例可能無法正確執行。  
   
--   [處理常式屬性範例](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [處理常式屬性範例](./handler-property-example-vc.md)  
   
--   [InternetTimeout 屬性範例](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [InternetTimeout 屬性範例](./internettimeout-property-example-vc.md)

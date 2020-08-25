@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443060"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773987"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 屬性範例 (VB)
-這則範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[precision](../../../ado/reference/ado-api/precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***表中顯示欄位的數值小數位數和有效位數。  
+這則範例會使用[NumericScale](./numericscale-property-ado.md)和[precision](./precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***表中顯示欄位的數值小數位數和有效位數。  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [ (ADO) 的 NumericScale 屬性 ](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)   
- [Precision 屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field 物件](./field-object.md)   
+ [ (ADO) 的 NumericScale 屬性 ](./numericscale-property-ado.md)   
+ [Parameter 物件](./parameter-object.md)   
+ [Precision 屬性 (ADO)](./precision-property-ado.md)

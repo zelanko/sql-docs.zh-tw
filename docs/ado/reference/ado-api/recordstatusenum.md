@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442383"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772127"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-指定與批次更新和其他大量作業有關的記錄 [狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md) 。  
+指定與批次更新和其他大量作業有關的記錄 [狀態](./status-property-ado-recordset.md) 。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|指出因為作業已取消，所以未儲存記錄。|  
 |**adRecCantRelease**|0x400|指出因為現有的記錄已鎖定，所以不會儲存新的記錄。|  
@@ -52,7 +52,7 @@ ms.locfileid: "88442383"
   
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums. RecordStatus。已取消|  
 |AdoEnums.RecordStatus.CANTRELEASE|  
@@ -74,4 +74,4 @@ ms.locfileid: "88442383"
 |AdoEnums. RecordStatus. 未修改|  
   
 ## <a name="applies-to"></a>套用至  
- [Status 屬性 (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 屬性 (ADO Recordset)](./status-property-ado-recordset.md)

@@ -18,30 +18,30 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448842387c524326e51b104a0850f9ff503d35e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe4984a9bdbeff69f7c2beba4d91833cdca85f50
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443070"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774097"
 ---
 # <a name="number-property-ado"></a>Number 屬性 (ADO)
-指出可唯一識別 [錯誤](../../../ado/reference/ado-api/error-object.md) 物件的數位。  
+指出可唯一識別 [錯誤](./error-object.md) 物件的數位。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回可能對應至其中一個[ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)常數的**Long**值。  
+ 傳回可能對應至其中一個[ErrorValueEnum](./errorvalueenum.md)常數的**Long**值。  
   
 ## <a name="remarks"></a>備註  
  使用 **Number** 屬性來判斷發生了哪些錯誤。 屬性的值是對應于錯誤條件的唯一數位。  
   
- [Errors](../../../ado/reference/ado-api/errors-collection-ado.md)集合會以十六進位格式傳回 HRESULT (例如，0x80004005) 或 long 值 (例如 2147467259) 。 這些 Hresult 可由基礎元件（例如 OLE DB 或甚至是 OLE 本身）引發。 如需這些數位的詳細資訊，請參閱 OLE DB 程式設計[人員參考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)中的[錯誤 (OLE DB) ](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) *。*  
+ [Errors](./errors-collection-ado.md)集合會以十六進位格式傳回 HRESULT (例如，0x80004005) 或 long 值 (例如 2147467259) 。 這些 Hresult 可由基礎元件（例如 OLE DB 或甚至是 OLE 本身）引發。 如需這些數位的詳細資訊，請參閱 OLE DB 程式設計[人員參考](/previous-versions/windows/desktop/ms713643(v=vs.85))中的[錯誤 (OLE DB) ](/previous-versions/windows/desktop/ms724533(v=vs.85)) *。*  
   
 ## <a name="applies-to"></a>套用至  
- [Error 物件](../../../ado/reference/ado-api/error-object.md)  
+ [Error 物件](./error-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Description、HelpCoNtext、NativeError、Number、Source 和 SQLState 屬性範例 (VB) ](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [ (VC + +) 的 Description、HelpCoNtext、説明、NativeError、Number、Source 和 SQLState 屬性範例 ](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description 屬性](../../../ado/reference/ado-api/description-property.md)   
- [HelpCoNtext，內容説明屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Source 屬性 (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Description、HelpCoNtext、NativeError、Number、Source 和 SQLState 屬性範例 (VB) ](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [ (VC + +) 的 Description、HelpCoNtext、説明、NativeError、Number、Source 和 SQLState 屬性範例 ](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description 屬性](./description-property.md)   
+ [HelpCoNtext，內容説明屬性](./helpcontext-helpfile-properties.md)   
+ [Source 屬性 (ADO Error)](./source-property-ado-error.md)
