@@ -3,7 +3,7 @@ description: FilterGroupEnum
 title: FilterGroupEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7552eb4b069b2cd2adc33e0bff25f23d918468c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1d9fdf420ee3b550bebfe394bf6722623307384a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775287"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972989"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 指定要從 [記錄集](./recordset-object-ado.md)篩選的記錄群組。  

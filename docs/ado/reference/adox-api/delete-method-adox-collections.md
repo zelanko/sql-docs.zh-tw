@@ -3,7 +3,7 @@ description: Delete 方法 (ADOX Collections)
 title: ) 的 (ADOX 集合刪除方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f239978dc9d71af81c74de452fefe16efe95d1bf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e92cbe56bb7823b5c6cfd2485d887f3e3c56a8e5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984619"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 (ADOX Collections)
 從集合中移除物件。  

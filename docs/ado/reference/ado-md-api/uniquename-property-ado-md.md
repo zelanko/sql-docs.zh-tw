@@ -3,7 +3,7 @@ description: UniqueName 屬性 (ADO MD)
 title: UniqueName 屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45c57c1d91fb2919db7e5abd5de2fdd78551141e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0b8b598c62d87fe515adc0557bf9a2888625eaa7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777807"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985959"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName 屬性 (ADO MD)
 表示目前物件的明確名稱。  

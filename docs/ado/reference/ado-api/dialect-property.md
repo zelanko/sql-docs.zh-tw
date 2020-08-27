@@ -3,7 +3,7 @@ description: Dialect 屬性
 title: 方言屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e106c76b859f9ccdf1e977cfe3a0ac784cb78740
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be93ceb76aa0aadba5b28673c16704b0881186f9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444070"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973899"
 ---
 # <a name="dialect-property"></a>Dialect 屬性
 表示 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 或 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 屬性的方言。 此方言會定義提供者用來剖析字串或資料流程的語法和一般規則。  

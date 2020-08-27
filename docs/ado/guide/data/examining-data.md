@@ -3,7 +3,7 @@ description: 檢查資料
 title: 檢查資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28c548316ebb6ede317f13d20ff82de0b802659e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1f13e39dd6c1740fb29fc0347a835d568aee352a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806118"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991289"
 ---
 # <a name="examining-data"></a>檢查資料
 「 [取得資料](./getting-data.md) 」一節說明如何將資料來源中的資料以一或多個 **記錄集** 物件的形式取出。 本節將更詳細地討論 **記錄集** ，包括如何流覽 **記錄集** 並查看其資料。  

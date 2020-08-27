@@ -3,7 +3,7 @@ description: XML 保存格式
 title: XML 持續性格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2da0090b9e06a9df7692a27242a08303174f51aa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758978"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978829"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式
 ADO 會針對其保存的 XML 資料流程使用 UTF-8 編碼。  

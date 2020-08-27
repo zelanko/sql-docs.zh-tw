@@ -3,7 +3,7 @@ description: ErrorValueEnum
 title: ErrorValueEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48962e163804eaa779f82789082e5b8d493bc3cd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443930"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973579"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 執行階段錯誤的類型。  
@@ -37,7 +37,7 @@ ms.locfileid: "88443930"
 > [!NOTE]
 >  OLE DB 錯誤可能會傳遞至您的 ADO 應用程式。 一般而言，這些可由 Windows 的 *4 個*設備碼來識別。 例如，0x800***4***。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|無法變更記錄集物件的 **ActiveConnection** 屬性，該 **記錄集** 物件的 **命令** 物件為其來源。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|伺服器無法完成操作。|  
@@ -99,7 +99,7 @@ ms.locfileid: "88443930"
   
  只會定義下列 ADO/WFC 對等專案的子集。  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.ErrorValue.BOUNDTOCOMMAND|  
 |AdoEnums.ErrorValue.DATACONVERSION|  

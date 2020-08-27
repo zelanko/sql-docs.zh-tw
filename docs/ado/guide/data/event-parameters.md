@@ -3,7 +3,7 @@ description: 事件參數
 title: 事件參數 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: cc36f0ab059bb7b605b02316008a969411663a8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991299"
 ---
 # <a name="event-parameters"></a>事件參數
 每個事件處理常式都有一個狀態參數，可控制事件處理常式。 若為完整事件，此參數也會用來指出產生事件的作業成功或失敗。 大部分的完整事件也都有 error 參數，以提供可能發生之任何錯誤的相關資訊，以及一個或多個物件參數參考用來執行作業的 ADO 物件。 例如， [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) 事件包含 **命令**的物件參數、 **記錄集**，以及與事件相關聯的 **連接** 物件。 在下列 Microsoft® Visual Basic®範例中，您可以看到 pCommand、pRecordset 和 pConnection 物件，這些物件代表**Execute**方法所使用的**命令**、**記錄集**和**連接**物件。  

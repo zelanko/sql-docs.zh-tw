@@ -3,7 +3,7 @@ description: ADOX (ADO) 的提供者支援
 title: ADOX (ADO) 的提供者支援 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 286c2b199c83feca11a69e8d4d137ad5691f5362
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: cbc2b4821ac5c57c2302892caff1afa742e829b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758798"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978689"
 ---
 # <a name="provider-support-for-adox-ado"></a>ADOX (ADO) 的提供者支援
 視您的 OLE DB 資料提供者而定，不支援 ADOX 的某些功能。 [OLE DB Provider For Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)完全支援 ADOX。 [Microsoft OLE DB Provider for SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md)的不支援功能、適用于[ODBC 的 Microsoft OLE DB 提供者](../appendixes/microsoft-ole-db-provider-for-odbc.md)或[Microsoft OLE DB Provider for Oracle](../appendixes/microsoft-ole-db-provider-for-oracle.md)列于下表中。 任何其他 Microsoft OLE DB 提供者都不支援 ADOX。  

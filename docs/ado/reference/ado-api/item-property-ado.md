@@ -3,7 +3,7 @@ description: Item 屬性 (ADO)
 title: 專案屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bea35ef148aa2f5646420a1c2b46197ce66f0d6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3f54ba0276affc1b098b3e499c31769f4cf9f927
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774677"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990749"
 ---
 # <a name="item-property-ado"></a>Item 屬性 (ADO)
 以名稱或序數表示集合的特定成員。  

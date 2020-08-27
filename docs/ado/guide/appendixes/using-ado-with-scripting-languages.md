@@ -3,7 +3,7 @@ description: 搭配使用 ADO 與指令碼語言
 title: 搭配使用 ADO 與指令碼語言 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd27476f577be4719489bc5ca2e1bfee95c5166
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806496"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990949"
 ---
 # <a name="using-ado-with-scripting-languages"></a>搭配使用 ADO 與指令碼語言
 在腳本環境中，ADO 可讓您透過伺服器端腳本來公開資料。 在此案例中，ADO、它所使用的基礎 OLE DB 提供者，以及參考指定資料存放區所需的任何其他元件，會安裝在執行 Internet Information Services (IIS) 的伺服器上。 使用 Active Server Pages (ASP) ，ADO 是可產生 HTML 的腳本中所參考的元件，例如， 這個 HTML 內容可以透過 HTTP 傳遞給用戶端網頁瀏覽器。 藉由使用腳本，網頁可以將動作傳送回伺服器端腳本，讓您更新、執行或查看特定資料。  

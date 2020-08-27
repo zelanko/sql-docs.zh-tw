@@ -3,7 +3,7 @@ description: Catalog 物件 (ADOX)
 title: " (ADOX) 的目錄物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968142adb0cb633a19a574c2d0994360faa3fadb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8329c4a94a6c9e01f0730b3244eabc6c74511cfa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771197"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985309"
 ---
 # <a name="catalog-object-adox"></a>Catalog 物件 (ADOX)
 包含 ([資料表](./tables-collection-adox.md)、 [視圖](./views-collection-adox.md)、 [使用者](./users-collection-adox.md)、 [群組](./groups-collection-adox.md)和 [程式](./procedures-collection-adox.md) 的集合，) 描述資料來源的架構目錄。  

@@ -3,7 +3,7 @@ description: ExecuteOptionEnum
 title: ExecuteOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ab70f52adb11d1b242dd0f1bbce11bea221ed55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b89d582d839c1eea382d09d922c6fa0dd988725
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443830"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973339"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定提供者應該如何執行命令。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|指出命令應該以非同步方式執行。<br /><br /> 此值無法與 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 值 **adCmdTableDirect**結合。|  
 |**adAsyncFetch**|0x20|表示應該以非同步方式抓取 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 屬性中指定的初始數量之後的其餘資料列。|  
@@ -39,7 +39,7 @@ ms.locfileid: "88443830"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.ExecuteOption. ASYNCEXECUTE|  
 |AdoEnums.ExecuteOption. ASYNCFETCH|  

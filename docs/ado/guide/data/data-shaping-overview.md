@@ -3,7 +3,7 @@ description: 資料成形概觀
 title: 資料成形總覽 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 45538bd81be1e4a64c41479ab6c4fb2165b26b78
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806948"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991429"
 ---
 # <a name="data-shaping-overview"></a>資料成形概觀
 *資料成形* 表示在查詢中建立兩個或多個邏輯實體之間的階層式關聯性。 階層可以在一個記錄 [集](../../reference/ado-api/recordset-object-ado.md)記錄之間的父子式關聯性中看到，以及一或多筆記錄 (也稱為另一個 **記錄集**的章節) 。 在父子式關聯性中，父 **記錄集** 包含子 **記錄集**。 這類階層式關聯性的範例是客戶和訂單。 針對資料庫中的每個客戶，可以有零或多個訂單。 階層式關聯性可以是遞迴的，也就是說，您可以在子記錄中嵌套孫記錄。 在主體中，階層式記錄可以嵌套到任何深度。 在實務上，ADO 會將遞迴限制為最多512的 **記錄集**。  

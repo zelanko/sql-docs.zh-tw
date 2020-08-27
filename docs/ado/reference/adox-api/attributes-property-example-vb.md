@@ -3,7 +3,7 @@ description: Attributes 屬性範例 (VB)
 title: Attributes 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 28015a4a457ddb4a64c047675d670cbdf4ce0a47
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985289"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 屬性範例 (VB)
 此範例示範資料[行](./column-object-adox.md)的[Attributes](./attributes-property-adox.md)屬性。 將它設定為**adColNullable** ，可讓使用者將[記錄集](../ado-api/recordset-object-ado.md)[欄位](../ado-api/field-object.md)的值設定為空字串。 在這種情況下，使用者可以區分不知道資料的記錄，以及不適用資料的記錄。  

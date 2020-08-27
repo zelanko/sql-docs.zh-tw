@@ -3,7 +3,7 @@ description: Append 方法 (ADOX Indexes)
 title: 附加方法 (ADOX 索引) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28e396e85dc68a3d622a173dad440c5dff68dea1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 00b37055efe15f204049d02c337b54c228468419
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771457"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985509"
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法 (ADOX Indexes)
 將新的 [索引](./index-object-adox.md) 物件加入至 [索引](./indexes-collection-adox.md) 集合。  

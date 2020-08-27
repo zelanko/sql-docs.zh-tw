@@ -3,7 +3,7 @@ description: ParentSameAsPrev 屬性 (ADO MD)
 title: ParentSameAsPrev 屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8a184501616588cd7da8a74f713dd692531b6dd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a2544b03198f3631d26ad2df272b3014bac9e4e0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777897"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986159"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev 屬性 (ADO MD)
 指出這個位置 [成員](./member-object-ado-md.md) 的父系是否與前一個成員的父系相同。  

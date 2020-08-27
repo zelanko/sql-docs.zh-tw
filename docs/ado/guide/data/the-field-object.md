@@ -3,7 +3,7 @@ description: Field 物件
 title: Field 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f1b85006366702b0f95d5a41a74abf91ac7997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452760"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979429"
 ---
 # <a name="the-field-object"></a>Field 物件
 每個 **Field** 物件通常會對應至資料庫資料表中的資料行。 但是， **欄位** 也可以表示另一個 **記錄集**的指標，稱為「章節」。 本指南稍後將會討論例外，例如章節資料行。  

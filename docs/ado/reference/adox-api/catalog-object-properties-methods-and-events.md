@@ -3,7 +3,7 @@ description: Catalog 物件屬性、方法和事件
 title: Catalog 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b54985a01911e7e8fce9082c424c5da86340395b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4fea808a9565f93f97a6e149936383f60a95c977
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771177"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985298"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

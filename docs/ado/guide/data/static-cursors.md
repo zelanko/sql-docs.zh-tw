@@ -3,7 +3,7 @@ description: 靜態資料指標
 title: 靜態資料指標 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 396083b57ad12b3cf5e917416272ec636696e91a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65ca384d89c4afbeeb24120debfd2ead5c2716ed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452820"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979549"
 ---
 # <a name="static-cursors"></a>靜態資料指標
 靜態資料指標一律會顯示第一次開啟資料指標時的結果集。 根據執行的不同，靜態資料指標是唯讀或讀取/寫入，可提供向前及向後滾動。 靜態資料指標通常不會偵測到資料指標開啟後對結果集的成員資格、順序或值所做的變更。 雖然不需要執行這項操作，但靜態資料指標可能會偵測自己的更新、刪除和插入。  

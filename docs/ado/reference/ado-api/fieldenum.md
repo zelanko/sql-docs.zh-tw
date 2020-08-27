@@ -3,7 +3,7 @@ description: FieldEnum
 title: FieldEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cad540a13fbad480f795049df0d0150188df4283
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2bdcec83c211f71803ea64b7b78f3e6f8c76dee6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775447"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973129"
 ---
 # <a name="fieldenum"></a>FieldEnum
 指定 [記錄](./record-object-ado.md) 物件的 [fields](./fields-collection-ado.md) 集合中參考的特殊欄位。  

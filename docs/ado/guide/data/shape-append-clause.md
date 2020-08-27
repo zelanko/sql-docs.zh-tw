@@ -3,7 +3,7 @@ description: Shape APPEND 子句
 title: Shape APPEND 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452860"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979619"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 Shape 命令 APPEND 子句會將一個或多個資料行附加到 **記錄集**。 這些資料行通常是參考子 **記錄集**的章節資料行。  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  附加關鍵字後面的子句實際上是一個清單，其中每個子句會以逗號分隔，並定義要附加至父系的另一個資料行。  
   
-## <a name="remarks"></a>備註  
- 當您將使用者輸入中的提供者命令設計為 SHAPE 命令的一部分時，SHAPE 會將使用者提供的提供者命令視為不透明的字串，並將它們如實傳遞給提供者。 例如，在下列 SHAPE 命令中，  
+當您將使用者輸入中的提供者命令設計為 SHAPE 命令的一部分時，SHAPE 會將使用者提供的提供者命令視為不透明的字串，並將它們如實傳遞給提供者。 例如，在下列 SHAPE 命令中，  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

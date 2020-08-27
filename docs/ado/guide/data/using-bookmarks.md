@@ -3,7 +3,7 @@ description: 使用書籤
 title: 使用書簽 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452590"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979033"
 ---
 # <a name="using-bookmarks"></a>使用書籤
 當您在 **記錄集** 內四處移動之後，直接傳回特定的記錄，而不需要在每一筆記錄中滾動並比較值，通常會很有用。 例如，如果您嘗試使用 **Find** 方法來搜尋記錄，但是搜尋未傳回任何記錄，您就會自動放在 **記錄集**的任一端。 如果您的提供者支援，書簽可以用來在使用 **Find** 方法之前標示您的位置，讓您可以回到您的位置。 書簽是一種 **Variant** 型別值，可唯一識別記錄 **集** 物件中的記錄。  

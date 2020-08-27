@@ -3,7 +3,7 @@ description: 資料成形
 title: 資料成形 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28893427bc94613f53504cd81c8b14fc5f595e83
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: df2e7f035e5479298887920814947666164f6593
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806938"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991419"
 ---
 # <a name="data-shaping"></a>資料成形
 此章節包含下列主題。  

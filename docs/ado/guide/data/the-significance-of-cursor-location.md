@@ -3,7 +3,7 @@ description: 資料指標位置的精確度
 title: 資料指標位置的重要性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acfb19f341bef22a9922e075d144026b9ef5f29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ee12680e5d5acd0d4091e0c1864ae51b285a0e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452720"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979349"
 ---
 # <a name="the-significance-of-cursor-location"></a>資料指標位置的精確度
 每個資料指標都會使用暫存資源來保存其資料。 這些資源可以是記憶體、磁片分頁檔案、暫存磁片檔案，甚至是資料庫中的暫存儲存體。 當這些資源位於用戶端電腦上時，會將資料指標稱為 *客戶* 端資料指標。 當這些資源位於伺服器上時，資料指標就稱為 *伺服器端* 資料指標。  

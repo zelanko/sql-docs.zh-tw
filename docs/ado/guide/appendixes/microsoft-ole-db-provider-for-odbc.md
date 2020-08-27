@@ -3,7 +3,7 @@ description: Microsoft OLE DB Provider for ODBC 總覽
 title: Microsoft OLE DB Provider for ODBC |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806646"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991019"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 總覽
 對於 ADO 或 RDS 程式設計師而言，理想的世界就是每個資料來源都會公開 OLE DB 介面，因此 ADO 可以直接呼叫資料來源。 雖然越來越多的資料庫供應商正在執行 OLE DB 介面，但有些資料來源尚未以這種方式公開。 不過，目前使用中的大部分 DBMS 系統都可以透過 ODBC 來存取。

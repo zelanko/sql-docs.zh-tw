@@ -3,7 +3,7 @@ description: 適用於網際網路發佈的 OLE DB 提供者
 title: 適用于網際網路發佈的 OLE DB 提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452730"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979359"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>適用於網際網路發佈的 OLE DB 提供者
 ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) 和 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 物件可搭配 Microsoft OLE DB Provider For Internet 發佈 (網際網路發佈提供者) 存取及操作資源，例如，Web 資料夾或 Microsoft FrontPage 提供的檔案。 您可以使用 ADO 將 **記錄**、 **資料流程**或 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 的來源指定為 URL。 然後，您可以上傳、下載、移動、複製和刪除資源，或直接操作資源屬性。  

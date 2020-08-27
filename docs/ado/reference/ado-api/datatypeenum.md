@@ -3,7 +3,7 @@ description: DataTypeEnum
 title: DataTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec805f403e3f76cacde3374cda091bf9b587b74c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd0e2226c0b85b10d7da9f4f14e7068aa25b1d2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444200"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974239"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定 [欄位](../../../ado/reference/ado-api/field-object.md)、 [參數](../../../ado/reference/ado-api/parameter-object.md)或 [屬性](../../../ado/reference/ado-api/property-object-ado.md)的資料類型。 對應的 OLE DB 類型指標會顯示在下表的 [描述] 資料行中的括弧內。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|旗標值，一律與另一個資料類型常數結合，表示其他資料類型的陣列。 不適用 ADOX。|  
 |**adBigInt**|20|指出 (DBTYPE_I8) 的八位元組帶正負號的整數。|  
@@ -72,7 +72,7 @@ ms.locfileid: "88444200"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums，資料類型 BIGINT|  

@@ -3,7 +3,7 @@ description: Internet Explorer 遠端資料服務的錯誤碼
 title: Internet Explorer 錯誤碼 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52372f652b66a87dfc569213401e3c200c03b2ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9a45a80374d323d8c9efde3833eae2b23ef323a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991119"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Internet Explorer 遠端資料服務的錯誤碼
 下表列出與遠端資料服務使用相關的 Microsoft® Internet Explorer 錯誤碼。 最少兩個位元組的正十進位轉譯、完整錯誤碼的負十進位轉譯，以及十六進位值。

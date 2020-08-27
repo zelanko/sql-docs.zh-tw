@@ -3,7 +3,7 @@ description: " (JScript) 的 Filter 和 RecordCount 屬性範例"
 title: 篩選和 RecordCount 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9de9c244d7faa115f03463a74a1dcaedb243b65
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f9647fd9fe838ff5657b04eb51fbe6adb40ce936
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775407"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973059"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a> (JScript) 的 Filter 和 RecordCount 屬性範例
 這個範例會在 Northwind 資料庫的 [公司] 資料表上開啟**記錄集**，然後使用 [[篩選](./filter-property.md)] 屬性來限制 [公司名稱] 欄位以字母 D 開頭的記錄。將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**FilterJS。**  

@@ -3,7 +3,7 @@ description: Member 物件 (ADO MD)
 title: " (ADO MD) 的成員物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c53b22dc0b5129fc822c4a012eefcf99041f5b45
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777997"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986459"
 ---
 # <a name="member-object-ado-md"></a>Member 物件 (ADO MD)
 表示 cube 中層級的成員、層級成員的子系，或是沿著資料格集軸的位置成員。  
@@ -69,7 +69,7 @@ ms.locfileid: "88777997"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會因提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬之目錄的名稱。|  
 |ChildrenCardinality|成員擁有的子系數目。|  

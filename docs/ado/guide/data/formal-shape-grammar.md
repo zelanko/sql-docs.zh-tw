@@ -3,7 +3,7 @@ description: 正式 Shape 文法
 title: 正式式圖形文法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: be65ff094518defcbf27ba2aa2ffa69835ee8ca3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806831"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991269"
 ---
 # <a name="formal-shape-grammar"></a>正式 Shape 文法
 這是建立任何 shape 命令的正式文法：  

@@ -3,7 +3,7 @@ description: Direction 屬性
 title: Direction 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37987e58829b1b6957b4fe1de440aaeb4aae1763
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af002ff20ff3ad27ab2395529c533738ad797ea6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444050"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973869"
 ---
 # <a name="direction-property"></a>Direction 屬性
 指出 [參數](../../../ado/reference/ado-api/parameter-object.md) 是否代表輸入參數、輸出參數、輸入和輸出參數，或是參數是否為預存程式的傳回值。  

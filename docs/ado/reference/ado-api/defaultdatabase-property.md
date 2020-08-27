@@ -3,7 +3,7 @@ description: DefaultDatabase 屬性
 title: DefaultDatabase 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7e16a5a5bc3a711477cca1507c889bd15e0f37a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86a8b283880f0765100c5a36eb63954f232c565a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444190"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974189"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 屬性
 表示 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件的預設資料庫。  

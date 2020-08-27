@@ -3,7 +3,7 @@ description: 事件的類型
 title: 事件種類 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fa59b0faeb5b1c74ccd4dff3f9d3c274a8f12c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd226901137e3ad19df84d17467ad2f283430c14
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979269"
 ---
 # <a name="types-of-events"></a>事件的類型
 有兩種基本類型的事件。 「將會在作業開始之前呼叫的事件」，通常會在其名稱中包含 "in"，例如 **WillChangeRecordset** 或 **WillConnect**。 在事件完成後呼叫的事件通常會在其名稱中包含 "Complete"，例如 **RecordChangeComplete** 或 **ConnectComplete**。 例外狀況存在（例如 **InfoMessage** ），但在相關聯的作業完成之後就會發生例外狀況。  

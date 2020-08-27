@@ -3,7 +3,7 @@ description: 使用 Connection 物件
 title: 使用 Connection 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3041abc535557f9f92e3a994d536fb07abde8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452620"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979119"
 ---
 # <a name="using-a-connection-object"></a>使用 Connection 物件
 開啟 **連接** 物件之前，您必須定義資料來源和連線類型的特定資訊。 這大部分的資訊都是由**connection**物件上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*connectionstring*參數，或是**連接**物件上的[connectionstring 屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)所持有。 連接字串是由以分號分隔的引數/值組清單所組成，其值以單引號括住。 例如：  

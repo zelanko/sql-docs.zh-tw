@@ -3,7 +3,7 @@ description: Command 屬性 (ADOX)
 title: 命令屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17dcabb379e9cc5d111b5c6914a99672039a2681
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73224966d9cab18253c18dd4f8bb183cd3381f76
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770927"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984909"
 ---
 # <a name="command-property-adox"></a>Command 屬性 (ADOX)
 指定可以用來建立或執行程式的 ADO [命令](../ado-api/command-object-ado.md) 物件。  

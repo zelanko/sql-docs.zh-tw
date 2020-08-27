@@ -3,7 +3,7 @@ description: Move 方法範例 (VBScript)
 title: " (VBScript) 的 Move 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6a05f873e14f1d722d357288f07d19931139f8bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774297"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990569"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法範例 (VBScript)
 這個範例會根據使用者輸入，使用 [Move](./move-method-ado.md) 方法來放置記錄指標。  

@@ -3,7 +3,7 @@ description: State 屬性 (ADO MD)
 title: 狀態屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efc3b140b2864aec7151e1235010c4a14b0b3a64
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 78b96e242cc27d27326d97f51cf378d9c5cbb51e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985979"
 ---
 # <a name="state-property-ado-md"></a>State 屬性 (ADO MD)
 指出儲存格的目前狀態。  

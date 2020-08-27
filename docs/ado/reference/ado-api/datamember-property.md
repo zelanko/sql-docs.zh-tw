@@ -3,7 +3,7 @@ description: DataMember 屬性
 title: DataMember 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f698c4a20fb76839460ca0930d45b8d18b2738be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 034afc971021f6bcfa4db7877d0409aeb817fc6f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444230"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974269"
 ---
 # <a name="datamember-property"></a>DataMember 屬性
 指出將從[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性所參考的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出的資料成員名稱。  
@@ -36,7 +36,7 @@ ms.locfileid: "88444230"
   
  **DataMember**屬性會決定**DataSource**屬性所指定的物件將會表示為**記錄集**物件。 必須先關閉 **記錄集** 物件，才能設定此屬性。 如果**datasource**屬性之前未設定**datamember**屬性，或**datasource**屬性中指定的物件無法辨識**datamember**名稱，就會產生錯誤。  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
   
 ```  
 Dim rs as New ADODB.Recordset  

@@ -3,7 +3,7 @@ description: Connection Close 方法、Table Type 屬性範例 (VB)
 title: Connection Close 方法、Table Type 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acd8183389276b47502b7ef14978eac855c74743
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770907"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984882"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close 方法、Table Type 屬性範例 (VB)
 將 [ActiveConnection](./activeconnection-property-adox.md) 屬性設定為 **Nothing** 時，應該會關閉與目錄的連接。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件都將會是孤立的。 這些已快取之物件上的任何屬性仍可供使用，但嘗試讀取需要對提供者呼叫的屬性將會失敗。  

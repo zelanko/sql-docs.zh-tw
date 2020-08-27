@@ -3,7 +3,7 @@ description: CursorOptionEnum
 title: CursorOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ba6960e6e7f81db55f3a8292fd054c1377b106
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a14102f57f2b328314e20e4124ca7e78258fb7e0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775517"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974349"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定 [支援](./supports-method.md) 方法應該測試的功能。  

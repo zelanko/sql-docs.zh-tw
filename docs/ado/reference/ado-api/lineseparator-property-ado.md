@@ -3,7 +3,7 @@ description: LineSeparator 屬性 (ADO)
 title: " (ADO) 的 LineSeparator 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe0976fda4a390f93f7d634fac9e1cbc52104b29
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7bd1e14d5c7ebc84ea4736da08296eca0e02ea38
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990719"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 屬性 (ADO)
 表示要在文字 [資料流程](./stream-object-ado.md) 物件中當做行分隔符號使用的二進位字元。  

@@ -3,7 +3,7 @@ description: EventStatusEnum
 title: EventStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d696d7b971b5f6624a85addb3f023f2090ac90d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 853dd54afbb8753b05ce95f17b20aa600fea493c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443900"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973559"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定事件執行的目前狀態。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|要求取消導致發生事件的作業。|  
 |**adStatusCantDeny**|3|指出作業無法要求取消暫止的作業。|  
@@ -37,7 +37,7 @@ ms.locfileid: "88443900"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums. EventStatus. CANCEL|  
 |AdoEnums. EventStatus. CANTDENY|  

@@ -3,7 +3,7 @@ description: '適用于 OLE DB (ADO 服務提供者的 Microsoft 資料成形服
 title: 適用于 OLE DB (ADO 服務提供者的 Microsoft 資料成形服務) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 07e5747e11cf3393e51c66a24c4c6fd5e6ade887
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806641"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991079"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>適用于 OLE DB 的 Microsoft 資料成形服務總覽
 > [!IMPORTANT]
