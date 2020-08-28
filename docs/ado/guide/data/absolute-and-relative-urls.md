@@ -3,7 +3,7 @@ description: 絕對和相對 URL
 title: 絕對和相對 Url |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 19ade6a2c9501523e97d30f496249a423445d3c0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806726"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991789"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
 URL 會指定儲存在本機電腦或網路電腦上的目標位置。 目標可以是檔案、目錄、HTML 網頁、影像、程式等等。  

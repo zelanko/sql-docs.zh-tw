@@ -3,7 +3,7 @@ description: GetRows 方法範例 (VC++)
 title: " (VC + +) 的 GetRows 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70882984404dab2905e10344af88c2d933aceacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 012d0bc96f50919b02e11329f4aebc5bb3ecb269
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774967"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990879"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法範例 (VC++)
 這個範例會使用 [GetRows](./getrows-method-ado.md) 方法，從 [記錄集](./recordset-object-ado.md) 取出指定的資料列數目，並將產生的資料填入陣列。 在兩種情況下， **getrows** 方法會傳回小於所需的資料列數目：若已達到 [EOF](./bof-eof-properties-ado.md) ，或 **getrows** 嘗試抓取另一位使用者刪除的記錄，則為。 只有在第二個案例發生時，函式才會傳回 **False** 。 此程式必須有 GetRowsOK 函數才能執行。  

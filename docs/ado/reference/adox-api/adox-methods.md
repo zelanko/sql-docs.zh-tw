@@ -3,7 +3,7 @@ description: ADOX 方法
 title: ADOX 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 700af57bf6145fe4c4af123117e57c15283f0e2a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6986e0bf160bb5dcdb54d6ae485b3d3879a4800a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771597"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985699"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 

@@ -3,7 +3,7 @@ description: 偵測並解決衝突
 title: 偵測和解決衝突 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991389"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
 如果您在立即模式中處理記錄集，則可能會發生平行存取問題的機率比較低。 另一方面，如果您的應用程式使用批次模式更新，則在另一位使用者編輯相同記錄所做的變更儲存之前，可能有一位使用者可能會變更記錄。 在這種情況下，您會想要讓應用程式正常地處理衝突。 您可能想要讓最後一個人將更新傳送到伺服器「獲勝」。 或者，您可能想要讓最近的使用者選擇兩個衝突值之間的選項，以決定應優先執行的更新。  

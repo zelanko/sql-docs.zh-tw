@@ -3,7 +3,7 @@ description: Visual C++ Extensions for ADO
 title: 適用于 ADO 的 Visual C++ 延伸模組 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a045c24989f058ae97aa9c7f4a29e27fb51acd02
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 6d1586800288d0a2d2984cf08e770f776c5ee3c6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806481"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991809"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++ Extensions for ADO
 使用 Visual C++ 的 ADO 程式設計慣用方法，是使用 **#import** 指示詞，如 [Microsoft Visual C++ ADO 程式設計](./visual-c-ado-programming.md)中所述。 不過，舊版 ADO 隨附的替代方法是使用 Visual C++： Visual C++ 擴充功能。 本節說明必須維護 Visual C++ 擴充程式碼的這項功能，但應該使用 #**import**來撰寫新的 ADO 程式碼。

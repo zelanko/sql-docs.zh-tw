@@ -3,7 +3,7 @@ description: Member 物件屬性、方法和事件
 title: 成員物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b12131ae069b9be362aebb93c90272d81de1d036
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 752c1ec4dbc8d78cbc123c2553f36557f7729afa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777987"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986419"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

@@ -3,7 +3,7 @@ description: GetObjectOwner 和 SetObjectOwner 方法範例 (VC++)
 title: GetObjectOwner 和 SetObjectOwner 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fee370cc44c224146a4f3f61cf0d0307fa7fdd90
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b838342c76c7d8757e98f98dfcf3aaf058178277
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770537"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984549"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法範例 (VC++)
 此範例示範 [GetObjectOwner](./getobjectowner-method-adox.md) 和 [SetObjectOwner](./setobjectowner-method.md) 方法。 這段程式碼假設有群群組帳戶處理 (請參閱 [群組和使用者附加、ChangePassword 方法範例 (VC + +) ](./groups-and-users-append-changepassword-methods-example-vc.md) ，以瞭解如何將此群組新增至系統) 。 Category 資料表的擁有者設定為 Accounting。  

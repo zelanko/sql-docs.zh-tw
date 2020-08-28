@@ -3,7 +3,7 @@ description: 順向資料指標
 title: 順向資料指標 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1ccf9d679d158b6f89ef6842b427c315078b99f6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806822"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991239"
 ---
 # <a name="forward-only-cursors"></a>順向資料指標
 一般預設資料指標類型（稱為順向 (或非可滾動的) 資料指標）只能在結果集中向前移動。 順向資料指標不支援滾動 (在結果集中向前及向後移動的能力) ;它僅支援從開始到結果集的結尾提取資料列。 使用某些順向資料指標 (例如 SQL Server 資料指標程式庫) ，目前使用者所做的所有插入、更新和刪除語句 (或由其他使用者所認可，) 會在提取資料列時顯示結果集內的資料列。 不過，由於無法反向捲動資料指標，因此擷取資料列之後對資料庫中資料列所進行的變更，都無法經由資料指標看見。  

@@ -3,7 +3,7 @@ description: Visual C++ ADO 程式設計
 title: Visual C++ ADO 程式設計 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a2e0284db09672d0e92bb952c9e122a65cb8350b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806769"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991829"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
 ADO API 參考描述 ADO 應用程式開發介面的功能 (API) 使用類似 Microsoft Visual Basic 的語法。 雖然預期的物件是所有使用者，但 ADO 程式設計人員採用不同的語言，例如 Visual Basic、Visual C++ (，不論是否有 **#import** 指示詞) ，以及 ADO/WFC 類別封裝 (的 Visual j + +) 。  
@@ -327,7 +327,7 @@ End Sub
   
  下列 Visual C++ 範例示範如何使用與 **_variant_t**搭配使用的**SafeArray** 。  
   
-#### <a name="notes"></a>備註  
+#### <a name="notes"></a>注意  
  下列附注對應到程式碼範例中的批註區段。  
   
 1.  同樣地，TESTHR ( # A1 內嵌函式定義為利用現有的錯誤處理機制。  
@@ -436,7 +436,7 @@ End Sub
   
  此 Visual C++ 範例示範**Get** / **Put** / **PutRef**_屬性_。  
   
-#### <a name="notes"></a>備註  
+#### <a name="notes"></a>注意  
  下列附注對應到程式碼範例中的批註區段。  
   
 1.  這個範例會使用兩種形式的遺漏字串引數：明確的常數、 **strMissing**，以及編譯器將用來建立**開啟**方法範圍所存在之暫時 **_bstr_t**的字串。  
@@ -555,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>使用 (IDispatch * ) 轉換 ADO 物件指標  
  下列 Visual C++ 範例將示範如何使用 (IDispatch * ) 來轉換 ADO 物件指標。  
   
-#### <a name="notes"></a>備註  
+#### <a name="notes"></a>注意  
  下列附注對應到程式碼範例中的批註區段。  
   
 1.  以明確編碼的**Variant**指定開啟的**連接**物件。 將其轉換為 (IDispatch \*) ，以便叫用正確的函式。 此外，請將第二個 **_variant_t** 參數明確設定為預設值 **true**，因此當 **Recordset：： Open** 作業結束時，物件參考計數將會是正確的。  

@@ -3,7 +3,7 @@ description: Hierarchies 集合屬性、方法和事件
 title: 階層集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a18d7aecb619afa2d820f2ce2d70ac9b6e6f38e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8df4ae6792c6394f4905390cf2bbdac6bd53e942
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778097"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986659"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

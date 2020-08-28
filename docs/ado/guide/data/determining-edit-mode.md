@@ -3,7 +3,7 @@ description: 判斷編輯模式
 title: 判斷編輯模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 788a91fc3de259210a5f2756f148161fbb90308e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec235cfd012b79449fdebfab9c99399d967ca32f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453500"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991359"
 ---
 # <a name="determining-edit-mode"></a>判斷編輯模式
 ADO 會維護與目前記錄相關聯的編輯緩衝區。 **EditMode**屬性會指出是否已對此緩衝區進行變更，或是否已建立新的記錄。 使用 **EditMode** 來判斷目前記錄的編輯狀態。 如果編輯程式已中斷，並判斷您是否需要使用 **Update** 或 **CancelUpdate** 方法，您可以測試暫止的變更。  

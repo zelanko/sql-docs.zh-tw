@@ -3,7 +3,7 @@ description: Item 屬性 (ADO MD Cellset)
 title: 專案屬性 (ADO MD 格集) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778067"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986599"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 屬性 (ADO MD Cellset)
 使用它的座標，從資料格 [集](./cellset-object-ado-md.md) 抓取儲存格。  
@@ -55,7 +55,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>備註  
  *位置*引數會指定要傳回的資料格。 您可以依序數位置或沿著每個軸的位置來指定資料格。 依每個軸的位置指定資料格時，您可以針對每個位置指定位置的數值或成員的名稱。  
   
  序數位置是可唯一識別資料格 **集**內一個資料格的數位。 在概念上，資料格會在 **資料格集中編號，如同資料** 格 **集** 是一種 *p*維陣列，其中 *p* 是軸的數目。 資料格的處理順序是以資料列為主。 以下是計算資料格序數的公式：  

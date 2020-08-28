@@ -3,7 +3,7 @@ description: 建立和執行簡單的命令
 title: 建立和執行簡單的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea860584e00b7b25a69d406ee81a24c4c8f01844
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f40f55f2a7df85078131813015fd584b52c75c2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453610"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991479"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>建立和執行簡單的命令
 簡單的命令是未參數化，而且不需要持續性的命令。 有三種方式可建立和執行簡單的命令。  

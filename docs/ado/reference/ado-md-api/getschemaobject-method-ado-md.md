@@ -3,7 +3,7 @@ description: GetSchemaObject 方法 (ADO MD)
 title: " (ADO MD) 的 GetSchemaObject 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0a54b02cf748d8ff1144e50e3531295dbfe8c55
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4031b9dbe100df7e73c64354888ffa97cf38c30c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778117"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986689"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 方法 (ADO MD)
 依[UniqueName](./uniquename-property-ado-md.md) ([維度](./dimension-object-ado-md.md)、階層、[層級](./level-object-ado-md.md)或[成員](./member-object-ado-md.md) [) ，抓取](./hierarchy-object-ado-md.md)ADO MD 的架構物件。  

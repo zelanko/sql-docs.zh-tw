@@ -3,7 +3,7 @@ description: Microsoft Visual Basic 中的 ADOX 程式碼範例
 title: Microsoft Visual Basic 中的 ADOX 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ee5e076ca28d3c91f77d514ee004eb853387799
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 32c78e82e72826b1d440a8c150d1d9e771d811e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777747"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985759"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic 中的 ADOX 程式碼範例
 這些主題提供可協助您瞭解如何使用 ADOX 的範例程式碼。 所有程式碼範例都是使用 Microsoft Visual Basic 來撰寫。  

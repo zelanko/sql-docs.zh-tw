@@ -3,7 +3,7 @@ description: 處理失敗的更新
 title: 處理失敗的更新 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ca4c5a094e263ca0c44c58a9d9118d4e2ce01538
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806923"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991409"
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 當更新最後有錯誤時，您解決錯誤的方式取決於錯誤的本質和嚴重性，以及應用程式的邏輯。 但是，如果資料庫與其他使用者共用，則一般的錯誤是其他人會在您進行之前修改欄位。 這類錯誤稱為「衝突」。 ADO 偵測到這種情況並報告錯誤。  

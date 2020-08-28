@@ -3,7 +3,7 @@ description: 資料區段
 title: Data 區段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806195"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991449"
 ---
 # <a name="data-section"></a>資料區段
 Data 區段會定義資料列集的資料以及任何暫止的更新、插入或刪除。 Data 區段可以包含零或多個資料列。 它只能包含一個資料列集的資料，其中資料列是由架構定義。 此外，如先前所述，您可以省略沒有任何資料的資料行。 如果在 data 區段中使用屬性或子項目，但架構區段中未定義該結構，則會以無訊息方式忽略它。  
   
-## <a name="string"></a>String  
+## <a name="string"></a>字串  
  文字資料中的保留 XML 字元必須取代為適當的字元實體。 例如，在公司名稱「Joe 的車庫」中，必須以實體取代單引號。 實際的資料列會如下所示：  
   
 ```  

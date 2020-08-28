@@ -6,19 +6,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8477be0be104731abb91c9d6353a7272df02111c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8546b7b345dfdab44674c9d6960389ffed133329
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805464"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991229"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>使用 ADO 物件的 ADO 程式設計人員指南
 本檔概述如何使用 ADO 物件來處理來自各種資料來源的資料。 首先，簡介會摘要說明安裝、使用和轉散發 ADO 元件的新功能和需求。 下一節將討論各種類型 ADO 物件的使用。 最後，附錄會討論各種 Microsoft 提供的資料和服務提供者、錯誤訊息，以及有關如何在多個程式設計語言中使用 ADO 的秘訣，以及範例和詞彙。

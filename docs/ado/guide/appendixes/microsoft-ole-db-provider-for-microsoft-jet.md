@@ -3,7 +3,7 @@ description: Microsoft OLE DB Provider for Microsoft Jet 總覽
 title: Microsoft OLE DB Provider for Microsoft Jet |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: bc04cce33d3a1170c01b604ef8b71ef82bc98fe2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806613"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991029"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 總覽
 Microsoft Jet 的 OLE DB 提供者可讓 ADO 存取 Microsoft Jet 資料庫。

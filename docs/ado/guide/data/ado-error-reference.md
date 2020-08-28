@@ -3,7 +3,7 @@ description: ADO 錯誤參考
 title: ADO 錯誤參考 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806697"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991739"
 ---
 # <a name="ado-errors"></a>ADO 錯誤
 **ErrorValueEnum**常數描述 ADO 誤差值。 如需這些列舉常數的完整清單（包括值），請參閱 [附錄 B： ADO 錯誤](../appendixes/appendix-b-ado-errors.md)。 本節將探討一些更有趣的錯誤，並說明可能引發這些錯誤的某些特定情況，或是解決問題的解決方案。 系統會列出 **ErrorValueEnum** 常數和簡短的正向十進位數。

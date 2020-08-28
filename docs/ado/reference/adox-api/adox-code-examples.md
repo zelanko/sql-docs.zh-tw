@@ -3,7 +3,7 @@ description: ADOX 程式碼範例
 title: ADOX 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7213d2b6afdad516edc345f58b4c7a3c4d978f08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0065eec7fc990f536e40969193ccb9aa1b5317d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985749"
 ---
 # <a name="adox-code-examples"></a>ADOX 程式碼範例
 使用下列程式碼範例，瞭解如何使用 ADOX 物件、方法、屬性和事件。  
