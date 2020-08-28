@@ -3,7 +3,7 @@ description: Users 集合屬性、方法和事件
 title: Users 集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d01e7b6ef146d858aab11288d0e41645915cb529
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7e211214f1b269b47b7a981d2648e35e0c3a5ac2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769047"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983019"
 ---
 # <a name="users-collection-properties-methods-and-events"></a>Users 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

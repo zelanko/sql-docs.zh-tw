@@ -3,7 +3,7 @@ description: SeekEnum
 title: SeekEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e60bbc81f7b40dac7d1564a32f1e60eb8456c9bf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 345e6dff5c2bc372f06eb386a4546a61b9e5a1bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777497"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989149"
 ---
 # <a name="seekenum"></a>SeekEnum
 指定要執行的 [搜尋](./seek-method.md) 類型。  

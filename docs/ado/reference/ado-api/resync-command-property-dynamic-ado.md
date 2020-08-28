@@ -3,7 +3,7 @@ description: Resync Command 動態屬性 (ADO)
 title: Resync 命令屬性-Dynamic (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e882a9c65bf0d54dc9bd9e160edbc67f4e7996b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777677"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989509"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 動態屬性 (ADO)
 指定使用者提供的命令字串，重新 [同步](./resync-method.md) 處理方法會發出重新整理，以重新整理 [Unique table](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 動態屬性中所指定資料表中的資料。  

@@ -3,7 +3,7 @@ description: Close 方法 (ADO)
 title: " (ADO) 的 Close 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f2fe4aff39b29e937de88f3166698fb8f9ad730
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7843642c38a30d854cb6729fd5a418de8c91f2c7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776217"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975389"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 關閉開啟的物件和任何相依的物件。  

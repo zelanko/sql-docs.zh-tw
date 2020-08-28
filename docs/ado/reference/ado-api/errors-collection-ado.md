@@ -3,7 +3,7 @@ description: Errors 集合 (ADO)
 title: " (ADO) 的錯誤集合 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f4719c9dcf182b6840ad950373b35c7ea8f0361
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3606827f95330bf75915463bba8225bccdc62cd7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443950"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973619"
 ---
 # <a name="errors-collection-ado"></a>Errors 集合 (ADO)
 包含為了回應單一提供者相關的失敗而建立的所有 [錯誤](../../../ado/reference/ado-api/error-object.md) 物件。  

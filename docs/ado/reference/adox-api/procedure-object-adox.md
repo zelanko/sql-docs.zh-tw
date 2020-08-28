@@ -3,7 +3,7 @@ description: Procedure 物件 (ADOX)
 title: Procedure 物件 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8932d2b71f631f24a9ce825804074b9094f932b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b41e83033ab86810c4e26ff3c15fa4d9d1ea97ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769707"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983629"
 ---
 # <a name="procedure-object-adox"></a>Procedure 物件 (ADOX)
 表示預存程式。 當與 ADO [命令](../ado-api/command-object-ado.md) 物件一起使用時，可以使用 **Procedure** 物件來加入、刪除或修改預存程式。  

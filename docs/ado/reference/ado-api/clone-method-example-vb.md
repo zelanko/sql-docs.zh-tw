@@ -3,7 +3,7 @@ description: Clone 方法範例 (VB)
 title: " (VB) 複製方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cede971170b571189d1f0a6fef4b45773cfd7370
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 69e8e90ce21e222d6552d42c8d2e2c9add5643e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776257"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975419"
 ---
 # <a name="clone-method-example-vb"></a>Clone 方法範例 (VB)
 這個範例會使用 [Clone](./clone-method-ado.md) 方法來建立 [記錄集](./recordset-object-ado.md) 的複本，然後讓使用者個別放置每個複本的記錄指標。  

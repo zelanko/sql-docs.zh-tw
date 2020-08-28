@@ -3,7 +3,7 @@ description: Cancel 方法範例 (VB)
 title: Cancel 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f76532e3904da2723f59afbf1f719f7cc212954
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3ca981db6a75beb2c4c4c04c03386f8e8b82920f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975629"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法範例 (VB)
 這個範例會使用 [cancel](./cancel-method-ado.md) 方法來取消在連線物件上執行的命令（ [如果連接忙碌](./connection-object-ado.md) 中）。  

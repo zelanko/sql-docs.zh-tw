@@ -3,7 +3,7 @@ description: 'AppendChunk 和 GetChunk 方法範例 (VB) '
 title: AppendChunk 和 GetChunk 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aeab0b42b530c91e57ea25fbca9e7dc3b7bfdba2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 28e47e8f74eba5fce8315da884486512663c1d71
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776497"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976069"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法範例 (VB) 
 此範例會使用 [AppendChunk](./appendchunk-method-ado.md) 和 [GetChunk](./getchunk-method-ado.md) 方法，以另一筆記錄的資料來填滿影像欄位。  

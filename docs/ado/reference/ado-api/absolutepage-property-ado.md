@@ -3,7 +3,7 @@ description: AbsolutePage 屬性 (ADO)
 title: " (ADO) 的 AbsolutePage 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5c9d802dd6ba373b7bf92f063125f0b656eab8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 1d735a8a61d4b62e6fa57427ecbee247d4589040
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759988"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977239"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 屬性 (ADO)
 指出目前記錄所在的頁面。  

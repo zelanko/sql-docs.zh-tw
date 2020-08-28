@@ -3,7 +3,7 @@ description: InternetTimeout 屬性 (RDS)
 title: InternetTimeout 屬性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83613f9083c0e532b4a2124b4beff20d4772c2fd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f69b6909630f2930939bc7757c9a4d9d1f1dd943
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768057"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981979"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 屬性 (RDS)
 表示要求超時前等待的毫秒數。  

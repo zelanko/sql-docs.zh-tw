@@ -3,7 +3,7 @@ description: Size 屬性 (ADO 參數)
 title: Size 屬性 (ADO 參數) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bede13c00304565a0e3b7819be7c8e6a5b5ca48
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 914f751c4bfd48755470ce3da9e994dae4a33477
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777477"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989119"
 ---
 # <a name="size-property-ado-parameter"></a>Size 屬性 (ADO 參數)
 指出 [參數](./parameter-object.md) 物件的大小上限（以位元組或字元為單位）。  

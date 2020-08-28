@@ -3,7 +3,7 @@ description: Requery 方法
 title: Requery 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8b9a5d3ab52fdbd3e219104ce3553cd69753a40
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 12f60b295d569119a356631dc445bd034916665a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989549"
 ---
 # <a name="requery-method"></a>Requery 方法
 藉由重新執行物件所依據的查詢來更新 [記錄集](./recordset-object-ado.md) 物件中的資料。  

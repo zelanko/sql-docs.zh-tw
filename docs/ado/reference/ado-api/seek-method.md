@@ -3,7 +3,7 @@ description: Seek 方法
 title: Seek 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3325cbb2a1178be61167cc0291bf23564d1e84fb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3b2058751177d0498e89d1f9bd631a3151490c9d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777517"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989159"
 ---
 # <a name="seek-method"></a>Seek 方法
 搜尋 [記錄集](./recordset-object-ado.md) 的索引，以快速找出符合指定值的資料列，並將目前的資料列位置變更為該資料列。  

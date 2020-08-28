@@ -3,7 +3,7 @@ description: Type 屬性 (Table) (ADOX)
 title: 類型屬性 (資料表)  (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bde14ad286e54505cb5476a38cd4080ae43d2e3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ab60bdf9c95edeed9845ea524e710760567e3ec7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769177"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983099"
 ---
 # <a name="type-property-table-adox"></a>Type 屬性 (Table) (ADOX)
 指出資料表的型別。  

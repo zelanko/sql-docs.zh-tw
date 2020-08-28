@@ -3,7 +3,7 @@ description: RecordTypeEnum
 title: RecordTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1e5a43d2b53a76a21d79ce671004e139dab5e20
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ded4106b770ff62edd4b79401885ee5ce3101798
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771987"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989659"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 指定 [記錄](./record-object-ado.md) 物件的類型。  

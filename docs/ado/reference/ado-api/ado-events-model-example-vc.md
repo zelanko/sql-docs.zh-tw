@@ -3,7 +3,7 @@ description: ADO 事件模型範例 (VC++)
 title: ADO 事件模型範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e5ce070edb9058f36bab18d64a06f50b867bbe55
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776697"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976469"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
 Ado 事件具現 [化（依語言](../../guide/data/ado-event-instantiation-by-language.md) ）的 Visual C++ 區段提供如何具現化 ADO 事件模型的一般描述。 以下是在 **#import** 指示詞所建立的環境內具現化事件模型的特定範例。  

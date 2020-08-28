@@ -3,7 +3,7 @@ description: Resync 方法範例 (VC++)
 title: " (VC + +) 的 Resync 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac58bd295975864b0fa92cbcec99285562fd0251
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ace4d981f4b777f9d495c8f257df6473b5636cdd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777657"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989469"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法範例 (VC++)
 此範例示範如何使用 [Resync](./resync-method.md) 方法來重新整理靜態記錄集中的資料。  

@@ -3,7 +3,7 @@ description: Recordset 物件 (ADO)
 title: " (ADO) 的記錄集物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9fade9e23303c9adaa22cad9822381fd10bb513
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989738"
 ---
 # <a name="recordset-object-ado"></a>Recordset 物件 (ADO)
 表示基表中的整組記錄，或執行命令的結果。 在任何時間， **記錄集** 物件都只會將集合中的單一記錄參考為目前的記錄。  

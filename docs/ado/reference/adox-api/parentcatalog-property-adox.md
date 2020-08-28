@@ -3,7 +3,7 @@ description: ParentCatalog 屬性 (ADOX)
 title: ParentCatalog 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4087e3bf0ab7b9e65d616907b1f5db3c87a0f75e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 07e4cdabe09b2bc4af8e849ef367df65c23711ca
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769937"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983769"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 屬性 (ADOX)
 指定資料表、使用者或資料行物件的父類別目錄，以提供對提供者特定屬性的存取權。  

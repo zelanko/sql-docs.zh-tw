@@ -3,7 +3,7 @@ description: Precision 屬性 (ADOX)
 title: Precision 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e75cfa88eb66b88084a823d0558923210aed4db
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4f0126da4e68ee84d9a8f155ee1dc50a89ab4646
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769778"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983709"
 ---
 # <a name="precision-property-adox"></a>Precision 屬性 (ADOX)
 表示資料 [行](./column-object-adox.md)中資料值的最大有效位數。  

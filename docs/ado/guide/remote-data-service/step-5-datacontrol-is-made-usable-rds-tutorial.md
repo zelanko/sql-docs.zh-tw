@@ -3,7 +3,7 @@ description: 步驟 5：將 DataControl 設為可用 (RDS 教學課程)
 title: 步驟5： DataControl 可用 (RDS 教學課程) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977509"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5：將 DataControl 設為可用 (RDS 教學課程)
 傳回的 **記錄集** 物件可供使用。 您可以檢查、流覽或編輯它，就像任何其他 **記錄集**一樣。 您可以使用 **記錄集** 來做些什麼，取決於您的環境。 Visual Basic 和 Visual C++ 具有視覺控制項，可透過啟用資料控制的輔助來直接或間接使用 **記錄集** 。  

@@ -3,7 +3,7 @@ description: Procedures 集合 (ADOX)
 title: 程式集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97421c9020750627dcd27f6188ae5cda72a2d90c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b3f98420fc85cabd2ccc584817ac6ca9a9203081
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983569"
 ---
 # <a name="procedures-collection-adox"></a>Procedures 集合 (ADOX)
 包含目錄 [的所有程式](./procedure-object-adox.md) 物件。  

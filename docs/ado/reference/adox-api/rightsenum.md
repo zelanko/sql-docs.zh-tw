@@ -3,7 +3,7 @@ description: RightsEnum
 title: RightsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: be2bd513cf41247fd6ce5c8f1172353557287144
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769447"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983409"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定物件之群組或使用者的許可權或許可權。  

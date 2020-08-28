@@ -3,7 +3,7 @@ description: ADO 物件和介面
 title: ADO 物件和介面 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d4cce8ba7913b80ea971c563b1235a15b84d372
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 80391605a0480d8967afb1e0240168a393f09363
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976309"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件和介面
 這些物件之間的關聯性會以 [ADO 物件模型](./ado-object-model.md)表示。  

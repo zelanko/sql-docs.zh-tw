@@ -3,7 +3,7 @@ description: 了解自訂檔案
 title: 瞭解自訂檔案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759866"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977389"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
 自訂檔案中的每個區段標頭都是由方括弧 (**[]**) 包含型別和參數所組成。 這四個區段類型是由常值字串 **connect**、 **sql**、 **userlist**或 **logs**表示。 參數是常值字串、預設值、使用者指定的識別碼或 nothing。  
@@ -45,7 +45,7 @@ identifier
 |部分|描述|  
 |----------|-----------------|  
 |**connect**|修改連接字串的常值字串。|  
-|**sql**|修改命令字串的常值字串。|  
+|**Sql**|修改命令字串的常值字串。|  
 |**userlist**|常值字串，可修改特定使用者的存取權限。|  
 |**日誌**|常值字串，指定記錄操作錯誤的記錄檔。|  
 |**預設值**|如果未指定或找不到任何識別碼，則會使用常值字串。|  

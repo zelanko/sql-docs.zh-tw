@@ -3,7 +3,7 @@ description: ParameterAttributesEnum
 title: ParameterAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98cbc245512ba957256605a05a3d44af46eb9d0c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4c070dcc9d10b55033152a66851db0b68f459ae7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773377"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990139"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定 [參數](./parameter-object.md) 物件的屬性。  

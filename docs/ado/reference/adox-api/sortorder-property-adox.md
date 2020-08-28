@@ -3,7 +3,7 @@ description: SortOrder 屬性 (ADOX)
 title: SortOrder 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f0af0f636513c3648755eb1d0c905e7a76ef9ee
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4141e657fd0c7dfcda2de38c33446bcb3e7a27a2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769367"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983309"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 屬性 (ADOX)
 指出僅) 資料行 (索引資料行的排序次序。  

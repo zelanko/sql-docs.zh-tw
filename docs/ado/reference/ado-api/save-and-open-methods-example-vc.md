@@ -3,7 +3,7 @@ description: 'Save 和 Open 方法範例 (VC + +) '
 title: Save 和 Open 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 547916d25655a34883072f39701f3ac9b1a5df45
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777587"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989349"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法範例 (VC + +) 
 這三個範例會示範如何搭配使用 [Save](./save-method.md) 和 **Open** 方法。  

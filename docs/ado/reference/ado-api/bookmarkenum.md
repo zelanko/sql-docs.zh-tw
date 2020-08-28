@@ -3,7 +3,7 @@ description: BookmarkEnum
 title: BookmarkEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0de6b1bfef3f7c036fda8102757e63b8d7049189
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6dcdb4b6366c3e787abdde04f7a88a51417e2aec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776367"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975749"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 指定書簽，指出作業的開始位置。  

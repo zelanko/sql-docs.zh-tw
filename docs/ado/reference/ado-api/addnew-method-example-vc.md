@@ -3,7 +3,7 @@ description: AddNew 方法範例 (VC++)
 title: " (VC + +) 的 AddNew 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 199a60ca21f7109ce1fdd181d8fa9dfcd7c70341
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 3d53033550d087844c429230c036aa1bf11e144a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760178"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976689"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法範例 (VC++)
 這個範例會使用 [AddNew](./addnew-method-ado.md) 方法，以指定的名稱建立新的記錄。  

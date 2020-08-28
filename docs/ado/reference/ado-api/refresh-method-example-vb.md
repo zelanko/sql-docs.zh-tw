@@ -3,7 +3,7 @@ description: Refresh 方法範例 (VB)
 title: Refresh 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a019d0f4e260feb7e9e9034fc7b9cf63b623bedf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 998af4a3b5264dafc4fd790cfbbea838cb1a708e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771967"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989599"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 方法範例 (VB)
 此範例示範如何使用[refresh](./refresh-method-ado.md)方法來重新整理預存程式[命令](./command-object-ado.md)物件的[參數](./parameters-collection-ado.md)集合。  

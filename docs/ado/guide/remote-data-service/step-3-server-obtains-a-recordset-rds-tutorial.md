@@ -3,7 +3,7 @@ description: 步驟 3：伺服器取得資料錄集 (RDS 教學課程)
 title: 步驟3：伺服器取得記錄集 (RDS 教學課程) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22664ed2943800702bbb12afe6900c1ca9bac6bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 494cf7a3be5206f5fd4f89d3f575989ce51002b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759118"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977539"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3：伺服器取得資料錄集 (RDS 教學課程)
 伺服器程式會使用連接字串和命令文字來查詢資料來源中所需的資料列。 ADO 通常用來抓取此 **記錄集**，不過可以使用其他 Microsoft 資料存取介面（例如 OLE DB）。  
