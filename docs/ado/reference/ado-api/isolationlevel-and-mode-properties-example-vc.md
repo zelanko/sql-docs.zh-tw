@@ -3,7 +3,7 @@ description: 'IsolationLevel 和 Mode 屬性範例 (VC + +) '
 title: IsolationLevel 和 Mode 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7d30aa737f78ba6356ac5104ca24ceeaf2f5504a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774757"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990789"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例 (VC + +) 
 這個範例會使用 [Mode](./mode-property-ado.md) 屬性來開啟獨佔連接，並使用 [IsolationLevel](./isolationlevel-property.md) 屬性來開啟在其他交易隔離時所執行的交易。  

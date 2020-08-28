@@ -3,7 +3,7 @@ description: PageCount 屬性 (ADO)
 title: " (ADO) 的 PageCount 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa050f7e99115ca13bf8871378ffa21b1f326d94
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 335f28c570ef240db6d65b66ef33f907d0202816
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773537"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990199"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 屬性 (ADO)
 指出 [記錄集](./recordset-object-ado.md) 物件包含多少頁面的資料。  

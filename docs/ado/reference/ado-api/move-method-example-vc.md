@@ -3,7 +3,7 @@ description: Move 方法範例 (VC++)
 title: Move 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f273fb32b41b54e696544719df5f7c50a32f4acb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 32f9ab33c3beac21ae82e2a5e4cf5dd9447d6844
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774277"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990559"
 ---
 # <a name="move-method-example-vc"></a>Move 方法範例 (VC++)
 這個範例會使用 [Move](./move-method-ado.md) 方法，根據使用者輸入來放置記錄指標。  

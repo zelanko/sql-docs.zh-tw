@@ -3,7 +3,7 @@ description: 在 Windows 2000 上設定 RDS
 title: 在 Windows 2000 上設定 RDS |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73ab5507d755fed32fa54b36a82f9ca915a8e194
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2a35d730981723f83b65867468a809f795fc6d3e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758638"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978329"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上設定 RDS
 如果您在升級到 Windows 2000 之後遇到 RDS 無法正常運作的問題，請遵循下列步驟來針對問題進行疑難排解：  

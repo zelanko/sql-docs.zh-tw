@@ -3,7 +3,7 @@ description: 結構描述區段
 title: 架構區段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452890"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979719"
 ---
 # <a name="schema-section"></a>結構描述區段
 需要架構區段。 如先前的範例所示，ADO 會寫出每個資料行的詳細中繼資料，盡可能地保留資料值的語法以進行更新。 不過，若要在 XML 中載入，ADO 只需要資料行的名稱和它們所屬的資料列集。 以下是基本架構的範例：  

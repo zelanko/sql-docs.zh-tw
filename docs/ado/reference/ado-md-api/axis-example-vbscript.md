@@ -3,7 +3,7 @@ description: Axis 範例 (VBScript)
 title: " (VBScript) 的座標軸範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9625b9e84ae9f7e4ffbe6b9134200f3dc666c9ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b65c23873c52d9e7d70fca11f4ccb19eae5c6033
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441313"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987379"
 ---
 # <a name="axis-example-vbscript"></a>Axis 範例 (VBScript)
 此 [使用中的伺服器] 頁面會顯示 MDX 查詢字串中的 OLAP 資料，並將產生的資料格集寫入至 HTML 資料表結構。  

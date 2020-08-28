@@ -3,7 +3,7 @@ description: 使用多維度資料
 title: 使用多維度資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0589b1fe5ca6da29f088e26b2236cfc5205bfe0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758768"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978569"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 資料 *格集* 是查詢多維度資料的結果。 它是由一組軸所組成，通常不能超過四個軸，而且通常只有兩個或三個。 *軸*是一或多個維度的成員集合，可用來尋找或篩選 cube 中的特定值。  

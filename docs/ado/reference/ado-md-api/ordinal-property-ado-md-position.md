@@ -3,7 +3,7 @@ description: Ordinal 屬性 (ADO MD Position)
 title: 序數屬性 (ADO MD 位置) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2f145cf96222eb08ab154dc9d683c0973cad861
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6d2485e8331a3eee95cfd5937ffbdbd570b2ecdc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777917"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986189"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal 屬性 (ADO MD Position)
 可唯一識別沿著軸的 [位置](./position-object-ado-md.md) 。  

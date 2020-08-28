@@ -3,7 +3,7 @@ description: ADO 執行階段錯誤
 title: ADO 錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0b1da9cd8e7afd2b56921fa6b413b5d349d7027f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806692"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991729"
 ---
 # <a name="ado-run-time-errors"></a>ADO 執行階段錯誤
 當您的程式發生執行階段錯誤時，會將 ADO 錯誤回報給您的程式。 您可以使用程式設計語言的錯誤捕捉機制來將它們設為陷阱和處理。 例如，在 Visual Basic 中，請使用 **On Error** 語句。 在 Visual C++ 中，這取決於您用來存取 ADO 程式庫的方法。 使用 #import，請使用 **try-catch** 區塊。 否則，c + + 程式設計人員必須藉由呼叫 **GetErrorInfo**，明確地取出 error 物件。 下列 Visual Basic sub 程式示範如何捕捉 ADO 錯誤：

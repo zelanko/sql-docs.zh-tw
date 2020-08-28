@@ -3,7 +3,7 @@ description: Level 物件 (ADO MD)
 title: 層級物件 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b77a0fad1b2ebe0f03855d9ff6c0ff689599774
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778047"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986509"
 ---
 # <a name="level-object-ado-md"></a>Level 物件 (ADO MD)
 包含一組成員，其中每個成員在階層內都有相同的順位。  
@@ -43,7 +43,7 @@ ms.locfileid: "88778047"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會因提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬之目錄的名稱。|  
 |CubeName|Cube 的名稱。|  

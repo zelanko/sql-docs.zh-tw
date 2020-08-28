@@ -3,7 +3,7 @@ description: 'AbsolutePosition 和 CursorLocation 屬性範例 (JScript) '
 title: AbsolutePosition 和 CursorLocation 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fcad0360e9ae15263860c45b9f9c4a96c4d36bc
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 058a6046d7ac4010413bb4d124dd92ff9af902df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759978"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977229"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 屬性範例 (JScript) 
 這個範例會示範 [AbsolutePosition](./absoluteposition-property-ado.md) 屬性如何追蹤列舉 [記錄集](./recordset-object-ado.md)之所有記錄的迴圈進度。 它會使用 [CursorLocation](./cursorlocation-property-ado.md) 屬性來啟用 **AbsolutePosition** 屬性，方法是將資料指標設定為用戶端資料指標。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AbsolutePositionJS。**  

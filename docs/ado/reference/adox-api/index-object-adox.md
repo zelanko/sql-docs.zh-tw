@@ -3,7 +3,7 @@ description: Index 物件 (ADOX)
 title: " (ADOX) 的索引物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75ceef103f3f0e6a3e1c789206887e3044da8854
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 58b9e80dc57ddfdbd95bcb9523e428031fcebff0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770307"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984289"
 ---
 # <a name="index-object-adox"></a>Index 物件 (ADOX)
 表示資料庫資料表中的索引。  

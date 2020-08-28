@@ -3,7 +3,7 @@ description: Value 屬性範例 (VB)
 title: 值屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c388b12b70213afb297508ccac91315d828c9d4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f9b3cfe95322801c35f36623b0323ed38b47fcdc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776937"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987969"
 ---
 # <a name="value-property-example-vb"></a>Value 屬性範例 (VB)
 此範例會顯示 [ ***Employees*** ] 資料表的欄位和屬性值，以示範具有[欄位](./field-object.md)和[屬性](./property-object-ado.md)物件的[Value](./value-property-ado.md)屬性。  

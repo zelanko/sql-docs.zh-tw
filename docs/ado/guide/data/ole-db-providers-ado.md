@@ -3,7 +3,7 @@ description: OLE DB 提供者 (ADO)
 title: OLE DB 提供者 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 25eea144ab0f9301f79a74773258cf399802af9d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805679"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980179"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供者 (ADO)
 OLE DB 定義一組 COM 介面，讓應用程式能夠統一存取儲存在不同資訊來源中的資料。 這種方法可讓資料來源透過支援適用于資料來源之 DBMS 功能數量的介面來共用其資料。 根據設計，OLE DB 的高效能架構是以其使用彈性、元件為基礎的服務模型為基礎。 除了在應用程式和資料之間擁有指定數目的中介層，OLE DB 只需要需要多少元件才能完成特定工作。  
   
- 例如，假設使用者想要執行查詢。 請考慮下列案例：  
+ 例如，假設使用者想要執行查詢。 請考慮下列情況：  
   
 -   資料位於目前存在 ODBC 驅動程式但沒有原生 OLE DB 提供者的關係資料庫中：應用程式會使用 ADO 來與 ODBC 的 OLE DB 提供者交談，然後載入適當的 ODBC 驅動程式。 驅動程式會將 SQL 語句傳遞至 DBMS，以抓取資料。  
   

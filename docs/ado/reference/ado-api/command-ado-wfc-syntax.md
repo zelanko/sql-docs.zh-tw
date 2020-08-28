@@ -3,7 +3,7 @@ description: Command (ADO - WFC 語法)
 title: 命令 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09d880b305d5325120325407c5ec07e0a4e40c42
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b9a79d343458969fcfdc72979f1b413f9b2a8742
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776167"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975239"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. 資料  

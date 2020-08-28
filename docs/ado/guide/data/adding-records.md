@@ -3,7 +3,7 @@ description: 將記錄加入至記錄集
 title: 加入記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b833bc78a75d09c8f58ae12532f446ec94a097e0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806703"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991749"
 ---
 # <a name="adding-records-to-a-recordset"></a>將記錄加入至記錄集
 使用 **AddNew** 方法，在現有的 **記錄集中**建立和初始化新的記錄。 您可以使用**CursorOptionEnum**值為**adAddNew**的**支援**方法，確認是否可以將記錄加入至目前的**記錄集**物件。

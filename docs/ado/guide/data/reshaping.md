@@ -3,7 +3,7 @@ description: 重新成形
 title: 重新整形 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b0173b04e64365d1dad08ecc5f8d26880d05504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04c43b9fcca56959aec242f344da6ec81a825030
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452930"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979769"
 ---
 # <a name="reshaping"></a>重新成形
 Shape 命令的子句所建立的 **記錄集** 可能會被指派 *別名* 名稱， (通常使用 AS 關鍵字) 。 您可以在完全不同的命令中參考成形 **記錄集** 的別名。 也就是說，您可以在新的圖形命令中重複使用或 *調整*先前成形的 **記錄集** 。 為了支援這項功能，ADO 提供了一個屬性，它會 [改變名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

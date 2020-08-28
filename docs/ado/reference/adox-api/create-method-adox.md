@@ -3,7 +3,7 @@ description: Create 方法 (ADOX)
 title: 建立方法 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5add8972d95413841a6c9c45de2dcc26d8cbb24
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 588f73fcd2ced95be3cd7f8586faed864b38f8ad
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770837"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984839"
 ---
 # <a name="create-method-adox"></a>Create 方法 (ADOX)
 建立新的目錄。  

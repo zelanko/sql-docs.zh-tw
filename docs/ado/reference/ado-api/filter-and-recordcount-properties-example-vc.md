@@ -3,7 +3,7 @@ description: " (VC + +) 的 Filter 和 RecordCount 屬性範例"
 title: " (VC + +) 的 Filter 和 RecordCount 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4d01d2acc51b89fbe1100e535c9aada7dcb8a603
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775307"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973009"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a> (VC + +) 的 Filter 和 RecordCount 屬性範例
 這個範例會使用[Filter](./filter-property.md)屬性，根據套用至現有**記錄集**的指定條件來開啟新的[記錄集](./recordset-object-ado.md)。 它會使用 [RecordCount](./recordcount-property-ado.md) 屬性來顯示這兩個 **記錄集中**的記錄數目。 此程式必須有 FilterField 函數才能執行。  

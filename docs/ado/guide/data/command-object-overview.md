@@ -3,7 +3,7 @@ description: Command 物件概觀
 title: 命令物件總覽 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d44c727a69dc74bf243bc2f2c0204cb41cd9f585
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0f1616fa83f1fed5a22de6fc1a1ee443bdddd82
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991559"
 ---
 # <a name="command-object-overview"></a>Command 物件概觀
 使用 **命令** 物件，您可以執行下列動作：  

@@ -3,7 +3,7 @@ description: 判斷支援的項目
 title: 判斷支援的內容 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 769004bd74b248188cfa96e633ce5961d2330838
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: c2caaf9e708b9a9fccd728472c7b13857978fdbe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806893"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991379"
 ---
 # <a name="determining-what-is-supported"></a>判斷支援的項目
 **支援**方法是用來判斷指定的**記錄集**物件是否支援特定的功能類型。 它具有下列語法：  

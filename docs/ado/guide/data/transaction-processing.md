@@ -3,7 +3,7 @@ description: 交易處理
 title: 交易處理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bde1338e56f4685359f8d1260b36c39a24455083
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452700"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979329"
 ---
 # <a name="transaction-processing"></a>交易處理
 *交易*分隔一系列在連接上執行的資料存取作業的開頭和結尾。 以您資料來源的交易式功能為依據， **連接** 物件也可讓您建立和管理交易。 例如，使用適用于 SQL Server 的 Microsoft OLE DB 提供者存取 Microsoft SQL Server 上的資料庫時，您可以為執行的命令建立多個嵌套交易。  

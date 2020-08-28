@@ -3,7 +3,7 @@ description: ADOX 列舉常數
 title: ADOX 列舉常數 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 553924a51845c7ac49bfb76bab27f75c7d4e4742
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1def9c0445551376aec56c36c554b9c74b15c02f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771607"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985709"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 為了協助進行偵錯工具，ADOX 列舉常數會列出每個常數的值。 不過，此值純粹是諮詢，而且可能會從某個 ADOX 版本變更為另一個。 您的程式碼應該只取決於列舉常數的名稱，而不是實際值。  

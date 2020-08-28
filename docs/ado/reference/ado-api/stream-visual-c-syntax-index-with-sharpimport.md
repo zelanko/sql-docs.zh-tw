@@ -3,7 +3,7 @@ description: '使用 #import) 串流 (Visual C++ 語法索引'
 title: '使用 #import)  (Visual C++ 語法索引的資料流程Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a409790fe23adb8500ab750b192a03be857dd2c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9f28f07c53a9535d0a4698e668be8f0d4e40592c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777197"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988519"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>使用 #import) 串流 (Visual C++ 語法索引
 ## <a name="methods"></a>方法  

@@ -3,7 +3,7 @@ description: NextRecordset 方法 (ADO)
 title: " (ADO) 的 NextRecordset 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 018de245b6d809b094a88d3a1f455bce0166a466
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b73779dbca82df1d672a57aae667bc5a666a4945
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774047"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990459"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除目前的 [記錄集](./recordset-object-ado.md) 物件，並藉由前進一系列的命令，傳回下一個 **記錄集** 。  

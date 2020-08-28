@@ -3,7 +3,7 @@ description: Parent 屬性 (ADO MD)
 title: 父屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 208fce5328f76f35cdd562ca82bb989851f366cb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 93d7d550c4d70f207c3ab0fdeea0fa4ab0812c79
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777907"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986209"
 ---
 # <a name="parent-property-ado-md"></a>Parent 屬性 (ADO MD)
 指出成員是階層中目前 [成員](./member-object-ado-md.md) 的父系。  

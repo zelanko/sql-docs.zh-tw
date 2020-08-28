@@ -3,7 +3,7 @@ description: AddNew 方法範例 (VBScript)
 title: " (VBScript) 的 AddNew 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6d402470724cfaaaa4a27e2c0d2d3843b7904c2
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d10fadde8b509b504ca857530d43d81b749ffaf4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760200"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976699"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 方法範例 (VBScript)
 這個範例會使用 [AddNew](./addnew-method-ado.md) 方法，以指定的名稱建立新的記錄。  

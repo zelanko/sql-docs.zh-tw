@@ -3,7 +3,7 @@ description: Create 方法範例 (VC++)
 title: " (VC + +) 建立方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46aaf66f2a715f716162ddab3f1952117fa27694
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 191d5634da4e59b03ee472bf39902a894a61f73f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770787"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984819"
 ---
 # <a name="create-method-example-vc"></a>Create 方法範例 (VC++)
 下列程式碼顯示如何使用 [create](./create-method-adox.md) 方法建立新的 Microsoft Jet 資料庫。  

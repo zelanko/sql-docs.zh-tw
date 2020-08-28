@@ -3,7 +3,7 @@ description: WriteText 方法
 title: WriteText 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776827"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987719"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 將指定的文字字串寫入 [資料流程](./stream-object-ado.md) 物件。  
@@ -35,7 +35,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>參數  
- *資料*  
+ *Data*  
  **字串**值，包含要寫入的文字（以字元為單位）。  
   
  *選項*  

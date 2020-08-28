@@ -3,7 +3,7 @@ description: Clustered 屬性 (ADOX)
 title: 叢集屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a102b63db62d6eba40e23bad99adeb3bdfa63b01
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e5a78263a69c70bbc6372c5a65bba779fe568d9f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771157"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985219"
 ---
 # <a name="clustered-property-adox"></a>Clustered 屬性 (ADOX)
 指出索引是否已叢集化。  

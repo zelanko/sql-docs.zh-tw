@@ -3,7 +3,7 @@ description: RowPosition 屬性 (ADO)
 title: " (ADO) 的 RowPosition 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5f78843e38c2a3ff6b21c90bc9ed7f2c573ee4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5072555e07a9fafb70b90a1bc19fa06f12c17d45
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777607"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989379"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 屬性 (ADO)
 取得或設定來自**ADORecordsetConstruction**物件的 OLE DB **RowPosition**物件。 當您使用 **put_RowPosition** 設定 **RowPosition** 物件時，產生的 **記錄集** 物件會使用 **RowPosition** 物件來決定目前的資料列。  

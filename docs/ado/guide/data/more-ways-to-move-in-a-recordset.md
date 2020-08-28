@@ -3,7 +3,7 @@ description: 更多可以在資料錄集中移動的方法
 title: 更多在記錄集中移動的方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8c668bc24b388d0367429086416cd67b5355550
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805813"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980289"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>更多可以在資料錄集中移動的方法
 下列四種方法可用來在 **記錄集**內四處移動或滾動： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。  (在順向資料指標上無法使用這些方法的部分。 )   

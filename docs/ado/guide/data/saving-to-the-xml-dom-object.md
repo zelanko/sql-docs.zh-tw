@@ -3,7 +3,7 @@ description: 儲存到 XML DOM 物件
 title: 儲存到 XML DOM 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c608abbae59244e2d0982328534b1cabcf1b903e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cccf3149917aa1b0f3deeb085eb3813729705d73
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452900"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979729"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
 您可以將 XML 格式的記錄集儲存到 MSXML DOM 物件的實例，如下列 Visual Basic 程式碼所示：  
