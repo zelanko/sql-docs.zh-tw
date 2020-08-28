@@ -3,7 +3,7 @@ description: " (JScript 的 Execute、Requery 和 Clear 方法範例) "
 title: " (JScript) 的 Execute、Requery 和 Clear 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30dfef8bcfb769dd124f2501143eac6e619315c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e27fc5ee9a234741beeb14e1dac7b754635bc2be
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443880"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973439"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a> (JScript 的 Execute、Requery 和 Clear 方法範例) 
 這個範例會示範從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件執行時的**Execute**方法。 它也會使用 [Requery](../../../ado/reference/ado-api/requery-method.md) 方法來取出 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)內的目前資料，並使用 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 方法清除 [錯誤](../../../ado/reference/ado-api/errors-collection-ado.md) 集合的內容。  (可以透過[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性**的 Connection**物件來存取**Errors**集合。 ) 將檔案命名為**ExecuteJS .asp**。  

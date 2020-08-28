@@ -3,7 +3,7 @@ description: Rowset 屬性 (ADO)
 title: " (ADO) 的資料列集屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f966261864cb7717b31e4851062228c3e6d63e92
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3341def2ce9f9f8e68f2135dc2b38cc3f947366f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989369"
 ---
 # <a name="rowset-property-ado"></a>Rowset 屬性 (ADO)
 取得或設定**ADORecordsetConstruction**物件上/的 OLE DB 資料列**集**物件。 當您使用 put_Rowset 時，資料列集會轉換成 ADO **記錄集** 物件。  

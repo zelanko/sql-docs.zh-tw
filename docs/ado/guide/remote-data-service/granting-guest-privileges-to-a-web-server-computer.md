@@ -3,7 +3,7 @@ description: 將來賓權限授與網頁伺服器電腦
 title: 將來賓許可權授與網頁伺服器電腦 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9fa62e95920e8a4aece0f7b6833c635cfdbf7b09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d34e53f62b66197c7aaedcc0df57e489763c1dd0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452180"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978089"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>將來賓權限授與網頁伺服器電腦
 您必須將匿名 Web 服務器帳戶 (IUSR_*ComputerName*) 新增至 Web 服務器電腦上的來賓本機群組，才能使用 RDS。  

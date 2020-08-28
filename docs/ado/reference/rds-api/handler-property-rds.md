@@ -3,7 +3,7 @@ description: Handler 屬性 (RDS)
 title: 處理常式屬性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d20e44a46309580f85a6d35e609cdade2b4f31c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9a5f2469ea581fbbbf8264867bbaaa78275d8483
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768127"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982069"
 ---
 # <a name="handler-property-rds"></a>Handler 屬性 (RDS)
 指出伺服器端自訂程式的名稱， (處理常式) 擴充 [RDSServer. DataFactory](./datafactory-object-rdsserver.md)的功能，以及 *處理常式*所使用的任何參數。  

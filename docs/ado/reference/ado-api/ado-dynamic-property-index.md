@@ -2,7 +2,7 @@
 description: ADO 動態屬性索引
 title: ADO 動態屬性索引 |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771737"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976489"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性索引
 資料提供者、服務提供者和服務元件可以將動態屬性加入至未開啟之[連接](./connection-object-ado.md)和[記錄集](./recordset-object-ado.md)物件的**屬性**集合。 當這些物件開啟時，指定的提供者也可以插入其他屬性。 其中一些屬性會列在 [ [ADO 動態屬性](./ado-dynamic-properties.md) ] 區段中。 [ [附錄 A：提供者](../../guide/appendixes/appendix-a-providers.md) ] 一節中的特定提供者底下會列出更多。  

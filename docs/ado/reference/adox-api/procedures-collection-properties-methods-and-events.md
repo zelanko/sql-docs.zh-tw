@@ -3,7 +3,7 @@ description: Procedures 集合屬性、方法和事件
 title: 程式集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 478dd68affe54fe1dddb7ede744e07454e6bcff6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4c223f8bd6c4d203986bf8576f8f60d6b2920d83
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769587"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983529"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Procedures 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

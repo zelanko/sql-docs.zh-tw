@@ -3,7 +3,7 @@ description: 使用 ADO 進行網際網路發佈
 title: 使用 ADO 進行網際網路發佈 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f08edfbd56b900759c004cbf0fca8a634ab1010
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452600"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979031"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 進行網際網路發佈
 [適用于網際網路發佈的 OLE DB 提供者](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) 會顯示使用 ADO 存取異質資料的特定範例。 雖然本節中的範例是使用網際網路發佈提供者所特有的，但使用 ADO 搭配其他提供者來處理異質資料（例如電子郵件存放區的提供者）時，所示範的原則應該很類似。  

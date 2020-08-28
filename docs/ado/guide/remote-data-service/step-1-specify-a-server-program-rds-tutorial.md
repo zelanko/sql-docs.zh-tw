@@ -3,7 +3,7 @@ description: 步驟 1：指定伺服器程式 (RDS 教學課程)
 title: 步驟1：指定伺服器程式 (RDS 教學課程) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32e01e2dd12dcfb098222ffb7c8da0d9a4527d5d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 39de22745bae445745959142fef3ecb2fed19dfd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759158"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977579"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>步驟 1：指定伺服器程式 (RDS 教學課程)
 在最常見的情況下，請使用[RDS。](../../reference/rds-api/dataspace-object-rds.md)用來指定預設伺服器程式、 [RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)或您自己的自訂伺服器程式 (商務物件) 的 [空間物件] [CreateObject](../../reference/rds-api/createobject-method-rds.md)方法。 伺服器程式會在伺服器上具現化，並傳回伺服器程式或 *proxy*的參考。  

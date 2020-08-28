@@ -3,7 +3,7 @@ description: Command 物件屬性、方法和事件
 title: Command 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7840a0853dd3279f06971db098e50951ccc99d1b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 393ed4047bb1f2313a3719ce39b942de20b5b6b7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776137"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975219"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Command 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  

@@ -3,7 +3,7 @@ description: ADO 事件具現化：ADO 和 WFC
 title: ADO 事件具現化： ADO 和 WFC |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806449"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991709"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件具現化：ADO 和 WFC
 ADO for Windows Foundation 類別 (ADO/WFC) 建基於 ADO 事件模型，並提供簡化的應用程式設計介面。 一般情況下，ADO/WFC 會攔截 ADO 事件、將事件參數合併為單一事件類別，然後呼叫您的事件處理常式。  

@@ -3,7 +3,7 @@ description: 批次模式
 title: 批次模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a2cda3a14dc51532d52184f8b2101981d4f36cd3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806402"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991599"
 ---
 # <a name="batch-mode"></a>批次模式
 當 **LockType** 屬性設定為 **adLockBatchOptimistic** ，而且提供者支援批次更新時，批次模式便會生效。 某些鎖定類型設定無法使用，視資料指標位置而定。 例如，當 **CursorLocation** 設定為 **adUseClient**時，無法使用封閉式鎖定類型。 相反地，當資料指標位置是在伺服器上時，提供者無法支援批次開放式鎖定。 您應該只使用索引鍵集或靜態資料指標來進行批次更新。  

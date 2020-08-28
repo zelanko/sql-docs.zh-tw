@@ -3,7 +3,7 @@ description: 資料成形所需的提供者
 title: 資料成形所需的提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e17ebe5f5e8deab776b88ce66df8636a28212394
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd2829c49adb318ae80eeefd2ec2913fd8620d2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452940"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979799"
 ---
 # <a name="required-providers-for-data-shaping"></a>資料成形所需的提供者
 資料成形通常需要兩個提供者。 服務提供者（ [OLE DB 的資料成形服務](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)）提供資料成形功能，而資料提供者（例如 SQL Server 的 OLE DB 提供者）會提供資料列來填入成形的 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

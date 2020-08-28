@@ -3,7 +3,7 @@ description: Stream 物件 (ADO)
 title: " (ADO) 的資料流程物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de91c32d62a0180ccab263ececd9e2f9e0442aed
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 619d9d307e26829ffa74a24c6904fa84889f476f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777227"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988589"
 ---
 # <a name="stream-object-ado"></a>Stream 物件 (ADO)
 代表二進位資料或文字的資料流程。  

@@ -3,7 +3,7 @@ description: Count 屬性範例 (VB)
 title: Count 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 665ad3516143696c7b286b90e70b42ce1c7b5dd6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 772d06ca8fa854f2af77e45007944d7217dd36a7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775657"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974509"
 ---
 # <a name="count-property-example-vb"></a>Count 屬性範例 (VB)
 此範例示範在***Employee***資料庫中有兩個集合的[Count](./count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合的迴圈上限。 在不使用 **Count** 屬性的情況下列舉這些集合的另一種方式是使用 `For Each...Next` 語句。  

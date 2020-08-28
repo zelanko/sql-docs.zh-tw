@@ -3,7 +3,7 @@ description: Optimize 屬性範例 (VC++)
 title: " (VC + +) 優化屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8000fd53dbc6342ecb9a41b9c66b398d8bbae84b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 85cfa464710579db5872155a0e27bcc57ccdda94
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990249"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 屬性範例 (VC++)
 此範例示範 [Field](./field-object.md) 物件 dynamic **Optimize** 屬性。 不會編制**Pubs**資料庫中**作者**資料表的**zip**欄位索引。 將 [**壓縮**] 欄位上的 [[優化](./optimize-property-dynamic-ado.md)] 屬性設定為 [ **True** ] 會授權 ADO 建立索引，以改善[尋找](./find-method-ado.md)方法的效能。  

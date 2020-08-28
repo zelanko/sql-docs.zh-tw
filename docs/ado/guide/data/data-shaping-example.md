@@ -3,7 +3,7 @@ description: 資料成形範例
 title: 資料成形範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b6d6310e27db65576aac3ed79e699200dfa31c18
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806173"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991439"
 ---
 # <a name="data-shaping-example"></a>資料成形範例
 下列資料成形命令示範如何從 Northwind 資料庫的**Customers**和**Orders**資料表建立階層式**記錄集**。  

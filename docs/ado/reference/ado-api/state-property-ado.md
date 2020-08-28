@@ -3,7 +3,7 @@ description: State 屬性 (ADO)
 title: State 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14e9a083c9f80d2c6485a9444211a2796b7fabee
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d118ed6d695f8f047640f0ef16c139204ae36277
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777347"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988839"
 ---
 # <a name="state-property-ado"></a>State 屬性 (ADO)
 指出物件的狀態為開啟或關閉時，所有適用的物件。 如果物件正在執行非同步方法，則表示物件的目前狀態是連接、執行或正在抓取。  

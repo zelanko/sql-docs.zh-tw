@@ -3,7 +3,7 @@ description: 適用於 OLE DB 的 Microsoft 資料指標服務
 title: 適用于 OLE DB 的 Microsoft 資料指標服務 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3646ec86f76fcba2f6b82759a4784de7d463279
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce59aa28e8db4716b0e27c848ce774b489ff5891
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452740"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979369"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>適用於 OLE DB 的 Microsoft 資料指標服務
 當您選取用戶端資料指標，或將 **CursorLocation** 屬性設定為 **adUseClient**時，您會叫用 Microsoft cursor Service 進行 OLE DB。 您也可能會看到「用戶端資料指標引擎」的參考，這基本上是 ADO 內容中的相同內容。 這項服務會補充資料提供者的資料指標支援功能。 如此一來，您就可以感知所有資料提供者的相對一致功能。  

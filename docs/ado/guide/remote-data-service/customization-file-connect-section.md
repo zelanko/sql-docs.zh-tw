@@ -3,7 +3,7 @@ description: 自訂檔案 Connect 區段
 title: 自訂檔案連接區段 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 19dfe6f81293234d3615d0c3acaae83c50febc1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759844"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978269"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
 處理常式的預設行為是拒絕所有連接。 **Connect**區段會指定該行為的例外狀況。 例如，如果所有 **connect** 區段都不存在或空白，則預設不會進行任何連接。  

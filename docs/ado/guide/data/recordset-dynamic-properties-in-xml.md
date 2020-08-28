@@ -3,7 +3,7 @@ description: XML 中的資料錄集動態屬性
 title: XML 中的記錄集動態屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad241bc794a3f7e462031691baf068928fb300c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 395a81108e3ceaed99ad8ccf1fbab29831dd116d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979889"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 中的資料錄集動態屬性
 下列記錄集提供者特定屬性 (自用戶端資料指標引擎) 目前保存為 XML 格式：  

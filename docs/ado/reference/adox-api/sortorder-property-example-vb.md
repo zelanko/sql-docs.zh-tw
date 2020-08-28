@@ -3,7 +3,7 @@ description: SortOrder 屬性範例 (VB)
 title: " (VB) 的 SortOrder 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5196f4391a37e5881cfc4c7e5743e56cf671c976
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769357"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983269"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
 這個範例會示範已附加至[索引](./index-object-adox.md)之資料[行](./columns-collection-adox.md)集合的資料[行](./column-object-adox.md)的[SortOrder](./sortorder-property-adox.md)屬性。 程式碼會將遞增索引附加至 **Employees** 資料表中的 Country 資料行，然後顯示記錄。 然後，程式碼會將遞減索引附加至 **Employees** 資料表中的 Country 資料行，並再次顯示記錄。 會顯示遞增和遞減索引之間的差異。  

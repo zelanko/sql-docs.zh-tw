@@ -6,19 +6,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0a9f2795906dce8c6a43b66397eefc1679ea22d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776797"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987659"
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義與 ADO 相關的詞彙。  
@@ -187,7 +187,7 @@ ms.locfileid: "88776797"
  ISAPI (網際網路伺服器應用程式開發介面)   
  一組適用于網際網路伺服器的函式，例如執行 Microsoft®的 Windows NT® Server/Windows 2000 伺服器 Internet Information Services (IIS) 。  
   
- 答案  
+ Key  
  在資料表中唯一識別資料列的資料行;通常用來編制資料表的索引。  
   
 ## <a name="m"></a>M  
@@ -264,7 +264,7 @@ ms.locfileid: "88776797"
  資料來源中的一組資料列，全都具有相同的欄位架構。 資料列集可以代表資料表中的所有欄位或部分欄位。 資料列集也可以代表由查詢建立的虛擬資料表或兩個或多個資料表的聯結。 在 ADO 中，資料列集是以 **記錄集** 物件來表示。  
   
 ## <a name="s"></a>S  
- 範圍  
+ 影響範圍  
  物件或變數的參考範圍，或視圖或資料表中的記錄範圍。 例如，只能在定義區域變數的程式內參考本機變數。 公用變數可從應用程式中的任何位置存取。 如果物件位於定義的搜尋路徑中，則物件（例如目前的資料庫）會在範圍內。 您可以使用多個命令中的 Scope 子句來指定記錄範圍。  
   
  服務提供者  

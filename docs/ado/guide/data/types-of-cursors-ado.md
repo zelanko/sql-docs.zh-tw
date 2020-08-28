@@ -3,7 +3,7 @@ description: 資料指標的類型 (ADO)
 title: " (ADO) 的資料指標類型 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea996827565f0cc6d593078e7772c336699260bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adeaef5251ef5e9ebbc1e6b792f2647d3fcea250
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452710"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979309"
 ---
 # <a name="types-of-cursors-ado"></a>資料指標的類型 (ADO)
 一般來說，您的應用程式應該使用最簡單的資料指標，以提供必要的資料存取。 除了基本概念之外，每個額外的資料指標特性 (順向、唯讀、靜態、滾動、未緩衝) 具有用戶端記憶體、網路負載或效能的價格。 在許多情況下，預設資料指標選項會產生比您的應用程式實際需要更複雜的資料指標。  

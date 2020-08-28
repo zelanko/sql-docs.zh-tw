@@ -3,7 +3,7 @@ description: " (VB 的讀取、ReadText、寫入和 WriteText 方法範例) "
 title: " (VB) 的讀取、ReadText、寫入和 WriteText 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32bc949827c943352808cb4981ef4f436e1b27d2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 83d15c287946bbd952a8ea37438e6862296901e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772657"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989889"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a> (VB 的讀取、ReadText、寫入和 WriteText 方法範例) 
 此範例示範如何將文字方塊的內容讀取至文字 [資料流程](./stream-object-ado.md) 和二進位 **資料流程**。 所顯示的其他屬性和方法包括 [位置](./position-property-ado.md)、 [大小](./size-property-ado-parameter.md)、 [字元集](./charset-property-ado.md)和 [SetEOS](./seteos-method.md)。  

@@ -3,7 +3,7 @@ description: GetChildren 方法 (ADO)
 title: " (ADO) 的 GetChildren 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5d0ff58401e5294080c762c1e27f018630364f4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ea59a94f095a438be8fc7009a58179d488af20a2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775097"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972829"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 方法 (ADO)
 傳回 [記錄集](./recordset-object-ado.md) ，其資料列代表集合 [記錄](./record-object-ado.md)的子系。  

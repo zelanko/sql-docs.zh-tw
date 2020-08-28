@@ -6,19 +6,19 @@ ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb313ceb6217bf9400fda05622c7505c8067d2c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760028"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977349"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 

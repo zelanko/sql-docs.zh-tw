@@ -3,7 +3,7 @@ description: Microsoft OLE DB Provider for Microsoft 索引編制服務總覽
 title: Microsoft OLE DB 的 Microsoft 索引服務提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec90db7109363cc017fd314dc674c143be01d185
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991039"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引編制服務總覽
 Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式唯讀存取由 Microsoft 索引服務編制索引的檔案系統和 Web 資料。 ADO 應用程式可以發出 SQL 查詢來取出內容和檔案屬性資訊。

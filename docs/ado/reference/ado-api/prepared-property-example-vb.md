@@ -3,7 +3,7 @@ description: Prepared 屬性範例 (VB)
 title: " (VB) 的備妥屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ae1e12bf05312f96e4647bb1185e3ac8359b0ed
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0442b231be45132c486ae45e5f8850b115b932bc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773097"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990029"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 屬性範例 (VB)
 此範例會藉由開啟兩個[命令](./command-object-ado.md)物件（一個已備妥且尚未備妥）來示範[備](./prepared-property-ado.md)妥的屬性。  

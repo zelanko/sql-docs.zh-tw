@@ -3,7 +3,7 @@ description: Name 屬性 (ADOX)
 title: 名稱屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0376017e4ab74822a076379385b4b5ab457afca0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dd3a9fd328ce332c409d613ad468b96f0b94d31e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769957"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983909"
 ---
 # <a name="name-property-adox"></a>Name 屬性 (ADOX)
 指出物件的名稱。  

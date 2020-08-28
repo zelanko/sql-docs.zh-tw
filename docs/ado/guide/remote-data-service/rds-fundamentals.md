@@ -3,7 +3,7 @@ description: RDS 基本概念
 title: RDS 基本概念 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d4219f2174ecaaac5824f5e821a92ec0dd270253
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759678"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977999"
 ---
 # <a name="rds-fundamentals"></a>RDS 基本概念
 > [!IMPORTANT]

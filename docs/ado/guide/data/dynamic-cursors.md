@@ -3,7 +3,7 @@ description: 動態資料指標
 title: 動態資料指標 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806158"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991349"
 ---
 # <a name="dynamic-cursors"></a>動態資料指標
 動態資料指標會偵測結果集中對資料列所做的所有變更，不論變更是從資料指標內部或資料指標以外的其他使用者進行。 所有使用者所做的所有 insert、update 和 delete 語句都可以透過資料指標來顯示。 動態資料指標可以偵測在開啟資料指標之後，對結果集內的資料列、順序和值所做的任何變更。 除非資料指標交易隔離等級設定為「未認可」 ) ，否則在資料指標外部進行的更新將不會顯示，直到認可為止 (。  

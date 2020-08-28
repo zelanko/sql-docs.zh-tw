@@ -3,7 +3,7 @@ description: Clear 方法 (ADO)
 title: " (ADO) 的 Clear 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b7ed940248230d1c7b74f6782abcb555a538021
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d78980c1baee5aed1280f69c0d5224622a217ea0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975469"
 ---
 # <a name="clear-method-ado"></a>Clear 方法 (ADO)
 從[錯誤](./errors-collection-ado.md)集合中移除所有[錯誤](./error-object.md)物件。  

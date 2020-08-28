@@ -3,7 +3,7 @@ description: XML 安全性考量
 title: XML 安全性考慮 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f73261f51a457144010aec6871f2acbf083b0361
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 608ad67d531573d0124ea312252e6d30c289bf15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758968"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978789"
 ---
 # <a name="xml-security-considerations"></a>XML 安全性考量
 在記錄集物件上的 ADO 儲存和開啟方法，不會被視為要在 Internet Explorer 中執行的安全作業。 因此，如果在以瀏覽器裝載的應用程式或控制項中執行的腳本程式碼中使用這些方法，則瀏覽器的安全性設定將會影響其行為。  

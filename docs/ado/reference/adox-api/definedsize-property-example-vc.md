@@ -3,7 +3,7 @@ description: DefinedSize 屬性範例 (VC++)
 title: DefinedSize 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92926461a9ec7f3e8efcff5edad8950d791b7d25
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 534161539b19681779d50ec2a91e56c996c305bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984629"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 屬性範例 (VC++)
 此範例示範資料[行](./column-object-adox.md)的[DefinedSize](./definedsize-property-adox.md)屬性。 此程式碼將會重新定義*Northwind*資料庫的**Employees**資料表中 FirstName 資料行的大小。 然後，會顯示以**Employees**資料表為基礎之[記錄集](../ado-api/recordset-object-ado.md)的 FirstName[欄位](../ado-api/field-object.md)值變更。 請注意，在您重新定義 **DefinedSize** 屬性之後，FirstName 欄位預設會以空格填補。  
