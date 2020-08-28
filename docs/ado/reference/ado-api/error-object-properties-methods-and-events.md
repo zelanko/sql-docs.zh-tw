@@ -3,7 +3,7 @@ description: Error 物件屬性、方法和事件
 title: Error 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b180faf68842f3492b9cbc1178863231ba02260
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a37fb2ed117a5d5db71061d323bb16c590984e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973685"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  

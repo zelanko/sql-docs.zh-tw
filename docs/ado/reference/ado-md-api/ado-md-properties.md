@@ -3,7 +3,7 @@ description: ADO MD 屬性
 title: ADO MD 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776667"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987419"
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
 

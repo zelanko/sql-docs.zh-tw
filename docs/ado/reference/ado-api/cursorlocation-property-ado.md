@@ -3,7 +3,7 @@ description: CursorLocation 屬性 (ADO)
 title: " (ADO) 的 CursorLocation 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bb1c7932047e72d586275a4b56d1424539477f4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 121aeef137946152a82808c8a439f2e5d03a2c94
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775587"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974459"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
 表示資料指標服務的位置。  

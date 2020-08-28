@@ -3,7 +3,7 @@ description: Attributes 屬性 (ADO)
 title: 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ceb141b0ecdbc278e324f19f3bd4b3d7ed1b4eb6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776447"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975939"
 ---
 # <a name="attributes-property-ado"></a>Attributes 屬性 (ADO)
 表示物件的一或多個特性。  

@@ -3,7 +3,7 @@ description: Update 方法
 title: Update 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776997"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988099"
 ---
 # <a name="update-method"></a>Update 方法
 儲存您對[記錄集](./recordset-object-ado.md)物件的目前資料列所做的任何變更，或[記錄](./record-object-ado.md)物件的[Fields](./fields-collection-ado.md)集合。  

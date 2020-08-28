@@ -1,7 +1,7 @@
 ---
 description: Refresh 方法範例 (VBScript)
 title: " (VBScript) 的 Refresh 方法範例 |Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d1a01aa5ef2049012cb296a2dc56684b8577c15
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3ab5056926fcda98ef0f60449eb5b19d75105e35
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767607"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981359"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 方法範例 (VBScript)
 > [!IMPORTANT]

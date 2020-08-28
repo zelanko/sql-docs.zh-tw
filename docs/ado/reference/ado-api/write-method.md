@@ -3,7 +3,7 @@ description: Write 方法
 title: Write 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26e9311a760e3d4349fdbbcececa9b9533741a4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 90f67c0804424e15d51cc8538413f3c4464ff775
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776837"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987749"
 ---
 # <a name="write-method"></a>Write 方法
 將二進位資料寫入 [資料流程](./stream-object-ado.md) 物件。  

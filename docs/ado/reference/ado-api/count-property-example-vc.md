@@ -3,7 +3,7 @@ description: Count 屬性範例 (VC++)
 title: Count 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd196830ad1212d495778d037c915b2f4d86874
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e379098c00931e56e81c22d111e698571e033e5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775647"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974499"
 ---
 # <a name="count-property-example-vc"></a>Count 屬性範例 (VC++)
 此範例示範在***Employee***資料庫中有兩個集合的[Count](./count-property-ado.md)屬性。 屬性會取得每個集合中的物件數目，並設定列舉這些集合的迴圈上限。  

@@ -3,7 +3,7 @@ description: CubeDefs 集合屬性、方法和事件
 title: CubeDefs 集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b43280068115f3c25da8215549a80c11ad65127
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9bc1b065d3693e00aac8d695aae605a5a68fcda0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778227"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986979"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>CubeDefs 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

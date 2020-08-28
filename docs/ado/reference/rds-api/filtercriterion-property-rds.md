@@ -3,7 +3,7 @@ description: FilterCriterion 屬性 (RDS)
 title: FilterCriterion 屬性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b13b3f3dcdaa2bdd45dabedd5310dc4cdd3db86
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: faa4492693cd05828fc25a5ea7abcf8a763df3d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768217"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982139"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 屬性 (RDS)
 表示要在篩選值中使用的評估運算子。  

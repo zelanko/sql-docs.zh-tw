@@ -3,7 +3,7 @@ description: Handler 屬性範例 (VC++)
 title: 處理常式屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d57c984912b46e03f8e07c85d028680196cc67cb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0e5f168cc552f900f9a4de6e53245b7897e28f52
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768157"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982079"
 ---
 # <a name="handler-property-example-vc"></a>Handler 屬性範例 (VC++)
 > [!IMPORTANT]

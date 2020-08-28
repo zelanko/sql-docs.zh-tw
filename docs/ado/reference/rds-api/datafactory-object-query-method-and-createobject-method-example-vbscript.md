@@ -3,7 +3,7 @@ description: DataFactory 物件、Query 方法和 CreateObject 方法範例 (VBS
 title: 使用 CreateObject (VBScript) 建立 RDSServer. DataFactory 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53c9d3161126a1728335c132fc7886b49297f2cb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 72db0edeb614ff712712590e1556077067537b39
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768487"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982459"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 物件、Query 方法和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]

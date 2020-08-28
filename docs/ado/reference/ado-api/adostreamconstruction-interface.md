@@ -3,7 +3,7 @@ description: ADOStreamConstruction 介面
 title: ADOStreamConstruction 介面 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 144965d31dbb11da6cbc9a3ee6b23cd79cda800e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f6e32b076fa0faa43a3dff46aed66bcadaa2f1ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976159"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
 **ADOStreamConstruction**介面是用來從 C/c + + 應用程式中 OLE DB **IStream**物件來建立 ADO**資料流程**物件。  
@@ -66,7 +66,7 @@ adoStrConstruct->put_Stream(pUnk);
   
  結果 `adoStr` 物件現在代表從 OLE DB **IStream**物件所建立的 ADO**資料流程**物件。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **版本：** ADO 2.0 或更新版本  
   
  連結**庫：** msado15.dll  

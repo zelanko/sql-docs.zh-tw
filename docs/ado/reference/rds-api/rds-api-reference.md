@@ -3,7 +3,7 @@ description: RDS API 參考
 title: RDS API 參考 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0379d8409d73a483ef3362f1ae0ba88b9ba4192c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3ba76ca47b24b871fba3986d477838ac5f891325
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767887"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981799"
 ---
 # <a name="rds-api-reference"></a>RDS API 參考
 > [!IMPORTANT]

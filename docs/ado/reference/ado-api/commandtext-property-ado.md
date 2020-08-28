@@ -3,7 +3,7 @@ description: CommandText 屬性 (ADO)
 title: CommandText 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e23ae5bffca27d7ad9940fb4f03df81645094792
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c0e7f2e9e346a5379051b101236df186b815aa85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776117"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975189"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 屬性 (ADO)
 表示要對提供者發出的命令文字。  

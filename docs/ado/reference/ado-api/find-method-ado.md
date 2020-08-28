@@ -3,7 +3,7 @@ description: Find 方法 (ADO)
 title: " (ADO) 的 Find 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0312fb8a8f91e8b56cb6c29a3a64b3a36bcec69d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 18b4dc88dfedbb5a9a06968ebb5b02300439ed1b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775227"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972949"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋 [記錄集](./recordset-object-ado.md) ，以尋找符合指定準則的資料列。 您可以選擇性地指定搜尋的方向、開始的資料列，以及起始資料列的位移。 如果符合準則，則會在找到的記錄上設定目前的資料列位置。否則，此位置會設定為 **記錄集**的結尾 (或開始) 。  

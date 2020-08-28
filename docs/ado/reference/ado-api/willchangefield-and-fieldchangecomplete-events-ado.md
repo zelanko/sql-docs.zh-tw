@@ -3,7 +3,7 @@ description: WillChangeField 和 FieldChangeComplete 事件 (ADO)
 title: WillChangeField 和 FieldChangeComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84c861c2a344276a80ea8e8fd98f84aeb2bb7cbc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 836228d0741cdf4fd75db5d9c9e0c3d523848b50
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776897"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987879"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
 在暫止的作業變更[記錄集中](./recordset-object-ado.md)一個或多個[欄位](./field-object.md)物件的值之前，會呼叫**WillChangeField**事件。 **FieldChangeComplete**事件會在一或多個**欄位**物件的值變更之後呼叫。  

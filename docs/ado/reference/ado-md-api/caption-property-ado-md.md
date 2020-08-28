@@ -3,7 +3,7 @@ description: Caption 屬性 (ADO MD)
 title: Caption 屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d30b4fdcea6d8334e94d8b02ef8e060e5060d69
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 11d2fbcd6e883b81dc25f4e61a7ee18923769a6f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778357"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987329"
 ---
 # <a name="caption-property-ado-md"></a>Caption 屬性 (ADO MD)
 指出顯示 [層級](./level-object-ado-md.md) 或 [成員](./member-object-ado-md.md) 物件時所要使用的文字標題。  

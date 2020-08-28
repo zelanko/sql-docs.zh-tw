@@ -3,7 +3,7 @@ description: DataSpace 物件 (RDS) 屬性、方法和事件
 title: " (RDS) 屬性、方法和事件的空間物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5793772e486c0af1b6827c0eb3279e1177cd0e47
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1439a18c7e4f29c9836f901e2cc2a5e42e822f28
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768387"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982349"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>DataSpace 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]

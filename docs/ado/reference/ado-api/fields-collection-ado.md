@@ -3,7 +3,7 @@ description: Fields 集合 (ADO)
 title: " (ADO) 的欄位集合 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d94803ecbe53addb2efb7ef738863bc6541a5801
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775377"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973119"
 ---
 # <a name="fields-collection-ado"></a>Fields 集合 (ADO)
 包含[記錄集](./recordset-object-ado.md)或[記錄](./record-object-ado.md)物件的所有[欄位](./field-object.md)物件。  

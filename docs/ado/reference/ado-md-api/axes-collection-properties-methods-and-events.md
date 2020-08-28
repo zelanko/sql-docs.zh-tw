@@ -3,7 +3,7 @@ description: Axes 集合屬性、方法和事件
 title: 軸集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0cfc62edcff2603d3a2e9e52149fd32597f6eedc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2db7cc811d4ae266bfbe3c86d5f254ba8a5cbaf5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987399"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Axes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

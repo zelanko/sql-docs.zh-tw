@@ -3,7 +3,7 @@ description: FieldAttributeEnum
 title: FieldAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd8910f07b5f30170e8addd90fa41ab3299fbda5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b218616ec1514ea8af1c160b155b63fb54c182c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443760"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973169"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定 [欄位](../../../ado/reference/ado-api/field-object.md) 物件的一或多個屬性。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指出提供者會快取域值，並從快取中完成後續讀取。|  
 |**adFldFixed**|0x10|表示欄位包含固定長度的資料。|  
@@ -49,7 +49,7 @@ ms.locfileid: "88443760"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.FieldAttribute.CACHEDEFERRED|  
 |AdoEnums. FieldAttribute. FIXED|  

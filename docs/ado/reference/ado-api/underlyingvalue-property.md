@@ -3,7 +3,7 @@ description: UnderlyingValue 屬性
 title: UnderlyingValue 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 869daa9afc840e7580e6498510ef07d4be002802
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a96924a682a0c916da8c6834ea7b290b88b6f690
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777077"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988169"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 屬性
 表示資料庫中 [Field](./field-object.md) 物件的目前值。  

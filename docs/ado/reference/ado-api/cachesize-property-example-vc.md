@@ -3,7 +3,7 @@ description: CacheSize 屬性範例 (VC++)
 title: CacheSize 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83b78ff80ab428daf616014a316c14e2e3185c27
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d2fb692aa0f4b6703b20ba019832ad01cc90865b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776537"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975679"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 (VC++)
 這個範例會使用 [CacheSize](./cachesize-property-ado.md) 屬性來顯示以和沒有30個記錄快取執行之作業的效能差異。  

@@ -3,7 +3,7 @@ description: ADO MD 物件模型
 title: ADO MD 物件模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e74c8faf741150c9f91d4956709189b4f0007de4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 61fc4c7ea45478af1911fec52f1c37dc017a2263
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776737"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987559"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 物件模型
 本主題說明如何在 ADO MD 中表示物件和相關物件。  

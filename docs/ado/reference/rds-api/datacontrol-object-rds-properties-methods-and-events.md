@@ -3,7 +3,7 @@ description: DataControl 物件 (RDS) 屬性、方法和事件
 title: " (RDS) 屬性、方法和事件的 DataControl 物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68304882e4ae39fa4e31665753a8f6554e79e55c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5f2b3733c523684701e8bde6cbc66faf51cf84b3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768537"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982479"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]

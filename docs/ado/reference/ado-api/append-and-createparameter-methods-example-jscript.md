@@ -3,7 +3,7 @@ description: '附加和 CreateParameter 方法範例 (JScript) '
 title: 附加和 CreateParameter 方法範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3b4de61bfa05e1dfa5fef778773105b93aeb0c5f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776547"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976129"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>附加和 CreateParameter 方法範例 (JScript) 
 這個範例會使用 [Append](./append-method-ado.md) 和 [CreateParameter](./createparameter-method-ado.md) 方法，以輸入參數來執行預存程式。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**AppendJS。**  
