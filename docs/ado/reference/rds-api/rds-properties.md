@@ -1,7 +1,7 @@
 ---
 description: RDS 屬性
 title: RDS 屬性 |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b2a106dadcb8af11dcdd5865472fce1fa2e1be2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a4f47967fc80ba488c57299fe7f94c13d9f9e949
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767737"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981519"
 ---
 # <a name="rds-properties"></a>RDS 屬性
 > [!IMPORTANT]

@@ -3,7 +3,7 @@ description: SkipLine 方法
 title: SkipLine 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0897d90ffeccabbce57525f268214577a523d92
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 840c0111aca8b202fd081d3f0250d17fd43e5bbb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777467"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989049"
 ---
 # <a name="skipline-method"></a>SkipLine 方法
 讀取文字 [資料流程](./stream-object-ado.md)時，略過一行。  

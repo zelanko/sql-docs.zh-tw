@@ -3,7 +3,7 @@ description: EndOfRecordset 事件 (ADO)
 title: EndOfRecordset 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d96d11333c47aeb190cd2842a5a65a832642eb8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c0bd91666040a87d104ff4a9c0036596b711a51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444030"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973794"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 嘗試移到[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)結尾之後的資料列時，就會呼叫**EndOfRecordset**事件。  

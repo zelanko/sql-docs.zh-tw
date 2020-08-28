@@ -3,7 +3,7 @@ description: ADO 事件
 title: ADO 事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4644596d216bd459b19778607e309cb7713d6fc4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2925a2c0a25bb919b5cfaae7a6b245f1175b9bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776657"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976449"
 ---
 # <a name="ado-events"></a>ADO 事件
 

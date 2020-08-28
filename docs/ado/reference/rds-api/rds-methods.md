@@ -1,7 +1,7 @@
 ---
 description: RDS 方法
 title: RDS 方法 |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3403fa1baeeaa2c5e09f3b3f3e116325ecaef77c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8403881e3e25f612ac9a27a798ad2d88f192d5cd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767747"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981639"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]

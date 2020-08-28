@@ -3,7 +3,7 @@ description: CreateRecordset 方法 (RDS)
 title: " (RDS) 的 CreateRecordset 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982519"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空白、中斷連接的 [記錄集](../ado-api/recordset-object-ado.md)。  
@@ -49,7 +49,7 @@ object.CreateRecordset(ColumnInfos)
   
 |屬性|描述|  
 |---------------|-----------------|  
-|Name|欄標題的名稱。|  
+|名稱|欄標題的名稱。|  
 |類型|資料類型的整數。|  
 |大小|寬度的整數（以字元為單位），不論資料類型為何。|  
 |Null 屬性|布林值。|  

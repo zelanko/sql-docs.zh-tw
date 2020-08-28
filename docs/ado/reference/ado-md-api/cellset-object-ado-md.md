@@ -3,7 +3,7 @@ description: Cellset 物件 (ADO MD)
 title: ADO MD) 的 (格集物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778307"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987149"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 物件 (ADO MD)
 表示多維度查詢的結果。 它是從 cube 或其他資料格集選取的儲存格集合。  
@@ -33,7 +33,6 @@ ms.locfileid: "88778307"
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>備註  
  資料格集內目前的儲存格沒有任何概念。 [專案](./item-property-ado-md-cellset.md)屬性會改為從資料格集抓取特定的[Cell](./cell-object-ado-md.md)物件。 **Item**屬性的引數會決定要抓取的儲存格。 您可以指定資料格的唯一序數值。 您也可以使用資料格集的每個軸上的位置數位來抓取儲存格。 如需有關如何取出資料格的詳細資訊，請參閱 [Item](./item-property-ado-md-cellset.md) 屬性。  
   
  使用 **儲存格** 物件的集合、方法和屬性，您可以執行下列動作：  

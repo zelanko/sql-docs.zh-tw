@@ -3,7 +3,7 @@ description: Command 物件 (ADO)
 title: " (ADO) 的命令物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d876be4883844790815a0640d26cee2933ca17f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776157"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975229"
 ---
 # <a name="command-object-ado"></a>Command 物件 (ADO)
 定義您想要對資料來源執行的特定命令。  

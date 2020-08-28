@@ -3,7 +3,7 @@ description: FieldStatusEnum
 title: FieldStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d30c0bc3508c364b7a0d52f23ccb52d11e06f8d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973089"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[欄位物件](./field-object.md)的[狀態](./status-property-ado-field.md)。  

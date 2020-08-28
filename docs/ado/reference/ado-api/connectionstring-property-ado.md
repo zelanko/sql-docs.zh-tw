@@ -3,7 +3,7 @@ description: ConnectionString 屬性 (ADO)
 title: " (ADO) 的 ConnectionString 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775897"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974769"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 屬性 (ADO)
 表示用來建立資料來源連接的資訊。  

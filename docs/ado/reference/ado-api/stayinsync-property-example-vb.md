@@ -3,7 +3,7 @@ description: StayInSync 屬性範例 (VB)
 title: " (VB) 的 StayInSync 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e96d32355fa31d79933b23620002f96d23eb7da
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7a8a6eb8fb9d6be9433e11f641c6b29367680ba5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988639"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 屬性範例 (VB)
 此範例示範 [StayInSync](./stayinsync-property.md) 屬性如何加速存取階層式 [記錄集中](./recordset-object-ado.md)的資料列。  

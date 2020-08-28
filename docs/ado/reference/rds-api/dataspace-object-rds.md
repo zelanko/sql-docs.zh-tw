@@ -3,7 +3,7 @@ description: DataSpace 物件 (RDS)
 title: " (RDS) 的空間物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 22faae3a62f4caa34ef8fa74da330475d7b9d774
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768377"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982303"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 物件 (RDS)
 > [!IMPORTANT]

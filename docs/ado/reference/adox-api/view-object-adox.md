@@ -3,7 +3,7 @@ description: View 物件 (ADOX)
 title: View Object (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b84873da0c4cacc12d624763b466786eaf1532ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eefc7c259d12f20ada1676a6518fa357719abe63
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769017"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982989"
 ---
 # <a name="view-object-adox"></a>View 物件 (ADOX)
 表示已篩選的一組記錄或虛擬資料表。 當與 ADO [命令](../ado-api/command-object-ado.md) 物件一起使用時， **View** 物件可以用來加入、刪除或修改視圖。  

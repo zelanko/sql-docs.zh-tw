@@ -3,7 +3,7 @@ description: DataSource 屬性 (ADO)
 title: DataSource 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b85f163ddb3f1fc31116966127bc01efa17a262
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48c5969df864364cd87d131fce2740a5a0e043f7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444220"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974259"
 ---
 # <a name="datasource-property-ado"></a>DataSource 屬性 (ADO)
 表示物件，該物件包含要表示為 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件的資料。  
@@ -33,7 +33,7 @@ ms.locfileid: "88444220"
   
  參考的物件必須執行 **IDataSource** 介面，且必須包含 **IRowset** 介面。  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
   
 ```  
 Dim rs as New ADODB.Recordset  

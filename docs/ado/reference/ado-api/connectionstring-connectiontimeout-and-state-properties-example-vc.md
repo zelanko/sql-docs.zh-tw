@@ -3,7 +3,7 @@ description: 'ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + 
 title: 連接屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7efad01088e4151d37dea9d71c1662a228e0c822
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 99d285a4fdd8d3eabc1df1b353b650e17a4571c5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775927"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974779"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout 和 State 屬性範例 (VC + +) 
 這個範例示範使用 [ConnectionString](./connectionstring-property-ado.md) 屬性來開啟 [連接](./connection-object-ado.md) 物件的不同方式。 它也會使用 [ConnectionTimeout](./connectiontimeout-property-ado.md) 屬性來設定連接逾時時間，並使用 [State](./state-property-ado.md) 屬性來檢查連接的狀態。 此程式必須有 >getstate 函數才能執行。  

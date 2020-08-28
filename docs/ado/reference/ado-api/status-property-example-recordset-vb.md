@@ -3,7 +3,7 @@ description: Status 屬性範例 (Recordset) (VB)
 title: Status 屬性範例 (記錄集)  (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0c8e417b86578500529820905beb3b16b0dc3a0f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777307"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988694"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 屬性範例 (Recordset) (VB)
 此範例會使用 [Status](./status-property-ado-recordset.md) 屬性來顯示批次更新發生之前已在批次作業中修改哪些記錄。  

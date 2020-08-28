@@ -2,7 +2,7 @@
 description: ADO 動態屬性
 title: ADO 動態屬性 |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ab2320d3400c5be066af246b50daccaf468462
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771757"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976509"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 動態屬性
 動態屬性可以加入至[連接](./connection-object-ado.md)、[命令](./command-object-ado.md)或[記錄集](./recordset-object-ado.md)物件的[屬性](./properties-collection-ado.md)集合。 這些屬性的來源是資料提供者，例如 [SQL Server 的 OLE DB 提供者](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或是服務提供者（例如 [OLE DB 的 Microsoft 資料指標服務](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)）。 如需特定動態屬性的詳細資訊，請參閱適當的資料提供者或服務提供者檔。  

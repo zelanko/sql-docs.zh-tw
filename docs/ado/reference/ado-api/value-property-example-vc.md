@@ -3,7 +3,7 @@ description: Value 屬性範例 (VC++)
 title: 值屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cbe1d7738bd827a8f984e8b4f5e024e88457035
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2d8cdeffd661ece8120078019792d306844e575d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776947"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987939"
 ---
 # <a name="value-property-example-vc"></a>Value 屬性範例 (VC++)
 此範例會顯示 [ ***Employees*** ] 資料表的欄位和屬性值，以示範具有[欄位](./field-object.md)和[屬性](./property-object-ado.md)物件的[Value](./value-property-ado.md)屬性。  

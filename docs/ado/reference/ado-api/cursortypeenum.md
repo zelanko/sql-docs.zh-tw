@@ -3,7 +3,7 @@ description: CursorTypeEnum
 title: CursorTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ceb52384d5ed33019bf0d7ec5148322801a1dc2e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775467"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974309"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 指定 [記錄集](./recordset-object-ado.md) 物件中使用的資料指標類型。  

@@ -3,7 +3,7 @@ description: Cell 物件 (ADO MD)
 title: 資料格物件 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6fceeea4ebe6728ae4adf9bce52cb6b642a926d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987208"
 ---
 # <a name="cell-object-ado-md"></a>Cell 物件 (ADO MD)
 代表資料格集內所含座標軸座標交集處的資料。  
@@ -43,7 +43,7 @@ ms.locfileid: "88778327"
   
  **Properties**集合包含提供者提供的屬性。 下表列出可能可用的屬性。 實際的屬性清單可能會因提供者的執行而有所不同。 如需可用屬性的完整清單，請參閱提供者的檔。  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |BackColor|顯示儲存格時使用的背景色彩。|  
 |FontFlags|用以詳述字型效果的位元遮罩。|  

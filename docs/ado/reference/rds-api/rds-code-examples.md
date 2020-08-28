@@ -1,7 +1,7 @@
 ---
 description: RDS 程式碼範例
 title: RDS 程式碼範例 |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66404237dbcb0a5cd74dd5eaf77d30f3af7e70a7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9b4c783913492669cd9092e953caef7e0a99aaf5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767807"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981649"
 ---
 # <a name="rds-code-examples"></a>RDS 程式碼範例
 > [!IMPORTANT]

@@ -3,7 +3,7 @@ description: Type 屬性 (ADO)
 title: Type 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd16324e4daa3e14e47da21ad4fd528e68c1a614
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9f4dcfd3c22363ab4950e03844647f990a34f4d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777097"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988309"
 ---
 # <a name="type-property-ado"></a>Type 屬性 (ADO)
 指出 [參數](./parameter-object.md)、 [欄位](./field-object.md)或 [屬性](./property-object-ado.md) 物件的操作類型或資料類型。  

@@ -1,7 +1,7 @@
 ---
 description: Visual Basic 中的 RDS 程式碼範例
 title: Visual Basic 中的 RDS 程式碼範例 |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7d6a356fb188cdd8507bdb80d79e4c9ceb6a1a5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e7dab6f47e215b3d9eb27f364f62d431ed5bf629
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981779"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic 中的 RDS 程式碼範例
 > [!IMPORTANT]

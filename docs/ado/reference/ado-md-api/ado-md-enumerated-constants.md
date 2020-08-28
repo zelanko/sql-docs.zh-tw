@@ -3,7 +3,7 @@ description: ADO MD 列舉常數
 title: ADO MD 列舉常數 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24e742f36dfda2c76059eb8055a903bac4ced9ac
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776747"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987549"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 列舉常數
 為了協助進行偵錯工具，ADO MD 列舉的常數會列出每個常數的值。 不過，此值純粹是諮詢，可能會從一個 ADO MD 版本變更為另一個。 您的程式碼應該只取決於列舉常數的名稱，而不是實際值。  

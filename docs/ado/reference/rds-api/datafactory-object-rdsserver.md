@@ -3,7 +3,7 @@ description: DataFactory 物件 (RDSServer)
 title: DataFactory 物件 (RDSServer) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 066add7729712c6c8c40951a3139dcba00ed5a70
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d35cda245b2f3ff01dffc04f79ca2922e05f348f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768457"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982419"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 物件 (RDSServer)
 > [!IMPORTANT]

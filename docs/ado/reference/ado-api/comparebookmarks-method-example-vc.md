@@ -3,7 +3,7 @@ description: CompareBookmarks 方法範例 (VC++)
 title: " (VC + +) 的 CompareBookmarks 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 921fccf29a823be169f16a0144aa0cdb0cabe232
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b30ea43d8a47e5e32b57f94f997ea05bfbe641de
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776047"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975029"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 方法範例 (VC++)
 此範例示範 [CompareBookmarks](./comparebookmarks-method-ado.md) 方法。 除非特定書簽是特殊的，否則很少需要書簽的相對值。  

@@ -3,7 +3,7 @@ description: WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
 title: WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3066ebce2f1f3e96404e933af1c39ad0fdd2659
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776887"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987799"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
 在暫止的作業變更[記錄集](./recordset-object-ado.md)之前，會呼叫**WillChangeRecordset**事件。 **RecordsetChangeComplete**事件會在**記錄集**變更之後呼叫。  

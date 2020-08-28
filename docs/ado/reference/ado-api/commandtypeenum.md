@@ -3,7 +3,7 @@ description: CommandTypeEnum
 title: CommandTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 994fe5eb0cf10189477e11154b8814f5e73c9194
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c23647edbe916daeb3f9356e06de75d11458a59c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776077"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975059"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定如何解讀命令引數。  

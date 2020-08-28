@@ -3,7 +3,7 @@ description: Visual Basic 中的 ADO MD 程式碼範例
 title: ADO MD Visual Basic 中的程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed25ae6338425438bd696a07c504f26e0a45c043
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a24cd1e0e3a00e0091cccc63e7747f0675307569
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776807"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987589"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Visual Basic 中的 ADO MD 程式碼範例
 下列範例需要 Microsoft Visual Basic 5.0 版（含 Service Pack 3）或 Visual Basic 6.0 版。  

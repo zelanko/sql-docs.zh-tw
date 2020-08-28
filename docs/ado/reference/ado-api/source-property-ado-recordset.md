@@ -3,7 +3,7 @@ description: Source 屬性 (ADO Recordset)
 title: 來源屬性 (ADO 記錄集) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29ce12027267918822ed49185f06ab28a6448190
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3a71efe111a58ab8f799db512e77da4365ba5f48
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777397"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988899"
 ---
 # <a name="source-property-ado-recordset"></a>Source 屬性 (ADO Recordset)
 表示 [記錄集](./recordset-object-ado.md) 物件的資料來源。  

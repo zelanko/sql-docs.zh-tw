@@ -3,7 +3,7 @@ description: CreateRecordset 方法範例 (VBScript)
 title: " (VBScript) 的 CreateRecordset 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9648445435cc1f26a28c43110584fb6280739f64
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 665d446c146681603482965fc47eda3fb46f4ca2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982549"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法範例 (VBScript)
 > [!IMPORTANT]

@@ -3,7 +3,7 @@ description: WillConnect 事件 (ADO)
 title: WillConnect 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a63bf9d324fc9c2e0363576814e1c97c9ad6aeb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 259ef55060d7968d9ec557c831412ad58609a6df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987779"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 在開始連接之前，會呼叫 **WillConnect** 事件。  

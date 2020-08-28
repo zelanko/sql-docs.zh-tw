@@ -3,7 +3,7 @@ description: Type 屬性範例 (Property) (VC++)
 title: Type 屬性範例 (屬性)  (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dec09d7c382bad1234da377cbedc204161a95885
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777057"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988229"
 ---
 # <a name="type-property-example-property-vc"></a>Type 屬性範例 (Property) (VC++)
 這個範例示範 [型](./type-property-ado.md) 別屬性。 它是一種公用程式模型，用來列出集合的名稱和類型，例如 [屬性](./properties-collection-ado.md)、 [欄位](./fields-collection-ado.md)等等。  

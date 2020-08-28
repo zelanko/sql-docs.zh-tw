@@ -3,7 +3,7 @@ description: ADORecordConstruction 介面
 title: ADORecordConstruction 介面 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4e56c1ed6339c7b0baf50abfc6308a2dc2be741a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776598"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976229"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
 **ADORecordConstruction**介面是用來從 C/c + + 應用程式中 OLE DB 的資料**列**物件來建立 ADO**記錄**物件。  
@@ -71,7 +71,7 @@ ms.locfileid: "88776598"
   
  您也可以從 OLE DB 資料**列**物件的容器來建立 ADO**記錄**物件。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **版本：** ADO 2.0 和更新版本  
   
  連結**庫：** msado15.dll  

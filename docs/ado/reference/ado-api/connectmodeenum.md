@@ -3,7 +3,7 @@ description: ConnectModeEnum
 title: ConnectModeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 704e4e78c47744fbdf2288800353fbbd33d8b090
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775847"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974709"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在[連接](./connection-object-ado.md)中修改資料、開啟[記錄](./record-object-ado.md)，或針對**記錄**和[資料流程](./stream-object-ado.md)物件的[Mode](./mode-property-ado.md)屬性指定值的可用許可權。  

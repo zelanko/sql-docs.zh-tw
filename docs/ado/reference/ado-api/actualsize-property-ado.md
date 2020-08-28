@@ -3,7 +3,7 @@ description: ActualSize 屬性 (ADO)
 title: " (ADO) 的 ActualSize 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b08a0ce6f9b318430785938c33ce951282eafce2
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 6684c03c94d26b8c8f6366ac41ccd1b331016426
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760283"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976899"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 屬性 (ADO)
 表示欄位值的實際長度（以位元組為單位）。  

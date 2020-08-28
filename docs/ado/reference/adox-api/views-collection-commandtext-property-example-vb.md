@@ -3,7 +3,7 @@ description: Views 集合、CommandText 屬性範例 (VB)
 title: Views 集合、CommandText 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 645dd3602c97f8ca4bb4fd7df832352bb4cdded0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: da3685ba69f34fce5a97d0621917883f0e16e6b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768907"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982859"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Views 集合、CommandText 屬性範例 (VB)
 下列程式碼示範如何使用 [Command](./command-property-adox.md) 屬性來更新視圖的文字。  

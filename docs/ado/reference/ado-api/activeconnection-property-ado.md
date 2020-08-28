@@ -3,7 +3,7 @@ description: ActiveConnection 屬性 (ADO)
 title: " (ADO) 的 ActiveConnection 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 344e712551e46d1ec28f75864dacbdfc39989248
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760098"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976959"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 屬性 (ADO)
 指出指定的[命令](./command-object-ado.md)、[記錄集](./recordset-object-ado.md)或[記錄](./record-object-ado.md)物件目前所屬的[連接](./connection-object-ado.md)物件。  
@@ -41,7 +41,7 @@ ms.locfileid: "88760098"
   
  如果 **連接** 物件已指派給 **ActiveConnection** 屬性，則必須開啟物件。 指派封閉的連線物件會導致錯誤。  
   
-### <a name="note"></a>附註  
+### <a name="note"></a>注意  
  **Microsoft Visual Basic** 將 **ActiveConnection** 屬性設定為 *Nothing* ，就不會將 **命令** 物件與目前的 **連接** 解除關聯，而會導致提供者釋出資料來源上任何相關聯的資源。 然後，您可以將 **命令** 物件與相同或其他 **連接** 物件產生關聯。 有些提供者可讓您將屬性設定從一個 **連接** 變更為另一個連接，而不需要先將屬性設定為 *Nothing*。  
   
  如果**Command**物件的[parameters](./parameters-collection-ado.md)集合包含提供者所提供的參數，則如果您將**ActiveConnection**屬性設定為*Nothing*或另一個**連接**物件，則會清除集合。 如果您手動建立[參數](./parameter-object.md)物件，並使用它們來填滿**Command**物件的**Parameters**集合，則將**ActiveConnection**屬性設定為*Nothing*或另一個**連接**物件會讓**參數**集合保持不變。  

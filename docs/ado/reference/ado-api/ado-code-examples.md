@@ -3,7 +3,7 @@ description: ADO 程式碼範例
 title: ADO 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3cb075c1a71f548515543d4c408760c5b4fe224
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: f9bfdb0b9251ef30335b7d502ae23c8a2331b745
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760128"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976579"
 ---
 # <a name="ado-code-examples"></a>ADO 程式碼範例
 您可以使用下列程式碼範例，瞭解如何使用 ADO 物件、方法、屬性和事件。  

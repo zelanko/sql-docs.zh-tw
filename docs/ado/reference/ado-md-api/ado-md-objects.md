@@ -3,7 +3,7 @@ description: ADO MD 物件
 title: ADO MD 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb297a35594cad76543713eb45d48b150d53aa0c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776717"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987429"
 ---
 # <a name="ado-md-objects"></a>ADO MD 物件
 
