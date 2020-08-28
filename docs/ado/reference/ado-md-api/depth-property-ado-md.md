@@ -3,7 +3,7 @@ description: Depth 屬性 (ADO MD)
 title: 深度屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e050f73aaa2ceb174c115218796e166b72f39381
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: cff8d4426630495c7adf73921d8210f1710f3315
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778207"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986909"
 ---
 # <a name="depth-property-ado-md"></a>Depth 屬性 (ADO MD)
 指出階層的 [層級](./level-object-ado-md.md) 和根目錄之間的層級數目。  

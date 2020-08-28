@@ -1,7 +1,7 @@
 ---
 description: SQL 屬性範例 (VBScript)
 title: " (VBScript) 的 SQL 屬性範例 |Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b9c17b11fce3d99f49b682d035214c95e7d3e91
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 346c2b7b5e58b5c32590fd7a60690dd6de0c5bc0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767447"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981129"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 屬性範例 (VBScript)
 > [!IMPORTANT]

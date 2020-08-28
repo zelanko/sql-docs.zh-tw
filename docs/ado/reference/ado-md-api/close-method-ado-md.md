@@ -3,7 +3,7 @@ description: Close 方法 (ADO MD)
 title: 關閉方法 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 666cf9afc4f6f5df5d3e950948e60bd644a45cdb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3f4f0c1613b1ca0e33a4f325dbe3e326d56f76e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987109"
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)
 關閉開啟的儲存格。  

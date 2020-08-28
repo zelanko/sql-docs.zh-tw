@@ -3,7 +3,7 @@ description: 網際網路發佈案例
 title: 網際網路發佈案例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2042cca7c4a6bc2cc01860ff29388cced3aa5387
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 40a74a489a39d0bbb4c11c27e16225aec8779606
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805950"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980449"
 ---
 # <a name="internet-publishing-scenario"></a>網際網路發佈案例
 此程式碼範例示範如何搭配使用 ADO 與 Microsoft OLE DB 提供者進行網際網路發佈。 在此案例中，您將建立使用 **記錄集**、 **記錄**和 **資料流程** 物件的 Visual Basic 應用程式，以顯示使用網際網路發佈提供者所發佈的資源內容。  

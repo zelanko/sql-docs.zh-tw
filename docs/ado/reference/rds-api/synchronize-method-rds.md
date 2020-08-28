@@ -1,7 +1,7 @@
 ---
 description: Synchronize 方法 (RDS)
 title: " (RDS) 同步處理方法 |Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 36cf462cf7f004055acedb215146d6c909175e79
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980969"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 將指定的記錄集與連接字串所指定的資料庫同步處理，以便在 ADO 2.5 和更新版本中使用。  

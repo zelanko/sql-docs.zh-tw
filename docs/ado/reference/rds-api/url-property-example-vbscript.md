@@ -1,7 +1,7 @@
 ---
 description: URL 屬性範例 (VBScript)
 title: " (VBScript) 的 URL 屬性範例 |Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38e09a12f56bef4751d2c872e25fce70413c88dc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7f0532998b1c887c3a7f5e0b93b90278cb2b37d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767297"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980929"
 ---
 # <a name="url-property-example-vbscript"></a>URL 屬性範例 (VBScript)
 > [!IMPORTANT]

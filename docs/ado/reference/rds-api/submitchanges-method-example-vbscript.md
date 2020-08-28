@@ -2,7 +2,7 @@
 description: SubmitChanges 方法範例 (VBScript)
 title: " (VBScript) 的 SubmitChanges 方法範例 |Microsoft Docs"
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8be18e18b890dbe438a0aced23503e690985b5c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7de649459a7b31d4d30230d8a4e7878c6938bf13
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767367"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981089"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法範例 (VBScript)
 > [!IMPORTANT]

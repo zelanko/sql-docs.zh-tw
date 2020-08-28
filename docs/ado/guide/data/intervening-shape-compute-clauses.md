@@ -3,7 +3,7 @@ description: 中介 Shape COMPUTE 子句
 title: 中間圖形計運算元句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49393765bfedc832f49fef103ba1076b277277fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8a4be3fb7f70ba41e24cd757da34e7272e51f87c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805892"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980439"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中介 Shape COMPUTE 子句
 在參數化圖形命令的父系和子系之間內嵌一或多個計運算元句是有效的，如下列範例所示：  

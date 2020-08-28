@@ -6,19 +6,19 @@ ms.date: 01/19/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f76f816f03d1b7ba8e8d186104dc235762739f9
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 238fe03736fbc295622fa42924f3249f28b9a527
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805514"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980809"
 ---
 # <a name="ado-features-for-each-release"></a>每個版本的 ADO 功能
 

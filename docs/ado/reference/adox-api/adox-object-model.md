@@ -3,7 +3,7 @@ description: ADOX 物件模型
 title: ADOX 物件模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ada8f0f0e5b93128ab188c18810f3240c5445940
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e08a73f18bfbf750ff9181591106552b4232938
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985719"
 ---
 # <a name="adox-object-model"></a>ADOX 物件模型
 下圖說明如何在 ADOX 中表示和關聯物件。 如需特定物件或集合的詳細資訊，請參閱特定的參考主題，或 [Adox 物件](./adox-objects.md) 和 [adox 集合](./adox-collections.md)。  

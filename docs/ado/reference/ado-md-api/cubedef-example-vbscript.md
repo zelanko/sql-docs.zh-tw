@@ -3,7 +3,7 @@ description: CubeDef 範例 (VBScript)
 title: CubeDef 範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d807932f16ecdc7bdf35ba6b749fcd6345baa811
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9119d48c6e19dcf94e3bac3105b2cad65f55f64
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441160"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987039"
 ---
 # <a name="cubedef-example-vbscript"></a>CubeDef 範例 (VBScript)
 此範例會在網頁上顯示 cube 中繼資料。  

@@ -1,7 +1,7 @@
 ---
 description: SortDirection 屬性 (RDS)
 title: SortDirection 屬性 (RDS) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a8aca2bb5dd4acf6a2b7b2702eb7807d520f73
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: aa7bdefd98c908ed97b225ebe268b33f353b5042
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767467"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981139"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 屬性 (RDS)
 指出排序次序為遞增或遞減。  

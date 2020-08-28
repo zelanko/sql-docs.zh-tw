@@ -3,7 +3,7 @@ description: 新增多個欄位和值
 title: 新增多個欄位 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2543741749c1521526aea18bc4600168559eb45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c661e8e99ae9651a4b89f8facad238d5f83564e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453890"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991769"
 ---
 # <a name="adding-multiple-fields-and-values"></a>新增多個欄位和值
 有時候，將欄位的陣列及其對應的值傳入 **AddNew** 方法可能更有效率，而不是為每個新欄位設定多次 **值** 。 如果 *FieldList* 是陣列， *值* 也必須是具有相同成員數目的陣列;否則，就會發生錯誤。 功能變數名稱的順序必須符合每個陣列中域值的順序。 下列程式碼會將欄位陣列和值陣列傳遞至 **AddNew** 方法。
