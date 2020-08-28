@@ -3,7 +3,7 @@ description: Row 屬性 (ADO)
 title: " (ADO) 的資料列屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3048bf470ed27adb3fb3ceaaef3c7658c1fb93fb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b2862e3f082d42c444b052fcf4a5b493bd192bfe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989389"
 ---
 # <a name="row-property-ado"></a>Row 屬性 (ADO)
 取得或設定[ADORecordConstruction 介面](./adorecordconstruction-interface.md)物件上或的 OLE DB 資料**列**物件。 當您使用 **put_Row** 來設定資料 **列** 物件時，會將資料列轉換成 ADO **記錄** 物件。  

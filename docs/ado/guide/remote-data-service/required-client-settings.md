@@ -3,7 +3,7 @@ description: 必要用戶端設定
 title: 必要的用戶端設定 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a68ad96d6573ba6f3f61eb993d63d181939590a7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759378"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977759"
 ---
 # <a name="required-client-settings"></a>必要用戶端設定
 > [!IMPORTANT]

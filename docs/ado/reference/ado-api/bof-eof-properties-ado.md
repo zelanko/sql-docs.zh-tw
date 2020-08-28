@@ -3,7 +3,7 @@ description: BOF、EOF 屬性 (ADO)
 title: BOF、EOF 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 710a116e28a102eeac8a7a062a9f66cd8dcbe79c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776397"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975779"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 屬性 (ADO)
 -   **BOF** 指出目前的記錄位置是在 [記錄集](./recordset-object-ado.md) 物件中的第一筆記錄之前。  

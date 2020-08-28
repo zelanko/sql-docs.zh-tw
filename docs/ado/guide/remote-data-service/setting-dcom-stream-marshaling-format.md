@@ -3,7 +3,7 @@ description: 設定 DCOM 資料流封送處理格式
 title: 設定 DCOM 資料流程封送處理格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42d49824bc814026348c6f3aef99860b40f20f76
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d1841c497faaab71b9d8cc9434adb686ca7293ab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759258"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977639"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>設定 DCOM 資料流封送處理格式
 使用來自 RDS 1.5 或更早版本之元件的用戶端電腦，與使用 RDS 2.0 或更新版本的元件的伺服器不相容。 使用 DCOM 作為基礎通訊協定時，對 RDS 2.0 或更新版本的支援會在傳輸 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件時更有效率。 如果您的用戶端執行的是 RDS 1.5 或更早版本的元件，您可以設定您的伺服器來使用先前的 RDS 支援 (稱為 RDS 1.0) 或稱為 RDS 2.0 或更新版本) 的較新 RDS 支援 (。 設定下列其中一個登錄專案：  

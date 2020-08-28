@@ -3,7 +3,7 @@ description: '命令 (使用 #import 的 Visual C++ 語法索引) '
 title: 命令 (#import) 的 Visual C++ 語法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02ba483a38f554455d1b30546a9308aeec3921ed
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4ef0aaa3819f60a2dd0488ce57868db09c8b1f1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776127"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975209"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>命令 (使用 #import 的 Visual C++ 語法索引) 
 ## <a name="methods"></a>方法  

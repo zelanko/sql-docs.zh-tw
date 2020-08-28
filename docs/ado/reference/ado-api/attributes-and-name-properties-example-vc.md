@@ -3,7 +3,7 @@ description: '屬性和名稱屬性範例 (VC + +) '
 title: 屬性和名稱屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb08bddc1e308859aa8460221136fb50fe5e6b86
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776467"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975959"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>屬性和名稱屬性範例 (VC + +) 
 此範例會顯示[連接](./connection-object-ado.md)、[欄位](./field-object.md)和[屬性](./property-object-ado.md)物件的[Attributes](./attributes-property-ado.md)屬性值。 它會使用 [name](./name-property-ado.md) 屬性來顯示每個 **欄位** 和 **屬性** 物件的名稱。  

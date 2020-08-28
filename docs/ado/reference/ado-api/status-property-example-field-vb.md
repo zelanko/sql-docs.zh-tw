@@ -3,7 +3,7 @@ description: Status 屬性範例 (Field) (VB)
 title: Status 屬性範例 (欄位)  (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 148deaa16746bd964e4bed07ed673fea0ec4cb6a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 23a6ebaa724e06ce4a8283b95e3d7a982c8deef1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777287"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988690"
 ---
 # <a name="status-property-example-field-vb"></a>Status 屬性範例 (Field) (VB)
 下列範例會使用 [網際網路發佈提供者](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，從讀取/寫入資料夾開啟檔。 [記錄](./record-object-ado.md)[欄位](./field-object.md)物件的[Status](./status-property-ado-field.md)屬性會先設定為**adFieldPendingInsert**，然後再更新為**adFieldOk**。  

@@ -3,7 +3,7 @@ description: OpenSchema 方法範例 (VB)
 title: " (VB) 的 OpenSchema 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3c576f5cd06b5fe075ca60a06ad1cc8877c49b4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e3b6b02449fdfebf20469bf859beb500146df0cb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773747"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990299"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法範例 (VB)
 這個範例會使用 [OpenSchema](./openschema-method.md) 方法來顯示 ***Pubs*** 資料庫中每個資料表的名稱和類型。  

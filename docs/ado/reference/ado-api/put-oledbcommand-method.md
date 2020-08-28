@@ -3,7 +3,7 @@ description: put_OLEDBCommand 方法
 title: put_OLEDBCommand 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e386485f5e430a1bda50aa0d2059aeca90525af2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5239a1b1924cb767d0425b2a6c686fc15607a08a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989939"
 ---
 # <a name="put_oledbcommand-method"></a>put_OLEDBCommand 方法
 這個方法不會執行任何作業，而且一律會傳回 S_OK。  

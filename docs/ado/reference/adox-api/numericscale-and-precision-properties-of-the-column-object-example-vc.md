@@ -3,7 +3,7 @@ description: Column 物件的 NumericScale 和 Precision 屬性範例 (VC++)
 title: " (VC + +) 的資料行範例的 NumericScale 和精確度屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e25052d71b0eebc9d142dd7fd61f5ee5b8ac3ea0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9b7ca5a849dafe9768a422a942f5c2c1816f77b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769927"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983899"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 物件的 NumericScale 和 Precision 屬性範例 (VC++)
 此範例示範資料[行](./column-object-adox.md)物件的[NumericScale](./numericscale-property-adox.md)和[Precision](./precision-property-adox.md)屬性。 此程式碼會顯示*Northwind*資料庫之 [**訂單詳細資料**] 資料表的值。  

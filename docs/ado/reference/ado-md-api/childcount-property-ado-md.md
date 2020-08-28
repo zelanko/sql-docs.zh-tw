@@ -3,7 +3,7 @@ description: ChildCount 屬性 (ADO MD)
 title: ChildCount 屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 049e6e9326fecc9835c0ac6e5d01b150403a9d12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a5c3668a115de8137cd96f489f3e11483cb50045
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778287"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987129"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 屬性 (ADO MD)
 指出目前 [成員](./member-object-ado-md.md) 物件為階層中之父系的成員數目。  

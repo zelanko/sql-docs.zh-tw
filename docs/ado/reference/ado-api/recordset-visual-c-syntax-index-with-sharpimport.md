@@ -3,7 +3,7 @@ description: '使用 #import) Visual C++ 語法索引的記錄集 ('
 title: '使用 #import) 的 Visual C++ 語法索引記錄集 (|Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45962629fef38bc456138114eec38393c093a945
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ff8a863273e11edf4daa67cb10b2d826190883d7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772137"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989709"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>使用 #import) Visual C++ 語法索引的記錄集 (
 ## <a name="methods"></a>方法  

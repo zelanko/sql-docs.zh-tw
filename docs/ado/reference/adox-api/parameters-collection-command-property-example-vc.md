@@ -3,7 +3,7 @@ description: Parameters 集合、Command 屬性範例 (VC++)
 title: Parameters 集合、Command 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5467a8f940e6b9472012fb3bfdc83ffb225864f4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 015179970822398d1c3a08735ff9d68af138b7fa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769877"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983789"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters 集合、Command 屬性範例 (VC++)
 下列程式碼示範如何搭配[command](../ado-api/command-object-ado.md)物件使用[command](./command-property-adox.md)屬性，以抓取程式的參數資訊。  

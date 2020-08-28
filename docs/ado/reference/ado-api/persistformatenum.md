@@ -3,7 +3,7 @@ description: PersistFormatEnum
 title: PersistFormatEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4f83189a241b396cba613d9df0d6c0b1aa1328e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c8c4f917b9c2874e945a3ff523c0d6593386a619
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773217"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990079"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 指定儲存 [記錄集](./recordset-object-ado.md)的格式。  

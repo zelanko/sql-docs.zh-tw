@@ -3,7 +3,7 @@ description: DateCreated 和 DateModified 屬性範例 (VB)
 title: DateCreated 和 DateModified 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7ea4c3fb59c2df1bba8cccb0d1ce9074b97950c9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984799"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 和 DateModified 屬性範例 (VB)
 這個範例會示範 [DateCreated](./datecreated-property-adox.md) 和 [DateModified](./datemodified-property-adox.md) 屬性，方法是將新資料 [行](./column-object-adox.md) 加入現有的 [資料表](./table-object-adox.md) ，並建立新的 **資料表**。 此範例需要 DateOutput 程式才能執行。  

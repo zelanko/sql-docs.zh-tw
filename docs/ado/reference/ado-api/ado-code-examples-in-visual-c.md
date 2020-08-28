@@ -3,7 +3,7 @@ description: Visual C++ 中的 ADO 程式碼範例
 title: Visual C++ 中的 ADO 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4606711bff277cc5e04e72d1c018ae22c4af292a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 556fefe0943d210955a9a6a0d1058268cfc9acc6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760148"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976599"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 程式碼範例
 使用下列程式碼範例，瞭解如何在 Microsoft Visual C++ 中撰寫時使用 ADO 方法、屬性和事件。  

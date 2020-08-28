@@ -3,7 +3,7 @@ description: ActualSize 和 DefinedSize 屬性範例 (JScript)
 title: ActualSize 和 DefinedSize 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6deb3d0b4bc1340835effaef3e2472017fa0cd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 5fb77fd1732162c745590d985fc1f0e29455545c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760058"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976939"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 和 DefinedSize 屬性範例 (JScript)
 這個範例會使用 [ActualSize](./actualsize-property-ado.md) 和 [DefinedSize](./definedsize-property.md) 屬性來顯示所定義的大小和實際的欄位大小。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActualSizeJS。**  

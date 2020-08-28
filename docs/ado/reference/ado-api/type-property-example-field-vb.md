@@ -3,7 +3,7 @@ description: Type 屬性範例 (Field) (VB)
 title: Type 屬性範例 (欄位)  (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79f72b8795fc060a44b83c3587f9243971b7c951
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6dcd959172ade73a7c960e91997c5a1cb1e2dc5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777087"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988269"
 ---
 # <a name="type-property-example-field-vb"></a>Type 屬性範例 (Field) (VB)
 這個範例會顯示[類型](./type-property-ado.md)屬性，其方式是顯示常數的名稱，該常數對應到***Employees***資料表中所有[欄位](./field-object.md)物件的[Type](./type-property-ado.md)屬性值。 此程式必須有 FieldType 函數才能執行。  

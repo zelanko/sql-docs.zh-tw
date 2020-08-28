@@ -3,7 +3,7 @@ description: Type 屬性 (Column) (ADOX)
 title: 類型屬性 (資料行)  (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70d8700f953a87fa3326f6a1c0985be1f6ca3dac
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dffb08de42e3c38a9c0a28e8cad33af95f0d8926
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769217"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983169"
 ---
 # <a name="type-property-column-adox"></a>Type 屬性 (Column) (ADOX)
 表示資料行的資料類型。  

@@ -3,7 +3,7 @@ description: DataSpace (ADO - WFC 語法)
 title: " (ADO-WFC 語法的空間) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5160e0fb52b0208899f30715d7821c71b26dda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fdc89f6fb9c1c32236d7e4da02ad2afb118ba08
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444210"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974249"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 語法)
 **空間**類別的**createObject**方法會指定商務物件來處理用戶端應用程式要求 (*progid*) 以及通訊協定和伺服器 (*連接*) 。 **createObject** 會傳回代表伺服器的 [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) 物件。  

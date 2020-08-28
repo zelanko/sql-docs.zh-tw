@@ -3,7 +3,7 @@ description: PrimaryKey 和 Unique 屬性範例 (VC++)
 title: PrimaryKey 和 Unique 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf23a36461c089a76ae40890fa548bc357029ea6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9f622c194e1eb6d9b19d529d57219d9424507caa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769727"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983659"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 和 Unique 屬性範例 (VC++)
 此範例示範[索引](./index-object-adox.md)的[PrimaryKey](./primarykey-property-adox.md)和[唯一](./unique-property-adox.md)屬性。 程式碼會建立具有兩個數據行的新資料表。 **PrimaryKey**和**Unique**屬性是用來讓一個資料行成為不允許重複值的主鍵。  

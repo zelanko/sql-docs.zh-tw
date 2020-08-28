@@ -3,7 +3,7 @@ description: Command (ADO for Visual C++ 語法)
 title: 適用于 Visual C++ 語法的命令 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 882c088379b53df8b9618f3d11f2e1628c9b7f03
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 62e788877c4f3cd3f4fba7f62b31d02a0d768c2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776177"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975249"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

@@ -3,7 +3,7 @@ description: ADCPROP_UPDATERESYNC_ENUM
 title: ADCPROP_UPDATERESYNC_ENUM |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4097bcdeb5460776017ce7a120ff43aa7a4420f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2fcf60974612325e8af7501eaa6066d96d9f2985
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760242"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976819"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
 指定 [UpdateBatch](./updatebatch-method.md) 方法是否接著隱含的 [Resync](./resync-method.md) 方法作業，如果是，該作業的範圍。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|使用所有其他 ADCPROP_UPDATERESYNC_ENUM 成員的合併值叫用重新 **同步** 。|  
 |**adResyncAutoIncrement**|1|預設值。 嘗試針對資料來源自動遞增或產生的資料行（例如 Microsoft Jet 自動編號欄位或 Microsoft SQL Server 識別欄位），取得新的識別值。|  

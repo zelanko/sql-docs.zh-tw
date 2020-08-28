@@ -3,7 +3,7 @@ description: ADO 語法索引
 title: ADO 語法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d8f16ee617b74ee98d83a1cdf8dad408cab2f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acb84a462e6648badb71be752342f7fb1f3ae0da
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776606"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976299"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 語法索引
 呼叫 ADO 方法和屬性的語法會根據您的開發環境而有所不同。 ADO 語言參考的其餘部分會使用 Microsoft Visual Basic 程式設計語言來說明 ADO 方法和屬性語法。 不過，根據您的程式設計語言和方法，請參閱下列各節，以取得更具體的語法範例：  

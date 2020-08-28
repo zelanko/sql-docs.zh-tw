@@ -3,7 +3,7 @@ description: Supports 方法
 title: 支援方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea56dc34cc2c69c7bb9ef30433a6c7c75f26c552
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8a91268668dae9ba430ba696ffb0186749047af9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777117"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988319"
 ---
 # <a name="supports-method"></a>Supports 方法
 判斷指定的 [記錄集](./recordset-object-ado.md) 物件是否支援特定的功能類型。  

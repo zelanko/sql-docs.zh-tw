@@ -3,7 +3,7 @@ description: Clone 方法範例 (VBScript)
 title: " (VBScript) 的複製方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: af5f0a49c2bf126dbba4f0c40d88e15f0d71a187
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776237"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975399"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 方法範例 (VBScript)
 這個範例會使用 [Clone](./clone-method-ado.md) 方法來建立 [記錄集](./recordset-object-ado.md) 的複本，然後讓使用者個別放置每個複本的記錄指標。  

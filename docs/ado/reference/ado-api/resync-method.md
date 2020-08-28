@@ -3,7 +3,7 @@ description: Resync 方法
 title: 重新同步方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e64c2f297e4628f04f99a7e97a6b9df00f6efa1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777647"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989479"
 ---
 # <a name="resync-method"></a>Resync 方法
 從基礎資料庫重新整理目前[記錄集](./recordset-object-ado.md)物件中的資料，或[記錄](./record-object-ado.md)物件的[欄位](./fields-collection-ado.md)集合中的資料。  

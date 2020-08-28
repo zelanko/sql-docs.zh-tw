@@ -3,7 +3,7 @@ description: Catalog 範例 (VB)
 title: " (VB) 的目錄範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 172edf69b1840c51aac11dcc66a209b469148d3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018b4d96995e11f98fc06ad382033c2059d3ef25
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441250"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987309"
 ---
 # <a name="catalog-example-vb"></a>Catalog 範例 (VB)
 此 Visual Basic 專案會使用 MDX 建立新的 cube。 然後，它會記錄 Microsoft Word 檔中的 cube 結構。  

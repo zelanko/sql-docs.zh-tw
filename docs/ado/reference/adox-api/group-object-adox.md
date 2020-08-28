@@ -3,7 +3,7 @@ description: Group 物件 (ADOX)
 title: 群組物件 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0442ca3bd785269fed49dc86d982971a8feec4ea
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 21514bbcbe91e1320a4a2806e545d5f7b40df8d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770417"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984429"
 ---
 # <a name="group-object-adox"></a>Group 物件 (ADOX)
 代表在安全資料庫中具有存取權限的群組帳戶。  

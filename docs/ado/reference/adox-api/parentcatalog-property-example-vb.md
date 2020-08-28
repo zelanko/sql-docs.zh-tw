@@ -3,7 +3,7 @@ description: ParentCatalog 屬性範例 (VB)
 title: " (VB) 的 ParentCatalog 屬性範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66e80c85d1361c99499c91685d46e2df29b59957
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6910ac229d309360676f83f855664ab368459ce0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769807"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983819"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 屬性範例 (VB)
 下列程式碼示範如何使用 [ParentCatalog](./parentcatalog-property-adox.md) 屬性來存取提供者特定的屬性，然後再將資料表附加至目錄。 屬性是 **自動遞增**的，會在 Microsoft Jet 資料庫中建立自動遞增欄位。  

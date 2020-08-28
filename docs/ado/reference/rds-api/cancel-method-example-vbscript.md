@@ -3,7 +3,7 @@ description: Cancel 方法範例 (VBScript)
 title: Cancel 方法範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 364f8ac8d799e8d354b43f5902eff5f3b46f4b59
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 37072e1126d9c1217722a2a5db4b60df84d0d633
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768827"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982789"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel 方法範例 (VBScript)
 > [!IMPORTANT]

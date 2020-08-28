@@ -3,7 +3,7 @@ description: OpenSchema 方法範例 (VC++)
 title: " (VC + +) 的 OpenSchema 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25f4cea4278421ee79c65c3784f74d36cc35e3c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4cb98b791f35a122643402344b6195246c19226f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773717"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990289"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema 方法範例 (VC++)
 這個範例會使用 [OpenSchema](./openschema-method.md) 方法來顯示 ***Pubs*** 資料庫中每個資料表的名稱和類型。  

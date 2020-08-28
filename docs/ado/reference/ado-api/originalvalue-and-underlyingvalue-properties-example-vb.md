@@ -3,7 +3,7 @@ description: 'OriginalValue 和 UnderlyingValue 屬性範例 (VB) '
 title: OriginalValue 和 UnderlyingValue 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 46fa4935e7a7aba6c9b50fef368a6f266f93abb4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773607"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990239"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VB) 
 此範例示範 [OriginalValue](./originalvalue-property-ado.md) 和 [UnderlyingValue](./underlyingvalue-property.md) 屬性，方法是在記錄 [集](./recordset-object-ado.md) 批次更新期間，如果記錄的基礎資料變更，則顯示訊息。  

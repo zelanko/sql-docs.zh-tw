@@ -3,7 +3,7 @@ description: EditModeEnum
 title: EditModeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64310c3399d24d557fc0896587dad0dc4fde091b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e10479aca06eab4a7aa5215f0016dd1f82eab1c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973849"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 指定記錄的編輯狀態。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|指出沒有進行中的編輯作業。|  
 |**adEditInProgress**|1|指出目前記錄中的資料已修改但未儲存。|  
@@ -36,7 +36,7 @@ ms.locfileid: "88444040"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 相等  
  封裝： **.com. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.EditMode.NONE|  
 |AdoEnums.EditMode.INPROGRESS|  

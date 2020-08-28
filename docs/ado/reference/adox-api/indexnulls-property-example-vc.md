@@ -3,7 +3,7 @@ description: IndexNulls 屬性範例 (VC++)
 title: IndexNulls 屬性範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e019ae60619bce814c4686612727344e8c786b0e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 01ec70af18c70faec253aa7f1d0cbb2c6a1579b6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770128"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984089"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 屬性範例 (VC++)
 此範例示範[索引](./index-object-adox.md)的[IndexNulls](./indexnulls-property-adox.md)屬性。 程式碼會建立新的索引，並根據使用者輸入設定 **IndexNulls** 的值。 然後，**索引**會附加至*Northwind* [目錄](./catalog-object-adox.md)中的**Employees** [資料表](./table-object-adox.md)。 新的**索引**會套用至以**Employees**資料表為基礎的[記錄集](../ado-api/recordset-object-ado.md)，並開啟**記錄集**。 新記錄會新增到 **Employees** 資料表中，並在索引欄位中加上 **Null** 值。 這項新記錄是否會顯示，取決於 **IndexNulls** 屬性的設定。  

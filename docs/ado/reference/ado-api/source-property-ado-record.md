@@ -3,7 +3,7 @@ description: Source 屬性 (ADO Record)
 title: 來源屬性 (ADO 記錄) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e755fb4a34e170efea760428021b540a182156c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b9c551e52864caca8834350d5107b76aed88700d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777407"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988939"
 ---
 # <a name="source-property-ado-record"></a>Source 屬性 (ADO Record)
 指出 [記錄](./record-object-ado.md)所代表的資料來源或物件。  
