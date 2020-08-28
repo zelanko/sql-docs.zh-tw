@@ -3,7 +3,7 @@ description: 將結果集擷取為資料流
 title: 正在將結果集取出至資料流程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452920"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979749"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>將結果集擷取為資料流
 ADO 可以改為將查詢結果取出至資料流程，而不是在傳統 **記錄集** 物件中接收結果。 ADO **資料流程** 物件 (或其他支援 COM **IStream** 介面的物件，例如 ASP **要求** 和 **回應** 物件) 可以用來包含這些結果。 這項功能的其中一個用途是取得 XML 格式的結果。 例如，有了 SQL Server，就可以用多種方式傳回 XML 結果，例如搭配使用 FOR XML 子句和 SQL SELECT 查詢，或使用 XPath 查詢。  

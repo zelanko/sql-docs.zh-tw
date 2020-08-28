@@ -3,7 +3,7 @@ description: 啟用 DLL 以在 DCOM 上執行
 title: 啟用 DLL 以在 DCOM 上執行 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0a9477acb504bf68edf6c5b9caec72b0d8e8feed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759781"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978119"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>啟用 DLL 以在 DCOM 上執行
 > [!IMPORTANT]

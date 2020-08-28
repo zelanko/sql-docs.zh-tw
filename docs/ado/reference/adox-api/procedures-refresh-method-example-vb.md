@@ -3,7 +3,7 @@ description: Procedures Refresh 方法範例 (VB)
 title: 程式 Refresh 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bc0bd69e4b184b91c1d337d6b9e1b9c490b3116
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 757c410982f43258f25729f5e88a5705c1ca814d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769557"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983489"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh 方法範例 (VB)
 下列程式碼說明如何重新整理[目錄](./catalog-object-adox.md)的[程式](./procedures-collection-adox.md)集合。 這是在可以存取來自**目錄**的程式物件之前的必要[步驟](./procedure-object-adox.md)。  

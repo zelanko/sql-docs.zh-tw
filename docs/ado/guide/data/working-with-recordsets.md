@@ -3,7 +3,7 @@ description: 使用資料錄集
 title: 使用記錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452520"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978839"
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
 **記錄集**物件具有內建功能，可讓您重新排列結果集中的資料順序、根據您提供的準則來搜尋特定記錄，甚至使用索引來優化這些搜尋作業。 這些功能是否可供使用，取決於提供者，以及在某些情況下（例如 [Index](../../../ado/reference/ado-api/index-property.md) 屬性）（資料來源本身的結構）。  

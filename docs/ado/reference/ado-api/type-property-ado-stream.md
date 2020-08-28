@@ -3,7 +3,7 @@ description: Type 屬性 (ADO Stream)
 title: Type 屬性 (ADO Stream) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5aebb29d8434c152c0a95f04a5eb083847cf9877
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a72fb3afba9ff1455cba3fde8ada4cf82cb6cd3d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777107"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988299"
 ---
 # <a name="type-property-ado-stream"></a>Type 屬性 (ADO Stream)
 表示 [資料流程](./stream-object-ado.md) 中包含的資料類型 (二進位或文字) 。  

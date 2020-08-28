@@ -3,7 +3,7 @@ description: 服務提供者和元件
 title: 服務提供者和元件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8405ad88ca2fc087eb6f71f665a508690bf1142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed89fd5e1917997e2377dd20575202df7869c5ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452870"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979649"
 ---
 # <a name="service-providers-and-components"></a>服務提供者和元件
 服務提供者是一種元件，可透過執行資料存放區原生不支援的延伸介面，來擴充資料提供者的功能。  

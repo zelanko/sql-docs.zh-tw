@@ -3,7 +3,7 @@ description: 'Seek 方法和 Index 屬性範例 (VB) '
 title: Seek 方法和 Index 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e2fe55a8aa34c6249edd2eee9666e9558a52027
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9eb5e6136be37e120ae9570db661ff75f02d05c5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777567"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989199"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 方法和 Index 屬性範例 (VB) 
 此範例會使用 [記錄集](./recordset-object-ado.md) 物件的 [Seek](./seek-method.md) 方法和 [Index](./index-property.md) 屬性搭配指定的 ***員工識別碼***，以在 Nwind .mdb 資料庫的 ***Employees*** 資料表中找出員工的名稱。  

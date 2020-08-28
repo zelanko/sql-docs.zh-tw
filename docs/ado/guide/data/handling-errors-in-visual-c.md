@@ -3,7 +3,7 @@ description: 處理 Visual C++ 的錯誤
 title: 處理 Visual C++ 中的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b43b8314e47c8a96dadcf8cab841a37da0c0518
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f61f6b9f27011543545932f9ce7d9e5d434bbf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453290"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980619"
 ---
 # <a name="handling-errors-in-visual-c"></a>處理 Visual C++ 的錯誤
 在 COM 中，大部分的作業會傳回 HRESULT 傳回碼，指出函式是否已順利完成。 #Import 指示詞會針對每個「原始」方法或屬性來產生包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會藉由以 HRESULT 傳回碼作為引數來呼叫 _com_issue_errorex ( # A1 來擲回 COM 錯誤。 COM 錯誤物件可以在 **try-catch** 區塊中捕捉。  (為了提高效率，請攔截 _com_error 物件的參考。 )   

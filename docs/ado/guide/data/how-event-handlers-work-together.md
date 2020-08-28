@@ -3,7 +3,7 @@ description: 事件處理常式如何協同運作
 title: 事件處理常式如何一起運作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 37e1c5d081ccbcacaf50aa385a87afa9555ad2ca
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805973"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980519"
 ---
 # <a name="how-event-handlers-work-together"></a>事件處理常式如何協同運作
 除非您是在 Visual Basic 中進行程式設計，否則無論您是否真的處理所有事件，都必須實作為 **連接** 和 **記錄集** 事件的所有事件處理常式。 您必須執行的實作為工作量取決於您的程式設計語言。 如需詳細資訊，請參閱 [ADO 事件具現化（依語言](./ado-event-instantiation-by-language.md)）。  

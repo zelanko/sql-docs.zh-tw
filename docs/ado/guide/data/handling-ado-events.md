@@ -3,7 +3,7 @@ description: 處理 ADO 事件
 title: 處理 ADO 事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efe8c82021c647b622792e8413527589435d4086
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806790"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980699"
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
 ADO 事件模型支援在作業開始之前或完成之後發出 *事件*或通知的特定同步和非同步 ADO 作業。 事件實際上是呼叫您在應用程式中定義的事件處理常式常式。  

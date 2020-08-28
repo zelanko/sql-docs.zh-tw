@@ -3,7 +3,7 @@ description: 深入了解資料錄集的保存
 title: 深入瞭解記錄集持續性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805842"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980329"
 ---
 # <a name="more-about-recordset-persistence"></a>深入了解資料錄集的保存
 ADO 記錄集物件支援使用[儲存方法，](../../reference/ado-api/save-method.md)將**記錄集**物件的內容儲存在檔案中。 持續儲存的檔案可能會存在於本機磁片磁碟機、伺服器或網站上的 URL。 之後，可以使用**記錄集**物件的[Open](../../reference/ado-api/open-method-ado-recordset.md)方法或[連接](../../reference/ado-api/connection-object-ado.md)物件的[Execute](../../reference/ado-api/execute-method-ado-connection.md)方法來還原檔案。  

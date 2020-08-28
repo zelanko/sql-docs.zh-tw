@@ -3,7 +3,7 @@ description: 保存資料
 title: 保存資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1487cdbba81677cd58e3f130f5d05a8b9337588
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86789dbce8ab86035f815f36f8eff369b55401a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453080"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980099"
 ---
 # <a name="persisting-data"></a>保存資料
 便攜運算 (例如，使用膝上型電腦) 就會產生可在已連線和已中斷連線的狀態下執行的應用程式需求。 ADO 已新增此功能的支援，讓開發人員能夠將用戶端資料指標 **記錄** 檔儲存到磁片，並于稍後重載。  

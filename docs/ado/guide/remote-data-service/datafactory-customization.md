@@ -3,7 +3,7 @@ description: DataFactory 自訂
 title: DataFactory 自訂 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759802"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978199"
 ---
 # <a name="datafactory-customization"></a>DataFactory 自訂
 遠端資料服務 (RDS) 可讓您輕鬆地在三層用戶端/伺服器系統中執行資料存取。 用戶端資料控制項會指定連接和命令字串參數，以對遠端資料源執行查詢，或是使用連接字串和 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件參數來執行更新。  

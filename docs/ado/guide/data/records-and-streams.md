@@ -3,7 +3,7 @@ description: 記錄和資料流
 title: 記錄和資料流程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afaae4221c57a7f7d832c34f0a374981e081cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38bf8e44ec6b9521a1608c6081697295e6d9aedf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979909"
 ---
 # <a name="records-and-streams"></a>記錄和資料流
 ADO 目前提供 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md) 物件作為存取資料來源中資訊的主要方法，例如關係資料庫。 不過，某些提供者支援 [記錄](../../../ado/reference/ado-api/record-object-ado.md) 和 [資料流程](../../../ado/reference/ado-api/stream-object-ado.md) 物件，做為替代物件或可操作提供者資料的互補物件。 如需 **記錄** 行為的詳細資訊，請參閱提供者的檔。  

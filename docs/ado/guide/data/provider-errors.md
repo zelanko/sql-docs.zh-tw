@@ -3,7 +3,7 @@ description: 提供者錯誤
 title: 提供者錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b31f530bafd69d59c98893cc2ead29039372dea9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453020"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979979"
 ---
 # <a name="provider-errors"></a>提供者錯誤
 當提供者錯誤發生時，會傳回-2147467259 的執行階段錯誤。 當您收到此錯誤時，請檢查作用中**連接**物件的 [**錯誤**] 集合，它會包含一或多個描述發生問題的錯誤。  

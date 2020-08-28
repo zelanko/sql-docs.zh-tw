@@ -3,7 +3,7 @@ description: CopyTo 方法 (ADO)
 title: " (ADO) 的 CopyTo 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59894d6632cd5dae3887099db2d6e71b1174af43
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7bbb394810ebbfe8d8c0e1d598641a1e77e7d204
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775707"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974549"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 根據[資料流程](./stream-object-ado.md)中的[類型](./type-property-ado-stream.md)) ，將指定的字元數或位元組數 (複製到另一個**資料流程**物件。  

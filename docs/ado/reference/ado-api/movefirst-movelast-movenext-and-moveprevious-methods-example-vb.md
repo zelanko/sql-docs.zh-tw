@@ -3,7 +3,7 @@ description: 'MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例 (VB)
 title: 移動記錄集的記錄指標範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f4015e2dca626824e8621fe9d2398d5022b23b5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a38a79354ad90faff75ed92c96310df838784a0d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990539"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext 和 MovePrevious 方法範例 (VB) 
 這個範例會使用 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)和 [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 方法，根據提供的命令移動記錄 [集](./recordset-object-ado.md) 的記錄指標。 此程式必須有 MoveAny 程式才能執行。  

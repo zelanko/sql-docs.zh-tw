@@ -3,7 +3,7 @@ description: WillExecute 事件 (ADO)
 title: WillExecute 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: affe058e06d20ffec9c27a5f4a60812f6fee1b03
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f56e864efd37b927ae657edc2ef2e8307d839104
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776867"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987769"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件是在連接上執行暫止命令之前呼叫。  

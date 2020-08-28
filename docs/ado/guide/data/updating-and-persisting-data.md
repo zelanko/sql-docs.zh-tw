@@ -3,7 +3,7 @@ description: 更新和保存資料
 title: 更新和保存資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e281e6108005279cd807e5ee76d383437b8814
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca0196ef59df1f67d5f65f3abc52133b81869a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452650"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979169"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保存資料
 上述章節已討論過如何使用 ADO 來取得資料來源中的資料、如何在資料中四處移動，甚至是如何編輯資料。 當然，如果您的應用程式目標是要讓使用者變更資料，您就必須瞭解如何儲存這些變更。 您可以使用**Save**方法將**記錄集**變更保存到檔案中，也可以使用**Update**或**UpdateBatch**方法將變更傳送回資料來源以進行儲存。  

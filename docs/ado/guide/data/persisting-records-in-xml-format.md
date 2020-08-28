@@ -3,7 +3,7 @@ description: 以 XML 格式保存記錄
 title: 以 XML 格式保存記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980059"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保存記錄
 如同 ADTG 格式一樣，XML 格式的 **記錄集** 持續性是以 Microsoft OLE DB 持續性提供者來執行。 此提供者會從儲存的 XML 檔案或資料流程產生順向唯讀資料列集，其中包含 ADO 所產生的架構資訊。 同樣地，它可以採用 ADO **記錄集**、產生 XML，然後將它儲存到檔案或任何實作為 COM **IStream** 介面的物件。  (事實上，檔案只是另一個支援 **IStream**) . 2.5 和更新版本的物件範例，ADO 依賴 Microsoft XML 剖析器 (MSXML) 將 XML 載入到 **記錄集**;因此 msxml.dll 是必要的。  

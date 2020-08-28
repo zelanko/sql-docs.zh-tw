@@ -3,7 +3,7 @@ description: 使用 CacheSize
 title: 使用 CacheSize |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5514f7b3a08d212e435a40341fc32033ec226c78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452580"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978999"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 您可以使用 **CacheSize** 屬性來控制一次取出多少筆記錄到提供者的本機記憶體中。 例如，如果 **CacheSize** 為10，則在第一次開啟 **記錄集** 物件之後，提供者會將前10筆記錄抓取到本機記憶體中。 當您在 **記錄集** 物件中移動時，提供者會傳回本機記憶體緩衝區中的資料。 當您移動超過快取中的最後一筆記錄時，提供者會將資料來源中的接下來10筆記錄抓取到快取中。  

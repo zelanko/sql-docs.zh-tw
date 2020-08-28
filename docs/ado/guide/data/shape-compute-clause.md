@@ -3,7 +3,7 @@ description: Shape COMPUTE 子句
 title: Shape COMPUTE 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452840"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979599"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape COMPUTE 子句會產生父 **記錄集**，其資料行是由子 **記錄集**的參考所組成;選擇性資料行，其內容為章節、新的或匯出資料行，或在子 **記錄集** 或先前成形的 **記錄集**上執行彙總函式的結果;以及選擇性 BY 子句中所列之子 **記錄集** 的任何資料行。  
@@ -77,15 +77,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  例如，假設您有一個名為「人口統計」的資料表，其中包含州、城市和人口欄位。  (資料表中的人口數位只提供作為範例) 。  
   
-|State|城市|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|或者|梅德福|200,000|  
-|或者|Portland|400,000|  
+|或|梅德福|200,000|  
+|或|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|或者|Corvallis|300,000|  
+|或|Corvallis|300,000|  
   
  現在，發出此圖形命令：  
   
@@ -109,29 +109,29 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 的參考|CA|  
 |1,200,000|Child2 的參考|WA|  
-|1,100,000|Child3 的參考|或者|  
+|1,100,000|Child3 的參考|或|  
   
 ## <a name="child1"></a>Child1  
   
-|State|城市|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|城市|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|城市|母體|  
+|State|City|母體|  
 |-----------|----------|----------------|  
-|或者|梅德福|200,000|  
-|或者|Portland|400,000|  
-|或者|Corvallis|300,000|  
+|或|梅德福|200,000|  
+|或|Portland|400,000|  
+|或|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另請參閱  
  [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

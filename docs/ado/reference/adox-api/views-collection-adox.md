@@ -3,7 +3,7 @@ description: Views 集合 (ADOX)
 title: Views 集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a024f21e83a25a82a226428835215a8cba9e21e9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 26d61c1d2835d9dcabba82beb2a120330f8f2ead
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768917"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982869"
 ---
 # <a name="views-collection-adox"></a>Views 集合 (ADOX)
 包含目錄的所有 [View](./view-object-adox.md) 物件。  

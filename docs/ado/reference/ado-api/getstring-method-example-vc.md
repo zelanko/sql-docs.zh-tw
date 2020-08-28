@@ -3,7 +3,7 @@ description: GetString 方法範例 (VC++)
 title: " (VC + +) 的 GetString 方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 004a875656b9dc772985f965ec8c2c2910b127ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a17c15f7ab3ec1764c9902a87ea4e7229af1fa2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774877"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990849"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 (VC++)
 此範例示範 [GetString](./getstring-method-ado.md) 方法。  

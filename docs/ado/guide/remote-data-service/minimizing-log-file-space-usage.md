@@ -3,7 +3,7 @@ description: 將記錄檔空間使用量降到最低
 title: 最小化記錄檔空間使用量 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6eeb933553d37df7db377d56ff0ff2e713ffef9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759718"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978009"
 ---
 # <a name="minimizing-log-file-space-usage"></a>將記錄檔空間使用量降到最低
 記錄檔可能會快速填滿 (因此當 SQL Server 資料庫上有大量的活動時，就會停止伺服器) 。 您可以將記錄檔設定為 **在檢查點截斷** ，以大幅延長資料庫記錄檔的存留期。  

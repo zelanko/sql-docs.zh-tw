@@ -1,7 +1,7 @@
 ---
 description: RDS 事件
 title: RDS 事件 |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0874d04d779b517971d215735fe2bb34d1677e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 76a02b0f9198be8bbfd0310465c2087d9ba1bed1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767787"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981659"
 ---
 # <a name="rds-events"></a>RDS 事件
 > [!IMPORTANT]

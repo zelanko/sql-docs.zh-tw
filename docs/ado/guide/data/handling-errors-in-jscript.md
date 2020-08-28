@@ -3,7 +3,7 @@ description: 處理 JScript 的錯誤
 title: 處理 JScript 中的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a23d22225de26562feababc263c6bf2b41b4ff60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 096fe54f8a62f11d5863cd48a9811a32f2846add
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453322"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980689"
 ---
 # <a name="handling-errors-in-jscript"></a>處理 JScript 的錯誤
 您的 Microsoft® JScript®程式碼必須檢查**連接**物件的**錯誤**集合的**Count**屬性。 如果值大於0，請逐一查看集合並列印值，就像在任何其他語言中所做的一樣。  

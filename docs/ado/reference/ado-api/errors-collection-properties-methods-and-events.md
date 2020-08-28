@@ -3,7 +3,7 @@ description: Errors 集合屬性、方法和事件
 title: Errors 集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7208baaafdcce5fccbf6ba5fdf1716f427a47c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ee567f4c604eba060ea1aad253a9acb70770dd5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443940"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973589"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Errors 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

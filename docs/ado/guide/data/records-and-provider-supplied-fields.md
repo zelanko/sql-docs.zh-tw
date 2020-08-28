@@ -3,7 +3,7 @@ description: 記錄和提供者提供的欄位
 title: 記錄和提供者提供的欄位 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453000"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979949"
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當 [記錄](../../../ado/reference/ado-api/record-object-ado.md) 物件開啟時，其來源可以是開啟之 [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的目前資料列、絕對 URL，或與開啟的 [連接](../../../ado/reference/ado-api/connection-object-ado.md) 物件結合的相對 URL。  
@@ -56,7 +56,7 @@ ms.locfileid: "88453000"
 ## <a name="resource-recordset-columns"></a>資源記錄集資料行  
  *資源記錄集*包含下列資料行。  
   
-|資料行名稱|類型|描述|  
+|欄名|類型|描述|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|唯讀。 指出資源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|唯讀。 表示父記錄的絕對 URL。|  

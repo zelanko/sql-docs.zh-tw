@@ -3,7 +3,7 @@ description: 具名命令
 title: 命名的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 986c82ca73e202ea2f07ab20822c73dbfe6e7832
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805801"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980269"
 ---
 # <a name="named-commands"></a>具名命令
 [建立和執行簡單的命令](./creating-and-executing-a-simple-command.md) 會顯示一個執行命令的方式。 還有另一種方式：您可以將它命名為命令，然後直接在**連接**物件上呼叫這個指名的命令， (指派給**Command**物件的**ActiveConnection**屬性) 。 命名命令表示將名稱指派給**command**物件的**name**屬性。 例如，  

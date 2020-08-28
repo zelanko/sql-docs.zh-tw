@@ -3,7 +3,7 @@ description: SetEOS 方法
 title: SetEOS 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ffe6f7d4a8861fb58f3b72f2b75de3de1ac9736
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3ebf47bdae6a879a3afe699be36081eb136b700e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777487"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989129"
 ---
 # <a name="seteos-method"></a>SetEOS 方法
 設定資料流程結尾的位置。  

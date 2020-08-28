@@ -3,7 +3,7 @@ description: CursorType 屬性 (ADO)
 title: " (ADO) 的 CursorType 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85bb0f624c5f5a3100bfba5d33d63a574fa9d0e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775497"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974319"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 屬性 (ADO)
 指出 [記錄集](./recordset-object-ado.md) 物件中使用的資料指標類型。  

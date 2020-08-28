@@ -3,7 +3,7 @@ description: XML 中的階層式資料錄集
 title: XML 中的階層式記錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a9563782851575970d9f2ab9a5fcabce5efa32d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806022"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980529"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的階層式資料錄集
 ADO 允許將階層式記錄集物件保存為 XML。 使用階層式記錄集物件時，父記錄集中的欄位值是另一個記錄集。 這類欄位會表示為 XML 資料流程中的子項目，而不是屬性。  
