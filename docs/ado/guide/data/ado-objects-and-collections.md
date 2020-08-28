@@ -3,7 +3,7 @@ description: ADO 物件和集合
 title: ADO 物件和集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 101eab85f19922b56a7e7f86f330188d87fcc9fe
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 04985c3972e9eaa1ec854102123c09c6a3fd8cde
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806422"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991639"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
 ADO 是由下列九個物件和四個集合所組成。  

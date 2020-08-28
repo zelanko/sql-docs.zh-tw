@@ -3,7 +3,7 @@ description: SaveToFile 方法
 title: SaveToFile 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1f6890d25922789a4b3656429582e4e8a60efc1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6aa3269e73f9823eb47dddeb039b62e3affdd3c6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777547"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989289"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
 將 [資料流程](./stream-object-ado.md) 的二進位內容儲存至檔案。  

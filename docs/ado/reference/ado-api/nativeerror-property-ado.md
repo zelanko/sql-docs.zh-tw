@@ -3,7 +3,7 @@ description: NativeError 屬性 (ADO)
 title: " (ADO) 的 NativeError 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c22667a9cd5855e4715b8aa37774a9137ab3cc4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4acc35688367b9508c80c015999aa302a387a55c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774056"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990469"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 屬性 (ADO)
 表示指定 [錯誤](./error-object.md) 物件的提供者特定錯誤碼。  

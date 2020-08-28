@@ -3,7 +3,7 @@ description: Refresh 方法範例 (VC++)
 title: Refresh 方法範例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b99e08e689e9e37ae489f61c742819e9d8a8afca
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 540c30018ed9b9c7d8d08239d4c93cf7a146b23e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771957"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989569"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh 方法範例 (VC++)
 此範例示範如何使用[refresh](./refresh-method-ado.md)方法來重新整理預存程式[命令](./command-object-ado.md)物件的[參數](./parameters-collection-ado.md)集合。  

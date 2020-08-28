@@ -3,7 +3,7 @@ description: 為安全或不受限制模式設定 DataFactory
 title: 為安全或不受限制的模式設定 DataFactory |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffd9c1b82225a131722cdaf384c4bd5662b5322f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: ab1236205813d1fa3aee0a039703afb10661169c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758388"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978359"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全或不受限制模式設定 DataFactory
 > [!IMPORTANT]

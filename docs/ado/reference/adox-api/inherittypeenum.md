@@ -3,7 +3,7 @@ description: InheritTypeEnum
 title: InheritTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1fed614d90bbf53fdb2198e3ddd657a1e44acd1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 37c6eba57eb7efb05d2b718e294e33b9616cac77
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770117"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984099"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 指定物件如何繼承使用 [SetPermissions](./setpermissions-method-adox.md)所設定的許可權。  

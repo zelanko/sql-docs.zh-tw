@@ -6,7 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [ADO]
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29aaeac82cc4853e0cd89d0179c988db9748e44e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991199"
 ---
 # <a name="ado-programming-task-table"></a>ADO 程式設計工作資料表
 下表列出 ADO 程式設計 *人員指南* 中包含的程式設計工作，並提供每項工作的參考。 這些參考可以是文字描述或程式碼範例，您可以在其中找到執行該工作之 ADO 功能的相關資訊。

@@ -3,7 +3,7 @@ description: DataControl 物件錯誤碼
 title: DataControl 錯誤碼 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 3554898451228afee73914a82907f6348ad1cff0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806653"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991129"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤碼
 下表列出 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件錯誤碼。 最少兩個位元組的正十進位轉譯、完整錯誤碼的負十進位轉譯，以及十六進位值。

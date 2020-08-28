@@ -3,7 +3,7 @@ description: Open 方法 (ADO Connection)
 title: " (ADO Connection) 的 Open 方法 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b16abd21f49f9c3dc7e317e5b7079e9b124f5e12
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3691f6b7b86d7f48ea570a542f85af75c53d017
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773837"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990329"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 (ADO Connection)
 開啟與資料來源的連接。  

@@ -3,7 +3,7 @@ description: Append 方法 (ADOX Procedures)
 title: 附加方法 (ADOX 程式) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f416d8223e828d724f1eabbe4ab82061204af0f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2bc35ccb48211f6a849dc102ba2d1806a79b2426
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771407"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985459"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法 (ADOX Procedures)
 將新的[程式](./procedures-collection-adox.md)物件加入至[Procedure](./procedure-object-adox.md)集合。  

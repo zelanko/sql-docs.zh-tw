@@ -3,7 +3,7 @@ description: 鎖定的類型
 title: 鎖定的類型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58bf825312f6d2d580359c0421aea2a710d28fa6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55087e96c0855f24153dee9bc279d9abf58d3f04
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452690"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979259"
 ---
 # <a name="types-of-locks"></a>鎖定的類型
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

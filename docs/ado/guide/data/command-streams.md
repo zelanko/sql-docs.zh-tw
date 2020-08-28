@@ -3,7 +3,7 @@ description: 命令資料流
 title: 命令資料流程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453660"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991539"
 ---
 # <a name="command-streams"></a>命令資料流
 ADO 一律支援 **CommandText** 屬性所指定之字串格式的命令輸入。 另一種方法是使用 ADO 2.7 或更新版本，您也可以藉由將資料流程指派給 **CommandStream** 屬性，來使用命令輸入的資訊串流。 您可以指派 ADO **資料流程** 物件或任何支援 COM **IStream** 介面的物件。  

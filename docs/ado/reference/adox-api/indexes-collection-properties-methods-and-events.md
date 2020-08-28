@@ -3,7 +3,7 @@ description: Indexes 集合屬性、方法和事件
 title: 索引集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76f89d20d2140f10cd0ab32e18a2878f191c53d4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dff2d804a5b31513b012a3b0ccb3f8ef0944aa9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770197"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984209"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

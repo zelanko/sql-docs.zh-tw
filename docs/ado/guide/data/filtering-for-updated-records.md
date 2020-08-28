@@ -3,7 +3,7 @@ description: 篩選更新的記錄
 title: 篩選更新的記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: cd97232b83b355948f449fefb57aa748bbc2db40
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806840"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991249"
 ---
 # <a name="filtering-for-updated-records"></a>篩選更新的記錄
 在您呼叫 UpdateBatch 之前，您可以使用 [記錄集篩選] 屬性，只查看自記錄集開啟以來已變更的記錄，或上次呼叫 UpdateBatch 的記錄。 若要這樣做，請將 Filter 設定為等於 adFilterPendingRecords，以判斷將更新多少記錄，如下一節中的程式碼範例所示。  

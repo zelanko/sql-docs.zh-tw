@@ -3,7 +3,7 @@ description: MarshalOptions 屬性 (ADO)
 title: " (ADO) 的 MarshalOptions 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3eb985c5940659f6d70c331dd860f0588398fb8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e7e574836f09df6f3bb8fdb078661c85cbf6355
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774497"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990669"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 屬性 (ADO)
 指出要將記錄 [集](./recordset-object-ado.md) 重新封送處理回伺服器的記錄。  

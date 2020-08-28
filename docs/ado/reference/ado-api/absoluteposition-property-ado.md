@@ -3,7 +3,7 @@ description: AbsolutePosition 屬性 (ADO)
 title: " (ADO) 的 AbsolutePosition 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8660c2b5fecaeb99c0e0f3b4bcc57b1b2fc222a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0ecb3290d73032568af7e0a92baf0c9d1b2628f4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759968"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977155"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 屬性 (ADO)
 表示 [記錄集](./recordset-object-ado.md) 物件的目前記錄的序數位置。  

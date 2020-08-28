@@ -3,7 +3,7 @@ description: 使用 Microsoft SDK for Java
 title: 使用 Microsoft SDK for JAVA |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8471d7e80599b96315fae47e130aaba8c23bd4f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806483"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990939"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 

@@ -3,7 +3,7 @@ description: KeyTypeEnum
 title: KeyTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a1ebbe699f00f29b0aac8e6b7fcbdbfcb1abaa6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f9a914e1be7811dcace5c0e05c199cf18030c8d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769987"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983949"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 指定索引 [鍵](./key-object-adox.md)的類型： primary、foreign 或 unique。  

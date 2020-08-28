@@ -3,7 +3,7 @@ description: RDS 傳回 &quot; 資料流程未讀取 &quot; 錯誤
 title: RDS 傳回 &quot; 資料流程未讀取 &quot; 錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0da62851a5cab542a64e219aecc70a13720570f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 23de3604b57f2b424a2166cc25f79bcb4ccbde09
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759628"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977899"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 傳回 &quot; 資料流程未讀取 &quot; 錯誤
 「無法讀取資料流程物件，因為它是空的，或是目前的位置在資料流程的結尾。 若是非空白的資料流程，請使用 Position 屬性來設定目前的位置。 若要判斷資料流程是否為空的，請檢查 Size 屬性。」  

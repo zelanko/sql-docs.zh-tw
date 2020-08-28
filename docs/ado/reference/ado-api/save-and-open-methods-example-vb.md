@@ -3,7 +3,7 @@ description: Save 和 Open 方法範例 (VB)
 title: " (VB) 的儲存和開啟方法範例 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777597"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989359"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 和 Open 方法範例 (VB)
 這三個範例會示範如何搭配使用 [Save](./save-method.md) 和 [Open](./open-method-ado-recordset.md) 方法。  

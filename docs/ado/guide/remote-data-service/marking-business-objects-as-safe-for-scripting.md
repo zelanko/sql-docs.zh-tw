@@ -3,7 +3,7 @@ description: 將商務物件標示為可安全編寫指令碼
 title: 將商務物件標示為安全的腳本 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ebbf64deba331308826eb7fe31c4148fd95ad1f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2cbbfaba540f5349fb7cc0291b8259eeda5b0d68
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759729"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978049"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>將商務物件標示為可安全編寫指令碼
 > [!IMPORTANT]

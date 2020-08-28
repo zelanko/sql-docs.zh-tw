@@ -3,7 +3,7 @@ description: LockTypeEnum
 title: LockTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ba912f082cbd621d2d2205c6505e8c2be309bec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 26cbe4b13e855949b617804311bd283cf44f2ef3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774547"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990679"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定在編輯期間放置於記錄的鎖定類型。  

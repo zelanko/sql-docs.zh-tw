@@ -3,7 +3,7 @@ description: 資料指標與鎖定的特性
 title: 資料指標和鎖定特性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f903cdf8feab9b3e6d649f95b33b68c2de107194
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bd8b88ab3a90669982a752023d8a983c188dcbf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453590"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991459"
 ---
 # <a name="cursor-and-lock-characteristics"></a>資料指標與鎖定的特性
 雖然資料指標的特性取決於提供者的功能，但下列優點和缺點通常適用于各種類型的資料指標和鎖定。  

@@ -3,7 +3,7 @@ description: Tables 集合屬性、方法和事件
 title: Tables 集合屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f1c04503af6a2f01c8265ee8014b8b7a84a530
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: af7583201ab0b2030cb8ed9a9e01d1b482197a22
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769237"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983199"
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Tables 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  

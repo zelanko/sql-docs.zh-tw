@@ -3,7 +3,7 @@ description: 控制交易 (ADO)
 title: " (ADO) 控制交易 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 279c77e7bbd5d676ab3f5f53b41e9e3172ab0d57
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 003bbddc0942e7fe40ca24f80fb94d1252d40bc0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806284"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991509"
 ---
 # <a name="controlling-transactions-ado"></a>控制交易 (ADO)
 ADO 支援連接中的交易處理，以及**連接**物件的**BeginTrans**、 **CommitTrans**和**RollbackTrans**方法的協助。 下列簡單的程式碼片段說明如何在 ADO 中執行交易處理的一般概念。  

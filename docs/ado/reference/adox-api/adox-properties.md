@@ -3,7 +3,7 @@ description: ADOX 屬性
 title: ADOX 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aae7fdebfa01972709cd8e84c9e92a59f24acff1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771627"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985589"
 ---
 # <a name="adox-properties"></a>ADOX 屬性
 

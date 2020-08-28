@@ -3,7 +3,7 @@ description: Parameter (ADO - WFC 語法)
 title: 參數 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09d345a0f08d9fa2e9e3696941aba1ef49443efd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 365e843693def4f8a050dbc5f12c4a23768923f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773467"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990179"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 .com. 資料  

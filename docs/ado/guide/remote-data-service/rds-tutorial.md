@@ -3,7 +3,7 @@ description: RDS 教學課程
 title: RDS 教學課程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0781d75d20254582a3a887cf92a54c8e32848289
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759518"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977829"
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程
 本教學課程說明如何使用 RDS 程式設計模型來查詢及更新資料來源。 首先，它會說明完成這項工作所需的步驟。 然後，本教學課程會在 Microsoft® Visual Basic Scripting Edition (採用適用于 Windows Foundation 類別的 ADO (ADO/WFC) # A3。  

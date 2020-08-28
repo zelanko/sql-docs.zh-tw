@@ -3,7 +3,7 @@ description: Key 物件 (ADOX)
 title: " (ADOX) 的索引鍵物件 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 619cd72854a4e779fbea8989fa84ef6fdf27f90a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d8b2f37dd12f7243f2c5fcb8e577dc35e350c6a9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770107"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984049"
 ---
 # <a name="key-object-adox"></a>Key 物件 (ADOX)
 表示資料庫資料表中的 primary、foreign 或 unique 索引鍵欄位。  

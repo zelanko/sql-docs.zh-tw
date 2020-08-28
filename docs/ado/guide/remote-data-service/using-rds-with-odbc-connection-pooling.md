@@ -3,7 +3,7 @@ description: 搭配 ODBC 連線集區使用 RDS
 title: 搭配 ODBC 連接共用使用 RDS |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 133b72de19edcf3e222c619b0edc1118a96d88ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760038"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977369"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>搭配 ODBC 連線集區使用 RDS
 如果您使用的是 ODBC 資料來源，您可以使用 Internet Information Services (IIS) 中的 [連接共用] 選項，以達到用戶端負載的高效能處理。 連接共用是連接的資源管理員，可維護常用連接的開啟狀態。  

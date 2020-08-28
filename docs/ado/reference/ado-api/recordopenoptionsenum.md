@@ -3,7 +3,7 @@ description: RecordOpenOptionsEnum
 title: RecordOpenOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 352622f55e82b1941439a242249e067aae090e51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772307"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989779"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用於開啟 [記錄](./record-object-ado.md)的選項。 您可以使用或來結合這些值。  

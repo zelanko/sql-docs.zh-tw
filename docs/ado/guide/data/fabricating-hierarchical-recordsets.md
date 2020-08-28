@@ -3,7 +3,7 @@ description: 產生階層式資料錄集
 title: 組裝階層式記錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806845"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991279"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>產生階層式資料錄集
 下列範例顯示如何使用資料成形文法來定義父系、子系和孫 **記錄集**的資料行，以製作沒有基礎資料來源的階層式記錄集。  

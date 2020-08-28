@@ -3,7 +3,7 @@ description: PageSize 屬性 (ADO)
 title: " (ADO) 的 PageSize 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c073d0ef7cceb74864b7f526ef9a5283ca946a7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 898b8269e0718012c43c0184c2eef4db79146dc3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773527"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990189"
 ---
 # <a name="pagesize-property-ado"></a>PageSize 屬性 (ADO)
 指出記錄 [集](./recordset-object-ado.md)內有多少筆記錄組成一個頁面。  

@@ -3,7 +3,7 @@ description: 使用 Delete 方法刪除記錄
 title: 使用 Delete 方法刪除記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f2f6f3fa47c53a5a6873024284e58604a8e8a2c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: d01223eae3f72a9a89b5f2e18b19c181a575052b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806919"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991399"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法刪除記錄
 使用 **Delete** 方法會將目前的記錄或記錄 **集** 物件中的一組記錄標記為刪除。 如果 **記錄集** 物件不允許刪除記錄，則會發生錯誤。 如果您是在立即更新模式中，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄 (由於資料庫完整性違規（例如) ），記錄在呼叫 Update 之後仍會維持在編輯模式中 **。** 這表示您必須先使用 [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) 來取消更新，才能移出目前的記錄 (例如，使用 [Close](../../reference/ado-api/close-method-ado.md)、 [Move](../../reference/ado-api/move-method-ado.md)或 [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)) 。  

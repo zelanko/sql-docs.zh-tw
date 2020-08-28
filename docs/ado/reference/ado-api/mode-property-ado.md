@@ -3,7 +3,7 @@ description: Mode 屬性 (ADO)
 title: " (ADO) 的 Mode 屬性 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eab9f3db1bfe9417411dc832cfa24e3d4496257b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774387"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990599"
 ---
 # <a name="mode-property-ado"></a>Mode 屬性 (ADO)
 指出可用來修改 [連接](./connection-object-ado.md)、 [記錄](./record-object-ado.md)或 [資料流程](./stream-object-ado.md) 物件中資料的許可權。  

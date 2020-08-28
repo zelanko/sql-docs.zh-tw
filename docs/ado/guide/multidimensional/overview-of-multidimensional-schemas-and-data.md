@@ -3,7 +3,7 @@ description: 多維度結構描述和資料的概觀
 title: 多維度架構和資料的總覽 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758358"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978639"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>瞭解多維度架構  
@@ -54,7 +54,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>階層  
  階層定義維度層級可以「匯總」或群組的方式。 維度可以有一個以上的階層。 [Geography] 維度中有一個自然階層：  
   
-### <a name="levels"></a>層級  
+### <a name="levels"></a>等級  
  在上圖所示的 [地理位置] 維度範例中，每個方塊都代表階層中的層級。  
   
  每個層級都有一組成員，如下所示：  

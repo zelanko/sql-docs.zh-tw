@@ -3,7 +3,7 @@ description: Visual Basic for Applications 函式
 title: Visual Basic for Applications 函式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452550"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978929"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函式
 下列 Visual Basic for Applications 函數可用於資料成形計算機運算式：  
@@ -122,7 +122,7 @@ ms.locfileid: "88452550"
         RTrim $  
         Second  
         Sgn  
-        正弦值  
+        Sin  
         SLN  
         Space  
         Space$  
@@ -133,11 +133,11 @@ ms.locfileid: "88452550"
         StrConv  
     :::column-end:::
     :::column:::
-        String  
+        字串  
         String$  
         SYD  
         Tan  
-        Time  
+        時間  
         Time$  
         計時器  
         TimeSerial  

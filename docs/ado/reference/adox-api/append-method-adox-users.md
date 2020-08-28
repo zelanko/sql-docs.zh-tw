@@ -3,7 +3,7 @@ description: Append 方法 (ADOX Users)
 title: 將方法附加 (ADOX 使用者) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35583e55a15fcbf781bc156b9c9fe1f226279d51
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 14b0c573b3ccf8a03b1c2f6513cdac67303fb4bf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771337"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985429"
 ---
 # <a name="append-method-adox-users"></a>Append 方法 (ADOX Users)
 將新的 [使用者](./user-object-adox.md) 物件加入至 [Users](./users-collection-adox.md) 集合。  

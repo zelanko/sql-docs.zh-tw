@@ -3,7 +3,7 @@ description: 遠端資料服務 (RDS)
 title: " (RDS) 的遠端資料服務 |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f21ac9577b45bbeca2d57a3c54c40d542fe5220
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 238dd8457b4397ee8ad6bd7480c030a090e66979
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759418"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977769"
 ---
 # <a name="remote-data-service-rds"></a>遠端資料服務 (RDS)
 遠端資料服務 (RDS) 是 ADO 的一項功能，可讓您將資料從伺服器移至用戶端應用程式或網頁、操作用戶端上的資料，以及在單一來回行程中將更新傳回伺服器。  

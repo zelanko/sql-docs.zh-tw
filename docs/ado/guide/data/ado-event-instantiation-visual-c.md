@@ -3,7 +3,7 @@ description: ADO 事件具現化：Visual C++
 title: ADO 事件具現化： Visual C++ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806436"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991649"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件具現化：Visual C++
 這是如何在 Microsoft® Visual C++®中具現化 ADO 事件的圖解描述。 如需完整的說明，請參閱 [ADO 事件模型範例 (VC + +) ](../../reference/ado-api/ado-events-model-example-vc.md) 。  
