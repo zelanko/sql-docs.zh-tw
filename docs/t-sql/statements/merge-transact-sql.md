@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357804"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778557"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ TOP ( *expression* ) [ PERCENT ]
 *target_table* 不能是遠端資料表。 *target_table* 不能有任何定義的規則。  
   
 [ AS ] *table_alias*  
-用於參考資料表的替代名稱。  
+用於參考 *target_table* 資料表的替代名稱。  
   
 USING \<table_source>  
 根據 \<merge_search condition>，指定與 *target_table* 中資料列進行比對的資料來源。 此項比對的結果會指定 MERGE 陳述式的 WHEN 子句所採取的動作。 \<table_source> 可以是遠端資料表或存取遠端資料表的衍生資料表。
   
 \<table_source> 可以是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)的衍生資料表，藉由指定多個資料列來建構該資料表。  
+  
+ [ AS ] *table_alias*  
+用於參考 table_source 資料表的替代名稱。   
   
 如需有關此子句語法和引數的詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
   

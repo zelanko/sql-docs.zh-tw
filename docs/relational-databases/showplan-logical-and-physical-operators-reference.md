@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455492"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760238"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -188,7 +188,7 @@ ms.locfileid: "88455492"
   
 |圖形執行計畫圖示|Showplan 運算子|描述|  
 |-----------------------------------|-----------------------|-----------------|  
-|![自適性聯結運算子圖示](../relational-databases/media/AdaptiveJoin.gif "自適性聯結運算子圖示")|**自適性聯結**|**自適性聯結**運算子可讓選擇的雜湊聯結或巢狀迴圈聯結方法，延後到已掃描的第一個輸入之後。 **自適性聯結**運算子是實體運算子。 如需詳細資訊，請參閱[了解自適性聯結](../relational-databases/performance/joins.md#adaptive)。 | 
+|![自適性聯結運算子圖示](../relational-databases/media/AdaptiveJoin.gif "自適性聯結運算子圖示")|**自適性聯結**|**自適性聯結**運算子可讓選擇的雜湊聯結或巢狀迴圈聯結方法延後到已掃描第一個輸入之後。 **自適性聯結**運算子是實體運算子。 如需詳細資訊，請參閱[了解自適性聯結](../relational-databases/performance/joins.md#adaptive)。 | 
 |None|**彙總**|**Aggregate** 運算子會計算包含 MIN、MAX、SUM、COUNT 或 AVG 的運算式。 **Aggregate** 運算子可以是邏輯運算子或實體運算子。| 
 |![算術運算式運算子圖示](../relational-databases/media/arithmetic-expression-32x-2.gif "算術運算式運算子圖示")|**算術運算式**|「算術運算式」運算子會從資料列中現有的值計算出新的值。 「算術運算式」無法用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中。| 
 |None|**Async Concat**|**Async Concat** 運算子只能使用於遠端查詢 (分散式查詢)。 它有 *n* 個子節點和一個父節點。 一般來說，某些子節點是參與分散式查詢的遠端電腦。 **Async Concat** 會同時向所有子節點發出 `open()` 呼叫，然後再將點陣圖套用到每個子節點。 **Async Concat** 會針對每一個是 1 的位元，視需要將輸出資料列傳送給父節點。| 
@@ -259,7 +259,7 @@ ms.locfileid: "88455492"
 |![母體擴展查詢資料指標運算子圖示](../relational-databases/media/poulation-query-32x.gif "母體擴展查詢資料指標運算子圖示")|**母體擴展查詢**|「母體擴展查詢」運算子會在開啟資料指標時，擴展資料指標的工作資料表。| 
 |![重新整理查詢資料指標運算子圖示](../relational-databases/media/refresh-query-32x.gif "重新整理查詢資料指標運算子圖示")|**重新整理查詢**|「重新整理查詢」運算子會在提取緩衝區中提取資料列目前的資料。| 
 |![遠端刪除運算子圖示](../relational-databases/media/remote-delete-32x.gif "遠端刪除運算子圖示")|**遠端刪除**|「遠端刪除」運算子會刪除遠端物件的輸入資料列。 「遠端刪除」是邏輯與實體運算子。| 
-|![遠端索引搜尋執行程序表運算子](../relational-databases/media/remote-index-scan-32x.gif "遠端索引搜尋執行程序表運算子")|**遠端索引掃描**|「遠端索引掃描」運算子會掃描 Argument 資料行中所指定的遠端索引。 「遠端索引掃描」是邏輯與實體運算子。| 
+|![遠端索引掃描執行程序表運算子](../relational-databases/media/remote-index-scan-32x.gif "遠端索引掃描執行程序表運算子")|**遠端索引掃描**|「遠端索引掃描」運算子會掃描 Argument 資料行中所指定的遠端索引。 「遠端索引掃描」是邏輯與實體運算子。| 
 |![遠端索引搜尋執行程序表運算子](../relational-databases/media/remote-index-seek-32x.gif "遠端索引搜尋執行程序表運算子")|**遠端索引搜尋**|「遠端索引搜尋」運算子會使用遠端索引物件的搜尋功能來擷取資料列。 **Argument** 資料行包含所使用的遠端索引名稱及 SEEK:() 述詞。 「遠端索引搜尋」是邏輯實體運算子。| 
 |![遠端插入運算子圖示](../relational-databases/media/remote-insert-32x.gif "遠端插入運算子圖示")|**遠端插入**|「遠端插入」運算子會將輸入資料列插入遠端物件。 「遠端插入」是邏輯與實體運算子。| 
 |![遠端查詢運算子圖示](../relational-databases/media/remote-query-32x.gif "遠端查詢運算子圖示")|**遠端查詢**|「遠端查詢」運算子會對遠端來源送出查詢。 傳給遠端伺服器的查詢文字會出現在 **Argument** 資料行中。 「遠端查詢」是邏輯與實體運算子。| 

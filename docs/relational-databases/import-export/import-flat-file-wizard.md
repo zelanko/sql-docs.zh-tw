@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251439"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646042"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > 如需 [匯入及匯出精靈] 的相關內容，請參閱 [SQL Server 匯入及匯出精靈](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
-[匯入一般檔案精靈] 是一個簡單的方法，可將一般檔案 (.csv、.txt) 的資料複製到您資料庫中的新資料表。 本概觀將說明使用此精靈的理由、如何找到此精靈，並提供簡單的範例供您參考。
+[匯入一般檔案精靈] 是一個簡單的方法，可將一般檔案 (.csv、.txt) 的資料複製到您資料庫中的新資料表。  [匯入一般檔案精靈] 支援以逗號分隔和固定寬度格式的檔案。 本概觀將說明使用此精靈的理由、如何找到此精靈，並提供簡單的範例供您參考。
 
 ## <a name="why-would-i-use-this-wizard"></a>為什麼要使用此精靈？
 建立此精靈的目的在於改善目前的匯入體驗，運用稱之為 Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) 的智慧型架構。 對於缺乏專業網域知識的使用者來說，匯入資料往往是件複雜、容易出錯且沉悶的工作。 此精靈簡化了匯入程序，只要選取輸入檔與唯一的資料表名稱，PROSE 架構就會為您處理其餘的部分。
@@ -36,7 +36,7 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisites
-只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[此處](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
+SQL Server Management Studio (SSMS) v17.3 或更新版本可提供此功能。 請確認目前使用的是最新版本。 您可以於[此處](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
  
 ## <a name="getting-started"></a><a id="started"></a>使用者入門
 若要存取 [匯入一般檔案精靈]，請遵循這些步驟進行：
@@ -54,6 +54,14 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 ![精靈 Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+概觀：
+1. [存取精靈](#step-1-access-wizard-and-intro-page)
+2. [指定輸入檔](#step-2-specify-input-file)
+3. [預覽資料](#step-3-preview-data)
+4. [修改資料行](#step-4-modify-columns)
+5. [總結](#step-5-summary)
+6. [結果](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>步驟 1:存取精靈及簡介頁面
 遵循[此處](#started)的說明存取精靈。
 
@@ -62,7 +70,7 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 ![精靈簡介](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>步驟 2:指定輸入檔
-按一下 [瀏覽] 以選取輸入檔。 依預設，該精靈會搜尋 .csv 與 .txt 檔案。 
+按一下 [瀏覽] 以選取輸入檔。 依預設，該精靈會搜尋 .csv 與 .txt 檔案。 PROSE 會偵測檔案格式為逗號分隔或固定寬度 (不論副檔名為何)。
 
 新的資料表名稱應為唯一，若名稱重複，精靈不會允許您前往下一步。
 
@@ -75,6 +83,8 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 ### <a name="step-4-modify-columns"></a>步驟 4：修改資料行
 該精靈會找出其認為正確的資料行名稱、資料類型等等。若這些欄位不正確 (例如，資料類型應為 float，而非 int)，可於此處編輯。
+
+偵測到空值的資料行將會核取 [允許 Null]。 不過，如果預期資料行中有 Null，但資料行未核取 [允許 Null] 時，則可在這裡更新資料表定義，以允許單一或所有資料行中的 Null。
 
 準備完成後請繼續進行。
 

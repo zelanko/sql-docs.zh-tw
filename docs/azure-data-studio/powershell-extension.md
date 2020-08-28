@@ -1,21 +1,21 @@
 ---
 title: PowerShell 延伸模組
-description: 了解如何安裝和使用 Azure Data Studio PowerShell 延伸模組，該延伸模組提供了豐富的 PowerShell 編輯器支援，可讓您撰寫和偵錯指令碼。
+description: 了解如何安裝和使用 Azure Data Studio PowerShell 延伸模組，該延伸模組提供豐富的 PowerShell 編輯器支援可供撰寫和偵錯指令碼。
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411314"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766537"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 編輯器支援
 
@@ -39,7 +39,7 @@ ms.locfileid: "87411314"
 
 ## <a name="installing-the-extension"></a>安裝延伸模組
 
-您可以遵循 [Azure Data Studio 文件](https://docs.microsoft.com/sql/azure-data-studio/extensions)中的步驟，安裝 PowerShell 延伸模組的正式版本。
+您可以遵循 [Azure Data Studio 文件](./extensions.md)中的步驟，安裝 PowerShell 延伸模組的正式版本。
 在 [延伸模組] 窗格中搜尋 "PowerShell" 延伸模組，然後在此進行安裝。  您會自動收到任何延伸模組未來更新的相關通知！
 
 您也可以從我們的[版本頁面](https://github.com/PowerShell/vscode-powershell/releases)安裝 VSIX 套件，然後透過命令列進行安裝：
@@ -63,8 +63,8 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 PowerShell Core 是 [GitHub](https://github.com/powershell/powershell) 上的開放原始碼專案。
 如需在 macOS 或 Linux 平台上安裝 PowerShell Core 的詳細資訊，請參閱下列文章：
 
-- [在 Linux 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [在 macOS 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [在 Linux 上安裝 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [在 macOS 上安裝 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>範例指令碼
 

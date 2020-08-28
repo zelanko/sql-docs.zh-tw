@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444825"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602193"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  強制規定對檢視執行的所有資料修改陳述式必須遵循 *select_statement* 內所設定的準則。 當利用檢視來修改資料列時，WITH CHECK OPTION 可確保在認可修改之後，仍可以透過檢視見到資料。  
   
-> [!NOTE]  
->  直接更新檢視的基礎資料表，不會針對檢視來進行驗證，即使指定了 CHECK OPTION 也是如此。  
+> [!NOTE]
+>  CHECK OPTION 僅適用於透過此檢視所執行的更新。 其不適用於任何直接對檢視基礎資料表執行的更新。  
   
  ENCRYPTION  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

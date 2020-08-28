@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748413"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618120"
 ---
 # <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748413"
 |重做資料庫鏡像|延遲交易|  
 |檔案群組離線|延遲交易|  
   
+### <a name="requirements-and-limitations"></a>需求和限制
+
+ - 資料庫必須使用完整或大量記錄復原模式。
+ - 必須為資料庫完成至少一個資料庫和記錄備份
+ - 延遲交易不適用於資料庫上線後，在交易回復期間所發生的錯誤。 (例如，執行階段錯誤)
+ - 在資料庫連結期間發生的復原失敗無法使用延遲交易
+ - 某些交易，例如系統交易 (例如 頁面配置) 無法延遲
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>將交易移出 DEFERRED 狀態  
   
 > [!IMPORTANT]  

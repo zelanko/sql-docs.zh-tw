@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772505"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564658"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連線
 
@@ -123,6 +123,10 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 9. 以滑鼠右鍵按一下匯入的憑證，並指向 [所有工作]，然後按一下 [管理私密金鑰]。 在 [安全性] 對話方塊中，為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶所使用的使用者帳戶新增讀取權限。  
   
 10. 完成 **[憑證匯入精靈]** 以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
+
+> [!IMPORTANT]
+> 針對生產環境，建議從憑證授權單位取得信任的憑證。    
+> 基於測試目的，也可使用自我簽署憑證。 若要建立自我簽署憑證，請參閱 [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) 或 [certreq 命令](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)。
   
 ## <a name="install-across-multiple-servers"></a>跨多部伺服器安裝
 
@@ -141,9 +145,9 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 設定伺服器強制加密連線。
 
 > [!IMPORTANT]
-> SQL Server 服務帳戶必須擁有用來在 SQL Server 上強制加密的憑證讀取權限。 針對不具有特殊權限的服務帳戶，則必須將讀取權限新增至憑證。 若不進行此操作，可能會導致 SQL Server 服務重新啟動失敗。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須擁有用來在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上強制加密的憑證讀取權限。 針對不具有特殊權限的服務帳戶，則必須將讀取權限新增至憑證。 若無法進行此操作，可能會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務重新啟動失敗。
   
-1. 在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [ _\<server instance>_ 的通訊協定]，然後選取 [屬性]。  
+1. 在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，然後以滑鼠右鍵按一下 [通訊協定] _\<server instance>_ ，然後選取 [屬性]。  
   
 2. 在 [ _\<instance name>_ 屬性的通訊協定]  對話方塊的 [憑證] 索引標籤上，從 [憑證] 方塊的下拉式清單選取所需憑證，然後按一下 [確定]。  
   
@@ -168,7 +172,7 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
   
 ## <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
   
-從 SQL Server Management Studio 加密連線：  
+若要從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將連線加密：  
 
 1. 在 [物件總管] 工具列上，按一下 **[連接]** ，再按一下 **[Database Engine]** 。  
   
@@ -183,3 +187,4 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 
 + [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)     
 + [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

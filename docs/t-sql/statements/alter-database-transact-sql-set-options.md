@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479152"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778547"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -194,11 +194,13 @@ SET
   | TRANSFORM_NOISE_WORDS = { OFF | ON }
   | TWO_DIGIT_YEAR_CUTOFF = { 1753, ..., 2049, ..., 9999 }
 }
+
 <FILESTREAM_option> ::=
 {
     NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL
   | DIRECTORY_NAME = <directory_name>
 }
+
 <HADR_options> ::=
     ALTER DATABASE SET HADR
 
@@ -212,7 +214,7 @@ SET
 {
     QUERY_STORE
     {
- = OFF
+          = OFF [ FORCED ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -235,7 +237,7 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+      STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
     | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
     | TOTAL_EXECUTION_CPU_TIME_MS = number
@@ -253,11 +255,12 @@ SET
     REMOTE_DATA_ARCHIVE =
     {
         ON ( SERVER = <server_name> ,
-{CREDENTIAL = <db_scoped_credential_name>
-   | FEDERATED_SERVICE_ACCOUNT = ON | OFF
-}
-      )
-      | OFF
+             { 
+                  CREDENTIAL = <db_scoped_credential_name>
+                  | FEDERATED_SERVICE_ACCOUNT = ON | OFF
+             }
+        )
+        | OFF
     }
 }
 
@@ -273,8 +276,8 @@ SET
 <snapshot_option> ::=
 {
     ALLOW_SNAPSHOT_ISOLATION { ON | OFF }
-  | READ_COMMITTED_SNAPSHOT {ON | OFF }
-  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = {ON | OFF }
+  | READ_COMMITTED_SNAPSHOT { ON | OFF }
+  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = { ON | OFF }
 }
 <sql_option> ::=
 {
@@ -299,7 +302,9 @@ SET
   | ROLLBACK IMMEDIATE
   | NO_WAIT
 }
-<temporal_history_retention>::=TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<temporal_history_retention> ::=
+    TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```
 
 ## <a name="arguments"></a>引數
@@ -337,9 +342,9 @@ OFF
 >
 > 當 AUTO_CLOSE 設為 ON 時，[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中某些資料行及 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式會傳回 NULL，因為資料庫無法擷取資料。 若要解決這個問題，請執行 USE 陳述式來開啟資料庫。
 >
-> 資料庫鏡像需要 AUTO_CLOSE OFF。
+> 資料庫鏡像需要 AUTO_CLOSE 設為 OFF。
 
-當資料庫設為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，針對計畫快取中每個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+當資料庫設為 `AUTOCLOSE = ON` 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體其計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，針對計畫快取中每個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 開啟     

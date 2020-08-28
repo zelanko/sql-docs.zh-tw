@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565301"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564510"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 您可以使用下列兩種方式之一連線至唯讀次要複本：
 * 應用程式可以直接連線到裝載次要複本的 SQL Server 執行個體，並查詢資料庫。 如需詳細資訊，請參閱[可讀取的次要複本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。
-* 應用程式也可以使用唯讀路由，這需要接聽程式。 如需詳細資訊，請參閱[唯讀路由](listeners-client-connectivity-application-failover.md#ConnectToSecondary)。
+* 應用程式也可以使用唯讀路由，這需要接聽程式。 如果要在沒有叢集管理員的情況下部署讀取縮放案例，您仍然可建立一個接聽程式，其指向目前主要複本的 IP 位址，以及與 SQL Server 所接聽連接埠不同的連接埠。 在容錯移轉之後，將須重新建立接聽程式，以指向新的主要 IP 位址。 如需詳細資訊，請參閱[唯讀路由](listeners-client-connectivity-application-failover.md#ConnectToSecondary)。
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>容錯移轉讀取級別可用性群組上的主要複本
 

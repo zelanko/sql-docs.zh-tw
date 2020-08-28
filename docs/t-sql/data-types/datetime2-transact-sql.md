@@ -2,7 +2,7 @@
 description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445975"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760328"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88445975"
 |元素範圍|YYYY 是代表年份的四位數字，範圍介於 0001 至 9999 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數字，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數字，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數字，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數字，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數字，範圍介於 00 至 59 之間。<br /><br /> n* 是代表小數秒數的零至七位數字，範圍介於 0 至 9999999 之間。 在 Informatica 中，毫秒會在 n > 3 時遭到截斷。|  
 |字元長度|最小 19 個位置 (YYYY-MM-DD hh:mm:ss)，最大 27 個位置 (YYYY-MM-DD hh:mm:ss.0000000)|  
 |有效位數，小數位數|0 至 7 位數，精確度為 100ns。 預設有效位數是 7 位數。|  
-|儲存體大小|不到 3 個有效位數為 6 個位元組。<br/>3 或4 個有效位數為 7 個位元組。<br/>所有其他有效位數均需要 8 個位元組。<sup>1</sup>|  
+|儲存體大小 <sup>1</sup>|不到 3 個有效位數為 6 個位元組。<br/>3 或4 個有效位數為 7 個位元組。<br/>所有其他有效位數均需要 8 個位元組。<sup>2</sup>|  
 |精確度|100 奈秒|  
 |預設值|1900-01-01 00:00:00|  
 |Calendar|西曆|  
@@ -57,7 +57,9 @@ ms.locfileid: "88445975"
 |時區位移感知和保留|否|  
 |日光節約感知|否|  
 
-<sup>1</sup>**datetime2** 值的第一個位元組會儲存值的有效位數，這表示 **datetime2** 值所需的實際儲存空間是上表說明的儲存體大小另加 1 個位元組，以儲存有效位數。  這使得 **datetime2** 值的最大大小變成 9 個位元組：1 個位元組儲存有效位數，加上 8 個位元組用於最大有效位數的資料儲存。
+<sup>1</sup> 所提供值適用於未壓縮的資料列存放區。 使用[資料壓縮](../../relational-databases/data-compression/data-compression.md)或[資料行存放區](../../relational-databases/indexes/columnstore-indexes-overview.md)可能會改變每個有效位數的儲存體大小。 此外，磁碟上與記憶體內的儲存體大小可能會有所不同。 例如，使用批次模式時，**datetime2** 值在記憶體中一律需要 8 個位元組。
+
+<sup>2</sup> 當 **datetime2** 值轉換成 **varbinary** 值時，會將額外的位元組新增至 **varbinary** 值，以儲存有效位數。
 
 如需資料類型中繼資料，請參閱 [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 或 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)。 有效位數和小數位數是某些日期和時間資料類型的變數。 若要取得資料行的有效位數和小數位數，請參閱 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)、[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)，或 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。
   

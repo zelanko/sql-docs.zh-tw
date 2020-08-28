@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122482"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655291"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 
 
@@ -43,7 +43,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 若要手動容錯移轉 (不會遺失資料)：
 
-1. 將目標次要複本設為 `SYNCHRONOUS_COMMIT`。
+1. 請製作目前的主要複本與目標次要複本 `SYNCHRONOUS_COMMIT`。
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. 將舊的主要角色更新為 `SECONDARY`，並在裝載主要複本的 SQL Server 執行個體上執行下列命令：
+1. 將舊的主要角色更新為 `SECONDARY`，並在裝載舊主要複本的 SQL Server 執行個體上執行下列命令：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. 重新建立為讀取縮放目的而建立的任何接聽程式，且不由叢集管理員所管理。 如果原始接聽程式指向舊的主要複本，請將其捨棄，然後重新建立接聽程式以指向新的主要複本。

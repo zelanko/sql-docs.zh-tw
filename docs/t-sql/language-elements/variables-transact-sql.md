@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459248"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807030"
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Transact-SQL 區域變數是一種物件，可保存特定類型的單一資料�
 * 若要儲存預存程序傳回碼或函數傳回值所傳回的資料值。
 
 > [!NOTE]
-> 有些 Transact-SQL 系統函式的名稱開頭是兩個 *at* 符號 (\@\@)。 雖然在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@ 函式是當作全域變數，但他們並不是變數，行為也和變數不一樣。 \@\@ 函式是系統函式，他們的語法是遵循函式的規則。
-
-> [!NOTE]
-> 無法在檢視中使用變數。
+> - 有些 Transact-SQL 系統函式的名稱開頭是兩個 *at* 符號 (\@\@)。 雖然在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@ 函式是作為全域變數，但 \@\@ 函式並不是變數，其行為也和變數不一樣。 \@\@ 函式是系統函式，他們的語法是遵循函式的規則。
+> - 您不能在檢視中使用變數。
+> - 對變數所做變更不會受到交易回復的影響。
 
 以下指令碼建立一個小型測試資料表，並於其中填入 26 個資料列。 指令碼將使用變數進行三個用途： 
 

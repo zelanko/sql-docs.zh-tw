@@ -2,23 +2,23 @@
 title: 版本資訊
 description: 本文包含 Azure Data Studio 從 2017 年 11 月至今版本的版本資訊。 針對許多摘要問題，請參閱其他詳細資料的連結。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 08/12/2020
-ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147199"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766187"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
-**[下載並安裝最新版本！](download.md)**
+**[下載並安裝最新版本！](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="august-2020"></a>2020 年 8 月
 
@@ -76,7 +76,7 @@ ms.locfileid: "88147199"
 | :----- | :------ |
 | 已將 Azure Data Studio 新增至 Azure 入口網站整合 | 使用者現在可直接從 Azure SQL Database 連線、Azure Postgres 等啟動至 Azure 入口網站。 |
 | 新增 Notebook 功能 | &bull; &nbsp; 新增筆記本工具列 <br/> &bull; &nbsp; 新增編輯儲存格工具列 <br/> &bull; &nbsp; Python 相依性精靈 UX 更新 <br/> &bull; &nbsp; 筆記本之間改善的間距 |
-| 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)中的功能。 |
+| 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15)中的功能。 |
 | [機器學習延伸模組的改善](https://go.microsoft.com/fwlink/?linkid=2129918) | 現在支援 Azure SQL 受控執行個體。 |
 | 資料虛擬化延伸模組的改善 | 現在支援 MongoDB 與 Teradata |
 | Postgres 延伸模組 Bug 修正 | 固定的 Azure MFA |
@@ -149,7 +149,7 @@ ms.locfileid: "88147199"
 | :----- | :------ |
 | 已在 SQL Notebooks 中新增圖表支援 | 現於程式碼資料格中執行 SQL 查詢時，使用者可以建立和儲存圖表。 |
 | 已新增建立 Jupyter Book 體驗 | 使用者現在可以使用筆記本建立自己的 Jupyter Book。 |
-| Postgres 延伸模組已新增 AAD 支援 | |
+| Postgres 延伸模組已新增 Azure AD 支援 | |
 | 已修正許多協助工具 Bug | [協助工具 Bug 清單](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
 | VS Code 合併到 1.42 | 此版本包含前 3 個 VS Code 版本的 VS Code 更新。 若要深入了解，請[閱讀其版本資訊](https://code.visualstudio.com/updates/v1_42)。 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed) \(英文\)。 |
@@ -314,7 +314,7 @@ ms.locfileid: "88147199"
 | SandDance 1.3.1 擴充功能的版本 | &bull; &nbsp; 智慧圖表偵測 <br/>&bull; &nbsp; 3D 視覺效果 <br/> &bull; &nbsp; 資料篩選 |
 | Notebook 改進 | &bull; &nbsp; 以內嵌方式新增程式碼或文字資料格 <br/>&bull; &nbsp; 已新增以滑鼠右鍵按一下 SQL 結果方格以將結果儲存為 CSV、JSON 等的功能 <br/> &bull; &nbsp; 已改善筆記本載入效能，加快載入 JSON 的速度 <br/> &bull; &nbsp; 在[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) \(英文\) 檢視完整的改進清單 |
 | SQL Server 2019 支援 |  此版本包含對額外 SQL Server 2019 巨量資料叢集功能的支援，包括： <br/> &bull; &nbsp; 減少了在物件對應頁面上載入資料表與資料行資訊所花費的時間。 <br/> &bull; &nbsp; 已修正在連線詳細資料頁面上載入現有資料庫範圍認證的錯誤 (Bug)。 <br/> &bull; &nbsp;已增加用於 PROSE 剖析的預設樣本大小。 | 
-| Dacpac 延伸模組現在支援 AAD | 
+| Dacpac 延伸模組現在支援 Azure AD | 
 | Visual Studio Code 7 月版本合併 1.37 | 您可以在[此處](https://code.visualstudio.com/updates/v1_37) \(英文\) 找到最新的改進。 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
@@ -345,7 +345,7 @@ ms.locfileid: "88147199"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 中央管理伺服器 (CMS) 延伸模組的版本 | 中央管理伺服器會儲存一份 SQL Server 執行個體清單，其會組織為一或多個中央管理伺服器群組。 使用者可以連線到自己現有的 CMS 伺服器，並管理其伺服器，例如新增和移除伺服器。 若要深入了解，請參閱[此處](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| 中央管理伺服器 (CMS) 延伸模組的版本 | 中央管理伺服器會儲存一份 SQL Server 執行個體清單，其會組織為一或多個中央管理伺服器群組。 使用者可以連線到自己現有的 CMS 伺服器，並管理其伺服器，例如新增和移除伺服器。 若要深入了解，請參閱[此處](../relational-databases/administer-multiple-servers-using-central-management-servers.md) |
 | 適用於 Windows 的資料庫管理工具延伸模組版本 | 此延伸模組會從 Azure Data Studio 的 SQL Server Management Studio 中啟動兩個最常使用的體驗。 使用者可在許多不同的物件 (例如資料庫、資料表、資料行、檢視等) 上按一下滑鼠右鍵，然後選取 [屬性] 以檢視該物件的 [SSMS 屬性] 對話方塊。 此外，使用者可在資料庫上按一下滑鼠右鍵，然後選取 [產生指令碼] 來啟動知名的 SSMS 產生指令碼精靈。 
 | 結構描述比較改進 | &bull; &nbsp; 已新增排除/包含選項 <br/>&bull; &nbsp; [產生指令碼] 會在產生之後開啟指令碼 <br/>&bull; &nbsp; 已移除雙重捲軸  <br/>&bull; &nbsp; 格式設定和配置改進 <br/>&bull; &nbsp; 您可以在[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed) \(英文\) 找到完整的變更|
 | 已將 [訊息] 區段移至自己的索引標籤 | 當使用者執行 SQL 查詢時，結果和訊息均位於堆疊的面板上。 現在，它們都位於一個面板的個別索引標籤中 (例如在 SSMS 中)。 |
@@ -361,7 +361,7 @@ ms.locfileid: "88147199"
     - 無法啟動 Azure 伺服器的屬性
     - 並非所有物件都有屬性對話方塊
     - 對話方塊需要很長的時間才能啟動
-    - 啟動具有某些連線類型 (例如 AAD) 的伺服器時發生錯誤
+    - 啟動具有某些連線類型 (例如 Azure AD) 的伺服器時發生錯誤
 - Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) \(英文\) 允許使用者使用適用於 Notebooks 的系統 Python
 - 結構描述比較
@@ -446,7 +446,7 @@ ms.locfileid: "88147199"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md?view=sql-server-2017) |
+| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md?view=sql-server-2017) |
 | 已在 Profiler 延伸模組中新增篩選擴充事件支援。 | &nbsp; |
 | 已新增「另存檔案為 XML」功能，可將 T-SQL 結果儲存為 XML。 | &nbsp; |
 | 已新增資料層應用程式精靈改進。 | &bull; &nbsp; 已新增 [產生指令碼] 按鈕<br/>&bull; &nbsp; 已新增檢視來提供部署期間可能遺失資料的警告。 |
@@ -498,7 +498,7 @@ ms.locfileid: "88147199"
 | 引進「高彩」查詢延伸模組，包括 SSMS 編輯器佈景主題。 | &nbsp; |
 | SQL Server Agent、Profiler 和「匯入」延伸模組中的修正。 | &nbsp; |
 | 修正 .Net Core Socket KeepAlive 問題，此問題會導致 macOS 上的非使用中連線中斷。 | &nbsp; |
-| 將 SQL Tools 服務升級至 .Net Core 2.2 Preview 3 (適用於最終 AAD 支援)。 | &nbsp; |
+| 將 SQL Tools 服務升級至 .Net Core 2.2 Preview 3 (適用於最終 Azure AD 支援)。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Bug 修正，2018 年 11 月

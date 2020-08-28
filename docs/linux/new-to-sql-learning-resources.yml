@@ -1,0 +1,100 @@
+### YamlMime:Landing
+title: SQL Server 的新使用者：學習資源
+summary: 包含教學課程、快速入門和其他教育資源用於指導熟悉 Linux 的使用者使用 Linux 上的 SQL Server 。
+metadata:
+  title: SQL Server 的新使用者：學習資源
+  description: 指導 Linux 使用者如何使用 Linux 上 SQL Server 的一系列資源。
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 07/25/2020
+  ms.openlocfilehash: 95d3e201267055a68bb3b07fbd2ecca61dc2d9ff
+  ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 08/20/2020
+  ms.locfileid: "88646778"
+landingContent:
+- title: 模組 1：SQL Server 的基本概念
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 什麼是資料庫？
+      url: ../relational-databases/databases/databases.md
+    - text: 系統資料庫
+      url: ../relational-databases/databases/system-databases.md
+    - text: 資料庫檔案
+      url: ../relational-databases/databases/database-files-and-filegroups.md
+    - text: 什麼是資料表？
+      url: ../relational-databases/tables/tables.md
+    - text: 索引
+      url: ../relational-databases/indexes/indexes.md
+- title: 模組 2：規劃 Linux 上的 SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 版本和功能
+      url: sql-server-linux-editions-and-components-2019.md
+    - text: 支援的平台
+      url: sql-server-linux-release-notes-2019.md
+    - text: 常見問題集
+      url: sql-server-linux-faq.md
+- title: 課程模組 3：安裝/部署與連線
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Redhat
+      url: quickstart-install-connect-red-hat.md
+    - text: SUSE
+      url: quickstart-install-connect-suse.md
+    - text: Ubuntu
+      url: quickstart-install-connect-ubuntu.md
+    - text: 容器
+      url: quickstart-install-connect-docker.md
+    - text: 工具概觀
+      url: ../tools/overview-sql-tools.md
+    - text: Azure Data Studio (工具)
+      url: ../azure-data-studio/what-is.md
+    - text: 撰寫基本的 Transact-SQL (T-SQL)
+      url: ../t-sql/tutorial-writing-transact-sql-statements.md
+    - text: Channel 9 - 跨平台 SQL 工具 (選擇性)
+      url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
+- title: 課程模組 4：設定 Linux 上的 SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 變更預設連接埠
+      url: sql-server-linux-configure-mssql-conf.md#tcpport
+    - text: 設定預設路徑
+      url: sql-server-linux-configure-mssql-conf.md#datadir
+    - text: 設定追蹤旗標
+      url: sql-server-linux-configure-mssql-conf.md#traceflags
+    - text: 加入網域
+      url: sql-server-linux-active-directory-authentication.md
+    - text: 載入範例資料
+      url: ../samples/adventureworks-install-configure.md
+    - text: 移轉
+      url: sql-server-linux-migrate-restore-database.md
+- title: 課程模組 5：設定商務持續性
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 商務持續性選項
+      url: sql-server-linux-business-continuity-dr.md
+    - text: 部署 Pacemaker 叢集
+      url: sql-server-linux-deploy-pacemaker-cluster.md
+    - text: 設定可用性群組
+      url: sql-server-linux-create-availability-group.md
+- title: 課程模組 6：監視與微調
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 效能儀表板
+      url: https://www.youtube.com/watch?v=cVdfhBVmeig
+    - text: 查詢存放區
+      url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
+    - text: DMV
+      url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+    - text: 其他課程 - Linux 上的 SQL Server 效能功能
+      url: sql-server-linux-performance-get-started.md
