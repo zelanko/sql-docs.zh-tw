@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_partitions (Transact-sql) '
-title: sys. pdw_nodes_partitions (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_nodes_partitions (Transact-sql) '
+title: sys.pdw_nodes_partitions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f015d17f401cb2457d3e5cf657ce85342c1628e
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 82903661be207c73b1b848e8273b594ff49d1642
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646268"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062267"
 ---
-# <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql) 
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   針對所有資料表的每個資料分割，以及資料庫中大部分類型的索引，各包含一個 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 資料列。 所有資料表和索引都至少包含一個資料分割，不論它們是否已明確分割。  
@@ -69,9 +69,6 @@ JOIN sys.objects AS o
 WHERE o.name = 'myTable'  
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
-
->[!TIP]
-> 為了改善 Synapse SQL 中的效能，請考慮在永久使用者資料表上使用 **sys. pdw_permanent_table_mappings** 而不是 **sys. pdw_table_mappings** 。 如需詳細資訊，請參閱 **[sys. pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 。
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

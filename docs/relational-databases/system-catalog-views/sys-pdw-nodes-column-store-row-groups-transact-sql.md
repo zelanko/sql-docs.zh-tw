@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_column_store_row_groups (Transact-sql) '
-title: 'sys. pdw_nodes_column_store_row_groups (Transact-sql) '
+description: 'sys.pdw_nodes_column_store_row_groups (Transact-sql) '
+title: 'sys.pdw_nodes_column_store_row_groups (Transact-sql) '
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9cabbcd9a47bbea4eaaf2d01bca1044c66ff9112
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646022"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062347"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql) 
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  提供每個區段的叢集資料行存放區索引資訊，以協助系統管理員在中進行系統管理決策 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 **sys. pdw_nodes_column_store_row_groups** 具有實際儲存的資料列總數的資料行 (包括標示為已刪除) 的資料行，以及標示為已刪除的資料列數目的資料行。 您可以使用 **sys. pdw_nodes_column_store_row_groups** 來判斷哪些資料列群組的已刪除資料列的百分比很高，且應該重建。  
+  提供每個區段的叢集資料行存放區索引資訊，以協助系統管理員在中進行系統管理決策 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 **sys.pdw_nodes_column_store_row_groups** 具有實際儲存的資料列總數的資料行 (包括標示為已刪除) 的資料行，以及標示為已刪除的資料列數目的資料行。 使用 **sys.pdw_nodes_column_store_row_groups** 來判斷哪些資料列群組的已刪除資料列的百分比很高，應該重建。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|基礎資料表的識別碼。 這是計算節點上的實體資料表，而不是控制節點上邏輯資料表的 object_id。 例如，object_id 與 sys. 資料表中的 object_id 不相符。<br /><br /> 若要與 sys. 資料表聯結，請使用 sys. pdw_index_mappings。|  
+|object_id|**int**|基礎資料表的識別碼。 這是計算節點上的實體資料表，而不是控制節點上邏輯資料表的 object_id。 例如，object_id 與 sys. 資料表中的 object_id 不相符。<br /><br /> 若要與 sys. 資料表聯結，請使用 sys.pdw_index_mappings。|  
 |**index_id**|**int**|*Object_id*資料表上的叢集資料行存放區索引的識別碼。|  
 |**partition_number**|**int**|保存資料列群組 *row_group_id*之資料表分割區的識別碼。 您可以使用 *partition_number* 將此 DMV 聯結至 sys. 分割。|  
 |**row_group_id**|**int**|此資料列群組的識別碼。 此號碼在分割區中是唯一的。|  
@@ -43,7 +43,7 @@ ms.locfileid: "88646022"
 ## <a name="remarks"></a>備註  
  針對擁有叢集或非叢集資料行存放區索引的每一個資料表的每一個資料行存放區資料列群組傳回一個資料列。  
   
- 使用 **sys. pdw_nodes_column_store_row_groups** 可判斷資料列群組中包含的資料列數目，以及資料列群組的大小。  
+ 使用 **sys.pdw_nodes_column_store_row_groups** 來判斷資料列群組中包含的資料列數目，以及資料列群組的大小。  
   
  當資料列群組中已刪除的資料列數增加到佔總列數的相當大比例時，資料表的效率就會降低。 重建資料行存放區索引可縮小資料表，減少讀取資料表所需的磁碟 I/O。 若要重建資料行存放區索引，請使用**ALTER index**語句的**rebuild**選項。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "88646022"
  需要 **VIEW SERVER STATE** 權限。  
   
 ## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會將 **sys. pdw_nodes_column_store_row_groups** 資料表聯結至其他系統資料表，以傳回特定資料表的相關資訊。 導出的 `PercentFull` 資料行是資料列群組的效率預估。 若要尋找單一資料表上的資訊，請移除 WHERE 子句前面的批註連字號，並提供資料表名稱。  
+ 下列範例會將 **sys.pdw_nodes_column_store_row_groups** 資料表聯結至其他系統資料表，以傳回特定資料表的相關資訊。 導出的 `PercentFull` 資料行是資料列群組的效率預估。 若要尋找單一資料表上的資訊，請移除 WHERE 子句前面的批註連字號，並提供資料表名稱。  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -107,13 +107,11 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
->[!TIP]
-> 為了改善 Synapse SQL 中的效能，請考慮在永久使用者資料表上使用 **sys. pdw_permanent_table_mappings** 而不是 **sys. pdw_table_mappings** 。 如需詳細資訊，請參閱 **[sys. pdw_permanent_table_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** 。
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [&#40;Transact-sql&#41;建立資料行存放區索引 ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

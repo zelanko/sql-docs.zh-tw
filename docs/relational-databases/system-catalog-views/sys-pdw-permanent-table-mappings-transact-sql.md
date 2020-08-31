@@ -1,5 +1,5 @@
 ---
-title: 'sys. pdw_permanent_table_mappings (Transact-sql) '
+title: 'sys.pdw_permanent_table_mappings (Transact-sql) '
 ms.custom: ''
 ms.date: 07/24/2020
 ms.prod: sql
@@ -11,20 +11,20 @@ dev_langs:
 author: mstehrani
 ms.author: emtehran
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 12261e8e38e75edf7dd596ca2b3499100cfff5ad
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: c48cb981549d47b24152772cef9278de6557612f
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646838"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062257"
 ---
-# <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys. pdw_permanent_table_mappings (Transact-sql) 
+# <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys.pdw_permanent_table_mappings (Transact-sql) 
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  **Object_id**將永久的使用者資料表系結至內建物件名稱。 建議您在 **sys. pdw_table_mappings**上提供更佳的效能。  
+  **Object_id**將永久的使用者資料表系結至內建物件名稱。  
   
 > [!NOTE]
-> **sys. pdw_permanent_table_mappings** 保存永久資料表的對應，且不包含臨時表對應。
+> **sys.pdw_permanent_table_mappings** 保存永久資料表的對應，且不包含暫存或外部資料表對應。
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -33,6 +33,6 @@ ms.locfileid: "88646838"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys. pdw_index_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)  
+ [sys.pdw_index_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)  
   
   
