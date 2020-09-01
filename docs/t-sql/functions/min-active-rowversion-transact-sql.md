@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f895b4bcd743cec45431ad55131c1118ace33b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7a1c89e9c841e196079e09eecb4e5f359a7f5d32
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467958"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093407"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88467958"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-MIN_ACTIVE_ROWVERSION  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
