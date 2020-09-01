@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66ddc41fab7366d6419e1906a5bff2ce1b2d12
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882701"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042371"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
 
@@ -654,7 +654,7 @@ sudo systemctl start mssql-server
 - [在 Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
-- [在 Docker 上執行](quickstart-install-connect-ubuntu.md)
+- [在 Docker 上執行](quickstart-install-connect-docker.md)
 - [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [執行與連線 - 雲端](quickstart-install-connect-clouds.md)
 

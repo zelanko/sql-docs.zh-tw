@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892052"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042496"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上設定 PolyBase 相應放大群組
 
@@ -34,7 +34,7 @@ ms.locfileid: "85892052"
   
 1. 在 N 部電腦上安裝同一個含有 PolyBase 的 SQL Server 版本。
   
-2. 選取一個 SQL Server 執行個體做為前端節點。 只可在執行 SQL Server Enterprise 的執行個體中指定前端節點。
+2. 選取一個 SQL Server 執行個體做為前端節點。 
   
 3. 使用 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)，加入其餘的 SQL Server 執行個體作為計算節點。
 
