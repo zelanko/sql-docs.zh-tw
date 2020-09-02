@@ -130,6 +130,14 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: 安全性
           href: big-data-cluster/concept-security.md
+        - name: 私人叢集
+          items:
+            - name: 部署
+              href: big-data-cluster/private-deploy.md
+            - name: 管理
+              href: big-data-cluster/private-manage.md
+            - name: 限制流量
+              href: big-data-cluster/private-restrict-egress-traffic.md
     - name: 操作指南
       items:
         - name: 設定
