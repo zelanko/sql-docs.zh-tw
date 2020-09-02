@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_resource_governor_external_resource_pools (Transact-sql) '
-title: sys. dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
+description: 'sys.dm_resource_governor_external_resource_pools (Transact-sql) '
+title: sys.dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
 ms.prod: sql
@@ -21,14 +21,14 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32df69f207de0e1c604c10d58f4d28b4a3a34aa5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99a85cb9c329752e35f720ec97dabbb417498d3d
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454848"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283629"
 ---
-# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql) 
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-sql) 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 傳回目前外部資源集區狀態的相關資訊、資源集區的目前設定，以及資源集區統計資料。 
@@ -55,9 +55,6 @@ ms.locfileid: "88454848"
 ## <a name="permissions"></a>權限
 
 需要 `VIEW SERVER STATE` 權限。
-
-> [!NOTE]
-> 適用于 Linux 的 SQL Machine Learning Services 2019 不支援設定 CPU 親和性的能力。
 
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_dms_workers (Transact-sql) '
-title: sys. dm_exec_dms_workers (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_dms_workers (Transact-sql) '
+title: sys.dm_exec_dms_workers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,15 +23,15 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1dd32f2bd3a810e01dc7bf50347b0a23a884796
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a47f820de618400e3772f3816ebe245682120a0f
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398614"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283650"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-sql) 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-sql) 
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存所有工作者完成 DMS 步驟的相關資訊。  
   
@@ -39,10 +39,10 @@ ms.locfileid: "88398614"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|查詢此 DMS 背景工作角色所屬的。 request_id、step_index 和 dms_step_index 會形成此視圖的索引鍵。||  
-|step_index|`int`|此 DMS 背景工作角色所屬的查詢步驟。|請參閱 sys. dm_exec_distributed_request_steps 中的步驟索引 [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱 [sys. dm_exec_dms_workers (transact-sql) ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|正在執行背景工作的節點。|請參閱 [sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|execution_id|`nvarchar(32)`|查詢此 DMS 背景工作角色是否為此視圖的一部分 of.request_id、step_index 和 dms_step_index 形成此視圖的索引鍵。||  
+|step_index|`int`|此 DMS 背景工作角色所屬的查詢步驟。|請參閱 [sys.dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)中的步驟索引。|  
+|dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱 [sys.dm_exec_dms_workers (transact-sql) ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|正在執行背景工作的節點。|請參閱 [sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|`int`|||  
 |type|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|此步驟的狀態|「擱置」、「執行中」、「完成」、「失敗」、「UndoFailed」、「PendingCancel」、「已取消」、「復原」、「已中止」|  

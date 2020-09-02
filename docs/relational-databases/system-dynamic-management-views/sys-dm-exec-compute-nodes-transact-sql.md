@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_compute_nodes (Transact-sql) '
-title: sys. dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_compute_nodes (Transact-sql) '
+title: sys.dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e13b8a3a6514548b05b3663a4a785128e23c80d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62591df1ce4a2a048c544b219f7efcc3fe18aa61
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454900"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283653"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-sql) 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-sql) 
+
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存與 PolyBase 資料管理搭配使用之節點的相關資訊。 它會針對每個節點列出一個資料列。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "88454900"
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此視圖的索引鍵。|不論類型為何，都是在相應放大叢集中唯一的。|  
 |type|**nvarchar(32)**|節點的類型。|「計算」、「標頭」|  
-|NAME|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
+|名稱|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|IP 位址範圍|  
   
 ## <a name="see-also"></a>另請參閱  

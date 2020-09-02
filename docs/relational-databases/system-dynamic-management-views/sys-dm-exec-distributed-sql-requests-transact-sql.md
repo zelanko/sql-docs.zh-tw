@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_distributed_sql_requests (Transact-sql) '
-title: sys. dm_exec_distributed_sql_requests (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_distributed_sql_requests (Transact-sql) '
+title: sys.dm_exec_distributed_sql_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,26 +23,26 @@ ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdda8279e49c5e1884cbd539e1a3158431e53b41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df6b6f743caa7ed04b1a55868988ffe460f31c27
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398844"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283610"
 ---
-# <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys. dm_exec_distributed_sql_requests (Transact-sql) 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-sql) 
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   保存所有 SQL 查詢散發的相關資訊，作為查詢中 SQL 步驟的一部分。  這個視圖會顯示最後一個1000要求的資料;使用中的要求一律會有此 view 中的資料。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|execution_id 並 step_index 組成此視圖的金鑰。 與要求相關聯的唯一數值識別碼。|請參閱[sys. dm_exec_requests 中 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)的識別碼|  
-|step_index|**int**|此散發所屬之查詢步驟的索引。|請參閱 [sys. dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)中的 step_index。|  
-|compute_node_id|**int**|此步驟所表示之作業的類型。|請參閱 [sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的 compute_node_id。|  
+|execution_id|**nvarchar(32)**|execution_id 並 step_index 組成此視圖的金鑰。 與要求相關聯的唯一數值識別碼。|請參閱[sys.dm_exec_requests 中 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)的識別碼|  
+|step_index|**int**|此散發所屬之查詢步驟的索引。|請參閱 [sys.dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)中的 step_index。|  
+|compute_node_id|**int**|此步驟所表示之作業的類型。|請參閱 [sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的 compute_node_id。|  
 |distribution_id|**int**|步驟執行所在的位置。|針對在節點範圍（而非散發範圍）執行的要求，設定為-1。|  
 |status|**nvarchar(32)**|此步驟的狀態|作用中、已取消、已完成、失敗、已排入佇列|  
-|error_id|**Nvarchar (36) **|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）|請參閱 [sys. dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的識別碼，如果沒有發生錯誤則為 Null。|  
+|error_id|**Nvarchar (36) **|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）|請參閱 [sys.dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的識別碼，如果沒有發生錯誤則為 Null。|  
 |start_time|**datetime**|步驟開始執行的時間|小於或等於目前的時間，而且大於或等於這個步驟所屬查詢的 end_compile_time。|  
 |end_time|**datetime**|此步驟完成執行、已取消或失敗的時間。|小於或等於目前的時間，大於或等於 start_time，請將目前執行中或已排入佇列的步驟設定為 Null。|  
 |total_elapsed_time|**int**|查詢步驟執行的總時間量（以毫秒為單位）|介於0和 end_time 與 start_time 之間的差異。 0表示已排入佇列的步驟。|  

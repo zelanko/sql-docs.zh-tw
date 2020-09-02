@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_compute_node_status (Transact-sql) '
-title: sys. dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_compute_node_status (Transact-sql) '
+title: sys.dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -22,15 +22,15 @@ ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 182a6fff7ff2cf0af1b009a3c5acc79e00c8365a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89ee3b4da2b3078346b4980f2293621db6ff67b0
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447627"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283669"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-sql) 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-sql) 
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存所有 PolyBase 節點的效能和狀態的其他相關資訊。 列出每個節點一個資料列。  
   

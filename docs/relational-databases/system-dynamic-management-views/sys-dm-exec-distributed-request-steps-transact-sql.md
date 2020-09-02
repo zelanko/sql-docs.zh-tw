@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_distributed_request_steps (Transact-sql) '
-title: sys. dm_exec_distributed_request_steps (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_distributed_request_steps (Transact-sql) '
+title: sys.dm_exec_distributed_request_steps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,27 +23,27 @@ ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64e2e63c3b2bd7696ec9915b21e726a82bce7b07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91cd131d3ebc226a8865710ef27161f55ac2ea1f
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447535"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283711"
 ---
-# <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>sys. dm_exec_distributed_request_steps (Transact-sql) 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-sql) 
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存所有組成指定 PolyBase 要求或查詢之步驟的相關資訊。 它會針對每個查詢步驟列出一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**int**|execution_id 並 step_index 組成此視圖的金鑰。 與要求相關聯的唯一數值識別碼。|請參閱 [sys. dm_exec_requests 中 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)的識別碼。|  
+|execution_id|**int**|execution_id 並 step_index 組成此視圖的金鑰。 與要求相關聯的唯一數值識別碼。|請參閱 [sys.dm_exec_requests 中 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)的識別碼。|  
 |step_index|**int**|此步驟在提出要求的步驟順序中的位置。|0到 (n-1) 用於具有 n 個步驟的要求。|  
 |operation_type|**nvarchar(128)**|此步驟所表示之作業的類型。|' MoveOperation '、' OnOperation '、' RandomIDOperation '、' RemoteOperation '、' ReturnOperation '、' ShuffleMoveOperation '、' TempTablePropertiesOperation '、' DropDiagnosticsNotifyOperation '、' HadoopShuffleOperation '、' HadoopBroadCastOperation '、' HadoopRoundRobinOperation '|  
 |distribution_type|**nvarchar(32)**|步驟執行所在的位置。|' AllComputeNodes '、' AllDistributions '、' ComputeNode '、' 散發 '、' >allnodes '、' SubsetNodes '、' SubsetDistributions '、' 未指定 '。|  
 |location_type|**nvarchar(32)**|步驟執行所在的位置。|「計算」、「標頭」或「DMS」。 所有資料移動步驟都會顯示「DMS」。|  
 |status|**nvarchar(32)**|此步驟的狀態|「擱置」、「執行中」、「完成」、「失敗」、「UndoFailed」、「PendingCancel」、「已取消」、「復原」、「已中止」|  
-|error_id|**Nvarchar (36) **|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）|請參閱 [sys. dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的識別碼，如果沒有發生錯誤則為 Null。|  
+|error_id|**Nvarchar (36) **|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）|請參閱 [sys.dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的識別碼，如果沒有發生錯誤則為 Null。|  
 |start_time|**datetime**|步驟開始執行的時間|小於或等於目前的時間，而且大於或等於這個步驟所屬查詢的 end_compile_time。|  
 |end_time|**datetime**|此步驟完成執行、已取消或失敗的時間。|小於或等於目前的時間，大於或等於 start_time，請將目前執行中或已排入佇列的步驟設定為 Null。|  
 |total_elapsed_time|**int**|查詢步驟執行的總時間量（以毫秒為單位）|介於0和 end_time 與 start_time 之間的差異。 0表示已排入佇列的步驟。|  
