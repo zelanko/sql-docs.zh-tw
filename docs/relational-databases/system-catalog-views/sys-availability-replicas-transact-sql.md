@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486497"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385969"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486497"
 |**group_id**|**uniqueidentifier**|複本所屬之可用性群組的唯一識別碼。|  
 |**replica_metadata_id**|**int**|Database Engine 中可用性複本之本機中繼資料物件的識別碼。|  
 |**replica_server_name**|**nvarchar(256)**|裝載這個複本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的伺服器名稱，如果是非預設執行個體，則是它的執行個體名稱。|  
-|**owner_sid**|**Varbinary (85) **|針對這個可用性複本的外部擁有者，註冊給這個伺服器執行個體的安全性識別碼 (SID)。<br /><br /> 非本機可用性複本為 NULL。|  
+|**owner_sid**|**varbinary(85)**|針對這個可用性複本的外部擁有者，註冊給這個伺服器執行個體的安全性識別碼 (SID)。<br /><br /> 非本機可用性複本為 NULL。|  
 |**endpoint_url**|**nvarchar(128)**|使用者指定之資料庫鏡像端點的字串表示法，該端點是由主要與次要複本之間的資料同步處理連接所使用。 如需這些端點 URL 語法的相關資訊，請參閱[在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。<br /><br /> NULL = 無法聯繫 WSFC 容錯移轉叢集。<br /><br /> 若要變更這個端點，請使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 ENDPOINT_URL 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**availability_mode**|**tinyint**|複本的可用性模式，下列其中一項：<br /><br /> 0 &#124; 非同步認可。 主要複本可認可交易，而不需要等候次要複本將記錄寫入磁碟中。<br /><br /> 1 &#124; 同步認可。 主要複本會等候認可給定交易，直到次要複本將交易寫入磁碟為止。<br /><br />4 &#124; 僅限設定。 主要複本會以同步方式將可用性群組設定中繼資料傳送至複本。 使用者資料不會傳送至複本。 可在 SQL Server 2017 CU1 和更新版本中使用。<br /><br /> 如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。|  
 |**availability_mode_desc**|**nvarchar(60)**|**可用性 \_ 模式**的描述，下列其中一個：<br /><br /> 非同步 \_ 認可<br /><br /> 同步 \_ 認可<br /><br /> \_僅限設定<br /><br /> 若要變更可用性複本的可用性模式，請使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)語句的 AVAILABILITY_MODE 選項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br/><br>您無法將複本的可用性模式變更為 [ \_ 僅限設定]。 您無法將 \_ 僅限設定複本變更為次要或主要複本。 |  
@@ -57,6 +57,8 @@ ms.locfileid: "88486497"
 |**modify_date**|**datetime**|上次修改複本的日期。<br /><br /> NULL = 複本不在這個伺服器執行個體上。|  
 |**backup_priority**|**int**|表示使用者為了在這個複本上執行備份所指定的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。<br /><br /> 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
 |**read_only_routing_url**|**nvarchar(256)**|唯讀可用性複本的連接端點 (URL)。 如需詳細資訊，請參閱本主題稍後的 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md))。|  
+|**seeding_mode**|**tinyint**|值為下列其中之一： </br></br> 0：手動 </br></br> 1：自動|
+|**seeding_mode_desc**|**nvarchar(60)**|說明植入模式。 </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## <a name="security"></a>安全性  
   
