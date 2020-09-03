@@ -84,10 +84,18 @@
           href: extensibility.md
         - name: 延伸模組製作
           href: extension-authoring.md
-        - name: 建立延伸模組
-          href: tutorial-create-extension.md
         - name: 擴充性 API
           href: extensibility-apis.md
+        - name: 金鑰對應延伸模組
+          href: extensions/keymap-extension.md
+        - name: 儀表板延伸模組
+          href: extensions/dashboard-extension.md
+        - name: Notebook 延伸模組
+          href: extensions/notebook-extension.md
+        - name: Jupyter Book 延伸模組
+          href: extensions/jupyter-book-extension.md
+        - name: 精靈延伸模組
+          href: extensions/wizard-extension.md
     - name: 整合式終端機 (PowerShell、Bash)
       href: integrated-terminal.md
     - name: 鍵盤快速鍵

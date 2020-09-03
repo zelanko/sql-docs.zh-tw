@@ -6222,6 +6222,8 @@
               items:
                 - name: 非對稱金鑰加密強度
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: 從不同裝置上的資料庫檔案備份檔案
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: 檢查磁碟輸入及輸出子系統的 I/O 延遲問題
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: 檢查磁碟輸入輸出子系統的讀取重試問題
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: 正確的親和性遮罩與親和性輸入/輸出遮罩重疊
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: 資料庫復原模式
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: 預設追蹤記錄檔已停用
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: 偵測失敗的輸入與輸出要求
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: 將 AUTO_SHRINK 資料庫選項設定為 OFF
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: 設定使用者資料庫的定序以符合 master 與 model 資料庫
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: 設定平行處理原則的最大程度選項來取得最佳效能
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: 將 PAGE_VERIFY 資料庫選項設定為 CHECKSUM
