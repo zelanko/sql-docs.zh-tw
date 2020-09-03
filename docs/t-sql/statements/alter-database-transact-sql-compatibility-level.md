@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d470d95b2d6999d4f6825dce63a1a9c5b991d20a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1035d6b4cd6eedd12c2c9a193657fd8741488f2a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426930"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901135"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -82,7 +82,12 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } 是�
 - 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。
 - 如果使用者資料庫在升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100，這是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支援的最低相容性層級)。
 - tempdb、模型、msdb 和資源資料庫的相容性層級，會針對指定的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本設定為預設相容性層級。 
-- master 系統資料庫會繼續保有升級前的相容性層級。
+- master 系統資料庫會繼續保有升級前的相容性層級。 這將不會影響使用者資料庫行為。 
+
+針對預先存在且在較低相容性層級執行的資料庫，只要應用程式不需利用只在較高資料庫相容性層級才提供的增強功能，其就是維護先前資料庫相容性層級的有效方法。 若要進行新的開發工作，或是現有的應用程式需要使用新功能 (例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)以及某些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)])，請規劃將資料庫相容性層級升級至可用的最新層級。 如需詳細資訊，請參閱[相容性層級和資料庫引擎升級](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades)。     
+
+> [!NOTE]
+> 如果沒有使用者物件與相依性，通常就能安全地升級至預設的相容性層級。 如需詳細資訊，請參閱[建議 - master 資料庫](../../relational-databases/databases/master-database.md#recommendations)。
 
 使用 `ALTER DATABASE` 變更資料庫的相容性層級。 資料庫的新相容性層級設定會在兩個情況下生效：發出 `USE <database>` 命令時，或使用該資料庫作為預設資料庫內容來處理新登入時。
 若要檢視資料庫目前的相容性層級，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 `compatibility_level` 資料行。

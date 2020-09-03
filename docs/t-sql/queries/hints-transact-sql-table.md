@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445358"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062327"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445358"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 我們建議您在資料表提示之間使用逗號。  
   
 > [!IMPORTANT]  
->  用空格而不用逗號來分隔提示是一項已被取代的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> 用空格而不用逗號來分隔提示是一項已被取代的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 指定當查詢最佳化工具處理查詢時，不展開任何索引檢視表來存取基礎資料表。 查詢最佳化工具在處理檢視表時，會將它視為具有叢集索引的資料表。 NOEXPAND 只適用於索引檢視表。 如需詳細資訊，請參閱[使用 NOEXPAND](#using-noexpand)。  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-INDEX() 語法會指定要由查詢最佳化工具在其處理陳述式時使用之一或多個索引的名稱或識別碼。 替代的 INDEX = 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
+INDEX  **(** _<index\_value>_ [ **,** ... _n_ ] ) | INDEX =  ( _<index\_value>_ **)**  
+INDEX() 語法會指定要由查詢最佳化工具在其處理陳述式時使用之一或多個索引的名稱或識別碼。 替代的 `INDEX =` 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
   
-如果有叢集索引存在，INDEX(0) 會強制執行叢集索引掃描，INDEX(1) 會強制執行叢集索引掃描或搜尋。 如果沒有叢集索引，INDEX(0) 會強制執行資料表掃描，INDEX(1) 會解譯為一則錯誤。  
+如果叢集索引存在，`INDEX(0)` 會強制執行叢集索引掃描，而 `INDEX(1)` 會強制執行叢集索引掃描或搜尋。 如果沒有叢集索引存在，`INDEX(0)` 會強制執行資料表掃描，並將 `INDEX(1)` 解譯為錯誤。  
   
  如果在單一提示清單中使用多個索引，便會忽略重複項目，且會利用其餘列出的索引來擷取資料表的資料列。 索引提示中的索引順序非常重要。 另外，多個索引提示也會強制執行索引的 AND 作業，而且查詢最佳化工具會在所存取的每個索引上盡量套用多一點的條件。 如果提示索引的集合不含此查詢所參考的所有資料行，則當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 擷取所有索引資料行之後，將會執行提取作業來擷取其餘的資料行。  
   
@@ -181,7 +180,7 @@ KEEPDEFAULTS
   
 如需在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式中使用此提示的範例，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... _n_ ] **))** ]  
 指定查詢最佳化工具只使用索引搜尋作業做為資料表或檢視表資料的存取路徑。 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ FORCESCAN **適用於**：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-
 FORCESCAN 提示具有下列限制：  
 -   您不可為 INSERT、UPDATE 或 DELETE 陳述式的目標資料表指定此提示。  
 -   此提示無法搭配多個索引提示使用。  
--   此提示會讓最佳化工具無法使用資料表的任何空間或 XML 索引。  
+-   此提示會讓查詢最佳化工具無法將資料表上的任何空間或 XML 索引納入考量。  
 -   您無法指定遠端資料來源的提示。  
 -   此提示不可與 FORCESCAN 提示同時指定。  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
-指定要用於鑲嵌幾何或地理物件的資料格數上限。 *number* 是介於 1 和 8192 之間的值。  
+指定要用於鑲嵌幾何或地理物件的資料格數上限。 *<integer\_value>* 是介於 1 到 8192 之間的值。  
   
 此選項允許藉由調整主要和次要篩選執行時間之間的取捨，微調查詢執行時間。 較大的數字會降低次要篩選執行時間，但增加主要篩選執行時間，較小的數字會減少主要篩選執行時間，但增加次要篩選器執行時間。 對於較密集的空間資料，較高的數字應該會藉由使用主要篩選提供更好的近似值，並減少次要篩選執行時間，產生更快速的執行時間。 對於較疏鬆的資料，較低的數目會減少主要篩選執行時間。  
   
@@ -390,12 +389,12 @@ SELECT StartDate, ComponentID FROM Production.BillOfMaterials
 GO  
 ```  
   
-如果 SET 選項沒有已篩選之索引的必要值，查詢最佳化工具將不會考量索引提示。 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
+如果 SET 選項不具已篩選之索引的必要值，查詢最佳化工具將不會考慮索引提示。 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
-NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢集索引的檢視表。 如果查詢包含同時在索引檢視表和基底資料表中的資料行參考，而且查詢最佳化工具判斷使用索引檢視表能夠提供最好的查詢執行方法，則查詢最佳化工具會使用檢視表的索引。 此功能稱為*索引檢視表比對*。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前，只有特定版本的 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 才支援由查詢最佳化工具自動使用索引檢視表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢集索引的檢視表。 如果查詢包含同時在索引檢視表和基底資料表中的資料行參考，而且查詢最佳化工具判斷使用索引檢視表能夠提供最好的查詢執行方法，則查詢最佳化工具會使用檢視表的索引。 此功能稱為*索引檢視表比對*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，只有特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援由查詢最佳化工具自動使用索引檢視表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱 [SQL Server 2016 版本所支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)、[SQL Server 2017 版本所支援的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)與 [SQL Server 2019 版本所支援的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
-不過，若要使最佳化工具考慮比對索引檢視表，或使用 NOEXPAND 提示所參考的索引檢視表，下列 SET 選項必須設為 ON。  
+不過，若要讓查詢最佳化工具考慮比對索引檢視表，或使用由 NOEXPAND 提示所參考的索引檢視表，就必須將下列 SET 選項設為 ON。  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援在不指定 NOEXPAND 提示的情況下，自動使用索引檢視表。
@@ -411,13 +410,13 @@ NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢�
 
 另外，NUMERIC_ROUNDABORT 選項必須設成 OFF。  
   
- 若要強制最佳化工具使用索引檢視表的索引，請指定 NOEXPAND 選項。 僅當查詢中指定了檢視的名稱時，才可使用此提示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供提示強制在未在 FROM 子句直接指定檢視名稱的查詢中使用特定的索引檢視，但即使查詢中未直接參考索引檢視，查詢最佳化工具仍會使用索引檢視。 SQL Server 只有在使用 NOEXPAND 資料表提示時，會自動建立索引檢視表的相關統計資料。 省略此提示可能會導致遺漏統計資料的相關執行計畫警告，該警告無法透過手動建立統計資料來解決。 在查詢最佳化期間，若查詢直接參考檢視表且使用了 NOEXPAND 提示，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用自動或手動建立的檢視表統計資料。    
+ 若要強制查詢最佳化工具使用索引檢視表的索引，請指定 NOEXPAND 選項。 僅當查詢中指定了檢視的名稱時，才可使用此提示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供提示以強制於未在 FROM 子句中直接為檢視命名的查詢中使用特定的索引檢視表，但是，即使查詢中未直接參考索引檢視表，查詢最佳化工具仍會考慮使用索引檢視表。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 只有在使用 NOEXPAND 資料表提示時，才會自動建立索引檢視表的相關統計資料。 省略此提示可能會導致遺漏統計資料的相關執行計畫警告，該警告無法透過手動建立統計資料來解決。 在查詢最佳化期間，若查詢會直接參考檢視並使用了 NOEXPAND 提示，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 將會使用自動或手動建立的檢視統計資料。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>將資料表提示當做查詢提示使用  
  也可以使用 OPTION (TABLE HINT) 子句將*資料表提示*指定為查詢提示。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。 如果是特定的查詢，只將這些提示指定為資料表提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="permissions"></a>權限  
- KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要資料表的 ALTER 權限。  
+ KEEPIDENTITY、IGNORE_CONSTRAINTS 與 IGNORE_TRIGGERS 提示需要資料表的 `ALTER` 權限。  
   
 ## <a name="examples"></a>範例  
   

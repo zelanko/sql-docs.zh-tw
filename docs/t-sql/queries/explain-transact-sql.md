@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b115c4249a0eded065ed95d45a7892ec1595911
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467538"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858106"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查口詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
+  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查口詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲。
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  將執行 EXPLAIN 的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式。 *SQL_statement* 可以是以下任何一個命令：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
 
-*WITH_RECOMMENDATIONS* (預覽)
+*WITH_RECOMMENDATIONS* 
 
 傳回含 SQL 陳述式效能最佳化建議的查詢計劃。  
   

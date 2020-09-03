@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425260"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042391"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
 
@@ -52,7 +52,7 @@ ms.locfileid: "88425260"
  指定要使用 HTTP 或 HTTPS 連線到儲存體帳戶。  
   
  **使用本機開發人員帳戶**  
- 指定是否在本機電腦上使用儲存體模擬器。  
+ 指定是否在本機電腦上使用 Azure 儲存體模擬器。  
   
  **Blob 容器名稱**  
  從指定儲存體帳戶的可用儲存體容器清單中選取。  

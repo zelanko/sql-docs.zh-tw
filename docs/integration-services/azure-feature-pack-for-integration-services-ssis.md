@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb40e52398faac830e740f8aa57a3412559149cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe5c1f52cb17b721efb1d3083a0679040d858343
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457863"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942321"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -232,4 +232,4 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 #### <a name="bugfixes"></a>Bug 修正
 
 1. 在某些情況下，Data Lake Storage Gen2 的測試連線會發生問題，並附帶錯誤訊息「嘗試以和陣列不相容的類型存取元素」
-1. 回復 Azure 儲存體模擬器的支援
+1. 恢復對 Azure 儲存體模擬器的支援

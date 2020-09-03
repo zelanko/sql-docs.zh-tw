@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778547"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900956"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -753,13 +753,13 @@ ON | **OFF** [ FORCED ] | CLEAR [ ALL ]
 啟用查詢存放區。
 
 OFF      
-停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 基本上會立即將查詢存放區關閉。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 引進了 FORCED。
+停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 FORCED 適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 與更新的組建。
 
 > [!NOTE]  
 > 您無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區停用查詢存放區。 執行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 將會傳回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
 CLEAR     
-移除查詢存放區的內容。
+從查詢存放區移除查詢相關的資料。 ALL 是選擇性的。 ALL 會從查詢存放區移除查詢相關的資料與中繼資料。
 
 OPERATION_MODE {READ_ONLY |READ_WRITE}     
 描述查詢存放區的作業模式。

@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a625b369deeeae69475c94350b30f68b4cc8e5cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244a70115f293b3723359cbb3966db37d240c186
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426710"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042474"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -148,7 +148,9 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-程式庫會新增至使用者的資料庫範圍。 程式庫名稱在特定使用者或擁有者的內容中必須是唯一的。 例如，兩個使用者 **RUser1** 和 **RUser2** 都可以各自且分別上傳 R 程式庫 `ggplot2`。 不過，如果 **RUser1** 想要上傳 `ggplot2` 的新版本，則第二個執行個體必須有不同名稱，否則會取代現有的程式庫。 
+上傳至執行個體的程式庫可以是公用或私用程式庫。 如果程式庫是由 `dbo` 的成員所建立，該程式庫就是公用程式庫，而可以與所有使用者共用。 否則，程式庫就只是該使用者的私用程式庫。
+
+程式庫名稱在特定使用者或擁有者的內容中必須是唯一的。 例如，兩個使用者 **RUser1** 和 **RUser2** 都可以各自且分別上傳 R 程式庫 `ggplot2`。 不過，如果 **RUser1** 想要上傳 `ggplot2` 的新版本，則第二個執行個體必須有不同名稱，否則會取代現有的程式庫。
 
 不可任意指派程式庫名稱；程式庫名稱應該與在外部指令碼載入程式庫時所需的名稱相同。
 
@@ -228,6 +230,8 @@ WITH ( LANGUAGE = <language> )
 `CREATE EXTERNAL LIBRARY` 陳述式會將程式庫位元上傳至資料庫。 當使用者使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)來執行外部指令碼並呼叫套件或程式庫時，就會安裝程式庫。
 
 上傳至執行個體的程式庫可以是公用或私用程式庫。 如果程式庫是由 `dbo` 的成員所建立，該程式庫就是公用程式庫，而可以與所有使用者共用。 否則，程式庫就只是該使用者的私用程式庫。
+
+SQL 執行個體中已預先安裝一些套件 (稱為「系統套件」)。 使用者無法新增、更新或移除系統套件。
 
 ## <a name="permissions"></a>權限
 

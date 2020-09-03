@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479817"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042451"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 ## <a name="result-sets"></a>結果集
 
-這是所有資料表的結果集。
+這是所有資料表的結果集。  針對複寫的 Synapse 資料表建立快取之前，DBCC 結果會反映每個分佈中底層循環配置資源資料表的總大小。  建立快取之後，結果會反映循環配置資源資料表與快取的總大小。   
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |index_space|BIGINT|索引使用的空間 (KB)。||  
 |unused_space|BIGINT|保留未使用的空間 (KB)。||  
 |pdw_node_id|int|用於報告空間使用量的計算節點。||  
-|distribution_id|int|用於報告空間使用量的分佈。|複寫資料表的值為 -1。|  
+|distribution_id|int|用於報告空間使用量的分佈。|針對平行處理資料倉儲，其適用於已複寫資料表的值為 -1。|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本語法  

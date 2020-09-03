@@ -2,7 +2,7 @@
 description: DROP EXTERNAL LIBRARY (Transact-SQL)
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3576afa1a3abe1454088178562366a69f807dcb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 219bb12f51542b178eabd0ae94ffe8c625f3072c
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88415914"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042514"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -74,6 +74,8 @@ DROP EXTERNAL LIBRARY library_name
 ## <a name="remarks"></a>備註
 
 不同於 SQL Server 中的其他 `DROP` 陳述式，此陳述式支援指定選擇性授權子句。 這可讓 **db_owner** 角色中的 **dbo** 或使用者卸除資料庫中由一般使用者上傳的套件資料庫。
+
+SQL 執行個體中已預先安裝一些套件 (稱為「系統套件」)。 使用者無法新增、更新或移除系統套件。
 
 ## <a name="examples"></a>範例
 

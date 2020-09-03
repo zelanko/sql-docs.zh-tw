@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482548"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991849"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ ms.locfileid: "88482548"
 * **制式**的範圍將由一個物件所擁有；範圍中的所有八個頁面只能被擁有的物件所使用。
 * **混合**的範圍最多可被八個物件所共用。 範圍中的 8 個分頁都可以由不同的物件所擁有。
 
-最高到 (並包含) [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會將整個範圍配置給包含少量資料的資料表。 新的資料表或索引，一般會從混合的範圍中配置分頁。 當資料表或索引成長至擁有八個分頁之後，接著會為後續配置切換成使用制式的範圍。 如果現有資料表有足夠的資料列可在索引中產生八個分頁，若對該資料表建立索引，索引的所有配置都將採用制式的範圍。 不過，從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，資料庫中所有配置的預設值是統一範圍。
+![統一與混合範圍](../relational-databases/media/extents.gif)
 
-![Extents](../relational-databases/media/extents.gif)
+最高到 (並包含) [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會將整個範圍配置給包含少量資料的資料表。 新的資料表或索引，一般會從混合的範圍中配置分頁。 當資料表或索引成長至擁有八個分頁之後，接著會為後續配置切換成使用制式的範圍。 如果現有資料表有足夠的資料列可在索引中產生八個分頁，若對該資料表建立索引，索引的所有配置都將採用制式的範圍。 
+
+從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，使用者資料庫與 tempdb 中大部分配置的預設值都會使用統一範圍，但屬於 [IAM 鏈結](#IAM)前八個分頁的配置除外。 針對 master、msdb 與 model 資料庫的配置仍會保留先前的行為。 
 
 > [!NOTE]
 > 最高到 (並包含) [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，追蹤旗標 1118 可以用來將預設配置變更為一律使用統一範圍。 如需此追蹤旗標的詳細資訊，請參閱 [DBCC TRACEON - 追蹤旗標](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，會針對 TempDB 自動啟用 TF 1118 所提供的功能。 對於使用者資料庫，此行為由 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 選項 (預設值設定為 OFF) 所控制，而且追蹤旗標 1118 沒有作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，會針對 tempdb 自動啟用 TF 1118 所提供的功能。 對於使用者資料庫，此行為由 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 選項 (預設值設定為 OFF) 所控制，而且追蹤旗標 1118 沒有作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+
+從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，`sys.dm_db_database_page_allocations` 系統函數可以報告資料庫、資料表、索引與資料分割的分頁配置資訊。
+
+> [!IMPORTANT]
+> `sys.dm_db_database_page_allocations` 系統函數並未記載，而且可能會變更。 我們無法確保其相容性。 
+
+從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，提供 [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) 系統函數，此系統函數可傳回資料庫中分頁的相關資訊。 此函數會傳回一個包含分頁中標頭資訊的資料列，包含 object_id、index_id 與 partition_id。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理範圍配置與可用空間 
 
@@ -141,7 +150,7 @@ ms.locfileid: "88482548"
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>管理由物件所使用的空間 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> 管理物件所使用的空間 
 
 [索引配置對應 (IAM)] 頁面會對應配置單位所使用資料庫檔案 4 GB 部分中的範圍。 配置單位為下列三種類型中的一種：
 
@@ -149,10 +158,10 @@ ms.locfileid: "88482548"
     保存堆積或索引的資料分割。
 
 - LOB_DATA   
-   保存大型物件 (LOB) 資料類型，例如 xml、varbinary(max) 與 varchar(max)。
+   保存大型物件 (LOB) 資料類型，例如 XML、VARBINARY(max) 與 VARCHAR(max)。
 
 - ROW_OVERFLOW_DATA   
-   保存儲存於 varchar、nvarchar、varbinary 或 sql_variant 資料行中，超過 8,060 個位元組資料列大小限制的可變長度資料。 
+   保存儲存於 VARCHAR、NVARCHAR、VARBINARY 或 SQL_VARIANT 資料行中，超過 8,060 個位元組資料列大小限制的可變長度資料。 
 
 堆積或索引的每個資料分割都會至少包含一個 IN_ROW_DATA 配置單位。 視堆積或索引結構描述而定，資料分割也可能會包含 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位。
 
@@ -160,10 +169,10 @@ IAM 頁面涵蓋檔案中的 4 GB 範圍，和 GAM 和 SGAM 頁面的涵蓋範�
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置是隨機的。 系統檢視 (sys.system_internals_allocation_units) 會指向配置單位的第一個 IAM 頁面。 該配置單位的所有 IAM 頁面都會連成一條鏈結。
+IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置是隨機的。 `sys.system_internals_allocation_units` 系統檢視指向配置單位的第一個 IAM 分頁。 該配置單位的所有 IAM 分頁都會連結成一條 IAM 鏈結。
 
 > [!IMPORTANT]
-> `sys.system_internals_allocation_units` 系統檢視僅用於內部，且往後可能會變更。 我們無法確保其相容性。 在 Azure SQL Database 中無法取得此檢視。 
+> `sys.system_internals_allocation_units` 系統檢視僅用於內部，且往後可能會變更。 我們無法確保其相容性。 此檢視在 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]中無法使用。 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ DCM 分頁與 BCM 分頁之間的間隔與 GAM 和 SGAM 分頁的間隔一樣，
 ## <a name="see-also"></a>另請參閱
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [堆積 &#40;無叢集索引的資料表&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [讀取分頁](../relational-databases/reading-pages.md)   
 [寫入分頁](../relational-databases/writing-pages.md)   

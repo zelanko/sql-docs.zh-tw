@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467330"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042381"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -450,9 +450,9 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定資料庫
 |250 GB|N/A|√ (D)|√ (D)|√|√|
 |300 GB|N/A|√|√|√|√|
 |400 GB|N/A|√|√|√|√|
-|500 GB|N/A|√|√ (D)|√ (D)|√|
+|500 GB|N/A|√|√|√ (D)|√|
 |750 GB|N/A|√|√|√|√|
-|1024 GB|N/A|√|√|√ (D)|√ (D)|
+|1024 GB|N/A|√|√|√|√ (D)|
 |從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)*|不適用|不適用|N/A|N/A|√|
 
 \* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。 P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 如需 DTU 模型的資源限制的額外詳細資訊，請參閱 [DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。
@@ -602,7 +602,7 @@ WITH SERVICE_OBJECTIVE { `S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`�
 ELASTIC_POOL (name = \<elastic_pool_name>) 未指定 ELASTIC_POOL 時，不會在彈性集區中建立次要資料庫。 已指定 ELASTIC_POOL 時，則會在指定的集區中建立次要資料庫。
 
 > [!IMPORTANT]
-> 執行 ADD SECONDARY 命令的使用者必須是主要伺服器上的 DBManager、具備本機資料庫中的 db_owner 成員資格，並且是次要伺服器上的 DBManager。
+> 執行 ADD SECONDARY 命令的使用者必須是主要伺服器上的 DBManager、具備本機資料庫中的 db_owner 成員資格，並且是次要伺服器上的 DBManager。 您必須同時在主要與次要伺服器的防火牆規則底下，將用戶端 IP 位址新增至允許清單。 如果是不同的用戶端 IP 位址，也必須將已在主要伺服器上新增的完全相同用戶端 IP 位址新增至次要資料庫。 在執行 ADD SECONDARY 命令以起始異地複寫之前，必須先完成此步驟。
 
 REMOVE SECONDARY ON SERVER \<partner_server_name> 移除所指定伺服器上指定的異地複寫次要資料庫。 此命令會在裝載主要資料庫之伺服器的 master 資料庫上執行。
 

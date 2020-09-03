@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602203"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901568"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -432,6 +432,15 @@ COPY 命令將會在此日曆年度 (2020) 結束前正式推出。
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>檔案的數目或大小是否有任何限制？
 檔案的數目或大小沒有限制，為了獲得最佳效能，我們建議檔案至少為 4MB。
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>使用 Synapse 工作區 (預覽)，是否有任何使用 COPY 的限制？
+
+COPY 陳述式或 PolyBase (包括在管線中使用時) 不支援使用受控識別 (MSI) 進行驗證。 您可能會遇到類似的錯誤訊息：
+
+com.microsoft.sqlserver.jdbc.SQLServerException:*受控服務識別尚未在此伺服器上啟用。* 請啟用受控服務識別並再試一次。
+
+當儲存體帳戶與 VNet 相關聯時，需要 MSI 驗證。 如果您的儲存體帳戶已附加至 VNet，則必須使用 BCP/Bulk Insert 來載入資料，而不是 COPY 或 PolyBase。
+
+此限制僅適用於屬於 Synapse 工作區 (預覽) 的 SQL 集區。 我們將在即將推出的版本中，於 Synapse 工作區中啟用 MSI 支援。 
 
 請將任何意見反應或問題傳送至下列通訊群組清單： sqldwcopypreview@service.microsoft.com
 

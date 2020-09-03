@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435437"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991859"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -63,7 +63,7 @@ ms.locfileid: "87435437"
 
 -   如果電腦已有 32 位元版的 Office，您就必須安裝 32 位元版的元件。 您也必須確定您在 32 位元模式中執行 SSIS 套件，或執行 [匯入和匯出精靈] 的 32 位元版本。
 
--   如果您有 Office 365 訂閱，可能會在執行安裝程式時看到一則錯誤訊息。 錯誤訊息指出您無法使用 Office 隨選即用元件並存安裝下載。 若要略過此錯誤訊息，請開啟 [命令提示字元] 視窗並執行使用 `/quiet` 參數所下載的 .EXE 檔案，以無訊息模式執行安裝。 例如：
+-   如果您有 Microsoft 365 訂用帳戶，可能會在執行安裝程式時看到一則錯誤訊息。 錯誤訊息指出您無法使用 Office 隨選即用元件並存安裝下載。 若要略過此錯誤訊息，請開啟 [命令提示字元] 視窗並執行使用 `/quiet` 參數所下載的 .EXE 檔案，以無訊息模式執行安裝。 例如：
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

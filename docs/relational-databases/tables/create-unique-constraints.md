@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646316"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195094"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646316"
   
 3.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
   
-4.  在 [一般]**** 底下的方格中，按一下 [類型]****，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]****。  
+4.  在 [一般] 底下的方格中，按一下 [類型]、從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]，然後按一下 [關閉]。  
   
-5.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
+5.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646316"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>若要在新的資料表中建立唯一條件約束  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>在新的資料表中建立唯一條件約束  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   

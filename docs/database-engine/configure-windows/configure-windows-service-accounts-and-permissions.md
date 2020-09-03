@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c231fef9f3700e5d131d15916dfbfe3e100751a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362828"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900997"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 
@@ -168,14 +168,14 @@ ms.locfileid: "87362828"
 
 - <a name="GMSA"></a> **分組受控服務帳戶**
 
-  群組受管理的服務帳戶是適用於多部伺服器的 MSA。 Windows 會為伺服器群組上執行的服務管理服務。 Active Directory 會自動更新群組受管理的服務帳戶密碼，不需要重新啟動服務。 您可以設定 SQL Server 服務，以使用群組受管理的服務帳戶主體。 自 SQL Server 2014 起，SQL Server 已可支援獨立執行個體的群組受控服務帳戶，自 SQL Server 2016 起的版本，則支援容錯移轉叢集執行個體與可用性群組。
+  群組受管理的服務帳戶 (gMSA) 是適用於多部伺服器的 MSA。 Windows 會為伺服器群組上執行的服務管理服務。 Active Directory 會自動更新群組受管理的服務帳戶密碼，不需要重新啟動服務。 您可以設定 SQL Server 服務，以使用群組受管理的服務帳戶主體。 自 SQL Server 2014 起，SQL Server 已可支援獨立執行個體的群組受控服務帳戶，自 SQL Server 2016 起的版本，則支援容錯移轉叢集執行個體與可用性群組。
 
-  若要針對 SQL Server 2014 或更新版本使用群組受管理的服務帳戶，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](https://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。
+  若要針對 SQL Server 2014 或更新版本使用 gMSA，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](https://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。
 
   如需詳細資訊，請參閱[群組受控服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)
 
   > [!NOTE]
-  > 網域系統管理員必須先在 Active Directory 中建立群組受管理的服務帳戶， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。
+  > 網域系統管理員必須先在 Active Directory 中建立 gMSA，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 
