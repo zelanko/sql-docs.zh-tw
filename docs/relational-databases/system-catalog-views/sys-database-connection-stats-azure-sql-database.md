@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
+ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460660"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432650"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88460660"
 
   包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫 **連接** 事件的統計資料，提供資料庫連接成功和失敗的總覽。 如需連接事件的詳細資訊，請參閱 sys. event_log 中的事件種類 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-|統計資料|類型|描述|  
+|統計資料|類型|說明|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -97,7 +97,7 @@ start_time                    end_time
 ```sql
 SELECT *  
 FROM sys.database_connection_stats
-WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
+WHERE start_time>='2011-09-25 12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
 ## <a name="see-also"></a>另請參閱
