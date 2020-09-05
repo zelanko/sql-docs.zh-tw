@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344094"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480660"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88344094"
 |**建立**|階層成員的權限不足以建立權限。|  
 |**更新**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**刪除**|顯示成員，而且使用者可加以刪除。|  
-|**拒絕**|不顯示成員。|  
+|**Deny**|不顯示成員。|  
   
  在 [階層成員]**** 索引標籤上，您指派的權限不會立即生效。 權限套用的頻率取決於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中 [系統設定] 資料表內的 [成員安全性處理間隔設定]****。 遵循 [立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的步驟，可以立即套用成員權限。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88344094"
 -   如果有一個階層節點被指派 [**建立** / **讀取** / **更新** / **刪除**] 許可權的任何組合，而另一個節點被指派 [**拒絕**] 許可權，則會拒絕存取節點中的成員。  
   
 ## <a name="external-resources"></a>外部資源  
- 請參考 msdn.com 上的 [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
+ 請參考 msdn.com 上的 [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(安全性改進) 部落格文章。  
   
 ## <a name="see-also"></a>另請參閱  
  [指派階層成員許可權 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

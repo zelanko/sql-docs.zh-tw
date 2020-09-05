@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476990"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480668"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 資料操作 - UPDATE CUBE
 
 
-  UPDATE CUBE 陳述式可用來將資料寫回 Cube 中的任何資料格，再使用 SUM 彙總將其彙總至其父系。 如需詳細說明和範例，請參閱此 blog 中的「瞭解配置」文章： [使用 Analysis Services (blog) 建立回寫應用程式 ](https://go.microsoft.com/fwlink/?LinkId=394977)。  
+  UPDATE CUBE 陳述式可用來將資料寫回 Cube 中的任何資料格，再使用 SUM 彙總將其彙總至其父系。 如需詳細說明和範例，請參閱此 blog 中的「瞭解配置」文章： [使用 Analysis Services (blog) 建立回寫應用程式 ](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)。  
   
 ## <a name="syntax"></a>語法  
   

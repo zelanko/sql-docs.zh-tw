@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494891"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480606"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 資料定義 - ALTER CUBE
 
 
-  改變指定 Cube 的結構，通常用來支援維度回寫。 如需在應用程式中使用回寫的詳細資訊，請參閱這篇 blog 文章： [使用 Analysis Services (Blog 建立回寫應用程式) ](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  改變指定 Cube 的結構，通常用來支援維度回寫。 如需在應用程式中使用回寫的詳細資訊，請參閱這篇 blog 文章： [使用 Analysis Services (Blog 建立回寫應用程式) ](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  請注意，並行維度回寫可能會導致死結，其中第一個回寫由於第二個回寫保留共用鎖定而無法認可。 在此情況下，雖然不會產生錯誤，但是也無法進行作業。 最後，這兩個回寫會逾時，而系統會回復變更。  
   
