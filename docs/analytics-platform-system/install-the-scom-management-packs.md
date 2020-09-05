@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 666eb33667f9badc2c09e4f7afa872622bedb67f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766977"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480302"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安裝適用于 Analytics Platform System 的 SQL Server Operations Manager (SCOM) 管理套件
 請遵循下列步驟，下載並安裝適用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理套件。 需要有管理元件，才能從 SCOM 監視 SQL Server PDW。  
@@ -29,7 +29,7 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
 若為裝置管理，請下載 [SQL Server 設備基礎管理套件](/previous-versions/system-center/packs/gg602398(v=technet.10))。  
   
-針對較舊版本的 PDW （沒有 AP），請下載[適用于 Microsoft SQL Server 2012 平行資料倉儲設備的 System Center 監視套件](https://go.microsoft.com/fwlink/p/?LinkId=282661)。  
+針對較舊版本的 PDW （沒有 AP），請下載[適用于 Microsoft SQL Server 2012 平行資料倉儲設備的 System Center 監視套件](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7)。  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -51,7 +51,7 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
     ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  按一下 [關閉]  。  
+5.  按一下 [關閉] 。  
   
     ![按一下 [關閉]](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
     ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  按一下 [關閉]  。  
+5.  按一下 [關閉] 。  
   
     ![安裝完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

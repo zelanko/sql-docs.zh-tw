@@ -1,6 +1,6 @@
 ---
 title: 新功能
-description: 瞭解 Master Data Services 的 SQL Server 2019 版本中的變更、改進和更新。
+description: 瞭解 Master Data Services SQL Server 2019 版中的變更、增強功能和更新。
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813922"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480574"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -71,7 +71,7 @@ ms.locfileid: "85813922"
   
  分散程度超過 30% 的索引會於線上重建。 重建期間，相同資料表上的 CRUD 作業效能會受到影響。 如果在意效能降低的問題，建議您於營業時間執行預存程序。 如需索引片段的詳細資訊，請參閱＜ [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)＞。  
   
- 如需詳細資訊，請參閱 Master Data Services 部落格上的 [SQL Server 2016 效能與調整改善](https://go.microsoft.com/fwlink/p/?LinkId=615375)一文。  
+ 如需詳細資訊，請參閱 Master Data Services 部落格上的 [SQL Server 2016 效能與調整改善](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225)一文。  
   
 ##  <a name="improved-security"></a>已改善安全性  
   
@@ -166,7 +166,7 @@ ms.locfileid: "85813922"
  
  **編輯衍生階層中的多對多關聯性**  
   
- 透過修改對應的實體成員的方式，可編輯多對多關聯性。 如需詳細資訊，請參閱[在衍生階層中顯示多對多關聯性 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)。  
+ 透過修改對應的實體成員的方式，可編輯多對多關聯性。 如需詳細資訊，請參閱 [在衍生階層中顯示多對多關聯性 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)。  
  
  **已改進衍生階層管理體驗**  
   
@@ -178,7 +178,7 @@ ms.locfileid: "85813922"
     
  **自訂索引**  
   
- 您可以在一個屬性（單一索引）或實體的屬性清單（複合索引）上建立非叢集索引，以協助改善查詢效能。 如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
+ 您可以在一個屬性上建立非叢集索引 (單一索引) 或在實體中 (複合索引) 的屬性清單上建立非叢集索引，以協助改善查詢效能。 如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
  
   **屬性篩選**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "85813922"
   
  **變更集**  
   
- 您可以使用變更集將暫止變更儲存至實體，而且可以檢視並修改暫止變更。 如果實體需要核准變更，則必須將暫止變更儲存至變更集，並提交由系統管理員核准。 如需詳細資訊，請參閱[&#40;Master Data Services&#41;的變更集](../master-data-services/changesets-master-data-services.md)。  
+ 您可以使用變更集將暫止變更儲存至實體，而且可以檢視並修改暫止變更。 如果實體需要核准變更，則必須將暫止變更儲存至變更集，並提交由系統管理員核准。 如需詳細資訊，請參閱 [&#40;Master Data Services&#41;的變更集 ](../master-data-services/changesets-master-data-services.md)。  
   
  **變更集電子郵件與管理**  
   

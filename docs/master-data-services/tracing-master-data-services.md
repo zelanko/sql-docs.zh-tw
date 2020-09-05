@@ -1,6 +1,6 @@
 ---
 title: 追蹤
-description: Web.config 檔案包含追蹤區段，SQL Server 2016 Master Data Services 的新功能。 深入瞭解預設的追蹤行為。
+description: Web.config 檔案包含追蹤區段，SQL Server 2016 Master Data Services 中的新功能。 深入瞭解預設的追蹤行為。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812678"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480418"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 
@@ -61,7 +61,7 @@ ms.locfileid: "85812678"
   
 -   記錄格式是 CSV。 下表描述記錄格式。  
   
-    |元素|描述|  
+    |項目|描述|  
     |-------------|-----------------|  
     |Time|追蹤項目的發生時間。|  
     |CorrelationID|每個要求會指派一個相互關聯識別碼。 此要求觸發的所有追蹤會共用相同的相互關聯識別碼。<br /><br /> 當 UI 中發生錯誤時，相互關聯識別碼會出現在錯誤訊息中。|  
@@ -70,6 +70,6 @@ ms.locfileid: "85812678"
     |訊息|追蹤的訊息主體|  
   
 ## <a name="external-resources"></a>外部資源  
- msdn.com 上的部落格文章： [疑難排解記錄改進](https://go.microsoft.com/fwlink/p/?LinkId=615377)。  
+ msdn.com 上的部落格文章： [疑難排解記錄改進](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)。  
   
   

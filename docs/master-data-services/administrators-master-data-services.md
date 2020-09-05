@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812825"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480314"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "85812825"
   本文說明 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的系統管理員類型：模型系統管理員、實體系統管理員和進階使用者。  
   
 ## <a name="model-administrators"></a>模型管理員  
- 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，模型系統管理員是在 [**模型物件**] 索引標籤上獲派最上層模型物件之**管理員**許可權的使用者。當使用者在特定模型上具有系統管理員許可權時，模型的子物件（模型物件和成員許可權）的任何其他許可權都是由模型**管理員**許可權所並且，並有效地忽略。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，模型管理員是在 [**模型物件**] 索引標籤上，具有指派給最上層模型物件之系統**管理員**許可權的使用者。當使用者在特定模型上具有系統管理員許可權時，模型的子物件上的任何其他許可權 (模型物件和成員許可權) 都會由模型**管理員**許可權並且，並且會有效地忽略。  
   
 -   如果使用者可以存取總管**** 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85812825"
  使用者可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或透過程式設計方式設定為模型管理員。 如需詳細資訊，請參閱 [建立模型管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="entity-administrators"></a>實體系統管理員  
- 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，實體系統管理員是在 [模型物件] 索引標籤上具有指派給實體物件之系統管理員許可權的使用者。當使用者擁有實體的系統管理員許可權時，實體子物件（模型物件和成員許可權）的任何其他許可權都會被系統管理員許可權取代，而且會被忽略。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，實體系統管理員是在 [模型物件] 索引標籤上，具有指派給實體物件之系統管理員許可權的使用者。當使用者擁有實體的系統管理員許可權時，實體子物件上的任何其他許可權 (模型物件和成員許可權) 都會被系統管理員許可權取代，而且會被忽略。  
   
 -   如果使用者可以存取總管**** 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85812825"
 |實體系統管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是實體系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定實體中所有物件和成員的所有權限。<br /><br /> 如果實體變更需要核准時，就可以核准暫止的變更集。|  
   
 ## <a name="external-resources"></a>外部資源  
- 請參考 msdn.com 上的 [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
+ 請參考 msdn.com 上的 [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(安全性改進) 部落格文章。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立模型系統管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
