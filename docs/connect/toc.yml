@@ -14,31 +14,31 @@
   items:
     - name: Microsoft ADO.NET for SQL Server
       href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-    - name: 開始使用 SqlClient 驅動程式
+    - name: 開始使用
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: '步驟 1:設定 ADO.NET 開發的開發環境'
+        - name: '步驟 1:設定開發環境'
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: 步驟 2︰建立 ADO.NET 開發的 SQL 資料庫
+        - name: 步驟 2：建立 SQL Database
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: 步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
+        - name: 步驟 3：連接到 SQL 的概念證明
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 步驟 4：使用 ADO.NET 彈性地連線到 SQL
+        - name: 步驟 4：復原連線 SQL
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-    - name: SqlClient 驅動程式概觀
+    - name: 概觀
       href: ../connect/ado-net/overview-sqlclient-driver.md
       items:
-        - name: Microsoft.Data.SqlClient 命名空間簡介
+        - name: Microsoft.Data.SqlClient 命名空間
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-        - name: 下載適用於 SQL Server 的 Microsoft SqlClient Data Provider
+        - name: 下載
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-        - name: 在 SqlClient 中啟用事件追蹤
-          href: ../connect/ado-net/enable-eventsource-tracing.md
-        - name: SqlClient 中的 AppContext 參數
-          href: ../connect/ado-net/appcontext-switches.md
-        - name: SqlClient 驅動程式支援生命週期
+        - name: 支援週期
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-        - name: 尋找其他 SqlClient 驅動程式資訊
+        - name: 啟用事件追蹤
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: AppContext 參數
+          href: ../connect/ado-net/appcontext-switches.md
+        - name: 尋找其他資訊
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
@@ -163,7 +163,43 @@
   items:
     - name: Microsoft JDBC Driver for SQL Server
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
-    - name: JDBC Driver API 參考
+    - name: 開始使用
+      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
+      items:
+        - name: '步驟 1:設定開發環境'
+          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
+        - name: 步驟 2：建立 SQL Database
+          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
+        - name: 步驟 3：連接到 SQL 的概念證明
+          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
+    - name: 概觀
+      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
+      items:
+        - name: 下載
+          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: 版本資訊
+          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
+        - name: 系統需求
+          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
+        - name: 支援矩陣
+          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
+        - name: 使用驅動程式
+          href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: 剖析結果
+          href: ../connect/jdbc/parsing-the-results.md
+        - name: 使用 useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
+        - name: 了解 Java EE 支援
+          href: ../connect/jdbc/understanding-java-ee-support.md
+        - name: 部署驅動程式
+          href: ../connect/jdbc/deploying-the-jdbc-driver.md
+        - name: 尋找其他資訊
+          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
+        - name: 常見問題集 (FAQ)
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+        - name: 功能依存性
+          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+    - name: API 參考資料
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
       items:
         - name: ISQLServerCallableStatement 介面
@@ -2498,43 +2534,7 @@
               items:
                 - name: SSTRANSTIGHTLYCPLD 欄位 (SQLServerXAResource)
                   href: ../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md
-    - name: 開始使用 JDBC Driver
-      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
-      items:
-        - name: '步驟 1:設定開發環境以進行 Java 開發'
-          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: '步驟 2:建立 SQL 資料庫以進行 Java 開發'
-          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: 步驟 3：使用 Java 連線到 SQL 的概念證明
-          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
-    - name: JDBC Driver 概觀
-      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
-      items:
-        - name: 下載 Microsoft JDBC Driver for SQL Server
-          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
-        - name: 剖析結果
-          href: ../connect/jdbc/parsing-the-results.md
-        - name: JDBC Driver 的版本資訊
-          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
-        - name: JDBC 驅動程式的系統需求
-          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-        - name: 使用 JDBC 驅動程式
-          href: ../connect/jdbc/using-the-jdbc-driver.md
-        - name: 使用 useFMTOnly
-          href: ../connect/jdbc/using-usefmtonly.md
-        - name: 了解 Java EE 支援
-          href: ../connect/jdbc/understanding-java-ee-support.md
-        - name: 部署 JDBC 驅動程式
-          href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: 尋找其他 JDBC 驅動程式資訊
-          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
-        - name: Microsoft JDBC Driver for SQL Server 支援對照表
-          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
-        - name: JDBC Driver 常見問題集 (FAQ)
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
-        - name: Microsoft JDBC Driver for SQL Server 的功能相依性
-          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-    - name: 保護 JDBC Driver 應用程式
+    - name: 保護應用程式
       href: ../connect/jdbc/securing-jdbc-driver-applications.md
       items:
         - name: 保護連接字串的安全
@@ -2554,7 +2554,7 @@
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS 模式
           href: ../connect/jdbc/fips-mode.md
-    - name: 增進 JDBC 驅動程式的效能與可靠性
+    - name: 改善效能與可靠性
       href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
       items:
         - name: 不使用時關閉物件
@@ -2569,7 +2569,7 @@
           href: ../connect/jdbc/sparse-columns.md
         - name: JDBC Driver 的備妥陳述式中繼資料快取
           href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
-    - name: 診斷 JDBC Driver 的問題
+    - name: 診斷問題
       href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
       items:
         - name: 處理錯誤
@@ -2582,7 +2582,7 @@
           href: ../connect/jdbc/troubleshooting-connectivity.md
         - name: 存取擴展事件記錄檔中的診斷資訊
           href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
-    - name: JDBC Driver 應用程式程式碼範例
+    - name: 應用程式程式碼範例
       href: ../connect/jdbc/sample-jdbc-driver-applications.md
       items:
         - name: 連接及擷取資料
@@ -2621,7 +2621,7 @@
               href: ../connect/jdbc/updating-large-data-sample.md
         - name: 資料探索與分類範例
           href: ../connect/jdbc/data-discovery-classification-sample.md
-    - name: JDBC SQL Driver 的合規性和法律聲明
+    - name: 合規性與法律
       href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
       items:
         - name: 適用於 JDBC 驅動程式的 JDBC 4.1 相容性
@@ -2630,25 +2630,25 @@
           href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
         - name: JDBC Driver 的 JDBC 4.3 合規性
           href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
-    - name: JDBC SQL Driver 程式設計指南
+    - name: 程式設計手冊
       href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
       items:
-        - name: 使用 JDBC 驅動程式連接到 SQL Server
+        - name: 連接到 SQL
           href: ../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md
-        - name: 了解 JDBC Driver 資料類型
+        - name: 了解 JDBC 資料類型
           href: ../connect/jdbc/understanding-the-jdbc-driver-data-types.md
-        - name: 搭配 JDBC Driver 使用陳述式
+        - name: 使用陳述式
           href: ../connect/jdbc/using-statements-with-the-jdbc-driver.md
-        - name: 使用 JDBC 驅動程式管理結果集
+        - name: 管理結果集
           href: ../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md
-        - name: 以 JDBC 驅動程式執行交易
+        - name: 執行交易
           href: ../connect/jdbc/performing-transactions-with-the-jdbc-driver.md
-        - name: 使用 JDBC Driver 處理中繼資料
+        - name: 處理中繼資料
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
-        - name: 搭配使用一律加密與 JDBC 驅動程式
+        - name: 使用 Always Encrypted
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: 使用具備安全記憶體保護區的 Always Encrypted 搭配 JDBC 驅動程式
+            - name: 使用具有安全記憶體保護區的 Always Encrypted
               href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: 指南文章
           items:
@@ -2777,17 +2777,19 @@
   items:
     - name: Node.js Driver for SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: '步驟 1:設定 Node.js 開發的開發環境'
+    - name: '步驟 1:設定開發環境'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: '步驟 2:建立 Node.js 開發的 SQL 資料庫'
+    - name: 步驟 2：建立 SQL Database
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 步驟 3：使用 Node.js 連線到 SQL 的概念證明
+    - name: 步驟 3：連接到 SQL 的概念證明
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
     - name: Microsoft ODBC Driver for SQL Server
       href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
-    - name: Linux 和 Mac
+    - name: 下載
+      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: Linux 與 macOS
       items:
         - name: 系統需求
           href: ../connect/odbc/linux-mac/system-requirements.md
@@ -2821,13 +2823,13 @@
           href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: 已知問題
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
-        - name: ODBC Linux 和 macOS 的常見問題集 (FAQ)
+        - name: 常見問題集 (FAQ)
           href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
     - name: Windows
       items:
         - name: Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
           href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
-        - name: Microsoft ODBC Driver for SQL Server on Windows 的功能
+        - name: 特性
           href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
         - name: 版本資訊
           href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
@@ -2835,9 +2837,9 @@
           href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
         - name: 功能指南
           items:
-            - name: Windows ODBC 驅動程式中的連接恢復功能
+            - name: 恢復連線
               href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
-            - name: ODBC Driver for SQL Server 中可感知驅動程式的連接共用
+            - name: 可感知驅動程式的連接共用
               href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
         - name: 非同步執行 (通知方法) 範例
           href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
@@ -2871,9 +2873,7 @@
           href: ../connect/odbc/use-xa-with-dtc.md
         - name: 錯誤修正
           href: ../connect/odbc/bug-fixes.md
-    - name: 下載 ODBC Driver for SQL Server
-      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
-    - name: 使用 ODBC 的 C++ 範例應用程式
+    - name: C++ 範例應用程式
       href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: ODBC 進階
       items:
@@ -5083,15 +5083,15 @@
   items:
     - name: Microsoft OLE DB Driver for SQL Server
       href: ../connect/oledb/oledb-driver-for-sql-server.md
+    - name: 下載
+      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: 版本資訊
       href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-    - name: 下載 Microsoft OLE DB Driver for SQL Server
-      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: 系統需求
       href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-    - name: 使用 OLE DB Driver for SQL Server 的時機
+    - name: 使用 OLE DB Driver 的時機
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-    - name: 尋找詳細的 OLE DB Driver for SQL Server 資訊
+    - name: 尋找詳細資訊
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
     - name: 特性
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
@@ -5478,35 +5478,35 @@
     - name: 開始使用
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: 步驟 1︰設定 PHP 開發的開發環境
+        - name: '步驟 1:設定開發環境'
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: '步驟 2:建立 PHP 開發的 SQL 資料庫'
+        - name: 步驟 2：建立 SQL Database
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: 步驟 3︰使用 PHP 連線到 SQL Server 的概念證明
+        - name: 步驟 3：連接到 SQL 的概念證明
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: 步驟 4︰使用 PHP 彈性地連線到 SQL Server
+        - name: 步驟 4：復原連線 SQL
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: 概觀
       href: ../connect/php/overview-of-the-php-sql-driver.md
       items:
+        - name: 下載
+          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Linux 和 macOS 上的安裝
+          href: ../connect/php/installation-tutorial-linux-mac.md
+        - name: 版本資訊
+          href: ../connect/php/release-notes-php-sql-driver.md
         - name: 系統需求
           href: ../connect/php/system-requirements-for-the-php-sql-driver.md
-        - name: 下載 Drivers for PHP for SQL Server
-          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: 支援矩陣
+          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
         - name: 載入驅動程式
           href: ../connect/php/loading-the-php-sql-driver.md
         - name: 設定 IIS
           href: ../connect/php/configuring-iis-for-php-sql-driver.md
-        - name: PHP Linux 及 Mac 驅動程式安裝教學課程
-          href: ../connect/php/installation-tutorial-linux-mac.md
-        - name: 版本資訊
-          href: ../connect/php/release-notes-php-sql-driver.md
         - name: 支援資源
           href: ../connect/php/support-resources-for-the-php-sql-driver.md
         - name: 關於程式碼範例
           href: ../connect/php/about-code-examples-in-the-documentation.md
-        - name: Microsoft Drivers for PHP for SQL Server 的支援矩陣
-          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: 程式設計手冊
       href: ../connect/php/programming-guide-for-php-sql-driver.md
       items:
@@ -5751,9 +5751,9 @@
     - name: 程式碼範例
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
-        - name: 範例應用程式 (PDO_SQLSRV 驅動程式)
+        - name: 範例應用程式 (PDO_SQLSRV)
           href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-        - name: 範例應用程式 (SQLSRV 驅動程式)
+        - name: 範例應用程式 (SQLSRV)
           href: ../connect/php/example-application-sqlsrv-driver.md
 - name: Python
   items:
@@ -5762,30 +5762,30 @@
     - name: Python SQL 驅動程式 - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: '步驟 1:設定 pyodbc Python 開發的開發環境'
+        - name: '步驟 1:設定開發環境'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: '步驟 2:建立 pyodbc Python 開發的 SQL 資料庫'
+        - name: 步驟 2：建立 SQL Database
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 步驟 3：使用 pyodbc 連線到 SQL 的概念證明
+        - name: 步驟 3：連接到 SQL 的概念證明
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 驅動程式 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: '步驟 1:設定 pymssql Python 開發的開發環境'
+        - name: '步驟 1:設定開發環境'
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: '步驟 2:建立 pymssql Python 開發的 SQL 資料庫'
+        - name: 步驟 2：建立 SQL Database
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 步驟 3：使用 pymssql 連線到 SQL 的概念證明
+        - name: 步驟 3：連接到 SQL 的概念證明
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Ruby Driver for SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: '步驟 1:設定 Ruby 開發的開發環境'
+    - name: '步驟 1:設定開發環境'
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: 步驟 2︰建立 Ruby 開發的 SQL 資料庫
+    - name: 步驟 2：建立 SQL Database
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: 步驟 3︰使用 Ruby 連線到 SQL 的概念證明
+    - name: 步驟 3：連接到 SQL 的概念證明
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: Spark
   items:
