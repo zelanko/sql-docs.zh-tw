@@ -1,6 +1,6 @@
 ---
 title: 使用 VBScript 存取 WMI 提供者
-description: 瞭解如何建立 VBScript 程式，其中列出電腦上執行的已安裝 SQL Server 實例的版本。
+description: 瞭解如何建立 VBScript 程式來列出電腦上執行之 SQL Server 的已安裝實例的版本。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab864d3e2fbfb10e98347ac40b0b5f74f08729cb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b41779568bee4e3d83d8425fc6745d1191c7b58
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888237"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520196"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>使用 VBScript 存取組態管理的 WMI 提供者
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本節說明如何建立 VBScript 程式，以列出在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 電腦上執行之已安裝實例的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  本節描述如何建立 VBScript 程式來列出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 電腦上執行的已安裝實例的版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  此程式碼範例會列出在電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的版本。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85888237"
   
 5.  儲存檔案。  
   
-6.  在命令提示字元中輸入**cscript** test.txt，以執行腳本。  
+6.  在命令提示字元中輸入 **cscript test** ，以執行腳本。  
 
 ## <a name="example"></a>範例  
   
