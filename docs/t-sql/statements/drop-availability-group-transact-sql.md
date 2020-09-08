@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c47ca2a1697752068902a26d20322232648dc2f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb493b4698918e7d93fb3ef45b3c5d03a2919e1f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496775"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480436"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  避免在 Windows Server 容錯移轉叢集 (WSFC) 叢集沒有仲裁時卸除可用性群組。 如果您必須在叢集缺少仲裁時卸除可用性群組，儲存在叢集中的中繼資料可用性群組並不會移除。 在叢集重新取得仲裁之後，您將需要再次卸除可用性群組，以便從 WSFC 叢集中將它移除。  
   
--   在次要複本上，只有在緊急狀況下才可使用 **DROP AVAILABILITY GROUP**。 這是因為卸除可用性群組會讓可用性群組離線。 如果您從次要複本卸除可用性群組，主要複本就無法判斷 **OFFLINE** 狀態是因為遺失仲裁、強制容錯移轉或 **DROP AVAILABILITY GROUP** 命令而發生。 主要複本會轉換成 **RESTORING** 狀態，以防止可能的裂腦情況發生。 如需詳細資訊，請參閱 [How It Works: DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)。  
+-   在次要複本上，只有在緊急狀況下才可使用 **DROP AVAILABILITY GROUP**。 這是因為卸除可用性群組會讓可用性群組離線。 如果您從次要複本卸除可用性群組，主要複本就無法判斷 **OFFLINE** 狀態是因為遺失仲裁、強制容錯移轉或 **DROP AVAILABILITY GROUP** 命令而發生。 主要複本會轉換成 **RESTORING** 狀態，以防止可能的裂腦情況發生。 如需詳細資訊，請參閱 [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)。  
   
 ## <a name="security"></a>安全性  
   
@@ -81,7 +81,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)  
+-   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (運作方式：DROP AVAILABILITY GROUP 行為) (CSS SQL Server 工程師部落格)  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   

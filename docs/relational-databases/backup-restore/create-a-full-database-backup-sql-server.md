@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: carlrab
-ms.openlocfilehash: d2da7198c2eee8bbbd98ae0951a57fc877d0e367
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fcb7c7efd559c3b03731949ccd2d7b810ecdb0e
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748461"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468353"
 ---
 # <a name="create-a-full-database-backup"></a>建立完整資料庫備份
 
@@ -397,7 +397,7 @@ $credential = Get-Credential
 $container = 'https://<myStorageAccount>blob.core.windows.net/<myContainer>'
 $fileName = '<myDatabase>.bak'
 $server = '<myServer>'
-$database = '<myDatabase>
+$database = '<myDatabase>'
 $backupFile = $container + '/' + $fileName
 
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential

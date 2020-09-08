@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ebe94614467e4b4c3d3ef2b9eb52287cdcc3feb7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03778a48310bcfe1fbf6e6efb8f99609bb57ba99
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897045"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480370"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的強制手動容錯移轉 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -320,7 +320,7 @@ ms.locfileid: "85897045"
   
      [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **白皮書：**  
   

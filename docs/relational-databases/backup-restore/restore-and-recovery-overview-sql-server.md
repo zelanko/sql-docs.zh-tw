@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717963"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480397"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,7 +174,7 @@ Database Recovery Advisor 有助於建構實作最佳化正確還原順序的還
   
 如需有關 Database Recovery Advisor 的詳細資訊，請參閱下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理能力部落格：  
   
--   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx) \(英文\)  
+-   [Recovery Advisor：簡介](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction) \(英文\)  
   
 -   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups) \(英文\)  
 

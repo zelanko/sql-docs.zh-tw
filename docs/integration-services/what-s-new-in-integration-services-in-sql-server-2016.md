@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456868"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480821"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
 
@@ -363,7 +363,7 @@ ms.locfileid: "88456868"
  維度處理目的地不適用於 SQL 2016 相容性層級的表格式模型。  如果您要進行表格式處理，就只需要 Analysis Services 處理工作和資料分割處理目的地。 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> 支援內建的 R Services  
- SSIS 已支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的內建 R 服務。 您不只能使用 SSIS 來擷取資料和載入分析的輸出，而且還能建置、執行及定期重新訓練 R 模型。 如需詳細資訊，請參閱下列部落格文章。 [使用 SQL Server 2016 SSIS 和 R 服務推動您的機器學習服務專案](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)。 
+ SSIS 已支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的內建 R 服務。 您不只能使用 SSIS 來擷取資料和載入分析的輸出，而且還能建置、執行及定期重新訓練 R 模型。 如需詳細資訊，請參閱下列部落格文章。 [使用 SQL Server 2016 SSIS 和 R 服務推動您的機器學習服務專案](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296)。 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML 工作中詳細的 XML 驗證輸出  
  驗證 XML 文件，並啟用 XML 工作的 **ValidationDetails** 屬性以取得詳細的錯誤輸出。 在提供 **ValidationDetails** 屬性前，XML 工作所執行的 XML 驗證只會傳回結果為 True 或 False，而不會有錯誤的相關資訊及其位置。 現在，當您將 **ValidationDetails** 設定為 True 時，輸出檔案即涵蓋每項錯誤的詳細資訊，包括行號及位置。 您可以使用此資訊來了解、尋找及修正 XML 文件中的錯誤。 如需詳細資訊，請參閱＜ [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)＞。  

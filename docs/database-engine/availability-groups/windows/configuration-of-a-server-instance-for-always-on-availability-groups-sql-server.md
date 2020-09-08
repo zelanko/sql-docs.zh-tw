@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6ed18baa9b046c7ad08bd26f4eb58ee22db487cf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70bcf6ed082381a6eed10990be55ca5648bff3ec
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896138"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479525"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>啟用 SQL Server 執行個體的 Always On 可用性群組功能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "85896138"
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **影片：**  
   

@@ -18,19 +18,19 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c77608f7b09c591fd5bdee3e5f24685d9887b51c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6279d5eae855c87e7f93cb47e3b2fb55bfcc2dba
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479097"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283492"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 變更 Resource Governor 外部集區，其指定外部處理序可以使用的資源。 
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 ::: moniker-end
 
@@ -41,8 +41,24 @@ ms.locfileid: "88479097"
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
-
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```syntaxsql
+ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
+[ WITH (
+    [ MAX_CPU_PERCENT = value ]
+    [ [ , ] MAX_MEMORY_PERCENT = value ]
+    [ [ , ] MAX_PROCESSES = value ]
+    )
+]
+[ ; ]
+  
+<CPU_range_spec> ::=
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
+```  
+::: moniker-end
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+ ```syntaxsql
+
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -61,7 +77,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 <CPU_range_spec> ::=
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
-  
+::: moniker-end 
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
@@ -70,6 +87,18 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 這是現有的使用者定義外部資源集區名稱，或是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時建立的預設外部資源集區名稱。
 搭配 `ALTER EXTERNAL RESOURCE POOL` 使用時，"default" 必須加上引號 ("") 或方括號 ([]) 才能避免與系統保留字 `DEFAULT` 產生衝突。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+
+MAX_MEMORY_PERCENT =*value*  
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+
+MAX_PROCESSES =*value*  
+指定允許外部資源集區使用的處理序數目上限。 指定 0 來為集區設定無限的閾值，這在之後只有電腦資源繫結會對其建立繫結。
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
 
@@ -83,7 +112,7 @@ MAX_MEMORY_PERCENT =*value*
 
 MAX_PROCESSES =*value*  
 指定允許外部資源集區使用的處理序數目上限。 指定 0 來為集區設定無限的閾值，這在之後只有電腦資源繫結會對其建立繫結。
-
+::: moniker-end
 ## <a name="remarks"></a>備註
 
 當您執行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 陳述式時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 將實作資源集區。
@@ -98,7 +127,20 @@ MAX_PROCESSES =*value*
 ## <a name="examples"></a>範例
 
 下列陳述式會變更外部集區，其限制 CPU 使用量為 50%，電腦中可用記憶體的最大記憶體為 25%。
-  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+```sql
+ALTER EXTERNAL RESOURCE POOL ep_1
+WITH (
+    MAX_CPU_PERCENT = 50
+    , MAX_MEMORY_PERCENT = 25
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -110,9 +152,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-
-> [!NOTE]
-> 適用於 Linux 的 SQL Machine Learning Services 2019 不支援設定 CPU 親和性的能力。
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

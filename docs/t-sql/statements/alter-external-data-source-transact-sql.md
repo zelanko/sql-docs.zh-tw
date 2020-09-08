@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d963edaaea4225fa969afd7694b9970d07135d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c7b09ee2c476fe43aa715e53d5782c849d09db3
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444869"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283473"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   修改用來建立外部資料表的外部資料來源。 外部資料源可以是適用於 SQL SERVER 的 Hadoop 或 Azure Blob 儲存體 (WASBS)，以及適用於 Azure SQL 資料倉儲的 Azure Blob 儲存體 (WASBS) 或 Azure Data Lake 儲存體 (ABFSS/ADL)。 
 

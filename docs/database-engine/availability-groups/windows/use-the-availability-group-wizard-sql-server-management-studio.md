@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0aa44a34e5c9036fa0657f170f7c3ff05d76a612
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b4f7203d5fd4f0ab46982a7b3bca184a27a94d6
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894148"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480505"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "85894148"
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **影片：**  
   

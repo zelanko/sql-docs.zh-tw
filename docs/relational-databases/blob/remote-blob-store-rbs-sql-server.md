@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 92b7abe9bee2ac7d8d7058f2fcc03a551b64e200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765481"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480964"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "85765481"
  RBS 包含一個 FILESTREAM 提供者，可讓您使用 RBS，將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上。 如果您要使用 RBS 將 BLOB 儲存在不同的儲存方案中，您必須使用針對該儲存方案開發的 RBS 提供者，或使用 RBS API 開發一個自訂的 RBS 提供者。 將 BLOB 儲存在 NTFS 檔案系統中的範例提供者，在 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上作為學習資源提供。  
   
 ## <a name="rbs-security"></a>RBS 安全性  
- SQL 遠端 Blob 存放區團隊部落格是了解這項功能很好的資訊來源。 [RBS Security Model](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)(RBS 安全性模型) 文章中有描述 RBS 安全性模型。  
+ SQL 遠端 Blob 存放區團隊部落格是了解這項功能很好的資訊來源。 [RBS Security Model](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model)(RBS 安全性模型) 文章中有描述 RBS 安全性模型。  
   
 ### <a name="custom-providers"></a>自訂提供者  
  當您使用自訂提供者將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部時，請確認您使用適合自訂提供者之儲存媒體的權限和加密選項，保護已儲存的 BLOB。  
@@ -89,7 +89,7 @@ ms.locfileid: "85765481"
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 範例會示範如何開發 RBS 應用程式，以及如何開發與安裝自訂的 RBS 提供者。  
   
  **RBS 部落格**  
- [RBS 部落格](https://go.microsoft.com/fwlink/?LinkId=210315) 會提供其他資訊來協助您了解、部署，以及維護 RBS。  
+ [RBS 部落格](https://docs.microsoft.com/archive/blogs/sqlrbs/) 會提供其他資訊來協助您了解、部署，以及維護 RBS。  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> 金鑰輪替指令碼  
  此範例會建立名為 `sp_rotate_rbs_symmetric_credential_key` 的預存程序，以您選擇的金鑰來取代目前使用的 RBS  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f22553f6fe5685600727ec5d382664e0f7878fac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e6467de5064cfd3b6d4ce2c151a456c63919e7d
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470341"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480480"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>進階編輯 (條件) 對話方塊
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "88470341"
 |**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|兩個數字相除。|*expression_dividend* - 這是要除的數值運算式。 被除數可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 資料類型除外。<br /><br /> *expression_divisor* - 這是要除以被除數的數值運算式。 除數可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 資料類型除外。|傳回具有較高優先順序之引數的資料類型。|**範例：** `Divide(Property1, 2)`<br /><br /> 注意：這將是雙精確度浮點數運算。 若要執行整數比較，您必須將結果與 `Round()`結合在一起。 例如： `Round(Divide(10, 3), 0) = 3` 。|  
 |**Enum()**|Numeric Enum (String *enumTypeName*, String *enumValueName*)|從字串建立列舉值。|*enumTypeName* - 這是列舉類型的名稱。<br /><br /> *enumValueName* - 這是列舉的值。|以數值形式傳回列舉值。|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape (String *replaceString*, String *stringToEscape*, String *escapeString*)|使用指定的逸出字串來逸出輸入字串的子字串。|*replaceString* - 為輸入字串。<br /><br /> *stringToEscape* - 為 *replaceString* 的子字串。 這是您想要將逸出字串加到其前面的字串。<br /><br /> *escapeString* - 這是您想要加到每一個 *stringToEscape* 執行個體前面的逸出字串。|傳回修改的 *replaceString* ，其中的每一個 *stringToEscape* 執行個體都是在 *escapeString*後面。|`Escape("Hello", "l", "[")` 會傳回 "`He[l[lo`"。|  
-|**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|針對目標伺服器執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。<br /><br /> 如需 ExecuteSql() 的詳細資訊，請參閱 [ExecuteSql() 函數](https://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|*returnType* - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所傳回的傳回資料類型。 *returnType* 的有效常值如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> *sqlQuery* - 這是包含要執行之查詢的字串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 對目標 SQL Server 執行個體執行純量值的 Transact-SQL 查詢。 `SELECT` 陳述式中，只能指定一個資料行，會忽略第一個以外的其他資料行。 產生的查詢應該只傳回一個資料列，會忽略第一個以外的其他資料列。 如果查詢傳回空集合，依據 `ExecuteSQL` 建立的條件運算式會評估為 false。 `ExecuteSql` 支援 **視需要** 和 **按排程時間** 評估模式。<br /><br /> -`@@ObjectName`:<br />                      對應到 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名稱欄位。 將會以目前物件的名稱來取代此變數。<br /><br /> -`@@SchemaName`：對應到 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 將會以目前物件的結構描述名稱來取代此變數 (如果適用的話)。<br /><br /> 注意：若要在 ExecuteSQL 陳述式中加入單引號，請以第二個單引號來逸出該單引號。 例如，若要包含名為 O'Brian 之使用者的參考，請輸入 O''Brian。|  
+|**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|針對目標伺服器執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。<br /><br /> 如需 ExecuteSql() 的詳細資訊，請參閱 [ExecuteSql() 函數](https://docs.microsoft.com/archive/blogs/sqlpbm/executesql)。|*returnType* - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所傳回的傳回資料類型。 *returnType* 的有效常值如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> *sqlQuery* - 這是包含要執行之查詢的字串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 對目標 SQL Server 執行個體執行純量值的 Transact-SQL 查詢。 `SELECT` 陳述式中，只能指定一個資料行，會忽略第一個以外的其他資料行。 產生的查詢應該只傳回一個資料列，會忽略第一個以外的其他資料列。 如果查詢傳回空集合，依據 `ExecuteSQL` 建立的條件運算式會評估為 false。 `ExecuteSql` 支援 **視需要** 和 **按排程時間** 評估模式。<br /><br /> -`@@ObjectName`:<br />                      對應到 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名稱欄位。 將會以目前物件的名稱來取代此變數。<br /><br /> -`@@SchemaName`：對應到 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 將會以目前物件的結構描述名稱來取代此變數 (如果適用的話)。<br /><br /> 注意：若要在 ExecuteSQL 陳述式中加入單引號，請以第二個單引號來逸出該單引號。 例如，若要包含名為 O'Brian 之使用者的參考，請輸入 O''Brian。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|針對提供的命名空間執行 WQL 指令碼。 Select 陳述式只能包含單一傳回資料行。 如果提供了一個以上的資料行，將會擲回錯誤。|*returnType* - 指定 WQL 所指定的傳回資料類型。 有效的常值為 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> *namespace* - 這是執行所要針對的 WMI 命名空間。<br /><br /> *wql* - 這是包含所要執行之 WQL 的字串。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|傳回布林值 FALSE。|無|傳回布林值 FALSE。|`IsDatabaseMailEnabled = False()`|  
 |**GetDate()**|DateTime GetDate()|傳回系統日期。|無|以日期時間形式傳回系統日期。|`@DateLastModified = GetDate()`|  

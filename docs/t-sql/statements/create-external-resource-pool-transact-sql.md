@@ -23,19 +23,19 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59a754655eff7c701a91013e686e7ff1105a4cfe
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426720"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283699"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 建立外部集區，以定義外部處理序的資源。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體和 CPU) 子集。 Resource Governor 可在資源集區間散發伺服器資源，最多可達 64 個集區。
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 ::: moniker-end
 
@@ -44,9 +44,27 @@ ms.locfileid: "88426720"
 ::: moniker-end
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
-  
+ 
+
 ## <a name="syntax"></a>語法  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+```syntaxsql
+CREATE EXTERNAL RESOURCE POOL pool_name  
+[ WITH (  
+    [ MAX_CPU_PERCENT = value ]  
+    [ [ , ] MAX_MEMORY_PERCENT = value ]  
+    [ [ , ] MAX_PROCESSES = value ]   
+    )   
+]  
+[ ; ]  
   
+<CPU_range_spec> ::=    
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
+```  
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -66,17 +84,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 <CPU_range_spec> ::=    
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+::: moniker-end
 
-> [!NOTE]
-> 適用於 Linux 的 SQL Machine Learning Services 2019 不支援設定 CPU 親和性的能力。
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
 
 *pool_name*  
 這是外部資源集區的使用者定義名稱。 *pool_name* 為英數字元，最多可有 128 個字元。 此引數在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，且必須滿足[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+出現 CPU 爭用時，外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+
+
+MAX_MEMORY_PERCENT =*value*  
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+
+MAX_PROCESSES =*value*  
+允許外部資源集區使用的處理序數目上限。 0 = 集區的閾值沒有限制，這在之後只會受電腦資源約束。
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 出現 CPU 爭用時，外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
 
@@ -91,6 +120,7 @@ MAX_MEMORY_PERCENT =*value*
 
 MAX_PROCESSES =*value*  
 允許外部資源集區使用的處理序數目上限。 0 = 集區的閾值沒有限制，這在之後只會受電腦資源約束。
+::: moniker-end
 
 ## <a name="remarks"></a>備註
 
@@ -108,6 +138,20 @@ MAX_PROCESSES =*value*
 
 外部集區的 CPU 使用率限制為百分之 75。 記憶體的最大值為電腦上可用記憶體的百分之 30。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+```sql
+CREATE EXTERNAL RESOURCE POOL ep_1
+WITH (  
+    MAX_CPU_PERCENT = 75
+    , MAX_MEMORY_PERCENT = 30
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -119,7 +163,8 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-  
+::: moniker-end
+
 ## <a name="see-also"></a>另請參閱
 
 + [外部指令碼已啟用伺服器組態選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

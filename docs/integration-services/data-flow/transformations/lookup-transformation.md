@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477694"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480901"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477694"
  從 **[指定如何處理無相符項目的資料列]** 清單方塊中選取任何其他選項時，會將資料列當做錯誤處理。 可以使用 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
   
 ### <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[連接]** 頁面，來選取連接管理員。 如果您選取 OLE DB 連接管理員，也可以選取查詢、資料表或檢視來產生參考資料集。  
@@ -219,7 +219,7 @@ ms.locfileid: "88477694"
  使用 [預覽查詢結果]  對話方塊來預覽結果。 此選項最多可顯示 200 個資料列。  
   
 ### <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>查閱轉換編輯器 (資料行頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定來源資料表和參考資料表之間的聯結，以及從參考資料表中選取查閱資料行。  
@@ -276,7 +276,7 @@ ms.locfileid: "88477694"
  使用 [設定查詢參數]**** 對話方塊，即可將輸入資料行對應至參數。  
   
 ### <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  
   
 ## <a name="see-also"></a>另請參閱  
  [模糊查閱轉換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

@@ -21,15 +21,15 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce343447b770a5a8f0cd0c1499c3b8ff236adf17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26b2b996402be1ddd2297cf61dce827a905980df
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426740"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283712"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
 建立外部檔案格式物件來定義儲存於 Hadoop、Azure Blob 儲存體、Azure Data Lake Store 的外部資料，或用於與外部資料流建立關聯的輸入和輸出資料流。 建立外部檔案格式是建立外部資料表的先決條件。 透過建立外部檔案格式，您可以指定外部資料表所參考資料的實際配置。  
   

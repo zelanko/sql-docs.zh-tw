@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26233c296fe6a53e66e45006eed854578a94243f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5a4f41009505a733eb58bef73f55697430550be3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882422"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480546"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性群組：互通性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85882422"
 
   [Migration Guide:Migrating to SQL Server 2012 Failover Clustering and Availability Groups from Prior Clustering and Mirroring Deployments](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/) (移轉指南：從先前叢集和鏡像部署移轉至 SQL Server 2012 容錯移轉叢集和可用性群組)
   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)
+  [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)
 
 - **白皮書：**
 

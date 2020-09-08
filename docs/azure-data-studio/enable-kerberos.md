@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 573f78b3edace44695f73d79fba9679ba5fd4e00
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb9735ec85ba8b6481156fb55e662bc55363dc7a
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778427"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283730"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>使用 Windows 驗證將 Azure Data Studio 連線到您的 SQL Server - Kerberos
 
@@ -125,8 +125,6 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ### <a name="macos"></a>macOS
 
 - 遵循下列步驟，將您的 macOS 加入 Active Directory 網域控制站：
-
-
 
 ## <a name="configure-kdc-in-krb5conf"></a>在 krb5.conf 中設定 KDC
 

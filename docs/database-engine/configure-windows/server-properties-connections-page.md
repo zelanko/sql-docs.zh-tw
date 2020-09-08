@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39f3bd57ced73fb4fb5f5d4a34232b9b2bd7c92e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759139"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480551"
 ---
 # <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85759139"
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
- [選項 &#40;查詢執行：SQL Server:進階頁面&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [選項 &#40;查詢執行：SQL Server:進階頁面&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 227c37385fd1c9b3b65ad45d891b3be7eb300739
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5212f29d4ab533554a6920517c0fa58ee1c19dd2
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900425"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480545"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性群組：高可用性和災害復原解決方案
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -159,7 +159,7 @@ ms.locfileid: "85900425"
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **影片：**  
   

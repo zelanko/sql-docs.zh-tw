@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 81abfd4c4e81e3eda3fd3f65ebe2a61303c73143
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042381"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511290"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -127,6 +127,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <sql_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
   | <compatibility_level>
       { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 }

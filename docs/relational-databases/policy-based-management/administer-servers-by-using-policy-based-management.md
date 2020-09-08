@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97514b5bab233bbef63876dd8f0cd6b0afca2274
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 425a463cce75440a40551b0487015bd2d39c203a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749533"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480270"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85749533"
   
  若為失敗的原則，[物件總管] 會指出嚴重健全狀況警告成為目標旁的紅色圖示以及 [物件總管] 樹狀結構中較高的節點。  
   
-> **注意** ：當系統計算原則的物件集時，預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **注意** ：當系統計算原則的物件集時，預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## <a name="three-policy-based-management-components"></a>三個原則式管理元件  
  原則式管理有三個元件：  

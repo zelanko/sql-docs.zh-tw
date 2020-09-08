@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2bc9a5c4ca7481d9d3d1039e0e467e35d5c2631b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363039"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288330"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -93,7 +93,7 @@ LocalDB 支援兩種類型的執行個體：自動執行個體和具名執行個
 
 ### <a name="connect-to-the-automatic-instance"></a>連線到自動執行個體
 
-使用 LocalDB 最簡單的方式是透過使用連接字串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`，連線到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連接到特定的資料庫，請使用類似於 `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf` 的連接字串進行連接。
+使用 LocalDB 最簡單的方式是透過使用連接字串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`，連線到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連接到特定的資料庫，請使用類似於 `Server=(LocalDB)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D:\Data\MyDB1.mdf` 的連接字串進行連接。
 
 LocalDB 格式的命名慣例和連接字串在 SQL Server 2014 中已變更。 先前，執行個體名稱是單一 v 字元，後面接著 LocalDB 和版本號碼。 從 SQL Server 2014 開始，已不再支援此執行個體名稱格式，應改為使用先前所述的連接字串。  
 
