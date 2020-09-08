@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ClientNetworkProtocol class
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2a2a72f926980efd5e355b4b99566c7eca991c3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ad9ac6a0915da30f998b3e02bdaeb0dfeb029a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418882"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522651"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

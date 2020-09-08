@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumberOfProps property
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3af0d8a773565cb776283e614dd7925624e9fd44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b568179401bde8f3d1d314452493b7af30fc558
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418872"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522733"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

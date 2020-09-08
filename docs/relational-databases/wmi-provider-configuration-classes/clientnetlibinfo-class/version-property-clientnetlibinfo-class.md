@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Version property
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9e68c6b76da255f42025c2d1d301fbc0141168e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 216c6415a7897f3363f0404d199e9b64a62c33e7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523080"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

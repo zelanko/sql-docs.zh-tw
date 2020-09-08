@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetEnable method
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bedd46eb07c9087c0fec11879f1f941361507212
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a4fa2a1bb7dda435676564989c1fb648eb3a956
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488457"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521333"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

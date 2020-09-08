@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 89342916f850745113136a88769be5f9b0ff13f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c14b544edfe96e5cf4778a31db35a18df0b66fa5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475861"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521835"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
