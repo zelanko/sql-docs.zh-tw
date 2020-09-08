@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syssubscriptions system table
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4ca29b9f24251db261dea3d1718485a97fb44cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05a664a82c29a8c8db721b8d3d110011afc3ad48
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427540"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523553"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

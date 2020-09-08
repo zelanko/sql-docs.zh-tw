@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_history system table
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7dcc8a6e5a35ca9062bf97dd4dece2afca078fb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 803333fc2cd28c94005c33a909c990de598e232c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460322"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89524187"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_articles system table
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 25fea9fb4f556c31b4986ae4ea113a95f6d48242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f1f046a44c3dcfbe2a44de93efe2185600633e3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485475"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523631"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

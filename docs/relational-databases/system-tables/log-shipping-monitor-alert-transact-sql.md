@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_alert system table
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5a171ba3bce8b7e657b99f71c16df6bfe33db4bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0251792954c4d6a534ae6175843192619e8de8ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460382"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525353"
 ---
 # <a name="log_shipping_monitor_alert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

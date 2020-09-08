@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4ab0908d8ef5ba3a3bb24e1a518c8195174603cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c5b83521f64253aaa5d4eb6dfd6d5e49eb5d71b4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488694"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523973"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

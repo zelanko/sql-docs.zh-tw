@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525358"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88492807"
 |**page_size**|**int**|頁面的大小 (以位元組為單位)。|  
 |**file_number**|**數值 (10，0) **|資料庫中唯一的檔案識別碼 (對應于 **sys. database_files**。**file_id**) 。|  
 |**backed_up_page_count**|**數值 (10，0) **|備份的頁數。 可以是 NULL。|  
-|**file_type**|**char (1) **|這是備份的檔案，它有下列幾種：<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔。<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。<br /><br /> F = 全文檢索目錄。<br /><br /> 可以是 NULL。|  
+|**file_type**|**char(1)**|這是備份的檔案，它有下列幾種：<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔。<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。<br /><br /> F = 全文檢索目錄。<br /><br /> 可以是 NULL。|  
 |**source_file_block_size**|**數值 (10，0) **|備份資料或記錄檔時，原始資料或記錄檔所在的裝置。 可以是 NULL。|  
 |**file_size**|**numeric(20,0)**|備份檔案的長度 (以位元組為單位)。 可以是 NULL。|  
 |**logical_name**|**nvarchar(128)**|備份檔案的邏輯名稱。 可以是 NULL。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplmonthresholdmetrics system table
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c58ed139f1ff0b35b190593c14ca360e065061f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 63006d1f481ba512a78ee73208c39206d0d19ff9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454595"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89524165"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

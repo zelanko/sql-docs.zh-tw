@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_info system table
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5b807bcb3595a20bcce849b6526e9729c960d5bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d949fe0234cad850a1080b727f0917df6e6a24af
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480728"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523770"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

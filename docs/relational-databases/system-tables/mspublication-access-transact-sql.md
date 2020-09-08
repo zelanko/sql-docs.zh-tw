@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublication_access system table
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4f438a10c7840cbc9f2db2b4e5e4e50ee63197be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f8a6e52f94bae4214c1a40e1f180c73b0193c5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423302"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89524595"
 ---
 # <a name="mspublication_access-transact-sql"></a>MSpublication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
