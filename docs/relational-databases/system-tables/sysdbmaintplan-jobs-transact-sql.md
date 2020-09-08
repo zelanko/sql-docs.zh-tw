@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplan_jobs system table
 ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 224a320720f1ae8afbf89861f05e5dfd457e9efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ab3398bdf0c258a5997ce64d48db781234059bf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446560"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517677"
 ---
 # <a name="sysdbmaintplan_jobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

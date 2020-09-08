@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c80f16b6698b3190b3a32ebd48738a0be3eed6f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477928"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480923"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
 
@@ -342,7 +342,7 @@ ms.locfileid: "88477928"
   
 -   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
--   blogs.msdn.com 上的部落格文章： [從 SSIS 連接至 MySQL](https://go.microsoft.com/fwlink/?LinkId=217669)。  
+-   blogs.msdn.com 上的部落格文章： [從 SSIS 連接至 MySQL](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)。  
   
 -   blogs.msdn.com 上的技術文章： [擷取及載入 SQL Server Integration Services 中的 SharePoint 資料](https://go.microsoft.com/fwlink/?LinkId=247826)。  
   

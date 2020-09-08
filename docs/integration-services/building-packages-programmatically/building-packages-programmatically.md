@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 464bc971ca52c1363366ff439bcc5c51f32d5065
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457801"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480762"
 ---
 # <a name="building-packages-programmatically"></a>以程式設計方式建立封裝
 
@@ -98,7 +98,7 @@ ms.locfileid: "88457801"
   
 -   位於 www.codeplex.com/MSFTISProdSamples 的 CodePlex 範例：[Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
--   blogs.msdn.com 上的部落格文章：[Performance profiling your custom extensions](https://go.microsoft.com/fwlink/?LinkId=238831) (對自訂延伸模組進行效能分析)。  
+-   blogs.msdn.com 上的部落格文章：[Performance profiling your custom extensions](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490) (對自訂延伸模組進行效能分析)。  
 
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

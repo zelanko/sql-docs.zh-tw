@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 992766acbc277706711d488ebe164575c4913a88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5090cbe224a9ac3f94bff828189d3517c1dd376
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457816"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480781"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>以程式設計方式加入資料流程工作
 
@@ -82,7 +82,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章：[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
+ blogs.msdn.com 上的部落格文章：[EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042) (EzAPI - 針對 SQL Server 2012 更新)。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式探索資料流程元件](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  

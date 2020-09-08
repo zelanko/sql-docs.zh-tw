@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a79a235f7329b3bac84a34b0d8ff10b1faa889d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9173bfca78a0fcb872e2eac408ca6992738d7dbb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457788"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480744"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
 
@@ -155,9 +155,9 @@ End Module
   
 ## <a name="external-resources"></a>外部資源  
   
--   blogs.msdn.com 上的部落格文章：[API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824) (API 範例 - OleDB 來源與 OleDB 目的地)。  
+-   blogs.msdn.com 上的部落格文章：[API Sample - OleDB source and OleDB destination](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553) (API 範例 - OleDB 來源與 OleDB 目的地)。  
   
--   blogs.msdn.com 上的部落格文章：[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
+-   blogs.msdn.com 上的部落格文章：[EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042) (EzAPI - 針對 SQL Server 2012 更新)。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式新增工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

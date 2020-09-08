@@ -17,26 +17,26 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498331"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517642"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   這個資料庫範圍的系統檢視是設計成提供早期警告系統，以判斷會受到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的主要版本升級影響的物件。 您可以在升級前後使用此檢視，以取得受影響物件的完整列舉。 您需要在每個資料庫中查詢這個檢視，才能取得整個伺服器的完整計量資料。  
   
-|資料行名稱|資料類型|描述|  
+|欄名|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Class - 類別|**int** 非 Null|會受到影響的物件類別：<br /><br /> **1** = 條件約束<br /><br /> **7** = 索引和堆積|  
-|class_desc|**Nvarchar (60) ** 非 Null|類別的描述：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **指數**|  
+|class_desc|**Nvarchar (60) ** 非 Null|類別的描述：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** 非 Null|條件約束的物件識別碼，或包含索引或堆積之資料表的物件識別碼。|  
 |minor_id|**int** 空|**NULL** 代表條件約束<br /><br /> 索引和堆積的 Index_id|  
 |相依性|**Nvarchar (60) ** 非 Null|導致條件約束或索引受影響的相依性說明。 相同值也用於升級期間所產生的警告。<br /><br /> 範例：<br /><br /> **space** (用於內建功能)<br /><br /> **geometry** (用於系統 UDT)<br /><br /> **geography::Parse** (用於系統 UDT 方法)|  

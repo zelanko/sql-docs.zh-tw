@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 30e8719aac08d87d4b4ce4f86f8766c46ca397b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 78fd096b7ce59bcfe0f17fb5be6d4dbc02536f7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427240"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517222"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName 屬性 (ServerSettingsGeneralFlag 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: d2a2de2fd59222b174fe6b02fae12ff344a3de04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346224"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480600"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
 
@@ -150,6 +150,6 @@ ms.locfileid: "88346224"
 -   您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦上的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 代理程式作業來執行已升級之 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 執行個體中所儲存的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]封裝。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](https://go.microsoft.com/fwlink/?LinkId=238157)。  
+ blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)。  
   
   
