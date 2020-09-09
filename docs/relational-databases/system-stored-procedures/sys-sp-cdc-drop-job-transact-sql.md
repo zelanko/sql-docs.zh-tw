@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 76661ae687d61d28d4f92be402f623722b540ce3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec369388db417ff68b750d01b908e19ceb8c75c0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485544"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551127"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

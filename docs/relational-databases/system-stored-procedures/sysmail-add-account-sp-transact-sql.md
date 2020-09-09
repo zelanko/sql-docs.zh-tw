@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 810e0f32b5a77fa60e2c32c4b9b7259d60fc51d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85625e9b8e5a3c1acf5bbc8152b90789f33665ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473361"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551089"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

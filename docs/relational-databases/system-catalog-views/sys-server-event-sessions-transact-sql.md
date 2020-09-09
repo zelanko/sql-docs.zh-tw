@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_sessions catalog view
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c98eece7a34af4ceb0693007690ec1499d91cef4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e97bffc2aff0a5c1fc176747ac965ce296d5b914
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460578"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551375"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

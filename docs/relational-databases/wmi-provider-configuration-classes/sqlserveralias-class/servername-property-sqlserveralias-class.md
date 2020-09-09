@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServerName property
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7a4ef5a8d80f97136bc6313254d07a1a89ffe2ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5bcecf3a22661418aba02b939a824973b30a070d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472776"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550891"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>ServerName 屬性 (SqlServerAlias 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

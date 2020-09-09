@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a9f7b7d1cb6f3c3f9af3dcb9f64b42fa48af78c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374674"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551309"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>資料庫鏡像-sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

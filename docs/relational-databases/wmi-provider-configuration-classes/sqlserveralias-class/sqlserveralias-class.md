@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a1609867cc1b21338ce20deab1d51302cebde201
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d3acca52f0139cf0f7ef6085470a5d9e2b839494
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472736"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550885"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

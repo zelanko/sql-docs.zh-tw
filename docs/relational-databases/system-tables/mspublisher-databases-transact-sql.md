@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublisher_databases system table
 ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f9b520c283f62bb42a981da746995e33b7b0164
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: caba0fa6bf5bee0d00b182a82fc2add0c5061720
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419082"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550968"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8290b399d91bb196c818ba61fc7b685fcc23b383
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15090a3b52be40dba3735bb0b10ef185efe5de2b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498342"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551296"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

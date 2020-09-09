@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_targets catalog view
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0d7a67610844722fc7b280223e31f096ad534679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 931941d6d660f90030211c9baa47907cf7531007
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475261"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551390"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

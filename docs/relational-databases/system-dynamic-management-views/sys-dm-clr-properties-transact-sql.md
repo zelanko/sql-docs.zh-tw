@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7db1f2a88248f01929326f02cf19cd42ac5a5e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498381"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551285"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498381"
   
  **Version**屬性工作表示伺服器上 .NET Framework 和 hosted CLR 的版本。  
   
- **Sys. dm_clr_properties**動態 managed view 可以針對**state**屬性傳回六個不同的值，這會反映裝載 clr 的狀態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 其中包括：  
+ **Sys. dm_clr_properties**動態 managed view 可以針對**state**屬性傳回六個不同的值，這會反映裝載 clr 的狀態 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這些包括：  
   
 -   未載入 Mscoree。  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 - YY
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b78167386734dd3c42a2900819ca9ccecbf53eba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea913109a9d981d0f59a7143746bda022edccf97
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475445"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551528"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性群組類別目錄檢視 (Transact-sql) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

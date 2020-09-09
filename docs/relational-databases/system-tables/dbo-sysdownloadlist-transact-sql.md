@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0240d13b1f787eb9b0356b1443f8401477176d0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34e0ba69d668cd25b902f9decdf75c0039a74fc9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446649"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551052"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

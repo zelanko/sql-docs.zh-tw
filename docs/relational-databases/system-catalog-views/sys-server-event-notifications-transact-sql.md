@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e6a8decda6dd98ad4c6bda353c70884d0f0c84c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c9d10906885eefeb6be66d8f353fd7a553c57288
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377214"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551413"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88377214"
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改物件的日期。|  
 |**service_name**|**nvarchar(256)**|通知所送往之目標服務的名稱。|  
 |**broker_instance**|**nvarchar(128)**|具名目標服務定義所在的 Service Broker。|  
-|**creator_sid**|**Varbinary (85) **|執行陳述式來建立事件通知之登入的 SID。 如果事件通知定義中沒有指定 WITH FAN_IN，則為 NULL。|  
+|**creator_sid**|**varbinary(85)**|執行陳述式來建立事件通知之登入的 SID。 如果事件通知定義中沒有指定 WITH FAN_IN，則為 NULL。|  
 |**principal_id**|**int**|擁有這個項目的伺服器主體識別碼。|  
   
 ## <a name="permissions"></a>權限  

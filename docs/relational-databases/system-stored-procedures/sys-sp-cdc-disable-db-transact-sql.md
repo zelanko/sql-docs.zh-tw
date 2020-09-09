@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5fb6f277e372a574b7884881d3895c1f96e90724
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e9b5f17c01ebaa6a55cc5e9afa1ab83c6d924111
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492833"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551149"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

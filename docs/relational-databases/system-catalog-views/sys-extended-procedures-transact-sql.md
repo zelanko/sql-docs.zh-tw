@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2c82984e5de92eec9be80302140fb6240a211f90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1edc9a52c610c3a72660fb899d6f74470c1c00c4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486349"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551443"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d143c3304e340a73da8e1e66c4d6ea9ba4c19d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3ae68a10bc71085daf3e162f7879cfe1db84f7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472719"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550899"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 屬性 (SqlServerAlias 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

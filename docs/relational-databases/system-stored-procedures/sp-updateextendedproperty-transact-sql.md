@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f8bedf71c6ec255aa0b81117c80e9aca6f5b1f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473483"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551151"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

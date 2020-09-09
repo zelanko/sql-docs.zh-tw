@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - systaskids system table
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 49b37238615d18743d5c650df7ee294b073bf4e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a3e639fcc99f3b78d499e76062cd7f6d32f516c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488881"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551059"
 ---
 # <a name="dbosystaskids-transact-sql"></a>dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33aa400800103c2f2b695dbb01e0caf908451ace
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f145ef3109ed9ba755ee006a218313d5a7956df4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482162"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551492"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
