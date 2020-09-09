@@ -31,7 +31,7 @@ ms.locfileid: "88491196"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|LDDB_MASTER_LOAD_FAILED|  
-|訊息文字|無法還原 master 資料庫。 正在關閉 SQL Server。 Check the error logs, and rebuild the master database. 如需有關如何重建 master 資料庫的詳細資訊，請參閱《SQL Server 線上叢書》。|  
+|訊息文字|無法還原 master 資料庫。 正在關閉 SQL Server。 請檢查錯誤記錄檔並重建 master 資料庫。 如需有關如何重建 master 資料庫的詳細資訊，請參閱《SQL Server 線上叢書》。|  
   
 ## <a name="explanation"></a>說明  
 這是指出 **master** 資料庫發生各種問題的一般錯誤訊息。  

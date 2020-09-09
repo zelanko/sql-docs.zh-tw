@@ -2,7 +2,7 @@
 description: sys.dm_os_volume_stats (Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2019
+ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539242"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614596"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**資料行**|**Data type**|**說明**|  
 |**database_id**|**int**|資料庫的識別碼。 不可以是 null。|  
 |**file_id**|**int**|檔案識別碼。 不可以是 null。|  
-|**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。|  
-|**volume_id**|**nvarchar(512)**|作業系統磁碟區識別碼。 可以傳回空字串|  
-|**logical_volume_name**|**nvarchar(512)**|邏輯磁碟區名稱。 可以傳回空字串|  
-|**file_system_type**|**nvarchar(512)**|作業系統磁碟區的類型 (例如，NTFS、FAT、RAW)。 可以傳回空字串|  
+|**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。 在 Linux 作業系統上傳回 null。|  
+|**volume_id**|**nvarchar(512)**|作業系統磁碟區識別碼。 可以傳回空字串。 在 Linux 作業系統上傳回 null。|  
+|**logical_volume_name**|**nvarchar(512)**|邏輯磁碟區名稱。 可以傳回空字串。 在 Linux 作業系統上傳回 null。|  
+|**file_system_type**|**nvarchar(512)**|作業系統磁碟區的類型 (例如，NTFS、FAT、RAW)。 可以傳回空字串。 在 Linux 作業系統上傳回 null。|  
 |**total_bytes**|**bigint**|磁碟區的總大小 (以位元組為單位)。 不可以是 null。|  
 |**available_bytes**|**bigint**|磁碟區上的可用空間。 不可以是 null。|  
-|**supports_compression**|**bit**|表示磁碟區是否支援作業系統壓縮。 不可以是 null。|  
-|**supports_alternate_streams**|**bit**|表示磁碟區是否支援替代資料流。 不可以是 null。|  
-|**supports_sparse_files**|**bit**|表示磁碟區是否支援疏鬆檔案。  不可以是 null。|  
-|**is_read_only**|**bit**|表示磁碟區目前是否標示成唯讀。 不可以是 null。|  
-|**is_compressed**|**bit**|表示這個磁碟區目前是否已經壓縮。 不可以是 null。|  
+|**supports_compression**|**tinyint**|表示磁碟區是否支援作業系統壓縮。 在 Windows 上不可以是 null，並且在 Linux 作業系統上傳回 null。|  
+|**supports_alternate_streams**|**tinyint**|表示磁碟區是否支援替代資料流。 在 Windows 上不可以是 null，並且在 Linux 作業系統上傳回 null。|  
+|**supports_sparse_files**|**tinyint**|表示磁碟區是否支援疏鬆檔案。  在 Windows 上不可以是 null，並且在 Linux 作業系統上傳回 null。|  
+|**is_read_only**|**tinyint**|表示磁碟區目前是否標示成唯讀。 不可以是 null。|  
+|**is_compressed**|**tinyint**|表示這個磁碟區目前是否已經壓縮。 在 Windows 上不可以是 null，並且在 Linux 作業系統上傳回 null。|  
+|**incurs_seek_penalty**|**tinyint**|指出支援此磁片區的儲存體類型。 可能的值包括：<br /><br />0：在此磁片區上沒有搜尋損失，通常是在存放裝置是 PMM 或 SSD 時<br /><br />1：在此磁片區上搜尋損失，通常是在存放裝置為 HDD 時<br /><br />2：當磁片區位於 UNC 路徑或掛接的共用上時，無法判斷存放裝置類型<br /><br />Null：無法在 Linux 作業系統上判斷儲存體類型<br /><br />**適用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從) 開始 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|  
   
 ## <a name="security"></a>安全性  
   
