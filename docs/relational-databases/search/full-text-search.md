@@ -34,7 +34,7 @@ ms.locfileid: "88465025"
 -   [使用全文檢索搜尋查詢](../../relational-databases/search/query-with-full-text-search.md)
 
 > [!NOTE]
-> Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如果您在安裝 SQL Server 時未選取全文檢索搜尋，請重新執行 SQL Server 安裝程式予以新增。
+> 全文檢索搜尋是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫引擎的選擇性元件之一。 如果您在安裝 SQL Server 時未選取全文檢索搜尋，請重新執行 SQL Server 安裝程式予以新增。
 
 ## <a name="overview"></a>概觀
 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml** 或 **varbinary(max)** 和 **FILESTREAM**。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  

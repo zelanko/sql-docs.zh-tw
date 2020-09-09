@@ -28,7 +28,7 @@
           href: ../integration-services/ssis-quickstart-deploy-cmdline.md
         - name: 使用 PowerShell 部署
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
-        - name: '使用 C# 部署'
+        - name: 使用 C# 部署
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
     - name: 執行
       items:
@@ -42,7 +42,7 @@
           href: ../integration-services/ssis-quickstart-run-cmdline.md
         - name: 使用 PowerShell 執行
           href: ../integration-services/ssis-quickstart-run-powershell.md
-        - name: '使用 C# 執行'
+        - name: 使用 C# 執行
           href: ../integration-services/ssis-quickstart-run-dotnet.md
 - name: 在 Azure 中部署和執行套件
   href: ../integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
@@ -811,7 +811,7 @@
           href: ../integration-services/expressions/bitwise-and-ssis-expression.md
         - name: ~ (位元 Not) (SSIS 運算式)
           href: ../integration-services/expressions/bitwise-not-ssis-expression.md
-        - name: == (等於) (SSIS 運算式)
+        - name: '== (等於) (SSIS 運算式)'
           href: ../integration-services/expressions/equal-ssis-expression.md
         - name: '!= (不等於) (SSIS 運算式)'
           href: ../integration-services/expressions/unequal-ssis-expression.md
@@ -1843,7 +1843,7 @@
 - name: 資源
   items:
     - name: SSIS 論壇 >>
-      href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
+      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: SSIS 部落格 >>
