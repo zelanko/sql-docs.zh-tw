@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_parameter
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cfb61e7c3bbfcbb3bd1c93bff3d650912f7ebd01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a52b93428666d44c3b42777566c18e0d5c8e4f7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493233"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535531"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

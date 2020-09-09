@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2cbf7c84c22998b5ee7e43fadad6a42cf02d17b8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481204"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535291"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3d1feb50ba79c7d9cb33218db1a256796d762b5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e8d150c2b45cd3556b47bef9cb2b2f882156f355
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447330"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536584"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_dbmmonitorupdate [ database_name ]
  要為其更新鏡像狀態的資料庫名稱。 如果未指定 *database_name* ，程式會補救伺服器實例上每個鏡像資料庫的狀態資料表。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  None  

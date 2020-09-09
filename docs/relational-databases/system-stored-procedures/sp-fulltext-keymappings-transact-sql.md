@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59445fdd9d4d7588291b2fac0073b962155cde04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464342"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536392"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -63,7 +63,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
-|機碼|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
+|答案|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
   
  <sup>*</sup> 索引鍵的資料類型與基表中全文檢索索引鍵資料行的資料類型相同。  
   

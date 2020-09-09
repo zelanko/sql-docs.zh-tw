@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0724bb3be7b22dc506f6038a9a5b9d1a1d25c0a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df9b2be3d6253bd3ba225d4cc444e705678109f3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485750"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534932"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,6 +1,6 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds （T-sql）
-description: 描述 sp_replmonitorsubscriptionpendingcmds 預存程式，此程式會傳回交易式發行集之訂閱的暫止命令數目的相關資訊。
+title: 'sp_replmonitorsubscriptionpendingcmds (T-sql) '
+description: 描述 sp_replmonitorsubscriptionpendingcmds 預存程式，它會傳回交易式發行集之訂閱的暫止命令數目的相關資訊。
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f8f07a38d612375030f43e2faf2194d4bc65bca8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b83c6492f065f29335bc4665156c02a18367795
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786131"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534897"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,17 +43,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。 *publisher* 是 **sysname**，沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'`這是已發行之資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 這是已發行的資料庫名稱。 *publisher_db* 是 **sysname**，沒有預設值。  
   
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 這是訂閱者的名稱。 *訂閱者* 是 **sysname**，沒有預設值。  
   
-`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'` 這是訂閱資料庫的名稱。 *subscriber_db* 是 **sysname**，沒有預設值。  
   
-`[ @subscription_type = ] subscription_type`如果訂用帳戶的類型，則為。 *publication_type*是**int**，沒有預設值，而且可以是下列其中一個值。  
+`[ @subscription_type = ] subscription_type` 如果訂用帳戶的類型。 *publication_type* 是 **int**，沒有預設值，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -68,13 +68,13 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |**estimatedprocesstime**|**int**|估計將所有暫止命令傳遞給訂閱者所需要的秒數。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_replmonitorsubscriptionpendingcmds**用於異動複寫。  
+ **sp_replmonitorsubscriptionpendingcmds** 用於異動複寫。  
   
 ## <a name="permissions"></a>權限  
- 只有在散發者端的**系統管理員（sysadmin** ）固定伺服器角色成員，或散發資料庫中之**db_owner**固定資料庫角色的成員，才能夠執行**sp_replmonitorsubscriptionpendingcmds**。 使用散發資料庫之發行集的發行集存取清單成員可以執行**sp_replmonitorsubscriptionpendingcmds** ，以傳回該發行集的暫止命令。  
+ 只有散發者端之 **系統管理員（sysadmin** ）固定伺服器角色的成員，或是散發資料庫中 **db_owner** 固定資料庫角色的成員，才能夠執行 **sp_replmonitorsubscriptionpendingcmds**。 使用散發資料庫之發行集的發行集存取清單成員可以執行 **sp_replmonitorsubscriptionpendingcmds** ，以傳回該發行集的暫止命令。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

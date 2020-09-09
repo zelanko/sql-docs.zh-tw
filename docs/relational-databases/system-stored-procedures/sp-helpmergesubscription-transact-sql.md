@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464230"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535189"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|訂閱的狀態：<br /><br /> **0** = 所有作業都在等待啟動<br /><br /> **1** = 一或多個作業正在啟動<br /><br /> **2** = 所有作業都已成功執行<br /><br /> **3** = 至少有一項工作正在執行<br /><br /> **4** = 所有作業都已排程和閒置<br /><br /> **5** = 至少有一項作業在先前的失敗之後嘗試執行<br /><br /> **6** = 至少有一項作業無法成功執行|  
 |**subscriber_type**|**int**|訂閱者的類型。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推送<br /><br /> **1** = 提取<br /><br /> **2** = 兩者|  
-|**優先**|**float (8) **|表示訂閱優先權的數字。|  
+|**priority**|**float (8) **|表示訂閱優先權的數字。|  
 |**sync_type**|**tinyint**|訂閱同步處理類型。|  
 |**description**|**nvarchar(255)**|這項合併訂閱的簡要描述。|  
 |**merge_jobid**|**binary(16)**|合併代理程式的作業識別碼。|  

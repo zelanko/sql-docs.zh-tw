@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_testlinkedserver
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ecd825b69ad3c78171ec8cb22a0b49488a6b9cd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 483b717511d70028bd8af4fc4649f210bbb972b1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489066"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534819"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

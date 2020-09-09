@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Resource Governor, dynamic management views
 - dynamic management views [SQL Server], Resource Governor
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8c7bcd99f35edc7c15863a08b4bab4aa88c82a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7733af9ac9c41368ba53d0035f79ac09cda4a409
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419782"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534496"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>資源管理員相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

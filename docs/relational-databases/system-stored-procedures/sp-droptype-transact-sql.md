@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droptype
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a20b3522e7e477af826e17d7fb654e3cd99220a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d470c4f6f706db73f401511826a6dbcd5903d8d0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493254"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536145"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

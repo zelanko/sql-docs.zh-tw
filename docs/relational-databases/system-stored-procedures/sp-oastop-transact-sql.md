@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAStop
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1ec53c344fc3b69351c8b7e5d8165db1120471c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d30bd1bfc143f18f67465b2d1ec71f7c4c97a9d2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473940"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534914"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 158f49e40b60b528fa0a243a66fb3a5d29c7b6b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42184546069fb5358fbdc8863998b7bda74f89a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473450"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534752"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88473450"
  呼叫端必須是 **系統管理員（sysadmin** ）固定伺服器角色的成員、散發資料庫的 **db_owner** 固定資料庫角色，或是與發行者資料庫相關聯之定義發行集的發行集存取清單的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的複寫預存程式 ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

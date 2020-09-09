@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergealternatepublisher
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: feaecea81d5d92cfa5fb8e5bf171edc6ea05d99d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c808c4326736a190dace9e6dd839306ec65c7307
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481310"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536471"
 ---
 # <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

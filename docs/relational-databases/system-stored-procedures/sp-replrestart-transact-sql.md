@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replrestart
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: aebe6c9dd60c697cd986dfc1412430821230130d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1c1ce05fe21325331a9319de270d860a2b6e44a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493085"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534883"
 ---
 # <a name="sp_replrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

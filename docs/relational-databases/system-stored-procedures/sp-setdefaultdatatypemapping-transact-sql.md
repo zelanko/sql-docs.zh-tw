@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d31d4f44d7b1b60c527a5fa8abcf1e9736b1f674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a712ecb629090947b0612844ce6049540b7359a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493021"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534948"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|來源是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
-|**甲骨文**|來源是一個 Oracle 資料庫。|  
+|**ORACLE**|來源是一個 Oracle 資料庫。|  
 |NULL (預設值)||  
   
  如果 *mapping_id* 為 Null，您就必須指定這個參數。  
@@ -90,7 +90,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目的地是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
-|**甲骨文**|目的地是一個 Oracle 資料庫。|  
+|**ORACLE**|目的地是一個 Oracle 資料庫。|  
 |**DB2**|目的地是一個 IBM DB2 資料庫。|  
 |**Sybase**|目的地是一個 Sybase 資料庫。|  
 |NULL (預設值)||  
