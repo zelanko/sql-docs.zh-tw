@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.sp_query_store_unforce_plan
 - sp_query_store_unforce_plan
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2109e1cec9655f53bbdcb0b213daf61955e3b86
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 7dec52b433bacd7d289708fa3e705771c07f7939
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646088"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547443"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-sql) 
 

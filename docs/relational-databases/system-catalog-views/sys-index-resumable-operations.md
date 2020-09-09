@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490305"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546762"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql) 
 

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_indexes catalog view
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2dcbefc1a9ea50841a7807002e31d236130eb038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1ceda15c69bd989172ad3fbb05e8c696fd9750aa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400404"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546703"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88400404"
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**||從 [sys. 索引](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)繼承資料行。|  
 |**using_xml_index_id**|**int**|NULL = 主要 XML 索引。<br /><br /> 非 Null = 次要 XML 索引。<br /><br /> 非 Null 是主要 XML 索引的自我聯結參考。|  
-|**secondary_type**|**char (1) **|輸入次要索引的描述：<br /><br /> P = PATH 次要 XML 索引<br /><br /> V = VALUE 次要 XML 索引<br /><br /> R = PROPERTY 次要 XML 索引<br /><br /> NULL = 主要 XML 索引|  
+|**secondary_type**|**char(1)**|輸入次要索引的描述：<br /><br /> P = PATH 次要 XML 索引<br /><br /> V = VALUE 次要 XML 索引<br /><br /> R = PROPERTY 次要 XML 索引<br /><br /> NULL = 主要 XML 索引|  
 |**secondary_type_desc**|**nvarchar(60)**|輸入次要索引的描述：<br /><br /> PATH = PATH 次要 XML 索引<br /><br /> VALUE = VALUE 次要 XML 索引<br /><br /> PROPERTY = PROPERTY 次要 XML 索引。<br /><br /> NULL = 主要 XML 索引|  
 |**xml_index_type**|**tinyint**|索引類型：<br /><br /> 0 = 主要 XML 索引<br /><br /> 1 = 次要 XML 索引<br /><br /> 2 = 選擇性 XML 索引<br /><br /> 3 = 次要選擇性 XML 索引|  
 |**xml_index_type_description**|**nvarchar(60)**|索引類型的描述：<br /><br /> PRIMARY_XML<br /><br /> 次要 XML 索引<br /><br /> 選擇性 XML 索引<br /><br /> 次要選擇性 XML 索引|  

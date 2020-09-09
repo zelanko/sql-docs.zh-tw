@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489128"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547452"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -44,7 +44,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'` 這是屬性的整數識別碼。 *attribute_id* 是 **int**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

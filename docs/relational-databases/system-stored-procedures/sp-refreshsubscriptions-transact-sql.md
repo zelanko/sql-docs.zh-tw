@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 98acb61611d25e695c481e9a93a215333b9ae020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b66508f869a2ee2ab7e0a9cad80340e69c798202
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485821"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547427"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

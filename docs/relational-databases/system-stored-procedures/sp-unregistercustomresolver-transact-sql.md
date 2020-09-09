@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregistercustomresolver
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e1d5957d830b322be2b4c32030a514988583522f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54d4b4ff0b08f0cd5a2a1275c0f1bc65d462137e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492894"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547308"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.parameter_xml_schema_collection_usages catalog view
 ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af263659348952f810d427b177d8eee6fd3ac936
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd2000cff38fc2e8813160928baefe62a020d8a1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447912"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546778"
 ---
 # <a name="sysparameter_xml_schema_collection_usages-transact-sql"></a>sys.parameter_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

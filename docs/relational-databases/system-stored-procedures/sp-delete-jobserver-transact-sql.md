@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4db36a6fbcf09ca6758fd3838ab489bc6aa23cb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474338"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546139"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

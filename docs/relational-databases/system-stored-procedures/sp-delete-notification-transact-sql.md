@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_notification
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 65a8442c4f957cda4db9c33e0988ba5dca05ca88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0f023990f20765272fe2cde09f5599ecf736f076
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469613"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546148"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

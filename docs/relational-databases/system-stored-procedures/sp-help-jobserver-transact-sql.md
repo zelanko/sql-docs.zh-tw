@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobserver
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546090"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

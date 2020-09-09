@@ -1,6 +1,6 @@
 ---
-description: 'sys.dm_exec_compute_node_errors (Transact-sql) '
-title: sys.dm_exec_compute_node_errors (Transact-sql) |Microsoft Docs
+description: 'sys. dm_exec_compute_node_errors (Transact-sql) '
+title: sys. dm_exec_compute_node_errors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b12f7bc4dc5cf9328d26c0f81a827731d28c234
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: a7e65469192e14c7a2cb9d3facf3be3730a08428
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283829"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546605"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-sql) 
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -40,9 +40,9 @@ ms.locfileid: "89283829"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|與錯誤相關聯的唯一數值識別碼。|在系統的所有查詢錯誤中都是唯一的|  
 |source|`nvarchar(255)`|來源執行緒或進程描述||  
-|type|`nvarchar(255)`|錯誤的類型。||  
+|類型|`nvarchar(255)`|錯誤的類型。||  
 |create_time|`datetime`|發生錯誤的時間||  
-|compute_node_id|`int`|特定計算節點的識別碼|請參閱[sys.dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)的 compute_node_id&#41;|  
+|compute_node_id|`int`|特定計算節點的識別碼|請參閱[sys. dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)的 compute_node_id&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 查詢的識別碼（如果有的話）。||  
 |spid|`int`|SQL Server 會話的識別碼||  
 |thread_id|`int`|發生錯誤之執行緒的數值識別碼。||  

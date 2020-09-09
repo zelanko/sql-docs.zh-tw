@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e301fe1ef2251a5c5814074864ccf566791ccc8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8a1285df9bf4d7e17e074e3c22f0ff37241c400
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492881"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545836"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

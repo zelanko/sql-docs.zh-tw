@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - data space catalog views [SQL Server]
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1ca8f547c24c09733d2313dd56a0e38e5da82ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 66a6e825239a4aa43f6ca92ce21b447fc1706efd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470060"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546830"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

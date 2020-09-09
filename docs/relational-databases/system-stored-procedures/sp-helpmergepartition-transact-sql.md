@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e7824eb6e547b8bacec2cae297e5f236376d0aa0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 79e4d1ea4ea226706aa34db3121b2a4469a330b9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474017"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546052"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

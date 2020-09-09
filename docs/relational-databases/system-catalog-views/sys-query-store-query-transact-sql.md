@@ -19,15 +19,15 @@ helpviewer_keywords:
 - query_store_query catalog view
 - sys.query_store_query catalog view
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0908c3ad3995510eb7e5cf1509941b735235005e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e96891721e5c42deb03e697c06a7f99ce353ad99
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460620"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546707"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

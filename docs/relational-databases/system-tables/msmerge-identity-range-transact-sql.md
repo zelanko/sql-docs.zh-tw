@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4011fcc653e72327fbbd20b3b7d8ec1da135f4f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0c473f481bc2a997d222558654ae960d4359667b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463913"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547091"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

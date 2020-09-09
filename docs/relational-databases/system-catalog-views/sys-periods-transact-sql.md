@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7f084571472f1f37a1e825ae2067e51a817ff35
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c2aecc1b4547812a4e388297270761481956835
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475281"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546688"
 ---
 # <a name="sysperiods-transact-sql"></a>sys. 句點 (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

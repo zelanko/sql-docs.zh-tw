@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data collector view
 - data collector [SQL Server], views
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b35f12b1ff06e417a01fafe6f4de1c012ee8f9fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ba8bb14fbcd308c764db1693802d660f729fed1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482211"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546868"
 ---
 # <a name="data-collector-views-transact-sql"></a>資料收集器檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

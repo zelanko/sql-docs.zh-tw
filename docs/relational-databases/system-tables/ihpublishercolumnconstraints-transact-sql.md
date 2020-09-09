@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishercolumnconstraints system table
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e683c32184ffa781fbd3e0b3a11d4e96343ee189
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5fd48949931767dde0873ac95c7184544850e842
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492794"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547182"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

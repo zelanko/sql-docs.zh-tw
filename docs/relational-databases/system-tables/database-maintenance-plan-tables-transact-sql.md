@@ -15,14 +15,14 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], system tables
 - system tables [SQL Server], database maintenance plans
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3c29bede925a84fda9d538c7f474ad6cebdf7c83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5abffa4b260d63d203dce9510c599d2187901620
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460380"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547214"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>資料庫維護計畫資料表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

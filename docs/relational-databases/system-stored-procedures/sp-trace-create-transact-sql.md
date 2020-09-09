@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47e16f40b7cdd9ea9c65d3262487a7a68c8cb6ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485573"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547317"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,7 +98,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |1|未知的錯誤。|  
 |10|無效的選項。 當指定的選項不相容時，便傳回這個代碼。|  
 |12|未建立檔案。|  
-|13|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|13|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
 |14|無效停止時間。 當指定的停止時間已發生過時，便傳回這個代碼。|  
 |15|無效的參數。 當使用者提供不相容的參數時，便傳回這個代碼。|  
   
@@ -150,8 +150,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   
   

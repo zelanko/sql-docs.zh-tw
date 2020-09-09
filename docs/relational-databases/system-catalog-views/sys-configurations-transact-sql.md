@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486447"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546820"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

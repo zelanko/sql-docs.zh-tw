@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_contents system table
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 81320e7cc5301577369d6d3d89cbfb53f77b0e6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 32041fc09c105509e050aa230ab05d1e8b3de6e6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469092"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547084"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

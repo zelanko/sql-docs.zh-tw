@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474427"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546207"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||代表 Web 同步處理之複寫接聽程式位置的 URL。|  
 |**merge_job_login**||用來執行代理程式之 Windows 帳戶的登入。|  
 |**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
-|**優先**||僅適用于回溯相容性;請改為在發行者端執行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改訂用帳戶的優先順序。|  
+|**priority**||僅適用于回溯相容性;請改為在發行者端執行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) ，以修改訂用帳戶的優先順序。|  
 |**publisher_login**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**publisher_security_mode**|**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  

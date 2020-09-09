@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0178d7e6458cc5cdf35e66313d00268f20b35363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b60d6f7efb33398789795753f8921ad9d5c55d1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375444"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546717"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88375444"
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|識別每個收集組執行。 用來聯結此檢視與其他詳細記錄。 可為 Null。|  
 |parent_log_id|**bigint**|識別父封裝或收集組。 不可為 Null。 這些識別碼會以父子式關聯性鏈結，可讓您判斷哪個收集組啟動哪個封裝。 這個檢視會依據父子式連結分組這些記錄項目，並縮排封裝的名稱，以便清楚地顯示呼叫鏈結。|  
-|NAME|**nvarchar(4000)**|這個記錄項目所代表之收集組或封裝的名稱。 可為 Null。|  
+|名稱|**nvarchar(4000)**|這個記錄項目所代表之收集組或封裝的名稱。 可為 Null。|  
 |status|**smallint**|指出收集組或封裝的目前狀態。 可為 Null。<br /><br /> 值為：<br /><br /> 0 = 執行中<br /><br /> 1 = 完成<br /><br /> 2 = 失敗|  
 |runtime_execution_mode|**smallint**|指出收集組活動是收集資料或上傳資料。 可為 Null。|  
 |start_time|**datetime**|啟動收集組或封裝的時間。 可為 Null。|  
@@ -52,7 +52,7 @@ ms.locfileid: "88375444"
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器視圖 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [資料收集器檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

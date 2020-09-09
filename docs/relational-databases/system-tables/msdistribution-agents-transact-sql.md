@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9802c60aed31ec8e5cb04f7d053761382e5f90df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2433e5dcc96cc8b60adbc231a4f40e5a726dc62
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454677"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547148"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88454677"
 |**dts_package_name**|**sysname**|DTS 封裝的名稱。 例如，如果是名為 **DTSPub_Package**的封裝，請指定 `@dts_package_name = N'DTSPub_Package'` 。|  
 |**dts_package_password**|**Nvarchar (524) **|封裝的密碼。|  
 |**dts_package_location**|**int**|封裝位置。 封裝的位置**可以是散發****者或訂閱者**。|  
-|**希**|**Varbinary (85) **|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
+|**希**|**varbinary(85)**|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 驗證<br /><br /> **1**個  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**subscriber_login**|**sysname**|連接到訂閱者時所用的登入。|  

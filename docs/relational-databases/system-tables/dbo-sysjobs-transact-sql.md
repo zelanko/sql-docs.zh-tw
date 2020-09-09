@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb1e7125dd953fe4904c963f888ae9c11c400df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454730"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545791"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88454730"
 |**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category_id**|**int**|作業類別目錄的識別碼。|  
-|**owner_sid**|**Varbinary (85) **|作業擁有者的安全性識別碼 (SID)。|  
+|**owner_sid**|**varbinary(85)**|作業擁有者的安全性識別碼 (SID)。|  
 |**notify_level_eventlog**|**int**|表示在哪些情況下，應該將通知事件記錄到 Microsoft Windows 應用程式記錄檔的**位元遮罩**：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
 |**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  
 |**notify_level_netsend**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送網路訊息：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成時 (，不論工作結果) |  

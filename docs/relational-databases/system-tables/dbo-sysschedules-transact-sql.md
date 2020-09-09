@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488862"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545800"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488862"
 |**schedule_uid**|**uniqueidentifier**|作業排程的唯一識別碼。 這個值用來識別分散式作業的排程。|  
 |**originating_server_id**|**int**|作業排程的來源主要伺服器識別碼。|  
 |**name**|**sysname (Nvarchar (128) # B3 **|作業排程的使用者自訂名稱。 這個名稱在作業內必須是唯一的。|  
-|**owner_sid**|**Varbinary (85) **|擁有作業排程之使用者或群組的 Microsoft Windows *security_identifier* 。|  
+|**owner_sid**|**varbinary(85)**|擁有作業排程之使用者或群組的 Microsoft Windows *security_identifier* 。|  
 |**啟用**|**int**|作業排程的狀態：<br /><br /> **0** = 未啟用。<br /><br /> **1** = 已啟用。<br /><br /> 如果未啟用排程，便不會依據這份排程來執行任何作業。|  
 |**freq_type**|**int**|針對這份排程來執行作業的頻率。<br /><br /> **1** = 僅限一次<br /><br /> **4** = 每日<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於 **freq_interval**<br /><br /> **64** = 在 SQL Server Agent 服務啟動時執行<br /><br /> **128** = 電腦閒置時執行|  
 |**freq_interval**|**int**|執行作業的天數。 取決於 **freq_type**的值。 預設值為 **0**，表示 **freq_interval** 未使用。 請參閱下表以取得可能的值及其效果。|  

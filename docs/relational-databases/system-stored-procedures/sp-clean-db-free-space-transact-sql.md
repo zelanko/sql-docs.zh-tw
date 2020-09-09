@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_clean_db_free_space
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 763697cbdf0ea842fb469ee781511e90266bf8b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 508ead96133a178e5abbe939defcefa4d6c33492
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486152"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546241"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

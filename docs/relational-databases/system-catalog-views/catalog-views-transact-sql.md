@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], metadata
 - catalog views [SQL Server], about catalog views
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402604"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546884"
 ---
 # <a name="system-catalog-views-transact-sql"></a> (Transact-sql) 的系統目錄檢視
 

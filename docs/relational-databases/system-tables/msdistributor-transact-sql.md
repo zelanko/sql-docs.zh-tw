@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistributor system table
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7086cae782cb002244466a6de56a9e8bb73827d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c38960fab8e1599af4ac74ca865092b09fbd178
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460355"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547117"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 954d468134c49d3b86fc39de9177afc164328400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b81d3535d2ea6a8abf18083f8d6c13d0f6ce8697
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446668"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545862"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server Agent 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 347d05c0bfc37b1c14fddb728df5508e062cb13d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398694"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546555"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

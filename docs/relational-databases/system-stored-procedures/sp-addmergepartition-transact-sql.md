@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepartition
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1bf10e593c23b4f31f418df45e9ad0fe03dbdcdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6ffb754208c6923a625860ba3c22bd9dc88e466d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489635"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546313"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

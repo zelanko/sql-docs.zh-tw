@@ -15,14 +15,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c60aad12977f5260cc108697e52245bc8a37d9d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446533"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547020"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

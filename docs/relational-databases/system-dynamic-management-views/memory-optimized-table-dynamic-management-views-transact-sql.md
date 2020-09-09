@@ -1,6 +1,6 @@
 ---
-title: 記憶體優化資料表動態管理 Views （Transact-sql）
-description: 瞭解 SQL Server 中記憶體內部 OLTP 所使用的 SQL Server 動態管理檢視和物件目錄檢視。
+title: '記憶體優化的資料表動態管理檢視 (Transact-sql) '
+description: 瞭解 SQL Server 中的記憶體內部 OLTP 所使用的 SQL Server 動態管理檢視和物件目錄檢視。
 ms.custom: seo-dt-2019
 ms.date: 02/01/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cbcc1bfb022f213295f5c3c37d78be4935fbf48
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b99bf0b996b94ebe96033a2d5a25a5e189cd65ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442515"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546668"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>記憶體最佳化的資料表動態管理檢視 (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動態管理檢視（dmv）可搭配記憶體內部 OLTP 使用：  
+  下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動態管理檢視 (dmv) 用於記憶體內部 OLTP：  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
 
 :::row:::
     :::column:::
-        [dm_db_xtp_checkpoint_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md)
+        [sys. dm_db_xtp_checkpoint_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md)
 
-        [dm_db_xtp_gc_cycle_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-gc-cycle-stats-transact-sql.md)
+        [sys. dm_db_xtp_gc_cycle_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-gc-cycle-stats-transact-sql.md)
 
         [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)
 
@@ -40,14 +40,14 @@ ms.locfileid: "87442515"
 
         [sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)
 
-        [dm_db_xtp_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-transactions-transact-sql.md)
+        [sys. dm_db_xtp_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-transactions-transact-sql.md)
 
-        [dm_xtp_gc_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-stats-transact-sql.md)
+        [sys. dm_xtp_gc_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-stats-transact-sql.md)
 
-        [dm_xtp_transaction_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-transaction-stats-transact-sql.md)
+        [sys. dm_xtp_transaction_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-transaction-stats-transact-sql.md)
     :::column-end:::
     :::column:::
-        [dm_db_xtp_checkpoint_files &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)
+        [sys. dm_db_xtp_checkpoint_files &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)
 
         [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)
 
@@ -57,9 +57,9 @@ ms.locfileid: "87442515"
 
         [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)
 
-        [dm_xtp_gc_queue_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)
+        [sys. dm_xtp_gc_queue_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)
 
-        [dm_xtp_system_memory_consumers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)
+        [sys. dm_xtp_system_memory_consumers &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -78,7 +78,7 @@ ms.locfileid: "87442515"
 
 ### <a name="internal-dmvs"></a>內部 Dmv
 
-還有其他僅供內部使用的 Dmv，我們不提供直接的檔。 在記憶體優化資料表的區域中，未記載的 Dmv 包括下列各項：
+還有其他的 Dmv 僅供內部使用，而且我們不提供任何直接的檔。 在記憶體優化資料表的區域中，未記載的 Dmv 包含下列各項：
 
 - sys. dm_xtp_threads
 - sys. dm_xtp_transaction_recent_rows

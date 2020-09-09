@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_index_xml procedure
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6190608c2c481b80f9cb3a1df8e8d2114387330b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef0113079e1bbbe0f82343eead26f8fca1609400
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486007"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546063"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## <a name="see-also"></a>另請參閱  
  [空間索引預存程式](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
- [空間索引總覽](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [XQuery 基本概念](../../xquery/xquery-basics.md)   
  [XQuery 語言參考](../../xquery/xquery-language-reference-sql-server.md)  

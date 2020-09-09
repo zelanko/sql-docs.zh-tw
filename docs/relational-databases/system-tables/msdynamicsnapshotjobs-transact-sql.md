@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdynamicsnapshotjobs system table
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3d9e7a86050d2bdf7f30c896ad2567f390955b5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2767813f713d8970693789add7e4ab7baa451620
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454664"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547118"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

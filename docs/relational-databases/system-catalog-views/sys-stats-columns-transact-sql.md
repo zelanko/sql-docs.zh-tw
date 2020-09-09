@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.stats_columns catalog view
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818a96ab6d867e7aee0ec2e6485e88c8434cdc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba458e094cace3e10bb7a2c21466b44cfea0ba5b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490122"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546744"
 ---
 # <a name="sysstats_columns-transact-sql"></a>sys.stats_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

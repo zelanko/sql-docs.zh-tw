@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 33610db3883facdc6dfb198cfe8947ef965baa82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f29ad11ca5b1df94e445466a5402637a2abab023
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486023"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546118"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -92,7 +92,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
- [FULLTEXTSERVICEPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

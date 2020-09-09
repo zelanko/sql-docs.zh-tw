@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_histogram
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1713bb208fd556b23776fcfc2871879e6aa0d79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e1ba161b0baefa42b68960c26941926fb226288
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464236"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546091"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

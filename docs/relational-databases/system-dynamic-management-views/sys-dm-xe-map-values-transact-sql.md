@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_map_values dynamic management view
 - xe
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46f94a90a63c64e8a2b841337b875256154e2e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 235f6d9bf0d84985d9749f9cae5ee2b93460feae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498304"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546352"
 ---
 # <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

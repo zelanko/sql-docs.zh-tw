@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1266bd0c4a8af020a3e29900c2d82d881010a4e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e616cea34c3c2b440decaec14ac20be3a6bcc30
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423292"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547057"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

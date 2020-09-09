@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], XML
 - XML [SQL Server], system stored procedures
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0ac976aaa5ef4b7ed07b77f37f1a0ae2d92443c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab3fcca8f710bd04a805f0783901cb106d62f75d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473324"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545818"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
-ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88618118"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546586"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5085fce0bec1568b940fbffd369effd0a6d31c8f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489551"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546203"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer` 這是正在使用的 ODBC 版本。 *ODBCVer* 是 **int**，預設值是2。 這表示 ODBC 2。 有效值是 2 或 3。 如需第2版和第3版之間的行為差異，請參閱 ODBC **SQLColumns** 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  **Sp_columns**目錄預存程式相當於 ODBC 中的**SQLColumns** 。 傳回的結果會依 **TABLE_QUALIFIER**、 **TABLE_OWNER**和 **TABLE_NAME**排序。  

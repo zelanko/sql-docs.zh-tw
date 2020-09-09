@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489976"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546578"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,10 +74,10 @@ ms.locfileid: "88489976"
 |**max_elapsed_time**|**bigint**|這個計畫的任何一次完成執行所經歷的最多時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
 |**query_hash**|**二元 (8) **|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
 |**query_plan_hash**|**二元 (8) **|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
-|**total_rows**|**bigint**|查詢傳回的資料列總數。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
-|**last_rows**|**bigint**|上次執行查詢時所傳回的資料列數目。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
-|**min_rows**|**bigint**|在一次執行期間，查詢所傳回的資料列數目下限。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
-|**max_rows**|**bigint**|在一次執行期間，查詢所傳回的資料列數目上限。 不可為 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
+|**total_rows**|**bigint**|查詢傳回的資料列總數。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
+|**last_rows**|**bigint**|上次執行查詢時所傳回的資料列數目。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
+|**min_rows**|**bigint**|在一次執行期間，查詢所傳回的資料列數目下限。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
+|**max_rows**|**bigint**|在一次執行期間，查詢所傳回的資料列數目上限。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
 |**statement_sql_handle**|**varbinary(64)**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 只有在查詢存放區開啟並收集該特定查詢的統計資料時，才會填入非 Null 值。|  
 |**statement_context_id**|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 只有在查詢存放區開啟並收集該特定查詢的統計資料時，才會填入非 Null 值。|  
 |**total_dop**|**bigint**|這個計畫在編譯以來使用之平行處理原則的總程度總和。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
@@ -104,14 +104,14 @@ ms.locfileid: "88489976"
 |**last_used_threads**|**bigint**|當此計畫最後一次執行時，所使用的平行線程數目。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 |**min_used_threads**|**bigint**|此計畫在一次執行期間曾使用的最小平行線程數目。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 |**max_used_threads**|**bigint**|此計畫在一次執行期間曾使用的最大平行線程數目。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
-|**total_columnstore_segment_reads**|**bigint**|查詢讀取之資料行存放區區段的總總和。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**last_columnstore_segment_reads**|**bigint**|上次執行查詢時所讀取的資料行存放區區段數目。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**min_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目下限。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**max_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目上限。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**total_columnstore_segment_skips**|**bigint**|查詢略過資料行存放區區段的總和。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**last_columnstore_segment_skips**|**bigint**|上次執行查詢時所略過的資料行存放區區段數目。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**min_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目下限。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**max_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目上限。 不可為 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|
+|**total_columnstore_segment_reads**|**bigint**|查詢讀取之資料行存放區區段的總總和。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**last_columnstore_segment_reads**|**bigint**|上次執行查詢時所讀取的資料行存放區區段數目。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**min_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目下限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**max_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目上限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**total_columnstore_segment_skips**|**bigint**|查詢略過資料行存放區區段的總和。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**last_columnstore_segment_skips**|**bigint**|上次執行查詢時所略過的資料行存放區區段數目。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**min_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目下限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**max_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目上限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|
 |**total_spills**|**bigint**|此查詢在編譯後的執行溢出的總頁數。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
 |**last_spills**|**bigint**|上次執行查詢時溢出的頁面數目。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
 |**min_spills**|**bigint**|此查詢在單次執行期間已溢出的最小頁面數目。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
