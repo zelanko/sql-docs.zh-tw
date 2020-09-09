@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 89e74d60a8b3ea72881aec2c9230f1cd296ea301
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48fc4cbb0967e757308d876a68d3580bcf72c4c6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454820"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530432"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

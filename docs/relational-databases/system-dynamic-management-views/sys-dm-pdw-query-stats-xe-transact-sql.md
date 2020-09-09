@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c141fef15f052b87db4c09d735c0217d45cb10a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13b09ebe66a759d0c57161c99cfb16864be1b094
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474686"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530256"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>sys. dm_pdw_query_stats_xe (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
