@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDisable method
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b5401d0eb4aa5d4682a078beb194e944c5923d88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 772e6c3eac9a6e6b9434e2cbb9e76f884cc031aa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488485"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537198"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

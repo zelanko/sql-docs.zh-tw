@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management objects [SQL Server], transactions
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 12e887f2fee4a86e3c7ceb8affb6866ddf3e1f8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73e1c02843815a1134149c822e49a5c26ac33fe6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322384"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536838"
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>交易相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88322384"
 
         [sys. dm_tran_transactions_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-transactions-snapshot-transact-sql.md)
 
-        [sys. dm_tran_version_store_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)
+        [sys.dm_tran_version_store_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)
     :::column-end:::
     :::column:::
         [sys. dm_tran_active_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)

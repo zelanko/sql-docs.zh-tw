@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_groups catalog view
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1633a8450bb6b09d571c7b5ecb368a17a3ffa02f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ffea98db7c6d1a2a673b7a8bd8d358578d81d43b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486440"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537455"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

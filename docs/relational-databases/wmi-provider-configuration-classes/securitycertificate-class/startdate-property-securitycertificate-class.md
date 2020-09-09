@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartDate property
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b8356a977b9e0572d44a500a40ec54aef3be05bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ec0cee68e01ea5281d81751536a1b29dd8588c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485195"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537615"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 屬性 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

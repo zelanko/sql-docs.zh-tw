@@ -18,14 +18,14 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], Database Mail
 - status information [SQL Server], Database Mail
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1e298e23af425ebecd6323ccd3de509ced9b650
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 124b427bea6fc2a83140168328f0eea8837648c1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470042"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537519"
 ---
 # <a name="database-mail-views-transact-sql"></a>Database Mail 檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

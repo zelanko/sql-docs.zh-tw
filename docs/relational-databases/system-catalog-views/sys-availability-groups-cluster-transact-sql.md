@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.availability_groups_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8cdbb0b871da55eddaaf2a9266679de4a9c8ee19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26a33fd75d392ea847fd2e27aa8dde6166e10bca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490389"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537499"
 ---
 # <a name="sysavailability_groups_cluster-transact-sql"></a>sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

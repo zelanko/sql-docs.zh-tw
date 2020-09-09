@@ -19,14 +19,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 83fa8a16f7e541c2db9b48a132108825471fd662
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1d82a2f1a152bacf4458a92727d62da5d93f4c31
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447707"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537258"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>資料庫鏡像-sys. dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

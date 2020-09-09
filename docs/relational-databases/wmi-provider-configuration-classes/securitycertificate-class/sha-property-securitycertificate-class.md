@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SHA property
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bfca405b1703fc4b8a058656f9d070c2d181587a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83ece259ec35a48eb5ee343830dc354237a1e1bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472864"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537188"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA 屬性 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

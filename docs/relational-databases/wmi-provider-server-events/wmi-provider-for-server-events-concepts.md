@@ -15,14 +15,14 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b4d0a9f777bc62212a7de22a2c1ab1950f2d09cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 52ca11abc4bee950cea08c9ba10a19f7673fa0d4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888140"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537592"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
