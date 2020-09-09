@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], distributed queries
 - distributed queries [SQL Server], stored procedures
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7766180a9b93a8e6fd4af5eaf0855a8de182a063
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 435465438134495b102ea4421786c5f29b0e5e20
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489728"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529599"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散式查詢預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

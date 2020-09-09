@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85d15ffb52e41d072db3d583644eb7269cd57a33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1b6013694b6fe9746a3a0a167b107ed08083cc4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469700"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528556"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

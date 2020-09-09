@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: af86ada2400422732d910752538de54f42b01437
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13e89d2dfe90789071821f7ad6714361f1954a8d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489601"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529514"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

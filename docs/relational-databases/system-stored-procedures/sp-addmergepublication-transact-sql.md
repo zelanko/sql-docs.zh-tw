@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489632"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529886"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**原生** (預設) |產生所有資料表的原生模式大量複製程式輸出。|  
-|**字元**|產生所有資料表的字元模式大量複製程式輸出。 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 與非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者所需。|  
+|**character**|產生所有資料表的字元模式大量複製程式輸出。 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 與非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者所需。|  
   
 `[ @allow_push = ] 'allow_push'` 指定是否可以為給定的發行集建立發送訂閱。 *allow_push* 是 **Nvarchar (5) **，預設值為 TRUE，允許發行集的發送訂閱。  
   
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
