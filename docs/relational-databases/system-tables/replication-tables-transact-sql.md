@@ -1,6 +1,6 @@
 ---
-title: 複寫資料表（Transact-sql） |Microsoft Docs
-description: 複寫系統資料表支援複寫拓撲。 複寫會將系統資料表加入至設定為「發行者」或「訂閱者」的資料庫。
+title: 複寫資料表 (Transact-sql) |Microsoft Docs
+description: 複寫系統資料表支援複寫拓撲。 複寫會將系統資料表新增至設定為「發行者」或「訂閱者」的資料庫。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - system tables [SQL Server], replication
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 88a35375a4aef80f9305987af7b3b0081f8ed2f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 016d1c2b16d2901870589e0ae21db00a9701d0f2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123009"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544434"
 ---
 # <a name="replication-tables-transact-sql"></a>複寫資料表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  複寫拓撲是由複寫系統資料表所支援。 當使用者資料庫被設定為發行者或訂閱者時，複寫便會將系統資料表加入資料庫中。 當使用者資料庫從複寫拓撲中移除時，也會一併移除這些資料表。 如需有關使用系統資料表的一般規則，請參閱[系統資料表 &#40;transact-sql&#41;](system-tables-transact-sql.md)。  
+  複寫拓撲是由複寫系統資料表所支援。 當使用者資料庫被設定為發行者或訂閱者時，複寫便會將系統資料表加入資料庫中。 當使用者資料庫從複寫拓撲中移除時，也會一併移除這些資料表。 如需有關使用系統資料表的一般規則，請參閱 [系統資料表 &#40;transact-sql&#41;](system-tables-transact-sql.md)。  
   
 ## <a name="replication-tables"></a>複寫資料表  
  下列是複寫所用的系統資料表清單，這些系統資料表是根據資料庫加以分組。  
@@ -150,7 +150,7 @@ ms.locfileid: "87123009"
     :::column-end:::
 :::row-end:::
 
- 散發資料庫中的這些資料表是用來從非發行者複寫資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[非 SQL Server 的發行者](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
+ 散發資料庫中的這些資料表是用來從非發行者的資料複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱 [非 SQL Server 的發行者](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
 
 :::row:::
     :::column:::

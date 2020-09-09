@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: aec8b147b1e70be0c9bd5b1081e0462c1da66bae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6fb42a19d3c1b844fdcff1d31201d9acb0a86adb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493382"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543663"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

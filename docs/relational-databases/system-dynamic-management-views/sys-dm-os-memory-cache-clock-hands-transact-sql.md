@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 688cafb3413d1252113ecb226daef76d2e730d1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 921a2c9e1b2f40c308c4f93b291d57ea1c39ef7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397954"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543865"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88397954"
 |**name**|**nvarchar(256)**|快取的名稱。 不可為 Null。|  
 |**type**|**nvarchar(60)**|快取存放區的類型。 可以有相同類型的幾個快取。 不可為 Null。|  
 |**clock_hand**|**nvarchar(60)**|指針的類型。 這是下列項目之一：<br /><br /> 外部<br /><br /> 內部<br /><br /> 不可為 Null。|  
-|**clock_status**|**nvarchar(60)**|時鐘的狀態。 這是下列項目之一：<br /><br /> 暫止<br /><br /> 執行中<br /><br /> 不可為 Null。|  
+|**clock_status**|**nvarchar(60)**|時鐘的狀態。 這是下列項目之一：<br /><br /> 暫止<br /><br /> Running<br /><br /> 不可為 Null。|  
 |**rounds_count**|**bigint**|透過快取移除項目的清除數目。 不可為 Null。|  
 |**removed_all_rounds_count**|**bigint**|所有清除所移除的項目數。 不可為 Null。|  
 |**updated_last_round_count**|**bigint**|上次清除期間更新的項目數。 不可為 Null。|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492843"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544664"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492843"
 |**last_media_number**|**smallint**|備份組結束時所在之媒體的媒體號碼。 可以是 NULL。|  
 |**catalog_family_number**|**tinyint**|備份組目錄起點所在之媒體的家族號碼。 可以是 NULL。|  
 |**catalog_media_number**|**smallint**|備份組目錄起點所在之媒體的媒體號碼。 可以是 NULL。|  
-|**位置**|**int**|還原作業用來尋找適當備份組和檔案的備份組位置。 可以是 NULL。 如需詳細資訊，請參閱備份中的檔案 [&#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|**position**|**int**|還原作業用來尋找適當備份組和檔案的備份組位置。 可以是 NULL。 如需詳細資訊，請參閱備份中的檔案 [&#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**expiration_date**|**datetime**|備份組到期的日期和時間。 可以是 NULL。|  
 |**software_vendor_id**|**int**|寫入備份媒體標頭的軟體供應商識別碼。 可以是 NULL。|  
 |**name**|**nvarchar(128)**|備份組的名稱。 可以是 NULL。|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492843"
 |**database_creation_date**|**datetime**|最初建立資料庫的日期和時間。 可以是 NULL。|  
 |**backup_start_date**|**datetime**|備份作業開始的日期和時間。 可以是 NULL。|  
 |**backup_finish_date**|**datetime**|備份作業完成的日期和時間。 可以是 NULL。|  
-|**type**|**char (1) **|這是備份類型， 可為以下項目：<br /><br /> D = 資料庫<br /><br /> I = 差異資料庫<br /><br /> L = 記錄<br /><br /> F = 檔案或檔案群組<br /><br /> G = 差異檔案<br /><br /> P = 部分<br /><br /> Q = 差異部分<br /><br /> 可以是 NULL。|  
+|**type**|**char(1)**|這是備份類型， 可為以下項目：<br /><br /> D = 資料庫<br /><br /> I = 差異資料庫<br /><br /> L = 記錄<br /><br /> F = 檔案或檔案群組<br /><br /> G = 差異檔案<br /><br /> P = 部分<br /><br /> Q = 差異部分<br /><br /> 可以是 NULL。|  
 |**sort_order**|**smallint**|執行備份作業的伺服器排序順序。 可以是 NULL。 如需排序次序和定序的詳細資訊，請參閱定 [序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**code_page**|**smallint**|執行備份作業的伺服器字碼頁。 可以是 NULL。 如需字碼頁的詳細資訊，請參閱定 [序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**compatibility_level**|**tinyint**|這是資料庫的相容性層級設定， 可為以下項目：<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 可以是 NULL。<br /><br /> 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  

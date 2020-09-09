@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 144f824c92dfb94c0b86ad1265d659ef42c648d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b08e7631633f56cb2f697dad862378685ee635a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469027"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545527"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

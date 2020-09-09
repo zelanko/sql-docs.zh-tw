@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 99ee5534acdf7fa67bf031a2a9ab213528a0bbea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 14383dc1a4f3deb0f53cb2ed63f7d8ecb6776225
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470080"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545068"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a> (Transact-sql) 的外部作業目錄檢視
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

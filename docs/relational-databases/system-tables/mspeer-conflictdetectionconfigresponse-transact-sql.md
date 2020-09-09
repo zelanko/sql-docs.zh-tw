@@ -1,6 +1,6 @@
 ---
-title: MSpeer_conflictdetectionconfigresponse （T-sql）
-description: 描述在點對點複寫中用來將每個節點的回應儲存至拓撲寬設定 requestion 的 MSPeer_conflictdetectionconfigureresponse 預存程式。
+title: 'MSpeer_conflictdetectionconfigresponse (T-sql) '
+description: 描述在點對點複寫中使用的 MSPeer_conflictdetectionconfigureresponse 預存程式，以將每個節點的回應儲存至整個拓撲的設定 requestion。
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8504c0e6451eeef154ad163ba0f9cb278294a11d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d402a77534b12fbb3bf880bcaac17be1dedcdde2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889672"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545551"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "85889672"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|識別[MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)資料表中的衝突設定要求專案。|  
+|request_id|**int**|識別 [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) 資料表中的衝突設定要求專案。|  
 |peer_node|**sysname**|產生回應的伺服器執行個體名稱。|  
 |peer_db|**sysname**|產生回應之對等的訂閱資料庫。|  
 |peer_version|**sysname**|識別發行者的版本號碼。|  
 |peer_db_version|**sysname**|識別對等資料庫的版本號碼。|  
-|is_peer|**bit**|指示節點是否為唯讀訂閱者。 值為**0**表示唯讀訂閱者。|  
+|is_peer|**bit**|指示節點是否為唯讀訂閱者。 值為 **0** 表示唯讀訂閱者。|  
 |conflict_detection_enabled|**bit**|指出是否已啟用拓撲的衝突偵測。|  
 |originator_id|**varbinary(16)**|針對衝突偵測的目的，識別拓撲中的每個節點。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |peer_conflict_retention|**int**|該中繼資料儲存在衝突資料表內的期間 (天數)。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.lsn_time_mapping
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a716c51821c3efccd0bdebea3f28f9376d29b7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4791eba84c89b96b03acc6011a018bab2bda4b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488931"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544618"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

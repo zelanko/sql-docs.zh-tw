@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpub_identity_range system table
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f96e19282118a07fb487a64eff2eb8593f4261c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 46fec7167a93357e02743e192adc29cfbb013a43
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485467"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545534"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

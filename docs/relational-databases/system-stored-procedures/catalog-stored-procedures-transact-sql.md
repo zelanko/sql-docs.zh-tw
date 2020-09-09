@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], catalog
 - catalog system stored procedures [SQL Server]
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 068b347f6e92f91de007e2d21c1fe809fd3c5c03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5faa36951062a82a89ae9b6ec3a22be61b113c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419342"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543738"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>目錄預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

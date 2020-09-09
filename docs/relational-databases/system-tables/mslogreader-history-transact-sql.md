@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c792ab21d4fb59df13f0cc86a2d81558b2c506a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae2abdcaf4014df405ebf6dcefff8e2207530a93
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488768"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545725"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

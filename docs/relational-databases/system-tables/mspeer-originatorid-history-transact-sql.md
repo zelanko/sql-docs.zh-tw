@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_originatorid_history
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 957ec6b764e18043aab4d68acff4db056cefb2fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05ba5720a45bc8d448fe1ed24d6bdc950dcf290d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469026"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545518"
 ---
 # <a name="mspeer_originatorid_history-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

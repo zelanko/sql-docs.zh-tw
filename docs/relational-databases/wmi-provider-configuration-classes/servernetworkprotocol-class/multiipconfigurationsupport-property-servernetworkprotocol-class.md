@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - MultiIpConfigurationSupport property
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da02aefabf6096712b4d6ccb06622892a20dbbed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a0c29f72ab66f008dfe6ddfb87be054501aeb50
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472834"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545442"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

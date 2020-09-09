@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflicts_info system table
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2acd79359758c4bc5c14d8d204a5b5ac6b889c48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5983e002f21a5c30c34dc791ab13e4784fd96c99
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469057"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545679"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_namespaces catalog view
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5fd43b5113423662dc61d437748c7dd80e2e584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8709142f4ff0e1db417cb67fdb5ea516400ead82
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475117"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545360"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

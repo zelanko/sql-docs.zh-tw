@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], replication
 - replication dynamic management objects [SQL Server]
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0cc444e857f74ce419a64ccec099372f2c05752c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73e0e0e1fcfd6f5909d4177512beaf0dec5787b0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455077"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543940"
 ---
 # <a name="replication-related-dynamic-management-views-transact-sql"></a>複寫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

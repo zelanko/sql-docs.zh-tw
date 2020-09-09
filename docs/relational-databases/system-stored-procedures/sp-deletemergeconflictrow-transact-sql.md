@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d65a0b2b039d94ca425bb6e93a067e8fcc0ddd2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b2fae5fad15490fee5c239a26e8e0b5e0a25832
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481324"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543529"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

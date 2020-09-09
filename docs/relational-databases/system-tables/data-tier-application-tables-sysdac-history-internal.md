@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480842"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544631"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>資料層應用程式資料表 - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88480842"
 |**dac_object_type**|**tinyint**|受到動作影響之物件類型的識別碼：<br /><br /> **0** = dacpac<br /><br /> **1** = 登入<br /><br /> **2** = 資料庫|  
 |**dac_object_type_name**|**Varchar (8) **|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 實例<br /><br /> **登錄**<br /><br /> **database**|  
 |**action_status**|**tinyint**|識別動作目前狀態的代碼：<br /><br /> **0** = 暫止<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
-|**action_status_name**|**Varchar (11) **|動作的目前狀態：<br /><br /> **等待**<br /><br /> **成功**<br /><br /> **失敗**|  
+|**action_status_name**|**Varchar (11) **|動作的目前狀態：<br /><br /> **暫止**<br /><br /> **成功**<br /><br /> **失敗**|  
 |**必要**|**bit**|在回復 DAC 作業時，由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用。|  
 |**dac_object_name_pretran**|**sysname**|認可包含動作之交易前的物件名稱。 僅用於資料庫與登入。|  
 |**dac_object_name_posttran**|**sysname**|認可包含動作之交易後的物件名稱。 僅用於資料庫與登入。|  

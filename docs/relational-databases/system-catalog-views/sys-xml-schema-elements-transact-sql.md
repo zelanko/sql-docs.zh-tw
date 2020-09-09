@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_elements catalog view
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cd80e0c7a557c720b4bbe09850e77f3dff260725
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 008fb9d5d8beb5f746d02be3357eb1e73ae58ea9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399914"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543943"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88399914"
 |**is_substitution_blocked**|**bit**|1 = 無法使用替代群組的執行個體。<br /><br /> 0 = 允許取代成替代群組。 (預設值)|  
 |**is_final_extension**|**bit**|1 = 不允許取代成某延伸類型的執行個體。<br /><br /> 0 = 允許取代成某延伸類型的執行個體。 (預設值)|  
 |**is_final_restriction**|**bit**|1 = 不允許取代成某限制類型的執行個體。<br /><br /> 0 = 允許取代成某限制類型的執行個體。 (預設值)|  
-|**default_value**|**nvarchar (4000)**|元素的預設值。 如果沒有提供預設值，則為 NULL。|  
+|**default_value**|**Nvarchar (4000) **|元素的預設值。 如果沒有提供預設值，則為 NULL。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

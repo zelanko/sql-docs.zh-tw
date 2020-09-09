@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8cbe10b4d7734aa15448bd39e9e3ea9ec52eabd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a2f6fa46b0057680453b443186f6a4828195ab4a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488884"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544568"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

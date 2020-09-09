@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: adf07725fb2d2403d8b07c4f41f865e70ebc611f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0dd3ef69b380122d173436e19ae42ed3227b30e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454633"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545686"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88454633"
 |**creation_date**|**datetime**|建立散發或合併代理程式的日期和時間。|  
 |**offload_enabled**|**bit**|指定是否能從遠端啟動代理程式。<br /><br /> **0** 指定不能從遠端啟動代理程式。<br /><br /> **1** 指定將從遠端啟動代理程式，並在 offload_server 屬性指定的遠端電腦上啟用。|  
 |**offload_server**|**sysname**|指定將用來啟用遠端代理程式之伺服器的網路名稱。|  
-|**希**|**Varbinary (85) **|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
+|**希**|**varbinary(85)**|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
 |**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。<br /><br /> **1**個  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**subscriber_login**|**sysname**|連接到訂閱者時所用的登入。|  
 |**subscriber_password**|**Nvarchar (524) **|連接到訂閱者時，所用之密碼的加密值。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_altsyncpartners system table
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8ce47008486b1b465dc018986bde0def071107b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ccec6fa369580fd68af0089c7e581ef1e915e868
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454614"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545650"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

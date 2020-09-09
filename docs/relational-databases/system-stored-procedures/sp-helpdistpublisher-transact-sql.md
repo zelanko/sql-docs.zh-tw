@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 129192de74a83232334437035599cffe24a910d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474075"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543333"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**working_directory**|**nvarchar(255)**|工作目錄的名稱。|  
 |**trusted**|**bit**|當發行者連接到散發者時，是否需要密碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 在和更新版本中，這一律會傳回**0**，表示需要密碼。|  
 |**thirdparty_flag**|**bit**|發行集是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用，或由協力廠商應用程式啟用：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、oracle 或 oracle Gateway 發行者。<br /><br /> **1** = 發行者已與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用協力廠商應用程式整合。|  
-|**publisher_type**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **甲骨文**<br /><br /> **ORACLE GATEWAY**|  
+|**publisher_type**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|發行者之 OLE DB 資料來源的名稱。|  
 |**storage_connection_string**|**nvarchar(4000)**|Azure SQL Database 中的「散發者」或「發行者」時，工作目錄的儲存體存取金鑰。|  
   
@@ -74,7 +74,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

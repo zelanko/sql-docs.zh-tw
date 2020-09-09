@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_actions dynamic management view
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f887261b4221da26c79b673d6c4a88f75f4e8645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10bf743f0c09ab423dfef16da30730d80017896e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498373"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544846"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

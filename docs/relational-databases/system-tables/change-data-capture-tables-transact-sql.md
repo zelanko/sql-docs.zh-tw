@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 38f2be3efcb798897849f249e63287ed6c49e496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 540228ff06fa673d55f0549e6e841c0af81b1a06
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469059"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544632"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>異動資料擷取資料表 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

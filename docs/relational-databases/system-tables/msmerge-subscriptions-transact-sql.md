@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e5648de8dd4d93e2f1fe1ed9290b9942f66cfe02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6e522b60af93e74980c0465e771ddd820ac9149
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460393"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545560"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

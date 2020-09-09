@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489311"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543271"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|訂閱狀態：<br /><br /> **0** = 非使用中的訂用帳戶<br /><br /> **1** = 有效訂用帳戶<br /><br /> **2** = 已刪除訂用帳戶<br /><br /> **3** = 卸離的訂用帳戶<br /><br /> **4** = 附加的訂用帳戶<br /><br /> **5** = 已使用上傳將訂用帳戶標示為重新初始化<br /><br /> **6** = 附加訂用帳戶失敗<br /><br /> **7** = 從備份還原訂用帳戶|  
 |**subscriber_type**|**int**|訂閱者的類型：<br /><br /> **1** = 全域<br /><br /> **2** = 本機<br /><br /> **3** = 匿名|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 推送<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
-|**優先**|**float (8) **|訂閱優先權。 值必須小於 **100.00**。|  
+|**priority**|**float (8) **|訂閱優先權。 值必須小於 **100.00**。|  
 |**sync_type**|**tinyint**|訂閱同步處理類型：<br /><br /> **1** = 自動<br /><br /> **2** = 未使用快照集。|  
 |**description**|**nvarchar(255)**|這項提取訂閱的簡要描述。|  
 |**merge_jobid**|**binary(16)**|合併代理程式的作業識別碼。|  

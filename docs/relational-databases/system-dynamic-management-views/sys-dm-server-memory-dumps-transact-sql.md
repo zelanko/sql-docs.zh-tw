@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_memory_dumps dynamic management view
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 636beea5b820aef3d37b8ac27f6e75c66bc6da3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cec8575270fd7068290cb24f88405453415b3020
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397704"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543822"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "88397704"
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**filename**|**nvarchar(256)**|記憶體傾印檔的路徑和名稱。 不可為 null。|  
-|**creation_time**|**datetimeoffset(7)**|建立檔案的日期與時間。 不可為 null。|  
+|**filename**|**nvarchar(256)**|記憶體傾印檔的路徑和名稱。 不可以是 null。|  
+|**creation_time**|**datetimeoffset(7)**|建立檔案的日期與時間。 不可以是 null。|  
 |**size_in_bytes**|**bigint**|檔案大小 (以位元組為單位)。 可為 Null。|  
   
 ## <a name="general-remarks"></a>一般備註  

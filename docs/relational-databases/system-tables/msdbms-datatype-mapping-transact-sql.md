@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype_mapping system table
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bfdf9ab815a1623aa6c323c256b9f7a4d4e27263
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8364437100eebf74c976ba0be2b9ad2d0d6c472a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488781"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544527"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

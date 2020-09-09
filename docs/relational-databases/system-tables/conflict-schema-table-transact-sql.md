@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a4a378eeef86204f87ce8eaa13a442752636c066
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 126474b4efe2eafb5c235d1ba4a31e433d71500c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488883"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544656"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; 架構 &gt; _ &lt; 資料表 &gt; (transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

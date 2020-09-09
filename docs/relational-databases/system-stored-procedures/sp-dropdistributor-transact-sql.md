@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 404ef0654abde8b9d41659d7dd25bf80ac5b3bb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2477b0a95fb74b26ecf8294baf2ce48a9fd32d12
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469566"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543470"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

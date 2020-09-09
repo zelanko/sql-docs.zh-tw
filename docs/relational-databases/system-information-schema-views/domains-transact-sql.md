@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DOMAINS view
 - INFORMATION_SCHEMA.DOMAINS view
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ae71f473dfce95d78b8ec4be60c31e73ea4f0d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7933697f38ea9404d2c3dd469d450a68126575b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419372"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543762"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

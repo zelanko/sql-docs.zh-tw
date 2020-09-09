@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481501"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543720"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -108,7 +108,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**status**|**active**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 ||**inactive**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 |**sync_method**|**native**|當同步處理訂閱時，使用所有資料表的原生模式大量複製輸出。|  
-||**字元**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
+||**character**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
 ||**併發**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 ||**concurrent_c**|使用所有資料表的字元模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 |**taskid**||這個屬性已被取代，不再受到支援。|  

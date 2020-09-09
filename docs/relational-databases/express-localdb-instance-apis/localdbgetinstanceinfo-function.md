@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f33e9f820eebd80680b4c2c631f30d74ca0f79da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5afa31d7b4b3cb814fee3df4154e713f30f7079
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475859"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544045"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

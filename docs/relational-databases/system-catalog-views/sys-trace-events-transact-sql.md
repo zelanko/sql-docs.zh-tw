@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_events catalog view
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 04a7adfc55929bc6f460f7cfbcc71f62d6a4ff66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b83821952fb9b7aa96a1c5c1da4033da1e750aa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455130"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544941"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0ddc76949165266656558a7f99c959fc0942d005
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb1202b625b0cd990ce0c336821c0765de643787
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494233"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544035"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

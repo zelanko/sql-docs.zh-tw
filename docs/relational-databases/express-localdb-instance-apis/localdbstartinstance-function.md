@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf46ccf1e972dc34b4f0500fdf654a76aa32f086
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 723f63b2b41b04b76c62f8cb3bc58ae917519b72
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494217"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544016"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsync_states system table
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d9926e1c015ce3603eb3c50e2d2550a9b03e2997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3ef439c3d5027e64eb988730c41c3f9bea12d9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460323"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545477"
 ---
 # <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

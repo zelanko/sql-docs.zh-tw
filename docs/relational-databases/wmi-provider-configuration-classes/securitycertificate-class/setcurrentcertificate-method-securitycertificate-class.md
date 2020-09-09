@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 001d9ccdff7db054760f1c7ae10bbce19269f694
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 504ee5369f193360a4e0705f9c9a1e352dbb23ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427280"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545249"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

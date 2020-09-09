@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_forwarded_messages dynamic management view
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4f4f5c7d504176d983eafa5996fbfe1a4f5a1ff5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b167baced0acda08234b4240bc362c602f327f9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498370"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544778"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

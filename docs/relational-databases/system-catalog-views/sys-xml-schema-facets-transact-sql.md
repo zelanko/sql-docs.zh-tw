@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_facets catalog view
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5ffbbe4105f9c20222d0673412a22c5a789191d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c6f72406c552bae440a57e7f1f19490e62d1b49
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419892"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544910"
 ---
 # <a name="sysxml_schema_facets-transact-sql"></a>sys.xml_schema_facets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88419892"
 |**類別**|**char(2)**|Facet 的種類：<br /><br /> LG = 長度<br /><br /> LN = 最小長度<br /><br /> LX = 最大長度<br /><br /> PT = 模式 (一般運算式)<br /><br /> EU = 列舉<br /><br /> IN = 最小包含值<br /><br /> IX = 最大包含值<br /><br /> EN = 最小排除值<br /><br /> EX = 最大排除值<br /><br /> DT = 總位數<br /><br /> DF = 小數位數<br /><br /> WS = 空格正規化|  
 |**kind_desc**|**Nvarchar (60) **|Facet 種類的描述：<br /><br /> LENGTH<br /><br /> MINIMUM_LENGTH<br /><br /> MAXIMUM_LENGTH<br /><br /> PATTERN<br /><br /> ENUMERATION<br /><br /> MINIMUM_INCLUSIVE_VALUE<br /><br /> MAXIMUM_INCLUSIVE_VALUE<br /><br /> MINIMUM_EXCLUSIVE_VALUE<br /><br /> MAXIMUM_EXCLUSIVE_VALUE<br /><br /> TOTAL_DIGITS<br /><br /> FRACTION_DIGITS<br /><br /> WHITESPACE_NORMALIZATION|  
 |**is_fixed**|**bit**|1 = Facet 有固定、預先指定的值。<br /><br /> 0 = 沒有固定值。 (預設值)|  
-|**value**|**nvarchar (4000)**|固定、預先指定的 Facet 值。|  
+|**value**|**Nvarchar (4000) **|固定、預先指定的 Facet 值。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

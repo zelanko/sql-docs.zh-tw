@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480978"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544728"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,16 +60,16 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**別名**|別名的名稱。|  
 |**GLOBAL TEMPORARY**|全系統所能使用之暫存資料表的名稱。|  
 |**LOCAL TEMPORARY**|只供目前作業使用之暫存資料表的名稱。|  
-|**同義字**|同義字的名稱。|  
+|**SYNONYM**|同義字的名稱。|  
 |**系統資料表**|系統資料表的名稱。|  
 |**系統檢視**|系統檢視表的名稱。|  
-|**表**|使用者資料表的名稱。|  
-|**視圖**|檢視表的名稱。|  
+|**TABLE**|使用者資料表的名稱。|  
+|**VIEW**|檢視表的名稱。|  
   
 `[ @fUsePattern = ] 'fUsePattern'` 判斷是否將 **_**、 **%** 、 **[** 和 **]** 字元視為萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern* 是 **bit**，預設值是1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

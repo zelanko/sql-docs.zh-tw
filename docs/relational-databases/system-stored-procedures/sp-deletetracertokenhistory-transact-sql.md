@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c08b5373109ab3ea6174aac190ed8fb7b04b2e0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481325"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543532"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 

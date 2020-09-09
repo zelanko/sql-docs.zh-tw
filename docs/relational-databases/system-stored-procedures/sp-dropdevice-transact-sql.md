@@ -17,14 +17,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: de658ea419fe2fe6fcdfbbdd2b335cf5abb12e2e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474290"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543490"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

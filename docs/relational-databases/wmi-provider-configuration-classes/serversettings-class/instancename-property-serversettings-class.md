@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5a6b3a80e88a8047597d90c9ea1976bcfae4f06a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3fb2e7bcae656714d95463829fdd1fc8e472db5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485116"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544371"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName 屬性 (ServerSettings 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

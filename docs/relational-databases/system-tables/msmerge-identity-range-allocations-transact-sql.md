@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1e258632e47664d88c6bfbe5f9b732672b5f9827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aba2d603c53827f63ceb39fdfdaae7819e4e1bff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488787"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545638"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

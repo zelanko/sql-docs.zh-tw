@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5c19b5f70df96e4288a3d5e68dd5f2309e115a93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8895f78aa31e5fa38b52de7163ddb2a1554e5617
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480755"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545508"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

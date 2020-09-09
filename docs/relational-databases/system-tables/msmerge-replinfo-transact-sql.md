@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5dc2aeae67fabd1ae53a1f6f6744e104017f596
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce4bee70ea5ef410512ce399e8d715fbc321e1a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488739"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545604"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

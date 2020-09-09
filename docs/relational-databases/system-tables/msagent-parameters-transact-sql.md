@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_parameters system table
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba10635a37f73ef0687d85edb233d1c00f731873
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f462e59611b33d35762ad0941e871c196990f2c5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488824"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544521"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

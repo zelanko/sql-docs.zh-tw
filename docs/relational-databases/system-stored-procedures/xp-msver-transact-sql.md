@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93223f6d7c63402161e48b0359bf735b14593c9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419222"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544698"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ xp_msver [ optname ]
   
 |選項/資料行名稱|描述|  
 |-------------------------|-----------------|  
-|**名稱**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**ProductName**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ProductVersion**|產品版本。|  
 |**語言**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語言版本。|  
 |**平台**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的作業系統名稱、製造商名稱和晶片家族名稱。|  
@@ -77,7 +77,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>另請參閱  
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的一般擴充預存程式 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

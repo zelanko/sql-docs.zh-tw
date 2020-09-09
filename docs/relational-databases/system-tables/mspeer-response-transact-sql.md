@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e0bb95540f6731c9fc1d49711b85d03c9fa2efad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e6133bee999ad828516f908aaf770321a59ec3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488695"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545559"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.traces catalog view
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2ab9f9b8d86e61d231aae70c43b028550b6032a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31de0333847573b46872cfa5a3441dd92820151f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475185"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544932"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

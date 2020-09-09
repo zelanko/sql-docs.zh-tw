@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdynamicsnapshot_job
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85a81b9dac7fd543a1840263da91ec644652cadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 932ca55e93c039c918302cb52026dd5051cbb551
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464379"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543460"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

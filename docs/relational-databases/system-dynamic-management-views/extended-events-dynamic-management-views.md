@@ -13,14 +13,14 @@ helpviewer_keywords:
 - extended events [SQL Server], dynamic management objects
 - dynamic management objects (SQL Server)
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 344f84ed228b9dd632f6461e272e89b3cd614da4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f926b6ad0b90af3ec04a668b1f81a762373037
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447733"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544875"
 ---
 # <a name="extended-events-dynamic-management-views"></a>擴充的事件動態管理檢視
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

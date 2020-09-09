@@ -13,14 +13,14 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2de737113a6ec114e3a296e5d826ed4034b2307c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6349d3a2b2db4c019df9607eba9424ca65beb226
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460460"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544869"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

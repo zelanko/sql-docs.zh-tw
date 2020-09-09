@@ -1,6 +1,6 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail （T-sql）
-description: 描述 sp_replmonitorhelpmergesessiondetail 預存程式，它會傳回特定複寫合併代理程式會話的詳細文章層級資訊。
+title: 'sp_replmonitorhelpmergesessiondetail (T-sql) '
+description: 描述 sp_replmonitorhelpmergesessiondetail 預存程式，該預存程式會傳回特定複寫合併代理程式會話的詳細發行項層級資訊。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725716"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543185"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,15 +38,15 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @session_id = ] session_id`指定代理程式會話。 *session_id*是**int** ，沒有預設值。  
+`[ @session_id = ] session_id` 指定代理程式會話。 *session_id* 是 **int** ，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|這是同步處理工作階段的階段，它可以是下列其中一項：<br /><br /> **0** = 初始化或摘要資料列<br /><br /> **1** = 上傳<br /><br /> **2** = 下載|  
-|**ArticleName**|**sysname**|這是正在同步處理的發行項名稱。 **ArticleName**也包含結果集中不代表發行項詳細資料之資料列的摘要資訊。|  
-|**百分比**|**decimal**|針對目前執行中或已失敗的工作階段，指出套用在給定發行項詳細資料列的總變更量之百分比。|  
+|**ArticleName**|**sysname**|這是正在同步處理的發行項名稱。 **ArticleName** 也包含結果集中不代表發行項詳細資料之資料列的摘要資訊。|  
+|**PercentComplete**|**decimal**|針對目前執行中或已失敗的工作階段，指出套用在給定發行項詳細資料列的總變更量之百分比。|  
 |**RelativeCost**|**decimal**|指出同步處理發行項所花的時間，相當於該工作階段同步處理總時間的百分比。|  
 |**有效期間**|**int**|代理程式工作階段的長度。|  
 |**Inserts**|**int**|工作階段中的插入數。|  
@@ -59,15 +59,15 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**SchemaChanges**|**int**|工作階段中的結構描述變更數。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_replmonitorhelpmergesessiondetail**是用來監視合併式複寫。  
+ **sp_replmonitorhelpmergesessiondetail** 用來監視合併式複寫。  
   
- 在訂閱者上執行時， **sp_replmonitorhelpmergesessiondetail**只會傳回最後5個合併代理程式會話的詳細資訊。  
+ 在訂閱者上執行時， **sp_replmonitorhelpmergesessiondetail** 只會傳回最後5個合併代理程式會話的詳細資訊。  
   
 ## <a name="permissions"></a>權限  
- 只有「散發者」端或「訂閱者」端之訂閱資料庫上的**db_owner**或**replmonitor**固定資料庫角色的成員，才能夠執行**sp_replmonitorhelpmergesessiondetail**。  
+ 只有散發者端或訂閱者端之訂閱資料庫上的 **db_owner** 或 **replmonitor** 固定資料庫角色的成員，才能夠執行 **sp_replmonitorhelpmergesessiondetail**。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

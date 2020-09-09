@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f1473db94c3defdcdd525409046e72f6d3cd5459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d7d0eed28b877c881cd297556755ea70bf5c674
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486091"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543509"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,7 +71,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

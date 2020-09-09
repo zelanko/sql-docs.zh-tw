@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b024189b3c68bcc2d26333f1c56412f30e73cacd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ed755f4df52d2a12aa990657a2562b6b72ba0dc5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408814"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544025"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_originators system table
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 65bc706e4087a8aed5809bdead7c8e1977afdf7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19e66da5cab574e18b592e0636cd9b3412870a10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488699"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544490"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

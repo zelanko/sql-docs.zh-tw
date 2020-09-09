@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.sp_query_store_flush_db
 - sp_query_store_flush_db
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c069ec0f4f3964948a64873b2802c232e63a8533
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 207773ccb324d9a60818809a69e0e3e09ab3431a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646098"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543205"
 ---
 # <a name="sp_query_store_flush_db-transact-sql"></a>sp_query_store_flush_db (Transact-sql) 
 

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - RemoveCertificate method
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8de2c4e631ac0455fa16d2f4ce70f3e980c467df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 07ff32236bfb4b8eb26a7f0e9f8b891b77222ecb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427250"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544336"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 方法 (ServerSettings 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

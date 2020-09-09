@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486016"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543335"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名稱**|**Nvarchar (** 128 **) **|資料表名稱|  
     |**擁有者**|**Nvarchar (** 128 **) **|資料表擁有者|  
-    |**型別**|**Nvarchar (** 31 **) **|資料表類型|  
+    |**類型**|**Nvarchar (** 31 **) **|資料表類型|  
     |**Created_datetime**|**datetime**|資料表的建立日期|  
   
      視指定的資料庫物件而定， **sp_help** 會傳回其他結果集。  
@@ -91,7 +91,7 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**Nvarchar (** 128 **) **|資料行名稱。|  
-        |**型別**|**Nvarchar (** 128 **) **|資料行資料類型。|  
+        |**類型**|**Nvarchar (** 128 **) **|資料行資料類型。|  
         |**計算**|**Varchar (** 35 **) **|指出是否計算資料行中的值：[是] 或 [否]。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意：如果資料行資料類型是大數數值型別 (**Varchar (max) **、 **Nvarchar (max) **、 **Varbinary (max) **或 **xml**) ，值會顯示為-1。|  
         |**Prec**|**char (** 5 **) **|資料行有效位數。|  
@@ -106,9 +106,9 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**身分識別**|**Nvarchar (** 128 **) **|資料類型宣告為識別的資料行名稱。|  
-        |**種子**|**numeric**|識別欄位的起始值。|  
+        |**Seed**|**numeric**|識別欄位的起始值。|  
         |**[遞增]**|**numeric**|這個資料行的值所用的遞增。|  
-        |**Not For Replication**|**int**|當複寫登入（例如 **sqlrepl**）將資料插入資料表時，不會強制執行 IDENTITY 屬性：<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**不可複寫**|**int**|當複寫登入（例如 **sqlrepl**）將資料插入資料表時，不會強制執行 IDENTITY 屬性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   在資料行上傳回的其他結果集：  
   
@@ -153,7 +153,7 @@ sp_help [ [ @objname = ] 'name' ]
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**Nvarchar (** 128 **) **|預存程序參數名稱。|  
-        |**型別**|**Nvarchar (** 128 **) **|預存程序參數的資料類型。|  
+        |**類型**|**Nvarchar (** 128 **) **|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
         |**Prec**|**int**|有效位數或總位數。|  
         |**縮放比例**|**int**|小數點右側的位數。|  
@@ -198,7 +198,7 @@ GO
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sys物件 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

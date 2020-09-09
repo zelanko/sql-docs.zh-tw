@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.transmission_queue catalog view
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9e3fbd63f399b54af919fd791f33e5d6f7b75a93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7b0a45de2a9eb967151bf0850556469fe857db5c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400294"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544929"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

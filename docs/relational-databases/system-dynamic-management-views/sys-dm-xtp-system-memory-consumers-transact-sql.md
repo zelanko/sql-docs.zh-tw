@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322594"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543774"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|資料行名稱|類型|描述|  
+|欄名|類型|描述|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|記憶體取用者的內部識別碼。|  
 |memory_consumer_type|**int**|整數，代表具有下列其中一個值的記憶體取用者類型：<br /><br /> 0-不應該顯示。 彙總兩個以上取用者的記憶體使用量。<br /><br /> 1-對應：追蹤系統對應的記憶體耗用量。<br /><br /> 2-VARHEAP：追蹤可變長度堆積的記憶體耗用量。<br /><br /> 4-IO 分頁集區：追蹤用於 IO 作業之系統分頁集區的記憶體耗用量。|  

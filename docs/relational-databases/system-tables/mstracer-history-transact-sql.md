@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MStracer_history system table
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cc21b23e670c13de44fbbb6485bc1d977a23d79f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3a8c4c03359209108ff839e2a5708ef2da248de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492692"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545453"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

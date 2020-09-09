@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e433372f8c1c5748b7ae4cfe1b355517e8b75d77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b6a262bad2d897725d625df592f5a6a8b712a6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455144"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545003"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

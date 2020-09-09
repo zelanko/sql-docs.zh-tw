@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 212c97116aa3b37f78dca22af1b5e1ad58c24801
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8583394eb282b24f77bb37a81afa23c91ac50d0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492793"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544696"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

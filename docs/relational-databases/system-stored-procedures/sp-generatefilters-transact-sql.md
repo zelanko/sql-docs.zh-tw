@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_generatefilters
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1c77a2e468cc3baf21dbf6a15c4f462803896b3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15be33b6ce5ffdf30dc46952f88bf861101ffa45
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447120"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543380"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

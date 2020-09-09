@@ -13,14 +13,14 @@ helpviewer_keywords:
 - index dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], index
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7171bc1bc44a4f9892eb3bd6012588848e919e5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2790e4551a8cf405f98d4cc5264516beabb35ba1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374264"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545343"
 ---
 # <a name="index-related-dynamic-management-views-and-functions-transact-sql"></a>索引相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

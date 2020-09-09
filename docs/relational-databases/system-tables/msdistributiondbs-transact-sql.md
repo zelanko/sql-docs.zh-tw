@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ccc4ea10d896a6422ca5b46f1bb4eb70bbc6ba0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70140091cdd3027538038301a86bc2611ba75c23
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480759"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545700"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
