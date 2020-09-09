@@ -1,6 +1,6 @@
 ---
-description: 'sys.dm_exec_compute_node_status (Transact-sql) '
-title: sys.dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
+description: 'sys. dm_exec_compute_node_status (Transact-sql) '
+title: sys. dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89ee3b4da2b3078346b4980f2293621db6ff67b0
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 17457d540e65f4af1dcef4941d365769ad02f185
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283669"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533383"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-sql) 
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存所有 PolyBase 節點的效能和狀態的其他相關資訊。 列出每個節點一個資料列。  
