@@ -10,15 +10,15 @@ ms.topic: reference
 apilocation:
 - sqluserinstance.dll
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 28f33fd5b5a69cc2dde37821b02a4cb334b9ed0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 887127c69bfc3670ba8a0209c3fe8ddb95d61380
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486894"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541188"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

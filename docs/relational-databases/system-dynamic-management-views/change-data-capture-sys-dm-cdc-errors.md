@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b34623ac9b7732faff5b1f29e6a154dddf79dd78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c15c3365904e727abae31d89f15cfc23b6f5d53
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482027"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542360"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>變更 Data Capture-sys. dm_cdc_errors
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

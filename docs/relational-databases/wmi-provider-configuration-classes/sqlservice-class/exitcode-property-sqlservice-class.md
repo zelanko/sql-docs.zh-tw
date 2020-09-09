@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ExitCode property
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab792d72f904511bb17dda140132e86350255fa2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 71e5fbe4180c67560709f004ba099bb90ca83b02
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446116"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542838"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>ExitCode 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

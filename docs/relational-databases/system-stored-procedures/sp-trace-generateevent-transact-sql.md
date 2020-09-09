@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d8a5e027b2d76aa1e6965f1fe782b8987a927ce3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480998"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541579"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**0**|沒有錯誤。|  
 |**1**|未知的錯誤。|  
 |**3**|指定的事件無效。 事件可能不存在，也可能是不適合預存程序。|  
-|**13**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|**13**|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
 ## <a name="remarks"></a>備註  
  **sp_trace_generateevent**會執行先前由**xp_trace_ \* **擴充預存程式所執行的許多動作。 使用 **sp_trace_generateevent** 而不是 **xp_trace_generate_event**。  

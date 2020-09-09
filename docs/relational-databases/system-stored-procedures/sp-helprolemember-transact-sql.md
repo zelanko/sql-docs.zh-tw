@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 360b700d6fe123c3a87ddb45878a3806e5671bee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bbfec9641e543b4774a8d8d6f7a288bd2fe23c8a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464180"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541699"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|目前資料庫中角色的名稱。|  
 |**名**|**sysname**|DbRole 成員的名稱 **。**|  
-|**MemberSID**|**Varbinary (85) **|**成員名稱**的安全識別碼。|  
+|**MemberSID**|**varbinary(85)**|**成員名稱**的安全識別碼。|  
   
 ## <a name="remarks"></a>備註  
  如果資料庫包含嵌套角色，則 **成員** 名稱可能是角色的名稱。 **sp_helprolemember** 不會顯示透過嵌套角色取得的成員資格。 例如，如果 User1 是 Role1 的成員，而且 Role1 是 Role2 的成員，`EXEC sp_helprolemember 'Role2'`; 將會傳回 Role1，而不是 Role1 的成員 (此範例中為 User1)。 若要傳回嵌套成員資格，您必須針對每個嵌套角色重複執行 **sp_helprolemember** 。  
@@ -71,7 +71,7 @@ EXEC sp_helprolemember 'Sales';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的安全性預存程式 ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   

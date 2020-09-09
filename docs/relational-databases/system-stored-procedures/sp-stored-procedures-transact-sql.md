@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d51536a973871e3907ba693306812b7681ab63d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 41c28dd8a9dff8c95f6656aace6d80eb8d289e7c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473681"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541132"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -65,7 +65,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = 開啟模式比對。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

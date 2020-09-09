@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.parameter_type_usages catalog view
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf978fffdcf5929a27c25f4769bf30a043b77787
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f20fbf0face7b4b99c7c2d5b5920139e68670052
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490301"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542505"
 ---
 # <a name="sysparameter_type_usages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

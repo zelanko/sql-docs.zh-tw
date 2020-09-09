@@ -1,6 +1,6 @@
 ---
-title: sp_replmonitorhelppublicationthresholds （T-sql）
-description: 描述 sp_replmonitorhelppublicationthresholds 預存程式，此程式會傳回針對受監視發行集所設定的臨界值標準。
+title: 'sp_replmonitorhelppublicationthresholds (T-sql) '
+description: 描述傳回受監視發行集之閾值計量集的 sp_replmonitorhelppublicationthresholds 預存程式。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebf0d2071d0687535479d8899c6f7c9b0f6b1eec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a41b93878178bd47574acc7ae11da69e11c76016
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720194"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543099"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 這是發行者的名稱。 *publisher* 是 **sysname**，沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'`這是已發行之資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 這是已發行的資料庫名稱。 *publisher_db* 是 **sysname**，沒有預設值。  
   
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
-`[ @publication_type = ] publication_type`如果發行集的類型，則為。 *publication_type*是**int**，而且可以是下列其中一個值。  
+`[ @publication_type = ] publication_type` 如果發行集的類型。 *publication_type* 是 **int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -61,20 +61,20 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|複寫效能標準的識別碼，它可以是下列項目之一。<br /><br /> **1expiration** -監視交易式發行集的訂閱是否即將到期。<br /><br /> **2latency** -監視交易式發行集之訂閱的效能。<br /><br /> **4mergeexpiration** -監視合併式發行集的訂閱是否即將到期。<br /><br /> **5mergeslowrunduration** -監視透過低頻寬（撥號）連接進行合併同步處理的持續時間。<br /><br /> **6mergefastrunduration** -監視透過高頻寬（LAN）連接進行合併同步處理的持續時間。<br /><br /> **7mergefastrunspeed** -監視透過高頻寬（LAN）連接進行合併同步處理的同步處理速率。<br /><br /> **8mergeslowrunspeed** -監視透過低頻寬（撥號）連接進行合併同步處理的同步處理速率。|  
+|**metric_id**|**int**|複寫效能標準的識別碼，它可以是下列項目之一。<br /><br /> **1expiration** -監視交易式發行集的訂閱是否即將到期。<br /><br /> **2latency** -監視交易式發行集之訂閱的效能。<br /><br /> **4mergeexpiration** -監視合併式發行集的訂閱是否即將到期。<br /><br /> **5mergeslowrunduration** -監視透過低頻寬 (撥號) 連接進行合併同步處理的持續時間。<br /><br /> **6mergefastrunduration** -監視透過高頻寬 (LAN) 連接進行合併同步處理的持續時間。<br /><br /> **7mergefastrunspeed** -監視透過高頻寬 (LAN) 連接進行合併同步處理的同步處理速率。<br /><br /> **8mergeslowrunspeed** -監視透過低頻寬 (撥號) 連接進行合併同步處理的同步處理速率。|  
 |**title**|**sysname**|複寫效能標準的名稱。|  
 |**value**|**int**|效能標準的臨界值。|  
-|**shouldalert**|**bit**|這是指當計量超出此發行集定義的臨界值時，是否應該產生警示;值為**1**表示應該引發警示。|  
-|**isenabled**|**bit**|這是指是否針對此發行集的這個複寫效能標準啟用監視;值為**1**表示已啟用監視。|  
+|**shouldalert**|**bit**|這是指當度量超過這個發行集的定義閾值時，是否應產生警示;值為 **1** 表示應該引發警示。|  
+|**isenabled**|**bit**|這是指是否針對此發行集的這個複寫效能標準啟用監視; **1** 值表示啟用監視。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_replmonitorhelppublicationthresholds**用於所有類型的複寫。  
+ **sp_replmonitorhelppublicationthresholds** 用於所有類型的複寫。  
   
 ## <a name="permissions"></a>權限  
- 只有散發資料庫上之**db_owner**或**replmonitor**固定資料庫角色的成員，才能夠執行**sp_replmonitorhelppublicationthresholds**。  
+ 只有散發資料庫上的 **db_owner** 或 **replmonitor** 固定資料庫角色的成員，才能夠執行 **sp_replmonitorhelppublicationthresholds**。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PauseService method
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 946ac67a84cf0dd5e6de83d7a3ff5a1a71eb2cb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9657d824326447ebf0f395e79c274173ec57cc20
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418694"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542873"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService 方法 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

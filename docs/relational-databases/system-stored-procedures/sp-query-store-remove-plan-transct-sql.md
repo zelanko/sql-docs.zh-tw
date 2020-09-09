@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.sp_query_store_remove_plan
 - sp_query_store_remove_plan
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17d047cb63a044473d57c946550b3c27e80130f8
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 8e931ab070b022f1e7649fd998642fed2694944c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646454"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541602"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 

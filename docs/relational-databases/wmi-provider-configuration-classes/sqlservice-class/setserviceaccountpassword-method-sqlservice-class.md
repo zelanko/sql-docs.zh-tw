@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetServiceAccountPassword method
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 18f83f130abc935bdfcff62d2f3b46087ee83a48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c5bd56bf8bb5515b3def7733d725a4c5f5cbab5f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488362"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542787"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 方法 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

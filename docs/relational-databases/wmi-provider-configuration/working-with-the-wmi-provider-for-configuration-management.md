@@ -1,6 +1,6 @@
 ---
 title: 使用 WMI 提供者進行設定管理
-description: 瞭解用於設定管理的 WMI 提供者，包括系結、指定連接字串，以及許可權/伺服器驗證。
+description: 瞭解設定管理的 WMI 提供者，包括系結、指定連接字串，以及許可權/伺服器驗證。
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da0f68133473e746b7eaae898273b3c8a8bab0cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2b95e9593493524a0a86579acdd2d96193ea2fb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880459"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542738"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 
@@ -40,13 +40,13 @@ ms.locfileid: "85880459"
 
 應用程式會藉由連接到組態管理的 WMI 提供者所定義的 WMI 命名空間，將該提供者導向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 Windows WMI 服務會將此命名空間對應至提供者 DLL，並將 DLL 載入記憶體中。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體都會以單一的 WMI 命名空間代表。
 
-命名空間預設為下列格式。 在格式中， `VV` 是 SQL Server 的主要版本號碼。 執行可探索此數目 `SELECT @@VERSION;` 。
+命名空間預設為下列格式。 格式 `VV` 是 SQL Server 的主要版本號碼。 您可以藉由執行來探索此數目 `SELECT @@VERSION;` 。
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-當您使用 PowerShell 進行連接時， `\\.\` 必須移除前置。 例如，下列 PowerShell 程式碼會列出 SQL Server 2016 的所有 WMI 類別，也就是主要版本13。
+當您使用 PowerShell 進行連線時， `\\.\` 必須移除開頭的。 例如，下列 PowerShell 程式碼會列出 SQL Server 2016 的所有 WMI 類別，這是最主要的第13版。
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -70,7 +70,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **注意：** 如果您是透過 Windows 防火牆進行連線，則必須確定您的電腦已正確設定。 請參閱 MSDN 網站上 Windows Management Instrumentation 檔中的「透過 Windows 防火牆連線」文章 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [Web site](https://go.microsoft.com/fwlink/?linkid=15426)  
+ **注意：** 如果您是透過 Windows 防火牆進行連線，則必須確定您的電腦已正確設定。 請參閱 MSDN 網站上 Windows Management Instrumentation 檔中的「透過 Windows 防火牆連接」一文 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [Web site](https://go.microsoft.com/fwlink/?linkid=15426)  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取組態管理的 WMI 提供者，用戶端 WMI 管理指令碼必須在目標電腦的管理員內容中執行。 您在要管理的電腦上必須是本機 Windows 管理員群組的成員。  
@@ -79,7 +79,7 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  WMI 管理指令碼可用來更新用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶。  
   
- 安全性憑證受到組態管理的 WMI 提供者支援。 如需憑證的詳細資訊，請參閱[加密](../../relational-databases/security/encryption/encryption-hierarchy.md)階層。  
+ 安全性憑證受到組態管理的 WMI 提供者支援。 如需憑證的詳細資訊，請參閱 [加密](../../relational-databases/security/encryption/encryption-hierarchy.md)階層。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)  

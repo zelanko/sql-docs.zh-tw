@@ -17,14 +17,14 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1b093be8f2a3cdb6fceb3cffbbe70ca2312fa81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481709"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542100"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系統資訊架構視圖 (Transact-sql) 
 

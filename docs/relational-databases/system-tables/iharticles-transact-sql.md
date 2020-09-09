@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc67de5d66f897ccc54a1cc06cf88aac35e572b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419232"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540962"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419232"
 |**publisher_id**|**smallint**|非 SQL Server 發行者的識別碼。|  
 |**creation_script**|**nvarchar(255)**|發行項的結構描述指令碼。|  
 |**del_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫刪除時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**濾波器**|**int**|不使用此資料行，只包含在讓**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) 的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**filter**|**int**|不使用此資料行，只包含在讓**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) 的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
 |**filter_clause**|**ntext**|用來進行水平篩選且寫在非 SQL 發行者所能解譯的標準 Transact-SQL 中的發行項 WHERE 子句。|  
 |**ins_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫插入時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
 |**pre_creation_cmd**|**tinyint**|當訂閱者端已有同名物件存在時，在套用初始快照集之前所執行的命令。<br /><br /> **0** = 無-命令未執行。<br /><br /> **1** = 卸載目的地資料表。<br /><br /> **2** = 刪除-刪除目的地資料表中的資料。<br /><br /> **3** = 截斷-截斷目的地資料表。|  

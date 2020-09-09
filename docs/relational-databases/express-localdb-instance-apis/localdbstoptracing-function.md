@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dcaec82419ebe5e33f8dc953753583b790909b12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7b42429debf70042cfc89c52f949e2b8efe907a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470501"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542938"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

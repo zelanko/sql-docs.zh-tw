@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Service Broker, catalog views
 - catalog views [SQL Server], Service Broker
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a6f083a8f776714f8ac32dcc3394b32d6bce6870
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c665bf8042c4f9d7b7cadcae6201169627099869
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498454"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542674"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker 目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88498454"
         
         [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)
         
-        [sys. 服務](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)
+        [sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)
         
         [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
     :::column-end:::

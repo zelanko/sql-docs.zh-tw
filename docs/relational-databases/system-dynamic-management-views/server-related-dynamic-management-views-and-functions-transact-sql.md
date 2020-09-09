@@ -10,14 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a856a1d9dc0f7968c7603fd104d8d3ef4796aa0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b3ad603576842161511d6171cc4acbb095ca4399
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455028"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542381"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>伺服器相關的動態管理檢視與函數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

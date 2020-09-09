@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHsubscriptions system table
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 87e750351fab39ad132781d25b2733daa8387176
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b8dafdba96014fe7c60524a34d76d8bc36792762
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473245"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540922"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

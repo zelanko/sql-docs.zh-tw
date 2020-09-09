@@ -17,16 +17,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
-ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
+ms.openlocfilehash: 2a3d57bb4ba8c36778d3d4e552d9a69bd285db9e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432650"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542580"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -34,7 +34,7 @@ ms.locfileid: "89432650"
 
   包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫 **連接** 事件的統計資料，提供資料庫連接成功和失敗的總覽。 如需連接事件的詳細資訊，請參閱 sys. event_log 中的事件種類 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-|統計資料|類型|說明|  
+|統計資料|類型|描述|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

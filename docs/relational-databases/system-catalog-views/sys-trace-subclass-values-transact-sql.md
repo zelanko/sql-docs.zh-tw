@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_subclass_values catalog view
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2c13e9d2f1ce861a2240495f504e945141a01c12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17d3b47e0e151aca5603ec8ea01e2d5e0a0aec02
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400264"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542421"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

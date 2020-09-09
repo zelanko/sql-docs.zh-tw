@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Service Broker, dynamic management views
 - dynamic management views [SQL Server], Service Broker
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c8256292310fb93843e333178fe42e6ddfcb2498
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ed1d15e3a8b1e98e58290e42c47362b188d10d19
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455049"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542354"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Service Broker 相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

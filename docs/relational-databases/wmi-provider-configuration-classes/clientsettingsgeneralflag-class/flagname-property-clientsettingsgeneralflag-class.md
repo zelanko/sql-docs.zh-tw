@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagName property
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d076f19054107bd72b52ec222988d7ea703b6c10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b06cdc4425c4417713911c93a119ef6979e4c606
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446236"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542847"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName 屬性 (ClientSettingsGeneralFlag 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

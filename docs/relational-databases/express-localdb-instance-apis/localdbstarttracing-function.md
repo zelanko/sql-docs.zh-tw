@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cb1bbdfc1dd05c7fe463a5e461d4c396f96274b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 854a840375601a6d571afa21b734cec6fb23b2b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494234"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542941"
 ---
 # <a name="localdbstarttracing-function"></a>LocalDBStartTracing 函數
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

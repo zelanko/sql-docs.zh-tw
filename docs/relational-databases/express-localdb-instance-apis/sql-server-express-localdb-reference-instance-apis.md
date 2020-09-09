@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a7d1f9461e766ec76ab5c17051143b67fd7914c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 892ccbc66070e7ef0d198daba60698502ee3bd0f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475812"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541182"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 參考 - 執行個體 API
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

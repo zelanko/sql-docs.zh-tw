@@ -1,6 +1,6 @@
 ---
-description: 'sys.dm_exec_compute_nodes (Transact-sql) '
-title: sys.dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
+description: 'sys. dm_exec_compute_nodes (Transact-sql) '
+title: sys. dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62591df1ce4a2a048c544b219f7efcc3fe18aa61
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283653"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542146"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-sql) 
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "89283653"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此視圖的索引鍵。|不論類型為何，都是在相應放大叢集中唯一的。|  
-|type|**nvarchar(32)**|節點的類型。|「計算」、「標頭」|  
+|類型|**nvarchar(32)**|節點的類型。|「計算」、「標頭」|  
 |名稱|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|IP 位址範圍|  
   

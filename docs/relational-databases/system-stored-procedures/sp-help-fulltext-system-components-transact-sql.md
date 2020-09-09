@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2455a2d6ccf3c17c1cd60e159ce429af681dca4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493202"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541706"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_fulltext_system_components
   
 -   **分詞**  
   
--   **濾波器**  
+-   **filter**  
   
 -   **通訊協定處理常式**  
   
@@ -73,7 +73,7 @@ sp_help_fulltext_system_components
 |**Clsid**|**uniqueidentifier**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是 **serveradmin** 固定伺服器角色的成員。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
-|**manufacturer**|**sysname**|元件的製造商名稱。|  
+|**製造商**|**sysname**|元件的製造商名稱。|  
   
  只有當有一個或多個使用 *component_type*的全文檢索目錄存在時，才會傳回下列結果集。  
   
@@ -138,7 +138,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [查看或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
- [設定及管理搜尋的斷詞工具和字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [全文檢索搜尋和語義搜尋預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

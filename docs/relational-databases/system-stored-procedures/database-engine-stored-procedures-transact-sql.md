@@ -15,14 +15,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], Database Engine
 - stored procedures [SQL Server], Database Engine
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7fd231b651fc6f222923ae38ca199635de274027
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d6e679c8d76e2166953bb89636344c5bedbc05e1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498121"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542073"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Database Engine 預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

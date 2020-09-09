@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobschedule
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ee25a531baeaf96b4090f0cb0f165e6cd4c8d203
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 89687d99aa2a8d020b64e9bedb1fcc4e10fc5364
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474405"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541841"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

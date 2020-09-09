@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Description property
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 49b9beaec4a7ea2263b6d56de276eb1d45f99c6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9b0fad75885e35a036c7c52c435736429d0ff94a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427210"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542871"
 ---
 # <a name="description-property-sqlservice-class"></a>Description 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

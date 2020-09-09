@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: be02e82ef4ba1718f15bd083e3ffc3b86058a24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81db44bae57dec8bb0298e872221998ac45e0a3a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498101"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542056"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>物件階層語法 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

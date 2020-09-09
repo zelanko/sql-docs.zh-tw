@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455094"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542369"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455094"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|訂閱的識別碼。|  
 |**database_id**|**int**|執行通知查詢的資料庫識別碼。 這個資料庫會儲存與這項訂閱有關的資訊。|  
-|**希**|**Varbinary (85) **|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
+|**希**|**varbinary(85)**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |object_id|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
 |**created**|**datetime**|建立訂閱的日期和時間。|  
 |**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意：實際引發時間可能大於指定的超時時間。但是，如果在指定的超時時間之後，但在引發訂用帳戶之前，會使訂閱失效的變更發生，就會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 確保在進行變更時引發。|  

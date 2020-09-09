@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a56a267fb7f10da12f0679c74f26b72a205fbf4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492868"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541481"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間索引預存程式-引數和屬性
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -320,7 +320,7 @@ ms.locfileid: "88492868"
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的空間索引預存程式 ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
- [空間索引總覽](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基本概念](../../xquery/xquery-basics.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   

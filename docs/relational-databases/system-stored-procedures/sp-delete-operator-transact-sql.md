@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_operator
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 22fcae3edb3d882826e80bdb7a359726eac930fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d228dbfe5d349a69addded2fe4eeadca6656836c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474318"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541799"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

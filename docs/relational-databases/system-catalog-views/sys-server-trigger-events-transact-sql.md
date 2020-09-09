@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_trigger_events catalog view
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 048dbd6270b65744bf44bdca5bdf60762a242275
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f379520d948e2b384cd43eac734fed9470c623c6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376264"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542444"
 ---
 # <a name="sysserver_trigger_events-transact-sql"></a>sys.server_trigger_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

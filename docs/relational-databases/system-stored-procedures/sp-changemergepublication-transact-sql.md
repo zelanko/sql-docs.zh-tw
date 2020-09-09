@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474482"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541887"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**active**|發行集在使用狀態中。|  
 ||**inactive**|發行集在非使用狀態中。|  
 |**sync_mode**|**原生** 或<br /><br /> **bcp 原生**|所有資料表的原生模式大量複製程式輸出會用在初始快照集上。|  
-||**字元**<br /><br /> 或 **bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
+||**character**<br /><br /> 或 **bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
 |**use_partition_groups**<br /><br /> 注意：使用 partition_groups 之後，如果您要還原為使用**setupbelongs**，並在**changemergearticle**中設定**use_partition_groups = false** ，則在建立快照集之後，可能不會正確地反映此情況。 快照集所產生的觸發程序與資料分割群組相容。<br /><br /> 此案例的因應措施是將狀態設為 [非使用中]、修改 **use_partition_groups**，然後將 [狀態] 設定為 [作用中]。|**true**|發行集使用預先計算的資料分割。|  
 ||**false**|發行集不使用預先計算的資料分割。|  
 |**validate_subscriber_info**||列出用來擷取訂閱者資訊的函數。 然後驗證用來針對訂閱者確認資訊分割一致的動態篩選準則。|  
