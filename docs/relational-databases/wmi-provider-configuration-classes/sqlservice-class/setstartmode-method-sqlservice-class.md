@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStartMode method
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b60886ac53fc31a2c0a0da469ace5adfdb1b1d74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea53ab79c36602658363e165231c5c9307bd97ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488341"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550801"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

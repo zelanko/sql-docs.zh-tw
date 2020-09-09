@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 90fbcbf710f1779ad011163641aa61b14b33c65b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447373"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549887"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

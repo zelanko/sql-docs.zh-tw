@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8490c652c2927e0b3587607adf0364c693839dbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20ee22c169ef624b70ca2790bf5fef5e4ff4e532
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419972"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550374"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

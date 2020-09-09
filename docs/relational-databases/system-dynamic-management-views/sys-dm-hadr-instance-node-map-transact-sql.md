@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 26e070d66fee1c7555d5448cace35318c6e4de66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08d928613751650b4943604aa6caed52ccc26b85
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419712"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548480"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

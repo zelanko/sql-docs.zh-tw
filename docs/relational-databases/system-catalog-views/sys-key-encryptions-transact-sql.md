@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.key_encryptions catalog view
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2c8f8126e3b9a1216e30801dc1d23be5b74cd48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 872b6d6abbf8a962763210524eb607c07305d85d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377824"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548730"
 ---
 # <a name="syskey_encryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

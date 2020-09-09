@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26b1946d03fe949bd0a2af52ce07d64198dd1bbf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469755"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548330"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

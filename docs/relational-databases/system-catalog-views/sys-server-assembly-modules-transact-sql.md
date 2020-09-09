@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_assembly_modules catalog view
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a1ba39407b55520c91b6a7714ec587a2fc886460
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 412cd0ef0ed2fa42ce6c1add66ce26b3a863f413
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419962"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550400"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_query_store_reset_exec_stats
 - sys.sp_query_store_reset_exec_stats
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 576647bbb04c41fc0e50383f38805f36f0717ddc
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: fcfdd367937cb00d98ed79edf6758b74c96ad330
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646465"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547868"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql) 
 

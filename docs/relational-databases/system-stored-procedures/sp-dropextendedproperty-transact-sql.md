@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2ca7e41849cbb55b16be6dcd50a19595e26a1ae0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 28a73c5cea3f957c83529de4d452efc88f6a6551
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486078"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549772"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - BinaryPath property
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e03d2ff47b9cb65a4a4bd0c5eff259c3379b22e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 367c4ea1b9acc8a06677ca2a9bb695a9bb59bfee
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485112"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550843"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

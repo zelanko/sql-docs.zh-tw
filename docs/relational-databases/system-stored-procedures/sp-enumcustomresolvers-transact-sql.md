@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2579e1d099d0543b1ed8d14bccef877bb892c64e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2971d44f61076191addb74a701bb03069d06bc4c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469494"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549750"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

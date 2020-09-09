@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedsrvlogin
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ae1cb5da71d58559598801d7b48a7f361e2317d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474578"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548397"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.plan_guides catalog view
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e37b5da28e5c4f00cc9a6e0f2faedcfcf104e3b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8aacbeebf50eae1a6e20d35262dbdc054f1429d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490191"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550476"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - stored procedures [SQL Server], extended
 - extending SQL Server functionality
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0b9f9ab9315eb04d21001a60c3c2b48d897f65a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fd438638c6cba4ce91ad3805c55b6d3f734c8d5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427680"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548445"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>一般擴充預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

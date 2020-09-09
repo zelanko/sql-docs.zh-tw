@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_alert
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 782d6f748521c6c0d1279fe3d29b843f93d2811f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e69f85b682cd9e6654bcc259fdb5b1c851e8cda3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469634"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549843"
 ---
 # <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

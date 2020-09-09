@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.event_notifications catalog view
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 100faecd43b0a76bea9aa11aa8bdff3055aa7f5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7051716ff8b401c04f1be90ec92d4a154dd0d68
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486383"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548788"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88486383"
 |**service_name**|**nvarchar(256)**|通知所送往之目標服務的名稱。|  
 |**broker_instance**|**nvarchar(128)**|通知所送往的 Broker 執行個體。|  
 |**principal_id**|**int**|擁有這個事件通知的資料庫主體識別碼。|  
-|**creator_sid**|**Varbinary (85) **|建立事件通知之登入的 SID。<br /><br /> 如果未指定 FAN_IN 選項，便是 NULL。|  
+|**creator_sid**|**varbinary(85)**|建立事件通知之登入的 SID。<br /><br /> 如果未指定 FAN_IN 選項，便是 NULL。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

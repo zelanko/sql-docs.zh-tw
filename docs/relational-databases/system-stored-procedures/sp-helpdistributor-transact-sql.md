@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eac0d50069eb6148efedecaa8f2359f4a56eed2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2c7f0778ced979765e046634d0bb39adc01578d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469300"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549641"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -91,7 +91,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**distribution cleanup agent**|**Nvarchar (100) **|散發清除代理程式的名稱。|  
 |**rpc server name**|**sysname**|遠端或本機散發者的名稱。|  
 |**rpc login name**|**sysname**|對遠端散發者的遠端程序呼叫所用的登入。|  
-|**發行者類型**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **甲骨文**<br /><br /> **ORACLE GATEWAY**|  
+|**發行者類型**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** (成功) 或 **1** (失敗)   

@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables_cursor
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74dc3af395ff6b9a3182ac97a0cb99dacc2e4513
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493196"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548033"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]

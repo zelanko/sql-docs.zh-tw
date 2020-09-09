@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16709ac2b02acf8641661831c4aee831ef95bc19
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469798"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548316"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

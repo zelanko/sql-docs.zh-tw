@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5bb9f3e59cf27c9bfbac1430c0d7c0830170367d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 075218121149528185b4adcddda7393433ff69a0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473928"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549576"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

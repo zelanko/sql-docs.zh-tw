@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.procedures catalog view
 ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4039aff0b0175ab5f4aeefed406b37b7948599c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e01fd2ef739f5eb9986597694a16faa64e01a71
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400744"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548742"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 155dce156469f5ee629143b7613bbf5e6c174c71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b45e1caf164cd367af4811d8e7cbc1f33a70921
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88324064"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550490"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

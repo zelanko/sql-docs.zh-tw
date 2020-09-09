@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 74a3aa00a5b298639b1e643842af1d834a664d58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b584cb652e6abd79818c733cb4e4fb2742d1527b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446841"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549548"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

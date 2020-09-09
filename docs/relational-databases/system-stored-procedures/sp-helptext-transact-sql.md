@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptext
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d8b8d14449a266022506c13c1c2b1cd6c5fad5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4461c311c32c1f500a4481b36f4a17d0be0134bf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547990"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,6 +1,6 @@
 ---
-title: sp_addsubscription （Transact-sql） |Microsoft Docs
-description: 將訂閱加入發行集中，以及設定訂閱者狀態。 這個預存程式會在發行集資料庫的發行者端執行。
+title: sp_addsubscription (Transact-sql) |Microsoft Docs
+description: 將訂閱加入發行集中，以及設定訂閱者狀態。 這個預存程式會在發行集資料庫的「發行者」端執行。
 ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918934"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548327"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,51 +76,51 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication =] '*發行*'  
- 這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
+ [ @publication =] '*發行*集 '  
+ 這是發行集的名稱。 *發行* 集是 **sysname**，沒有預設值。  
   
  [ @article =] '*文章*'  
- 這是發行集訂閱的發行項。 發行*項是* **sysname**，預設值是 all。 如果是 all，就會將訂閱加入該發行集的所有發行項中。 只有 all 或 NULL 值支援 Oracle 發行者。  
+ 這是發行集訂閱的發行項。 *文章* 是 **sysname**，預設值是 all。 如果是 all，就會將訂閱加入該發行集的所有發行項中。 只有 all 或 NULL 值支援 Oracle 發行者。  
   
  [ @subscriber =] '*訂閱者*'  
- 這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 Null。  
+ 這是訂閱者的名稱。 *訂閱者* 是 **sysname**，預設值是 Null。  
 
 > [!NOTE]
-> 伺服器名稱可指定為 `<Hostname>,<PortNumber>` 。 當您使用自訂埠在 Linux 或 Windows 上部署 SQL Server，且已停用 browser 服務時，您可能需要指定連接的埠號碼。
+> 您可以將伺服器名稱指定為 `<Hostname>,<PortNumber>` 。 當您使用自訂埠在 Linux 或 Windows 上部署 SQL Server 時，您可能需要指定連線的埠號碼，並停用 browser 服務。
   
  [ @destination_db =] '*destination_db*'  
- 這是放置複寫資料之目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是 Null。 當為 Null 時， *destination_db*設定為發行集資料庫的名稱。 若為 Oracle 發行者，必須指定*destination_db* 。 若為非 SQL Server 的訂閱者，請為*destination_db*指定（預設目的地）值。  
+ 這是放置複寫資料之目的地資料庫的名稱。 *destination_db* 是 **sysname**，預設值是 Null。 若為 Null， *destination_db* 設定為發行集資料庫的名稱。 針對 Oracle 發行者，必須指定 *destination_db* 。 若為非 SQL Server 訂閱者，請為 *destination_db*指定 (預設目的地) 的值。  
   
  [ @sync_type =] '*sync_type*'  
- 這是訂閱同步處理類型。 *sync_type*是**Nvarchar （255）**，它可以是下列其中一個值：  
+ 這是訂閱同步處理類型。 *sync_type* 是 **Nvarchar (255) **，它可以是下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
 |無|訂閱者已有發行資料表的結構描述和初始資料。<br /><br /> 注意：此選項已被取代。 請改用 replication support only。|  
 |automatic (預設值)|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
 |replication support only|提供在訂閱者自動產生支援更新訂閱之發行項自訂預存程序和觸發程序的功能 (如果適用)。 假設訂閱者已有發行資料表的結構描述和初始資料。 當設定點對點異動複寫拓撲時，請確定拓撲中所有節點的資料都相同。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。<br /><br /> *不支援非 SQL Server 發行集的訂閱使用這個值。*|  
-|initialize with backup|從發行集資料庫的備份中，取得發行資料表的結構描述和初始資料。 假設訂閱者有權存取發行集資料庫的備份。 備份的備份和媒體類型的位置是由*backupdevicename*和*backupdevicetype*所指定。 當使用這個選項時，不需要在設定組態期間，默認點對點異動複寫拓撲。<br /><br /> *不支援非 SQL Server 發行集的訂閱使用這個值。*|  
+|initialize with backup|從發行集資料庫的備份中，取得發行資料表的結構描述和初始資料。 假設訂閱者有權存取發行集資料庫的備份。 備份的備份和媒體類型的位置是由 *backupdevicename* 和 *>backupdevicetype*所指定。 當使用這個選項時，不需要在設定組態期間，默認點對點異動複寫拓撲。<br /><br /> *不支援非 SQL Server 發行集的訂閱使用這個值。*|  
 |initialize from lsn|當您要將節點加入至點對點異動複寫拓撲時使用。 搭配 @subscriptionlsn 使用可確保所有相關的交易都會複寫至新的節點。 假設訂閱者已有發行資料表的結構描述和初始資料。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
   
 > [!NOTE]  
 >  一律會傳送系統資料表和資料。  
   
  [ @status =] '*status*'  
- 這是訂閱狀態。 *狀態*為**sysname**，預設值為 Null。 如果未明確設定這個參數，複寫會自動將它設定為這些值之一。  
+ 這是訂閱狀態。 *狀態* 是 **sysname**，預設值是 Null。 如果未明確設定這個參數，複寫會自動將它設定為這些值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|作用中|訂閱已初始化且已做好接受變更的準備。 當*sync_type*的值為 none、initialize with backup 或 replication support only 時，就會設定此選項。|  
-|subscribed|訂閱需要初始化。 當*sync_type*的值為 [自動] 時，就會設定此選項。|  
+|作用中|訂閱已初始化且已做好接受變更的準備。 當 *sync_type* 的值為 none、initialize with backup 或 replication support only 時，就會設定此選項。|  
+|subscribed|訂閱需要初始化。 當 *sync_type* 的值為 [自動] 時，就會設定此選項。|  
   
  [ @subscription_type =] '*subscription_type*'  
- 這是訂閱的類型。 *subscription_type*是**Nvarchar （4）**，預設值是 push。 它可以是 push 或 pull。 push 訂閱的散發代理程式位於散發者端，而 pull 訂閱的散發代理程式位於訂閱者端。 *subscription_type*可以提取，以建立發行者已知的已命名提取訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
+ 這是訂閱的類型。 *subscription_type* 是 **Nvarchar (4) **，預設值是 push。 它可以是 push 或 pull。 push 訂閱的散發代理程式位於散發者端，而 pull 訂閱的散發代理程式位於訂閱者端。 *subscription_type* 可以提取來建立發行者已知的命名提取訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
   
 > [!NOTE]  
 >  匿名訂閱不需要使用這個預存程序。  
   
  [ @update_mode =] '*update_mode*'  
- 這是更新的類型。*update_mode*是**Nvarchar （30）**，而且可以是下列其中一個值。  
+ 這是更新的類型。*update_mode* 是 **Nvarchar (30) **，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -133,16 +133,16 @@ sp_addsubscription [ @publication = ] 'publication'
  請注意，如果訂閱的發行集允許 DTS，則不允許 synctran 和佇列交易的值。  
   
  [ @loopback_detection =] '*loopback_detection*'  
- 指定散發代理程式是否會將起源於訂閱者端的交易傳回給訂閱者。 *loopback_detection*是**Nvarchar （5）**，它可以是下列其中一個值。  
+ 指定散發代理程式是否會將起源於訂閱者端的交易傳回給訂閱者。 *loopback_detection* 是 **Nvarchar (5) **，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|true|散發代理程式不將起源於訂閱者端的交易傳回給訂閱者。 搭配雙向異動複寫來使用。 如需詳細資訊，請參閱[雙向異動複寫](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
+|true|散發代理程式不將起源於訂閱者端的交易傳回給訂閱者。 搭配雙向異動複寫來使用。 如需詳細資訊，請參閱 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|散發代理程式將起源於訂閱者端的交易傳回給訂閱者。|  
 |NULL (預設值)|針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者，會自動設定為 true，而針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者，則會自動設定為 false。|  
   
  [ @frequency_type =] *frequency_type*  
- 這是散發工作的排程頻率。 *frequency_type*是 int，而且可以是下列其中一個值。  
+ 這是散發工作的排程頻率。 *frequency_type* 是 int，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -152,14 +152,14 @@ sp_addsubscription [ @publication = ] 'publication'
 |8|每週|  
 |16|每月|  
 |32|每月相對|  
-|64（預設值）|自動啟動|  
+|64 (預設) |自動啟動|  
 |128|重複執行|  
   
  [ @frequency_interval =] *frequency_interval*  
- 這是要套用至*frequency_type*所設定之頻率的值。 *frequency_interval*是**int**，預設值是 Null。  
+ 這是要套用至 *frequency_type*所設定之頻率的值。 *frequency_interval* 是 **int**，預設值是 Null。  
   
  [ @frequency_relative_interval =] *frequency_relative_interval*  
- 這是散發代理程式的日期。 當*frequency_type*設定為32（每月相對）時，會使用這個參數。 *frequency_relative_interval*是**int**，而且可以是下列其中一個值。  
+ 這是散發代理程式的日期。 當 *frequency_type* 設定為 32 (每月相對) 時，就會使用這個參數。 *frequency_relative_interval* 是 **int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -171,75 +171,75 @@ sp_addsubscription [ @publication = ] 'publication'
 |NULL (預設值)||  
   
  [ @frequency_recurrence_factor =] *frequency_recurrence_factor*  
- 這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**，預設值是 Null。  
+ 這是 *frequency_type*所用的迴圈因數。 *frequency_recurrence_factor* 是 **int**，預設值是 Null。  
   
  [ @frequency_subday =] *frequency_subday*  
- 這是在定義的期間內，重新排程的頻率 (以分鐘為單位)。 *frequency_subday*是**int**，而且可以是下列其中一個值。  
+ 這是在定義的期間內，重新排程的頻率 (以分鐘為單位)。 *frequency_subday* 是 **int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |1|單次|  
 |2|Second|  
-|4|分鐘|  
+|4|Minute|  
 |8|小時|  
 |NULL||  
   
  [ @frequency_subday_interval =] *frequency_subday_interval*  
- 這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，預設值是 Null。  
+ 這是 *frequency_subday*的間隔。 *frequency_subday_interval* 是 **int**，預設值是 Null。  
   
  [ @active_start_time_of_day =] *active_start_time_of_day*  
- 這是第一次排程散發代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day*是**int**，預設值是 Null。  
+ 這是第一次排程散發代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day* 是 **int**，預設值是 Null。  
   
  [ @active_end_time_of_day =] *active_end_time_of_day*  
- 這是排程停止散發代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 Null。  
+ 這是排程停止散發代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day* 是 **int**，預設值是 Null。  
   
  [ @active_start_date =] *active_start_date*  
- 這是第一次排程散發代理程式的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，預設值是 Null。  
+ 這是第一次排程散發代理程式的日期，格式為 YYYYMMDD。 *active_start_date* 是 **int**，預設值是 Null。  
   
  [ @active_end_date =] *active_end_date*  
- 這是排程停止散發代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 Null。  
+ 這是排程停止散發代理程式的日期，格式為 YYYYMMDD。 *active_end_date* 是 **int**，預設值是 Null。  
   
  [ @optional_command_line =] '*optional_command_line*'  
- 這是要執行的選擇性命令提示字元。 *optional_command_line*是**Nvarchar （4000）**，預設值是 Null。  
+ 這是要執行的選擇性命令提示字元。 *optional_command_line* 是 **Nvarchar (4000) **，預設值是 Null。  
   
- [ @reserved =] 「已*保留*」  
+ [ @reserved =] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr =] '*enabled_for_syncmgr*'  
- 這是指是否可以透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr*是**Nvarchar （5）**，預設值是 FALSE。 如果是 false，便不用 Windows Synchronization Manager 來註冊訂閱。 如果是 true，便用 Windows Synchronization Manager 來註冊訂閱，而且不需要啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，就可以同步處理。 不支援 Oracle 發行者使用這個值。  
+ 這是指是否可以透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步處理管理員來同步處理訂閱。 *enabled_for_syncmgr* 是 **Nvarchar (5) **，預設值是 FALSE。 如果是 false，便不用 Windows Synchronization Manager 來註冊訂閱。 如果是 true，便用 Windows Synchronization Manager 來註冊訂閱，而且不需要啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，就可以同步處理。 不支援 Oracle 發行者使用這個值。  
   
  [ @offloadagent =] '*remote_agent_activation*'  
- 指定是否能從遠端啟動代理程式。 *remote_agent_activation*是**bit** ，預設值是0。  
+ 指定是否能從遠端啟動代理程式。 *remote_agent_activation* 是 **bit** ，預設值是0。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
  [ @offloadserver =] '*remote_agent_server_name*'  
- 指定將用來遠端啟用之伺服器的網路名稱。 *remote_agent_server_name*是**sysname**，預設值是 Null。  
+ 指定將用來遠端啟用之伺服器的網路名稱。 *remote_agent_server_name*是 **sysname**，預設值是 Null。  
   
  [ @dts_package_name =] '*dts_package_name*'  
- 指定 Data Transformation Services (DTS) 封裝的名稱。 *dts_package_name*是預設值為 Null 的**sysname** 。 例如，若要指定 DTSPub_Package 封裝，這個參數便是 `@dts_package_name = N'DTSPub_Package'`。 發送訂閱可以使用這個參數。 若要將 DTS 封裝資訊加入提取訂閱中，請使用 sp_addpullsubscription_agent。  
+ 指定 Data Transformation Services (DTS) 封裝的名稱。 *dts_package_name* 是預設值為 Null 的 **sysname** 。 例如，若要指定 DTSPub_Package 封裝，這個參數便是 `@dts_package_name = N'DTSPub_Package'`。 發送訂閱可以使用這個參數。 若要將 DTS 封裝資訊加入提取訂閱中，請使用 sp_addpullsubscription_agent。  
   
  [ @dts_package_password =] '*dts_package_password*'  
- 指定封裝的密碼 (如果有的話)。 *dts_package_password*是**sysname** ，預設值是 Null。  
+ 指定封裝的密碼 (如果有的話)。 *dts_package_password* 是 **sysname** ，預設值是 Null。  
   
 > [!NOTE]  
->  如果指定*dts_package_name* ，您必須指定密碼。  
+>  如果指定 *dts_package_name* ，您必須指定密碼。  
   
  [ @dts_package_location =] '*dts_package_location*'  
- 指定封裝的位置。 *dts_package_location*是**Nvarchar （12）**，預設值是「散發者」。 封裝位置可以是散發者或訂閱者。  
+ 指定封裝的位置。 *dts_package_location* 是 **Nvarchar (12) **，預設值是「散發者」。 封裝位置可以是散發者或訂閱者。  
   
  [ @distribution_job_name =] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher =] '*publisher*'  
- 指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher*是**sysname**，預設值是 Null。  
+ 指定非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *publisher* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
 >  發行者不應指定*發行者* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- [ @backupdevicetype =] '*backupdevicetype*'  
- 指定從備份中初始化訂閱者時所用的備份裝置類型。 *backupdevicetype*是**Nvarchar （20）**，它可以是下列其中一個值：  
+ [ @backupdevicetype =] '*>backupdevicetype*'  
+ 指定從備份中初始化訂閱者時所用的備份裝置類型。 *>backupdevicetype* 是 **Nvarchar (20) **，而且可以是下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -247,47 +247,47 @@ sp_addsubscription [ @publication = ] 'publication'
 |disk|備份裝置是硬碟。|  
 |tape|備份裝置是磁帶機。|  
   
- 只有當*sync_method*設定為 initialize_with_backup 時，才會使用*backupdevicetype* 。  
+ 只有當*sync_method*設定為 initialize_with_backup 時，才會使用 *>backupdevicetype* 。  
   
  [ @backupdevicename =] '*backupdevicename*'  
- 指定從備份中初始化訂閱者時所用的裝置名稱。 *backupdevicename*是**Nvarchar （1000）**，預設值是 Null。  
+ 指定從備份中初始化訂閱者時所用的裝置名稱。 *backupdevicename* 是 **Nvarchar (1000) **，預設值是 Null。  
   
  [ @mediapassword =] '*mediapassword*'  
- 如果媒體格式化時設定了密碼，便指定媒體集的密碼。 *mediapassword*是**sysname**，預設值是 Null。  
+ 如果媒體格式化時設定了密碼，便指定媒體集的密碼。 *mediapassword* 是 **sysname**，預設值是 Null。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password =] '*密碼*'  
- 如果建立備份時設定了密碼，便指定備份的密碼。 *password*是**sysname**，預設值是 Null。  
+ [ @password =] '*password*'  
+ 如果建立備份時設定了密碼，便指定備份的密碼。 *password* 是 **sysname**，預設值是 Null。  
   
  [ @fileidhint =] *fileidhint*  
- 識別要還原之備份組的序數值。 *fileidhint*是**int**，預設值是 Null。  
+ 識別要還原之備份組的序數值。 *fileidhint* 是 **int**，預設值是 Null。  
   
- [ @unload =] *unload*卸載  
- 指定在從備份初始化完成之後，是否應該卸載磁帶備份裝置。 *unload*是**bit**，預設值是1。 1 表示應該卸載磁帶。 只有當*backupdevicetype*是磁帶時，才會使用*unload* 。  
+ [ @unload =] *unload*  
+ 指定在從備份初始化完成之後，是否應該卸載磁帶備份裝置。 *unload* 是 **bit**，預設值是1。 1 表示應該卸載磁帶。 只有當 *>backupdevicetype*為磁帶時，才會使用*unload* 。  
   
  [ @subscriptionlsn =] *subscriptionlsn*  
- 指定記錄序號 (LSN)，而且訂閱應該從這個序號開始傳遞變更至點對點異動複寫拓撲中的節點。 與 @sync_type initialize from lsn 的值搭配使用，以確保所有相關的交易都會複寫到新的節點。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
+ 指定記錄序號 (LSN)，而且訂閱應該從這個序號開始傳遞變更至點對點異動複寫拓撲中的節點。 與 @sync_type initialize from lsn 的值搭配使用，以確保所有相關的交易都會複寫至新的節點。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  [ @subscriptionstreams =] *subscriptionstreams*  
- 這是在維護許多使用單一執行緒時所提供的交易式特性時，每個散發代理程式可用來將變更批次並行套用在訂閱者上的連接數目。 *subscriptionstreams*是**Tinyint**，預設值是 Null。 支援的值範圍是 1-64。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者、Oracle 發行者或點對點訂閱不支援這個參數。 每當使用訂閱資料流時，msreplication_subscriptions 資料表就會加入其他資料列 (每個資料流 1 個資料列) 並將 agent_id 設定為 NULL。  
+ 這是在維護許多使用單一執行緒時所提供的交易式特性時，每個散發代理程式可用來將變更批次並行套用在訂閱者上的連接數目。 *subscriptionstreams* 是 **Tinyint**，預設值是 Null。 支援的值範圍是 1-64。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者、Oracle 發行者或點對點訂閱不支援這個參數。 每當使用訂閱資料流時，msreplication_subscriptions 資料表就會加入其他資料列 (每個資料流 1 個資料列) 並將 agent_id 設定為 NULL。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)]Subscriptionstreams 不適用於設定為傳遞  的發行項。 若要使用 subscriptionstreams，請改將發行項設定為傳遞預存程序呼叫。  
   
  [ @subscriber_type =] *subscriber_type*  
- 這是訂閱者的類型。 *subscriber_type*是**Tinyint**，而且可以是下列其中一個值。  
+ 這是訂閱者的類型。 *subscriber_type* 是 **Tinyint**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|0 (預設值)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預訂|  
+|0 (預設值)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者|  
 |1|ODBC 資料來源伺服器|  
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 資料庫|  
 |3|OLE DB 提供者|  
   
  [ @memory_optimized =] *memory_optimized*  
- 表示訂用帳戶支援記憶體優化資料表。 *memory_optimized*是**bit**，其中1等於 true （訂閱支援記憶體優化資料表）。  
+ 指出訂閱支援記憶體優化的資料表。 *memory_optimized* 是 **bit**，其中1等於 true (訂用帳戶支援記憶體優化的資料表) 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -295,21 +295,21 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  sp_addsubscription 用於快照式複寫和異動複寫中。  
   
- 當系統管理員 (sysadmin) 固定伺服器角色的成員執行 sp_addsubscription 來建立發送訂閱時，系統會隱含地建立散發代理程式作業，而且會利用 SQL Server Agent 服務帳戶來執行這項作業。 我們建議您執行[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ，並針對和指定不同代理程式特定 Windows 帳戶的認證 @job_login @job_password 。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 當系統管理員 (sysadmin) 固定伺服器角色的成員執行 sp_addsubscription 來建立發送訂閱時，系統會隱含地建立散發代理程式作業，而且會利用 SQL Server Agent 服務帳戶來執行這項作業。 建議您執行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ，並為和指定不同的代理程式特定 Windows 帳戶的認證 @job_login @job_password 。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
  sp_addsubscription 可防止 ODBC 和 OLE DB 訂閱者存取符合下列狀況的發行集：  
   
--   是使用原生*sync_method*在[sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)的呼叫中所建立。  
+-   使用原生 *sync_method* 建立 [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)的呼叫中。  
   
--   包含已使用[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)預存程式（具有*pre_creation_cmd*參數值為3（截斷））加入發行集的發行項。  
+-   包含已使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 預存程式新增至發行集的發行項，其 *pre_creation_cmd* 參數值為 3 (截斷) 。  
   
--   嘗試設定*update_mode*以同步處理交易。  
+-   嘗試將 *update_mode* 設定為同步交易。  
   
 -   有設定成使用參數化陳述式的發行項。  
   
- 此外，如果發行集的 [ *allow_queued_tran* ] 選項設為 [true] （這會在「訂閱者」端將變更排入佇列，直到可以在「發行者」端套用）為止，發行項中的 timestamp 資料行就會編寫為**時間戳記**，並將該資料行的變更傳送給「訂閱者」。 訂閱者會產生和更新時間戳記資料行值。 對於 ODBC 或 OLE DB 訂閱者而言，如果嘗試訂閱的發行集*allow_queued_tran*設定為 true，且其中含有時間戳記資料行的發行項，sp_addsubscription 就會失敗。  
+ 此外，如果發行集的 *allow_queued_tran* 選項設定為 true (這可在「訂閱者」端套用變更之前，將訂閱者端的變更排入佇列) ，發行項中的時間戳記資料行會編寫為 **時間戳記**，而該資料行的變更會傳送給訂閱者。 訂閱者會產生和更新時間戳記資料行值。 若為 ODBC 或 OLE DB 訂閱者，如果嘗試訂閱的發行集 *allow_queued_tran* 設為 true，且其中包含時間戳記資料行的發行集，則 sp_addsubscription 會失敗。  
   
- 如果訂閱未使用 DTS 封裝，它就無法訂閱設為*allow_transformable_subscriptions*的發行集。 如果發行集的資料表必須複寫到 DTS 訂閱和非 DTS 訂閱，則必須建立兩個個別的發行集，每個訂閱類型各一個發行集。  
+ 如果訂閱未使用 DTS 封裝，它就無法訂閱設定為 *allow_transformable_subscriptions*的發行集。 如果發行集的資料表必須複寫到 DTS 訂閱和非 DTS 訂閱，則必須建立兩個個別的發行集，每個訂閱類型各一個發行集。  
   
  選取 **sync_type** 選項 *replication support only*、 *initialize with backup*或 *initialize from lsn*時，記錄讀取器代理程式必須在執行 **sp_addsubscription**之後執行，讓設定指令碼寫入至散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當 **sync_type** 選項設為 *Automatic*時，不需要任何特殊的記錄讀取器代理程式動作。  
   
@@ -321,7 +321,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [為非 SQL Server 的訂閱者建立訂用帳戶](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
+ [為非 SQL Server 訂閱者建立訂閱](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   

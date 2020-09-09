@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d65bd7f5e6967bac665892de55566cf4d151144f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae2e3cb2ec6506810d1682926d96ec1fe1734174
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485757"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549552"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

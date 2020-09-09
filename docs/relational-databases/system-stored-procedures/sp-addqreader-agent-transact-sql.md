@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 998a8c27af1a44bc477ab232f3b263a5ea70688f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dae183ab0f04ac343e7836b852a881341f188325
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481502"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549952"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

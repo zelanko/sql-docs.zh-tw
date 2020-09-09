@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1662f79b4c30a4503a580b562f3d264cd8d05719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6dc1bb60a075f75aabb737a0eccc35b8269f8db2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376084"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548653"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

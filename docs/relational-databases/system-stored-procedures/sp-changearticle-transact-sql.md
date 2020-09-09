@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464464"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548217"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,14 +62,14 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||提供這個項目的目的，是為了與舊版相容。 使用 **dest_table**。|  
 |**dest_table**||新的目的地資料表。|  
 |**destination_owner**||目的地物件的擁有者名稱。|  
-|**濾波器**||用於篩選資料表 (水平篩選) 的新預存程序。 預設值是 NULL。 點對點複寫發行集的這個項目不能變更。|  
+|**filter**||用於篩選資料表 (水平篩選) 的新預存程序。 預設值是 NULL。 點對點複寫發行集的這個項目不能變更。|  
 |**fire_triggers_on_snapshot**|**true**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意：若要複寫觸發程式， *schema_option* 的位元遮罩值必須包含 **0x100**值。|  
 ||**false**|在套用初始快照集時，不執行複寫的使用者觸發程序。|  
 |**identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**ins_cmd**||要執行的 INSERT 陳述式；否則，便從記錄檔中建構它。|  
 |**pre_creation_cmd**||可以在套用同步處理之前，卸除、刪除或截斷目的地資料表的預先建立命令。|  
 ||無|不使用命令。|  
-||**drop**|卸除目的地資料表。|  
+||**下降**|卸除目的地資料表。|  
 ||**delete**|刪除目的地資料表。|  
 ||**截斷**|截斷目的地資料表。|  
 |**pub_identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
@@ -195,7 +195,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **濾波器**  
+-   **filter**  
   
 -   **ins_cmd**  
   
@@ -240,8 +240,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [查看和修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

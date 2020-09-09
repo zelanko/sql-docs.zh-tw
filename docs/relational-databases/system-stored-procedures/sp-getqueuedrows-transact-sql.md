@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6948964a224d0dfe1d36324971608e649ec45d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481249"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548017"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

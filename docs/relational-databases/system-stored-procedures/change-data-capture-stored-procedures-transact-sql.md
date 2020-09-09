@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], change data capture
 - change data capture [SQL Server], stored procedures
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1f7ea900983571658406f8b32ec945a9da82635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 017e6f6ff7dd9c5e257050619cbf744c2acd80d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419332"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550104"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>異動資料擷取預存程序 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48e8146386cdbeb3ea88ecfd5f23027537c048c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b1a185ef8fe998a614de8ca56451966894a461f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481448"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549938"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'` 這是正在使用的 ODBC 版本。 *ODBCVer* 是 **int**，預設值是2。 這表示 ODBC 2。 有效值是 2 或 3。 如需有關 2 和 3 版之間行為差異的詳細資訊，請參閱 ODBC SQLColumns 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

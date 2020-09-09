@@ -13,15 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f71ed91509fca2d0df69b2fdd35e7c32c11351a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b8d3b3e735345562cc0cde0e14b3105c8618e73
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498154"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549993"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>管理資料倉儲預存程序 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

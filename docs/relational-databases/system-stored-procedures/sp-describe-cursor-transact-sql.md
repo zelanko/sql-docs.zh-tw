@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 97f7d5b17fdd06199b11bfa82c6795407e28127f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2e24c729dce92d05827466d9931916a9002adc1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493292"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548099"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable* 是 **Nvarchar (128) **。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="cursors-returned"></a>傳回的資料指標  
  sp_describe_cursor 會將其結果集封裝在資料 [!INCLUDE[tsql](../../includes/tsql-md.md)] **指標** 輸出參數中。 這樣 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序和觸發程序就能夠一次處理一個資料列的輸出。 另外，這也表示無法直接從資料庫 API 函數呼叫程序。 **Cursor** output 參數必須系結至程式變數，但資料庫 api 並不支援系結資料**指標**參數或變數。  
@@ -79,7 +79,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR 陳述式的資料指標名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果是設定指向資料指標的資料指標變數來建立資料指標，cursor_name 就會傳回資料指標變數的名稱。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個輸出資料行會傳回系統產生的名稱。|  
 |cursor_scope|**tinyint**|1 = LOCAL <br /><br /> 2 = GLOBAL|  
 |status|**int**|與 CURSOR_STATUS 系統函數所報告相同的值：<br /><br /> 1 = 資料指標名稱或變數所參考的資料指標是開啟的。 如果資料指標是不區分、靜態或索引鍵集，它至少會有一個資料列。 如果資料指標是動態的，結果集就會有零或多個資料列。<br /><br /> 0 = 資料指標名稱或變數所參考的資料指標是開啟的，但沒有資料列。 動態資料指標永不傳回這個值。<br /><br /> -1 = 資料指標名稱或變數所參考的資料指標是關閉的。<br /><br /> -2 = 只適用於資料指標變數。 沒有指派給變數的資料指標。 可能是 OUTPUT 參數將資料指標指派給變數，但傳回之前，預存程序便關閉了資料指標。<br /><br /> -3 = 含指定名稱的資料指標或資料指標變數不存在，或資料指標變數還沒有配置資料指標。|  
-|model|**tinyint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
+|模型|**tinyint**|1 = 不區分 (或靜態)<br /><br /> 2 = 索引鍵集<br /><br /> 3 = 動態<br /><br /> 4 = 向前快轉|  
 |並行|**tinyint**|1 = 唯讀<br /><br /> 2 = 捲動鎖定<br /><br /> 3 = 開放式|  
 |scrollable|**tinyint**|0 = 順向<br /><br /> 1 = 可捲動|  
 |open_status|**tinyint**|0 = 已關閉<br /><br /> 1 = 開啟|  

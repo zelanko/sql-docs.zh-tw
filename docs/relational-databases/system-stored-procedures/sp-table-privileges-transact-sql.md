@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9eb21300720f43d68dc00953e5b760489596145d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ef4f8bb0971c0f594d07d3f8926a6a4cdae8991
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481016"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549505"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
@@ -59,7 +59,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  決定是否將底線 (_) 、百分比 (% ) 和方括弧 ( [或] ) 字元視為萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern* 是 **bit**，預設值是1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

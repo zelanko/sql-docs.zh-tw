@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cde44e61d01f4995f1f3517f2144a36fff669177
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398734"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550250"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

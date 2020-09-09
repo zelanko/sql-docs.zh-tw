@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpmonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6c01cf610764cc02f77ac1f035319fb1598687b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd82681731ab29068c2a951850da9f2ad225742b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493358"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548152"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +41,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>引數  
- None  
+ 無  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  傳回目前的更新週期，也就是資料庫鏡像狀態資料表更新之間的分鐘數。 這個值介於 1 和 120 分鐘之間。  

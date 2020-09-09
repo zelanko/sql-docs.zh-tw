@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addextendedproperty
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 836828ca54ca450ca2932e462db2a2a9bac502cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fb15ad9040276302586efc1b9661ff1e08e62e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481529"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548395"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

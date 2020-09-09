@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_references catalog view
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b9560a2fd64c2d58e6cc39746acb5c99dae008ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9376c15ecf0da2922714ce4c17e80485d628d91b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88324418"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550511"
 ---
 # <a name="sysassembly_references-transact-sql"></a>sys.assembly_references (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

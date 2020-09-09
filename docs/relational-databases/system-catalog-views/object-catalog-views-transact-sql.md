@@ -14,14 +14,14 @@ helpviewer_keywords:
 - object catalog views [SQL Server]
 - catalog views [SQL Server], objects
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 787f323c21b3cb14b2323870c4b702ca10ac2244
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ed6cb1967e7c64ad77b5d5cbc8c40000a733e3fb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455280"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550565"
 ---
 # <a name="object-catalog-views-transact-sql"></a>物件目錄檢視 (Transact-SQL)
 

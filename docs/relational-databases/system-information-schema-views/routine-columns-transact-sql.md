@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ROUTINE_COLUMNS view
 - INFORMATION_SCHEMA.ROUTINE_COLUMNS view
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce2495a7711be38903cba00acf9beb05789f601d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8cda806de638edcea2c7b28cfa850414c90006a2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397294"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550121"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

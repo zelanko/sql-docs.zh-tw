@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549665"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ sp_help_proxy
 |**credential_identity**|**sysname**|Proxy 相關認證的 Microsoft Windows 網域名稱和使用者名稱。|  
 |**啟用**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 已啟用}|  
 |**description**|**nvarchar(1024)**|這個 Proxy 的描述。|  
-|**user_sid**|**Varbinary (85) **|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
+|**user_sid**|**varbinary(85)**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
 |**credential_id**|**int**|這個 Proxy 的相關認證識別碼。|  
 |**credential_identity_exists**|**int**|credential_identity 是否存在。 { 0 = 不存在，1 = 存在 }|  
   

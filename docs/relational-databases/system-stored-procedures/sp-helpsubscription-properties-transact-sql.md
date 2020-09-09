@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4bcbd2ec90018561870d6159edb41105119ebc69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446980"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547955"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

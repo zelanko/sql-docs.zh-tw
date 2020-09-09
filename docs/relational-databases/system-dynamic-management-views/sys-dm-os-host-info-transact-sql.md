@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb99e12c75a3f10ca88dc7668d194840f360be2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d313e91fdd719a7ff33728bf3183980f564910
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489819"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550223"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-sql) 
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88489819"
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 (版本號碼)。 如需值和描述的清單，請參閱 [ (Windows) 的作業系統版本 ](/windows/desktop/SysInfo/operating-system-version)。 <br> 若是 Linux，則會傳回空字串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 作業系統的 Service Pack 層級。 <br> 若是 Linux，則會傳回空字串。 |  
 |**host_sku**|**int**|Windows 庫存單位 (SKU) 識別碼。 如需 SKU 識別碼和描述的清單，請參閱 [GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx)函式。 可為 Null。 <br> 若是 Linux，則會傳回 Null。 |  
-|**os_language_version**|**int**|作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 [Microsoft 指派的地區設定識別碼](https://go.microsoft.com/fwlink/?LinkId=208080)。 不可為 null。|  
+|**os_language_version**|**int**|作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 [Microsoft 指派的地區設定識別碼](https://go.microsoft.com/fwlink/?LinkId=208080)。 不可以是 null。|  
 
 ## <a name="remarks"></a>備註  
 此視圖類似于 [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，新增資料行來區分 Windows 和 Linux。
@@ -76,7 +76,7 @@ FROM sys.dm_os_host_info;
 
   
 ## <a name="see-also"></a>另請參閱  
- [sys. dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

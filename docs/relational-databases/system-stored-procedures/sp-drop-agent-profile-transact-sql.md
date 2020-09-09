@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_drop_agent_profile
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d69f685fce04f3a4355fae3dab31900cde4a1c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a3864e61e681ad6465295b1fb43011e8d9f9b19
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474321"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549805"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - Clustered property
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40b62cbdc3d3e2e7bcdd67c8c07a7794a1e70885
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 693c2f9e55683a3d9bb680359f211ce3f72f93dd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463550"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550829"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 屬性 (SqlService 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

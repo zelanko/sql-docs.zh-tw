@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489360"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548018"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_help_fulltext_catalog_components
 |**Clsid**|**uniqueidentifier**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是 **serveradmin** 固定伺服器角色的成員。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
-|**manufacturer**|**sysname**|元件的製造商名稱。|  
+|**製造商**|**sysname**|元件的製造商名稱。|  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  

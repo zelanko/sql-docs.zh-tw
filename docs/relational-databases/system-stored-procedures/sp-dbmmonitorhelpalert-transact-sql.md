@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 942696e1d05ac149780ca226d4a6ba500a3aa11c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9483733ddcaca469ea162ff9dba884ef857a9493
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489411"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548154"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_dbmmonitorhelpalert database_name
  如需與警告對應之事件識別碼的詳細資訊，請參閱 [使用鏡像效能計量的警告臨界值和警示 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  針對每個傳回的警示，傳回包含下列資料行的資料列：  

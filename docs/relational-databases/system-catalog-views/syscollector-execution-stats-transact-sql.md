@@ -17,14 +17,14 @@ helpviewer_keywords:
 - syscollector_execution_stats view
 - data collector view
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ed50c37df682bf3ea41478c29847ca7daba0e448
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d0819aba312ddfaceaff092815b1c78297308dd6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490054"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550344"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88490054"
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#40;Transact-sql&#41;的資料收集器視圖 ](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [資料收集器檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

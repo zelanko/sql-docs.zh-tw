@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.databases catalog view
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73141e7bc09d2748ff79cba0de4ebf9d4758cd65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379084"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550563"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88379084"
 |**name**|**sysname**|資料庫的名稱，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]伺服器內是唯一的。|  
 |**database_id**|**int**|資料庫的識別碼，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]伺服器內是唯一的。|  
 |**source_database_id**|**int**|Non-NULL = 這個資料庫快照集的來源資料庫識別碼。<br /> NULL = 不是資料庫快照集。|  
-|**owner_sid**|**Varbinary (85) **|資料庫外部擁有者的 SID (安全性識別碼)，亦即在伺服器註冊所用的識別碼。 如需誰可以擁有資料庫的詳細資訊，請參閱[ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)的**alter authorization for** database 一節。|  
+|**owner_sid**|**varbinary(85)**|資料庫外部擁有者的 SID (安全性識別碼)，亦即在伺服器註冊所用的識別碼。 如需誰可以擁有資料庫的詳細資訊，請參閱[ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)的**alter authorization for** database 一節。|  
 |**create_date**|**datetime**|資料庫建立或重新命名的日期。 針對 **tempdb**，此值會在每次伺服器重新開機時變更。|  
 |**compatibility_level**|**tinyint**|對應於與行為相容之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整數：<br /><br /><table border="0"><tr><td>**值**</td><td>**適用於**</td></tr><tr><td>70</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]</td></tr><tr><td>80</td><td>[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 通過 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]</td></tr><tr><td>90</td><td>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 通過 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]</td></tr><tr><td>100</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>110</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>120</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>130</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>140</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr><tr><td>150</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]</td></tr></table>|  
 |**collation_name**|**sysname**|資料庫的定序。 它是資料庫中的預設定序。<br /> NULL = 資料庫不在線上，或者 AUTO_CLOSE 設為 ON 且資料庫已關閉。|  

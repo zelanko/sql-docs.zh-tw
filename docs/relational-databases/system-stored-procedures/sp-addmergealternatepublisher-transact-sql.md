@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergealternatepublisher
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e0589b82f3126819e1638d90c8e67dea7556aafe
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474507"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548353"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

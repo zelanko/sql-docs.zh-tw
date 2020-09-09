@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f017ab485a5a6516db76566775e12fbb612312c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d49121d6f8ce91d6ca1e8be809466ee58968a1d3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473657"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549519"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

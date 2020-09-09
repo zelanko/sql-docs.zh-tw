@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6c27dc5a6caacf7a1cde44a54fe6383fc36ea516
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a321ea1734ce63941e2ba3ebac30bb0149891d09
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455295"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548816"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>資料庫鏡像見證目錄檢視-sys. database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

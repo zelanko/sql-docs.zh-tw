@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 61e72b03e3bc6adff3a9e3d0858a8a2bdb4b5805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b11598fc8dacc27f88856e2afdc3adced41470f7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469290"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549656"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

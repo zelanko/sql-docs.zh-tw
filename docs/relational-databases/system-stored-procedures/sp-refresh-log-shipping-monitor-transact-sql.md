@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ece1b616c1639a7e826f6c5d5cc566ec8cb35b6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464066"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549556"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

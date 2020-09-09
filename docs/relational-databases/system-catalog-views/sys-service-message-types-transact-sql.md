@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b56665ff1a780cdcf8052c063f817b542e65ac3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3eaaa45f6f34e690b7b8abc3fc0366b54748b16c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455178"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550392"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88455178"
 |**name**|**sysname**|訊息類型的名稱，它在資料庫中是唯一的。 不是 NULLABLE。|  
 |**message_type_id**|**int**|訊息類型的識別碼，它在資料庫中是唯一的。 不是 NULLABLE。|  
 |**principal_id**|**int**|擁有這個訊息類型的資料庫主體識別碼。 NULLABLE。|  
-|**驗證**|**char(2)**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證。 不是 NULLABLE。 值為下列其中之一：<br /><br /> N = 無<br /><br /> X = XML<br /><br /> E = 空的|  
+|**validation**|**char(2)**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證。 不是 NULLABLE。 值為下列其中之一：<br /><br /> N = 無<br /><br /> X = XML<br /><br /> E = 空的|  
 |**validation_desc**|**nvarchar(60)**|在傳送這種類型的訊息之前，已由 Broker 完成的驗證描述。 NULLABLE。 值為下列其中之一：<br /><br /> 無<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|如果是使用 XML 結構描述來進行驗證，則使用該結構描述集合的識別碼。<br /><br /> 否則為 NULL。|  
   

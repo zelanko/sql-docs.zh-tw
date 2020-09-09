@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e9e76c30adf6ec3ec241c5f5bc8589802a2cad0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53db2ff3554c095832a6fa21accb061f2575c3d6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489678"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548379"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -1,6 +1,6 @@
 ---
-description: 'sys.dm_exec_external_work (Transact-sql) '
-title: sys.dm_exec_external_work (Transact-sql) |Microsoft Docs
+description: 'sys. dm_exec_external_work (Transact-sql) '
+title: sys. dm_exec_external_work (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -20,30 +20,30 @@ helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4476f9a3beaf7906d69763462f5b7558989241eb
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 660b41d250f8bfccfc8d0e123f0e1a6aafb5fcde
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283639"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548507"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-sql) 
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   在每個計算節點上，傳回每個背景工作負載的相關資訊。  
   
- 查詢 sys.dm_exec_external_work 識別與外部資料源進行通訊的工作， (例如 Hadoop 或外部 SQL Server) 。  
+ 查詢 sys. dm_exec_external_work，以識別與外部資料源進行通訊的工作， (例如 Hadoop 或外部 SQL Server) 。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|相關聯 PolyBase 查詢的唯一識別碼。|請參閱[sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*request_ID* 。|  
-|step_index|`int`|此背景工作正在執行的要求。|請參閱[sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*step_index* 。|  
-|dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱 [sys.dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
-|compute_node_id|`int`|正在執行背景工作的節點。|請參閱 [sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
+|execution_id|`nvarchar(32)`|相關聯 PolyBase 查詢的唯一識別碼。|請參閱[sys. dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*request_ID* 。|  
+|step_index|`int`|此背景工作正在執行的要求。|請參閱[sys. dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*step_index* 。|  
+|dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱 [sys. dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
+|compute_node_id|`int`|正在執行背景工作的節點。|請參閱 [sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|類型|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
 |work_id|`int`|實際分割的識別碼。|大於或等於0。|  
 |input_name|`nvarchar(4000)`|要讀取之輸入的名稱|使用 Hadoop 時的檔案名。|  
 |read_location|`bigint`|位移或讀取位置。|要讀取的檔案位移。|  

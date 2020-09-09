@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7cad3ee246c9ca0e9867c2726091d1e0d269780a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10cbbdd96df97ff1100443f1363418f18d28c538
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498091"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549948"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a> (Transact-sql) 的 Managed 備份預存程式
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

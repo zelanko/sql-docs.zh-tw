@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11605b404e846db81cd364eac2e9223bf563e3a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 61ac8c7567247e87afa927348592a0f0dacbb382
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493418"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548238"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

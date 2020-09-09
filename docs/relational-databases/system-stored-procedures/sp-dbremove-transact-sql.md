@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbremove
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ac926a35cb7e1c15460bdb5afa7bee3ad3bbc205
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1303996a3ca68c5cc244ed24d0405169a19e4779
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493387"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549876"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

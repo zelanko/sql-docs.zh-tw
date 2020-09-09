@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6db181cfddbbde9730fba0ac9b0ddfc7264d433
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4874af1c1defd949f4744a98f9f959995bf1d231
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474007"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547927"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

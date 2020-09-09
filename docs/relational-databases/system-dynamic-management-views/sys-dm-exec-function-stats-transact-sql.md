@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_function_stats dynamic management view
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baa8bd4e62d66812d6f2ba32e4c94bc1b80da99f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ec3f05f40f6de423cec2d08f2a240729201e43e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454923"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550283"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

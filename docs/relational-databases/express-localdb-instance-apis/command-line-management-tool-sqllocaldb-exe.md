@@ -11,14 +11,14 @@ ms.topic: reference
 apilocation:
 - sqluserinstance.dll
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f58db3daf85ec6415e182d348e6be63460986776
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b2140dc74bd9e30bb4c707681aa9b491f8ea272
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475880"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548890"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>命令列管理工具：SqlLocalDB.exe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

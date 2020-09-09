@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7bca458ae688762c45d365a2d65b92106288952a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: deb1973dcff95f79d70ca3f458c38208db3b1f47
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486030"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548027"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

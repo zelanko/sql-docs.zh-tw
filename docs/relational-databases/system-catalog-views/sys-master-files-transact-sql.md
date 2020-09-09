@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455259"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548698"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88455259"
 |database_id|**int**|套用這個檔案的資料庫識別碼。 Masterdatabase_id 一律為1。|  
 |file_id|**int**|資料庫內的檔案識別碼。 主要 file_id 一定是 1。|  
 |file_guid|**uniqueidentifier**|檔案的唯一識別碼。<br /><br /> Null = 資料庫已從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (升級為 SQL Server 2005 及更早版本的) 有效。|  
-|type|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 <br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
+|類型|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 <br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
 |type_desc|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS<br /><br /> 記錄<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄)。|  
 |data_space_id|**int**|這個檔案所屬的資料空間識別碼。 資料空間是一個檔案群組。<br /><br /> 0 = 記錄檔。|  
 |NAME|**sysname**|資料庫中之檔案的邏輯名稱。|  

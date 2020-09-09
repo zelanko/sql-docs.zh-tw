@@ -19,15 +19,15 @@ helpviewer_keywords:
 - query_store_plan catalog view
 - sys.query_store_plan catalog view
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 355cd29ab98fd93dbee853532bf82f2c875fddf3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 205fd73aa1315c4534b3bb975687450b01a40c92
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420052"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548711"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

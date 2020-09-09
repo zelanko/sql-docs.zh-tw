@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.parameters catalog view
 - table-valued parameters,sys.parameters
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a1d269c0bc247a1bb5d8afbc0aecb54bc9e7fd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 863f360d5d5aaba7eae957d7406f5e3ec465d64f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447920"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548710"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

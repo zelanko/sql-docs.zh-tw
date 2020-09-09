@@ -19,14 +19,14 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4357cc8cc214f610ef1f61c27dd8e05be3e3d56b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 79188e36e5a876fb61ddda3af94f37372963a08c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486291"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548404"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

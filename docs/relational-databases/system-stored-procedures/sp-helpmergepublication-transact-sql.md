@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e16d7669dd827d1d58bf02851ced72bd89ee804d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1042543ba82dcbd4bc7376acf6943a838506b6fa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464208"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549588"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

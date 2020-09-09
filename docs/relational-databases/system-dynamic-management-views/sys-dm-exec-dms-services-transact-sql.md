@@ -1,6 +1,6 @@
 ---
-description: 'sys.dm_exec_dms_services (Transact-sql) '
-title: sys.dm_exec_dms_services (Transact-sql) |Microsoft Docs
+description: 'sys. dm_exec_dms_services (Transact-sql) '
+title: sys. dm_exec_dms_services (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - dm_exec_dms_services management view
 - sys.dm_exec_dms_services management view
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5ffd1328fc8fa2eb1e8370d06309e3a524b1a75
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 098be8cf81eaffa5f110b69c25f51eee92a9279b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283599"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548563"
 ---
-# <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-sql) 
+# <a name="sysdm_exec_dms_services-transact-sql"></a>sys. dm_exec_dms_services (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存在 PolyBase 計算節點上執行之所有 DMS 服務的相關資訊。 它會針對每個服務實例列出一個資料列。  
@@ -38,7 +38,7 @@ ms.locfileid: "89283599"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|與 DMS 核心相關聯的唯一數值識別碼。 此視圖的索引鍵。|唯一識別碼。|  
-|compute_node_id|`int`|此 DMS 服務執行所在的節點識別碼|請參閱[sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的*compute_node_id* 。|  
+|compute_node_id|`int`|此 DMS 服務執行所在的節點識別碼|請參閱[sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的*compute_node_id* 。|  
 |status|`nvarchar(32)`|DMS 服務的目前狀態||
 |compute_pool_id|`int`|集區的唯一識別碼。|
 

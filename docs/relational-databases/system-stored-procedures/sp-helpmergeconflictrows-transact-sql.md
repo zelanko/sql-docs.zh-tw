@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4c66dc9c8ac6cc21d74cbf2a6474ad74a2cffba1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d9a0f2326951609a22dfe5647f8eceb7af28c581
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485937"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547988"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

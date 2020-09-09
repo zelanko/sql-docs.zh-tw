@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8edccbecb7d5a44b2fc8a5eed2297498c0f94bae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480973"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547831"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |6|指定的比較運算子無效。|  
 |7|指定的邏輯運算子無效。|  
 |9|指定的追蹤控制代碼無效。|  
-|13|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|13|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
 |16|函數對於這項追蹤無效。|  
   
 ## <a name="remarks"></a>備註  
@@ -112,7 +112,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

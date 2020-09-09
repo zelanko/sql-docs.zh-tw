@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ceb162fa058f1dd46eea196929586b8e31f4152c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d385c34f58e7796d7ed09fe5d5ba644f32a6eff1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493466"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548286"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'` 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 您想要的參數資訊之語句或批次的 Unicode 字串。 *tsqlbatch* 是 **Nvarchar (max) ** 或可隱含轉換成 **Nvarchar (max) **。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

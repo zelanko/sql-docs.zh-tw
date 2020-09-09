@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0479039ce13cc03e9440ad7faccb8739a0331611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0254566d2d388bdad78ed92b84f9e7f2d63865a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498443"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550523"
 ---
 # <a name="spatial-data-catalog-views"></a>空間資料目錄檢視
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

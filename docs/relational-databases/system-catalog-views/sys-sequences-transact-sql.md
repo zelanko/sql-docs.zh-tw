@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sequence number object, sys. sequences catalog view
 - sys.sequences catalog view
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad00c34e57dc124a946268afb1f60a3eee031ab6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8dcd78028499875016828e31bd3386eaf23c85a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447817"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550391"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
