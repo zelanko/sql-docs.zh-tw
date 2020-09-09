@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - systargetservergroups system table
 ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7a018a4fceb3bb3ee8f500ebe103ad4dfde9a22d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f6eca950d24bfe5dc4de1168179a1e99444ff71
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488871"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538334"
 ---
 # <a name="dbosystargetservergroups-transact-sql"></a>dbo.systargetservergroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

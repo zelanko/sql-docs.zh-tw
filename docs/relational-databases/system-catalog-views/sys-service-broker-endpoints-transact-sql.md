@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1fd6a01ea9b6936edc90a64e70a2c310750d2b85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ee3bd0e5e09ab2e8511596f3920e0e8408f1b6f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419952"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539548"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,6 +1,6 @@
 ---
-title: sp_removedbreplication （T-sql）
-description: 描述用來移除發行集資料庫上的所有複寫物件以進行 SQL Server 複寫的 sp_removedbreplication 預存程式。
+title: 'sp_removedbreplication (T-sql) '
+description: 描述用來移除發行集資料庫上之所有複寫物件的 sp_removedbreplication 預存程式，以進行 SQL Server 複寫。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01fc666444891836011b80e77492b1cdebbefff5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751670"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538642"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,31 +42,31 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbname'`這是資料庫的名稱。 *dbname* 是 **sysname**，預設值為 NULL。 如果是 NULL，則會使用目前資料庫。  
+`[ @dbname = ] 'dbname'` 這是資料庫的名稱。 *dbname* 是 **sysname**，預設值為 NULL。 如果是 NULL，則會使用目前資料庫。  
   
-`[ @type = ] type`這是要移除之資料庫物件的複寫類型。 *類型*是**Nvarchar （5）** ，它可以是下列值之一。  
+`[ @type = ] type` 這是要移除資料庫物件的複寫類型。 *類型* 是 **Nvarchar (5) ** 而且可以是下列其中一個值。  
   
 |||  
 |-|-|  
-|**tran**|移除異動複寫發行物件。|  
+|**事務**|移除異動複寫發行物件。|  
 |**合併**|移除合併式複寫發行物件。|  
-|**兩者**（預設值）|移除所有的複寫發行物件。|  
+|** (預設** 值) |移除所有的複寫發行物件。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功）或**1** （失敗）  
+ **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- **sp_removedbreplication**用於所有類型的複寫中。  
+ **sp_removedbreplication** 用於所有類型的複寫中。  
   
- 還原不需要還原複寫物件的複寫資料庫時， **sp_removedbreplication**會很有用。  
+ 在還原不需要還原之複寫物件的複寫資料庫時， **sp_removedbreplication**會很有用。  
   
- **sp_removedbreplication**不能用於標示為唯讀的資料庫。  
+ **sp_removedbreplication** 不能用於標示為唯讀的資料庫。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
 ## <a name="permissions"></a>權限  
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_removedbreplication**。  
+ 只有 **系統管理員（sysadmin** ）固定伺服器角色的成員，才可以執行 **sp_removedbreplication**。  
   
 ## <a name="example"></a>範例  
   

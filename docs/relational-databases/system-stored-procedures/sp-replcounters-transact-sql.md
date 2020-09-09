@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c4646b4062a0557a4c0b8a3086eef10f3e1a38a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8a2078faa410b41e381c5c1a6e913d2c2329ee08
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485729"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538552"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_replcounters
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**Database**|**sysname**|資料庫的名稱。|  
+|**資料庫**|**sysname**|資料庫的名稱。|  
 |**Replicated transactions**|**int**|記錄中等待傳遞給散發資料庫的交易數目。|  
 |**Replication rate trans/sec**|**float**|傳遞給散發資料庫的每秒平均交易數目。|  
 |**複寫延遲**|**float**|在散發之前，交易在記錄中的平均時間 (以秒為單位)。|  

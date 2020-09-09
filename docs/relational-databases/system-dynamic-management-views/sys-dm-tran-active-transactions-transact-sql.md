@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_transactions dynamic management view
 ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 614c53545631de7de3a62edd30e8b8e1f71b664f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c42556306a8e3fc48446ada4f8bee1e499f2f53a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454808"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539262"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88454808"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|執行個體層級 (而非資料庫層級) 的交易識別碼。 它只有在一個執行個體的所有資料庫才是唯一的，在所有的伺服器執行個體則不是。|  
-|NAME|**nvarchar(32)**|交易名稱。 如果交易被標示出來，而且標示的名稱取代了交易名稱，這個值便會被覆寫。|  
+|名稱|**nvarchar(32)**|交易名稱。 如果交易被標示出來，而且標示的名稱取代了交易名稱，這個值便會被覆寫。|  
 |transaction_begin_time|**datetime**|交易啟動的時間。|  
 |transaction_type|**int**|交易的類型。<br /><br /> 1 = 讀取/寫入交易<br /><br /> 2 = 唯讀交易<br /><br /> 3 = 系統交易<br /><br /> 4 = 分散式交易|  
 |transaction_uow|**uniqueidentifier**|分散式交易的交易工作單位 (UOW) 識別碼。 MS DTC 是以 UOW 識別碼來使用分散式交易。|  

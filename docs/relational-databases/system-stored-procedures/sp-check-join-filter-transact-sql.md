@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: daf5b155aa4319a20a3005687515fbafa8702e6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be5d9341f0ad1372f91666dc7f7022e4f14b2ea3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486201"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539077"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

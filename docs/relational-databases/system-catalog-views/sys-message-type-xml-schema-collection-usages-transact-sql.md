@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.message_type_xml_schema_collection_usages catalog view
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fa9522e09e8ef0f3779533e7e2f84b06fc769949
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13af427df514fe0f6a8b614fb4f03a61e5fa88ee
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460631"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539613"
 ---
 # <a name="sysmessage_type_xml_schema_collection_usages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

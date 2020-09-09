@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e430a763a5922a38c23fda241fd207edc3c91fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d2a254a81bdd4b1a4d7718e8960ced22666b5705
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481254"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538909"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

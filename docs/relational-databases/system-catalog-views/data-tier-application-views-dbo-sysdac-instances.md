@@ -19,14 +19,14 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 77aafe21c2aa67b55d7c2d9319ab2699585c697c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 643257fb35e042979353b8918f0381525b497cf7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475505"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539768"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>資料層應用程式視圖-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

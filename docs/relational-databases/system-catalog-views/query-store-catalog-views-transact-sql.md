@@ -14,15 +14,15 @@ helpviewer_keywords:
 - query store [SQL Server], catalog views
 - catalog views [SQL Server], query store
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46af0fdda723a23534592e3d5755922c6182e1b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5537e3a8d773f0222fdc431979b3d6f54ac2decd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470033"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539738"
 ---
 # <a name="query-store-catalog-views-transact-sql"></a>查詢存放區 (Transact-sql) 的目錄檢視
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

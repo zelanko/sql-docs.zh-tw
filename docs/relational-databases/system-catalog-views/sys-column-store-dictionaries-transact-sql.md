@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_dictionaries catalog view
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cdc7ea16b6803f846f6163312669c0a27f855ffb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec0e67a4406076b73b1e064e31fba15cf7a0c70c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475457"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539675"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

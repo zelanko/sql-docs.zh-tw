@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 28506e30d5f2d253410cca319f22ae620a2c33a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b16f0e11cc38abbbaf14abd4b21e7334a578c1cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469131"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538452"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DefaultAttachmentEncoding*|電子郵件附件的預設編碼。|MIME|  
 |*MaxFileSize*|附件的大小上限 (以位元組為單位)。|**1000000**|  
 |*ProhibitedExtensions*|無法作為電子郵件訊息附件來傳送的副檔名清單 (以逗號分隔)。|**exe,dll,vbs,js**|  
-|*LoggingLevel*|指定哪些訊息要記錄在 Database Mail 記錄中。 下列其中一個數值：<br /><br /> 1 - 這是標準模式。 只記錄錯誤。<br /><br /> 2 - 這是擴充模式。 記錄錯誤、警告和參考訊息。<br /><br /> 3 - 這是詳細資訊模式。 記錄錯誤、警告、參考訊息、成功訊息和其他內部訊息。 進行疑難排解時，請使用此模式。|**2**|  
+|*Logginglevel.information*|指定哪些訊息要記錄在 Database Mail 記錄中。 下列其中一個數值：<br /><br /> 1 - 這是標準模式。 只記錄錯誤。<br /><br /> 2 - 這是擴充模式。 記錄錯誤、警告和參考訊息。<br /><br /> 3 - 這是詳細資訊模式。 記錄錯誤、警告、參考訊息、成功訊息和其他內部訊息。 進行疑難排解時，請使用此模式。|**2**|  
   
  預存程式 **sysmail_configure_sp** 位於 **msdb** 資料庫中，而且是由 **dbo** 架構所擁有。 如果目前的資料庫不是 **msdb**，就必須以三部分名稱執行程式。  
   

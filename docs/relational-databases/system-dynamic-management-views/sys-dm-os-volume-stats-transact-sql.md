@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474810"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539242"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sys.dm_os_volume_stats (database_id, file_id)
 ||||  
 |-|-|-|  
 |**資料行**|**Data type**|**說明**|  
-|**database_id**|**int**|資料庫的識別碼。 不可為 null。|  
-|**file_id**|**int**|檔案識別碼。 不可為 null。|  
+|**database_id**|**int**|資料庫的識別碼。 不可以是 null。|  
+|**file_id**|**int**|檔案識別碼。 不可以是 null。|  
 |**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。|  
 |**volume_id**|**nvarchar(512)**|作業系統磁碟區識別碼。 可以傳回空字串|  
 |**logical_volume_name**|**nvarchar(512)**|邏輯磁碟區名稱。 可以傳回空字串|  
 |**file_system_type**|**nvarchar(512)**|作業系統磁碟區的類型 (例如，NTFS、FAT、RAW)。 可以傳回空字串|  
-|**total_bytes**|**bigint**|磁碟區的總大小 (以位元組為單位)。 不可為 null。|  
-|**available_bytes**|**bigint**|磁碟區上的可用空間。 不可為 null。|  
-|**supports_compression**|**bit**|表示磁碟區是否支援作業系統壓縮。 不可為 null。|  
-|**supports_alternate_streams**|**bit**|表示磁碟區是否支援替代資料流。 不可為 null。|  
-|**supports_sparse_files**|**bit**|表示磁碟區是否支援疏鬆檔案。  不可為 null。|  
-|**is_read_only**|**bit**|表示磁碟區目前是否標示成唯讀。 不可為 null。|  
-|**is_compressed**|**bit**|表示這個磁碟區目前是否已經壓縮。 不可為 null。|  
+|**total_bytes**|**bigint**|磁碟區的總大小 (以位元組為單位)。 不可以是 null。|  
+|**available_bytes**|**bigint**|磁碟區上的可用空間。 不可以是 null。|  
+|**supports_compression**|**bit**|表示磁碟區是否支援作業系統壓縮。 不可以是 null。|  
+|**supports_alternate_streams**|**bit**|表示磁碟區是否支援替代資料流。 不可以是 null。|  
+|**supports_sparse_files**|**bit**|表示磁碟區是否支援疏鬆檔案。  不可以是 null。|  
+|**is_read_only**|**bit**|表示磁碟區目前是否標示成唯讀。 不可以是 null。|  
+|**is_compressed**|**bit**|表示這個磁碟區目前是否已經壓縮。 不可以是 null。|  
   
 ## <a name="security"></a>安全性  
   

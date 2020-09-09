@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - logmarkhistory system table
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d52c161baa58924a21966ed4c354fa614e677062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e5b7a952735485c85c4763937a6448c164e3823b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419152"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538282"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

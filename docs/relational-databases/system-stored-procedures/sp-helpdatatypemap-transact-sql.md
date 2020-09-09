@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 266098010f7da11f431c3bb334761209c7049cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fb7ee524e2b9849c9c8a348cd6c8a9de7fb74e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474102"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538761"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|來源是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
-|**甲骨文**|來源是一個 Oracle 資料庫。|  
+|**ORACLE**|來源是一個 Oracle 資料庫。|  
   
 `[ @source_version = ] 'source_version'` 這是來源 DBMS 的產品版本。 *source_version*是 **Varchar (10) **，如果未指定，則會傳回來源 DBMS 所有版本的資料類型對應。 啟用 DBMS 來源版本所要篩選的結果集。  
   
@@ -60,7 +60,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目的地是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
-|**甲骨文**|目的地是一個 Oracle 資料庫。|  
+|**ORACLE**|目的地是一個 Oracle 資料庫。|  
 |**DB2**|目的地是一個 IBM DB2 資料庫。|  
 |**Sybase**|目的地是一個 Sybase 資料庫。|  
   
@@ -72,7 +72,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|描述|  
+|欄名|描述|  
 |-----------------|-----------------|  
 |**mapping_id**|識別資料類型對應。|  
 |**source_dbms**|這是來源 DBMS 的名稱和版本號碼。|  

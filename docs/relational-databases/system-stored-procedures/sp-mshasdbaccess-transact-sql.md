@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_MShasdbaccess
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 22c9e8a366cb50490a2a4f8bfb330d2d3317d31c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: daf8ee0c7ffa976d7062a0e9e0b0be65a19be86d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464105"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538673"
 ---
 # <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

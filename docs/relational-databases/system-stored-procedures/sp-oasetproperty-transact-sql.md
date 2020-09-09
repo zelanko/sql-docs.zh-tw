@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4b15d0c0e7d28973ef0803041b421c30517f0665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2865189ad38f31382257a51117c62cd5d52454c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473920"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538700"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *newvalue*  
  這是屬性的新值，必須是適當資料類型的值。  
   
- *指數*  
+ *index*  
  這是一個索引參數。 如果有指定， *索引* 必須是適當資料類型的值。  
   
  部份屬性有參數。 這些屬性稱為索引屬性，參數稱為索引參數。 一個屬性可以有多個索引參數。  

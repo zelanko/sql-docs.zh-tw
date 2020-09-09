@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_sprintf
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bd830fc35da8604538d0d70171988e218ee5200
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5acb35cb22a5004c5eb5dba3ccfc31a62612a1ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419192"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538387"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ xp_sprintf { string OUTPUT , format }
  需要 **public** 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統預存程式 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的一般擴充預存程式 ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   

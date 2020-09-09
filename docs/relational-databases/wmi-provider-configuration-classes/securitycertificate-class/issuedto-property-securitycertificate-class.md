@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IssuedTo property
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fe913eeae76f9b069502caa55249eb0a785a86ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee22ae8b10ef4c146c4eb0fe4a8c3c4e5ea6cd95
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460113"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537774"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo 屬性 (SecurityCertificate 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

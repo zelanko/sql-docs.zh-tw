@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_remoteoption
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8bd92e5335b04dd7fca13dfa7fb64a867cee4b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 84080d77fdbc4611d3c78ab8077cd697193168bb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464060"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538635"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_replicas catalog view
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
-ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385969"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539727"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

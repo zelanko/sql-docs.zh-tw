@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IpAddressName property
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c993778f5ceb42367cfafcb3343fb00677851dde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03ab2e7cf94aeeca68cc88762222b187539eca4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418744"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538194"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 屬性 (ServerNetworkProtocolIPAddress 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

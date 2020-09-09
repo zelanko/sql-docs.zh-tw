@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyName property
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f87b32c302793ff9e35c95c43f4e55a22211a10f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e3e62a082ae7ffb2048d2b173f6f2466da9cebe
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485053"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539941"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

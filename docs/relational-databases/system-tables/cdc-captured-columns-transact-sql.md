@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.captured_columns
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1f97c0f9f8836a1ef0115a93d9cfae882cbaac05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 675d6934c468b4f2a4574b82e79c203ab4796c9a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374120"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538351"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

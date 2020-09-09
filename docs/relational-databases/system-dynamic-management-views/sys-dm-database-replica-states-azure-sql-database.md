@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_database_replica_states dynamic management view
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a40c5ba80bc3e9929109d9acc5f58f454db243d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 217f9e691ceb0da86834eb452d6b608fdbb8f091
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490029"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537665"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

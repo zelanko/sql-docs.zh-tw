@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_renamedb
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bbf6e245c580a54d68ddaba146bc26050f4264ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85ded9c74077436ccf94c33350b4193726819068
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485755"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538563"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

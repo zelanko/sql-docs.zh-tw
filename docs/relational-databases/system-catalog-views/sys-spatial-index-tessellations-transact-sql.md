@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.spatial_index_tessellations catalog view
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a86ba88f46944140da647133ab7f8a72a81dd279
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 783c73ba514e348cd515929ae988c4097225ec5b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376594"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539486"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "88376594"
   
 ## <a name="see-also"></a>另請參閱  
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [空間索引總覽](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

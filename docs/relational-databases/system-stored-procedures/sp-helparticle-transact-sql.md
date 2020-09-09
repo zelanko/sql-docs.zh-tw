@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474147"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538780"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**synchronization object**|**Nvarchar (257) **|定義已發行的發行項之檢視的名稱。|  
 |**type**|**smallint**|發行項的類型：<br /><br /> **1** = 以記錄為基礎。<br /><br /> **3** = 以手動篩選的記錄式。<br /><br /> **5** = 以手動方式登入。<br /><br /> **7** = 以手動篩選和手動方式記錄為基礎的記錄。<br /><br /> **8** = 預存程式執行。<br /><br /> **24** = 可序列化預存程式執行。<br /><br /> **32** = 預存程式 (只) 的架構。<br /><br /> **64** = 僅) View (架構。<br /><br /> **96** = 彙總函式 (僅限架構) 。<br /><br /> **128** = 函式 (僅) 的架構。<br /><br /> **257** = 以記錄為基礎的索引視圖。<br /><br /> **259** = 具有手動篩選的記錄式索引視圖。<br /><br /> **261** = 具有手動 view 的記錄式索引查看。<br /><br /> **263** = 具有手動篩選和手動視圖的記錄式索引視圖。<br /><br /> **320** = 索引視圖 (架構僅) 。<br /><br />|  
 |**status**|**tinyint**|可以是一或多個或這些發行項屬性的 [& (位 and) ](../../t-sql/language-elements/bitwise-and-transact-sql.md) 結果：<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 發行項為使用中狀態。<br /><br /> **0x08** = 在 insert 語句中包含資料行名稱。<br /><br /> **0x16** = 使用參數化語句。<br /><br /> **0x32** = 使用參數化語句，並在 insert 語句中包含資料行名稱。|  
-|**濾波器**|**Nvarchar (257) **|用來水平篩選資料表的預存程序。 必須已利用 FOR REPLICATION 子句來建立這個預存程序。|  
+|**filter**|**Nvarchar (257) **|用來水平篩選資料表的預存程序。 必須已利用 FOR REPLICATION 子句來建立這個預存程序。|  
 |**description**|**nvarchar(255)**|發行項的描述項目。|  
 |**insert_command**|**nvarchar(255)**|當隨著資料表發行項而複寫插入時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
 |**update_command**|**nvarchar(255)**|當隨著資料表發行項而複寫更新時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
@@ -105,9 +105,9 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>另請參閱  
  [查看和修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

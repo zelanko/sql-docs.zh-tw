@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7b0b7486de9709b0cfb4fc9ab20b8c8dd2da0f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01f3c79cf6097f3e916d7faa5e77e508b75015e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399174"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539418"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88399174"
 |-|-|-|  
 |**資料行名稱**|**型別**|**說明**|  
 |*class*|**int**|1 = 物件或資料行 (包含模組、XPs、檢視、同義字及資料表)。<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引 (全文檢索索引)<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 19 = 路由<br /><br /> 30 = 稽核規格|  
-|*class_desc*|**nvarchar(120)**|實體類別的描述。 符合類別的下列其中一項：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **裝配**<br /><br /> **TYPE**<br /><br /> **指數**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **路線**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|實體類別的描述。 符合類別的下列其中一項：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **裝配**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|實體的識別碼。<br /><br /> 如果 *class* = 1，則 object_id<br /><br /> 如果 *class* = 4，則 sys. database_principals. principal_id。<br /><br /> 如果 *class* = 5，則 sys. 元件. assembly_id。<br /><br /> 如果 *class* = 6，則 sys. types. user_type_id。<br /><br /> 如果 *class* = 7，則 sys. 索引. index_id。<br /><br /> 如果 *class* = 12，則 sys. trigger. object_id。<br /><br /> 如果 *class* = 19，則 sys. route. route_id。<br /><br /> 如果 *class* = 30，則 sys。 database_audit_specifications。 database_specification_id。|  
 |*statement_line_number*|**int**|如果類別為模組，將會傳回非內含使用所在的行號。  否則，此值為 Null。|  
 |*statement_ offset_begin*|**int**|如果類別為模組，會指出非內含使用的起始位置 (以位元組為單位，從 0 開始)。 否則傳回值為 Null。|  

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_usages catalog view
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b230a2e4b1b207f3af711f9d746865c2b4f50300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b44ee215023a33cb27c73e16933bfafd9839703
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460568"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539532"
 ---
 # <a name="sysservice_contract_usages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

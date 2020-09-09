@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5d5648dc1798740429c8a2d50d3058117a1e1546
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a89b139970822482e8b0745d9ceeefe8bba3f94
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427640"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538267"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

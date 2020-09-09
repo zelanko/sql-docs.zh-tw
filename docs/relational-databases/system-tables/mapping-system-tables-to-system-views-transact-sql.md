@@ -15,14 +15,14 @@ helpviewer_keywords:
 - mapping system tables to system views [SQL Server]
 - system tables [SQL Server], mapping to catalog views
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 84493da61303f1ac383eb009e07198d495a9846d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0770074106a8d8dcbf0744297f7e6fa84b556420
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460362"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538295"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>將系統資料表對應至系統檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "88460362"
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|動態管理檢視|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|動態管理檢視|  
 |sysprocesses|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)<br /><br /> [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)<br /><br /> [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|動態管理檢視<br /><br /> 動態管理檢視<br /><br /> 動態管理檢視|  
-|sysremotelogins|[sys. remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|目錄檢視|  
-|sysservers|[sys. 伺服器](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|目錄檢視|  
+|sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|目錄檢視|  
+|sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|目錄檢視|  
   
  下表將 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中每個資料庫的系統資料表或函數對應到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中對應的系統檢視或函數。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88460362"
 |sysreferences|[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)|目錄檢視|  
 |systypes|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|目錄檢視|  
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|目錄檢視|  
-|sysfulltextcatalogs|[sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|目錄檢視|  
+|sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|目錄檢視|  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d31a6f58b62d242fd6fe056eaac198fb0a7b7738
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae7c24167b06f659006d44f469c92383adc96d21
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481054"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538574"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

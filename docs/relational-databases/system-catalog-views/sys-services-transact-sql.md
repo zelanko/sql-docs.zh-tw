@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.services catalog view
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 89d8d4202372660ec44b8fc12a3a8513949f3bd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 27653c3cbc38f8d7cd2bdc46c4800fd3db4067db
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455149"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539512"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

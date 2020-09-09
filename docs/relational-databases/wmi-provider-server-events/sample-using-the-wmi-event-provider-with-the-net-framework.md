@@ -1,6 +1,6 @@
 ---
 title: 範例：在 .NET 中使用 WMI 事件提供者
-description: '範例 c # 應用程式會使用 WMI 事件提供者，傳回 SQL Server 實例上發生的所有資料定義語言事件的事件資料。'
+description: '範例 c # 應用程式會使用 WMI 事件提供者，針對 SQL Server 實例上發生的所有資料定義語言事件傳回事件資料。'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - sample applications [WMI]
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a863d0c6130821c9a495b8e92332342e90005689
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac51d05e79b11f35b264db4f23e5107f8de89b97
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888187"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539934"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>範例：搭配 .NET Framework 使用 WMI 事件提供者
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
