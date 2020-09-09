@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Properties property
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bc587824aa56dad677e679e24e23062a3a7d7fdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd10c45c33256a14e22b2d74fc223f1cab4a48f7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446208"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540080"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ClientSettingsGeneralFlag class
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d454ee7f53d6bd533b50433765c45304aa7b5ccf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 09c25de732fa08bc0032164aaf42ca223e71f2c9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446276"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540147"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

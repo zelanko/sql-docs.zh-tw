@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 799c068d066fdab518a355552ead5ed5a9fde8af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8f43705f8fec92e39e55a4fa4f62cf24aa9f25be
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427650"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540297"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

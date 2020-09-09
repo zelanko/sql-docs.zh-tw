@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 862e03c447e6c7e0c80318b89bcd9cbf5ecd92aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3570423483ea398be21a41e3b26d7d1c3d61c064
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460144"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540106"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 類別 - SetDefaults 方法
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

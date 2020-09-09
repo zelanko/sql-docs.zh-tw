@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_agents system table
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 10ed60edbbbe2e94e09a9205d34f856cee42c687
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 22792d4f3d2c6d0042f3dcb0af86e63581f5dea7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492752"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540278"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17b73b2acd00e7ea299c1d9e64bbac270485c678
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 436d04ea81df4b25646b4b56d8ac59ffc9fa3b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473462"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540392"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
  resource_pool_name  
  現有資源集區的名稱。  
   
-## <a name="messages"></a>訊息  
+## <a name="messages"></a>Messages  
  發生錯誤時，`sp_xtp_bind_db_resource_pool` 會傳回下列其中一則訊息。  
   
  **資料庫不存在**  
@@ -146,7 +146,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 -   `database_name` 所指定的資料庫與 `resource_pool_name` 所指定的資源集區都必須在繫結之前存在。  
   

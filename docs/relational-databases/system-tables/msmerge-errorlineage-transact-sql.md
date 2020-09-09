@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_errorlineage system table
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf6dca4ed2e67382b9736d0883657bbe46961007
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6b7893c684db25c6a0dcfd4e7ae9cc2d6445065
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473220"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540312"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

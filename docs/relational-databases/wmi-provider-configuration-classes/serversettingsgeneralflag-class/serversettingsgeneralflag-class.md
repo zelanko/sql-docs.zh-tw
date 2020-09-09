@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServerSettingsGeneralFlag class
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab60b3e2740f5f916638c686091239bf9aefb50c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 797cbcf609ff858bed1b1e07cb80a61b91ffca64
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472809"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540743"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

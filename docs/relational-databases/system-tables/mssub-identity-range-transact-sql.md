@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsub_identity_range system table
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7ec13e409f637063abbf5d2d3b99549a13d2d5ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b694526e1ccff9dce5dcdba7d3e1ac85d7449a74
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419092"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540192"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

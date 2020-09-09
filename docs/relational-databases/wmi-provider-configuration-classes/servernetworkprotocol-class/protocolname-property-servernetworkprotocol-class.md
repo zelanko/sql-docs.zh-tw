@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b5cf2a79f4460900b96d68a33ef700fbe9a6c50e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac2d3eb50b26b7b638fd906adf91581546151b22
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472814"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540031"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

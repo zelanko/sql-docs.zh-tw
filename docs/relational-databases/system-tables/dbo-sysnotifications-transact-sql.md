@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysnotifications system table
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a55ba4b149466f127ee7e4d96d0df5677004bf56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8bcfd6b5b52a4f091337d55681be149ccd3f7900
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480821"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540349"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

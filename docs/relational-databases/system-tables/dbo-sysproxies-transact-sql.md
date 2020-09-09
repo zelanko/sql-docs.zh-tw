@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxies system table
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40ffbc10351cf4ca0cccc54e810a358da9a3e9f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d806ed58647b8c22edd28be44e85790b1962e32a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446607"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540399"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88446607"
 |**credential_id**|**int**|Proxy 帳戶使用的認證識別碼。|  
 |**啟用**|**tinyint**|Proxy 帳戶的狀態：<br /><br /> **0** = 已停用。 **1** = 已啟用。|  
 |**description**|**nvarchar(512)**|當建立 Proxy 帳戶時，使用者所輸入的描述。|  
-|**user_sid**|**Varbinary (85) **|與 proxy 認證相關聯之使用者或群組的 Microsoft Windows *security_identifier* 。|  
+|**user_sid**|**varbinary(85)**|與 proxy 認證相關聯之使用者或群組的 Microsoft Windows *security_identifier* 。|  
 |**credential_date_created**|**datetime**|認證的建立日期和時間。|  
   
 ## <a name="remarks"></a>備註  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 26b3d319738ce827d482aafcfb76f91cc2ab53ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03b5887ee905d5a39bce5ef9e73e78e27b581972
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460278"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540830"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88460278"
 |**destination_database_name**|**nvarchar(128)**|還原作業的目的地資料庫名稱。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行還原作業的使用者名稱。 可以是 NULL。|  
 |**backup_set_id**|**int**|用來識別還原的備份組的唯一識別碼。 參考 **backupset (backup_set_id) **。|  
-|**restore_type**|**char (1) **|還原作業的類型：<br /><br /> D = 資料庫<br /><br /> F = 檔案<br /><br /> G = 檔案群組<br /><br /> I = 差異<br /><br /> L = 記錄<br /><br /> V = 僅驗證<br /><br /> 可以是 NULL。|  
+|**restore_type**|**char(1)**|還原作業的類型：<br /><br /> D = 資料庫<br /><br /> F = 檔案<br /><br /> G = 檔案群組<br /><br /> I = 差異<br /><br /> L = 記錄<br /><br /> V = 僅驗證<br /><br /> 可以是 NULL。|  
 |**replace**|**bit**|指出還原作業是否指定了 REPLACE 選項：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原到某個資料庫快照集時，0 是唯一選項。|  
 |**recovery**|**bit**|指出還原作業指定了 RECOVERY 或 NORECOVERY 選項：<br /><br /> 1 = RECOVERY<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原為資料庫快照集時，1是唯一的選項。<br /><br /> 0 = NORECOVERY|  
 |**restart**|**bit**|指出還原作業是否指定了 RESTART 選項：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以是 NULL。<br /><br /> 當資料庫還原到某個資料庫快照集時，0 是唯一選項。|  

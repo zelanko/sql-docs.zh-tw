@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticlecolumns system table
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 45cc5fc3a39f13f7795e2f26aa91a15b618e2d38
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 142ed0bfaad34607422b69929450ae9f7b09bd9e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460233"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540213"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
