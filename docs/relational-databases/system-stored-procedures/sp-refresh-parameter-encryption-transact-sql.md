@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ca46d46ac648fdebeb8c028df312472e4f5d58
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: b2172c7d17d9c3d9ebb6680fc7af0212c0a01e12
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645056"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526081"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql) 
 

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485694"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525975"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

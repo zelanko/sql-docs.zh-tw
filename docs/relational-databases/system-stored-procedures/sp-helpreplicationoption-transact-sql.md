@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 80d34e406b7672e31dd9cb70f42431bcd7392917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 093b718c74d086af10b351d1a87165ef1a659ea2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464202"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526733"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

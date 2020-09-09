@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 98e487f2393aba0c33f91fba6a41dd096cb61368
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7442e3af4bf0233e51f32d7c8e6f034d69598046
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493101"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526659"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

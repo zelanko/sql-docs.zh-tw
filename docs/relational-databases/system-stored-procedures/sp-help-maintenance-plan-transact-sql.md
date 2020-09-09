@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481202"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527605"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'` 指定維護計畫的計畫識別碼。 *plan_id* 為 **UNIQUEIDENTIFIER**。 預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
  如果指定 *plan_id* ， **sp_help_maintenance_plan** 會傳回三個數據表： Plan、Database 和 Job。  
@@ -71,13 +71,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>資料庫資料表  
   
-|資料行名稱|描述|  
+|欄名|描述|  
 |-----------------|-----------------|  
 |**database_name**|維護計畫所有相關資料庫的名稱。 *database_name* 為 **sysname**。|  
   
 ### <a name="job-table"></a>作業資料表  
   
-|資料行名稱|描述|  
+|欄名|描述|  
 |-----------------|-----------------|  
 |**job_id**|與維護計畫相關聯之所有作業的識別碼。 *job_id* 為 **uniqueidentifier**。|  
   

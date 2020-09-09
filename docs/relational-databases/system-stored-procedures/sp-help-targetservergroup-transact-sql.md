@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetservergroup
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea33d20e35938561489f27a14c834da002a7408d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489370"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527085"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

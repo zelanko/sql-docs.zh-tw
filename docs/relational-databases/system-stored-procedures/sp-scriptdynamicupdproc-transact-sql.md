@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03be0aa206a4037de5e09e202e38fcce5ecf5a6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481119"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525843"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
