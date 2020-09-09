@@ -1,6 +1,6 @@
 ---
-description: 'sys.dm_pdw_node_status (Transact-sql) '
-title: sys.dm_pdw_node_status (Transact-sql) |Microsoft Docs
+description: 'sys. dm_pdw_node_status (Transact-sql) '
+title: sys. dm_pdw_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78b6370a7041a5e29720acce5dfcf2b0bdf1c607
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: fbe3aae7c707d836bafff703c8e86adffe4d1cd9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283569"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89531075"
 ---
-# <a name="sysdm_pdw_node_status-transact-sql"></a>sys.dm_pdw_node_status (Transact-sql) 
+# <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-sql) 
 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  保存有關所有設備節點的效能和狀態 ([sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 的額外資訊。 它會針對設備中的每個節點列出一個資料列。  
+  保存有關 [sys. dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 有關所有設備節點的效能和狀態的額外資訊 (。 它會針對設備中的每個節點列出一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  

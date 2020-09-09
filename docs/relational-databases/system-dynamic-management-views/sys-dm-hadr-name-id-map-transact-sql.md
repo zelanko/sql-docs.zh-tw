@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_name_id_map dynamic management view
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e6c719710c6759f837edb0d29d618e7f32d52187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdd98f7eaa120814a8f615738cc0cee284b60269
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419722"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533008"
 ---
 # <a name="sysdm_hadr_name_id_map-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -8,15 +8,15 @@ ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719f6ed133a3ff6163e64cdaf10bc7e35b416f1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1394d13bae5cc86fde37424925f259ce88b8c97d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481873"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89531193"
 ---
 # <a name="sysdm_pdw_component_health_alerts-transact-sql"></a>sys. dm_pdw_component_health_alerts (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
