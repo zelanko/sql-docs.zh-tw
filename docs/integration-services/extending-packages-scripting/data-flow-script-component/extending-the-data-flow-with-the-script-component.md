@@ -1,5 +1,5 @@
 ---
-description: Extending the Data Flow with the Script Component
+description: 使用指令碼元件來擴充資料流程
 title: 使用指令碼元件擴充資料流程 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
