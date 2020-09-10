@@ -9958,10 +9958,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: 容器
           items:
-            - name: 設定 Docker 容器
-              href: linux/sql-server-linux-configure-docker.md
+            - name: 部署及連線到容器
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: 設定及自訂容器
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: 容器安全性
+              href: linux/sql-server-linux-docker-container-security.md
             - name: 設定 MSDTC 的 Docker
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: 疑難排解 Docker 容器的問題
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: 開發
           href: linux/sql-server-linux-develop-overview.md
           items:
