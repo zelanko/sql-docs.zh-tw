@@ -29,7 +29,7 @@ ms.locfileid: "88493846"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  選取此發行集必須支援的每個訂閱者類型。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

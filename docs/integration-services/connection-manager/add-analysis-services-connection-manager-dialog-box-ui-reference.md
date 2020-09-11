@@ -31,7 +31,7 @@ ms.locfileid: "88484614"
   
  若要深入了解 Analysis Services 連接管理員，請參閱＜ [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **建立執行 Analysis Services 之電腦的連接**  
  使用執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器的預設連接，或按一下 [編輯]**** 建立新的連接。  
   

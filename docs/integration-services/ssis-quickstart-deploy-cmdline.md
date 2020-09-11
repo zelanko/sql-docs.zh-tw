@@ -25,7 +25,7 @@ ms.locfileid: "88495469"
 
 如需 Integration Services 部署精靈的詳細資訊，請參閱 [Integration Services 部署精靈](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 本文所述要部署到 Azure SQL Database 的驗證，需要有 SQL Server Data Tools (SSDT) 17.4 版或更新版本。 若要取得最新版的 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 

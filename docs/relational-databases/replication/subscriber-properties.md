@@ -30,7 +30,7 @@ ms.locfileid: "88493875"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **代理程式至訂閱者的連接**  
  散發代理程式和合併代理程式從散發者連接至訂閱者所用的內容。這個選項只適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以前的版本。  
   

@@ -119,7 +119,7 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [IsDescendantOf &#40;資料庫引擎&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

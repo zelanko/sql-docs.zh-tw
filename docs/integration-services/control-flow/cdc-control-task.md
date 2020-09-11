@@ -99,7 +99,7 @@ ms.locfileid: "88496031"
   
 2.  在 [控制流程]**** 索引標籤中，按兩下 CDC 控制工作。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **SQL Server CDC 資料庫 ADO.NET 連接管理員**  
  從清單中選取現有的連接管理員，或按一下 [新增]  建立新的連接。 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   

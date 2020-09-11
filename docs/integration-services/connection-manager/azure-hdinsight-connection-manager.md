@@ -34,5 +34,5 @@ ms.locfileid: "88478010"
 
 1. 在 [新增 SSIS 連線管理員]**** 對話方塊中，選取 [AzureHDInsight]****，然後按一下 [新增]****。
 2. 在 [Azure HDInsight Connection Manager Editor] (Azure HDInsight 連線管理員編輯器)**** 對話方塊中，指定 HDInsight 叢集要連線的**叢集 DNS 名稱** (前面不加上通訊協定)、**使用者名稱**和**密碼**。
-3. 按一下 **[確定]** ，關閉對話方塊。
+3. 按一下 [確定]  關閉對話方塊。
 4. 您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。
