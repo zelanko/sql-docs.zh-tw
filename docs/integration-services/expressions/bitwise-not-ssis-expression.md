@@ -44,7 +44,7 @@ ms.locfileid: "88430610"
  傳回 *integer_expression*的資料類型。  
   
 ## <a name="remarks"></a>備註  
- 無  
+ None  
   
 ## <a name="expression-examples"></a>運算式範例  
  此範例會在數字 170 (0000 0000 1010 1010) 上執行位元 ~ (NOT) 運算。 此數字為帶正負號的整數。  
