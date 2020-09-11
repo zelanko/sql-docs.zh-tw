@@ -68,7 +68,7 @@ ms.locfileid: "88446346"
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|從清單中移除 UPDATE 和 DELETE。|  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 7.  在 [查詢編輯器]**** 中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
   

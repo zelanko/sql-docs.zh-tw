@@ -64,7 +64,7 @@ ms.locfileid: "88463817"
   
      如需有關結構描述的詳細資訊，請參閱＜ [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)＞。  
   
-9. 從 [檔案]**** 功能表中，選擇 [儲存 <資料表名稱>]**** **。  
+9. 從 [檔案] 功能表中，選擇 [儲存 <資料表名稱>]。  
   
 10. 在 **[選擇名稱]** 對話方塊中，輸入資料表的名稱，然後按一下 **[確定]**。  
   

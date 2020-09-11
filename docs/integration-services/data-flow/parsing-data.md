@@ -38,7 +38,7 @@ ms.locfileid: "88457339"
 ## <a name="fast-parse"></a>Fast Parse
 快速剖析提供一組快速、簡單的常式用以剖析資料。 這些常式並不區分地區設定，而且只支援一組日期、時間和整數格式的子集。  
   
-### <a name="requirements-and-limitations"></a>需求與限制  
+### <a name="requirements-and-limitations"></a>需求及限制  
  實作快速剖析時，封裝將無法解譯使用特定地區設定格式與許多常用之 ISO 8601 基本格式與擴充格式的日期、時間和數值資料，但卻可以提高封裝的效能。 例如，快速剖析僅支援最常用的日期格式表示法 (例如 YYYYMMDD 和 YYYY-MM-DD)，不會執行地區設定特定的剖析，也不會識別貨幣資料中的特殊字元，且無法轉換以十六進位表示或以科學記號表示的整數。  
   
  只有在使用「一般檔案」來源或「資料轉換」時，才能夠使用快速剖析。 效能的提高可能會很顯著，因此如果可能，您應該考慮在這些資料流程元件中使用快速剖析。  
@@ -185,7 +185,7 @@ ms.locfileid: "88457339"
 |分鐘|加入 00:00。|  
 |小時|加入 00:00:00。|  
 |天|加入 01 做為此月的某個日期。|  
-|Month|加入 01 做為此年份的某個月份。|  
+|月|加入 01 做為此年份的某個月份。|  
   
  如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "88457339"
   
 4.  在 [屬性] 視窗中，展開 **[自訂屬性]** 節點，然後將 **FastParse** 屬性設為 **True**。  
   
-5.  按一下 [確定]  。  
+5.  按一下 [確定]。  
 
 ## <a name="standard-parse"></a>Standard Parse
 標準剖析是一組區分地區設定的剖析常式，它支援 Oleaut32.dll 和 Ole2dsip.dll 中可用的 Automation 資料類型轉換 API 所提供的所有資料類型轉換。 標準剖析相當於 OLE DB 剖析 API。  
