@@ -43,7 +43,7 @@ Scale Out Worker 的背景工作代理程式識別碼。 *WorkerAgentId* 是 **u
 屬性的名稱。 *PropertyName* 是 **nvarchar(256)**。
 
 [@PropertyValue =] *PropertyValue*  
-屬性的值。 *PropertyValue* 是 **nvarchar(max)**。
+屬性的值。 *PropertyValue* 是 **nvarchar(max)** 。
 
 ## <a name="remarks"></a>備註
 有效屬性名稱是 **DisplayName**、**Description**、**Tags**。

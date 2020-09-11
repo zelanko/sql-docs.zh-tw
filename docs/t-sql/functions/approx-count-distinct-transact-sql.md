@@ -99,6 +99,6 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

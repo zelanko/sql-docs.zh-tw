@@ -61,7 +61,7 @@ FROM @temp;
   
  然後此範例會傳回每一個 `geometry` 執行個體的維度。  
   
-|NAME|dim|  
+|名稱|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  

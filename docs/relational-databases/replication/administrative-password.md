@@ -25,7 +25,7 @@ ms.locfileid: "88406384"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
    如果在此精靈的 [散發者]**** 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連線的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **密碼**  
  為發行者與遠端散發者之間的連接輸入密碼。  
   

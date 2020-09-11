@@ -23,7 +23,7 @@ ms.locfileid: "88422172"
 
 本快速入門示範如何使用 PowerShell 指令碼，來連線至資料庫伺服器並執行 SSIS 套件。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連接埠，讓您成功連線。
 
@@ -103,7 +103,7 @@ $result = $package.Execute("false", $null)
 Write-Host "Done."
 ```
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來執行套件。
     - [使用 SSMS 執行 SSIS 套件](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)

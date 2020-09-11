@@ -280,7 +280,7 @@ ProductCount   SalesOrderID`
 1              SO55981
 ```
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
