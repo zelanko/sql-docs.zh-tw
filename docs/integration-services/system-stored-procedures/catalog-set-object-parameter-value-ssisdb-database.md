@@ -56,7 +56,7 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
  參數的值。 *parameter_value* 是 **sql_variant**。  
   
  [@object_name =] *object_name*  
- 封裝的名稱。 參數為封裝參數時，就需要這個引數。 *object_name* 是 **nvarchar(260)**。  
+ 封裝名稱。 參數為封裝參數時，就需要這個引數。 *object_name* 是 **nvarchar(260)**。  
   
  [@value_type =] *value_type*  
  參數值的類型。 使用字元 `V` 表示如果執行前沒有指派任何值，就會預設使用常值 *parameter_value*。 使用字元 `R` 表示 *parameter_value* 這個參考值已設定為環境變數的名稱。 這是選擇性引數，根據預設，會使用字元 `V`。 *value_type* 是 **char(1)**。  

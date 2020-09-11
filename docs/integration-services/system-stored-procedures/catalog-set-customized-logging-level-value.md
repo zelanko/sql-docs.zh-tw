@@ -39,7 +39,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  *level_name* 是 **nvarchar(128)**。  
   
  [ @property_name = ] *property_name*  
- 要變更之屬性的名稱。 有效值為 **PROFILE** 和 **EVENTS**。  
+ 要變更的屬性名稱。 有效值為 **PROFILE** 和 **EVENTS**。  
   
  *property_name* 是 **nvarchar(128)**。  
   

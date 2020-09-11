@@ -58,7 +58,7 @@ byte[] encoding = stream.ToArray();
   
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [Read &#40;資料庫引擎&#41;](../../t-sql/data-types/read-database-engine.md)  
 [ToString &#40;資料庫引擎&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
