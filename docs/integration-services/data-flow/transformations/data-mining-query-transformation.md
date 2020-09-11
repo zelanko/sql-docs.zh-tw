@@ -68,7 +68,7 @@ ms.locfileid: "88477750"
 ## <a name="data-mining-query-transformation-editor-query-tab"></a>資料採礦查詢轉換編輯器 (查詢索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[查詢]** 索引標籤，即可建立預測查詢。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **資料採礦查詢**  
  將資料採礦延伸模組 (DMX) 查詢直接輸入文字方塊中。  
   

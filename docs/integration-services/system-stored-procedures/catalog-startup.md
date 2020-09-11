@@ -31,7 +31,7 @@ ms.locfileid: "88477078"
   
  您可以選擇讓預存程序在每次 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體重新啟動時自動執行，方法是選取 [建立目錄]**** 對話方塊中的 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]**** 選項。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```sql  
 catalog.startup  

@@ -109,7 +109,7 @@ GO
  屬性  
  資料列的全文檢索索引資料行。  
   
- Document  
+ 文件  
  在查詢中傳回的實體。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，它會對應至資料列。 文件可以有多種屬性，就像資料列可以有多個全文檢索索引資料行。  
   
  索引  

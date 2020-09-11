@@ -68,7 +68,7 @@ SELECT CRYPT_GEN_RANDOM(50) ;
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

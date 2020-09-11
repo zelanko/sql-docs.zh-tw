@@ -80,7 +80,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 4.  按一下 [確定] 以執行套件。
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 - 請考慮使用其他方式來執行套件。
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

@@ -76,7 +76,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [日期 &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)
   
   
