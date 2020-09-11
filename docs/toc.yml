@@ -7094,8 +7094,8 @@
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 論壇 >>
-              href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
+            - name: Microsoft Q&A >>
+              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
             - name: 提交意見反應 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -10110,8 +10110,8 @@
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇 >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
+        - name: Microsoft Q&A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: 提交意見反應 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10140,16 +10140,16 @@
       items:
         - name: 取得說明
           href: sql-server/sql-server-get-help.md
-        - name: SQL 文件的版本設定
-          href: sql-server/versioning-system-monikers-ui-sql-server.md
+        - name: Microsoft Q&A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇 >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
+        - name: 文件瀏覽提示
+          href: sql-server/sql-docs-navigation-guide.md
     - name: 部落格
       items:
         - name: SQL Server >>
