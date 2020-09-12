@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447574"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042749"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql) 
 
@@ -413,7 +413,6 @@ GO
 
  [何時 Spinlock SQL Server 中 CPU 使用率的重要驅動程式？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [診斷和解決 SQL Server 上的 Spinlock 爭用](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 
