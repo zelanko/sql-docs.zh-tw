@@ -1,4 +1,5 @@
 ---
+description: 疏鬆資料行
 title: 疏鬆資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 406f4fea8df9a3c410f126f5a766aeb2e1ad4bb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396294"
 ---
 # <a name="sparse-columns"></a>疏鬆資料行
 

@@ -1,4 +1,5 @@
 ---
+description: 執行查詢 (Visual Database Tools)
 title: 執行查詢
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6c27df1b246b5313e5b55e36f8485b1417a02e84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fd821363738701904b5186c4649c2e93adc73c56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85989190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397284"
 ---
 # <a name="run-queries-visual-database-tools"></a>執行查詢 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85989190"
   
 1.  開啟或建立要執行的查詢。  
   
-2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]  。  
+2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]****。  
   
     -或-  
   

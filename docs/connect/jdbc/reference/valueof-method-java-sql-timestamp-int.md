@@ -1,4 +1,5 @@
 ---
+description: valueOf 方法 (java.sql.Timestamp, int)
 title: valueOf 方法 (java.sql.Timestamp, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b32534ac2ace6d2324cb37434c7fe5571159bdde
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d9797c5109b34897aca747d091949975eefc3727
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396124"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf 方法 (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

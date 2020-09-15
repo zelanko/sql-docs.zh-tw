@@ -1,4 +1,5 @@
 ---
+description: 對 Windows Token 服務 (c2WTS) 和 Reporting Services 的宣告
 title: 對 Windows Token 服務 (c2WTS) 和 Reporting Services 的宣告 | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
@@ -6,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 65f2fb2148e1a33aacb9d0b1e82039d594ea3524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396784"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
 

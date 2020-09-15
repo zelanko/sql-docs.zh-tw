@@ -1,4 +1,5 @@
 ---
+description: 更新結果的規格 (Visual Database Tools)
 title: 更新結果的規則
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b71d1e6324465df97a174134463f8d5759a2d06a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bbf2a7a3ca1d25a6556a6f31667d3f406cf055dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397344"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-大多數的情形下，您可以更新 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  
+ 大多數的情形下，您可以更新[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  
   
 一般說來，為了更新結果， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 必須要有足夠的資訊才能唯一識別資料表中的資料列。 一個例子是輸出清單中的查詢包含主索引鍵。 此外，也必須要有足夠的使用權限可更新資料庫。  
   

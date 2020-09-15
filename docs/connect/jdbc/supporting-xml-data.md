@@ -1,4 +1,5 @@
 ---
+description: 支援 XML 資料
 title: 支援 XML 資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 799b22cfac669846c606456f1911e27353a9ba9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da49d5c0468f19768eff720e7f03690bea954432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396274"
 ---
 # <a name="supporting-xml-data"></a>支援 XML 資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
