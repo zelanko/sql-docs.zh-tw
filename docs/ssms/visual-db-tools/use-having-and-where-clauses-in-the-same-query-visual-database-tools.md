@@ -1,4 +1,5 @@
 ---
+description: 在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 title: 在相同查詢中使用 HAVING 和 WHERE 子句
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 511f8a5d8fb239da7f125231083264d798939bbb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6e02a61bd221c35cac2dfacd51602364035c2ba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422942"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,9 +61,9 @@ HAVING AVG(price) > 10
   
 2.  如果沒有出現在 [準則] 窗格中，加入您想要組成 WHERE 條件的資料行。  
   
-3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出]  資料行。  
+3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出]**** 資料行。  
   
-4.  在 [篩選條件]  資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
+4.  在 [篩選條件]**** 資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
   
     > [!NOTE]  
     > 在這個程序中所顯示的查詢範例聯結了兩個資料表， `titles` 和 `publishers`。  
@@ -77,7 +78,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  在 [群組依據]  資料行中，從群組和摘要選項清單中選擇 [Where]  。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
+5.  在 [群組依據]**** 資料行中，從群組和摘要選項清單中選擇 [Where]****。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
   
     SQL 陳述式變更為包含了 WHERE 子句：  
   

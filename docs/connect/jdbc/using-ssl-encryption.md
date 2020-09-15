@@ -1,4 +1,5 @@
 ---
+description: 使用加密
 title: 使用加密
 ms.custom: Learn how to establish secure communication channels using TLS encryption with your SQL database connections.
 ms.date: 09/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d55189e01bbc68772163bcd054165737ae186ee
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 86a36cec5930630c00501796e9c2340106cfa6c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414574"
 ---
 # <a name="using-encryption"></a>使用加密
 

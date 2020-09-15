@@ -1,4 +1,5 @@
 ---
+description: 使用透明網路 IP 解析
 title: 使用透明網路 IP 解析 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/02/2020
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: chris-rossi
 ms.author: v-chross
-ms.openlocfilehash: 50ab8a6895feeff177dfd31aa90fa3b94e38fae4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: adaad0f80d6304c855af22f134d24f0d3f23d301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415014"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明網路 IP 解析
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "86006814"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## <a name="purpose"></a>目的
-透明網路 IP 解析 (TNIR) 是現有 MultiSubnetFailover 功能的修訂版本。 TNIR 在第一個解析主機名稱 IP 未回應，且有多個與該主機名稱建立關聯的 IP 時，影響驅動程式的連線順序。 TNIR 與 MultiSubnetFailover 互動，以提供下列三種連線順序：<br />
+透明網路 IP 解析 (TNIR) 是現有 MultiSubnetFailover 功能的修訂版本。 如果第一個解析的主機名稱 IP 未回應，且該主機名稱有多個相關聯的 IP 時，TNIR 會影響驅動程式的連線順序。 TNIR 會與 MultiSubnetFailover 互動，以提供下列三種連線順序：<br />
 * 0：嘗試一個 IP，然後以並行方式嘗試所有 IP
 * 1：以並行方式嘗試所有 IP
 * 2：逐一嘗試所有 IP

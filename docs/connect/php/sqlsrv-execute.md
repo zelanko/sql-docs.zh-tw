@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_execute
 title: sqlsrv_execute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_execute
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6daa3c227735f99d258590fbd281e306b7b84344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413754"
 ---
 # <a name="sqlsrv_execute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

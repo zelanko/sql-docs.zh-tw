@@ -1,4 +1,5 @@
 ---
+description: Microsoft Drivers for PHP for SQL Server 的安全性考量
 title: Microsoft Drivers for PHP for SQL Server 的安全性考量 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 03b887ef511a4d030a5bb49be6cd4cfef2c9297d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 36c5826b81c68229c5c5bffba7f19d17187447a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414384"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的安全性考量
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: 開啟資料庫圖表 (Visual Database Tools)
 title: 開啟資料庫圖表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 07ea1f96ac38a99a13aa9957960ae523e5f10609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 17c86c408ca67a6d4eea656850b6126a55dbe2f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417754"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>開啟資料庫圖表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "85999821"
   
 ### <a name="to-open-a-database-diagram"></a>若要開啟資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]**** 資料夾。  
   
 2.  在要開啟的資料庫圖表名稱上按兩下。  
   
     -或-  
   
-    在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]  。  
+    在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]****。  
   
 資料庫圖表將在 [資料庫圖表設計工具] 中開啟，您可在其中編輯圖表。  
   

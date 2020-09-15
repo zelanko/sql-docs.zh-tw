@@ -1,4 +1,5 @@
 ---
+description: 連接到 Microsoft Azure 儲存體
 title: 連接到 Microsoft Azure 儲存體
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: f88bafe27da30ceec6154bf64cd9ced0046f7e87
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417924"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 

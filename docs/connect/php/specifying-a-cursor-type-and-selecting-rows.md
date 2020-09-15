@@ -1,4 +1,5 @@
 ---
+description: 指定資料指標類型及選取資料列
 title: 指定資料指標類型及選取資料列 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ae3d54f71c70b06601309ea490377241b84598b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a8374bd54ef39a905e5ff99c113e11e3fd25af9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414374"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>指定資料指標類型及選取資料列
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

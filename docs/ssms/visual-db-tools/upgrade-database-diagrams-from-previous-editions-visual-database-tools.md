@@ -1,4 +1,5 @@
 ---
+description: 升級舊版的資料庫圖表 (Visual Database Tools)
 title: 升級舊版的資料庫圖表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a0221259c40a171b02d4d7b6af1d8f65f329a8a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6f303bdee6d19af39600317c2147728c89e2b3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417694"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86004109"
   
 2.  在資料庫中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]  。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]****。  
   
     這樣將會升級資料庫上預存的圖表。  
   

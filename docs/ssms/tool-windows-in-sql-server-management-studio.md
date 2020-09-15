@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 中的工具視窗
 title: SQL Server Management Studio 中的工具視窗
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ec93cc023145e051115318c67c644ea98403663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417844"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "87236773"
   
 |工具|目的|  
 |-|-|   
-|[物件總管](../ssms/object/object-explorer.md)|瀏覽伺服器、建立和尋找物件、管理資料來源，以及檢視記錄。 此工具可從 [檢視]  功能表加以存取。|  
-|[方案總管](../ssms/solution/solution-explorer.md)|儲存和組織稱為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼之專案中的指令碼和相關連接資訊。 您可以將許多 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼儲存成方案，當指令碼隨著時間而進展時，您可以利用原始檔控制來管理它們。 此工具可從 [檢視]  功能表加以存取。|  
-|[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視]  功能表加以存取。|  
+|[物件總管](../ssms/object/object-explorer.md)|瀏覽伺服器、建立和尋找物件、管理資料來源，以及檢視記錄。 此工具可從 [檢視]**** 功能表加以存取。|  
+|[方案總管](../ssms/solution/solution-explorer.md)|儲存和組織稱為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼之專案中的指令碼和相關連接資訊。 您可以將許多 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指令碼儲存成方案，當指令碼隨著時間而進展時，您可以利用原始檔控制來管理它們。 此工具可從 [檢視]**** 功能表加以存取。|  
+|[範本總管](../ssms/template/template-explorer.md)|根據現有的範本來建立查詢。 您也可以建立您的自訂查詢，或變更現有的範本來配合您的狀況。 此工具可從 [檢視]**** 功能表加以存取。|  
 |[動態說明](../ssms/user-assistance-in-sql-server-management-studio.md)|在您按一下元件或類型程式碼時，顯示一份相關說明主題的清單。|  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的各項工具能夠協同運作。 例如，您可以：  

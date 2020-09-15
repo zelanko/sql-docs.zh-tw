@@ -1,4 +1,5 @@
 ---
+description: SSMS 公用程式
 title: SSMS 公用程式
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5112278618d32428277d37031085709049f72dae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417884"
 ---
 # <a name="ssms-utility"></a>SSMS 公用程式
 

@@ -1,4 +1,5 @@
 ---
+description: 專案 (SQL Server Management Studio)
 title: 專案 (SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417874"
 ---
 # <a name="projects-sql-server-management-studio"></a>專案 (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86011596"
 專案也可以整合為一個原始程式碼控制系統。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>從指令碼專案連接到 SQL Server 的執行個體  
-指令碼專案可包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接。 按一下該連接，就可以連接到專案中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此時會開啟一個 [SQL 指令碼] 視窗，這個視窗會連接到您選取的連接所定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果您利用採取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的連接來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 指令碼，在啟動編輯器及載入指令碼之後，系統會利用 [連接到 SQL Server]  對話方塊來提示您輸入密碼。  
+指令碼專案可包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接。 按一下該連接，就可以連接到專案中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此時會開啟一個 [SQL 指令碼] 視窗，這個視窗會連接到您選取的連接所定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果您利用採取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的連接來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 指令碼，在啟動編輯器及載入指令碼之後，系統會利用 [連接到 SQL Server]**** 對話方塊來提示您輸入密碼。  
   
 對應視窗關閉之後，連接也會關閉。  
   
@@ -52,12 +53,12 @@ ms.locfileid: "86011596"
 |描述如何變更儲存專案檔案的預設位置。|[變更專案的預設位置](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |描述如何檢視專案的目前屬性。|[檢視專案屬性](../../ssms/solution/view-project-properties.md)|  
 |描述如何將新的項目 (例如連接或指令碼檔案) 加入專案中。|[將新項目加入專案](../../ssms/solution/add-new-items-to-a-project.md)|  
-|描述如何建立查詢的連接資訊。|[建立查詢與專案中連接的關聯性](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
+|描述如何建立查詢的連接資訊。|[在專案中建立查詢與連接的關聯性](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
 |描述如何變更查詢的連接資訊。|[變更與查詢相關聯的連接](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |描述如何變更連接屬性。|[檢視或變更專案中連接的屬性](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  
-[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[方案總管原始檔控制](https://msdn.microsoft.com/library/ms173879.aspx)  
+[解決方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[方案總管原始檔控制](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   
