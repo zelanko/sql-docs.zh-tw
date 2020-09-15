@@ -1,4 +1,5 @@
 ---
+description: supportsUnion 方法 (SQLServerDatabaseMetaData)
 title: supportsUnion 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8684d05a5a3a059df663240b168260d0a345e2e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 99c8057d86d124cb2629c7463a85cb6e304437fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353974"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

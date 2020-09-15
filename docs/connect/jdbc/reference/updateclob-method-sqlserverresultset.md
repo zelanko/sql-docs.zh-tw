@@ -1,4 +1,5 @@
 ---
+description: updateClob 方法 (SQLServerResultSet)
 title: updateClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1b41a6573478439589eb554b48b125a13c6a533
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1f24fb7b9bb14c74df2378b52f3247fd1c34266b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353714"
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: updateBinaryStream 方法 (int, java.io.InputStream)
 title: updateBinaryStream 方法 (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c0106d85f00bf406f8b79b1df3c6562fd56e7ae
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0920ccd4b4e22de19c03feb8ccee9735d00d2109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354094"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream"></a>updateBinaryStream 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法指定。  
+ 這個 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法所指定。  
   
  將這個方法用於 **image**、**text** 和 **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型可能會影響效能。  
   

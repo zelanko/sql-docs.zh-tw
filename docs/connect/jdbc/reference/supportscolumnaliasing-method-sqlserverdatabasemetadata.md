@@ -1,4 +1,5 @@
 ---
+description: supportsColumnAliasing 方法 (SQLServerDatabaseMetaData)
 title: supportsColumnAliasing 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5997f81977ac91889ed6386abd820bb3ae22dd63
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 862afa32825ddccd202993f69118dd70e2c41063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354315"
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

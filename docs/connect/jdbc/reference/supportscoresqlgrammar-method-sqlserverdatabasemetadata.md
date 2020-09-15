@@ -1,4 +1,5 @@
 ---
+description: supportsCoreSQLGrammar 方法 (SQLServerDatabaseMetaData)
 title: supportsCoreSQLGrammar 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6bc18cd7c49a2dae98c20e28f1e0789f260ea59f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 950a7a3d448131ed3732c6059413143640365a7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354304"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>supportsCoreSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

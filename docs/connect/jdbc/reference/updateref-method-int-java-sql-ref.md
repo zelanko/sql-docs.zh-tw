@@ -1,4 +1,5 @@
 ---
+description: updateRef 方法 (int, java.sql.Ref)
 title: updateRef 方法 (int, java.sql.Ref) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: acdff5d46b8b2be5c060688353b43732b2a01b79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9358fdc1c788e2e2be19b4999c3d10ca825d2799
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353164"
 ---
 # <a name="updateref-method-int-javasqlref"></a>updateRef 方法 (int, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

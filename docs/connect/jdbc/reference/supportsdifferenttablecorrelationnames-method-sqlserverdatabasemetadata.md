@@ -1,4 +1,5 @@
 ---
+description: supportsDifferentTableCorrelationNames 方法 (SQLServerDatabaseMetaData)
 title: supportsDifferentTableCorrelationNames 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18b6c1dcb74f369e0b2e2bf7118d8e262b929abf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0020826fc94dec70c041ec3d1a4d2a1570a04949
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354024"
 ---
 # <a name="supportsdifferenttablecorrelationnames-method-sqlserverdatabasemetadata"></a>supportsDifferentTableCorrelationNames 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
