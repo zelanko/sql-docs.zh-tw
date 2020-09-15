@@ -1,4 +1,5 @@
 ---
+description: SQL 編輯器 (Visual Database Tools)
 title: SQL 編輯器
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 95f34dec91f727bfb366af3e39ce9d3ef697e4ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6787c74845424603353e346b841c98a4bcb02d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313544"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：
   
 -   提供有用的編輯功能，包括剪下、複製、貼上和拖曳作業。  
   
--   變更編輯器的行為 (藉由選取 [工具]  功能表上的 [選項]  )，以修改虛擬空間、自動換行、行號，以及定位點大小。  
+-   變更編輯器的行為 (藉由選取 [工具]**** 功能表上的 [選項]****)，以修改虛擬空間、自動換行、行號，以及定位點大小。  
   
 -   協助管理偵錯時的中斷點。  
   

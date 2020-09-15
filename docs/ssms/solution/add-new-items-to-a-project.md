@@ -1,4 +1,5 @@
 ---
+description: 將新項目加入專案
 title: 將新項目加入專案
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0440f720923ebfa6378766372e4bcdb48a2a166d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bd7c686682a83b95e6053d60323fe1829a500752
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316184"
 ---
 # <a name="add-new-items-to-a-project"></a>將新項目加入專案
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "86003304"
   
 1.  在 [方案總管] 中，選取一個目標專案。  
   
-2.  在 [專案]  功能表上，按一下 [加入新項目]  。  
+2.  在 [專案]**** 功能表上，按一下 [加入新項目]****。  
   
-3.  在 [新增項目]  對話方塊的左窗格中，選取一個類別目錄。  
+3.  在 [新增項目]**** 對話方塊的左窗格中，選取一個類別目錄。  
   
-4.  在右窗格中，選取一個查詢範本，再按一下 [新增]  。 此時會在專案的 [查詢]  資料夾中，加入新的查詢。  
+4.  在右窗格中，選取一個查詢範本，再按一下 [新增]****。 此時會在專案的 [查詢]**** 資料夾中，加入新的查詢。  
   
-5.  在 [連接到 Database Engine]  對話方塊中，指定新查詢的連接，再按一下 [連接]  。 如果您不要將連接關聯於這項新查詢，您可以在連接對話中，按一下 [取消]  。  
+5.  在 [連接到 Database Engine]**** 對話方塊中，指定新查詢的連接，再按一下 [連接]****。 如果您不要將連接關聯於這項新查詢，您可以在連接對話中，按一下 [取消]****。  
   
 6.  如果想要的話，請在 [方案總管] 中重新命名查詢。  
   
@@ -44,13 +45,13 @@ ms.locfileid: "86003304"
   
 1.  在 [方案總管] 中，選取一個目標專案。  
   
-2.  在 [專案]  功能表上，按一下 [加入新項目]  。  
+2.  在 [專案]**** 功能表上，按一下 [加入新項目]****。  
   
-3.  在左窗格中，選取 [連接]  。  
+3.  在左窗格中，選取 [連接]****。  
   
-4.  在右窗格中，選取 [新增連接]  ，再按一下 [新增]  。  
+4.  在右窗格中，選取 [新增連接]****，再按一下 [新增]****。  
   
-5.  在 [連接到 Database Engine]  對話方塊中，指定新查詢的連接，再按一下 [連接]  。 此時會在專案的 [連接]  資料夾中，新增連接。  
+5.  在 [連接到 Database Engine]**** 對話方塊中，指定新查詢的連接，再按一下 [連接]****。 此時會在專案的 [連接]**** 資料夾中，新增連接。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

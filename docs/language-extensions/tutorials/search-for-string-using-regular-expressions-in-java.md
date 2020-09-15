@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 669903c59b3fd732418ba5fec94c963675679ea7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dab5079ab3c0447b0895bbc3642f23884317f3c4
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722541"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180492"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 本教學課程示範如何使用 [SQL Server 語言延伸模組](../language-extensions-overview.md)來建立一個會從 SQL Server 接收兩個資料行 (ID 和 text) 的 Java 類別，以及一個作為輸入參數的規則運算式。 此類別會將兩個資料行傳回 SQL Server (ID 和 text)。
 

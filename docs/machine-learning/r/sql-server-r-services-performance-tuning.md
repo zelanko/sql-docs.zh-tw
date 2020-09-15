@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 991f9f0ddbe58e5591a89ff16bf8455d5a5cdca4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cedb8cd13db6c8d27b987c60881093caa91af50a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756473"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180455"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中 R 的效能微調
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文是一系列共四篇文章中的第一篇，會根據兩個案例研究來描述 R Services 的效能最佳化：
 

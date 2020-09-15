@@ -1,4 +1,5 @@
 ---
+description: 定序對話方塊 (Visual Database Tools)
 title: 定序對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 23ba5cfb04712ebb0bf7f2e744cc0e7dcb5234e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c1e4c82b90c9b3c569f9f179ed16242c4ca76f40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314654"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>定序對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,11 +27,11 @@ ms.locfileid: "86003849"
   
 下列情況會出現這個對話方塊：  
   
--   在 [資料行屬性]  索引標籤的 [定序]  欄位中輸入無效的定序名稱。  
+-   在 [資料行屬性]**** 索引標籤的 [定序]**** 欄位中輸入無效的定序名稱。  
   
 -   在 [資料行屬性] 索引標籤的 [定序] 欄位中按一下，然後按一下欄位右側的省略符號按鈕 ( **...** )。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **SQL 定序**  
 從下拉式清單中選擇 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所定義的定序序列。  
   
@@ -38,10 +39,10 @@ ms.locfileid: "86003849"
 從下拉式清單中選擇 Windows 所定義的定序序列。  
   
 **二進位編碼排序**  
-使用字元值的二進位碼進行比較。 如果選取此選項，某些字母順序比較選項會無法使用。 例如，區分字母大小寫的比較會無法使用，因為大寫字母和小寫字母有不同的二進位編碼方式。 只有在選取 [Windows 定序]  時適用。  
+使用字元值的二進位碼進行比較。 如果選取此選項，某些字母順序比較選項會無法使用。 例如，區分字母大小寫的比較會無法使用，因為大寫字母和小寫字母有不同的二進位編碼方式。 只有在選取 [Windows 定序]**** 時適用。  
   
 **字典排序**  
-使用字母順序比較選項。 只有在選取 [Windows 定序]  時適用。 The alphabetic comparisons options are:  
+使用字母順序比較選項。 只有在選取 [Windows 定序]**** 時適用。 The alphabetic comparisons options are:  
   
 -   **區分大小寫** ：若要比較作業將大寫和小寫字母視為不相同，請選取此選項。  
   

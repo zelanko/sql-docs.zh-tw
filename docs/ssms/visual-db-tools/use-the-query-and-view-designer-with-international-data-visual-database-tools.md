@@ -1,4 +1,5 @@
 ---
+description: 使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
 title: 使用查詢設計工具和檢視表設計師處理國際資料
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 99e6d84d96171747977852caa1ceeef287d3e337
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf7402047138bc70810aec16e6ea99845e85dbef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312654"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-您可以使用 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 處理任何語言的資料，並在任何版本的 Windows 作業系統中執行。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  
+ 您可以使用[查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)處理任何語言的資料，並在任何版本的 Windows 作業系統中執行。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>準則和 SQL 窗格的當地語系化文化資訊  
 如果使用 [準則] 窗格建立查詢，可以用符合於您電腦的 Windows [地區選項] 的格式來輸入資訊。 例如，如果您要搜尋資料，您可以使用您習慣使用的格式在 [準則] 資料行中輸入資料，但以下為例外情況：  

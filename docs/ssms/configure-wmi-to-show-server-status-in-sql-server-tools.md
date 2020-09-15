@@ -1,4 +1,5 @@
 ---
+description: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
 title: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 848a0b7a22f0a90e355b32d1391f18bdbfab0ea6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 199ce23eee967ff19a026cf267209247cab09eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317724"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>設定 WMI 在 SQL Server 工具中顯示伺服器狀態
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,19 +27,19 @@ ms.locfileid: "86000187"
   
 ## <a name="to-configure-wmi-permission"></a><a name="SSMSProcedure"></a>若要設定 WMI 權限  
   
-1.  在遠端伺服器的 [開始]  功能表上按一下 [執行]  。  
+1.  在遠端伺服器的 [開始]**** 功能表上按一下 [執行]****。  
   
-2.  在 [開啟]  方塊中輸入 **wmimgmt.msc**，再按 [確定]  。  
+2.  在 [開啟]**** 方塊中輸入 **wmimgmt.msc**，再按 [確定]****。  
   
-3.  在 **Windows Management Infrastructure** 程式中，以滑鼠右鍵按一下 [WMI 控制 (本機)]  ，然後按一下[內容]  。  
+3.  在 **Windows Management Infrastructure** 程式中，以滑鼠右鍵按一下 [WMI 控制 (本機)]****，然後按一下[內容]****。  
   
-4.  在 [WMI 控制 (本機) 內容]  對話方塊的 [安全性]  索引標籤上，展開 [Root]  ，然後按一下 [CIMV2]  。  
+4.  在 [WMI 控制 (本機) 內容]**** 對話方塊的 [安全性]**** 索引標籤上，展開 [Root]****，然後按一下 [CIMV2]****。  
   
-5.  按一下 [安全性]  以開啟 [安全性 ROOT\CIMV2]  對話方塊。  
+5.  按一下 [安全性]**** 以開啟 [安全性 ROOT\CIMV2]**** 對話方塊。  
   
-6.  新增群組或使用者至 [群組或使用者名稱]  方塊，然後選取此新增項目。  
+6.  新增群組或使用者至 [群組或使用者名稱]**** 方塊，然後選取此新增項目。  
   
-7.  在 [_<group or user>_ 的權限] 方塊中，針對想要遠端偵測其服務狀態的使用者，選取 [遠端啟用] 權限的 [允許] 資料行。  
+7.  在 [ _<group or user>_ 的權限] 方塊中，針對想要遠端偵測其服務狀態的使用者，選取 [遠端啟用] 權限的 [允許] 資料行。  
   
 ## <a name="see-also"></a>另請參閱  
 [啟動、停止或暫停 SQL Server Agent 服務](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

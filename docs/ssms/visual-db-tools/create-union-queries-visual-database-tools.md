@@ -1,4 +1,5 @@
 ---
+description: 建立 UNION 查詢 (Visual Database Tools)
 title: 建立 UNION 查詢
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a7a274c092a98cbe63313f633ec37fc4377aa75
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12731ff7960a8376c8f0a79d933d62fde43e76dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314984"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>建立 UNION 查詢 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ UNION 關鍵字讓您可以在所產生的單一資料表中，包含 2 個 SELE
     FROM dbo.Gloves;  
     ```  
   
-3.  在 [查詢設計工具]  功能表中，按一下 [執行 SQL]  來執行查詢。  
+3.  在 [查詢設計工具]**** 功能表中，按一下 [執行 SQL]**** 來執行查詢。  
   
     查詢設計工具目前已格式化您的 UNION 查詢。  
   

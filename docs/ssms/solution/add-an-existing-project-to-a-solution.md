@@ -1,4 +1,5 @@
 ---
+description: 將現有專案加入方案中
 title: 將現有專案加入方案中
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15ae22db943edf33fcf09a7f8b854544b0713612
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26babc6e9a40e86f853663034f8441c5e041dfeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316234"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "86000838"
   
 1.  在 [方案總管] 中，選取方案。  
   
-2.  在 [檔案]  功能表上，指向 [新增]  ，再按一下 [現有的專案]  。  
+2.  在 [檔案]**** 功能表上，指向 [新增]****，再按一下 [現有的專案]****。  
   
-3.  在 [新增現有的專案]  對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]  。  
+3.  在 [新增現有的專案]**** 對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]****。  
   
     此時會將專案加入所選的方案中。  
   
@@ -42,5 +43,5 @@ ms.locfileid: "86000838"
   
 ## <a name="see-also"></a>另請參閱  
 [專案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[解決方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   

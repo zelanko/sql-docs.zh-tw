@@ -1,4 +1,5 @@
 ---
+description: 資料表屬性 (Visual Database Tools)
 title: 資料表屬性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312814"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86000746"
 **識別類別目錄**  
 展開以顯示 **名稱**、 **說明**及 **結構描述**的屬性。  
   
-**名稱**  
+**Name**  
 顯示資料表的名稱。 若要編輯名稱，請在文字方塊中輸入。  
   
 > [!CAUTION]  
@@ -59,14 +60,14 @@ ms.locfileid: "86000746"
 **Identity Column**  
 顯示做為資料表識別欄位的資料行。 若要變更識別欄位，請從下拉式清單中選擇。 清單中只會顯示數字資料類型的資料行。  
   
-**為可編索引**  
+**Is Indexable**  
 顯示是否可對資料表進行索引。 如果資料表不可索引，可能是因為您不是資料表擁有人，或是因為資料表包含具有 text、ntext 或 image 等資料類型的資料行。  
   
 **為已複寫**  
 顯示是否已在其他位置複寫資料表。  
   
 **規則資料空間規格分類**  
-展開以顯示 **(資料空間類型)** 、 **檔案群組或資料分割配置名稱**及 **資料分割資料行清單**的屬性。  
+展開以顯示 **(資料空間類型)**、 **檔案群組或資料分割配置名稱**及 **資料分割資料行清單**的屬性。  
   
 **(資料空間類型)**  
 顯示此資料表是否使用檔案群組或資料分割配置加以儲存。  

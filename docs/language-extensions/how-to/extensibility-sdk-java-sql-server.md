@@ -1,6 +1,6 @@
 ---
 title: 適用於 Java 的 Microsoft 擴充性 SDK
-description: 了解如何使用「適用於 Java 的 Microsoft 擴充性 SDK」來實作適用於 SQL Server 的 Java 程式。 SDK 是 Java 語言延伸模組的介面，可用來與 SQL Server 交換資料，並從 SQL Server 執行 Java 程式碼。
+description: 了解如何使用「適用於 Java 的 Microsoft 擴充性 SDK」來實作適用於 SQL Server 的 Java 程式。
 ms.prod: sql
 ms.technology: language-extensions
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67e54169dab869751a0e63e9e1e4a2d62a23d34c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 175c96e19c0a15cd2e995c527f869a6f8a2ca7ab
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722573"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173569"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>適用於 SQL Server 的 Microsoft Extensibility SDK for Java
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 了解如何使用「適用於 Java 的 Microsoft 擴充性 SDK」來實作適用於 SQL Server 的 Java 程式。 SDK 是 Java 語言延伸模組的介面，可用來與 SQL Server 交換資料，並從 SQL Server 執行 Java 程式碼。
 
 SDK 在 Windows 與 Linux 上安裝為 SQL Server 2019 候選版 1 的一部分：
 
-+ Windows 上的預設安裝路徑： **[執行個體安裝主目錄]\MSSQL\Binn\mssql-java-lang-extension.jar**
-+ Linux 上的預設安裝路徑： **/opt/mssql/lib/mssql-java-lang-extension.jar**
++ Windows 上的預設安裝路徑：**[執行個體安裝主目錄]\MSSQL\Binn\mssql-java-lang-extension.jar**
++ Linux 上的預設安裝路徑：**/opt/mssql/lib/mssql-java-lang-extension.jar**
 
 此程式碼是開放原始碼，而且可以在 [SQL Server 語言延伸模組 GitHub 存放庫](https://github.com/microsoft/sql-server-language-extensions)中找到。
 

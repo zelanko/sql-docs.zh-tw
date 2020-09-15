@@ -1,7 +1,7 @@
 ---
 title: SQL Server 文件導覽提示
 description: 瀏覽 SQL Server 技術文件的提示與訣竅 - 說明中樞頁面、目錄、標頭等內容，以及如何使用階層連結以及如何使用版本篩選。
-ms.date: 10/15/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f85c97e36900d3c6f4372004819690a8ede49d22
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: cd724e9caf8f104e366e34b7f64f6461681620b0
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731598"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200315"
 ---
-# <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南 
+# <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南
 
 本主題提供巡覽 SQL Server 技術文件空間的一些提示和技巧。  
 

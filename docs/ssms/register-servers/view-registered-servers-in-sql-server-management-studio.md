@@ -1,4 +1,5 @@
 ---
+description: 在 SQL Server Management Studio 中檢視已註冊的伺服器
 title: 檢視已註冊的伺服器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 71b93247000615811e9416e7f2a2315f77d39be9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c3331dd690a8052535825834507359e6701cac3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316294"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中檢視已註冊的伺服器
 

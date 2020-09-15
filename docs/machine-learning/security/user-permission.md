@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da601b8c83e6e226da0329ec8d8c732d9877656a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c961c2c4df15fdff7b1e2f3d5b1815c50d69771
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775367"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180396"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務，授與使用者執行 Python 及 R 指令碼的權限
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 了解如何對使用者授與在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中執行外部 Python 及 R 指令碼的權限，並將讀取、寫入或資料定義語言 (DDL) 權限授與資料庫。
 

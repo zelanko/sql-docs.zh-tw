@@ -1,4 +1,5 @@
 ---
+description: 準則窗格 (Visual Database Tools)
 title: 準則窗格
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6f1df4856844b162560f562e487f970dc1974d04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4738edd7c0db3522547bba26cd637a132f6630bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314754"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>準則窗格 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85999962"
   
 [準則窗格] 顯示的特定資訊將視您建立的查詢類型而定。  
   
-若 [準則窗格] 未出現，請在設計師工具上按一下滑鼠右鍵，再指向 [窗格]  ，然後按一下 [準則]  。  
+若 [準則窗格] 未出現，請在設計師工具上按一下滑鼠右鍵，再指向 [窗格]****，然後按一下 [準則]****。  
   
 ## <a name="options"></a>選項。  
   
@@ -64,11 +65,11 @@ ms.locfileid: "85999962"
 |輸出|SELECT、INSERT FROM、MAKE TABLE|指定查詢輸出中是否出現資料行。<br /><br />注意：若資料庫允許，您無須在結果集中顯示資料行，就能使用資料行來排序或搜尋子句。|  
 |排序類型|SELECT、INSERT FROM|指定使用關聯資料欄來排序查詢結果，及其排序是否為遞增或遞減排序。|  
 |排序次序|SELECT、INSERT FROM|指定用來排序結果集的資料行之排序優先順序。 當您變更資料行的排序次序時，所有其他資料行的排序次序也會一併更新。|  
-|群組依據|SELECT、INSERT FROM、MAKE TABLE|指定使用關聯資料行來建立彙總查詢。 僅當您從 [工具] 功能表中選擇 [群組依據]，或將 GROUP BY 子句新增到 [SQL 窗格] 中，才會顯示格線欄。<br /><br />此資料行的預設值為 [群組依據]  ，而且此資料行將會成為 GROUP BY 子句的一部分。<br /><br />當您移到這個資料行的資料格並選取要套用到關聯資料行的彙總函式時，依照預設，其產生的運算式將加入至結果集並成為輸出資料行。|  
-|準則|全部|指定關聯資料行的搜尋條件 (篩選條件)。 輸入運算子 (預設值為「=」) 及要搜尋的值。 使用單引號括住文字值。<br /><br />如果關聯資料行為 GROUP BY 子句的一部份，您輸入的運算式將供 HAVING 子句使用。<br /><br />若您在 [準則]  格線欄中，為多個資料格輸入值，產生的搜尋條件將會自動連結到邏輯 AND。<br /><br />若要為單一資料庫資料行指定多個搜尋條件運算式 (例如 (fname > 'A') AND (fname < 'M'))，可將資料行新增到 [準則窗格] 兩次，再個別於 [準則]  格線欄中，為每個資料行執行個體輸入值。|  
-|或...|全部|指定資料行的其他搜尋條件運算式，連結至之前使用邏輯 OR 的運算式。 您可以按最右邊 [或...]  資料行中的 TAB 鍵，新增更多的 [或...]  格線欄。|  
+|群組依據|SELECT、INSERT FROM、MAKE TABLE|指定使用關聯資料行來建立彙總查詢。 僅當您從 [工具]**** 功能表中選擇 [群組依據]****，或將 GROUP BY 子句新增到 [SQL 窗格] 中，才會顯示格線欄。<br /><br />此資料行的預設值為 [群組依據]****，而且此資料行將會成為 GROUP BY 子句的一部分。<br /><br />當您移到這個資料行的資料格並選取要套用到關聯資料行的彙總函式時，依照預設，其產生的運算式將加入至結果集並成為輸出資料行。|  
+|準則|全部|指定關聯資料行的搜尋條件 (篩選條件)。 輸入運算子 (預設值為「=」) 及要搜尋的值。 使用單引號括住文字值。<br /><br />如果關聯資料行為 GROUP BY 子句的一部份，您輸入的運算式將供 HAVING 子句使用。<br /><br />若您在 [準則]**** 格線欄中，為多個資料格輸入值，產生的搜尋條件將會自動連結到邏輯 AND。<br /><br />若要為單一資料庫資料行指定多個搜尋條件運算式 (例如 (fname > 'A') AND (fname < 'M'))，可將資料行新增到 [準則窗格] 兩次，再個別於 [準則]**** 格線欄中，為每個資料行執行個體輸入值。|  
+|或...|全部|指定資料行的其他搜尋條件運算式，連結至之前使用邏輯 OR 的運算式。 您可以按最右邊 [或...]**** 資料行中的 TAB 鍵，新增更多的 [或...]**** 格線欄。|  
 |附加|INSERT FROM|指定相關資料行的目標資料行名稱。 當您建立 Insert From 查詢時，查詢和檢視設計工具將嘗試比對來源和正確的目標資料行。 如果查詢和檢視設計工具無法選擇符合的項目，您必須提供資料行名稱。|  
-|新值|UPDATE、NSERT INTO|指定要放入關聯資料行的值。 輸入常值 (Literal) 或運算式。|  
+|[新值]|UPDATE、NSERT INTO|指定要放入關聯資料行的值。 輸入常值 (Literal) 或運算式。|  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -1,4 +1,5 @@
 ---
+description: 連接到伺服器 (Database Engine)
 title: 連接到伺服器 (Database Engine)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: d49edce2cf6c096711fc57903ea6599264ea1932
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d46002843574b54c803ed0da33c02f1d795494ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317924"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
 

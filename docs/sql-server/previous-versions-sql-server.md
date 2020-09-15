@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.date: 07/24/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d2fd489c31ea140f747f90c50976b28f45f0045
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.date: 08/12/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: b8afd0df0dd5807f5d27ba5113fa27714b47fa43
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248085"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200321"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>舊版的 SQL Server 文件
 
