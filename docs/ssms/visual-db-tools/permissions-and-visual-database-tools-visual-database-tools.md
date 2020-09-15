@@ -1,4 +1,5 @@
 ---
+description: 權限和 Visual Database Tools (Visual Database Tools)
 title: 權限和 Visual Database Tools
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 4c6c3928de56e853318978b0c4db131106fb5e79
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2f0ae43bd58d71e47819c8551744565da9f4eadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88369704"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

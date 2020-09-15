@@ -1,4 +1,5 @@
 ---
+description: 在結果窗格中加入新的資料列 (Visual Database Tools)
 title: 在結果窗格中新增資料列
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d504f1c3aefd598a65848e34b1bd37c79de2c280
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9e976858478d896a1057cc561a2e61a540d0cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370234"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
 
@@ -46,11 +47,11 @@ ms.locfileid: "86009319"
     > [!NOTE]  
     > 如果所貼上的一或多個資料列無法為資料庫認可，您將會收到通知哪些資料列不被認可的訊息。  
   
-3.  輸入新資料列的資料。 若要貼上，請從 [編輯] 功能表選擇 [貼上]。  
+3.  輸入新資料列的資料。 若要貼上，請從 [編輯]**** 功能表選擇 [貼上]****。  
   
 4.  離開該資料列，讓資料庫對其進行認可。  
   
-儲存資料列時如果發生錯誤，查詢和檢視設計工具會顯示訊息，然後讓您返回先前所編輯的資料列。 您可以：  
+儲存資料列時如果發生錯誤，查詢和檢視設計工具會顯示訊息，然後讓您返回先前所編輯的資料列。 接著，您可以：  
   
 -   進一步編輯資料列來解決錯誤。  
   

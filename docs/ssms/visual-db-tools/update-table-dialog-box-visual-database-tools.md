@@ -1,4 +1,5 @@
 ---
+description: 更新資料表對話方塊 (Visual Database Tools)
 title: 更新資料表對話方塊
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 19251316d4674ad7632c6f220f85e2178f4365ca
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 93c0ed1368325ec27ff9ebb640f48ee45f7de8ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88369174"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>更新資料表對話方塊 (Visual Database Tools)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86004128"
 
 當您將查詢類型變更為更新查詢時，如果 [圖表] 窗格中顯示一個以上的資料表，此對話方塊就會出現。  
 
-選取要更新的資料表，然後選擇 [確定]  。
+選取要更新的資料表，然後選擇 [確定]****。
 
 > [!NOTE]
 > 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。

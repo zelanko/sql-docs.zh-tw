@@ -1,4 +1,5 @@
 ---
+description: 建立全文檢索搜尋查詢 (Visual Database Tools)
 title: 建立全文檢索搜尋查詢
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 1f9d145dcf462b06aef58eb2094c168275fb6574
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b861cf926bdbc43fda8986be44dacb5652196b7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88369894"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>建立全文檢索搜尋查詢 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 開啟查詢和檢視表設計工具 (Visual Database Tools)
 title: 開啟查詢設計工具和檢視表設計師
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a5a9a1222723e04304356e3e1e8473811cbb642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 56d9aec3b6768a45ddad6fec107fded037656eb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88369284"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>開啟查詢和檢視表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,21 +37,21 @@ ms.locfileid: "85768148"
   
 -   這些窗格可以用來使用查詢和檢視。  
   
--   開啟檢視或查詢時，某些窗格或所有窗格會一併開啟。 哪些窗格會開啟，會根據 [選項]  對話方塊中的設定以及所連接的資料庫管理系統而定。 預設值是四個窗格全部開啟。  
+-   開啟檢視或查詢時，某些窗格或所有窗格會一併開啟。 哪些窗格會開啟，會根據 [選項]**** 對話方塊中的設定以及所連接的資料庫管理系統而定。 預設值是四個窗格全部開啟。  
   
 ### <a name="to-open-the-query-and-view-designer-for-a-view"></a>開啟檢視的查詢和檢視設計師  
   
-1.  在物件總管中，以滑鼠右鍵按一下您要開啟的檢視，然後按一下 [設計]  或 [開啟檢視]  。  
+1.  在物件總管中，以滑鼠右鍵按一下您要開啟的檢視，然後按一下 [設計]**** 或 [開啟檢視]****。  
   
-    如果您選擇 [設計]  ，查詢和檢視表設計工具窗格即會依照 [選項]  對話方塊中選取的選項開啟。 如果您選擇 [開啟檢視]  ，只有 [結果] 窗格預設會開啟。  
+    如果您選擇 [設計]****，查詢和檢視表設計工具窗格即會依照 [選項]**** 對話方塊中選取的選項開啟。 如果您選擇 [開啟檢視]****，只有 [結果] 窗格預設會開啟。  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>若要開啟現有查詢的查詢和檢視設計師  
   
-1.  在方案總管中，展開 [查詢]  資料夾。  
+1.  在方案總管中，展開 [查詢]**** 資料夾。  
   
 2.  按兩下要開啟的查詢。  
   
-3.  反白顯示查詢陳述式，在反白顯示區域上按一下滑鼠右鍵，然後按一下 [在編輯器中設計查詢]  。  
+3.  反白顯示查詢陳述式，在反白顯示區域上按一下滑鼠右鍵，然後按一下 [在編輯器中設計查詢]****。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
