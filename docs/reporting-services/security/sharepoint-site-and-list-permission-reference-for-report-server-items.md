@@ -1,4 +1,5 @@
 ---
+description: 報表伺服器項目的 SharePoint 網站和清單權限參考
 title: 報表伺服器項目的 SharePoint 網站和清單權限參考 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373364"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>報表伺服器項目的 SharePoint 網站和清單權限參考
   本文中提供 SharePoint 權限的參考，可用來針對以 SharePoint 整合式模式執行的報表伺服器，授與報表伺服器作業的存取權。 如果您要建立自訂的權限等級，本主題可幫助您選擇適用的權限。  
@@ -27,22 +28,29 @@ ms.locfileid: "65570688"
   
  每份表格最開始先列出 SharePoint 權限和描述。 資料表中包括三個資料行，表示權限在預先定義的權限等級中使用的方式。 預先定義的權限等級包括下列各項：  
   
-|權限等級|縮寫|  
+|權限層級|縮寫|  
 |----------------------|------------------|  
 |完全控制|**F**|  
 |參與|**C**|  
 |訪客|**V**|  
   
  不會影響報表伺服器的權限並不會列出。 所有個人化權限都會排除在此參考文件之外。 即使您可以將報表伺服器項目加入個人化的網站中，報表伺服器仍不會直接處理個人化要求或作業。  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; SharePoint 2010 和 SharePoint 2013。|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 和 SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>清單權限  
  您在包含報表伺服器項目的文件庫上設定的權限，會決定使用者存取這些項目的方式。  
   
-|權限|描述|F|C|V|報表伺服器作業|  
+|權限|說明|F|C|V|報表伺服器作業|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理清單|建立和刪除清單、新增或移除清單中的資料行，以及新增或移除清單的公用檢視。|X|||在從編輯工具發行作業期間，於 SharePoint 程式庫中建立資料夾。 此權限同時為管理報表記錄所需。|  
 |加入項目|將項目新增至清單、將文件新增至文件庫，以及新增網頁討論區註解。|X|X||將報表、報表模型、共用資料來源，以及資源 (外部影像檔) 加入 SharePoint 程式庫。 建立共用資料來源。 從共用資料來源產生報表模型。 啟動報表產生器，並建立新報表或將模型載入報表產生器。|  
@@ -59,7 +67,7 @@ ms.locfileid: "65570688"
 ## <a name="site-permissions"></a>網站權限  
  網站權限決定並非與特定文件庫中所儲存項目直接相關之報表伺服器作業的存取。 例如，建立和管理共用排程 (可由多個文件庫中的項目使用)，以及設定報表檢視器網頁組件 (可在整個網站上使用)。  
   
-|權限|描述|F|C|V|報表伺服器作業|  
+|權限|說明|F|C|V|報表伺服器作業|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理權限|建立和變更網站上的權限等級，並且將權限指派給使用者和群組。|X|||您可以變更所有報表伺服器項目和作業的權限。 還可以設定模型項目的安全性。|  
 |管理網站|執行所有網站管理工作，以及管理內容。|X|||建立、變更和刪除共用排程。|  

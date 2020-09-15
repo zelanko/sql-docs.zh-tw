@@ -1,4 +1,5 @@
 ---
+description: RSWindowsExtendedProtectionLevel 屬性
 title: RSWindowsExtendedProtectionLevel 屬性 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7854821a9f43bc234490d915ff75339e250f6c39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4098d19c86ab6940aebd254ba08a196ae880dc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373044"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>RSWindowsExtendedProtectionLevel 屬性
   傳回字串值，表示報表伺服器設定為支援的保護等級。 這個屬性是唯讀的。  

@@ -1,4 +1,5 @@
 ---
+description: 含有 Reporting Services 的驗證擴充保護
 title: Reporting Services 的驗證擴充保護 | Microsoft Docs
 ms.date: 06/22/2020
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c881376243e1e870c5d3aa6c8477eccfb4a17ac0
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373465"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 

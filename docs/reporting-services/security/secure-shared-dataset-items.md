@@ -1,4 +1,5 @@
 ---
+description: 保護共用資料集項目的安全
 title: 保護共用資料集項目的安全 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80cfeba2128e82c6254ba962e91c6c51461ff955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373214"
 ---
 # <a name="secure-shared-dataset-items"></a>保護共用資料集項目的安全
   在報表伺服器上，共用資料集項目可由多個報表使用。 您可以保護共用資料集來控制使用者能夠存取的程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以檢視共用資料集、修改屬性、啟用快取、建立快取重新整理計劃，以及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，才能存取共用資料集。  
@@ -25,7 +26,7 @@ ms.locfileid: "65570676"
   
  可讓您加入、刪除、編輯項目屬性，並檢視資料集相關報表和共用資料來源的預設角色指派有：[內容管理員]、[我的報表] 和 [發行者]。 若要編輯共用資料集定義，請使用預設角色指派報表產生器或內容管理員。  
   
- 由於角色指派通常是繼承自父節點，已啟用 [檢視報表]  工作的資料夾會傳承資料夾中之共用資料集和報表的權限。  
+ 由於角色指派通常是繼承自父節點，已啟用 [檢視報表] **** 工作的資料夾會傳承資料夾中之共用資料集和報表的權限。  
   
  若要就共用資料集及其查詢結果提供更強的控制，請在共用資料集項目上設定項目層級安全性，或將共用資料集儲存到資料夾，並在資料夾上設定項目層級安全性。  
   

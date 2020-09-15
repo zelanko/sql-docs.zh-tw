@@ -1,4 +1,5 @@
 ---
+description: SenderEmailAddress 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: SenderEmailAddress 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 62c64167886a28ad05a60a576cfa0a42a2cbbcf1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 982bb08909ab49a5f5f6faaffc610d2e7c3ebf2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373064"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting 屬性 - SenderEmailAddress
   取得用以從報表伺服器傳送電子郵件的位址。 唯讀。  

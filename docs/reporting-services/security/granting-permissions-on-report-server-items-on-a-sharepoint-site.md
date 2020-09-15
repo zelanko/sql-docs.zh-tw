@@ -1,4 +1,5 @@
 ---
+description: 授與 SharePoint 網站上報表伺服器項目的權限
 title: 授與 SharePoint 網站上報表伺服器項目的權限 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dfaece778331dd84a3d24283d11c5721180ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373354"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供內建的安全性功能，可用來授與從 SharePoint 網站和文件庫存取報表伺服器項目的權限。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  
@@ -56,7 +57,7 @@ ms.locfileid: "65580040"
  伺服器管理員和網站集合管理員可以設定選項，以決定其他網站擁有者能否設定權限。 依您擁有的不同權限等級，您或許無法建立或自訂 SharePoint 群組或權限等級。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用預先定義的 SharePoint 群組和權限等級  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (這些是 *Site name* **擁有者**、*Site name*  **成員**和 *Site name* **訪客**)，並於網站層級指派權限。 獲您指派權限的大部分使用者應該是 *Site name* **訪客**或 *Site name* **成員**群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (這些是 *Site name* **擁有者**、*Site name* ** 成員**和 *Site name* **訪客**)，並於網站層級指派權限。 獲您指派權限的大部分使用者應該是 *Site name* **訪客**或 *Site name* **成員**群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
   
  下列 SharePoint 群組具有下列預先定義的權限等級：  
   
@@ -64,7 +65,7 @@ ms.locfileid: "65580040"
   
 -   「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、編輯項目、提交變更核准、加入清單項目和刪除清單項目。  
   
--    [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。  
+-   **** [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。  
   
  SharePoint 群組具有可立即存取許多報表伺服器作業的權限等級。 如果您覺得內建的安全性設定無法提供您需要的存取層級，您可以建立自訂群組或權限等級。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "65580040"
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  提供可用來存取報表伺服器作業之所有 SharePoint 產品權限的參考。  
   
- [設定 SharePoint Web 應用程式中報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  描述隨選報表的權限需求，並建議啟用功能的方法。  
   
  [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
