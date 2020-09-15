@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 77cbd38bf873761496800cc4ad78d74eee414cf1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728572"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178795"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：搭配 SQL Server 資料使用 RevoScaleR R 函式
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 在這個多部分的教學課程系列中，會為您介紹與資料科學相關聯工作的一些 **RevoScaleR** 函式。 在此程序中，您將會了解如何建立遠端計算內容、在本機與遠端計算內容之間移動資料，以及在遠端 SQL Server 上執行 R 程式碼。 您也會了解如何在本機與遠端伺服器上分析及繪製資料，以及如何建立及部署模型。
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2efa4bc739dcf39cd10672d81ebf66eceb6ecbb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee493ec09c5cfc8a5198239cd5cafcb2579f50d8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671117"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178614"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python 與 SQL Server 之間的資料類型對應
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 針對在 SQL Server 機器學習服務中 Python 整合功能上執行的 Python 解決方案，請檢閱不支援的資料類型清單，以及在 Python 與 SQL Server 之間傳遞資料時，可能隱含執行的資料類型轉換。
 

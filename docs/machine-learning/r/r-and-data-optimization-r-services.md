@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2438ff265c788753a42bc01119f954359c799ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753404"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179989"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 的效能 - 資料最佳化
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此文章是一系列文章中的第三篇，會根據兩個案例研究來說明 R Services 的效能最佳化。 此文章討論在 SQL Server 中執行之 R 或 Python 指令碼的效能最佳化。 它也說明您可以用來更新 R 程式碼的方法，以提高效能並避免已知的問題。
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4f0da1fdee47d166fe1b06fd8ce6e8ddea64f4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a8e216069b831e14e4888aced79013ab5b55770
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723853"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173711"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>使用 rxExecBy 建立多個模型
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 RevoScaleR 中的 **rxExecBy** 函式支援多個相關模型的平行處理。 資料科學家可以快速建立許多相關的模型，而不是根據多個類似實體的資料來定型一個大型模型，每一個都使用單一實體特有的資料。 
 

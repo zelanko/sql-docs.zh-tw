@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cecd267627b32b989913ace5e374c74543e69ba4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2232b844fc6955118e2da878caf9ff425f160c55
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671097"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178945"
 ---
 # <a name="get-python-package-information"></a>取得 Python 套件資訊
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文描述如何從 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)與[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)取得已安裝的 Python 套件資訊，包括版本與安裝位置。 範例 Python 指令碼會示範如何列出套件資訊，例如安裝路徑與版本。

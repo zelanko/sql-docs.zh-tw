@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: dca97c6ad00a0678d277447b03dd6b7c863e8fe3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4ec56f02dd038d87e8b4e8e4c8597b7ba047ffa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242369"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179807"
 ---
 # <a name="plot-histograms-in-python"></a>以 Python 繪製長條圖 
-[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 本文描述如何使用 Python 套件 [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html) 來繪製資料。 SQL 資料庫是用來將具有非重疊連續值的長條圖資料間隔視覺化的來源。
 

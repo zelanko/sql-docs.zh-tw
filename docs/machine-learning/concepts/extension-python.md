@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e9fedafebab6b5353ddb6f2f51bd0c8662377e1
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 9263d11f271249d7fa31b1a3f3af83a21c04c793
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406281"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173291"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中的 Python 語言延伸模組
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 本文描述使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)來執行外部 Python 指令碼的 Python 延伸模組。 此延伸模組會新增：
 

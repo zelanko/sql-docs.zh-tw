@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86aad616cc8c9fc54adc2fffd14bfc663acf3887
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771767"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179718"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server上安裝預先定型的機器學習模型
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此文章說明如何使用 Powershell 將適用於「情緒分析」  與「影像特徵化」  的預先定型免費機器學習模型新增到具有 R 或 Python 整合的 SQL Server 執行個體。 預先定型的模型是由 Microsoft 所建置並可立即使用，並新增至執行個體作為安裝後工作。 如需有關這些模型的詳細資訊，請參閱此文章的[資源](#bkmk_resources)一節。
 

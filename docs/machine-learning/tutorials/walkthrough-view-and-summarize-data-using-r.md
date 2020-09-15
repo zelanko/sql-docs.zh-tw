@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 18fd4df2d2ae5764b5f3e9becaa872f863ed5ee5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781772"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179750"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>使用 R 來檢視及摘要 SQL Server 資料 (逐步解說)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 本課程會向您介紹 **RevoScaleR** 套件中的函式，並逐步引導您完成下列工作：
 

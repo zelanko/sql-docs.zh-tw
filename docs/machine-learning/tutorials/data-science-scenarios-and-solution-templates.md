@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241affaea232fcc916456b96ff724655b9289618
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728637"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178828"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此文章描述數個 SQL Server 機器學習服務解決方案範本。 這些範本示範最佳做法，並提供可協助您快速實作機器學習解決方案的建置組塊。 每個範本都是針對特定類別或產業來解決特定資料科學問題而設計的。
 每個範本所包含的工作，從資料準備和特徵工程，到模型定型和計分，應有盡有。 

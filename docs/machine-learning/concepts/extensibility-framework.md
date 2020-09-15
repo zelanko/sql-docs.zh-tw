@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406291"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173310"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充性結構 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文描述用來在 SQL 伺服器機器學習服務上執行外部 Python 或 R 指令碼的擴充性架構結構。 指令碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 

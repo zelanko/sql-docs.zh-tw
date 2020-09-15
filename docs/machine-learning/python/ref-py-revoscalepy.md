@@ -1,6 +1,6 @@
 ---
 title: revoscalepy Python 套件
-description: revoscalepy 是來自 Microsoft 的 Python 套件，其支援分散式計算、遠端計算內容，以及高效能資料科學演算法。 該套件包含在 SQL Server 機器學習服務中。
+description: revoscalepy 是來自 Microsoft 的 Python 套件，其支援分散式計算、遠端計算內容，以及高效能資料科學演算法。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406181"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178601"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (SQL Server 機器學習服務中的 Python 套件)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **revoscalepy** 是來自 Microsoft 的 Python 套件，其支援分散式計算、遠端計算內容，以及高效能資料科學演算法。 該套件包含在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中。
 
@@ -54,7 +54,7 @@ ms.locfileid: "86406181"
 
 在某些情況下，SQL Server 和 Python 會使用不同的資料類型。 如需 SQL 與 Python 資料類型間的對應清單，請參閱 [Python 與 SQL 的對應資料類型](python-libraries-and-data-types.md)。
 
-| 函式| 說明|
+| 函式| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  建立 SQL Server 計算內容物件以將計算推送至遠端執行個體。 數個 **revoscalepy** 函式會以計算內容作為引數。 如需內容切換範例，請參閱[使用 revoscalepy 來建立模型](../tutorials/use-python-revoscalepy-to-create-model.md)。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | 根據 SQL Server 查詢或資料表來建立資料物件。 |
@@ -66,7 +66,7 @@ ms.locfileid: "86406181"
 
 ## <a name="2-data-manipulation-etl"></a>2-資料操作 (ETL)
 
-| 函式 | 說明 |
+| 函式 | 描述 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | 將資料匯入至 .xdf 檔案或資料框架。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 將資料從輸入資料集轉換至輸出資料集。|
@@ -75,7 +75,7 @@ ms.locfileid: "86406181"
 
 ## <a name="3-training-and-summarization"></a>3-定型與摘要
 
-| 函式| 說明|
+| 函式| 描述|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 符合隨機梯度提升決策樹|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 符合分類與迴歸決策樹系|
@@ -105,7 +105,7 @@ ms.locfileid: "86406181"
 
 當您準備好將 Python 指令碼封裝在預存程序 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 內時，建議您將程式碼重寫成已清楚定義輸入和輸出的單一函式。 
 
-輸入和輸出必須是 **pandas** 資料框架。 完成此作業後，您就可以從任何支援 T-SQL 的用戶端呼叫該預存程序、輕鬆傳遞 SQL 查詢作為輸入，然後將結果儲存至 SQL 資料表。 如需範例，請參閱[了解適用於 SQL 開發人員的資料庫內 Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
+輸入和輸出必須是 **pandas** 資料框架。 完成此作業後，您就可以從任何支援 T-SQL 的用戶端呼叫該預存程序、輕鬆傳遞 SQL 查詢作為輸入，然後將結果儲存至 SQL 資料表。 如需範例，請參閱[了解適用於 SQL 開發人員的資料庫內 Python 分析](../tutorials/python-taxi-classification-introduction.md)。
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>搭配 microsoftml 使用 revoscalepy
 

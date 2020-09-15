@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2ed46c4c4fc79d47bf2ca60b16f7d5563fd15d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723984"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179167"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>在 SQL Server 上使用 Python 工具來安裝套件
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 此文章說明如何使用標準的 Python 工具，在 SQL Server 機器學習服務的執行個體上安裝新的 Python 套件。 一般而言，安裝新套件的程序類似於標準 Python 環境中的程序。 不過，如果伺服器沒有網際網路連線，則需要一些額外步驟。
 

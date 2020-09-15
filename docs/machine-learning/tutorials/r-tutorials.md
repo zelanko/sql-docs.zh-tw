@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28cbd4f91992ceb98d8c983099e0bbb0bed56971
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671023"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178713"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>SQL 機器學習的 R 教學課程
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文說明 [SQL Server](../sql-server-machine-learning-services.md) 和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上機器學習服務的 R 教學課程和快速入門。
@@ -44,7 +44,7 @@ ms.locfileid: "85671023"
 | [使用決策樹預測滑雪工具租用](r-predictive-model-introduction.md) | 使用 R 和決策樹模型來預測未來的滑雪工具租用數。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
 | [使用 k-means 叢集將客戶分類](r-clustering-model-introduction.md) | 使用 R 來開發及部署 K-Means 群集模型，以將客戶分類。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
 | [適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL 機器學習的 R 開發人員說明如何在 SQL 中執行常見資料科學工作。 載入資料並將其視覺化、將模型定型並儲存在資料庫中，以及使用模型進行預測性分析。 |
-| [適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 僅使用 SQL 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存在資料庫中，以及對 R 模型進行參數化呼叫來進行預測。 |
+| [適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/r-taxi-classification-introduction.md) | 僅使用 SQL 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存在資料庫中，以及對 R 模型進行參數化呼叫來進行預測。 |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | 教學課程 | 描述 |

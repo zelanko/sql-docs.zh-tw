@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a5bdd0eb36873c179b51f2a867feac1c7539165d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253646"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173469"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>針對 SQL 機器學習進行疑難排解收集資料
 
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文描述當嘗試解決 SQL 機器學習中的問題時，如何收集所需資料。 無論是自行解決問題，或透過 Microsoft 客戶支援服務的協助，這項資料都十分有用。
 

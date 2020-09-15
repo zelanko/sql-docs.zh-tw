@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784121"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178535"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>快速入門：使用 SQL 機器學習來執行簡單的 Python 指令碼
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上執行一組簡單的 Python 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
@@ -103,7 +103,7 @@ GO
 
 `sp_execute_external_script` 預存程序的輸入包括：
 
-| | |
+| 輸入 | 描述 |
 |-|-|
 | @language | 定義要呼叫的語言擴充功能，在本例中為 Python |
 | @script | 定義要傳遞至 Python 執行階段的命令。 您的整個 Python 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至 **Nvarchar** 類型的變數，並呼叫該變數 |

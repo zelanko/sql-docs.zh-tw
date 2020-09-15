@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896387"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178895"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上設定用於 R 開發的資料科學用戶端
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 當您在 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 或 [SQL Server 機器學習服務 (資料庫內)](../install/sql-machine-learning-services-windows-install.md) 安裝中納入 R 語言選項時，SQL Server 2016 或更新版本中便會提供 R 整合。 
 
@@ -38,7 +38,7 @@ ms.locfileid: "85896387"
 
 針對簡單的 R 開發案例，您可以使用 RGUI 可執行檔 (隨附於 MRO 和 SQL Server 中的基底 R 散發套件)。 本文會說明如何針對本機和遠端的 R 工作階段使用 RGUI。 為了提高生產力，您應該使用功能完整的 IDE，例如 [RStudio 或 Visual Studio](#install-ide)。
 
-SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存程序，包括那些包含 R 程式碼的預存程序。 您在開發環境中撰寫的 R 程式碼，幾乎都可以內嵌在預存程序中。 您可以逐步執行其他教學課程以了解 [SSMS 和內嵌的 R](../tutorials/sqldev-in-database-r-for-sql-developers.md)。
+SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存程序，包括那些包含 R 程式碼的預存程序。 您在開發環境中撰寫的 R 程式碼，幾乎都可以內嵌在預存程序中。 您可以逐步執行其他教學課程以了解 [SSMS 和內嵌的 R](../tutorials/r-taxi-classification-introduction.md)。
 
 ## <a name="1---install-r-packages"></a>1 - 安裝 R 套件
 

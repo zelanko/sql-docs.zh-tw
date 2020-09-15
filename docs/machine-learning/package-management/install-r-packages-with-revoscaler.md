@@ -9,16 +9,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 7f2978cd971f2259d7155d9d6c69c32ffe923ee5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723932"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179189"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 來安裝 R 套件
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 此文章描述如何使用 [RevoScaleR](../r/ref-r-revoscaler.md) (9.0.1 版或更新版本) 函式來搭配機器學習服務或 R Services 在 SQL Server 上安裝 R 套件。 RevoScaleR 函式可以由遠端的非系統管理員用來在 SQL Server 上安裝套件，而不需要直接存取伺服器。
 

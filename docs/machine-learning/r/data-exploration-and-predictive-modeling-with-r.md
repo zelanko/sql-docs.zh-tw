@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f3c5b72f562f4ba90de68f53911c067baa37189
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b39d73a46a5ac82c3b85606536f283e4d6bbf57e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735070"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173694"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>在 SQL Server 中使用 R 進行資料探索和建立預測模型
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文說明可能可透過與 SQL Server 整合來對資料科學程序進行的改善項目。
 

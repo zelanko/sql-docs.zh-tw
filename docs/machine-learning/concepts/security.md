@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406221"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179847"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性概觀
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文描述 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中用來將 SQL Server 資料庫引擎和相關元件與擴充性架構整合的整體安全性架構。 它會檢查安全性實體、服務、處理序身分識別及權限。 如需 SQL Server 中擴充性重要概念與元件的詳細資訊，請參閱 [SQL Server 機器學習服務的擴充性架構](extensibility-framework.md)。
 

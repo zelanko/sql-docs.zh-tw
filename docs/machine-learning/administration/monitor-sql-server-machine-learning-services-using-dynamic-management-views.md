@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2313b13a009ea4c3fb5ec6a8dae6da75716f0b1b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aee3aac6fa0f53314b28cc6064200fc398702dac
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726578"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173329"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (DMV) 來監視 SQL Server 機器學習服務
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 使用動態管理檢視 (DMV) 來監視 SQL Server 機器學習服務中的外部指令碼 (Python 與 R) 執行、使用的資源、診斷問題，以及調整 效能。
 
