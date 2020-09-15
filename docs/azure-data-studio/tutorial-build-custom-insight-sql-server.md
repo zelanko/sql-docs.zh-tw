@@ -1,20 +1,20 @@
 ---
-title: 教學課程：建置自訂深入解析小工具
+title: 建置自訂深入解析小工具
 description: 本教學課程示範如何建置自訂深入解析小工具，並新增至 Azure Data Studio 中的資料庫和伺服器儀表板。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745751"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283749"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教學課程：建置自訂深入解析小工具
 
@@ -104,7 +104,7 @@ ms.locfileid: "88745751"
 
 7. 儲存 [使用者設定]  檔案，然後開啟 *TutorialDB* 資料庫儀表板，查看使用中的工作階段小工具：
 
-   ![使用中的工作階段深入解析](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![使用中工作階段見解儀表板](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>將詳細資料新增至自訂深入解析
 
@@ -159,7 +159,7 @@ ms.locfileid: "88745751"
 
 7. 儲存 [使用者設定]  檔案，然後開啟 *TutorialDB* 資料庫儀表板。 按一下 *My-Widget* 旁的省略符號 (...) 按鈕，顯示詳細資料：
 
-    ![使用中的工作階段深入解析](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![使用中工作階段見解詳細資料](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>後續步驟
 在本教學課程中，您已了解如何：

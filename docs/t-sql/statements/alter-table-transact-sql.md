@@ -2,7 +2,7 @@
 description: ALTER TABLE (Transact-SQL)
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,17 +55,18 @@ helpviewer_keywords:
 - constraints [SQL Server], enabling
 - dropping constraints
 - dropping columns
+- data retention policy
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94e6ab85dd61babfc6a4ca2e4d57b3ee546a0d03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb5fa8a9f667ff94d05dbfd67e4115b599042f57
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479063"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511270"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -174,6 +175,18 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
+            | DATA_DELETION =
+                  {
+                     OFF 
+                  | ON
+                      ( FILTER_COLUMN = column_name
+                         , RETENTION_PERIOD =
+                          {
+                           INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                            | MONTH | MONTHS | YEAR | YEARS }
+                          }
+                        )
+                  }  
           )
 
     | REBUILD
@@ -792,6 +805,22 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| 數字 {DAY \| DAYS \| WEEK \| WEEK
 **適用對象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 為時態表中的歷程記錄資料指定有限或無限保留期。 如果省略，會使用無限保留期。
+
+SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }  ) **適用於：** 「僅限」Azure SQL Edge
+
+根據資料庫內的資料表，啟用舊或過時資料的保留原則式清除。 如需詳細資訊，請參閱[啟用和停用資料保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable) (機器翻譯)。 必須為資料保留指定下列參數才能啟用資料保留。 
+
+- FILTER_COLUMN = { column_name }  
+指定應用來判斷資料表中資料列是否已淘汰的資料行。 允許針對篩選資料行使用下列資料類型。
+  - Date
+  - Datetime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  指定資料表的保留期間原則。 保留期間是使用正整數值和資料部分單位的組合來指定。 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。

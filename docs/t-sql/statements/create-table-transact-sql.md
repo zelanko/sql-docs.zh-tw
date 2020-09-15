@@ -2,7 +2,7 @@
 description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 02/24/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -44,15 +44,16 @@ helpviewer_keywords:
 - CREATE TABLE statement
 - number of columns per table
 - maximum number of bytes per row
+- data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862457"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511260"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -237,14 +238,19 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
+        , RETENTION_PERIOD = {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }) ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -762,7 +768,8 @@ SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table
 
 如果符合資料類型、 可 Null 性條件約束和主索引鍵條件約束需求，就會啟用資料表的系統版本設定。 如果未使用 `HISTORY_TABLE` 引數，系統會在與目前資料表相同的檔案群組中，產生一個與目前資料表的結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 根據預設，歷程記錄資料表會採 **PAGE** 壓縮處理。 如果使用 `HISTORY_TABLE` 引數來建立連結，並使用現有的記錄資料表，則會在目前的資料表和指定的資料表之間建立連結。 若目前的資料表已分割，則會在預設檔案群組上建立歷程記錄資料表，這是因為資料分割設定不會自動從目前的資料表複寫至歷程記錄資料表。 若在建立歷程記錄資料表時指定歷程記錄資料表名稱，則您必須指定結構描述和資料表名稱。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設執行資料一致性檢查。 使用這個引數再加上 `PERIOD FOR SYSTEM_TIME` 和 `GENERATED ALWAYS AS ROW { START | END }` 引數，在資料表上啟用系統版本設定。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 建立已啟用或停用 Stretch Database 的新資料表。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -793,6 +800,23 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用於**：[!INCLUDE[ssNo
    這項操作會產生資料傳輸成本，且無法取消。
 
 - 指定 `PAUSED` 以暫停或延後資料移轉。 如需詳細資訊，請參閱[暫停和繼續資料移轉 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
+
+DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+**適用範圍：** 「僅限」Azure SQL Edge
+
+根據資料庫內的資料表，啟用保留原則式清除舊的或過時資料。 如需詳細資訊，請參閱[啟用和停用資料保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable) (英文)。 必須指定下列參數才能啟用資料保留。 
+
+- FILTER_COLUMN = { column_name }  
+指定應用來判斷資料表中資料列是否已淘汰的資料行。 允許針對篩選資料行使用下列資料類型。
+  - Date
+  - Datetime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  指定資料表的保留期間原則。 保留期間是使用正整數值和資料部分單位的組合來指定。   
 
 MEMORY_OPTIMIZED **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 Azure SQL 受控執行個體不支援經記憶體最佳化的資料表。
 
@@ -1573,6 +1597,20 @@ Invalid object name '##test'
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### <a name="w-enable-data-retention-policy-on-a-table"></a>W. 在資料表上啟用資料保留原則
+
+下列範例會建立啟用資料保留，且保留期間為 1 週的資料表。 此範例僅適用於 **Azure SQL Edge**。
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## <a name="next-steps"></a>後續步驟

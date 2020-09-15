@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395053"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424428"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395053"
   在可用性群組的內容中，可用性複本的主要角色和次要角色在稱為 *「容錯移轉」* (Failover) 的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留您的所有資料。 可用性群組會在可用性複本層級容錯移轉。 亦即可用性群組會容錯移轉至其中一個次要複本 (目前的「容錯移轉目標」)。  
   
 > [!NOTE]  
->  資料庫層級問題 (如資料庫因為資料檔案遺失而有問題、資料庫刪除或交易記錄損毀) 並不會造成可用性群組容錯移轉。  
+>   除非有設定[資料庫層級健康狀況偵測](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)，否則資料庫層級的問題 (例如資料庫可能發生資料檔案遺失、刪除資料庫，或交易記錄損毀) 不會造成可用性群組容錯移轉。  
   
  容錯移轉期間，容錯移轉目標會接管主要角色並復原其資料庫，使之上線之後做為新的主要資料庫。 之前的主要複本 (如果可用的話) 會切換到次要角色，而且其資料庫會變成次要資料庫。 原則上，這些角色可以來回切換 (或切換為不同的容錯移轉目標)，以回應多項失敗或達成管理目的。  
   

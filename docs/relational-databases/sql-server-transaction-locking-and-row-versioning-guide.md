@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403054"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480940"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -424,7 +424,7 @@ GO
   
  應用程式通常不會直接要求鎖定。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中的鎖定管理員會在內部管理鎖定。 當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體處理 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式時， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 查詢處理器可以決定要存取哪些資源。 查詢處理器根據存取類型以及交易隔離等級設定，決定需要哪些類型的鎖定以保護每個資源。 查詢處理器接著會對鎖定管理員要求適當的鎖定。 如果沒有其他交易持有衝突的鎖定，鎖定管理員就會授與鎖定。  
   
-### <a name="lock-granularity-and-hierarchies"></a>鎖定資料粒度和階層  
+## <a name="lock-granularity-and-hierarchies"></a>鎖定資料粒度和階層  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 具有多資料粒度鎖定 (Multigranular Lock)，允許交易鎖定不同類型的資源。 為了把鎖定的成本降至最低， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 自動依照工作的適當層級來鎖定資源。 鎖定於較小的資料粒度 (Granularity) 如資料列可以提高並行，但如果鎖定許多的資料列則由於必須持有更多的鎖定而造成更高的額外負荷。 鎖定於較大的資料粒度如資料表，從並行的角度來看則由於鎖定整個資料表會限制其他交易對於資料表其他部份的存取因而更費時。 但由於必須維持的鎖定較少因此額外負荷較低。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 通常必須在資料粒度的多個層級取得鎖定，以完全保護資源。 在資料粒度的多個層級之鎖定群組稱為鎖定階層。 例如，若要充份地保護索引的讀取， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可能需要取得資料列的共用鎖定以及頁面和資料表的意圖共用鎖定。  
@@ -448,7 +448,7 @@ GO
 > [!NOTE]  
 > [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) 的 LOCK_ESCALATION 選項可影響 HoBT 和 TABLE 鎖定。  
   
-### <a name="lock-modes"></a><a name="lock_modes"></a> 鎖定模式  
+## <a name="lock-modes"></a><a name="lock_modes"></a> 鎖定模式  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用可決定並行交易如何存取資源的各種鎖定模式來鎖定資源。  
   
  下表顯示 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用的資源鎖定模式。  
@@ -463,20 +463,20 @@ GO
 |**大量更新 (BU)**|用於大量複製資料到資料表，且已指定 **TABLOCK** 提示時。|  
 |**索引鍵範圍**|當使用可序列化交易隔離等級時，保護查詢讀取的資料列範圍。 確定其他交易無法插入資料列，這些資料列在查詢重新執行時可限定可序列化交易的查詢。|  
   
-#### <a name="shared-locks"></a><a name="shared"></a> 共用鎖定  
+### <a name="shared-locks"></a><a name="shared"></a> 共用鎖定  
  共用 (S) 鎖定允許並行交易在封閉式 (Pessimistic) 並行控制之下讀取 (SELECT) 資源。 當資源存在共用 (S) 鎖定時，任何交易都無法修改資料。 除非交易隔離等級是設為可重複讀取或更高等級，或是使用鎖定提示來保持交易期間的共用 (S) 鎖定，否則讀取作業一完成就會釋放資源的共用 (S) 鎖定。  
   
-#### <a name="update-locks"></a><a name="update"></a> 更新鎖定  
+### <a name="update-locks"></a><a name="update"></a> 更新鎖定  
  更新 (U) 鎖定可防止常見的死結。 在可重複讀取或可序列化交易中，交易在讀取資料時取得資源 (頁面或資料列) 的共用 (S) 鎖定，然後修改資料，此過程需要將鎖定轉換為獨佔 (X) 鎖定。 如果兩筆交易取得某個資源的共用模式鎖定，然後嘗試同時更新資料，則其中一筆交易便會嘗試將鎖定轉換為獨佔 (X) 鎖定。 這種「從共用模式到獨佔」的鎖定轉換必須等待，因為某一筆交易的獨佔鎖定與另一筆交易的共用模式鎖定並不相容，所以會發生鎖定等候。 第二筆交易便嘗試取得更新時的獨佔 (X) 鎖定。 由於兩筆交易都轉換成獨佔 (X) 鎖定，且兩者皆等候另一筆交易釋放其共用模式的鎖定，因此便發生死結。  
   
  為了避免這種潛在的死結問題，則使用更新 (U) 鎖定。 一次只有一筆交易可以取得資源的更新 (U) 鎖定。 交易如果修改資源，更新 (U) 鎖定便轉換為獨佔 (X) 鎖定。  
   
-#### <a name="exclusive-locks"></a><a name="exclusive"></a> 獨佔鎖定  
+### <a name="exclusive-locks"></a><a name="exclusive"></a> 獨佔鎖定  
  獨佔 (X) 鎖定防止並行交易存取某個資源。 運用獨佔 (X) 鎖定，沒有其他交易可修改資料；只有使用 NOLOCK 提示或讀取未認可隔離等級，才能進行讀取作業。  
   
  資料修改陳述式 (例如 INSERT、UPDATE 和 DELETE) 結合了修改和讀取作業。 陳述式先執行讀取作業來取得資料，再執行必要的修改作業。 因此，資料修改陳述式通常會同時要求共用鎖定和獨佔鎖定。 例如，UPDATE 陳述式可能基於與一個資料表的聯結來修改另一個資料表的資料列。 在這個案例中，除了對已更新的資料列要求獨佔鎖定之外，UPDATE 陳述式還對聯結資料表中讀取的資料列要求共用鎖定。  
   
-#### <a name="intent-locks"></a><a name="intent"></a> 意圖鎖定  
+### <a name="intent-locks"></a><a name="intent"></a> 意圖鎖定  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用意圖鎖定來保護，它把共用 (S) 鎖定或獨佔 (X) 鎖定放在鎖定階層中較低的資源上。 意圖鎖定會稱作意圖鎖定，是因為它們是在較低層級的鎖定之前取得的，因此表示將鎖定放在較低層級的意圖。  
   
  意圖鎖定有兩個用途：  
@@ -497,14 +497,14 @@ GO
 |**共用意圖更新 (SIU)**|S 和 IU 鎖定的結合，這是個別取得這些鎖定又同時保留兩種鎖定的結果。 例如，交易執行具有 PAGLOCK 提示的查詢，然後執行更新作業。 具有 PAGLOCK 提示的查詢取得 S 鎖定，而更新作業則取得 IU 鎖定。|  
 |**更新意圖獨佔 (UIX)**|U 和 IX 鎖定的結合，這是個別取得這些鎖定又同時保留兩種鎖定的結果。|  
   
-#### <a name="schema-locks"></a><a name="schema"></a> 結構描述鎖定  
+### <a name="schema-locks"></a><a name="schema"></a> 結構描述鎖定  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 是在資料表的資料定義語言 (DDL) 作業 (例如加入資料行或卸除資料表) 期間使用結構描述修改 (Sch-M) 鎖定。 在保留期間，Sch-M 鎖定禁止資料表的並行存取。 這表示 Sch-M 鎖定會封鎖所有外在作業，直到釋放鎖定為止。  
   
  有些資料操作語言 (DML) 作業 (例如資料表截斷) 使用 Sch-M 鎖定來防止並行作業存取受影響的資料表。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在編譯並執行查詢時，會使用結構描述穩定性 (Sch-S) 鎖定。 Sch-S 鎖定並未封鎖任何交易式鎖定，包括獨佔 (X) 鎖定。 因此，其他的交易在查詢編譯期間可以繼續執行，包括對資料表使用 X 鎖定的那些交易。 不過，取得 Sch-M 鎖定的並行 DDL 作業和並行 DML 作業無法在資料表上執行。  
   
-#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> 大量更新鎖定  
+### <a name="bulk-update-locks"></a><a name="bulk_update"></a> 大量更新鎖定  
  大量更新 (BU) 鎖定允許多個執行緒將資料同時大量載入到相同資料表，同時禁止未大量載入資料的其他處理序存取該資料表。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會在下列兩種情況都成立時使用大量更新 (BU) 鎖定。  
   
 -   您使用 [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT 陳述式或 OPENROWSET(BULK) 函數，或使用其中一個「大量插入 API」命令 (例如 .NET SqlBulkCopy)、「OLEDB 快速載入 API」或「ODBC 大量複製 API」，將資料大量複製到資料表中。  
@@ -513,10 +513,10 @@ GO
 > [!TIP]  
 > 與 BULK INSERT 陳述式 (持有較不嚴格的大量更新鎖定) 不同之處在於，具 TABLOCK 提示的 INSERT INTO...SELECT 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用平行插入作業插入資料列。  
   
-#### <a name="key-range-locks"></a><a name="key_range"></a> 索引鍵範圍鎖定  
+### <a name="key-range-locks"></a><a name="key_range"></a> 索引鍵範圍鎖定  
  使用可序列化的交易隔離等級時，索引鍵範圍鎖定可保護由 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式讀取之記錄集內隱含包括的資料列範圍。 索引鍵範圍鎖定可預防虛設項目讀取。 透過保護資料列之間的索引鍵範圍，也可防止某交易存取的記錄集內的虛設項目插入或刪除。  
   
-### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> 鎖定相容性  
+## <a name="lock-compatibility"></a><a name="lock_compatibility"></a> 鎖定相容性  
  鎖定相容性可控制多筆交易是否可同時對相同的資源取得鎖定。 若資源已被其他交易鎖定，則只有在要求的鎖定模式與現有鎖定模式相容時，才能授與新的鎖定要求。 若所要求鎖定的模式與現有鎖定不相容，則要求新鎖定的交易會等候現有鎖定被釋放，或等候鎖定逾時間隔過期。 例如，沒有任何一種鎖定模式與獨佔鎖定相容。 有獨佔 (X) 鎖定存在時，其他的交易都無法取得該資源的任何一種鎖定 (共用、更新或獨佔)，直到獨佔 (X) 鎖定被釋放為止。 此外，如果資源已套用共用 (S) 鎖定，則即使第一筆交易尚未完成，其他的交易仍可取得該項目的共用鎖定或更新 (U) 鎖定。 然而在共用鎖定尚未釋放之前，其他的交易仍然無法取得獨占鎖定。  
   
 <a name="lock_compat_table"></a> 下表顯示常見鎖定模式的相容性。  
@@ -538,14 +538,14 @@ GO
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
-### <a name="key-range-locking"></a>索引鍵範圍鎖定  
+## <a name="key-range-locking"></a>索引鍵範圍鎖定  
  使用可序列化的交易隔離等級時，索引鍵範圍鎖定可保護由 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式讀取之記錄集內隱含包括的資料列範圍。 可序列化的隔離等級要求在交易期間執行的任何查詢，在交易期間每次執行時都必須取得相同的資料列集。 索引鍵範圍鎖定藉由預防其他交易插入新資料列時，這些資料列的索引鍵落在可序列化交易讀取的索引鍵範圍，來保護此種需求。  
   
  索引鍵範圍鎖定可預防虛設項目讀取。 藉由保護資料列之間的索引鍵範圍，也可以預防虛設項目插入到交易存取的記錄集。  
   
  索引鍵範圍鎖定是放置於索引之上，指定開始和結束的索引鍵值。 因為這些動作會先在索引上取得鎖定，因此這種鎖定可封鎖任何嘗試插入、更新或刪除含有索引鍵值落入範圍的任何資料列。 例如，可序列化的交易可能會發出 `SELECT` 陳述式，其會讀取索引鍵值符合 `BETWEEN 'AAA' AND 'CZZ'` 條件的所有資料列。 從 **'** AAA **'** 到 **'** CZZ **'** 範圍中索引鍵值的索引鍵範圍鎖定，可預防其他交易將含有索引鍵值的資料列插入到該範圍內的任何地方，例如 **'** ADG **'** 、 **'** BBD **'** 或 **'** CAL **'** 。  
   
-#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> 索引鍵範圍鎖定模式  
+### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> 索引鍵範圍鎖定模式  
  索引鍵範圍鎖定包括範圍以及資料列元件，以範圍-資料列的格式來指定：  
   
 -   範圍代表保護兩個連續索引項之間的範圍的鎖定模式。  
@@ -575,7 +575,7 @@ GO
 |**RangeI-N**|是|是|是|否|否|是|否|  
 |**RangeX-X**|否|否|否|否|否|否|否|  
   
-#### <a name="conversion-locks"></a><a name="lock_conversion"></a> 轉換鎖定  
+### <a name="conversion-locks"></a><a name="lock_conversion"></a> 轉換鎖定  
  轉換鎖定是在索引鍵範圍鎖定與另一種鎖定重疊時建立。  
   
 |鎖定 1|鎖定 2|轉換鎖定|  
@@ -588,7 +588,7 @@ GO
   
  在不同的複雜環境下，可以觀察到短期的轉換鎖定，有時是在並行的處理序執行時。  
   
-#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>可序列化範圍掃描、單一擷取、刪除以及插入  
+### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>可序列化範圍掃描、單一擷取、刪除以及插入  
  索引鍵範圍鎖定可確保下列動作是可序列化：  
   
 -   範圍掃描查詢  
@@ -601,12 +601,12 @@ GO
 -   交易隔離等級必須設為 SERIALIZABLE。  
 -   查詢處理器必須使用索引來實作範圍篩選述詞。 例如，SELECT 陳述式中的 WHERE 子句可利用此述詞建立一個範圍條件：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** 。 如果 **ColumnX** 涵蓋在索引鍵中，才會取得索引鍵範圍鎖定。  
   
-#### <a name="examples"></a>範例  
+### <a name="examples"></a>範例  
  下列資料表和索引是用來作為索引鍵範圍鎖定範例要遵循的基礎。  
   
  ![btree](../relational-databases/media/btree4.png)  
   
-##### <a name="range-scan-query"></a>範圍掃描查詢  
+#### <a name="range-scan-query"></a>範圍掃描查詢  
  為了確保範圍掃描查詢是可序列化，相同的查詢每次在相同交易內執行時都必須傳回相同的結果。 其他的交易絕不能把新的資料列插入範圍掃描查詢內；否則這些動作將會變成虛設項目插入。 例如，以下的查詢使用上述的資料表與索引：  
   
 ```sql  
@@ -615,12 +615,12 @@ FROM mytable
 WHERE name BETWEEN 'A' AND 'C';  
 ```  
   
- 放置索引鍵範圍鎖定的索引項對應到名稱介於資料值 Adam 與 Dale 之間的資料列範圍，讓前次查詢中限定的新資料列無法新增或刪除。 雖然此範圍內的第一個名稱是 Adam，但位於此索引項的 RangeS-S 模式的索引鍵範圍鎖定會確保以字母 A 開頭的新名稱無法新增至 Adam 前面，例如 Abigail。 同樣的，位於 Dale 的索引項的 RangeS-S 索引鍵範圍鎖定，則確保以字母 C 開頭的新名稱皆無法新增至 Carlos 後面，例如 Clive。  
+ 關鍵範圍鎖定會放置在對應到名稱介於值 `Adam` 和 `Dale` 之間資料列範圍的索引項目，以防止新增或刪除符合先前查詢條件的新資料列。 雖然此範圍中的名稱是 `Adam`，但此索引項目上 RangeS-S 模式關鍵範圍鎖定會確保以字母 A 開頭的新名稱 (例如 `Abigail`) 皆無法新增到 `Adam` 之前。 同樣的，位於 `Dale` 索引項目的 RangeS-S 關鍵範圍鎖定，則會確保以字母 C 開頭的新名稱 (例如 `Clive`) 皆無法新增至 `Carlos` 後面。  
   
 > [!NOTE]  
 > 持有的 RangeS-S 鎖定的數量為 *n*+1，其中 *n* 為符合查詢的資料列數量。  
   
-##### <a name="singleton-fetch-of-nonexistent-data"></a>單一擷取不存在的資料  
+#### <a name="singleton-fetch-of-nonexistent-data"></a>單一擷取不存在的資料  
  如果交易內的查詢嘗試選取不存在的資料列，則在同一筆交易內稍後的某一點所提交的查詢必須傳回相同的結果。 其他的任何交易皆不得插入這個不存在的資料列。 例如，給定以下的查詢：  
   
 ```sql  
@@ -631,7 +631,7 @@ WHERE name = 'Bill';
   
  將索引鍵範圍鎖定放在與名稱範圍從 `Ben` 到 `Bing` 對應的索引項，因為要把名稱 `Bill` 插入這兩個相鄰的索引項之間。 將 RangeS-S 模式的索引鍵範圍鎖定放在索引項 `Bing`之上。 這可預防其他交易將值 (例如 `Bill`) 插入到索引項 `Ben` 和 `Bing`之間。  
   
-##### <a name="delete-operation"></a>刪除作業  
+#### <a name="delete-operation"></a>刪除作業  
  在交易內刪除某個值時，交易進行刪除動作期間不需鎖定該值所處之範圍。 鎖定欲刪除的索引鍵值直到交易結束，即足以維持可序列化能力。 例如，給定以下的 DELETE 陳述式：  
   
 ```sql  
@@ -641,9 +641,9 @@ WHERE name = 'Bob';
   
  將獨占 (X) 鎖定放在與名稱 `Bob`對應的索引項。 其他交易可在被刪除的值 `Bob`前後插入或刪除值。 但是，嘗試讀取、插入或是刪除 `Bob` 這個值的任何交易，在進行刪除動作的交易尚未認可或回復之前都會被封鎖。  
   
- 可以使用三種基本鎖定模式來執行範圍刪除：資料列、分頁或資料表鎖定。 資料列、分頁或資料表的鎖定策略是由查詢最佳化工具來決定，或者亦可由使用者透過最佳化提示 (如 ROWLOCK、PAGLOCK 或 TABLOCK) 來指定。 使用 PAGLOCK 或 TABLOCK 時，如果所有資料列都會從此分頁刪除， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會立即重新配置索引頁。 相反的，若是使用 ROWLOCK，所有已刪除的資料列則僅標示為已刪除；稍後再使用背景工作將這些資料列從索引頁中移除。  
+ 可以使用三種基本鎖定模式來執行範圍刪除：資料列、分頁或資料表鎖定。 資料列、分頁或資料表的鎖定策略是由查詢最佳化工具決定，或可由使用者透過查詢最佳化工具提示 (如 ROWLOCK、PAGLOCK 或 TABLOCK) 來指定。 使用 PAGLOCK 或 TABLOCK 時，如果所有資料列都會從此分頁刪除， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會立即重新配置索引頁。 相反的，若是使用 ROWLOCK，所有已刪除的資料列則僅標示為已刪除；稍後再使用背景工作將這些資料列從索引頁中移除。  
   
-##### <a name="insert-operation"></a>插入動作  
+#### <a name="insert-operation"></a>插入動作  
  在交易內插入某個值時，交易進行插入動作期間不需鎖定該值所處之範圍。 鎖定欲插入的索引鍵值直到交易結束，即足以維持可序列化能力。 例如，給定以下的 INSERT 陳述式：  
   
 ```sql  
@@ -652,7 +652,162 @@ INSERT mytable VALUES ('Dan');
   
  將 RangeI-N 模式的索引鍵範圍鎖定放在與名稱 David 對應的索引項來測試範圍。 如果授與鎖定，便插入 `Dan` 並將獨占 (X) 鎖定放在 `Dan`這個值。 RangeI-N 模式的索引鍵範圍鎖定只有在測試範圍時才需要，且在交易進行插入動作期間不需持有。 其他的交易皆可在插入值 `Dan`的前面或後面插入或刪除值。 但是，嘗試讀取、插入或是刪除 `Dan` 這個值的任何交易在進行插入動作的交易尚未認可或回復之前都會被鎖定。  
   
-### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 動態鎖定  
+## <a name="lock-escalation"></a>鎖定擴大
+鎖定擴大是將許多的細緻鎖定轉換成較少的粗略鎖定之過程，可減少系統的負擔，但會增加並行競爭的可能性。
+
+當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 取得低層級鎖定時，其也會對含有低層級物件的物件進行意圖鎖定：
+
+-   當鎖定資料列或索引鍵範圍時，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會對含有資料列或索引鍵的分頁進行意圖鎖定。
+-   當鎖定頁面時，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會對含有分頁的較高層級物件進行意圖鎖定。 除了對物件進行意圖鎖定之外，也會在下列物件上要求意圖頁面鎖定：
+    -  非叢集索引的分葉層級頁面
+    -  叢集索引的資料頁面
+    -  堆積資料頁面
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可能會在相同的陳述式中同時進行資料列與頁面鎖定，以盡可能減少鎖定數目，並降低必須使用鎖定擴大的可能性。 例如，資料庫引擎可能會對非叢集索引進行頁面鎖定 (若索引節點中已選取足夠的連續索引鍵來滿足查詢)，並對資料進行資料列鎖定。
+
+為了擴大鎖定，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會試圖將資料表上意圖鎖定變更為對應的完全鎖定，例如：將意圖獨佔 (IX) 鎖定變為獨佔 (X) 鎖定，或將意圖共用 (IS) 鎖定變為共用 (S) 鎖定。 若鎖定擴大的嘗試成功而取得資料表的完全鎖定，則所有由堆積或索引上的交易所保有的堆積或 B 型樹狀結構、頁面 (PAGE) 或資料列層級 (RID) 鎖定，都會被釋放。 若無法取得完全鎖定，則屆時不會發生任何鎖定擴大，但資料庫引擎會繼續試圖取得資料列、索引鍵或頁面鎖定。
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] 不會將資料列或索引鍵範圍鎖定擴大為頁面鎖定，但會直接將其擴大為資料表鎖定。 同樣地，頁面鎖定一律會擴大為資料表鎖定。 可針對相關聯資料分割將資料分割資料表的鎖定擴大到 HoBT 層級，而不是擴大到資料表鎖定。 HoBT 層級的鎖定不一定會針對此資料分割鎖定對齊的 HoBT。
+
+> [!NOTE]
+> HoBT 層級的鎖定通常會增加並行，但是當正在鎖定不同資料分割的每一個交易都想要將其獨佔的鎖定擴充到其他資料分割時，可能會導致死結的發生。 在罕見的情況下，TABLE 鎖定資料粒度可能會執行得更好。
+
+若鎖定擴大的嘗試因並行交易所保有的鎖定衝突而失敗，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會在交易每多取得 1,250 個鎖定時重新嘗試鎖定擴大。
+
+每個擴大事件主要會在單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的層級上運作。 當事件開始時，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會試圖針對作用中陳述式所參考任何資料表中的現行交易來擴大其所擁有全部鎖定，前提是該陳述式符合擴大臨界值需求。 若擴大事件在陳述式存取資料表前即已開始，則不會嘗試擴大該資料表的鎖定。 若鎖定擴大成功，則由先前陳述式中的交易取得且在事件開始時仍保有的所有鎖定，都將會擴大，只要現行陳述式參考了該資料表，且該資料表包含在擴大事件中即可。
+
+舉例而言，假設某個工作階段執行了下列作業：
+
+-  開始交易。
+-  更新 `TableA`。 此作業會在 TableA 中產生獨佔資料列鎖定，並保有鎖定到交易完成為止。
+-  更新 `TableB`。 此作業會在 TableB 中產生獨佔資料列鎖定，並保有鎖定到交易完成為止。
+-  執行將 `TableA` 與 `TableC` 聯結的 SELECT。 查詢執行計畫要求先從 `TableA` 擷取資料列，再從 `TableC` 擷取資料列。
+-  SELECT 陳述式會在其從 `TableA` 擷取資料列之際且在其存取 `TableC` 之前，觸發鎖定擴大。
+
+若鎖定擴大成功，則只有 `TableA` 上的工作階段所保有的鎖定會擴大。 其中包括 SELECT 陳述式的共用鎖定與先前 UPDATE 陳述式的獨佔鎖定。 雖然只有工作階段在 `TableA` 中針對 SELECT 陳述式所取得鎖定是決定應否執行鎖定擴大的考量依據，但一旦擴大成功，則工作階段在 `TableA` 中所保有全部鎖定都會擴大為資料表的獨佔鎖定，而 `TableA` 上所有其他較低資料粒度的鎖定 (包括意圖鎖定) 都會獲得釋放。
+
+對 `TableB` 則不會有任何擴大鎖定的嘗試，因為在 SELECT 陳述式中並沒有對 `TableB` 的使用中參考。 同樣地，對 `TableC` 也不會有任何擴大鎖定的嘗試，因為在發生擴大時尚未進行存取。
+
+### <a name="lock-escalation-thresholds"></a>鎖定擴大臨界值
+
+當未使用 `ALTER TABLE SET LOCK_ESCALATION` 選項在資料表上停用鎖定擴大，且下列其中一個條件成立時，就會觸發鎖定擴大：
+
+-  單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式對單一非資料分割資料表或索引取得至少 5,000 個鎖定。
+-  單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式對資料分割資料表的單一資料分割至少取得 5,000 個鎖定，且 `ALTER TABLE SET LOCK_ESCALATION` 選項設定為 AUTO。
+-  [!INCLUDE[ssde_md](../includes/ssde_md.md)] 執行個體中的鎖定數目超過記憶體或組態閾值。
+
+如果因為鎖定衝突而無法擴大鎖定，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會在每取得 1,250 個新鎖定時定期地觸發鎖定擴大。
+
+### <a name="escalation-threshold-for-a-transact-sql-statement"></a>Transact-SQL 陳述式的擴大臨界值
+當 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 在每取得 1,250 個新鎖定的同時檢查可能的擴大時，只有當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式在資料表的單一參考上至少取得 5,000 鎖定時，才會發生鎖定擴大。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 在資料表的單一參考上取得至少 5,000 個鎖定時，即會觸發鎖定擴大。 例如，若陳述式對單一索引取得 3,000 個鎖定，並且對相同資料表中的另一個索引也取得 3,000 個鎖定，則不會觸發鎖定擴大。 同樣地，若陳述式具有資料表的自我聯結，而且資料表的每個參考只取得 3,000 個資料表的鎖定，則不會觸發鎖定擴大。
+
+只有在擴大觸發時被存取的資料表，才會發生鎖定擴大。 假設有個單一 SELECT 陳述式是按照此順序存取三個資料表的聯結：`TableA`、`TableB` 和 `TableC`。 此陳述式對 `TableA` 的叢集索引取得了 3,000 個資料列鎖定，對 `TableB` 的叢集索引取得了至少 5,000 個資料列鎖定，但尚未存取 `TableC`。 當 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 偵測到此陳述式已取得 `TableB` 中至少 5,000 個資料列鎖定時，即會試圖擴大 `TableB` 中目前交易所保留的所有鎖定。 其也會試圖擴大 `TableA` 中目前交易所保留的全部鎖定，但由於 `TableA` 的鎖定數目小於 5000，因此擴大將不會成功。 對 `TableC` 則不會嘗試進行鎖定擴大，因為在擴大發生時尚未存取該資料表。
+
+### <a name="escalation-threshold-for-an-instance-of-the-database-engine"></a>Database Engine 執行個體的擴大臨界值
+每當鎖定數目大於鎖定擴大的記憶體閾值時，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 即會觸發鎖定擴大。 記憶體閾值取決於[鎖定組態選項](../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)的設定：
+
+-   若**鎖定**選項設為預設值 0，則在鎖定物件所用記憶體為資料庫引擎所用記憶體的 24% (AWE 記憶體除外) 時，就會達到鎖定擴大閾值。 用來表示鎖定的資料結構大約為 100 位元組的長度。 這個閾值是動態的，因為資料庫引擎會動態取得及釋放記憶體，以便針對隨時變動的工作負載進行調整。
+
+-   若 [鎖定] 選項設為 0 以外的值，則鎖定擴大閾值為鎖定選項值的 40% (若記憶體不足則較低)。
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可從任何工作階段中選擇任何作用中陳述式來進行擴大，且每產生 1,250 個新鎖定，其就會選擇陳述式進行擴大，只要執行個體中所用的鎖定記憶體保持在閾值以上即可。
+
+### <a name="escalating-mixed-lock-types"></a>擴大混合鎖定類型
+發生鎖定擴大時，針對堆積或索引而選取的鎖定足以符合最嚴格的低層級鎖定需求。
+
+例如，假設有某個工作階段：
+
+-  開始交易。
+-  更新含有叢集索引的資料表。
+-  發出參考相同資料表的 SELECT 陳述式。
+
+UPDATE 陳述式會取得下列鎖定：
+
+-  對於更新後資料列的獨佔 (X) 鎖定。
+-  對於含有這些資料列之叢集索引頁面的意圖獨佔 (IX) 鎖定。
+-  對於叢集索引的 IX 鎖定以及對資料表的其他 IX 鎖定。
+
+SELECT 陳述式會取得下列鎖定：
+
+-  它所讀取之所有資料列的共用 (S) 鎖定，已由 UPDATE 陳述式的 X 鎖定所保護的資料列則除外。
+-  含有這些資料列之所有叢集索引頁面的意圖共用鎖定，已由 IX 鎖定所保護的頁面則除外。
+-  不會取得叢集索引或資料表的鎖定，因為它們已由 IX 鎖定所保護。
+
+若 SELECT 陳述式取得足夠的鎖定可觸發鎖定擴大，且擴大成功的話，則資料表的 IX 鎖定會轉換為 X 鎖定，且會釋放所有資料列、頁面與索引鎖定。 資料表的更新與讀取都會受到 X 鎖定所保護。
+
+### <a name="reducing-locking-and-escalation"></a>減少鎖定與擴大
+在大多數的情況下，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 以其鎖定與鎖定擴大的預設值來運作時會展現最佳效能。 若 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 執行個體產生了大量鎖定，且經常發生鎖定擴大，請考慮減少鎖定的數量，方法如下：
+
+-   使用不會對讀取作業產生共用鎖定的隔離等級：
+    -  在 READ_COMMITTED_SNAPSHOT 資料庫選項為 ON 時，使用 READ COMMITTED 隔離等級。
+    -  SNAPSHOT 隔離等級。
+    -  READ UNCOMMITTED 隔離等級。 只有能夠採取中途讀取的系統才可使用此等級。    
+  
+    > [!NOTE]
+    > 變更隔離等級會影響 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 執行個體上的所有資料表。
+
+-   使用 PAGLOCK 或 TABLOCK 資料表提示，讓資料庫引擎使用分頁、堆積或索引鎖定，而非資料列鎖定。 然而，使用這個選項會增加使用者阻止其他使用者嘗試存取相同資料的問題，因此只應在具有較多並行使用者的系統上使用。
+
+-   針對資料分割資料表，請使用 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) 的 LOCK_ESCALATION 選項，將鎖定擴大為 HoBT 層級 (而不是擴大為資料表)，或停用鎖定擴大。
+
+-   將大型的批次作業分成較小作業。 例如，假設您執行了下列查詢來從稽核資料表移除數十萬個舊記錄，而您發現這項作業造成了封鎖其他使用者的鎖定擴大：
+   
+    ```sql
+    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    ```
+
+    藉由一次移除其中數百個記錄，您可大幅降低每次交易累積的鎖定數，並防止鎖定擴大。 例如：
+
+    ```sql
+    SET ROWCOUNT 500
+    delete_more:
+      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    IF @@ROWCOUNT > 0 GOTO delete_more
+    SET ROWCOUNT 0
+    ```
+
+-   透過盡可能地提升查詢效率以減少查詢的鎖定磁碟使用量。 大型掃描或大量書籤查閱可能會增加鎖定擴大的機會；此外，這樣做也會增加死結的機會，且一般會對並行及效能造成負面影響。 在找出造成鎖定擴大的查詢後，請尋找建立新索引或將資料行新增到現有索引的機會，以移除索引或資料表掃描來最大化索引搜尋的效率。 請考慮使用 [Database Engine Tuning Advisor](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md) 來針對查詢執行自動索引分析。 如需詳細資訊，請參閱[教學課程：Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md)。
+    這項最佳化的目標是讓索引搜尋盡可能地傳回較少資料列，以最小化書籤查閱的成本 (最大化特定查詢的索引選擇性)。 若 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 估計書籤查閱邏輯運算子可能會傳回許多資料列，其可能會使用 PREFETCH 來執行書籤查閱。 若 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 使用 PREFETCH 進行書籤查閱，其必須增加一部分查詢的交易隔離等級，以對查詢的一部分進行重複讀取。 這表示看起來與讀取認可隔離等級 SELECT 陳述式相似的陳述式可能需要數千個索引鍵鎖定 (同時針對叢集索引和一個非叢集索引)，而這可能會造成這類查詢超過隔離擴大的閾值。 若發現擴大的鎖定是共用資料表鎖定，這便特別重要，雖然這在預設的讀取認可隔離等級中並不常見。 若書籤查閱 WITH PREFETCH 子句正造成擴大，請考慮將額外的資料行新增至出現在查詢計劃中書籤查閱邏輯運算子底下索引搜尋或索引搜尋邏輯運算子中的非叢集索引。 您可能可建立涵蓋索引 (包含查詢中所用資料表中所有資料行的索引)，或是在包含所選取資料行清單中的所有項目並不實際時，至少建立可涵蓋用於聯結準則或 WHERE 子句中資料行的索引。
+    巢狀迴圈聯結也可能會使用 PREFETCH，而這會造成相同的鎖定行為。
+   
+-   若有不同 SPID 正在保有不相容的資料表鎖定，鎖定擴大便無法發生。 鎖定擴大一律會擴大至資料表鎖定，且永遠不會擴大至頁面鎖定。 此外，若鎖定擴大嘗試因另外一個 SPID 保有不相容的 TAB 鎖定而失敗，則嘗試該擴大的查詢便不會在等待 TAB 鎖定時進行封鎖。 相反地，其會繼續在其更細微的原始層級 (資料列、索引鍵或分頁) 取得鎖定，並定期進行其他擴大嘗試。 因此，其中一種防止在特定資料表上鎖定擴大的方法便是取得並保留與擴大鎖定類型不相容的不同連線鎖定。 資料表層級的 IX (意圖獨佔) 鎖定不會鎖定任何資料列或分頁，但其仍然與擴大的 S (共用) 或 X (獨佔) TAB 鎖定不相容。 例如，假設您必須執行修改 mytable 資料表中大量資料列的批次作業，而這項作業造成了因鎖定擴大而發生的封鎖。 若這項作業一律會在一個小時內完成，則可建立包含下列程式碼的 [!INCLUDE[tsql](../includes/tsql-md.md)] 作業，並排程新作業在批次任務啟動時間的前幾分鐘開始：
+  
+    ```sql
+    BEGIN TRAN
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    WAITFOR DELAY '1:00:00'
+    COMMIT TRAN
+    ```
+   
+    這項查詢會取得並保有 mytable 的 IX 鎖定一個小時，其會防止在這段時間裡對資料表進行鎖定擴大。 此批次不會修改任何資料或封鎖其他查詢 (除非其他查詢使用 TABLOCK 提示來實施資料表鎖定，或系統管理員使用 sp_indexoption 預存程序來停用了頁面或資料列鎖定)。
+
+您也可以使用追蹤旗標 1211 與 1224 來停用所有或部分的鎖定擴大。 但是，這些[追蹤旗標](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)會為整個 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 全域停用所有鎖定擴大。 鎖定擴大在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中非常實用，其會最大化本來應該會因取得和釋放數千個鎖定所帶來的額外負荷而變得更慢的查詢效率。 鎖定擴大也有助於將追蹤鎖定所需要的記憶體降至最低。 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 可為鎖定結構動態配置的記憶體有限，因此若停用鎖定擴大，且鎖定記憶體成長到足夠的大小，則嘗試為任何查詢配置額外的鎖定便可能會失敗，並發生下列錯誤：
+
+```Error: 1204, Severity: 19, State: 1
+The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
+```
+
+> [!NOTE]
+> 當發生[錯誤 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md) 時，其會停止處理目前的陳述式，並造成使用中交易的復原。 若重新啟動資料庫服務，則復原本身可能會封鎖使用者或導致漫長的復原時間。
+
+> [!NOTE]
+> 使用 ROWLOCK 等鎖定提示只會改變初始的鎖定計劃。 鎖定提示不會防止鎖定擴大。 
+
+此外，請使用 `lock_escalation` 延伸事件 (xEvent) 來監視鎖定擴大，如下列範例所示：
+
+```sql
+-- Session creates a histogram of the number of lock escalations per database 
+CREATE EVENT SESSION [Track_lock_escalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
+    ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
+ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
+GO
+```
+
+> [!IMPORTANT]
+> 建議改為使用 `lock_escalation` 延伸事件 (xEvent)，而非 SQL 追蹤或 SQL 分析工具內的鎖定擴大事件類別
+
+## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 動態鎖定
  使用像資料列鎖定等低層級鎖定，可藉由降低兩個交易同時要求相同片段的資料鎖定之可能性來增加並行。 使用低層級鎖定也會增加鎖定的數目以及需要管理鎖定的資源。 使用高層級的資料表或頁面鎖定可降低額外負荷，但必須花費降低並行的成本。  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -665,13 +820,13 @@ INSERT mytable VALUES ('Dan');
 -   提升效能。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 藉由使用適合於工作的鎖定，將系統的負擔降至最低。  
 -   應用程式開發人員可以專注於開發。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動調整鎖定。  
   
- 從 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 開始，鎖定擴大行為已隨著 `LOCK_ESCALATION` 選項的導入而變更。 如需詳細資訊，請參閱 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)的 `LOCK_ESCALATION` 選項。  
-  
+ 從 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 開始，鎖定擴大行為已隨著 `LOCK_ESCALATION` 選項的導入而變更。 如需詳細資訊，請參閱 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)的 `LOCK_ESCALATION` 選項。 
+   
 ## <a name="deadlocks"></a><a name="deadlocks"></a> 死結  
  當二或多個工作各自具有某個資源的鎖定，但其他工作嘗試要鎖定此資源，而造成工作永久封鎖彼此時，會發生死結。 例如：  
   
--   交易 A 取得資料列 1 的共用鎖定。  
--   交易 B 取得資料列 2 的共用鎖定。  
+-   交易 A 需要資料列 1 的共用鎖定。  
+-   交易 B 需要資料列 2 的共用鎖定。  
 -   交易 A 現在要求資料列 2 的獨佔鎖定，但會被封鎖直到交易 B 完成並釋出對資料列 2 的共用鎖定為止。  
 -   交易 B 現在要求資料列 1 的獨佔鎖定，但會被封鎖直到交易 A 完成並釋出對資料列 1 的共用鎖定為止。  
   
@@ -688,7 +843,7 @@ INSERT mytable VALUES ('Dan');
   
  ![顯示交易死結的圖表](../relational-databases/media/deadlock.png)  
   
- 在上圖中，在 **Part** 資料表鎖定資源上，交易 T1 相依於交易 T2。 同樣的，在 **Supplier** 資料表鎖定資源上，交易 T2 相依於交易 T1。 由於這些相依性形成循環，交易 T1 與 T2 之間便構成死結。  
+ 在上圖中，在 `Part` 資料表鎖定資源上，交易 T1 相依於交易 T2。 同樣的，在 `Supplier` 資料表鎖定資源上，交易 T2 相依於交易 T1。 由於這些相依性形成循環，交易 T1 與 T2 之間便構成死結。  
   
  當資料表已分割，且 `ALTER TABLE` 的 `LOCK_ESCALATION` 設定為 AUTO 時，也可能發生死結。 當 `LOCK_ESCALATION` 設定為 AUTO 時，會藉由讓[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]鎖定 HoBT 層級 (而不是資料表層級) 的資料表資料分割來增加並行。 但是，當個別交易在資料表中保留資料分割鎖定，而且想要鎖定其他交易資料分割上的某個地方時，這就會造成死結。 您可以將 `LOCK_ESCALATION` 設定為 `TABLE` 來避免這類死結；雖然此設定減少並行的方式，是強制資料分割的大量更新等候資料表鎖定。  
   
@@ -747,7 +902,7 @@ INSERT mytable VALUES ('Dan');
   
  在偵測到死結之後， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會選擇其中一個執行緒作為死結犧牲者，結束死結。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會結束目前為此執行緒所執行的批次、回復死結犧牲者的交易，並且傳回 1205 錯誤至應用程式。 回復死結犧牲者的交易，將會釋放交易所持有的所有鎖定。 這可讓其他執行緒的交易變成解除封鎖的狀態並繼續進行。 1205 死結犧牲者錯誤會將與死結相關的執行緒和資源資訊記錄在錯誤記錄檔中。  
   
- 依預設， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會選擇執行回復成本最低之交易的工作階段作為死結犧牲者。 或者，使用者也可以使用 SET DEADLOCK_PRIORITY 陳述式，指定死結情況下工作階段的優先權。 DEADLOCK_PRIORITY 可以設為 LOW、NORMAL 或 HIGH，或設為 -10 到 10 範圍內的任何整數值。 死結優先權預設為 NORMAL。 如果兩個工作階段有不同的死結優先權，優先權較低的工作階段會被選為死結犧牲者。 如果兩個工作階段有相同的死結優先權，則會選擇回復成本最低之交易的工作階段。 如果死結循環中相關的工作階段具有相同的死結優先權和相同成本，則會隨機選擇犧牲者。  
+ 依預設， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會選擇執行回復成本最低之交易的工作階段作為死結犧牲者。 或者，使用者可使用 `SET DEADLOCK_PRIORITY` 陳述式來指定在發生死結時工作階段的優先順序。 DEADLOCK_PRIORITY 可以設為 LOW、NORMAL 或 HIGH，或設為 -10 到 10 範圍內的任何整數值。 死結優先權預設為 NORMAL。 如果兩個工作階段有不同的死結優先權，優先權較低的工作階段會被選為死結犧牲者。 如果兩個工作階段有相同的死結優先權，則會選擇回復成本最低之交易的工作階段。 如果死結循環中相關的工作階段具有相同的死結優先權和相同成本，則會隨機選擇犧牲者。  
   
  使用 CLR 時，死結監視器會為 Managed 程序內所存取的同步處理資源 (監視器、讀取器/寫入器鎖定和執行緒聯結) 自動偵測是否有死結。 不過，死結是透過在選為死結犧牲者的程序中擲回例外狀況來解決。 例外狀況並不會自動釋放犧牲者目前所擁有的資源；您必須明確釋放資源，了解這點很重要。 與例外狀況行為一致，用來識別死結犧牲者的例外狀況可以在發生後解除。  
   
@@ -757,7 +912,7 @@ INSERT mytable VALUES ('Dan');
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> 死結擴充事件
 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，應使用 `xml_deadlock_report` 擴充事件 (xEvent)，以取代 SQL 追蹤或 SQL Profiler 中的死結圖表事件類別。
 
-從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，發生死結時，system\_health 工作階段會擷取所有 `xml_deadlock_report` xEvent (其包含死結圖表)。 因為依預設會啟用 system\_health 工作階段，所以不需要設定個別的 xEvent 工作階段來擷取死結資訊。 
+此外，從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，當發生死結時，***system\_health*** 工作階段已經會擷取所有包含死結圖表的 `xml_deadlock_report` xEvent。 由於根據預設會啟用 *system\_health* 工作階段，因此無須設定個別的 xEvent 工作階段來擷取死結資訊。 
 
 所擷取的 Deadlock Graph 通常有三個不同的節點：
 -   **victim-list**。 死結犧牲者處理序識別碼。
@@ -768,7 +923,7 @@ INSERT mytable VALUES ('Dan');
 
 ![xEvent 死結圖表](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-下列查詢可以檢視 system\_health 工作階段信號緩衝區所擷取的所有死結事件：
+下列查詢可檢視 *system\_health* 工作階段通道緩衝區所擷取的所有死結事件：
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -1762,7 +1917,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  如需有關特定鎖定提示及其行為的詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md)。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 查詢最佳化工具幾乎永遠都會選擇正確的鎖定層級。 建議您只有在必要時才使用資料表層級的鎖定提示來變更預設的鎖定行為。 不允許鎖定層級可能會嚴重影響並行。  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 幾乎一律會選擇正確的鎖定層級。 建議您只有在必要時才使用資料表層級的鎖定提示來變更預設的鎖定行為。 不允許鎖定層級可能會嚴重影響並行。  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在讀取中繼資料時可能必須取得鎖定，即使在處理具有鎖定提示的選取，而該鎖定是防止讀取資料時要求共用鎖定時也是如此。 例如，使用 `NOLOCK` 提示的 `SELECT` 在讀取資料時並不會取得共用鎖定，但在讀取系統目錄檢視時有時會要求鎖定。 這意謂著使用 `NOLOCK` 的 `SELECT` 陳述式有可能被封鎖。  
   
@@ -1793,7 +1948,7 @@ ROLLBACK;
 GO  
 ```  
   
- 所採用的鎖定中，唯一參考 *HumanResources.Employee* 的鎖定是結構描述穩定性 (Sch-S) 鎖定。 這種情況下不保證有序列化能力。  
+ 所採用的鎖定中，唯一參考 `HumanResources.Employee` 的鎖定為結構描述穩定性 (Sch-S) 鎖定。 這種情況下不保證有序列化能力。  
   
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，`ALTER TABLE` 的 `LOCK_ESCALATION` 選項可能不偏好使用資料表鎖定，而會在資料分割資料表上啟用 HoBT 鎖定。 這個選項不是鎖定提示，但是可用來減少鎖定擴大。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md)。  
   
@@ -1957,7 +2112,7 @@ GO
  您可能必須使用 KILL 陳述式。 但是，請小心使用此陳述式，尤其是執行重要處理序時。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)。  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料   
-[資料列版本設定的額外負荷](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[資料列版本設定的額外負荷](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [擴充事件](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

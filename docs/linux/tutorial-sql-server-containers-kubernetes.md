@@ -5,16 +5,16 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2018
+ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902313"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424408"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes Service (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -35,17 +35,17 @@ ms.locfileid: "85902313"
 
 Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)、[永續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，以及 [Azure 磁碟區類型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 您可以在 Kubernetes 中以原生方式建立並管理您的 SQL Server 執行個體。 本文中的範例說明如何建立[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)，以達成類似於共用磁碟容錯移轉叢集執行個體的高可用性設定。 在此設定中，Kubernetes 扮演叢集協調器的角色。 當容器中的 SQL Server 執行個體失敗時，協調器會啟動附加至相同永續性儲存體的其他容器執行個體。
 
-![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![Kubernetes 叢集上的 SQL Server 容器](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
 在上圖中，`mssql-server` 是 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 中的容器。 Kubernetes 會協調叢集中的資源。 [複本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可確保 Pod 會在節點失敗後自動復原。 應用程式會連線至服務。 在此情況下，服務代表的負載平衡器會在 `mssql-server` 失敗後維持相同 IP 位址。
 
 在下圖中，`mssql-server` 容器已失敗。 作為協調器，Kubernetes 可保證複本集中狀態良好的執行個體正確計數，並根據設定啟動新的容器。 協調器會在相同節點上啟動新的 Pod，而 `mssql-server` 會重新連接到相同的永續性儲存體。 服務會連接到重新建立的 `mssql-server`。
 
-![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Kubernetes 叢集上的 SQL Server Pod 失敗](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 在下圖中，裝載 `mssql-server` 容器的節點已失敗。 協調器會在不同節點上啟動新的 Pod，而 `mssql-server` 會重新連接到相同的永續性儲存體。 服務會連接到重新建立的 `mssql-server`。
 
-![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Kubernetes 叢集上的 SQL Server Pod 復原](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -174,10 +174,12 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
          labels:
            app: mssql
        spec:
-         terminationGracePeriodSeconds: 10
+         terminationGracePeriodSeconds: 30
+         securityContext:
+           fsGroup: 10001
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server:2017-latest
+           image: mcr.microsoft.com/mssql/server:2019-latest
            ports:
            - containerPort: 1433
            env:
@@ -227,10 +229,12 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD 
+         key: SA_PASSWORD
      ```
 
-     當 Kubernetes 部署容器時，它會參考名為 `mssql` 的 Secret，以取得密碼的值。 
+    當 Kubernetes 部署容器時，它會參考名為 `mssql` 的 Secret，以取得密碼的值。
+
+   * `securityContext`：securityContext 會定義 Pod 或容器的權限和存取控制設定，在此案例中由於其會在 Pod 層級指定，因此所有容器 (在此案例中只有一個) 都會遵循該安全性內容。 在安全性內容中會使用值 10001 (mssql 群組的 GID) 來定義 fsGroup，這表示容器其所有處理序都是增補群組識別碼 10001 (mssql) 的一部分。 /var/opt/mssql 磁碟區的擁有者和在該磁碟區中所建立任何檔案都會是群組識別碼 10001 (mssql 群組)。
 
    >[!NOTE]
    >藉由使用 `LoadBalancer` 服務類型，您可以在連接埠 1433 遠端存取 (透過網際網路) SQL Server 執行個體。
@@ -272,7 +276,19 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
-   ```  
+   ```
+
+1. 您也可以透過執行下列命令來驗證容器是以非根使用者的身分執行：
+
+    ```azurecli
+    kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
+    ```
+
+    然後執行 'whoami'，即應看到使用者名稱為 mssql。 這是非根使用者。
+
+    ```azurecli
+    whoami
+    ```
 
 ## <a name="connect-to-the-sql-server-instance"></a>連接到 SQL Server 執行個體
 
@@ -285,7 +301,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 * [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
-   
+
    若要與 `sqlcmd` 連線，請執行下列命令：
 
    ```cmd
@@ -293,9 +309,9 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
    ```
 
    取代下列值：
-      
-    - 將 `<External IP Address>` 取代為 `mssql-deployment` 服務的 IP 位址 
-    - 將 `MyC0m9l&xP@ssw0rd` 取代為您的密碼
+
+  * 將 `<External IP Address>` 取代為 `mssql-deployment` 服務的 IP 位址 
+  * 將 `MyC0m9l&xP@ssw0rd` 取代為您的密碼
 
 ## <a name="verify-failure-and-recovery"></a>驗證失敗和復原
 
@@ -314,6 +330,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
+
    `mssql-deployment-0` 即為上一個步驟傳回的 Pod 名稱值。 
 
 Kubernetes 會自動重新建立 Pod，以復原 SQL Server 執行個體，並連接永續性儲存體。 使用 `kubectl get pods` 來驗證是否已部署新的 Pod。 使用 `kubectl get services` 來驗證新容器的 IP 位址是否相同。 
@@ -333,5 +350,3 @@ Kubernetes 會自動重新建立 Pod，以復原 SQL Server 執行個體，並�
 
 > [!div class="nextstepaction"]
 >[Kubernetes 簡介](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-
-

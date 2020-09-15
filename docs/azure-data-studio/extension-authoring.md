@@ -6,22 +6,21 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 08/26/2020
+ms.openlocfilehash: 477e93dc272c4a26e40333b02728c643299161ce
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778417"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283715"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組來擴充功能
 
 Azure Data Studio 中的延伸模組提供一種簡單方式，其可將更多功能新增至基底 Azure Data Studio 安裝。
 
 延伸模組是由 Azure Data Studio 小組 (Microsoft) 及協力廠商社群 (您！) 提供。
-
 
 ## <a name="author-an-extension"></a>撰寫延伸模組
 
@@ -35,7 +34,7 @@ Azure Data Studio 中的延伸模組提供一種簡單方式，其可將更多�
 
 若要建立新的延伸模組，則可使用 Azure Data Studio 延伸模組產生器。 Yeoman [延伸模組產生器](https://www.npmjs.com/package/generator-azuredatastudio)對於延伸模組專案而言是一個很好的起點。 若要啟動產生器，請在命令提示字元中鍵入下列命令：
 
-```
+```console
 npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
@@ -46,23 +45,22 @@ yo azuredatastudio
 
 若要了解 Azure Data Studio 擴充性，請參閱[擴充性概觀](extensibility.md)。 您也可以在現有[範例](https://github.com/Microsoft/azuredatastudio/tree/main/samples)中查看如何使用 API 的範例。
 
-
 ## <a name="debug-an-extension"></a>對延伸模組進行偵錯
 
 您可以使用 Visual Studio Code 延伸模組 [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug)，對新的延伸模組進行偵錯。
 
-步驟
-1. 使用 [Visual Studio Code](https://code.visualstudio.com/) 開啟延伸模組。
-1. 安裝 Azure Data Studio 偵錯延伸模組。
-1. 按 **F5** 或按一下偵錯圖示，然後按一下 [啟動]。
-1. Azure Data Studio 的新執行個體會以特殊模式 (延伸模組開發主機) 啟動，且這個新執行個體現可識別您的延伸模組。
+步驟：
 
+1. 使用 [Visual Studio Code](https://code.visualstudio.com/) 開啟延伸模組。
+2. 安裝 Azure Data Studio 偵錯延伸模組。
+3. 按 **F5** 或按一下偵錯圖示，然後按一下 [啟動]。
+4. Azure Data Studio 的新執行個體會以特殊模式 (延伸模組開發主機) 啟動，且這個新執行個體現可識別您的延伸模組。
 
 ## <a name="create-an-extension-package"></a>建立延伸模組套件
 
-撰寫延伸模組之後，您必須建立 VSIX 套件，才能將其安裝至 Azure Data Studio。 您可使用 [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code 延伸模組) 來建立 VSIX 套件。 
+撰寫延伸模組之後，您必須建立 VSIX 套件，才能將其安裝至 Azure Data Studio。 您可使用 [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code 延伸模組) 來建立 VSIX 套件。
 
-```
+```console
 npm install -g vsce
 cd myExtensionName
 vsce package
@@ -70,7 +68,6 @@ vsce package
 ```
 
 透過 VSIX 套件，您可共用 `.vsix` 檔案，並從 [命令選擇區] 使用 [延伸模組：從 VSIX 檔案進行安裝] 命令，將延伸模組安裝至 Azure Data Studio，即可在本機和私人位置共用延伸模組。
-
 
 ## <a name="publish-an-extension"></a>發佈延伸模組
 
@@ -86,3 +83,13 @@ vsce package
 **發佈延伸模組更新**
 
 發佈更新與發佈延伸模組的程序類似。 請確定已更新 package.json 中的版本。
+
+## <a name="next-steps"></a>後續步驟
+
+請參閱下列其中一個延伸模組撰寫教學課程來取得如何開始進行的逐步說明：
+
+- [鍵盤對應延伸模組教學課程](extensions/keymap-extension.md)
+- [儀表板延伸模組教學課程](extensions/dashboard-extension.md)
+- [Notebook 延伸模組教學課程](extensions/notebook-extension.md)
+- [Jupyter Book 延伸模組教學課程](extensions/jupyter-book-extension.md)
+- [精靈延伸模組教學課程](extensions/wizard-extension.md)

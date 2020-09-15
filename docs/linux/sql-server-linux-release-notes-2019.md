@@ -3,16 +3,16 @@ title: Linux 上 SQL Server 2019 的版本資訊
 description: 此文章包含在 Linux 上執行之 SQL Server 2019 的版本資訊與支援功能。 其中包含最新版本和數個先前版本的版本資訊。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/04/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 02ed1996d79b0c2760e91fd8c7fda593da145cca
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: a65e5fc7862c42e1e91bbd9b8bc424cca59e647e
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790361"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392206"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本資訊
 
@@ -35,6 +35,7 @@ ms.locfileid: "87790361"
 
 | 版本                   | 版本       | 發行日期 |
 |---------------------------|---------------|--------------|
+| [CU7](#cu7)               | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
@@ -57,9 +58,28 @@ ms.locfileid: "87790361"
 - [安裝 PolyBase 套件](../relational-databases/polybase/polybase-linux-setup.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a name="cu7-august-2020"></a><a id="cu7"></a> CU7 (2020 年 8 月)
+
+這是 SQL Server 2019 (15.x) 的累積更新 7 (CU7) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4063.15。 如需修正與改善的資訊，請參閱 <https://support.microsoft.com/help/4570012> \(機器翻譯\)。
+
+### <a name="package-details"></a>套件詳細資料
+
+針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
+
+> [!NOTE]
+> 從 CU1 開始，Red Hat 的離線套件安裝連結會指向 RHEL 8 套件。 如果您要尋找 RHEL 7 套件，請參閱下載路徑 <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
+>
+> SQL Server 2019 從 CU3 開始支援 **Ubuntu 18.04**。 Ubuntu 的離線套件安裝連結會指向 Ubuntu 18.04 套件。 若要尋找 Ubuntu 16.04 套件，請參閱下載路徑 <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
+
+| Package | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 15.0.4063.15-10 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4063.15-10.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4063.15-10.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4063.15-10.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4063.15-10.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4063.15-10.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4063.15-10.x86_64.rpm)|
+| SLES RPM 套件 | 15.0.4063.15-10 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4063.15-10.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4063.15-10.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4063.15-10.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4063.15-10.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4063.15-10.x86_64.rpm)</br>[PolyBase RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4063.15-10.x86_64.rpm)|
+| Ubuntu 18.04 Debian 套件 | 15.0.4063.15-10 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4063.15-10_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4063.15-10_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4063.15-10_amd64.deb)</br>[擴充性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4063.15-10_amd64.deb)</br>[Java 擴充性 Debian 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4063.15-10_amd64.deb)</br>[PolyBase RPM 套件](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4063.15-10_amd64.deb)|
+
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (2020 年 7 月)
 
-這是 SQL Server 2019 (15.x) 的累積更新 6 (CU6) 版本。 此發行版本的 SQL Server 資料庫引擎版本為 15.0.4053.23。 如需修正與改善的資訊，請參閱 <https://support.microsoft.com/help/4563110> \(機器翻譯\)。
+這是 SQL Server 2019 (15.x) 的累積更新 6 (CU6) 版本。 此發行版本的 SQL Server 資料庫引擎版本為 15.0.4053.23。 如需修正和改善的資訊，請參閱 <https://support.microsoft.com/help/4563110>
 
 ### <a name="package-details"></a>套件詳細資料
 

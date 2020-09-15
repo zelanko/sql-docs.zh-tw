@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動調整、加密、查詢存放區。
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,6 +22,7 @@ helpviewer_keywords:
 - snapshot isolation framework option
 - checksums [SQL Server]
 - Automatic tuning
+- " Data Retention Policy"
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: c7e35b474e33da25b2d323d4af4aced5c4fe50f1
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900956"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511300"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -115,6 +116,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -305,6 +307,10 @@ SET
 
 <temporal_history_retention> ::=
     TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## <a name="arguments"></a>引數
@@ -504,6 +510,17 @@ GLOBAL
 只有在中斷連接時，才會隱含地取消配置資料指標。 如需詳細資訊，請參閱 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_local_cursor_default` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsLocalCursorsDefault` 屬性來判斷狀態。
+
+**\<data_retention_policy> ::=**
+
+**適用於**：「僅限」Azure SQL Edge
+
+DATA_RETENTION { ON | OFF }   
+開啟    
+在資料庫上啟用以資料保留原則為基礎的清除。
+
+OFF   
+在資料庫上停用以資料保留原則為基礎的清除。
 
 **\<database_mirroring>**     
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]

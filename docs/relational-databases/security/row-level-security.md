@@ -2,7 +2,7 @@
 title: 資料列層級安全性 | Microsoft 文件
 description: 了解資料列層級安全性使用群組成員資格或執行內容，對 SQL Server 中資料庫資料表內資料列的存取進行控制的方式。
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000533"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392186"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 現在從每個使用者的 Sales 資料表進行選取，藉此測試篩選述詞。
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 管理員應該會看到所有六個資料列。 Sales1 和 Sales2 使用者只能看到他們自己的銷售。
 
 變更安全性原則，以停用原則。
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. 在 Azure Synapse 外部資料表上使用資料列層級安全性的案例
 
-此範例會建立三個使用者，以及包含六個資料列的外部資料表。 它接著為該外部資料表建立內嵌資料表值函式和安全性原則。 此範例示範如何針對不同的使用者篩選 select 陳述式。
+此範例會建立三個使用者，以及包含六個資料列的外部資料表。 它接著為該外部資料表建立內嵌資料表值函式和安全性原則。 此範例示範如何針對不同的使用者篩選 select 陳述式。 
 
-建立三個使用者帳戶，將示範不同的存取功能。
+### <a name="prerequisites"></a>先決條件
+
+1. 您必須擁有 SQL 集區。 請參閱[建立 Synapse SQL 集區](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. 裝載 SQL 集區的伺服器必須向相同的 AAD 註冊，且必須擁有具備儲存體部落格參與者權限的 Azure 儲存體帳戶。 遵循[此處](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步驟。
+1. 為 Azure 儲存體帳戶建立檔案系統。 使用儲存體總管來檢視儲存體帳戶。 以滑鼠右鍵按一下容器，並選取 [建立檔案系統]。  
+
+在具備所有先決條件後，請建立三個將示範不同存取功能的使用者帳戶。
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 在資料表中填入六個資料列，每個銷售代表各顯示三個訂單。  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 從所建立的 Sales 資料表建立 Azure Synapse 外部資料表。
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-使用工作階段 A 中的函式在外部資料表上建立安全性原則，以作為篩選述詞。 若要啟用此原則，狀態必須設為 ON。
+建立新的結構描述，以及內嵌的資料表值函式；您可能已在範例 A 中完成這項操作。SalesRep 資料行中的資料列相同、且使用者執行查詢時 (`@SalesRep = USER_NAME()`) 或執行查詢的使用者是管理員使用者 (`USER_NAME() = 'Manager'`) 時，此函式會傳回 1。
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+使用內嵌資料表值函式作為篩選述詞，在外部資料表上建立安全性原則。 若要啟用此原則，狀態必須設為 ON。
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

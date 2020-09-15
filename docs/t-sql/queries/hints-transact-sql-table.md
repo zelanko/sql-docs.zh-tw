@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062327"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288233"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -307,13 +307,19 @@ READUNCOMMITTED 和 NOLOCK 提示只適用於資料鎖定。 所有的查詢 (�
 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 > [!NOTE]  
-> 如果您在指定 READUNCOMMITTED 的情況下，收到錯誤訊息 601，請依照死結錯誤 (1205) 的相同方式來解決它，再重試您的陳述式。  
+> 若在指定 READUNCOMMITTED 時收到[錯誤訊息 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999)，請採用解決鎖死錯誤 ([錯誤訊息 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)) 時相同的方式來解決，然後重試陳述式。  
   
 REPEATABLEREAD  
 指定利用與執行 REPEATABLE READ 隔離等級之交易相同的鎖定語意來執行掃描。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 ROWLOCK  
-指定通常在採用頁面或資料表鎖定時，採用資料列鎖定。 如果是在以 SNAPSHOT 隔離等級操作的交易中指定時，不會採用資料列鎖定，除非 ROWLOCK 是與其他需要鎖定的資料表提示相結合，例如 UPDLOCK 和 HOLDLOCK。  
+指定通常在採用頁面或資料表鎖定時，採用資料列鎖定。 如果是在以 SNAPSHOT 隔離等級操作的交易中指定時，不會採用資料列鎖定，除非 ROWLOCK 是與其他需要鎖定的資料表提示相結合，例如 UPDLOCK 和 HOLDLOCK。 ROWLOCK 無法搭配具有叢集資料行存放區索引的資料表使用。 下列範例會將[錯誤 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) 傳回應用程式。  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 SERIALIZABLE  
 這相當於 HOLDLOCK。 使共用鎖定更具限制性的方法是將共用鎖定持續保留到交易完成為止，而不是在不再需要所要求的資料表或資料頁面時，便立即釋放共用鎖定 (不論交易是否完成)。 利用與在 SERIALIZABLE 隔離等級執行之交易相同的語意來執行掃描。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
@@ -321,11 +327,11 @@ SERIALIZABLE
 SNAPSHOT  
 **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。 
   
-記憶體最佳化的資料表是在 SNAPSHOT 隔離下存取。 SNAPSHOT 只能用於記憶體最佳化的資料表 (不可用於磁碟基礎的資料表)。 如需詳細資訊，請參閱[記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
+記憶體最佳化的資料表是在 SNAPSHOT 隔離下存取。 SNAPSHOT 只能搭配經記憶體最佳化的資料表使用 (無法搭配磁碟式資料表使用)，如下列範例所示。 如需詳細資訊，請參閱[記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  

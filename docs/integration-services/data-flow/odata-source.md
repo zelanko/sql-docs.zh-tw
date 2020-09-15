@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425820"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424418"
 ---
 # <a name="odata-source"></a>OData 來源
 
@@ -54,6 +54,13 @@ OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTi
 
 > [!IMPORTANT]
 > OData 來源元件不支援 SharePoint 清單中的複雜類型，例如多重選擇項目。
+
+> [!Note]
+> 若來源僅允許 TLS 1.2 連線，則需要在電腦上透過登錄設定來實施 TLS 1.2。 在提高權限的命令提示字元中執行下列命令：
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## <a name="odata-format-and-performance"></a>OData 格式和效能
  大部分的 OData 服務都會傳回多種格式的結果。 您可使用 `$format` 查詢選項來指定結果集的格式。 類似 JSON 和 JSON Light 的格式要比 ATOM 或 XML 更有效率，而且在傳輸大量資料時可能會提供更好的效能。 下表提供範例測試的結果。 如您所見，當從 ATOM 切換到 JSON 時有 30-53% 的效能提升，而且當從 ATOM 切換到新的 JSON light 格式時有 67% 的效能提升 (適用於 WCF Data Services 5.1)。  

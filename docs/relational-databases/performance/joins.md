@@ -18,73 +18,90 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915844"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511310"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用記憶體內排序和雜湊聯結技術，來執行排序、交叉、聯集及差異作業。 使用這類查詢計畫，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援資料表垂直分割 (有時候稱為分欄儲存)。   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用記憶體內排序和雜湊聯結技術，來執行排序、交叉、聯集及差異作業。 使用這種查詢計劃類型，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援垂直資料表分割。   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 採用四種聯結作業：    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法決定的邏輯聯結作業：
+-   內部聯結
+-   左方外部聯結
+-   右方外部聯結
+-   完整外部聯結
+-   交叉聯結
+
+> [!NOTE]
+> 如需聯結語法的詳細資訊，請參閱 [FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 採用四種實體聯結作業類型來執行邏輯聯結作業：    
 -   巢狀迴圈聯結     
 -   合併聯結   
 -   雜湊聯結   
--   自適性聯結 (開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
+-   自適性聯結 (自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始)
 
 ## <a name="join-fundamentals"></a><a name="fundamentals"></a> 聯結基本概念
 透過使用聯結，您可以根據資料表之間的邏輯關聯性從二或多個資料表中擷取資料。 聯結指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用一個資料表的資料，以選取另一個資料表的資料列。    
 
 聯結條件定義兩個資料表在查詢中相關的方式：    
 -   指定每個資料表中要用於聯結的資料行。 典型的聯結條件會指定一個資料表的外部索引鍵，以及其在另一個資料表關聯的索引鍵。    
--   指定邏輯運算子 (例如 = 或 <>)，以便用來比較資料行的數值。    
+-   指定邏輯運算子 (例如 = 或 <>)，以便用來比較資料行的數值。   
 
-您可以在 `FROM` 或 `WHERE` 子句中指定內部聯結。 外部聯結則只能在 `FROM` 字句中指定。 聯結條件會與 `WHERE` 和 `HAVING` 搜尋條件結合，以控制從 `FROM` 子句所參考之基底資料表中選取的資料列。    
+聯結是使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法以邏輯方式表示的：
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-在 `FROM` 子句中指定聯結條件有助於將它們與 `WHERE` 子句中可能指定的任何其他搜尋條件分開，建議您以此方式指定聯結。 簡化的 ISO FROM 子句聯結語法為：
+**內部聯結**可在 `FROM` 或 `WHERE` 子句中指定。 **外部聯結**和**交叉聯結**只能在 `FROM` 子句中指定。 聯結條件會與 `WHERE` 和 `HAVING` 搜尋條件結合，以控制從 `FROM` 子句所參考之基底資料表中選取的資料列。    
+
+在 `FROM` 子句中指定聯結條件有助於將它們與 `WHERE` 子句中可能指定的任何其他搜尋條件分開，建議您以此方式指定聯結。 簡化的 ISO `FROM` 子句聯結語法為：
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* 會指定所執行聯結的種類：內部、外部或交叉聯結。 *join_condition* 會定義要針對每一對聯結資料列評估的述詞。 下列是 FROM 子句聯結規格的範例：
+*join_type* 會指定所執行聯結的種類：內部、外部或交叉聯結。 *join_condition* 會定義要針對每一對聯結資料列評估的述詞。 下列是 `FROM` 子句聯結規格的範例：
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-下列範例則是使用此聯結的簡單 SELECT 陳述式：
+下列是使用聯結的簡易 `SELECT` 陳述式：
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-此選取將傳回公司名稱以字母 F 開頭之公司所供應的零件，並且產品的價格大於 $10 之任何組合的產品與供應商資訊。   
+`SELECT` 陳述式將傳回其名稱以字母 F 開頭的公司所供應零件，且產品價格大於 $10 的任何組合其產品與供應商資訊。   
 
-若在單一查詢中參考多個資料表，所有的資料行參考都不可以模擬兩可。 在先前的範例中，ProductVendor 和 Vendor 資料表都有名稱為 BusinessEntityID 的資料行。 查詢所參考的二或多個資料表中，若有任何資料行名稱重複，則必須以資料表名稱來加以限定。 在範例中，所有對 Vendor 資料行的參考都有加以限定。   
+若在單一查詢中參考多個資料表，所有的資料行參考都不可以模擬兩可。 在先前範例中，`ProductVendor` 和 `Vendor` 兩個資料表都有名為 `BusinessEntityID` 的資料行。 查詢所參考的二或多個資料表中，若有任何資料行名稱重複，則必須以資料表名稱來加以限定。 在範例中，所有對 `Vendor` 資料行的參考都已限定。   
 
-當查詢所使用的二或多個資料表中，資料行名稱都沒有重複，對資料行的參考就不需要以資料表名稱加以限定。 如先前的範例所示。 這樣的 SELECT 陳述式有時候很難了解，因為無法指出提供每個資料行的資料表。 如果以資料表名稱限定所有資料行，可增進查詢的可讀性。 如果還使用資料表別名，特別是當資料表名稱本身還需要以資料庫和擁有者名稱加以限定時，可進一步增進可讀性。 下列是相同的範例，但是指定了資料表別名，並且以資料表別名限定資料行，以增進可讀性：
+當查詢所使用的二或多個資料表中，資料行名稱都沒有重複，對資料行的參考就不需要以資料表名稱加以限定。 如先前的範例所示。 這樣的 `SELECT` 陳述式有時候很難了解，因為無法指出提供每個資料行的資料表。 如果以資料表名稱限定所有資料行，可增進查詢的可讀性。 如果還使用資料表別名，特別是當資料表名稱本身還需要以資料庫和擁有者名稱加以限定時，可進一步增進可讀性。 下列是相同的範例，但是指定了資料表別名，並且以資料表別名限定資料行，以增進可讀性：
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-上個範例在 FROM 子句中指定聯結條件，這是較好的方式。 下列查詢包含指定於 WHERE 子句中的相同聯結條件：
+先前範例在 `FROM` 子句中指定了聯結條件，這是較好的方式。 下列查詢包含指定於 `WHERE` 子句中的相同聯結條件：
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-聯結的選取清單可參考聯結資料表中的所有資料行，或是資料行的任何子集。 若要包含聯結中每個資料表的資料行，您並不需要用到選取清單。 例如，在三個資料表的聯結中，一個資料表可作為第二個資料表與第三個資料表的橋樑，並且中間的資料表不需要有任何資料行參考於選取清單中。   
+聯結的 `SELECT` 清單可參考聯結資料表中的所有資料行，或資料行的任何子集。 若要包含聯結中每個資料表的資料行，您並不需要用到 `SELECT` 清單。 例如，在三個資料表的聯結中，一個資料表可作為第二個資料表與第三個資料表的橋樑，並且中間的資料表不需要有任何資料行參考於選取清單中。 這也稱為**反半聯結**。  
 
 雖然聯結條件通常擁有相等比較 (=)，您也可以指定其他的比較或關聯式運算子，就如同其他述詞一樣。 如需詳細資訊，請參閱[比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) 和 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)。  
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理聯結時，查詢引擎將從多種可能性選擇最有效率的處理聯結方式。 不同聯結的實際執行可能會使用許多不同的最佳化方式，因此無法可靠地預測。   
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理聯結時，查詢最佳化工具將從多種可能性選擇最有效率的處理聯結方式。 這包括選擇最有效率的實體聯結類型、聯結資料表的順序，甚至使用無法以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法直接表示的邏輯聯結作業類型，例如**半聯結**以及**反半聯結**。 不同聯結的實際執行可能會使用許多不同的最佳化方式，因此無法可靠地預測。 如需半聯結和反半聯結的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)。  
 
-用於聯結條件的資料行，並不需要擁有相同的名稱或相同的資料類型。 不過，如果資料類型不一致，則必須是相容的類型，或是 SQL 可用隱含方式轉換的類型。 若無法以隱含方式轉換資料類型，聯結條件就必須使用 `CAST` 函數來明確轉換資料類型。 如需有關隱含及明確轉換的詳細資訊，請參閱[資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。    
+用於聯結條件的資料行，並不需要擁有相同的名稱或相同的資料類型。 不過，若資料類型不一樣，則其必須是相容的類型，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可隱含轉換的類型。 若無法以隱含方式轉換資料類型，聯結條件就必須使用 `CAST` 函數來明確轉換資料類型。 如需有關隱含及明確轉換的詳細資訊，請參閱[資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。    
 
 大多數使用聯結的查詢都可使用子查詢重新改寫 (查詢巢狀於另一個查詢之內)，而大多數的子查詢也可重新改寫成聯結。 如需有關子查詢的詳細資訊，請參閱[子查詢](../../relational-databases/performance/subqueries.md)。   
 
@@ -356,3 +373,4 @@ NULL        three  NULL        NULL
 [資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [子查詢](../../relational-databases/performance/subqueries.md)      
 [自適性聯結](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
