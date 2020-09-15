@@ -1,4 +1,5 @@
 ---
+description: setFetchDirection 方法 (SQLServerResultSet)
 title: setFetchDirection 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f0055facd8248816da07fea74e8dc8035f78d84
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1056136ec3f7cef61e22c237d250fd6709c23e22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431890"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>setFetchDirection 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public void setFetchDirection(int direction)
 #### <a name="parameters"></a>參數  
  *direction*  
   
- **int**，指出建議的提取方向。 可以是下列其中一個值：  
+ **int**，指出建議的提取方向。 可以是下列值之一：  
   
  ResultSet.FETCH_FORWARD  
   

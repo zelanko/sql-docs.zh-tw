@@ -1,4 +1,5 @@
 ---
+description: setHoldability 方法 (SQLServerConnection)
 title: setHoldability 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9250d30222ce537013959e1433d45f6cb2245a39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7111094bf78e1fa1408ce163d764e52f30274c33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431790"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

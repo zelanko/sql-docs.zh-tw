@@ -1,4 +1,5 @@
 ---
+description: UnattendedExecutionAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: UnattendedExecutionAccount 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7df8794f3205feebc49495d27b4bd78a254a4638
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a01ad9b881c19aacc66b2746944a93c48a39f331
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423082"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>ConfigurationSetting 屬性 - UnattendedExecutionAccount
   傳回自動執行報表時，報表伺服器模擬的使用者帳戶。 唯讀。  

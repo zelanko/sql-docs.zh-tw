@@ -1,4 +1,5 @@
 ---
+description: updateClob 方法 (java.lang.String, java.io.Reader)
 title: updateClob 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 338a2bf2-b110-469d-ad08-a0f2bbefcb88
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 811585923bc02ea68eb05862a4eaedd532d8221d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2aa2dfd454382911d5ee485c0f08657596759e34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431390"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader"></a>updateClob 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

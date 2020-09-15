@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_next_result
 title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426230"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

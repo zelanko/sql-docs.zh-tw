@@ -1,4 +1,5 @@
 ---
+description: RemoveSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
 title: RemoveSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: edead6fb553151265556163659eb6b1383918c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423162"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting 方法 - RemoveSSLCertificateBinding
   移除 TLS/SSL 憑證繫結。  

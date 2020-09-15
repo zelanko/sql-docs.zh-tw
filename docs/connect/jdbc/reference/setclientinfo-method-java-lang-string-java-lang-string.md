@@ -1,4 +1,5 @@
 ---
+description: setClientInfo 方法 (java.lang.String, java.lang.String)
 title: setClientInfo 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b94f6a00e26934426ef1ece760ce1179c3c53046
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c5a9dfe96f5ff660ff2a57a3d0af19b01e56765
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432200"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>setClientInfo 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

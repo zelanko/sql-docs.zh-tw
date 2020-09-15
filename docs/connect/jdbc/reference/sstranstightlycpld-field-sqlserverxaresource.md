@@ -1,4 +1,5 @@
 ---
+description: SSTRANSTIGHTLYCPLD 欄位 (SQLServerXAResource)
 title: SSTRANSTIGHTLYCPLD 欄位 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6d816ba896b792894716b9b61b133d1acea0c93
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f3161ceb41586e330bee39206700702cf3d36239
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431550"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>SSTRANSTIGHTLYCPLD 欄位 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

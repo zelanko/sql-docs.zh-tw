@@ -1,4 +1,5 @@
 ---
+description: 角色指派
 title: 角色指派 | Microsoft Docs
 ms.date: 05/07/2017
 ms.prod: reporting-services
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db55abd24cac0fa4cc6aacab03f0b1f68969d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423252"
 ---
 # <a name="role-assignments"></a>角色指派
 
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「角色指派」  會決定預存項目以及報表伺服器本身的存取權。 角色指派包含下列部份：  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「角色指派」** 會決定預存項目以及報表伺服器本身的存取權。 角色指派包含下列部份：  
   
 - 您想要控制存取權的安全性實體項目。 安全性實體項目的範例包括資料夾、報表和資源。  
   
 - 可以利用 Windows 安全性，或其他驗證機制驗證的使用者或群組帳戶。  
   
 - 角色定義會定義一組允許的工作，包括：
-  - **[瀏覽器]**
+  - **瀏覽器**
   - **內容管理員**
   - **我的報表**
   - **發行者**

@@ -1,4 +1,5 @@
 ---
+description: setByte 方法 (SQLServerCallableStatement)
 title: setByte 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 102d77049a1fef17a483c6302dcb7edb324d1490
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2985b5db2ee75d5d54c890490ff1e0bec4e47e69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432380"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>setByte 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

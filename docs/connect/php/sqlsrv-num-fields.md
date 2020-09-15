@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_num_fields
 title: sqlsrv_num_fields | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1155a01de68a9c4d45fc2c7e4e6660c581c3bb7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81f279d758f6dcb212fd20306fb09cb0222a2832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426210"
 ---
 # <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

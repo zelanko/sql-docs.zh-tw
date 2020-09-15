@@ -1,4 +1,5 @@
 ---
+description: setClob 方法 (java.lang.String, java.io.Reader)
 title: setClob 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f7457b8a-df31-4999-883e-8cc386a48ceb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f123a708698c5ebfd4aac0eac13655a9f30e2f94
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1b7447b6539df6077ff2b32ce3fb8cf0f0e2efdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432130"
 ---
 # <a name="setclob-method-javalangstring-javaioreader"></a>setClob 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

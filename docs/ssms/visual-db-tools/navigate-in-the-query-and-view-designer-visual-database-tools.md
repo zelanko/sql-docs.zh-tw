@@ -1,4 +1,5 @@
 ---
+description: 在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
 title: 在查詢與檢視表設計工具中巡覽
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423072"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85996774"
 |在資料表或表格化物件的資料行之間移動|方向鍵|要移至的資料行|  
 |選擇選取的資料行以供輸出|空白鍵或加號鍵|資料行名稱旁邊的核取方塊|  
 |從查詢輸出中移除選取的資料行|空白鍵或減號鍵|資料行名稱旁邊的核取方塊|  
-|從查詢中移除選取的資料表、表格化物件或聯結線|刪除|按一下滑鼠右鍵，再選擇 [移除]  。|  
+|從查詢中移除選取的資料表、表格化物件或聯結線|刪除|按一下滑鼠右鍵，再選擇 [移除]****。|  
   
 > [!NOTE]  
 > 如果選取多個項目，按下此按鍵會影響所有選取的項目。 按住 CTRL 鍵，同時在要選取的各項目上按一下滑鼠，即可選取多個項目。  
@@ -52,7 +53,7 @@ ms.locfileid: "85996774"
   
 ## <a name="criteria-pane"></a>準則窗格  
   
-|至|按鍵|按一下|  
+|收件者|按鍵|按一下|  
 |------|---------|---------|  
 |在資料格間移動|方向鍵、TAB 或 SHIFT+TAB|目標資料格|  
 |移至所選取資料行的最後一列|CTRL+向下鍵||  
@@ -78,7 +79,7 @@ ms.locfileid: "85996774"
 如需詳細資訊，請參閱[準則窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
-在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯]  功能表上的 [剪下]  、[複製]  和 [貼上]  命令。  
+在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯]**** 功能表上的 [剪下]****、[複製]**** 和 [貼上]**** 命令。  
   
 > [!NOTE]  
 > 您只能插入文字；沒有覆寫模式。  

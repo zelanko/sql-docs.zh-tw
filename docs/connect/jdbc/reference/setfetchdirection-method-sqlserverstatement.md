@@ -1,4 +1,5 @@
 ---
+description: setFetchDirection 方法 (SQLServerStatement)
 title: setFetchDirection 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8436637eef7edeb16ad6b1d4e1c72748efcbfb8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7e9469fe9b0e559358e3e18c15719161b0ae0033
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431870"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>setFetchDirection 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

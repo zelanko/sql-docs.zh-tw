@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream 方法 (int, java.io.Reader)
 title: setCharacterStream 方法 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4987a452d0f4d4985dbcaacf53b265aa7d8f1c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cd2b09810329bc79f74616fc964eb18c2efd803
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432320"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

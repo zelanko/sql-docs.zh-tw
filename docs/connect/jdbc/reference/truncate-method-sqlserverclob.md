@@ -1,4 +1,5 @@
 ---
+description: truncate 方法 (SQLServerClob)
 title: truncate 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ea3b2a03-387e-49d7-a4d6-ca6a6a354c90
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e9f1f7c220fecf512fbed2b8cbcac0c7745d98e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d25deb243f43b3c4ae4cd82d561e581cc5b5ba95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431420"
 ---
 # <a name="truncate-method-sqlserverclob"></a>truncate 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: start 方法 (SQLServerXAResource)
 title: start 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 33c90213-92f7-416b-b2fa-67a1afe64e97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c15f96b8375904a42d7f246212db264d1801899a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b0ce9233089c94a253e0c827769b042a37582b1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431530"
 ---
 # <a name="start-method-sqlserverxaresource"></a>start 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

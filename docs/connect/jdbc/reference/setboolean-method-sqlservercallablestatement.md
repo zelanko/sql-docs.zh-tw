@@ -1,4 +1,5 @@
 ---
+description: setBoolean 方法 (SQLServerCallableStatement)
 title: setBoolean 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04f09bcd843946763fe3bb2b69cbdcd9560e7c91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 406af612bb46c03fb9b624aa034bc5a0edad8ce4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432400"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>setBoolean 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

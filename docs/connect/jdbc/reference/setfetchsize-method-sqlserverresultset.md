@@ -1,4 +1,5 @@
 ---
+description: setFetchSize 方法 (SQLServerResultSet)
 title: setFetchSize 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5052d9830c3df97e8e491c38a3c606bbdfca1919
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d984004b4d306462e2c1345344ebc8072f775a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431860"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

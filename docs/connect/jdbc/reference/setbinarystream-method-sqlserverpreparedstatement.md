@@ -1,4 +1,5 @@
 ---
+description: setBinaryStream 方法 (SQLServerPreparedStatement)
 title: setBinaryStream 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2adb2b88-96d6-4645-86d0-0388c8186691
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82247317859792c9509e4f851ac195a43fb2e8c3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce44f685e86c1351fdd1b9594b3d87693b982e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432440"
 ---
 # <a name="setbinarystream-method-sqlserverpreparedstatement"></a>setBinaryStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

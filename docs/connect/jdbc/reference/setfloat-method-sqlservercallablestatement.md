@@ -1,4 +1,5 @@
 ---
+description: setFloat 方法 (SQLServerCallableStatement)
 title: setFloat 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 26d861da-bb6a-4197-8b32-13dc7781c2bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ef88415db781721815be6de51c6b94303e59b07
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae5392f7951f254ff8c73fa484743e49e2441010
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431810"
 ---
 # <a name="setfloat-method-sqlservercallablestatement"></a>setFloat 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

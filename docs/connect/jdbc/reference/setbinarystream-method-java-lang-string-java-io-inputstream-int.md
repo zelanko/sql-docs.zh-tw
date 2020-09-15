@@ -1,4 +1,5 @@
 ---
+description: setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 title: 針對輸入資料流的 setBinaryStream 方法 - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1badda80dc0a0a82926f7466a407ad5d0f44362b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5b23d225c1cfeef0ca4008b221475af3cc901bfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432460"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public void setBinaryStream(java.lang.String parameterName,
   
  InputStream 物件。  
   
- *length*  
+ *length* (長度)  
   
  **int**，指出位元組數目的長度。  
   

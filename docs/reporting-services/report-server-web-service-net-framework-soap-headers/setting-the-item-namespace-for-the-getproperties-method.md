@@ -1,4 +1,5 @@
 ---
+description: 設定 GetProperties 方法的項目命名空間
 title: 設定 GetProperties 方法的項目命名空間 | Microsoft Docs
 Description: 了解如何使用 GetProperties 方法和 ItemNamespaceHeader SOAP 標頭，根據項目的路徑或識別碼來擷取屬性。
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc0d61726a885b6a2422a4fe048121e65b8642f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423242"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>設定 GetProperties 方法的項目命名空間
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 <xref:ReportService2010.ItemNamespaceHeader> SOAP 標頭，根據兩個不同的項目識別碼來擷取項目屬性：項目的完整路徑或是項目的識別碼。  

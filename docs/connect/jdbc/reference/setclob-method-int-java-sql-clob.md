@@ -1,4 +1,5 @@
 ---
+description: setClob 方法 (int, java.sql.Clob)
 title: setClob 方法 (int, java.sql.Clob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 68d49f2c-fd8d-4abb-bfdc-e7b0fbd9a9da
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc029cf788bcd55562b2434ece8de7cfe18c0921
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0fd797ad65cd17725e7f033f3245ea708caaead3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432150"
 ---
 # <a name="setclob-method-int-javasqlclob"></a>setClob 方法 (int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

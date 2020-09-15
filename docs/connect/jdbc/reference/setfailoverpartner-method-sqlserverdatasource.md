@@ -1,4 +1,5 @@
 ---
+description: setFailoverPartner 方法 (SQLServerDataSource)
 title: setFailoverPartner 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d152001d1b0eb4ad47936d04ba6c74b8ae7f6e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c90a6cd4850ad746bafde4646cd459fbcff3e825
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431880"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>setFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

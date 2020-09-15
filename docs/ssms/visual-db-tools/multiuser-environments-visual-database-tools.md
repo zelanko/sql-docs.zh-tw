@@ -1,4 +1,5 @@
 ---
+description: 多使用者環境 (Visual Database Tools)
 title: 多使用者環境
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: fbd00cd0d6bdd06e23ec65ddb73ffbfa65649199
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7b31540ad30056e3f4a3b6d34c2bb57912e304a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423112"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多使用者環境 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

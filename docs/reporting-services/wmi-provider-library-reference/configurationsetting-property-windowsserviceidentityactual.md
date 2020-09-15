@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 屬性 - WindowsServiceIdentityActual
 title: ConfigurationSetting 屬性 - WindowsServiceIdentityActual | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9a5cedf8b4a64007147c39d69913c51f1fb2d0c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2425d8ebbc3e98801d3e77a1221ff47b37c4b2a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423062"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 屬性 - WindowsServiceIdentityActual
   執行報表伺服器 Windows 服務所使用的識別。 唯讀。  

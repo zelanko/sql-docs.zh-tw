@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 title: setCharacterStream 方法 (java.lang.String, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 304797651e93ea39269b9a68f810a3e98290eac8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9e7b63e52278c3a64f0c7bd4f9c6d5915b3b1f50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432260"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public final void setCharacterStream(java.lang.String parameterName
   
  Reader 物件，包含 Unicode 資料。  
   
- *length*  
+ *length* (長度)  
   
  **long**，指出資料流中的字元數。  
   
@@ -48,7 +49,7 @@ public final void setCharacterStream(java.lang.String parameterName
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 setCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setCharacterStream 方法指定。  
+ 此 setCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setCharacterStream 方法所指定。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

@@ -1,4 +1,5 @@
 ---
+description: SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting)
 title: SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1d746ec97ef320cb9527d3a4be4dc3011c7b875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423102"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 方法 - SetEmailConfiguration
   設定報表伺服器用來傳送電子郵件的電子郵件傳遞延伸模組。  
@@ -41,7 +42,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
   
 ## <a name="parameters"></a>參數  
  *SendUsingSMTPServer*  
- 指出伺服器是否要使用 SMTP 伺服器來傳送電子郵件的布林值。 這個值只能設定為 true。 預設值為 false。  
+ 指出伺服器是否要使用 SMTP 伺服器來傳送電子郵件的布林值。 這個值只能設定為 true。 預設值為 False。  
   
  *SMTPServer*  
  包含 SMTP 伺服器之名稱或 IP 位址的字串。  

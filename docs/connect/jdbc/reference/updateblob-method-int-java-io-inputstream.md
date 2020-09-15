@@ -1,4 +1,5 @@
 ---
+description: updateBlob 方法 (int, java.io.InputStream)
 title: updateBlob 方法 (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 117f13d061641d3d9c02e5dbe23c6122c03d1c03
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a4d73df45761aad32b023b91e3b1f42dbcb99da0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431400"
 ---
 # <a name="updateblob-method-int-javaioinputstream"></a>updateBlob 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

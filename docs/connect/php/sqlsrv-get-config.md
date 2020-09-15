@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_get_config
 title: sqlsrv_get_config | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef4f53e4ee4ae1c9022ea8bfab0ba7a66c147c08
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1d8b78e001b666fbc45f204aee9488e740c95208
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426290"
 ---
 # <a name="sqlsrv_get_config"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

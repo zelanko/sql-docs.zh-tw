@@ -1,4 +1,5 @@
 ---
+description: setHostNameInCertificate 方法 (SQLServerDataSource)
 title: setHostNameInCertificate 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 418e9aea8d44d3be23bc21c5a8950c5788e7c07a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 886a32898b04cc8907a832d54a3051222e4d0fb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431820"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

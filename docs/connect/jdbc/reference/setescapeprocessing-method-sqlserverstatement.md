@@ -1,4 +1,5 @@
 ---
+description: setEscapeProcessing 方法 (SQLServerStatement)
 title: setEscapeProcessing 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b19314337fd78f85ab79d186c0d0956f0ed5aaa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b8864c591a72fdeabc5dd61ee7df34dcdc5f61c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431900"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>setEscapeProcessing 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

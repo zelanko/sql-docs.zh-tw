@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream 方法 (java.lang.String, java.io.Reader)
 title: setCharacterStream 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 43acac5b-5a8a-4685-bee6-7194d2d03a52
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c8df9d2bda9773bf3e5e6d9bcdc7294b29ff740b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0d7f8ad0d6ef17da0539983b2da2f67994ee2dca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432250"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ public final void setCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 setCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setCharacterStream 方法指定。  
+ 此 setCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setCharacterStream 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [setCharacterStream 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   

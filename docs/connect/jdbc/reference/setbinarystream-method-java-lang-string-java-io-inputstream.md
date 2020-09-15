@@ -1,4 +1,5 @@
 ---
+description: setBinaryStream 方法 (java.lang.String, java.io.InputStream)
 title: 針對輸入資料流的 setBinaryStream 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96f64182f3bab275f69952a030580000dbfb1c3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce6bfbecdd30409a7bb3b5fe4cf11ebd7039d149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432450"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

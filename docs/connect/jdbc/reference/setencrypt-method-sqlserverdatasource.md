@@ -1,4 +1,5 @@
 ---
+description: setEncrypt 方法 (SQLServerDataSource)
 title: setEncrypt 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da0aa987f1ec773e2f61e738bc4045136c64859a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e7da98aa70be2066c370b75e2bc213c25ba16e03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431970"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public void setEncypt(boolean encrypt)
   
 -   使用具有較小 RSA 公開金鑰的伺服器憑證設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   設定 JVM 在 "\<Java 主目錄>/lib/security/java.security" 安全性屬性檔中使用不同的 JSSE 安全性提供者  
+-   設定 JVM 使用 "\<java-home>/lib/security/java.security" 安全屬性檔案中的不同 JSSE 安全性提供者  
   
 -   使用不同的 JVM  
   

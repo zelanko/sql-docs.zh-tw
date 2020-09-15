@@ -1,4 +1,5 @@
 ---
+description: updateClob 方法 (java.lang.String, java.sql.Clob)
 title: updateClob 方法 (java.lang.String, java.sql.Clob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5da64915-1c13-44fd-90c0-52168889bae0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fad30096707c07dfc61e3cbfd1d6838d5b8d41a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d9537b7bd0bd595e1063354e0e7c783007d15d59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431380"
 ---
 # <a name="updateclob-method-javalangstring-javasqlclob"></a>updateClob 方法 (java.lang.String, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

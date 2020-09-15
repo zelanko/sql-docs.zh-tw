@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
 title: GetDatabaseVersionDisplayName 方法 (WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 598bc82d266bfff12f085275a03598f2caf6fc48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423222"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
   取得給定報表伺服器資料庫版本字串的顯示名稱。  

@@ -1,4 +1,5 @@
 ---
+description: setClob 方法 (java.lang.String, java.io.Reader, long)
 title: setClob 方法 (java.lang.String, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbe5407948691ebe8d551e274e9ed29ace96350c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 40992ee39a6e7a3dc27bb41969e555988b49b397
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432140"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public final void setClob(java.lang.String parameterName,
   
  Reader 物件。  
   
- *length*  
+ *length* (長度)  
   
  **long**，指出資料流中的字元數。  
   

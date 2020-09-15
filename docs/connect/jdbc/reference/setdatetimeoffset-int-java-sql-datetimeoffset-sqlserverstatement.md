@@ -1,4 +1,5 @@
 ---
+description: setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 title: setDateTimeOffset(int, java.sql.DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a45711b4f3007f0f3c91f271542784386db99379
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 219e9a2b275065af96c39d0b66094297e427aa40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431990"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |--------------|------------|  
 |Datetime|只能插入："YYYY-MM-DD hh:mm:ss[.nnn]"|  
 |smalldatetime|只能插入："YYYY-MM-DD hh:mm:ss"|  
-|Time|只能插入："hh:mm:ss[.nnnnnnn]"|  
+|時間|只能插入："hh:mm:ss[.nnnnnnn]"|  
 |Date|只能插入："YYYY-MM-DD"|  
 |DateTime2|只能插入："YYYY-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
