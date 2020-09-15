@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8100d6f18803f891ac9ba5607185fdbac782660
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883733"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332517"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -46,11 +46,18 @@ ms.locfileid: "85883733"
   
     您必須儲存的檔案包括下列資料庫檔案：  
 
-    |             |            |           |            |
-    | :---------- | :--------- |:--------- | :--------- |
-    | Master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
-    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
-    | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
+    * Master.mdf
+    * msdbdata.mdf
+    * Tempdb.mdf
+    * mastlog.ldf
+    * msdblog.ldf
+    * Templog.ldf
+    * model.mdf
+    * Mssqlsystemresource.mdf
+    * ReportServer[$InstanceName]
+    * modellog.ldf
+    * Mssqlsustemresource.ldf
+    * ReportServer[$InstanceName]TempDB
 
     > [!NOTE]
     > ReportServer 資料庫包含在 SQL Server Reporting Services 中。   

@@ -2,7 +2,7 @@
 title: 步驟 3：使用 ADO.NET 連線到 SQL 的概念證明 | Microsoft Docs
 description: 包含用來連線到 SQL Server、執行查詢及插入資料列的 C# 程式碼範例。
 ms.custom: ''
-ms.date: 08/15/2019
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e78ba27912452562199a3d0c4d0d995b17371a56
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5e68e4e7753126c995923f0c037f227572a17e7f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918182"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823373"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
 
@@ -34,9 +34,8 @@ ms.locfileid: "80918182"
 
 
 ```csharp
-// C# , ADO.NET  
 using System;
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -77,9 +76,9 @@ SqlCommand. ExecuteReader 方法：
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -165,9 +164,9 @@ Press any key to finish...
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  

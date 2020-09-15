@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011856"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939218"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計資料區域會顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以在單一量測計面板內，建立多個量測計來共用篩選、群組或排序等常用功能。  
@@ -283,16 +283,13 @@ ms.locfileid: "84011856"
   
 -   [設定量測計的最小值或最大值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [設定量測計的貼齊間隔 (報表產生器及 SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2) \(機器翻譯\)  
-  
--   [將影像指定為量測計的指標 (報表產生器及 SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b) \(機器翻譯\)  
+-   [設定量測計的貼齊間隔 (報表產生器及 SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs) \(機器翻譯\)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  下列主題會提供有關使用量測計的其他資訊。  
   
-|||  
-|-|-|  
 |詞彙|定義|  
+|-|-|  
 |[格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之標尺的一般資訊，以及有關格式化星形與線性量測計上標尺之選項的詳細資訊。|  
 |[格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|  
 |[格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: 586e55397297277130b61b2e6468dac0ada7b38a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465305"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807090"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -225,4 +225,4 @@ DSN 中只需要 DRIVER 項目，但若要連線到伺服器，`sqlcmd` 或 `bcp
 
 ## <a name="see-also"></a>另請參閱  
 [使用 **bcp** 進行連線](connecting-with-bcp.md)  
- 
+[版本資訊](release-notes-tools.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547470"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390654"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547470"
   
  ![報表工具列](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "報表工具列")  
   
-|||  
+|互動|使用者介面|  
 |-|-|  
 |第一個對話方塊在所有瀏覽器中都相同，並且允許您變更基本版面配置屬性，例如方向。 當您按一下 [列印] ，其體驗會依您使用的瀏覽器而稍有不同。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |在 Chrome 中，會開啟詳細的瀏覽器列印對話方塊。   您可以變更列印設定、列印和開啟作業系統列印對話方塊。|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

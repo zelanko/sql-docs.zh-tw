@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 143520a4bb62df4f38ed0d1d116fd6dc1df22f2c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 67e43301ac1582bd3cfc085a9ad6412724d4ec92
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487737"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395285"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|類別|值|  
 |-|-|  
 |產品名稱|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件識別碼|rrRenderingError|  

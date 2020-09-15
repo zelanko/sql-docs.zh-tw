@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764898"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934277"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -29,7 +29,7 @@ ms.locfileid: "83764898"
 
  如需有關安裝及設定的詳細資訊，請參閱以下主題：  
   
--   [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
+-   [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)。  
   
 -   [將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "83764898"
   
 |**Task**|**連結**|  
 |--------------|--------------|  
-|安裝和設定 SharePoint 模式之 Reporting Services 的詳細步驟。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)和[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
+|安裝和設定 SharePoint 模式之 Reporting Services 的詳細步驟。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)和[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
 |新增額外的報表伺服器，藉以向外延展您的 Reporting Services SharePoint 部署。|[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和 [SharePoint 中 SQL Server BI 功能的部署拓撲](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。|  
 |新增針對檢視和報表項目安裝之 Reporting Services 元件的其他 SharePoint Web 前端。|[將其他 Reporting Services Web 前端新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |在 SharePoint 內設定報表伺服器的電子郵件。|[設定 Reporting Services 服務應用程式的電子郵件](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
