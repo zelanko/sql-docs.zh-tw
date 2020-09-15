@@ -1,4 +1,5 @@
 ---
+description: setString 方法 (long, java.lang.String, int, int)
 title: setString 方法 (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ad0f8e51b0663c771c1ee519ac318a13264aa7e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 12b594a7cfd5133abde253123525161cc0d63273
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355194"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 方法 (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

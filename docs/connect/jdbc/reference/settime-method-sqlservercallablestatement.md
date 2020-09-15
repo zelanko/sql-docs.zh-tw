@@ -1,4 +1,5 @@
 ---
+description: setTime 方法 (SQLServerCallableStatement)
 title: setTime 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 04ea83b2-db5e-4b46-b016-9e496363827e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fc546fd72aa53ec26c3b3385e7a5459464ae2dd4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a39c76ea741f730c05f66ecc1ea330bed76be6cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355234"
 ---
 # <a name="settime-method-sqlservercallablestatement"></a>setTime 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

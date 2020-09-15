@@ -1,4 +1,5 @@
 ---
+description: setTrustManagerClass 方法 (SQLServerDataSource)
 title: setTrustManagerClass 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21a6101b1b9a16a90ddb9fd86579f6b5e4b4dac2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 74a82516e982e9bf84d00939cb93bc5f9eda502e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354954"
 ---
 # <a name="settrustmanagerclass-method-sqlserverdatasource"></a>setTrustManagerClass 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

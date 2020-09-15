@@ -1,4 +1,5 @@
 ---
+description: SQLServerCallableStatement 類別
 title: SQLServerCallableStatement 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3bc4825fcbf802fa76056353a8883f64925c438f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a43f718b3a4723710246b85bc166bb52d24a3f8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355084"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

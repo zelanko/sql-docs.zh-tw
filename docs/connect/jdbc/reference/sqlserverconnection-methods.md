@@ -1,4 +1,5 @@
 ---
+description: SQLServerConnection 方法
 title: SQLServerConnection 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c3db6be0-9e2b-4408-ab22-b6ecfc42961e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8702c53db3b4ca70e14caacdee5f08f31b152a9c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b25927d964c185d3aa045706847499a6476f8bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354884"
 ---
 # <a name="sqlserverconnection-methods"></a>SQLServerConnection 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

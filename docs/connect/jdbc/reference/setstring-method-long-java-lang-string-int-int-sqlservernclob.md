@@ -1,4 +1,5 @@
 ---
+description: setString 方法 (long, java.lang.String, int, int) (SQLServerNClob)
 title: setString 方法 (long, java.lang.String, int, int) - NClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ecf0a25eb9219ee662e9431ca14af61dfc52c42d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1b28dc4e76be3d321f78cef7820a3c53480f08d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355274"
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>setString 方法 (long, java.lang.String, int, int) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
