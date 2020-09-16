@@ -1,7 +1,7 @@
 ---
 title: Linux 和 macOS 上的 ODBC 驅動程式已知問題
 description: 了解 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 已知問題，以及連線問題的疑難排解步驟。
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1057252f896b62a5659b53aa53eb2f5c6d9b17ea
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886398"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288021"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux 和 macOS 上的 ODBC 驅動程式已知問題
 
@@ -58,7 +58,7 @@ TraceFile = (path to log file, or /dev/stdout to output directly to the terminal
         Entry:  
             Connection = 0x17c858e0  
             Window Hdl = (nil)  
-            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str In = [DRIVER={ODBC Driver 17 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
             Str Out = (nil)  
             Str Out Max = 0  
             Str Out Ptr = (nil)  

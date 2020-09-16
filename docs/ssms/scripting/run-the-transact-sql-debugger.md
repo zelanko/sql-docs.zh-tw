@@ -2,7 +2,7 @@
 title: 執行 Transact-SQL 偵錯工具
 description: 了解如何自訂 Transact-SQL 偵錯工具，以及如何使用此偵錯工具來偵錯 Transact-SQL 程式碼。 您可在另一部電腦上的資料庫引擎執行個體上執行該偵錯工具。
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122814"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901961"
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
 

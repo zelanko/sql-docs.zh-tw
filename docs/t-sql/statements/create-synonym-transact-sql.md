@@ -21,14 +21,14 @@ helpviewer_keywords:
 - CREATE SYNONYM statement
 - synonyms [SQL Server], creating
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6b157b8b501d33221f8cdc6d377c8e35aa57207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0db46168ccaa488960db4f1a4aa9a0e7a73c5434
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426640"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538064"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 

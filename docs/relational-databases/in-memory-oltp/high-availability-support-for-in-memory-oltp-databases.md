@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fa468028198839f9cf8d4dd6d12791966d254aaf
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88091980"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537075"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>記憶體內部 OLTP 資料庫的高可用性支援
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

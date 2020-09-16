@@ -20,14 +20,14 @@ helpviewer_keywords:
 - DROP FULLTEXT INDEX statement
 - dropping full-text indexes
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 111b04595ee418b277b5284452787fe1307a233b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 98d7d4fb82ee030afe623a9873be14963632f7c1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478827"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541270"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

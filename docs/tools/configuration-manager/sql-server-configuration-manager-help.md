@@ -6,7 +6,7 @@ ms.date: 02/01/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
@@ -14,12 +14,12 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02926be4321c3f423f33c9b10b810009e65e2731
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a881d4e40717fa943f0674d5af7c570e41bf2fcc
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895050"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901794"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 組態管理員說明
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -83,6 +83,5 @@ ms.locfileid: "85895050"
  [SQL Server 服務](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server 網路設定](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 設定](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
- [選擇網路通訊協定](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
-  
+ [選擇網路通訊協定](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))  
   

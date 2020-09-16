@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e73839faa5e369ced7e6ad6328ed4271788268f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 463ccd2c76d5b3dc1428aa35540f068eee7fcc37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881878"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901087"
 ---
 # <a name="shared-memory-properties"></a>共用記憶體屬性
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -32,7 +32,6 @@ ms.locfileid: "85881878"
  可能的值為 [是] 和 [否]。 根據預設，已啟用共用記憶體通訊協定。  
   
 ## <a name="see-also"></a>另請參閱  
- [選擇網路通訊協定](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
+ [選擇網路通訊協定](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
  [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
-  
   

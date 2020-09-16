@@ -1,11 +1,8 @@
 ---
 title: 列印程式碼與結果
 description: 了解如何在列印時指定文字的色彩。 色彩可能會和用於顯示的不同。 了解如何控制是否要在清單上顯示行號。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -15,17 +12,22 @@ helpviewer_keywords:
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf3abb5bbecbc93a9a2f86b373f6192b7fbb6169
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 0a498a46d2b3afce46079faaec0ef717836fc973
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122550"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093462"
 ---
 # <a name="print-code-and-results"></a>列印程式碼與結果
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  當您列印查詢或檔案時，如果您的印表機支援彩色列印，且印表機設定啟用了彩色列印，就會用彩色來列印彩色的元素。  
+
+當您列印查詢或檔案時，如果您的印表機支援彩色列印，且印表機設定啟用了彩色列印，就會用彩色來列印彩色的元素。  
   
  不過，編輯器中的字型和配色與印表機列印文字的方式可能會不同。 請從 [工具] 功能表上，選取 [選項]。 在 [環境]**** 之下，按一下 [字型和色彩]****，再選取編輯器要顯示之項目的字型和色彩，以及列印時所採用的字型和色彩。 由於這些設定可能不同，因此，輸出可能會與編輯器所顯示的情況不同。  
   

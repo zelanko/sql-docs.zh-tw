@@ -4,7 +4,7 @@ description: 了解如何將 Transact-SQL 指令檔中其中斷點移至到指�
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ada37fc6ca1b90e65b2cc4531b13c090db05736
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: ea7eeade1386afeca1361cf1fbefc118eb0eb0be
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122947"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901291"
 ---
 # <a name="edit-a-breakpoint-location"></a>編輯中斷點位置
 

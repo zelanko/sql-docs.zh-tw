@@ -20,14 +20,14 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c6bd938d1dfcf4cf1506d1b8eb35cade61458f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8d195ca82f1f137b4777bc0d4c442c7c9af1a624
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467341"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540753"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 

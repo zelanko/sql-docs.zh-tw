@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485572"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076803"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 
 根據預設，每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的優先權為 7，這稱為一般優先權。 這讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒有夠高的優先權，可以取得足夠的 CPU 資源，而不會影響其他的應用程式。 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 使用[優先權提升](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)設定選項，可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中執行緒的優先權增加至 13。 這稱為高優先權。 這個設定讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒擁有比大部份其他應用程式更高的優先權。 因此，每當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒就緒可執行時，通常系統會先分派執行緒，且其他應用程式不會預先清空執行緒。 當伺服器僅執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體、而沒有執行其他應用程式時，可以改善系統的效能。 然而，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中發生需要大量記憶體的作業，則其他應用程式可能無法擁有夠高的優先權，以預先清空 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行緒。 
 
 如果您在電腦上執行多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，並且僅提高部份執行個體的優先權，則以一般優先權執行的所有執行個體之效能都將受到影響。 另外，如果有開啟優先權提升，就可能會降低伺服器上其他應用程式與元件的效能。 因此，它應該在嚴格控制的情況下使用。
+
 
 ## <a name="hot-add-cpu"></a>熱新增 CPU
 熱新增 CPU 是指將 CPU 動態新增到執行中系統的功能。 新增 CPU 可發生於實體上新增硬體、邏輯上進行線上硬體分割或是虛擬上透過虛擬化層時。 從 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 開始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 便可支援熱新增 CPU。

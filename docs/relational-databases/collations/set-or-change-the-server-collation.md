@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.reviewer: carlrab
-ms.openlocfilehash: fbcfa1ad33ef986bcd8e6cfc621758f632118ba0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd3a3de0bf42300075af11ddafb088dd746f954
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465559"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539771"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
 

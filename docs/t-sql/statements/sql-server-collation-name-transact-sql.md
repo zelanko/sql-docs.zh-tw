@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL collations
 - names [SQL Server], collations
 ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11608103a07937dd1c2785369d799e1171769fe4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afec53715458129253f1f2bebb8eee40214d15c6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444658"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541316"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 定序名稱 (Transact-SQL)
 

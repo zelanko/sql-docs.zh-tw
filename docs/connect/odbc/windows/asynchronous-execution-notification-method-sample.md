@@ -2,7 +2,7 @@
 title: 非同步執行 (通知方法) 範例
 description: 示範如何在 Microsoft ODBC Driver for SQL Server 中使用非同步執行 (使用通知方法) 的範例程式碼。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f0a5a7ea9f252364c200c587e60193366a005f60
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8a86a0fd8103fc1e64555f94397893281c494708
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922286"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89287920"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同步執行 (通知方法) 範例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -318,7 +318,7 @@ int _tmain(int argc, _TCHAR* argv[])
     for(int i = 0; i < g_nConnection; i++)  
     {  
         SQLDriverConnect(g_hDbcs[i],NULL,
-            (SQLCHAR*)"DRIVER={ODBC Driver 13 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",
+            (SQLCHAR*)"DRIVER={ODBC Driver 17 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",
             SQL_NTS, (SQLCHAR*)g_connOut[i].szOutConnectionString, 500, &g_connOut[i].iLen, SQL_DRIVER_NOPROMPT);  
     }
 

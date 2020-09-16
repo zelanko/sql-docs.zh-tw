@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b907472303d6ba11691efe72bb08717ac7854ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722391"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537997"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

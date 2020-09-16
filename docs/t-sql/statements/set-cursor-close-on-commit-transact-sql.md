@@ -22,14 +22,14 @@ helpviewer_keywords:
 - cursors [SQL Server], closing
 - SET CURSOR_CLOSE_ON_COMMIT statement
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b8353cb7043f3835149104f0ab277af6de2ed45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 320b3ed7656ea7862e2f1d90818930646c865a01
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414824"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541239"
 ---
 # <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

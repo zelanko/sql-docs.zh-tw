@@ -3,7 +3,7 @@ title: 指定中斷點動作
 description: 立即了解如何指定「叫用」動作，這是一個自訂工作，可在遇到中斷點時執行 Transact-SQL 偵錯工具，並滿足特定其他條件。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: a9f25e1c75bfeef51562dddd71f5dc376d46b927
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122719"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901624"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
 

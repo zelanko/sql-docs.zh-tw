@@ -20,14 +20,14 @@ helpviewer_keywords:
 - deleting full-text catalogs
 - DROP FULLTEXT CATALOG statement
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 09ccdc16a00b60c5f6f0e2e70f2378a9a098048a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a579383915a734eb692b7f52f129f824be4201c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358604"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544157"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

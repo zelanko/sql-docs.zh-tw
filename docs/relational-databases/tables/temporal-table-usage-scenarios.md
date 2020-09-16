@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40bc6d8774c4d8a9d37642df23d6b71237a37c6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419072"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540829"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 
