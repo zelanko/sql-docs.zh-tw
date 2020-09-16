@@ -1,4 +1,5 @@
 ---
+description: getURL 方法 (SQLServerDataSource)
 title: getURL 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ed41c600f0fc7a82f1f9a4ec3f512e96839191d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b15ef1dae8182994f179a2284b85b4838730516c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433820"
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>getURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

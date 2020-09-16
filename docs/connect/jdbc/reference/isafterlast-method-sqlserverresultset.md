@@ -1,4 +1,5 @@
 ---
+description: isAfterLast 方法 (SQLServerResultSet)
 title: isAfterLast 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8542c6a2dc87e1f0d52049b27446acf2c1f909de
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4f0f982ebfce1e4920c98583f31bb7a9e14ba867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433670"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>isAfterLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

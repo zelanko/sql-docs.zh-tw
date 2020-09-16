@@ -1,4 +1,5 @@
 ---
+description: setAsciiStream 方法 (SQLServerClob)
 title: setAsciiStream 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 665696770d4a683bc67aa469ff0e1b27a8378615
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 80438309cf2e8ee2368762197b0617b2443bc42d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432580"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

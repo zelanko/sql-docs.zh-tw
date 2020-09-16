@@ -1,4 +1,5 @@
 ---
+description: getUser 方法 (SQLServerDataSource)
 title: getUser 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ce0fa8fb14789f6557bd4f54c48756acd2d1d87
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5b3f1cf26d395e982c21f7f4819ff19b4e633719
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433850"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

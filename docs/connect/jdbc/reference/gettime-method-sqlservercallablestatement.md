@@ -1,4 +1,5 @@
 ---
+description: getTime 方法 (SQLServerCallableStatement)
 title: getTime 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6801394bda93a87860e60f01719c69d709e04ee5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fb2ca273e5fdecb8aa01e0c26c4b60285edf861e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434170"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>getTime 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

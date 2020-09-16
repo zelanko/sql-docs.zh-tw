@@ -1,4 +1,5 @@
 ---
+description: isWritable 方法 (SQLServerResultSetMetaData)
 title: isWritable 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f199ae0fea034ed83e0b633939b2224e531e9f8c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 56f7d240f82209c46414e40d1c7b6518f198239e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433270"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>isWritable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

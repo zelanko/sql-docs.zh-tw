@@ -1,4 +1,5 @@
 ---
+description: getTimestamp 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 title: getTimestamp 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 44474000-8951-49ee-93a5-c8cb879eaf55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c195a6fd4d48e4a77252b71f27228dbf833f9f7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dcee6ec45995da0c020a2430d1a69906c72d7ff9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434130"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTimestamp 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

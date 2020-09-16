@@ -1,4 +1,5 @@
 ---
+description: othersDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 title: othersDeletesAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ee84cea21eba37fd22b8ff40f7d14e4b63aadad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6bd0907c3d6992725ce9f9b43f8d00adab5b571a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433120"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>othersDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

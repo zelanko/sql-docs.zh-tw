@@ -1,4 +1,5 @@
 ---
+description: previous 方法 (SQLServerResultSet)
 title: previous 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a2a8ed081f89e5acd9d09f96fada5f5bc718057
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 97ba2829717022eeb26bdc2e43eb007eb61063b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432840"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: setBinaryStream 方法 (int, java.io.InputStream, long)
 title: setBinaryStream 方法 (int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 712fdfd5cd4b7dd87654d78feea49b15278bdd02
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e7f7b9564c6ae1c7dd1793d8c76a890807686e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432480"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>setBinaryStream 方法 (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public final void setBinaryStream(int parameterIndex,
   
  java.io.InputStream 物件。  
   
- *length*  
+ *length* (長度)  
   
  **long**，指定位元組的數目。  
   
@@ -48,7 +49,7 @@ public final void setBinaryStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 setBinaryStream 方法是由 java.sql.PreparedStatement 介面中的 setBinaryStream 方法所指定。  
+ 這個 setBinaryStream 方法是由 java.sql.PreparedStatement 介面中的 setBinaryStream 方法指定。  
   
  如果此資料流長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

@@ -1,4 +1,5 @@
 ---
+description: getTime 方法 (java.lang.String) (SQLServerResultSet)
 title: getTime 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e0efc0b3-4da4-45fc-9e8d-5edd9da7a42d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a36351169347041b56de8b48f39bb255c2a16a9a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a7c4d054b6ea5fa5983a149bce2c1319180f9785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434190"
 ---
 # <a name="gettime-method-javalangstring-sqlserverresultset"></a>getTime 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getSuperTypes 方法 (SQLServerDatabaseMetaData)
 title: getSuperTypes 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5c8d9c6c0b4d59aff90515818c13e849a55a1b8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 85106a2fb02a43ed0191717f93211994d8cc7fe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434280"
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>getSuperTypes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

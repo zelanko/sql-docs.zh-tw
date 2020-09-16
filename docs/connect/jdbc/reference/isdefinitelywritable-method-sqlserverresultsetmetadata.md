@@ -1,4 +1,5 @@
 ---
+description: isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
 title: isDefinitelyWritable 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 761a502dc01dd9ce2b3e7705338ce94f73393187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433630"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

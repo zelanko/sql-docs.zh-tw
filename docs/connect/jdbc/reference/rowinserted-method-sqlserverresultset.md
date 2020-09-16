@@ -1,4 +1,5 @@
 ---
+description: rowInserted 方法 (SQLServerResultSet)
 title: rowInserted 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b471631bb5111f6bc6af5889ecf0d4444e4742c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82daf8113de55a970196ac9a1715933bd6b78cfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432720"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

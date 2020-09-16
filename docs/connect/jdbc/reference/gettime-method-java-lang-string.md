@@ -1,4 +1,5 @@
 ---
+description: getTime 方法 (java.lang.String)
 title: getTime 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 560a3621c4c8752e4f42552b13cd35df5f276ced
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4b4bdcc5eeab3edf282619aac90d6b8bd50fbd81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434180"
 ---
 # <a name="gettime-method-javalangstring"></a>getTime 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

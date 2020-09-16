@@ -1,4 +1,5 @@
 ---
+description: nullsAreSortedAtStart 方法 (SQLServerDatabaseMetaData)
 title: nullsAreSortedAtStart 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5250e5dc1d16e83107d92b24131294a74f2efdb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50d26d02f4af38ec181c5c88a987475398a33dff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433150"
 ---
 # <a name="nullsaresortedatstart-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtStart 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

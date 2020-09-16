@@ -1,4 +1,5 @@
 ---
+description: setAsciiStream 方法 (SQLServerPreparedStatement)
 title: setAsciiStream 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83dcca17bdd2741cadb2a71631db5f5158217478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 74f87d8ec49080556d04364757e8b2b77e09ca88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432559"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>setAsciiStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

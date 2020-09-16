@@ -1,4 +1,5 @@
 ---
+description: getXAConnection 方法 ()
 title: getXAConnection 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c4e5b96ed5d008e374884597197a735ec72f767
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ea992985bc54be3313f7194781f345819bb1d869
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433730"
 ---
 # <a name="getxaconnection-method-"></a>getXAConnection 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

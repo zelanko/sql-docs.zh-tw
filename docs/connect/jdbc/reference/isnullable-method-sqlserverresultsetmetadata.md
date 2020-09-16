@@ -1,4 +1,5 @@
 ---
+description: isNullable 方法 (SQLServerResultSetMetaData)
 title: isNullable 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9306205afa72fdb28b9f7215db46e1f87fdbca3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6552a6aed76545c27e602212c984108ee60e0518
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433490"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>isNullable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

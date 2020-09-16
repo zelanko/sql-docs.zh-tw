@@ -1,4 +1,5 @@
 ---
+description: getTime 方法 (int)
 title: getTime 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1b8cee608f09a7095005d8ec7a1c47dbeb07d19
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: eb618aaa4a15cc370bc290b8a7ebb405f7771d72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434210"
 ---
 # <a name="gettime-method-int"></a>getTime 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

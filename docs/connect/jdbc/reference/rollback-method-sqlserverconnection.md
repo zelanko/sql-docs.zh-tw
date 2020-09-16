@@ -1,4 +1,5 @@
 ---
+description: rollback 方法 (SQLServerConnection)
 title: rollback 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a36e5b5a352531ed2c7c1b818423f602a81d1b4f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 94c8e262914c8a31b3fcbdea07133ec9c6782a7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432690"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

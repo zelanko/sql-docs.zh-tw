@@ -1,4 +1,5 @@
 ---
+description: isNullable 方法 (SQLServerParameterMetaData)
 title: isNullable 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bd918413f730cc2fb3cf251b31d8e8555e029fb6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e8b69729195546246a624773976487670c6441c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433530"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>isNullable 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

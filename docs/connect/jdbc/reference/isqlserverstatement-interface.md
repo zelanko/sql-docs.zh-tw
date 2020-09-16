@@ -1,4 +1,5 @@
 ---
+description: ISQLServerStatement 介面
 title: ISQLServerStatement 介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec01618ffa24c980733642ca66df5af0f234d172
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 037da22001317eaa8059e56671b712f151116487
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433450"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

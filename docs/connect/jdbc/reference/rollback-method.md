@@ -1,4 +1,5 @@
 ---
+description: rollback 方法 ()
 title: rollback 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 08eaa304a861ab697c8b9cc83446610740d13d11
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca2a2847f9d917872ee3a0b56bad50b184f58ea2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432670"
 ---
 # <a name="rollback-method-"></a>rollback 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

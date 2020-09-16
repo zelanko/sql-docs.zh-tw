@@ -1,4 +1,5 @@
 ---
+description: isReadOnly 方法 (SQLServerConnection)
 title: isReadOnly 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e3e8f4cdd1ae9d0fcb61ab5ccb2c47c11fb52ef
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 44a3255f8743384a8807388b7d2f0f8692fa61a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433440"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>isReadOnly 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

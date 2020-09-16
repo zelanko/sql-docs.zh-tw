@@ -1,4 +1,5 @@
 ---
+description: length 方法 (SQLServerClob)
 title: length 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f00c55bf8d1faa2ecfcd15dfebf7f392ead122
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 28b5a550b44d48a4f61883347fc8673d96ef4f8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433240"
 ---
 # <a name="length-method-sqlserverclob"></a>length 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

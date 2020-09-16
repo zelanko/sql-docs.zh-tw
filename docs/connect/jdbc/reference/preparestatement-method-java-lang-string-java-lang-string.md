@@ -1,4 +1,5 @@
 ---
+description: prepareStatement 方法 (java.lang.String, java.lang.String)
 title: prepareStatement 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e0db2871-3a5f-4fcc-af61-92333042dcd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1077f1a75328075138b5221af463f0e5b7186990
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51c8d9f09419c0d738bc819270c82a43471549be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432890"
 ---
 # <a name="preparestatement-method-javalangstring-javalangstring"></a>prepareStatement 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

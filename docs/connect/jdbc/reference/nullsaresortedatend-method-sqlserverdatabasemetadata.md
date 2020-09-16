@@ -1,4 +1,5 @@
 ---
+description: nullsAreSortedAtEnd 方法 (SQLServerDatabaseMetaData)
 title: nullsAreSortedAtEnd 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2faa53da128a5aa174f5dfc8b268110def6ea1ad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b11b9868720a588ae60d63abad651af01193ca20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433160"
 ---
 # <a name="nullsaresortedatend-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtEnd 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

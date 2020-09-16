@@ -1,4 +1,5 @@
 ---
+description: getTransactionTimeout 方法 (SQLServerXAResource)
 title: getTransactionTimeout 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cae91c04487f3ca973e9c7697ec992f61632ca17
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a8b8605ab9c9acf4872a93ed305da7cb01fef85c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434000"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>getTransactionTimeout 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

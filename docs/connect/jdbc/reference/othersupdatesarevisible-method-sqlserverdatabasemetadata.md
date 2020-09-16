@@ -1,4 +1,5 @@
 ---
+description: othersUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 title: othersUpdatesAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3fa13d626cc3a5e6d4b66ca96325ef3c8ed17b2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0bdb8bc28a620d2f5d8ff30b1e0be4457ddaf5a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433100"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>othersUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

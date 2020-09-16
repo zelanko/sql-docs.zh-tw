@@ -1,4 +1,5 @@
 ---
+description: ISQLServerConnection 介面
 title: ISQLServerConnection 介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d2f63e094fa4ea4598163d419e221ad5a41b288
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1cedc723bcaee3b8ca850d7671ea0c868f9e11fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433510"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

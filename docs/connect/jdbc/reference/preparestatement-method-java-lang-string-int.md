@@ -1,4 +1,5 @@
 ---
+description: prepareStatement 方法 (java.lang.String)
 title: prepareStatement 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b17c514a293f4566c3408e364acccbab721e1ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f9cec12d2443e84ef3334e19253a64ff60fea1c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432860"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement 方法 (java.lang.String)
 

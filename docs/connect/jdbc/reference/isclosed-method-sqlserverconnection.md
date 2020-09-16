@@ -1,4 +1,5 @@
 ---
+description: isClosed 方法 (SQLServerConnection)
 title: isClosed 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 776c719a01378a30198b7a3bcc4134478ebeb742
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 09d4a5e3c1d3634e52fd9b2d8244262c40fada06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433590"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

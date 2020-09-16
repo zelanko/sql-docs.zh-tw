@@ -1,4 +1,5 @@
 ---
+description: length 方法 (SQLServerNClob)
 title: length 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eedd18dba38a2dbb868ecb0218624b733e038a48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2489b65821b3c597a91b81123ae2cdf9df07c248
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433230"
 ---
 # <a name="length-method-sqlservernclob"></a>length 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

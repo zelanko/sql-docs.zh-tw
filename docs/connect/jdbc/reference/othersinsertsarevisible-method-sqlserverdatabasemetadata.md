@@ -1,4 +1,5 @@
 ---
+description: othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 title: othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ce373e9147760f1bad4f4dca495bac75669ddb4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: addf9a610270a7a2b3c6dae10c0e33dba1380552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433110"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

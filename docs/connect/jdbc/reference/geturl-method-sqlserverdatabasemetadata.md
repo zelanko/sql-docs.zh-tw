@@ -1,4 +1,5 @@
 ---
+description: getURL 方法 (SQLServerDatabaseMetaData)
 title: getURL 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7371c5aa585c7ffc9ec434e8c0dbc5ae6ecc4d89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433870"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

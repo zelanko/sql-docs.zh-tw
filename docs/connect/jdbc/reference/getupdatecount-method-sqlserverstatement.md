@@ -1,4 +1,5 @@
 ---
+description: getUpdateCount 方法 (SQLServerStatement)
 title: getUpdateCount 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f0dcd2b67ef5dcfed234e7fe54ce5c3c5e368d2f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 19a4cfc7b9957d8ba4392477e6dcd3732f10bd7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433900"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>getUpdateCount 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

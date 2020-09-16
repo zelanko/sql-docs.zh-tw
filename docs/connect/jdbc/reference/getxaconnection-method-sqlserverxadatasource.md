@@ -1,4 +1,5 @@
 ---
+description: getXAConnection 方法 (SQLServerXADataSource)
 title: getXAConnection 方法 (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d8bfa530d37e40c71d4516a07b0d1f676ebc84e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 24feca7392e2328fad6b1f6917027a4b89bcf131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433740"
 ---
 # <a name="getxaconnection-method-sqlserverxadatasource"></a>getXAConnection 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

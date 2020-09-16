@@ -1,4 +1,5 @@
 ---
+description: getTrustServerCertificate 方法 (SQLServerDataSource)
 title: getTrustServerCertificate 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f43719fc585a4d1a2fda23fa1111a3918365572b
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: c3a5de057e6a9363f4e3feeace35f2b5105d3cd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434050"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>getTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

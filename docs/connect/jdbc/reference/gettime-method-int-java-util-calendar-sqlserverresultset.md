@@ -1,4 +1,5 @@
 ---
+description: getTime 方法 (int, java.util.Calendar) (SQLServerResultSet)
 title: getTime 方法 (int, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31e6d09782746d72ac7073cca99f8e55736e08ef
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b647e4dff3980e5828a92d54866f17ddf8790d97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434240"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>getTime 方法 (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

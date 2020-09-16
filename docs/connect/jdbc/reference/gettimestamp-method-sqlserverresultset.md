@@ -1,4 +1,5 @@
 ---
+description: getTimestamp 方法 (SQLServerResultSet)
 title: getTimestamp 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 418d4db1-dfc2-47be-be76-8476265e1740
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4fbaba88df2a8259f247ca718c8d24afd5fbe7c9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a7d2477a245eaff1abe5b05527d1aba73626e04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434030"
 ---
 # <a name="gettimestamp-method-sqlserverresultset"></a>getTimestamp 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: next 方法 (SQLServerResultSet)
 title: next 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96d30995c91a7eb038f4aed7bd5dea88d7fe2fcb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48e6d1fcfd0a7e2e2778ed6b2f109e66024df7b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433180"
 ---
 # <a name="next-method-sqlserverresultset"></a>next 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

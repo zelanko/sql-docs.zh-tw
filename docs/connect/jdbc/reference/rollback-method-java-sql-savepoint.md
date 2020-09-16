@@ -1,4 +1,5 @@
 ---
+description: rollback 方法 (java.sql.Savepoint)
 title: rollback 方法 (java.sql.Savepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e1ac014ddeee1d3763dc3cebe720751c4c1ec94
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a25a2721efee6586e8571854f2ce6cea8ee8179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432710"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>rollback 方法 (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: position 方法 (java.sql.NClob, long)
 title: position 方法 (java.sql.NClob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed9313f31d30308b448381276608e119f279ea2a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e810a05d5c289babe665a398f27a670349c2b304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433010"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 方法 (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取指定 **NClob** 物件 *searchstr* 出現在此 **NClob** 物件中的位置。  
+  擷取指定 **NClob** 物件 *searchstr* 出現在此 **NClob** 物件中的字元位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +36,7 @@ long position(java.sql.NClob searchstr,
   
  要搜尋的 NClob 物件。  
   
- *start*  
+ *開始*  
   
  開始搜尋的位置，第一個位置是 1。  
   

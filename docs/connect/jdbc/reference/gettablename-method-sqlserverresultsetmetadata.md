@@ -1,4 +1,5 @@
 ---
+description: getTableName 方法 (SQLServerResultSetMetaData)
 title: getTableName 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a28fb70257bf9978c63537d2f2b37555012f9c14
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 27002f0e425edafcd04bc0c73463d581fcd9eb39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434220"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>getTableName 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

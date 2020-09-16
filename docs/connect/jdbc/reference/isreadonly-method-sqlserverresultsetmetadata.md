@@ -1,4 +1,5 @@
 ---
+description: isReadOnly 方法 (SQLServerResultSetMetaData)
 title: isReadOnly 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4b086f001546cee081fc330cd13b36b138e1ca7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1d726ca9184b391861ff395e9a1a281682ba8c50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433420"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>isReadOnly 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

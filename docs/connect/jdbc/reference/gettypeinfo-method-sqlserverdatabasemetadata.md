@@ -1,4 +1,5 @@
 ---
+description: getTypeInfo 方法 (SQLServerDatabaseMetaData)
 title: getTypeInfo 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434010"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|資料類型之 creation 參數的描述。|  
 |NULLABLE|**short**|指出資料行是否能包含 null 值。 它可能是下列其中一個值：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|指出資料類型是否區分大小寫。 如果類型會區分大小寫則為 "**true**"，否則為 "**false**"。|  
-|SEARCHABLE|**short**|指出資料行是否能用於 SQL WHERE 子句。 它可能是下列其中一個值：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|可搜尋|**short**|指出資料行是否能用於 SQL WHERE 子句。 它可能是下列其中一個值：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|指出資料類型的正負號。 如果類型不帶正負號則為 "**true**"，否則為 "**false**"。|  
 |FIXED_PREC_SCALE|**boolean**|指出資料類型可以是 money 值。 如果資料類型是 money 值則為"**true**"，否則為 "**false**"。|  
 |AUTO_INCREMENT|**boolean**|指出資料類型可以自動遞增。 如果類型可以自動遞增則為 "**true**"，否則為 "**false**"。|  

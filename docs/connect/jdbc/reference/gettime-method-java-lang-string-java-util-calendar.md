@@ -1,4 +1,5 @@
 ---
+description: getTime 方法 (java.lang.String, java.util.Calendar)
 title: getTime 方法 (java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74f46517cacb300aaede061cf7c2666603aeebf7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 47ecebd8694c8fc7d89d88b96599eeabd0c55fa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434200"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

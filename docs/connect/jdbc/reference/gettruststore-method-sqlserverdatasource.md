@@ -1,4 +1,5 @@
 ---
+description: getTrustStore 方法 (SQLServerDataSource)
 title: getTrustStore 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 43b537a20cf39d64e06baf6f0cae78ed46526915
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7afcb2b9d8402bf1fd8d2f4637488ba8c091f4c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433990"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>getTrustStore 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

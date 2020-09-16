@@ -1,4 +1,5 @@
 ---
+description: getUserName 方法 (SQLServerDatabaseMetaData)
 title: getUserName 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1ae81034-5de3-4f4a-b3f2-7d9d198a73af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d47b34e6f84c3a12466ee402c01ee7149b2c35b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c8307cdd01aa83db3e473e242ee1c93c6345a847
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433800"
 ---
 # <a name="getusername-method-sqlserverdatabasemetadata"></a>getUserName 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

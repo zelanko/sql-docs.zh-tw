@@ -1,4 +1,5 @@
 ---
+description: nullsAreSortedLow 方法 (SQLServerDatabaseMetaData)
 title: nullsAreSortedLow 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5d9a65a626d5ff09551d66265e5d17e9c075a58
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33239e2f4755adb526b9b81158efd2498702452f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433130"
 ---
 # <a name="nullsaresortedlow-method-sqlserverdatabasemetadata"></a>nullsAreSortedLow 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

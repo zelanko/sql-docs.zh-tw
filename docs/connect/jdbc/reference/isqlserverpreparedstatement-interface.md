@@ -1,4 +1,5 @@
 ---
+description: ISQLServerPreparedStatement 介面
 title: ISQLServerPreparedStatement 介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0d1ff3f0b8cd25d44bbb3e5d3784faa0e761a033
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9afc2bb3561b650baa7d7ef45e1d949cdfd19ea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433520"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

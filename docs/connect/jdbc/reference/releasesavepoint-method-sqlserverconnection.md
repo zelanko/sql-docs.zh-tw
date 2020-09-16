@@ -1,4 +1,5 @@
 ---
+description: releaseSavepoint 方法 (SQLServerConnection)
 title: releaseSavepoint 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd402193bf666ca7bacadafb44a177ddda71777b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 587fa4dcb100feed7890ca87d56218676ce842e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432750"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>releaseSavepoint 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

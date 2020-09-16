@@ -1,4 +1,5 @@
 ---
+description: getWarnings 方法 (SQLServerStatement)
 title: getWarnings 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c4a21fd8c35919e28d4b5981860a4b55043b663f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ac38ef664d8aa295ce6493f6ad3e04222a8780fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433770"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>getWarnings 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

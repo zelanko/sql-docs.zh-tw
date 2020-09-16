@@ -1,4 +1,5 @@
 ---
+description: isCurrency 方法 (SQLServerResultSetMetaData)
 title: isCurrency 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: abe0ef33861571cdcac262bdab74bfc3588e45f8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b4b5c127dab64cfd77599fb9f2dfb50b4605c64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433660"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
