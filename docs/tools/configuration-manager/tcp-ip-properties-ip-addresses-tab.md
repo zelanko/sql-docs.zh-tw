@@ -6,7 +6,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880301"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901060"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -62,8 +62,7 @@ ms.locfileid: "85880301"
  搜尋 MSDN 中的主題，例如 **設定伺服器接聽特定 TCP 通訊埠 (SQL Server 組態管理員)** 和 **設定 Database Engine 接聽多個 TCP 通訊埠**。  
   
 ## <a name="see-also"></a>另請參閱  
- [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [選擇網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [使用 TCP IP 建立有效的連接字串](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 服務](sql-server-browser-service.md)  
-  
   
