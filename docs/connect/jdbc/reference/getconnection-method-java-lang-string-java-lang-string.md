@@ -1,4 +1,5 @@
 ---
+description: getConnection 方法 (java.lang.String, java.lang.String)
 title: getConnection 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5dea8e183cb572bd0d70e9ccce01a203204b26c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bfc2a318fad442edcae2af4df1a51c521ed9bda9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436540"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

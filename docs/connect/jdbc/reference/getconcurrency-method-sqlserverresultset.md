@@ -1,4 +1,5 @@
 ---
+description: getConcurrency 方法 (SQLServerResultSet)
 title: getConcurrency 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a154f730885f4fa5380451e98ecdda11672cbfc8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b8cb92a019c9c65e867be023fab9bc299a7a8bc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436550"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

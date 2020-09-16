@@ -1,4 +1,5 @@
 ---
+description: getCatalogSeparator 方法 (SQLServerDatabaseMetaData)
 title: getCatalogSeparator 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c9c73652c1c0b512c24e2d592323833390c7b0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b183c202af2fda00a67bd75ccb12e007c82342d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436890"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

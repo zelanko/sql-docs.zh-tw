@@ -1,4 +1,5 @@
 ---
+description: getCharacterStream (java.lang.String)
 title: getCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 57b92b502aa940fb9aebca653856782ab1c6b2e1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2ce336e13a6c9e7e1a281131970761fdf5ca64ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436820"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

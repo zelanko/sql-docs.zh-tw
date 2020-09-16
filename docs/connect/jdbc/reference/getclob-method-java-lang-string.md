@@ -1,4 +1,5 @@
 ---
+description: getClob 方法 (java.lang.String)
 title: getClob 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf427d357f5013b19cc5a9d23fd2090990615be2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a01cfb00163d9602221428ae060a2cd3bbf72db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436610"
 ---
 # <a name="getclob-method-javalangstring"></a>getClob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

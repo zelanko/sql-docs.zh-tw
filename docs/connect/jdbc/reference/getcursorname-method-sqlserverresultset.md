@@ -1,4 +1,5 @@
 ---
+description: getCursorName 方法 (SQLServerResultSet)
 title: getCursorName 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 995cede3675199112253311089d59cfadd8f208d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbb1f87888740dab730bf7f315106675d10f2503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436480"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

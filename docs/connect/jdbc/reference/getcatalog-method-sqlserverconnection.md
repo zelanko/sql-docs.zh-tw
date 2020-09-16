@@ -1,4 +1,5 @@
 ---
+description: getCatalog 方法 (SQLServerConnection)
 title: getCatalog 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e87ef65f-4b5a-4e1c-8db5-7f0932390bb0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 482bf8e2928e423f326369223bd2148306712b39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cc4b720ccf920d1f9fe97ed29f2a2a237e24939e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436880"
 ---
 # <a name="getcatalog-method-sqlserverconnection"></a>getCatalog 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

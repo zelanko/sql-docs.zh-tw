@@ -1,4 +1,5 @@
 ---
+description: getColumnDisplaySize 方法 (SQLServerResultSetMetaData)
 title: getColumnDisplaySize 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60ed53f51ff9fe828944ecfdbadab647501eac5c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1d6a933f2e5d0fe87ac4b224905dba9683586bd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436650"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

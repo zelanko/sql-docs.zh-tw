@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (java.lang.String) (SQLServerResultSet)
 title: getDate 方法 (java.lang.String) 資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eac14323f765ff23a913ecf4f68d8a277ee66cee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 774923c62c8fcbe70bfee39b975e14e47adebaf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436350"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

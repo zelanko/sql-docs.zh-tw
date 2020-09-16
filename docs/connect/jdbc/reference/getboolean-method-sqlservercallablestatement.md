@@ -1,4 +1,5 @@
 ---
+description: getBoolean 方法 (SQLServerCallableStatement)
 title: getBoolean 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9dee27e968b45edbe30fcdc33dea447f3ccff67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e1462d447119a1afe2c32ad94c4f09e2df729aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437040"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>getBoolean 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

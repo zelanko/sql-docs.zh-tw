@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (int, java.util.Calendar)
 title: getDate 方法 (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 826c41b4355bc939d115a2b132639f0b390ae4cb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5db80d918f8f9b4757782c0f00aab8ece29239c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436420"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

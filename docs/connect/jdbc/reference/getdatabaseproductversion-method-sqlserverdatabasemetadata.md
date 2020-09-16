@@ -1,4 +1,5 @@
 ---
+description: getDatabaseProductVersion 方法 (SQLServerDatabaseMetaData)
 title: getDatabaseProductVersion 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd09db3880b7e4294620f9e8f0476fc759d1a54a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3d86ab32d0327ec6dadc830d3d76ea4e611d7a80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436390"
 ---
 # <a name="getdatabaseproductversion-method-sqlserverdatabasemetadata"></a>getDatabaseProductVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

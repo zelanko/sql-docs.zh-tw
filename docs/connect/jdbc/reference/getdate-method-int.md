@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (int)
 title: getDate 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aa9f08af-df24-4c80-8298-c4007339b20a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313ae3564d79861d43ccb02e7e79d1e18da27a67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d90d3bf7ee9fedc405fba52fce426ba0201114b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436380"
 ---
 # <a name="getdate-method-int"></a>getDate 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

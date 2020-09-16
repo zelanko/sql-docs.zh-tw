@@ -1,4 +1,5 @@
 ---
+description: getClob 方法 (SQLServerResultSet)
 title: getClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d5403f6099b7097ea5c68629f5a2880caef0ede
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2ff9b734d6f9d099134e84147e51f5a2e1f6f14d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436600"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>getClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

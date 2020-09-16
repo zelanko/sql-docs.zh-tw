@@ -1,4 +1,5 @@
 ---
+description: getClientInfoProperties 方法 (SQLServerDatabaseMetaData)
 title: getClientInfoProperties 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a84002f7b44644ee5ba86ee277925e5f482b412
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7a013bdc53a5699ba01accf5629326df7929e798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436710"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>getClientInfoProperties 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
