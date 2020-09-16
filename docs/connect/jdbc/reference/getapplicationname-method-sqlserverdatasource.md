@@ -1,4 +1,5 @@
 ---
+description: getApplicationName 方法 (SQLServerDataSource)
 title: getApplicationName 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f71e501c-ccd7-4a1e-b6ea-4d47a81c18c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ad1a1b199b391e00a3db1c916f349f9cec94713
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3d558d088c8bd993183fe1bdac95fe8b40b213b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437570"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

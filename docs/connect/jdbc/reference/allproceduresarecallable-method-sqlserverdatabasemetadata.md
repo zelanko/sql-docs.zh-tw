@@ -1,4 +1,5 @@
 ---
+description: allProceduresAreCallable 方法 (SQLServerDatabaseMetaData)
 title: allProceduresAreCallable 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe10b1c7255b1861de6332cff7fa23344ed12f7a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d4fe4638ebf7f9260074068c7f7c3f78c50f5434
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438230"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>allProceduresAreCallable 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

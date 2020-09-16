@@ -1,4 +1,5 @@
 ---
+description: dataDefinitionIgnoredInTransactions 方法 (SQLServerDatabaseMetaData)
 title: 資料庫是否忽略交易中的資料定義陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00f8a8dda595f1ffdd01e19c99709e9d334f9f4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 24e1135b8fa251050026a1c88bd5bb8f01421ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437873"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

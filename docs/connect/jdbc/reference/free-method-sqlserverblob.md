@@ -1,4 +1,5 @@
 ---
+description: free 方法 (SQLServerBlob)
 title: free 方法 (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 18a5732f-a246-4483-bcfb-169f25917467
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 985050da0eb54a06948e1398055d742b43eaf6e8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8f6dd21f406ccbd080f2df046d15d0abe5c8743a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437540"
 ---
 # <a name="free-method-sqlserverblob"></a>free 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getBigDecimal 方法 (int, int) (SQLServerResultSet)
 title: getBigDecimal 方法 (int, int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2772afeea36f1a92fb4a4213fef3901578e11260
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5cfaa199eeb6a27ff3f4237c85d454f94ee1dd8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437340"
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>getBigDecimal 方法 (int, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getAsciiStream 方法 (SQLServerClob)
 title: getAsciiStream 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 115e9a2670f89909c7551b31f7a4a163b1522afc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 27a934e014b1b6045ead64e39759c665197f87bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437390"
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>getAsciiStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

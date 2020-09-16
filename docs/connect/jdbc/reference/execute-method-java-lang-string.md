@@ -1,4 +1,5 @@
 ---
+description: execute 方法 (java.lang.String)
 title: execute 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0375eb9dd2d9252ed914fa554beb54faa7e345ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437750"
 ---
 # <a name="execute-method-javalangstring"></a>execute 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: clearBatch 方法 (SQLServerStatement)
 title: clearBatch 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e6fc1461-bbc6-45ae-85b1-a824aba51085
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a27ca74f6fe93d06bc526875976abf7038bf71f7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0ebac647d7609aca070ae2aef6886b7f110116b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438170"
 ---
 # <a name="clearbatch-method-sqlserverstatement"></a>clearBatch 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

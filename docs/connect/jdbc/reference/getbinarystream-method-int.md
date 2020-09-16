@@ -1,4 +1,5 @@
 ---
+description: getBinaryStream 方法 (int)
 title: getBinaryStream 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c68917aefc39cce459a2de12f09ac75a35cf04b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f9151749a063cd18f544d55810e830bf940f3e5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437270"
 ---
 # <a name="getbinarystream-method-int"></a>getBinaryStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

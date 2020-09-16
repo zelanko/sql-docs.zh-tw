@@ -1,4 +1,5 @@
 ---
+description: getBinaryStream 方法 (long, long)
 title: getBinaryStream 方法 (long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70ad7dfb297e1ec1b3d34f657f48a67f16debab5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a641fb117fe1dc091aa04f6343f69dac70d95c22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437200"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream 方法 (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
   
  這是要擷取之部分值中第一個位元組的位移。  
   
- *length*  
+ *length* (長度)  
   
  這是要擷取之部分值中的位元組長度。  
   

@@ -1,4 +1,5 @@
 ---
+description: clearParameters 方法 (SQLServerPreparedStatement)
 title: clearParameters 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84cf1569d865f8e7aad5b407ea993576dbe8b456
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6df59c5e303edb586df489a4b68a3f5a50ce7fa1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438160"
 ---
 # <a name="clearparameters-method-sqlserverpreparedstatement"></a>clearParameters 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

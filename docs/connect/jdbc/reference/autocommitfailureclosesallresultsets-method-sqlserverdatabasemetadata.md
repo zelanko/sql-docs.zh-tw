@@ -1,4 +1,5 @@
 ---
+description: autoCommitFailureClosesAllResultSets 方法 (SQLServerDatabaseMetaData)
 title: JDBC 驅動程式是否會關閉開啟的結果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d76ebdcd4eac2fca67d04693aa2fe24fa279da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e0fb75b6124947cd32656d081d0c3a29c327b63b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438210"
 ---
 # <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>autoCommitFailureClosesAllResultSets 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

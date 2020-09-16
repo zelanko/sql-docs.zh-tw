@@ -1,4 +1,5 @@
 ---
+description: execute 方法 (SQLServerStatement)
 title: execute 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4073149f426fc9aade012696780f57cf092c359a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e8185052b0b84e0ee977e298a981774de821e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437760"
 ---
 # <a name="execute-method-sqlserverstatement"></a>execute 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

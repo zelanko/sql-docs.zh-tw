@@ -1,4 +1,5 @@
 ---
+description: createStatement 方法 ()
 title: createStatement 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fcb82d90c030f4ebee6bd3ebae262aafb8c4e929
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3f60cca276ffbbf56b09e3ccc297987e45bbf555
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437890"
 ---
 # <a name="createstatement-method-"></a>createStatement 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

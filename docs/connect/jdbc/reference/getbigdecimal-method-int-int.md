@@ -1,4 +1,5 @@
 ---
+description: getBigDecimal 方法 (int, int)
 title: getBigDecimal 方法 (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f9ad49897791a4d921c073bc5dcdff8775e3a112
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bca09005a56846517a70d49d8c846d8d45a45b5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437330"
 ---
 # <a name="getbigdecimal-method-int-int"></a>getBigDecimal 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

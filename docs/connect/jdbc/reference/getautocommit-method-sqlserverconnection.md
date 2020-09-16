@@ -1,4 +1,5 @@
 ---
+description: getAutoCommit 方法 (SQLServerConnection)
 title: getAutoCommit 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d9e5545e0b7ed2953ba89b2351c09ae0fd3700a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 887e60b7bc390d323f890e6cb9552489ff15cfab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437350"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: clearWarnings 方法 (SQLServerResultSet)
 title: clearWarnings 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f55af4b6-ae5c-41c9-8aa3-8313773f5443
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d77d6130fd50fd6376c81eeb1af497b8bf25e3af
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ac3142b51903d43c3dc9f9ba9ee63becfc810c00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438130"
 ---
 # <a name="clearwarnings-method-sqlserverresultset"></a>clearWarnings 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

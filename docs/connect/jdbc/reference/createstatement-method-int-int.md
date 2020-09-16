@@ -1,4 +1,5 @@
 ---
+description: createStatement 方法 (int, int)
 title: createStatement 方法 (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e260135aa251012edfa98a08d4db3c358c17c51
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fda0c8b6055cca6692c37596872c3c7ebae12f81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437930"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

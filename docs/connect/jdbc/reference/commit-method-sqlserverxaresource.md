@@ -1,4 +1,5 @@
 ---
+description: commit 方法 (SQLServerXAResource)
 title: commit 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da610bd650bd373ee1003ae89a81190204722328
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7a4f5be3a81b4640155d143a664b5e79cfcec0aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438020"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>commit 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: beforeFirst 方法 (SQLServerResultSet)
 title: beforeFirst 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 04eebd6a-016f-4462-82f5-ab34b945eec4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0550f6a1e4821e7fd291b30de1762daf6956cd9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 672387fd2f26ae0d5d9442a445df2ce433ca2c34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438200"
 ---
 # <a name="beforefirst-method-sqlserverresultset"></a>beforeFirst 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

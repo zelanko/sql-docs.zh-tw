@@ -1,4 +1,5 @@
 ---
+description: executeBatch 方法 (SQLServerStatement)
 title: executeBatch 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 46b738dfe180b6d137b47042a9b9db517cb3b93c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bd3c7d62d9ed35c5bacab061134531c9f03580c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437720"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>executeBatch 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

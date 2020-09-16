@@ -1,4 +1,5 @@
 ---
+description: executeUpdate 方法 (java.lang.String, java.lang.String)
 title: executeUpdate 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f99b9153b09ed268444a90dd054535c0e61ae060
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 037521938c5a28c6d40159a19151f8b84438a8e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437640"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>executeUpdate 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

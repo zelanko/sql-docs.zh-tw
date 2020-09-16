@@ -1,4 +1,5 @@
 ---
+description: DateTimeOffset 成員
 title: DateTimeOffset 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca2de23d6ddbd3bdebb900d4f840846c52d47154
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9361169363af84b701e6e963d844645072874d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437860"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

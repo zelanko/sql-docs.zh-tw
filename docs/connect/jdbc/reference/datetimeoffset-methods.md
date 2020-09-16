@@ -1,4 +1,5 @@
 ---
+description: DateTimeOffset 方法
 title: DateTimeOffset 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6b1f31c1-97de-4fc6-8d23-71d299f7bc28
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 279f9b05d6483ec0c5751bfc9202a6092782a777
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 05a348844da0e2fb9cdf2b01bf810d71b525054d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437850"
 ---
 # <a name="datetimeoffset-methods"></a>DateTimeOffset 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

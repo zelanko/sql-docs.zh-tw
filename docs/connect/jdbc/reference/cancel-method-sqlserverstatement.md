@@ -1,4 +1,5 @@
 ---
+description: cancel 方法 (SQLServerStatement)
 title: cancel 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 276bd9c1-9329-4fc9-9622-ed673c83a12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b19ff8669843e93dc7c220e3e6b48cbd5bab7d06
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 44f59ea02a54f68833eb40b291d4cd8edeb56da6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438190"
 ---
 # <a name="cancel-method-sqlserverstatement"></a>cancel 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

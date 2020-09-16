@@ -1,4 +1,5 @@
 ---
+description: getBigDecimal 方法 (java.lang.String, int)
 title: getBigDecimal 方法 (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84fcab6bd438fed1f89e622757ce316379571bdd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a911ec886cfc27d2c65b3530f14aab0bb6df52c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437290"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>getBigDecimal 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

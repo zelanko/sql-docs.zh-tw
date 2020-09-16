@@ -1,4 +1,5 @@
 ---
+description: free 方法 (SQLServerClob)
 title: free 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f3845548-5186-4986-953c-ddce14057ec1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f68dac3a1ab728baf0544997014f2b08980d4edd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 56f97859c904ee81f9e91962a3c3495ae39e7760
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437530"
 ---
 # <a name="free-method-sqlserverclob"></a>free 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

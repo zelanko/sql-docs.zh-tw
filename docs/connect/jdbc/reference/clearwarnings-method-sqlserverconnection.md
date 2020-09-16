@@ -1,4 +1,5 @@
 ---
+description: clearWarnings 方法 (ISQLServerConnection)
 title: clearWarnings 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15968e8f117858f1ee5497ed3277e853ba86a353
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b797fe5cdc4a7d3cd6a21ebd9b7959685103c398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438150"
 ---
 # <a name="clearwarnings-method-sqlserverconnection"></a>clearWarnings 方法 (ISQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

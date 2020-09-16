@@ -1,4 +1,5 @@
 ---
+description: getBinaryStream 方法 (SQLServerCallableStatement)
 title: getBinaryStream 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b0d2cff1-1ab0-44c2-9824-70106fc43370
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 520576cd42d6f561e4af32254053a3d7aa54503d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 13e0faa351c18a9e2ce74fb53f515c25207868d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437180"
 ---
 # <a name="getbinarystream-method-sqlservercallablestatement"></a>getBinaryStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

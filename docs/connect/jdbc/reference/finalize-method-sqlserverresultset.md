@@ -1,4 +1,5 @@
 ---
+description: finalize 方法 (SQLServerResultSet)
 title: finalize 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01b93d90406a579a71188b8269c520cf521bb62a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f6f232e7755dd975edaa7b255e5ffe6dd9f85091
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437590"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>finalize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

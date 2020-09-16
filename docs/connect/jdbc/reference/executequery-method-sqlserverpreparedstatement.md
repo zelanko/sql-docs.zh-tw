@@ -1,4 +1,5 @@
 ---
+description: executeQuery 方法 (SQLServerPreparedStatement)
 title: executeQuery 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3600354b92392ad2e3caeae72b59202472539310
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c52d816b05a834c781c0ee1c5e3196377a91c1d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437670"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>executeQuery 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

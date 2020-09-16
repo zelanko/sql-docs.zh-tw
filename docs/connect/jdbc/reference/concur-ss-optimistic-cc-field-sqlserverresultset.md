@@ -1,4 +1,5 @@
 ---
+description: CONCUR_SS_OPTIMISTIC_CC 欄位 (SQLServerResultSet)
 title: CONCUR_SS_OPTIMISTIC_CC 欄位 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4d5cecb8-b29b-49c0-a4b1-9472b8709ddf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 81f77080ca9622a339bc091c4f0240a2b6f3d48a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 21f278843fd846b630b852494ded97810ea19ce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438060"
 ---
 # <a name="concur_ss_optimistic_cc-field-sqlserverresultset"></a>CONCUR_SS_OPTIMISTIC_CC 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

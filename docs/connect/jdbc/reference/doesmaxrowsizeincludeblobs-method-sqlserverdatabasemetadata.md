@@ -1,4 +1,5 @@
 ---
+description: doesMaxRowSizeIncludeBlobs 方法 (SQLServerDatabaseMetaData)
 title: doesMaxRowSizeIncludeBlobs 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c90a7a7-5a59-4858-bb26-3e725d8611d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 617f30347d61771347788e7f21152506c4b96411
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8b0e5705a4b967ff057e546434b12bd5200bdc45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437830"
 ---
 # <a name="doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata"></a>doesMaxRowSizeIncludeBlobs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

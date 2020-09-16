@@ -1,4 +1,5 @@
 ---
+description: executeQuery 方法 (java.lang.String)
 title: executeQuery 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cff547cf27a6ef796e31383e524872717943b860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437700"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

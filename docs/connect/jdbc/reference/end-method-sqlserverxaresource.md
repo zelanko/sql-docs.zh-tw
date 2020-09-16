@@ -1,4 +1,5 @@
 ---
+description: end 方法 (SQLServerXAResource)
 title: end 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fae16dbc10308a558b6b1a7e894ea4391b40326e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7908c25c3366903d13ac27c2cefbb349ef43b4b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437820"
 ---
 # <a name="end-method-sqlserverxaresource"></a>end 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
