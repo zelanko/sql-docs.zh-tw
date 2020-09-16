@@ -1,6 +1,6 @@
 ---
 title: 擷取錯誤資訊 (OLE DB 驅動程式)
-description: 使用 OLE DB Driver for SQL Server 來擷取錯誤資訊
+description: 此範例會取得 OLE DB Driver for SQL Server 所公開之各種錯誤介面的資訊。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB error handling, retrieving information
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f380f983b191843b82f7ba6ee9d17b06d43e2ba3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0dd82b6ff3cb708cd6136929d1bdfd503a297bf
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244786"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862216"
 ---
 # <a name="retrieving-error-information"></a>擷取錯誤資訊
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

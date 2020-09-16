@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server
 - MSOLEDBSQL
 - native data access [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 634958baf85b47d49921ae26ce60f3afb8939730
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5cb6f2fa76b2e0a5d07a8d72c3047191cbdf5b2a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862101"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Internet Protocol
@@ -16,12 +16,12 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1909c2ec612bcd75b34d34e23e3da3adda228e45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 698d201e07ef7e84bcc552d9ec815012af2d968d
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897601"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900531"
 ---
 # <a name="connecting-using-ipv6"></a>使用 IPv6 連接
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

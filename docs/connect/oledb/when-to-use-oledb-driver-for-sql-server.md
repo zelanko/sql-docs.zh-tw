@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 114a0e65f6d813bb2d43ca8641e3260e9b88f668
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bd5237556ec0bbe1bf4101cb5adde9734088217c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860182"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 的時機
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
