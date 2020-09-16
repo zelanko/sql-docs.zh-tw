@@ -3,7 +3,7 @@ title: 指定中斷點篩選條件
 description: 了解如何實作中斷點篩選條件，以限制只能在指定的電腦、作業系統處理序和執行緒上進行偵錯時，中斷點才會運作。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943168cc640f2a3373ed1baec1018962bf64123d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122802"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901590"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
 

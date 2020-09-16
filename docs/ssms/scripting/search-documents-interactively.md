@@ -4,7 +4,7 @@ description: 了解如何使用 [尋找和取代] 對話方塊來搜尋一或多
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 5808e51f9311a90f84527bce104d25c673198953
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122809"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901922"
 ---
 # <a name="search-documents-interactively"></a>以互動方式搜尋文件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

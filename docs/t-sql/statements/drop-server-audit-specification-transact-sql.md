@@ -18,14 +18,14 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - DROP SERVER AUDIT SPECIFICATION statement
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 891600fe47bd334a3806da2fd26d637568a5dd13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3b87ff1ba14f3f8725d946f56823c83a1e1599ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472267"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547677"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

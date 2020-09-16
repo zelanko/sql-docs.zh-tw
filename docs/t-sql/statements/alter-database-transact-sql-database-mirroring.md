@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ALTER DATABASE statement, database mirroring
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 03bd40c682b2d0ad36952c7f59c2b3d95d16a5e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05d2abb4b471722b035fda1b0101b8111285f1f1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426910"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541447"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像
 

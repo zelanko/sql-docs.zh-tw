@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8aaedc07aef085f7245346adc5a8e04302be909
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646628"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546985"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
 

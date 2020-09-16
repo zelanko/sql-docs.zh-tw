@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd2a3fe4ce33a8ea5a9889f996e1b6f35c5d9b28
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a29b6a050779cdf61d97833d49ad9854cac4e484
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645759"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521533"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 

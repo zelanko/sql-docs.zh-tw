@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ccec5e37a3ff533f5658b4d9ca529281d46147
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729024"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480452"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85729024"
 > [!NOTE]  
 >  此問題會影響位於不同電腦上的 Windows 本機帳戶。 但是，網域帳戶不至於發生此問題，因為每一部電腦上的 SID 都相同。  
   
- 如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
+ 如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (孤立的使用者與資料庫鏡像及記錄傳送)。  
   
 ## <a name="jobs"></a>工作  
  像是備份工作這類的工作，也需要特別注意。 通常在角色切換之後，資料庫擁有者或系統管理員必須為新的主要/主體資料庫重新建立各項作業。  

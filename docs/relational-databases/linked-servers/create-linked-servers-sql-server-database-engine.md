@@ -5,7 +5,6 @@ ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8d678f4950a493543e11878cc09e6cd23fb66b5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc05ee55d1229ca570c7fb35d4efce9aed338420
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424080"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522344"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

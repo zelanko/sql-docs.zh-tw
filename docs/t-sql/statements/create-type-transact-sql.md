@@ -25,14 +25,14 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: edff505f253c5c913a9330cb514c8cb72d764ba8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f1a1e3d5ab483e550b8bcbfc28b4928f62948e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488051"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541335"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

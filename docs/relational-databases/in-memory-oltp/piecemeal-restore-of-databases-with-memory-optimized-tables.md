@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d484e919fca78b3b77546f659ed198cdea7ab1b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e78c9912b4fa1482d44f7dc9367f70b3c25f04bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722404"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551599"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫
 

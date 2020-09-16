@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
-ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
+ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84638282"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042849"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
 
@@ -95,7 +95,7 @@ ms.locfileid: "84638282"
   
 - [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
-- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733) (服務和服務帳戶安全性規劃指南)。  
+- [The Services and Service Accounts Security Planning Guide](https://www.zubairalexander.com/blog/services-and-service-accounts-security-planning-guide/) (服務和服務帳戶安全性規劃指南)。  
   
 ## <a name="updating-an-expired-password"></a>更新已過期的密碼
 

@@ -3,21 +3,21 @@ title: 使用 sqlrutils 套件從配套的 R 程式碼建立函式
 description: 在 SQL Server 中使用 sqlrutils R 套件，將 R 語言程式碼組合成可作為引數傳遞至預存程序的單一函式。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/31/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f1a53e3b2c5d6481bea436d7a7b6d045653a9e7d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0ba94a55144278abd54ebbc2cf038463c3c5f0cb
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483869"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288279"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>使用 sqlrutils 建立預存程序
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文描述如何轉換 R 程式碼，以透過 T-SQL 預存程序形式加以執行的步驟。 為了獲得最佳的結果，您的程式碼可能需要稍加修改，以確保所有輸入皆可參數化。
 

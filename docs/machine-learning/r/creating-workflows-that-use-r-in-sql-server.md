@@ -3,20 +3,20 @@ title: 使用 R 建立 SSIS 和 SSRS 工作流程
 description: 結合 SQL Server 機器學習服務與 R 服務、Reporting Services (SSRS) 和 SQL Server Integration Services (SSIS) 的整合案例。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/17/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680367"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288280"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>使用 R 在 SQL Server 上建立 SSIS 和 SSRS 工作流程
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文說明如何搭配兩種重要 SQL Server 功能、透過 SQL Server 機器學習服務的語言與資料科學功能，來使用內嵌的 R 和 Python 指令碼：SQL Server Integration Services (SSIS) 和 SQL Server Reporting Services SSRS。 SQL Server 中的 R 和 Python 程式庫可提供統計與預測功能。 而 SSIS 和 SSRS 則分別提供協調的 ETL 轉換與視覺效果。 本文說明如何將上述所有功能一起放入此工作流程模式中：
 
@@ -192,19 +192,6 @@ exec predict_species_length 'rxLinMod';
 雖然 R 可以建立圖表和有趣的視覺效果，但其與外部資料來源的整合度並不高，這表示您必須個別產生每個圖表或圖形。 此外，可能也很難進行共用。
 
 藉由使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，您便可以透過各種企業報告工具 (包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Power BI) 都能輕鬆取用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，在 R 中執行複雜的作業。
-
-### <a name="ssrs-example"></a>SSRS 範例
-
-[R Graphics Device for Microsoft Reporting Services (SSRS) (英文)](https://rgraphicsdevice.codeplex.com/)
-
-這個 CodePlex 專案提供程式碼，可協助您建立自訂報表項目，以將 R 的圖形輸出轉譯成可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表中使用的影像。  透過使用自訂報表項目，您可以：
-
-+ 將使用 R Graphics Device 建立的圖表和繪圖發佈到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 儀表板
-
-+ 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 參數傳遞給 R 繪圖
-
-> [!NOTE]
-> 針對此範例，支援 R Graphics Device for Reporting Services 的程式碼不僅要安裝在 Visual Studio 中，也必須安裝在 Reporting Services 伺服器上。 此外，還需要手動編譯和設定。
 
 ## <a name="next-steps"></a>後續步驟
 

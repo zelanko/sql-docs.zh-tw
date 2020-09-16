@@ -1,11 +1,8 @@
 ---
 title: XML 編輯器 (SQL Server Management Studio)
 description: 了解如何使用 SQL Server Management Studio XML 編輯器的視覺化工具，以處理 XML 結構描述 (XSD)、ADO.NET 資料集和 XML 文件。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -17,22 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236914"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093561"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
-  
- 若要顯示設計師，請在專案中加入資料集、XML 結構描述或 XML 檔案，或開啟下面資料表中所列出的任何檔案類型。  
-  
-> [!CAUTION]  
->  在結構描述檢視中作業時，沒有 **[恢復]** 命令可用。 請仔細規劃您的工作，並經常儲存檔案。  
+
+提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
+
+若要顯示設計師，請在專案中加入資料集、XML 結構描述或 XML 檔案，或開啟下面資料表中所列出的任何檔案類型。  
+
+> [!CAUTION]
+> 在結構描述檢視中作業時，沒有 **[恢復]** 命令可用。 請仔細規劃您的工作，並經常儲存檔案。  
   
  設計師提供下列三種檢視 (或模式) 來處理 XML 檔案、XML 結構描述和資料集：  
   

@@ -14,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 82ae0f0b2ef46cf1082d5d0fe7fc064e3c538ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7c153456f92783b26bda05a99e848b48909ced8
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361584"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076705"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL 中繼資料函式
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88361584"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   

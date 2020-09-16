@@ -12,15 +12,15 @@ helpviewer_keywords:
 - creating synonyms
 - synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28709eaba9bf8afb2f2c26749db4bb52c80fd64e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5c4d25ed48715c9317ebe0df37ee4d2779abe10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490366"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551590"
 ---
 # <a name="create-synonyms"></a>建立同義字
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

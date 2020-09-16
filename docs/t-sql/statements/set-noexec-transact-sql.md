@@ -21,14 +21,14 @@ helpviewer_keywords:
 - compiling queries [SQL Server]
 - NOEXEC option
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 083679a21aec4fa39971cdb99ca75e9bf0db14b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356624"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540549"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -3,21 +3,21 @@ title: 轉換 R 程式碼以用於 SQL
 description: 將 R 程式碼移轉到 SQL Server 預存程序，以進行方案部署，以及對 SQL Server 上的關聯式資料進行資料存取。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009ce927481a455478e170cbe075e920d72571f3
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723885"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288298"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換 R 程式碼以在 SQL Server (資料庫內) 執行個體中執行
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文提供有關如何修改 R 程式碼以在 SQL Server 中運作的高階指引。 
 
@@ -121,7 +121,6 @@ ms.locfileid: "85723885"
 
 + 請洽詢資料庫開發人員，以判斷藉由使用像是[經記憶體最佳化的資料表](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)這樣的 SQL Server 功能，或者，如果您有 Enterprise Edition，則使用 [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)來改善效能的方式。
 
-    如需詳細資訊，請參閱 [Analytics Services 適用的 SQL Server 最佳化提示和秘訣](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 ### <a name="step-3-prepare-for-deployment"></a>步驟 3： 準備開始部署
 
@@ -135,7 +134,7 @@ ms.locfileid: "85723885"
 
 + 如果您的程式碼較簡單，則可以在不修改的情況下，將其內嵌在 T-SQL 使用者定義函式中，如此範例中所述：
 
-    + [ 使用 T-SQL 和 R 的特徵工程](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [ 使用 T-SQL 和 R 的特徵工程](../tutorials/r-taxi-classification-create-features.md)
 
 + 如果程式碼比較複雜，請使用 R 封裝 **sqlrutils** 來轉換您的程式碼。 此套件的設計目的是要協助有經驗的 R 使用者撰寫良好的預存程序程式碼。 
 
@@ -165,6 +164,6 @@ ms.locfileid: "85723885"
 
 + [使用 R 和 SQL Server 建置滑雪租賃企業預測模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [SQL 開發人員適用的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)示範了如何將 R 程式碼包裝在預存程序中來使它更加模組化
++ [SQL 開發人員適用的資料庫內分析](../tutorials/r-taxi-classification-introduction.md)示範了如何將 R 程式碼包裝在預存程序中來使它更加模組化
 
 + [端對端資料科學解決方案](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)包含 R 和 T-SQL 中特徵工程的比較

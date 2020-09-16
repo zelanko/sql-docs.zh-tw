@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 827d05f614a55789d93d11e9f43f31bf937b2744
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1ae07d2de2b99422c43b11f73bdf3ea002f55351
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479234"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551294"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

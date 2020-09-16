@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed9bc2a1d7791c593ab33335aea2967411117bac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8784e1fe3f44cd2927ffc1f1a48d51242671051a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723143"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537025"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>記憶體中的 OLTP 記憶體回收
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

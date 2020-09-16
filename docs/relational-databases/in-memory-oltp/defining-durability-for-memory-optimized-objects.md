@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6fb32139ff2d3330616d842b092dac13ec1f1b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1483c709c518243bc49fdb6ce3aa5eecdea0f973
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723285"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519102"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>為記憶體最佳化的物件定義持久性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

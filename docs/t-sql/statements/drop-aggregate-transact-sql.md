@@ -21,14 +21,14 @@ helpviewer_keywords:
 - deleting user-defined functions
 - DROP AGGREGATE statement
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 47abd647ce5b46986c665a1ed898232de2c0483c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 46c1074500d6ea73af9b10ff373a8beb9cb433d5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416824"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541271"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

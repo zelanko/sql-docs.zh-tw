@@ -25,15 +25,15 @@ helpviewer_keywords:
 - locking [SQL Server], isolation levels
 - transactions [SQL Server], isolation levels
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1e0142b312bbeff8fe222f86013af87ba93c866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 977ebc69d15e88de11e5906bb1e283f7e73d072a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426490"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540560"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

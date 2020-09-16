@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: carlrab
-ms.openlocfilehash: 7fcb7c7efd559c3b03731949ccd2d7b810ecdb0e
-ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
+ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89468353"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519261"
 ---
 # <a name="create-a-full-database-backup"></a>建立完整資料庫備份
 

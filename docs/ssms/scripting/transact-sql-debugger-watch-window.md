@@ -3,7 +3,7 @@ title: 監看式視窗
 description: 了解監看式視窗 (最多可同時有四個)，其中顯示所選運算式的相關資訊。 此資訊只會在偵錯模式中顯示。
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42ddd23645e866cd066f8d70ea2cded0f9c0fcd0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248001"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901809"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 偵錯工具 - 監看式視窗
 

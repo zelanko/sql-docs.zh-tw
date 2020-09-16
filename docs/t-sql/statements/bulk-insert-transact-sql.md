@@ -24,14 +24,14 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d8d91f01faa2f8ce6e81579964d7027122cd8d38
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2dd6b8be1bcaf19c6c5134c70ff60b535e47aa6a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200798"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547568"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
