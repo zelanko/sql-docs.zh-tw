@@ -1,4 +1,5 @@
 ---
+description: getShort 方法 (java.lang.String) (SQLServerResultSet)
 title: getShort 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 183af414-b0a3-4ca7-b160-d199bcf469b0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 010f6f7b9294a5b1f32b18f4b4d11597e04faaa9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cd726246ff18f9c3fe37dbaef41c46589f1da4f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434570"
 ---
 # <a name="getshort-method-javalangstring-sqlserverresultset"></a>getShort 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

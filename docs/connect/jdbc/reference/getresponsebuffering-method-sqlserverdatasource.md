@@ -1,4 +1,5 @@
 ---
+description: getResponseBuffering 方法 (SQLServerDataSource)
 title: getResponseBuffering 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 387f5442224f26095b0803891725ab8af81996ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434800"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

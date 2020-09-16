@@ -1,4 +1,5 @@
 ---
+description: getJDBCMinorVersion 方法 (SQLServerDatabaseMetaData)
 title: getJDBCMinorVersion 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d9e153b5-51b7-4e44-b342-f147f04dbe19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 600c1369df2bf71f305ccd10937f9b901212ac98
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c45c051c29ffefa6cfcf1b0713a8745401f039ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435780"
 ---
 # <a name="getjdbcminorversion-method-sqlserverdatabasemetadata"></a>getJDBCMinorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

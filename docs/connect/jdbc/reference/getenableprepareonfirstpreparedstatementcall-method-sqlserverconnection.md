@@ -1,4 +1,5 @@
 ---
+description: getEnablePrepareOnFirstPreparedStatementCall 方法 (SQLServerConnection)
 title: getEnablePrepareOnFirstPreparedStatementCall 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 203ed2f6a68e11af8c63157a850a146ea8d81464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 00cf8f6718e3aeacf2e4f2604b3a36bbbe0187c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436080"
 ---
 # <a name="getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>getEnablePrepareOnFirstPreparedStatementCall 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

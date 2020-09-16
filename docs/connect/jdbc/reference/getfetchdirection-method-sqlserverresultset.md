@@ -1,4 +1,5 @@
 ---
+description: getFetchDirection 方法 (SQLServerResultSet)
 title: getFetchDirection 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5ab385c2-e18c-4b75-ac2d-2402af5c52a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73a507e48b4ecc7f1ead7e33fe6936f5ed73f424
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50b0ec2751f2a6cabe852be3e8610b3a97328c13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436050"
 ---
 # <a name="getfetchdirection-method-sqlserverresultset"></a>getFetchDirection 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

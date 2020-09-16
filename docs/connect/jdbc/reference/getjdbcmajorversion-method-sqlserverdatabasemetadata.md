@@ -1,4 +1,5 @@
 ---
+description: getJDBCMajorVersion 方法 (SQLServerDatabaseMetaData)
 title: getJDBCMajorVersion 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b34dbaab0b389fc642192b6e652d7451fe0424b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f90e4135f4fbef77c5d5c6fa22baefc445dab98e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435810"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>getJDBCMajorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getString 方法 (java.lang.String)
 title: getString 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c24af0fd26d2651e583ea254d9f3b708868dea5d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c632a6991000ff13d6f3955318a3a9008c66f187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434440"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

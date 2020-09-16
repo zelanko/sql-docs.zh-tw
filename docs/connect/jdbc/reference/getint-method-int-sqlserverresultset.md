@@ -1,4 +1,5 @@
 ---
+description: getInt 方法 (int) (SQLServerResultSet)
 title: getInt 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c465ff91-ab96-41de-8917-96c4974c2624
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d781afd23abb13e398ee1f2f99c1428066b6ca60
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff2b65d6254e0ea65ad2fd6830032c217b9fe50a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435920"
 ---
 # <a name="getint-method-int-sqlserverresultset"></a>getInt 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

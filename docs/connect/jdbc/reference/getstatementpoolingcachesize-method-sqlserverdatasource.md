@@ -1,4 +1,5 @@
 ---
+description: getStatementPoolingCacheSize 方法 (SQLServerDataSource)
 title: getStatementPoolingCacheSize 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f988abfee166191c3098570dff44b04878942821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434360"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回 **statementPoolingCacheSize** 連線屬性的值。 傳回此連線之備妥陳述式快取的大小。 '0' 表示未啟用快取。
+  傳回 **statementPoolingCacheSize** 連線屬性的值。 傳回此連線備妥陳述式快取的大小。 '0' 表示未啟用快取。
   
 ## <a name="syntax"></a>語法  
   

@@ -1,4 +1,5 @@
 ---
+description: getLong 方法 (SQLServerCallableStatement)
 title: getLong 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d6c1a8a4-5647-439f-87b8-310b6e9b778a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 211ca3db1fc2784c06d0a5a0108a37df5b3d83fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c8facc3fde6c399353d3f765cc073d87b06ed66d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435700"
 ---
 # <a name="getlong-method-sqlservercallablestatement"></a>getLong 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getResultSetHoldability 方法 (SQLServerStatement)
 title: getResultSetHoldability 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd7c65b1496220eb4faff60e9d3269a211be196f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434750"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

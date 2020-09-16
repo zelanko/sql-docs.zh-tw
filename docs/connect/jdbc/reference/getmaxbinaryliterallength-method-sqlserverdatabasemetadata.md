@@ -1,4 +1,5 @@
 ---
+description: getMaxBinaryLiteralLength 方法 (SQLServerDatabaseMetaData)
 title: getMaxBinaryLiteralLength 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 125626e626d2390d5aa7be275c10ff9e0b3028c4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8112b50bb2205645cb362696836d7b09fd45af8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435680"
 ---
 # <a name="getmaxbinaryliterallength-method-sqlserverdatabasemetadata"></a>getMaxBinaryLiteralLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

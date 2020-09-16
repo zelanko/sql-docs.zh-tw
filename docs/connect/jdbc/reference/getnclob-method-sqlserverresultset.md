@@ -1,4 +1,5 @@
 ---
+description: getNClob 方法 (SQLServerResultSet)
 title: getNClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 432901eb-57b6-44ad-98b4-43164bcbc2b6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68ee925b520a51d9bc955cb1af371d548473a4c2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 16762feeaf8aa9e5b968620945e06f7d3bcd5da6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435250"
 ---
 # <a name="getnclob-method-sqlserverresultset"></a>getNClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

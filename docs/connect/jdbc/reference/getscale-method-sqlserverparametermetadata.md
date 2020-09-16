@@ -1,4 +1,5 @@
 ---
+description: getScale 方法 (SQLServerParameterMetaData)
 title: getScale 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e55fe6d5407cb9ab46f57e125f34d4e14dcdb9d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 12e9cd3e599a016601f587125dbd76f70d21410b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434680"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

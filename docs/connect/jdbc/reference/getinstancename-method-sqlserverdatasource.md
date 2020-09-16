@@ -1,4 +1,5 @@
 ---
+description: getInstanceName 方法 (SQLServerDataSource)
 title: getInstanceName 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3749776b-69b8-4f57-a192-568705200ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4fe2fd62eee0e6da975e878b0c8831b0f1250ed
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 587c05555387ace7260d4655d176d4586af3fb51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435910"
 ---
 # <a name="getinstancename-method-sqlserverdatasource"></a>getInstanceName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

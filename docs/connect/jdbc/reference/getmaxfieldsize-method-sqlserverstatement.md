@@ -1,4 +1,5 @@
 ---
+description: getMaxFieldSize 方法 (SQLServerStatement)
 title: getMaxFieldSize 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc1fd6ebd8c526762bca61b97f6fbb01f4ee93ff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0930c5ab4b3c2e907a6de9caeef96f78d57e2737
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435560"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

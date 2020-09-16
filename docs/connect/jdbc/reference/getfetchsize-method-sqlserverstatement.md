@@ -1,4 +1,5 @@
 ---
+description: getFetchSize 方法 (SQLServerStatement)
 title: getFetchSize 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d272fc215c43b72ce9f30a1d3b138d10798d881
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f1f57da836e5ce4d0b31e3d4a8e5f4fe283b5ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436010"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

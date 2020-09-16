@@ -1,4 +1,5 @@
 ---
+description: getDouble 方法 (SQLServerCallableStatement)
 title: getDouble 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f89ce642-9eac-4d5b-b1ba-45aa3031ab3b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6975e9ae9b23c1330407ad2d6a0b3afd2502439e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 448dfa96882298a314b2b4bc463085d38b162eb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436160"
 ---
 # <a name="getdouble-method-sqlservercallablestatement"></a>getDouble 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

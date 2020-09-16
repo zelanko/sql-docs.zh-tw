@@ -1,4 +1,5 @@
 ---
+description: getReference 方法 (SQLServerDataSource)
 title: getReference 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef07d4a60e3d32faaaabee923c1c23a79ce8b91a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8916c339a4a1d6c8373e3fbaf5a130dcc168155e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434880"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public javax.naming.Reference getReference()
  Reference 物件。  
   
 ## <a name="remarks"></a>備註  
- 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法指定。  
+ 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法所指定。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 之前，如果 SQLServerDataSource.setTrustStorePassword 在 SQLServerDataSource 物件上呼叫，密碼會存在於 SQLServerDataSource.getReference 所傳回的物件中，以便允許使用此物件來建立其他連線。 在 JDBC Driver 3.0 中，您需要在 SQLServerDataSource.getReference 傳回的物件上設定密碼，才能夠使用此物件建立連接。  
   

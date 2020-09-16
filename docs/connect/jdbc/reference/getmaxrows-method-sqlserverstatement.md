@@ -1,4 +1,5 @@
 ---
+description: getMaxRows 方法 (SQLServerStatement)
 title: getMaxRows 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4fe0ef1e178b3462c51f7ab2eb9b2c85eef4dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435530"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

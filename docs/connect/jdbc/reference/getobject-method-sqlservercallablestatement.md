@@ -1,4 +1,5 @@
 ---
+description: getObject 方法 (SQLServerCallableStatement)
 title: getObject 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62799dfa09ce090ad9b32125b4efb49413c98d32
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 05c9fd24af68e98e9ea5972e22d2cc1e21ee3a42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435080"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>getObject 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

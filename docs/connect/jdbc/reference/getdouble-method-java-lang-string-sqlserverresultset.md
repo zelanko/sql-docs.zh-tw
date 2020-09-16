@@ -1,4 +1,5 @@
 ---
+description: getDouble 方法 (java.lang.String) (SQLServerResultSet)
 title: getDouble 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9e8b1ea89c36e142245d09719f797e0c6efa3c63
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 61b4f23209a7a0decd7b4325112ee530b70d5d07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436180"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>getDouble 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

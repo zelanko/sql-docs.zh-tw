@@ -1,4 +1,5 @@
 ---
+description: getGeneratedKeys 方法 (SQLServerStatement)
 title: getGeneratedKeys 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1f0c1d8b605cb0decea6c5bfae08d5e27d841217
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2d7b3a4b8ca8f95ab4b62aa1ceee8e330a0b9f9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435860"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>getGeneratedKeys 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

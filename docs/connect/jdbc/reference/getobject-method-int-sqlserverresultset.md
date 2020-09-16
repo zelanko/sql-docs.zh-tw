@@ -1,4 +1,5 @@
 ---
+description: getObject 方法 (int) (SQLServerResultSet)
 title: getObject 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 94e59366-ca34-4cd5-a6ec-ae32d475ef36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5661d0f69c41e285e3805201b8676f18e3fbeb08
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8a7fbed4acdcd168af0a6c6c8b62a5954353e1dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435180"
 ---
 # <a name="getobject-method-int-sqlserverresultset"></a>getObject 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

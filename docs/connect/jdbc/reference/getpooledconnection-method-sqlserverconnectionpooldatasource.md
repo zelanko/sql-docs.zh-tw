@@ -1,4 +1,5 @@
 ---
+description: getPooledConnection 方法 (SQLServerConnectionPoolDataSource)
 title: getPooledConnection 方法 (SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 030ad599-0431-4242-9428-e9ead7b75b1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89bdd9c7d62554df915a84ff51240f5a19ee8605
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 99450dfa4667192a36f1402d62acd7c72d96b2b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434970"
 ---
 # <a name="getpooledconnection-method-sqlserverconnectionpooldatasource"></a>getPooledConnection 方法 (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

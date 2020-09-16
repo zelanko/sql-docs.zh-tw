@@ -1,4 +1,5 @@
 ---
+description: getSubString 方法 (SQLServerNClob)
 title: getSubString 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1f84e1ab88eee80a4d73cc04f301a7c588950c25
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9fb3e1d0df17c71f915d34c202fcf1c4b4960a6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434300"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public java.lang.String getSubString(long pos,
   
  要從子字串中擷取的第一個字元。 第一個字元落在位置 1。  
   
- *length*  
+ *length* (長度)  
   
  要複製的連續字元數目。  
   

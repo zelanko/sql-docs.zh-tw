@@ -1,4 +1,5 @@
 ---
+description: getMaxStatements 方法 (SQLServerDatabaseMetaData)
 title: getMaxStatements 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f567de2206542e78b427951f7534b604ac5ad43d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 65b697414aadc3ded169cd70f19f8f923886c699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435490"
 ---
 # <a name="getmaxstatements-method-sqlserverdatabasemetadata"></a>getMaxStatements 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

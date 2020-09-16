@@ -1,4 +1,5 @@
 ---
+description: getFloat 方法 (java.lang.String) (SQLServerResultSet)
 title: getFloat 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a3c35e701b80ea371dd14d1a90580a2b5080269e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c808dc2308d6f4c4a8582045b474bc05aa4d27d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435980"
 ---
 # <a name="getfloat-method-javalangstring-sqlserverresultset"></a>getFloat 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

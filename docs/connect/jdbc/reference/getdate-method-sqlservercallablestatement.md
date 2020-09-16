@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (SQLServerCallableStatement)
 title: getDate 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c0b5302c6707d10bca72d46a6786e2ec4e7f2f80
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 36a74adc9e1b9e968b5e60ec42e3cebdf31a86eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436290"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>getDate 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

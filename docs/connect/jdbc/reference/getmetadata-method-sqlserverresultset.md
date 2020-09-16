@@ -1,4 +1,5 @@
 ---
+description: getMetaData 方法 (SQLServerResultSet)
 title: getMetaData 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6437f792e9fd8c7d9c9c4f355a27d79b9404431b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0304d4d3aed5e3023dbe9f7c5f435e14eb88ba85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435420"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>getMetaData 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getPropertyInfo 方法 (SQLServerDriver)
 title: getPropertyInfo 方法 (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fefcbd719689879ece66fe43df7d546d315d1e5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cfdcc8917d818ff74d5897e9481f829f1284bdee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434920"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
   
  **String** 值，其中包含用來連接到資料庫的 URL。  
   
- *Info*  
+ *資訊*  
   
  屬性值配對的清單，如果是第一次使用則為 null。  
   

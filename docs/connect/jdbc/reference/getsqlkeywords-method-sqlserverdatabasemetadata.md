@@ -1,4 +1,5 @@
 ---
+description: getSQLKeywords 方法 (SQLServerDatabaseMetaData)
 title: getSQLKeywords 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7420aac9f7deb66e61fdb32520f7ec8f4ff0a9d6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7d83f32b9df0b3e3bdd336accf332b72a85da0b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434500"
 ---
 # <a name="getsqlkeywords-method-sqlserverdatabasemetadata"></a>getSQLKeywords 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

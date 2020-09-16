@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (SQLServerResultSet)
 title: getDate 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07b6321a5bcc695438b171dc0406afecd7d729f8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ea91922c0327aeb901c5ab78857e378eba8d3c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436270"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>getDate 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: getString 方法 (SQLServerResultSet)
 title: getString 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f81dde01-d328-4b32-8871-1efac645b68e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01af3843f644cd15a266f0bac8caee50b1e9d0a5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 23430ac4232ea8093aa4de94279d0e7e55717345
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434330"
 ---
 # <a name="getstring-method-sqlserverresultset"></a>getString 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

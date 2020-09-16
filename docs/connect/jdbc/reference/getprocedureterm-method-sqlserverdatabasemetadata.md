@@ -1,4 +1,5 @@
 ---
+description: getProcedureTerm 方法 (SQLServerDatabaseMetaData)
 title: getProcedureTerm 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3336d4c1-d999-43cc-b36b-ff1532e899bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f86809112c7eb156772c85f639944f8390f3e587
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39564dfb9f802564805a5fbe58115a883551ca20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434930"
 ---
 # <a name="getprocedureterm-method-sqlserverdatabasemetadata"></a>getProcedureTerm 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

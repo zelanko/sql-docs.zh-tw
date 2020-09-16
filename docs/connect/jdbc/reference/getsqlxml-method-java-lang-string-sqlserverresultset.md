@@ -1,4 +1,5 @@
 ---
+description: getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
 title: getSQLXML 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63872c5dcdf882797317755d407a70f9d250bdc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ec01af89ce9afbf9b38d65a1e76ac7d27ea937e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434460"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

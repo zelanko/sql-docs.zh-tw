@@ -1,4 +1,5 @@
 ---
+description: getObject 方法 (int)
 title: getObject 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c4b8366b-c065-48e1-b712-19e2d9834228
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d20134de6b7df5d444da12b03de9a938c3bd13bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d07b467a0924ad5c66f1636f0a6db589a767e983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435150"
 ---
 # <a name="getobject-method-int"></a>getObject 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

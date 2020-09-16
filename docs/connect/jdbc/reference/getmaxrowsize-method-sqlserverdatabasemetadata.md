@@ -1,4 +1,5 @@
 ---
+description: getMaxRowSize 方法 (SQLServerDatabaseMetaData)
 title: getMaxRowSize 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18a76daa7a901c6d20e15ff338e69832354015fc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: acbb258cec2c0a3223ef1a5ea8fe0aef70ca1f19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435520"
 ---
 # <a name="getmaxrowsize-method-sqlserverdatabasemetadata"></a>getMaxRowSize 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

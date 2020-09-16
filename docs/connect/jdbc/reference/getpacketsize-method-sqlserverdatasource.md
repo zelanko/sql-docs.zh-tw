@@ -1,4 +1,5 @@
 ---
+description: getPacketSize 方法 (SQLServerDataSource)
 title: getPacketSize 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be0d32d8dbb8dea35d354426c75c5cdd1af3f3f9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d21f76ecf79406a3016e9891b0fb2af0e2232def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435090"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

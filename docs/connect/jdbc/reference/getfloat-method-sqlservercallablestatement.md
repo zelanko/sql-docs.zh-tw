@@ -1,4 +1,5 @@
 ---
+description: getFloat 方法 (SQLServerCallableStatement)
 title: getFloat 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 58a60767-655b-4c89-a44a-965b9fb9bcd6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14482480f8905c0cb83561bb7aeda1a35fa4f148
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 87cc472c478b1712b0335358daf142c098576950
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435960"
 ---
 # <a name="getfloat-method-sqlservercallablestatement"></a>getFloat 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

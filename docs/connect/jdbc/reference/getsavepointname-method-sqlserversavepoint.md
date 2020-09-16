@@ -1,4 +1,5 @@
 ---
+description: getSavepointName 方法 (SQLServerSavepoint)
 title: getSavepointName 方法 (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63cb17bc30666d8afdbfbaeac8e684be89dc8eaa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2604a9170af793941133ace4ae0253cf849971d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434690"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName 方法 (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

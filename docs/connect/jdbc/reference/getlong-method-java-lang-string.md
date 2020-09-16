@@ -1,4 +1,5 @@
 ---
+description: getLong 方法 (java.lang.String)
 title: getLong 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd7081c6ece290be866b395388ae28ee8b56b312
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7af80b24c383e3b8dc69fbd02c93288b422bc942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435710"
 ---
 # <a name="getlong-method-javalangstring"></a>getLong 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

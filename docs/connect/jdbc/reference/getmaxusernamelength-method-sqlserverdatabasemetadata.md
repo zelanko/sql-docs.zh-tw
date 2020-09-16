@@ -1,4 +1,5 @@
 ---
+description: getMaxUserNameLength 方法 (SQLServerDatabaseMetaData)
 title: getMaxUserNameLength 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35c808e25c114bf4503c2edfa06d80a204a6fbbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: efa08594db2e634d500f78b16e25952f072332e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435460"
 ---
 # <a name="getmaxusernamelength-method-sqlserverdatabasemetadata"></a>getMaxUserNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

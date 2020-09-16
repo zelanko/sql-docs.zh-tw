@@ -1,4 +1,5 @@
 ---
+description: getLoginTimeout 方法 (SQLServerDataSource)
 title: getLoginTimeout 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db1ee4d76dede5b8249852f5ef0fcf91591c3e96
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1a868a7fc9f562496037dd4280de91aac28b335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435730"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>getLoginTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

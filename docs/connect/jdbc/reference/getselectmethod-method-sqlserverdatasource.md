@@ -1,4 +1,5 @@
 ---
+description: getSelectMethod 方法 (SQLServerDataSource)
 title: getSelectMethod 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b6255d2e-0028-474a-afa8-553ef092243e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 849768edee2b6eaebceecf190f9b35dce81372b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e70a2753a705afe29114a41bd526a84ce6ef17f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434590"
 ---
 # <a name="getselectmethod-method-sqlserverdatasource"></a>getSelectMethod 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

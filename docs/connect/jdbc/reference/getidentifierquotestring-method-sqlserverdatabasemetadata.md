@@ -1,4 +1,5 @@
 ---
+description: getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData)
 title: getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 81e1f6f6d053df8cd4a81398b9776ceecd0f46bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435930"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

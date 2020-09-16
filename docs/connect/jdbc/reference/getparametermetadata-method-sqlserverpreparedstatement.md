@@ -1,4 +1,5 @@
 ---
+description: getParameterMetaData 方法 (SQLServerPreparedStatement)
 title: getParameterMetaData 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c2876dec-ce29-4b61-9d74-ec3173b8cba5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 59b852094da369bb1f968d206b1f3328c3efe294
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a5de2959f5c3116b3023499fbc2600256ad57d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435030"
 ---
 # <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>getParameterMetaData 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

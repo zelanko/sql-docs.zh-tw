@@ -1,4 +1,5 @@
 ---
+description: getLong 方法 (java.lang.String) (SQLServerResultSet)
 title: getLong 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd99d5d2db3f0d76ac9bfc5bc6ec3294c052e0fd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4833ee58132d416339572cf8dd681b7991649b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435740"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>getLong 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

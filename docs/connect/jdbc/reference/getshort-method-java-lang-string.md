@@ -1,4 +1,5 @@
 ---
+description: getShort 方法 (java.lang.String)
 title: getShort 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7ab0b9ece4fb9f251d7d07033c1867c242235f0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dae7ef1fcf670b509f329a752fe8869d24a4da12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434530"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

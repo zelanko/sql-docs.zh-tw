@@ -1,4 +1,5 @@
 ---
+description: getResponseBuffering 方法 (SQLServerStatement)
 title: getResponseBuffering 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - SQLServerStatement.getResponseBuffering()
 apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 08411235fe8e571e9f3bdaf7220f2387d3a0b5c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434790"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

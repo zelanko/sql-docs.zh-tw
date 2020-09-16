@@ -1,4 +1,5 @@
 ---
+description: getParameterClassName 方法 (SQLServerParameterMetaData)
 title: getParameterClassName 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8653907344f49a0cd38069b6a43c639e7cb2990b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435050"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

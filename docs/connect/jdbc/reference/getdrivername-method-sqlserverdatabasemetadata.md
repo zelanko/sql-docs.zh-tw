@@ -1,4 +1,5 @@
 ---
+description: getDriverName 方法 (SQLServerDatabaseMetaData)
 title: getDriverName 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15549c3f238aaa1855c24f05555964686dfb2a00
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d5913c39aff0de5372e6d96fb53dbf3f4ae60b37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436120"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

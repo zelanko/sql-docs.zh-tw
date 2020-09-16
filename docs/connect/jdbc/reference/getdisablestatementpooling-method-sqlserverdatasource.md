@@ -1,4 +1,5 @@
 ---
+description: getDisableStatementPooling 方法 (SQLServerDataSource)
 title: getDisableStatementPooling 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e250d21fe2b8b9cd46a15989ff1178c5512cb81
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 902cceb335ea1f4f5a5858ae3bc80354002ba77b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436220"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>getDisableStatementPooling 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回 **disableStatementPooling** 連接屬性的值。 此設定能控制陳述式共用是否已針對此連線啟用。
+  傳回 **disableStatementPooling** 連接屬性的值。 此設定控制陳述式共用是否已針對此連線啟用。
 
   
 ## <a name="syntax"></a>語法  

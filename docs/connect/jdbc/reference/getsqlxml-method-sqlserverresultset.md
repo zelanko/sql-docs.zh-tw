@@ -1,4 +1,5 @@
 ---
+description: getSQLXML 方法 (SQLServerResultSet)
 title: getSQLXML 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: a07e0f30-cbc6-4ad7-b931-c30cad382e64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c4523a6b6599e31198939c9d3bd905e1c7217092
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: edc801974e987b87ea824d8724ffdd9257b35bd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434410"
 ---
 # <a name="getsqlxml-method-sqlserverresultset"></a>getSQLXML 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來作為 SQLXML 物件。  
+  擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 SQLXML 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   

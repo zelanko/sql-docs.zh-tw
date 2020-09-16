@@ -1,4 +1,5 @@
 ---
+description: getObject 方法 (java.lang.String) (SQLServerResultSet)
 title: getObject 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bca4281891c8ae45d57f14dc26bb77ea80071d5e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b0ec424269200feb0325449953eec91917ff5a70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435100"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>getObject 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

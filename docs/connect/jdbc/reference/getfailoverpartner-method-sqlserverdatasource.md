@@ -1,4 +1,5 @@
 ---
+description: getFailoverPartner 方法 (SQLServerDataSource)
 title: getFailoverPartner 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a5ae9cce50492a1ac950be98495abba49701d8c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 607f14bab8795ba3dfebd33e2c179f85897f210a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436060"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>getFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

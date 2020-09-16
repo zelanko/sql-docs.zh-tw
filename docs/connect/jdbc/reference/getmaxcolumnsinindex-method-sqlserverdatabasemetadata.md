@@ -1,4 +1,5 @@
 ---
+description: getMaxColumnsInIndex 方法 (SQLServerDatabaseMetaData)
 title: getMaxColumnsInIndex 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e32de87add3f02736e877c99ed64c565dc1f6430
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: aa7db547f9ffe7b90b703164de3a8601b0778a89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435620"
 ---
 # <a name="getmaxcolumnsinindex-method-sqlserverdatabasemetadata"></a>getMaxColumnsInIndex 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

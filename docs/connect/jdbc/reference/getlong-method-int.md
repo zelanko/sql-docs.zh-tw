@@ -1,4 +1,5 @@
 ---
+description: getLong 方法 (int)
 title: getLong 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b71fa2f0f243f4d5ad55751039d1b6b73fea7840
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: babe880124ae58fb6dd820619864af3b400bac6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435800"
 ---
 # <a name="getlong-method-int"></a>getLong 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
