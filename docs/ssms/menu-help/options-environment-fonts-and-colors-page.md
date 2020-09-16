@@ -1,4 +1,5 @@
 ---
+description: 選項 (環境 - 字型和色彩頁面)
 title: 選項 (環境 - 字型和色彩頁面)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011833"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480230"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>選項 (環境 - 字型和色彩頁面)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,5 +84,3 @@ ms.locfileid: "86011833"
   
 ## <a name="see-also"></a>另請參閱  
 [程式碼編輯器中的色彩編碼](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[選項 (文字編輯器/編輯器索引標籤和狀態列頁面)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
-  

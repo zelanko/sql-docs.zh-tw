@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111018"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570307"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87111018"
 ## <a name="20-before-you-install"></a>2.0 安裝之前  
 如需有關如何安裝 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的詳細資訊，請參閱 [SQL Server 2008 R2 服務文件](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)。  
   
-如需有關如何開始使用並安裝 SQL Server 2008 R2 的一般資訊，請參閱 SQL Server 2008 R2 讀我檔案。 安裝媒體中提供此讀我檔案文件。 您也可以在 [SQL Server 論壇](https://social.msdn.microsoft.com/Forums/category/sqlserver/)中尋找更多資訊。
+如需有關如何開始使用並安裝 SQL Server 2008 R2 的一般資訊，請參閱 SQL Server 2008 R2 讀我檔案。 安裝媒體中提供此讀我檔案文件。
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 選擇要下載並安裝的正確檔案  
 您可以使用下表來決定要下載並安裝的檔案。 在安裝 Service Pack 之前，請先確認您擁有正確的系統需求。 系統需求會列在資料表中所連結的下載頁面。  

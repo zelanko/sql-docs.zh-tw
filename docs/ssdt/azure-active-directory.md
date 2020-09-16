@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8be8ec4b61c42c0a25c01a6511b5bf69da6a47fd
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519128"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480841"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -89,6 +89,6 @@ MFA 強制執行是由 Azure AD 透過此額外的 MFA 快顯視窗來提供。
 [多重要素驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [搭配使用 Azure Active Directory 驗證和 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT 團隊部落格](https://blogs.msdn.com/b/ssdt/)  
+[SSDT 團隊部落格](https://docs.microsoft.com/archive/blogs/ssdt/)  
 [DACFx API 參考](https://msdn.microsoft.com/library/dn645454.aspx)  
 [下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

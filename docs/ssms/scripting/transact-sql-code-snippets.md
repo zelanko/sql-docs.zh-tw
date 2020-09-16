@@ -2,7 +2,7 @@
 title: Transact-SQL 程式碼片段
 description: 您可使用 Transact-SQL 程式碼片段來協助撰寫程式碼。 在此處尋找程式碼片段工作的清單，其中包含描述這些工作的文章連結。
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246214"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480698"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 程式碼片段
 
@@ -35,4 +35,4 @@ ms.locfileid: "87246214"
   
 ## <a name="see-also"></a>另請參閱
 
-[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
+[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)

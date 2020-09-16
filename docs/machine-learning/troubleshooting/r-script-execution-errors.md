@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253665"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569909"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server 中常見的 R 指令碼錯誤
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文說明在 SQL Server 中執行 R 程式碼時遇到的幾個常見指令碼錯誤。 這份清單並不是完整清單。 因為有很多套件，所以相同套件的各個版本之間可能會有不同錯誤。
-
-如果遇到此處未涵蓋的指令碼錯誤，請將其張貼在 [Machine Learning Server 論壇](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR) 上。 此論壇支援用於各種 SQL 機器學習產品的機器學習元件。
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>有效的指令碼在 T-SQL 或預存程序中失敗
 
@@ -100,6 +98,6 @@ remove('name1', 'name2', ...)
 
 [用於針對機器學習進行疑難排解所收集的資料](data-collection-ml-troubleshooting-process.md)
 
-[升級及安裝常見問題集](upgrade-and-installation-faq-sql-server-r-services.md)
+[安裝 SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
 
 [針對資料引擎連線進行疑難排解](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
