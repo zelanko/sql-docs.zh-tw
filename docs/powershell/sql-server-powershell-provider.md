@@ -3,7 +3,7 @@ title: SQL Server PowerShell 提供者 | Microsoft Docs
 description: 了解適用於 Windows PowerShell 的 SQL Server 提供者，其可供透過類似於檔案系統路徑的路徑來存取 SQL Server 物件。
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 9434ad33aee0f00856e4c59ece38c0729830c977
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06288ab89e61b3ff2203949de2b3ef6373e3aefc
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912450"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714286"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
 

@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96e6bf9e0f564e68449a8dfaf99d921c69aadd47
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b60741f9e35b9910f9650d1ce7dcb920ba22c08b
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919096"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714126"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理完成索引標籤 (SQL Server PowerShell)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457495"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713736"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ ms.locfileid: "86457495"
   
  這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，使用它來微調工作負載。 它會使用您針對 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) [微調工作負載](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)練習所建立的 MyScript.sql 工作負載  
   
-本教學課程使用 AdventureWorks2017 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)＞。  
+本教學課程使用 AdventureWorks2017 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](../../samples/adventureworks-install-configure.md)＞。  
   
-下列工作將帶您逐步開啟命令提示字元、啟動 **dta** 命令提示字元公用程式、檢視其語法說明，以及微調您在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的簡單工作負載 MyScript.sql。  
+下列工作將帶您逐步開啟命令提示字元、啟動 **dta** 命令提示字元公用程式、檢視其語法說明，以及微調您在 [微調工作負載](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)中所建立的簡單工作負載 MyScript.sql。  
 
 ## <a name="prerequisites"></a>必要條件 
 
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) \(機器翻譯\)。
+- 下載 [AdventureWorks2017 範例資料庫](../../samples/adventureworks-install-configure.md) \(機器翻譯\)。
 
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > 本教學課程適用於熟悉使用 SQL Server Management Studio 與基本資料庫管理工作的使用者。 
@@ -84,7 +84,7 @@ ms.locfileid: "86457495"
 
   ![搭配 DTA 使用 Cmd](media/dta-tutorials/dta-cmd.png)
   
-3.  在 Database Engine Tuning Advisor 微調好工作負載之後，它會顯示一則訊息，指出微調工作階段已順利完成。 您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開啟 MySession2OutputScript.sql 和 MySession2Output.xml 檔，以檢視微調結果。 另外，您也可以在 Database Engine Tuning Advisor GUI 中開啟 MySession2 微調工作階段，依照 [檢視微調建議](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 和 [檢視微調報表](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)中的相同方式來檢視其建議和報表。  
+3.  在 Database Engine Tuning Advisor 微調好工作負載之後，它會顯示一則訊息，指出微調工作階段已順利完成。 您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開啟 MySession2OutputScript.sql 和 MySession2Output.xml 檔，以檢視微調結果。 另外，您也可以在 Database Engine Tuning Advisor GUI 中開啟 MySession2 微調工作階段，依照 [檢視微調建議](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) 和 [檢視微調報表](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)中的相同方式來檢視其建議和報表。  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>完成這個教學課程之後  
@@ -97,4 +97,3 @@ ms.locfileid: "86457495"
   
 ## <a name="see-also"></a>另請參閱  
 [Database Engine 教學課程](../../relational-databases/database-engine-tutorials.md)  
-    

@@ -15,19 +15,19 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c9983289150144059a4b71d787aab1c0a91dbeb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fcf85aa9657da37d2fc1f64300c5a773d6de63ca
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006274"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714276"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **sqlps** 公用程式會啟動 Windows PowerShell 工作階段並且載入和註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者與 Cmdlet。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 請改用 **sqlps** PowerShell 模組。 如需有關 **sqlps** 模組的詳細資訊，請參閱 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 請改用 **sqlps** PowerShell 模組。 如需有關 **sqlps** 模組的詳細資訊，請參閱 [Import the SQLPS Module](../powershell/download-sql-server-ps-module.md?view=sql-server-ver15)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -123,6 +123,5 @@ sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"
   
 ## <a name="see-also"></a>另請參閱  
  [啟用或停用伺服器網路通訊協定](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
-  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md?view=sql-server-ver15)  
   

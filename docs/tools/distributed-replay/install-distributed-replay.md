@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14f3a13e566fc56332c79fd104ef584be098cda7
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681337"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714186"
 ---
 # <a name="install-distributed-replay"></a>安裝 Distributed Replay
 
@@ -192,7 +192,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   命令列的值會覆寫組態檔中的值  
   
- 如需有關如何使用組態檔的詳細資訊，請參閱 [使用組態檔來安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
+ 如需有關如何使用組態檔的詳細資訊，請參閱 [使用組態檔來安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md?view=sql-server-ver15)。  
   
 > [!IMPORTANT]  
 >  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱 [完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  

@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f075dcbbe4123c8395844a18a5aaee1bd53c0482
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 15dae50a965c6e30c9531a76b0cb7d6867ee49ec
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922292"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714316"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL Server PowerShell 路徑
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

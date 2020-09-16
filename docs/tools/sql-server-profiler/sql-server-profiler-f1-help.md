@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722643"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713796"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
 
@@ -52,7 +52,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 |---|---
 |[事件] 資料行|選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 依事件類別目錄所組織的**事件** 。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |資料行|核取對應到所需事件和資料行的方塊，來指定追蹤的資料行。 依預設，針對追蹤內所包含的每個事件，都會核取所有相關的事件資料行。  
-|篩選器|按一下資料行標頭並輸入篩選準則，即可指定篩選。 篩選的資料行在 **[編輯篩選]** 對話方塊中，會以資料行標籤左方的篩選圖示指出。 如需詳細資訊，請參閱 [SQL Server Profiler - 編輯篩選](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)。  
+|篩選器|按一下資料行標頭並輸入篩選準則，即可指定篩選。 篩選的資料行在 **[編輯篩選]** 對話方塊中，會以資料行標籤左方的篩選圖示指出。 如需詳細資訊，請參閱 [SQL Server Profiler - 編輯篩選](?view=sql-server-ver15)。  
 |**顯示所有事件**|顯示所有可用的事件。 依預設，僅會顯示在 **[事件選取範圍]** 方格中選取的資料列。 取消選取此方塊，即可隱藏 **[事件選取範圍]** 方格中所有未選取的事件。  
 |**顯示所有資料行**|顯示所有可用的資料行。 依預設，僅會顯示選取的資料行。 取消選取此方塊，即可隱藏 **[事件選取範圍]** 方格中所有未選取的資料行。  
 |**資料行篩選**|啟動 [編輯篩選] 對話方塊。 您可以使用此對話來編輯資料行篩選。  
@@ -279,5 +279,4 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 ## <a name="see-also"></a>另請參閱 
 [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [伺服器效能與活動監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
   

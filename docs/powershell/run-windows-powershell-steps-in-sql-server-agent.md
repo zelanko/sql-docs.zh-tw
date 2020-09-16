@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e250e3cc9436e8312ee1a8617acf328edde25b1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f42e8f23a525e6ebfd71c240c039b67320d9b08e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923175"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714086"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
 

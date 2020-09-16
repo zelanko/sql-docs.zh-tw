@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce7bfce6fb21ab7a8e5307b7b06ac8735554169c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 54a37555038b3757ebff61faad8717c6a800ff1c
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923170"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714296"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 識別碼
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

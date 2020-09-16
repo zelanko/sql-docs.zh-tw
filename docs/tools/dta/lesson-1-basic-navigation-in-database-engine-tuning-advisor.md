@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726916"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713826"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>第 1 課：Database Engine Tuning Advisor (DTA) 基本導覽
 
@@ -30,12 +30,12 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
 
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017) \(機器翻譯\)。
+- 下載 [AdventureWorks2017 範例資料庫](../../samples/adventureworks-install-configure.md?view=sql-server-2017) \(機器翻譯\)。
 
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > 本教學課程適用於熟悉使用 SQL Server Management Studio 與基本資料庫管理工作的使用者。 
@@ -89,6 +89,5 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
   
 ## <a name="next-lesson"></a>下一課  
 [第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

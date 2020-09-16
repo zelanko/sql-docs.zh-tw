@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54ecf5fc3205ce3648f4783f846dd5954df684e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 51e4caad8209f84a1ab0f1db054431c37cd10598
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919134"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714056"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

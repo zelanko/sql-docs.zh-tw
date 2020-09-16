@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfbac9d60a1cdda4d4fe1ab1628088890e35be5a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681862"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713786"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -186,7 +186,6 @@ ms.locfileid: "85681862"
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay 論壇](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 - 第 2 部分](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
- [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 1 部分](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
-  
+ [使用 Distributed Replay 對您的 SQL Server 進行負載測試 - 第 2 部分](/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
+ [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 1 部分](/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
   

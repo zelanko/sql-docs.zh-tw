@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748613"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714256"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
  報告會讓 **ssbdiagnose** 無法完成組態分析或無法監視交談的問題。  
   
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 環境變數  
- **ssbdiagnose** 公用程式支援 **sqlcmd** 公用程式也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 環境變數。 您可以使用命令提示字元 SET 命令，或在用 **sqlcmd** 執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中使用 **setvar**命令，來設定這些環境變數。 如需如何在 **sqlcmd** 中使用 **setvar**的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ **ssbdiagnose** 公用程式支援 **sqlcmd** 公用程式也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 環境變數。 您可以使用命令提示字元 SET 命令，或在用 **sqlcmd** 執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中使用 **setvar**命令，來設定這些環境變數。 如需如何在 **sqlcmd** 中使用 **setvar**的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15)。  
   
 ## <a name="permissions"></a>權限  
  在每個 **connectionoptions** 子句中，使用 **-E** 或 **-U** 指定的登入，必須是以 **-S** 所指定之執行個體內 **系統管理員**固定伺服器角色的成員。  
@@ -466,5 +466,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
-  
   

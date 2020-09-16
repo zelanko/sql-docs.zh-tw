@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487866"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746068"
 ---
 # <a name="python-sql-driver"></a>Python SQL 驅動程式
 
@@ -37,7 +37,7 @@ ms.locfileid: "81487866"
 * [python.org 社群](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>其他範例  
-* [在 Azure 網站中使用 DJango 和 SQL Database 建立 Python Web 應用程式](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure) \(英文\)
+* [在 Linux 上的 Azure App Service 中建立 Python 應用程式](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
 * [在 Windows 上開始使用 Python](https://www.microsoft.com/sql-server/developer-get-started/python/windows/) \(英文\)
 * [在 macOS 上開始使用 Python](https://www.microsoft.com/sql-server/developer-get-started/python/mac/) \(英文\)
 * [在 Ubuntu 上開始使用 Python](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

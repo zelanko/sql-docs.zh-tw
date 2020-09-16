@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0fdaa59f094a44b90affc3fa256275fffdfc69a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b418baa8bf729746ac14382e0e9099055ee0fb5e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920594"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713996"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  使用 **SqlLocalDB** 公用程式建立 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** 的執行個體。 **SqlLocalDB** 公用程式 (SqlLocalDB.exe) 是一個簡單的命令列工具，可讓使用者和開發人員建立及管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的執行個體。 如需如何使用 **LocalDB**的詳細資訊，請參閱 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
+  使用 **SqlLocalDB** 公用程式建立 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** 的執行個體。 **SqlLocalDB** 公用程式 (SqlLocalDB.exe) 是一個簡單的命令列工具，可讓使用者和開發人員建立及管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的執行個體。 如需如何使用 **LocalDB**的詳細資訊，請參閱 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -114,6 +114,5 @@ sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+ [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)  
 [命令列管理工具：SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
-  

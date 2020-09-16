@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 6ce61356dcbaaf1d05be9aa56804af3d85adbd7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3b8bc77f5d4fd2bd549c253b8a64cfa86c6132c
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734172"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713766"
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
 
@@ -55,4 +55,4 @@ ms.locfileid: "85734172"
 
 ## <a name="next-steps"></a>後續步驟  
  [SQL Server Profiler 概觀](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [使用 SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md?view=sql-server-ver15)

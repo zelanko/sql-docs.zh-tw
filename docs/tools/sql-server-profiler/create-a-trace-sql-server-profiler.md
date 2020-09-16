@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
-ms.openlocfilehash: c9c3fd13687004c1e632e81819ea25bfac7a3689
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e31f01bb380c84cf3391cc3feebb432b388317ee
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774883"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713726"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
 
@@ -59,6 +59,5 @@ ms.locfileid: "85774883"
  [執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
-  
+ [使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)  
   

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159366"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765767"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -34,7 +34,7 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 
 |版本|注意|
 |---------|---------|
-|Enterprise<br/>標準<br/>開發人員| 巨量資料叢集版本是由 SQL Server 主要執行個體版本所決定。 在部署時，預設會部署 Developer Edition。 在部署後可以變更此版本。 請參閱[設定 SQL Server 主要執行個體](../big-data-cluster/configure-sql-server-master-instance.md)。 |
+|Enterprise<br/>標準<br/>開發人員| 巨量資料叢集版本是由 SQL Server 主要執行個體版本所決定。 在部署時，預設會部署 Developer Edition。 在部署後可以變更此版本。 請參閱[設定 SQL Server 主要執行個體](./configure-sql-server-master-instance.md)。 |
 
 ## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 

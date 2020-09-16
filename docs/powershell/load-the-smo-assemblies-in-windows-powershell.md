@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3ac67e05f5a94de1c45e44b2fc466d5f4097751
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 673e94da44cbdd46a8873468b4421a1a8ea4e037
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919106"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714226"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>載入 Windows PowerShell 中的 SMO 組件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

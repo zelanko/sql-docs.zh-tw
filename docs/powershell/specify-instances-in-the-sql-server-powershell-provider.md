@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08d8509d0bb2686aba7d042a3180d6d719e981be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1e8c6c0b2d73528ecf483741458f10a606adc273
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010208"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714306"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

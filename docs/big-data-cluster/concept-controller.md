@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730696"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765677"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集上的控制器？
 
@@ -57,7 +57,7 @@ ms.locfileid: "85730696"
 控制器服務端點的驗證是使用 Active Directory 身分識別或是以使用者名稱和密碼為基礎。 這些認證會在叢集啟動時佈建，並使用環境變數 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 的輸入。
 
 > [!NOTE]
-> 您必須提供符合 [SQL Server 密碼複雜性需求](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)的密碼。
+> 您必須提供符合 [SQL Server 密碼複雜性需求](../relational-databases/security/password-policy.md?view=sql-server-2017)的密碼。
 
 ## <a name="next-steps"></a>後續步驟
 

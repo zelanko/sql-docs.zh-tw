@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d766a4856d83800115d68938c10b36fe032edec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7896c2f0368826698b29aab5d1f8d52ae9ad22d
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919115"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714036"
 ---
 # <a name="escape-sql-server-identifiers"></a>逸出 SQL Server 識別碼
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

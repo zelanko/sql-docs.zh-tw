@@ -6,17 +6,17 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13ec62ac5adfd818de429f087f9b5d8dc83bb8a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cde441ebf659cfb558c21abd981a49079bcacb16
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919097"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714216"
 ---
 # <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell：管理對 SQL Server 的驗證
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

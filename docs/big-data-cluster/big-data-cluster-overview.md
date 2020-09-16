@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942768"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765737"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -26,14 +26,14 @@ ms.locfileid: "86942768"
 
 使用 SQL Server 巨量資料叢集可執行下列動作：
 
-- 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](../big-data-cluster/deploy-get-started.md)。 
+- 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](./deploy-get-started.md)。 
 - 讀取、寫入及處理來自 Transact-SQL 或 Spark 的巨量資料。
 - 輕鬆結合及分析含有大量巨量資料的高價值關聯式資料。
 - 查詢外部資料來源。
 - 在 SQL Server 的受控 HDFS 中儲存巨量資料。
 - 透過叢集查詢來自多個外部資料來源的資料。
 - 使用 AI、機器學習和其他分析工作的資料。
-- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署及執行應用程式](../big-data-cluster/concept-application-deployment.md)。
+- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署及執行應用程式](./concept-application-deployment.md)。
 - 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 將資料虛擬化。 使用外部資料表來查詢來自外部 SQL Server、Oracle、Teradata、MongoDB 及 ODBC 資料來源的資料。
 - 使用 Always On 可用性群組技術，為 SQL Server 主要執行個體和所有資料庫提供高可用性。
 
