@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5393fec82a0e1ab082369970f15756dc59e91846
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73edcacffe6267d6a2692018a106a4eb055817e6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722338"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551243"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

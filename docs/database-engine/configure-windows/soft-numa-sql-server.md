@@ -16,14 +16,14 @@ helpviewer_keywords:
 - non-uniform memory access
 - soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2674f1453242e6f9b580ff41524254a10896f76
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789756"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538029"
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

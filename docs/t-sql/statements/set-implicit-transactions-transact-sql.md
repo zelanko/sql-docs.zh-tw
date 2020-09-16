@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SET IMPLICIT_TRANSACTIONS statement
 - IMPLICIT_TRANSACTIONS option
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 992a1fd5e6129666cae7413cb461a51285fb5973
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62c6e1d74cb75de180e2d55f955cd49f1c3fc9d5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426550"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544137"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

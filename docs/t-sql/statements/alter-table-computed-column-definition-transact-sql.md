@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3960af7cc636b7dc8608a6892c1f7a2fa370dbc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 06ce56d0e4a25f4e28c1ded6c0dc246a0ee3b730
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88359094"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549438"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

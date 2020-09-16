@@ -3,7 +3,7 @@ title: '[錯誤清單] 視窗'
 description: 了解如何使用 [錯誤清單]，以檢視在編輯 Transact-SQL 指令碼時，IntelliSense 所產生的錯誤和警告。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ce203349f36ecf05d934903518ec0f783d12537
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247344"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901405"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 偵錯工具 - 錯誤清單視窗
 

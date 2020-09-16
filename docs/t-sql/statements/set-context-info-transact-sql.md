@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CONTEXT_INFO option
 - SET CONTEXT_INFO statement
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bb9e8487303cb2d718eddc2052b453c55b520d97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e352a36f5106c4df7e6d4bb986ef6817212d901
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414904"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548942"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

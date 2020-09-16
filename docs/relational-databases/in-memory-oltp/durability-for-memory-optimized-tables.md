@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723247"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537048"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

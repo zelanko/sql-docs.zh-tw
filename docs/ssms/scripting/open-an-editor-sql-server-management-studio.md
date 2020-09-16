@@ -1,26 +1,28 @@
 ---
 title: 開啟編輯器 (SQL Server Management Studio)
 description: 了解如何在 SQL Server Management Studio 中開啟資料庫引擎查詢、MDX、DMX 和 XML/A 編輯器。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122566"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093471"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  此主題描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查詢、MDX、DMX 或 XML/A 編輯器。 開啟時，每個編輯器視窗都會顯示為 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]之中央面板中的索引標籤。  
+
+此主題描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查詢、MDX、DMX 或 XML/A 編輯器。 開啟時，每個編輯器視窗都會顯示為 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]之中央面板中的索引標籤。  
   
 ## <a name="before-you-begin"></a>開始之前  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 支援四種編輯器： [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器 (用於編輯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼)、DMX 及 MDX 編輯器 (以便使用這些語言來編輯指令碼)，以及 XML/A 編輯器 (用於編輯 XML/A 指令碼或 XML 檔案)。 任何編輯器都可以用來編輯文字檔。  
@@ -81,6 +83,4 @@ ms.locfileid: "87122566"
   
 -   **[範本瀏覽器]** 視窗即會顯示在右窗格中。  
   
--   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本] 資料夾、開啟 [資料庫] 資料夾，然後按兩下 [建立資料庫]。  
-  
-  
+-   按兩下範本，即可開啟含有範本文字的 [Database Engine 查詢] 視窗。 例如，若要開啟 CREATE DATABASE 範本，請開啟 [SQL Server 範本] 資料夾、開啟 [資料庫] 資料夾，然後按兩下 [建立資料庫]。

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - GET CONVERSATION GROUP statement
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c6dc77084c32b88d507cf8216cf901359268252f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16b73d0d01f4507dfb1a53596ca6ed38c49fd78a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88415754"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548980"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

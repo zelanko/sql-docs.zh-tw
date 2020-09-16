@@ -18,14 +18,14 @@ helpviewer_keywords:
 - modifying message types
 - message types [Service Broker], modifying
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 25553c83a9d564be0ea2ef6a5bb845c750d4f589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b935b0c084c66a8abea6d7160256bdba574bc37d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444906"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547840"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
