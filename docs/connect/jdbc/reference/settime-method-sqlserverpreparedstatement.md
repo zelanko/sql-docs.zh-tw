@@ -1,4 +1,5 @@
 ---
+description: setTime 方法 (SQLServerPreparedStatement)
 title: setTime 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51be70ac4d6d17a953a401807306f16a60d6553
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1beac0c34b17e851cbe2a0dbc94445e25a9c8254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472173"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

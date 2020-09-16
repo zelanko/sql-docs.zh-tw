@@ -1,4 +1,5 @@
 ---
+description: IsWindowsServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: IsWindowsServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3a769d8c279ef8d024f790157622799c6fbba129
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6c14666ee0bc7c00dade13755fbf9999e57e95f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472617"
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>ConfigurationSetting 屬性 - IsWindowsServiceEnabled
   指出是否已啟用報表伺服器 Windows 服務。 唯讀。  

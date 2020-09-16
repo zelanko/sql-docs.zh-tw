@@ -1,4 +1,5 @@
 ---
+description: updateBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 title: updateBinaryStream 方法 (java.io.InputStream, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 343baa42d4f03b6e23e8b98fc14c71ddfa336c88
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 47085362965b35f1da9c6c188821709da4c7a3d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472100"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>updateBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  InputStream 物件。  
   
- *length*  
+ *length* (長度)  
   
  **int**，指出資料流的長度。  
   
@@ -53,7 +54,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法指定。  
+ 這個 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法所指定。  
   
  這個方法會透過 InputStream 物件將位元組傳遞到選取的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二進位資料行，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 這個方法不支援更新字元資料行。 若要以 InputStream 更新字元資料行，請使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   
