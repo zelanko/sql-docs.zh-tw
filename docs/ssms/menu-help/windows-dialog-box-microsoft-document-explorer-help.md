@@ -1,4 +1,5 @@
 ---
+description: 視窗對話方塊 (Microsoft 文件總管說明)
 title: 視窗對話方塊 (Microsoft 文件總管說明)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de17d169a89f4192d0de167549218fee6c3e8fab
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dde3b50d34f269285cdd81bb4e14556d95474009
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468582"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗]  功能表上按一下 [視窗]  來顯示此對話方塊。  
+此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗]**** 功能表上按一下 [視窗]**** 來顯示此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **名稱**  

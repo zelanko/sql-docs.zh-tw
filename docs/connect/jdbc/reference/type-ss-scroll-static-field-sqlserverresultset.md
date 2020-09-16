@@ -1,4 +1,5 @@
 ---
+description: TYPE_SS_SCROLL_STATIC 欄位 (SQLServerResultSet)
 title: TYPE_SS_SCROLL_STATIC 欄位 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 179551a0-3ca4-4816-8098-8195898c997f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 169caaf540a718b8e18c02d017d277b2178fbc86
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 625ffa1205c2d560e186ff9c6ed8df54dafc853b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462420"
 ---
 # <a name="type_ss_scroll_static-field-sqlserverresultset"></a>TYPE_SS_SCROLL_STATIC 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

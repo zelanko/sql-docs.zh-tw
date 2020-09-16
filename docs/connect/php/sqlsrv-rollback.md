@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rollback
 title: sqlsrv_rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_rollback
 - sqlsrv_rollback
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4cde5b4e805b6dc55830c2ad396f181f2e1f642c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466719"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68014958"
 > 根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
   
 > [!NOTE]  
-> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_rollback**，則呼叫會傳回 **false**，且「不在交易中」錯誤會新增至錯誤集合。  
+> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_rollback**，則呼叫會傳回 **false**，且「不在交易中」** 錯誤會新增至錯誤集合。  
   
 ## <a name="syntax"></a>語法  
   

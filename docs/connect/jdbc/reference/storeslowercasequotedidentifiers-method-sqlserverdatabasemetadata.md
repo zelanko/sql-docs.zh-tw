@@ -1,4 +1,5 @@
 ---
+description: storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 title: storesLowerCaseQuotedIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c3762c6ed9d5f27b95acc14681d34c9ead86acb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a29d256250d9f7380ca636c4c4c087980a8d0116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467054"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

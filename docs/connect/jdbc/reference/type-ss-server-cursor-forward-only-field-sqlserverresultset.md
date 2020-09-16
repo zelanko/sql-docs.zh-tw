@@ -1,4 +1,5 @@
 ---
+description: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 欄位 (SQLServerResultSet)
 title: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 欄位 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 93a7398e3c22d676eeb6816cbb45bd273a1ce26a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d358498ca194a71131f80a7c6aa5a13a42692c13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462440"
 ---
 # <a name="type_ss_server_cursor_forward_only-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

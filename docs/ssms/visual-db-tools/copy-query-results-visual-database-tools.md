@@ -1,4 +1,5 @@
 ---
+description: 複製查詢結果 (Visual Database Tools)
 title: 複製查詢結果
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,22 +13,22 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6ab720bb886946c975bf721a2a38d6d53176201d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 97f444de2e08ac17500e5aa8bffbc8346598cab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462835"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>複製查詢結果 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-您可以從 [結果]  窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
+ 您可以從 [結果]**** 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>若要從 [結果] 窗格複製結果集文字  
   
 1.  執行含有您要複製之資料的查詢或檢視。  
   
-2.  若要選取整個結果集，請在 [結果]  窗格中按一下左上方空白的資料格。  
+2.  若要選取整個結果集，請在 [結果]**** 窗格中按一下左上方空白的資料格。  
   
 3.  若要選取資料列：  
   
@@ -49,7 +50,7 @@ ms.locfileid: "85977979"
   
     選取的資料格將會反白顯示。  
   
-5.  按一下滑鼠右鍵，再選擇 [複製]  。  
+5.  按一下滑鼠右鍵，再選擇 [複製]****。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

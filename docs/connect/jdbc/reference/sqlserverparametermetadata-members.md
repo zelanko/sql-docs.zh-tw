@@ -1,4 +1,5 @@
 ---
+description: SQLServerParameterMetaData 成員
 title: SQLServerParameterMetaData 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 82e005a4e81dd08643613f0c90dafbd9124dd3bb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e466581d6012a96584a378e426fc87f8f912958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462670"
 ---
 # <a name="sqlserverparametermetadata-members"></a>SQLServerParameterMetaData 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 屬性 - MachineAccountIdentity
 title: MachineAccountIdentity 屬性 (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c755fd18f3b904f6c28707752e5ff00c6086f0b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba1d38f3b6a1010039f2f64ee609ea869447ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468930"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>ConfigurationSetting 屬性 - MachineAccountIdentity
   取得安裝報表伺服器的電腦帳戶識別。  

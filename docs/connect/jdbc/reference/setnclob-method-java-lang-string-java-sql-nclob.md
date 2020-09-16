@@ -1,4 +1,5 @@
 ---
+description: setNClob 方法 (java.lang.String, java.sql.NClob)
 title: setNClob 方法 (java.lang.String, java.sql.NClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4e30d242-0c1b-45db-b75f-41b041692f31
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb011b7d2b0a3b18576765ebeaf3d9c75fa636e1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bf119306e3c937a8998670d7f22611e0b9772b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458690"
 ---
 # <a name="setnclob-method-javalangstring-javasqlnclob"></a>setNClob 方法 (java.lang.String, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

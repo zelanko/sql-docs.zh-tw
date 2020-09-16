@@ -1,4 +1,5 @@
 ---
+description: updateBoolean 方法 (int, boolean)
 title: updateBoolean 方法 (int, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88dc682abfff75f5668888d2d4598e0619ed033e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bf2d3a34b20743558ccd43eb315bcc47fb27cbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462280"
 ---
 # <a name="updateboolean-method-int-boolean"></a>updateBoolean 方法 (int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

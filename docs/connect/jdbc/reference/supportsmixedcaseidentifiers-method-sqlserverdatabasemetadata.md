@@ -1,4 +1,5 @@
 ---
+description: supportsMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 title: supportsMixedCaseIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 932b9ce0a178796887f6eb64634b4bb205a9b90b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 25aecc12f5e8a8e9d02401afae4d9830a71f6f0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466993"
 ---
 # <a name="supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

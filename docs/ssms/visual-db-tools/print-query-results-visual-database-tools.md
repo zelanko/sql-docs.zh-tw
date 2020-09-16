@@ -1,4 +1,5 @@
 ---
+description: 列印查詢結果 (Visual Database Tools)
 title: 列印查詢結果
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c3efdca2215b4338ef4141117c5ad19031c53bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462748"
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-若要列印查詢結果，可將 [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
+ 若要列印查詢結果，可將[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
   
 查詢和檢視設計師將查詢結果放入剪貼簿時，會以定位點做為資料行之間的分隔符號，資料列之間的分隔符號則用歸位/換行字元組 (Carriage Return/Line Feed)。  
   
@@ -32,11 +33,11 @@ ms.locfileid: "86002674"
   
 1.  選取要列印的資料行或資料列。  
   
-2.  使用 [複製]  命令將它們移至剪貼簿。  
+2.  使用 [複製]**** 命令將它們移至剪貼簿。  
   
 3.  切換控制至列印結果用的 Windows 程式。  
   
-4.  使用 [貼上]  命令將查詢結果移出剪貼簿。  
+4.  使用 [貼上]**** 命令將查詢結果移出剪貼簿。  
   
 5.  格式化並列印出結果。  
   

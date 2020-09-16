@@ -1,4 +1,5 @@
 ---
+description: 將衍生資料表加入查詢 (Visual Database Tools)
 title: 將衍生資料表新增到查詢
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,23 +16,23 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a234da70206c87387b38f55b64304f6ed8e31dc9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 709eed623af0265c6d88c5b2c25523f85273309f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462949"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>將衍生資料表加入查詢 (Visual Database Tools)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-衍生資料表是用作查詢中資料表來源的結果集。 您可以加入衍生資料表至 [圖表窗格]  中的查詢。  
+衍生資料表是用作查詢中資料表來源的結果集。 您可以加入衍生資料表至 [圖表窗格]**** 中的查詢。  
   
 ### <a name="to-add-a-derived-table-to-a-query"></a>將衍生資料表加入查詢  
   
 1.  開啟現有查詢或建立新查詢。  
   
-2.  以滑鼠右鍵按一下 [圖表窗格]  ，然後選擇 [新增衍生資料表]  。  
+2.  以滑鼠右鍵按一下 [圖表窗格]****，然後選擇 [新增衍生資料表]****。  
   
     隨即加入名稱為 derivedtbl_*N* 的新資料表，衍生資料表的 SELECT 陳述式也加入查詢的 FROM 子句中。  
   

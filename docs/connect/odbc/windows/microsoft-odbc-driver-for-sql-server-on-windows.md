@@ -1,4 +1,5 @@
 ---
+description: Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 title: Windows 版 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2020
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb53e8e44d0f6b9e9f293f6afa5a470e91103a0c
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 64a2c7ff06534865c4105ab28c2f3bc42b783de3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462234"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

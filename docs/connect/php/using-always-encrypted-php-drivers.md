@@ -1,4 +1,5 @@
 ---
+description: 搭配 PHP Drivers for SQL Server 使用 Always Encrypted
 title: 搭配 PHP Drivers for SQL Server 使用 Always Encrypted | Microsoft Docs
 ms.date: 12/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw
-ms.openlocfilehash: 81119187f1f00814e5b50dc97e41a506fe94131e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7f0e4ece6031f4aba769a9b9fee04e249ef553e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466652"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -158,7 +159,7 @@ $stmt->execute();
  -   執行具有繫結參數的查詢時，除非使用者在使用 SQLSRV 驅動程式時明確指定 SQL 類型，否則 PHP 驅動程式會針對使用者自動判斷 SQL 類型。
  -   程式列印的所有值都是純文字格式，因為驅動程式會以清晰簡明方式來解密從 SSN 和 BirthDate 資料行擷取的資料。
  
-注意:只有當加密具確定性時，查詢才能在加密資料行上執行相等比較。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+注意：只有當加密具確定性時，查詢才能在加密資料行上執行相等比較。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 SQLSRV：
 ```
@@ -256,7 +257,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 為了將呼叫資料行主要金鑰存放區來解密資料行加密金鑰 (CEK) 的次數減少，驅動程式會將純文字 CEK 快取至記憶體中。 從資料庫中繼資料收到加密 CEK (ECEK) 之後，ODBC 驅動程式會先嘗試尋找與快取中加密金鑰值對應的純文字 CEK。 只有在快取中找不到對應的純文字 CEK 時，驅動程式才會呼叫包含 CMK 的金鑰存放區。
 
-注意:在 ODBC Driver for SQL Server 中，快取中的項目會在兩小時逾時之後被收回。 此行為意謂著針對指定的 ECEK，驅動程式在應用程式存留期間或每隔兩小時 (以較短者為準) 會連絡金鑰存放區一次。
+注意：在 ODBC Driver for SQL Server 中，快取中的項目會在兩小時逾時之後被收回。 此行為意謂著針對指定的 ECEK，驅動程式在應用程式存留期間或每隔兩小時 (以較短者為準) 會連絡金鑰存放區一次。
 
 ## <a name="working-with-column-master-key-stores"></a>使用資料行主要金鑰存放區
 

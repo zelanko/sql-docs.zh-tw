@@ -1,4 +1,5 @@
 ---
+description: updateClob 方法 (int, java.sql.Clob)
 title: updateClob 方法 (int, java.sql.Clob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d2a5e9cb-2631-4f6e-a90c-4bee58e2f7b8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5248b9064fa134988f2339b7ce7465d8c3b34b1d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ef15a6f7127949550ba8cd925863d798e5610344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466906"
 ---
 # <a name="updateclob-method-int-javasqlclob"></a>updateClob 方法 (int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

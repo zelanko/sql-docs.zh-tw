@@ -1,4 +1,5 @@
 ---
+description: supportsANSI92EntryLevelSQL 方法 (SQLServerDatabaseMetaData)
 title: supportsANSI92EntryLevelSQL 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a67def3f71e0298f00382f13bb0c7925adf61ba6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ed62c28bfd0017e96ca90e9b62189588b01aad7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472080"
 ---
 # <a name="supportsansi92entrylevelsql-method-sqlserverdatabasemetadata"></a>supportsANSI92EntryLevelSQL 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

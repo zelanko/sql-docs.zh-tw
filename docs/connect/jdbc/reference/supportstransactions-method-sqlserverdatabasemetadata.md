@@ -1,4 +1,5 @@
 ---
+description: supportsTransactions 方法 (SQLServerDatabaseMetaData)
 title: supportsTransactions 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 57d28ee5-c2f6-4740-b42d-cead1aade809
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69799cff87d0d8ef7723361b9a6532a63da85a63
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 47535eeb527bf7e74fc689475d4f13f2da6e876b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466950"
 ---
 # <a name="supportstransactions-method-sqlserverdatabasemetadata"></a>supportsTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

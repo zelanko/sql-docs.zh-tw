@@ -1,4 +1,5 @@
 ---
+description: 變更圖表中的字型色彩、大小及樣式 (Visual Database Tools)
 title: 變更圖表中的字型色彩、大小及樣式
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1d8852d6e6f33dd6039e6350d19cd523f383bec8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7fd5a2f8dd1b40bbacb9967e8a9ce3b52e4ad3ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462899"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>變更圖表中的字型色彩、大小及樣式 (Visual Database Tools)
 
@@ -31,9 +32,9 @@ ms.locfileid: "86007647"
   
 1. 在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2. 展開 [環境]  ，再按一下 [字型和色彩]  。  
+2. 展開 [環境]****，再按一下 [字型和色彩]****。  
   
-3. 在 [顯示設定]  清單中，選取 [資料表和資料庫設計工具]  。  
+3. 在 [顯示設定]**** 清單中，選取 [資料表和資料庫設計工具]****。  
   
 4. 變更字型、大小、顯示項目、前景和背景色彩。  
   

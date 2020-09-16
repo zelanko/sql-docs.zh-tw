@@ -1,4 +1,5 @@
 ---
+description: unwrap 方法 (SQLServerDataSource)
 title: unwrap 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ad619a07e1eb10a74acd9ab5769baa7f0d1c653
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e48b55729e1c459126567fab4bcc35740201e295
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462375"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance 屬性
 title: MSReportServer_Instance 屬性 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f33795c9b030727e448440d3585e19b2a83fc418
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468913"
 ---
 # <a name="msreportserver_instance-properties"></a>MSReportServer_Instance 屬性
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
   
 ## <a name="public-properties"></a>公用屬性  
   
-|||  
+|屬性|描述|  
 |-|-|  
 |[EditionID 屬性 &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|傳回報表伺服器的版本。|  
 |[EditionName 屬性 &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|傳回報表伺服器版本之人們可讀取的名稱。|  

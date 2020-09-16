@@ -1,4 +1,5 @@
 ---
+description: setTimestamp 方法 (int, java.sql.Timestamp, java.util.Calendar)
 title: setTimestamp方法 (int, java.sql.Timestamp, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53f1732fd96949d53cf931a547e7b45e4113f546
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a60744d0adb570e98be1816925ceb5eca867bfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467160"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp 方法 (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData)
 title: supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5eb5728ff3e1e30a094487469e3e7401f0f8d10
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c27704022f1da09fdca6ec5f9697abed8bf3e3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467030"
 ---
 # <a name="supportsgetgeneratedkeys-method-sqlserverdatabasemetadata"></a>supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

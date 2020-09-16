@@ -1,4 +1,5 @@
 ---
+description: setObject 方法 (java.lang.String, java.lang.Object, int, int)
 title: setObject 方法 (java.lang.String, java.lang.Object, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 16f5f09a-51b5-423a-b52d-8c2eaa04e9ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd801e1fb79c73dc21d2221ba47069914b3ef61f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 92610692addf37ef83f9906453b398f43c53278d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458537"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject 方法 (java.lang.String, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

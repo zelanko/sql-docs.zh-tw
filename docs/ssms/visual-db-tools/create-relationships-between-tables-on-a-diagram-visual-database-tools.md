@@ -1,4 +1,5 @@
 ---
+description: 在圖表上建立資料表之間的關聯性 (Visual Database Tools)
 title: 在圖表上建立資料表之間的關聯性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 665de2b5956d769a31ee24a1dbb5966ea1f1c49a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a90f644aeaf17bd51c8963f355c9932c85da7c58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468415"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,17 +30,17 @@ ms.locfileid: "86000037"
   
 2.  將選取的資料行拖曳到關聯的資料表。  
   
-3.  會出現兩個對話方塊：[外部索引鍵關聯性]  和 [資料表與資料行]  ，而後者會顯示在前景中。  
+3.  會出現兩個對話方塊：[外部索引鍵關聯性]**** 和 [資料表與資料行]****，而後者會顯示在前景中。  
   
-4.  [關聯性名稱]  具有系統提供的名稱，其格式為 FK_*localtable*\_*foreigntable*。 您可以變更這個值。  
+4.  [關聯性名稱]**** 具有系統提供的名稱，其格式為 FK_*localtable*\_*foreigntable*。 您可以變更這個值。  
   
-5.  確認 [主索引鍵資料表]  是否指定正確的資料表。  
+5.  確認 [主索引鍵資料表]**** 是否指定正確的資料表。  
   
 6.  方格會列出本地資料行及其對應的外部資料行。 您可以加入或移除資料表資料行，或變更對應。  
   
-7.  選擇 [確定]  。  
+7.  選擇 [確定]。  
   
-    [外部索引鍵關聯性]  對話方塊便會出現。 [選取的關聯性]  會顯示您所建立的關聯性。  
+    [外部索引鍵關聯性]**** 對話方塊便會出現。 [選取的關聯性]**** 會顯示您所建立的關聯性。  
   
 8.  變更方格中關聯性的屬性。  
   

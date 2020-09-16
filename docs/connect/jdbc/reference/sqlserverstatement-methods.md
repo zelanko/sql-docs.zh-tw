@@ -1,4 +1,5 @@
 ---
+description: SQLServerStatement 方法
 title: SQLServerStatement 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de170a1a-fd06-4b70-8749-d86e2e0fb286
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d32cc33878000a16170baff738badd4fa46e0a9d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b2d596e02100899a13fa67c677ddcdcd87d556e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462560"
 ---
 # <a name="sqlserverstatement-methods"></a>SQLServerStatement 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: 在彙總查詢中使用資料行 (Visual Database Tools)
 title: 在彙總查詢中使用資料行
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: acd777cfd536c60f1eb7e7b81e65e55f9fb6bb1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468302"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在彙總查詢中使用資料行 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-當您建立彙總查詢時， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 會做出特定假設，以便建構有效的查詢。 例如，如果您要建立彙總查詢並標記某資料行進行輸出，查詢和檢視設計師會自動將該資料行變成 GROUP BY 子句的一部分，如此一來您便不會不慎在摘要中顯示個別資料列的內容。  
+ 當您建立彙總查詢時，[查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會做出特定假設，以便建構有效的查詢。 例如，如果您要建立彙總查詢並標記某資料行進行輸出，查詢和檢視設計師會自動將該資料行變成 GROUP BY 子句的一部分，如此一來您便不會不慎在摘要中顯示個別資料列的內容。  
   
 ## <a name="using-group-by"></a>使用群組依據  
 查詢和檢視設計師根據下列規則使用資料行：  
@@ -37,11 +38,11 @@ ms.locfileid: "86002599"
   
 當您將搜尋條件輸入 [準則] 窗格的 [篩選條件] 資料行時，查詢和檢視設計師將遵守下列規則：  
   
--   如果方格的 [群組依據]  資料行並未顯示 (因為您尚未指定彙總查詢)，則將搜尋條件放入 WHERE 子句。  
+-   如果方格的 [群組依據]**** 資料行並未顯示 (因為您尚未指定彙總查詢)，則將搜尋條件放入 WHERE 子句。  
   
--   如果您已在彙總查詢中並已選取 [群組依據]  資料行中的 [Where]  選項，則將搜尋條件放入 WHERE 子句。  
+-   如果您已在彙總查詢中並已選取 [群組依據]**** 資料行中的 [Where]**** 選項，則將搜尋條件放入 WHERE 子句。  
   
--   如果 [群組依據]  資料行中含有任何 [Where]  以外的值，則將搜尋條件放入 HAVING 子句。  
+-   如果 [群組依據]**** 資料行中含有任何 [Where]**** 以外的值，則將搜尋條件放入 HAVING 子句。  
   
 ## <a name="using-the-having-and-where-clauses"></a>使用 HAVING 和 WHERE 子句  
 以下原則說明如何在搜尋條件中參考彙總查詢中的資料行。 通常，您可以使用搜尋條件中的資料行來篩選應進行摘要的資料列 (WHERE 子句)，或決定最後輸出 (HAVING 子句) 中出現的群組結果。  

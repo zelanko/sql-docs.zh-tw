@@ -1,4 +1,5 @@
 ---
+description: Management Studio 中的自訂報表
 title: Management Studio 中的自訂報表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 515bb92125c48f963bc6d6c2dfa0836bcb9ef14e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: def361352b3d8938ec0d263a97e3206d237ef55b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462980"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "86001983"
 ## <a name="running-a-custom-report"></a>執行自訂報表  
 您可以利用下列方式在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中執行自訂報表：  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後以滑鼠左鍵按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]****，然後以滑鼠左鍵按一下 [自訂報表]****。 在 [開啟檔案]**** 對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  、指向 [自訂報表]  ，然後從最近使用過的檔案清單中選取自訂報表。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]****、指向 [自訂報表]****，然後從最近使用過的檔案清單中選取自訂報表。  
   
 ## <a name="limitations"></a>限制  
 當您使用自訂報表時，請考量下列限制：  

@@ -1,4 +1,5 @@
 ---
+description: 註冊伺服器
 title: 註冊伺服器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4331f92cb0d20d967625c26445ea3fd54e25eafc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dd50ab7a771dd0cd479716c94fa26110198822b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468545"
 ---
 # <a name="register-servers"></a>註冊伺服器
 
@@ -51,7 +52,7 @@ ms.locfileid: "86007436"
   
 -   建立伺服器群組。  
   
--   在有別於 [伺服器名稱] 清單的 [已註冊的伺服器名稱] 方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
+-   在有別於 [伺服器名稱]**** 清單的 [已註冊的伺服器名稱]**** 方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
   
 -   提供已註冊的伺服器的詳細說明。  
   

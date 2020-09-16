@@ -1,4 +1,5 @@
 ---
+description: SQLServerSavepoint 成員
 title: SQLServerSavepoint 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3adc8469720ec87343325afd552b5630d3c3b39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c80da4d3b87c379bda298880ae1ac09c300f76e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462610"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

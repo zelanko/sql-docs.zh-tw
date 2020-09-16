@@ -1,4 +1,5 @@
 ---
+description: 建立刪除查詢 (Visual Database Tools)
 title: 建立刪除查詢
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d5903396af4d38b97924860733a264838397b03e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 042d134a70c673052ed186aa94ca34fd4bc01faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462872"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>建立刪除查詢 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以使用刪除查詢 (Delete Query) 刪除資料表中的所有資料列。  
   
 > [!NOTE]  
-> 從資料表中刪除所有資料列可清除資料表中的資料，但不會刪除資料表本身。 若要將資料表從資料庫中刪除，請在物件總管的資料表上按一下滑鼠右鍵，並且按一下 [刪除]  。  
+> 從資料表中刪除所有資料列可清除資料表中的資料，但不會刪除資料表本身。 若要將資料表從資料庫中刪除，請在物件總管的資料表上按一下滑鼠右鍵，並且按一下 [刪除]****。  
   
 建立刪除查詢時，[準則] 窗格將會變更，以反映可以用來刪除資料列的選項。 由於您不會在刪除查詢中顯示資料，因此 [輸出]、[排序依據] 和 [排序次序] 等資料行都會移除。 此外，在表示資料表或資料表值物件的矩形中，資料行名稱旁邊的核取方塊也會移除，因為您無法個別指定要刪除的資料行。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "86010441"
   
 1.  將要刪除資料列的來源資料表加入至 [圖表] 窗格中。  
   
-2.  從 [查詢設計工具]  功能表中，指向 [變更類型]  ，然後按一下 [刪除]  。 **注意**：在啟動刪除查詢時，如果 [圖表] 窗格中顯示一個以上的資料表，查詢和檢視設計師就會顯示[刪除資料表對話方塊](../../ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md)，提示您輸入要刪除資料列的資料表名稱。  
+2.  從 [查詢設計工具]**** 功能表中，指向 [變更類型]****，然後按一下 [刪除]****。 **注意**：在啟動刪除查詢時，如果 [圖表] 窗格中顯示一個以上的資料表，查詢和檢視設計師就會顯示[刪除資料表對話方塊](../../ssms/visual-db-tools/delete-table-dialog-box-visual-database-tools.md)，提示您輸入要刪除資料列的資料表名稱。  
   
 執行刪除查詢時， [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)不會報告任何結果。 但是畫面會出現訊息，指出已經刪除的資料列數目。  
   

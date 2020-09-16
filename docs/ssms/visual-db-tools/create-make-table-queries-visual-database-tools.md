@@ -1,4 +1,5 @@
 ---
+description: 建立製成資料表查詢 (Visual Database Tools)
 title: 建立製成資料表查詢
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: dc2c7c425bc9f75304917ec37531a2db7cab57da
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1679eb137b6931810b79e42d9009e0682d90e0f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468423"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>建立製成資料表查詢 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,15 +61,15 @@ WHERE country = 'UK'
   
 1.  將一或多個來源資料表加入至 [圖表] 窗格中。  
   
-2.  從 [查詢設計工具]  功能表中，指向 [變更類型]  ，然後按一下 [製成資料表]  。  
+2.  從 [查詢設計工具]**** 功能表中，指向 [變更類型]****，然後按一下 [製成資料表]****。  
   
-3.  在 [製成資料表]  對話方塊中，輸入目的資料表的名稱。 查詢和檢視設計師並不會檢查名稱是否存在，或您是否具有建立資料表的權限。  
+3.  在 [製成資料表]**** 對話方塊中，輸入目的資料表的名稱。 查詢和檢視設計師並不會檢查名稱是否存在，或您是否具有建立資料表的權限。  
   
     若要在其他資料庫中建立目的資料表，請指定完整的資料表名稱，包括目標資料庫名稱、擁有人 (如有需要) 和資料表的名稱。  
   
-4.  指定並將要複製的資料行加入至查詢中。 如需詳細資料，請參閱[將資料行新增至查詢](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)。 只有加入查詢中的資料行才會複製。 若要複製整個資料列，請選擇 [&#42; (所有資料行)]  。  
+4.  指定並將要複製的資料行加入至查詢中。 如需詳細資料，請參閱[將資料行新增至查詢](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)。 只有加入查詢中的資料行才會複製。 若要複製整個資料列，請選擇 [&#42; (所有資料行)]。  
   
-    查詢和檢視表設計工具會將您選擇的資料行新增至 [準則] 窗格的 [資料行]  資料行。  
+    查詢和檢視表設計工具會將您選擇的資料行新增至 [準則] 窗格的 [資料行]**** 資料行。  
   
 5.  若要以特定次序複製資料列，請指定排序次序。 如需詳細資訊，請參閱 **排序和群組查詢結果**。  
   

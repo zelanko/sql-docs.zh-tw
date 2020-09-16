@@ -1,4 +1,5 @@
 ---
+description: 計算資料表中的資料列 (Visual Database Tools)
 title: 計算資料表中的資料列
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4aef31efc3b7636d56d9a4cd1ba1cf07aa22830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462853"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>計算資料表中的資料列 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "86005125"
   
 1.  請確定您要摘要的資料表已經出現在 [圖表] 窗格中。  
   
-2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]  。 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
+2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]****。 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會將 [群組依據] 資料行新增至 [準則] 窗格的方格中。  
   
-3.  在代表資料表或資料表值物件的矩形中，選取 [&#42; (所有資料行)]  。  
+3.  在代表資料表或資料表值物件的矩形中，選取 [&#42; (所有資料行)]。  
   
-    查詢和檢視表設計工具會自動將 [計數]  一詞填入至 [準則] 窗格的 [群組依據]  資料行，並且將資料行別名指定至您所摘要的資料行。 您可以使用較有意義的別名取代這個自動產生的別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
+    查詢和檢視表設計工具會自動將 [計數]**** 一詞填入至 [準則] 窗格的 [群組依據]**** 資料行，並且將資料行別名指定至您所摘要的資料行。 您可以使用較有意義的別名取代這個自動產生的別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
 4.  執行查詢。  
   
@@ -54,19 +55,19 @@ ms.locfileid: "86005125"
   
 1.  請確定您要摘要的資料表已經出現在 [圖表] 窗格中。  
   
-2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]  。 查詢和檢視表設計工具會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
+2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]****。 查詢和檢視表設計工具會將 [群組依據]**** 資料行新增至 [準則] 窗格的方格中。  
   
-3.  在代表資料表或資料表結構物件的矩形中，選取 [&#42; (所有資料行)]  。  
+3.  在代表資料表或資料表結構物件的矩形中，選取 [&#42; (所有資料行)]。  
   
-    查詢和檢視表設計工具會自動將 [計數]  一詞填入至 [準則] 窗格的 [群組依據]  資料行，並且將資料行別名指定至您所摘要的資料行。 若要在查詢輸出中建立更有用的資料行標題，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
+    查詢和檢視表設計工具會自動將 [計數]**** 一詞填入至 [準則] 窗格的 [群組依據]**** 資料行，並且將資料行別名指定至您所摘要的資料行。 若要在查詢輸出中建立更有用的資料行標題，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  新增要搜尋的資料行，然後清除 [輸出]  資料行中的核取方塊。  
+4.  新增要搜尋的資料行，然後清除 [輸出]**** 資料行中的核取方塊。  
   
-    查詢和檢視表設計工具會自動將 [群組依據]  一詞填入至方格的 [群組依據]  資料行中。  
+    查詢和檢視表設計工具會自動將 [群組依據]**** 一詞填入至方格的 [群組依據]**** 資料行中。  
   
-5.  將 [群組依據]  資料行中的 [群組依據]  變更為 [Where]  。  
+5.  將 [群組依據]**** 資料行中的 [群組依據]**** 變更為 [Where]****。  
   
-6.  在想要搜尋資料行的 [過濾]  資料行中，輸入搜尋條件。  
+6.  在想要搜尋資料行的 [過濾]**** 資料行中，輸入搜尋條件。  
   
 7.  執行查詢。  
   
@@ -74,16 +75,16 @@ ms.locfileid: "86005125"
   
 1.  請確定您要摘要的資料表已經出現在 [圖表] 窗格中。  
   
-2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]  。 查詢和檢視表設計工具會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
+2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]****。 查詢和檢視表設計工具會將 [群組依據]**** 資料行新增至 [準則] 窗格的方格中。  
   
 3.  將您要計算的資料行加入至 [準則] 窗格。  
   
-    查詢和檢視表設計工具會自動將 [群組依據]  一詞填入至方格的 [群組依據]  資料行中。  
+    查詢和檢視表設計工具會自動將 [群組依據]**** 一詞填入至方格的 [群組依據]**** 資料行中。  
   
-4.  將 [群組依據]  資料行中的 [群組依據]  變更為 [計數]  。  
+4.  將 [群組依據]**** 資料行中的 [群組依據]**** 變更為 [計數]****。  
   
     > [!NOTE]  
-    > 若只要計算唯一的值，則選擇 [Count Distinct]  。  
+    > 若只要計算唯一的值，則選擇 [Count Distinct]****。  
   
 5.  執行查詢。  
   

@@ -1,4 +1,5 @@
 ---
+description: supportsPositionedDelete 方法 (SQLServerDatabaseMetaData)
 title: supportsPositionedDelete 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8011659a-d74b-489b-a88b-08bd9e8b48b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01781a15d618c0dcb6d68b5716484fc236d9fe75
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d943aa97362f75c567dc3e98a1736a2d7c540c91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466981"
 ---
 # <a name="supportspositioneddelete-method-sqlserverdatabasemetadata"></a>supportsPositionedDelete 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

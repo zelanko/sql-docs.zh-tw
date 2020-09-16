@@ -1,4 +1,5 @@
 ---
+description: 範本總管
 title: 範本總管
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +20,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 3720799e0af4dbd7d01b6703be87bd9ac16b0587
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5fcf7040cbf7b0dc3982164ca6574f2c048ed28c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468511"
 ---
 # <a name="template-explorer"></a>範本總管
 
@@ -36,7 +37,7 @@ ms.locfileid: "86001533"
 ## <a name="benefits-of-templates"></a>範本的優點  
 方案、專案和各類型的程式碼編輯器都可以使用範本。 您可以利用範本來建立資料庫、資料表、檢視、索引、預存程序、觸發程序、統計資料和函數這類物件。 此外，還有一些範本可協助您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的擴充屬性、連結伺服器、登入、角色、使用者和範本來管理伺服器。  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本指令碼包含協助您自訂程式碼的參數。 開啟範本時，請使用 [取代範本參數]  對話方塊，在指令碼中插入值。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本指令碼包含協助您自訂程式碼的參數。 開啟範本時，請使用 [取代範本參數]**** 對話方塊，在指令碼中插入值。  
   
 請建立您經常執行之工作的自訂範本。 請將您的自訂指令碼組織成現有的資料夾，或建立新的資料夾結構。  
   

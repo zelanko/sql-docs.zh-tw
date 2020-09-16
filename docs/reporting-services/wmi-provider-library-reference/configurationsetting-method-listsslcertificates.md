@@ -1,4 +1,5 @@
 ---
+description: ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
 title: ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e39c771872b0afbb614257145f447d1a47386a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1c4aafdeeb348f3b4a3b4135a17ede2db8d4cfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468969"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting 方法 - ListSSLCertificates
   傳回報表伺服器電腦上的憑證清單。  

@@ -1,4 +1,5 @@
 ---
+description: 使用方向參數
 title: 使用方向參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb320fbd7b5abbd796964d4215a6cf38b72b5f48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 244bad8f08616efb8a566ce05738228e0c964e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466630"
 ---
 # <a name="using-directional-parameters"></a>使用方向參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

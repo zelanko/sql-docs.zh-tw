@@ -1,4 +1,5 @@
 ---
+description: SQLServerStatement 類別
 title: SQLServerStatement 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c749554d3f95ca873c9bee61b8f6c748ccbf7906
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c794edb2b0f2c62177b6591881c8886e36590bd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462580"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

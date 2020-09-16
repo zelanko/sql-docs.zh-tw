@@ -1,4 +1,5 @@
 ---
+description: setTime 方法 (int, java.sql.Time, java.util.Calendar)
 title: setTime 方法 (int, java.sql.Time, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26411ba7d2e6445c324d7967dce3ad54ad28c88b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5bc53fbdb8eaf2cd4667967f7e7665b389652ac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462700"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime 方法 (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

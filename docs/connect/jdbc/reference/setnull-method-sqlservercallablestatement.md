@@ -1,4 +1,5 @@
 ---
+description: setNull 方法 (SQLServerCallableStatement)
 title: setNull 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 842dbcfb-7f6a-46d5-b386-c6cbb879a23d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de1995ed76f31739ec239fff5df99f7baab54c6b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 507e8b7c9f97bdcf925e2719686346ccfeace0ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458600"
 ---
 # <a name="setnull-method-sqlservercallablestatement"></a>setNull 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

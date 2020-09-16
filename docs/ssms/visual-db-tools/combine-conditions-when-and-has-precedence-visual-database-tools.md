@@ -1,4 +1,5 @@
 ---
+description: 在 AND 具有優先權時結合條件 (Visual Database Tools)
 title: 在 AND 具有優先權時結合條件
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e5f7932ecfedaace610bb9adc1e76825c8797e0a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ad323d3efdbb760b315c16d94752d8c658fdab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468475"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 具有優先權時結合條件 (Visual Database Tools)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-若要使用 AND 結合條件，請將資料行加入至查詢兩次，每一個條件一次。 若要使用 OR 結合條件，請將第一個條件放入 [篩選條件] 資料行，其他條件則放入 [或...]  資料行。  
+若要使用 AND 結合條件，請將資料行加入至查詢兩次，每一個條件一次。 若要使用 OR 結合條件，請將第一個條件放入 [篩選條件] 資料行，其他條件則放入 [或...]**** 資料行。  
   
 例如，假設要尋找公司中已經擔任低階工作超過五年的員工，或不論其雇用日期負責中階工作的員工。 此一查詢需要三個條件，其中兩個以 AND 連結：  
   
@@ -41,7 +42,7 @@ ms.locfileid: "86005159"
   
 1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，新增想要搜尋的資料行。 若要搜尋使用由 AND 所連結的兩個或多個條件之相同資料行，就必須針對想要搜尋的每個值，將資料行名稱加入方格中。  
   
-2.  在 [篩選條件]  資料行，輸入想要使用 AND 連結的所有條件。 例如，若要以 AND 連結搜尋 `hire_date` 和 `job_lvl` 資料行的條件，請在 [篩選條件] 資料行分別輸入值 `< '1/1/91'` 和 `= 100`。  
+2.  在 [篩選條件]**** 資料行，輸入想要使用 AND 連結的所有條件。 例如，若要以 AND 連結搜尋 `hire_date` 和 `job_lvl` 資料行的條件，請在 [篩選條件] 資料行分別輸入值 `< '1/1/91'` 和 `= 100`。  
   
     這些方格項目會在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的陳述式中產生下列 WHERE 子句：  
   
@@ -50,9 +51,9 @@ ms.locfileid: "86005159"
       (job_lvl = 100)  
     ```  
   
-3.  在 [或...]  方格資料行中，輸入想要使用 OR 連結的條件。 例如，若要新增搜尋 `job_lvl` 資料行中其他值的條件，請在 [或...]  資料行中輸入其他值，例如 `= 200`。  
+3.  在 [或...]**** 方格資料行中，輸入想要使用 OR 連結的條件。 例如，若要新增搜尋 `job_lvl` 資料行中其他值的條件，請在 [或...]**** 資料行中輸入其他值，例如 `= 200`。  
   
-    在 [或...]  資料行中新增一個值，就會在 SQL 窗格中將另一個條件新增至陳述式中的 WHERE 子句：  
+    在 [或...]**** 資料行中新增一個值，就會在 SQL 窗格中將另一個條件新增至陳述式中的 WHERE 子句：  
   
     ```  
     WHERE (hire_date < '01/01/91' ) AND  
@@ -62,7 +63,7 @@ ms.locfileid: "86005159"
   
 ## <a name="see-also"></a>另請參閱
 
-[在 OR 具有優先權時結合條件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[在 OR 具有優先順序時合併條件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [在準則窗格中合併搜尋條件的慣例](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [輸入搜尋值的規則](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [指定搜尋準則](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

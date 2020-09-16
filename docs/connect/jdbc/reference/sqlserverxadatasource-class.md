@@ -1,4 +1,5 @@
 ---
+description: SQLServerXADataSource 類別
 title: SQLServerXADataSource 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6727ed92b72f905682908da6d38d8df0406a355
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 775768de5cd833a6fdc9d496c5d94653bcf4ef09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462590"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

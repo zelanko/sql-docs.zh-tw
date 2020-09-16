@@ -1,4 +1,5 @@
 ---
+description: setNull 方法 (SQLServerPreparedStatement)
 title: setNull 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49e197694bf1bf11564a07b4a06c75b378a3389d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f6bd15105040a0d24d85225e2371786234897e54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458590"
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>setNull 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: 將資料表從一個資料庫圖表複製至另一個資料庫圖表 (Visual Database Tools)
 title: 將資料表從一個資料庫圖表複製到另一個
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e92b18a5efee8082689d5e77e8ab9cdd91464de1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b75d0d2c3429f5649e1034ea9eb4f922ca995652
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468468"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>將資料表從一個資料庫圖表複製至另一個資料庫圖表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "85978057"
   
 2.  開啟來源和目標資料庫圖表，然後在來源圖表中選取要複製至目標圖表的資料表。  
   
-3.  按一下工具列上的 [複製]  按鈕。 這一動作會將選取的資料表定義放在剪貼簿中。  
+3.  按一下工具列上的 [複製]**** 按鈕。 這一動作會將選取的資料表定義放在剪貼簿中。  
   
 4.  切換至目標圖表。 這一圖表必須與來源圖表在同一資料庫中。  
   
-5.  按一下工具列上的 [貼上]  按鈕。 剪貼簿的內容會出現在新位置，而且仍保持反白顯示，直到您按一下別處。 如果選取的資料表與目標圖表中的其他資料表之間有關聯性，則會自動繪出關聯線。  
+5.  按一下工具列上的 [貼上]**** 按鈕。 剪貼簿的內容會出現在新位置，而且仍保持反白顯示，直到您按一下別處。 如果選取的資料表與目標圖表中的其他資料表之間有關聯性，則會自動繪出關聯線。  
   
 在任一圖表中編輯資料表時，您所做的變更會同時反應在兩個圖表中。 同理，在任一圖表中儲存資料表，則任一圖表中的資料表都不會再被視為「已修改」。  
   

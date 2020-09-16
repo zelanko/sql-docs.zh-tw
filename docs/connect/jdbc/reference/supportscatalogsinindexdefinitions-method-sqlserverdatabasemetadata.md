@@ -1,4 +1,5 @@
 ---
+description: supportsCatalogsInIndexDefinitions 方法 (SQLServerDatabaseMetaData)
 title: supportsCatalogsInIndexDefinitions 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a19423a0-e7b6-4f5c-94be-80ddf3fa4717
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17b8d4de4bbecac7687ce2f2bbb6581bede31eb1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e385c2782ed45ecb2353b01f583e9b3aedc55b7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462480"
 ---
 # <a name="supportscatalogsinindexdefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInIndexDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

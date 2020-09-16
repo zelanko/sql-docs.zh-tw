@@ -1,4 +1,5 @@
 ---
+description: 將資料庫圖表的影像複製到剪貼簿 (Visual Database Tools)
 title: 將資料庫圖表的影像複製到剪貼簿
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 36d23248776e614ea3185ca614beea5f124dd8e3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fc97c5a15ef25724a6b377007e727e5c26a6cf49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462920"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>將資料庫圖表的影像複製到剪貼簿 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86005140"
     > [!NOTE]  
     > 只有圖表的擁有人或資料庫的 db_owner 角色成員能開啟圖表。  
   
-2.  以滑鼠右鍵按一下空白區域，再選擇 [複製圖表至剪貼簿]  。  
+2.  以滑鼠右鍵按一下空白區域，再選擇 [複製圖表至剪貼簿]****。  
   
     整個資料庫圖表的影像現在已經在系統剪貼簿中。  
   

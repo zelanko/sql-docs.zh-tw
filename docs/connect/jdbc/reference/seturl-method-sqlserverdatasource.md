@@ -1,4 +1,5 @@
 ---
+description: setURL 方法 (SQLServerDataSource)
 title: setURL 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb39d5e5f3805d5c734b51fd01eb36d84fb53410
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3e27df8b938cee4503a2078d597b12eb880f52c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467116"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

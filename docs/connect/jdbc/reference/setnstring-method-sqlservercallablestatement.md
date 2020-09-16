@@ -1,4 +1,5 @@
 ---
+description: setNString 方法 (SQLServerCallableStatement)
 title: setNString 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af608cdb956e24a59f508c1d9a661c64b9081a98
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bb8178f04919afb403499e79f0af646f670485f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458650"
 ---
 # <a name="setnstring-method-sqlservercallablestatement"></a>setNString 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

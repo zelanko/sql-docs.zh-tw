@@ -1,4 +1,5 @@
 ---
+description: supportsGroupByBeyondSelect 方法 (SQLServerDatabaseMetaData)
 title: supportsGroupByBeyondSelect 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff2ace25771e94755aae68b4484349d5c751c004
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: df5107683e6bc9b80c97fcf111c63eb4caceb7c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462445"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

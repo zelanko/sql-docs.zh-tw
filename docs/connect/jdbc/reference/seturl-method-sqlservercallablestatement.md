@@ -1,4 +1,5 @@
 ---
+description: setURL 方法 (SQLServerCallableStatement)
 title: setURL 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3d83675e-74ca-49d9-8461-6326773c5c8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 93602b5b1176aa71828fc6c94fc06b37dc28b2b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9eaeb6aecac6a9bed9d43227c2fa50571603c8ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467131"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>setURL 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

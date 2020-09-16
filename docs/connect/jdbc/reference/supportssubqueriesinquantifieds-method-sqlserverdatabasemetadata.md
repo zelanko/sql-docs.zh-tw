@@ -1,4 +1,5 @@
 ---
+description: supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData)
 title: supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c0fa9f2cb890f4b71d53b97c7c024a752037c94
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d7c10719052590399c4716a7b38f85444da8b6c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466970"
 ---
 # <a name="supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
