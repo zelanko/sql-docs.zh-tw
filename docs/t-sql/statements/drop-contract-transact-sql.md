@@ -20,14 +20,14 @@ helpviewer_keywords:
 - contracts [Service Broker], dropping
 - DROP CONTRACT statement
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 128a8d993345e5c78d537923e26463acbe734e2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9766a428a74348de168f2d4df41ac8f9b7084df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416644"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547448"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

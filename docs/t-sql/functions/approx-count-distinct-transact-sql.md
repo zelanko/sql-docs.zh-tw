@@ -15,12 +15,12 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e77c9cb851921db306e52594b49d472902f36563
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e980e97adc29cda45dbedb0640f46d0a444c4b2
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417524"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076733"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -32,9 +32,7 @@ ms.locfileid: "88417524"
   
 ## <a name="syntax"></a>語法  
   
-```sql
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse  
-
+```syntaxsql
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   

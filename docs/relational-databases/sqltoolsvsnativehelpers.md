@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2a367470a4f6ca7c8d6b3015ab45b77888bbab2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 206312ba10a1dfc451434d88b982773dad1ccc4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88324891"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537570"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

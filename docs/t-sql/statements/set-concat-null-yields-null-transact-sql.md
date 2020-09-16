@@ -21,15 +21,15 @@ helpviewer_keywords:
 - concatenation [SQL Server]
 - SET CONCAT_NULL_YIELDS_NULL statement
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdca657421c2508ed05a25302f85e4bba365891d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 856afc234c12a2a394c9b2e2583f5f14b098e2f2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88415234"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538059"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

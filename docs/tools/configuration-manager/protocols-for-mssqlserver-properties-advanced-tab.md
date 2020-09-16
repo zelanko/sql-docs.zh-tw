@@ -6,18 +6,18 @@ ms.date: 01/24/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf8f2a6c80dbaf13c6e47ca835c7dc3c3e0d4d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f430d2be5a9b1af495b296f59c172e16401c01eb
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897063"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901123"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 的通訊協定內容 (進階索引標籤)
 
@@ -27,8 +27,8 @@ ms.locfileid: "85897063"
 
 > [!IMPORTANT]  
 > Windows 預設不會啟用 **[擴充保護]** 。 如需如何啟用**擴充保護**的資訊，請參閱：
-> - [Windows 擴充保護 \<extendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/) (英文)
-> - [驗證擴充保護概觀](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview) \(機器翻譯\)
+> - [Windows 擴充保護 \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/) (英文)
+> - [驗證擴充保護概觀](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview) \(機器翻譯\)
 
 如需如何設定其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的詳細資訊及 [擴充保護] 的完整說明，請參閱 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752) 上最新的資訊。
 
@@ -53,4 +53,3 @@ ms.locfileid: "85897063"
 ## <a name="see-also"></a>另請參閱
 
 [Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
-

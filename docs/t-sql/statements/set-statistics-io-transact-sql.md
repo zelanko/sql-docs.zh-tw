@@ -24,14 +24,14 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0baaa385e86844bed40dfa3f725e11ba298e27c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472193"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541251"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

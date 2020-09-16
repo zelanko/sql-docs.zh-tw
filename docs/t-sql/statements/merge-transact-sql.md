@@ -23,14 +23,14 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778557"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549004"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 

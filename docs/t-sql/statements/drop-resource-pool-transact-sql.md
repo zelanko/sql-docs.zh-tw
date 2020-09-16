@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - DROP RESOURCE POOL
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: faad24f1b4cd637dadb05edef812ababbc75000e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5554ed7ae2e741ebd2138ce8faae0f441f5d3b56
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478780"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540679"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

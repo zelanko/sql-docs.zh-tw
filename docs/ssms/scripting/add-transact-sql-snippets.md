@@ -1,28 +1,30 @@
 ---
 title: 新增 Transact-SQL 程式碼片段
 description: 了解如何將自己的 Transact-SQL 程式碼片段新增至 SQL Server 包含的預先定義程式碼片段集合。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 499cbf0dd9ea2f12e182f678bc61976e31df2504
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8a04c680b5f9753619c0f069ad6c9956bc675cc1
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921344"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093556"
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  將您自己的 Transact-SQL 程式碼片段加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包含的預先定義程式碼片段集合。  
-  
+
+將您自己的 Transact-SQL 程式碼片段加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包含的預先定義程式碼片段集合。  
+
 ## <a name="creating-a-transact-sql-snippet-file"></a>建立 Transact-SQL 程式碼片段檔案  
  建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的第一部分是使用您自己的程式碼片段文字建立 XML 檔案。 此檔案必須有 .snippet 副檔名，且必須符合 [程式碼片段結構描述參考](https://go.microsoft.com/fwlink/?LinkId=207504)的需求。 將程式碼片段語言設定為 SQL。  
   

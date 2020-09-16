@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b1ef7c9af95ade874303c868bb586c603b6b3b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 2d71f195f6432a5d27598d7861526f2a6475307c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646550"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537823"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>暫存資料表中繼資料檢視和函數
 

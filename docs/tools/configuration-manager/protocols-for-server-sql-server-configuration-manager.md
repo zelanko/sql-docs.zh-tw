@@ -6,18 +6,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f2b21507d580f7da2cee1faa3a22fce079a352c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f7d2c20b9b381c8c5fe635fc38cd5cb44eda74dd
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896642"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901641"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>&lt;伺服器&gt; 的通訊協定 (SQL Server 設定管理員)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

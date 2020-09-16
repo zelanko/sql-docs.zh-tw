@@ -6,18 +6,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e30390e1de39256346a6c5d721c1ac950657146
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b5fdf7c1faa8bde6269ac329534497ba250966e
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881911"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901130"
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>報表伺服器 &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

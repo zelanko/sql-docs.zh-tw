@@ -20,15 +20,15 @@ helpviewer_keywords:
 - identity values [SQL Server], explicit values
 - identity columns [SQL Server], explicit values
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 051b414aac878f4f55c6bf3255ba63fb68f2603f
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 08c8fd59e702d668f7218757021f415b0bea3e39
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147969"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544206"
 ---
 # <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

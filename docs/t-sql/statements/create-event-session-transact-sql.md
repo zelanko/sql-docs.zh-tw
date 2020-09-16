@@ -21,14 +21,14 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f36aa2ea714e1055a350cc921ab043a23131ff7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3830563da106d8446a3ae8aadff5fa8e8ecc39f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426770"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547538"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 

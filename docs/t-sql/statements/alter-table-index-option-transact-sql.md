@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - index_option
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5b4b1fbb918d81c6ad7145d895df306f1f39e7ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d3aedcafe6917084474d5cc7f33d35f651aa39f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458840"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541441"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

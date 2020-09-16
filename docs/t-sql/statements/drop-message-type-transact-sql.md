@@ -20,14 +20,14 @@ helpviewer_keywords:
 - DROP MESSAGE TYPE statement
 - removing message types
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b93b022ed1937b3923a44d5c13b62ff2038df958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7cd2c25c24844e80107e3995287e3452c58e663e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478821"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547748"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

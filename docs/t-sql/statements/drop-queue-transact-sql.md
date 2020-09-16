@@ -20,14 +20,14 @@ helpviewer_keywords:
 - DROP QUEUE statement
 - removing queues
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 28269fcc3c3b4e43e1343bb13abb72d1716a5b0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 736b413affafc1a75ff3b08ffaa686aff7893cbd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478793"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544189"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

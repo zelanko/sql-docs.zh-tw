@@ -3,7 +3,7 @@ title: 產生指令碼
 description: 了解如何使用 [產生與發佈指令碼精靈] 來為多個物件建立 Transact-SQL 指令碼，以及如何使用 [物件總管] 中的 [編寫組件的指令碼為] 功能表來為個別物件或多個物件產生指令碼。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123123"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901337"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ ms.locfileid: "87123123"
 
 4. 選取 **F7** 或是開啟 [檢視] 功能表並選取 [物件總管詳細資料]，開啟 [物件總管詳細資料] 窗格。
 
-    ![物件總管](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![檢視功能表](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. 以滑鼠左鍵按一下您想要編寫指令碼的其中一個物件。
 
@@ -75,4 +75,4 @@ ms.locfileid: "87123123"
 
 7. 以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<object type> 的指令碼為]。
 
-    ![物件總管](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![詳細資料](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

@@ -3,7 +3,7 @@ title: 切換中斷點
 description: 了解如何切換中斷點來醒目提示相關聯的 Transact-SQL 陳述式，以及在陳述式上執行各種動作 (例如編輯)。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 159834507edfc57466dc0872bf42e2976c4ca8cc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248063"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901484"
 ---
 # <a name="toggle-a-breakpoint"></a>切換中斷點
 

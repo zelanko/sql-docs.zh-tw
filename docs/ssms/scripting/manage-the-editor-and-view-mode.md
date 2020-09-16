@@ -1,11 +1,8 @@
 ---
 title: 管理編輯器和檢視模式
 description: 了解如何選取 SQL Server Management Studio 兩個檢視模式的其中一個：索引標籤式文件模式及多重文件介面模式。 並了解分割區視圖、自動換行、虛擬空間模式、顯示行號、全螢幕模式與自動全部隱藏等功能。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122581"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093424"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  編輯器提供了許多用來控制程式碼檢視的方式。  
-  
+
+編輯器提供了許多用來控制程式碼檢視的方式。  
+
 ## <a name="changing-the-view-mode"></a>變更檢視模式  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有一個稱為 **[索引標籤文件]** 的檢視模式，您可以利用這個模式來同時開啟多個編輯器和多份文件，並利用編輯器頂端的索引標籤來存取它們。 另外，您也可以在多重文件介面 (MDI) 模式中開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 環境，此時會將不含索引標籤的各個視窗聯結起來，您可以並排這些視窗、將它們最小化...等等。  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有一個稱為 **[索引標籤文件]** 的檢視模式，您可以利用這個模式來同時開啟多個編輯器和多份文件，並利用編輯器頂端的索引標籤來存取它們。 另外，您也可以在多重文件介面 (MDI) 模式中開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 環境，此時會將不含索引標籤的各個視窗聯結起來，您可以並排這些視窗、將它們最小化...等等。  
   
 #### <a name="to-switch-between-view-modes"></a>切換檢視模式  
   

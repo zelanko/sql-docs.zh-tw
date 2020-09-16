@@ -21,14 +21,14 @@ helpviewer_keywords:
 - DML triggers, enabling
 - ENABLE TRIGGER statement
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 31f558799af8244bf14faeff1af16717ead48417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a92daba45062c3aafe77069b57ad63129f70a913
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496684"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549024"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

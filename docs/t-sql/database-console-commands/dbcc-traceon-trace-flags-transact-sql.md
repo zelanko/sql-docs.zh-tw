@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a1c9281fff3c6b51a513617b522a362c9e800c07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91f0fc840d6e4f6925acde6499573ae5a4506463
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417614"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042739"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -118,7 +118,7 @@ ms.locfileid: "88417614"
 |**2549**|強制 DBCC CHECKDB 命令以假設每個資料庫檔案都在唯一磁碟機上，但將不同實體檔案視為單一邏輯檔案。 DBCC CHECKDB 命令會跨所有資料庫檔案建立要在每個唯一磁碟機內讀取的內部分頁清單。 此邏輯判斷唯一磁碟機的依據，是每個檔案之實際檔案名稱的磁碟機代號。<br /><br />**注意：** 除非您已知每個檔案是以唯一實體磁碟為基礎，否則請勿使用此追蹤旗標。<br /><br />**注意：** 雖然此追蹤旗標可改善目標使用 PHYSICAL_ONLY 選項時的 DBCC CHECKDB 命令效能，但某些使用者可能無法察覺效能有任何改善。 此追蹤旗標可改善磁碟 I/O 資源用量，但磁碟資源的基礎效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2634571) \(機器翻譯\)。<br /><br />**範圍**：只限全域| 
 |**2562**|無論資料庫中的索引數目為何，一律在單一「批次」中執行 DBCC CHECKDB 命令。 根據預設，DBCC CHECKDB 命令會運用「批次」概念來嘗試限制其產生的索引或「事實」數目，以將 TempDB 資源數量減到最低。 但此追蹤旗標會將所有處理強制成單一批次。<br /><br />使用此追蹤旗標的其中一個影響是 TempDB 空間需求可能會增加。 TempDB 可能成長至 DBCC CHECKDB 命令所處理使用者資料庫的 5% 或以上。<br /><br />**注意：** 雖然此追蹤旗標可改善目標使用 PHYSICAL_ONLY 選項時的 DBCC CHECKDB 命令效能，但某些使用者可能無法察覺效能有任何改善。 此追蹤旗標可改善磁碟 I/O 資源用量，但磁碟資源的基礎效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2634571) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**2566**|除非指定 `DATA_PURITY` 選項，否則請執行不含資料純度檢查的 DBCC CHECKDB 命令。<br /><br />**注意：** 預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 針對從舊版 SQL Server 升級的資料庫，在毫無錯誤的情況下完成對資料庫執行 `DBCC CHECKDB WITH DATA_PURITY` 至少一次之前，預設不會啟用資料行值檢查。 此後，依預設 DBCC CHECKDB 會檢查資料行值的完整性。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/945770) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
-|**2592**|<a name="2592"></a>在安裝「Windows 偵錯工具」之後，在堆疊傾印上啟用符號解析。 例如，使用追蹤旗標 3656 時，會要求啟用追蹤旗標 2592。 如需詳細資訊，請參閱這篇 [Microsoft 技術白皮書](https://www.microsoft.com/download/details.aspx?id=26666)。<br /><br />**警告：** 這是偵錯追蹤旗標，不適用於生產環境。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本的組建。 <br/><br/>**範圍**：全域和工作階段|
+|**2592**|<a name="2592"></a>在安裝「Windows 偵錯工具」之後，在堆疊傾印上啟用符號解析。 例如，使用追蹤旗標 3656 時，會要求啟用追蹤旗標 2592。 <br /><br />**警告：** 這是偵錯追蹤旗標，不適用於生產環境。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本的組建。 <br/><br/>**範圍**：全域和工作階段|
 |**3023**|啟用 CHECKSUM 選項，做為 BACKUP 命令的預設值。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2656988) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，此行為是透過設定 [備份總和檢查碼預設] 設定選項來控制。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。<br /><br />**範圍**：全域和工作階段|
 |**3042**|略過預設備份壓縮預先配置演算法，讓備份檔案只會視需要成長以達到其最終大小。 如果您只要配置壓縮備份所需的實際大小，藉以節省空間，這個追蹤旗標就很有用。 使用此追蹤旗標可能會導致效能稍微降低 (可能會增加備份作業的持續時間)。 如需預先配置演算法的詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)。<br /><br />**範圍**：只限全域|
 |**3051**|使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份至 URL 記錄到特定的錯誤記錄檔。7 如需詳細資訊，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。<br /><br />**範圍**：只限全域|  
@@ -130,7 +130,7 @@ ms.locfileid: "88417614"
 |**3605**|<a name="3605"></a>將追蹤訊息重新導向至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 例如，使用追蹤旗標 205 與 8721 時，需要啟用追蹤旗標 3605。<br /><br />**警告：** 這是偵錯追蹤旗標，不應在生產環境中持續啟用。<br /><br />**範圍**：全域或工作階段|  
 |**3608**|防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動啟動並復原任何資料庫，但 **master** 資料庫除外。 若起始了需要 **TempDB** 的活動，則會復原 **model** 並建立 **TempDB**。 其他資料庫會在存取時啟動和復原。 但是，某些功能 (例如快照集隔離和讀取認可的快照集) 可能無法運作。 用於[移動系統資料庫](../../relational-databases/databases/move-system-databases.md)和[移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)。<br /><br />**注意：** 請勿在一般作業期間使用。<br /><br />**範圍**：只限全域|   
 |**3625**|使用 '\*\*\*\*\*\*' 來遮罩某些錯誤訊息的參數，藉以限制傳回給非 sysadmin 固定伺服器角色成員之使用者的資訊量。 這樣做有助於避免洩漏機密資訊。<br /><br />**範圍**：只限全域|  
-|**3656**|在安裝 Windows 偵錯工具之後，啟用堆疊傾印的符號解析。 如需詳細資訊，請參閱這篇 [Microsoft 技術白皮書](https://www.microsoft.com/download/details.aspx?id=26666)。<br /><br />**警告：** 這是偵錯追蹤旗標，不適用於生產環境。<br /><br />**注意：** 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，追蹤旗標 [2592](#2592) 必須與追蹤旗標 3656 一同啟用，才能啟用符號解析。 <br/><br/>**範圍**：全域和工作階段|
+|**3656**|在安裝 Windows 偵錯工具之後，啟用堆疊傾印的符號解析。 <br /><br />**警告：** 這是偵錯追蹤旗標，不適用於生產環境。<br /><br />**注意：** 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，追蹤旗標 [2592](#2592) 必須與追蹤旗標 3656 一同啟用，才能啟用符號解析。 <br/><br/>**範圍**：全域和工作階段|
 |**3924**|允許自動移除具有 SPID =-2 的孤立 DTC 交易 (其對部分第三方交易監視而言會產生問題)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4519668)和 [Microsoft 支援服務文章](https://support.microsoft.com/help/4511816)。<br /><br />**範圍**：只限全域|  
 |**4136**|除非使用了 OPTION(RECOMPILE)、WITH RECOMPILE 或 OPTIMIZE FOR \<value>，否則請停用參數探查。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/980653) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若要在資料庫層級完成此操作，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 PARAMETER_SNIFFING 選項。<br /><br />若要在查詢層級達到相同結果，請新增 OPTIMIZE FOR UNKNOWN [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。 OPTIMIZE FOR UNKNOWN 提示不會停用參數探查機制，但會有效地略過該機制，以達到相同的預期結果。<br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，在查詢層級完成此操作的第二個選項是新增 USE HINT 'DISABLE_PARAMETER_SNIFFING' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段|  
 |**4137**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更舊版本 (70) 的查詢最佳化工具基數評估模型下，當評估用來說明部分關聯性 (而非獨立) 的篩選條件 AND 述詞時，會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以最少的選擇性產生計畫。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2658214) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，在使用 CE 70 時，若要在查詢層級完成此操作，請新增 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**注意：** 此追蹤旗標不適用於 CE 120 版或更新版本。 請改用追蹤旗標 9471。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 

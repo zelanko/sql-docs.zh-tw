@@ -21,14 +21,14 @@ helpviewer_keywords:
 - dropping assemblies
 - WITH NO DEPENDENTS option
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 96c9142b0a6906606529807ab245c6a397c8b5aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 721f7dbf286d6088af861fe26ee3fb4ec04bfedc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478935"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547817"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

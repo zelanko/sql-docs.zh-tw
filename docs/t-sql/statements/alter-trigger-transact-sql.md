@@ -20,14 +20,14 @@ helpviewer_keywords:
 - ALTER TRIGGER statement
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 051f3b675aaf4ab8e7a2ce84b4bb587676355a41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a203d4a3b3d1b8f945779fe9b255f2c3a8cfcd5e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479020"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538141"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
