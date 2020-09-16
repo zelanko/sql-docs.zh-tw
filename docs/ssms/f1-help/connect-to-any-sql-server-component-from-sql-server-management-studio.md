@@ -1,4 +1,5 @@
 ---
+description: 從 SQL Server Management Studio 連接到任何 SQL Server 元件
 title: 連線到任何 SQL Server 元件
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 2fb4150c0c1d659feebac2047094b479b7027087
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497420"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
 
@@ -33,7 +34,7 @@ ms.locfileid: "87123089"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供 [連接到伺服器]  對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟動時，便會開啟 [連接到伺服器]  對話方塊，提示您連線到伺服器。 [連接到伺服器]  對話方塊會保留上次使用的連線設定。  
   

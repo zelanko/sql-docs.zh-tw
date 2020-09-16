@@ -1,4 +1,5 @@
 ---
+description: 方案總管
 title: 方案總管
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1c98d1e8cdf0525da76e65ef7481def4e3feb0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491768"
 ---
 # <a name="solution-explorer"></a>方案總管
 
@@ -54,7 +55,7 @@ ms.locfileid: "87243565"
   
 |描述|主題|  
 |-|-|    
-|描述如何收集方案中的一個或多個專案。|[方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
+|描述如何收集方案中的一個或多個專案。|[解決方案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |描述如何建立專案並加入指令碼和連接等項目。|[專案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |提供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用來管理方案和檔案之檔案的相關資訊。|[管理方案和專案的檔案](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

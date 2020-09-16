@@ -1,4 +1,5 @@
 ---
+description: updateNCharacterStream 方法 (int, java.io.Reader)
 title: updateNCharacterStream 方法 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fc746413-bdbf-4109-aee0-385a1270c847
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc698509787fe03060f75a0f3437adf524b97828
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dce0068658f111a4cabf64515985ee07de1cbd57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478350"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>updateNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

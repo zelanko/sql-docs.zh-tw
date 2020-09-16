@@ -1,4 +1,5 @@
 ---
+description: 加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
 title: 新增資料表對話方塊 (資料庫設計工具)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 9c005a61a742a0c589cf5ccc26f818b8479b6a14
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53898206b1111119dad7056e420bf7395d326007
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497315"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
 

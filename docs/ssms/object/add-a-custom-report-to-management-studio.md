@@ -1,4 +1,5 @@
 ---
+description: 將自訂報表加入 Management Studio
 title: 將自訂報表加入 Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e6b5323efc2d0ef9a32e68997ae53e7056dc9fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa920b620cfa0045228fcdb5675c1e88bc7ab035
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480155"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,33 +27,33 @@ ms.locfileid: "86002032"
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>建立儲存成 .rdl 檔的簡單報表  
   
-1.  按一下 [開始]  、依序指向 [程式集]  和 [Microsoft SQL Server]  ，然後按一下 [SQL Server Data Tools]  。  
+1.  按一下 [開始]****、依序指向 [程式集]**** 和 [Microsoft SQL Server]****，然後按一下 [SQL Server Data Tools]****。  
   
 2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
   
 3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]** 。  
   
-4.  在 [範本]  清單中，按一下 [報表伺服器專案精靈]  。  
+4.  在 [範本]**** 清單中，按一下 [報表伺服器專案精靈]****。  
   
-5.  在 [名稱]  中，輸入 **ConnectionsReport**，然後按一下 [確定]  。  
+5.  在 [名稱]**** 中，輸入 **ConnectionsReport**，然後按一下 [確定]****。  
   
-6.  在 [報表精靈]  簡介頁面中，按一下 [下一步]  。  
+6.  在 [報表精靈]**** 簡介頁面中，按一下 [下一步]****。  
   
-7.  在 [選取資料來源]  頁面的 [名稱] 方塊中，為 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的這個連接輸入名稱，然後按一下 [編輯]  。  
+7.  在 [選取資料來源]**** 頁面的 [名稱] 方塊中，為 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的這個連接輸入名稱，然後按一下 [編輯]****。  
   
-8.  在 [連接屬性]  對話方塊的 [伺服器名稱]  方塊中，輸入您的 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體名稱。  
+8.  在 [連接屬性]**** 對話方塊的 [伺服器名稱]**** 方塊中，輸入您的 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體名稱。  
   
-9. 在 [請選取或輸入資料庫名稱]  方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上任何資料庫的名稱 (例如 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)])，然後按一下 [確定]  。  
+9. 在 [請選取或輸入資料庫名稱]**** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上任何資料庫的名稱 (例如 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)])，然後按一下 [確定]****。  
   
-10. 在 [選取資料來源]  頁面上，按一下 [下一步]  。  
+10. 在 [選取資料來源]**** 頁面上，按一下 [下一步]****。  
   
-11. 在 [設計查詢]  頁面的 [查詢字串]  方塊中，輸入下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (可列出 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的目前連接)，然後按一下 [下一步]  。 [報表精靈] 的 [查詢字串] 方塊無法接受報表參數。 您必須手動建立更複雜的自訂報表。  
+11. 在 [設計查詢]**** 頁面的 [查詢字串]**** 方塊中，輸入下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (可列出 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的目前連接)，然後按一下 [下一步]****。 [報表精靈] 的 [查詢字串] 方塊無法接受報表參數。 您必須手動建立更複雜的自訂報表。  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   
-12. 在 [選取報表類型]  頁面上，選取 [表格式]  ，然後按一下 [完成]  。  
+12. 在 [選取報表類型]**** 頁面上，選取 [表格式]****，然後按一下 [完成]****。  
   
-13. 在 [正在完成精靈]  頁面的 [報表名稱]  方塊中，輸入 **ConnectionsReport**，然後按一下 [完成]  建立並儲存報表。  
+13. 在 [正在完成精靈]**** 頁面的 [報表名稱]**** 方塊中，輸入 **ConnectionsReport**，然後按一下 [完成]**** 建立並儲存報表。  
   
 14. 關閉 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
@@ -60,13 +61,13 @@ ms.locfileid: "86002032"
   
 ### <a name="to-add-a-report-to-management-studio"></a>將報表加入至 Management Studio  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找到自訂報表資料夾，並選取 **ConnectionsReport.rdl** 檔案，然後按一下 [開啟]  。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件總管中的節點、指向 [報表]****，然後按一下 [自訂報表]****。 在 [開啟檔案]**** 對話方塊中，找到自訂報表資料夾，並選取 **ConnectionsReport.rdl** 檔案，然後按一下 [開啟]****。  
   
-    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]  下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
+    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]**** 下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]**** 下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   
-    1.  若要變更最近使用清單中可顯示的檔案數目，請在 [工具]  功能表中，按一下 [選項]  、展開 [環境]  資料夾，然後按一下 [一般]  。  
+    1.  若要變更最近使用清單中可顯示的檔案數目，請在 [工具]**** 功能表中，按一下 [選項]****、展開 [環境]**** 資料夾，然後按一下 [一般]****。  
   
-    2.  調整 [顯示在最近使用的清單中的檔案數]  中的數目。  
+    2.  調整 [顯示在最近使用的清單中的檔案數]**** 中的數目。  
   
 ## <a name="see-also"></a>另請參閱  
 [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)  

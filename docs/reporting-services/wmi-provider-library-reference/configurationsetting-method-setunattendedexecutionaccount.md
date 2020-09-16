@@ -1,4 +1,5 @@
 ---
+description: SetUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting)
 title: SetUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aac5b7a237c5aa21b79c1204d7d4560736da56d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f65c36ae1f27039061642dba87ec79b6f81c7c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497921"
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting 方法 - SetUnattendedExecutionAccount
   指定用來自動執行報表的帳戶。  
@@ -38,7 +39,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ```  
   
 ## <a name="parameters"></a>參數  
- *UserName*  
+ *使用者名稱*  
  要用於自動執行的 Windows 帳戶。  
   
  *密碼*  

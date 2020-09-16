@@ -1,4 +1,5 @@
 ---
+description: updateBinaryStream 方法 (SQLServerResultSet)
 title: updateBinaryStream 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01e63937d1e6009e2c87b3c1e9e94e0963a08bc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f18ba3d2387af462095ab6a5ff9c4bfbd097b477
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478410"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>updateBinaryStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

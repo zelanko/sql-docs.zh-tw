@@ -1,4 +1,5 @@
 ---
+description: 比較共用和內嵌資料來源 - 報表產生器 & Reporting Services (SSRS)
 title: 比較共用和內嵌資料來源 - 報表產生器與 Reporting Services | Microsoft Docs
 ms.date: 11/18/2019
 ms.prod: reporting-services
@@ -7,22 +8,22 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 25721242123d34c1cb4b826cd937df2decf02523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484991"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>比較共用和內嵌資料來源 - 報表產生器 & Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
  
-您可以使用共用或內嵌的資料來源以連線到資料。 「共用資料來源」  是獨立於所有報表外定義的。 您可以在報表伺服器或 SharePoint 網站的多份報表中使用共用資料來源。 「內嵌資料來源」  則是在報表中定義。 您只能在該報表中使用內嵌資料來源。 
+您可以使用共用或內嵌的資料來源以連線到資料。 「共用資料來源」** 是獨立於所有報表外定義的。 您可以在報表伺服器或 SharePoint 網站的多份報表中使用共用資料來源。 「內嵌資料來源」** 則是在報表中定義。 您只能在該報表中使用內嵌資料來源。 
 
  如果資料來源使用頻率很高，則共用資料來源很有用。 建議您盡量建立並使用共用資料來源。 它們會簡化報表和報表存取的管理，而且有助於提升報表和報表所存取之資料來源的安全性。 如果需要共用資料來源，您可能必須要求系統管理員為您建立一個。  
   
- 內嵌資料來源也稱為「報表特定資料來源」  ，是儲存在報表定義中的資料連線。 內嵌資料來源連線資訊僅供資料來源內嵌所在的報表使用。 若要定義和管理內嵌資料來源，請使用 **[資料來源屬性]** 對話方塊。  
+ 內嵌資料來源也稱為「報表特定資料來源」**，是儲存在報表定義中的資料連線。 內嵌資料來源連線資訊僅供資料來源內嵌所在的報表使用。 若要定義和管理內嵌資料來源，請使用 **[資料來源屬性]** 對話方塊。  
   
  內嵌與共用資料來源之間的差異在於其建立、儲存和管理的方式。  
   

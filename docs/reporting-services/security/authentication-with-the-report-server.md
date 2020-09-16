@@ -1,4 +1,5 @@
 ---
+description: 使用報表伺服器驗證
 title: 使用報表伺服器驗證 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08551b5b7005f882ffe9fb2bd147eb0fbca108e8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b25a182c94b2949a4c9d3dc83e4b9be6a810022e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492681"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
 

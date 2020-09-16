@@ -1,4 +1,5 @@
 ---
+description: 版面設定對話方塊
 title: 版面設定對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b395ad0cb0d570f74f84937ee78cb7118a5f8404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 698e9022fc5fbb4b3ba5d33a13c7495b7d96c118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491677"
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-您可以選取 [頁面設定]  對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
+ 您可以選取 [頁面設定]**** 對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
   
 ## <a name="paper"></a>文件  
 **大小**  
@@ -31,7 +32,7 @@ ms.locfileid: "86003239"
 指定要使用的紙張。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 列出可用於所選印表機的來源。  
   
 ## <a name="orientation"></a>方向  
-**縱向**  
+**直向**  
 以紙張短邊在頁面頂端的方式列印文件。  
   
 **橫向**  
@@ -47,7 +48,7 @@ Right
 頂端  
 設定頁面頂端和頁面第一行頂端之間的距離。  
   
-下  
+下層  
 設定頁面底部和頁面最後一行底部之間的距離。  
   
 ## <a name="other"></a>其他  

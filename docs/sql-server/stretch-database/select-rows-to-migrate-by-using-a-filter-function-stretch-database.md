@@ -1,4 +1,5 @@
 ---
+description: 使用篩選函數選取要移轉的資料列 (Stretch Database)
 title: 使用篩選函式選取要移轉的資料列
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492603"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   若您將原始資料儲存在其他資料表中，您可以設定 Stretch Database 以移轉整個資料表。 若您的資料表同時包含作用及原始資料，則可以指定篩選器述詞，以選取要移轉的資料列。 篩選器述詞是內嵌資料表值函數。 本文描述如何撰寫內嵌資料表值函式，以選取要移轉的資料列。  
@@ -199,7 +200,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>在執行精靈後新增篩選函數  
   
-如果您想要使用無法在 [啟用資料庫的延展功能精靈]  中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
+如果您想要使用無法在 [啟用資料庫的延展功能精靈]**** 中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
   
 1. 反轉移轉方向並回復已經移轉的資料。 這項作業開始之後，即無法將其取消。 您也會因輸出資料傳輸 (輸出) 而在 Azure 上產生費用。 如需詳細資訊，請參閱 [Azure 定價機制](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   
@@ -208,7 +209,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器]  中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱 [資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
+2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器]**** 中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱 [資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
 3. 建立您想要套用至資料表的篩選函數。  
   

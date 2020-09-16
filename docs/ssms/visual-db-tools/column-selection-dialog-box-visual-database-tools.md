@@ -1,4 +1,5 @@
 ---
+description: 資料行選取對話方塊 (Visual Database Tools)
 title: 資料行選取對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,28 +14,28 @@ ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 64755a8f4f40939c2c20419576c984fce61cb11c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 79fed858c46dd61b1c6bcfc9d3082935f149fa45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480077"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>資料行選取對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 讓您在資料庫圖表中變更資料表的 [自訂] 檢視。 [自訂] 檢視只會顯示使用者可識別的資料行屬性。  
   
-在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]  ，便會出現此對話方塊。  
+在資料表上按一下滑鼠右鍵，然後從快速鍵功能表選擇 [修改自訂檢視]****，便會出現此對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **可用的資料行**  
-列出存在於已選取資料庫資料表中的所有資料行。 此處所列的資料行相依於資料庫資料表屬性及資料庫類型。 反白顯示所要的資料行，並使用箭號按鈕將資料行移至 [選取的資料行]  方塊。  
+列出存在於已選取資料庫資料表中的所有資料行。 此處所列的資料行相依於資料庫資料表屬性及資料庫類型。 反白顯示所要的資料行，並使用箭號按鈕將資料行移至 [選取的資料行]**** 方塊。  
   
 **選取的資料行**  
 顯示目前為 [自訂] 檢視所定義的資料行屬性。 使用箭號按鈕將資料行屬性加入 [選取的資料行] 清單，或從該清單移除。  
   
 **箭號控制**  
-使用向上箭號與向下箭號按鈕，在 [選取的資料行]  清單中向上或向下移動反白顯示的資料行。  
+使用向上箭號與向下箭號按鈕，在 [選取的資料行]**** 清單中向上或向下移動反白顯示的資料行。  
   
 使用 > 和 >> 箭號，將一個或所有屬性加入自訂檢視。  
   

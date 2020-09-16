@@ -1,4 +1,5 @@
 ---
+description: SQL Server 2019 隱私權補充
 title: SQL Server 2019 隱私權補充 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c365f3e9aa5221e29d875d05ba3daf4337ca44cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480682"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 隱私權補充
 
@@ -32,7 +33,7 @@ ms.locfileid: "86914674"
 - SQL Server 移轉小幫手
 - MS-SQL 延伸模組
 
-「允許的使用方式情節」  的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
+「允許的使用方式情節」** 的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
 
 ## <a name="access-control"></a>存取控制
 
@@ -155,7 +156,7 @@ Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程�
 |狀況  |存取限制  |保留需求|
 |---------|---------|---------|
 |Microsoft 可以用來改善功能及 (或) 修正目前功能中的 Bug。|限制為供 Microsoft 內部使用且協力廠商不可存取。 |最少 90 天 - 最多 3 年 |
-|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最小 3 年 - 最多 6 年 |
+|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最少 3 年 - 最多 6 年 |
 |Microsoft 可以用來進行未來的產品規劃。 |Microsoft 可能會與其他硬體和軟體廠商共用這項資訊，以改善其產品如何與 Microsoft 軟體搭配執行。 |最少 90 天 - 最多 3 年|
 |Microsoft 可以用來根據發出的使用方式和診斷資料來提供雲端服務。 例如，客戶儀表板顯示跨組織之所有 SQL Server 安裝的功能使用方式。 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |最少 90 天 - 最多 3 年 |
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |
@@ -183,6 +184,6 @@ Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程�
 
 ## <a name="telemetry-controls"></a>遙測控制項
 
-您可於參考此處的指示，來了解如何開啟/關閉產品中的遙測 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft 。
+您可於參考此處的指示，來了解如何開啟/關閉產品中的遙測 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

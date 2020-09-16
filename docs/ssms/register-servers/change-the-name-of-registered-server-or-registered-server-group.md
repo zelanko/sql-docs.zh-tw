@@ -1,4 +1,5 @@
 ---
+description: 變更已註冊之伺服器或已註冊之伺服器群組的名稱
 title: 變更已註冊伺服器或伺服器群組的名稱
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 32f59e2db98280a7d096e0f1f7d1a90895db010b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491793"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>變更已註冊之伺服器或已註冊之伺服器群組的名稱
 
@@ -25,23 +26,23 @@ ms.locfileid: "86001782"
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
-從功能表，巡覽至 [檢視]\\[已註冊的伺服器] 開啟 [已註冊的伺服器] 窗格。
+從功能表，巡覽至 [檢視]\\[已註冊的伺服器]**** 開啟 [已註冊的伺服器]**** 窗格。
 
 ### <a name="to-change-the-name-of-a-server"></a>變更伺服器的名稱
 
-1. 在 [已註冊的伺服器]  中，依序展開 [資料庫引擎]  和 [本機伺服器群組]  。  
+1. 在 [已註冊的伺服器]**** 中，依序展開 [資料庫引擎]**** 和 [本機伺服器群組]****。  
 
-2. 以滑鼠右鍵按一下伺服器，然後選取 [屬性]  開啟 [編輯伺服器註冊屬性]  對話方塊視窗。
+2. 以滑鼠右鍵按一下伺服器，然後選取 [屬性]**** 開啟 [編輯伺服器註冊屬性]**** 對話方塊視窗。
 
-3. 在 [已註冊的伺服器名稱]  文字方塊中，輸入伺服器註冊的新名稱，然後按一下 [儲存]  。  
+3. 在 [已註冊的伺服器名稱]**** 文字方塊中，輸入伺服器註冊的新名稱，然後按一下 [儲存]****。  
 
 ### <a name="to-change-the-name-of-a-server-group"></a>若要變更伺服器群組名稱  
 
-1. 在 [已註冊的伺服器]  中，依序展開 [資料庫引擎]  和 [本機伺服器群組]  。  
+1. 在 [已註冊的伺服器]**** 中，依序展開 [資料庫引擎]**** 和 [本機伺服器群組]****。  
 
-2. 以滑鼠右鍵按一下伺服器群組，然後選取 [屬性]  開啟 [編輯伺服器群組屬性]  對話方塊視窗。 
+2. 以滑鼠右鍵按一下伺服器群組，然後選取 [屬性]**** 開啟 [編輯伺服器群組屬性]**** 對話方塊視窗。 
 
-3. 在 [群組名稱]  文字方塊中，輸入伺服器群組的新名稱，然後按一下 [儲存]  。  
+3. 在 [群組名稱]**** 文字方塊中，輸入伺服器群組的新名稱，然後按一下 [儲存]****。  
 
 ## <a name="see-also"></a>另請參閱
 

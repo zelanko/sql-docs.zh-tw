@@ -1,4 +1,5 @@
 ---
+description: 自訂功能表與快速鍵
 title: 自訂功能表與快速鍵
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
@@ -19,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: de57e987e933b7dee45b1dd9ff91698dd43488ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480207"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
 

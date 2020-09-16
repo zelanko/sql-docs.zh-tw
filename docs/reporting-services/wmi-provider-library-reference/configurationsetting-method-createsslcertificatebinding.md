@@ -1,4 +1,5 @@
 ---
+description: CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting)
 title: CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b45f1f0344f00053978dd24db334c7dafad0a066
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497961"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
   建立 TLS/SSL 憑證繫結。  

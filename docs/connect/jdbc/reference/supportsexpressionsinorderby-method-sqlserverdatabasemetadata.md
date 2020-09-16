@@ -1,4 +1,5 @@
 ---
+description: supportsExpressionsInOrderBy 方法 (SQLServerDatabaseMetaData)
 title: supportsExpressionsInOrderBy 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8cc9dd143d684e0366000f16a2662495f47e82bb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6532e0d286c84e02cb45ec4340088e651052a75f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478540"
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>supportsExpressionsInOrderBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: 建立或編輯伺服器群組 (SQL Server Management Studio)
 title: 建立或編輯伺服器群組
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: eb39627de23f236dcd3a7241f83883b747353501
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ecf61bca3e0780aefedb989ab0d7bd3ead83a3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480140"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>建立或編輯伺服器群組 (SQL Server Management Studio)
 
@@ -36,16 +37,16 @@ ms.locfileid: "86001744"
 
 1. 在 [已註冊的伺服器] 中，按一下 [已註冊的伺服器] 工具列上的伺服器類型。 如果看不見「已註冊的伺服器」，請在 **[檢視]** 功能表中按一下 **[已註冊的伺服器]** 。  
 
-2. 以滑鼠右鍵按一下伺服器或伺服器群組，並指向 [新增]  ，然後按一下 [伺服器群組]  。  
+2. 以滑鼠右鍵按一下伺服器或伺服器群組，並指向 [新增]****，然後按一下 [伺服器群組]****。  
 
 3. 在 **[新增伺服器群組]** 對話方塊的 **[群組名稱]** 清單方塊中，輸入伺服器群組的唯一名稱。 在「已註冊的伺服器」樹狀結構的目前位置上，伺服器群組名稱必須是唯一的。
 
 4. (選擇性) 在 **[群組描述]** 清單方塊中，輸入用來描述伺服器群組的易記名稱，例如「拉丁美洲的財務伺服器」。  
 
-5. 在 **[選取新伺服器群組的位置]** 方塊中，按一下群組的位置，然後按一下 **[儲存]** 。  
+5. 在 **[選取新伺服器群組的位置]** 方塊中，按一下群組的位置，然後按一下 **[儲存]**。  
 
    > [!NOTE]
-   > 在註冊伺服器時，您也可以按一下 [新增群組]  ，然後完成 [新增群組]  對話方塊來建立新伺服器群組。  
+   >  在註冊伺服器時，您也可以按一下 **[新增群組]**，然後完成 **[新增群組]** 對話方塊來建立新伺服器群組。  
 
 ## <a name="see-also"></a>另請參閱
 

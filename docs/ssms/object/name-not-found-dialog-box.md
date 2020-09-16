@@ -1,4 +1,5 @@
 ---
+description: 找不到名稱對話方塊
 title: 找不到名稱對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a54e4152a13b1bf1f1b46efb05ff9f8dcd1b72f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f06b1ce5c2b36d00e4b05ba017de80717ee9b960
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491881"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

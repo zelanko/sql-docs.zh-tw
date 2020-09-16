@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497991"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database 以透明且安全的方式，將您的原始資料遷移到 Microsoft Azure 雲端。  
@@ -29,7 +30,7 @@ ms.locfileid: "81488344"
  Stretch Database 提供下列優點：  
   
  **為冷資料提供符合成本效益的可用性**  
- 使用 SQL Server Stretch Database 以動態方式將暖交易資料和冷交易資料從 SQL Server 延展到 Microsoft Azure。 與一般冷資料儲存區不同的是，您的資料會一直在線上而且可供查詢。 您可以提供較長的資料保留時間軸，而不需要為「客戶訂單記錄」之類的大型資料表砸下大筆花費。 受益於低成本的 Azure，而不是調整昂貴的內部部署儲存體。 您可以在 Azure 入口網站選擇定價層並進行設定，以維持對定價及成本的控制。 並可視需要擴大或縮減規模。 如需詳細資料，請瀏覽 [SQL Server Stretch Database 定價](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 。  
+ 使用 SQL Server Stretch Database 以動態方式將暖交易資料和冷交易資料從 SQL Server 延展到 Microsoft Azure。 與一般冷資料儲存區不同的是，您的資料會一直在線上而且可供查詢。 您可以提供較長的資料保留時間軸，而不需要為「客戶訂單記錄」之類的大型資料表砸下大筆花費。 受益於低成本的 Azure，而不是調整昂貴的內部部署儲存體。 您可以在 Azure 入口網站選擇定價層並進行設定，以維持對定價及成本的控制。 並可視需要擴大或縮小規模。 如需詳細資料，請瀏覽 [SQL Server Stretch Database 定價](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 。  
   
  **不需要變更查詢或應用程式**  
  無論您的 SQL Server 資料位於內部部署或已延展到雲端，都能平順地存取。  您可以設定原則來決定資料的儲存位置，並由 SQL Server 負責在背景處理資料的移動。 整個資料表都會一直在線上，而且可供查詢。 此外，因為資料位置對應用程式而言完全透明，所以 Stretch Database 不會要求對現有查詢或應用程式進行任何變更。  
@@ -37,7 +38,7 @@ ms.locfileid: "81488344"
  **簡化內部部署資料維護**  
  減少資料的內部部署維護與儲存。 內部部署資料的備份會執行得更快，並在維護時間窗口內完成。 資料的雲端部分備份會自動執行。 您的內部部署儲存需求將大幅減少。 Azure 儲存體的成本與加入內部部署 SSD 相比，可節省 80%。  
   
- **即使在移轉期間也能保護您的資料安全**  
+ **即使在遷移期間也能保護您的資料安全**  
  您可以安全地將最重要的應用程式延展到雲端，因此大可放心。 SQL Server 的 Always Encrypted 可為移動中的資料提供加密。 資料列層級安全性 (RLS) 及其他進階 SQL Server 安全性功能也可搭配 Stretch Database 運作，以保護您的資料。  
   
 ## <a name="what-does-stretch-database-do"></a>Stretch Database 有何作用？  

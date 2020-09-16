@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio (SSMS) 支援原則
 title: SQL Server Management Studio (SSMS) 支援原則
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497266"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) 支援原則
 
@@ -43,4 +44,4 @@ Microsoft 計劃每年發行幾次 SQL Server Management Studio (SSMS) 的更新
 
 
 > [!NOTE]
-> 最新分支版本一律會處於**完整支援**服務階段。 這個支援聲明表示，如果您發現需要重大更新的程式碼缺失，您必須安裝最新分支版本才能收到修正程式。
+> 最新分支版本一律會處於**完整支援**服務階段。 這個支援聲明表示，如果您發現需要重大更新的程式碼缺失，則必須已安裝最新分支版本，才能接收修正程式。

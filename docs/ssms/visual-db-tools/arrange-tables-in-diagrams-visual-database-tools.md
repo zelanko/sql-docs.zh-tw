@@ -1,4 +1,5 @@
 ---
+description: 排列圖表中的資料表 (Visual Database Tools)
 title: 排列圖表中的資料表
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 7cb133b36d804a3d5a32906e2de735df20fb113f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eba464a7648151d24945e755c1f6432f12a699cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497261"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>排列圖表中的資料表 (Visual Database Tools)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85999538"
   
 1. 在 [資料庫圖表] 視窗的空白空間上按一下滑鼠右鍵。  
   
-2. 從捷徑功能表按一下 [排列資料表]  。  
+2. 從捷徑功能表按一下 [排列資料表]****。  
   
 ## <a name="see-also"></a>另請參閱
 

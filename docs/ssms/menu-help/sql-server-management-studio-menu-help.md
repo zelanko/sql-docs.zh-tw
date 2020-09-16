@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio 功能表說明 [SQL Server]
 title: SQL Server Management Studio 功能表說明 [SQL Server]
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c16c2f27f95eb987c1d8cd1368aa27709fa4fc9c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 06562bfd23c315e13f2bf7c0891270c2e68b3d62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497433"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 功能表說明 [SQL Server]
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-本節提供 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中功能表列對話方塊與頁面的 F1 說明。  
+ 本節包含 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，功能表列所提供之對話方塊及頁面的 F1 說明。  
   
 [關於 SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

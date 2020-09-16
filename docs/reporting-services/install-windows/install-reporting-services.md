@@ -1,4 +1,5 @@
 ---
+description: 安裝 SQL Server Reporting Services
 title: 安裝 SQL Server Reporting Services | Microsoft Docs
 ms.date: 05/01/2020
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3539b53864f14c9d88f92a07f5217d619084c3fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484981"
 ---
 # <a name="install-sql-server-reporting-services"></a>安裝 SQL Server Reporting Services
 

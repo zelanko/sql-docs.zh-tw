@@ -1,4 +1,5 @@
 ---
+description: 檢查條件約束運算式對話方塊 (Visual Database Tools)
 title: 檢查條件約束運算式對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: bcde2847ecbe1fbfdd156df6e631ef4d5c382917
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 08bcaa1fa6537268266011b7ea785f9badba54d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497190"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

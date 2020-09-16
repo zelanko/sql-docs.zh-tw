@@ -1,4 +1,5 @@
 ---
+description: updateLong 方法 (java.lang.String, long)
 title: updateLong 方法 (java.lang.String, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c0b799ab2a32435ed87135cdb231e0565a44ee26
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2ba14f1377c5212d425328ea3f3d53ef67785d09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478376"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>updateLong 方法 (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

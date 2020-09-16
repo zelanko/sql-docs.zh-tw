@@ -1,4 +1,5 @@
 ---
+description: 以遞增或遞減順序排序 (Visual Database Tools)
 title: 以遞增或遞減順序排序
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 947ff75c1eb3f0a20b0bc3c415645254a7c4b6c4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1826914bd042ad897dc7eb143dfd38d18104e7a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85976788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491618"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-您可以使用  或  關鍵字搭配  子句，以遞增或遞減的方式，排序結果集中一個或多個資料行內的查詢結果。  
+ 您可以使用 **ASC** 或 **DESC** 關鍵字搭配 **ORDER BY** 子句，以遞增或遞減的方式，排序結果集中一或多個資料行內的查詢結果。  
   
 > [!NOTE]  
 > 排序次序一部份取決於資料行的定序序列。 您可以在 [定序對話方塊](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)中變更定序序列。  
@@ -31,9 +32,9 @@ ms.locfileid: "85976788"
   
 ### <a name="to-specify-or-change-the-order-in-which-results-are-sorted"></a>指定或變更已經排序結果的順序  
   
-1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型]  欄位。  
+1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型]**** 欄位。  
   
-2.  選擇 [遞增]  或 [遞減]  以指定資料行的排序順序。  
+2.  選擇 [遞增]**** 或 [遞減]**** 以指定資料行的排序順序。  
   
 請注意，使用 [準則] 窗格時，查詢的 UNION 子句會變更，以符合您最近的動作。  
   

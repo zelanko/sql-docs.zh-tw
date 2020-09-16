@@ -1,4 +1,5 @@
 ---
+description: DatabaseName 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: DatabaseName 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a2a245a75f38019c749e67565c5f596a80e3640
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71735d8c7f2e6ec1c4fba9a48c96041b72138a94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492581"
 ---
 # <a name="configurationsetting-property---databasename"></a>ConfigurationSetting 屬性 - DatabaseName
   指定主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 唯讀。  

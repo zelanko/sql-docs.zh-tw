@@ -1,4 +1,5 @@
 ---
+description: 使用自訂報表搭配物件總管節點屬性
 title: 使用自訂報表搭配物件總管節點屬性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 715885ea3eaaa3601c56ddf296c91cf579dd4c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497378"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>使用自訂報表搭配物件總管節點屬性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86001836"
 |------------------|-------------|  
 |**ObjectName**|**String**|  
 |**ObjectTypeName**|**String**|  
-|**已篩選**|**布林值**|  
+|**Filtered**|**布林值**|  
 |**ServerName**|**String**|  
 |**FontName**|**String**|  
 |**DatabaseName**|**String**|  
@@ -43,13 +44,13 @@ ms.locfileid: "86001836"
   
 2.  將報表檔案複製到您在資料庫伺服器上針對自訂報表所建立資料夾。  
   
-3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，於物件總管中的節點上按一下滑鼠右鍵，再指向 [報表]  ，然後按一下 [自訂報表]。 在 [開啟檔案]  對話方塊中，找出自訂報表資料夾並選取報表檔案，然後按一下 [開啟]  。  
+3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，於物件總管中的節點上按一下滑鼠右鍵，再指向 [報表]，然後按一下 [自訂報表]。 在 [開啟檔案]**** 對話方塊中，找出自訂報表資料夾並選取報表檔案，然後按一下 [開啟]****。  
   
-    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]  下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
+    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]**** 下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]**** 下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   
-    1.  若要變更最近使用之清單上所顯示的檔案數，請在 [工具]  功能表中按一下 [選項]  ，再展開 [環境]  資料夾，然後按一下 [一般]  。  
+    1.  若要變更最近使用之清單上所顯示的檔案數，請在 [工具]**** 功能表中按一下 [選項]****，再展開 [環境]**** 資料夾，然後按一下 [一般]****。  
   
-    2.  調整 [顯示在最近使用的清單中的檔案數]  中的數目。  
+    2.  調整 [顯示在最近使用的清單中的檔案數]**** 中的數目。  
   
 ## <a name="custom-report-code-sample"></a>自訂報表程式碼範例  
 使用下列程式碼所建立的報表將會使用與 [物件總管] 節點相關聯的參數。  

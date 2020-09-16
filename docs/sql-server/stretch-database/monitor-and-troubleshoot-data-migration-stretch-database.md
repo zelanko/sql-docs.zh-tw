@@ -1,4 +1,5 @@
 ---
+description: 監視和疑難排解資料移轉 (Stretch Database)
 title: 監視及疑難排解資料移轉
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -11,21 +12,21 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4ca3f7b7a857e5c8592844c9523753b68a3728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492662"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | Stretch | 監視]  。  
+  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | Stretch | 監視]****。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>在 Stretch Database 監視器中檢查資料移轉狀態  
- 針對 SQL Server Management Studio 中的資料庫選取 [工作 | Stretch | 監視]  ，以開啟 Stretch Database 監視器並監視資料移轉。  
+ 針對 SQL Server Management Studio 中的資料庫選取 [工作 | Stretch | 監視]****，以開啟 Stretch Database 監視器並監視資料移轉。  
   
 -   監視器的上半部會顯示啟用延展的 SQL Server 資料庫與遠端 Azure 資料庫的一般資訊。  
   
@@ -54,6 +55,6 @@ ms.locfileid: "73843783"
  您可能必須在 Azure 伺服器的 Azure 防火牆設定中新增一個規則，讓 SQL Server 與遠端 Azure 伺服器進行通訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 Stretch Database 並對其進行疑難排解](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [Stretch Database 的管理和疑難排解](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   

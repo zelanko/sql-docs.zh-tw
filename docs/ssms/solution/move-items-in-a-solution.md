@@ -1,4 +1,5 @@
 ---
+description: 移動方案中的項目
 title: 移動方案中的項目
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67456bfd826610aaf500735d4f055e00f0c58aa7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 871f86e949eb8c4567b6998f5f664de554e4f466
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497285"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,11 +30,11 @@ ms.locfileid: "86000804"
   
 1.  在 [方案總管] 中，選取您要移動的項目。  
   
-2.  在 [編輯]  功能表上，按一下 [剪下]  。  
+2.  在 [編輯]**** 功能表上，按一下 [剪下]****。  
   
 3.  在 [方案總管] 中，選取目的地。  
   
-4.  在 [編輯]  功能表上，按一下 [貼上]  。  
+4.  在 [編輯]**** 功能表上，按一下 [貼上]****。  
   
 您可以在 [方案總管] 內拖曳「查詢」和「其他」檔案來移動項目。 拖曳可讓您查看拖曳作業的結果。 在專案類型之間移動查詢，可能會造成在目標專案中，將查詢視為其他檔案。  
   

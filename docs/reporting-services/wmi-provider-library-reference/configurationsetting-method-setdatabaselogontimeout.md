@@ -1,4 +1,5 @@
 ---
+description: SetDatabaseLogonTimeout 方法 (WMI MSReportServer_ConfigurationSetting)
 title: SetDatabaseLogonTimeout 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58d8bd5514467585026608ada825bf805af4c092
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 308ba8255f6d6df0f379b364f4c1af034d9011b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497931"
 ---
 # <a name="configurationsetting-method---setdatabaselogontimeout"></a>ConfigurationSetting 方法 - SetDatabaseLogonTimeout
   指定報表伺服器資料庫連接的預設逾時值。  

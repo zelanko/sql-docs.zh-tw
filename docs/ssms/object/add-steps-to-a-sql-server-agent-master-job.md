@@ -1,4 +1,5 @@
 ---
+description: 將步驟加入至 SQL Server Agent 主要作業
 title: 將步驟加入至 SQL Server Agent 主要作業
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cba58d8b4068ebe40729d8262f24661711129c03
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b8aaa114d4ac2741adc6f3f990c114665153dfe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491900"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>將步驟加入至 SQL Server Agent 主要作業
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86002011"
   
 -   **若要使用下列項目，將步驟加入至 SQL Server Agent 主要作業：**  
   
-    [Transact-SQL](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -51,11 +52,11 @@ ms.locfileid: "86002011"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您想要加入步驟之作業的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要新增步驟的作業，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下您想要新增步驟的作業，然後選取 [屬性]****。  
   
 5.  在 [作業屬性 -_job_name_] 對話方塊的 [選取頁面] 下，選取 [步驟]。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;步驟頁面&#41;](../../ssms/agent/job-properties-new-job-steps-page.md)。  
  

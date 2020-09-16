@@ -1,4 +1,5 @@
 ---
+description: Tablix 資料區的區域 (報表產生器及 SSRS)
 title: Tablix 資料區的區域 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 890d15b32f26664aca1e9144d42aa480789f2eb7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 118a913dd9b42b5742b70691a5f4202f3c67df89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484966"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，Tablix 資料區具有四個包含 Tablix 資料格的區域︰   

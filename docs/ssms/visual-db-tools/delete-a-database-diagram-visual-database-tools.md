@@ -1,4 +1,5 @@
 ---
+description: 刪除資料庫圖表 (Visual Database Tools)
 title: 刪除資料庫圖表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e55d6355213241a44b9d5bb27f5e73253192ba40
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6a3da018c1d18b605846559fe47784452e4c8253
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497178"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>刪除資料庫圖表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,13 +29,13 @@ ms.locfileid: "85999944"
   
 ### <a name="to-delete-a-database-diagram"></a>若要刪除資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]**** 資料夾。  
   
 2.  用滑鼠右鍵按一下準備刪除的資料庫圖表。  
   
-3.  在快速鍵功能表上選擇 [刪除]  。  
+3.  在快速鍵功能表上選擇 [刪除]****。  
   
-4.  會出現訊息提示您確認是否刪除。 選擇 [是]  。  
+4.  會出現訊息提示您確認是否刪除。 選擇 [ **是**]。  
   
 資料庫圖表已從資料庫中刪除。 在您刪除資料庫圖表時，圖表內的資料表並未遭到刪除。  
   

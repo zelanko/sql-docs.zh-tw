@@ -1,4 +1,5 @@
 ---
+description: 繪製自反關聯性 (Visual Database Tools)
 title: 繪製自反關聯性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d87529fc1aebccecca90308475f6efeaf82f4a2f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2472266ae29470b19f93518676e75f8ff17d86ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480042"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,11 +34,11 @@ ms.locfileid: "86004949"
   
 2.  將線條拖曳回選取的資料表。  
   
-3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行]  對話方塊。  
+3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行]**** 對話方塊。  
   
 4.  選取要用來形成關聯性的外部索引鍵資料行及主索引鍵資料表與資料行。  
   
-5.  選擇兩次 [確定]  以建立關聯性。  
+5.  選擇兩次 [確定]**** 以建立關聯性。  
   
 當您對資料表執行查詢時，可使用自反關聯性來建立自我聯結 (Self-Join)。 如需使用聯結查詢資料表的相關資訊，請參閱 [使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)。  
   

@@ -1,4 +1,5 @@
 ---
+description: 全文檢索索引對話方塊 (Visual Database Tools)
 title: 全文檢索索引對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497141"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86004942"
 > [!NOTE]
 > 並非每個 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **選取的全文檢索索引**  
 列出現有的全文檢索索引。 選取索引，在方格右側顯示其屬性。 如果清單是空的，表示資料表尚未定義全文檢索關聯性。  
   
@@ -37,10 +38,10 @@ ms.locfileid: "86004942"
 建立新的全文檢索索引。  
   
 **刪除**  
-刪除在 [選取的全文檢索索引]  清單中所選取的全文檢索索引。  
+刪除在 [選取的全文檢索索引]**** 清單中所選取的全文檢索索引。  
   
 **一般類別目錄**  
-展開時會顯示 [資料行]  和 [全文檢索資料庫目錄名稱]  。  
+展開時會顯示 [資料行]**** 和 [全文檢索資料庫目錄名稱]****。  
   
 **資料行**  
 顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 ( **...** )。  
@@ -54,7 +55,7 @@ ms.locfileid: "86004942"
 **識別類別目錄**  
 展開時會顯示這個索引的名稱欄位。  
   
-**名稱**  
+**Name**  
 顯示這個全文檢索索引的系統指定名稱。  
   
 **資料表設計工具類別目錄**  

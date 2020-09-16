@@ -1,4 +1,5 @@
 ---
+description: 排序及群組查詢結果 (Visual Database Tools)
 title: 排序與群組查詢結果
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,12 +23,12 @@ ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a9d965c70593e99c70b400bb72cdef9636ec7070
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5ea08ce02bc1f18640638676eb868ca385954eba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491624"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>排序及群組查詢結果 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

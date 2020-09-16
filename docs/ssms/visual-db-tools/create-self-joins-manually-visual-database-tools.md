@@ -1,4 +1,5 @@
 ---
+description: 手動建立自我聯結 (Visual Database Tools)
 title: 手動建立自我聯結
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 483c763d2c9dcce9a927b2b3eb3dc8c7b5599d70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497183"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -115,9 +116,9 @@ Cheryl Carson       Abraham Bennet
   
     查詢和檢視設計師藉由在資料表名稱加入連續編號，來指派第二個執行個體的別名。 此外，[查詢和檢視設計師] 會在 [圖表] 窗格的兩個資料表或資料表值物件之間建立聯結線。  
   
-3.  在聯結線上按一下滑鼠右鍵，然後在捷徑功能表中選擇 [屬性]  。  
+3.  在聯結線上按一下滑鼠右鍵，然後在捷徑功能表中選擇 [屬性]****。  
   
-4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]  ，再按一下屬性右邊的省略符號 ([...]  )。  
+4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]****，再按一下屬性右邊的省略符號 ([...]****)。  
   
 5.  在[聯結對話方塊](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)中，在必要時變更主索引鍵之間的比較運算子。 例如，您可以會將運算子變更為小於 (<)。  
   

@@ -1,4 +1,5 @@
 ---
+description: 重新命名資料庫圖表 (Visual Database Tools)
 title: 重新命名資料庫圖表
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 79d11ec9e6fa2e2b740b492ad6ed5a65443a90b0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7c26ad67ba91e7cd92cbc9542d1f4aa9a4f3fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491595"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重新命名資料庫圖表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,11 +29,11 @@ ms.locfileid: "86010679"
   
 ### <a name="to-rename-a-database-diagram"></a>若要為資料庫圖表重新命名  
   
-1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]**** 資料夾。  
   
 2.  在準備重新命名的資料庫圖表上，按一下滑鼠右鍵。  
   
-3.  在快速鍵功能表上選擇 [重新命名]  。  
+3.  在快速鍵功能表上選擇 [重新命名]****。  
   
     在 [物件總管] 的圖表名稱四週，會開啟某個編輯方塊。  
   

@@ -1,4 +1,5 @@
 ---
+description: DatabaseServerName 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: DatabaseServerName 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a967cb012f8647d51a33b2a603144bfd4dd8d9e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 734cf026aa9328b8c8fa76363cadc00d13f80aa2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480560"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 屬性 - DatabaseServerName
   指定安裝報表伺服器資料庫之伺服器的名稱。 讀取/寫入  

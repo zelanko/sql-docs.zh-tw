@@ -1,4 +1,5 @@
 ---
+description: 選項 (SQL Server 物件總管 - 命令)
 title: 選項 (SQL Server 物件總管 - 命令)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fed6267ca26a01003b9115d9179e9d4d2dce5f97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bb1c05534ef2ce73caeccd4f6f1bf4fee3d10063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497373"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>選項 (SQL Server 物件總管 - 命令)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86001888"
   
     在 Visual Database Tools 中開啟已填入 200 個資料列的資料表。  
   
-使用 [一般指令碼選項]  對話方塊，以變更將會開啟的資料列數目。  
+使用 [一般指令碼選項]**** 對話方塊，以變更將會開啟的資料列數目。  
   
 ## <a name="general-scripting-options"></a>一般指令碼選項  
 **[選取前 <n> 筆稽核記錄] 命令的值**  

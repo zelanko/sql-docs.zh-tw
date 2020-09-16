@@ -1,4 +1,5 @@
 ---
+description: 將資料表加入查詢 (Visual Database Tools)
 title: 將資料表新增至查詢
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,29 +15,29 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 9ec5e22aab5aceec28f5a1566ca2984782616f95
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6db409686e7852e155622f5215b669ee6cbf49ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497287"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>將資料表加入查詢 (Visual Database Tools)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-建立查詢時，您會從資料表或結構與資料表類似的其他物件 (檢視和某些使用者定義函式) 擷取資料。 若要在查詢中使用上述物件，請將這些物件新增到 [圖表窗格]  。  
+建立查詢時，您會從資料表或結構與資料表類似的其他物件 (檢視和某些使用者定義函式) 擷取資料。 若要在查詢中使用上述物件，請將這些物件新增到 [圖表窗格]****。  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>若要將資料表或資料表值物件加入至查詢  
   
-1.  在查詢和檢視表設計工具之 [圖表窗格]  的背景上按一下滑鼠右鍵，再從捷徑功能表中選擇 [加入資料表]  。  
+1.  在查詢和檢視表設計工具之 [圖表窗格]**** 的背景上按一下滑鼠右鍵，再從捷徑功能表中選擇 [加入資料表]****。  
   
-2.  在 [加入資料表]  對話方塊中，選取您要新增到查詢中之物件類型所屬的索引標籤。  
+2.  在 [加入資料表]**** 對話方塊中，選取您要新增到查詢中之物件類型所屬的索引標籤。  
   
 3.  在項目清單中，按兩下您要加入的每個項目。  
   
-4.  當您完成新增項目時，請按一下 [關閉]  。  
+4.  當您完成新增項目時，請按一下 [關閉]****。  
   
-    查詢和檢視表設計工具會據此更新 [圖表窗格]  、[準則窗格]  及 [SQL 窗格]  。  
+    查詢和檢視表設計工具會據此更新 [圖表窗格]****、[準則窗格]**** 及 [SQL 窗格]****。  
   
 當您在 [SQL] 窗格的陳述式中參考資料表和檢視時，這些資料表和檢視會自動加入至查詢中。  
   
@@ -44,19 +45,19 @@ ms.locfileid: "85999544"
   
 ### <a name="to-add-an-existing-query-to-a-new-query"></a>若要將現有查詢加入至新查詢  
   
-1.  請確定您建立的新查詢中顯示有 [SQL 窗格]  。  
+1.  請確定您建立的新查詢中顯示有 [SQL 窗格]****。  
   
-2.  在 [SQL 窗格]  中，於 FROM 一字之後輸入左、右括號 ()。  
+2.  在 [SQL 窗格]**** 中，於 FROM 一字之後輸入左、右括號 ()。  
   
-3.  開啟現有查詢的 [查詢設計工具] \(您現在已開啟兩個 [查詢設計工具])。  
+3.  開啟現有查詢的 [查詢設計工具]  \(您現在已開啟兩個 [查詢設計工具])。  
   
-4.  顯示內部查詢 (即您要加入所新增外部查詢之現有查詢) 的 [SQL 窗格]  。  
+4.  顯示內部查詢 (即您要加入所新增外部查詢之現有查詢) 的 [SQL 窗格]****。  
   
-5.  選取 [SQL 窗格]  中的所有文字，再將其複製到剪貼簿中。  
+5.  選取 [SQL 窗格]**** 中的所有文字，再將其複製到剪貼簿中。  
   
-6.  按一下新查詢中的 [SQL 窗格]  ，並將游標置於先前新增的括號之中，然後貼上剪貼簿的內容。  
+6.  按一下新查詢中的 [SQL 窗格]****，並將游標置於先前新增的括號之中，然後貼上剪貼簿的內容。  
   
-7.  在 [SQL 窗格]  中，於右括號之後新增別名。  
+7.  在 [SQL 窗格]**** 中，於右括號之後新增別名。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立資料表別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  

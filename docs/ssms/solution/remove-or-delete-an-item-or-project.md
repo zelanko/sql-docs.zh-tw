@@ -1,4 +1,5 @@
 ---
+description: 移除或刪除項目或專案
 title: 移除或刪除項目或專案
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f88ef2cd69bcb3beb8729830a35f40232c4bd04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5e8389848928507d29be094faaf626f99ba9c8ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491811"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或刪除項目或專案
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,9 +30,9 @@ ms.locfileid: "86009651"
   
 1.  在 [方案總管] 中，選取您要移除的專案項目。  
   
-2.  在 [編輯]  功能表上，按一下 [移除]  。  
+2.  在 [編輯]**** 功能表上，按一下 [移除]****。  
   
-3.  在確認對話方塊中，按一下 [移除]  ，從專案中移除項目。  
+3.  在確認對話方塊中，按一下 [移除]****，從專案中移除項目。  
   
 移除的項目仍會在檔案系統中。 因此，您可以將已移除的項目加入原始方案或另一個方案中。  
   
@@ -39,9 +40,9 @@ ms.locfileid: "86009651"
   
 1.  在 [方案總管] 中，選取您要移除的專案。  
   
-2.  在 [編輯]  功能表上，按一下 [移除]  。  
+2.  在 [編輯]**** 功能表上，按一下 [移除]****。  
   
-3.  在確認對話方塊中，按一下 [確定]  ，從方案中移除專案。  
+3.  在確認對話方塊中，按一下 [確定]****，從方案中移除專案。  
   
 您可以永久刪除專案，但您必須先從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案中，移除任何指向這個專案的參考，之後，再利用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 檔案總管，從儲存體中，永久刪除相關的檔案。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "86009651"
   
 2.  在 Windows 的 [檔案總管] 中，尋找和選取您要刪除的專案或項目的相關檔案。  
   
-3.  在 [檔案]  功能表上，按一下 [刪除]  。  
+3.  在 [檔案]**** 功能表上，按一下 [刪除]****。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

@@ -1,4 +1,5 @@
 ---
+description: 建立新的已註冊伺服器 (SQL Server Management Studio)
 title: 建立新的已註冊伺服器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 836775e914023e4f68c7a4a1225c843c639825d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480152"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
 

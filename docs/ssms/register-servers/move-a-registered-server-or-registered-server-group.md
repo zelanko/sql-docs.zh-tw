@@ -1,4 +1,5 @@
 ---
+description: 移動已註冊的伺服器或已註冊的伺服器群組
 title: 移動已註冊的伺服器或伺服器群組
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 95331f9861db63bed63870a373981c5309ff3e04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491779"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移動已註冊的伺服器或已註冊的伺服器群組
 
@@ -33,9 +34,9 @@ ms.locfileid: "86011814"
 
 ### <a name="to-move-a-registered-server-or-server-group"></a>若要移動已註冊的伺服器或伺服器群組  
 
-1. 在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，然後按一下 [移至]  。  
+1. 在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器或伺服器群組，然後按一下 [移至]****。  
   
-2. 在 **[移動伺服器註冊]** 對話方塊中，展開伺服器群組的清單，按一下您希望伺服器或伺服器群組出現的節點位置，然後按一下 **[確定]** 。  
+2. 在 **[移動伺服器註冊]** 對話方塊中，展開伺服器群組的清單，按一下您希望伺服器或伺服器群組出現的節點位置，然後按一下 **[確定]**。  
 
 ## <a name="see-also"></a>另請參閱
 

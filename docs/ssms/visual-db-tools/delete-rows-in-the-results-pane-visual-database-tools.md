@@ -1,4 +1,5 @@
 ---
+description: 刪除結果窗格中的資料列 (Visual Database Tools)
 title: 刪除結果窗格中的資料列
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 71e70000e6a4b1c6208e19f5d233f44fb31b965b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53d0e10900f918c16148f09853bf3c45d8c0bc21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480026"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>刪除結果窗格中的資料列 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86008331"
   
 2.  按下 DELETE 鍵。  
   
-3.  在詢問確認的訊息方塊中，按一下 [是]  。  
+3.  在詢問確認的訊息方塊中，按一下 [是]****。  
   
 > [!CAUTION]  
 > 用這種方式刪除的資料列，會永久自資料庫移除，無法重新叫用。  

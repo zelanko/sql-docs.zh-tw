@@ -1,4 +1,5 @@
 ---
+description: 註冊連接的伺服器 (SQL Server Management Studio)
 title: 註冊已連線的伺服器
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,30 +16,30 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: ecc063b1dabf0ea1c2b440ae8848fb10418cdfda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bcac629eef24a68f66d1e7043f5cedb5ff8923e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497376"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 註冊 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中已連接的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]  \\[已註冊的伺服器]  ，在 SSMS 中檢視已註冊的伺服器。
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 註冊 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中已連接的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]\\[已註冊的伺服器]，在 SSMS 中檢視已註冊的伺服器。
   
  **本主題內容**  
   
 -   **若要使用下列項目註冊伺服器：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>若要註冊連接的伺服器  
   
-在物件總管中，以滑鼠右鍵按一下已連接的伺服器，然後按一下 [註冊]  。
+在物件總管中，以滑鼠右鍵按一下已連接的伺服器，然後按一下 [註冊]****。
   
 **伺服器名稱**  
 此欄位預設為連接的伺服器名稱。  或者您可以輸入伺服器名稱，或從下拉式清單中選擇一個。

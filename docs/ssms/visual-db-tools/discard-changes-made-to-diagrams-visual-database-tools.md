@@ -1,4 +1,5 @@
 ---
+description: 捨棄對圖表所做的變更 (Visual Database Tools)
 title: 捨棄對圖表所做的變更
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 45ae54e4f921478869c9e360d3daeb2660730075
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a75bcc35252b597839a9c1ca9496aa499a63f019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491676"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>捨棄對圖表所做的變更 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85999689"
   
 1.  關閉您的資料庫圖表或資料表設計視窗。  
   
-2.  畫面會出現訊息，提示您儲存變更。 選擇 [否]  。  
+2.  畫面會出現訊息，提示您儲存變更。 選擇 [否]****。  
   
     > [!CAUTION]  
     > 如果有其他開啟的資料庫圖表或資料表設計視窗連接到相同的資料庫，請將其關閉且不要儲存變更。  

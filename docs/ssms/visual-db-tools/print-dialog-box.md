@@ -1,4 +1,5 @@
 ---
+description: 列印對話方塊
 title: 列印對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 992ff4f61358f46035f4cbc817491d5968aa6ea1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ae0988c795c988d1849c049080fc78651bfd96f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485009"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

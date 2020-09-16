@@ -1,4 +1,5 @@
 ---
+description: ConnectionPoolSize 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: ConnectionPoolSize 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 052aef53b4a02e26757493ab6cdd89578c39f4f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0170b595f9e729c847bd2ed72046722d0670d3a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497972"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting 屬性 - ConnectionPoolSize
   報表伺服器用來與主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體進行通訊的連接集區大小。 唯讀。  

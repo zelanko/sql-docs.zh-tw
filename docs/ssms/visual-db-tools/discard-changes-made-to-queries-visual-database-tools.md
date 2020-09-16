@@ -1,4 +1,5 @@
 ---
+description: 捨棄對查詢所做的變更 (Visual Database Tools)
 title: 捨棄對查詢所做的變更
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 895bc5a3f68d36b4948d5697a901e6b4711025ec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6df4797bab17deec42e0d5657633f0d48304d80a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480020"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85999704"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]  功能表中按一下 [關閉]  。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]**** 功能表中按一下 [關閉]****。  
   
-2.  在 [Microsoft SQL Server Management Studio]  對話方塊中，按一下 [否]  。  
+2.  在 [Microsoft SQL Server Management Studio]**** 對話方塊中，按一下 [否]****。  
   
     查詢定義會回復為上次儲存時的狀態。  
   

@@ -1,4 +1,5 @@
 ---
+description: PathName 屬性 (WMI MSReportServer_ConfigurationSetting)
 title: PathName 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd4b7857faf7de561831485643afecf5c0e721e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdd04cc372337fec0df6134c9057529189ad87f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497859"
 ---
 # <a name="configurationsetting-property---pathname"></a>ConfigurationSetting 屬性 - PathName
   指定報表伺服器執行個體的安裝路徑。 唯讀。  

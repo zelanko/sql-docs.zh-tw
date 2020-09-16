@@ -1,4 +1,5 @@
 ---
+description: SQLServerClob 成員
 title: SQLServerClob 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d69a32f3822a82d2395d51a375fedf0867b3f3e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c08ab28a64ddbb463f8a86d2d5a8a66f14f1ca82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478570"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "80909588"
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|具體化此 Clob 當做 ASCII 資料流。|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)|傳回 Clob 資料當做 java.io.Reader 物件或字元資料流。|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlserverclob.md)|依據指定開始的位置和要複製的字元數目，傳回 Clob 中所指定子字串的副本。|  
-|[length](../../../connect/jdbc/reference/length-method-sqlserverclob.md)|傳回 Clob 中的字元數。|  
+|[length](../../../connect/jdbc/reference/length-method-sqlserverclob.md) (長度)|傳回 Clob 中的字元數。|  
 |[position](../../../connect/jdbc/reference/position-method-sqlserverclob.md)|依據指定的開始位置，傳回所指定 Clob 物件或 Clob 中之子字串的字元位置。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlserverclob.md)|傳回資料流，此資料流將用於從指定位置開始將 ASCII 字元寫入到這個 Clob。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverclob.md)|傳回資料流，此資料流將用於從指定位置開始將 Unicode 字元資料流寫入到這個 Clob。|  

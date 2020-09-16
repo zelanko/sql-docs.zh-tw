@@ -1,4 +1,5 @@
 ---
+description: 設定報表伺服器上的自訂或表單驗證
 title: 設定報表伺服器上的自訂或表單驗證 | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492621"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>設定報表伺服器上的自訂或表單驗證
 
@@ -35,7 +36,7 @@ Reporting Services 提供可延伸的架構，可以讓您插入自訂或表單�
 
 1.  在文字編輯器中開啟 RSReportServer.config。
 
-2.  尋找 \<**驗證**>。
+2.  尋找 \<**Authentication**>。
 
 3.  複製下列 XML 結構：
 
@@ -48,7 +49,7 @@ Reporting Services 提供可延伸的架構，可以讓您插入自訂或表單�
     </Authentication>
     ```
 
-4.  將它貼到 \<**驗證**> 的現有項目上。
+4.  將其貼到 \<**Authentication**> 的現有項目上。
 
      請注意，您無法搭配其他驗證類型使用 **Custom** 。
 

@@ -1,5 +1,6 @@
 ---
-title: 步驟 3：使用 Ruby 連線到 SQL 的概念證明 | Microsoft Docs
+description: 步驟 3︰使用 Ruby 連線到 SQL 的概念證明
+title: 步驟 3︰使用 Ruby 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484771"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3：使用 Ruby 連線到 SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3︰使用 Ruby 連線到 SQL 的概念證明
 
-這個範例只應被視為概念證明。  為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。  
+這個範例只應被視為一個概念證明。  為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。  
   
 ## <a name="step-1--connect"></a>步驟 1:連線  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85263782"
   
 ## <a name="step-3--insert-a-row"></a>步驟 3：插入資料列  
   
-在這個範例中，您將了解如何安全地執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式，傳遞可保護您應用程式來防禦 [SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
+在這個範例中，您將了解如何安全地執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式、傳遞可保護您應用程式來防禦 [SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
   
 若要搭配使用 TinyTDS 和 Azure，建議您執行多個 `SET` 陳述式來變更目前工作階段處理特定資訊的方式。 建議使用程式碼範例中所提供的 `SET` 陳述式。 例如，即使未明確陳述資料行的可為 null 狀態， `SET ANSI_NULL_DFLT_ON` 也可讓新建立的資料行允許 null 值。  
   

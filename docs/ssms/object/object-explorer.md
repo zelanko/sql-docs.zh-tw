@@ -1,4 +1,5 @@
 ---
+description: 物件總管
 title: 物件總管
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -26,12 +27,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea4cde409c05054614a4881b189ebef15abb5fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497401"
 ---
 # <a name="object-explorer"></a>物件總管
 

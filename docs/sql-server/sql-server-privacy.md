@@ -1,4 +1,5 @@
 ---
+description: SQL Server 隱私權補充
 title: SQL Server 隱私權補充 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480683"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 
@@ -31,7 +32,7 @@ ms.locfileid: "86916904"
 - SQL Server 移轉小幫手
 - MS-SQL 延伸模組
 
-「允許的使用方式情節」  的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
+「允許的使用方式情節」** 的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
 
 ## <a name="access-control"></a>存取控制
 
@@ -168,6 +169,6 @@ Microsoft 會檢查其他程式使用 SQL Server 所設定的應用程式名稱�
 
 ## <a name="telemetry-controls"></a>遙測控制項
 
-您可於參考此處的指示，來了解如何開啟/關閉產品中的遙測 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft 。
+您可於參考此處的指示，來了解如何開啟/關閉產品中的遙測 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

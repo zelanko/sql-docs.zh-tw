@@ -1,4 +1,5 @@
 ---
+description: 選取物件 (物件總管)
 title: 選取物件 (物件總管)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,30 +13,30 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b35f277da1b91e4c47b57eb1ee2f5c8e6ff529a7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dbe7d8cd1e297dbea72635ca1af28a361b52912a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491839"
 ---
 # <a name="select-objects-object-explorer"></a>選取物件 (物件總管)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-使用 [選取物件]  對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  
+ 使用 [選取物件]**** 對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **選取下列物件類型**  
-顯示要選取之物件所屬類型的清單。 這些類型包括 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 層級和資料庫層級的主體，以及安全性實體。 這個方塊是從 [選取物件類型]  對話方塊中的選取項目擴展而來，對話方塊可以從 [物件類型]  按鈕進行存取。  
+顯示要選取之物件所屬類型的清單。 這些類型包括 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 層級和資料庫層級的主體，以及安全性實體。 這個方塊是從 [選取物件類型]**** 對話方塊中的選取項目擴展而來，對話方塊可以從 [物件類型]**** 按鈕進行存取。  
   
 **輸入要選取的物件名稱**  
-以分號分隔，輸入要選取之物件的名稱清單。 要選取之物件的類型，必須是 [選取下列物件類型]  方塊中所列出的類型。 按一下 [瀏覽]  按鈕，即可從出現的清單中選取物件。  
+以分號分隔，輸入要選取之物件的名稱清單。 要選取之物件的類型，必須是 [選取下列物件類型]**** 方塊中所列出的類型。 按一下 [瀏覽]**** 按鈕，即可從出現的清單中選取物件。  
   
 **物件類型**  
 顯示物件類型的清單。 透過選取對應至類型的核取方塊，選取一或多個類型。  
   
 **檢查名稱**  
-驗證 [輸入要選取的物件名稱]  方塊中的物件名稱。 如果列出的物件名稱無效，會出現 [找不到名稱]  對話方塊。 使用這個對話方塊，即可從要選取的物件清單中更正或移除名稱。  
+驗證 [輸入要選取的物件名稱]**** 方塊中的物件名稱。 如果列出的物件名稱無效，會出現 [找不到名稱]**** 對話方塊。 使用這個對話方塊，即可從要選取的物件清單中更正或移除名稱。  
   
 **瀏覽**  
-會呈現 [瀏覽物件]  對話方塊。 這包含列示在 [選取下列物件類型]  方塊中之類型的物件清單。 透過選取對應的核取方塊，即可從這份清單中選取物件。  
+會呈現 [瀏覽物件]**** 對話方塊。 這包含列示在 [選取下列物件類型]**** 方塊中之類型的物件清單。 透過選取對應的核取方塊，即可從這份清單中選取物件。  
   

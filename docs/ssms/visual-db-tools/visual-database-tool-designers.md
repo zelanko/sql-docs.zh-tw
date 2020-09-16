@@ -1,4 +1,5 @@
 ---
+description: Visual Database Tool 設計工具
 title: Visual Database Tool 設計工具
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 4d35ac179c26c768a3ffb7b9427b9ffeca1ad597
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 22a49dc4a6d4dbff64a0468c4caae5cadc4b16a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479950"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,9 +38,9 @@ Visual Database Tools 是設計組合工具，可用來使用資料來源。 您
 ## <a name="database-diagram-designer"></a>資料庫圖表設計工具  
 資料庫圖表設計工具提供了讓您其中視覺化地建立、編輯和顯示資料庫中之資料表和關聯性的視窗。  
   
-若要顯示資料庫圖表設計工具，請開啟現有的圖表或以滑鼠右鍵按一下物件總管中的 [資料庫] 節點，再從下拉式功能表中選擇 [新增資料庫圖表]  。  
+若要顯示資料庫圖表設計工具，請開啟現有的圖表或以滑鼠右鍵按一下物件總管中的 [資料庫] 節點，再從下拉式功能表中選擇 [新增資料庫圖表]****。  
   
-設計工具開啟後，[資料庫圖表]  功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
+設計工具開啟後，[資料庫圖表]**** 功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
   
 > [!NOTE]  
 > 此設計師使用 Microsoft SQL Server 資料庫。  
@@ -55,7 +56,7 @@ Visual Database Tools 是設計組合工具，可用來使用資料來源。 您
   
 從 [資料表設計師]，您也可以在方格區按一下滑鼠右鍵，存取可用以建立和修改資料表關聯性、條件約束、索引和索引鍵的對話方塊。  
   
-若要顯示資料表設計工具，請開啟現有的資料表或以滑鼠右鍵按一下物件總管中的 [資料表]  節點，再從下拉式功能表中選擇 [新增資料表]  。  
+若要顯示資料表設計工具，請開啟現有的資料表或以滑鼠右鍵按一下物件總管中的 [資料表]**** 節點，再從下拉式功能表中選擇 [新增資料表]****。  
   
 設計師一旦開啟，[資料表設計師] 功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
   
@@ -78,9 +79,9 @@ Visual Database Tools 是設計組合工具，可用來使用資料來源。 您
   
 檢視設計師有四個窗格：圖表窗格、準則窗格、SQL 窗格和結果窗格。 如需這些每個窗格的詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)。  
   
-若要顯示檢視表設計工具，請開啟現有的檢視或以滑鼠右鍵按一下物件總管中的 [檢視]  節點，再從下拉式功能表中選擇 [新增檢視]  。  
+若要顯示檢視表設計工具，請開啟現有的檢視或以滑鼠右鍵按一下物件總管中的 [檢視]**** 節點，再從下拉式功能表中選擇 [新增檢視]****。  
   
-設計工具開啟後，[查詢設計工具]  功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
+設計工具開啟後，[查詢設計工具]**** 功能表會出現在主功能表中。 此功能表可存取設計師的特殊功能。  
   
 > [!NOTE]  
 > 此設計師使用 Microsoft SQL Server 資料庫。  

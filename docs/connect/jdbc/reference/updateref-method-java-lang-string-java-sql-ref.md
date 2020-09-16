@@ -1,4 +1,5 @@
 ---
+description: updateRef 方法 (java.lang.String, java.sql.Ref)
 title: updateRef 方法 (java.lang.String, java.sql.Ref) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 322249da1311410f3220d0d782893c6ee09a2efa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4f8878ac687c0357f2bf0a4512c1a9c1c52dc444
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484928"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>updateRef 方法 (java.lang.String, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

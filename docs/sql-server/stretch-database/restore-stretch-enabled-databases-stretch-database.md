@@ -1,4 +1,5 @@
 ---
+description: 還原已啟用 Stretch 的資料庫 (Stretch Database)
 title: 還原已啟用 Stretch 的資料庫
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492598"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>還原已啟用 Stretch 的資料庫 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   有必要復原許多類型的失敗、錯誤和嚴重損壞時，請還原備份的資料庫。
@@ -39,10 +40,10 @@ Azure 的 SQL Server Stretch Database 服務使用 Azure 儲存體快照集至�
 若要使用 Azure 入口網站將即時的 Azure 資料庫還原到較早的時間點，請執行下列作業。
 
 1. 登入 [Azure 入口網站][]。
-2. 在畫面左側選取 [瀏覽]  ，然後選取 [SQL 資料庫]  。
+2. 在畫面左側選取 [瀏覽]****，然後選取 [SQL 資料庫]****。
 3. 瀏覽並選取您的資料庫。
-4. 在 [資料庫] 刀鋒視窗頂端，按一下 [還原]  。
-5. 指定新的**資料庫名稱**，選取 [還原點]  然後按一下 [建立]  。
+4. 在 [資料庫] 刀鋒視窗頂端，按一下 [還原]****。
+5. 指定新的**資料庫名稱**，選取 [還原點]**** 然後按一下 [建立]****。
 6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS**監視。
 
 ### <a name="recover-a-deleted-azure-database"></a>復原刪除的 Azure 資料庫
@@ -51,11 +52,11 @@ Azure 的 SQL Server Stretch Database 服務，會在卸除資料庫前擷取資
 若要使用 Azure 入口網站將刪除的 Azure 資料庫還原到刪除的時點，請執行下列作業。
 
 1. 登入 [Azure 入口網站][]。
-2. 在畫面左側選取 [瀏覽]  ，然後選取 [SQL Server]  。
+2. 在畫面左側選取 [瀏覽]，然後選取 [SQL Server]。
 3. 瀏覽並選取您的伺服器。
-4. 向下捲動到伺服器的 [作業] 刀鋒視窗，按一下 [已刪除的資料庫]  圖格。
+4. 向下捲動到伺服器的 [作業] 刀鋒視窗，按一下 [已刪除的資料庫]**** 圖格。
 5. 選取您要還原的已刪除資料庫。
-5. 指定新的**資料庫名稱**，然後按一下 [建立]  。
+5. 指定新的**資料庫名稱**，然後按一下 [建立]****。
 6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS**監視。
 
 ## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>還原 SQL Server 資料庫與遠端 Azure 資料庫之間的連線

@@ -1,4 +1,5 @@
 ---
+description: 建立子查詢 (Visual Database Tools)
 title: 建立子查詢
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ecee42edc9a27cb746615b7343c5014893e23c17
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf5c7140e36f0767de84c04c56be84e1a8191c6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497232"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>建立子查詢 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "85999994"
   
 1.  建立主查詢。  
   
-2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製]  將查詢移至 [剪貼簿]。  
+2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製]**** 將查詢移至 [剪貼簿]。  
   
-3.  起始新的查詢，然後使用 [貼上]  將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
+3.  起始新的查詢，然後使用 [貼上]**** 將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
   
     例如，假設您有兩個資料表 `products` 和 `suppliers`，並且想建立顯示 Sweden 供應商的所有產品的查詢。 請先在 `suppliers` 資料表建立第一個查詢，以找出所有的 Swedish 供應商：  
   

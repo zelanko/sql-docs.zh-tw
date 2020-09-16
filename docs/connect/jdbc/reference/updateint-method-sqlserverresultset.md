@@ -1,4 +1,5 @@
 ---
+description: updateInt 方法 (SQLServerResultSet)
 title: updateInt 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6345c9fb9f4dbc7ccb007b82267c2e0a2437ae95
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d4ab1c14d9ca517a1c6a8ab515d82622716b8448
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478400"
 ---
 # <a name="updateint-method-sqlserverresultset"></a>updateInt 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
