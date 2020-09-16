@@ -1,4 +1,5 @@
 ---
+description: SQLServerException 建構函式 (java.lang.String, java.lang.Throwable)
 title: SQLServerException 建構函式 (java.lang.String, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -11,14 +12,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14984450507b5eea63d2fbe88bb2e7f957f61868
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd671bcb9c29eb7ac835c5bcbb877dc72c794c0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450450"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 建構函式 (java.lang.String, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

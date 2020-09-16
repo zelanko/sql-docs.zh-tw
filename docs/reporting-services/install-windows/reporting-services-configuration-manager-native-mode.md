@@ -1,4 +1,5 @@
 ---
+description: Reporting Services 組態管理員 (原生模式)
 title: Reporting Services 組態管理員 (原生模式) | Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454565"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
@@ -70,21 +71,21 @@ ms.locfileid: "73593786"
 
     - 在 Windows 的 [開始] 畫面上，輸入 **Reporting** ，然後從搜尋結果中選取 **[Reporting Services 組態管理員]** 。
 
-    - 選取 [開始]  ，然後依序指向 [所有程式]  和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]  。
+    - 選取 [開始]****，然後依序指向 [所有程式]**** 和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]****。
 
          如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向 [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] 而不是 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ]，以開啟 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器元件的組態工具。
 
-         選取 [Reporting Services 組態管理員]  。
+         選取 [Reporting Services 組態管理員]****。
 
-2. **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 選取 [連接]  。
+2. **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 選取 [連接]。
 
 3. 在 **[伺服器名稱]** 中，指定安裝報表伺服器執行個體的電腦名稱。 預設會出現本機電腦的名稱，但是如果您想要連接到遠端電腦上所安裝的報表伺服器，也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。
 
-4. 如果您指定遠端電腦，請選取 [尋找]  來建立連線。
+4. 如果您指定遠端電腦，請選取 [尋找]**** 來建立連線。
 
-5. 在 [報表伺服器執行個體]  中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
+5. 在 [報表伺服器執行個體]**** 中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
-6. 選取 [連接]  。
+6. 選取 [連接]。
 
 ## <a name="next-steps"></a>後續步驟
 

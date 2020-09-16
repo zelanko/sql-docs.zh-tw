@@ -1,4 +1,5 @@
 ---
+description: 教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式
 title: 教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/09/2020
@@ -10,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: a7a2170c14502be9ffcae478839657abc39974ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438670"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 

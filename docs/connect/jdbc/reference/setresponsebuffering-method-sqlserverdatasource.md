@@ -1,4 +1,5 @@
 ---
+description: setResponseBuffering 方法 (SQLServerDataSource)
 title: setResponseBuffering 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af2465fa929c47acc1cf39c87d0847c9c4e7d451
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90f66ec23ebd40296e5dee45bb3c663688551cc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458411"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>setResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

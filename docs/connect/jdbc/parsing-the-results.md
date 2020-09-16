@@ -1,4 +1,5 @@
 ---
+description: 剖析結果
 title: 剖析結果 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -11,12 +12,12 @@ ms.assetid: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93e494ceeac791368a0017f919a9676bbc193966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438330"
 ---
 # <a name="parsing-the-results"></a>剖析結果
 

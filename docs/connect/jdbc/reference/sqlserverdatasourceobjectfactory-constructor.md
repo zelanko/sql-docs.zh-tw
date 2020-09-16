@@ -1,4 +1,5 @@
 ---
+description: SQLServerDataSourceObjectFactory 建構函式 ()
 title: SQLServerDataSourceObjectFactory 建構函式 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7c2bd899-0d79-47ed-bb8d-60941594ee0d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d0d4bf645f9a0b4c3eb6cda58df4b4caf2cdc0c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be304a8028403f9d95c7a406e0de0cfe639761de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450623"
 ---
 # <a name="sqlserverdatasourceobjectfactory-constructor-"></a>SQLServerDataSourceObjectFactory 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

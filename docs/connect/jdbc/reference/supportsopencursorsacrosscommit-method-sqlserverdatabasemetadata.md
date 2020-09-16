@@ -1,4 +1,5 @@
 ---
+description: supportsOpenCursorsAcrossCommit 方法 (SQLServerDatabaseMetaData)
 title: supportsOpenCursorsAcrossCommit 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86285b1b0fd7b1b474e549b5046ac1258fdcb3a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3a70446b3555eff4e39345789ef81a9b5e346a7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450286"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossCommit 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

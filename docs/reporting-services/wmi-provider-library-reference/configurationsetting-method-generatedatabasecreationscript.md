@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting 方法 - GenerateDatabaseCreationScript
 title: ConfigurationSetting 方法 - GenerateDatabaseCreationScript | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcbcf0fde93dbba2e1d664ef7768232355ba5de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d827c26e316280c1946f90bc35d69427fc672df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454510"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>ConfigurationSetting 方法 - GenerateDatabaseCreationScript
   產生可用來建立報表伺服器資料庫的 SQL 指令碼。  

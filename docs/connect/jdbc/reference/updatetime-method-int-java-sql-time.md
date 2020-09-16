@@ -1,4 +1,5 @@
 ---
+description: updateTime 方法 (int, java.sql.Time)
 title: updateTime 方法 (int, java.sql.Time) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c3d8f4b5d5728530015832f60b9ad8714cbe93cc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 728d5554eea3165af30f6191d28499b3c79bf250
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457936"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>updateTime 方法 (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

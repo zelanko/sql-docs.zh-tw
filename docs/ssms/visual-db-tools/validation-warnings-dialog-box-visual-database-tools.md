@@ -1,4 +1,5 @@
 ---
+description: 驗證警告對話方塊 (Visual Database Tools)
 title: 驗證警告對話方塊
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3dd3f15ba7b6b42b95d8789d204bc44c2afb3f7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f8656e0d43b93c2b640d5839a0d6a2235d48749d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445995"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86002659"
   
 -   您的修改會使一個資料表中的資料行，產生需要特別注意的 ANSI_NULLS、ANSI_PADDING 或兩者的設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **是**  
 繼續執行作業並產生變更指令碼，或將修改內容傳輸至資料庫。 如果您沒有修改資料庫的權限、如果您的修改將導致索引大於 900 個位元組，或者如果您的修改將導致不適當形成的計算資料行、預設條件約束或檢查條件約束，則認可操作仍然可能失敗。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "86002659"
 取消儲存動作。  
   
 **儲存為文字檔**  
-顯示 [另存新檔]  對話方塊，您可在此為包含警告清單的文字檔指定一個位置。  
+顯示 [另存新檔]**** 對話方塊，您可在此為包含警告清單的文字檔指定一個位置。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

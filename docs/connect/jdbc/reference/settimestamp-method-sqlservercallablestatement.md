@@ -1,4 +1,5 @@
 ---
+description: setTimestamp 方法 (SQLServerCallableStatement)
 title: setTimestamp 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d4f59d5e-af85-491d-abde-eb06684745ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 43d474b744751c62383f3bd256beab774773c8e6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 23f48a1b37d378368d7a17d87d4e81b50d99bb02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450670"
 ---
 # <a name="settimestamp-method-sqlservercallablestatement"></a>setTimestamp 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

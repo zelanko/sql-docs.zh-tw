@@ -1,4 +1,5 @@
 ---
+description: SQLServerDataSourceObjectFactory 方法
 title: SQLServerDataSourceObjectFactory 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d64064bc-59dc-4614-a078-c2304d2fc236
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e2b937d9e221c8d508dbefaa172510020d97b8e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75ae9a2a4405a59972ec7300cee369e1182d9dd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450494"
 ---
 # <a name="sqlserverdatasourceobjectfactory-methods"></a>SQLServerDataSourceObjectFactory 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

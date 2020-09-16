@@ -1,4 +1,5 @@
 ---
+description: supportsSchemasInTableDefinitions 方法 (SQLServerDatabaseMetaData)
 title: supportsSchemasInTableDefinitions 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3326b1b0-53e2-42ae-9ff7-98e8c7017ffa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e974b706e8ad42959ab969a37025dc6a5b2d4bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8b91bf2c511da150dce56850c0b1d344226499a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450200"
 ---
 # <a name="supportsschemasintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInTableDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

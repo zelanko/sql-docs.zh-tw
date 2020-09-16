@@ -1,4 +1,5 @@
 ---
+description: supportsSavepoints 方法 (SQLServerDatabaseMetaData)
 title: supportsSavepoints 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff804bc6a3716d79bcde8be22753c17a6d8a3182
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5e1ac3b793c664f9de683ae41b135a3d5b50e54e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450243"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

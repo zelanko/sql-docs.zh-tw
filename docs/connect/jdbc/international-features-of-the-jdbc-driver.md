@@ -1,4 +1,5 @@
 ---
+description: JDBC 驅動程式的國際功能
 title: JDBC 驅動程式的國際功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438400"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驅動程式的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

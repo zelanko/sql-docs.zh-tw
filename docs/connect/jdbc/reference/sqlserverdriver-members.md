@@ -1,4 +1,5 @@
 ---
+description: SQLServerDriver 成員
 title: SQLServerDriver 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed87b925bd5c835a6955b9fb7e67aeed05a4ffdd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dbdee613bcf217f7f60401c305ce6f68ca55ad29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450481"
 ---
 # <a name="sqlserverdriver-members"></a>SQLServerDriver 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

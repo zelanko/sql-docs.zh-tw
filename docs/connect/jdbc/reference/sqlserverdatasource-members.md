@@ -1,4 +1,5 @@
 ---
+description: SQLServerDataSource 成員
 title: SQLServerDataSource 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d778c5d75686a3de61064037fd0ade492f998b
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 4f425bfe9f4a27595270c2a060027e6a4358c6c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450660"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

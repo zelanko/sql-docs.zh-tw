@@ -1,4 +1,5 @@
 ---
+description: SQLServerPreparedStatement 成員
 title: SQLServerPreparedStatement 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a995211f7e485971ad71a5ae290e410b8604cb0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b5025d8a7387777de1d95861fa6b2d09f436b68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458270"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

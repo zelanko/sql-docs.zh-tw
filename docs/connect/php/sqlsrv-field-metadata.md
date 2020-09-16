@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76939568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449964"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +47,7 @@ sqlsrv_field_metadata( resource $stmt)
 |名稱|欄位所對應的資料行名稱。|  
 |類型|對應至 SQL 類型的數值。|  
 |大小|字元類型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) 之欄位的字元數目。 二進位類型 (binary(n)、varbinary(n)、UDT) 之欄位的位元組數目。 **NULL** 適用於其他 SQL Server 資料類型。|  
-|Precision|變數有效位數 (real、numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的有效位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
+|精確度|變數有效位數 (real、numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的有效位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |調整|變數小數位數 (numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的小數位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |Nullable|列舉的值，指出資料行可為 Null (**SQLSRV_NULLABLE_YES**)、資料行不可為 Null (**SQLSRV_NULLABLE_NO**)，或不知道資料行是否可為 Null (**SQLSRV_NULLABLE_UNKNOWN**)。|  
   
@@ -58,7 +59,7 @@ sqlsrv_field_metadata( resource $stmt)
 |BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
+|日期|SQL_TYPE_DATE (91)|10/10|0/0||  
 |Datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
@@ -76,7 +77,7 @@ sqlsrv_field_metadata( resource $stmt)
 |SMALLINT|SQL_SMALLINT (5)|||2 個位元組|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |sql_variant|SQL_SS_VARIANT (-150)|||變動|  
-|text|SQL_LONGVARCHAR (-1)|||2 GB|  
+|文字|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 個位元組|  
 |TINYINT|SQL_TINYINT (-6)|||1 個位元組|  
@@ -128,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感性資料分類中繼資料
 
-5\.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 `sqlsrv_field_metadata` 存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
+5.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 `sqlsrv_field_metadata` 存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
 
 根據預設，選項 `DataClassification` 是 `false`，但當設定為 `true` 時，`sqlsrv_field_metadata` 所傳回的陣列將會填入敏感性資料分類中繼資料 (如果存在)。 
 
@@ -143,7 +144,7 @@ CREATE TABLE Patients
       [BirthDate] date)
 ```
 
-我們可以將 SSN 和 BirthDate 資料行以下列方式分類：
+我們可以將 SSN 和 BirthDate 資料行分類，如下所示：
 
 ```
 ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confidential - secure privacy', INFORMATION_TYPE = 'Credentials')

@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a database
 title: Enable Stretch Database for a database
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,20 +12,20 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454382"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要設定現有的資料庫以使用 Stretch Database，請在 SQL Server Management Studio 中為資料庫選取 [工作 | 延展 | 啟用]  ，開啟 [啟用資料庫的延展功能精靈]  。 您也可以使用 Transact-SQL 來為資料庫啟用 Stretch Database。  
+  若要設定現有的資料庫以使用 Stretch Database，請在 SQL Server Management Studio 中為資料庫選取 [工作 | 延展 | 啟用]****，開啟 [啟用資料庫的延展功能精靈]****。 您也可以使用 Transact-SQL 來為資料庫啟用 Stretch Database。  
   
- 如果您為個別資料表選取 [工作 | 延展 | 啟用]  ，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請遵循本文中的步驟，而非[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 中的步驟。  
+ 如果您為個別資料表選取 [工作 | 延展 | 啟用]****，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請遵循本文中的步驟，而非[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 中的步驟。  
   
  在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫或資料表上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
 
@@ -44,11 +45,11 @@ ms.locfileid: "73844594"
 ##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 必要條件：在伺服器上啟用 Stretch Database  
  在您於資料庫或資料表上啟用 Stretch Database 前，您必須在本機伺服器上啟用它。 這項作業需要 sysadmin 或 serveradmin 權限。  
   
--   如果您已經有必要的系統管理權限，則 [啟用資料庫的延展功能精靈]  會設定伺服器以使用「延展」。  
+-   如果您已經有必要的系統管理權限，則 [啟用資料庫的延展功能精靈]**** 會設定伺服器以使用「延展」。  
   
 -   如果您沒有必要的權限，系統管理員必須在您執行精靈前，執行 **sp_configure** 來手動啟用選項，否則系統管理員必須執行精靈。  
   
- 若要以手動方式在伺服器上啟用 Stretch Database，請執行 **sp_configure** 並開啟 [遠端資料封存]  選項。 下列範例會將 **remote data archive** 選項的值設為 1 來啟用它。  
+ 若要以手動方式在伺服器上啟用 Stretch Database，請執行 **sp_configure** 並開啟 [遠端資料封存]**** 選項。 下列範例會將 **remote data archive** 選項的值設為 1 來啟用它。  
   
 ```sql
 EXEC sp_configure 'remote data archive' , '1';  
@@ -138,7 +139,7 @@ GO
   
 -   [暫停和繼續資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [管理 Stretch Database 並對其進行疑難排解](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Stretch Database 的管理和疑難排解](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [備份已啟用 Stretch 的資料庫](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

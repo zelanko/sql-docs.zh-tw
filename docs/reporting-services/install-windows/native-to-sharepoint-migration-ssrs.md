@@ -1,4 +1,5 @@
 ---
+description: 原生至 SharePoint 移轉 (SSRS)
 title: 原生至 SharePoint 移轉 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6eef61dd79dbbbe97326c888698b69152065ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454540"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
 
@@ -41,7 +42,7 @@ ms.locfileid: "77082618"
   
  下表概述可以用指令碼來移轉的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 物件：  
   
-|Object|可撰寫指令碼|註解|  
+|物件|可撰寫指令碼|註解|  
 |------------|---------------------|--------------|  
 |報表|是|在移轉之後，重新輸入資料來源的密碼。|  
 |資料來源|是|在移轉之後，將報表重新連結至資料來源。|  

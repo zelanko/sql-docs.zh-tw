@@ -1,4 +1,5 @@
 ---
+description: updateBytes 方法 (int, byte)
 title: updateBytes 方法 (int, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4448eb96ab1b9678fffaa1fdc8a6071c7b89c7da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b21eb14869be6c97f07e058e8917797d61fae72e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458094"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes 方法 (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

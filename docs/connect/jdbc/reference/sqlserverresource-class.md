@@ -1,4 +1,5 @@
 ---
+description: SQLServerResource 類別
 title: SQLServerResource 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7e362d1-6b5f-4e8c-8862-2001102cf4f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38cd74edd271349532902564b7073de4fd36b487
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 76aaeeb21a6b4a72a31d2437628d8bf397fee9ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458250"
 ---
 # <a name="sqlserverresource-class"></a>SQLServerResource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

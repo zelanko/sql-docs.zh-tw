@@ -1,4 +1,5 @@
 ---
+description: supportsNamedParameters 方法 (SQLServerDatabaseMetaData)
 title: supportsNamedParameters 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af906153bee5e7127383fbf19da4a06a968b2f18
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 46804b36bde6a8c9bf52c0ec7fda4f97e2be2113
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450310"
 ---
 # <a name="supportsnamedparameters-method-sqlserverdatabasemetadata"></a>supportsNamedParameters 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: setSelectMethod 方法 (SQLServerDataSource)
 title: setSelectMethod 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7df9d7f066e9ddf076ba23b88c1d22b14d0f009d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c2b9c0fb4fb5f2a410abc790bf2f40d2bd2a64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458361"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>setSelectMethod 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

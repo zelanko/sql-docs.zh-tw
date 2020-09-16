@@ -1,4 +1,5 @@
 ---
+description: SQLServerException 建構函式 (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 title: SQLServerException 建構函式 (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -11,14 +12,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13b0e3aea694b0cedb3594cb76650ca7c938eb55
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b25231da75962e6705d5a3fb0b620a39407034b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450455"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException 建構函式 (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

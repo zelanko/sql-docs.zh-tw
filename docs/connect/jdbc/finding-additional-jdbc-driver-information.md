@@ -1,4 +1,5 @@
 ---
+description: 尋找其他 JDBC 驅動程式資訊
 title: 尋找其他 JDBC 驅動程式資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df6fa7bc4b5352ead02f66f6f5e38756030820ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438480"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>尋找其他 JDBC 驅動程式資訊
 

@@ -1,4 +1,5 @@
 ---
+description: Stretch Database 的管理和疑難排解
 title: 管理及疑難排解
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454330"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 的管理和疑難排解
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   若要管理 Stretch Database 並對其進行疑難排解，請使用本文所述的工具和方法。  
@@ -45,7 +46,7 @@ GO
  開啟 **sys.remote_data_archive_tables** 目錄檢視，並檢查 **filter_predicate** 資料行的值，以識別 Stretch Database 用什麼函數來選取要移轉的資料列。 如果值為 Null，便代表整個資料表皆符合移轉資格。 如需詳細資訊，請參閱 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和[使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
 ###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> 檢查資料移轉狀態  
- 若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]  。 如需詳細資訊，請參閱 [監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
+ 若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]****。 如需詳細資訊，請參閱 [監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，開啟 **sys.dm_db_rda_migration_status** 動態管理檢視，查看已移轉的批次和資料列數目。  
   

@@ -1,4 +1,5 @@
 ---
+description: updateRow 方法 (SQLServerResultSet)
 title: updateRow 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c431c3f996ea5ba2f4a6868114919c949be95355
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 13238fc12a57244116744221fa53b76efde415e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450076"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>updateRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

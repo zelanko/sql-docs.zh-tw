@@ -1,4 +1,5 @@
 ---
+description: supportsMultipleOpenResults 方法 (SQLServerDatabaseMetaData)
 title: supportsMultipleOpenResults 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73eab48ff558a5a93eb64b3a9a908914003b579e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b51ef93984c22278bf136b4c4e2108cbb73371f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450340"
 ---
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

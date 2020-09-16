@@ -1,4 +1,5 @@
 ---
+description: SQLServerDataSourceObjectFactory 類別
 title: SQLServerDataSourceObjectFactory 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 079ab64d487bf1ba09dd3bfeb2a89b4638c67674
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c41473da9a29cc962f1b3ad37df22b0699def3b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450585"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>SQLServerDataSourceObjectFactory 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

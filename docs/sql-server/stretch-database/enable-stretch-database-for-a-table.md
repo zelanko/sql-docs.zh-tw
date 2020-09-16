@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a table
 title: Enable Stretch Database for a table
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,24 +12,24 @@ ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10f267dc42c7626ad89b576b00e2b80a07dae427
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454377"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要設定 Stretch Database 的資料表，請在 SQL Server Management Studio 中為資料表選取 [延展 | 啟用]  ，開啟 [對資料表啟用延展精靈]  。 您也可以使用 Transact-SQL 對現有的資料表啟用 Stretch Database，或建立已啟用 Stretch Database 的新資料表。  
+  若要設定 Stretch Database 的資料表，請在 SQL Server Management Studio 中為資料表選取 [延展 | 啟用]****，開啟 [對資料表啟用延展精靈]****。 您也可以使用 Transact-SQL 對現有的資料表啟用 Stretch Database，或建立已啟用 Stretch Database 的新資料表。  
   
 -   如果您將原始資料儲存在個別的資料表中，可以遷移整個資料表。  
   
 -   若您的資料表同時包含作用及原始資料，您可以指定篩選函數，以選取要移轉的資料列。    
  
- **必要條件**。 如果您為資料表選取了 [延展 | 啟用]  ，卻未針對資料庫啟用 Stretch Database，精靈會先設定 Stretch Database 資料庫。 請遵循[開始執行 [啟用資料庫的延展功能精靈]](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) 的步驟著手，而不是本文中的步驟。  
+ **必要條件**。 如果您為資料表選取了 [延展 | 啟用]****，卻未針對資料庫啟用 Stretch Database，精靈會先設定 Stretch Database 資料庫。 請遵循[開始執行 [啟用資料庫的延展功能精靈]](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) 的步驟著手，而不是本文中的步驟。  
   
  **權限**。 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料表上啟用 Stretch Database 也需要資料表上的 ALTER 權限。  
 
@@ -39,7 +40,7 @@ ms.locfileid: "73843812"
  **啟動精靈**  
  1.  在 SQL Server Management Studio 的 [物件總管] 中，選取要啟用 Stretch 的資料表。  
   
-2.  按一下滑鼠右鍵並選取 [延展]  ，然後選取 [啟用]  來啟動精靈。  
+2.  按一下滑鼠右鍵並選取 [延展]****，然後選取 [啟用]**** 來啟動精靈。  
   
  **簡介**  
  檢閱精靈的用途及必要條件。  
@@ -56,7 +57,7 @@ ms.locfileid: "73843812"
  本文稍後將描述 ALTER TABLE 語法。  
   
  **總結**  
- 檢閱您輸入的值和在精靈中選取的選項。 然後選取 [完成]  以啟用 Stretch。  
+ 檢閱您輸入的值和在精靈中選取的選項。 然後選取 [完成] **** 以啟用 Stretch。  
   
  **結果**  
  檢閱結果。  
@@ -64,7 +65,7 @@ ms.locfileid: "73843812"
 ##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> 使用 Transact-SQL 在資料表上啟用 Stretch Database  
  您可以對現有的資料表啟用 Stretch Database，或使用 Transact-SQL 建立已啟用 Stretch Database 的新資料表。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  當您執行 CREATE TABLE 或 ALTER TABLE 在資料表上啟用 Stretch Database 時，請使用下列選項。  
   
 -   如果資料表同時包含作用及原始資料，您可以選擇使用 `FILTER_PREDICATE = <function>` 子句指定函數來選取要遷移的資料列。 此述詞必須呼叫內嵌資料表值函數。 如需詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。 若您未指定篩選函數，則會移轉整個資料表。  

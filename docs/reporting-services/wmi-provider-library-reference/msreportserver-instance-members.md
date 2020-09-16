@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance 成員
 title: MSReportServer_Instance 成員 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f75e1f2cffcbfc09672dc60242ad955360c864f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454411"
 ---
 # <a name="msreportserver_instance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
   
 ## <a name="public-properties"></a>公用屬性  
   
-|||  
+|屬性|描述|  
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|傳回報表伺服器的版本。|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|傳回報表伺服器版本之人們可讀取的名稱。|  
@@ -38,7 +39,7 @@ ms.locfileid: "65572213"
   
 ## <a name="public-methods"></a>公用方法  
   
-|||  
+|方法|描述|  
 |-|-|  
 |[GetReportServerUrls 方法 &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|列出使用者可用來存取報表伺服器和報表管理員的 URL。|  
   

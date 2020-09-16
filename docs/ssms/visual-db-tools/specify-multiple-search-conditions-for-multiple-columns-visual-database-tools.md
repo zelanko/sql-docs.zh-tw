@@ -1,4 +1,5 @@
 ---
+description: 指定多重資料行的多重搜尋條件 (Visual Database Tools)
 title: 指定多個資料行的多個搜尋條件
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a78fbabb45d634e88b7b6bf1c5b663b8d6d6b15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5a5f5d4e3396e3ccbff7280fbae14036015ba5eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445976"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>指定多重資料行的多重搜尋條件 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "85999281"
   
 1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，新增想要搜尋的資料行。  
   
-2.  在想要搜尋的第一個資料行的 [篩選條件]  資料行中，指定第一個條件。  
+2.  在想要搜尋的第一個資料行的 [篩選條件]**** 資料行中，指定第一個條件。  
   
-3.  在要搜尋的第二個資料行之 [或...]  資料行中，指定第二個條件，請將 [篩選條件]  資料行保留空白。  
+3.  在要搜尋的第二個資料行之 [或...]**** 資料行中，指定第二個條件，請將 [篩選條件]**** 資料行保留空白。  
   
     [查詢和檢視表設計工具] 會建立包含 OR 條件的 WHERE 子句，如下所示：  
   
@@ -53,18 +54,18 @@ ms.locfileid: "85999281"
       (hire_date < '01/01/1998')  
     ```  
   
-4.  對想要加入的每個額外條件重複步驟 2 和 3。 為每個新增的條件使用不同的 [或...]  資料行。  
+4.  對想要加入的每個額外條件重複步驟 2 和 3。 為每個新增的條件使用不同的 [或...]**** 資料行。  
   
 ## <a name="specifying-an-and-condition"></a>指定 AND 條件  
-若要搜尋使用 AND 連結條件的不同資料行，請將所有條件放入方格的 [篩選條件]  資料行。  
+若要搜尋使用 AND 連結條件的不同資料行，請將所有條件放入方格的 [篩選條件]**** 資料行。  
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>若要指定兩個不同資料行的 AND 條件  
   
 1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，新增想要搜尋的資料行。  
   
-2.  在想要搜尋的第一個資料行的 [篩選條件]  資料行中，指定第一個條件。  
+2.  在想要搜尋的第一個資料行的 [篩選條件]**** 資料行中，指定第一個條件。  
   
-3.  在第二個資料行的 [篩選條件]  資料行中，指定第二個條件。  
+3.  在第二個資料行的 [篩選條件]**** 資料行中，指定第二個條件。  
   
     查詢與檢視設計工具會建立 WHERE 子句，其中包含 AND 條件，如下所示：  
   
@@ -78,7 +79,7 @@ ms.locfileid: "85999281"
   
 ## <a name="see-also"></a>另請參閱  
 [在 AND 具有優先權時結合條件](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[在 OR 具有優先權時結合條件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[在 OR 具有優先順序時合併條件](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [在準則窗格中合併搜尋條件的慣例](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [指定搜尋準則](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

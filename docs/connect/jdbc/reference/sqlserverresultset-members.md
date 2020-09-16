@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSet 成員
 title: SQLServerResultSet 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458212"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "67970569"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|將資料指標移動到這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的最後一個資料列。|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|移動資料指標到記住的資料指標位置，通常是目前資料列。|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|將資料指標移動到插入資料列。|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|從資料指標的目前位置，將資料指標向下移動到下一個資料列。|  
+|[下一步](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|從資料指標的目前位置，將資料指標向下移動到下一個資料列。|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|將資料指標移動到這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的前一個資料列。|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|使用資料庫中的最新值來重新整理目前資料列。|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|移動資料游標相對於目前資料列的給定資料列數，無論是從正方向或負方向。|  

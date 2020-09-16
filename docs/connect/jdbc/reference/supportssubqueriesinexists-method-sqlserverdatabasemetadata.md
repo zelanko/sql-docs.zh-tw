@@ -1,4 +1,5 @@
 ---
+description: supportsSubqueriesInExists 方法 (SQLServerDatabaseMetaData)
 title: supportsSubqueriesInExists 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 14c08c7f-5c1e-4e21-8373-ae32c22e47d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc63f644ef1f6e94aec37a7fe7ddbea9482fff64
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c7314cd5ff24e53dacf78301eb720d891ca248d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80908850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450141"
 ---
 # <a name="supportssubqueriesinexists-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInExists 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLServerConnection 成員
 title: SQLServerConnection 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7000c8737d8d950968a9074e092a88c738941e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75a3670a0f7e958f1976e387acdaa02a8449d202
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458280"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,14 +55,14 @@ ms.locfileid: "80921056"
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|擷取這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件的目前目錄名稱。|  
 |[getClientConnectionID 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|取得最新連接嘗試的連接識別碼，不論嘗試成功或失敗。|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|擷取有關 JDBC 驅動程式所支援之用戶端資訊屬性的資訊。|  
-|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|傳回 **disableStatementPooling** 連接屬性的值。 此設定能控制陳述式共用是否已針對此連線啟用。|
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|傳回 **disableStatementPooling** 連接屬性的值。 此設定控制陳述式共用是否已針對此連線啟用。|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|傳回目前未完成備妥陳述式未準備動作的數目。|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|傳回 **enablePrepareOnFirstPreparedStatementCall** 連接屬性的值。|
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前保留性，這些物件是使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件所建立。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|擷取 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 物件，其中包含此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件表示連接到其中資料庫的相關中繼資料。|  
-|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|傳回 **serverPreparedStatementDiscardThreshold** 連線屬性的值。|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|傳回 **serverPreparedStatementDiscardThreshold** 連接屬性的值。|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|傳回目前共用備妥陳述式控制代碼的數目。|  
-|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|傳回此連線之備妥陳述式快取的大小。|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|傳回此連線備妥陳述式快取的大小。|  
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|擷取這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件的目前交易隔離等級。|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|擷取與這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件建立關聯的 Map 物件。|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|擷取由呼叫這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件所報告的第一個警告。|  

@@ -1,4 +1,5 @@
 ---
+description: 使用 JDBC 驅動程式處理中繼資料
 title: 使用 JDBC 驅動程式處理中繼資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 859932404e14a9ab1216665d211e1b6734ca9726
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 633629005eef8e9a47f616637e646886666f2200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438420"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>使用 JDBC 驅動程式處理中繼資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

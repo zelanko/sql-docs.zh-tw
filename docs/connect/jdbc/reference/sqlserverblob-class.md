@@ -1,4 +1,5 @@
 ---
+description: SQLServerBlob 類別
 title: SQLServerBlob 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a914c90a417acd3c636fe34575a076cb503abbe6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 952b5e4aa8580056eeda415e4d86057948655c4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450640"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

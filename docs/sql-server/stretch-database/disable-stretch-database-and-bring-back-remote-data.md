@@ -1,4 +1,5 @@
 ---
+description: 停用 Stretch Database 並恢復遠端資料
 title: 停用 Stretch Database 並恢復遠端資料
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,18 +12,18 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 80974811f45a88b740aa8d84ea9ac67c2c2c1c07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454371"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>停用 Stretch Database 並恢復遠端資料
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
-  若要停用資料表的 Stretch Database，請在 SQL Server Management Studio 中針對資料表選取 [延展]  。 然後選取下列其中一個選項。  
+  若要停用資料表的 Stretch Database，請在 SQL Server Management Studio 中針對資料表選取 [延展] **** 。 然後選取下列其中一個選項。  
   
 -   **停用 | 從 Azure 回復資料**。 將資料表遠端資料從 Azure 複製回 SQL Server，然後再停用資料表的 Stretch Database。 這項操作會產生資料傳輸成本，且無法取消。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "73843824"
   
 1.  在 SQL Server Management Studio 的 [物件總管] 中，選取您要停用 Stretch Database 的資料表。  
   
-2.  按一下滑鼠右鍵並選取 [Stretch]  ，然後選取下列其中一個選項。  
+2.  按一下滑鼠右鍵並選取 [Stretch]****，然後選取下列其中一個選項。  
   
     -   **停用 | 從 Azure 回復資料**。 將資料表遠端資料從 Azure 複製回 SQL Server，然後再停用資料表的 Stretch Database。 無法取消此命令。  
   
@@ -94,7 +95,7 @@ ms.locfileid: "73843824"
   
 1.  在 SQL Server Management Studio 的 [物件總管] 中，選取您要停用 Stretch Database 的資料庫。  
   
-2.  按一下滑鼠右鍵並選取 [工作]  ，然後選取 [Stretch]  ，再選取 [停用]  。  
+2.  按一下滑鼠右鍵並選取 [工作]****，然後選取 [Stretch]****，再選取 [停用]****。  
   
 > [!NOTE]
 > 針對資料庫停用 Stretch Database，並不會刪除遠端資料庫。 如果您想要刪除遠端資料庫，您必須使用 Azure 管理入口網站加以卸除。 遠端資料庫會繼續產生 Azure 成本，直到您將其刪除為止。 如需詳細資訊，請參閱 [SQL Server Stretch Database 定價](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)。  

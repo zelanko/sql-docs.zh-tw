@@ -1,4 +1,5 @@
 ---
+description: supportsStoredFunctionsUsingCallSyntax 方法 (SQLServerDatabaseMetaData)
 title: supportsStoredFunctionsUsingCallSyntax 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ab38835eaff8598398d445a10fd857e9b9ca3c7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d4840d544ddf3b5823f6df37bf247abe3ceab4d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450170"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>supportsStoredFunctionsUsingCallSyntax 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

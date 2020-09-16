@@ -1,4 +1,5 @@
 ---
+description: 示範如何搭配 Always Encrypted 使用 Azure Key Vault 提供者的範例
 title: 示範如何搭配 Always Encrypted 使用 Azure Key Vault 提供者的範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2019
@@ -10,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: fca498fbc7f79dcfc8852799ade6e230952ea082
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b0f389a822b3fcc37572b34a17cd5780f1091bd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75250948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438660"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted"></a>示範如何搭配 Always Encrypted 使用 Azure Key Vault 提供者的範例
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 

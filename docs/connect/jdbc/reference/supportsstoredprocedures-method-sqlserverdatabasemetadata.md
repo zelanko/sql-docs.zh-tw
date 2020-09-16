@@ -1,4 +1,5 @@
 ---
+description: supportsStoredProcedures 方法 (SQLServerDatabaseMetaData)
 title: supportsStoredProcedures 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86e425d40a12e441e1951962cac71152a21a7f69
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 64be84267ca934b1e832680479109c7652e0b722
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450160"
 ---
 # <a name="supportsstoredprocedures-method-sqlserverdatabasemetadata"></a>supportsStoredProcedures 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLServerDataSource 方法
 title: SQLServerDataSource 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fac054f1-60dc-4261-bc1b-ed70d1ceb85f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c2ad48c0a7d01dd0d2f18db0a3fcf853ebf32a5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 865b25920f100108d282cd03cd30c7fc3c3e59e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450622"
 ---
 # <a name="sqlserverdatasource-methods"></a>SQLServerDataSource 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

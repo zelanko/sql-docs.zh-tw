@@ -1,4 +1,5 @@
 ---
+description: setQueryTimeout 方法 (SQLServerStatement)
 title: setQueryTimeout 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 050a32c83950d2846ac60d14af0413f0be67110d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1780ba78587e85efdd70d2b18a8a82869469d618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458455"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

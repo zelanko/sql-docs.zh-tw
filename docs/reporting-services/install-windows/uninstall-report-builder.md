@@ -1,4 +1,5 @@
 ---
+description: 將報表產生器解除安裝
 title: 將報表產生器解除安裝 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e92f5eafad039858022a915fd0006ea3130a2c75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65502647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446041"
 ---
 # <a name="uninstall-report-builder"></a>將報表產生器解除安裝
 
@@ -26,19 +27,19 @@ ms.locfileid: "65502647"
 
 1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按一下 **[程式和功能]** 。  
+2.  在 [控制台] 中，按一下 **[程式和功能]**。  
   
-3.  在 [名稱] 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 報表產生器，然後按一下它。  
+3.  在 [名稱]**** 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 報表產生器，然後按一下它。  
   
-4.  按一下 **[解除安裝]** 。  
+4.  按一下 [解除安裝]  。  
   
-5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]** 。  
+5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]**。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>若要從命令列解除安裝報表產生器  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [開啟]  文字方塊中，輸入 **cmd.**  
+2.  在 [開啟] **** 文字方塊中，輸入 **cmd.**  
   
 3.  在 [命令提示字元] 視窗中，導覽至包含 ReportBuilder3_x86.msi 的資料夾。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "65502647"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-5.  按 **Enter** 鍵。  
+5.  按 **Enter**。  
 
 ## <a name="next-steps"></a>後續步驟
 

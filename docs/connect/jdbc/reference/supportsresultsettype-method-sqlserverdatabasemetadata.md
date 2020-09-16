@@ -1,4 +1,5 @@
 ---
+description: supportsResultSetType 方法 (SQLServerDatabaseMetaData)
 title: supportsResultSetType 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0cbf9a6f4798af6fa302cf3de1b495e89cf10eff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a08227ba9d2c82831b042d935bacbd65e0216e64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450260"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>supportsResultSetType 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

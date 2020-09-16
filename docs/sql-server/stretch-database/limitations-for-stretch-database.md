@@ -1,4 +1,5 @@
 ---
+description: Stretch Database 的限制
 title: Stretch Database 的限制
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c53fe235850dbb932e5773c82cc22cc19d62e749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454346"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   了解已啟用 Stretch 之資料表的限制，以及目前讓您無法為資料表啟用 Stretch 的限制。  

@@ -1,4 +1,5 @@
 ---
+description: 使用加密連線
 title: 使用加密連線 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f60a186626514ed5532cc2ffc0fa4ffd1af0674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438460"
 ---
 # <a name="connecting-with-encryption"></a>使用加密連線
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

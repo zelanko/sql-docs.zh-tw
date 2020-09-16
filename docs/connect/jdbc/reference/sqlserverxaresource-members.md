@@ -1,4 +1,5 @@
 ---
+description: SQLServerXAResource 成員
 title: SQLServerXAResource 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d41f89ce541d6bb6497ad0702511c303704a41b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0f772627bf8fb2265bfc95d25416d0f64f39601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458153"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "80925662"
 |[recover](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|從資源管理員取得備妥的交易分支清單。|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|要求資源管理員回復之前代表交易分支所完成的工作。|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|設定這個 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 物件的目前交易逾時值。|  
-|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 XID 物件中指定的交易分支開始工作。|  
+|[開始](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 XID 物件中指定的交易分支開始工作。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  
   

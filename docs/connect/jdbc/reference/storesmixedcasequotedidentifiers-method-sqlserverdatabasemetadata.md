@@ -1,4 +1,5 @@
 ---
+description: storesMixedCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 title: storesMixedCaseQuotedIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89d4364a94d7ac123c147f4784130d8d56aee08a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: eb740b77c42bb80f6effb86e5f731ea2c7cd3588
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458120"
 ---
 # <a name="storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

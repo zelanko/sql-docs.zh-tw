@@ -1,4 +1,5 @@
 ---
+description: ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting)
 title: ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 886c6b6622a2051751704aa9ea72aabcbb4afef3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e19d6bf8c8f437f032edd9ad7a26b94f93a7ea7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454480"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>ConfigurationSetting 方法 - ListReservedURLs
   列出針對報表伺服器上所有應用程式保留的 URL。  

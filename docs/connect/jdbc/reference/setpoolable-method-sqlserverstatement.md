@@ -1,4 +1,5 @@
 ---
+description: setPoolable 方法 (SQLServerStatement)
 title: setPoolable 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8651644bbf67f70642385b8c9b4bd2925dfce5a6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f75e1ffad80d1442689da6d32eafcaf74cb48fdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458470"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

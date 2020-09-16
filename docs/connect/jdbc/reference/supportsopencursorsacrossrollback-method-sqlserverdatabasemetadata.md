@@ -1,4 +1,5 @@
 ---
+description: supportsOpenCursorsAcrossRollback 方法 (SQLServerDatabaseMetaData)
 title: supportsOpenCursorsAcrossRollback 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4bc3e82b-a7e7-43a5-8938-6f29c7570163
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e75d7c7f3d74d2070980a9596cea38227c365db5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a071bcc9439bd7fbe8f36665e296827865ee60a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450274"
 ---
 # <a name="supportsopencursorsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossRollback 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

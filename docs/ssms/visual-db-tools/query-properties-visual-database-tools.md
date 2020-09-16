@@ -1,4 +1,5 @@
 ---
+description: 查詢屬性 (Visual Database Tools)
 title: 查詢屬性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d9d284d99b6dfddaf8936c36cf06e373a673e46a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca80e60a35b9eccff0ada18854d4f8a33ddaa9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445974"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,11 +28,11 @@ ms.locfileid: "86003184"
 > [!NOTE]  
 > 此主題中的屬性是依分類排列，而非依字母順序排列。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **識別類別目錄**  
-展開以顯示 [名稱]  屬性。  
+展開以顯示 [名稱]**** 屬性。  
   
-**名稱**  
+**Name**  
 顯示目前查詢的名稱。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中無法予以變更。  
   
 **Database Name**  
@@ -61,13 +62,13 @@ ms.locfileid: "86003184"
 指定結果集 (Result Set) 中要包含目前查詢中所有資料表的全部資料行。 選擇此選項就等於在 SQL 陳述式裡的 SELECT 關鍵字後指定星號 (*)，而非指定個別的資料行名稱。  
   
 **查詢參數清單**  
-顯示查詢參數。 若要編輯參數，請按一下屬性，再按屬性右邊的省略符號 ([...]  )。 (只適用於泛型 OLE DB)。  
+顯示查詢參數。 若要編輯參數，請按一下屬性，再按屬性右邊的省略符號 ([...])。 (只適用於泛型 OLE DB)。  
   
 **SQL 註解**  
-顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 ([...]  )。 您的註解中可能包含使用查詢的人及使用時間等這類資訊 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本的資料庫)。  
+顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 ([...])。 您的註解中可能包含使用查詢的人及使用時間等這類資訊 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本的資料庫)。  
   
 **排名規格分類**  
-展開以顯示 [Top]  、[Percent]  、[Expression]  的屬性，以及 [With Ties]  屬性。  
+展開以顯示 [Top]****、[Percent]****、[Expression]**** 的屬性，以及 [With Ties]**** 屬性。  
   
 **(Top)**  
 指定查詢將包括 TOP 子句，而這個子句只會傳回結果集內的前 *n* 個資料列，或前百分之 *n* 的資料列。 預設值是查詢會傳回結果集裡前 10 個資料列。  
@@ -75,7 +76,7 @@ ms.locfileid: "86003184"
 使用此方塊變更傳回的資料列數目，或指定不同的百分比 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更新版本)。  
   
 **運算式**  
-指定查詢將傳回的資料列數目或百分比。 如果將 [Percent]  設定為 [是]，則此數字為查詢將傳回的資料列百分比；如果將 [Percent]  設定為 [否]，則此數字表示傳回的資料列數目。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  
+指定查詢將傳回的資料列數目或百分比。 如果將 [Percent]**** 設定為 [是]，則此數字為查詢將傳回的資料列百分比；如果將 [Percent]**** 設定為 [否]，則此數字表示傳回的資料列數目。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  
   
 **Percent**  
 指定查詢只會傳回結果集內前百分之 *n* 的資料列。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本)。  

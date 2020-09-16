@@ -1,4 +1,5 @@
 ---
+description: SSRS 加密金鑰 - 備份與還原加密金鑰
 title: 備份與還原 Reporting Services 加密金鑰 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a49c9f3fbffc127fb4f81db5d82435b2d310fcda
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454560"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,13 +62,13 @@ ms.locfileid: "86053654"
   
 1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
-2.  按一下 [加密金鑰]  ，然後選取 [備份]  。  
+2.  按一下 [加密金鑰]****，然後選取 [備份]****。  
   
 3.  輸入增強式密碼。  
   
 4.  指定要包含儲存之金鑰的檔案。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將 .snk 副檔名附加到這個檔案。 可以考慮將檔案儲存到磁碟上，使其與報表伺服器分開。  
   
-5.  選取 [確定]  。  
+5.  選取 [確定]。  
   
 ###  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 - rskeymgmt (原生模式)  
   
@@ -94,13 +95,13 @@ ms.locfileid: "86053654"
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [加密金鑰] 頁面上，選取 [還原]  。  
+2.  在 [加密金鑰] 頁面上，選取 [還原]****。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   
 4.  輸入解除檔案鎖定的密碼。  
   
-5.  選取 [確定]  。 
+5.  選取 [確定]。 
   
 ###  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 - rskeymgmt (原生模式)  
   

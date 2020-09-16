@@ -1,4 +1,5 @@
 ---
+description: 角色定義 - 預先定義的角色
 title: 角色定義 - 預先定義的角色 | Microsoft Docs
 ms.date: 06/10/2020
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454520"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定義 - 預先定義的角色
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  
@@ -133,7 +134,7 @@ ms.locfileid: "84716735"
 ### <a name="report-builder-tasks"></a>報表產生器工作  
  下表描述 [報表產生器] 角色定義中所包含的工作：  
   
-|Task|說明|  
+|Task|描述|  
 |----------|-----------------|  
 |取用報表|讀取報表定義。|  
 |檢視報表|執行報表與檢視報表屬性。|  

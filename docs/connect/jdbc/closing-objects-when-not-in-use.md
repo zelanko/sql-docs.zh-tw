@@ -1,4 +1,5 @@
 ---
+description: 不使用時關閉物件
 title: 不使用時關閉物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1f0c264a7752b296691f20f702ab345f18b1b37
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c8e1242f5090e347dd3dd61d42fedd3698613cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438450"
 ---
 # <a name="closing-objects-when-not-in-use"></a>不使用時關閉物件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

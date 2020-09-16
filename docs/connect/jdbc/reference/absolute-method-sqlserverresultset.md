@@ -1,4 +1,5 @@
 ---
+description: absolute 方法 (SQLServerResultSet)
 title: absolute 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06a6a95838ef4ee1c605fa54fce9ef2d81f4573e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 260849163934c32cf1d671af024856f81cad7db3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438310"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

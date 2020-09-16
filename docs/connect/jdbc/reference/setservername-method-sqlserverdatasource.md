@@ -1,4 +1,5 @@
 ---
+description: setServerName 方法 (SQLServerDataSource)
 title: setServerName 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 70920828-eda0-4064-be9f-c1e460db8f00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2a3c3c33fec8e36b799150dbe74dc69248e200d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 42380a0a3816dd0a3e93472afddc66ffa1ecaa02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458367"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>setServerName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

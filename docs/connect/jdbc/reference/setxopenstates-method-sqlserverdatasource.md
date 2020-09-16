@@ -1,4 +1,5 @@
 ---
+description: setXopenStates 方法 (SQLServerDataSource)
 title: setXopenStates 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42c8e22ed8fe17ea72accee7c1a58b49abf97134
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 345f243f6fb712208df336207ee408cd7596b296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450610"
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>setXopenStates 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

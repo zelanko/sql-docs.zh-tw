@@ -1,4 +1,5 @@
 ---
+description: supportsStatementPooling 方法 (SQLServerDatabaseMetaData)
 title: supportsStatementPooling 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3431fe93b64c441f10537a6b0def63ae4748cf3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b502deca7b9249430c2a7061fea6795c272421cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450180"
 ---
 # <a name="supportsstatementpooling-method-sqlserverdatabasemetadata"></a>supportsStatementPooling 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

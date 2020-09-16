@@ -1,4 +1,5 @@
 ---
+description: supportsSelectForUpdate 方法 (SQLServerDatabaseMetaData)
 title: supportsSelectForUpdate 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef5f845f1dee63be37b3fb5615eb1dffefbdd398
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 653e9fdbc8b0b2092819751ddf4070eed0ea0873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450188"
 ---
 # <a name="supportsselectforupdate-method-sqlserverdatabasemetadata"></a>supportsSelectForUpdate 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

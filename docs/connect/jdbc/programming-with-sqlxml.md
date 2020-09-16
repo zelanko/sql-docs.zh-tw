@@ -1,4 +1,5 @@
 ---
+description: 使用 SQLXML 進行程式設計
 title: 使用 SQLXML 設計程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 67766bb505750a4fbaaa1081dcf1d0441a44166e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438320"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 進行程式設計
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "69027775"
 ## <a name="readable-and-writable-sqlxml-objects"></a>可讀取和可寫入的 SQLXML 物件  
  下表將列出 JDBC API 提供之 setter、getter 和 updater 方法所支援的 SQLXML 物件類型。 此表格中的欄位代表下列項目：  
   
--   [方法名稱] 欄位會列出 JDBC API 中支援的 getter、setter 和 updater 方法。   
+-   [方法名稱] 欄位會列出 JDBC API 中支援的 getter、setter 和 updater 方法。 ****  
   
--   [Getter SQLXML 物件] 欄位代表 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法所建立的 SQLXML 物件。  
+-   [Getter SQLXML 物件] 欄位代表 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法所建立的 SQLXML 物件。****  
   
--   [Setter SQLXML 物件] 欄位代表 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  請注意，下列 setter 方法僅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  
+-   [Setter SQLXML 物件] 欄位代表 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。 **** 請注意，下列 setter 方法僅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  
   
 |方法名稱|Getter SQLXML 物件<br /><br /> (可讀取)|Setter SQLXML 物件<br /><br /> (可寫入)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
