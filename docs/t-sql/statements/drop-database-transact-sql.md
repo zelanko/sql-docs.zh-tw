@@ -26,12 +26,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99bb5ae7f069dce08f78de0b081c10702330d408
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0ae3af2eb84fa18777c0d0fe55503ea60bf5c303
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549365"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990281"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -49,7 +49,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```
 
 ```syntaxsql
--- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
+-- Azure SQL Database, Azure Synapse Analytics and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
 

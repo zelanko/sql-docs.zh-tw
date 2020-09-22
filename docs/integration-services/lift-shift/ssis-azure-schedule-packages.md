@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: f6aef5ff65ee10c01cecd012eb1f35d5b2aab136
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823773"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989968"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>排程部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件執行
 
@@ -59,33 +59,33 @@ ms.locfileid: "87823773"
 使用與下列範例中所示指令碼類似的 Transact-SQL 指令碼，來建立作業：
 
 ```sql
--- Create Elastic Jobs target groupÂ 
-EXECÂ jobs.sp_add_target_group 'TargetGroup'Â 
+-- Create Elastic Jobs target group
+EXEC jobs.sp_add_target_group 'TargetGroup'
 
--- Add Elastic Jobs target group memberÂ 
-EXECÂ jobs.sp_add_target_group_memberÂ @target_group_name='TargetGroup',Â 
-    @target_type='SqlDatabase',Â @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB'Â 
+-- Add Elastic Jobs target group member
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup',
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
 
 -- Add a job to schedule SSIS package execution
-EXECÂ jobs.sp_add_jobÂ @job_name='ExecutePackageJob',Â @description='Description',Â 
-    @schedule_interval_type='Minutes',Â @schedule_interval_count=60
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
 
 -- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXECÂ jobs.sp_add_jobstepÂ @job_name='ExecutePackageJob',Â 
-    @command=N'DECLAREÂ @exe_idÂ bigintÂ 
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1,Â 
-            @execution_id=@exe_idÂ OUTPUT       Â 
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0',Â 
-    @credential_name='YourDBScopedCredentials',Â 
-    @target_group_name='TargetGroup'Â 
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
 
--- Enable the job scheduleÂ 
-EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
-    @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
 ## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> 使用 SQL Server Agent 在內部部署排程套件
@@ -145,17 +145,17 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
-    DECLARE @return_valueÂ int,Â @exe_idÂ bigintÂ 
+    DECLARE @return_value int, @exe_id bigint 
 
-    EXEC @return_valueÂ =Â [YourLinkedServer].[SSISDB].[catalog].[create_execution]Â 
-        @folder_name=N'folderName',Â @project_name=N'projectName',Â 
-        @package_name=N'packageName',Â @use32bitruntime=0,Â @runincluster=1,Â @useanyworker=1,
-        @execution_id=@exe_idÂ OUTPUTÂ 
+    EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
     EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
         @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution]Â @execution_id=@exe_id
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  完成設定和排程作業。

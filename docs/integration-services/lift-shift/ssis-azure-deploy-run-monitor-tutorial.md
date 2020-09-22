@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 0faf8f4bd71b7e86de38c2090cae0936d9c96374
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b4bcae3e857fd6dfa7a64acd828529bf9a599552
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915337"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990021"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
 
@@ -151,7 +151,7 @@ if ($folders.Count -gt 0)
 {
     foreach ($filefolder in $folders)
     {
-        Write-Host "Creating Folder " $filefolder.Name " ..."
+        Write-Host "Creating Folder " + $filefolder.Name + " ..."
 
         # Create a new folder
         $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
@@ -163,7 +163,7 @@ if ($folders.Count -gt 0)
             foreach($projectfile in $projects)
             {
                 $projectfilename = $projectfile.Name.Replace(".ispac", "")
-                Write-Host "Deploying " $projectfilename " project ..."
+                Write-Host "Deploying " + $projectfilename + " project ..."
 
                 # Read the project file, and deploy it to the folder
                 [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)

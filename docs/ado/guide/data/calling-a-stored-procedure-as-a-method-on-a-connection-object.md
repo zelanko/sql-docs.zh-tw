@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194c9374258e23e7c5a388df9424f986fc899b0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 887730cdedd1dca884bca18bb6df449fdec2e1dc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991569"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989951"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>以 Connection 物件方法的形式來呼叫預存程序
 您可以呼叫預存程式，就像是相關聯開啟 **連接** 物件上的原生方法一樣。 這類似于在 **連接** 物件上呼叫指名的命令。  
@@ -62,7 +62,9 @@ Set objComm.ActiveConnection = objConn
 ' the active connection object...  
 '    "ALFKI" is the required input parameter,  
 '    objRs is the resultant output variable.  
-  
+objComm(1) = "ALFKI"
+Set objRs = objComm.Execute
+
 ' Display the result.  
 Debug.Print "Results returned from sp_CustOrdersOrders for ALFKI: "  
 Do While Not objRs.EOF  

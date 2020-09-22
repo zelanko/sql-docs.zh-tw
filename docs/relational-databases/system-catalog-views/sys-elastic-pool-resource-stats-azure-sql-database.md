@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3478bcf1b6cef15ecb843f76cecb5b180ec7df2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548770"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990161"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "89548770"
   
 ## <a name="remarks"></a>備註
 
- 此視圖存在於 SQL Database server 的 master 資料庫中。 您必須連接到 master 資料庫，才能查詢 **sys. elastic_pool_resource_stats**。  
+ 此視圖存在於 SQL Database server 的 master 資料庫中。 您必須連接至 master 資料庫，才能查詢 **sys.elastic_pool_resource_stats**。  
   
 ## <a name="permissions"></a>權限
 
@@ -81,8 +81,8 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>另請參閱
 
  [使用彈性資料庫來駕馭爆炸性成長](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [建立及管理 SQL Database 彈性資料庫集區 (preview) ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [建立及管理 SQL Database 彈性資料庫集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

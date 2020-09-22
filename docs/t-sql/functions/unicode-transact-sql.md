@@ -21,12 +21,12 @@ ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56a8d99b228c1115af02109e5715020463126f78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 273faa70282ca1bc9c6ec0ab441dcb5f6fcfda1a
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479519"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990191"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,12 +92,12 @@ SET @nstring = N'Åkergatan 24';
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
 WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
-   BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
-   SELECT @position = @position + 1;  
-   END;  
+BEGIN;  
+   SELECT @position AS [position],   
+      SUBSTRING(@nstring, @position, 1) AS [character],  
+      UNICODE(SUBSTRING(@nstring, @position, 1)) AS [code_point];  
+   SET @position = @position + 1;  
+END; 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

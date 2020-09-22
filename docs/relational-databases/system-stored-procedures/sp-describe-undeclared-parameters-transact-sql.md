@@ -19,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546146"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990121"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> 若要在 Azure Synapse Analytics 中使用這個預存程式 (先前的 SQL DW) ，資料庫的相容性層級必須大於10。 
+> 若要在 Azure Synapse Analytics 中使用這個預存程式 (先前的 SQL DW) ，請將資料庫相容性層級設定為20或更高。   若要退出，請將資料庫相容性層級變更為10。
 
 ## <a name="arguments"></a>引數  
 `[ \@tsql = ] 'Transact-SQL\_batch'` 一或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 *交易 SQL_batch*可能是**Nvarchar (** _n_ **) **或**Nvarchar (max) **。  
@@ -56,7 +56,7 @@ sp_describe_undeclared_parameters
  參數的資料類型。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 在成功時， **sp_describe_undeclared_parameters**一律傳回零的傳回狀態。 如果程式擲回錯誤，並以 RPC 的形式呼叫程式，則會依 sys. dm_exec_describe_first_result_set 的 error_type 資料行中所述的錯誤類型來填入傳回狀態。 如果程序是從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所呼叫，即使發生錯誤，傳回值也永遠是零。  
+ 在成功時， **sp_describe_undeclared_parameters**一律傳回零的傳回狀態。 如果程式擲回錯誤，並以 RPC 的形式呼叫程式，則會依 sys.dm_exec_describe_first_result_set 的 error_type 資料行中所述的錯誤類型來填入傳回狀態。 如果程序是從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所呼叫，即使發生錯誤，傳回值也永遠是零。  
   
 ## <a name="result-sets"></a>結果集  
  **sp_describe_undeclared_parameters** 會傳回下列結果集。  
@@ -279,5 +279,5 @@ WHERE object_id = @id OR NAME = @name',
   
 ## <a name="see-also"></a>另請參閱  
  [sp_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sys.dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

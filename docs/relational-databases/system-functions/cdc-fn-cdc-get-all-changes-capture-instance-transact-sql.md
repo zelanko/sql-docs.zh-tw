@@ -1,6 +1,6 @@
 ---
-description: 'cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) '
-title: cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) |Microsoft Docs
+description: 'cdc.fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) '
+title: cdc.fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397564"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989937"
 ---
-# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) 
+# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   針對在指定之記錄序號 (LSN) 範圍內套用至來源資料表的每個變更，各傳回一個資料列。 如果來源資料列在間隔期間具有多個變更，就會在傳回的結果集中表示每個變更。 除了傳回變更資料以外，四個中繼資料資料行會提供讓您將變更套用至其他資料來源所需的資訊。 資料列篩選選項會管理結果集中傳回的中繼資料資料行以及資料列內容。 當您指定了 'all' 資料列篩選選項時，每個變更都剛好具有一個資料列來識別變更。 當您指定了 'all update old' 選項時，更新作業會表示成兩個資料列：其中一個資料列包含更新之前擷取資料行的值，而另一個資料列則包含更新之後擷取資料行的值。  
   
- 當來源資料表啟用異動資料擷取時，就會建立此列舉函數。 函式名稱會衍生出來，並使用**cdc. fn_cdc_get_all_changes_** 的格式_capture_instance_其中*capture_instance*是在來源資料表啟用變更資料捕獲時，針對 capture 實例所指定的值。  
+ 當來源資料表啟用異動資料擷取時，就會建立此列舉函數。 函數名稱是衍生的，並且使用 **cdc.fn_cdc_get_all_changes_**_capture_instance_ 的格式，其中 *capture_instance* 是在來源資料表啟用變更資料捕獲時，為 capture 實例指定的值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  LSN 值，代表要包含在結果集之 LSN 範圍的高端點。 *to_lsn* 是 **二進位 (10) **。  
   
- 只有 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 變更資料表中的資料列，其值在 **__ $ start_lsn** 小於或等於 *from_lsn* 或等於 *to_lsn* 都會包含在結果集中。  
+ 只有 [cdc. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 變更資料表中的資料列，其值在 **__ $ start_lsn** 大於或等於 *from_lsn* ，且小於或等於 *to_lsn* 都會包含在結果集中。  
   
  <row_filter_option>：： = {all | all update old}  
  管理結果集中傳回之中繼資料資料行以及資料列內容的選項。  
@@ -106,11 +106,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys. sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ [sys.sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   
