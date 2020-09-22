@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66d81c4c2261ca37e7756b61e8ecff9433271367
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537784"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990390"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 
@@ -174,7 +174,7 @@ ALTER TABLE InsurancePolicy
 
 ### <a name="migrate-existing-tables-to-built-in-support"></a>將現有的資料表移轉至內建支援
 
-此範例說明如何根據觸發程序，將現有的方案移轉至內建的暫時支援。 在這個範例中，我們假設自訂方案會將目前資料和記錄資料分割成兩個不同的使用者資料表 (**ProjectTaskCurrent** 和 **ProjectTaskHistory**)。 如果您現有的方案使用單一資料表儲存實際資料列和記錄資料列，您就應該先將資料分割成兩個資料表，再執行本範例的移轉步驟︰
+本例會示範如何根據觸發程序，將現有的方案移轉至內建的暫時支援。 在這個範例中，我們假設自訂方案會將目前資料和記錄資料分割成兩個不同的使用者資料表 (**ProjectTaskCurrent** 和 **ProjectTaskHistory**)。 如果您現有的方案使用單一資料表儲存實際資料列和記錄資料列，您就應該先將資料分割成兩個資料表，再執行本範例的移轉步驟︰
 
 ```sql
 /*Drop trigger on future temporal table*/
