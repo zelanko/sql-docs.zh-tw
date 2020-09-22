@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce602b13c79f45e5bba58664a165f74c7712a81a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538122"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688421"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,17 +87,16 @@ TYPE = [HADOOP | BLOB_STORAGE]
 ## <a name="examples"></a>範例  
  下列範例會改變現有資料來源的位置和資源管理員位置。
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
-  
 ```
 
  下列範例會改變要連線到現有資料來源的認證。
 
-```  
+```sql 
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
@@ -105,7 +104,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
 
  下列範例會將認證更改為新的 LOCATION。 這個範例是針對 Azure SQL 資料倉儲所建立的外部資料源。 
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
    LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
    CREDENTIAL = AzureStorageCredential

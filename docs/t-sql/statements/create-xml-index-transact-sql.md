@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 04551729aac84c7d29cdd0691d918f84acabf07e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ae874a6b9b734b6fe0ab802a3b1aa9d2ebb2ff3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444771"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688654"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,8 +48,7 @@ ms.locfileid: "88444771"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
-Create XML Index   
+--Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
     ON <object> ( xml_column_name )  
     [ USING XML INDEX xml_index_name   
@@ -72,7 +71,6 @@ CREATE [ PRIMARY ] XML INDEX index_name
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
 }  
-  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

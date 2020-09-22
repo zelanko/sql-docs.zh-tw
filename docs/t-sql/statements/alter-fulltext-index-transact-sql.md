@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63ef4a797c8e396d3ce3ca4b4db21d44519b8525
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549475"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688375"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89549475"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -238,7 +237,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  在 `table_1` 上，建立具有搜尋屬性清單 `spl_1` 的全文檢索索引：  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -246,13 +245,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  在全文檢索索引上執行完整母體擴展：  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  稍後使用下列陳述式，將全文檢索索引與不同的搜尋屬性清單 `spl_2` 產生關聯：  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -262,14 +261,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  在 `table_1` 上，建立具有搜尋屬性清單 `spl_1` 的全文檢索索引，接著執行自動的完整母體擴展 (預設行為)：  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  關閉搜尋屬性清單，如下所示：  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -278,7 +277,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      例如，下列陳述式會將全文檢索索引與原始搜尋屬性清單 `spl_1` 重新建立關聯：  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -300,7 +299,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### <a name="a-setting-manual-change-tracking"></a>A. 設定手動變更追蹤  
  下列範例會針對 `JobCandidate` 資料表設定全文檢索索引的手動變更追蹤。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -317,7 +316,7 @@ GO
 > [!NOTE]  
 >  如需建立 `DocumentPropertyList` 屬性清單的範例，請參閱 [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -331,7 +330,7 @@ GO
   
  下列範例會從 `DocumentPropertyList` 的全文檢索索引移除 `Production.Document` 屬性清單。 在這個範例中，從索引移除屬性沒有急迫性，所以指定了 WITH NO POPULATION 選項。 但是，不再允許對這個全文檢索索引進行屬性層級搜尋。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -342,7 +341,7 @@ GO
 ### <a name="d-starting-a-full-population"></a>D. 啟動完整母體擴展  
  下列範例會針對 `JobCandidate` 資料表啟動全文檢索索引的完整母體擴展。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

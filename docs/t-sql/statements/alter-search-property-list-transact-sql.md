@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f7354a8a8ea4e705df8eb54a3db6dd2531132e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cf5d6bcda6670c6cfc9a142be0569bc4bfeaf8e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544237"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688195"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ALTER SEARCH PROPERTY LIST list_name
   
  若要檢視現有屬性清單的名稱，請使用 [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 目錄檢視，如下所示：  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -79,7 +79,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
  若要在目前資料庫的搜尋屬性清單中檢視目前存在之屬性的名稱，請使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目錄檢視，如下所示：  
   
-```  
+```sql  
 SELECT property_name FROM sys.registered_search_properties;  
 ```  
   
@@ -88,7 +88,7 @@ SELECT property_name FROM sys.registered_search_properties;
   
  若要在目前資料庫的搜尋屬性清單中檢視任何存在之屬性的屬性集 GUID，請使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目錄檢視，如下所示：  
   
-```  
+```sql  
 SELECT property_set_guid FROM sys.registered_search_properties;  
 ```  
   
@@ -97,7 +97,7 @@ SELECT property_set_guid FROM sys.registered_search_properties;
   
  若要在目前資料庫的搜尋屬性清單中檢視任何存在之屬性的整數識別碼，請使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目錄檢視，如下所示：  
   
-```  
+```sql  
 SELECT property_int_id FROM sys.registered_search_properties;  
 ```  
   
@@ -117,7 +117,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
   
  當指定屬性時，您可以用括號括住的逗點分隔清單，依任何順序排列 PROPERTY_SET_GUID、PROPERTY_INT_ID 和 PROPERTY_DESCRIPTION 子句，例如：  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST CVitaProperties  
 ADD 'System.Author'   
 WITH (   
@@ -136,7 +136,7 @@ WITH (
 ## <a name="making-added-properties-searchable"></a>讓加入的屬性成為可搜尋的  
  若將搜尋屬性加入至搜尋屬性清單，會註冊屬性。 最近新增的屬性可立即在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 查詢中指定。 但是，直到相關的全文檢索索引重新擴展之後，新加入之屬性的屬性範圍全文檢索查詢才會傳回文件。 例如，直到與目標資料表 (*table_name*) 建立關聯的全文檢索索引重新擴展之後，最近新增之屬性 *new_search_property* 的下列屬性範圍全文檢索查詢才會傳回任何文件：  
   
-```  
+```sql  
 SELECT column_name  
 FROM table_name  
 WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 
@@ -146,7 +146,7 @@ GO
   
  若要啟動完整母體擴展，請使用下列 [ALTER FULLTEXT INDEX &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 陳述式：  
   
-```  
+```sql  
 USE database_name;  
 GO  
 ALTER FULLTEXT INDEX ON table_name START FULL POPULATION;  
@@ -184,7 +184,7 @@ GO
 > [!NOTE]  
 >  如需建立 `DocumentPropertyList` 屬性清單的範例，請參閱 [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)。  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
    ADD 'Title'   
    WITH ( PROPERTY_SET_GUID = 'F29F85E0-4FF9-1068-AB91-08002B27B3D9', PROPERTY_INT_ID = 2,   
@@ -208,7 +208,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 ### <a name="b-dropping-a-property"></a>B. 卸除屬性  
  下列範例會從 `Comments` 屬性清單卸除 `DocumentPropertyList` 屬性。  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
 DROP 'Comments' ;  
 ```  

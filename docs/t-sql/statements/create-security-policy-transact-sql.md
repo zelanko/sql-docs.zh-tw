@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d59e3d1577d368ef80f7bb10598a9db7f52c49a2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: d21a0588eb508b8a5e75ff8caef7636a530a5ccd
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646240"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688864"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 
@@ -122,7 +122,7 @@ ON [dbo].[Customer];
 ### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. 建立影響多個資料表的原則  
  下列語法使用三個篩選器述詞建立三種資料表的安全性原則，並啟用安全性原則。  
   
-```  
+```sql  
 CREATE SECURITY POLICY [FederatedSecurityPolicy]   
 ADD FILTER PREDICATE [rls].[fn_securitypredicate1]([CustomerId])   
     ON [dbo].[Customer],  
@@ -136,7 +136,7 @@ WITH (STATE = ON);
 ### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 建立包含多種安全性述詞類型的原則  
  將篩選述詞和封鎖述詞新增至 Sales 資料表。  
   
-```  
+```sql  
 CREATE SECURITY POLICY rls.SecPol  
     ADD FILTER PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales,  
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  

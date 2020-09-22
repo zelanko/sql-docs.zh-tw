@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 509117125c468d3ef8854f624060805b1a360990
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541354"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688455"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ CREATE MESSAGE TYPE message_type_name
 ### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 建立包含格式正確之 XML 的訊息類型  
  下列範例會建立一個包含格式正確之 XML 的新訊息類型。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
   [//Adventure-Works.com/Expenses/SubmitExpense]  
   VALIDATION = WELL_FORMED_XML ;     
@@ -108,7 +108,7 @@ CREATE MESSAGE TYPE
 ### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. 建立包含 XML 類型的訊息類型  
  下列範例會建立用 XML 來編碼之費用報表的訊息類型。 這個範例會建立一個 XML 結構描述集合來存放簡單費用報表的結構描述。 之後，這個範例會建立一個比對結構描述來驗證訊息的新訊息類型。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ N'<?xml version="1.0" encoding="UTF-16" ?>
 ### <a name="c-creating-a-message-type-for-an-empty-message"></a>C. 建立空訊息的訊息類型  
  下列範例會建立一個包含空白編碼的新訊息類型。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = EMPTY ;  
@@ -156,7 +156,7 @@ CREATE MESSAGE TYPE
 ### <a name="d-creating-a-message-type-containing-binary-data"></a>D. 建立包含二進位資料的訊息類型  
  下列範例會建立用來存放二進位資料的新訊息類型。 由於訊息將包含不是 XML 的資料，因此，訊息類型會指定 `NONE` 驗證類型。 請注意，在這個情況下，接收這種類型之訊息的應用程式必須確認訊息包含資料，且資料的類型符合預期。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/ReceiptImage]  
     VALIDATION = NONE ;  

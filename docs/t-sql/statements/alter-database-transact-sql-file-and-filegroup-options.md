@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9fa653040cdbd1ac08225e04203eeae6ecd344d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8baedeb74c111207f55e7d2c77ee44a9c6eef27a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541422"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688287"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
 
@@ -118,7 +118,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## <a name="arguments"></a>引數
@@ -622,15 +621,15 @@ GO
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN
@@ -739,7 +738,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## <a name="arguments"></a>引數
@@ -909,7 +907,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;
 GO
-
 ```
 
 ### <a name="c-removing-a-file-from-a-database"></a>C. 從資料庫中移除檔案
@@ -1003,15 +1000,15 @@ GO
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN

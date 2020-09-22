@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08a4d8ad8ab23f1bfa618049462506c140090135
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c6a9ed30e92358d269fa4d6c0e270bd4a16e3bdb
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547774"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688129"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "89547774"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
    [ ( < opt_arg > [ , ...n ] ) ]  
@@ -77,7 +76,7 @@ ALTER SERVICE service_name
 ### <a name="a-changing-the-queue-for-a-service"></a>A. 變更服務的佇列  
  下列範例會變更 `//Adventure-Works.com/Expenses` 服務，使其改用 `NewQueue` 佇列。  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE NewQueue ;  
 ```  
@@ -85,7 +84,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="b-adding-a-new-contract-to-the-service"></a>B. 將新合約加入服務中  
  下列範例會變更 `//Adventure-Works.com/Expenses` 服務，以允許 `//Adventure-Works.com/Expenses` 合約上的對話。  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
@@ -93,7 +92,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="c-adding-a-new-contract-to-the-service-dropping-existing-contract"></a>C. 將新合約加入服務中，並卸除現有的合約  
  下列範例會變更 `//Adventure-Works.com/Expenses` 服務，以允許 `//Adventure-Works.com/Expenses/ExpenseProcessing` 合約上的對話，並禁止 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約上的對話。  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing],   
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  

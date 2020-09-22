@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a203d4a3b3d1b8f945779fe9b255f2c3a8cfcd5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e1fce1957dce037d33f1906ecea59b24292b813b
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538141"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688576"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -250,7 +250,7 @@ AS { sql_statement
 ## <a name="examples"></a>範例  
  下列範例會在 AdventureWorks 2012 資料庫中建立 DML 觸發程序，當使用者試圖於 `SalesPersonQuotaHistory` 資料表中新增或變更資料時，即可將使用者定義訊息列印至用戶端。 之後，會利用 `ALTER TRIGGER` 來修改觸發程序，只在 `INSERT` 活動上套用觸發程序。 這個觸發程序很有用，因為它會提醒使用者在這份資料表中更新或插入資料列，以便同時通知 `Compensation` 部門。  
   
-```  
+```sql  
 CREATE TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 WITH ENCRYPTION  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: efef9df2254c9f0c27e23733e24afaddf23f4435
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95c7f778abe9417a108e4df6982b73d3037f5ae9
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479191"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688764"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88479191"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
@@ -83,21 +83,21 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  下列範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，將稱為 `SecurityProvider` 的密碼編譯提供者更改為更新版的 .dll 檔案。 這個新的版本命名為 `c:\SecurityProvider\SecurityProvider_v2.dll`，而且會安裝在伺服器上。 您必須將提供者的憑證安裝在伺服器上。  
   
 1. 停用提供者以執行升級。 這將會終止所有開啟的密碼編譯工作階段。  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
 2. 升級提供者 .dll 檔案。 GUID 必須與先前版本相同，但版本可以不同。  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
 3. 啟用升級後的提供者。   
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

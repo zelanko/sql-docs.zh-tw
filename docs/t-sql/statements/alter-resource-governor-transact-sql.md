@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544318"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688233"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>A. 啟動資源管理員  
  首次安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會停用資源管理員。 下列範例會啟動資源管理員。 陳述式執行後，資源管理員會執行，而且可能會使用預先定義的工作負載群組和資源集區。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. 指派新的工作階段到預設檔案群組  
  下列範例會從資源管理員組態移除任何現有的分類函數，以將所有新增的工作階段指派到預設的工作負載群組。 當沒有任何函數被指定為分類函數時，所有新的工作階段都會指派到預設的工作負載群組。 這項變更僅會套用至新的工作階段。 現有的工作階段不會受到影響。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. 建立和註冊分類函數  
  下列範例會建立名為 `dbo.rgclassifier_v1` 的分類函數。 這個函數會根據使用者名稱或應用程式名稱將每個新的工作階段分類，然後將工作階段要求和查詢指派到特定的工作負載群組。 沒有對應到指定的使用者或應用程式名稱的工作階段會指派到預設的工作負載群組。 接著會註冊此分類函數並套用組態變更。  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>D. 重設統計資料  
  下列範例會重設所有的工作負載群組和資源集區統計資料。  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. 設定 MAX_OUTSTANDING_IO_PER_VOLUME 選項  
  下列範例會將 MAX_OUTSTANDING_IO_PER_VOLUME 選項設為 20。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

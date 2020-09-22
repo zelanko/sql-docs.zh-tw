@@ -28,12 +28,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c8b24889e99f5f0f3cdbaaad377a2d4e99f2da3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549328"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688337"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,6 @@ ms.locfileid: "89549328"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -73,7 +72,7 @@ WITH
  BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  指定主控目標服務的資料庫。 *broker_instance_identifier* 參數必須是遠端資料庫的 Broker 執行個體識別碼，您可以在所選資料庫中執行下列查詢來取得這個識別碼：  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -93,7 +92,7 @@ WHERE database_id = DB_ID()
   
  指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -145,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. 使用 DNS 名稱來建立 TCP/IP 路由  
  下列範例會建立服務 `//Adventure-Works.com/Expenses` 的路由。 這個路由指定送往這項服務的訊息要通過 TCP 而到達 DNS 名稱 `1234` 所識別之主機的通訊埠 `www.Adventure-Works.com`。 目標伺服器會在到達時將訊息傳遞給唯一識別碼 `D8D4D268-00A3-4C62-8F91-634B89C1E315` 所識別的 Broker 執行個體。  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -156,7 +155,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. 使用 NetBIOS 名稱來建立 TCP/IP 路由  
  下列範例會建立服務 `//Adventure-Works.com/Expenses` 的路由。 這個路由指定送往這項服務的訊息要通過 TCP 而到達 NetBIOS 名稱 `1234` 所識別之主機的通訊埠 `SERVER02`。 在到達時，目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將訊息傳遞給唯一識別碼 `D8D4D268-00A3-4C62-8F91-634B89C1E315` 所識別的資料庫執行個體。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -167,7 +166,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>C. 使用 IP 位址來建立 TCP/IP 路由  
  下列範例會建立服務 `//Adventure-Works.com/Expenses` 的路由。 這個路由指定送往這項服務的訊息要通過 TCP 而到達在 IP 位址 `1234` 之主機的通訊埠 `192.168.10.2`。 在到達時，目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將訊息傳遞給唯一識別碼 `D8D4D268-00A3-4C62-8F91-634B89C1E315` 所識別的 Broker 執行個體。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -178,7 +177,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. 建立通往轉送 Broker 的路由  
  下列範例會建立通往伺服器 `dispatch.Adventure-Works.com` 之轉送 Broker 的路由。 由於既未指定服務名稱，也未指定 Broker 執行個體識別碼，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將這個路由用在未定義任何其他路由的服務上。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -187,7 +186,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="e-creating-a-route-to-a-local-service"></a>E. 建立通往本機服務的路由  
  下列範例會建立通往與路由位於相同執行個體之服務 `//Adventure-Works.com/LogRequests` 的路由。  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -197,7 +196,7 @@ CREATE ROUTE LogRequests
 ### <a name="f-creating-a-route-with-a-specified-lifetime"></a>F. 建立含指定存留期間的路由  
  下列範例會建立服務 `//Adventure-Works.com/Expenses` 的路由。 路由的存留期間是 `259200` 秒，相當於 72 小時。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -208,7 +207,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="g-creating-a-route-to-a-mirrored-database"></a>G. 建立通往鏡像資料庫的路由  
  下列範例會建立服務 `//Adventure-Works.com/Expenses` 的路由。 服務在鏡像的資料庫中。 其中一個鏡像資料庫所在的位址是 `services.Adventure-Works.com:1234`，另一個資料庫所在的位址是 `services-mirror.Adventure-Works.com:1234`。  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -220,7 +219,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. 建立使用服務名稱來進行傳遞的路由  
  下列範例會建立一個路由，利用服務名稱來判斷訊息所要送往的網路位址。 請注意，在網路位址中指定 `'TRANSPORT'` 的路由，符合的優先權低於其他路由。  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  

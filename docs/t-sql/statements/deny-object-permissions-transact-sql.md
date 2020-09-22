@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8be1d18c6caae4751ab1168f99aa7b5192510185
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fae275453fd14afacc700150c93cc6a091141a11
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444710"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688617"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 物件權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ PRIVILEGES
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 拒絕資料表的 SELECT 權限  
  下列範例會拒絕使用者 `RosaQdM` 對 `Person.Address` 資料表的 `SELECT` 權限。  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -153,7 +153,7 @@ GO
 ### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. 拒絕預存程序的 EXECUTE 權限  
  下列範例會對一個稱為 `EXECUTE` 的應用程式角色拒絕預存程序 `HumanResources.uspUpdateEmployeeHireInfo` 的 `Recruiting11` 權限。  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -162,7 +162,7 @@ GO
 ### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>C. 拒絕具有 CASCADE 之檢視的 REFERENCES 權限  
  下列範例會對具有 `REFERENCES` 之使用者 `BusinessEntityID` 拒絕檢視 `HumanResources.vEmployee` 中之資料行 `Wanida` 的 `CASCADE` 權限。  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

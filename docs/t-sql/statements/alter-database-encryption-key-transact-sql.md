@@ -19,12 +19,12 @@ ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 3ecebada059baf91632eb74acd161add4ba0a393
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7a9573f1700c1a8912e075aaa732492ed89a9a9
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444962"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688317"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -92,7 +92,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## <a name="examples"></a>範例  
  下列範例會將資料庫加密金鑰改為使用 `AES_256` 演算法。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 ALTER DATABASE ENCRYPTION KEY  

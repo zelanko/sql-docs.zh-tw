@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444626"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570529"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 伺服器權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. 授與權限給登入  
  下列範例會將 `CONTROL SERVER` 權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `TerryEminhizer`。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. 授與具有 GRANT 權限的權限  
  下列範例會將 `ALTER ANY EVENT NOTIFICATION` 授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `JanethEsteves`，而這項登入具有對將該權限授與其他登入的權限。  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. 授與權限給伺服器角色  
  下列範例會建立兩個名稱為 `ITDevAdmin` 和 `ITDevelopers` 的伺服器角色。 它會將 `ALTER ANY DATABASE` 權限授與 `ITDevAdmin` 使用者定義的伺服器角色，包括 `WITH GRANT` 選項，讓 `ITDevAdmin` 伺服器角色可以重新指派 `ALTER ANY DATABASE` 權限。 此範例接著會授權 `ITDevelopers` 使用 `ALTER ANY DATABASE` 伺服器角色的 `ITDevAdmin` 權限。  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

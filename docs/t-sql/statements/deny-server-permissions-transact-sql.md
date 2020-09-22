@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50377ed7b719eee6a135af5db6161d9eed824915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67833e662688b6de418fc6d7db169f1107866035
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426620"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688602"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 伺服器權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +155,7 @@ DENY permission [ ,...n ]
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. 對 SQL Server 登入及已對其授與權限的主體，拒絕 CONNECT SQL 權限  
  下列範例會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `CONNECT SQL` 及她已對其授與權限的主體，拒絕 `Annika` 權限。  
   
-```  
+```sql  
 USE master;  
 DENY CONNECT SQL TO Annika CASCADE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. 使用 AS 選項，對 SQL Server 登入拒絕 CREATE ENDPOINT 權限  
  下列範例會對使用者 `CREATE ENDPOINT` 拒絕 `ArifS` 權限。 這個範例利用 `AS` 選項來指定 `MandarP` 作為負責執行的主體從其衍生權限，以執行這項指定作業的主體。  
   
-```  
+```sql  
 USE master;  
 DENY CREATE ENDPOINT TO ArifS AS MandarP;  
 GO  

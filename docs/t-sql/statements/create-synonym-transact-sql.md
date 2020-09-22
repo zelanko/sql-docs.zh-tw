@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0db46168ccaa488960db4f1a4aa9a0e7a73c5434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 10d6e3fdfbb1614a24960d4d2115e0ca17e26be8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538064"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688707"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "89538064"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- SQL Server Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
@@ -128,7 +128,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ### <a name="a-creating-a-synonym-for-a-local-object"></a>A. 建立本機物件的同義字  
  下列範例會先建立 `Product` 資料庫中之基底物件 `AdventureWorks2012` 的同義字，再查詢這個同義字。  
   
-```  
+```sql 
 -- Create a synonym for the Product table in AdventureWorks2012.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2012.Production.Product;  
@@ -160,7 +160,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
-```  
+```sql 
 EXEC sp_addlinkedserver Server_Remote;  
 GO  
 USE tempdb;  
@@ -172,10 +172,10 @@ GO
 ### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. 建立使用者定義函數的同義字  
  下列範例會建立名為 `dbo.OrderDozen` 的函數，以便將訂單數量增加為平均一打的單位。 然後，此範例會建立 `dbo.CorrectOrder` 函數的同義字 `dbo.OrderDozen`。  
   
-```  
+```sql  
 -- Creating the dbo.OrderDozen function  
-CREATE FUNCTION dbo.OrderDozen (@OrderAmt int)  
-RETURNS int  
+CREATE FUNCTION dbo.OrderDozen (@OrderAmt INT)  
+RETURNS INT  
 WITH EXECUTE AS CALLER  
 AS  
 BEGIN  
@@ -188,7 +188,7 @@ END;
 GO  
   
 -- Using the dbo.OrderDozen function  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.OrderDozen(@Amt) AS ModifiedOrder;  
   
@@ -198,7 +198,7 @@ FOR dbo.OrderDozen;
 GO  
   
 -- Using the dbo.CorrectOrder synonym.  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  

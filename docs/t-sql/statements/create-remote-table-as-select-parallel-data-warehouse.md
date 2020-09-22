@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 841c8a62a90b6d14a1ee4d20bce7b57be097e9b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a45d59e3891e08f2ae5c5b5d64258b5ebcc371a8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304978"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688327"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "88304978"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
@@ -138,7 +137,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ### <a name="a-creating-a-remote-table"></a>A. 建立遠端資料表  
  此範例會在資料庫 `OrderReporting` 和結構描述 `Orders` 上建立一個名為 `MyOrdersTable` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 遠端資料表。 `OrderReporting` 資料庫位於名為 `SQLA` 並在預設連接埠 1433 上進行接聽的伺服器上。 對該伺服器的連線會使用使用者 `David` 的認證，其密碼為 `e4n8@3`。  
   
-```  
+```sql  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
 AS SELECT <select_criteria>;  
@@ -147,7 +146,7 @@ AS SELECT <select_criteria>;
 ### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. 查詢 sys.dm_pdw_dms_workers DMV 以了解遠端資料表複製狀態  
  此查詢示範如何檢視遠端資料表複製的複製狀態。  
   
-```  
+```sql  
 SELECT * FROM sys.dm_pdw_dms_workers   
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
@@ -155,7 +154,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. 搭配 CREATE REMOTE TABLE 使用查詢聯結提示  
  此查詢示範搭配 CREATE REMOTE TABLE 使用查詢聯結提示的基本語法。 向控制節點提交查詢之後，在計算節點上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在產生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢計劃時套用雜湊聯結策略。 如需有關聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
-```  
+```sql  
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  

@@ -21,12 +21,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 80a1d4d3ae6b9bf61879a6b77ad7ab3bddd1d4d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a044f2d876df2682631bf4df9015290d9b2fc3a1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479041"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688184"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -157,7 +157,7 @@ SHUTDOWN
 ### <a name="a-changing-a-server-audit-name"></a>A. 變更伺服器稽核名稱  
  下列範例會將伺服器稽核的名稱 `HIPAA_Audit` 變更為 `HIPAA_Audit_Old`。  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  
@@ -174,7 +174,7 @@ GO
 ### <a name="b-changing-a-server-audit-target"></a>B. 變更伺服器稽核目標  
  下列範例會將稱為 `HIPAA_Audit` 的伺服器稽核變更為檔案目標。  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  

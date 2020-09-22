@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e75a8511c8f706e8b92cbe2830b9f904f56c42b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9d6b7434c8daf3e1236e5a16368f175ded765f1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444800"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688060"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選擇性 XML 索引)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "88444800"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  
     USING XML INDEX sxi_index_name  
@@ -104,7 +103,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## <a name="examples"></a>範例  
  下列範例會在 `pathabc`路徑上建立次要選擇性 XML 索引。 索引路徑是來自 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 的指派名稱。  
   
-```  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  

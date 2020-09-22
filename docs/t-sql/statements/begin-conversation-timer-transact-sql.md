@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0bb1b0171420c8fd25756eae07304ebf8f469a01
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dc2b02a96911dc0ff6e7be86c5cbd36708ddf348
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547565"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688119"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,6 @@ ms.locfileid: "89547565"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   
 [ ; ]  
@@ -80,7 +79,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ## <a name="examples"></a>範例  
  下列範例會在 `@dialog_handle` 所識別的對話上設定兩分鐘逾時。  
   
-```  
+```sql 
 -- @dialog_handle is of type uniqueidentifier and  
 -- contains a valid conversation handle.  
   

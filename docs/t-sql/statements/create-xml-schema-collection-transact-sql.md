@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa614b7b0496c1547f85106758f6ff5d7dd2835a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444753"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688648"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88444753"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
@@ -84,7 +83,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. 在資料庫中建立 XML 結構描述集合  
  下列範例會建立 XML 結構描述集合 `ManuInstructionsSchemaCollection`。 這個集合只有一個結構描述命名空間。  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -176,7 +175,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. 在結構描述集合中指定多個結構描述命名空間  
  建立 XML 結構描述集合時，您也可以指定多個 XML 結構描述。 例如：  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -188,7 +187,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  下列範例會建立包括兩個 XML 結構描述命名空間的 XML 結構描述集合 `ProductDescriptionSchemaCollection`。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -234,7 +233,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 匯入不指定目標命名空間的結構描述  
  如果將不包含 **targetNamespace** 屬性的結構描述匯入集合中，其元件會與空字串目標命名空間關聯，如下列範例所示。 請注意，不對匯入集合之一或多個結構描述進行關聯，會造成多個結構描述元件 (可能無關) 與預設空字串命名空間相關聯。  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -254,7 +253,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. 使用 XML 結構描述集合和批次  
  在建立結構描述集合所在的同一批次中，不可以參考該結構描述集合。 如果您嘗試在建立集合之同一批次中參考該集合，您會看到錯誤訊息，告訴您集合不存在。 下列範例是有效的；然而，如果您移除 `GO` 而因此嘗試參考 XML 結構描述集合在同一批次中輸入 `xml` 變數，則會傳回錯誤。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a17f41df5e7b35abe757be7a5e2e98997e253c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c50ce97995322a025feb1e201682717d7d2234d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539922"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688505"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "89539922"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
 [ SET ( [ CONTRACT_NAME = {ContractName | ANY } ]  
@@ -169,7 +168,7 @@ FOR CONVERSATION
 ### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. 指派優先權等級給交談的兩個方向。  
  這兩個交談優先權可確保在 `SimpleContract` 和 `TargetService` 之間使用 `InitiatorAService` 的所有作業都會被指派優先權等級 3。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY InitiatorAToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -187,7 +186,7 @@ CREATE BROKER PRIORITY TargetToInitiatorAPriority
 ### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>B. 針對使用合約的所有交談設定優先權等級  
  將優先權等級 `7` 指派給使用名為 `SimpleContract` 之合約的所有作業。 這會假設沒有其他優先權同時指定 `SimpleContract` 以及本機或遠端服務。  
   
-```  
+```sql 
 CREATE BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -199,7 +198,7 @@ CREATE BROKER PRIORITY SimpleContractDefaultPriority
 ### <a name="c-setting-a-base-priority-level-for-a-database"></a>C. 為資料庫設定基本優先權等級。  
  為兩個特定的服務定義交談優先權，然後定義一個將會符合所有其他交談端點的交談優先權。 這樣並不會取代預設優先權 (一定是 5)，但是確實會讓指派預設值的項目數減至最少。  
   
-```  
+```sql 
 CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/ClaimPriority]  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = ANY,  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b279b48adb0a72060d9e7700c57f25782eb83587
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39b9fdbb63a515f74640ff1e4c18366652584980
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496911"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688794"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ### <a name="a-closing-a-symmetric-key"></a>A. 關閉對稱金鑰  
  下列範例會關閉對稱金鑰 `ShippingSymKey04`。  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY ShippingSymKey04;  
 GO  
 ```  
@@ -68,7 +68,7 @@ GO
 ### <a name="b-closing-all-symmetric-keys"></a>B. 關閉所有對稱金鑰  
  下列範例會關閉目前工作階段中開啟的所有對稱金鑰，以及明確開啟的資料庫主要金鑰。  
   
-```  
+```sql  
 CLOSE ALL SYMMETRIC KEYS;  
 GO  
 ```  

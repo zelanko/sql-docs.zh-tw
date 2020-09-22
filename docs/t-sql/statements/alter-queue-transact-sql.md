@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa1828f1a6c684c0028ed3ada229aca3811a88a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a8ba9a6a1dbc0f1c6e6c6312c627f83335bbe09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541482"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688225"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -180,14 +179,14 @@ WITH
 ### <a name="a-making-a-queue-unavailable"></a>A. 使佇列無法使用  
  下列範例使 `ExpenseQueue` 佇列無法接收訊息。  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. 變更啟用預存程序  
  下列範例會變更佇列啟動的預存程序。 這個預存程序是以執行 `ALTER QUEUE` 陳述式的使用者身分來執行。  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -197,14 +196,14 @@ ALTER QUEUE ExpenseQueue
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 變更佇列讀取器的數目  
  下列範例會將 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 為了這個佇列而啟動的最大預存程序執行個體數目設為 `7`。  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. 變更啟用預存程序和 EXECUTE AS 帳戶  
  下列範例會變更 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 啟動的預存程序。 這個預存程序以 `SecurityAccount` 使用者的身分來執行。  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -214,7 +213,7 @@ ALTER QUEUE ExpenseQueue
 ### <a name="e-setting-the-queue-to-retain-messages"></a>E. 設定佇列來保留訊息  
  下列範例會設定佇列來保留訊息。 佇列會保留使用這個佇列的服務所傳送和接收的所有訊息，直到包含訊息的交談結束為止。  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -231,7 +230,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  下列範例會重建佇列索引  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -241,7 +240,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  下列範例會重新組織佇列索引  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -249,7 +248,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

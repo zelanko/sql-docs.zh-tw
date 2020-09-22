@@ -29,12 +29,12 @@ ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 7bf86dee77c7b6667f4acafed150855060b2d9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5d833b75641c20116c49a7ab4907b9cb8522ab6
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467215"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688084"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 
@@ -106,7 +106,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
   
 下列範例會利用 `AES_256` 演算法建立一個資料庫加密金鑰，並且使用名稱為 `MyServerCert` 的憑證保護私密金鑰。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DATABASE ENCRYPTION KEY  

@@ -21,12 +21,12 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f429b2cf8b581cf005f1ff88b4fa329432040cee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d952142a989823a96a4edace573c8e097b357c6b
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479672"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570689"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ FLOOR ( numeric_expression )
 ## <a name="examples"></a>範例  
  下列範例會利用 `FLOOR` 函數來顯示正數、負數和貨幣值。  
   
-```  
+```sql  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
@@ -67,7 +67,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會使用 `FLOOR` 函式來顯示正數、負數和值。  
   
-```  
+```sql  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   

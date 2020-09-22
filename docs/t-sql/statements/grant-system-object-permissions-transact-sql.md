@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496692"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570594"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 系統物件權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  下列查詢會傳回系統物件權限的相關資訊：  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +81,7 @@ GO
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 授與檢視的 SELECT 權限  
  下列範例授與選取檢視 (這份檢視會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `Sylvester1` 權限。 接著，這個範例再授與其他權限，它是檢視非使用者擁有之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入上的中繼資料時所需的權限。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 授與擴充預存程序的 EXECUTE 權限  
  下列範例會對 `EXECUTE` 授與 `xp_readmail` 的 `Sylvester1` 權限。  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c378e113e07a9d85bbeedbf585f9b58f417812f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48e25e4a2bc22d56503b3f0cc1819bb10b856e9d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426670"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688724"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -161,7 +161,7 @@ CREATE SYMMETRIC KEY key_name
 ### <a name="a-creating-a-symmetric-key"></a>A. 建立對稱金鑰  
  下列範例會利用 `JanainaKey09` 演算法建立一個稱為 `AES 256` 的對稱金鑰，然後利用憑證 `Shipping04` 加密新金鑰。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey09   
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY CERTIFICATE Shipping04;  
@@ -171,8 +171,7 @@ GO
 ### <a name="b-creating-a-temporary-symmetric-key"></a>B. 建立暫時對稱金鑰  
  下列範例會從這個複雜密碼中建立一個稱為 `#MarketingXXV` 的暫時對稱金鑰：`The square of the hypotenuse is equal to the sum of the squares of the sides`。 金鑰由某 GUID 提供，該 GUID 是從字串 `Pythagoras` 產生且利用憑證 `Marketing25` 來加密的。  
   
-```  
-  
+```sql 
 CREATE SYMMETRIC KEY #MarketingXXV   
 WITH ALGORITHM = AES_128,  
 KEY_SOURCE   
@@ -185,7 +184,7 @@ GO
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可延伸金鑰管理 (EKM) 裝置建立對稱金鑰  
  下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，註冊稱為 `MyEKMProvider` 的提供者。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY MySymKey  
 AUTHORIZATION User1  
 FROM PROVIDER EKMProvider  

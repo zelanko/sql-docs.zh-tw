@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2a36dab320bac556c5847f74049d2af6524457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c7d0bd39ebda34677469a45687fd78f0e4124cc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472376"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688554"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88472376"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 BACKUP MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
@@ -67,7 +66,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ## <a name="examples"></a>範例  
  下列範例會建立 `AdventureWorks2012` 主要金鑰的備份。 因為不是利用服務主要金鑰來加密這個主要金鑰，所以開啟主要金鑰時必須指定密碼。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';  
 BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'   

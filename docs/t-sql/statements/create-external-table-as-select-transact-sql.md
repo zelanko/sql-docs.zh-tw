@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 14f329396794d3bfd0384a4888e705e9e31a498b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 7b38d226ca660befe7a04c1c014fe41eedf22146
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862088"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688469"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88862088"
 
 ## <a name="syntax"></a>語法
 
-```syntaxsql
-  
+```syntaxsql 
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   
         LOCATION = 'hdfs_folder',  
@@ -198,9 +197,8 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  產生的 Hadoop 位置和檔案名稱將會是 `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`。
 
-```  
-  
-      -- Example is based on AdventureWorks   
+```sql  
+-- Example is based on AdventureWorks   
 CREATE EXTERNAL TABLE hdfsCustomer  
 WITH (  
         LOCATION='/pdwdata/customer.tbl',  
@@ -216,9 +214,8 @@ WITH (
 > [!NOTE]
 >  這個範例指定的是 5000。 如果未指定連接埠，資料庫就會使用 8020 作為預設連接埠。
 
-```  
-  
-      -- Example is based on AdventureWorks  
+```sql  
+-- Example is based on AdventureWorks  
 CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
 WITH   
     (   

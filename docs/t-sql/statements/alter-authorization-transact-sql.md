@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f47d0489955f0e7104449395a2fe3f8f591a1b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88305793"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688278"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -239,7 +239,7 @@ Azure AD 使用者     |Azure AD 使用者         |Success
   
 若要驗證資料庫的 Azure AD 擁有者，請在使用者資料庫中執行下列 Transact-SQL 命令 (在此範例中為 `testdb`)。  
     
-```    
+```sql    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
@@ -248,7 +248,7 @@ WHERE name = 'testdb';
 輸出將為識別碼 (例如 6D8B81F6-7C79-444C-8858-4AF896C03C67)，該識別碼會對應到指派給 `richel@cqclinic.onmicrosoft.com` 的 Azure AD ObjectID  
 當 SQL Server 驗證登入使用者為資料庫擁有者時，請在 master 資料庫中執行下列陳述式來驗證資料庫擁有者：  
     
-```    
+```sql    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -259,16 +259,19 @@ ON d.owner_sid = sl.sid;
 ### <a name="best-practice"></a>最佳做法  
   
 請使用 Azure AD 群組作為 **db_owner** 固定資料庫角色的成員，而非使用 Azure AD 使用者作為資料庫的個別擁有者。 下列步驟示範如何將已停用的登入設定為資料庫擁有者，並讓 Azure Active Directory 群組 (`mydbogroup`) 成為 **db_owner** 角色的成員。 
+
 1.  以 Azure AD 系統管理員的身分登入 SQL Server，然後將資料庫的擁有者變更為已停用的 SQL Server 驗證登入。 例如，從使用者資料庫中執行：  
-  ```    
+  ```sql    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-  ```    
+  ```  
+  
 2.  建立應擁有資料庫的 Azure AD 群組，然後將其作為使用者新增至使用者資料庫。 例如：  
-  ```    
+  ```sql    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-  ```    
+  ```   
+  
 3.  在使用者資料庫中，將表示 Azure AD 群組的使用者新增至 **db_owner** 固定資料庫角色。 例如：  
-  ```    
+  ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
@@ -278,7 +281,7 @@ ON d.owner_sid = sl.sid;
   
 若要檢查特定使用者是否具備有效的 dbo 權限，請讓使用者執行下列陳述式：  
     
-```    
+```sql    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
@@ -293,21 +296,21 @@ SELECT IS_MEMBER ('db_owner');
 ### <a name="a-transfer-ownership-of-a-table"></a>A. 轉移資料表的擁有權    
  下列範例會將資料表 `Sprockets` 的擁有權轉移給使用者 `MichikoOsada`。 此資料表位於結構描述 `Parts` 內。    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- 這項查詢也會如下所示：    
+這項查詢也會如下所示：    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- 若物件結構描述並未作為陳述式的一部分包含在其中，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在使用者預設結構描述中尋找物件。 例如：    
+若物件結構描述並未作為陳述式的一部分包含在其中，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在使用者預設結構描述中尋找物件。 例如：    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
@@ -315,7 +318,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. 將檢視的擁有權轉移給結構描述擁有者    
  下列範例會將 `ProductionView06` 檢視的擁有權轉移給包含其結構描述的擁有者。 此檢視位於結構描述 `Production` 內。    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;    
 GO    
 ```    
@@ -323,7 +326,7 @@ GO
 ### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>C. 將結構描述的擁有權轉移給使用者    
  下列範例會將 `SeattleProduction11` 結構描述的擁有權轉移給使用者 `SandraAlayo`。    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;    
 GO    
 ```    
@@ -333,14 +336,15 @@ GO
     
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
 GO    
 ```    
     
 ### <a name="e-changing-the-owner-of-a-table"></a>E. 變更資料表的擁有者    
  下列每個範例都會將 `Parts` 資料庫中 `Sprockets` 資料表的擁有者變更為 `MichikoOsada` 資料庫使用者。    
-```    
+ 
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
@@ -352,14 +356,14 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
     
  下列範例會將 `Parts` 資料庫的擁有者變更為 `MichikoOsada` 登入。    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
 ### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. 將 SQL Database 的擁有者變更為 Azure AD 使用者  
 在下列範例中，具有名為 `cqclinic.onmicrosoft.com` 之 Active Directory 組織中的 SQL Server Azure Active Directory 系統管理員，可變更 `targetDB` 資料庫目前的擁有權，並使用下列命令讓 `richel@cqclinic.onmicorsoft.com` AAD 使用者成為新的資料庫擁有者：  
     
-```    
+```sql    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     

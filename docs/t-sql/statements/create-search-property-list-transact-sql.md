@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf08875b244a3184f8992efcb0c991ef36a73dc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549303"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688874"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89549303"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
@@ -104,7 +104,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  如需將數個預先定義的已知搜尋屬性新增至這個搜尋屬性清單的範例，請參閱 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)。 在將搜尋屬性加入至清單之後，資料庫管理員需要使用另一個 ALTER FULLTEXT INDEX 陳述式搭配 START FULL POPULATION 子句。  
   
-```  
+```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  
 USE AdventureWorks2012;  
@@ -117,14 +117,13 @@ GO
 ### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 從現有屬性清單建立屬性清單  
  下列範例會從範例 A 所建立的清單 `JobCandidateProperties` (此清單與 `DocumentPropertyList` 資料庫中的全文檢索索引相關聯) 建立新的搜尋屬性清單 `AdventureWorks2012`。 然後此範例使用 ALTER FULLTEXT INDEX 陳述式，將新屬性清單與 `HumanResources.JobCandidate` 資料庫中 `AdventureWorks2012` 資料表的全文檢索索引產生關聯。 這個 ALTER FULLTEXT INDEX 陳述式會啟動完整母體擴展，這是 SET SEARCH PROPERTY LIST 子句的預設行為。  
   
-```  
+```sql  
 CREATE SEARCH PROPERTY LIST JobCandidateProperties 
 FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  
-GO  
-  
+GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  

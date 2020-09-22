@@ -20,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7671b2f961826e6c964afbaeeb2db694877adf01
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 1f6cd4c28efff1425a18fcef9e7ed60ee535a93f
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147949"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570541"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT 搜尋屬性清單權限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -137,7 +137,7 @@ GRANT permission [ ,...n ] ON
 ### <a name="granting-permissions-to-a-search-property-list"></a>授與搜尋屬性清單的權限  
  下列範例會將搜尋屬性清單 `Mary` 的 `VIEW DEFINITION` 權限授與 `DocumentTablePropertyList`。  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
     TO Mary ;  

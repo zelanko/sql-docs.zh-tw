@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2936b17929239c947c87a5e694adaa1e31adae13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7e8912a4f057f895b73c0b76ad1f4ac02d46d1b
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491351"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565073"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速資料庫復原
 
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver2019.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>啟用和控制 ADR
 

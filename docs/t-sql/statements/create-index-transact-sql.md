@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2fb1378d31721c0087ac42babdd642c5d0f8421
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ebfdd690e705495d7daa04e9cd65928f97e389b0
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541427"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688480"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -897,7 +897,7 @@ INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
 
 產生的錯誤訊息如下：
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
@@ -959,7 +959,7 @@ GO
 
 以下是第二個 `INSERT` 陳述式的結果。
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 5
 Cannot insert duplicate key row in object '#Test' with unique index
 'AK_Index'. The statement has been terminated.

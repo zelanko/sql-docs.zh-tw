@@ -23,12 +23,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ff8c86ef00124329600a99ef85cd471c81e25ff7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544261"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688217"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89544261"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 ALTER ROUTE route_name  
 WITH    
   [ SERVICE_NAME = 'service_name' [ , ] ]  
@@ -71,7 +70,7 @@ WITH
  BROKER_INSTANCE **='** _broker\_instance_ **'**  
  指定主控目標服務的資料庫。 *broker_instance* 參數必須是遠端資料庫的 Broker 執行個體識別碼，您可以在所選資料庫中執行下列查詢來取得這個識別碼：  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID();  
@@ -95,7 +94,7 @@ WHERE database_id = DB_ID();
   
  指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -119,7 +118,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -151,7 +150,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-changing-the-service-for-a-route"></a>A. 變更路由的服務  
  下列範例會修改 `ExpenseRoute` 路由來指向遠端服務 `//Adventure-Works.com/Expenses`。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
@@ -160,7 +159,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="b-changing-the-target-database-for-a-route"></a>B. 變更路由的目標資料庫  
  下列範例將 `ExpenseRoute` 路由的目標資料庫變更為唯一識別碼 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` 所識別的資料庫。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
@@ -169,7 +168,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="c-changing-the-address-for-a-route"></a>C. 變更路由的位址  
  下列範例會將 `ExpenseRoute` 路由的網路位址改成 IP 位址是 `1234` 之主機的 TCP 通訊埠 `10.2.19.72`。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute   
    WITH   
      ADDRESS = 'TCP://10.2.19.72:1234';  
@@ -178,7 +177,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="d-changing-the-database-and-address-for-a-route"></a>D. 變更路由的資料庫和位址  
  下列範例會將 `ExpenseRoute` 路由的網路位址改成 DNS 名稱是 `1234` 之主機的 TCP 通訊埠 `www.Adventure-Works.com`。 它也會將目標資料庫變更為唯一識別碼 `D8D4D268-00A3-4C62-8F91-634B89B1E317` 所識別的資料庫。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317',  

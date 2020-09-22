@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4095c5fcfebdcaa531fc621684b95f4b1598142d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 16f0dce09020c1139bc97b86453c96ed7ada95f1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484815"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688884"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -157,7 +157,7 @@ DENY permission [ ,...n ]
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. 對其他使用者拒絕使用者的 CONTROL 權限  
  下列範例會對使用者 `CONTROL` 拒絕 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 使用者 `Wanida` 的 `RolandX` 權限。  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
@@ -166,7 +166,7 @@ GO
 ### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. 對被授與 GRANT OPTION 的使用者，拒絕角色的 VIEW DEFINITION 權限  
  下列範例會對資料庫使用者 `VIEW DEFINITION` 拒絕 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 角色 `SammamishParking` 的 `JinghaoLiu` 權限。 有指定 `CASCADE` 選項，因為使用者 `JinghaoLiu` 被授與 VIEW DEFINITION 權限 WITH GRANT OPTION。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
@@ -178,7 +178,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    

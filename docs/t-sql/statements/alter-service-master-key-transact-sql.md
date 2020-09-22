@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 53526aa2ba6a59b623382aa1c47b11443759756b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c75769df4c504f71dfdd3a724648aea19b66460
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426820"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688142"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88426820"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 ALTER SERVICE MASTER KEY   
     [ { <regenerate_option> | <recover_option> } ] [;]  
   
@@ -112,7 +111,7 @@ ALTER SERVICE MASTER KEY
 ## <a name="examples"></a>範例  
  下列範例會重新產生服務主要金鑰。  
   
-```  
+```sql  
 ALTER SERVICE MASTER KEY REGENERATE;  
 GO  
 ```  

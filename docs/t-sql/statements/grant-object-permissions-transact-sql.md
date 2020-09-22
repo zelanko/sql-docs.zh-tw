@@ -17,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cca05a701f7ec0255536c496ae5288cd1105835
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472266"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570579"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 物件權限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -160,7 +160,7 @@ PRIVILEGES
 ### <a name="a-granting-select-permission-on-a-table"></a>A. 授與資料表的 SELECT 權限  
  下列範例會將 `SELECT` 資料庫中之資料表 `RosaQdM` 的 `Person.Address` 權限，授與使用者 `AdventureWorks2012`。  
   
-```  
+```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -168,7 +168,7 @@ GO
 ### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. 授與預存程序的 EXECUTE 權限  
  下列範例會將預存程序 `EXECUTE` 的 `HumanResources.uspUpdateEmployeeHireInfo` 權限，授與一個稱為 `Recruiting11` 的應用程式角色。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
@@ -178,7 +178,7 @@ GO
 ### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>C. 授與具有 GRANT OPTION 之檢視的 REFERENCES 權限  
  下列範例會將檢視 `REFERENCES` 中之資料行 `BusinessEntityID` 的 `HumanResources.vEmployee` 權限，授與具有 `Wanida` 的使用者 `GRANT OPTION`。  
   
-```  
+```sql  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -187,7 +187,7 @@ GO
 ### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D. 授與資料表的 SELECT 權限，但不使用 OBJECT 片語  
  下列範例會將 `SELECT` 資料庫中之資料表 `RosaQdM` 的 `Person.Address` 權限，授與使用者 `AdventureWorks2012`。  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -195,7 +195,7 @@ GO
 ### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>E. 將資料表的 SELECT 權限授與網域帳戶  
  下列範例會將 `SELECT` 資料庫中之資料表 `AdventureWorks2012\RosaQdM` 的 `Person.Address` 權限，授與使用者 `AdventureWorks2012`。  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -203,7 +203,7 @@ GO
 ### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>F. 將程序的 EXECUTE 權限授與角色  
  下列範例會建立一個角色，然後將 `EXECUTE` 資料庫中 `uspGetBillOfMaterials` 程序的 `AdventureWorks2012` 權限授與該角色。  
   
-```  
+```sql  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  

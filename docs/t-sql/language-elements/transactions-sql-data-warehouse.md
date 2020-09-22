@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e2912d3bb0608a105c4f68c857b2ea679a86c2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417064"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688350"
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -114,7 +114,8 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. 復原交易  
  下列範例示範復原交易的效果。  在此範例中，ROLLBACK 陳述式將復原 INSERT 陳述式，但所建立的資料表仍會存在。  
   
-```sql  
+
+```sql
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

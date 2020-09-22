@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca119bfb4b94aee36270315a29e97613f3d28ce5
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467268"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688168"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,7 +74,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>範例  
  下列範例會建立一個稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格。 針對失敗的登入，它會捨棄稽核動作群組，並針對稱為 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核，新增用於資料庫物件存取的稽核動作群組。  
   
-```  
+```sql  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP),  

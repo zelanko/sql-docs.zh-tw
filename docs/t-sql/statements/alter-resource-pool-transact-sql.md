@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ce08b332255d43f1912454c7695b36998578a4b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e1e705930e31cec8fa6b7b4913e3643cc25227e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544280"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688211"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
   
  當您使用 AFFINITY NAMANODE = (NUMA_node_range_spec) 時，資源集區會與對應至對應給定 NUMA 節點或節點範圍之實體 CPU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器相似化。 您可以使用下列 Transact-SQL 查詢探索實體 NUMA 組態與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器識別碼之間的對應。  
   
-```  
+```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
 FROM sys.dm_os_nodes AS osn  
 INNER JOIN sys.dm_os_schedulers AS sc 
@@ -144,7 +144,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ## <a name="examples"></a>範例  
  下列範例會保留 `default` 集區上的所有預設資源集區設定，除了變更為 `MAX_CPU_PERCENT` 的 `25` 之外。  
   
-```  
+```sql  
 ALTER RESOURCE POOL "default"  
 WITH  
      ( MAX_CPU_PERCENT = 25);  
@@ -157,7 +157,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
-```  
+```sql  
 ALTER RESOURCE POOL Pool25  
 WITH(   
      MIN_CPU_PERCENT = 5,  
@@ -171,7 +171,6 @@ WITH(
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

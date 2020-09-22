@@ -24,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a69a4d5f7cd7153b6acd4b6d487fbb2a201deb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b5c75b95d32905e6cd2fa7ff30cb0440cca0dd9
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362814"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688814"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ SESSION_USER
  下列範例會宣告一個變數 `nchar`、指派 `SESSION_USER` 的目前值給該變數，然後將變數和文字描述一起列印出來。  
   
 ```  
-DECLARE @session_usr nchar(30);  
+DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
 GO  
@@ -83,12 +83,12 @@ USE AdventureWorks2012;
 GO  
 CREATE TABLE deliveries3  
 (  
- order_id int IDENTITY(5000, 1) NOT NULL,  
- cust_id  int NOT NULL,  
- order_date smalldatetime NOT NULL DEFAULT GETDATE(),  
- delivery_date smalldatetime NOT NULL DEFAULT   
+ order_id INT IDENTITY(5000, 1) NOT NULL,  
+ cust_id  INT NOT NULL,  
+ order_date SMALLDATETIME NOT NULL DEFAULT GETDATE(),  
+ delivery_date SMALLDATETIME NOT NULL DEFAULT   
     DATEADD(dd, 10, GETDATE()),  
- received_shipment nchar(30) NOT NULL DEFAULT SESSION_USER  
+ received_shipment NCHAR(30) NOT NULL DEFAULT SESSION_USER  
 );  
 GO  
 ```  

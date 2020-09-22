@@ -23,12 +23,12 @@ ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d55a8194cff725c61d7584d1c01970f5be2c76e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67cec38e835bd12cb951bba6ee790d0815c9cd29
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88310454"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570685"
 ---
 # <a name="db_name-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88310454"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DB_NAME ( [ database_id ] )  
 ```  
   
@@ -76,7 +76,7 @@ GO
 ```sql
 USE master;  
 GO  
-SELECT DB_NAME(3)AS [Database Name];  
+SELECT DB_NAME(3) AS [Database Name];  
 GO  
 ```  
   

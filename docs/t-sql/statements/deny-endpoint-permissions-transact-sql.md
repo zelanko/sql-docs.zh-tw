@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9b4af50e021520c1333e0dbffb8cc3c654b6f0fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60e788fc63d0a7dd47274e85397f30aa04f95416
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416834"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688637"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 端點權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 拒絕端點的 VIEW DEFINITION 權限  
  下列範例拒絕在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Mirror7` 端點上，登入 `ZArifin` 的 `VIEW DEFINITION` 權限。  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. 拒絕具有 CASCADE 選項的 TAKE OWNERSHIP 權限  
  下列範例會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `TAKE OWNERSHIP` 拒絕端點 `Shipping83` 的 `PKomosinski` 權限，並對 `PKomosinski` 對其授與 `TAKE OWNERSHIP` 的主體拒絕該權限。  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     CASCADE;  

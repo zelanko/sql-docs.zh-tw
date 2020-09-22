@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5d3e39d3a9533a75089c3126503abdd338c25ca1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfb423e90d8c7776fe9d2f5eb8815a37254a3b8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472319"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688512"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 系統物件權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88472319"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
@@ -67,7 +66,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  下列查詢會傳回系統物件權限的相關資訊：  
   
-```  
+```sql
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +80,7 @@ GO
 ## <a name="examples"></a>範例  
  下列範例會對 `EXECUTE` 拒絕 `xp_cmdshell` 的 `public` 權限。  
   
-```  
+```sql
 DENY EXECUTE ON sys.xp_cmdshell TO public;  
 GO  
 ```  

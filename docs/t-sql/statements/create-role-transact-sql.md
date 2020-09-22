@@ -28,12 +28,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0ca6f481b84cfd1453359e3b77d47bb5a6b52b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c74406db7ea8d05b6c01fb31ef3f6f0a6d1976a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458775"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688301"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88458775"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
+```syntaxsql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74be76c08a9dbe58f0c9ae59b97679001812572b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 8ebe6f0764cd4993a101a43b9f9db753918d24c1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646279"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688158"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 
@@ -112,7 +112,7 @@ BLOCK 述詞會在執行對應的 DML 作業後加以評估。 因此，READ UNC
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. 將額外的述詞加入原則  
 下列語法會改變安全性原則，在 `mytable` 資料表上加入篩選器述詞。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1   
     ADD FILTER PREDICATE schema_preds.SecPredicate(column1)   
     ON myschema.mytable;  
@@ -121,14 +121,14 @@ ALTER SECURITY POLICY pol1
 ### <a name="b-enabling-an-existing-policy"></a>B. 啟用現有的原則  
 下列範例使用 ALTER 語法，來啟用安全性原則。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1 WITH ( STATE = ON );  
 ```  
   
 ### <a name="c-adding-and-dropping-multiple-predicates"></a>C. 加入及卸除多個述詞  
 下列語法會改變安全性原則，在 `mytable1` 和 `mytable3` 資料表上加入篩選器述詞，並移除 `mytable2` 資料表上的篩選器述詞。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
 ADD FILTER PREDICATE schema_preds.SecPredicate1(column1)   
     ON myschema.mytable1,  
@@ -141,7 +141,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
 ### <a name="d-changing-the-predicate-on-a-table"></a>D. 變更資料表上的述詞  
 下列語法會將 mytable 資料表上的現有篩選述詞變更為 SecPredicate2 函數。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
     ALTER FILTER PREDICATE schema_preds.SecPredicate2(column1)  
         ON myschema.mytable;  
@@ -150,7 +150,7 @@ ALTER SECURITY POLICY pol1
 ### <a name="e-changing-a-block-predicate"></a>E. 變更 BLOCK 述詞  
 變更資料表上作業的 BLOCK 述詞函數。  
   
-```  
+```sql 
 ALTER SECURITY POLICY rls.SecPol  
     ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
     ON dbo.Sales AFTER INSERT;  

@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0091a060bc75b87ef40d03a48c25b5154c00ee4
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 33c985511b94b3ec5fcd03764a44d404b05078f8
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200435"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570633"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -145,7 +145,7 @@ FROM Data ;
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. 使用 SELECT 陳述式搭配簡單的 CASE 運算式  
  在 `SELECT` 陳述式內，只允許相等檢查使用簡單的 `CASE` 運算式，不能進行任何其他比較。 下列範例利用 `CASE` 運算式來變更產品線類別目錄的顯示方式，使它們更容易了解。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Category =  
@@ -160,13 +160,12 @@ SELECT   ProductNumber, Category =
 FROM Production.Product  
 ORDER BY ProductNumber;  
 GO  
-  
 ```  
   
 ### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. 使用 SELECT 陳述式搭配搜尋的 CASE 運算式  
  在 `SELECT` 陳述式內，搜尋的 `CASE` 運算式允許以比較值為基礎來取代結果集中的值。 下列範例以產品的價格範圍為基礎，將標價顯示為文字註解。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Name, "Price Range" =   
@@ -180,34 +179,31 @@ SELECT   ProductNumber, Name, "Price Range" =
 FROM Production.Product  
 ORDER BY ProductNumber ;  
 GO  
-  
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. 在 ORDER BY 子句中使用 CASE  
  下列範例在 ORDER BY 子句中使用 CASE 運算式，根據給定的資料行值，決定資料列的排序次序。 在第一則範例中，系統會評估 `SalariedFlag` 資料表之 `HumanResources.Employee` 資料行的值。 將 `SalariedFlag` 設定為 1 的員工會以 `BusinessEntityID` 的遞減順序傳回。 將 `SalariedFlag` 設定為 0 的員工會以 `BusinessEntityID` 的遞增順序傳回。 在第二則範例中，結果集會依照資料行 `TerritoryName` 排序 (當資料行 `CountryRegionName` 等於 'United States' 時) 以及依照 `CountryRegionName` 排序 (針對所有其他資料列)。  
   
-```  
+```sql  
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
-GO  
-  
+GO    
 ```  
   
-```  
+```sql  
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END;  
-  
+         ELSE CountryRegionName END; 
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. 在 UPDATE 陳述式中使用 CASE  
  下列範例在 UPDATE 陳述式中使用 CASE 運算式來決定 `VacationHours` 設定為 0 時，針對員工之 `SalariedFlag` 資料行設定的值。 從 `VacationHours` 減去 10 小時變成負值時，`VacationHours` 會加上 40 小時，否則 `VacationHours` 會加上 20 小時。 OUTPUT 子句用於顯示假期值之前和之後。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee  
@@ -220,32 +216,30 @@ SET VacationHours =
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. 在 SET 陳述式中使用 CASE  
  下列範例會在資料表值函式 `dbo.GetContactInfo` 的 SET 陳述式中使用 CASE 運算式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，與人員相關的所有資料都會儲存在 `Person.Person` 資料表中。 例如，該人員可能是員工、廠商代表或客戶。 此函數會傳回給定之 `BusinessEntityID` 的姓名，以及該人員的連絡類型。SET 陳述式中的 CASE 運算式會根據 `Employee`、`Vendor` 或 `Customer` 資料表中的 `BusinessEntityID` 資料行是否存在，來決定要針對 `ContactType` 資料行顯示的值。  
   
-```  
-  
+```sql   
 USE AdventureWorks2012;  
 GO  
-CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID int)  
+CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
     RETURNS @retContactInformation TABLE   
 (  
-BusinessEntityID int NOT NULL,  
-FirstName nvarchar(50) NULL,  
-LastName nvarchar(50) NULL,  
-ContactType nvarchar(50) NULL,  
+BusinessEntityID INT NOT NULL,  
+FirstName NVARCHAR(50) NULL,  
+LastName NVARCHAR(50) NULL,  
+ContactType NVARCHAR(50) NULL,  
     PRIMARY KEY CLUSTERED (BusinessEntityID ASC)  
 )   
 AS   
 -- Returns the first name, last name and contact type for the specified contact.  
 BEGIN  
     DECLARE   
-        @FirstName nvarchar(50),   
-        @LastName nvarchar(50),   
-        @ContactType nvarchar(50);  
+        @FirstName NVARCHAR(50),   
+        @LastName NVARCHAR(50),   
+        @ContactType NVARCHAR(50);  
   
     -- Get common contact information  
     SELECT   
@@ -293,14 +287,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);  
-  
+FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. 在 HAVING 子句中使用 CASE  
  下列範例會在 HAVING 子句中使用 CASE 運算式來限制 SELECT 陳述式所傳回的資料列。 此陳述式會傳回 `HumanResources.Employee` 資料表中每個職稱的最高時薪。 HAVING 子句會將職稱限制為薪水上限大於 40 美金之男士所持有的職稱，以及薪水上限大於 42 美金之女士所持有的職稱。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -313,8 +306,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC;  
-  
+ORDER BY MaximumRate DESC; 
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -322,7 +314,7 @@ ORDER BY MaximumRate DESC;
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. 使用 SELECT 陳述式搭配 CASE 運算式  
  在 SELECT 陳述式內，CASE 運算式允許以比較值為基礎來取代結果集中的值。 下列範例使用 CASE 運算式來變更產品線類別目錄的顯示方式，使它們更容易被了解。 若值並不存在，即會顯示 "Not for sale' 的字樣。  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT   ProductAlternateKey, Category =  
@@ -341,7 +333,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. 在 UPDATE 陳述式中使用 CASE  
  下列範例在 UPDATE 陳述式中使用 CASE 運算式來決定 `VacationHours` 設定為 0 時，針對員工之 `SalariedFlag` 資料行設定的值。 從 `VacationHours` 減去 10 小時變成負值時，`VacationHours` 會加上 40 小時，否則 `VacationHours` 會加上 20 小時。  
   
-```  
+```sql  
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  
@@ -352,7 +344,6 @@ SET VacationHours =
        END  
     )   
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dff53a56e9acd613322be5af1de6e5f0207abd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547562"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688525"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89547562"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -79,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  *service_broker_guid* 是 **nvarchar(128)** 類型。 若要尋找資料庫的 *service_broker_guid*，請在資料庫中執行下列查詢：  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -132,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. 開始對話  
  下列範例會開始對話交談，並將對話的識別碼儲存在 `@dialog_handle.` 中。`//Adventure-Works.com/ExpenseClient` 服務是對話的起始端，`//Adventure-Works.com/Expenses` 服務是對話的目標。 對話遵照 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -144,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. 開始含有明確存留期間的對話  
  下列範例會開始對話交談，並將對話的識別碼儲存在 `@dialog_handle` 中。 `//Adventure-Works.com/ExpenseClient` 服務是對話的起始端，`//Adventure-Works.com/Expenses` 服務是對話的目標。 對話遵照 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。 如果 END CONVERSATION 命令沒有在 `60` 秒內關閉對話，Broker 會結束對話並傳回錯誤。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -157,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>C. 利用特定 Broker 執行個體來開始對話  
  下列範例會開始對話交談，並將對話的識別碼儲存在 `@dialog_handle` 中。 `//Adventure-Works.com/ExpenseClient` 服務是對話的起始端，`//Adventure-Works.com/Expenses` 服務是對話的目標。 對話遵照 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。 Broker 會將這個對話的訊息傳送給 GUID `a326e034-d4cf-4e8b-8d98-4d7e1926c904.` 所識別的 Broker。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -170,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D. 開始對話，將這段對話關聯於現有的交談群組  
  下列範例會開始對話交談，並將對話的識別碼儲存在 `@dialog_handle` 中。 `//Adventure-Works.com/ExpenseClient` 服務是對話的起始端，`//Adventure-Works.com/Expenses` 服務是對話的目標。 對話遵照 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。 Broker 會將對話關聯於 `@conversation_group_id` 所識別的交談群組，不會建立新的交談群組。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -186,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. 開始含有明確存留期間的對話，並將這段對話關聯於現有的交談  
  下列範例會開始對話交談，並將對話的識別碼儲存在 `@dialog_handle` 中。 `//Adventure-Works.com/ExpenseClient` 服務是對話的起始端，`//Adventure-Works.com/Expenses` 服務是對話的目標。 對話遵照 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。 新對話與 `@existing_conversation_handle` 屬於相同的交談群組。 如果 END CONVERSATION 命令沒有在 `600` 秒內關閉對話，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會結束對話並傳回錯誤。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -203,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. 利用選擇性的加密來開始對話  
  下列範例會開始對話，並將對話的識別碼儲存在 `@dialog_handle` 中。 `//Adventure-Works.com/ExpenseClient` 服務是對話的起始端，`//Adventure-Works.com/Expenses` 服務是對話的目標。 對話遵照 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。 這個範例的交談可讓訊息在無法加密的情況下，在網路中以不加密的方式來傳送。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 20e92d37c2476663bfe203a5b83a1ca7b8a0f536
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479193"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688074"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -133,7 +133,7 @@ ALTER CERTIFICATE certificate_name
   
 ### <a name="a-removing-the-private-key-of-a-certificate"></a>A. 移除憑證的私密金鑰  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping04   
     REMOVE PRIVATE KEY;  
 GO  
@@ -141,7 +141,7 @@ GO
   
 ### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>B. 變更為私密金鑰加密所用的密碼  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping11   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hkjdskghFDGGG4%',  
     ENCRYPTION BY PASSWORD = '34958tosdgfkh##38');  
@@ -150,7 +150,7 @@ GO
   
 ### <a name="c-importing-a-private-key-for-a-certificate-that-is-already-present-in-the-database"></a>C. 匯入已在資料庫中之憑證的私密金鑰。  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping13   
     WITH PRIVATE KEY (FILE = 'c:\importedkeys\Shipping13',  
     DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
@@ -159,7 +159,7 @@ GO
   
 ### <a name="d-changing-the-protection-of-the-private-key-from-a-password-to-the-database-master-key"></a>D. 將私密金鑰的保護，從密碼改為資料庫主要金鑰  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
 GO  

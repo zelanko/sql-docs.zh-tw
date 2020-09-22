@@ -25,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467700"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570676"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467700"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
@@ -65,7 +65,7 @@ USER_NAME ( [ id ] )
 ### <a name="a-using-user_name"></a>A. 使用 USER_NAME  
  下列範例會傳回使用者識別碼 `13` 的使用者名稱。  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -73,7 +73,7 @@ GO
 ### <a name="b-using-user_name-without-an-id"></a>B. 使用 USER_NAME 而不指定識別碼  
  下列範例不指定識別碼來尋找目前使用者的名稱。  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -90,7 +90,7 @@ dbo
 ### <a name="c-using-user_name-in-the-where-clause"></a>C. 在 WHERE 子句中使用 USER_NAME  
  下列範例會在 `sysusers` 中尋找資料列，這個資料列名稱等於套用系統函數 `USER_NAME` 至使用者識別碼 `1` 所得的結果。  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -108,7 +108,7 @@ dbo
 ### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. 於使用 EXECUTE AS 進行模擬期間呼叫 USER_NAME  
  下列範例會顯示 `USER_NAME` 在模擬期間的行為方式。  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -134,7 +134,7 @@ DBO
 ### <a name="e-using-user_name-without-an-id"></a>E. 使用 USER_NAME 而不指定識別碼  
  下列範例不指定識別碼來尋找目前使用者的名稱。  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -148,7 +148,7 @@ User7
 ### <a name="f-using-user_name-in-the-where-clause"></a>F. 在 WHERE 子句中使用 USER_NAME  
  下列範例會在 `sysusers` 中尋找資料列，這個資料列名稱等於套用系統函數 `USER_NAME` 至使用者識別碼 `1` 所得的結果。  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edf7eeec78c764f778ee17c747aa1cee755a7bd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549468"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688370"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89549468"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 ALTER FULLTEXT STOPLIST stoplist_name  
 {   
         ADD [N] 'stopword' LANGUAGE language_term    
@@ -98,7 +97,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ## <a name="examples"></a>範例  
  下列範例會變更名為 `CombinedFunctionWordList` 的停用字詞表，加入 'en' 一字 (先針對西班牙文，再針對法文)。  
   
-```  
+```sql  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';  
 ```  

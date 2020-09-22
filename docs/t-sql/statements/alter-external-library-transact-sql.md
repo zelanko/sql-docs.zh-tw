@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f0c6ad88976ff2c61f77c5b00f15cd3e551ce111
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 61ece1ff1d43d0a60d136ce140bcc6e1ae8f8259
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042407"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688401"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89042407"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
 
-```text
+```syntaxsql
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -86,7 +86,7 @@ WITH ( LANGUAGE = <language> )
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 的語法
 
-```text
+```syntaxsql
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -117,7 +117,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 受控執行個體的語法
 
-```text
+```syntaxsql
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  

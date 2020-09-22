@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c617d405aed8f9144ab7d85b16bb3c428f4ae541
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9edfba19ad84a0334f85e6990f0e3cd1c2ccee81
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540778"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688687"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -203,7 +203,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  您可以執行 UserDefinedDataType 範例指令碼，來建立組件 `ComplexNumber`。 如需相關資訊，請參閱[使用者定義型別](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191)。  
   
- ```
+ ```sql
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
@@ -214,7 +214,7 @@ ALTER ASSEMBLY assembly_name
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. 加入檔案，與組件建立關聯  
  下列範例會上傳即將與組件 `Class1.cs` 建立關聯的原始程式碼檔案 `MyClass`。 這個範例假設組件 `MyClass` 已在資料庫中建立。  
   
-```  
+```sql  
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
@@ -225,7 +225,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. 變更組件的權限  
  下列範例會將組件 `ComplexNumber` 的權限集合，從 SAFE 改為 `EXTERNAL ACCESS`。  
   
-```  
+```sql  
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   

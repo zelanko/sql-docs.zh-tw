@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544228"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688180"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544228"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>權限  
  需要順序的 **ALTER** 權限，或結構描述的 **ALTER** 權限。 若要授與順序的 **ALTER** 權限，請使用下列格式的 **ALTER ON OBJECT**：  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. 改變順序  
  下列範例會建立名為 Test 的結構描述以及名為 TestSeq 的順序，其使用 **int** 資料類型，且範圍介於 100 到 200 之間。 順序開頭為 125，而且每次產生數字時會遞增 25。 因為順序設定為循環，所以當值超過最大值 200 時，順序會從最小值 100 重新啟動。  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  下列範例會將 TestSeq 順序的範圍改成介於 50 到 200 之間。 順序會從 100 重新啟動編號數列，而且每次產生數字時遞增 50。  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. 重新啟動順序  
  下列範例會建立名稱為 CountBy1 的順序。 順序會使用預設值。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  為了產生順序值，擁有者接著執行下列陳述式：  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  傳回值 -9,223,372,036,854,775,808 是 **bigint** 資料類型的最小可能值。 擁有者發現自己需要的是開頭為 1 的順序，但在建立順序時未指示 **START WITH** 子句。 為了更正這個錯誤，擁有者執行下列陳述式。  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  擁有者接著重新執行下列陳述式產生序號。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  CountBy1 順序是使用 NO CYCLE 預設值建立的，所以它在產生 9,223,372,036,854,775,807 數字之後會停止運作。 順序物件的後續呼叫會傳回錯誤 11728。 下列陳述式會將順序物件變更為循環，並設定 20 的快取。  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  現在當順序物件達到 9,223,372,036,854,775,807 時，它會循環，而且下一個數字在循環之後將會是資料類型的最小值 -9,223,372,036,854,775,808。  

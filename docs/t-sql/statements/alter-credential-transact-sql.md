@@ -21,12 +21,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8c251486ae982abda531bd443db95c57a1b99900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c16003a3d265bbebc613c6a7eacd798f5c00da6d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479226"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688784"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88479226"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -75,7 +74,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-credential"></a>A. 變更認證的密碼  
  下列範例會變更儲存在稱為 `Saddles` 之認證中的秘密。 這個認證包含 Windows 登入 `RettigB` 及其密碼。 使用 SECRET 子句將新的密碼加入認證中。  
   
-```  
+```sql  
 ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -84,7 +83,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 從認證移除密碼  
  下列範例會從稱為 `Frames` 的認證中移除密碼。 這個認證包含 Windows 登入 `Aboulrus8` 和密碼。 由於未指定 SECRET 選項，因此在執行陳述式之後，認證的密碼為 NULL。  
   
-```  
+```sql  
 ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

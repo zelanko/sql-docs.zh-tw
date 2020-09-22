@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5356c811b9e1e0118e7080afa91491066b6c434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549373"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688447"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,8 +92,8 @@ AS PARTITION partition_function_name
 ### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. 建立將每個資料分割對應至不同檔案群組的資料分割結構描述  
  下列範例會建立一個資料分割函數，將資料表或索引分割成四個資料分割。 之後，會建立資料分割結構描述來指定分別存放這四份資料分割的檔案群組。 這個範例假設這些檔案群組已在資料庫中。  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  
@@ -112,8 +112,8 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. 建立將多個資料分割對應至相同檔案群組的資料分割結構描述  
  如果所有資料分割都對應至相同的檔案群組，請使用 ALL 關鍵字。 但如果不是全部，而只是多個資料分割對應至相同的檔案群組，就必須依照下列範例所示來重複檔案群組名稱。  
   
-```  
-CREATE PARTITION FUNCTION myRangePF2 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF2 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS2  
@@ -132,8 +132,8 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. 建立將所有資料分割對應至相同檔案群組的資料分割結構描述  
  下列範例會建立上述各範例的相同資料分割函數，且會建立一項資料分割結構描述，將所有資料分割對應至相同的檔案群組。  
   
-```  
-CREATE PARTITION FUNCTION myRangePF3 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF3 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS3  
@@ -144,8 +144,8 @@ ALL TO ( test1fg );
 ### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D. 建立指定 'NEXT USED' 檔案群組的資料分割結構描述  
  下列範例會建立上述各範例的相同資料分割函數，且會建立一項資料分割結構描述來列出數量超出相關聯資料分割函數所建立之資料分割的檔案群組。  
   
-```  
-CREATE PARTITION FUNCTION myRangePF4 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF4 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS4  
@@ -164,8 +164,8 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
 
  下列範例會建立一個資料分割函數，將資料表或索引分割成四個資料分割。 然後，就會建立分割區配置，以指定在 PRIMARY 檔案群組中建立所有分割區。  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5fa05a31a3087970a12acbe8d6a69a6a647ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac369044de3cbc01e3087e7f3619950ebcaa8010
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472247"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570570"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端點權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. 授與端點的 VIEW DEFINITION 權限  
  下列範例會將端點 `VIEW DEFINITION` 的 `Mirror7` 權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `ZArifin`。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 授與具有 GRANT OPTION 的 TAKE OWNERSHIP 權限  
  下列範例將端點 `TAKE OWNERSHIP` 的 `Shipping83` 權限授與具有 `PKomosinski` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `GRANT OPTION`。  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     WITH GRANT OPTION;  

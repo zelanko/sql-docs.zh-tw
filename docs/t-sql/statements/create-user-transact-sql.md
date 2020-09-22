@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54734c9b463ab6450e0f5793d637b32d9e60553e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467262"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688834"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -354,13 +354,13 @@ GO
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. 依據 SQL Server 登入建立資料庫使用者  
  下列範例會先建立一個名為 `AbolrousHazem` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，然後在 `AbolrousHazem` 建立對應的資料庫使用者 `AdventureWorks2012`。  
   
-```  
+```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
 變更為使用者資料庫。 例如，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 `USE AdventureWorks2012` 陳述式。 在 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，您必須建立與使用者資料庫之間的新連接。
 
-```   
+```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
 GO   
 ```  
@@ -368,7 +368,7 @@ GO
 ### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. 以預設的結構描述建立資料庫使用者  
  下列範例會先建立一個具有密碼且名叫 `WanidaBenshoof` 的伺服器登入，然後再以預設的結構描述 `Wanida`，建立對應的資料庫使用者 `Marketing`。  
   
-```  
+```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
 USE AdventureWorks2012;  
@@ -382,7 +382,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
@@ -395,7 +395,7 @@ GO
 ###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. 建立及使用不含登入的使用者  
  下列範例會建立未對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者 `CustomApp`。 然後此範例會授與使用者 `adventure-works\tengiz0` 權限來模擬 `CustomApp` 使用者。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
@@ -404,14 +404,14 @@ GO
   
  若要使用 `CustomApp` 認證，使用者 `adventure-works\tengiz0` 會執行下列陳述式。  
   
-```  
+```sql  
 EXECUTE AS USER = 'CustomApp' ;  
 GO  
 ```  
   
  若要還原回 `adventure-works\tengiz0` 認證，使用者會執行下列陳述式。  
   
-```  
+```sql  
 REVERT ;  
 GO  
 ```  
@@ -421,7 +421,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 如果 DEFAULT_LANGUAGE 已移除，則這個範例才能運作[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER Carlo  
@@ -436,7 +436,7 @@ GO
   
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
@@ -448,12 +448,11 @@ GO
   
 **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
-, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;  
-  
+, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;
 ```  
   
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 建立使用者以複製加密的資料  
@@ -461,7 +460,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
   
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql  
 CREATE USER [Chin]   
 WITH   
       DEFAULT_SCHEMA = dbo  

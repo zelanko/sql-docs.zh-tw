@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddbf9a7d6d6ce28764c572d22fd5829ce4f46ada
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9aa2c82f83e20017778a9e5096977dedeb38646d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538120"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688598"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,6 @@ AS select_statement
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
-
 ``` 
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -120,7 +119,7 @@ AS <select_statement>
 ## <a name="examples"></a>範例  
  下列範例會建立一份包含所有員工及其雇用日期 (稱為 `EmployeeHireDate`) 的檢視。 授與檢視的權限，但需求改成選取在特定日期之前雇用的員工。 之後，再利用 `ALTER VIEW` 來取代檢視。  
   
-```  
+```sql 
 USE AdventureWorks2012 ;  
 GO  
 CREATE VIEW HumanResources.EmployeeHireDate  
@@ -129,12 +128,11 @@ SELECT p.FirstName, p.LastName, e.HireDate
 FROM HumanResources.Employee AS e JOIN Person.Person AS  p  
 ON e.BusinessEntityID = p.BusinessEntityID ;  
 GO  
-  
 ```  
   
  檢視必須改成只包括在 `2002` 之前雇用的員工。 如果未使用 ALTER VIEW，而是卸除再重建檢視，您就必須重新輸入先前所用的 GRANT 陳述式及處理這份檢視相關權限的任何其他陳述式。  
   
-```  
+```sql  
 ALTER VIEW HumanResources.EmployeeHireDate  
 AS  
 SELECT p.FirstName, p.LastName, e.HireDate  
@@ -142,7 +140,6 @@ FROM HumanResources.Employee AS e JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID  
 WHERE HireDate < CONVERT(DATETIME,'20020101',101) ;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

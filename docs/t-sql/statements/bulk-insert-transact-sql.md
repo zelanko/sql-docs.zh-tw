@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dd6b8be1bcaf19c6c5134c70ff60b535e47aa6a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83ccbac5d01fca3e7ca237e0debedcd4c1ad9e83
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547568"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688804"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -249,7 +249,7 @@ BULK INSERT 中使用的字串到十進位資料類型轉換遵守與 [!INCLUDE[
 這個範例使用下列資料表：
 
 ```sql
-CREATE TABLE t_float(c1 float, c2 decimal (5,4));
+CREATE TABLE t_float(c1 FLOAT, c2 DECIMAL (5,4));
 ```
 
  使用者想要將大量資料匯入 `t_float` 資料表中。 資料檔案 C:\t_float-c.dat 包含科學記號標記法 **float** 資料；例如：
@@ -398,7 +398,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
  下列範例利用換行字元做為資料列結束字元來匯入檔案，如 UNIX 輸出：
 
 ```sql
-DECLARE @bulk_cmd varchar(1000);
+DECLARE @bulk_cmd VARCHAR(1000);
 SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 FROM ''<drive>:\<path>\<filename>''
 WITH (ROWTERMINATOR = '''+CHAR(10)+''')';
