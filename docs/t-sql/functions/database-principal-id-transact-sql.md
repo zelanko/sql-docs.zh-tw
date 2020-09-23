@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da62d368b27c7539115e199742d5e7ed224eb75c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95d7bf7ac61ed2b79829a5aeb9d41c7f06485c8d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445849"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114872"
 ---
 # <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88445849"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DATABASE_PRINCIPAL_ID ( 'principal_name' )  
 ```  
   

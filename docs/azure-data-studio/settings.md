@@ -1,20 +1,20 @@
 ---
 title: 使用者與工作區設定
 description: 了解如何使用設定來自訂 Azure Data Studio 的編輯器、使用者介面，以及功能行為，以符合您的喜好設定。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746158"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114525"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改使用者與工作區設定
 
@@ -55,7 +55,6 @@ Azure Data Studio 提供兩種不同的設定範圍：
 根據預設，當您結束時，Azure Data Studio 會記住未儲存的檔案變更。 這與 Visual Studio Code 中的 Hot Exit 功能相同。
 
 Hot Exit 預設為關閉。 您可以編輯 `files.hotExit` 設定，啟用 Hot Exit。 如需詳細資訊，請參閱 [Hot Exit (Visual Studio Code 文件中)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
-
 
 ## <a name="tab-color"></a>索引標籤色彩
 

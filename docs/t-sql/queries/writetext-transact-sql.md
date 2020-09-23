@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 443abad18869728130299be24d542bc54cde670e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422392"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114697"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88422392"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 WRITETEXT [BULK]  
   { table.column text_ptr }  
   [ WITH LOG ] { data }  
@@ -98,12 +97,12 @@ WRITETEXT [BULK]
 > [!NOTE]  
 >  若要執行這個範例，您必須安裝 pubs 範例資料庫。  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   

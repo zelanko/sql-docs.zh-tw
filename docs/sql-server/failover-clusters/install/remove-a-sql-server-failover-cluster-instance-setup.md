@@ -6,7 +6,7 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - clusters [SQL Server], removing failover cluster instance
 - failover clustering [SQL Server], removing failover cluster instance
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7013df80c0bce5105128759f874deb2ec1fb0cca
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e60acfeb4f8a785fa55ee8df70003b9b8b42f13b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435452"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114640"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>移除容錯移轉叢集執行個體 (安裝程式)
 

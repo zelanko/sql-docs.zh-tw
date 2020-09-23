@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.agdashboard.drp1notsuspended.issues.f1
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3c5ce2a441183fe4a9e68be44a16d4641ac617c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f5b246accb66b13cf13466d17b5d8318d5d8ec0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900858"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114650"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>可用性群組的可用性資料庫已暫停
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

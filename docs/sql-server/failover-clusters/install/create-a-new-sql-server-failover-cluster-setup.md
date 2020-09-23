@@ -6,7 +6,7 @@ ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - adding nodes
 - failover clustering [SQL Server], creating clusters
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03a3b84d5f21391d957ea1ae1f71286133e4d492
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442375"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114669"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>建立新的 Always On 容錯移轉叢集執行個體 (安裝程式)
 

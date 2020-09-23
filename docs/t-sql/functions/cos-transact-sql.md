@@ -20,12 +20,12 @@ ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 096c24a129a7262248add636094c8288d4291c6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fa1b87f9b45acf1e926fb02a687e71a354775bc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479739"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114908"
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,15 +53,15 @@ COS ( float_expression )
 這個範例會傳回指定角度的 `COS` 值：
   
 ```sql
-DECLARE @angle float;  
+  DECLARE @angle FLOAT;  
 SET @angle = 14.78;  
-SELECT 'The COS of the angle is: ' + CONVERT(varchar,COS(@angle));  
+SELECT 'The COS of the angle is: ' + CONVERT(VARCHAR,COS(@angle));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COS of the angle is: -0.599465                        
   
 (1 row(s) affected)  

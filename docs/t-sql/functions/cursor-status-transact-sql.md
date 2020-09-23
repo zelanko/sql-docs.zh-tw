@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab7cbb48d371236d23d90de2347349318369f274
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24d7cea4d5e04c92379961bea5f2b6cc6abac07d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459821"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114822"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88459821"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CURSOR_STATUS   
      (  
           { 'local' , 'cursor_name' }   
@@ -82,7 +82,7 @@ CURSOR_STATUS
 ```sql
 CREATE TABLE #TMP  
 (  
-   ii int  
+   ii INT  
 )  
 GO  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 519f0cb9e198e86705d412af20d9d939365ee834
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbe67c81d106641d56e9ab2deb0bbad246c70b60
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356164"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113078"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 資料中繫結關聯式資料
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "88356164"
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>範例：Cross-domain Query Using sql:variable()  
  此範例會示範 **sql:variable()** 如何讓應用程式將查詢參數化。 ISBN 的傳入方式是使用 SQL 變數 @isbn。 將常數置換成 **sql:variable()** 之後，就可以使用該查詢來搜尋任何 ISBN，而不只是 ISBN 為 0-7356-1588-2 的 ISBN。  
   
-```  
-DECLARE @isbn varchar(20)  
+```sql
+DECLARE @isbn VARCHAR(20)  
 SET     @isbn = '0-7356-1588-2'  
 SELECT  xCol  
 FROM    T  

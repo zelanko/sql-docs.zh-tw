@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8ddbf1bd14e246741639a7e9eb11f4175c14d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c75867165d29be5af4073aa6c8e2281687db7f0c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365244"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114773"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88365244"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
