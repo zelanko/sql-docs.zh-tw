@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487641"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在沒有網際網路存取的電腦上安裝 SQL Server 機器學習 R 和 Python
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 根據預設，安裝程式會連線到 Microsoft 下載網站以取得適用於 SQL Server 上機器學習的必要及更新元件。 如果防火牆條件約束防止安裝程式抵達這些網站，您可以使用已連線到網際網路的裝置來下載這些檔案，將檔案傳輸到離線伺服器，然後再執行安裝程式。
 
@@ -215,4 +215,4 @@ SQL Server R Services 的初始離線安裝需要和線上安裝相同的設定�
 
 ## <a name="next-steps"></a>後續步驟
 
-如需任何不熟悉訊息或記錄項目上的協助，請參閱[升級和安裝常見問題集 - 機器學習服務](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)。
+若要使用機器學習服務執行資料庫內的 Python 和 R 指令碼，請參閱[安裝 SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)。

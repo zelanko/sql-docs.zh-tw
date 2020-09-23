@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742043"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396079"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+    :::column-end:::
+:::row-end:::
+
  **本文內容：**  
   
 -   [原生模式使用者介面](#bkmk_native_mode)  
@@ -48,17 +55,17 @@ ms.locfileid: "80742043"
 |------------|-----------------|  
 |新的訂用帳戶|出現在第一次建立訂閱時。|  
 |非使用中|出現在無法處理訂用帳戶時。 如需詳細資訊，請參閱本文中稍後的＜管理非使用中訂閱＞。|  
-|完成：已處理 \<數目  > 個 (總共 \<數目  > 個)；\<數目  > 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
-|已處理 \<數目  > 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
-|總共 \<數目  > 個|訂閱最後一次傳遞所產生的通知總數。|  
-|\<數目  > 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
+|完成：已處理 \<*number*> 個，總共 \<*number*> 個；\<*number*> 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
+|已處理 \<*number*> 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
+|總計 \<*number*> 個|訂閱最後一次傳遞所產生的通知總數。|  
+|\<*number*> 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
 |傳送郵件失敗：傳輸無法連接到伺服器。|指出報表伺服器未連接到郵件伺服器；此訊息來自電子郵件傳遞延伸模組。|  
-|檔案 \<檔案名稱  > 已寫入 \<路徑>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
+|檔案 \<*filename*> 已寫入 \<path>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |寫入檔案時發生未知的錯誤。|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
-|無法連線到目的資料夾，\<路徑>。 請確認目的資料夾或檔案共用存在。|指出找不到所指定的資料夾；此訊息來自檔案共用傳遞延伸模組。|  
-|檔案 \<檔案名稱> 無法寫入 \<路徑>。 正在嘗試重試。|指出無法以較新版本進行檔案更新；此訊息來自檔案共用傳遞延伸模組。|  
-|無法寫入檔案 \<檔案名稱>：\<訊息>|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
-|\<自訂狀態訊息>|關於傳遞成功與傳遞失敗的狀態訊息，是由傳遞延伸模組所提供。 如果您使用協力廠商或自訂傳遞延伸模組，就可能會提供其他的狀態訊息。|  
+|無法連線至目的資料夾 \<path>。 請確認目的資料夾或檔案共用存在。|指出找不到所指定的資料夾；此訊息來自檔案共用傳遞延伸模組。|  
+|無法將檔案 \<filename> 寫入 \<path>。 正在嘗試重試。|指出無法以較新版本進行檔案更新；此訊息來自檔案共用傳遞延伸模組。|  
+|寫入檔案 \<filename> 時發生失敗：\<message>|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
+|\<custom status messages>|關於傳遞成功與傳遞失敗的狀態訊息，是由傳遞延伸模組所提供。 如果您使用協力廠商或自訂傳遞延伸模組，就可能會提供其他的狀態訊息。|  
   
  報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
@@ -95,9 +102,8 @@ ms.locfileid: "80742043"
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 記錄檔  
  寫入 SharePoint ULS 記錄檔的訂閱相關資訊。 如需設定 ULS 記錄檔之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 事件的詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)。  下列是與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱相關的範例 ULS 記錄檔項目。  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|Process|區域|類別|層級|Correlation|訊息|  
+|-|-|-|-|-|-|-|  
 |2019/5/21 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空白)|**Error sending email.** 例外狀況：System.Net.Mail.SmtpException:無法使用信箱。 伺服器回應為:5.7.1 用戶端沒有權限，無法以這個寄件人身分傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 SSystem.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  

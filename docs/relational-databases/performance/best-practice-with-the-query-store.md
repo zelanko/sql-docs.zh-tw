@@ -2,10 +2,9 @@
 title: 使用查詢存放區的最佳做法 | Microsoft Docs
 description: 了解工作負載與 SQL Server 查詢存放區搭配使用的最佳做法，例如使用最新的 SQL Server Management Studio 和查詢效能深入解析。
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970079"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042813"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 
@@ -421,7 +420,7 @@ WHERE is_forced_plan = 1;
 
 如果您重新命名資料庫，強制執行計劃即會失敗，而導致重新編譯所有後續查詢執行。
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> 在任務關鍵性伺服器中使用追蹤旗標
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> 在任務關鍵性伺服器中使用查詢存放區
 
 您可以使用查詢存放區和全域追蹤旗標 7745 與 7752 來提升資料庫可用性。 如需詳細資訊，請參閱[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
@@ -432,7 +431,10 @@ WHERE is_forced_plan = 1;
 > 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，此行為即由引擎控制，而追蹤旗標 7752 沒有任何作用。
 
 > [!IMPORTANT]
-> 若您是將查詢存放區用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 工作負載見解，請計劃盡快安裝 [KB 4340759](https://support.microsoft.com/help/4340759) 中的效能延展性修正程式。
+> 若您要將查詢存放區用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 工作負載深入解析，請盡快擬定計劃，安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的效能延展性改進功能。 若沒有這些改進功能，當資料庫承受繁重的工作負載時，可能會發生執行緒同步鎖定競爭，伺服器效能可能會變慢。 尤其是，您可能會在 `QUERY_STORE_ASYNC_PERSIST` 執行緒同步鎖定或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 執行緒同步鎖定時發現嚴重的爭用。 套用此改進功能後，查詢存放區將不會再造成執行緒同步鎖定競爭。
+
+> [!IMPORTANT]
+> 若您要將查詢存放區用於 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的 Just-In-Time 工作負載深入解析，請盡快擬定計劃，安裝 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 中的效能延展性改進功能。 若沒有這項改進功能，當資料庫承受繁重的臨機操作工作負載時，查詢存放區可能會使用大量的記憶體，而伺服器效能可能會變慢。 套用這項改進功能後，查詢存放區將會對其各種元件可使用的記憶體數量施加內部限制，並且可在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重獲足夠的記憶體之前，自動將作業模式變更為唯讀。 請注意，查詢存放區內部記憶體限制有可能變更，因此並未載於文件中。  
 
 ## <a name="see-also"></a>另請參閱
 

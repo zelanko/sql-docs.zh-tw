@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft Docs
+title: PDO::prepare
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDO::prepare 函式適用的 API 參考。
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941200"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435202"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +30,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>參數
-$*statement*：一個包含 SQL 陳述式的字串。
+$*statement*：包含 SQL 陳述式的字串。
 
-*key_pair*：包含屬性名稱和值的陣列。 如需詳細資訊，請參閱「備註」一節。
+*key_pair*：包含屬性名稱和值的陣列。 如需詳細資訊，請參閱＜備註＞一節。
 
 ## <a name="return-value"></a>傳回值
 如果成功，則傳回 PDOStatement 物件。 如果失敗，則會根據 `PDO::ATTR_ERRMODE` 的值傳回 PDOException 物件或 false。
@@ -49,7 +50,7 @@ $*statement*：一個包含 SQL 陳述式的字串。
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定將擷取的貨幣值格式化時的小數位數。 此選項只有當 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 為 true 時才能運作。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|若為 True，將會指定直接查詢執行。 False 表示備妥的陳述式執行。 如需 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (預設值)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如需詳細資訊，請參閱[如何：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|處理從數值 SQL 類型資料行擷取的數值。 如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否要在適當時於十進位字串中新增前置零。 如果設定，此選項就會啟用 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 選項來將貨幣類型格式化。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|

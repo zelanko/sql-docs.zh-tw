@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus (OLE DB 驅動程式) | Microsoft Docs
-description: ISSAsynchStatus (OLE DB)
+description: 了解 OLE DB Driver for SQL Server 如何使用 ISSAsynchStatus 介面來支援 SQL Server 非同步作業。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - ISSAsynchStatus interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 75514d969f826374a52c3d441c7d75a63b31956e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1cc7d83cd9d014e863493365345b8f399f2ee713
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862181"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

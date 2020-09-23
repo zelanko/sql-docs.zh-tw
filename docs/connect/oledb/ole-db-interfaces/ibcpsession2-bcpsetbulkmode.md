@@ -1,6 +1,6 @@
 ---
 title: IBCPSession2::BCPSetBulkMode (OLE DB 驅動程式) | Microsoft Docs
-description: 使用 IBCPSession2::BCPSetBulkMode 來大量複製查詢或資料表
+description: 了解如何使用 IBCPSession2::BCPSetBulkMode 方法從 OLE DB Driver for SQL Server 中的查詢或資料表建立大量複製。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7dede556c75be45eddf23dbbe327ab1367023b1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b04ede3efe3d77119a4aaadbc904f32a7c51a201
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244537"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860202"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

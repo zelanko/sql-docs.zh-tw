@@ -1,6 +1,6 @@
 ---
-title: 從結果集擷取資料列 (OLE DB) | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 從結果集擷取資料列
+title: 從結果集擷取資料列 (OLE DB 驅動程式) | Microsoft Docs
+description: 了解如何使用 OLE DB Driver for SQL Server 從結果集擷取資料列。 此範例會使用 AdventureWorks 範例資料庫。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 967b8613902900b436abc6ab282c1cf6329dca71
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015557"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860285"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>從結果集提取資料列 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

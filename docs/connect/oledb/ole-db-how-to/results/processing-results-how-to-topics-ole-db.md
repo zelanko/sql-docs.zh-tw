@@ -1,6 +1,6 @@
 ---
 title: 處理結果操作說明主題 (OLE DB 驅動程式)
-description: 處理結果操作說明主題 (OLE DB)
+description: 使用這些文章了解 OLE DB Driver for SQL Server 應用程式中的處理結果，包括執行預存程序的命令。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 897d3ce2357d3fd6e6f11bba643bd4d4d0219912
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a1178d795d90009cf1305aad3fd3d3d9c4495a8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244699"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860279"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

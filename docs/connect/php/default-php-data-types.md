@@ -1,7 +1,8 @@
 ---
-title: 預設 PHP 資料類型 | Microsoft Docs
+title: 預設 PHP 資料類型
+description: 本主題列出使用 Microsoft SQLSRV Driver for PHP for SQL Server 時的所有預設 PHP 資料類型及其對應的 SQL Server 資料類型
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928023"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680787"
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80928023"
   
 本主題的其餘部分將討論使用 SQLSRV 驅動程式的預設資料類型。  
   
-下表列出 SQL Server 資料類型 (從伺服器擷取的資料類型)、預設 PHP 資料類型 (資料會轉換成的資料類型)，以及資料流和字串的預設編碼。 如需從伺服器擷取資料時如何指定資料類型的詳細資訊，請參閱[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)。  
+下表列出 SQL Server 資料類型 (從伺服器擷取的資料類型)、預設 PHP 資料類型 (資料會轉換成的資料類型)，以及資料流和字串的預設編碼。 如需從伺服器擷取資料時如何指定資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 |SQL Server 類型|預設 PHP 類型|預設編碼|  
 |-------------------|--------------------|--------------------|  
@@ -77,7 +78,7 @@ ms.locfileid: "80928023"
   
 3.  資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。  
 
-4.  可以字串形式擷取日期和時間。 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。  
+4.  可以字串形式擷取日期和時間。 如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式，以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。  
 
 5.  這是對應至 varbinary(max) 類型的傳統類型。
 
@@ -98,12 +99,12 @@ ms.locfileid: "80928023"
 |功能|PHP 支援|  
 |-----------|---------------|  
 |資料表值參數|否|  
-|疏鬆資料行|部分|  
+|疏鬆資料行|Partial|  
 |Null 位元壓縮|是|  
 |大型 CLR 使用者定義型別 (UDT)|是|  
 |服務主體名稱|否|  
 |MERGE|是|  
-|FILESTREAM|部分|  
+|FILESTREAM|Partial|  
   
 部分類型支援表示您無法以程式設計方式查詢資料行的類型。  
   

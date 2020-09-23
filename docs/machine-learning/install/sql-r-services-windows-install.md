@@ -4,28 +4,29 @@ titleSuffix: ''
 description: 了解如何在 Windows 上安裝 SQL Server 2016 R Services。 您可使用 R Services 在資料庫內執行 R 指令碼。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487651"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 了解如何在 Windows 上安裝 SQL Server 2016 R Services。 您可使用 R Services 在資料庫內執行 R 指令碼。
 
 > [!NOTE]
 > 在 SQL Server 2017 及更新版本中，R 連同 Python 隨附於 [機器學習服務](../sql-server-machine-learning-services.md)中。 如果想要 R 並擁有 SQL Server 2017 或更新版本，請參閱[安裝 SQL Server 機器學習服務](sql-machine-learning-services-windows-install.md)來新增該功能。
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>預先安裝檢查清單
 
@@ -188,7 +189,10 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 1. 繼續執行精靈，並接受 R 散發套件的授權條款。
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> SQL Server 2016 SP2 的累積更新 (CU) 14 和更新版本包含較新的 R 執行階段。 如需詳細資訊，請參閱[變更預設的語言執行階段版本](change-default-language-runtime-version.md)。
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>其他設定
 
@@ -212,7 +216,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 * [新增 SQLRUserGroup 作為資料庫使用者](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> 並非所有列出的變更都是必要的，且可能不需要任何變更。 需求取決於您的安全性結構描述、SQL Server 的安裝位置，以及預期使用者如何連線至資料庫並執行外部指令碼。 如需其他疑難排解秘訣，請參閱這裡：[升級及安裝常見問題集](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> 並非所有列出的變更都是必要的，且可能不需要任何變更。 需求取決於您的安全性結構描述、SQL Server 的安裝位置，以及預期使用者如何連線至資料庫並執行外部指令碼。 您可以在這裡找到其他安裝指引：[安裝 SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>建議的最佳化
 

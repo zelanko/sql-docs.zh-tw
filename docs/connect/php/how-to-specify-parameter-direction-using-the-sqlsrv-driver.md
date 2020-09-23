@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式指定參數方向 | Microsoft Docs
+title: 如何：使用 SQLSRV 驅動程式指定參數方向
+description: 了解在使用 Microsoft SQLSRV Driver for PHP for SQL Server 呼叫預存程序時如何指定參數方向
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915924"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680234"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定參數方向
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "80915924"
     ```  
   
     > [!NOTE]  
-    > 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
+    >  初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法做為輸出參數。  
   
 3.  使用步驟 2 中的 PHP 變數來建立或更新依序對應至 Transact-SQL 字串中參數預留位置的參數值陣列。 指定陣列中每個參數的方向。 每個參數的方向可由下列兩種方式之一來決定：根據預設 (適用於輸入參數)，或使用 **SQLSRV_PARAM_\*** 常數 (適用於輸出和雙向參數)。 例如，下列程式碼會將 *$employeeId* 參數指定為輸入參數，並將 *$usedVacationHours* 參數指定為雙向參數：  
   

@@ -1,6 +1,6 @@
 ---
 title: 資料列集 (OLE DB 驅動程式)
-description: OLE DB Driver for SQL Server 中的資料列集
+description: 了解支援取用者在 OLE DB Driver for SQL Server 的工作階段中建立資料列集的介面。 如需詳細資訊，請參閱本節中的文章。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55100932092abeb81da7fa1c156ccb5a61fc193c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244169"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859940"
 ---
 # <a name="rowsets"></a>資料列集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

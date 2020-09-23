@@ -1,22 +1,22 @@
 ---
-title: 非系統地區設定 | Microsoft Docs
+title: 非系統地區設定
+description: 了解 Linux 和 macOS 中不同的地區設定對 Microsoft Driver for PHP for SQL Server 有何影響
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - locale, linux, macOS, system
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: bd60bff3ab9ee19b1a1d2435e69651ea054689e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 303037729164d4165fc106529a901b58d4d049f4
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76913321"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680523"
 ---
 # <a name="non-system-locale-settings"></a>非系統地區設定
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

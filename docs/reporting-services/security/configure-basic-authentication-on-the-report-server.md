@@ -1,4 +1,5 @@
 ---
+description: 設定報表伺服器的基本驗證
 title: 設定報表伺服器上的基本驗證 | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492638"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  
@@ -36,9 +37,9 @@ ms.locfileid: "81625867"
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-     此檔案位於 \<磁碟機>:  \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
+     此檔案位於 *\<drive>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer。  
   
-2.  尋找 \<**驗證**>。  
+2.  尋找 \<**Authentication**>。  
   
 3.  複製下列其中一個最符合您需要的 XML 結構。 第一個 XML 結構會提供指定所有元素的預留位置，下一節會加以描述：  
   
@@ -63,13 +64,13 @@ ms.locfileid: "81625867"
           </AuthenticationTypes>  
     ```  
   
-4.  將它貼到 \<**驗證**> 的現有項目上。  
+4.  將其貼到 \<**Authentication**> 的現有項目上。  
   
      如果您使用多個驗證類型，請只加入 **RSWindowsBasic** 元素，而不要刪除 **RSWindowsNegotiate**、 **RSWindowsNTLM**或 **RSWindowsKerberos**的項目。  
   
      請注意，您無法搭配其他驗證類型使用 **Custom** 。  
   
-5.  使用對環境有效的值來取代 \<**Realm**> 或 \<**DefaultDomain**> 的空白值。  
+5.  將 \<**Realm**> 或 \<**DefaultDomain**> 的空白值取代為對環境有效的值。  
   
 6.  儲存檔案。  
   

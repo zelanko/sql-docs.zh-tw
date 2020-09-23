@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 485bb37dee0c118cf313bd7b3740b56c41e20c90
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914804"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713776"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
@@ -34,11 +34,11 @@ ms.locfileid: "86914804"
 > 支援適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。
 
 > [!NOTE]
-> 當嘗試從 SQL Server Profiler 連線到 SQL Azure 資料庫時，會擲回具誤導性的錯誤訊息，如下所示：
+> 當嘗試從 SQL Server Profiler 連線至 Azure SQL Database 時，會擲回具誤導性的錯誤訊息，如下所示：
 >
 > - 若要對 SQL Server 執行追蹤，則必須為系統管理員固定伺服器角色的成員，或具有「改變追蹤」權限。
 >
-> 此訊息原本應該要說明 SQL Server Profiler 不支援 SQL Azure 資料庫執行個體。
+> 此訊息原本應說明 SQL Server Profiler 不支援 Azure SQL Database。
 
 ## <a name="where-is-the-profiler"></a>Profiler 位於何處？
 
@@ -164,7 +164,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQ
 |描述如何重新執行至資料指標。|[重新執行至資料指標處 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |描述如何重新執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|[重新執行 Transact-SQL 指令碼 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |描述如何建立追蹤範本。|[建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|描述如何修改追蹤範本。|[修改追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
+|描述如何修改追蹤範本。|[修改追蹤範本 &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)|  
 |描述如何設定全域追蹤選項。|[設定全域追蹤選項 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |描述如何在追蹤時尋找值或資料行。|[在追蹤時尋找值或資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |描述如何從執行中追蹤衍生範本。|[從執行中的追蹤衍生範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -173,7 +173,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是「SQ
 |描述如何匯出追蹤範本。|[匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |描述如何匯入追蹤範本。|[匯入追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |描述如何從追蹤擷取指令碼。|[從追蹤中擷取指令碼 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|描述如何使追蹤與 Windows 效能記錄資料相互關聯。|[使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|描述如何使追蹤與 Windows 效能記錄資料相互關聯。|[使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
 |描述如何組織追蹤中所顯示的資料行。|[組織追蹤內顯示的資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |描述如何啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。|[啟動 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |描述如何儲存追蹤及追蹤範本。|[儲存追蹤及追蹤範本](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

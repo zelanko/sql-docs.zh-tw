@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindColumn | Microsoft Docs
+title: PDOStatement::bindColumn
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::bindColumn 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8362edccaf1e2c2a296b7e62f91958170c0bedb6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd62d4436c5718801dee7b273773b87f6b47eec6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918912"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645878"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

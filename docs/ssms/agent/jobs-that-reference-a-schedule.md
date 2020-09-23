@@ -1,4 +1,5 @@
 ---
+description: 參考排程的作業
 title: 參考排程的作業
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,35 +17,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 798cb6414080f11ffc744cedccdfc8ed4f117bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724fb57c6574f38232714b4af7dba9b10b538311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418194"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>參考排程的作業
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 此對話方塊允許您檢視有關參考特定排程之作業的資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **[排程]**  
 顯示您正在檢視之排程的名稱。  
   
-**已選取**  
+**Selected**  
 唯讀。  
   
-**名稱**  
+**Name**  
 使用此排程之作業的名稱。  
   
-**已啟用**  
+**Enabled**  
 唯讀。 指出此作業目前是否為已啟用。  
   
-**類別目錄**  
+**類別**  
 作業類別目錄。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,6 +1,6 @@
 ---
 title: SSMS 指令碼物件
-description: 在 SSMS 中撰寫物件指令碼的教學課程
+description: 針對能在 SQL Server Management Studio (SSMS) 內找到的各種物件產生 Transact-SQL (T-SQL) 指令碼。
 keywords: SQL Server, SSMS, SQL Server Management Studio, 指令碼, 撰寫指令碼
 author: MashaMSFT
 ms.author: mathoma
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247301"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523330"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中撰寫物件指令碼
 

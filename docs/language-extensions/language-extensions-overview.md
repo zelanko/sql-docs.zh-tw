@@ -4,24 +4,27 @@ titleSuffix: ''
 description: 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 藉由使用擴充性架構，即可在外部程式碼中使用關聯式資料。
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 08/19/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921057"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645921"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什麼是 SQL Server 語言延伸模組？
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 關聯式資料可使用[擴充性架構](concepts/extensibility-framework.md)，用於外部程式碼中。
 
 在 SQL Server 2019 中，Java 受到支援。 預設的 Java Runtime 是 Zulu Open JRE。 您也可以使用另一個 Java JRE 或 SDK。
+
+> [!NOTE]
+> 若要在 SQL Server 中執行 Python 或 R，請參閱[機器學習服務](../machine-learning/sql-server-machine-learning-services.md)文件。
 
 ## <a name="what-you-can-do-with-language-extensions"></a>語言延伸模組的用途
 
@@ -48,11 +51,11 @@ ms.locfileid: "86921057"
 
 + **使用您慣用的 IDE** 開發 Java 程式碼。
 
-+ **安裝[適用於 Java 的 Microsoft 擴充性 SDK](how-to/extensibility-sdk-java-sql-server.md)** ，在 SQL Server 上執行 Java 程式碼
++ **安裝[適用於 Java 的 Microsoft 擴充性 SDK](how-to/extensibility-sdk-java-sql-server.md)**，在 SQL Server 上執行 Java 程式碼
 
-+ **使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** ，在 SQL Server 上執行外部程式碼
++ **使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)**，在 SQL Server 上執行外部程式碼
 
-+ **使用系統預存程序 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** ，在 SQL Server 上執行 Java 程式碼。
++ **使用系統預存程序 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)**，在 SQL Server 上執行 Java 程式碼。
 
 ### <a name="step-3-write-your-first-code"></a>步驟 3：撰寫您的第一個程式碼
 

@@ -1,6 +1,6 @@
 ---
 title: R 教學課程：建置及儲存模型
-description: 此教學課程示範如何建置用於 SQL Server 資料庫內分析的 R 語言模型。
+description: 深入了解如何建置用於 SQL Server 資料庫內分析的 R 語言機器學習模型。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730430"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178705"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建置 R 模型並儲存至 SQL Server (逐步解說)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在此步驟中，瞭解如何建立機器學習模型，並將模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 儲存模型之後，可以使用系統預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼進行呼叫。
 

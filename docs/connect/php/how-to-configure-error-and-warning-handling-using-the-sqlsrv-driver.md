@@ -1,7 +1,8 @@
 ---
-title: 使用 SQLSRV 驅動程式設定錯誤和警告處理 | Microsoft Docs
+title: 使用 SQLSRV 驅動程式設定錯誤和警告處理
+description: 本主題說明在使用 Microsoft SQLSRV Driver for PHP for SQL Server 時，如何設定 SQLSRV 驅動程式來處理錯誤和警告
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab941b5813ccd60bb3afcd5ba76718406fb446
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916574"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680703"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式設定錯誤和警告處理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

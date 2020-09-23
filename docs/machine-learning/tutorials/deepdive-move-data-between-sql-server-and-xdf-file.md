@@ -1,6 +1,6 @@
 ---
 title: 使用 XDF 檔案移動資料
-description: RevoScaleR 教學課程 13：如何在 SQL Server 上使用 XDF 與 R 語言移動資料。
+description: 使用 XDF 檔案，在遠端和本機計算內容之間傳輸資料。 將資料儲存在 XDF 檔案中，可讓您對資料執行轉換。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c7e5ce4cbe995fd677acd406187dfaf264a7461
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680008"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173444"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 與 XDF 檔案之間移動資料 (SQL Server 和 RevoScaleR 教學課程)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 13 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
@@ -37,11 +37,11 @@ ms.locfileid: "85680008"
     ```
     **結果**
     
-    CA|OR|WA
+    CA|或者|WA
     ----|----|----
     5|38|48
     
-2. 定義想要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢從 SQL Server 帶過來的資料。  稍後您將使用此變數作為 **rxImport** 的 inData  引數。
+2. 定義想要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢從 SQL Server 帶過來的資料。  稍後您將使用此變數作為 **rxImport** 的 inData** 引數。
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -59,7 +59,7 @@ ms.locfileid: "85680008"
             )
     ```
   
-4. 將計算內容設定為 [本機]  ，因為您想要讓所有資料都可在本機電腦上使用。
+4. 將計算內容設定為 [本機]，因為您想要讓所有資料都可在本機電腦上使用。
   
     ```R
     rxSetComputeContext("local")

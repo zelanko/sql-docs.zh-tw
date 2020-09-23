@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPInit (OLE DB 驅動程式) | Microsoft Docs
-description: IBCPSession::BCPInit (OLE DB)
+description: 了解 IBCPSession::BCPInit 方法如何對工作站與 SQL Server 之間的大量資料複製執行必要的初始化。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPInit method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d020ecdb6b54378c3380095e3c286e57aad03ec8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da825601ea16f31f891e751a419c1689e1ccacb1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244602"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861946"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ HRESULT BCPInit(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  

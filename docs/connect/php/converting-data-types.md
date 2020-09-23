@@ -1,7 +1,8 @@
 ---
-title: 轉換資料類型 | Microsoft Docs
+title: 轉換資料類型
+description: 了解在使用 Microsoft Drivers for PHP for SQL Server 時如何指定資料類型，並提供關於預設資料類型的詳細資料
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b6d52f7a38bf59574ef6b6ec1b6c3ba303d150
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b72b4e61331754a0bfead58710709552652a176f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928062"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680613"
 ---
 # <a name="converting-data-types"></a>轉換資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

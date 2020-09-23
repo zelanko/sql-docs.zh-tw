@@ -1,4 +1,5 @@
 ---
+description: 組態檔中的 URL (SSRS 組態管理員)
 title: 組態檔中的 URL (組態管理員) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 20c138bc54209a93b570b69cb3e497a8b3003553
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e3382a5d51a46d1fb2fdbe33f94ca56e398bfd3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472660"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>組態檔中的 URL (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在 RSReportServer.config 檔案中。 在這個檔案中，URL 和 URL 保留項目都有組態設定。 這些組態設定的用途與修改規則大不相同。 如果您習慣修改組態檔來微調部署，本主題將可幫助您了解每一個 URL 設定的使用方式。  
@@ -53,7 +54,7 @@ ms.locfileid: "81487033"
 |設定|使用量|描述|  
 |-------------|-----------|-----------------|  
 |**ReportServerUrl**|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。<br /><br /> 只有當您要設定以下其中一個狀況時，才能設定這個元素：<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 會提供報表伺服器 Web 服務的 Web 前端存取權，該服務可在不同電腦上執行或是在相同電腦的不同執行個體上執行。<br /><br /> 當您擁有報表伺服器的多個 URL，而且希望 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 使用特定的 URL 時。<br /><br /> 您擁有特定報表伺服器 URL，您希望所有 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 連接都使用此 URL。<br /><br /> 例如，您可能會啟用網路上所有電腦的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 存取權，但是您需要 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 透過本機連接來連接報表伺服器。 在此情況下，您可能會將 **ReportServerUrl** 設定為 "`https://localhost/reportserver`"。|這個值會指定報表伺服器 Web 服務的 URL。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 應用程式會在啟動時讀取這個值。 如果設定了這個值， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 將會連接到此 URL 中指定的報表伺服器。<br /><br /> 依預設， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 會提供報表伺服器 Web 服務的 Web 前端存取權，該服務會在相同報表伺服器執行個體內作為 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]來執行。 但是，如果您要將 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 搭配報表伺服器 Web 服務一起使用 (該服務屬於另一個執行個體的一部分，或是會在不同電腦的執行個體中執行)，您就可以設定此 URL 來引導 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 連接外部報表伺服器 Web 服務。<br /><br /> 如果您要連線的報表伺服器上已安裝傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 憑證，**ReportServerUrl** 值必須是為該憑證註冊之伺服器的名稱。 如果您收到錯誤訊息「基礎連線已關閉：無法為 SSL/TLS 安全通道建立信任關係」，請將 [ReportServerUrl]  設定為對其發出 TLS/SSL 憑證之伺服器的完整網域名稱。 例如，如果已將此憑證註冊到 **https:\//adventure-works.com.onlinesales**，報表伺服器 URL 即為 **https:\//adventure-works.com.onlinesales/reportserver**。|  
-|**ReportServerExternalUrl**|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。<br /><br /> 只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才設定這個元素。<br /><br /> 在不同的瀏覽器視窗中存取時，將 \<**ReportServerExternalUrl**> 新增至 \<**ReportServerUrl**> 項目底下，然後將它設定為可解析為報表伺服器執行個體的完整報表伺服器名稱。 請勿刪除 \<**ReportServerUrl**>。<br /><br /> 下列範例說明語法：<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|這個值是由 SharePoint 2.0 Web 組件使用。<br /><br /> 舊版中曾經建議您設定這個值，以便將「報表產生器」部署在供網際網路存取的報表伺服器上， 這是未經測試的部署狀況。 如果您過去使用這項設定來支援「報表產生器」的網際網路存取，現在應該考慮改用替代的策略。|  
+|**ReportServerExternalUrl**|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。<br /><br /> 只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才設定這個元素。<br /><br /> 在不同的瀏覽器視窗中存取時，將 \<**ReportServerExternalUrl**> 新增至 \<**ReportServerUrl**> 元素底下，然後將其設定為可解析為報表伺服器執行個體的完整報表伺服器名稱。 請勿刪除 \<**ReportServerUrl**>。<br /><br /> 下列範例說明語法：<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|這個值是由 SharePoint 2.0 Web 組件使用。<br /><br /> 舊版中曾經建議您設定這個值，以便將「報表產生器」部署在供網際網路存取的報表伺服器上， 這是未經測試的部署狀況。 如果您過去使用這項設定來支援「報表產生器」的網際網路存取，現在應該考慮改用替代的策略。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

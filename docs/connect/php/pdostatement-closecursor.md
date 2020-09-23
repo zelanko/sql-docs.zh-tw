@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::closeCursor | Microsoft Docs
+title: PDOStatement::closeCursor
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::closeCursor 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de4a6cb90c5c23186d734c819ae309530b911e26
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 61ced9d3c4dca42dfe71baaef1a3201fb4f2d260
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921003"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645329"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

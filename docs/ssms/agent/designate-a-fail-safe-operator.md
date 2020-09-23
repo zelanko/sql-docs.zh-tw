@@ -1,4 +1,5 @@
 ---
+description: 指定保全操作員
 title: 指定保全操作員
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,20 +17,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f91a6c3548c944d3b2bcf075f2189a5fe4112df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0be299ee081043e03a55a3cd0fa7a5a0aaf2c2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371404"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-如果在無法聯繫到指定的操作員時，就會由保全操作員這位使用者接收警示。 本主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)]，以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定保全操作員來接收 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent 警示通知。  
+如果在無法聯繫到指定的操作員時，就會由保全操作員這位使用者接收警示。 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定保全操作員來接收 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示通知。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
@@ -50,17 +51,17 @@ ms.locfileid: "85724503"
   
 #### <a name="to-designate-a-fail-safe-operator"></a>若要指定保全操作員  
   
-1.  在物件總管  中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
+1.  在物件總管**** 中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - _server\_name_] 對話方塊的 [選取頁面] 下，選取 [警示系統]。  
+3.  在 [SQL Server Agent 屬性 - _server\_name_]**** 對話方塊的 [選取頁面]**** 下，選取 [警示系統]****。  
   
-4.  在 [保全操作員]  下方，選取 [啟用保全操作員]  。  
+4.  在 [保全操作員]**** 下方，選取 [啟用保全操作員]****。  
   
-5.  在 [操作員]  清單中，選取您想要設為保全操作員的操作員。  
+5.  在 [操作員]**** 清單中，選取您想要設為保全操作員的操作員。  
   
-6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：[電子郵件]  、[呼叫器]  或 [Net send]  。  
+6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：[電子郵件]****、[呼叫器]**** 或 [Net send]****。  
   
 7.  完成後，請按一下 **[確定]** 。  
   

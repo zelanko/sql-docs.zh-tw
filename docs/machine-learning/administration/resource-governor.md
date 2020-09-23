@@ -3,25 +3,25 @@ title: 使用 Resource Governor 管理
 description: 了解如何使用 Resource Governor 來管理 SQL Server 機器學習服務中 Python 與 R 工作負載的 CPU、實體 IO 與記憶體資源配置。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881972"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283549"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的 Resource Governor 管理 Python 與 R 工作負載
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 了解如何使用 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 來管理 SQL Server 機器學習服務中 Python 與 R 工作負載的 CPU、實體 IO 與記憶體資源配置。
 
-Python 與 R 中的機器學習演算法通常為計算密集型。 視您的工作負載優先順序而定，您可能需要增加或減少機器學習服務可用的資源。
+Python 與 R 中的機器學習演算法需要大量計算。 視您的工作負載優先順序而定，您可能需要增加或減少機器學習服務可用的資源。
 
 如需更多一般資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。
 
@@ -36,9 +36,9 @@ Python 與 R 中的機器學習演算法通常為計算密集型。 視您的工
  
 根據預設，外部處理序最多會在本機伺服器上使用 20% 的總主機記憶體。 您可以修改預設資源集區來進行全伺服器變更，其中 R 與 Python 處理序會利用您提供給外部處理序的任何容量。
 
-或者，您可以使用關聯的工作負載群組與分類器來建立自訂**外部資源集區**，以針對來自特定程式、主機或您提供之其他準則的要求決定資源配置。 外部資源集區是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引進的資源集區類型，可協助管理資料庫引擎外部的 R 與 Python 執行階段。
+您也可以選擇使用關聯的工作負載群組與分類器來建立自訂**外部資源集區**，以針對來自特定程式、主機或您提供之其他準則的要求決定資源配置。 外部資源集區是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引進的資源集區類型，可協助管理資料庫引擎外部的 R 與 Python 執行階段。
 
-1. [啟用資源治理](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (預設為關閉)。
+1. [啟用資源控管](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (預設為關閉)。
 
 2. 執行 [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) 以建立並設定資源集區，然後執行 [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) 來加以實作。
 

@@ -1,4 +1,5 @@
 ---
+description: 移轉 Reporting Services 安裝 (原生模式)
 title: 移轉 Reporting Services 安裝 (原生模式) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454574"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -265,7 +266,7 @@ ms.locfileid: "82719277"
 
 ## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Windows 服務群組和安全性 ACL
 
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name  >$\<instance_name  > 顯示。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 格式顯示。  
 
 ## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> 驗證您的部署
 

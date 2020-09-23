@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_num_rows | Microsoft Docs
+title: sqlsrv_num_rows
+description: Microsoft SQLSRV Driver for PHP for SQL Server 中的 sqlsrv_num_rows 函式適用的 API 參考。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926412"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435136"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

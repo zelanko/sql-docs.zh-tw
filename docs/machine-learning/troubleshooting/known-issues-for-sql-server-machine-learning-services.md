@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495019"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的已知問題
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 本文描述 Python 和 R 元件的已知問題或限制，這些元件會在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)和 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 中提供。
 
 ## <a name="setup-and-configuration-issues"></a>安裝和設定問題
 
-如需與初始安裝和設定相關之流程及常見問題的說明，請參閱[升級和安裝常見問題集](upgrade-and-installation-faq-sql-server-r-services.md)。 該文章會提供升級、並存安裝，以及安裝新 R 或 Python 元件的相關資訊。
+如需初始安裝和設定相關程序的說明，請參閱[安裝 SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)。 該文章會提供升級、並存安裝，以及安裝新 R 或 Python 元件的相關資訊。
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1.由於遺失環境變數而導致 MKL 計算不一致
 

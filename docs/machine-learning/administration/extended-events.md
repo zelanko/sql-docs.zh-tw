@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110178"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860021"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 了解如何使用擴充事件來監視與 SQL Server 機器學習服務、SQL Server Launchpad 和 Python 或 R 作業外部指令碼相關的操作及針對其進行疑難排解。
 
@@ -53,8 +53,8 @@ AND p.name = 'SQLSatellite';
 |satellite_abort_connection|中止連接記錄||  
 |satellite_abort_received|透過附屬連線收到中止訊息時引發。||  
 |satellite_abort_sent|透過附屬連線傳送中止訊息時引發。||  
-|satellite_authentication_completion|完成透過 TCP 或 Namedpipe 連線的驗證時引發。||  
-|satellite_authorization_completion|完成透過 TCP 或 Namedpipe 連線的授權時引發。||  
+|satellite_authentication_completion|完成透過 TCP 或具名管道連線的驗證時引發。||  
+|satellite_authorization_completion|完成透過 TCP 或具名管道連線的授權時引發。||  
 |satellite_cleanup|清除附屬呼叫時引發。|只會從外部處理序引發。 檢視從外部處理序收集事件的指示。|  
 |satellite_data_chunk_sent|附屬連線完成傳送單一資料區塊時引發。|事件會回報已傳送的資料列數、資料行數、已使用的 SNI 封包數，以及傳送區塊時所經過的時間 (以毫秒為單位)。 此資訊可協助您了解傳送不同類型的資料花費多少時間，以及使用多少封包。|  
 |satellite_data_receive_completion|透過附屬連線收到查詢要求的所有資料時引發。|只會從外部處理序引發。 檢視從外部處理序收集事件的指示。|  
@@ -102,7 +102,7 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
      
     **R：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 
-    **Python：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`。
+    **Python：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`。
 
 組態檔必須以 "[名稱].xevents.xml" 格式命名為和可執行檔相同的名稱。 也就是說，檔案必須用以下的格式命名︰
 
@@ -112,7 +112,7 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
 組態檔本身的格式如下：
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

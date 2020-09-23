@@ -1,4 +1,5 @@
 ---
+description: 保護報表和資源的安全
 title: 保護報表和資源的安全 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454490"
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
   您可以設定個別報表以及資源的安全性，來控制使用者必須對這些項目擁有的存取權程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以執行報表、檢視資源、修改屬性及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，好讓他們存取報表或資源。  
@@ -51,7 +52,7 @@ ms.locfileid: "65570631"
   
 2.  報表會發行到報表伺服器或者提供給人使用，好讓報表參數值可以從網頁的 URL 加以控制。  
   
-3.  攻擊者會建立與網頁或報表伺服器的連結，指定「javascript:\<這裡是惡意指令碼>」形式的參數值，並傳送該連結給引誘攻擊的某個人。  
+3.  攻擊者會建立與網頁或報表伺服器的連結，指定 "javascript:\<malicious script here>" 形式的參數值，並傳送該連結給引誘攻擊的某個人。  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>減少已發行之報表或文件中的超連結內指令碼資料隱碼攻擊  
  報表可以在報表項目或是部分報表項目的 Action 屬性值中包含內嵌超連結。 當處理報表時，超連結可以繫結至取自外部資料來源的資料。 當惡意使用者修改基礎資料時，超連結可能會遇到指令碼遭人利用的風險。 如果使用者在發行或匯出的報表中按一下連結，惡意指令碼就可能會執行。  

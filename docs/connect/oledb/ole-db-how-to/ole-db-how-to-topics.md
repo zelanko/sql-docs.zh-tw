@@ -1,6 +1,6 @@
 ---
 title: 操作說明主題 (OLE DB Driver)
-description: OLE DB 操作說明主題
+description: 使用這些操作說明文章，了解 OLE DB Driver for SQL Server 如何連線至伺服器、執行命令及處理結果。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c8491c084e166b48e9436838879fd66386b9da38
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca01ad2797e0f39c1195416c21a1bb030f6d0576
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244728"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860329"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

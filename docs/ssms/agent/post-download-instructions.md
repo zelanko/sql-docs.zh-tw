@@ -1,4 +1,5 @@
 ---
+description: 公佈下載指示
 title: 公佈下載指示
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,22 +14,22 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dc3732b205f76555bd345a130d856322d20a1035
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b21535c1347ddd0e63b3cdf5fd2ed8297bd2b2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318584"
 ---
 # <a name="post-download-instructions"></a>公佈下載指示
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此頁面指定目標伺服器的下載指示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **指示類型**  
 指定要公佈的下載指示類型。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85715653"
 檢視下載指示的描述。  
   
 **輪詢間隔**  
-設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]  指示。  
+設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]**** 指示。  
   
 **所有目標伺服器**  
 選取此選項將下載指示公佈到所有目標伺服器。  

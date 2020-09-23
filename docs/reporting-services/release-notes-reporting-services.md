@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 2017 和更新版本的版本資訊 | Microsoft Docs
 description: 了解 SQL Server Reporting Services (SSRS) 2017 版和更新版本中變更的詳細資料。
-ms.date: 04/28/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247507"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282388"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
@@ -53,12 +53,39 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
+## <a name="15075454810-20200831"></a>15.0.7545.4810，2020/08/31 
+
+| 已修正的問題 | 詳細資料 |
+| :---------- | :------ |
+| 安全性更新  | &nbsp; |
+| 受限制的註解附件支援不再允許 PDF 文件  | &nbsp; |
+| 已修正匯出的報表在名稱中包含句點時的檔案名稱截斷問題  | &nbsp; |
+| 已修正導致日期格式無效錯誤的訂用帳戶和 zh-TW 文化特性的相關問題  | &nbsp; |
+| 已修正特定報表在存取參數選項時會導致無限循環的問題  | &nbsp; |
+| 已修正與報表名稱中的單引號有關的問題  | &nbsp; |
+| 已修正 URL 存取中導致 FindString 找不到相符項目的問題  | &nbsp; |
+| 已修正 PDF 匯出的替代文字未針對多位元組字元正確編碼的問題  | &nbsp; |
+| 已修正線性元素下的空白影像不當的外觀  | &nbsp; |
+| 已修正 Web Edition 中的自訂驗證不正確的「不受支援」錯誤  | &nbsp; |
+| 已修正螢幕助讀程式在 Tablix 中額外讀取資料列和資料行的問題  | &nbsp; |
+| 已修正在縮放至整個頁面的最適大小時的影像截斷問題  | &nbsp; |
+| 命令列升級已不再需要 EULA 旗標  | &nbsp; |
+
 ## <a name="150724337714-20191101"></a>15.0.7243.37714，2019/11/01
 
 初始版本。
 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+## <a name="1406001669-20200831"></a>14.0.600.1669，2020/08/31 
+
+| 已修正的問題 | 詳細資料 |
+| :---------- | :------ |
+| 安全性更新  | &nbsp; |
+| 受限制的註解附件支援不再允許 PDF 文件  | &nbsp; |
+| 已修正匯出的報表在名稱中包含句點時的檔案名稱截斷問題  | &nbsp; |
+| 已修正導致日期格式無效錯誤的訂用帳戶和 zh-TW 文化特性的相關問題  | &nbsp; |
 
 ## <a name="1406001572-20200406"></a>14.0.600.1572，2020/04/06 
 

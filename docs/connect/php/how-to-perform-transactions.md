@@ -1,7 +1,8 @@
 ---
-title: 如何：執行交易 | Microsoft Docs
+title: 如何：執行交易
+description: 本主題說明並示範在使用 Microsoft Drivers for PHP for SQL Server 時如何執行交易
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3945b20d7aaf3b6de778aaa3dee83f028be06a23
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c5a04b2a68c47b85ce89512f4ae772fb6c9408b9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916126"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680633"
 ---
 # <a name="how-to-perform-transactions"></a>如何：執行交易
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

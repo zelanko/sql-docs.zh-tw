@@ -1,4 +1,5 @@
 ---
+description: 安裝 Reporting Services 2016 原生模式報表伺服器
 title: 安裝 Reporting Services 2016 原生模式報表伺服器 | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498079"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
@@ -75,7 +76,7 @@ ms.locfileid: "81486836"
 
 - 用來執行安裝程式的使用者帳戶必須是本機管理員群組的成員，而且擁有在主控報表伺服器資料庫之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上存取和建立資料庫的權限。
 
-- 安裝程式必須能夠使用預設值，以保留可提供存取報表伺服器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 這些值包括連接埠 80、一個強式萬用字元，以及採用 **ReportServer_\<***instance_name***>** 和 **Reports_\<***instance_name***>** 格式的虛擬目錄名稱。
+- 安裝程式必須能夠使用預設值，以保留可提供存取報表伺服器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 這些值為連接埠 80、強式萬用字元及採用 **ReportServer_\<***instance_name***>** 和 **Reports_\<***instance_name***>** 格式的虛擬目錄名稱。
 
 - 安裝程式必須能夠使用預設值，以建立報表伺服器資料庫。 這些值為 **ReportServer** 和 **ReportServerTempDB**。 如果您現有的資料庫是來自之前的安裝，安裝程式將會被封鎖，因為它無法在原生模式的預設組態中設定報表伺服器。 您必須重新命名、移動或刪除這些資料庫，才能解除封鎖安裝程式。
 
@@ -93,7 +94,7 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 |前置詞|預設前置詞是 HTTP。 如果您之前已安裝傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|
 |連接埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|
-|虛擬目錄|根據預設，系統會使用 ReportServer_\<執行個體名稱  > (針對報表伺服器 Web 服務) 和 Reports_\<執行個體名稱  > (針對[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]) 的格式來建立虛擬目錄。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|
+|虛擬目錄|根據預設，系統會建立虛擬目錄，報表伺服器 Web 服務使用 ReportServer_\<*instance_name*> 格式，[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用 Reports_\<*instance_name*> 格式。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|
 
 完整 URL 字串可能出現的範例如下：
 

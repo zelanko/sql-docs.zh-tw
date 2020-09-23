@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a200917a21e664a21b4186ca1d643bfb0e275869
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411636"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179973"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 與 SQL Server 之間的資料類型對應
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 針對在 SQL Server 機器學服服務 R 整合功能上執行的 R 解決方案，請檢閱不支援的資料類型清單，以及當資料在 R 程式庫與 SQL Server 之間傳遞時，可能會隱含執行的資料類型轉換。
 
@@ -136,19 +136,20 @@ outputDataSet <- inputDataSet'
 
 **結果**
 
-||||||
+|資料列 \#|C1|C2|C3|C4|
 |-|-|-|-|-|
-||C1|C2|C3|C4|
 |1|1|您好|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|2|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 請注意，在 R 中使用 `str` 函數可取得輸出資料的結構描述。 此函數傳回下列資訊：
 
-<code>'data.frame':2 obs. of  4 variables:</code>
-<code> $ c1: int  1 -11</code>
-<code> $ c2: Factor w/ 2 levels "Hello","world": 1 2</code>
-<code> $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1</code>
-<code> $ cR: num  4 2</code>
+```output
+'data.frame':2 obs. of  4 variables:
+ $ c1: int  1 -11
+ $ c2: Factor w/ 2 levels "Hello","world": 1 2
+ $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1
+ $ cR: num  4 2
+```
 
 從這裡開始，您可以看到下列資料類型轉換會與這項查詢一起以隱含方式執行：
 

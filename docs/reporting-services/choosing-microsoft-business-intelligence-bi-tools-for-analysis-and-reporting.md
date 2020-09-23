@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: 0d8bdd09fd1ae946c78aeb4860d1d5cfd89eabb8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245147"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395296"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 
@@ -28,9 +28,8 @@ ms.locfileid: "87245147"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
-|工作負載|User|||BI 工具|||  
+|工作負載|User|以 Excel 為基礎的 BI&nbsp;工具|以 SharePoint 為基礎的 BI&nbsp;工具|以 SharePoint&nbsp;Online 為基礎的 BI&nbsp;工具|以 Power&nbsp;BI 為基礎的 BI&nbsp;工具|以 SQL&nbsp;Server 為基礎的 BI&nbsp;工具|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**自助 BI**|分析師/使用者||||||  
 |輕鬆地探索及存取公用和公司資料||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure 資料目錄](https://azure.microsoft.com/services/data-catalog/)||  
 |建立功能強大的資料模型||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  

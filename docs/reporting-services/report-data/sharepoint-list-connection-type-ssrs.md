@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455650"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396687"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
 
@@ -40,7 +40,7 @@ ms.locfileid: "86455650"
   
  **表格 1**  
   
-||支援的認證|傳統模式 Windows 驗證|*宣告驗證|  
+|擷取類型|支援的認證|傳統模式 Windows 驗證|*宣告驗證|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |本機伺服器陣列的 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|是|  
 ||預存、提示、無 (包含 Windows 認證)<br /><br /> 不支援具有非 Windows 認證的預存和提示認證。|是|否|  
@@ -51,7 +51,7 @@ ms.locfileid: "86455650"
   
  **表格 2**  
   
-||支援的認證|傳統模式 Windows 驗證|*宣告驗證|  
+|擷取類型|支援的認證|傳統模式 Windows 驗證|*宣告驗證|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |本機伺服器陣列的 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|是|  
 ||預存、提示、無 (包含 Windows 認證)<br /><br /> 不支援具有非 Windows 認證的預存和提示認證。|否|否|  

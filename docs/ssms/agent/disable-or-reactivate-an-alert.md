@@ -1,4 +1,5 @@
 ---
+description: 停用或重新啟用警示
 title: 停用或重新啟用警示
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,20 +22,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a6e72bee93cad2036cf76e44390c2c8af654a4c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c36dc10e2576d1d766df32426cece3ebdcf57b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85690644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371604"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>停用或重新啟用警示
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中停用或重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 警示。  
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中停用或重新啟動 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
@@ -48,11 +49,11 @@ ms.locfileid: "85690644"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您想要停用或重新啟動之警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]  。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]  。  
+4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]****。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]****。  
   
 5.  畫面上會顯示 **[停用警示]** 或 **[啟用警示]** 對話方塊，並顯示處理的狀態。 完成後，請按一下 **[關閉]** 。  
   

@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e467fb50ae2b2c76deea885990b160745c691eb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042513"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上。 您安裝的套件可用於使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 陳述式在資料庫中執行的 R 指令碼。
@@ -38,6 +38,8 @@ ms.locfileid: "85723970"
 - 在用來連線到 SQL Server 的用戶端電腦上安裝 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)。 您可以使用其他資料庫管理或查詢工具，但此文章假設使用 Azure Data Studio。
 
 ### <a name="other-considerations"></a>其他考量
+
+- 套件安裝是您在提供給 **sqlmlutils**的連線資訊中指定的 SQL 執行個體、資料庫和使用者專用的。 若要在多個 SQL 執行個體或資料庫中使用套件，或將其用於不同的使用者，您必須個別為其安裝套件。 例外狀況是，如果套件是由 `dbo` 的成員所安裝，則套件會是*公用*的，且會與所有使用者共用。 如果使用者安裝了較新版本的公用套件，公用套件將不受影響，但該使用者將可存取較新的版本。
 
 - 在 SQL Server 中執行的 R 指令碼只能使用安裝在預設執行個體程式庫中的套件。 SQL Server 無法從外部程式庫載入套件，即使該程式庫位於相同電腦上也一樣。 這包括隨其他 Microsoft 產品安裝的 R 程式庫。
 

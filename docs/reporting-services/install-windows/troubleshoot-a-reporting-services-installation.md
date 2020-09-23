@@ -1,4 +1,5 @@
 ---
+description: 針對 Reporting Services 安裝進行疑難排解
 title: 針對 Reporting Services 安裝進行疑難排解 | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3d3bf132fb869ac2273a1db76dd34c4f24970ad
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889701"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569888"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -87,7 +88,7 @@ ms.locfileid: "68889701"
   
 1.  在執行 SharePoint 2013/2016 管理中心的電腦上  
   
-    1.  使用系統管理員權限來開啟 SharePoint 2013/2016 管理命令介面。 以滑鼠右鍵按一下圖示，然後按一下 [以系統管理員身分執行]  。 在命令介面中執行下列三個指令程式：  
+    1.  使用系統管理員權限來開啟 SharePoint 2013/2016 管理命令介面。 以滑鼠右鍵按一下圖示，然後按一下 [以系統管理員身分執行]****。 在命令介面中執行下列三個指令程式：  
   
     2.  ```  
         Install-SPRSService  
@@ -101,7 +102,7 @@ ms.locfileid: "68889701"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  在以下頁面上，確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的狀態已顯示為 [已啟動]  ：SharePoint 2013/2016 管理中心 -> [應用程式管理]  -> [管理伺服器上的服務]   
+2.  驗證 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在頁面上顯示的狀態為「**已啟動**」：SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務]  
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
   
@@ -116,7 +117,7 @@ ms.locfileid: "68889701"
   
 -   從 SQL Server 安裝媒體安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。  
   
- 如果當您完成其中一種因應措施時，[SharePoint 2013/2016 管理命令介面]  已開啟，請關閉並重新開啟管理命令介面。  
+ 如果當您完成其中一種因應措施時，[SharePoint 2013/2016 管理命令介面]**** 已開啟，請關閉並重新開啟管理命令介面。  
   
  如需詳細資訊，請參閱下列文章：  
   
@@ -137,7 +138,7 @@ ms.locfileid: "68889701"
  
  - SSRS 服務應用程式未對應至此 Web 應用程式。 請使用 SSRS 服務應用程式頁面，將 SSRS 服務應用程式 Proxy 關聯至此 Web 應用程式的應用程式 Proxy 群組。 
   
- **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 「報表伺服器 URL 未設定」訊息中的第一項建議。 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定]  頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)]  來完成。  
+ **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 「報表伺服器 URL 未設定」訊息中的第一項建議。 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定]**** 頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)]**** 來完成。  
   
  **詳細資訊：** 當您嘗試使用任何需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之連接的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，就會看見這則錯誤訊息。 這包括：  
   
@@ -163,7 +164,7 @@ ms.locfileid: "68889701"
 ###  <a name="sharepoint-central-administration-page-is-blank"></a><a name="bkmk_central_admin_blank"></a> SharePoint 管理中心頁面是空白的  
  **描述：** 您可以順利安裝 SharePoint 2013/2016，且未出現安裝錯誤。 但當您瀏覽至管理中心時，只看到了空白頁面：  
   
- **因應措施：** 此問題不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所特有的問題，而是與整體 SharePoint 安裝中的權限組態相關。 以下是一些建議：  
+ **因應措施：** 此問題不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所特有的問題，而是與整體 SharePoint 安裝中的權限組態相關。 以下為一些建議：  
   
 -   檢閱開發環境上的 SharePoint 文章。 [設定 SharePoint 的一般開發環境](https://msdn.microsoft.com/library/ee554869)  
   
@@ -208,10 +209,10 @@ ms.locfileid: "68889701"
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
-    -   **run \<** .NET 4.0 Framework 目錄  **>\InstallUtil.exe \<** Report Server Bin 目錄  **>\ReportingServicesLibrary.dll**  
+    -   **執行 \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  以 .NET Framework 4.0 檔案的實體路徑來取代 \<.NET 4.0 Framework 目錄  >，並以報表伺服器 Bin 檔案的實體路徑來取代 \<報表伺服器 Bin 目錄  >。  
+        >  將 \<*.NET 4.0 Framework directory*> 取代為 .NET Framework 4.0 檔案的實體路徑，並將 \<*Report Server Bin directory*> 取代為報表伺服器 bin 檔案的實體路徑。  
   
 3.  重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務。  
   
@@ -221,13 +222,13 @@ ms.locfileid: "68889701"
   
 1.  開啟登錄編輯程式：  
   
-    1.  按一下 **[開始]** ，並按一下 **[執行]** 。  
+    1.  按一下 **[開始]**，並按一下 **[執行]**。  
   
-    2.  在 [執行]  對話方塊的 [開啟]  方塊中，輸入 **regedit**。  
+    2.  在 [執行] **** 對話方塊的 [開啟] **** 方塊中，輸入 **regedit**。  
   
 2.  在 [登錄編輯程式] 中，選取下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  以滑鼠右鍵按一下 [Performance]  節點，並指向 [新增]  ，然後按一下 [多字串值]  。  
+3.  以滑鼠右鍵按一下 [Performance]**** 節點，並指向 [新增]****，然後按一下 [多字串值]****。  
   
 4.  輸入 **Counter Names** ，然後按 ENTER。  
   
@@ -235,7 +236,7 @@ ms.locfileid: "68889701"
   
 6.  瀏覽到以下的登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  以滑鼠右鍵按一下 [Performance]  節點，並指向 [新增]  ，然後按一下 [多字串值]  。  
+7.  以滑鼠右鍵按一下 [Performance]**** 節點，並指向 [新增]****，然後按一下 [多字串值]****。  
   
 8.  輸入 **Counter Names** ，然後按 ENTER。  
   
@@ -255,7 +256,7 @@ ms.locfileid: "68889701"
 
  如果您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升級到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，且對報表伺服器服務帳戶使用 NTLM 驗證及內建帳戶，則當您在升級後存取報表伺服器或入口網站時，可能會發生 401 未經授權錯誤。  
   
- 您看到此訊息的原因，是 Windows 驗證的預設 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 設定變更。 當報表伺服器服務帳戶是 Network Service 或 Local System 時，會設定交涉。 如果報表伺服器服務帳戶不是上述其中一個內建帳戶時，則會設定 NTLM。 若要在升級後修正這個問題，您可以編輯 RSReportServer.config 檔案，並將 **AuthenticationType** 設定成 **RSWindowsNTLM**。 如需詳細資訊，請參閱 [設定報表伺服器上的 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)。  
+ 您看到此訊息的原因，是 Windows 驗證的預設 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 設定變更。 當報表伺服器服務帳戶是 Network Service 或 Local System 時，會設定交涉。 如果報表伺服器服務帳戶不是上述其中一個內建帳戶時，則會設定 NTLM。 若要在升級後修正這個問題，您可以編輯 RSReportServer.config 檔案，並將 **AuthenticationType** 設定成 **RSWindowsNTLM**。 如需詳細資訊，請參閱 [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md) (在報表伺服器上設定 Windows 驗證)。  
 
 ### <a name="uninstalling-32-bit-instance-of-sql-server-2016-reporting-services-in-side-by-side-deployment-with-a-64-bit-instance-breaks-the-64-bit-instance"></a><a name="Uninstall32BitBreaks64Bit"></a> 在包含 64 位元執行個體的並存部署中，解除安裝 SQL Server 2016 Reporting Services 的 32 位元執行個體會中斷 64 位元執行個體
 
@@ -266,14 +267,14 @@ ms.locfileid: "68889701"
  若要修正這個問題，您可以修復 64 位元執行個體。 雖然建議您使用修復，但您可以使用登錄編輯程式手動重新新增登錄機碼。  
   
 > [!CAUTION]  
->  不當編輯登錄可能會造成系統嚴重受損。 在變更登錄之前，應備份電腦上的所有重要資料。  
+>  不當編輯登錄可能會造成系統嚴重受損。 變更登錄之前，您應該先備份電腦所有的重要資料。  
   
 ##  <a name="additional-resources"></a><a name="bkmk_additional"></a> 其他資源  
  下列為您可檢閱以協助您針對問題進行疑難排解的其他資源：  
   
 -   TechNet Wiki：[針對 SharePoint 2010 整合模式的 SQL Server Reporting Services (SSRS) 進行疑難排解](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [論壇：SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Microsoft 問答集：SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
   
 -   要取得意見反應或更多問題嗎？ 請前往 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)。  
   

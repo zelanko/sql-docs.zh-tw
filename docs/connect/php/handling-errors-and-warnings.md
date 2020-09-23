@@ -1,7 +1,8 @@
 ---
-title: 處理錯誤和警告 | Microsoft Docs
+title: 處理錯誤和警告
+description: 本主題提供在使用 Microsoft SQLSRV Driver for PHP for SQL Server 時處理錯誤和警告的相關資訊
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 464daee0f6c6bbb18b63b7a7cc9fab9cad827fdb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 28aba75d57c8bec09478266f2231900cd53197cf
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916594"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680713"
 ---
 # <a name="handling-errors-and-warnings"></a>處理錯誤和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

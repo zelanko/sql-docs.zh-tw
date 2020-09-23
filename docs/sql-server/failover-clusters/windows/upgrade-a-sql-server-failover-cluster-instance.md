@@ -1,6 +1,6 @@
 ---
 title: 升級容錯移轉叢集執行個體
-description: 了解如何使用安裝媒體升級 SQL Server 容錯移轉叢集執行個體。 了解輪流升級和升級多個子網路的叢集。
+description: 使用安裝媒體升級 SQL Server Always On 容錯移轉叢集執行個體的步驟。 了解輪流升級和升級多個子網路的叢集。
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -8,45 +8,49 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
-- upgrading failover clusters
+- upgrading failover cluster instances
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858578"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442372"
 ---
-# <a name="upgrade-a-sql-server-failover-cluster-instance"></a>升級 SQL Server 容錯移轉叢集執行個體
+# <a name="upgrade-a-failover-cluster-instance"></a>升級容錯移轉叢集執行個體 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級至新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或在所有容錯移轉叢集節點上個別安裝至新的 Windows Service Pack 或累積更新時，可將停機時間限制為僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。  
+
   
- [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 之前的作業系統不支援升級容錯移轉叢集的 Windows 作業系統。 若要升級在 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 或以上版本上執行的叢集節點，請參閱[執行輪流升級或更新](#perform-a-rolling-upgrade-or-update)。  
+ [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 之前的作業系統不支援對包含容錯移轉叢集執行個體的節點進行 Windows Server 作業系統升級。 若要升級在 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 或以上版本上執行的 Windows Server 容錯移轉叢集節點，請參閱[執行輪流升級或更新](#perform-a-rolling-upgrade-or-update)。  
   
  支援詳細資料如下：  
   
--   支援從使用者介面和命令提示字元進行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級。 您可以在每個容錯移轉叢集節點上，透過命令提示字元執行升級，也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 UI 來升級每個叢集節點。  如需詳細資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) 和[從命令提示字元安裝 SQL Server](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
-  
+-   支援從使用者介面和命令提示字元進行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級。 您可以在每個容錯移轉叢集節點上，透過命令提示字元執行升級，也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 UI 來升級每個叢集節點。 如需詳細資訊，請參閱
+
+   - 安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體
+   - [從命令提示字元安裝 SQL Server](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級不支援下列狀況：  
   
-    -   您無法從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的獨立執行個體升級至容錯移轉叢集。  
+    -   您無法從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的獨立執行個體升級至容錯移轉叢集執行個體。  
   
-    -   您無法將功能加入容錯移轉叢集。 例如，您無法將 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 加入至現有的僅限 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]容錯移轉叢集。  
+    -   您無法將功能新增至容錯移轉叢集執行個體。 例如，您無法將 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 新增至現有的僅限 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 容錯移轉叢集執行個體。  
   
-    -   您無法將容錯移轉叢集節點降級為獨立執行個體。  
+    -   在 Windows Server 容錯移轉叢集的任何節點上，都無法將容錯移轉叢集執行個體降級為獨立執行個體。  
   
-    -   變更容錯移轉叢集的版本會受限於特定狀況。 如需詳細資訊，請參閱 [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
+    -   變更容錯移轉叢集執行個體的版本會受限於特定狀況。 如需詳細資訊，請參閱 [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
--   在容錯移轉叢集升級期間，停機時間僅包含容錯移轉時間以及執行升級指令碼所需的時間。 在開始升級程序之前，如果您遵循下方的容錯移轉叢集輪流升級程序，且所有節點都符合必要條件，就可將停機時間降至最低。 在記憶體最佳化資料表使用中時升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將會花費額外時間。 如需詳細資訊，請參閱 [計劃和測試資料庫引擎升級計劃](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+-   在容錯移轉叢集執行個體升級期間，停機時間僅包含容錯移轉時間以及執行升級指令碼所需的時間。 在開始升級程序之前，如果您遵循下方的容錯移轉叢集執行個體輪流升級程序，且所有節點都符合必要條件，就可將停機時間降至最低。 在記憶體最佳化資料表使用中時升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將會花費額外時間。 如需詳細資訊，請參閱 [計劃和測試資料庫引擎升級計劃](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  在開始之前，請檢閱以下重要資訊：  
   
--   [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集。  
+-   [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集執行個體。  
   
 -   [選擇資料庫引擎升級方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
   
@@ -55,9 +59,9 @@ ms.locfileid: "85858578"
 -   [安裝 SQL Server 的硬體與軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>執行輪流升級或更新  
- 若要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，請使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式升級每個容錯移轉叢集節點 (從被動節點開始，一次一個)。 當您升級每個節點時，它就不會包含在容錯移轉叢集的可能擁有者中。 如果發生非預期的容錯移轉，則在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將叢集資源群組擁有權移至升級的節點之前，升級的節點都不會參與容錯移轉。  
+ 若要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，請使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式升級每個參與容錯移轉叢集執行個體的節點 (從被動節點開始，一次一個)。 當您升級每個節點後，該節點就不會包含在容錯移轉叢集執行個體的可能擁有者中。 如果發生非預期的容錯移轉，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將 Windows Server 容錯移轉叢集角色擁有權移至升級的節點之前，升級的節點不會參與容錯移轉。  
   
- 根據預設， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會自動決定容錯移轉至升級節點的時機。 這個時機會取決於容錯移轉叢集執行個體中的節點總數以及已經升級的節點數目而定。 如果半數以上的節點都已經升級，當您在下一個節點上執行升級時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式就會將容錯移轉導至升級的節點。 容錯移轉至升級的節點之後，叢集群組就會移至升級的節點。 系統會將所有升級的節點都放置在可能擁有者的清單中，並從可能擁有者的清單中移除尚未升級的所有節點。 當您升級其餘每個節點時，它就會加入至容錯移轉叢集的可能擁有者。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會自動決定容錯移轉至升級節點的時機。 這個時機會取決於容錯移轉叢集執行個體中的節點總數以及已經升級的節點數目而定。 如果半數以上的節點都已經升級，當您在下一個節點上執行升級時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式就會將容錯移轉導至升級的節點。 容錯移轉至升級的節點之後，叢集群組就會移至升級的節點。 系統會將所有升級的節點都放置在可能擁有者的清單中，並從可能擁有者的清單中移除尚未升級的所有節點。 當您升級其餘每個節點後，該節點就會新增至容錯移轉叢集執行個體的可能擁有者。  
   
  這個程序會導致停機時間僅會包含整個容錯移轉叢集升級期間的單一容錯移轉時間和資料庫升級指令碼執行時間。  
   
@@ -109,25 +113,25 @@ ms.locfileid: "85858578"
   
 19. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-20. 若要完成升級程序，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的所有其他節點上重複這些步驟。  
+20. 若要完成升級程序，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的所有其他節點上重複這些步驟。  
   
-## <a name="upgrade-a-multi-subnet-failover-cluster"></a>升級多重子網路容錯移轉叢集  
+## <a name="upgrade-a-multi-subnet-failover-cluster-instance"></a>升級多重子網路容錯移轉叢集執行個體  
 
-請遵循下列步驟，在多重子網環境中升級您的 SQL Server 容錯移轉叢集執行個體。 
+請遵循下列步驟，在多重子網環境中升級您的 Always On 容錯移轉叢集執行個體。 
   
-### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>若要升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集 (現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集為非多重子網路叢集)。  
+### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-instance-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>升級至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集執行個體 (現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集為非多重子網路叢集)。  
   
-1.  請遵循上述步驟，升級您的叢集。  
+1.  依照上述步驟升級您的容錯移轉叢集執行個體。  
   
-2.  使用 AddNode 安裝程式動作將節點加入到不同的子網路，並在 [叢集網路組態]**** 頁面確認 IP 位址資源相依性為 OR。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+2.  使用 AddNode 安裝程式動作將節點新增至不同的子網路，並在 [叢集網路設定] 頁面確認 IP 位址資源相依性為 OR。 如需詳細資訊，請參閱[在 Always On 容錯移轉叢集執行個體中新增或移除節點 (安裝程式)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
-### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>若要升級目前使用延展 V-Lan 的多重子網路叢集。  
+### <a name="to-upgrade-a-multi-subnet-failover-cluster-instance-currently-using-stretch-vlan-to-use-multi-subnet"></a>將目前使用 Stretch VLAN 的多重子網路容錯移轉叢集執行個體升級為使用多重子網路。  
   
 1.  請遵循上述步驟，將您的叢集升級到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 2.  變更網路設定，將遠端節點移到不同的子網路。  
   
-3.  使用 Windows 容錯移轉叢集管理工具，為新的子網路加入新的 IP 位址，並將 IP 位址資源相依性設定為 OR。  
+3.  使用容錯移轉叢集管理員或 PowerShell，為新的子網路新增新的 IP 位址，將 IP 位址資源相依性設定為 OR。  
   
 ## <a name="next-steps"></a>後續步驟  
  在升級為 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之後，請完成下列工作：  

@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPColFmt (OLE DB 驅動程式) | Microsoft Docs
-description: IBCPSession::BCPColFmt (OLE DB)
+description: 了解 IBCPSession::BCPColFmt 方法如何在 OLE DB Driver for SQL Server 中建立程式變數與 SQL Server 資料行之間的繫結。
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPColFmt method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6170c513a57521d74a23d91af1fa24f66dc375d4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244653"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861975"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ HRESULT BCPColFmt(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 介面。  
+ 發生提供者特定的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

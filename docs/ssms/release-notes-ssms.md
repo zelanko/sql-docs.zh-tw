@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-ms.openlocfilehash: 0a9b93190f0240c917c6331ae69d1e8461cb7ea2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243769"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180042"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -84,14 +84,15 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | 解決 SSMS 中造成停止回應的三個常見原因。 |
 | 一般 SSMS | 修正與 SSMS 連線對話方塊「忘記」項目 (伺服器/使用者/密碼) 相關的幾個問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/40256401)和 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/40015519)。 |
 | 一般 SSMS | 修正 [統計資料屬性] 對話方塊在選取 [更新這些資料行的統計資料] 核取方塊並選取 [確定] 時沒有任何效果的問題。 統計資料不會更新，且嘗試撰寫動作指令碼會產生「沒有任何要撰寫指令碼的動作」訊息)。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/37799992)。 |
+| 一般 SSMS | 已解決 [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455) 的相關問題。 | 
 | 匯入/匯出資料層應用程式 | 修正 SSMS 在匯入 bacpac 檔案時擲回錯誤的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/40229137)。 |
 | Integration Services | 修正客戶在使用 SSMS 版本 18.4 或更早版本於 Azure SQL 受控執行個體中執行 SSIS 套件時，無法編輯 SQL 代理程式作業的錯誤 (Bug)。 |
 | Integration Services | 修正在內部部署 SQL Server 的 SQL 代理程式作業中執行 SSIS 套件的 [執行選項] 索引標籤內遺失 [使用 32 位元執行階段] 選項的 Bug。 |
 | Intellisense/編輯器 | 修正在執行 [檔案] -> [新增] -> [資料庫引擎查詢] 時可能會彈出錯誤對話方塊的問題。 |
-| 物件總管 | 修正在 [物件總管] 中的資料表或索引節點上以滑鼠右鍵按一下時，無法使用 SQL Azure Database [屬性視窗] 的問題。 |
+| 物件總管 | 修正在 [物件總管] 中的資料表或索引節點上以滑鼠右鍵按一下時，無法使用 Azure SQL Database [屬性視窗] 的問題。 |
 | 物件總管 | 解決控制平面發生影響 sys.database_service_objectives 的中斷時 SSMS 無法展開 master 資料庫節點此問題。 |
 | 報表 | 修正在 Linux 上中斷的數個標準報表 </br></br> 範例：記憶體耗用量報表因為與「/var/opt/mssql/log/log_116.trc\log.trc 無效…」相似的錯誤而失敗。 |
-| SMO/指令碼 | 更新建立新 SQL Azure Database 的邏輯，以使用 Gen5_2 作為預設 SLO。 |
+| SMO/指令碼 | 已更新在 SQL Azure Database 中建立新資料庫的邏輯，以使用 Gen5_2 作為預設 SLO。 |
 | Xevent UI | 修正「儲存到 XEL 檔案…」擲回錯誤的長期問題 (在 SSMS 18.0 中首次出現)。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/37695592)。 |
 
 #### <a name="known-issues-186"></a>已知問題 (18.6)
@@ -102,6 +103,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | [新的伺服器稽核規格] 對話方塊可能會導致 SSMS 損毀，並出現存取違規錯誤。 | N/A |
 | 一般 SSMS | 使用 SMO 的 SSMS 延伸模組應以新 SSMS 特定 SMO v161 套件為目標重新編譯。 您可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 取得預覽版本 </br></br> 針對 Microsoft.SqlServer.SqlManagementObjects 套件 160 以前版本所編譯的延伸模組仍然會正常運作。 | N/A |
 | Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 因應措施：移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 | N/A|
+| Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 因應措施：在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些 Hive 內，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'，以取得我們嘗試連線的特定 Integration Services 版本 | N/A|
 
 
 針對其他已知問題，您可參考 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server)並為產品小組提供意見反應。
@@ -144,6 +146,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 ### <a name="known-issues-1851"></a>18.5.1 已知問題
 
 | 新項目 | 詳細資料 | 因應措施 | |----------|---------||-----------| | 一般 SSMS | 圖表設計包含一項已知 Bug，其會造成現有的圖表損毀。 例如，您使用 SSMS 17.9.1 建立圖表設計，然後使用 SSMS 18.x 予以更新/儲存，並稍後使用 17.9.1 來嘗試開啟。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/37992649)以取得詳細資料。 | N/A | | 一般 SSMS | 新的伺服器稽核規格對話方塊可能會造成 SMSS 因存取違規錯誤而損毀。 | N/A || | SMO/指令碼 | 使用 SMO 的 SSMS 延伸模組需要以新 SMO v160 為目標重新編譯。 | N/A | | Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，會遺失包含指令碼工作/元件的指令碼。 因應措施： | 移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 |
+
 
 ### <a name="185"></a>18.5
 
@@ -227,7 +230,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 移除明確的 sqlvariant 強制轉換 (SqlOnDemand 不合法的 T-SQL 語法)，可修正 SqlOnDemand 的指令碼。 |
 | SMO/指令碼 | 已修正略過 SQL Azure 索引上 FILLFACTOR 的問題。 |
 | SMO/指令碼 | 已修正與指令碼外部物件有關的問題。 |
-| SMO/指令碼 | 已修正 [產生指令碼]  不允許為針對 SQL DB 的 [擴充屬性] 選擇指令碼選項的問題。 此外，也已修正這類擴充屬性的指令碼。 |
+| SMO/指令碼 | 已修正 [產生指令碼] 不允許為針對 SQL Database 的 [擴充屬性] 選擇指令碼選項的問題。 此外，也已修正這類擴充屬性的指令碼。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 規則中有錯誤的說明連結。 |
 | XEvent UI | 已修正格線中的項目在游標暫留時選取的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/38262124)及 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)。 |
 
@@ -316,10 +319,10 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，*ALTER SERVER CONFIGURATION*) 的支援。 |
 | Integration Services | 新增新的選項功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，此項目會在 Azure-SSIS Integration Runtime 上叫用執行 SSIS 套件，以作為 ADF 管線中的執行 SSIS 套件活動。 |
 | SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
-| SMO/指令碼 | 資料分類 </br> - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。 </br> - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL DB 的新敏感性屬性 'rank'。 |
+| SMO/指令碼 | 資料分類 </br> - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。 </br> - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL Database 的新敏感性屬性 'rank'。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 將版本設定新增至規則集格式。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增新的檢查。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增 Azure SQL Database 受控執行個體的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增 Azure SQL 受控執行個體的支援。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新 Cmdlet 的預設檢視，將結果顯示為資料表。 |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1 中的 Bug 修正
@@ -342,7 +345,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | Integration Services | 已修正 Azure 啟用的 `DTExec` 公用程式所產生 Azure Data Factory 管線中問題，以使用正確的參數類型。 (明確用於 18.3.1) |
 | SMO/指令碼 | 修正造成 SMO 使用 **SMO.Server.SetDefaultInitFields(true)** 擷取屬性時擲回錯誤的問題。|
 | 查詢存放區 UI | 已修正在 [追蹤查詢]  檢視中選取 [執行計數]  計量時，Y 軸無法調整大小的問題。 |
-| 弱點評量 | 停用 Azure SQL DB 的清除和核准基準。|
+| 弱點評量 | 停用 Azure SQL Database 的清除和核准基準。|
 
 #### <a name="known-issues-1831"></a>已知問題 (18.3.1)
 
@@ -407,7 +410,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 修正嘗試對具有數千個資料表之資料庫執行「產生指令碼」  的問題 (導致進度對話方塊似乎停滯)。 |
 | SMO/指令碼 | 已修正 SQL 2019 上「外部資料表」  指令碼無法正常運作的問題。 |
 | SMO/指令碼 | 已修正 SQL 2019 上「外部資料來源」  指令碼無法正常運作的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/34295080)以取得詳細資料。 |
-| SMO/指令碼 | 已修正當目標為 Azure SQL DB 時，不會撰寫資料行上「擴充屬性」的問題。 如需詳細資料，請參閱 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
+| SMO/指令碼 | 已修正當目標為 Azure SQL Database 時，不會撰寫資料行上「擴充屬性」的問題。 如需詳細資料，請參閱 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
 | SMO/指令碼 | 最後一頁插入：SMO - 新增屬性 *Index.IsOptimizedForSequentialKey* |
 |**SSMS 安裝程式**| **減輕 SSMS 安裝程式不正確地封鎖 SSMS 安裝，使其無法回報不相符語言的問題。在某些異常情況下，這可能會是個問題，例如中止的安裝程式或錯誤解除安裝舊版 SSMS。請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/37483594/)以取得詳細資料。** |
 | XEvent 分析工具 | 修正當檢視器關閉時發生的損毀問題。 |
@@ -440,7 +443,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | :-------| :------|
 | 資料庫圖表 | [將資料庫圖表新增回 SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 | SSBDIAGNOSE.EXE |SQL Server 診斷 (命令列工具) 已新增回 SSMS 套件。|
-| Integration Services (SSIS) | 支援在 Azure 中，排程位於 Azure 或檔案系統中 SSIS 目錄裡的 SSIS 套件。 有三種啟動新增排程對話方塊的項目：[新增排程...]  功能表項目 (以滑鼠右鍵按一下 Azure 中 SSIS 目錄內的 SSIS 套件時顯示)、位於 [工具]  功能表項目下方 [移轉到 Azure]  功能表項目下的 [排程 Azure 中的 SSIS 套件]  ，以及以滑鼠右鍵按一下 Azure SQL Database 受控執行個體 SQL Server 代理程式下方的 Jobs 資料夾時所顯示的「排程 Azure 中的 SSIS」。|
+| Integration Services (SSIS) | 支援在 Azure 中，排程位於 Azure 或檔案系統中 SSIS 目錄裡的 SSIS 套件。 有三種啟動新增排程對話方塊的項目：[新增排程...]  功能表項目 (以滑鼠右鍵按一下 Azure 中 SSIS 目錄內的 SSIS 套件時顯示)、位於 [工具] 功能表項目下方 [移轉到 Azure] 功能表項目下的 [排程 Azure 中的 SSIS 套件]，以及以滑鼠右鍵按一下 Azure SQL 受控執行個體 SQL Server 代理程式下方的 Jobs 資料夾時所顯示的「排程 Azure 中的 SSIS」。|
 
 #### <a name="bug-fixes-in-181"></a>18.1 中的錯誤修正
 
@@ -542,9 +545,9 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |Azure Data Studio 整合|新增功能表項目以啟動/下載 Azure Data Studio。|
 |Azure Data Studio 整合|在 [物件總管] 中新增 [啟動 Azure Data Studio] 功能表項目。|
 |Azure Data Studio 整合|當使用者以滑鼠右鍵按一下 OE 中的資料庫節點時，即會顯示操作功能表，讓使用者在 Azure Data Studio 中執行查詢或建立新的筆記本。|
-|Azure SQL 支援| SLO/Edition/MaxSize 資料庫屬性現在可以接受自訂的名稱，讓您更輕鬆支援未來版本的 Azure SQL Database。|
+|Azure SQL 支援| SLO/Edition/MaxSize 資料庫屬性現在可接受自訂名稱，讓您更輕鬆地支援未來版本的 Azure SQL Database。|
 |Azure SQL 支援| 新增對 vCore SKU (一般用途和業務關鍵) 的支援：Gen4_24 及所有 Gen5。|
-|Azure SQL 受控執行個體|新增「AAD 登入」作為 SMO 及 SSMS 中連線到 Azure SQL 受控執行個體時的新登入類型。|
+|Azure SQL 受控執行個體|新增「AAD 登入」作為 SMO 及 SSMS 中連線至 Azure SQL 受控執行個體時的新登入類型。|
 |永遠開啟|重新雜湊 SSMS Always On 儀表板中的 RTO (預估復原時間) 和 RPO (估計的資料遺失)。 請參閱 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) 上的更新文件。|
 |Always Encrypted| [連線至伺服器] 對話方塊之新 [Always Encrypted] 索引標籤中的 [啟用 Always Encrypted] 核取方塊現在提供簡單的方法來啟用/停用資料庫連線的 Always Encrypted。|
 |具有安全記憶體保護區的 Always Encrypted| 在 SQL Server 2019 中，已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：[連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。  [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。  其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。|
@@ -558,7 +561,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |一般檔案匯入精靈|新增邏輯，通知使用者匯入可能會導致重新命名資料行。|
 |Integration Services (SSIS)|新增支援，允許客戶對 Azure Government 雲端中 Azure-SSIS IR 上的 SSIS 套件進行排程。|
 |Integration Services (SSIS)|當您透過 SSMS 使用 Azure SQL 受控執行個體的 SQL Agent 時，您可以在 SSIS 代理程式作業步驟中設定參數和連線管理員。|
-|Integration Services (SSIS)|連線到 Azure SQL DB/受控執行個體時，您可以使用 *default* 作為初始資料庫來連線至該執行個體。|
+|Integration Services (SSIS)|連線至 Azure SQL Database/Azure SQL 受控執行個體時，您可以使用 *default* 作為初始資料庫進行連線。|
 |Integration Services (SSIS)|在 [Integration Services 目錄] 節點下新增項目 [在 Azure Data Factory 中嘗試 SSIS]  ，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。
 |Integration Services (SSIS)|在 [目錄建立精靈] 中新增 [建立 SSIS IR]  按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。|
 |Integration Services (SSIS)|ISDeploymentWizard 現在支援 SQL 驗證、Azure Active Directory 整合式驗證，以及命令列模式下的 Azure Active Directory 密碼驗證。|
@@ -585,7 +588,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |SMO|已在 SMO 和 SSMS 中新增「邊緣條件約束」的串聯刪除支援。|
 |SMO|已新增資料分類「讀取-寫入」權限的支援。|
 |弱點評量| 啟用 Azure SQL DW 上的 [弱點評定] 工作功能表。|
-|弱點評量|變更在 Azure SQL 受控執行個體伺服器上執行的弱點評定規則集，使「弱點評定」的掃描結果與 Azure SQL DB 中的結果一致。|
+|弱點評量|變更在 Azure SQL 受控執行個體上執行的弱點評定規則集，使「弱點評定」的掃描結果與 Azure SQL DB 中的結果一致。|
 |弱點評量| [弱點評定] 現在支援 Azure SQL DW。|
 |弱點評量|新增匯出功能以將弱點評定的掃描結果匯出到 Excel。|
 |XEvent 檢視器|XEvent 檢視器：啟用執行程序表視窗以取得更多 XEvent。|
@@ -596,7 +599,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | :-------| :------|
 |損毀和凍結|修正與 GDI 物件相關的常見 SSMS 損毀來源。|
 |損毀和凍結|修正選取 [編寫指令碼為 Create/Update/Drop] (已移除 SMO 物件的不必要提取) 時，造成停止回應和效能不佳的常見來源。|
-|損毀和凍結|修正在啟用 ADAL 追蹤的情況下使用 MFA 連線到 Azure SQL DB 時系統停止回應此問題。|
+|損毀和凍結|修正在啟用 ADAL 追蹤的情況下使用 MFA 連線至 Azure SQL Database 時系統停止回應此問題。|
 |損毀和凍結|修正從 [活動監視器] 叫用即時查詢統計資料時系統停止回應 (或察覺停止回應) 的問題 (在沒有設定「持續安全性資訊」的情況下使用 SQL Server驗證時便會出現此問題)。|
 |損毀和凍結|修正在 [物件總管] 中選取「報表」時系統停止回應的問題，這個問題會在高延遲連線或暫時無法存取資源時發生。|
 |損毀和凍結|已修正嘗試使用中央管理伺服器和 Azure SQL Server 時，SSMS 發生損毀的問題。 如需詳細資料，請參閱 [SMSS 17.5 application error and crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884) (使用中央管理伺服器時發生 SMSS 17.5 應用程式錯誤和損毀)。|
@@ -613,31 +616,31 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |一般 SSMS|進一步修正以提高 SSMS 對多監視器的感知能力，讓它在正確的監視器中開啟對話方塊。|
 |Analysis Services (AS)|修正已裁剪 AS XEvent UI [進階設定] 的問題。|
 |Analysis Services (AS)|修正 DAX 剖析擲回找不到檔案例外狀況的問題。|
-|Azure SQL Database|已修正下列問題：連線到 Azure SQL Database 中的使用者資料庫 (而非 master) 時，Azure SQL DB 查詢視窗中的資料庫清單填入的資料不正確。|
+|Azure SQL Database|已修正下列問題：連線至 Azure SQL Database 中的使用者資料庫 (而非 master) 時，Azure SQL Database 查詢視窗中的資料庫清單填入的資料不正確。|
 |Azure SQL Database|已修正問題：無法將「時態表」新增至 Azure SQL Database。|
 |Azure SQL Database|在 Azure 中的 [統計資料] 功能表下啟用 [統計資料屬性] 子功能表選項，因為到目前為止已完全支援一段時間。|
 |Azure SQL - 一般支援|修正通用 Azure UI 控制項中防止使用者顯示 Azure 訂用帳戶 (若未超過 50 個) 的問題。 此外，排序已變更為依名稱，而不是依訂用帳戶識別碼。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。|
 |Azure SQL - 一般支援|已修正通用 Azure UI 控制項在列舉訂用帳戶時，使用者在一些租用戶中沒有任何訂用帳戶時，這可能會產生「索引超出範圍。 必須為非負數且小於集合的大小。」 錯誤。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。|
 |Azure SQL - 一般支援|修正服務等級目標會硬式編碼而導致 SSMS 難以支援較新 Azure SQL SLO 的問題。 現在，使用者可以登入 Azure，且讓 SSMS 擷取所有適用的 SLO 資料 (版本和大小上限)|
-|Azure SQL DB 受控執行個體支援|已改善/完善對受控執行個體的支援：停用 UI 中不支援的選項，並修正 [檢視稽核記錄] 選項來處理 URL 稽核目標。|
-|Azure SQL DB 受控執行個體支援|[產生和發佈指令碼精靈] 會撰寫不受支援的 CREATE DATABASE 子句指令碼。|
-|Azure SQL DB 受控執行個體支援|啟用受控執行個體的即時查詢統計資料。|
-|Azure SQL DB 受控執行個體支援|[資料庫屬性] -> [檔案] 不正確地撰寫 ALTER DB ADD FILE 指令碼。|
-|Azure SQL DB 受控執行個體支援|修正使用 SQL Agent 排程器的迴歸問題，在其中即使選擇了其他某個排程類型，還是會選擇 ONIDLE 排程。|
-|Azure SQL DB 受控執行個體支援|調整 MAXTRANSFERRATE、MAXBLOCKSIZE，以便在 Azure 儲存體上執行備份。|
-|Azure SQL DB 受控執行個體支援|在 RESTORE 作業之前為結尾記錄備份編寫指令碼的問題 (CL 不支援此作業)。|
-|Azure SQL DB 受控執行個體支援|[建立資料庫精靈] 不正確地撰寫 CREATE DATABASE 陳述式指令碼。|
-|Azure SQL DB 受控執行個體支援|當 SSMS 連線到受控執行個體時，可對其中的 SSIS 套件進行特殊處理。|
-|Azure SQL DB 受控執行個體支援|已修正在連線至受控執行個體的情況下，當嘗試使用「活動監視器」時顯示錯誤的問題。|
-|Azure SQL DB 受控執行個體支援|改善 AAD 登入 (SSMS 總管中) 的支援。|
-|Azure SQL DB 受控執行個體支援|改善 SMO 檔案群組物件的指令碼撰寫。|
-|Azure SQL DB 受控執行個體支援|改善認證的 UI。|
-|Azure SQL DB 受控執行個體支援|新增邏輯複寫的支援。|
-|Azure SQL DB 受控執行個體支援|已修正造成以滑鼠右鍵按一下資料庫，並選擇 [匯入資料層應用程式] 時失敗的問題。|
-|Azure SQL DB 受控執行個體支援|已修正造成以滑鼠右鍵按一下 [TempDB] 來顯示錯誤時的問題。|
-|Azure SQL DB 受控執行個體支援|修正嘗試為 SMO 中的 ALTER DB ADD FILE 陳述式編寫指令碼時，造成所產生 T-SQL 指令碼空白的問題。|
-|Azure SQL DB 受控執行個體支援|已改善受控執行個體伺服器特定屬性 (硬體世代、服務層、已使用和保留的儲存體) 的顯示方式。|
-|Azure SQL DB 受控執行個體支援|已修正下列問題：為資料庫編寫指令碼時 ([指令碼編寫為 Create...])，無法為額外檔案群組和檔案編寫指令碼。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799)。 |
+|Azure SQL 受控執行個體支援|已改善/完善對受控執行個體的支援：停用 UI 中不支援的選項，並修正 [檢視稽核記錄] 選項來處理 URL 稽核目標。|
+|Azure SQL 受控執行個體支援|[產生和發佈指令碼精靈] 會撰寫不受支援的 CREATE DATABASE 子句指令碼。|
+|Azure SQL 受控執行個體支援|啟用受控執行個體的即時查詢統計資料。|
+|Azure SQL 受控執行個體支援|[資料庫屬性] -> [檔案] 不正確地撰寫 ALTER DB ADD FILE 指令碼。|
+|Azure SQL 受控執行個體支援|修正使用 SQL Agent 排程器的迴歸問題，在其中即使選擇了其他某個排程類型，還是會選擇 ONIDLE 排程。|
+|Azure SQL 受控執行個體支援|調整 MAXTRANSFERRATE、MAXBLOCKSIZE，以便在 Azure 儲存體上執行備份。|
+|Azure SQL 受控執行個體支援|在 RESTORE 作業之前為結尾記錄備份編寫指令碼的問題 (CL 不支援此作業)。|
+|Azure SQL 受控執行個體支援|[建立資料庫精靈] 不正確地撰寫 CREATE DATABASE 陳述式指令碼。|
+|Azure SQL 受控執行個體支援|當 SSMS 連線到受控執行個體時，可對其中的 SSIS 套件進行特殊處理。|
+|Azure SQL 受控執行個體支援|已修正在連線至受控執行個體的情況下，當嘗試使用「活動監視器」時顯示錯誤的問題。|
+|Azure SQL 受控執行個體支援|改善 AAD 登入 (SSMS 總管中) 的支援。|
+|Azure SQL 受控執行個體支援|改善 SMO 檔案群組物件的指令碼撰寫。|
+|Azure SQL 受控執行個體支援|改善認證的 UI。|
+|Azure SQL 受控執行個體支援|新增邏輯複寫的支援。|
+|Azure SQL 受控執行個體支援|已修正造成以滑鼠右鍵按一下資料庫，並選擇 [匯入資料層應用程式] 時失敗的問題。|
+|Azure SQL 受控執行個體支援|已修正造成以滑鼠右鍵按一下 [TempDB] 來顯示錯誤時的問題。|
+|Azure SQL 受控執行個體支援|修正嘗試為 SMO 中的 ALTER DB ADD FILE 陳述式編寫指令碼時，造成所產生 T-SQL 指令碼空白的問題。|
+|Azure SQL 受控執行個體支援|已改善受控執行個體伺服器特定屬性 (硬體世代、服務層、已使用和保留的儲存體) 的顯示方式。|
+|Azure SQL 受控執行個體支援|已修正下列問題：為資料庫編寫指令碼時 ([指令碼編寫為 Create...])，無法為額外檔案群組和檔案編寫指令碼。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799)。 |
 |備份/還原/附加/卸離資料庫|修正當 .mdf 檔案的實體檔案名稱與原始檔案名稱不相符時，使用者無法附加資料庫的問題。|
 |備份/還原/附加/卸離資料庫|已修正 SSMS 可能找不到有效的還原計畫，或者可能找到次佳還原計畫的問題。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752)。 |
 |備份/還原/附加/卸離資料庫|已修正下列問題：[附加資料庫精靈] 沒有顯示已重新命名的次要檔案。 現在會顯示檔案，並新增其相關註解 (例如「找不到」)。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434)。 |
@@ -688,8 +691,8 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |物件指令碼|當撰寫物件指令碼，會省略具有預設值的資料庫範圍設定。|
 |物件指令碼|編寫指令碼時，不要產生動態 T-SQL。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)。 |
 |物件指令碼|在 SQL Server 2016 及更早版本上撰寫資料表指令碼時，省略圖形語法 "as edge" 和 "as node"。|
-|物件指令碼|修正搭配 MFA 使用 AAD 連線到 Azure SQL DB 時，為資料庫物件編寫指令碼失敗的問題。|
-|物件指令碼|已修正下列問題：嘗試在 Azure SQL DB 上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 為空間索引編寫指令碼時，擲回錯誤。|
+|物件指令碼|已修正搭配使用 AAD 與 MFA 連線至 Azure SQL Database 時，撰寫資料庫物件指令碼失敗的問題。|
+|物件指令碼|修正嘗試在 Azure SQL Database 上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 撰寫空間索引指令碼時擲回錯誤的問題。|
 |物件指令碼|已修正問題：即使「物件總管」指令碼設定已設為符合來源，Azure SQL Database 的資料庫指令碼仍一律以內部部署 SQL 為目標。|
 |物件指令碼|修正嘗試為 SQL DW 資料庫中涉及叢集及非叢集索引的資料表編寫指令碼時，產生的 T-SQL 陳述式不正確之問題。|
 |物件指令碼|修正嘗試為 SQL DW 資料庫中具有「叢集資料行存放區索引」及「叢集索引」的資料表編寫指令碼時，產生不正確 T-SQL (重複陳述式) 的問題。|

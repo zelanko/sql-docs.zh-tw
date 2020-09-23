@@ -4,20 +4,21 @@ titleSuffix: ''
 description: R 服務是 SQL Server 2016 中的一項功能，可讓您使用關聯式資料來執行 R 指令碼。 您可以使用開放原始碼套件和架構及 Microsoft R 套件，來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server R Services 的基本概念。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fabca5748849e0dd2e708ae02c11dc8f028a14d
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775393"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898838"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什麼是 SQL Server 2016 R Services？
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 R 服務是 SQL Server 2016 中的一項功能，可讓您使用關聯式資料來執行 R 指令碼。 您可以使用開放原始碼套件和架構及 [Microsoft R 套件](#packages)，來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server R Services 的基本概念。
 
@@ -41,7 +42,7 @@ R 服務使用擴充性架構在 SQL Server 中執行 R 指令碼。 深入了�
 
 您可以使用 SQL Server R Services 來進行的預測類型範例包括：
 
-|||
+|預測類型|範例|
 |-|-|
 |分類|自動將客戶意見反應分為正面與負面類別|
 |迴歸/預測連續數值|根據大小和位置來預測房屋價格|
@@ -54,13 +55,22 @@ R 服務使用擴充性架構在 SQL Server 中執行 R 指令碼。 深入了�
 
 + 最常見的方式是使用 T-SQL 預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-+ 您也可以使用慣用的 R 用戶端，然後撰寫會將執行 (稱為「遠端計算內容」  ) 推送至遠端 SQL Server 的指令碼。 如需詳細資訊，請參閱[設定資料科學用戶端 R 開發](../r/set-up-a-data-science-client.md)。
++ 您也可以使用慣用的 R 用戶端，然後撰寫會將執行 (稱為「遠端計算內容」**) 推送至遠端 SQL Server 的指令碼。 如需詳細資訊，請參閱[設定資料科學用戶端 R 開發](../r/set-up-a-data-science-client.md)。
 
 <a name="version"></a>
 
-## <a name="r-version"></a>R 版本
+## <a name="r-versions"></a>R 版本
 
-R 3.2.2 版包含在 SQL Server 2016 R Services 中。 針對較新版本的 R，請使用 [SQL Server 2017 和更新版本的機器學習服務](../sql-server-machine-learning-services.md)。
+以下列出 SQL Server 2016 R Services 中包含的 R 執行階段版本。
+
+SQL Server 版本 | 預設 R 執行階段版本 |
+|-|-|
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 和更新版本 | 3.2.2 和 3.5.2 |
+
+SQL Server 2016 Service Pack (SP) 2 和更新版本的累積更新 (CU) 14 包含較新的 R 執行階段。 如需詳細資訊，請參閱[變更預設的語言執行階段版本](../install/change-default-language-runtime-version.md)。
+
+若要使用其他版本的 R 或是要執行 Python，請使用 [SQL Server 2017 和更新版本的機器學習服務](../sql-server-machine-learning-services.md)。
 
 <a name="packages"></a>
 
@@ -89,7 +99,7 @@ R 3.2.2 版包含在 SQL Server 2016 R Services 中。 針對較新版本的 R�
 
     + 快速入門：[在 SQL Server 中建立及執行簡單的 R 指令碼](../tutorials/quickstart-r-create-script.md)
     + 快速入門：[在 R 中建立預測模型並加以訓練](../tutorials/quickstart-r-train-score-model.md)
-    + 教學課程：[在 T-SQL 中使用 R](../tutorials/sqldev-in-database-r-for-sql-developers.md)：探索資料、執行特徵工程、訓練模型並加以部署，以及進行預測 (五部分系列)
+    + 教學課程：[在 T-SQL 中使用 R](../tutorials/r-taxi-classification-introduction.md)：探索資料、執行特徵工程、訓練模型並加以部署，以及進行預測 (五部分系列)
     + 教學課程：[在 R 工具中使用 R 服務](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)：探索資料、建立圖表和繪圖、執行特徵工程、訓練模型並加以部署，以及進行預測 (六部分系列)
 
 ## <a name="next-steps"></a>後續步驟

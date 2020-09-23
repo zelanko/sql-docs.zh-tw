@@ -1,4 +1,5 @@
 ---
+description: 作業步驟屬性 - 新增作業步驟 (進階頁面)
 title: 新增作業步驟屬性 (進階頁面)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,23 +14,23 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa078a72894711dbe267a4cac049317a159eb20d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8133db62cb2805ad0f267b9779a5f9ef64535dc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418144"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作業步驟屬性 - 新增作業步驟 (進階頁面)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **成功時的動作**  
 設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業步驟成功時要執行的動作。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85755211"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -87,7 +88,7 @@ ms.locfileid: "85755211"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -112,7 +113,7 @@ ms.locfileid: "85755211"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -144,7 +145,7 @@ ms.locfileid: "85755211"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  

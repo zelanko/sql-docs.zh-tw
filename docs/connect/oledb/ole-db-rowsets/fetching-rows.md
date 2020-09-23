@@ -1,6 +1,6 @@
 ---
 title: 擷取資料列 (OLE DB Driver) | Microsoft Docs
-description: 使用 IRowset 介面來擷取資料列
+description: 了解 OLE DB Driver for SQL Server 中的取用者如何使用 IRowset 介面來擷取資料列、取得資料列中的資料，以及管理資料列。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - IRowset interface
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2d803da7e8930eccb66843a025cb3426f5af62f5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 992ec376a8f881dc06a72a5c9d6502faae9f9cc3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244189"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862464"
 ---
 # <a name="fetching-rows"></a>提取資料列
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

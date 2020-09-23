@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244317"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468343"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
 
@@ -36,27 +36,28 @@ ms.locfileid: "75244317"
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > 若是 VS，如果您沒有在左側資料行中看到 Reporting Services，則會安裝 SSDT 工作負載來新增報表設計師。 從 [工具]  功能表上，選取 [取得工具與功能...]  ，然後從顯示的工作負載中選取 [SQL Server Data Tools]  。 如果您沒有在中間資料行中看到報表服務物件，請新增 Reporting Services 擴充功能。 從 [工具]  功能表上，選取 [擴充功能和更新]   > [線上]  。 在中間資料行中，從顯示的擴充功能選取 [Microsoft Reporting Services 專案]   > [下載]  。 對於 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
+    > 若是 VS，如果您沒有在左側資料行中看到 Reporting Services，則會安裝 SSDT 工作負載來新增報表設計師。 從 [工具]  功能表上，選取 [取得工具與功能...]  ，然後從顯示的工作負載中選取 [SQL Server Data Tools]  。 如果您沒有在中間資料行中看到報表服務物件，請新增 Reporting Services 擴充功能。 從 [工具]  功能表上，選取 [擴充功能和更新]   > [線上]  。 在中間資料行中，從顯示的擴充功能選取 [Microsoft Reporting Services 專案]   > [下載]  。 對於 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。 在 Visual Studio 2019 中，如果前述步驟無法運作，請嘗試安裝 [Microsoft Reporting Services Project 延伸模組](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)。
 
-3. 在 [新增專案]  對話方塊的中間資料行中，選取**報表伺服器專案**圖示 &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png)&nbsp;&nbsp;。
 
-4. 在 [名稱]  文字方塊中，輸入 "Tutorial" 作為專案名稱。 根據預設，[位置]  文字方塊會顯示您 "Documents\Visual Studio 20xx\Projects\" 資料夾的路徑。 報表設計師會在此路徑底下建立一個名為 Tutorial 的資料夾，然後在此資料夾中建立 Tutorial 專案。 如果專案不屬於 VS 方案，則 VS 也會建立一個方案檔 (.sln)。
+3. 在 [新增專案] 對話方塊的中間資料行中，選取**報表伺服器專案**圖示 &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png)&nbsp;&nbsp;。
 
-5. 選取 [確定]  可建立專案。 Tutorial 專案會顯示在右邊的 [方案總管]  窗格中。
+4. 在 [名稱]**** 文字方塊中，輸入 "Tutorial" 作為專案名稱。 根據預設，[位置]**** 文字方塊會顯示您 "Documents\Visual Studio 20xx\Projects\" 資料夾的路徑。 報表設計師會在此路徑底下建立一個名為 Tutorial 的資料夾，然後在此資料夾中建立 Tutorial 專案。 如果專案不屬於 VS 方案，則 VS 也會建立一個方案檔 (.sln)。
+
+5. 選取 [確定] 可建立專案。 Tutorial 專案會顯示在右邊的 [方案總管] 窗格中。
   
 ## <a name="creating-a-report-definition-file-rdl"></a>建立報表定義檔案 (RDL)  
   
-1. 在 [方案總管]  窗格中，以滑鼠右鍵按一下 [報表]  資料夾。 如果您沒有看到 [方案總管]  窗格，請選取 [檢視]  功能表 > [方案總管]  。
+1. 在 [方案總管]**** 窗格中，以滑鼠右鍵按一下 [報表]**** 資料夾。 如果您沒有看到 [方案總管]**** 窗格，請選取 [檢視]**** 功能表 > [方案總管]****。
 
-2. 選取 [新增]   > [新項目]  。
+2. 選取 [新增] > [新項目]。
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
 
-3. 在 [加入新項目]  視窗中，選取 [報表]  圖示。
+3. 在 [加入新項目]**** 視窗中，選取 [報表]**** 圖示。
 
-4. 在 [名稱]  文字方塊中輸入 "Sales Orders.rdl"。
+4. 在 [名稱]**** 文字方塊中輸入 "Sales Orders.rdl"。
 
-5. 選取 [加入新項目]  對話方塊右下方的 [新增]  按鈕，即可完成此程序。 報表設計師會在 [設計] 檢視中開啟並顯示 Sales Orders 報表檔案。
+5. 選取 [加入新項目]**** 對話方塊右下方的 [新增]**** 按鈕，即可完成此程序。 報表設計師會在 [設計] 檢視中開啟並顯示 Sales Orders 報表檔案。
 
     ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
 
@@ -68,4 +69,4 @@ ms.locfileid: "75244317"
 - 從資料來源建立資料集。
 - 設計報表版面配置並設定其格式。
 
-繼續進行[第 2 課：指定連線資訊 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)。
+請繼續進行[第 2 課：指定連線資訊 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)。

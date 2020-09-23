@@ -1,5 +1,6 @@
 ---
-title: 如何：以資料流形式傳送資料 | Microsoft Docs
+title: 如何：以資料流的形式傳送資料
+description: 了解如何透過 Microsoft SQLSRV/PDO_SQLSRV Driver for PHP for SQL Server 使用資料流將大型物件傳送至資料庫。
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915944"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411435"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>如何：以資料流形式傳送資料
+# <a name="how-to-send-data-as-a-stream"></a>如何：以資料流的形式傳送資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會利用 PHP 資料流將大型物件傳送至伺服器。 本主題中的範例會示範如何以資料流的形式傳送資料。 第一個範例會使用 SQLSRV 驅動程式示範預設行為，也就是在查詢執行時傳送所有的資料流資料。 第二個範例會使用 SQLSRV 驅動程式示範如何將最多 8 千位元組 (8 KB) 的資料流資料同時傳送至伺服器。  

@@ -1,5 +1,6 @@
 ---
-title: 如何：在指定的連接埠上連線 | Microsoft Docs
+title: 如何：在指定的通訊埠上連接
+description: 了解如何使用 Microsoft SQLSRV/PDO_SQLSRV Driver for PHP for SQL Server 連線至設定於特定連接埠上的資料庫。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916494"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435234"
 ---
-# <a name="how-to-connect-on-a-specified-port"></a>如何：在指定的連接埠上連線
+# <a name="how-to-connect-on-a-specified-port"></a>如何：在指定的通訊埠上連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主題說明如何透過 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]在指定的通訊埠上連接到 SQL Server。  

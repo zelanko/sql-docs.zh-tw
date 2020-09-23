@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 01/23/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998544"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076753"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 
@@ -42,7 +42,7 @@ ms.locfileid: "85998544"
 
 > 如需在 Linux 上使用 bcp 的資訊，請參閱[在 Linux 上安裝 sqlcmd 與 bcp](../linux/sql-server-linux-setup-tools.md)。
 >
-> 如需使用 bcp 搭配 Azure SQL 資料倉儲的詳細資訊，請參閱[使用 bcp 載入資料](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 如需使用 bcp 搭配 Azure SQL 資料倉儲的詳細資訊，請參閱[使用 bcp 載入資料](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
 **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定的格式在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
 
@@ -53,16 +53,16 @@ ms.locfileid: "85998544"
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>下載最新版的 bcp 公用程式
 
-**[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x64) 的 Microsoft 命令列公用程式 15](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x86) 的 Microsoft 命令列公用程式 15](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![下載 bcp for x64](../ssdt/media/download.png) 下載適用於 SQL Server (x64) 的 Microsoft 命令列公用程式 15](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![下載 bcp for x86](../ssdt/media/download.png) 下載適用於 SQL Server (x86) 的 Microsoft 命令列公用程式 15](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 命令列工具已正式推出，但是將會透過 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安裝程式套件發行。
 
 ### <a name="version-information"></a>版本資訊
 
-版本號碼：15.0 <br>
-組建編號：15.0.1300.359<br>
-發行日期：2019 年 3 月 13 日
+版本號碼：15.0.2 <br>
+組建編號：15.0.2000.5<br>
+發行日期：2020 年 9 月 11 日
 
 新版本的 SQLCMD 支援 Azure AD 驗證，其包含 SQL Database、SQL 資料倉儲，以及 Always Encrypted 功能的多重要素驗證 (MFA) 支援。
 新的 BCP 支援 Azure AD 驗證，其包含 SQL Database 與 SQL 資料倉儲的多重要素驗證 (MFA) 支援。
@@ -71,9 +71,9 @@ ms.locfileid: "85998544"
 
 Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019
 
-此元件同時需要 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 及 [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
+此元件同時需要 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 及 [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql)。
 
-若要檢查 BCP 版本，請執行 `bcp /v` 命令並確認正在使用 15.0.1300.359 版或更新版本。
+若要檢查 BCP 版本，請執行 `bcp /v` 命令並確認正在使用 15.0.2000.5 版或更新版本。
 
 <table><th>語法</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -124,7 +124,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  您也可以使用 **-d** 明確指定資料庫名稱。  
 
- **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
+ **in** *data_file* \| **out** *data_file* \| **queryout** *data_file* \| **format nul**  
  請依照下列方式指定大量複製的方向：  
   
 - **in**<a name="in"></a> 會從檔案複製到資料庫資料表或檢視。  
@@ -163,7 +163,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
- **-C** { **ACP** | **OEM** | **RAW** | *code_page* }<a name="C"></a>   
+ **-C** { **ACP** \| **OEM** \| **RAW** \| *code_page* }<a name="C"></a>   
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的*code_page* 、 **code_page**, **varcode_page**資料行時， **code_page** columns with code_pageacter values greater than 127 or less than 32.  
   
 > [!NOTE]
@@ -215,7 +215,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>
 
- 這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要 [14.0.3008.27 版或更新版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[利用 SQL Database 和 SQL 資料倉儲使用 Azure Active Directory 驗證來驗證](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要 [14.0.3008.27 版或更新版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[利用 SQL Database 和 SQL 資料倉儲使用 Azure Active Directory 驗證來驗證](/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!IMPORTANT]
 > **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。
@@ -260,7 +260,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Azure SQL Database 與 SQL 資料倉儲的 Azure AD 互動式驗證，可讓您使用支援多重要素驗證的互動式方法。 如需詳細資訊，請參閱 [Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。
 
-   Azure AD 互動需要 **bcp** [15.0.1000.34 版](#download-the-latest-version-of-bcp-utility) 或更新版本，以及 [ODBC 17.2 版或更新版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
+   Azure AD 互動需要 **bcp** [15.0.1000.34 版](#download-the-latest-version-of-bcp-utility) 或更新版本，以及 [ODBC 17.2 版或更新版本](https://aka.ms/downloadmsodbcsql)。  
 
    若要啟用互動式驗證，請在不使用密碼的情況下，僅以使用者名稱 (-U) 提供 -G 選項。
 
@@ -278,7 +278,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
-   如果來賓使用者存在於特定 Azure AD 中，且屬於 SQL DB 中具有執行 bcp 命令的資料庫權限群組，則會使用其來賓使用者別名 (例如， *keith0@adventureworks.com* )。
+   如果來賓使用者存在於特定 Azure AD 中，且屬於 SQL Database 中具有執行 bcp 命令的資料庫權限群組，則會使用其來賓使用者別名 (例如， *keith0@adventureworks.com* )。
   
 **-h** _**"load hints**_[ ,... *n*] **"** <a name="h"></a> 指定將資料大量匯入資料表或檢視期間所要使用的一或多個提示。  
   
@@ -415,7 +415,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-v**<a name="v"></a>  
  報告 **bcp** 公用程式版本號碼和著作權。  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  利用舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的資料類型執行大量複製作業。 不是每個欄位都有這個選項的提示，它會使用預設值。  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -444,7 +444,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## <a name="remarks"></a>備註<a name="remarks"></a>
 
-- 您可以利用 **bcp** 工具時，也會安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 用戶端。 如果同時為 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝工具，則根據 PATH 環境變數值順序的不同，您也可以使用舊版的 **bcp** 用戶端來取代 **bcp** 13.0 用戶端。 這個環境變數定義了 Windows 用來搜尋可執行檔的一組目錄。 若要確定您正在使用的版本，請在 Windows 命令提示字元處執行 **bcp /v** 或 **bcp -v** 命令。 如需如何在 PATH 環境變數中設定命令路徑的詳細資訊，請參閱[環境變數](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) (英文) 或在 Windows 說明中搜尋環境變數。
+- 您可以利用 **bcp** 工具時，也會安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 用戶端。 如果同時為 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝工具，則根據 PATH 環境變數值順序的不同，您也可以使用舊版的 **bcp** 用戶端來取代 **bcp** 13.0 用戶端。 這個環境變數定義了 Windows 用來搜尋可執行檔的一組目錄。 若要確定您正在使用的版本，請在 Windows 命令提示字元處執行 **bcp /v** 或 **bcp -v** 命令。 如需如何在 PATH 環境變數中設定命令路徑的詳細資訊，請參閱[環境變數](/windows/win32/shell/user-environment-variables) (英文) 或在 Windows 說明中搜尋環境變數。
 
     若要確保正在執行 BCP 公用程式的最新版本，您必須移除所有舊版的 BCP 公用程式。
 
@@ -464,7 +464,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。
 
-- [使用其他特殊字元](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+- [使用其他特殊字元](/windows-server/administration/windows-commands/set_1#remarks)
 
     <、>、|、&、^ 等字元為特殊的命令殼層字元，且在字串中使用這些字元時，必須在前方加上逸出字元 (^) 或括在引號中 (例如，"StringContaining&Symbol")。 如果您使用引號來括住包含特殊字元的字串，則引號會被視為環境變數值的一部分。
 
@@ -758,9 +758,5 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-
-## <a name="feedback"></a>意見反應
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

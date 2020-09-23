@@ -1,7 +1,8 @@
 ---
-title: PDO::errorCode | Microsoft Docs
+title: PDO::errorCode
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDO::errorCode 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9bce6acf829e39e5082d63f6a910731b709ef8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 03ed6428a6c655f3639bd66449506a6e50dd9186
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919373"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646178"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

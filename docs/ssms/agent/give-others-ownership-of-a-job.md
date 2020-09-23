@@ -1,4 +1,5 @@
 ---
+description: 將作業擁有權授與其他人
 title: 將作業擁有權授與其他人
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12302ebf660ca4d4c6b98ce29f7cb12a5b32f8e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cc6131719ffc3c683c06c720e0056a625d1f520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492128"
 ---
 # <a name="give-others-ownership-of-a-job"></a>將作業擁有權授與其他人
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 本主題描述如何將 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "85759784"
   
 -   **若要使用下列項目賦予作業擁有權給其他人：**  
   
-    [Transact-SQL](#SSMSProc2)  
+    [SQL Server Management Studio](#SSMSProc2)  
   
     [Transact-SQL](#TsqlProc2)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "85759784"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下作業，然後按一下 [屬性]  。  
+2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下作業，然後按一下 [屬性]****。  
   
 3.  在 **[擁有者]** 清單選取登入。 您必須是系統管理員，才能夠變更作業的擁有者。  
   

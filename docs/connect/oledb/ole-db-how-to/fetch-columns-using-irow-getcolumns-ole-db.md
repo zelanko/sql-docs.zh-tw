@@ -1,6 +1,6 @@
 ---
 title: 使用 IRow::GetColumns 擷取資料行 (OLE DB 驅動程式) | Microsoft Docs
-description: 使用 IRow::GetColumns 擷取資料行 (OLE DB)
+description: 了解如何使用 OLE DB Driver for SQL Server 中的 IRow::GetColumns 方法擷取資料行。 此範例會從資料列中逐一取得資料行。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c22a948cad5fdc2b41f1ac14b73d728be06b9c3f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244775"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860614"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

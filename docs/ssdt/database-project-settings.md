@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518848"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934109"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 
@@ -87,7 +87,7 @@ ms.locfileid: "85518848"
 |欄位|預設值|說明|  
 |---------|-----------------|---------------|  
 |目標平台|Microsoft SQL Server 2012|指定這個資料庫專案所設定的目標 SQL Server 版本。|  
-|為一般物件啟用擴充的 Transact\-SQL 驗證。|當您建立新專案時，不會啟用。<br /><br />當您從 [SQL Server 物件總管] 連接至 SQL Azure 以建立專案、將 SQL Azure 資料庫匯入專案或將專案的目標平台變更為 SQL Azure 時，則會啟用。|一旦啟用此選項，將報告在專案中所發現造成 SQL Server 編譯器驗證失敗的錯誤。 如果您將目標平台變更為 SQL Azure，擴充驗證就會變成啟用狀態。 儘管您變更目標平台，也不會取消勾選此選項。<br /><br />您可以對其他版本的 SQL Server 啟用此選項，但是驗證只限於 Microsoft SQL Server 2012 部分自主資料庫和 SQL Azure。 並非所有 SQL Server 版本都支援全部的 Transact\-SQL 語法。<br /><br />如需詳細資訊，請參閱本主題稍後的[擴充的 Transact-SQL 驗證](#bkmk_evf)|  
+|為一般物件啟用擴充的 Transact\-SQL 驗證。|當您建立新專案時，不會啟用。<br /><br />當您從 [SQL Server 物件總管] 連線至 SQL Azure 以建立專案、將 Azure SQL Database 匯入專案或將專案的目標平台變更為 SQL Azure 時，則會啟用。|一旦啟用此選項，將報告在專案中所發現造成 SQL Server 編譯器驗證失敗的錯誤。 如果您將目標平台變更為 SQL Azure，擴充驗證就會變成啟用狀態。 儘管您變更目標平台，也不會取消勾選此選項。<br /><br />您可以對其他版本的 SQL Server 啟用此選項，但是驗證只限於 Microsoft SQL Server 2012 部分自主資料庫和 SQL Azure。 並非所有 SQL Server 版本都支援全部的 Transact\-SQL 語法。<br /><br />如需詳細資訊，請參閱本主題稍後的[擴充的 Transact-SQL 驗證](#bkmk_evf)|  
 |輸出類型|||  
 |資料層應用程式 (.dacpac 檔案)|已啟用並鎖定。 建置資料庫專案時，專案的建置輸出一定會產生 .dacpac 封裝。|如果您正在使用具有 [建立其他下層 .dacpac 檔案 (v2.0)] 選項的 SQL Server Data Tools (SSDT) 版本，而且希望套件能與 SQL Server Management Studio 或 SQL Azure 管理入口網站相容，請選取該選項。 您可以直接從 (SSDT) 部署 .dacpac 套件，但在 SQL Server Data Tools 正式發行後，透過 SQL Server Management Studio 只能部署 2.0 版 .dacpac 檔案。|  
 |建立指令碼 (.sql 檔案)||指定是否要為專案中的所有物件產生整段 .sql CREATE 指令碼，並在建置專案時將指令碼放入 bin\debug 資料夾。 您可以使用 **[專案發行]** 命令或 SQL 比較公用程式來建立累加更新指令碼。|  
@@ -132,7 +132,7 @@ Compiler Service 具有兩種限制分類。
 -   SQL Azure 中繼資料定序 (Compiler Service 會使用 SQL Server 2012 部分自主資料庫中繼資料定序 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>啟用/停用擴充驗證  
-直接從 SQL Azure 資料庫建立的資料庫專案或其目標平台設定為 SQL Azure 的專案預設會啟用擴充的 Transact-SQL 驗證。 針對 SQL Azure 或是以 SQL Server 2012 為目標的應用程式範圍資料庫進行開發時，建議您使用擴充驗證。 如需應用程式範圍資料庫的詳細資訊，請參閱 [部分自主資料庫](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
+直接從 Azure SQL Database 建立的資料庫專案或其目標平台設定為 SQL Azure 的專案預設會啟用擴充的 Transact-SQL 驗證。 針對 SQL Azure 或是以 SQL Server 2012 為目標的應用程式範圍資料庫進行開發時，建議您使用擴充驗證。 如需應用程式範圍資料庫的詳細資訊，請參閱 [部分自主資料庫](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
   
 此外，當您開發 SQL Server 2008/R2 的應用程式範圍資料庫時，也可以使用擴充驗證功能，以達到與 Microsoft SQL Server 2012 和 SQL Azure 相容的目的。  
   
@@ -151,7 +151,7 @@ Compiler Service 具有兩種限制分類。
   
 2.  在 [屬性] 中，將 [擴充的 T-SQL 驗證] 屬性變更為 [False]。  
   
-![檔案屬性](../ssdt/media/ssdt-evf.gif "檔案屬性")  
+    ![檔案屬性](../ssdt/media/ssdt-evf.gif "檔案屬性")  
   
 ### <a name="special-considerations-for-collations"></a>定序的特殊考量  
 如需部分自主資料庫中之定序的詳細資訊，請參閱 [自主資料庫定序](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  

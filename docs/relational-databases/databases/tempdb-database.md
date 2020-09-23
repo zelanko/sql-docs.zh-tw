@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafc98ea91b60ec21396e1b25eca2684e24f5cfc
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861366"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076823"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -228,15 +227,33 @@ GO
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
 
+### <a name="configuring-and-using-memory-optimized-tempdb-metadata"></a>設定和使用記憶體最佳化 tempdb 中繼資料
+
 若要選擇加入這個新功能，請使用下列指令碼：
 
 ```sql
-ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 ```
 
 這項設定變更需要重新啟動服務才會生效。
 
-此實作有一些限制：
+您可以使用以下 T-SQL 命令驗證 `tempdb` 是否經記憶體最佳化：
+
+```sql
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
+```
+
+若伺服器在您啟用經記憶體最佳化的 `tempdb` 中繼資料後因任何原因而無法啟動，則您可以透過 **-f** 啟動選項，以[最低組態](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)啟動 SQL Server 執行個體來略過此功能。 您接著可以停用此功能，然後以一般模式重新啟動 SQL Server。
+
+若要防止伺服器發生記憶體不足的狀況，您可以將 `tempdb` 繫結至[資源集區](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)。 此作業須透過 [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) 命令來完成，而非執行您將資源集區繫結至資料庫時通常會遵循的步驟。
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+```
+
+此變更也需要重新啟動才會生效，即使已啟用記憶體最佳化 tempdb 中繼資料，仍是如此。
+
+### <a name="memory-optimized-tempdb-limitations"></a>記憶體最佳化 tempdb 限制
 
 - 功能開關切換不是動態的。 因為內部變更需要作用於 `tempdb` 的結構，所以啟用或停用此功能都必須重新開機。
 
@@ -249,12 +266,15 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
   範例：
     
   ```sql
-  BEGIN TRAN
+  BEGIN TRAN;
+  
   SELECT *
-  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  FROM tempdb.sys.tables;  -----> Creates a user in-memory OLTP transaction in tempdb
+  
   INSERT INTO <user database>.<schema>.<mem-optimized table>
-  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
-   COMMIT TRAN
+  VALUES (1); ----> Tries to create a user in-memory OLTP transaction in the user database but will fail
+  
+  COMMIT TRAN;
   ```
     
 - 針對經記憶體最佳化資料表的查詢不支援鎖定和隔離提示，因此，針對經記憶體最佳化 `tempdb` 目錄檢視的查詢將不支援鎖定和隔離提示。 至於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的其他系統目錄檢視，針對系統檢視的所有交易都會在 `READ COMMITTED` (或在此範例中為 `READ COMMITTED SNAPSHOT`) 隔離中。
@@ -265,14 +285,6 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 
 > [!NOTE] 
 > 只有當您參考 `tempdb` 系統檢視時，才適用這些限制。 如有需要，您可以在與存取使用者資料庫中經記憶體最佳化資料表相同的交易中建立暫存資料表。
-
-您可以使用以下 T-SQL 命令驗證 `tempdb` 是否經記憶體最佳化：
-
-```
-SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
-```
-
-若伺服器在您啟用經記憶體最佳化的 `tempdb` 中繼資料後因任何原因而無法啟動，則您可以透過 **-f** 啟動選項，以[最低組態](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)啟動 SQL Server 執行個體來略過此功能。 您接著可以停用此功能，然後以一般模式重新啟動 SQL Server。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中 tempdb 的容量規劃
 在決定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生產環境中的 `tempdb` 適當大小時，您需要考量許多因素。 如先前所述，這些因素包括現有的工作負載與使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：

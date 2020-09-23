@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式以資料流形式擷取字元資料 | Microsoft Docs
+title: 使用 SQLSRV 驅動程式以資料流形式擷取字元資料
+description: 本主題說明在使用 Microsoft SQLSRV Driver for PHP for SQL Server 時如何以資料流的形式擷取字元資料
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4dfdc85256a5f9e85f8ee4ac5b090a4088e90a9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0665f02e81c09a7ac753da738efa6cd92cc62c3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916194"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680597"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80916194"
 SQLSRV 驅動程式會利用 PHP 資料流，從伺服器擷取大量的資料。 本主題中的範例會示範如何以資料流的形式擷取字元資料。  
   
 ## <a name="example"></a>範例  
-下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 傳回資料列的 [註解]  欄位會以資料流的形式擷取，並使用 PHP [fpassthru](https://php.net/manual/function.fpassthru.php) 函式來顯示。  
+下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 傳回資料列的 [註解]** 欄位會以資料流的形式擷取，並使用 PHP [fpassthru](https://php.net/manual/function.fpassthru.php) 函式來顯示。  
   
 使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 搭配指定為字元資料流的傳回類型，可完成以資料流的形式擷取資料的作業。 使用常數 **SQLSRV_PHPTYPE_STREAM** 可指定傳回型別。 如需 **sqlsrv** 常數的資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   

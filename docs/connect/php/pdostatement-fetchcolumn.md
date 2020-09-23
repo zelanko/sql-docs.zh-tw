@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchColumn | Microsoft Docs
+title: PDOStatement::fetchColumn
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::fetchColumn 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9619ca2292416f6f28b14edd0ee0801826aae8f6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbfc332339e3cd5e17890ef3a7ef9341474a8189
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928573"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645081"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

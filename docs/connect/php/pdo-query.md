@@ -1,5 +1,6 @@
 ---
-title: PDO::query | Microsoft Docs
+title: PDO::query
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDO::query 函式適用的 API 參考。
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919170"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410944"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>參數  
 *$statement*：您要執行的 SQL 陳述式。  
   
-*$fetch_style*：有關如何執行查詢的選擇性指示。 如需詳細資訊，請參閱＜備註＞一節。可以使用 PDO::fetch 中的 $ $fetch_style*覆寫 PDO::query 中的* *fetch_style*。  
+*$fetch_style*：有關如何執行查詢的選擇性指示。 如需詳細資訊，請參閱＜備註＞一節。可以使用 PDO::fetch 中的 $*fetch_style* 覆寫 PDO::query 中的  $*fetch_style*。  
   
 ## <a name="return-value"></a>傳回值  
 如果呼叫成功，PDO::query 會傳回 PDOStatement 物件。 如果呼叫失敗，PDO::query 會擲回 PDOException 物件或傳回 false (視 PDO::ATTR_ERRMODE 的設定而定)。  
@@ -47,7 +48,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 PDO::exec 的行為；如需詳細�
   
 您可以為 $*fetch_style* 指定下列選項。  
   
-|Style|描述|  
+|樣式|描述|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|指定的資料行中資料的查詢。 資料表中的第一個資料行是資料行 0。|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server 訊息結果 | Microsoft Docs
-description: SQL Server 訊息結果
+title: SQL Server 訊息結果 (OLE DB 驅動程式)
+description: 了解不會產生 OLE DB Driver for SQL Server 資料列集或計數的 Transact-SQL 陳述式，以及其預期的傳回值。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, errors
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: dfebd7443b24d09e6bf7696caba5449c1890e0d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc3701313f920eead650435ca40538ad8a4b6ef0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998281"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862500"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 訊息結果
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式不會產生 OLE DB Driver for SQL Server 資料列集或執行時受到影響之資料列的計數：  
+下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式不會產生 OLE DB Driver for SQL Server 資料列集或執行時受到影響之資料列的計數：  
   
 -   PRINT  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85998281"
   
  OLE DB Driver for SQL Server 會傳回 S_OK，而且在執行許多 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之後，或在取用者執行 OLE DB Driver for SQL Server 成員函式之後，會提供一或多個參考用訊息。  
   
- 每個成員函數執行之後，不管傳回碼的值為何、傳回的 **IRowset** 或 **IMultipleResults** 介面參考是否存在，或者受影響的資料列計數為何，允許動態指定查詢文字的 OLE DB Driver for SQL Server 取用者都應該會檢查錯誤介面。  
+OLE DB Driver for SQL Server 取用者可以動態指定查詢文字。 取用者應在_每次_執行成員函式後檢查錯誤介面。 無論傳回碼的值為何、是否傳回對 `IRowset` 或 `IMultipleResults` 的介面參考、受影響的資料列計數為何，都一律應執行這些檢查。
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../oledb/ole-db-errors/errors.md)  

@@ -1,4 +1,5 @@
 ---
+description: 修改或刪除角色指派 (SSRS 入口網站)
 title: 修改或刪除角色指派 (SSRS Web 入口網站) | Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: defe3952f9fd3c5c4eb4453c2071820cb44a3fb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480650"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色指派 - 修改或刪除
 
@@ -37,13 +38,13 @@ ms.locfileid: "65570650"
   
 1. 存取[報表伺服器的入口網站 &#40;SSRS 原生模式&#41;](../../reporting-services/web-portal-ssrs-native-mode.md)。
 
-2. 選取 [站台設定]   > [安全性]  。 如此就會依據帳戶名稱列出目前針對伺服器或向外延展部署所定義的所有系統層級角色指派。
+2. 選取 [站台設定] > [安全性]。 如此就會依據帳戶名稱列出目前針對伺服器或向外延展部署所定義的所有系統層級角色指派。
 
 3. 尋找您想要修改或刪除的角色指派。
 
-4. 若要新增或移除特定使用者或群組的角色，選取 [編輯]  。
+4. 若要新增或移除特定使用者或群組的角色，選取 [編輯]****。
 
-5. 若要刪除角色指派，選取使用者或群組名稱旁的核取方塊，然後選取 [刪除]  。
+5. 若要刪除角色指派，選取使用者或群組名稱旁的核取方塊，然後選取 [刪除]****。
 
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>若要修改或刪除項目角色指派
 
@@ -51,15 +52,15 @@ ms.locfileid: "65570650"
 
 2. 將滑鼠停留在該項目上，然後選取下拉箭號。
 
-3. 在下拉式功能表中選取 [安全性]  。
+3. 在下拉式功能表中選取 [安全性]****。
 
 4. 尋找您想要修改或刪除的角色指派。
 
-5. 若要新增或移除特定使用者或群組的角色，選取 [編輯]  。
+5. 若要新增或移除特定使用者或群組的角色，選取 [編輯]****。
 
-6. 若要刪除角色指派，選取使用者或群組名稱旁的核取方塊，然後選取 [刪除]  。
+6. 若要刪除角色指派，選取使用者或群組名稱旁的核取方塊，然後選取 [刪除]****。
 
 ## <a name="see-also"></a>另請參閱
 
-[建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [角色指派](../../reporting-services/security/role-assignments.md)  

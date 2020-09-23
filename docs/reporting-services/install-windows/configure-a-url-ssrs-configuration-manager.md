@@ -1,4 +1,5 @@
 ---
+description: 設定 URL (SSRS 組態管理員)
 title: 設定 URL (組態管理員) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427090"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器]  選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -68,7 +69,7 @@ ms.locfileid: "81487167"
   
     -   **[::1]** 是 IPv6 格式的回送位址。  
   
-    -   特定的 IP 位址也會出現在這個清單中。 IP 位址可以採用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是電腦網路介面卡的 32 位元 IPv4 位址。 IPv6 位址為 128 位元，具有以冒號分隔的八個 4 位元組的欄位：\<前置詞>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   特定的 IP 位址也會出現在這個清單中。 IP 位址可以採用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是電腦網路介面卡的 32 位元 IPv4 位址。 IPv6 位址為 128 位元，具有以冒號分隔的八個 4 位元組的欄位：\<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          如果您有多張網路介面卡或是您的網路同時支援 IPv4 和 IPv6 位址，您將會看到多個 IP 位址。 如果您只選取一個 IP 位址，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。 一般來說，如果您選取這個值，這是因為您正在設定多個同時也指定明確 IP 位址或主機名稱的 URL 保留項目 (例如，一個項目用於內部網路連接的網路介面卡，另一個項目用於外部網路連接)。  
   

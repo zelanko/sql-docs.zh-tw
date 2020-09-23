@@ -1,7 +1,8 @@
 ---
-title: 連線共用 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: 連接共用 (Microsoft Drivers for PHP for SQL Server)
+description: 深入了解使用 Microsoft Driver for PHP for SQL Server 時的連線共用，以及此體驗在不同的作業系統上可能有哪些差異。
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900984"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435268"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>連接共用 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80900984"
   
 -   依預設會在 Windows 中啟用連線共用。 在 Linux 與 macOS 中，只有在已針對 ODBC 啟用連線共用時才會共用連線 (請參閱[啟用/停用連線共用](#enablingdisabling-connection-pooling))。 當連線共用已啟用且您連線到伺服器時，驅動程式會在建立新連線之前先嘗試使用共用連線。 如果在集區中找不到等同的連接，則會建立新連接，並加入至集區。 驅動程式會根據連接字串的比較，來判斷連接是否相等。  
   
--   使用來自集區的連接時，連接狀態會重設。  
+-   使用來自集區的連線時，連線狀態會重設 (僅限 Windows)。  
   
 -   關閉連接會將連接傳回集區。  
   
@@ -39,8 +40,12 @@ ms.locfileid: "80900984"
 您可以將連接字串的 *ConnectionPooling* 屬性值設定為 **false** (或 0)，以強制驅動程式建立新連線 (而不是在連線集區中尋找相同的連線)。  
   
 如果在連接字串中省略 *ConnectionPooling* 屬性，或是將該屬性設定為 **true** (或 1)，則只有在連線集區中沒有相同的連線存在時，驅動程式才會建立新的連線。  
+
+> [!NOTE]  
+> 依預設會啟用 Multiple Active Result Set (MARS)。 如果同時使用了 MARS 和共用，為了讓 MARS 能夠正常運作，驅動程式需要較長的時間來重設*第一個*查詢的連線，因此會忽略任何指定的查詢逾時。 不過，查詢逾時設定將在後續的查詢中生效。
   
-如需其他連接屬性的相關資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
+如有必要，請參閱[如何：停用 Multiple Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。 如需其他連接屬性的相關資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
+
 ### <a name="linux-and-macos"></a>Linux 與 macOS
 *ConnectionPooling* 屬性無法用來啟用/停用連線共用。 
 
@@ -51,7 +56,7 @@ ms.locfileid: "80900984"
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ odbcinst.ini 檔案看起來至少要像下面的範例一樣：
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>備註
-- 在 Linux 或 macOS 中，如果已在 odbcinst.ini 檔案中啟用共用，所有連線都會共用。 這表示 ConnectionPooling 連線選項沒有任何作用。 若要停用共用，請在 odbcinst.ini 檔案中設定 Pooling=No，然後重新載入驅動程式。
+- 在 Linux 或 macOS 中，不建議將連線共用使用於 2.3.7 之前的 unixODBC。 如果已在 odbcinst.ini 檔案中啟用共用，即表示 ConnectionPooling 連線選項沒有作用，因此所有連線都會共用。 若要停用共用，請在 odbcinst.ini 檔案中設定 Pooling=No，然後重新載入驅動程式。 
   - unixODBC <= 2.3.4 (Linux 與 macOS) 可能不會傳回適當的診斷資訊，例如錯誤訊息、警告與資訊訊息
   - 基於此理由，SQLSRV 與 PDO_SQLSRV 驅動程式可能無法正確地以字串形式擷取長資料 (例如 xml、binary)。 作為因應措施，長資料能以資料流的方式擷取。 針對 SQLSRV，請參閱下面的範例。
 
@@ -125,7 +130,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 Windows 驗證進行連線](../../connect/php/how-to-connect-using-windows-authentication.md)
+[如何：使用 Windows 驗證進行連接](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[操作說明：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

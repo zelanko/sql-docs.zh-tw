@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003952"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195124"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6，適用於 VS 2017 的 &nbsp; SSDT
+
+發行日期：&nbsp; 2020 年 8 月 31 日  
+組建編號：&nbsp; 14.0.16222.0  
+適用於 Visual Studio 2017 的 SSDT。 
+
+### <a name="whats-new"></a>新功能
+
+| 新項目 | 詳細資料 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 已修正在連線至 SQL Server Analysis Services (SSAS) 資料來源時，[預覽] 按鈕對於 OLE DB 來源無法運作的問題。 |
+| Integration Services (SSIS) | 已修正在移除相關聯的路徑之前即移除資料流程元件的輸入或輸出可能會導致 COMException 錯誤的問題。 |
+| Integration Services (SSIS) | 已修正 SSAS 處理工作無法連線至 Power BI 工作區並重新整理其模型的問題。 |
+| Integration Services (SSIS) | 已修正在使用 x64 執行階段並以 SQL Server 2017 為目標時，Visual Studio 會在偵錯指令碼工作/元件上停止回應的問題。 |
+| Integration Services (SSIS) | 已修正在某些環境中選取 MySQL 驅動程式時，「匯入/匯出精靈」會損毀的問題。 |
+| Integration Services (SSIS) | 已修正某些與協助工具和高 DPI 有關的問題。 |
+| Integration Services (SSIS) | 允許使用者在開啟套件時略過驗證，這有助於改善效能。 如需詳細資訊，請參閱[在 SSDT 中加速開啟 SSIS 套件](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099)。 |
+| Integration Services (SSIS) | 在目標伺服器版本不是 SQL Server 2017 時，封鎖部署至 Azure-SSIS 的作業。 |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :---------- | :------ |
+| 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用於偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
+| Power Query 來源未當地語系化。 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5，適用於 VS 2017 的 SSDT&nbsp;
 
@@ -624,7 +653,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：  &nbsp; 14.0.61707.300  
-適用於 Visual Studio 2015 的 SSDT。
+適用於 Visual Studio 2015 的 SSDT。 
 
 ### <a name="whats-new"></a>新功能
 
@@ -640,7 +669,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 **AS 專案**
 - 認可 DAX 量值變更和其他模型編輯時，對改善體驗所進行的大幅效能修正。
-- 修正使用 1400 相容性層級表格式模型之 Analysis Services 專案中的一些 PowerQuery 整合問題。
+- 修正使用 1400 相容性層級表格式模型之 Analysis Services 專案中的一些 Power Query 整合問題。
 - 修正 VS2017 的多維專案中可能無法載入設計彙總設計工具的問題。
 - 修正拖曳 Analysis Services 多維 DSV 圖表中可能會讓 VS 2017 當機之項目時的問題。
 - 修正 AS 專案中 [部署] 對話方塊不一定會在 Visual Studio 前景的問題。
@@ -671,7 +700,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：  &nbsp; 14.0.61705.170  
-適用於 Visual Studio 2015 的 SSDT。
+適用於 Visual Studio 2015 的 SSDT。 
 
 ### <a name="whats-new"></a>新功能
 **AS 專案：**
@@ -978,7 +1007,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 發行日期：  &nbsp; 2016 年 6 月 30 日  
 組建編號：  &nbsp; 14.0.60629.0  
-適用於 SQL Server 2016。
+適用於 SQL Server 2016。 
 
 **新功能**  
 - **Always Encrypted 支援：** 針對包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 與命令列工具 (SqlPackage.exe) 新增 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
@@ -989,7 +1018,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 **更新和修正**
 * **資料庫工具︰**
     * 從現在起，SSDT 將永遠不會停用資料庫的「透明資料加密」(TDE)。 先前因為停用專案資料庫設定中的預設加密選項，所以會關閉加密。 透過此修正可啟用加密，但在發行期間永遠不會停用。 
-    * 增加初始連線期間 Azure SQL DB 連線的重試計數和復原能力。
+    * 增加初始連線期間 Azure SQL Database 連線的重試計數和復原能力。
     * 如果預設檔案群組不是 PRIMARY，匯入/發佈至 Azure V12 將會失敗。 現在發行時會忽略此設定。
     * 已修正當匯出的資料庫含有啟用「引號識別項」的物件時，匯出驗證可能會在某些情況下失敗的問題。
     * 已修正在建立 Hekaton 資料表時不正確加入 TEXTIMAGE_ON 選項的問題，這是不允許的動作。

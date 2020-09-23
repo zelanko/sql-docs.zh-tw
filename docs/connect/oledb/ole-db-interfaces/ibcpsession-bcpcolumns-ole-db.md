@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPColumns (OLE DB 驅動程式) | Microsoft Docs
-description: IBCPSession::BCPColumns (OLE DB)
+description: 了解 IBCPSession::BCPColumns 方法如何設定要與 OLE DB Driver for SQL Server 中的 SQL Server 資料表所含的資料行繫結的欄位數目。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba6126113fef947aa1253ff5ac4b9291ec2f6924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2eb8456d75a1dd04be2c547db957edf2e01bcaca
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244682"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860211"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。 針對大量複製作業呼叫此方法超過一次時，也會發生這個狀況。  

@@ -1,6 +1,6 @@
 ---
 title: R 教學課程：部署模型
-description: 本教學課程示範如何在資料庫內分析的 SQL Server 上部署 R 模型。
+description: 了解如何從預存程序呼叫定型的模型，以在實際執行環境中部署 R 模型。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781787"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179743"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型，並將其用於 SQL Server (逐步解說)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在本課中，您將了解如何從預存程序呼叫定型模型，以便在實際執行環境中部署 R 模型。 您可以從 R 或任何支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的應用程式設計語言 (如 C#、Java、Python 等) 叫用預存程序，並使用模型進行新的觀察預測。
 
@@ -228,6 +228,6 @@ ms.locfileid: "85781787"
 您也可以探索下列額外的範例和資源：
 
 + [資料科學案例和解決方案範本](data-science-scenarios-and-solution-templates.md)
-+ [資料庫內的進階分析](sqldev-in-database-r-for-sql-developers.md)
++ [資料庫內的進階分析](r-taxi-classification-introduction.md)
 + [Machine Learning Server 操作指南](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Machine Learning Server 其他資源](https://docs.microsoft.com//machine-learning-server/resources-more)

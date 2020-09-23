@@ -1,5 +1,6 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 概觀 | Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 概觀
+description: 了解 Microsoft SQLSRV/PDO_SQSRV Driver for PHP for SQL Server 的概觀，以及如何在 PHP 應用程式中將其用於資料庫存取。
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c8f5cbf011165b41b353a37d8973031f55c2db6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 556d13a5b29a53b323b41bc9b697d7ad934ca143
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922818"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042779"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 概觀
 
@@ -43,8 +44,6 @@ ms.locfileid: "80922818"
 
 ## <a name="see-also"></a>另請參閱
 
-[開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-
-[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[範例應用程式 &#40;SQLSRV 驅動程式&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)  
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)  
+[範例應用程式 &#40;SQLSRV 驅動程式&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

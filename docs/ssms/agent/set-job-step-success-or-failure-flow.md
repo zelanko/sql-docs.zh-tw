@@ -1,4 +1,5 @@
 ---
+description: 設定作業步驟成功或失敗的流程
 title: 設定作業步驟成功或失敗的流程
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4016ec2e5bab05b56cd5b49e345f5b83cbcc903
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d402e5032ade32e12941cf43a38f43898eddddc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497548"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 建立 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業時，您可以指定作業執行期間發生失敗時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應採取什麼動作。 決定每個作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應採取的動作。 接著，依照下列程序使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來設定作業步驟動作流程。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "85644474"
   
 -   **若要使用下列項目，設定作業步驟成功或失敗的流程：**  
   
-    [Transact-SQL](#SSMS)  
+    [SQL Server Management Studio](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -52,25 +53,25 @@ ms.locfileid: "85644474"
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
-1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
+1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
   
-2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]****。  
   
-3.  按一下 **[步驟]** 頁面，再按一下步驟，然後按一下 **[編輯]** 。  
+3.  按一下 **[步驟]** 頁面，再按一下步驟，然後按一下 **[編輯]**。  
   
 4.  在 **[作業步驟屬性]** 對話方塊中，選取 **[進階]** 頁面。  
   
-5.  在 [成功時的動作]  清單中，按一下作業步驟順利完成時要執行的動作。  
+5.  在 [成功時的動作]**** 清單中，按一下作業步驟順利完成時要執行的動作。  
   
-6.  在 **[重試次數]** 方塊中，輸入介於 0 到 9999 間的值，此值是當發生作業步驟失敗前應該重試的次數。 如果在 [重試次數]  方塊中指定大於 0 的值，請在 [重試間隔 (分鐘)]  方塊內輸入 1 至 9999 間的分鐘數，此值為作業步驟在重試前所應等待的時間。  
+6.  在 **[重試次數]** 方塊中，輸入介於 0 到 9999 間的值，此值是當發生作業步驟失敗前應該重試的次數。 如果在 [重試次數]**** 方塊中指定大於 0 的值，請在 [重試間隔 (分鐘)]**** 方塊內輸入 1 至 9999 間的分鐘數，此值為作業步驟在重試前所應等待的時間。  
   
 7.  在 **[當動作失敗時]** 清單中，按一下當作業步驟失敗時要執行的動作。  
   
 8.  如果作業是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，您可以從下列選項中選擇：  
   
-    -   在 **[輸出檔]** 方塊中，輸入要寫入指令碼輸出的輸出檔名稱。 根據預設，每次執行作業步驟時都會覆寫此檔案。 如果您不想要覆寫輸出檔，請選取 **[將輸出附加至現有檔案]** 。  
+    -   在 **[輸出檔]** 方塊中，輸入要寫入指令碼輸出的輸出檔名稱。 根據預設，每次執行作業步驟時都會覆寫此檔案。 如果您不想要覆寫輸出檔，請選取 **[將輸出附加至現有檔案]**。  
   
-    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]** 。 作業步驟執行之後，您可以按一下 **[檢視]** 以檢視這個資料表的內容。  
+    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]**。 作業步驟執行之後，您可以按一下 **[檢視]** 以檢視這個資料表的內容。  
   
     -   如果您希望步驟的記錄中包含輸出，請選取 **[包含步驟輸出於記錄中]** 。 只有無錯誤時，才會顯示輸出。 另外，輸出可能被截斷。  
   

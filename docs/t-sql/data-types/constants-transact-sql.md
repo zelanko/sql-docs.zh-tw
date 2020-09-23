@@ -2,7 +2,7 @@
 description: 常數 (Transact-SQL)
 title: 常數 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422932"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027279"
 ---
 # <a name="constants-transact-sql"></a>常數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422932"
 常數也稱為常值或純量值，是一個代表特定資料值的符號。 常數的格式會隨著所代表之值的資料類型而不同。
   
 ## <a name="character-string-constants"></a>字元字串常數
-字元字串常數含括在單引號中，其中包括英數字元 (a-z、A-Z 和 0-9) 以及特殊字元，如驚歎號 (!)、@ 記號 (@) 和數字符號 (#)。 除非利用 COLLATE 子句來指定定序，否則，字元字串常值會被指派目前資料庫的預設定序。 使用者所輸入的字元字串是透過電腦的字碼頁來評估的，必要的話，它們會轉換成資料庫預設字碼頁。
+字元字串常數含括在單引號中，其中包括英數字元 (a-z、A-Z 和 0-9) 以及特殊字元，如驚歎號 (!)、@ 記號 (@) 和數字符號 (#)。 字元字串常數會被指派目前資料庫的預設定序。 如果使用 COLLATE 子句，則在轉換為 COLLATE 子句所指定的定序之前，仍會先轉換為資料庫預設字碼頁。 使用者所輸入的字元字串是透過電腦的字碼頁來評估的，必要的話，它們會轉換成資料庫預設字碼頁。
+
+> [!NOTE]
+> 使用 COLLATE 子句指定[已啟用 UTF8 的定序](../../relational-databases/collations/collation-and-unicode-support.md#utf8)時，在轉換為 COLLATE 子句所指定的定序之前，仍會先轉換為資料庫預設字碼頁。 並不會直接轉換為已啟用 Unicode 的指定定序。 如需詳細資訊，請參閱 [Unicode 字串](#unicode-strings)。
   
-如果連接的 QUOTED_IDENTIFIER 選項已設為 OFF，就可以將字元字串括在雙引號內，但 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者和 ODBC 驅動程式會自動使用 SET QUOTED_IDENTIFIER ON。 我們建議您使用單引號。
+如果連線的 QUOTED_IDENTIFIER 選項已設為 OFF，也就可將字元字串含括在雙引號內，但 Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) 會自動使用 `SET QUOTED_IDENTIFIER ON`。 我們建議您使用單引號。
   
 如果括在單引號中的字元字串包含內嵌雙引號，請用兩個單引號來表示內嵌的單引號。 內嵌在雙引號內的字串，不需要如此。
   
@@ -64,18 +67,23 @@ ms.locfileid: "88422932"
   
 空字串用不含任何東西的兩個單引號來表示。 在 6.x 相容性模式中用單一空格來表示空字串。
   
-字元字串常數支援增強型定序。
+字元字串常數支援增強型[定序](../../relational-databases/collations/collation-and-unicode-support.md)。
   
 > [!NOTE]  
->  大於 8000 位元組的字元常數類型為 **varchar(max)** 資料。  
+> 大於 8000 位元組的字元常數類型為 **varchar(max)** 資料。  
   
 ## <a name="unicode-strings"></a>Unicode 字串
-Unicode 字串的格式類似於字元字串，但前面附加了 N 識別碼 (N 代表 SQL-92 標準中的國家 (地區) 語言)。 N 前置詞必須是大寫。 例如，'Michél' 是一個字元常數，而 N'Michél' 則為 Unicode 常數。 Unicode 常數會解譯成 Unicode 資料，並不會用字碼頁來評估。 Unicode 常數有定序。 這個定序主要用來控制比較和區分大小寫。 除非利用 COLLATE 子句來指定定序，否則，Unicode 常數會被指派目前資料庫的預設定序。 Unicode 資料是利用每個字元 2 位元組來儲存的，而不是字元資料的每個字元 1 個位元組。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
+Unicode 字串的格式類似於字元字串，但前面附加了 N 識別碼 (N 代表 SQL-92 標準中的國家 (地區) 語言)。 
+
+> [!IMPORTANT]  
+> N 前置詞必須是大寫。 
+
+例如，`'Michél'` 是一個字元常數，而 `N'Michél'` 則是 Unicode 常數。 Unicode 常數會解譯成 Unicode 資料，並不會用字碼頁來評估。 Unicode 常數有定序。 這個定序主要用來控制比較和區分大小寫。 Unicode 常數會被指派目前資料庫的預設定序。 如果使用 COLLATE 子句，則在轉換為 COLLATE 子句所指定的定序之前，仍會先轉換為資料庫預設定序。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。
   
 Unicode 字串常數支援增強型定序。
   
 > [!NOTE]  
->  大於 8000 位元組的 Unicode 常數類型為 **nvarchar(max)** 資料。  
+> 大於 8000 位元組的 Unicode 常數類型為 **nvarchar(max)** 資料。  
   
 ## <a name="binary-constants"></a>二進位常數
 二進位常數的前置詞是 `0x`，它是一個十六進位數字字串。 它們不需加上引號。
@@ -200,11 +208,12 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>增強型定序  
-SQL Server 支援字元及支援增強型定序的 Unicode 字串常數。 如需詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 子句。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 支援字元及支援增強型定序的 Unicode 字串常數。 如需詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) 子句。
   
 ## <a name="see-also"></a>另請參閱
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)  
+[定序優先順序](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

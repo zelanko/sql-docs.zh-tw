@@ -1,4 +1,5 @@
 ---
+description: 保護我的報表
 title: 保護我的報表 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498031"
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  
@@ -32,7 +33,7 @@ ms.locfileid: "65570692"
   
  **我的報表** 角色指派是由下列元素組成：  
   
--   使用者的 [我的報表] 資料夾，位於 Users Folders\\\<使用者名稱>\My Reports 資料夾內。  
+-   使用者的 [我的報表] 資料夾，位於 Users Folders\\ *\<username>* \My Reports 資料夾內。  
   
 -   使用者帳戶，會判斷何時啟用 [我的報表] 資料夾。 資料夾是當使用者按一下報表管理員的 [我的報表] 資料夾，或者從報表設計師發行報表至 [我的報表] 資料夾時啟用。 此資料夾也會在使用者要求 [我的報表] 連結的屬性時啟用。  
   

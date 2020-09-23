@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286462"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282393"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>伺服器屬性進階頁面 - Power BI 報表伺服器和 Reporting Services
 
@@ -51,7 +51,17 @@ ms.locfileid: "79286462"
 
 (僅限 Power BI 報表伺服器 2020 年 1 月、Reporting Services 2019 及更新版本)
 
-設定所有符合指定 regex 模式的 URL 標頭值。 使用者可以使用有效的 XML 來更新 CustomHeaders 值，以設定所選要求 URL 的標頭值。 系統管理員可以在 XML 中新增任意數量的標頭。 根據預設，不會有任何自訂標頭，且值為空白。 
+設定所有符合指定 regex 模式的 URL 標頭值。 使用者可以使用有效的 XML 來更新 CustomHeaders 值，以設定所選要求 URL 的標頭值。 系統管理員可以在 XML 中新增任意數量的標頭。 在 Reporting Services 2019 中，依預設不會有自訂標頭，其值為空白。 在 Power BI 報表伺服器 2020 年 1 月和更新版本中，預設值為：
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > 太多標頭可能會影響效能。 
@@ -154,7 +164,7 @@ ms.locfileid: "79286462"
 要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括 **-1** 至 **2**、**147**、**483**和**647**。 如果此值為 **-1**，系統不會從執行記錄資料表中刪除項目。 預設值是 **60**秒。  
 
 > [!NOTE]
-> 將值設定為 **0** 會「刪除」  執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，且不會將其刪除。
+> 將值設定為 **0 會「刪除」** ** 執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，且不會將其刪除。
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 設定執行記錄層級。 *預設值為「標準」。*
@@ -205,7 +215,7 @@ RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名
 (僅限 Power BI 報表伺服器、Reporting Services 2017 及更新版本) 啟用用戶端工具下載功能表。 *預設值為 true。*
 
 ### <a name="sitename"></a>SiteName
-顯示在入口網站頁面標題中的報表伺服器網站名稱。 預設值為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 這個屬性可以是空字串。 最大長度是 8,000 個字元。  
+顯示在入口網站頁面標題中的報表伺服器網站名稱。 預設值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 這個屬性可以是空字串。 最大長度是 8,000 個字元。  
 
 ### <a name="snapshotcompression"></a>SnapshotCompression
 定義快照集的壓縮方式。 預設值是 **SQL**秒。 有效值如下：
@@ -213,7 +223,7 @@ RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名
 |值|描述|
 |---------|---------|
 |**SQL**|快照集在儲存於報表伺服器資料庫時會進行壓縮。 此壓縮為目前的行為。|
-|**None**|系統不會壓縮快照集。|
+|**無**|系統不會壓縮快照集。|
 |**全部**|系統會針對所有儲存選項壓縮快照集，包括報表伺服器資料庫或是檔案系統。|
 
 ### <a name="storedparameterslifetime"></a>StoredParametersLifetime
@@ -223,7 +233,7 @@ RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名
 指定報表伺服器可儲存的最大參數值數目。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值是 **1500**秒。  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(僅限 Power BI 報表伺服器 2019 年 1 月、Reporting Services 2019 及更新版本)：設定可在超連結動作上定義以便轉譯的 URI 配置清單 (以逗號分隔)，或 “&ast;” 以啟用所有超連結配置。 例如，設定 “http,https” 會允許 “https://www. contoso.com” 的超連結，但會移除 “mailto:bill@contoso.com” 或 “javascript:window.open(‘ www.contoso.com’, ‘_blank’)” 的超連結。 預設為 “&ast;”。
+(僅限 Power BI 報表伺服器 2019 年 1 月、Reporting Services 2019 及更新版本)：設定可在超連結動作上定義以便轉譯的 URI 配置清單 (以逗號分隔)，或 “&ast;” 以啟用所有超連結配置。 例如，設定 “http,https” 會允許 “https://www. 但是會移除 “mailto:bill@contoso.com” 或 “javascript:window.open(‘ www.contoso.com’, ‘_blank’)” 的超連結。 預設為 "&ast;"。
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 在報表伺服器命名空間中管理之所有報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800**秒。  

@@ -1,6 +1,6 @@
 ---
 title: R 教學課程：SQL 中的開發模型
-description: 示範如何針對資料庫內分析建立端對端 R 解決方案的教學課程。
+description: 了解如何根據 SQL Server 2016 或 SQL Server 2017 中的 R 功能支援，建置預測性模型的端對端解決方案。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781790"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179745"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用 R 資料科學家的 SQL 開發
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在這個適用資料科學家的教學課程中，瞭解如何根據 SQL Server 2016 或 SQL Server 2017 中的 R 功能支援，建置預測性模型的端對端解決方案。 本教學課程使用 SQL Server 上的 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 資料庫。 
 

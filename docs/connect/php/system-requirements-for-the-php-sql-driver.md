@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP 的系統需求
 description: Microsoft Drivers for PHP for SQL Server 支援各種 PHP 版本、作業系統和 SQL Server 版本。
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
-ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0ae11dd3a13ac8b2071943c49ef1ae4b8c400f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635705"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540462"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的系統需求
 
@@ -47,30 +46,18 @@ PHP 執行所在的電腦上需要正確版本的 Microsoft ODBC Driver for SQL 
 
 如果您要在 64 位元版本的 Windows 上下載 Windows 版本的驅動程式，ODBC 64 位元安裝程式會同時安裝 32 位元和 64 位元的 ODBC 驅動程式。 如果您使用 32 位元版本的 Windows，請使用 ODBC x86 安裝程式。 在非 Windows 平台上，只有 64 位元版本的驅動程式可供使用。
 
-|PHP for SQL Server 驅動程式版本 &#8594;<br />&#8595; ODBC 驅動程式版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP 驅動程式版本 &#8594;<br />&#8595; ODBC 驅動程式版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC 驅動程式 17+ |Y|Y|Y|Y| | | |
-|ODBC 驅動程式 13.1|Y|Y|Y|Y|Y|Y| |
-|ODBC Driver 13  | | | | | |Y| |
-|ODBC Driver 11  |Y|Y|Y|Y|Y|Y|Y|
+|ODBC 驅動程式 17+ |是|是|是|是|   |   |   |
+|ODBC 驅動程式 13.1|是|是|是|是|是|是|   |
+|ODBC Driver 13  |   |   |   |   |   |是|   |
+|ODBC Driver 11  |是|是|是|是|是|是|是|
 
 如果您使用 SQLSRV 驅動程式，[sqlsrv_client_info](sqlsrv-client-info.md) 會傳回 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 正在使用哪個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 版本的相關資訊。 如果您使用 PDO_SQLSRV 驅動程式，您可以使用 [PDO::getAttribute](pdo-getattribute.md) 來探索版本。
 
 ## <a name="sql-server"></a>SQL Server
 
-如需搭配 Azure SQL Database 使用 PHP 的詳細資訊，請參閱[連接到 Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md)。
-
-|PHP for SQL Server 驅動程式版本 &#8594;<br />&#8595; SQL Server 版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Database (所有部署選項)        |Y|Y|Y|Y| | | |
-|Azure SQL Synapse  |Y|Y|Y|Y| | | |
-|SQL Server 2019           |Y|Y|Y|Y| | | |
-|SQL Server 2017           |Y|Y|Y|Y| | | |
-|SQL Server 2016           |Y|Y|Y|Y|Y| | |
-|SQL Server 2014           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2        | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008           | | | | |Y|Y|Y|
+請參閱[支援的資料庫版本](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility)，以深入了解支援的 SQL Server 版本。
 
 ## <a name="operating-systems"></a>作業系統
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247197"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396475"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
@@ -35,7 +35,7 @@ ms.locfileid: "87247197"
   
  下表描述報表工具列的常用功能。 每一項功能都可以透過存取該功能的控制項來識別。  
   
-|使用這個圖示或控制項||至|  
+|圖示或控制項|名稱|描述|  
 |------------------------------|-|--------|  
 |![頁面導覽控制項](../reporting-services/media/htmlviewer-pagenav.gif "頁面導覽控制項")|**頁面導覽控制項**|開啟報表的第一頁或最後一頁、逐頁捲動報表和開啟報表中的特定頁面。 若要檢視特定頁面，請輸入頁碼然後按 ENTER。|  
 |![頁面顯示控制項](../reporting-services/media/htmlviewer-pagesize.gif "頁面顯示控制項")|**頁面顯示控制項**|放大或縮小報表頁面的尺寸。 除了百分比架構的變更之外，您還可以選取 [頁寬]**** 使其符合瀏覽器視窗中報表頁面的水平長度，或選取 [整頁]**** 使其符合瀏覽器視窗中報表的垂直長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 和更新的版本可以支援 [顯示比例] 選項。|  

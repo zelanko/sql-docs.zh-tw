@@ -1,6 +1,6 @@
 ---
-title: 建立資料表值參數資料列集 | Microsoft Docs
-description: 以靜態及動態方式建立資料表值參數資料列集
+title: 建立資料表值參數資料列集 (OLE DB 驅動程式)
+description: 了解資料表值參數資料列集，這是 OLE DB Driver for SQL Server 允許取用者建立的記憶體內部物件。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 00103e02efe284e9c5d60e2f251f8bc28646a30d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9705f8c17aa6d4f12f19d1233c4e0a6b47f2b230
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003341"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861609"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>建立資料表值參數資料列集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

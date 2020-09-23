@@ -1,4 +1,5 @@
 ---
+description: 目標伺服器 (下載指示索引標籤)
 title: 目標伺服器 (下載指示索引標籤)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,26 +14,26 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e7ba5e253d7f7d90cb5dd153cc6076317b598aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7729eb764558d1f672cfd3f3bb1a5bc32e3e3712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463033"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目標伺服器 (下載指示索引標籤)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此頁面來顯示和更新一或多個目標伺服器的下載指示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **目標伺服器**  
 選取要檢視或修改指示的伺服器。  
   
-**作業**  
+**工作 (Job)**  
 選取要檢視或修改指示的作業。  
   
 **目標伺服器**  

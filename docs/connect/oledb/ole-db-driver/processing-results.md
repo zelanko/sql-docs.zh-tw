@@ -1,6 +1,6 @@
 ---
 title: 處理結果 (OLE DB 驅動程式)
-description: 處理結果
+description: 了解 OLE DB Driver for SQL Server 取用者如何從命令或提供者所產生的資料列集內取得和存取資料。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB, processing results
 - rowsets [SQL Server], results processing
 - results [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c4455ccc2a44567cfe7ed0709966810b145a5ff6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3cea6c2ef9cfdab250966cbd809be44e6506e4dc
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244818"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861538"
 ---
 # <a name="processing-results"></a>處理結果
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

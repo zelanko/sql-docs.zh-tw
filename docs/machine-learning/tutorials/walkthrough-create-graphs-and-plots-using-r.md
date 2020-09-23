@@ -1,6 +1,6 @@
 ---
 title: R 教學課程：建立圖表及繪圖
-description: 示範如何在 SQL Server 上使用 R 語言函數建立圖表和繪圖的教學課程。
+description: 了解搭配使用 R 語言與 SQL Server 資料產生繪圖和地圖的技術。 建立簡單的長條圖，接著再開發更複雜的地圖繪圖。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781816"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178425"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 建立圖表和繪圖 (逐步解說)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在本逐步解說的這個部份中，您將學習使用 R 與 SQL Server 資料產生繪圖和地圖的技巧。 您將建立簡單的長條圖，接著再開發更複雜的地圖繪圖。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 此步驟會假設您有以本逐步解說中先前步驟為基礎的進行中 R 工作階段。 它會使用在那些步驟中建立的連接字串和資料來源物件。 會使用下列工具和套件來執行指令碼。
 
@@ -43,7 +43,7 @@ ms.locfileid: "85781816"
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2), " seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate plot.", sep=""))
     ```
 
-2. 針對開發環境，在 R 圖形裝置中傳回影像。  例如，在 RStudio 中，按一下 [繪製]  視窗。  在 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]中，開啟個別的圖形視窗。
+2. 針對開發環境，在 R 圖形裝置中傳回影像。  例如，在 RStudio 中，按一下 [繪製] **** 視窗。  在 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]中，開啟個別的圖形視窗。
 
     ![使用 rxHistogram 繪製費用金額](media/rsql-e2e-rxhistogramresult.png "使用 rxHistogram 繪製費用金額")
 

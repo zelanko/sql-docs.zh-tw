@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式擷取 I/O 參數 | Microsoft Docs
+title: 如何：使用 SQLSRV 驅動程式擷取 I/O 參數
+description: 本主題說明如何使用預存程序和 Microsoft SQLSRV Driver for PHP for SQL Server 擷取輸入和輸出參數
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916074"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680683"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916074"
 本主題示範如何使用 SQLSRV 驅動程式呼叫將其中一個參數定義為輸入/輸出參數的預存程序，以及如何擷取結果。 在擷取輸出或輸入/輸出參數時，必須先取用預存程序所傳回的所有結果，傳回的參數值才可供存取。  
   
 > [!NOTE]  
-> 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
+>  初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法做為輸出參數。  
   
 ## <a name="example-1"></a>範例 1
 下列範例會呼叫從指定員工的可用休假時數中扣除掉已用休假時數的預存程序。 代表已用休假時數的變數 *$vacationHrs*，會傳遞至預存程序做為輸入參數。 在更新可用休假時數之後，預存程序會使用相同的參數傳回剩餘休假時數。  
@@ -32,7 +33,7 @@ ms.locfileid: "80916074"
 > [!NOTE]  
 > 將 *$vacationHrs* 初始化為 4，會將傳回的 PHPTYPE 設為整數。 若要確保資料類型的完整性，應在呼叫預存程序之前初始化輸入/輸出參數，或應指定所需的 PHPTYPE。 如需指定 PHPTYPE 的相關資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-由於預存程序會傳回兩個結果，因此 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 必須在預存程序執行完成之後呼叫，輸出參數的值才可供使用。 在呼叫 **sqlsrv_next_result** 之後， *$vacationHrs* 會包含預存程序所傳回的輸出參數值。  
+由於預存程序會傳回兩個結果，因此 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 必須在預存程序執行完成之後呼叫，輸出參數的值才可供使用。 在呼叫 **sqlsrv_next_result** 之後，*$vacationHrs* 會包含預存程序所傳回的輸出參數值。  
   
 > [!NOTE]  
 > 使用標準語法呼叫預存程序，是建議的做法。 如需標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  

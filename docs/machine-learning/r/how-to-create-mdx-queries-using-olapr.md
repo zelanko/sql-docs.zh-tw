@@ -1,6 +1,6 @@
 ---
 title: 在 R 中使用 olapR 建立 MDX 查詢
-description: 在 SQL Server 中使用 olapR 套件程式庫，以 R 語言指令碼撰寫 MDX 查詢。
+description: 了解如何在 SQL Server 中使用 olapR 套件程式庫撰寫 MDX 查詢，或以 R 語言指令碼執行現有的 MDX 查詢。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 05/22/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 501449396ee20b763047ac16d23e32b3e98aa366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5789a0791654b89ac78f9333cb71e10f3ca9322e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722528"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173667"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) \(英文\) 套件針對 SQL Server Analysis Services 中裝載的 Cube 支援 MDX 查詢。 您可以針對現有的 Cube 建置查詢、瀏覽維度和其他 Cube 物件，並貼上現有的 MDX 查詢來取出資料。
 

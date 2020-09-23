@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式擷取輸出參數 | Microsoft Docs
+title: 如何：使用 SQLSRV 驅動程式擷取輸出參數
+description: 了解如何透過 Microsoft SQLSRV Driver for PHP for SQL Server 使用和擷取預存程序中的輸出參數。
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916014"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410954"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916014"
 本主題示範如何呼叫將其中一個參數定義為輸出參數的預存程序。 在擷取輸出或輸入/輸出參數時，必須先取用預存程序所傳回的所有結果，傳回的參數值才可供存取。  
   
 > [!NOTE]  
-> 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
+>  初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法做為輸出參數。  
   
 以 SQLSRV_SQLTYPE_VARCHAR('max') 之類的資料流類型做為輸出參數時，可能會發生資料截斷。 目前不支援以資料流類型做為輸出參數。 就非資料流類型而言，如果未指定輸出參數的長度，或指定的長度不足以用於輸出參數，則可能會發生資料截斷。  
   

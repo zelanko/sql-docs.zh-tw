@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e585b0314b6306bdff84b07f2d12514ee015936
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900542"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862750"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什麼是 SQL Server 的延伸安全性更新？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -281,17 +281,17 @@ Enterprise、Datacenter、Standard、Web 和 Workgroup 版的 [!INCLUDE[ssKatmai
 
 **如果 SQL Server 2008 和 2008 R2 客戶想要自備授權 (BYOL)，是否必須具有軟體保證範圍？**
 
-是的，客戶必須具有軟體保證，才能將 Azure 虛擬機器上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 BYOL 方案視為授權行動性方案的一部分來使用。 若客戶沒有軟體保證，則建議客戶移至 Azure SQL Database 受控執行個體，以使用其 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 環境。 客戶也可以移轉到隨用隨付的 Azure 虛擬機器。 依核心授權 SQL 的軟體保證客戶可以選擇使用 Azure Hybrid Benefit (AHB) 來移轉到 Azure。
+是的，客戶必須具有軟體保證，才能將 Azure 虛擬機器上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 BYOL 方案視為授權行動性方案的一部分來使用。 若客戶沒有軟體保證，建議客戶移至 Azure SQL 受控執行個體，以使用其 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 環境。 客戶也可以移轉到隨用隨付的 Azure 虛擬機器。 依核心授權 SQL 的軟體保證客戶可以選擇使用 Azure Hybrid Benefit (AHB) 來移轉到 Azure。
 
-Azure SQL Database 受控執行個體是一項 Azure 服務，提供與內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 幾近 100% 的相容性。 受控執行個體提供內建的高可用性/災害復原功能，以及智慧型效能功能和即時調整的能力。 受控執行個體也提供不需要手動進行安全性修補和升級的無版本體驗。 如需 BYOL 方案的詳細資訊，請參閱 Azure 定價指導方針頁面。
+Azure SQL 受控執行個體是一項 Azure 服務，提供與內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 幾近 100% 的相容性。 受控執行個體提供內建的高可用性/災害復原功能，以及智慧型效能功能和即時調整的能力。 受控執行個體也提供不需要手動進行安全性修補和升級的無版本體驗。 如需 BYOL 方案的詳細資訊，請參閱 Azure 定價指導方針頁面。
 
 **客戶有哪些選項可在 Azure 中執行 SQL Server？**
 
-客戶可以將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境移至 Azure SQL Database 受控執行個體，這是一項完全受控的資料平台服務 (PaaS)，提供「無版本」選項，因此不必擔心終止支援日期；客戶也可以移至 Azure 虛擬機器，來存取安全性更新。 移轉後資料庫會保留其與舊版系統的相容性。 如需詳細資訊，請參閱[相容性憑證](../../database-engine/install-windows/compatibility-certification.md)。
+客戶可以將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境移至 Azure SQL 受控執行個體，這是一項完全受控的資料平台服務 (PaaS)，提供「無版本」選項，因此不必擔心終止支援日期；客戶也可以移至 Azure 虛擬機器，來存取安全性更新。 移轉後資料庫會保留其與舊版系統的相容性。 如需詳細資訊，請參閱[相容性憑證](../../database-engine/install-windows/compatibility-certification.md)。
 
 延伸安全性更新會在終止支援日期 2019 年 7 月 9 日後的未來三年，提供給 Azure 虛擬機器中的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]。 對於想要從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 升級的客戶，我們將支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有後續版本。 針對 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，客戶必須在最新支援的 Service Pack 上。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，建議客戶在最新的累積更新上。 請注意，從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，不會提供 Service Pack，只會提供累積更新和一般發行版本 (GDR)。
 
-Azure SQL Database 受控執行個體是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的執行個體範圍部署選項，其提供最廣泛的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎相容性和原生虛擬網路 (VNET) 支援，讓您不必變更應用程式，即可將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫移轉到受控執行個體。 其結合豐富的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 介面區，以及智慧型、完全受控服務的營運和財務優勢。 利用新的 Azure 資料庫移轉服務，在最少或沒有應用程式程式碼變更的情況下，將 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 移至 Azure SQL Database 受控執行個體。
+Azure SQL 受控執行個體是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的執行個體範圍部署選項，其提供最廣泛的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎相容性和原生虛擬網路 (VNET) 支援，讓您不必變更應用程式，即可將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫移轉到受控執行個體。 其結合豐富的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 介面區，以及智慧型、完全受控服務的營運和財務優勢。 利用新的 Azure 資料庫移轉服務，在最少或沒有應用程式程式碼變更的情況下，將 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 移至 Azure SQL 受控執行個體。
 
 **客戶可以針對 SQL Server 2008 和 2008 R2 版本使用 Azure Hybrid Benefit 嗎？**
 

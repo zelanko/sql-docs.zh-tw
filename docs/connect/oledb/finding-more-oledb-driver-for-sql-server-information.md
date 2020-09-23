@@ -1,6 +1,6 @@
 ---
-title: 尋找詳細的 OLE DB Driver for SQL Server 資訊 | Microsoft Docs
-description: 哪裡可以找到詳細的 OLE DB Driver for SQL Server 資訊
+title: 尋找詳細的 OLE DB Driver for SQL Server 資訊
+description: 使用這些資源，深入了解 OLE DB Driver for SQL Server 以及其他類型的資料存取程式設計。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - MSOLEDBSQL, additional resources
 - OLE DB Driver for SQL Server, additional resources
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: aec9888c6d362fede8cd1991f05892315982eb11
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7f0beae794a4958a74b0ffa1b80b72bc41b0a396
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986560"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480619"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>尋找詳細的 OLE DB Driver for SQL Server 資訊
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85986560"
  [資料存取和儲存體程式開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)  
  這個網站提供 OLE DB Driver for SQL Server 及其他資料存取技術的技術文件、程式碼範例和其他資源。  
   
- [Data Access 部落格](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Data Access 部落格](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  這個部落格網站提供了資料存取技術的相關資訊，可讓您直接與產品小組的成員互動。  
   
  [Windows Data Access Component](https://go.microsoft.com/fwlink/?LinkId=107907)  

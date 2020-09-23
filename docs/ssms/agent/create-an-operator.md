@@ -1,4 +1,5 @@
 ---
+description: 建立操作員
 title: 建立操作員
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,20 +19,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c56a6a41971fb7751266c192be2d671526262418
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2210590414b45113077ac331beef0f89cbf25424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418174"
 ---
 # <a name="create-an-operator"></a>建立操作員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定使用者來接收 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業的通知。  
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定使用者來接收 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的通知。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
@@ -54,16 +55,16 @@ ms.locfileid: "85786778"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent 操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [操作員]  資料夾，然後選取 [新增操作員]  。  
+3.  以滑鼠右鍵按一下 [操作員]**** 資料夾，然後選取 [新增操作員]****。  
   
     下列選項可從 **[新增操作員]** 對話方塊的 **[一般]** 頁面取得：  
   
-    **名稱**  
+    **Name**  
     變更操作員的名稱。  
   
-    **已啟用**  
+    **Enabled**  
     啟用操作員。 未啟用時，不會傳送通知給操作員。  
   
     **電子郵件名稱**  
@@ -110,7 +111,7 @@ ms.locfileid: "85786778"
     **Net Send**  
     使用 **net send**通知此操作員。  
   
-4.  完成建立新的操作員後，請按一下 **[確定]** 。  
+4.  完成建立新的操作員後，請按一下 **[確定]**。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   

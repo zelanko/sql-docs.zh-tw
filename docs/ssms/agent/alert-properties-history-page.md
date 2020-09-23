@@ -1,4 +1,5 @@
 ---
+description: 警示屬性 (記錄頁面)
 title: 警示屬性 (記錄頁面)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,24 +14,24 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 78504c87d25e0287cafb2930c6a44d140228992f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b318730bd1e45059e447e14c4b90b054d73709a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372434"
 ---
 # <a name="alert-properties-history-page"></a>警示屬性 (記錄頁面)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 
 使用此頁面來檢視及修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的記錄。  
 
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **上一次警示的日期**  
 顯示指定的事件上一次發生的日期，如果自從建立了警示起，事件尚未發生過，則顯示 **(未曾發生)** 。  
   

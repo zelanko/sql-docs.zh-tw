@@ -1,6 +1,6 @@
 ---
 title: 執行使用者定義函數和處理傳回碼 (OLE DB) | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 執行使用者定義函數和處理傳回碼
+description: 了解如何使用 OLE DB Driver for SQL Server 執行使用者定義函式和列印傳回碼。 這個範例會使用 AdventureWorks 範例資料庫。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a1acbc1aaca3a4618ac0f74da0cc85c628b04d79
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 47b35cd2dfee25b1ab2d9a8e9c2810749f59a80e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012524"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860290"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>執行使用者定義函數和處理傳回碼 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

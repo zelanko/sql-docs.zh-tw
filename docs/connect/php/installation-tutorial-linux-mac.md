@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886275"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807014"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程
-下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 19.10；RedHat 7 和 8；Debian 8、9 和 10；Suse 12 和 15；Alpine 3.11，以及 macOS 10.13、10.14 及 10.15 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache Web 伺服器，以及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)的小節。
+下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 20.04；RedHat 7 和 8；Debian 8、9 和 10；Suse 12 和 15；Alpine 3.11，以及 macOS 10.13、10.14 及 10.15 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache Web 伺服器，以及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)的小節。
 
 這些指示預設會使用 `pecl install` 安裝 PHP 7.4。 您可能需要先執行 `pecl channel-update pecl.php.net`。 請注意，部分支援的 Linux 發行版本會預設為 PHP 7.1 或更早版本，但最新版本的 PHP drivers for SQL Server 並不支援這些版本。請參閱每節開頭的注意事項以改為安裝 PHP 7.2 或 7.3。
 
 同時包含在 Ubuntu 上安裝 PHP FastCGI Process Manager (PHP-FPM) 的指示。 如果使用 nginx Web 伺服器而非 Apache，便會需要此項目。
 
-## <a name="contents-of-this-page"></a>此頁面的內容：
+## <a name="contents-of-this-page"></a>此頁面的內容
 
-- [在 Ubuntu 16.04、18.04 和 19.10 上安裝驅動程式](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [在 Ubuntu 16.04、18.04 和 20.04 上安裝驅動程式](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [在 Ubuntu 上搭配 PHP-FPM 安裝驅動程式](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [在 Red Hat 7 和 8 上安裝驅動程式](#installing-the-drivers-on-red-hat-7-and-8)
 - [在 Debian 8、9 和 10 上安裝驅動程式](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ ms.locfileid: "82886275"
 - [在 Alpine 3.11 上安裝驅動程式](#installing-the-drivers-on-alpine-311)
 - [在 macOS High Sierra、Mojave 和 Catalina 上安裝驅動程式](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>在 Ubuntu 16.04、18.04 和 19.10 上安裝驅動程式
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>在 Ubuntu 16.04、18.04 和 20.04 上安裝驅動程式
 
 > [!NOTE]
 > 若要安裝 PHP 7.2 或 7.3，請在下列命令中使用 7.2 或 7.3 來取代 7.4。

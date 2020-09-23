@@ -1,5 +1,6 @@
 ---
-title: 常數 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: 常數 (Microsoft Drivers for PHP for SQL Server)
+description: 了解 Microsoft SQLSRV/PDO_SQLSRV Driver for PHP for SQL Server 中定義的常數。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928074"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435249"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +72,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理具有數值 SQL �
 
 ### <a name="handling-date-and-time-fetches"></a>處理日期和時間擷取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可以在連線或陳述式等級使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 來設定，但是陳述式屬性將會覆寫對應的連線屬性。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可以在連線或陳述式等級使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 來設定，但是陳述式屬性將會覆寫對應的連線屬性。 如需詳細資訊，請參閱[如何：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驅動程式常數  
 下列各節列出 SQLSRV 驅動程式所使用的常數。  
@@ -143,7 +144,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://
 |SQLSRV_PHPTYPE_INT|整數|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|資料流|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** 和 **SQLSRV_PHPTYPE_STRING** 可接受指定資料流編碼的參數。 下表包含是可接受之參數的 SQLSRV 常數，以及對應編碼的描述。  
@@ -223,7 +224,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://
 |SQLSRV_SQLTYPE_CHAR、<br /><br />SQLSRV_SQLTYPE_VARCHAR|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR、<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY、<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL、<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL、<br /><br />SQLSRV_SQLTYPE_NUMERIC|精確度|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL、<br /><br />SQLSRV_SQLTYPE_NUMERIC|級別|1 - 有效位數|  
   
 ### <a name="transaction-isolation-level-constants"></a>交易隔離等級常數  

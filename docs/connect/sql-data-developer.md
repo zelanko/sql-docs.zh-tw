@@ -2,7 +2,7 @@
 title: SQL 資料開發人員 |Microsoft Docs
 description: 使用 Microsoft 的 SQL 資料平台，針對網頁伺服器、企業伺服器與雲端建立跨行動裝置與桌上型電腦且以資料為中心的解決方案。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922306"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988486"
 ---
 # <a name="sql-data-developer"></a>SQL 資料開發人員
 使用 Microsoft 的 SQL 資料平台，針對網頁伺服器、企業伺服器與雲端建立跨行動裝置與桌上型電腦且以資料為中心的解決方案。  
 
 ## <a name="sql-data-storage"></a>SQL 資料儲存
 * [SQL Server 資料庫引擎](../database-engine/configure-windows/sql-server-database-engine.md)：使用 SQL Server 資料庫引擎來建立用於線上交易處理或線上分析處理資料的關聯式資料庫。 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/)：使用 SQL Azure 將您的資料庫移至雲端 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709)：SQL Server Compact 可為行動裝置、桌上型電腦與 Web 用戶端建立獨立且偶爾連線的應用程式。
+* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)：使用 Azure SQL 將您的資料庫移至雲端 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709)：使用 SQL Server Compact，為行動裝置、桌面和 Web 用戶端建立獨立且偶爾連線的應用程式。
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)：在開發期間使用 LocalDB 來撰寫及測試 Transact-SQL 程式碼，而不需要管理 SQL Server 的完整伺服器執行個體。
 
 ## <a name="sql-data-tools"></a>SQL Data 工具
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) :使月 SSDT 來建置關聯式資料庫、Azure SQL 資料庫、Integration Services 套件、Analysis Services 資料模型與 Reporting Services 報表。
-* [SQL Server 管理工具](../ssms/download-sql-server-management-studio-ssms.md)：使用 SSMS 來設定、監視及管理 SQL Server 執行個體。
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)：在 Windows、macOS 和 Linux 上使用 Azure Data Studio 執行 SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook 等等。
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)：使用 Visual Studio 中的 SSDT 建置關聯式資料庫、Azure SQL 資料庫、Integration Services 套件、Analysis Services 資料模型與 Reporting Services 報表。
+* [SQL Server 管理工具](../ssms/download-sql-server-management-studio-ssms.md)：在 Windows 上使用 SSMS 設定、監視及管理 SQL Server 執行個體。
 
 ## <a name="sql-data-access"></a>SQL 資料存取
 * [SQL 用戶端驅動程式](sql-connection-libraries.md)：使用 SQL 驅動程式來連接、查詢、更新、插入或刪除 SQL 資料庫中的資料。

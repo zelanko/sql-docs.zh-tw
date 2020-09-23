@@ -1,6 +1,6 @@
 ---
 title: 使用 IOpenRowset 建立資料列集 (OLE DB Driver) | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 的 IOpenRowset 介面建立資料列集
+description: 了解 OLE DB Driver for SQL Server 如何支援 IOpenRowset::OpenRowset 方法，以傳回資料列集及其使用限制。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], creating
 - OLE DB Driver for SQL Server, rowsets
 - OLE DB rowsets, creating
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 721a54d4e423675fa5dad39d22e8f94c178228d6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a39ff5a60f13a25c271be61d4db20a604364420
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942378"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862264"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

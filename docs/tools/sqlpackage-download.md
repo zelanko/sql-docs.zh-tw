@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 06/20/2018
-ms.openlocfilehash: 67fdb2d5d78f5068f8379d046221ceb9c564a176
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 93979ba5b0bf7ffb26726db86dbc5d6ee548df15
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352425"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283679"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -63,6 +63,19 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
    $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    $ source ~/.bash_profile
    $ sqlpackage
+   ```
+
+   > [!NOTE]
+   > 安全性設定可能需要修改，才能在 macOS 上執行 sqlpackage。 請在命令列中使用下列命令，與 Gatekeeper 進行互動。
+
+   **執行 sqlpackage 之前：**
+   ```bash
+   $ sudo spctl --master-disable
+   ```
+
+   **執行 sqlpackage 之後：**
+   ```bash
+   $ sudo spctl --master-enable
    ```
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>取得適用於 Linux 的 sqlpackage .NET Core
@@ -123,9 +136,11 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行，並支援下列平台：
 - Windows 10
 - Windows 8.1
 - Windows 7 SP1
+- Windows 伺服器核心
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016
+- Windows Server 2019
 
 ### <a name="macos"></a>macOS
 

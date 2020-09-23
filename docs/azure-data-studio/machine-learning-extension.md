@@ -5,17 +5,17 @@ description: 適用於 Azure Data Studio 的機器學習延伸模組可讓您管
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: a6a86baeb3c206c722aa91eae386ca80c287644c
+ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745548"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90101118"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>適用於 Azure Data Studio 的機器學習延伸模組 (預覽)
 
@@ -101,7 +101,7 @@ _安裝這些元件：_
 
 若要在 Azure Data Studio 中使用機器學習延伸模組，請遵循下列步驟。
 
-1. 在 Azure Data Studio 中開啟連線。
+1. 在 Azure Data Studio 中開啟 [連線] Viewlet。
 
 1. 在您的伺服器上按一下滑鼠右鍵，然後選取 [管理]。
 

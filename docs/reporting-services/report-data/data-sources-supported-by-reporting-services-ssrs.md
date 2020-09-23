@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458950"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988428"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -157,7 +157,7 @@ ms.locfileid: "86458950"
   
  如果您在圖形化模式下使用查詢設計工具，則會分析查詢，而且可能會重寫查詢。 以文字為基礎的查詢設計工具也可用來編寫查詢。 當您想要控制用於查詢的確切 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法時，請使用以文字為基礎的查詢設計工具。   
   
- 從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、SQL 資料倉儲和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擷取資料的做法非常類似，但有幾項需求只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。  
+ 從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、SQL 資料倉儲和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擷取資料的做法非常類似，但有幾項需求只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱 [Azure SQL 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   

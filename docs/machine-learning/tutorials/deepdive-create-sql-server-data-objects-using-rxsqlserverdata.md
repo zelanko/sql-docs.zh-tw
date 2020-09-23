@@ -1,6 +1,6 @@
 ---
 title: 建立 RxSqlServerData 物件
-description: RevoScaleR 教學課程 2：如何在 SQL Server 上使用 R 語言建立資料物件。
+description: 了解如何搭配使用 RevoScaleR 函式與 SQL Server。 此教學課程接續資料庫建立：新增資料表及載入資料。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728610"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178805"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>使用 RxSqlServerData 建立 SQL Server 資料物件 (SQL Server 和 RevoScaleR 教學課程)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 2 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
@@ -55,19 +55,19 @@ ms.locfileid: "85728610"
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    因為已將伺服器執行個體和資料庫名稱指定為連接字串的一部分，所以當您合併兩個變數時，新資料表的「完整」  名稱會變成 instance.database.schema.ccFraudSmall  。
+    因為已將伺服器執行個體和資料庫名稱指定為連接字串的一部分，所以當您合併兩個變數時，新資料表的「完整」** 名稱會變成 instance.database.schema.ccFraudSmall**。
   
-3.  選擇性指定 rowsPerRead  ，以控制每個批次中讀取的資料列數目。
+3.  選擇性指定 rowsPerRead**，以控制每個批次中讀取的資料列數目。
   
     ```R
     sqlRowsPerRead = 5000
     ```
   
-    雖然這個參數是選擇性的，但是設定它可以讓計算更有效率。 **RevoScaleR** 和 **MicrosoftML** 中的大部分增強型分析函式會以區塊形式處理資料。 rowsPerRead  參數會決定每個區塊中的資料列數目。
+    雖然這個參數是選擇性的，但是設定它可以讓計算更有效率。 **RevoScaleR** 和 **MicrosoftML** 中的大部分增強型分析函式會以區塊形式處理資料。 rowsPerRead** 參數會決定每個區塊中的資料列數目。
   
-    您可能需要實驗此設定，以找出正確的平衡。 如果值太大，而沒有足夠記憶體可以該大小的區塊形式處理資料，則資料存取可能會變慢。 相反地，在某些系統上，如果 rowsPerRead  的值太小，效能也會變慢。
+    您可能需要實驗此設定，以找出正確的平衡。 如果值太大，而沒有足夠記憶體可以該大小的區塊形式處理資料，則資料存取可能會變慢。 相反地，在某些系統上，如果 rowsPerRead** 的值太小，效能也會變慢。
   
-    作為初始值，使用資料庫引擎執行個體所定義的預設批次處理大小，來控制每個區塊中的資料列數目 (5000 個資料列)。 將該值儲存在 sqlRowsPerRead  變數中。
+    作為初始值，使用資料庫引擎執行個體所定義的預設批次處理大小，來控制每個區塊中的資料列數目 (5000 個資料列)。 將該值儲存在 sqlRowsPerRead** 變數中。
   
 4.  為新的資料來源物件定義一個變數，並將先前定義的引數傳遞至 **RxSqlServerData** 建構函式。 請注意，這只會建立資料來源物件，並不會在其中填入資料。 載入資料是個別的步驟。
   
@@ -110,7 +110,7 @@ ms.locfileid: "85728610"
 
 ### <a name="load-data-into-the-training-table"></a>將資料載入定型資料表
 
-1. 建立 R 變數 ccFraudCsv  ，並將 CSV 檔案 (包含範例資料) 的檔案路徑指派給變數。 **RevoScaleR** 提供此資料集。 "SampleDataDir" 是 **rxGetOption** 函式上的關鍵字。
+1. 建立 R 變數 ccFraudCsv**，並將 CSV 檔案 (包含範例資料) 的檔案路徑指派給變數。 **RevoScaleR** 提供此資料集。 "SampleDataDir" 是 **rxGetOption** 函式上的關鍵字。
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
@@ -145,9 +145,9 @@ ms.locfileid: "85728610"
     
     如果連接字串沒有任何問題，則在短暫暫停之後，您應該會看到類似如下的結果：
   
-    *寫入的資料列總數：10000，總時間：0.466* *讀取的資料列:10000，已處理的資料列總數：10000，總區塊時間：0.577 秒*
+    *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
-5. 重新整理資料表清單。 若要確認每個變數具有正確的資料類型且已順利匯入，您也可以使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料表，然後選取 [選取前 1000 個資料列]  。
+5. 重新整理資料表清單。 若要確認每個變數具有正確的資料類型且已順利匯入，您也可以使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料表，然後選取 [選取前 1000 個資料列]****。
 
 ### <a name="load-data-into-the-scoring-table"></a>將資料載入評分資料表
 
@@ -179,7 +179,7 @@ ms.locfileid: "85728610"
   
     - *OutFile* 引數會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料表，這是您要儲存資料的位置。
   
-    - 如果資料表已存在，而且您未使用 overwrite  選項，就會插入而不會截斷結果。
+    - 如果資料表已存在，而且您未使用 overwrite** 選項，就會插入而不會截斷結果。
   
 同樣地，如果連線成功，您應該會看到一則訊息，指出完成以及將資料寫入資料表所需的時間︰
 

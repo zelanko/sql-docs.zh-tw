@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564658"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027289"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連線
 
@@ -84,7 +84,7 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須有存取 TLS 憑證的必要權限。
 
-- 目前的系統時間必須介於憑證的 [有效期限自] 屬性和憑證的 [有效期限至] 屬性之間。
+- 目前的系統時間必須在憑證的 [有效期限自] 屬性值之後，並且在憑證的 [有效期限至] 屬性值之前。
 
 - 憑證必須是為了伺服器驗證而準備的。 這需要憑證的 [增強金鑰使用方法] 屬性指定 [伺服器驗證 (1.3.6.1.5.5.7.3.1)]。
 

@@ -1,6 +1,6 @@
 ---
 title: 建立資料來源的連線 (OLE DB 驅動程式) | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 來建立與資料來源的連線
+description: 了解取用者如何使用 OLE DB Driver for SQL Server 建立資料來源的連線。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, data source connections
 - CoCreateInstance method
 - OLE DB data sources [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 79f0ba6da0416c269d4a23cf45862746462f38e4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d842bcee76fa989d8212d3c377c25c1f86f2491
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244835"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861540"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

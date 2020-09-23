@@ -24,12 +24,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 208c26d0dd9b11cdcc0783de69caf99cba0a0de4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 121f9121d39b3532edac9486521037a256814fa9
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445603"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076635"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -46,7 +46,7 @@ SERVERPROPERTY ( 'propertyname' )
 ```  
 
 > [!IMPORTANT]
-> SQL Server 和 Azure SQL Database 的資料庫引擎版本號碼無法彼此相互比較，且更像是這些個別產品的內部組建編號。 Azure SQL Database 資料庫引擎是以和 SQL Server 資料庫引擎相同的程式碼基底作為基礎。 最重要的是，Azure SQL Database 資料庫引擎一律具有最新的 SQL 資料庫引擎位元。 Azure SQL Database 版本 12 比 SQL Server 版本 15 更新。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本號碼無法相互比較，而代表這些個別產品的內部組建編號。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 以與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 相同的程式碼基底為基礎。 最重要的是，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 一律會有最新的 SQL [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 位元。 第 12 版的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 比第 15 版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新。
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -62,9 +62,9 @@ SERVERPROPERTY ( 'propertyname' )
 |CollationID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序的識別碼。<br /><br /> 基底資料類型：**int**|  
 |ComparisonStyle|Windows 的定序比較樣式。<br /><br /> 基底資料類型：**int**|  
 |ComputerNamePhysicalNetBIOS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體目前執行所在之本機電腦的 NetBIOS 名稱。<br /><br /> 如果是容錯移轉叢集中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集執行個體，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體容錯移轉到容錯移轉叢集中的其他節點時，這個值會跟著改變。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體中，這個值會維持不變，且會傳回與 MachineName 屬性相同的值。<br /><br /> **注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在容錯移轉叢集中，且您想要取得容錯移轉叢集執行個體的名稱，請使用 MachineName 屬性。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
-|版本|已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。 64 位元版的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 (64 位元) 附加至版本中。<br /><br /> 傳回：<br /><br /> 'Enterprise Edition'<br /><br /> 「Enterprise 版:核心授權」<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' 表示 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 'Azure SQL Edge Developer' 表示 Azure SQL Edge' 的僅限開發版本 <br /><br /> 'Azure SQL Edge' 表示 Azure SQL Edge' 的付費版本 <br /><br /> 基底資料型別：**nvarchar(128)**|  
-|EditionID|EditionID 表示安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：核心授權<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database 或 Microsoft Azure Synapse Analytics (前稱為 SQL 資料倉儲)<br /><br /> -1461570097 = Azure SQL Edge 開發人員 <br /><br /> 1994083197 = Azure SQL Edge <br /><br />基底資料型別：**bigint**|  
-|EngineEdition|安裝在伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。<br /><br /> 1 = Personal 或 Desktop Engine (不適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中)。<br /><br /> 2 = Standard (Standard、Web 和 Business Intelligence 都會傳回這個值)。<br /><br /> 3 = Enterprise (Evaluation、Developer 和 Enterprise 版本都會傳回這個項目。)<br /><br /> 4 = Express (Express、Express with Tools 和 Express with Advanced Services 都會傳回這個項目)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 受控執行個體<br /><br /> 9 = Azure SQL Edge (這會針對 Azure SQL Edge 的兩個版本傳回<br /><br /> 基底資料類型：**int**|  
+|版本|已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。 64 位元版的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 (64 位元) 附加至版本中。<br /><br /> 傳回：<br /><br /> 'Enterprise Edition'<br /><br /> 「Enterprise 版:核心授權」<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' 表示 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 'Azure SQL Edge Developer' 表示 Azure SQL Edge 的僅限開發版本<br /><br /> 'Azure SQL Edge' 表示 Azure SQL Edge 的付費版本<br /><br /> 基底資料型別：**nvarchar(128)**|  
+|EditionID|EditionID 表示安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：核心授權<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]<br /><br /> -1461570097 = Azure SQL Edge 開發人員 <br /><br /> 1994083197 = Azure SQL Edge <br /><br />基底資料型別：**bigint**|  
+|EngineEdition|安裝在伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。<br /><br /> 1 = Personal 或 Desktop Engine (不適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中)。<br /><br /> 2 = Standard (Standard、Web 和 Business Intelligence 都會傳回這個值)。<br /><br /> 3 = Enterprise (Evaluation、Developer 和 Enterprise 版本都會傳回這個項目。)<br /><br /> 4 = Express (Express、Express with Tools 和 Express with Advanced Services 都會傳回這個項目)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]<br /><br /> 9 = Azure SQL Edge (這會針對 Azure SQL Edge 的兩個版本傳回<br /><br /> 基底資料類型：**int**|  
 |FilestreamConfiguredLevel|已設定的 FILESTREAM 存取層級。 如需詳細資訊，請參閱[檔案資料流存取層級](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基底資料類型：**int**|  
 |FilestreamEffectiveLevel|有效的 FILESTREAM 存取層級。 如果此層級已變更而且執行個體重新啟動或電腦重新啟動已暫止，這個值就可能會與 FilestreamConfiguredLevel 不同。 如需詳細資訊，請參閱[檔案資料流存取層級](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。<br /><br /> 基底資料類型：**int**|  
 |FilestreamShareName|FILESTREAM 所使用之共用的名稱。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**| 
@@ -104,7 +104,6 @@ SERVERPROPERTY ( 'propertyname' )
 |SqlCharSetName|定序中的 SQL 字元集名稱。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |SqlSortOrder|定序中的 SQL 排序順序識別碼<br /><br /> 基底資料型別：**tinyint**|  
 |SqlSortOrderName|定序中的 SQL 排序次序名稱。<br /><br /> 基底資料型別：**nvarchar(128)**|  
- 
   
 ## <a name="return-types"></a>傳回型別  
 

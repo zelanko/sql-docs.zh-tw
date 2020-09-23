@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360694"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076665"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "88360694"
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-另一個範例如下，下列標籤指出主題僅適用於 Azure SQL 資料倉儲與平行處理資料倉儲。
+另一個範例如下，下列標籤指出主題僅適用於 Azure Synapse Analytics 和平行處理資料倉儲。
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 在某些情形下，主題適用於某產品或服務，但卻不支援所有引數。 在此情況下，就會在主題本文中適當的引數描述中，插入額外的 **適用於**一節。  
  
-## <a name="get-help-from-the-msdn-forum"></a>從 MSDN 論壇取得說明  
-如需線上說明，請參閱 [MSDN Transact-SQL 論壇](https://social.msdn.microsoft.com/Forums/home)。  
+## <a name="get-help-from-microsoft-q--a"></a>透過 Microsoft 問答集求助  
+如需線上說明，請參閱 [Microsoft 問答集 Transact-SQL 論壇](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html)。  
  
 ## <a name="see-other-language-references"></a>查看其他語言參考
 SQL 文件包括這些其他語言參考：

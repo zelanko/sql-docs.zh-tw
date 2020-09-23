@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487207"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395186"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 錯誤
     
 ## <a name="details"></a>詳細資料  
   
-|||  
+|類別|值|  
 |-|-|  
 |產品名稱|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |事件識別碼|rsServerConfiguration|  
@@ -46,7 +46,7 @@ ms.locfileid: "81487207"
 ## <a name="user-action"></a>使用者動作  
  如果當您在手動編輯組態檔之後開始發生這個錯誤，請移除您的變更並輸入之前的值，或者如果您有備份則還原舊版。  
   
- 若要檢閱伴隨著 **rsServerConfiguration** 錯誤的其他錯誤訊息資訊，請檢閱位於 \Microsoft SQL Server\MSRS12.\<執行個體名稱>\Reporting Services\LogFiles 中的報表伺服器追蹤記錄檔。 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+ 若要檢閱伴隨著 **rsServerConfiguration** 錯誤的其他錯誤訊息資訊，請檢閱位於 \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles 中的報表伺服器追蹤記錄檔。 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
 ## <a name="internal-only"></a>僅供內部使用  
   

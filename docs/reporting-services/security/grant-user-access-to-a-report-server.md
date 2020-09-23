@@ -1,4 +1,5 @@
 ---
+description: 將報表伺服器的存取權授與使用者
 title: 將報表伺服器的存取權授與使用者 | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373884"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 
@@ -53,20 +54,20 @@ ms.locfileid: "65619611"
 
 1. 啟動[入口網站](../web-portal-ssrs-native-mode.md)。
 
-2. 選取左上方的**齒輪**圖示，然後從下拉式功能表選取 [網站設定]  。
+2. 選取左上方的**齒輪**圖示，然後從下拉式功能表選取 [網站設定]****。
 
     ![報表伺服器入口網站齒輪圖示和下拉式功能表](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-3. 選取 [安全性]  。
+3. 選取 [安全性]。
 
-4. 選取 [新增群組或使用者]  。
+4. 選取 [新增群組或使用者]****。
 
-5. 在 [群組或使用者]  中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。
+5. 在**群組或使用者**中，使用下列格式輸入 Windows 網域使用者或群組帳戶：\<domain>\\<account\>。
 
     > [!NOTE]
     > 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
 
-6. 選取系統角色，然後選取 [確定]  。
+6. 選取系統角色，然後選取 [確定]****。
 
     由於角色是累計的，因此如果您同時選取「系統管理員」和「系統使用者」，則使用者或群組就能夠以這兩種角色來執行工作。
 
@@ -74,28 +75,28 @@ ms.locfileid: "65619611"
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>若要將使用者或群組加入至項目角色
 
-1. 啟動入口網站  ，並找出您想要新增使用者或群組的報表項目。
+1. 啟動入口網站****，並找出您想要新增使用者或群組的報表項目。
 
 2. 選取項目上的 **...** (省略符號)。
 
-3. 從下拉式功能表中選取 [管理]  。
+3. 從下拉式功能表中選取 [管理]。
 
-4. 選取 [安全性]  。
+4. 選取 [安全性]。
 
-5. 選取 [新增群組或使用者]  。
+5. 選取 [新增群組或使用者]****。
 
     > [!NOTE]
-    > 如果某個項目目前是從父項目繼承安全性，請選取工具列中的 [自訂安全性]  來變更安全性設定。 然後選取 [新增群組或使用者]  。
+    > 如果某個項目目前是從父項目繼承安全性，請選取工具列中的 [自訂安全性]**** 來變更安全性設定。 然後選取 [新增群組或使用者]****。
 
-6. 在 [群組或使用者]  中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
+6. 在**群組或使用者**中，使用下列格式輸入 Windows 網域使用者或群組帳戶：\<domain>\\<account\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
 
-7. 選取描述使用者或群組應如何存取項目的一或多個角色定義，然後選取 [確定]  。
+7. 選取描述使用者或群組應如何存取項目的一或多個角色定義，然後選取 [確定]****。
 
 8. 重複上述步驟，以便建立其他使用者或群組的指派。
 
 ## <a name="next-steps"></a>後續步驟
 
-[建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [角色指派](../../reporting-services/security/role-assignments.md)  
 [角色定義](../../reporting-services/security/role-definitions.md)  
 

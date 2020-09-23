@@ -1,6 +1,6 @@
 ---
-title: 執行命令 | Microsoft Docs
-description: 執行命令
+title: 執行命令 (OLE DB 驅動程式) | Microsoft Docs
+description: 了解 OLE DB Driver for SQL Server 中的取用者如何藉由建立工作階段、取得資料列集，然後使用 Execute 來執行命令。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - sessions [OLE DB Driver for SQL Server]
 - OLE DB extensions for XML
 - OLE DB Driver for SQL Server, command execution
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f13c9177a74212b849572881f114e503a9530286
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f24216ec62b77c56d5d2b18563f64e37fd4b7691
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994986"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861522"
 ---
 # <a name="executing-a-command"></a>執行命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

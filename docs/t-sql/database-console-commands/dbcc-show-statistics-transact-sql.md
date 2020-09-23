@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459897"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076713"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DBCC SHOW_STATISTICS 會針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 查詢最佳化工具會使用統計資料來預估基數或查詢結果中的資料列數，如此可讓查詢最佳化工具建立高品質的查詢計畫。 例如，查詢最佳化工具可使用基數預估來選擇查詢計畫中的索引搜尋運算子，而不是索引掃描運算子，避免發生資源密集的索引掃描來提高查詢效能。
+DBCC SHOW_STATISTICS 會針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 查詢最佳化工具會使用統計資料來估計基數或查詢結果中的資料列數目，以利其建立高品質的查詢計劃。 例如，查詢最佳化工具可使用基數預估來選擇查詢計劃中的索引搜尋運算子，而不是索引掃描運算子，避免發生資源密集的索引掃描來提高查詢效能。
   
-查詢最佳化工具會將資料表或索引檢視表的統計資料儲存在統計資料物件中。 如果是資料表，將會在索引或資料表資料行清單上建立統計資料物件。 統計資料物件包含標頭 (其中包含有關統計資料的中繼資料)、長條圖 (包含統計資料物件之第一個索引鍵資料行中的值分佈)，以及用來測量跨資料行關聯的密度向量。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以使用統計資料物件中的任何資料來計算基數預估。
+查詢最佳化工具會將資料表或索引檢視表的統計資料儲存在統計資料物件中。 如果是資料表，將會在索引或資料表資料行清單上建立統計資料物件。 統計資料物件包含標頭 (其中包含有關統計資料的中繼資料)、長條圖 (包含統計資料物件之第一個索引鍵資料行中的值分佈)，以及用來測量跨資料行關聯的密度向量。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以使用統計資料物件中的任何資料來計算基數預估。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)和[基數估計 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)。
   
 DBCC SHOW_STATISTICS 會根據儲存在統計資料物件中的資料來顯示標頭、長條圖和密度向量。 此語法可讓您指定資料表或索引檢視表，連同目標索引名稱、統計資料名稱或資料行名稱。 此主題描述如何顯示統計資料以及如何了解顯示的結果。
-  
-如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。
-  
+
+> [!IMPORTANT]
+> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 開始，[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 動態管理檢視可讓您以程式設計方式擷取統計資料物件中包含的標頭資訊，以取得非累加統計資料。
+
+> [!IMPORTANT]
+> 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 開始，[sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) 動態管理檢視可讓您以程式設計方式擷取統計資料物件中包含的標頭資訊，以取得累加統計資料。
+
+> [!IMPORTANT]
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 開始，[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 動態管理檢視可讓您以程式設計方式擷取統計資料物件中包含的長條圖資訊。
+
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -162,15 +169,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |(CustomerId, ItemId, Price)|與 CustomerId、ItemId 和 Price 的值相符的資料列|  
   
 ## <a name="restrictions"></a>限制  
- DBCC SHOW_STATISTICS 不會提供空間或 xVelocity 記憶體最佳化的資料行存放區索引之統計資料。  
+ DBCC SHOW_STATISTICS 不會提供空間索引或記憶體最佳化的資料行存放區索引的統計資料。  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的權限  
-若要檢視統計資料物件，使用者必須具有資料表的 SELECT 權限。
+若要檢視統計資料物件，使用者必須具有資料表的 `SELECT` 權限。
 請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
 -   使用者必須有統計資料物件的所有資料行的權限  
 -   使用者必須有篩選條件 (如果有) 的所有資料行的權限  
 -   資料表不能有資料列層級安全性原則。
--   如果統計資料物件內的任何資料行是以動態資料遮罩規則進行遮罩，則除了 SELECT 權限之外，使用者還必須具有 UNMASK 權限
+-   如果統計資料物件內的任何資料行是以動態資料遮罩規則進行遮罩，則除了 `SELECT` 權限之外，使用者還必須具有 `UNMASK` 權限。
 
 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的版本中，使用者必須擁有資料表，或使用者必須是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。
 
@@ -178,10 +185,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  > 若要將行為變更回 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前版本的行為，請使用追蹤旗標 9485。
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的權限  
-DBCC SHOW_STATISTICS 需要資料表上的 SELECT 權限或下列其中一項的成員資格：
--   sysadmin 固定伺服器角色  
--   db_owner 固定資料庫角色  
--   db_ddladmin 固定資料庫角色  
+DBCC SHOW_STATISTICS 需要資料表的 `SELECT` 權限，或 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員資格。  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
 DBCC SHOW_STATISTICS 會顯示在控制節點層級的 Shell 資料庫中儲存的統計資料。 不會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在計算節點上自動建立的統計資料。
@@ -234,3 +238,4 @@ GO
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

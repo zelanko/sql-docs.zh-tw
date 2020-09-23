@@ -1,4 +1,5 @@
 ---
+description: 並存安裝 Reporting Services 和 Internet Information Services
 title: 並存安裝 Reporting Services 和 Internet Information Services | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e32958f17e4cdb57b37fcf4a85ad54a11b48821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472680"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>並存安裝 Reporting Services 和 Internet Information Services
 
@@ -44,8 +45,8 @@ ms.locfileid: "64330625"
 |`https://123.234.345.456:80/reports`|如果網域名稱服務可以將 IP 位址解析成該主機名稱，則會收到所有傳送至 `https://123.234.345.456/reports` 或 `https://\<computername>/reports` 的所有要求。|  
 |`https://+:80/reports`|只要此 URL 包含 "reports" 虛擬目錄名稱，便接收傳送至適用於該電腦之任何 IP 位址或主機名稱的任何要求。|  
 |`https://123.234.345.456:80`|如果網域名稱服務可以將 IP 位址解析成該主機名稱，則會收到任何指定 `https://123.234.345.456` 或 `https://\<computername>` 的要求。|  
-|`https://+:80`|若為對應至 [全部指派]  的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
-|`https://*:80`|若為對應至 [全未指派]  的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
+|`https://+:80`|若為對應至 [全部指派]**** 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
+|`https://*:80`|若為對應至 [全未指派]**** 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
   
  發生連接埠衝突的其中一個指標是，您將會看到下列錯誤訊息：「System.IO.FileLoadException: 由於已有另一個處理序正在使用該檔案，所以無法存取該檔案。 (來自 HRESULT 的例外狀況: 0x80070020)。」  
   
@@ -54,8 +55,8 @@ ms.locfileid: "64330625"
   
 |Application|URL 保留項目|描述|要求接收|  
 |-----------------|---------------------|-----------------|---------------------|  
-|報表伺服器|`https://+:80/ReportServer`|通訊埠 80 的強式萬用字元，以及報表伺服器虛擬目錄。|在通訊埠 80 上接收指定報表伺服器虛擬目錄的所有要求。 報表伺服器 Web 服務會接收 https://\<電腦名稱>/reportserver 的所有要求。|  
-|入口網站|`https://+:80/Reports`|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 會接收 https://\<電腦名稱>/reports 的所有要求。|  
+|報表伺服器|`https://+:80/ReportServer`|通訊埠 80 的強式萬用字元，以及報表伺服器虛擬目錄。|在通訊埠 80 上接收指定報表伺服器虛擬目錄的所有要求。 報表伺服器 Web 服務會接收對 https://\<computername>/reportserver 的所有要求。|  
+|入口網站|`https://+:80/Reports`|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 會接收對 https://\<computername>/reports 的所有要求。|  
 |IIS|`https://*:80/`|通訊埠 80 的弱式萬用字元。|在通訊埠 80 上接收其他應用程式未接收的任何其餘要求。|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>在 IIS 8.0、8.5 上並存部署 SQL Server Reporting Services
@@ -66,7 +67,7 @@ ms.locfileid: "64330625"
   
 -   以預設設定安裝的報表伺服器執行個體，其中 URL 保留項目也指定了通訊埠 80 而 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 應用程式也將 "Reports" 用於虛擬目錄名稱。  
   
- 如果您採用此設定，則傳送至 https://\<電腦名稱>:80/reports 的要求將由 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 所接收。 安裝了報表伺服器執行個體之後，透過 IIS 中 Reports 虛擬目錄存取的應用程式將不會再接收要求。  
+ 如果您採用此設定，則傳送至 https://\<computername>:80/reports 的要求將由 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 所接收。 安裝了報表伺服器執行個體之後，透過 IIS 中 Reports 虛擬目錄存取的應用程式將不會再接收要求。  
   
  如果您要執行舊版與新版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的並存部署，可能會遇到上述路由傳送的問題。 這是因為所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都會使用 "ReportServer" 和 "Reports" 當做報表伺服器與 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 應用程式的虛擬目錄名稱，因而增加您在 IIS 中設有 "reports" 和 "reportserver" 虛擬目錄的可能性。  
   

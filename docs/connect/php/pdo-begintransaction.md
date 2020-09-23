@@ -1,7 +1,8 @@
 ---
-title: PDO::beginTransaction | Microsoft Docs
+title: PDO::beginTransaction
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDO::beginTransaction 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ec1b4149b882e520eb58a8789516461c83c01de
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ed3a4ed3e1dd4642f5456423e6266bb2a327c330
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919397"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646208"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

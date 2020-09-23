@@ -1,6 +1,6 @@
 ---
 title: 設定大型資料 (OLE DB 驅動程式)
-description: 設定大型資料 (OLE DB)
+description: 了解如何在 OLE DB Driver for SQL Server 中設定 BLOB 資料、建立資料表、新增記錄、在資料列集中擷取該記錄，以及設定 BLOB 欄位的值。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large data
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9650f475da3fd15d2956cc8a64c9fcb995b562ce
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51ca3f7d977b558f196e95cb826b11cd22cc0ce7
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244668"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860267"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

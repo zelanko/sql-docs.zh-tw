@@ -1,6 +1,6 @@
 ---
-title: 使用增強型日期和時間功能 (OLE DB) | Microsoft Docs
-description: 使用增強型日期和時間功能 (OLE DB)
+title: 使用增強型日期和時間功能 (OLE DB 驅動程式)
+description: 了解如何使用日期/時間功能 date、time、datetime2 和 datetimeoffset 來執行命令，以及擷取 OLE DB Driver for SQL Server 中的資料列集結果。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 013e933fe4aeab69abf28148949dfcb0b5b4d47d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25fe260204a1cf95f5d6a1ed93c0b2fb1b0bab06
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012019"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861986"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

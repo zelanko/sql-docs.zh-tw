@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL Databases 的連線程式庫 | Microsoft Docs
+title: Microsoft SQL Database 的連線程式庫 | Microsoft Docs
 description: 提供模組下載連結，這些模組可供從各種用戶端程式設計語言連線到 Microsoft SQL Server 與 Azure SQL Database。
 author: David-Engel
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244049"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988513"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連線模組
+# <a name="connection-modules-for-microsoft-sql-database"></a>Microsoft SQL Database 的連接模組
 
 此文章提供連線模組或驅動程式  的下載連結，這些可讓您的用戶端程式用來與 [Microsoft SQL Server](../relational-databases/database-features.md)互動，以及其在雲端的對應項 [Azure SQL Database](/azure/sql-database/) 互動。 驅動程式適用於在下列作業系統上執行的各種程式設計語言：
 
@@ -50,7 +50,7 @@ ms.locfileid: "87244049"
 
 ## <a name="drivers-for-orm-access"></a>ORM 存取的驅動程式
 
-下表列出用戶端應用程式用來連線到 Microsoft SQL 資料庫的物件關聯式對應 (ORM) 架構範例。
+下表列出用戶端應用程式用來連線至 Microsoft SQL Database 的物件關聯式對應 (ORM) 架構範例。
 
 | Language | ORM 驅動程式下載 |
 | :------- | :------------------ |

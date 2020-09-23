@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料 | Microsoft Docs
+title: 如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
+description: 本主題說明在使用 Microsoft SQLSRV Driver for PHP for SQL Server 時如何以資料流的形式擷取二進位資料
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 631983a89549913863a5bd284e951b518831bc76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d509eaf083cf7a16e83506ecf54d99daa8883a62
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916154"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680623"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

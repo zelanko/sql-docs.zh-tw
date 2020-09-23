@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dcf3a2f48eab092cf12d229685aa05f9e5e42f69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479782"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076693"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (平行資料倉儲)
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**。  
 *target_size* 是 DBCC SHRINKLOG 完成後期望的交易記錄大小 (跨所有計算節點)。 其為大於 0 的整數。  
 記錄大小的測量單位是 MB、GB 或 TB。 它是所有計算節點上的交易記錄合併的大小。  
-根據預設，DBCC SHRINKLOG 會將交易記錄縮減為儲存在資料庫中繼資料中的記錄大小。 中繼資料的記錄大小是由 [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) or [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 中的 LOG_SIZE 參數所決定。 指定 `SIZE=DEFAULT` 或省略 `SIZE` 子句時，DBCC SHRINKLOG 會將交易記錄大小縮減至預設大小。
+根據預設，DBCC SHRINKLOG 會將交易記錄縮減為儲存在資料庫中繼資料中的記錄大小。 中繼資料的記錄大小由 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 或 [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 中的 LOG_SIZE 參數所決定。 指定 `SIZE=DEFAULT` 或省略 `SIZE` 子句時，DBCC SHRINKLOG 會將交易記錄大小縮減至預設大小。
   
 WITH NO_INFOMSGS  
 DBCC SHRINKLOG 結果中不會顯示資訊訊息。  

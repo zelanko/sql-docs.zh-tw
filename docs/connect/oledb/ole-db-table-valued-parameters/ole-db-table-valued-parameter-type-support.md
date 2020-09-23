@@ -1,6 +1,6 @@
 ---
 title: 資料表值參數類型支援 (OLE DB 驅動程式)
-description: OLE DB 資料表值參數類型支援
+description: 了解如何為 OLE DB Driver for SQL Server 中的資料表值參數建立特殊化資料列集物件。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 453609d2d5633b6270ab565a2da50a98c909e86a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1a113783462962eed8af91c0d0f23a6024392b58
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244132"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861868"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 資料表值參數類型支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

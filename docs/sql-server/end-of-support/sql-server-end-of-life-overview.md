@@ -1,20 +1,20 @@
 ---
 title: 終止支援選項
 description: 了解已達終止支援其 SQL Server 產品 (例如 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2) 的各種可用選項。
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112108"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200296"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 終止支援選項 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "87112108"
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 支援的版本與版次升級：
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ ms.locfileid: "87112108"
 
 - **成本**：單一資料庫可能符合成本效益，因為已卸載硬體、軟體和維護，且您可以按秒或小時的使用量付費。 
 - **彈性**：單一資料庫特別適合針對雲端設計的應用程式使用，因為對於此類應用程式來說，開發人員的生產力和解決方案上市時間快慢至關重要，或是需要外部存取。  
-- **常用功能**：提供最常使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但沒有像 Azure SQL Database 受控執行個體那麼多。  
+- **常用功能**：提供最常使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但沒有像 SQL 受控執行個體那麼多。  
 - **快速部署**：您可以快速部署單一資料庫。 
 - **延展性**：您可以視業務需求快速輕鬆地擴大和縮小，因此提供額外的節省成本效益。 
 - **可用性**：服務成本包含儲存體和高可用性，並保證正常運作時間達 99.995%。  
@@ -177,7 +177,7 @@ ms.locfileid: "87112108"
 ### <a name="considerations"></a>考量
 
 - **有限移轉選項**：您一次只能移轉單一資料庫，而不是整個執行個體。   
-- **功能限制**：雖然提供最常使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但單一資料庫的功能集並不如 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一樣完整。 
+- **功能限制**：雖然提供最常使用的 Azure SQL Database 功能，但單一資料庫的功能集並不如 Azure SQL 受控執行個體或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一樣完整。 
 - **Transact-SQL 差異**：單一資料庫與內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間有一些 [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) 差異。 
 - **大小限制**：相較於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 524 PB 大小，單一資料庫的資料庫大小上限為 100 TB。 
 - **維護時間**：不保證確切的維護時間，但近乎透明。 
@@ -197,9 +197,9 @@ ms.locfileid: "87112108"
 - [資料移轉小幫手](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="sql-managed-instance"></a>SQL 受控執行個體
 
-如果您想要利用卸載維護和成本，但發現 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫的功能集太過侷限，則可移至 [Azure SQL Database 受控執行個體](/azure/sql-database/sql-database-managed-instance)。 受控執行個體與內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非常相似，因此不必擔心硬體故障或修補的問題。 受控執行個體是具有一組共用資源的系統和使用者資料庫集合，可隨即轉移，並可用於大多數的雲端移轉。 此選項最適用於想要在最少變更的情況下使用最新穩定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，且會移轉到雲端的新應用程式或現有內部部署應用程式。 
+如果您想要利用卸載維護和成本，但發現 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫的功能集太過侷限，則可移至 [SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)。 受控執行個體與內部部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非常相似，因此不必擔心硬體故障或修補的問題。 受控執行個體是具有一組共用資源的系統和使用者資料庫集合，可隨即轉移，並可用於大多數的雲端移轉。 此選項最適用於想要在最少變更的情況下使用最新穩定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，且會移轉到雲端的新應用程式或現有內部部署應用程式。 
 
 ### <a name="benefits"></a>優點
 
@@ -225,10 +225,10 @@ ms.locfileid: "87112108"
 
 ### <a name="resources"></a>資源
 
-[Azure SQL Database 受控執行個體概觀](/azure/sql-database/sql-database-managed-instance)       
+[SQL 受控執行個體概觀](/azure/sql-database/sql-database-managed-instance)       
 [選擇 Azure SQL 選項](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database 功能比較](/azure/sql-database/sql-database-features)       
-[將 SQL Server 移轉到受控執行個體](/azure/sql-database/sql-database-managed-instance-migrate)       
+[將 SQL Server 移轉至 Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-migrate)       
 [更廣泛的移轉程序](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 工具：

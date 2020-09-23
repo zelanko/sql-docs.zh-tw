@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::setFetchMode | Microsoft Docs
+title: PDOStatement::setFetchMode
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::setFetchMode 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75082b50eeb6298173d41e70ed3020247896c164
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f23800d3c1d7ffa232d87999fecb0de1b39bfde
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921142"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646518"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

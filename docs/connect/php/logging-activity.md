@@ -1,7 +1,8 @@
 ---
-title: 記錄活動 | Microsoft Docs
+title: 記錄活動
+description: 了解在使用 Microsoft Driver for PHP for SQL Server 時如何設定不同的記錄選項組合
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5486f32894b04a211be26bd7c55d58294ad36367
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922861"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680543"
 ---
 # <a name="logging-activity"></a>記錄活動
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +65,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
 |值 (括號中的整數對等項目)|描述|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|開啟所有子系統的記錄。|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|關閉記錄。 這是預設值。|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|關閉記錄。 此為預設值。|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|開啟初始化活動的記錄。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|開啟連接活動的記錄。|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|開啟陳述式活動的記錄。|  
@@ -95,7 +96,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
 |值 (括號中的整數對等項目)|描述|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|指定會記錄錯誤、警告和通知。|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|指定記錄錯誤。 這是預設值。|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|指定記錄錯誤。 此為預設值。|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|指定記錄警告。|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|指定記錄通知。|  
   

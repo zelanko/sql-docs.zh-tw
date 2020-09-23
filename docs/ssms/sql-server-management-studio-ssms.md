@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-description: 描述什麼是 SQL Server Management Studio (SSMS) 及其功用。
+description: 深入了解 SQL Server Management Studio (SSMS) 和 SMMS 可執行的工作，包括如何管理 Analysis Services 解決方案。
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001594"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480426"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？
 
@@ -43,7 +43,7 @@ ms.locfileid: "86001594"
 |如何使用 [範本總管]  建立及管理重複使用文字的檔案，以用來加快查詢與指令碼的開發速度。|[範本總管](../ssms/template/template-explorer.md)|  
 |如何使用即將淘汰的 **方案總管** 建立專案，以管理管理項目 (例如指令碼與查詢)。|[方案總管](../ssms/solution/solution-explorer.md)|  
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]隨附的視覺化設計工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器](scripting/query-and-text-editors-sql-server-management-studio.md)
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>適用於商業智慧的 SQL Server Management Studio
 

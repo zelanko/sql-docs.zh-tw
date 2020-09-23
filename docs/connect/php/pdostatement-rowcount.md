@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::rowCount | Microsoft Docs
+title: PDOStatement::rowCount
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::rowCount 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68acc6ddb3a5c42562dbbdb787770b76a22b50da
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 31671bc3db85a31cde4109cedb11f3ab44f07ea1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925290"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646578"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

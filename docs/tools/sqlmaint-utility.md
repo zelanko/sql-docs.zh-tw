@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918345"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332252"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -218,7 +218,7 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  指定在備份完成時執行 RESTORE VERIFYONLY。  
   
- *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
+ *number*[**minutes**\| **hours**\| **day**\| **weeks**\| **months**]  
  指定一個時間間隔來決定報表或備份檔經過多久時間之後便可刪除。 *number* 是後面接著時間單位的一個整數 (不含空格)。 有效範例：  
   
 -   **12weeks**  

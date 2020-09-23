@@ -1,4 +1,5 @@
 ---
+description: 變更操作員的可用性
 title: 變更操作員的可用性
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -23,18 +24,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12d8345e00b7f575b6672b46ef2c4b9331533f93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85c1b4373ff7ad954ed67bab0316e4ccd1c800a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418304"
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更操作員接收警示通知的排程。  
   
@@ -51,15 +52,15 @@ ms.locfileid: "85749211"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您要啟用或停用操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]** 。  
+2.  按一下加號展開 **[SQL Server Agent]**。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]  ，然後按一下 [一般]  索引標籤。  
+4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]****，然後按一下 [一般]**** 索引標籤。  
   
-5.  在 [_operator\_name_ 屬性]  對話方塊中，選取或清除 [已啟用]  核取方塊。  
+5.  在 [_operator\_name_ 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   

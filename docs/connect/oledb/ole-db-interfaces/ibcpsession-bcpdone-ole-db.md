@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPDone (OLE DB 驅動程式) | Microsoft Docs
-description: IBCPSession::BCPDone (OLE DB)
+description: 了解 IBCPSession::BCPDone 方法如何在 OLE DB Driver for SQL Server 中認可要傳送至 SQL Server 的其餘資料列。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPDone method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4533779b6124c440b769ea171685b552c0cda6b9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4b785ef962474a73eeaafa1975adc3e70642b9c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244609"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861960"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

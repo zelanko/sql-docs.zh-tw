@@ -1,6 +1,6 @@
 ---
 title: IDBProperties (OLE DB 驅動程式) | Microsoft Docs
-description: IDBProperties 介面 (OLE DB)
+description: 了解 OLE DB Driver for SQL Server 中的 IDBProperties 介面，包括 IDBProperties::GetPropertyInfo 方法。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: afaf7fc8e0ea60a1ee8576e0afa5b279653a2272
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e5122c4f8e78caa4fd28d595a09a58af21aacb4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244488"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861342"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

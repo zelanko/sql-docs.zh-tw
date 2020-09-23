@@ -1,6 +1,6 @@
 ---
 title: 列舉 OLE DB 資料來源 (OLE DB 驅動程式) | Microsoft Docs
-description: 使用 MSOLEDBSQL 列舉程式列舉 OLE DB 資料來源
+description: 透過此範例，了解如何使用 MSOLEDBSQL.H 列舉程式列出可用的 OLE DB Driver for SQL Server 資料來源。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 33006af4eee9d97566144e66c984d55cabd5765d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244791"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861388"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

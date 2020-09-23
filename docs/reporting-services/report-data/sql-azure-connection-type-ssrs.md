@@ -1,6 +1,6 @@
 ---
-title: SQL Azure 連線類型 | Microsoft Docs
-description: SQL Azure 連線資料延伸模組支援多值參數、伺服器彙總，以及與連接字串分開管理的認證。
+title: Azure SQL 連線類型 | Microsoft Docs
+description: Azure SQL 連線資料延伸模組支援多值參數、伺服器彙總，以及與連接字串分開管理的認證。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,14 +9,14 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081756"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988470"
 ---
-# <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
+# <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 連線類型 (SSRS)
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 是運用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術所建立的雲端式主控關聯式資料庫。 若要在報表中包含來自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料，您必須具有以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]並從中擷取資料。  
   

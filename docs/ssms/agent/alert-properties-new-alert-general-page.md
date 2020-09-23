@@ -1,4 +1,5 @@
 ---
+description: 警示屬性 - 新增警示 (一般頁面)
 title: 警示屬性 - 新增警示 (一般頁面)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90141295bbb68d6401bb8fade13776ef4dc65def
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ed13dc3f03a82adb3cfb85a9ecabce6742a4071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418404"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警示屬性 - 新增警示 (一般頁面)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的一般屬性。  
 
@@ -52,7 +53,7 @@ ms.locfileid: "85749241"
 **錯誤號碼**  
 指定此事件會回應錯誤，並指定錯誤號碼。  
   
-**Severity**  
+**嚴重性**  
 指定此事件會回應具特定嚴重性層級的任何訊息，並指定嚴重性層級。  
   
 **訊息包含下列內容時引發警示**  
@@ -72,9 +73,9 @@ ms.locfileid: "85749241"
 指定要監視之計數器的執行個體。  
   
 **發出警示的時機為計數器達**  
-指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]  計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]  高於某個值時，您可能會希望警示針對如此的條件做出回應。  
+指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]**** 計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]**** 高於某個值時，您可能會希望警示針對如此的條件做出回應。  
   
-**ReplTest1**  
+**值**  
 指定計數器的值。  
   
 ## <a name="wmi-event-alert-options"></a>WMI 事件警示選項  

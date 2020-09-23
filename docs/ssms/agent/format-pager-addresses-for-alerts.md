@@ -1,4 +1,5 @@
 ---
+description: 設定警示的呼叫器位址格式
 title: 設定警示的呼叫器位址格式
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,20 +19,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e7150f11485a9cd32bfaa940675e24ee513d960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c75d7eaf25941969ddbf9e9d9dfc2cb683c1360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492196"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>設定警示的呼叫器位址格式
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中格式化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 警示的呼叫器號碼。  
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中格式化 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的呼叫器號碼。  
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="security"></a><a name="Security"></a>安全性  
@@ -45,15 +46,15 @@ ms.locfileid: "85715802"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要傳送至呼叫器的警示。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
   
-3.  在 **[選取頁面]** 底下，選取 **[警示系統]** 。  
+3.  在 **[選取頁面]** 底下，選取 **[警示系統]**。  
   
-4.  在 [呼叫器電子郵件位址格式]  欄位的 [收件者]  和 [副本]  方塊中，輸入呼叫器號碼的前置詞和後置詞。 當傳送通知時，就會插入操作員的實際呼叫器號碼。  
+4.  在 [呼叫器電子郵件位址格式]**** 欄位的 [收件者]**** 和 [副本]**** 方塊中，輸入呼叫器號碼的前置詞和後置詞。 當傳送通知時，就會插入操作員的實際呼叫器號碼。  
   
 5.  在 **[主旨]** 方塊中，輸入主旨行前置詞或後置詞。  
   
-6.  選取 [將電子郵件的內文包含在通知訊息中]  核取方塊，表示會在呼叫器訊息中加入完整的電子郵件訊息 (而不是僅有主旨行)。  
+6.  選取 [將電子郵件的內文包含在通知訊息中]**** 核取方塊，表示會在呼叫器訊息中加入完整的電子郵件訊息 (而不是僅有主旨行)。  
   
 7.  完成後，請按一下 **[確定]** 。  
   

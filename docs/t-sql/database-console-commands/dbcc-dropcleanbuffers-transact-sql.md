@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f756dda5a0fc09eaad4e20fb6436a8fb5957fb2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c820f664d6d8b56453c39f117d373f44312f898e
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468248"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076743"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -42,12 +42,12 @@ ms.locfileid: "88468248"
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法
-SQL Server 的語法：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語法：
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Azure SQL 資料倉儲和平行處理資料倉儲的語法：
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的語法：
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -77,14 +77,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>權限  
-
-適用對象：SQL Server、平行處理資料倉儲 
-
-- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
-
-適用對象：Azure SQL 資料倉儲
-
-- 需要 DB_OWNER 固定資料庫角色中的成員資格。  
+需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的 `sysadmin` 固定伺服器角色的成員資格。  
+需要 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 的 `DB_OWNER` 固定伺服器角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

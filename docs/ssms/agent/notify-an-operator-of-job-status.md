@@ -1,4 +1,5 @@
 ---
+description: 通知操作員作業狀態
 title: 通知操作員作業狀態
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,20 +19,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fca1a7f4272839f6ac3443431e6de469bcc77291
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 520495002a15790451321f486a069154e6469199
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418104"
 ---
 # <a name="notify-an-operator-of-job-status"></a>通知操作員作業狀態
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件，以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中設定通知選項來讓 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 將作業的相關通知傳送給操作員。  
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定通知選項來讓 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 將作業的相關通知傳送給操作員。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
@@ -44,11 +45,11 @@ ms.locfileid: "85715742"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]  。  
+2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]****。  
   
 3.  在 **[作業屬性]** 對話方塊中，選取 **[通知]** 頁面。  
   
-4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]  、從清單選取操作員，然後選取下列其中一個選項：  
+4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]****、從清單選取操作員，然後選取下列其中一個選項：  
   
     -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85715742"
   
     -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
   
-5.  如果您想以呼叫器來通知操作員，請核取 **[呼叫器]** 、從清單選取操作員，然後選取下列其中一個選項：  
+5.  如果您想以呼叫器來通知操作員，請核取 **[呼叫器]**、從清單選取操作員，然後選取下列其中一個選項：  
   
     -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85715742"
   
     -   **[作業完成時]** 可在無論完成狀態為何，都通知操作員。  
   
-6.  如果您想以網路傳送的方式來通知操作員，請核取 **[網路傳送]** 、從清單選取操作員，然後選取下列其中一個選項：  
+6.  如果您想以網路傳送的方式來通知操作員，請核取 **[網路傳送]**、從清單選取操作員，然後選取下列其中一個選項：  
   
     -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   

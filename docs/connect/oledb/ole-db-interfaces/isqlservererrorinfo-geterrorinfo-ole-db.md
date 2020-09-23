@@ -1,6 +1,6 @@
 ---
 title: ISQLServerErrorInfo::GetErrorInfo (OLE DB Driver) | Microsoft Docs
-description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
+description: 了解 ISQLServerErrorInfo::GetErrorInfo 方法如何傳回一個指標，指向 OLE DB Driver for SQL Server SSERRORINFO 結構以及 SQL Server 錯誤詳細資料。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - GetErrorInfo method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 89a6bab95fa43deb3536e25a7cb99610413b1848
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6c025b5832299867be8b611756b5e15d54109c2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244442"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860082"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ SSERRORINFO;
  結構中的指標會參考 *ppErrorStrings* 引數所傳回之字串中的地址。  
   
 ## <a name="see-also"></a>另請參閱  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

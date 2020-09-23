@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::columnCount | Microsoft Docs
+title: PDOStatement::columnCount
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::columnCount 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c0b109b3cc40b9e76f878a1d0f455b2637372cf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4c1cfa12ea94a0ffd952473f13782e2bc49c4810
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920992"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645249"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

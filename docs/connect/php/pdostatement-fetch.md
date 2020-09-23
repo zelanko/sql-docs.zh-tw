@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetch | Microsoft Docs
+title: PDOStatement::fetch
+description: Microsoft PDO_SQLSRV Driver for PHP for SQL Server 中的 PDOStatement::fetch 函式適用的 API 參考。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 338d871e7e0cbbfa2da04d04d33fe672f85d8083
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928602"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645105"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ $*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* �
 |$*fetch_style*|描述|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|指定依資料行名稱編製索引的陣列。|  
-|PDO::FETCH_BOTH|指定依資料行名稱且以 0 起始而編製索引的陣列。 這是預設值。|  
+|PDO::FETCH_BOTH|指定依資料行名稱且以 0 起始而編製索引的陣列。 此為預設值。|  
 |PDO::FETCH_BOUND|會傳回 true，並指定 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)所指定的值。|  
 |PDO::FETCH_CLASS|建立執行個體，並將資料行對應至具名屬性。<br /><br />在呼叫提取之前呼叫 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) 。|  
 |PDO::FETCH_INTO|重新整理要求類別的執行個體。<br /><br />在呼叫提取之前呼叫 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) 。|  
@@ -59,7 +60,7 @@ $*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* �
   
 |$*cursor_orientation*|描述|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|擷取下一個資料列。 這是預設值。|  
+|PDO::FETCH_ORI_NEXT|擷取下一個資料列。 此為預設值。|  
 |PDO::FETCH_ORI_PRIOR|擷取上一個資料列。|  
 |PDO::FETCH_ORI_FIRST|擷取第一個資料列。|  
 |PDO::FETCH_ORI_LAST|擷取最後一個資料列。|  

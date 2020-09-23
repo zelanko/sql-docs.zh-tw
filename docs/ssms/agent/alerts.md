@@ -1,4 +1,5 @@
 ---
+description: 警示
 title: 警示
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,19 +24,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 338493592a01031542d316df2c454bb09ff9b68d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa31500bd90ab993f58a2e27e1a41c937ad0370
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320264"
 ---
 # <a name="alerts"></a>警示
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 事件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生，並輸入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄檔中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會讀取應用程式記錄檔，然後比較寫入其中的事件與您所定義的警示。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 找到相符項目時，即會發出警示，這是對事件的自動回應。 除了監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 還可以監視效能條件與 Windows Management Instrumentation (WMI) 事件。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "85755317"
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在指定事件的事件訊息中含有特定的文字字串時發出警示。 例如，您可以定義警示來回應含有特定資料表名稱或特定條件約束名稱的訊息。  
   
 ## <a name="selecting-a-performance-condition"></a>選取效能條件  
-您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  
+您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]**** 頁面上定義 [新增警示]**** 或 [警示屬性]**** 對話方塊中的下列項目：  
   
 -   **Object**  
   
@@ -95,11 +96,11 @@ ms.locfileid: "85755317"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可為要監視的屬性定義特定的執行個體 (如果有的話)。  
   
--   **如果是計數器和值則發出警示**   
+-   **如果是計數器和值則發出警示******  
   
-    警示的臨界值和產生警示的行為。 臨界值是一個數值。 此行為是下列其中一項：低於  、變成等於  或高於在 [值] 中指定的數值  。 [值]  是一個描述效能行況計數器的數值。 例如，若要設定警示在效能物件 **SQLServer:Locks** 的 **Lock Wait Time** 超過 30 分鐘時產生，您就必須選擇 [高於]  ，並指定 30 為 [值]  。  
+    警示的臨界值和產生警示的行為。 臨界值是一個數值。 此行為是下列其中一項：低於****、變成等於**** 或高於在 [值] 中指定的數值****。 [值]**** 是一個描述效能行況計數器的數值。 例如，若要設定警示在效能物件 **SQLServer:Locks** 的 **Lock Wait Time** 超過 30 分鐘時產生，您就必須選擇 [高於]****，並指定 30 為 [值]****。  
   
-    至於另一個範例，您可以指定效能物件 **SQLServer:Transactions** 在 **tempdb** 中的可用空間低於 1000 KB 時發出警示。 若要進行此設定，您必須選擇計數器 **Free space in tempdb (KB)** 、低於  ，並在 [值]  中指定 **1000**。  
+    至於另一個範例，您可以指定效能物件 **SQLServer:Transactions** 在 **tempdb** 中的可用空間低於 1000 KB 時發出警示。 若要進行此設定，您必須選擇計數器 **Free space in tempdb (KB)**、低於****，並在 [值]**** 中指定 **1000**。  
   
     > [!NOTE]  
     > 效能資料是定期取樣的，因此在到達臨界值與發出效能警示之間可能會有一點延遲 (幾秒鐘)。  
@@ -113,7 +114,7 @@ ms.locfileid: "85755317"
   
   
 ## <a name="selecting-a-wmi-event"></a>選取 WMI 事件  
-您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  
+您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]**** 頁面上定義 [新增警示]**** 或 [警示屬性]**** 對話方塊中的下列項目：  
   
 -   **Namespace**  
   
@@ -127,25 +128,25 @@ ms.locfileid: "85755317"
   
 **若要以訊息編號為基礎建立警示**  
   
--   [Transact-SQL](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **若要以嚴重性層級為基礎建立警示**  
   
--   [Transact-SQL](../../ssms/agent/create-an-alert-using-severity-level.md)  
+-   [SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **若要根據 WMI 事件建立警示**  
   
--   [Transact-SQL](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [SQL Server Management Studio](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 -   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **若要定義對警示的回應**  
   
--   [Transact-SQL](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
+-   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
 -   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
@@ -163,7 +164,7 @@ ms.locfileid: "85755317"
   
 **若要停用或重新啟動警示**  
   
--   [Transact-SQL](../../ssms/agent/disable-or-reactivate-an-alert.md)  
+-   [SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
   
 -   [Transact-SQL](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   

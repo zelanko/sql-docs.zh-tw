@@ -1,26 +1,26 @@
 ---
-title: SQL 迴圈連線
+title: Pyrhon 和 R 中的 SQL 迴圈連線
 description: 了解如何使用回送連線，透過 ODBC 連回到 SQL Server，以從 sp_execute_external_script 執行的 Python 或 R 指令碼讀取或寫入資料。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
+ms.date: 08/20/2020
 ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482569"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714136"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>從 Python 或 R 指令碼對 SQL Server 的回送連線
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-了解如何使用回送連線，透過 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 連回到 SQL Server，以從 `sp_execute_external_script` 執行的 Python 或 R 指令碼讀取或寫入資料。 當您使用 `sp_execute_external_script` 的 **InputDataSet** 與 **OutputDataSet** 引數時，無法這樣做。
+了解如何使用[機器學習服務](../sql-server-machine-learning-services.md)的回送連線，透過 [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 連回到 SQL Server，以從 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 執行的 Python 或 R 指令碼讀取或寫入資料。 當您使用 `sp_execute_external_script` 的 **InputDataSet** 與 **OutputDataSet** 引數時，無法這樣做。
 
 ## <a name="connection-string"></a>連接字串
 

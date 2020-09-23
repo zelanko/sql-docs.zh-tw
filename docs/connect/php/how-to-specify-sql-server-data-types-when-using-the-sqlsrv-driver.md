@@ -1,7 +1,8 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式時指定 SQL Server 資料類型 | Microsoft Docs
+title: 如何：在使用 SQLSRV 驅動程式時指定 SQL Server 資料類型
+description: 了解在使用 SQLSRV Driver for PHP 時，如何在備妥的陳述式或直接查詢中以選擇性的 *$params* 陣列指定 SQL Server 資料類型
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce7e541486412d6c309fdbf1a9fe6d155e38f5a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922872"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680567"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

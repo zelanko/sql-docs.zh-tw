@@ -1,7 +1,8 @@
 ---
-title: 直接陳述式 - 已備妥的陳述式執行 PDO_SQLSRV 驅動程式 | Microsoft Docs
+title: 直接陳述式 - 已備妥的陳述式執行 PDO_SQLSRV 驅動程式
+description: 了解在使用 Microsoft PDO_SQLSRV Driver for PHP for SQL Server 時，如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 屬性直接執行陳述式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ca9ab0e2846ddff98b6a0d7b626ae6757517a2d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e781200d74fcd0b34d42a69417546a0aeaf95a9e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928002"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680784"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdo_sqlsrv-driver"></a>PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

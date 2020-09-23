@@ -1,6 +1,6 @@
 ---
 title: 搭配 dbSqlPackage 提供者使用 MSDeploy
-description: 了解淘汰的 Msdeploy 提供者 DbSqlPackage。 查看參數、範例與替代的 SQL Server 及 SQL Azure 資料庫發佈工具。
+description: 了解淘汰的 Msdeploy 提供者 DbSqlPackage。 查看參數、範例與替代的 SQL Server 及 Azure SQL Database 發佈工具。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899739"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934083"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 
-**DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/SQL Azure 資料庫進行互動。 **DbSqlPackage** 支援下列動作：  
+**DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/Azure SQL Database 進行互動。 **DbSqlPackage** 支援下列動作：  
   
--   **Extract**：從即時 SQL Server 或 SQL Azure 資料庫建立資料庫快照集 (.dacpac) 檔案。  
+-   **Extract**：從即時的 SQL Server 或 Azure SQL Database 建立資料庫快照集 (.dacpac) 檔案。  
   
 -   **Publish**：以累加方式更新資料庫結構描述，以符合來源 .dacpac 檔案的結構描述。  
   
@@ -57,7 +57,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/A**|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。<br /><br />**注意：** 當您使用連接字串當作輸入來源時，支援的連接字串屬性只有 *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* 和 *ConnectionTimeout*。|  
   
-如果您的輸入來源是即時 SQL Server/SQL Azure 資料庫的連接字串，**dbSqlPackage** 將會從即時 SQL Server/SQL Azure 資料庫中擷取資料庫快照集 (.dacpac 格式的檔案)。  
+如果您的輸入來源是 SQL Server/Azure SQL Database 的連接字串，**dbSqlPackage** 將會從 SQL Server/Azure SQL Database 中擷取資料庫快照集 (.dacpac 格式的檔案)。  
   
 **來源**參數包括：  
   

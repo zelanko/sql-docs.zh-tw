@@ -2,7 +2,7 @@
 description: Validate XML with the XML Task
 title: 使用 XML 工作驗證 XML | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2dd292ea05ae40ff5cd19a1a8e8de55f9f0b9095
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5009a7a1c0b51feb555223294e1cc4cb5ff490f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349254"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570349"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88349254"
 
   驗證 XML 文件，並啟用 XML 工作的 **ValidationDetails** 屬性以取得詳細的錯誤輸出。  
   
- 下列螢幕擷取畫面顯示 [XML 工作編輯器]  ，內含具有豐富錯誤輸出之 XML 驗證所需的設定。  
+ 下列螢幕擷取畫面顯示 [XML 工作編輯器]，內含具有豐富錯誤輸出之 XML 驗證所需的設定。  
   
  ![[XML 工作編輯器] 中的 XML 工作屬性](../../integration-services/control-flow/media/xmltaskproperties.jpg "[XML 工作編輯器] 中的 XML 工作屬性")  
   
@@ -121,7 +121,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  以下是先前文字所示之第二個範例查詢的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的結果。  
   
- ![在 Management Studio 中使用查詢將 XML 錯誤分組](../../integration-services/control-flow/media/queryforxmlerrors.jpg "在 Management Studio 中使用查詢將 XML 錯誤分組")  
+ ![在 Management Studio 中使用查詢將 XML 錯誤分組](../../integration-services/control-flow/media/query-for-xml-errors.png "在 Management Studio 中使用查詢將 XML 錯誤分組")  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 工作](../../integration-services/control-flow/xml-task.md)   

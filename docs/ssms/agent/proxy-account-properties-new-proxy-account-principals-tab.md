@@ -1,4 +1,5 @@
 ---
+description: Proxy 帳戶屬性 - 新 Proxy 帳戶 (主體索引標籤)
 title: 新增 Proxy 帳戶 (主體頁面)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,23 +14,23 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f214a0923bfdea8bab530589dcb542bd928f2d7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1135f887e0d2563d483d677c422923d8d2dba4b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497515"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Proxy 帳戶屬性 - 新 Proxy 帳戶 (主體索引標籤)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 使用此頁面來檢視或變更可以在作業步驟中使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的主體。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **Proxy 帳戶主體**  
 列出可以使用此 Proxy 帳戶的主體。  
   

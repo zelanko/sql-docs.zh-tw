@@ -1,5 +1,6 @@
 ---
-title: Oracle 連線類型 (報表產生器與 Power BI 報表伺服器) |Microsoft Docs
+title: Oracle 連線類型 (SSRS 和 Power BI 報表伺服器)
+description: 請運用本文中有關 Oracle 連線類型的資訊，以了解如何建立資料來源。
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342736"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246477"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 連線類型 ((報表產生器與 Power BI 報表伺服器) |Microsoft Docs)
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle 連線類型 (SSRS 和 Power BI 報表伺服器)
 
 若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。 本文說明如何下載及安裝 Reporting Services、Power BI 報表伺服器、報表產生器和 Power BI Desktop 的驅動程式。
 
@@ -87,7 +88,7 @@ Power BI 報表使用**非受控 ODP.NET**。 只有在使用 Oracle ODAC 驅動
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 如需詳細的連接字串範例，請參閱[建立資料連接字串 - 報表產生器與 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需詳細的連接字串範例，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="credentials"></a><a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
@@ -105,7 +106,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="parameters"></a><a name="Parameters"></a> 參數  
  如果查詢包含查詢變數，就會自動產生對應的報表參數。 此延伸模組支援具名參數。 若使用 Oracle 9 或更新版本，則支援多重值的參數。  
   
- 報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如，每一個報表參數的資料類型都是 **[文字]** 。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
+ 報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如，每一個報表參數的資料類型都是 **[文字]**。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
 ##  <a name="remarks"></a><a name="Remarks"></a> 備註  

@@ -2,19 +2,19 @@
 title: 驅動程式功能支援矩陣
 description: 了解 SQL Server 驅動程式支援哪些熱門功能，以及要在何處尋找其相關資訊。
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: a879b3784b19de4e7d30e1af213953b8e592abf9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947888"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823353"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式功能支援矩陣
 
@@ -60,8 +60,8 @@ ms.locfileid: "84947888"
 | [一律加密](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [是](odbc/using-always-encrypted-with-the-odbc-driver.md) | [是](odbc/using-always-encrypted-with-the-odbc-driver.md) | [是](jdbc/using-always-encrypted-with-the-jdbc-driver.md) |
 | [具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [是](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [是](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [是](jdbc/using-always-encrypted-with-the-jdbc-driver.md) | |
 | [Azure Active Directory 存取權杖驗證](/azure/active-directory/develop/access-tokens) | [是](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [是](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [是](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [是](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 密碼驗證](/azure/sql-database/sql-database-aad-authentication) |  [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md)<sup>[1](#note1)</sup> | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory 整合式驗證](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory 密碼驗證](/azure/sql-database/sql-database-aad-authentication) |  [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory 整合式驗證](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 互動式 (MFA) 驗證](/azure/sql-database/sql-database-aad-authentication) | [是](odbc/using-azure-active-directory.md) | | | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 受控識別驗證](/azure/active-directory/managed-identities-azure-resources/overview) | [是](odbc/using-azure-active-directory.md) | [是](odbc/using-azure-active-directory.md) | [是](jdbc/connecting-using-azure-active-directory-authentication.md) | [是](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory 服務主體驗證](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
@@ -75,14 +75,14 @@ ms.locfileid: "84947888"
 | [透明網路 IP 解析](odbc/using-transparent-network-ip-resolution.md) | [是](odbc/using-transparent-network-ip-resolution.md) | [是](odbc/using-transparent-network-ip-resolution.md) | [是](jdbc/setting-the-connection-properties.md) | [是](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| <a id="table3"></a>功能 | [Windows 上的 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Linux 和 macOS 上的 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |
+| <a id="table3"></a>功能 | [Windows 上的 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Linux 和 macOS 上的 Drivers for PHP for SQL Server](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [一律加密](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [是](php/using-always-encrypted-php-drivers.md) | [是](php/using-always-encrypted-php-drivers.md) | | 是 |
 | [具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [是](php/always-encrypted-secure-enclaves.md) | [是](php/always-encrypted-secure-enclaves.md) | | 是 |
 | [Azure Active Directory 存取權杖驗證](/azure/active-directory/develop/access-tokens) | [是](php/azure-active-directory.md) | [是](php/azure-active-directory.md) | [是](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 是 |
-| [Azure Active Directory 密碼驗證](/azure/sql-database/sql-database-aad-authentication) | [是](php/azure-active-directory.md) | [是](php/azure-active-directory.md)<sup>[1](#note1)</sup> | [是](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 是 |
-| [Azure Active Directory 整合式驗證](/azure/sql-database/sql-database-aad-authentication) | | | | 是<sup>[3](#note3)</sup> |
-| [Azure Active Directory 互動式 (MFA) 驗證](/azure/sql-database/sql-database-aad-authentication) | | | | 是<sup>[3](#note3)</sup> |
+| [Azure Active Directory 密碼驗證](/azure/sql-database/sql-database-aad-authentication) | [是](php/azure-active-directory.md) | [是](php/azure-active-directory.md) | [是](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 是 |
+| [Azure Active Directory 整合式驗證](/azure/sql-database/sql-database-aad-authentication) | [是](php/azure-active-directory.md) | [是](php/azure-active-directory.md) | | 是 |
+| [Azure Active Directory 互動式 (MFA) 驗證](/azure/sql-database/sql-database-aad-authentication) | | | | 是<sup>[2](#note2)</sup> |
 | [Azure Active Directory 受控識別驗證](/azure/active-directory/managed-identities-azure-resources/overview) | [是](php/azure-active-directory.md) | [是](php/azure-active-directory.md) | [是](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | 是 |
 | [Azure Active Directory 服務主體驗證](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Windows 整合式驗證](/windows-server/security/windows-authentication/windows-authentication-overview) | [是](php/how-to-connect-using-windows-authentication.md) | [是](odbc/linux-mac/using-integrated-authentication.md) | | 是 |
@@ -95,11 +95,9 @@ ms.locfileid: "84947888"
 | [透明網路 IP 解析](odbc/using-transparent-network-ip-resolution.md) | [是](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [是](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [是](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<a id="note1"></a><sup>1</sup> Linux 和 macOS 上不支援沒有密碼雜湊同步處理或傳遞驗證的 Active Directory 同盟驗證。
+<a id="note1"></a><sup>1</sup> 由於這些驅動程式依賴 Microsoft ODBC Driver for SQL Server，因此還必須使用支援該功能的驅動程式版本。
 
-<a id="note2"></a><sup>2</sup> 由於這些驅動程式依賴 Microsoft ODBC Driver for SQL Server，因此還必須使用支援該功能的驅動程式版本。
-
-<a id="note3"></a><sup>3</sup> 僅限在 Windows 上。
+<a id="note2"></a><sup>2</sup> 僅限在 Windows 上。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

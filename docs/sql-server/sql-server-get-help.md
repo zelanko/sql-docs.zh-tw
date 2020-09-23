@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49bf5ae8b9ab88859bedaf114242b1dcf64bb641
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: ed931eb7a77026e4902f5591def3496eb30851bf
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732177"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569938"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 
@@ -29,23 +29,11 @@ ms.locfileid: "83732177"
 
 ## <a name="ask-community-for-help"></a>向社群尋求協助
 
-如果您有興趣參與充滿活力的 SQL Server 社群並獲得協助，有多種選項可提供給您！
+如果您有興趣參與充滿活力的 SQL Server 社群並獲得協助，我們有多種選項可供使用。
 
+### <a name="microsoft-q--a"></a>Microsoft 問答集
 
-### <a name="msdn-forums"></a>MSDN 論壇
-
-有許多 MSDN 論壇可以協助您解決 SQL Server 問題。 
-- [SQL Server 資料庫引擎](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc)
-- [安裝與升級](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [高可用性及災害復原](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
-- [SQL Server 工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [安全性](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
-- [複寫](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
-- [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Reporting Services (SSRS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreportingservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server 資料倉儲](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
+您也可以在 [Microsoft 問答集](https://docs.microsoft.com/answers/products/sql-server)上搜尋及張貼問題，以取得協助。
 
 ### <a name="communities"></a>社群
 
@@ -56,7 +44,7 @@ ms.locfileid: "83732177"
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [在 Twitter 上使用 #sqlhelp 標籤從社群取得協助](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## <a name="feedback"></a>意見反應
+## <a name="feedback-suggestions"></a>意見反應建議
 
 您可以為以下內容提供改善建議，以及提交 Bug：
 
@@ -92,7 +80,7 @@ ms.locfileid: "83732177"
 下列 SQL Server 部落格提供 SQL Server 的最新資訊： 
 
 - [SQL Server 部落格](https://cloudblogs.microsoft.com/sqlserver/)
-- [SQL Repl 談話](https://blogs.msdn.microsoft.com/repltalk/)
+- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger 小組](https://blogs.msdn.microsoft.com/sql_server_team/)
 - [SQL 支援小組](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/) \(英文\)
 
