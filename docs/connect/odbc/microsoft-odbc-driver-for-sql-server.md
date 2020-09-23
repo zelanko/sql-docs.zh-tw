@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b17517d0a4a904c5a8ffa56a625ba092c6b79b41
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886335"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807041"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -64,6 +64,7 @@ ODBC 驅動程式隨附 [**sqlcmd**](../../tools/sqlcmd-utility.md) 及 [**bcp**
 - [已知問題](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [程式設計指導方針](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [版本資訊](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [版本資訊 (mssql-tools)](../../connect/odbc/linux-mac/release-notes-tools.md)
 - [高可用性與災害復原的支援](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [使用整合式驗證 (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 

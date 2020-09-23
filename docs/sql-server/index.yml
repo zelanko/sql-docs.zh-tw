@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: b65a616e3a4ab3911f746347a1ae5e6f74490b49
-  ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+  ms.openlocfilehash: 31d0046c3a81b84c926a99efce80816c5ef42a88
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87934134"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90915484"
 landingContent:
 - title: Azure 上的 SQL
   linkLists:
@@ -58,6 +58,8 @@ landingContent:
       url: ../azure-data-studio/what-is.md
     - text: Linux 上的 SQL Server
       url: ../linux/sql-server-linux-overview.md
+    - text: 適用於 Azure Arc 的 SQL Server (預覽)
+      url: azure-arc/overview.md
   - linkListType: quickstart
     links:
     - text: 連線與查詢 (SSMS)

@@ -1,7 +1,7 @@
 ---
 title: 執行 Spark 作業：Azure Toolkit for IntelliJ
 titleSuffix: SQL Server Big Data Clusters
-description: 在 Azure Toolkit for IntelliJ 中於 SQL Server 巨量資料叢集上提交 Spark 作業。
+description: 了解如何在 Azure Toolkit for IntelliJ 中的 SQL Server 巨量資料叢集上，透過提交本機 Jar 或 Py 檔案來提交 Spark 作業。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726731"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778537"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 中於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上提交 Spark 作業
 
@@ -28,7 +28,7 @@ ms.locfileid: "85726731"
 - SQL Server 巨量資料叢集。
 - Oracle Java 開發套件。 您可以從 [Oracle 網站](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) \(英文\) 安裝它。
 - IntelliJ IDEA。 您可以從 [JetBrains 網站](https://www.jetbrains.com/idea/download/) \(英文\) 安裝它。
-- Azure Toolkit for IntelliJ 擴充功能。 如需安裝指示，請參閱[安裝 Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)。
+- Azure Toolkit for IntelliJ 擴充功能。 如需安裝指示，請參閱[安裝 Azure Toolkit for IntelliJ](/azure/azure-toolkit-for-intellij-installation)。
 
 ## <a name="link-sql-server-big-data-cluster"></a>連結 SQL Server 巨量資料叢集
 1. 開啟 IntelliJ IDEA 工具。
@@ -118,7 +118,7 @@ ms.locfileid: "85726731"
       ![Spark 提交對話方塊 Jar 檔案意義](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > 若要上傳參考的 JAR 和參考的檔案，請參閱：[快速入門：使用 Azure 儲存體總管在物件儲存體中建立 Blob](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > 若要上傳參考的 JAR 和參考的檔案，請參閱：[快速入門：使用 Azure 儲存體總管在物件儲存體中建立 Blob](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **Upload Path** \(上傳路徑\)：您可以指出 Jar 或 Scala 專案資源提交的儲存體位置。 有數個支援的儲存體類型：[Use Spark interactive session to upload]  \(使用 Spark 互動式工作階段上傳\) 和 [Use WebHDFS to upload]  \(使用 WebHDFS 上傳\)
     

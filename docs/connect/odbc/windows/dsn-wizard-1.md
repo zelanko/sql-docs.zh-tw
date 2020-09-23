@@ -1,4 +1,5 @@
 ---
+description: 資料來源精靈畫面 1 (ODBC Driver for SQL Server)
 title: 資料來源精靈畫面 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78009925b5d62e8a314d0a3fdc27c29acaee5c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462222"
 ---
 # <a name="data-source-wizard-screen-1"></a>資料來源精靈畫面 1
 
 指定資料來源的名稱及描述，以及資料來源將連接之執行 SQL Server 的伺服器名稱。 
     
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 ### <a name="name"></a>名稱
 
@@ -43,11 +44,11 @@ ms.locfileid: "80928255"
 
 ### <a name="finish"></a>[完成]
 
-如果在此畫面上指定的資訊即為連接到 SQL Server 所需全部資訊，可按一下 [完成]。  在精靈其他螢幕上指定的所有屬性都使用預設值。
+如果在此畫面上指定的資訊即為連接到 SQL Server 所需全部資訊，可按一下 [完成]。 **** 在精靈其他螢幕上指定的所有屬性都使用預設值。
 
-### <a name="next"></a>下一頁
+### <a name="next"></a>下一個
 
-若要繼續前往精靈的下一個畫面，按一下 [下一頁]  。
+若要繼續前往精靈的下一個畫面，按一下 [下一頁]****。
 
 ## <a name="next-steps"></a>後續步驟
 

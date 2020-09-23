@@ -1,21 +1,22 @@
 ---
-title: Windows ODBC 驅動程式中的連線恢復功能 | Microsoft Docs
+title: Windows ODBC 驅動程式中的連接恢復功能
+description: 了解 ODBC 驅動程式中的連線復原如何在伺服器關閉閒置連線時，以透明方式還原連線並改善應用程式行為。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01b8da5d2a7f7c0e49d54a9fe237367ab3ed405f
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68008429"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288120"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "68008429"
   若要確保應用程式仍然連線到 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]，Windows 上的 ODBC 驅動程式可以還原閒置的連線。  
   
 > [!IMPORTANT]  
->  Microsoft Azure SQL Database 和 SQL Server 2014 (和更新版本) 伺服器版本都支援連接恢復功能。  
+>  Microsoft Azure SQL Database 與 SQL Server 2014 (和更新版本) 伺服器版本都支援連線復原功能。  
   
  如需閒置連線恢復功能的詳細資訊，請參閱[技術文章 - 閒置連線恢復功能](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx)。
   
@@ -137,7 +138,7 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
    SQLCHAR ConnStrOut[MAXBUFLEN];
 
    SQLSMALLINT cbConnStrOut = 0;  

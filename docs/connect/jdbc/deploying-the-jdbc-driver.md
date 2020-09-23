@@ -2,7 +2,7 @@
 title: 部署 JDBC 驅動程式
 description: 了解如何使用您的應用程式來重新發佈和部署 Microsoft JDBC Driver for SQL Server，以及需要哪些檔案。
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 08365944acd071f21b3b4fadf950c23b65c6cfe5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728358"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565418"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 
@@ -51,7 +51,7 @@ ms.locfileid: "81728358"
 
 ## <a name="legalities-of-driver-redistribution"></a>轉散發驅動程式的合法性
 
-JDBC Driver 6.0、6.2、6.4、7.0、7.2、7.4 與 8.2 版均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
+JDBC 驅動程式 6.0、6.2、6.4、7.0、7.2、7.4、8.2 與 8.4 版均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
 
 JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援已於 2018 年之前過期。
 

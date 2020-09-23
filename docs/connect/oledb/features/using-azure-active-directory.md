@@ -1,5 +1,6 @@
 ---
-title: 使用 Azure Active Directory | 適用於 SQL Server 的 Microsoft Docs
+title: 使用 Azure Active Directory
+description: 了解 Microsoft OLE DB Driver for SQL Server 中所提供，可讓使用者連線至 Azure SQL 資料庫的 Azure Active Directory 驗證方法。
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 9c3586c8b51495ed3c49dd88f9f85a2b60d09aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007252"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899053"
 ---
 # <a name="using-azure-active-directory"></a>使用 Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86007252"
 
 18.3 版增加對下列驗證方法的支援：
 - Azure Active Directory 互動式驗證
-- Azure Active Directory MSI 驗證
+- Azure Active Directory 受控識別驗證
 
 > [!NOTE]
 > **不**支援在 `DataTypeCompatibility` (或其對應的屬性) 設定為 `80` 的情況下使用下列驗證模式：
@@ -39,12 +40,12 @@ ms.locfileid: "86007252"
 > - 使用存取權杖進行 Azure Active Directory 驗證
 > - Azure Active Directory 整合式驗證
 > - Azure Active Directory 互動式驗證
-> - Azure Active Directory MSI 驗證
+> - Azure Active Directory 受控識別驗證
 
 ## <a name="connection-string-keywords-and-properties"></a>連接字串的關鍵字及屬性
 已引入下列連接字串關鍵字來支援 Azure Active Directory 驗證：
 
-|連接字串關鍵字|連線屬性|描述|
+|連接字串關鍵字|Connection 屬性|描述|
 |---               |---                |---        |
 |存取權杖|SSPROP_AUTH_ACCESS_TOKEN|指定用來向 Azure Active Directory 進行驗證的存取權杖。 |
 |驗證|SSPROP_AUTH_MODE|指定要使用的驗證方法。|
@@ -118,7 +119,7 @@ ms.locfileid: "86007252"
 ### <a name="azure-active-directory-authentication-using-an-access-token"></a>使用存取權杖進行 Azure Active Directory 驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]** ;Use Encryption for Data=true
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     > 不支援透過 `DBPROP_INIT_PROVIDERSTRING` 提供存取權杖
 
@@ -129,7 +130,7 @@ ms.locfileid: "86007252"
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
 
-### <a name="azure-active-directory-msi-authentication"></a>Azure Active Directory MSI 驗證
+### <a name="azure-active-directory-managed-identity-authentication"></a>Azure Active Directory 受控識別驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
     - 使用者指派的受控識別：

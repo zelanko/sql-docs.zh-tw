@@ -1,4 +1,5 @@
 ---
+description: 使用資料分類搭配 Microsoft ODBC Driver for SQL Server
 title: 使用資料分類搭配 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
@@ -13,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 63600f98fcf86fb9549c6da91224988ce7483eee
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: d2f33c6b753b227bf8c6d7aed2c66dd7a09d8433
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466870"
 ---
 # <a name="data-classification"></a>資料分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

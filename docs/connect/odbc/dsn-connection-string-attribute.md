@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 61b3e618b413ddb1a8b52f7fb377148b282fcb66
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528980"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878417"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
@@ -97,6 +97,7 @@ ms.locfileid: "81528980"
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
 | | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
 | | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
+| | [SQL_COPT_SS_AUTOBEGINTXN](dsn-connection-string-attribute.md#sql_copt_ss_autobegintxn)| LMW |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
@@ -137,6 +138,15 @@ ms.locfileid: "81528980"
 | SQL_AO_OFF | (預設) 不執行轉譯。 |
 | SQL_AO_ON | 執行轉譯。 |
 
+### <a name="sql_copt_ss_autobegintxn"></a>SQL_COPT_SS_AUTOBEGINTXN
+
+17.6+ 版 在自動認可關閉時，控制 ROLLBACK 或 COMMIT 之後的自動 BEGIN TRANSACTION。
+
+| 屬性值 | 描述 |
+|-|-|
+| SQL_AUTOBEGINTXN_ON | (預設) 在 ROLLBACK 或 COMMIT 之後自動進行 BEGIN TRANSACTION。 |
+| SQL_AUTOBEGINTXN_OFF | 在 ROLLBACK 或 COMMIT 之後不會自動進行 BEGIN TRANSACTION。 |
+
 ### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 控制 SQL Server 後援連線的使用。 這一項已不再支援。
@@ -161,7 +171,7 @@ ms.locfileid: "81528980"
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 整合式驗證。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密碼驗證。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 互動式驗證。|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 受控服務識別驗證。 針對使用者指派的識別，UID 設成使用者身分識別的物件識別碼。 |
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 受控識別驗證。 針對使用者指派的識別，UID 設成使用者身分識別的物件識別碼。 |
 | |SQL_AU_RESET|未設定。 覆寫任何 DSN 或連接字串設定。|
 
 > [!NOTE]

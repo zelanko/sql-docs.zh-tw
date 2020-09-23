@@ -2,7 +2,7 @@
 title: 搭配使用 Always Encrypted 與 JDBC 驅動程式
 description: 了解如何在您的 Java 應用程式中搭配使用 Always Encrypted 和 JDBC Driver for SQL Server 來加密伺服器上的敏感性資料。
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279615"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570323"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 
@@ -98,6 +98,9 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 ```
 當連線屬性中存在這些認證時，JDBC 驅動程式會自動具現化 **SQLServerColumnEncryptionAzureKeyVaultProvider** 物件。
 
+> [!IMPORTANT]
+> 從 v8.4.1 開始，**keyVaultProviderClientId** 與 **keyVaultProviderClientKey** 這兩個連線屬性皆已淘汰。 建議使用者改為使用 **keyStoreAuthentication**、**KeyStorePrincipalId** 與 **KeyStoreSecret**。
+
 #### <a name="jdbc-driver-version-prior-to-741"></a>早於 7.4.1 版的 JDBC 驅動程式
 
 此節會涉及早於 7.4.1 版的 JDBC 驅動程式。
@@ -126,6 +129,42 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java 程式庫](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > 如需如何將這些相依性包含在 Maven 專案中的範例，請參閱[搭配 Apache Maven 下載 ADAL4J 和 AKV 相依性](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) \(英文\)
+
+### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>搭配受控識別使用 Azure Key Vault 驗證
+
+從 JDBC 驅動程式 **8.4.1** 開始，驅動程式已新增使用受控識別驗證至 Azure Key Vaults 的支援。
+
+如果應用程式是裝載於 Azure 中，使用者可以使用[受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)來驗證至 Azure Key Vault，進一步消除在程式碼中提供及公開任何認證的必要性。 
+
+#### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>適用於搭配受控識別之 Key Vault 驗證的連線屬性
+
+針對 JDBC 驅動程式 8.4.1 與更新版本，驅動程式已引進下列連線屬性：
+
+| ConnectionProperty    | 可能的值配對 1 | 可能的值配對 2 | 可能的值配對 3 |
+| ---|---|---|----|
+| keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
+| keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\> (選擇性)| n/a |
+| keyStoreSecret        | \<Azure AD Application Client Secret\>|n/a|\<secret/password for the Java Key Store\> |
+
+下列範例顯示如何在連接字串中使用連線屬性。
+
+#### <a name="use-managed-identity-to-authenticate-to-akv"></a>使用受控識別來驗證至 AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
+```
+#### <a name="use-managed-identity-and-the-principal-id-to-authenticate-to-akv"></a>使用受控識別和主體識別碼來驗證至 AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
+```
+#### <a name="use-clientid-and-clientsecret-to-authentication-to-akv"></a>使用 clientId 與 clientSecret 來驗證至 AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+```
+建議使用者使用這些連線屬性來指定用於金鑰存放區的驗證類型，而不是使用 `SQLServerColumnEncryptionAzureKeyVaultProvider`。
+
+請注意，先前新增的 `keyVaultProviderClientId` 與 `keyVaultProviderClientKey` 連線屬性皆已過時，並已由上述連線屬性取代。
+
+如需如何設定受控識別的相關資訊，請參閱[使用 Azure 入口網站在 VM 上設定 Azure 資源的受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)。
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
 SQLServerColumnEncryptionCertificateStoreProvider 可用來將資料行主要金鑰儲存在 Windows 憑證存放區。 使用 [SQL Server Management Studio (SSMS) Always Encrypted] 精靈或其他支援的工具來在資料庫中建立資料行主要金鑰和資料行加密金鑰定義。 相同的精靈也可以用來在 Windows 憑證存放區中產生自我簽署憑證，以作為 Always Encrypted 資料的資料行主要金鑰使用。 如需資料行主要金鑰和資料行加密金鑰 T-SQL 語法的詳細資訊，請分別參閱[建立資料行主要金鑰](../../t-sql/statements/create-column-master-key-transact-sql.md)和[建立資料行加密金鑰](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。

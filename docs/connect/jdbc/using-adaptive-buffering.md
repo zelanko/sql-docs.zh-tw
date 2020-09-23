@@ -1,4 +1,5 @@
 ---
+description: 使用自適性緩衝
 title: 使用自適性緩衝 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b4b01798ac0bf37ce6e8deaadd2d0f02d9e5d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487941"
 ---
 # <a name="using-adaptive-buffering"></a>使用自適性緩衝
 
@@ -27,9 +28,9 @@ ms.locfileid: "80924083"
 
 為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是適應性緩衝可能有用的部分範例：
 
-- **此查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式所產生的資料列會比應用程式可以儲存於記憶體中的資料列還要多。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
+- **查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式會產生比應用程式可以儲存在記憶體中還要多的資料列。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
 
-- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取值太大而無法完整納入應用程式記憶體的單一值 (資料行或 OUT 參數)。 自適性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法，來擷取諸如資料流的值。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
+- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) ** 資料行或 ** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 自適性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法，來擷取諸如資料流的值。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
 
 > [!NOTE]  
 > 透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
@@ -52,13 +53,13 @@ ms.locfileid: "80924083"
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>利用自適性緩衝擷取大型資料
 
-使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用適應性緩衝時：
+使用 get\<Type>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用適應性緩衝時：
 
-- 雖然資料流透過應用程式標示時可以重設，但是在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別中定義的 get\<類型>Stream 方法預設還是會傳回讀取一次的資料流。 如果應用程式想要 `reset` 資料流，必須先在該資料流上呼叫 `mark` 方法。
+- 在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別中定義的 get\<Type>Stream 方法預設會傳回讀取一次的資料流，雖然資料流可以在由應用程式所標記的情況下重設。 如果應用程式想要 `reset` 資料流，必須先在該資料流上呼叫 `mark` 方法。
 
-- 在 [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 和 [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 類別中定義的 get\<類型>Stream 方法會傳回一律可以重新定位到資料流開始位置的資料流，而不需要呼叫 `mark` 方法。
+- 在 [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 和 [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 類別中定義的 get\<Type>Stream 方法，會傳回一律可以在不需要呼叫 `mark` 方法的情況下，重新定位到資料流開始位置的資料流。
 
-當應用程式使用自適性緩衝時，僅可以擷取 get\<類型>Stream 方法所擷取值一次。 如果您在呼叫相同物件的 get\<類型>Stream 方法後，嘗試針對相同的資料行或參數呼叫任何 get\<類型> 方法，則會擲回例外狀況並顯示訊息：「資料已存取，此資料行或參數無法使用」。
+當應用程式使用自適性緩衝時，僅可以單次擷取 get\<Type>Stream 方法所擷取的值。 如果您在呼叫相同物件的 get\<Type>Stream 方法後，嘗試針對相同的資料行或參數呼叫任何 get\<Type> 方法，則會擲回具有下列訊息的例外狀況：「資料已存取，此資料行或參數無法使用」。
 
 > [!NOTE]
 > 在處理 ResultSet 的過程中呼叫 ResultSet.close()，會要求 Microsoft JDBC Driver for SQL Server 讀取和捨棄所有剩餘的封包。 如果查詢傳回了大型資料集，特別是當網路連線速度很慢時，這可能需要相當長的時間。
@@ -69,11 +70,11 @@ ms.locfileid: "80924083"
 
 - 請避免使用 **selectMethod=cursor** 連接字串屬性，以讓應用程式處理非常龐大的結果集。 適應性緩衝功能可讓應用程式處理非常大的順向唯讀結果集，而不需要使用伺服器資料指標。 請注意，當您設定 **selectMethod=cursor** 時，該連線產生的所有順向唯讀結果集都會受到影響。 換言之，如果您的應用程式例行地處理含有少數資料列的簡短結果集，就用戶端和伺服器端而言，針對每個結果集建立、讀取和關閉伺服器資料指標所使用的資源會比 **selectMethod** 沒有設定為 **cursor** 的情況還多。
 
-- 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法)，以資料流形式讀取大型文字或二進位值。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<類型>Stream 方法。
+- 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法)，以資料流形式讀取大型文字或二進位值。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<Type>Stream 方法。
 
-- 確保潛在具有大數值的資料行放置在 SELECT 陳述式之資料行清單中的最後面，並確保 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 的 get\<類型>Stream 方法用於以選取的順序存取資料行。
+- 確保會將潛在具有大數值的資料行放置在 SELECT 陳述式中資料行清單的最後面，並會使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 的 get\<Type>Stream 方法來依資料行的選取順序加以存取。
 
-- 確保潛在具有大數值的 OUT 參數在用於建立 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 之 SQL 中的參數清單結尾處宣告。 此外，確保 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 的 get\<類型>Stream 方法用於以宣告的順序存取 OUT 參數。
+- 確保潛在具有大數值的 OUT 參數在用於建立 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 之 SQL 中的參數清單結尾處宣告。 此外，確保會使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 的 get\<Type>Stream 方法來依 OUT 參數的宣告順序加以存取。
 
 - 避免在相同的連接上，同時執行一個以上的陳述式。 在處理前一個陳述式的結果前執行其他陳述式可能會使未處理的結果在應用程式記憶體中緩衝處理。
 
@@ -89,7 +90,7 @@ ms.locfileid: "80924083"
 
 - 若為可捲動的結果集，在提取資料列的區塊時，此驅動程式一定會將 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件之 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 方法所指定的資料列數目讀入記憶體中，即使已啟用自適性緩衝也一樣。 如果捲動導致 OutOfMemoryError，您可以呼叫 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法，將提取大小設定為更小的資料列數目 (必要時，甚至可以降低至 1 個資料列)，藉此減少所提取的資料列數目。 如果這樣做無法防止 OutOfMemoryError，請避免在可捲動的結果集中包含非常龐大的資料行。
 
-- 若為順向可更新的結果集，在提取資料列的區塊時，此驅動程式通常會將 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件之 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 方法所指定的資料列數目讀入記憶體中，即使連線已啟用自適性緩衝也一樣。 如果呼叫 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) 方法導致 OutOfMemoryError，您可以呼叫 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法，將提取大小設定為更小的資料列數目 (必要時，甚至可以降低至 1 個資料列)，藉此減少所提取的資料列數目。 此外，您也可以在執行陳述式之前，呼叫 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法並搭配 "**adaptive**" 參數，藉此強制驅動程式不要緩衝處理任何資料列。 因為結果集並非可捲動，所以如果應用程式使用其中一個 get\<類型>Stream 方法來存取大型資料行值，此驅動程式就會在應用程式讀取該值時捨棄它，就如同針對順向唯讀結果集所做的一樣。
+- 若為順向可更新的結果集，在提取資料列的區塊時，此驅動程式通常會將 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件之 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 方法所指定的資料列數目讀入記憶體中，即使連線已啟用自適性緩衝也一樣。 如果呼叫 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) 方法導致 OutOfMemoryError，您可以呼叫 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法，將提取大小設定為更小的資料列數目 (必要時，甚至可以降低至 1 個資料列)，藉此減少所提取的資料列數目。 此外，您也可以在執行陳述式之前，呼叫 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法並搭配 "**adaptive**" 參數，藉此強制驅動程式不要緩衝處理任何資料列。 因為結果集並非可捲動，所以如果應用程式使用其中一個 get\<Type>Stream 方法來存取大型資料行值，此驅動程式就會在應用程式讀取該值時加以捨棄，就如同針對順向唯讀結果集所做的一樣。
 
 ## <a name="see-also"></a>另請參閱
 

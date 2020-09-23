@@ -1,6 +1,6 @@
 ---
 title: Commands (OLE DB 驅動程式) | Microsoft Docs
-description: OLE DB Driver for SQL Server 中的命令
+description: 了解 OLE DB Driver for SQL Server 中的 ICommand 介面，包括語法、參數、準備命令，以及具有多個結果的命令。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: da86675b244ac3424c6ffaf04df6c42bc133c4d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 715ab31652697643e473a6b7cd944c89c46037c8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943057"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860149"
 ---
 # <a name="commands"></a>命令
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

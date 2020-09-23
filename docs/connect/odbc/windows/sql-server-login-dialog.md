@@ -1,5 +1,6 @@
 ---
-title: SQL Server 登入對話方塊 (ODBC) | Microsoft Docs
+title: SQL Server 登入對話方塊 (ODBC)
+description: 當應用程式建立 ODBC 連線，但未指定足夠資訊以連線至資料庫時，可能會出現 [SQL Server 登入] 對話方塊。
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 35a9c6b6c254d6ed7c3283aedba15e65b6114579
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920131"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898810"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 登入對話方塊 (ODBC)
 
@@ -39,6 +40,7 @@ ms.locfileid: "80920131"
 - 具有登入識別碼和密碼的 **Active Directory 密碼**
 - 使用目前登入的使用者帳戶進行 **Active Directory 整合式**驗證
 - 使用登入識別碼進行的 **Active Directory 互動式**驗證
+- 使用受控識別進行的 [受控服務識別] 驗證
 
 如需有關驗證模式的詳細資訊，請參閱[資料來源精靈畫面 2](../../../connect/odbc/windows/dsn-wizard-2.md)。
 
@@ -48,7 +50,7 @@ ms.locfileid: "80920131"
 
 ### <a name="login-id"></a>登入識別碼
 
-如果 [驗證模式]  設定為 [SQL Server]  或 [Active Directory 密碼]  或 [Active Directory 互動式]  ，則指定要用於連線的 SQL Server 或 Azure Active Directory 登入識別碼。 否則，就會停用 [登入識別碼]  方塊。
+如果 [驗證模式] 設定為 [SQL Server]、[Active Directory 密碼]、[Active Directory 互動式] 或 [受控服務識別]，則指定要用於連線的 SQL Server 或 Azure Active Directory 登入識別碼。 否則，就會停用 [登入識別碼]  方塊。
 
 ### <a name="password"></a>密碼
 

@@ -1,6 +1,6 @@
 ---
 title: 使用快照集隔離 | Microsoft Docs
-description: 在 OLE DB Driver for SQL Server 中使用快照集隔離
+description: 了解 OLE DB Driver for SQL Server 增強功能如何使用快照隔離，其能強化線上交易處理應用程式的並行能力。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SQLGetInfo function
 - concurrency [OLE DB Driver for SQL Server]
 - SQLSetConnectAttr function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: acbb39726ede983d3c0909235d1fb2ddb588d65b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 700ce06359188f05c7f3e152003dfa9dde06da76
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986514"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861428"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔離
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

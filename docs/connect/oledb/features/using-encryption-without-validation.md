@@ -1,6 +1,6 @@
 ---
 title: 使用加密而不需驗證 | Microsoft Docs
-description: 使用加密而不需驗證
+description: 了解適用於 SQL Server 連線的加密而不需驗證。 OLE DB Driver for SQL Server 支援加密而不需驗證。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, encryption
 - encryption [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, encryption
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e728440447e9e7dbdd13ce52a60781ea3b240ebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b4e69fcc506f8e52dc8104067b9e7454e4022f5
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006849"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861628"
 ---
 # <a name="using-encryption-without-validation"></a>使用加密而不需驗證
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "86006849"
 
 自我簽署憑證不保證安全性。 加密的交握會以 NT LAN Manager (NTLM) 為基礎。 強烈建議您在 SQL Server 上佈建可驗證的憑證，以提供安全連線能力。 傳輸層安全性 (TLS) 只能透過憑證驗證來保護。
 
-應用程式也可要求加密所有網路流量，其方式是使用連接字串關鍵字或連接屬性。 當搭配 **IDbInitialize::Initialize** 使用提供者字串時，關鍵字為 "Encrypt" (適用於 OLE DB)；當搭配 **IDataInitialize** 使用初始化字串時，關鍵字為 "Use Encryption for Data" (適用於 ADO 和 OLE DB)。 這也可以透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 使用 [強制通訊協定加密]  選項來設定，以及藉由將用戶端設定為要求加密連線來設定。 根據預設，加密連接的所有網路流量會要求在伺服器上提供憑證。 藉由將您的用戶端設定為信任伺服器上的憑證，您可能很容易受到中間人攻擊。 如果您在伺服器上部署可驗證的憑證，請務必將有關信任憑證的用戶端設定變更為 FALSE。
+應用程式也可要求加密所有網路流量，其方式是使用連接字串關鍵字或連接屬性。 當搭配 **IDbInitialize::Initialize** 使用提供者字串時，關鍵字為 "Encrypt" (適用於 OLE DB)；當搭配 **IDataInitialize** 使用初始化字串時，關鍵字為 "Use Encryption for Data" (適用於 ADO 和 OLE DB)。 這也可以透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 使用 [強制通訊協定加密]**** 選項來設定，以及藉由將用戶端設定為要求加密連線來設定。 根據預設，加密連接的所有網路流量會要求在伺服器上提供憑證。 藉由將您的用戶端設定為信任伺服器上的憑證，您可能很容易受到中間人攻擊。 如果您在伺服器上部署可驗證的憑證，請務必將有關信任憑證的用戶端設定變更為 FALSE。
 
 如需連接字串關鍵字的資訊，請參閱[搭配 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md )。  
   
- 若要在伺服器上尚未佈建憑證時使用加密，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員可用來設定 [強制通訊協定加密]  和 [信任伺服器憑證]  選項。 在此情況下，如果伺服器上未提供任何可驗證的憑證，加密將會使用自行簽署的伺服器憑證，而不需驗證。  
+ 若要在伺服器上尚未佈建憑證時使用加密，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員可用來設定 [強制通訊協定加密]**** 和 [信任伺服器憑證]**** 選項。 在此情況下，如果伺服器上未提供任何可驗證的憑證，加密將會使用自行簽署的伺服器憑證，而不需驗證。  
   
- 應用程式可能也會使用 "TrustServerCertificate" 關鍵字或它的關聯連接屬性，以便保證加密將會發生。 應用程式設定絕對不會減少 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端組態管理員所設定的安全性層級，但是可能會強化它。 例如，如果未針對用戶端設定 [強制通訊協定加密]  ，應用程式可能會自行要求加密。 如果要保證加密，甚至是在尚未提供伺服器憑證時，應用程式可能會要求加密和 "TrustServerCertificate"。 但是，如果用戶端組態中未啟用 "TrustServerCertificate"，仍然需要提供的伺服器憑證。 下表描述所有的案例：  
+ 應用程式可能也會使用 "TrustServerCertificate" 關鍵字或它的關聯連接屬性，以便保證加密將會發生。 應用程式設定絕對不會減少 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端組態管理員所設定的安全性層級，但是可能會強化它。 例如，如果未針對用戶端設定 [強制通訊協定加密]****，應用程式可能會自行要求加密。 如果要保證加密，甚至是在尚未提供伺服器憑證時，應用程式可能會要求加密和 "TrustServerCertificate"。 但是，如果用戶端組態中未啟用 "TrustServerCertificate"，仍然需要提供的伺服器憑證。 下表描述所有的案例：  
   
 |強制通訊協定加密用戶端設定|信任伺服器憑證用戶端設定|資料的連接字串/連接屬性加密/使用加密|連接字串/連接屬性信任伺服器憑證|結果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  

@@ -2,19 +2,19 @@
 title: 搭配使用 Always Encrypted 與 ODBC 驅動程式
 description: 了解如何使用 Always Encrypted 與 Microsoft ODBC Driver for SQL Server 來開發 ODBC 應用程式。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886295"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288180"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "82886295"
 若要同時啟用參數加密和結果集加密資料行解密，最簡單的方式是將 `ColumnEncryption` 連接字串關鍵字的值設定為 **Enabled**。 可啟用 Always Encrypted 的連接字串範例如下：
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 您也可以使用相同的金鑰和值 (如果有連接字串設定，則會由此設定覆寫)，或透過程式設計方式使用 `SQL_COPT_SS_COLUMN_ENCRYPTION` 連線前屬性，在 DSN 設定中啟用 Always Encrypted。 以這種方式設定它會覆寫連接字串或 DSN 中設定的值：
@@ -309,6 +309,8 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 如果連線已啟用 Always Encrypted，此驅動程式預設會針對每個參數化查詢呼叫 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 這個預存程序會分析查詢陳述式，以查明是否有任何參數需要加密，如果有，便傳回每個參數的加密相關資訊，以便讓驅動程式加密參數。 上述行為可對用戶端應用程式確保高透明度：只要將以加密資料行為目標的值傳遞給參數中的驅動程式，應用程式 (及應用程式開發人員) 便無須知道哪些查詢存取了加密資料行。
 
+從 17.6 版開始，該驅動程式也會快取已備妥之陳述式的加密中繼資料，使後續針對 `SQLExecute` 的呼叫不需要採取額外的來回行程來擷取加密中繼資料，藉此改善效能。
+
 ### <a name="per-statement-always-encrypted-behavior"></a>個別陳述式的 Always Encrypted 行為
 
 若要控制擷取參數化查詢之加密中繼資料的效能影響，您可以改變個別查詢的 Always Encrypted 行為 (如果已在連線上啟用此行為)。 如此一來，您便可以確保只有針對已知具有以加密資料行為目標之參數的查詢，才會叫用 `sys.sp_describe_parameter_encryption`。 不過請注意，如此一來會降低加密的透明度︰如果您將資料庫中的其他資料行加密，您可能需要變更應用程式的程式碼，以配合結構描述的變更。
@@ -330,6 +332,8 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 - 針對不會存取任何加密資料行的陳述式，將 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 屬性設定為 `SQL_CE_DISABLED`。 這會導致無法呼叫 `sys.sp_describe_parameter_encryption`，以及無法嘗試解密結果集內的任何值。
     
 - 針對沒有任何需要加密的參數但會從加密資料行擷取資料的陳述式，將 `SQL_SOPT_SS_COLUMN_ENCRYPTION`屬性設定為 `SQL_CE_RESULTSETONLY`。 這會導致無法呼叫 `sys.sp_describe_parameter_encryption` 和進行參數加密。 包含加密資料行的結果將繼續進行解密。
+
+- 請針對會多次執行的查詢使用已備妥的陳述式；使用 `SQLPrepare` 來準備該查詢並儲存陳述式控制代碼，並在每次執行時搭配 `SQLExecute` 重複加以使用。 這是針對效能的建議方法 (即便沒有任何已加密的資料行也一樣)，且能允許驅動程式利用快取的中繼資料。
 
 ## <a name="always-encrypted-security-settings"></a>Always Encrypted 安全性設定
 
@@ -395,7 +399,7 @@ Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰�
 
 為了允許驅動程式使用儲存在 AKV 中的 CMK 來進行資料行加密，請使用下列僅限連接字串的關鍵字：
 
-|認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|認證類型|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
 |用戶端識別碼/祕密| `KeyVaultClientSecret`|用戶端識別碼|祕密|
@@ -408,13 +412,13 @@ Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰�
 **用戶端識別碼/祕密**：
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **使用者名稱/密碼**：
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **受控識別 (系統指派)**
@@ -596,7 +600,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 下表提供在加密資料行上操作時的動作摘要：
 
-|`ColumnEncryption`|BCP 方向|描述|
+|<code>ColumnEncryption</code>|BCP 方向|描述|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (至用戶端)|擷取加密文字。 觀察到的資料類型是 **varbinary(max)** 。|
 |`Enabled`|OUT (至用戶端)|擷取純文字。 驅動程式會將資料行資料解密。|
@@ -641,7 +645,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |IPD 欄位|大小/類型|預設值|描述|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 個位元組)|0|若為 0 (預設)：加密此參數的決定會取決於加密中繼資料的可用性。<br><br>若不為 0：如果有加密中繼資料可供此參數使用，就會加密。 否則，要求會因以下錯誤而失敗：[CE300] [Microsoft][ODBC Driver 13 for SQL Server]已為參數指定了強制加密，但伺服器沒有提供任何加密中繼資料。|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 個位元組)|0|若為 0 (預設)：加密此參數的決定會取決於加密中繼資料的可用性。<br><br>若不為 0：如果有加密中繼資料可供此參數使用，就會加密。 否則，要求會因以下錯誤而失敗：[CE300] [Microsoft][ODBC Driver 17 for SQL Server]已為參數指定了強制加密，但伺服器沒有提供任何加密中繼資料。|
 
 ### <a name="bcp_control-options"></a>bcp_control 選項
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 OLE DB Driver for SQL Server 標頭與程式庫檔案 | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 標頭及程式庫檔案
+description: 了解如何在開發環境中使用 OLE DB Driver for SQL Server 標頭檔與程式庫檔案。
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], library files
 - OLE DB Driver for SQL Server, library files
 - MSOLEDBSQL, library files
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ecb2b323a9acb84c2c7a53b28653e81ef65ea23b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66870fbbc20d22067f00a8ced721cb63c331eb2f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006991"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861640"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用 OLE DB Driver for SQL Server 標頭及程式庫檔案
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

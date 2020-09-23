@@ -1,4 +1,5 @@
 ---
+description: 資料來源精靈畫面 4 (ODBC Driver for SQL Server)
 title: 資料來源精靈畫面 4 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e35eae2e827b1fb0885eeaf5c953f64bddc7c3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6d1f72323f3db7db1f0f9c0084ef3da9de034490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462180"
 ---
 # <a name="data-source-wizard-screen-4"></a>資料來源精靈畫面 4
 
 指定 SQL Server 訊息所使用的語言、字元集轉譯，以及 ODBC Driver for SQL Server 是否應該使用區域設定。 您也可以控制長期執行查詢及驅動程式統計資料設定的記錄。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>變更 SQL Server 系統訊息的語言為
 
@@ -47,7 +48,7 @@ SQL Server 的每一個執行個體都可具有多組系統訊息，每一組都
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>將長時間執行的查詢儲存到記錄檔
 
-指定驅動程式記錄查詢時間長於 [長查詢時間] 值的任何查詢。  長期執行查詢會記錄在指定的檔案中。 若要指定記錄檔，請在方塊中鍵入完整路徑和檔案名稱，或按一下 [瀏覽]，透過巡覽現有檔案目錄來選取記錄檔。 
+指定驅動程式記錄查詢時間長於 [長查詢時間] 值的任何查詢。 **** 長期執行查詢會記錄在指定的檔案中。 若要指定記錄檔，請在方塊中鍵入完整路徑和檔案名稱，或按一下 [瀏覽]，透過巡覽現有檔案目錄來選取記錄檔。 ****
 
 ### <a name="long-query-time-milliseconds"></a>長時間查詢的時間 (毫秒)
 
@@ -65,15 +66,15 @@ SQL Server 的每一個執行個體都可具有多組系統訊息，每一組都
 
 ### <a name="connect-retry-interval-seconds"></a>連接重試間隔 (秒)
 
-指定每個連接重試嘗試的間隔秒數。 如需有關此作業和 [連接重試計數]  選項的詳細資訊，請參閱 [Windows ODBC 驅動程式中的連接復原功能](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+指定每個連接重試嘗試的間隔秒數。 如需有關此作業和 [連接重試計數]**** 選項的詳細資訊，請參閱 [Windows ODBC 驅動程式中的連接復原功能](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
 
-### <a name="back"></a>Back
+### <a name="back"></a>上一步
 
 按一下此按鈕，返回精靈的上一頁。
 
 ### <a name="finish"></a>[完成]
 
-如果在此畫面上指定的資訊完整，您可以按一下 [完成]  。 DSN 是使用在精靈此畫面與其他畫面上指定的所有屬性建立的，而且您有機會測試新建立的 DSN。
+如果在此畫面上指定的資訊完整，您可以按一下 [完成]****。 DSN 是使用在精靈此畫面與其他畫面上指定的所有屬性建立的，而且您有機會測試新建立的 DSN。
 
 ## <a name="next-steps"></a>後續步驟
 

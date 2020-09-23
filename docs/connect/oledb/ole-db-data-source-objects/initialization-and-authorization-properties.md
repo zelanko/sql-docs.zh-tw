@@ -1,6 +1,6 @@
 ---
 title: 初始化和授權屬性 (OLE DB Driver) | Microsoft Docs
-description: 初始化和授權屬性
+description: 了解 OLE DB Driver for SQL Server 如何解譯 OLE DB 初始化與授權屬性。
 ms.custom: ''
 ms.date: 01/02/2020
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, initialization properties
 - OLE DB Driver for SQL Server, authorization properties
 - initialization properties [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 1a133b8b259b7746ff6f5e8750f31c5288c88aa9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 702b6058e09a49528f96184d8591a0b6c97b3f86
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244947"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862080"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授權屬性
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87244947"
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：用來向 Azure Active Directory 進行驗證的存取權杖。 <br/><br/>**注意：** 指定此屬性，並同時指定 `UID`、`PWD`、`Trusted_Connection` 或 `Authentication` 連接字串關鍵字或其對應的屬性/關鍵字是錯誤的。|
-|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：指定所使用的 SQL 或 Active Directory 驗證。 有效值為：<br/><ul><li>`(not set)`:由其他關鍵字決定的驗證模式。</li><li>`(empty string)`:將先前設定的驗證模式取消設定。</li><li>`ActiveDirectoryPassword:`以 Azure Active Directory 識別進行的使用者識別碼和密碼驗證。</li><li>`ActiveDirectoryIntegrated:`以 Azure Active Directory 識別進行的整合式驗證。</li><br/>**注意：** `ActiveDirectoryIntegrated` 關鍵字也可用於向 SQL Server 進行的 Windows 驗證。 該關鍵字會取代 `Integrated Security` (或 `Trusted_Connection`) 驗證關鍵字。 **建議**使用 `Integrated Security` (或 `Trusted_Connection`) 關鍵字或其對應屬性的應用程式將 `Authentication` 關鍵字 (或其對應的屬性) 的值設定為 `ActiveDirectoryIntegrated`，以啟用新的加密和憑證驗證行為。<br/><br/><li>`ActiveDirectoryInteractive:`以 Azure Active Directory 識別進行的互動式驗證。 此方法支援 Azure Multi-Factor Authentication (MFA)。 </li><li>`ActiveDirectoryMSI:`[受控服務識別 (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 驗證。 針對使用者指派的識別，應該將使用者識別碼設定為使用者識別的物件識別碼。</li><li>`SqlPassword:`利用使用者識別碼和密碼進行的驗證。</li><br/>**注意：** **建議**使用 `SQL Server` 驗證的應用程式將 `Authentication` 關鍵字 (或其對應的屬性) 的值設定為 `SqlPassword`，以啟用[新的加密和憑證驗證行為](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：指定所使用的 SQL 或 Active Directory 驗證。 有效值為：<br/><ul><li>`(not set)`:由其他關鍵字決定的驗證模式。</li><li>`(empty string)`:將先前設定的驗證模式取消設定。</li><li>`ActiveDirectoryPassword:`以 Azure Active Directory 識別進行的使用者識別碼和密碼驗證。</li><li>`ActiveDirectoryIntegrated:`以 Azure Active Directory 識別進行的整合式驗證。</li><br/>**注意：** `ActiveDirectoryIntegrated` 關鍵字也可用於向 SQL Server 進行的 Windows 驗證。 該關鍵字會取代 `Integrated Security` (或 `Trusted_Connection`) 驗證關鍵字。 **建議**使用 `Integrated Security` (或 `Trusted_Connection`) 關鍵字或其對應屬性的應用程式將 `Authentication` 關鍵字 (或其對應的屬性) 的值設定為 `ActiveDirectoryIntegrated`，以啟用新的加密和憑證驗證行為。<br/><br/><li>`ActiveDirectoryInteractive:`以 Azure Active Directory 識別進行的互動式驗證。 此方法支援 Azure Multi-Factor Authentication (MFA)。 </li><li>`ActiveDirectoryMSI:` [受控識別 (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) 驗證。 針對使用者指派的識別，應該將使用者識別碼設定為使用者識別的物件識別碼。</li><li>`SqlPassword:`利用使用者識別碼和密碼進行的驗證。</li><br/>**注意：** **建議**使用 `SQL Server` 驗證的應用程式將 `Authentication` 關鍵字 (或其對應的屬性) 的值設定為 `SqlPassword`，以啟用[新的加密和憑證驗證行為](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|輸入：VT_BSTR<br /><br /> R/W︰寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：目前或過期的密碼。 如需詳細資訊，請參閱 [以程式設計方式變更密碼](../../oledb/features/changing-passwords-programmatically.md)。|  
 |SSPROP_INIT_APPNAME|輸入：VT_BSTR<br /><br /> R/W︰讀取/寫入<br /><br /> 描述：用戶端應用程式名稱。|  
 |SSPROP_INIT_AUTOTRANSLATE|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：OEM/ANSI 字元轉換。<br /><br /> VARIANT_TRUE：OLE DB Driver for SQL Server 會透過 Unicode 進行轉換，藉以轉譯在用戶端和伺服器之間傳送的 ANSI 字元字串，以大幅減少在用戶端和伺服器上之字碼頁間比對擴充字元的問題：<br /><br /> 傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**、**varchar** 或 **text** 變數、參數或資料行之執行個體的用戶端 DBTYPE_STR 資料會使用用戶端的 ANSI 字碼頁 (ACP)，從字元轉換成 Unicode，然後使用伺服器的 ACP，從 Unicode 轉換成字元。<br /><br /> 傳送到用戶端 DBTYPE_STR 變數的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**、**varchar** 或 **text** 資料會使用伺服器 ACP 來從字元轉換成 Unicode，然後使用用戶端 ACP 來從 Unicode 轉換成字元。<br /><br /> 這些轉換會由 OLE DB Driver for SQL Server 在用戶端上執行。 但是在伺服器上使用的相同 ACP 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> 傳送到伺服器之 **char**、**varchar** 或 **text** 的 Unicode DBTYPE_WSTR 用戶端資料。<br /><br /> 傳送到用戶端之 Unicode DBTYPE_WSTR 變數的 **char**、**varchar** 或 **text** 伺服器資料。<br /><br /> 傳送到伺服器之 **nchar**、**nvarchar** 或 **ntext** 的 ANSI DBTYPE_STR 用戶端資料。<br /><br /> 傳送到用戶端之 ANSI DBTYPE_STR 變數的 Unicode **char**、**varchar** 或 **text** 伺服器資料。<br /><br /> VARIANT_FALSE：OLE DB Driver for SQL Server 不會執行字元轉譯。<br /><br /> OLE DB Driver for SQL Server 不會轉譯傳送到伺服器之 **char**、**varchar** 或 **text** 變數、參數或資料行的用戶端 ANSI 字元 DBTYPE_STR 資料。 在從伺服器傳送到用戶端之 DBTYPE_STR 變數的 **char**、**varchar** 或 **text** 資料上不會執行任何轉譯。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體使用不同的 ACP，可能會將擴充字元解譯錯誤。|  

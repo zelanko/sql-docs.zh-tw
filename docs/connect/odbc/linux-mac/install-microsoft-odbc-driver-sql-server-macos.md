@@ -1,7 +1,7 @@
 ---
 title: 安裝 Microsoft ODBC Driver for SQL Server (macOS)
 description: 了解如何在 macOS 用戶端上安裝 Microsoft ODBC Driver for SQL Server，以啟用資料庫連線能力。
-ms.date: 03/05/2020
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24ddbbd8adaa646005c8e5ea3c945cb3ab164d48
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488516"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569818"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安裝 Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -70,7 +70,14 @@ macOS 上的 ODBC 驅動程式包含下列元件：
 
 ## <a name="troubleshooting"></a>疑難排解
 
-如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的[針對連線問題進行疑難排解](known-issues-in-this-version-of-the-driver.md#connectivity)。
+某些使用者在安裝 ODBC 驅動程式後嘗試連線時會遇到問題，並收到類似以下的錯誤：`"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"`。 這可能是因為 unixODBC 未正確設定且找不到已註冊的驅動程式。 在這些情況下，建立數個符號連結便可以解決該問題。
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
+
+針對無法使用 ODBC 驅動程式與 SQL Server 建立連線的其他案例，請參閱已知問題一文中的[針對連線問題進行疑難排解](known-issues-in-this-version-of-the-driver.md#connectivity)。
 
 ## <a name="next-steps"></a>後續步驟
 

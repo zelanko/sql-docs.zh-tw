@@ -1,6 +1,6 @@
 ---
 title: 用戶端連接中的服務主體名稱 (SPN) 支援 | Microsoft Docs
-description: 用戶端連接中的服務主體名稱 (SPN) 支援
+description: 了解 SQL Server 如何支援用戶端連線中的服務主體名稱。 查看最常見的使用方式情節。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007263"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195144"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,7 +45,7 @@ ms.locfileid: "86007263"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
  下表描述用戶端應用程式可允許安全驗證的常見案例。  
   
 |狀況|描述|  

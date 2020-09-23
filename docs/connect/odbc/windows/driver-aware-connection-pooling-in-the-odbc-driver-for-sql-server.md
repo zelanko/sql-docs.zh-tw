@@ -2,7 +2,7 @@
 title: ODBC Driver 中可感知驅動程式的連接共用
 description: 了解 Windows 版 Microsoft ODBC Driver for SQL Server 中可感知驅動程式連接共用的增強功能。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922079"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288098"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中可感知驅動程式的連接共用
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82922079"
   
 -   如果在您的連接字串與共用的連接字串之間，有下列任一連接關鍵字不相同，則不會使用共用連接。  
   
-    |關鍵字|ODBC Driver 13|ODBC Driver 11|
+    |關鍵字|ODBC 驅動程式 17/13|ODBC Driver 11|
     |-|-|-|
     |`Address`|是|是|
     |`AnsiNPW`|是|是|
@@ -68,7 +68,7 @@ ms.locfileid: "82922079"
     
 - 如果在您的連接字串與共用的連接字串之間，有下列任一連接屬性不相同，則不會使用共用連接。  
   
-    |屬性|ODBC Driver 13|ODBC Driver 11|  
+    |屬性|ODBC 驅動程式 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|是|是|
     |`SQL_ATTR_PACKET_SIZE`|是|是|
@@ -94,7 +94,7 @@ ms.locfileid: "82922079"
   
      當驅動程式管理員在嘗試比對您的連接與集區中的連接時，並不會考量這些連接關鍵字。 (即使您變更其中一個參數，現有的連接仍可重複使用。 驅動程式會視需要重設選項。)這些屬性可以在用戶端重設，而不需要進行額外的網路呼叫。  
   
-    |關鍵字|ODBC Driver 13|ODBC Driver 11|  
+    |關鍵字|ODBC 驅動程式 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|是|是|
     |`Description`|是|是|
@@ -108,7 +108,7 @@ ms.locfileid: "82922079"
   
      如果您變更下列其中一個連接屬性，現有的連接仍可重複使用。  驅動程式會視需要重設此值。 驅動程式可在用戶端重設這些屬性，而不需要進行額外的網路呼叫。  
   
-    |屬性|ODBC Driver 13|ODBC Driver 11|  
+    |屬性|ODBC 驅動程式 17/13|ODBC Driver 11|  
     |-|-|-|  
     |所有陳述式屬性|是|是|
     |`SQL_ATTR_AUTOCOMMIT`|是|是|

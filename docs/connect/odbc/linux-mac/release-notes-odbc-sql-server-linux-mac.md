@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922203"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899527"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6，2020 年 7 月
+
+| 新項目 | 詳細資料 |
+| :------- | :------ |
+| 支援新的散發套件。 | Ubuntu 20.04 |
+| 同盟驗證的支援 | 請參閱[使用 Azure Active Directory](../using-azure-active-directory.md)。 |
+| 已備妥陳述式的中繼資料快取 | 請參閱[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| SQL_COPT_SS_AUTOBEGINTXN 連線屬性來控制是否會在 ROLLBACK 或 COMMIT 之後自動進行 BEGIN TRANSACTION | 請參閱 [DSN 與連接字串屬性和關鍵字](../dsn-connection-string-attribute.md)。 |
+| 錯誤修正。 | [錯誤修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2，2020 年 4 月 (僅限 Alpine Linux)
 
@@ -91,7 +103,7 @@ GeneMi.  2019/04/03.
 | 新項目 | 詳細資料 |
 | :------- | :------ |
 | 支援新的散發套件。 | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Azure Active Directory 受控服務識別 (系統和使用者指派) 驗證模式。 | 請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md)。 |
+| Azure Active Directory 受控識別 (系統與使用者指派) 驗證模式。 | 請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md)。 |
 | 針對 Always Encrypted 資料行串流輸入參數的能力。 | 如需詳細資訊，請參閱[使用 Always Encrypted 時的 ODBC 驅動程式限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分散式交易。 | 請參閱[使用 XA 交易](../use-xa-with-dtc.md)。<br/><br/>XA 是 _eXtended Architecture_ (延伸架構) 的縮寫，這是針對存取多個伺服器端資料儲存系統的全域交易執行標準。 |
 | &nbsp; | &nbsp; |

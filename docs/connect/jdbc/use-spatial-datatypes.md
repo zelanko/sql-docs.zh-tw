@@ -1,7 +1,8 @@
 ---
+description: 使用空間資料類型
 title: 使用空間資料類型 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83f64df45036091985ccb6e26b86907882939313
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487958"
 ---
 # <a name="using-spatial-datatypes"></a>使用空間資料類型
 
@@ -25,7 +26,7 @@ ms.locfileid: "80916804"
 
 ## <a name="creating-a-geometry--geography-object"></a>建立 Geometry / Geography 物件
 
-建立 Geometry / Geography 物件的主要方式有兩種：從 Well-Known Text (WKT) 或 Well-Known Binary (WKB) 轉換。
+建立 Geometry / Geography 物件的主要方式有兩種：從 Well-Known Text (WKT) 或內部 SQL Server 格式 (CLR) 轉換。
 
 ### <a name="creating-from-wkt"></a>從 WKT 建立
 
@@ -37,14 +38,14 @@ Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 
 這將會建立空間參考系統識別碼 (SRID) 為 0 的 LINESTRING Geometry 物件，以及 SRID 為 4326 的 Geography 物件。
 
-### <a name="creating-from-wkb"></a>從 WKB 建立
+### <a name="creating-from-clr"></a>從 CLR 建立
 
 ```java
-byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
-byte[] geogWKB = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geomCLR = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geogCLR = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
 
-Geometry geomWKT = Geometry.deserialize(geomWKB);
-Geography geogWKT = Geography.deserialize(geogWKB);
+Geometry geomWKT = Geometry.deserialize(geomCLR);
+Geography geogWKT = Geography.deserialize(geogCLR);
 ```
 
 這將會建立與先前從 WKT 建立的 Geometry 和 Geography 物件相當的物件。
@@ -101,17 +102,17 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Geography getGeography(int colunIndex)| 使用 Java 程式設計語言，以 com.microsoft.sqlserver.jdbc.Geography 物件形式，傳回這個 ResultSet 物件之目前資料列中指定資料行的值。
 |Geography getGeography(String columnName)| 使用 Java 程式設計語言，以 com.microsoft.sqlserver.jdbc.Geography 物件形式，傳回這個 ResultSet 物件之目前資料列中指定資料行的值。
 
-### <a name="geometry"></a>幾何
+### <a name="geometry"></a>幾何形狀
 
 |方法|描述|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
-|Geometry STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geometry 執行個體的建構函式。
-|Geometries deserialize(byte[] wkb)| 針對空間資料從內部 SQL Server 格式取得 Geometry 執行個體的建構函式。
+|Geometry STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geometry 執行個體的建構函式。 注意:此方法目前會使用內部 SQL Server 格式 (CLR) 來建立 Geometry 執行個體，此為驅動程式中的已知問題，且已規劃於未來變更成改為接受 WKB 資料。 對於已經使用此方法的現有使用者，請考慮改為切換成 deserialize(byte)。
+|Geometries deserialize(byte[] clr)| 針對空間資料從內部 SQL Server 格式取得 Geometry 執行個體的建構函式。
 |Geometry parse(String wkt)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式。 空間參考識別碼預設為 0。
 |Geometry point(double x, double y, int SRID)| Geometry 執行個體的建構函式，其會根據 Point 執行個體的 X 和 Y 值與空間參考識別碼來代表該執行個體。
 |String STAsText()| 傳回 Geometry 執行個體的開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。
-|byte[] STAsBinary()| 傳回 Geometry 執行個體的開放式地理空間協會 (OGC) Well-Known Binary (WKB) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
+|byte[] STAsBinary()| 傳回 Geometry 執行個體的內部 SQL Server 格式 (CLR) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
 |byte[] serialize()| 傳回表示 Geometry 類型之內部 SQL Server 格式的位元組。
 |boolean hasM()| 傳回物件是否包含 M (量值) 值。
 |boolean hasZ()| 傳回物件是否包含 Z (海拔) 值。
@@ -131,12 +132,12 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |方法|描述|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
-|Geography STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geography 執行個體的建構函式。
-|Geography deserialize(byte[] wkb)| 針對空間資料從內部 SQL Server 格式取得 Geography 執行個體的建構函式。
+|Geography STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geography 執行個體的建構函式。 注意:此方法目前會使用內部 SQL Server 格式 (CLR) 來建立 Geometry 執行個體，但這在未來將會變更成改為接受 WKB 資料，因為此方法的 SQL Server 對應項目 (STGeomFromWKB) 是使用 WKB。 對於已經使用此方法的現有使用者，請考慮改為切換成 deserialize(byte)。
+|Geography deserialize(byte[] clr)| 針對空間資料從內部 SQL Server 格式取得 Geography 執行個體的建構函式。
 |Geography parse(String wkt)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式。 空間參考識別碼預設為 0。
 |Geography point(double lon, double lat, int SRID)| 代表位置執行個體 (經緯度及空間參考識別碼) 之地理執行個體的建構函式。
 |String STAsText()| 傳回 Geography 執行個體的開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。
-|byte[] STAsBinary())| 傳回 Geography 執行個體的開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
+|byte[] STAsBinary())| 傳回 Geography 執行個體的內部 SQL Server 格式 (CLR) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
 |byte[] serialize()| 傳回表示 Geography 類型之內部 SQL Server 格式的位元組。
 |boolean hasM()| 傳回物件是否包含 M (量值) 值。
 |boolean hasZ()| 傳回物件是否包含 Z (海拔) 值。

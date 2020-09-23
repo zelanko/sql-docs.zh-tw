@@ -1,6 +1,6 @@
 ---
 title: 日期和時間以及結構描述資料列集 | Microsoft Docs
-description: 日期和時間以及結構描述資料列集
+description: 了解 OLE DB Driver for SQL Server 中相對於 COLUMNS 資料列集與 PROCEDURE_PARAMETERS 資料列集的 OLE DB 日期和時間增強功能。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f9d852689f008fcaaff53a3325a298a66be5f4e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44b3959b72d07cb12d6523e063a0ddfa75b59c97
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004463"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862010"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>中繼資料 - 日期和時間以及結構描述資料列集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

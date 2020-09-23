@@ -1,7 +1,7 @@
 ---
 title: 設定部署
 titleSuffix: SQL Server big data clusters
-description: 了解如何搭配設定檔自訂巨量資料叢集部署。
+description: 了解如何使用 azdata 管理工具內建的設定檔，來自訂巨量資料叢集部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728021"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860576"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
@@ -307,58 +307,67 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 
 ## <a name="configure-storage"></a><a id="storage"></a> 設定儲存體
 
-您也可以變更用於每個集區的儲存體類別和特性。 下列範例會將自訂儲存類別指派給存放和資料集區，並將儲存資料的持續性磁碟區宣告大小更新為 500 GB (HDFS/存放集區) 和 100 GB (資料集區)。 
+您也可以變更用於每個集區的儲存體類別和特性。 下列範例會將自訂儲存類別指派給儲存體與資料集區，並將儲存資料的持續性磁碟區宣告大小更新為 500 GB (HDFS/存放集區) 與 100 GB (針對主要與資料集區)。 
 
 > [!TIP]
 > 如需儲存體設定的詳細資訊，請參閱[在 Kubernetes 上使用 SQL Server 2019 巨量資料叢集的資料持續性](concept-data-persistence.md)。
 
-先如下所示建立 patch.json 檔案，除了 *type* 和 *replicas* 區段之外，它還會包含新的 *storage* 區段
+請先建立可調整儲存體設定的 patch.jso 檔案，如下所示
 
 ```json
 {
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "500Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "100Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    }
-  ]
+        "patch": [
+                {
+                        "op": "add",
+                        "path": "spec.resources.storage-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "500Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+        {
+                        "op": "add",
+                        "path": "spec.resources.master.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+                {
+                        "op": "add",
+                        "path": "spec.resources.data-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                }
+        ]
 }
+
 ```
 
 您接著可以使用 `azdata bdc config patch` 命令來更新 `bdc.json` 設定檔。
@@ -666,7 +675,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > 建議的最佳做法是依照[本文](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)中的指示，在 Kubernetes 叢集中每個主機上手動更新 `max_map_count` 設定。
 
-## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>開啟/關閉 Pod 與節點計量集合
+## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>開啟/關閉 Pod 與節點計量集合
 
 SQL Server 2019 CU5 已啟用兩個功能參數，以控制 Pod 與節點計量的集合。 如果監視 Kubernetes 基礎結構使用了不同的解決方案，您可將 *control.json* 部署組態檔中的 *allowNodeMetricsCollection* 和 *allowPodMetricsCollection* 設為 *false*，以關閉 Pod 與主機節點的內建計量集合。 在 OpenShift 環境中，因為收集 Pod 與節點計量需要特殊權限的功能，所以這些設定在內建部署設定檔中預設為 *false*。
 請執行此命令，以使用 *azdata* CLI 更新您自訂組態檔中的這些設定值：

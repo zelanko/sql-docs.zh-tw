@@ -1,6 +1,6 @@
 ---
 title: 大型 CLR 使用者定義型別 | Microsoft Docs
-description: OLE DB Driver for SQL Server 中的大型 CLR 使用者定義型別
+description: 了解在適用於不同版本 SQL Server 的 Common Language Runtime 中，使用者定義型別的大小限制與相關行為。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 20469f3cd6a1b98a6fd08db195e883ccff4ac776
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9fdc52df9307bbe4ce3e826ca682d787e1c11506
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006957"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861465"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

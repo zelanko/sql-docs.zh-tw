@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160156"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472334"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>使用 Python 指令碼在 Azure Red Hat OpenShift (ARO) 上部署 SQL Server 巨量資料叢集
 
@@ -24,6 +24,10 @@ ms.locfileid: "86160156"
 
 > [!TIP]
 > ARO 是唯一針對巨量資料叢集裝載 Kubernetes 的選項。 若要深入了解其他部署選項，以及如何自訂部署選項，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)。
+
+
+> [!WARNING]
+> 使用內建儲存類別 *managed-premium* 建立的永久性磁碟區具有 *Delete* (刪除) 的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告會遭到刪除，然後永久性磁碟區也是。 您應該使用 azure-disk 佈建程式搭配 *Retain* (保留) 回收原則來建立自訂儲存類別，如[概念儲存體](/azure/aks/concepts-storage/#storage-classes)中所述。 下列指令碼是使用 *managed-premium* 儲存類別。 如需詳細資訊，請參閱[資料持續性](concept-data-persistence.md)主題。
 
 此處使用的預設巨量資料叢集部署，包含 SQL 主要執行個體、一個計算集區執行個體、兩個資料集區執行個體以及兩個存放集區執行個體。 資料以使用 ARO 預設儲存類別的 Kubernetes 持續性磁碟區保存。 本教學課程中使用的預設設定適用於開發/測試環境。
 

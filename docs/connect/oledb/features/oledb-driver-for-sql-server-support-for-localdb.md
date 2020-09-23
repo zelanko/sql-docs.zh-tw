@@ -1,6 +1,6 @@
 ---
 title: OLE DB Driver for SQL Server 對 LocalDB 的支援 | Microsoft Docs
-description: OLE DB Driver for SQL Server 對 LocalDB 的支援
+description: 了解如何使用 OLE DB Driver for SQL Server 連線至輕量型版本的 SQL Server (稱為 LocalDB)。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: bd97c05d30e367def4a9138b9b61f08a6d54c74d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c7f5ac94ff64ef32aaee793c59529ad0377b2f5
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006881"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860687"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>OLE DB Driver for SQL Server 的 LocalDB 支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

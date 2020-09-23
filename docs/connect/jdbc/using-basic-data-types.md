@@ -2,7 +2,7 @@
 title: 使用基本 JDBC 資料類型
 description: Microsoft JDBC Driver for SQL Server 會使用基本 JDBC 資料類型，將 SQL Server 資料類型轉換成 Java 能夠理解的格式。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728377"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806993"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 
@@ -35,9 +35,9 @@ ms.locfileid: "81728377"
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
 | date               | 日期                                               | java.sql.Date                |
-| Datetime           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ ms.locfileid: "81728377"
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ ms.locfileid: "81728377"
 | 幾何           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設為 false。  
+<sup>1</sup> 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設定為 false。  
   
-(2) 您可以使用 [DateTimeOffset 類別](reference/datetimeoffset-class.md)來以程式設計方式存取 **datetimeoffset** 的值。  
+<sup>2</sup> 您可以使用 [DateTimeOffset 類別](reference/datetimeoffset-class.md)來以程式設計方式存取 **datetimeoffset** 的值。  
+  
+<sup>3</sup> 請注意，從 SQL Server 2016 開始，java.sql.Timestamp 值已無法用來比較來自 datetime 資料行的值。 此限制是因會以不同方式將 datetime 轉換為 datetime2 並產生非合理值的伺服器端變更所導致。 此問題的因應措施是將 datetime 資料行變更為 datetime2(3)、使用 String 取代 java.sql.Timestamp，或是將資料庫相容性層級變更至 120 或更低。
   
 下列章節會提供如何使用 JDBC Driver 與基本資料類型的範例。 如需如何在 Java 應用程式中使用基本資料類型的更詳細範例，請參閱[基本資料類型範例](basic-data-types-sample.md)。  
   
@@ -81,7 +83,7 @@ ms.locfileid: "81728377"
   
 ## <a name="retrieving-data-by-data-type"></a>依資料類型擷取資料
 
-如果您必須從資料來源擷取資料，且您知道正在擷取的資料類型，請使用 SQLServerResultSet 類別的其中一個 get\<Type> 方法，也稱為「getter 方法」  。 您可使用資料行名稱或資料行索引搭配 get\<Type> 方法，如下所示：  
+如果您必須從資料來源擷取資料，且您知道正在擷取的資料類型，請使用 SQLServerResultSet 類別的其中一個 get\<Type> 方法，其也稱為「getter 方法」。 您可以搭配 get\<Type> 方法使用資料行名稱或資料行索引，如下所示：  
   
 [!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -99,7 +101,7 @@ ms.locfileid: "81728377"
   
 ## <a name="updating-data-by-parameterized-query"></a>依參數化查詢更新資料
 
-如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」  )，來設定參數的資料類型。 在下列範例中，[prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](reference/executeupdate-method.md) 方法之前，使用 [setString](reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
+如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」)，來設定參數的資料類型。 在下列範例中，[prepareStatement](reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](reference/executeupdate-method.md) 方法之前，使用 [setString](reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
   
 [!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   

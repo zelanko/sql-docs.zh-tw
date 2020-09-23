@@ -1,6 +1,6 @@
 ---
 title: 工作階段 (OLE DB 驅動程式)
-description: OLE DB Driver for SQL Server 中的工作階段
+description: 了解如何使用 OLE DB Driver for SQL Server 來連線到 SQL Server 資料庫。 工作階段代表與 SQL Server 執行個體的單一連線。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - OLE DB Driver for SQL Server, sessions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba9d1dcfbc3ac57d9f24ba78e992443d6d7d6453
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0187f42ab9389f18d35d4f400c2ea494a6d6dcd4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244936"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862478"
 ---
 # <a name="sessions"></a>工作階段
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

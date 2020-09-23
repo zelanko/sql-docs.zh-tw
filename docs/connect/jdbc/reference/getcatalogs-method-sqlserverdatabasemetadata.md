@@ -1,4 +1,5 @@
 ---
+description: getCatalogs 方法 (SQLServerDatabaseMetaData)
 title: getCatalogs 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a813a04f11a9ad74e4ceec2663e9d7f812d5c3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a31fca087c206104d197a3121db90991ff38f8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436900"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ public java.sql.ResultSet getCatalogs()
  此 getCatalogs 方法由 java.sql.DatabaseMetaData 介面中的 getCatalogs 方法所指定。  
   
 > [!NOTE]  
->  在 SQL Azure 上，您應該連接至 master 資料庫來呼叫 **SQLServerDatabaseMetaData.getCatalogs**。 SQL Azure 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs** 會使用 sys.databases 檢視取得目錄。 請參閱 [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) 中的權限討論，以了解 SQL Azure 上的 **SQLServerDatabaseMetaData.getCatalogs** 行為。  
+>  在 Azure SQL Database 上，您應該連線至 master 資料庫來呼叫 **SQLServerDatabaseMetaData.getCatalogs**。 SQL Database 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs** 會使用 sys.databases 檢視取得目錄。 請參閱 [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) 中關於權限的討論，以了解 SQL 上的 **SQLServerDatabaseMetaData.getCatalogs** 行為。在 Azure SQL Database 上，您應該連線至 master 資料庫來呼叫 **SQLServerDatabaseMetaData.getCatalogs**。 SQL Database 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs** 會使用 sys.databases 檢視取得目錄。 請參閱 [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) 中關於權限的討論，以了解 SQL Database 上的 **SQLServerDatabaseMetaData.getCatalogs** 行為。                      .  
   
  getCatalogs 方法所傳回的結果集將包含下列資訊：  
   

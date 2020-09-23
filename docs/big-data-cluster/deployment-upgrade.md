@@ -5,16 +5,16 @@ description: 了解如何將 SQL Server 巨量資料叢集升級至新版本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764066"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392169"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -36,8 +36,16 @@ ms.locfileid: "85764066"
 
 本節會說明如何將 SQL Server BDC 從支援的版本 (從 SQL Server 2019 GDR1 起) 升級至較新的支援版本。
 
+1. 確認沒有作用中的 Livy 工作階段。
+
+   確定 Azure Data Studio 中沒有任何作用中的 Livy 工作階段或批次工作正在執行。 若要以簡單的方式確認這一點，您可以透過 `curl` 命令或瀏覽器來要求這些 URL：
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. 備份 SQL Server 主要執行個體。
-2. 備份 HDFS。
+
+1. 備份 HDFS。
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
@@ -49,13 +57,13 @@ ms.locfileid: "85764066"
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. 更新 `azdata`。
+1. 更新 `azdata`。
 
    遵循安裝 `azdata` 的指示。 
    - [Windows 安裝程式](deploy-install-azdata-installer.md)
-   - [Linux 搭配 apt](deploy-install-azdata-linux-package.md)
-   - [Linux 搭配 yum](deploy-install-azdata-yum.md)
-   - [Linux 搭配 zypper](deploy-install-azdata-zypper.md)
+   - [Linux 搭配 APT](deploy-install-azdata-linux-package.md)
+   - [Linux 搭配 YUM](deploy-install-azdata-yum.md)
+   - [Linux 搭配 Zypper](deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >如果 `azdata` 是使用 `pip` 安裝的，您必須先手動加以移除，再使用 Windows 安裝程式或 Linux 套件管理員安裝。
@@ -66,10 +74,10 @@ ms.locfileid: "85764066"
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   例如，下列指令碼使用 `2019-CU4-ubuntu-16.04` 映像標籤：
+   例如，下列指令碼使用 `2019-CU6-ubuntu-16.04` 映像標籤：
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +104,7 @@ ms.locfileid: "85764066"
 若要增加升級的逾時，請使用 **--controller-timeout** 和 **--component-timeout** 參數，在您發出升級時指定較高的值。 僅自 SQL Server 2019 CU2 版本開始提供此選項。 例如：
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** 指定等待控制器或控制器資料庫完成升級的分鐘數。
 **--component-timeout** 指定升級所必須完成每個後續階段的時間長度。
@@ -123,7 +131,7 @@ ms.locfileid: "85764066"
 
 ### <a name="backup-and-delete-the-old-cluster"></a>備份和刪除舊叢集
 
-在 SQL Server 2019 GDR1 版本之前部署的巨量資料叢集沒有就地升級。 升級至新版本的唯一方法是手動移除並重新建立叢集。 每個版本都有與先前版本不相容的唯一 `azdata` 版本。 此外，如果新版容器映像是在以不同舊版部署的叢集上下載的，則最新映像可能會與叢集上的舊版映像不相容。 若在容器設定的部署設定檔中使用 `latest` 映像標籤，系統會提取新版映像。 根據預設，每個版本都有一個對應至 SQL Server 發行版本的特定映像標籤。 若要升級至最新版本，請遵循下列步驟：
+在 SQL Server 2019 GDR1 版本之前部署的巨量資料叢集沒有就地升級。 升級至新版本的唯一方法是手動移除並重新建立叢集。 每個版本都有與先前版本不相容的唯一 `azdata` 版本。 此外，如果新版容器映像是在以不同舊版部署的叢集上下載的，則最新映像可能會與叢集上的舊版映像不相容。 若在容器設定的部署設定檔中使用 `latest` 映像標籤，系統會提取新版映像。 根據預設，每個發行版本都有一個對應到 SQL Server 發行版本的特定映像標籤。 若要升級至最新版本，請遵循下列步驟：
 
 1. 在刪除舊叢集之前，請先備份 SQL Server 主要執行個體和 HDFS 上的資料。 針對 SQL Server 主要執行個體，您可以使用 [SQL Server 備份和還原](data-ingestion-restore-database.md)。 針對 HDFS，您[可以使用 `curl` 來複製資料](data-ingestion-curl.md)。
 

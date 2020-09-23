@@ -2,7 +2,7 @@
 title: JDBC 驅動程式概觀 | Microsoft Docs
 description: Microsoft JDBC Driver for SQL Server 是與類型 4 Java 資料庫連線 (JDBC) 4.2 相容的驅動程式，可提供對 SQL 資料庫的資料存取。
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529332"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943589"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驅動程式概觀
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server 是類型 4 Java 資料庫連線 (JDBC) 4.2 相容驅動程式，其提供對於 SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 及 Azure SQL Database 穩固的資料存取。  
+Microsoft JDBC Driver for SQL Server 是與類型 4 Java 資料庫連線 (JDBC) 4.2 相容的驅動程式，可提供對 SQL Server 與 Azure SQL 資料庫的穩固資料存取。  
 
 ## <a name="redistribution"></a>可轉散發
 
-JDBC 驅動程式 6.0、6.2、6.4 與 7.0 版均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
+JDBC 驅動程式 6.0 版與更新版本均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
 
-JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援將於 2018 之前到期。
+JDBC 驅動程式 4.x 版已淘汰。 對 4.x 的支援將於 2018 之前到期。
 
 ## <a name="in-this-section"></a>本節內容  
 

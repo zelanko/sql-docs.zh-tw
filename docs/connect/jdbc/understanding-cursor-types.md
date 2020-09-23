@@ -1,4 +1,5 @@
 ---
+description: 了解資料指標類型
 title: 了解資料指標類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b47569f0580b8e39ce84b9093dc38718845617c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395904"
 ---
 # <a name="understanding-cursor-types"></a>了解資料指標類型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,12 +47,12 @@ ms.locfileid: "69027494"
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|N/A|順向、唯讀|直接|adaptive|應用程式必須單一 (順向) 通過結果集。 它與 TYPE_SS_DIRECT_FORWARD_ONLY 資料指標的行為相同。 驅動程式會因為應用程式的要求而從伺服器讀取資料集，因此會將用戶端的記憶體使用量降到最低。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|向前快轉|順向、唯讀|cursor|N/A|應用程式必須使用伺服器資料指標單一 (順向) 通過結果集。 它與 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標的行為相同。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|動態 (順向)|順向、可更新的|N/A|N/A|應用程式必須單一 (順向) 通過結果集以更新一或多個資料列。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。<br /><br /> 根據預設，當應用程式呼叫 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 方法時，提取大小是固定的。<br /><br /> **注意：** JDBC 驅動程式提供適應性緩衝功能，可讓您在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 例如，如果應用程式應該擷取的大型資料過大而無法完整納入應用程式記憶體中，適應性緩衝就會允許用戶端應用程式將這類值擷取成資料流。 此驅動程式的預設行為是 "**adaptive**"。 不過，若要取得順向可更新結果集的適應性緩衝，應用程式必須提供**字串**值 "**adaptive"** 來明確呼叫 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)。|  
-|TYPE_SCROLL_INSENSITIVE|靜態|可捲動、不可更新<br /><br /> 系統不會顯示外部資料列更新、插入和刪除。|N/A|N/A|應用程式需要資料庫快照集。 此結果集不可更新。 僅支援 CONCUR_READ_ONLY。  搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SCROLL_INSENSITIVE|Static|可捲動、不可更新<br /><br /> 系統不會顯示外部資料列更新、插入和刪除。|N/A|N/A|應用程式需要資料庫快照集。 此結果集不可更新。 僅支援 CONCUR_READ_ONLY。  搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|索引鍵集|可捲動、唯讀。 系統會顯示外部資料列更新，而且刪除會顯示為遺失資料。<br /><br /> 系統不會顯示外部資料列插入。|N/A|N/A|應用程式必須僅針對現有的資料列查看變更的資料。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|索引鍵集|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新，而且刪除會顯示為遺失資料，但是不會顯示插入。|N/A|N/A|應用程式可能會使用 ResultSet 物件來變更現有資料列中的資料。 應用程式也必須能夠查看其他人在 ResultSet 物件外部對資料列所做的變更。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_SS_DIRECT_FORWARD_ONLY|N/A|順向、唯讀|N/A|完整或適應性|整數值 = 2003。 提供完整緩衝的唯讀用戶端資料指標。 系統不會建立任何伺服器資料指標。<br /><br /> 僅支援 CONCUR_READ_ONLY 並行類型。 搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。|  
 |TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|向前快轉|順向|N/A|N/A|整數值 = 2004。 使用伺服器資料指標來快速存取所有資料。 搭配 CONCUR_UPDATABLE 並行類型使用時，它是可更新的。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。<br /><br /> 若要取得此案例的適應性緩衝，應用程式必須提供**字串**值 "**adaptive"** 來明確呼叫 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)。|  
-|TYPE_SS_SCROLL_STATIC|靜態|系統不會反映其他使用者的更新。|N/A|N/A|整數值 = 1004。 應用程式需要資料庫快照集。 這是 JDBC TYPE_SCROLL_INSENSITIVE 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SS_SCROLL_STATIC|Static|系統不會反映其他使用者的更新。|N/A|N/A|整數值 = 1004。 應用程式需要資料庫快照集。 這是 JDBC TYPE_SCROLL_INSENSITIVE 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|索引鍵集|可捲動、唯讀。 系統會顯示外部資料列更新，而且刪除會顯示為遺失資料。<br /><br /> 系統不會顯示外部資料列插入。|N/A|N/A|整數值 = 1005。 應用程式必須僅針對現有的資料列查看變更的資料。 這是 JDBC TYPE_SCROLL_SENSITIVE 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|索引鍵集|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新，而且刪除會顯示為遺失資料，但是不會顯示插入。|N/A|N/A|整數值 = 1005。 應用程式必須變更資料或針對現有的資料列查看變更的資料。 這是 JDBC TYPE_SCROLL_SENSITIVE 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
 |TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_READ_ONLY)|動態|可捲動、唯讀。<br /><br /> 系統會顯示外部資料列更新和插入，而且刪除在目前的提取緩衝區中，會顯示為暫時遺失的資料。|N/A|N/A|整數值 = 1006。 應用程式必須針對現有的資料列查看變更的資料，並查看在資料指標存留時間期間插入以及刪除的資料列。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
@@ -67,7 +68,7 @@ ms.locfileid: "69027494"
 > [!NOTE]  
 >  當應用程式進行不支援的資料指標定位呼叫時，或進行不支援的 getRow 方法呼叫時，會擲回一個例外狀況訊息：「不支援使用此資料指標類型來執行要求的作業」。  
   
- 只有 TYPE_SS_SCROLL_KEYSET 和相等的 TYPE_SCROLL_SENSITIVE 資料指標會公開已刪除的資料列。 如果資料指標定位在已刪除的資料列上，則無法使用資料行值，而且 [rowDeleted](../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法會傳回 "true"。 get\<Type> 方法的呼叫會擲回一個例外狀況訊息：「無法從已刪除的資料列取得值」。 無法更新已刪除的資料列。 如果您嘗試在刪除的資料列上呼叫 update\<Type> 方法，會擲回一個例外狀況訊息：「無法更新已刪除的資料列」。 TYPE_SS_SCROLL_DYNAMIC 資料指標在移出目前的提取緩衝區之前的行為都相同。  
+ 只有 TYPE_SS_SCROLL_KEYSET 和相等的 TYPE_SCROLL_SENSITIVE 資料指標會公開已刪除的資料列。 如果資料指標定位在已刪除的資料列上，則無法使用資料行值，而且 [rowDeleted](../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法會傳回 "true"。 針對 get\<Type> 方法的呼叫會擲回具有下列訊息的例外狀況：「無法從已刪除的資料列取得值」。 無法更新已刪除的資料列。 如果您嘗試在已刪除的資料列上呼叫 update\<Type> 方法，會擲回具有下列訊息的例外狀況：「無法更新已刪除的資料列」。 TYPE_SS_SCROLL_DYNAMIC 資料指標在移出目前的提取緩衝區之前的行為都相同。  
   
  向前資料指標和動態資料指標會以類似的方式公開已刪除的資料列，但是只有在資料指標仍可在提取緩衝區中存取時才是如此。 若是向前資料指標，這是十分簡單的。 若是動態資料指標，當提取大小大於 1 時，則比較複雜。 應用程式可以在提取緩衝區定義的視窗內前後移動資料指標，但是在遺失已更新的原始提取緩衝區時，已刪除的資料列將會消失。 如果應用程式不想使用動態資料指標查看暫時刪除的資料列，則應使用 Fetch Relative (0)。  
   
@@ -87,18 +88,18 @@ ms.locfileid: "69027494"
 -   建立陳述式時，使用 [SQLServerResultSet.TYPE_SS_SCROLL_DYNAMIC](../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md) 而非 ResultSet.TYPE_SCROLL_SENSITIVE。  
   
 ## <a name="cursor-updating"></a>資料指標更新  
- 對於資料指標類型和並行支援更新的資料指標，支援就地更新。 如果資料指標沒有定位在結果集 (get\<Type> 方法呼叫不成功) 中的可更新資料列，update\<Type> 方法的呼叫將會擲回例外狀況訊息：「結果集目前沒有資料列」。 針對資料指標為 CONCUR_READ_ONLY 的資料行呼叫更新方法時，JDBC 規格會說明引發例外狀況。 在資料列無法更新的情況下；例如，因為競相更新或刪除之類的開放式並行衝突，在呼叫 [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)、[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 或 [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) 前，可能不會引發例外狀況。  
+ 對於資料指標類型和並行支援更新的資料指標，支援就地更新。 如果資料指標不是位於結果集中可更新的資料列上 (沒有任何 get\<Type> 方法呼叫成功)，對 update\<Type> 方法的呼叫將會擲回具有下列訊息的例外狀況：「結果集目前沒有資料列」。 針對資料指標為 CONCUR_READ_ONLY 的資料行呼叫更新方法時，JDBC 規格會說明引發例外狀況。 在資料列無法更新的情況下；例如，因為競相更新或刪除之類的開放式並行衝突，在呼叫 [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)、[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 或 [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) 前，可能不會引發例外狀況。  
   
- 呼叫 update\<Type> 後，get\<Type> 無法存取受影響的資料行，直到呼叫 updateRow 或 [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) 為止。 這樣可以避免使用不同於伺服器所傳回之類型更新資料行所產生的問題，而且後續的 getter 呼叫可能會叫用產生不正確結果的用戶端類型轉換。 get\<Type> 的呼叫將會擲回例外狀況訊息：「直到呼叫 updateRow() 或 cancelRowUpdates() 之後，才能存取已更新的資料行」。  
+ 呼叫 update\<Type> 後，get\<Type> 將無法存取受影響的資料行，直到已呼叫 updateRow 或 [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) 為止。 這樣可以避免使用不同於伺服器所傳回之類型更新資料行所產生的問題，而且後續的 getter 呼叫可能會叫用產生不正確結果的用戶端類型轉換。 對 get\<Type> 的呼叫將會擲回具有下列訊息的例外狀況：「直到呼叫 updateRow() 或 cancelRowUpdates() 之後，才能存取已更新的資料行。」  
   
 > [!NOTE]  
 >  如果在尚未更新任何資料行時呼叫 updateRow 方法，JDBC 驅動程式將會擲回例外狀況訊息：「尚未更新任何資料行時呼叫 updateRow()」。  
   
- 呼叫 [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) 後，如果在結果集上呼叫非 get\<Type>、update\<Type>、insertRow 和資料指標定位方法 (包括 [moveToCurrentRow](../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)) 的任何方法，則會擲回例外狀況。 moveToInsertRow 方法會將結果集有效地放入插入模式中，然後資料指標定位方法會中止插入模式。 相對的資料指標定位呼叫會移動呼叫 moveToInsertRow 前，位置的相對資料指標。 資料指標定位呼叫後，最終的目的地資料指標位置會變成新的資料指標位置。  
+ 呼叫 [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) 後，如果在結果集上呼叫 get\<Type>、update\<Type>、insertRow 與資料指標置放方法 (包括 [moveToCurrentRow](../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)) 以外的任何方法，則會擲回例外狀況。 moveToInsertRow 方法會將結果集有效地放入插入模式中，然後資料指標定位方法會中止插入模式。 相對的資料指標定位呼叫會移動呼叫 moveToInsertRow 前，位置的相對資料指標。 資料指標定位呼叫後，最終的目的地資料指標位置會變成新的資料指標位置。  
   
  如果在插入模式不成功時進行資料指標定位呼叫，呼叫失敗後之資料指標位置為呼叫 moveToInsetRow 前的原始資料指標位置。 如果 insertRow 失敗，資料指標仍然會在插入資料列上，而且資料指標仍然會在插入模式下。  
   
- 插入資料列中的資料行一開始會處於未初始化的狀態。 update\<Type> 方法的呼叫會將資料行狀態設定為已初始化。 未初始化之資料行的 get\<Type> 方法呼叫會擲回例外狀況。 insertRow 方法的呼叫會將插入資料列中的所有資料行返回到未初始化的狀態。  
+ 插入資料列中的資料行一開始會處於未初始化的狀態。 對 update\<Type> 方法的呼叫會將資料行狀態設定為已初始化。 針對未初始化的資料行呼叫 get\<Type> 方法會擲回例外狀況。 insertRow 方法的呼叫會將插入資料列中的所有資料行返回到未初始化的狀態。  
   
  如果在呼叫 insertRow 方法時未初始化任何資料行，則會插入資料行的預設值。 如果沒有預設值，但是資料行允許為 NULL，則會插入 NULL。 如果沒有預設值，而且資料行不允許 NULL，則伺服器將會傳回錯誤，而且將會擲回例外狀況。  
   

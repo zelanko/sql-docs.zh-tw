@@ -37,7 +37,7 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: 變更預設 Python 與 R 執行階段
       href: ../machine-learning/install/change-default-language-runtime-version.md
-    - name: 升級 Python 與 R
+    - name: 使用繫結升級 Python 和 R 執行階段
       href: ../machine-learning/install/upgrade-r-and-python.md
     - name: Azure Data Studio 筆記本
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md

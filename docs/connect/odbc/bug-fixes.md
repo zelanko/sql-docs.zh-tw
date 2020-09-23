@@ -14,16 +14,24 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091802"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544301"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的錯誤 (Bug) 清單
 
 此頁面包含每個版本中已修正的錯誤 (Bug) 清單 (從 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始)。
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正
+
+- 修正使用同盟帳戶進行驗證時的 ADAL 錯誤 (Windows)
+- 修正在非同步通知作業期間發生逾時的情況下，驅動程式變得沒有回應的問題
+- 修正在 Alpine Linux 中進行升級時的驅動程式參考計數
+- 修正 Ubuntu 的 libc6 相依性版本
+- 將遺漏的定義新增至 Linux/Mac msodbcsql.h
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的錯誤 (Bug) 修正 (僅限 Alpine Linux)
 

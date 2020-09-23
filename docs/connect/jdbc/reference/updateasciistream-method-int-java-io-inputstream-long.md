@@ -1,5 +1,6 @@
 ---
-title: updateAsciiStream 方法 (java.io.InputStream, long) | Microsoft Docs
+description: updateAsciiStream 方法 (int, java.io.InputStream, long)
+title: updateAsciiStream 方法 (int, java.io.InputStream, long)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 889e7e6b14299a924c999bc2141d24dbfb88dfd7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 840406139292e3ccecbc4953e89e7f1822095751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462340"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-long"></a>updateAsciiStream 方法 (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public void updateAsciiStream(int columnIndex,
   
  InputStream 物件。  
   
- *length*  
+ *length* (長度)  
   
  資料流的長度。  
   

@@ -1,6 +1,6 @@
 ---
 title: LINKEDSERVERS 資料列集 (OLE DB) | Microsoft Docs
-description: LINKEDSERVERS 資料列集 (OLE DB)
+description: LINKEDSERVERS 資料列集會列舉可以參與 OLE DB Driver for SQL Server 中分散式查詢的組織資料來源。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 99b942b6cbdf230122c082154c6a9e280444d4e7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1639463992bfffe7ea86a97c43564214a92b2cdb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012787"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861555"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集 - LINKEDSERVERS 資料列集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

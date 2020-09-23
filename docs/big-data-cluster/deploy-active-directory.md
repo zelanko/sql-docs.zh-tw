@@ -5,16 +5,16 @@ description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243069"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076656"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -31,9 +31,16 @@ ms.locfileid: "87243069"
 
 若要在 Active Directory 中自動建立所有必要的物件，BDC 在部署期間需要一個 AD 帳戶。 此帳戶必須有權限在提供的 OU 內建立使用者、群組和機器帳戶。
 
-以下步驟假設您已經有 Active Directory 網域控制站。 如果您沒有網域控制站，下列[指南](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) \(英文\) 包含的步驟可能有幫助。
+>[!IMPORTANT]
+>視網域控制站中設定的密碼到期原則而定，這些帳戶的密碼可能會過期。 預設的到期原則為 42 天。 沒有任何機制可輪替 BDC 中所有帳戶的認證，因此一旦符合到期期限，叢集將會變成無法運作。 為因應此問題，請在網域控制站中將 BDC 服務帳戶的到期原則更新為 [密碼永久有效]。 此動作可以在到期時間之前或之後完成。 如果是後者，Active Directory 將會重新啟用過期的密碼。
+>
+>下圖顯示在 Active Directory [使用者和電腦] 中設定此屬性的位置。
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="設定密碼到期原則":::
 
 如需 AD 帳戶和群組的清單，請參閱[自動產生的 Active Directory 物件](active-directory-objects.md)。
+
+以下步驟假設您已經有 Active Directory 網域控制站。 如果您沒有網域控制站，下列[指南](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) \(英文\) 包含的步驟可能有幫助。
 
 ## <a name="create-ad-objects"></a>建立 AD 物件
 
@@ -180,6 +187,9 @@ AD 整合需要下列參數。 使用本文稍後在下面顯示的 `config repl
 
 - `security.activeDirectory.realm`**選擇性參數**：在大部分的情況下，領域等於網域名稱。 如果它們不相同，請使用此參數來定義領域的名稱 (例如 `CONTOSO.LOCAL`)。 為這個參數提供的值必須是完整名稱。
 
+  > [!IMPORTANT]
+  > 目前，BDC 不支援 Active Directory 網域名稱與 Active Directory 網域的 **NETBIOS** 名稱不同的設定。
+
 - `security.activeDirectory.domainDnsName`:將用於叢集的 DNS 網域名稱 (例如 `contoso.local`)。
 
 - `security.activeDirectory.clusterAdmins`:此參數接受一個 AD 群組。 AD 群組範圍必須是通用或全域。 此群組的成員將具備 *bdcAdmin* 叢集角色，使其在叢集內具備系統管理員權限。 這表示這些成員將具備 [SQL Server 中的 `sysadmin` 權限](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles)、[HDFS 中的 `superuser` 權限](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User)，以及在連線到控制器端點時具備系統管理員權限。
@@ -192,6 +202,9 @@ AD 整合需要下列參數。 使用本文稍後在下面顯示的 `config repl
 此清單中的 AD 群組會對應到 *bdcUser* 巨量資料叢集角色，且需要授與 SQL Server 存取權 (請參閱 [SQL Server 權限](../relational-databases/security/permissions-hierarchy-database-engine.md))，或 HDFS (請參閱 [HDFS 權限指南](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20))。 當連線到控制器端點時，這些使用僅能使用 *azdata bdc endpoint list* 命令列出叢集內可用的端點。
 
 如需如何更新此設定 AD 群組的詳細資料，請參閱[在 Active Directory 模式中管理巨量資料叢集存取](manage-user-access.md)。
+
+  >[!TIP]
+  >若要在連線到 Azure Data Studio 中的 SQL Server 主機時啟用 HDFS 瀏覽體驗，必須為具有 bdcUser 角色的使用者授與 VIEW SERVER STATE 權限，因為 Azure Data Studio 會使用 *sys.dm_cluster_endpoints* DMV 取得所需的 Knox 閘道端點以連線到 HDFS。
 
   >[!IMPORTANT]
   >開始部署之前，請先在 AD 中建立這些群組。 若這些 AD 群組的範圍是網域本機，則部署會失敗。
@@ -261,9 +274,9 @@ AD 整合需要下列參數。 使用本文稍後在下面顯示的 `config repl
 - `security.activeDirectory.accountPrefix`:**選擇性參數**：此參數是在 SQL Server 2019 CU5 版本中引進，以用來支援針對相同的網域部署多個巨量資料叢集。 這項設定保證各種巨量資料叢集服務其帳戶名稱都是唯一的，而其在任意兩個叢集間都必須是不同的。 自訂帳戶前置名稱為選擇性，且根據預設會使用子網域名稱作為帳戶的前置詞。 若子網域名稱超過 12 個字元，則會使用子網域名稱的前 12 個字元作為帳戶的前置詞。  
 
   >[!NOTE]
-  >Active Directory 要求帳戶名稱不得超過 20 個字元。 BDC 叢集必須使用 8 個字元來區別 Pod 和 StatefulSet。 這代表帳戶前置詞限制為 12 個字元
+  >Active Directory 要求帳戶名稱不得超過 20 個字元。 BDC 叢集必須使用 8 個字元區隔 Pod 與 StatefulSet。 這代表帳戶前置詞限制為 12 個字元
 
-[檢查 AD 群組範圍](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以判斷該範圍是否為 DomainLocal。
+[檢查 AD 群組範圍](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以判斷該範圍是否為 DomainLocal。
 
 如果您尚未初始化部署設定檔案，您可以執行此命令來取得設定的複本。 以下範例使用 `kubeadm-prod` 設定檔，但同樣適用於 `openshift-prod`。
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - 在 SQL Server 2019 CU5 版本前，只允許每個網域 (Active Directory) 一個 BDC。 從 CU5 版本開始，您可在每個網域啟用多個 BDC。
 
-- 安全性設定中指定的任何 AD 群組都不能設定 DomainLocal 範圍。 您可以遵循[這些指示](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以檢查 AD 群組的範圍。
+- 安全性設定中指定的任何 AD 群組都不能設定 DomainLocal 範圍。 您可以遵循[這些指示](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以檢查 AD 群組的範圍。
 
 - 可用來登入 BDC 的 AD 帳戶允許在為 BDC 設定的相同網域中使用。 不支援啟用來自其他受信任網域的登入。
 

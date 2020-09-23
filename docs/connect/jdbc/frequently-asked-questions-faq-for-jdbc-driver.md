@@ -2,7 +2,7 @@
 title: JDBC 驅動程式常見問題集 (FAQ)
 description: 此頁面提供有關 Microsoft JDBC Driver for SQL Server 之常見問題的答案。
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728321"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042419"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
 
@@ -36,6 +36,15 @@ JDBC Driver 是開放原始碼，您可以在 [GitHub](https://github.com/micros
 GitHub 存放庫上針對 Microsoft JDBC 驅動程式提供的 JDBC 驅動程式檔案為 JDBC 驅動程式的核心，且屬於存放庫中列出的開放原始碼授權。 [Microsoft 下載頁面](download-microsoft-jdbc-driver-for-sql-server.md)的驅動程式套件包含適用於 Windows 整合式驗證及透過 JDBC 驅動程式啟用 XA 交易的額外程式庫。 那些額外的程式庫均屬於可下載套件隨附的授權。
 
 **升級我的驅動程式前，我應該先知道哪些事？**  
+Microsoft JDBC 驅動程式 8.4 支援 JDBC 4.2 與 4.3 (部分) 規格，同時也在安裝套件中包含下列三個 JAR 類別庫：
+
+| JAR                        | JDBC 規格            | JDK 版本 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.4.1.jre14.jar | JDBC 4.3 (部份) 和 4.2 | JDK 14.0    |
+| mssql-jdbc-8.4.1.jre11.jar | JDBC 4.3 (部份) 和 4.2 | JDK 11.0    |
+| mssql-jdbc-8.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 8.2 支援 JDBC 4.2 和 4.3 (部分) 規格，同時也在安裝套件中包含下列三個 JAR 類別庫：
 
 | JAR                        | JDBC 規格            | JDK 版本 |
@@ -143,7 +152,7 @@ JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合�
 此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱[使用連線共用](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。
 
 **此驅動程式是否提供任何支援選項？**  
-此驅動程式提供數個支援選項。 您可以在我們的 [GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\) 上張貼或提出問題，這會由 Microsoft 監控。 [論壇](https://go.microsoft.com/fwlink/?LinkID=246673) \(英文\) 會由 Microsoft、MVP 和社群監控。 您也可以連絡 Microsoft 客戶支援服務。 開發小組可能會要求您重現任何第三方應用程式伺服器以外的問題。 若無法在裝載 Java 容器之環境以外之處重現問題，您必須連絡相關的第三方廠商，小組才能繼續協助您。 該小組也可能要求您在作業系統 (例如 Windows) 上重現您的問題，以便為該問題提供最佳支援。
+此驅動程式提供數個支援選項。 您可以在我們的 [GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\) 上張貼或提出問題，Microsoft 會持續追蹤該存放庫。 [論壇](https://go.microsoft.com/fwlink/?LinkID=246673) \(英文\) 會由 Microsoft、MVP 和社群監控。 您也可以連絡 Microsoft 客戶支援服務。 開發小組可能會要求您重現任何第三方應用程式伺服器以外的問題。 若無法在裝載 Java 容器之環境以外之處重現問題，您必須連絡相關的第三方廠商，小組才能繼續協助您。 該小組也可能要求您在作業系統 (例如 Windows) 上重現您的問題，以便為該問題提供最佳支援。
 
 **此驅動程式是否通過認證，可與任何第三方應用程式伺服器搭配使用？**  
 此驅動程式已在多種應用程式伺服器上進行過測試，包括 IBM WebSphere 及 SAP NetWeaver。
@@ -155,7 +164,7 @@ JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合�
 因為已經停止支援這些驅動程式版本，所以也不再提供其下載。 因為我們會持續改進 Java 連線能力支援， 所以極力建議您使用最新版的 Microsoft JDBC 驅動程式。
 
 **我使用 JRE 1.4。哪一個驅動程式與 JRE 1.4 相容？**  
-對於使用 SAP 產品並需要 JRE 1.4 支援的客戶，請連絡 [SAPService Marketplace](https://service.sap.com/) ，以取得 1.2 Microsoft JDBC Driver。
+對於使用 SAP 產品並需要 JRE 1.4 支援的客戶，請連絡 [SAP Service Marketplace](https://service.sap.com/) \(英文\)，以取得 1.2 Microsoft JDBC 驅動程式。
 
 **此驅動程式可以使用 FIPS 驗證演算法進行通訊嗎？**  
 Microsoft JDBC Driver 不含任何密碼編譯演算法。 若客戶使用作業系統、應用程式及聯邦資訊處理標準 (FIPS) 可接受的 JVM 演算法，並將驅動程式設定成使用這些演算法，則此驅動程式只會使用指定的演算法進行通訊。

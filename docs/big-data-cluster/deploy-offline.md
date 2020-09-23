@@ -1,7 +1,7 @@
 ---
 title: 離線部署
 titleSuffix: SQL Server big data clusters
-description: 了解如何執行 SQL Server 巨量資料叢集的離線部署。
+description: 了解如何執行 SQL Server 2019 巨量資料叢集的離線部署，以及如何將容器映像載入私人存放庫。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423157"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875557"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行 SQL Server 巨量資料叢集的離線部署
 
@@ -80,7 +80,6 @@ ms.locfileid: "84423157"
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

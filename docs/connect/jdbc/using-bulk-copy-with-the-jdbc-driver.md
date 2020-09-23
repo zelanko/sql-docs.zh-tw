@@ -2,7 +2,7 @@
 title: 搭配 JDBC 驅動程式使用大量複製
 description: SQLServerBulkCopy 類別讓您能夠在 Java 中撰寫資料載入解決方案，透過標準 JDBC API 提供顯著的效能優勢。
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245007"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042211"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC 驅動程式使用大量複製
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  大量複製作業可以做為隔離作業或做為多步驟交易的一部分執行。 這第二個選項可讓您執行相同交易內的多項大量複製作業，以及執行其他資料庫作業 (例如插入、更新和刪除)，同時仍然能夠認可或回復整個交易。  
   
  根據預設，大量複製作業會做為隔離作業執行。 該複製作業會以非交易的方式進行，且沒有機會復原。 如果需要在發生錯誤時回復全部或部分大量複製，則可使用由 `SQLServerBulkCopy` 管理的交易，或在現有的交易內執行大量複製作業。  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>適用於 Azure 資料倉儲的延伸大量複製
+
+驅動程式 v8.4.1 版加入一個新的連線屬性 `sendTemporalDataTypesAsStringForBulkCopy`。 此布林值屬性預設為 `true`。
+
+當這個連線屬性設定為 `false` 時，將會傳送 **DATE**、**DATETIME**、**DATIMETIME2**、**DATETIMEOFFSET**、**SMALLDATETIME** 和 **TIME** 資料類型作為其各自的類型，而不是以字串的形式傳送。
+
+將時態性資料類型作為其各自的類型傳送，可讓使用者針對 Azure Synapse Analytics (SQL DW) 將資料傳送到那些資料行中；這在之前並不可能達成，因為驅動程式會將資料轉換成字串。 將字串資料傳送到時態性資料行適用於 SQL Server，因為 SQL Server 會為我們執行隱含轉換，但其與 Azure Synapse Analytics (SQL DW) 並不相同。
+
+此外，即使不將此連接字串設定為 'false'，從 **v8.4.1** 和更新版本開始，**MONEY** 和 **SMALLMONEY** 資料類型將會以 **MONEY** / **SMALLMONEY** 資料類型 (而不是 **DECIMAL**) 的形式傳送，這也會允許將那些資料類型大量複製到 Azure Synapse Analytics (SQL DW)。
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>適用於 Azure 資料倉儲的延伸大量複製限制
+
+目前有兩個限制：
+
+1. 當此連線屬性設定為 `false` 時，驅動程式只會接受每個時態性資料類型的預設字串常值格式，例如：
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. 當此連線屬性設定為 `false` 時，針對大量複製所指定的資料行類型必須遵循[這裡](../../connect/jdbc/using-basic-data-types.md)的資料類型對應圖表。 例如，使用者先前可以指定 `java.sql.Types.TIMESTAMP`，以將資料大量複製到 `DATE` 資料行中，但在啟用此功能之後，必須指定 `java.sql.Types.DATE` 才能執行相同的工作。
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>執行非交易大量複製作業
 
@@ -455,7 +485,7 @@ public class BulkCopyNonTransacted {
 
 ### <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>在交易中執行專用大量複製作業
 
-根據預設，大量複製作業不會自行建立交易。 當想要執行專用大量複製作業時，請使用連接字串來建立 `SQLServerBulkCopy` 的新執行個體。 在此案例中，大量複製作業的每個批次都會由資料庫以隱含方式認可。 您可在 `SQLServerBulkCopyOptions` 中將 `UseInternalTransaction` 選項設定為 `true`，讓大量複製作業建立交易，並在大量複製作業的每個批次之後執行認可。
+根據預設，大量複製作業不會自行建立交易。 當想要執行專用大量複製作業時，請使用連接字串來建立 `SQLServerBulkCopy` 的新執行個體。 在此案例中，大量複製作業的每個批次都會由資料庫以隱含方式認可。 您可以在 `SQLServerBulkCopyOptions` 中將 `UseInternalTransaction` 選項設定為 `true`，讓大量複製作業建立交易，並在大量複製作業的每個批次之後執行認可。
   
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>以分隔符號作為 CSV 檔案中的資料進行大量複製
+
+驅動程式 8.4.1 版會新增新的 API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`。 當設定為 true 時，將會套用下列規則：
+
+- 每個欄位可以也可以不以雙引號括住。
+- 如果欄位不以雙引號括住，雙引號便不可以出現在欄位內。
+- 包含雙引號和分隔符號的欄位應該以雙引號括住。
+- 如果使用雙引號來括住欄位，則針對出現在欄位內的雙引號，必須在其前方加上另一個雙引號來加以逸出。
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Always Encrypted 資料行的大量複製  
 

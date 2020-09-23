@@ -2,7 +2,7 @@
 title: 使用 JDBC 驅動程式 | Microsoft Docs
 description: 此節將針對使用 Microsoft JDBC Driver for SQL Server 建立與 SQL Server 資料庫的簡易連線，提供快速入門指示。
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d1c14f81c22442f37ec026310edf228124e8911
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e042e1604c9a59bc823272743ed675b682882c94
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488293"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042551"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 
@@ -27,6 +27,8 @@ ms.locfileid: "81488293"
 ## <a name="choosing-the-right-jar-file"></a>選擇正確的 JAR 檔案
 
 Microsoft JDBC Driver 提供各種與您慣用之 Java Runtime Environment (JRE) 設定一致的 Jar 以供使用，如下：
+
+Microsoft JDBC Driver 8.4 for SQL Server 提供 **mssql-jdbc-8.4.1.jre8.jar**、**mssql-jdbc-8.4.1.jre11.jar** 和 **mssql-jdbc-8.4.1.jre14.jar** 類別庫檔案。
 
 Microsoft JDBC Driver 8.2 for SQL Server 提供 **mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar** 和 **mssql-jdbc-8.2.2.jre13.jar** 類別庫檔案。
 
@@ -64,7 +66,32 @@ Microsoft JDBC 驅動程式 jar 不是 Java SDK 的一部分，而且必須包�
 
 如果使用 JDBC Driver 8.2，請將 Classpath 設定成包含 **mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar** 或 **mssql-jdbc-8.2.2.jre13.jar**。
 
+如果使用 JDBC 驅動程式 8.4，請將 Classpath 設定成包含 **mssql-jdbc-8.4.1.jre8.jar**、**mssql-jdbc-8.4.1.jre11.jar** 或 **mssql-jdbc-8.4.1.jre14.jar**。
+
 如果 Classpath 遺漏了適用於正確 Jar 檔案的項目，則應用程式將擲回常見的 `Class not found` 例外狀況。  
+
+### <a name="for-microsoft-jdbc-driver-84"></a>針對 Microsoft JDBC 驅動程式 8.4
+
+**mssql-jdbc-8.4.1.jre8.jar**、**mssql-jdbc-8.4.1.jre11.jar** 或 **mssql-jdbc-8.4.1.jre14.jar** 檔案會安裝在下列位置：
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre14.jar
+```
+
+下列程式碼片段是用於 Windows 應用程式的 CLASSPATH 陳述式範例：
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.4 for SQL Server\sqljdbc_8.4\enu\mssql-jdbc-8.4.1.jre11.jar`
+
+下列程式碼片段是用於 Unix/Linux 應用程式的 CLASSPATH 陳述式範例：
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.4/enu/mssql-jdbc-8.4.1.jre11.jar`
+
+確定 CLASSPATH 陳述式只包含一個 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 **mssql-jdbc-8.4.1.jre8.jar**、**mssql-jdbc-8.4.1.jre11.jar** 或 **mssql-jdbc-8.4.1.jre14.jar**。
+
 
 ### <a name="for-microsoft-jdbc-driver-82"></a>針對 Microsoft JDBC Driver 8.2
 

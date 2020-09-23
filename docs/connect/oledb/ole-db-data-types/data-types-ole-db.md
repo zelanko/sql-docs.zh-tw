@@ -1,6 +1,6 @@
 ---
 title: 資料類型 (OLE DB 驅動程式) | Microsoft Docs
-description: 資料類型 (OLE DB)
+description: 了解 OLE DB Driver for SQL Server 如何針對繫結參數/資料行將 SQL Server 資料類型對應至 OLE DB 類型，並使用 ITableDefinition 建立資料表。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, data types
 - data types [OLE DB]
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 28ff4bfc3262803ba8bafcb405e477a1692cb93f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf62e63ba0912c6fb6ccfa8d2aa9352838ebca19
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977748"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862369"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

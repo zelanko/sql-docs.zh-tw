@@ -1,7 +1,7 @@
 ---
 title: Kubernetes 上的資料持續性
 titleSuffix: SQL Server big data clusters
-description: 了解資料持續性在 SQL Server 2019 巨量資料叢集中的運作方式。
+description: 了解永久性磁碟區如何為 Kubernetes 中的儲存體提供外掛程式模型。 同時了解資料持續性在 SQL Server 2019 巨量資料叢集中的運作方式。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661073"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765687"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性
 
@@ -28,7 +28,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
 
 以下是當您為巨量資料叢集規劃儲存體設定時需考慮的一些重要層面：
 
-- 若要成功部署巨量資料叢集，請確定您有所需的永久性磁碟區數目可供使用。 若要在 Azure Kubernetes Service (AKS) 叢集上部署，而且使用內建儲存類別 (`default` 或 `managed-premium`)，則此類別均支援永久性磁碟區的動態佈建。 因此，您不需要預先建立永久性磁碟區，但必須確保 AKS 叢集中可用的背景工作角色節點，可以連接部署所需的永久性磁碟區數目。 根據為背景工作節點指定的 [VM 大小](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)，每個節點都可連接特定數目的磁碟。 針對預設大小叢集 (沒有高可用性)，最少需要 24 個磁碟。 如果您要啟用高可用性或相應增加任何集區，則不論您要相應增加的資源為何，請確保每個額外的複本都有至少兩個永久性磁碟區。
+- 若要成功部署巨量資料叢集，請確定您有所需的永久性磁碟區數目可供使用。 若要在 Azure Kubernetes Service (AKS) 叢集上部署，而且使用內建儲存類別 (`default` 或 `managed-premium`)，則此類別均支援永久性磁碟區的動態佈建。 因此，您不需要預先建立永久性磁碟區，但必須確保 AKS 叢集中可用的背景工作角色節點，可以連接部署所需的永久性磁碟區數目。 根據為背景工作節點指定的 [VM 大小](/azure/virtual-machines/linux/sizes)，每個節點都可連接特定數目的磁碟。 針對預設大小叢集 (沒有高可用性)，最少需要 24 個磁碟。 如果您要啟用高可用性或相應增加任何集區，則不論您要相應增加的資源為何，請確保每個額外的複本都有至少兩個永久性磁碟區。
 
 - 如果您在設定中提供之儲存類別的儲存體佈建程式不支援動態佈建，您必須預先建立永久性磁碟區。 例如，`local-storage` 佈建程式不會啟用動態佈建。 如需如何在使用 `kubeadm` 部署的 Kubernetes 叢集中繼續進行的指引，請參閱此[範例指令碼](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) \(英文\)。
 
@@ -71,7 +71,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
     }
 ```
 
-巨量資料叢集的部署會使用永續性儲存體來儲存各種元件的資料、中繼資料與記錄。 您可以自訂在部署過程中建立的永久性磁碟區宣告大小。 建議的最佳做法是使用具有保留  [回收原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) \(英文\) 的儲存類別。
+巨量資料叢集的部署會使用永續性儲存體來儲存各種元件的資料、中繼資料與記錄。 您可以自訂在部署過程中建立的永久性磁碟區宣告大小。 建議的最佳做法是使用具有保留** [回收原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) \(英文\) 的儲存類別。
 
 > [!WARNING]
 > 在沒有永續性儲存體的情況下執行可以在測試環境中運作，但是它可能會導致無法正常運作的叢集。 在 Pod 重新啟動時，叢集中繼資料和/或使用者資料會永久遺失。 建議不要在此設定下執行。
@@ -83,7 +83,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
 AKS 隨附[兩個內建的儲存類別](/azure/aks/azure-disks-dynamic-pv/) `default` 與 `managed-premium`，以及其所適用的動態佈建程式。 您可以指定其中一個，或建立您自己的儲存類別，以部署已啟用永續性儲存體的巨量資料叢集。 根據預設，AKS `aks-dev-test` 的內建叢集設定檔會隨附永續性儲存體設定，以使用 `default` 儲存類別。
 
 > [!WARNING]
-> 使用內建儲存類別 `default` 和 `managed-premium` 建立的永續性磁碟區具有「刪除」  的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告會遭到刪除，然後永久性磁碟區也是。 您可以透過使用 `azure-disk` 佈建程式搭配 `Retain` 回收原則來建立自訂儲存類別，如[概念儲存體](/azure/aks/concepts-storage/#storage-classes)中所述。
+> 使用內建儲存類別 `default` 和 `managed-premium` 建立的永續性磁碟區具有「刪除」** 的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告會遭到刪除，然後永久性磁碟區也是。 您可以透過使用 `azure-disk` 佈建程式搭配 `Retain` 回收原則來建立自訂儲存類別，如[概念儲存體](/azure/aks/concepts-storage/#storage-classes)中所述。
 
 ## <a name="storage-classes-for-kubeadm-clusters"></a>`kubeadm` 叢集的儲存類別 
 

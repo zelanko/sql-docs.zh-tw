@@ -1,5 +1,6 @@
 ---
-title: 設定資料來源屬性 | Microsoft Docs
+title: 設定資料來源屬性
+description: 了解 JDBC 中的資料來源，以及如何設定其屬性，以使用 Java 設定資料庫存取權。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bdc9c8ba6efc024b8cbe6846daa91f07d548da3e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7a2a9964b592fc1bcb8c41cf0c5b8de67a2d5a18
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909504"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411334"
 ---
 # <a name="setting-the-data-source-properties"></a>設定資料來源屬性
 

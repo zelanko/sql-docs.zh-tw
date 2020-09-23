@@ -1,7 +1,7 @@
 ---
 title: 部署：Azure Data Studio 筆記本
 titleSuffix: SQL Server Big Data Clusters
-description: 使用來自 Azure Data Studio 的筆記本來部署巨量資料叢集。
+description: 了解如何從 Azure Data Studio 使用筆記本中的程式碼與文件，來部署 SQL Server 巨量資料叢集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 67cbd034cd2b5fc36b9f98bbfb2f8bbc43f1598e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e85889a3a1118ab60595a9b0c6bd614b6071829
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85699966"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772437"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "85699966"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供包含部署筆記本的 Azure Data Studio 擴充功能。 部署筆記本所包含的文件和程式碼，可供您用來在 Azure Data Studio 中建立 SQL Server 巨量資料叢集。
 
-[筆記本](../azure-data-studio/notebooks-guidance.md)在實作之初是開放原始碼專案的型態，現已實作到 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download) 之中。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
+[筆記本](../azure-data-studio/notebooks-guidance.md)在實作之初是開放原始碼專案的型態，現已實作到 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) 之中。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
 
 您可以使用筆記本來部署 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的巨量資料叢集。
 
@@ -37,7 +37,7 @@ ms.locfileid: "85699966"
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI (若是部署在 Azure 中)](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [Azure CLI (若是部署在 Azure 中)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 ## <a name="launch-the-notebook"></a>啟動筆記本
 

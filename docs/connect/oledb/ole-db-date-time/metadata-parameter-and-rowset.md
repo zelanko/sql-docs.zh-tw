@@ -1,6 +1,6 @@
 ---
 title: 參數與資料列集中繼資料 (OLE DB Driver)
-description: 參數和資料列集的中繼資料
+description: 了解與 OLE DB Driver for SQL Server 日期和時間資強功能相關聯的 DBBINDING 類型與類型成員。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f48366cc887d2c06c3f230cf6bf8f84d767b798
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244891"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862018"
 ---
 # <a name="metadata---parameter-and-rowset"></a>中繼資料 - 參數和資料列集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

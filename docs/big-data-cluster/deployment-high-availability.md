@@ -5,16 +5,16 @@ description: 了解如何部署高可用性 SQL Server 巨量資料叢集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279457"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790266"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
@@ -133,6 +133,9 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 > [!IMPORTANT]
 > 針對 SQL Server 執行個體連接所公開的端點只支援 SQL 驗證，即使在已啟用 Active Directory 的叢集中也一樣。 根據預設，在巨量資料叢集部署期間，會停用 `sa` 登入，並根據部署時為 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 環境變數所提供值佈建新的 `sysadmin` 登入。
+
+> [!IMPORTANT]
+> 包含的可用性群組 DDL 在 BDC 中是以獨佔方式自我管理的。 不支援卸除包含的可用性或資料庫鏡像端點的任何 (外部使用者) 嘗試，而且可能導致無法復原的 BDC 狀態。
 
 下列範例示範如何公開此端點，然後將使用還原工作流程建立的資料庫新增至可用性群組。 當您想要使用 `sp_configure` 變更伺服器設定時，也適用設定 SQL Server 主要執行個體連接的類似指示。
 

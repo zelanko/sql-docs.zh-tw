@@ -1,5 +1,6 @@
 ---
-title: setAutoCommit 方法 (SQLServerConnection) | Microsoft Docs
+title: setAutoCommit 方法 (SQLServerConnection)
+description: 了解 JDBC Driver for SQL Server 的 SQLServerConnection 類別中之 setAutoCommit 方法的公用 API 詳細資料。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8595489da0aaf65bc5a8e8892e22eff70ed8873
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 117fa85e5ec6bdd7d0d37de9fc057dd8127cf42a
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915754"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435378"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public void setAutoCommit(boolean value)
 #### <a name="parameters"></a>參數  
  *value*  
   
- **true** 表示啟用連接的自動認可模式，**false** 表示停用。  
+ **true** 以針對連線啟用自動認可模式，**false** 以加以停用。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -45,17 +46,15 @@ public void setAutoCommit(boolean value)
 ## <a name="remarks"></a>備註  
  這個 setAutoCommit 方法是由 java.sql.Connection 介面中的 setAutoCommit 方法指定。  
   
- 如果連接處於自動認可模式，則它的所有 SQL 陳述式都會當做個別交易來執行及認可。 否則，它的 SQL 陳述式會分組成許多交易，這些交易會透過 [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 方法或 [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) 方法的呼叫來結束。 根據預設，新的連接會處於自動認可模式。  
+ 如果連線處於自動認可模式，則其所有 SQL 陳述式都會作為個別交易執行並認可。 否則，它的 SQL 陳述式會分組成許多交易，這些交易會透過 [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 方法或 [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) 方法的呼叫來結束。 根據預設，新的連線會處於自動認可模式。  
   
- 當陳述式完成或下一次執行時 (以先發生者為準)，就會進行認可。 如果是傳回 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的陳述式，當擷取結果集的最後一個資料列或是關閉結果集時，該陳述式就會完成。 在進階案例中，除了輸出參數值以外，單一陳述式也可能會傳回多個結果。 在這些案例中，當擷取了所有結果和輸出參數值時，就會發生認可。  
+ 當陳述式完成或下一次執行時 (以先發生者為準)，就會進行認可。 如果陳述式傳回 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件，則當擷取結果集的最後一個資料列或是關閉結果集時，該陳述式就會完成。 在進階案例中，除了輸出參數值以外，單一陳述式也可能會傳回多個結果。 在這些案例中，當擷取了所有結果和輸出參數值時，就會發生認可。  
   
  當自動認可模式為 **false** 時，JDBC 驅動程式會在每一次認可之後以隱含方式開始新的交易。  
   
 > [!NOTE]  
->  如果在交易期間呼叫這個方法，便會認可交易。  
+> 如果在交易期間呼叫這個方法，便會認可交易。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+ [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)  
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  

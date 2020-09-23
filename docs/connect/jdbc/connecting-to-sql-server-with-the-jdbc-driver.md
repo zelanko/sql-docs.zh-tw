@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f88a1bbe3554b74e3dae67ddb1fad93122fc41fe
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487962"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988622"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>使用 JDBC 驅動程式連線到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[使用資料庫鏡像 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|說明 JDBC 驅動程式如何支援使用資料庫鏡像。|  
 |[JDBC 驅動程式對於高可用性、災害復原的支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|描述如何開發將連接到 AlwaysOn 可用性群組的應用程式。|  
 |[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|針對使用 Kerberos 整合式驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的應用程式討論其 Java 實作。|  
-|[連接到 Azure SQL Database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|討論 SQL Azure 上資料庫的連接問題。|  
+|[連接到 Azure SQL Database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|討論 Azure SQL 上資料庫的連線問題。|  
   
 ## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

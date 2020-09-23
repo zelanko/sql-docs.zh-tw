@@ -1,5 +1,6 @@
 ---
-title: 以 JDBC 驅動程式執行交易 | Microsoft Docs
+title: 以 JDBC 驅動程式執行交易
+description: 了解 JDBC Driver for SQL Server 支援交易的方式，包括隔離等級、儲存點和結果集保留性。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa86cde4d8c7d0aa91b5864f5beb3317b91bf0ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff851fc3d62be939eab7983eee80a173160f0d5c
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923744"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435401"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>以 JDBC 驅動程式執行交易
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

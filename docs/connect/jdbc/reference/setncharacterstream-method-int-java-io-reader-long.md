@@ -1,4 +1,5 @@
 ---
+description: setNCharacterStream 方法設定為 java.io.Reader 物件 - long
 title: setNCharacterStream 方法設定為 java.io.Reader 物件 - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e954735a06c1ad52112c43ec09e4de9722caa3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d5baf0107e4c641782d2808e0fc62be9e1dbc3e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431670"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  Reader 物件，其中包含參數值。  
   
- *length*  
+ *length* (長度)  
   
  指出參數值中字元數的 **long**。  
   

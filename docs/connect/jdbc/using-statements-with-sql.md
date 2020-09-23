@@ -1,5 +1,6 @@
 ---
-title: 搭配 SQL 使用陳述式 | Microsoft Docs
+title: 使用 SQL 陳述式
+description: 了解搭配 Microsoft JDBC Driver for SQL Server 使用不同類型 SQL 陳述式的概觀。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49ab0f6367353847bdf3a9e0a7aff13975b4d711
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025833"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435284"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 

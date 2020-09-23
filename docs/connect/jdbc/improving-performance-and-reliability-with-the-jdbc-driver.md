@@ -2,7 +2,7 @@
 title: 改善 JDBC 驅動程式的效能與可靠性
 description: 了解使用 Microsoft JDBC Driver for SQL Server 時，可改善應用程式效能和可靠性的各種技術。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728479"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565376"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>改善 JDBC 驅動程式的效能與可靠性
 
@@ -37,6 +37,7 @@ ms.locfileid: "81728479"
 |[疏鬆資料行](../../connect/jdbc/sparse-columns.md)|討論 JDBC 驅動程式對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 疏鬆資料行的支援。|  
 |[JDBC 驅動程式的備妥陳述式中繼資料快取](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|討論使用備妥的陳述式查詢來改善效能的技巧。|
 |[使用大量複製 API 執行批次插入作業](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|說明如何針對批次插入作業與其優點啟用「大量複製 API」功能。|
+|[不以 Unicode 的形式傳送 String 參數](../../connect/jdbc/setting-the-connection-properties.md)|處理 **CHAR**、**VARCHAR** 與 **LONGVARCHAR** 資料時，使用者可以將 **sendStringParametersAsUnicode** 連線屬性設定為 `false` 來獲得最佳效能提升。|
 
 ## <a name="see-also"></a>另請參閱
 

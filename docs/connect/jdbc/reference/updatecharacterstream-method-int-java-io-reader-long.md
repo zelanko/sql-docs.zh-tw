@@ -1,5 +1,6 @@
 ---
-title: updateCharacterStream 方法 (java.io.Reader, long) | Microsoft Docs
+description: updateCharacterStream 方法 (int, java.io.Reader, long)
+title: updateCharacterStream 方法 (int, java.io.Reader, long)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c426b0e3-2f9d-425a-b7da-1d0325e292d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffa741a68b646f0d0ee23be265f7d368b663cbbf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: aec0b6dfa8c5de9cefe9bf26ee36088d282f060d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458000"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-long"></a>updateCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public void updateCharacterStream(int columnIndex,
   
  Reader 物件。  
   
- *length*  
+ *length* (長度)  
   
  資料流的長度。  
   

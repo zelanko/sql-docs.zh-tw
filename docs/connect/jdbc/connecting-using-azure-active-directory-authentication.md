@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 16e6758e6846c6258c0345bd8ceca8aed3c3f3c6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054259"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899016"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -24,14 +24,14 @@ ms.locfileid: "85054259"
 
 此文章提供如何開發 Java 應用程式，以搭配 Microsoft JDBC Driver for SQL Server 使用 Azure Active Directory 驗證功能的相關資訊。
 
-Azure Active Directory (AAD) 驗證是使用 Azure Active Directory 中身分識別連線至 Azure SQL Database v12 的機制。 使用 Azure Active Directory 驗證集中管理資料庫使用者的身分識別，並作為 SQL Server 的替代驗證。 JDBC Driver 可讓您在連線到 Azure SQL DB 的 JDBC 連接字串中指定 Azure Active Directory 認證。 如需如何設定 Azure Active Directory 驗證的資訊，請瀏覽[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) \(部分機器翻譯\)。 
+您可以使用 Azure Active Directory (Azure AD) 驗證，這是使用 Azure Active Directory 中身分識別連線至 Azure SQL Database v12 的機制。 使用 Azure Active Directory 驗證集中管理資料庫使用者的身分識別，並作為 SQL Server 的替代驗證。 JDBC 驅動程式可讓您在連線到 Azure SQL Database 的 JDBC 連接字串中指定 Azure Active Directory 認證。 如需如何設定 Azure Active Directory 驗證的資訊，請瀏覽[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) \(部分機器翻譯\)。 
 
 在 Microsoft JDBC Driver for SQL Server 中，對 Azure Active Directory 驗證提供支援的連接屬性為：
 *   **authentication**：使用此屬性來指出要用於連線的 SQL 驗證方法。 可能的值包括： 
     * **ActiveDirectoryMSI**
-        * 從驅動程式 **v7.2** 版開始支援，可以從已啟用「身分識別」支援的 Azure 資源內，使用 `authentication=ActiveDirectoryMSI` 連線到 Azure SQL Database/資料倉儲。 此外，您也可以在 Connection/DataSource 屬性中指定 **msiClientId** 和驗證模式，這必須包含用來取得建立連線 **accessToken** 之受控服務識別的用戶端識別碼。
+        * 從驅動程式 **v7.2** 版開始支援，可以從已啟用「身分識別」支援的 Azure 資源內，使用 `authentication=ActiveDirectoryMSI` 連線到 Azure SQL Database/資料倉儲。 此外，使用此驗證模式時，您也可以在 Connection/DataSource 屬性中指定 **msiClientId**，其必須包含用來取得建立連線之 **accessToken** 的受控識別用戶端識別碼。
     * **ActiveDirectoryIntegrated**
-        * 從驅動程式 **v6.0** 版開始支援，可使用 `authentication=ActiveDirectoryIntegrated` 來連線到使用整合式驗證的 Azure SQL Database/資料倉儲。 若要使用此驗證模式，您必須將內部部署 Active Directory 同盟服務 (ADFS) 與雲端中的 Azure Active Directory 建立同盟。 設定後，您可以將原生程式庫 'mssql-jdbc_auth-\<version>-\<arch>.dll' 新增至 Windows 作業系統上的應用程式類別路徑，或為跨平台驗證支援設定 Kerberos 票證，藉以連線。 當您登入已加入網域的機器時，您將能夠存取 Azure SQL DB/DW，而不會提示您輸入認證。
+        * 從驅動程式 **v6.0** 版開始支援，可使用 `authentication=ActiveDirectoryIntegrated` 來連線到使用整合式驗證的 Azure SQL Database/資料倉儲。 若要使用此驗證模式，您必須將內部部署 Active Directory 同盟服務 (ADFS) 與雲端中的 Azure Active Directory 建立同盟。 設定後，您可以將原生程式庫 'mssql-jdbc_auth-\<version>-\<arch>.dll' 新增至 Windows 作業系統上的應用程式類別路徑，或為跨平台驗證支援設定 Kerberos 票證，藉以連線。 登入已加入網域的電腦之後，您將能夠在系統不提示輸入認證的情況下存取 Azure SQL Database/SQL 資料倉儲。
     * **ActiveDirectoryPassword**
         * 從驅動程式 **v6.0** 版開始支援，可使用 `authentication=ActiveDirectoryPassword` 來連線到使用 Azure AD 主體名稱和密碼的 Azure SQL Database/資料倉儲。
     * **SqlPassword**
@@ -49,7 +49,7 @@ Azure Active Directory (AAD) 驗證是使用 Azure Active Directory 中身分識
 * Java 8 或更新版本
 * Microsoft JDBC Driver 7.2 (或更新版本) for SQL Server
 * 用戶端環境必須是 Azure 資源，而且必須啟用「身分識別」功能的支援。
-* 代表您 Azure 資源的「系統指派的受控識別」或「使用者指派的受控識別」，或代表您 MSI 所屬其中一個群組的自主資料庫使用者，必須存在於目標資料庫中，且必須有 CONNECT 權限。
+* 代表您 Azure 資源的「系統指派的受控識別」或「使用者指派的受控識別」，或代表您受控識別所屬其中一個群組的自主資料庫使用者，必須存在於目標資料庫中，且必須有 CONNECT 權限。
 
 針對其他驗證模式，必須在用戶端機器上安裝下列元件：
 * Java 7 或更新版本
@@ -67,7 +67,7 @@ Azure Active Directory (AAD) 驗證是使用 Azure Active Directory 中身分識
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 ```
 
 使用 ActiveDirectoryMSI 驗證模式的範例：
@@ -87,7 +87,7 @@ public class AAD_MSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();
@@ -103,7 +103,7 @@ public class AAD_MSI {
 在 Azure 虛擬機器上執行此範例時，會從「系統指派的受控識別」  或「使用者指派的受控識別」  (如果已指定 **msiClientId**) 擷取存取權杖，並使用所擷取的存取權杖建立連線。 如果已建立連線，您應該會看到下列訊息：
 
 ```bash
-You have successfully logged on as: <your MSI username>
+You have successfully logged on as: <your Managed Identity username>
 ```
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>使用 ActiveDirectoryIntegrated 驗證模式來連線
@@ -223,7 +223,7 @@ JDK 隨附 `kinit`，可讓您在與 Azure Active Directory 建立同盟已加�
     ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
-3.  找出下列幾行程式碼，並將使用者名稱取代為您想要以該身分連線的 AAD 使用者名稱。
+3.  找出下列幾行程式碼，並將使用者名稱取代為您想要以該身分連線的 Azure AD 使用者名稱。
     ```java
     ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
     ds.setPassword("password");     // replace with your password
@@ -293,7 +293,7 @@ You have successfully logged on as: <your user name>
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  在您想要執行範例的用戶端機器上，下載 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 程式庫 (英文) 及其相依性，並將其包含在 Java 建置路徑中。 請注意，只有在執行此特定範例時，才需要 azure-activedirectory-library-for-java。 此範例使用此程式庫中的 API，從 Azure AAD 擷取存取權杖。 如果您已經擁有存取權杖，則可以跳過此步驟。 請注意，您也必須移除範例中擷取存取權杖的區段。
+3.  在您想要執行範例的用戶端機器上，下載 [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) 程式庫 (英文) 及其相依性，並將其包含在 Java 建置路徑中。 請注意，只有在執行此特定範例時，才需要 azure-activedirectory-library-for-java。 此範例使用此程式庫中的 API，從 Azure AD 擷取存取權杖。 如果您已經擁有存取權杖，則可以跳過此步驟。 請注意，您也必須移除範例中擷取存取權杖的區段。
 
 在下列範例中，將 STS URL、用戶端識別碼、用戶端密碼、伺服器和資料庫名稱取代為您的值。
 

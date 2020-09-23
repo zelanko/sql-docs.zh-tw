@@ -1,7 +1,8 @@
 ---
-title: 透過 Linux 和 macOS 上的 ODBC 驅動程式進行資料存取追蹤 | Microsoft Docs
+title: 透過 Linux 和 macOS 上的 ODBC 驅動程式進行資料存取追蹤
+description: 了解如何在 Linux 與 macOS 上搭配 Microsoft ODBC Driver for SQL Server 啟用追蹤，以在對應用程式行為進行疑難排解時輸出記錄檔。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6abf282656681d3f798215282adb784b29c3846
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69f55104ed73f4d6468de3dcacca54d05cf0ac9a
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921984"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288200"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>透過 Linux 和 macOS 上的 ODBC 驅動程式進行資料存取追蹤
 
@@ -44,7 +45,7 @@ TraceFile=/home/myappuser/odbctrace.log
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-在此案例中，您可以將 `Trace=Yes` 新增至 `/home/myappuser/odbcinst.ini` 的 `[ODBC Driver 13 for SQL Server]` 區段。
+在此案例中，您可以將 `Trace=Yes` 新增至 `/home/myappuser/odbcinst.ini` 的 `[ODBC Driver 17 for SQL Server]` 區段。
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>決定驅動程式所使用的 odbc.ini 檔案
 

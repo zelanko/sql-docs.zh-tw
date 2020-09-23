@@ -1,6 +1,6 @@
 ---
 title: 用戶端連接中的服務主體名稱 (SPN) (OLE DB) | Microsoft Docs
-description: 用戶端連接中的服務主體名稱 (SPN) (OLE DB)
+description: 了解可在用戶端應用程式中支援服務主體名稱的 OLE DB Driver for SQL Server 屬性與成員函式。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: bd4128e3b53ffdeeaa793bbe39510bbee67e492a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a97e889a8e36e0c9fc918f3f4724d283b8cfa5d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244089"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862230"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db-in-sql-server-native-client"></a>SQL Server Native Client 中用戶端連線 (OLE DB) 內的服務主體名稱 (SPN)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

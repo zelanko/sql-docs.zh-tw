@@ -1,6 +1,6 @@
 ---
 title: 保存的資料來源物件 (OLE DB 驅動程式)
-description: 保存的資料來源物件
+description: 透過這些範例了解 OLE DB Driver for SQL Server 透過 IPersistFile 介面針對保存的資料來源物件的支援。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - OLE DB Driver for SQL Server, persisted data source objects
 - persisted data source objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5b8b939d0f82905971ee1656bf03b1212a5179d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49013eeca8561275a1ce78cef9f02d4beac9c190
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244928"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862057"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: 對日期和時間資料類型支援的改善 (OLE DB 驅動程式) | Microsoft Docs
-description: 對 OLE DB 日期和時間改善的資料類型支援
+description: 了解 OLE DB Driver for SQL Server 中支援 SQL Server 日期/時間資料類型的 OLE DB 類型。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c4306574aca251ad1f530cfeb3c26ce91e0a48b1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f914b211e1b573f1c3e91ac0fe50acf3e6f6a3a8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244866"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860010"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

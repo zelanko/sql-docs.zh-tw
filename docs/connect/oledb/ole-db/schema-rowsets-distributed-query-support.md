@@ -1,6 +1,6 @@
 ---
 title: 結構描述資料列集中的分散式查詢支援 | Microsoft Docs
-description: 結構描述資料列集中的分散式查詢支援
+description: OLE DB Driver for SQL Server 的 IDBSchemaRowset 介面會傳回關於連結的伺服器的中繼資料，以支援 SQL Server 分散式查詢。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB, schema rowsets
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c1207278d194df83a69109b14768eb3b99a719e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61105b2e974cd111cd4f5dfd10e7f528cd04519a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012789"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861560"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>結構描述資料列集 - 分散式查詢支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

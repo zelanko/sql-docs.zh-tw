@@ -1,6 +1,6 @@
 ---
-title: 執行大量複製作業 | Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 執行大量複製作業
+title: 執行大量複製作業
+description: 了解使用 OLE DB Driver for SQL Server 執行大量複製作業，以及其如何讓資料快速傳輸到資料庫中。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], bulk copy operations
 - OLE DB Driver for SQL Server, bulk copy operations
 - MSOLEDBSQL, bulk copy operations
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 3d4fcb39822ba70a807e80f25579947e670b8985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6035f5ac8723e9ccb84735080569468c1b7b33b3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006889"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861320"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

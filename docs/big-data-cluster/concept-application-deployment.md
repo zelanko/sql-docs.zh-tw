@@ -1,7 +1,7 @@
 ---
 title: 什麼是應用程式部署？
 titleSuffix: SQL Server Big Data Clusters
-description: 本文說明 SQL Server 2019 巨量資料叢集上的應用程式部署。
+description: 了解應用程式部署如何提供介面，在 SQL Server 2019 巨量資料叢集上建立、管理及執行應用程式。
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215447"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765327"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>什麼巨量資料叢集上的應用程式部署？
 
@@ -57,7 +57,7 @@ output: #output parameter the app expects and the type
 
 SQL Server 2019 CU5 可支援 Red Hat OpenShift 上的巨量資料叢集部署，以及 BDC 的已更新安全性模型，因此不再需要特殊權限容器。 針對所有使用 SQL Server 2019 CU5 的新部署，除了沒有特殊權限以外，容器還預設會以非根使用者的身分執行。
 
-在 CU5 版本中，使用[應用程式部署](concept-application-deployment.md)介面部署的應用程式安裝步驟，執行身分仍然必須是「根」使用者。 這是必要項目，因為在安裝期間，系統會安裝應用程式將使用的其他套件。 部署為應用程式一部分的其他使用者程式碼，將會以低權限使用者的身分執行。 
+在 CU5 版本中，使用[應用程式部署]()介面部署的應用程式安裝步驟，執行身分仍然必須是「根」使用者。 這是必要項目，因為在安裝期間，系統會安裝應用程式將使用的其他套件。 部署為應用程式一部分的其他使用者程式碼，將會以低權限使用者的身分執行。 
 
 此外，**CAP_AUDIT_WRITE** 功能是允許使用 Cron 作業為 SSIS 應用程式排程所需的選擇性功能。 當應用程式的 YAML 規格檔案指定排程時，應用程式會透過 Cron 作業觸發，這需要額外的功能。  或者，可視需要透過 Web 服務呼叫來使用 *azdata app run* 以觸發應用程式，這不需要 CAP_AUDIT_WRITE 功能。 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>如何使用應用程式部署
 
 應用程式部署的兩個主要介面為： 
-- [命令列介面 `azdata`](big-data-cluster-create-apps.md)
+- [命令列介面 `azdata`](app-create.md)
 - [Visual Studio Code 和 Azure Data Studio 延伸模組](app-deployment-extension.md)
 
-您也可以使用 RESTful Web 服務來執行應用程式。 如需詳細資訊，請參閱[取用巨量資料叢集上的應用程式](big-data-cluster-consume-apps.md)。
+您也可以使用 RESTful Web 服務來執行應用程式。 如需詳細資訊，請參閱[取用巨量資料叢集上的應用程式](app-consume.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
 若要深入了解如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上建立並執行應用程式，請參閱下列各項：
 
-- [使用 azdata 部署應用程式](big-data-cluster-create-apps.md)
+- [使用 azdata 部署應用程式](app-create.md)
 - [使用應用程式部署延伸模組部署應用程式](app-deployment-extension.md)
-- [取用巨量資料叢集上的應用程式](big-data-cluster-consume-apps.md)
+- [取用巨量資料叢集上的應用程式](app-consume.md)
 
 若要深入了解 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，請參閱下列概觀：
 

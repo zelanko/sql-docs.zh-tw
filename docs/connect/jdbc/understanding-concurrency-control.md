@@ -1,5 +1,6 @@
 ---
-title: 了解並行控制 | Microsoft Docs
+title: 了解並行控制
+description: 了解並行控制，以及如何在使用 JDBC Driver for SQL Server 開發多使用者應用程式時保留資料庫完整性。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 520abf20b52f15458ac36d7a2e617a04970eb66a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925337"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435299"
 ---
 # <a name="understanding-concurrency-control"></a>了解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

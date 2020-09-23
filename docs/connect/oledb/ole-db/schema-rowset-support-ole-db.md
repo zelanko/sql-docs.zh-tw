@@ -1,6 +1,6 @@
 ---
 title: 結構描述資料列集支援 (OLE DB) | Microsoft Docs
-description: 結構描述資料列集支援 (OLE DB)
+description: 處理 Transact-SQL 分散式查詢時，OLE DB Driver for SQL Server 支援從連結的伺服器傳回結構描述資訊。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - OLE DB Driver for SQL Server, schema rowsets
 - rowsets [OLE DB], schema
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fdd00a0c53e2570ec9688665ce5348401571531b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 38571c97516309b3a90731f8e95f928dc0ad5591
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012825"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861806"
 ---
 # <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

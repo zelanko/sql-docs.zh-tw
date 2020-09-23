@@ -1,7 +1,7 @@
 ---
 title: 管理：Azure Data Studio 筆記本
 titleSuffix: SQL Server Big Data Clusters
-description: 使用來自 Azure Data Studio 的筆記本，來管理巨量資料叢集與進行疑難排解。
+description: 使用來自 Azure Data Studio 的筆記本來管理 SQL Server 巨量資料叢集及進行疑難排解。
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660393"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778527"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 筆記本管理 SQL Server 巨量資料叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660393"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供包含筆記本的 Azure Data Studio 延伸模組。 筆記本提供了文件和程式碼，可供您用來在 Azure Data Studio 中管理 SQL Server 2019 巨量資料叢集。
 
-[筆記本](../azure-data-studio/notebooks-guidance.md)原本是實作為開放原始碼專案，而現已合併至 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download) \(部分機器翻譯\)。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
+[筆記本](../azure-data-studio/notebooks-guidance.md)原本是實作為開放原始碼專案，而現已合併至 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) \(部分機器翻譯\)。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
 
 您可以使用筆記本來部署 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的巨量資料叢集。
 

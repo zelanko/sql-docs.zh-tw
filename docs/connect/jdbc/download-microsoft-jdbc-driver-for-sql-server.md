@@ -1,7 +1,7 @@
 ---
 title: 下載 Microsoft JDBC Driver for SQL Server
 description: 下載 Microsoft JDBC Driver for SQL Server，以開發連線到 SQL Server 和 Azure SQL Database 的 Java 應用程式。
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ab209588a1bf05380ed1856ddfb90683e3259b3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d48c3f0384a805debe13472fae1841515207d160
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487182"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042441"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下載 Microsoft JDBC Driver for SQL Server
 
@@ -23,15 +23,15 @@ Microsoft JDBC Driver for SQL Server 為 Type 4 JDBC 驅動程式，透過可在
 
 ## <a name="download"></a>下載
 
-8\.2 版是最新的正式運作 (GA) 版本。 支援 Java 8、11 和 13。 如果需要在比該版本更舊的 Java Runtime 上執行，請參閱 [Java 及 JDBC 規格支援對照表](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support)，以查看是否有支援的驅動程式版本可供使用。 我們會持續改善 Java 連線能力支援。 所以強烈建議您使用最新版的 Microsoft JDBC 驅動程式。
+8\.4 版是最新的公開發行 (GA) 版本。 其支援 Java 8、11 和 14。 如果需要在比該版本更舊的 Java Runtime 上執行，請參閱 [Java 及 JDBC 規格支援對照表](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support)，以查看是否有支援的驅動程式版本可供使用。 我們會持續改善 Java 連線能力支援。 所以強烈建議您使用最新版的 Microsoft JDBC 驅動程式。
 
-**[![下載](../../ssms/media/download-icon.png) 下載 Microsoft JDBC Driver 8.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
-**[![下載](../../ssms/media/download-icon.png) 下載 Microsoft JDBC Driver 8.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
+**[![下載](../../ssms/media/download-icon.png) 下載 Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![下載](../../ssms/media/download-icon.png) 下載 Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
 
 ### <a name="version-information"></a>版本資訊
 
-- 版本號碼：8.2.2
-- 發行日期：2020 年 3 月 24 日
+- 版本號碼：8.4.1
+- 發行日期：2020 年 8 月 27 日
 
 當您下載驅動程式時，會有多個 JAR 檔案。 JAR 檔案的名稱指出其支援的 Java 版本。
 
@@ -42,9 +42,9 @@ Microsoft JDBC Driver for SQL Server 為 Type 4 JDBC 驅動程式，透過可在
 
 這一版的 Microsoft JDBC Driver for SQL Server 提供下列語言版本：
 
-Microsoft JDBC Driver 8.2.2 for SQL Server (zip)：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)
+Microsoft JDBC Driver 8.4.1 for SQL Server (zip)：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)
 
-Microsoft JDBC Driver 8.2.2 for SQL Server (tar.gz)：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)
+Microsoft JDBC Driver 8.4.1 for SQL Server (tar.gz)：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)
 
 ### <a name="release-notes"></a>版本資訊
 
@@ -62,7 +62,7 @@ Microsoft JDBC Driver 8.2.2 for SQL Server (tar.gz)：[簡體中文](https://go.
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
 </dependency>
 ```  
 

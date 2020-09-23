@@ -1,7 +1,7 @@
 ---
 title: 部署組態檔
 titleSuffix: SQL Server Big Data Clusters
-description: 巨量資料叢集部署組態檔的參考。
+description: 了解記載 SQL Server 2019 巨量資料叢集部署設定檔結構的 JSON 檔案。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 2/19/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3a94fb34110401c16b81bd05993e2cf85d2fdc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 174ef6dd8131e9b13aab6d701693ab78a988327b
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752112"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807441"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>巨量資料叢集的部署組態檔參考
 

@@ -1,4 +1,5 @@
 ---
+description: getDate 方法 (java.lang.String) 參數
 title: getDate 方法 (java.lang.String) 參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 435e6eaf5e6078fc2d61a359d6e8a40323e59b67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9ec829f3f4f5717b0a493c69f6b5c4733a2fc1fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436340"
 ---
 # <a name="getdate-method-javalangstring"></a>getDate 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -5,16 +5,16 @@ description: 本文說明 SQL Server 巨量資料叢集的最新更新和已知�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772898"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392168"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -47,7 +47,7 @@ ms.locfileid: "85772898"
 
 |版本|注意|
 |---------|---------|
-|Enterprise<br/>標準<br/>開發人員| 巨量資料叢集版本是由 SQL Server 主要執行個體版本所決定。 在部署時，預設會部署 Developer Edition。 在部署後可以變更此版本。 請參閱[設定 SQL Server 主要執行個體](../big-data-cluster/configure-sql-server-master-instance.md)。 |
+|Enterprise<br/>標準<br/>開發人員| 巨量資料叢集版本是由 SQL Server 主要執行個體版本所決定。 在部署時，預設會部署 Developer Edition。 在部署後可以變更此版本。 請參閱[設定 SQL Server 主要執行個體](./configure-sql-server-master-instance.md)。 |
 
 ## <a name="tools"></a>工具
 
@@ -64,6 +64,7 @@ ms.locfileid: "85772898"
 
 | 版本          | BDC 版本    | `azdata` 版本| 發行日期 |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
@@ -71,9 +72,31 @@ ms.locfileid: "85772898"
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> 沒有適用於 CU7 的 SQL Server 2019 巨量資料叢集更新。
+
 ## <a name="how-to-install-updates"></a>如何安裝更新
 
 若要安裝更新，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (2020 年 7 月)
+
+SQL Server 2019 的累積更新 6 (CU6) 版本。
+
+|套件版本 | 映像標籤 |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+此版本包含次要修正與增強功能。 下列文章包含與這些更新相關的資訊：
+
+- [以 Active Directory 模式管理巨量資料叢集存取](manage-user-access.md)
+- [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md)
+- [部署高可用性 SQL Server 巨量資料叢集](deployment-high-availability.md)
+- [設定 SQL Server 巨量資料叢集](configure-cluster.md)
+- [在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
+- [SQL Server 主要執行個體設定屬性。](reference-config-master-instance.md)
+- [Apache Spark 與 Apache Hadoop (HDFS) 設定屬性](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC 模型與其對管理 BDC 之使用者與服務帳戶的影響](kubernetes-rbac.md)
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (2020 年 6 月)
 
@@ -89,7 +112,7 @@ SQL Server 2019 的累積更新 5 (CU5) 版本。
 - 已更新 BDC 部署安全性模型，因此不再「需要」部署為 BDC 一部分的特殊權限容器。 針對所有使用 SQL Server 2019 CU5 的新部署，除了沒有特殊權限以外，容器還預設會以非根使用者的身分執行。 
 - 已新增針對 Active Directory 網域部署多個巨量資料叢集的支援。
 - `azdata` CLI 有自己的語意版本，並獨立於伺服器。 用戶端與伺服器版本 azdata 之間的任何相依性都會被移除。 我們建議針對用戶端及伺服器使用最新版本，以確保您可受益於最新的增強功能及修正程式。
-- 引進了兩個新的預存程式，sp_data_source_objects 及 sp_data_source_columns，以支援特定外部資料來源的自我檢查。 客戶可直接透過 T-SQL 來使用預存程式以進行結構描述探索，並查看哪些資料表可供虛擬化。 我們會在適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)外部資料表精靈中運用這些變更，這可供從 SQL Server、Oracle、MongoDB 及 Teradata 建立外部資料表。
+- 引進了兩個新的預存程序 (sp_data_source_objects 與 sp_data_source_table_columns)，以支援特定外部資料來源的自我檢查。 客戶可直接透過 T-SQL 來使用預存程式以進行結構描述探索，並查看哪些資料表可供虛擬化。 我們會在適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)外部資料表精靈中運用這些變更，這可供從 SQL Server、Oracle、MongoDB 及 Teradata 建立外部資料表。
 - 新增持續在 Grafana 中執行自訂項目的支援。 在 CU5 之前，客戶會注意到在 Grafana 組態中進行的任何編輯，都會在 `metricsui` Pod (其裝載 Grafana 儀表板) 重新開機時遺失。 此問題已修正，且所有組態現在都會保存。 
 - 已修正與使用 Telegraf (裝載於 `metricsdc` Pod 中) 來收集 Pod 及節點計量的 API 相關安全性問題。 因為此變更，Telegraf 現在需要服務帳戶、叢集角色和叢集繫結，才能擁有收集 Pod 及節點計量的必要權限。 如需詳細資料，請參閱[收集 Pod 和節點計量所需的叢集角色](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)。
 - 新增兩個功能參數，以控制 Pod 和節點計量的收集。 如果正在使用不同的解決方案來監視 Kubernetes 基礎結構，則可將 control.json 部署組態檔中的 *allowNodeMetricsCollection* 和 *allowPodMetricsCollection* 設為 false，以關閉 Pod 與主機節點的內建計量集合。 在 OpenShift 環境中，因為收集 Pod 與節點計量需要特殊權限的功能，所以這些設定在內建部署設定檔中預設為 false。
@@ -144,6 +167,28 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>已知問題
+
+### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>套用累積更新之前的空白 Livy 作業
+
+- **受影響的版本**：到最新的累積更新
+
+- **問題和對客戶的影響**︰在升級期間，Sparkhead 傳回 404 錯誤。
+
+- **因應措施**：升級 BDC 之前，請確定沒有作用中的 Livy 工作階段或批次工作。 依照[從支援的版本升級](deployment-upgrade.md#upgrade-from-supported-release)底下的指示執行，以避免這種情況。 
+
+   如果 Livy 在升級程序期間傳回 404 錯誤，請在這兩個 Sparkhead 節點上重新啟動 Livy 伺服器。 例如：
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>巨量資料叢集產生的服務帳戶密碼過期
+
+- **受影響的版本**：與 Active Directory 整合的所有巨量資料叢集部署 (所有版本)
+
+- **問題和對客戶的影響**︰在巨量資料叢集部署期間，工作流程會產生一組[服務帳戶](active-directory-objects.md)。視網域控制站中設定的密碼到期原則而定，這些帳戶的密碼可能會過期 (預設為 42 天)。 目前沒有任何機制可輪替 BDC 中所有帳戶的認證，因此一旦符合到期期限，叢集將會變成無法運作。
+
+- **因應措施**：將 BDC 服務帳戶的到期原則更新為網域控制站中的「密碼永不過期」。 如需這些帳戶的完整清單，請參閱[自動產生的 Active Directory 物件](active-directory-objects.md)。 此動作可以在到期時間之前或之後完成。 如果是後者，Active Directory 將會重新啟用過期的密碼。
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>透過閘道端點存取服務的認證
 

@@ -1,6 +1,6 @@
 ---
 title: 繫結和轉換 (OLE DB) | Microsoft Docs
-description: 繫結和轉換 (OLE DB)
+description: 了解 OLE DB Driver for SQL Server 如何在 datetime 與 datetimeoffset 值之間進行轉換。 有數個一般的轉換規則。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - conversions [OLE DB]
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 559bafd92b712c836e17155acca0a358d0adac1c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c8f2008feea82e29902ba77791915c849cae7271
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004514"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860110"
 ---
 # <a name="conversions-ole-db"></a>轉換 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
