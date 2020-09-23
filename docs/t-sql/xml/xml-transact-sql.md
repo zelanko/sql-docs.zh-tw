@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 15543b21a462d8ad01ddc3a1cc5ba82847ee3016
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dde86e7a900a6ec2bb0aa8328eba9a5fe1e7248a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478692"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112562"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +33,7 @@ ms.locfileid: "88478692"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
@@ -59,11 +58,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="examples"></a>範例  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
-SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+DECLARE @DemographicData XML (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData = (SELECT TOP 1 Demographics FROM Person.Person);  
 SELECT @DemographicData;  
 GO  
 ```  

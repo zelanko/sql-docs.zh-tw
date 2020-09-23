@@ -8,9 +8,14 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- Int()_TSQL
-- sql13.swb.tsqlresults.f1
-- sql13.swb.tsqlquery.f1
+- bigint_TSQL
+- smallint
+- bigint
+- smallint_TSQL
+- tinyint_TSQL
+- int_TSQL
+- int
+- tinyint
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -23,12 +28,12 @@ ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fab6f77202c4a0fc136d760730c03d24e583870
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 83abf17fc4d5e182834a3085f49c862cb0dcd2e8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565616"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111246"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,10 +83,10 @@ Result1      Result2
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyBigIntColumn bigint  
-,MyIntColumn  int
-,MySmallIntColumn smallint
-,MyTinyIntColumn tinyint
+  MyBigIntColumn BIGINT  
+,MyIntColumn  INT
+,MySmallIntColumn SMALLINT
+,MyTinyIntColumn TINYINT
 );  
   
 GO  
@@ -94,7 +99,7 @@ FROM dbo.MyTable;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn  
 -------------------- ----------- ---------------- ---------------  
 9223372036854775807  2147483647  32767            255  

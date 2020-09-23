@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a1b6f93654e312f8c7a0266b3500c18a38ff511a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6d5bac616d1c83cda53a055b00951cced2de19f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445910"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111212"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 
@@ -128,13 +128,13 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
  下列範例會使用 sql_variant 資料類型建立資料表。 接著範例會擷取有關 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 資訊，如果 `tableA` 有 `colB` 和 `sql_variant` 類型的 `colA`，則 `colB` =`1689`。  
   
 ```sql    
-CREATE   TABLE tableA(colA sql_variant, colB int)  
-INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+CREATE TABLE tableA(colA sql_variant, colB INT)  
+INSERT INTO tableA values ( CAST(46279.1 as decimal(8,2)), 1689)  
 SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
          SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
          SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
 FROM      tableA  
-WHERE      colB = 1689  
+WHERE     colB = 1689  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 請注意，這三個值的每一個都是 **sql_variant**。  

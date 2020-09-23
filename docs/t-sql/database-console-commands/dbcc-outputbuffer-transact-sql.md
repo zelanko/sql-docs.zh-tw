@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 567f303b2ebd78fab3f6803ad2490ca1dc059e2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dfc426af5cc72e072cab1908930d265dc1cf91c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311254"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111153"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ DBCC OUTPUTBUFFER 會顯示傳給指定用戶端 (*session_id*) 的結果。 如
 ## <a name="result-sets"></a>結果集  
 DBCC OUTPUTBUFFER 會傳回下列值 (值可能不同)：
   
-```sql
+```
 Output Buffer                                                              
 ------------------------------------------------------------------------   
 01fb8028:  04 00 01 5f 00 00 00 00 e3 1b 00 01 06 6d 00 61  ..._.........m.a  

@@ -28,12 +28,12 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9bec3ce34e9d7aebc204c183f5ec24d92b065a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16b9daa836f745bc4b7068275baf91b637427815
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367124"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111172"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ CHAR ( integer_expression )
 SET TEXTSIZE 0;  
 -- Create variables for the character string and for the current   
 -- position in the string.  
-DECLARE @position int, @string char(8);  
+DECLARE @position INT, @string CHAR(8);  
 -- Initialize the current position and the string variables.  
 SET @position = 1;  
 SET @string = 'New Moon';  

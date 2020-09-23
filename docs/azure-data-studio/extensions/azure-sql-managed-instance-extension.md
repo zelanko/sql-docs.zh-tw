@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
-ms.custom: seodec18
+ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: f1bb18e6595276d28901f8a04b2d885c57d71697
-ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
+ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90568658"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111756"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL 受控執行個體儀表板 (預覽)
 

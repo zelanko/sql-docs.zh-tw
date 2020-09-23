@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: 3f6de8718576c3bd5d29303a218d9d7fae6d7dc7
-  ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+  ms.openlocfilehash: c17887d2415fa5e7ea072426a1825aa7a51f73b0
+  ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/21/2020
-  ms.locfileid: "88745958"
+  ms.lasthandoff: 09/23/2020
+  ms.locfileid: "91111189"
 landingContent:
 - title: 關於 Azure Data Studio
   linkLists:
@@ -68,10 +68,16 @@ landingContent:
   - linkListType: concept
     links:
     - text: 擴充 Azure Data Studio 的功能
-      url: extensions.md
+      url: extensions/add-extensions.md
     - text: 藉由建立 Azure Data Studio 延伸模組來擴充功能
-      url: extension-authoring.md
+      url: extensions/extension-authoring.md
     - text: PostgreSQL 延伸模組
-      url: postgres-extension.md
+      url: extensions/postgres-extension.md
     - text: PowerShell 編輯器支援
-      url: powershell-extension.md
+      url: extensions/powershell-extension.md
+    - text: Azure 資料總管
+      url: extensions/kusto-extension.md
+    - text: Notebook 延伸模組
+      url: extensions/notebook-extension.md
+    - text: Jupyter Book 延伸模組
+      url: extensions/jupyter-book-extension.md

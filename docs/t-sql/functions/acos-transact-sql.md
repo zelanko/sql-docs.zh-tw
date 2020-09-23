@@ -21,12 +21,12 @@ ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16c6a83f914c577fd239f3c28b6d302dfb2523f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7d40695c1f9edef75f66c93e9e7cc7f3c6e8769
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417564"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111179"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,14 +55,14 @@ ACOS ( float_expression )
   
 ```sql
 SET NOCOUNT OFF;  
-DECLARE @cos float;  
+DECLARE @cos FLOAT;  
 SET @cos = -1.0;  
-SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
+SELECT 'The ACOS of the number is: ' + CONVERT(VARCHAR, ACOS(@cos));  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---------------------------------   
 The ACOS of the number is: 3.14159   
   

@@ -25,12 +25,12 @@ ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8e5f56358030a75e7be4943f8790766e036e6a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8218bf8b98cd072dd60f8458c75819761153b634
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468284"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111280"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,15 +60,15 @@ ms.locfileid: "88468284"
 下列範例會分別將 **smallmoney** 和 **money** 值轉換成 **varchar** 和 **decimal** 資料類型。
   
 ```sql
-DECLARE @mymoney_sm smallmoney = 3148.29,  
-        @mymoney    money = 3148.29;  
-SELECT  CAST(@mymoney_sm AS varchar) AS 'SM_MONEY varchar',  
-        CAST(@mymoney AS decimal)    AS 'MONEY DECIMAL';  
+DECLARE @mymoney_sm SMALLMONEY = 3148.29,  
+        @mymoney    MONEY = 3148.29;  
+SELECT  CAST(@mymoney_sm AS VARCHAR) AS 'SM_MONEY varchar',  
+        CAST(@mymoney AS DECIMAL)    AS 'MONEY DECIMAL';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 SM_MONEY VARCHAR               MONEY DECIMAL  
 ------------------------------ ----------------------  
 3148.29                        3148    

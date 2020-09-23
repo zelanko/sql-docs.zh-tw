@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2a8f93d51cd61e9a6a7654472fabbab95475913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dc98efb298d06682b29c53c05b14e014ad8361a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445919"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111252"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Database Engine)
 
@@ -33,12 +33,12 @@ ms.locfileid: "88445919"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 node.GetLevel ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlInt16 GetLevel ( )   
 ```  

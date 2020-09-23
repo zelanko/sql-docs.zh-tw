@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 98388d74f1cf4eb90af2eccaa0d0cf71595167f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c9599042d8cab079c155496be1fb4e0194bc66fe
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459910"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111137"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 
@@ -126,7 +126,7 @@ DBCC CHECKCONSTRAINTS 會傳回含有下列資料行的資料列集。
 ```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE Table1 (Col1 int, Col2 char (30));  
+CREATE TABLE Table1 (Col1 INT, Col2 CHAR(30));  
 GO  
 INSERT INTO Table1 VALUES (100, 'Hello');  
 GO  

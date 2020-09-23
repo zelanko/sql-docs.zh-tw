@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c8642be92d56b2900abd4cb5c6b4d77fcac78c0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fca72f6462c3313a946a6b837097425b9e95a2aa
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417634"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111261"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "88417634"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 parent.GetDescendant ( child1 , child2 )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )   
 ```  

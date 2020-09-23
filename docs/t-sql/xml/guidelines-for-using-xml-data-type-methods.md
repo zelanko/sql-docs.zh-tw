@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355964"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112316"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
 
@@ -33,7 +33,7 @@ ms.locfileid: "88355964"
 **xml** 資料類型方法不能用於 PRINT 陳述式中，如下列範例所示。 **xml** 資料類型方法會被視為子查詢，而 PRINT 陳述式中不允許有子查詢。 因此，下列範例會傳回錯誤：
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 解決方案是先將 **value()** 方法的結果指派到 **xml** 類型的變數中，然後再於查詢中指定變數。
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 在此範例中，**nodes()** 方法會為每個 `<book>` 元素各產生一列。 在 `<book>` 節點上評估的 **value()** 方法會擷取 `@genre` 的值，而且因為是屬性，所以會是 singleton。
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 XML 結構描述可用來檢查具類型之 XML 的類型。 如果在 XML 結構描述中將節點指定為單一性，編譯器就會使用該資訊，而且不會發生錯誤。 否則，就需要有選擇單一節點的序數。 尤其是使用 descendant-or-self 軸 (//) (例如在 `/book//title` 時，會使 `<title>` 元素的 singleton 基數推斷變得鬆散，即使 XML 結構描述指定要如此。 因此，您應將其改寫成 `(/book//title)[1]`。
@@ -90,22 +90,22 @@ XML 結構描述可用來檢查具類型之 XML 的類型。 如果在 XML 結�
 下面這個在不具類型 XML 資料行上執行的查詢會導致靜態的編譯錯誤。這是因為 **value()** 預期以 singleton 節點作為第一個引數，而編譯器無法判斷在執行階段是否只會出現一個 `<last-name>` 節點：
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 您可以考慮下面這個解決方案：
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 然而，這個解決方案並不能解決錯誤，因為每個 XML 執行個體中可能都會出現多個 `<author>` 節點。 下列改寫方案可以奏效：
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 此查詢會傳回每個 XML 執行個體中第一個 `<last-name>` 元素的值。

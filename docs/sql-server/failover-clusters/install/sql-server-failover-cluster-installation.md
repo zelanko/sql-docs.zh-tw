@@ -6,16 +6,16 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc5aaf5bb89edabcc483baebe8cb4b709314a383
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897666"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112187"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -6,15 +6,15 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: ''
 ms.date: 05/24/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: 1eef940dd30ab0d5b9f987edf6f68c7d777c6a90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564510"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111043"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別
 

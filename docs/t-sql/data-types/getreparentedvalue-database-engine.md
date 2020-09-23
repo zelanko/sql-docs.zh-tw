@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b0381cc90ff6a69c8d8cd91d9ce141e8a13707c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab0a24f8b2255625bad41509f37ba6425e837ab4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479873"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111221"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "88479873"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 node. GetReparentedValue ( oldRoot, newRoot )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  

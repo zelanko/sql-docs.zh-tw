@@ -6,7 +6,7 @@ ms.date: 10/21/2015
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - troublshooting, failover clustering
 - failover clustering, troubleshooting
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f387fc8778a600305696d0c2f4ea45293b8d5c59
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895864"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111017"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
