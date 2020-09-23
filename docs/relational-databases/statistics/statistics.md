@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147739"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116568"
 ---
 # <a name="statistics"></a>統計資料
 
@@ -61,7 +61,7 @@ ms.locfileid: "88147739"
 
 下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。
   
-![長條圖](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "長條圖") 
+![長條圖](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "長條圖") 
   
 針對上述每一個長條圖步驟：
 -   粗線代表上限值 (*range_high_key*) 以及其所發生的次數 (*equal_rows*)  

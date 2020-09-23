@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 46bf3ce0853f1c8c4a8a9442e27f8235f95abbac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88fe0cd4deb4bc73683e6dbff46f35d1d61da348
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422832"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116861"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 
@@ -102,7 +102,7 @@ DBCC INDEXDEFRAG 無法用於重組下列索引：
 ## <a name="result-sets"></a>結果集  
 如果在陳述式中指定了索引，DBCC INDEXDEFRAG 會傳回下列結果集 (值可能會不同) (除非指定了 WITH NO_INFOMSGS)：
   
-```sql
+```
 Pages Scanned Pages Moved Pages Removed  
 ------------- ----------- -------------  
 359           346         8  
@@ -131,12 +131,12 @@ GO
 /*Perform a 'USE <database name>' to select the database in which to run the script.*/  
 -- Declare variables  
 SET NOCOUNT ON;  
-DECLARE @tablename varchar(255);  
-DECLARE @execstr   varchar(400);  
-DECLARE @objectid  int;  
-DECLARE @indexid   int;  
-DECLARE @frag      decimal;  
-DECLARE @maxfrag   decimal;  
+DECLARE @tablename VARCHAR(255);  
+DECLARE @execstr   VARCHAR(400);  
+DECLARE @objectid  INT;  
+DECLARE @indexid   INT;  
+DECLARE @frag      DECIMAL;  
+DECLARE @maxfrag   DECIMAL;  
   
 -- Decide on the maximum fragmentation to allow for.  
 SELECT @maxfrag = 30.0;  
@@ -149,26 +149,26 @@ DECLARE tables CURSOR FOR
   
 -- Create the table.  
 CREATE TABLE #fraglist (  
-   ObjectName char(255),  
-   ObjectId int,  
-   IndexName char(255),  
-   IndexId int,  
-   Lvl int,  
-   CountPages int,  
-   CountRows int,  
-   MinRecSize int,  
-   MaxRecSize int,  
-   AvgRecSize int,  
-   ForRecCount int,  
-   Extents int,  
-   ExtentSwitches int,  
-   AvgFreeBytes int,  
-   AvgPageDensity int,  
-   ScanDensity decimal,  
-   BestCount int,  
-   ActualCount int,  
-   LogicalFrag decimal,  
-   ExtentFrag decimal);  
+   ObjectName CHAR(255),  
+   ObjectId INT,  
+   IndexName CHAR(255),  
+   IndexId INT,  
+   Lvl INT,  
+   CountPages INT,  
+   CountRows INT,  
+   MinRecSize INT,  
+   MaxRecSize INT,  
+   AvgRecSize INT,  
+   ForRecCount INT,  
+   Extents INT,  
+   ExtentSwitches INT,  
+   AvgFreeBytes INT,  
+   AvgPageDensity INT,  
+   ScanDensity DECIMAL,  
+   BestCount INT,  
+   ActualCount INT,  
+   LogicalFrag DECIMAL,  
+   ExtentFrag DECIMAL);  
   
 -- Open the cursor.  
 OPEN tables;  

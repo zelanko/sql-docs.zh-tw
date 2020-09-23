@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1e8dc46be875a7bd3dbdc31014455c76fa6d510
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b6aa8b3ccdc0dfb6584f6138059de6686326dca
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459736"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115193"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88459736"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@IO_BUSY  
 ```  
 
@@ -57,7 +57,7 @@ ms.locfileid: "88459736"
 ## <a name="examples"></a>範例  
  下列範例會顯示傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在開始時間和目前時間之間，用來執行輸入/輸出作業的毫秒數。 為了避免在將值轉換成微秒時發生算術溢位，這個範例會將其中一個值轉換成 **float** 資料類型。  
   
-```  
+```sql  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   
    GETDATE() AS 'as of';  
 ```  

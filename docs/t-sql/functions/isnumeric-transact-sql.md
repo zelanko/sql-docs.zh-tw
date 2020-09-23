@@ -24,12 +24,12 @@ ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6736ebb5cb10ea882284f16a241b710f7d5c0f2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1214d622d6da50961ac6b36c6f4f4d6cee9abc9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364814"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115222"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88364814"
   
 ## <a name="syntax"></a>語法  
   
-``` 
+```syntaxsql 
 ISNUMERIC ( expression )  
 ```  
   

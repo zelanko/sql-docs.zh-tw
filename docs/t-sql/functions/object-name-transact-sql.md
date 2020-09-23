@@ -25,12 +25,12 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3386f37e4888ee8b0734d60d87359314a7bc9325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459658"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115175"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  根據預設，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會假設 *object_id* 在目前資料庫的內容中。 參考另一資料庫中之 *object_id* 的查詢會傳回 NULL 或不正確的結果。 例如，在下列查詢中，目前資料庫內容便是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會嘗試傳回這個資料庫 (而不是查詢之 FROM 子句中所指定的資料庫) 中指定之物件識別碼的物件名稱。 因此，會傳回不正確的資訊。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_NAME(object_id)  
@@ -82,7 +82,7 @@ GO
   
  您可以指定資料庫識別碼，在另一個資料庫的內容中解析物件名稱。 下列範例會在 `master` 中指定 `OBJECT_SCHEMA_NAME` 資料庫的資料庫識別碼，並傳回正確的結果。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
@@ -95,7 +95,7 @@ GO
 ### <a name="a-using-object_name-in-a-where-clause"></a>A. 在 WHERE 子句中使用 OBJECT_NAME  
  下列範例會從 `sys.objects` 目錄檢視中，傳回 `OBJECT_NAME` 陳述式 `WHERE` 子句中的 `SELECT` 所指定之物件的資料行。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyID INT;  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-returning-the-object-schema-name-and-object-name"></a>B. 傳回物件結構描述名稱和物件名稱  
  下列範例會針對不是特定或準備陳述式的所有快取查詢計畫，傳回物件結構描述名稱、物件名稱和 SQL 文字。  
   
-```  
+```sql  
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -124,7 +124,7 @@ GO
 ### <a name="c-returning-three-part-object-names"></a>C. 傳回三部分物件名稱  
  下列範例會針對所有資料庫中的所有物件，傳回資料庫、結構描述和物件名稱，以及 `sys.dm_db_index_operational_stats` 動態管理檢視中的所有其他資料行。  
   
-```  
+```sql  
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -140,7 +140,7 @@ GO
 ### <a name="d-using-object_name-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
  下列範例會從 `sys.objects` 目錄檢視中，傳回 `OBJECT_NAME` 陳述式 `WHERE` 子句中的 `SELECT` 所指定之物件的資料行。 (您的物件數目 (下列範例中為 274100017) 會不同。  若要測試此範例，請藉由在您的資料庫中執行 `SELECT name, object_id FROM sys.objects;` 來查看有效物件的數目。)  
   
-```  
+```sql  
 SELECT name, object_id, type_desc  
 FROM sys.objects  
 WHERE name = OBJECT_NAME(274100017);  

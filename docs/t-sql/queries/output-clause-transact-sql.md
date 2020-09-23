@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c361e0d6ff8ab00abdc70775e903d3fc5dcd602
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27c4c2b1f86b4bd59424632dcdb58e54cbc4f31d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459155"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116268"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -283,7 +283,9 @@ PRINT '@MyTableVar, after delete'
 SELECT * FROM @MyTableVar;  
   
 DROP TABLE dbo.table1;  
-  
+```
+
+```
 --Results  
 --table1, before delete  
 --id          employee  
@@ -322,9 +324,11 @@ DROP TABLE dbo.table1;
 USE AdventureWorks2012;
 GO
 
-DECLARE @MyTableVar table( NewScrapReasonID smallint,  
-                           Name varchar(50),  
-                           ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE (
+    NewScrapReasonID SMALLINT,  
+    Name VARCHAR(50),  
+    ModifiedDate DATETIME); 
+    
 INSERT Production.ScrapReason  
     OUTPUT INSERTED.ScrapReasonID, INSERTED.Name, INSERTED.ModifiedDate  
         INTO @MyTableVar  
@@ -363,11 +367,11 @@ GO
 USE AdventureWorks2012;
 GO
   
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
   
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25,  
@@ -395,12 +399,12 @@ GO
 USE AdventureWorks2012;  
 GO
 
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
-    VacationHoursDifference int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
+    VacationHoursDifference INT,  
+    ModifiedDate DATETIME);  
   
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25,  
@@ -429,12 +433,12 @@ GO
 USE AdventureWorks2012;
 GO
 
-DECLARE @MyTestVar table (  
-    OldScrapReasonID int NOT NULL,   
-    NewScrapReasonID int NOT NULL,   
-    WorkOrderID int NOT NULL,  
-    ProductID int NOT NULL,  
-    ProductName nvarchar(50)NOT NULL);  
+DECLARE @MyTestVar TABLE (  
+    OldScrapReasonID INT NOT NULL,   
+    NewScrapReasonID INT NOT NULL,   
+    WorkOrderID INT NOT NULL,  
+    ProductID INT NOT NULL,  
+    ProductName NVARCHAR(50)NOT NULL);  
   
 UPDATE Production.WorkOrder  
 SET ScrapReasonID = 4  
@@ -463,11 +467,11 @@ GO
 USE AdventureWorks2012;
 GO
 
-DECLARE @MyTableVar table (  
-    ProductID int NOT NULL,   
-    ProductName nvarchar(50)NOT NULL,  
-    ProductModelID int NOT NULL,   
-    PhotoID int NOT NULL);  
+DECLARE @MyTableVar TABLE (  
+    ProductID INT NOT NULL,   
+    ProductName NVARCHAR(50)NOT NULL,  
+    ProductModelID INT NOT NULL,   
+    PhotoID INT NOT NULL);  
   
 DELETE Production.ProductProductPhoto  
 OUTPUT DELETED.ProductID,  
@@ -494,9 +498,9 @@ GO
 USE AdventureWorks2012;
 GO
 
-DECLARE @MyTableVar table (  
-    SummaryBefore nvarchar(max),  
-    SummaryAfter nvarchar(max));  
+DECLARE @MyTableVar TABLE (  
+    SummaryBefore NVARCHAR(max),  
+    SummaryAfter NVARCHAR(max));  
   
 UPDATE Production.Document  
 SET DocumentSummary .WRITE (N'features',28,10)  
@@ -562,19 +566,19 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   int IDENTITY (1,5)NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  CurrentSales money NOT NULL,  
+( EmployeeID   INT IDENTITY (1,5) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  CurrentSales MONEY NOT NULL,  
   ProjectedSales AS CurrentSales * 1.10   
 );  
 GO  
-DECLARE @MyTableVar table(  
-  EmployeeID   int NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  CurrentSales money NOT NULL,  
-  ProjectedSales money NOT NULL  
+DECLARE @MyTableVar TABLE (  
+  EmployeeID   INT NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  CurrentSales MONEY NOT NULL,  
+  ProjectedSales MONEY NOT NULL  
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
@@ -606,11 +610,11 @@ GO
 USE AdventureWorks2012;
 GO
 
-DECLARE @MyTableVar table (  
-    ProductID int NOT NULL,   
-    ProductName nvarchar(50)NOT NULL,  
-    ProductModelID int NOT NULL,   
-    PhotoID int NOT NULL);  
+DECLARE @MyTableVar TABLE (  
+    ProductID INT NOT NULL,   
+    ProductName NVARCHAR(50)NOT NULL,  
+    ProductModelID INT NOT NULL,   
+    PhotoID INT NOT NULL);  
   
 DELETE Production.ProductProductPhoto  
 OUTPUT DELETED.ProductID,  

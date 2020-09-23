@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 306930c6d66db06f36554dd1ab49bf70d586017a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec78a9cd0dc6c0b08b61e4d1ca79748350bbb6ea
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417284"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115160"
 ---
 # <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88417284"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 Key_GUID( 'Key_Name' )  
 ```  
   
@@ -61,7 +60,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="examples"></a>範例  
  下列範例會傳回 `ABerglundKey1` 對稱金鑰的 GUID。  
   
-```  
+```sql  
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   

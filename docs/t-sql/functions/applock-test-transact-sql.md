@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa4c73e5a6830b3274e3e388679dd4e5f935f17c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae3fc6e47bcb375122be6e045c36b5e5f08c2cc0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417534"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116885"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88417534"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owner' )  
 ```  
   
@@ -79,7 +79,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
-DECLARE @result int;  
+DECLARE @result INT;  
 EXEC @result=sp_getapplock  
     @DbPrincipal='public',  
     @Resource='Form1',  

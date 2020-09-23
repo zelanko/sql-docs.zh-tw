@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc63fcaa6e7419a37005817f3121a2b8851dc749
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68ad50b69fefd541e083ecab096732d549d171d1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363794"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116012"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>邏輯函式 - CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88363794"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
@@ -62,7 +61,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 
  下列範例會從已提供的數值清單傳回第三個項目。  
  
-```  
+```sql 
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
   
@@ -80,7 +79,7 @@ Developer
 
  下列範例會根據 `ProductCategoryID` 資料行中的值傳回簡單的字元字串。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductCategoryID, CHOOSE (ProductCategoryID, 'A','B','C','D','E') AS Expression1  
@@ -106,7 +105,7 @@ ProductCategoryID Expression1
   
  下列範例會傳回雇用員工的季節。 MONTH 函數用於從 `HireDate` 資料行傳回月份的值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, HireDate, CHOOSE(MONTH(HireDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   

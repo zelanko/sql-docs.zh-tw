@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 722e8b7d7e818cb4bd9225f83f65aeb8b0090798
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60247a9c2dcdc038f17edc9637805c62e02fe0d0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364684"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115442"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88364684"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )  
 ```  
   

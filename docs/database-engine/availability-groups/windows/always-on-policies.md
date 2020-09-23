@@ -6,16 +6,16 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7c84182de4647a206c25ba20a5a993af88a3e41
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19eb6e3c43ce404770d641bc33bf663ad12a4b61
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900912"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115822"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用群組原則評估 Always On 可用性群組的健全狀況
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

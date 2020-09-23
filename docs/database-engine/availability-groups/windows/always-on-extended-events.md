@@ -6,16 +6,16 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af4a34a41607a7410d2f2ca43ae9b8bb197ff682
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a5b2f339f5aec4d97daaee9ac273dd73833d564
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235966"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115852"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddcdc3f13b37bac0b02c44935c14a4436a7a22c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468084"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116523"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88468084"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
@@ -127,7 +127,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 這表示 AUTO_SHRINK 是關閉狀態。
   
-```sql
+```
 ------------------  
 0  
 ```  
@@ -145,7 +145,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Collation                     Edition        ServiceObjective  MaxSizeInBytes  
 ----------------------------  -------------  ----------------  --------------  
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  

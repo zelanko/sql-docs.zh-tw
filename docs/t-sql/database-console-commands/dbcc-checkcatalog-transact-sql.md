@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 345b555a5cb69adec2c506fb6b40eafbaf3ee62d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe40df4a8593b3ae00bb6733d30a4091a6179ef5
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459919"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116515"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88459919"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 DBCC CHECKCATALOG   
 [   
     (   

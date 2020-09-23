@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d384171a4397816d51736c9ea793d3b2396c4178
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7c653d422938a3ead8bcd42bbbbdc8e6718a811
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417654"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114982"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ DBCC OPENTRAN
 ## <a name="result-sets"></a>結果集  
 當沒有開啟的交易時，DBCC OPENTRAN 會傳回下列結果集：
   
-```sql
+```
 No active open transactions.  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 下列範例會取得目前資料庫的交易資訊。 結果可能各不相同。
   
 ```sql  
-CREATE TABLE T1(Col1 int, Col2 char(3));  
+CREATE TABLE T1(Col1 INT, Col2 CHAR(3));  
 GO  
 BEGIN TRAN  
 INSERT INTO T1 VALUES (101, 'abc');  
@@ -121,7 +121,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```sql  
 -- Create the temporary table to accept the results.  
 CREATE TABLE #OpenTranStatus (  
-   ActiveTransaction varchar(25),  
+   ActiveTransaction VARCHAR(25),  
    Details sql_variant   
    );  
 -- Execute the command, putting the results in the table.  

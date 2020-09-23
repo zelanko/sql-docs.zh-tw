@@ -26,12 +26,12 @@ ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e45fad8edfcc54e35d5a0c4ad0536a5586439d6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5d2ec0e37ce2dd4818b0783ca2b0ee97cfecbcb9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112057"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116492"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -171,7 +171,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1 millisecond     2007-01-01 13:10:10.1121111  
 2 milliseconds    2007-01-01 13:10:10.1131111  
 1 microsecond     2007-01-01 13:10:10.1111121  
@@ -220,7 +220,7 @@ SELECT 'nanosecond',DATEADD(nanosecond,1,@datetime2);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Year         2008-01-01 13:10:10.1111111  
 quarter      2007-04-01 13:10:10.1111111  
 month        2007-02-01 13:10:10.1111111  
@@ -271,7 +271,7 @@ FROM Sales.SalesOrderHeader;
   
 部分結果集：
   
-```sql
+```
 SalesOrderID OrderDate               PromisedShipDate  
 ------------ ----------------------- -----------------------  
 43659        2005-07-01 00:00:00.000 2005-07-03 00:00:00.000  
@@ -296,14 +296,14 @@ SalesOrderID OrderDate               PromisedShipDate
 此範例會將使用者定義變數指定為 *number* 和 *date* 的引數：
   
 ```sql
-DECLARE @days int = 365,   
-        @datetime datetime = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
+DECLARE @days INT = 365,   
+        @datetime DATETIME = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
 SELECT DATEADD(day, @days, @datetime);  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------------------  
 2000-12-31 01:01:01.110  
   
@@ -319,7 +319,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---------------------------  
 2013-02-06 14:29:59.6727944  
   

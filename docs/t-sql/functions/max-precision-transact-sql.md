@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6a44419d89a8c823794ad3bd69adcae1fbb463e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31b1c96a3cb6ab0a0a957ebcbff2d49776d658c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422632"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115139"
 ---
 # <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88422632"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 @@MAX_PRECISION  
 ```  
   
@@ -53,7 +52,7 @@ ms.locfileid: "88422632"
   
 ## <a name="examples"></a>範例  
   
-```  
+```sql  
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   

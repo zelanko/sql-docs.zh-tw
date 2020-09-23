@@ -21,12 +21,12 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf9ac8c8f907da233cc1168df7d4e81cb42c6c53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3efeffa1d628395824893bb2c0ae9d546347f79d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368234"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115351"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,19 +56,19 @@ ms.locfileid: "88368234"
   
 ```sql
 DECLARE @myid uniqueidentifier = NEWID();  
-SELECT CONVERT(char(255), @myid) AS 'char';  
+SELECT CONVERT(CHAR(255), @myid) AS 'char';  
 ```  
   
 下列範例會示範當值對於要轉換的目標資料類型而言太大時，資料的截斷方式。 因為 **uniqueidentifier** 類型限制為 36 個字元，所以超過該長度的字元會被截斷。
   
 ```sql
-DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
+DECLARE @ID NVARCHAR(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  

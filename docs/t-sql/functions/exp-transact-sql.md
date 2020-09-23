@@ -20,12 +20,12 @@ ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a866a13a9abf74781e114a1fab4928a0c2cb1042
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e93680972f686b2d596e9c8659d5a4bed90032a4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445802"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116454"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ EXP ( float_expression )
 ### <a name="a-finding-the-exponent-of-a-number"></a>A. 尋找數字的指數  
  下列範例會宣告一個變數，並且傳回該指定變數的指數值 (`10`) 以及文字描述。  
   
-```  
+```sql  
 DECLARE @var FLOAT  
 SET @var = 10  
 SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
@@ -79,7 +79,7 @@ The EXP of the variable is: 22026.5
 ### <a name="b-finding-exponentials-and-natural-logarithms"></a>B. 尋找指數和自然對數  
  下列範例會傳回 `20` 之自然對數的指數值，以及 `20` 之指數的自然對數。 由於這些函數互為反向函數，因此傳回值都是 `20`。  
   
-```  
+```sql  
 SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
@@ -98,7 +98,7 @@ GO
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. 尋找數字的指數  
  下列範例會傳回指定值的指數 (`10`)。  
   
-```  
+```sql  
 SELECT EXP(10);  
 ```  
   
@@ -112,7 +112,7 @@ SELECT EXP(10);
 ### <a name="d-finding-exponential-values-and-natural-logarithms"></a>D. 尋找指數和自然對數  
  下列範例會傳回 `20` 之自然對數的指數值，以及 `20` 之指數的自然對數。 由於這些函數互為反向函數，因此傳回值都是 `20`。  
   
-```  
+```sql  
 SELECT EXP( LOG(20)), LOG( EXP(20));  
 ```  
   

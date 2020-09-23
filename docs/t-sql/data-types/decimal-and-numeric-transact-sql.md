@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7bd1dcb906e7ba0ced0939313b21952d5ecd090
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 05c7ee73b7f37cdc96847f546db11f351b5edd68
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554499"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116159"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,8 +75,8 @@ p (有效位數)
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyDecimalColumn decimal(5,2)  
-,MyNumericColumn numeric(10,5)
+  MyDecimalColumn DECIMAL(5,2)  
+,MyNumericColumn NUMERIC(10,5)
   
 );  
   

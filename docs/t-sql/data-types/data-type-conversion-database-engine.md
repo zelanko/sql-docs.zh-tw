@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368554"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115037"
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 例如，下列指令碼會定義 `varchar` 類型的變數、將 `int` 類型的值指派給變數，然後使用字串選取變數的串連。
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ SELECT @string + ' is a string.'
 下列範例會顯示相似的指令碼，但是會改用 `int` 變數：
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ SELECT @notastring + ' is not a string.'
 為了評估運算式 `@notastring + ' is not a string.'`，SQL Server 會遵循資料類型優先順序規則，在計算運算式的結果前完成隱含轉換。 因為 `int` 具有比 `varchar` 更高的優先順序，所以 SQL Server 會嘗試將字串轉換成整數，但由於此字串無法轉換成整數，因此會失敗。 若運算式提供可進行轉換的字串，則陳述式會成功，如下列範例所示：
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

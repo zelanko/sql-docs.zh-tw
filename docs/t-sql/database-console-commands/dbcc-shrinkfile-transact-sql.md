@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479773"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115578"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88479773"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -158,7 +157,7 @@ FROM sys.database_files;
 
 在[以資料列版本設定為基礎的隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下執行的交易可以封鎖壓縮作業。 例如，當 DBCC SHRINK DATABASE 作業執行時，如果正在以資料列版本設定為基礎的隔離等級下進行大量刪除作業，則壓縮作業將會等到刪除作業完成之後，才會開始壓縮檔案。 當這種封鎖情況發生時，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 作業會列印資訊訊息 (SHRINKDATABASE 是 5202，SHRINKFILE 是 5203) 到 SQL Server 錯誤記錄檔中。 此訊息在第一個小時內每隔五分鐘記錄一次，然後每隔一小時記錄一次。 例如，如果錯誤記錄檔包含下列錯誤訊息，就會發生下列錯誤：
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

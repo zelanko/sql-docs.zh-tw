@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 5cde2ed7c2d53498bb360d36a0ae13edda5e3073
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ef7510dfa2583464ac5f0dcf29405c13318476
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468255"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115013"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 
@@ -43,7 +43,6 @@ ms.locfileid: "88468255"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DBCC CLEANTABLE  
 (  
     { database_name | database_id | 0 }  
@@ -81,7 +80,7 @@ DBCC CLEANTABLE 不應當做例行維護工作來執行， 而應該在對資料
 ## <a name="result-sets"></a>結果集  
 DBCC CLEANTABLE 會傳回：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

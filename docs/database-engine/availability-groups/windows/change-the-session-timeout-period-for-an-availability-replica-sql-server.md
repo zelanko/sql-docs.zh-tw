@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], session timeout
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fe9dac2261532afcb9430ae3dc8b7b3ea0ce3c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea1d38b4cc19c0752a036cfa08f4ecf49b7ca53a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896164"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115656"
 ---
 # <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>修改可用性群組複本的工作階段逾時期限
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

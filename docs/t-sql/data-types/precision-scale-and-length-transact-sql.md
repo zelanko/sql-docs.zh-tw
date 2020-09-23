@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f48de11f648d48a3d727514718b8bdd6304ad57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39542dd45b9d3aaec1eca6e0fd507f73fe7326a9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422881"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116956"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有效位數、小數位數和長度 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20
 
 下列運算式會傳回結果 `0.000001` 以符合 `decimal(38,6)`：
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 在此案例中，位數為 61，小數位數為 20。
 小數位數大於 6 且整數位數 (`precision-scale = 41`) 大於 32。 這個案例屬於乘法規則中的案例 (3)，其結果類型為 `decimal(38,6)`。

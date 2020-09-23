@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f6a8a9625582bd40b988f787bfdd6201bb2b747
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbbaa5a395ff608f677a49e5841907ee79bb667
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479686"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116443"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88479686"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 FILE_NAME ( file_id )   
 ```  
   

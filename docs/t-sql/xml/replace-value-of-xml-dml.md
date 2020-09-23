@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7c4133965870627a475fc7314f55952c38694a6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7efecb0dbecf4ae7e4d9d142eb6f3bff3f94d616
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426510"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116545"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88426510"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 replace value of Expression1   
 with Expression2  
 ```  
@@ -53,7 +53,7 @@ with Expression2
 在下列範例中，首先會將文件執行個體指派至 **xml** 類型的變數。 接著，**replace value of** XML DML 陳述式會更新文件中的值。  
   
 ```sql
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours="1.1"  
@@ -67,13 +67,13 @@ SELECT @myDoc;
 -- update text in the first manufacturing step  
 SET @myDoc.modify('  
   replace value of (/Root/Location/step[1]/text())[1]  
-  with     "new text describing the manu step"  
+  with "new text describing the manu step"  
 ');  
 SELECT @myDoc;  
 -- update attribute value  
 SET @myDoc.modify('  
   replace value of (/Root/Location/@LaborHours)[1]  
-  with     "100.0"  
+  with "100.0"  
 ');  
 SELECT @myDoc;  
 ```  
@@ -84,7 +84,7 @@ SELECT @myDoc;
 您可以在 **replace value of XML DML** 陳述式的 Expression2 中指定 **if** 運算式，如下列範例所示。 Expression1 識別第一個工作中心內要更新的 LaborHours 屬性。 Expression2 使用 **if** 運算式決定 LaborHours 屬性的新值。  
   
 ```sql
-DECLARE @myDoc xml  
+DECLARE @myDoc XML  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours=".1"  
@@ -111,10 +111,10 @@ SELECT @myDoc
 下列範例會更新儲存在資料行中的 XML：  
   
 ```sql
-drop table T  
-go  
-CREATE TABLE T (i int, x xml)  
-go  
+DROP TABLE T  
+GO  
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -143,52 +143,53 @@ FROM T
 在此範例中，您先在 AdventureWorks 資料庫中建立一個包含具類型的 xml 資料行的資料表 (T)。 接著便從 ProductModel 資料表的 Instructions 資料行，將製造指示 XML 執行個體複製成 T 資料表，然後套用插入至 T 資料表中的 XML。  
   
 ```sql
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,   
+  Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID=7  
+GO
 --insert a new location - <Location 1000/>.   
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
   as first  
-  into   (/MI:root)[1]  
+  into (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
-go  
+GO  
+SELECT Instructions  
+FROM T  
+GO  
 -- Now replace manu. tool in location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
-  with   "screwdriver"  
+  with "screwdriver"  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- Now replace value of lot size  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
-  with   500 cast as xs:decimal ?  
+  with 500 cast as xs:decimal ?  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 ```  
   
 請注意取代 LotSize 值時 **cast** 的用法。 當該值必須是特定類型時就需要使用它。 在此範例中，如果值為 500，就不一定需要明確轉換。  

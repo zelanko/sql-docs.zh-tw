@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a98fd2557655672389f5372009f3cf0adaa3ba9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b3d0f5307b8a9b96dec8b81f00550dbcd639ac9a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459138"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116265"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -147,9 +147,9 @@ MATCH 內的節點名稱可以重複。  換句話說，在同一個查詢中，
 ### <a name="a--find-a-friend"></a>A.  尋找朋友 
  下列範例會建立 Person 節點資料表和 friend 邊緣資料表、插入一些資料，然後使用 MATCH 來尋找 Alice (圖表中的一個人) 的朋友。
 
- ```
+ ```sql
  -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+ CREATE TABLE dbo.Person (ID INTEGER PRIMARY KEY, name VARCHAR(50)) AS NODE;
  CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
  -- Insert into node table
@@ -172,24 +172,22 @@ SELECT Person2.name AS FriendName
 FROM Person Person1, friend, Person Person2
 WHERE MATCH(Person1-(friend)->Person2)
 AND Person1.name = 'Alice';
-
  ```
 
  ### <a name="b--find-friend-of-a-friend"></a>B.  尋找朋友的朋友
  下列範例會嘗試尋找 Alice 朋友的朋友。 
 
- ```
+ ```sql
 SELECT Person3.name AS FriendName 
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
-
  ```
 
 ### <a name="c--more-match-patterns"></a>C.  其他 `MATCH` 模式
  以下是可在 MATCH 內指定模式的一些其他方法。
 
- ```
+ ```sql
  -- Find a friend
     SELECT Person2.name AS FriendName
     FROM Person Person1, friend, Person Person2

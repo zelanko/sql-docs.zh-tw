@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82855e167f44106078e7e2e3589f349eb307e503
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 239a48b378e186e6149a31012785835939d2cde7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417234"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115952"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88417234"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 OBJECT_DEFINITION ( object_id )  
 ```  
   
@@ -89,7 +88,7 @@ OBJECT_DEFINITION ( object_id )
 ### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. 傳回使用者自訂物件的來源文字  
  下列範例會傳回 `uAddress` 結構描述中 `Person` 使用者自訂觸發程序的定義。 內建函數 `OBJECT_ID` 用來將觸發程序的物件識別碼傳回給 `OBJECT_DEFINITION` 陳述式。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.uAddress')) AS [Trigger Definition];   
@@ -99,7 +98,7 @@ GO
 ### <a name="b-returning-the-source-text-of-a-system-object"></a>B. 傳回系統物件的來源文字  
  下列範例會傳回系統預存程序 `sys.sp_columns` 的定義。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];  

@@ -20,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 922f1da9e2988f5bf6a316101bad175dbe46b2b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c8caff3b757de461c79081976623ec493efffc4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479732"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116825"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -87,7 +87,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE myTable (column1 int, column2 varchar(256));  
+CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  
 INSERT INTO myTable VALUES (1, 'test');  
 GO  

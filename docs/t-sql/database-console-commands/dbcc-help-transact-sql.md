@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3440683db3fb0b72987e26913a43ed4ba2a852ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a609cd126f131e59ac2ed09ef91df70021c1ca6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311164"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116888"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88311164"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )  
 [ WITH NO_INFOMSGS ]  
 ```  

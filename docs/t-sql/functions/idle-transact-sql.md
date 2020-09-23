@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 373f01d1d381cccc32d7247c1d576630c9b0ba88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ac8dc223ee53ca51cb5a09836bc5e9f4efea817
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365534"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115520"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88365534"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@IDLE  
 ```  
 
@@ -56,7 +56,7 @@ ms.locfileid: "88365534"
 ## <a name="examples"></a>範例  
  下列範例會顯示傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在開始時間和目前時間之間所經歷的閒置毫秒數。 為了避免在將值轉換成百萬分之一秒時，發生算術溢位，這個範例會將其中一個值轉換成 `float` 資料類型。  
   
-```  
+```sql  
 SELECT @@IDLE * CAST(@@TIMETICKS AS float) AS 'Idle microseconds',  
    GETDATE() AS 'as of';  
 ```  

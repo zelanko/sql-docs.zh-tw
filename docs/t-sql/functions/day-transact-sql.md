@@ -24,12 +24,12 @@ ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c785d96e43944e758627c948a5249971d05401be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6e967b66ff4de244d1027583877c3250d4d11a7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88310804"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116793"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88310804"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DAY ( date )  
 ```  
   

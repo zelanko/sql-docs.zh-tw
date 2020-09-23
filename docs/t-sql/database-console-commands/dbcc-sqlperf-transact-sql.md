@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cae65d63d9974d12698949bce4c5483fcb380c17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 56b75e8a3cb34ed1c023b9d946af5eb54292b177
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479757"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115333"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88479757"
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 DBCC SQLPERF   
 (  
      [ LOGSPACE ]  

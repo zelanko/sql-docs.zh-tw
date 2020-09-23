@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 28dd70e39079b8c49d38ea0e165224c0d88b7cdd
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: 623c29594f1ceec2051eeec6e0a533fc948413dc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195104"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116627"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -436,8 +436,8 @@ GO
   
 ```sql  
 CREATE PROCEDURE dbo.RetrievePersonAddress
-@city_name nvarchar(30),  
- @postal_code nvarchar(15)
+@city_name NVARCHAR(30),  
+ @postal_code NVARCHAR(15)
 AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  

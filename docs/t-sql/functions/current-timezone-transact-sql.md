@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 828004a15fe7c6fb11dbde0e13b02d85e5685947
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60eb4edd5f52bb160b3be2fad2757b649a59d474
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468071"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115243"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "88468071"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE ( )  
 ```
   

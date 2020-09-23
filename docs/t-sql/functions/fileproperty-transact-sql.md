@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f05d17efce6b568d5abd2cc81f3a7954f19fb34e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 524fe8130742a58da0c806c8ad35c9287c732017
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445752"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116390"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88445752"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 FILEPROPERTY ( file_name , property )  
 ```  
   
@@ -69,8 +68,7 @@ FILEPROPERTY ( file_name , property )
 ## <a name="examples"></a>範例  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `IsPrimaryFile` 檔案名稱的 `AdventureWorks_Data` 屬性設定。  
   
-```  
-  
+```sql
 SELECT FILEPROPERTY('AdventureWorks2012_Data', 'IsPrimaryFile')AS [Primary File];  
 GO  
 ```  

@@ -35,11 +35,11 @@
     - name: 延伸模組
       items:
         - name: 延伸模組概觀
-          href: extensions.md
+          href: extensions/add-extensions.md
         - name: Azure Arc 延伸模組
           href: extensions/azure-arc-extension.md
         - name: 資料虛擬化延伸模組
-          href: data-virtualization-extension.md
+          href: extensions/data-virtualization-extension.md
         - name: Kusto 延伸模組
           href: extensions/kusto-extension.md
         - name: 機器學習延伸模組
@@ -55,39 +55,39 @@
         - name: 受控執行個體延伸模組
           href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL 延伸模組
-          href: postgres-extension.md
+          href: extensions/postgres-extension.md
         - name: PowerShell 延伸模組
-          href: powershell-extension.md
+          href: extensions/powershell-extension.md
         - name: SandDance 延伸模組
           href: sanddance-extension.md
         - name: 結構描述比較延伸模組
-          href: schema-compare-extension.md
+          href: extensions/schema-compare-extension.md
         - name: SQL Database Projects 延伸模組
           items:
             - name: SQL Database 專案延伸模組概觀
-              href: sql-database-project-extension.md
+              href: extensions/sql-database-project-extension.md
             - name: 開始使用 SQL Database 專案延伸模組
-              href: sql-database-project-extension-getting-started.md
+              href: extensions/sql-database-project-extension-getting-started.md
             - name: 建置和發佈專案
-              href: sql-database-project-extension-build.md
+              href: extensions/sql-database-project-extension-build.md
             - name: 從命令列開始建立專案
-              href: sql-database-project-extension-build-from-command-line.md
+              href: extensions/sql-database-project-extension-build-from-command-line.md
         - name: SQL Server Agent
-          href: sql-server-agent-extension.md
+          href: extensions/sql-server-agent-extension.md
         - name: SQL Server 中央管理伺服器延伸模組
-          href: sql-server-cms-extension.md
+          href: extensions/sql-server-cms-extension.md
         - name: SQL Server dacpac 延伸模組
-          href: sql-server-dacpac-extension.md
+          href: extensions/sql-server-dacpac-extension.md
         - name: SQL Server 匯入
-          href: sql-server-import-extension.md
+          href: extensions/sql-server-import-extension.md
         - name: SQL Server Profiler
-          href: sql-server-profiler-extension.md
+          href: extensions/sql-server-profiler-extension.md
     - name: 延伸模組製作
       items:
         - name: 擴充性概觀
           href: extensibility.md
         - name: 延伸模組製作
-          href: extension-authoring.md
+          href: extensions/extension-authoring.md
         - name: 擴充性 API
           href: extensibility-apis.md
         - name: 金鑰對應延伸模組

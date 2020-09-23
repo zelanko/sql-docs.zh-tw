@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b84e5749e7e217442e618d998cecf504d5be046
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b58823a6b9e6b43b3458392d1b9016c0716a2e32
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417254"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116357"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>邏輯函式 - IIF (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88417254"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 IIF ( boolean_expression, true_value, false_value )  
 ```  
   
@@ -65,8 +64,8 @@ IIF ( boolean_expression, true_value, false_value )
   
 ### <a name="a-simple-iif-example"></a>A. 簡單的 IIF 範例  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;  
 ```  
   
@@ -82,7 +81,7 @@ TRUE
   
 ### <a name="b-iif-with-null-constants"></a>B. 包含 NULL 常數的 IIF  
   
-```  
+```sql 
 SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;  
 ```  
   
@@ -90,7 +89,7 @@ SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;
   
 ### <a name="c-iif-with-null-parameters"></a>C. 包含 NULL 參數的 IIF  
   
-```  
+```sql  
 DECLARE @P INT = NULL, @S INT = NULL;  
 SELECT IIF ( 45 > 30, @p, @s ) AS Result;  
 ```  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee78ea030b50ee6ab90c5df616f2bd49f163ded2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363634"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115889"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88363634"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )   
 [ WITH ( SchemaDeclaration | TableName ) ]  
 ```  
@@ -111,8 +110,8 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  `OPENXML` 資料列集提供者建立了有 2 個資料行的資料列集 (`CustomerID` 和 `ContactName`)，`SELECT` 陳述式可由這個資料列集擷取必要的資料行 (本範例中為所有資料行)。  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);  
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);  
 SET @doc ='  
 <ROOT>  
 <Customer CustomerID="VINET" ContactName="Paul Henriot">  
@@ -132,9 +131,8 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- Execute a SELECT statement that uses the OPENXML rowset provider.  
 SELECT    *  
 FROM       OPENXML (@idoc, '/ROOT/Customer',1)  
-            WITH (CustomerID  varchar(10),  
-                  ContactName varchar(20));  
-  
+            WITH (CustomerID  VARCHAR(10),  
+                  ContactName VARCHAR(20));  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -168,8 +166,8 @@ NULL       NULL
   
  雖然**以元素為主**的對應是由 *flags* 參數所指定，但是在 *ColPattern* 中指定的對應會覆寫這個對應。  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);   
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);   
 SET @doc ='  
 <ROOT>  
 <Customer CustomerID="VINET" ContactName="Paul Henriot">  
@@ -218,8 +216,8 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
   
  最後，`SELECT` 陳述式會擷取**邊緣**資料表中的所有資料行。  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);   
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);   
 SET @doc ='  
 <ROOT>  
 <Customers CustomerID="VINET" ContactName="Paul Henriot">  
@@ -243,8 +241,7 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT statement that uses the OPENXML rowset provider.  
 SELECT    *  
 FROM       OPENXML (@idoc, '/ROOT/Customers')   
-EXEC sp_xml_removedocument @idoc;  
-  
+EXEC sp_xml_removedocument @idoc;   
 ```  
   
 ## <a name="see-also"></a>另請參閱  

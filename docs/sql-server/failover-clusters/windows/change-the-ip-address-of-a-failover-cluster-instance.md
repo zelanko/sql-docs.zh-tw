@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - modifying IP addresses
 - failover clustering [SQL Server], IP addresses
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 415a669546fcd91a7b504d419874dc539ed5c0ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8258f67e86d8eb4f1bc90de01aacfae2e80fd100
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895871"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115364"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>變更容錯移轉叢集執行個體的 IP 位址
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 04e11f27d26a7979dfc84b29d7c7de1b02eb02ab
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552570"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115432"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -181,7 +181,7 @@ CONTAINS (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -193,7 +193,7 @@ WHERE CONTAINS(Description, @SearchWord);
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -256,7 +256,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  根據預設，不論中間距離，也不論其順序，自訂相近詞彙會傳回包含指定之詞彙的任何資料列。 例如，文件中的任何地方、依任何順序只需要包含 `term1` 和 "`term3 term4`"，就會符合下列查詢：  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
 ```  
   
@@ -270,13 +270,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  例如，下列查詢會依任一順序，在五個詞彙的最大距離內搜尋 `AA` 和 `BB`。  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
  字串 `AA one two three four five BB` 會是相符項目。 在下列範例中，查詢指定在五個詞彙的最大距離內搜尋三個搜尋詞彙，`AA`、`BB` 和 `CC`：  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
 ```  
   
@@ -304,7 +304,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  例如，下列相近詞彙會按照指定順序但不論最大距離來搜尋單字 "`Monday`"、"`Tuesday`" 和 "`Wednesday`"：  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
@@ -468,7 +468,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
 SELECT Description   
 FROM Production.ProductDescription   

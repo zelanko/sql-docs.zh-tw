@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e377a022c4a027c64008b2a09ff58f2d7d27112c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e87e45e43a6b85a04dc623a48135bdfab4c8ce8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311734"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115617"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88311734"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child.GetAncestor ( n )   
 ```  

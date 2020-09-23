@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0b5e147a87e6559d1d3bd2782d46bf09a783297a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a80a6bdaa75d01f63f22244f93225a9b32ba93d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417554"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115561"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88417554"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -52,8 +52,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 DBCC USEROPTIONS 會針對 SET 選項的名稱傳回一個資料行，以及針對該選項的值傳回一個資料行 (值和項目可能不同)：
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 

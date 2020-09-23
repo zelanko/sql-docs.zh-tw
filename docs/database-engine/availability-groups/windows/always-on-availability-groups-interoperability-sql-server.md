@@ -6,19 +6,19 @@ ms.date: 04/20/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], interoperability
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a4f41009505a733eb58bef73f55697430550be3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480546"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115714"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性群組：互通性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

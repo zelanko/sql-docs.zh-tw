@@ -6,16 +6,16 @@ ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b9f992c50b19d8618f1eacbdbb4a441501de4a61
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b62c15496df5ded2295c3b401d7870bc2aa3184b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897678"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115384"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 容錯移轉叢集上安裝用戶端工具
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

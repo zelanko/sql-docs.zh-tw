@@ -6,7 +6,7 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
 - renaming virtual servers
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca8faa59c304f145eb2ac1dc46bab46d368d163b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897651"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115752"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

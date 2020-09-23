@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - sql13.swb.availabilitygroup.joinreplica.f1
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 00f1b5a7e373f5a77fe17611e8b92689da5030aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17c2b0f35dbd5eb682dc3844e1740ceb01e3fd64
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893847"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116181"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>將次要複本聯結至 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

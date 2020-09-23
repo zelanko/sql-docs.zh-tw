@@ -6,7 +6,7 @@ ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f131897a8f45f510237732d528e402f4dc2457a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900513"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115629"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

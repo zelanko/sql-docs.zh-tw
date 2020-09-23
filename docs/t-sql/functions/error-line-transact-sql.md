@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366264"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116731"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -68,7 +68,7 @@ ERROR_LINE ( )
 ### <a name="a-using-error_line-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_LINE  
 此程式碼範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 `ERROR_LINE` 會傳回發生錯誤的行號。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. 在含有預存程序的 CATCH 區塊中使用 ERROR_LINE  
 此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_LINE` 會傳回發生錯誤的行號。  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_LINE  
 此程式碼範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 `ERROR_LINE` 會傳回發生錯誤的行號，以及與錯誤本身相關的資訊。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

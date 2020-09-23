@@ -23,12 +23,12 @@ ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71a281b8af7d4532701a09cf1da274f523350f9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 283ed2043029ad89934079df96b81ac1bc11e040
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366144"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116752"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88366144"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 ERROR_MESSAGE ( )   
 ```  
 

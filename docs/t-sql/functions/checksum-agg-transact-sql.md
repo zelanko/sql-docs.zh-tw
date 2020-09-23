@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6190b42e9e52f9f20e9ad645c0169f08dc7694a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a423fefd8acfa2e917605955658f18c0a55c77d7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311124"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114920"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88311124"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )  
 ```  
   
@@ -70,7 +70,7 @@ DISTINCT
 ```sql
 --Get the checksum value before the column value is changed.  
 
-SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
+SELECT CHECKSUM_AGG(CAST(Quantity AS INT))  
 FROM Production.ProductInventory;  
 GO  
 ```  
@@ -89,7 +89,7 @@ WHERE Quantity=100;
 GO  
 
 --Get the checksum of the modified column.  
-SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
+SELECT CHECKSUM_AGG(CAST(Quantity AS INT))  
 FROM Production.ProductInventory;  
 ```  
   

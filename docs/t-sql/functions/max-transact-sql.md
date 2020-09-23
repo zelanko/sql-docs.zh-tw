@@ -21,12 +21,12 @@ ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b344d71bb3bd526e0b49624de3176d5b203b8049
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f68cdf9461211003f90aaf4e302be8df02c4722
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467987"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116023"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467987"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Aggregation Function Syntax  
 MAX( [ ALL | DISTINCT ] expression )  
   

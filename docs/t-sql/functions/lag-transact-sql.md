@@ -20,12 +20,12 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7edaea7f6e1f2e491674454aeac9b90d5e00d29e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 61921766a4b665ceadc5dd4791fa699f1f23d1dc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445751"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116694"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88445751"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 LAG (scalar_expression [,offset] [,default])  
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1c19a02d6cd965181f9ea94338e0669a3ec45df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e68ad7dbd0e0998fdffee08abde97446352990c4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422782"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115507"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88422782"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
@@ -69,8 +68,8 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="examples"></a>範例  
 此範例會解密原本以非對稱金鑰 `JanainaAsymKey02` 來加密的加密文字。 `AdventureWorks2012.ProtectedData04` 會儲存此非對稱金鑰。 此範例會以非對稱金鑰 `JanainaAsymKey02` 來解密傳回的資料。 此範例使用密碼 `pGFD4bb925DGvbd2439587y` 來解密此非對稱金鑰。 此範例會將傳回的純文字轉換成 **nvarchar** 類型。  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

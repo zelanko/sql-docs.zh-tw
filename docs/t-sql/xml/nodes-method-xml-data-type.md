@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2e5a22c943d675de6f71d205ed794c77913fef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e0bb9fd57a5e31ada020b84a55cac0608b5d569
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496370"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116612"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88496370"
   
 ## <a name="syntax"></a>語法  
   
-```sql
-  
+```syntaxsql
 nodes (XQuery) as Table(Column)  
 ```  
   
@@ -53,12 +52,12 @@ nodes (XQuery) as Table(Column)
 舉例來說，假設您有下列資料表：  
   
 ```sql
-T (ProductModelID int, Instructions xml)  
+T (ProductModelID INT, Instructions XML)  
 ```  
   
 資料表中儲存了下列製造指示文件。 這裡只顯示部份片段。 請注意，文件中有三個製造位置。  
   
-```sql
+```
 <root>  
   <Location LocationID="10"...>  
      <step>...</step>  
@@ -76,7 +75,7 @@ T (ProductModelID int, Instructions xml)
   
 含有查詢運算式 `/root/Location` 的 `nodes()` 方法引動過程會傳回含有三個資料列的資料列集，每個資料列都含有原始 XML 文件的邏輯複本，且其內容項目會設成其中一個 `<Location>` 節點：  
   
-```sql
+```
 Product  
 ModelID      Instructions  
 ----------------------------------  
@@ -95,13 +94,13 @@ ModelID      Instructions
   
 ```sql
 SELECT T2.Loc.query('.')  
-FROM   T  
-CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
+FROM T  
+CROSS APPLY Instructions.nodes('/root/Location') AS T2(Loc)   
 ```  
   
 結果如下：  
   
-```sql
+```
 ProductModelID  Instructions  
 ----------------------------------  
 1        <Location LocationID="10" ... />  
@@ -129,7 +128,7 @@ USE AdventureWorks;
 GO  
   
 CREATE FUNCTION XTest()  
-RETURNS xml  
+RETURNS XML  
 AS  
 BEGIN  
 RETURN '<document/>';  
@@ -154,7 +153,7 @@ GO
 接著，查詢會從每個資料列傳回內容節點：  
   
 ```sql
-DECLARE @x xml   
+DECLARE @x XML   
 SET @x='<Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -167,7 +166,7 @@ GO
   
 在下列範例結果中，查詢方法會傳回內容項目及其內容：  
   
-```sql
+```
 <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
 <row id="2"><name>moe</name></row>  
 <row id="3"/>  
@@ -178,12 +177,12 @@ GO
 ```sql
 SELECT T.c.query('..') AS result  
 FROM   @x.nodes('/Root/row') T(c)  
-go  
+GO  
 ```  
   
 結果如下：  
   
-```sql
+```
 <Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -235,7 +234,7 @@ go
   
   部分結果如下：  
   
-    ```sql
+    ```
     <MI:Location LocationID="10"  ...>  
        <MI:step ... />  
           ...  
@@ -257,22 +256,22 @@ go
 - `nodes()` 會套用至 `T1 (Locations)` 資料列集，並傳回 `T2 (steps)` 資料列集。 此資料列集包含原始製造說明文件的邏輯副本，並以 `/root/Location/step` 元素做為項目內容。  
   
 ```sql
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-./MI:step ') as T2(steps)         
+./MI:step ') AS T2(steps)         
 WHERE ProductModelID=7         
 GO         
 ```  
   
 結果如下：  
   
-```sql
+```
 ProductModelID LocID Step         
 ----------------------------         
 7      10   <step ... />         
@@ -288,13 +287,13 @@ ProductModelID LocID Step
   
 ```sql
 WITH XMLNAMESPACES (  
-   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS MI)  
   
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         

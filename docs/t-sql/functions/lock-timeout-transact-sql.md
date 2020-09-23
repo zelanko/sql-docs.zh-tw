@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e52cf67e220c6ff9a1b15b837ad037e2be83679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8344739fb058956f95367bb190132cec57a28923
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479635"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115503"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88479635"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@LOCK_TIMEOUT  
 ```  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88479635"
 ## <a name="examples"></a>範例  
  這個範例顯示當未設定 LOCK_TIMEOUT 值時的結果集。  
   
-```  
+```sql  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  
 ```  
@@ -69,7 +69,7 @@ Lock Timeout
   
  這個範例會將 LOCK_TIMEOUT 設為 1800 毫秒，然後呼叫 @@LOCK_TIMEOUT。  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  

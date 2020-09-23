@@ -23,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 657a3c207fb3e6928e183890ae5bc97b19da7387
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445740"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116673"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88445740"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 OBJECTPROPERTY ( id , property )   
 ```  
   
@@ -172,7 +172,7 @@ OBJECTPROPERTY ( id , property )
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假設 *object_id* 在目前資料庫內容中。 參考另一資料庫中之 *object_id* 的查詢會傳回 NULL 或不正確的結果。 例如，在下列查詢中，目前資料庫內容是 master 資料庫。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會嘗試傳回該資料庫中指定之 *object_id* 的屬性值，而不是查詢中所指定的資料庫。 查詢會傳回不正確的結果，因為 `vEmployee` 檢視表不在 master 資料庫中。  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -190,7 +190,7 @@ GO
 ### <a name="a-verifying-that-an-object-is-a-table"></a>A. 確認物件是資料表  
  下列範例會測試 `UnitMeasure` 是否為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的資料表。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 1  
@@ -200,13 +200,12 @@ ELSE IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 0
 ELSE IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') IS NULL  
    PRINT 'ERROR: UnitMeasure is not a valid object.';  
 GO  
-  
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. 確認純量值使用者定義函數具決定性  
  下列範例會測試使用者定義的純量值函式 `ufnGetProductDealerPrice` (會傳回 **money** 值) 是否具確定性。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID('dbo.ufnGetProductDealerPrice'), 'IsDeterministic');  
@@ -223,7 +222,7 @@ GO
 ### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C：尋找屬於特定結構描述的資料表  
  下列範例會傳回 dbo 結構描述中的所有資料表。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT name, object_id, type_desc  
@@ -238,7 +237,7 @@ GO
 ### <a name="d-verifying-that-an-object-is-a-table"></a>D：驗證物件是資料表  
  下列範例會測試 `dbo.DimReseller` 是否為 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中的資料表。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF OBJECTPROPERTY (OBJECT_ID(N'dbo.DimReseller'),'ISTABLE') = 1  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cf5807404f6ba5400750b38528ab8437bcc2be1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5bf98755fe784c00c9dce71a45b74a0a8cc03950
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468090"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115211"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "88468090"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE_ID ( )  
 ```
   

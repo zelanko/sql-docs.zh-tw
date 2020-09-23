@@ -6,16 +6,16 @@ ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5a6e5f2051a0e6937cd26d9ceec06d42ccbeb201
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565265"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115664"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

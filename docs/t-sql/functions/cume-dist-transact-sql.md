@@ -20,12 +20,12 @@ ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cee3a163b3fe08b59aab3542a8c3848626b63693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 761e940e04bc0d61c7b78102a9c3cc2a37ff016a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468138"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115272"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,10 +36,9 @@ ms.locfileid: "88468138"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
-  
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -75,8 +74,7 @@ ORDER BY Department, Rate DESC;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
-  
+```
 Department             LastName               Rate                  CumeDist               PctRank  
 ---------------------- ---------------------- --------------------- ---------------------- ----------------------  
 Document Control       Arifin                 17.7885               1                      1  

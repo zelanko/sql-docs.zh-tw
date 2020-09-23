@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d630d5c0cf4b51776bbfc6c6936267f11304557
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d3de0c039ec6d2832e3f0e6100b97786d83e5f2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367034"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116831"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88367034"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CONNECTIONPROPERTY ( property )  
 ```  
 

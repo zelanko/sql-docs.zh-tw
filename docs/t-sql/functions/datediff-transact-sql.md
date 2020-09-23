@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e5f0fa70dc5c46d984a4d7003fc1ae6a00906a7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: df865c15c13c78f01a8c3da30be2f39656dc7156
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112094"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116138"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "87112094"
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
@@ -171,8 +171,8 @@ SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'
 在此範例中，會以使用者定義的變數作為 *startdate* 和 *enddate* 的引數。
   
 ```sql
-DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate   datetime2 = '2007-05-04 12:10:09.3312722';   
+DECLARE @startdate DATETIME2 = '2007-05-05 12:10:09.3312722';  
+DECLARE @enddate   DATETIME2 = '2007-05-04 12:10:09.3312722';   
 SELECT DATEDIFF(day, @startdate, @enddate);  
 ```  
   

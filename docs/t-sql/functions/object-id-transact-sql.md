@@ -27,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34139155f6d5e7f58657a5f8e8adf6ac2d4ecbf3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0d939b4b198d72722ce5130a3339e299d69f06d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417244"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115957"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. 傳回指定物件的物件識別碼  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫之 `Production.WorkOrder` 資料表的物件識別碼。  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';  
@@ -92,7 +92,7 @@ GO
 ### <a name="b-verifying-that-an-object-exists"></a>B. 確認物件存在  
  下列範例會確認資料表有物件識別碼，來檢查指定的資料表是否存在。 如果資料表存在，就會刪除它。 如果資料表不存在，就不會執行 `DROP TABLE` 陳述式。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'dbo.AWBuildVersion', N'U') IS NOT NULL  
@@ -106,9 +106,9 @@ GO
 > [!IMPORTANT]  
 >  當您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 DB_ID 和 OBJECT_ID 傳回參數值時，請務必確定所傳回的是有效的識別碼。 如果找不到資料庫或物件名稱 (例如，因為不存在或是拼錯了)，這兩個函數都會傳回 NULL。 **sys.dm_db_index_operational_stats** 函數會將 NULL 解譯為指定所有資料庫或物件的萬用字元值。 由於這不見得是刻意安排的作業，因此本節所舉的範例，只會示範決定資料庫和物件識別碼的安全方法。  
   
-```  
-DECLARE @db_id int;  
-DECLARE @object_id int;  
+```sql  
+DECLARE @db_id INT;  
+DECLARE @object_id INT;  
 SET @db_id = DB_ID(N'AdventureWorks2012');  
 SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
 IF @db_id IS NULL   
@@ -131,7 +131,7 @@ GO
 ### <a name="d-returning-the-object-id-for-a-specified-object"></a>D：傳回指定物件的物件識別碼  
  下列範例會傳回 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]資料庫之 `FactFinance` 資料表的物件識別碼。  
   
-```  
+```sql  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   

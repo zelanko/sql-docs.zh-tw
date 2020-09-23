@@ -20,12 +20,12 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aec9fccaeb0ba0a6a0fd67e575bbc1a7877fad72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2869c46d3aca815968f77829f2ce57b31de06a6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459692"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116064"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88459692"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 LEAD ( scalar_expression [ ,offset ] , [ default ] )   
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  

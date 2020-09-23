@@ -12,12 +12,12 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196398"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115421"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -47,16 +47,15 @@ ms.locfileid: "86196398"
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. 子查詢中的 TOP 和 ORDER BY  
   
-```  
+```sql
 SELECT * FROM tblA  
 WHERE col1 IN  
-    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);  
-  
+    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);
 ```  
   
 ### <a name="b-having-clause-with-a-correlated-subquery"></a>B. 含有相互關聯子查詢的 HAVING 子句  
   
-```  
+```sql
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 GROUP BY dm.EmployeeKey, dm.FirstName, dm.LastName  
@@ -64,13 +63,12 @@ HAVING 5000 <=
 (SELECT sum(OrderQuantity)  
 FROM FactResellerSales AS frs  
 WHERE dm.EmployeeKey = frs.EmployeeKey)  
-ORDER BY EmployeeKey;  
-  
+ORDER BY EmployeeKey;
 ```  
   
 ### <a name="c-correlated-subqueries-with-analytics"></a>C. 含有分析的相互關聯子查詢  
   
-```  
+```sql
 SELECT * FROM ReplA AS A   
 WHERE A.ID IN   
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
@@ -78,7 +76,7 @@ WHERE A.ID IN
   
 ### <a name="d-correlated-union-statements-in-a-subquery"></a>D. 子查詢中相互關聯的聯集陳述式  
   
-```  
+```sql
 SELECT * FROM RA   
 WHERE EXISTS   
     (SELECT 1 FROM RB WHERE RB.b1 = RA.a1   
@@ -87,14 +85,14 @@ WHERE EXISTS
   
 ### <a name="e-join-predicates-in-a-subquery"></a>E. 子查詢中的聯結述詞  
   
-```  
+```sql
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
 ### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. 子查詢中相互關聯的聯結述詞  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE RA.a2 IN   
     (SELECT 1 FROM RB INNER JOIN RC ON RA.a1=RB.b1+RC.c1);  
@@ -102,7 +100,7 @@ SELECT * FROM RA
   
 ### <a name="g-correlated-subselects-as-data-sources"></a>G. 作為資料來源的相互關聯子選擇  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE 3 = (SELECT COUNT(*)   
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
@@ -110,14 +108,14 @@ SELECT * FROM RA
   
 ### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. 與彙總搭配使用的資料值中相互關聯子查詢  
   
-```  
+```sql
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. 搭配相互關聯子查詢使用 IN  
  下列範例在相關或重複的子查詢中使用 `IN`。 這是一項相依於外部查詢來取得其值的查詢。 內部查詢會重複執行，針對外部查詢可能選取的每個資料列各執行一次。 這個查詢會擷取一個 `EmployeeKey` 執行個體，再加上 `FactResellerSales` 資料表中 `OrderQuantity` 為 `5` 且員工識別碼在 `DimEmployee` 和 `FactResellerSales` 資料表中相符之每位員工的名字和姓氏。  
   
-```  
+```sql
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 WHERE 5 IN   
@@ -130,7 +128,7 @@ ORDER BY EmployeeKey;
 ### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. 搭配子查詢使用 EXISTS 和 IN 之比較  
  下列範例示範語意相等的查詢，以說明使用 `EXISTS` 關鍵字和 `IN` 關鍵字之間的差異。 兩者都是子查詢的範例，會針對產品子類別為 `Road Bikes` 的每個產品名稱各擷取一個執行個體。 `ProductSubcategoryKey` 會在 `DimProduct` 與 `DimProductSubcategory`資料表之間進行比對。  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE EXISTS  
@@ -143,7 +141,7 @@ ORDER BY EnglishProductName;
   
  Or  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE dp.ProductSubcategoryKey IN  
@@ -156,16 +154,14 @@ ORDER BY EnglishProductName;
 ### <a name="k-using-multiple-correlated-subqueries"></a>K. 使用多個相互關聯的子查詢  
  這個範例利用相關的子查詢來尋找銷售了特定產品的員工名稱。  
   
-```  
+```sql
 SELECT DISTINCT LastName, FirstName, e.EmployeeKey  
 FROM DimEmployee e JOIN FactResellerSales s ON e.EmployeeKey = s.EmployeeKey  
 WHERE ProductKey IN  
 (SELECT ProductKey FROM DimProduct WHERE ProductSubcategoryKey IN  
 (SELECT ProductSubcategoryKey FROM DimProductSubcategory   
  WHERE EnglishProductSubcategoryName LIKE '%Bikes'))  
-ORDER BY LastName  
-;  
-  
+ORDER BY LastName;  
 ```  
   
   

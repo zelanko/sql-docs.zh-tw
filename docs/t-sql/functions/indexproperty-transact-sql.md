@@ -21,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 853fbe7569d160cfa9fee7e59b4f9c323c5d4ec1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417364"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115476"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88417364"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ## <a name="examples"></a>範例  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Employee` 資料表 `PK_Employee_BusinessEntityID` 索引的 **IsClustered**、**IndexDepth** 和 **IndexFillFactor** 屬性的值。  
   
-```  
+```sql  
 SELECT   
     INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
         'PK_Employee_BusinessEntityID','IsClustered')AS [Is Clustered],  
@@ -109,7 +109,7 @@ Is Clustered Index Depth Fill Factor
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會檢查 `FactResellerSales` 資料表上其中一個索引的屬性。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT   

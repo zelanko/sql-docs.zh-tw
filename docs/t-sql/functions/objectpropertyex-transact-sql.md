@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d2e9cd5f22c0aea8b44c0e7db527be893c732f8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445671"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116656"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88445671"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
@@ -178,7 +178,7 @@ OBJECTPROPERTYEX ( id , property )
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假設 *object_id* 在目前資料庫內容中。 參考另一資料庫中之 *object_id* 的查詢會傳回 NULL 或不正確的結果。 例如，在下列查詢中，目前資料庫內容是 master 資料庫。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會嘗試傳回這個資料庫 (而不是查詢中所指定的資料庫) 中指定之 *object_id* 的屬性值。 查詢會傳回不正確的結果，因為 `vEmployee` 檢視表不在 master 資料庫中。  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -196,7 +196,7 @@ GO
 ### <a name="a-finding-the-base-type-of-an-object"></a>A. 找出物件的基底類型  
  以下的範例在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中為 `MyEmployeeTable` 資料表建立了 SYNONYM `Employee`，然後傳回 SYNONYM 的基底類型。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SYNONYM MyEmployeeTable FOR HumanResources.Employee;  
@@ -216,18 +216,17 @@ U
 ### <a name="b-returning-a-property-value"></a>B. 傳回屬性值  
  以下的範例傳回了指定資料表的 UPDATE 觸發程序數量。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'HumanResources.Employee'), N'TABLEUPDATETRIGGERCOUNT');  
 GO  
-  
 ```  
   
 ### <a name="c-finding-tables-that-have-a-foreign-key-constraint"></a>C. 尋找具有 FOREIGN KEY 條件約束的資料表  
  下列範例使用 `TableHasForeignKey` 屬性來傳回具有 FOREIGN KEY 條件約束的所有資料表。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, object_id, schema_id, type_desc  
@@ -235,7 +234,6 @@ FROM sys.objects
 WHERE OBJECTPROPERTYEX(object_id, N'TableHasForeignKey') = 1  
 ORDER BY name;  
 GO  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -243,7 +241,7 @@ GO
 ### <a name="d-finding-the-base-type-of-an-object"></a>D：找出物件的基底類型  
  下列範例會傳回 `dbo.DimReseller` 物件的基底類型。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OBJECTPROPERTYEX ( object_id(N'dbo.DimReseller'), N'BaseType')AS BaseType;  

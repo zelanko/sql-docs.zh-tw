@@ -23,12 +23,12 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 183cc509061439bdc2792e7e81ed0d8f1e847ca1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e3fbe43f03e202e87ce951042091190f48a4b8c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459840"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115316"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459840"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 AVG ( [ ALL | DISTINCT ] expression )  
    [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
@@ -113,7 +113,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 TerritoryID Average Bonus         YTD Sales  
 ----------- --------------------- ---------------------  
 NULL        0.00                  1252127.9471  
@@ -171,11 +171,11 @@ FROM Production.Product;
 ```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -185,7 +185,7 @@ ORDER BY TerritoryID,SalesYear;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg            CumulativeTotal  
 ---------------- ----------- ----------- -------------------- -------------------- --------------------  
 274              NULL        2005        559,697.56           559,697.56           559,697.56  
@@ -208,10 +208,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -220,7 +220,7 @@ ORDER BY SalesYear;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg            CumulativeTotal  
 ---------------- ----------- ----------- -------------------- -------------------- --------------------  
 274              NULL        2005        559,697.56           2,449,684.05         17,147,788.35  

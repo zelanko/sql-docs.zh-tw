@@ -25,12 +25,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd9c5fc213462de6c1d4f7ddae0b3948957ffa0e
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 6fcc2f6593a7fc7a72c80ee3fe271cdb392ee747
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042541"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115395"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 
@@ -99,8 +99,8 @@ ms.locfileid: "89042541"
 下列範例顯示在變數宣告中使用 `char` 和 `varchar` 資料類型時，這些資料類型的 *n* 預設值是 1。
 
 ```sql
-DECLARE @myVariable AS varchar = 'abc';
-DECLARE @myNextVariable AS char = 'abc';
+DECLARE @myVariable AS VARCHAR = 'abc';
+DECLARE @myNextVariable AS CHAR = 'abc';
 --The following returns 1
 SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO
@@ -111,12 +111,12 @@ GO
 下列範例顯示搭配使用 `char` 或 `varchar` 資料類型與 `CAST` 和 `CONVERT` 函式時，*n* 的預設值是 30。
 
 ```sql
-DECLARE @myVariable AS varchar(40);
+DECLARE @myVariable AS VARCHAR(40);
 SET @myVariable = 'This string is longer than thirty characters';
-SELECT CAST(@myVariable AS varchar);
-SELECT DATALENGTH(CAST(@myVariable AS varchar)) AS 'VarcharDefaultLength';
-SELECT CONVERT(char, @myVariable);
-SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
+SELECT CAST(@myVariable AS VARCHAR);
+SELECT DATALENGTH(CAST(@myVariable AS VARCHAR)) AS 'VarcharDefaultLength';
+SELECT CONVERT(CHAR, @myVariable);
+SELECT DATALENGTH(CONVERT(CHAR, @myVariable)) AS 'VarcharDefaultLength';
 ```
 
 ### <a name="c-converting-data-for-display-purposes"></a>C. 轉換資料以加以顯示
@@ -128,11 +128,11 @@ USE AdventureWorks2012;
 GO
 SELECT BusinessEntityID,
    SalesYTD,
-   CONVERT (varchar(12),SalesYTD,1) AS MoneyDisplayStyle1,
+   CONVERT (VARCHAR(12),SalesYTD,1) AS MoneyDisplayStyle1,
    GETDATE() AS CurrentDate,
-   CONVERT(varchar(12), GETDATE(), 3) AS DateDisplayStyle3
+   CONVERT(VARCHAR(12), GETDATE(), 3) AS DateDisplayStyle3
 FROM Sales.SalesPerson
-WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
+WHERE CAST(SalesYTD AS VARCHAR(20) ) LIKE '1%';
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -155,13 +155,13 @@ BusinessEntityID SalesYTD              DisplayFormat CurrentDate             Dis
 
 ```sql
 DECLARE @myid uniqueidentifier = NEWID();
-SELECT CONVERT(char(255), @myid) AS 'char';
+SELECT CONVERT(CHAR(255), @myid) AS 'char';
 ```
 
 下列範例會示範當值對於要轉換的目標資料類型而言太大時，資料的截斷方式。 因為 **uniqueidentifier** 類型限制為 36 個字元，所以超過該長度的字元會被截斷。
 
 ```sql
-DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';
+DECLARE @ID NVARCHAR(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
 ```
 

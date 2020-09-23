@@ -21,12 +21,12 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0223be182fc7e29466f0a8a676cea6dc94eb915b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15924f5116261de308a9288935396d24d54b8aa8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364094"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115113"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88364094"
   
 ## <a name="syntax"></a>語法  
   
-```sql  
-  
+```syntaxsql  
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
@@ -78,7 +77,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ### <a name="a-simple-example"></a>A. 簡單範例  
  下列範例會傳回最低 (最小) 稅率。 此範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫  
   
-```  
+```sql  
 SELECT MIN(TaxRate)  
 FROM Sales.SalesTaxRate;  
 GO  
@@ -97,7 +96,7 @@ GO
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
  下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `HumanResources.Department` 資料表中的各部門提供彙總值。  
   
-```  
+```sql  
 SELECT DISTINCT Name  
        , MIN(Rate) OVER (PARTITION BY edh.DepartmentID) AS MinSalary  
        , MAX(Rate) OVER (PARTITION BY edh.DepartmentID) AS MaxSalary  
@@ -142,7 +141,7 @@ Tool Design                   8.62                  29.8462               23.505
 ### <a name="c-using-min"></a>C. 使用 MIN  
  下列範例會使用 MIN 彙總函式，以傳回指定銷售訂單集中最便宜 (最低價) 之產品的價格。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice)  
@@ -160,7 +159,7 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
 ### <a name="d-using-min-with-over"></a>D. 搭配 OVER 使用 MIN  
  下列範例會使用 MIN OVER() 分析函式，以傳回每一筆銷售訂單中最便宜產品的價格。 結果集會根據 `SalesOrderID` 資料行進行分割。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice) OVER(PARTITION BY SalesOrderNumber) AS LeastExpensiveProduct,  

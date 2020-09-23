@@ -20,12 +20,12 @@ ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3407f021d27365dcdee7c07b6ebea3a00b3d0845
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13a9f556b74300fde0c792380d8616b36cccb19a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468181"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115278"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COT of the angle is: -0.040312                
   
 (1 row(s) affected)  

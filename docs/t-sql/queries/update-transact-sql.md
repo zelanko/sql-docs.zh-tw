@@ -39,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 076592e79090eef33adbe17dca602b71ffc18bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8bde11240927cc7f20581c1f9a9fd7655b38f19
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307097"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115936"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -283,10 +283,10 @@ IF OBJECT_ID ('dbo.Table2', 'U') IS NOT NULL
     DROP TABLE dbo.Table2;  
 GO  
 CREATE TABLE dbo.Table1   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2   
-    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT PRIMARY KEY NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  
@@ -313,10 +313,10 @@ IF OBJECT_ID ('dbo.Table2', 'U') IS NOT NULL
     DROP TABLE dbo.Table2;  
 GO  
 CREATE TABLE dbo.Table1  
-    (c1 int PRIMARY KEY NOT NULL, c2 int NOT NULL);  
+    (c1 INT PRIMARY KEY NOT NULL, c2 INT NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2  
-    (d1 int PRIMARY KEY NOT NULL, d2 int NOT NULL);  
+    (d1 INT PRIMARY KEY NOT NULL, d2 INT NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES (1, 10);  
 INSERT INTO dbo.Table2 VALUES (1, 20), (2, 30);  
@@ -428,8 +428,8 @@ GO
 USE tempdb;  
 GO  
 -- UPDATE statement with CTE references that are correctly matched.  
-DECLARE @x TABLE (ID int, Value int);  
-DECLARE @y TABLE (ID int, Value int);  
+DECLARE @x TABLE (ID INT, Value INT);  
+DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
 INSERT @y VALUES (1, 100),(2, 200);  
   
@@ -457,8 +457,8 @@ CTE 參考未正確相符的 UPDATE 陳述式。
 ```sql  
 USE tempdb;  
 GO  
-DECLARE @x TABLE (ID int, Value int);  
-DECLARE @y TABLE (ID int, Value int);  
+DECLARE @x TABLE (ID INT, Value INT);  
+DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
 INSERT @y VALUES (1, 100),(2, 200);  
   
@@ -642,7 +642,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NewPrice int = 10;  
+DECLARE @NewPrice INT = 10;  
 UPDATE Production.Product  
 SET ListPrice += @NewPrice  
 WHERE Color = N'Red';  
@@ -723,10 +723,10 @@ JOIN Production.WorkOrder AS wo
 USE AdventureWorks2012;  
 GO  
 -- Create the table variable.  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
   
 -- Populate the table variable with employee ID values from HumanResources.Employee.  
 INSERT INTO @MyTableVar (EmpID)  
@@ -837,9 +837,9 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table (  
-    SummaryBefore nvarchar(max),  
-    SummaryAfter nvarchar(max));  
+DECLARE @MyTableVar TABLE (  
+    SummaryBefore NVARCHAR(max),  
+    SummaryAfter NVARCHAR(max));  
 UPDATE Production.Document  
 SET DocumentSummary .WRITE (N'features',28,10)  
 OUTPUT deleted.DocumentSummary,   
@@ -927,7 +927,7 @@ GO
   
 ```sql  
 UPDATE Archive.dbo.Records  
-SET [Chart] = CAST('Xray 1' as varbinary(max))  
+SET [Chart] = CAST('Xray 1' as VARBINARY(max))  
 WHERE [SerialNumber] = 2;  
 ```  
   
@@ -987,7 +987,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE Production.uspProductUpdate  
-@Product nvarchar(25)  
+@Product NVARCHAR(25)  
 AS  
 SET NOCOUNT ON;  
 UPDATE Production.Product  
@@ -1010,10 +1010,10 @@ EXEC Production.uspProductUpdate 'BK-%';
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
     ModifiedDate datetime);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25,  
@@ -1043,7 +1043,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
-@NewHours smallint  
+@NewHours SMALLINT  
 AS   
 SET NOCOUNT ON;  
 UPDATE HumanResources.Employee  
@@ -1144,8 +1144,8 @@ OPTION (LABEL = N'label1');
 -- Uses AdventureWorks  
   
 CREATE TABLE YearlyTotalSales (  
-    YearlySalesAmount money NOT NULL,  
-    Year smallint NOT NULL )  
+    YearlySalesAmount MONEY NOT NULL,  
+    Year SMALLINT NOT NULL )  
 WITH ( DISTRIBUTION = REPLICATE );  
   
 INSERT INTO YearlyTotalSales VALUES (0, 2004);  
@@ -1165,10 +1165,10 @@ SELECT * FROM YearlyTotalSales;
 
 ```sql
 CREATE TABLE dbo.Table1   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES(1, 10.0);  
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  

@@ -23,12 +23,12 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bd4a53a70eced1c59c8b33d973fab451451d294
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67d21c6d51a90015fe78833d572ff4740d64bd81
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422692"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116029"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL) 
 
@@ -67,7 +67,7 @@ ISNULL ( check_expression , replacement_value )
 ### <a name="a-using-isnull-with-avg"></a>A. 使用 ISNULL 搭配 AVG  
  下列範例會尋找所有產品的加權平均值。 它會在 `50` 資料表的 `Weight` 資料行中，用值 `Product` 來取代所有 NULL 項目。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT AVG(ISNULL(Weight, 50))  
@@ -87,7 +87,7 @@ GO
 ### <a name="b-using-isnull"></a>B. 使用 ISNULL  
  下列範例會選取 `AdventureWorks2012` 中所有特殊供應項目的描述、折扣百分比、最小數量和最大數量。 如果所有特殊供應項目的最大數量是 NULL，結果集所顯示的 `MaxQty` 便是 `0.00`。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description, DiscountPct, MinQty, ISNULL(MaxQty, 0.00) AS 'Max Quantity'  
@@ -121,7 +121,7 @@ GO
 ### <a name="c-testing-for-null-in-a-where-clause"></a>C. 在 WHERE 子句中測試 NULL  
  請勿使用 ISNULL 來尋找 NULL 值。 請改用 IS NULL。 下列範例會尋找加權資料行中有 `NULL` 的所有產品。 請注意 `IS` 和 `NULL` 之間的空格。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight  
@@ -135,7 +135,7 @@ GO
 ### <a name="d-using-isnull-with-avg"></a>D. 使用 ISNULL 搭配 AVG  
  下列範例會尋找範例資料表中所有產品的加權平均值。 它會在 `50` 資料表的 `Weight` 資料行中，用值 `Product` 來取代所有 NULL 項目。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT AVG(ISNULL(Weight, 50))  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ### <a name="e-using-isnull"></a>E. 使用 ISNULL  
  下列範例會使用 ISNULL 來在 `MinPaymentAmount` 資料行中測試 NULL 值，然後為那些資料列顯示 `0.00` 值。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ResellerName,   
@@ -176,7 +176,7 @@ ORDER BY ResellerName;
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 來在 WHERE 子句中測試 NULL  
  下列範例會尋找 `NULL` 資料行中有 `Weight` 的所有產品。 請注意 `IS` 和 `NULL` 之間的空格。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName, Weight  

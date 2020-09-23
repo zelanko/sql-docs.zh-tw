@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29f6feeb045e3c8418bfb63fd28e784113dc629f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e84cc199c94775a38268ab486712c5f5982bdb26
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364924"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115454"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88364924"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]  
     table_or_view_name', index_id , key_id )   
 ```  
@@ -75,7 +74,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
 ### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. 利用 INDEX_COL 傳回索引資料行名稱  
  下列範例會傳回 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 索引中兩個索引鍵資料行的資料行名稱。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

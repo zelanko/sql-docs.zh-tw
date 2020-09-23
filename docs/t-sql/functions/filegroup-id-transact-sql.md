@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ce3c3947ec276935d601905dc1ea7b4d0188a3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff8932e241349836f34dad60c805d4396ca84575
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422742"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116410"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422742"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql 
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
@@ -56,7 +56,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 ## <a name="examples"></a>範例  
 此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `PRIMARY` 檔案群組的檔案群組識別碼。  
   
-```  
+```sql  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  

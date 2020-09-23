@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08f593fc3123e6f99f3e44473d75101eacd406e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f62ec1073df44ff755277e60bd61906c25ed4723
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368074"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116122"
 ---
 # <a name="write-database-engine"></a>Write (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ Write 會寫出 **SqlHierarchyId** 的二進位表示法到傳入的 **BinaryWri
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```csharp
 void Write( BinaryWriter w )
 ```  
 
@@ -50,12 +50,11 @@ void Write( BinaryWriter w )
   
 ## <a name="examples"></a>範例  
   
-```sql
+```csharp
 MemoryStream stream = new MemoryStream();  
 BinaryWriter bw = new BinaryWriter(stream);  
 hid.Write(bw);  
 byte[] encoding = stream.ToArray();  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱

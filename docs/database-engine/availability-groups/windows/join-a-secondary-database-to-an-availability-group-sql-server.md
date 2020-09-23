@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - sql13.swb.availabilitygroup.joindbs.f1
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 952ffb4f049719d298a7f42e57c847a50c6e27f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8674dbd200e582d75e488999f6f5e2bf7004bd0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901300"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115022"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>將次要資料庫聯結至 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076620"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115593"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ DBCC SHRINKDATABASE 會試圖將每個實體記錄檔立即壓縮成目標大小
 ## <a name="troubleshooting"></a>疑難排解  
 壓縮作業可以由在[資料列版本設定隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)之下執行的交易進行封鎖。 例如，當 DBCC SHRINK DATABASE 作業執行時，正在以資料列版本設定為基礎的隔離等級下進行大量刪除作業。 發生這種情況時，壓縮作業將會等到刪除作業完成之後，才會開始壓縮檔案。 當壓縮作業在等待時，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 作業會列印資訊訊息 (SHRINKDATABASE 是 5202，SHRINKFILE 是 5203)。 這則訊息會在第一個小時每隔五分鐘列印至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，接下來每個小時列印一次。 例如，如果錯誤記錄檔包含下列的錯誤訊息：  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. 縮小 Azure Synapse Analytics 資料庫
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 

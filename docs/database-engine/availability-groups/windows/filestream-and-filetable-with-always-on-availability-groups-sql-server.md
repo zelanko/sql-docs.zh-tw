@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - FileTables [SQL Server], Availability Groups
 - FILESTREAM [SQL Server], Availability Groups
@@ -15,12 +15,12 @@ ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b98c555c9110981159cc3344d0adadd874bae7e0
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: fae2557d2849dc85fd616053e745a947f6b4c254
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522910"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115080"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>搭配 Always On 可用性群組使用 FILESTREAM 和 FileTable
 

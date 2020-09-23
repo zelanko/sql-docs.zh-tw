@@ -21,12 +21,12 @@ ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f166e322f37ab4c78e8871bdcaae5e203711a17f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ff4bc91b513b7e1b86afd784d789b6a49065f93
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367574"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115567"
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 --------- --------- -------------------------   
 124.00    -123.00    0.00                       
   

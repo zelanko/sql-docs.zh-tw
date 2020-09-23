@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2299352c6047dd177c900fe0747245b27037d2ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce7382722999e7120cafc3fcc7aeff496d1b97c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496332"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116555"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +31,7 @@ ms.locfileid: "88496332"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 value (XQuery, SQLType)  
 ```  
   
@@ -55,9 +54,9 @@ value (XQuery, SQLType)
 ### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. 對 xml 類型變數使用 value() 方法  
  在下列範例中，XML 執行個體是儲存在 `xml` 類型的變數中。 `value()` 方法會從 XML 擷取 `ProductID` 屬性值， 然後此值會指派給 `int` 變數。  
   
-```  
-DECLARE @myDoc xml  
-DECLARE @ProdID int  
+```sql
+DECLARE @myDoc XML  
+DECLARE @ProdID INT  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -78,13 +77,13 @@ SELECT @ProdID
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. 使用 value() 方法來擷取 xml 類型資料行中的值  
  下列查詢是針對 `AdventureWorks` 資料庫中的 **xml** 類型資料行 (`CatalogDescription`) 所指定。 此查詢會從儲存在資料行中的每一個 XML 執行個體擷取 `ProductModelID` 屬性值。  
   
-```  
+```sql
 SELECT CatalogDescription.value('             
     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
-ORDER BY Result desc             
+ORDER BY Result DESC             
 ```  
   
  請注意下列項目是從上一個查詢而來：  
@@ -107,10 +106,10 @@ ORDER BY Result desc
   
  此查詢會從將保固資訊 (<`Warranty`> 元素) 作為功能之一的 XML 執行個體中，擷取產品型號識別碼。 `WHERE` 子句中的條件會使用 `exist()` 方法，只擷取滿足此條件的資料列。  
   
-```  
+```sql
 SELECT CatalogDescription.value('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
+           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -140,8 +139,8 @@ Result
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. 使用 exist() 方法而非 value() 方法  
  基於效能的考量，不要在述詞中使用 `value()` 方法來與關聯式值做比較，而是使用 `exist()` 搭配 `sql:column()` 進行比較。 例如：  
   
-```  
-CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
+```sql
+CREATE TABLE T (c1 INT, c2 VARCHAR(10), c3 XML)  
 GO  
   
 SELECT c1, c2, c3   
@@ -152,7 +151,7 @@ GO
   
  這可由下列方式來撰寫：  
   
-```  
+```sql
 SELECT c1, c2, c3   
 FROM T  
 WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1  

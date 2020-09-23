@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 121f3d656a0d40bf97fbf01a47b92e47be9c6adb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445297"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116638"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88445297"
  
  下列是 SQL Server 和 Azure SQL Database 的語法：
 
-```sql  
+```syntaxsql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
@@ -49,7 +49,7 @@ ms.locfileid: "88445297"
 
 下列是 Azure SQL 資料倉儲和平行處理資料倉儲的語法：
 
-```sql  
+```syntaxsql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
@@ -92,7 +92,7 @@ TOP 運算式不會影響因觸發程序而執行的陳述式。 在觸發程序
 當您在查詢中指定包含 UNION、UNION ALL、EXCEPT 或 INTERSECT 運算子的 TOP 子句時，請特別小心。 您可能撰寫一個傳回非預期結果的查詢，因為當這些運算子用於選取作業時，TOP 和 ORDER BY 子句的邏輯處理順序不一定是直覺式。 例如，提供下列資料表和資料時，假設您想要傳回最便宜的紅色汽車和最便宜的藍色汽車。 也就是紅色轎車和藍色小貨車。  
   
 ```sql  
-CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
+CREATE TABLE dbo.Cars(Model VARCHAR(15), Price MONEY, Color VARCHAR(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
@@ -190,7 +190,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @p AS int = 10;  
+DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
 ORDER BY VacationHours DESC;  
@@ -265,10 +265,10 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   nvarchar(11) NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  YearlySales  money NOT NULL  
+( EmployeeID   NVARCHAR(11) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  YearlySales  MONEY NOT NULL  
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  

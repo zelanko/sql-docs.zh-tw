@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a46720f3752e5588221a3af686d2449554dc0fe4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 862e7aa70a3d26f5555c5f809d5fb24137de1a40
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88310924"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116100"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88310924"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 COL_LENGTH ( 'table' , 'column' )   
 ```  
   
@@ -67,7 +67,7 @@ COL_LENGTH ( 'table' , 'column' )
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE t1(c1 varchar(40), c2 nvarchar(40) );  
+CREATE TABLE t1(c1 VARCHAR(40), c2 NVARCHAR(40) );  
 GO  
 SELECT COL_LENGTH('t1','c1')AS 'VarChar',  
       COL_LENGTH('t1','c2')AS 'NVarChar';  
@@ -77,7 +77,7 @@ DROP TABLE t1;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 VarChar     NVarChar  
 40          80  
 ```  

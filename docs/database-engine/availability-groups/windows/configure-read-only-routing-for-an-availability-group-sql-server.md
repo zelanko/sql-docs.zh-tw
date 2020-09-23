@@ -6,7 +6,7 @@ ms.date: 02/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - read-only routing
 - Availability Groups [SQL Server], readable secondary replicas
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 35016718bc38b959dd91d2c91f41bdf9d5b73627
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 4dd29dcd85dcc85469ace6ff7d743bd575a55413
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480865"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115743"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的唯讀路由
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

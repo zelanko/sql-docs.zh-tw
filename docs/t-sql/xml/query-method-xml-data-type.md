@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a8383e599cde5ab99bdf7238e177196eb059784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af8a312db85630c9f7e527b47ad876daf9520eef
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496351"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116597"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "88496351"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 query ('XQuery')  
 ```  
   
@@ -49,8 +48,8 @@ XQuery
 查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
 ```sql
-declare @myDoc xml  
-set @myDoc = '<Root>  
+DECLARE @myDoc XML  
+SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
   <Warranty>1 year parts and labor</Warranty>  
@@ -113,7 +112,6 @@ SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescripti
        AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
-
 ```  
   
 ## <a name="see-also"></a>另請參閱  

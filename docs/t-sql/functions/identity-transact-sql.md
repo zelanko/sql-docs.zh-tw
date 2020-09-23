@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d4c3f909144846292acf1247411582e7d9d638bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eff66d795dce39c21ee6a4354e8f34a62ed15d6c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365384"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115482"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88365384"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@IDENTITY  
 ```  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88365384"
 ## <a name="examples"></a>範例  
  下列範例會將資料列插入含有識別欄位 (`LocationID`) 的資料表，並利用 `@@IDENTITY` 來顯示新資料列所用的識別值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the value of LocationID in the last row in the table.  

@@ -21,12 +21,12 @@ ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c7e5deac23eaed47a1426c51bdb0aee087f10d0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c1ebbb0fc376d4c3995218c499816725dbe12932
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110620"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114940"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "87110620"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
@@ -78,7 +78,7 @@ CHARINDEX 會根據輸入定序來執行比較。 若要執行指定定序的比
 此範例會在已搜尋字串值變數 `@document` 中搜尋 `bicycle`。
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
 SELECT CHARINDEX('bicycle', @document);  
@@ -87,7 +87,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 48            
 ```  
@@ -96,7 +96,7 @@ GO
 此範例會使用選擇性 *start_location* 參數，在已搜尋字串值變數 `@document` 的第五個字元開始搜尋 `vital`。
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -106,7 +106,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 16            
   
@@ -117,7 +117,7 @@ GO
 此範例會顯示 CHARINDEX 在 *expressionToSearch* 內找不到 *expressionToFind* 時的結果集。
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -175,7 +175,6 @@ SELECT CHARINDEX ( 'Test',
 此範例會顯示 `'This is a Test'` 中字串 `'TEST'` 的不區分大小寫搜尋。
   
 ```sql
-  
 USE tempdb;  
 GO  
 SELECT CHARINDEX ( 'TEST',  

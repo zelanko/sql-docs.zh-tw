@@ -19,12 +19,12 @@ ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2183bdd6d636ec7b8a63cc6bc73896de3eb69981
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 568c6334506b3b8cc2d186d9d6ad6ee48fa773ac
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445791"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116797"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88445791"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -86,7 +86,7 @@ SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ---------------------------  
 2010-12-31 23:59:59.0000000  
@@ -112,7 +112,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------------------  
 2011-08-15 14:23:44.5  
   

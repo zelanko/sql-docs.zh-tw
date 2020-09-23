@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6f0f9f8ec2c3f8588172b17f8876b0ed7cfb68a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ec9f2a854daa85ea57627c13fa64c3fddeb70c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468217"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115606"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88468217"
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
-```sql
+```syntaxsql
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   

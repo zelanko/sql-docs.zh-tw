@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffc3d6b3ec03d8903124e1fd75515a93fd43cd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53667e55c7728271fce8d9e61cd6ddeb96ccc89e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999192"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116320"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 
@@ -42,7 +42,7 @@ ms.locfileid: "85999192"
 ## <a name="syntax"></a>語法  
 下列語法摘要說明如何使用 `PIVOT` 運算子。  
   
-```  
+```syntaxsql  
 SELECT <non-pivoted column>,  
     [first pivoted column] AS <column name>,  
     [second pivoted column] AS <column name>,  
@@ -164,8 +164,8 @@ FROM PurchaseOrderHeader;
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
-CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
-    Emp3 int, Emp4 int, Emp5 int);  
+CREATE TABLE pvt (VendorID INT, Emp1 INT, Emp2 INT,  
+    Emp3 INT, Emp4 INT, Emp5 INT);  
 GO  
 INSERT INTO pvt VALUES (1,4,3,5,4,4);  
 INSERT INTO pvt VALUES (2,4,1,5,5,5);  

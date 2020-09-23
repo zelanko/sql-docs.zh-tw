@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fffc7d4a09e29066942c321fc65b48202d247ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4fe77504233fe2569a978c9f51c34e4e2236993
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365474"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116330"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88365474"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
@@ -95,8 +95,8 @@ GO
 IF OBJECT_ID(N't7', N'U') IS NOT NULL   
     DROP TABLE t7;  
 GO  
-CREATE TABLE t6(id int IDENTITY);  
-CREATE TABLE t7(id int IDENTITY(100,1));  
+CREATE TABLE t6(id INT IDENTITY);  
+CREATE TABLE t7(id INT IDENTITY(100,1));  
 GO  
 CREATE TRIGGER t6ins ON t6 FOR INSERT   
 AS  

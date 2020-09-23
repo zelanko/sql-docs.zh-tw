@@ -6,16 +6,16 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d8c71bc806bc01443b07c9cb43cb5ea5be939fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb5244cb547ee450a5e5a5e06e3c3f4f0f30d204
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894484"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116211"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>動態管理檢視與系統目錄檢視 (Always On 可用性群組)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

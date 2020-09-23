@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459853"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116766"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88459853"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 排序分割區中的資料列  
 此範例會根據庫存產品數量依指定庫存位置來排列庫存產品。 `DENSE_RANK` 會依 `LocationID` 分割結果集，並依 `Quantity` 以邏輯方式排序結果集。 請注意產品 494 和 495 具相同的數量。 因為它們具有相同的數量值，所以其次序值都是一。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 排序結果集中的所有資料列  
 此範例會依員工薪水的排序傳回前 10 位員工。 因為 `SELECT` 陳述式沒有指定 `PARTITION BY` 子句，所以 `DENSE_RANK` 函式會套用至所有結果集資料列。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ BusinessEntityID Rate                  RankBySalary
 
 可用於相同的查詢中。 如需函式特定範例，請參閱每個次序函式。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D.排序分割區中的資料列  
 此範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 `DENSE_RANK` 會依 `SalesTerritoryGroup` 分割資料列集，並依 `SalesAmountQuota` 排序結果集。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

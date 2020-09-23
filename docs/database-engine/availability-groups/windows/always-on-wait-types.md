@@ -6,16 +6,16 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 50886885852fd9ffe2d759be779989cb221cf76f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900919"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115805"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>識別與可用性群組相關的等候
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

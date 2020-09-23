@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0443c0e73593b68b2a1084fbff2fccd7739beebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6cd2cb8379281733a4fadada57af60780d0f0db
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459713"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115120"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88459713"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@LANGID  
 ```  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88459713"
 ## <a name="examples"></a>範例  
  下列範例會將目前工作階段的語言設定為 `Italian`，並且使用 `@@LANGID` 傳回義大利文的識別碼。  
   
-```  
+```sql  
 SET LANGUAGE 'Italian'  
 SELECT @@LANGID AS 'Language ID'  
 ```  

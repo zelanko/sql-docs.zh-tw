@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af91c04f85eae26326ab05e2deb83030267cc7fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc2c16fb026bb64a304c1582b59ee7ffa09f35d6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422822"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116503"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88422822"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 COLUMNS_UPDATED ( )   
 ```  
 
@@ -94,24 +94,24 @@ IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
    DROP TABLE auditEmployeeData;  
 GO  
 CREATE TABLE dbo.employeeData (  
-   emp_id int NOT NULL PRIMARY KEY,  
-   emp_bankAccountNumber char (10) NOT NULL,  
-   emp_salary int NOT NULL,  
-   emp_SSN char (11) NOT NULL,  
-   emp_lname nchar (32) NOT NULL,  
-   emp_fname nchar (32) NOT NULL,  
-   emp_manager int NOT NULL  
+   emp_id INT NOT NULL PRIMARY KEY,  
+   emp_bankAccountNumber CHAR (10) NOT NULL,  
+   emp_salary INT NOT NULL,  
+   emp_SSN CHAR (11) NOT NULL,  
+   emp_lname NCHAR (32) NOT NULL,  
+   emp_fname NCHAR (32) NOT NULL,  
+   emp_manager INT NOT NULL  
    );  
 GO  
 CREATE TABLE dbo.auditEmployeeData (  
    audit_log_id uniqueidentifier DEFAULT NEWID() PRIMARY KEY,  
-   audit_log_type char (3) NOT NULL,  
-   audit_emp_id int NOT NULL,  
-   audit_emp_bankAccountNumber char (10) NULL,  
-   audit_emp_salary int NULL,  
-   audit_emp_SSN char (11) NULL,  
+   audit_log_type CHAR (3) NOT NULL,  
+   audit_emp_id INT NOT NULL,  
+   audit_emp_bankAccountNumber CHAR (10) NULL,  
+   audit_emp_salary INT NULL,  
+   audit_emp_SSN CHAR (11) NULL,  
    audit_user sysname DEFAULT SUSER_SNAME(),  
-   audit_changed datetime DEFAULT GETDATE()  
+   audit_changed DATETIME DEFAULT GETDATE()  
    );  
 GO  
 CREATE TRIGGER dbo.updEmployeeData   

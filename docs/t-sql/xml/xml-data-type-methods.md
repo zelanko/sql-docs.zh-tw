@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ad40f95ce20db318d475f3317e6a2ebfc0b02cf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b139187edc98242b7b4efc03ebd53a71fe415f3
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414894"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116559"
 ---
 # <a name="xml-data-type-methods"></a>xml 資料類型方法
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "88414894"
   
  您可以使用使用者自訂類型方法叫用語法以呼叫這些方法。 例如：  
   
-```  
+```sql
 SELECT XmlCol.query(' ... ')  
-FROM   Table  
+FROM Table  
 ```  
   
 > [!NOTE]  
