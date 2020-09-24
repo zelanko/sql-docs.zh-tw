@@ -45,13 +45,13 @@
         - name: 機器學習延伸模組
           items:
             - name: 機器學習延伸模組概觀
-              href: machine-learning-extension.md
+              href: extensions/machine-learning-extension.md
             - name: 管理資料庫中的套件
-              href: machine-learning-extension-manage-packages.md
+              href: extensions/machine-learning-extension-manage-packages.md
             - name: 進行預測
-              href: machine-learning-extension-predictions.md
+              href: extensions/machine-learning-extension-predictions.md
             - name: 匯入和檢視模型
-              href: machine-learning-extension-import-view-models.md
+              href: extensions/machine-learning-extension-import-view-models.md
         - name: 受控執行個體延伸模組
           href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL 延伸模組
@@ -113,15 +113,15 @@
     - name: Notebooks
       items:
         - name: 筆記本概觀
-          href: notebooks-guidance.md
+          href: notebooks/notebooks-guidance.md
         - name: 使用 SQL 核心
-          href: notebooks-tutorial-sql-kernel.md
+          href: notebooks/notebooks-sql-kernel.md
         - name: 使用 Python 核心
-          href: notebooks-tutorial-python-kernel.md
+          href: notebooks/notebooks-python-kernel.md
         - name: 使用 Kusto 核心
           href: notebooks/notebooks-kusto-kernel.md
-        - name: Kqlmagic 延伸模組
-          href: notebooks-kqlmagic.md
+        - name: 使用 Kqlmagic
+          href: notebooks/notebooks-kqlmagic.md
     - name: 部署
       items:
         - name: 部署 Azure SQL Edge
