@@ -5,16 +5,16 @@ description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076656"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687725"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -24,12 +24,31 @@ ms.locfileid: "90076656"
 
 >[!Note]
 >在 SQL Server 2019 CU5 版本之前，巨量資料叢集中有一項限制，使您只能針對一個 Active Directory 網域部署一個叢集。 CU5 版本中已移除這項限制，請參閱[概念：在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deployment-background.md)，以取得新功能的詳細資料。 本文中的範例已經過調整，同時適用於兩種部署使用案例。
+>
 
 ## <a name="background"></a>背景
 
-若要啟用 Active Directory (AD) 驗證，BDC 會自動建立叢集中各種服務所需的使用者、群組、機器帳戶和服務主體名稱 (SPN)。 若要提供這些帳戶的部分內含項目並允許範圍權限，請在部署期間選擇將在其中建立所有 BDC 相關 AD 物件的組織單位 (OU)。 在叢集部署之前建立此 OU。
+若要啟用 Active Directory (AD) 驗證，BDC 會自動建立叢集中各種服務所需的使用者、群組、機器帳戶和服務主體名稱 (SPN)。 若要提供這些帳戶的一些內含項目，並允許範圍權限，我們建議在進行叢集部署之前先建立組織單位 (OU)。 將會在在部署期間建立所有 BDC 相關 AD 物件。 
 
-若要在 Active Directory 中自動建立所有必要的物件，BDC 在部署期間需要一個 AD 帳戶。 此帳戶必須有權限在提供的 OU 內建立使用者、群組和機器帳戶。
+## <a name="pre-requisites"></a>必要條件
+
+### <a name="organizational-unit-ou"></a>組織單位 (OU)
+組織單位 (OU) 是 Active Directory 內的子分支，其中會放置使用者、群組，甚至是其他組織單位。 大型圖片組織單位可以用來鏡像組織的功能或商業結構。 在此文章文中，我們將建立名為 `bdc` 的 OU 作為範例。 
+
+>[!NOTE]
+>組織單位 (OU) 代表系統管理界限，並可讓客戶控制資料管理員的授權範圍。 
+
+
+您可以依照 [OU 設計原則](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts)決定在組織內使用 OU 的最佳結構。 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>BDC 網域服務帳戶的 AD 帳戶
+
+若要能夠自動在 Active Directory 中建立所有必要物件，BDC 需要一個擁有特殊權限、可在所提供組織單位 (OU) 內建立使用者、群組與電腦帳戶的 AD 帳戶。 此文章將說明如何設定此 AD 帳戶的權限。 我們使用 AD 帳戶呼叫 `bdcDSA` 作為此文章中的範例。
+
+### <a name="auto-generated-active-directory-objects"></a>已自動產生 Active Directory 物件
+BDC 部署會自動產生帳戶與群組名稱。 每個帳戶都代表 BDC 中的服務，而且會在 BDC 叢集使用中的整個存留期中受 BDC 管理。 那些帳戶擁有每個服務所需的服務主體名稱 (SPN)。  如需其所管理 AD 自動產生的帳戶、群組與服務的完整清單，請參閱[自動產生的 Active Directory 物件](active-directory-objects.md)。
+
+
 
 >[!IMPORTANT]
 >視網域控制站中設定的密碼到期原則而定，這些帳戶的密碼可能會過期。 預設的到期原則為 42 天。 沒有任何機制可輪替 BDC 中所有帳戶的認證，因此一旦符合到期期限，叢集將會變成無法運作。 為因應此問題，請在網域控制站中將 BDC 服務帳戶的到期原則更新為 [密碼永久有效]。 此動作可以在到期時間之前或之後完成。 如果是後者，Active Directory 將會重新啟用過期的密碼。
@@ -38,16 +57,16 @@ ms.locfileid: "90076656"
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="設定密碼到期原則":::
 
-如需 AD 帳戶和群組的清單，請參閱[自動產生的 Active Directory 物件](active-directory-objects.md)。
 
 以下步驟假設您已經有 Active Directory 網域控制站。 如果您沒有網域控制站，下列[指南](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) \(英文\) 包含的步驟可能有幫助。
+
 
 ## <a name="create-ad-objects"></a>建立 AD 物件
 
 使用 AD 整合部署 BDC 之前，請執行下列事項：
 
-1. 建立將會儲存所有 BDC AD 物件的組織單位 (OU)。 或者，您也可以在部署時選擇現有的 OU。
-1. 為 BDC 建立 AD 帳戶，或使用現有帳戶，並提供正確的權限給此 BDC AD 帳戶。
+1. 建立將會儲存所有 BDC 相關 AD 物件的組織單位 (OU)。 或者，您也可以在部署時選擇現有的 OU。
+1. 為 BDC 建立 AD 帳戶，或使用現有帳戶，並提供所提供組織單位 (OU) 內的正確權限給此 BDC AD 帳戶。
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>為 BDC 網域服務帳戶在 AD 中建立使用者
 

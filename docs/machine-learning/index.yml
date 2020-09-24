@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 05/27/2020
-  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
-  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+  ms.openlocfilehash: 226eb1c5afe9812cf5bcc29de47289b865ac0c3c
+  ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/20/2020
-  ms.locfileid: "86485299"
+  ms.lasthandoff: 09/24/2020
+  ms.locfileid: "91136366"
 landingContent:
 - title: SQL Server 上的機器學習
   linkLists:
@@ -96,15 +96,15 @@ landingContent:
   - linkListType: overview
     links:
     - text: 什麼是適用於 Azure Data Studio 的機器學習延伸模組？
-      url: ../azure-data-studio/machine-learning-extension.md
+      url: ../azure-data-studio/extensions/machine-learning-extension.md
   - linkListType: how-to-guide
     links:
     - text: 管理資料庫中的套件
-      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+      url: ../azure-data-studio/extensions/machine-learning-extension-manage-packages.md
     - text: 進行預測
-      url: ../azure-data-studio/machine-learning-extension-predictions.md
+      url: ../azure-data-studio/extensions/machine-learning-extension-predictions.md
     - text: 匯入或檢視模型
-      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+      url: ../azure-data-studio/extensions/machine-learning-extension-import-view-models.md
 - title: SQL Server 巨量資料叢集
   linkLists:
   - linkListType: overview
