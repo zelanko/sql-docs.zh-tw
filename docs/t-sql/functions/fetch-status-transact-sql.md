@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e8e3c851b411be330d60eb5733d94614c644fbb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88310104"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117091"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88310104"
 ## <a name="examples"></a>範例  
 此範例使用 `@@FETCH_STATUS` 控制 `WHILE` 迴圈中的資料指標活動。  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT BusinessEntityID, JobTitle  
 FROM AdventureWorks2012.HumanResources.Employee;  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - automatic page repair
 - Availability Groups [SQL Server], automatic page repair
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 195b796514be6ac86de1b997d88de1b6eee44394
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729131"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117029"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自動修復頁面 (可用性群組：資料庫鏡像)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

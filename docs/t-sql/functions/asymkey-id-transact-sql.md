@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0fc2bad348f27caa34916f91909f9358a474231
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59956382fb5cded4dfac61499c6bb3349b31a8b7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417464"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117119"
 ---
 # <a name="asymkey_id-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88417464"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   

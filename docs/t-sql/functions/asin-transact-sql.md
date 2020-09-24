@@ -21,12 +21,12 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43905f174185f45cb2d56d3e9325bf0098cfb4e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 680486ac7d743347df759c96f31b4b7925881a5d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417544"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117198"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,27 +56,27 @@ ASIN ( float_expression )
 ```sql
 /* The first value will be -1.01. This fails because the value is   
 outside the range.*/  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -1.01  
-SELECT 'The ASIN of the angle is: ' + CONVERT(varchar, ASIN(@angle))  
+SELECT 'The ASIN of the angle is: ' + CONVERT(VARCHAR, ASIN(@angle))  
 GO  
   
 -- The next value is -1.00.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -1.00  
-SELECT 'The ASIN of the angle is: ' + CONVERT(varchar, ASIN(@angle))  
+SELECT 'The ASIN of the angle is: ' + CONVERT(VARCHAR, ASIN(@angle))  
 GO  
   
 -- The next value is 0.1472738.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.1472738  
-SELECT 'The ASIN of the angle is: ' + CONVERT(varchar, ASIN(@angle))  
+SELECT 'The ASIN of the angle is: ' + CONVERT(VARCHAR, ASIN(@angle))  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -------------------------  
 .Net SqlClient Data Provider: Msg 3622, Level 16, State 1, Line 3  
 A domain error occurred.  

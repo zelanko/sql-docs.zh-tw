@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fcabdb207b1e15994323731c30c1a3516222c899
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e8af312809066bef0a1e73bcdb1d8902f1c7808
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417214"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117066"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88417214"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   

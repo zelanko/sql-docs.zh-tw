@@ -21,12 +21,12 @@ ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc9c293eec94a0bacc24bdd2c4b70811f535cb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7dd9d89534be641da25c0cbf0d4f7e1e58d82dde
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445896"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117145"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,14 +54,14 @@ ATN2 ( float_expression , float_expression )
 下列範例會計算指定的 `ATN2` 和 `x` 元件的 `y`。
   
 ```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar, ATN2(@y, @x));  
+DECLARE @x FLOAT = 35.175643, @y FLOAT = 129.44;  
+SELECT 'The ATN2 of the angle is: ' + CONVERT(VARCHAR, ATN2(@y, @x));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The ATN2 of the angle is: 1.30545                         
 (1 row(s) affected)  
 ```  

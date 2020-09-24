@@ -6,16 +6,16 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1b92e0ce9e3d705587b81604dac28a2e927d3e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efe29087d77a524128357ba2651fa411b279e658
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882958"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117017"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>進行 FailureConditionLevel 屬性設定
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

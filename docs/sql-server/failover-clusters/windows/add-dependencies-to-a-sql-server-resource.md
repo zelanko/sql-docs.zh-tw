@@ -7,7 +7,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - resource dependencies [SQL Server]
 - failover clustering [SQL Server], dependencies
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edfe4aef388749cf1a9362f31f9ae2668f85b524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 402fd3d816145c182520317ab61e65493bfb4149
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454420"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117221"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>將相依性加入 SQL Server 資源
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

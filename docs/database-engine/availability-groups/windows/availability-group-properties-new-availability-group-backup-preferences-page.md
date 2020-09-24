@@ -6,7 +6,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilitygroupproperties.backuppreferences.f1
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e71c01cfcabaf074b255b1afabd6e72b9fc9e14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 57e24082eb7bf1fe1e7c2cecc86275ac5d918b3b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900413"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117015"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 56037b1a9caf1c6b37c62e0bdb10ecbf76c045a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f374a9a935a0bc0e4c015fb3eff4e87a2be4e20
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496357"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117176"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,8 +29,7 @@ ms.locfileid: "88496357"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 modify (XML_DML)  
 ```  
   

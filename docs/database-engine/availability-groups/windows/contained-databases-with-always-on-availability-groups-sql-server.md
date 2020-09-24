@@ -6,19 +6,19 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - contained database, AlwaysOnAvailabilityGroups
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26518e529c02018c43a08d4e0597aa7fe7507359
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 19905877e4651a2f2372c521cc09839abe938d68
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565263"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116996"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>搭配使用自主資料庫與 AlwaysOn 可用性群組 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

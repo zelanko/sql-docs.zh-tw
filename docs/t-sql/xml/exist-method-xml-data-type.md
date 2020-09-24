@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f79e3aed7926b8cd3d123139d317735bc6d94abe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1788db3b0baec4f9ab7279f13ff792e6d7764ea6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356384"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117209"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88356384"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 exist (XQuery)   
 ```  
   
@@ -51,10 +50,10 @@ exist (XQuery)
 > [!NOTE]  
 >  **exist()** 方法會針對傳回非空白結果的 XQuery 運算式傳回 1。 若您在 **exist()** 方法內指定 **true()** 或 **false()** 函數，則 **exist()** 方法會傳回 1，因為函數 **true()** 及 **false()** 分別會傳回布林值 True 及 False。 也就是說，它們會傳回非空白的結果。 因此，**exist()** 會傳回 1 (True)，如下列範例所示：  
   
-```  
-declare @x xml;  
-set @x='';  
-select @x.exist('true()');   
+```sql
+DECLARE @x XML;  
+SET @x='';  
+SELECT @x.exist('true()');   
 ```  
   
 ## <a name="examples"></a>範例  
@@ -63,12 +62,12 @@ select @x.exist('true()');
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>範例：針對 XML 類型變數指定 exist() 方法  
  在下列範例中，@x 是 **xml** 類型變數 (不具類型的 xml)，而 @f 則是整數類型變數，用以儲存 **exist()** 方法所傳回的值。 如果儲存在 XML 執行個體中的日期值是 `2002-01-01`，**exist()** 方法會傳回 True (1)。  
   
-```  
-declare @x xml;  
-declare @f bit;  
-set @x = '<root Somedate = "2002-01-01Z"/>';  
-set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
-select @f;  
+```sql  
+DECLARE @x XML;  
+DECLARE @f BIT;  
+SET @x = '<root Somedate = "2002-01-01Z"/>';  
+SET @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
+SELECT @f;  
 ```  
   
  在比較 **exist()** 方法中的日期時，請注意下列要點：  
@@ -81,9 +80,9 @@ select @f;
   
  下列範例與上一個範例相似，差別在其具有 <`Somedate`> 元素。  
   
-```  
-DECLARE @x xml;  
-DECLARE @f bit;  
+```sql
+DECLARE @x XML;  
+DECLARE @f BIT;  
 SET @x = '<Somedate>2002-01-01Z</Somedate>';  
 SET @f = @x.exist('/Somedate[(text()[1] cast as xs:date ?) = xs:date("2002-01-01Z") ]')  
 SELECT @f;  
@@ -100,13 +99,13 @@ SELECT @f;
   
  如果製造指示文件包含具有 `LocationID=50` 的 <`Location`> 元素，針對 @x 變數所指定的 **exist()** 方法將會傳回 1 (True)。 否則，該方法會傳回 0 (False)。  
   
-```  
-DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
+```sql
+DECLARE @x XML (Production.ManuInstructionsSchemaCollection);  
 SELECT @x=Instructions  
 FROM Production.ProductModel  
 WHERE ProductModelID=67;  
 --SELECT @x  
-DECLARE @f int;  
+DECLARE @f INT;  
 SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /AWMI:root/AWMI:Location[@LocationID=50]  
 ');  
@@ -116,7 +115,7 @@ SELECT @f;
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>範例：針對 XML 類型資料行指定 exist() 方法  
  下列查詢將擷取目錄描述不包含 <`Specifications`> 元素規格的產品型號識別碼：  
   
-```  
+```sql
 SELECT ProductModelID, CatalogDescription.query('  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
@@ -142,7 +141,7 @@ WHERE CatalogDescription.exist('
   
  查詢會指定 xml 資料類型的 **query()** 與 **exist()** 方法，這兩種方法都會在查詢初構中宣告相同的命名空間。 在此例中，您可能會想要使用 WITH XMLNAMESPACES 來宣告前置詞並在查詢中使用它。  
   
-```  
+```sql
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   

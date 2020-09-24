@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbd5be9b5c350819dc8b1b86ca9eff8bfb205259
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bbd0ad445399fe45ddf704d0037bb7ee31a53b2c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113568"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117162"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "87113568"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 DATEPART ( datepart , date )  
 ```  
   

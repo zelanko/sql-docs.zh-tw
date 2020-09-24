@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
 - clusters [SQL Server], maintaining
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c5a6abf9599591bf1619b951926626fc337cf170
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da021bee317997233c7e7370e00eb0f5c8444844
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887788"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117242"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>容錯移轉叢集執行個體管理及維護
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

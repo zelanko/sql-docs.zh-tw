@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e466b8d66760704ce7ee90028210dfa5dfabc22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25ce07cf4605082faf496264aa6c3b6e5fe513e7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417474"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117181"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88417474"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```syntaxsql
 ASSEMBLYPROPERTY('assembly_name', 'property_name')  
 ```  
   

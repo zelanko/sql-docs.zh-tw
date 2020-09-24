@@ -6,7 +6,7 @@ ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - adding nodes
 - nodes [Faillover Clustering], removing
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9162dba1861193bba542feb51bc4c793c2c7d011
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435569"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117042"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>在容錯移轉叢集執行個體中新增或移除節點 (安裝程式)
 

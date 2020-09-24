@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0d2878824d9525f5fbb09d2a7fa9609fa072e7e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1cb7e61d6a86773f41244c88dd75762eab7bfed
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467589"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117055"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,6 @@ ms.locfileid: "88467589"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  
 ```  
@@ -76,11 +75,10 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* 是 **nvarchar**。 當使用另一個字元資料類型當做輸入時，會發生隱含轉換。 不能使用大型字串資料類型 nvarchar(max) 和 varchar(max)。 在下列範例中，定義為 `@SearchWord` 的 `varchar(30)` 變數會造成 `FREETEXT` 述詞中的隱含轉換。  
   
-```sql  
-  
+```sql
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -91,10 +89,9 @@ WHERE FREETEXT(Description, @SearchWord);
  由於「參數探測」不適用於轉換，因此請使用 **nvarchar** 來獲得更好的效能。 在此範例中，請將 `@SearchWord` 宣告為 `nvarchar(30)`。  
   
 ```sql  
-  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -151,7 +148,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30);  
+DECLARE @SearchWord NVARCHAR(30);  
 SET @SearchWord = N'high-performance';  
 SELECT Description   
 FROM Production.ProductDescription   

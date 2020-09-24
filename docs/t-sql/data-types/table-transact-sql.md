@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ad743fc9864207dedcad050428646abf80fa4f59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af3dff9699813079a68c44125d488a97ffd33781
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311444"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117194"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -127,9 +127,9 @@ SELECT select_list INTO table_variable;
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
     ModifiedDate datetime);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25   
