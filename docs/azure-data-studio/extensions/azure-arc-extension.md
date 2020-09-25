@@ -1,20 +1,20 @@
 ---
 title: Azure Arc 延伸模組 (預覽)
 description: 了解如何安裝和使用 Azure Arc 延伸模組來試用 Azure Arc 資料服務。
-ms.custom: seodec18
-ms.date: 09/22/2020
-ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 53adb48f8ee83213fe99eee1148173d20c6276c7
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.reviewer: maghan, sstein
+ms.custom: ''
+ms.date: 09/22/2020
+ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942374"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111740"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure Arc 延伸模組 (預覽)
 
@@ -60,5 +60,5 @@ ms.locfileid: "90942374"
 
 這些儀表板會提供資源的其他相關資訊，包括在 Azure 入口網站中開啟的選項。
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 若要深入了解 Azure Arc 資料服務，請[查看我們的文件。](https://aka.ms/azurearcdata-docs)
