@@ -25,12 +25,12 @@ ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53431655d4fbc8dd4f9a4de015b89f529577df8e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7bc83bfc6995b54755ab0195c1f535de5c3eddd5
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547682"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227293"
 ---
 # <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_OFF OFF
 ```

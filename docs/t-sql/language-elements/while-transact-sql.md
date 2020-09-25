@@ -23,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c99677be10dd8931be10c5902db036769312fd6
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307322"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227372"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ WHILE Boolean_expression
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Azure Synapse Analytics and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
      { sql_statement | statement_block | BREAK }  

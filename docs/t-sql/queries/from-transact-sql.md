@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445367"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227217"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -138,7 +138,7 @@ SELECT 陳述式通常必須使用 FROM 子句。 例外狀況如下：未列出
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -151,7 +151,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -270,12 +270,12 @@ FROM { <table_source> [ ,...n ] }
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed* 是 **bigint**。 如果未指定 *repeat_seed*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會隨機指派一個值。 針對特定的 *repeat_seed*值，只要尚未對資料表套用任何變更，取樣結果一律會相同。 *repeat_seed* 運算式必須評估為大於零的整數。  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 子句
-**適用範圍：** SQL 資料倉儲
+**適用對象：** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT 或 UPDATE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。 
 
  PERCENT  
- 指定應該從資料表中擷取百分之 *sample_number* 的資料表資料列。 當指定 PERCENT 時，SQL 資料倉儲會傳回所指定之百分比的近似值。 當指定 PERCENT 時，*sample_number* 運算式必須評估為 0 到 100 的值。  
+ 指定應該從資料表中擷取百分之 *sample_number* 的資料表資料列。 當指定 PERCENT 時，[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 會傳回所指定之百分比的近似值。 當指定 PERCENT 時，*sample_number* 運算式必須評估為 0 到 100 的值。  
 
 
 ### <a name="joined-table"></a>聯結的資料表 

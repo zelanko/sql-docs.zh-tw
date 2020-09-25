@@ -26,12 +26,12 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 423980488c6b40093fa5c2bc49e6e933845643a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 424ff170c28087d0d6d43e153b92583d517baae1
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472230"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226796"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 
@@ -54,7 +54,7 @@ GRANT { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 GRANT
     <permission> [ ,...n ]  

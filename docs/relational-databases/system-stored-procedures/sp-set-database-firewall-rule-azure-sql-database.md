@@ -22,15 +22,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493031"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226860"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   建立或更新您的資料庫層級防火牆規則 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 您可以針對 **master** 資料庫和使用者資料庫，設定資料庫防火牆規則 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 使用自主資料庫使用者時，資料庫防火牆規則特別有用。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
@@ -89,6 +89,6 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
  [如何： (Azure SQL Database) 設定防火牆設定 ](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [sys. database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

@@ -26,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 461b86a910f31b9f6957d2eeae95f26d7e12870c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 670c9ed80a81ce2e276af815a840a9a9386a9872
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547661"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227117"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ SET ANSI_NULLS { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ANSI_NULLS ON
 ```

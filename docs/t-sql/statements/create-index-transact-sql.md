@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a31193dfd6d2e29bb5f318ea1b8d70d82d309a8c
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: dbce72e7fc8e309700098424e7ca1830dab1b1af
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024501"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227180"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -196,7 +196,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 ```syntaxsql
 
-CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
     [ORDER (column[,...n])]
     [WITH ( DROP_EXISTING = { ON | OFF } )]

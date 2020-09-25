@@ -26,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b944acae465dee3d6ba30e6807d4d74e38742555
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c8f67adb02f69cd216f0c28919bf5f0409794ce
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544121"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227461"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -50,7 +50,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET QUOTED_IDENTIFIER ON
 ```

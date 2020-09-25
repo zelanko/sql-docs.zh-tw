@@ -26,12 +26,12 @@ ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da104e3c3c6598b45915bd49bcaba0707af3d68e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce904ef96ce7aeee41ec8925d98966db013402d6
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541299"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227060"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ SET DATEFIRST { number | @number_var }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
 ```  

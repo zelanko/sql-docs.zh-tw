@@ -40,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 244931d2f04a893e91a0fa85c1c0158a181b4996
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0b6910a57f137a6463f235bb64db2b6bef4274d4
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114781"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226901"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -83,7 +83,7 @@ ORDER BY order_by_expression
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ ORDER BY   
     {  

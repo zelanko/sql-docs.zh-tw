@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b39471e09260afce768694d645a2bf843ae3e79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4a8e535c8cfa51075680850b222e377d16825e8
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467735"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227242"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88467735"
 ## <a name="syntax"></a>語法  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-下列程式碼區塊顯示 SQL Server 2019 中的語法。 或者，請改為參閱 [SQL Server 2017 和更早版本中的語法](execute-transact-sql.md?view=sql-server-2017)。 
+下列程式碼區塊顯示 SQL Server 2019 中的語法。 或者，請改為參閱 [SQL Server 2017 和更早版本中的語法](execute-transact-sql.md?view=sql-server-2017&preserve-view=true)。 
 
 ```syntaxsql
 -- Syntax for SQL Server 2019
@@ -116,7 +116,7 @@ Execute a pass-through command against a linked server
 
 ::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
 
-下列程式碼區塊顯示 SQL Server 2017 和更早版本中的語法。 或者，請改為參閱 [SQL Server 2019 中的語法](execute-transact-sql.md?view=sql-server-ver15)。
+下列程式碼區塊顯示 SQL Server 2017 和更早版本中的語法。 或者，請改為參閱 [SQL Server 2019 中的語法](execute-transact-sql.md?view=sql-server-ver15&preserve-view=true)。
 
 
 ```syntaxsql
@@ -254,7 +254,7 @@ Execute a character string
 
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
 [ { EXEC | EXECUTE } ]  

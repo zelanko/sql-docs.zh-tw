@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28c07de7846b30d1fca9fe81a58398a19deec9a8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bbb4c1c7df2e06d1e3740e401a3c9304aa0beb3a
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921481"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226919"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ See CREATE TABLE for index option syntax.
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DECLARE   
 {{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]  

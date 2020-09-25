@@ -38,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc6a1454ba11630128d8ab1ffbb316c6a37ff32f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 4d51a3b2339fc1b44897bf3be9087b086bb81878
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115885"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226794"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "91115885"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 < search_condition > ::=   
     { [ NOT ] <predicate> | ( <search_condition> ) }   

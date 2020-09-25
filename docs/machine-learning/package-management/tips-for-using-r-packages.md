@@ -1,5 +1,6 @@
 ---
 title: 使用 R 套件的祕訣
+titleSuffix: SQL machine learning
 description: 針對不熟悉 R 或 SQL Server 使用者，了解有關在 SQL Server 中使用 R 套件的實用秘訣。
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 67071e8a13f0f7935064daa6dabdd857a3644d92
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 632b380b1935d380661903f18d56fe09aa9eff77
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178928"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227142"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 套件的祕訣
 

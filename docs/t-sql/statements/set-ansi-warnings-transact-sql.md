@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2056019bb88169bfef2acd35b871eef84b2d017f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547667"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227080"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ SET ANSI_WARNINGS { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ANSI_WARNINGS ON
 ```

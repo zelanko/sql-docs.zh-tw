@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d38afcb410b6af58bbe3088e6984ce405bfca91e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b0ab0d7c79568ad1343f08a367b6ee7dcf293c82
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555559"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226900"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86555559"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics  
   
 OVER (   
        [ <PARTITION BY clause> ]  

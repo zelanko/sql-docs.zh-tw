@@ -28,12 +28,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d8876fe6531d8b64d40c2178045d5d714445ad0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc072ac6ba5cba3de1b64996c79b589b18ecb5b1
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539827"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226786"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ SET ARITHABORT { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ARITHABORT ON
 ```

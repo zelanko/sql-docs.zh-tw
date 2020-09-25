@@ -30,12 +30,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb01b06486996a43eba3401644c34663eb05b800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a1b425a293dd811ec5202a94612a3dcfc815ef2
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496551"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227467"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ REVOKE [ GRANT OPTION FOR ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 REVOKE   
     <permission> [ ,...n ]  

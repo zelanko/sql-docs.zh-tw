@@ -35,6 +35,12 @@
       href: ../machine-learning/install/sql-ml-component-commandline-install.md
     - name: 安裝已訓練的模型
       href: ../machine-learning/install/sql-pretrained-models-install.md
+    - name: 安裝自訂執行階段
+      items:
+        - name: 安裝 Python 自訂執行階段
+          href: ../machine-learning/install/custom-runtime-python.md
+        - name: 安裝 R 自訂執行階段
+          href: ../machine-learning/install/custom-runtime-r.md
     - name: 變更預設 Python 與 R 執行階段
       href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: 使用繫結升級 Python 和 R 執行階段

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: af6cb013109d5d871c709f72cf5a564ae69940cb
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: a781affee2db40dbd7636c25712ca622c881650e
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288170"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226835"
 ---
 # <a name="create-a-jupyter-book-extension"></a>建立 Jupyter Book 延伸模組
 
@@ -176,9 +176,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 恭喜！ 您已建置且可傳遞第一個 Jupyter Book 延伸模組。 如需 Jupyter Book 的詳細資訊，請參閱 [Book with Jupyter](https://jupyterbook.org/intro.html) (使用 Jupyter 撰寫書籍)。
 
-## <a name="publish-your-extension-to-the-marketplace"></a>將延伸模組發佈到 Marketplace
+## <a name="publish-your-extension-to-the-marketplace"></a>將您的延伸模組發佈到市集
 
-Azure Data Studio 延伸模組 Marketplace 尚未完全實作。 若要發佈，請在某個位置裝載延伸模組 VSIX (例如 GitHub 發行頁面)，並使用延伸模組資訊提交更新[此 JSON 檔案](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)的 PR。
+Azure Data Studio 延伸模組市集尚未完全實作。 若要發佈，請在某個位置裝載延伸模組 VSIX (例如 GitHub 發行頁面)，並使用延伸模組資訊提交更新[此 JSON 檔案](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)的 PR。
 
 ## <a name="next-steps"></a>後續步驟
 

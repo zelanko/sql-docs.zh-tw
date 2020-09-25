@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c985511b94b3ec5fcd03764a44d404b05078f8
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.openlocfilehash: be188a87a06a91467a16862ea0a0d572e4f71b93
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570633"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227402"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -64,7 +64,7 @@ END
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   

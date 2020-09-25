@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 468ffd5a95bcb0bf6fa2c5d4cb9a1cb343102acd
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116303"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227172"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 子句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91116303"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 OPTION ( <query_option> [ ,...n ] )  
   

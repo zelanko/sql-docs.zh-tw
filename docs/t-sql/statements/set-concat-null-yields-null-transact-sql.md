@@ -24,12 +24,12 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856afc234c12a2a394c9b2e2583f5f14b098e2f2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cc2e5858e978aa88c55e2cdbbd7c54cb06a814dc
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538059"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226768"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  

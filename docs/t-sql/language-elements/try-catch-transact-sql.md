@@ -30,12 +30,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c80df0e55221541bc677de6c36baf0d894f1a271
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd4c6c720ea2de5d2ce88f17a0ea20e451b28d7d
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445422"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227042"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,8 @@ BEGIN CATCH
         ROLLBACK TRANSACTION;  
     END;  
   
-    -- Test whether the transaction is committable.  
+    -- Test whether the transaction is committable.
+    -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  
