@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 701b4240ccf6dedd79ce9de7baf22b3ae295baab
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013691"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024435"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -175,14 +175,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =  OFF | ON  
-                      [(    
-                         [ FILTER_COLUMN = column_name ],   
-                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                              | MONTH | MONTHS | YEAR | YEARS }}]    
-                      )]
-          )
-
+            | DATA_DELETION =  
+                {
+                      OFF 
+                    | ON  
+                        [(  [ FILTER_COLUMN = column_name ]   
+                            [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                                    | MONTH | MONTHS | YEAR | YEARS }}]   
+                        )]
+                   }
     | REBUILD
       [ [PARTITION = ALL]
         [ WITH ( <rebuild_option> [ ,...n ] ) ]
@@ -800,11 +801,11 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| 數字 {DAY \| DAYS \| WEEK \| WEEK
 
 為時態表中的歷程記錄資料指定有限或無限保留期。 如果省略，會使用無限保留期。
 
-SET (DATA_DELETION =  OFF | ON  
-            [( [ FILTER_COLUMN = column_name ],    
-                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
-            )]    
-          )   
+SET (DATA_DELETION =  
+      { OFF | ON  
+                [(  [ FILTER_COLUMN = column_name ]   
+                    [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]   
+                )] }   
 **適用範圍：** 「僅限」Azure SQL Edge
 
 根據資料庫內的資料表，啟用保留原則式清除舊的或過時資料。 如需詳細資訊，請參閱[啟用和停用資料保留](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable) (機器翻譯)。 必須為資料保留指定下列參數才能啟用資料保留。 

@@ -14,18 +14,18 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921d626eaacb0cdfd6f14988cd41e39efc35339b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41b99ede74cb7e8213fb50e95f1a9160b4d947af
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459126"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226894"
 ---
 # <a name="queries"></a>查詢
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  「資料操作語言」(DML) 是一種詞彙，可用來擷取和處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL Database 中的資料。 大部分也都可在「SQL 資料倉儲」和 PDW 中運作 (如需詳細資訊，請檢閱每個個別的陳述式)。 請使用這些陳述式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中加入、修改、查詢或移除資料。  
+  「資料操作語言」(DML) 是一種詞彙，可用來擷取和處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SQL Database 中的資料。 大部分也都可在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中運作 (如需詳細資訊，請檢閱每個個別的陳述式)。 請使用這些陳述式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中加入、修改、查詢或移除資料。  
   
 ## <a name="in-this-section"></a>本節內容  
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的 DML 陳述式。  

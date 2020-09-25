@@ -1,29 +1,30 @@
 ---
 title: azdata bdc spark batch 參考
 titleSuffix: SQL Server big data clusters
-description: 使用此參考文章了解 azdata 工具中的 SQL 命令，特別是 bdc spark batch 命令。
+description: azdata bdc spark batch 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8d903e443cf6adb3fd38891e70726161b75c0dd3
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 9dbfe61cce1650bf7ffe21a986866e25f4a4da53
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733599"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914807"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+適用於 `azdata`
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
+下列文章提供 **azdata** 工具中 **sql** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
-| 命令 | 說明 |
+
+|命令|說明|
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | 建立新的 Spark 批次。
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | 列出 Spark 中的所有批次。
@@ -235,4 +236,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 `azdata` 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](../install/deploy-install-azdata.md)。
+如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata](..\install\deploy-install-azdata.md)。
+

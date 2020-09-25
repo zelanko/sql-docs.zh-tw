@@ -1,31 +1,33 @@
 ---
 title: azdata bdc 參考
 titleSuffix: SQL Server big data clusters
-description: 使用此參考文章了解 azdata 工具中的 SQL 命令，特別是許多 bdc 命令。
+description: azdata bdc 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee94bc76f1a59940a753eec6944ccdab8bfc943
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: f3b7d4bd76e1b988fa9481fad18c4573c5b6a13b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733571"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914725"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+適用於 `azdata`
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
+下列文章提供 **azdata** 工具中 **sql** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
-| 命令 | 說明 |
+
+|命令|說明|
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令可讓使用者透過建立和管理工作階段、陳述式和批次，與 Spark 系統進行互動。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模組提供用來存取 HDFS 檔案系統的命令。
 [azdata bdc create](#azdata-bdc-create) | 建立巨量資料叢集。
 [azdata bdc delete](#azdata-bdc-delete) | 刪除巨量資料叢集。
 [azdata bdc upgrade](#azdata-bdc-upgrade) | 更新 SQL Server 巨量資料叢集中每個容器所部署的映像。
@@ -39,7 +41,6 @@ ms.locfileid: "89733571"
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 服務命令。
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | 閘道服務命令。
 [azdata bdc app](reference-azdata-bdc-app.md) | 應用程式服務命令。
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模組提供用來存取 HDFS 檔案系統的命令。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 建立 SQL Server 巨量資料叢集 - 系統上必須有 Kubernetes 設定，以及下列環境變數 ['AZDATA_USERNAME', 'AZDATA_PASSWORD']。
 ```bash
@@ -73,7 +74,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 巨量資料叢集名稱，用於 kubernetes 命名空間。
 #### `--config-profile -c`
-巨量資料叢集組態設定檔，用來部署叢集：['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+巨量資料叢集組態設定檔，用來部署叢集： ['openshift-prod'、'aks-dev-test-ha'、'aro-dev-test-ha'、'aks-dev-test'、'kubeadm-prod'、'aro-dev-test'、'openshift-dev-test'、'kubeadm-dev-test']
 #### `--accept-eula -a`
 您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 您可在 https://aka.ms/eula-azdata-en 檢視 azdata 的授權條款。
 #### `--node-label -l`
@@ -174,4 +175,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 `azdata` 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](../install/deploy-install-azdata.md)。
+如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata](..\install\deploy-install-azdata.md)。
+

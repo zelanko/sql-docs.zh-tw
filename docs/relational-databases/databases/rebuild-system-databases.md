@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471158"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210623"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471158"
   
  **本主題內容**  
   
--   **開始之前：**  
+   - **開始之前：**  
   
      [限制事項](#Restrictions)  
   
      [先決條件](#Prerequisites)  
   
--   **程序：**  
+   - **程序：**  
   
      [重建系統資料庫](#RebuildProcedure)  
   
      [重建資源資料庫](#Resource)  
   
-     [建立新的 msdb 資料庫](#CreateMSDB)  
+     [建立新的 msdb 資料庫](#CreateMSDB) 
+
+     [重建 tempdb 資料庫](#RebuildTempdb)  
   
--   **後續操作：**  
+   - **後續操作：**  
   
      [疑難排解重建錯誤](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471158"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  請在重建系統資料庫之前執行下列工作，以便確保您可以將系統資料庫還原成目前的設定。  
   
-1.  記錄所有伺服器範圍的組態值。  
+1. 記錄所有伺服器範圍的組態值。  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  記錄所有套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Hotfix 以及目前的定序。 您必須在重建系統資料庫之後重新套用這些 Hotfix。  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471158"
   
 3.  記錄系統資料庫之所有資料和記錄檔的目前位置。 重建系統資料庫會將所有系統資料庫安裝到其原始位置。 如果您已將系統資料庫的資料或記錄檔移至不同的位置，就必須再次移動這些檔案。  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471158"
 6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]** 。 [完成] 頁面會指出作業已完成。  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 建立新的 msdb 資料庫  
+
  如果 **msdb** 資料庫損毀，而您沒有 **msdb** 資料庫的備份，可以使用 **instmsdb** 指令碼建立新的 **msdb** 。  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471158"
 9. 重新建立儲存在 **msdb** 資料庫中的使用者內容，例如工作、警示等。  
   
 10. 備份 **msdb** 資料庫。  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a>重建 tempdb 資料庫  
+
+如果 **tempdb** 資料庫已損毀，而且資料庫引擎無法啟動，您就可以重建 **tempdb**，而不需要重建所有系統資料庫。
+  
+1. 重新命名目前的 Tempdb.mdf 和 Templog.ldf 檔案 (如果遺失的話)。 
+1. 使用下列命令從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   若為預設執行個體名稱，請使用 MSSQLSERVER，針對已命名的執行個體，請使用 MSSQL$<instance_name>。 追蹤旗標 4022 會停用啟動預存程序的執行。 -mSQLCMD 只允許 [sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md) 連線到伺服器 (請參閱 [其他啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > 請確定命令提示字元視窗在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之後保持開啟狀態。 關閉命令提示字元視窗將會終止流程。
+
+1. 使用 **sqlcmd** 連線到伺服器，然後使用下列預存程序來重設 tempdb 資料庫的狀態。
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. 在命令提示字元視窗中按 Ctrl+C，來關閉伺服器
+
+1. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 這會建立一組新的 tempdb 資料庫檔案，並復原 tempdb 資料庫。
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 疑難排解重建錯誤  
  語法和其他執行階段錯誤會顯示在 [命令提示字元] 視窗中。 您可以檢查安裝程式陳述式是否有下列語法錯誤：  

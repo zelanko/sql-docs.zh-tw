@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357514"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226878"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357514"
 重新命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中使用者建立的資料表。 重新命名 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中使用者建立的資料表、使用者所建立資料表或資料庫中的資料行。
 
 > [!NOTE]
-> 若要重新命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的資料庫，請使用 [ALTER DATABASE (Azure SQL 資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016-au7)。 若要重新命名 Azure SQL Database 中的資料庫，請使用 [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) 陳述式。 若要重新命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫，請使用預存程序 [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。
+> 若要重新命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的資料庫，請使用 [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)。 若要重新命名 Azure SQL Database 中的資料庫，請使用 [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) 陳述式。 若要重新命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫，請使用預存程序 [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **適用於：** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-將使用者定義的資料庫名稱從 *database_name* 變更為 *new_database_name*。 您無法將資料庫重新命名為這些 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的以下任一保留之資料庫名稱：
+將使用者定義的資料庫名稱從 *database_name* 變更為 *new_database_name*。 您無法將資料庫重新命名為任一以下 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 保留的資料庫名稱：
 
 - master
 - model
@@ -93,7 +93,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 
 ### <a name="cannot-rename-a-table-in-use"></a>無法重新命名使用中的資料表
 
-正在使用資料表或資料庫時，您無法將其重新命名。 需要資料表的獨佔鎖定，才能重新命名。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 SQL 資料倉儲中的工作階段名稱前面都會加上 'SID'。 叫用 KILL 命令時，請包含 'SID' 與此工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。
+正在使用資料表或資料庫時，您無法將其重新命名。 需要資料表的獨佔鎖定，才能重新命名。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的工作階段前面會加上 'SID'。 叫用 KILL 命令時，請包含 'SID' 與此工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。
 
 ### <a name="rename-column-restrictions"></a>重新命名資料行的限制
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-請務必記得，如果資料表正在使用中，便無法將其重新命名。 重新命名資料表時，需要取得資料表的獨佔鎖定。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 SQL 資料倉儲中的工作階段名稱前面都會加上 'SID'。 叫用 KILL 命令時，應該包含 'SID' 與工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。
+您無法在資料表使用中時將其重新命名。 重新命名資料表時，需要取得資料表的獨佔鎖定。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的工作階段前面會加上 'SID'。 叫用 KILL 命令時，應該包含 'SID' 與工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。
 
 ```sql
 -- View a list of the current sessions

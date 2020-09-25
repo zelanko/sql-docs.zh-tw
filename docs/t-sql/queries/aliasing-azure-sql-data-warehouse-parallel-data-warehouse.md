@@ -1,7 +1,7 @@
 ---
 title: 別名
-description: Azure SQL 資料倉儲和平行處理資料倉儲中的別名。
-titleSuffix: Azure SQL Data Warehouse
+description: Azure Synapse Analytics 和平行處理資料倉儲的別名。
+titleSuffix: Azure Synapse Analytics
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 01afcc83b2a7094ea65607cac87437854e828e11
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: be27468691c64cd23020dd9232e146e44f2a45fa
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197304"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227342"
 ---
-# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲)
+# <a name="aliasing-azure-synapse-analytics-parallel-data-warehouse"></a>別名 (Azure Synapse Analytics、平行處理資料倉儲)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 

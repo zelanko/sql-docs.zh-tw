@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361164"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227215"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88361164"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  
 <expression> ::=   
@@ -132,7 +132,7 @@ GO
   
  在結果集的每個資料列中，`1+2` 運算式都會評估得出 `3`。 雖然 `ProductID` 運算式會在每個結果集資料列中產生唯一值，但每個資料列都只有 `ProductID` 的一個值。  
  
-- Azure SQL 資料倉儲會配置固定的記憶體數量上限給每個執行緒，這樣就不會有執行緒用盡所有記憶體。  此記憶體有一部份會用來儲存查詢的運算式。  若查詢有太多運算式，而且其所需記憶體超過內部限制，引擎將不會執行它。  為避免發生這個問題，使用者可以將查詢變更為多個查詢，以減少每個查詢中的運算式數。 例如，您查詢的 WHERE 子句中有一長串運算式： 
+- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 會配置固定的記憶體數量上限給每個執行緒，這樣就不會有執行緒用盡所有記憶體。  此記憶體有一部份會用來儲存查詢的運算式。  若查詢有太多運算式，而且其所需記憶體超過內部限制，引擎將不會執行它。  為避免發生這個問題，使用者可以將查詢變更為多個查詢，以減少每個查詢中的運算式數。 例如，您查詢的 WHERE 子句中有一長串運算式： 
 
 ```sql
 DELETE FROM dbo.MyTable 

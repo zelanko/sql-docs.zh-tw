@@ -4,17 +4,17 @@ titleSuffix: ''
 description: 了解如何藉由執行 SQL Server 安裝程式精靈，在 Windows 的 SQL Server 上安裝語言延伸模組功能。
 author: dphansen
 ms.author: davidph
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173555"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989851"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安裝 SQL Server 語言延伸模組
 
@@ -150,8 +150,11 @@ ms.locfileid: "88173555"
 2. 授與 AppContainer 權限
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > 上面的命令會授與電腦 SID **S-1-15-2-1** 的權限，這相當於英文版 Windows 上的**所有應用程式套件**。 或者，您也可以在英文版的 Windows 上使用 `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T`。
     
 ## <a name="enable-script-execution"></a>啟用指令碼執行
 
@@ -162,7 +165,7 @@ ms.locfileid: "88173555"
     > 
     > 您也可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支援針對 SQL Server 的系統管理工作與查詢。
   
-2. 連線到您安裝語言延伸模組的執行個體，按一下 [新增查詢]  開啟查詢視窗，然後執行下列命令：
+2. 連線到您安裝語言延伸模組的執行個體，按一下 [新增查詢]**** 開啟查詢視窗，然後執行下列命令：
 
     ```sql
     sp_configure
@@ -185,7 +188,7 @@ ms.locfileid: "88173555"
 
 重新啟動該服務也會自動重新啟動相關的 SQL Server Launchpad 服務。
 
-您可以針對 SSMS 中的執行個體，使用滑鼠右鍵按一下 [重新啟動]  命令，或使用 [控制台] 中的 [服務]  面板，或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)來重新啟動服務。
+您可以針對 SSMS 中的執行個體，使用滑鼠右鍵按一下 [重新啟動] 命令，或使用 [控制台] 中的 [服務] 面板，或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)來重新啟動服務。
 
 <a name="register_external_language"></a>
 
@@ -217,7 +220,7 @@ GO
 
     **run_value** 現在設定為 1。
     
-2. 開啟 [服務]  面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 每個安裝語言延伸模組的資料庫引擎執行個體應該都有一個該服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
+2. 開啟 [服務] 面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 每個安裝語言延伸模組的資料庫引擎執行個體應該都有一個該服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
    
 ## <a name="additional-configuration"></a>其他設定
 

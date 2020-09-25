@@ -22,12 +22,12 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19c8184168b2fd553062d1a888aa619ee164483
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3588c21ff18120c390c6ecb4484d02bc7f83dbb9
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307228"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227485"
 ---
 # <a name="transactions-transact-sql"></a>交易 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88307228"
  僅適用於 Multiple Active Result Sets (MARS)，在 MARS 工作階段下啟動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外顯或隱含交易會變成批次範圍的交易。 當批次完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會自動回復未認可或回復之批次範圍的交易。  
 
 > [!NOTE] 
-> 如需有關資料倉儲的特別考量，請參閱[交易 (SQL Data Warehouse)](transactions-sql-data-warehouse.md)。   
+> 如需有關資料倉儲的特別考量，請參閱[交易 (Azure Synapse Analytics)](transactions-sql-data-warehouse.md)。   
 
 ## <a name="in-this-section"></a>本節內容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列交易陳述式：  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549004"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227296"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. 使用 MERGE 對圖形資料庫中的目標邊緣資料表執行 INSERT 或 UPDATE
 
 在此範例中，您會建立 `Person` 和 `City` 節點資料表以及 `livesIn` 邊緣資料表。 您將在 `livesIn` 邊緣使用 MERGE 陳述式，以在 `Person` 與 `City` 之間還未存在邊緣時插入新資料列。 如果邊緣已經存在，則您只需更新 `livesIn` 邊緣上的 StreetAddress 屬性。
+
+> [!NOTE]
+> 下列範例適用於從 2019 版開始的 SQL Server。
 
 ```sql
 -- CREATE node and edge tables

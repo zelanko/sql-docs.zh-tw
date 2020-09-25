@@ -3,31 +3,29 @@ title: 升級 Python 和 R 執行階段 (繫結)
 description: 使用 sqlbindr.exe 升級 SQL Server 機器學習服務或 SQL Server R Services 中的 Python 和 R 執行階段，以繫結至 Machine Learning Server。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009374"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990111"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用繫結在 SQL Server 機器學習服務中升級 Python 和 R 執行階段
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-本文說明如何使用名為**繫結**的安裝程序，在 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 機器學習服務](../sql-server-machine-learning-services.md)中升級 R 或 Python 執行階段。
+本文說明如何使用名為**繫結**的安裝程序，在 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 機器學習服務](../sql-server-machine-learning-services.md)中升級 R 或 Python 執行階段。 您可以透過「繫結」至 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server)，取得 [Python 和 R 的較新版本](#version-map)。
 
 > [!IMPORTANT]
 > 本文說明用來升級 R 和 Python 執行階段的舊方法，名為*繫結*。 如果您已安裝 **SQL Server 2016 Services Pack (SP) 2 的累積更新 (CU) 14 或更新版本**，或 **SQL Server 2017 的累積更新 (CU) 22 或更新版本**，則應參閱如何[將預設的 R 或 Python 語言執行階段變更為更新版本](change-default-language-runtime-version.md)。
 
-您可以透過「繫結」至 Microsoft Machine Learning Server，取得 [Python 和 R 的較新版本](#version-map)。 該版本同時適用於 SQL Server 機器學習服務 (資料庫內) 和 SQL Server R Services (資料庫內)。
-
 ## <a name="what-is-binding"></a>何謂繫結？
 
-繫結是一種安裝程序，會使用來自 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) 的較新的可執行檔，程式庫和工具，交換 **R_SERVICES** 和 **PYTHON_SERVICES** 資料夾的內容。
+繫結是一種安裝程序，會使用來自 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) 的較新的可執行檔、程式庫與工具，取代 **R_SERVICES** 與 **PYTHON_SERVICES** 資料夾的內容。
 
 維護模型所包含的上傳元件已經變更。 服務更新現在符合[現代化生命週期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)上的 [Microsoft R Server 與 Machine Learning Server 支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) \(英文\)。
 

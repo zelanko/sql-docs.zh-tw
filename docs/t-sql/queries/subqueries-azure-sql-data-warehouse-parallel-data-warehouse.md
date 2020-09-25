@@ -1,8 +1,8 @@
 ---
 title: 子查詢
-description: Azure SQL 資料倉儲和平行處理資料倉儲中的子查詢
+description: Azure Synapse Analytics 中的子查詢和平行處理資料倉儲
 ms.custom: seo-lt-2019
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +12,14 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b60dc6b14b6161849a0e50b3de149946427568f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115421"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227429"
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
+# <a name="subqueries-azure-synapse-analytics-parallel-data-warehouse"></a>子查詢 (Azure Synapse Analytics、平行處理資料倉儲)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   本主題提供在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中使用子查詢的範例。  
@@ -30,7 +30,7 @@ ms.locfileid: "91115421"
   
 -   [基本概念](#Basics)  
   
--   [範例：SQL 資料倉儲和平行處理資料倉儲](#Examples)  
+-   [範例：Azure Synapse Analytics 和平行處理資料倉儲](#Examples)  
   
 ##  <a name="basics"></a><a name="Basics"></a> 基本概念  
  子查詢  

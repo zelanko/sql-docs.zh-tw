@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547690"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227313"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547690"
  指定您要模擬的執行內容是登入。 模擬範圍是在伺服器層級。  
   
 > [!NOTE]  
->  此選項在自主資料庫或 SQL Database 或 SQL 資料倉儲中無法使用。  
+>  自主資料庫或 SQL Database 或 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 無法使用這個選項。  
   
  USER  
  指定您要模擬的內容是目前資料庫中的使用者。 模擬範圍僅限於目前資料庫。 通往資料庫使用者的內容切換不會繼承該使用者的伺服器層級權限。  
@@ -96,7 +96,7 @@ ms.locfileid: "89547690"
  用於模組內部時，指定模組內部的陳述式是在模組呼叫者的內容中執行。
 用於模組外部時，陳述式沒有動作。
  > [!NOTE]  
->  此選項在 SQL 資料倉儲中無法使用。  
+>  此選項在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中無法使用。  
   
 ## <a name="remarks"></a>備註  
  執行內容中的變更持續有效，直到發生下列項目之一為止：  
@@ -146,7 +146,7 @@ ms.locfileid: "89547690"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. 使用 EXECUTE AS 及 REVERT 切換內容  
  下列範例會利用多個主體來建立一個內容執行堆疊。 然後再用 `REVERT` 陳述式，將執行內容重設為前一個呼叫者。 `REVERT` 陳述式在上移堆疊時會執行多次，直到執行內容設為原始呼叫者為止。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
  下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

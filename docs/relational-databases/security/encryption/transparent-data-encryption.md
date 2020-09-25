@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380881"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227046"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 
@@ -119,7 +119,7 @@ GO
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會將加密和解密作業排定在背景執行緒上。 請使用本文中稍後出現的資料表目錄檢視和動態管理檢視，以檢視這些作業的狀態。
 
 > [!CAUTION]
-> 備份啟用 TDE 的資料庫檔案時，也會使用資料庫來加密金鑰加密。 因此，當要還原這些備份時，必須可以使用用來保護此資料庫加密金鑰的憑證。 所以，除了備份資料庫以外，請務必也要維護伺服器憑證的備份。 如果無法再使用此憑證，即會遺失資料。
+> 啟用 TDE 的資料庫備份檔案時，也會使用資料庫加密金鑰來加密。 因此，當要還原這些備份時，必須可以使用用來保護此資料庫加密金鑰的憑證。 所以，除了備份資料庫以外，請務必也要維護伺服器憑證的備份。 如果無法再使用此憑證，即會遺失資料。
 >
 > 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。
 

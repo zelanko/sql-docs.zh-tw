@@ -5,22 +5,22 @@ description: 了解如何部署高可用性 SQL Server 巨量資料叢集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790266"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990013"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-由於 SQL Server 巨量資料叢集在 Kubernetes 上是容器化應用程式，並使用具狀態集合和永續性儲存體等功能，因此這個基礎結構具有內建的狀況監控、失敗偵測和容錯移轉機制，可供叢集元件用來維護服務健全狀態。 為了提高可靠性，您也可以設定 SQL Server 主要執行個體或 HDFS 名稱節點和 Spark 共用服務，在高可用性設定中部署額外的複本。 監控、失敗偵測和自動容錯移轉是由巨量資料叢集管理服務 (即控制服務) 所管理。 此服務不需要使用者介入，其涵蓋範圍從可用性群組設定、設定資料庫鏡像端點，到將資料庫新增至可用性群組，或容錯移轉及升級協調。 
+由於 SQL Server 巨量資料叢集在 Kubernetes 上是容器化應用程式，並使用具狀態集合和永續性儲存體等功能，因此這個基礎結構具有內建的狀況監控、失敗偵測和容錯移轉機制，可供叢集元件用來維護服務健全狀態。 為了提高可靠性，您也可以設定 SQL Server 主要執行個體和/或 HDFS 名稱節點和 Spark 共用服務，在高可用性設定中使用額外的複本進行部署。 監視、失敗偵測與自動容錯移轉是由巨量資料叢集管理服務 (即控制服務) 所管理。 此服務不需要使用者介入，其涵蓋範圍從可用性群組設定、設定資料庫鏡像端點，到將資料庫新增至可用性群組，或容錯移轉及升級協調。 
 
 下圖表示如何在 SQL Server 巨量資料叢集中部署可用性群組：
 
@@ -32,7 +32,7 @@ ms.locfileid: "87790266"
 - 所有資料庫都會自動新增至可用性群組，包括所有使用者和系統資料庫 (例如 `master` 和 `msdb`)。 此功能提供跨可用性群組複本的單一系統檢視。 其他模型資料庫 `model_replicatedmaster` 和 `model_msdb` 可用來植入系統資料庫的複寫部分。 除了這些資料庫，如果您直接連接到執行個體，還會看到 `containedag_master` 和 `containedag_msdb` 資料庫。 `containedag` 資料庫代表可用性群組內的 `master` 和 `msdb`。
 
   > [!IMPORTANT]
-  > 在 SQL Server 2019 CU1 版本中，只有因 CREATE DATABASE 陳述式而建立的資料庫會自動新增至可用性群組。 因其他工作流程 (例如附加資料庫) 而在執行個體上建立的資料庫尚未新增至可用性群組，且巨量資料叢集管理員必須手動執行這項操作。 如需指示，請參閱[＜連接到 SQL Server 執行個體＞](#instance-connect)一節。 在 SQL Server 2019 CU2 版本之前，因 restore 陳述式而建立的資料庫具有相同行為，且需要手動將資料庫新增至包含的可用性群組。
+  > 因工作流程 (例如附加資料庫) 而在執行個體上建立的資料庫不會自動新增至可用性群組，且巨量資料叢集管理員必須手動執行此作業。 如需如何啟用 SQL Server 執行個體 master 資料庫之暫存端點的指示，請參閱[連線到 SQL Server 執行個體](#instance-connect)一節。 在 SQL Server 2019 CU2 版本之前，因 restore 陳述式而建立的資料庫具有相同行為，且需要手動將資料庫新增至包含的可用性群組。
   >
 - Polybase 設定資料庫由於包含每個複本特定的執行個體層級中繼資料，因此不會包含在可用性群組中。
 - 系統會自動佈建外部端點來連接到可用性群組中的資料庫。 `master-svc-external` 這個端點扮演可用性群組接聽程式的角色。
@@ -201,13 +201,17 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a name="known-limitations"></a>已知限制
 
-巨量資料叢集中 SQL Server 主要的可用性群組具有已知問題和限制：
+巨量資料叢集中 SQL Server master 的內含可用性群組有已知問題與限制：
 
-- 在 SQL Server 2019 CU2 版本之前，因 `CREATE DATABASE` 與 `RESTORE DATABASE` 以外的工作流程 (例如 `CREATE DATABASE FROM SNAPSHOT`) 而建立的資料庫不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
+- 部署巨量資料叢集之後，必須建立高可用性設定。 您無法在可用性群組部署後啟用高可用性設定。 此時，唯一啟用的設定是針對同步認可複本。
+
+> [!WARNING]
+> 針對仲裁認可中的任何複本將同步處理模式更新為非同步認可，將會導致無效的高可用性設定。 以此組態執行可能會有資料遺失風險，因為萬一發生影響主要複本的失敗事件時，並不會觸發自動容錯移轉，而且使用者在發出手動容錯移轉時，必須接受資料遺失的風險。
+
 - 若要從另一部伺服器上所建立備份成功還原已啟用 TDE 的資料庫，則必須確定已同時在 SQL Server 執行個體主機以及包含的 AG 主機上還原[必要憑證](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。 如需如何備份和還原憑證的範例，請參閱[此處](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)。
 - 使用 `sp_configure` 執行伺服器組態設定等特定作業會需要連接到 SQL Server 執行個體 `master` 資料庫，而不是可用性群組 `master`。 您無法使用對應的主要端點。 請遵循[指示](#instance-connect)來公開端點並連接到 SQL Server 執行個體，然後執行 `sp_configure`。 當您手動公開端點來連接到 SQL Server 執行個體 `master` 資料庫時，只能使用 SQL 驗證。
-- 部署巨量資料叢集之後，必須建立高可用性設定。 您無法在可用性群組部署後啟用高可用性設定。
-- 雖然可用性群組中包含 msdb 資料庫，且 SQL Agent 工作會複寫到整個群組，但不會每個排程都觸發作業。 解決方法是[連線到每個 SQL Server 執行個體](#instance-connect)，並在執行個體 msdb 中建立作業。 從 SQL Server 2019 CU2 版本開始，僅支援在主要執行個體的每個複本中所建立作業。
+- 雖然可用性群組中包含 msdb 資料庫，而且 SQL Agent 作業會複寫到整個群組，作業只會根據主要複本上的排程執行。
+- 在 SQL Server 2019 CU2 版本之前，因 `CREATE DATABASE` 與 `RESTORE DATABASE` 以外的工作流程 (例如 `CREATE DATABASE FROM SNAPSHOT`) 而建立的資料庫不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
 
 ## <a name="next-steps"></a>後續步驟
 

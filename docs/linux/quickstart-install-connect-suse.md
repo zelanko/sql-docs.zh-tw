@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 6aff6f8a35a28b76ad3bbfb92079bbaa9659cd7b
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1d917c3f205f6b4b8d5872cf0b853316ed6e913d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569948"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990127"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門：在 SUSE Linux Enterprise Server 上安裝 SQL Server 並建立資料庫
 
@@ -145,6 +145,12 @@ ms.locfileid: "89569948"
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+   若要確定您的系統上是否已安裝 Microsoft 套件簽署金鑰，請使用下列命令來匯入金鑰： 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. 執行下列命令安裝 SQL Server：

@@ -2,7 +2,7 @@
 title: 記錄活動
 description: 了解在使用 Microsoft Driver for PHP for SQL Server 時如何設定不同的記錄選項組合
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680543"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024506"
 ---
 # <a name="logging-activity"></a>記錄活動
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-依預設不會記錄 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 所產生的錯誤和警告。 本主題討論如何設定記錄活動。  
+根據預設，不會將 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 所產生的錯誤與警告記錄到 PHP 系統記錄檔。 此主題討論如何設定驅動程式記錄活動。 如需有關如何設定非驅動程式特定之 PHP 錯誤處理設定的詳細資訊，請參閱 [PHP 文件](https://www.php.net/manual/en/errorfunc.configuration.php) \(英文\)。  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>使用 PDO_SQLSRV 驅動程式記錄活動  
-唯一適用於 PDO_SQLSRV 驅動程式的組態，是 php.ini 檔案中的 pdo_sqlsrv.log_severity 項目。  
+PDO_SQLSRV 驅動程式的唯一特定可用記錄設定是 php.ini 檔案中的 pdo_sqlsrv.log_severity 項目。  
   
 在 php.ini 檔案的結尾加入下列項目：  
   
@@ -53,7 +53,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
 若要開啟記錄，您可以使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函式，或是修改 php.ini 檔案。 您可以記錄初始化、連接、陳述式或錯誤函數的活動。 您也可以指定是要記錄錯誤、警告、通知，還是三者全部記錄。  
   
 > [!NOTE]  
-> 您可以在 php.ini 檔案中設定記錄檔的位置。  
+> 您可以在 php.ini 檔案中設定記錄檔的位置。 如需詳細資訊，請參閱 [PHP 文件](https://www.php.net/manual/en/errorfunc.configuration.php) \(英文\)。  
   
 ### <a name="turning-logging-on"></a>開啟記錄  
 您可以使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函式指定 **LogSubsystems** 設定的值，以開啟記錄。 例如，下列程式碼行會將驅動程式設定為要記錄連接的活動：  

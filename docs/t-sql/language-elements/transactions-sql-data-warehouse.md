@@ -1,6 +1,6 @@
 ---
-description: 交易 (SQL 資料倉儲)
-title: 交易 (SQL 資料倉儲) | Microsoft Docs
+title: 交易 (Azure Synapse Analytics)
+description: 交易是一組一或多個全部認可或全部復原的資料庫陳述式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688350"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227462"
 ---
-# <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
+# <a name="transactions-azure-synapse-analytics"></a>交易 (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   交易是一組一或多個全部認可或全部復原的資料庫陳述式。 每個交易都是不可部分完成、一致、隔離和耐用 (ACID)。 如果交易成功，表示認可交易中的所有陳述式。 如果交易失敗，表示群組中至少有一個陳述式失敗，然後整個群組都會復原。  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>限制事項  
  您不能在發出 COMMIT 陳述式之後復原交易，因為資料修改已成為資料庫的永久部份。  
   
- 在明確交易中不能使用 [CREATE DATABASE &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
+ 在明確交易中不能使用 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 沒有交易共用機制。 這表示在任何給定的時間點，只有一個工作階段可以在系統中進行任何交易。  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. 復原交易  
  下列範例示範復原交易的效果。  在此範例中，ROLLBACK 陳述式將復原 INSERT 陳述式，但所建立的資料表仍會存在。  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

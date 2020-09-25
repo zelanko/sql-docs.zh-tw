@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478648"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227272"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -65,10 +65,10 @@ ms.locfileid: "88478648"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />受控執行個體 \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ RESTORE HEADERONLY 結果會比照 [!INCLUDE[ssNoVersion](../../includes/ssnover
 需要具備備份目錄之存取和讀取權限的 Windows 帳戶。 您也必須將 Windows 帳戶名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。
 
 - 若要驗證認證是否已經存在，請使用 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)。
-- 若要新增或更新認證，請使用 [sp_pdw_add_network_credentials - SQL 資料倉儲](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。
-- 若要從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 移除認證，請使用 [sp_pdw_remove_network_credentials - SQL 資料倉儲](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
+- 若要新增或更新認證，請使用 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)。
+- 若要從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 移除認證，請使用 [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
 
 ## <a name="error-handling"></a>錯誤處理
 
@@ -980,13 +980,13 @@ RESTORE HEADERONLY 結果會比照 [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>還原至具有較多計算節點的設備
 
-將資料庫從較小型應用裝置還原至較大型應用裝置之後，請執行 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)，因為轉散發會增加交易記錄。
+將資料庫從較小型應用裝置還原至較大型應用裝置之後，請執行 [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)，因為轉散發會增加交易記錄。
 
 將備份還原至具有較多計算節點的應用裝置時，會讓已配置的資料庫大小依計算節點數目比例成長。
 
 例如，將 60 GB 資料庫從具有 2 個節點的應用裝置 (每個節點 30 GB) 還原至具有 6 個節點的應用裝置時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會在具有 6 個節點的應用裝置上建立一個 180 GB 的資料庫 (6 個節點，每個節點 30 GB)。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]一開始會將資料庫還原至 2 個節點以符合來源組態，然後會將資料轉散發至全部 6 個節點。
 
-在轉散發之後，與較小型的來源應用裝置相比，每個計算節點將會包含較少的實際資料和較多的可用空間。 請使用額外的空間將更多資料新增至資料庫。 如果所還原資料庫大於您所需的大小，您可以使用 [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) 來縮減資料庫檔案大小。
+在轉散發之後，與較小型的來源應用裝置相比，每個計算節點將會包含較少的實際資料和較多的可用空間。 請使用額外的空間將更多資料新增至資料庫。 如果所還原資料庫大於您所需的大小，您可以使用 [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) 來縮減資料庫檔案大小。
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 您可以使用此標頭資訊來檢查備份的內容，或在嘗試還原備份之前，先確認目標還原應用裝置與來源備份應用裝置相容。
 
 ## <a name="see-also"></a>另請參閱
-[ DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[ DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

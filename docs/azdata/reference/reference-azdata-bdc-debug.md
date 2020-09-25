@@ -1,36 +1,37 @@
 ---
 title: azdata bdc debug 參考
 titleSuffix: SQL Server big data clusters
-description: 使用此參考文章了解 azdata 工具中的 SQL 命令，特別是 bdc debug 命令。
+description: azdata bdc debug 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e9d1f561666bf6aefdef6abf4b1daf568a5a89d8
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: fe9f79373bd26ab4b010c63487ffa38de44dae3b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733631"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914575"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+適用於 `azdata`
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
+下列文章提供 **azdata** 工具中 **sql** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
-| 命令 | 說明 |
+
+|命令|說明|
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | 複製記錄。
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | 觸發記憶體傾印。
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 從巨量資料叢集中複製偵錯記錄 - 系統需要 Kubernetes 設定。
 ```bash
-azdata bdc debug copy-logs --namespace -n 
+azdata bdc debug copy-logs --namespace -ns 
                            [--container -c]  
                            
 [--target-folder -d]  
@@ -44,7 +45,7 @@ azdata bdc debug copy-logs --namespace -n
 [--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>必要參數
-#### `--namespace -n`
+#### `--namespace -ns`
 巨量資料叢集名稱，用於 kubernetes 命名空間。
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--container -c`
@@ -73,13 +74,13 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
 觸發記憶體傾印並將其容器中複製出來 - 系統需要 Kubernetes 設定。
 ```bash
-azdata bdc debug dump --namespace -n 
+azdata bdc debug dump --namespace -ns 
                       [--container -c]  
                       
 [--target-folder -d]
 ```
 ### <a name="required-parameters"></a>必要參數
-#### `--namespace -n`
+#### `--namespace -ns`
 巨量資料叢集名稱，用於 kubernetes 命名空間。
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--container -c`
@@ -100,4 +101,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 `azdata` 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](../install/deploy-install-azdata.md)。
+如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata](..\install\deploy-install-azdata.md)。
+
