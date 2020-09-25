@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: azdata context 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3506d3ab1b2fad9d07496d1041773d26aae6d68
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1d48ef786389c5ef32b1f3fd49c88b0a9d3aac18
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733567"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914736"
 ---
 # <a name="azdata-context"></a>azdata context
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+適用於 `azdata`
 
-下文提供 `azdata` 工具中 `sql` 命令的參考。 如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
+下列文章提供 **azdata** 工具中 **sql** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
-| 命令 | 說明 |
+
+|命令|說明|
 | --- | --- |
 [azdata context list](#azdata-context-list) | 列出使用者設定檔中可用的內容。
 [azdata context delete](#azdata-context-delete) | 從使用者設定檔刪除具有指定命名空間的內容。
@@ -60,7 +61,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ## <a name="azdata-context-delete"></a>azdata context delete
 如果刪除的內容為使用中，則使用者需要設定新的使用中內容。 若要查看可供設定或刪除的內容，請使用 `azdata context list`
 ```bash
-azdata context delete --namespace -n 
+azdata context delete --namespace -ns 
                       
 ```
 ### <a name="examples"></a>範例
@@ -69,7 +70,7 @@ azdata context delete --namespace -n
 azdata context delete -n contextNamespace
 ```
 ### <a name="required-parameters"></a>必要參數
-#### `--namespace -n`
+#### `--namespace -ns`
 所要刪除內容的命名空間。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
@@ -85,7 +86,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 ## <a name="azdata-context-set"></a>azdata context set
 若要查看可供設定的內容，請使用 `azdata context list`。 如果沒有列出任何內容，則您必須登入才能在使用者設定檔 `azdata login` 中建立內容。 您登入的內容將成為使用中內容。 如果您登入多個實體，則可以使用此命令在使用中內容之間切換。 若要查看目前使用中的內容，請使用 `azdata context list --active`
 ```bash
-azdata context set --namespace -n 
+azdata context set --namespace -ns 
                    
 ```
 ### <a name="examples"></a>範例
@@ -94,7 +95,7 @@ azdata context set --namespace -n
 azdata context set -n contextNamespace
 ```
 ### <a name="required-parameters"></a>必要參數
-#### `--namespace -n`
+#### `--namespace -ns`
 所要設定內容的命名空間。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
@@ -110,4 +111,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 `azdata` 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 `azdata` 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](../install/deploy-install-azdata.md)。
+如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata](..\install\deploy-install-azdata.md)。
+

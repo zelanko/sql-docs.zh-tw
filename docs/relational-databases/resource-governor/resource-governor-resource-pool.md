@@ -1,5 +1,5 @@
 ---
-title: 資源管理員資源集區 | Microsoft 文件
+title: 資源管理員資源集區
 description: SQL Server Resource Governor 會針對內送應用程式要求可在資源集區中使用的 CPU、實體 IO 和記憶體數量指定限制。
 ms.custom: ''
 ms.date: 10/20/2017
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fa28f69fea78c3ccf09b0b41357ab156ed72c608
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457816"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115674"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,11 +35,13 @@ ms.locfileid: "86457816"
   
 -   **CAP_CPU_PERCENT**  
   
-     此設定是 CPU 頻寬硬體上限，適用於資源集區中的所有要求。 與集區相關聯的工作負載可以使用高於 MAX_CPU_PERCENT 值 (如果有的話) 但不高於 CAP_CPU_PERCENT 值的 CPU 容量。 在上述範例中，假設已針對行銷部門的資源使用量收費。 他們想要可預測的帳單，不想支付超過 30% 的 CPU。 只要將行銷資源集區的 CAP_CPU_PERCENT 設為 30 就可以做到這一點。  
+     CAP_CPU_PERCENT 設定是 CPU 頻寬硬體上限，適用於資源集區中的所有要求。 與集區相關聯的工作負載可以使用高於 MAX_CPU_PERCENT 值 (如果有的話) 但不高於 CAP_CPU_PERCENT 值的 CPU 容量。 在上述範例中，假設已針對行銷部門的資源使用量收費。 他們想要可預測的帳單，不想支付超過 30% 的 CPU。 只要將行銷資源集區的 CAP_CPU_PERCENT 設為 30 就可以做到這一點。  
   
 -   **MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT**  
   
-     這兩個設定是保留記憶體數量的下限及上限，適用於不能與其他資源集區共享的資源集區。 這裡所指的記憶體是查詢執行授與記憶體，而非緩衝集區記憶體 (例如，資料和索引頁面)。 設定集區的記憶體最小值，表示您可以確保可能在此資源集區中執行的任何要求，都可使用所指定的記憶體百分比。 這是與 MIN_CPU_PERCENT 相較下的重要差異指標，因為在此情況下，即使集區對於區內的工作負載群組沒有任何要求，記憶體仍可保留在指定的資源集區中。 因此，在使用此設定時，務必非常小心，因為即使沒有任何作用中的要求，也無法將此記憶體提供給任何其他集區使用。 設定集區的記憶體最大值，表示在此集區中執行要求時，要求所取得的記憶體永遠不會高於整體記憶體的百分比。  
+     這兩個設定是保留記憶體數量的下限及上限，適用於不能與其他資源集區共享的資源集區。 對於不包含記憶體最佳化資料表的資料庫，這裡所指的記憶體是查詢執行授與記憶體，而非緩衝集區記憶體 (例如，資料和索引頁面)。 設定集區的記憶體最小值，表示您可以確保可能在此資源集區中執行的任何要求，都可使用所指定的記憶體百分比。 這是與 MIN_CPU_PERCENT 相較下的重要差異指標，因為在此情況下，即使集區對於區內的工作負載群組沒有任何要求，記憶體仍可保留在指定的資源集區中。 因此，在使用此設定時請務必小心，因為即使沒有任何作用中的要求，也無法將此記憶體提供給任何其他集區使用。 設定集區的記憶體最大值，表示在此集區中執行要求時，要求所取得的記憶體永遠不會高於整體記憶體的百分比。
+
+     若要使用 Resource Governor 來管理記憶體最佳化資料表的記憶體，您應該將資料庫繫結至不同的資源集區。 如需詳細資訊，請參閱[將包含記憶體最佳化資料表的資料庫繫結至資源集區](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)。
   
 -   **AFFINITY**  
   
@@ -110,7 +112,7 @@ ms.locfileid: "86457816"
   
 **外部集區**  
   
-使用者可以定義外部集區，以定義外部處理序的資源。 針對 R 服務，此會特別用來管理 `rterm.exe`、 `BxlServer.exe` 及其所衍生的其他處理序。  
+使用者可以定義外部集區，以定義外部處理序的資源。 針對 R 服務，此會特別用來管理 `rterm.exe`、`BxlServer.exe` 及其所衍生的其他處理序。  
   
 **使用者定義的資源集區**  
   
@@ -118,7 +120,7 @@ ms.locfileid: "86457816"
   
 ## <a name="resource-pool-tasks"></a>資源集區工作  
   
-|工作描述|主題|  
+|工作描述|發行項|  
 |----------------------|-----------|  
 |描述如何建立資源集區。|[建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)|  
 |描述如何變更資源集區設定。|[變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  

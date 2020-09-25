@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688834"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990194"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -145,7 +145,7 @@ CREATE USER user_name
 > 建立完成後的 Azure SQL 受控執行個體 Azure AD 管理員功能已變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -344,7 +344,7 @@ GO
   
  當您使用自主的資料庫使用者時[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，使用資料庫層級防火牆規則來設定存取，而非使用伺服器層級防火牆規則。 如需詳細資訊，請參閱 [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)。
  
-若是 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 自主資料庫使用者，SSMS 可支援 Multi-Factor Authentication。 如需詳細資訊，請參閱 [適用於與 SQL Database 和 SQL 資料倉儲搭配使用之 Azure AD MFA 的 SSMS 支援](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
+若是 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 自主資料庫使用者，SSMS 可支援 Multi-Factor Authentication。 如需詳細資訊，請參閱[適用於與 SQL Database 和 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]搭配使用之 Azure AD MFA 的 SSMS 支援](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。  
   
 ### <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY USER 權限。  

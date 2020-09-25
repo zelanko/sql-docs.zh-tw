@@ -4,16 +4,16 @@ description: 此文章提供了在 Linux 上執行 SQL Server 的效能最佳作
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887834"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989911"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
 
@@ -85,7 +85,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>虛擬位址空間的核心設定
 
-**vm.max_map_count** 的預設設定 (也就是 65536) 可能不足以安裝 SQL Server。 將此值 (這是一個上限) 變更為 256K。
+**vm.max_map_count** 的預設設定 (也就是 65536) 可能不足以安裝 SQL Server。 基於這個理由，請將 SQL Server 部署的 **vm.max_map_count** 值變更為 262144，並參閱[使用微調的 mssql 設定檔提出的 Linux 設定](#proposed-linux-settings-using-a-tuned-mssql-profile)一節，以進一步微調這些核心參數。 vm.max_map_count 的最大值為 2147483647。
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -112,7 +112,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
@@ -152,12 +152,12 @@ tuned-adm list
 大部分的 Linux 安裝預設都應該為開啟此選項。 為了提供最一致的效能體驗，我們建議您讓此設定選項維持啟用狀態。 不過，在具有多個執行個體的 SQL Server 部署中進行高記憶體分頁活動，或 SQL Server 與伺服器上其他大量占用記憶體的應用程式同時執行等情況下，建議在執行下列命令之後，測試您的應用程式效能 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 或使用此行來修改 MSSQL 微調設定檔
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 接著，讓 MSSQL 設定檔在修改之後生效
 ```bash
@@ -173,7 +173,7 @@ tuned-adm profile mssql
 
 如果您是在虛擬機器中執行 Linux 上的 SQL Server，請務必選取選項來修正保留給虛擬機器的記憶體數量。 請勿使用 Hyper-V 動態記憶體這類功能。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 若要深入了解可改善效能的 SQL Server 功能，請參閱[開始使用效能功能](sql-server-linux-performance-get-started.md)。
 

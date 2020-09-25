@@ -1,7 +1,7 @@
 ---
 title: 使用 Windows Installer 安裝 azdata
-titleSuffix: SQL Server big data clusters
-description: 了解如何安裝 azdata 工具以使用安裝程式來安裝及管理 SQL Server 巨量資料叢集。
+titleSuffix: ''
+description: 了解如何使用安裝程式來安裝 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 60d3b60f98a93cb6b724cd569fb2871adec3f1ce
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: a33e43386c44ec2ab60166ef57a502fc592c8d73
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733654"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914953"
 ---
 # <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>使用 Windows Installer 來安裝 `azdata` 以管理 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-本文描述如何在 Windows 上安裝適用於 SQL Server 2019 巨量資料叢集的 `azdata`。 在安裝 Windows 之前，`azdata` 的安裝需要 `pip`。
+本文描述如何在 Windows 上安裝 `azdata`。 在安裝 Windows 之前，`azdata` 的安裝需要 `pip`。
 
 >針對 Linux (Ubuntu)，請參閱[使用安裝程式來安裝 `azdata`](./deploy-install-azdata-linux-package.md)。
 
@@ -70,3 +70,5 @@ ms.locfileid: "89733654"
 ## <a name="next-steps"></a>後續步驟
 
 如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)
+
+使用 azdata 搭配[已啟用 Azure Arc 的資料服務](/azure/azure-arc/data/)

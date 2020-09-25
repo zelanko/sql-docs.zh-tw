@@ -1,7 +1,7 @@
 ---
 title: 使用 zypper 安裝 azdata
-titleSuffix: SQL Server big data clusters
-description: 了解如何使用 zypper 安裝 azdata 工具，以安裝及管理巨量資料叢集。
+titleSuffix: ''
+description: 了解如何使用 zypper 來安裝 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2445fecc554ff9f7816bbf75483ab49bbee542c1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 8fdde8b6229bd2fc98005025e17efe97104d2fc1
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733660"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914887"
 ---
 # <a name="install-azdata-with-zypper"></a>使用 zypper 安裝 `azdata`
 
@@ -44,7 +44,7 @@ ms.locfileid: "89733660"
 1. 建立本機存放庫資訊
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. 安裝
@@ -80,3 +80,5 @@ ms.locfileid: "89733660"
 ## <a name="next-steps"></a>後續步驟
 
 如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)。
+
+使用 azdata 搭配[已啟用 Azure Arc 的資料服務](/azure/azure-arc/data/)

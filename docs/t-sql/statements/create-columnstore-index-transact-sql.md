@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb9080044b0ded77b023d6700be4bba7fd260b2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549421"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024378"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -301,7 +301,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ##  <a name="general-remarks"></a><a name="GenRemarks"></a> 一般備註  
 資料行存放區索引可以在暫存資料表上建立。 當資料表卸除或工作階段結束時，也會卸除索引。  
 
-已排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
+已排序的叢集資料行存放區索引可以建立在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 支援的任何資料類型的資料行上，但不包括字串資料行。  
  
 ## <a name="filtered-indexes"></a>篩選的索引  
 已篩選的索引是最佳化的非叢集索引，適用於從資料表選取小型資料列百分比的查詢使用。 它會使用篩選述詞，針對資料表中的部分資料建立索引。 設計良好的已篩選索引可以提升查詢效能、降低儲存成本，並減少維護成本。  

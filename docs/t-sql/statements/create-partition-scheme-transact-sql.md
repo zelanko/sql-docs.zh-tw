@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ea6018e34db8ddc07a1e30cec6089994e402b9e6
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688447"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024544"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,7 +160,7 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  如果將資料分割函數 `myRangePF4` 改成加入資料分割，`test5fg` 檔案群組會收到新建立的資料分割。  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. 只在 PRIMARY 上建立分割區配置 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 只支援 PRIMARY
+### <a name="e-creating-a-partition-scheme-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. 只在 PRIMARY 上建立分割區配置 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 僅支援 PRIMARY
 
  下列範例會建立一個資料分割函數，將資料表或索引分割成四個資料分割。 然後，就會建立分割區配置，以指定在 PRIMARY 檔案群組中建立所有分割區。  
   

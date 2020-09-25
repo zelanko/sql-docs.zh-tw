@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444808"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024260"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -316,7 +316,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 Azure SQL Database 單一和集區資料庫以及 Azure Synapse Analytics (前稱為 Azure SQL 資料倉儲) 資料庫僅支援 SQL 登入。 若要建立 Azure Active Directory 使用者帳戶，或建立未與登入建立關聯的使用者帳戶，請使用 [CREATE USER](create-user-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[管理 Azure SQL Database 中的登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
+*login_name* 指定建立的登入名稱。 Azure SQL Database 中的單一和集區資料庫以及 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的資料庫僅支援 SQL 登入。 若要建立 Azure Active Directory 使用者帳戶，或建立未與登入建立關聯的使用者帳戶，請使用 [CREATE USER](create-user-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[管理 Azure SQL Database 中的登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
 
 PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 

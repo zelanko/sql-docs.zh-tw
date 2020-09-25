@@ -6,23 +6,23 @@ ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894496"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116236"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-AlwaysOn 可用性群組 (AG) 需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 透過 Windows Server 2012 R2 部署 WSFC 時，一律需要參與 WSFC 的伺服器 (也稱為節點) 加入相同的網域。 如需 Active Directory 網域服務 (AD DS) 的詳細資訊，請參閱[這裡](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。
+Always On 可用性群組 (AG) 需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 透過 Windows Server 2012 R2 部署 WSFC 時，一律需要參與 WSFC 的伺服器 (也稱為節點) 加入相同的網域。 如需 Active Directory 網域服務 (AD DS) 的詳細資訊，請參閱[這裡](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。
 
 AD DS 和 WSFC 相依性比先前使用資料庫鏡像 (DBM) 組態所部署的相依性更為複雜，因為可以使用憑證跨多個資料中心部署 DBM，而不需要任何這類相依性。  跨多個資料中心的傳統可用性群組需要所有伺服器都必須加入相同的 Active Directory 網域；不同的網域即使是受信任的網域，也沒有作用。 所有伺服器都必須是相同 WSFC 的節點。 下圖顯示這個組態。 SQL Server 2016 也具有分散式可用性群組，同時以不同的方式達到此目標。
 

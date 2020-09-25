@@ -1,7 +1,7 @@
 ---
 title: 使用 pip 安裝 azdata
-titleSuffix: SQL Server big data clusters
-description: 了解如何使用 pip 安裝 azdata 工具，以安裝及管理巨量資料叢集。
+titleSuffix: ''
+description: 了解如何使用 pip 來安裝 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51faf26a6414854ad3b2b1c2d205304e9b3dfb36
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733651"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914949"
 ---
 # <a name="install-azdata-with-pip"></a>使用 `pip` 安裝 `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 本文描述如何使用 `pip` 在 Windows 或 Linux 上 安裝 `azdata`。
 
@@ -26,7 +26,7 @@ ms.locfileid: "89733651"
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> 必要條件
 
-`azdata` 是以 Python 撰寫的命令列公用程式，可讓叢集系統管理員透過 REST API 啟動及管理巨量資料叢集。 所需的最低 Python 版本為 3.5。 您也必須擁有 `pip`，才能下載及安裝 `azdata` 工具。 下列說明提供適用於 Windows 和 Ubuntu 的範例。 如需在其他平台上安裝 Python，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
+`azdata` 是以 Python 撰寫的命令列公用程式，可讓叢集管理員透過 REST API 啟動及管理資料。 所需的最低 Python 版本為 3.5。 您也必須擁有 `pip`，才能下載及安裝 `azdata` 工具。 下列說明提供適用於 Windows 和 Ubuntu 的範例。 如需在其他平台上安裝 Python，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
 此外也請安裝及更新最新版的 `requests` Python 套件：
 
 ```bash
@@ -143,3 +143,5 @@ pip3 install -U requests
 ## <a name="next-steps"></a>後續步驟
 
 如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)。
+
+使用 azdata 搭配[已啟用 Azure Arc 的資料服務](/azure/azure-arc/data/)

@@ -2,7 +2,7 @@
 description: LAST_VALUE (Transact-SQL)
 title: LAST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2015
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f8dba37244085035a95512c3e1430435bd3ee90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 288b8213bba3623895c8c600f9b398c6e4f608b2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417294"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90915035"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88417294"
   
 ```syntaxsql
   
-LAST_VALUE ( [ scalar_expression ] )   
+LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
@@ -47,6 +47,14 @@ LAST_VALUE ( [ scalar_expression ] )
 ## <a name="arguments"></a>引數
  *scalar_expression*  
  要傳回的值。 *scalar_expression* 可以是資料行、子查詢，或其他結果為單一值的運算式。 不允許其他分析函數。  
+  
+ [ 忽略 Null | 尊重 Null ]     
+ **適用於**：Azure SQL Edge
+
+ 忽略 Null - 在計算分割區的最後一個值時，忽略資料集中的 null 值。     
+ 尊重 Null - 在計算分割區的最後一個值時，尊重資料集中的 null 值。     
+ 
+  如需詳細資訊，請參閱[輸入遺漏值](/azure/azure-sql-edge/imputing-missing-values/)。
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。  
@@ -154,4 +162,6 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
   
 ```  
   
-  
+## <a name="see-also"></a>另請參閱  
+
+ [First_Value &#40;Transact-SQL&#41;](first-value-transact-sql.md)  

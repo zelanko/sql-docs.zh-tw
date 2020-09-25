@@ -13,18 +13,24 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da1baba9e50007358bd7a0f4d550282ee130e4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491461"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989874"
 ---
 # <a name="accelerated-database-recovery"></a>加速資料庫復原
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-加速資料庫復原 (ADR) 藉由重新設計 SQL 的資料庫引擎復原處理序來提升資料庫可用性，尤其是針對長時間執行的交易。 ADR 是 SQL Server 2019 的新功能，也適用於 Azure SQL Database 中的單一資料庫和集區資料庫，以及 Azure SQL 資料倉儲中的資料庫 (目前處於公開預覽狀態)。 ADR 的主要優點為：
+加速資料庫復原 (ADR) 藉由重新設計 SQL 的資料庫引擎復原處理序來提升資料庫可用性，尤其是針對長時間執行的交易。 ADR 是 SQL Server 2019 中的新功能。 
+
+ADR 也適用於 Azure SQL Database、Azure SQL 受控執行個體和 Azure Synapse SQL 中的資料庫。 SQL Database 和 SQL 受控執行個體預設會啟用 ADR，而且無法停用。 
+
+## <a name="overview"></a>概觀
+
+ADR 的主要優點為：
 
 - **快速且一致的資料庫復原**
 

@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: 可啟用數個個別資料庫層級的資料庫組態設定。
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537084"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565083"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 若要在執行個體層級設定此選項，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 > [!NOTE]
-> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，伺服器層級**平行處理原則最大程度**設定一律設為 0。 您可以為每個資料庫設定 MAXDOP，如本文中所述。 如需設定 MAXDOP 的最佳建議，請參閱[其他資源](#additional-resources)一節。
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，新的單一和彈性集區資料庫的 MAXDOP 資料庫範圍設定預設為 8。 您可以為每個資料庫設定 MAXDOP，如本文中所述。 如需設定 MAXDOP 的最佳建議，請參閱[其他資源](#additional-resources)一節。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請使用 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。    

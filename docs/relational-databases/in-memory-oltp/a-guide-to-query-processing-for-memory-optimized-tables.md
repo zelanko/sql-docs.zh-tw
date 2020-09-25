@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247072"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989901"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|請注意，Hash Match 運算子不支援彙總。 因此，即使解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中相同查詢的計畫使用 Hash Match 運算子，原生編譯預存程序中的所有彙總仍會使用 Stream Aggregate 運算子。|  
   
 ## <a name="column-statistics-and-joins"></a>資料行統計資料和聯結  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或如果查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會建立這些統計資料。)成本估計的主要標準是單一運算子所處理的資料列數 請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或如果查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會建立這些統計資料。)成本估計的主要標準是單一運算子所處理的資料列數 請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
   
- 在圖 1 的範例中，  
+在圖 1 的範例中，  
   
--   Customer 上叢集索引掃描的資料列估計為 91；實際為 91。  
+- Customer 上叢集索引掃描的資料列估計為 91；實際為 91。  
+- CustomerID 上非叢集索引掃描的資料列估計為 830；實際為 830。  
+- Merge Join 運算子的資料列估計為 815；實際為 830。  
   
--   CustomerID 上非叢集索引掃描的資料列估計為 830；實際為 830。  
+索引掃描的估計是正確的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護磁碟資料表的資料列計數。 完整資料表和索引掃描的估計永遠正確，而聯結的估計也一樣相當正確。 聯結的估計同樣相當正確。  
   
--   Merge Join 運算子的資料列估計為 815；實際為 830。  
+如果這些估計改變，不同計畫替代方式的成本考量也會改變。 例如，如果聯結其中一端的估計資料列計數為 1，或只有少數資料列，則使用巢狀迴圈聯結成本較低。 請考慮以下查詢：  
   
- 索引掃描的估計是正確的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護磁碟資料表的資料列計數。 完整資料表和索引掃描的估計永遠正確，而聯結的估計也一樣相當正確。 聯結的估計同樣相當正確。  
-  
- 如果這些估計改變，不同計畫替代方式的成本考量也會改變。 例如，如果聯結其中一端的估計資料列計數為 1，或只有少數資料列，則使用巢狀迴圈聯結成本較低。  
-  
- 以下是查詢的計畫：  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- 只保留 Customer 資料表中的一個資料列，並刪除其餘全部資料列時：  
+刪除 `Customer` 資料表中除了一個資料列以外的所有資料列之後，會產生下列查詢計劃：  
   
- ![資料行統計資料和聯結。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "資料行統計資料和聯結。")  
+![資料行統計資料和聯結。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "資料行統計資料和聯結。")  
   
- 關於這個查詢計畫：  
+關於這個查詢計畫：  
   
--   Hash Match 已取代為 Nested Loops 實體聯結運算子。  
-  
--   對 IX_CustomerID 的完整索引掃描已取代為索引搜尋。 這樣的結果會是掃描 5 個資料列，而不是完整索引掃描所需的 830 個資料列。  
+- Hash Match 已取代為 Nested Loops 實體聯結運算子。  
+- 對 IX_CustomerID 的完整索引掃描已取代為索引搜尋。 這樣的結果會是掃描 5 個資料列，而不是完整索引掃描所需的 830 個資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8a9c656e63ca975550d0ccffbfb93235f060621
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547518"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024360"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -321,7 +321,7 @@ WITH (
 #### <a name="encoding"></a>編碼方式
    `Encoding = {'UTF8' | 'UTF16'}`
    
- 在 Azure SQL 資料倉儲和 PDW (APS CU7.4) 中，PolyBase 可以讀取 UTF8 及 UTF16-LE 編碼的分隔符號文字檔。 在 SQL Server 中，PolyBase 不支援讀取 UTF16 編碼的檔案。
+ 在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4) 中，PolyBase 可讀取 UTF8 和 UTF16-LE 編碼的分隔符號文字檔。 在 SQL Server 中，PolyBase 不支援讀取 UTF16 編碼的檔案。
 
 
 ## <a name="permissions"></a>權限  
@@ -352,7 +352,7 @@ WITH (
 ## <a name="performance"></a>效能
  使用壓縮檔案一律要在下列兩者間進行取捨：在外部資料來源和 SQL Server 之間傳送較少資料，同時要提高 CPU 使用量來壓縮和解壓縮資料。
   
- Gzip 壓縮文字檔不是可分割的。 若要提升 Gzip 壓縮文字檔的效能，我們建議產生多個檔案，並將它們全都儲存於外部資料來源內的相同目錄中。 這個檔案結構允許 PolyBase 使用多個讀取器和解壓縮程序，更快速地讀取及解壓縮資料。 壓縮檔案的理想數目是每個計算節點的資料讀取器處理序數目上限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，資料讀取器程序數目上限為每個節點 8 個，但每個節點 20 個讀取器的 Azure SQL Data Warehouse Gen2 除外。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每個節點的資料讀取器處理序數目上限會因 SLO 而異。 如需詳細資訊，請參閱 [Azure SQL 資料倉儲載入模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) \(英文\)。  
+ Gzip 壓縮文字檔不是可分割的。 若要提升 Gzip 壓縮文字檔的效能，我們建議產生多個檔案，並將它們全都儲存於外部資料來源內的相同目錄中。 這個檔案結構允許 PolyBase 使用多個讀取器和解壓縮程序，更快速地讀取及解壓縮資料。 壓縮檔案的理想數目是每個計算節點的資料讀取器處理序數目上限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，資料讀取器程序數目上限為每個節點 8 個，但每個節點 20 個讀取器的 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2 除外。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每個節點的資料讀取器處理序數目上限會因 SLO 而異。 如需詳細資訊，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 載入模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)。  
   
 ## <a name="examples"></a>範例  
   
@@ -433,5 +433,5 @@ WITH (
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

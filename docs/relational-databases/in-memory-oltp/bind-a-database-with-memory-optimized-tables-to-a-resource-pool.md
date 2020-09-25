@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51ae675af9c37cf7a347830520f0782d801cfea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537732"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110998"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -166,7 +166,7 @@ GO
 ##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> 可用於記憶體最佳化資料表和索引的記憶體百分比  
  如果您將具有記憶體最佳化資料表的資料庫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載對應至相同的資源集區，資源管理員就會設定 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用的內部臨界值，避免集區的使用者在集區使用量上發生衝突。 一般而言， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用的臨界值大約是 80% 的集區。 下表顯示各種記憶體大小的實際臨界值。  
   
- 您為 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計需要的記憶體之後，請建立資源集區，且其中有一定比例的認可目標記憶體可用於 SQL 執行個體，如 DMV `sys.dm_os_sys_info` 中的 'committed_target_kb' 資料行所反映 (請參閱 [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md))。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫使用的記憶體。  
+ 您為 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計需要的記憶體之後，請建立資源集區，且其中有一定比例的認可目標記憶體可用於 SQL 執行個體，如 DMV [`sys.dm_os_sys_info`](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 中的 'committed_target_kb' 資料行所反映。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫使用的記憶體。  
   
 |目標認可的記憶體|記憶體中資料表可用的百分比|  
 |-----------------------------|---------------------------------------------|  

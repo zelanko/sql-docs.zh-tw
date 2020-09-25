@@ -1,6 +1,6 @@
 ---
-title: 擴充性的安全性概觀
-description: SQL Server 機器學習服務中擴充性架構的安全性概觀。 登入與使用者帳戶、SQL Server Launchpad 服務、背景工作角色帳戶、執行多個指令碼及檔案權限的安全性。
+title: 具有擴充性的安全性結構
+description: 本文說明 SQL Server 機器學習服務中擴充性架構的安全性結構。 這包括登入與使用者帳戶、SQL Server Launchpad 服務、背景工作角色帳戶、執行多個指令碼及檔案權限的安全性。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,24 +8,26 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179847"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989833"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性概觀
+# <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性結構
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-本文描述 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中用來將 SQL Server 資料庫引擎和相關元件與擴充性架構整合的整體安全性架構。 它會檢查安全性實體、服務、處理序身分識別及權限。 如需 SQL Server 中擴充性重要概念與元件的詳細資訊，請參閱 [SQL Server 機器學習服務的擴充性架構](extensibility-framework.md)。
+本文描述 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中用來將 SQL Server 資料庫引擎和相關元件與擴充性架構整合的安全性結構。 它會檢查安全性實體、服務、處理序身分識別及權限。 本文涵蓋的重點包括：啟動控制板、SQLRUserGroup 與背景工作帳戶、外部指令碼的處理序隔離等項目的用途，以及使用者身分識別如何對應到背景工作帳戶。
+
+如需 SQL Server 中擴充性重要概念與元件的詳細資訊，請參閱 [SQL Server 機器學習服務的擴充性架構](extensibility-framework.md)。
 
 ## <a name="securables-for-external-script"></a>外部指令碼的安全性實體
 
-以 R、Python 或外部語言 (例如 Java 或 .NET) 撰寫的外部指令碼，會以輸入參數形式提交給針對此目的建立的[系統預存程序](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，或包裝在您定義的預存程序中。 此外，您可能有在資料庫資料表中以二進位格式預先定型及儲存的模型，可在 T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式中呼叫。
+外部指令碼會提交為針對此目的建立之[系統預存程序](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)的輸入參數，或會被包裝在您定義的預存程序中。 指令碼可能會以 R、Python 或外部語言 (例如 Java 或 .NET) 撰寫。 此外，您可能有在資料庫資料表中以二進位格式預先定型及儲存的模型，可在 T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式中呼叫。
 
 當指令碼透過現有的資料庫結構描述物件、預存程式與資料表提供時，SQL Server 機器學習服務沒有新的[安全性實體](../../relational-databases/security/securables.md)。
 
@@ -35,7 +37,7 @@ ms.locfileid: "88179847"
 
 ## <a name="permissions"></a>權限
 
-SQL Server 的資料庫登入與角色資料安全性模型會延伸至外部指令碼。 需要 SQL Server 登入或 Windows 使用者帳戶，才能執行使用 SQL Server 資料或透過 SQL Server 以計算內容形式執行的外部指令碼。 擁有執行臨機操作查詢權限的資料庫使用者，可以從外部指令碼存取相同的資料。
+SQL Server 的資料庫登入與角色資料安全性模型會延伸至外部指令碼。 需要 SQL Server 登入或 Windows 使用者帳戶，才能執行使用 SQL Server 資料或透過 SQL Server 以計算內容形式執行的外部指令碼。 擁有執行查詢權限的資料庫使用者，可以從外部指令碼存取相同的資料。
 
 登入或使用者帳戶會根據外部指令碼需求，識別可能需要多個存取層級的「安全性主體」  ：
 
@@ -78,7 +80,7 @@ SQL Server 的資料庫登入與角色資料安全性模型會延伸至外部指
 擴充性架構會將一個新的 NT 服務新增至 SQL Server 安裝中的[服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)：[**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)。
 
 資料庫引擎會使用 SQL Server **Launchpad** 服務，將外部指令碼工作階段具現化為個別處理序。 
-處理序會以低權限帳戶執行；這與 SQL Server、啟動控制板本身以及用來執行預存程序或主查詢的使用者識別不同。 以低權限帳戶在個別處理序中執行指令碼，是 SQL Server 中外部指令碼安全性與隔離模型的基礎。
+此處理序會以低權限帳戶執行。 此帳戶與 SQL Server、啟動控制板本身以及用來執行預存程序或主查詢的使用者身分識別不同。 以低權限帳戶在個別處理序中執行指令碼，是 SQL Server 中外部指令碼安全性與隔離模型的基礎。
 
 SQL Server 也會維護呼叫使用者身分識別與用來啟動附屬處理序其低權限背景工作帳戶的對應。 在指令碼或程式碼會針對資料與作業回呼 SQL Server 的某些情況下，SQL Server 可以順暢地管理身分識別移轉。 如果呼叫的使用者有足夠的權限，則包含 SELECT 陳述式或呼叫函式的指令碼與其他程式設計物件通常會成功。
 
@@ -111,7 +113,7 @@ SQL Server 也會維護呼叫使用者身分識別與用來啟動附屬處理序
 
 僅支援一個資料庫引擎執行個體，且有一個繫結至該執行個體的 launchpadd 服務。 執行指令碼時，launchpadd 服務會在自己的新 PID、IPC、掛接和網路命名空間中，以低權限使用者帳戶 mssql_satellite 啟動個別的啟動控制板處理序。 每個附屬處理序都繼承啟動控制板的 mssql_satellite 使用者帳戶，並在指令碼執行期間使用該帳戶。
 
-如需詳細資料，請參閱 [SQL Server 機器學習服務的擴充性結架構](extensibility-framework.md)。
+如需詳細資訊，請參閱 [SQL Server 機器學習服務的擴充性結構](extensibility-framework.md)。
 
 ::: moniker-end
 
@@ -133,7 +135,7 @@ SQL Server 也會維護呼叫使用者身分識別與用來啟動附屬處理序
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>授與 SQLRUserGroup 的權限
 
-根據預設，**SQLRUserGroup** 的成員具有 SQL Server **Binn**、**R_SERVICES** 與 **PYTHON_SERVICES** 目錄中檔案的讀取及執行權限，具有隨 SQL Server 安裝之 R 與 Python 發行版本的可執行檔、程式庫與內建資料集的存取權。 
+根據預設，**SQLRUserGroup** 的成員具有 SQL Server **Binn**、**R_SERVICES** 和 **PYTHON_SERVICES** 目錄中檔案的讀取和執行權限。 這包括存取與 SQL Server 一起安裝的 R 和 Python 散發套件中的可執行檔、程式庫和內建資料集。 
 
 若要保護 SQL Server 上的敏感性資源，您可以選擇性地定義存取控制清單 (ACL)，以拒絕對 **SQLRUserGroup** 的存取權。 相反地，您也可以授與主機電腦上本機資料來源的存取權，與 SQL Server 本身分開。 
 
@@ -192,7 +194,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 ## <a name="implied-authentication-loopback-requests"></a>隱含驗證 (回送要求)
 
-「隱含驗證」  描述連線要求行為，其中以低權限背景工作帳戶執行的外部處理序，在資料或作業的回送要求上會顯示為 SQL Server 的受信任使用者身分識別。 就概念而言，隱含驗證對於 Windows 驗證而言是唯一的 (在指定受信任連線的SQL Server 連接字串中，或在來自外部處理序 (例如 R 或 Python 指令碼) 的要求上)。 這有時候也稱為「回送」。
+「隱含驗證」  描述連線要求行為，其中以低權限背景工作帳戶執行的外部處理序，在資料或作業的回送要求上會顯示為 SQL Server 的受信任使用者身分識別。 就概念而言，隱含驗證對於 Windows 驗證而言是唯一的 (在指定受信任連線的SQL Server 連接字串中，或在來自外部處理序 (例如 R 或 Python 指令碼) 的要求上)。 這有時候也稱為「回送」  。
 
 受信任的連線可從外部指令碼運作，但只適用於額外的組態。 在擴充性架構中，外部處理序會在背景工作帳戶下執行，繼承父系 **SQLRUserGroup** 的權限。 當連接字串指定 `Trusted_Connection=True` 時，背景工作角色帳戶的身分識別會顯示在連線要求上，SQL Server 預設不會知道此資訊。
 
@@ -234,7 +236,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 使用啟動控制板 GUID 資料夾中的附屬憑證，透過附屬處理序來向 SQL Server 進行驗證，即可達成回送連線。 呼叫使用者的身分識別會對應至此憑證，因此使用憑證連線回 SQL Server 的附屬處理序，可對應回呼叫使用者。
 
-如需詳細資料，請參閱[從 Python 或 R 指令碼對 SQL Server 的回送連線](../connect/loopback-connection.md)。
+如需詳細資訊，請參閱[從 Python 或 R 指令碼對 SQL Server 的回送連線](../connect/loopback-connection.md)。
 
 ### <a name="how-implied-authentication-works-for-external-script-sessions"></a>外部指令碼工作階段的隱含驗證如何運作
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353095"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989431"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>18.6 sqlpackage
+
+|平台|下載|發行日期|版本|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2143544)|2020 年 9 月 18 日|18.6|15.0.4897.1|
+|macOS .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143659)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
+|Linux .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143497)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
+|Windows .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
+
+### <a name="features"></a>特性
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| 平台 | 已將 .NET Core 版本的 sqlpackage 更新為 .NET Core 3.1 |
+| Always Encrypted | 已新增 SQL Server 2019 的安全記憶體保護區匯入和匯出支援 |
+| 部署 | 已新增支援在從 Azure SQL Database 匯出時忽略已啟用變更資料擷取的資料表 |
+| 部署 | 已在 Azure SQL Database 中新增索引選項 OPTIMIZE_FOR_SEQUENTIAL_KEY 的支援 |
+| 部署 | 已新增 Azure SQL 資料倉儲的識別欄位支援 | 
+| [說明] | 輸出 help (/?) 中的 sqlpackage 版本並支援 /version 參數 | 
+
+### <a name="fixes"></a>修正
+| 功能 | 詳細資料 |
+| :------ | :------ | 
+| 部署 | 以非系統管理員 (sysadmin) 使用者身分修正以 Azure SQL Database 受控執行個體作為目標時所產生的錯誤部署指令碼  | 
+| 部署 | 已修正在執行指令碼動作時載入部署參與者的問題 | 
+| [說明] | 當作業花費的時間超過 1 天時，在 sqlpackage 中輸出正確的經歷時間 | 
+| 部署 | 已修正針對 .NET Core 部署時的 dacpac 註冊問題 | 
+| 部署 | 已修正 .NET Core 處理 /accessToken (/at) 參數時的 sqlpackage | 
+| 部署 | 允許預存程序中的 ALTER TABLE 陳述式作為非最上層陳述式 | 
+| 部署 | 已將具體化檢視的 Azure SQL 資料倉儲驗證修正為不區分大小寫 | 
+
+### <a name="known-issues"></a>已知問題
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| 部署 | 尚未支援 Azure SQL 資料倉儲工作負載管理功能 (工作負載群組和工作負載分類器) | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 平台 | 適用於 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
 | 安全性 | 移除 SHA1 程式碼簽署。 |
 | 部署 | 新增支援全新的 Azure 資料庫版本：GeneralPurpose、BusinessCritical、Hyperscale |
-| 部署 | 新增對 AAD 使用者和群組的受控執行個體支援。 |
+| 部署 | 新增對 Azure Active Directory 使用者和群組的受控執行個體支援。 |
 | 部署 | 支援 .NET Core 上 sqlpackage 的 /AccessToken 參數。 |
 | &nbsp; | &nbsp; |
 

@@ -38,18 +38,18 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a63931e71983b0ae5bba99fb13081cc75c93b2cd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444831"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024527"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-此文章說明 Azure SQL 資料倉儲中用於開發解決方案的 CREATE MATERIALIZED VIEW AS SELECT T-SQL 陳述式。 此文章也提供程式碼範例。
+此文章說明 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中用於開發解決方案的 CREATE MATERIALIZED VIEW AS SELECT T-SQL 陳述式。 此文章也提供程式碼範例。
 
 具體化檢視會保存從檢視定義查詢傳回的資料，並在底層資料表中的資料變更時自動取得更新。   它可以改進複雜查詢 (通常是具有聯結與會總的查詢) 的效能，同時提供簡單的維護作業。   使用其執行計畫的自動比對功能，不需要在查詢中參考具體化檢視，最佳化工具就能考慮要替代的檢視。  這項功能可讓資料工程師將具體化檢視實作為改善查詢回應時間的機制，而不需要變更查詢。  
   
@@ -131,7 +131,7 @@ Azure 資料倉儲中具體化檢視類似 SQL Server 中的索引檢視表。�
 |STDEV(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 'a' 是運算式。|SUM(a)、COUNT_BIG(a)、SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
 | | | |
 
-一旦建立，具體化檢視在 SQL Server Management Studio 內 Azure SQL 資料倉儲執行個體的檢視資料夾下就是可見的。
+一旦建立，具體化檢視在 SQL Server Management Studio 內 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 執行個體的檢視資料夾下就是可見的。
 
 使用者可以執行 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 與 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) 來判斷具體化檢視取用的空間。  
 
@@ -156,6 +156,6 @@ SQL Server Management Studio 中的 EXPLAIN 計畫與圖形化預估執行計畫
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[Azure SQL 資料倉儲中支援的系統檢視](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[Azure SQL 資料倉儲中支援的 T-SQL 陳述式](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中支援的系統檢視](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中支援的 T-SQL 陳述式](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

@@ -1,51 +1,38 @@
 ---
 title: 快速入門：執行 Python 指令碼
 titleSuffix: SQL machine learning
-description: 使用 SQL 機器學習來執行一組簡單的 Python 指令碼。 了解如何使用預存程序 sp_execute_external_script 來執行指令碼。
+description: 使用機器學習服務在 SQL Server、巨量資料叢集或 Azure SQL 受控執行個體上執行一組簡單的 Python 指令碼。 了解如何使用預存程序 sp_execute_external_script 來執行指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/23/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
+ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178535"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91136376"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>快速入門：使用 SQL 機器學習來執行簡單的 Python 指令碼
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上執行一組簡單的 Python 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)來執行一組簡單的 Python 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-在此快速入門中，您將會使用 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)來執行一組簡單的 Python 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在資料庫中執行指令碼。
-::: moniker-end
+在此快速入門中，您將會使用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)、[Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)或在 [SQL Server 巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上執行一組簡單的 Python 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
 
 ## <a name="prerequisites"></a>Prerequisites
 
 您需要符合下列必要條件，才能執行此快速入門。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
-::: moniker-end
+- SQL 資料庫位於其中一個平台上：
+  - [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - SQL Server 巨量資料叢集。 查看如何[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+  - Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
-- 一項用來執行 SQL 查詢 (包含 Python 指令碼) 的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+- 執行包含 Python 指令碼之 SQL 查詢的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="run-a-simple-script"></a>執行簡單的指令碼
 

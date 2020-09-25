@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487701"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990391"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
 
@@ -368,16 +368,14 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 6.  重新啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。  
   
-### <a name="connecting-by-using-a-local-account"></a>使用本機帳戶進行連接  
- 如果您是在用戶端電腦上使用本機 Windows 帳戶工作，那麼只有當遠端電腦上存在和本機帳戶相同名稱與密碼以及適當權限的帳戶，您才能連接到遠端電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。  
+### <a name="connecting-by-using-a-local-account"></a>使用本機帳戶進行連接
+
+如果您是在用戶端電腦上使用本機 Windows 帳戶工作，那麼只有當遠端電腦上存在和本機帳戶相同名稱與密碼以及適當權限的帳戶，您才能連接到遠端電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>SSIS 服務預設不支援委派  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務預設不支援認證委派 (有時候稱為「雙躍點」)。 在這種情況中，您是在用戶端電腦上工作、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務是在第二部電腦上執行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則是在第三部電腦上執行。 首先， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 已順利將認證從用戶端電腦傳遞至正在其上執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的第二部電腦。 接著，不過， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法將認證從第二部電腦委派至正在其上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第三部電腦。
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>SSIS Windows 服務不支援委派
 
-將 [信任這個使用者，可委派任何服務 (只限 Kerberos)]**** 權限授與 SQL Server 服務帳戶 (可將 Integration Services 服務 (ISServerExec.exe) 啟動為子處理序)，即可啟用認證委派。 在授與此權限之前，請考慮它是否符合您組織的安全性需求。
+SSIS 不支援認證委派 (有時候稱為「雙躍點」)。 在這種情況中，您是在用戶端電腦上工作，SSIS 是安裝在第二部電腦上，而 SQL Server 則是安裝在第三部電腦上。 雖然 SSIS 成功地將您的認證從用戶端電腦傳送到第二部電腦 (SSIS 執行所在)，SSIS 卻無法將您的認證從第二部電腦委派給第三部電腦 (SQL Server 執行所在)。
 
-如需詳細資訊，請參閱 [取得使用 SSIS 封裝的跨網域 Kerberos 和委派](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)。
- 
 ## <a name="configure-the-firewall"></a>設定防火牆
   
  Windows 防火牆系統有助於防止未經授權的使用者透過網路連線來存取電腦資源。 若要透過此防火牆存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，必須設定防火牆來啟用存取。  

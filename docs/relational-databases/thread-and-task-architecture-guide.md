@@ -2,7 +2,7 @@
 title: 執行緒和工作架構指南 | Microsoft Docs
 description: 了解 SQL Server 中的執行緒和工作架構，包括工作排程、熱新增 CPU 及最佳做法來使用超過 64 個 CPU 的電腦。
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076803"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114592"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ ms.locfileid: "90076803"
 **排程器** (亦稱為 SOS 排程器) 會管理需要處理時間來代表工作 (Task) 執行工作 (Work) 的背景工作執行緒。 每個排程器都對應到個別處理器 (CPU)。 背景工作角色可在排程器中維持作用中的時間稱為 OS 配量，其最大值為 4 毫秒。 在經過此配量時間之後，背景工作角色會將其時間分配給需要存取 CPU 資源的背景工作角色，並變更其狀態。 這個背景工作角色之間的合作以最大化 CPU 資源存取的機制稱為**合作式排程**，亦稱為非先佔式排程。 接著，背景工作角色中的變更會傳播到與該背景工作角色關聯的工作，以及傳播到與該工作關聯的要求。 如需有關背景工作角色狀態的詳細資訊，請參閱 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 如需有關排程器的詳細資訊，請參閱 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
 
 總結來說，**要求**可能會繁衍一或多個**工作**以執行工作的單位。 每個工作都會指派給負責完成此工作的**背景工作執行緒**。 每個背景工作執行緒都必須排程 (位於**排程器**上) 才能確實執行工作。 
+
+> [!NOTE]
+> 請考慮下列案例：   
+> -  背景工作角色 1 是長時間執行的工作，例如，在記憶體內為基礎的資料表上使用預先讀取的讀取查詢。 背景工作角色 1 會在緩衝集區中尋找已存在的所需資料頁，因此不需要暫止以等待 I/O 作業，而且可以在暫止之前取用其完整的配量。   
+> -  背景工作角色 2 會執行短於一毫秒的工作，因此必須在其完整的配量耗盡之前必須暫止。     
+>
+> 在此案例中，最高可達 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，背景工作角色 1 基本上可允許擁有更多的整體配量時間來獨佔排程器。   
+> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，合作式排程包括大型不足額優先 (LDF) 排程。 使用 LDF 排程時，系統會監視配量使用模式，而單一背景工作執行緒不會獨佔一個排程器。 在相同的情況下，背景工作角色 2 可以在背景工作角色1 取用更多的配量之前取用重複配量，因此可防止背景工作角色 1 在不友善的模式下獨佔排程器。
 
 ### <a name="scheduling-parallel-tasks"></a>排程平行工作
 假設 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以 MaxDOP 8 設定，且 CPU 親和性設為跨 NUMA 節點 0 和 1 的 24 個 CPU (排程器)。 排程器 0 到 11 屬於 NUMA 節點 0，而排程器 12 到 23 屬於 NUMA 節點 1。 應用程式會將下列查詢 (要求) 傳送至 [!INCLUDE[ssde_md](../includes/ssde_md.md)]：
@@ -228,8 +244,8 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 > [!NOTE]
 > 適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]「未」遭淘汰，而且將會繼續受支援。
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>設定 TempDB 資料檔案的數目
-檔案數目取決於電腦上 (邏輯) 處理器的數目。 一般而言，如果邏輯處理器的數目小於或等於 8，請使用與邏輯處理器數目相同的資料檔案數目。 如果邏輯處理器的數目大於 8，請使用 8 個資料檔案，要是競爭的情況仍持續發生，請以 4 的倍數增加資料檔案數目，直到競爭縮減到可接受的程度；或是對工作負載/程式碼進行變更。 也請記住有關 TempDB 的其他建議，它位於[將 SQL Server 中的 TempDB 效能最佳化](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)。 
+### <a name="setting-the-number-of-tempdb-data-files"></a>設定 tempdb 資料檔案的數目
+檔案數目取決於電腦上 (邏輯) 處理器的數目。 一般而言，如果邏輯處理器的數目小於或等於 8，請使用與邏輯處理器數目相同的資料檔案數目。 如果邏輯處理器的數目大於 8，請使用 8 個資料檔案，要是競爭的情況仍持續發生，請以 4 的倍數增加資料檔案數目，直到競爭縮減到可接受的程度；或是對工作負載/程式碼進行變更。 也請記住有關 tempdb 的其他建議，您可於[將 SQL Server 中的 tempdb 效能最佳化](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)中找到。 
 
 不過，只要仔細地考量 tempdb 的並行需求，您就可以減少資料庫管理作業額外負荷。 例如，如果系統具有 64 個 CPU 而且通常只有 32 個查詢使用 tempdb，則將 tempdb 檔案的數目增加至 64 並不會改善效能。
 

@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
-ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 09/22/2020
+ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766187"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989981"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
-**[下載並安裝最新版本！](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[下載並安裝最新版本！](./download-azure-data-studio.md)**
+
+## <a name="september-2020"></a>2020 年 9 月
+
+2020 年 9 月 22 日 &nbsp; / &nbsp; 版本：1.22.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| ------ | ------- |
+| 新增 Notebook 功能 | <br/> &bull; &nbsp; 支援全新的文字資料格編輯體驗，該體驗是以 RTF 格式和順暢轉換為 Markdown (也稱為 WYSIWYG (所見即所得) 工具列) 為基礎 <br/> &bull; &nbsp; 支援 Kusto 核心 <br/> &bull; &nbsp; 支援筆記本釘選 <br/> &bull; &nbsp; 已新增新版 Jupyter Book 的支援 <br/> &bull; &nbsp; 已改善 Jupyter 快速鍵 <br/> &bull; &nbsp; 引進效能載入改善 |
+| SQL Database Projects 延伸模組 | SQL Database 專案延伸模組將以專案為基礎的資料庫開發帶入 Azure Data Studio。 在此預覽版本中，可以從 Azure Data Studio 建立和發佈 SQL 專案。 |
+| Kusto (KQL) 延伸模組 | 在 Azure Data Studio 中帶入原生 Kusto 體驗，以便針對儲存在 Azure 資料總管中的大量即時串流資料進行資料探索和資料分析。 此預覽版本支援連線和瀏覽 Azure 資料總管叢集、撰寫 KQL 查詢，以及使用 Kusto 核心編寫筆記本。 |
+| Azure Arc 延伸模組 | 使用者可以透過 Azure Data Studio 試用 Azure Arc 公開預覽版。 這包括： <br/> &bull; &nbsp; 部署資料控制器 <br/> &bull; &nbsp; 部署 Postgres <br/> &bull; &nbsp; 部署適用於 Azure Arc 的受控執行個體 <br/> &bull; &nbsp; 連線到資料控制器 <br/> &bull; &nbsp; 存取資料服務儀表板 <br/> &bull; &nbsp; Azure Arc Jupyter 書籍 |
+| 部署選項 | <br/> &bull; &nbsp;Azure SQL Database Edge <br/> (Edge 會需要 Azure SQL Edge 部署延伸模組) |
+| SQL Server 匯入延伸模組 GA | 宣佈 SQL Server 匯入延伸模組的 GA，功能不再處於預覽狀態。 此延伸模組可協助匯入 csv/txt 檔案。 在[本文](sql-server-import-extension.md)中深入了解此延伸模組。 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed) \(英文\)。 |
 
 ## <a name="august-2020"></a>2020 年 8 月
 
@@ -29,7 +45,7 @@ ms.locfileid: "88766187"
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 新增 Notebook 功能 | &bull; &nbsp; 移動資料格位置 <br/> &bull; &nbsp; 將資料格轉換成文字資料格或程式碼資料格
-| Jupyter 書籍選擇器 | 使用者現在可以從 Github 版本中選擇 Jupyter 書籍，並在 Azure Data Studio 中順暢地開啟 |
+| Jupyter 書籍選擇器 | 使用者現在可以從 GitHub 版本中選擇 Jupyter Book，並在 Azure Data Studio 中順暢地開啟 |
 | 已將搜尋新增至 Notebooks Viewlet | 使用者可以輕鬆地在其筆記本與 Jupyter 叢書中搜尋內容 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed) \(英文\)。 |
 | &nbsp; | &nbsp; |
@@ -76,7 +92,7 @@ ms.locfileid: "88766187"
 | :----- | :------ |
 | 已將 Azure Data Studio 新增至 Azure 入口網站整合 | 使用者現在可直接從 Azure SQL Database 連線、Azure Postgres 等啟動至 Azure 入口網站。 |
 | 新增 Notebook 功能 | &bull; &nbsp; 新增筆記本工具列 <br/> &bull; &nbsp; 新增編輯儲存格工具列 <br/> &bull; &nbsp; Python 相依性精靈 UX 更新 <br/> &bull; &nbsp; 筆記本之間改善的間距 |
-| 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15)中的功能。 |
+| 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](../tools/sql-assessment-api/sql-assessment-api-overview.md)中的功能。 |
 | [機器學習延伸模組的改善](https://go.microsoft.com/fwlink/?linkid=2129918) | 現在支援 Azure SQL 受控執行個體。 |
 | 資料虛擬化延伸模組的改善 | 現在支援 MongoDB 與 Teradata |
 | Postgres 延伸模組 Bug 修正 | 固定的 Azure MFA |
@@ -417,10 +433,10 @@ ms.locfileid: "88766187"
 | :----- | :------ |
 | 已新增[適用於 Azure Data Studio 的 PostgreSQL 延伸模組](postgres-extension.md) | 支援的功能： <br/>&bull; &nbsp; 連線對話方塊 <br/>&bull; &nbsp; 物件總管 <br/>&bull; &nbsp; 查詢編輯器 <br/>&bull; &nbsp; 圖表 <br/>&bull; &nbsp; 儀表板 <br/>&bull; &nbsp; 程式碼片段 <br/>&bull; &nbsp; 編輯資料 <br/>&bull; &nbsp; Notebooks |
 | 已新增 SQL Notebook | 已將 SQL 核心支援新增至內建的 Notebook 檢視器： <br/>&bull; &nbsp; 支援 T-SQL <br/>&bull; &nbsp; 支援 PGSQL |
-| 已新增 PowerShell 延伸模組  | 從 VS Code 帶來 [PowerShell 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) \(英文\) 體驗。  |
+| 已新增 PowerShell 延伸模組 | 從 VS Code 帶來 [PowerShell 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) \(英文\) 體驗。  |
 | 已新增 SQL Server dacpac 延伸模組  | 將資料層應用程式精靈從 SQL Server 匯入延伸模組移除至新的延伸模組。  |
 | 已新增社群延伸模組 QueryPlan.show | 新增整合支援以將查詢計劃視覺化  |
-| 已更新 SQL Server 2019 Preview 延伸模組 | &bull; &nbsp; 已將 Jupyter Notebook 支援 (特別是 Python3 和 Spark 核心) 移至核心 Azure Data Studio 工具。 <br/>&bull; &nbsp; 對外部資料精靈的錯誤 (Bug) 修正  |
+| 已更新 SQL Server 2019 Preview 延伸模組 | &bull; &nbsp; 已將 Jupyter Notebook 支援 (特別是 Python3 和 Spark 核心) 移至核心 Azure Data Studio 工具。 <br/>&bull; &nbsp; 對外部資料精靈的錯誤 (Bug) 修正 |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
@@ -446,11 +462,11 @@ ms.locfileid: "88766187"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md?view=sql-server-2017) |
+| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md) |
 | 已在 Profiler 延伸模組中新增篩選擴充事件支援。 | &nbsp; |
 | 已新增「另存檔案為 XML」功能，可將 T-SQL 結果儲存為 XML。 | &nbsp; |
 | 已新增資料層應用程式精靈改進。 | &bull; &nbsp; 已新增 [產生指令碼] 按鈕<br/>&bull; &nbsp; 已新增檢視來提供部署期間可能遺失資料的警告。 |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
 | 預設已針對長時間執行的查詢啟用結果串流。 | &nbsp; |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
@@ -476,9 +492,9 @@ ms.locfileid: "88766187"
 | :----- | :------ |
 | 已針對 Windows 新增使用者安裝程式。 | 不同於現有的系統安裝程式，新的使用者安裝程式不需要系統管理員權限。 這也能為非系統管理員提供更輕鬆的升級體驗。 |
 | 已新增 Azure Active Directory 驗證支援。 | &nbsp; |
-| 宣布 Idera SQL DM 效能深入解析 (預覽)。 | &nbsp; |
+| 宣佈 Idera SQL DM Performance Insights (預覽)。 | &nbsp; |
 | SQL Server 匯入延伸模組中的資料層應用程式精靈支援。 | &nbsp; |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
 | SQL Server Profiler 改進。 | &nbsp; |
 | 大型查詢的結果串流 (預覽)。 | &nbsp; |
 | 社群延伸模組：sp_executesql 至 sql 和「新增資料庫」。 | &nbsp; |
@@ -493,7 +509,7 @@ ms.locfileid: "88766187"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
 | 引進「貼上計劃」延伸模組。 | &nbsp; |
 | 引進「高彩」查詢延伸模組，包括 SSMS 編輯器佈景主題。 | &nbsp; |
 | SQL Server Agent、Profiler 和「匯入」延伸模組中的修正。 | &nbsp; |
@@ -523,7 +539,7 @@ ms.locfileid: "88766187"
 | 引進 Azure 資源總管來瀏覽 Azure SQL Database。 | &nbsp; |
 | 改進物件總管和查詢編輯器的連線穩定性。 | &nbsp; |
 | SQL Agent 延伸模組改進。 | &nbsp; |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Bug 修正，2018 年 10 月

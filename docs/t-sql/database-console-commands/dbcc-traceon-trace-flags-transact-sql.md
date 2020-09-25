@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 91f0fc840d6e4f6925acde6499573ae5a4506463
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 826960263f60a1b9d76e2eb7fb738111613678fc
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042739"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565053"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -171,23 +171,29 @@ ms.locfileid: "90042739"
 |**8744**|停用預先擷取[巢狀迴圈](../../relational-databases/performance/joins.md#nested_loops)運算子。<br /><br />**警告：** 如不當使用此追蹤旗標，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行包含巢狀迴圈運算子的計畫時，可能會有額外的實體讀取作業。<br /><br />**範圍**：全域和工作階段|
 |**9024**|將全域記錄集區記憶體物件轉換成 NUMA 節點分割的記憶體物件。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2809338) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 開始，此行為由引擎控制，追蹤旗標 9024 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**9347**|停用排序運算子的批次模式。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 導入新批次模式排序運算子，將提升許多分析查詢的效能。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3172787) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
+|**9348**|能夠使用查詢最佳化工具基數估計值，決定是否應起始叢集資料行存放區索引的 BULK INSERT。 如果要插入的估計資料列數目小於 102400，則 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用 BULK INSERT。 如果估計的資料列超過102400 個，就會起始 BULK INSERT。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2998301) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**9349**|停用前 N 個排序運算子的批次模式。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 導入新批次模式前幾個排序運算子，將提升許多分析查詢的效能。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
+|**9358**|停用排序運算子的批次模式。 如需詳細資訊，請參閱這篇 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3171555) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]開始會依預設啟用此行為，而此追蹤旗標不會有任何作用。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**9389**|啟用批次模式運算子的額外動態記憶體授與。 如果查詢無法取得其需要的所有記憶體，它會將資料溢出到 TempDB，因而產生額外的 I/O，並可能會影響查詢效能。 如果已啟用動態記憶體授與追蹤旗標，批次模式運算子可能會要求額外的記憶體，在有額外的記憶體可用時，可避免溢出到 TempDB。 如需詳細資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query)的＜min memory per query 的作用＞一節。<br /><br />**範圍**：全域或工作階段| 
 |**9398**|停用[自適性聯結](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)運算子可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法延後到已掃描第一個輸入之後，如 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中所述。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4099126) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
+|**9410**|針對使用雜湊彙總運算子並溢出的查詢，啟用非預設修正程式。 啟用此追蹤旗標會增加不同雜湊作業的可用記憶體。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3167159) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**9453**|停用批次模式執行。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4016902) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**9471**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本的查詢最佳化工具基數估計模型下，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對單一資料表篩選條件以最少的選擇性來產生計劃。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**注意：** 此追蹤旗標不適用於 CE 70 版。 請改用追蹤旗標 4137。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 
 |**9476**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本的查詢最佳化工具基數估計模型下，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以簡易內含項目假設來產生計畫，而不使用預設的基底內含項目假設。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3189675) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 
 |**9481**|可讓您將查詢最佳化工具基數估計模型設定為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更舊版本，而不根據資料庫的相容性層級。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若要在資料庫層級完成此操作，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LEGACY_CARDINALITY_ESTIMATION 選項。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|  
-|**9485**|停用 DBCC SHOW_STATISTICS 的 SELECT 權限。<br /><br />**範圍**：只限全域|
+|**9485**|停用 DBCC SHOW_STATISTICS 的 SELECT 權限。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2683304) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**9488**|<a name="9488"></a>使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本的查詢最佳化工具基數估計模型時，將資料表值函式的固定估計設為預設值 1 (對應 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 與更舊版本查詢最佳化工具基數估計模型下的預設值)。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**9495**|在 INSERT...SELECT 作業的插入期間停用平行處理原則，這項規則同時套用至使用者和暫存資料表。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3180087) \(機器翻譯\)<br /><br />**範圍**：全域或工作階段| 
 |**9567**|在自動植入期間，針對 Always On 可用性群組啟用資料流的壓縮。 在自動植入期間，壓縮可以大幅縮短傳輸時間，而且會增加處理器負載。 如需詳細資訊，請參閱[自動初始化 Always On 可用性群組](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：全域或工作階段|
 |**9571**|停用對預設資料庫路徑進行可用性群組自動植入。 如需詳細資訊，請參閱 [磁碟配置](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)。<br /><br />**範圍**：全域或工作階段| 
+|**9576**|針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 引進的可用性群組容錯移轉，停用增強的錯誤集合。 如需詳細資訊，請參閱 [SQL Server 可用性群組 – 增強的資料庫層級容錯移轉](https://docs.microsoft.com/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)。<br /><br />**範圍**：只限全域| 
 |**9591**|在 Always On 可用性群組中停用記錄區塊壓縮。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的同步和非同步複本預設會使用記錄區塊壓縮。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，只有非同步複本會使用壓縮。 <br /><br />**範圍**：全域或工作階段|
 |**9592**|啟用同步可用性群組的記錄資料流壓縮。 因為壓縮會增加延遲，所以在同步可用性群組上預設會停用這項功能。 如需詳細資訊，請參閱 [微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：全域或工作階段| 
 |**9929**|將記憶體中的檢查點檔案大小減少至各 1 MB。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3147012) \(機器翻譯\)。<br /><br />**範圍**：只限全域|  
 |**9939**|在參考記憶體最佳化資料表或資料表變數的 DML 作業中，啟用平行計畫和平行掃描記憶體最佳化資料表和資料表變數 (只要它們不是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中 DML 作業的目標)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4013877) \(機器翻譯\)。<br /><br />**注意：** 如果同時也明確啟用追蹤旗標 4199，則不需要追蹤旗標 9939。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|   
+|**9944**|當資料庫具有大量記憶體最佳化資料表或記憶體最佳化資料表類型，而且可能觀察到 PREMPTIVE_OS_FINDFILE 或 PREEMPTIVE_OS_CREATEDIRECTORY 等候類型的封鎖時，啟用緩慢資料庫復原時間的非預設修正程式。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4090789)和此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4052338)。<br /><br />**範圍**：只限全域|  
 |**10204**|在資料行存放區索引重組期間停用合併/重新壓縮。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，當重新組織資料行存放區索引時，新功能會自動將任何小型的壓縮資料列群組合併成較大的壓縮資料列群組，並重新壓縮有大量已刪除資料列的任何資料列群組。<br /><br />**注意：** 追蹤旗標 10204 不適用於在記憶體最佳化資料表上建立的資料行存放區索引。<br /><br />**範圍**：全域或工作階段|   
+|**10207**|允許叢集資料行存放區索引 (CCI) 掃描略過損毀的區段或中繼資料，進而允許從損毀的 CCI 擷取資料。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3067257) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段| 
 |**10316**|在[內部記憶體最佳化暫存時態表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)上建立預設索引和額外的索引。 如果您有特定的查詢模式，而其中包含預設索引未涵蓋的資料行，您可以考慮加入額外的索引。<br /><br />**注意：** 記憶體最佳化資料表的系統建立版本時態表，是專為提供高交易輸送量所設計。 請留意，對負責更新或刪除目前資料表資料列的 DML 作業來說，建立額外的索引可能會造成額外負荷。 使用額外的索引，您的目標應該是在時態性查詢和 DML 額外負荷之間尋求適當的平衡。<br /><br />**範圍**：全域或工作階段|
 |**11023**|針對未在 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式中明確指定採樣速率的所有後續統計資料更新，停用上次保存的採樣速率。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4039284) \(機器翻譯\)。<br /><br />**範圍**：只限全域|    
 |**11024**|當任何分割區的修改次數超過總[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)時，使自動更新統計資料功能觸發。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4041811) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和更新版本的組建。<br /><br />**範圍**：只限全域| 

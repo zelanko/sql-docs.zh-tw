@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243687"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116220"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 
@@ -62,7 +74,7 @@ ms.locfileid: "87243687"
 |鎖定記憶體中作業系統 (OS) 分頁的權限 (允許鎖定實體記憶體，避免鎖定記憶體的 OS 分頁。)<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard、Enterprise 與 Developer 版本：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序使用 AWE 機制所需。 透過 AWE 機制配置的記憶體無法分頁。 <br> 授與此權限但未啟用 AWE 對伺服器將沒有作用。 | 請只有在必要的情況下才使用，例如出現 sqlservr 程序移出分頁的跡象。在此情況下，錯誤記錄檔中會回報錯誤 17890，類似如下範例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]開始不提供 32 位元版本。  
-<sup>2</sup> /3gb 是作業系統開機參數。 如需詳細資訊，請瀏覽 MSDN Library。  
+<sup>2</sup> /3gb 是作業系統開機參數。  
 <sup>3</sup> WOW64 (Windows 64 上的 Windows) 是 32 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位元作業系統上執行的模式。  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 最多支援 128 GB。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 支援作業系統上限。  
 <sup>5</sup> 請注意，sp_configure awe enabled 選項會出現在 64 位元的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上，但會遭到忽略。    
@@ -76,7 +88,7 @@ ms.locfileid: "87243687"
 ## <a name="changes-to-memory-management-starting-with-sssql11"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對記憶體管理進行的變更
 
 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，使用了五種不同的機制配置記憶體：
--  **單一頁面配置器 (SPA)** ，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單一分頁配置的最大取用者。
+-  **單一頁面配置器 (SPA)** ，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單頁配置的最大取用者。
 -  **多頁配置器 (MPA)** ，適用於要求超過 8KB 的記憶體配置。
 -  **CLR 配置器**，包括 SQL CLR 堆積，及其在 CLR 初始化期間所建立的全域配置。
 -  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中 **[執行緒堆疊](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的記憶體配置。
@@ -314,11 +326,24 @@ FROM sys.dm_os_process_memory;
 在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中導入的「總和檢查碼保護」會提供更強的資料完整性檢查。 總和檢查碼會針對每個頁面中寫入的資料來計算，並且儲存在頁面標頭中。 每當從磁碟讀取具有已儲存總和檢查碼的頁面時，資料庫引擎會在頁面中重新計算資料的總和檢查碼，如果新的總和檢查碼與儲存的總和檢查碼不同，即引發錯誤 824。 總和檢查碼保護可以比損毀頁保護捕捉更多的錯誤，因為頁面的每個位元組都會牽動它，不過相對上也需要大量的資源。 啟用總和檢查碼時，緩衝區管理員任何時間從磁碟讀取頁面，都能偵測到因電源故障和有缺陷硬體或韌體所造成的錯誤。 如需設定總和檢查碼的資訊，請參閱 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify)。
 
 > [!IMPORTANT]
-> 將使用者或系統資料庫升級為 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或更新版本時，會保留 [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) 值 (NONE 或 TORN_PAGE_DETECTION)。 我們建議您使用 CHECKSUM。
+> 將使用者或系統資料庫升級為 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 或更新版本時，會保留 [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) 值 (NONE 或 TORN_PAGE_DETECTION)。 我們強烈建議您使用 CHECKSUM。
 > TORN_PAGE_DETECTION 可以使用較少資源，但所提供的 CHECKSUM 保護最少。
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非統一記憶體存取
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是非統一記憶體存取 (NUMA) 感知，不需要特殊組態就可以在 NUMA 硬體上順利執行。 隨著處理器時脈和數目的增加，要降低使用此額外處理能力所需要的記憶體延遲變得越來越困難。 為了避免這個狀況，硬體供應商提供了大型的 L3 快取，但這只是有限的解決方案。 NUMA 架構對這個問題提供了可擴充的解決方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已設計成可利用 NUMA 型電腦的優點，而不需要進行任何應用程式變更。 如需詳細資訊，請參閱[如何：設定 SQL Server 使用軟體 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
+
+## <a name="dynamic-partition-of-memory-objects"></a>記憶體物件的動態分割
+堆積配置器 (在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中稱為記憶體物件) 可讓 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 從堆積配置記憶體。 您可以使用 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 來追蹤這些物件。 CMemThread 是安全執行緒的記憶體物件類型，允許從多個執行緒進行並行記憶體配置。 為了正確追蹤，CMemThread 物件依賴同步處理建構 (Mutex) 來確保一次只有一個執行緒更新重要的資訊片段。 
+
+> [!NOTE]
+> CMemThread 物件類型會在許多不同配置的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 程式碼基底中使用，而且可以透過節點或 CPU 進行全域分割。   
+
+不過，如果有許多執行緒是以高度並行的方式從相同的記憶體物件配置，則 mutex 的使用可能會導致爭用。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有分割記憶體物件 (PMO) 的概念，而且每個資料分割都是由單一 CMemThread 物件來表示。 記憶體物件的資料分割會以靜態方式定義，而且無法在建立後變更。 由於記憶體配置模式根據硬體和記憶體使用量等方面而有很大的差異，因此無法預先提供完美的資料分割模式。 在大部分的情況下，使用單一分割區就已足夠，但在某些情況下，這可能會導致爭用，而只有在高度分割的記憶體物件上才可避免爭用發生。 不建議將每個記憶體物件都加以分割，因為多個磁碟分割區可能會導致其他部分效率不足並增加記憶體片段。
+
+> [!NOTE]
+> 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 之前，追蹤旗標 8048 可用來強制以節點為基礎的 PMO 成為以 CPU 為基礎的 PMO。 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，此行為是動態的且由引擎所控制。
+
+從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以動態偵測特定 CMemThread 物件上的爭用，並將物件升階為以每個節點或每個 CPU 為基礎的實作。 一旦升階之後，PMO 就會保持升階，直到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序重新開始為止。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中是否有高 CMEMTHREAD 等候，以及透過觀察 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 資料行 *contention_factor*、*partition_type*、*exclusive_allocations_count* 和 *waiting_tasks_count*，都可以偵測到 CMemThread 爭用。
 
 ## <a name="see-also"></a>另請參閱
 [伺服器記憶體伺服器組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

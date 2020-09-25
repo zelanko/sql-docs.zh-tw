@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728486"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989819"
 ---
 # <a name="backup-encryption"></a>備份加密
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728486"
 > 備份憑證或非對稱金鑰是非常重要的，而且最好與其用以加密的備份檔案存放於不同位置。 若沒有憑證或非對稱金鑰，您將無法還原備份，而此備份檔案將無法使用。  
   
  **從加密備份還原：** 在還原期間，SQL Server 還原不要求指定任何加密參數。 但它要求用以加密備份檔案的憑證或非對稱金鑰可用於您要進行還原的執行個體上。 執行還原的使用者帳戶必須擁有憑證或金鑰的 **VIEW DEFINITION** 權限。 若您要將加密的備份還原到不同的執行個體，您必須確定憑證可用於該執行個體上。  
-  
- 若您要從 TDE 加密資料庫中還原備份，TDE 憑證需可用於您要進行還原的執行個體上。  
+將加密的資料庫還原到新位置的順序是：
+
+1. 在舊資料庫中 [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
+1. 在新位置 master 資料庫中 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
+1. 從匯入到新伺服器上某個位置的舊資料庫備份憑證 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+1. [將資料庫還原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ 若您要從 TDE 加密資料庫中還原備份，TDE 憑證需可用於您要進行還原的執行個體上。 如需詳細資訊，請參閱 [將 TDE 保護的資料庫移至另一個 SQL Server](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 優點  
   

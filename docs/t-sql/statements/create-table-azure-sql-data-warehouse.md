@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE (Azure SQL 資料倉儲)
-title: CREATE TABLE (Azure SQL 資料倉儲) | Microsoft Docs
+description: CREATE TABLE (Azure Synapse Analytics)
+title: CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.service: sql-data-warehouse
@@ -12,23 +12,23 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: df8d395f6d799f817a02943e59f98a29ac79aa29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467223"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989812"
 ---
-# <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
+# <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中建立新的資料表。  
 
-若要了解資料表和其使用方式，請參閱 [SQL 資料倉儲中的資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
+若要了解資料表及其使用方式，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中的資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
 
 > [!NOTE]
->  除非另有說明，否則本文中和 SQL 資料倉儲有關的討論適用於 SQL 資料倉儲和平行處理資料倉儲。
+>  除非另有註明，否則本文中有關 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 討論都適用於 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
 
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -59,14 +59,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
-      | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
+      | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
@@ -90,11 +90,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | smallint  
     | tinyint  
     | bit  
-    | nvarchar [ ( n | max ) ]  -- max applies only to SQL Data Warehouse 
+    | nvarchar [ ( n | max ) ]  -- max applies only to Azure Synapse Analytics 
     | nchar [ ( n ) ]  
-    | varchar [ ( n | max )  ] -- max applies only to SQL Data Warehouse  
+    | varchar [ ( n | max )  ] -- max applies only to Azure Synapse Analytics  
     | char [ ( n ) ]  
-    | varbinary [ ( n | max ) ] -- max applies only to SQL Data Warehouse  
+    | varbinary [ ( n | max ) ] -- max applies only to Azure Synapse Analytics  
     | binary [ ( n ) ]  
     | uniqueidentifier  
 ```  
@@ -109,7 +109,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  資料表的結構描述。 指定*結構描述*是選擇性的。 如果空白，將會使用預設結構描述。  
   
  *table_name*  
- 新資料表的名稱。 若要建立本機暫存資料表，請在資料表名稱前面加上 #。  如需暫存資料表的說明和指導方針，請參閱 [Azure SQL 資料倉儲中的暫存資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
+ 新資料表的名稱。 若要建立本機暫存資料表，請在資料表名稱前面加上 #。  如需暫存資料表的說明和指導方針，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中的暫存資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
 
  *column_name*  
  資料表資料行的名稱。
@@ -132,7 +132,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-structure-options"></a><a name="TableOptions"></a> 資料表結構選項
 
-如需選擇資料表類型的指導方針，請參閱 [Azure SQL 資料倉儲中的索引資料表](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
+如需選擇資料表類型的指導方針，請參閱[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中編製資料表的索引](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
   
  `CLUSTERED COLUMNSTORE INDEX` 
  
@@ -147,7 +147,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> 資料表散發選項
 
-若要了解如何選擇最佳散發方法及如何使用分散式資料表，請參閱 [Azure SQL 資料倉儲中的分散式資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
+若要了解如何選擇最佳散發方法及如何使用分散式資料表，請參閱[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中散發資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* ) 透過對儲存在 *distribution_column_name* 中的值進行雜湊處理，將每個資料列指派給一個發佈。 演算法具有確定性，這表示其一律會將相同值進行雜湊處理至相同的散發。  散發資料行應定義為 NOT NULL，因為擁有 NULL 的所有資料列都會指派給相同散發。
 
@@ -156,7 +156,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION = REPLICATE` 在每個計算節點上儲存一份資料表的複本。 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，資料表會儲存在每個計算節點的散發資料庫中。 針對 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，資料表會儲存在跨越計算節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組中。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。
   
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 資料表資料分割選項
-如需使用資料表資料分割的指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
+如需使用資料表資料分割的指導方針，請參閱[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 建立一或多個資料表資料分割。 這些資料分割是水平資料表配量，可讓您將作業套用至資料列子集，無論資料表是儲存為堆積、叢集索引，或叢集資料行存放區索引。 和散發資料行不同，資料表資料分割不會決定每個資料列儲存所在的散發。 反之，資料表資料分割會決定資料列在每個散發內的分組方式和儲存方式。  
@@ -172,9 +172,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>已排序的叢集資料行存放區索引選項 
 
-叢集資料行存放區索引 (CCI) 是在 Azure SQL 資料倉儲中建立資料表的預設值。  CCI 中的資料在壓縮成資料行存放區區段之前，不會進行排序。  建立具有順序的 CCI 時，資料會先進行排序，再新增至索引區段，且可改善查詢效能。 如需詳細資訊，請參閱[使用已排序叢集資料行存放區索引進行效能調整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
+叢集資料行存放區索引 (CCI) 是在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中建立資料表的預設值。  CCI 中的資料在壓縮成資料行存放區區段之前，不會進行排序。  建立具有順序的 CCI 時，資料會先進行排序，再新增至索引區段，且可改善查詢效能。 如需詳細資訊，請參閱[使用已排序叢集資料行存放區索引進行效能調整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
 
-已排序的 CCI 可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
+已排序的 CCI 可以建立在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]支援的任何資料類型的資料行上，但不包括字串資料行。  
 
 使用者可以查詢 **sys.index_columns** 中的 **column_store_order_ordinal** 資料行，以取得資料表排序所在的資料行，以及排序中的順序。  
 
@@ -182,7 +182,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="data-type"></a><a name="DataTypes"></a> 資料類型
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支援最常使用的資料類型。 下方是所支援資料類型的清單，以及它們的詳細資料和儲存體位元組。 若要進一步了解資料類型和使用方式，請參閱 [SQL 資料倉儲中的資料表資料類型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支援最常使用的資料類型。 下方是所支援資料類型的清單，以及它們的詳細資料和儲存體位元組。 若要進一步了解資料類型和使用方式，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中的資料表資料類型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
 如需資料類型轉換表，請參閱 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的＜隱含轉換＞一節。
 
@@ -306,14 +306,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="GeneralRemarks"></a>  
 ## <a name="general-remarks"></a>一般備註  
  
-針對最小和最大限制，請參閱 [SQL 資料倉儲容量限制](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)。 
+如需最小和最大限制，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]容量限制](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)。 
  
 ### <a name="determining-the-number-of-table-partitions"></a>判斷資料表資料分割數目
 每個使用者定義的資料表都會分割成多個較小資料表，儲存在稱為散發的個別位置。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用 60 個散發。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，散發的數目取決於計算節點的數目。
  
 每個散發都會包含所有資料表資料分割。 例如，如果有 60 個散發和四個資料表分割區加上一個空的分割區，將會有 300 個分割區 (5 x 60 = 300)。 如果資料表是叢集資料行存放區索引，每個資料分割都將有一個資料行存放區索引，這表示您將會有 300 個資料行存放區索引。
 
-我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需詳細資訊，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
+我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需詳細資訊，請參閱[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中編製資料表的索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
 ### <a name="rowstore-table-heap-or-clustered-index"></a>資料列存放區資料表 (堆積或叢集索引)
 
@@ -327,7 +327,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 如需詳細資訊，請參閱這些文章：
 - [資料行存放區索引建立版本功能摘要](https://msdn.microsoft.com/library/dn934994/)
-- [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
+- [在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中編製資料表的索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
@@ -593,7 +593,7 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>另請參閱
  
-[CREATE TABLE AS SELECT &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
 [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 

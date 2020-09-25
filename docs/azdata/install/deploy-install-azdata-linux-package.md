@@ -1,7 +1,7 @@
 ---
 title: 使用安裝程式在 Linux 上安裝 azdata
-titleSuffix: SQL Server big data clusters
-description: 了解如何使用安裝程式 (Linux) 安裝 azdata 工具，以安裝及管理 SQL Server 巨量資料叢集。
+titleSuffix: ''
+description: 了解如何使用安裝程式來安裝 azdata 工具 (Linux)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 767268e11519d6ec3a4c3af4325870361a92cfc7
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733653"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914968"
 ---
 # <a name="install-azdata-with-apt"></a>使用 apt 安裝 `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-本文說明如何在 Linux 上安裝適用於 SQL Server 2019 巨量資料叢集的 `azdata`。 您必須先使用 `pip` 安裝 `azdata`，才能開始使用這些套件管理員。
+本文描述如何在 Linux 上安裝 `azdata`。 您必須先使用 `pip` 安裝 `azdata`，才能開始使用這些套件管理員。
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -52,12 +52,12 @@ ms.locfileid: "89733653"
 
    針對 Ubuntu 16.04 用戶端，執行：
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    針對 Ubuntu 18.04 用戶端，執行：
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
 4. 更新存放庫資訊並安裝 `azdata`：
@@ -113,3 +113,5 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ## <a name="next-steps"></a>後續步驟
 
 如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)。
+
+使用 azdata 搭配[已啟用 Azure Arc 的資料服務](/azure/azure-arc/data/)

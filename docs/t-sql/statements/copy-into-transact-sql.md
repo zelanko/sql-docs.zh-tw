@@ -1,7 +1,7 @@
 ---
 title: COPY INTO (Transact-SQL) (預覽)
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: 在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: 在 Azure Synapse Analytics 中使用 COPY 陳述式，從外部儲存體帳戶載入。
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
@@ -18,18 +18,18 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901568"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024557"
 ---
-# <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
+# <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-本文說明如何在 Azure SQL 資料倉儲中使用 COPY 陳述式，從外部儲存體帳戶載入。 COPY 陳述式提供最大的彈性，可將高輸送量資料擷取到 SQL 資料倉儲中。 將 COPY 用於下列功能：
+本文說明如何在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中使用 COPY 陳述式，從外部儲存體帳戶載入。 COPY 陳述式提供最大的彈性，可將高輸送量資料擷取到 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中。 將 COPY 用於下列功能：
 
 - 使用具有較低權限的使用者來載入，而不需要對資料倉儲設定嚴格的 CONTROL 權限
 - 執行單一 T-SQL 陳述式，而不需要建立任何額外的資料庫物件
@@ -40,9 +40,6 @@ ms.locfileid: "88901568"
 - 指定 CSV 檔案的自訂資料列結束字元
 - 利用 CSV 檔案的 SQL Server 日期格式
 - 在儲存體位置路徑中指定萬用字元和多個檔案
-
-> [!NOTE]  
-> COPY 陳述式目前處於公開預覽階段。
 
 請瀏覽下列文件，以取得使用 COPY 陳述式的完整範例和快速入門：
 
@@ -274,7 +271,7 @@ IDENTITY_INSERT 會指定所匯入資料檔案中的一或多個識別值是否�
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL 資料倉儲中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。
+需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。
 
 ## <a name="examples"></a>範例  
 
@@ -398,7 +395,7 @@ WITH (
 ## <a name="faq"></a>常見問題集
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>相較於 PolyBase，COPY 命令的效能為何？
-COPY 命令是否會有更好的效能，需取決於您的工作負載。 為了在公開預覽期間獲得最佳的載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。 在預覽期間與我們的小組分享您的效能結果！ sqldwcopypreview@service.microsoft.com
+COPY 命令是否會有更好的效能，需取決於您的工作負載。 為了獲得最佳載入效能，請考慮在載入 CSV 時，將您的輸入分割成多個檔案。
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>COPY 命令載入 CSV 檔案的檔案分割指導方針為何？
 下表列出檔案數目的指導方針。 一旦達到建議的檔案數目，檔案越大，您的效能就會越好。 如需簡單的檔案分割體驗，請參閱下列[文件](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) \(英文\)。 
@@ -446,4 +443,4 @@ com.microsoft.sqlserver.jdbc.SQLServerException:*受控服務識別尚未在此�
 
 ## <a name="see-also"></a>另請參閱  
 
- [使用 SQL 資料倉儲載入概觀](/azure/sql-data-warehouse/design-elt-data-loading)
+ [使用 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 載入概觀](/azure/sql-data-warehouse/design-elt-data-loading)

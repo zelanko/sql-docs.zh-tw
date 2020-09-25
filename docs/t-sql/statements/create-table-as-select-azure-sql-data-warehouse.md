@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
-title: CREATE TABLE AS SELECT (Azure SQL 資料倉儲) | Microsoft Docs
+description: CREATE TABLE AS SELECT (Azure Synapse Analytics)
+title: CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fb060b4a5f42cdc526bbb2a3737fd728c9ac3b71
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688674"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990151"
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
+# <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) 是最重要的 T-SQL 功能之一。 這是一種完全平行化作業，會利用 SELECT 陳述式的輸出來建立新的資料表。 CTAS 是建立資料表複本最快、最簡單的方法。   
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT (CTAS) 是最重要的 T-SQL 功能之一。 這是一種
 -   查詢或匯入的外部資料。  
 
 > [!NOTE]  
-> 因為 CTAS 擴充了原本的資料表建立功能，所以本主題不再重複討論 CREATE TABLE 主題。 我們將重點放在描述 CTAS 和 CREATE TABLE 陳述式之間的差異。 如需 CREATE TABLE 的詳細資訊，請參閱 [CREATE TABLE (Azure SQL 資料倉儲)](https://msdn.microsoft.com/library/mt203953/) 陳述式。 
+> 因為 CTAS 擴充了原本的資料表建立功能，所以本主題不再重複討論 CREATE TABLE 主題。 我們將重點放在描述 CTAS 和 CREATE TABLE 陳述式之間的差異。 如需 CREATE TABLE 詳細資訊，請參閱 [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) 陳述式。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::= 
     {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+        CLUSTERED COLUMNSTORE INDEX --default for Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
@@ -138,7 +138,7 @@ CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 
 ## <a name="limitations-and-restrictions"></a>限制事項  
 
-已排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
+已排序的叢集資料行存放區索引可以建立在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]支援的任何資料類型的資料行上，但不包括字串資料行。  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) 對 CTAS 沒有作用。 若要達到類似的行為，請使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
  
@@ -167,7 +167,7 @@ CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. 使用 CTAS 複製資料表 
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 或許 `CTAS` 最常見的用途之一就是建立資料表複本，以便您變更 DDL。 例如，您最初是將資料表建立為 `ROUND_ROBIN`，而現在想要將它變更為散發到資料行上的資料表，就可以使用 `CTAS` 來變更散發資料行。 `CTAS` 也可以用來變更資料分割、索引或資料行的類型。
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. 使用 CTAS 來變更資料行屬性 
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 這個範例會使用 CTAS 來為 DimCustomer2 資料表的數個資料行變更資料類型、可 Null 性和定序。  
   
@@ -300,13 +300,13 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. 使用 CTAS 來變更資料表的散發方法
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 這個簡易範例會示範如何變更資料表的散發方法。 為了示範整個操作流程，它會將雜湊散發資料表變更為循環配置資源資料表，然後再將循環配置資源資料表變更回雜湊散發資料表。 最後的資料表將與原始資料表相符。 
 
 大部分情況下，您不需要將雜湊散發資料表變更為循環配置資源資料表。 更多的情況是，您可能需要將循環配置資源資料表變更為雜湊散發資料表。 例如，您可能一開始將新的資料表載入為循環配置資源資料表，但之後將其移至雜湊散發資料表以獲取更佳的聯結效能。
 
-這個範例會使用 AdventureWorksDW 範例資料庫。 若要載入 SQL 資料倉儲版本，請參閱[將範例資料載入 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
+這個範例會使用 AdventureWorksDW 範例資料庫。 若要載入 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 版本，請參閱[將範例資料載入 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
  
 ```sql
 -- DimSalesTerritory is hash-distributed.
@@ -350,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. 使用 CTAS 將資料表轉換成複寫資料表  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲 
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 此範例適用於將循環配置資源資料表或雜湊散發資料表轉換為複寫資料表。 這個特殊範例會針對之前的散發類型變更方法，做更進一步的應用。  因為 DimSalesTerritory 是一個維度，而且可能是小型的資料表，因此可以選擇將資料表重新建立為複寫資料表，這樣在聯結至其他資料表時，就能避免移動資料。 
 
@@ -374,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. 使用 CTAS 來建立資料行較少的資料表
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲 
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 下列範例會建立名為 `myTable (c, ln)` 的循環配置資源散發資料表。 新的資料表只有兩個資料行。 它會使用 SELECT 陳述式中的資料行別名來作為資料行的名稱。  
   
@@ -396,7 +396,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 查詢提示與 CREATE TABLE AS SELECT (CTAS) 搭配使用  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 此查詢示會示範查詢聯結提示與 CTAS 陳述式搭配使用的基本語法。 提交查詢後，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會在為每一個散發產生查詢計劃時，套用雜湊聯結策略。 如需有關雜湊聯結查詢提示的詳細資訊，請參閱 [OPTION 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
@@ -419,7 +419,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. 使用 CTAS 來從 Azure Blob 儲存體匯入資料  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 若要從外部資料表匯入資料，只要使用 CREATE TABLE AS SELECT 來從外部資料表進行選取即可。 從外部資料表選取資料來匯入 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 時所用的語法，與從一般資料表中選取資料時所使用語法相同。  
   
@@ -440,7 +440,7 @@ WITH (
 ;  
   
 --Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
---SQL Data Warehouse table called ClickStreamData  
+--Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  
   (  
@@ -501,7 +501,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. 使用 CTAS 而不使用 SELECT..INTO  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 SQL Server 程式碼通常會使用 SELECT...INTO 來將 SELECT 陳述式的結果填入資料表。 這是一個 SQL Server SELECT..INTO 陳述式的範例。
 
@@ -511,7 +511,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-Azure SQL 資料倉儲和平行處理資料倉儲不支援這種語法。 這個範例會示範如何將以前的 SELECT..INTO 陳述式，重新撰寫為 CTAS 陳述式。 您可以選擇 CTAS 語法中所描述的任何 DISTRIBUTION 選項。 這個範例會使用 ROUND_ROBIN 散發方法。
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和平行處理資料倉儲不支援這種語法。 這個範例會示範如何將以前的 SELECT..INTO 陳述式，重新撰寫為 CTAS 陳述式。 您可以選擇 CTAS 語法中所描述的任何 DISTRIBUTION 選項。 這個範例會使用 ROUND_ROBIN 散發方法。
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -528,7 +528,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隱含聯結來取代 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 假設您有一個複雜更新，其中使用 ANSI 聯結語法將兩個以上的資料表聯結起來，以執行 UPDATE 或 DELETE。
 
@@ -572,7 +572,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-因為 SQL 資料倉儲不支援 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結，因此您必須微幅修改這個 SQL Server 程式碼，否則無法使用。
+因為 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]不支援 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結，因此您必須微幅修改這個 SQL Server 程式碼，否則無法使用。
 
 您可以使用 `CTAS` 和隱含聯結的組合來取代此程式碼：
 
@@ -611,9 +611,9 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 來指定要保留的資料，而不是在 DELETE 陳述式的 FROM 子句中使用 ANSI 聯結  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-有時候，刪除資料的最佳方法是使用 `CTAS`。 您不用刪除資料，只要選取想要保留的資料即可。 對於使用 ANSI 聯結語法的 `DELETE` 陳述式更是如此，因為 SQL 資料倉儲不支援 `DELETE` 陳述式 `FROM` 子句的 ANSI 聯結。
+有時候，刪除資料的最佳方法是使用 `CTAS`。 您不用刪除資料，只要選取想要保留的資料即可。 對於使用 ANSI 聯結語法的 `DELETE` 陳述式更是如此，因為 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]不支援 `DELETE` 陳述式 `FROM` 子句的 ANSI 聯結。
 
 以下是已轉換的 DELETE 陳述式範例：
 
@@ -639,7 +639,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. 使用 CTAS 來簡化合併陳述式  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 使用 `CTAS` 可以取代至少部分取代合併陳述式。 您可以將 `INSERT` 和 `UPDATE` 合併成一個陳述式。 任何刪除的記錄都應該在第二個陳述式中關閉。
 
@@ -678,9 +678,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明確陳述資料類型和輸出可為 null  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-將 SQL Server 程式碼移轉至 SQL 資料倉儲時，您可能碰到這種類型的程式碼模式：
+將 SQL Server 程式碼移轉至 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]時，您可能碰到這種類型的程式碼模式：
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455
@@ -844,7 +844,7 @@ OPTION (MAXDOP 1);
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

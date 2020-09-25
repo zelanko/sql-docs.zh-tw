@@ -1,7 +1,7 @@
 ---
 description: 使用 PowerShell 執行 SSIS 套件
 title: 使用 PowerShell 執行 SSIS 套件 | Microsoft Docs
-ms.date: 05/21/2018
+ms.date: 09/17/2020
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a876164579679802c5dc0335d01dd5ec8839e95b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422172"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989921"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 執行 SSIS 套件
 
@@ -33,7 +33,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 -   Windows 上的 SQL Server。
 
--   Azure SQL Database。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+-   Azure Data Factory (ADF) 中的 SSIS 整合執行階段 (IR)，其中 SSIS 目錄 (SSISDB) 是由 Azure SQL 受控執行個體 (MI) 主控。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 您不能使用本快速入門中的資訊在 Linux 上執行 SSIS 套件。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 

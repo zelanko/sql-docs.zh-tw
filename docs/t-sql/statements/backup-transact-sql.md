@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480854"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024567"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1209,7 +1209,7 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 
 需要 **BACKUP DATABASE** 權限或 **db_backupoperator** 固定資料庫角色的成員資格。 新增至 **db_backupoperator** 固定資料庫角色的一般使用者無法備份 master 資料庫。 只有 **sa**、網狀架構系統管理員或 **sysadmin** 固定伺服器角色的成員才能備份 master 資料庫。
 
-需要具備備份目錄之存取、建立及寫入權限的 Windows 帳戶。 您也必須將 Windows 帳戶名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要將這些網路認證新增至[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，請使用 [sp_pdw_add_network_credentials - SQL 資料倉儲](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)預存程序。
+需要具備備份目錄之存取、建立及寫入權限的 Windows 帳戶。 您也必須將 Windows 帳戶名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要將這些網路認證新增至 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，請使用 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 預存程序。
 
 如需有關管理[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中之認證的詳細資訊，請參閱[安全性](#Security)一節。
 
@@ -1222,14 +1222,14 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 - 資料庫不存在。
 - 目標目錄已經存在於網路共用上。
 - 目標網路共用無法使用。
-- 目標網路共用沒有足夠的空間來進行備份。 BACKUP DATABASE 命令在起始備份之前，未先確認是否有足夠的空間存在，導致在執行 BACKUP DATABASE 時，可能產生磁碟空間不足錯誤。 發生磁碟空間不足問題時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會復原 BACKUP DATABASE 命令。 若要縮減資料庫大小，請執行 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- 目標網路共用沒有足夠的空間來進行備份。 BACKUP DATABASE 命令在起始備份之前，未先確認是否有足夠的空間存在，導致在執行 BACKUP DATABASE 時，可能產生磁碟空間不足錯誤。 發生磁碟空間不足問題時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會復原 BACKUP DATABASE 命令。 若要縮減資料庫大小，請執行 [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - 嘗試在交易內啟動備份。
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>一般備註
 
-在您執行資料庫之前，請使用 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 來縮減資料庫的大小。
+在您執行資料庫之前，請使用 [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 來縮減資料庫的大小。 
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]備份會以多檔案集合的形式儲存在相同的目錄中。
 
@@ -1288,9 +1288,9 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 > [!IMPORTANT]
 > 為了降低您資料的安全性風險，建議您指定一個專門用來執行備份和還原作業的 Windows 帳戶。 請讓此帳戶僅擁有備份位置的權限。
 
-您必須藉由執行 [sp_pdw_add_network_credentials - SQL 資料倉儲](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)預存程序，將使用者名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會使用「Windows 認證管理員」在控制節點及計算節點上，儲存並加密使用者名稱和密碼。 備份認證時，不會使用 BACKUP DATABASE 命令來備份。
+您必須藉由執行 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 預存程序，將使用者名稱和密碼儲存在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會使用「Windows 認證管理員」在控制節點及計算節點上，儲存並加密使用者名稱和密碼。 備份認證時，不會使用 BACKUP DATABASE 命令來備份。
 
-若要從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]移除網路認證，請參閱 [sp_pdw_remove_network_credentials - SQL 資料倉儲](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
+若要從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 移除網路認證，請參閱 [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)。
 
 若要列出儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中的所有網路認證，請使用 [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 動態管理檢視。
 

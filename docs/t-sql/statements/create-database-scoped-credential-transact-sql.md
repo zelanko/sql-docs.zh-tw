@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426830"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024367"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 指定要所建立資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。
 
-IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos (Windows Active Directory 或 MIT KDC) 時，請勿在 IDENTITY 引數中使用網域名稱。 它應只是帳戶名稱。
 
 > [!NOTE]
 > 如果 Azure Blob 儲存體中的容器已針對匿名存取啟用，則不需要 WITH IDENTITY。 如需查詢 Azure Blob 儲存體的範例，請參閱[從儲存在 Azure Blob 儲存體上的檔案匯入資料表](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)。
@@ -121,7 +121,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. 建立可讓 PolyBase 連線到 Azure Data Lake Store 的資料庫範圍認證
 
-下列範例會建立可以用於建立[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md) (可在 Azure SQL 資料倉儲中供 PolyBase 使用) 的資料庫範圍認證。
+下列範例會建立可以用於建立[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md) (可在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中供 PolyBase 使用) 的資料庫範圍認證。
 
 Azure Data Lake Store 將 Azure Active Directory 應用程式用於「服務對服務驗證」。
 請先[建立 AAD 應用程式](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)並記錄您的 client_id、OAuth_2.0_Token_EndPoint 和金鑰，然後再嘗試建立資料庫範圍認證。

@@ -21,12 +21,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: a130cc08ad7a8e04ca3faf0578ff1c4600783d07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ba3377c525a51475cd3cf567f098e27c9c12be7
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444765"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990041"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -180,7 +180,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## <a name="see-also"></a>另請參閱
 
-[SQL 資料倉儲分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)</br>
 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
