@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024435"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227408"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1110,7 +1110,7 @@ ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料
 
 如果您將 ALTER TABLE 陳述式中的任何資料行定義為屬於 Common Language Runtime (CLR) 使用者定義型別或別名資料類型，則需要對該類型具有 REFERENCES 權限。
 
-加入會更新資料表之資料列的資料行時，需要該資料表的 **UPDATE** 權限。 例如，當資料表非空白時，新增具有預設值的 **NOT NULL** 資料行或新增識別欄位。
+加入或修改會更新資料表之資料列的資料行時，需要該資料表的 **UPDATE** 權限。 例如，當資料表非空白時，新增具有預設值的 **NOT NULL** 資料行或新增識別欄位。
 
 ## <a name="examples"></a><a name="Example_Top"></a> 範例
 

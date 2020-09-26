@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989991"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145387"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -62,7 +62,7 @@ ms.locfileid: "90989991"
 
 下表列出 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的版本歷程記錄。
 
-| 發行版本 <sup>1</sup> | BDC 版本  | `azdata` 版本 <sup>2</sup> | 發行日期 |
+| 版本 | BDC 版本  | `azdata` 版本 <sup>1</sup> | 發行日期 |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,9 +72,7 @@ ms.locfileid: "90989991"
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> 沒有適用於 CU7 的 SQL Server 2019 巨量資料叢集更新。
-
-<sup>2</sup> `azdata` 版本會反映在 CU 發行時的工具版本。 `azdata` 也可以獨立於伺服器版本之外發行，因此當您安裝最新的套件時，可能會取得較新的版本。 較新版本與先前發行的 CU 相容。
+<sup>1</sup> `azdata` 版本會反映在 CU 發行時的工具版本。 `azdata` 也可以獨立於伺服器版本之外發行，因此當您安裝最新的套件時，可能會取得較新的版本。 較新版本與先前發行的 CU 相容。
 
 ## <a name="how-to-install-updates"></a>如何安裝更新
 

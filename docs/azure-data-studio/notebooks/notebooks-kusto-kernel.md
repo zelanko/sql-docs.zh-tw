@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942344"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226958"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>建立並執行 Kusto (KQL) 筆記本 (預覽)
 
@@ -38,7 +38,7 @@ ms.locfileid: "90942344"
 
 1. 在 Azure Data Studio 中，連線至您的 Azure 資料總管叢集。
 
-2. 瀏覽至 [連線] 窗格，在 [伺服器] 視窗底下，以滑鼠右鍵按一下 Kusto 資料庫，然後選取 [新增筆記本]。
+2. 瀏覽至 [連線] 窗格，在 [伺服器] 視窗底下，以滑鼠右鍵按一下 Kusto 資料庫，然後選取 [新增筆記本]。 您也可以移至 [檔案] > [新增筆記本]。
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="開啟筆記本":::
 
@@ -78,7 +78,7 @@ ms.locfileid: "90942344"
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto 核心程式碼區塊":::
 
-2. 將下列範例複製並貼到資料格中，然後選取 [執行資料格]。 此範例會查詢 StormEvents 資料中的特定事件類型。
+2. 將下列範例複製並貼到資料格中，然後選取 [執行資料格]。 此範例會查詢 StormEvents 資料以尋找特定事件類型。
 
    ```kusto
     StormEvents
@@ -103,6 +103,12 @@ ms.locfileid: "90942344"
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="儲存結果":::
+
+## <a name="limitations-and-considerations"></a>限制與考量
+
+- 您必須先為 Azure 資料總管叢集選擇資料庫，然後再執行 Kusto 查詢。
+- 如果您讓 Azure 資料總管叢集閒置太久，其可以中斷連線。
+    - 因應措施：中斷與叢集的連線，然後重新連線。
 
 ## <a name="next-steps"></a>後續步驟
 

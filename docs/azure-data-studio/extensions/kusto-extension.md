@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 6533133aaac7f2479bb9eea27ef3f6c47e019938
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942352"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226823"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組 (預覽)
 
@@ -43,7 +43,7 @@ ms.locfileid: "90942352"
 
 3. 選取 [Kusto (KQL)] 延伸模組並檢視其詳細資料。
 
-4. 選取 [安裝]。
+4. 選取 [安裝]  。
 
 :::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Kusto 延伸模組":::
 
@@ -126,7 +126,13 @@ Azure Data Studio 中的 [SandDance 延伸模組](https://docs.microsoft.com/sql
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 視覺效果":::
 
-## <a name="next-steps"></a>下一步
+## <a name="limitations-and-considerations"></a>限制與考量
+
+- 您必須先為 Azure 資料總管叢集選擇資料庫，然後再執行 Kusto 查詢。
+- 如果您讓 Azure 資料總管叢集閒置太久，其可以中斷連線。
+    - 因應措施：中斷與叢集的連線，然後重新連線。
+
+## <a name="next-steps"></a>後續步驟
 
 - [建立並執行 Kusto 筆記本](../notebooks/notebooks-kusto-kernel.md)
 - [Azure Data Studio 中的 kqlmagic 筆記本](../notebooks-kqlmagic.md)

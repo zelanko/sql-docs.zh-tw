@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942462"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227321"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>為已啟用 Azure Arc 的 SQL Server 執行個體設定 SQL 評定
 
@@ -37,7 +37,7 @@ ms.locfileid: "90942462"
 
    ![SQL 評定選取](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. 指定資料收集機器上的工作目錄。 在收集和分析期間，資料會暫時儲存在該資料夾底下。 如果資料夾不存在，則會自動建立。
+1. 指定資料收集機器上的工作目錄。 根據預設，將會使用 `C:\sql_assessment\work_dir`。 在收集和分析期間，資料會暫時儲存在該資料夾底下。 如果資料夾不存在，則會自動建立。
 
 1. 按一下 [下載設定指令碼]，然後將下載的指令碼複製到目標機器。
 
@@ -73,6 +73,8 @@ Microsoft Monitoring Agent 會每 15 分鐘掃描工作資料夾一次，以尋�
 
 ![已處理資料檔案](media/assess/sql-assessment-data-files-processed.png)
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 如需詳細資訊，請參閱[服務中樞隨選評定必要條件](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents)中的 SQL Server 文件。
+
+若要取得隨選 SQL 評定的完整支援，需要頂級或統一的支援訂用帳戶。 如需詳細資訊，請參閱 [Azure 頂級支援](https://azure.microsoft.com/support/plans/premier)。

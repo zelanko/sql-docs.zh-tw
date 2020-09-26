@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136709"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226968"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio 中的 Kqlmagic
 
@@ -107,6 +107,10 @@ ms.locfileid: "91136709"
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > 如果您使用自己的 ADX 叢集，則必須在連接字串中包含該區域，如下所示：   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    請使用裝置登入來進行驗證。 從輸出複製程式碼，然後選取 [驗證]，瀏覽器將會開啟，請在其中貼上程式碼。 成功驗證後，您可回到 Azure Data Studio 以繼續進行指令碼的其餘部分。
 

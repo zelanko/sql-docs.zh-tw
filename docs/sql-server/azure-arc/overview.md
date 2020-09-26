@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210575"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已啟用 Azure Arc 的 SQL Server (預覽)
 
@@ -25,7 +26,7 @@ SQL Server 可以安裝在執行 Windows 或 Linux 的虛擬或實體機器上�
 
 「已啟用 Azure Arc 的 SQL Server」公開預覽支援一組解決方案，需要安裝 Microsoft Monitoring Agent (MMA) 伺服器延伸模組並連線至 Azure Log analytics 工作區，以進行資料收集和報告。 這些解決方案包括使用 Azure 資訊安全中心和 Azure Sentinel 的進階資料安全性，以及使用隨選 SQL 評定功能的 SQL 環境健康情況檢查。
 
-下圖顯示使用虛擬化環境的「已啟用 Azure Arc 的 SQL Server」架構。
+下圖顯示「已啟用 Azure Arc 的 SQL Server」架構。
 
 ![公開預覽架構](media/overview/pubic-preview-architecture.png)
 
@@ -71,7 +72,7 @@ SQL Server 可以安裝在執行 Windows 或 Linux 的虛擬或實體機器上�
 - 西歐
 - 英國南部
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 - [將 SQL Server 連線到 Azure Arc](connect.md)
 - [使用隨選 SQL 評定來設定您的 SQL Server 執行個體以進行定期環境健康情況檢查](assess.md)

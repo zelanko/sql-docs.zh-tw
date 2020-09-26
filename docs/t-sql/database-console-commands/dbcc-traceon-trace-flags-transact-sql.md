@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 826960263f60a1b9d76e2eb7fb738111613678fc
-ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
+ms.openlocfilehash: 99dd26d2eec49212ae1603cc2acb8e7464dfbd2b
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90565053"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210603"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -132,6 +132,7 @@ ms.locfileid: "90565053"
 |**3625**|使用 '\*\*\*\*\*\*' 來遮罩某些錯誤訊息的參數，藉以限制傳回給非 sysadmin 固定伺服器角色成員之使用者的資訊量。 這樣做有助於避免洩漏機密資訊。<br /><br />**範圍**：只限全域|  
 |**3656**|在安裝 Windows 偵錯工具之後，啟用堆疊傾印的符號解析。 <br /><br />**警告：** 這是偵錯追蹤旗標，不適用於生產環境。<br /><br />**注意：** 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，追蹤旗標 [2592](#2592) 必須與追蹤旗標 3656 一同啟用，才能啟用符號解析。 <br/><br/>**範圍**：全域和工作階段|
 |**3924**|允許自動移除具有 SPID =-2 的孤立 DTC 交易 (其對部分第三方交易監視而言會產生問題)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4519668)和 [Microsoft 支援服務文章](https://support.microsoft.com/help/4511816)。<br /><br />**範圍**：只限全域|  
+|**4022**|停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時自動執行預存程序。 如需有關自動執行啟動預存程序的詳細資訊，請參閱 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) <br /><br />**範圍**：只限全域|  
 |**4136**|除非使用了 OPTION(RECOMPILE)、WITH RECOMPILE 或 OPTIMIZE FOR \<value>，否則請停用參數探查。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/980653) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若要在資料庫層級完成此操作，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 PARAMETER_SNIFFING 選項。<br /><br />若要在查詢層級達到相同結果，請新增 OPTIMIZE FOR UNKNOWN [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。 OPTIMIZE FOR UNKNOWN 提示不會停用參數探查機制，但會有效地略過該機制，以達到相同的預期結果。<br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，在查詢層級完成此操作的第二個選項是新增 USE HINT 'DISABLE_PARAMETER_SNIFFING' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段|  
 |**4137**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更舊版本 (70) 的查詢最佳化工具基數評估模型下，當評估用來說明部分關聯性 (而非獨立) 的篩選條件 AND 述詞時，會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以最少的選擇性產生計畫。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2658214) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，在使用 CE 70 時，若要在查詢層級完成此操作，請新增 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**注意：** 此追蹤旗標不適用於 CE 120 版或更新版本。 請改用追蹤旗標 9471。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 
 |**4138**|會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的計劃不使用資料列目標調整來處理包含 TOP、OPTION (FAST N)、IN 或 EXISTS 關鍵字的查詢。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2667211) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'DISABLE_OPTIMIZER_ROWGOAL' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)| 
@@ -165,7 +166,7 @@ ms.locfileid: "90565053"
 |**8048**|將 NUMA 分割記憶體物件轉換成 CPU 分割記憶體物件。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2809338) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為是動態的且由引擎所控制。<br /><br />**範圍**：只限全域|  
 |**8075**|收到 64 位元 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的記憶體頁面配置錯誤時，請減少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 片段。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3074434) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 以及 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8075 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**8079**|允許 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 在每一 NUMA 節點回報 8 個或更多 CPU 的系統上質詢硬體配置及自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8079 沒有任何作用。<br /><br />**範圍**：只限全域| 
-|**8099**|為執行 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以服務許多並行使用者的高階系統，啟用執行緒同步鎖定競爭修正。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 和更新版本的組建。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4538688) \(機器翻譯\)。<br /><br />**範圍**：只限全域| 
+|**8099**|為執行 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以服務許多並行使用者的高階系統，啟用執行緒同步鎖定競爭修正。<br /><br />**注意：** 此追蹤旗標僅適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2 與 CU3。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4 開始，預設會啟用此行為。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4538688) \(機器翻譯\)。<br /><br />**範圍**：只限全域| 
 |**8207**|啟用異動複寫和 CDC 的 singleton 更新。 訂閱者的更新可以複寫為 DELETE 和 INSERT 配對。 這可能不符合商務規則，例如引發 UPDATE 觸發程序。 使用追蹤旗標 8207 時，只影響一個資料列的唯一資料行更新 (單一更新) 會複寫為 UPDATE，而不是 DELETE 或 INSERT 配對。 如果更新影響存在唯一條件約束的資料行，或是更新影響多個資料列，更新仍會複寫為 DELETE 或 INSERT 配對。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/302341) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**8721**|當自動更新統計資料執行時回報至錯誤記錄檔。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/195565) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標要求必須啟用追蹤旗標 [3605](#3605)。<br /><br />**範圍**：只限全域|
 |**8744**|停用預先擷取[巢狀迴圈](../../relational-databases/performance/joins.md#nested_loops)運算子。<br /><br />**警告：** 如不當使用此追蹤旗標，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行包含巢狀迴圈運算子的計畫時，可能會有額外的實體讀取作業。<br /><br />**範圍**：全域和工作階段|
