@@ -21,12 +21,12 @@ ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f2d02a2ff302b88c8af676200997978e750cf49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11eb965ba1917d413e212ecca49a8abddc231379
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467837"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379908"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ SPACE ( integer_expression )
 ## <a name="examples"></a>範例  
  下列範例會修剪姓氏，並且將逗號、兩個空格以及 `Person` 之 `AdventureWorks2012` 資料表所列人員的名字串連起來。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  
@@ -70,7 +70,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會修剪姓氏，並且將逗號、兩個空格以及 `DimCustomer` 之 `AdventureWorksPDW2012` 資料表所列人員的名字串連起來。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  

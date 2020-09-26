@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a579383915a734eb692b7f52f129f824be4201c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 71061c8265ccd7ca2b1d8ed060843b06db621b0e
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544157"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380443"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89544157"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql  
 DROP FULLTEXT CATALOG catalog_name  
 ```  
   

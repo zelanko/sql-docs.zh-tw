@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422592"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380503"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422592"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. 使用 TEXTPTR  
  下列範例會使用 `TEXTPTR` 函式來尋找 `pubs` 資料庫的 `pub_info` 資料表中與 `New Moon Books` 建立關聯的 **image** 資料行 `logo`。 這個文字指標放在本機變數 `@ptrval.` 中。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. 使用 TEXTPTR 搭配 in-row 文字  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，同資料列文字指標必須如下列範例所示，在交易內使用。  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. 傳回文字資料  
  下列範例會從 `pub_id` 資料表中，選取 `pr_info` 資料行和 `pub_info` 資料行的 16 位元組文字指標。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  下列範例會顯示如何在不使用 TEXTPTR 的情況下，傳回文字的前 `8000` 位元組。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D. 傳回特定文字資料  
  下列範例會尋找 `pubs` 資料庫 `pub_info` 資料表中與 `pub_id``0736` 建立關聯的 `text` 資料行 (`pr_info`)。 它先宣告本機變數 `@val`。 之後，將文字指標 (大型二進位字串) 放在 `@val` 中，將它當作一個參數來提供給 `READTEXT` 陳述式。 這會傳回從第 5 位元組 (位移 4) 開始的 10 個位元組。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3a08123af9155789fa2d14e2deac807061bf162
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467773"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380053"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88467773"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
@@ -81,7 +80,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ### <a name="a-using-suser_sid"></a>A. 使用 SUSER_SID  
  下列範例會傳回目前安全性內容的安全性識別碼 (SID)。  
   
-```  
+```sql
 SELECT SUSER_SID();  
 ```  
   
@@ -90,7 +89,7 @@ SELECT SUSER_SID();
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
-```  
+```sql
 SELECT SUSER_SID('sa');  
 GO  
 ```  
@@ -100,7 +99,7 @@ GO
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
-```  
+```sql
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
@@ -108,15 +107,15 @@ GO
 ### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. 使用 SUSER_SID 做為 DEFAULT 條件約束  
  下列範例會利用 `SUSER_SID` 來做為 `DEFAULT` 陳述式中的 `CREATE TABLE` 條件約束。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sid_example  
 (  
-login_sid   varbinary(85) DEFAULT SUSER_SID(),  
-login_name  varchar(30) DEFAULT SYSTEM_USER,  
-login_dept  varchar(10) DEFAULT 'SALES',  
-login_date  datetime DEFAULT GETDATE()  
+login_sid   VARBINARY(85) DEFAULT SUSER_SID(),  
+login_name  VARCHAR(30) DEFAULT SYSTEM_USER,  
+login_dept  VARCHAR(10) DEFAULT 'SALES',  
+login_date  DATETIME DEFAULT GETDATE()  
 );   
 GO  
 INSERT sid_example DEFAULT VALUES;  
@@ -128,7 +127,7 @@ GO
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
-```  
+```sql
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3a17b88e65f370894e626fa05582a244e53cb0b4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1e2b72e3b398f5b79f1467530b589853f7f67781
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645771"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380133"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 
@@ -37,8 +37,7 @@ ms.locfileid: "88645771"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 DROP COLUMN MASTER KEY key_name;  
 ```  
 
@@ -57,7 +56,7 @@ DROP COLUMN MASTER KEY key_name;
 ### <a name="a-dropping-a-column-master-key"></a>A. 卸除資料行主要金鑰  
  下列範例會卸除名為 `MyCMK` 的資料行主要金鑰。  
   
-```  
+```sql  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9766a428a74348de168f2d4df41ac8f9b7084df9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e0de044e06a6a78d9b0b8e7bb3f7020d5a356cc0
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547448"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380140"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89547448"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP CONTRACT contract_name   
 [ ; ]  
 ```  
@@ -61,9 +60,8 @@ DROP CONTRACT contract_name
 ## <a name="examples"></a>範例  
  下列範例會從資料庫中移除 `//Adventure-Works.com/Expenses/ExpenseSubmission` 合約。  
   
-```  
-DROP CONTRACT   
-    [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
+```sql  
+DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

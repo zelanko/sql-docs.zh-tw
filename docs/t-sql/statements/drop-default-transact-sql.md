@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8d8b67ecc262269e1aa322735ac152329bc36b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539856"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380040"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### <a name="a-dropping-a-default"></a>A. 卸除預設值  
  如果預設值尚未繫結到資料行或別名資料類型，只能利用 DROP DEFAULT 來卸除它。 下列範例會移除名稱為 `datedflt` 的使用者建立預設值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -81,7 +81,7 @@ GO
   
  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用下列語法。  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. 卸除已繫結到資料行的預設值  
  下列範例會將預設值和相關聯之 `EmergencyContactPhone` 資料表的 `Contact` 資料行解除繫結，再卸除名稱為 `phonedflt` 的預設值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

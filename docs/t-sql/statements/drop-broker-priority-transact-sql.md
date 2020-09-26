@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef86c39af2116d06fab2f56f1ca049342981e63d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4b1ecefa12702aade36144df55600f696e2042e2
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544197"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380168"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "89544197"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  
 ```  
@@ -55,9 +54,8 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## <a name="examples"></a>範例  
  下列範例會卸除名稱為 `InitiatorAToTargetPriority` 的交談優先權。  
   
-```  
-DROP BROKER PRIORITY InitiatorAToTargetPriority;  
-  
+```sql  
+DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## <a name="see-also"></a>另請參閱  

@@ -25,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1044f594889c8d7a6698c0ffc5a09692ed734a47
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307974"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379766"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88307974"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
@@ -68,7 +67,7 @@ SUSER_NAME 可用於選取清單、WHERE 子句及任何允許使用運算式的
 ## <a name="examples"></a>範例  
 下列範例會傳回登入識別碼是 `1` 之使用者的登入識別名稱。  
   
-```  
+```sql
 SELECT SUSER_NAME(1);  
 ```  
   

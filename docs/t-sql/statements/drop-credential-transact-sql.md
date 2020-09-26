@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b28f91129bccf4c8005cd840d87f14f2a84b25e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f50d075b23df010e1a79a6b83283e8a6bcdb9b0
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416544"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380103"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88416544"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 DROP CREDENTIAL credential_name  
 ```  
   
@@ -64,7 +63,7 @@ DROP CREDENTIAL credential_name
 ## <a name="examples"></a>範例  
  下列範例會移除一個稱為 `Saddles` 的認證。  
   
-```  
+```sql  
 DROP CREDENTIAL Saddles;  
 GO  
 ```  

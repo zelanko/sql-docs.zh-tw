@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbd07982bc45b3fbd32b140f74a9a0f32fa3c3a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467930"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380741"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88467930"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
@@ -118,7 +117,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. 搭配陳述式權限來使用 PERMISSIONS 函數  
  下列範例會決定目前使用者是否可執行 `CREATE TABLE` 陳述式。  
   
-```  
+```sql  
 IF PERMISSIONS()&2=2  
    CREATE TABLE test_table (col1 INT)  
 ELSE  
@@ -128,7 +127,7 @@ ELSE
 ### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. 搭配物件權限來使用 PERMISSIONS 函數  
  下列範例會決定目前使用者是否可將資料列插入 `Address` 資料庫的 `AdventureWorks2012` 資料表中。  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
@@ -138,7 +137,7 @@ ELSE
 ### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>C. 搭配可授與的權限來使用 PERMISSIONS 函數  
  下列範例會決定目前使用者是否可授與 `Address` 資料庫中 `AdventureWorks2012` 資料表的 INSERT 權限給另一位使用者。  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  

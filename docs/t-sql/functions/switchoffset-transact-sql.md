@@ -25,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e266c23c0fdc712f5bab15173e187043fede5de
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417194"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380843"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88417194"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
@@ -66,17 +66,16 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  使用 SWITCHOFFSET 搭配函數 GETDATE() 會導致查詢執行速度變慢。 這是因為查詢最佳化工具無法取得日期時間值的準確基數估計值。 若要解決此問題，請使用 OPTION (RECOMPILE) 查詢提示，強制查詢最佳化工具在下次執行相同的查詢時，重新編譯查詢計劃。 之後，最佳化工具會有準確的基數估計值，並將產生更有效率的查詢計劃。 如需 RECOMPILE 查詢提示的詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-```  
+```sql
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
 SELECT * FROM t    
 WHERE c1 > @dt OPTION (RECOMPILE);  
-  
 ```  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 `SWITCHOFFSET` 來顯示與資料庫中儲存的值不同的時區位移。  
   
-```  
+```sql  
 CREATE TABLE dbo.test   
     (  
     ColDatetimeoffset datetimeoffset  

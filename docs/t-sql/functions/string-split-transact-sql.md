@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b07d34eeab7077df4467efe46e48dd27bfb59f5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111280"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379776"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ STRING_SPLIT 需要為至少 130 的相容性層級。 當層級小於 130 時�
   
 ## <a name="syntax"></a>語法  
 
-```
+```syntaxsql
 STRING_SPLIT ( string , separator )  
 ```
 

@@ -19,12 +19,12 @@ ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: b6a58db5551e8e94b6069f7dba7e415034c45a2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82c8807aef206867a8f50eed507e7a3a4cb48e59
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467748"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379503"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88467748"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  
   
@@ -125,7 +124,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT 成功  
  這個範例示範運算式必須採用所需的格式。  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  

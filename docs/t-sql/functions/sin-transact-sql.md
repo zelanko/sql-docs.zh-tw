@@ -20,12 +20,12 @@ ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7cfd23265e9e3338a078477f8b3740f933f1f5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98cda2eaebc8dba22cf1784f3f4a4ae1845ce018
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467864"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380583"
 ---
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88467864"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SIN ( float_expression )  
 ```  
   
@@ -53,10 +53,10 @@ SIN ( float_expression )
 ## <a name="examples"></a>範例  
  下列範例會計算指定角度的 SIN。  
   
-```  
-DECLARE @angle float;  
+```sql  
+DECLARE @angle FLOAT;  
 SET @angle = 45.175643;  
-SELECT 'The SIN of the angle is: ' + CONVERT(varchar,SIN(@angle));  
+SELECT 'The SIN of the angle is: ' + CONVERT(VARCHAR, SIN(@angle));  
 GO  
 ```  
   
@@ -71,7 +71,7 @@ The SIN of the angle is: 0.929607
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會計算指定角度的正弦函式。  
   
-```  
+```sql  
 SELECT SIN(45.175643);  
 ```  
   

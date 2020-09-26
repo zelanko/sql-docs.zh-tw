@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362054"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380549"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88362054"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -73,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 驗證簽署的資料未遭竄改  
  下列範例會測試 `Signed_Data` 中的資訊，在利用名為 `Shipping04` 的憑證簽署之後，是否已經變更。 簽章是儲存在 `DataSignature` 中。 憑證 (`Shipping04`) 會傳遞至 `Cert_ID`，後者則會傳回資料庫中的憑證識別碼。 如果 `VerifySignedByCert` 傳回 1，表示簽章正確。 如果 `VerifySignedByCert` 傳回 0，表示 `Signed_Data` 中的資料，並不是產生 `DataSignature` 所用的資料。 在本例中，表示 `Signed_Data` 在簽署之後已經變更，或者 `Signed_Data` 是以不同的憑證簽署的。  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -84,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. 只傳回具有有效簽章的記錄  
  這項查詢只會傳回自從使用憑證 `Shipping04` 簽署之後尚未變更的記錄。  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

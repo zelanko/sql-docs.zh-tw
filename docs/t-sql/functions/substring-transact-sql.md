@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111852"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379793"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "87111852"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>A. 使用 SUBSTRING 與字元字串  
  下列範例會顯示如何只傳回字元字串的一部分。 從 `sys.databases` 資料表，此查詢會傳回第一個資料行中的系統資料庫名稱、第二個資料行中的資料庫第一個字母，以及最後一個資料行中的第三和第四個字元。  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  以下是如何顯示字串常數 `abcdef` 的第二、第三和第四個字元。  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  下列範例示範如何從 `pubs` 資料庫之 `pub_info`資料表的各個 **text** 和 **image**資料行傳回前 10 個字元。 **text** 資料會當成 **varchar** 傳回，且 **image** 資料會當成 **varbinary** 傳回。  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  下列範例會顯示 **text** 和 **ntext** 資料的 SUBSTRING 效果。 首先，這個範例會在名稱為 `pubs` 的 `npub_info` 資料庫中，建立一份新的資料表。 其次，這個範例會從 `pr_info` 資料行的前 80 個字元中，建立 `npub_info` 資料表的 `pub_info.pr_info` 資料行，再加入 `ü` 來作為第一個字元。 最後，`INNER JOIN` 會擷取所有簽發者識別碼，以及 **text** 和 **ntext** 發行者資訊資料行的 `SUBSTRING`。  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>C. 使用 SUBSTRING 與字元字串  
  下列範例會顯示如何只傳回字元字串的一部分。 這個查詢會從 `dbo.DimEmployee` 資料表中，傳回第一個資料行中的姓氏，而第二資料行只有第一個首字母。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  下列範例會顯示如何傳回字串常數 `abcdef` 的第二、第三和第四個字元。  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

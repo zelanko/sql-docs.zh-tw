@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 736b413affafc1a75ff3b08ffaa686aff7893cbd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4bf41bb420ddaaccd0f1899c641a30a17bbb8fcd
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544189"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380340"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89544189"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP QUEUE <object>  
 [ ; ]  
   
@@ -68,9 +67,8 @@ DROP QUEUE <object>
 ## <a name="examples"></a>範例  
  下列範例會從目前的資料庫中卸除 **ExpenseQueue** 佇列。  
   
-```  
+```sql  
 DROP QUEUE ExpenseQueue ;  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
