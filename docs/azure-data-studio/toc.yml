@@ -102,8 +102,6 @@
           href: extensions/wizard-extension.md
     - name: 整合式終端機 (PowerShell、Bash)
       href: integrated-terminal.md
-    - name: 鍵盤快速鍵
-      href: keyboard-shortcuts.md
     - name: 伺服器群組
       href: server-groups.md
     - name: 原始檔控制
@@ -132,14 +130,14 @@
       href: code-snippets.md
     - name: 探索 Azure SQL 資源
       href: azure-resource-explorer.md
+    - name: 鍵盤快速鍵
+      href: keyboard-shortcuts.md
     - name: 使用量資料收集
       href: usage-data-collection.md
-    - name: 工作區與使用者設定
-      href: settings.md
     - name: Windows 驗證 (Kerberos)
       href: enable-kerberos.md
-    - name: 使用量資料收集
-      href: usage-data-collection.md
+    - name: 工作區與使用者設定
+      href: settings.md
 - name: 參考
   items:
     - name: SQL 工具

@@ -3,18 +3,18 @@ title: 啟用或停用使用方式資料收集和當機報告
 description: 本文說明如何控制使用方式和當機報告資料的收集，以及是否傳送給 Microsoft。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 5d65a1333f3fc0f41bdcb5b7ac1f5284f32a03cc
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 5ef44a7e2981d98c749e25692e667ae71b42843d
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745538"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91363885"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-azure-data-studio"></a>啟用或停用 Azure Data Studio 的使用狀況資料收集
 

@@ -3,24 +3,24 @@ title: 建立精靈延伸模組
 description: 本教學課程示範如何建立精靈延伸模組，將自訂功能新增至 Azure Data Studio。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288140"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364055"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>建立 Azure Data Studio 精靈延伸模組
 
 本教學課程示範如何建立新的 **Azure Data Studio 精靈延伸模組**。 延伸模組會在 Azure Data Studio 中提供和使用者互動的精靈。
 
-在本教學課程中，您將了解如何：
+在本文中，您將了解如何：
 > [!div class="checklist"]
 > - 安裝延伸模組產生器
 > - 建立您的延伸模組

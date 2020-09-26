@@ -1,20 +1,20 @@
 ---
 title: 使用 Azure 資源總管探索 Azure SQL 資源
 description: 了解如何透過 Azure 資源總管，探索和管理 Azure SQL Server、Azure SQL Database 和 Azure SQL 受控執行個體。
-ms.custom: seodec18
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: how-to
 author: yanancai
 ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
-ms.topic: quickstart
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dab8425871d32641e696cc3fee2d92a45b7bdf3b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746098"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364158"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 資源總管探索和管理 Azure SQL 資源
 

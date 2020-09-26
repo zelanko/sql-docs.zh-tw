@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio 中的 SQL 核心筆記本
 description: 本教學課程說明如何建立和執行 SQL Server 筆記本。
-ms.topic: tutorial
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: markingmyname
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: mikeray, alayu
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: d235b4acf40a2711d5935c34f72c5e97996fbc5c
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: cd71a160036bdcb5768e7a2ca51529989f733eeb
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136697"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364205"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>建立並執行 SQL Server 筆記本
 

@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio 中的 Python 核心筆記本
 description: 本教學課程說明如何建立及執行 Python 筆記本。
-ms.topic: tutorial
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: garyericson
@@ -9,12 +9,12 @@ ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: 38223789b149f0302005c39a42fdd18eb73ec2f6
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: e019777c629084c5265cac1cd531ee01bdede01f
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136616"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364215"
 ---
 # <a name="create-and-run-a-python-notebook"></a>建立及執行 Python 筆記本
 
