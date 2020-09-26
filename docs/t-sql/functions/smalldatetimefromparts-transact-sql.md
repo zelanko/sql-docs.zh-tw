@@ -19,12 +19,12 @@ ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f82241b49a83f2553ff2d683887e6e76be50279e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26552c560277ae7eff9067ab3c33ec1d37a67e84
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467861"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379923"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88467861"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )  
 ```  
   
@@ -67,7 +67,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## <a name="examples"></a>範例  
   
-```  
+```sql  
 SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  
 ```  
   

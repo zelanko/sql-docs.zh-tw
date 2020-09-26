@@ -24,12 +24,12 @@ ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4a4153f9ae882bd4d86e2d9cda53ed326bd9ac
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 1487d56bd1f93e0410f6c9b6001f4f379b466fb5
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990202"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380326"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -40,15 +40,16 @@ ms.locfileid: "90990202"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 DROP ROLE [ IF EXISTS ] role_name  
 ```  
   
-```  
+
+```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
-  
+
 DROP ROLE role_name  
 ```  
   
@@ -83,7 +84,7 @@ DROP ROLE role_name
 ## <a name="examples"></a>範例  
  下列範例會從 `AdventureWorks2012` 資料庫卸除資料庫角色 `purchasing`。  
   
-```  
+```sql  
 DROP ROLE purchasing;  
 GO  
 ```  

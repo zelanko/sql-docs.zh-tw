@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 219bb12f51542b178eabd0ae94ffe8c625f3072c
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 98ce649f2b0c2f1d9788deddecfa5294c0325230
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042514"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378473"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89042514"
 
 ## <a name="syntax"></a>語法
 
-```sql
+```syntaxsql
 DROP EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ];
 ```

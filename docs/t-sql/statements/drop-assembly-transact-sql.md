@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 721f7dbf286d6088af861fe26ee3fb4ec04bfedc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 601d7bdff19c6e6d8f4daec58c28c048891bcc82
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547817"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380183"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## <a name="examples"></a>範例  
  下列範例假設組件 `HelloWorld` 已經建立在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中。  
   
-```  
+```sql  
 DROP ASSEMBLY Helloworld ;  
 ```  
   

@@ -19,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d37d26a54bb3659f7cd1fe929d8fbf1ee48624e
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 2c2110b541ad06770b1218e3e48e77056085eaeb
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076725"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379521"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -34,12 +34,12 @@ ms.locfileid: "90076725"
 
 ## <a name="syntax"></a>語法
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string )
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```

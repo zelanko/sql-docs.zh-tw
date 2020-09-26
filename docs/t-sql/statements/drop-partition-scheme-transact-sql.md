@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a670facd072a81ba3788e861af4ffabffd4ad59f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 02aa1e5d8bae0949c58bd94af07589260e55af1d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547695"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380325"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89547695"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
@@ -64,7 +63,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## <a name="examples"></a>範例  
  下列範例會從目前資料庫中，卸除資料分割結構描述 `myRangePS1`：  
   
-```  
+```sql  
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   

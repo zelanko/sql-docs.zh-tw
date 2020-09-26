@@ -25,12 +25,12 @@ ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 624910a714816d93d892991591674a076858aa4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8769671a5f769fcf7c7d6af1eff00406355ce33
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308395"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380533"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88308395"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 SYSUTCDATETIME ( )  
 ```  
 
@@ -69,7 +69,7 @@ SYSUTCDATETIME ( )
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 顯示日期和時間函數所傳回的格式  
  下列範例示範日期和時間函數所傳回的不同格式。  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -92,7 +92,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-converting-date-and-time-to-date"></a>B. 將日期和時間轉換成日期  
  下列範例會顯示如何將日期和時間值轉換成 `date`。  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -115,7 +115,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### <a name="c-converting-date-and-time-values-to-time"></a>C. 將日期和時間值轉換成時間  
  下列範例會顯示如何將日期和時間值轉換成 `time`。  
   
- ```
+ ```sql
 DECLARE @DATETIME DATETIME = GetDate();
 DECLARE @TIME TIME
 SELECT @TIME = CONVERT(time, @DATETIME)

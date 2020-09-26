@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1206a13efe3061929e25c36bbe2731238ee5d415
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7047288c3607c91455d1cf17881efb0866205e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459495"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379550"
 ---
 # <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88459495"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 @@TOTAL_WRITE  
 ```  
   
@@ -54,7 +53,7 @@ ms.locfileid: "88459495"
 ## <a name="examples"></a>範例  
  下列範例會顯示傳回迄今 (到目前的日期和時間為止) 的磁碟讀取和寫入總數。  
   
-```  
+```sql
 SELECT @@TOTAL_READ AS 'Reads', @@TOTAL_WRITE AS 'Writes', GETDATE() AS 'As of'  
 ```  
   

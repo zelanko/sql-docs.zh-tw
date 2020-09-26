@@ -20,12 +20,12 @@ ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b526a4b57487fd43e7e39808d63e55a523b6836b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70350f99ad21f711d02f4fa504bc75d8075b04dd
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467825"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379875"
 ---
 # <a name="sqrt-transact-sql"></a>SQRT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88467825"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 SQRT ( float_expression )  
 ```  
   
@@ -52,8 +52,8 @@ SQRT ( float_expression )
 ## <a name="examples"></a>範例  
  下列範例會傳回 `1.00` 和 `10.00` 之間數字的平方根。  
   
-```  
-DECLARE @myvalue float;  
+```sql  
+DECLARE @myvalue FLOAT;  
 SET @myvalue = 1.00;  
 WHILE @myvalue < 10.00  
    BEGIN  
@@ -89,7 +89,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會傳回數字 `1.00` 和 `10.00` 的平方根。  
   
-```  
+```sql  
 SELECT SQRT(1.00), SQRT(10.00);  
 ```  
   

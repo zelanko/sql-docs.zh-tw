@@ -20,12 +20,12 @@ ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca09b778e11ad9db482f9a3438c1a20138e61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4afad65060a553689abe0bb28a11c740eb8d38f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467937"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380753"
 ---
 # <a name="pi-transact-sql"></a>PI (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88467937"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 PI ( )  
 ```  
   
@@ -48,7 +48,7 @@ PI ( )
 ## <a name="examples"></a>範例  
  下列範例會傳回 `PI` 的值。  
   
-```  
+```sql  
 SELECT PI();  
 GO  
 ```  

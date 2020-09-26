@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb5f6e5153628ce7d452bb06c31625e6515503e4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: af16b7921358a12b87e9ab2ddbd6acaefee47d13
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549020"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379653"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89549020"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name  
 ```  
   
@@ -74,7 +73,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ## <a name="examples"></a>範例  
  下列範例會先建立一個同義字 `MyProduct`，再卸除該同義字。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 -- Create a synonym for the Product table in AdventureWorks2012.  

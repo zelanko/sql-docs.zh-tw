@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 41a2c51ed429185156b4bf0ff5e9b002e4b514ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8407991622201fe3798695c4aecdd4514c5492f9
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363164"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379673"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88363164"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 @@SERVERNAME  
 ```  
   
@@ -63,7 +62,7 @@ ms.locfileid: "88363164"
 ## <a name="examples"></a>範例  
  下列範例會顯示如何使用 `@@SERVERNAME`。  
   
-```  
+```sql  
 SELECT @@SERVERNAME AS 'Server Name'  
 ```  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a15c11d3eb1b8f9026e4829b7992cd1a58d4a87b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c7c3133c15e10425af767d56d90a8d3a5b8277f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422652"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379129"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88422652"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 SESSIONPROPERTY (option)  
 ```  
   
@@ -67,7 +66,7 @@ SESSIONPROPERTY (option)
 ## <a name="examples"></a>範例  
  下列範例會傳回 `CONCAT_NULL_YIELDS_NULL` 選項的設定。  
   
-```  
+```sql  
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   

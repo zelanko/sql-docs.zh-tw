@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d4543adc695f7de97394bc02e8b2c478f7a22d34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db39f526499581d105176fa7df6092b7b2edd567
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308794"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379933"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88308794"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 SCOPE_IDENTITY()  
 ```  
   
@@ -68,8 +68,8 @@ SCOPE_IDENTITY()
 USE tempdb;  
 GO  
 CREATE TABLE TZ (  
-   Z_id  int IDENTITY(1,1)PRIMARY KEY,  
-   Z_name varchar(20) NOT NULL);  
+   Z_id  INT IDENTITY(1,1)PRIMARY KEY,  
+   Z_name VARCHAR(20) NOT NULL);  
   
 INSERT TZ  
    VALUES ('Lisa'),('Mike'),('Carla');  
@@ -87,8 +87,8 @@ Z_id   Z_name
 ```  
 ```sql 
 CREATE TABLE TY (  
-   Y_id  int IDENTITY(100,5)PRIMARY KEY,  
-   Y_name varchar(20) NULL);  
+   Y_id  INT IDENTITY(100,5)PRIMARY KEY,  
+   Y_name VARCHAR(20) NULL);  
   
 INSERT TY (Y_name)  
    VALUES ('boathouse'), ('rocks'), ('elevator');  

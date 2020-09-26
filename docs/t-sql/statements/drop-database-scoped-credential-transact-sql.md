@@ -18,12 +18,12 @@ ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a43fc4828b2f3c436767ff4c19508ee6b897eb58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4ac1f679400a021b8a61b0e5c0b3adbdffcdf29
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416254"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380083"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88416254"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql  
 DROP DATABASE SCOPED CREDENTIAL credential_name  
 ```  
   

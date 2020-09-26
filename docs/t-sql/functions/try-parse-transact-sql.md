@@ -19,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6529be493a9f35349b1a4f9b4b0c44fe379c85b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467725"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379484"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88467725"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 TRY_PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
@@ -133,7 +132,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE 的簡單範例  
   
-```  
+```sql
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -149,7 +148,7 @@ NULL
   
 ### <a name="b-detecting-nulls-with-try_parse"></a>B. 使用 TRY_PARSE 偵測 Null  
   
-```  
+```sql
 SELECT  
     CASE WHEN TRY_PARSE('Aragorn' AS decimal USING 'sr-Latn-CS') IS NULL  
         THEN 'True'  
@@ -170,10 +169,9 @@ True
   
 ### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. 一併使用 IIF 與 TRY_PARSE 及隱含文化特性設定  
   
-```  
+```sql
 SET LANGUAGE English;  
-SELECT IIF(TRY_PARSE('01/01/2011' AS datetime2) IS NULL, 'True', 'False') AS Result;  
-  
+SELECT IIF(TRY_PARSE('01/01/2011' AS datetime2) IS NULL, 'True', 'False') AS Result;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

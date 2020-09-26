@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e945d07f357055904fe31bb54746e94e69a7d46
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136792"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227262"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 Python 自訂執行階段
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -117,7 +117,7 @@ python.exe -m pip install pandas
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -134,7 +134,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-python-language-extension"></a>下載 Python 語言延伸模組
 
-下載包含 Python 語言延伸模組的 zip 檔案 ([python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952))。
+下載[包含適用於 Windows 之 Python 語言延伸模組的 ZIP 檔案](https://github.com/microsoft/sql-server-language-extensions/releases) \(英文\)。 建議在生產環境中使用發行版本。 在開發或測試時使用偵錯版本，因為其提供詳細的記錄資訊，可供您調查任何錯誤。
 
 ## <a name="register-external-language"></a>註冊外部語言
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a> 下載 Python 語言延伸模組
 
-下載包含 Python 語言延伸模組的 zip 檔案 ([python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793))。
+下載[包含適用於 Linux 之 Python 語言延伸模組的 ZIP 檔案](https://github.com/microsoft/sql-server-language-extensions/releases) \(英文\)。 建議在生產環境中使用發行版本。 在開發或測試時使用偵錯版本，因為其提供詳細的記錄資訊，可供您調查任何錯誤。
 
 ## <a name="register-external-language"></a>註冊外部語言
 

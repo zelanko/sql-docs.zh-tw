@@ -30,12 +30,12 @@ ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95a36c889059488d20e5cfdf3f1c954d6c403d87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79a275c0532838ec8466a2fc5415d9e3b4238b12
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459615"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380013"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ SYSDATETIME ( )
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 取得目前的系統日期和時間  
   
-```  
+```sql
 SELECT SYSDATETIME()  
     ,SYSDATETIMEOFFSET()  
     ,SYSUTCDATETIME()  
@@ -94,7 +94,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
   
 ### <a name="b-getting-the-current-system-date"></a>B. 取得目前的系統日期  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -107,7 +107,7 @@ SELECT CONVERT (date, SYSDATETIME())
   
 ### <a name="c-getting-the-current-system-time"></a>C. 取得目前的系統時間  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME())  
     ,CONVERT (time, SYSDATETIMEOFFSET())  
     ,CONVERT (time, SYSUTCDATETIME())  
@@ -129,7 +129,7 @@ GETUTCDATE()       20:18:45.3470000
   
 ### <a name="d-getting-the-current-system-date-and-time"></a>D：取得目前的系統日期和時間  
   
-```  
+```sql
 SELECT SYSDATETIME();  
 ```  
   

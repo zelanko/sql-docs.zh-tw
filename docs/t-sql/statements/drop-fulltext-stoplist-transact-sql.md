@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd3cc4e5679a5f766f02d7630b3b760290203d43
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e82a6c699aa31b58e5bdd79d122754cabf728941
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549298"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380411"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89549298"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT STOPLIST stoplist_name  
 ;  
 ```  
@@ -62,7 +61,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="examples"></a>範例  
  下列範例會卸除名為 `myStoplist` 的全文檢索停用字詞表。  
   
-```  
+```sql 
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   

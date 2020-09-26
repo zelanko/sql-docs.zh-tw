@@ -21,12 +21,12 @@ ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 219d071b6cb85dad1014a1cdf5b40926aaba634a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dee02959fae06b67779b400c778bd2a465f5e87
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422622"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380603"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ RIGHT ( character_expression , integer_expression )
 ### <a name="a-using-right-with-a-column"></a>A：搭配資料行使用 RIGHT  
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中每個人名字最右邊的五個字元。  
   
-```  
+```sql  
 SELECT RIGHT(FirstName, 5) AS 'First Name'  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -93,7 +93,7 @@ Rob
 ### <a name="b-using-right-with-a-column"></a>B. 搭配資料行使用 RIGHT  
  下列範例會傳回 `DimEmployee` 資料表中，每個姓氏的最右側五個字元。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RIGHT(LastName, 5) AS Name  
@@ -115,7 +115,7 @@ lters
 ### <a name="c-using-right-with-a-character-string"></a>C. 搭配字元字串使用 RIGHT  
  下列範例會利用 `RIGHT` 來傳回字元字串 `abcdefg` 最右側兩個字元。  
   
-```  
+```sql  
 SELECT RIGHT('abcdefg', 2); 
 ```  
   

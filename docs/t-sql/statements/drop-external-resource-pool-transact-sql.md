@@ -19,12 +19,12 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: 77f1985a83109718f4185d691adb316b1b214ea3
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 4f8ab5fdef426293a7d74be3d41a08b9f033afab
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283767"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380426"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89283767"
   
 ## <a name="syntax"></a>語法  
   
-```
+```syntaxsql
 DROP EXTERNAL RESOURCE POOL pool_name  
 ```  
   

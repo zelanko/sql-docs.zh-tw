@@ -24,12 +24,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 121f9121d39b3532edac9486521037a256814fa9
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 74fc3af1bea40a7610bc6c8fe511e6cbfe712daf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076635"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380273"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "90076635"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 SERVERPROPERTY ( 'propertyname' )  
 ```  
 

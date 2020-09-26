@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3ed024269a385961cce9ff6eddef1298d22fea3d
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 7c8f4ffe7bc861fece68c37ae734a0d659bebb56
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646538"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380153"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 
@@ -39,7 +39,6 @@ ms.locfileid: "88646538"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
 
@@ -58,7 +57,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 卸除資料行加密金鑰  
  下列範例會卸除名為 `MyCEK` 的資料行加密金鑰。  
   
-```  
+```sql  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  

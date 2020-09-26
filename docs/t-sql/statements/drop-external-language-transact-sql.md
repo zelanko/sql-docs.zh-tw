@@ -11,12 +11,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d159d4b61e9fa8a171873d7c1a8f6466452e8fe9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3eff9057307d06874237ccda6cb1f1ace518339d
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358454"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378133"
 ---
 # <a name="drop-external-language-transact-sql"></a>DROP EXTERNAL LANGUAGE (Transact-SQL)  
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88358454"
 
 ## <a name="syntax"></a>語法
 
-```text
+```syntaxsql
 DROP EXTERNAL LANGUAGE <language_name>
 ```
 

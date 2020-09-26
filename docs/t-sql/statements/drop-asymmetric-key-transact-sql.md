@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49260a78ef3012f022a6d523bc2cc1d7ea1b128f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ae0f615c3d59228618a7e04d637997b999cb123
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478893"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380207"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88478893"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]  
 ```  
   
@@ -67,7 +66,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
 ## <a name="examples"></a>範例  
  下列範例會從 `MirandaXAsymKey6` 資料庫移除非對稱金鑰 `AdventureWorks2012`。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  

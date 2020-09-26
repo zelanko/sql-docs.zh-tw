@@ -24,12 +24,12 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4b1e652bfeff0646fb28da125a46b3ff222f54f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 500010c11f80bf36341631a90cf8dfcf49f49c5b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362634"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380573"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88362634"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 USER  
 ```  
   
@@ -63,8 +63,8 @@ USER
 ### <a name="a-using-user-to-return-the-database-user-name"></a>A. 使用 USER 傳回資料庫使用者名稱  
  下列範例宣告一個變數為 `char`、將 USER 的目前值指派給這個變數，然後列印這個變數與文字描述。  
   
-```  
-DECLARE @usr char(30)  
+```sql
+DECLARE @usr CHAR(30)  
 SET @usr = user  
 SELECT 'The current user''s database username is: '+ @usr  
 GO  
@@ -82,14 +82,14 @@ The current user's database username is: dbo
 ### <a name="b-using-user-with-default-constraints"></a>B. 搭配 DEFAULT 條件約束來使用 USER  
  下列範例會使用 `USER` 做為銷售資料列之銷售員的 `DEFAULT` 條件約束，來建立資料表。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE inventory22  
 (  
- part_id int IDENTITY(100, 1) NOT NULL,  
- description varchar(30) NOT NULL,  
- entry_person varchar(30) NOT NULL DEFAULT USER   
+ part_id INT IDENTITY(100, 1) NOT NULL,  
+ description VARCHAR(30) NOT NULL,  
+ entry_person VARCHAR(30) NOT NULL DEFAULT USER   
 )  
 GO  
 INSERT inventory22 (description)  
@@ -107,7 +107,7 @@ GO
   
  下列查詢會選取 `inventory22` 資料表的所有資訊：  
   
-```  
+```sql
 SELECT * FROM inventory22 ORDER BY part_id;  
 GO  
 ```  
@@ -129,7 +129,7 @@ part_id     description                    entry_person
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. 與 EXECUTE AS 合併使用 USER  
  下列範例說明在模擬工作階段中進行呼叫時，`USER` 的行為。  
   
-```  
+```sql
 SELECT USER;  
 GO  
 EXECUTE AS USER = 'Mario';  

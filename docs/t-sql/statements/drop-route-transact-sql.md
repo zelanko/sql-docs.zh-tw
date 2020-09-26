@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c85a6b4629e7cf6e6738a2a8313395c511e11818
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 112bb3a213fe009ab8ff1a02961bfaecd7da7dce
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540643"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380283"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89540643"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP ROUTE route_name  
 [ ; ]  
 ```  
@@ -61,7 +60,7 @@ DROP ROUTE route_name
 ## <a name="examples"></a>範例  
  下列範例會刪除 `ExpenseRoute` 路由。  
   
-```  
+```sql  
 DROP ROUTE ExpenseRoute ;  
 ```  
   

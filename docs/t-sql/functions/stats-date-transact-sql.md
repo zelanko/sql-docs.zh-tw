@@ -23,12 +23,12 @@ ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bc07124925f28ea0114a95ec5a60319bd2112bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4657f96d1fe67435d547696361b8593d022fb559
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467821"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379863"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467821"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 STATS_DATE ( object_id , stats_id )  
 ```  
   

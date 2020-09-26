@@ -22,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4192aa80f1cbc2d7106d8893f135387c40b5bef5
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467720"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379451"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88467720"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 TYPE_ID ( [ schema_name ] type_name )   
 ```  
   
@@ -64,7 +64,7 @@ TYPE_ID ( [ schema_name ] type_name )
 ### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>A. 查閱單一部分或兩部分類型名稱的 TYPE ID 值  
  下列範例會針對單一部分或兩部分類型名稱來傳回類型識別碼。  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TYPE NewType FROM int;  
@@ -81,7 +81,7 @@ GO
 ### <a name="b-looking-up-the-type-id-of-a-system-data-type"></a>B. 查閱系統資料類型的 TYPE ID  
  下列範例會針對 `TYPE ID` 系統資料類型來傳回 `datetime`。  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]  
     ,TYPE_ID('datetime') AS [TYPE_ID];  
 GO  
@@ -92,7 +92,7 @@ GO
 ### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C：查閱系統資料類型的 TYPE ID  
  下列範例會針對 `TYPE ID` 系統資料類型來傳回 `datetime`。  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,   
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  

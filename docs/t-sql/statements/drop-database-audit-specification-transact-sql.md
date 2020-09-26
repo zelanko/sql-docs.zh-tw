@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e4abd76d2f2fb4b2036036e165ec8f075003fc21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 864a3af986cd4b88df30ebc587c67e395bed9b10
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472298"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380111"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88472298"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP DATABASE AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -58,7 +57,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-dropping-a-database-audit-specification"></a>A. 卸除資料庫稽核規格  
  下列範例會卸除稱為 `HIPAA_Audit_DB_Specification` 的稽核。  
   
-```  
+```sql  
 DROP DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification;  
 GO  
 ```  

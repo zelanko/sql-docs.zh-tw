@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 64a4c28705c80d68bd6f7499f059b1d0ca7f6846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 659baca8c7b0dc99ee070888e09744fa8e6b5b5c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304603"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379701"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "88304603"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  
   
@@ -70,7 +69,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ## <a name="examples"></a>範例  
  下列範例會從預存程序 `HumanResourcesDP` 移除憑證 `HumanResources.uspUpdateEmployeeLogin` 的簽章。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  

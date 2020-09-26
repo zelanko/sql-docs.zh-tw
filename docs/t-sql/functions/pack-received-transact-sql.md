@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b3bb37af363727d1eb41922979ee6f78a9fd008
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363484"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380817"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88363484"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88363484"
 ## <a name="examples"></a>範例  
  下列範例會顯示 `@@PACK_RECEIVED` 的用法。  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5c7472a6185dca4ca32bfd0ef639a674b82fc719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f26a89ed0da4a6521a339cd837e81b6c5b3369a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416513"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378769"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88416513"
   
 ## <a name="syntax"></a>語法  
   
-```    
+```syntaxsql    
 DROP EVENT SESSION event_session_name  
 ON SERVER  
 ```  

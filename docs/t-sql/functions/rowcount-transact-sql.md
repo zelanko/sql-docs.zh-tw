@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1cbc8ae7854eb38185eaf07ed8ce52beaf4a1eff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0a85b458990042e524b8e8382e75ce7c4cf27b1
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309164"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379960"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88309164"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 @@ROWCOUNT  
 ```  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88309164"
 ## <a name="examples"></a>範例  
  下列範例會執行 `UPDATE` 陳述式，並且使用 `@@ROWCOUNT` 來偵測是否有任何資料列變更。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee   

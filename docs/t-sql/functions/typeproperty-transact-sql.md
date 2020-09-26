@@ -21,12 +21,12 @@ ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 455f736f73d2b4ba6c5e798b3cd9d8376ee4217b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0d97d422cb5f3ca7c248b3c3175eb172a5180be
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467708"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379454"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467708"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql
 TYPEPROPERTY (type , property)  
 ```  
   
@@ -71,7 +71,7 @@ TYPEPROPERTY (type , property)
 ### <a name="a-identifying-the-owner-of-a-data-type"></a>A. 識別資料類型的擁有者  
  下列範例會傳回資料類型的擁有者。  
   
-```  
+```sql
 SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + '.' + name, 'OwnerId') AS owner_id, name, system_type_id, user_type_id, schema_id  
 FROM sys.types;  
 ```  
@@ -79,7 +79,7 @@ FROM sys.types;
 ### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>B. 傳回 tinyint 資料類型的有效位數  
  下列範例會傳回 `tinyint` 資料類型的有效位數或位數數目。  
   
-```  
+```sql
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   

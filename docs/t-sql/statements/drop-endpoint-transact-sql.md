@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a33cf6c43f2f01e3a897a0491954b98e5739db6e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1ebeeee770fc161d289a10f246559ca353446618
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539824"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380023"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89539824"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 DROP ENDPOINT endPointName  
 ```  
   
@@ -58,7 +57,7 @@ DROP ENDPOINT endPointName
 ## <a name="examples"></a>範例  
  下列範例會移除先前建立稱為 `sql_endpoint` 的端點。  
   
-```  
+```sql  
 DROP ENDPOINT sql_endpoint;  
 ```  
   

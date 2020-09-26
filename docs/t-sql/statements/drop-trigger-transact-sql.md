@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ebbd18eda53dcedcfd0118c16bb5b16066c8fa7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539863"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379643"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -109,7 +109,7 @@ ON ALL SERVER
 ### <a name="a-dropping-a-dml-trigger"></a>A. 卸除 DML 觸發程序  
  下列範例會卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `employee_insupd` 觸發程序。 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用 DROP TRIGGER IF EXISTS 語法。)  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -120,7 +120,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  由於 DDL 觸發程序的範圍並不是結構描述，因此不會出現在 **sys.objects** 目錄檢視中，您也無法使用 OBJECT_ID 函式來查詢它們是否在資料庫中。 範圍不是結構描述的物件必須利用適當的目錄檢視來查詢。 如果是 DDL 觸發程序，請使用 **sys.triggers**。  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

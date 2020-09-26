@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b87ff1ba14f3f8725d946f56823c83a1e1599ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1664f2a9263db649dc9e840b915cd25d2610e956
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547677"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379723"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "89547677"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -57,7 +56,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>範例  
  下列範例會卸除一個稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格。  
   
-```  
+```sql  
 DROP SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification;  
 GO  
 ```  

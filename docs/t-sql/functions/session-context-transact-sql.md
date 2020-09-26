@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb971143c7de2bdbf683b24f81162e088ffd2a8e
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467900"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378735"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88467900"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 SESSION_CONTEXT(N'key')  
 ```  
   
@@ -57,7 +57,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="examples"></a>範例  
  下面這個簡單的範例會先將索引鍵 `user_id` 的工作階段值設為 4，再使用 **SESSION_CONTEXT** 函式來擷取該值。  
   
-```  
+```sql  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  

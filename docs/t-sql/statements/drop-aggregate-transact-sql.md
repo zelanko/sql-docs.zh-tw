@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46c1074500d6ea73af9b10ff373a8beb9cb433d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b0ff8af0373d733cd24c507a544694849b849027
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541271"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380223"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89541271"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name  
 ```  
   
@@ -66,7 +66,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ## <a name="examples"></a>範例  
  下列範例會卸除彙總 `Concatenate`。  
   
-```  
+```sql  
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   

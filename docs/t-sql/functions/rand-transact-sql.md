@@ -21,12 +21,12 @@ ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c430fa567f0d7e59627971b789d6b65d6ef148d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0ff845ff64d45532a7a6455a133701111cad958
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309434"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380673"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88309434"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 RAND ( [ seed ] )  
 ```  
   

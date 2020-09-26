@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38c35f039701d68eddfee86f4fb558a3689033d8
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445611"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380713"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "88445611"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 PWDCOMPARE ( 'clear_text_password'  
    , password_hash   
    [ , version ] )  
@@ -78,7 +77,7 @@ PWDCOMPARE ( 'clear_text_password'
 ### <a name="a-identifying-logins-that-have-no-passwords"></a>A. 識別沒有密碼的登入  
  下列範例會識別沒有密碼的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
-```  
+```sql  
 SELECT name FROM sys.sql_logins   
 WHERE PWDCOMPARE('', password_hash) = 1 ;  
 ```  
@@ -86,7 +85,7 @@ WHERE PWDCOMPARE('', password_hash) = 1 ;
 ### <a name="b-searching-for-common-passwords"></a>B. 搜尋一般密碼  
  若要搜尋您要識別與變更的一般密碼，請將密碼指定為第一個參數。 例如，執行下列陳述式來搜尋指定為 `password` 的密碼。  
   
-```  
+```sql  
 SELECT name FROM sys.sql_logins   
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  

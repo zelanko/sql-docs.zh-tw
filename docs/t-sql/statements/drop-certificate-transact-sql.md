@@ -23,12 +23,12 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3907c74fd03e58416a2b15cec06d3416570f11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6af8fdfe363f8edbebbd80213e467ec7b35514ad
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426630"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380163"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -65,7 +65,7 @@ DROP CERTIFICATE certificate_name
 ## <a name="examples"></a>範例  
  下列範例會從 `Shipping04` 資料庫卸除憑證 `AdventureWorks`。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP CERTIFICATE Shipping04;  
 ```  
@@ -73,7 +73,7 @@ DROP CERTIFICATE Shipping04;
 ## <a name="examples-sspdw"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會卸除憑證 `Shipping04`。  
   
-```
+```sql
 USE master;  
 DROP CERTIFICATE Shipping04;  
 ```  
