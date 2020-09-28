@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465557"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364225"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定及變更資料庫定序。 如果沒有指定定序，會使用伺服器定序。  
+  本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來設定及變更資料庫定序。 如果沒有指定定序，會使用伺服器定序。  
   
 > [!IMPORTANT]
-> 在 Azure SQL Database 中，不會明確禁止變更資料庫定序。 不過，變更資料庫定序會要求在資料庫與其他使用者或背景處理序 (例如，正在進行備份的背景) 上的獨佔鎖定可能會持有資料庫鎖定，並防止定序變更。 Azure SQL Database 不支援 `ALTER DATABASE COLLATE` 陳述式。
+> Azure SQL Database 不支援 `ALTER DATABASE COLLATE` 陳述式。
 
  **本主題內容**  
   

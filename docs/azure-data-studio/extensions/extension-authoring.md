@@ -1,6 +1,6 @@
 ---
 title: 建立延伸模組
-description: 您可以使用延伸模組將功能新增到 Azure Data Studio。 了解如何建立延伸模組，以及如何將延伸模組發佈到延伸模組資源庫。
+description: 您可以使用延伸模組將功能新增到 Azure Data Studio。 了解如何建立延伸模組，以及將其發佈到延伸模組資源庫。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -9,14 +9,14 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/26/2020
-ms.openlocfilehash: 9dbb60dab5d2b1a5dc3a95189a93d6617ed83b6b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 92c6a5d9522d015786eafdefaeea64b46925b92b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123203"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364035"
 ---
-# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組來擴充功能
+# <a name="extend-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組來擴充功能
 
 Azure Data Studio 中的延伸模組提供一種簡單方式，其可將更多功能新增至基底 Azure Data Studio 安裝。
 
@@ -26,13 +26,13 @@ Azure Data Studio 中的延伸模組提供一種簡單方式，其可將更多�
 
 如果您有興趣擴充 Azure Data Studio，您可以建立自己的延伸模組，並將其發佈至延伸模組資源庫。
 
-### <a name="writing-an-extension"></a>撰寫延伸模組
+### <a name="write-an-extension"></a>撰寫延伸模組
 
 #### <a name="prerequisites"></a>Prerequisites
 
-若要開發延伸模組，則需要安裝 [Node.js](https://nodejs.org/)，並使其可在 `$PATH` 中使用。 Node.js 包含 npm，也就是 Node.js 套件管理員，可用來安裝延伸模組產生器。
+若要開發延伸模組，則需要安裝 [Node.js](https://nodejs.org/)，並使其可在 `$PATH` 中使用。 Node.js 包含 Node.js 套件管理員 npm，可用來安裝延伸模組產生器。
 
-若要建立新的延伸模組，則可使用 Azure Data Studio 延伸模組產生器。 Yeoman [延伸模組產生器](https://www.npmjs.com/package/generator-azuredatastudio)對於延伸模組專案而言是一個很好的起點。 若要啟動產生器，請在命令提示字元中鍵入下列命令：
+若要建立新的延伸模組，您可以使用 Azure Data Studio 延伸模組產生器。 Yeoman [延伸模組產生器](https://www.npmjs.com/package/generator-azuredatastudio)對於延伸模組專案而言是一個很好的起點。 若要啟動產生器，請在命令提示字元中輸入下列命令：
 
 ```console
 npm install -g yo generator-azuredatastudio # Install the generator
@@ -47,14 +47,14 @@ yo azuredatastudio
 
 ## <a name="debug-an-extension"></a>對延伸模組進行偵錯
 
-您可以使用 Visual Studio Code 延伸模組 [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug)，對新的延伸模組進行偵錯。
+您可以使用 Visual Studio Code 延伸模組 [Azure Data Studio 偵錯](https://github.com/kevcunnane/sqlops-debug)，對新的延伸模組進行偵錯。
 
-步驟：
+若要對您的延伸模組偵錯：
 
 1. 使用 [Visual Studio Code](https://code.visualstudio.com/) 開啟延伸模組。
 2. 安裝 Azure Data Studio 偵錯延伸模組。
-3. 按 **F5** 鍵或選取 [偵錯] 圖示，然後選取 [開始]。
-4. Azure Data Studio 的新執行個體會以特殊模式 (延伸模組開發主機) 啟動，且這個新執行個體現可識別您的延伸模組。
+3. 選取 **F5** 鍵或選取 [偵錯] 圖示，然後選取 [開始]。
+4. Azure Data Studio 的新執行個體會以特殊模式 (延伸模組開發主機) 啟動。 這個新的執行個體現在可以識別您的延伸模組。
 
 ## <a name="create-an-extension-package"></a>建立延伸模組套件
 
@@ -67,29 +67,29 @@ vsce package
 # The myExtensionName.vsix file has now been generated
 ```
 
-透過 VSIX 套件，您可共用 `.vsix` 檔案，並從 [命令選擇區] 使用 [延伸模組：從 VSIX 檔案進行安裝] 命令，將延伸模組安裝至 Azure Data Studio，即可在本機和私人位置共用延伸模組。
+透過 VSIX 套件，您可共用 .vsix 檔案，並從命令選擇區使用 [延伸模組：從 VSIX 檔案進行安裝] 命令，將延伸模組安裝至 Azure Data Studio，即可在本機和私人位置共用延伸模組。
 
 ## <a name="publish-an-extension"></a>發佈延伸模組
 
 若要將您的新延伸模組發佈至 Azure Data Studio：
 
-1. 將延伸模組新增至 https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
-2. 我們目前不支援裝載協力廠商的延伸模組，因此 Azure Data Studio 會讓您選擇瀏覽至下載頁面，而不是下載延伸模組。 若要設定延伸模組的下載頁面，請設定 "Microsoft.AzureDataStudio.DownloadPage" 資產值。
+1. 將延伸模組新增至[延伸模組資源庫](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)。
+2. 我們目前不支援裝載第三方延伸模組。 Azure Data Studio 會提供瀏覽至下載頁面的選項，而不是下載延伸模組。 若要設定延伸模組的下載頁面，請設定 **Microsoft.AzureDataStudio.DownloadPage** 資產的值。
 3. 依據版本/延伸模組分支建立 PR。
 4. 將檢閱要求傳送給小組。
 
 我們會檢閱您的延伸模組，並新增至延伸模組資源庫。
 
-### <a name="publishing-extension-updates"></a>發佈延伸模組更新
+### <a name="publish-extension-updates"></a>發佈延伸模組更新
 
 發佈更新與發佈延伸模組的程序類似。 請確定已更新 package.json 中的版本。
 
 ## <a name="next-steps"></a>後續步驟
 
-請參閱下列其中一個延伸模組撰寫教學課程來取得如何開始進行的逐步說明：
+請參閱下列其中一個延伸模組撰寫教學課程，以取得如何開始進行的逐步說明：
 
 - [鍵盤對應延伸模組教學課程](keymap-extension.md)
 - [儀表板延伸模組教學課程](dashboard-extension.md)
-- [Notebook 延伸模組教學課程](notebook-extension.md)
+- [筆記本延伸模組教學課程](notebook-extension.md)
 - [Jupyter Book 延伸模組教學課程](jupyter-book-extension.md)
 - [精靈延伸模組教學課程](wizard-extension.md)

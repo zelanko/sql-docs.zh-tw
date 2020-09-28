@@ -3,24 +3,24 @@ title: 建立鍵盤對應延伸模組
 description: 本教學課程示範如何建立鍵盤對應延伸模組，將自訂功能新增至 Azure Data Studio。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111662"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364075"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>建立 Azure Data Studio 鍵盤對應延伸模組
 
 本教學課程示範如何建立新的 Azure Data Studio 延伸模組。 此延伸模組會在 Azure Data Studio 中建立熟悉的 SSMS 按鍵繫結關係。
 
-在本教學課程中，您將了解如何：
+在本文中，您將了解如何：
 > [!div class="checklist"]
 > - 建立延伸模組專案
 > - 安裝延伸模組產生器
@@ -41,7 +41,7 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
 ## <a name="install-the-extension-generator"></a>安裝延伸模組產生器
 
-為了簡化建立延伸模組的程序，我們使用 Yeoman 建置了[延伸模組產生器](https://code.visualstudio.com/docs/extensions/yocode)。 若要加以安裝，請從命令提示字元執行下列命令：
+為了簡化建立延伸模組的程序，我們使用 Yeoman 建置了[延伸模組產生器](https://code.visualstudio.com/docs/extensions/yocode)。 若要加以安裝，請在命令提示字元中執行下列程式碼：
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -85,7 +85,7 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
 **步驟 2：將快速鍵新增至延伸模組**
 
-若要將快速鍵新增至延伸模組，請開啟延伸模組中的 *package.json* 檔案，然後將 `contributes` 區段取代為下列內容：
+若要將快速鍵新增至延伸模組，請開啟延伸模組中的 *package.json* 檔案，然後將 `contributes` 區段取代為下列程式碼：
 
 ```json
 "contributes": {
@@ -134,7 +134,7 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
 ## <a name="package-your-extension"></a>封裝您的延伸模組
 
-若要分享給其他人，您必須將延伸模組封裝成單一檔案。 此檔案可發佈到 Azure Data Studio 延伸模組市集，或是在您的小組或社群分享。 若要執行這項操作，您必須從命令列安裝另一個 npm 套件：
+若要與其他人共用，則需要將延伸模組封裝成單一檔案。 此檔案可發佈到 Azure Data Studio 延伸模組 Marketplace，或在小組或社群分享。 若要執行這項操作，您必須從命令列安裝另一個 npm 套件：
 
 ```console
 `npm install -g vsce`
@@ -156,9 +156,9 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
 :::image type="content" source="media/keymap-extension/extensions.png" alt-text="安裝":::
 
-## <a name="publish-your-extension-to-the-marketplace"></a>將您的延伸模組發佈到市集
+## <a name="publish-your-extension-to-the-marketplace"></a>將延伸模組發佈到 Marketplace
 
-Azure Data Studio 延伸模組市集尚未完全實行，目前的程序是在其他地方 (例如 GitHub 版本頁面) 裝載延伸模組 VSIX，然後提交 PR 並將[此 JSON 檔案](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)更新為您的延伸模組資訊。
+Azure Data Studio 延伸模組市集正在建構中，目前的程序是在某處 (例如 GitHub 版本頁面) 裝載延伸模組 VSIX，然後提交 PR，將[此 JSON 檔案](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)更新為您的延伸模組資訊。
 
 ## <a name="next-steps"></a>後續步驟
 

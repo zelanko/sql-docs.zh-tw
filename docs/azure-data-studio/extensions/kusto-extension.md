@@ -1,26 +1,28 @@
 ---
 title: 適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組
 description: 本文說明如何使用 Azure Data Studio 來連線及查詢 Azure 資料總管叢集。
-ms.topic: conceptual
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226823"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379613"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組 (預覽)
 
 適用於 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 延伸模組可讓您連線及查詢 [Azure 資料總管](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)叢集。
 
-使用者現在可以連線及瀏覽其 Azure 資料總管叢集、撰寫和執行 KQL 查詢，以及使用 Kusto 核心搭配 IntelliSense 來撰寫筆記本。 藉由在 Azure Data Studio 中啟用原生 Kusto (KQL) 體驗，資料工程師、資料科學家和資料分析師即可快速觀察 Azure 資料總管中所儲存大量資料的趨勢和異常狀況。
+使用者可撰寫和執行 KQL 查詢，以及使用 [Kusto 核心](../notebooks/notebooks-kusto-kernel.md)搭配 IntelliSense 來撰寫筆記本。
+
+藉由在 Azure Data Studio 中啟用原生 Kusto (KQL) 體驗，資料工程師、資料科學家和資料分析師即可快速觀察 Azure 資料總管中所儲存大量資料的趨勢和異常狀況。
 
 此延伸模組目前為預覽狀態。
 
@@ -43,7 +45,7 @@ ms.locfileid: "91226823"
 
 3. 選取 [Kusto (KQL)] 延伸模組並檢視其詳細資料。
 
-4. 選取 [安裝]  。
+4. 選取 [安裝]。
 
 :::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Kusto 延伸模組":::
 
@@ -126,16 +128,23 @@ Azure Data Studio 中的 [SandDance 延伸模組](https://docs.microsoft.com/sql
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 視覺效果":::
 
-## <a name="limitations-and-considerations"></a>限制與考量
+## <a name="known-issues"></a>已知問題
 
-- 您必須先為 Azure 資料總管叢集選擇資料庫，然後再執行 Kusto 查詢。
-- 如果您讓 Azure 資料總管叢集閒置太久，其可以中斷連線。
-    - 因應措施：中斷與叢集的連線，然後重新連線。
+| 詳細資料 | 因應措施 |
+|---------|------------|
+| [Kusto 連線 Viewlet 在重載之後無法運作](https://github.com/microsoft/azuredatastudio/issues/12475)。 | N/A |
+| [無法自動重新連線](https://github.com/microsoft/azuredatastudio/issues/11830)。 | 中斷 Azure 資料總管叢集的連線並重新連線。 |
+| [重新整理 Kusto 叢集似乎無法正確地重新連線](https://github.com/microsoft/azuredatastudio/issues/11824)。 | 中斷 Azure 資料總管叢集的連線並重新連線。 |
+| [連線至叢集應會顯示叢集儀表板，而不是資料庫](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
+| 針對 Azure 資料叢集資料庫中的每個資料表，只能使用 [選取前 1000 個] 的選項，而不是 [取用 10 個]。 | N/A |
 
-## <a name="next-steps"></a>後續步驟
+您可以提出[功能要求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)，以提供意見反應給產品小組。  
+您可以提出[錯誤 (bug)](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)，以提供意見反應給產品小組。
+
+## <a name="next-steps"></a>下一步
 
 - [建立並執行 Kusto 筆記本](../notebooks/notebooks-kusto-kernel.md)
-- [Azure Data Studio 中的 kqlmagic 筆記本](../notebooks-kqlmagic.md)
+- [Azure Data Studio 中的 kqlmagic 筆記本](../notebooks/notebooks-kqlmagic.md)
 - [SQL 對 Kusto 的功能提要](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [什麼是 Azure 資料總管？](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [使用 SandDance 視覺效果](https://sanddance.js.org/)

@@ -17,12 +17,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 52cba9eb53b02e416e0274608f6437ee483c26b3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107517"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364235"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -181,6 +181,9 @@ snapshot [ -?]
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為處理器數目的兩倍。  
+ 
+ > [!NOTE]
+ > 如果複寫的物件具有篩選器，則快照集代理程式只會針對該文章產生一個 BCP 檔案，而不會產生多個 BCP 檔案。 
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  這是指無關的刪除動作是否會傳送至訂閱者。 無關的刪除動作是針對不屬於訂閱者資料分割的資料列傳送至訂閱者的 DELETE 命令。 雖然無關的刪除動作不會影響資料完整性或聚合，但是它們可能會產生不必要的網路流量。 **MaxNetworkOptimization** 的預設值為 **0**。 將 **MaxNetworkOptimization** 設定為 **1** 會盡可能減少無關刪除動作的機會，因而縮減網路流量並擴大網路最佳化。 如果聯結篩選和複雜子集篩選的多重層級存在，將這個參數設定為 **1** 也可能會增加中繼資料的儲存體，而且導致發行者端的效能降低。 您應該仔細地評估複寫拓撲，並且只有在無關刪除動作的網路流量高得無法接受，才將 **MaxNetworkOptimization** 設定為 **1** 。  
@@ -236,7 +239,7 @@ snapshot [ -?]
  這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的登入。  
   
  **-PublisherPassword**  _publisher_password_  
- 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的密碼。 。  
+ 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的密碼。 .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  

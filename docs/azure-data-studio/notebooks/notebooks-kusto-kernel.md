@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226958"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379593"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>建立並執行 Kusto (KQL) 筆記本 (預覽)
 
-本文說明如何使用連線至 Azure 資料總管叢集的 [Kusto (KQL) 延伸模組](../extensions/kusto-extension.md)，來建立並執行 [Azure Data Studio 筆記本](../notebooks-guidance.md)。
+本文說明如何使用連線至 Azure 資料總管叢集的 [Kusto (KQL) 延伸模組](../extensions/kusto-extension.md)，來建立並執行 [Azure Data Studio 筆記本](./notebooks-guidance.md)。
 
 透過 Kusto (KQL) 延伸模組，您可以將核心選項變更為 **Kusto**。
 
@@ -104,11 +104,14 @@ ms.locfileid: "91226958"
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="儲存結果":::
 
-## <a name="limitations-and-considerations"></a>限制與考量
+## <a name="known-issues"></a>已知問題
 
-- 您必須先為 Azure 資料總管叢集選擇資料庫，然後再執行 Kusto 查詢。
-- 如果您讓 Azure 資料總管叢集閒置太久，其可以中斷連線。
-    - 因應措施：中斷與叢集的連線，然後重新連線。
+| 詳細資料 | 因應措施 |
+|---------|------------|
+| [查詢結果只會顯示的資料行標題](https://github.com/microsoft/azuredatastudio/issues/12565)。 | N/A |
+
+您可以提出[功能要求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)，以提供意見反應給產品小組。  
+您可以提出[錯誤 (bug)](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)，以提供意見反應給產品小組。
 
 ## <a name="next-steps"></a>後續步驟
 
