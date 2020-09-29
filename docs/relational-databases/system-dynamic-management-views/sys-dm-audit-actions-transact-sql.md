@@ -1,6 +1,6 @@
 ---
 description: sys.dm_audit_actions (Transact-SQL)
-title: sys. dm_audit_actions (Transact-sql) |Microsoft Docs
+title: sys.dm_audit_actions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10bf743f0c09ab423dfef16da30730d80017896e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 897d83dcf6c85606ac513d9075cca9ebc316a6cf
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544846"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412805"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89544846"
 |**containing_group_name**|**nvarchar(120)**|包含指定之動作的稽核群組名稱。 如果名稱中的值是群組，則為 NULL。|  
   
 ## <a name="permissions"></a>權限  
- 主體必須具有 **SELECT** 許可權。 根據預設值，這會授與給 Public。  
+公開會看到此 view。
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
