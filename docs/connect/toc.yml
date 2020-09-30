@@ -5987,8 +5987,6 @@
               href: ../ado/guide/data/handling-errors-in-vbscript.md
             - name: 處理 Visual C++ 的錯誤
               href: ../ado/guide/data/handling-errors-in-visual-c.md
-            - name: 處理 Visual J++ 的錯誤
-              href: ../ado/guide/data/handline-errors-in-visual-j.md
             - name: 處理 JScript 的錯誤
               href: ../ado/guide/data/handling-errors-in-jscript.md
         - name: 預期的錯誤
@@ -6011,8 +6009,6 @@
               href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
             - name: ADO 事件具現化：Visual C++
               href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-            - name: ADO 事件具現化：Visual J++
-              href: ../ado/guide/data/ado-event-instantiation-visual-j.md
             - name: ADO 事件具現化：VBScript
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
             - name: ADO 事件具現化：JScript

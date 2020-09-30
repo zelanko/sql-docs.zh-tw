@@ -4819,6 +4819,10 @@
     - name: Azure 移轉服務 >
       displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
+    - name: 移轉指南
+      items:
+        - name: 從 DB2
+          href: sql-server/migrate/guides/db2-to-sql-server.md
     - name: Data Quality Services (DQS)
       items:
         - name: 概觀
