@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253311"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603388"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>建立報表伺服器資料庫 (SSRS 組態管理員)  
 
@@ -84,8 +84,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
 如果您在遠端電腦上建立報表伺服器資料庫，請設定連線以使用網域使用者帳戶，或是擁有網路存取權的服務帳戶。 如果您使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請考慮報表伺服器要用來連線到執行個體的認證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   

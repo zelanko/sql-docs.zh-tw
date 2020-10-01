@@ -4378,11 +4378,7 @@
         - name: 使用量和診斷資料集合
           items:
             - name: SQL Server 隱私權補充
-              items:
-                - name: SQL Server 2017 與舊版
-                  href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: "設定 SQL Server\_使用量和診斷資料"
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: 設定工具使用量和診斷資料

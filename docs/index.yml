@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL 文件 | Microsoft Docs
   description: 了解如何使用 SQL Server 及 Azure SQL，以管理內部部署與雲端中的資料庫需求。 (快速連結：https://aka.ms/sqldocs)
   ms.topic: hub-page
-  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
-  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+  ms.openlocfilehash: 74d8bef8777f43355896af4ab16e5c2ef91a92d7
+  ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90916409"
+  ms.lasthandoff: 09/30/2020
+  ms.locfileid: "91603436"
 highlightedContent:
   items:
   - title: 試用 SQL Server 2019
@@ -45,7 +45,7 @@ productDirectory:
     - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
       text: Azure SQL 受控執行個體
     - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
-      text: Azure SQL Edge (預覽)
+      text: Azure SQL Edge
     - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
       text: Azure Synapse Analytics (SQL DW)
   - title: Linux 上的 SQL Server
