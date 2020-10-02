@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_sessions (Transact-SQL)
-title: sys. dm_cryptographic_provider_sessions (Transact-sql) |Microsoft Docs
+title: sys.dm_cryptographic_provider_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 223d3b1ebac4230436f069c2ec9415e7d57feb3f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7a9aba28efb9367d6dc935a8bf97141aff22b2c
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542277"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662157"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,8 +55,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**身分識別**|**nvarchar(128)**|利用密碼編譯提供者驗證所使用的識別。|  
 |**spid**|**short**|連接的工作階段識別碼 SPID。 如需詳細資訊，請參閱 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)。|  
   
-## <a name="remarks"></a>備註  
- 目前連接的公用可以看到 **sys. dm_cryptographic_provider_sessions** view。 若要查看所有密碼編譯連接，您必須具有 **CONTROL** server 許可權。  
+## <a name="permissions"></a>權限  
+ Public 伺服器角色的成員可以使用 **sys.dm_cryptographic_provider_sessions** 來傳回目前連接的相關資訊。 若要查看所有密碼編譯連接，則需要 **CONTROL** server 許可權。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
