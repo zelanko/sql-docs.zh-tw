@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e4b24a8b2a825c5754d7cd1ec3f1c9594896eed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551227"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670063"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>引數  
 `[ @table_name = ] 'table_name'` 指定用來傳回目錄資訊的資料表。 *table_name* 是 **sysname**，沒有預設值。 不支援萬用字元的模式比對。  
   
@@ -79,12 +81,12 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|索引內資料行的位置。|  
 |**COLUMN_NAME**|**sysname**|傳回之 **TABLE_NAME** 的每個資料行的資料行名稱。 這個資料行一律會傳回值。|  
 |**COLLATION**|**char(1)**|定序中使用的順序。 可為以下項目：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用|  
-|**基數**|**int**|資料表中的資料列數，或索引中的唯一值數目。|  
+|**CARDINALITY**|**int**|資料表中的資料列數，或索引中的唯一值數目。|  
 |**頁面**|**int**|用來儲存索引或資料表的頁數。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="remarks"></a>備註  
  結果集中的索引會依資料行 **NON_UNIQUE**、 **TYPE**、 **INDEX_NAME**和 **SEQ_IN_INDEX**以遞增順序顯示。  
