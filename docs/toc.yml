@@ -8457,10 +8457,18 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: 教學課程
+        - name: 快速入門
           items:
             - name: 連線與查詢 SQL Server
-              href: ssms/tutorials/connect-query-sql-server.md
+              href: ssms/quickstarts/connect-query-sql-server.md
+        - name: 教學課程
+          items:
+            - name: SSMS 組態
+              href: ssms/tutorials/ssms-configuration.md
+            - name: 使用其他的秘訣和訣竅
+              href: ssms/tutorials/ssms-tricks.md
+            - name: 編寫物件的指令碼
+              href: ssms/tutorials/scripting-ssms.md
             - name: 匯入一般檔案
               href: relational-databases/import-export/import-flat-file-wizard.md
         - name: 概念
@@ -8747,12 +8755,6 @@
               href: ssms/install-other-languages.md
             - name: 使用 SSMS 中的範本
               href: ssms/template/templates-ssms.md
-            - name: 編寫物件的指令碼
-              href: ssms/tutorials/scripting-ssms.md
-            - name: SSMS 組態
-              href: ssms/tutorials/ssms-configuration.md
-            - name: 使用其他的秘訣和訣竅
-              href: ssms/tutorials/ssms-tricks.md
             - name: 自訂功能表與快速鍵
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
