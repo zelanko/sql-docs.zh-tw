@@ -24,13 +24,13 @@ ms.author: drskwier
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 2d1eb8e37de9956352dad852d74760fecdc8086b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.date: 09/28/2020
+ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943075"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497722"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -82,6 +82,9 @@ SQL Server Management Studio 18.6：
 ## <a name="previous-versions"></a>舊版
 
 本文僅適用於最新版本的 SSMS。 若要下載舊版的 SSMS，請前往[舊版 SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases)。
+
+> [!NOTE]
+> 在 2021 年 12 月時，18.6 以前的 SSMS 版本不再能透過 Azure Active Directory 搭配 MFA 進行驗證。 若要繼續使用 Azure Active Directory 搭配 MFA 進行驗證，請安裝或更新至 SSMS 18.6 或更新版本。
 
 ## <a name="unattended-install"></a>自動安裝
 
@@ -145,12 +148,12 @@ SQL Server Management Studio 18.6：
 
 支援的硬體：
 
-- 1.8 GHz 或更快的處理器。 建議雙核心或更佳的處理器
+- 1.8 GHz 或更快的 x86 (Intel、AMD) 處理器。 建議雙核心或更佳的處理器
 - 2 GB 的 RAM，建議 4 GB 的 RAM (如果在虛擬機器上執行，至少 2.5 GB)
 - 硬碟空間：最少 2 GB 至 10 GB 的可用空間
 
 > [!NOTE]
-> SSMS 只能在 Windows (AMD 或 Intel) 上執行。 若您需要能在 Windows 以外平台上執行的工具，請查看 Azure Data Studio。 Azure Data Studio 是一個新的跨平台工具，可在 macOS、Linux 以及 Windows 上執行。 如需詳細資料，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
+> SSMS 僅能在 Windows 上執行。 若您需要能在 Windows 以外作業系統上執行的工具，我們建議使用 Azure Data Studio。 Azure Data Studio 是一個跨平台工具，可在 macOS、Linux 與 Windows 上執行。 如需詳細資料，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
