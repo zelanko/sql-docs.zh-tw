@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d3876b358721c7d63b1bbbb0aca98c56721b83
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977849"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721399"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教學課程 (VBScript)
 這是以 Microsoft Visual Basic Scripting Edition 撰寫的 RDS 教學課程。 如需本教學課程用途的說明，請參閱 [RDS 教學](./rds-tutorial.md)課程。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  在本教學課程中， [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 和 [RDS。空間](../../reference/rds-api/dataspace-object-rds.md) 是在設計階段建立的，也就是說，它們是以物件標記來定義，如下所示： `<OBJECT>...</OBJECT>` 。 或者，您也可以在執行時間使用 CreateObject 方法來建立它們， [ (RDS) ](../../reference/rds-api/createobject-method-rds.md) 方法。 例如， **RDS。** 您可以建立 DataControl 物件，如下所示：  
   

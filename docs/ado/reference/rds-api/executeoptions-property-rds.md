@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c363333e7e88fa0bedbb8cddc126d7ad62f0e2d3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8fe38de33ea0b5f0784af27f031d2a93759d15aa
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982249"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722354"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 屬性 (RDS)
 指出是否已啟用非同步執行。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回下列其中一個值。  
   
-|持續性|描述|  
+|常數|描述|  
 |--------------|-----------------|  
 |**adcExecSync**|以同步方式執行下次重新整理 [記錄集](../ado-api/recordset-object-ado.md) 。|  
 |**adcExecAsync**|預設值。 以非同步方式執行下次重新整理 **記錄集** 。|  

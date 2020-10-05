@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb313ceb6217bf9400fda05622c7505c8067d2c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a63b254397e45fdba56f3d86cdcf45069f9265fb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977349"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721239"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -42,7 +42,7 @@ ActiveX Data Objects 是一種程式設計模型，這表示它不會相依于�
  遠端資料服務 (RDS) 是 ADO 的一項功能，可讓您將資料從伺服器移至用戶端應用程式或網頁、操作用戶端上的資料，以及在單一來回行程中將更新傳回伺服器。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至  [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至  [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="adox"></a>ADOX  
  適用于資料定義語言和安全性 (ADOX) 的 Microsoft ActiveX Data Objects 延伸模組是 ADO 物件和程式設計模型的延伸。 ADOX 包含用於建立和修改架構的物件，以及安全性。 由於它是以物件為基礎的架構操作方法，您可以撰寫程式碼來處理各種不同的資料來源，而不論其原生語法是否有差異。  

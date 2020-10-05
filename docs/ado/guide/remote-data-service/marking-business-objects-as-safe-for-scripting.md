@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cbbfaba540f5349fb7cc0291b8259eeda5b0d68
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978049"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721500"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>將商務物件標示為可安全編寫指令碼
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  為了協助確保安全的網際網路環境，您必須標記任何以 RDS 具現化的商務物件 [。](../../reference/rds-api/dataspace-object-rds.md) 以「安全的方式撰寫腳本」的空間物件 [CreateObject](../../reference/rds-api/createobject-method-rds.md) 方法。 您必須確保在系統登錄的授權區域中將它們標示為如此，才可在 DCOM 中使用。  
   

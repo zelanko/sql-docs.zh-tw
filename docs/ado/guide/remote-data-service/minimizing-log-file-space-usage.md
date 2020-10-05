@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6eeb933553d37df7db377d56ff0ff2e713ffef9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 26d8a458b9bc1b477dd74ade09ad742c15ac73e8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978009"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721429"
 ---
 # <a name="minimizing-log-file-space-usage"></a>將記錄檔空間使用量降到最低
 記錄檔可能會快速填滿 (因此當 SQL Server 資料庫上有大量的活動時，就會停止伺服器) 。 您可以將記錄檔設定為 **在檢查點截斷** ，以大幅延長資料庫記錄檔的存留期。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>在 Microsoft SQL Server 6.5 中啟用檢查點的截斷  
   

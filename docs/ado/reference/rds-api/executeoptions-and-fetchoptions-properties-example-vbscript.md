@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730b5f9fbadb36db449033d8d0c9167c3a035c9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0bb4b99b268397ff34d6e4c1a022407379dc1409
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982269"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722343"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  下列程式碼顯示如何在設計階段設定 [ExecuteOptions](./executeoptions-property-rds.md) 和 [FetchOptions](./fetchoptions-property-rds.md) 屬性。 如果保留未設定， **ExecuteOptions** 會預設為 **adcExecSync**。 此設定指出當 **RDS。** 會呼叫 Refresh 方法，它會在目前的呼叫執行緒上執行，也就是同步。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ExecuteOptionsDesignVBS。**  
   

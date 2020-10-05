@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cda8ddf7be69bd4c4f1b0e46e00dd882acd9160
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc2887f46996450dc9d809439226dbef6cf76e97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982339"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91720959"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 物件和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  下列範例顯示如何使用 RDS 的 [CreateObject](./createobject-method-rds.md) 方法 [。](./dataspace-object-rds.md) 具有預設商務物件（ [RDSServer. DataFactory](./datafactory-object-rdsserver.md)）的空間。 若要測試此範例，請將此程式碼剪下並貼到 \<Body> 一般 HTML 檔案中的和標記之間，然後將 \</Body> 它命名為 **DataSpaceVBS .asp**。 ASP 腳本會識別您的伺服器。  
   

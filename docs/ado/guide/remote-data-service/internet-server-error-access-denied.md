@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5902892fa850808afe69e0795c485ce5e46a604
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9cf9b2010fdbb20522c774d4c54ce2773cf817c5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978059"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721559"
 ---
 # <a name="internet-server-error-access-denied"></a>網際網路伺服器錯誤：拒絕存取
 如果您收到此錯誤，通常表示 Microsoft Internet Information Services (IIS) 傳回下列狀態：  
@@ -28,7 +28,7 @@ ms.locfileid: "88978059"
  請確定 IIS 所存取的目錄具有適當的許可權。 RDS 可以與在下列三種密碼驗證模式中執行的 IIS Web 服務器通訊：匿名、基本或 NT 挑戰/回應 (在 Windows 2000) 中稱為整合式 Windows 驗證。 此外，如果 Web 服務器是 Windows NT/Windows 2000 電腦，則必須具有資料來源電腦的許可權。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](./rds-fundamentals.md)

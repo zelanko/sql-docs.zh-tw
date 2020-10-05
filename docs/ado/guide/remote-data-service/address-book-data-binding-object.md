@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978439"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721569"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄的應用程式會使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件，可將 SQL Server 資料庫中的資料系結至視覺物件 (在此案例中，會在應用程式的用戶端 HTML 頁面中) DHTML 資料表。 事件驅動的 VBScript 程式邏輯使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 至：  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 -   查詢資料庫、將更新傳送至資料庫，然後重新整理資料格。  
   
