@@ -1,7 +1,7 @@
 ---
 description: SQL Server 隱私權補充
 title: SQL Server 隱私權補充 | Microsoft Docs
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480683"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603413"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-本文摘要說明使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SQL Server 可能會收集標準電腦資訊以及關於使用方式和效能的資料，這些資訊可能會傳送給 Microsoft，並基於改善產品品質、安全性和可靠性的目的加以分析。 如果您將 SQL Server 安裝在 Microsoft Azure 服務的虛擬機器中，環境資訊可能會傳送給 Microsoft，以便 Microsoft 向您 Azure 訂用帳戶內資源提供者註冊您的 SQL Server 虛擬機器資源，如[此處](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)所述。 註冊 SQL Server 虛擬機器資源時，SQL Server IaaS 代理程式延伸模組可能會安裝在您的虛擬機器上，如[此處](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)所述。 本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
+本文摘要說明使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SQL Server 可能會收集標準電腦資訊以及關於使用方式和效能的資料，這些資訊可能會傳送給 Microsoft，並基於改善產品品質、安全性和可靠性的目的加以分析。
+
+本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
 
 - Azure SQL Database
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - 資料庫移轉小幫手
@@ -115,6 +117,20 @@ ms.locfileid: "88480683"
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |
 |Power View 和 SQL Reporting Services 地圖項目可能會傳送資料，以使用 Bing 地圖服務。 |限制為工作階段資料 |- |
 
+## <a name="organization-identifiable-information-oii"></a>組織識別資訊 (OII)
+
+接收自組織的資料，或從其產品使用而產生的資料。
+-   可連結至組織。
+-   不包含內容。
+
+### <a name="examples-of-organization-identifiable-information"></a>組織識別資訊的範例
+-   組織名稱 (例如：Microsoft Corp.)
+
+### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
+|狀況  |存取限制  |保留需求|
+|---------|---------|---------|
+| Microsoft 可能會收集在 Azure 虛擬機器中所執行 SQL Server 執行個體的一般使用方式資料，用來明確地向客戶提供在 Azure 虛擬機器內使用 SQL Server 時，Azure 內部的額外利益。 | Microsoft 可以向客戶公開資料 (例如透過 Azure 入口網站) 來協助在 Azure 虛擬機器中執行 SQL Server 之客戶存取在 Azure 中執行 SQL Server 才能獲得的利益。 </br></br>Microsoft 在沒有客戶的事先同意之前，不會將此資料用於授權稽核。 | 最少 90 天 - 最多 3 年 |
+
 ## <a name="system-metadata"></a>系統中繼資料
 
 在執行伺服器的過程中產生的資料。  資料未包含客戶內容。
@@ -134,7 +150,7 @@ ms.locfileid: "88480683"
 - 事件名稱和錯誤碼
 - 硬體設定和識別，例如 OEM 製造商
 
-Microsoft 會檢查其他程式使用 SQL Server 所設定的應用程式名稱值 (例如：Sharepoint 或協力廠商封裝程式，且會在使用方式資料啟用時在傳送給 Microsoft 的系統中繼資料中包含此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
+Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程式名稱值 (範例：SharePoint 或協力廠商封裝程式且在啟用「使用方式資料」情況下於傳送給 Microsoft 的系統中繼資料中包括此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
 
 ### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
 

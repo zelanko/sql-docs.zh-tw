@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238376"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497712"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ ms.locfileid: "87238376"
   
  另一種設定具名執行個體接聽固定通訊埠的方法，是在防火牆中為 **sqlservr.exe** (適用於[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 一類的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式建立例外狀況。 雖然這樣很方便，但當您使用具有進階安全性的 Windows 防火牆 MMC 嵌入式管理單元時，通訊埠編號將不會顯示在 [輸入規則]  頁面的 [本機通訊埠]  資料行中。 如此一來可能會讓您更難以稽核哪些通訊埠已開啟。 其他考量是 Service Pack 或累積更新可能會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的路徑，因而使防火牆規則失效。  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>使用具有進階安全性的 Windows 防火牆，將程式例外新增至防火牆
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>使用具有進階安全性的 Windows Defender 防火牆，將程式例外新增至防火牆
   
-1. 從 [開始] 功能表，鍵入 *wf.msc*。 選取 [具有進階安全性的 Windows 防火牆]  。
+1. 從 [開始] 功能表，鍵入 *wf.msc*。 按 Enter 或選取搜尋結果 wf.msc，以開啟**具有進階安全性的 Windows Defender 防火牆**。
 1. 在左窗格中，選取 [輸入規則]  。
-1. 在右窗格的 [動作]  下方，選取 [新增規則]  。[新增輸入規則精靈]  隨即開啟。
+1. 在右窗格的 [動作] 下方，選取 [新增規則]。[新增輸入規則精靈] 隨即開啟。
 1. 在 [規則類型]  上，選取 [程式]  。 選取 [下一步] 。
 1. 在 [程式]  上，選取 [這個程式路徑]  。 選取 [瀏覽]  以找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    選取 [下一步] 。
 
-1. 在 [動作]  上，按一下 [允許連線]  。  
-1. 在 [設定檔] 中，加入所有三個設定檔。 選取 [下一步]  。
+1. 在 [動作] 上，選取 [允許連線]。 選取 [下一步] 。
+1. 在 [設定檔] 上，加入所有三個設定檔。 選取 [下一步]  。
 1. 在 [名稱]  上，輸入規則的名稱。 選取 [完成]  。
 
 如需端點的詳細資訊，請參閱[設定 Database Engine 接聽多個 TCP 通訊埠](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。 

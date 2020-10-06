@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989441"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498213"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |---|---|---|---|
 |**/Action:**|**/a**|發佈|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|指定存取 Azure Key Vault 時要使用的驗證方法 |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|指定如果發佈作業包含對加密資料表/資料行的修改，則要使用哪種驗證方法來存取 Azure KeyVault。 |
 |**/ClientId:**|**/cid**|{string}|指定必要時驗證 Azure Key Vault 所要使用的用戶端識別碼 |
 |**/DeployScriptPath:**|**/dsp**|{string}|指定選擇性檔案路徑來輸出部署指令碼。 對於 Azure 部署，若有 TSQL 命令要建立或修改 master 資料庫，將會對指令碼寫入相同的路徑，但會使用 "Filename_Master.sql" 做為輸出檔案名稱。 |
 |**/DeployReportPath:**|**/drp**|{string}|指定選擇性檔案路徑來輸出部署報表 XML 檔案。 |
@@ -313,7 +313,7 @@ SqlPackage.exe 的 Export 動作會將即時資料庫從 SQL Server 或 Azure SQ
 |**/p:**|TableData=(STRING)|指出要解壓縮其資料的資料表。 下列列格式指定資料表名稱，名稱部分使用或不用括弧括住：schema_name.table_identifier。 可以多次指定這個選項。|
 |**/p:**|TempDirectoryForTableData=(STRING)|指定在寫入套件檔案之前，用於緩衝資料表資料的暫存目錄。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定預期的目標引擎版本。 這影響是否在產生的 bacpac 中允許具有 V12 功能的 Azure SQL Database 伺服器支援物件，例如經記憶體最佳化的資料表。|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否要驗證 Microsoft Azure SQL Database v12 支援的全文檢索文件類型。|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否要驗證 Microsoft Azure SQL Database v12 所支援的全文檢索文件類型。|
   
 ## <a name="import-parameters-and-properties"></a>匯入參數與屬性
 

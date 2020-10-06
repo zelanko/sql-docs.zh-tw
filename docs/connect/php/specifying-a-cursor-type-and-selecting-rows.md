@@ -1,6 +1,6 @@
 ---
-description: 指定資料指標類型及選取資料列
-title: 指定資料指標類型及選取資料列 | Microsoft Docs
+title: 指定資料指標類型及選取資料列
+description: 了解如何使用用於 SQL Server 之 PHP 的 Microsoft 驅動程式指定指標類型及資料列。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a8374bd54ef39a905e5ff99c113e11e3fd25af9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7031f5aa0d3b2e3c222feface1b2c857a7b2384
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414374"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603427"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>指定資料指標類型及選取資料列
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

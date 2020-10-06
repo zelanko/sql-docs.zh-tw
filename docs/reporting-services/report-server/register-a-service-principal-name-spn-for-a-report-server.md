@@ -1,7 +1,7 @@
 ---
 title: 為報表伺服器註冊服務主體名稱 (SPN) | Microsoft Docs
 description: 了解當網路使用 Kerberos 進行驗證時，如何在報表伺服器服務以網域使用者執行時為其建立 SPN。
-ms.date: 02/12/2020
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4fad93d5682a8e3cfdd6fdf5341944c4b4b58a83
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544500"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603178"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
   如果您在使用 Kerberos 通訊協定進行相互驗證的網路中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當您想要將報表伺服器服務設定為以網域使用者帳戶的身分執行時，必須為此服務建立服務主要名稱 (SPN)。  
@@ -32,10 +32,10 @@ ms.locfileid: "84544500"
   
 ## <a name="syntax"></a>語法  
 
-當您使用 setspn 操作 SPN 時，必須以正確的格式輸入 SPN。 SPN 的格式為 `<serviceclass>/host:<por>`。 使用 SetSPN 公用程式來建立報表伺服器之 SPN 的命令語法如下：  
+當您使用 setspn 操作 SPN 時，必須以正確的格式輸入 SPN。 HTTP SPN 的格式為 `http/host`。 使用 SetSPN 公用程式來建立報表伺服器之 SPN 的命令語法如下：  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  Windows Server 上提供**SetSPN** 。 **-s** 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
@@ -57,10 +57,10 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  複製下列命令，使用對您的網路有效的實際值來取代預留位置值：  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    例如： `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    例如： `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  執行命令。  
   

@@ -1,6 +1,6 @@
 ---
 title: 在 SQL Server 中進行驗證
-description: 描述 SQL Server 中的登入和驗證，並提供其他資源的連結。
+description: 了解使用 ADO.NET 時 SQL Server 中的登入及驗證，以及在何處尋找其他資源。
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c12f3adacbf26cfe70e2f5993db0ace84460404
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bdcc51fad2bbc14499b60a1986bec5d2bcb6a1e
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928922"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603483"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 命名空間簡介
-description: Microsoft.Data.SqlClient 命名空間的簡介頁面。
-ms.date: 06/23/2019
+description: 了解 Microsoft.Data.SqlClient 命名空間，以及其為何是連線至適用於 .NET 應用程式的 SQL 其慣用方式。
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334580"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529349"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空間簡介
 
@@ -59,7 +59,7 @@ Microsoft.Data.SqlClient.EventSource
 
 #### <a name="enabling-managed-networking-on-windows"></a>在 Windows 上啟用受控網路
 
-新 AppContext 參數 **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** 可供啟用 Windows 上的受控 SNI 實作，以用於測試與偵錯。 此參數會切換驅動程式的行為，以在 Windows 的 .NET Core 2.1+ 與 .NET Standard 2.0+ 專案中使用受控 SNI，同時消除 Microsoft.Data.SqlClient 程式庫的原生程式庫上所有相依性。
+新 AppContext 切換， **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** ，可供啟用 Windows 上的受控 SNI 實作，以用於測試與偵錯。 此參數會切換驅動程式的行為，以在 Windows 的 .NET Core 2.1+ 與 .NET Standard 2.0+ 專案中使用受控 SNI，同時消除 Microsoft.Data.SqlClient 程式庫的原生程式庫上所有相依性。
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
@@ -206,11 +206,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 支援
 
-UTF-8 支援不需要進行任何應用程式程式碼變更。 這些 SqlClient 變更會在伺服器支援 UTF-8 且底層資料行定序為 UTF-8 時，將用戶端與伺服器之間的通訊最佳化。 請參閱 [SQL Server 2019 預覽版的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)底下的 UTF-8 小節。
+UTF-8 支援不需要進行任何應用程式程式碼變更。 這些 SqlClient 變更會在伺服器支援 UTF-8 且底層資料行定序為 UTF-8 時，將用戶端與伺服器之間的通訊最佳化。 請參閱 [SQL Server 2019 的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)下方的 UTF-8 一節。
 
 ### <a name="always-encrypted-with-enclaves"></a>具有記憶體保護區的 Always Encrypted
 
-一般來說，在 .NET Framework **和內建資料行主要金鑰存放區提供者**上使用 System.Data.SqlClient 的現有文件現在也應該使用 .NET Core。
+一般來說，在 .NET Framework **及內建資料行主要金鑰存放區提供者**上使用 System.Data.SqlClient 的現有文件，現在也應該使用 .NET Core。
 
  [搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 

@@ -4,19 +4,19 @@ titleSuffix: SQL machine learning
 description: 使用機器學習服務在 SQL Server、巨量資料叢集或 Azure SQL 受控執行個體上執行一組簡單的 Python 指令碼。 了解如何使用預存程序 sp_execute_external_script 來執行指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/23/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136376"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497825"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>快速入門：使用 SQL 機器學習來執行簡單的 Python 指令碼
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

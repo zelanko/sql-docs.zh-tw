@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721451"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726752"
 ---
 ## <a name="specifying-application-intent"></a>指定應用程式意圖
 
@@ -31,9 +31,9 @@ ms.locfileid: "83721451"
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - 資料庫可以允許或不允許 Always On 目標資料庫上的讀取工作負載。 此選擇是透過使用 **PRIMARY_ROLE** 與 **SECONDARY_ROLE** Transact-SQL 陳述式的 **ALLOW_CONNECTIONS** 子句來控制的。
 
-- [異地複寫](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+- [異地複寫](/azure/sql-database/sql-database-geo-replication-overview)
 
-- [讀取相應放大](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [讀取相應放大](/azure/sql-database/sql-database-read-scale-out)
 
 如果沒有任何那些特殊目標可用，則會從一般資料庫讀取。
 
@@ -54,5 +54,4 @@ ms.locfileid: "83721451"
 
 每個都使用唯讀路由的多個連線可能不會都連線到相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 您可以確保所有唯讀要求都連線到相同的唯讀複本。 透過*不*將可用性群組接聽程式傳遞到 **Server** 連接字串關鍵字，以確保此相同性。 請改為指定唯讀執行個體的名稱。
 
-唯讀路由連線到主要複本的時間可能會比較長。 等候較久是因為唯讀路由會先連線到主要複本，然後尋找最佳可用的可讀次要複本。 由於有多個步驟，您應該將登入超時時間增加到至少30秒。
-
+唯讀路由連線到主要複本的時間可能會比較長。 等候較久是因為唯讀路由會先連線到主要複本，然後尋找最佳可用的可讀次要複本。 由於這些多步驟，您應該將登入逾時增加到至少 30 秒。

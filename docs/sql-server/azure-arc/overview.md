@@ -9,18 +9,18 @@ ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210575"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589297"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已啟用 Azure Arc 的 SQL Server (預覽)
 
 已啟用 Azure Arc 的 SQL Server 是「適用於伺服器的 Azure Arc」的一部分。 它將 Azure 服務擴充至在 Azure 外部裝載於客戶資料中心、邊緣或多雲端環境中的 SQL Server 執行個體。
 
-若要啟用 Azure 服務，必須使用 Azure 入口網站和註冊指令碼，向 Azure Arc 註冊正在執行的 SQL Server 執行個體。 註冊之後，執行個體會在 Azure 上顯示為 __SQL Server – Azure Arc__ 資源。 此資源的屬性會反映 SQL Server 組態設定的子集。
+若要啟用 Azure 服務，必須使用 Azure 入口網站和註冊指令碼，向 Azure Arc 註冊正在執行的 SQL Server 執行個體。 註冊之後，執行個體會在 Azure 上顯示為 __SQL Server – Azure Arc__ 資源。 此資源屬性會反映 SQL Server 組態設定的子集。
 
 SQL Server 可以安裝在執行 Windows 或 Linux 的虛擬或實體機器上，並透過 Connected Machine 代理程式連線至 Azure Arc。 安裝此代理程式後，機器就會自動註冊為 SQL Server 執行個體註冊的一部分。 Connected Machine 代理程式會透過 TCP 連接埠 443，安全地將訊息輸出到 Azure Arc。 如果機器連線至防火牆或 HTTP Proxy 伺服器以透過網際網路通訊，請檢閱 [Connected Machine 代理程式的網路設定需求](/azure/azure-arc/servers/agent-overview#prerequisites)。
 
@@ -38,7 +38,7 @@ SQL Server 可以安裝在執行 Windows 或 Linux 的虛擬或實體機器上�
 
 - Windows Server 2012 R2 及更高版本
 - Ubuntu 16.04 和 18.04 (x64)
-- CentOS Linux 7 (x64)
+- Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 ### <a name="required-permissions"></a>所需的權限

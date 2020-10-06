@@ -1,6 +1,6 @@
 ---
-description: 步驟 2︰建立 Ruby 開發的 SQL 資料庫
-title: 步驟 2︰建立 Ruby 開發的 SQL 資料庫 | Microsoft Docs
+title: 步驟 2︰建立 Ruby 開發的 SQL 資料庫
+description: 此使用者入門指南的步驟 2 說明如何在 SQL Server 或 Azure SQL Database 中為此 Ruby 範例建立資料庫。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bffa9c3d-cf88-4cf4-8110-d11f7948980d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4739a706caaae477a78f97d8f7687d0fb8348de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe04f00a9fa10cd3230f6d4c1e760dd40b8db203
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449927"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603325"
 ---
 # <a name="step-2-create-a-sql-database-for-ruby-development"></a>步驟 2︰建立 Ruby 開發的 SQL 資料庫
 

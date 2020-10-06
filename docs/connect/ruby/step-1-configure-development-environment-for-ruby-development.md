@@ -1,6 +1,6 @@
 ---
 title: 步驟 1:設定適用於 Ruby 的開發環境
-description: 了解如何設定適用於 Ruby 的開發環境。
+description: 此使用者入門指南的步驟 1 說明如何將 Ruby 及 ODBC driver for SQL Server 安裝至開發環境中。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6412015000a5f9dda09ea5d489c8080fd2e1c09
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634588"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603366"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1:設定 Ruby 開發的開發環境
 您必須搭配必要條件設定您的開發環境，才能使用 Ruby Driver for SQL Server 開發應用程式。    

@@ -3,22 +3,32 @@ title: 版本資訊
 description: 本文包含 Azure Data Studio 從 2017 年 11 月至今版本的版本資訊。 針對許多摘要問題，請參閱其他詳細資料的連結。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: overview
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
-ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.date: 09/30/2020
+ms.openlocfilehash: fdcba98194643a823d7cef79dde0e8be335f056d
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364191"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603475"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](./download-azure-data-studio.md)**
+
+## <a name="september-2020-hotfix"></a>2020 年 9 月 (Hotfix)
+
+2020 年 9 月 30 日 &nbsp; / &nbsp; 版本：1.22.1
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| ------ | ------- |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/releases/tag/untagged-ca77e3ca71bd29150699) \(英文\)。 |
 
 ## <a name="september-2020"></a>2020 年 9 月
 

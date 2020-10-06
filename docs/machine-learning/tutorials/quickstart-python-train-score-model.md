@@ -4,32 +4,24 @@ titleSuffix: SQL machine learning
 description: 在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存在您資料庫中的資料表，然後以 SQL 機器學習使用模型從新資料預測值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0198ec9c27523c3465a90fa569b819072bf6014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 98c1b6235af6b521d668853a4fdcf75e75066ee8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178485"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497988"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入門：透過 SQL 機器學習，建立 Python 的預測模型並為其評分
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型，利用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上預測新資料中的值。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)所產生新資料的值。
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存在您資料庫中的資料表，然後使用 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)，利用模型從新的資料預測值。
-::: moniker-end
+在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型以利用 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)或在 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)，或 [SQL Server 巨量資料叢集](../../big-data-cluster/machine-learning-services.md)來預測新資料中的值。
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用傳統的鳶尾花資料集，並產生貝氏機率分類模型，以根據花卉特徵來預測鳶尾花的品種。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 Python 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
 
@@ -44,15 +36,10 @@ ms.locfileid: "88178485"
 
 您需要符合下列必要條件，才能執行此快速入門。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server 機器學習服務。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL 受控執行個體機器學習服務。 如需註冊說明，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
-::: moniker-end
+- SQL 資料庫位於其中一個平台上：
+  - [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)。 如需如何安裝機器學習服務的相關資訊，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - SQL Server 巨量資料叢集。 查看如何[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
+  - Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 - 執行包含 Python 指令碼之 SQL 查詢的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 

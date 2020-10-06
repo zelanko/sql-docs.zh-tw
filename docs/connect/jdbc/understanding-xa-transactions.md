@@ -2,7 +2,7 @@
 title: 了解 XA 交易
 description: Microsoft JDBC Driver for SQL Server 提供對 Java 平台企業版/JDBC 2.0 選擇性分散式交易的支援。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293995"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529329"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -63,7 +63,7 @@ ms.locfileid: "84293995"
 > JDBC 分散式交易元件會包含在 JDBC 驅動程式安裝的 xa 目錄中。 這些元件包括 xa_install.sql 及 sqljdbc_xa.dll 檔案。 如果不同用戶端上使用不同版本的 JDBC 驅動程式，則建議在伺服器上使用最新的 sqljdbc_xa.dll。  
 
 > [!NOTE]  
-> 從 SQL Server 2019 公開預覽 CTP 2.0 開始，JDBC XA 分散式交易元件會包含在 SQL Server 引擎中，並且可以使用系統預存程序來啟用或停用。
+> JDBC XA 分散式交易元件會從 SQL Server 2017 累積更新 16 及 SQL Server 2019 開始包含在 SQL Server 引擎中，且可使用系統預存程序來啟用或停用。
 > 若要使用 JDBC 驅動程式啟用必要元件以執行 XA 分散式交易，請執行下列預存程序。
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,7 +86,7 @@ ms.locfileid: "84293995"
   
 4. 按一下 [本機 DTC 內容]  對話方塊中的 [安全性]  索引標籤。  
   
-5. 選取 [啟用 XA 交易]  核取方塊，然後按一下 [確定]  。 MS DTC 服務會隨即重新啟動。
+5. 選取 [啟用 XA 交易]  核取方塊，然後按一下 [確定]  。 此動作會導致 MS DTC 服務隨即重新啟動。
   
 6. 再按一下 [確定]  關閉 [內容]  對話方塊，然後關閉 [元件服務]  。  
   
@@ -145,15 +145,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     表示如果用戶端未指定任何逾時，所有交易都將有 60 秒逾時。 如果用戶端指定了逾時，則會使用該逾時值。 不會強制執行逾時最大值。  
+     表示如果用戶端未指定任何逾時，則所有交易都將有 60 秒逾時。 如果用戶端指定了逾時，則會使用該逾時值。 不會強制執行逾時最大值。  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     表示如果用戶端未指定任何逾時，所有交易都將有 30 秒逾時。 用戶端如有指定逾時，除非該值小於 60 秒 (最大值)，否則將會使用用戶端的逾時值。  
+     表示如果用戶端未指定任何逾時，則所有交易都將有 30 秒逾時。 用戶端如有指定逾時，除非該值小於 60 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     表示如果用戶端未指定任何逾時，所有交易都將有 30 秒逾時 (最大值)。 用戶端如有指定逾時，除非該值小於 30 秒 (最大值)，否則將會使用用戶端的逾時值。  
+     表示如果用戶端未指定任何逾時，則所有交易都將有 30 秒逾時 (最大值)。 用戶端如有指定逾時，除非該值小於 30 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>升級 sqljdbc_xa.dll
 
@@ -170,14 +170,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 ### <a name="configuring-the-user-defined-roles"></a>設定使用者定義角色
 
-若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，將名為 'shelby' (SQL 標準登入使用者名稱為 'shelby') 的使用者新增至 SqlJDBCXAUser 角色：  
+若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，將名為 'shelly' (名為 'shelly' 的 SQL 標準登入使用者) 的使用者新增至 SqlJDBCXAUser 角色：  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 每一個資料庫都會定義 SQL 使用者自訂角色。 若要基於安全目的來建立您自己的角色，您將必須在每一個資料庫中定義角色，然後在每一個資料庫中新增使用者。 SqlJDBCXAUser 角色一定是定義在 master 資料庫中，因為它是用來授與存取 SQL JDBC 擴充預存程序 (位於 master 資料庫) 的權限。 您必須先授與個別使用者存取 master 的權限，然後在您登入 master 資料庫時，再授與他們存取 SqlJDBCXAUser 角色的權限。  

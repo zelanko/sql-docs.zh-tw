@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.date: 09/28/2020
+ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180042"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603441"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -105,10 +105,11 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 因應措施：移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 | N/A|
 | Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 因應措施：在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些 Hive 內，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'，以取得我們嘗試連線的特定 Integration Services 版本 | N/A|
 
-
 針對其他已知問題，您可參考 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server)並為產品小組提供意見反應。
 
 ## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 選取相關區段中的下載連結，以下載舊版的 SSMS。
 
@@ -147,7 +148,6 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 | 新項目 | 詳細資料 | 因應措施 | |----------|---------||-----------| | 一般 SSMS | 圖表設計包含一項已知 Bug，其會造成現有的圖表損毀。 例如，您使用 SSMS 17.9.1 建立圖表設計，然後使用 SSMS 18.x 予以更新/儲存，並稍後使用 17.9.1 來嘗試開啟。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/37992649)以取得詳細資料。 | N/A | | 一般 SSMS | 新的伺服器稽核規格對話方塊可能會造成 SMSS 因存取違規錯誤而損毀。 | N/A || | SMO/指令碼 | 使用 SMO 的 SSMS 延伸模組需要以新 SMO v160 為目標重新編譯。 | N/A | | Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，會遺失包含指令碼工作/元件的指令碼。 因應措施： | 移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 |
 
-
 ### <a name="185"></a>18.5
 
 ![下載](media/download-icon.png) [下載 SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
@@ -175,8 +175,8 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 已移除 [功能限制]  的支援 (此預覽功能已從 SQL Azure 和內部部署 SQL 移除)。 |
 | SMO/指令碼 | 已將 [筆記本]  新增為 [產生指令碼] 精靈的目的地。 |
 | SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name 和 engineEdition 欄位現在可以包含一般逗號分隔清單 (平台  ：\[*Windows*、*Linux*\])，而不只是規則運算式 (平台  ： *\/Windows\|Linux\/* )
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 13 個評定規則。 如需詳細資訊，請移至 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name 和 engineEdition 欄位現在可以包含一般逗號分隔清單 (平台  ：\[*Windows*、*Linux*\])，而不只是規則運算式 (平台  ： *\/Windows\|Linux\/* )
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 13 個評定規則。 如需詳細資訊，請移至 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))。 |
 
 ### <a name="bug-fixes-in-185"></a>18.5 中的錯誤 (Bug) 修正
 
@@ -184,7 +184,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |----------|---------|
 | Accessibility | SSIS ADF / 新增排程：已修正 [新增排程]  精靈下，朗讀程式的掃描模式中，焦點順序不合邏輯的問題。 |
 | Accessibility | 延展資料庫精靈：已修正當提供資料表的相關資訊時，螢幕助讀程式不會通知查詢資料表名稱的問題。 |
-| Analysis Services | 使用 AAD 連線在 AS 中編寫指令碼時，修正快取的連線。 |
+| Analysis Services | 使用 Azure AD 連線在 AS 中撰寫指令碼時，修正快取的連線。 |
 | 永遠開啟 | 已修正新增至 Always On AG 的第一個資料庫未正確聯結的問題。
 | 永遠開啟 | 已修正當連線到巨量資料叢集端點時，嘗試顯示儀表板時會顯示錯誤的問題。 |
 | 稽核 | 已修正當儲存體帳戶的根資料夾中有一個資料夾具有空白名稱時，[稽核記錄合併] 視窗當機的問題。 |
@@ -231,7 +231,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 已修正略過 SQL Azure 索引上 FILLFACTOR 的問題。 |
 | SMO/指令碼 | 已修正與指令碼外部物件有關的問題。 |
 | SMO/指令碼 | 已修正 [產生指令碼] 不允許為針對 SQL Database 的 [擴充屬性] 選擇指令碼選項的問題。 此外，也已修正這類擴充屬性的指令碼。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 規則中有錯誤的說明連結。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 規則中有錯誤的說明連結。 |
 | XEvent UI | 已修正格線中的項目在游標暫留時選取的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/38262124)及 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)。 |
 
 ### <a name="known-issues-185"></a>已知問題 (18.5)
@@ -264,13 +264,13 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 查詢存放區 | 在 [查詢存放區]  的 [資料庫屬性]  選項中，新增了 [等候統計資料擷取模式]  。 |
 | SMO/指令碼 | 支援 SQL DW 中具體化檢視的指令碼。 |
 | SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 JSON 格式儲存規則的方式，並已更新套用覆寫/自訂的機制。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新支援 Linux 上 SQL 的規則。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新規則集 JSON 格式，並已新增結構描述版本。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 Cmdlet 輸出以改善建議的可讀性。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已更新 JSON 格式儲存規則的方式，並已更新套用覆寫/自訂的機制。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已更新支援 Linux 上 SQL 的規則。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已更新規則集 JSON 格式，並已新增結構描述版本。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已更新 Cmdlet 輸出以改善建議的可讀性。 |
 | XEvent 分析工具 | 已將 *error_reported* 事件新增至 XEvent Profiler 工作階段。 |
 
 #### <a name="bug-fixes-in-184"></a>18.4 中的 Bug 修正
@@ -320,10 +320,10 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | Integration Services | 新增新的選項功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，此項目會在 Azure-SSIS Integration Runtime 上叫用執行 SSIS 套件，以作為 ADF 管線中的執行 SSIS 套件活動。 |
 | SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
 | SMO/指令碼 | 資料分類 </br> - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。 </br> - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL Database 的新敏感性屬性 'rank'。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 將版本設定新增至規則集格式。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增新的檢查。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增 Azure SQL 受控執行個體的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新 Cmdlet 的預設檢視，將結果顯示為資料表。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 將版本設定新增至規則集格式。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 新增新的檢查。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 新增 Azure SQL 受控執行個體的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 更新 Cmdlet 的預設檢視，將結果顯示為資料表。 |
 
 #### <a name="bug-fixes-in-1831"></a>18.3.1 中的 Bug 修正
 
@@ -547,7 +547,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |Azure Data Studio 整合|當使用者以滑鼠右鍵按一下 OE 中的資料庫節點時，即會顯示操作功能表，讓使用者在 Azure Data Studio 中執行查詢或建立新的筆記本。|
 |Azure SQL 支援| SLO/Edition/MaxSize 資料庫屬性現在可接受自訂名稱，讓您更輕鬆地支援未來版本的 Azure SQL Database。|
 |Azure SQL 支援| 新增對 vCore SKU (一般用途和業務關鍵) 的支援：Gen4_24 及所有 Gen5。|
-|Azure SQL 受控執行個體|新增「AAD 登入」作為 SMO 及 SSMS 中連線至 Azure SQL 受控執行個體時的新登入類型。|
+|Azure SQL 受控執行個體|新增「Azure AD 登入」作為 SMO 及 SSMS 中連線至 Azure SQL 受控執行個體時的新登入類型。|
 |永遠開啟|重新雜湊 SSMS Always On 儀表板中的 RTO (預估復原時間) 和 RPO (估計的資料遺失)。 請參閱 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) 上的更新文件。|
 |Always Encrypted| [連線至伺服器] 對話方塊之新 [Always Encrypted] 索引標籤中的 [啟用 Always Encrypted] 核取方塊現在提供簡單的方法來啟用/停用資料庫連線的 Always Encrypted。|
 |具有安全記憶體保護區的 Always Encrypted| 在 SQL Server 2019 中，已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：[連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。  [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。  其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。|
@@ -632,7 +632,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |Azure SQL 受控執行個體支援|[建立資料庫精靈] 不正確地撰寫 CREATE DATABASE 陳述式指令碼。|
 |Azure SQL 受控執行個體支援|當 SSMS 連線到受控執行個體時，可對其中的 SSIS 套件進行特殊處理。|
 |Azure SQL 受控執行個體支援|已修正在連線至受控執行個體的情況下，當嘗試使用「活動監視器」時顯示錯誤的問題。|
-|Azure SQL 受控執行個體支援|改善 AAD 登入 (SSMS 總管中) 的支援。|
+|Azure SQL 受控執行個體支援|改善 Azure AD 登入 (SSMS 總管中) 的支援。|
 |Azure SQL 受控執行個體支援|改善 SMO 檔案群組物件的指令碼撰寫。|
 |Azure SQL 受控執行個體支援|改善認證的 UI。|
 |Azure SQL 受控執行個體支援|新增邏輯複寫的支援。|
@@ -648,7 +648,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |複製資料庫精靈|SQL Server 2017 和 SQL Server 2019 上已中斷 [傳輸資料庫工作/複製資料庫精靈]。|""
 |複製資料庫精靈|在建立相關聯的外部資料來源之前，須建立 [產生指令碼/傳輸/複製資料庫精靈] 指令碼資料表。|
 |連線對話方塊|啟用按下 DEL 鍵從先前使用者名稱清單移除使用者名稱的功能。 如需詳細資料，請參閱 [Allow deletion of users from SSMS login window](https://feedback.azure.com/forums/908035/suggestions/32897632) (允許從 SSMS 登入視窗刪除使用者)。|
-|DAC 匯入精靈|已修正下列問題：使用 AAD 連線時，[DAC 匯入精靈] 無法運作。|
+|DAC 匯入精靈|已修正下列問題：使用 Azure Active Directory (Azure AD) 連線時，[DAC 匯入精靈] 無法運作。|
 |資料分類|修正在資料分類窗格中儲存分類時，若其他資料庫上已開啟其他資料分類窗格的問題。|
 |資料層應用程式精靈|已修正使用者因為伺服器的有限存取權 (例如無法存取相同伺服器上的所有資料庫)，而無法匯入資料層應用程式 (.dacpac) 的問題。|
 |資料層應用程式精靈|已修正當多個資料庫裝載於相同 Azure SQL 伺服器時會導致匯入極度緩慢的問題。|
@@ -691,7 +691,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |物件指令碼|當撰寫物件指令碼，會省略具有預設值的資料庫範圍設定。|
 |物件指令碼|編寫指令碼時，不要產生動態 T-SQL。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)。 |
 |物件指令碼|在 SQL Server 2016 及更早版本上撰寫資料表指令碼時，省略圖形語法 "as edge" 和 "as node"。|
-|物件指令碼|已修正搭配使用 AAD 與 MFA 連線至 Azure SQL Database 時，撰寫資料庫物件指令碼失敗的問題。|
+|物件指令碼|已修正搭配使用 Azure AD 與 MFA 連線至 Azure SQL Database 時，撰寫資料庫物件指令碼失敗的問題。|
 |物件指令碼|修正嘗試在 Azure SQL Database 上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 撰寫空間索引指令碼時擲回錯誤的問題。|
 |物件指令碼|已修正問題：即使「物件總管」指令碼設定已設為符合來源，Azure SQL Database 的資料庫指令碼仍一律以內部部署 SQL 為目標。|
 |物件指令碼|修正嘗試為 SQL DW 資料庫中涉及叢集及非叢集索引的資料表編寫指令碼時，產生的 T-SQL 陳述式不正確之問題。|
@@ -717,7 +717,7 @@ SSMS 18.6 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |SMO|已修正嘗試還原名稱中具有大括號的資料庫時，造成 StringBuilder.FormatError 的問題。|
 |SMO|修正 SMO 中 Azure 資料庫預設為所有字串比較皆採用不區分大小寫的定序，而不是使用為資料庫指定之定序的問題。|
 |SSMS 編輯器|已修正在「SQL 系統資料表」中，還原預設色彩是將色彩變更為檸檬綠，而不是預設綠色，而令人難以在白色背景上進行閱讀的問題。 如需詳細資料，請參閱 [Restoring wrong default color for SQL System Table](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906) (SQL 系統資料表的還原預設色彩錯誤)。 此問題在非英文版的 SSMS 中仍持續發生。|
-|SSMS 編輯器|已修正下列問題：使用 AAD 驗證連線到 Azure SQLDW 時，IntelliSense 無法運作。|
+|SSMS 編輯器|已修正下列問題：使用 Azure Active Directory (Azure AD) 驗證連線到 Azure SQLDW 時，IntelliSense 無法運作。|
 |SSMS 編輯器|修正 IntelliSense 在使用者缺少 **master** 資料庫存取權時於 Azure 中的體驗。|
 |SSMS 編輯器|修正用來建立「時態表」的程式碼片段，當目標資料庫的定序會區分大小寫時，此程式碼片段就會中斷。|
 |SSMS 編輯器|IntelliSense 現在可識別新的 TRANSLATE 函式。 如需詳細資訊，請參閱 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430)。 |
