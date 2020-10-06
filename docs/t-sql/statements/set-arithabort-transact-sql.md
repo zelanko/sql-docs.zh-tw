@@ -28,12 +28,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc072ac6ba5cba3de1b64996c79b589b18ecb5b1
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: e00e040e74faf9e37b58a258dfe93a84388be767
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226786"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497759"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ SELECT @ARITHABORT AS ARITHABORT;
 ## <a name="examples"></a>範例  
 下列範例示範具有 `SET ARITHABORT` 設定的除以零和溢位錯誤。  
   
-```  
+```sql  
 -- SET ARITHABORT  
 -------------------------------------------------------------------------------  
 -- Create tables t1 and t2 and insert data values.  

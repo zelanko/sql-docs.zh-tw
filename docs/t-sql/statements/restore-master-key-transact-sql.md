@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f5b32d1caa0562f5a5fd226387c21ec029982a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5a15c5ac7a401e4f5359cff34693a6131ce1391
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496649"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497787"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88496649"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 RESTORE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password'  
     ENCRYPTION BY PASSWORD = 'password'  
@@ -80,7 +79,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="examples"></a>範例  
  下列範例會還原 `AdventureWorks2012` 資料庫的資料庫主要金鑰。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 RESTORE MASTER KEY   
     FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   

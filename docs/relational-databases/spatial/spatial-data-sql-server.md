@@ -19,15 +19,15 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38df38923b69bf24432cf4d5d162187c0962fcfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43ec99d77ea10b33dd06427f97444c995534dba2
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403344"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662137"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   空間資料代表幾何物件的實體位置和圖形相關資訊。 這些物件可以是點位置或更複雜的物件，例如國家/地區、道路或湖泊。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88403344"
  [建立、建構及查詢幾何執行個體](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  描述可以與 geometry 資料類型執行個體搭配使用的方法。  
   
- [建立、建構及查詢地理位置執行個體](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
+ [建立、建構並查詢地理位置執行個體](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  描述可以與 geography 資料類型執行個體搭配使用的方法。  
   
  [查詢最接近像素的空間資料](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  

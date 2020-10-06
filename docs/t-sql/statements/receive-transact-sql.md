@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548960"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498186"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548960"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548960"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. 接收交談群組中全部訊息的所有資料行  
  下列範例接收 `ExpenseQueue` 佇列中下一個可用交談群組的所有可用訊息。 陳述式將訊息當作結果集傳回。  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. 接收交談群組中全部訊息的指定資料行  
  下列範例接收 `ExpenseQueue` 佇列中下一個可用交談群組的所有可用訊息。 陳述式將訊息當作包含 `conversation_handle`、`message_type_name` 和 `message_body` 等資料行的結果集傳回。  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. 接收佇列中第一個可用的訊息  
  下列範例從 `ExpenseQueue` 佇列中接收第一個可用的訊息來做為結果集。  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. 接收指定交談的所有訊息  
  下列範例從 `ExpenseQueue` 佇列中接收指定交談的所有可用訊息來做為結果集。  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. 接收指定交談群組的訊息  
  下列範例從 `ExpenseQueue` 佇列中接收指定交談群組的所有可用訊息來做為結果集。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>F. 接收並放入資料表變數  
  下列範例從 `ExpenseQueue` 佇列中接收指定交談群組的所有可用訊息，將它們放入資料表變數中。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. 接收訊息並無限期等候  
  下列範例接收 `ExpenseQueue` 佇列中下一個可用交談群組的所有可用訊息。 陳述式會等候到至少有一個可用的訊息，再傳回包含所有訊息資料行的結果集。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. 接收訊息並等候指定的間隔  
  下列範例接收 `ExpenseQueue` 佇列中下一個可用交談群組的所有可用訊息。 陳述式會等候 60 秒，或等到至少有一個可用的訊息，兩者中取其先發生者。 如果至少有一個可用的訊息，陳述式會傳回包含所有訊息資料行的結果集。 否則，陳述式會傳回空的結果集。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. 接收訊息，修改資料行的類型  
  下列範例接收 `ExpenseQueue` 佇列中下一個可用交談群組的所有可用訊息。 當訊息類型說明訊息包含 XML 文件時，陳述式會將訊息主體轉換成 XML。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. 接收訊息、從訊息主體擷取資料、擷取交談狀態  
  下列範例接收 `ExpenseQueue` 佇列中下一個可用交談群組的下一個可用訊息。 當訊息的類型是 `//Adventure-Works.com/Expenses/SubmitExpense` 時，陳述式會從訊息主體中擷取員工識別碼和項目的清單。 陳述式也會從 `ConversationState` 資料表中擷取交談的狀態。  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

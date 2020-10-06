@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 738fe71b4f8fe1c97252039a0f48ef054c7d0125
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 192eb99c7ba6e4472faee82aa3b3636b35423478
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496561"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497748"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 物件權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88496561"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         { FROM | TO } <database_principal> [ ,...n ]   
@@ -154,7 +153,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ### <a name="a-revoking-select-permission-on-a-table"></a>A. 撤銷資料表的 SELECT 權限  
  下列範例會從使用者 `SELECT` 撤銷 `RosaQdM` 資料庫中之資料表 `Person.Address` 的 `AdventureWorks2012` 權限。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;  
 GO  
@@ -163,7 +162,7 @@ GO
 ### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. 撤銷預存程序的 EXECUTE 權限  
  下列範例會對一個稱為 `EXECUTE` 的應用程式角色，撤銷預存程序 `HumanResources.uspUpdateEmployeeHireInfo` 的 `Recruiting11` 權限。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     FROM Recruiting11;  
@@ -173,7 +172,7 @@ GO
 ### <a name="c-revoking-references-permission-on-a-view-with-cascade"></a>C. 撤銷具有 CASCADE 之檢視的 REFERENCES 權限  
  下列範例會從具有 `REFERENCES` 之使用者 `BusinessEntityID` 撤銷檢視 `HumanResources.vEmployee` 中之資料行 `Wanida` 的 `CASCADE` 權限。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     FROM Wanida CASCADE;  

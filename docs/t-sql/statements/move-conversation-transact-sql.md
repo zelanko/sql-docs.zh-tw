@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20ea86bba51f0229c5b791cb86999036ae7a5771
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 221c16ac567c7dfffa86d2c2259bd86d62cc1d8a
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548976"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498105"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89548976"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 MOVE CONVERSATION conversation_handle  
    TO conversation_group_id  
 [ ; ]  
@@ -72,7 +71,7 @@ MOVE CONVERSATION conversation_handle
 ## <a name="examples"></a>範例  
  下列範例會將交談移到不同的交談群組。  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER,  
         @conversation_group_id UNIQUEIDENTIFIER ;  
   

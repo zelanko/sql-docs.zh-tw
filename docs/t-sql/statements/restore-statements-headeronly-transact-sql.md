@@ -24,12 +24,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f4411388de1c2a621665a65aacddc188a3a9f2ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a306c9ceba9078852f7f2edcce7978518c251dd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478747"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498137"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -44,7 +44,6 @@ ms.locfileid: "88478747"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 RESTORE HEADERONLY   
 FROM <backup_device>   
 [ WITH   
@@ -169,7 +168,7 @@ FROM <backup_device>
 ## <a name="examples"></a>範例  
  下列範例會傳回磁碟檔 `C:\AdventureWorks-FullBackup.bak` 標頭中的資訊。  
   
-```  
+```sql 
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  

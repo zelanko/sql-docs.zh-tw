@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8114ca6e50f28c4c603285affd05478c297bf881
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5926b71c2626ddea858190b6a135151abaa28586
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485139"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497782"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 資料庫主體權限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "86485139"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -165,7 +164,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. 從其他使用者撤銷使用者的 CONTROL 權限  
  下列範例會從使用者 `CONTROL` 撤銷 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 使用者 `Wanida` 的 `RolandX` 權限。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -174,7 +173,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. 從對其將 WITH GRANT OPTION 授與某角色的使用者，撤銷該角色的 VIEW DEFINITION 權限。  
  下列範例會從資料庫使用者 `VIEW DEFINITION` 撤銷 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 角色 `SammamishParking` 的 `JinghaoLiu` 權限。 指定 `CASCADE` 選項，是因為使用者 `JinghaoLiu` 被授與 `VIEW DEFINITION` 權限 `WITH GRANT OPTION`。  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -186,7 +185,7 @@ GO
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

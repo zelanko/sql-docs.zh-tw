@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16b73d0d01f4507dfb1a53596ca6ed38c49fd78a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e433b0ba5513396d732c1230f8e3ce43539e3976
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548980"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497876"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89548980"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -106,7 +105,7 @@ ms.locfileid: "89548980"
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 取得交談群組，無限期等候  
  下列範例會將 `@conversation_group_id` 設定為 `ExpenseQueue` 中下一個可用訊息的交談群組識別碼。 命令會等到訊息成為可用訊息為止。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -118,7 +117,7 @@ WAITFOR (
 ### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>B. 取得交談群組，等候一分鐘  
  下列範例會將 `@conversation_group_id` 設定為 `ExpenseQueue` 中下一個可用訊息的交談群組識別碼。 如果一分鐘內還沒有出現可用訊息，GET CONVERSATION GROUP 便會傳回，而不改變 `@conversation_group_id` 的值。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -130,7 +129,7 @@ TIMEOUT 60000 ;
 ### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. 取得交談群組，立即傳回  
  下列範例會將 `@conversation_group_id` 設定為 `ExpenseQueue` 中下一個可用訊息的交談群組識別碼。 如果沒有可用訊息，`GET CONVERSATION GROUP` 便會立即傳回，而不變更 `@conversation_group_id`。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

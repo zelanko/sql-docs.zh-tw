@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540628"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497936"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540628"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>A. 結束交談  
  下列範例會結束 `@dialog_handle` 所指定的對話。  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. 結束交談時發生錯誤  
  下列範例會在進行處理的陳述式報告錯誤時，結束 `@dialog_handle` 所指定的對話，並傳回錯誤。 請注意，這是最簡單的錯誤處理方式，可能不適合某些應用程式。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. 清除無法正常完成的交談  
  下列範例會結束 `@dialog_handle` 所指定的對話。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會立即移除服務佇列和傳輸佇列中的所有訊息，且不會通知遠端服務。 由於在結束對話時進行清除，並不會通知遠端服務，因此，您只應在遠端服務無法接收 **EndDialog** 或 **Error** 訊息時，才使用這個方式。  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

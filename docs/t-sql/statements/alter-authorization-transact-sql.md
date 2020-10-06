@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024390"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529439"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -215,7 +215,6 @@ ALTER AUTHORIZATION ON
 -   Azure AD 中存在的同盟使用者 (而非群組)。  
 -   Azure AD 中存在的受控使用者 (而非群組) 或應用程式。    
 
-> [!NOTE]  
 > 若新的擁有者為 Azure Active Directory 使用者，它將無法在新的擁有者會成為新 DBO 的資料庫中作為使用者存在。 必須先從資料庫移除這類 Azure AD 使用者，才能執行 ALTER AUTHORIZATION 陳述式，將資料庫的擁有權變更為新的使用者。 如需使用 SQL Database 設定 Azure Active Directory 使用者的詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database 或 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。   
   
 **執行 ALTER AUTHORIZATION 陳述式的人員需求：**  

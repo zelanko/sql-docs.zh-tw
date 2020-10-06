@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024360"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529389"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -322,7 +322,6 @@ WITH (
    `Encoding = {'UTF8' | 'UTF16'}`
    
  在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4) 中，PolyBase 可讀取 UTF8 和 UTF16-LE 編碼的分隔符號文字檔。 在 SQL Server 中，PolyBase 不支援讀取 UTF16 編碼的檔案。
-
 
 ## <a name="permissions"></a>權限  
  需要 ALTER ANY EXTERNAL FILE FORMAT 權限。

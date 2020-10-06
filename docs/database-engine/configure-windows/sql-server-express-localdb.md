@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288330"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669546"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -55,7 +55,7 @@ LocalDB 是您在安裝 SQL Server Express 期間選取的功能，而且可以�
 
 LocalDB 安裝程式使用 `SqlLocalDB.msi` 程式在電腦上安裝必要的檔案。 在安裝後，LocalDB 就是可建立及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在本機上通常處於隱藏狀態的 AppData 路徑中。 例如： `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` 。 使用者資料庫檔案會儲存在使用者指定的位置，通常位於 `C:\Users\<user>\Documents\` 資料夾。
 
-如需在應用程式中包含 LocalDB 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [本機資料概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))、[在 Visual Studio 中建立資料庫並新增資料表](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)。
+如需在應用程式中包含 LocalDB 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [本機資料概觀](/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))、[在 Visual Studio 中建立資料庫並新增資料表](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)。
 
 如需有關 LocalDB API 的詳細資訊，請參閱 [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。
 

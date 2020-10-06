@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12ad4564a7d1f72ec257872372b67b69754392ef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 26fb837dc28b0ac7b2845a64eab800512e508b7b
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541240"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497622"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## <a name="examples"></a>範例  
  下列範例假設目前資料庫中已建立了名稱為 `ssn` 的類型。  
   
-```  
+```sql  
 DROP TYPE ssn ;  
 ```  
   

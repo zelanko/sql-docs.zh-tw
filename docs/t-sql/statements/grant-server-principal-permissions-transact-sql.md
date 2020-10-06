@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e60093d5a81d01a88daac53593b2be721652df42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76dd1d69fe66b5165bdf3cad21c3d5b513c6bbe5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472197"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498230"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT 伺服器主體權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88472197"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -115,7 +114,7 @@ GRANT permission [ ,...n ] }
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. 授與登入的 IMPERSONATE 權限  
  下列範例會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `WanidaBenshoof` 的 `IMPERSONATE` 權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，而該項登入是透過 Windows 使用者 `AdvWorks\YoonM` 所建立。  
   
-```  
+```sql  
 USE master;  
 GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];  
 GO  
@@ -124,7 +123,7 @@ GO
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. 授與具有 GRANT OPTION 的 VIEW DEFINITION 權限  
  下列範例會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW DEFINITION` 的 `EricKurjan` 授與具有 `RMeyyappan` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `GRANT OPTION`。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     WITH GRANT OPTION;  
@@ -134,7 +133,7 @@ GO
 ### <a name="c-granting-view-definition-permission-on-a-server-role"></a>C. 授與伺服器角色的 VIEW DEFINITION 權限  
  下列範例會將 `VIEW DEFINITION` 伺服器角色的 `Sales` 權限授與 `Auditors` 伺服器角色。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

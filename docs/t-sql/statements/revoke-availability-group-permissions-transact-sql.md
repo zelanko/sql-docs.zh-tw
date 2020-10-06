@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5bdcb114316ea124200e7974f2ffd5675adbe052
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9f3bf6cabb705c194036bb123ed9f9e463777f94
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485340"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498055"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>撤銷可用性群組權限 (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "86485340"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
     { FROM | TO } < server_principal >  [ ,...n ]  
@@ -111,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 撤銷可用性群組的 VIEW DEFINITION 權限  
  下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW DEFINITION` 之可用性群組 `MyAg` 的 `ZArifin` 權限。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -120,7 +119,7 @@ GO
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. 撤銷具有 CASCADE 的 TAKE OWNERSHIP 權限  
  下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `TAKE OWNERSHIP` 之可用性群組 `MyAg` 的 `PKomosinski` 權限，並從 `PKomosinski` 對其授與 MyAg 之 TAKE OWNERSHIP 的所有主體撤銷該權限。  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  
@@ -130,7 +129,7 @@ GO
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. 撤銷先前授與的 WITH GRANT OPTION 子句  
  如果使用 WITH GRANT OPTION 授與權限，使用 REVOKE GRANT OPTION FOR ... 即可移除 WITH GRANT OPTION。 下列範例會授與權限，然後移除權限的 WITH GRANT 部分。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  

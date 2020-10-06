@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab14a2b771e9c87f3e3c1092a5018150dd231eca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79fe7ab839ddb8d4d44d71fd0039121b8ed3552a
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496598"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497766"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 端點權限 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88496598"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
     { FROM | TO } <server_principal> [ ,...n ]  
@@ -109,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 撤銷端點的 VIEW DEFINITION 權限  
  下列範例會撤銷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入 `VIEW DEFINITION` 之端點 `Mirror7` 的 `ZArifin` 權限。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;  
 GO  
@@ -118,7 +117,7 @@ GO
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. 撤銷具有 CASCADE 選項的 TAKE OWNERSHIP 權限  
  下列範例會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者 `PKomosinski` 撤銷 `Shipping83` 端點上的 `TAKE OWNERSHIP` 權限，以及從所有 `PKomosinski` 授與 `Shipping83` 上 `TAKE OWNERSHIP` 權限的主體撤銷該權限。  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski   
     CASCADE;  
