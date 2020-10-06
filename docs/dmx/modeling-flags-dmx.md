@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 968b1c10f8eb054f6527253bd358e97eaa396637
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466535"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727719"
 ---
 # <a name="modeling-flags-dmx"></a>模型旗標 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88466535"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列模型旗標：  
   
- **非 Null**  
+ **NOT NULL**  
  屬性資料行的值絕對不能包含 Null 值。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在模型培訓處理過程中遇到這個屬性資料行的 Null 值，將會產生錯誤。 這個旗標是在採礦結構資料行定義。  
   
  **回歸輸入變數**  
@@ -49,10 +49,10 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  如需在 [採礦模型] 資料行上指定模型 flga 的語法範例，請參閱 [ALTER &#40;DMX&#41;的採礦結構 ](../dmx/alter-mining-structure-dmx.md)。  
   
- 如需使用「採礦模型」資料行的詳細資訊，請參閱「 [採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」。  
+ 如需使用「採礦模型」資料行的詳細資訊，請參閱「 [採礦模型資料行](/analysis-services/data-mining/mining-model-columns)」。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [&#40;DMX&#41; 參考的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -62,5 +62,4 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

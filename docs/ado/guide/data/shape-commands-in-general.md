@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979609"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724929"
 ---
 # <a name="shape-commands-in-general"></a>一般 Shape 命令
 資料成形定義了成形 **記錄集**的資料行、資料行所代表的實體之間的關聯性，以及 **記錄集** 填入資料的方式。  
@@ -28,7 +28,7 @@ ms.locfileid: "88979609"
   
 |資料行類型|描述|  
 |-----------------|-----------------|  
-|data|從查詢命令所傳回之 **記錄集** 的欄位，到資料提供者、資料表或先前成形的 **記錄集**。|  
+|資料|從查詢命令所傳回之 **記錄集** 的欄位，到資料提供者、資料表或先前成形的 **記錄集**。|  
 |章|另一個 **記錄集**的參考，稱為「 *章節*」。 章節資料行可讓您定義 *父子式* 關聯性，其中 *父系* 是包含章節資料行的 **記錄集** ，而 *子* 系是該章節所代表的 **記錄集** 。|  
 |彙總 (aggregate)|資料行的值是藉由在所有資料列或子**記錄集**之所有資料列的資料行上執行*彙總函式*所衍生。  (請參閱下列主題中的彙總函式、 [彙總函式、CALC 函式和 NEW 關鍵字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。 ) |  
 |計算運算式|資料行的值是藉由計算 **記錄集**相同資料列中資料行的 Visual Basic for Applications 運算式所衍生。 運算式是 CALC 函數的引數。  (參閱下列主題中的計算運算式、 [彙總函式、CALC 函式和 NEW 關鍵字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) 以及 In [Visual Basic for Applications 函數](../../../ado/guide/data/visual-basic-for-applications-functions.md)。 ) |  
@@ -46,7 +46,7 @@ ms.locfileid: "88979609"
   
  您可以透過程式設計方式或透過適當的視覺控制項來存取成形**記錄集**的**記錄集**元件。  
   
- Microsoft 提供的視覺化檢視會產生圖形命令 (請參閱 Visual Basic 6 檔) 中的 [資料環境設計](https://go.microsoft.com/fwlink/?LinkId=5689) 工具，以及顯示階層式資料指標的另一項， (在 Visual Basic 6 檔) 中看到「使用 Microsoft 階層式 Flexgrid 控制項」。  
+ Microsoft 提供的視覺化檢視會產生圖形命令 (請參閱 Visual Basic 6 檔) 中的 [資料環境設計](/previous-versions/visualstudio/aa445793(v=vs.60)) 工具，以及顯示階層式資料指標的另一項， (在 Visual Basic 6 檔) 中看到「使用 Microsoft 階層式 Flexgrid 控制項」。  
   
  如需導覽階層式 **記錄集**的詳細資訊，請參閱 [存取階層式記錄](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)集中的資料列。  
   

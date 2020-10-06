@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624795"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727799"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
@@ -32,9 +32,9 @@ ms.locfileid: "91624795"
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 3.6 版或更新版本。
   - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更新版本。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更新版本。
-  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
+  - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17.0 或更新版本。
   - [Power BI 桌面](/power-bi/fundamentals/desktop-get-the-desktop)。
-  - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell 模組](/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
   - [DMA 會報告 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip)。
   - [LoadWarehouse 腳本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。
@@ -110,7 +110,7 @@ ms.locfileid: "91624795"
 
 - ServerName
 - InstanceName
-- 連接埠
+- Port
 - AssessmentFlag
 
 ![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad2204beb3d6c4abd9b1f68ff6814dc99ded6738
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978199"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724739"
 ---
 # <a name="datafactory-customization"></a>DataFactory 自訂
 遠端資料服務 (RDS) 可讓您輕鬆地在三層用戶端/伺服器系統中執行資料存取。 用戶端資料控制項會指定連接和命令字串參數，以對遠端資料源執行查詢，或是使用連接字串和 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件參數來執行更新。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  參數會傳遞至伺服器程式，以在遠端資料源上執行資料存取作業。 RDS 提供預設的伺服器程式，稱為 [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) 物件。 **RDSServer. DataFactory**物件會將查詢所產生的任何**記錄集**物件傳回給用戶端。  
   

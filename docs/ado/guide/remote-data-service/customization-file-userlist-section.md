@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38eb55c77f98711910e303bf6f511df26f7cecf7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b09e5f9356ad196e03c970623369d4918a6f5506
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978209"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724749"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList 區段
 **Userlist**區段適用于具有相同區段*識別碼*參數的**connect**區段。  
@@ -27,9 +27,9 @@ ms.locfileid: "88978209"
  這個區段可以包含*使用者存取專案*，此專案會指定指定之使用者的存取權限，並覆寫 [相符的**連接]** 區段中的*預設**存取專案*。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
  使用者存取專案的形式如下：  
   
  使用者_名稱_**=**   

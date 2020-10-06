@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa7bdefd98c908ed97b225ebe268b33f353b5042
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cd6336c4c19a79a21f9649fdf3521fc8fe40275c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981139"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724215"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 屬性 (RDS)
 指出排序次序為遞增或遞減。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ DataControl.SortDirection = value
  *DataControl*  
  代表 RDS 的物件變數 [。DataControl](./datacontrol-object-rds.md) 物件。  
   
- *值*  
+ *ReplTest1*  
  **布林**值，當設為**True**時，表示排序方向為遞增。 **False** 表示遞減順序。  
   
 ## <a name="remarks"></a>備註  

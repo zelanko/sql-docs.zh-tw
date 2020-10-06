@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43a92ce6f71d8c9ad4cca25f1c657150b28bde27
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad10cbb434c1fda57f684438499bf6e4b885cf9b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981259"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724236"
 ---
 # <a name="server-property-rds"></a>Server 屬性 (RDS)
 指出 Internet Information Services (IIS) 名稱和通訊協定。  
@@ -29,9 +29,9 @@ ms.locfileid: "88981259"
  您可以在設計階段于 RDS 的物件標記中設定 **伺服器** 屬性[。DataControl](./datacontrol-object-rds.md) 物件，或在腳本程式碼的執行時間。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
  **HTTP**  
   
  設計階段語法  

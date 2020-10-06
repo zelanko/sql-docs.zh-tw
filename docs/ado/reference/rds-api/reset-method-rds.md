@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb8d10d857e164832b852a78a4f8b2082b304990
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fcebd112b389fe98b69b25852ef0504e88890261
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981309"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724257"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
 根據指定的排序和篩選屬性，執行用戶端 **記錄集** 的排序或篩選。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>語法  
   

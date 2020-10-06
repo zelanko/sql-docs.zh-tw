@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd20a9ca7a25e1e00613ea5c87baa9eda41accc8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466730"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726619"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -38,7 +38,7 @@ ms.locfileid: "88466730"
   
  服務商場與 DQS 之間的順暢整合會簡化與探索、瀏覽及取得 DQS 內的資料品質專案資訊相關的步驟。 這些資料是從 DQS 取用，而且有助於 DQS 使用者以創新方式將 DQS、服務商場和參考資料服務提供者結合在一起，以達成高資料品質。  
   
- 若要針對清理活動在 DQS 中使用服務商場的參考資料，您必須擁有服務商場帳號金鑰。 建立服務商場帳號金鑰是免費的，只有當您訂閱付費的資料集時才需要付費。 訂閱及使用免費的資料集不需要支付任何費用。 如需有關建立 Marketplace 帳戶金鑰的詳細資訊，請參閱 [建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。  
+ 若要針對清理活動在 DQS 中使用服務商場的參考資料，您必須擁有服務商場帳號金鑰。 建立服務商場帳號金鑰是免費的，只有當您訂閱付費的資料集時才需要付費。 訂閱及使用免費的資料集不需要支付任何費用。 如需有關建立 Marketplace 帳戶金鑰的詳細資訊，請參閱 [建立您的帳戶](/previous-versions/azure/ff717655(v=azure.100)) (https://go.microsoft.com/fwlink/?LinkId=212936) 。  
   
  此外，您可以從 DQS 執行下列服務商場活動：  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88466730"
 |描述如何設定 DQS 使用服務商場或直接線上協力廠商資料提供者所提供的參考資料服務。|[設定 DQS 使用參考資料](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |描述如何將知識庫中的定義域/複合定義域對應至參考資料服務。|[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |描述如何使用參考資料服務清理資料。|[使用參考資料 &#40;外部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-  
   

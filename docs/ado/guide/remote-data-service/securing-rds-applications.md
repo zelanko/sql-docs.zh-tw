@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 588a18179c15f27c00c7e47d871d0c0a9bbddc44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5dbeffea507c857aec6554a8f98096d7752fe9fc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977629"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723085"
 ---
 # <a name="securing-rds-applications"></a>保護 RDS 應用程式
 本主題提供 RDS 的安全性資訊。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="microsoft-internet-explorer-security-issues"></a>Microsoft Internet Explorer 安全性問題  
  將新的安全性增強功能新增至 Microsoft Internet Explorer 後，某些 ADO 和 RDS 物件會限制為僅在「安全」模式環境中執行。 這需要您留意這些問題，包括不同的區域、安全性等級、限制行為、不安全的作業，以及自訂的安全性設定。  

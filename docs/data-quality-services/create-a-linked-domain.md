@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487859"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725363"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487859"
   
 6.  必要時，您可以在 [定義域屬性] 索引標籤中變更連結的定義域的名稱或描述。  
   
-7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487859"
 -   您不能建立與複合定義域之間的連結的定義域或連結的複合定義域。  
   
 -   當您在任何 [定義域管理] 索引標籤中按兩下連結的定義域時，將會開啟此定義域進行編輯，而且在名稱字串中會指示它是連結的定義域。  
-  
   

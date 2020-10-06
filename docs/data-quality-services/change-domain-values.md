@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450016"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724635"
 ---
 # <a name="change-domain-values"></a>變更定義域值
 
@@ -97,11 +97,11 @@ ms.locfileid: "88450016"
   
 9. **從 Excel 匯入定義域值**：若要從 Excel 試算表加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[從 Excel 匯入定義域值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-10. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成]  。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
+10. **匯入專案值**：若要從資料品質專案加入新的值，請按一下 **[匯入值]** 圖示的向下箭號，然後選取 **[匯入專案值]**。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成] 。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   
 11. **刪除選取的定義域值**：若要從定義域中移除一個或多個現有的值，請選取 [值] 資料表中的值，然後按一下 **[刪除選取的定義域值]** 圖示。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   
-12. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+12. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> 後續操作：在變更定義域值之後  
  在您變更定義域值之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
@@ -136,5 +136,4 @@ ms.locfileid: "88450016"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> 如何處理 Null 對應項目  
  **[定義域值]** 索引標籤中的每一個值資料表都包含 DQS_NULL 值。 資料來源中的 null 將會以 SQL_NULL 形式出現在值資料表中。 您可以將一個或多個 null 對應項目設定為 DQS_NULL 的同義字。 當您這樣做時，所有 null 和 null 對應項目都將會處理為 DQS_NULL。  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414084"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726249"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>資料採礦延伸模組 (DMX) 參考
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414084"
   
  規格會將資料採礦的基準定義為資料採礦模型虛擬物件。 資料採礦模型物件會封裝特定採礦模型的所有已知內容。 資料採礦模型物件的結構就像 SQL 資料表，有描述模型的資料行、資料類型與中繼資訊。 這種結構可以讓您使用 DMX 語言 (SQL 的延伸模組) 來建立及處理模型。  
   
- **如需詳細資訊：** [&#40;Analysis Services 資料採礦的採礦結構&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
+ **如需詳細資訊：** [&#40;Analysis Services 資料採礦的採礦結構&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX 語句  
  您可以使用 DMX 陳述式建立、處理、刪除、複製、瀏覽與預測資料採礦模型。 DMX 中有兩種陳述式類型：資料定義陳述式與資料操作陳述式。 您可以使用每一種陳述式執行不同種類的工作。  
@@ -109,5 +109,4 @@ ms.locfileid: "88414084"
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

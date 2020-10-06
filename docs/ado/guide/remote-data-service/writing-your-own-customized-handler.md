@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e421b128faa5a7d90ec658a7c42e246110d921fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977339"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722719"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
 如果您是想要使用預設 RDS 支援的 IIS 伺服器系統管理員，但對使用者要求和存取權限有更大的控制權，您可能會想要撰寫自己的處理常式。  
@@ -27,7 +27,7 @@ ms.locfileid: "88977339"
  MSDFMAP。處理常式會實 **IDataFactoryHandler** 介面。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 介面  
  這個介面有兩種方法： **GetRecordset** 和 **Reconnect**。 這兩種方法都需要將 [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) 屬性設定為 **adUseClient**。  

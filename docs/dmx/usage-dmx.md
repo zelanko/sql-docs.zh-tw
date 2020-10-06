@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394854"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726039"
 ---
 # <a name="usage-dmx"></a>使用方式 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88394854"
   
  指定為 **預測** 類型的資料行會當做輸入和輸出資料行使用。 以 **PredictOnly** 指定的資料行只會當做輸出資料行使用。 特定的演算法可能會以不同方式處理 Predict 資料行。  
   
- 如需有關支援之資料行使用類型的詳細資訊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱 [採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 如需有關支援之資料行使用類型的詳細資訊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱 [採礦模型資料行](/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [&#40;DMX&#41; 參考的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394854"
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

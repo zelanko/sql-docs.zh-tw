@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d404533b950aea7549a64b7863d2c1623118594
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 46444bf6e34278af9ca80f56f7d3bfdea1f3feef
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978149"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724729"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>讀取可重複的隔離等級發生死結
 如果自訂商務物件使用可重複讀取的隔離等級來存取 SQL Server，且在相同交易中傳送查詢和更新的兩個用戶端同時呼叫商務物件，則可能會發生鎖死。 遠端資料服務的設計目的是要讓其中一個進程有時間釋放鎖死，但該用戶端的更新將會失敗。  
@@ -27,7 +27,7 @@ ms.locfileid: "88978149"
  使用「資料[指標服務](../appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)**命令逾時**動態」屬性來修改超時時間長度。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](./rds-fundamentals.md)

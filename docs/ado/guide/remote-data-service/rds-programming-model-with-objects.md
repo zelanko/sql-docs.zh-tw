@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2658b8b7591284f1624f3649e3980db6e2022726
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6ee41cabf8175bc7f2a34c0381193e406d33f38f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977949"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724909"
 ---
 # <a name="rds-programming-model-with-objects"></a>具有物件的 RDS 程式設計模型
 RDS 的目標是透過像是 IIS 的媒介來取得和更新資料來源。 程式設計模型會指定完成此目標所需的活動順序。 物件模型會指定其方法和屬性會影響程式設計模型的物件。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  RDS 提供可執行下列動作順序的方法：  
   

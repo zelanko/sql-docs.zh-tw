@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990989"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724869"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 遠端處理提供者總覽
 Microsoft OLE DB 遠端處理提供者可讓用戶端電腦上的本機使用者叫用遠端電腦上的資料提供者。 如您是遠端電腦上的本機使用者，指定遠端電腦的資料提供者參數。 然後指定遠端處理提供者用來存取遠端電腦的參數。 然後您就可以像本機使用者一樣存取遠端電腦。
 
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至  [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至  [WCF 資料服務](/dotnet/framework/wcf/)。
 
 ## <a name="provider-keyword"></a>Provider 關鍵字
  若要叫用 OLE DB 遠端處理提供者，請在連接字串中指定下列關鍵字和值。  (記下提供者名稱中的空白空間。 ) 

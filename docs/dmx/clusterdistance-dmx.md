@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfcf7804455ecb3b16a29a8cab2f61d91df6b1f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431130"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726349"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **ClusterDistance**函式會傳回輸入案例與指定之群集的距離; 如果未指定任何叢集，則為輸入案例與最可能之群集的距離。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,7 +37,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>備註  
  **ClusterDistance**函式會傳回輸入案例與該輸入案例的機率最高之群集之間的距離。  
   
- 如果是 K-Means 群集，由於任何案例都可能僅屬於一個群集，而且成員資格加權為 1.0，則群集距離永遠為 0。 不過，在 K-Means 中，系統會假設每個群集都有一個距心。 您可以在採礦模型內容中，查詢或瀏覽 NODE_DISTRIBUTION 巢狀資料表來取得距心的值。 如需詳細資訊，請參閱 [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)。  
+ 如果是 K-Means 群集，由於任何案例都可能僅屬於一個群集，而且成員資格加權為 1.0，則群集距離永遠為 0。 不過，在 K-Means 中，系統會假設每個群集都有一個距心。 您可以在採礦模型內容中，查詢或瀏覽 NODE_DISTRIBUTION 巢狀資料表來取得距心的值。 如需詳細資訊，請參閱 [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)。  
   
  如果是預設的 EM 群集方法，群集內部所有的點都會被視為可能性相等，因此，根據設計，沒有用於群集的距心。 在特定案例和特定叢集*N*之間的**ClusterDistance**值計算方式如下：  
   
@@ -129,6 +129,5 @@ NATURAL PREDICTION JOIN
  [叢集 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)   
- [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+ [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   

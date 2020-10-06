@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: adef4e3eea01e966b87f939ce1a5b961ba87847b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56caf584d45b76315ff95cf6001a2ce1c882f579
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981899"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724459"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 每當作業期間發生錯誤時，就會呼叫 **onError** 事件。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  整數，表示錯誤的狀態碼。  
   
- *說明*  
+ *描述*  
  表示錯誤描述的 **字串** 。  
   
  *Source*  

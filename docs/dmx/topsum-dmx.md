@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9127339e23443ea76c8f68820a96261991556c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395184"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726069"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   以遞減次序的順序，傳回累計總和至少達指定值的最頂部資料表資料列。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,7 +38,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
  **TopSum**函數會根據每個資料列引數的評估值，以遞減的次序順序傳回最上層的 \<rank expression> 資料列，因此值的總和 \<rank expression> 至少是引數所指定的指定總計 \<sum> 。 當仍然符合指定的總和值時， **TopSum**會傳回可能的最小元素數目。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對您使用「 [基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型建立預測查詢。  
+ 下列範例會針對您使用「 [基本資料採礦」教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程所建立的關聯模型建立預測查詢。  
   
  若要瞭解 TopPercent 的運作方式，請先執行僅傳回嵌套資料表的預測查詢，這可能會很有説明。  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 [在資料採礦設計師中建立單一查詢](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
+>  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 [在資料採礦設計師中建立單一查詢](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
   
  範例結果︰  
   
@@ -103,5 +103,4 @@ NATURAL PREDICTION JOIN
  [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414024"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726279"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>備註  
  定義採礦結構的方法是指定資料行的清單、選擇性地指定資料行之間的階層式關聯性，然後選擇性地將採礦結構分割為培訓和測試資料集。  
   
- 選擇性的 SESSION 關鍵字表示此結構是暫時性結構，您僅能用於目前工作階段的持續時間。 當工作階段結束時，將會刪除此結構以及所有以此結構為基礎的模型。 若要建立臨時的採礦結構和模型，您必須先設定資料庫屬性 AllowSessionMiningModels。 如需詳細資訊，請參閱 [資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+ 選擇性的 SESSION 關鍵字表示此結構是暫時性結構，您僅能用於目前工作階段的持續時間。 當工作階段結束時，將會刪除此結構以及所有以此結構為基礎的模型。 若要建立臨時的採礦結構和模型，您必須先設定資料庫屬性 AllowSessionMiningModels。 如需詳細資訊，請參閱 [資料採礦屬性](/analysis-services/server-properties/data-mining-properties)。  
   
 ## <a name="column-definition-list"></a>資料行定義清單  
  您可以在資料行定義清單中包含每個資料行的下列資訊，以定義採礦結構：  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  如需可用於定義結構資料行之資料類型、內容類型、資料行散發，以及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [資料類型 &#40;資料採礦&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [內容類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [內容類型 &#40;資料採礦&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [資料行分佈 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [資料行分佈 &#40;資料採礦&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [模型旗標 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [模型旗標 &#40;資料採礦&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  
   
 ## <a name="holdout-parameters"></a>鑑效組參數  
- 當您指定鑑效組參數時，您可以建立結構資料的資料分割。 您為鑑效組所指定的數量會保留給測試之用，而剩餘的資料則用於培訓。 根據預設，如果您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立採礦結構，系統會為您建立鑑效組資料分割，其中包含 30% 的測試資料以及 70% 的培訓資料。 如需詳細資訊，請參閱 [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)。  
+ 當您指定鑑效組參數時，您可以建立結構資料的資料分割。 您為鑑效組所指定的數量會保留給測試之用，而剩餘的資料則用於培訓。 根據預設，如果您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立採礦結構，系統會為您建立鑑效組資料分割，其中包含 30% 的測試資料以及 70% 的培訓資料。 如需詳細資訊，請參閱 [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)。  
   
  如果您使用資料採礦延伸模組 (DMX) 建立採礦結構，您必須手動指定要建立的鑑效組資料分割。  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

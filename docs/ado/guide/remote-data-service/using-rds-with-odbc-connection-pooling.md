@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133b72de19edcf3e222c619b0edc1118a96d88ea
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b455687f6869f073a4f8cc78f5a568b4d2eb4e7e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977369"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722800"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>搭配 ODBC 連線集區使用 RDS
 如果您使用的是 ODBC 資料來源，您可以使用 Internet Information Services (IIS) 中的 [連接共用] 選項，以達到用戶端負載的高效能處理。 連接共用是連接的資源管理員，可維護常用連接的開啟狀態。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  若要啟用連接共用，請參閱 Internet Information Services 檔。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "88977369"
   
 2.  按一下 [一般] 索引標籤。  
   
-3.  按一下 [加入]。  
+3.  按一下 [新增]。  
   
 4.  在 [伺服器別名] 方塊中輸入伺服器的別名。 在 [網路程式庫] 方塊中，按一下 [TCP/IP]。 在 [電腦名稱稱] 方塊中，輸入接聽 TCP/IP 通訊端用戶端之電腦的電腦名稱稱。 在 [埠號碼] 方塊中，輸入 SQL Server 接聽的埠。  
   

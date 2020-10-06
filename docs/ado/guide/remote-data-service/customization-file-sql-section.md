@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d17fa12aa0b07b265fb8f26b6ac1b6c584015d1e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978229"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724759"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL 區段
 **Sql**區段可以包含取代用戶端命令字串的新 sql 字串。 如果區段中沒有 SQL 字串，則會忽略區段。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  新的 SQL 字串可能已 *參數化*。 也就是說， **sql** 區段 sql 字串中的參數 (由 '？ ' 字元指定) 可由用戶端命令字串中 *識別碼* 內的對應引數取代，) 中以逗號分隔的清單指定 (。 識別碼和引數清單的行為就像函式呼叫一樣。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "88978229"
 SQL = " "  
 ```  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
  取代的 SQL 字串專案的形式如下：  
   
  **SQL =**   

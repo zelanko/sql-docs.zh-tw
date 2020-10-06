@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9658b148d2ce76d5e73f5deaf3abfa9542e79771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f688c3e4ce2fb3eed4089554eea21bf5f3820bb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491531"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726259"
 ---
 # <a name="data-types-dmx"></a>資料類型 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "88491531"
   
 -   Date  
   
- 如需有關支援之資料類型的詳細資訊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱資料 [類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)。  
+ 如需有關支援之資料類型的詳細資訊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱資料 [類型 &#40;資料採礦&#41;](/analysis-services/data-mining/data-types-data-mining)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [&#40;DMX&#41; 參考的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -46,5 +46,4 @@ ms.locfileid: "88491531"
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bffd325b4c940302ebcc4fef67c17f5f76c03a00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450004"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724650"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>將知識加入至知識庫
 
@@ -44,14 +44,14 @@ ms.locfileid: "88450004"
   
 -   如需文件集中的詳細資訊，請參閱＜ [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)＞。  
   
--   如需示範如何執行知識探索的影片，請按一下 [這裡](https://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
+-   如需示範如何執行知識探索的影片，請按一下 [這裡](../sql-server/index.yml)。  
   
 ##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> 管理定義域中的資料值  
  DQS 可讓您以互動方式變更及增加電腦輔助的知識探索活動所產生的中繼資料。 您會在 [定義域管理] 活動中執行這項作業，您可以在此活動中將變更套用至特定資料值。  
   
 -   如需文件集中的詳細資訊，請參閱＜ [Change Domain Values](../data-quality-services/change-domain-values.md)＞。  
   
--   如需示範如何執行定義域管理的影片，請按一下 [這裡](https://msdn.microsoft.com/sqlserver/hh323825.aspx)。 請注意，在此影片中，您會在知識探索精靈的 [管理定義域值] 頁面中變更定義域值。 您也可以在 [定義域管理] 活動的 [定義域值] 頁面中執行這些步驟。  
+-   如需示範如何執行定義域管理的影片，請按一下 [這裡](../sql-server/index.yml)。 請注意，在此影片中，您會在知識探索精靈的 [管理定義域值] 頁面中變更定義域值。 您也可以在 [定義域管理] 活動的 [定義域值] 頁面中執行這些步驟。  
   
 ##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> 從 dqs 檔案匯入知識  
  您可以將 .dqs 資料檔中的定義域匯入現有的知識庫，或者將 .dqs 中的整個知識庫匯入新的知識庫。 若要這樣做，您必須先將現有的定義域或知識庫匯出至 .dqs 檔案。 包含定義域的 .dqs 檔案會包含所有定義域資料；包含知識庫的 .dqs 檔案將包含所有知識庫資訊，包括定義域和比對原則。  
@@ -72,5 +72,4 @@ ms.locfileid: "88450004"
  DQS 隨附在預先建立的知識庫 (稱為 DQS 資料) 中，其中包含美國公司和地址資料。 這個知識庫可用來快速啟動專案，不需要建立新的知識庫。 「DQS 資料」知識庫是唯讀的，但是資料監管可將它做為基礎建立新的知識庫。  
   
 -   如需文件集中的詳細資訊，請參閱＜ [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md)＞。  
-  
   

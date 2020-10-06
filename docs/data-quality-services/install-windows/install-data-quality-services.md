@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 35ca44da3c63d8de38a342cbf1f63bceb1916e15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462119"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724622"
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
 
@@ -115,7 +115,7 @@ ms.locfileid: "88462119"
                     [存取 DQS 作業的資料](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [影片：安裝和設定 DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [影片：安裝和設定 DQS](/previous-versions/dn912438(v=msdn.10))   
  [.NET Framework 更新之後升級 SQLCLR 元件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [使用 DQSInstaller.exe匯出和匯入 DQS 知識庫 ](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [升級 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -124,5 +124,4 @@ ms.locfileid: "88462119"
  [卸載 SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [針對 DQS 中的安裝和組態問題進行疑難排解](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
-  
   

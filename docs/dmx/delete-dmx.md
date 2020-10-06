@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6050a387af893e984b95c036181b7f16a269dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eafe865a5d997b0f01a510fc0fad30646a732825
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491532"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726237"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,13 +41,13 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  下表說明使用不同語法格式的結果。  
   
-|引數|結果|  
+|陳述式|結果|  
 |---------------|------------|  
 |從採礦結構刪除*\<structure>*<br /><br /> 或<br /><br /> 從採礦結構刪除 *\<structure>* 。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
 |從採礦結構刪除 *\<structure>* 。例|在採礦結構上執行 ProcessClearStructureOnly。 清除採礦結構中所有的內容，但是相關聯的採礦模型則保持不變。 清除採礦結構之後，在相關聯之採礦模型上的鑽研將會失敗。|  
 |從採礦模型刪除*\<model>*<br /><br /> 或<br /><br /> 從採礦模型刪除 *\<model>* 。內容|在模型上執行 ProcessClear，但不會讓狀態值保持不變。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
   
- 如需處理類型的詳細資訊，請參閱 [Type Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla)。  
+ 如需處理類型的詳細資訊，請參閱 [Type Element &#40;XMLA&#41;](/analysis-services/xmla/xml-elements-properties/type-element-xmla)。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除 NB_Sample 模型中的所有內容。  
@@ -60,5 +60,4 @@ DELETE FROM NB_Sample.CONTENT
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

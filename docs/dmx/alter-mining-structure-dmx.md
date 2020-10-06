@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431180"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727809"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  提供者所定義的資料採礦演算法名稱。  
   
 > [!NOTE]  
->  您可以使用 DMSCHEMA_MINING_SERVICES 資料列 [集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))來抓取目前提供者所支援的演算法清單。 若要查看目前實例所支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱 [資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  您可以使用 DMSCHEMA_MINING_SERVICES 資料列 [集](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))來抓取目前提供者所支援的演算法清單。 若要查看目前實例所支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱 [資料採礦屬性](/analysis-services/server-properties/data-mining-properties)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>資料行名稱和別名  
- 在資料行定義清單中使用的資料行名稱，必須是採礦結構中所使用的資料行名稱。 不過，您也可以選擇定義別名來代表採礦模型中的結構資料行。 您也可以為相同的結構資料行建立多個資料行定義，然後為每個資料行副本指派不同的別名及預測使用方式。 根據預設，如果沒有定義別名，就會使用結構資料行名稱。 如需詳細資訊，請參閱 [建立模型資料行的別名](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column)。  
+ 在資料行定義清單中使用的資料行名稱，必須是採礦結構中所使用的資料行名稱。 不過，您也可以選擇定義別名來代表採礦模型中的結構資料行。 您也可以為相同的結構資料行建立多個資料行定義，然後為每個資料行副本指派不同的別名及預測使用方式。 根據預設，如果沒有定義別名，就會使用結構資料行名稱。 如需詳細資訊，請參閱 [建立模型資料行的別名](/analysis-services/data-mining/create-an-alias-for-a-model-column)。  
   
  針對嵌套資料表資料行，您可以指定嵌套資料表的名稱、將資料類型指定為 **資料表**，然後提供要包含在模型中的嵌套資料行清單（以括弧括住）。  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |子句|描述|  
 |-|-|  
-|**預測**|這個資料行可以由模型預測，而其值可以用來當做輸入以預測其他可預測資料行的值。|  
+|**PREDICT**|這個資料行可以由模型預測，而其值可以用來當做輸入以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
   
 ## <a name="filter-criteria-expressions"></a>篩選準則運算式  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  篩選準則運算式是經過簡化的 DMX 述詞，與 WHERE 子句類似。 篩選運算式限於使用基本數學運算子、純量和資料行名稱的公式。 EXISTS 運算子則是例外；如果子查詢至少傳回一個資料列，該運算子就會評估為 True。 述詞可以使用常見的邏輯運算子 AND、OR 和 NOT 等來結合。  
   
- 如需與採礦模型搭配使用之篩選準則的詳細資訊，請參閱 [&#40;Analysis Services 資料採礦&#41;的採礦模型篩選 ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
+ 如需與採礦模型搭配使用之篩選準則的詳細資訊，請參閱 [&#40;Analysis Services 資料採礦&#41;的採礦模型篩選 ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
 > [!NOTE]  
 >  篩選中的資料行必須是採礦結構資料行。 您無法在模型資料行或別名資料行上建立篩選。  
   
- 如需 DMX 運算子和語法的詳細資訊，請參閱 [採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 如需 DMX 運算子和語法的詳細資訊，請參閱 [採礦模型資料行](/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="parameter-definition-list"></a>參數定義清單  
- 您可以將演算法參數加入至參數清單，以調整模型的效能和功能。 可以使用的參數是依照您在 USING 子句中指定的演算法而定。 如需與每個演算法相關聯的參數清單，請參閱 [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
+ 您可以將演算法參數加入至參數清單，以調整模型的效能和功能。 可以使用的參數是依照您在 USING 子句中指定的演算法而定。 如需與每個演算法相關聯的參數清單，請參閱 [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
  參數清單的語法如下：  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

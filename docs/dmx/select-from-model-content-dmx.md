@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496277"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727639"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>從 &lt; 模型選取 &gt; 。DMX) 內容 (
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  下表列出包含在採礦模型內容中的資料行。  
   
 > [!NOTE]  
->  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需每個演算法的「採礦模型」內容的描述，以及如何針對每個模型類型解讀和查詢「採礦模型」內容的秘訣，請參閱 [&#40;Analysis Services 資料採礦&#41;的「採礦模型內容 ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」。  
+>  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需每個演算法的「採礦模型」內容的描述，以及如何針對每個模型類型解讀和查詢「採礦模型」內容的秘訣，請參閱 [&#40;Analysis Services 資料採礦&#41;的「採礦模型內容 ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」。  
   
 |CONTENT 資料列集資料行|描述|  
 |---------------------------|-----------------|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  預期的結果：  
   
- 由於此模型是決策樹模型，因此模型父節點的下階包含單一臨界統計資料節點、代表可預測屬性的節點，以及包含輸入屬性與值的多個節點。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)。  
+ 由於此模型是決策樹模型，因此模型父節點的下階包含單一臨界統計資料節點、代表可預測屬性的節點，以及包含輸入屬性與值的多個節點。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)。  
   
 ## <a name="using-the-flattened-keyword"></a>使用 FLATTENED 關鍵字  
  採礦模型內容經常包含巢狀資料表資料行中，關於模型的有趣資訊。 FLATTENED 關鍵字可讓您從巢狀資料表資料行擷取資料，而不必使用支援階層式資料列集的提供者。  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [選取 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

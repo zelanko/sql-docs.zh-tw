@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 29d8da0efeb42d554353fa25395b3058e82e3dbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfc837238d20e58b04b66ae4ea998e60ee80247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487851"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725373"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
 
@@ -100,9 +100,8 @@ ms.locfileid: "88487851"
   
 6.  按一下 **[套用變更]** ，將以詞彙為主的關聯套用至定義域。  
   
-7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> 後續操作：建立以詞彙為主的關聯之後  
  在您建立以詞彙為主的關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
-  
   

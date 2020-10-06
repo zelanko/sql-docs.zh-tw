@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35382c7d1d7301d35d8517b62bac352a4ae9fb47
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462031"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726291"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  目前提供者所定義之資料採礦演算法的名稱。  
   
 > [!NOTE]  
->  您可以使用 DMSCHEMA_MINING_SERVICES 資料列 [集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))來抓取目前提供者所支援的演算法清單。 若要查看目前實例所支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱 [資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  您可以使用 DMSCHEMA_MINING_SERVICES 資料列 [集](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))來抓取目前提供者所支援的演算法清單。 若要查看目前實例所支援的演算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，請參閱 [資料採礦屬性](/analysis-services/server-properties/data-mining-properties)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  如需可用於定義資料行之資料類型、內容類型、資料行散發及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [資料類型 &#40;資料採礦&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [內容類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [內容類型 &#40;資料採礦&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [資料行分佈 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [資料行分佈 &#40;資料採礦&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [模型旗標 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [模型旗標 &#40;資料採礦&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援使用下列 \<Column relationship> 子句。  
   
@@ -112,7 +112,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<prediction> 子句|描述|  
 |---------------------------|-----------------|  
-|**預測**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
+|**PREDICT**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
   
 ### <a name="parameter-definition-list"></a>參數定義清單  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- 如需與每個演算法相關聯的參數清單，請參閱 [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
+ 如需與每個演算法相關聯的參數清單，請參閱 [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
 ## <a name="remarks"></a>備註  
  如果您想要建立具有內建測試資料集的模型，您應該使用 CREATE MINING STRUCTURE 陳述式，後面接著 ALTER MINING STRUCTURE。 但是，並非所有模型類型都支援鑑效組資料集。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
   
- 如需如何使用 CREATEMODEL 語句來建立採礦模型的逐步解說，請參閱 [時間序列預測 DMX 教學](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)課程。  
+ 如需如何使用 CREATEMODEL 語句來建立採礦模型的逐步解說，請參閱 [時間序列預測 DMX 教學](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))課程。  
   
 ## <a name="naive-bayes-example"></a>貝氏機率分類範例  
  以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類演算法建立新的採礦模型。 Bike Buyer 資料行定義為可預測屬性。  
@@ -191,5 +191,4 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

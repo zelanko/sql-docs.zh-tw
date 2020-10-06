@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979119"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724859"
 ---
 # <a name="using-a-connection-object"></a>使用 Connection 物件
 開啟 **連接** 物件之前，您必須定義資料來源和連線類型的特定資訊。 這大部分的資訊都是由**connection**物件上[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)的*connectionstring*參數，或是**連接**物件上的[connectionstring 屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)所持有。 連接字串是由以分號分隔的引數/值組清單所組成，其值以單引號括住。 例如：  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  您也可以在連接字串中指定 ODBC 資料來源名稱 (DSN) 或資料連結 (UDL) 檔。 如需有關 Dsn 的詳細資訊，請參閱《 ODBC 程式設計人員參考》中的 [管理資料來源](../../../odbc/admin/managing-data-sources.md) 。 如需 Udl 的詳細資訊，請參閱《 OLE DB 程式設計人員參考》中的 [資料連結 API 總覽](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) 。  
+>  您也可以在連接字串中指定 ODBC 資料來源名稱 (DSN) 或資料連結 (UDL) 檔。 如需有關 Dsn 的詳細資訊，請參閱《 ODBC 程式設計人員參考》中的 [管理資料來源](../../../odbc/admin/managing-data-sources.md) 。 如需 Udl 的詳細資訊，請參閱《 OLE DB 程式設計人員參考》中的 [資料連結 API 總覽](/previous-versions/windows/desktop/ms718102(v=vs.85)) 。  
   
  一般而言，您可以呼叫連接來建立連接 **。** 請以適當的 *連接字串* 做為其參數來開啟方法。 範例如下列 Visual Basic 程式碼片段所示：  
   

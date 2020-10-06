@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352914"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726159"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  處理指定的資料採礦物件。 如需處理採礦模型和採礦結構的詳細資訊，請參閱 [&#40;資料採礦&#41;的處理需求和考慮 ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)。  
+  處理指定的資料採礦物件。 如需處理採礦模型和採礦結構的詳細資訊，請參閱 [&#40;資料採礦&#41;的處理需求和考慮 ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)。  
   
  如果指定採礦結構，則陳述式會處理採礦結構及其所有相關聯的採礦模型。 如果指定採礦模型，陳述式就只會處理採礦模型。  
   
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  使用第二個語法形式的 INSERT INTO *\<object>* 。COLUMN_VALUES，您可以直接在模型資料行中插入資料，而不需要定型模型。 這種方法以精簡、已排序的方式提供模型的資料行資料，當您處理包含階層或已排序資料行的資料集時很有用。  
   
- 如果您搭配使用 **INSERT INTO** 與採礦模型或採礦結構，並保留 \<mapped model columns> 和 \<source data query> 引數，語句的行為就像 **ProcessDefault**，使用已經存在的系結。 如果繫結不存在，陳述式就會傳回錯誤。 如需 **ProcessDefault**的詳細資訊，請參閱 [&#40;Analysis Services&#41;的處理選項和設定 ](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下列範例會顯示語法：  
+ 如果您搭配使用 **INSERT INTO** 與採礦模型或採礦結構，並保留 \<mapped model columns> 和 \<source data query> 引數，語句的行為就像 **ProcessDefault**，使用已經存在的系結。 如果繫結不存在，陳述式就會傳回錯誤。 如需 **ProcessDefault**的詳細資訊，請參閱 [&#40;Analysis Services&#41;的處理選項和設定 ](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下列範例會顯示語法：  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  下表會根據物件的狀態，提供不同陳述式格式之結果的描述。  
   
-|引數|物件的狀態|結果|  
+|陳述式|物件的狀態|結果|  
 |---------------|----------------------|------------|  
 |插入至採礦模型*\<model>*|處理採礦結構。|處理採礦模型。|  
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
@@ -124,5 +124,4 @@ AS [Models]
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4343d8e1bd04d7e8044fa7f3f1b5de6184466d3f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7e4cafeaf590c07ec52153a2932de3e105e26950
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977719"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723099"
 ---
 # <a name="running-business-objects-in-component-services"></a>在 Component Services 中執行商務物件
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  商務物件可以是可執行檔 ( .exe) 或動態連結程式庫 ( .dll) 。 您用來執行商務物件的設定取決於物件是否為 .dll 或 .exe 檔案：  
   

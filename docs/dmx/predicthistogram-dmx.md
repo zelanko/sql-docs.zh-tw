@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbeaa08cd118e032465f8456c0d7d7e111562f88
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426160"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727687"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   傳回表示給定資料行的預測長條圖的資料表。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -92,9 +92,8 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

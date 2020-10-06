@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc4b05a804bcb544b2d4b7e532d78d9526c62e92
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 69a76648c676af5c6420cffde930ac76c096276d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980999"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724172"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 將本機快取和可更新 [記錄集](../ado-api/recordset-object-ado.md) 的暫止變更提交至 [Connect](./connect-property-rds.md) 屬性或 [URL](./url-property-rds.md) 屬性中所指定的資料來源。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="syntax"></a>語法  
   

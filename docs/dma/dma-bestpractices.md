@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 440d6d12ed639d158ad0309209b60daa56e08322
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472364"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727779"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>執行 Data Migration Assistant 的最佳做法 (機器翻譯)
 本文提供安裝、評估和遷移的一些最佳作法資訊。
@@ -29,17 +29,17 @@ ms.locfileid: "87472364"
 
 ## <a name="assessment"></a>評量
 - 在非尖峰時間執行生產資料庫的評量。
-- 分別執行**相容性問題**和**新的功能建議**評量，以減少評量的持續時間。
+- 分別執行 **相容性問題** 和 **新功能建議** 評定，以減少評量的持續時間。
 
 ## <a name="migration"></a>遷移
-- 在非尖峰時間遷移伺服器。
+- 在非尖峰時間時遷移伺服器。
 
-- 在遷移資料庫時，請提供來源伺服器和目標伺服器可存取的單一共用位置，並盡可能避免複製作業。 複製作業可能會根據備份檔案的大小來引入延遲。 複製作業也會增加因額外步驟而導致遷移失敗的機率。 當提供單一位置時，Data Migration Assistant 會略過複製作業。
+- 在遷移資料庫時，請提供來源伺服器和目標伺服器可存取的單一共用位置，並盡可能避免複製作業。 複製作業可能會根據備份檔案的大小來引入延遲。 由於有額外的步驟，因此複製作業也可增加遷移失敗的機率。 當提供單一位置時，Data Migration Assistant 會略過複製操作。
  
-    此外，請確定為共用資料夾提供正確的許可權，以避免發生遷移失敗。 正確的許可權是在工具中指定。 如果 SQL Server 實例是以網路服務認證執行，請將共用資料夾的正確許可權提供給 SQL Server 實例的電腦帳戶。
+    此外，請務必提供共用資料夾的正確許可權，以避免發生遷移失敗。 在工具中指定正確的許可權。 如果 SQL Server 實例是以 Network Service 認證執行，請將共用資料夾上的正確許可權提供給 SQL Server 實例的電腦帳戶。
 
-- 連接到來源和目標伺服器時，啟用加密連接。 使用 TLS 加密可提高 Data Migration Assistant 和 SQL Server 實例之間，在網路上傳輸之資料的安全性，這在遷移 SQL 登入時特別有用。 如果未使用 TLS 加密，而網路遭到攻擊者入侵，則要遷移的 SQL 登入可能會受到攻擊者即時攔截及/或修改。
+- 連接到來源和目標伺服器時，啟用加密連接。 使用 TLS 加密可提升 Data Migration Assistant 與 SQL Server 實例之間跨網路傳輸資料的安全性，這在遷移 SQL 登入時特別有用。 如果未使用 TLS 加密，且網路遭到攻擊者入侵，則遷移的 SQL 登入可能會被攻擊者即時攔截及/或修改。
 
-    但是，如果所有的存取都與安全的內部網路組態有關，則可能不需要加密。 啟用加密會降低效能，因為加密和解密封包所需的額外負荷。 如需詳細資訊，請參閱 [SQL Server 的加密連接](https://go.microsoft.com/fwlink/?linkid=832513)。
+    但是，如果所有的存取都與安全的內部網路組態有關，則可能不需要加密。 啟用加密會降低效能，因為加密和解密封包所需的額外負荷。 如需詳細資訊，請參閱 [SQL Server 的加密連接](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))。
     
-- 在遷移資料之前，請檢查源資料庫和目標資料庫上是否有不受信任的條件約束。 在遷移之後，再次分析目標資料庫，以查看是否有任何條件約束在資料移動過程中成為不受信任。 視需要修正不受信任的條件約束。 將條件約束保持不受信任可能會導致執行計畫不佳，而且可能會影響效能。
+- 在遷移資料之前，請先檢查源資料庫與目標資料庫的不受信任條件約束。 在遷移之後，再次分析目標資料庫，以查看是否有任何條件約束在資料移動時變成不受信任。 視需要修正不受信任的條件約束。 保持不受信任的條件約束可能會導致執行計畫不佳，而且可能會影響效能。

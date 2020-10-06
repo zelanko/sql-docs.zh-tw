@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bea20a1eb563df3d2af9cddf640359673b05dc57
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462146"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725351"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -28,28 +28,27 @@ ms.locfileid: "88462146"
  如需有關安裝 DQS 的詳細資訊，請參閱＜ [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)＞。 如想將 DQS 現有版本升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請參閱[升級 Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md)。  
   
  **依區域瀏覽內容**  
- [Data Quality Client 應用程式](../data-quality-services/data-quality-client-application.md)的![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")  
+ [Data Quality Client 應用程式](../data-quality-services/data-quality-client-application.md)的![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 知識庫和網域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 知識庫和網域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料品質專案](../data-quality-services/data-quality-projects-dqs.md)  
+ ![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料品質專案](../data-quality-services/data-quality-projects-dqs.md)  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料清理](../data-quality-services/data-cleansing.md)  
+ ![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料清理](../data-quality-services/data-cleansing.md)  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料](../data-quality-services/data-matching.md)比對  
+ ![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料](../data-quality-services/data-matching.md)比對  
   
- DQS 中的![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[參考資料服務](../data-quality-services/reference-data-services-in-dqs.md)  
+ DQS 中的![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[參考資料服務](../data-quality-services/reference-data-services-in-dqs.md)  
   
- DQS 中的![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料分析和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ DQS 中的![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示")[資料分析和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 管理](../data-quality-services/dqs-administration.md)  
+ ![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 管理](../data-quality-services/dqs-administration.md)  
   
- ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 安全性](../data-quality-services/dqs-security.md)  
+ ![小型檔案資料夾圖示](/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") [DQS 安全性](../data-quality-services/dqs-security.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Data Quality Services 簡介](../data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services 概念](../data-quality-services/data-quality-services-concepts.md)   
- [DQS 資源](https://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server 資源中心](https://go.microsoft.com/fwlink/?linkID=219676)  
-  
+ [DQS 資源](../sql-server/index.yml)   
+ [SQL Server 資源中心](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110))  
   

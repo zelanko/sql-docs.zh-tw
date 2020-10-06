@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33a80f1cf59ff314236e69085c7625521d6f721f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9929177baaf1efd486cb9f628034158b370badc7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977469"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722859"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6：將變更傳送到伺服器 (RDS 教學課程)
 如果已編輯 **記錄集** 物件，則任何變更 (也就是新增、變更或刪除的資料列) 可以傳回給伺服器。  
@@ -73,7 +73,7 @@ End Sub
  **本教學課程即將結束。**  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft OLE DB (ADO 服務提供者的遠端處理提供者) ](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   

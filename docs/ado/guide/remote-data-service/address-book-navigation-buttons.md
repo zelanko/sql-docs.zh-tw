@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e78ab8a8a652f07d93f98b144a5a9ba09f5419b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65d5686dc605e1ba254f4b7c39e879eb59733d79
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978409"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724839"
 ---
 # <a name="address-book-navigation-buttons"></a>通訊錄導覽按鈕
 通訊錄應用程式會在網頁底部顯示導覽按鈕。 您可以使用瀏覽按鈕，選取資料的第一個或最後一個資料列，或與目前選取範圍連續的資料列，以流覽 HTML 方格顯示中的資料。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="navigation-sub-procedures"></a>導覽 Sub 程式  
  通訊錄的應用程式包含數個程式，可讓使用者按一下 **第一個**、 **下**一個、 **上**一個和 **最後一個** 按鈕來四處移動資料。  

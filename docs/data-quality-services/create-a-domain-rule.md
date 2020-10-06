@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480394"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725410"
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480394"
   
 2.  按一下 **[放棄所有變更]** 移除您對定義域規則所做的任何變更，並還原成先前套用的規則，結果就是上次套用規則之後所做的任何變更將不再套用。 定義域中每個值的有效性將會更新成符合先前套用的規則，而非放棄的變更。  
   
-3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> 後續操作：建立定義域規則之後  
  在建立定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
@@ -131,7 +131,6 @@ ms.locfileid: "89480394"
 |值不符合模式|只有不符合運算元中之字元、數字和特殊字元模式的值才有效。|範例運算元：A1 (值不得符合 *任* 一個字元後面接著 *任* 一個數字的模式)。<br /><br /> 有效值：AB1、A、A:5<br /><br /> 無效值：B7、c9|  
 |值包含模式|只有包含運算元中之字元、數字和特殊字元模式的值才有效。|範例運算元：AA-12 (值包含 *任* 兩個字元後面接著連字號 (-) 的模式，後面同樣再接著 *任* 兩個數字)。<br /><br /> 有效值：AAA-01、ab-975<br /><br /> 有效值：A7、AA-6、C-45、aa;98|  
 |值不包含模式|只有不包含運算元中之字元模式的值才有效。|範例運算元：AB-12 (值包含 *任* 兩個字元後面接著連字號 (-) 的模式，後面同樣再接著 *任* 兩個數字)。<br /><br /> 有效值：A7、AA-6、C-45、aa;98<br /><br /> 無效值：AAA-01、ab-975|  
-|值符合規則運算式|只有等於運算元中之規則運算式的值才會被視為有效。<br /><br /> 請勿在規則運算式中加入 "^" 錨點或 "$" 錨點，因為 DQS 會自動將這些錨點加入至包含「值等於規則運算式」的子句  (另外，您也可以用括弧括住包含 "^" 和 "$" 錨點的正則運算式 ) 。如需有關正則運算式的詳細資訊，請參閱正則運算式 [語言元素](https://go.microsoft.com/fwlink/?LinkId=225561)。|範例運算元：[1-5]+ (每個字元都必須是介於 1 到 5 之間的數字，並出現一次或多次)<br /><br /> 有效值：123、12345、14352<br /><br /> 無效值：456、ABC|  
+|值符合規則運算式|只有等於運算元中之規則運算式的值才會被視為有效。<br /><br /> 請勿在規則運算式中加入 "^" 錨點或 "$" 錨點，因為 DQS 會自動將這些錨點加入至包含「值等於規則運算式」的子句  (另外，您也可以用括弧括住包含 "^" 和 "$" 錨點的正則運算式 ) 。如需有關正則運算式的詳細資訊，請參閱正則運算式 [語言元素](/dotnet/standard/base-types/regular-expression-language-quick-reference)。|範例運算元：[1-5]+ (每個字元都必須是介於 1 到 5 之間的數字，並出現一次或多次)<br /><br /> 有效值：123、12345、14352<br /><br /> 無效值：456、ABC|  
 |值不符合規則運算式|只有不符合運算元中之規則運算式的值才會被視為有效。|範例運算元：[1-5]+ (字串不得只包含介於 1 到 5 之間的數字)<br /><br /> 有效值：456、ABC<br /><br /> 無效值：123、123456、14352|  
-  
   

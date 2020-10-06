@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7bc85d20ab3c1c087b6352d16777b2bb7d7dcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 062e95b2030b3f4e3004fa1409f26fe82e38e05d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500857"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726109"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ FROM <existing model>
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
   
  *expression*  
- 在定型資料上，評估為有效篩選條件的運算式。 如需可當做篩選準則使用之運算式的詳細資訊，請參閱 [&#40;Analysis Services 資料採礦&#41;的採礦模型篩選 ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
+ 在定型資料上，評估為有效篩選條件的運算式。 如需可當做篩選準則使用之運算式的詳細資訊，請參閱 [&#40;Analysis Services 資料採礦&#41;的採礦模型篩選 ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
  *現有的模型*  
  要複製之現有模型的名稱。  
@@ -54,7 +54,7 @@ FROM <existing model>
  **WITH 鑽取**子句可讓您在新的採礦模型上進行鑽取。 唯有您建立模型時，才能啟用鑽研。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>範例 1：變更模型的參數  
- 下列範例 `TM_Clustering` 會根據您在「 [基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的現有「採礦模型」建立新的「採礦模型」。 在新的模型中，CLUSTER_COUNT 參數經過修改，使新模型中最多會有 5 個群集。 相反地，現有的模型使用預設值 10。  
+ 下列範例 `TM_Clustering` 會根據您在「 [基本資料採礦」教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程中建立的現有「採礦模型」建立新的「採礦模型」。 在新的模型中，CLUSTER_COUNT 參數經過修改，使新模型中最多會有 5 個群集。 相反地，現有的模型使用預設值 10。  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -78,5 +78,4 @@ FROM [TM Clustering]
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

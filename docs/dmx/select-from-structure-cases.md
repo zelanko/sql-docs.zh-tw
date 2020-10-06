@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf8afcdf84c5d33e91971c58dff5c1f93c68fd08
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500909"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726125"
 ---
 # <a name="select-from-ltstructuregtcases"></a>選取 [從 &lt; 結構] &gt; 。例
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  因此，若要保護敏感性資料或個人資訊，您應該將資料來源 view 視為遮罩個人資訊，並只在必要時授與 **AllowDrillthrough** 許可權給採礦結構或採礦模型。  
   
 ## <a name="examples"></a>範例  
- 下列範例是根據以資料庫為基礎的採礦結構、目標郵寄以及 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 相關聯的採礦模型。 如需詳細資訊，請參閱 [基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
+ 下列範例是根據以資料庫為基礎的採礦結構、目標郵寄以及 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 相關聯的採礦模型。 如需詳細資訊，請參閱 [基本資料採礦教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>範例 1：鑽研結構案例  
  下列範例會傳回採礦結構「目標郵寄」中，最舊的 500 位客戶的清單。 此查詢會傳回採礦模型中的所有資料行，但會將資料列限制為購買自行車的客戶，並以年齡加以排序。 您也可以編輯運算式清單，僅傳回您需要的資料行。  
@@ -94,5 +94,4 @@ WHERE IsTestCase();
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

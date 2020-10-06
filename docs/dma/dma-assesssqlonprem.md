@@ -1,7 +1,7 @@
 ---
-title: 執行 SQL Server 遷移評估
+title: 執行 SQL Server 的遷移評量
 titleSuffix: Data Migration Assistant
-description: 瞭解如何使用 Data Migration Assistant 來評估內部部署 SQL Server，然後再遷移至另一個 SQL Server 或 Azure SQL Database
+description: 瞭解如何使用 Data Migration Assistant 來評估內部部署 SQL Server，然後再遷移到另一個 SQL Server 或 Azure SQL Database
 ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
@@ -15,29 +15,29 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886105"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726298"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 來執行 SQL Server 移轉評估
 
-下列逐步指示可協助您執行第一個評估，以遷移至內部部署 SQL Server、SQL Server 在 Azure VM 上執行，或使用 Data Migration Assistant 來 Azure SQL Database。
+下列逐步指示可協助您執行第一次評量以遷移至內部部署 SQL Server、SQL Server 在 Azure VM 上執行，或使用 Data Migration Assistant Azure SQL Database。
 
    > [!NOTE]
-   > Data Migration Assistant 5.0 版引進了在應用程式代碼中分析資料庫連接和內嵌 SQL 查詢的支援。 如需詳細資訊，請參閱[使用 Data Migration Assistant 評估應用程式資料存取層](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)的 blog 文章。
+   > Data Migration Assistant 5.0 版引進了在應用程式程式碼中分析資料庫連接和內嵌 SQL 查詢的支援。 如需詳細資訊，請參閱使用 Data Migration Assistant 的 blog 文章 [來評估應用程式的資料存取層](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)。
 
 ## <a name="create-an-assessment"></a>建立評估
 
-1. 選取 [**新增**] （+）圖示，然後選取 [**評估**] 專案類型。
+1. 選取 **新** 的 (+) ] 圖示，然後選取 [ **評定** ] 專案類型。
 
 2. 設定來源和目標伺服器類型。
 
-    如果您要將內部部署 SQL Server 實例升級至現代化內部部署 SQL Server 實例，或將 Azure VM 上裝載的 SQL Server，請將來源和目標伺服器類型設定為 [ **SQL Server**]。 如果您要遷移至 Azure SQL Database，請改為將目標伺服器類型設定為 [ **Azure SQL Database**]。
+    如果您要將內部部署 SQL Server 實例升級到新式內部部署 SQL Server 實例或裝載于 Azure VM 上的 SQL Server，請將來源和目標伺服器類型設定為 **SQL Server**。 如果您要遷移至 Azure SQL Database，請改為將目標伺服器類型設定為 **Azure SQL Database**。
 
-3. 按一下頁面底部的 [新增]  。
+3. 按一下 [建立]。
 
    ![建立評估](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -54,27 +54,27 @@ ms.locfileid: "82886105"
 
    ![選取 SQL Server 目標的評量報告類型](../dma/media/dma-assesssqlonprem/assessment-types.png)
 
-   評估來源 SQL Server 實例以遷移至 Azure SQL Database 時，您可以選擇下列其中一種或兩種評估報告類型：
+   評定來源 SQL Server 實例以遷移至 Azure SQL Database 時，您可以選擇下列其中一種或兩種評估報告類型：
 
     - **檢查資料庫相容性**
     - **檢查功能同位**
 
-    ![選取 SQL Database 目標的評量報告類型](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
+    ![選取 SQL Database 目標的評定報告類型](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
 ## <a name="add-databases-and-extended-events-trace-to-assess"></a>新增資料庫和擴充事件追蹤以進行評估
 
-1. 選取 [**新增來源**] 以開啟 [連線] 飛出視窗功能表。
+1. 選取 [ **新增來源** ] 以開啟連接飛出視窗功能表。
 
-2. 輸入 SQL server 實例名稱、選擇 [驗證類型]、設定正確的 [連接屬性]，然後選取 **[連線]**。
+2. 輸入 SQL server 實例名稱，選擇驗證類型，設定正確的連接屬性，然後選取 **[連接]**。
 
-3. 選取要評估的資料庫，然後選取 [**新增**]。
+3. 選取要評估的資料庫，然後選取 [ **新增**]。
 
     > [!NOTE]
-    > 您可以選取多個資料庫，同時按住 Shift 或 Ctrl 鍵，然後按一下 [**移除來源**]。 您也可以選取 [**新增來源**]，從多個 SQL Server 實例新增資料庫。
+    > 您可以選取多個資料庫，同時按住 Shift 或 Ctrl 鍵，然後按一下 [ **移除來源**]，以移除多個資料庫。 您也可以選取 [ **新增來源**]，以從多個 SQL Server 實例加入資料庫。
 
-4. 如果您有任何臨機操作或動態 SQL 查詢，或是透過應用程式資料層起始的任何 DML 語句，請輸入您在其中放置所收集的所有擴充事件會話檔案的資料夾路徑，以在來源 SQL Server 上捕獲工作負載。
+4. 如果您有任何特定或動態 SQL 查詢，或是透過應用程式資料層起始的任何 DML 語句，則請輸入您所收集之所有擴充事件會話檔案的資料夾路徑，以在來源 SQL Server 上抓取工作負載。
 
-     下列範例顯示如何在來源 SQL Server 上建立擴充事件會話，以捕捉應用程式資料層工作負載。  在代表尖峰工作負載的持續時間內，捕獲工作負載。
+     下列範例示範如何在來源 SQL Server 建立擴充的事件會話，以捕捉應用程式資料層工作負載。  在代表您尖峰工作負載的持續時間內捕獲工作負載。
 
     ```
     DROP EVENT SESSION [DatalayerSession] ON SERVER
@@ -112,53 +112,53 @@ ms.locfileid: "82886105"
 
 5. 按 [下一步]**** 開始進行評估。
 
-    ![新增來源並開始評估](../dma/media/dma-assesssqlonprem/select-database1.png)
+    ![新增來源並開始評量](../dma/media/dma-assesssqlonprem/select-database1.png)
 
 > [!NOTE]
 > 您可以同時執行多個評估，並開啟 [所有評估]**** 頁面來檢視這些評估的狀態。
 
 ## <a name="view-results"></a>檢視結果
 
-評量的持續時間取決於新增的資料庫數目和每個資料庫的架構大小。 每個資料庫一旦出現就會顯示結果。
+評量的持續時間取決於新增的資料庫數目和每個資料庫的架構大小。 當每個資料庫可用時，就會顯示結果。
 
-1. 選取已完成評估的資料庫，然後使用切換器切換**相容性問題**和**功能建議**。
+1. 選取已完成評量的資料庫，然後使用切換器在 **相容性問題** 和 **功能建議** 之間切換。
 
-2. 檢查您在 [**選項**] 頁面上選取的目標 SQL Server 版本所支援之所有相容性層級的相容性問題。
+2. 檢查您在 [ **選項** ] 頁面上選取之目標 SQL Server 版本所支援之所有相容性層級的相容性問題。
 
-您可以分析受影響的物件、其詳細資料，並可能修正**重大變更**、**行為變更**和已**淘汰功能**所識別的每個問題，以檢查相容性問題。
+您可以藉由分析受影響的物件、其詳細資料，以及可能會修正 **中斷變更**、 **行為變更**和已 **淘汰功能**所識別的每個問題，來查看相容性問題。
 
-![查看評估結果](../dma/media/dma-assesssqlonprem/review-results.png)
+![查看評量結果](../dma/media/dma-assesssqlonprem/review-results.png)
 
-同樣地，您可以在**效能**、**儲存體**和**安全性**區域中查看功能建議。
+同樣地，您可以跨 **效能**、 **儲存體**和 **安全性** 區域查看功能建議。
 
-功能建議涵蓋不同種類的功能，例如記憶體內部 OLTP、資料行存放區、Stretch Database、Always Encrypted、動態資料遮罩和透明資料加密。
+功能建議涵蓋各種不同的功能，例如記憶體內部 OLTP、資料行存放區、Stretch Database、Always Encrypted、動態資料遮罩和透明資料加密。
 
-![View 功能建議](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
+![查看功能建議](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-針對 Azure SQL Database，評量會提供遷移封鎖問題和功能同位問題。選取特定的選項，以檢查這兩個類別的結果。
+針對 Azure SQL Database，評量可提供遷移封鎖問題和功能同位問題。選取特定選項來檢查這兩個類別的結果。
 
-- **SQL Server 功能**同位類別提供一組完整的建議、Azure 中可用的替代方法，以及緩和步驟。 這可協助您在遷移專案中規劃這項工作。
+- **SQL Server 功能**同位分類提供一組完整的建議、Azure 中可用的替代方法，以及緩和步驟。 它可協助您在遷移專案中規劃這項工作。
 
-  ![SQL Server 功能同位的視圖資訊](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
+  ![查看 SQL Server 功能同位的資訊](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- [**相容性問題**] 類別提供部分支援或不支援的功能，以封鎖將內部部署 SQL Server 資料庫移轉至 Azure SQL 資料庫。接著，它會提供可協助您解決這些問題的建議。
+- **相容性問題**類別提供部分支援或不支援的功能，以防止將內部部署 SQL Server 資料庫移轉至 Azure SQL 資料庫。接著，它會提供建議來協助您解決這些問題。
 
   ![查看相容性問題](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>評估資料資產的目標就緒程度
 
-如果您想要進一步將這些評量延伸到整個資料資產，並找出 SQL Server 實例和資料庫的相對就緒程度以進行遷移 Azure SQL Database，請選取 [**上傳至 Azure Migrate**]，將結果上傳至 Azure Migrate 中樞。
+如果您想要進一步將這些評定延伸至整個資料資產，並找出 SQL Server 實例和資料庫的相對就緒程度，以便遷移至 Azure SQL Database，請選取 **[上傳至 Azure Migrate**]，將結果上傳至 Azure Migrate 中樞。
 
-這麼做可讓您在 Azure Migrate hub 專案上查看合併的結果。
+這樣做可讓您在 Azure Migrate 中樞專案上查看合併的結果。
 
-如需目標就緒評量的詳細逐步指引，請參閱[這裡](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017)。
+您可以 [在這裡](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017)找到目標就緒程度評定的詳細逐步指引。
 
    ![將結果上傳至 Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 
 ## <a name="export-results"></a>匯出結果
 
-在所有資料庫完成評估之後，請選取 [**匯出報表**]，將結果匯出至 JSON 檔案或 CSV 檔案。 然後您就可以方便地分析資料。
+所有資料庫完成評量之後，請選取 [ **匯出報表** ]，將結果匯出至 JSON 檔案或 CSV 檔案。 然後您就可以自行分析資料。
 
 ## <a name="save-and-load-assessments"></a>儲存並載入評量
 
-除了匯出評估結果之外，您還可以將評估詳細資料儲存至檔案，並載入評估檔案以供日後審查。  如需詳細資訊，請參閱[使用 Data Migration Assistant 儲存和載入評](../dma/dma-save-load-assessments.md)量一文。
+除了匯出評量的結果之外，您還可以將評量詳細資料儲存到檔案中，並載入評定檔以供稍後審核。  如需詳細資訊，請參閱 [使用 Data Migration Assistant 儲存和載入評](../dma/dma-save-load-assessments.md)量一文。

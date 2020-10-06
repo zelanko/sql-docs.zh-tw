@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466623"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726602"
 ---
 # <a name="set-domain-properties"></a>設定定義域屬性
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466623"
   
 2.  在建立新的定義域之後設定其屬性，如＜ [Create a Domain](../data-quality-services/create-a-domain.md)＞中所述。  
   
-3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> 後續操作：設定定義域屬性之後  
  在您設定定義域屬性之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
@@ -90,5 +90,4 @@ ms.locfileid: "88466623"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> 停用語法錯誤演算法  
  如果資料類型是 **[字串]**，選取此選項可指定定義域中的 DQS 在清理期間將不會識別語法錯誤。 當識別該定義域的語法錯誤無關緊要時，請選取這個核取方塊。 例如，對序號識別語法錯誤可能無關緊要。 此控制項只適用於字串資料類型。 DQS 將不會檢查非字串資料類型的語法錯誤。  
-  
   

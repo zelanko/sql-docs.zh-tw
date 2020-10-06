@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353554"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726186"
 ---
 # <a name="functions-dmx"></a>函數 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>預存程序  
  您可以使用 Common Language Runtime 程式設計語言建立擴充 DMX 功能的預存程序。 例如，迴歸樹採礦模型會傳回描述回歸方程式的係數，例如 A、B 等，但模型不會傳回方程式本身，例如 + Bx = y。 不過，您可以撰寫使用資料庫採礦模型物件導覽內容結構描述，以及將迴歸方程式當成輸出傳回的預存程序。 因此，DMX 陳述式可以傳回迴歸方程式的清單作為查詢結果的一部份。  
   
- **如需詳細資訊：多**[維度模型元件管理](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **如需詳細資訊：多**[維度模型元件管理](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;DMX&#41; 參考的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

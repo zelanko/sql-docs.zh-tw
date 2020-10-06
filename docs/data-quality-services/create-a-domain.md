@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399cc88598173e7406b326c83ea9a098b879c59e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487880"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725347"
 ---
 # <a name="create-a-domain"></a>建立定義域
 
@@ -88,11 +88,10 @@ ms.locfileid: "88487880"
   
 8.  如果資料類型是 **[字串]**，請選取 **[停用語法錯誤演算法]** 來擴展定義域，而不檢查字串值的語法錯誤。  
   
-9. 按一下 [確定]。  
+9. 按一下 [確定]  。  
   
-10. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+10. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> 後續操作：建立定義域之後  
  在建立定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d80417306c4fe466003a48739b65c337424487a6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d234732b90fdd89b6f0e41efe1762bb3a99ddde2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978469"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724849"
 ---
 # <a name="address-book-command-buttons"></a>通訊錄命令按鈕
 通訊錄的應用程式包含下列命令按鈕：  
@@ -33,7 +33,7 @@ ms.locfileid: "88978469"
 -   [ **取消變更** ] 按鈕以捨棄變更。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
 ## <a name="find-button"></a>尋找按鈕  
  按一下 [ **尋找** ] 按鈕會啟動 VBScript Find_OnClick Sub 程式，此程式會建立並傳送 SQL 查詢。 按一下這個按鈕，就會填入資料格。  

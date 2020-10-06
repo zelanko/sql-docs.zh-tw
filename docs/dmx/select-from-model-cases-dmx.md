@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466520"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727659"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>從 &lt; 模型選取 &gt; 。DMX)  (案例
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函數只會傳回與架構資料列集 NODE_UNIQUE_NAME 資料行所指定之節點相關聯的案例。  
   
 ## <a name="examples"></a>範例  
- 下列範例是根據以 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫及其相關聯的採礦模型為依據的「以目標郵寄為目標的」結構。 如需詳細資訊，請參閱 [基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程。  
+ 下列範例是根據以 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫及其相關聯的採礦模型為依據的「以目標郵寄為目標的」結構。 如需詳細資訊，請參閱 [基本資料採礦教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>範例 1：鑽研模型案例和結構資料行  
  下列範例會傳回用於測試「目標郵寄」模型之所有案例的資料行。 如果有建置模型的採礦結構不包含鑑效組測試資料集，此查詢會傳回 0 個案例。 您可以使用運算式清單，僅傳回您需要的資料行。  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  若要傳回結構資料行，必須同時在採礦模型和採礦結構上啟用鑽研權限。  
   
 > [!NOTE]  
->  並非所有的採擷模型類型都支援鑽研。 如需支援「鑽取」之模型的相關資訊，請參閱 [&#40;資料採礦&#41;的「查詢查詢 ](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)」。  
+>  並非所有的採擷模型類型都支援鑽研。 如需支援「鑽取」之模型的相關資訊，請參閱 [&#40;資料採礦&#41;的「查詢查詢 ](/analysis-services/data-mining/drillthrough-queries-data-mining)」。  
   
 ## <a name="see-also"></a>另請參閱  
  [選取 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料定義語句](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

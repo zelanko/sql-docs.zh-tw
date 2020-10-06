@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a08ec4809b281205386abad429afe339e0dbb1d1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426120"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727694"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -81,9 +81,8 @@ NATURAL PREDICTION JOIN
  這些結果之間的差異示範了正規化的效果。 **CaseLikelihood**的原始值會建議案例的機率大約是 20%;但是，當您將結果正規化時，案例的可能性會很明顯。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦演算法 &#40;Analysis Services 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)   
  [&#40;DMX&#41;的一般預測函數 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

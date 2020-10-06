@@ -14,12 +14,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 002524d834b8036c353b096b0a4fa1fa37875b4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473780"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725029"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL 資料倉儲) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -41,7 +41,9 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
      [ , [ @nullable = ] 'nullable' ]   
      [ , [ @ODBCVer = ] 'ODBCVer' ]   
 [ ; ]  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引數  
  [ @table_name =] '*table_name*'  
@@ -68,7 +70,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  這是正在使用的 ODBC 版本。 *ODBCVer* 是 **int (** 4 **) **，預設值是2。 這表示 ODBC 2.0 版。 如需有關 ODBC 2.0 版和 ODBC 3.0 版之差異的詳細資訊，請參閱 ODBC 3.0 版的 ODBC SQLSpecialColumns 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="result-sets"></a>結果集  
   

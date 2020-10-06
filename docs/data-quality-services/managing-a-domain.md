@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5083a23b8e29bfcbf1a4fc343cc8535667b0af89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb3e35b7ad6809eef6fec9bf8e390f36f6572cdf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496322"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724614"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 
@@ -53,7 +53,7 @@ ms.locfileid: "88496322"
 |變更或增加知識庫中的值|[變更定義域值](../data-quality-services/change-domain-values.md)|  
 |使用驗證和標準化規則|[建立定義域規則](../data-quality-services/create-a-domain-rule.md)|  
 |使用關聯來更正屬於定義域值之一部分的詞彙|[建立以詞彙為主的關聯](../data-quality-services/create-term-based-relations.md)|  
-|完成、關閉或取消定義域管理活動|[結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|完成、關閉或取消定義域管理活動|[結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -62,5 +62,4 @@ ms.locfileid: "88496322"
 |藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
 |將知識匯入知識庫或是從知識庫匯出知識。|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |建立複合定義域，並將知識加入至定義域。|[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

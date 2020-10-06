@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a943c8b4f42dc5ca232114070e5e09ac318889d0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b43d18127717ae58b4db2c8fb33c5d173ab160af
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978379"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724829"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  RDS 解決了存在於下列環境中的應用程式：用戶端應用程式會指定將在伺服器上執行的程式，以及傳回所需資訊所需的參數。 在伺服器上叫用的程式會取得指定之資料來源的存取權、抓取資訊、選擇性地處理資料，然後將產生的資訊傳回給用戶端應用程式，其可輕鬆使用的形式。 RDS 提供可讓您執行下列動作順序的方法：  
   

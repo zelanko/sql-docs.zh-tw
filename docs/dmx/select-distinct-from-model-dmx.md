@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: caefcdc2e081c0e8d0e7bee329d4dc5d4d5cfa22
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413264"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727649"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>從 &lt; 模型 &gt; (DMX) 選取相異
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |連續|資料行中之值的中點。|  
   
 ## <a name="discrete-column-example"></a>分隔資料行範例  
- 下列程式碼範例是 `[TM Decision Tree]` 以您在「 [基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的模型為基礎。 此查詢會傳回離散資料行 `Gender` 中存在的唯一值。  
+ 下列程式碼範例是 `[TM Decision Tree]` 以您在「 [基本資料採礦」教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程中建立的模型為基礎。 此查詢會傳回離散資料行 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  下列程式碼範例會針對演算法建立的每個值區，傳回 [`Yearly Income]` 資料行的中點、最大與最小值。 若要重新產生此範例的結果，您必須建立與 `[Targeted Mailing]` 相同的新採礦結構。 在嚮導中，將資料行的內容類型 `Yearly Income` 從 **連續** 變更為 **離散**化。  
   
 > [!NOTE]  
->  您也可以變更在＜基本採礦教學課程＞中建立的採礦模型，以便將採礦結構資料行 [`Yearly Income]` 離散化。 如需如何進行這項作業的詳細資訊，請參閱 [變更採礦模型中資料行的離散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 不過，當您變更資料行的離散化時，將會強制重新處理採礦結構，這樣會變更您使用該結構建立之其他模型的結果。  
+>  您也可以變更在＜基本採礦教學課程＞中建立的採礦模型，以便將採礦結構資料行 [`Yearly Income]` 離散化。 如需如何進行這項作業的詳細資訊，請參閱 [變更採礦模型中資料行的離散](/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 不過，當您變更資料行的離散化時，將會強制重新處理採礦結構，這樣會變更您使用該結構建立之其他模型的結果。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -138,5 +138,4 @@ FROM [TM Decision Tree]
  [選取 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dd320306e757a969b684bd6654a6cc0431cb717c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c576147845d5e6c2186def8eb79b7424f332a40
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487784"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725316"
 ---
 # <a name="dqs-security"></a>DQS 安全性
 
@@ -41,6 +41,5 @@ ms.locfileid: "88487784"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何使用 SQL Server Management Studio 建立使用者及授與 DQS 角色。|[在 SSMS 中管理 DQS 使用者](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
-  
+|描述如何使用 SQL Server Management Studio 建立使用者及授與 DQS 角色。|[在 SSMS 中管理 DQS 使用者](./data-quality-services-features-and-tasks.md)|  
   

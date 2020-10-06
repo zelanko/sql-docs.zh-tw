@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977589"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722999"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步驟 2：叫用伺服器程式 (RDS 教學課程)
 當您在用戶端 *proxy*上叫用方法時，伺服器上的實際程式會執行方法。 在此步驟中，您將在伺服器上執行查詢。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  **部分 A** 如果您未在本教學課程中使用 [RDSServer DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) ，執行此步驟最方便的方式就是使用 [RDS。DataControl](../../reference/rds-api/datacontrol-object-rds.md) 物件。 **RDS。DataControl**結合了先前建立 proxy 的步驟，此步驟會發出查詢。  
   

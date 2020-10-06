@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24a19fc748da4ef521bb9781941911efb08e0132
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431170"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727742"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   依照運算式指定的遞增次序順序，傳回指定數目的最底部資料列。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,7 +38,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  引數所提供的值會 \<rank expression> 決定引數中所提供之資料列的順位順序 \<table expression> ，而且會傳回引數中所指定之最底層資料列的數目 \<count> 。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對您使用「 [基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程所建立的關聯模型建立預測查詢。  
+ 下列範例會針對您使用「 [基本資料採礦」教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程所建立的關聯模型建立預測查詢。  
   
  若要瞭解 BottomCount 的運作方式，請先執行僅傳回嵌套資料表的預測查詢，這可能會很有説明。  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 [在資料採礦設計師中建立單一查詢](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
+>  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 [在資料採礦設計師中建立單一查詢](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
   
  範例結果︰  
   
@@ -105,5 +105,4 @@ NATURAL PREDICTION JOIN
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
  [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
-  
   

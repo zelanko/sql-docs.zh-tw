@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6967254559dda05fcedd1224a8b8769b08f10ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466566"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724637"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 預設知識庫
 
@@ -49,9 +49,8 @@ ms.locfileid: "88466566"
   
 -   使用預設知識庫建立新的知識庫。 若要從現有的知識庫建立知識庫，請參閱＜ [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md)＞。  
   
--   在 [Integration Services 中的 DQS 清理元件](https://go.microsoft.com/fwlink/?LinkId=238830) 及 [Excel 的 Master Data Services 增益集](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用。  
+-   在 [Integration Services 中的 DQS 清理元件](/previous-versions/sql/sql-server-2012/ee677619(v=sql.110)) 及 [Excel 的 Master Data Services 增益集](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)中使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ab5056926fcda98ef0f60449eb5b19d75105e35
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e8d73b1c0a07ea127e0d4bad880b82c08ca24a5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981359"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724282"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統中不再包含 RDS 伺服器元件 (如需詳細) 資訊，請參閱 Windows 8 和 [Windows server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416) 。 未來的 Windows 版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至 [WCF 資料服務](/dotnet/framework/wcf/)。  
   
  下列範例顯示如何設定 RDS 的必要參數 [。](./datacontrol-object-rds.md) 在執行時間 DataControl。 使用[Refresh](../ado-api/refresh-method-ado.md)方法抓取[記錄集](../ado-api/recordset-object-ado.md)的方式是由[ExecuteOptions](./executeoptions-property-rds.md)和[FetchOptions](./fetchoptions-property-rds.md)屬性的設定所決定。 若要測試此範例，請將下列程式碼剪下並貼入一般 ASP 檔中，並將它命名為**RefreshVBS。** 使用 [ **尋找** ] 找出檔案 Adovbs，並將它放在您打算使用的目錄中。 ASP 腳本會識別您的伺服器。  
   

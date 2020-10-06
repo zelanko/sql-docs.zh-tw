@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04bfd39b8b1d94ec02f12ee599bfb0a21652b15c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4601399a2476b71f789b497fd022c60030def5e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431160"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727729"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  **BottomPercent**函數會以遞增的順位順序傳回最底層的資料列。 排名是根據 \<rank expression> 每個資料列之引數的評估值，因此值的總和 \<rank expression> 至少是引數所指定的給定百分比 \<percent> 。 當仍然符合指定的百分比值時， **BottomPercent**會傳回可能的最小元素數目。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對您在「 [基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的關聯模型建立預測查詢。  
+ 下列範例會針對您在「 [基本資料採礦」教學](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))課程中建立的關聯模型建立預測查詢。  
   
  若要瞭解 BottomPercent 的運作方式，請先執行僅傳回嵌套資料表的預測查詢，可能會很有説明。  
   
@@ -58,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 [在資料採礦設計師中建立單一查詢](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
+>  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 [在資料採礦設計師中建立單一查詢](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
   
  範例結果︰  
   
@@ -116,5 +116,4 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;函數 &#40;](../dmx/functions-dmx.md)  
-  
   
