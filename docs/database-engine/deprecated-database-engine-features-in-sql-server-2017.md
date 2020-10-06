@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244074"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670516"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
 |--------------------|-------------|--------------|------------|
-從 100 版 (SQL Server 2008 和 SQL Server 2008 R2) 升級。 | 當 SQL Server 版本不再受到[支援](https://aka.ms/sqllifecycle)時，相關聯的資料庫相容性層級會標示為已淘汰。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 | 資料庫相容性層級 100 | 108 |
+從 100 版 (SQL Server 2008 和 SQL Server 2008 R2) 升級。 | 當 SQL Server 版本不再受到[支援](/lifecycle/products/?products=sql-server)時，相關聯的資料庫相容性層級會標示為已淘汰。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 | 資料庫相容性層級 100 | 108 |
 
 ### <a name="database-objects"></a>資料庫物件
 
@@ -370,6 +370,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)** 。 如果開發人員已配置 **varbinary(50)** ，則未來版本的 Cookie 傳回大小如有增加，應用程式可能需要變更。 雖然這不是取代問題，但是由於應用程式調整很類似，因此在本主題中提及。 如需詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 中已停止的 Database Engine 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [SQL Server 2016 中已停止的 Database Engine 功能](./discontinued-database-engine-functionality-in-sql-server.md)  

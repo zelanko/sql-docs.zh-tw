@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496225"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670741"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>隱藏復原模式錯誤伺服器組態選項
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-SQL Server [復原模式](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)可控制交易記錄維護。 完整復原模式可確保不會因為資料檔案遺失或損毀而遺失任何工作，並支援復原到備份保留原則內的任意時間點。 完整復原模式是預設值，且是 SQL 受控執行個體中唯一支援的復原模式。 嘗試在 SQL 受控執行個體中變更復原模式會傳回錯誤訊息。
+SQL Server [復原模式](../../relational-databases/backup-restore/recovery-models-sql-server.md)可控制交易記錄維護。 完整復原模式可確保不會因為資料檔案遺失或損毀而遺失任何工作，並支援復原到備份保留原則內的任意時間點。 完整復原模式是預設值，且是 SQL 受控執行個體中唯一支援的復原模式。 嘗試在 SQL 受控執行個體中變更復原模式會傳回錯誤訊息。
 
 使用 [隱藏復原模式錯誤] 進階組態選項，可指定在 SQL 受控執行個體上執行變更資料庫復原模式的命令時，會傳回錯誤或只傳回警告。 當此選項在 SQL 受控執行個體上設定為 1 (開啟) 時，執行 ALTER DATABASE SET RECOVERY 命令不會變更資料庫的復原模式，但仍不會傳回錯誤，而是改傳回警告訊息。 當此選項在 SQL 受控執行個體上設定為 0 (關閉) 時，執行 ALTER DATABASE SET RECOVERY 命令會傳回錯誤訊息。
 

@@ -11,12 +11,12 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90eb3c3e9565d25c3b17f1080923b26efad97196
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900276"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670965"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
 
@@ -98,7 +98,7 @@ ms.locfileid: "85900276"
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
         >   
-        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 作為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) Web 應用程式，則必須先從 IIS 刪除 Web 應用程式和相關聯的應用程式集區，然後使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
+        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 作為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) Web 應用程式，則必須先從 IIS 刪除 Web 應用程式和相關聯的應用程式集區，然後使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) 和 [移除應用程式集區 (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10))。  
   
 4.  建立新 Web 應用程式與升級的 MDS 資料庫的關聯。  
   
@@ -158,5 +158,4 @@ ms.locfileid: "85900276"
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
   

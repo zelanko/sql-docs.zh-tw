@@ -11,12 +11,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1de1d21208319773552d315714306abe3530f871
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883534"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670416"
 ---
 # <a name="install-sql-server-powershell"></a>安裝 SQL Server PowerShell
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,10 +35,9 @@ ms.locfileid: "85883534"
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援從物件總管樹狀結構啟動 Windows PowerShell 工作階段。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式支援 Windows PowerShell 作業步驟。  
   
-Windows Server 2012 及更新版本和 Windows 8 及更新版本，會安裝並設定 PowerShell。 如需安裝 Windows PowerShell 的資訊，請參閱[安裝 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell)。  
+Windows Server 2012 及更新版本和 Windows 8 及更新版本，會安裝並設定 PowerShell。 如需安裝 Windows PowerShell 的資訊，請參閱[安裝 Windows PowerShell](/powershell/scripting/install/installing-windows-powershell)。  
 
 如需詳細資訊，請參閱   
 
-- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
-  
+- [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   

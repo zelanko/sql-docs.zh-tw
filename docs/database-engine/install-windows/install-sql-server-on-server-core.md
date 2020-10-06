@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1cc02299cda600a9c82e121f8b588b49d9bd64b1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 40114f51a3012f5f60564a57e63a2f3e0bc8bdab
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442803"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670429"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "87442803"
 
 您可以在 Server Core 安裝上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
   
-Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) 。  
+Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](/windows-server/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) 。  
   
  如需目前支援的作業系統清單，請參閱[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
@@ -77,7 +77,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
  在 Server Core 安裝中，可支援從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。  
   
 ## <a name="install"></a>安裝  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)。  
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
@@ -324,13 +324,11 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用組態檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [使用組態檔安裝 SQL Server](./install-sql-server-using-a-configuration-file.md)   
+ [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2017 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [安裝 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [安裝 Server Core](/windows-server/get-started/getting-started-with-server-core)   
+ [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](/windows-server/get-started/sconfig-on-ws2016)   
  [Windows PowerShell 中的容錯移轉叢集 Cmdlet](/powershell/module/failoverclusters/)
 
   
-  
-

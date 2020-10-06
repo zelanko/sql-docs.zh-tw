@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 98fdd14f73f64dd23df2a8766a49f4adbc7ffc2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500915"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670181"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 
@@ -27,7 +27,7 @@ ms.locfileid: "88500915"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- 如需版本資訊，請參閱 [SQL Server 2016 版本資訊](https://go.microsoft.com/fwlink/?LinkID=398124)。  
+ 如需版本資訊，請參閱 [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md)。  
   
  **本文內容：**  
   
@@ -93,13 +93,13 @@ ms.locfileid: "88500915"
   
 2.  重新啟動伺服器。  
   
-3.  在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**)，以安裝資料提供者。 但是執行 SQL Server 安裝精靈所在的伺服器除外，安裝精靈也會升級資料提供者。 如需詳細資訊，請參閱[下載 Microsoft SQL Server 2014 Powerpivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) 和[安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
+3.  在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**)，以安裝資料提供者。 但是執行 SQL Server 安裝精靈所在的伺服器除外，安裝精靈也會升級資料提供者。 如需詳細資訊，請參閱[下載 Microsoft SQL Server 2014 Powerpivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) 和[安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
 4.  **在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態** 工具，以增益集所安裝的更新方案檔來設定 SharePoint 伺服器陣列。 您無法使用 SharePoint 管理中心來進行此步驟。 如需詳細資訊，請參閱下列：  
   
     1.  在 Windows [開始] 頁面中，輸入 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ，然後在搜尋結果中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態]。 請注意，搜尋可能會將組態工具的兩個版本皆傳回。  
   
-         ![兩個 PowerPivot 組態工具](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
+         ![兩個 PowerPivot 組態工具](/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
          Or  
   
@@ -130,13 +130,13 @@ ms.locfileid: "88500915"
   
      如需詳細資訊，請參閱下列：  
   
-    -   [Power Pivot 組態工具](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
+    -   [Power Pivot 組態工具](/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
-    -   [設定或修復 Power Pivot for SharePoint 2013 &#40;Power Pivot 組態工具&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
+    -   [設定或修復 Power Pivot for SharePoint 2013 &#40;Power Pivot 組態工具&#41;](/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
   
-    -   [使用 Windows PowerShell 的 Power Pivot 組態](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
+    -   [使用 Windows PowerShell 的 Power Pivot 組態](/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
-    -   [Power Pivot for SharePoint 的 PowerShell 參考](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+    -   [Power Pivot for SharePoint 的 PowerShell 參考](/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
 5.  透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本文的[升級後的驗證工作](#verify)和下列章節：  
   
@@ -183,7 +183,7 @@ ms.locfileid: "88500915"
   
          按一下 **[是]** ，將活頁簿覆寫成較新的版本。 否則，按一下 **[否]** ，返回首頁。 將活頁簿儲存到不同的位置，讓您擁有一個副本，然後在準備好繼續時，返回此步驟。  
   
-         如需自訂儀表板中使用之活頁簿的詳細資訊，請參閱 [自訂 Power Pivot 管理儀表板](https://go.microsoft.com/fwlink/?linkID=229639)。  
+         如需自訂儀表板中使用之活頁簿的詳細資訊，請參閱 [自訂 Power Pivot 管理儀表板](/previous-versions/sql/sql-server-2008-r2/ff718155(v=sql.105))。  
   
     5.  檢閱工作清單中的動作，並排除您不希望該工具執行的任何動作。 預設包含所有動作。 若要移除動作，請在工作清單中選取該動作，然後清除 [參數] 頁面上的 **[在工作清單中包含這個動作]** 核取方塊。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "88500915"
   
     4.  依序按一下 **[驗證]** 和 **[執行]** ，重試組態工具中的工作。  
   
-     至於其他所有錯誤，請檢查 ULS 記錄檔。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)。  
+     至於其他所有錯誤，請檢查 ULS 記錄檔。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)。  
   
 ##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> 活頁簿  
  升級伺服器不一定會升級伺服器上執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，但是使用舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 建立的舊活頁簿仍可如常運作，並使用該版本提供的功能。 活頁簿可以維持運作，是由於已升級的伺服器具有屬於舊版安裝的 Analysis Services OLE DB 提供者版本所致。  
@@ -300,7 +300,7 @@ Get-PowerPivotSystemService
   
 3.  按一下 **[信任的資料提供者]** 。 您應該會看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果您已升級 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝，也會看到舊版的 MSOLAP.4。  
   
-4.  如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services)。  
+4.  如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services)。  
   
  MSOLAP.4 會描述為 Microsoft OLE DB Provider for OLAP Services 10.0。 這個版本可能是與 Excel Services 一併安裝的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 預設版本，或者是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本。 SharePoint 安裝的預設版本不支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。 您必須擁有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本或更新版本，才能連接 SharePoint 上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。 若要確認您擁有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本，請使用上一節中說明如何檢視檔案屬性以確認版本的指示。  
   
@@ -349,18 +349,17 @@ Get-PowerPivotSystemService
   
 |Task|連結|  
 |----------|----------|  
-|確認伺服器在執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的所有電腦上執行。|[啟動或停止 Power Pivot for SharePoint Server](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
-|確認網站集合層級的功能啟用。|[在管理中心為網站集合啟用 Power Pivot 功能整合](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
+|確認伺服器在執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的所有電腦上執行。|[啟動或停止 Power Pivot for SharePoint Server](/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
+|確認網站集合層級的功能啟用。|[在管理中心為網站集合啟用 Power Pivot 功能整合](/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |確認個別的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿會透過開啟活頁簿，並按一下篩選與交叉分析篩選器起始查詢來正確載入。|檢查快取的檔案是否存在硬碟上。 快取的檔案可確認資料檔案已在實體伺服器上載入。 尋找 c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup 資料夾中的快取檔案。|  
-|在設定為資料重新整理的所選活頁簿上測試資料重新整理。|測試資料重新整理最簡單的方式就是修改資料重新整理排程，也就是選擇 **[並且盡快重新整理]** 核取方塊，讓資料重新整理立即執行。 此步驟將判斷目前活頁簿的資料重新整理是否成功。 針對其他常用的活頁簿重複這些步驟以確保資料重新整理運作正常。 如需排程資料重新整理的詳細資訊，請參閱 [排程資料重新整理 (Power Pivot for SharePoint)](https://docs.microsoft.com/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account)。|  
-|一段時間之後，監視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的資料重新整理報表，以確認沒有資料重新整理錯誤。|[Power Pivot 管理儀表板和使用量資料](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
+|在設定為資料重新整理的所選活頁簿上測試資料重新整理。|測試資料重新整理最簡單的方式就是修改資料重新整理排程，也就是選擇 **[並且盡快重新整理]** 核取方塊，讓資料重新整理立即執行。 此步驟將判斷目前活頁簿的資料重新整理是否成功。 針對其他常用的活頁簿重複這些步驟以確保資料重新整理運作正常。 如需排程資料重新整理的詳細資訊，請參閱 [排程資料重新整理 (Power Pivot for SharePoint)](/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account)。|  
+|一段時間之後，監視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的資料重新整理報表，以確認沒有資料重新整理錯誤。|[Power Pivot 管理儀表板和使用量資料](/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
- 如需如何設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定和功能的詳細資訊，請參閱 [管理中心的 PowerPivot 伺服器管理和組態](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
+ 如需如何設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定和功能的詳細資訊，請參閱 [管理中心的 PowerPivot 伺服器管理和組態](/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)。  
   
- 如需引導您完成所有安裝後組態工作的逐步指示，請參閱 [初始組態 (Power Pivot for SharePoint)](https://docs.microsoft.com/sharepoint/administration/configure-power-pivot-for-sharepoint-2013)。  
+ 如需引導您完成所有安裝後組態工作的逐步指示，請參閱 [初始組態 (Power Pivot for SharePoint)](/sharepoint/administration/configure-power-pivot-for-sharepoint-2013)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [PowerPivot for SharePoint 2010 安裝](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)  
-  
   

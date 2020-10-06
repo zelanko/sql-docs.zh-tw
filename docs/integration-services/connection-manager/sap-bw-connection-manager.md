@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426000"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719423"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
 
@@ -50,12 +50,12 @@ ms.locfileid: "88426000"
   
  如果您不知道設定連接管理員的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
+ 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 設計師設定來源  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 連接管理員屬性的詳細資訊，請按下列主題：  
   
--   [SAP BW 連接管理員編輯器](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連接管理員編輯器]()  
   
 ## <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
   使用 [SAP BW 連線管理員編輯器]**** 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
@@ -154,5 +154,4 @@ ms.locfileid: "88426000"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW 元件](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

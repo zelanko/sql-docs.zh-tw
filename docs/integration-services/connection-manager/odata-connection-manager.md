@@ -14,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496094"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719672"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
 
@@ -55,7 +55,7 @@ ms.locfileid: "88496094"
 若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services]**** 驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。 目前不支援新式驗證。 
   
 ### <a name="specifying-and-securing-credentials"></a>指定認證及維護認證安全  
- 如果 OData 服務需要基本驗證，您可以在 [OData 連線管理員編輯器](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定使用者名稱和密碼。 您在編輯器中輸入的值會保存在封裝中。 密碼值會根據封裝保護等級進行加密。  
+ 如果 OData 服務需要基本驗證，您可以在 [OData 連線管理員編輯器]()中指定使用者名稱和密碼。 您在編輯器中輸入的值會保存在封裝中。 密碼值會根據封裝保護等級進行加密。  
   
  有多個方式可將使用者名稱和密碼值參數化，或儲存到封裝外部。 例如，您可以使用參數，或從 SQL Server Management Studio 執行套件時直接設定連線管理員屬性。  
   
@@ -92,4 +92,4 @@ ms.locfileid: "88496094"
 若要連線至 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，您不能使用 [Microsoft Online Services]**** 驗證選項。 您也無法使用針對多重要素驗證設定的任何選項。
 
  **測試連接**  
- 按一下此按鈕，測試 OData 來源的連線。  
+ 按一下此按鈕，測試 OData 來源的連線。

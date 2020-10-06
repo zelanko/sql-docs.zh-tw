@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394204"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719671"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
 
@@ -82,7 +82,7 @@ ms.locfileid: "88394204"
   
     2.  在 **[查閱作業]** 清單中，指定查閱資料行的值要取代輸入資料行中的值，還是要寫入至新的資料行。  
   
-12. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+12. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../data-flow/transformations/lookup-transformation.md)。  
   
 13. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
@@ -90,5 +90,4 @@ ms.locfileid: "88394204"
  [使用快取連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

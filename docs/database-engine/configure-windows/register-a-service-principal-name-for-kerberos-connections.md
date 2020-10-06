@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200682"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670328"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
 
@@ -68,7 +68,7 @@ Windows 驗證是 SQL Server 驗證使用者的慣用方法。 使用 Windows �
 > [!NOTE]  
 >  當 Windows 網域設定為在小於 Windows Server 2008 R2 的功能層級上執行時，受管理的服務帳戶將不會有針對 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務註冊 SPN 的必要權限。 如果需要 Kerberos 驗證，網域系統管理員應該在受管理的服務帳戶上手動註冊 SQL Server SPN。
 
-[How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
+[How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> SPN 格式
 
@@ -190,4 +190,4 @@ WHERE session_id = @@SPID;
 - [用戶端連接 &#40;OLE DB&#41; 中的服務主體名稱 &#40;SPN&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [用戶端連接 &#40;ODBC&#41; 中的服務主體名稱 &#40;SPN&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [管理 Reporting Services 環境中的 Kerberos 驗證問題](https://technet.microsoft.com/library/ff679930.aspx)
+- [管理 Reporting Services 環境中的 Kerberos 驗證問題](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

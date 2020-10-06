@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d5463ac163271cf14f5b52167559bc8f3f53d805
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772576"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671111"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>預設 SQL Server 網路通訊協定組態
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85772576"
 > 如果執行個體是在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 容錯移轉叢集上執行，則會接聽您在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝期間為 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 選取之每個 IP 位址的這些連接埠。
  
 >[!NOTE]
-> 在使用命令提示字元引數安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時，您可以使用 `TCPENABLED` 和 `NPENABLED` 參數來指定要啟用的通訊協定。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。
+> 在使用命令提示字元引數安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時，您可以使用 `TCPENABLED` 和 `NPENABLED` 參數來指定要啟用的通訊協定。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../install-windows/install-sql-server-from-the-command-prompt.md)。
 
 ## <a name="creating-a-connection-string"></a>建立連接字串
 
@@ -72,7 +72,4 @@ ms.locfileid: "85772576"
 
 [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[介面區組態](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[介面區組態](../../relational-databases/security/surface-area-configuration.md)

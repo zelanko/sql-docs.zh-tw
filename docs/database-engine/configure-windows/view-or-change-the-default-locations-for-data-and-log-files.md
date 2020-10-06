@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9a0c720684f0eefa301e9a5387ffda54e349f85d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d20175640070884a45d9a7230fb4da0f09afc0f1
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680779"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670703"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>檢視或變更資料及記錄檔的預設位置
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "85680779"
 >**注意：** 變更預設位置之後，您必須停止並啟動 SQL Server 服務，才能完成變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [建立資料庫](../../relational-databases/databases/create-a-database.md)  
-  
   

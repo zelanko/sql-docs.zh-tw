@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027289"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670961"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連線
 
@@ -74,7 +74,7 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 > 若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 ***test1.\*\<your company>\*.com*** 與 ***test2.\*\<your company>\*.com***，且您有一個名為 ***virtsql*** 的虛擬伺服器，則會需要在兩個節點上都安裝 ***virtsql.\*\<your company>\*.com*** 的憑證。 您可以在 [SQL Server 網路組態] 的 [virtsql 通訊協定] 屬性方塊中，將 **ForceEncryption** 選項的值設為 [是]。
 
 > [!NOTE]
-> 在 Azure VM 上建立 Azure 搜尋服務索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密連線時，請參閱[在 Azure VM 上設定從 Azure 搜尋服務索引器到 SQL Server 的連線](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)。 
+> 在 Azure VM 上建立 Azure 搜尋服務索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密連線時，請參閱[在 Azure VM 上設定從 Azure 搜尋服務索引器到 SQL Server 的連線](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)。 
 
 ## <a name="certificate-requirements"></a>憑證需求
 
@@ -126,7 +126,7 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 
 > [!IMPORTANT]
 > 針對生產環境，建議從憑證授權單位取得信任的憑證。    
-> 基於測試目的，也可使用自我簽署憑證。 若要建立自我簽署憑證，請參閱 [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) 或 [certreq 命令](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)。
+> 基於測試目的，也可使用自我簽署憑證。 若要建立自我簽署憑證，請參閱 [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) 或 [certreq 命令](/windows-server/administration/windows-commands/certreq_1)。
   
 ## <a name="install-across-multiple-servers"></a>跨多部伺服器安裝
 
@@ -187,4 +187,4 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 
 + [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)     
 + [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

@@ -13,12 +13,12 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c10d77a72ef23616feb2ac59db44589966fe49a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a215dbb0653b9783a0cb66b1a076e30523ba7d72
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900234"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670261"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>升級 SQL Server 管理工具
 
@@ -52,7 +52,6 @@ ms.locfileid: "85900234"
   
 ## <a name="see-also"></a>另請參閱  
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [回溯相容性_已刪除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
+ [回溯相容性_已刪除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))   
  [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

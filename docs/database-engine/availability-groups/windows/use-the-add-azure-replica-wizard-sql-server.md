@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894186"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670658"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>將 Azure VM 設定為可用性群組中的次要複本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85894186"
   
 -   您必須連接到裝載目前主要複本的伺服器執行個體。  
   
--   您必須擁有混合式 IT 環境，其中的內部部署子網路具有 Azure 的站對站 VPN。 如需詳細資訊，請參閱 [使用 Azure 傳統入口網站建立具有站對站 VPN 連線的虛擬網路](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)。  
+-   您必須擁有混合式 IT 環境，其中的內部部署子網路具有 Azure 的站對站 VPN。 如需詳細資訊，請參閱 [使用 Azure 傳統入口網站建立具有站對站 VPN 連線的虛擬網路](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal)。  
   
 -   您的可用性群組必須包含內部部署可用性複本。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85894186"
   
 1.  首先，下載您的 Azure 訂用帳戶的管理憑證。 按一下 [下載] 開啟登入頁面。  
   
-2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
+2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](/previous-versions/jj592903(v=msdn.10)) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
   
 3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連線之後，下拉式清單就會填入您的 Azure 參數，例如 [虛擬網路] 和 [虛擬網路子網路]。  
   
@@ -107,5 +107,4 @@ ms.locfileid: "85894186"
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [將次要複本加入至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

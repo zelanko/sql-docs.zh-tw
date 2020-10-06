@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394214"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719781"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394214"
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
   
 > [!NOTE]  
->  快取連接管理員不支援二進位大型物件 (BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果參考資料集包含 BLOB 資料類型，則在您執行封裝時元件會失敗。 您可以使用 **[快取連接管理員編輯器]** 修改資料行資料類型。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+>  快取連接管理員不支援二進位大型物件 (BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果參考資料集包含 BLOB 資料類型，則在您執行封裝時元件會失敗。 您可以使用 **[快取連接管理員編輯器]** 修改資料行資料類型。 如需詳細資訊，請參閱 [快取連線管理員編輯器](./cache-connection-manager.md)。  
   
  查閱轉換會藉由聯結已連接資料來源輸入資料行中的資料與參考資料集中的資料行來執行查閱。 如需相關資訊，請參閱 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394214"
   
 -   [時序容器](../../integration-services/control-flow/sequence-container.md)  
   
- 如需示範如何在完整快取模式中使用快取連線管理員實作查閱轉換的影片，請參閱 [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 如需示範如何在完整快取模式中使用快取連線管理員實作查閱轉換的影片，請參閱 [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>若要使用快取連接管理員和資料流程中的資料來源在單一封裝中以完整快取模式實作查閱轉換  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394214"
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](./cache-connection-manager.md)。  
   
 6.  若要將快取儲存至檔案，請在 [快取連線管理員編輯器]**** 的 [一般]**** 索引標籤上，藉由設定下列選項來設定快取連線管理員：  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394214"
     > [!NOTE]  
     >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
   
-7.  視需要設定快取轉換。 如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
+7.  視需要設定快取轉換。 如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../data-flow/transformations/cache-transform.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../data-flow/transformations/cache-transform.md)。  
   
 8.  藉由執行下列工作，在第二個資料流程中加入查閱轉換，然後設定該轉換：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394214"
   
     8.  在 [可用的查閱資料行]**** 清單中選取資料行。 然後在 [查閱作業]**** 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
-    9. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+    9. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../data-flow/transformations/lookup-transformation.md)。  
   
     10. 按一下 [確定]****，將變更儲存至查閱轉換。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394214"
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](./cache-connection-manager.md)。  
   
-7.  視需要設定快取轉換。 如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
+7.  視需要設定快取轉換。 如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../data-flow/transformations/cache-transform.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../data-flow/transformations/cache-transform.md)。  
   
 8.  請執行下列其中一項作業，以擴展用於第二個封裝中的快取連接管理員：  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394214"
   
     8.  在 [可用的查閱資料行]**** 清單中選取資料行。 然後在 [查閱作業]**** 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
-    9. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+    9. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../data-flow/transformations/lookup-transformation.md)。  
   
     10. 按一下 [確定]****，將變更儲存至查閱轉換。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394214"
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](./cache-connection-manager.md)。  
   
 7.  在 [控制流程]**** 索引標籤上，將資料流程工作加入封裝，然後將查閱轉換加入資料流程。  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394214"
   
     8.  在 [可用的查閱資料行]**** 清單中選取資料行。 然後在 [查閱作業]**** 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
-    9. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+    9. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../data-flow/transformations/lookup-transformation.md)。  
   
     10. 按一下 [確定]****，將變更儲存至查閱轉換。  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394214"
  [使用 OLE DB 連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

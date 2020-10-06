@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363028"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670751"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 
@@ -342,7 +342,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> 使用服務控制站類別
 
-您可以使用 ServiceController 類別來控制 SQL 伺服器服務或任何其他 Windows 服務。 如需如何執行此操作的範例，請參閱 [ServiceController 類別](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8) \(部分機器翻譯\)。
+您可以使用 ServiceController 類別來控制 SQL 伺服器服務或任何其他 Windows 服務。 如需如何執行此操作的範例，請參閱 [ServiceController 類別](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8) \(部分機器翻譯\)。
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>管理 Linux 上的 SQL Server 服務
 
@@ -366,7 +366,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 ## <a name="next-steps"></a>後續步驟
 
-- [SQL Server 安裝程式文件概觀](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)
+- [SQL Server 安裝程式文件概觀](../install-windows/install-sql-server.md)
 - [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)
 - [以最低組態啟動 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)

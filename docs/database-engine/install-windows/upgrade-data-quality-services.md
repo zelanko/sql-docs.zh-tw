@@ -11,12 +11,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900252"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670351"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
 
@@ -27,7 +27,7 @@ ms.locfileid: "85900252"
 > [!IMPORTANT]
 >  -   在升級 DQS 之前，您必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的遺失資料狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   您可以使用最新或舊版的 Data Quality Client 連線至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server，或連線至 Integration Services 的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，執行您的資料品質工作。  
-> -   升級 Data Quality Services 和 Master Data Services 之後，所有適用於 Excel 的舊版 Master Data Services 增益集都無法再繼續運作。 您可以從 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 這裡 [下載](https://go.microsoft.com/fwlink/?LinkID=506665)版適用於 Exel 的 Master Data Services 增益集。  
+> -   升級 Data Quality Services 和 Master Data Services 之後，所有適用於 Excel 的舊版 Master Data Services 增益集都無法再繼續運作。 您可以從 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 這裡 [下載](../../master-data-services/master-data-services-installation-and-configuration.md)版適用於 Exel 的 Master Data Services 增益集。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
@@ -101,5 +101,4 @@ ms.locfileid: "85900252"
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [移除 Data Quality Server 物件](../../sql-server/install/remove-data-quality-server-objects.md)   
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

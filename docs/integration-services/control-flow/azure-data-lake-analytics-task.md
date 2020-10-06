@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913894"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719204"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
 
@@ -59,8 +59,8 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 |SourceType|動態選項|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|直接在選項方塊輸入要提交的 U-SQL 查詢，或選取瀏覽按鈕 (...)，在 [輸入 U-SQL 查詢]  對話方塊中輸入 U-SQL 查詢。|  
-|**SourceType = FileConnection**|選取現有的檔案連線管理員，或選取 [<新增連線>]  以建立新的檔案連線。 如需相關資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
-|**SourceType = Variable**|選取現有的變數，或選取 \<**New variable...**> 建立新的變數。 如需相關資訊，請參閱[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
+|**SourceType = FileConnection**|選取現有的檔案連線管理員，或選取 [<新增連線>]  以建立新的檔案連線。 如需相關資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和[檔案連線管理員編輯器](../connection-manager/file-connection-manager.md)。|  
+|**SourceType = Variable**|選取現有的變數，或選取 \<**New variable...**> 建立新的變數。 如需相關資訊，請參閱[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[新增變數](../integration-services-ssis-variables.md)。|
 | &nbsp; | &nbsp; |
 
 
@@ -137,4 +137,3 @@ OUTPUT @rs1
 - [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store 檔案系統工作](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store 連線管理員](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-

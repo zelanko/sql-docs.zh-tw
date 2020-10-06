@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ae9ee2f231367ebf577f0c5c70e5e64ce32d6cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763997"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670761"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>以最低組態啟動 SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85763997"
 
 -   `tempdb` 已設定最小可能大小。
 
--   稽核將會停用，但仍可發出稽核 DDL。 在實務上， **-m** 應足以應付大多數要求重新設定 SQL Server 稽核的情況。 如需審核組態的安全性詳細資料，請參閱[在 SQL Server 中稽核](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security) (英文)。
+-   稽核將會停用，但仍可發出稽核 DDL。 在實務上， **-m** 應足以應付大多數要求重新設定 SQL Server 稽核的情況。 如需審核組態的安全性詳細資料，請參閱[在 SQL Server 中稽核](/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security) (英文)。
   
  在伺服器以最低組態啟動後，您應該變更適當的伺服器選項值，然後將伺服器停止，再重新啟動。  
   
@@ -44,11 +44,10 @@ ms.locfileid: "85763997"
 >  使用 **sqlcmd** 公用程式與專用管理員連接 (DAC) 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您使用一般連接，請先停止 SQL Server Agent 服務，再以最低組態模式連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 否則，SQL Server Agent 服務會使用連接，從而將其封鎖。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動、停止或暫停 SQL Server Agent 服務](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [資料庫管理員的診斷連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

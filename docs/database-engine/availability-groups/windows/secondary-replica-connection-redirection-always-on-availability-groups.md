@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472444"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669839"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 
@@ -155,7 +155,7 @@ GO
 
 ## <a name="sql-server-instance-offline"></a>SQL Server 執行個體離線
 
-如果連接字串中指定的 SQL Server 執行個體無法使用 (發生中斷)，則不論目標伺服器上的複本所扮演的角色為何，連線都會失敗。 若要避免長時間應用程式關閉，請在連接字串中設定替代 `FailoverPartner`。 應用程式必須實作重試邏輯，以容納在實際容錯移轉期間未上線的主要和次要複本。 如需連接字串的詳細資訊，請參閱 [SqlConnection.ConnectionString 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)。
+如果連接字串中指定的 SQL Server 執行個體無法使用 (發生中斷)，則不論目標伺服器上的複本所扮演的角色為何，連線都會失敗。 若要避免長時間應用程式關閉，請在連接字串中設定替代 `FailoverPartner`。 應用程式必須實作重試邏輯，以容納在實際容錯移轉期間未上線的主要和次要複本。 如需連接字串的詳細資訊，請參閱 [SqlConnection.ConnectionString 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -163,4 +163,4 @@ GO
  
 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898094"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671091"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：新增複本精靈)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85898094"
  **伺服器執行個體**  
  顯示將裝載可用性複本的伺服器執行個體名稱。  
   
- 如果 [可用性複本] 方格未列出您要用來裝載次要複本的伺服器執行個體，請按一下 [新增複本] 按鈕。 如果您在混合式 IT 環境設定可用性群組 (請參閱 [SQL Server 在 Azure 虛擬機器中的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx))，您可以按一下 [加入 Azure 複本] 按鈕，以在 Azure 中建立包含次要複本的虛擬機器。  
+ 如果 [可用性複本] 方格未列出您要用來裝載次要複本的伺服器執行個體，請按一下 [新增複本] 按鈕。 如果您在混合式 IT 環境設定可用性群組 (請參閱 [SQL Server 在 Azure 虛擬機器中的高可用性和災害復原](/previous-versions/azure/jj870962(v=azure.100)))，您可以按一下 [加入 Azure 複本] 按鈕，以在 Azure 中建立包含次要複本的虛擬機器。  
   
  **初始角色**  
  指出新複本一開始執行的角色：[主要] 或 [次要]。  
@@ -67,7 +67,7 @@ ms.locfileid: "85898094"
  按一下可將次要複本加入至可用性群組。  
   
  **加入 Azure 複本**  
- 按一下以建立在可用性群組中執行次要複本的 Azure 虛擬機器。 此選項只適用於混合式 IT 中包含內部部署複本的可用性群組。 如需詳細資訊，請參閱 [SQL Server 在 Azure 虛擬機器中的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 按一下以建立在可用性群組中執行次要複本的 Azure 虛擬機器。 此選項只適用於混合式 IT 中包含內部部署複本的可用性群組。 如需詳細資訊，請參閱 [SQL Server 在 Azure 虛擬機器中的高可用性和災害復原](/previous-versions/azure/jj870962(v=azure.100))。  
   
  **移除複本**  
  按一下可從可用性群組中移除選取的次要複本。  
@@ -213,5 +213,4 @@ ms.locfileid: "85898094"
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

@@ -11,12 +11,12 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 315960092f6c27c881a000c2c6a26f0b850f3072
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5071fc2953bf93b75c3dd808ec0ba676e32b9e60
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227282"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670251"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
@@ -30,6 +30,8 @@ ms.locfileid: "91227282"
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引數
 

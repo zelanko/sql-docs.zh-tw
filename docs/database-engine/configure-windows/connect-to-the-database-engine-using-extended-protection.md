@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772635"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670278"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772635"
 ### <a name="operating-system-support"></a>作業系統支援  
  下列連結提供有關 Windows 如何支援 **[擴充保護]** 的詳細資訊：  
   
--   [具有擴充保護的整合式 Windows 驗證](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [具有擴充保護的整合式 Windows 驗證](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Microsoft 安全性摘要報告 (973811)，驗證擴充保護](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772635"
 ## <a name="configuring-other-sql-server-components"></a>設定其他 SQL Server 元件  
  如需如何設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 [含有 Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
   
- 當使用 IIS 來透過 HTTP 或 HTTPs 連接存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以充分利用 IIS 所提供的擴充保護。 如需有關如何設定 IIS 使用擴充保護的詳細資訊，請參閱 [在 IIS 7.5 中設定擴充保護](https://go.microsoft.com/fwlink/?LinkId=181105)。  
+ 當使用 IIS 來透過 HTTP 或 HTTPs 連接存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以充分利用 IIS 所提供的擴充保護。 如需有關如何設定 IIS 使用擴充保護的詳細資訊，請參閱 [在 IIS 7.5 中設定擴充保護](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10))。  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器網路組態](../../database-engine/configure-windows/server-network-configuration.md)   
  [用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)   
- [驗證擴充保護概觀](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [具有擴充保護的整合式 Windows 驗證](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [驗證擴充保護概觀](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [具有擴充保護的整合式 Windows 驗證](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216721"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670588"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安裝指南
 
@@ -31,7 +31,7 @@ ms.locfileid: "88216721"
 如需了解其他部署案例，請參閱：
 
 - [Linux](../../linux/sql-server-linux-setup.md)
-- [Docker 容器](../../linux/sql-server-linux-configure-docker.md)
+- [Docker 容器](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - 巨量資料叢集](../../big-data-cluster/deploy-get-started.md)
 
 從 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 開始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 才可以用作 64 位元應用程式。 下列重要詳細資料說明如何取得 SQL Server 及其安裝方式。
@@ -86,12 +86,12 @@ ms.locfileid: "88216721"
 |發行項|描述|  
 |-----------|-----------------|  
 |[安裝精靈](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|使用從 setup.exe 安裝媒體啟動的安裝精靈 GUI 安裝 SQL Server。 |  
-|[命令提示字元](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|從命令提示字元執行 SQL Server 安裝的範例語法和安裝參數。 | 
+|[命令提示字元](./install-sql-server-from-the-command-prompt.md)|從命令提示字元執行 SQL Server 安裝的範例語法和安裝參數。 | 
 |[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|在 Windows Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。|  
 |[檢查 System Configuration Checker 的參數](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|討論系統組態檢查 (SCC) 的功能。|   
-|[組態檔](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|透過組態檔執行安裝程式的範例語法及安裝參數。|  
+|[組態檔](./install-sql-server-using-a-configuration-file.md)|透過組態檔執行安裝程式的範例語法及安裝參數。|  
 |[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|透過 SysPrep 執行安裝程式的範例語法及安裝參數。|
-|[將功能新增至執行個體](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|更新現有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體的元件。|  
+|[將功能新增至執行個體](./add-features-to-an-instance-of-sql-server-setup.md)|更新現有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體的元件。|  
 |[SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| 安裝 SQL Server 容錯移轉叢集執行個體。  | 
 |[修復失敗的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|修復損毀的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝。|  
 |[以 SQL Server 重新命名電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|在重新命名裝載 SQL Server 獨立執行個體之電腦的主機名稱之後，更新 sys.servers 中儲存的系統中繼資料。 |  
@@ -107,7 +107,7 @@ ms.locfileid: "88216721"
 |[SQL Server 資料庫引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)|安裝和設定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 |[SQL Server 複寫](../../database-engine/install-windows/install-sql-server-replication.md)|安裝和設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫。|  
 |[Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出說明 Distributed Replay 功能安裝的文章。|  
-|[SQL Server 管理工具與 SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
+|[SQL Server 管理工具與 SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 元件時的考量。|  
   
 
@@ -116,7 +116,7 @@ ms.locfileid: "88216721"
 |發行項|描述|  
 |-----------|-----------------|  
 |[設定 Windows 防火牆 (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|防火牆設定及如何設定 Windows 防火牆以允許存取 SQL Server 的概觀。|  
-|[設定 Windows 防火牆 (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|設定連接埠與防火牆設定，以允許存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。|  
+|[設定 Windows 防火牆 (SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|設定連接埠與防火牆設定，以允許存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。|  
 |[設定多重主目錄電腦](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。|  
 
  
@@ -127,4 +127,4 @@ ms.locfileid: "88216721"
 [安裝 SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
 [安裝 SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
 [安裝[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]商業智慧功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
-[高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+[高可用性解決方案 &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)

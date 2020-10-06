@@ -14,12 +14,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4be5f264e790bb84142cbed1460e937a40c41663
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883261"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670481"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 
@@ -34,15 +34,15 @@ ms.locfileid: "85883261"
   
 如需遠端設定及管理 Server Core 安裝的詳細資訊，請參閱以下文章：  
   
-- [安裝 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [安裝 Server Core](/windows-server/get-started/getting-started-with-server-core)  
   
-- [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](/windows-server/get-started/sconfig-on-ws2016)  
   
-- [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   
-- [Managing a Server Core installation:Overview](https://go.microsoft.com/fwlink/?LinkId=245962) (管理 Server Core 安裝：概觀)  
+- [Managing a Server Core installation:Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441255(v=ws.10)) (管理 Server Core 安裝：概觀)  
   
-- [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
+- [Administering a Server Core installation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="install-ssnoversion-updates"></a><a name="BKMK_InstallSQLUpdates"></a> 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
 本節提供有關在 Windows Server Core 機器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的資訊。 我們建議客戶及時評估並安裝最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便確保系統保持在最新狀態而且具有最新的安全性更新。 如需在 Windows Server Core 機器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "85883261"
 - [在 SQL Server 安裝完成之後安裝更新](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
   
 ###  <a name="installing-updates-for-ssnoversion-during-a-new-installation"></a><a name="bkmk_NewInstall"></a> 在進行新安裝期間安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的更新。  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式只支援 Server Core 作業系統上的命令提示字元安裝。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式只支援 Server Core 作業系統上的命令提示字元安裝。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會整合最新產品更新與主要產品安裝，因此主要產品及其適用的更新可同時安裝。  
   
@@ -230,6 +230,5 @@ $Tcp
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [安裝的使用說明文章](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [安裝的使用說明文章](/previous-versions/sql/)  
   

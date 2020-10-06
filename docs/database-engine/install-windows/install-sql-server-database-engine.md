@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883255"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670449"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 
@@ -73,13 +73,12 @@ ms.locfileid: "85883255"
   
 
 > [!NOTE]  
->  根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要安裝範例資料庫和範例程式碼，請參閱 [Microsoft SQL Server 範例](../../sample/microsoft-sql-server-samples.md)。 請參閱 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843) 上的較舊範例。  
+>  根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要安裝範例資料庫和範例程式碼，請參閱 [Microsoft SQL Server 範例](../../samples/sql-samples-where-are.md)。 請參閱 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843) 上的較舊範例。  
 
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2017 的版本與支援功能](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)   
- [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [高可用性解決方案 &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
  [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

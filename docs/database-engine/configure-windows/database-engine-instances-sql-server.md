@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772600"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670718"
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772600"
 |描述如何管理與 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體相關聯的服務。 此包含啟動和停止服務，或是設定啟動選項等動作。|[管理 Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |描述如何執行伺服器網路組態工作，例如：啟用通訊協定、修改通訊協定所使用的通訊埠或管道、設定加密、設定 SQL Server Browser 服務、在網路上公開或隱藏 SQL Server Database Engine，以及註冊伺服器主體名稱。|[伺服器網路組態](../../database-engine/configure-windows/server-network-configuration.md)|  
 |描述如何執行用戶端網路組態工作，例如：設定用戶端通訊協定，以及建立或刪除伺服器別名。|[用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)|  
-|描述可用來設計、偵錯以及執行指令碼 (例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指令碼) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 編輯器。 同時描述如何撰寫 Windows PowerShell 指令碼以使用 SQL Server 元件。|[Database Engine 指令碼](../../relational-databases/scripting/database-engine-scripting.md)|  
+|描述可用來設計、偵錯以及執行指令碼 (例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指令碼) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 編輯器。 同時描述如何撰寫 Windows PowerShell 指令碼以使用 SQL Server 元件。|[Database Engine 指令碼](../../ssms/scripting/database-engine-scripting.md)|  
 |描述如何使用維護計畫來指定執行個體之一般管理工作的工作流程。 工作流程包含備份資料庫以及更新統計資料這類工作，以提升效能。|[維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |描述如何使用資源管理員透過指定應用程式要求可用的 CPU 和記憶體數量限制，來管理資源耗用和工作負載。|[資源管理員](../../relational-databases/resource-governor/resource-governor.md)|  
 |描述資料庫應用程式如何使用 Database Mail，從 [!INCLUDE[ssDE](../../includes/ssde-md.md)]傳送電子郵件訊息。|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772600"
   
 ## <a name="see-also"></a>另請參閱  
  [sqlservr 應用程式](../../tools/sqlservr-application.md)   
- [資料庫功能](../../relational-databases/database-features.md)   
- [資料庫引擎跨執行個體功能](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [資料庫功能](../../relational-databases/databases/databases.md)   
+ [資料庫引擎跨執行個體功能](../../relational-databases/databases/databases.md)  
   

@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863395"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670771"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)中進行傳訊及佇列處理的原生支援。 開發人員能夠輕易地建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件的複雜應用程式，以便在不同資料庫間進行通訊，並建置可靠的分散式應用程式。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-index)中進行傳訊及佇列處理的原生支援。 開發人員能夠輕易地建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件的複雜應用程式，以便在不同資料庫間進行通訊，並建置可靠的分散式應用程式。  
   
 ## <a name="when-to-use-service-broker"></a>使用 Service Broker 的時機
 
@@ -90,7 +90,7 @@ FROM ExpenseQueue;
   
 -   [資料定義語言 &#40;DDL&#41; 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md)，適用 CREATE、ALTER 和 DROP 陳述式  
   
--   [Service Broker 陳述式](../../t-sql/statements/service-broker-statements.md)  
+-   [Service Broker 陳述式](../../t-sql/statements/statements.md)  
   
 -   [Service Broker 目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose 公用程式 &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- 請參閱＜ [舊版文件集](https://go.microsoft.com/fwlink/?LinkId=231312) ＞，了解 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 概念及開發和管理工作。 此文件集未在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件集中重製，因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中只有少數 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的變更。  
+ 請參閱＜ [舊版文件集](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) ＞，了解 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 概念及開發和管理工作。 此文件集未在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件集中重製，因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中只有少數 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的變更。  
   
 ## <a name="whats-new-in-service-broker"></a>Service Broker 的新功能  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]並無導入重大變更。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入了下列變更。  
@@ -107,7 +107,7 @@ FROM ExpenseQueue;
 
 - 不支援跨執行個體服務代理程式 
  - `sys.routes` - 必要條件：從 sys.routes 選取位址。 位址在每個路由上都必須是 LOCAL。 請參閱 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)。
- - `CREATE ROUTE` - 您只能使用 `LOCAL` 的 `ADDRESS` 來執行 `CREATE ROUTE`。 請參閱 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
+ - `CREATE ROUTE` - 您只能使用 `LOCAL` 的 `ADDRESS` 來執行 `CREATE ROUTE`。 請參閱 [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md)。
  - `ALTER ROUTE` 無法使用 `ALTER ROUTE` 來搭配 `LOCAL` 以外的 `ADDRESS`。 請參閱 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>訊息可以傳送至多個目標服務 (多點傳送)  
@@ -125,6 +125,4 @@ FROM ExpenseQueue;
   
 ## <a name="next-steps"></a>後續步驟
 
-Service Broker 最常見的用法是[事件通知](../../relational-databases/service-broker/event-notifications.md)。 了解如何[實作事件通知](../../relational-databases/service-broker/implement-event-notifications.md)、[設定安全性對話方塊](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)，或[取得更多資訊](../../relational-databases/service-broker/get-information-about-event-notifications.md)。 
-
-
+Service Broker 最常見的用法是[事件通知](../../relational-databases/service-broker/event-notifications.md)。 了解如何[實作事件通知](../../relational-databases/service-broker/implement-event-notifications.md)、[設定安全性對話方塊](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)，或[取得更多資訊](../../relational-databases/service-broker/get-information-about-event-notifications.md)。

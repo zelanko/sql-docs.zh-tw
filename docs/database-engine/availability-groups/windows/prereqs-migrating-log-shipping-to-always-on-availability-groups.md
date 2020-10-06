@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4ee9154593b5c1d2d3d1bdf083796134d441fad
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: dd1fe3943fe3e5c36dc60df147a2c2ec77a4dac2
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480810"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670131"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>將記錄傳送轉換成 Always On 可用性群組的必要條件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "89480810"
   
  **如需詳細資訊：＜＞**  
   
- [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (將記錄傳送設定轉換成可用性群組) (SQL Server 部落格)  
+ [Converting a log shipping configuration to Availability Group](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group) (將記錄傳送設定轉換成可用性群組) (SQL Server 部落格)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **記錄傳送**  
@@ -86,19 +86,19 @@ ms.locfileid: "89480810"
   
 -   **部落格：**  
   
-     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)  
+     [Converting a logshipping configuration to Availability Group](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [將記錄傳送主要資料庫和次要資料庫加入至現有的可用性群組](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
+     [將記錄傳送主要資料庫和次要資料庫加入至現有的可用性群組](/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server 工程師部落格](/archive/blogs/psssql/)  
   
 -   **白皮書：**  
   
-     [移轉指南：從結合資料庫鏡像與記錄傳送的先前部署移轉至 AlwaysOn 可用性群組](https://msdn.microsoft.com/library/jj635217)  
+     [移轉指南：從結合資料庫鏡像與記錄傳送的先前部署移轉至 AlwaysOn 可用性群組](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))  
   
-     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server 客戶諮詢團隊白皮書](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -106,5 +106,4 @@ ms.locfileid: "89480810"
  [關於記錄傳送 &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [監視可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

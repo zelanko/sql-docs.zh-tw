@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888018"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670668"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組已超過 RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  如果重做執行緒確實落後，則您需要調查次要複本效能降低的根本原因。 如果和報告工作負載有 I/O 競爭，您可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 來控制報告工作負載使用的 CPU 週期，進而間接地在某種程度上控制 I/O 週期。 例如，如果您的報告工作負載取用百分之 10 的 CPU，但它是以 I/O 為主的工作負載，則您可以使用 Resource Governor 將 CPU 資源使用量限制為百分之 5，以限制讀取工作負載，進而降低對 I/O 的影響。  
   
 ## <a name="next-steps"></a>後續步驟  
- [對 SQL Server 中的效能問題進行疑難排解 (適用於 SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) \(英文\)  
-  
+ [對 SQL Server 中的效能問題進行疑難排解 (適用於 SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100)) \(英文\)  
   

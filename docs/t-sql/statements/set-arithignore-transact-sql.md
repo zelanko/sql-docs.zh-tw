@@ -24,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7569c7145fddd44a5ba8cd8138a5a16fab368a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1ca2f675704741c0bd48c8ffbf6be6037065075c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226778"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670841"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,8 @@ SET ARITHIGNORE OFF
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="remarks"></a>備註
  SET ARITHIGNORE 設定只會控制是否傳回錯誤訊息。 在包含溢位或除以零的錯誤之計算中，不論這項設定為何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會傳回 NULL。 您可以利用 SET ARITHABORT 設定來判斷查詢是否終止。 這項設定不會影響 INSERT、UPDATE 和 DELETE 陳述式期間所發生的錯誤。  

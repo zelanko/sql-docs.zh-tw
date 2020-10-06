@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900208"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670235"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安裝精靈升級 SQL Server (安裝程式)
 
@@ -46,7 +46,7 @@ ms.locfileid: "85900208"
 您必須以系統管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限並且為本機系統管理員的網域帳戶。  
   
 > [!WARNING]  
->  請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 如需如何在完成升級作業後，將功能新增至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 之升級執行個體的詳細資訊，請參閱[將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
+>  請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 如需如何在完成升級作業後，將功能新增至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 之升級執行個體的詳細資訊，請參閱[將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](./add-features-to-an-instance-of-sql-server-setup.md)。  
   
  如要升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請參閱 [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) ，然後根據環境狀況執行下列工作︰  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85900208"
   
      當您完成針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指定登入資訊之後，請按 **[下一步]** 。  
   
-15. 在 [全文檢索搜尋升級選項] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+15. 在 [全文檢索搜尋升級選項] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](./install-sql-server.md)。  
   
 16. 如果所有規則都通過，[功能規則] 視窗會自動前進。  
   
@@ -143,6 +143,5 @@ ms.locfileid: "85900208"
   
 ## <a name="see-also"></a>另請參閱  
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [回溯相容性_已刪除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [回溯相容性_已刪除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

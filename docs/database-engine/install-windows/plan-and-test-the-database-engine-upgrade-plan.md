@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900347"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671031"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 
@@ -29,7 +29,7 @@ ms.locfileid: "85900347"
 
 - [SQL Server 2017 版本資訊](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 資料庫引擎回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)一文。  
+- [SQL Server 資料庫引擎回溯相容性](../discontinued-database-engine-functionality-in-sql-server.md)一文。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>升級前的計劃檢查清單  
  升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，請檢閱下列檢查清單及相關文章。 這些文章適用於所有升級，無論升級方法為何，都能協助您決定最適當的升級方法：輪流升級、新安裝升級或就地升級。 例如，您可能無法執行就地升級或輪流升級 (若您要升級作業系統)、從 SQL Server 2005 升級，或是從 32 位元版本的 SQL Server 升級。 對於決策樹，請參閱 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "85900347"
     > [!NOTE]  
     >  當您從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 升級至 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 時，請選擇 Enterprise Edition 的版本：核心授權和 Enterprise Edition。 這些 Enterprise Edition 只有在授權模式方面不同。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
--   **回溯相容性：** 檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 資料庫引擎回溯相容性文章，以檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 與您所要升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間的行為變更。 請參閱 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
+-   **回溯相容性：** 檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 資料庫引擎回溯相容性文章，以檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 與您所要升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間的行為變更。 請參閱 [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)。  
   
 -   **Data Migration Assistant：** 執行 Data Migration Assistant 協助診斷可能封鎖升級程序的問題，或因重大變更而需要修改現有指令碼或應用程式的問題。
     您可以在[這裡](https://aka.ms/get-dma)下載 Data Migration Assistant。  
@@ -98,4 +98,4 @@ ms.locfileid: "85900347"
 [升級 Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>其他資源 
-[資料庫移轉指南](https://aka.ms/datamigration)  
+[資料庫移轉指南](https://aka.ms/datamigration)

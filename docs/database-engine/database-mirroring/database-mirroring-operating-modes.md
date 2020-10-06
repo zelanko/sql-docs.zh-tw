@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631417"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670844"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631417"
  本節描述非同步資料庫鏡像如何運作、適合使用高效能模式的時機，以及主體伺服器失敗時如何回應。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的大部分版本僅支援同步資料庫鏡像 (「僅限 Safety Full」)。 如需哪些版本完全支援資料庫鏡像的資訊，請參閱 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)中的＜高可用性 (AlwaysOn)＞。
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的大部分版本僅支援同步資料庫鏡像 (「僅限 Safety Full」)。 如需哪些版本完全支援資料庫鏡像的資訊，請參閱 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)中的＜高可用性 (AlwaysOn)＞。
   
  當交易安全性設為 OFF 時，資料庫鏡像工作階段就會以非同步的方式運作。 非同步作業只支援一種作業模式：高效能模式。 這種模式可提高效能，但代價是會降低高可用性。 高效能模式僅需使用主體伺服器與鏡像伺服器。 而鏡像伺服器方面的問題絕不會影響到主體伺服器。 如果主體伺服器失效，鏡像資料庫會標示為 DISCONNECTED，但仍可當做暖待命資料庫使用。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631417"
  在主體伺服器與鏡像伺服器的距離相隔很遠，以及您不希望有小失誤影響主體伺服器的災害復原狀況中，高效能模式會非常實用。  
   
 > [!NOTE]  
->  記錄傳送可以是資料庫鏡像的補強方式，以及非同步資料庫鏡像的理想替代方式。 如需記錄傳送優點的資訊，請參閱[高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。 如需一起使用記錄傳送與資料庫鏡像的資訊，請參閱[資料庫鏡像和記錄傳送 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)。  
+>  記錄傳送可以是資料庫鏡像的補強方式，以及非同步資料庫鏡像的理想替代方式。 如需記錄傳送優點的資訊，請參閱[高可用性解決方案 &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)。 如需一起使用記錄傳送與資料庫鏡像的資訊，請參閱[資料庫鏡像和記錄傳送 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)。  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 見證對高效能模式的影響  
  如果您使用 Transact-SQL 來設定高效能模式，每當 SAFETY 屬性設為 OFF 時，我們由衷建議您也將 WITNESS 屬性設為 OFF。 見證可與高效能模式並存，但見證沒有什麼好處，只會帶來風險。  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

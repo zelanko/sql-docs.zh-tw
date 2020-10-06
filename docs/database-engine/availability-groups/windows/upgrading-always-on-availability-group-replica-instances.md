@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aa433db303e80610fb8f109d8a0905f888348c1b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894193"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671136"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "85894193"
 將裝載 AlwaysOn 可用性群組 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體升級為新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或安裝至新的 Windows Service Pack 或累積更新時，您可透過執行輪流升級來將主要複本的停機時間減少至僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。 在升級過程中無法使用次要複本執行容錯移轉或唯讀作業，且在升級完成後，次要複本可能需要花費一些時間趕上主要複本節點，根據主要複本節點的活動量而定 (因此網路流量會偏高)。 另請注意，在初始容錯移轉到執行較新版 SQL Server 的次要複本之後，該可用性群組中的資料庫會執行整個升級程序，以將其升級為最新版本。 在這段期間內，這些資料庫都不會有可讀取的複本。 初始容錯移轉之後的停機時間長短，取決於可用性群組中的資料庫數量。 如果您打算容錯回復為原始的主要複本，此步驟在您進行容錯回復時不會重覆。
   
 >[!NOTE]  
->本文僅限討論 SQL Server本身的升級。 其未涵蓋包含 Windows Server 容錯移轉叢集 (WSFC) 的作業系統升級。 Windows Server 2012 R2 之前的作業系統，不支援裝載容錯移轉叢集的 Windows 作業系統升級。 若要升級在 Windows Server 2012 R2 上執行的叢集結點，請參閱[叢集作業系統輪流升級](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade) \(機器翻譯\)。  
+>本文僅限討論 SQL Server本身的升級。 其未涵蓋包含 Windows Server 容錯移轉叢集 (WSFC) 的作業系統升級。 Windows Server 2012 R2 之前的作業系統，不支援裝載容錯移轉叢集的 Windows 作業系統升級。 若要升級在 Windows Server 2012 R2 上執行的叢集結點，請參閱[叢集作業系統輪流升級](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade) \(機器翻譯\)。  
   
 ## <a name="prerequisites"></a>必要條件  
 在開始之前，請檢閱以下重要資訊：  
@@ -256,12 +256,11 @@ ms.locfileid: "85894193"
 
 1. 升級原本為主要複本的執行個體。
 
-如需背景資訊，請參閱 [CDC functionality may break after upgrading to the latest CU](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/) (CDC 功能可能會在升級至最新版 CU 之後中斷)。
+如需背景資訊，請參閱 [CDC functionality may break after upgrading to the latest CU](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016) (CDC 功能可能會在升級至最新版 CU 之後中斷)。
 
   
 ## <a name="see-also"></a>另請參閱  
  [使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
 
- [從命令提示字元安裝 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-  
+ [從命令提示字元安裝 SQL Server 2016](../../install-windows/install-sql-server-from-the-command-prompt.md)  
   

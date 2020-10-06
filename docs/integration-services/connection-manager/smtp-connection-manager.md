@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a621a780f7bd0e9cc231630e5d20a02a3f95c0c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0609ea0b10cd5f656c78cbda8c3f2b7ad5be382f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425980"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719189"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
 
@@ -51,7 +51,7 @@ ms.locfileid: "88425980"
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [SMTP 連線管理員編輯器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)。  
+ 如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [SMTP 連線管理員編輯器]()。  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
@@ -81,4 +81,3 @@ ms.locfileid: "88425980"
   
  **啟用安全通訊端層 (SSL)**  
  選取此選項可在傳送電子郵件訊息時，使用 TLS/SSL 來加密通訊。  
-  

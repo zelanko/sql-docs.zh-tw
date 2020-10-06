@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62ed4ee20e7a17b291b09f895f7a558b91584ee9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785802"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670291"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>設定 remote access 伺服器組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "85785802"
   
 -   [當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
--   [連接至已註冊的伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)  
+-   [連接至已註冊的伺服器 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md)  
   
 -   [從 SQL Server Management Studio 連接到任何 SQL Server 元件](../../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
   
--   [使用 sqlcmd 連接至 Database Engine](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
+-   [使用 sqlcmd 連接至 Database Engine](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md)  
   
 -   [如何疑難排解與 SQL Server Database Engine 的連接](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
  程式設計人員可能會對下列主題感興趣︰  
   
--   [How To:Connect to SQL Server Using SQL Authentication in ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx) (如何：使用 ASP.NET 2.0 中的 SQL 驗證連接到 SQL Server)  
+-   [How To:Connect to SQL Server Using SQL Authentication in ASP.NET 2.0](/previous-versions/msp-n-p/ff648340(v=pandp.10)) (如何：使用 ASP.NET 2.0 中的 SQL 驗證連接到 SQL Server)  
   
 -   [連接到 SQL Server 的執行個體](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [操作說明：建立 SQL Server 資料庫的連線](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [操作說明：建立 SQL Server 資料庫的連線](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))  
   
  **從這裡開始是本主題的主要內文。**  
   
@@ -118,5 +118,4 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

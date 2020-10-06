@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd4acadbf94f45c1b155d10a70a376ea11c326e4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244069"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670496"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "87244069"
 >  您也可以考慮在升級計畫中升級 Azure SQL Database，或將您的 SQL Server 環境虛擬化。 本文未涵蓋這些文章，如有需要請參閱以下連結：
 >   - [Azure 虛擬機器上的 SQL Server 概觀](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
->   - [在 Azure 中選取 SQL Server 選項](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
+>   - [在 Azure 中選取 SQL Server 選項](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)。  
   
 ## <a name="upgrade-in-place"></a>就地升級  
  透過此方法，SQL Server 安裝程式會以新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 位元取代現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位元，然後升級每個系統及使用者資料庫，藉此升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  就地升級方法最簡易，其需要停機一段時間，需要後援時也會花費較長時間，而且未受所有案例支援。 如需支援與未支援的就地升級案例詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "87244069"
  在遷移使用者資料庫後，您可以使用多種方法其中之一 (例如將伺服器重新命名、使用 DNS 項目、修改連接字串) 向新使用者指出新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  與就地升級相較之下，新的安裝方法可減少風險及停機時間，並有助於硬體及作業系統升級與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更新同時進行。  
   
 > [!NOTE]  
->  若您已經就地擁有高可用性 (HA) 解決方案或其他多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體環境，請前往 [輪流升級](#rolling-upgrade)。 若您未就地擁有高可用性解決方案，則可以考慮暫時設定 [資料庫鏡像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 進一步縮短停機時間以加速升級，或利用此機會設定 [AlwaysOn 可用性群組](https://msdn.microsoft.com/library/hh510260.aspx) 當作永久 HA 解決方案。  
+>  若您已經就地擁有高可用性 (HA) 解決方案或其他多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體環境，請前往 [輪流升級](#rolling-upgrade)。 若您未就地擁有高可用性解決方案，則可以考慮暫時設定 [資料庫鏡像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 進一步縮短停機時間以加速升級，或利用此機會設定 [AlwaysOn 可用性群組](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) 當作永久 HA 解決方案。  
   
  例如，您可以使用此方法來升級：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "87244069"
 -   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server x86 安裝不支援 x86 安裝。   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新硬體和/或新版作業程式。    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。   
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server 2005 不支援 SQL Server 2005 的就地升級。 如需詳細資訊，請參閱[是否從 SQL Server 2005 升級？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)
+-   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server 2005 不支援 SQL Server 2005 的就地升級。 如需詳細資訊，請參閱[是否從 SQL Server 2005 升級？](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)
 
   
 新安裝升級的必要步驟會依據您使用連接儲存體還是 SAN 儲存體而有些微不同。  
@@ -114,4 +114,4 @@ ms.locfileid: "87244069"
   
 ## <a name="next-steps"></a>後續步驟
  [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [完成資料庫引擎升級](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [完成資料庫引擎升級](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

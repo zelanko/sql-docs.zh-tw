@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcec8cc2395f22774b853407fe5959286e539e7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ecd953c8c383ef78c6e84221282eda76a5f7fca
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917124"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671131"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86917124"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 角色的成員可以使用 DAC 進行連接。  
   
- DAC 的存取與支援是使用特殊管理員參數 (`-A`)，以透過 `sqlcmd` 命令提示字元公用程式來執行。 如需使用 `sqlcmd` 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在前面加上 `admin:` 來連線到執行個體名稱，其格式為 `sqlcmd -S admin:<*instance_name*>`。 您也可以藉由連線到 `admin:\<*instance_name*>`，以便從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器起始 DAC。
+ DAC 的存取與支援是使用特殊管理員參數 (`-A`)，以透過 `sqlcmd` 命令提示字元公用程式來執行。 如需使用 `sqlcmd` 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在前面加上 `admin:` 來連線到執行個體名稱，其格式為 `sqlcmd -S admin:<*instance_name*>`。 您也可以藉由連線到 `admin:\<*instance_name*>`，以便從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器起始 DAC。
 
 > [!Note]  
 > 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立 DAC
@@ -122,7 +122,7 @@ ms.locfileid: "86917124"
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## <a name="related-content"></a>相關內容  
- [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [以指令碼變數使用 sqlcmd](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -136,5 +136,3 @@ ms.locfileid: "86917124"
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

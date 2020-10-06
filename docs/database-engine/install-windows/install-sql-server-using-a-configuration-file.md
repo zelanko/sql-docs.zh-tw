@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110213"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670301"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用組態檔安裝 SQL Server
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. 取消安裝程式而不實際完成安裝，即可產生 INI 檔案。 
   
     > [!NOTE]  
-    >  安裝程式基礎結構會針對已執行的動作寫出所有適當的參數，但密碼等機密資訊除外。 /IAcceptSQLServerLicenseTerms 參數也不會寫出至組態檔，而且需要修改組態檔或在命令提示字元中提供某個值。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 此外，若為通常不會透過命令提示字元提供值的布林值參數，系統就會包含一個值。 
+    >  安裝程式基礎結構會針對已執行的動作寫出所有適當的參數，但密碼等機密資訊除外。 /IAcceptSQLServerLicenseTerms 參數也不會寫出至組態檔，而且需要修改組態檔或在命令提示字元中提供某個值。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)。 此外，若為通常不會透過命令提示字元提供值的布林值參數，系統就會包含一個值。 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>使用組態檔安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [升級 SQL Server 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

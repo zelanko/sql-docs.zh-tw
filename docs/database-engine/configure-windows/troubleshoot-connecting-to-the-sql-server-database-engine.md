@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ceca51cf35e1a2e061d841336f0ab7a91b97dc9a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988645"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670728"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>對 SQL Server 資料庫引擎的連線進行疑難排解
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -193,7 +193,7 @@ SQL Server 的預設執行個體並不需要 SQL Server Browser 服務。
    - 啟動 SQL Server Browser 服務。 請參閱指示，以[在 SQL Server 組態管理員中啟動瀏覽器](#startbrowser)。
    - 防火牆正在封鎖 SQL Server Browser 服務。 在防火牆中開啟 UDP 連接埠 1434。 請返回[在防火牆中開啟連接埠](#open-a-port-in-the-firewall)一節。 確認您已開啟 UDP 連接埠，而非 TCP 連接埠。
    - 路由器正在封鎖 UDP 連接埠 1434 資訊。 UDP 通訊 (使用者資料包通訊協定) 不適合通過路由器。 這會防止低優先順序流量填滿網路。 您可以設定讓路由器轉送 UDP 流量，或者決定連線時一律提供連接埠號碼。
-   - 如果用戶端電腦使用的是 Windows 7 或 Windows Server 2008 (或較新的作業系統)，作業系統可能會捨棄UDP 流量，因為傳回伺服器回應的 IP 位址和被查詢的位址不同。 這是封鎖「鬆散的來源對應」的安全性功能。 如需詳細資訊，請參閱下列《線上叢書》主題的**多個伺服器 IP 位址**一節：[疑難排解：等候時間逾時](https://msdn.microsoft.com/library/ms190181.aspx)。 這是 SQL Server 2008 R2 的文章，但是原則仍然適用。 您可以設定讓用戶端使用正確的 IP 位址，或者決定連線時一律提供連接埠號碼。
+   - 如果用戶端電腦使用的是 Windows 7 或 Windows Server 2008 (或較新的作業系統)，作業系統可能會捨棄UDP 流量，因為傳回伺服器回應的 IP 位址和被查詢的位址不同。 這是封鎖「鬆散的來源對應」的安全性功能。 如需詳細資訊，請參閱下列《線上叢書》主題的**多個伺服器 IP 位址**一節：[疑難排解：等候時間逾時](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105))。 這是 SQL Server 2008 R2 的文章，但是原則仍然適用。 您可以設定讓用戶端使用正確的 IP 位址，或者決定連線時一律提供連接埠號碼。
 
 3. 一旦可以使用 IP 位址 (或具名執行個體的 IP 位址和執行個體名稱) 連線，請嘗試使用電腦名稱 (或具名執行個體的電腦名稱和執行個體名稱) 連線。 將 `tcp:` 放在電腦名稱前面，以強制 TCP/IP 連線。 例如， `ACCNT27`電腦上的預設執行個體使用 `tcp:ACCNT27` 。該電腦上稱為 `PAYROLL`的具名執行個體使用 `tcp:ACCNT27\PAYROLL` 。如果可以使用 IP 位址連線，但不能使用電腦名稱連線，表示有名稱解析問題。 請返回**測試 TCP/IP 連線能力**一節 (第 4 節)。
 

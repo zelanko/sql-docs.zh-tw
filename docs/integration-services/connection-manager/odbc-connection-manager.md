@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a70375f6ad677dcec18fe0606d5a09cec8960f70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fe63ad503b49a760823635902b3744a1ae2d85a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496091"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719426"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 連接管理員
 
@@ -49,7 +49,7 @@ ms.locfileid: "88496091"
   
  如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [ODBC 連線管理員 UI 參考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [ODBC 連線管理員 UI 參考]()  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
@@ -72,5 +72,4 @@ ms.locfileid: "88496091"
  請選取一個連接，然後使用 [刪除]**** 按鈕刪除它。  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

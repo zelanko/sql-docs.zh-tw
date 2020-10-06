@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3a34bc940a8c47a3a4794a4a264267c14ba47d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934374"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670456"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -182,8 +182,8 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateEnabled<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateSource<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本中沒有任何作用。 <br/><br/> 若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 SQL Server 2016 和更新版本以將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。<br /><br /> 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本中沒有任何作用。 <br/><br/> 若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 SQL Server 2016 和更新版本以將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。<br /><br /> 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> - 或 -<br /><br /> /ROLE<br /><br /> **必要**|指定要安裝的元件。<br /><br /> 選擇 **/FEATURES** 來指定要安裝的個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 如需詳細資訊，請參閱＜ [功能參數](#Feature) ＞。<br /><br /> 選擇 **/ROLE** 來指定安裝程式角色。 安裝程式角色會使用預先決定的組態安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示安裝參數的使用方式選項。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
@@ -211,7 +211,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄。 預設值：<br /><br /> 64 位元上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 所有其他安裝：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的伺服器模式。 有效的值為 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 區分大小寫。 所有值都必須以大寫形式表示。 如需有關有效值的詳細資訊，請參閱 [安裝 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **選擇性**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的伺服器模式。 有效的值為 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 區分大小寫。 所有值都必須以大寫形式表示。 如需有關有效值的詳細資訊，請參閱 [安裝 Analysis Services](/analysis-services/instances/install-windows/install-analysis-services)。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的帳戶。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **選擇性**|指定 [服務的](#Accounts) 啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
@@ -262,7 +262,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|從 SQL Server 2017 開始不再適用。  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。 使用受控服務帳戶、虛擬帳戶或內建帳戶時，可以省略此參數。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|從 SQL Server 2017 開始不再適用。  指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。 支援的值：<br /><br /> **自動**<br /><br /> **Disabled**<br /><br /> **手動**|  
 |Python/機器學習服務 (資料庫內)|/MPYCACHEDIRECTORY|保留供未來使用。 請使用 %TEMP% 來儲存 Python .CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |  
-|R/機器學習服務 (資料庫內)|/MRCACHEDIRECTORY|使用此參數來指定 SQL Server 機器學習服務或 Machine Learning Server (獨立式) 中 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-component-install-without-internet-access)時。|  
+|R/機器學習服務 (資料庫內)|/MRCACHEDIRECTORY|使用此參數來指定 SQL Server 機器學習服務或 Machine Learning Server (獨立式) 中 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](../../machine-learning/install/sql-ml-component-install-without-internet-access.md)時。|  
 |Java/語言延伸模組| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **選擇性** | 從 SQL Server 2019 開始，會指定使用語言延伸模組來安裝 Java。 如果在未使用 /SQLJAVADIR 參數的情況下提供 /SQL_INST_JAVA，系統會假設您希望安裝由安裝媒體提供的 Zulu Open JRE。 <br /><br /> 提供 /SQLJAVADIR 的路徑，表示您希望使用已安裝的 JRE 或 JDK。 |
   
 ###### <a name="sample-syntax"></a>範例語法：  
@@ -287,7 +287,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateEnabled<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateSource<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> **必要**|指定要安裝的 [元件](#Feature) 。<br /><br /> 支援的值為 SQLEngine、Replication、FullText、DQ、AS、AS_SPI、RS、RS_SHP、RS_SHPWFE、DQC、Conn、IS、BC、SDK、DREPLAY_CTLR、DREPLAY_CLT、SNAC_SDK、SQLODBC、SQLODBC_SDK、LocalDB、MDS、POLYBASE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示安裝參數的使用方式選項。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HIDECONSOLE<br /><br /> **選擇性**|指定要隱藏或關閉主控台視窗。|  
@@ -318,8 +318,8 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值：**CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示安裝參數的使用方式選項。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (2013 年 1 月) 之前為**必要項**<br /><br /> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始為**選用項**|使用準備圖像步驟期間指定的執行個體識別碼。<br /><br /> 支援的值：準備之執行個體的 InstanceID。|  
@@ -385,8 +385,8 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateEnabled*<br /><br /> **選擇性**|指定 SQL Server 安裝程式是否應探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateSource*<br /><br /> **選擇性**|指定 SQL Server 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 .\MyUpdates) 或 UNC 共用。 根據預設，SQL Server 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ INSTANCEDIR<br /><br /> **選擇性**|指定共用元件的非預設安裝目錄。|  
@@ -462,7 +462,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出解除安裝工作流程的必要參數。<br /><br /> 支援的值：**解除安裝**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> **必要**|指定要解除安裝的 [元件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、H、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
@@ -516,8 +516,8 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |PolyBase|/PBSCALEOUT<br /><br /> **選擇性**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 支援的值：**True**、**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateEnabled*<br /><br /> **選擇性**|指定 SQL Server 安裝程式是否應探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateSource*<br /><br /> **選擇性**|指定 SQL Server 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 .\MyUpdates) 或 UNC 共用。 根據預設，SQL Server 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> **必要**|指定要安裝的 [元件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
@@ -596,8 +596,8 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateEnabled*<br /><br /> **選擇性**|指定 SQL Server 安裝程式是否應探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateSource*<br /><br /> **選擇性**|指定 SQL Server 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FEATURES<br /><br /> **必要**|指定要安裝的 [元件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
@@ -659,8 +659,8 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出容錯移轉叢集完成工作流程的必要參數。<br /><br /> 支援的值：**CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/FAILOVERCLUSTERGROUP<br /><br /> **選擇性**|指定要用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集之資源群組的名稱。 它可以是現有叢集群組的名稱或新資源群組的名稱。<br /><br /> 預設值：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<InstanceName>)|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。 支援的值：<br /><br /> 1=啟用<br /><br /> 0=停用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md)  
@@ -724,8 +724,8 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateEnabled*<br /><br /> **選擇性**|指定 SQL Server 安裝程式是否應探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateSource*<br /><br /> **選擇性**|指定 SQL Server 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)＞。 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/>若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](../../sql-server/sql-server-privacy.md)＞。 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ INSTANCEDIR<br /><br /> **選擇性**|指定共用元件的非預設安裝目錄。|  
@@ -754,7 +754,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateEnabled*<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，SQL Server 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/*UpdateSource*<br /><br /> **選擇性**|指定 SQL Server 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
@@ -795,7 +795,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出 RemoveNode 工作流程的必要參數。<br /><br /> 支援的值：**RemoveNode**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/HELP、?<br /><br /> **選擇性**|顯示參數的使用方式選項。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INDICATEPROGRESS<br /><br /> **選擇性**|指定要將詳細安裝程式記錄檔送到主控台。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。|  
@@ -844,10 +844,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase |安裝 PolyBase 元件。|
 ||PolyBaseCore | 從 SQL Server 2019 開始，與 **PolyBase** 配對來安裝 Polybase 技術，讓您能夠使用標準 T-SQL 陳述式，跨 Oracle、Teradata、SQL Server 及其他關聯式和非關聯式資料進行真正的整合查詢。 |
 || PolyBaseJava | 從 SQL Server 2019 開始，與 **PolyBase** 配對來安裝 PolyBase Java 連接器，讓您能夠使用標準 T-SQL 陳述式，跨 HDFS 資料進行真正的整合查詢。
-||AdvancedAnalytics |安裝 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)或 [SQL Server 2016 R Services (資料庫內)](https://docs.microsoft.com/sql/machine-learning/install/sql-r-services-windows-install)。|  
-||SQL_INST_MR |適用於 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝 R Open 與專屬的 R 套件。|  
-||SQL_INST_MPY|適用於 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝 Anaconda 和專屬的 Python 套件。|  
-||SQL_INST_JAVA |適用於 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install)。 與 **AdvancedAnalytics** 配對來安裝延伸模組，以使用標準 T-SQL 陳述式來與 Java 整合。|  
+||AdvancedAnalytics |安裝 [SQL Server 機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md)或 [SQL Server 2016 R Services (資料庫內)](../../machine-learning/install/sql-r-services-windows-install.md)。|  
+||SQL_INST_MR |適用於 [SQL Server 機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。 與 **AdvancedAnalytics** 配對來安裝 R Open 與專屬的 R 套件。|  
+||SQL_INST_MPY|適用於 [SQL Server 機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。 與 **AdvancedAnalytics** 配對來安裝 Anaconda 和專屬的 Python 套件。|  
+||SQL_INST_JAVA |適用於 [SQL Server 機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md)。 與 **AdvancedAnalytics** 配對來安裝延伸模組，以使用標準 T-SQL 陳述式來與 Java 整合。|  
 |AS||安裝所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 元件。|  
 |RS||安裝所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件。 從 SQL Server 2017 開始移除。 |  
 |RS_SHP||安裝 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件。 從 SQL Server 2017 開始移除。|  
@@ -857,8 +857,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Master|包含適用於 Integration Services 擴增的擴增主機。| 
 ||IS_Worker|包含適用於 Integration Services 擴增的擴增背景工作角色。| 
 |MDS||安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  
-|SQL_SHARED_MPY||安裝適用於 [SQL Server 2017 Machine Learning Server (獨立式)](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) 的 Python 套件 |  
-|SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install?view=sql-server-2016) 或 [SQL Server Machine Learning Server (獨立式)](/sql/machine-learning/install/sql-machine-learning-standalone-windows-install) 的 R 套件 |  
+|SQL_SHARED_MPY||安裝適用於 [SQL Server 2017 Machine Learning Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 的 Python 套件 |  
+|SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016) 或 [SQL Server Machine Learning Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 的 R 套件 |  
 |工具*||安裝用戶端工具和《SQL Server 線上叢書》元件。|  
 ||BC|安裝回溯相容性元件。|  
 ||Conn|安裝連接元件。|
@@ -870,7 +870,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 現在位於與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式不同的獨立安裝程式中。 如需詳細資料，請參閱[安裝 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-**LocalDB 是在安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任何 SKU 時可用的選項。 如需詳細資訊，請參閱 [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 
+**LocalDB 是在安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任何 SKU 時可用的選項。 如需詳細資訊，請參閱 [SQL Server 2016 Express LocalDB](../configure-windows/sql-server-express-localdb.md)。 
   
 ### <a name="feature-parameter-examples"></a>功能參數範例：  
   
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine,PolyBase|安裝 PolyBase 引擎。|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> 角色參數  
- 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。 
+ 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。 
   
  AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。 
   
@@ -928,4 +928,3 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  [從安裝精靈安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [安裝 SQL Server 2016 Business Intelligence 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)     
-  

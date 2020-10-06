@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897025"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670896"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "85897025"
 2. 使用 **Switch-SqlAvailabilityGroup** Cmdlet。 
   
     > [!NOTE] 
-    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Cmdlet。 如需詳細資訊，請參閱[取得 SQL Server PowerShell 的說明](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。 
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Cmdlet。 如需詳細資訊，請參閱[取得 SQL Server PowerShell 的說明](../../../powershell/sql-server-powershell.md)。 
   
      下列範例會將 *MyAg* 可用性群組手動容錯移轉到位於指定路徑的次要複本。 
   
@@ -104,8 +104,8 @@ ms.locfileid: "85897025"
   
     若要設定和使用 SQL Server PowerShell 提供者： 
   
-    -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [取得 SQL Server PowerShell 的說明](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md) 
+    -   [取得 SQL Server PowerShell 的說明](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> 後續操作：手動容錯移轉可用性群組之後 
  如果您在可用性群組的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 外部容錯移轉，請調整 Windows Server 容錯移轉叢集節點的仲裁投票，以反映您新的可用性群組設定。 如需詳細資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
@@ -121,5 +121,4 @@ ms.locfileid: "85897025"
  * [AlwaysOn 可用性群組的概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

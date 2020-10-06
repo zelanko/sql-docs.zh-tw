@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500929"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671051"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>交易 - 可用性群組和資料庫鏡像
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ SQL Server 2017 支援可用性群組中多個資料庫的分散式交易。 這
 
 如需詳細資訊，請參閱：
 
-- [DTC Administration Guide](https://msdn.microsoft.com/library/ms681291.aspx) (DTC 系統管理指南)
-- [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx) (DTC 開發人員指南)
-- [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx) (DTC 程式設計人員參考)
+- [DTC Administration Guide](/previous-versions/windows/desktop/ms681291(v=vs.85)) (DTC 系統管理指南)
+- [DTC Developers Guide](/previous-versions/windows/desktop/ms679938(v=vs.85)) (DTC 開發人員指南)
+- [DTC Programmers Reference](/previous-versions/windows/desktop/ms686108(v=vs.85)) (DTC 程式設計人員參考)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 和以前版本：相同 SQL Server 執行個體內的跨資料庫交易支援  
 
@@ -93,5 +93,4 @@ SQL Server 2016 引進此功能，以便在可用性群組中有一或多個該�
   
 ## <a name="next-steps"></a>後續步驟  
  [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902365"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670381"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性群組儀表板 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ ms.locfileid: "85902365"
 
 SQL Agent 會執行資料收集，而且必須在主要複本以及至少一個次要複本上啟用。 在 SQL Server Management Studio 的 [物件總管]  中，以滑鼠右鍵按一下可用性群組 > [報表] > [標準報表]，以檢視報表。  
 
-如需詳細資訊，請參閱 [Always On 可用性群組延遲報表](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)。
+如需詳細資訊，請參閱 [Always On 可用性群組延遲報表](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports)。
 
 ## <a name="related-tasks"></a>相關工作  
   
@@ -340,5 +340,4 @@ SQL Agent 會執行資料收集，而且必須在主要複本以及至少一個�
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [監視可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

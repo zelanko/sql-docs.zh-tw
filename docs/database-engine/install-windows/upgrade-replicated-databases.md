@@ -17,12 +17,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7db0240ce9a94a5a7bb8431a79c9a66b468471d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900221"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670929"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升級或修補複寫的資料庫
 
@@ -135,4 +135,4 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
  [複寫回溯相容性](../../relational-databases/replication/replication-backward-compatibility.md)   
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) (將複寫拓撲升級至 SQL Server 2016)
+ [Upgrading a Replication Topology to SQL Server 2016](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016) (將複寫拓撲升級至 SQL Server 2016)

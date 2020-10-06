@@ -20,12 +20,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0426ae38b00a939ff852af21b3a3b376b4c236f3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900319"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671018"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦
 
@@ -111,9 +111,8 @@ ms.locfileid: "85900319"
   
  **連結的伺服器組態** - 連結的伺服器組態將會受到電腦重新命名作業影響。 您可以使用 **sp_addlinkedserver** 或 **sp_setnetname** 更新電腦名稱參考。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 或 [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)。  
   
- **用戶端別名名稱** - 使用具名管道的用戶端別名將會受到電腦重新命名作業影響。 例如，如果您建立了指向 SRVR1 的別名 "PROD_SRVR" 並且使用具名管道通訊協定，此管道名稱將會類似這樣： `\\SRVR1\pipe\sql\query`。 重新命名電腦之後，具名管道的路徑將不再有效。 如需具名管道的詳細資訊，請參閱 [使用具名管道建立有效的連接字串](https://go.microsoft.com/fwlink/?LinkId=111063)。  
+ **用戶端別名名稱** - 使用具名管道的用戶端別名將會受到電腦重新命名作業影響。 例如，如果您建立了指向 SRVR1 的別名 "PROD_SRVR" 並且使用具名管道通訊協定，此管道名稱將會類似這樣： `\\SRVR1\pipe\sql\query`。 重新命名電腦之後，具名管道的路徑將不再有效。 如需具名管道的詳細資訊，請參閱 [使用具名管道建立有效的連接字串](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100))。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md)  
-  
   
