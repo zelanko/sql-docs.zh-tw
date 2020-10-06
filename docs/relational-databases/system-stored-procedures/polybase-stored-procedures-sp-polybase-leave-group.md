@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3d909da06b0f8cf4520d92a9ba8cb8652a6b2a5a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546245"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753884"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql) 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,7 +47,7 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>備註  
  您只能從群組中移除計算節點。  
   
- 執行預存程式之後，請重新開機 PolyBase 引擎，並在電腦上 PolyBase 資料移動服務。 若要確認在前端節點上執行下列 DMV： **sys. dm_exec_compute_nodes**。  
+ 執行預存程式之後，請重新開機 PolyBase 引擎，並在電腦上 PolyBase 資料移動服務。 若要確認在前端節點上執行下列 DMV： **sys.dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>範例  
  此範例會從 PolyBase 群組中移除目前的電腦。  
@@ -57,7 +57,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [開始使用 PolyBase](../polybase/polybase-guide.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

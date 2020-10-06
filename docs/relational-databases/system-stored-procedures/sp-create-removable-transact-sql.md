@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06a7201d7e631c660bd0478705f84d395289ccc3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8e76256ec08495383d989134c101b54e4a510370
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541860"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753945"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89541860"
   建立抽取式媒體資料庫。 建立三個或更多檔案 (系統目錄資料表和交易記錄各有一個檔案，資料表有一個或多個檔案)，將資料庫放在這些檔案中。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -128,5 +128,4 @@ EXEC sp_create_removable 'inventory',
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

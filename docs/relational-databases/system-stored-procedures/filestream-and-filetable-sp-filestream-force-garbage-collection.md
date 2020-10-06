@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eeb70b4bc548496dcb8d0c93eeba27a9644c5bca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539185"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753834"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|指出 FILESTREAM 容器名稱|  
 |*num_collected_items*|指出在這個容器中已進行記憶體回收 (已刪除) 的 FILESTREAM 項目 (檔案/目錄) 的數目。|  
 |*num_marked_for_collection_items*|指出在這個容器中已標示為記憶體回收的 FILESTREAM 項目 (檔案/目錄) 的數目。 這些專案尚未刪除，但可能符合在垃圾收集階段之後的刪除條件。|  
-|*num_unprocessed_items*|指出在這個 FILESTREAM 容器中適合記憶體回收但未處理的 FILESTREAM 項目 (檔案或目錄) 的數目。 項目可能因各種原因未處理，包括下列：<br /><br /> 因為尚未進行記錄備份或檢查點而需要確定的檔案。<br /><br /> 在 FULL 或 BULK_LOGGED 復原模式中的檔案。<br /><br /> 有長時間執行的使用中交易。<br /><br /> 複寫記錄讀取器工作尚未執行。 如需詳細資訊，請參閱 [SQL Server 2008 中的白皮書 FILESTREAM 儲存體](https://go.microsoft.com/fwlink/?LinkId=209156) 。|  
+|*num_unprocessed_items*|指出在這個 FILESTREAM 容器中適合記憶體回收但未處理的 FILESTREAM 項目 (檔案或目錄) 的數目。 項目可能因各種原因未處理，包括下列：<br /><br /> 因為尚未進行記錄備份或檢查點而需要確定的檔案。<br /><br /> 在 FULL 或 BULK_LOGGED 復原模式中的檔案。<br /><br /> 有長時間執行的使用中交易。<br /><br /> 複寫記錄讀取器工作尚未執行。 如需詳細資訊，請參閱 [SQL Server 2008 中的白皮書 FILESTREAM 儲存體](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) 。|  
 |*last_collected_xact_seqno*|傳回指定 FILESTREAM 容器中已進行記憶體回收之檔案的最後一個對應記錄序號 (LSN)。|  
   
 ## <a name="remarks"></a>備註  
@@ -111,5 +111,4 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 <br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
-  
   

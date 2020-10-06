@@ -20,12 +20,12 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cda806de638edcea2c7b28cfa850414c90006a2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550121"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753955"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,9 +61,8 @@ ms.locfileid: "89550121"
 |**DOMAIN_NAME**|**Nvarchar (** 128 **) **|如果資料行是一個使用者自訂資料類型，這個資料行就是使用者自訂資料類型的名稱。 否則，便傳回 NULL。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   
  [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
   

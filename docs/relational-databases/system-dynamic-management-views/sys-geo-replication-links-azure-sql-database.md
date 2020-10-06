@@ -1,6 +1,6 @@
 ---
 description: sys.geo_replication_links (Azure SQL Database)
-title: sys. geo_replication_links (Azure SQL Database) |Microsoft Docs
+title: sys.geo_replication_links (Azure SQL Database) Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 36849d6fc285839ebf99b75452735ddf5073f4ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543743"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753684"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -68,6 +68,6 @@ FROM sys.geo_replication_links;
 
 ## <a name="see-also"></a>另請參閱
 
- [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919558d10e0e5d16b93d6efc171825670da47778
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536755"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753460"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89536755"
   將資料庫附加至伺服器。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建議您改用 CREATE DATABASE *database_name* 進行附加。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建議您改用 CREATE DATABASE *database_name* 進行附加。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
 > [!NOTE]  
 >  當一個或多個記錄檔有新位置時，若要重建多個記錄檔，請使用 CREATE DATABASE *database_name* 進行 ATTACH_REBUILD_LOG。  
@@ -53,7 +53,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 `[ @filename1 = ] 'filename_n'` 這是資料庫檔案的機構名稱，包括路徑。 *filename_n* 是 **Nvarchar (260) **，預設值是 Null。 您最多可以指定 16 個檔案名稱。 參數名稱的開頭為** \@ filename1** ，而遞增為** \@ filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
   
 > [!NOTE]  
->  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+>  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
 >   
 >  當您將包含全文檢索目錄檔案的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體時，系統就會從先前的位置附加這些目錄檔案以及其他資料庫檔案，此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
   
@@ -64,7 +64,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  None  
   
 ## <a name="remarks"></a>備註  
- **Sp_attach_db**預存程式只能在先前從資料庫伺服器卸離的資料庫上執行，方法是使用明確的**sp_detach_db**作業或複製的資料庫。 如果您必須指定16個以上的檔案，請使用 CREATE DATABASE *database_name* 來附加或建立資料庫 *database_name* FOR_ATTACH_REBUILD_LOG。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ **Sp_attach_db**預存程式只能在先前從資料庫伺服器卸離的資料庫上執行，方法是使用明確的**sp_detach_db**作業或複製的資料庫。 如果您必須指定16個以上的檔案，請使用 CREATE DATABASE *database_name* 來附加或建立資料庫 *database_name* FOR_ATTACH_REBUILD_LOG。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
  任何未指定的檔案都假設為在前次的已知位置中。 若要在不同位置使用檔案，您必須指定新位置。  
   
@@ -84,7 +84,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。  
   
 ## <a name="permissions"></a>權限  
- 如需有關附加資料庫時如何處理許可權的詳細資訊，請參閱 [建立資料庫 &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 如需有關附加資料庫時如何處理許可權的詳細資訊，請參閱 [建立資料庫 &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的檔案附加至目前的伺服器。  
@@ -103,5 +103,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541988"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753831"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|每月|  
 |**32**|每月，相對於 *freq_interval*|  
 |**64**|SQL Agent 服務啟動時執行|  
-|**128**|在電腦閒置 (不支援 [AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 中執行時執行)  |  
+|**128**|在電腦閒置 (不支援 [AZURE SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 中執行時執行)  |  
   
 `[ @freq_interval = ] freq_interval` 執行作業的天數。 *freq_interval* 是 **int**，預設值是 **1**，且取決於 *freq_type*的值。  
   
@@ -102,7 +102,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**2**|Second|  
 |**4**|Third|  
 |**8**|第四個|  
-|**16**|Last|  
+|**16**|最後一個|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor` 作業排程執行之間的周數或月數。 只有當*freq_type*是**8**、 **16**或**32**時，才會使用*freq_recurrence_factor* 。 *freq_recurrence_factor* 是 **int**，預設值是 **0**。  
   
@@ -201,5 +201,4 @@ GO
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

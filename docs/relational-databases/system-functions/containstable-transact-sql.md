@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454790"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753700"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>備註  
  全文檢索述詞與函數會在 FROM 述詞中隱含的單一資料表上處理。 若要在多個資料表上進行搜尋，請使用 FROM 子句中聯結的資料表，在兩個或多個資料表之產品的結果集上進行搜尋。  
   
- 傳回的資料表有一個名為 **key** 的資料行，其中包含全文檢索索引鍵值。 每個全文檢索索引資料表都有一個資料行，其值保證是唯一的，而且在索引 **鍵** 資料行中傳回的值，是符合包含搜尋條件中所指定的選取準則之資料列的全文檢索索引鍵值。 從 OBJECTPROPERTYEX 函數取得的 **TableFulltextKeyColumn** 屬性提供此唯一索引鍵資料行的識別。 若要取得與全文檢索索引之全文檢索索引鍵相關聯之資料行的識別碼，請使用 **sys. fulltext_indexes**。 如需詳細資訊，請參閱 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+ 傳回的資料表有一個名為 **key** 的資料行，其中包含全文檢索索引鍵值。 每個全文檢索索引資料表都有一個資料行，其值保證是唯一的，而且在索引 **鍵** 資料行中傳回的值，是符合包含搜尋條件中所指定的選取準則之資料列的全文檢索索引鍵值。 從 OBJECTPROPERTYEX 函數取得的 **TableFulltextKeyColumn** 屬性提供此唯一索引鍵資料行的識別。 若要取得與全文檢索索引之全文檢索索引鍵相關聯之資料行的識別碼，請使用 **sys.fulltext_indexes**。 如需詳細資訊，請參閱 [sys.fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  若要取得原始資料表中您想要的資料列，請指定含有 CONTAINSTABLE 資料列的聯結。 使用 CONTAINSTABLE 的 SELECT 陳述式之 FROM 子句的一般形式如下：  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [以排名限制搜尋結果](../../relational-databases/search/limit-search-results-with-rank.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
- [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

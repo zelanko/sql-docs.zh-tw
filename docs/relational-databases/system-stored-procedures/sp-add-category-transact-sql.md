@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481680"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753706"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  將作業、警示或操作員的指定類別目錄加入伺服器中。 如需替代方法，請參閱 [使用 SQL Server Management Studio 建立作業類別目錄](/sql/ssms/agent/create-a-job-category)。
+  將作業、警示或操作員的指定類別目錄加入伺服器中。 如需替代方法，請參閱 [使用 SQL Server Management Studio 建立作業類別目錄](../../ssms/agent/create-a-job-category.md)。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > 在 [AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分但並非所有的 SQL Server Agent 功能目前都受到支援。 如需詳細資料，請參閱 [AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
+ > [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>語法  
   
@@ -97,5 +97,4 @@ GO
  [dbo.sys作業 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

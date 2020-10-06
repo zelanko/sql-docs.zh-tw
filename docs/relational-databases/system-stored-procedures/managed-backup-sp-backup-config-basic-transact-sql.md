@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (Transact-SQL)
-title: managed_backup sp_backup_config_basic (Transact-sql) |Microsoft Docs
+title: managed_backup managed_backup.sp_backup_config_basic (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549992"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753727"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89549992"
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定特定資料庫或實例的基本設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!NOTE]  
->  您可以自行呼叫此程式，以建立基本的 managed backup 設定。 但是，如果您打算新增 advanced 功能或自訂排程，請先使用 managed_backup 設定這些設定 [。 sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 和 Managed_backup sp_backup_config_schedule [transact-sql &#40;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) ，然後再使用此程式啟用受控備份。  
+>  您可以自行呼叫此程式，以建立基本的 managed backup 設定。 但是，如果您打算新增 advanced 功能或自訂排程，請先使用 [managed_backup. sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 和 [managed_backup. sp_backup_config_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) 進行這些設定，再使用此程式啟用受控備份。  
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  在特定資料庫上啟用 managed 備份的資料庫名稱。  
   
  @container_url  
- 指出備份位置的 URL。 當 @credential_name 為 Null 時，此 URL 是共用存取簽章 (SAS) URL 指向 Azure 儲存體中的 blob 容器，而備份則使用新的備份來封鎖 blob 功能。 如需詳細資訊，請參閱 [瞭解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當 @credential_name 指定時，這會是儲存體帳戶 URL，而備份會使用已淘汰的備份來分頁 blob 功能。  
+ 指出備份位置的 URL。 當 @credential_name 為 Null 時，此 URL 是共用存取簽章 (SAS) URL 指向 Azure 儲存體中的 blob 容器，而備份則使用新的備份來封鎖 blob 功能。 如需詳細資訊，請參閱 [瞭解 SAS](/azure/storage/common/storage-sas-overview)。 當 @credential_name 指定時，這會是儲存體帳戶 URL，而備份會使用已淘汰的備份來分頁 blob 功能。  
   
 > [!NOTE]  
 >  此參數目前只支援 SAS URL。  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [managed_backup sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

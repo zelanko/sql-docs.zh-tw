@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46f76ceeba699f614e19b494785c42591ab5299a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549979"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753814"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89549979"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在 [AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分但並非所有的 SQL Server Agent 功能目前都受到支援。 如需詳細資料，請參閱 [AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
+  > [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>語法  
   
@@ -111,7 +111,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|Second|  
 |**4**|Third|  
 |**8**|第四個|  
-|**16**|Last|  
+|**16**|最後一個|  
   
  *frequency_relative_interval* 指出間隔的出現次數。 例如，如果 *frequency_relative_interval* 設定為 **2**， *frequency_type* 會設定為 **32**，而 *frequency_interval* 設定為 **3**，則排程工作會在每個月的第二個星期二進行。  
   
@@ -173,5 +173,4 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

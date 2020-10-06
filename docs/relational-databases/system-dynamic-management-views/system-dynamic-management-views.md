@@ -25,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94ac37d2e2a908d25c9c4b90c8517d127086ed68
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34d184b3605cd10d9ca9313028640a5821367e02
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536931"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753870"
 ---
 # <a name="system-dynamic-management-views"></a>系統動態管理檢視
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,13 +110,13 @@ FROM sys.dm_os_wait_stats;
 
         [Service Broker 相關的動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
 
-        [空間資料相關的動態管理檢視和函數 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)
+        [空間資料相關的動態管理檢視和函數 &#40;Transact-sql&#41;](./spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)
 
         [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
 
         [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 
-        [Stretch Database 動態管理檢視 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)
+        [Stretch Database 動態管理檢視 &#40;Transact-sql&#41;]()
 
         [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)
     :::column-end:::
@@ -125,6 +125,5 @@ FROM sys.dm_os_wait_stats;
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;授與伺服器許可權 ](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   

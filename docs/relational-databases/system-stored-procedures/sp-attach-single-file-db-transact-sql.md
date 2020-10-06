@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7774b738dd8ec6fc0619bc8f72fa85c9ab0db349
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0b8026e1aae3df927a6cc454f7fb4763e3d05093
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541980"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753487"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89541980"
   將只有一個資料檔的資料庫附加至目前的伺服器。 **sp_attach_single_file_db** 不能與多個資料檔案一起使用。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建議您改用 CREATE DATABASE *database_name* 進行附加。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 請勿在複寫資料庫上使用此程序。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建議您改用 CREATE DATABASE *database_name* 進行附加。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。 請勿在複寫資料庫上使用此程序。  
   
 > [!IMPORTANT]  
 >  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
@@ -52,7 +52,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 `[ @physname = ] 'physical_name'` 這是資料庫檔案的機構名稱，包括路徑。 *physical_name* 是 **Nvarchar (260) **，預設值是 Null。  
   
 > [!NOTE]  
->  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+>  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
  當您將包含全文檢索目錄檔案的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體時，系統就會從先前的位置附加這些目錄檔案以及其他資料庫檔案，此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
   
@@ -73,7 +73,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  請勿在複寫資料庫上使用此程序。  
   
 ## <a name="permissions"></a>權限  
- 如需有關附加資料庫時如何處理許可權的詳細資訊，請參閱 [建立資料庫 &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 如需有關附加資料庫時如何處理許可權的詳細資訊，請參閱 [建立資料庫 &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會卸離 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，再從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中，將一個檔案附加至目前的伺服器。  
@@ -92,5 +92,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

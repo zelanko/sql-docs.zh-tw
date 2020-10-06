@@ -1,6 +1,6 @@
 ---
 description: sys.fn_get_audit_file (Transact-SQL)
-title: sys. fn_get_audit_file (Transact-sql) |Microsoft Docs
+title: sys.fn_get_audit_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321794"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753740"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
 | client_ip | **nvarchar(128)** | **適用于**： Azure SQL Database + SQL Server (從2017開始) <br /><br />  用戶端應用程式的來源 IP |  
 | connection_id | GUID | **適用于**： AZURE SQL DATABASE 和 SQL 受控執行個體<br /><br /> 伺服器中的連接識別碼 |
-| data_sensitivity_information | nvarchar(4000) | **適用于**：僅限 Azure SQL Database<br /><br /> 經過審核查詢所傳回的資訊類型和敏感度標籤，是根據資料庫中的分類資料行。 深入瞭解 [Azure SQL Database 資料探索和分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **適用于**：僅限 Azure SQL Database<br /><br /> 經過審核查詢所傳回的資訊類型和敏感度標籤，是根據資料庫中的分類資料行。 深入瞭解 [Azure SQL Database 資料探索和分類](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | 動作發生所在的資料庫環境。 可為 Null。 針對在伺服器層級發生的審核傳回 Null。 |  
 | database_principal_id | **int** |動作執行所在之資料庫使用者環境的識別碼。 不可為 Null。 如果不適用則傳回 0。 例如，伺服器作業。|
 | database_principal_name | **sysname** | 目前的使用者。 可為 Null。 如果無法使用則傳回 NULL。 |  
@@ -177,7 +177,7 @@ fn_get_audit_file ( file_pattern,
 
 如需如何建立稽核的完整範例，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md) (SQL Server 稽核 &#40;資料庫引擎&#41)。
 
-如需設定 Azure SQL Database 審核的詳細資訊，請參閱 [使用 SQL Database 審核開始](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)。
+如需設定 Azure SQL Database 審核的詳細資訊，請參閱 [使用 SQL Database 審核開始](/azure/sql-database/sql-database-auditing)。
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
@@ -200,5 +200,4 @@ fn_get_audit_file ( file_pattern,
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

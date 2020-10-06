@@ -20,12 +20,12 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be084e13d7d6ea5a2eac12ccdda4e4d0a4224ee5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8fcdf7061685dacbd578e995164e3658fd22b45
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481681"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753910"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88481681"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**GRANTOR**|**Nvarchar (** 128 **) **|權限同意授權者。|  
-|**者**|**Nvarchar (** 128 **) **|權限被授與者。|  
+|**GRANTEE**|**Nvarchar (** 128 **) **|權限被授與者。|  
 |**TABLE_CATALOG**|**Nvarchar (** 128 **) **|資料表限定詞。|  
 |**TABLE_SCHEMA**|**Nvarchar (** 128 **) **|包含資料表的結構描述名稱。<br /><br /> 重要的是，若要尋找物件的架構，唯一的可靠方式就是查詢 sys. objects 目錄檢視。 <strong> \* \* \* \* </strong>|  
 |**TABLE_NAME**|**sysname**|資料表名稱。|  
@@ -45,10 +45,9 @@ ms.locfileid: "88481681"
 |**IS_GRANTABLE**|**Varchar (** 3 **) **|指定被授與者是否可以將權限授與其他人。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   
  [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys. objects &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
-  
   

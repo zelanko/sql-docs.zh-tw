@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: bb8a754ee5e477f0bccce286f8f93193136276e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e4b24e5fcab13083c06f53868f462c3b45cc497
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464730"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753800"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -32,7 +32,7 @@ ms.locfileid: "88464730"
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> 在 [AZURE SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大部分（但並非全部） SQL Server Agent 作業類型都受到支援。 如需詳細資料，請參閱 [AZURE SQL 受控執行個體與 SQL Server 的 t-sql 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 。
+> 在 [AZURE SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)上，大部分（但並非全部） SQL Server Agent 作業類型都受到支援。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 ## <a name="syntax"></a>語法
 
@@ -100,7 +100,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 如需有關這些權杖的詳細資訊，並將您的作業步驟更新為使用新的權杖語法，請參閱 [在作業步驟中使用權杖](../../ssms/agent/use-tokens-in-job-steps.md)。
 
 > [!IMPORTANT]
-> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些標記包括： **DBN**、 **SVR**、 **a-ERR**、 **嚴重性**、 **MSG**和 **WMI (**_屬性_**) **。 請注意在此版本中，Token 的使用擴充到所有警示。
+> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(** <屬性> **)** 。 請注意在此版本中，Token 的使用擴充到所有警示。
 >
 > 如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]****、選取 [屬性]****，然後在 [警示系統]**** 頁面上選取 [取代回應警示之所有作業的 Token]****，以啟用這些 Token。
 

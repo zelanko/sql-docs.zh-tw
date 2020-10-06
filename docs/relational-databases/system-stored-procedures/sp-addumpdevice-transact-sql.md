@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549983"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753790"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](../../sql-server/what-s-new-in-sql-server-2016.md))。  
 
 將備份裝置加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_addumpdevice** 將備份裝置新增至 **sys. backup_devices** 目錄檢視。 可在 BACKUP 和 RESTORE 陳述式中以邏輯方式參照裝置。 **sp_addumpdevice** 不會執行實體裝置的任何存取。 只有在執行 BACKUP 或 RESTORE 陳述式時，才對指定的裝置進行存取。 建立邏輯備份裝置可簡化 BACKUP 和 RESTORE 陳述式，其中指定裝置名稱是使用 "TAPE =" 或 "DISK =" 子句指定裝置路徑的替代方法。  
+ **sp_addumpdevice** 將備份裝置新增至 **sys.backup_devices** 目錄檢視。 可在 BACKUP 和 RESTORE 陳述式中以邏輯方式參照裝置。 **sp_addumpdevice** 不會執行實體裝置的任何存取。 只有在執行 BACKUP 或 RESTORE 陳述式時，才對指定的裝置進行存取。 建立邏輯備份裝置可簡化 BACKUP 和 RESTORE 陳述式，其中指定裝置名稱是使用 "TAPE =" 或 "DISK =" 子句指定裝置路徑的替代方法。  
   
  擁有權和權限問題可能會干擾磁碟或檔案備份裝置的使用。 請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 Windows 帳戶已取得適當的檔案權限。  
   
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

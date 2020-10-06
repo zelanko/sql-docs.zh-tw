@@ -20,12 +20,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c52f6d3c89051bd07143180410a0040c9d01144d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42ebb05e1ec3bf70426cb0cef662623e2beb57f7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548458"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753939"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,9 @@ ms.locfileid: "89548458"
 |**DELETE_RULE**|**Varchar (** 11 **) **|當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式違反這個條件約束所定義的參考完整性時，所採取的動作。 傳回下列項目之一： <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> 如果這個條件約束的 ON DELETE 指定了 NO ACTION，就不會將條件約束所參考的主索引鍵之刪除傳播到外部索引鍵。 如果這類的主索引鍵刪除會因為至少有一個外部索引鍵包含相同的值，而造成參考完整性違規，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會變更父系和參考資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會引發錯誤。<br /><br /> 如果這個條件約束的 ON DELETE 指定了 CASCADE，就會將主索引鍵值的變更傳播到外部索引鍵值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   
  [&#40;Transact-sql&#41;的資訊架構視圖 ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. foreign_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
-  
+ [sys.foreign_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
   
