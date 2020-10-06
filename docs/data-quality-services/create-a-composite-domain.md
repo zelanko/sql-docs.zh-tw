@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449890"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728025"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
 
@@ -70,7 +70,7 @@ ms.locfileid: "88449890"
   
 6.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。  
   
-7.  按一下 [確定]。  
+7.  按一下 [確定]  。  
   
 ##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a> 設定複合定義域屬性  
   
@@ -90,7 +90,7 @@ ms.locfileid: "88449890"
   
 5.  如果您選取 **[分隔符號]** 當做剖析方法，您也可以選取 **[使用知識庫剖析]**。 如需詳細資訊，請參閱 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   
-6.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+6.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 後續操作：建立複合定義域之後  
  在建立複合定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
@@ -103,5 +103,4 @@ ms.locfileid: "88449890"
  當複合定義域是由字串定義域所組成，或者複合定義域是由混合不同類型的定義域 (整數、日期、時間等) 所組成時，便可以使用以知識為基礎的剖析。 如果資料來源是由不同類型的資料所組成，則應該先針對非字串資料類型來執行剖析，然後其餘資料則根據定義域知識，如上面所述。  
   
  當您使用以知識為基礎的剖析，而且來源資料中的值少於複合定義域中的定義域時，DQS 會在遺漏的定義域中放置 null。 當來源資料中的值多於複合定義域中的定義域時，DQS 會將額外的資料加入至其中一個資料行。 如果有兩個或多個定義域包含相同的值，則資料來源將會剖析為第一個相符的定義域。  
-  
   

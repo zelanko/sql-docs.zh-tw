@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5da54333208b1e9781387387374f58a822e08f06
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487955"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728019"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
 
@@ -95,9 +95,8 @@ ms.locfileid: "88487955"
   
     6.  測試完成之後，請在 **[測試複合定義域規則]** 對話方塊中按一下 **[關閉]** 。  
   
-2.  當您完成跨定義域規則時，請按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+2.  當您完成跨定義域規則時，請按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))＞中所述。  
   
 ##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> 後續操作：建立跨定義域規則之後  
  在建立跨定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
-  
   
