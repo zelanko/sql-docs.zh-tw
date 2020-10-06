@@ -2,7 +2,7 @@
 
 大眾部署 SQL Server 時都必須考量的一項工作，是確定所有任務關鍵性 SQL Server 執行個體及其內部資料庫，在企業和使用者需要它們時都能夠使用，無論是上班時間或全天候。 目標是維持企業運轉不中斷或將影響降至最低。 這個概念就是所謂的企業持續營運。
 
-SQL Server 2017 引進了許多新功能或現有項目的增強功能，有些就是針對可用性。 SQL Server 2017 最大的變化是新增 Linux 發行版本的 SQL Server 支援。 如需 SQL Server 2017 新功能的完整清單，請參閱 [SQL Server 2017 的新功能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)主題。
+SQL Server 2017 引進了許多新功能或現有項目的增強功能，有些就是針對可用性。 SQL Server 2017 最大的變化是新增 Linux 發行版本的 SQL Server 支援。 如需 SQL Server 2017 新功能的完整清單，請參閱 [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)主題。
 
 本文著重於涵蓋 SQL Server 2017 的可用性案例，以及 SQL Server 2017 中新增和強化的可用性功能。 包括跨 Windows Server 和 Linux 的 SQL Server 部署混合式案例，以及能增加可讀取資料庫複本數目的案例。 雖然此文章不涵蓋 SQL Server 外部的可用性選項，例如虛擬化提供的可用性選項，但這裡討論的所有內容都適用於客體虛擬機器內的 SQL Server 安裝，無論在公用雲端或由內部部署 Hypervisor 伺服器所主控。
 
@@ -15,7 +15,7 @@ SQL Server 2017 引進了許多新功能或現有項目的增強功能，有些�
 * 移轉與升級
 * 向外延展一或多個資料庫的可讀取複本
 
-每節都會討論可用於該特定案例的相關功能。 未涵蓋的一項功能是 [SQL Server 複寫](https://docs.microsoft.com/sql/relational-databases/replication/sql-server-replication)。 雖未正式指定為 AlwaysOn 範圍內的可用性功能，但經常用於特定情況下的資料備援。 未來的 Linux SQL Server 版本會新增複寫。
+每節都會討論可用於該特定案例的相關功能。 未涵蓋的一項功能是 [SQL Server 複寫](../relational-databases/replication/sql-server-replication.md)。 雖未正式指定為 AlwaysOn 範圍內的可用性功能，但經常用於特定情況下的資料備援。 未來的 Linux SQL Server 版本會新增複寫。
 
 > [!IMPORTANT] 
 > SQL Server 可用性功能不會取代任何可用性方案對強固且經過備份和還原策略測試的最基本建置組塊的需求。
@@ -144,7 +144,7 @@ FCI 未遺失任何資料，但基礎的共用儲存體是單一失敗點，因�
 
 ![可用性群組](media/sql-server-ha-story/image6.png)
  
-在叢集類型為 None 的可用性群組之外，可用性群組要求所有複本都屬於相同的基礎叢集，無論是 WSFC 或 Pacemaker。 這表示在上圖中，WSFC 會延伸到兩個不同的資料中心工作，這會增加複雜度。 無論平台 (Windows Server 或 Linux)。 跨距離延展叢集會增加複雜性。 SQL Server 2016 引進的分散式可用性群組，能讓可用性群組跨越在不同叢集上設定的可用性群組。 如此即可減少所有節點參與相同叢集的需求，使設定災害復原更為容易。 如需分散式可用性群組的詳細資訊，請參閱[分散式可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups)。
+在叢集類型為 None 的可用性群組之外，可用性群組要求所有複本都屬於相同的基礎叢集，無論是 WSFC 或 Pacemaker。 這表示在上圖中，WSFC 會延伸到兩個不同的資料中心工作，這會增加複雜度。 無論平台 (Windows Server 或 Linux)。 跨距離延展叢集會增加複雜性。 SQL Server 2016 引進的分散式可用性群組，能讓可用性群組跨越在不同叢集上設定的可用性群組。 如此即可減少所有節點參與相同叢集的需求，使設定災害復原更為容易。 如需分散式可用性群組的詳細資訊，請參閱[分散式可用性群組](../database-engine/availability-groups/windows/distributed-availability-groups.md)。
 
 ![分散式可用性群組](media/sql-server-ha-story/image11.png)
  
@@ -180,12 +180,12 @@ FCI 可用於災害復原。 與一般可用性群組一樣，基礎叢集機制
 
 可用性群組會在修補作業完成時將主要複本手動容錯移轉至次要複本，讓修補基礎作業系統期間的停機時間降至最低。 從作業系統的觀點而言，在 Windows 伺服器上這樣做更常見，因為提供服務給基礎作業系統，通常 (但非一律) 需要重新開機。 修補 Linux 有時候需要重新開機，但不常見。 
 
-[修補參與可用性群組的 SQL Server 執行個體](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances)也能將停機時間降至最低，視可用性群組架構的複雜程度而定。 若要修補參與可用性群組的伺服器，必須先修補次要複本。 修補完成正確的複本數目後，主要複本即可手動容錯移轉至另一個要升級的節點。 任何剩餘的次要複本也可以在此時升級。 
+[修補參與可用性群組的 SQL Server 執行個體](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)也能將停機時間降至最低，視可用性群組架構的複雜程度而定。 若要修補參與可用性群組的伺服器，必須先修補次要複本。 修補完成正確的複本數目後，主要複本即可手動容錯移轉至另一個要升級的節點。 任何剩餘的次要複本也可以在此時升級。 
 
 ### <a name="always-on-failover-cluster-instances"></a>AlwaysOn 容錯移轉叢集執行個體
 
 自力更生的 FCI 無法協助傳統的移轉或升級。FCI 的資料庫和計算在內的所有其他物件都必須設定可用性群組或記錄傳送。 不過，基礎的 Windows Server 需要修補時，Windows Server 下的 FCI 仍是大受歡迎的選項。 可起始手動容錯移轉，這表示短暫中斷，而不是在整個修補 Windows Server 的期間完全無法使用執行個體。
-FCI 可以就地升級為 SQL Server 2017。 如需相關資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance)。
+FCI 可以就地升級為 SQL Server 2017。 如需相關資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)。
 
 ### <a name="log-shipping"></a>記錄傳送
 
@@ -197,7 +197,7 @@ FCI 可以就地升級為 SQL Server 2017。 如需相關資訊，請參閱[升�
 
 Linux 的 SQL Server 另有兩種部署方法：容器和使用 Azure (或其他公用雲端提供者)。 如本文所述的一般可用性需求，無論 SQL Server 部署方式為何都存在。 當要讓 SQL Server 具有高可用性時，這兩個方法有一些特殊考量。
 
-[使用 Docker 的容器](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)，對 Windows Server 或 Linux 而言，都是部署 SQL Server 的新方法。 容器是準備好要執行的 SQL Server 完整影像。 不過，目前沒有叢集化高可用性或災害復原的原生支援。 目前，使用容器提供 SQL Server 資料庫的選項是記錄傳送以及備份和還原。 雖然如前文所述可以設定 None 叢集類型的可用性群組，但它不會視為真正的可用性組態。 Microsoft 正在尋找使用容器啟用可用性群組或 FCI 的方式。 
+[使用 Docker 的容器](../linux/quickstart-install-connect-docker.md)，對 Windows Server 或 Linux 而言，都是部署 SQL Server 的新方法。 容器是準備好要執行的 SQL Server 完整影像。 不過，目前沒有叢集化高可用性或災害復原的原生支援。 目前，使用容器提供 SQL Server 資料庫的選項是記錄傳送以及備份和還原。 雖然如前文所述可以設定 None 叢集類型的可用性群組，但它不會視為真正的可用性組態。 Microsoft 正在尋找使用容器啟用可用性群組或 FCI 的方式。 
 
 如果您目前使用的是容器，且容器遺失，它可以再次部署並附加至所用的共用儲存體，視容器平台而定。 此機制有部分由容器協調者提供。 雖然這提供某種程度的靈活度，但仍有一些與資料庫復原有關的停機時間，如果使用可用性群組或 FCI，並非真的如預期般高度可用。 
 
@@ -226,7 +226,7 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 ## <a name="read-scale"></a><a name = "ReadScaleOut"></a> 讀取級別
 
-自 SQL Server 2012 引進次要複本後，其就已經能夠用於唯讀查詢。 以可用性群組可以達到的兩種方式：允許直接存取次要複本以及[設定唯讀路由](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) (必須使用接聽程式)。  SQL Server 2016 引進了透過接聽程式使用循環配置資源演算法的負載平衡唯讀狀態連線能力，允許唯讀要求散佈到所有的可讀取複本。 
+自 SQL Server 2012 引進次要複本後，其就已經能夠用於唯讀查詢。 以可用性群組可以達到的兩種方式：允許直接存取次要複本以及[設定唯讀路由](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) (必須使用接聽程式)。  SQL Server 2016 引進了透過接聽程式使用循環配置資源演算法的負載平衡唯讀狀態連線能力，允許唯讀要求散佈到所有的可讀取複本。 
 
 > [!NOTE]
 > 可讀取的次要複本是 Enterprise Edition 的獨有功能，每個裝載可讀取複本的執行個體都需要 SQL Server 授權。

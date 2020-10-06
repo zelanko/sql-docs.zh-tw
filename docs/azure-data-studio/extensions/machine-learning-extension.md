@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136784"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725143"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的機器學習延伸模組 (預覽)
 
@@ -24,7 +24,7 @@ ms.locfileid: "91136784"
 
 您必須在執行 Azure Data Studio 的電腦上安裝下列先決條件。
 
-- [Python 3](https://www.python.org/downloads/)。 安裝 Python 之後，您必須在 [[延伸模組設定](#settings)] 底下，指定 Python 安裝的本機路徑。 如果您已在 Azure Data Studio 中使用 [Python 核心筆記本](../notebooks-tutorial-python-kernel.md)，根據預設，此延伸模組將使用來自筆記本的路徑。
+- [Python 3](https://www.python.org/downloads/)。 安裝 Python 之後，您必須在 [[延伸模組設定](#settings)] 底下，指定 Python 安裝的本機路徑。 如果您已在 Azure Data Studio 中使用 [Python 核心筆記本](../notebooks/notebooks-python-kernel.md)，根據預設，此延伸模組將使用來自筆記本的路徑。
 
 - 適用於 Windows、macOS 或 Linux 的 [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
@@ -87,7 +87,7 @@ _安裝這些元件：_
 
 1. 確定 [機器學習:啟用 Python] 已啟用。 此設定預設為啟用狀態。
 
-1. 提供您預先存在之 Python 安裝的路徑 (位於 [機器學習:Python 路徑] 底下)。 這可以是 Python 可執行檔的完整路徑，也可以是可執行檔所在的資料夾。 如果您已在 Azure Data Studio 中使用 [Python 核心筆記本](../notebooks-tutorial-python-kernel.md)，根據預設，此延伸模組將使用來自筆記本的路徑。
+1. 提供您預先存在之 Python 安裝的路徑 (位於 [機器學習:Python 路徑] 底下)。 這可以是 Python 可執行檔的完整路徑，也可以是可執行檔所在的資料夾。 如果您已在 Azure Data Studio 中使用 [Python 核心筆記本](../notebooks/notebooks-python-kernel.md)，根據預設，此延伸模組將使用來自筆記本的路徑。
 
 ### <a name="enable-r"></a>啟用 R
 
@@ -114,6 +114,6 @@ _安裝這些元件：_
 - [管理資料庫中的套件](machine-learning-extension-manage-packages.md)
 - [進行預測](machine-learning-extension-predictions.md)
 - [匯入或檢視模型](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio 中的 Notebook](../notebooks-guidance.md)
+- [Azure Data Studio 中的 Notebook](../notebooks/notebooks-guidance.md)
 - [SQL 機器學習文件](../../machine-learning/index.yml)
 - [SQL Edge 中採用 ONNX 的機器學習和 AI (預覽)](/azure/azure-sql-edge/onnx-overview)(機器翻譯)

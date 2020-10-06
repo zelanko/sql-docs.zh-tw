@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478053"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724279"
 ---
 # <a name="advanced-editor"></a>進階編輯器
 
@@ -47,11 +47,11 @@ ms.locfileid: "88478053"
   
  顯示的屬性會因元件而異。 如需有關 **[進階編輯器]** 可能顯示之屬性的詳細資訊，請參閱下列主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [路徑屬性](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [路徑屬性](./data-flow/integration-services-paths.md)  
   
  如需有關正在編輯之特定元件的詳細資訊，請參閱＜ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件及概念＞文件集＜資料流程元素＞一節中的該元件描述：  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88478053"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

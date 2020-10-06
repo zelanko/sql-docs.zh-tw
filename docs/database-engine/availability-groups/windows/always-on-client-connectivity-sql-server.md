@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3fa77d1c6796220937a6966a5e4202c7f029ddd8
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 10517361b14711595b08a2c4761a368666b764b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790321"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726569"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>可用性群組的驅動程式和用戶端連線支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "87790321"
 |具有連接修補程式的 ADO.NET 與 .NET Framework 4.0*|是|是|是|是|是|  
 |具有連接修補程式的 ADO.NET 與 .NET Framework 3.5 SP1**|是|是|是|是|是|  
 |[Microsoft ODBC Driver 13.1+ for SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|是|是|是|是|是|
-|[Microsoft JDBC Driver 4.0+ for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|是|是|是|是|是| 
-|[Microsoft OLE DB Driver for SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|是|是|是|是|是| 
+|[Microsoft JDBC Driver 4.0+ for SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|是|是|是|是|是| 
+|[Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|是|是|是|是|是| 
   
  *下載 ADO .NET 與 .NET Framework 4.0 的連線修補程式：[https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)。  
   
  **下載 ADO.NET 與 .NET Framework 3.5 SP1 的連線修補程式：[https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)。  
  
- *下載新的 Microsoft OLE DB Driver for SQL Server：[https://aka.ms/downloadmsoledbsql](https://aka.ms/downloadmsoledbsql)。  
+ *下載新的 Microsoft OLE DB Driver for SQL Server：[https://aka.ms/downloadmsoledbsql](../../../connect/oledb/download-oledb-driver-for-sql-server.md)。  
 
 > [!IMPORTANT]  
 >  若要連接到可用性群組接聽程式，用戶端必須使用 TCP 連接字串。  
@@ -65,10 +65,9 @@ ms.locfileid: "87790321"
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)   
+ [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))   
+ [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](/archive/blogs/sqlalwayson/)   
  [當您從執行 Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2 的電腦重新連接 IPSec 連接時發生長時間延遲](https://support.microsoft.com/kb/980915)   
  [叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 R2 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578113)   
  [如果叢集與應用程式伺服器之間不存在任何路由器，就會緩慢地進行容錯移轉作業](https://support.microsoft.com/kb/2582281)  
-  
   

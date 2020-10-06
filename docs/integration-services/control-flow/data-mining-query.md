@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3e798ca968230aa0a554189076281a886bff3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457538"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727620"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
 
@@ -68,7 +68,6 @@ ms.locfileid: "88457538"
  指定套用至資料行的條件或使用者運算式。 可以將資料行從包含採礦模型和輸入資料行的資料表，拖曳至資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦查詢工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [資料採礦查詢工具](/analysis-services/data-mining/data-mining-query-tools)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

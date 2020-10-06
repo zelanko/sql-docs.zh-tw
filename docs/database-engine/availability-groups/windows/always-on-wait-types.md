@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50886885852fd9ffe2d759be779989cb221cf76f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2a04953b5881362dbae6a83ea874dc9ed0207a7a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115805"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724528"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>識別與可用性群組相關的等候
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   當您在針對 Always On 可用性群組延遲進行疑難排解時，可以使用動態管理檢視 (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 中的可用性群組特定等候類型，來監視等候的統計資料的累積。  
   
- 如需使用等候統計資料的一般資訊，請參閱 [SQL Server 2005 等候和佇列](https://technet.microsoft.com/library/cc966413.aspx) \(英文\)。 該文件是針對 SQL Server 2005 撰寫，但其資訊可以套用到更新的 SQL Server 版本。  
+ 如需使用等候統計資料的一般資訊，請參閱 [SQL Server 2005 等候和佇列](/previous-versions/sql/sql-server-2005/administrator/cc966413(v=technet.10)) \(英文\)。 該文件是針對 SQL Server 2005 撰寫，但其資訊可以套用到更新的 SQL Server 版本。  
   
 ## <a name="query-for-availability-groups-wait-types"></a>查詢可用性群組等候類型  
  使用以下 T-SQL 查詢來擷取具有可用性群組等候類型的所有等候的統計資料：  
@@ -53,5 +53,4 @@ ORDER BY map_key ASC
   
 ## <a name="next-steps"></a>後續步驟  
  [等候的類型](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116940"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727854"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>連線到 Always On 可用性群組接聽程式 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ SELECT @@SERVERNAME
  
 -   至少一個次要複本設定為唯讀存取，且每個唯讀次要複本和主要複本都[設定為支援唯讀路由](configure-read-only-routing-for-an-availability-group-sql-server.md)。 
 
--   連接字串會參考可用性群組中的相關資料庫。 您有一個替代方案，就是將資料庫設定為連線所使用之登入的預設資料庫。 如需詳細資訊，請參閱[演算法如何使用唯讀路由](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)一文。
+-   連接字串會參考可用性群組中的相關資料庫。 您有一個替代方案，就是將資料庫設定為連線所使用之登入的預設資料庫。 如需詳細資訊，請參閱[演算法如何使用唯讀路由](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)一文。
 
 -   連接字串參考可用性群組接聽程式，而且內送連接的應用程式意圖設定為唯讀，例如，透過在 ODBC 或 OLEDB 連接字串或連接屬性 (attribute) 或屬性 (property) 中使用 **Application Intent=ReadOnly** 關鍵字。 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 當成功連線到接聽程式之後，請考慮將[唯讀工作負載](overview-of-always-on-availability-groups-sql-server.md)和[備份](configure-backup-on-availability-replicas-sql-server.md)卸載至次要複本，以提升效能。 您也可以檢閱各種[可用性群組監視策略](monitoring-of-availability-groups-sql-server.md)，以確保可用性群組的健康狀態。 
 
-如需可用性群組的詳細資訊，請參閱 [Always On 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 
+如需可用性群組的詳細資訊，請參閱 [Always On 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。

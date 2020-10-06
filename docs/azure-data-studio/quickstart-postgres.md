@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a66f349658c8470a3e4408953cc6121ffff74b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766547"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725112"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>快速入門：使用 Azure Data Studio 連線及查詢 PostgreSQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "88766547"
 若要完成本快速入門，則需要 Azure Data Studio、適用於 Azure Data Studio 的 PostgreSQL 延伸模組，以及 PostgreSQL 伺服器的存取權。
 
 - [安裝 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
-- [安裝適用於 Azure Data Studio 的 PostgreSQL 延伸模組](postgres-extension.md)。
+- [安裝適用於 Azure Data Studio 的 PostgreSQL 延伸模組](./extensions/postgres-extension.md)。
 - [安裝 PostgreSQL](https://www.postgresql.org/download/) (或者，您可以使用 [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli)，在雲端建立 Postgres 資料庫)。 
 
 ## <a name="connect-to-postgresql"></a>連線到 PostgreSQL
@@ -133,4 +133,4 @@ ms.locfileid: "88766547"
 
 ## <a name="next-steps"></a>後續步驟
 
-了解[適用於 Azure Data Studio 中 Postgres 的案例](postgres-extension.md)。
+了解[適用於 Azure Data Studio 中 Postgres 的案例](./extensions/postgres-extension.md)。

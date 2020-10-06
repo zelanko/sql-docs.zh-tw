@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480250"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727822"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>什麼是 Always On 可用性群組？
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "89480250"
   
     -   **自動容錯移轉** (不會遺失資料)  
   
-         自動容錯移轉的發生，是為了回應造成同步處理的次要複本轉換到主要角色 (擁有資料保護保證) 的失敗。 當先前的主要複本變成可以使用時，會轉換到次要角色。 自動容錯移轉要求主要複本和目標次要複本都在同步認可模式下執行，而且容錯移轉模式設為「自動」。 此外，次要複本必須已經過同步處理、擁有 WSFC 仲裁，而且符合可用性群組之 [具彈性的容錯移轉原則](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)所指定的條件。  
+         自動容錯移轉的發生，是為了回應造成同步處理的次要複本轉換到主要角色 (擁有資料保護保證) 的失敗。 當先前的主要複本變成可以使用時，會轉換到次要角色。 自動容錯移轉要求主要複本和目標次要複本都在同步認可模式下執行，而且容錯移轉模式設為「自動」。 此外，次要複本必須已經過同步處理、擁有 WSFC 仲裁，而且符合可用性群組之 [具彈性的容錯移轉原則](./configure-flexible-automatic-failover-policy.md)所指定的條件。  
   
         > [!IMPORTANT]  
         >  SQL Server 容錯移轉叢集執行個體 (FCI) 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
@@ -156,11 +156,11 @@ ms.locfileid: "89480250"
   
 -   **部落格：**  
   
-     [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
+     [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
-     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server 工程師部落格](/archive/blogs/psssql/)  
   
 -   **影片：**  
   
@@ -170,9 +170,9 @@ ms.locfileid: "89480250"
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server 客戶諮詢團隊白皮書](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ ms.locfileid: "89480250"
  [使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

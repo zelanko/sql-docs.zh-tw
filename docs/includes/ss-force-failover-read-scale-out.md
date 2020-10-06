@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: eeef45e1678a1770f2dd0fc89c38943fa76cef72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88655291"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726416"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 
 
@@ -98,7 +98,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```
 
    > [!NOTE] 
-   > 若要刪除可用性群組，請使用 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)。 針對以叢集類型 NONE 或 EXTERNAL 建立的可用性群組，請在屬於可用性群組的所有複本上執行此命令。
+   > 若要刪除可用性群組，請使用 [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md)。 針對以叢集類型 NONE 或 EXTERNAL 建立的可用性群組，請在屬於可用性群組的所有複本上執行此命令。
 
 1. 繼續進行資料移動，在裝載主要複本的 SQL Server 執行個體上，針對可用性群組中的每個資料庫執行下列命令： 
 

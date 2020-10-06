@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484612"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724959"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
 
@@ -69,7 +69,7 @@ ms.locfileid: "88484612"
 >   
 >  如果您從不是最近建立的輸出檔向下切入，則向下鑽研查詢傳回的資料列集可能與計算原始輸出的資料列集不同。  
   
- 如需資料設定檔檢視器之使用者介面的詳細資訊，請參閱 [資料設定檔檢視器 F1 說明](../../integration-services/control-flow/data-profile-viewer-f1-help.md)。  
+ 如需資料設定檔檢視器之使用者介面的詳細資訊，請參閱 [資料設定檔檢視器 F1 說明]()。  
   
 ## <a name="data-profile-viewer-f1-help"></a>資料設定檔檢視器 F1 說明
   您可以使用資料設定檔檢視器來檢視資料分析工作的輸出。  
@@ -246,4 +246,3 @@ ms.locfileid: "88484612"
   
  **Count**  
  顯示指定之資料行具有第一個資料行中所顯示之值的資料列數目。  
-  

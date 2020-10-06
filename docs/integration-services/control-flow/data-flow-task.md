@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431030"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725951"
 ---
 # <a name="data-flow-task"></a>資料流程工作
 
@@ -108,7 +108,7 @@ ms.locfileid: "88431030"
   
  如需如何在 [屬性]**** 視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>資料流程工作的程式設計組態  
  如需有關以程式設計方式將資料流程工作加入封裝，並設定資料流程屬性的詳細資訊，請按下列主題：  
@@ -116,9 +116,8 @@ ms.locfileid: "88431030"
 -   [以程式設計方式加入資料流程工作](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>相關工作  
- [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>相關內容  
- technet.microsoft.com 上的影片： [Balanced Data Distributer](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)(平衡型資料散發者)。  
-  
+ technet.microsoft.com 上的影片： [Balanced Data Distributer](/previous-versions/dn912438(v=msdn.10))(平衡型資料散發者)。  
   

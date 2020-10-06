@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b4c7725de6d0381f80a5cc90beaf54d7101fa82
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 1b5232854920083c685e426e0ca55eeb9a065c70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115645"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726497"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何叢集化 Always On 可用性群組的 DTC 服務
 
@@ -36,7 +36,7 @@ ms.locfileid: "91115645"
 |Task|參考|  
 |-----------------|----------|  
 |共用存放磁碟機。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(設定共用存放磁碟機)。 請考慮使用磁碟機代號 **M**。|
-|唯一的 DTC 網路名稱資源。  此名稱將會在 Active Directory 中註冊作為叢集電腦物件。<br /><br />請確定下列任一條件成立：<br /><br />• 建立 DTC 網路名稱資源的使用者，具有 DTC 網路名稱資源所在 OU 或容器的建立電腦物件權限。<br /><br />• 如果使用者沒有建立電腦物件權限，則請網域系統管理員為 DTC 網路名稱資源預先設置叢集電腦物件。|[在 Active Directory 網域服務中預先設置叢集電腦物件](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|唯一的 DTC 網路名稱資源。  此名稱將會在 Active Directory 中註冊作為叢集電腦物件。<br /><br />請確定下列任一條件成立：<br /><br />• 建立 DTC 網路名稱資源的使用者，具有 DTC 網路名稱資源所在 OU 或容器的建立電腦物件權限。<br /><br />• 如果使用者沒有建立電腦物件權限，則請網域系統管理員為 DTC 網路名稱資源預先設置叢集電腦物件。|[在 Active Directory 網域服務中預先設置叢集電腦物件](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |有效的可用靜態 IP 位址及該 IP 位址的適當子網路遮罩。||
 
 ## <a name="cluster-the-dtc-resource"></a>叢集化 DTC 資源
@@ -47,7 +47,7 @@ ms.locfileid: "91115645"
 
 |Task|參考|  
 |-----------------|----------|  
-|安全地啟用叢集 DTC 資源的網路存取。|[安全地啟用 MS DTC 的網路存取](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
+|安全地啟用叢集 DTC 資源的網路存取。|[安全地啟用 MS DTC 的網路存取](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
 |停止並停用本機 DTC 服務。|[設定如何啟動服務](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |針對可用性群組中的每個執行個體輪流使用 SQL Server 服務。  視需要容錯移轉可用性群組。|[執行可用性群組的已規劃手動容錯移轉 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
@@ -60,13 +60,13 @@ ms.locfileid: "91115645"
 ### <a name="resources"></a>資源
 
 
-[在可用性群組上測試 DTC 的詳細資訊：](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
+[在可用性群組上測試 DTC 的詳細資訊：](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups)
 
 [監視 AlwaysOn 可用性群組系統檢視](monitor-availability-groups-transact-sql.md)
 
 [逐步建立可用性群組](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (可用性群組中的 SQL Server 2016 DTC 支援) 
+[SQL Server 2016 DTC Support in Availability Groups](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups) (可用性群組中的 SQL Server 2016 DTC 支援) 
 
 [External link:Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (外部連結：使用 Windows Server 2008 R2 設定 SQL Server 叢集執行個體的 DTC)

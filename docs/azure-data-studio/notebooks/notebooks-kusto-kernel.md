@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379593"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725122"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>建立並執行 Kusto (KQL) 筆記本 (預覽)
 
@@ -28,7 +28,7 @@ ms.locfileid: "91379593"
 
 如果您沒有 Azure 訂用帳戶，請在開始前建立[免費 Azure 帳戶](https://azure.microsoft.com/free/)。
 
-- [Azure 資料總管叢集，其中包含您可以連線的資料庫](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)。
+- [Azure 資料總管叢集，其中包含您可以連線的資料庫](/azure/data-explorer/create-cluster-database-portal)。
 - [Azure Data Studio](../download-azure-data-studio.md)。
 - [適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組](../extensions/kusto-extension.md)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "91379593"
 
 3. 針對 [核心] 選取 [Kusto]。 確認 [附加至] 功能表已設定為叢集名稱和資料庫。 在本文中，我們會使用 help.kusto.windows.net 叢集來處理範例資料庫資料。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="設定 [核心] 和 [附加至]":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="開啟筆記本":::
 
 您可從 [檔案] 功能表使用 [儲存] 或 [另存新檔...] 命令來儲存筆記本。
 
@@ -56,14 +56,14 @@ ms.locfileid: "91379593"
 
 1. 選取筆記本工具列中的 [附加至]  功能表，然後選取 [變更連線]  。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="變更連線":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="開啟筆記本":::
 
    > [!Note]
    > 確定已填入資料庫值。 Kusto 筆記本必須已指定資料庫。
 
 2. 您現在可以選取最近的連線伺服器，或輸入新的連線詳細資料來連線。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="選取不同的叢集":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="開啟筆記本":::
 
    > [!Note]
    > 指定不含 `https://` 的叢集名稱。
@@ -76,7 +76,7 @@ ms.locfileid: "91379593"
 
 1. 選取工具列中的 [+程式碼]  命令來新增程式碼儲存格。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto 核心程式碼區塊":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="開啟筆記本":::
 
 2. 將下列範例複製並貼到資料格中，然後選取 [執行資料格]。 此範例會查詢 StormEvents 資料以尋找特定事件類型。
 
@@ -85,7 +85,7 @@ ms.locfileid: "91379593"
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="執行資料格":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="開啟筆記本":::
 
 ## <a name="save-the-result-or-show-chart"></a>儲存結果或顯示圖表
 
@@ -102,7 +102,7 @@ ms.locfileid: "91379593"
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="儲存結果":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="開啟筆記本":::
 
 ## <a name="known-issues"></a>已知問題
 
@@ -118,6 +118,6 @@ ms.locfileid: "91379593"
 深入了解筆記本：
 
 - [適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組](../extensions/kusto-extension.md)
-- [如何在 Azure Data Studio 中使用筆記本](../notebooks-guidance.md)
-- [建立及執行 Python 筆記本](../notebooks-tutorial-python-kernel.md)
-- [建立並執行 SQL Server 筆記本](../notebooks-tutorial-sql-kernel.md)
+- [如何在 Azure Data Studio 中使用筆記本](./notebooks-guidance.md)
+- [建立及執行 Python 筆記本](./notebooks-python-kernel.md)
+- [建立並執行 SQL Server 筆記本](./notebooks-sql-kernel.md)

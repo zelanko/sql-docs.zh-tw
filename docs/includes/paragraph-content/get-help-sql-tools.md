@@ -4,16 +4,16 @@ ms.topic: include
 ms.prod: sql
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7e335f40386223aa869608cd5cce22493ba7e3f
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: 7502743d17abbc24bdc23d29e6948a93f20b527f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86218063"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91745586"
 ---
 ## <a name="image-typeicon-sourcemediainfo-tippng-borderfalse-get-help-for-sql-tools"></a>:::image type="icon" source="../media/info-tip.png" border="false"::: 取得 SQL 工具的說明
 
-- [取得說明的所有方法](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
+- [取得說明的所有方法](../../sql-server/sql-server-get-help.md)
 - [提交 Azure Data Studio Git 問題](https://github.com/Microsoft/azuredatastudio/issues) \(英文\)
 - [參與 Azure Data Studio](https://github.com/Microsoft/azuredatastudio) \(英文\)
 - [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools&filter=alltypes&sort=lastpostdesc)

@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379613"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725187"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組 (預覽)
 
-適用於 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 延伸模組可讓您連線及查詢 [Azure 資料總管](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)叢集。
+適用於 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 延伸模組可讓您連線及查詢 [Azure 資料總管](/azure/data-explorer/data-explorer-overview)叢集。
 
 使用者可撰寫和執行 KQL 查詢，以及使用 [Kusto 核心](../notebooks/notebooks-kusto-kernel.md)搭配 IntelliSense 來撰寫筆記本。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91379613"
 還需要下列必要條件：
 
 - [已安裝 Azure Data Studio](../download-azure-data-studio.md)。
-- [Azure 資料總管叢集和資料庫](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)。
+- [Azure 資料總管叢集和資料庫](/azure/data-explorer/create-cluster-database-portal)。
 
 ## <a name="install-the-kusto-kql-extension"></a>安裝 Kusto (KQL) 延伸模組
 
@@ -55,7 +55,7 @@ ms.locfileid: "91379613"
 
 在 [Azure 入口網站](https://ms.portal.azure.com/#home)中尋找您的 Azure 資料總管叢集，然後尋找叢集的 URI。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Kusto 延伸模組":::
 
 不過，您可以立即開始使用 *help.kusto.windows.net* 叢集。
 
@@ -82,7 +82,7 @@ ms.locfileid: "91379613"
     7. 將 [名稱 (選擇性)] 保留空白。
         1. 您可以使用此欄位來為您的伺服器提供別名。
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="連線詳細資料":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Kusto 延伸模組":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>如何在 Azure Data Studio 中查詢 Azure 資料總管資料庫
 
@@ -104,7 +104,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-如需有關撰寫 KQL 查詢的詳細資訊，請瀏覽[撰寫Azure 資料總管的查詢](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+如需有關撰寫 KQL 查詢的詳細資訊，請瀏覽[撰寫Azure 資料總管的查詢](/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## <a name="view-extension-settings"></a>檢視延伸模組設定
 
@@ -120,13 +120,13 @@ StormEvents
 
 延伸模組設定看起來像這樣：
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto (KQL) 延伸模組設定":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto 延伸模組":::
 
 ## <a name="sanddance-visualization"></a>SandDance 視覺效果
 
-Azure Data Studio 中的 [SandDance 延伸模組](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension)與 Kusto (KQL) 延伸模組將豐富的互動式視覺效果整合在一起。 從 KQL 查詢結果集，選取 [視覺化檢視] 按鈕以啟動 [SandDance](https://sanddance.js.org/)。
+Azure Data Studio 中的 [SandDance 延伸模組](../sanddance-extension.md)與 Kusto (KQL) 延伸模組將豐富的互動式視覺效果整合在一起。 從 KQL 查詢結果集，選取 [視覺化檢視] 按鈕以啟動 [SandDance](https://sanddance.js.org/)。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 視覺效果":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 延伸模組":::
 
 ## <a name="known-issues"></a>已知問題
 
@@ -145,6 +145,6 @@ Azure Data Studio 中的 [SandDance 延伸模組](https://docs.microsoft.com/sql
 
 - [建立並執行 Kusto 筆記本](../notebooks/notebooks-kusto-kernel.md)
 - [Azure Data Studio 中的 kqlmagic 筆記本](../notebooks/notebooks-kqlmagic.md)
-- [SQL 對 Kusto 的功能提要](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [什麼是 Azure 資料總管？](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [SQL 對 Kusto 的功能提要](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [什麼是 Azure 資料總管？](/azure/data-explorer/data-explorer-overview)
 - [使用 SandDance 視覺效果](https://sanddance.js.org/)

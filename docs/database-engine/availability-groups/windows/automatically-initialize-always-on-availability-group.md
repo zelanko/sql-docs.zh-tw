@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07b5dd0889c4379a8586f071416e5d4a8a21fb6e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a8dea3150b7dbdbb1b69e82f80723e5651681ef8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114630"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726522"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組初始化
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -286,5 +286,4 @@ SQL Server 使用固定的執行緒數目來進行自動植入。 在主要執�
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[AlwaysOn 可用性群組疑難排解和監視指南](https://technet.microsoft.com/library/dn135328.aspx)
-
+[AlwaysOn 可用性群組疑難排解和監視指南](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))

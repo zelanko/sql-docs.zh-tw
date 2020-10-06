@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362670"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727852"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362670"
 > [!IMPORTANT]  
 >  如果可用性群組包含多個可用性資料庫，則包含最高 Tfailover 的可用性資料庫會變成 RTO 合規性的限制值。  
   
- 失敗偵測時間 Tdetection 是系統用來偵測失敗的時間。 此時間取決於叢集層級設定，而不是個別可用性複本。 根據已設定的自動容錯移轉條件，則可能會觸發容錯移轉作為關鍵 SQL Server 內部錯誤的立即回應，例如孤立執行緒同步鎖定。 在此情況下，偵測可以和 [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 錯誤報告傳送至 WSFC 叢集同樣快速 (預設間隔為健康情況檢查逾時的 1/3)。 容錯移轉也可因為逾時而觸發，例如叢集健康情況檢查逾時已過期 (預設為 30 秒) 或資源 DLL 和 SQL Server 執行個體之間的租用已過期 (預設為 20 秒)。 在此情況下，偵測時間與逾時間隔長度相同。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx)。  
+ 失敗偵測時間 Tdetection 是系統用來偵測失敗的時間。 此時間取決於叢集層級設定，而不是個別可用性複本。 根據已設定的自動容錯移轉條件，則可能會觸發容錯移轉作為關鍵 SQL Server 內部錯誤的立即回應，例如孤立執行緒同步鎖定。 在此情況下，偵測可以和 [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 錯誤報告傳送至 WSFC 叢集同樣快速 (預設間隔為健康情況檢查逾時的 1/3)。 容錯移轉也可因為逾時而觸發，例如叢集健康情況檢查逾時已過期 (預設為 30 秒) 或資源 DLL 和 SQL Server 執行個體之間的租用已過期 (預設為 20 秒)。 在此情況下，偵測時間與逾時間隔長度相同。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014)。  
   
  次要複本為了準備好進行容錯移轉而必須做的一件事，就是讓重做趕上記錄檔的結尾。 重做時間 Tredo 是使用下列公式計算的：  
   
@@ -310,7 +310,7 @@ ms.locfileid: "87362670"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>監視 RTO 和 RPO  
- 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似下列文章中提供的 GUI 教學課程：[Always On 健康情況模型，第 2 部分：Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。  
+ 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似下列文章中提供的 GUI 教學課程：[Always On 健康情況模型，第 2 部分：Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。  
   
  [預估容錯移轉時間 (RTO)](#estimating-failover-time-rto) 和[預估潛在資料遺失 (RPO)](#estimating-potential-data-loss-rpo) 中容錯移轉時間和潛在資料遺失的元素，會提供為原則管理 Facet **資料庫複本狀態**中便利的效能計量 (請參閱[檢閱 SQL Server 物件的原則式管理 Facet](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md))。 您可以依排程監視這兩個計量，並在計量分別超過您的 RTO 和 RPO 時收到警示。  
   
@@ -454,4 +454,4 @@ ms.locfileid: "87362670"
 |hadr_worker_pool_task|`alwayson`|偵錯|Primary|  
 |hadr_dump_primary_progress|`alwayson`|偵錯|Primary|  
 |hadr_dump_log_progress|`alwayson`|偵錯|Primary|  
-|hadr_undo_of_redo_log_scan|`alwayson`|分析|次要|  
+|hadr_undo_of_redo_log_scan|`alwayson`|分析|次要|

@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477977"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724524"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
 
@@ -45,7 +45,7 @@ Azure Data Lake Store 連線管理員是 [SQL Server Integration Services (SSIS)
     1.  如果選取 [Azure AD 使用者身分識別]**** 驗證選項，請執行下列動作︰
         1. 提供 [使用者名稱]**** 和 [密碼]**** 欄位的值。 
     
-        2. 選取 [測試連線]**** 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Data Lake Storage Gen1 資料，因此當提示出現時請選取 [接受]****。 如需此同意體驗的詳細資訊，請參閱 [整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)。
+        2. 選取 [測試連線]**** 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Data Lake Storage Gen1 資料，因此當提示出現時請選取 [接受]****。 如需此同意體驗的詳細資訊，請參閱 [整合應用程式與 Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)。
     
         > [!NOTE] 
         > 當您選取 [Azure AD 使用者身分識別]**** 驗證選項時，不支援多重要素驗證和 Microsoft 帳戶驗證。
@@ -53,7 +53,7 @@ Azure Data Lake Store 連線管理員是 [SQL Server Integration Services (SSIS)
     2. 如果選取 [Azure AD 服務識別]**** 驗證選項，請執行下列動作︰
         1. 建立 Azure Active Directory (AAD) 應用程式和服務主體以存取 Data Lake Storage Gen1 資料。
     
-        2. 指派合適的權限，讓此 AAD 應用程式存取 Data Lake Storage Gen1 資源。 如需此驗證選項的詳細資訊，請參閱 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(使用入口網站建立可存取資源的 Active Directory 應用程式和服務主體)。
+        2. 指派合適的權限，讓此 AAD 應用程式存取 Data Lake Storage Gen1 資源。 如需此驗證選項的詳細資訊，請參閱 [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal)(使用入口網站建立可存取資源的 Active Directory 應用程式和服務主體)。
     
         3. 提供 [用戶端識別碼]****、[祕密金鑰]**** 和 [租用戶名稱]**** 欄位的值。
     
@@ -63,5 +63,4 @@ Azure Data Lake Store 連線管理員是 [SQL Server Integration Services (SSIS)
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>檢視連線管理員的屬性
 您可以在 [屬性] **** 視窗中看到您建立的連線管理員屬性。  
-  
   

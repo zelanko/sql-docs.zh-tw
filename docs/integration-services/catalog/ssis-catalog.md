@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990381"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726042"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
 
@@ -40,7 +40,7 @@ ms.locfileid: "90990381"
   
  若要維護 **SSISDB** 資料庫，建議您套用管理使用者資料庫的標準企業原則。 如需有關建立維護計畫的詳細資訊，請參閱＜ [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)＞。  
   
- **SSISDB** 目錄和 **SSISDB** 資料庫都支援 Windows PowerShell。 如需有關使用 SQL Server 搭配 Windows PowerShell 的詳細資訊，請參閱＜ [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)＞。 如需有關如何使用 Windows PowerShell 完成部署專案等工作的範例，請參閱 blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。  
+ **SSISDB** 目錄和 **SSISDB** 資料庫都支援 Windows PowerShell。 如需有關使用 SQL Server 搭配 Windows PowerShell 的詳細資訊，請參閱＜ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)＞。 如需有關如何使用 Windows PowerShell 完成部署專案等工作的範例，請參閱 blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)。  
   
  如需檢視作業資料的詳細資訊，請參閱 [監視封裝執行和其他作業](../../integration-services/performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -416,7 +416,7 @@ ms.locfileid: "90990381"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 4.  執行下列動作，以產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -440,7 +440,7 @@ ms.locfileid: "90990381"
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
-1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行 `sp_configure` 預存程序來啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [CLR 已啟用選項](https://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行 `sp_configure` 預存程序來啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [CLR 已啟用選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
   
     ```  
     use master   
@@ -456,7 +456,7 @@ ms.locfileid: "90990381"
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    您可以從 [SQL Server 預設相容性層級清單](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments)中尋找 `YourSQLServerDefaultCompatibilityLevel` 的值。
+    您可以從 [SQL Server 預設相容性層級清單](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments)中尋找 `YourSQLServerDefaultCompatibilityLevel` 的值。
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 預存程序需要授與 UNSAFE 權限給登入，因為登入需要對於限制資源的額外存取，例如 Microsoft Win32 API。 如需 UNSAFE 程式碼權限的詳細資訊，請參閱 [建立組件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
 
@@ -679,4 +679,4 @@ SSISDB 不支援限制委派。 在雙躍點環境中，如果裝載 SSISDB 目�
   
 -   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)。  
   
--   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
+-   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。

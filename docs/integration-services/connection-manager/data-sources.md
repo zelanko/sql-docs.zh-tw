@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477974"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728056"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的資料來源
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477974"
   
 > **注意：** 您只能將資料來源加入到設定為使用套件部署模型的專案。 若專案設定為使用專案部署模型，您就可以使用在專案層級建立的連接管理員來共用連接，取代使用資料來源的方式。  
 >   
->  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](https://msdn.microsoft.com/library/hh231102.aspx)。  
+>  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用資料來源的好處包括：  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477974"
  資料來源物件代表至資料來源的簡單連接，並提供其參考之資料存放區中物件的存取權。 例如，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks 範例資料庫的資料來源物件包含資料庫中的所有 60 個資料表。  
   
  資料來源與參考資料來源的連接管理員之間沒有相依性。 如果資料來源不再是專案的一部分，封裝將繼續有效，因為有關資料來源的資訊 (例如其連接類型和連接字串) 都包含在封裝定義中。  
-  
   

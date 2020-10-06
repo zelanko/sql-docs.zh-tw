@@ -166,6 +166,4 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >對於 SQL Server 2017 版，資料庫鏡像端點唯一支援的驗證方法是 `CERTIFICATE`。 未來的版本將啟用 `WINDOWS` 選項。
 
-如需詳細資訊，請參閱[資料庫鏡像端點 (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)。
-
-
+如需詳細資訊，請參閱[資料庫鏡像端點 (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。

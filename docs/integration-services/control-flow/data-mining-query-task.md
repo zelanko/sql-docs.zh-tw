@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431020"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727574"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
 
@@ -44,9 +44,9 @@ ms.locfileid: "88431020"
 ## <a name="prediction-queries"></a>預測查詢  
  查詢為「資料採礦延伸模組」(DMX) 陳述式。 DMX 語言為 SQL 語言的擴充模組，能提供使用採礦模型的支援。 如需如何使用 DMX 語言的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
- 此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
+ 此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
- 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資料，請參閱 [資料採礦查詢工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
+ 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資料，請參閱 [資料採礦查詢工具](/analysis-services/data-mining/data-mining-query-tools)。  
   
  查詢結果會儲存到資料表。 如果「資料採礦查詢」工作指定的資料表名稱已存在，則工作可使用相同的名稱附加一個號碼建立新的資料表，或者覆寫資料表內容。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88431020"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>以程式設計方式設定資料採礦查詢工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列其中一個主題：  
@@ -72,7 +72,7 @@ ms.locfileid: "88431020"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  
@@ -104,7 +104,7 @@ ms.locfileid: "88431020"
 ## <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作]**** 對話方塊的 [查詢]**** 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  
@@ -160,7 +160,7 @@ ms.locfileid: "88431020"
 ## <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  
@@ -184,4 +184,3 @@ ms.locfileid: "88431020"
   
  **卸除並重新建立輸出資料表**  
  指出預測查詢是否應藉由卸除然後重新建立資料表，來覆寫目的地資料表的內容。  
-  

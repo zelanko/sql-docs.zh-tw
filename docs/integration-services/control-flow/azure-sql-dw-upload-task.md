@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350014"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725971"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 
@@ -28,7 +28,7 @@ ms.locfileid: "88350014"
 
 
 **Azure SQL DW 上傳工作**可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure SQL 資料倉儲 (DW)。
-該工作會利用 PolyBase 來改善效能，如 [Azure SQL 資料倉儲上傳模式及策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)一文所述。
+該工作會利用 PolyBase 來改善效能，如 [Azure SQL 資料倉儲上傳模式及策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文所述。
 目前支援的來源資料檔案格式為使用 UTF8 編碼的分隔文字。
 從檔案系統複製時，資料會先上傳到 Azure Blob 儲存體暫存，再到 Azure SQL DW。 因此，會需要 Azure Blob 儲存體。
 

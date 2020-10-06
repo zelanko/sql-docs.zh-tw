@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457567"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724532"
 ---
 # <a name="control-flow"></a>控制流程
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457567"
   
 -   加入連接管理員。  
   
-     許多工作都需要連接到資料來源，因此您必須將工作所需的連接管理員加入封裝。 視其使用的列舉值類型而定，「Foreach 迴圈」容器也可能需要連接管理員。 您可以在逐項建構控制流程時，或在開始建構控制流程之前加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+     許多工作都需要連接到資料來源，因此您必須將工作所需的連接管理員加入封裝。 視其使用的列舉值類型而定，「Foreach 迴圈」容器也可能需要連接管理員。 您可以在逐項建構控制流程時，或在開始建構控制流程之前加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](../connection-manager/integration-services-ssis-connections.md)。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具還包括許多設計階段功能，您可以使用這些功能管理設計介面，並使控制流程可以自我記錄。  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457567"
   
 -   [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [將元件分組或取消分組](../../integration-services/group-or-ungroup-components.md)  
-  
   

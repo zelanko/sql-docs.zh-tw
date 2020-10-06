@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4334a18c00eb040307b5fa2116c9a3edb4a011d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46c1132e2432a244fda6f21efc69cb294a41f670
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351984"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725952"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Integration Services (SSIS) 目錄 Transact-SQL 參考
 
@@ -27,4 +27,4 @@ ms.locfileid: "88351984"
   
  [預存程序 &#40;Integration Services 目錄&#41;](../../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [函式 &#40;Integration Services 目錄&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f) 
+ [函式 &#40;Integration Services 目錄&#41;](../functions-dm-execution-performance-counters.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9466f9434ff06d22b7dcabc1d42da6d1bae76014
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115065"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727856"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>開始使用 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91115065"
   
 |Task|連結|  
 |----------|----------|  
-|修改可用性群組的 [彈性容錯移轉原則](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) ，以便控制造成自動容錯移轉的狀況。 只有在可能發生自動容錯移轉時，這個原則才會相關。|[設定可用性群組的彈性容錯移轉原則](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|修改可用性群組的 [彈性容錯移轉原則](./configure-flexible-automatic-failover-policy.md) ，以便控制造成自動容錯移轉的狀況。 只有在可能發生自動容錯移轉時，這個原則才會相關。|[設定可用性群組的彈性容錯移轉原則](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |執行規劃的手動容錯移轉或強制手動容錯移轉 (可能遺失資料)，後者通常稱為「強制容錯移轉」。 如需詳細資訊，請參閱本主題稍後的 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。|[執行已規劃的手動容錯移轉](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [執行強制手動容錯移轉](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |使用一組預先定義的原則，檢視可用性群組及其複本和資料庫的健全狀況。|[使用原則式管理檢視可用性群組健全狀況](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [使用 AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |加入或移除次要複本。|[加入次要複本](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [移除次要複本](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -90,9 +90,9 @@ ms.locfileid: "91115065"
   
 -   **影片 - 深入探討 Always On：**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Microsoft SQL Server 名稱代碼 "Denali" Always On 系列第二部分：使用 Always On 建立任務關鍵性高可用性解決方案)  
   
--   **白皮書：** [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **白皮書：** [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **部落格：** [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **部落格：** [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -102,5 +102,4 @@ ms.locfileid: "91115065"
  [監視可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組的 Transact-SQL 陳述式概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

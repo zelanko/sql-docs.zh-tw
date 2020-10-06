@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477972"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728064"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
 
@@ -40,12 +40,11 @@ ms.locfileid: "88477972"
   
 3.  從下拉式清單中選擇 [Management certificate store location (管理憑證存放區位置)]**** 和 [Management certificate store name (管理憑證存放區名稱)]****。  
   
-4.  輸入 [管理憑證指紋]****，或按一下 [瀏覽...]**** 可從選取的存放區選擇憑證。 憑證必須上傳為訂用帳戶的管理憑證。 若要這樣做，請按一下 Azure 入口網站下一個頁面上的 [上傳]**** (如需詳細資訊，請參閱此 [MSDN 文章](https://msdn.microsoft.com/library/azure/gg551722.aspx))。  
+4.  輸入 [管理憑證指紋]****，或按一下 [瀏覽...]**** 可從選取的存放區選擇憑證。 憑證必須上傳為訂用帳戶的管理憑證。 若要這樣做，請按一下 Azure 入口網站下一個頁面上的 [上傳]**** (如需詳細資訊，請參閱此 [MSDN 文章](/previous-versions/azure/gg551722(v=azure.100)))。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  按一下 [測試連接] 來測試連接。  
   
 6.  按一下 **[確定]** ，關閉對話方塊。  
-  
   

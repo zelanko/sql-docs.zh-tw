@@ -13,19 +13,19 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc4877a76b314baf13353e6fe979210244d81c48
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900210"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670227"
 ---
 # <a name="upgrade-sql-server"></a>升級 SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  您可以將 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 或 [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 的執行個體直接升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，由於支援的主要作業系統之間沒有共同重疊，所以您必須執行並存升級 (或移轉) 才能移至 SQL Server 2019。 在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式以升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，請先檢閱下列升級程序的相關文章和版本資訊。  
   
-   - 如需從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級的詳細資訊，請參閱 [從 SQL Server 2005 升級嗎？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)。  
+   - 如需從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級的詳細資訊，請參閱 [從 SQL Server 2005 升級嗎？](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)。  
    - [SQL Server 2016 版本資訊](../../sql-server/sql-server-2016-release-notes.md) 
    - [SQL Server 2017 版本資訊](../../sql-server/sql-server-2017-release-notes.md) 
   
@@ -34,7 +34,7 @@ ms.locfileid: "85900210"
   
 -   [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [執行 Data Migration Assistant 準備進行升級](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
--   [從 SQL Server 2005 升級嗎？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+-   [從 SQL Server 2005 升級嗎？](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
 -   [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
 -   [升級 Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [升級 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
@@ -55,6 +55,5 @@ ms.locfileid: "85900210"
  [升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [升級 Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
- [回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [回溯相容性](../discontinued-database-engine-functionality-in-sql-server.md)  
   

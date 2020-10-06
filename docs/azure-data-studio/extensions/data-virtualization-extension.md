@@ -9,12 +9,12 @@ ms.author: raajmera
 ms.reviewer: alayu, sstein, maghan
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 9e2d1adbd092bd221399a642ce8f299613c7095c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2d0e508cc509f0c2e8d758684545e189c71dd928
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123204"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725177"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>適用於 Azure Data Studio 的資料虛擬化延伸模組
 
@@ -22,7 +22,7 @@ ms.locfileid: "91123204"
 
 ## <a name="install-the-data-virtualization-extension"></a>安裝資料虛擬化延伸模組
 
-若要安裝資料虛擬化延伸模組，請造訪[擴充 Azure Data Studio 的功能](../extensions.md)。
+若要安裝資料虛擬化延伸模組，請造訪[擴充 Azure Data Studio 的功能](./add-extensions.md)。
 
 ## <a name="changes-in-release-10"></a>1\.0 版中的變更
 

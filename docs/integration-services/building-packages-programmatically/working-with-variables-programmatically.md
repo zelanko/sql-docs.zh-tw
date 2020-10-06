@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394994"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725109"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
 
@@ -41,15 +41,15 @@ ms.locfileid: "88394994"
   
 -   在執行階段擴展 Transact-SQL 陳述式的參數值。  
   
--   控制 Foreach 迴圈的流程。 如需詳細資訊，請參閱[將列舉新增至控制流程](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)。  
+-   控制 Foreach 迴圈的流程。 如需詳細資訊，請參閱[將列舉新增至控制流程](../control-flow/foreach-loop-container.md)。  
   
--   按照運算式中的用途控制優先順序條件約束。 優先順序條件約束可以包含條件約束定義中的變數。 如需詳細資訊，請參閱 [將運算式加入優先順序條件約束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+-   按照運算式中的用途控制優先順序條件約束。 優先順序條件約束可以包含條件約束定義中的變數。 如需詳細資訊，請參閱 [將運算式加入優先順序條件約束](../control-flow/precedence-constraints.md)。  
   
--   控制 For 迴圈容器的條件式重複。 如需詳細資訊，請參閱[將反覆項目新增至控制流程](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)。  
+-   控制 For 迴圈容器的條件式重複。 如需詳細資訊，請參閱[將反覆項目新增至控制流程](../control-flow/for-loop-container.md)。  
   
 -   建立包含變數值的運算式。  
   
--   您可以為下列所有容器類型建立自訂變數：套件、**Foreach 迴圈**容器、**For 迴圈**容器、**時序**容器、TaskHost 和事件處理常式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   您可以為下列所有容器類型建立自訂變數：套件、**Foreach 迴圈**容器、**For 迴圈**容器、**時序**容器、TaskHost 和事件處理常式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
 ## <a name="scope"></a>影響範圍  
  每個容器有它自己的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合。 在建立新變數時，它在其父容器的範圍內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，而且在封裝中的所有容器都可以看到它們。 透過使用集合中的變數名稱或是變數的索引，容器的子系也可以透過 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合來存取容器的變數集合。  
@@ -231,10 +231,9 @@ End Module
  運算式必須是使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式語法的有效運算式。 除了運算式語法提供的運算子與函數之外，變數運算式中還允許常值，但是運算式無法參考其他變數或是資料行。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
 ## <a name="configuration-files"></a>組態檔  
- 如果組態檔包含自訂變數，則可以在執行階段更新變數。 這表示當封裝執行時，會使用組態檔中的新值來取代原本在封裝中的變數值。 當將封裝部署到需要不同變數值的多部伺服器時，這個取代技術將特別有用。 例如，變數可以指定 **Foreach 迴圈**容器重複其工作流程的次數；或是列出事件處理常式在引發錯誤時，傳送電子郵件的收件者清單；或是變更套件失敗前，允許發生的錯誤次數。 這些變數是在每個環境的組態檔中動態提供的。 因此，在組態檔中只允許讀取/寫入的變數。 如需詳細資訊，請參閱 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)。  
+ 如果組態檔包含自訂變數，則可以在執行階段更新變數。 這表示當封裝執行時，會使用組態檔中的新值來取代原本在封裝中的變數值。 當將封裝部署到需要不同變數值的多部伺服器時，這個取代技術將特別有用。 例如，變數可以指定 **Foreach 迴圈**容器重複其工作流程的次數；或是列出事件處理常式在引發錯誤時，傳送電子郵件的收件者清單；或是變更套件失敗前，允許發生的錯誤次數。 這些變數是在每個環境的組態檔中動態提供的。 因此，在組態檔中只允許讀取/寫入的變數。 如需詳細資訊，請參閱 [建立封裝組態](../packages/legacy-package-deployment-ssis.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
- [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [在套件中使用變數](../integration-services-ssis-variables.md)  
   

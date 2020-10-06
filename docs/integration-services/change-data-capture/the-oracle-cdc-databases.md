@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496142"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724978"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496142"
   
 -   SQL Server CDC 機制產生的一組變更資料表和變更存取函數，與一般非 Oracle 的 SQL Server CDC 中使用的項目相同。  
   
- `cdc` 結構描述一開始僅供 **dbowner** 固定資料庫角色的成員存取。 對變更資料表和變更函數的存取是由與 SQL Server CDC 相同的安全性模型所決定。 如需安全性模型的詳細資訊，請參閱 [安全性模型](https://go.microsoft.com/fwlink/?LinkId=231151)。  
+ `cdc` 結構描述一開始僅供 **dbowner** 固定資料庫角色的成員存取。 對變更資料表和變更函數的存取是由與 SQL Server CDC 相同的安全性模型所決定。 如需安全性模型的詳細資訊，請參閱 [安全性模型](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))。  
   
 ## <a name="creating-the-cdc-database"></a>建立 CDC 資料庫  
  在大多數情況下，CDC 資料庫是使用 CDC 設計工具主控台所建立，但是也可以使用透過 CDC 設計工具主控台產生的 CDC 部署指令碼來建立。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以視需要變更資料庫設定 (例如儲存體、安全性或可用性等項目)。  
@@ -55,11 +55,11 @@ ms.locfileid: "88496142"
  鏡像資料表是空的，其中不會儲存任何資料。 鏡像資料表是用來啟用 Oracle CDC 執行個體所使用的標準 SQL Server CDC 基礎結構。 為了避免將資料插入或更新到鏡像資料表中，PUBLIC 拒絕所有的 UPDATE、DELETE 和 INSERT 作業。 這可確保無法修改這些資料表。  
   
 ## <a name="access-to-change-data"></a>存取變更資料  
- 由於用來存取與擷取執行個體相關聯之變更資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模型的緣故，必須將相關鏡像資料表之所有擷取資料行的 `select` 存取權限授與使用者 (對原始 Oracle 資料表的存取權限不會提供對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中之變更資料表的存取權)。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模型的資訊，請參閱 [安全性模型](https://go.microsoft.com/fwlink/?LinkId=231151)。  
+ 由於用來存取與擷取執行個體相關聯之變更資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模型的緣故，必須將相關鏡像資料表之所有擷取資料行的 `select` 存取權限授與使用者 (對原始 Oracle 資料表的存取權限不會提供對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中之變更資料表的存取權)。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模型的資訊，請參閱 [安全性模型](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))。  
   
  此外，如果建立擷取執行個體時指定了控制角色，呼叫端也必須是指定之控制角色的成員。 雖然傳回之中繼資料的存取權通常也會使用基礎來源資料表的選取存取權以及任何已定義之控制角色的成員資格來控制，但是所有資料庫使用者都可以透過 PUBLIC 角色存取用以存取中繼資料的其他一般異動資料擷取函數。  
   
- 當建立擷取執行個體時，可能會藉由呼叫特殊資料表函數 (由 SQL Server CDC 元件產生) 來讀取變更資料。 如需此函數的詳細資訊，請參閱 [異動資料擷取函數 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 當建立擷取執行個體時，可能會藉由呼叫特殊資料表函數 (由 SQL Server CDC 元件產生) 來讀取變更資料。 如需此函數的詳細資訊，請參閱 [異動資料擷取函數 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)。  
   
  透過 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC 來源元件存取 CDC 資料受限於相同的規則。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496142"
   
  一開始為資料表 `<schema-name>.<table-name>`啟用擷取時，預設擷取執行個體名稱為 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 資料表的預設擷取執行個體名稱為 HR_EMPLOYEES 而且關聯的變更資料表為 [cdc]。 [HR_EMPLOYEES_CT]。  
   
- 擷取資料表是由 Oracle CDC 執行個體寫入。 當建立擷取執行個體時，便會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的特殊資料表值函式讀取這些資料表。 例如： `fn_cdc_get_all_changes_HR_EMPLOYEES` 。 如需這些 CDC 函數的詳細資訊，請參閱 [異動資料擷取函數 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
+ 擷取資料表是由 Oracle CDC 執行個體寫入。 當建立擷取執行個體時，便會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的特殊資料表值函式讀取這些資料表。 例如： `fn_cdc_get_all_changes_HR_EMPLOYEES` 。 如需這些 CDC 函數的詳細資訊，請參閱 [異動資料擷取函數 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)。  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 資料表是由 SQL Server CDC 元件所產生。 它在 Oracle CDC 中的使用情況與一般使用情況不同。  
@@ -192,5 +192,4 @@ ms.locfileid: "88496142"
   
 ## <a name="see-also"></a>另請參閱  
  [Attunity Oracle 異動資料擷取設計工具](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

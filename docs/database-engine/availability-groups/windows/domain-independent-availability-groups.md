@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116236"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727889"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On 可用性群組 (AG) 需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 透過 Windows Server 2012 R2 部署 WSFC 時，一律需要參與 WSFC 的伺服器 (也稱為節點) 加入相同的網域。 如需 Active Directory 網域服務 (AD DS) 的詳細資訊，請參閱[這裡](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。
+Always On 可用性群組 (AG) 需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 透過 Windows Server 2012 R2 部署 WSFC 時，一律需要參與 WSFC 的伺服器 (也稱為節點) 加入相同的網域。 如需 Active Directory 網域服務 (AD DS) 的詳細資訊，請參閱[這裡](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10))。
 
 AD DS 和 WSFC 相依性比先前使用資料庫鏡像 (DBM) 組態所部署的相依性更為複雜，因為可以使用憑證跨多個資料中心部署 DBM，而不需要任何這類相依性。  跨多個資料中心的傳統可用性群組需要所有伺服器都必須加入相同的 Active Directory 網域；不同的網域即使是受信任的網域，也沒有作用。 所有伺服器都必須是相同 WSFC 的節點。 下圖顯示這個組態。 SQL Server 2016 也具有分散式可用性群組，同時以不同的方式達到此目標。
 
 
 ![跨兩個連接至相同網域之資料中心的 WSFC][1]
 
-Windows Server 2012 R2 引進[已中斷連結 Active Directory 的叢集](https://technet.microsoft.com/library/dn265970.aspx)，這是可與可用性群組搭配使用的一種特殊形式的 Windows Server 容錯移轉叢集。 這種類型的 WSFC 仍然需要將節點加入相同的 Active Directory 網域，但在此情況下，WSFC 會使用 DNS，而不是使用網域。 因為仍然包含網域，所以已中斷連結 Active Directory 的叢集仍然未提供完全無網域體驗。
+Windows Server 2012 R2 引進[已中斷連結 Active Directory 的叢集](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11))，這是可與可用性群組搭配使用的一種特殊形式的 Windows Server 容錯移轉叢集。 這種類型的 WSFC 仍然需要將節點加入相同的 Active Directory 網域，但在此情況下，WSFC 會使用 DNS，而不是使用網域。 因為仍然包含網域，所以已中斷連結 Active Directory 的叢集仍然未提供完全無網域體驗。
 
 Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為基礎之新類型的 Windows Server 容錯移轉叢集：Workgroup 叢集。 Workgroup 叢集可讓 SQL Server 2016 在不需要 AD DS 的 WSFC 上部署可用性群組。 SQL Server 需要使用憑證才能獲得端點安全性，就像資料庫鏡像案例需要憑證一樣。  這種類型的可用性群組稱為「網域獨立的可用性群組」。 部署具有基礎 Workgroup 叢集的可用性群組，支援將構成 WSFC 之節點的下列組合：
 - 沒有節點加入網域。
@@ -47,7 +47,7 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 ![Standard Edition 中的 AG 高階檢視][3]
 
 部署「網域獨立的可用性群組」的一些已知警示如下：
-- 可與仲裁搭配使用的唯一見證類型是磁碟和[雲端](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness)，其為 Windows Server 2016 中的新功能。 因為可用性群組最有可能不需要使用共用磁碟，所以磁碟會有問題。
+- 可與仲裁搭配使用的唯一見證類型是磁碟和[雲端](/windows-server/failover-clustering/deploy-cloud-witness)，其為 Windows Server 2016 中的新功能。 因為可用性群組最有可能不需要使用共用磁碟，所以磁碟會有問題。
 - WSFC 的基礎 Workgroup 叢集變異只能使用 PowerShell 建立，但接著可以使用容錯移轉叢集管理員進行管理。
 - 如果需要 Kerberos，您必須部署連接至 Active Directory 網域的標準 WSFC，因此「網域獨立的可用性群組」可能不是其中一個選擇。
 - 雖然可以設定接聽程式，但它必須在 DNS 中註冊才能使用。 如前所述，接聽程式沒有 Kerberos 支援。
@@ -80,7 +80,7 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 目前使用 SQL Server Management Studio 無法完整建立「網域獨立的可用性群組」。 雖然建立「網域獨立的可用性群組」基本上與建立一般可用性群組相同，但是某些方面 (例如建立憑證) 只有使用 Transact-SQL 才能達成。 下列範例假設可用性群組組態包含兩個複本：一個主要複本，一個次要複本。 
 
 1. [使用本連結的指示](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)，部署 Workgroup 叢集以包含所有要參與可用性群組的伺服器。 設定 Workgroup 叢集之前，請確定已設定一般 DNS 尾碼。
-2. 在要參與可用性群組的每個執行個體上[啟用 AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)功能。 這需要重新啟動每個 SQL Server 執行個體。
+2. 在要參與可用性群組的每個執行個體上[啟用 AlwaysOn 可用性群組](./enable-and-disable-always-on-availability-groups-sql-server.md)功能。 這需要重新啟動每個 SQL Server 執行個體。
 3. 將裝載主要複本的每個執行個體都需要資料庫主要金鑰。 如果還沒有主索引鍵，請執行下列命令：
 
    ```sql
@@ -172,4 +172,4 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

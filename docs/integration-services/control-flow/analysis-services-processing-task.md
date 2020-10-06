@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349984"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727573"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349984"
   
  如需在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>以程式設計方式設定 Analysis Services 處理工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
@@ -123,7 +123,7 @@ ms.locfileid: "88349984"
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
 |**型別**|列出指定的物件類型。|  
-|**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題：**[處理多維度模型 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題：**[處理多維度模型 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|列出指定物件的處理設定。|  
   
  **加入**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349984"
  **影響分析**  
  執行選取之物件的影響分析。  
   
- **相關主題：** [影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **相關主題：** [影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **批次設定摘要**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349984"
  **變更設定**  
  變更維度索引鍵中的處理選項和錯誤處理。  
   
- **相關主題：** [變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **相關主題：** [變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

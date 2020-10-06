@@ -9,19 +9,19 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364158"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725229"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 資源總管探索和管理 Azure SQL 資源
 
 在本文件中，您將了解如何透過 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] 中的 Azure 資源總管，探索和管理 Azure SQL Server、Azure SQL Database 和 Azure SQL 受控執行個體資源。
 
 >[!NOTE]
->SQL Server 2019 支援 Azure 資源總管。 之後，您可以透過[延伸模組管理員](extensions.md)，或透過 [檔案]   > [Install Package from VSIX Package] \(從 VSIX 套件安裝套件\)  ，安裝延伸模組。
+>SQL Server 2019 支援 Azure 資源總管。 之後，您可以透過[延伸模組管理員](./extensions/add-extensions.md)，或透過 [檔案]   > [Install Package from VSIX Package] \(從 VSIX 套件安裝套件\)  ，安裝延伸模組。
 
 ## <a name="connect-to-azure"></a>連線到 Azure
 

@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3bcdd76cf143c94dc1e200a21972d00419f26b96
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111740"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725209"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure Arc 延伸模組 (預覽)
 
-[Azure Arc 延伸模組 (預覽)](https://aka.ms/azurearcdata-docs) 是用於建立和管理 Azure Arc 資料服務資源的延伸模組。
+[Azure Arc 延伸模組 (預覽)](/azure/azure-arc/data/) 是用於建立和管理 Azure Arc 資料服務資源的延伸模組。
 
 **主要動作包括：**
 - 建立資源
@@ -61,4 +61,4 @@ ms.locfileid: "91111740"
 這些儀表板會提供資源的其他相關資訊，包括在 Azure 入口網站中開啟的選項。
 
 ## <a name="next-steps"></a>後續步驟
-若要深入了解 Azure Arc 資料服務，請[查看我們的文件。](https://aka.ms/azurearcdata-docs)
+若要深入了解 Azure Arc 資料服務，請[查看我們的文件。](/azure/azure-arc/data/)

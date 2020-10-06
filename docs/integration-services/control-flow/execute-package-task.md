@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457530"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725923"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457530"
  依預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 **False**，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 **True**，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 **True**，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
- 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [繼承的事務](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)＞。  
+ 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [繼承的事務](../integration-services-transactions.md)＞。  
   
 ## <a name="propagating-logging-details"></a>傳播記錄詳細資料  
  「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "88457530"
   
 -   **參數**  
   
-     您可以設定「執行封裝」工作將父封裝變數或參數 (或專案參數) 對應到子封裝參數。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
+     您可以設定「執行封裝」工作將父封裝變數或參數 (或專案參數) 對應到子封裝參數。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器]()＞。  
   
     > [!NOTE]  
     >  如果子封裝參數不區分大小寫，但對應到區分大小寫的父參數，則子封裝將無法執行。  
@@ -118,7 +118,7 @@ ms.locfileid: "88457530"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>以程式設計的方式設定執行封裝工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
@@ -224,5 +224,4 @@ ms.locfileid: "88457530"
   
  **移除**  
  按一下此選項可移除參數或變數與子封裝參數之間的對應。  
-  
   

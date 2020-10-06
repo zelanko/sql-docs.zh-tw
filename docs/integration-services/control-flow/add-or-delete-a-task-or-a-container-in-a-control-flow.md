@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350064"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728095"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
 
@@ -100,9 +100,9 @@ ms.locfileid: "88350064"
   
 4.  在 [控制流程]**** 索引標籤的設計介面上，以滑鼠右鍵按一下工作或容器，然後按一下 [編輯]**** 開啟對應的工作或容器編輯器。  
   
-     如需如何設定「For 迴圈」容器的資訊，請參閱[設定 For 迴圈容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
+     如需如何設定「For 迴圈」容器的資訊，請參閱[設定 For 迴圈容器](./for-loop-container.md)。  
   
-     如需如何設定Foreach 迴圈容器的資訊，請參閱 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+     如需如何設定Foreach 迴圈容器的資訊，請參閱 [設定 Foreach 迴圈容器](./foreach-loop-container.md)。  
   
     > [!NOTE]  
     >  「時序」容器沒有任何自訂編輯器。  
@@ -119,5 +119,4 @@ ms.locfileid: "88350064"
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
-  
   

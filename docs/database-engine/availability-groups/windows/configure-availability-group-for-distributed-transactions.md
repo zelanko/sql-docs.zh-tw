@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfa584b5b6debf497438dc7b50f513e5da1b6d4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 797885368b0aa8abfd2d367d4dbaf9b1b6942b41
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114027"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726460"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -193,16 +193,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-如需解析可疑交易的詳細資訊，請參閱[手動解析交易](https://technet.microsoft.com/library/cc754134.aspx)。
+如需解析可疑交易的詳細資訊，請參閱[手動解析交易](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754134(v=ws.10))。
 
 ## <a name="next-steps"></a>後續步驟  
 
-[分散式交易](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[分散式交易](/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [交易 - AlwaysOn 可用性群組和資料庫鏡像](transactions-always-on-availability-and-database-mirroring.md)  
 
-[支援 XA 交易](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[支援 XA 交易](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10))
 
-[How It Works:Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (運作方式：DTC 交易的工作階段/SPID (-2))
+[How It Works:Session/SPID (-2) for DTC Transactions](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions) (運作方式：DTC 交易的工作階段/SPID (-2))

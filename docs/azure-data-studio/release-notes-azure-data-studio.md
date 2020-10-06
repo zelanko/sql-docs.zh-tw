@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 09/30/2020
-ms.openlocfilehash: fdcba98194643a823d7cef79dde0e8be335f056d
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603475"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725099"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -28,7 +28,7 @@ ms.locfileid: "91603475"
 
 | 變更 | 詳細資料 |
 | ------ | ------- |
-| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/releases/tag/untagged-ca77e3ca71bd29150699) \(英文\)。 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1) \(英文\)。 |
 
 ## <a name="september-2020"></a>2020 年 9 月
 
@@ -43,7 +43,7 @@ ms.locfileid: "91603475"
 | Kusto (KQL) 延伸模組 | 在 Azure Data Studio 中帶入原生 Kusto 體驗，以便針對儲存在 Azure 資料總管中的大量即時串流資料進行資料探索和資料分析。 此預覽版本支援連線和瀏覽 Azure 資料總管叢集、撰寫 KQL 查詢，以及使用 Kusto 核心編寫筆記本。 |
 | Azure Arc 延伸模組 | 使用者可以透過 Azure Data Studio 試用 Azure Arc 公開預覽版。 這包括： <br/> &bull; &nbsp; 部署資料控制器 <br/> &bull; &nbsp; 部署 Postgres <br/> &bull; &nbsp; 部署適用於 Azure Arc 的受控執行個體 <br/> &bull; &nbsp; 連線到資料控制器 <br/> &bull; &nbsp; 存取資料服務儀表板 <br/> &bull; &nbsp; Azure Arc Jupyter 書籍 |
 | 部署選項 | <br/> &bull; &nbsp;Azure SQL Database Edge <br/> (Edge 會需要 Azure SQL Edge 部署延伸模組) |
-| SQL Server 匯入延伸模組 GA | 宣佈 SQL Server 匯入延伸模組的 GA，功能不再處於預覽狀態。 此延伸模組可協助匯入 csv/txt 檔案。 在[本文](sql-server-import-extension.md)中深入了解此延伸模組。 |
+| SQL Server 匯入延伸模組 GA | 宣佈 SQL Server 匯入延伸模組的 GA，功能不再處於預覽狀態。 此延伸模組可協助匯入 csv/txt 檔案。 在[本文](./extensions/sql-server-import-extension.md)中深入了解此延伸模組。 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed) \(英文\)。 |
 
 ## <a name="august-2020"></a>2020 年 8 月
@@ -103,7 +103,7 @@ ms.locfileid: "91603475"
 | 已將 Azure Data Studio 新增至 Azure 入口網站整合 | 使用者現在可直接從 Azure SQL Database 連線、Azure Postgres 等啟動至 Azure 入口網站。 |
 | 新增 Notebook 功能 | &bull; &nbsp; 新增筆記本工具列 <br/> &bull; &nbsp; 新增編輯儲存格工具列 <br/> &bull; &nbsp; Python 相依性精靈 UX 更新 <br/> &bull; &nbsp; 筆記本之間改善的間距 |
 | 宣告 SQL 評定 API 延伸模組 | 此延伸模組會在 ADS 中新增 SQL Server 最佳做法評定。 其會公開先前僅適用於 PowerShell SqlServer 課程模組與 SMO 的 SQL 評定 API，以供評估 SQL Server 執行個體，以及透過 SQL Server 小組接收建議。 了解有關 SQL 評定 API，以及其在[本文](../tools/sql-assessment-api/sql-assessment-api-overview.md)中的功能。 |
-| [機器學習延伸模組的改善](https://go.microsoft.com/fwlink/?linkid=2129918) | 現在支援 Azure SQL 受控執行個體。 |
+| [機器學習延伸模組的改善](./extensions/machine-learning-extension.md) | 現在支援 Azure SQL 受控執行個體。 |
 | 資料虛擬化延伸模組的改善 | 現在支援 MongoDB 與 Teradata |
 | Postgres 延伸模組 Bug 修正 | 固定的 Azure MFA |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed) \(英文\)。 |
@@ -441,7 +441,7 @@ ms.locfileid: "91603475"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已新增[適用於 Azure Data Studio 的 PostgreSQL 延伸模組](postgres-extension.md) | 支援的功能： <br/>&bull; &nbsp; 連線對話方塊 <br/>&bull; &nbsp; 物件總管 <br/>&bull; &nbsp; 查詢編輯器 <br/>&bull; &nbsp; 圖表 <br/>&bull; &nbsp; 儀表板 <br/>&bull; &nbsp; 程式碼片段 <br/>&bull; &nbsp; 編輯資料 <br/>&bull; &nbsp; Notebooks |
+| 已新增[適用於 Azure Data Studio 的 PostgreSQL 延伸模組](./extensions/postgres-extension.md) | 支援的功能： <br/>&bull; &nbsp; 連線對話方塊 <br/>&bull; &nbsp; 物件總管 <br/>&bull; &nbsp; 查詢編輯器 <br/>&bull; &nbsp; 圖表 <br/>&bull; &nbsp; 儀表板 <br/>&bull; &nbsp; 程式碼片段 <br/>&bull; &nbsp; 編輯資料 <br/>&bull; &nbsp; Notebooks |
 | 已新增 SQL Notebook | 已將 SQL 核心支援新增至內建的 Notebook 檢視器： <br/>&bull; &nbsp; 支援 T-SQL <br/>&bull; &nbsp; 支援 PGSQL |
 | 已新增 PowerShell 延伸模組 | 從 VS Code 帶來 [PowerShell 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) \(英文\) 體驗。  |
 | 已新增 SQL Server dacpac 延伸模組  | 將資料層應用程式精靈從 SQL Server 匯入延伸模組移除至新的延伸模組。  |
@@ -472,11 +472,11 @@ ms.locfileid: "91603475"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](sql-server-import-extension.md) |
+| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](./extensions/sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./extensions/sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](./extensions/sql-server-import-extension.md) |
 | 已在 Profiler 延伸模組中新增篩選擴充事件支援。 | &nbsp; |
 | 已新增「另存檔案為 XML」功能，可將 T-SQL 結果儲存為 XML。 | &nbsp; |
 | 已新增資料層應用程式精靈改進。 | &bull; &nbsp; 已新增 [產生指令碼] 按鈕<br/>&bull; &nbsp; 已新增檢視來提供部署期間可能遺失資料的警告。 |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](./extensions/data-virtualization-extension.md)。 |
 | 預設已針對長時間執行的查詢啟用結果串流。 | &nbsp; |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
@@ -504,7 +504,7 @@ ms.locfileid: "91603475"
 | 已新增 Azure Active Directory 驗證支援。 | &nbsp; |
 | 宣佈 Idera SQL DM Performance Insights (預覽)。 | &nbsp; |
 | SQL Server 匯入延伸模組中的資料層應用程式精靈支援。 | &nbsp; |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](./extensions/data-virtualization-extension.md)。 |
 | SQL Server Profiler 改進。 | &nbsp; |
 | 大型查詢的結果串流 (預覽)。 | &nbsp; |
 | 社群延伸模組：sp_executesql 至 sql 和「新增資料庫」。 | &nbsp; |
@@ -519,7 +519,7 @@ ms.locfileid: "91603475"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](./extensions/data-virtualization-extension.md)。 |
 | 引進「貼上計劃」延伸模組。 | &nbsp; |
 | 引進「高彩」查詢延伸模組，包括 SSMS 編輯器佈景主題。 | &nbsp; |
 | SQL Server Agent、Profiler 和「匯入」延伸模組中的修正。 | &nbsp; |
@@ -549,7 +549,7 @@ ms.locfileid: "91603475"
 | 引進 Azure 資源總管來瀏覽 Azure SQL Database。 | &nbsp; |
 | 改進物件總管和查詢編輯器的連線穩定性。 | &nbsp; |
 | SQL Agent 延伸模組改進。 | &nbsp; |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](./extensions/data-virtualization-extension.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Bug 修正，2018 年 10 月
@@ -666,8 +666,8 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| [適用於 SQL Operations Studio 的 SQL Server Agent 延伸模組](sql-server-agent-extension.md)改進。 | 已在左窗格中新增警示、操作員，以及 Proxy 和圖示的檢視。<br/><br/>已新增 [新增作業]、[新增作業步驟]、[新增警示] 和 [新增操作員] 的對話方塊。<br/><br/>已新增 [刪除作業]、[刪除警示] 和 [刪除操作員] (按一下滑鼠右鍵)。<br/><br/>已新增 [先前的執行] 視覺效果。<br/><br/>已針對每個資料行名稱新增篩選。 |
-| [適用於 SQL Operations Studio 的 SQL Server Profiler延伸模組](sql-server-profiler-extension.md)改進。 | 已新增 5 個預設範本來檢視擴充事件。<br/><br/>已新增伺服器/資料庫連線名稱。<br/><br/>已新增對 Azure SQL Database 執行個體的支援。<br/><br/>已新增當索引標籤於 Profiler 仍在執行期間關閉時結束 Profiler 的建議。 |
+| [適用於 SQL Operations Studio 的 SQL Server Agent 延伸模組](./extensions/sql-server-agent-extension.md)改進。 | 已在左窗格中新增警示、操作員，以及 Proxy 和圖示的檢視。<br/><br/>已新增 [新增作業]、[新增作業步驟]、[新增警示] 和 [新增操作員] 的對話方塊。<br/><br/>已新增 [刪除作業]、[刪除警示] 和 [刪除操作員] (按一下滑鼠右鍵)。<br/><br/>已新增 [先前的執行] 視覺效果。<br/><br/>已針對每個資料行名稱新增篩選。 |
+| [適用於 SQL Operations Studio 的 SQL Server Profiler延伸模組](./extensions/sql-server-profiler-extension.md)改進。 | 已新增 5 個預設範本來檢視擴充事件。<br/><br/>已新增伺服器/資料庫連線名稱。<br/><br/>已新增對 Azure SQL Database 執行個體的支援。<br/><br/>已新增當索引標籤於 Profiler 仍在執行期間關閉時結束 Profiler 的建議。 |
 | 合併指令碼延伸模組的版本。 | &nbsp; |
 | 已針對延伸模組作者新增的精靈和對話方塊擴充點。 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -817,7 +817,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 增強儀表板擴充性模型，以支援索引標籤式的深入解析和設定窗格。 | 延伸模組管理員可讓您輕鬆取得延伸模組。<br/><br/>來自 [whoisactive.com](http://www.whoisactive.com) 之 sp\_whoisactive 的儀表板延伸模組。<br/><br/>如需詳細資訊，請參閱[擴充 SQL Operations Studio 的功能](extensions.md)。 |
+| 增強儀表板擴充性模型，以支援索引標籤式的深入解析和設定窗格。 | 延伸模組管理員可讓您輕鬆取得延伸模組。<br/><br/>來自 [whoisactive.com](http://www.whoisactive.com) 之 sp\_whoisactive 的儀表板延伸模組。<br/><br/>如需詳細資訊，請參閱[擴充 SQL Operations Studio 的功能](./extensions/add-extensions.md)。 |
 | 新增額外的[擴充性 API，以用於連線和物件總管](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API) \(英文\) 管理。 | &nbsp; |
 | 持續修正對重要客戶產生影響的 [GitHub 問題](https://github.com/Microsoft/azuredatastudio/issues) \(英文\)。 | &nbsp; |
 | &nbsp; | &nbsp; |

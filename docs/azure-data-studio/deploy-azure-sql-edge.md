@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364115"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725219"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>使用 Azure Data Studio 部署 Azure SQL Edge (預覽)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) 是專為 IoT 和 Azure IoT Edge 部署而最佳化的關聯式資料庫引擎。 其功能可為 IoT 應用程式和解決方案建立高效能的資料儲存和處理層。 本文說明如何使用 Azure Data Studio 部署 Azure SQL Edge 執行個體，以及部署精靈支援的部署案例。  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) 是專為 IoT 和 Azure IoT Edge 部署而最佳化的關聯式資料庫引擎。 其功能可為 IoT 應用程式和解決方案建立高效能的資料儲存和處理層。 本文說明如何使用 Azure Data Studio 部署 Azure SQL Edge 執行個體，以及部署精靈支援的部署案例。  
 
 Azure Data Studio 中的部署精靈支援下列案例：
 
@@ -76,11 +76,11 @@ Azure SQL Edge 部署精靈可以建立數個 Azure 資源，以便部署連線�
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Azure IoT 中樞的多個裝置
 
-如果您有現有的 IoT 中樞和已連線的裝置，則可根據資源群組、IoT 中樞名稱，以及要選取裝置的[目標條件](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition)，將 Azure SQL Edge 部署至裝置。
+如果您有現有的 IoT 中樞和已連線的裝置，則可根據資源群組、IoT 中樞名稱，以及要選取裝置的[目標條件](/azure/iot-edge/module-deployment-monitoring#target-condition)，將 Azure SQL Edge 部署至裝置。
 在部署精靈期間提供的 IP 位址用於在筆記本底部產生快速連線連結。
 
 (選擇性) dacpac 檔案可以壓縮在資料夾中並部署到新的 Azure SQL Edge 執行個體作為此程序的一部分。  如果提供 dacpac 檔案，就會在相同的資源群組中建立 Azure Blob 儲存體帳戶。
 
 ## <a name="next-steps"></a>下一步
 
-- [深入了解 Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [深入了解 Azure SQL Edge](/azure/azure-sql-edge/)

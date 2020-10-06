@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 193280bb5e7f702336bf31fde363db08f437cc9b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113332"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727927"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "91113332"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
--   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>疑難排解  
   
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  將相依性加入至 WSFC 可用性群組資源。  
   
-         如需容錯移轉叢集管理員對話方塊和索引標籤的資訊，請參閱 [User Interface:The Failover Cluster Manager Snap-In](https://technet.microsoft.com/library/cc772502.aspx) (使用者介面：容錯移轉叢集管理員嵌入式管理單元)。  
+         如需容錯移轉叢集管理員對話方塊和索引標籤的資訊，請參閱 [User Interface:The Failover Cluster Manager Snap-In](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11)) (使用者介面：容錯移轉叢集管理員嵌入式管理單元)。  
   
     -   **使用適用容錯移轉叢集的 Windows PowerShell：**  
   
         1.  使用 [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) 建立網路名稱和 IP 位址資源。  
   
-        2.  使用 [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) 啟動網路名稱資源。  
+        2.  使用 [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) 啟動網路名稱資源。  
   
-        3.  使用 [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) 設定網路名稱和現有 SQL Server 可用性群組資源之間的相依性。  
+        3.  使用 [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) 設定網路名稱和現有 SQL Server 可用性群組資源之間的相依性。  
   
-         如需有關使用適用容錯移轉叢集的 Windows PowerShell 之詳細資訊，請參閱 [伺服器管理員命令概觀](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)。  
+         如需有關使用適用容錯移轉叢集的 Windows PowerShell 之詳細資訊，請參閱 [伺服器管理員命令概觀](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps)。  
   
 2.  在新的接聽程式上啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接聽。 建立額外的接聽程式之後，連接到裝載主要可用性群組複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 修改接聽程式通訊埠。  
   
- 如需詳細資訊，請參閱 [如何為相同可用性群組建立多個接聽程式](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (SQL Server AlwaysOn 團隊部落格)。  
+ 如需詳細資訊，請參閱 [如何為相同可用性群組建立多個接聽程式](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) (SQL Server AlwaysOn 團隊部落格)。  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 既然已建立接聽程式，請將應用程式設定為[連線到接聽程式](listeners-client-connectivity-application-failover.md)。 您也可以檢閱各種[可用性群組監視策略](monitoring-of-availability-groups-sql-server.md)，以確保可用性群組的健全狀況。
 
 您也可以[檢視接聽程式的屬性](view-availability-group-listener-properties-sql-server.md)，或了解如何[移除接聽程式](remove-an-availability-group-listener-sql-server.md) (如有必要)。 
-  
