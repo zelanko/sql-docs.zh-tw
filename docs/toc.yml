@@ -6030,8 +6030,6 @@
       items:
         - name: 新功能
           href: dma/dma-whatsnew.md
-        - name: 存取 SQL 資料庫
-          href: dma/dma-assesssqlonprem.md
         - name: 存取 SQL Server Integration Services (SSIS)
           href: dma/dma-assess-ssis.md
         - name: 儲存並載入評量
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: 移轉 SQL Server 登入
           href: dma/dma-migrateserverlogins.md
-        - name: 評定 SQL Server 資料資產的 Azure SQL Database 整備程式
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: 最佳作法
           href: dma/dma-bestpractices.md
         - name: 合併評定報告
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: 進行設定
           href: dma/dma-configurationsettings.md
+        - name: 評估 Azure SQL DB 整備度
+          items:
+            - name: 建立評估
+              href: dma/dma-assesssqlonprem.md
+            - name: 使用 DMA GUI
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: 使用 DMA 命令列
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SQL Server 移轉小幫手 (SSMA)
       href: ssma/toc.yml
 - name: 管理、監視與調整
