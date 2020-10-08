@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1d72f658cf957a9dfb78eae4186cdd35d6e9849
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727633"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809560"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 整合架構 - 效能
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85727633"
  編譯程序會產生可以在執行階段，從原生程式碼呼叫的函數指標。 如果是純量值的使用者定義函數，此函數引動過程會以資料列為基礎發生。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之間轉換的成本降至最低，包含任何 Managed 引動過程的陳述式都有一個識別目標應用程式網域的啟動步驟。 這個識別步驟會降低每個資料列轉換的成本。  
   
 ## <a name="performance-considerations"></a>效能考量  
- 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時的特定效能考量。 如需更多詳細資訊，請參閱 MSDN 網站上的「[在 SQL Server 2005 中使用 CLR 整合](https://go.microsoft.com/fwlink/?LinkId=50332)」。 有關 managed 程式碼效能的一般資訊，請參閱 MSDN 網站上的「[改善 .Net 應用程式效能和擴充性](https://go.microsoft.com/fwlink/?LinkId=50333)」。  
+ 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時的特定效能考量。 如需更多詳細資訊，請參閱 MSDN 網站上的「[在 SQL Server 2005 中使用 CLR 整合](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))」。 有關 managed 程式碼效能的一般資訊，請參閱 MSDN 網站上的「[改善 .Net 應用程式效能和擴充性](/previous-versions/msp-n-p/ff649152(v=pandp.10))」。  
   
 ### <a name="user-defined-functions"></a>使用者定義的函式  
  CLR 函數會因為引動過程路徑比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數的引動過程更快速而獲益。 此外，Managed 程式碼在程序性程式碼、計算與字串操作的決定性效能優勢上優於 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 需要大量計算而不執行資料存取的 CLR 函數以更好的 Managed 程式碼方式撰寫。 不過，[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數在資料存取的執行上比 CLR 整合更有效率。  
@@ -80,5 +80,4 @@ ms.locfileid: "85727633"
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
   

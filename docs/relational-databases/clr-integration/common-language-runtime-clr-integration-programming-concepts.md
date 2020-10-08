@@ -1,6 +1,6 @@
 ---
-title: Common Language Runtime （CLR）程式設計
-description: 本文提供使用 CLR 與 SQL Server 整合的相關資源，可讓您使用任何 .NET Framework 語言來撰寫伺服器端模組。
+title: Common Language Runtime (CLR) 程式設計
+description: 本文提供使用 CLR 與 SQL Server 整合的資源，可讓您使用任何 .NET Framework 語言撰寫伺服器端模組。
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d6953f9ddc30f81cb37ca8d3b1775ca6d5e7a51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef7b3d4c2d3b48c289d49e31124f763dcec887bc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789541"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809504"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Common Language Runtime (CLR) 整合程式設計概念
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "85789541"
  Microsoft.SqlServer.Server 命名空間在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含用於 CLR 程式設計的核心功能。 不過，Microsoft.SqlServer.Server 命名空間會記載在 .NET Framework SDK 中。 此文件不包含在《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中。  
   
 > [!IMPORTANT]  
->  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝之後，請遵循[安裝 .NET FRAMEWORK sdk](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的指示，將 SDK 新增至線上叢書集合和目錄。  
+>  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝之後，請遵循 [安裝 .NET FRAMEWORK sdk](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的指示，將 SDK 加入《線上叢書》集合和目錄中。  
   
 > [!NOTE]  
->  Azure SQL Database*不*支援 clr 功能（例如 clr 使用者函數）。  
+>  Azure SQL Database *不* 支援 clr 功能，例如 clr 使用者函數。  
   
  下表列出本節的主題。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85789541"
  [組件 &#40;Database Engine&#41](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  描述如何使用組件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中部署以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) 主控的其中一種 Managed 程式碼語言 (非 [!INCLUDE[tsql](../../includes/tsql-md.md)]) 所編寫的函數、預存程序、觸發程序、使用者定義彙總，以及使用者定義型別。  
   
- [使用 Common Language Runtime 建立資料庫物件 &#40;CLR&#41; 整合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [使用 Common Language Runtime &#40;CLR&#41; 整合建立資料庫物件](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  描述可以使用 CLR 建立的物件種類，並檢閱建立 CLR 資料庫物件的需求。  
   
  [從 CLR 資料庫物件進行資料存取](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -64,11 +64,10 @@ ms.locfileid: "85789541"
  [監視與疑難排解 Managed 資料庫物件](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  提供可用於監視和疑難排解 Managed 資料庫物件以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行之組件的工具相關資訊。  
   
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
  描述使用 CLR 物件的使用狀況和程式碼範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [元件 &#40;資料庫引擎&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [安裝 .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b74fa91b13b3b7f432a4b647f063a91a76e8c56a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535226"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810209"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -148,6 +148,5 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的空間索引預存程式 ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [&#40;Transact-sql&#41;的空間索引預存程式 ](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

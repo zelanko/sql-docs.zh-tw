@@ -15,12 +15,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfa5203d9be4b89d94173abc000c6fdb1d76d07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428310"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810594"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88428310"
   
  **SQLColumns** 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 **SQLColumns** 時，將會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會接受*CatalogName*參數的兩部分名稱，以支援連結伺服器上資料表的報告資訊： *Linked_Server_Name Catalog_Name*。  
+ > Native Client ODBC 驅動程式會藉由接受*CatalogName*參數的兩部分名稱，來支援連結伺服器上資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
   
  適用于 ODBC 2。*x* 應用程式不在 *TableName*中使用萬用字元， **SQLColumns** 會傳回其名稱符合 *TableName* 且由目前使用者所擁有之任何資料表的相關資訊。 如果目前使用者沒有任何資料表的名稱符合 *tablename* 參數， **SQLColumns** 會傳回其他使用者所擁有之資料表的相關資訊，其中資料表名稱符合 *tablename* 參數。 適用于 ODBC 2。使用萬用字元的*x* 應用程式， **SQLColumns** 會傳回其名稱符合 *TableName*的所有資料表。 適用于 ODBC 3。*x* 應用程式 **SQLColumns** 會傳回其名稱符合 *TableName* 的所有資料表（不論擁有者或是否使用萬用字元）。  
   
@@ -92,7 +92,6 @@ ms.locfileid: "88428310"
  如需 ODBC 中的稀疏資料行的詳細資訊，請參閱 [&#40;odbc&#41;的稀疏資料行支援 ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLColumns 函式](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 函式](../../odbc/reference/syntax/sqlcolumns-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

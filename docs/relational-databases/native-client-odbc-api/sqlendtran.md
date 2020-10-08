@@ -15,12 +15,12 @@ ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5ac26d47e9d75731e879d5fd05f7b72b09da047
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd11be29813d5e399d21e35f95afb56507dc165d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428270"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810584"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,6 +29,5 @@ ms.locfileid: "88428270"
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 的執行詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLEndTran 函數](https://go.microsoft.com/fwlink/?LinkId=59342)  
-  
+ [SQLEndTran 函數](../../odbc/reference/syntax/sqlendtran-function.md)  
   

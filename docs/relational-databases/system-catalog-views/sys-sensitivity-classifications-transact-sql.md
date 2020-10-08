@@ -1,6 +1,6 @@
 ---
 description: sys.sensitivity_classifications (Transact-SQL)
-title: sys. sensitivity_classifications (Transact-sql) |Microsoft Docs
+title: sys.sensitivity_classifications (Transact-sql) |Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475299"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809344"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "88475299"
 |-----------------|---------------|-----------------|  
 |**class**|**int**|識別存在分類之專案的類別。 一律會有代表資料行的值 1 () |  
 |**class_desc**|**Varchar (16) **|存在分類之專案類別的描述。 一律會有值 *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|表示包含已分類資料行之資料表的識別碼，對應于 sys. all_objects。 object_id|  
-|**minor_id**|**int**|代表存在分類的資料行識別碼，對應于 sys. all_columns。 column_id|   
+|**major_id**|**int**|表示包含已分類資料行之資料表的識別碼，對應于 sys. all _objects. object_id|  
+|**minor_id**|**int**|代表存在分類的資料行識別碼，對應于 sys. all _columns. column_id|   
 |**label**|**sysname**|指派給敏感度分類 (人類可讀取) 的標籤|  
 |**label_id**|**sysname**|與標籤相關聯的識別碼，可供資訊保護系統（例如 Azure 資訊保護 (AIP）使用) |  
 |**information_type**|**sysname**| (為敏感度分類指派的人類可讀取) 資訊類型|  
@@ -87,4 +87,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[開始使用 SQL 資訊保護](https://aka.ms/sqlip)
+[開始使用 SQL 資訊保護](/azure/azure-sql/database/data-discovery-and-classification-overview)

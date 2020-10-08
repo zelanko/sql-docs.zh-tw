@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66a6e825239a4aa43f6ca92ce21b447fc1706efd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 146ad58f2997328b94b758d8e2e3e59f125fdd1d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546830"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809594"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89546830"
 :::row-end:::
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
   

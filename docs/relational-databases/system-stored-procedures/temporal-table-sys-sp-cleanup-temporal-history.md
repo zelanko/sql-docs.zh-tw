@@ -1,6 +1,6 @@
 ---
-description: 'sys. sp_cleanup_temporal_history (Transact-sql) '
-title: sys. sp_cleanup_temporal_history |Microsoft Docs
+description: 'sys.sp_cleanup_temporal_history (Transact-sql) '
+title: sys.sp_cleanup_temporal_history |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -10,14 +10,14 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3b47fd6b0ee5a06ae1ce585f583a699a530e350b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545784"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809144"
 ---
-# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-sql) 
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-sql) 
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
@@ -64,6 +64,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
-[時態表保留原則](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[時態表保留原則](/azure/sql-database/sql-database-temporal-tables-retention-policy)

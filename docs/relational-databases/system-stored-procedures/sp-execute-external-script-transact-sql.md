@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447184"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810185"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ sp_execute_external_script
 
 ### <a name="monitor-script-execution"></a>監視腳本執行
 
-使用 [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)監視腳本執行。
+使用 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)來監視腳本的執行。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>資料分割模型的參數
 
 您可以設定兩個額外的參數來啟用分割資料的模型化，其中的資料分割是根據您提供的一或多個資料行，自然地將資料集分割成建立的邏輯分割區，並只在腳本執行期間使用。 包含年齡、性別、地理區域、日期或時間之重複值的資料行，是幾個可讓您成為分割資料集的範例。
 
-這兩個參數是 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**，而第二個參數則是用來排序結果集。 參數會以輸入的形式傳遞至， `sp_execute_external_script` 並針對每個資料分割執行一次外部腳本。 如需詳細資訊和範例，請參閱 [教學課程：建立資料分割型模型](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition)。
+這兩個參數是 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**，而第二個參數則是用來排序結果集。 參數會以輸入的形式傳遞至， `sp_execute_external_script` 並針對每個資料分割執行一次外部腳本。 如需詳細資訊和範例，請參閱 [教學課程：建立資料分割型模型](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)。
 
 您可以藉由指定，以平行方式執行腳本 `@parallel=1` 。 如果可以平行處理輸入查詢，您應該將設為 `@parallel=1` 的引數的一部分 `sp_execute_external_script` 。 根據預設，查詢最佳化工具會在 `@parallel=1` 具有超過256個數據列的資料表上運作，但如果您想要明確處理此問題，此腳本會將參數包含為示範。
 
@@ -322,9 +322,9 @@ GO
 
 若要計分，您也可以使用原生 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式，其會避免呼叫 Python 或 R 執行階段，因此一般來說速度更快。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-+ [SQL 機器學習服務](../../machine-learning/index.yml)
++ [SQL 機器學習](../../machine-learning/index.yml)
 + [SQL Server 語言擴充](../../language-extensions/language-extensions-overview.md)功能。 
 + [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [CREATE EXTERNAL LIBRARY &#40;Transact-sql&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
@@ -334,4 +334,4 @@ GO
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, 外部指令碼物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

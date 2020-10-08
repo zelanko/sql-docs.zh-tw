@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ed6cb1967e7c64ad77b5d5cbc8c40000a733e3fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 811ab46ce472f91aeab40c48ff11ce584f3cabb7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550565"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810144"
 ---
 # <a name="object-catalog-views-transact-sql"></a>物件目錄檢視 (Transact-SQL)
 
@@ -115,7 +115,5 @@ ms.locfileid: "89550565"
 :::row-end:::
   
 ## <a name="see-also"></a>另請參閱  
- [系統目錄 views](catalog-views-transact-sql.md) [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [系統目錄 views](catalog-views-transact-sql.md) [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   
-  
-

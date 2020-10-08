@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d5d33f5952982cf6b28500bd86841386c051166
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1d27ee8c9460b8b14b451479cd061af08b9dfdce
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545122"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810257"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR 組件目錄檢視 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,5 @@ ms.locfileid: "89545122"
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   

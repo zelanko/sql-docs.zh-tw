@@ -21,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536392"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810094"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  這是對應至索引鍵值的內部文件識別碼 (DocId)。 無效的 *docid* 值不會傳回任何結果。  
   
  *key*  
- 這是來自指定資料表的全文檢索索引鍵值。 無效的 *key* 值不會傳回任何結果。 如需全文檢索索引鍵值的詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 這是來自指定資料表的全文檢索索引鍵值。 無效的 *key* 值不會傳回任何結果。 如需全文檢索索引鍵值的詳細資訊，請參閱 [管理全文檢索索引](../search/create-and-manage-full-text-indexes.md)。  
   
 > [!IMPORTANT]  
 >  如需有關使用一個、兩個或三個參數的詳細資訊，請參閱本主題稍後的「備註」。  
@@ -63,7 +63,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
-|答案|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
+|機碼|*|這是來自指定資料表的全文檢索索引鍵值。<br /><br /> 如果對應資料表中沒有任何的全文檢索索引鍵，就會傳回空白的資料列集。|  
   
  <sup>*</sup> 索引鍵的資料類型與基表中全文檢索索引鍵資料行的資料類型相同。  
   
@@ -75,7 +75,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |此參數清單 .。。|有此結果 .。。|  
 |--------------------------|----------------------|  
-|*table_id*|當只使用 *table_id* 參數叫用時，sp_fulltext_keymappings 會從指定的基表傳回所有全文檢索索引鍵 (索引鍵) 值，以及對應至每個索引鍵的 DocId。 這包含暫止刪除的索引鍵。<br /><br /> 這個函數對於多項問題的疑難排解很有用。 當選取的全文檢索索引鍵並非整數資料類型時，此函數特別適合用來查看全文檢索索引內容。 這包括聯結 sp_fulltext_keymappings 的結果與 **sys. dm_fts_index_keywords_by_document**的結果。 如需詳細資訊，請參閱 [sys. dm_fts_index_keywords_by_document &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 不過，一般而言，建議您在可能的情況下，使用指定特定全文檢索索引鍵或 DocId 的參數來執行 sp_fulltext_keymappings。 以這種方式作業的效率，要比傳回整個索引鍵對應高得多，特別是在處理大型資料表時，因為在這種情況下，傳回整個索引鍵對應的效能成本可能相當高。|  
+|*table_id*|當只使用 *table_id* 參數叫用時，sp_fulltext_keymappings 會從指定的基表傳回所有全文檢索索引鍵 (索引鍵) 值，以及對應至每個索引鍵的 DocId。 這包含暫止刪除的索引鍵。<br /><br /> 這個函數對於多項問題的疑難排解很有用。 當選取的全文檢索索引鍵並非整數資料類型時，此函數特別適合用來查看全文檢索索引內容。 這牽涉到將 sp_fulltext_keymappings 的結果與 **sys.dm_fts_index_keywords_by_document**的結果聯結。 如需詳細資訊，請參閱 [sys.dm_fts_index_keywords_by_document &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 不過，一般而言，建議您在可能的情況下，使用指定特定全文檢索索引鍵或 DocId 的參數來執行 sp_fulltext_keymappings。 以這種方式作業的效率，要比傳回整個索引鍵對應高得多，特別是在處理大型資料表時，因為在這種情況下，傳回整個索引鍵對應的效能成本可能相當高。|  
 |*table_id*、 *docid*|如果只指定 *table_id* 和 *docid* ， *docid* 必須為非 null，並在指定的資料表中指定有效的 docid。 此函數非常適合用來隔離基底資料表的自訂全文檢索索引鍵 (對應至特定全文檢索索引的 DocId)。|  
 |*table_id*、Null、 *key*|如果有三個參數，則第二個參數必須為 Null，而且索引 *鍵* 必須為非 null，並從指定的資料表指定有效的全文檢索索引鍵值。 此函數非常適合用來隔離對應至基底資料表的特定自訂全文檢索索引鍵的 DocId。|  
   
@@ -139,5 +139,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋和語義搜尋預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

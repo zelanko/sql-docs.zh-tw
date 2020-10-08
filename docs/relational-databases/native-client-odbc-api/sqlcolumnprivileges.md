@@ -15,12 +15,12 @@ ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01deae36632bcc0543f5df60082a557894d9f50e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e85edde7aaba43dab43d486e5b615a27f50bc19e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428380"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809894"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,10 +29,9 @@ ms.locfileid: "88428380"
   
  **SQLColumnPrivileges** 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 **SQLColumnPrivileges** 時，將會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會接受*CatalogName*參數的兩部分名稱，以支援連結伺服器上資料表的報告資訊： *Linked_Server_Name Catalog_Name*。  
+ > Native Client ODBC 驅動程式會藉由接受*CatalogName*參數的兩部分名稱，來支援連結伺服器上資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLColumnPrivileges 函式](https://go.microsoft.com/fwlink/?LinkId=59335)   
+ [SQLColumnPrivileges 函式](../../odbc/reference/syntax/sqlcolumnprivileges-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

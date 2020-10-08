@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536674"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810160"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89536674"
   
 ||  
 |-|  
-|**適用**于： SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 透過 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)) 。|  
+|**適用**于： SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 透過 [目前的版本](../../sql-server/what-s-new-in-sql-server-2016.md)) 。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -178,5 +178,4 @@ sp_cursor  cursor, optype, rownum, table
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 title: SQLXML 4.0 程式設計概念
-description: 查看 SQLXML 4.0 中使用之程式設計概念的相關資訊。
+description: 查看 SQLXML 4.0 中所使用之程式設計概念的相關資訊。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b321928d3e898edfcbae041391a85152d69e058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21e32d4e0091738c95ed995318e4a1904c81d127
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665972"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809293"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85665972"
  [執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  描述從所提供的 SQLXML 範例建立工作範例的需求。  
   
- [用戶端和伺服器端格式 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [用戶端和伺服器端格式設定 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  提供用戶端和伺服器端之格式設定的相關資訊和比較，包括用來建構 XML 文件的 FOR XML 命令。  
   
  [SQLXML 4.0 中的註解式 XSD 結構描述](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -63,10 +63,10 @@ ms.locfileid: "85665972"
  [SQLXML 4.0 Data Access Components](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  提供 SQLXMLOLEDB 提供者的說明以及其他 SQLXML 4.0 資料存取元件的連結。  
   
- [SQLXML 4.0 .NET Framework 支援](https://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 .NET Framework 支援](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  描述 .NET Framework 的 SQLXML 4.0 支援。  
   
- [快取範本、XSL 和架構 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0 快取範本、XSL 和架構&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  描述 SQLXML 為增強效能而提供的快取功能。  
   
  [SQLXML 4.0 安全性考量](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -77,5 +77,4 @@ ms.locfileid: "85665972"
   
 ## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
-  
   

@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: fd7e49443d6166b8a7da809b0b2e96fd2ddb927f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670063"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810749"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  結果集中的索引會依資料行 **NON_UNIQUE**、 **TYPE**、 **INDEX_NAME**和 **SEQ_IN_INDEX**以遞增順序顯示。  
@@ -95,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  雜湊的索引類型接受完全相符或範圍搜尋，但模式比對搜尋不會使用索引。  
   
- **sp_statistics** 相當於 ODBC 中的 **SQLStatistics** 。 傳回的結果會依 **NON_UNIQUE**、 **類型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**和 **SEQ_IN_INDEX**排序。 如需詳細資訊，請參閱 [ODBC API 參考](https://go.microsoft.com/fwlink/?LinkId=68323)。  
+ **sp_statistics** 相當於 ODBC 中的 **SQLStatistics** 。 傳回的結果會依 **NON_UNIQUE**、 **類型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**和 **SEQ_IN_INDEX**排序。 如需詳細資訊，請參閱 [ODBC API 參考](../../odbc/reference/syntax/odbc-reference.md)。  
   
 ## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  
@@ -113,5 +113,3 @@ EXEC sp_statistics DimEmployee;
  [&#40;Transact-sql&#41;的目錄預存程式 ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

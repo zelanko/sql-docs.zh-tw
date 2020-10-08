@@ -15,12 +15,12 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ea15c94c0fa4231be4d34c486c4aaf139f083fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428300"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809266"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428300"
   
  資料庫引擎的增強功能從 [ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 允許 SQLDescribeParam] 取得預期結果更精確的描述。 這些更精確的結果可能與舊版的 SQLDescribeParam 所傳回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
- 此外 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， *ParameterSizePtr* 現在也會傳回一個值，這個值會與對應參數標記的資料行或運算式的大小（以字元為單位）的定義對齊，如 [ODBC 規格](https://go.microsoft.com/fwlink/?LinkId=207044)中所定義。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr* 可以是類型的 **SQL_DESC_OCTET_LENGTH** 對應值，或是針對某個類型提供給 SQLBindParameter 的不相關資料行大小值， (**SQL_INTEGER**中應忽略此值，例如) 。  
+ 此外 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， *ParameterSizePtr* 現在也會傳回一個值，這個值會與對應參數標記的資料行或運算式的大小（以字元為單位）的定義對齊，如 [ODBC 規格](../../odbc/reference/appendixes/column-size.md)中所定義。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr* 可以是類型的 **SQL_DESC_OCTET_LENGTH** 對應值，或是針對某個類型提供給 SQLBindParameter 的不相關資料行大小值， (**SQL_INTEGER**中應忽略此值，例如) 。  
   
  驅動程式在下列情況下不支援呼叫 SQLDescribeParam：  
   
@@ -91,7 +91,6 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  **SQLDescribeParam** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR 使用者自訂類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLDescribeParam 函式](https://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 函式](../../odbc/reference/syntax/sqldescribeparam-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

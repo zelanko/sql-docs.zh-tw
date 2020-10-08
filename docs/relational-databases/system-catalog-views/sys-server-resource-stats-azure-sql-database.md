@@ -1,6 +1,6 @@
 ---
-description: 'sys. server_resource_stats (Azure SQL Database) '
-title: sys. server_resource_stats (Azure SQL Database) |Microsoft Docs
+description: 'sys.server_resource_stats (Azure SQL Database) '
+title: sys.server_resource_stats (Azure SQL Database) Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542490"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809315"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL Database) 
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database) 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 傳回 Azure SQL 受控執行個體的 CPU 使用量、IO 和儲存體資料。 於五分鐘間隔內收集及彙總資料。 每15秒報告都有一個資料列。 傳回的資料包含 CPU 使用量、儲存體大小、IO 使用量和 SKU。 歷程記錄資料大約會保留 14 天。
 
-**Sys. server_resource_stats** view 具有不同的定義，這取決於與資料庫相關聯的 Azure SQL 受控執行個體版本。 請考慮這些差異，以及升級到新伺服器版本時應用程式所需的任何修改。
+**Sys.server_resource_stats** view 具有不同的定義，這取決於與資料庫相關聯的 Azure SQL 受控執行個體版本。 請考慮這些差異，以及升級到新伺服器版本時應用程式所需的任何修改。
  
   
  下表描述 v12 伺服器中可用的資料行：  
@@ -54,13 +54,13 @@ ms.locfileid: "89542490"
 
  
 > [!TIP]  
->  如需這些限制和服務層級的詳細內容，請參閱 [受控執行個體服務層級](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)的主題。  
+>  如需這些限制和服務層級的詳細內容，請參閱 [受控執行個體服務層級](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)的主題。  
     
 ## <a name="permissions"></a>權限  
  此視圖適用于具有連接到 **master** 資料庫之許可權的所有使用者角色。  
   
 ## <a name="remarks"></a>備註  
- **Sys. server_resource_stats**所傳回的資料會以資料行) 名稱中所述的位元組或 mb (（除了 avg_cpu 以外）來表示，這是以所執行服務層級/效能層級的最大允許限制百分比表示。  
+ **Sys.server_resource_stats**所傳回的資料會以位元組或 mb (中所述的資料行名稱來表示，) 除了 avg_cpu 以外的資料行名稱中所述，這是以您正在執行之服務層級/效能層級的最大允許限制百分比表示。  
  
 ## <a name="examples"></a>範例  
  下列範例會傳回上一週平均至少為 80% 運算使用率的所有資料庫。  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>另請參閱  
- [受控執行個體服務層級](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [受控執行個體服務層級](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

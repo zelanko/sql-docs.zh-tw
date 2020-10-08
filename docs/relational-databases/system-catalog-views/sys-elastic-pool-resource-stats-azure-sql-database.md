@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990161"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809857"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "90990161"
 |**max_session_percent**|**decimal (5，2) **|集區限制的並行工作階段百分比。|  
 |**elastic_pool_dtu_limit**|**int**|間隔期間此彈性集區目前最大的彈性集區 DTU 設定。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|間隔期間此彈性集區目前最大的彈性集區儲存體限制設定 (MB)。|
-|**avg_allocated_storage_percent**|**decimal (5，2) **|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區資料大小上限的資料空間的比率。  如需詳細資訊，請參閱[SQL Database 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)。|  
+|**avg_allocated_storage_percent**|**decimal (5，2) **|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區資料大小上限的資料空間的比率。  如需詳細資訊，請參閱[SQL Database 中的檔案空間管理](/azure/sql-database/sql-database-file-space-management)。|  
   
 ## <a name="remarks"></a>備註
 
@@ -80,9 +80,8 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>另請參閱
 
- [使用彈性資料庫來駕馭爆炸性成長](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [建立及管理 SQL Database 彈性資料庫集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [使用彈性資料庫來駕馭爆炸性成長](/azure/azure-sql/database/elastic-pool-overview)   
+ [建立及管理 SQL Database 彈性資料庫集區](/azure/azure-sql/database/elastic-pool-overview)   
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
   

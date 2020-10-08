@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b93410e5b8d654d068524c1f5f73ebe355100f45
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22e2a4f57d8453d8c69a0594bcf6d5b16ee6b6a6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545140"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810256"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>端點目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89545140"
 :::row-end:::
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
   

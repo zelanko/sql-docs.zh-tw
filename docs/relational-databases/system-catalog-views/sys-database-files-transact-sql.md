@@ -1,6 +1,6 @@
 ---
 description: sys.database_files (Transact-SQL)
-title: sys. database_files (Transact-sql) |Microsoft Docs
+title: sys.database_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50db45870e5168ab30973b2692fbcc7a3f6e7601
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 39b6c373a75a5480d4b2d044af84a53c7b906c4d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537468"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810514"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,14 +80,13 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-如需使用時的詳細資訊 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，請參閱 SQL 客戶諮詢小組 blog 上的 [判斷 Azure SQL Database V12 的資料庫大小](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 。
+如需使用時的詳細資訊 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，請參閱 SQL 客戶諮詢小組 blog 上的 [判斷 Azure SQL Database V12 的資料庫大小](/archive/blogs/sqlcat/determining-database-size-in-azure-sql-database-v12) 。
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫和檔案目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [檔案狀態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
   

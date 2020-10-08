@@ -15,12 +15,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56b505e4c4dcaf00c77c31e5e0e55617106df0fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3aed2ce31a79a51eadd9db7fdc1afc042d01efaa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428390"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811140"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,6 @@ ms.locfileid: "88428390"
 |已記載 SQL_COPT_SS_BROWSE_CACHE_DATA。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLBrowseConnect 函式](https://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect 函式](../../odbc/reference/syntax/sqlbrowseconnect-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffaa2eb4d9016436813ac57bdfb47031eadb1e97
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551460"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809225"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "89551460"
   
  如需定價的詳細資訊，請參閱 [SQL Database 選項和效能： SQL Database 定價](https://azure.microsoft.com/pricing/details/sql-database/) 和 [SQL 資料倉儲定價](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)。  
   
- 若要變更服務設定，請參閱 [ALTER database (Azure SQL Database) ](../../t-sql/statements/alter-database-azure-sql-database.md) 和 [Alter DATABASE (Azure SQL 資料倉儲) ](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)。  
+ 若要變更服務設定，請參閱 [ALTER database (Azure SQL Database) ](../../t-sql/statements/alter-database-transact-sql.md) 和 [Alter DATABASE (Azure SQL 資料倉儲) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)。  
   
- Sys. database_service_objectives view 包含下列資料行。  
+ Sys.database_service_objectives view 包含下列資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|int|資料庫的識別碼，在 Azure SQL Database server 的實例內是唯一的。 Joinable 與 [sys. 資料庫 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |edition|sysname|資料庫或資料倉儲的服務層： **基本**、 **標準**、 **Premium** 或 **資料倉儲**。|  
 |service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，則會傳回 **ElasticPool**。<br /><br /> 在「 **基本** 」層上，傳回「 **基本**」。<br /><br /> **標準服務層級中的單一資料庫** 會傳回下列其中一項： S0、S1、S2、S3、S4、S6、S7、S9 或 S12。<br /><br /> 進階層**中的單一資料庫**會傳回下列各項： P1、P2、P4、P6、P11 或 P15。<br /><br /> **SQL 資料倉儲** 會透過 DW30000C 傳回 DW100。<br /><br /> 如需詳細資訊，請參閱[單一資料庫](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[彈性](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)集區、[資料](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)倉儲|  
-|elastic_pool_name|sysname|資料庫所屬 [彈性集](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) 區的名稱。 如果資料庫是單一資料庫或資料倉儲，則會傳回 **Null** 。|  
+|elastic_pool_name|sysname|資料庫所屬 [彈性集](/azure/azure-sql/database/elastic-pool-overview) 區的名稱。 如果資料庫是單一資料庫或資料倉儲，則會傳回 **Null** 。|  
   
 ## <a name="permissions"></a>權限  
  需要 master 資料庫的 **dbManager** 許可權。  在資料庫層級，使用者必須是建立者或擁有者。  
@@ -57,5 +57,4 @@ JOIN sys.database_service_objectives slo
 ON d.database_id = slo.database_id;  
   
 ```  
-  
   

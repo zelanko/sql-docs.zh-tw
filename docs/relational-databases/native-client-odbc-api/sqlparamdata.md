@@ -14,12 +14,12 @@ ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1e81c4e02d0c16caa0cf46d99f731347a639960
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af2f9651ad0bc8986df1c688e4d94084ddeac0df
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424000"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810916"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "88424000"
  如需資料表值參數的詳細資訊，請參閱 [&#40;ODBC&#41;的資料表值參數 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   
+ [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

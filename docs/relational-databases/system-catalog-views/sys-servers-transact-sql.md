@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539566"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809319"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539566"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
 |**name**|**sysname**|當 **server_id** = 0 時，傳回的值就是伺服器名稱。<br /><br /> 當 **server_id** > 0 時，傳回的值就是連結伺服器的本機名稱。|  
-|**產品**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示另一個實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**product**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 的值表示另一個實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**供應商**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。<br /><br />從開始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ，"SQLNCLI" 值會對應至預設的 [MICROSOFT OLE DB DRIVER FOR SQL SERVER (msoledbsql.h) ](../../connect/oledb/oledb-driver-for-sql-server.md) 。 在較早的版本中，"SQLNCLI" 值會對應至 [SQL Server Native Client OLE DB 提供者 (SQLNCLI11) ](../../relational-databases/native-client/sql-server-native-client.md)。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539566"
 |**is_nonsql_subscriber**|**bit**|伺服器是非 SQL Server 複寫訂閱者。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|如果是 1，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的資料。|  
 |**modify_date**|**datetime**|上次變更伺服器資訊的日期。|  
-|**is_rda_server**|**bit**|**適用于：** 從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />伺服器是遠端資料封存功能，可 (已啟用延展功能的) 。 如需詳細資訊，請參閱在 [伺服器上啟用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。|
+|**is_rda_server**|**bit**|**適用于：** 從開始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />伺服器是遠端資料封存功能，可 (已啟用延展功能的) 。 如需詳細資訊，請參閱在 [伺服器上啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。|
   
 ## <a name="permissions"></a>權限  
  除非呼叫端具有 ALTER ANY 連結伺服器許可權，否則 **provider_string** 中的值一律為 Null。  
@@ -80,4 +80,3 @@ ms.locfileid: "89539566"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

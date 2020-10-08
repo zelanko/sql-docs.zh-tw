@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497950"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808414"
 ---
 # <a name="automatic-tuning"></a>自動微調
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -101,7 +101,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，您可以使用查詢存放區系統檢視來尋找計畫選擇回歸。 從開始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ， [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會偵測並顯示可能的計畫選擇回歸，以及應該套用在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中的建議動作。 DMV 會顯示問題的相關資訊、問題的重要性，以及詳細資料（例如識別的查詢）、回歸計畫的識別碼、做為比較基準的計畫識別碼，以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可執行以修正問題的語句。
 
-| 類型 | description | Datetime | score | 詳細資料 | ... |
+| type | description | Datetime | score | 詳細資料 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間從4毫秒變更為14毫秒 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間從37毫秒變更為84毫秒 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -111,7 +111,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 描述，其中包含有關 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 此計畫變更的原因可能是效能回歸的資訊。
  - 偵測到潛在回歸的日期時間。
  - 這項建議的分數。
- - 關於問題的詳細資料，例如偵測到之計畫的識別碼、回歸計畫的識別碼、應該強制修正問題的計畫識別碼、 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可能套用以修正問題的腳本等等。詳細資料會以 [JSON 格式](../../relational-databases/json/index.md)儲存。
+ - 關於問題的詳細資料，例如偵測到之計畫的識別碼、回歸計畫的識別碼、應該強制修正問題的計畫識別碼、 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可能套用以修正問題的腳本等等。詳細資料會以 [JSON 格式](../json/json-data-sql-server.md)儲存。
 
 使用下列查詢來取得可修正問題的腳本，以及估計增益的其他相關資訊：
 
@@ -180,7 +180,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 如果沒有自動索引管理，使用者或 DBA 將需要以手動方式查詢 [sys.dm_db_missing_index_details &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view 或使用中的效能儀表板報表 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 尋找可改善效能的索引、使用此視圖中提供的詳細資料建立索引，以及手動監視查詢的效能。 為了找出應該卸載的索引，使用者應該監視索引的操作使用狀況統計資料，以找出很少使用的索引。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 簡化此程式。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析您的工作負載、識別可使用新索引更快執行的查詢，並識別未使用或重複的索引。 如需找出應變更的索引詳細資訊，可在 [Azure 入口網站中的尋找索引建議](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)中找到。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 簡化此程式。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析您的工作負載、識別可使用新索引更快執行的查詢，並識別未使用或重複的索引。 如需找出應變更的索引詳細資訊，可在 [Azure 入口網站中的尋找索引建議](/azure/sql-database/sql-database-advisor-portal)中找到。
 
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
@@ -190,7 +190,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON 函數](../../relational-databases/json/index.md)    
+ [JSON 函數](../json/json-data-sql-server.md)    
  [執行計畫](../../relational-databases/performance/execution-plans.md)    
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

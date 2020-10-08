@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: sys. server_principals (Transact-sql) |Microsoft Docs
+title: sys.server_principals (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377294"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809334"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "88377294"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|主體的名稱。 在伺服器中，這是唯一的。|  
 |**principal_id**|**int**|主體的識別碼。 在伺服器中，這是唯一的。|  
-|**希**|**Varbinary (85) **|主體的 SID (安全性識別碼)。 如果是 Windows 主體，則與 Windows SID 相符。|  
-|**type**|**char (1) **|主體類型：<br /><br /> S = SQL 登入<br /><br /> U = Windows 登入<br /><br /> G = Windows 群組<br /><br /> R = 伺服器角色<br /><br /> C = 對應至憑證的登入<br /><br /> K = 對應至非對稱金鑰的登入|  
+|**希**|**varbinary(85)**|主體的 SID (安全性識別碼)。 如果是 Windows 主體，則與 Windows SID 相符。|  
+|**type**|**char(1)**|主體類型：<br /><br /> S = SQL 登入<br /><br /> U = Windows 登入<br /><br /> G = Windows 群組<br /><br /> R = 伺服器角色<br /><br /> C = 對應至憑證的登入<br /><br /> E = 來自 Azure Active Directory 的外部登入<br /><br /> X = 來自 Azure Active Directory 群組或應用程式的外部群組
+<br /><br /> K = 對應至非對稱金鑰的登入|  
 |**type_desc**|**nvarchar(60)**|主體類型的描述：<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 登入已停用。|  
 |**create_date**|**datetime**|建立主體的時間。|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377294"
  下列查詢會列出已明確授與或拒絕伺服器主體的權限。  
   
 > [!IMPORTANT]  
->   (公用) 以外的固定伺服器角色的許可權不會出現在 sys. server_permissions 中。 因此，伺服器主體可能仍有其他未列於此處的權限。  
+>   (公用) 以外的固定伺服器角色的許可權不會出現在 sys.server_permissions 中。 因此，伺服器主體可能仍有其他未列於此處的權限。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

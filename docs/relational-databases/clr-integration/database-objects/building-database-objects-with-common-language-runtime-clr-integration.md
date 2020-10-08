@@ -1,6 +1,6 @@
 ---
-title: Common Language Runtime （CLR）組建資料庫物件
-description: 使用與 .NET Framework common language runtime （CLR）的 SQL Server 整合來建立資料庫物件。
+title: Common Language Runtime (CLR) 建立資料庫物件
+description: 使用 SQL Server 與 .NET Framework common language runtime (CLR) 整合來建立資料庫物件。
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a891da3459e82bbb8c218fd68693840f141da93f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885908"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810827"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -57,22 +57,21 @@ ms.locfileid: "85885908"
  [.NET Framework 的 SQL Server 資料類型](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型及其 .NET Framework 對等項目的概觀。  
   
- [CLR 整合自訂屬性的概觀](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [CLR 整合自訂屬性的概觀](./clr-integration-custom-attributes-for-clr-routines.md)  
  提供 CLR 整合自訂屬性的相關資訊。  
   
- [CLR 使用者定義函數](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [CLR 使用者定義函式](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  描述如何實作與使用各種類型的 CLR 函數：資料表值函式、純量函數，以及使用者定義彙總函式。  
   
- [CLR 使用者定義型別](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [CLR 使用者定義類型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  描述如何實作及使用 CLR 使用者定義型別。  
   
- [CLR 預存程序](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR 預存程序](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
  描述如何實作及使用 CLR 預存程序。  
   
- [CLR 觸發程序](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [CLR 觸發程序](/dotnet/framework/data/adonet/sql/clr-triggers)  
  描述如何實作及使用 CLR 觸發程序。  
   
 ## <a name="see-also"></a>另請參閱  
  [Common Language Runtime &#40;CLR&#41; 整合總覽](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
-  
   

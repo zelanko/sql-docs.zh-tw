@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538368"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809777"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;capture_instance &gt; _CT (transact-sql) 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT，其中 *capture_instance* 是來源資料表的架構名稱，以及格式 *schema_table*的來源資料表名稱。 例如，如果**AdventureWorks**範例資料庫中的資料表**Person**已啟用變更資料捕捉，則衍生的變更資料表名稱將會是**cdc。Person_Address_CT**。  
   
- 我們建議您不要 **直接查詢系統資料表**。 相反地，請執行 [cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 和 [cdc. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance 函數。  
+ 我們建議您不要 **直接查詢系統資料表**。 相反地，請執行 [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) [和 cdc.fn_cdc_get_net_changes_<](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) capture_instance 函數。  
   
 
   
@@ -46,7 +46,7 @@ ms.locfileid: "89538368"
   
 ## <a name="remarks"></a>備註  
 
-資料 `__$command_id` 行是在2012至2016版的累計更新中引進的資料行。 如需版本和下載資訊，請參閱知識庫文章 3030352 [：修正：為 Microsoft SQL Server 資料庫啟用變更資料捕捉之後，變更資料表的排序次序不正確](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱 [升級至最新的 CU 之後，CDC 功能可能會中斷，以獲得 SQL Server 2012、2014和 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
+資料 `__$command_id` 行是在2012至2016版的累計更新中引進的資料行。 如需版本和下載資訊，請參閱知識庫文章 3030352 [：修正：為 Microsoft SQL Server 資料庫啟用變更資料捕捉之後，變更資料表的排序次序不正確](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱 [升級至最新的 CU 之後，CDC 功能可能會中斷，以獲得 SQL Server 2012、2014和 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016)。
 
 ## <a name="captured-column-data-types"></a>擷取資料行資料類型  
  包含在這個資料表中的擷取資料行與對應的來源資料行具有相同的資料類型和值，但下列情況除外：  
@@ -63,9 +63,9 @@ ms.locfileid: "89538368"
  根據預設，在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中可加入至擷取資料行的大小上限為 65,536 個位元組或 64 KB。 若要增加此大小以支援較大的 LOB 資料，請使用 [ [設定最大文字複寫大小伺服器](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 設定] 選項來指定較大的大小上限。 如需詳細資訊，請參閱 [設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   
 ## <a name="data-definition-language-modifications"></a>資料定義語言修改  
- 來源資料表的 DDL 修改（例如，加入或卸載資料行）會記錄在 [cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 資料表中。 這些變更不會套用至變更資料表。 也就是說，變更資料表的定義會維持不變。 將資料列插入變更資料表時，擷取處理序會忽略沒有顯示在與來源資料表相關聯之擷取資料行清單中的這些資料行。 如果某個資料行顯示在擷取資料行清單中，但是該資料行已不存在來源資料表中，系統就會指派 Null 值給此資料行。  
+ 來源資料表的 DDL 修改（例如，加入或卸載資料行）會記錄在 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 資料表中。 這些變更不會套用至變更資料表。 也就是說，變更資料表的定義會維持不變。 將資料列插入變更資料表時，擷取處理序會忽略沒有顯示在與來源資料表相關聯之擷取資料行清單中的這些資料行。 如果某個資料行顯示在擷取資料行清單中，但是該資料行已不存在來源資料表中，系統就會指派 Null 值給此資料行。  
   
- 在來源資料表中變更資料行的資料類型，也會記錄在 [cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 資料表中。 不過，這項變更不會更改變更資料表的定義。 當擷取處理序遇到對來源資料表所做 DDL 變更的記錄檔記錄時，變更資料表中擷取資料行的資料類型就會遭修改。  
+ 在來源資料表中變更資料行的資料類型，也會記錄在 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 資料表中。 不過，這項變更不會更改變更資料表的定義。 當擷取處理序遇到對來源資料表所做 DDL 變更的記錄檔記錄時，變更資料表中擷取資料行的資料類型就會遭修改。  
   
  如果您必須以減少資料類型大小的方式來修改來源資料表中擷取資料行的資料類型，請使用下列程序來確保變更資料表中的對等資料行可成功進行修改。  
   
@@ -83,7 +83,6 @@ ms.locfileid: "89538368"
  若為插入和刪除作業，就會設定更新遮罩中的所有位元。 若為更新作業，就會同時修改更新舊值與更新新值資料列中的更新遮罩，以便反映在更新期間變更的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
   

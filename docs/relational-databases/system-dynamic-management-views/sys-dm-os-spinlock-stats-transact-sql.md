@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_os_spinlock_stats (Transact-sql) '
-title: sys. dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
+description: 'sys.dm_os_spinlock_stats (Transact-sql) '
+title: sys.dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042749"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810104"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql) 
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql) 
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -53,9 +53,9 @@ ms.locfileid: "90042749"
   
 ## <a name="remarks"></a>備註  
  
- sys. dm_os_spinlock_stats 可以用來識別 spinlock 爭用的來源。 在某些情況下，您可以解決或減少 spinlock 爭用。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
+ sys.dm_os_spinlock_stats 可以用來識別 spinlock 爭用的來源。 在某些情況下，您可以解決或減少 spinlock 爭用。 不過有些時候您可能還是必須連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援服務部門。  
   
- 您可以使用來重設 sys. dm_os_spinlock_stats 的內容，如下所示 `DBCC SQLPERF` ：  
+ 您可以使用來重設 sys.dm_os_spinlock_stats 的內容，如下所示 `DBCC SQLPERF` ：  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -413,6 +413,7 @@ GO
 
  [何時 Spinlock SQL Server 中 CPU 使用率的重要驅動程式？](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [診斷和解決 SQL Server 上的 Spinlock 爭用](../diagnose-resolve-spinlock-contention.md)
   
   
 
