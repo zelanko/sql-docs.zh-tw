@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8c086e5d9cc08af95b027e4ea986845861005a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2acd26b8fb88fa6cf51c6b8715eee9cdfca8ad49
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544873"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834305"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>執行相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,11 +117,9 @@ ms.locfileid: "89544873"
 :::row-end:::
 
 > [!NOTE]  
->  系統會識別 **sys. dm_exec_query_transformation_stats** 動態管理檢視，僅供參考之用。 不支援。 我們無法保證未來的相容性。  
+>  **Sys.dm_exec_query_transformation_stats**動態管理檢視的識別僅供參考之用。 不支援。 我們無法保證未來的相容性。  
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   
-  
-

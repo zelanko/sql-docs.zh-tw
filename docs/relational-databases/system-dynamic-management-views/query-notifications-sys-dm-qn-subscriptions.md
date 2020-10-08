@@ -1,6 +1,6 @@
 ---
-description: 查詢通知-sys. dm_qn_subscriptions
-title: sys. dm_qn_subscriptions (Transact-sql) |Microsoft Docs
+description: 查詢通知-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542369"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834468"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   傳回有關伺服器之使用中查詢通知訂閱的資訊。 您可以使用這個檢視，檢查伺服器或指定資料庫中是否有使用中的訂閱，或檢查指定的伺服器主體。  
@@ -53,7 +53,7 @@ ms.locfileid: "89542369"
   
  下列狀態碼表示因為變更所引發的訂閱：  
   
-|程式碼|次要狀態|資訊|  
+|程式碼|次要狀態|Info|  
 |----------|------------------|----------|  
 |65798|因為資料變更所以引發訂閱|插入觸發的訂閱|  
 |65799|因為資料變更所以引發訂閱|刪除|  
@@ -70,7 +70,7 @@ ms.locfileid: "89542369"
   
  下列狀態碼表示無法建立訂閱：  
   
-|程式碼|次要狀態|資訊|  
+|程式碼|次要狀態|Info|  
 |----------|------------------|----------|  
 |132609|因為不支援陳述式所以訂閱建立失敗|查詢太複雜|  
 |132610|因為不支援陳述式所以訂閱建立失敗|訂閱陳述式無效|  
@@ -81,7 +81,7 @@ ms.locfileid: "89542369"
   
  下列狀態碼用於內部，而且分類為檢查終止和初始化模式：  
   
-|程式碼|次要狀態|資訊|  
+|程式碼|次要狀態|Info|  
 |----------|------------------|----------|  
 |198656|用於內部：檢查終止和初始化模式|未定義的資訊模式|  
 |198928|已終結訂閱|因為已附加資料庫所以引發訂閱|  
@@ -133,7 +133,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [查詢通知相關的動態管理檢視 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [查詢通知相關的動態管理檢視 &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

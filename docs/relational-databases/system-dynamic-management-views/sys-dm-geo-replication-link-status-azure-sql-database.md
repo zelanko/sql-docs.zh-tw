@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548467"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834255"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -48,10 +48,10 @@ ms.locfileid: "89548467"
 |last_commit|**datetimeoffset**|上次交易認可至資料庫的時間。 如果在主資料庫上抓取，則表示主資料庫上的上次認可時間。 如果在次要資料庫上抓取，則表示次要資料庫上的上次認可時間。 當複寫連結的主要複本關閉時，如果在次要資料庫上抓取，則會指出次要複本在哪個點上到達。|
   
 > [!NOTE]  
->  如果藉由移除次要資料庫 (區段 4.2) 來終止複寫關聯性， **sys. dm_geo_replication_link_status** 視圖中該資料庫的資料列就會消失。  
+>  如果藉由移除次要資料庫 (區段 4.2) 來終止複寫關聯性， **sys.dm_geo_replication_link_status** 視圖中該資料庫的資料列就會消失。  
   
 ## <a name="permissions"></a>權限  
- 具有 view_database_state 許可權的任何帳戶都可以查詢 **sys. dm_geo_replication_link_status**。  
+ 具有 view_database_state 許可權的任何帳戶都可以查詢 **sys.dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>範例  
  顯示次要資料庫的複寫延遲和最後複寫時間。  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

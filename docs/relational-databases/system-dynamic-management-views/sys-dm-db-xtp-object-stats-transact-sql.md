@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_object_stats (Transact-SQL)
-title: sys. dm_db_xtp_object_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_object_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7ba94c5561f43aac191c06f032cc18d34ea5bac
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f6d6c0d191022099e027b29a5be1b34b592da31f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542191"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834127"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   報告自從上一次資料庫重新啟動之後，受到每個 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件上的作業所影響的資料列數。 不論交易是否認可還是已經回復，執行此作業時都會更新統計資料。  
   
- sys.dm_db_xtp_object_stats 可幫助您識別哪些記憶體最佳化資料表有最大的改變。 您可能會決定移除資料表上未使用或不常使用的索引，因為每個索引都會影響效能。 如果有雜湊索引，您應該定期重新評估貯體計數。 如需詳細資訊，請參閱＜ [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)＞。  
+ sys.dm_db_xtp_object_stats 可幫助您識別哪些記憶體最佳化資料表有最大的改變。 您可能會決定移除資料表上未使用或不常使用的索引，因為每個索引都會影響效能。 如果有雜湊索引，您應該定期重新評估貯體計數。 如需詳細資訊，請參閱＜ [Determining the Correct Bucket Count for Hash Indexes](/previous-versions/sql/)＞。  
   
  sys.dm_db_xtp_object_stats 可幫助您識別哪些記憶體最佳化資料表導致了寫入-寫入衝突，這些衝突可能會影響應用程式的效能。 例如，如果您有交易重試邏輯，相同的陳述式可能必須執行一次以上。 此外，您可以使用這項資訊來識別需要處理寫入-寫入錯誤的資料表 (以及商務邏輯)。  
   
@@ -56,5 +56,4 @@ ms.locfileid: "89542191"
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

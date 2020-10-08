@@ -1,6 +1,6 @@
 ---
 description: sys.dm_operation_status
-title: sys. dm_operation_status |Microsoft Docs
+title: sys.dm_operation_status |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 201d7b1c0a15299817edfc663a0176f98ad72156
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531791"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834151"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -46,7 +46,7 @@ ms.locfileid: "89531791"
 |percent_complete|**int**|已完成作業的百分比。 值不是連續的，而且有效值如下所示。 不是 Null。<br/><br/>0 = 作業未啟動<br/>50 = 操作進行中<br/>100 = 作業完成|  
 |error_code|**int**|表示在作業失敗期間發生之錯誤的代碼。 如果這個值為 0，就表示作業已順利完成。|  
 |error_desc|**nvarchar(2048)**|在作業失敗期間發生之錯誤的描述。|  
-|error_severity|**int**|在作業失敗期間發生之錯誤的嚴重性層級。 如需有關錯誤嚴重性的詳細資訊，請參閱 [資料庫引擎錯誤嚴重性](https://go.microsoft.com/fwlink/?LinkId=251052)。|  
+|error_severity|**int**|在作業失敗期間發生之錯誤的嚴重性層級。 如需有關錯誤嚴重性的詳細資訊，請參閱 [資料庫引擎錯誤嚴重性](../errors-events/database-engine-error-severities.md)。|  
 |error_state|**int**|保留供未來使用。 我們無法保證未來的相容性。|  
 |start_time|**datetime**|作業啟動時的時間戳記。|  
 |last_modify_time|**datetime**|上次修改長時間執行作業之記錄時的時間戳記。 如果作業順利完成，這個欄位會顯示作業完成時的時間戳記。|  
@@ -75,7 +75,7 @@ ms.locfileid: "89531791"
   
 -   刪除資料庫  
 
-此視圖中的資訊大約會保留1小時。 請使用 [Azure 活動記錄](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) 來查看過去90天的作業詳細資料。 保留超過90天，請考慮將 [活動記錄](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 專案傳送至 Log Analytics 工作區。
+此視圖中的資訊大約會保留1小時。 請使用 [Azure 活動記錄](/azure/azure-monitor/platform/activity-log) 來查看過去90天的作業詳細資料。 保留超過90天，請考慮將 [活動記錄](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) 專案傳送至 Log Analytics 工作區。
 
 ## <a name="example"></a>範例  
  顯示與資料庫 ' mydb ' 相關聯的最新異地複寫作業。  
@@ -88,8 +88,7 @@ SELECT * FROM sys.dm_operation_status
   
 ## <a name="see-also"></a>另請參閱  
  [異地複寫動態管理檢視和函式 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys. dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys. geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-  
+ [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

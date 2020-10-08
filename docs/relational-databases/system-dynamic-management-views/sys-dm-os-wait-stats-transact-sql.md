@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys. dm_os_wait_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2020
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532100"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834234"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-傳回執行中之執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能問題，以及特定查詢和批次的效能問題。 [sys. dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 依會話提供類似的資訊。  
+傳回執行中之執行緒所遇到之所有等候的相關資訊。 您可以使用這份彙總檢視來診斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能問題，以及特定查詢和批次的效能問題。 [sys.dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 依會話提供類似的資訊。  
   
 > [!NOTE] 
-> 若要從** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **呼叫這個，請使用名稱**sys. dm_pdw_nodes_os_wait_stats**。  
+> 若要從** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 或**呼叫這個，請使用**sys.dm_pdw_nodes_os_wait_stats**名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -87,7 +87,7 @@ GO
   
  下表列出工作會遇到的等候類型。  
 
-|類型 |描述| 
+|type |描述| 
 |-------------------------- |--------------------------| 
 |ABR |僅供參考之用。 不支援。 我們無法保證未來的相容性。| | 
 |AM_INDBUILD_ALLOCATION |僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
@@ -136,7 +136,7 @@ GO
 |BROKER_TRANSMISSION_OBJECT |僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |BROKER_TRANSMISSION_TABLE |僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |BROKER_TRANSMISSION_WORK |僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
-|BROKER_TRANSMITTER |當 Service Broker 發送器正在等候工作時發生。 Service Broker 有一個稱為傳輸器的元件，它會排程多個對話的訊息，以透過一或多個連接端點跨網路傳送。 發送器有2個專用線程可供此用途。 這種等候類型會在這些傳輸器執行緒正在等候對話訊息使用傳輸連接來傳送時收費。 這種等候類型的最高 waiting_tasks_count 值指向這些傳輸器執行緒的間歇性運作，而不是任何效能問題的指示。 如果未使用 service broker，waiting_tasks_count 應為2個發送器執行緒的 2 () 而且 wait_time_ms 應該是自實例啟動之後的兩倍。 請參閱 [Service broker 等候統計](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types)資料。|
+|BROKER_TRANSMITTER |當 Service Broker 發送器正在等候工作時發生。 Service Broker 有一個稱為傳輸器的元件，它會排程多個對話的訊息，以透過一或多個連接端點跨網路傳送。 發送器有2個專用線程可供此用途。 這種等候類型會在這些傳輸器執行緒正在等候對話訊息使用傳輸連接來傳送時收費。 這種等候類型的最高 waiting_tasks_count 值指向這些傳輸器執行緒的間歇性運作，而不是任何效能問題的指示。 如果未使用 service broker，waiting_tasks_count 應為2個發送器執行緒的 2 () 而且 wait_time_ms 應該是自實例啟動之後的兩倍。 請參閱 [Service broker 等候統計](/archive/blogs/sql_service_broker/service-broker-wait-types)資料。|
 |BUILTIN_HASHKEY_MUTEX |可能在啟動執行個體之後，而內部資料結構正在初始化時發生。 資料結構初始化之後就不會再次發生。| 
 |CHANGE_TRACKING_WAITFORCHANGES |僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |CHECK_PRINT_RECORD |僅供參考之用。 不支援。 我們無法保證未來的相容性。| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |背景工作正在等候處理 Windows Server 容錯移轉叢集通知的背景工作啟動完成。 僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |背景工作正在等候處理 Windows Server 容錯移轉叢集通知的背景工作終止。 僅供內部使用。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_PARTNER_SYNC |夥伴清單的並行控制等候。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
-|HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 注意：引擎會保留用於動態管理檢視的 WSFC 網路清單 (例如 sys. dm_hadr_cluster_networks) 或驗證參考 WSFC 網路資訊 Always On Transact-sql 語句。 這份清單會在引擎啟動、WSFC 相關通知和內部 Always On 重新開機時更新 (例如，遺失和重新建立 WSFC 仲裁) 。 當該清單的更新正在進行時，通常會封鎖工作。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
+|HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 注意：引擎會保留動態管理檢視中使用的 WSFC 網路清單 (例如 sys.dm_hadr_cluster_networks) 或驗證參考 WSFC 網路資訊 Always On Transact-sql 語句。 這份清單會在引擎啟動、WSFC 相關通知和內部 Always On 重新開機時更新 (例如，遺失和重新建立 WSFC 仲裁) 。 當該清單的更新正在進行時，通常會封鎖工作。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |等候次要資料庫在執行復原之前連接到主要資料庫。 這是預期的等候，而且如果建立主要資料庫之連接的速度很慢，等候可能會延長。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |資料庫復原正在等候次要資料庫完成還原和初始化階段，以便讓它返回與主要資料庫相同的記錄點。 在容錯移轉之後，這是預期的等候。您可以透過 Windows 系統監視器 (perfmon.exe) 和動態管理檢視追蹤恢復進度。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
 |HADR_REPLICAINFO_SYNC |等候並行控制更新目前複本狀態。 <br /><br /> **適用對象**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更新版本。| 
@@ -381,12 +381,12 @@ GO
 |KTM_ENLISTMENT |僅供參考之用。 不支援。 我們無法保證未來的相容性。| 
 |KTM_RECOVERY_MANAGER |僅供參考之用。 不支援。 我們無法保證未來的相容性。| 
 |KTM_RECOVERY_RESOLUTION |僅供參考之用。 不支援。 我們無法保證未來的相容性。| 
-|LATCH_DT  |在等候 DT (終結) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 您 \_ \* 可以在 sys. dm_os_latch_stats 中找到閂鎖等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
-|LATCH_EX  |在等候 EX (獨佔) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 您 \_ \* 可以在 sys. dm_os_latch_stats 中找到閂鎖等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
-|LATCH_KP  |在等候 KP (保留) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 您 \_ \* 可以在 sys. dm_os_latch_stats 中找到閂鎖等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
+|LATCH_DT  |在等候 DT (終結) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 閂鎖等候的清單 \_ \* 可在 sys.dm_os_latch_stats 中取得。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
+|LATCH_EX  |在等候 EX (獨佔) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 閂鎖等候的清單 \_ \* 可在 sys.dm_os_latch_stats 中取得。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
+|LATCH_KP  |在等候 KP (保留) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 閂鎖等候的清單 \_ \* 可在 sys.dm_os_latch_stats 中取得。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
 |LATCH_NL  |僅供參考之用。 不支援。 我們無法保證未來的相容性。| 
-|LATCH_SH  |在等候 SH (共用) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 您 \_ \* 可以在 sys. dm_os_latch_stats 中找到閂鎖等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
-|LATCH_UP  |在等候 UP (更新) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 您 \_ \* 可以在 sys. dm_os_latch_stats 中找到閂鎖等候的清單。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
+|LATCH_SH  |在等候 SH (共用) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 閂鎖等候的清單 \_ \* 可在 sys.dm_os_latch_stats 中取得。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
+|LATCH_UP  |在等候 UP (更新) 閂鎖時發生。 其中不包括緩衝區閂鎖或交易標示閂鎖。 閂鎖等候的清單 \_ \* 可在 sys.dm_os_latch_stats 中取得。 請注意，sys.dm_os_latch_stats 會將 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 和 LATCH_DT 等候分組在一起。| 
 |LAZYWRITER_SLEEP  |當延遲寫入器工作暫止時發生。 這是等候中的背景工作所花的時間。 如果您要尋找使用者拋錨點，就不要考慮這個狀態。| 
 |LCK_M_BU  |當工作在等候取得大量更新 (BU) 鎖定時發生。| 
 |LCK_M_BU_ABORT_BLOCKERS |當工作在等候取得具有中止封鎖器的大量更新 (BU) 鎖定時發生   (與 ALTER TABLE 和 ALTER INDEX 的低優先順序等候選項相關。 ) ， <br /><br /> **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。| 
@@ -1024,12 +1024,11 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- 如需鎖定相容性矩陣，請參閱 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
+ 如需鎖定相容性矩陣，請參閱 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
     
  [SQL Server 作業系統相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys. dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [sys.dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

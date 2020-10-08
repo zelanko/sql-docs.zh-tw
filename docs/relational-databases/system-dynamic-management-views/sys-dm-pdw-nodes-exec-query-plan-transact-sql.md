@@ -1,6 +1,6 @@
 ---
-title: sys.databases dm_pdw_nodes_exec_query_plan （Transact-sql） |Microsoft Docs
-description: 動態管理檢視會針對計畫控制碼所指定的批次，傳回 XML 格式的執行程式表。 計畫控制代碼指定的計畫可以是快取或目前正在執行的計畫。
+title: sys.dm_pdw_nodes_exec_query_plan (Transact-sql) |Microsoft Docs
+description: 動態管理檢視，可針對計畫控制碼所指定的批次，以 XML 格式傳回顯示計畫。 計畫控制代碼指定的計畫可以是快取或目前正在執行的計畫。
 ms.custom: ''
 ms.date: 10/14/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6a11571ab7e4de54dbae73ae1f1252c88c2e2dca
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 40f8c69f595665c4188c76aded00517512620bb1
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395930"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834349"
 ---
-# <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.databases pdw_nodes_dm_exec_query_plan （Transact-sql）
+# <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 針對計畫控制代碼指定的批次，以 XML 格式傳回顯示計畫。 計畫控制代碼指定的計畫可以是快取或目前正在執行的計畫。  
@@ -30,20 +30,20 @@ ms.locfileid: "87395930"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|與節點相關聯的唯一數值識別碼。| 
-|**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 若為未規劃和備妥的 SQL 語句，則為編譯語句的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
+|**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 若為未規劃和已備妥的 SQL 語句，則為編譯語句的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
 |**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。|  
 |**number**|**smallint**|編號預存程序整數。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。| 
 |**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
-|**query_plan**|**xml**|包含以*plan_handle*指定之查詢執行計畫的編譯時間顯示計畫標記法。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
+|**query_plan**|**xml**|包含以 *plan_handle*指定之查詢執行計畫的編譯階段顯示計畫標記法。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
   
 ## <a name="remarks"></a>備註  
-[Dm_exec_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql?view=sql-server-ver15)適用相同的備註。  
+[Sys.dm_exec_query_plan](./sys-dm-exec-query-plan-transact-sql.md?view=sql-server-ver15)中的相同備註也適用。  
   
 ## <a name="permissions"></a>權限  
- 需要伺服器的**系統管理員（sysadmin** ）伺服器角色或 `VIEW SERVER STATE` 許可權。  
+ 需要伺服器的 **系統管理員（sysadmin** ）伺服器角色或 `VIEW SERVER STATE` 許可權。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>請參閱  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
- ## <a name="next-steps"></a>後續步驟
- 如需更多開發秘訣，請參閱 [SQL 資料倉儲開發概觀](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。
+ ## <a name="next-steps"></a>下一步
+ 如需更多開發秘訣，請參閱 [SQL 資料倉儲開發概觀](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。

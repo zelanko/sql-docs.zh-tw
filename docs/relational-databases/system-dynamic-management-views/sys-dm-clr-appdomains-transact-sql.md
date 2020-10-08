@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_appdomains (Transact-SQL)
-title: sys. dm_clr_appdomains (Transact-sql) |Microsoft Docs
+title: sys.dm_clr_appdomains (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545336"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834104"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "89545336"
   
  CLR 整合 Managed 資料庫物件有多種類型。 如需這些物件的一般資訊，請參閱 [使用 Common Language Runtime 建立資料庫物件 (CLR) 整合](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。 只要執行這些物件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會建立一個 **AppDomain** ，讓它可以載入和執行所需的程式碼。 **Appdomain**的隔離等級為每個擁有者每個資料庫一個**appdomain** 。 也就是說，使用者擁有的所有 CLR 物件一律會在每個資料庫相同的 **AppDomain** (中，如果使用者在不同的資料庫中註冊 clr 資料庫物件，clr 資料庫物件將會在不同的應用程式域) 中執行。 在程式碼完成執行之後， **AppDomain** 不會終結。 而會將它快取到記憶體中，以供日後執行使用。 這樣可以提高執行效能。  
   
- 如需詳細資訊，請參閱 [應用程式域](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ 如需詳細資訊，請參閱 [應用程式域](../../sql-server/what-s-new-in-sql-server-2016.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary(8)**|**AppDomain**的位址。 使用者擁有的所有受管理資料庫物件一律會載入相同的 **AppDomain**中。 您可以使用此資料行來查閱**sys. dm_clr_loaded_assemblies**中目前載入此**AppDomain**的所有元件。|  
+|**appdomain_address**|**varbinary(8)**|**AppDomain**的位址。 使用者擁有的所有受管理資料庫物件一律會載入相同的 **AppDomain**中。 您可以使用此資料行來查閱**sys.dm_clr_loaded_assemblies**中目前載入此**AppDomain**中的所有元件。|  
 |**appdomain_id**|**int**|**AppDomain**的識別碼。 每個 **AppDomain** 都有唯一的識別碼。|  
 |**appdomain_name**|**Varchar (386) **|所指派之 **AppDomain** 的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**creation_time**|**datetime**|建立 **AppDomain** 的時間。 由於 **appdomain** 會快取並重複使用以獲得較佳的效能，因此 **creation_time** 不一定是執行程式碼的時間。|  
@@ -53,7 +53,7 @@ ms.locfileid: "89545336"
 |**survived_memory_kb**|**bigint**|在上次完整區塊回收中存活下來且已知為目前應用程式定義域所參考的 KB 數。 這相當於 **MonitoringSurvivedMemorySize**。|  
   
 ## <a name="remarks"></a>備註  
- Dm_clr_appdomains 之間有一對一的關聯性。 **appdomain_address** 和 **dm_clr_loaded_assemblies appdomain_address**。  
+ **Dm_clr_appdomains. appdomain_address**和**dm_clr_loaded_assemblies. appdomain_address**之間有一對一的關聯性。  
   
  下表列出可能的 **狀態** 值、其描述，以及它們在 **AppDomain** 生命週期中的發生時機。 您可以使用這項資訊來追蹤 **AppDomain** 的生命週期，並監看是否有可疑或重複的 **AppDomain** 實例卸載，而不需要剖析 Windows 事件記錄檔。  
   
@@ -110,7 +110,6 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Common Language Runtime 相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
-  
   

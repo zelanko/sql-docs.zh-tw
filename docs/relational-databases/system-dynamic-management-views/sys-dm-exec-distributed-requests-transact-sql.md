@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_distributed_requests (Transact-sql) '
-title: sys. dm_exec_distributed_requests (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_distributed_requests (Transact-sql) '
+title: sys.dm_exec_distributed_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2794dfd106c00531c1c1cff96571dbb59c0b67a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548590"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834369"
 ---
-# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-sql) 
+# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   保存 PolyBase 查詢中目前或最近使用中的所有要求的相關資訊。 它會針對每個要求/查詢列出一個資料列。  
   
- 根據會話和要求識別碼，使用者可以藉由 sys. dm_exec_distributed_requests，取得所產生要執行的實際分散式要求。 例如，涉及一般 SQL 和外部 SQL 資料表的查詢會分解成跨不同計算節點執行的各種語句/要求。 為了追蹤所有計算節點上的分散式步驟，我們引進了「全域」執行識別碼，可用來分別追蹤與某個特定要求和操作員相關聯之計算節點上的所有作業。  
+ 使用者可以根據會話和要求識別碼，取得產生要執行的實際分散式要求-透過 sys.dm_exec_distributed_requests。 例如，涉及一般 SQL 和外部 SQL 資料表的查詢會分解成跨不同計算節點執行的各種語句/要求。 為了追蹤所有計算節點上的分散式步驟，我們引進了「全域」執行識別碼，可用來分別追蹤與某個特定要求和操作員相關聯之計算節點上的所有作業。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
@@ -48,8 +48,7 @@ ms.locfileid: "89548590"
 |total_elapsed_time|**int**|自開始要求以來經過的時間（以毫秒為單位）。|介於0和 start_time 與 end_time 之間的差異。如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 將會繼續成為最大值。 這種狀況會產生「已超過最大值」的警告。 以毫秒為單位的最大值相當於24.8 天。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [使用動態管理檢視進行 PolyBase 疑難排解](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

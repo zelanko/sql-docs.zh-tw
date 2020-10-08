@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_os_host_info (Transact-sql) '
-title: sys. dm_os_host_info (Transact-sql) |Microsoft Docs
+description: 'sys.dm_os_host_info (Transact-sql) '
+title: sys.dm_os_host_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97d313e91fdd719a7ff33728bf3183980f564910
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550223"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834083"
 ---
-# <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-sql) 
+# <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-sql) 
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 傳回一個顯示作業系統版本資訊的資料列。  
@@ -38,11 +38,11 @@ ms.locfileid: "89550223"
 |**host_distribution** |**nvarchar(256)** |作業系統的描述。 |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 (版本號碼)。 如需值和描述的清單，請參閱 [ (Windows) 的作業系統版本 ](/windows/desktop/SysInfo/operating-system-version)。 <br> 若是 Linux，則會傳回空字串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 作業系統的 Service Pack 層級。 <br> 若是 Linux，則會傳回空字串。 |  
-|**host_sku**|**int**|Windows 庫存單位 (SKU) 識別碼。 如需 SKU 識別碼和描述的清單，請參閱 [GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx)函式。 可為 Null。 <br> 若是 Linux，則會傳回 Null。 |  
-|**os_language_version**|**int**|作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 [Microsoft 指派的地區設定識別碼](https://go.microsoft.com/fwlink/?LinkId=208080)。 不可以是 null。|  
+|**host_sku**|**int**|Windows 庫存單位 (SKU) 識別碼。 如需 SKU 識別碼和描述的清單，請參閱 [GetProductInfo](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo)函式。 可為 Null。 <br> 若是 Linux，則會傳回 Null。 |  
+|**os_language_version**|**int**|作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 [Microsoft 指派的地區設定識別碼](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。 不可以是 null。|  
 
 ## <a name="remarks"></a>備註  
-此視圖類似于 [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，新增資料行來區分 Windows 和 Linux。
+此視圖類似于 [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，新增資料行來區分 Windows 和 Linux。
   
 ## <a name="security"></a>安全性  
   
@@ -54,7 +54,7 @@ ms.locfileid: "89550223"
 
   
 ## <a name="examples"></a>範例  
- 下列範例會從 **sys. dm_os_host_info** 視圖傳回所有資料行。  
+ 下列範例會傳回 **sys.dm_os_host_info** view 中的所有資料行。  
   
 ```  
 SELECT host_platform, host_distribution, host_release, 
@@ -78,5 +78,3 @@ FROM sys.dm_os_host_info;
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
- 
-

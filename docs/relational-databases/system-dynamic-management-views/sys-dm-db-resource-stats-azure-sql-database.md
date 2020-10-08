@@ -1,6 +1,6 @@
 ---
 description: sys.resource_stats (Azure SQL Database)
-title: sys. dm_db_resource_stats (Azure SQL Database) |Microsoft Docs
+title: sys.dm_db_resource_stats (Azure SQL Database) Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475016"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833704"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88475016"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
 |avg_cpu_percent|**decimal (5，2) **|平均運算使用率，以服務層限制的百分比計算。|  
-|avg_data_io_percent|**decimal (5，2) **|平均資料 i/o 使用率（以服務層限制的百分比表示）。 針對超大規模資料庫，請參閱 [資源使用量統計資料中的資料 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
+|avg_data_io_percent|**decimal (5，2) **|平均資料 i/o 使用率（以服務層限制的百分比表示）。 針對超大規模資料庫，請參閱 [資源使用量統計資料中的資料 IO](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  
 |avg_log_write_percent|**decimal (5，2) **|平均交易記錄寫入 (MBps) ，以服務層限制的百分比表示。|  
 |avg_memory_usage_percent|**decimal (5，2) **|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區頁面的記憶體，以及記憶體內部 OLTP 物件的儲存體。|  
 |xtp_storage_percent|**decimal (5，2) **|記憶體內部 OLTP 的儲存體使用量，以服務層的限制百分比為單位， (在報告間隔結束時) 。 這包括用於儲存下列記憶體內部 OLTP 物件的記憶體：記憶體優化資料表、索引和資料表變數。 它也包含用來處理 ALTER TABLE 作業的記憶體。<br /><br /> 如果資料庫中未使用記憶體內部 OLTP，則傳回0。|  
@@ -51,17 +51,17 @@ ms.locfileid: "88475016"
 |||
   
 > [!TIP]  
-> 如需這些限制和服務層級的詳細內容，請參閱 [服務層級](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、 [在 Azure SQL Database 中手動調整查詢效能](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)，以及 [SQL Database 資源限制和資源管理](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)。
+> 如需這些限制和服務層級的詳細內容，請參閱 [服務層級](/azure/azure-sql/database/purchasing-models)、 [在 Azure SQL Database 中手動調整查詢效能](/azure/azure-sql/database/performance-guidance)，以及 [SQL Database 資源限制和資源管理](/azure/sql-database/sql-database-resource-limits-database-server)。
   
 ## <a name="permissions"></a>權限
  此檢視需要 VIEW DATABASE STATE 權限。  
   
 ## <a name="remarks"></a>備註
- **Sys. dm_db_resource_stats**所傳回的資料會以百分比表示您正在執行的服務層/效能層級所允許的最大限制。
+ **Sys.dm_db_resource_stats**所傳回的資料會以您正在執行的服務層級/效能層級的最大允許限制百分比表示。
  
  如果資料庫在過去60分鐘內已容錯移轉到另一部伺服器，則此視圖只會傳回該容錯移轉後的時間資料。  
   
- 若要以較長的保留期限更細微地查看這項資料，請使用**master**資料庫中的**sys. resource_stats**目錄查看。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊，請參閱 [sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
+ 若要以較長的保留期限更細微地查看這項資料，請在**master**資料庫中使用**sys.resource_stats** catalog view。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊，請參閱 [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
  當資料庫是彈性集區的成員時，以百分比值呈現的資源統計資料會以彈性集區設定中設定之資料庫的最大限制百分比表示。  
   
@@ -102,4 +102,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [服務層級](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [服務層級](/azure/azure-sql/database/purchasing-models)

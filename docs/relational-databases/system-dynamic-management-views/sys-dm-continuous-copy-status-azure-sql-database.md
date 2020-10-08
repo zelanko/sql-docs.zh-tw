@@ -21,19 +21,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f06228aaec7abb9d9eb7de6237be696319cd661f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550320"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834273"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   針對目前參與異地複寫連續複製關聯性的每個使用者資料庫，各傳回一個資料列 (V11) 。 如果給定的主要資料庫起始一個以上的連續複製關聯性，這個資料表會針對每個使用中的次要資料庫各包含一個資料列。  
   
-如果您使用 SQL Database V12，則應該使用 [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (，因為 *sys. dm_continuous_copy_status* 只適用于 V11) 。
+如果您使用 SQL Database V12，則應使用 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (，因為 *sys.dm_continuous_copy_status* 只適用于 V11) 。
 
   
 |資料行名稱|資料類型|描述|  
@@ -53,14 +53,13 @@ ms.locfileid: "89550320"
  若要取出資料，需要 **db_owner** 資料庫角色中的成員資格。 Dbo 使用者、 **dbmanager** 資料庫角色的成員和 sa 登入都可以同時查詢此視圖。  
   
 ## <a name="remarks"></a>備註  
- 系統會在**resource**資料庫中建立**sys. dm_continuous_copy_status** view，並且可在所有資料庫中看到，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
+ **Sys.dm_continuous_copy_status** view 會建立在**resource**資料庫中，而且會顯示在所有資料庫中，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
- 如果資料庫上的連續複製關聯性終止， **sys. dm_continuous_copy_status** view 中該資料庫的資料列就會消失。  
+ 如果資料庫上的連續複製關聯性終止， **sys.dm_continuous_copy_status** view 中該資料庫的資料列就會消失。  
   
- 如同 **sys. dm_database_copies** 視圖， **sys. dm_continuous_copy_status** 會反映連續複製關聯性的狀態，其中資料庫是主要或作用中的次要資料庫。 不同于 **sys. dm_database_copies**， **sys. dm_continuous_copy_status** 包含數個數據行，可提供有關作業和效能的詳細資料。 這些資料行包含 **last_replication**和 **replication_lag_sec**。  
+ 如同 **sys.dm_database_copies** 視圖， **sys.dm_continuous_copy_status** 會反映連續複製關聯性的狀態，其中資料庫是主要或作用中的次要資料庫。 不同于 **sys.dm_database_copies**， **sys.dm_continuous_copy_status** 包含數個數據行，以提供有關作業和效能的詳細資料。 這些資料行包含 **last_replication**和 **replication_lag_sec**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [主動式異地複寫預存程式 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
-  
+ [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [主動式異地複寫預存程式 &#40;Transact-sql&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

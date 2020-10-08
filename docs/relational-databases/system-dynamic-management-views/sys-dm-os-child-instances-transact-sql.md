@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_child_instances (Transact-SQL)
-title: sys. dm_os_child_instances (Transact-sql) |Microsoft Docs
+title: sys.dm_os_child_instances (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c148c6d3bab448d89294eba4af7ebec8cd2cf6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81cceff6a1336fadecb84f1d70c5f41c7625dc07
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539353"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834448"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "89539353"
   
 > **重要！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 從 **sys. dm_os_child_instances** 傳回的資訊可以用來判斷每個使用者實例的狀態 (heart_beat) ，以及取得可用來建立使用者實例連接（使用或 SQLCmd）的管道名稱 (instance_pipe_name) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 您只能連接到已由外部處理序 (例如，用戶端應用程式) 啟動的使用者執行個體。 SQL 管理工具無法啟動使用者執行個體。  
+ 從 **sys.dm_os_child_instances** 傳回的資訊可用來判斷每個使用者實例的狀態 (heart_beat) ，以及取得可用來建立使用者實例連接（使用或 SQLCmd）的管道名稱 (instance_pipe_name) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 您只能連接到已由外部處理序 (例如，用戶端應用程式) 啟動的使用者執行個體。 SQL 管理工具無法啟動使用者執行個體。  
   
 > **注意：** 使用者實例只是的一項功能 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 。  
 > 
-> **注意** 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_child_instances**。  
+> **注意** 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_os_child_instances**名稱。  
   
 |資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
@@ -60,9 +60,5 @@ ms.locfileid: "89539353"
  如需動態管理檢視的詳細資訊，請參閱《線上叢書》中的 [動態管理檢視和函數 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  
- [非管理員的使用者執行個體](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [非管理員的使用者執行個體](/previous-versions/sql/)  
   
-  
-
-
-

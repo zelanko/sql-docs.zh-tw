@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) '
-title: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
+description: 'sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) '
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481785"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834323"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) 
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) 
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -119,7 +119,7 @@ ms.locfileid: "88481785"
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-下列範例會傳回與 sys. elastic_pool_resource_stats 類似的資訊，而不需要連接到邏輯 Master
+下列範例會傳回類似的 sys.elastic_pool_resource_stats，而不需要連接到邏輯主機
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>另請參閱
 
-- [翻譯記錄檔速率治理](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [彈性集區 DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [彈性集區 vCore 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [翻譯記錄檔速率治理](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [彈性集區 DTU 資源限制](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [彈性集區 vCore 資源限制](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

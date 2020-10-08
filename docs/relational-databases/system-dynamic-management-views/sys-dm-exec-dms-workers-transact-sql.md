@@ -23,12 +23,12 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 677ad00bd29d3f689c1722e1fc1abd65374426a5
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 5942abbdd1710a058ec725e88d96f99c9ba21e37
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624775"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834092"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91624775"
 |dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱 [sys.dm_exec_dms_workers (transact-sql) ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|正在執行背景工作的節點。|請參閱 [sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|`int`|||  
-|類型|`nvarchar(32)`|此專案代表的 DMS 工作者執行緒類型。|「DIRECT_CONVERTER」、「DIRECT_READER」、「FILE_READER」、「HASH_CONVERTER」、「HASH_READER」、「ROUNDROBIN_CONVERTER」、「EXPORT_READER」、「EXTERNAL_READER」、「EXTERNAL_WRITER」、「PARALLEL_COPY_READER」、「REJECT_WRITER」、「寫入器」|  
+|type|`nvarchar(32)`|此專案代表的 DMS 工作者執行緒類型。|「DIRECT_CONVERTER」、「DIRECT_READER」、「FILE_READER」、「HASH_CONVERTER」、「HASH_READER」、「ROUNDROBIN_CONVERTER」、「EXPORT_READER」、「EXTERNAL_READER」、「EXTERNAL_WRITER」、「PARALLEL_COPY_READER」、「REJECT_WRITER」、「寫入器」|  
 |status|`nvarchar(32)`|此步驟的狀態|「擱置」、「執行中」、「完成」、「失敗」、「UndoFailed」、「PendingCancel」、「已取消」、「復原」、「已中止」|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -64,8 +64,7 @@ ms.locfileid: "91624775"
 |compute_pool_id|`int`|集區的唯一識別碼。|
 
 ## <a name="see-also"></a>另請參閱  
- [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [使用動態管理檢視進行 PolyBase 疑難排解](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   
