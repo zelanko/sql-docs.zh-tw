@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba388925b96be073ed72208b2e795ea0b292cf17
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: f1ce60f3b96036ff9483782379728ad6e57e3288
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860132"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727133"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>變更 SQL Server 驗證使用者密碼 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88860132"
   此範例顯示如何使用 OLE DB 變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證下，使用者帳戶的密碼。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  建立之前，請更新 .C++ 程式碼來指定使用者識別碼、舊密碼與新密碼。  
@@ -324,5 +324,4 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, B
       pISupportErrorInfo->Release();  
 }  
 ```  
-  
   

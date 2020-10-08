@@ -21,12 +21,12 @@ ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec55904334a360d848e7cc9e661fa365b7968b3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ccce0c55e7c59cd72e004d6c7bd52fe03a1c4e1f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542698"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807256"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>架構目錄檢視-sys. 架構
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -55,8 +55,7 @@ ms.locfileid: "89542698"
 
 [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
-[&#40;Transact-sql&#41;的架構目錄檢視 ](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+[&#40;Transact-sql&#41;的架構目錄檢視 ](./catalog-views-transact-sql.md)   
 
 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
   

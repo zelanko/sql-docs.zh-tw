@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 4424f11e4b8d31c964d024b3ecaf90bec0cd7c21
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076773"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727339"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下載 Microsoft OLE DB Driver for SQL Server
 
@@ -35,7 +35,7 @@ Microsoft OLE DB Driver 18.4 for SQL Server 是最新的正式運作 (GA) 版本
 - 發行日期：2020 年 5 月 30 日
 
 > [!Note]
-> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱[本頁面的英文 (美國) 版](https://aka.ms/downloadmsoledbsqlusenglish)。 您可以選取[可用的語言](#available-languages)，從英文 (美國) 版網站下載不同語言版本。
+> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱[本頁面的英文 (美國) 版]()。 您可以選取[可用的語言](#available-languages)，從英文 (美國) 版網站下載不同語言版本。
 
 ## <a name="available-languages"></a>可用的語言
 

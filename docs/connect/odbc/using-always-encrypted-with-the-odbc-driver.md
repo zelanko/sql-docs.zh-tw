@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288180"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727387"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer
 > [!NOTE]
 > 在 Linux 與 macOS 上，需要 OpenSSL 1.0.1 版或更新版本，才能使用具有安全記憶體保護區的 Always Encrypted。
 
-從 17.4 版開始，驅動程式支援具有安全記憶體保護區的 Always Encrypted。 若要在連線到 SQL Server 2019 或更新版本時啟用及使用記憶體保護區，請將 `ColumnEncryption` DSN、連接字串或連接屬性設定為記憶體保護區類型與證明通訊協定以及相關聯證明資料的名稱，並以逗號分隔。 在 17.4 版中，只支援[虛擬化型安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) \(英文\) 記憶體保護區類型與[主機守護者服務](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)證明通訊協定 (由 `VBS-HGS` 表示)；若要加以使用，請指定證明伺服器的 URL，例如：
+從 17.4 版開始，驅動程式支援具有安全記憶體保護區的 Always Encrypted。 若要在連線到 SQL Server 2019 或更新版本時啟用及使用記憶體保護區，請將 `ColumnEncryption` DSN、連接字串或連接屬性設定為記憶體保護區類型與證明通訊協定以及相關聯證明資料的名稱，並以逗號分隔。 在 17.4 版中，只支援[虛擬化型安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) \(英文\) 記憶體保護區類型與[主機守護者服務](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)證明通訊協定 (由 `VBS-HGS` 表示)；若要加以使用，請指定證明伺服器的 URL，例如：
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ ODBC Driver for SQL Server 隨附下列內建的金鑰存放區提供者：
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供者
 
-Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 中時)。 Linux、macOS 及 Windows 上的 ODBC Driver for SQL Server 包含 Azure Key Vault 的內建資料行主要金鑰存放區提供者。 如需有關設定適用於 Always Encrypted 之 Azure Key Vault 的詳細資訊，請參閱 [Azure Key Vault - 逐步解說](/archive/blogs/kv/azure-key-vault-step-by-step) \(英文\)、[金鑰保存庫使用者入門](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)及[在 Azure Key Vault 中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
+Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 中時)。 Linux、macOS 及 Windows 上的 ODBC Driver for SQL Server 包含 Azure Key Vault 的內建資料行主要金鑰存放區提供者。 如需有關設定適用於 Always Encrypted 之 Azure Key Vault 的詳細資訊，請參閱 [Azure Key Vault - 逐步解說](/archive/blogs/kv/azure-key-vault-step-by-step) \(英文\)、[金鑰保存庫使用者入門](/azure/key-vault/general/overview)及[在 Azure Key Vault 中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
 
 > [!NOTE]
 > ODBC 驅動程式只支援直接針對 Azure Active Directory 的 AKV 驗證。 如果使用 AKV 的 Azure Active Directory 驗證，而您的 Active Directory 組態需要驗證 Active Directory 同盟服務端點，則驗證可能會失敗。
@@ -395,7 +395,7 @@ Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰�
 
 - 用戶端識別碼/祕密 - 使用此方法時，認證係指應用程式用戶端識別碼和應用程式祕密。
 
-- 受控識別 (17.5.2+) - 系統或使用者指派；如需詳細資訊，請參閱 [Azure 資源受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)。
+- 受控識別 (17.5.2+) - 系統或使用者指派；如需詳細資訊，請參閱 [Azure 資源受控識別](/azure/active-directory/managed-identities-azure-resources/)。
 
 為了允許驅動程式使用儲存在 AKV 中的 CMK 來進行資料行加密，請使用下列僅限連接字串的關鍵字：
 

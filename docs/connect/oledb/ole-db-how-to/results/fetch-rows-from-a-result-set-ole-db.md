@@ -12,12 +12,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 967b8613902900b436abc6ab282c1cf6329dca71
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 59a9e7b5dc0a4af5355658eaf910ec53e8577528
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860285"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727037"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>從結果集提取資料列 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860285"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ## <a name="example"></a>範例  
   
@@ -381,5 +381,4 @@ int ProcessResultSet() {
   
 ## <a name="see-also"></a>另請參閱  
  [處理結果操作說明主題 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

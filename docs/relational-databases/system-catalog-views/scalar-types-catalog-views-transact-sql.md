@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21ee2636d4a91e509f490ab3929514d7826d4c98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d7efb66c93e6392ed6955ab91d6694e9fd50c60
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545049"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807097"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>純量類型目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,6 +39,5 @@ ms.locfileid: "89545049"
 
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   

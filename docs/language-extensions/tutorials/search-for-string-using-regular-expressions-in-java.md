@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dab5079ab3c0447b0895bbc3642f23884317f3c4
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180492"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765736"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88180492"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-+ SQL Server 2019 資料庫引擎執行個體，其中包含 [Windows](../install/install-sql-server-language-extensions-on-windows.md) 或 [Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions) 上的擴充性架構和 Java 程式設計延伸模組。 如需詳細資訊，請參閱 [SQL Server 2019 中的語言延伸模組](../language-extensions-overview.md)。 如需有關程式碼撰寫需求的詳細資訊，請參閱[如何在 SQL Server 中呼叫 Java](../how-to/call-java-from-sql.md)。
++ SQL Server 2019 資料庫引擎執行個體，其中包含 [Windows](../install/install-sql-server-language-extensions-on-windows.md) 或 [Linux](../../linux/sql-server-linux-setup-language-extensions.md) 上的擴充性架構和 Java 程式設計延伸模組。 如需詳細資訊，請參閱 [SQL Server 2019 中的語言延伸模組](../language-extensions-overview.md)。 如需有關程式碼撰寫需求的詳細資訊，請參閱[如何在 SQL Server 中呼叫 Java](../how-to/call-java-from-sql.md)。
 
 + 可執行 T-SQL 的 SQL Server Management Studio 或 Azure Data Studio。
 
@@ -216,11 +216,11 @@ GO
 
 若要執行 Java 程式碼，使用者必須獲授與該特定語言的外部指令碼執行。
 
-如需詳細資訊，請參閱 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+如需詳細資訊，請參閱 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)。
 
 ## <a name="create-external-libraries"></a>建立外部程式庫
 
-使用 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 為您的 `.jar` 檔案建立外部程式庫。 SQL Server 將可存取 `.jar` 檔案，而且您不需要將任何特殊權限設定為 **classpath**。
+使用 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 為您的 `.jar` 檔案建立外部程式庫。 SQL Server 將可存取 `.jar` 檔案，而且您不需要將任何特殊權限設定為 **classpath**。
 
 在此範例中，您將建立兩個外部程式庫。 一個用於 SDK，另一個用於 RegEx Java 程式碼。
 

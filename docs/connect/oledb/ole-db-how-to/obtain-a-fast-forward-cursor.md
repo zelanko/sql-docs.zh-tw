@@ -12,12 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6b5aec6440a666413a06e1c7307a6d8c83aaaac
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: de4b4d600e6b83d1c2eede7ed7ef3d5970b6ac74
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860330"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727095"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860330"
  完整的範例示範如何設定資料列集屬性，以取得 FAST_FORWARD 資料指標。 在設定屬性之後，會執行 SELECT 陳述式，擷取並顯示 **AdventureWorks** 資料庫中 **Purchasing.Vendor** 資料表的 **Name** 資料行。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標  
   
@@ -409,5 +409,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

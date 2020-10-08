@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b748efb2fecd7030622ee85b7dc9bb72d20dc674
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43b91e08726ed548d24ba3461f45164eb97bb6b7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860637"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727367"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>安裝 OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ OLE DB Driver for SQL Server 檔案 (msoledbsql.dll、msoledbsqlr.rll) 會安裝
 
 OLE DB Driver for SQL Server 標頭和程式庫檔案 (msoledbsql.h 和 msoledbsql.lib) 會安裝在 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK` 中。 此外，x64 msoledbsql.msi 會在 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK` 中安裝相同的檔案。  
 
-您可以透過 msoledbsql.msi 散發 OLE DB Driver for SQL Server。 當您部署應用程式時，可能必須安裝 OLE DB Driver for SQL Server。 使用 Chainer 和 Bootstrapper 技術是安裝多個封裝 (但對使用者卻好像是單一安裝) 的一種方法。 如需詳細資訊，請參閱[撰寫適用於 Visual Studio 2005 的自訂啟動載入器套件](https://go.microsoft.com/fwlink/?LinkId=115667)和[新增自訂的必要條件](https://go.microsoft.com/fwlink/?LinkId=115668)。  
+您可以透過 msoledbsql.msi 散發 OLE DB Driver for SQL Server。 當您部署應用程式時，可能必須安裝 OLE DB Driver for SQL Server。 使用 Chainer 和 Bootstrapper 技術是安裝多個封裝 (但對使用者卻好像是單一安裝) 的一種方法。 如需詳細資訊，請參閱[撰寫適用於 Visual Studio 2005 的自訂啟動載入器套件](/previous-versions/aa730839(v=vs.80))和[新增自訂的必要條件](/visualstudio/deployment/creating-bootstrapper-packages)。  
   
 x64 msoledbsql.msi 也會安裝 32 位元版本的 OLE DB Driver for SQL Server。 如果應用程式的目標使用平台與當初開發時的平台不同，您可以下載 x64 和 x86 版本的 msoledbsql.msi。
 
@@ -63,4 +63,4 @@ x64 msoledbsql.msi 也會安裝 32 位元版本的 OLE DB Driver for SQL Server�
 APPGUID 選項需要從提高權限的命令提示字元執行安裝程式。
 
 ## <a name="see-also"></a>另請參閱  
- [利用 OLE DB Driver for SQL Server 建置](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [利用 OLE DB Driver for SQL Server 建置](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)

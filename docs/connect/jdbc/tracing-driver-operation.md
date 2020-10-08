@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393126"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727536"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393126"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援使用追蹤 (或記錄)，協助解決在應用程式中使用 JDBC 驅動程式時所發生的問題。 為了啟用追蹤，JDBC 驅動程式使用 java.util.logging 中的記錄 API，它會提供一組類別來建立 Logger 和 LogRecord 物件。  
   
 > [!NOTE]  
->  若是 JDBC 驅動程式隨附的原生元件 (sqljdbc_xa.dll)，內建診斷 (BID) 架構會啟用追蹤。 如需 BID 的資訊，請參閱 [SQL Server 中的資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=70042)。  
+>  若是 JDBC 驅動程式隨附的原生元件 (sqljdbc_xa.dll)，內建診斷 (BID) 架構會啟用追蹤。 如需 BID 的資訊，請參閱 [SQL Server 中的資料存取追蹤](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))。  
   
  開發應用程式時，您可以呼叫 Logger 物件，進而建立 LogRecord 物件，這些物件接著會傳遞至 Handler 物件以進行處理。 Logger 和 Handler 物件都會使用記錄層級和記錄篩選 (選擇性)，來規範要處理哪些 LogRecord。 完成記錄作業時，Handler 物件可以選擇性地使用 Formatter 物件，以發佈記錄資訊。  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>另請參閱  
  [診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

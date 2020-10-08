@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449964"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726713"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感性資料分類中繼資料
 
-5.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 `sqlsrv_field_metadata` 存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
+5.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 `sqlsrv_field_metadata` 存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4)，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
 
 根據預設，選項 `DataClassification` 是 `false`，但當設定為 `true` 時，`sqlsrv_field_metadata` 所傳回的陣列將會填入敏感性資料分類中繼資料 (如果存在)。 
 
@@ -244,4 +244,3 @@ foreach ($fieldmeta as $f) {
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

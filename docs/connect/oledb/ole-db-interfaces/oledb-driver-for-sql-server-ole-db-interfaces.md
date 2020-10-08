@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00bf7bad226fc793c17a80a0e10e86c970aae195
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3676f8daad2e597510323577a67f37c9a901f2b0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862137"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726918"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB Driver for SQL Server (OLE DB) 介面
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88862137"
   
  這個 OLE DB Driver for SQL Server 程式設計參考不會記載所有 OLE DB 介面與方法，只會記載使用 OLE DB Driver for SQL Server 時，表現為提供者特定行為的介面與方法。  
   
- 如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45232)。  
+ 如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643(v=vs.85))。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -39,5 +39,4 @@ ms.locfileid: "88862137"
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

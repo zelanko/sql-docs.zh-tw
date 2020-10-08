@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9e62ebb5b8060c3b19e06d4e0af71981a63660c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 27acbce6e1c8a93878c0f7d803264c568d9e46b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860306"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727081"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 及處理輸出執行預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860306"
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 **IMultipleResults::GetResult** 傳回 DB_S_NORESULT 或是當 **IMultipleResults** 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>若要處理傳回碼和輸出參數  
   
@@ -399,5 +399,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [處理結果操作說明主題 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

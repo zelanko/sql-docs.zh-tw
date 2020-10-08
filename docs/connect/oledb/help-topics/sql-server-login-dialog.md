@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147579"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727249"
 ---
 # <a name="sql-server-login-dialog-box"></a>SQL Server 登入對話方塊
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,19 +27,19 @@ ms.locfileid: "88147579"
 > [!NOTE]  
 > SQL Server 登入對話方塊的提示行為會由 `DBPROP_INIT_PROMPT` 初始化屬性所控制。 如需詳細資訊，請參閱
 > - [初始化和授權屬性](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [OLE DB 程式設計人員指南](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![[SQL Server 登入] 對話方塊的螢幕擷取畫面](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>選項。
 |選項|描述|
 |---   |---        |
-|伺服器|網路上 SQL Server 執行個體的名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器]  方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員]  建立伺服器別名，並在 [伺服器]  方塊中鍵入該名稱。 <br/><br/>如果您使用的電腦與 SQL Server 的相同，則可輸入 "(local)"。 接著，即使執行的是非網路版的 SQL Server，您也可連接到 SQL Server 的本機執行個體。<br/><br/>如需適用於不同網路類型之伺服器名稱的詳細資訊，請參閱 [SQL Server 安裝](https://go.microsoft.com/fwlink/?linkid=2067541)。|
+|伺服器|網路上 SQL Server 執行個體的名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器]  方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員]  建立伺服器別名，並在 [伺服器]  方塊中鍵入該名稱。 <br/><br/>如果您使用的電腦與 SQL Server 的相同，則可輸入 "(local)"。 接著，即使執行的是非網路版的 SQL Server，您也可連接到 SQL Server 的本機執行個體。<br/><br/>如需適用於不同網路類型之伺服器名稱的詳細資訊，請參閱 [SQL Server 安裝](../../../database-engine/install-windows/install-sql-server.md)。|
 |驗證模式|您可以從下拉式清單中選取下列驗證選項：<br/><ul><li>`Windows Authentication:`使用目前登入之使用者的 Windows 帳戶認證來向 SQL Server 進行的驗證。</li><li>`SQL Server Authentication:`使用登入識別碼和密碼進行的驗證。</li><li>`Active Directory - Integrated:`以 Azure Active Directory 識別進行的整合式驗證。 此模式也可以用於向 SQL Server 進行的 Windows 驗證。</li><li>`Active Directory - Password:`以 Azure Active Directory 識別進行的使用者識別碼和密碼驗證。</li><li>`Active Directory - Universal with MFA support:`以 Azure Active Directory 識別進行的互動式驗證。 此模式支援 Azure Multi-Factor Authentication (MFA)。</li></ul>|
 |伺服器 SPN|如果您使用了信任連接，就可以指定伺服器的服務主要名稱 (SPN)。|
 |登入識別碼|指定要針對連線使用的登入識別碼。 只有當 `Authentication Mode` 設定為 `SQL Server Authentication`、`Active Directory - Password` 或 `Active Directory - Universal with MFA support` 時，才會啟用 [登入識別碼] 文字方塊。|
 |密碼|指定要針對連線使用的密碼。 只有當 `Authentication Mode` 設定為 `SQL Server Authentication` 或 `Active Directory - Password` 時，才會啟用 [密碼] 文字方塊。|
-|選項。|顯示或隱藏 [選項]  群組。 如果 [伺服器] 具有值，即會啟用 [選項] 按鈕。|
+|選項。|顯示或隱藏 [選項]  群組。 如果 [伺服器]  具有值，即會啟用 [選項]  按鈕。|
 |變更密碼|核取時，會啟用 [新密碼]  和 [確認新密碼]  文字方塊。|
 |新密碼|指定新的密碼。|
 |確認新密碼|再次指定新密碼，以進行確認。|

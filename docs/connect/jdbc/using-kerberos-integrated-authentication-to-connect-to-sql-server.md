@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ecbffed0e29bc3a36a1129dbade504c9b03484c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d015565b114641f2c44c28da1f2dc03e4fdda773
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414594"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727513"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定要使用類型 4 Kerberos 整合驗證連線至資料庫。 如需連線屬性的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。 如需 Kerberos 的詳細資訊，請參閱 [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758) \(英文\)。
+從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定要使用類型 4 Kerberos 整合驗證連線至資料庫。 如需連線屬性的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。 如需 Kerberos 的詳細資訊，請參閱 [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos) \(英文\)。
 
 當您搭配 Java **Krb5LoginModule** 使用整合驗證時，可使用 [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) (類別 Krb5LoginModule) 設定模組。
 
@@ -74,7 +74,7 @@ ms.locfileid: "88414594"
 
 - [註冊 Kerberos 連接的服務主體名稱](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [搭配 SQL Server 使用 Kerberos](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
+- [搭配 SQL Server 使用 Kerberos](/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > 在 JDBC 驅動程式 6.2 版之前，若要正確使用跨領域 Kerberos，您必須明確地設定 **serverSpn**。

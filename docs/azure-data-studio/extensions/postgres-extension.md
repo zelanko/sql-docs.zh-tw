@@ -4,17 +4,17 @@ description: 了解如何安裝 Azure Data Studio PostgreSQL 延伸模組。 可
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: rachel-msft
-ms.author: raagyema
+author: sunilagarwal
+ms.author: sunila
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 03/19/2019
-ms.openlocfilehash: 0efbc734e8b4e8b9e0597dcf7104c857e51b3c2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: c673b1e1e9f5c24b8e874037e3a74f234bb0d83d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123168"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784948"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL 延伸模組 (預覽)
 

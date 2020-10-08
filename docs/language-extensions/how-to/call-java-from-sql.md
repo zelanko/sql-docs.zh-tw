@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180292"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765805"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>如何在 SQL Server 語言延伸模組中呼叫 Java 執行階段
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-[SQL Server 語言延伸模組](../language-extensions-overview.md)會使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 系統預存程序，作為呼叫 Java Runtime 的介面。 
+[SQL Server 語言延伸模組](../language-extensions-overview.md)會使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 系統預存程序，作為呼叫 Java Runtime 的介面。 
 
 此操作說明文章會針對在 SQL Server 上執行的 Java 類別與方法，說明其實作詳細資料。
 
@@ -56,7 +56,7 @@ ms.locfileid: "88180292"
 
 ### <a name="call-java-class"></a>呼叫 Java 類別
 
-[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 系統預存程序是用來呼叫 Java Runtime 的介面。 下列範例顯示使用 Java 延伸模組的 `sp_execute_external_script`，以及用來指定路徑、指令碼與自訂程式碼的參數。
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 系統預存程序是用來呼叫 Java Runtime 的介面。 下列範例顯示使用 Java 延伸模組的 `sp_execute_external_script`，以及用來指定路徑、指令碼與自訂程式碼的參數。
 
 > [!NOTE]
 > 請注意，您不需要定義要呼叫的方法。 預設會呼叫名為 **execute** 的方法。 這表示您必須依照 [SQL Server 中適用於 Java 的擴充性 SDK](extensibility-sdk-java-sql-server.md)，並在您的 Java 類別中實作 execute 方法。
@@ -90,7 +90,7 @@ EXEC sp_execute_external_script
 
 ## <a name="use-external-library"></a>使用外部程式庫
 
-在 SQL Server 2019 候選版 1 中，您可以在 Windows 與 Linux 上使用適用於 Java 語言的外部程式庫。 您可以將類別編譯成 .jar 檔案，並使用 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL，將該 .jar 檔案與其他相依性上傳至資料庫。
+在 SQL Server 2019 候選版 1 中，您可以在 Windows 與 Linux 上使用適用於 Java 語言的外部程式庫。 您可以將類別編譯成 .jar 檔案，並使用 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) DDL，將該 .jar 檔案與其他相依性上傳至資料庫。
 
 如何使用外部程式庫上傳 .jar 檔案的範例：
 
@@ -113,7 +113,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-如需詳細資訊，請參閱 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
+如需詳細資訊，請參閱 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)。
 
 ## <a name="loopback-connection-to-sql-server"></a>SQL Server 的回送連線
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180305"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765690"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 語言延伸模組中的擴充性架構
 
@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | 適用於 Java 的 JavaLauncher.dll | Java 延伸模組 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 執行隔離的 **SQLRUserGroup** 執行。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 執行隔離的 **SQLRUserGroup** 執行。
 
 系統會針對您已新增 SQL Server 機器學習語言延伸模組的每個資料庫引擎執行個體，建立個別的 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務。 每個資料庫引擎執行個體都有一個啟動控制板服務，因此如果您有多個支援外部指令碼的執行個體，就會每個都有一個啟動控制板服務。 資料庫引擎執行個體會繫結至為它建立的啟動控制板。 預存程序或 T-SQL 中的所有外部指令碼叫用，都會導致 SQL Server 服務呼叫為相同執行個體建立的啟動控制板服務。
 
@@ -86,7 +86,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 + **其他通訊協定**
 
-  可能需要以「區塊」運作或將資料傳輸回遠端用戶端的處理序也可以使用 [XDF 檔案格式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf) \(英文\)。 實際的資料傳輸是透過已編碼的 Blob 來進行。
+  可能需要以「區塊」運作或將資料傳輸回遠端用戶端的處理序也可以使用 [XDF 檔案格式](/machine-learning-server/r/concept-what-is-xdf) \(英文\)。 實際的資料傳輸是透過已編碼的 Blob 來進行。
 
 ## <a name="next-steps"></a>後續步驟
 

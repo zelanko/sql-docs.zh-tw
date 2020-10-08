@@ -17,19 +17,19 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 265919d6117298ee1501aa4773a944e7e13f95d2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862223"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727146"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 錯誤詳細資料
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會定義提供者特定的錯誤介面 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)。 此介面會傳回有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的詳細資料，在命令執行或資料列集作業失敗時非常有用。  
+  OLE DB Driver for SQL Server 會定義提供者特定的錯誤介面 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15)。 此介面會傳回有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的詳細資料，在命令執行或資料列集作業失敗時非常有用。  
   
  取得 **ISQLServerErrorInfo** 介面存取權的方法有兩種。  
   
@@ -61,5 +61,4 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

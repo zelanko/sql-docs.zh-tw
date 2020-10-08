@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 543b717031ff3217b2c71a636d0d3efd38cd8238
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: a01e79c34caeae849c103c2f8f9cbf967e078016
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860240"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727038"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88860240"
  <b id="conversion_note">[1]：</b>雖然無法進行轉換，但如果伺服器不支援 UTF-8，則仍然可能發生 UTF-8 和資料庫定序字碼頁間的翻譯。 如需詳細資訊，請參閱 [OLE DB Driver for SQL Server 中的 UTF-8 支援](../features/utf-8-support-in-oledb-driver-for-sql-server.md)。
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  執行第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
@@ -485,5 +485,4 @@ void wmain() {
 use master  
 drop table fltest  
 ```  
-  
   

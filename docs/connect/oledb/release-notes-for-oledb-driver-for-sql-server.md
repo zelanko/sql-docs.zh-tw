@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011915"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726909"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 
@@ -49,8 +49,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 已修正的錯誤 (Bug) | 詳細資料 |
 | :-------- | :------ |
-| 已修正 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) 介面中的各種 Bug | 一些影響多位元組字碼頁的 Bug 會導致此介面在讀取作業期間提前報告到達資料流結尾。|
-| 已修正 [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 介面中的記憶體流失問題 | 已修正啟用 `SSPROP_IRowsetFastLoad` 屬性時，[IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) 介面中發生記憶體流失的問題。 |
+| 已修正 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 介面中的各種 Bug | 一些影響多位元組字碼頁的 Bug 會導致此介面在讀取作業期間提前報告到達資料流結尾。|
+| 已修正 [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 介面中的記憶體流失問題 | 已修正啟用 `SSPROP_IRowsetFastLoad` 屬性時，[IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 介面中發生記憶體流失的問題。 |
 | 已修正涉及 `sql_variant` 資料類型和非 ASCII 字串的案例中 Bug。 | 執行涉及 `sql_variant` 資料類型和非 ASCII 字串的特定案例可能會導致資料損毀。 如需詳細資料，請參閱：[已知問題](ole-db-data-types/ssvariant-structure.md#known-issues)。 |
 | 已修正 [UDL 設定對話方塊](help-topics/data-link-pages.md)中 [測試連線] 按鈕的問題 | [UDL 設定對話方塊](help-topics/data-link-pages.md)中 [測試連線] 按鈕現在會接受 [全部] 索引標籤中設定的初始化屬性。 |
 | 已修正 `SSPROP_INIT_PACKETSIZE` 屬性預設值的處理方式 | 已修正當 `SSPROP_INIT_PACKETSIZE` 屬性設定為其預設值 `0` 時所發生的未預期錯誤。 如需此屬性的詳細資料，請參閱[初始化和授權屬性](ole-db-data-source-objects/initialization-and-authorization-properties.md)。 |
@@ -82,7 +82,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 已修正的錯誤 (Bug) | 詳細資料 |
 | :-------- | :------ |
-| 已修正 [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) \(英文\) 中的卸除索引邏輯。 | 舊版的 OLE DB 驅動程式無法在索引擁有者的結構描述識別碼和使用者識別碼不相等時卸除主索引鍵索引。 |
+| 已修正 [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)) \(英文\) 中的卸除索引邏輯。 | 舊版的 OLE DB 驅動程式無法在索引擁有者的結構描述識別碼和使用者識別碼不相等時卸除主索引鍵索引。 |
 | &nbsp; | &nbsp; |
 
 按一下下列各節中的下載連結，以下載舊版的 OLE DB 驅動程式：
@@ -120,7 +120,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 已修正的錯誤 (Bug) | 詳細資料 |
 | :-------- | :------ |
-| 修正了多執行緒 Apartment (MTA)中的非互動式 Azure Active Directory 驗證。 | OLE DB Driver 18.2.1 不當地嘗試變更先前已初始化成多執行緒 (MTA) 之 Apartment 上的 COM 並行存取模型。 如此一來，在呼叫 [idbinitialize:: Initialize](https://go.microsoft.com/fwlink/?linkid=2092522)介面之前，先接著多次呼叫 [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) 或 [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) 的應用程式中，無論使用何種 Azure Active Directory 驗證模式，此驅動程式均無法連線。 |
+| 修正了多執行緒 Apartment (MTA)中的非互動式 Azure Active Directory 驗證。 | OLE DB Driver 18.2.1 不當地嘗試變更先前已初始化成多執行緒 (MTA) 之 Apartment 上的 COM 並行存取模型。 如此一來，在呼叫 [idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85))介面之前，先接著多次呼叫 [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) 或 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) 的應用程式中，無論使用何種 Azure Active Directory 驗證模式，此驅動程式均無法連線。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

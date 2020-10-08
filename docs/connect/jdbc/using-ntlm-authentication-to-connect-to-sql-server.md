@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393146"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727492"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 驗證連線到 SQL Server
 
@@ -35,11 +35,11 @@ ms.locfileid: "86393146"
 
 除了 **domain** 之外，其他屬性是必要的，如果使用 **NTLM** authenticationScheme 屬性時缺少任一個屬性，驅動程式將會擲回錯誤。 
 
-如需連接屬性的詳細資訊，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。 如需 Microsoft NTLM 驗證通訊協定的詳細資訊，請參閱 [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm) \(英文\)。
+如需連接屬性的詳細資訊，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。 如需 Microsoft NTLM 驗證通訊協定的詳細資訊，請參閱 [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm) \(英文\)。
 
 ## <a name="remarks"></a>備註
 
-請參閱[網路安全性：LAN Manager 驗證等級](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) \(部分機器翻譯\)，以取得 SQL 伺服器設定 (控制 NTLM 驗證行為) 的描述。 
+請參閱[網路安全性：LAN Manager 驗證等級](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) \(部分機器翻譯\)，以取得 SQL 伺服器設定 (控制 NTLM 驗證行為) 的描述。 
 
 ## <a name="logging"></a>記錄
 
@@ -79,7 +79,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 如需有關服務主要名稱 (SPN) 的詳細資訊，請參閱：
 
-- [用戶端連接中的服務主要名稱 (SPN) 支援](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [用戶端連接中的服務主要名稱 (SPN) 支援](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > 只有 Microsoft JDBC Driver 4.2 以上 (含) 版本支援 serverSpn 連線屬性。

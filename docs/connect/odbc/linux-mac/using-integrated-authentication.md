@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288206"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727409"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -128,7 +128,7 @@ Linux 或 macOS 電腦上時間與 Kerberos 金鑰發佈中心 (KDC) 上的時�
 
 如果 Kerberos 驗證失敗， Linux 或 macOS 上的 ODBC 驅動程式不會使用 NTLM 驗證。  
 
-如需使用 Active Directory 驗證 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)。 如需設定 Kerberos 的詳細資訊，請參閱 [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+如需使用 Active Directory 驗證 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048)。 如需設定 Kerberos 的詳細資訊，請參閱 [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另請參閱  
 [程式設計指導方針](programming-guidelines.md)

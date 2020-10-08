@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632948"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726859"
 ---
 # <a name="idle-connection-resiliency"></a>閒置連線恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "81632948"
 
 ## <a name="example"></a>範例
 
-下列程式碼會連線到資料庫並執行查詢。 該連線會藉由終止工作階段來中斷，然後嘗試使用已中斷的連線執行新查詢。 這個範例會使用 [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) 範例資料庫。
+下列程式碼會連線到資料庫並執行查詢。 該連線會藉由終止工作階段來中斷，然後嘗試使用已中斷的連線執行新查詢。 這個範例會使用 [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) 範例資料庫。
 
 在此範例中，我們會在中斷連線之前，指定緩衝資料指標。 如果沒有指定緩衝資料指標，就不會重新建立連線，因為會有使用中的伺服器端資料指標，所以當中斷時，連線就不會進入閒置狀態。 不過，在該情況下，我們可以在中斷連線之前，先呼叫 sqlsrv_free_stmt() 以空出資料指標，然後就能成功重新建立連線。
 

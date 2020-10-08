@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414524"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727481"
 ---
 # <a name="using-sql_variant-data-type"></a>使用 Sql_variant 資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從 6.3.0 版開始，JDBC 驅動程式支援 sql_variant 資料類型。 在使用資料表值參數和大量複製等功能的情況下，也支援 sql_variant，但有些限制 (將在本頁面稍後詳述)。 並非所有資料類型都可以儲存在 sql_variant 資料類型中。 如需 sql_variant 支援的資料類型清單，請查看 SQL Server [文件](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)。
+從 6.3.0 版開始，JDBC 驅動程式支援 sql_variant 資料類型。 在使用資料表值參數和大量複製等功能的情況下，也支援 sql_variant，但有些限制 (將在本頁面稍後詳述)。 並非所有資料類型都可以儲存在 sql_variant 資料類型中。 如需 sql_variant 支援的資料類型清單，請查看 SQL Server [文件](../../t-sql/data-types/sql-variant-transact-sql.md)。
 
 ##  <a name="populating-and-retrieving-a-table"></a>填入及擷取資料表：
 假設有一個資料表，其中有一個 sql_variant 資料行如下：
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

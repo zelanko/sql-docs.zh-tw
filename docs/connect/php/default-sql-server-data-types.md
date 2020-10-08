@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 218228d01873f56ac64b8cc16d5db1d9e51b770f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680773"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726849"
 ---
 # <a name="default-sql-server-data-types"></a>預設 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,5 +50,4 @@ ms.locfileid: "88680773"
 
 [PHP 類型](https://php.net/manual/language.types.php)
 
-[資料類型 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
-  
+[資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BCPColumns method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2eb8456d75a1dd04be2c547db957edf2e01bcaca
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 03c69c6aaba842d65dee13b93b621b6981dc1f94
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860211"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727009"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。 針對大量複製作業呼叫此方法超過一次時，也會發生這個狀況。  
@@ -66,5 +66,4 @@ HRESULT BCPColumns(
 ## <a name="see-also"></a>另請參閱  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

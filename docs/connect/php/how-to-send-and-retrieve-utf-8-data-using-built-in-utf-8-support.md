@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381011"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726809"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-如需儲存 Unicode 資料的資訊，請參閱 [使用 Unicode 資料](https://msdn.microsoft.com/library/ms175180.aspx)。  
+如需儲存 Unicode 資料的資訊，請參閱 [使用 Unicode 資料](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))。  
   
 ## <a name="example"></a>範例  
 下列範例類似於第一個範例，但此範例不會在連接上指定 UTF-8 字元集，而會說明如何在資料行上指定 UTF-8 字元集。  
@@ -231,4 +231,3 @@ sqlsrv_close( $conn);
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [範例應用程式 &#40;SQLSRV 驅動程式&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

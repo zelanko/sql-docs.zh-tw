@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f335fef3f9918ebcd04362cd6b1edf2df6a29dfc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195144"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727294"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
 
@@ -41,9 +41,9 @@ ms.locfileid: "89195144"
   
  如需有關 Kerberos 的詳細資訊，請參閱下列文件：  
   
--   [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=101449) (適用於 Windows 的 Kerberos 技術補充)  
+-   [Kerberos Technical Supplement for Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10)) (適用於 Windows 的 Kerberos 技術補充)  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## <a name="usage"></a>使用方式  
  下表描述用戶端應用程式可允許安全驗證的常見案例。  
@@ -110,4 +110,3 @@ ms.locfileid: "89195144"
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [註冊 Kerberos 連接的服務主體名稱](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

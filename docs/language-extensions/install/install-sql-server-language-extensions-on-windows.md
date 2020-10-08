@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: fd04b92aaffab70835ce2affb56ece70cdb393b3
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989851"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765778"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安裝 SQL Server 語言延伸模組
 
@@ -23,7 +23,7 @@ ms.locfileid: "90989851"
 了解如何透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈，在 SQL Server 上安裝語言延伸模組元件。
 
 > [!NOTE]
-> 此文章適用於在 Windows 上安裝 SQL Server 語言延伸模組。 針對 Linux，請參閱[在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
+> 此文章適用於在 Windows 上安裝 SQL Server 語言延伸模組。 針對 Linux，請參閱[在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)](../..//linux/sql-server-linux-setup-language-extensions.md)
 
 <a name="prerequisites"></a> 
 
@@ -33,7 +33,7 @@ ms.locfileid: "90989851"
 
 + 需要資料庫引擎執行個體。 您無法只安裝語言延伸模組功能，但是您可以透過累加方式將它們新增至現有的執行個體。
 
-+ 針對商務持續性，語言延伸模組支援 [AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 您必須在每個節點上安裝語言延伸模組，並設定套件。
++ 針對商務持續性，語言延伸模組支援 [AlwaysOn 可用性群組](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 您必須在每個節點上安裝語言延伸模組，並設定套件。
 
 + SQL Server 2019 中的容錯移轉叢集上支援安裝語言延伸模組。
 
@@ -87,7 +87,7 @@ ms.locfileid: "90989851"
 
         - 如果您想要使用自己的 Java Runtime，請選取 [機器學習服務和語言延伸模組]  。 請勿選取 Java。
 
-        如果您要使用 R 與 Python，請參閱[在 Windows 上安裝 SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install) \(部分機器翻譯\)。
+        如果您要使用 R 與 Python，請參閱[在 Windows 上安裝 SQL Server 機器學習服務](../../machine-learning/install/sql-machine-learning-services-windows-install.md) \(部分機器翻譯\)。
 
     ![語言延伸模組的功能選項](../media/sql-install-feature-selection.png)
 
@@ -107,7 +107,7 @@ ms.locfileid: "90989851"
 
     請注意組態檔儲存所在資料夾 (路徑 `..\Setup Bootstrap\Log` 底下) 的位置。 當安裝程式完成時，您可以在摘要檔案中檢閱已安裝的元件。
 
-6. 在安裝程式完成之後，如果系統要求您重新啟動電腦，請立即重新啟動。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
+6. 在安裝程式完成之後，如果系統要求您重新啟動電腦，請立即重新啟動。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。
 
 ## <a name="add-the-jre_home-variable"></a>新增 JRE_HOME 變數
 
@@ -161,7 +161,7 @@ ms.locfileid: "90989851"
 1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
     > [!TIP]
-    > 您可以從這個頁面下載並安裝適當的版本：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > 您可以從這個頁面下載並安裝適當的版本：[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > 您也可以使用 [Azure Data Studio](../../azure-data-studio/what-is.md)，它支援針對 SQL Server 的系統管理工作與查詢。
   
@@ -194,7 +194,7 @@ ms.locfileid: "90989851"
 
 ## <a name="register-external-language"></a>註冊外部語言
 
-針對您要在其中使用語言擴充功能的每個資料庫，您必須使用 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) 來註冊外部語言。
+針對您要在其中使用語言擴充功能的每個資料庫，您必須使用 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) 來註冊外部語言。
 
 下例會將外部語言呼叫的 Java 新增至 Windows 之 SQL Server 的資料庫。
 
@@ -204,7 +204,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-如需詳細資訊，請參閱 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+如需詳細資訊，請參閱 [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)。
 
 ## <a name="verify-installation"></a>確認安裝
 
@@ -241,7 +241,7 @@ GO
 在資料庫上，您可能需要下列設定更新：
 
 * [授與使用者 SQL Server 機器學習服務的權限](../../machine-learning/security/user-permission.md)
-* [授與使用者執行特定語言的權限](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
+* [授與使用者執行特定語言的權限](../../t-sql/statements/create-external-language-transact-sql.md#permissions)
 
 > [!NOTE]
 > 是否需要其他設定取決於您的安全性架構、SQL Server 的安裝位置，以及預期使用者如何連線至資料庫並執行外部指令碼。

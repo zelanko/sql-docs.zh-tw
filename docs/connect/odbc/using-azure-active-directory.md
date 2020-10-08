@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c71c9a458d285cdf33bd785e1bec74a6f33d5820
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288190"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727379"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -45,7 +45,7 @@ Microsoft ODBC Driver for SQL Server 13.1 版或更新版本可讓 ODBC 應用�
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(未設定)|請參閱上方的 `Authentication` 關鍵字描述。 提供 `SQL_AU_NONE` 以便明確覆寫 DSN 和/或連接字串中設定的 `Authentication` 值，而 `SQL_AU_RESET` 會取消設定該屬性 (如已設定)，讓 DSN 或連接字串值能夠取得高優先順序。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指向 `ACCESSTOKEN` 的指標或 NULL|NULL|如果不是 Null，請指定要使用的 AzureAD 存取權杖。 指定存取權杖，並同時指定 `UID`、`PWD`、`Trusted_Connection` 或 `Authentication` 連接字串關鍵字或其對等屬性，是錯誤的。 <br> **注意：** ODBC Driver 13.1 版僅在 _Windows_ 上支援此項。|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(請參閱描述)|控制連接的加密。 `SQL_EN_OFF` 和 `SQL_EN_ON` 會分別停用和啟用加密。 如果 `Authentication` 設定的前置屬性值不是 _none_ 或已設定 `SQL_COPT_SS_ACCESS_TOKEN`，而且未在 DSN 或連接字串中指定 `Encrypt`，則預設值為 `SQL_EN_ON`。 否則預設為 `SQL_EN_OFF`。 如果已將 `SQL_COPT_SS_AUTHENTICATION` 連線屬性設定為不是 _none_，若尚未在 DSN 或連接字串中指定 `Encrypt`，請明確地將 `SQL_COPT_SS_ENCRYPT` 設定為所需的值。 這個屬性的有效值會控制[是否將針對連線使用加密](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation) \(部分機器翻譯\)。|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(請參閱描述)|控制連接的加密。 `SQL_EN_OFF` 和 `SQL_EN_ON` 會分別停用和啟用加密。 如果 `Authentication` 設定的前置屬性值不是 _none_ 或已設定 `SQL_COPT_SS_ACCESS_TOKEN`，而且未在 DSN 或連接字串中指定 `Encrypt`，則預設值為 `SQL_EN_ON`。 否則預設為 `SQL_EN_OFF`。 如果已將 `SQL_COPT_SS_AUTHENTICATION` 連線屬性設定為不是 _none_，若尚未在 DSN 或連接字串中指定 `Encrypt`，請明確地將 `SQL_COPT_SS_ENCRYPT` 設定為所需的值。 這個屬性的有效值會控制[是否將針對連線使用加密](../../relational-databases/native-client/features/using-encryption-without-validation.md) \(部分機器翻譯\)。|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Azure Active Directory 不支援，因為對 Azure AD 主體進行的密碼變更無法透過 ODBC 連線來完成。 <br><br>SQL Server 驗證的密碼逾期已在 SQL Server 2005 中推出。 已新增 `SQL_COPT_SS_OLDPWD` 屬性，讓用戶端能夠同時提供舊的和新的密碼進行連線。 設定這個屬性之後，提供者將不會針對第一次連線或後續連線使用連接集區，因為連接字串將會包含現已變更的「舊密碼」。|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|「已淘汰」  ；請改用設定為 `SQL_AU_AD_INTEGRATED` 的 `SQL_COPT_SS_AUTHENTICATION`。 <br><br>針對伺服器登入的存取驗證強制使用 Windows 驗證 (Linux 和 macOS 上的 Kerberos)。 使用 Windows 驗證時，驅動程式會忽略在 `SQLConnect`、`SQLDriverConnect` 或 `SQLBrowseConnect` 處理期間所提供的使用者識別碼和密碼值。|
 
@@ -135,7 +135,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-`ACCESSTOKEN` 是一個可變長度結構，由 4 個位元組的「長度」  且後面接著形成存取權杖之不透明資料的「長度」  位元組所組成。 由於 SQL Server 處理存取權杖的方式，因此，必須展開透過 [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) \(部分機器翻譯\) JSON 回應取得的權杖，讓每個位元組後面都接著一個 0 填補位元組，類似於僅包含 ASCII 字元的 UCS-2 字串；不過，此權杖是一個不透明的值，而且指定的長度 (以位元組為單位) 不得包含任何 Null 結束字元。 由於其在長度和格式方面有大量限制，因此只能透過 `SQL_COPT_SS_ACCESS_TOKEN` 連線屬性以程式設計方式使用這個驗證方法；沒有對應的 DSN 或連接字串關鍵字。 連接字串不能包含 `UID`、`PWD`、`Authentication` 或 `Trusted_Connection` 關鍵字。
+`ACCESSTOKEN` 是一個可變長度結構，由 4 個位元組的「長度」  且後面接著形成存取權杖之不透明資料的「長度」  位元組所組成。 由於 SQL Server 處理存取權杖的方式，因此，必須展開透過 [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) \(部分機器翻譯\) JSON 回應取得的權杖，讓每個位元組後面都接著一個 0 填補位元組，類似於僅包含 ASCII 字元的 UCS-2 字串；不過，此權杖是一個不透明的值，而且指定的長度 (以位元組為單位) 不得包含任何 Null 結束字元。 由於其在長度和格式方面有大量限制，因此只能透過 `SQL_COPT_SS_ACCESS_TOKEN` 連線屬性以程式設計方式使用這個驗證方法；沒有對應的 DSN 或連接字串關鍵字。 連接字串不能包含 `UID`、`PWD`、`Authentication` 或 `Trusted_Connection` 關鍵字。
 
 > [!NOTE]
 > ODBC Driver 13.1 版僅在 _Windows_ 上支援此驗證。

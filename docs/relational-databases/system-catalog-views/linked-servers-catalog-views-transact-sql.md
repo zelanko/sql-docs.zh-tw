@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e93d22afa155aeffed49718c719553488d4a030
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: afcdfdd9822af8380269e65ddb0f095dde74db67
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542714"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807283"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>連結伺服器目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -41,6 +41,5 @@ ms.locfileid: "89542714"
 
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   

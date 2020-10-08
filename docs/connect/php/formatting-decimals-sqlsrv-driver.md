@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680723"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726815"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>將十進位字串及貨幣值格式化 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-為了維持正確性，[decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律是以完全符合的精確度與小數位數擷取為字串。 如果任何值小於 1，則會遺漏前置零。 money 和 smallmoney 欄位也是如此，因為其為小數位數固定為 4 的 decimal 欄位。
+為了維持正確性，[decimal 或 numeric 類型](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)一律是以完全符合的精確度與小數位數擷取為字串。 如果任何值小於 1，則會遺漏前置零。 money 和 smallmoney 欄位也是如此，因為其為小數位數固定為 4 的 decimal 欄位。
 
 ## <a name="add-leading-zeroes-if-missing"></a>若遺漏前置零則加以新增
 從 5.6.0 版開始，已將 `FormatDecimals` 選項新增至 sqlsrv 連線和陳述式層級，其可讓使用者格式化十進位字串。 此選項會預期布林值 (true 或 false)，而且只會影響所擷取結果中十進位或數值的格式設定。 換句話說，`FormatDecimals` 選項不會影響插入或更新等其他作業。

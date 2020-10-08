@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18e8c8544c557292bd5a7cc813d809ea0f9cf061
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 0b177fcb4a86c614116b414902be808862721abf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860070"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726920"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,12 +62,11 @@ HRESULT Abort(void);
  批次未取消。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，物件會因為已經呼叫 `ISSAbort::Abort` 而處於廢止狀態。  
   
  E_OUTOFMEMORY  
  記憶體不足的錯誤。  
-  
   

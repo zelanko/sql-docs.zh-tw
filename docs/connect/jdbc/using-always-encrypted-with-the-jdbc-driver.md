@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570323"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727503"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 
@@ -134,7 +134,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 從 JDBC 驅動程式 **8.4.1** 開始，驅動程式已新增使用受控識別驗證至 Azure Key Vaults 的支援。
 
-如果應用程式是裝載於 Azure 中，使用者可以使用[受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)來驗證至 Azure Key Vault，進一步消除在程式碼中提供及公開任何認證的必要性。 
+如果應用程式是裝載於 Azure 中，使用者可以使用[受控識別](/azure/active-directory/managed-identities-azure-resources/overview)來驗證至 Azure Key Vault，進一步消除在程式碼中提供及公開任何認證的必要性。 
 
 #### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>適用於搭配受控識別之 Key Vault 驗證的連線屬性
 
@@ -164,7 +164,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 請注意，先前新增的 `keyVaultProviderClientId` 與 `keyVaultProviderClientKey` 連線屬性皆已過時，並已由上述連線屬性取代。
 
-如需如何設定受控識別的相關資訊，請參閱[使用 Azure 入口網站在 VM 上設定 Azure 資源的受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)。
+如需如何設定受控識別的相關資訊，請參閱[使用 Azure 入口網站在 VM 上設定 Azure 資源的受控識別](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)。
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
 SQLServerColumnEncryptionCertificateStoreProvider 可用來將資料行主要金鑰儲存在 Windows 憑證存放區。 使用 [SQL Server Management Studio (SSMS) Always Encrypted] 精靈或其他支援的工具來在資料庫中建立資料行主要金鑰和資料行加密金鑰定義。 相同的精靈也可以用來在 Windows 憑證存放區中產生自我簽署憑證，以作為 Always Encrypted 資料的資料行主要金鑰使用。 如需資料行主要金鑰和資料行加密金鑰 T-SQL 語法的詳細資訊，請分別參閱[建立資料行主要金鑰](../../t-sql/statements/create-column-master-key-transact-sql.md)和[建立資料行加密金鑰](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。

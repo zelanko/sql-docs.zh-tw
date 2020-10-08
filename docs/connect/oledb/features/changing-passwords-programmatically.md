@@ -20,12 +20,12 @@ helpviewer_keywords:
 - modifying passwords
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: afd00e1de90941c3e5c1ff069c1f1413dfc9f2df
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 61134cf281a5e3aa7eab8c2404f2d3dbfac13972
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861507"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727315"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88861507"
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，OLE DB Driver for SQL Server 支援透過 OLE DB Driver，以及透過變更 [SQL Server 登入]  對話方塊，以程式設計方式處理密碼到期。  
   
 > [!NOTE]  
->  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。 如需使用密碼的詳細資訊，請參閱[強式密碼](../../../relational-databases/security/strong-passwords.md)。  
+>  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。 如需使用密碼的詳細資訊，請參閱[強式密碼](../../../relational-databases/security/strong-passwords.md)。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 登入錯誤碼  
  當連接因為驗證問題而無法建立時，將會提供下列其中一個 SQL Server 錯誤碼給應用程式來協助診斷和復原。  
@@ -94,5 +94,4 @@ ms.locfileid: "88861507"
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

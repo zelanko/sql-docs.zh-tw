@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPExec method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 87e7b6e3d53f865ff4c5495729951d9045edb483
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 9cb92840b95a04dc05253cce57da9a3f1cbf25d2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861949"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726989"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ HRESULT BCPExec(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。 此外，如果已經透過使用 BCP_OPTION_ABORT 選項來中止此作業，之後再呼叫 **BCPExec** 方法，也會發生這種情況。  
@@ -73,5 +73,4 @@ HRESULT BCPExec(
 ## <a name="see-also"></a>另請參閱  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

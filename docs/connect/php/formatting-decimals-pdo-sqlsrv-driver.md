@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680653"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726839"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-為了維持正確性，[decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律是以完全符合的精確度與小數位數擷取為字串。 如果任何值小於 1，則會遺漏前置零。 money 和 smallmoney 欄位也是如此，因為其為小數位數固定為 4 的 decimal 欄位。
+為了維持正確性，[decimal 或 numeric 類型](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)一律是以完全符合的精確度與小數位數擷取為字串。 如果任何值小於 1，則會遺漏前置零。 money 和 smallmoney 欄位也是如此，因為其為小數位數固定為 4 的 decimal 欄位。
 
 ## <a name="add-leading-zeroes-if-missing"></a>若遺漏前置零則加以新增
 從 5.6.0 版開始，連線或陳述式屬性 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 允許使用者對小數字串進行格式設定。 此屬性預期的是布林值 (true 或 false)，且只影響所擷取結果中 decimal 或 numeric 值的格式設定。 換句話說，此屬性不影響插入或更新等其他作業。

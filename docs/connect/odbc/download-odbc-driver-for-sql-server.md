@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 919a0f04eb0d6c4f15125dc9514d11930bd13f8e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b1f77ce4eb0b329fdb6911bd38f6e120e4ff7d3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901331"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727489"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver 17 for SQL Server 的可轉散發安裝程式會安裝必�
 - 發行日期：2020 年 7 月 31 日
 
 > [!Note]
-> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱[本頁面的英文 (美國) 版](https://aka.ms/downloadmsodbcsqlenglish)。 您可以選取[可用的語言](#available-languages)，從英文 (美國) 版網站下載不同語言版本。
+> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱[本頁面的英文 (美國) 版]()。 您可以選取[可用的語言](#available-languages)，從英文 (美國) 版網站下載不同語言版本。
 
 ## <a name="available-languages"></a>可用的語言
 

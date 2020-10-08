@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478000"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726753"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88478000"
 
 **MultiSubnetFailover** 連線屬性會指出應用程式正在部署於可用性群組或容錯移轉叢集執行個體中，且驅動程式將會透過嘗試連線至所有 IP 位址來嘗試連線至主要 SQL Server 執行個體上的資料庫。 在連線到 SQL Server 可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，請一律指定 **MultiSubnetFailover=True**。 如果應用程式已連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，且應用程式必須開啟新的連線，才能在容錯移轉後繼續運作。
 
-Always On 可用性群組的完整詳細資料，可在[高可用性、災害復原](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery) \(部分機器翻譯\) 文件頁面上找到。
+Always On 可用性群組的完整詳細資料，可在[高可用性、災害復原](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md) \(部分機器翻譯\) 文件頁面上找到。
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>透明網路 IP 解析 (TNIR)
 
@@ -72,4 +72,3 @@ try {
 
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)  
-  

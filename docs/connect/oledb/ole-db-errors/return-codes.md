@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862240"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727179"
 ---
 # <a name="return-codes"></a>傳回碼
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862240"
 
   在大部分的基本層級，成員函數不是成功就是失敗。 在更精確一點的層級，函數可能會成功，但是其成功可能不是應用程式開發人員所樂見的。  
   
- 如需 OLE DB 傳回碼的詳細資訊，請參閱 [Return Codes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631) (傳回碼 (OLE DB))。  
+ 如需 OLE DB 傳回碼的詳細資訊，請參閱 [Return Codes (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85)) (傳回碼 (OLE DB))。  
   
  當 OLE DB Driver for SQL Server 成員函式傳回 S_OK 時，該函式已成功。  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862240"
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../oledb/ole-db-errors/errors.md)  
-  
   

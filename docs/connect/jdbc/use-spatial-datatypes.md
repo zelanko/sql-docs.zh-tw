@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b545ec1d33d17674266d58a2a120f07af423ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487958"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727525"
 ---
 # <a name="using-spatial-datatypes"></a>使用空間資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從 JDBC Driver 預覽版本 6.5.0 開始支援空間資料類型 (Geometry 和 Geography)。 預存程序、資料表值參數 (TVP)、BulkCopy 和 Always Encrypted 目前不支援空間資料類型。 此頁面顯示 Geometry 和 Geography 資料類型搭配 JDBC Driver 的各種使用案例。 如需空間資料類型的概觀，請參閱[空間資料類型概觀](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)頁面。
+從 JDBC Driver 預覽版本 6.5.0 開始支援空間資料類型 (Geometry 和 Geography)。 預存程序、資料表值參數 (TVP)、BulkCopy 和 Always Encrypted 目前不支援空間資料類型。 此頁面顯示 Geometry 和 Geography 資料類型搭配 JDBC Driver 的各種使用案例。 如需空間資料類型的概觀，請參閱[空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)頁面。
 
 ## <a name="creating-a-geometry--geography-object"></a>建立 Geometry / Geography 物件
 

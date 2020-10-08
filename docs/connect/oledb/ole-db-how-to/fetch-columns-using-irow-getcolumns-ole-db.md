@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IRow interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c22a948cad5fdc2b41f1ac14b73d728be06b9c3f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 005748886f0a0e3b6e35b97ac02d1ca77b290b0c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860614"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727135"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88860614"
 -   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果 **pData** 為 NULL，而 **cbMaxLen** 為 0，**IRow**- **>GetColumns()** 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 **IRow->GetColumns()** 來擷取實際的資料。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>使用 IRow::GetColumns 提取資料行  
   
@@ -522,5 +522,4 @@ go
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

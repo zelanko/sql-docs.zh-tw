@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 854446b0a505dd2f8a2dc44c4f3eca70158e20be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646728"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726799"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-傳回最近在資料庫的資料表中插入之資料列的識別碼。 資料表必須有 IDENTITY NOT NULL 資料行。 如果已提供序列名稱，`lastInsertId` 會傳回所提供序列名稱最近插入的序號 (如需序號的詳細資訊，請參閱[這裡](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
+傳回最近在資料庫的資料表中插入之資料列的識別碼。 資料表必須有 IDENTITY NOT NULL 資料行。 如果已提供序列名稱，`lastInsertId` 會傳回所提供序列名稱最近插入的序號 (如需序號的詳細資訊，請參閱[這裡](../../relational-databases/sequence-numbers/sequence-numbers.md))。
   
 ## <a name="syntax"></a>語法  
   
@@ -155,4 +155,3 @@ Last sequence number when a table name is supplied =
 [PDO 類別](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

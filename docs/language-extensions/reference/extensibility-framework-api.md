@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180491"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765775"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 的擴充性架構 API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ SQLRETURN GetTelemetryResults(
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-安裝程式庫。 此函數為選擇性，不需要實作。 預設實作是將程式庫內容複製到適當位置的檔案 (請參閱 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql))。 檔案名稱是程式庫名稱。
+安裝程式庫。 此函數為選擇性，不需要實作。 預設實作是將程式庫內容複製到適當位置的檔案 (請參閱 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md))。 檔案名稱是程式庫名稱。
 
 ### <a name="syntax"></a>語法
 
@@ -571,7 +571,7 @@ SQLRETURN InstallExternalLibrary(
 \[輸入\] 程式庫名稱的長度。
 
 *LibraryFile*  
-\[輸入\] 程式庫檔案的路徑 (字串形式)，包含 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 所指定的二進位內容。
+\[輸入\] 程式庫檔案的路徑 (字串形式)，包含 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 所指定的二進位內容。
 
 *LibraryFileLength*  
 \[輸入\] LibraryFile 字串的長度。
@@ -637,4 +637,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## <a name="next-steps"></a>後續步驟
 
-- [適用於 SQL Server 的 Microsoft Extensibility SDK for Java](../how-to/extensibility-sdk-java-sql-server.md) 
+- [適用於 SQL Server 的 Microsoft Extensibility SDK for Java](../how-to/extensibility-sdk-java-sql-server.md)

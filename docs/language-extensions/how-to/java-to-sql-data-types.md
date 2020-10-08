@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e5239520d6c19de51b20f33d43ce72bb1079eba
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 742eeac8d1255f02571f6a1e77d20cb0d8084fe3
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173539"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765758"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 與 SQL Server 支援的資料類型
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-此文章會將 SQL Server 資料類型對應到 Java 資料類型，以供 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 的資料結構與參數使用。
+此文章會將 SQL Server 資料類型對應到 Java 資料類型，以供 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 的資料結構與參數使用。
 
 下列 SQL 與 Java 資料類型目前支援輸入/輸出資料集與輸入/輸出參數。
 

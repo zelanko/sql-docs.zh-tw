@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25fe260204a1cf95f5d6a1ed93c0b2fb1b0bab06
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 2e3b0f8be8bccfe9c6ecb74252a12d2bc80619e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861986"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727039"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88861986"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的預存程序。  
@@ -652,5 +652,4 @@ int main() {
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'sp_datetimetypes')  
      DROP PROCEDURE sp_datetimetypes  
 ```  
-  
   

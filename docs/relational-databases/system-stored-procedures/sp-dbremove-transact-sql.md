@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1303996a3ca68c5cc244ed24d0405169a19e4779
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c57b013e1c97a82200390b7b3876248c7099e863
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549876"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807305"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,8 +65,7 @@ EXEC sp_dbremove sales;
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
-  
   

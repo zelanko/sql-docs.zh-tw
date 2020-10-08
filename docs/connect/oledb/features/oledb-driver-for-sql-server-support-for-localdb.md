@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c7f5ac94ff64ef32aaee793c59529ad0377b2f5
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: bcb768c0beea3ce836586bc718e1b7757da7ce72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860687"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727309"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>OLE DB Driver for SQL Server 的 LocalDB 支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860687"
   
 -   [SQL Server Express LocalDB 參考](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  總而言之，LocalDB 可讓您：  
   
@@ -47,5 +47,4 @@ SERVER=(localdb)\v11.0
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

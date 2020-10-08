@@ -15,12 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42b3860be78028b89531ce5490877f06c388f942
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96e80fe8d0c30c217a4f3bbe324c7ebccbca6b3b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862396"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727147"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862396"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>若要大量複製資料到 SQL Server 資料表中  
   
@@ -432,5 +432,4 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')
      DROP TABLE IRFLTable  
 GO  
 ```  
-  
   

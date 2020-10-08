@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c21b883fe2c411e18b8da081fc92e74da65450e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be3767ed7423f6601a0796f120064d96feec78b7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542678"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807282"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>伺服器範圍組態目錄檢視 (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -51,6 +51,5 @@ ms.locfileid: "89542678"
 
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統檢視 ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)  
   

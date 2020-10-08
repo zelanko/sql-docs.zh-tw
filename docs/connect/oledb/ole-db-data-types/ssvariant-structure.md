@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 701476b8e1cea1f84d7fdbf970a345311d686cfd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860068"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727217"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860068"
 
   定義於 msoledbsql.h 中的 **SSVARIANT** 結構會對應至 OLE DB Driver for SQL Server 中的 DBTYPE_SQLVARIANT 值。  
   
- **SSVARIANT** 是一個區分集合聯集。 根據 vt 成員的值而定，取用者可以判斷要讀取的成員。 vt 值會對應至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。 因此，**SSVARIANT** 結構可以保留任何 SQL Server 類型。 如需適用於標準 OLE DB 類型之資料結構的詳細資訊，請參閱[類型指示器](https://go.microsoft.com/fwlink/?LinkId=122171) \(英文\)。  
+ **SSVARIANT** 是一個區分集合聯集。 根據 vt 成員的值而定，取用者可以判斷要讀取的成員。 vt 值會對應至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。 因此，**SSVARIANT** 結構可以保留任何 SQL Server 類型。 如需適用於標準 OLE DB 類型之資料結構的詳細資訊，請參閱[類型指示器](/previous-versions/windows/desktop/ms711251(v=vs.85)) \(英文\)。  
   
 ## <a name="remarks"></a>備註  
  當 DataTypeCompat==80 時，數個 **SSVARIANT** 子類型會變成字串。 例如，下列 vt 值在 **SSVARIANT** 中會顯示為 VT_SS_WVARSTRING：  
@@ -87,7 +87,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 - 用戶端電腦字碼頁不符合資料庫定序字碼頁。
 - 要插入的用戶端緩衝區，包含以用戶端字碼頁編碼的非 ASCII 窄字串字元。
 - 若下列其中一項條件成立：
-  - `DBPARAMBINDINFO` 結構中的 `pwszDataSourceType` 欄位，其描述對應至 `sql_variant` 資料行的參數已設定為 `L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"` 或 `L"sql_variant"`。 如需詳細資料，請參閱：[ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))。
+  - `DBPARAMBINDINFO` 結構中的 `pwszDataSourceType` 欄位，其描述對應至 `sql_variant` 資料行的參數已設定為 `L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"` 或 `L"sql_variant"`。 如需詳細資料，請參閱：[ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85))。
 
     *or*
   - 用於插入的參數化 SQL 查詢已準備妥當。
@@ -153,5 +153,4 @@ UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <Fi
 
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
   

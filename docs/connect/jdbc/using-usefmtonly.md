@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450038"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727459"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>透過 useFmtOnly 擷取 ParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  此功能僅支援 `SELECT/INSERT/UPDATE/DELETE` 查詢。 查詢的開頭應為 4 個支援的關鍵字之一或一個[通用資料表運算式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)，後面接著其中一個支援的查詢。 不支援在通用資料表運算式內使用參數。
+>  此功能僅支援 `SELECT/INSERT/UPDATE/DELETE` 查詢。 查詢的開頭應為 4 個支援的關鍵字之一或一個[通用資料表運算式](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017)，後面接著其中一個支援的查詢。 不支援在通用資料表運算式內使用參數。
 
 ## <a name="known-issues"></a>已知問題
   目前有些功能問題是 SQL 剖析邏輯中的缺陷所致。 這些問題可能會在未來對此功能的更新中獲得解決，並在下方記載其相關的因應措施建議。
@@ -139,7 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

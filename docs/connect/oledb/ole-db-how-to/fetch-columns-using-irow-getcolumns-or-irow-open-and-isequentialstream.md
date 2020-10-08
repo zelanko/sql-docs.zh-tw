@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetColumns method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 65c7bdd5413b2ac320f7c9338978ab54012dabd4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860600"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727119"
 ---
 # <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來擷取資料行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860600"
   大型資料可以使用 **ISequentialStream** 介面來繫結或擷取。 若為繫結資料行，狀態旗標 DBSTATUS_S_TRUNCATED 會指出資料是否遭到截斷。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行  
   
@@ -675,5 +675,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

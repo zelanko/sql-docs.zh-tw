@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a9f20904c5719960cbffc7ca94c825def7231c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ed150ea18d1141e6116efe177e65836c235cf703
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862330"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727210"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>建立 OLE DB Driver for SQL Server 應用程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88862330"
 3.  處理結果。  
   
 > [!NOTE]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 cryptoAPI](/windows/win32/seccng/cng-portal) 加密這些認證。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88862330"
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

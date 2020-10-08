@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 023926ff67c85dcf8d95499b8281853bf7b3b1f3
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 25115cc1e5d34624b13c6218cef256e686d39e3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860009"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727185"
 ---
 # <a name="information-in-error-interfaces"></a>錯誤介面中的資訊
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88860009"
 |成員函數|描述|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|以有關錯誤的基本資訊填入 ERRORINFO 結構。 ERRORINFO 結構所包含的成員會識別錯誤的 HRESULT 傳回值，以及該錯誤適用的提供者和介面。|  
-|**GetCustomErrorObject**|在 **ISQLErrorInfo** 和 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) 介面上傳回參考。|  
+|**GetCustomErrorObject**|在 **ISQLErrorInfo** 和 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 介面上傳回參考。|  
 |**GetErrorInfo**|在 **IErrorInfo** 介面上傳回參考。|  
 |**GetErrorParameters**|OLE DB Driver for SQL Server 不會透過 **GetErrorParameters** 將參數傳回取用者。|  
 |**GetRecordCount**|可用錯誤記錄的計數。|  
@@ -60,5 +60,4 @@ ms.locfileid: "88860009"
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../oledb/ole-db-errors/errors.md)  
-  
   

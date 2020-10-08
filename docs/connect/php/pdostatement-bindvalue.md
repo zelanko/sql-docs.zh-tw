@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebb895ac26aaff16ef4fb0d51a56243a9401e4d1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 602b368e8d36a39b3350c0e61e290da053484e38
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645359"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726779"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,7 +77,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 建議在將值繫結至 [decimal 或 numeric 資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
+> 建議在將值繫結至 [decimal 或 numeric 資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
 ## <a name="example"></a>範例  
 此程式碼範例示範如何繫結十進位值作為輸入參數。  
@@ -101,4 +101,3 @@ $stmt->execute();
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  
