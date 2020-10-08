@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cbeac11486783b8eb2f0de59bd34e72234c8ea68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896699"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725609"
 ---
 # <a name="large-udts"></a>大型 UDT
 
@@ -27,13 +27,13 @@ ms.locfileid: "78896699"
   
 在過去，UDT 的大小上限為 8 KB。 在 SQL Server 2008 中，目前使用 <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined> 格式的 UDT 已不再具有這項限制。  
   
-如需使用者定義型別的完整文件，請參閱 SQL Server 線上叢書中的 [CLR 使用者定義型別](https://go.microsoft.com/fwlink/?LinkId=98366)。
+如需使用者定義型別的完整文件，請參閱 SQL Server 線上叢書中的 [CLR 使用者定義型別](/previous-versions/sql/sql-server-2008/ms131120(v=sql.100))。
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 擷取 UDT 結構描述  
-<xref:Microsoft.Data.SqlClient.SqlConnection> 的 <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 方法會傳回 <xref:System.Data.DataTable> 中的資料庫結構描述資訊。
+<xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 方法會傳回 <xref:System.Data.DataTable> 中的資料庫結構描述資訊。
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT 的 GetSchemaTable 資料行值  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 方法會傳回描述資料行中繼資料的 <xref:System.Data.DataTable>。 下表描述 SQL Server 2005 與 SQL Server 2008 之間大型 UDT 之資料行中繼資料中的差異。  
+<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法會傳回描述資料行中繼資料的 <xref:System.Data.DataTable>。 下表描述 SQL Server 2005 與 SQL Server 2008 之間大型 UDT 之資料行中繼資料中的差異。  
   
 |SqlDataReader 資料行|SQL Server 2005|SQL Server 2008 及更新版本|  
 |--------------------------|---------------------|-------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "78896699"
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 考量因素  
 從 SQL Server 2008 開始，<xref:Microsoft.Data.SqlClient.SqlDataReader> 已擴充，可支援大型 UDT 值的擷取。 <xref:Microsoft.Data.SqlClient.SqlDataReader> 處理大型 UDT 值的方式，取決於您所使用的 SQL Server 版本，以及連接字串中指定的 `Type System Version`。 如需詳細資訊，請參閱 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
-當 `Type System Version` 設定為 SQL Server 2005 時，下列 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的方法將會傳回 <xref:System.Data.SqlTypes.SqlBinary>，而不是 UDT：  
+當 <xref:Microsoft.Data.SqlClient.SqlDataReader> 設定為 SQL Server 2005 時，下列 <xref:System.Data.SqlTypes.SqlBinary> 的方法將會傳回 `Type System Version`，而不是 UDT：  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -62,7 +62,7 @@ ms.locfileid: "78896699"
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
-當 `Type System Version` 設定為 SQL Server 2005 時，下列方法將會傳回 `Byte[]` (而非 UDT) 的陣列：  
+當 `Byte[]` 設定為 SQL Server 2005 時，下列方法將會傳回 `Type System Version` (而非 UDT) 的陣列：  
   
 - <xref:Microsoft.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
@@ -110,4 +110,3 @@ reader.close
   
 ## <a name="next-steps"></a>後續步驟
 - [SQL Server 二進位和大型數值資料](sql-server-binary-large-value-data.md)
- 

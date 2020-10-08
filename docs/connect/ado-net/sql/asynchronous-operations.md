@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4c88a8ccbc242b0fd85c66acfb3539ec260c58dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3923db97ce144662f7fe5410c13278862d1ab6a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928932"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725676"
 ---
 # <a name="asynchronous-operations"></a>非同步作業
 
@@ -26,7 +26,7 @@ ms.locfileid: "80928932"
 .NET 提供了數個標準的非同步設計模式，讓開發人員可用來利用背景執行緒，並釋放使用者介面或高優先順序的執行緒，以便在其 <xref:Microsoft.Data.SqlClient.SqlCommand> 類別中完成其他作業。 具體而言，<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 和 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法 (與 <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 和 <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> 方法配對) 都提供非同步支援。  
   
 > [!NOTE]
->  非同步程式設計是 .NET 的一個核心功能。 如需開發人員可使用之各種非同步技術的詳細資訊，請參閱[以非同步的方式呼叫同步方法](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously) \(部分機器翻譯\)。  
+>  非同步程式設計是 .NET 的一個核心功能。 如需開發人員可使用之各種非同步技術的詳細資訊，請參閱[以非同步的方式呼叫同步方法](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously) \(部分機器翻譯\)。  
   
 雖然使用具有 ADO.NET 功能的非同步技術並不會新增任何特殊考量，但請務必留意建立多執行緒應用程式的優點和陷阱。 此節中後續的範例會指出在建置包含多執行緒功能的應用程式時，開發人員必須考慮的數個重要問題。  
   
@@ -42,4 +42,4 @@ ms.locfileid: "80928932"
   
 ## <a name="next-steps"></a>後續步驟
 - [SQL Server and ADO.NET](index.md) (SQL Server 和 ADO.NET)
-- [以非同步的方式呼叫同步方法](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously) \(部分機器翻譯\)
+- [以非同步的方式呼叫同步方法](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously) \(部分機器翻譯\)

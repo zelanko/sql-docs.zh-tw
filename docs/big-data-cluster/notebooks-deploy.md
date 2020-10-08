@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6e85889a3a1118ab60595a9b0c6bd614b6071829
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bcf42d76f855e6fc722caa18f3c0d3c3672f9ec7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772437"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725839"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "88772437"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供包含部署筆記本的 Azure Data Studio 擴充功能。 部署筆記本所包含的文件和程式碼，可供您用來在 Azure Data Studio 中建立 SQL Server 巨量資料叢集。
 
-[筆記本](../azure-data-studio/notebooks-guidance.md)在實作之初是開放原始碼專案的型態，現已實作到 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) 之中。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
+[筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)在實作之初是開放原始碼專案的型態，現已實作到 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) 之中。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
 
 您可以使用筆記本來部署 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的巨量資料叢集。
 
@@ -35,7 +35,7 @@ ms.locfileid: "88772437"
 
 除了上述，部署 SQL Server 2019 巨量資料叢集也需要：
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI (若是部署在 Azure 中)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 

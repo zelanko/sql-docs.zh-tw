@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: bda9c33588c8248d0aff62f555ec46451d0e9e78
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988590"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725489"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -24,9 +24,9 @@ ms.locfileid: "87988590"
 
 此文章討論使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時發生的問題。 如需連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 的詳細資訊，請參閱：  
   
-- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)  
   
-- [操作說明：使用 JDBC 連線到 Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [操作說明：使用 JDBC 連線到 Azure SQL](/azure/sql-database/sql-database-connect-query-java)  
 
 - [使用 Azure Active Directory 驗證連接](connecting-using-azure-active-directory-authentication.md)  
   
@@ -91,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC 驅動程式連線到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)  
+[使用 JDBC 驅動程式連線到 SQL Server](connecting-to-sql-server-with-the-jdbc-driver.md)

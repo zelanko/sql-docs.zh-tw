@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8112c5c6b69b83986bdf10c6b73d72afba4d9cb6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 126bb1ae7daddbaeb4d0ab72440051807f71cd5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764057"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725829"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>管理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的 HDFS 權限
 
@@ -133,6 +133,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## <a name="next-steps"></a>後續步驟
 
-- [`azdata` 參考](reference-azdata.md)
+- [`azdata` 參考](../azdata/reference/reference-azdata.md)
 
 - [什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)

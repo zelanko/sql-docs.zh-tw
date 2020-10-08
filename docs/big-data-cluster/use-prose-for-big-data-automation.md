@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243439"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725759"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE Code Accelerator 進行資料整頓
 
@@ -37,7 +37,7 @@ import prose.codeaccelerator as cx
 - 修正資料框架中的資料類型。
 - 在字串清單中尋找呈現出模式的規則運算式。
 
-若要取得 Code Accelerator 方法的一般概觀，請參閱[文件](https://aka.ms/prose-codeaccelerator-overview)。
+若要取得 Code Accelerator 方法的一般概觀，請參閱[文件](/python/api/overview/azure/prose/intro)。
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>將檔案中的資料讀入資料框架
 
@@ -86,7 +86,7 @@ def read_file(file):
     return df
  ```
 
-Code Accelerator 可以產出程式碼，將分隔、JSON 和固定寬度的檔案載入資料框架。 若要讀取固定寬度的檔案，`ReadFwfBuilder` 會選擇性地採用人們看得懂的結構描述檔案，以便進行剖析來取得資料行位置。 若要深入了解，請參閱[文件](https://aka.ms/prose-codeaccelerator-docs)。
+Code Accelerator 可以產出程式碼，將分隔、JSON 和固定寬度的檔案載入資料框架。 若要讀取固定寬度的檔案，`ReadFwfBuilder` 會選擇性地採用人們看得懂的結構描述檔案，以便進行剖析來取得資料行位置。 若要深入了解，請參閱[文件](/python/api/overview/azure/prose/intro)。
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>修正資料框架中的資料類型
 
@@ -106,7 +106,7 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-若要深入了解，請參閱[文件](https://aka.ms/prose-codeaccelerator-fixtypes)。
+若要深入了解，請參閱[文件](/python/api/overview/azure/prose/fixdatatypes)。
 
 ## <a name="identifying-patterns-in-strings"></a>識別字串中的模式
 
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-除了產出規則運算式之外，`FindPatternsBuilder` 也可以產出程式碼，以根據產生的 RegEx 將值叢集化。 它也可以宣告資料行中的所有值都符合產出的規則運算式。 若要深入了解並查看其他實用案例，請參閱[文件](https://aka.ms/prose-codeaccelerator-findpatterns)。
+除了產出規則運算式之外，`FindPatternsBuilder` 也可以產出程式碼，以根據產生的 RegEx 將值叢集化。 它也可以宣告資料行中的所有值都符合產出的規則運算式。 若要深入了解並查看其他實用案例，請參閱[文件](/python/api/overview/azure/prose/findpatterns)。

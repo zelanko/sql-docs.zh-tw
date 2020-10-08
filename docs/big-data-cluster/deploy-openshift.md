@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553023"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725879"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 內部部署與 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -88,7 +88,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 
 ## <a name="deploy-big-data-cluster"></a>部署巨量資料叢集
 
-1. 安裝最新的 [azdata](deploy-install-azdata.md)。
+1. 安裝最新的 [azdata](../azdata/install/deploy-install-azdata.md)。
 
 1. 根據目標環境 (OpenShift 內部部署或 ARO) 和部署案例，複製其中一個 OpenShift 內建組態檔。 請參閱以下＜部署組態檔中的 OpenShift 特定設定＞一節，以了解內建組態檔中 OpenShift 特定設定。 如需可用組態檔的詳細資料，請參閱[部署指引](deployment-guidance.md)。
 

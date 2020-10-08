@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e8c603040c0b5df9440e3aaabadac0d947315310
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: bf1608ed13a6a6de4ff0b2b3191520e07a01205d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681037"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725011"
 ---
 # <a name="run-apps-with-azdata---sql-server-big-data-clusters"></a>使用 azdata 執行應用程式 - SQL Server 巨量資料叢集
 
@@ -24,7 +24,7 @@ ms.locfileid: "88681037"
 ## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 2019 巨量資料叢集](deployment-guidance.md)
-- [azdata 命令列公用程式](deploy-install-azdata.md)
+- [azdata 命令列公用程式](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765767"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725866"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -80,7 +80,7 @@ kubectl config view
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)
+- 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/extensions/data-virtualization-extension.md)
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> 部署概觀
@@ -255,7 +255,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 如果您未在部署期間變更預設名稱，則在上一個命令中使用 `-n mssql-cluster`。 `mssql-cluster` 是巨量資料叢集的預設名稱。
 
-1. 使用 [azdata login](reference-azdata.md) 來登入巨量資料叢集。 將 `--endpoint` 參數設定為控制器端點的外部 IP 位址。
+1. 使用 [azdata login](../azdata/reference/reference-azdata.md) 來登入巨量資料叢集。 將 `--endpoint` 參數設定為控制器端點的外部 IP 位址。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 如果您是 Kubernetes 叢集管理員並可存取叢集設定檔 (Kube 設定檔)，您可以將目前的內容設定為指向目標 Kubernetes 叢集。 在此情況下，您可以使用 `azdata login -n <namespaceName>` 登入，其中 `namespace` 是巨量資料叢集名稱。 如果未在登入命令中指定，系統會提示您提供認證。
    
-1. 執行 [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) 來取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
+1. 執行 [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) 來取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> 確認叢集狀態
 
-部署之後，您可以使用 [azdata bdc status show](reference-azdata-bdc-status.md) 命令來檢查叢集的狀態。
+部署之後，您可以使用 [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) 命令來檢查叢集的狀態。
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 您也可以使用下列命令來取得更詳細的狀態：
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) 會傳回與控制管理服務建立關聯的所有元件健全狀態
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) 會傳回與控制管理服務建立關聯的所有元件健全狀態
 ```
 azdata bdc control status show
 ```

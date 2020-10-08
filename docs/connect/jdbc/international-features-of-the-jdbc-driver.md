@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438400"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725499"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驅動程式的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438400"
 ## <a name="collation-support"></a>定序支援  
  JDBC Driver 3.0 支援 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 和 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所支援的所有定序，以及 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 中引進的新定序或新版 Windows 定序名稱。  
   
- 如需定序的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[定序與 Unicode 支援](https://go.microsoft.com/fwlink/?LinkId=131366) 和 [Windows 定序名稱 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)。  
+ 如需定序的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[定序與 Unicode 支援](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) 和 [Windows 定序名稱 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。  
   
 ## <a name="using-international-domain-names-idn"></a>使用國際網域名稱 (IDN)  
  SQL Server 的 JDBC Driver 6.0 支援使用國際化網域名稱 (IDN)，且於連線期間會於必要時將 Unicode serverName 轉換成 ASCII 相容編碼 (Punycode)。  如果 IDN 在網域名稱系統 (DNS) 中以 Punycode 格式 (由 RFC 3490 指定) 儲存為為 ASCII 字串，請將 serverNameAsACE 屬性設定為 true，啟用 Unicode 伺服器名稱的轉換。  否則，如果 DNS 服務設定為允許使用 Unicode 字元，則請將 serverNameAsACE 屬性設定為 false (預設值)。  針對舊版 JDBC 驅動程式，也可將 serverName 轉換為 Punycode，方法是在為連線設定該屬性之前，使用 [Java 的 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 方法。  
   
 > [!NOTE]  
->  為非 Windows 平台所撰寫的大部分解析程式軟體，均以網際網路 DSN 標準為基礎，因此，最有可能為 IDN 使用 Punycode 格式，而私人網路上的 Windows DNS 伺服器，則可設定為允許在每部伺服器上使用 UTF-8 字元。  如需詳細資料，請參閱 [Unicode 字元支援](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  
+>  為非 Windows 平台所撰寫的大部分解析程式軟體，均以網際網路 DSN 標準為基礎，因此，最有可能為 IDN 使用 Punycode 格式，而私人網路上的 Windows DNS 伺服器，則可設定為允許在每部伺服器上使用 UTF-8 字元。  如需詳細資料，請參閱 [Unicode 字元支援](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10))。  
   
 ## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

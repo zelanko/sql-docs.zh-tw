@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117127"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725466"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117127"
 
 此文章提供如何開發 Java 應用程式，以搭配 Microsoft JDBC Driver for SQL Server 使用 Azure Active Directory 驗證功能的相關資訊。
 
-您可以使用 Azure Active Directory (Azure AD) 驗證，這是使用 Azure Active Directory 中身分識別連線至 Azure SQL Database v12 的機制。 使用 Azure Active Directory 驗證集中管理資料庫使用者的身分識別，並作為 SQL Server 的替代驗證。 JDBC 驅動程式可讓您在連線到 Azure SQL Database 的 JDBC 連接字串中指定 Azure Active Directory 認證。 如需如何設定 Azure Active Directory 驗證的資訊，請瀏覽[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) \(部分機器翻譯\)。 
+您可以使用 Azure Active Directory (Azure AD) 驗證，這是使用 Azure Active Directory 中身分識別連線至 Azure SQL Database v12 的機制。 使用 Azure Active Directory 驗證集中管理資料庫使用者的身分識別，並作為 SQL Server 的替代驗證。 JDBC 驅動程式可讓您在連線到 Azure SQL Database 的 JDBC 連接字串中指定 Azure Active Directory 認證。 如需如何設定 Azure Active Directory 驗證的資訊，請瀏覽[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/azure-sql/database/authentication-aad-overview) \(部分機器翻譯\)。 
 
 在 Microsoft JDBC Driver for SQL Server 中，對 Azure Active Directory 驗證提供支援的連接屬性為：
 *   **authentication**：使用此屬性來指出要用於連線的 SQL 驗證方法。 可能的值包括： 
@@ -287,7 +287,7 @@ You have successfully logged on as: <your user name>
     12. 在左側導覽面板中，按一下 [Azure Active Directory]。 在 [應用程式註冊] 下，尋找 [結束點] 索引標籤。複製 [OATH 2.0 權杖端點] 底下的 URL，這是您的 STS URL。
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. 以 Azure Active Directory 管理員身分登入 Azure SQL Server 的使用者資料庫，並使用 T-SQL 命令為您的應用程式主體佈建自主資料庫使用者。 如需建立 Azure Active Directory 管理員和自主資料庫使用者的詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) \(部分機器翻譯\)。
+2. 以 Azure Active Directory 管理員身分登入 Azure SQL Server 的使用者資料庫，並使用 T-SQL 命令為您的應用程式主體佈建自主資料庫使用者。 如需建立 Azure Active Directory 管理員和自主資料庫使用者的詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](/azure/azure-sql/database/authentication-aad-overview) \(部分機器翻譯\)。
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ public class AADTokenBased {
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

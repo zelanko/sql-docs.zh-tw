@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529349"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725699"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空間簡介
 
@@ -77,7 +77,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="new-connection-string-property-synonyms"></a>全新連接字串屬性同義字
 
-已為下列現有連接字串屬性新增新的同義字，以避免具有一個單字以上的屬性之間的間距混淆。 將繼續支援舊版屬性名稱，以獲得回溯相容性，但現在從 [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) 連接字串時，會包含新的連接字串屬性。
+已為下列現有連接字串屬性新增新的同義字，以避免具有一個單字以上的屬性之間的間距混淆。 將繼續支援舊版屬性名稱，以獲得回溯相容性，但現在從 [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) 連接字串時，會包含新的連接字串屬性。
 
 |現有的連接字串屬性|全新同義字|
 |-----------------------------------|-----------|
@@ -214,11 +214,11 @@ UTF-8 支援不需要進行任何應用程式程式碼變更。 這些 SqlClient
 
  [搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted：保護敏感性資料並將加密金鑰儲存在 Windows 憑證存放區中](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted) \(部分機器翻譯\)
+ [Always Encrypted：保護敏感性資料並將加密金鑰儲存在 Windows 憑證存放區中](/azure/sql-database/sql-database-always-encrypted) \(部分機器翻譯\)
 
 ### <a name="authentication"></a>驗證
 
-您可以使用 _Authentication_ 連接字串選項來指定不同的驗證模式。 如需詳細資訊，請參閱 [SqlAuthenticationMethod 的文件](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2) \(部分機器翻譯\)。
+您可以使用 _Authentication_ 連接字串選項來指定不同的驗證模式。 如需詳細資訊，請參閱 [SqlAuthenticationMethod 的文件](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2) \(部分機器翻譯\)。
 
 > [!NOTE]
 > 自訂金鑰存放區提供者 (例如 Azure Key Vault 提供者) 將需要更新，才能支援 Microsoft.Data.SqlClient。 同樣地，記憶體保護區提供者也必須更新，才能支援 Microsoft.Data.SqlClient。

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: be8a2e43c120f154cf998e49027c5025bd4feac4
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 3ccd54d4e5e73da6492de753084ffa924341b63a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438080"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725729"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上建立、匯出及評分 Spark 機器學習模型
 
@@ -52,7 +52,7 @@ ms.locfileid: "86438080"
 
    此筆記本包含具有此範例區段之必要命令的儲存格。
 
-1. 在 Azure Data Studio 中開啟筆記本，並執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何搭配 SQL Server 使用筆記本](../azure-data-studio/notebooks-guidance.md)。
+1. 在 Azure Data Studio 中開啟筆記本，並執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何搭配 SQL Server 使用筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)。
 
 資料會先讀入 Spark 並分割成定型和測試資料集。 然後程式碼會使用定型資料將管線模型定型。 最後，它會將模型匯出至 MLeap 組合。
 

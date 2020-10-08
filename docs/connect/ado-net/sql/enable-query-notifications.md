@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e587639f5323ea76c975e3a8c35d647a7eb3d891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1fae73102dbbb29b6772213c4d021c273271458a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896976"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725631"
 ---
 # <a name="enabling-query-notifications"></a>啟用查詢通知
 
@@ -40,23 +40,23 @@ ms.locfileid: "78896976"
   
 **SQL Server 文件**  
   
-- [為通知建立查詢](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [為通知建立查詢](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Service Broker 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Service Broker 的安全性考量](/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
-- [安全性與保護 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [安全性與保護 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
-- [Notification Services 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Notification Services 的安全性考量](/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
-- [查詢通知權限](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [查詢通知權限](/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
-- [Service Broker 的國際性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Service Broker 的國際性考量](/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
-- [解決方案設計考量 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [解決方案設計考量 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
-- [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 開發人員資訊中心](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [開發人員手冊 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [開發人員手冊 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>啟用查詢通知以執行範例程式碼  
 若要透過使用 SQL Server Management Studio，在 **AdventureWorks** 資料庫上啟用 Service Broker，請執行下列 Transact-SQL 陳述式：  
@@ -78,7 +78,7 @@ CREATE SERVICE ContactChangeNotifications
   
 在部分信任狀況下執行的用戶端程式碼需要 <xref:Microsoft.Data.SqlClient.SqlClientPermission>。  
   
-下列程式碼會建立將 <xref:System.Security.Permissions.PermissionState> 設定為 <xref:System.Security.Permissions.PermissionState.Unrestricted> 的 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 物件。 如果在呼叫堆疊中較高的所有呼叫者都尚未獲授與權限，<xref:System.Security.CodeAccessPermission.Demand%2A> 將會在執行階段強制執行 <xref:System.Security.SecurityException>。  
+下列程式碼會建立將 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 設定為 <xref:System.Security.Permissions.PermissionState> 的 <xref:System.Security.Permissions.PermissionState.Unrestricted> 物件。 如果在呼叫堆疊中較高的所有呼叫者都尚未獲授與權限，<xref:System.Security.CodeAccessPermission.Demand%2A> 將會在執行階段強制執行 <xref:System.Security.SecurityException>。  
   
 [!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   

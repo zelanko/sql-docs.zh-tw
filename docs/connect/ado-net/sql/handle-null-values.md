@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393166"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725632"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393166"
 在關聯式資料庫中，當資料行中的值為未知或遺漏時，就會使用 Null 值。 Null 不是空字串 (針對字元或日期時間資料類型)，也不是零值 (針對數值資料類型)。 ANSI SQL-92 規格指出，所有資料類型的 Null 都必須相同，因此，所有 Null 都會以一致的方式來處理。 <xref:System.Data.SqlTypes> 命名空間會藉由實作 <xref:System.Data.SqlTypes.INullable> 介面來提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料類型都有自己的 `IsNull` 屬性，以及可指派給該資料類型之執行個體的 `Null` 值。  
   
 > [!NOTE]
->  .NET Framework 2.0 版和 .NET Core 1.0 版引進了對可為 Null 之類型的支援，讓程式設計人員可以擴充數值類型來代表底層類型的所有值。 這些可為 Null 的 CLR 類型代表 <xref:System.Nullable> 結構的執行個體。 已將數值類型 Boxed 和 Unboxed 時，此功能特別有用，可提供與物件類型的增強相容性。 可為 Null 的 CLR 類型不適合用來儲存資料庫 Null，因為 ANSI SQL Null 的行為與 `null` 參考 (或 Visual Basic 中的 `Nothing`) 的運作方式不同。 若要使用資料庫 ANSI SQL Null 值，請使用 <xref:System.Data.SqlTypes> Null，而不是 <xref:System.Nullable>。 如需在 C# 中使用可為 Null 之 CLR 類型的詳細資訊，請參閱[可為 Null 的類型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/) \(部分機器翻譯\)，若為 C#，請參閱[使用可為 Null 的類型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/) \(部分機器翻譯\)。  
+>  .NET Framework 2.0 版和 .NET Core 1.0 版引進了對可為 Null 之類型的支援，讓程式設計人員可以擴充數值類型來代表底層類型的所有值。 這些可為 Null 的 CLR 類型代表 <xref:System.Nullable> 結構的執行個體。 已將數值類型 Boxed 和 Unboxed 時，此功能特別有用，可提供與物件類型的增強相容性。 可為 Null 的 CLR 類型不適合用來儲存資料庫 Null，因為 ANSI SQL Null 的行為與 `null` 參考 (或 Visual Basic 中的 `Nothing`) 的運作方式不同。 若要使用資料庫 ANSI SQL Null 值，請使用 <xref:System.Data.SqlTypes> Null，而不是 <xref:System.Nullable>。 如需在 C# 中使用可為 Null 之 CLR 類型的詳細資訊，請參閱[可為 Null 的類型](/dotnet/csharp/programming-guide/nullable-types/) \(部分機器翻譯\)，若為 C#，請參閱[使用可為 Null 的類型](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/) \(部分機器翻譯\)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null 和三值邏輯  
 在資料行定義中允許 Null 值，會在您的應用程式中引進三值邏輯。 比較可以評估為三個條件的其中一個：  

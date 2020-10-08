@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64352409e567c5854d348dce8e6545317b41bc01
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730598"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725819"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>管理 SQL Server 控制器儀表板的巨量資料叢集
 
@@ -27,14 +27,14 @@ ms.locfileid: "85730598"
 
 您必須滿足下列必要條件，才能啟動筆記本：
 
-* 最新版的 [Azure Data Studio](https://aka.ms/getazuredatastudio)
+* 最新版的 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 * [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 延伸模組](../azure-data-studio/data-virtualization-extension.md)安裝在 Azure Data Studio 中
 
 除了上述條件外，SQL Server 2019 巨量資料叢集也需要：
 
 * **azdata**
-    - [Windows 安裝程式](deploy-install-azdata-installer.md)
-    - [Linux 套件管理員](deploy-install-azdata-linux-package.md)
+    - [Windows 安裝程式](../azdata/install/deploy-install-azdata-installer.md)
+    - [Linux 套件管理員](../azdata/install/deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 

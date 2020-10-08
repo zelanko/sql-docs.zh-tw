@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896247"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725577"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 
@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  在 SQL Server 內部執行的通用語言執行平台 (CLR) 程式碼不支援使用者執行個體。 如果在連接字串中有 `User Instance=true` 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 上呼叫 `Open`，會擲回 <xref:System.InvalidOperationException>。  
+>  在 SQL Server 內部執行的通用語言執行平台 (CLR) 程式碼不支援使用者執行個體。 如果在連接字串中有 <xref:System.InvalidOperationException> 的 `Open` 上呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection>，會擲回 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>使用者執行個體連線的存留期  
 不同於以服務方式執行的 SQL Server 版本，SQL Server Express 執行個體不需要手動啟動及停止。 每次使用者登入並連線到使用者執行個體時，如果使用者執行個體尚未執行，就會啟動該執行個體。 使用者執行個體資料庫已設定 `AutoClose` 選項，因此資料庫會在一段時間沒有活動之後自動關閉。 在執行個體的最後一個連線關閉之後，已啟動的 sqlservr.exe 程序會繼續執行一段有限的逾時期間，因此，如果在逾時到期之前開啟另一個連線，就不需要重新啟動該處理序。 如果在該逾時期間到期之前未開啟任何新的連線，使用者執行個體會自動關閉。 父執行個體的系統管理員可以使用 **sp_configure** 來變更 **user instance timeout** 選項，藉此設定使用者執行個體的逾時期限持續期間。 預設值是 60 分鐘。  
@@ -143,7 +143,7 @@ private static void OpenSqlConnection()
   
 - 任何不需要共用資料的單一使用者應用程式。  
   
-- ClickOnce 部署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 或 .NET Core 1.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，若 SQL Server Express 是安裝程式的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 [Windows Forms 的 ClickOnce 部署](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)。
+- ClickOnce 部署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 或 .NET Core 1.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，若 SQL Server Express 是安裝程式的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 [Windows Forms 的 ClickOnce 部署](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)。
   
 - 使用 Windows 驗證的專用 ASP.NET 裝載。 單一 SQL Server Express 執行個體可以裝載在內部網路上。 應用程式會使用 ASPNET Windows 帳戶來連線，而不是使用模擬。 使用者執行個體不應用於協力廠商或共用裝載案例，其中所有應用程式都會共用相同的使用者執行個體，而且不會再互相保持隔離。  
   

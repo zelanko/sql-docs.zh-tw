@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922255"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725503"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄檔中的診斷資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922255"
   
  您可以使用 [ISQLServerConnection 介面](../../connect/jdbc/reference/isqlserverconnection-interface.md)，以程式設計方式取得用戶端連線識別碼。 連接識別碼也會出現在任何與連接有關的例外狀況中。  
   
- 發生連線錯誤時，伺服器內建診斷 (BID) 追蹤資訊和連線通道緩衝區中的用戶端連線識別碼可協助您將用戶端連線與伺服器連線相互關聯。 如需伺服器 BID 追蹤的詳細資訊，請參閱[資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)。 請注意，資料存取追蹤文章也包含資料存取追蹤的相關資訊，但是這些資訊不適用於 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]；如需使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行資料存取追蹤的資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。  
+ 發生連線錯誤時，伺服器內建診斷 (BID) 追蹤資訊和連線通道緩衝區中的用戶端連線識別碼可協助您將用戶端連線與伺服器連線相互關聯。 如需伺服器 BID 追蹤的詳細資訊，請參閱[資料存取追蹤](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))。 請注意，資料存取追蹤文章也包含資料存取追蹤的相關資訊，但是這些資訊不適用於 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]；如需使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行資料存取追蹤的資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。  
   
  JDBC 驅動程式也會傳送執行緒特有的活動識別碼。 如果已啟動工作階段並啟用 TRACK_CAUSAILITY 選項，即可在擴充的事件工作階段中擷取活動識別碼。 如果使用中的連接發生效能問題，您可以從用戶端的追蹤中取得活動識別碼 (ActivityID 欄位)，然後在擴充事件輸出中找出活動識別碼。 擴充事件中的活動識別碼是附加 4 位元組序號的 16 位元組 GUID (與用戶端連線識別碼的 GUID 不同)。 此序號代表要求在執行緒中的順序。 系統會針對 SQL 批次陳述式和 RPC 要求傳送 ActivityId。 若要將 ActivityId 傳送至伺服器，您必須先在 Logging.Properties 檔案中指定下列機碼/值組：  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>另請參閱
 
-[診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

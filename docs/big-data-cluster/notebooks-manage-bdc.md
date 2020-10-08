@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e54c9b01a58ba6eeeeda2fb74ca422d9d90ae45c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778527"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725775"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 筆記本管理 SQL Server 巨量資料叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "88778527"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供包含筆記本的 Azure Data Studio 延伸模組。 筆記本提供了文件和程式碼，可供您用來在 Azure Data Studio 中管理 SQL Server 2019 巨量資料叢集。
 
-[筆記本](../azure-data-studio/notebooks-guidance.md)原本是實作為開放原始碼專案，而現已合併至 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) \(部分機器翻譯\)。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
+[筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)原本是實作為開放原始碼專案，而現已合併至 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) \(部分機器翻譯\)。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
 
 您可以使用筆記本來部署 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的巨量資料叢集。
 
@@ -33,12 +33,12 @@ ms.locfileid: "88778527"
 
 您需要下列必要元件才能開啟筆記本：
 
-* 最新版的 [Azure Data Studio Insiders 組建](https://aka.ms/azuredatastudio-rc) \(英文\)
+* 最新版的 [Azure Data Studio Insiders 組建](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts) \(英文\)
 * 在 Azure Data Studio 中安裝 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 延伸模組
 
 除了以上必要元件之外，若要部署 SQL Server 2019 巨量資料叢集叢集，您也需要：
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 
@@ -97,4 +97,4 @@ ms.locfileid: "88778527"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 Azure Data Studio 中筆記本的詳細資訊，請參閱[如何搭配 SQL Server 使用筆記本](../azure-data-studio/notebooks-guidance.md)。
+如需 Azure Data Studio 中筆記本的詳細資訊，請參閱[如何搭配 SQL Server 使用筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)。

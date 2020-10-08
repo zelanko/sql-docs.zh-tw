@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29560d1622d239b2327da0907b49b95d10ae3541
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438470"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725539"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>設定 java.sql.Time 值如何傳送給伺服器
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88438470"
   
  如果您要在處理 java.sql.Time 值時使用 **datetime** 和 **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，您應該將 **sendTimeAsDatetime** 連接屬性設為 **true**。 如果您要在處理 java.sql.Time 值時使用 **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，您應該將 **sendTimeAsDatetime** 連接屬性設為 **false**。  
   
- 請注意，將 java.sql.Time 值傳送給資料類型同時可以儲存日期的參數時，該預設日期會因為 java.sql.Time 值傳送為 **datetime** (1/1/1970) 或 **time** (1/1/1900) 值而有所不同。 如需將資料傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時之資料轉換的詳細資訊，請參閱[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkID=145211)。  
+ 請注意，將 java.sql.Time 值傳送給資料類型同時可以儲存日期的參數時，該預設日期會因為 java.sql.Time 值傳送為 **datetime** (1/1/1970) 或 **time** (1/1/1900) 值而有所不同。 如需將資料傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時之資料轉換的詳細資訊，請參閱[使用日期和時間資料](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC 驅動程式 3.0 中，**sendTimeAsDatetime** 預設為 true。 在未來的版本中，**sendTimeAsDatetime** 連線屬性可能會預設為 false。  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88438470"
   
 ## <a name="see-also"></a>另請參閱
  [了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
-  
   

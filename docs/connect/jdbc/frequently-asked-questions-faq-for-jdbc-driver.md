@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042419"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725459"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
 
@@ -146,7 +146,7 @@ JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合�
 是。 此驅動程式支援使用 IPv6 位址。 使用連線屬性集合和 serverName 連接字串屬性。 如需詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 **什麼是自適性緩衝？**  
-自適性緩衝是從 Microsoft SQL Server 2005 JDBC Driver 1.2 版開始引進的。 它是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 在 1.2 版中，預設的緩衝模式為 "full"，而且應用程式必須明確自適性緩衝模式。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 因此，您的應用程式不需要明確要求自適性行為，就能取得自適性緩衝行為。 如需詳細資訊，請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)與 [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (什麼是自適性回應緩衝，以及我為何應該使用它？) 部落格。
+自適性緩衝是從 Microsoft SQL Server 2005 JDBC Driver 1.2 版開始引進的。 它是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 在 1.2 版中，預設的緩衝模式為 "full"，而且應用程式必須明確自適性緩衝模式。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 因此，您的應用程式不需要明確要求自適性行為，就能取得自適性緩衝行為。 如需詳細資訊，請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)與 [What is adaptive response buffering and why should I use it?](/archive/blogs/jdbcteam/) (什麼是自適性回應緩衝，以及我為何應該使用它？) 部落格。
 
 **此驅動程式支援連線共用嗎？**  
 此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱[使用連線共用](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。
@@ -158,7 +158,7 @@ JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合�
 此驅動程式已在多種應用程式伺服器上進行過測試，包括 IBM WebSphere 及 SAP NetWeaver。
 
 **如何啟用追蹤功能？**  
-此驅動程式支援追蹤 (或記錄) 功能，可用於協助解決在應用程式中使用 JDBC 驅動程式時所發生的問題。 為能在用戶端上使用 JAR 追蹤，JDBC 驅動程式會使用 java.util.logging 中的記錄 API java.util.logging。 如需詳細資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。 對於伺服器端的 XA 追蹤，請參閱 [Data Access Tracing in SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705)(SQL Server 的資料存取追蹤)。
+此驅動程式支援追蹤 (或記錄) 功能，可用於協助解決在應用程式中使用 JDBC 驅動程式時所發生的問題。 為能在用戶端上使用 JAR 追蹤，JDBC 驅動程式會使用 java.util.logging 中的記錄 API java.util.logging。 如需詳細資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。 對於伺服器端的 XA 追蹤，請參閱 [Data Access Tracing in SQL Server](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))(SQL Server 的資料存取追蹤)。
 
 **何處可以下載舊版的驅動程式？例如 SQL Server 2000 的 JDBC 驅動程、2005 驅動程式、1.0、1.1 或 1.2 版的驅動程式。**  
 因為已經停止支援這些驅動程式版本，所以也不再提供其下載。 因為我們會持續改進 Java 連線能力支援， 所以極力建議您使用最新版的 Microsoft JDBC 驅動程式。

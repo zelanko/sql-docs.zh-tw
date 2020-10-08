@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f5b3b210cb4e20bdf9585a7efdfd0f10aa19f29
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772823"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725779"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視巨量資料叢集的狀態 
 
@@ -24,7 +24,7 @@ ms.locfileid: "85772823"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> 使用 Azure Data Studio
 
-下載 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新**測試人員組建**之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
+下載 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 的最新**測試人員組建**之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
 
 1. 首先，在 Azure Data Studio 中建立與您巨量資料叢集的連線。 如需詳細資訊，請參閱[使用 Azure Data Studio 連線至 SQL Server 巨量資料叢集](connect-to-big-data-cluster.md)。
 
@@ -83,11 +83,11 @@ ms.locfileid: "85772823"
 
 ## <a name="use-azdata"></a>使用 azdata
 
-您也可以使用 [azdata](deploy-install-azdata.md) 命令來同時檢視端點和叢集狀態。
+您也可以使用 [azdata](../azdata/install/deploy-install-azdata.md) 命令來同時檢視端點和叢集狀態。
 
 ### <a name="service-endpoints"></a>服務端點
 
-1. 使用 [azdata login](reference-azdata.md) 來登入巨量資料叢集。 將 **--controller-endpoint** 參數設定為控制器端點的外部 IP 位址。
+1. 使用 [azdata login](../azdata/reference/reference-azdata.md) 來登入巨量資料叢集。 將 **--controller-endpoint** 參數設定為控制器端點的外部 IP 位址。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -100,7 +100,7 @@ ms.locfileid: "85772823"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. 請執行 [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) 以取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
+1. 請執行 [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) 以取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -126,7 +126,7 @@ ms.locfileid: "85772823"
 
 ### <a name="view-cluster-status"></a>檢視叢集狀態
 
-您可以使用 [`azdata bdc status show`](reference-azdata-bdc-status.md) 命令來檢視叢集的狀態。
+您可以使用 [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) 命令來檢視叢集的狀態。
 
 ```bash
 azdata bdc status show
@@ -211,7 +211,7 @@ azdata bdc status show
 
 ### <a name="view-specific-resource-status"></a>檢視特定資源狀態
 
-您可以使用 [azdata bdc status show](reference-azdata-bdc-status.md) 命令來檢視叢集內特定資源的狀態。 當您使用此命令時，可以使用 `--resource` 參數進行篩選。 `--resource` 參數的幾個輸入範例包括：
+您可以使用 [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) 命令來檢視叢集內特定資源的狀態。 當您使用此命令時，可以使用 `--resource` 參數進行篩選。 `--resource` 參數的幾個輸入範例包括：
 
 - master
 - 控制
@@ -316,7 +316,7 @@ azdata bdc status show --all --resource storage-0
 
 ### <a name="view-controller-status"></a>檢視控制器狀態
 
-您可以使用 [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) 命令來檢視控制器狀態。 該命令可提供監視儀表板的類似連結，這些監視儀表板與巨量資料叢集的控制器元件相關。
+您可以使用 [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) 命令來檢視控制器狀態。 該命令可提供監視儀表板的類似連結，這些監視儀表板與巨量資料叢集的控制器元件相關。
 
 ## <a name="next-steps"></a>後續步驟
 

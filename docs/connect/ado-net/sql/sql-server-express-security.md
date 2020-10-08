@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243422"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725563"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 
@@ -42,8 +42,8 @@ SQL Server Express 通常會安裝為具名執行個體。 執行個體的預設
   
 |資源|說明|
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition 線上叢書](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文件。|  
-|《SQL Server 線上叢書》中的[非管理員的使用者執行個體](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|描述如何建立及部署使用者執行個體。|  
+|[Microsoft SQL Server 2005 Express Edition 線上叢書](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文件。|  
+|《SQL Server 線上叢書》中的[非管理員的使用者執行個體](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|描述如何建立及部署使用者執行個體。|  
 |[SQL Server Express 使用者執行個體](sql-server-express-user-instances.md)|描述 ADO.NET 應用程式中的使用者執行個體功能。 提供如何啟用使用者執行個體、使用 <xref:Microsoft.Data.SqlClient.SqlConnection> 連線到使用者執行個體、使用者執行個體存留期，以及使用者執行個體案例的相關資訊。|  
   
 ## <a name="next-steps"></a>後續步驟

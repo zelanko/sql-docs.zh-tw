@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: b2222c72be6a499e9a60424d1a7cc508904b8f33
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528344"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726649"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步驟 4：使用 PHP 復原連線 SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-示範程式是設計來使連線嘗試期間的暫時性錯誤 (也就是具有前置詞 '08' 的任何錯誤碼，如此[附錄](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) \(部分機器翻譯\) 中所列) 都會導致重試。 但是，查詢命令期間的暫時性錯誤會導致程式捨棄連線並建立新的連線，然後再重試查詢命令。 我們不建議或不鼓勵這種設計選擇。 示範程式會說明一些您可使用的設計彈性。  
+示範程式是設計來使連線嘗試期間的暫時性錯誤 (也就是具有前置詞 '08' 的任何錯誤碼，如此[附錄](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) \(部分機器翻譯\) 中所列) 都會導致重試。 但是，查詢命令期間的暫時性錯誤會導致程式捨棄連線並建立新的連線，然後再重試查詢命令。 我們不建議或不鼓勵這種設計選擇。 示範程式會說明一些您可使用的設計彈性。  
   
 程式碼範例中大部分的內容都是攔截例外狀況的邏輯。   
   

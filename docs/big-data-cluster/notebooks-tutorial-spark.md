@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f42b454ebfc1b9b4ea8e841cba6fe2a4b209ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660374"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725801"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>執行使用 Spark 的範例筆記本
 
@@ -69,11 +69,11 @@ ms.locfileid: "85660374"
 
 連續執行範例筆記本中的每個資料格。 如需搭配 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 使用筆記本的相關資訊，請參閱下列資源：
 
-- [如何使用筆記本](../azure-data-studio/notebooks-guidance.md)
+- [如何使用筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)
 - [如何管理 Azure Data Studio 中的 Notebook](notebooks-manage-bdc.md)
 
 ## <a name="next-steps"></a>後續步驟
 
 深入了解筆記本：
 > [!div class="nextstepaction"]
-> [如何使用筆記本](../azure-data-studio/notebooks-guidance.md)
+> [如何使用筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)

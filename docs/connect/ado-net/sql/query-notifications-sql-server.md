@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d3905604b45eec2f1e9c7c1c93bd53b1863695f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925471"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725599"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
 
@@ -35,19 +35,19 @@ ms.locfileid: "80925471"
   
 您可以為 SELECT 和 EXECUTE 陳述式設定通知。 使用 EXECUTE 陳述式時，SQL Server 會為執行的命令註冊通知，而非為 EXECUTE 陳述式本身。 此命令必須符合 SELECT 陳述式的需求和限制。 當註冊通知的命令包含多個陳述式時，資料庫引擎會為批次中的每個陳述式建立一個通知。  
   
-如果您所開發的應用程式在資料變更時需擁有可靠的次秒通知，請查看**高效的查詢通知策略規劃**和**查詢通知的替代方案**這兩節，其屬於《SQL Server 線上叢書》的[通知規劃](https://go.microsoft.com/fwlink/?LinkId=211984)主題。 如需查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱下列連結以取得《SQL Server 線上叢書》中的主題。  
+如果您所開發的應用程式在資料變更時需擁有可靠的次秒通知，請查看**高效的查詢通知策略規劃**和**查詢通知的替代方案**這兩節，其屬於《SQL Server 線上叢書》的[通知規劃](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105))主題。 如需查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱下列連結以取得《SQL Server 線上叢書》中的主題。  
   
 **SQL Server 文件**  
   
-- [使用查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [使用查詢通知](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [為通知建立查詢](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [為通知建立查詢](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [開發 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [開發 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 開發人員資訊中心](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [開發人員手冊 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [開發人員手冊 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本節內容  
 [啟用查詢通知](enable-query-notifications.md)  

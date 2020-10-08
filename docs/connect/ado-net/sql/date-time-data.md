@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff8e80314210dee9c227360e54f8ba1e6b1a3691
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896995"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725645"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 
@@ -27,7 +27,7 @@ SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新
   
 早於 SQL Server 2008 的 SQL Server 版本，只有兩種資料類型可用來處理日期和時間值：`datetime` 和 `smalldatetime`。 這兩種資料類型都同時包含日期值和時間值，所以很難只使用日期或是時間值。 此外，這些資料類型僅支援 1753 年在英國引進西曆之後的日期。 另一個限制是這些較舊的資料類型不是時區感知的，因此很難處理源自多個時區的資料。  
   
-《SQL Server 線上叢書》提供 SQL Server 資料類型的完整文件。 如需有關日期和時間資料的入門級主題，請參閱[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkID=98361)。
+《SQL Server 線上叢書》提供 SQL Server 資料類型的完整文件。 如需有關日期和時間資料的入門級主題，請參閱[使用日期和時間資料](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))。
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 所引進的日期/時間資料類型  
  下表描述新的日期和時間資料類型。  
@@ -47,12 +47,12 @@ SQL Server 剖析日期和時間值的方式，不僅取決於類型系統版本
   
 Transact-SQL SET LANGUAGE 陳述式會隱含地設定 DATEFORMAT，以決定日期部分的順序。 您可以利用 MDY、DMY、YMD、YDM、MYD 或 DYM 順序來排序日期部分，以在連線上使用 SET DATEFORMAT Transact-SQL 陳述式來釐清日期值。  
   
-如果您未針對連線指定任何 DATEFORMAT，SQL Server 就會使用與連線相關聯的預設語言。 例如，在語言設定為「美式英文」的伺服器上，會將 '01/02/03' 的日期字串解讀為 MDY (2003 年 1 月 2 日)，而在語言設定為「英式英文」的伺服器上則會解譯為 DMY (2003 年 2 月 1 日)。 年份會使用 SQL Server 的截止年份規則來決定，這會定義用來指派世紀值的截止日期。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [two digit year cutoff 選項](https://go.microsoft.com/fwlink/?LinkId=120473)。  
+如果您未針對連線指定任何 DATEFORMAT，SQL Server 就會使用與連線相關聯的預設語言。 例如，在語言設定為「美式英文」的伺服器上，會將 '01/02/03' 的日期字串解讀為 MDY (2003 年 1 月 2 日)，而在語言設定為「英式英文」的伺服器上則會解譯為 DMY (2003 年 2 月 1 日)。 年份會使用 SQL Server 的截止年份規則來決定，這會定義用來指派世紀值的截止日期。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [two digit year cutoff 選項](/previous-versions/sql/sql-server-2008-r2/ms189577(v=sql.105))。  
   
 > [!NOTE]
 >  從字串格式轉換為 `date`、`time`、`datetime2` 或 `datetimeoffset` 時，不支援 YDM 日期格式。  
   
-如需 SQL Server 如何解譯日期和時間資料的詳細資訊，請參閱《SQL Server 2008 線上叢書》中的[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkID=98361)。  
+如需 SQL Server 如何解譯日期和時間資料的詳細資訊，請參閱《SQL Server 2008 線上叢書》中的[使用日期和時間資料](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日期/時間資料類型和參數  
 <xref:System.Data.SqlDbType> 中新增了以下列舉來支援新的日期和時間資料類型。  
@@ -65,12 +65,12 @@ Transact-SQL SET LANGUAGE 陳述式會隱含地設定 DATEFORMAT，以決定日�
   
 - `SqlDbType.DateTimeOffSet`  
 
-您可以使用上述其中一個 <xref:System.Data.SqlDbType> 列舉來指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 的資料類型。 
+您可以使用上述其中一個 <xref:Microsoft.Data.SqlClient.SqlParameter> 列舉來指定 <xref:System.Data.SqlDbType> 的資料類型。 
 
 > [!NOTE]
-> 您無法將 `SqlParameter` 的 `DbType` 屬性設定為 `SqlDbType.Date`。
+> 您無法將 `DbType` 的 `SqlParameter` 屬性設定為 `SqlDbType.Date`。
 
-您也可以藉由將 `SqlParameter` 物件的 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 屬性設定為特定的 <xref:System.Data.DbType> 列舉值，以一般的方法指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 的類型。 <xref:System.Data.DbType> 中新增了以下列舉值，以支援 `datetime2` 和 `datetimeoffset` 資料類型：  
+您也可以藉由將 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件的 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 屬性設定為特定的 `SqlParameter` 列舉值，以一般的方法指定 <xref:System.Data.DbType> 的類型。 <xref:System.Data.DbType> 中新增了以下列舉值，以支援 `datetime2` 和 `datetimeoffset` 資料類型：  
   
 - DbType.DateTime2  
   
@@ -105,7 +105,7 @@ Transact-SQL SET LANGUAGE 陳述式會隱含地設定 DATEFORMAT，以決定日�
 >  小於零或者大於或等於 24 小時的時間值將會擲回 <xref:System.ArgumentException>。  
   
 ### <a name="creating-parameters"></a>建立參數  
-您可以使用其建構函式來建立 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件，或將它新增到 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 的 `Add` 方法來完成)。 `Add` 方法將會取得建構函式引數或現有參數物件作為輸入。  
+您可以使用其建構函式來建立 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件，或將它新增到 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 `Add` 的 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 方法來完成)。 `Add` 方法將會取得建構函式引數或現有參數物件作為輸入。  
   
 此主題的後續小節將提供如何指定日期和時間參數的範例。
   
@@ -150,7 +150,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
-您也可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `AddWithValue` 方法來提供參數，如下列程式碼片段所示。 不過，`AddWithValue` 方法不允許您針對參數指定 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 或 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>。  
+您也可以使用 `AddWithValue` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 方法來提供參數，如下列程式碼片段所示。 不過，`AddWithValue` 方法不允許您針對參數指定 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 或 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>。  
   
 ```csharp  
 command.Parameters.AddWithValue(   
@@ -177,7 +177,7 @@ command.Parameters.AddWithValue(
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|傳回類型，其為欄位的底層提供者特定類型。 針對新的日期和時間類型，傳回與 `GetFieldType` 相同的類型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|擷取指定資料行的值。 針對新的日期和時間類型，傳回與 `GetValue` 相同的類型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|擷取指定陣列中的值。|  
-|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|以 <xref:System.Data.SqlTypes.SqlString> 形式擷取資料行值。 如果無法將資料表示為 `SqlString`，就會發生 <xref:System.InvalidCastException>。|  
+|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|以 <xref:System.Data.SqlTypes.SqlString> 形式擷取資料行值。 如果無法將資料表示為 <xref:System.InvalidCastException>，就會發生 `SqlString`。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|擷取資料行資料作為其預設 `SqlDbType`。 針對新的日期和時間類型，傳回與 `GetValue` 相同的類型。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|擷取指定陣列中的值。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetString%2A>|如果 Type System Version 是設為 SQL Server 2005，則擷取資料行的值作為字串。 如果無法將資料表示為字串，就會發生 <xref:System.InvalidCastException>。|  
@@ -208,9 +208,9 @@ command.Parameters.AddWithValue(
   
 |主題|描述|  
 |-----------|-----------------|  
-|[日期與時間資料類型及函式 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|提供所有 Transact-SQL 日期和間資料類型與函式的概觀。|  
-|[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkId=98361)|提供日期和時間資料類型與函式的詳細資訊，以及使用範例。|  
-|[資料類型 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|描述 SQL Server 2008 中的系統資料類型。|  
+|[日期與時間資料類型及函式 (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100))|提供所有 Transact-SQL 日期和間資料類型與函式的概觀。|  
+|[使用日期和時間資料](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|提供日期和時間資料類型與函式的詳細資訊，以及使用範例。|  
+|[資料類型 (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))|描述 SQL Server 2008 中的系統資料類型。|  
   
 ## <a name="next-steps"></a>後續步驟
 - [SQL Server 資料類型和 ADO.NET](sql-server-data-types.md)

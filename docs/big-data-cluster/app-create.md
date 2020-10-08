@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08e19f1c78b14e57aa50fa23bc10379c6f662351
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681002"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725079"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>如何在 SQL Server 巨量資料叢集上部署應用程式
 
@@ -44,7 +44,7 @@ ms.locfileid: "88681002"
 ## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 2019 巨量資料叢集](deployment-guidance.md)
-- [azdata 命令列公用程式](deploy-install-azdata.md)
+- [azdata 命令列公用程式](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 

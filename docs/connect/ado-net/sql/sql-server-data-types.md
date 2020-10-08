@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57e0cec178c407cda530e6699e51743094c57dca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896545"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725589"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
 
@@ -25,11 +25,11 @@ SQL Server 與 .NET 是以不同的型別系統為基礎，這可能會導致資
   
 SQL Server 2008 引進了新的資料類型，其設計目的是為了符合商務需求，以處理日期和時間、結構化、半結構化與非結構化資料。 《SQL Server 2008 線上叢書》中有說明。  
   
-可在應用程式中使用的 SQL Server 資料類型，取決於您目前使用的 SQL Server 版本。 如需詳細資訊，請參閱《SQL Server 線上叢書》的[資料類型 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkID=107468)。
+可在應用程式中使用的 SQL Server 資料類型，取決於您目前使用的 SQL Server 版本。 如需詳細資訊，請參閱《SQL Server 線上叢書》的[資料類型 (資料庫引擎)](/previous-versions/sql/sql-server-2008-r2/ms187594(v=sql.105))。
   
 ## <a name="in-this-section"></a>本節內容  
 [SqlTypes 和資料集](sqltypes-dataset.md)  
-說明針對 `DataSet` 中的 `SqlTypes` 所提供的類型支援。  
+說明針對 `SqlTypes` 中的 `DataSet` 所提供的類型支援。  
   
 [處理 Null 值](handle-null-values.md)  
 示範如何處理 Null 值與三值邏輯。  

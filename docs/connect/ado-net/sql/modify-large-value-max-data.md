@@ -9,25 +9,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f55cb14a95844558e4a759a4acce71509d62d4ba
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896679"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725619"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>修改 ADO.NET 中的大型數值 (max) 資料
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-大型物件 (LOB) 資料類型是指資料列大小上限超過 8 KB 的資料類型。 SQL Server 提供 `varchar`、`nvarchar` 和 `varbinary` 資料類型的 `max` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行和 Transact-SQL 變數可能會指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 在 .NET 中，`max` 資料類型可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料類型，可以使用累加方式來擷取和更新資料。  
+大型物件 (LOB) 資料類型是指資料列大小上限超過 8 KB 的資料類型。 SQL Server 提供 `max`、`varchar` 和 `nvarchar` 資料類型的 `varbinary` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行和 Transact-SQL 變數可能會指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 在 .NET 中，`max` 資料類型可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料類型，可以使用累加方式來擷取和更新資料。  
   
 `max` 資料類型可用於比較 (作為 Transact-SQL 變數) 及串連。 它們也可用於 SELECT 陳述式的 DISTINCT、ORDER BY、GROUP BY 子句中，以及彙總、聯結和子查詢中。
 
-如需大數值資料類型的詳細資訊，請參閱《SQL Server 線上叢書》的[使用大數值資料類型](https://go.microsoft.com/fwlink/?LinkId=120498)。
+如需大數值資料類型的詳細資訊，請參閱《SQL Server 線上叢書》的[使用大數值資料類型](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))。
   
 ## <a name="large-value-type-restrictions"></a>大數值類型限制  
 下列限制適用於 `max` 資料類型，較小的資料類型則不存在這些限制：  
@@ -110,10 +110,10 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>在 ADO.NET 中使用大數值類型  
-您可以在 ADO.NET 中使用大數值類型，方法是將大數值類型指定為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 中的 <xref:Microsoft.Data.SqlClient.SqlParameter> 物件以傳回結果集，或使用 <xref:Microsoft.Data.SqlClient.SqlDataAdapter> 來填滿 `DataSet`/`DataTable`。 您使用大數值類型及其相關且較小數值資料類型的方式並無任何差異。  
+您可以在 ADO.NET 中使用大數值類型，方法是將大數值類型指定為 <xref:Microsoft.Data.SqlClient.SqlParameter> 中的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件以傳回結果集，或使用 <xref:Microsoft.Data.SqlClient.SqlDataAdapter> 來填滿 `DataSet`/`DataTable`。 您使用大數值類型及其相關且較小數值資料類型的方式並無任何差異。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>使用 GetSqlBytes 來擷取資料  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetSqlBytes` 方法可以用來擷取 `varbinary(max)` 資料行的內容。 下列程式碼片段會假設一個名為 `cmd` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件 (此物件會從資料表中選取 `varbinary(max)` 資料)，以及一個名為 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件 (此物件會以 <xref:System.Data.SqlTypes.SqlBytes> 形式來擷取資料)。  
+`GetSqlBytes` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可以用來擷取 `varbinary(max)` 資料行的內容。 下列程式碼片段會假設一個名為 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `cmd` 物件 (此物件會從資料表中選取 `varbinary(max)` 資料)，以及一個名為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 物件 (此物件會以 <xref:System.Data.SqlTypes.SqlBytes> 形式來擷取資料)。  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -124,7 +124,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlchars-to-retrieve-data"></a>使用 GetSqlChars 來擷取資料  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetSqlChars` 方法可以用來擷取 `varchar(max)` 或 `nvarchar(max)` 資料行的內容。 下列程式碼片段會假設一個名為 `cmd` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件 (此物件會從資料表中選取 `nvarchar(max)` 資料)，以及一個名為 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件 (此物件會擷取資料)。   
+`GetSqlChars` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可以用來擷取 `varchar(max)` 或 `nvarchar(max)` 資料行的內容。 下列程式碼片段會假設一個名為 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `cmd` 物件 (此物件會從資料表中選取 `nvarchar(max)` 資料)，以及一個名為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 物件 (此物件會擷取資料)。   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -135,7 +135,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlbinary-to-retrieve-data"></a>使用 GetSqlBinary 來擷取資料  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetSqlBinary` 方法可以用來擷取 `varbinary(max)` 資料行的內容。 下列程式碼片段會假設一個名為 `cmd` 的 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件 (此物件會從資料表中選取 `varbinary(max)` 資料)，以及一個名為 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件 (此物件會以 <xref:System.Data.SqlTypes.SqlBinary> 資料流形式來擷取資料)。  
+`GetSqlBinary` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可以用來擷取 `varbinary(max)` 資料行的內容。 下列程式碼片段會假設一個名為 <xref:Microsoft.Data.SqlClient.SqlCommand> 的 `cmd` 物件 (此物件會從資料表中選取 `varbinary(max)` 資料)，以及一個名為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 物件 (此物件會以 <xref:System.Data.SqlTypes.SqlBinary> 資料流形式來擷取資料)。  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -146,7 +146,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getbytes-to-retrieve-data"></a>使用 GetBytes 來擷取資料  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetBytes` 方法可將指定資料行位移的位元組資料流，讀取到始於指定陣列位移的位元組陣列。 下列程式碼片段會假設一個名為 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件，此物件可將位元組擷取到位元組陣列。 請注意，不同於 `GetSqlBytes`，`GetBytes` 需要陣列緩衝區的大小。  
+`GetBytes` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法可將指定資料行位移的位元組資料流，讀取到始於指定陣列位移的位元組陣列。 下列程式碼片段會假設一個名為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 物件，此物件可將位元組擷取到位元組陣列。 請注意，不同於 `GetSqlBytes`，`GetBytes` 需要陣列緩衝區的大小。  
   
 ```csharp  
 while (reader.Read())  
@@ -157,7 +157,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getvalue-to-retrieve-data"></a>使用 GetValue 來擷取資料  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `GetValue` 方法會將指定資料行位移中的值讀取到陣列。 下列程式碼片段會假設一個名為 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件，此物件會從第一個資料行位移中擷取二進位資料，然後從第二個資料行位移中擷取字串資料。  
+`GetValue` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法會將指定資料行位移中的值讀取到陣列。 下列程式碼片段會假設一個名為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 物件，此物件會從第一個資料行位移中擷取二進位資料，然後從第二個資料行位移中擷取字串資料。  
   
 ```csharp  
 while (reader.Read())  
@@ -171,7 +171,7 @@ while (reader.Read())
 ```  
   
 ## <a name="converting-from-large-value-types-to-clr-types"></a>從大數值類型轉換為 CLR 類型  
-您可以使用任何字串轉換方法 (例如 `ToString`)，來轉換 `varchar(max)` 或 `nvarchar(max)` 資料行的內容。 下列程式碼片段會假設一個名為 `reader` 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件，此物件會擷取資料。  
+您可以使用任何字串轉換方法 (例如 `varchar(max)`)，來轉換 `nvarchar(max)` 或 `ToString` 資料行的內容。 下列程式碼片段會假設一個名為 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 `reader` 物件，此物件會擷取資料。  
   
 ```csharp  
 while (reader.Read())  
@@ -182,7 +182,7 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>範例  
-下列程式碼會從 `AdventureWorks` 資料庫中的 `ProductPhoto` 資料表，擷取名稱和 `LargePhoto` 物件，並將其儲存到檔案。 此組件必須以 <xref:System.Drawing> 命名空間的參考進行編譯。  <xref:Microsoft.Data.SqlClient.SqlDataReader> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 方法會傳回 <xref:System.Data.SqlTypes.SqlBytes> 物件，此物件會公開 `Stream` 屬性。 該程式碼會使用此物件來建立新的 `Bitmap` 物件，然後將其儲存為 Gif `ImageFormat`。  
+下列程式碼會從 `LargePhoto` 資料庫中的 `ProductPhoto` 資料表，擷取名稱和 `AdventureWorks` 物件，並將其儲存到檔案。 此組件必須以 <xref:System.Drawing> 命名空間的參考進行編譯。  <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 方法會傳回 <xref:System.Data.SqlTypes.SqlBytes> 物件，此物件會公開 `Stream` 屬性。 該程式碼會使用此物件來建立新的 `Bitmap` 物件，然後將其儲存為 Gif `ImageFormat`。  
   
 [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   

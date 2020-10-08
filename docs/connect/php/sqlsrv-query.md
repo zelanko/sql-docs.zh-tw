@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728403"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726680"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建議在將值繫結至 [decimal 或 numeric 資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
+> 建議在將值繫結至 [decimal 或 numeric 資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
 ## <a name="example"></a>範例  
 此程式碼範例示範如何繫結十進位值作為輸入參數。  
@@ -184,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>範例
-此程式碼範例示範如何建立 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 類型的資料表，並擷取插入的資料。
+此程式碼範例示範如何建立 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 類型的資料表，並擷取插入的資料。
 
 ```
 <?php
@@ -252,4 +252,3 @@ Second field:  test_data
 
 [使用方向參數](../../connect/php/using-directional-parameters.md)  
 
-  

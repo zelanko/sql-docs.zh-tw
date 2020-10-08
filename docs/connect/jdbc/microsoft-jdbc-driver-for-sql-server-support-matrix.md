@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042397"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725449"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 
@@ -81,7 +81,7 @@ Microsoft JDBC Driver 不提供延長支援與自訂支援選項。
   
  <sup>2</sup> Azure SQL Database 的支援已在驅動程式 3.0 版中以 Hotfix 的形式推出。 建議 Azure SQL Database 客戶使用所提供的最新版驅動程式。  
   
- <sup>3</sup> Microsoft SQL Server JDBC Driver 2.0 版與 Microsoft SQL Server 2005 JDBC Driver 1.2 版可用下層用戶端的身分連線到 SQL Server 2008。 若允許轉換成下層，應用程式便能對 SQL Server 2008 資料類型 (例如 time、date、datetime2、datetimeoffset 及 FILESTREAM) 執行查詢及更新。 如需如何使用搭配使用這些新資料類型與 JDBC 驅動程式的詳細資訊，請參閱  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) (使用 JDBC 驅動程式時使用 SQL Server 2008 Date/Time 資料類型) 及  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199)(使用 JDBC 驅動程式時使用 SQL Server 2008 FileStream)。 如需新資料類型與下層之相容性的詳細資訊，請參閱《SQL Server 線上叢書》中的  [使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkId=145211)及  [FILESTREAM 支援](https://go.microsoft.com/fwlink/?LinkId=145212) 主題。  
+ <sup>3</sup> Microsoft SQL Server JDBC Driver 2.0 版與 Microsoft SQL Server 2005 JDBC Driver 1.2 版可用下層用戶端的身分連線到 SQL Server 2008。 若允許轉換成下層，應用程式便能對 SQL Server 2008 資料類型 (例如 time、date、datetime2、datetimeoffset 及 FILESTREAM) 執行查詢及更新。 如需如何使用搭配使用這些新資料類型與 JDBC 驅動程式的詳細資訊，請參閱  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](/archive/blogs/jdbcteam/) (使用 JDBC 驅動程式時使用 SQL Server 2008 Date/Time 資料類型) 及  [Working with SQL Server 2008 FileStream using JDBC Driver](/archive/blogs/jdbcteam/)(使用 JDBC 驅動程式時使用 SQL Server 2008 FileStream)。 如需新資料類型與下層之相容性的詳細資訊，請參閱《SQL Server 線上叢書》中的  [使用日期和時間資料](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))及  [FILESTREAM 支援](../../relational-databases/native-client/features/filestream-support.md) 主題。  
   
  <sup>4</sup> Microsoft JDBC Driver 與平行資料倉儲之間的連線支援首次於 Microsoft JDBC Driver 4.0 for SQL Server 與 Microsoft SQL Server 2008 R2 平行處理資料倉儲設備更新 3 中推出。  
   

@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6c5ec4c058edc0f1d63aee7c0ab305d9becfdc56
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 53d7b050fe1269f704a38ca5542c0dae6fdfd0f7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790311"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724999"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop
 
@@ -155,5 +155,5 @@ bdc.json 中的範例存放集區定義可能如下所示：
 ## <a name="next-steps"></a>後續步驟
 
 - [Apache Spark 與 Apache Hadoop (HDFS) 設定屬性。](reference-config-spark-hadoop.md)
-- [`azdata` 參考](reference-azdata.md)
+- [`azdata` 參考](../azdata/reference/reference-azdata.md)
 - [什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
