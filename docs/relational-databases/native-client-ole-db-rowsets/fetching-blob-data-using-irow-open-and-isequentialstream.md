@@ -17,12 +17,12 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d3329b336bb5f302a950aa5ea03d9896239dea2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a58ab361c7e43537dedcb8b6115b3ff52d78b63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448366"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869518"
 ---
 # <a name="fetching-blob-data-by-using-irowopen-and-isequentialstream"></a>使用 IRow：： Open 和 ISequentialStream 提取 BLOB 資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,6 +83,5 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  大型資料可以使用 **ISequentialStream** 介面來繫結或擷取。 對於繫結的資料行，狀態旗標會藉由設定 DBSTATUS_S_TRUNCATED 指出資料是否遭到截斷。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 IRow 擷取 BLOB 資料](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
-  
+ [使用 IRow 擷取 BLOB 資料](./fetching-a-single-row-with-irow.md)  
   

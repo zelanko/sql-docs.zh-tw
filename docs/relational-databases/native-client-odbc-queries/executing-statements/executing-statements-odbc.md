@@ -17,12 +17,12 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45ac4b91f5aab26d1086bcc8e3b31c11821f75da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc2f16bf168fc7f37ac6f6518e7e16cd7dfa35c3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486807"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869363"
 ---
 # <a name="executing-statements-odbc"></a>執行陳述式 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88486807"
   
 -   準備執行  
   
- 直接執行牽涉到建立包含語句的字元字串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，並使用 **SQLExecDirect** 函式提交它以供執行。 準備執行則包括建立含有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的字元字串，然後在兩個階段中執行此字串。 第一個階段會使用 [SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360) 函數來剖析和編譯中語句的執行計畫 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 第二個階段會使用 **SQLExecute** 函數來執行先前已備妥的執行計畫。 這樣會省下每次執行時的剖析和編譯負擔。 應用程式通常會使用備妥的執行來重複執行相同且參數化的 SQL 陳述式。  
+ 直接執行牽涉到建立包含語句的字元字串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，並使用 **SQLExecDirect** 函式提交它以供執行。 準備執行則包括建立含有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的字元字串，然後在兩個階段中執行此字串。 第一個階段會使用 [SQLPrepare 函數](../../../odbc/reference/syntax/sqlprepare-function.md) 函數來剖析和編譯中語句的執行計畫 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 第二個階段會使用 **SQLExecute** 函數來執行先前已備妥的執行計畫。 這樣會省下每次執行時的剖析和編譯負擔。 應用程式通常會使用備妥的執行來重複執行相同且參數化的 SQL 陳述式。  
   
  直接和準備執行都可以執行單一 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式或 SQL 陳述式批次，也可以呼叫預存程序。  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88486807"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;執行查詢 ](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
-  
   
