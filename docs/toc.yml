@@ -4330,6 +4330,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: 記憶體管理架構
       href: relational-databases/memory-management-architecture-guide.md
+    - name: 診斷閂鎖競爭
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: 診斷自旋鎖競爭
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: 安裝
   items:
     - name: 概觀
