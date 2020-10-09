@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729249"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867697"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>DMACMD：評定遷移至 Azure SQL Database SQL Server 資料資產的就緒程度 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD：評定遷移至 Azure SQL SQL Server 資料資產的就緒程度 
 
 有許多組織嘗試遷移至 Azure 時，請務必評估現有的內部部署 SQL Server 實例，並在 Azure Vm 上找出正確的 Azure SQL 目標 Azure SQL Database、Azure SQL 受控執行個體或 SQL Server。 
 
@@ -87,7 +87,7 @@ C:\Program Files\Microsoft Data Migration Assistant\DmaCmd.exe /Action=Assess /A
 |**XML 元素** |**[定義]**  |
 |---------|---------|
 |`AssessmentName`|評量的名稱|
-|`AssessmentSourcePlatform`|來源 SQL Server 平臺。 預設值是 `SqlOnPrem`。|
+|`AssessmentSourcePlatform`|來源 SQL Server 平臺。 預設值為 `SqlOnPrem`。|
 |`AssessmentTargetPlatform`|以 SQL Server 平臺為目標。  </br> `AzureSqlDatabase` 適用于 Azure SQL Database 目標。 </br> `ManagedSqlServer` 適用于 Azure SQL 受控執行個體目標。 </br></br>**AzureSQLMI**評估 SQL 受控執行個體目標的評估範例。|
 |`AssessmentDatabases`|如果您需要評估實例中的所有資料庫，請只指定實例名稱，否則會列出每一行中的特定資料庫。 </br></br>**AzureSQLMI**評估範例中的所有資料庫 `Servername\SQL2017` ，以及實例中的兩個特定資料庫 `Servername\SQL2016` 。  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | 指定結果檔的格式。 `.DMA`、 `.JSON` 和 `.CSV` 分別。 按兩下 `.DMA` 以在 DMA UI 中開啟。 <br> `AssessmentResultDma` 需要將評量結果上傳至 Azure Migrate hub。  |
@@ -134,7 +134,7 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 - 執行評量的時間取決於資料庫物件的數目。 可能的話，請避免在生產系統上執行評量，並改為卸載至虛擬機器或預備伺服器，尤其是針對具有大量物件的資料庫。 
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md) \(英文\)
 * [Data Migration Assistant： Configuration settings](../dma/dma-configurationsettings.md)

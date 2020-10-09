@@ -15,12 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ee418dfb4378ea0291996a0a16e5f0596faf471
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423768"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867739"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88423768"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>準備一次陳述式，然後執行多次  
   
-1.  呼叫 [SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360) 來準備語句。  
+1.  呼叫 [SQLPrepare 函數](../../../odbc/reference/syntax/sqlprepare-function.md) 來準備語句。  
   
-2.  （選擇性）呼叫 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 來判斷備妥語句中的參數數目。  
+2.  （選擇性）呼叫 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 來判斷備妥語句中的參數數目。  
   
 3.  (選擇性) 針對準備陳述式中的每個參數：  
   
@@ -42,9 +42,9 @@ ms.locfileid: "88423768"
   
     -   如果陳述式具有參數標記，請將資料值放在繫結參數緩衝區中。  
   
-    -   呼叫 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 來執行備妥的語句。  
+    -   呼叫 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 來執行備妥的語句。  
   
-    -   如果使用了資料執行中的輸入參數， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 會傳回 SQL_NEED_DATA。 使用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以區區塊轉送資料。  
+    -   如果使用了資料執行中的輸入參數， [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 會傳回 SQL_NEED_DATA。 使用 [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) 和 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)以區區塊轉送資料。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>準備含有資料行取向參數繫結的陳述式  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88423768"
   
 2.  呼叫 SQLPrepare 來準備語句。  
   
-3.  （選擇性）呼叫 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 來判斷備妥語句中的參數數目。  
+3.  （選擇性）呼叫 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 來判斷備妥語句中的參數數目。  
   
 4.  （選擇性）針對準備語句中的每個參數，呼叫 SQLDescribeParam 以取得參數資訊。  
   
@@ -116,5 +116,4 @@ ms.locfileid: "88423768"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;執行查詢的 how to 主題 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

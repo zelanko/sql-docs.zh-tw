@@ -17,12 +17,12 @@ ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07b792c3e86cd53fc40a1d506fa040efc747378c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b465832e99c08cc8c4a17380fc894ecd3076a9c7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486693"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866737"
 ---
 # <a name="irowsetfastloadinsertrow-native-client-ole-db-provider"></a>IRowsetFastLoad：： InsertRow (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ HRESULT InsertRow(
  針對大量複製而定義資料列資料的存取子控制代碼。 所參考的存取子是資料列存取子，會繫結取用者所擁有的記憶體 (內含資料值)。  
   
  *pData*[in]  
- 取用者所擁有記憶體 (內含資料值) 的指標。 如需詳細資訊，請參閱 [DBBINDING 結構](https://go.microsoft.com/fwlink/?LinkId=65955)。  
+ 取用者所擁有記憶體 (內含資料值) 的指標。 如需詳細資訊，請參閱 [DBBINDING 結構](/previous-versions/windows/desktop/ms716845(v=vs.85))。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
@@ -76,5 +76,4 @@ HRESULT InsertRow(
   
 ## <a name="see-also"></a>另請參閱  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
   

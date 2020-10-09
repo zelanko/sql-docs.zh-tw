@@ -15,12 +15,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11156b3b3080c537f1fb65eee081632ce7f3c1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d32f5f577d9c594556c477620e89435cf66226
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423960"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869133"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88423960"
  當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行具有 output 子句的 INSERT、UPDATE、DELETE 或 MERGE 語句時，SQLRowCount 將不會傳回受影響的資料列計數，除非已取用 output 子句所產生之結果集內的所有資料列。 若要 sconsume 這些資料列，您可以呼叫 SQLFetch 或 SQLFetchScroll。 SQLResultCols 會傳回-1，直到所有結果資料列都已取用為止。 在 SQLFetch 或 SQLFetchScroll 傳回 SQL_NO_DATA 之後，應用程式必須呼叫 SQLRowCount 來判斷在呼叫 SQLMoreResults 之前，受影響的資料列數目，以移至下一個結果。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLRowCount 函式](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount 函式](../../odbc/reference/syntax/sqlrowcount-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

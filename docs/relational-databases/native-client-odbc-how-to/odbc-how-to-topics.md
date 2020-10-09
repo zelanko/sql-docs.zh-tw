@@ -12,12 +12,12 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ad00292ae7d5605b7cd54a2a04d040b94f8e20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a6d643708d3c2417a19becf071a4aef71972972
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460745"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868885"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 的使用說明主題
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,21 +26,21 @@ ms.locfileid: "88460745"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [設定 SQL Server ODBC 驅動程式的使用說明主題](https://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
+-   [設定 SQL Server ODBC 驅動程式的使用說明主題](./configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
 -   [配置控制碼並連接至 SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
 -   [&#40;ODBC&#41;執行查詢的 how to 主題 ](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [&#40;ODBC&#41;處理結果的 how to 主題 ](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+-   [&#40;ODBC&#41;處理結果的 how to 主題 ](./processing-results-process-results.md)  
   
 -   [使用資料指標的 how to 主題 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
 -   [使用 Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [執行預存程式的 how to 主題 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+-   [執行預存程式的 how to 主題 &#40;ODBC&#41;](./running-stored-procedures-call-stored-procedures.md)  
   
--   [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+-   [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ]()  
   
 -   [&#40;ODBC&#41;分析 ODBC 驅動程式效能的使用說明主題 ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88460745"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: 使用 ODBC 資料表值參數
-title: ODBC 資料表值參數的使用 |Microsoft Docs
+title: 使用 ODBC Table-Valued 參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d447c957c2e12039dc2f235eeb3fa802fe4ca4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40309d4743aae5944d508962e7409de8a29a704a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381977"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867933"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88381977"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>完整繫結多資料列緩衝區之下的資料表值參數 (使用記憶體中的所有值，將資料當做 TVP 傳送)  
  當搭配完整繫結的多資料列緩衝區使用時，記憶體中將提供所有參數值。 例如，這對於 OLTP 交易而言就是典型的情況，在這類交易中，資料表值參數可以封裝到單一預存程序中。 如果沒有資料表值參數，這會牽涉到動態產生複雜的多重陳述式批次，或是對伺服器進行多次呼叫。  
   
- 資料表值參數本身會使用 [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) 以及其他參數進行系結。 系結所有參數之後，應用程式會在每個資料表值參數上設定參數焦點屬性 SQL_SOPT_SS_PARAM_FOCUS，並針對資料表值參數的資料行呼叫 SQLBindParameter。  
+ 資料表值參數本身會使用 [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) 以及其他參數進行系結。 系結所有參數之後，應用程式會在每個資料表值參數上設定參數焦點屬性 SQL_SOPT_SS_PARAM_FOCUS，並針對資料表值參數的資料行呼叫 SQLBindParameter。  
   
  資料表值參數的伺服器類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有的新類型 SQL_SS_TABLE。 SQL_SS_TABLE 的繫結 C 類型一定必須是 SQL_C_DEFAULT。 資料表值參數繫結的參數不會傳送任何資料；它是用來傳遞資料表中繼資料，以及控制要如何傳遞資料表值參數之組成資料行中的資料。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88381977"
   
  有時應用程式會搭配動態 SQL 使用資料表值參數，而且必須提供此資料表值參數的類型名稱。 如果是這種情況，而且資料表值參數未定義于連接的目前預設架構中，SQL_CA_SS_TYPE_CATALOG_NAME 和 SQL_CA_SS_TYPE_SCHEMA_NAME 必須使用 SQLSetDescField 來設定。 因為資料表類型定義和資料表值參數必須在相同的資料庫中，所以如果應用程式使用資料表值參數，就不能設定 SQL_CA_SS_TYPE_CATALOG_NAME。 否則，SQLSetDescField 會報告錯誤。  
   
- 此案例的範例程式碼位於 `demo_fixed_TVP_binding` [使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)中的程式。  
+ 此案例的範例程式碼位於 `demo_fixed_TVP_binding` [使用 Table-Valued &#40;ODBC&#41;的參數 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)程式中。  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>以資料流方式傳送資料列的資料表值參數 (使用資料執行中，將資料當做 TVP 傳送)  
  在此案例中，應用程式會在要求時提供資料列給驅動程式，然後以資料流方式將資料列傳送給伺服器。 如此就不需要在記憶體中緩衝處理所有資料列。 這是大量插入/更新案例的代表。 資料表值參數會提供參數陣列與大量複製之間某一處的效能點。 也就是說，編寫資料表值參數就跟參數陣列一樣輕鬆，但是資料表值參數在伺服器上提供更大的彈性。  
@@ -61,7 +61,7 @@ ms.locfileid: "88381977"
   
  當所有資料表值參數資料行都已經處理過之後，此驅動程式會回到資料表值參數來進一步處理資料表值參數資料的資料列。 因此，如果是資料執行中的資料表值參數，此驅動程式不會遵循一般的繫結參數循序掃描。 系結的資料表值參數將會輪詢，直到使用 *StrLen_Or_IndPtr* 等於0的 SQLPutData 呼叫為止，此時驅動程式會略過資料表值參數資料行，並移至下一個實際的預存程式參數。  當 SQLPutData 傳遞大於或等於1的指標值時，驅動程式會依序處理資料表值參數資料行和資料列，直到它具有所有系結資料列和資料行的值為止。 然後此驅動程式會回到資料表值參數。 從 SQLParamData 接收資料表值參數的 token，以及呼叫 SQLPutData (hstmt、Null、n) 如果是資料表值參數，應用程式必須將下一個資料列的資料表值參數組成資料行資料和指標緩衝區內容，以傳遞至伺服器。  
   
- 此案例的範例程式碼位於 `demo_variable_TVP_binding` [使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
+ 此案例的範例程式碼位於 `demo_variable_TVP_binding` [使用 Table-Valued 參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>從系統目錄擷取資料表值參數中繼資料  
  當應用程式針對具有資料表值參數參數的程式呼叫 SQLProcedureColumns 時，會以 SQL_SS_TABLE 傳回 DATA_TYPE，TYPE_NAME 是資料表值參數之資料表類型的名稱。 系統會將兩個額外的資料行加入至 SQLProcedureColumns 所傳回的結果集： SS_TYPE_CATALOG_NAME 會傳回定義資料表值參數之資料表類型的目錄名稱，而 SS_TYPE_SCHEMA_NAME 會傳回定義資料表值參數之資料表類型的架構名稱。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
@@ -72,7 +72,7 @@ ms.locfileid: "88381977"
   
  應用程式會使用 SQLColumns 來判斷資料表類型的資料行，其方式與針對持續性資料表的資料行相同，但必須先將 SQL_SOPT_SS_NAME_SCOPE 設定為表示它正在處理資料表類型，而不是實際資料表。 SQLPrimaryKeys 也可以搭配資料表類型使用，同樣也可以使用 SQL_SOPT_SS_NAME_SCOPE。  
   
- 此案例的範例程式碼位於 `demo_metadata_from_catalog_APIs` [使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
+ 此案例的範例程式碼位於 `demo_metadata_from_catalog_APIs` [使用 Table-Valued 參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>針對準備好的陳述式擷取資料表值參數中繼資料  
  在此案例中，應用程式會使用 SQLNumParameters 和 SQLDescribeParam 來取得資料表值參數的中繼資料。  
@@ -85,9 +85,8 @@ ms.locfileid: "88381977"
   
  在此案例中，應用程式也會使用 SQLColumns 來取出資料表值參數的資料行中繼資料，因為 SQLDescribeParam 不會傳回資料表值參數資料行的資料行中繼資料。  
   
- 此使用案例的範例程式碼位於 `demo_metadata_from_prepared_statement` [使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
+ 此使用案例的範例程式碼位於 `demo_metadata_from_prepared_statement` [使用 Table-Valued 參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)的常式中。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC&#41;&#40;資料表值參數 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
-  
   

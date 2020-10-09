@@ -12,12 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455527"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868264"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88455527"
   
 -   Database Mail 的管理，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立電子郵件伺服器、電子郵件設定檔和電子郵件帳戶。 如需詳細資訊，請參閱 [Database Mail](../../relational-databases/database-mail/database-mail.md)。  
   
--   已註冊的伺服器支援，可用於註冊連接資訊。 如需詳細資訊，請參閱 [註冊伺服器](../../tools/sql-server-management-studio/register-servers.md)。  
+-   已註冊的伺服器支援，可用於註冊連接資訊。 如需詳細資訊，請參閱 [註冊伺服器](../../ssms/register-servers/register-servers.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的追蹤和重新執行。 如需詳細資訊，請參閱 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)、 [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)、 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)和 [擴充事件](../../relational-databases/extended-events/extended-events.md)。  
   
@@ -175,5 +175,4 @@ ms.locfileid: "88455527"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫管理物件概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-  
   

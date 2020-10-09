@@ -14,12 +14,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb647cc83c9d98aedc15531c919c54f9ae7d53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8d8b297afe44f990b7d0fa685ffa4aff51accf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494068"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867785"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "88494068"
   
      設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY 屬性 (這是慣用的選項)。  
   
-     Or  
+     或者  
   
      設定 SQL_CURSOR_SCROLLABLE 和 SQL_CURSOR_SENSITIVITY 屬性。  
   
 2.  使用 SQL_ATTR_ROW_ARRAY_SIZE 屬性呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定資料列集大小。  
   
-3.  如果使用 WHERE CURRENT OF 子句完成定點更新，可以選擇呼叫 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 來設定資料指標名稱。  
+3.  如果使用 WHERE CURRENT OF 子句完成定點更新，可以選擇呼叫 [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) 來設定資料指標名稱。  
   
 4.  執行 SQL 陳述式。  
   
-5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，可以選擇呼叫 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
+5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) 提供，可以選擇呼叫 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
   
 6.  呼叫 [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) 來取得資料列集中的資料行 (C) 數目。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "88494068"
   
     -   如果該函數傳回 SQL_NO_DATA，表示沒有其他可用的結果集。  
   
-    -   如果該函數傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 來判斷是否可以使用來自 PRINT 或 RAISERROR 陳述式的輸出。  
+    -   如果該函數傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，請呼叫 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 來判斷是否可以使用來自 PRINT 或 RAISERROR 陳述式的輸出。  
   
      如果繫結陳述式參數用於預存程序的輸出參數或傳回值，請使用繫結參數緩衝區中目前可用的資料。  
   
-     在使用繫結參數時，每個 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 呼叫都會執行 SQL 陳述式 S 次，其中 S 是繫結參數陣列中的元素數。 這代表將要處理 S 個結果集，其中每個結果集都是由 SQL 陳述式的單一執行通常會傳回的結果集、輸出參數和傳回碼等所有項目而組成。  
+     在使用繫結參數時，每個 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 或 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) 呼叫都會執行 SQL 陳述式 S 次，其中 S 是繫結參數陣列中的元素數。 這代表將要處理 S 個結果集，其中每個結果集都是由 SQL 陳述式的單一執行通常會傳回的結果集、輸出參數和傳回碼等所有項目而組成。  
   
      請注意，當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
@@ -77,5 +77,4 @@ ms.locfileid: "88494068"
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料指標的 how to 主題 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
   

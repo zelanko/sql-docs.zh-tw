@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420542"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868920"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>管理 text 和 image 資料行 - 使用資料執行中資料行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420542"
   
     -   針對第四個參數，放入程式定義的資料行識別碼。  
   
-2.  呼叫 [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) 會傳回 SQL_NEED_DATA，這表示資料執行中資料行已準備就緒，可進行處理。  
+2.  呼叫 [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) 會傳回 SQL_NEED_DATA，這表示資料執行中資料行已準備就緒，可進行處理。  
   
 3.  針對每一個資料執行中資料行：  
   
-    -   呼叫 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以取得資料行陣列指標。 如果有另一個資料執行中資料行，它將會傳回 SQL_NEED_DATA。  
+    -   呼叫 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 以取得資料行陣列指標。 如果有另一個資料執行中資料行，它將會傳回 SQL_NEED_DATA。  
   
     -   呼叫 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 一次或多次來傳送資料行資料，直到傳送長度為止。  
   
-4.  呼叫 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以指出最終資料執行中資料行的所有資料都已傳送。 它不會傳回 SQL_NEED_DATA。  
+4.  呼叫 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 以指出最終資料執行中資料行的所有資料都已傳送。 它不會傳回 SQL_NEED_DATA。  
 
 ## <a name="example"></a>範例  
  此範例顯示如何使用 SQLGetData 讀取 SQL_LONG 變數字元資料。 IA64 不支援此範例。  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ](./odbc-how-to-topics.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1610a48081c8eb8e4cab0829527516e9ee44246
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470414"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867708"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "88470414"
     
 ### <a name="to-use-a-statement"></a>使用陳述式  
   
-1.  利用 SQL_HANDLE_STMT 的 *HandleType* 來呼叫 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)，以配置陳述式控制代碼。  
+1.  利用 SQL_HANDLE_STMT 的 *HandleType* 來呼叫 [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)，以配置陳述式控制代碼。  
   
 2.  您可以選擇呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定陳述式選項，或是呼叫 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 來取得陳述式屬性。  
   
      若要使用伺服器資料指標，您必須將資料指標屬性設定為預設值以外的值。  
   
-3.  如果此陳述式將會執行數次，您可以選擇預備此陳述式搭配 [SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)一起執行。  
+3.  如果此陳述式將會執行數次，您可以選擇預備此陳述式搭配 [SQLPrepare 函數](../../../odbc/reference/syntax/sqlprepare-function.md)一起執行。  
   
-4.  如果此陳述式已經繫結參數標記，您可以選擇使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 將這些參數標記繫結至程式變數。 如果此陳述式已備妥，您可以呼叫 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 和 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 來尋找參數的數目和參數的特性。  
+4.  如果此陳述式已經繫結參數標記，您可以選擇使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 將這些參數標記繫結至程式變數。 如果此陳述式已備妥，您可以呼叫 [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) 和 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 來尋找參數的數目和參數的特性。  
   
 5.  使用 SQLExecDirect 直接執行陳述式  
   
      \- 或 -  
   
-     如果此陳述式已備妥，請使用 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 將它執行多次。  
+     如果此陳述式已備妥，請使用 [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) 將它執行多次。  
   
      \- 或 -  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88470414"
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;執行查詢的 how to 主題 ](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

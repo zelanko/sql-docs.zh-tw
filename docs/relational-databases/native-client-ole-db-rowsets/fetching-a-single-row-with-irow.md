@@ -19,12 +19,12 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89b550533363e6526b0ce9a2affd02d1d8bc71c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e70f3aa9fc0faef9a6c80d5009818329dd7abcc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88327824"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868727"
 ---
 # <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>使用 IRow 提取單一資料列 (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,9 +42,8 @@ ms.locfileid: "88327824"
   
 -   [使用 IRow::GetColumns](../../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md)  
   
--   [使用 IRow 擷取 BLOB 資料](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+-   [使用 IRow 擷取 BLOB 資料]()  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
-  
   

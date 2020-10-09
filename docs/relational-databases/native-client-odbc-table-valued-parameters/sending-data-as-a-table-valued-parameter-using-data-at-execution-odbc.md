@@ -1,6 +1,6 @@
 ---
 description: 使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
-title: '資料表值參數、資料執行中 (ODBC) '
+title: 'Table-Valued 參數、資料執行中 (ODBC) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499126"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868211"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   這與 [ [All In Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) ] 程式類似，但會針對資料表值參數使用資料執行中。  
   
- 如需示範資料表值參數的另一個範例，請參閱 [使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 如需示範資料表值參數的另一個範例，請參閱 [使用 Table-Valued 參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
  在此範例中，當呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 然後，應用程式會重複呼叫 SQLParamData，直到驅動程式傳回 SQL_NEED_DATA 以外的值為止。 驅動程式會傳回 *ParameterValuePtr* ，通知應用程式它要求資料的參數。 應用程式會在下一次呼叫 SQLParamData 之前呼叫 SQLPutData，以提供參數資料。 對於資料表值參數，SQLPutData 的呼叫會指出它為驅動程式準備的資料列數目 (在此範例中，一律為 1) 。 當資料表值的所有資料列都傳遞至驅動程式時，就會呼叫 SQLPutData，表示有0個數據列可用。  
   
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 資料表值參數程式設計範例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [ODBC 資料表值參數程式設計範例](./table-valued-parameters-odbc.md)  
   

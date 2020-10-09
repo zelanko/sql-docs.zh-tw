@@ -1,6 +1,6 @@
 ---
 title: 呼叫預存程式 |Microsoft Docs
-description: 瞭解 ODBC 呼叫 escape 序列，這是執行預存程式的慣用方法。 Native Client ODBC 驅動程式也支援交易 SQLEXECUTE。
+description: 深入瞭解 ODBC 呼叫 escape 序列，這是執行預存程式的慣用方法。 Native Client ODBC 驅動程式也支援交易 SQLEXECUTE。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,31 +20,32 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ebd8eb539190c65e1e1a97ce55579eb93f180
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2b96446e0d73da09bb6dbbb547c6a0171cb20170
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004657"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867038"
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式同時支援 ODBC 呼叫 escape 序列和 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)語句來執行預存程式; odbc 呼叫 escape 序列是慣用的方法。 使用 ODBC 語法可讓應用程式擷取預存程序的傳回碼，而且會最佳化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，使用最初開發的通訊協定，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦之間傳送遠端程序 (RPC) 呼叫。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式同時支援 ODBC call escape 序列和 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)語句來執行預存程式; odbc call escape 序列是慣用的方法。 使用 ODBC 語法可讓應用程式擷取預存程序的傳回碼，而且會最佳化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，使用最初開發的通訊協定，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦之間傳送遠端程序 (RPC) 呼叫。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用具有 ODBC 的具名引數來呼叫預存程式時（如需詳細資訊，請參閱[依名稱系結參數（具名引數）](https://go.microsoft.com/fwlink/?LinkID=209721)），參數名稱必須以 ' \@ ' 字元開頭。 這是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會比 Microsoft Data Access Components (MDAC) 更嚴格地強制執行此限制。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用具有 ODBC 的具名引數來呼叫預存程式時 (如需詳細資訊，請參閱[ (具名引數的名稱系結參數) ](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)) ，參數名稱必須以 ' \@ ' 字元開頭。 這是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會比 Microsoft Data Access Components (MDAC) 更嚴格地強制執行此限制。  
   
  用來呼叫程序的 ODBC CALL 逸出序列為：  
   
- {[**？ =**]**呼叫**_procedure_name_[（[*參數*] [**，**[*parameter*]] ...）]}  
+ {[**？ =**]**呼叫**_procedure_name_[ ( [*參數*] [**，**[*參數*]] ... ) ]}  
   
- 其中*procedure_name*會指定程式的名稱，而*參數*會指定程式參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
+ 其中 *procedure_name* 指定程式的名稱， *參數* 指定程式參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
   
- 程序可以有零或多個參數。 它也可以傳回值 (如語法開頭的選用參數標記 ?= 所指示)。 如果參數是輸入參數或輸入/輸出參數，則可以是常值或參數標記。 如果參數是輸出參數，它必須是參數標記，因為輸出不明。 參數標記必須與[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)系結，才能執行程序呼叫語句。  
+ 程序可以有零或多個參數。 它也可以傳回值 (如語法開頭的選用參數標記 ?= 所指示)。 如果參數是輸入參數或輸入/輸出參數，則可以是常值或參數標記。 如果參數是輸出參數，它必須是參數標記，因為輸出不明。 在執行程序呼叫語句之前，必須先使用 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 來系結參數標記。  
   
  輸入和輸入/輸出參數可以從程序呼叫省略。 如果呼叫包含括號但沒有任何參數的程序，驅動程式會引導資料來源使用第一個參數的預設值。 例如：  
   
- {**call** _procedure_name_**（）**}  
+ {**call** _procedure_name_ ** ( ) **}  
   
  如果程序沒有任何參數，該程序可能會失敗。 如果呼叫沒有括號的程序，驅動程式不會傳送任何參數值。 例如：  
   
@@ -73,7 +74,7 @@ ms.locfileid: "86004657"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- 不過，利用預設值執行時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援使用引號識別碼的形式與包含 ISO 標準未指定為合法識別碼之字元的識別碼。 例如，驅動程式無法使用引號識別碼的 CALL 語句來存取名為 **"My. Proc"** 的預存程式：  
+ 不過，利用預設值執行時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援使用引號識別碼的形式與包含 ISO 標準未指定為合法識別碼之字元的識別碼。 例如，驅動程式無法存取名稱為 **"My. Proc"** 的預存程式，方法是使用具有引號識別碼的 CALL 語句：  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -85,7 +86,7 @@ ms.locfileid: "86004657"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- 伺服器會引發錯誤，指出名為**MyDB**的連結伺服器不存在。  
+ 伺服器會引發錯誤，指出名為 **MyDB** 的連結伺服器不存在。  
   
  此問題在使用有括號的識別碼時不存在，因為此陳述式會正確解譯：  
   
@@ -95,5 +96,4 @@ ms.locfileid: "86004657"
   
 ## <a name="see-also"></a>另請參閱  
  [執行預存程序](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

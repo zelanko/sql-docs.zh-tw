@@ -1,6 +1,6 @@
 ---
 description: 資料表值參數 (ODBC)
-title: ODBC)  (的資料表值參數 |Microsoft Docs
+title: Table-Valued (ODBC) 的參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420502"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867864"
 ---
 # <a name="table-valued-parameters-odbc"></a>資料表值參數 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 對資料表值參數的支援可讓用戶端應用程式有效率地將參數化資料傳送給伺服器，其方式是使用一個呼叫來傳送多個資料列給伺服器。  
   
- 如需有關伺服器上之資料表值參數的詳細資訊，請參閱 [使用資料表值參數 &#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 如需有關伺服器上之資料表值參數的詳細資訊，請參閱 [使用 Table-Valued 參數 &#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
  在 ODBC 中，這是您可以將資料表值參數傳送給伺服器的兩種方式：  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420502"
   
  [ODBC 資料表值參數 API 摘要](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  列出可支援資料表值參數的 ODBC 函數。  
-  
- [ODBC 資料表值參數程式設計範例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- 描述如何執行一般工作。  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [資料表值參數 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

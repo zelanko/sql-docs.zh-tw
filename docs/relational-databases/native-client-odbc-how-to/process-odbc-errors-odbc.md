@@ -14,29 +14,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5bade3c381024ef8e20ac069ed3effd16ac1e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490861"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868870"
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  您可以使用兩個 ODBC 函式呼叫來取得 ODBC 訊息： [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 **SQLGetDiagField** 擷取。  
+  您可以使用兩個 ODBC 函式呼叫來取得 ODBC 訊息： [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 **SQLGetDiagField** 擷取。  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
+ [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用診斷欄位呼叫 **SQLGetDiagField**。 IA64 不支援此範例。  
+ 此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用診斷欄位呼叫 **SQLGetDiagField**。 IA64 不支援此範例。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
  您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫   (您可以從 [Microsoft SQL Server 範例和群組專案](https://go.microsoft.com/fwlink/?LinkID=85384) 首頁下載 AdventureWorks 範例資料庫。 ) 這個資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎， (驅動程式名稱是 "SQL Server" ) 。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
@@ -241,5 +241,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
   

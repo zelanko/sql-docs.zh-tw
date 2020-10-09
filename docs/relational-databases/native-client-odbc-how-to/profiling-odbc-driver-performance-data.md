@@ -14,12 +14,12 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bedad59ad9f61b7ab12b207bc87bf1c7e250c8a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88329434"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868858"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驅動程式效能資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88329434"
   此範例顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，以記錄效能統計資料。 此範例會建立一個檔案：odbcperf.log。此範例會示範如何建立效能資料記錄檔，以及直接從 SQLPERF 資料結構顯示效能資料 (SQLPERF 結構定義於 Odbcss.h 中)。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理員記錄驅動程式效能資料  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88329434"
   
 3.  按一下記錄效能的資料來源。  
   
-4.  按一下 [設定]****。  
+4.  按一下 [設定]  。  
   
 5.  在 [設定 DSN] Microsoft SQL Server 中，流覽至含有 **記錄檔 ODBC 驅動程式統計資料**的頁面至記錄檔。  
   
@@ -244,5 +244,4 @@ int main() {
 ## <a name="see-also"></a>另請參閱  
  [&#40;ODBC&#41;分析 ODBC 驅動程式效能的使用說明主題 ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [分析 ODBC 驅動程式效能](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
-  
   

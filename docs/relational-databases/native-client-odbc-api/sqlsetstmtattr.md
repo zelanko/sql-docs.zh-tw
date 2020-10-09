@@ -15,12 +15,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909eca1ac7b61da6d9d29ecbe0f4283065b122b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420772"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868458"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88420772"
   
 |*ValuePtr* 值|描述|  
 |----------------------|-----------------|  
-|SQL_DP_ON|預設值。 在呼叫 [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360)函式之後，語句準備會延遲，直到呼叫 **SQLExecute** ，或執行中繼屬性作業 (**SQLDescribeCol** 或 **SQLDescribeParam**) 執行為止。|  
+|SQL_DP_ON|預設值。 在呼叫 [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)函式之後，語句準備會延遲，直到呼叫 **SQLExecute** ，或執行中繼屬性作業 (**SQLDescribeCol** 或 **SQLDescribeParam**) 執行為止。|  
 |SQL_DP_OFF|語句會在 **SQLPrepare** 執行時立即備妥。|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -149,7 +149,6 @@ ms.locfileid: "88420772"
  如果 SQL_SOPT_SS_NAME_SCOPE 具有 SQL_SS_NAME_SCOPE_TABLE 以外的值，則會呼叫目錄函式，然後再呼叫 SQLTables、SQLColumns 或 SQLPrimaryKeys，SQL_ERROR 會傳回。 此時會產生包含 SQLSTATE HY010 與「函數順序錯誤 (SQL_SOPT_SS_NAME_SCOPE 未設定為 SQL_SS_NAME_SCOPE_TABLE)」訊息的診斷記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetStmtAttr 函式](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 函式](../../odbc/reference/syntax/sqlgetstmtattr-function.md)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460756"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868914"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 資料行 - 使用資料執行中參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88460756"
   
     -   使用程式定義之參數識別碼的 **rgbValue** (第八個參數)。  
   
-2.  呼叫 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 或 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 會傳回 SQL_NEED_DATA，這表示資料執行中參數已準備就緒可供處理。  
+2.  呼叫 [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) 或 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) 會傳回 SQL_NEED_DATA，這表示資料執行中參數已準備就緒可供處理。  
   
 3.  針對每一個資料執行中參數：  
   
-    -   呼叫 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 來取得程式定義的參數識別碼。 如果有另一個資料執行中參數，它將會傳回 SQL_NEED_DATA。  
+    -   呼叫 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 來取得程式定義的參數識別碼。 如果有另一個資料執行中參數，它將會傳回 SQL_NEED_DATA。  
   
     -   呼叫 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 一次或多次來傳送參數資料，直到傳送長度為止。  
   
-4.  呼叫 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 來指示最終資料執行中參數的所有資料都已傳送。 它不會傳回 SQL_NEED_DATA。  
+4.  呼叫 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 來指示最終資料執行中參數的所有資料都已傳送。 它不會傳回 SQL_NEED_DATA。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何使用 SQLParamData 和 SQLPutData 讀取 SQL_LONG 變數字元資料。 IA64 不支援此範例。  
@@ -226,6 +226,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [&#40;ODBC&#41;管理文字和影像資料行的 how to 主題 ](./odbc-how-to-topics.md)  
   

@@ -1,6 +1,6 @@
 ---
-description: '執行 SQL Server Native Client 的使用者定義函數，並 (OLE DB 處理傳回碼) '
-title: '使用者定義函數，傳回碼 (OLE DB) '
+description: '執行 SQL Server Native Client User-Defined 函式和處理傳回碼 (OLE DB) '
+title: 'User-Defined 函式，傳回碼 (OLE DB) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50cdc551c609f5a30e7b70aa844cb4e46739070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0f9f31caa5b026df62d509db5c276e60839877b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475730"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866649"
 ---
-# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>執行 SQL Server Native Client 的使用者定義函數，並 (OLE DB 處理傳回碼) 
+# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>執行 SQL Server Native Client User-Defined 函式和處理傳回碼 (OLE DB) 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   在這個範例中，您會執行使用者定義函數，而且會列印傳回碼。 IA64 不支援此範例。  
@@ -29,7 +29,7 @@ ms.locfileid: "88475730"
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  執行第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以建立應用程式所使用的預存程序。  
@@ -369,5 +369,4 @@ go
   
 ## <a name="see-also"></a>另請參閱  
  [處理結果操作說明主題 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   
