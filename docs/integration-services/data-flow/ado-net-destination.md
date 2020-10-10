@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425900"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412744"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
 
@@ -96,7 +96,7 @@ ms.locfileid: "88425900"
   
  只有傳回 <xref:System.Data.SqlClient.SqlConnection> 物件的 ADO.NET 提供者才支援使用 <xref:System.Data.SqlClient.SqlBulkCopy> 介面。 .NET Data Provider for SQL Server (SqlClient) 會傳回 <xref:System.Data.SqlClient.SqlConnection> 物件，而自訂提供者則可能傳回 <xref:System.Data.SqlClient.SqlConnection> 物件。  
   
- 您可以使用 .NET Data Provider for SQL Server (SqlClient) 連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+ 您可使用 .NET Data Provider for SQL Server (SqlClient) 連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
  如果您選取 [盡可能使用大量插入]  ，並將 [錯誤]  選項設定為 [重新導向資料列]  ，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤]  選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   

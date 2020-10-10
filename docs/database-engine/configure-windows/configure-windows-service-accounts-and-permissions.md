@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: c3a609c9d9cdf4f01fea153fa85316920b674e88
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042799"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670308"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 
@@ -72,7 +72,6 @@ ms.locfileid: "90042799"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|
 
 ## <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的服務
 
@@ -172,7 +171,7 @@ ms.locfileid: "90042799"
 
   若要針對 SQL Server 2014 或更新版本使用 gMSA，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](https://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。
 
-  如需詳細資訊，請參閱[群組受控服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)
+  如需詳細資訊，請參閱[群組受控服務帳戶](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11))
 
   > [!NOTE]
   > 網域系統管理員必須先在 Active Directory 中建立 gMSA，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。
@@ -195,7 +194,7 @@ ms.locfileid: "90042799"
 
 如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱[服務帳戶的逐步指南](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的**受管理的服務帳戶和虛擬帳戶概念**一節，以及[受管理的服務帳戶常見問題集 (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。
 
-**安全性注意事項：** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 如果可能的話，請使用 [MSA](#MSA) 或[虛擬帳戶](#VA_Desc)。 如果無法使用 MSA 或虛擬帳戶，請使用特定低權限的使用者帳戶或網域帳戶，而不要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的共用帳戶。 針對不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用個別的帳戶。 請勿將其他權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或服務群組。 權限將透過群組成員資格授與，或直接授與服務 SID (如果支援服務 SID)。
+**安全性注意事項：** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 請在允許情況下使用 [MSA](#MSA)、[gMSA](#GMSA) 或[虛擬帳戶](#VA_Desc)。 如果無法使用 MSA、gMSA 或虛擬帳戶，請使用特定低權限的使用者帳戶或網域帳戶，而不要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的共用帳戶。 針對不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用個別的帳戶。 請勿將其他權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或服務群組。 權限將透過群組成員資格授與，或直接授與服務 SID (如果支援服務 SID)。
 
 ### <a name="automatic-startup"></a><a name="Auto_Start"></a> 自動啟動
 
@@ -223,7 +222,7 @@ ms.locfileid: "90042799"
 |R 服務或機器學習服務|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS\*\*\*|
 |PolyBase 引擎| PBENGSVCACCOUNT、PBENGSVCPASSWORD、PBENGSVCSTARTUPTYPE、PBDMSSVCACCOUNT、PBDMSSVCPASSWORD、PBDMSSVCSTARTUPTYPE、PBSCALEOUT、PBPORTRANGE。
 
-\*需自動安裝的詳細資訊和範例語法，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。
+\*需自動安裝的詳細資訊和範例語法，請參閱[從命令提示字元安裝 SQL Server 2016](../install-windows/install-sql-server-from-the-command-prompt.md)。
 
 \*\*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務。
 
@@ -249,7 +248,7 @@ ms.locfileid: "90042799"
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> 服務組態和存取控制
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會對它的每個服務啟用個別服務 SID，以提供深度的服務隔離和防禦。 每個服務 SID 都是衍生自服務名稱，而且是該服務專用的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的服務 SID 名稱可能是 **NT Service\MSSQL$** _\<InstanceName>_ 。 服務隔離可讓服務存取特定物件，而不需要以高權限帳戶執行或降低物件的安全性保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可以透過使用包含服務 SID 的存取控制項目，來限制其資源的存取權。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會對它的每個服務啟用個別服務 SID，以提供深度的服務隔離和防禦。 每個服務 SID 都是衍生自服務名稱，而且是該服務專用的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的具名執行個體服務 SID 名稱可能是 **NT Service\MSSQL$** _\<InstanceName>_ 。 服務隔離可讓服務存取特定物件，而不需要以高權限帳戶執行或降低物件的安全性保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可以透過使用包含服務 SID 的存取控制項目，來限制其資源的存取權。
 
 > [!NOTE]
 > 在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (以及更新版本) 上，個別服務 SID 可以是服務所使用的虛擬帳戶。
@@ -426,7 +425,7 @@ ms.locfileid: "90042799"
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor|調整資料庫以達到最佳查詢效能。|第一次使用時，具有系統管理認證的使用者必須初始化應用程式。 初始化之後，dbo 使用者使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 只能微調他們擁有的資料表。 如需詳細資訊，請參閱《 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 線上叢書》中的＜初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tuning Advisor＞。|
 
 > [!IMPORTANT]
-> 在升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 Windows 驗證，並確認必要的預設組態： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin (系統管理員) 群組的成員。
+> 在升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，請先啟用 SQL Server Agent 並驗證必要的預設組態：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定伺服器角色的成員。
 
 ### <a name="registry-permissions"></a><a name="Registry"></a> 登錄權限
 
@@ -446,7 +445,7 @@ ms.locfileid: "90042799"
 
 Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 為支援此功能，會在**中提供 Windows WMI 提供者 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的個別服務 SID。
 
-SQL WMI 提供者需要下列權限：
+SQL WMI 提供者需要下列最低權限：
 
 - msdb 資料庫中 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員資格。
 - 伺服器中的**CREATE DDL EVENT NOTIFICATION** 權限。
@@ -485,11 +484,11 @@ SQL WMI 提供者需要下列權限：
 
 #### <a name="sa-account"></a><a name="sa"></a> sa 帳戶
 
-**sa** 帳戶一律做為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 登入存在，而且是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 僅使用 Windows 驗證安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] (也就是未啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證) 時， **sa** 登入仍然存在，但是會停用。 如需啟用 **sa** 帳戶的詳細資訊，請參閱 [變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。
+**sa** 帳戶一律做為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 登入存在，而且是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 僅使用 Windows 驗證安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] (也就是未啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證) 時，儘管 **A** 登入仍然存在，但是會停用，且密碼是複雜且隨機的。 如需啟用 **sa** 帳戶的詳細資訊，請參閱 [變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。
 
 #### <a name="sql-server-per-service-sid-login-and-privileges"></a><a name="Logins"></a> SQL Server 個別服務 SID 登入和權限
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的個別服務 SID 會做為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 登入提供。 個別服務 SID 登入是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的個別服務 SID (也稱為服務安全性主體 (SID)) 會佈建為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 登入。 個別服務 SID 登入是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 如需個別服務 SID 的詳細資訊，請參閱[使用服務 SID 將權限授與 SQL Server 中的服務](../../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md)。
 
 #### <a name="sql-server-agent-login-and-privileges"></a><a name="Agent"></a> SQL Server Agent 登入和權限
 
@@ -513,9 +512,9 @@ SQL WMI 提供者需要下列權限：
 
 ### <a name="ssas-provisioning"></a><a name="SSAS"></a> SSAS 提供
 
-[!INCLUDE[ssAS](../../includes/ssas-md.md)] 服務帳戶需求會依據您部署伺服器的方式而有所不同。 如果您要安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會要求您將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務設定為以網域帳戶執行。 網域帳戶是支援 SharePoint 內建的受管理帳戶設備所需。 基於這個理由， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會針對 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝提供預設的服務帳戶 (例如虛擬帳戶)。 如需佈建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的詳細資訊，請參閱 [設定 Power Pivot 服務帳戶](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)。
+[!INCLUDE[ssAS](../../includes/ssas-md.md)] 服務帳戶需求會依據您部署伺服器的方式而有所不同。 如果您要安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會要求您將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務設定為以網域帳戶執行。 網域帳戶是支援 SharePoint 內建的受管理帳戶設備所需。 基於這個理由， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會針對 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝提供預設的服務帳戶 (例如虛擬帳戶)。 如需佈建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的詳細資訊，請參閱 [設定 Power Pivot 服務帳戶](/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)。
 
-針對所有其他獨立 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 安裝，您可以提供以網域帳戶、內建系統帳戶、受管理的帳戶或虛擬帳戶執行的服務。 如需佈建帳戶的詳細資訊，請參閱 [設定服務帳戶 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)。
+針對所有其他獨立 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 安裝，您可以提供以網域帳戶、內建系統帳戶、受管理的帳戶或虛擬帳戶執行的服務。 如需佈建帳戶的詳細資訊，請參閱 [設定服務帳戶 &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services)。
 
 針對叢集安裝，您必須指定網域帳戶或內建系統帳戶。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 容錯移轉叢集不支援受管理的帳戶，也不支援虛擬帳戶。
 
@@ -551,18 +550,18 @@ SQL WMI 提供者需要下列權限：
 
 ### <a name="description-of-service-accounts"></a><a name="Serv_Accts"></a> 服務帳戶的描述
 
-服務帳戶是用來啟動 Windows 服務 (例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 的帳戶。
+服務帳戶是用來啟動 Windows 服務 (例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 的帳戶。 執行 SQL Server 時，除了服務 SID 之外，不需要將服務帳戶作為登入新增至 SQL Server，服務 SID 一律存在，且是 **sysamin** 固定伺服器角色的成員。
 
 #### <a name="accounts-available-with-any-operating-system"></a><a name="Any_OS"></a> 可搭配任何作業系統使用的帳戶
 
-除了前段所描述新的 [MSA](#MSA) 和 [虛擬帳戶](#VA_Desc) 之外，以下帳戶都可以使用。
+除了前段所描述新的 [MSA](#MSA)、[gMSA](#GMSA) 與 [虛擬帳戶](#VA_Desc)之外，下列帳戶都可以使用。
 
 <a name="Domain_User"></a> **網域使用者帳戶**
 
 如果此服務必須與網路服務互動，請存取檔案共用等網域資源。如果它使用執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之其他電腦的連結的伺服器連接，您可能會使用最低權限的網域帳戶。 許多伺服器對伺服器的活動只能以網域使用者帳戶執行。 這個帳戶應該由環境中的網域管理所預先建立。
 
 > [!NOTE]
-> 如果您將應用程式設定為使用網域帳戶，則可以隔離應用程式的權限，不過必須手動管理密碼或建立自訂解決方案來管理這些密碼。 許多伺服器應用程式都是使用此策略來增強安全性，不過此策略需要額外的管理和複雜性。 在這些部署中，服務管理員會花相當多時間進行維護工作，例如管理 Kerberos 驗證所需的服務密碼和服務主要名稱 (SPN)。 此外，這些維護工作都可能干擾服務。
+> 如果將 SQL Server 設定為使用網域帳戶，則可隔離服務的權限，不過必須手動管理密碼或建立自訂解決方案來管理這些密碼。 許多伺服器應用程式都是使用此策略來增強安全性，不過此策略需要額外的管理和複雜性。 在這些部署中，服務管理員會花相當多時間進行維護工作，例如管理 Kerberos 驗證所需的服務密碼和服務主要名稱 (SPN)。 此外，這些維護工作都可能干擾服務。
 
 <a name="Local_User"></a> **本機使用者帳戶**
 
@@ -570,7 +569,10 @@ SQL WMI 提供者需要下列權限：
 
 <a name="Local_Service"></a> **本機服務帳戶**
 
-本機服務帳戶是一個內建帳戶，它對於資源和物件的存取層級與使用者群組的成員相同。 如果個別服務或處理序受到危害時，這種有限的存取權可協助保護系統的安全。 以本機服務帳戶執行的服務是以不含認證的 Null 工作階段來存取網路資源。 請注意，本機服務帳戶不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 不支援使用本機服務當做執行這些服務的帳戶，因為它是共用服務而且在本機服務之下執行的任何其他服務將會讓系統管理員存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此帳戶的實際名稱是 **NT AUTHORITY\LOCAL SERVICE**。
+本機服務帳戶是一個內建帳戶，它對於資源和物件的存取層級與使用者群組的成員相同。 如果個別服務或處理序受到危害時，這種有限的存取權可協助保護系統的安全。 以本機服務帳戶執行的服務是以不含認證的 Null 工作階段來存取網路資源。 
+> [!NOTE]
+> 本機服務帳戶不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 不支援使用本機服務當做執行這些服務的帳戶，因為它是共用服務而且在本機服務之下執行的任何其他服務將會讓系統管理員存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+此帳戶的實際名稱是 **NT AUTHORITY\LOCAL SERVICE**。
 
 <a name="Network_Service"></a> **網路服務帳戶**
 

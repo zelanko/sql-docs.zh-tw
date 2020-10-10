@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: 8c3dc88f13b7cfade3b650dcf621132d6bc22f9a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a6849f13f8182285749c7a95801ee111e7ba0130
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123180"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624675"
 ---
 # <a name="build-a-database-project-from-command-line"></a>從命令列建置資料庫專案
 
@@ -29,6 +29,7 @@ ms.locfileid: "91123180"
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll
     - Microsoft.Data.Tools.Utilities.dll
+    - System.Io.Packaging.dll
     - Microsoft.SqlServer.Dac.dll
     - Microsoft.SqlServer.Dac.Extensions.dll
     - Microsoft.SqlServer.TransactSql.ScriptDom.dll

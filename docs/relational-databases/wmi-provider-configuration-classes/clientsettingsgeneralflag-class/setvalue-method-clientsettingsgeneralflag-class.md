@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceab1e91f11cdb53ed157d595260b1fb448a453f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b2475eac5044c28b3f5a5a52037ac1a3e0715a0c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545293"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892518"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue 方法 (ClientSettingsGeneralFlag 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ object.SetValue(Value)
   
 |參數|描述|  
 |---------------|-----------------|  
-|*值*|指定旗標之值的布林值。|  
+|*ReplTest1*|指定旗標之值的布林值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  
@@ -52,6 +52,5 @@ object.SetValue(Value)
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端通訊協定](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

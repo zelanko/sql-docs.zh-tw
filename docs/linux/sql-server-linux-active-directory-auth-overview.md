@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efce6c9f297c3dba58a37a3d097a9c8176efa287
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900134"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497990"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>適用於 Linux 上 SQL Server 的 Active Directory 驗證
 
@@ -52,6 +52,7 @@ AD 驗證與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證相較
 ## <a name="known-issues"></a>已知問題
 
 - 目前，資料庫鏡像端點唯一支援的驗證方法是 CERTIFICATE。 未來的版本將啟用 WINDOWS 驗證方法。
+- Linux 上的 SQL Server 不支援遠端連線的 NTLM 通訊協定。 本機連線則可使用 NTLM 來執行。
 
 ## <a name="next-steps"></a>後續步驟
 

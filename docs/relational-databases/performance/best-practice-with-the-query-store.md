@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042813"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529479"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 
@@ -434,7 +434,7 @@ WHERE is_forced_plan = 1;
 > 若您要將查詢存放區用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 工作負載深入解析，請盡快擬定計劃，安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的效能延展性改進功能。 若沒有這些改進功能，當資料庫承受繁重的工作負載時，可能會發生執行緒同步鎖定競爭，伺服器效能可能會變慢。 尤其是，您可能會在 `QUERY_STORE_ASYNC_PERSIST` 執行緒同步鎖定或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 執行緒同步鎖定時發現嚴重的爭用。 套用此改進功能後，查詢存放區將不會再造成執行緒同步鎖定競爭。
 
 > [!IMPORTANT]
-> 若您要將查詢存放區用於 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的 Just-In-Time 工作負載深入解析，請盡快擬定計劃，安裝 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 中的效能延展性改進功能。 若沒有這項改進功能，當資料庫承受繁重的臨機操作工作負載時，查詢存放區可能會使用大量的記憶體，而伺服器效能可能會變慢。 套用這項改進功能後，查詢存放區將會對其各種元件可使用的記憶體數量施加內部限制，並且可在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重獲足夠的記憶體之前，自動將作業模式變更為唯讀。 請注意，查詢存放區內部記憶體限制有可能變更，因此並未載於文件中。  
+> 若要將查詢存放區用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 中的 Just-In-Time 工作負載見解，請盡快規劃安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 中的效能延展性改善功能。 若沒有這項改進功能，當資料庫承受繁重的臨機操作工作負載時，查詢存放區可能會使用大量的記憶體，而伺服器效能可能會變慢。 套用這項改進功能後，查詢存放區將會對其各種元件可使用的記憶體數量施加內部限制，並且可在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重獲足夠的記憶體之前，自動將作業模式變更為唯讀。 請注意，查詢存放區內部記憶體限制有可能變更，因此並未載於文件中。  
 
 ## <a name="see-also"></a>另請參閱
 

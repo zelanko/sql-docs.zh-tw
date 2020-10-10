@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809844"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892398"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   傳回成功的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 資料庫連接、連接失敗和鎖死。 您可以使用這項資訊追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料庫活動或進行疑難排解。  
   
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>資料庫範圍的擴充事件
+### <a name="db-scoped-extended-event"></a>DB-Scoped 擴充的事件
 
  使用下列範例程式碼，將資料庫範圍的擴充事件設定 (XEvent) 會話：  
 

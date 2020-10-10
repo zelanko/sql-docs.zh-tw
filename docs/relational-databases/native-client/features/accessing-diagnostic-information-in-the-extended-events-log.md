@@ -10,19 +10,19 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 71219302c9180000ee14c18f0d7f90c9557c3673
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042759"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891988"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄檔中的 SQL Server Native Client 診斷資訊
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  從開始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端和資料存取追蹤 ([資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)) 已更新，可讓您更輕鬆地從連接信號緩衝區取得有關連接失敗的診斷資訊，以及從擴充的事件記錄檔取得應用程式效能資訊。  
+  從開始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端和資料存取追蹤 ([資料存取追蹤](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) 已更新，可讓您更輕鬆地從連接信號緩衝區取得有關連接失敗的診斷資訊，以及從擴充的事件記錄檔取得應用程式效能資訊。  
   
- 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)。  
+ 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](../../extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。  
   
 > [!NOTE]  
 >  此功能僅供疑難排解及診斷使用，可能不適用稽核或安全性。  
@@ -215,5 +215,4 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
   
 ## <a name="see-also"></a>另請參閱  
  [處理錯誤與訊息](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

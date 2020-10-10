@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6fb8143dd78695ad32028d520263beccdfee40b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 456f4bfd3d2051bff614d1d65710366ea39b08b5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521158"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888866"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,6 +50,5 @@ object.SupportAlias [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端通訊協定](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

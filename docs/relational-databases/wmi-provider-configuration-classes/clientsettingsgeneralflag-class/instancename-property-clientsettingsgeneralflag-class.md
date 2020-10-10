@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49141a00cc7e9192baa1989baa5f91419fea4997
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 965ff3afc2eaca876498bcbcb5977c402632df57
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545410"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892378"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName 屬性 (ClientSettingsGeneralFlag 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,5 @@ object.InstanceName [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端通訊協定](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

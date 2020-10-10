@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de72ccb7342266b58d90c7949b92bdd2053cffb4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf2678182a72f0782eea785a757580f7cf578c0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523510"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890938"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,5 @@ object.FileName [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端通訊協定](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423712"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412757"
 ---
 # <a name="import-a-policy-based-management-policy"></a>匯入原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423712"
 
 
 ## <a name="example-policies"></a>範例原則
- 範例原則不包含在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，但先前的分散式範例原則可透過安裝 [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases) 來存取。  安裝 SQL Server Management Studio v17 之後，就可以在 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies` 中找到範例原則。 您可以匯入這些原則，並作為您自己的原則式管理原則使用。
+ 範例原則可在 [SQL Server 範例程式碼存放庫](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)中取得。 您可以匯入這些原則，並作為您自己的原則式管理原則使用。

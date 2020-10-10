@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a99b8bbc94bf8e62cd8125e01327a4691a296cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 99771d12be4c10d8d4b823ceb788e9722d417fca
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545309"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890978"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 類別 - SetDefaults 方法
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +52,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端通訊協定](../../database-engine/configure-windows/configure-client-protocols.md)  
   

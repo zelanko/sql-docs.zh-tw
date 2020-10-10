@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 建立適用於 SQL Server、Azure SQL Database、Azure Synapse Analytics，以及 Analytics Platform System 的資料庫語法
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539869"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723499"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -84,7 +84,7 @@ ms.locfileid: "89539869"
 
 ## <a name="syntax"></a>語法
 
-建立資料庫。
+建立資料庫
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 附加資料庫
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ COLLATE *collation_name* 指定資料庫的預設定序。 定序名稱可以是
 > 自主資料庫的定序方式不同於非自主資料庫。 如需詳細資訊，請參閱[自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)。
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -971,6 +976,11 @@ CATALOG_COLLATION 指定中繼資料目錄的預設定序。 *DATABASE_DEFAULT* 
 
 *SQL_Latin1_General_CP1_CI_AS* 指定將用於系統檢視和資料表的中繼資料目錄定序為固定 SQL_Latin1_General_CP1_CI_AS 定序。 如果未指定，這就是 Azure SQL Database 上的預設設定。
 
+BACKUP_STORAGE_REDUNDANCY 會為資料庫指定時間點還原與長期保留備份的複寫方式。 異地還原或從區域中斷復原的能力，只有在使用「異地」備份儲存體備援建立資料庫時才可使用。 除非明確指定，否則以 T-SQL 建立的資料庫會使用異地備援備份儲存體。 
+
+> [!IMPORTANT]
+> Azure SQL Database 的 BACKUP_STORAGE_REDUNDANCY 選項僅適用於東南亞 Azure 區域的公開預覽。  
+
 EDITION 指定資料庫的服務層級。
 
 單一資料庫與集區資料庫。 可用的值為：'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。
@@ -999,12 +1009,12 @@ MAXSIZE 指定資料庫的大小上限。 MAXSIZE 對於指定的 EDITION (服�
 |150 GB|N/A|√|√|√|√|
 |200 GB|N/A|√|√|√|√|
 |250 GB|N/A|√ (D)|√ (D)|√|√|
-|300 GB|不適用|不適用|√|√|√|
-|400 GB|不適用|不適用|√|√|√|
-|500 GB|不適用|不適用|√|√ (D)|√|
-|750 GB|不適用|不適用|√|√|√|
-|1024 GB|不適用|不適用|√|√|√ (D)|
-|從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)* |不適用|不適用|不適用|N/A|√|√|
+|300 GB|N/A|N/A|√|√|√|
+|400 GB|N/A|N/A|√|√|√|
+|500 GB|N/A|N/A|√|√ (D)|√|
+|750 GB|N/A|N/A|√|√|√|
+|1024 GB|N/A|N/A|√|√|√ (D)|
+|從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)* |N/A|N/A|N/A|N/A|√|√|
 
 \* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。 P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 如需 DTU 模型的資源限制的額外詳細資訊，請參閱 [DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。
 
@@ -1170,6 +1180,10 @@ AS COPY OF [source_server_name.]source_database_name **適用於：** 僅單一�
 
 如需詳細資訊，請參閱[使用 Transact-SQL 建立 Azure SQL 資料庫的複本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。
 
+> [!IMPORTANT]
+> 根據預設，會使用與源資料庫相同的備份儲存體備援來建立資料庫複本。 不支援透過 T-SQL 在建立資料庫複本時變更備份儲存體備援。 
+
+
 ## <a name="permissions"></a>權限
 
 若要建立資料庫，登入必須為下列其中一項：
@@ -1258,6 +1272,15 @@ CREATE DATABASE db_copy
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>使用區域備援來建立備份的資料庫
+
+下列範例會設定資料庫備份的區域備援。 時間點還原備份與長期保留備份 (如果已設定) 將會使用相同的備份儲存體備援。
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>另請參閱
@@ -1380,6 +1403,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="syntax"></a>語法
 
+### <a name="sql-pool"></a>[SQL 集區](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL 隨選 (預覽)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>引數
 

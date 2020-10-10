@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c22c1756e580cc194db336fed4e192f5b67e3b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540020"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891638"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 類別
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> ： \PROGRAM Files\Microsoft SQL Server\MSSQL11** **。 \<InstanceName>\MSSQL\Log**  
   
- 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 [從 Windows Vista 開始遠端連線到 WMI](https://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 [從 Windows Vista 開始遠端連線到 WMI](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlErrorLogEvent 類別](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [檢視離線記錄檔](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

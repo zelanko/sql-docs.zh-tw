@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789731"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529444"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789731"
 ###  <a name="security"></a><a name="Security"></a> Security  
  伺服器執行個體的驗證及加密方法是由系統管理員所建立。  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 權限  
- 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+ 需要 `CREATE ENDPOINT` 權限或系統管理員 `sysadmin` 固定伺服器角色中的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -58,40 +58,42 @@ ms.locfileid: "85789731"
   
 3.  使用下列陳述式決定資料庫鏡像端點是否已經存在。  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  如果伺服器執行個體已經有資料庫鏡像端點，則在您於伺服器執行個體上建立的其他任何工作階段，都會使用該端點。  
   
-4.  若要以 Transact-SQL 來建立使用 Windows 驗證的端點，請使用 CREATE ENDPOINT 陳述式。 陳述式會採用下列一般形式：  
+4.  若要以 Transact-SQL 來建立使用 Windows 驗證的端點，請使用 `CREATE ENDPOINT` 陳述式。 陳述式會採用下列一般形式：  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
   
-     AS TCP (LISTENER_PORT = *\<listenerPortList>* )  
+     AS TCP ( LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod>* ]  
+     [ AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod>* ]  
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ALGORITHM { *\<algorithm>* }]  
+     [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     其中  
+     ```
+     
+     其中：  
   
     -   *\<endpointName>* 是伺服器執行個體的資料庫鏡像端點唯一名稱。  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789731"
   
          每個電腦系統僅能使用某個通訊埠編號一次。 建立資料庫鏡像端點後，該資料庫鏡像端點即可使用本機系統上的任何可用通訊埠。 若要識別系統上 TCP 端點目前使用的通訊埠，請使用下列 Transact-SQL 陳述式：  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789731"
   
          AES RC4 指定此端點將交涉加密演算法，將優先權指定給 AES 演算法。 RC4 AES 指定此端點將交涉加密演算法，將優先權指定給 RC4 演算法。 如果這兩個端點都指定了這兩種演算法 (但指定順序不同)，則以接受連接的端點為準。 明確提供相同的演算法，以避免不同伺服器之間發生連線錯誤。
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
     -   *\<role>* 定義伺服器可執行的一或多個角色。 指定所需的 ROLE。 然而，端點的角色只與資料庫鏡像有關。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，端點的角色會被忽略。  
   
-         若要允許伺服器執行個體做為一個資料庫鏡像工作階段的一個角色，並做為另一個工作階段的其他角色，請指定 ROLE=ALL。 若要限制伺服器執行個體做為夥伴或見證伺服器，請分別指定 ROLE=PARTNER 或 ROLE=WITNESS。  
+         若要允許伺服器執行個體做為一個資料庫鏡像工作階段的一個角色，並做為另一個工作階段的其他角色，請指定 ROLE=ALL。 若要限制伺服器執行個體作為夥伴或見證伺服器，請分別指定 `ROLE = PARTNER` 或 `ROLE = WITNESS`。  
   
         > [!NOTE]  
         >  如需適用不同版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之資料庫鏡像選項的詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -155,7 +157,7 @@ ms.locfileid: "85789731"
 > [!IMPORTANT]  
 >  每個伺服器執行個體都僅能有一個終止點。 因此，如果您要伺服器執行個體成為某些工作階段中的夥伴，而其他的為見證，請指定 ROLE=ALL。  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

@@ -1,6 +1,6 @@
 ---
 title: LocalDB 的支援
-description: 瞭解如何連接到 LocalDB 實例中的資料庫，這是 SQL Server Native Client 所支援 SQL Server 的輕量版本。
+description: 瞭解如何連接到 LocalDB 實例中的資料庫，這是 SQL Server Native Client 所支援的輕量 SQL Server 的輕量版本。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,11 +11,12 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc043b9e26f9a940575689b9392efef5b7ee1a4a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fcbd82f5752075ead64c22e61d92a2f32066b259
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009896"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892278"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 對 LocalDB 的支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86009896"
   
 -   [SQL Server Express LocalDB 參考](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  總而言之，LocalDB 可讓您：  
   
@@ -45,5 +46,4 @@ SERVER=(localdb)\v11.0
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
   

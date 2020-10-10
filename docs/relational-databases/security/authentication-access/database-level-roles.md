@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005678"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624855"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -98,6 +98,10 @@ ms.locfileid: "86005678"
 
 > [!NOTE]
 > 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Azure Synapse 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取權](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
+
+某些資料庫角色不適用於 Azure SQL 或 Synapse SQL：
+- **db_backupoperator** 不適用於 Azure SQL 資料庫 (非受控執行個體) 與 Synapse SQL 無伺服器集區，因為無法使用備份和還原 T-SQL 命令。
+- **db_datawriter** 與 **db_denydatawriter** 不適用於 Synapse SQL 無伺服器，因為 Synapse SQL 只能讀取外部資料。
   
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 資料庫含有下表所示的特殊用途角色。  

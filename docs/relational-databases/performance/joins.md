@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511310"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726002"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ WHERE [fo].[Quantity] = 361;
 - 資料庫相容性層級為 140 以上。
 - 查詢是 `SELECT` 陳述式 (資料修改陳述式目前不適合)。
 - 聯結能夠由索引巢狀迴圈聯結或雜湊聯結實體演算法執行。
-- 雜湊聯結使用批次模式，可透過存在於整體查詢中的資料行存放區索引、由聯結直接參考的資料行存放區索引資料表，或透過使用[資料列存放區功能中的批次模式](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)加以啟用。
+- 雜湊聯結使用批次模式，可透過存在於整體查詢中的資料行存放區索引、由聯結直接參考的資料行存放區索引資料表，或透過使用[資料列存放區中的批次模式](./intelligent-query-processing.md#batch-mode-on-rowstore)加以啟用。
 - 產生的巢狀迴圈聯結和雜湊聯結替代解決方案應該有相同的第一個子系 (外部參考)。
 
 ### <a name="adaptive-threshold-rows"></a>自適性閾值資料列

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 10d2eb061a4ee6d9ff9c8d0594561667dd882dc9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 60ee13c6715362ba821575a3f8b9f9d5bc3e2bfa
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511568"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589327"
 ---
 # <a name="secure-sql-server-docker-containers"></a>安全的 SQL Server Docker 容器
 
@@ -126,6 +126,60 @@ chmod -R g=u <database file dir>
 ```bash
 chown -R 10001:0 <database file dir>
 ```
+## <a name="encrypting-connections-to-sql-server-linux-containers"></a>加密 SQL Server Linux 容器的連線
+
+若要加密 SQL Server Linux 容器的連線，即會需要憑證，請參閱[這裡]所記載的憑證需求。
+
+以下是如何加密 SQL Server Linux 容器連線的範例。 在此我們會使用自我簽署的憑證，但這種憑證不應用於這類環境的生產情況，而應該使用 CA 憑證。
+
+1. 建立自我簽署憑證，僅適用於測試與非生產環境。
+  
+      ```bash
+      openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=sql1.contoso.com' -keyout /container/sql1/mssql.key -out /container/sql1/mssql.pem -days 365
+      ```
+     sql1 是 SQL 容器的主機名稱，因此當連線到這個容器時，連接字串中所使用的名稱將會是 \'sql1.contoso.com,port\'。
+
+    > [!NOTE]
+    > 請先確定資料夾路徑 /container/sql1/ 已經存在，再執行上述命令。
+
+2. 請確定已在 mssql.key 與 mssql.pem 檔案上設定正確的權限，以避免在將檔案掛接至 SQL 容器時發生錯誤：
+
+    ```bash
+    chmod 440 /container/sql1/mssql.pem
+    chmod 440 /container/sql1/mssql.key
+    ```
+
+3. 現在，使用下列內容建立 mssql.conf 檔案，以啟用伺服器啟動的加密，若要啟用用戶端啟動的加密，請將最後一行變更為 'forceencryption = 0\'。
+
+    ```bash
+    [network]
+    tlscert = /etc/ssl/certs/mssql.pem
+    tlskey = /etc/ssl/private/mssql.key
+    tlsprotocols = 1.2
+    forceencryption = 1
+    ```
+
+    > [!NOTE]
+    > 針對某些 Linux 發行版本，儲存憑證和金鑰的路徑也可能分別是：/etc/pki/tls/certs/ 與 /etc/pki/tls/private/。 請先確認路徑，再更新 SQL 容器的 mssql.conf。 您在 mssql.conf 中設定的位置會是容器中 SQL Server 要搜尋憑證及其金鑰的位置。 在此情況下，該位置為 /etc/ssl/certs/ 與 /etc/ssl/private/。
+
+    mssql.conf 檔案也會建立在相同的資料夾位置 /container/sql1/。 執行上述步驟之後，sql1 資料夾中應該會有三個檔案：mssql.conf、mssql.key 與 mssql.pem。
+
+4. 使用下列命令來部署 SQL 容器：
+
+    ```bash
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5434:1433 --name sql1 -h sql1 -v /container/sql1/mssql.conf:/var/opt/mssql/mssql.conf -v   /container/sql1/mssql.pem:/etc/ssl/certs/mssql.pem -v /container/sql1/mssql.key:/etc/ssl/private/mssql.key -d mcr.microsoft.com/mssql/server:2019-latest
+    ```
+
+    在上述命令中，我們已將 mssql.conf、mssql.key 與 mssql.pem 檔案掛接至容器，並將容器中的 1433 連接埠 (SQL Server 預設連接埠) 對應至主機的 5434 連接埠。 
+
+    > [!NOTE]
+    > 如果正在使用 RHEL 8 或更新版本，您也可以使用 \'podman run\' 命令，而非 \'docker run\' 命令。 
+
+遵循記載於[這裡][1]的 \"在用戶端電腦上註冊憑證\" 與 \"範例連接字串\" 區段，開始為 Linux 容器上 SQL Server 的連線加密。
+
+  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
+  [此處]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
+  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
 
 ## <a name="next-steps"></a>後續步驟
 

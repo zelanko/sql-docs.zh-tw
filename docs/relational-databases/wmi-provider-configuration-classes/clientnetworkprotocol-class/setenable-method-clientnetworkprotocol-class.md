@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a4fa2a1bb7dda435676564989c1fb648eb3a956
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dcc745710132ea85b7027152900b7d693df37aab
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888927"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  啟用 [設定用戶端通訊](https://technet.microsoft.com/library/ms181035.aspx)協定所指定的用戶端網路通訊協定。  
+  啟用 [設定用戶端通訊](../../../database-engine/configure-windows/configure-client-protocols.md)協定所指定的用戶端網路通訊協定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,6 +46,5 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端網路通訊協定和網路程式庫](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端網路通訊協定和網路程式庫](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

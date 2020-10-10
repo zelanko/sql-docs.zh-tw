@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f65cd55570312a4d86e795d224c900fa7517236e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545158"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891238"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 查詢的 `FROM` 子句中的引數 (`DDL_DATABASE_LEVEL_EVENTS`) 可以是能在其上建立事件通知的任何有效事件。  和  子句中的引數可以指定與事件或其上層事件相關的任何事件屬性。 如需有效事件和事件屬性的清單，請參閱 [ (資料庫引擎) 的事件通知 ](https://technet.microsoft.com/library/ms182602.aspx)。  
+ WQL 查詢的 `FROM` 子句中的引數 (`DDL_DATABASE_LEVEL_EVENTS`) 可以是能在其上建立事件通知的任何有效事件。  和  子句中的引數可以指定與事件或其上層事件相關的任何事件屬性。 如需有效事件和事件屬性的清單，請參閱 [ (資料庫引擎) 的事件通知 ](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))。  
   
  下列 WQL 語法會由 WMI Provider for Server Events 明確支援。 也可以指定其他的 WQL 語法，但該語法並非此提供者所專屬，而會改由其他的 WMI 主機服務進行剖析。 如需有關 WMI 查詢語言的詳細資訊，請參閱 Microsoft Developer Network (MSDN) 上的 WQL 文件集。  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  指定要查詢與事件相關聯的所有屬性。  
   
  *event_type*  
- 這是任何可針對其而建立事件通知的事件。 如需可用事件的清單，請參閱 [伺服器事件類別和屬性的 WMI 提供者](https://technet.microsoft.com/library/ms186449.aspx)。 請注意，當您使用 create event notification 手動建立事件通知時，*事件種類*名稱會對應至相同的*event_type*  |  *event_group* 。 *事件種類*的範例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
+ 這是任何可針對其而建立事件通知的事件。 如需可用事件的清單，請參閱 [伺服器事件類別和屬性的 WMI 提供者](./wmi-provider-for-server-events-classes-and-properties.md)。 請注意，當您使用 create event notification 手動建立事件通知時，*事件種類*名稱會對應至相同的*event_type*  |  *event_group* 。 *事件種類*的範例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
   
 > [!NOTE]  
 >  執行類似 DDL 作業的系統預存程序也可以引發事件通知。 請測試事件通知以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 語句和 **sp_addtype** 預存程式都會引發在 CREATE_TYPE 事件上建立的事件通知。 不過， **sp_rename** 預存程式不會引發任何事件通知。 如需詳細資訊，請參閱[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
@@ -111,9 +111,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  請注意，並非所有事件都可以在任何的特定範圍上查詢。 例如，在追蹤事件 (例如 Lock_Deadlock) 或追蹤事件群組 (例如 TRC_LOCKS) 上的 WQL 查詢都只能在伺服器層級註冊。 同樣地，CREATE_ENDPOINT 事件和 DDL_ENDPOINT_EVENTS 事件群組也只能在伺服器層級註冊。 如需註冊事件之適當範圍的詳細資訊，請參閱 [設計事件通知](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)。 嘗試註冊 *event_type* 只能在伺服器層級註冊的 WQL 查詢，一律是在伺服器層級進行。 如果 WMI 用戶端擁有權限，註冊就會成功。 否則，就會對用戶端傳回錯誤。 不過在某些情況下，您仍可以根據與事件相對應的屬性，使用 WHERE 子句做為伺服器層級事件的篩選器。 例如，許多追蹤事件都有 **DatabaseName** 屬性，可在 WHERE 子句中當做篩選準則使用。  
   
- 伺服器範圍的事件通知會建立在 **master** 資料庫中，而且可以使用 [sys. server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目錄檢視來查詢中繼資料。  
+ 伺服器範圍的事件通知會建立在 **master** 資料庫中，而且可以使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目錄檢視來查詢中繼資料。  
   
- 系統會在指定的資料庫中建立資料庫範圍或物件範圍的事件通知，並且可以使用 [sys. event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 目錄檢視來查詢中繼資料。 (必須將相對應的資料庫名稱當做目錄檢視的前置詞)。  
+ 系統會在指定的資料庫中建立資料庫範圍或物件範圍的事件通知，並且可使用 [sys.event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) 目錄檢視來查詢中繼資料。 (必須將相對應的資料庫名稱當做目錄檢視的前置詞)。  
   
 ## <a name="examples"></a>範例  
   
@@ -142,7 +142,6 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [伺服器事件概念的 WMI 提供者](https://technet.microsoft.com/library/ms180560.aspx)   
- [事件通知 (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
-  
+ [伺服器事件概念的 WMI 提供者](./wmi-provider-for-server-events-concepts.md)   
+ [事件通知 (Database Engine)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))  
   

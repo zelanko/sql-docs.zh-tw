@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3346d217228bf6ca914b6ae1aa31af0883383908
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173239"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636128"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,6 +42,10 @@ ms.locfileid: "88173239"
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 已同時支援 R 與 Python 語言。
 
     在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [機器學習服務] 功能，以啟用外部指令碼的執行。 請務必在初始安裝期間選取至少一個語言：R、Python 或兩者。
+    
++ 針對 [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 和更新版本，[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 支援所有 R、Python、JAVA 和其他協力廠商語言。
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝機器學習服務與語言延伸模組功能，在支援的語言下啟用執行外部指令碼。
 
 ## <a name="additional-requirements"></a>其他需求
 

@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 2ba665e435b6245320f4f5c496a212d485df7951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0c54bbd653e6939327e96beb5d7662b14dad1ea3
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538182"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589307"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -216,7 +216,7 @@ SET
 {
     QUERY_STORE
     {
-          = OFF [ FORCED ] 
+          = OFF [ ( FORCED ) ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -763,19 +763,19 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。 如需詳細資訊，請參閱[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)。
 
 開啟     
 啟用查詢存放區。
 
-OFF      
-停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 FORCED 適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 與更新的組建。
+OFF [ ( FORCED ) ]      
+停用查詢存放區。 OFF 是預設值。 FORCED 為選擇性。 FORCED 會中止所有執行中的查詢存放區背景工作，並略過查詢存放區關閉時的同步排清。 導致查詢存放區以最快的速度關機。 FORCED 適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU14、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 與更新的組建。
 
 > [!NOTE]  
 > 您無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區停用查詢存放區。 執行 `ALTER DATABASE [database] SET QUERY_STORE = OFF` 將會傳回警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`。 
 
-CLEAR     
+CLEAR [ ALL ]     
 從查詢存放區移除查詢相關的資料。 ALL 是選擇性的。 ALL 會從查詢存放區移除查詢相關的資料與中繼資料。
 
 OPERATION_MODE {READ_ONLY |READ_WRITE}     

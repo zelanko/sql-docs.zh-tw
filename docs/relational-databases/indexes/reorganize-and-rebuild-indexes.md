@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537050"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753524"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段
 
@@ -86,7 +86,7 @@ ms.locfileid: "89537050"
 
 <sup>2</sup> 重建索引可於線上或離線執行。 重新組織索引則一律在線上執行。 若要達到與重新組織選項相似的可用性，您應該在線上重建索引。 如需詳細資訊，請參閱 [INDEX](#rebuild-an-index) 和[線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)。
 
-您不需要重組片段百分比低於 5% 的索引，因為由重新組織或重建索引產生的 CPU 成本，遠超過移除如此少量片段所獲得的好處。 此外，重建或重新組織小型資料列存放區索引通常不會實際減少片段。 最高到 (包括) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用混合範圍來配置空間。 因此，小型索引的頁面有時候會儲存在混合範圍上。 混合範圍最多可由八個物件所共用，所以當重新組織或重建索引之後，小型索引中的片段可能不會減少。 另請參閱[重建資料列存放區索引的特定考量](#considerations-specific-to-rebuilding-rowstore-indexes)。 如需範圍的詳細資訊，請參閱[分頁與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md#extents)。
+您不需要重組片段百分比低於 5% 的索引，因為由重新組織或重建索引所產生 CPU 成本一律遠超過移除如此少量片段所獲得的好處。 此外，重建或重新組織小型資料列存放區索引通常不會減少實際片段。 最高到 (包括) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用混合範圍來配置空間。 因此，小型索引的頁面有時候會儲存在混合範圍上。 混合範圍最多可由八個物件所共用，所以當重新組織或重建索引之後，小型索引中的片段可能不會減少。 另請參閱[重建資料列存放區索引的特定考量](#considerations-specific-to-rebuilding-rowstore-indexes)。 如需範圍的詳細資訊，請參閱[分頁與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md#extents)。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>偵測資料行存放區索引的片段
 

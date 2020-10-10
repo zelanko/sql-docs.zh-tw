@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428120"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892268"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,11 +68,11 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   應用程式設定檔  
   
--   Connection  
+-   連線  
   
--   Network (網路)  
+-   網路  
   
--   Time  
+-   時間  
   
  在下表中，SQLPERF 資料結構內的欄位描述也會套用到效能記錄檔中記錄的統計資料。  
   
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之後處理的 SELECT 陳述式數目。|  
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
-|SQLPrepares|SQL_PERF_START 後的 [SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360) 調用數目。|  
+|SQLPrepares|SQL_PERF_START 後的 [SQLPrepare 函數](../../../odbc/reference/syntax/sqlprepare-function.md) 調用數目。|  
 |ExecDirects|SQL_PERF_START 之後的 **SQLExecDirect** 呼叫數目。|  
 |SQLExecutes|SQL_PERF_START 之後的 **SQLExecute** 呼叫數目。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [&#40;ODBC&#41;分析 ODBC 驅動程式效能的使用說明主題 ](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

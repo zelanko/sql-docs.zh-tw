@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537703"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529369"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>呼叫原生編譯預存程序的最佳作法
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89537703"
   
 -   預期非常快速。  
   
- 使用原生編譯預存程序的效能優勢，會隨程序所處理的資料列數目和邏輯數量增多而提升。 例如，如果原生編譯預存程序使用下列一個或多個項目，則會展現更佳的效能：  
+ 使用原生編譯預存程序的效能優勢，會隨程序所處理的資料列數目和邏輯數量增多而提升。 例如，如果原生編譯預存程序使用下列一或多個元件，則會展現更佳的效能：  
   
 -   彙總：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "89537703"
   
  如果您只需要處理一個資料列，使用原生編譯預存程序可能不會提供效能優勢。  
   
- 若要避免伺服器必須對應參數名稱和轉換類型：  
+ 若要避免伺服器必須對應參數名稱和轉換類型，請確定：  
   
 -   讓傳遞至程序的參數類型與程序定義中的類型相符。  
   

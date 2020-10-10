@@ -1,6 +1,6 @@
 ---
 title: 連接中的服務主體名稱
-description: 深入瞭解 SQL Server Native Client 中的相互驗證服務主體名稱支援。
+description: 瞭解 SQL Server Native Client 中相互驗證的服務主體名稱支援。
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50be9c92fdf887fbf11ae5e301c8c21b55be62c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f500e41737bf3c1c17ada377f533bd1241d0db4b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247587"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892288"
 ---
-# <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>SQL Server Native Client 中用戶端連接的服務主體名稱（SPN）支援
+# <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>SQL Server Native Client 中用戶端連線的服務主體名稱 (SPN) 支援
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，已經擴充服務主體名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。 在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的預設 SPN 使用 Active Directory 註冊時，Kerberos 才能透過 TCP 支援 SPN。  
@@ -42,9 +42,9 @@ ms.locfileid: "87247587"
   
 -   [Kerberos Technical Supplement for Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10)) (適用於 Windows 的 Kerberos 技術補充)  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
  下表描述用戶端應用程式可允許安全驗證的常見案例。  
   
 |狀況|描述|  
@@ -72,7 +72,7 @@ ms.locfileid: "87247587"
  新的連接行為會由用戶端實作，因此，該行為對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本而言不是專屬的。  
   
 ## <a name="linked-servers-and-delegation"></a>連結的伺服器與委派  
- 建立連結的伺服器時， [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的** \@ provstr**參數可以用來指定伺服器和容錯移轉夥伴 spn。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
+ 建立連結的伺服器時，可以使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 **\@provstr** 參數來指定伺服器和容錯移轉夥伴 SPN。 這麼做的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更簡單，而且更可靠。  
   
  利用連結的伺服器委派需要 Kerberos 驗證。  
   
@@ -94,13 +94,13 @@ ms.locfileid: "87247587"
   
 |語法|描述|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn*是完整功能變數名稱。|  
+|MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn* 是完整網域名稱。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *port* 是 TCP 通訊埠編號。|  
-|MSSQLSvc/*fqdn*：*InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
+|MSSQLSvc/*fqdn*:*InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。<br /><br /> *InstanceName* 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|對應到 Windows 自動註冊之內建電腦帳戶的 SPN。|  
-|使用者*名稱* @*網域*|網域帳戶的直接規格。<br /><br /> *Username* 是 Windows 使用者帳戶名稱。<br /><br /> *Domain* 是 Windows 網域名稱或完整的網域名稱。|  
-|*MachineName* $@*網域*|電腦帳戶的直接規格。<br /><br /> (如果您所連接的伺服器是以 LOCAL SYSTEM 或 NETWORK SERVICE 帳戶執行，若要取得 Kerberos 驗證， **ServerSPN** 可以是 *MachineName*$@*Domain* 格式)。|  
-|*KDCKey* /*MachineName*|使用者指定的 SPN。<br /><br /> *KDCKey* 是符合 KDC 金鑰規則的英數字串。|  
+|*Username*@*Domain*|網域帳戶的直接規格。<br /><br /> *Username* 是 Windows 使用者帳戶名稱。<br /><br /> *Domain* 是 Windows 網域名稱或完整的網域名稱。|  
+|*MachineName*$@*Domain*|電腦帳戶的直接規格。<br /><br /> (如果您所連接的伺服器是以 LOCAL SYSTEM 或 NETWORK SERVICE 帳戶執行，若要取得 Kerberos 驗證， **ServerSPN** 可以是 *MachineName*$@*Domain* 格式)。|  
+|*KDCKey*/*MachineName*|使用者指定的 SPN。<br /><br /> *KDCKey* 是符合 KDC 金鑰規則的英數字串。|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支援 SPN 的 ODBC 和 OLE DB 語法  
  如需語法專屬的資訊，請參閱下列主題：  
@@ -114,4 +114,3 @@ ms.locfileid: "87247587"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [註冊 Kerberos 連接的服務主體名稱](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088953"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753510"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上備份與還原 SQL Server 資料庫
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 您可以使用許多不同的選項，從 Linux 上的 SQL Server 2017 備份資料庫。 在 Linux 伺服器上，您可以使用 **sqlcmd** 來連線至 SQL Server 並進行備份。 在 Windows 中，您可以連線至 Linux 上的 SQL Server，並藉由使用者介面來進行備份。 備份功能在不同平台上都相同。 例如，您可以在本機將資料庫備份至遠端磁碟機或 [Microsoft Azure Blob 儲存體服務。](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+
+> [!IMPORTANT]
+> Linux 上的 SQL Server 僅支援使用區塊 Blob 備份至 Azure Blob 儲存體。 使用儲存體金鑰來進行備份與還原會導致系統使用不受支援的分頁 Blob。 請改用共用存取簽章。 如需區塊 Blob 與分頁 Blob 的資訊，請參閱[備份至區塊 Blob 與分頁 Blob](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob)。
 
 ## <a name="backup-a-database"></a>備份資料庫
 

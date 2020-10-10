@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215740"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624725"
 ---
 # <a name="type-mapping-with-polybase"></a>使用 PolyBase 進行類型對應
 
@@ -64,7 +64,8 @@ ms.locfileid: "80215740"
 | Oracle 資料類型 | SQL Server 類型 | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -78,7 +79,7 @@ ms.locfileid: "80215740"
 |NCLOB             | nvarchar        | 
 |ROWID             |Varchar          |
 |UROWID            |Varchar          | 
-|日期              |Datetime2        |
+|DATE              |Datetime2        |
 |timestamp         |Datetime2        | 
 
 **類型不符** 
@@ -95,10 +96,10 @@ ms.locfileid: "80215740"
 | BSON 資料類型     | SQL Server 類型 |
 | ------------------ | --------------- |
 | Double             | Float           |
-| String             | nvarchar        |
+| 字串             | nvarchar        |
 | 二進位資料        | nvarchar        |
 | 物件識別碼          | nvarchar        |
-| Boolean            | bit             |
+| 布林值            | bit             |
 | Date               | Datetime2       |
 | 32 位元整數     | Int             |
 | 時間戳記          | nvarchar        |
@@ -135,11 +136,11 @@ MongoDB 會使用 BSON 文件來儲存資料記錄。 不同於先前的案例�
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|日期                |Date             |
+|DATE                |Date             |
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|TIMESTAMP WITH TIME ZONE|時間         |
 
 ::: moniker-end
 

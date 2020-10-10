@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ed706ebdeb3151911d20ba76c7317bdac3b27f58
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba9dfe13c38f4f29dd06c313c16896f34857a746
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537254"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890208"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  取得與 [設定用戶端通訊](https://technet.microsoft.com/library/ms181035.aspx)協定所指定之目前用戶端網路通訊協定相關聯的屬性。  
+  取得與 [設定用戶端通訊](../../../database-engine/configure-windows/configure-client-protocols.md)協定所指定之目前用戶端網路通訊協定相關聯的屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,6 +46,5 @@ object.Properties [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端網路通訊協定和網路程式庫](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [設定用戶端網路通訊協定和網路程式庫](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

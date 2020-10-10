@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e7cb88f8fbb942678c2aaf785a4b04a9297c74f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 02703ceb13fdd04e0a90fee6b7c996a2fa632b73
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545196"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891948"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 類別
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,9 +31,8 @@ ms.locfileid: "89545196"
   
  [AdvancedProperties 屬性 (SqlService 類別) ](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md)參考[SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)物件的陣列。  
   
- [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)類別代表對於服務而言是唯一的屬性。 這些屬性不在與 [SqlService 類別](https://technet.microsoft.com/library/ms186497.aspx) 類別相關聯的屬性清單中。 [SqlServiceAdvancedProperty 類別](https://technet.microsoft.com/library/ms182447.aspx)類別允許字串、數值或布林屬性的標記法。 您可以使用這個類別來檢視指定之服務的唯一屬性。  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)類別代表對於服務而言是唯一的屬性。 這些屬性不在與 [SqlService 類別](../sqlservice-class/sqlservice-class.md) 類別相關聯的屬性清單中。 `SqlServiceAdvancedProperty Class`類別允許字串、數值或布林屬性的標記法。 您可以使用這個類別來檢視指定之服務的唯一屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止和暫停服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
-  
   

@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-ms.openlocfilehash: e13dc56d78a5305b8fb8221d5622d2cd49ade704
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f9b1e77d082ad5e42a9818272fc1c4a48b44968
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734996"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529379"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016 的 SQL Server 記憶體內部 OLTP 內部
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **摘要：** SQL Server 2014 中引進了記憶體內部 OLTP，其經常以其代號名稱 "Hekaton" 稱呼。
-這項強大技術可讓您利用大量的記憶體和眾多數十個核心，以提升 OLTP 作業的效能，最高達 30 到 40 倍！ SQL Server 2016 透過移除 SQL Server 2014 中的多種限制並增強內部處理演算法，持續投資記憶體內部 OLTP，讓記憶體內部 OLTP 的改良更完善。 本報告描述自 SQL Server 2016 RTM 起的 SQL Server 2016 的記憶體內部 OLTP 技術實作。 使用記憶體內部 OLTP，資料表可宣告為「記憶體最佳化」以啟用記憶體內部 OLTP 的功能。 記憶體最佳化的資料表為完全交易式，且可使用 Transact-SQL 存取。 Transact-SQL 預存程序、觸發程序及純量 UDF 可編譯為機器碼，以進一步提升記憶體最佳化的資料表效能。 引擎設計為高度並行存取且不會受到封鎖。    
+這項強大技術可讓您利用大量的記憶體和眾多數十個核心，以提升 OLTP 作業的效能，最高達 30 到 40 倍！ SQL Server 2016 透過移除 SQL Server 2014 中的多種限制並增強內部處理演算法，持續投資記憶體內部 OLTP，讓記憶體內部 OLTP 的改良更完善。 本報告描述自 SQL Server 2016 RTM 起的 SQL Server 2016 的記憶體內部 OLTP 技術實作。 使用記憶體內部 OLTP，資料表可宣告為「記憶體最佳化」以啟用記憶體內部 OLTP 的功能。 記憶體最佳化的資料表為完全交易式，且可使用 Transact-SQL 存取。 Transact-SQL 預存程序、觸發程序，及純量 UDF 可編譯為機器碼，以進一步提升記憶體最佳化的資料表效能。 引擎設計為高度並行存取且不會受到封鎖。    
   
 **作者：** Kalen Delaney  
   

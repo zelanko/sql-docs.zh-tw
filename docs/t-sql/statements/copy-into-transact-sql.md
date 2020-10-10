@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380833"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624815"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ WITH
 - ADLS Gen2 的*外部位置*： https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> 為了提供回溯相容性，ADLS Gen2 可使用 Blob 端點。 使用 **Blob** 端點以獲得最佳效能。
+> Blob 端點也適用於 ADLS Gen2，且目前能夠執行最佳效能。 當驗證方法不需要 .dfs 時，請使用 .blob 端點。
 
 - *帳戶* - 儲存體帳戶名稱
 
@@ -141,14 +141,15 @@ WITH
 |  **Azure Blob 儲存體**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1：您必須在外部位置路徑中使用 Blob 端點 ( **.blob**.core.windows.net)。
+1：此驗證方法需要外部位置路徑中的 .blob 端點 ( **.blob**.core.windows.net)。
 
-2：您必須在外部位置路徑中使用 dfs 端點 ( **.dfs**.core.windows.net)。
+2：此驗證方法需要外部位置路徑中的 .dfs 端點 ( **.dfs**.core.windows.net)。
+
 
 > [!NOTE]  
 >
 > - 使用 AAD 或公用儲存體帳戶進行驗證時，不需要指定 CREDENTIAL。 
->  - 如果您的儲存體帳戶與 VNet 相關聯，則必須使用 MSI (受控識別) 進行驗證。
+> - 如果您的儲存體帳戶與 VNet 相關聯，則必須使用 MSI (受控識別) 進行驗證。
 
 - 使用共用存取簽章 (SAS) 進行驗證
   
@@ -428,9 +429,6 @@ COPY 命令是否會有更好的效能，需取決於您的工作負載。 為�
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>COPY 命令載入 Parquet 或 ORC 檔案的檔案分割指導方針為何？
 不需要分割 Parquet 與 ORC 檔案，因為 COPY 命令將會自動分割檔案。 Azure 儲存體帳戶中的 Parquet 與 ORC 檔案應為 256MB 以上，以達到最佳效能。 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 命令何時會公開推出？
-COPY 命令將會在此日曆年度 (2020) 結束前正式推出。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>檔案的數目或大小是否有任何限制？
 檔案的數目或大小沒有限制，為了獲得最佳效能，我們建議檔案至少為 4MB。

@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334020"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636138"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334020"
 |**diskadmin**|**diskadmin** 固定伺服器角色是用來管理磁碟檔案。|  
 |**dbcreator**|**dbcreator** 固定伺服器角色的成員可以建立、改變、卸除及還原任何資料庫。|  
 |**public**|每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入都屬於 **public** 伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> **注意：** **public** 的實作方式不同於其他角色，您可以授與、拒絕或撤銷 public 固定伺服器角色的權限。|  
+  
+> [!IMPORTANT] 
+> 下列伺服器角色所提供的大部分權限不適用於 Synapse SQL：**processadmin**、**serveradmin**、**setupadmin** 以及 **diskadmin**。
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定伺服器角色的權限  
  每個固定伺服器角色都擁有指派給它的特定權限。 下圖顯示指派給伺服器角色的權限。   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537075"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529429"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>記憶體內部 OLTP 資料庫的高可用性支援
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "89537075"
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>AlwaysOn 可用性群組和記憶體內部 OLTP 資料庫  
- 利用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 元件設定資料庫提供了下列好處：  
+ 利用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 元件設定資料庫提供下列好處：  
   
 -   **完全整合的體驗**   
     您可以使用同樣支援同步和非同步次要複本的相同精靈，設定包含記憶體最佳化資料表的資料庫。 此外，還可以使用 SQL Server Management Studio 中熟悉的 AlwaysOn 儀表板提供健全狀況監視。  
@@ -42,10 +42,10 @@ ms.locfileid: "89537075"
 - SQL Server 2019 已針對經記憶體最佳化的可用性群組資料庫引進平行重做。 在 SQL Server 2016 與 2017 中，如果可用性群組中的資料庫也已進行記憶體最佳化，則磁碟型資料表不會使用平行重做。 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>容錯移轉叢集執行個體 (FCI) 和記憶體內部 OLTP 資料庫  
- 若要在共用儲存體設定中達到高可用性，您可以使用經記憶體最佳化的資料表，利用資料庫來設定容錯移轉叢集執行個體。 在設定 FCI 的過程中，您必須考慮下列因素。  
+ 若要在共用儲存體設定中達到高可用性，您可以使用經記憶體最佳化的資料表，利用資料庫來設定容錯移轉叢集執行個體。 在設定 FCI 的過程中，請考慮下列因素：  
   
 -   **復原時間目標**   
-    由於記憶體最佳化的資料表必須先載入到記憶體才能使用資料庫，因此會有較高的容錯移轉時間。  
+    由於記憶體最佳化的資料表必須先載入到記憶體才能使用資料庫，因此會有較長的容錯移轉時間。  
   
 -   **SCHEMA_ONLY 資料表**   
     請注意，在容錯移轉之後，SCHEMA_ONLY 資料表將會是空的，沒有任何資料列。 這是由應用程式進行設計與定義。 這種行為與您重新啟動具有一或多個 SCHEMA_ONLY 資料表的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫完全相同。  

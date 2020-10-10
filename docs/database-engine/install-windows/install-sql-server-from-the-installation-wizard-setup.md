@@ -15,12 +15,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899704"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670432"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -32,8 +32,8 @@ ms.locfileid: "85899704"
 
 如需其他安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的方式，請參閱：  
 
-* [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [使用設定檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)  
+* [使用設定檔安裝 SQL Server](./install-sql-server-using-a-configuration-file.md)  
 * [使用 SysPrep 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -70,7 +70,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 1. 在 [授權條款]頁面上，檢閱授權合約。 如果您同意，請選取 [我接受授權條款] 核取方塊，然後選取 [下一步]。  
     
    > [!NOTE]
-   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
+   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)。
 
 1. 在 [全域規則] 頁面中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新] 頁面。  
   
@@ -238,7 +238,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
    > 如果輸入企業伺服器/CAL 授權產品金鑰，且電腦具有 20 個以上的實體核心，或在啟用超執行緒時有 40 個邏輯核心，則會在安裝期間顯示警告。 您仍然可以繼續安裝，方法是選取 [Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum] \(核取此方塊以確認這項限制，或按一下 [上一步]/[取消] 以輸入支援最多作業系統的 Enterprise Core 產品授權\) 核取方塊，或按一下 [上一步]，然後輸入支援最多作業系統處理器數目的授權金鑰。
 
    > [!NOTE]
-   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
+   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)。
 
 1. 在 [全域規則] 頁面中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新] 頁面。  
   
@@ -306,11 +306,11 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 使用 [資料庫引擎設定 - 伺服器設定] 頁面指定下列選項：  
   
-    * **安全性模式**：針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體選取 [Windows 驗證] 或 [混合模式驗證]。 如果您選取 [混合模式驗證]，就必須為內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
+    * **安全性模式**：針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體選取 [Windows 驗證] 或 [混合模式驗證]。 如果選取 [混合模式驗證]，就必須為內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (SA) 提供強式密碼。  
   
        當裝置成功連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，Windows 驗證和混合模式驗證的安全性機制是相同的。 如需詳細資訊，請參閱 [[資料庫引擎設定 - 伺服器設定] 頁面](../../sql-server/install/instance-configuration.md#serverconfig)。
   
-    * **SQL Server 管理員**：針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您至少必須指定一位系統管理員。 若要新增正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的帳戶，請選取 [新增目前的使用者]。 若要在系統管理員清單中新增或移除帳戶，請選取 [新增] 或 [移除]，然後編輯有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體管理員權限的使用者、群組或電腦清單。  
+    * **SQL Server 管理員**：針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您至少必須指定一位系統管理員。 若要新增正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的帳戶，請選取 [新增目前的使用者]。 若要在系統管理員清單中新增或移除帳戶，請選取 [新增] 或 [移除]，然後編輯有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體管理員權限的使用者、群組或電腦清單。  您也可以新增 Windows 網域群組，在具有 SQL Server 系統管理員存取權的 Active Directory 中建立共用的 SQL 系統管理員群組。 
   
      使用 [資料庫引擎設定 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請選取 [下一步]。  
   
@@ -326,14 +326,14 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
     > [!NOTE]  
     > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
     
-    如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) 頁面。 
+    如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop) 頁面。 
 
      使用 [資料庫引擎組態 - 記憶體] 頁面來指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在啟動後將使用的**最小伺服器記憶體**與**最大伺服器記憶體**值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議] 選項之後手動指定您自己的值。
      
     > [!NOTE]  
     > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
     
-    如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
+    如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory)。 
 
      使用 [資料庫引擎設定 - FILESTREAM] 頁面針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [[資料庫引擎設定 - FILESTREAM] 頁面](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
   
@@ -411,4 +411,4 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 * [修復失敗的 SQL Server 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [使用安裝精靈升級至 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [從命令提示字元安裝 SQL Server](./install-sql-server-from-the-command-prompt.md)

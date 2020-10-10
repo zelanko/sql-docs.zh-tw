@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785087"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412737"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  原則式管理可讓您監視 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳做法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當作最佳做法原則匯入，然後為包含執行個體、執行個體物件、資料庫或資料庫物件的目標集評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
+  原則式管理可讓您監視 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳做法。  您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  您可將一組[範例原則檔](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)匯入為最佳做法原則，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。
   
 ## <a name="policy-and-rules-for-database-engine"></a>Database Engine 的原則和規則  
- 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中所包含的原則，以及有關每一個原則所評估之最佳做法規則的資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)。  
+ 下表列出[範例原則](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)組中所包含的原則，以及每一個原則所評估最佳做法規則的資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)。  
   
 |原則名稱|最佳作法規則|  
 |-----------------|------------------------|  
