@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536626"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955859"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -83,7 +83,7 @@ RECONFIGURE
 |**minimum**|**int**|組態選項的最小值。|  
 |**maximum**|**int**|組態選項的最大值。|  
 |**config_value**|**int**|設定選項的設定值，這個值會在**sys.configurations**中使用**sp_configure** (值) 。 如需這些選項的詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 和 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
-|**run_value**|**int**|目前正在執行設定選項的值 (sys.configurations 中的值 ** 。 value_in_use**) 。<br /><br /> 如需詳細資訊，請參閱 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**run_value**|**int**|目前正在執行設定選項的值 (**sys.configurations.value_in_use**) 中的值。<br /><br /> 如需詳細資訊，請參閱 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>備註  
  使用 **sp_configure** 來顯示或變更伺服器層級設定。 若要變更資料庫層級的設定，請使用 ALTER DATABASE。 若要變更只影響目前使用者工作階段的設定，請使用 SET 陳述式。  
@@ -112,7 +112,10 @@ RECONFIGURE
  如需詳細資訊，請參閱 [重新設定 &#40;transact-sql&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
 ## <a name="advanced-options"></a>進階選項  
- 某些設定選項（例如 **親和性遮罩** 和復原 **間隔**）會指定為 advanced options。 依預設，這些選項無法檢視和變更。 若要使其可供使用，請將 **設定 showadvancedoptions** 設定選項設定為1。  
+ 某些設定選項（例如 **親和性遮罩** 和復原 **間隔**）會指定為 advanced options。 依預設，這些選項無法檢視和變更。 若要使其可供使用，請將 [ **顯示 Advanced Options** ] 設定選項設定為1。 
+ 
+> [!CAUTION]  
+> 當選項 **Show Advanced Options** 設定為1時，此設定會套用至所有使用者。 建議您在完成需要觀看 advanced 選項的工作時，暫時使用此狀態，並切換回0。  
   
  如需設定選項及其設定的詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
