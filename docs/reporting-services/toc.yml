@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: 在 SQL Server 容錯移轉叢集中裝載報表伺服器資料庫
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Reporting Services 組態管理員 (原生模式)
+    - name: 報表伺服器組態管理員 (原生模式)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: 設定報表伺服器服務帳戶 (SSRS 組態管理員)
+        - name: 設定報表伺服器服務帳戶
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: 設定報表伺服器 URL (SSRS 組態管理員)
+        - name: 設定報表伺服器 URL
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: 關於 URL 保留項目和註冊 (SSRS 組態管理員)
+            - name: 關於 URL 保留項目和註冊
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: 設定 URL (SSRS 組態管理員)
+            - name: 設定 URL
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: URL 保留項目語法 (SSRS 組態管理員)
+            - name: URL 保留項目語法
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: 組態檔中的 URL (SSRS 組態管理員)
+            - name: 組態檔中的 URL
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: 多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
+            - name: 多重執行個體報表伺服器部署的 URL 保留項目
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: 建立資料庫
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: 電子郵件設定 - Reporting Services 原生模式 (組態管理員)
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: 設定自動執行帳戶 (SSRS 組態管理員)
+        - name: 設定自動執行帳戶
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: SSRS 加密金鑰 - 管理加密金鑰
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: 訂閱設定與檔案共用帳戶 (Configuration Manager)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: 設定原生模式報表伺服器向外延展部署 (SSRS 組態管理員)
+        - name: 設定原生模式報表伺服器向外延展部署
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Power BI 整合
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
