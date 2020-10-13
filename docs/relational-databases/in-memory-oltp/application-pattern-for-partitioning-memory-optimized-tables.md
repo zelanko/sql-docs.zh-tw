@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08fb58f77382dae2d6455cc181c983798c89050a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 57c6a851f192e9166fef872a9531a73339177238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529409"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867362"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
 
@@ -298,4 +298,4 @@ GO
 
 ## <a name="see-also"></a>另請參閱
 
-[記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[記憶體最佳化資料表](./sample-database-for-in-memory-oltp.md)

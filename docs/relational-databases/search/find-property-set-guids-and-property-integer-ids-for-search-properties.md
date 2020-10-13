@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498601"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867454"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498601"
 |類型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|項目的標題。 例如文件的標題、郵件的主旨、相片的標題或音樂曲目的名稱。|  
   
- 為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) (自訂檔案格式的系統定義屬性)。  
+ 為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) (自訂檔案格式的系統定義屬性)。  
   
  特定檔案格式可能會實作三種類型的屬性：  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- 如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 。  
+ 如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](/windows/win32/properties/props-system-author) 。  
   
- 如需 Windows 屬性的完整清單，請參閱同樣在 Windows Search 文件集中的 [Windows Properties](https://go.microsoft.com/fwlink/?LinkId=215013)Windows 屬性)。  
+ 如需 Windows 屬性的完整清單，請參閱同樣在 Windows Search 文件集中的 [Windows Properties](/windows/win32/properties/props)Windows 屬性)。  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> 將屬性加入至搜尋屬性清單  
  下列範例示範如何將屬性加入至搜尋屬性清單。 此範例會使用 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 陳述式將 `System.Author` 屬性加入名為 `PropertyList1`的搜尋屬性清單，並且為屬性提供使用者易記名稱 `Author`。  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ac9ba37fae91916675a8a8edb4dfe904306112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463789"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810725"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "88463789"
   
      描述變更追蹤、提供變更追蹤之運作方式的高層級概觀，以及描述變更追蹤要如何與其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能互動。  
   
--   [Microsoft Sync Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 開發人員中心](/previous-versions/sql/synchronization/mt490616(v=msdn.10))  
   
      提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文件集。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文件集中，＜如何：使用 SQL Server 變更追蹤＞主題包含了詳細資訊和程式碼範例。  
   
@@ -176,7 +176,5 @@ ms.locfileid: "88463789"
  [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [異動資料擷取預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [異動資料擷取資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](../system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-

@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834719"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867282"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85834719"
 
  如需原生模組定義支援的功能，請參閱 [原生編譯的預存程序上支援的建構](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)。  
 
- 如需有關不支援之建構的完整資訊，以及如何處理某些原生編譯模組不支援功能的相關資訊，請參閱 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 如需有關不支援之建構的完整資訊，以及如何處理某些原生編譯模組不支援功能的相關資訊，請參閱 [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
 
 ##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> 原生模組中的查詢介面區  
 
@@ -286,7 +286,5 @@ GO
  計算 TOP N 中最差情況下支援之最大值 N 的公式是： `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`。  
 
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
- [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
-
+ [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
+ [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)

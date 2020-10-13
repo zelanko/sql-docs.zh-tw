@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427930"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868072"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ GO
   
  基於安全性理由，篩選是由篩選背景程式主機處理序載入。 伺服器執行個體會針對所有多執行緒篩選使用多執行緒處理序，而針對所有單一執行緒篩選使用單一執行緒處理序。 當使用多執行緒篩選的文件包含使用單一執行緒篩選的內嵌文件時，全文檢索引擎就會針對內嵌文件啟動單一執行緒處理序。 例如，如果遇到包含 PDF 文件的 Word 文件，全文檢索引擎就會針對 Word 內容啟動多執行緒處理序，而針對 PDF 內容啟動單一執行緒處理序。 不過，單一執行緒篩選在此環境下可能無法正常運作，而且可能會使篩選處理序不穩定。 在經常會有這類內嵌的特定情況下，不穩定可能會導致處理序損毀。 發生這個狀況時，全文檢索引擎就會將任何失敗的文件 (例如，包含內嵌 PDF 內容的 Word 文件) 重新路由傳送至單一執行緒篩選處理序。 如果經常發生重新路由傳送的狀況，則會導致全文檢索索引處理序的效能降低。  
   
-若要解決這個問題，請將容器文件 (在此範例中是 Word 文件) 的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，請將篩選的 **ThreadingModel** 登錄值設為 **Apartment Threaded**。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
+若要解決這個問題，請將容器文件 (在此範例中是 Word 文件) 的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，請將篩選的 **ThreadingModel** 登錄值設為 **Apartment Threaded**。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](/previous-versions/ms809971(v=msdn.10))(了解與使用 COM 執行緒模型) 技術白皮書。  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ GO
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [疑難排解全文檢索索引](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651011"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866630"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，記憶體最佳化資料表的 in-row 資料大小不能超過 [8,060 個位元組](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 不過，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 Azure SQL Database 中建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的記憶體最佳化資料表，並可使用原生編譯的 T-SQL 模組和資料表類型對它們執行作業。 
+在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，記憶體最佳化資料表的 in-row 資料大小不能超過 [8,060 個位元組](?viewFallbackFrom=sql-server-2014)。 不過，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 Azure SQL Database 中建立具有多個大型資料行 (例如，多個 varbinary(8000) 資料行) 和 LOB 資料行 (即 varbinary(max)、varchar(max) 和 nvarchar(max)) 的記憶體最佳化資料表，並可使用原生編譯的 T-SQL 模組和資料表類型對它們執行作業。 
   
 無法放入 8060 位元組資料列大小限制的資料行都會置於個別內部資料表中的 off-row。 每個 off-row 資料行都會有對應的內部資料表，而內部資料表接著會有單一非叢集索引。 如需 off-row 資料行所用之內部資料表的詳細資料，請參閱 [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   大小限制鏡像磁碟資料表的 LOB (LOB 值的限制是 2 GB)。 
 -   為達最佳效能，建議將大多數的資料行調整到 8060 個位元組內。 
 
-[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (SQL Server 2016 自 CTP3 後的記憶體內部 OLTP 新功能) 部落格文章會對這些複雜性的一部分詳加說明。   
+[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) (SQL Server 2016 自 CTP3 後的記憶體內部 OLTP 新功能) 部落格文章會對這些複雜性的一部分詳加說明。   
  
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [記憶體最佳化資料表](./sample-database-for-in-memory-oltp.md)  
   

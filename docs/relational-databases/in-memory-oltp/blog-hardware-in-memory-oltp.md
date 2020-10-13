@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e5486dddb1b71d2a32055cb4175ed300ce19320f
-ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
+ms.openlocfilehash: cae884233c329e97c1cd1294780cb9c796ceee8e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85377619"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867260"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server 中記憶體內部 OLTP 的硬體考量
 
@@ -25,7 +25,7 @@ In-Memory OLTP 會以不同於傳統磁碟資料表的方式，使用記憶體�
 > [!NOTE]
 > 本文已在 2013 年 8 月 1 日，由 Microsoft SQL Server 2014 小組發佈在部落格上。 即將淘汰的部落格網頁。
 >
-> [SQL Server In-Memory-OLTP](index.md)
+> [SQL Server In-Memory-OLTP](./in-memory-oltp-in-memory-optimization.md)
 
 <!--
     Here was the link to the blog. This blog was captured into this new article on 2018/11/30, by GeneMi (MightyPen).

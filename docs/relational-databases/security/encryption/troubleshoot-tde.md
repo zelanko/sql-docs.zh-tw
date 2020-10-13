@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448066"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867946"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
@@ -34,7 +34,7 @@ ms.locfileid: "88448066"
 
 如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。 除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的其他所有動作。 當使用客戶管理金鑰加密的資料庫無法存取時，也無法將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
 
-在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如，[容錯移轉群組](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤**都會遺失**。 因此，建議使用[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
+在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如，[容錯移轉群組](/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤**都會遺失**。 因此，建議使用[動作群組](/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>導致資料庫變得無法存取的常見錯誤
 
@@ -68,17 +68,17 @@ ms.locfileid: "88448066"
 
 使用下列 Cmdlet 或命令，以確保身分識別已指派給邏輯 SQL Server 執行個體：
 
-- Azure PowerShell：[Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) \(英文\) 
+- Azure PowerShell：[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) \(英文\) 
 
-- Azure CLI：[az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show) \(英文\)
+- Azure CLI：[az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show) \(英文\)
 
 **風險降低**
 
 使用下列 Cmdlet 或命令，為邏輯 SQL Server 執行個體設定 Azure AD 身分識別 (AppId)：
 
-- Azure PowerShell：具有 `-AssignIdentity` 選項的 [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) \(英文\)。
+- Azure PowerShell：具有 `-AssignIdentity` 選項的 [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) \(英文\)。
 
-- Azure CLI：具有 `--assign_identity` 選項的 [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) \(英文\)。
+- Azure CLI：具有 `--assign_identity` 選項的 [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) \(英文\)。
 
 在 Azure 入口網站中，移至金鑰保存庫，然後移至 [存取原則]  。 完成下列步驟： 
 
@@ -103,9 +103,9 @@ ms.locfileid: "88448066"
 
 1. 使用下列 Cmdlet 或命令來取得特定邏輯 SQL Server 執行個體的金鑰 URI：
 
-    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI：[az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) \(英文\) 
+    - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) \(英文\) 
 
 1. 使用金鑰 URI 來識別金鑰保存庫：
 
@@ -165,7 +165,7 @@ ms.locfileid: "88448066"
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>從活動記錄中取得 TDE 狀態
 
-為了允許監視因 Azure Key Vault 金鑰存取問題而造成的資料庫狀態，系統將會根據 Azure Resource Manager URL 與 Subscription+Resourcegroup+ServerName+DatabaseName，將下列事件記錄到資源識別碼的[活動記錄](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) \(部分機器翻譯\) 中： 
+為了允許監視因 Azure Key Vault 金鑰存取問題而造成的資料庫狀態，系統將會根據 Azure Resource Manager URL 與 Subscription+Resourcegroup+ServerName+DatabaseName，將下列事件記錄到資源識別碼的[活動記錄](/azure/service-health/alerts-activity-log-service-notifications) \(部分機器翻譯\) 中： 
 
 **當服務失去 Azure Key Vault 金鑰存取權時的事件**
 
@@ -238,7 +238,5 @@ EventName：MakeDatabaseAccessible
 
 ## <a name="next-steps"></a>後續步驟
 
-- 深入了解[Azure 資源健康狀態](https://docs.microsoft.com/azure/service-health/resource-health-overview) \(部分機器翻譯\)。
-- 設定[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\)，以根據您的偏好來接收通知和警示，例如，電子郵件/簡訊/推播/語音、邏輯應用程式、Webhook、ITSM 或自動化 Runbook。 
-
-
+- 深入了解[Azure 資源健康狀態](/azure/service-health/resource-health-overview) \(部分機器翻譯\)。
+- 設定[動作群組](/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\)，以根據您的偏好來接收通知和警示，例如，電子郵件/簡訊/推播/語音、邏輯應用程式、Webhook、ITSM 或自動化 Runbook。

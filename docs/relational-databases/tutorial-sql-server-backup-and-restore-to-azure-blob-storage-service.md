@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864955"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809094"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "87864955"
 若要完成本快速入門，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。  您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)，以及執行 SQL Server 伺服器或 Azure SQL 受控執行個體之伺服器的存取權。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
-- 建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 建立 [Azure 儲存體帳戶](/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
+- 安裝 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)，或使用透過 [Azure SQL 虛擬機器](/azure/sql-database/sql-database-managed-instance-configure-vm)或[點對站](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的連線來部署 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started)。
-- 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
+- 將使用者帳戶指派給 [db_backupoperator](./security/authentication-access/database-level-roles.md) 的角色，並授與 [ALTER ANY CREDENTIAL](../t-sql/statements/alter-credential-transact-sql.md) 權限。 
 
 ## <a name="create-azure-blob-container"></a>建立 Azure Blob 容器
 容器會提供一組 Blob 的群組。 所有 Blob 都必須位於容器中。 儲存體帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存不限數目的 Blob。 
@@ -46,7 +46,7 @@ ms.locfileid: "87864955"
     ![新增容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > 即使您選擇建立公用容器，SQL Server 備份與還原仍然需要儲存體帳戶的驗證。 您也可以使用 REST API，以程式設計方式建立容器。 如需詳細資訊，請參閱[建立容器](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
+  > 即使您選擇建立公用容器，SQL Server 備份與還原仍然需要儲存體帳戶的驗證。 您也可以使用 REST API，以程式設計方式建立容器。 如需詳細資訊，請參閱[建立容器](/rest/api/storageservices/Create-Container)
 
 ## <a name="create-a-test-database"></a>建立測試資料庫 
 在此步驟中，使用 SQL Server Management Studio (SSMS) 來建立測試資料庫。 
@@ -235,4 +235,3 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
   
 -   [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [SQL Server 備份至 URL 的最佳做法和疑難排解](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

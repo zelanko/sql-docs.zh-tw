@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16671290ed86def1b013a77d991487dfdad26a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85779493"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869312"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
 
@@ -66,7 +66,7 @@ ms.locfileid: "85779493"
 
 如需 Azure SQL Database 特有擴充事件的文件，請參閱︰
 
-- [Azure SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Azure SQL Database 中的擴充事件](/azure/azure-sql/database/xevent-db-diff-from-svr)
 
 
 

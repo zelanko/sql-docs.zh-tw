@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464990"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869192"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>備份並還原全文檢索目錄與索引。
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88464990"
   本主題說明如何備份和還原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中建立的全文檢索索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文檢索目錄，您必須識別包含屬於此目錄之全文檢索索引的每個檔案群組。 然後，您必須逐一備份這些檔案群組。  
   
 > [!IMPORTANT]  
->  您可以在升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫時，匯入全文檢索目錄。 每個匯入的全文檢索目錄都是其檔案群組中的資料庫檔案。 若要備份匯入的目錄，只要備份其檔案群組即可。 如需詳細資訊，請參閱《 [線上叢書》中的](https://go.microsoft.com/fwlink/?LinkID=121052)備份和還原 SQL Server 2008 全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+>  您可以在升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫時，匯入全文檢索目錄。 每個匯入的全文檢索目錄都是其檔案群組中的資料庫檔案。 若要備份匯入的目錄，只要備份其檔案群組即可。 如需詳細資訊，請參閱《 [線上叢書》中的]()備份和還原 SQL Server 2008 全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> 備份全文檢索目錄的全文檢索索引  
   
@@ -105,5 +105,4 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

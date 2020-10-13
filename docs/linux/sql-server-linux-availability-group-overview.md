@@ -2,20 +2,20 @@
 title: Linux 上的 SQL Server 可用性群組
 description: 了解 Linux 上的 SQL Server Always On 可用性群組的特性。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 633254fad662479e8bb8a46be1ccfc322e69623f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883938"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784789"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上的 Always On 可用性群組
 

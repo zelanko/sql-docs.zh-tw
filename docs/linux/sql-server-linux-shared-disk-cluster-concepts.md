@@ -1,19 +1,19 @@
 ---
 title: 容錯移轉叢集執行個體 - Linux 上的 SQL Server
 description: Linux 上 SQL Server 容錯移轉叢集執行個體的概念包括叢集層、執行個體數目、IP 位址和名稱，以及共用儲存體。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2db19ff4a953f0652e96903134b46c377196c0da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2b852a1c1acecefa3b702bb140d9128d04a212
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897323"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784644"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體 - Linux 上的 SQL Server
 

@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765047"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867819"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>建立及儲存 Always Encrypted 的資料行主要金鑰
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 建立自我簽署的憑證
 
 如需詳細資料，請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)。
-如需使用 SSMS，並將永遠加密金鑰儲存在 Windows 憑證存放區中的逐步教學課程，請參閱 [永遠加密精靈教學課程 (Windows 憑證存放區)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。
+如需使用 SSMS，並將永遠加密金鑰儲存在 Windows 憑證存放區中的逐步教學課程，請參閱 [永遠加密精靈教學課程 (Windows 憑證存放區)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)。
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>讓憑證可供應用程式和使用者使用
@@ -104,7 +104,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>在 Azure 金鑰保存庫中建立資料行主要金鑰
 
-Azure 金鑰保存庫可協助保護密碼編譯金鑰和密碼，並且是存放永遠加密資料行主要金鑰的方便選項，尤其是當應用程式裝載在 Azure 時。 若要在 [Azure 金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)建立金鑰，您需要 [Azure 訂用帳戶](https://azure.microsoft.com/free/) 和 Azure 金鑰保存庫。
+Azure 金鑰保存庫可協助保護密碼編譯金鑰和密碼，並且是存放永遠加密資料行主要金鑰的方便選項，尤其是當應用程式裝載在 Azure 時。 若要在 [Azure 金鑰保存庫](/azure/key-vault/general/overview)建立金鑰，您需要 [Azure 訂用帳戶](https://azure.microsoft.com/free/) 和 Azure 金鑰保存庫。
 
 ### <a name="using-powershell"></a>使用 PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS)
 
 如需如何使用 SSMS 在 Azure Key Vault 中建立資料行主要金鑰的詳細資料，請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)。
-如需使用 SSMS，並將永遠加密金鑰儲存在 Azure 金鑰保存庫中的逐步教學課程，請參閱 [永遠加密精靈教學課程 (Azure 金鑰保存庫)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)。
+如需使用 SSMS，並將永遠加密金鑰儲存在 Azure 金鑰保存庫中的逐步教學課程，請參閱 [永遠加密精靈教學課程 (Azure 金鑰保存庫)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)。
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>讓 Azure 金鑰保存庫金鑰可供應用程式和使用者使用
 
@@ -138,7 +138,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 
 #### <a name="using-powershell"></a>使用 PowerShell
 
-若要讓使用者和應用程式能存取 Azure Key Vault 中的實際金鑰，您必須設定保存庫的存取原則 ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
+若要讓使用者和應用程式能存取 Azure Key Vault 中的實際金鑰，您必須設定保存庫的存取原則 ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ Windows 包含下列以軟體為基礎 (不受 HSM 支援 HSM) 的 CSP，它們�
   
 ## <a name="see-also"></a>另請參閱 
 - [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

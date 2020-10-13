@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62e63082d016d36855cd6a9e9f6067257bc6c77c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551569"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867058"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  若要在 Azure DB 中使用記憶體內部 OLTP，請參閱 [在 SQL Database 中開始使用 In-Memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)。  
+  若要在 Azure DB 中使用記憶體內部 OLTP，請參閱 [在 SQL Database 中開始使用 In-Memory](/azure/azure-sql/in-memory-oltp-overview)。  
   
  除了[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)之外，使用記憶體內部 OLTP 的還有以下需求：  
   
@@ -59,4 +59,3 @@ ms.locfileid: "89551569"
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)  
  [記憶體架構指南](../../relational-databases/memory-management-architecture-guide.md)
-  

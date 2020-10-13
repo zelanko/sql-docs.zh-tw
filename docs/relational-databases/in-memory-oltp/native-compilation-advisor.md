@@ -15,23 +15,23 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722451"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868537"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   交易效能分析報表會通知您，資料庫中哪些解譯的預存程序將能因匯出使用原生編譯而受益。 如需詳細資訊，請參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)。  
   
- 識別您要匯出使用原生編譯的預存程序之後，即可使用原生編譯建議程式 (NCA) 協助您將解譯的預存程序移轉到原生編譯。 如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 識別您要匯出使用原生編譯的預存程序之後，即可使用原生編譯建議程式 (NCA) 協助您將解譯的預存程序移轉到原生編譯。 如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)。  
   
  在指定解譯預存程序中，NCA 可讓您識別原生模組中不支援的所有功能。 NCA 提供解決方法或解決方案的文件連結。  
   
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](/previous-versions/dn673538(v=msdn.10))。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用原生編譯 Advisor 的逐步解說  
  在 [物件總管] 中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]。 隨即顯示 [預存程序原生編譯 Advisor] 的歡迎頁面。 選取 [下一步] 以繼續操作。  
@@ -105,7 +105,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [使用記憶體最佳化資料表的需求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

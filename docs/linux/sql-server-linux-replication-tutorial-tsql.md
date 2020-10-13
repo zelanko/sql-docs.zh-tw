@@ -2,8 +2,8 @@
 title: 教學課程：設定複寫 (T-SQL)
 description: 在 Linux 上，使用 Transact-SQL (T-SQL) 搭配兩個 SQL Server 執行個體來設定 SQL Server 快照式複寫。
 ms.custom: seo-dt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cc1a6ab577a471b69394cf35149f457972aece68
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 0a11581be84e9e9864c1709242b9897160403468
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088835"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785020"
 ---
 # <a name="configure-replication-with-t-sql"></a>搭配 T-SQL 設定複寫
 

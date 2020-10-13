@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863346"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866562"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "87863346"
 
 5. 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法來安裝散發者。 指定安全密碼 (連接到遠端散發者時由發行者使用) 及步驟 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 物件。 如需詳細資訊，請參閱[保護散發者](../../relational-databases/replication/security/secure-the-distributor.md)。
 
-   > `IMPORTANT!!` 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。
+   > `IMPORTANT!!` 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](/previous-versions/aa719848(v=vs.71)) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。
 
 6. 建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。
 
@@ -158,7 +158,7 @@ ms.locfileid: "87863346"
 11. 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 傳遞遠端散發者的名稱以及步驟 5 中指定之遠端散發者的密碼。
 
 > [!IMPORTANT]
-> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。
+> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](/previous-versions/aa719848(v=vs.71)) 。
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> 範例 (RMO) 
 您可以使用 Replication Management Objects (RMO) 以程式設計的方式設定複寫發行和散發。
@@ -172,6 +172,4 @@ ms.locfileid: "87863346"
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [設定散發](../../relational-databases/replication/configure-distribution.md)  
 [複寫管理物件概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[設定 AlwaysOn 可用性群組的複寫 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[設定 AlwaysOn 可用性群組的複寫 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

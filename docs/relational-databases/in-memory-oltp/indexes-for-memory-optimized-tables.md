@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723109"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866612"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
 
@@ -143,7 +143,7 @@ ms.locfileid: "85723109"
 
 在此情況下，最佳做法是在 `(CustomerCategoryID, CustomerId)` 上使用非叢集索引。 此索引可用於使用 `CustomerCategoryID` 相關述詞的查詢，但索引鍵不包含重複項目。 因此，重複的 CustomerCategoryID 值或索引中額外資料行，就不會造成索引維護效率不彰。
 
-下列查詢會顯示範例資料庫 `CustomerCategoryID` WideWorldImporters `Sales.Customers`的資料表 [中，](../../sample/world-wide-importers/wide-world-importers-documentation.md)上索引之重複索引鍵值的平均數目。
+下列查詢會顯示範例資料庫 `CustomerCategoryID` WideWorldImporters `Sales.Customers`的資料表 [中，](../../samples/wide-world-importers-what-is.md)上索引之重複索引鍵值的平均數目。
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ WHERE col1 = 'dn';
  [SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)   
  [記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

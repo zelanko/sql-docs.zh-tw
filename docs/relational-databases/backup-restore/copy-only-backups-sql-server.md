@@ -16,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863371"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809856"
 ---
 # <a name="copy-only-backups"></a>只複製備份
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "87863371"
  只複製備份會記錄在 **backupset** 資料表的 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 資料行中。  
  
  > [!IMPORTANT]  
-> 在 Azure SQL 受控執行個體中，無法為使用[服務管理的透明資料加密 (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) \(部分機器翻譯\) 加密的資料庫建立僅複製備份。 服務管理的 TDE 使用內部金鑰加密資料，且該金鑰無法匯出，所以您無法將備份還原到其他位置。 請考慮改用[客戶管理的 TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql)，以便建立加密資料庫的僅複本備份，但請務必讓加密金鑰可供日後還原使用。
+> 在 Azure SQL 受控執行個體中，無法為使用[服務管理的透明資料加密 (TDE)](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) \(部分機器翻譯\) 加密的資料庫建立僅複製備份。 服務管理的 TDE 使用內部金鑰加密資料，且該金鑰無法匯出，所以您無法將備份還原到其他位置。 請考慮改用[客戶管理的 TDE](/azure/sql-database/transparent-data-encryption-byok-azure-sql)，以便建立加密資料庫的僅複本備份，但請務必讓加密金鑰可供日後還原使用。
   
 ## <a name="to-create-a-copy-only-backup"></a>若要建立只複製備份  
  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell 建立只複製備份。  
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
-- [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [SQL Server PowerShell 提供者](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>另請參閱  
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -108,4 +108,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

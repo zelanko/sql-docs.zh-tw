@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718064"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809434"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718064"
   
 -   RESTORE WITH MOVE 是必要的。  
   
--   如需進階儲存體的額外資訊，請參閱[進階儲存體：適用於 Azure 虛擬機器工作負載的高效能儲存體](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
+-   如需進階儲存體的額外資訊，請參閱[進階儲存體：適用於 Azure 虛擬機器工作負載的高效能儲存體](/azure/virtual-machines/disks-types)  
   
  **單一儲存體帳戶：** 檔案快照集和目的地 Blob 必須使用相同的儲存體帳戶。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718064"
   
  **線上還原：** 使用快照集備份時，您無法執行「線上還原」。 如需「線上還原」的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
- **計費：** 使用 SQL Server 檔案快照集備份時，會隨著資料變更產生額外費用。 如需詳細資訊，請參閱 [Understanding How Snapshots Accrue Charges](https://msdn.microsoft.com/library/azure/hh768807.aspx)(了解快照集的計費方式)。  
+ **計費：** 使用 SQL Server 檔案快照集備份時，會隨著資料變更產生額外費用。 如需詳細資訊，請參閱 [Understanding How Snapshots Accrue Charges](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges)(了解快照集的計費方式)。  
   
  **封存：** 若您希望封存檔案快照集備份，您可以封存到 Blob 儲存體或串流備份。 若要封存至 Blob 儲存體，請將檔案快照集備份中的快照集複製到其他 Blob。 若要封存至資料流備份，請將資料庫檔案快照集備份還原為新的資料庫，然後執行壓縮和/或加密的標準串流備份，並且獨於基底 Blob 之外，視所需的期限封存它。  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

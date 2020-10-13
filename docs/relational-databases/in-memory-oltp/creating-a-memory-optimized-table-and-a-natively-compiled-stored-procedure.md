@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10c344ac156a59dda89e678709e6b846bf3c33a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cededc3af0cb9c5e1980246ef67491c7e68fc960
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541169"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868142"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>建立記憶體最佳化資料表和原生編譯的預存程序
 
@@ -42,7 +42,7 @@ ms.locfileid: "89541169"
 
 ### <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序
 
-原生編譯預存程序是編譯成機器碼且可存取記憶體最佳化資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 原生編譯預存程序允許以有效率的方式執行預存程序中的查詢和商務邏輯。 如需有關原生編譯程序的詳細資料，請參閱＜ [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)＞。 如需將以磁碟為基礎之預存程序移轉至原生編譯預存程序的詳細資訊，請參閱 [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。
+原生編譯預存程序是編譯成機器碼且可存取記憶體最佳化資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 原生編譯預存程序允許以有效率的方式執行預存程序中的查詢和商務邏輯。 如需有關原生編譯程序的詳細資料，請參閱＜ [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)＞。 如需將以磁碟為基礎之預存程序移轉至原生編譯預存程序的詳細資訊，請參閱 [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)。
 
 > [!NOTE]
 > 解譯 (以磁碟為基礎) 的預存程序與原生編譯的預存程序之間的差異在於，解譯的預存程序是在第一次執行時編譯，而原生編譯的預存程序是在建立時編譯。 原生編譯的預存程序於建立時將能偵測出許多錯誤狀況，而這會造成原生編譯的預存程序建立失敗 (例如算術溢位、類型轉換和一些除以零的狀況)。 若是解譯的預存程序，這些錯誤狀況通常不會導致預存程序建立失敗，但所有的執行都會失敗。
@@ -291,6 +291,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體內部 OLTP 程式碼範例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [記憶體內部 OLTP 程式碼範例](./sample-database-for-in-memory-oltp.md)  
   

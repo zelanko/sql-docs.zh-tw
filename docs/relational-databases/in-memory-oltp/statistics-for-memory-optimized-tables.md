@@ -12,12 +12,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c427c56c6ce7081b187dba2bda7b6b891e258bec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734961"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867508"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -100,6 +100,5 @@ WHERE o.is_memory_optimized=1
  在您載入資料後建立原生編譯預存程序，可確保最佳化工具具有記憶體最佳化資料表的統計資料。 這樣將可確保編譯程序時，查詢計劃能夠保持效率。  
 
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [記憶體最佳化資料表](./sample-database-for-in-memory-oltp.md)  
   

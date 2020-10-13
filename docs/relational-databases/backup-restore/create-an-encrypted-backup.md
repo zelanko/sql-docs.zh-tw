@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748434"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809252"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748434"
   
  **必要條件：**  
   
--   一個視窗儲存體帳戶和容器。 如需詳細資訊，請參閱。 [第 1 課：建立 Azure 儲存體物件](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
+-   一個視窗儲存體帳戶和容器。 如需詳細資訊，請參閱。 [第 1 課：建立 Azure 儲存體物件](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130))。  
   
 -   主要資料庫的資料主要金鑰，以及 SQL Server 執行個體的憑證或非對稱金鑰。 如需加密需求及權限的資訊，請參閱 [備份加密](../../relational-databases/backup-restore/backup-encryption.md)。  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748434"
     GO  
   
     ```  
-  
   

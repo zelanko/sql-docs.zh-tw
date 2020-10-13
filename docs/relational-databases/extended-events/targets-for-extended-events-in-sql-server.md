@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863352"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868773"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 
@@ -156,7 +156,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Azure SQL Database 只支援在 Azure Blob 儲存體上存放 `xel` 檔案。 
 >
-> 如需 SQL Database (以及 SQL 受控執行個體) 專屬的 **event_file** 程式碼範例，請參閱 [SQL Database 中擴充事件的事件檔案目標代碼](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file) \(部分機器翻譯\)。
+> 如需 SQL Database (以及 SQL 受控執行個體) 專屬的 **event_file** 程式碼範例，請參閱 [SQL Database 中擴充事件的事件檔案目標代碼](/azure/sql-database/sql-database-xevent-code-event-file) \(部分機器翻譯\)。
 
 ::: moniker-end
 
@@ -792,9 +792,6 @@ event_stream 目標可以用於 C# 這類語言所撰寫的 .NET 程式。 C# �
 ### <a name="xevent-namespaces"></a>XEvent 命名空間
 
 
-- [Microsoft.SqlServer.Management.XEvent 命名空間](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent 命名空間](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq 命名空間](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq 命名空間](/dotnet/api/microsoft.sqlserver.xevent.linq)

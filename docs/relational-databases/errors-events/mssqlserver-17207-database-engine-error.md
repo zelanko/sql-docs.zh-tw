@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456445"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869463"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>原因
-在可以使用任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之前，該資料庫必須先啟動。 資料庫啟動程序會涉及初始化代表資料庫和資料庫檔案的各種資料結構，開啟屬於資料庫的所有檔案，最後再於資料庫上執行復原。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) \(英文\) Windows API 函式來開啟屬於某個資料庫的檔案。
+在可以使用任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之前，該資料庫必須先啟動。 資料庫啟動程序會涉及初始化代表資料庫和資料庫檔案的各種資料結構，開啟屬於資料庫的所有檔案，最後再於資料庫上執行復原。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) \(英文\) Windows API 函式來開啟屬於某個資料庫的檔案。
  
 訊息 17207 (和 17204) 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在啟動程序期間嘗試開啟資料庫檔案時發生錯誤。
  
@@ -83,7 +83,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. 如果您接收到 ```Access is Denied``` 作業系統錯誤 = 5，請考慮這些方法：
    -  透過在 Windows 檔案總管中查看檔案的內容，來檢查針對檔案所設定的權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 Windows 群組來佈建各種檔案資源上的存取控制。 確定適當的群組 (具有如 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName 的名稱) 針對錯誤訊息中所述的資料庫檔案具有必要的權限。 如需詳細資料，請檢閱[設定資料庫引擎對檔案系統的存取權限](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)。 確定 Windows 群組確實包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶或服務 SID。
    -  檢閱正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的使用者帳戶。 您可以使用 Windows 工作管理員來取得此資訊。 尋找可執行檔 "sqlservr.exe" 的 [使用者名稱]。 此外，如果您最近已變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶，請記住執行此作業的支援方式是使用 SQL Server 組態管理員公用程式。 此功能的詳細資訊已於 [SQL Server 組態管理員](../sql-server-configuration-manager.md)提供。 
-   -  取決於作業的類型 (在伺服器啟動時開啟資料庫、附加資料庫、資料庫還原等)，用來進行模擬和存取資料庫檔案的帳戶可能會有所不同。 請檢閱[保護資料和記錄檔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)主題，以了解哪個作業會設定哪一種權限，以及會針對哪些帳戶設定。 使用如 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) \(英文\) 之類的工具，來了解檔案存取是否正在 SQL Server 執行個體服務啟動帳戶 (或服務 SID) 或模擬帳戶的資訊安全內容底下發生。
+   -  取決於作業的類型 (在伺服器啟動時開啟資料庫、附加資料庫、資料庫還原等)，用來進行模擬和存取資料庫檔案的帳戶可能會有所不同。 請檢閱[保護資料和記錄檔](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105))主題，以了解哪個作業會設定哪一種權限，以及會針對哪些帳戶設定。 使用如 Windows SysInternals [Process Monitor](/sysinternals/downloads/procmon) \(英文\) 之類的工具，來了解檔案存取是否正在 SQL Server 執行個體服務啟動帳戶 (或服務 SID) 或模擬帳戶的資訊安全內容底下發生。
 
       如果 SQL Server 正在模擬執行 ALTER DATABASE 或 CREATE DATABASE 作業之登入的使用者認證，您將會在 Process Monitor 工具 (作為範例) 中注意到下列資訊。
 
@@ -115,7 +115,6 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
    - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試存取任何磁碟或網路位置 [例如 iSCSI 磁碟] 上的資料庫檔案之前，請先確保這些位置是可供使用的。 如果必要，請在叢集系統管理員或服務控制管理員中建立必要的相依性。
 
 1. 如果您收到 `The process cannot access the file because it is being used by another process` 作業系統錯誤 = 32：
-   - 請使用來自 Windows Sysinternals 的 [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) \(英文\) 或 [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) \(英文\) 之類的工具，來找出是否有另一個處理序或服務已取得此資料庫檔案的獨佔鎖定。
+   - 請使用來自 Windows Sysinternals 的 [Process Explorer](/sysinternals/downloads/process-explorer) \(英文\) 或 [Handle](/sysinternals/downloads/handle) \(英文\) 之類的工具，來找出是否有另一個處理序或服務已取得此資料庫檔案的獨佔鎖定。
    - 停止該處理序存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案。 常見的範例包括防毒程式 (請參閱後續[知識庫文章](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)中針對檔案排除的指導方針)。
    - 在叢集環境中，請確保來自先前擁有節點的 sqlservr.exe 處理序已確實釋放資料庫檔案的控制代碼。 雖然通常並不會發生此情況，但叢集或 I/O 路徑設定錯誤可能會導致這類問題。
-  

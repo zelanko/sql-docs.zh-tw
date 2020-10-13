@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a3dedb6c503983cf2d916ffecbbf78e8fe1fc06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424110"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864060"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88424110"
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 出貨時已附帶各種工具。 這個主題描述您需要的優先工具，並幫助您選取作業的正確工具。 所有工具都可以從 [開始] 功能表存取。 根據預設，有些工具 (像是 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) 並不會安裝。 您必須在安裝期間選取工具作為用戶端元件的一部分。 如需下面所述工具的完整描述，請在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中搜尋相關內容。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 只包含工具的子集。  
 
 ### <a name="basic-tools"></a>基本工具
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 以及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 您可以從 [Microsoft 下載中心](https://msdn.microsoft.com/library/mt238290.aspx)免費下載 SSMS。 最新版本可以與舊版 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]搭配使用。  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 以及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 您可以從 [Microsoft 下載中心](../ssms/download-sql-server-management-studio-ssms.md)免費下載 SSMS。 最新版本可以與舊版 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]搭配使用。  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員會隨著 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和用戶端工具一起安裝。 它可讓您啟用伺服器通訊協定、設定通訊協定選項 (例如 TCP 通訊埠)、設定伺服器服務自動啟動，以及設定用戶端電腦以您偏好的方式連接。 這個工具會設定更進階的連接元素，但是不會啟用功能。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "88424110"
 - 如果您知道執行個體的名稱，而且是以電腦上本機系統管理員群組的成員身分來連接，則要從相同電腦上所執行的工具連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 很容易。 下列程序必須執行在主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相同電腦上。  
 
 > [!NOTE]  
-> 本主題討論如何連接至內部部署 SQL Server。 若要連接到 Azure SQL Database，請參閱 [使用 SQL Server Management Studio 連接到 SQL Database 並執行範例 T-SQL 查詢](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/)。  
+> 本主題討論如何連接至內部部署 SQL Server。 若要連接到 Azure SQL Database，請參閱 [使用 SQL Server Management Studio 連接到 SQL Database 並執行範例 T-SQL 查詢](/azure/azure-sql/database/connect-query-ssms)。  
 
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>判斷 Database Engine 執行個體的名稱  
 
@@ -111,4 +111,3 @@ ms.locfileid: "88424110"
 
 ## <a name="next-lesson"></a>下一課  
 [第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)    
-  

@@ -15,12 +15,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab93bbb94022f25206154e94531754315ef21c34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10262f9d74fd6d7ef7a4de8fc231a4f96fa00468
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456013"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869390"
 ---
 # <a name="broker-event-category"></a>Broker 事件類別目錄
 
@@ -46,6 +46,5 @@ ms.locfileid: "88456013"
  還為 Service Broker 提供了兩個安全性稽核事件。 如需這些事件的詳細資訊，請參閱 [Audit Broker 登入事件類別](../../relational-databases/event-classes/audit-broker-login-event-class.md) 和 [Audit Broker 交談事件類別](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性稽核事件類別目錄](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
-  
+ [安全性稽核事件類別目錄](/analysis-services/trace-events/security-audit-event-category)  
   

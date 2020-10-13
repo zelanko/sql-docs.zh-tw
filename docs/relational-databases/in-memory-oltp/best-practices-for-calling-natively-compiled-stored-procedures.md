@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: cb8f9d6d75250660e5f2cd38c5054ef40726c310
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867320"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>呼叫原生編譯預存程序的最佳作法
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,4 +55,4 @@ ms.locfileid: "91529369"
  - 預設值：**reason=default** 
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)

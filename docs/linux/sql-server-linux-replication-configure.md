@@ -2,8 +2,8 @@
 title: 設定複寫 (SSMS)
 description: 了解如何設定 Linux 上的 SQL Server 複寫。 使用 SQL Server Management Studio (SSMS) 或 Transact-SQL 預存程序來設定複寫。
 ms.custom: seo-dt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/20/2018
 ms.topic: article
@@ -12,12 +12,12 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61943baf9083d3ca33bd37e0fe9759a4c530dfe2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088839"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785055"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上設定 SQL Server 複寫
 

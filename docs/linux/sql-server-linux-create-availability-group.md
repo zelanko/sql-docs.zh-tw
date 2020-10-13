@@ -1,19 +1,19 @@
 ---
 title: 為 Linux 上的 SQL Server 建立和設定可用性群組
 description: 此教學課程說明如何針對 Linux 上的 SQL Server 建立和設定可用性群組，以及建立可用性群組端點和憑證。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c3b1bf11bfbc91fa2226bfc925e80288aaf9281d
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 075a2e7ed11abe0ceadfa4f50ba82ca57ff97f0e
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088966"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785151"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 建立和設定可用性群組
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773914"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868300"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -285,7 +285,7 @@ PAUSE
 >  當篩選發行項產生了對每個訂閱而言是唯一的非重疊資料分割時 (在建立合併發行項時，針對 P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption 指定 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription 的值)，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 當使用這個選項時，您應該考慮允許訂閱者要求產生快照集。 如需詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞主題中的「使用適當的篩選選項」一節。  
   
 > [!IMPORTANT]  
->  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+>  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](/previous-versions/aa719848(v=vs.71)) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>建立可讓訂閱者初始化快照集產生和傳遞的發行集  
   
@@ -424,5 +424,4 @@ PAUSE
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [複寫安全性最佳作法](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715386"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868762"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
 
@@ -135,7 +135,7 @@ GO
 
 如需分散式查詢的詳細資訊，請參閱下列主題：
 
-- [分散式查詢](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (SQL Server 2016 仍支援分散式查詢，但適用於此功能的文件並未更新。)
+- [分散式查詢](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) (SQL Server 2016 仍支援分散式查詢，但適用於此功能的文件並未更新。)
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -252,8 +252,8 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 如需 [複製精靈] 的詳細資訊，請參閱下列主題：
 
-- [Data Factory 複製精靈](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [教學課程：使用 Data Factory 複製精靈建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
+- [Data Factory 複製精靈](/azure/data-factory/data-factory-azure-copy-wizard)
+- [教學課程：使用 Data Factory 複製精靈建立具有複製活動的管線](/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -263,14 +263,14 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 
 如需使用這些 Data Factory 來源與接收的詳細資訊，請參閱下列主題：
 
-- [檔案系統](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [檔案系統](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [Azure SQL Database](/azure/data-factory/data-factory-azure-sql-connector)
 
 若要開始學習如何使用 Azure Data Factory 複製資料，請參閱下列主題：
 
-- [使用複製活動來移動資料](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [教學課程：使用 Azure 入口網站建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [使用複製活動來移動資料](/azure/data-factory/data-factory-data-movement-activities)
+- [教學課程：使用 Azure 入口網站建立具有複製活動的管線](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>常見錯誤
 

@@ -12,12 +12,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b378b5921397ec90d44a4d63de3aeaf944d8ab2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ff95c2fad217e0592e82c6e7bf034813931e758
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730892"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863840"
 ---
 # <a name="migrating-computed-columns"></a>移轉計算資料行
 
@@ -98,6 +98,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

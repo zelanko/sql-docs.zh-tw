@@ -12,12 +12,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbac8fa27b79b96a55f580983586141e14e27fc1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4214a85d3adc673c557d99d6bc21176559a85bd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545162"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868515"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
 
@@ -133,6 +133,5 @@ GO
  原生編譯預存程序的估計執行計畫會顯示程序內各查詢的查詢運算子和運算式。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 並未支援原生編譯預存程序的所有 SHOWPLAN_XML 屬性。 例如，與查詢最佳化工具成本相關的屬性並未納入程序的 SHOWPLAN_XML。  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

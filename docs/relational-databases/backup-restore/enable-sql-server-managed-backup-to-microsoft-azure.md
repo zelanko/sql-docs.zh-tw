@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248627"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810174"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>啟用 SQL Server 到 Azure 的受控備份
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   本主題說明如何使用資料庫和執行個體層級的預設設定來啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 它也會說明啟用電子郵件通知以及監視備份活動的方式。  
   
- 本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ 本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](/powershell/azure/)。  
   
 > [!IMPORTANT]  
 >  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱[設定到 Microsoft Azure 的 SQL Server 受管理備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "87248627"
 
 此程序需要 Azure 帳戶。 如果您已經有帳戶，請移至下一個步驟。 否則，您可以開始使用 [免費試用版](https://azure.microsoft.com/pricing/free-trial/) 或瀏覽 [購買選項](https://azure.microsoft.com/pricing/purchase-options/)。
 
-如需儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。 
+如需儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](/azure/storage/common/storage-account-create)。 
 
 #### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ ms.locfileid: "87248627"
 |**SAS 權杖**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需關於 SAS 的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需關於 SAS 的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](/azure/storage/common/storage-sas-overview)。  
   
 ## <a name="enable-managed-backup-to-azure"></a>啟用到 Azure 的受控備份
   
@@ -211,4 +211,4 @@ ms.locfileid: "87248627"
 本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 您可以使用相同的系統預存程序來修改現有的組態並提供新值。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 到 Azure 的受控備份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 到 Azure 的受控備份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

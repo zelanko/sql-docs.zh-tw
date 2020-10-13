@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3d7218b9d2524fd2312ea0364268821524eb926
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2c78991ea408f6b6b23169524280d834cf5c27a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446363"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809284"
 ---
 # <a name="create-clr-triggers"></a>建立 CLR 觸發程序
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88446363"
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立 CLR 觸發程序 (DML 或 DDL) 包含下列步驟：  
   
--   以 .NET Framework 支援的語言，將觸發程序定義為類別。 如需如何在 CLR 中設計觸發程序的程式的詳細資訊，請參閱 [CLR 觸發程序](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。 然後，使用適當的語言編譯器編譯類別，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中建立組件。  
+-   以 .NET Framework 支援的語言，將觸發程序定義為類別。 如需如何在 CLR 中設計觸發程序的程式的詳細資訊，請參閱 [CLR 觸發程序](/dotnet/framework/data/adonet/sql/clr-triggers)。 然後，使用適當的語言編譯器編譯類別，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中建立組件。  
   
 -   使用 CREATE ASSEMBLY 陳述式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中登錄組件。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之組件的詳細資訊，請參閱[組件 &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)。  
   
@@ -55,5 +55,4 @@ ms.locfileid: "88446363"
  [DML 觸發程序](../../relational-databases/triggers/dml-triggers.md)   
  [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [從 CLR 資料庫物件進行資料存取](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   

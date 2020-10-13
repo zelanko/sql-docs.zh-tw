@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7e7ba7e0e3f526c69026b9f759937d7329d50c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472910"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811072"
 ---
 # <a name="create-clr-functions"></a>建立 CLR 函數
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88472910"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>存取機器碼  
- CLR 函數可用來透過 Managed 程式碼中的 PInvoke 存取機器碼 (Unmanaged 程式碼)，例如使用 C 或 C++ 撰寫的程式碼 (如需詳細資訊，請參閱 [從 Managed 程式碼呼叫原生函數](https://go.microsoft.com/fwlink/?LinkID=181929) )。 如此可讓您重複使用舊版程式碼 (如 CLR UDF) 或是使用機器碼撰寫關鍵效能 UDF。 這樣的處理方式需要 UNSAFE 組件。 如需了解使用 UNSAFE 組件的注意事項，請參閱 [CLR 整合程式碼存取安全性](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
+ CLR 函數可用來透過 Managed 程式碼中的 PInvoke 存取機器碼 (Unmanaged 程式碼)，例如使用 C 或 C++ 撰寫的程式碼 (如需詳細資訊，請參閱 [從 Managed 程式碼呼叫原生函數](/cpp/dotnet/calling-native-functions-from-managed-code) )。 如此可讓您重複使用舊版程式碼 (如 CLR UDF) 或是使用機器碼撰寫關鍵效能 UDF。 這樣的處理方式需要 UNSAFE 組件。 如需了解使用 UNSAFE 組件的注意事項，請參閱 [CLR 整合程式碼存取安全性](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義函數 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -64,5 +64,4 @@ ms.locfileid: "88472910"
  [執行使用者定義函數](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [檢視使用者定義函數](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

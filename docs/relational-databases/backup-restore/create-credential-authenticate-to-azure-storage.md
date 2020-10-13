@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748420"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809233"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>建立認證 - 向 Azure 儲存體驗證
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85748420"
   
 ## <a name="azure-credentials"></a>Azure 認證  
  **管理憑證**  
- 使用這個選項可從本機憑證存放區指定憑證，該憑證符合來自 Azure 的管理憑證。 如需 Azure 管理憑證的詳細資訊，請參閱[建立及上傳 Azure 的管理憑證](https://go.microsoft.com/fwlink/?LinkId=320781)。  
+ 使用這個選項可從本機憑證存放區指定憑證，該憑證符合來自 Azure 的管理憑證。 如需 Azure 管理憑證的詳細資訊，請參閱[建立及上傳 Azure 的管理憑證](/previous-versions/azure/gg551722(v=azure.100))。  
   
  **訂用帳戶**  
  選取、輸入或貼上符合本機憑證存放區之管理憑證的 Azure 訂用帳戶識別碼。  
@@ -44,5 +44,4 @@ ms.locfileid: "85748420"
   
 ## <a name="storage-account"></a>儲存體帳戶  
  選取您想要用來儲存備份檔案的儲存體帳戶。  
-  
   

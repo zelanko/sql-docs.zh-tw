@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2de53e7c941e28a3a498f984fc544f4733f71694
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87240122"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810434"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -984,7 +984,7 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [重新組織與重建索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[＜使用 SQL Server 2008 索引檢視提升效能＞](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[＜使用 SQL Server 2008 索引檢視提升效能＞](/previous-versions/sql/sql-server-2008/dd171921(v=sql.100))  
 [分割資料表與索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [建立主索引鍵](../relational-databases/tables/create-primary-keys.md)    
 [記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -994,4 +994,4 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

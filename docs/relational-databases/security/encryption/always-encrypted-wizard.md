@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627448"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866682"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 [Always Encrypted 精靈] 設定資料行加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "85627448"
 建議使用 PowerShell 
 
  - 如需端對端逐步解說，其示範如何使用精靈來設定 Always Encrypted 並在用戶端應用程式中使用，請參閱下列 Azure SQL Database 教學課程：
-    - [使用 Always Encrypted 和 Windows 憑證存放區中資料行主要金鑰保護 Azure SQL Database 中的敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [使用 Always Encrypted 和 Azure Key Vault 中資料行主要金鑰保護 Azure SQL Database 中的敏感性資料](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [使用 Always Encrypted 和 Windows 憑證存放區中資料行主要金鑰保護 Azure SQL Database 中的敏感性資料](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [使用 Always Encrypted 和 Azure Key Vault 中資料行主要金鑰保護 Azure SQL Database 中的敏感性資料](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - 如需使用精靈的影片，請參閱 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，請參閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性小組部落格的 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545)(SSMS 加密精靈 - 幾個簡單步驟即可啟用永遠加密)。  
  - 如需 Always Encrypted 金鑰的資訊，請參閱 [Always Encrypted 金鑰管理概觀](overview-of-key-management-for-always-encrypted.md)。
