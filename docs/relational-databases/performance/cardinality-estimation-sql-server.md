@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990171"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890998"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 
@@ -159,7 +159,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-如需為 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 量身訂做之擴充事件的相關資訊，請參閱 [SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
+如需為 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 量身訂做之擴充事件的相關資訊，請參閱 [SQL Database 中的擴充事件](/azure/azure-sql/database/xevent-db-diff-from-svr)。  
   
 ## <a name="steps-to-assess-the-ce-version"></a>評估 CE 版本的步驟  
   
@@ -290,9 +290,9 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10)) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)  
  [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)   
+ [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)

@@ -16,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463810"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810477"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>資料表資料行屬性 (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88463810"
  顯示是否可以確定地決定選取之資料行的資料類型。  
   
  **以 DTS 發行**  
- 顯示資料行是否為以 DTS 發行。 ([Data Transformation Services 已被取代](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0))。 
+ 顯示資料行是否為以 DTS 發行。 ([Data Transformation Services 已被取代](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105)))。 
   
  **全文檢索規格**  
  顯示全文檢索索引的相關資訊。 這個屬性的值是 [已全文檢索索引]**** 子屬性的值，並且指出這個資料行是否已全文檢索索引。  
@@ -137,5 +137,4 @@ ms.locfileid: "88463810"
   
 > [!NOTE]  
 >  每個資料列的 **(max)** 資料類型長度都會不同。 **sp_help** 會傳回 (-1) 當作 **(max)** 資料行的長度。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會顯示 -1 當作資料行大小。  
-  
   

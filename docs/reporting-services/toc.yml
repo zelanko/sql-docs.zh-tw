@@ -1467,7 +1467,7 @@
 - name: 關聯式資料庫
   items:
     - name: 如何管理登入、使用者和結構描述
-      href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      href: ../relational-databases/security/authentication-access/create-a-login.md
     - name: 動態資料遮罩
       href: ../relational-databases/security/dynamic-data-masking.md
     - name: SQL Server Express LocalDB 參考

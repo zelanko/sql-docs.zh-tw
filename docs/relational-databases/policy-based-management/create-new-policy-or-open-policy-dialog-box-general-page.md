@@ -16,16 +16,16 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88741c77d43e3f68303c6624ba32e1d58a2d8392
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 60997f5a657db79dc9e31c17c47f02bfc12b3cad
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480276"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892188"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>建立新原則或開啟原則對話方塊，一般頁面
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  使用此對話方塊可建立新的以原則為基礎的管理原則，或是修改現有的原則。 使用 **[針對目標]** 和 **[伺服器限制]** 區域當做篩選，將原則限制為所有可能目標的子集。 如果是要當做目標篩選使用的條件，必須在實體 Facet 上定義這些條件，而且這些條件不能包含函數和 LIKE 運算子。 當系統計算原則的物件集時，根據預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes)  
+  使用此對話方塊可建立新的以原則為基礎的管理原則，或是修改現有的原則。 使用 **[針對目標]** 和 **[伺服器限制]** 區域當做篩選，將原則限制為所有可能目標的子集。 如果是要當做目標篩選使用的條件，必須在實體 Facet 上定義這些條件，而且這些條件不能包含函數和 LIKE 運算子。 當系統計算原則的物件集時，根據預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -74,5 +74,4 @@ ms.locfileid: "89480276"
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

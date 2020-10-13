@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902364"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891118"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "86902364"
     - 增加 **SubscriptionStreams** 值有助於提升「散發代理程式」的整體輸送量，因為多個訂閱者連線會平行套用變更批次。 不過，根據處理器數目以及其他中繼資料的條件 (例如主索引鍵、外部索引鍵、唯一限制式和索引)，SubscriptionStreams 較高的值，實際上可能會有不利的影響。 此外，如果資料流無法執行或認可，則「散發代理程式」會退而使用單一資料流來重試失敗的批次。
 
 
-如需有關這項測試的詳細資訊，請參閱部落格[最佳化複寫代理程式設定檔參數以提升效能](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) \(英文\)。
+如需有關這項測試的詳細資訊，請參閱部落格[最佳化複寫代理程式設定檔參數以提升效能](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance) \(英文\)。
 
 
 ### <a name="log-reader-agent"></a>記錄讀取器代理程式
@@ -162,5 +162,4 @@ ms.locfileid: "86902364"
 [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

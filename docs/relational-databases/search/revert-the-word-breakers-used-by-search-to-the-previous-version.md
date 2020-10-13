@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 29861071eec3c87797843aaa40590c23d912ea52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6d2ab12917fe043cd65d035cc1f133a24c04460
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464965"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868973"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>將搜尋所使用的文字分隔還原為舊版 (SQL Server 搜尋)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -381,5 +381,4 @@ ms.locfileid: "88464965"
   
 ## <a name="see-also"></a>另請參閱  
  [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [全文檢索搜尋的行為變更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
- 
+ [全文檢索搜尋的行為變更](./full-text-search.md?view=sql-server-ver15)

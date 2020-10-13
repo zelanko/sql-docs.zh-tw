@@ -14,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: baa0397320f725f401099c00e9887069b5ec6cd1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418922"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891918"
 ---
 # <a name="views"></a>檢視
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88418922"
  資料分割檢視會水平聯結一個或多個伺服器上一組成員資料表的分割資料。 這可讓顯示的資料好像源自於一個資料表。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同執行個體上聯結成員資料表的檢視是本機資料分割檢視。  
   
  系統檢視表  
- 系統檢視表會公開目錄中繼資料。 您可以使用系統檢視表來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或此執行個體中所定義物件的詳細資訊。 例如，您可以查詢 sys.databases 目錄檢視，以傳回執行個體中可用的使用者定義資料庫的詳細資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
+ 系統檢視表會公開目錄中繼資料。 您可以使用系統檢視表來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或此執行個體中所定義物件的詳細資訊。 例如，您可以查詢 sys.databases 目錄檢視，以傳回執行個體中可用的使用者定義資料庫的詳細資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)。  
   
 ## <a name="common-view-tasks"></a>一般檢視工作  
  下表提供與建立或修改檢視相關聯之一般工作的連結。  
@@ -57,5 +57,4 @@ ms.locfileid: "88418922"
 ## <a name="see-also"></a>另請參閱  
  [建立 XML 資料行的檢視表](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
-  
   

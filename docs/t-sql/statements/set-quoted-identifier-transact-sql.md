@@ -26,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c8f67adb02f69cd216f0c28919bf5f0409794ce
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5d1b7d5af0f47367ba1c31cc8bf220adc5fc1123
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227461"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91957029"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "91227461"
 ## <a name="syntax"></a>語法
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server, Azure SQL Database and SQL on-demand (preview) in Azure Synapse Analytics
 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```

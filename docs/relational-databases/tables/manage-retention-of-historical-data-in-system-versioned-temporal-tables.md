@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548891"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810675"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統建立版本之時態表中的歷程記錄資料保留
 
@@ -38,10 +38,10 @@ ms.locfileid: "89548891"
 
 一旦決定資料保留期限後，下一步擬定計劃來管理歷程記錄資料的儲存方式和位置，以及刪除超過保留需求之歷程記錄資料的方式。 您可以使用下列四種方法來管理時態歷程記錄資料表中的歷程記錄資料：
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [資料表資料分割](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [自訂清除指令碼](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [保留原則](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [資料表資料分割](#using-table-partitioning-approach)
+- [自訂清除指令碼](#using-custom-cleanup-script-approach)
+- [保留原則](#using-temporal-history-retention-policy-approach)
 
  對於以上任一種方式，移轉或清除歷程記錄資料的邏輯乃基於與目前資料表之期間結束相對應的資料行。 每個資料列的期間結束值決定資料列版本「關閉」時間，也就是落在歷程記錄資料表的時間。 例如， `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 條件指定超過一個月的歷程記錄資料需要移除或移出歷程記錄資料表。
 
@@ -53,7 +53,7 @@ ms.locfileid: "89548891"
 > [!NOTE]
 > Stretch Database 方法僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 能以透明的方式將歷程記錄資料移轉到 Azure。 若要提升安全性，您可以使用 SQL Server 的 [一律加密](https://msdn.microsoft.com/library/mt163865.aspx) 功能為移動中的資料加密。 此外，您還可以使用 [資料列層級安全性](../../relational-databases/security/row-level-security.md) 和其他先進的 SQL Server 安全性功能來搭配 Temporal 和 Stretch Database，藉此保護資料。
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 能以透明的方式將歷程記錄資料移轉到 Azure。 若要提升安全性，您可以使用 SQL Server 的 [一律加密](../security/encryption/always-encrypted-database-engine.md) 功能為移動中的資料加密。 此外，您還可以使用 [資料列層級安全性](../../relational-databases/security/row-level-security.md) 和其他先進的 SQL Server 安全性功能來搭配 Temporal 和 Stretch Database，藉此保護資料。
 
 透過 Stretch Database 方法，您可以將部分或所有時態歷程記錄資料表延展到 Azure，而 SQL Server 將會以無訊息的方式將歷程記錄資料移動到 Azure。 讓歷程記錄資料表具備延展功能，不會變更您與時態表在資料修改和時態查詢等方面的互動方式。
 
@@ -98,7 +98,7 @@ ms.locfileid: "89548891"
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>使用 Transact-SQL 來延展整個歷程記錄資料表
 
-您也可以使用 Transact-SQL 在本機伺服器上啟用 Stretch 以及 [為資料庫啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。 接著，您可以[使用 Transact-SQL 在資料表上啟用 Stretch Database](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)。 對於先前已啟用 Stretch Database 的資料庫，執行下列 Transact-SQL 指令碼可延伸現有的系統設定版本時態歷程記錄資料表︰
+您也可以使用 Transact-SQL 在本機伺服器上啟用 Stretch 以及 [為資料庫啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。 接著，您可以[使用 Transact-SQL 在資料表上啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。 對於先前已啟用 Stretch Database 的資料庫，執行下列 Transact-SQL 指令碼可延伸現有的系統設定版本時態歷程記錄資料表︰
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ COMMIT TRANSACTION
 4. 在步驟 (6) 中，藉由合併下限來改變資料分割函式︰`MERGE RANGE(N'2015-10-31T23:59:59.999'` (在移出 10 月的資料之後)。
 5. 在步驟 (7) 中，藉由建立新的上限來分割資料分割函數︰移出 10 月的資料之後， `SPLIT RANGE (N'2016-04-30T23:59:59.999'` 。
 
-然而，最好的方案是定期執行不需要修改指令碼即可在每個月執行適當動作的一般性 Transact-SQL 指令碼。 您可以將上述指令碼一般化，以根據提供的參數採取行動 (需要合併的下限和使用資料分割分割建立的新界限)。 為了避免在每個月建立暫存資料表，您可以將檢查條件約束變更為比對要切換移出的資料分割，藉此預先建立暫存資料表並重複使用。請參閱下列頁面以了解如何使用 Transact-SQL 指令碼將 [滑動視窗全面自動化](https://msdn.microsoft.com/library/aa964122.aspx) 的概念。
+然而，最好的方案是定期執行不需要修改指令碼即可在每個月執行適當動作的一般性 Transact-SQL 指令碼。 您可以將上述指令碼一般化，以根據提供的參數採取行動 (需要合併的下限和使用資料分割分割建立的新界限)。 為了避免在每個月建立暫存資料表，您可以將檢查條件約束變更為比對要切換移出的資料分割，藉此預先建立暫存資料表並重複使用。請參閱下列頁面以了解如何使用 Transact-SQL 指令碼將 [滑動視窗全面自動化](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) 的概念。
 
 ### <a name="performance-considerations-with-table-partitioning"></a>資料表資料分割效能考量
 
@@ -502,7 +502,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 卓越的資料壓縮和有效率的保留清除，可讓叢集資料行存放區索引成為您的工作負載快速產生大量歷程記錄資料時的完美選擇。 此模式一般適用於使用時態表進行變更追蹤和稽核、趨勢分析或 IoT 資料擷取的大量交易處理工作負載。
 
-如需更多詳細資料，請參閱[使用保留原則管理時態資料表中的歷程記錄資料](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)。
+如需更多詳細資料，請參閱[使用保留原則管理時態資料表中的歷程記錄資料](/azure/sql-database/sql-database-temporal-tables-retention-policy)。
 
 ## <a name="next-steps"></a>後續步驟
 

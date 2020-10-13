@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458332"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892228"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458332"
 |**Redo Bytes Remaining**|完成還原階段所要重做的剩餘記錄檔數量 (以 KB 為單位)。|次要複本|  
 |**Redone Bytes/sec**|次要資料庫在上一秒重做的記錄檔記錄數量。|次要複本|  
 |**Total Log requiring undo**|必須復原之記錄檔的總 KB 數。|次要複本|  
-|**Transaction Delay**|等候目前所有交易未終止之認可通知的延遲時間，以毫秒為單位。 除以 *Mirrored Write Transaction/sec* 得出 *Avg Transaction Delay*。 如需詳細資訊，請參閱 [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/) (SQL Server 2012 AlwaysOn – 第 12 集 – 效能層面與效能監視 II)|主要複本|  
+|**Transaction Delay**|等候目前所有交易未終止之認可通知的延遲時間，以毫秒為單位。 除以 *Mirrored Write Transaction/sec* 得出 *Avg Transaction Delay*。 如需詳細資訊，請參閱 [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii) (SQL Server 2012 AlwaysOn – 第 12 集 – 效能層面與效能監視 II)|主要複本|  
   
 ## <a name="see-also"></a>另請參閱
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458332"
  [SQL Server、可用性複本](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server、Databases 物件](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

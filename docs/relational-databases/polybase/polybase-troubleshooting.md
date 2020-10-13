@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a6ea70d3e24d659337c85895946c1f310e045234
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c54a2d16acafefdc763ca7e02f9b42c81cb1c2f7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247307"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892388"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>監視 PolyBase 並進行疑難排解
 
@@ -260,7 +260,7 @@ PolyBase 不會與名稱節點 HA 服務互動，例如目前的 Zookeeper 或 K
 
 ## <a name="error-messages-and-possible-solutions"></a>錯誤訊息與可能的解決方案
 
-若要針對外部資料表錯誤進行疑難排解，請參閱 Murshed Zaman 的部落格 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 安裝程式錯誤和可能的解決方案")。
+若要針對外部資料表錯誤進行疑難排解，請參閱 Murshed Zaman 的部落格 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "PolyBase 安裝程式錯誤和可能的解決方案")。
 
 ## <a name="see-also"></a>另請參閱
 

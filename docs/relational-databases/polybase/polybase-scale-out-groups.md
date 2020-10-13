@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818224"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892508"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818224"
 
 含有 PolyBase 的獨立 SQL Server 執行個體會在處理 Hadoop 或 Azure Blob 儲存體中的大量資料集時成為效能瓶頸。 PolyBase 群組功能可讓您建立 SQL Server 執行個體的叢集，利用向外延展方式處理來自外部資料來源 (例如 Hadoop 或 Azure Blob 儲存體) 的大型資料集，以提高查詢效能。 您現在可以調整 SQL Server 計算，以符合您工作負載的效能需求。 PolyBase 向外延展群組是一組 SQL Server 執行個體，能讓您在平行處理結構中處理龐大的外部資料集。 當您將更多 SQL Server 執行個體新增至群組時，資料載入及查詢效能可線性增加。 
   
-請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
+請參閱 [開始使用 PolyBase](./polybase-guide.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。
   
 ![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 向外延展群組")  
   
@@ -68,5 +68,4 @@ PolyBase Data Movement Service 會接收來自 PolyBase Engine 的指示，並�
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

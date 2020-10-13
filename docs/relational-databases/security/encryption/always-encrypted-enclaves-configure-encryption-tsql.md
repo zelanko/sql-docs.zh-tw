@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490471"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863649"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>使用 Transact-SQL 就地設定資料行加密
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88490471"
 本文的其餘部分將描述如何從 SQL Server Management Studio 使用 `ALTER TABLE`/`ALTER COLUMN` 陳述式來觸發就地加密。 或者，您也可以從應用程式發出 `ALTER TABLE`/`ALTER COLUMN`。 
 
 > [!NOTE]
-> 目前，SSMS 以外的工具 (包括 SqlServer PowerShell 模組中的 [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) Cmdlet 以及 [sqlcmd](../../../tools/sqlcmd-utility.md)) 不支援使用 `ALTER TABLE`/`ALTER COLUMN` 進行就地密碼編譯作業。
+> 目前，SSMS 以外的工具 (包括 SqlServer PowerShell 模組中的 [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) Cmdlet 以及 [sqlcmd](../../../tools/sqlcmd-utility.md)) 不支援使用 `ALTER TABLE`/`ALTER COLUMN` 進行就地密碼編譯作業。
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>請使用 SSMS 中的 Transact-SQL 執行就地加密
 ### <a name="pre-requisites"></a>必要條件

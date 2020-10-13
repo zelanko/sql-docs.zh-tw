@@ -14,12 +14,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b612f3718b35d94ec7e0a4ae60acd618faa9135e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfbe3440f5976ed2432f5fbcc7bd7ff39dffde45
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427400"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811082"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "88427400"
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) (AdventureWorks2017 範例資料庫)。
+- 下載 [AdventureWorks2017 sample databases](../samples/adventureworks-install-configure.md) (AdventureWorks2017 範例資料庫)。
 
-如需還原 SQL Server Management Studio 中資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
+如需還原 SQL Server Management Studio 中資料庫的指示，請參閱[還原資料庫](./backup-restore/restore-a-database-backup-using-ssms.md)。   
   
 ## <a name="1-configure-the-environment"></a>1.設定環境  
 為設定範例的初步內容，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟新查詢，然後執行下列程式碼以開啟 Adventureworks2017 資料庫。 這段程式碼會將資料庫內容變更為 `AdventureWorks2012` ，再建立新的伺服器登入和資料庫使用者帳戶 (`TestCreditRatingUser`)，並且使用了密碼。  
@@ -288,6 +288,5 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

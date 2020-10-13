@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ed1a88ec860edfc34535bbf812fd51f9930edb11
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569912"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890968"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查詢調整小幫手來升級資料庫
 
@@ -230,4 +230,5 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
 - [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) \(機器翻譯\)
 - [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [基數估計工具](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)
+- [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [使用 SQL Server 查詢調整小幫手](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)

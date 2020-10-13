@@ -12,12 +12,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24ecd09d3f649e0a18e76db87c05ee2be79c0cb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca5334dd7f83ac31c8e118cad983b25d049b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381976"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863903"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -91,21 +91,21 @@ ms.locfileid: "88381976"
   
 -   [即時作業分析的商業案例](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [使用非叢集資料行存放區索引進行即時作業分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [使用非叢集資料行存放區索引進行即時作業分析](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)  
   
--   [使用非叢集資料行存放區索引的簡單範例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
+-   [使用非叢集資料行存放區索引的簡單範例](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)  
   
--   [SQL Server 如何在交易式工作負載上維護非叢集資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)  
+-   [SQL Server 如何在交易式工作負載上維護非叢集資料行存放區索引](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)  
   
--   [使用篩選的索引，將非叢集資料行存放區索引維護的影響降到最低](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+-   [使用篩選的索引，將非叢集資料行存放區索引維護的影響降到最低](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
--   [使用壓縮延遲，將非叢集資料行存放區索引維護的影響降到最低](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)  
+-   [使用壓縮延遲，將非叢集資料行存放區索引維護的影響降到最低](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)  
   
--   [使用壓縮延遲 - 效能數目，將非叢集資料行存放區索引維護的影響降到最低](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
+-   [使用壓縮延遲 - 效能數目，將非叢集資料行存放區索引維護的影響降到最低](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)  
   
--   [使用記憶體最佳化資料表的即時作業分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/) \(英文\)  
+-   [使用記憶體最佳化資料表的即時作業分析](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index) \(英文\)  
   
--   [資料行存放區索引和適用於資料列群組的合併原則](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
+-   [資料行存放區索引和適用於資料列群組的合併原則](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>效能提示 #1：使用經篩選索引來改善查詢效能  
  執行即時作業分析會影響 OLTP 工作負載的效能。 這種影響應該很小。 下列範例示範如何使用篩選的索引，將交易式工作負載上的非叢集資料行存放區索引影響降到最低，同時仍能提供即時分析。  
@@ -165,7 +165,7 @@ Group By customername
   
  ![查詢計劃](../../relational-databases/indexes/media/query-plan-columnstore.png "查詢計劃")  
   
- 如需 [篩選的非叢集資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)的詳細資訊，請參閱此部落格。  
+ 如需 [篩選的非叢集資料行存放區索引](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)的詳細資訊，請參閱此部落格。  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>效能提示 #2：將分析卸載至 Always On 可讀取次要  
  雖然可使用篩選的資料行存放區索引來將資料行存放區索引維護最小化，但分析查詢仍然需要大量運算資源 (CPU、I/O、記憶體)，其會影響作業工作負載效能。 針對大部分任務關鍵性工作負載，建議您使用 AlwaysOn 組態。 在此組態中，您可以免除將分析卸載至可讀取次要以執行分析的影響。  
@@ -192,7 +192,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- 如需[壓縮延遲](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)的詳細資訊，請參閱此部落格。  
+ 如需[壓縮延遲](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)的詳細資訊，請參閱此部落格。  
   
  以下是建議的最佳做法：  
   
@@ -222,4 +222,3 @@ ORDER BY created_time DESC;
  [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [資料倉儲的資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-  

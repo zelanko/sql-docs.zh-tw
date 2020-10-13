@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529479"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891048"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 
@@ -28,13 +28,13 @@ ms.locfileid: "91529479"
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> 使用最新版 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組使用者介面，其設計為用來設定查詢存放區，以及用來取用所收集與工作負載相關的資料。 [在此](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)下載最新版的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組使用者介面，其設計為用來設定查詢存放區，以及用來取用所收集與工作負載相關的資料。 [在此](../../ssms/download-sql-server-management-studio-ssms.md)下載最新版的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
 如需如何在疑難排解案例中使用查詢存放區的快速描述，請參閱[查詢存放區@Azure部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析
 
-如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中執行查詢存放區，則可使用[查詢效能見解](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance)來分析隨時間的資源使用量。 雖然可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 來取得所有查詢的資源耗用量詳細資訊 (例如 CPU、記憶體和 I/O)，但查詢效能見解能提供一個快速並有效率方式來判斷資源耗用量對資料庫整體 DTU 耗用量的影響。 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)。
+如果在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中執行查詢存放區，則可使用[查詢效能見解](/azure/sql-database/sql-database-query-performance)來分析隨時間的資源使用量。 雖然可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [Azure Data Studio](../../azure-data-studio/what-is.md) 來取得所有查詢的資源耗用量詳細資訊 (例如 CPU、記憶體和 I/O)，但查詢效能見解能提供一個快速並有效率方式來判斷資源耗用量對資料庫整體 DTU 耗用量的影響。 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](/azure/azure-sql/database/query-performance-insight-use)。
 
 本節描述最佳的組態預設值，其設計目的是確保查詢存放區及相依功能可確實運作。 預設組態已針對持續收集資料最佳化，也就是在 OFF/READ_ONLY 狀態花費最少的時間。 如需所有可用查詢存放區選項的詳細資訊，請參閱 [LTER DATABASE SET 選項 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)。
 

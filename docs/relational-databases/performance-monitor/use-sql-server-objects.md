@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458608"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892218"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458608"
   
  若給定類型的多個資源存在於電腦內，一些物件將擁有多個執行個體。 例如，若系統擁有多個處理器， **Processor** 物件類型將擁有多個執行個體。 **Databases** 物件類型對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的每個資料庫都擁有一個執行個體。 有些物件類型 (例如 **Memory Manager** 物件) 則只有一個執行個體。 若物件擁有多個執行個體，您可增加計數器來追蹤每個執行個體的統計資料，在許多狀況下，則可同時追蹤所有的執行個體。 預設執行個體的計數器會以 **SQLServer:** _\<object name>_ 格式顯示。 具名執行個體的計數器會以 **MSSQL$:** _\<instance name>_  _\<counter name>_ 或 **SQLAgent$** _\<instance name>_  _\<counter name>_ 格式顯示。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能計數器值是使用 Windows 效能計數器 (WPC) 引擎所產生。 某些計數器值不會直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會為 WPC 引擎提供基底值，該引擎會執行所需的計算 (例如百分比)。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動態管理檢視會提供具有由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所產生原始值的所有計數器。 `cntr_type` 資料行會指出計數器的類型。 WPC 引擎處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器值的方式取決於此類型。 如需效能計數器類型的詳細資訊，請參閱 [WMI 文件](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能計數器值是使用 Windows 效能計數器 (WPC) 引擎所產生。 某些計數器值不會直接由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計算。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會為 WPC 引擎提供基底值，該引擎會執行所需的計算 (例如百分比)。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動態管理檢視會提供具有由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所產生原始值的所有計數器。 `cntr_type` 資料行會指出計數器的類型。 WPC 引擎處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器值的方式取決於此類型。 如需效能計數器類型的詳細資訊，請參閱 [WMI 文件](/windows/win32/wmisdk/wmi-performance-counter-types)。
   
  您可以在圖表中新增或移除計數器，並儲存圖表設定，藉以指定要在「系統監視器」啟動時監視的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件和計數器。  
   
@@ -144,5 +144,4 @@ ms.locfileid: "86458608"
 ## <a name="see-also"></a>另請參閱  
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

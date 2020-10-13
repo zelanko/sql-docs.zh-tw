@@ -12,12 +12,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 699819c74630687f4548d248632536e6e713e68b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723244"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869369"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -429,11 +429,10 @@ Batch execution completed 5001 times.
   
 ## <a name="h-see-also"></a>H. 另請參閱  
   
-- [經記憶體最佳化的資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。
+- [經記憶體最佳化的資料表](./sample-database-for-in-memory-oltp.md)。
 
 - [為記憶體最佳化的物件定義持久性](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)。
 
 - [降低發生不當記憶體不足錯誤可能性的累積更新，已於 2017 年 9 月部落格中宣告](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
     - [SQL Server 2016 組建版本](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)提供版本、Service Pack 和累積更新的完整詳細資料。
     - 這些偶發的不當錯誤不會出現在 SQL Server Enterprise Edition 中。
-

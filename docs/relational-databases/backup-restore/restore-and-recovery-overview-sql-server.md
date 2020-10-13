@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480397"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810695"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89480397"
 
 -   **復原階段**會復原 ATT 中找到的未完成交易，確保資料庫的完整性。 回復之後，資料庫會上線，而且不再有交易記錄備份可以套用到資料庫。
 
-每個資料庫復原階段進度的資訊都會記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [錯誤記錄檔](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)中。 資料庫復原進度也可以使用擴充事件進行追蹤。 如需詳細資訊，請參閱部落格文章[資料庫復原進度的新擴充事件](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)。
+每個資料庫復原階段進度的資訊都會記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [錯誤記錄檔](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)中。 資料庫復原進度也可以使用擴充事件進行追蹤。 如需詳細資訊，請參閱部落格文章[資料庫復原進度的新擴充事件](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)。
 
 > [!NOTE]
 > 針對分次還原案例，如果唯讀檔案群組從建立檔案備份以前已經是唯讀，就不需要將記錄備份套用到檔案群組，且檔案還原會跳過它。 
@@ -174,9 +174,9 @@ Database Recovery Advisor 有助於建構實作最佳化正確還原順序的還
   
 如需有關 Database Recovery Advisor 的詳細資訊，請參閱下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理能力部落格：  
   
--   [Recovery Advisor：簡介](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction) \(英文\)  
+-   [Recovery Advisor：簡介](/archive/blogs/managingsql/recovery-advisor-an-introduction) \(英文\)  
   
--   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups) \(英文\)  
+-   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups) \(英文\)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 加速資料庫復原
 [加速資料庫復原](/azure/sql-database/sql-database-accelerated-database-recovery/)可在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中使用。 加速資料庫復原藉由重新設計 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [復原流程](#TlogAndRecovery)來大幅改善資料庫可用性，尤其是針對長時間執行的交易。 啟用加速資料庫復原的資料庫，其在容錯移轉或其他非正常關機之後完成復原流程的速度會大幅加快。 啟用時，加速資料庫復原也會大幅加快完成復原已取消長時間執行交易的速度。
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [套用交易記錄備份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [套用交易記錄備份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

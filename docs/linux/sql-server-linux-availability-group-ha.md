@@ -7,15 +7,15 @@ ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9ab42b6628f34c020d02dcffac130601dddb1938
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472406"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784806"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組設定的高可用性和資料保護
 

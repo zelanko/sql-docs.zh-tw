@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea4b3c26cba886b5150b1bef7b8f3b08380c7a98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760469"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892478"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 課：建立和套用 Off By Default 原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "85760469"
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio 和執行 SQL Server 的伺服器存取權。 
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
   
 ## <a name="create-the-mail-off-condition"></a>建立 mail-off 條件
@@ -92,6 +92,5 @@ ms.locfileid: "85760469"
    
 ## <a name="next-lesson"></a>下一課  
 [第 2 課：建立和套用命名標準原則](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
-  
   
   

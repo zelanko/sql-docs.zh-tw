@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411144"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868907"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>向主機守護者服務註冊電腦
 
@@ -120,7 +120,7 @@ HGS 會在證明時根據此基準來測量電腦，因此在收集 TPM 測量�
 | -------------------- | ---------------- | ---------- |
 | 平台識別項  | 電腦 TPM 中的公開簽署金鑰，以及 TPM 製造商的簽署金鑰憑證。 | 每部電腦 1 個 |
 | TPM 基準 | TPM 中的平台控制項暫存器 (PCR)，用於測量在開機程序期間載入的韌體和 OS 設定。 例如安全開機狀態，以及損毀傾印是否受到加密。 | 每個唯一的電腦設定都有一個基準 (相同的硬體和軟體可以使用相同基準) |
-| 程式碼完整性原則 | 您信任的 [Windows Defender 應用程式控制](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)原則，用於保護電腦 | 每個部署至電腦的唯一 CI 原則都有一個。 |
+| 程式碼完整性原則 | 您信任的 [Windows Defender 應用程式控制](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)原則，用於保護電腦 | 每個部署至電腦的唯一 CI 原則都有一個。 |
 
 您可以在 HGS 上設定超過一個證明成品，以支援硬體和軟體混合組合。
 HGS 只需要電腦證明在每個原則類別中符合一個原則。
@@ -147,7 +147,7 @@ WDAC 程式碼完整性原則會檢查每個嘗試對受信任發行者和檔案
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. 遵循 [Windows Defender 應用程式控制部署指南](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)中的指導，以使用[群組原則](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)將 `allowall_cipolicy.bin` 檔案部署到 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦。 針對工作群組電腦，請使用本機群組原則編輯器 (`gpedit.msc`)，遵循相同程序。
+2. 遵循 [Windows Defender 應用程式控制部署指南](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)中的指導，以使用[群組原則](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)將 `allowall_cipolicy.bin` 檔案部署到 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦。 針對工作群組電腦，請使用本機群組原則編輯器 (`gpedit.msc`)，遵循相同程序。
 
 3. 在 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦上執行 `gpupdate /force` 以設定新的程式碼完整性原則，然後將電腦重新開機以套用原則。
 
@@ -243,7 +243,7 @@ Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputerna
 
 在您向 HGS 註冊 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦後 ([步驟 4A](#step-4a-register-a-computer-in-tpm-mode) 用於 TPM 模式，[步驟 4B](#step-4b-register-a-computer-in-host-key-mode) 用於主機金鑰模式)，應確認電腦能成功證明。
 
-您可以檢查 HGS 證明用戶端的設定，並隨時使用 [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) 來執行證明嘗試。
+您可以檢查 HGS 證明用戶端的設定，並隨時使用 [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) 來執行證明嘗試。
 命令的輸出類似如下範例：
 
 ```

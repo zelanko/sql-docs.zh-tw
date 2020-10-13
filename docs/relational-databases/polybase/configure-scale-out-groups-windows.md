@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042496"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892138"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上設定 PolyBase 相應放大群組
 
@@ -109,6 +109,6 @@ ms.locfileid: "89042496"
   
 ## <a name="next-steps"></a>後續步驟  
 
-如需疑難排解，請參閱 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。
+如需疑難排解，請參閱 [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))。
   
 如需 PolyBase 的詳細資訊，請參閱 [PolyBase 概觀](../../relational-databases/polybase/polybase-guide.md)。

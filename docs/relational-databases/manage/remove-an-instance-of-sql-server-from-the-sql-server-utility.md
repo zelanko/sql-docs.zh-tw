@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c1b0f36dd95146ec93819177b91d8abed1f0cc8c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b316b0fdf68debf590d3946b24c6ae9c6c79ae9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773503"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810679"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>從 SQL Server 公用程式移除 SQL Server 執行個體
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,6 +69,5 @@ select @@SERVERNAME AS instance_name
   
 ## <a name="see-also"></a>另請參閱  
  [使用公用程式總管來管理 SQL Server 公用程式](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [疑難排解 SQL Server 公用程式](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

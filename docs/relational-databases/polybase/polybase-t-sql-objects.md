@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173376"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891338"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 參考
 
@@ -198,7 +198,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>建立 Azure Data Lake Store 的外部資料表
 適用於：Azure SQL 資料倉儲
 
-如需詳細資訊，請參閱[使用 Azure Data Lake Store 載入](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+如需詳細資訊，請參閱[使用 Azure Data Lake Store 載入](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
 **1.建立資料庫範圍認證**   
 
@@ -567,5 +567,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 如需查詢的範例，請參閱 [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md)(PolyBase 查詢)。  
   
 ## <a name="see-also"></a>另請參閱  
-[開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[開始使用 PolyBase](./polybase-guide.md)   
 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)
