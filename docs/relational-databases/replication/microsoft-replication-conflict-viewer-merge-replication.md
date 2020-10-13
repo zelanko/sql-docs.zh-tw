@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e10e89850c8028590fd9e498a062abe0ac0de06
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722036"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868233"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85722036"
  同步處理期間解決衝突時，遺失之資料列的資料會寫入衝突資料表。 不論您接受原始解決方案或為衝突選擇不同的解決方案，都會從衝突資料表刪除記錄的衝突資料列。 您應該定期檢閱衝突，以協助減少衝突追蹤資料表的大小。  
   
 > [!NOTE]  
->  「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
+>  「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md)。  
   
 ## <a name="options"></a>選項。  
  複寫衝突檢視器會劃分為兩個區段。 對話方塊的上半段會顯示選取之資料表的衝突清單。 當您按一下衝突清單中的某個項目時，對話方塊的下半段中會顯示衝突的詳細資料。  
@@ -87,5 +87,4 @@ ms.locfileid: "85722036"
 ## <a name="see-also"></a>另請參閱  
  [檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

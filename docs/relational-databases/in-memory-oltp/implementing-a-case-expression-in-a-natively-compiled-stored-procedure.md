@@ -12,12 +12,12 @@ ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51d1aed041e25ceaefea1a3237fb1e02848f2d77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ab5daed36d446f60229ec11600e106b28b36ad
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723201"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869139"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +103,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
  [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
-  
   

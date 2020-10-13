@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480350"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890757"
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "89480350"
   
 -   在成本昂貴查詢所參考資料表上建立遺漏的索引。  
   
--   套用安全性原則以取得資料列層級安全性。 如需詳細資訊，請參閱[使用查詢存放區將資料列層級安全性最佳化](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) \(英文\)。  
+-   套用安全性原則以取得資料列層級安全性。 如需詳細資訊，請參閱[使用查詢存放區將資料列層級安全性最佳化](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) \(英文\)。  
   
 -   將暫時性系統版本設定新增到您 OLTP 應用程式經常修改的資料表中。  
   
@@ -222,4 +222,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404474"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869275"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404474"
   
  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部門用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對每台可攜式電腦進行了設定，可以讓合併式複寫使用 Web 同步處理。 每台可攜式電腦上的合併代理程式都有一個指向複寫元件的網際網路 URL，這些複寫元件安裝在執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦上。 這些元件會利用發行者來同步處理訂閱者。 現在每個銷售代表都可以透過任何可用的網際網路連接進行連線，而不需要使用遠端撥號連接，並能夠上傳及下載適當的資料。 網際網路連線使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL))；因此不需要使用虛擬私人網路 (VPN)。  
   
- 如需設定 Web 同步處理所需元件的資訊，請參閱[設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)、[針對 Web 同步處理設定 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 和[針對 Web 同步處理設定 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
+ 如需設定 Web 同步處理所需元件的資訊，請參閱[設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)、[針對 Web 同步處理設定 IIS](./configure-iis-7-for-web-synchronization.md) 和[針對 Web 同步處理設定 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
   
 > [!NOTE]  
 >  Web 同步處理專為同步處理可攜式電腦、手持式裝置及其他用戶端的資料而設計。 Web 同步處理並非用於高容量伺服器至伺服器應用程式。  
@@ -85,5 +85,4 @@ ms.locfileid: "88404474"
 ## <a name="see-also"></a>另請參閱  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Web 同步處理的拓撲](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

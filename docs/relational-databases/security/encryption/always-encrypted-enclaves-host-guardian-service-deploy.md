@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410984"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868202"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>針對 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主機守護者服務
 
@@ -53,7 +53,7 @@ ms.locfileid: "87410984"
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    您的 HGS 電腦將會再次重新啟動以完成設定 Active Directory 樹系。 在您下一次登入時，您的系統管理員帳戶將會是網域系統管理員帳戶。 我們建議檢閱 [Active Directory Domain Services 作業文件](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations) \(部分機器翻譯\)，以取得管理及保護您新樹系的詳細資訊。
+    您的 HGS 電腦將會再次重新啟動以完成設定 Active Directory 樹系。 在您下一次登入時，您的系統管理員帳戶將會是網域系統管理員帳戶。 我們建議檢閱 [Active Directory Domain Services 作業文件](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations) \(部分機器翻譯\)，以取得管理及保護您新樹系的詳細資訊。
 
 3. 接下來，您將會在已提高權限的 Windows PowerShell 主控台中執行下列命令，來設定 HGS 叢集並安裝證明服務：
 
@@ -218,7 +218,7 @@ Set-HgsServer -TrustHostKey
 
 1. 從您的憑證授權單位取得 TLS 憑證，並使用來自步驟 1.3 的完整 HGS 服務名稱作為主體名稱。 如果您不知道自己的服務名稱，則可以在任何 HGS 電腦上執行 `Get-HgsServer` 來找到它。 如果您的 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦使用不同的 DNS 名稱來連線至您的 HGS 叢集 (例如，如果 HGS 位於具有不同位址的網路負載平衡器後方)，您可以將替代 DNS 名稱新增到主體替代名稱清單中。
 
-2. 在 HGS 電腦上，使用 [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver) \(英文\) 來啟用 HTTPS 繫結，並指定在上述步驟中取得的 TLS 憑證。 如果您的憑證已經安裝在電腦上的本機憑證存放區中，請使用下列命令來向 HGS 註冊它：
+2. 在 HGS 電腦上，使用 [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) \(英文\) 來啟用 HTTPS 繫結，並指定在上述步驟中取得的 TLS 憑證。 如果您的憑證已經安裝在電腦上的本機憑證存放區中，請使用下列命令來向 HGS 註冊它：
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

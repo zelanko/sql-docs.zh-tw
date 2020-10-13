@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488562"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809475"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88488562"
 ## <a name="prerequisites"></a>必要條件  
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) (AdventureWorks2017 範例資料庫)。
+- 下載 [AdventureWorks2017 sample databases](../../samples/adventureworks-install-configure.md) (AdventureWorks2017 範例資料庫)。
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。  
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](../backup-restore/restore-a-database-backup-using-ssms.md)。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>檢查 Employee 資料表的目前結構
 範例 AdventureWorks2017 (或更新版本) 資料庫在 **HumanResources** 結構描述中包含一個 **Employee** 資料表。 為避免變更原始資料表，此步驟會製作一個名為 **EmployeeDemo** 的 **Employee**資料表複本。 若要簡化範例，您僅能從原始資料表複製五個資料行。 然後，您可以查詢 **HumanResources.EmployeeDemo** 資料表，以便在不使用 **hierarchyid** 資料類型的情況下，檢閱如何將資料表中的資料結構化。  
@@ -224,7 +224,7 @@ ms.locfileid: "88488562"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
- 您在[使用現有的階層式資料填入資料表](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作中建立的 **NewOrd** 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
+ 您在[使用現有的階層式資料填入資料表]()工作中建立的 **NewOrd** 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
   
 
 **hierarchyid** 資料行 (**OrgNode**) 是 **NewOrg** 資料表的主要索引鍵。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  

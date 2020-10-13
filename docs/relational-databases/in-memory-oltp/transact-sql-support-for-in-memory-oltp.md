@@ -12,12 +12,12 @@ ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27f21922951ad42dc4f26625a2558b03f0425715
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dda00961f4d8aa7a5b220e2794105adbac74793b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753188"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868249"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 Transact-SQL 支援
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85753188"
   
 -   [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) (已加入 **MEMORY_OPTIMIZED_DATA**)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) (已加入 **MEMORY_OPTIMIZED_DATA**)  
   
 -   [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
@@ -51,8 +51,7 @@ ms.locfileid: "85753188"
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
- [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
  [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)   
- [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

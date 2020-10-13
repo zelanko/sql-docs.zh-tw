@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8ba3ebb2aca0f1afd435e654427250901f9d83a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727336"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868563"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 
@@ -45,7 +45,7 @@ ms.locfileid: "85727336"
 |主題|描述|  
 |-----------|-----------------|  
 |[SQL Server 擴充的事件套件](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|描述包含物件的「擴充事件」套件。 當「擴充事件」工作階段在執行時，系統會使用這些物件來取得和處理資料。|  
-|[SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|描述事件工作階段期間可以接收資料的事件取用者。|  
+|[SQL Server 擴充的事件目標](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))|描述事件工作階段期間可以接收資料的事件取用者。|  
 |[SQL Server 擴充的事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|描述可實作和管理擴充事件工作階段的引擎。|  
 |[SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|描述擴充事件工作階段。|  
 | &nbsp; | &nbsp; |
@@ -68,7 +68,7 @@ ms.locfileid: "85727336"
   
 -   「擴充事件」引擎無法得知事件。 此引擎可將任何事件繫結至任何目標，因為此引擎不受到事件內容限制。 如需有關擴充的事件引擎的詳細資訊，請參閱＜ [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)＞。  
   
--   事件會與事件取用者區隔，後者在擴充的事件中稱為 *「目標」* 。 這表示，任何目標都可以接收任何事件。 此外，目標可以自動耗用任何引發的事件，這樣可以記錄或提供其他事件內容。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)＞。  
+-   事件會與事件取用者區隔，後者在擴充的事件中稱為 *「目標」* 。 這表示，任何目標都可以接收任何事件。 此外，目標可以自動耗用任何引發的事件，這樣可以記錄或提供其他事件內容。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))＞。  
   
 -   事件與事件發生時所要採取的動作不同。 因此，任何動作都可以與任何事件產生關聯。  
   
@@ -93,15 +93,15 @@ ms.locfileid: "85727336"
 |工作描述|主題|  
 |----------------------|-----------|  
 |使用 **[物件總管]** 管理事件工作階段。|[在物件總管中管理事件工作階段](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|描述如何建立擴充事件工作階段。|[建立擴充事件工作階段](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|描述如何建立擴充事件工作階段。|[建立擴充事件工作階段](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))|  
 |描述如何檢視及重新整理目標資料。| [進階檢視 SQL Server 中擴充事件的目標資料](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |描述如何使用擴充事件工具來建立和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「擴充事件」工作階段。|[擴充事件工具](../../relational-databases/extended-events/extended-events-tools.md)|  
 |描述如何改變擴充事件工作階段。|[更改擴充事件工作階段](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|描述如何取得與事件有關之欄位的資訊。|[取得所有事件的欄位](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|描述如何在註冊的封裝中查明哪些事件可用。|[檢視已註冊之套件的事件](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|描述如何判斷哪些擴充事件目標可在註冊的封裝中使用。|[檢視已註冊之套件的擴充事件目標](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|描述如何取得與事件有關之欄位的資訊。|[取得所有事件的欄位](/previous-versions/sql/sql-server-2016/bb677249(v=sql.130))|  
+|描述如何在註冊的封裝中查明哪些事件可用。|[檢視已註冊之套件的事件](./selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)|  
+|描述如何判斷哪些擴充事件目標可在註冊的封裝中使用。|[檢視已註冊之套件的擴充事件目標](/previous-versions/sql/sql-server-2016/bb677247(v=sql.130))|  
 |描述如何檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」事件和動作。|[檢視同等於 SQL 追蹤事件類別的擴充事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|描述當您在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 引數時，如何尋找可以設定的參數。|[取得 ADD TARGET 引數的可設定參數](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|描述當您在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 引數時，如何尋找可以設定的參數。|[取得 ADD TARGET 引數的可設定參數](/previous-versions/sql/sql-server-2016/bb677176(v=sql.130))|  
 |描述如何將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段。|[將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |描述如何判斷哪些查詢持有鎖定、查詢的計畫，以及取得鎖定時的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊。|[判斷哪些查詢持有鎖定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |描述如何識別阻礙資料庫效能的鎖定來源。|[尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
@@ -133,7 +133,7 @@ SELECT
 ## <a name="see-also"></a>另請參閱
 
 [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-[SQL Server 物件與版本的 DAC 支援](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[SQL Server 物件與版本的 DAC 支援](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
 [部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
 [監視資料層應用程式](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 &nbsp;  
@@ -142,4 +142,4 @@ SELECT
 &nbsp;  
 [XELite：跨平台程式庫，用來讀取 XEL 檔案或即時 SQL 串流中的 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，於 2019 年 5 月發行。  
 [Read-SQLXEvent PowerShell Cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent)，發行日期 2019 年 6 月。  
-[SQL 謎團：XEvent 工作階段的原因追蹤與事件順序 (2019 年 4 月 1 日發佈於部落格)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/) \(英文\)  
+[SQL 謎團：XEvent 工作階段的原因追蹤與事件順序 (2019 年 4 月 1 日發佈於部落格)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/) \(英文\)

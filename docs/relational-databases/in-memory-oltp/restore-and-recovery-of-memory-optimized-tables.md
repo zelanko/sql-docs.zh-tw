@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73edcacffe6267d6a2692018a106a4eb055817e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 740636f90882f32ec42722e2f36cdd2932747025
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551243"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868682"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,6 +68,5 @@ ms.locfileid: "89551243"
 -   具有一或多個非叢集索引的大型記憶體最佳化資料表可能會造成高 CPU 使用率。 不同於在建立時調整值區計數大小的雜湊索引，非叢集索引會動態成長。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份、還原及復原記憶體最佳化資料表](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [備份、還原及復原記憶體最佳化資料表](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458570"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890908"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458570"
  您也可以使用 GUI 來檢視由 **dta** 命令列公用程式產生的微調輸出。  
   
 > [!NOTE]  
->  如果您使用 **dta** 命令列公用程式並指定以 **-ox** 引數將輸出寫入到 XML 檔案，則在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  功能表上按一下 [開啟檔案]  ，即可開啟並檢視 XML 輸出檔。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 如需 **dta** 命令列公用程式的相關資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。  
+>  如果您使用 **dta** 命令列公用程式並指定以 **-ox** 引數將輸出寫入到 XML 檔案，則在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  功能表上按一下 [開啟檔案]  ，即可開啟並檢視 XML 輸出檔。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)。 如需 **dta** 命令列公用程式的相關資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>以 Database Engine Tuning Advisor GUI 檢視微調建議  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458570"
 ## <a name="see-also"></a>另請參閱  
  [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta 公用程式](../../tools/dta/dta-utility.md)  
-  
   

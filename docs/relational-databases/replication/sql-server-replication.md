@@ -15,12 +15,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0690ad04a9b4dfdb2edd22c4e882616c2f8bf73f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723099"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869504"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -134,7 +134,6 @@ ms.locfileid: "85723099"
 -   [允許非管理員使用複寫監視器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以程式設計方式監視複寫](monitor/programmatically-monitor-replication.md)    
 -   [在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](view-conflict-information-for-merge-publications.md) 
+-   [檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md) 
 -   [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
-  
   

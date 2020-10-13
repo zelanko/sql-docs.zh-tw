@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420922"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869412"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420922"
   連結的伺服器會啟用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 以從遠端資料來源讀取資料，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體外部的遠端資料庫伺服器 (例如 OLE DB 資料來源) 執行命令。 一般會將連結的伺服器設定為可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，而此陳述式包含另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的資料表或另一個資料庫產品 (例如 Oracle) 中的資料表。 多種 OLE DB 資料來源類型可設定為連結的伺服器，包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 及 Azure CosmosDB。
 
 > [!NOTE]
-> 連結的伺服器會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中提供。 其不會在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一與彈性集區中啟用。 有一些[受控執行個體中的條件約束可以在這裡找到](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers) \(部分機器翻譯\)。 
+> 連結的伺服器會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中提供。 其不會在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一與彈性集區中啟用。 有一些[受控執行個體中的條件約束可以在這裡找到](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers) \(部分機器翻譯\)。 
 
 ## <a name="when-to-use-linked-servers"></a>何時使用連結的伺服器？
 
@@ -76,7 +76,7 @@ ms.locfileid: "88420922"
 > 當使用 OLE DB 提供者時，用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶，必須要有該提供者安裝位置之目錄及其所有子目錄的讀取和執行權限。 這包括 Microsoft 發行的提供者，以及任何第三方提供者。
 
 > [!NOTE]
-> 使用完整委派時，連結的伺服器支援 Active Directory 傳遞驗證。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 開始，也支援搭配限制委派的傳遞驗證；不過，不支援[以資源為基礎的限制委派](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) \(部分機器翻譯\)。
+> 使用完整委派時，連結的伺服器支援 Active Directory 傳遞驗證。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 開始，也支援搭配限制委派的傳遞驗證；不過，不支援[以資源為基礎的限制委派](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) \(部分機器翻譯\)。
 
 ## <a name="managing-providers"></a>管理提供者  
 有一組選項可用來控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何載入及使用登錄中所指定的 OLE DB 提供者。  
@@ -107,5 +107,4 @@ ms.locfileid: "88420922"
   
 ## <a name="related-content"></a>相關內容  
  [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

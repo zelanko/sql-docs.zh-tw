@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519261"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809267"
 ---
 # <a name="create-a-full-database-backup"></a>建立完整資料庫備份
 
@@ -208,7 +208,7 @@ GO
 
 以下範例會執行 `SQLTestDB` 的完整資料庫備份到 Azure Blob 儲存體服務。 此範例假設您已擁有具備 Blob 容器的儲存體帳戶。 此範例會為您建立共用存取簽章；此範例會在已有現有共用存取簽章的容器上失敗。
 
-若您在儲存體帳戶中尚未擁有 Azure Blob 容器，請先建立一個再繼續。 如需詳細資訊，請參閱[建立一般用途儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)及[建立容器](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
+若您在儲存體帳戶中尚未擁有 Azure Blob 容器，請先建立一個再繼續。 如需詳細資訊，請參閱[建立一般用途儲存體帳戶](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)及[建立容器](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
 
 1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管]  中展開伺服器樹狀目錄。
 
@@ -368,7 +368,7 @@ GO
 > [!NOTE]
 > 這些範例需要 SqlServer 模組。 若要判斷是否已安裝，請執行 `Get-Module -Name SqlServer`。 若要安裝此模組，請在 PowerShell 的系統管理員工作階段中執行 `Install-Module -Name SqlServer`。
 >
-> 如需詳細資訊，請參閱 [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。
+> 如需詳細資訊，請參閱 [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)。
 
 > [!IMPORTANT]
 > 若您正在從 SQL Server Management Studio 開啟 PowerShell 視窗來連線到安裝的 SQL Server，您可以省略此範例的認證部分，因為會自動使用您在 SSMS 中認證來建立 PowerShell 與您 SQL Server 執行個體間的連線。
@@ -379,7 +379,7 @@ GO
 
 下列範例會在伺服器執行個體 `<myDatabase>` 的預設備份位置，建立 `Computer\Instance`資料庫的完整資料庫備份。 這個範例指定了選擇性的 **-BackupAction Database**。
 
-如需完整的語法和其他範例，請參閱 [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase)。
+如需完整的語法和其他範例，請參閱 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)。
 
 ```powershell
 $credential = Get-Credential

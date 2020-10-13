@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624785"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869421"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
@@ -49,13 +49,13 @@ ms.locfileid: "91624785"
 部落格及其他非正式交談有時會以縮寫 *xevents*來指稱擴充事件。
 
 > [!NOTE]
-> 如需 Azure SQL Database 中擴充事件的相關資訊 (包括程式碼範例)，請參閱 [SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/) \(部分機器翻譯\)。
+> 如需 Azure SQL Database 中擴充事件的相關資訊 (包括程式碼範例)，請參閱 [SQL Database 中的擴充事件](/azure/azure-sql/database/xevent-db-diff-from-svr) \(部分機器翻譯\)。
 
 ## <a name="preparations-before-demo"></a>示範前的準備工作
 
 您必須完成下列準備工作，才能實際執行後續的示範。
 
-1. [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+1. [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
    您應該每個月安裝 SSMS 的最新每月更新。
 2. 登入 Microsoft SQL Server 2014 或更新版本。
@@ -359,7 +359,7 @@ SELECT
 - [尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此案例使用目標 package0.histogram，它會處理未經處理的事件資料，再向您顯示。
 - [判斷哪些查詢持有鎖定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 此案例使用 [目標 package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件配對為 sqlserver.lock_acquire 和 lock_release。
+  - 此案例使用 [目標 package0.pair_matching](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130))，其中的事件配對為 sqlserver.lock_acquire 和 lock_release。
 
 ## <a name="terms-and-concepts-in-extended-events"></a>擴充事件的詞彙和概念
 
@@ -541,7 +541,7 @@ SELECT HAS_PERMS_BY_NAME
 - 內建函數 [HAS_PERMS_BY_NAME (TRANSACT-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)的詳細資料
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 伺服器權限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.server_principals (Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
 - 部落格：[有效的資料庫引擎權限](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - 可縮放的 PDF 格式 [海報](https://aka.ms/sql-permissions-poster)，顯示所有 SQL Server 權限的階層。
 

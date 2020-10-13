@@ -22,15 +22,15 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: d1cc1a575ba2159fc995022df97f5f2079b26206
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15083ee98c5752fc22cb2a1584883764bd1076a8
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928659"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785140"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的版本及支援功能
 

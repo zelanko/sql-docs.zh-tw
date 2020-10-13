@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116220"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809809"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 
@@ -81,7 +81,7 @@ ms.locfileid: "91116220"
 <sup>6</sup> 如果(在具有 AWE 支援的 32 位元上或是本身的 64 位元上) 授與鎖定記憶體中的分頁權限 (LPIM)，我們建議另外設定最大伺服器記憶體。 如需 LPIM 的詳細資訊，請參閱[伺服器記憶體伺服器設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體，會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需有關 AWE 的詳細資訊，請參閱 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文件中的[處理序位址空間](https://msdn.microsoft.com/library/ms189334.aspx)以及[管理大型資料庫的記憶體](https://msdn.microsoft.com/library/ms191481.aspx)。   
+> 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體，會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需有關 AWE 的詳細資訊，請參閱 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文件中的[處理序位址空間](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105))以及[管理大型資料庫的記憶體](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105))。   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

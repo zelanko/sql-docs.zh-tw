@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b907472303d6ba11691efe72bb08717ac7854ea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 75b1f1b489a50041d360ac8abc60dd492bf43378
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537997"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868239"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -159,9 +159,8 @@ GO
 若要緩和這個問題，請預先配置足夠的記憶體給資料庫，以復原或重新啟動資料庫，而不是提供最小值，依賴動態記憶體在需要時提供額外的記憶體。
   
 ## <a name="see-also"></a>另請參閱  
- [為記憶體中的 OLTP 管理記憶體](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [為記憶體中的 OLTP 管理記憶體](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))   
  [監視與疑難排解記憶體使用量](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md)  
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
-  

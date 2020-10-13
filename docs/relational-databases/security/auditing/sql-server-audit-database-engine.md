@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923930"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868594"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923930"
  所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本都支援伺服器層級稽核。 所有版本都支援以 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 開頭的資料庫層級稽核。 在這之前，資料庫層級稽核則限於 Enterprise、Developer 和 Evaluation Edition。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 > [!NOTE]  
->  本主題適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  若是 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]，請參閱 [開始使用 SQL 資料庫稽核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)。  
+>  本主題適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  若是 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]，請參閱 [開始使用 SQL 資料庫稽核](/azure/azure-sql/database/auditing-overview)。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server Audit 元件  
  「稽核」  是針對特定伺服器動作或資料庫動作群組將幾個元素組合成單一封裝的動作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的元件結合起來可產生稱為稽核的輸出，就像是與圖形和資料元素結合的報表定義會產生報表一樣。  
@@ -70,7 +70,7 @@ ms.locfileid: "86923930"
 > [!IMPORTANT]  
 >  任何經過驗證的使用者都可以讀寫 Windows 應用程式事件記錄檔。 應用程式事件記錄檔所需的權限低於 Windows 安全性事件記錄檔，所以比起 Windows 安全性事件記錄檔是較不安全的。  
   
- 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核]  原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取]  安全性原則必須已啟用 [成功]  和 [失敗] 。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式 ( **AuditPol.exe)** 從命令列設定更細微的 [產生的應用程式]原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](https://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
+ 寫入到 Windows 安全性記錄檔需要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶加入 [產生安全性稽核]  原則。 根據預設，本機系統、本機服務和網路服務都是此原則的一部分。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 此外，[稽核物件存取]  安全性原則必須已啟用 [成功]  和 [失敗] 。 您可以使用安全性原則嵌入式管理單元 (secpol.msc) 來設定這項設定。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，您可以使用稽核原則程式 ( **AuditPol.exe)** 從命令列設定更細微的 [產生的應用程式]原則。 如需啟用寫入 Windows 安全性記錄檔之步驟的詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 如需 Auditpol.exe 程式的詳細資訊，請參閱知識庫文章 921469： [如何使用「群組原則」進行詳細的安全性稽核設定](https://support.microsoft.com/kb/921469/)。 Windows 事件記錄檔在 Windows 作業系統中為全域的範圍。 如需 Windows 事件記錄檔的詳細資訊，請參閱 [事件檢視器概觀](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10))。 如果您需要更精確的稽核權限，請使用二進位檔案目標。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以使用以下方式來限制對檔案位置的存取：  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923930"
  [DDL 觸發程序](../../../relational-databases/triggers/ddl-triggers.md)  
  說明如何使用資料定義語言 (DDL) 觸發程序來追蹤資料庫的變更。  
   
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性與保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性與保護](../../../sql-server/index.yml)  
  提供有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server Audit 記錄](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

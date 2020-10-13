@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730856"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868569"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730856"
   
 -   將資料表和資料移轉至記憶體最佳化 (如果沒有不支援的功能)。  
     
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](/previous-versions/dn673538(v=msdn.10))。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用記憶體最佳化 Advisor 的逐步解說  
  在 **[物件總管]** 中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]** 。 隨即顯示 **[資料表記憶體最佳化 Advisor]** 的歡迎頁面。  
@@ -99,7 +99,7 @@ ms.locfileid: "85730856"
   
  如果主索引鍵不存在，而且資料表正移轉至非持久性資料表，這個畫面將不會出現。  
   
- 對於文字資料行 ( **char**、 **nchar**、 **varchar**和 **nvarchar**類型的資料行)，您必須選取適當的定序。 記憶體中 OLTP 只支援記憶體最佳化資料表上的資料行之 BIN2 定序，而不支援附帶補充字元的定序。 如需支援的定序及定序變更之潛在影響的詳細資訊，請參閱＜ [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) ＞。  
+ 對於文字資料行 ( **char**、 **nchar**、 **varchar**和 **nvarchar**類型的資料行)，您必須選取適當的定序。 記憶體中 OLTP 只支援記憶體最佳化資料表上的資料行之 BIN2 定序，而不支援附帶補充字元的定序。 如需支援的定序及定序變更之潛在影響的詳細資訊，請參閱＜ [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) ＞。  
   
  您可以為主索引鍵設定下列參數：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730856"
   
 -   非叢集索引。 此類型的索引最適合具有許多範圍查詢的索引。 您可以在 **[排序資料行和次序]** 清單中設定每個資料行的排序次序。  
   
- 若要了解主索引鍵最適合的索引類型，請參閱 [雜湊索引](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
+ 若要了解主索引鍵最適合的索引類型，請參閱 [雜湊索引](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130))。  
   
  選定主索引鍵之後，請按 **[下一步]** 。  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730856"
  程序完成之後，請重新整理 **[物件總管]** 以查看新的記憶體最佳化資料表和舊的磁碟資料表。 您可保留舊資料表或隨時將其刪除。  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

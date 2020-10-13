@@ -15,12 +15,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868292"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -172,7 +172,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  快照集代理程式會在發行集建立之後產生快照集。 您可以使用 Replication Management Objects (RMO) 和對複寫代理程式功能的直接 Managed 程式碼存取，以程式設計的方式產生這些快照集。 您使用的物件取決於複寫的類型而定。 您可以使用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 物件同步啟動快照集代理程式，或是使用代理程式作業以非同步方式啟動它。 在產生初始快照集之後，此快照集會在第一次同步處理訂閱時，傳送及套用到訂閱者。 每當現有的快照集不再包含有效且最新的資料時，您就需要重新執行此代理程式。 如需詳細資訊，請參閱[維護發行集](../../relational-databases/replication/publish/maintain-publications.md)。  
   
 > [!IMPORTANT]  
->  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+>  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](/previous-versions/aa719848(v=vs.71)) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>啟動快照集代理程式作業 (非同步) 來針對快照式或交易式發行集產生初始快照集  
   
@@ -264,6 +264,5 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [以指令碼變數使用 sqlcmd](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

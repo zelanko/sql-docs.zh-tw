@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990390"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809292"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 
@@ -84,7 +84,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 
 - 結構描述名稱是 **HISTORY_TABLE** 參數的必要項目。
 - 如果指定的結構描述不存在，則 **CREATE TABLE** 陳述式會失敗。
-- 如果 **HISTORY_TABLE** 參數指定的資料表已經存在，就會根據新建立的時態表驗證 [結構描述一致性和暫存資料一致性](https://msdn.microsoft.com/library/dn935015.aspx)。 如果您指定無效的記錄資料表，則 **CREATE TABLE** 陳述式會失敗。
+- 如果 **HISTORY_TABLE** 參數指定的資料表已經存在，就會根據新建立的時態表驗證 [結構描述一致性和暫存資料一致性](./temporal-tables.md)。 如果您指定無效的記錄資料表，則 **CREATE TABLE** 陳述式會失敗。
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>建立具有使用者定義記錄資料表的時態表
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [修改系統建立版本時態表中的資料](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [變更系統建立版本時態表的結構描述](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [停止系統設定版本時態表上的系統版本設定功能](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [停止系統設定版本時態表上的系統版本設定功能](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

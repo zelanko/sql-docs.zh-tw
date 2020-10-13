@@ -1,21 +1,21 @@
 ---
 title: 在 Linux 上設定 SQL Server 的可用性群組
 description: 了解如何建立 SQL Server Always On 可用性群組 (AG) 以確保 Linux 上的高可用性。
-author: MikeRayMSFT
+author: VanMSFT
 ms.custom: seo-lt-2019
-ms.author: mikeray
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892313"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784855"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Always On 可用性群組以確保 Linux 上的高可用性
 

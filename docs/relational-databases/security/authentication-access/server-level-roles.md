@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636138"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869021"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636138"
   
  您可以將伺服器層級主體 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、Windows 帳戶和 Windows 群組) 新增至伺服器層級角色。 固定伺服器角色的每個成員可以對相同的角色增加其他登入。 使用者定義伺服器角色的成員無法將其他伺服器主體加入至此角色。  
 > [!NOTE]
->  在 SQL Database 或 SQL Data Warehouse 中無法使用伺服器層級權限。 如需 SQL Database 的詳細資訊，請參閱[控制和授與資料庫存取權](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
+>  在 SQL Database 或 SQL Data Warehouse 中無法使用伺服器層級權限。 如需 SQL Database 的詳細資訊，請參閱[控制和授與資料庫存取權](/azure/sql-database/sql-database-manage-logins)。
   
 ## <a name="fixed-server-level-roles"></a>固定伺服器層級角色  
  下表顯示固定伺服器層級角色及其功能。  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE 伺服器主體權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY 伺服器主體權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [建立伺服器角色](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

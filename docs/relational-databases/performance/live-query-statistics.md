@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457876"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890785"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457876"
   
 > [!WARNING]  
 > 這項功能主要用在疑難排解。 使用這項功能不會過度降低整體查詢效能，尤其在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。  
-> 這項功能可以搭配 [TRANSACT-SQL 偵錯工具](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)使用。  
+> 這項功能可以搭配 [TRANSACT-SQL 偵錯工具](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)使用。  
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>檢視某項查詢的即時查詢統計資料 
   
@@ -79,4 +79,4 @@ ms.locfileid: "86457876"
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)   
+ [查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)

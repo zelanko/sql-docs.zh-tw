@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753203"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868788"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753203"
   
  如需記憶體最佳化資料表和原生方式編譯預存程序之支援功能的詳細資訊，請參閱：  
   
--   [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [記憶體內部 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>使用記憶體中 OLTP 的資料庫  
  下表列出不支援的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能，以及會出現在與記憶體內部 OLTP 資料庫有關之錯誤訊息文字中的關鍵字。 這個表格也會列出錯誤的解決方法。  
@@ -110,7 +110,7 @@ ms.locfileid: "85753203"
 |功能|COMPUTE|不支援 **COMPUTE** 子句。 請從查詢中將它移除。|  
 |功能|SELECT INTO|不支援 **INTO** 子句與 **SELECT** 陳述式一起使用。 請將查詢重新撰寫為 **INSERT INTO** _Table_ **SELECT**。|  
 |功能|不完整的插入資料行清單|一般而言，在 INSERT 陳述式中，必須為資料表中的所有資料行指定值。<br /><br /> 不過，我們支援記憶體最佳化資料表上的 DEFAULT 條件約束和 IDENTITY(1,1) 資料行。 INSERT 資料行清單中可以省略這些資料行，但 IDENTITY 資料行必須省略這些資料行。|  
-|功能|*Function*|原生編譯預存程序中不支援某些內建函數。 請從預存程序中移除拒絕的函數。 如需所支援內建函數的詳細資訊，請參閱<br />[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|功能|*Function*|原生編譯預存程序中不支援某些內建函數。 請從預存程序中移除拒絕的函數。 如需所支援內建函數的詳細資訊，請參閱<br />[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)。|  
 |功能|CASE|**適用於：** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>原生編譯的預存程序不支援 **CASE** 運算式。 請為每個案例建立查詢。 如需詳細資訊，請參閱 [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援 CASE 運算式。|  
 |功能|INSERT EXECUTE|移除參考。|  
 |功能|執行 CREATE 陳述式之前，請先執行|僅支援執行原生編譯預存程序和使用者定義函數。|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753203"
 |運算子|TSEQUAL|不支援此運算子。 請從原生編譯預存程序中移除 **TSEQUAL** 。|  
 |運算子|LIKE|不支援此運算子。 請從原生編譯預存程序中移除 **LIKE** 。|  
 |運算子|NEXT VALUE FOR|原生編譯預存程序內可以參考順序。 請使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]取得值，並將它傳遞至原生編譯預存程序。 如需詳細資訊，請參閱 [在記憶體最佳化資料表中實作 IDENTITY](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)。|  
-|Set 選項|*選項*|原生編譯預存程序內的 SET 選項不可變更。 某些選項可以透過 BEGIN ATOMIC 陳述式設定。 如需詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)＞中的＜Atonic 區塊＞一節。|  
+|Set 選項|*選項*|原生編譯預存程序內的 SET 選項不可變更。 某些選項可以透過 BEGIN ATOMIC 陳述式設定。 如需詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)＞中的＜Atonic 區塊＞一節。|  
 |運算元|TABLESAMPLE|不支援此運算子。 請從原生編譯預存程序中移除 **TABLESAMPLE** 。|  
 |選項|RECOMPILE|原生編譯預存程序是在建立時編譯。 請從程序定義中移除 **RECOMPILE** 。<br /><br /> 您可以在原生編譯預存程序上執行 sp_recompile，下次執行時就會重新編譯它。|  
 |選項|ENCRYPTION|不支援這個選項。 請從程序定義中移除 **ENCRYPTION** 。|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753203"
 |功能|DTC|存取記憶體最佳化資料表的交易不可以是分散式交易。|  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

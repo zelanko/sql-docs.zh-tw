@@ -14,12 +14,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b81ec42b06c310a7ac0d3ef038795aeb538ed768
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448189"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868621"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88448189"
   
 -   重新啟動「記錄讀取器代理程式」。 如需詳細資訊，請參閱[啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
--   在「散發者」上重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務 (使其在叢集中離線或上線)。 如果已排程作業可能已經從其他任何 **執行個體執行**sp_repldone **、** sp_replcmds **或** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則重新啟動那些執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 如需詳細資訊，請參閱[啟動、停止或暫停 SQL Server Agent 服務](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)。  
+-   在「散發者」上重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務 (使其在叢集中離線或上線)。 如果已排程作業可能已經從其他任何 **執行個體執行**sp_repldone **、** sp_replcmds **或** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則重新啟動那些執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 如需詳細資訊，請參閱[啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)。  
   
 -   在發行集資料庫上的「發行者」端執行 [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)，然後重新啟動記錄讀取器代理程式。  
   
@@ -66,5 +66,4 @@ ms.locfileid: "88448189"
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [複寫記錄讀取器代理程式](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
-  
   

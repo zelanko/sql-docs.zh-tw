@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98b00f32fd2a49d8a326a2df94d84c72fa999cf3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e2348d17f2ccb3181441e2d816af83b6636f0f6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759115"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809734"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>還原 master 資料庫 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85759115"
   
      `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
-     即使有同名的資料庫，REPLACE 選項還是會指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原指定的資料庫。 現有的資料庫 (如果有的話) 會遭到刪除。 在單一使用者模式中，我們建議您在 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)中輸入 RESTORE DATABASE 陳述式。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
+     即使有同名的資料庫，REPLACE 選項還是會指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原指定的資料庫。 現有的資料庫 (如果有的話) 會遭到刪除。 在單一使用者模式中，我們建議您在 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)中輸入 RESTORE DATABASE 陳述式。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../../ssms/scripting/sqlcmd-use-the-utility.md)。  
   
     > [!IMPORTANT]  
     >  在還原 **master** 之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體會關閉，並終止 **sqlcmd** 處理序。 在重新啟動伺服器執行個體之前，請移除單一使用者啟動參數。 如需詳細資訊，請參閱[設定伺服器啟動選項 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
@@ -66,5 +66,4 @@ ms.locfileid: "85759115"
  [系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [以單一使用者模式啟動 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
-  
   

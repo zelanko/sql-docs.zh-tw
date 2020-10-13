@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382524"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869058"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88382524"
   
 -   網頁之間的連結圖形  
   
- 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
+ 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](../t-sql/data-types/hierarchyid-data-type-method-reference.md) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid 的主要屬性  
  **hierarchyid** 資料類型的值代表樹狀目錄階層中的位置。 **hierarchyid** 的值具有下列屬性：  
@@ -540,8 +540,7 @@ GO
   
   
 ## <a name="see-also"></a>另請參閱  
- [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Hierarchyid 資料類型方法參考](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   

@@ -26,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b3914f2ed9be429f29b929bc74623af9f707bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a60d78abb92552e6413fd827d2223e507a0a439e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922836"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890948"
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86922836"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 主控和排程複寫中使用的代理程式，並為執行複寫代理程式提供了簡易的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 還控制和監視除複寫以外的其他作業。 如需詳細資訊，請參閱 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)。  
   
 > [!IMPORTANT]  
->  依預設，安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時會停用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務，除非明確選擇在安裝期間自動啟動該服務。 如需有關啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務的詳細資訊，請參閱＜ [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)進行管理。  
+>  依預設，安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時會停用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務，除非明確選擇在安裝期間自動啟動該服務。 如需有關啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務的詳細資訊，請參閱＜ [Start, Stop, or Pause the SQL Server Agent Service](../../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)進行管理。  
   
 ## <a name="snapshot-agent"></a>快照集代理程式  
  「快照集代理程式」通常搭配各種類型的複寫使用， 它會準備已發行資料表和其他物件的結構描述和初始資料檔、儲存快照集檔案，並記錄散發資料庫中同步處理的相關資訊。 快照集代理程式於發行者端執行。 如需詳細資訊，請參閱 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)。  
@@ -66,5 +66,4 @@ ms.locfileid: "86922836"
  [執行複寫維護作業 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
   

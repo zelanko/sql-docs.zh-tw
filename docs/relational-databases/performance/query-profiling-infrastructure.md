@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719336"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890766"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> 如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章 [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)。 
+> 如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章 [Developers Choice:Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (開發人員選擇：查詢進度 - 隨時隨地)。 
 
 執行擴充事件工作階段以使用 *query_thread_profile* 事件時，接著也會使用輕量型分析填入 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV，其會使用[活動監視器](../../relational-databases/performance-monitor/activity-monitor.md)或直接查詢 DMV，針對所有工作階段啟用即時查詢統計資料。
 
@@ -212,4 +212,4 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)      
+ [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)

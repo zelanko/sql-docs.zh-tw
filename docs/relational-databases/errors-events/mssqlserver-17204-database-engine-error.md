@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3853181bad494232b1874a7e19da9652738b546f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0dafe59102083ea1cd5c675819487eb88c9ecbc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456474"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869482"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
 1. 開啟屬於資料庫的所有檔案
 1. 在資料庫上執行復原 
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) \(英文\) Windows API 函式來開啟屬於某個資料庫的檔案。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) \(英文\) Windows API 函式來開啟屬於某個資料庫的檔案。
  
 訊息 17204 (和 17207) 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在啟動程序期間嘗試開啟資料庫檔案時發生錯誤。
  
@@ -81,7 +81,7 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
 1. 如果您接收到 `Access is Denied` 作業系統錯誤 = 5，請考慮這些方法：
    -  透過在 Windows 檔案總管中查看檔案的內容，來檢查針對檔案所設定的權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 Windows 群組來佈建各種檔案資源上的存取控制。 確定適當的群組 [具有如 SQLServerMSSQLUser$ComputerName$MSSQLSERVER 或 SQLServerMSSQLUser$ComputerName$InstanceName 的名稱] 針對錯誤訊息中所述的資料庫檔案具有必要的權限。 如需詳細資料，請檢閱[設定資料庫引擎對檔案系統的存取權限](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)。 確定 Windows 群組確實包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶或服務 SID。
    -  檢閱正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的使用者帳戶。 您可以使用 Windows 工作管理員來取得此資訊。 尋找可執行檔 "sqlservr.exe" 的 [使用者名稱]。 此外，如果您最近已變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶，請記住執行此作業的支援方式是透過 SQL Server 組態管理員公用程式。 此功能的詳細資訊已於 [SQL Server 組態管理員](../sql-server-configuration-manager.md)提供。 
-   -  取決於作業的類型 (在伺服器啟動時開啟資料庫、附加資料庫、資料庫還原等)，用來進行模擬和存取資料庫檔案的帳戶可能會有所不同。 請檢閱[保護資料和記錄檔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)主題，以了解哪個作業會設定哪一種權限，以及會針對哪些帳戶設定。 使用如 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) \(英文\) 之類的工具，來了解檔案存取是否正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體服務啟動帳戶 [或服務 SID] 或模擬帳戶的資訊安全內容底下發生。
+   -  取決於作業的類型 (在伺服器啟動時開啟資料庫、附加資料庫、資料庫還原等)，用來進行模擬和存取資料庫檔案的帳戶可能會有所不同。 請檢閱[保護資料和記錄檔](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105))主題，以了解哪個作業會設定哪一種權限，以及會針對哪些帳戶設定。 使用如 Windows SysInternals [Process Monitor](/sysinternals/downloads/procmon) \(英文\) 之類的工具，來了解檔案存取是否正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體服務啟動帳戶 [或服務 SID] 或模擬帳戶的資訊安全內容底下發生。
 
       如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在模擬執行 ALTER DATABASE 或 CREATE DATABASE 作業之使用者的認證，您將會在 Process Monitor 工具 (作為範例) 中注意到下列資訊：
         ```Date & Time:      3/27/2010 8:26:08 PM
@@ -109,7 +109,6 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
      - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
    - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
 1. If you're getting the `The process cannot access the file because it is being used by another process` operating system error = 32:
-   - Use a tool like [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) or [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file
+   - Use a tool like [Process Explorer](/sysinternals/downloads/process-explorer) or [Handle](/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file
    - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) )
    - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally, this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.
-  

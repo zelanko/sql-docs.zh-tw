@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8cd67af06699c929e1f84f948606a6411c5e1a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e79840f828a7891ac3e01cd52721eb5755a97c7b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722501"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809222"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>將多個資料庫備份至 Azure Blob 儲存體服務 - Powershell
 
@@ -44,7 +44,7 @@ ms.locfileid: "85722501"
   
 - SQL Server PowerShell 會實作 Cmdlet 以巡覽路徑結構，而路徑結構代表 PowerShell 提供者所支援物件的階層。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。
 
-  如需詳細資訊，請參閱 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。
+  如需詳細資訊，請參閱 [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md)。
 
 - **Get-ChildItem** Cmdlet：**Get-ChildItem** 傳回的資訊內容，視在 SQL Server PowerShell 路徑中的位置而定。 例如，如果位置在電腦層級，此指令程式會傳回所有安裝在電腦上的 SQL Server Database Engine 執行個體。 或者，如果位置在物件層級 (例如資料庫)，則其會傳回資料庫物件的清單。 **Get-ChildItem** Cmdlet 預設不會傳回任何系統物件。 使用 `–Force` 參數來查看系統物件。
 

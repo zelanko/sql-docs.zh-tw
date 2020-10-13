@@ -12,12 +12,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e26bb81bb4289d2b60f069444230e6fb25142ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2600cee68204b3ec05c68e074cfc12d48cfee9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722436"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868519"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>資料表和預存程序的原生編譯
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -149,7 +149,7 @@ GO
 
 標示為 NATIVE_COMPILATION 的預存程序為原生編譯。 這表示，程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式全都編譯為原生程式碼，能夠有效率地執行效能具有決定性的商務邏輯。
 
-如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。
+如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)。
 
 請考慮下列範例預存程序，它會在上一個範例的資料表 t1 中插入資料列：
 
@@ -212,6 +212,6 @@ native_sp 的 DLL 可直接與 t1 的 DLL 以及記憶體中 OLTP 儲存引擎�
 
 ## <a name="see-also"></a>另請參閱
 
-[記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[記憶體最佳化資料表](./sample-database-for-in-memory-oltp.md)
 
-[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95b7165fb16832b8b76e6a9c7a331433d49ff0a9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737821"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809634"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
 
@@ -24,7 +24,7 @@ ms.locfileid: "85737821"
 
 備份至 Microsoft Azure 儲存體或從中還原時，SQL Server 會取得無限期租用，以鎖定 Blob 的獨佔存取權。 當備份或還原程序順利完成時，就會釋放租用。 如果備份或還原失敗，備份程序會嘗試清除任何無效的 Blob。 不過，如果由於過長或持續性網路連線失敗而無法備份，備份程序可能無法存取 Blob，而該 Blob 可能仍然是被遺棄狀態。 這表示在釋放租用之前，無法寫入或刪除 Blob。 本主題描述如何釋放 (中斷) 租用及刪除 Blob。
   
-如需租用類型的詳細資訊，請閱讀這篇[文章](https://go.microsoft.com/fwlink/?LinkId=275664)。  
+如需租用類型的詳細資訊，請閱讀這篇[文章](/rest/api/storageservices/Lease-Blob)。  
   
 如果備份作業失敗，可能會產生無效的備份檔案。 備份 Blob 檔案可能也擁有使用中租用，導致無法刪除或覆寫此檔案。 若要刪除或覆寫這些 Blob，必須先釋放 (中斷) 租用。 如果備份失敗，建議您清除租用及刪除 Blob。 您也可以在儲存體管理工作之中，定期清除租用及刪除 Blob。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85737821"
   
 1. **識別擁有租用的 Blob：** 如果您有執行備份程序的指令碼或處理序，就可以在指令碼或處理序內部擷取失敗，並將其用於清除 Blob。  您也可以使用 LeaseStats 和 LeastState 屬性來識別擁租用的 Blob。 識別出 Blob 之後，請在刪除 Blob 之前先驗證備份檔案的有效性。  
   
-1. **中斷租用：** 授權的要求不必提供租用識別碼就可以中斷租用。 如需詳細資訊，請參閱 [此處](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
+1. **中斷租用：** 授權的要求不必提供租用識別碼就可以中斷租用。 如需詳細資訊，請參閱 [此處](/rest/api/storageservices/Lease-Blob) 。  
   
     > [!TIP]  
     > SQL Server 會發出租用識別碼，以便在還原作業期間確立獨佔存取權。 還原租用識別碼為 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
@@ -46,7 +46,7 @@ ms.locfileid: "85737821"
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell 指令碼範例  
   
 > [!IMPORTANT]
-> 如果您執行的是 PowerShell 2.0，載入 Microsoft WindowsAzure.Storage.dll 組件時可能會發生問題。 建議您升級 [PowerShell](https://docs.microsoft.com/powershell/) 以解決這項問題。 您也可以使用下列因應措施來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  
+> 如果您執行的是 PowerShell 2.0，載入 Microsoft WindowsAzure.Storage.dll 組件時可能會發生問題。 建議您升級 [PowerShell](/powershell/) 以解決這項問題。 您也可以使用下列因應措施來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -128,4 +128,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>另請參閱
 
-[SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

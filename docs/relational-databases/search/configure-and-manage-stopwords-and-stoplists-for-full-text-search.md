@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423382"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869407"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88423382"
   
     -   **從現有全文檢索停用字詞表建立**  
   
-     如需詳細資訊，請參閱[新增全文檢索停用字詞表 &#40;一般頁面&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309)。  
+     如需詳細資訊，請參閱[新增全文檢索停用字詞表 &#40;一般頁面&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130))。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "88423382"
   
 4.  以滑鼠右鍵按一下要變更屬性的停用字詞表，然後選取 [屬性]****。  
   
-5.  在 [[全文檢索停用字詞表屬性]](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) 對話方塊中：  
+5.  在 [[全文檢索停用字詞表屬性]](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) 對話方塊中：  
   
     1.  在 **[動作]** 清單方塊中，選取下列其中一個動作： **[加入停用字詞]**、 **[刪除停用字詞]**、 **[刪除所有停用字詞]** 或 **[清除停用字詞表]**。  
   
@@ -139,6 +139,5 @@ ms.locfileid: "88423382"
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>從 SQL Server 2005 升級非搜尋字  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 非搜尋字已經由停用字詞所取代。 當資料庫從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級時，便不再使用非搜尋字檔案。 不過，這些非搜尋字檔案會儲存在 FTDATA\ FTNoiseThesaurusBak 資料夾中，而且您之後可以在更新或建立對應的停用字詞表時使用它們。 如需如何將非搜尋字檔案升級為停用字詞表的資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
-  
   
   

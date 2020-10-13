@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195094"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809647"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195094"
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立唯一條件約束，確保在沒有參與主索引鍵之特定資料行中輸入的值不會重複。 建立唯一條件約束會自動建立對應的唯一索引。  
   
 > [!NOTE]    
-> 如需 Azure Synapse Analytics 唯一條件約束的資訊，請參閱 [Azure Synapse Analytics 的主要金鑰、外部索引鍵和唯一索引鍵](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) (機器翻譯)。
+> 如需 Azure Synapse Analytics 唯一條件約束的資訊，請參閱 [Azure Synapse Analytics 的主要金鑰、外部索引鍵和唯一索引鍵](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) (機器翻譯)。
   
  **本主題內容**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195094"
   
      如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)、[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)。  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001180"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868806"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86001180"
 ### <a name="design-your-own-import-or-export"></a>自行設計匯入或匯出
 如果您想要設計自訂的資料匯入，您可以使用下列一項功能或服務：
 -   SQL Server Integration Services。 如需詳細資訊，請參閱 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)。
--   Azure Data Factory。 如需詳細資訊，請參閱 [Azure Data Factory 簡介](https://docs.microsoft.com/azure/data-factory/data-factory-introduction)。
+-   Azure Data Factory。 如需詳細資訊，請參閱 [Azure Data Factory 簡介](/azure/data-factory/data-factory-introduction)。
 
 ## <a name="data-formats-for-import-and-export"></a>匯入及匯出的資料格式
 
@@ -53,7 +53,7 @@ ms.locfileid: "86001180"
 您可以匯入及匯出一般檔案或各種其他檔案格式、關聯式資料庫和雲端服務的資料。 若要深入了解特定工具的這些選項，請參閱下列主題。
 -   針對 SQL Server 匯入和匯出精靈，請參閱[使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。
 -   針對 SQL Server Integration Services，請參閱 [Integration Services (SSIS) 連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)。
--   針對 Azure Data factory，請參閱 [Azure Data Factory 連接器](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)。
+-   針對 Azure Data factory，請參閱 [Azure Data Factory 連接器](/azure/data-factory/data-factory-amazon-redshift-connector)。
 
 ### <a name="commonly-used-data-formats"></a>常用的資料格式
 

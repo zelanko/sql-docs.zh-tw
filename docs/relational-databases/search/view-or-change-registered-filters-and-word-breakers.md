@@ -17,12 +17,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f261aeafc9ae6010f02a8f4cff4cb14168e81303
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec6bffa39e5f7a9b3bb1938f42dac110b8385da5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490511"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868934"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>檢視或變更已註冊的篩選與斷詞工具
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88490511"
   
      **安裝並載入 Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server (如何對 SQL Server 註冊 Microsoft Filter Pack IFilter)](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server (如何對 SQL Server 註冊 Microsoft Filter Pack IFilter)]()  
   
 4.  使用 **sp_fulltext_service** 將新安裝的斷詞工具與篩選，載入伺服器執行個體中，如下所示：  
   
@@ -105,5 +105,4 @@ ms.locfileid: "88490511"
  [設定全文檢索篩選背景程式啟動器的服務帳戶](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

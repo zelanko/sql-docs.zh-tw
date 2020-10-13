@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89006f322ce113808deb989010b62ff9df49f04c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460220"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809464"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "88460220"
 ## <a name="prerequisites"></a>必要條件  
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) (AdventureWorks2017 範例資料庫)。
+- 下載 [AdventureWorks2017 sample databases](../../samples/adventureworks-install-configure.md) (AdventureWorks2017 範例資料庫)。
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](../backup-restore/restore-a-database-backup-using-ssms.md)。   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>使用 hierarchyid 資料類型建立資料表
 以下範例會建立名稱為 EmployeeOrg 的資料表，其中同時包含員工資料及其回報的階層。 本範例會在 AdventureWorks2017 資料庫中建立資料表，但這是選擇性的。 為了要維持此範例的簡單性，此資料表僅包含五個資料行：  
@@ -392,4 +392,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 曾經回報給 Jill (Wanida 和 Kevin) 的整個組織樹狀結構現在會回報給 Sariya。  
   
 若要讓預存程序辨識階層的區段，請參閱 [移動子樹](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees)的＜移動子樹＞一節。  
-  

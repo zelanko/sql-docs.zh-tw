@@ -18,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773933"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869099"
 ---
 # <a name="create-a-pull-subscription"></a>建立提取訂閱
 
@@ -308,7 +308,7 @@ GO
     -   (選擇性) **\@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
         > [!NOTE]  
-        >  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 SQL Server Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 當您為 Express 訂閱者指定值 **true** 時，不會建立代理程式作業。 不過，在「訂閱者」上會儲存重要的訂閱相關中繼資料。  
+        >  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 SQL Server Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。 當您為 Express 訂閱者指定值 **true** 時，不會建立代理程式作業。 不過，在「訂閱者」上會儲存重要的訂閱相關中繼資料。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到「散發者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ) 欄位。  
   
@@ -1136,5 +1136,4 @@ End Try
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [複寫安全性最佳作法](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

@@ -18,12 +18,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f69f19c766fc0768bf72101955ee5bc08b9e8702
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110577"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869254"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "87110577"
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式建立發送訂閱。 用於建立發送訂閱的 RMO 類別，依該訂閱所屬的發行集類型而定。  
   
 > [!IMPORTANT]
-> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733)。  
+> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[密碼編譯服務](/previous-versions/aa719848(v=vs.71))。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>若要建立快照式或交易式發行集的發送訂閱  
   
@@ -266,6 +266,5 @@ ms.locfileid: "87110577"
  [複寫管理物件概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [同步處理發送訂閱](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [以指令碼變數使用 sqlcmd](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756870"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868794"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 
@@ -80,7 +80,7 @@ ms.locfileid: "85756870"
 
 本節會比對同一已定義事件工作階段的三種不同技術檢視方塊，並建立其關聯。 工作階段已定義並顯示在 SQL Server Management Studio (SSMS.exe) 的 [物件總管]  中，但此工作階段目前未執行。
 
-最好每個月 [安裝最新的 SSMS 更新](https://msdn.microsoft.com/library/mt238290.aspx)，以避免發生意外的失敗。
+最好每個月 [安裝最新的 SSMS 更新](../../ssms/download-sql-server-management-studio-ssms.md)，以避免發生意外的失敗。
 
 
 擴充事件目錄檢視的相關參考文件位於 [擴充事件目錄檢視 (TRANSACT-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)。
@@ -891,5 +891,3 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
-
-

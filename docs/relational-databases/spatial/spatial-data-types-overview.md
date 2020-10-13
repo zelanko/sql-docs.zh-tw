@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464902"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809527"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 
@@ -74,7 +74,7 @@ geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z �
 
 在平面 (平面地球) 系統中，系統會使用與座標相同的度量單位來測量距離和區域。 使用 **geometry** 資料類型時，(2, 2) 與 (5, 6) 之間距離就是 5 個單位 (不論所用的單位為何)。  
 
-在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常會使用公尺和平方公尺來測量，但此測量可能取決於 **geography** 執行個體的[空間參考識別碼](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)。 **geography** 資料類型最常見的度量單位是公尺。  
+在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常會使用公尺和平方公尺來測量，但此測量可能取決於 **geography** 執行個體的[空間參考識別碼](./spatial-reference-identifiers-srids.md)。 **geography** 資料類型最常見的度量單位是公尺。  
 
 ### <a name="orientation-of-spatial-data"></a>空間資料的方向
 
@@ -201,10 +201,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## <a name="see-also"></a>另請參閱
 
-- [空間資料 (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry 資料類型方法參考](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography 資料類型方法參考](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [空間資料 (SQL Server)](./spatial-data-sql-server.md)
+- [geometry 資料類型方法參考](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography 資料類型方法參考](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

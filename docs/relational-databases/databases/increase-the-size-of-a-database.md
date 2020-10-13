@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6520e44a9a351c2cc2e433397575b90cc641e42f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ba22ed5ef08a90bd0726dfefb1f748da0588cb1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465521"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810024"
 ---
 # <a name="increase-the-size-of-a-database"></a>增加資料庫的大小
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中增加資料庫的大小。 增加現有資料或記錄檔的大小或將新檔案加入資料庫中，可擴充資料庫。  
   
  **本主題內容**  

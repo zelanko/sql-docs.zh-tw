@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759022"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809174"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳做法和疑難排解
 
@@ -67,7 +67,7 @@ ms.locfileid: "85759022"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   認證存在，但是用來執行 Backup 命令的登入帳戶沒有存取認證的權限。 請使用具備 **更改任何認證** 權限的 ***db_backupoperator*** 角色登入帳戶。  
@@ -92,7 +92,7 @@ ms.locfileid: "85759022"
   
     -   您也可以透過檢閱 Windows 事件記錄檔 (在名為 `SQLBackupToUrl` 的應用程式記錄底下)，尋找相關資訊。  
 
-    -   備份大型資料庫時，請考慮 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多個 URL 引數。  請參閱[將 VLDB 備份至 Azure Blob 儲存體](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
+    -   備份大型資料庫時，請考慮 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多個 URL 引數。  請參閱[將 VLDB 備份至 Azure Blob 儲存體](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
  [從儲存在 Microsoft Azure 的備份還原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

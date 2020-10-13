@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 030aac3b-8901-4c41-91ed-aba96420276c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5a29a8f1f2b5e158fd9a071403afe9689146b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75b2f80a8f2d8aeed3bb5858c8de7dd07ef1419c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776037"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868692"
 ---
 # <a name="configure-health-policies-sql-server-utility"></a>設定健康情況原則 (SQL Server 公用程式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "85776037"
 > [!NOTE]  
 >  對於資料層應用程式而言，存放磁碟區和處理器使用率是唯讀原則。  
   
- 如需有關檢視或變更資料層應用程式之全域監視原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。  
+ 如需有關檢視或變更資料層應用程式之全域監視原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))。  
   
- 如需有關檢視或變更個別資料層應用程式監視原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ 如需有關檢視或變更個別資料層應用程式監視原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))。  
   
 ## <a name="monitoring-policies-for-managed-instances-of-sql-server"></a>SQL Server Managed 執行個體的監視原則  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體的使用量過高和使用量過低原則如下：  
@@ -55,12 +55,11 @@ ms.locfileid: "85776037"
   
 -   電腦處理器使用率。  
   
- 如需有關檢視或變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體之全域監視原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。  
+ 如需有關檢視或變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體之全域監視原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))。  
   
- 如需有關檢視或變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 個別受管理的執行個體之監視原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
+ 如需有關檢視或變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 個別受管理的執行個體之監視原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](./utility-explorer-f1-help.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [降低 CPU 使用量原則的雜訊 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
-  
   

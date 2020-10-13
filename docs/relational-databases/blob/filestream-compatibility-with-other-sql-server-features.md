@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642842"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809915"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
 
@@ -72,7 +72,7 @@ ms.locfileid: "85642842"
  在簽發者上啟用 FILESTREAM 屬性的 **varbinary(max)** 資料行可以複寫到訂閱者上 (不論有沒有 FILESTREAM 屬性)。 若要指定複寫資料行的方式，請使用 [發行項屬性 - \<Article>] 對話方塊或是 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 參數。 複寫到沒有 FILESTREAM 屬性之 **varbinary(max)** 資料行的資料不能超過該資料類型的 2-GB 限制，否則會產生執行階段錯誤。 我們建議您最好複寫 FILESTREAM 屬性，除非您要將資料複寫到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 不論所指定的結構描述選項為何，目前皆不支援將含有 FILESTREAM 資料行的資料表複寫至 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 訂閱者。  
   
 > [!NOTE]  
->  將大型資料值從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 複寫到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者受到最大 256 MB 資料值的限制。 如需詳細資訊，請參閱＜ [SQL Server 2005 的最大容量規格](https://go.microsoft.com/fwlink/?LinkId=103810)＞。  
+>  將大型資料值從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 複寫到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者受到最大 256 MB 資料值的限制。 如需詳細資訊，請參閱＜ [SQL Server 2005 的最大容量規格](../../sql-server/maximum-capacity-specifications-for-sql-server.md)＞。  
   
 ### <a name="considerations-for-transactional-replication"></a>異動複寫考量  
  如果您在針對異動複寫發行之資料表中使用 FILESTREAM 資料行，請注意以下考量：  
@@ -124,5 +124,4 @@ ms.locfileid: "85642842"
   
 ## <a name="see-also"></a>另請參閱  
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
   

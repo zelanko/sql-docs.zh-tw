@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279364"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868164"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS 提供安全記憶體保護區的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "86279364"
   - 搭載延伸分頁表的 Intel VT-x。
   - 搭載快速虛擬化索引處理的 AMD-V。
   - 如果您是在 VM 中執行 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，則 Hypervisor 和實體 CPU 必須提供巢狀虛擬化功能。 
-    - 在 Hyper-V 2016 或更新版本上，[於 VM 處理器上啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
-    - 在 Azure 中，選取支援巢狀虛擬化的 VM 大小。 這包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
+    - 在 Hyper-V 2016 或更新版本上，[於 VM 處理器上啟用巢狀虛擬化延伸模組](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+    - 在 Azure 中，選取支援巢狀虛擬化的 VM 大小。 這包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 請參閱[建立可使用巢狀功能的 Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
     - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
     - 其他 Hypervisor 和公用雲端可能還支援啟用具有 VBS 記憶體保護區的 Always Encrypted 巢狀虛擬化功能。 如需相容性和設定指示，請參閱虛擬化解決方案文件。
 - [SQL Server Management Studio (SSMS) 18.3 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。
@@ -264,7 +264,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     2. 選取您的資料行主要金鑰名稱：**CMK1**。
     3. 請確定您選取 [Windows 憑證存放區 (目前的使用者或本機電腦)] 或 [Azure Key Vault]。
     4. 選取 [允許記憶體保護區運算]。
-    5. 如果您已選取 Azure Key Vault，請登入 Azure，然後選取您的金鑰保存庫。 如需如何建立 Always Encrypted 金鑰保存庫的詳細資訊，請參閱 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (從 Azure 入口網站管理金鑰保存庫)。
+    5. 如果您已選取 Azure Key Vault，請登入 Azure，然後選取您的金鑰保存庫。 如需如何建立 Always Encrypted 金鑰保存庫的詳細資訊，請參閱 [Manage your key vaults from Azure portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal) (從 Azure 入口網站管理金鑰保存庫)。
     6. 選取您的憑證或 Azure Key Vault 金鑰 (如果已經存在)，或按一下 [產生憑證] 按鈕來建立一個新的憑證。
     7. 選取 [確定]。
 

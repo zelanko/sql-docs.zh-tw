@@ -3,20 +3,20 @@ title: 設定可用性群組的 Ubuntu 叢集
 titleSuffix: SQL Server on Linux
 description: 了解如何在 Ubuntu 上建立三節點叢集，並將先前建立的可用性群組資源新增至叢集。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52511077d0f4f0da4db0f32dc057b614830587ec
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892324"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784858"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 

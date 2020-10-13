@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af830fc0130c4404f4321c3ec5c03bd1111a11a0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472937"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809747"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 
@@ -36,16 +36,16 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 若要完成本教學課程，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。 若要使用本教學課程，您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)、存取 SQL Server 內部部署執行個體的權限、存取執行 SQL Server 2016 Azure 虛擬機器 (VM) 的權限，以及 AdventureWorks2016 資料庫。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
-- 建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
+- 建立 [Azure 儲存體帳戶](/azure/storage/common/storage-quickstart-create-account?tabs=portal)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - 佈建[執行 SQL Server 的 Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/)
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 下載 [AdventureWorks2016 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) \(英文\)。
-- 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
+- 安裝 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
+- 下載 [AdventureWorks2016 範例資料庫](../samples/adventureworks-install-configure.md) \(英文\)。
+- 將使用者帳戶指派給 [db_backupoperator](./security/authentication-access/database-level-roles.md) 的角色，並授與 [ALTER ANY CREDENTIAL](../t-sql/statements/alter-credential-transact-sql.md) 權限。 
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 建立預存存取原則和共用存取儲存體
 
-在本節中，您將使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  
+在本節中，您將使用 [Azure PowerShell](/powershell/azure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  
   
 > [!NOTE]  
 > 此指令碼是使用 Azure PowerShell 5.0.10586 所撰寫。  
@@ -484,13 +484,13 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 [Microsoft Azure 中的 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[建立容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
-[Set Container ACL (設定容器 ACL)](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
-[取得容器 ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)
+[共用存取簽章，第 1 部分：了解 SAS 模型](/azure/storage/common/storage-sas-overview)  
+[建立容器](/rest/api/storageservices/Create-Container)  
+[Set Container ACL (設定容器 ACL)](/rest/api/storageservices/Set-Container-ACL)  
+[取得容器 ACL](/rest/api/storageservices/Get-Container-ACL)
 [認證 &#40;資料庫引擎&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure 中的資料庫檔案檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure 中的資料庫檔案檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

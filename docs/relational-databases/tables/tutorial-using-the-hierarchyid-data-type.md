@@ -15,12 +15,12 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1abc4ab38086afd380707b2eb12fafc48713bf08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418992"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809646"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88418992"
 [第 2 課：在階層式資料表中建立與管理資料](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 在本課程中，您可以使用 **hierarchyid** 資料類型建立資料表來代表階層結構。 然後，您可以使用階層式方法操作資料表中的資料。  
   
-## <a name="requirements"></a>規格需求  
+## <a name="requirements"></a>需求  
 另外，系統必須有安裝下列程式：  
   
 -   任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本或更新版本。  
@@ -47,9 +47,8 @@ ms.locfileid: "88418992"
 ## <a name="see-also"></a>另請參閱  
 [教學課程：資料庫引擎使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [教學課程：撰寫 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[Hierarchyid 資料類型方法參考](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
 [階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   
   

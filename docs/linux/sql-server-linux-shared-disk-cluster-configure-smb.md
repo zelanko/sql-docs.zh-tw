@@ -1,19 +1,19 @@
 ---
 title: 設定 SMB 儲存體 FCI - Linux 上的 SQL Server
 description: 了解如何使用 Linux 上的 SQL Server SMB 儲存體，設定容錯移轉叢集執行個體 (FCI)。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902355"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784907"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - SMB - Linux 上的 SQL Server
 

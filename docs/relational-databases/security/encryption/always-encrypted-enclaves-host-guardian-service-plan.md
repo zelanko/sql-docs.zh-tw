@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411373"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869164"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>規劃主機守護者服務證明
 
@@ -42,7 +42,7 @@ HGS 安裝程式會自動為 HGS 伺服器、容錯移轉叢集資源和系統�
 ### <a name="high-availability"></a>高可用性
 
 HGS 功能會自動安裝和設定容錯移轉叢集。
-在生產環境中，建議使用三部 HGS 伺服器以獲得高可用性。 如需叢集仲裁判斷方式及替代設定 (包括具有外部見證的兩個節點叢集) 的詳細資料，請參閱[容錯移轉叢集文件](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum)。
+在生產環境中，建議使用三部 HGS 伺服器以獲得高可用性。 如需叢集仲裁判斷方式及替代設定 (包括具有外部見證的兩個節點叢集) 的詳細資料，請參閱[容錯移轉叢集文件](/windows-server/failover-clustering/manage-cluster-quorum)。
 
 HGS 節點之間不需要共用存放裝置。 證明資料庫的複本會儲存在每部 HGS 伺服器上，並由叢集服務透過網路自動複寫。
 
@@ -67,7 +67,7 @@ HGS 支援兩種證明模式，可搭配 [!INCLUDE [ssnoversion-md](../../../inc
 一般來說，以下是我們的建議：
 
 - 針對**實體生產伺服器**，建議使用 TPM 證明來取得它所提供的其他保證。
-- 針對**虛擬生產伺服器**，建議使用主機金鑰證明，因為大部分的虛擬機器都沒有虛擬 TPM 或安全開機。 如果您使用增強安全性的 VM (例如[內部部署受防護的 VM](https://aka.ms/shieldedvms))，您可以選擇使用 TPM 模式。 在所有虛擬化部署中，證明程序只會分析您的 VM 環境，而不是 VM 底下的虛擬化平台。
+- 針對**虛擬生產伺服器**，建議使用主機金鑰證明，因為大部分的虛擬機器都沒有虛擬 TPM 或安全開機。 如果您使用增強安全性的 VM (例如[內部部署受防護的 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node))，您可以選擇使用 TPM 模式。 在所有虛擬化部署中，證明程序只會分析您的 VM 環境，而不是 VM 底下的虛擬化平台。
 - 針對**開發/測試案例**，建議使用主機金鑰證明，因為它較容易設定。
 
 ### <a name="trust-model"></a>信任模型
@@ -114,7 +114,7 @@ TPM 證明需要安全開機，以確保 UEFI 載入 Microsoft 簽署的合法�
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦先決條件
 
-執行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的電腦必須同時符合[安裝 SQL Server 的需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)和 [Hyper-V 硬體需求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)。
+執行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的電腦必須同時符合[安裝 SQL Server 的需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)和 [Hyper-V 硬體需求](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)。
 
 這些需求包括：
 
@@ -124,7 +124,7 @@ TPM 證明需要安全開機，以確保 UEFI 載入 Microsoft 簽署的合法�
   - 搭載延伸分頁表的 Intel VT-x。
   - 搭載快速虛擬化索引處理的 AMD-V。
   - 如果您是在 VM 中執行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]，則 Hypervisor 和實體 CPU 必須提供巢狀虛擬化功能。 如需在 VM 中執行 VBS 記憶體保護區時的保證資訊，請參閱[＜信任模型＞](#trust-model)一節。
-    - 在 Hyper-V 2016 或更新版本上，[於 VM 處理器上啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+    - 在 Hyper-V 2016 或更新版本上，[於 VM 處理器上啟用巢狀虛擬化延伸模組](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
     - 在 Azure 中，選取支援巢狀虛擬化的 VM 大小。 所有 v3 系列 VM 都支援巢狀虛擬化，例如 Dv3 與 Ev3。 請參閱[建立可使用巢狀功能的 Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
     - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
     - 其他 Hypervisor 和公用雲端可能還支援啟用具有 VBS 記憶體保護區的 Always Encrypted 巢狀虛擬化功能。 如需相容性和設定指示，請參閱虛擬化解決方案文件。

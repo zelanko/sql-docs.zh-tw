@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 425a463cce75440a40551b0487015bd2d39c203a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480270"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890878"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "89480270"
   
  若為失敗的原則，[物件總管] 會指出嚴重健全狀況警告成為目標旁的紅色圖示以及 [物件總管] 樹狀結構中較高的節點。  
   
-> **注意** ：當系統計算原則的物件集時，預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes)  
+> **注意** ：當系統計算原則的物件集時，預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## <a name="three-policy-based-management-components"></a>三個原則式管理元件  
  原則式管理有三個元件：  
@@ -119,4 +119,4 @@ ms.locfileid: "89480270"
  
  - [教學課程：建立和套用 Off By Default 原則](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [教學課程：建立和套用命名標準原則](lesson-2-create-and-apply-a-naming-standards-policy.md)
- - [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ - [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)

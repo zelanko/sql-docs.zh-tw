@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e22b9695d229c83cbf95a08c0ef81462b8074a63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720710"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868287"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 異動複寫是處理持續連線伺服器之間移動資料問題的良好解決方案。 您可以使用 [複寫精靈]，輕鬆設定及管理複寫拓撲。 
 
-本教學課程會為您示範，如何為持續連線的伺服器設定異動複寫拓撲。 如需異動複寫如何運作的詳細資訊，請參閱[異動複寫概觀](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)。 
+本教學課程會為您示範，如何為持續連線的伺服器設定異動複寫拓撲。 如需異動複寫如何運作的詳細資訊，請參閱[異動複寫概觀](./transactional/transactional-replication.md)。 
   
 ## <a name="what-you-will-learn"></a>學習內容  
 本教學課程會教您如何使用異動複寫，從一個資料庫將資料發行到另一個資料庫。  
@@ -50,13 +50,13 @@ ms.locfileid: "85720710"
   
 - 在訂閱者伺服器 (目的地) 安裝任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 以外， 因為 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 無法在異動複寫中充任訂閱者。  
   
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 有關在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 有關在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](../backup-restore/restore-a-database-backup-using-ssms.md)。 
  
 >[!NOTE]
 > - 相差兩個版本以上的 SQL Server 執行個體不支援複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫拓撲中支援的 SQL Server 版本)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](../security/authentication-access/server-level-roles.md)。  
   
   
 **完成此教學課程的估計時間：60 分鐘**  
@@ -168,7 +168,7 @@ ms.locfileid: "85720710"
 
    ![已選取發行集的「發行集」頁面](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. 在 [散發代理程式位置]  頁面上，選取 [Run all agents at the Distributor] \(在散發者端執行所有代理程式\)  ，然後選取 [下一步]  。  如須提取和推送訂閱的詳細資訊，請參閱[訂閱發行集](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)。
+4. 在 [散發代理程式位置]  頁面上，選取 [Run all agents at the Distributor] \(在散發者端執行所有代理程式\)  ，然後選取 [下一步]  。  如須提取和推送訂閱的詳細資訊，請參閱[訂閱發行集](./subscribe-to-publications.md)。
 
    ![「散發代理程式位置」頁面，以及選為在散發者端執行所有代理程式的選項](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

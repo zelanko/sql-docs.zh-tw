@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f439f07e8bdc374e5457c946e3b57120b0c6b0c8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736995"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869151"
 ---
 # <a name="surface-area-configuration"></a>介面區組態
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85736995"
  變更 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的屬性設定。 若要變更 [排程事件和報表傳遞] 屬性以及 [Web 服務和 HTTP 存取] 屬性時，請編輯 **RSReportServer.config** 組態檔。  
   
 ## <a name="command-prompt-options"></a>命令提示字元選項  
- 您可以使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell Cmdlet 以叫用介面區組態原則。 如需詳細資訊，請參閱 [使用 Database Engine Cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)。  
+ 您可以使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell Cmdlet 以叫用介面區組態原則。 如需詳細資訊，請參閱 [使用 Database Engine Cmdlet](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="soap-and-service-broker-endpoints"></a>SOAP 和 Service Broker 端點  
  若要關閉端點，請使用以原則為基礎的管理。 建立和改變端點的屬性時，請使用 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) 和 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
@@ -76,5 +76,4 @@ ms.locfileid: "85736995"
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

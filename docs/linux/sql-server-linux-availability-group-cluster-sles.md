@@ -2,20 +2,20 @@
 title: SUSE：在 Linux 上設定 SQL Server 的可用性群組
 titleSuffix: SQL Server
 description: 了解如何在 SUSE Linux Enterprise Server (SLES) 上設定 SQL Server 可用性群組叢集。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892336"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784870"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 

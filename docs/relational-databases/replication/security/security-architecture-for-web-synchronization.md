@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59ad240e910a4188672b0d73abcd98f168603f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9db611e60deea85ee5d24006f111db425f66924f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88326894"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868224"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步處理的安全性架構
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88326894"
   
 -   Xmlsub  
   
- 此帳戶也應該是 IIS_WPG 群組的一部分。 如需詳細資訊，請參閱[針對 Web 同步處理設定 IIS](../../../relational-databases/replication/configure-iis-for-web-synchronization.md)中的＜設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener 的權限＞一節。  
+ 此帳戶也應該是 IIS_WPG 群組的一部分。 如需詳細資訊，請參閱[針對 Web 同步處理設定 IIS](../configure-iis-7-for-web-synchronization.md)中的＜設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener 的權限＞一節。  
   
 |帳戶類型|指定帳戶的位置|  
 |---------------------|------------------------------------|  
@@ -140,5 +140,4 @@ ms.locfileid: "88326894"
 ## <a name="see-also"></a>另請參閱  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

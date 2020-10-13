@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767997"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809911"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ GO
  非交易式存取的可用層級是 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非交易式存取的層級**  
- - **建立新資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。
+ - **建立新資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 陳述式。
 
    ```sql
    CREATE DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  跨資料庫層級目錄的執行個體中，指定的名稱必須是唯一的。  
   
 **使用 Transact-SQL 指定 FileTable 的目錄**  
-- **建立新資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。
+- **建立新資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 陳述式。
 
    ```sql
    CREATE DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   **附加資料庫**時，請使用 **FOR ATTACH** 選項和 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。  
+-   **附加資料庫**時，請使用 **FOR ATTACH** 選項和 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 陳述式。  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -153,5 +153,4 @@ GO
 -   當您在資料庫層級中啟用或停用非交易式存取時，此作業不會檢查是否已經指定目錄名稱，或者目錄名稱是否唯一。  
   
 -   當您卸除為 FileTable 啟用的資料庫時，會一併移除資料庫層級目錄和其下所有 FileTable 的全部目錄結構。  
-  
   

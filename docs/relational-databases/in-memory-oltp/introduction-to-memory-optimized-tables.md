@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723120"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868670"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85723120"
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>存取記憶體最佳化資料表中的資料  
 
-從原生編譯的預存程序可以最有效率地存取記憶體最佳化資料表 ([原生編譯預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md))。 使用 (傳統) 解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]也可以存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是指在不使用原生編譯之預存程序的情況下存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取範例包括從 DML 觸發程序、特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、檢視和資料表值函式，存取記憶體最佳化資料表。  
+從原生編譯的預存程序可以最有效率地存取記憶體最佳化資料表 ([原生編譯預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md))。 使用 (傳統) 解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]也可以存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 是指在不使用原生編譯之預存程序的情況下存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取範例包括從 DML 觸發程序、特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、檢視和資料表值函式，存取記憶體最佳化資料表。  
   
  下表摘要說明各種物件的原生和解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取。  
   
@@ -108,5 +108,4 @@ ms.locfileid: "85723120"
 ## <a name="see-also"></a>另請參閱
 
 [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

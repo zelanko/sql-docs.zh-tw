@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472952"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809364"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>教學課程：擁有權鏈結和環境切換
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88472952"
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) (AdventureWorks2017 範例資料庫)。
+- 下載 [AdventureWorks2017 sample databases](../samples/adventureworks-install-configure.md) (AdventureWorks2017 範例資料庫)。
 
-如需還原 SQL Server Management Studio 中資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
+如需還原 SQL Server Management Studio 中資料庫的指示，請參閱[還原資料庫](./backup-restore/restore-a-database-backup-using-ssms.md)。   
   
 ## <a name="1-configure-the-environment"></a>1.設定環境  
 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 與下列程式碼開啟 `AdventureWorks2017` 資料庫，然後使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式檢查 dbo 使用者是否顯示為內容。  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

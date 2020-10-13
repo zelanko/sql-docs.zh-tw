@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667861"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869288"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667861"
   
  如果您在使用 [已註冊的伺服器]，則所要連接的目標執行個體就必須在 [本機伺服器群組]  或 [中央管理伺服器] 底下註冊。 (此執行個體可獨立註冊，或成為伺服器群組的成員)。如需有關如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體加入至 [已註冊的伺服器] 的詳細資訊，請參閱下列主題：  
   
--   [建立或編輯伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [建立或編輯伺服器群組 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [註冊連接的伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [註冊連接的伺服器 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [建立中央管理伺服器與伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [建立中央管理伺服器與伺服器群組 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  如需有關如何透過 WMI 和 WQL 查詢以程式設計方式檢視離線記錄檔的詳細資訊，請參閱下列主題：  
   
@@ -122,5 +122,4 @@ ms.locfileid: "85667861"
   
 ## <a name="see-also"></a>另請參閱  
  [記錄檔檢視器](../../relational-databases/logs/log-file-viewer.md)  
-  
   

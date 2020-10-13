@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490566"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868942"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "88490566"
 ## <a name="backup-and-imported-full-text-catalogs"></a>備份與匯入的全文檢索目錄  
  對於升級期間重建或重設的全文檢索目錄 (以及新的全文檢索目錄) 而言，此全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的全文檢索目錄，您必須識別包含此目錄之全文檢索索引的每個檔案群組，然後逐一備份它們。 如需詳細資訊，請參閱 [備份並還原全文檢索目錄與索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)。  
   
- 對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](https://go.microsoft.com/fwlink/?LinkId=209154) 。  
+ 對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](/previous-versions/sql/sql-server-2005/ms142511(v=sql.90)) 。  
   
 ##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> 升級資料庫時移轉全文檢索索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  您可以使用附加、還原或 [複製資料庫精靈]，將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄升級為現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統會匯入、重設或重建全文檢索索引 (如果有的話)。 **upgrade_option** 伺服器屬性會控制此伺服器執行個體在這些資料庫升級期間所使用的全文檢索升級選項。  
@@ -135,7 +135,7 @@ ms.locfileid: "88490566"
   
 -   如果全文檢索目錄處於離線狀態，備份將會失敗。  
   
- 如需備份和還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的詳細資訊，請參閱《 [線上叢書》中的](https://go.microsoft.com/fwlink/?LinkId=121052) 備份與還原全文檢索目錄 [和](https://go.microsoft.com/fwlink/?LinkId=121053)檔案備份、還原及全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+ 如需備份和還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的詳細資訊，請參閱《 [線上叢書》中的](./back-up-and-restore-full-text-catalogs-and-indexes.md) 備份與還原全文檢索目錄 [和](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))檔案備份、還原及全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中還原資料庫時，系統會針對此全文檢索目錄建立新的資料庫檔案。 這個檔案的預設名稱為 ftrow_*catalog-name*.ndf。 例如，如果您的 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫檔案的預設名稱會是 `ftrow_cat1.ndf`。 但是，如果預設名稱已經用於目標目錄中，新的資料庫檔案就會命名為 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`，其中 *GUID* 是新檔案的全域唯一識別碼。  
   
@@ -176,11 +176,10 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入]**** 或 [重建]****，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]****，系統就會重設附加的全文檢索目錄。  
   
- 如需卸離和附加資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
+ 如需卸離和附加資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

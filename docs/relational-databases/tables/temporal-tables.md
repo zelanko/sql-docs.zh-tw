@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fbaf3147eaa9cf8c68e0d0b8b3ee0510c6b4ef7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76768274921bceb17ba9ea05c73850f449441082
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540814"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810127"
 ---
 # <a name="temporal-tables"></a>暫存資料表
 
@@ -35,7 +35,7 @@ SQL Server 2016 開始支援時態表 (又稱為由系統控制版本的時態�
   - [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [時態表使用案例](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [開始使用 Azure SQL 資料庫的時態表](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [開始使用 Azure SQL 資料庫的時態表](/azure/azure-sql/temporal-tables)
 
 - **範例：**
 

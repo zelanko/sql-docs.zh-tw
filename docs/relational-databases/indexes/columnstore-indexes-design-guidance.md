@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409174"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868651"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88409174"
 * 資料表需使用 varchar(max)、nvarchar(max) 或 varbinary(max) 的資料類型。 或者，您可以將資料行存放區索引設計為不包括這些資料行。
 * 資料表資料不是永久性的。 當您需要快速儲存和刪除資料時，請考慮使用堆積或暫存資料表。
 * 資料表中每個分割區的資料列必須少於 1 百萬個。 
-* 資料表上超過 10% 的作業都是更新和刪除。 大量更新和刪除會形成片段， 而片段會影響壓縮率和查詢效能，除非您執行 Reorganize 作業，將所有資料強制放入資料行存放區，並移除片段。 如需詳細資訊，請參閱[將資料行存放區索引中的索引片段最小化](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)。
+* 資料表上超過 10% 的作業都是更新和刪除。 大量更新和刪除會形成片段， 而片段會影響壓縮率和查詢效能，除非您執行 Reorganize 作業，將所有資料強制放入資料行存放區，並移除片段。 如需詳細資訊，請參閱[將資料行存放區索引中的索引片段最小化](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)。
 
 如需詳細資訊，請參閱[資料行存放區索引 - 資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
 
@@ -100,7 +100,7 @@ ms.locfileid: "88409174"
 
 如需詳細資訊，請參閱[開始使用資料行存放區索引進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。
 
-如需如何選擇最佳資料行存放區索引的詳細資訊，請參閱 Sunil Agarwal 的部落格文章 [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (哪一個資料行存放區索引最適合我的工作負載？)。
+如需如何選擇最佳資料行存放區索引的詳細資訊，請參閱 Sunil Agarwal 的部落格文章 [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (哪一個資料行存放區索引最適合我的工作負載？)。
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>使用資料表分割區以保障資料管理和查詢效能
 資料行存放區索引可支援資料分割，這是管理和封存資料的好方法。 資料分割也能限制一個或多個分割區的作業，以提升查詢效能。
@@ -130,7 +130,7 @@ ms.locfileid: "88409174"
 * 將 1,000,000 個資料列載入一個分割區或非資料分割的資料表。 您會取得一個壓縮資料列群組，其中含有 1,000,000 個資料列。 這可以確保高資料壓縮與快速的查詢效能。
 * 將 1,000,000 個資料列平均載入 10 個分割區。 每個分割區取得 100,000 個資料列，這低於資料行存放區壓縮的最小臨界值。 因此，資料行存放區索引可能會有 10 個差異資料列群組，每個含有 100,000 個資料列。 您可以使用一些方法，強制將差異資料列群組放入資料行存放區。 不過，如果資料行存放區索引中僅有這些資料列，壓縮的資料列群組就會太小，而無法達到最佳壓縮和查詢效能。
 
-如需資料分割的詳細資訊，請參閱 Sunil Agarwal 的部落格文章 [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) (我需要針對資料行存放區索引進行資料分割嗎？)。
+如需資料分割的詳細資訊，請參閱 Sunil Agarwal 的部落格文章 [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index) (我需要針對資料行存放區索引進行資料分割嗎？)。
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>選擇適當的資料壓縮方法
 資料行存放區索引提供兩種資料壓縮的選擇：資料行存放區壓縮及封存壓縮。 您可以在建立索引時選擇壓縮選項，或於稍後使用下列項目來變更：[ALTER INDEX ...REBUILD](../../t-sql/statements/alter-index-transact-sql.md)。
@@ -193,4 +193,3 @@ ms.locfileid: "88409174"
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，參考 [CREATE TABLE (Azure SQL 資料倉儲)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。
 
 如需如何將現有的資料列存放區堆積或 B 型樹狀結構索引轉換成叢集資料行存放區索引，或建立非叢集資料行存放區索引的詳細資訊，請參閱 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
-

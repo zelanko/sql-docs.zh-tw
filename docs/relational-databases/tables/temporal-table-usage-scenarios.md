@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540829"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809188"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 
@@ -59,7 +59,7 @@ CREATE TABLE Employee
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>在現有的資料表上針對資料稽核啟用系統版本設定
 
-如果您需要在現有資料庫中執行資料稽核，請使用 ALTER TABLE 來延伸非時態表以使它成為已系統版本設定。 為了避免您應用程式中的中斷性變更，請將期間資料行新增為 HIDDEN，如[建立系統建立版本的時態表](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)。 下列範例說明在假設性的 HR 資料庫中於現有「員工」資料表上啟用系統版本設定：
+如果您需要在現有資料庫中執行資料稽核，請使用 ALTER TABLE 來延伸非時態表以使它成為已系統版本設定。 為了避免您應用程式中的中斷性變更，請將期間資料行新增為 HIDDEN，如[建立系統建立版本的時態表](./creating-a-system-versioned-temporal-table.md)。 下列範例說明在假設性的 HR 資料庫中於現有「員工」資料表上啟用系統版本設定：
 
 ```sql
 /*
