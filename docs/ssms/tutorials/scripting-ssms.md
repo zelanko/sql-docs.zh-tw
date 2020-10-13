@@ -1,15 +1,15 @@
 ---
 title: SSMS 指令碼物件
 description: 針對能在 SQL Server Management Studio (SSMS) 內找到的各種物件產生 Transact-SQL (T-SQL) 指令碼。
-keywords: SQL Server, SSMS, SQL Server Management Studio, 指令碼, 撰寫指令碼
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/13/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio, 指令碼, 撰寫指令碼
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
+ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523330"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662037"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中撰寫物件指令碼
 
@@ -156,7 +156,7 @@ ms.locfileid: "87523330"
 
 9. 選取 [全部取代]  以將所有 *AdventureWorks2016* 的執行個體取代為 *AdventureWorks2016b*。
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. 選取 [執行]  來執行查詢並建立新的 AdventureWorks2016b 資料庫。
 

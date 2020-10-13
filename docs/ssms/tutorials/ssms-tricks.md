@@ -1,12 +1,12 @@
 ---
 title: 使用 SSMS 的祕訣和訣竅
 description: 了解如何對程式註解與取消註解碼、縮排文字、篩選物件、存取錯誤記錄，以及使用 SQL Server Management Studio 來尋找 SQL Server 執行個體名稱。
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462342"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724509"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和訣竅
 
-此文章提供使用 SQL Server Management Studio (SSMS) 的一些提示和訣竅。 本文示範如何： 
+此文章提供使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 的一些提示與訣竅。 本文示範如何： 
 
 > [!div class="checklist"]
 > * 註解與取消註解 TRANSACT-SQL (T-SQL) 文字
 > * 縮排文字
 > * 在 [物件總管] 中檢篩選物件
-> * 存取您的 SQL Server 錯誤記錄檔
-> * 尋找您的 SQL Server 執行個體名稱
+> * 存取您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔
+> * 尋找您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱
 
 ## <a name="prerequisites"></a>Prerequisites
 
-若要測試此文章所提供的步驟，您需要 SQL Server Management Studio、SQL 伺服器的存取權，以及 AdventureWorks 資料庫。 
+若要測試此文章所提供的步驟，您需要 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQL 伺服器的存取權，以及 AdventureWorks 資料庫。 
 
 * 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-* 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* 安裝 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 開發人員版本](https://www.microsoft.com/sql-server/sql-server-downloads)。
 * 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 若要了解如何在 SSMS 中還原資料庫，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>註解與取消註解您的 T-SQL 程式碼
 
 透過使用工具列中的 [註解]  按鈕，可以對部分文字進行註解與取消註解。 標記為註解的文字將不會執行。
 
-1. 開啟 SQL Server Management Studio。
+1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
 
 2. 連線到 SQL Server。
 
 3. 開啟 [新增查詢] 視窗。
 
-4. 將下列 T-SQL 程式碼貼入文字視窗中。
+4. 將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼貼入文字視窗中。
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ ms.locfileid: "84462342"
 
 1. 開啟 [新增查詢] 視窗。
 
-2. 將下列 T-SQL 程式碼貼入文字視窗中：
+2. 將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼貼入文字視窗中：
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ ms.locfileid: "84462342"
 
 ## <a name="access-your-sql-server-error-log"></a>存取您的 SQL Server 錯誤記錄檔
 
-錯誤記錄檔是含有在 SQL Server 執行個體中發生事項之詳細資料的檔案。 您可以在 SSMS 中瀏覽和查詢錯誤記錄檔。 錯誤記錄檔是位於您磁碟上的 .log 檔案。
+錯誤記錄檔是含有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中發生事項之詳細資料的檔案。 您可以在 SSMS 中瀏覽及查詢錯誤記錄檔。 錯誤記錄檔是位於您磁碟上的 .log 檔案。
 
 ### <a name="open-the-error-log-in-ssms"></a>在 SSMS 中開啟錯誤記錄檔
 
-1. 連線到 SQL Server。  
+1. 連線到您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 2. 展開 [管理]   > [SQL Server 記錄檔]  。 
 
@@ -181,7 +181,7 @@ ms.locfileid: "84462342"
 
 2. 開啟 [新增查詢] 視窗。
 
-3. 將下列 T-SQL 程式碼貼入查詢視窗中：
+3. 將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼貼入查詢視窗中：
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ ms.locfileid: "84462342"
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>若您已連線到 SQL Server，請尋找錯誤記錄檔的位置
 
-1. 連線到 SQL Server。
+1. 連線到您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 2. 開啟 [新增查詢] 視窗。
 
-3. 在查詢視窗中貼上以下 T-SQL 程式碼，然後選取 [執行]  ：
+3. 在查詢視窗中貼上以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，然後選取 [執行]：
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ ms.locfileid: "84462342"
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>若您無法連線到 SQL Server，尋找錯誤記錄檔的位置
 
-視您的組態設定而定。SQL Server 錯誤記錄路徑可能會不同。 您可以在 SQL Server 組態管理員內的啟動參數中找到錯誤記錄位置的路徑。 依照下面的步驟尋找指出 SQL Server 錯誤記錄檔位置的相關啟動參數。 *您的路徑可能與下面的路徑不同*。
+視您的組態設定而定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔路徑可能會不同。 您可以在 SQL Server 組態管理員內的啟動參數中找到錯誤記錄位置的路徑。 依照下面的步驟尋找指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔位置的相關啟動參數。 *您的路徑可能與下面的路徑不同*。
 
 1. 開啟 [SQL Server 設定管理員]。
 
 2. 展開 [服務]  。
 
-3. 以滑鼠右鍵按一下您的 SQL Server 執行個體，然後選取 [屬性]  ：
+3. 以滑鼠右鍵按一下您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後選取 [屬性]：
 
     ![設定管理員伺服器屬性](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ ms.locfileid: "84462342"
 
     ![錯誤記錄檔](media/ssms-tricks/errorlog.png)
 
-    這個位置中有數個 errorlog.* 檔案。 結尾為 *.log 的檔案名稱是目前的錯誤記錄檔。 結尾為數字的檔案名稱是先前的記錄檔。 每次 SQL Server 重新啟動時，會建立新的記錄檔。
+    此位置中有數個錯誤記錄檔。 結尾為 *.log 的檔案名稱是目前的錯誤記錄檔。 結尾為數字的檔案名稱是先前的記錄檔。 每次 SQL Server 重新啟動時，會建立新的記錄檔。
 
-6. 在 [記事本] 中開啟 errorlog.log 檔案。 
+6. 在 [記事本] 中開啟 errorlog.log 檔案。
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>尋找 SQL Server 執行個體名稱
+## <a name="find-sql-server-instance-name"></a>尋找 SQL Server 執行個體名稱
 
-您有一些選項可用來在連線到 SQL Server 之前和之後尋找您的 SQL Server 名稱。  
+您有一些選項可用來在連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前和之後尋找您的 SQL Server 名稱。  
 
 ### <a name="before-you-connect-to-sql-server"></a>連線到 SQL Server 之前
 
@@ -243,7 +243,7 @@ ms.locfileid: "84462342"
 
 3. 搜尋文字「伺服器名稱是」  。
 
-    在單引號中列出的任何內容，就是您將要連線到的 SQL Server 執行個體名稱：
+    在單引號中列出的任何內容，就是您將要連線到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：
 
     ![在錯誤記錄檔中尋找伺服器名稱](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "84462342"
 
 ### <a name="when-youre-connected-to-sql-server"></a>當您連線到 SQL Server 時
 
-當您連線到 SQL Server 時，您可以在三個位置中找到伺服器名稱： 
+當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，您可以在三個位置中找到伺服器名稱： 
 
 1. 伺服器名稱將會列在 [物件總管] 中：
 
@@ -266,19 +266,19 @@ ms.locfileid: "84462342"
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>如果您已連線到別名或可用性群組接聽程式
 
-如果您已連線到別名或可用性群組接聽程式，該資訊會顯示在 [物件總管] 和 [屬性]。 在此情況下，SQL Server 名稱可能不明顯，且必須進行查詢：
+如果您已連線到別名或可用性群組接聽程式，該資訊會顯示在 [物件總管] 和 [屬性]。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名稱可能不明顯，且必須進行查詢：
 
 1. 連線到 SQL Server。
 
 2. 開啟 [新增查詢] 視窗。
 
-3. 將下列 T-SQL 程式碼貼入視窗中：
+3. 將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼貼入視窗中：
 
       ```sql
        select @@Servername
      ```
 
-4. 檢視查詢結果以識別您連線的 SQL Server 執行個體名稱： 
+4. 檢視查詢結果以識別您連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱： 
 
     ![查詢 SQL 伺服器名稱](media/ssms-tricks/queryservername.png)
 

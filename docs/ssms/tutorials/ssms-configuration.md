@@ -1,21 +1,21 @@
 ---
 title: SSMS 元件和組態」
 description: 描述 SQL Server Management Studio 環境之元件和基本設定選項的教學課程。
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
-ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/16/2018
+ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247285"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662027"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 元件和設定
 
@@ -53,7 +53,7 @@ ms.locfileid: "75247285"
 
 * **屬性** (F4)：查詢視窗開啟時，您會看到 [屬性] 檢視。 該檢視會顯示查詢的基本屬性。 例如，會顯示查詢開始的時間、傳回的資料列數目和連線詳細資料。  
 
-    ![屬性](media/ssms-configuration/properties.png)
+    ![設定屬性](media/ssms-configuration/properties.png)
 
 * **範本瀏覽器** (Ctrl+Alt+T)：範本瀏覽器具有各種預先建立之 T-SQL 的範本。 您可以使用這些範本來執行各種功能，例如建立或備份資料庫。 
 

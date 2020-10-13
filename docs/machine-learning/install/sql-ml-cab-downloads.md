@@ -1,22 +1,22 @@
 ---
-title: 下載離線安裝的更新
+title: CAB 下載離線安裝的更新
 description: 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 10/02/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c7af170b3e64e60c886dd1cab2a02cba06e318e2
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498271"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670791"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>適用於 SQL Server 機器學習服務之累積更新的 CAB 下載
+# <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>適用於 SQL Server 機器學習服務之累積更新的 CAB 離線安裝下載
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -50,7 +50,7 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 
 |版本 | 元件 | 下載連結 | 解決的問題 |
 |------- | --------- | ------------- | ---------------- |
-|**[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255)** |  |  |  |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R 伺服器              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |

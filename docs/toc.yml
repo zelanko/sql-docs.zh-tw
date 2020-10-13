@@ -88,8 +88,6 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 離線部署
               href: big-data-cluster/deploy-offline.md
-            - name: Active Directory 模式
-              href: big-data-cluster/deploy-active-directory.md
             - name: 以高可用性部署
               items:
                 - name: 主要執行個體
@@ -130,6 +128,22 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: 安全性
           href: big-data-cluster/concept-security.md
+        - name: Active Directory 模式
+          items:
+            - name: 必要條件
+              href: big-data-cluster/active-directory-prerequisites.md
+            - name: 部署
+              href: big-data-cluster/active-directory-deploy.md
+            - name: 連線
+              href: big-data-cluster/active-directory-connect.md
+            - name: 相同 AD 網域中的多個 BDC
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: 自動產生的 AD 物件
+              href: big-data-cluster/active-directory-objects.md
+            - name: AD DNS 對帳
+              href: big-data-cluster/active-directory-dns-reconciliation.md
+            - name: 管理使用者的存取
+              href: big-data-cluster/manage-user-access.md
         - name: 私人叢集
           items:
             - name: 部署
@@ -336,16 +350,8 @@
               href: big-data-cluster/kubernetes-rbac.md
             - name: 更新 AZDATA_PASSWORD
               href: big-data-cluster/change-azdata-password.md
-            - name: 管理使用者的存取
-              href: big-data-cluster/manage-user-access.md
             - name: 非根容器
               href: big-data-cluster/non-root-containers.md
-            - name: 相同 AD 網域中的多個 BDC
-              href: big-data-cluster/active-directory-deployment-background.md
-            - name: 自動產生的 AD 物件
-              href: big-data-cluster/active-directory-objects.md
-            - name: AD DNS 對帳
-              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Spark 作業
           items:
             - name: 在 Azure Data Studio 中提交 Spark 作業
@@ -362,13 +368,17 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: 針對 pyspark 筆記本進行疑難排解
               href: big-data-cluster/troubleshoot-pyspark-notebook.md
-            - name: Active Directory 網域群組範圍
-              href: big-data-cluster/troubleshoot-active-directory.md
-            - name: Active Directory DNS
-              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-            - name: Active Directory 登入失敗
-              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: HDFS 系統管理員權限
+            - name: 針對 Active Directory 進行疑難排解
+              items:
+                - name: AD 部署停止
+                  href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+                - name: AD 網域群組範圍
+                  href: big-data-cluster/troubleshoot-active-directory.md
+                - name: AD DNS
+                  href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+                - name: AD 登入失敗
+                  href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: 針對 HDFS 系統管理員權限進行疑難排解
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 參考
       items:

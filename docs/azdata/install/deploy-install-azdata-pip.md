@@ -5,59 +5,55 @@ description: 了解如何使用 pip 來安裝 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: ecf4eaaddf9423bb9a3ae88036b5c3cb2090451b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914949"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725279"
 ---
 # <a name="install-azdata-with-pip"></a>使用 `pip` 安裝 `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-本文描述如何使用 `pip` 在 Windows 或 Linux 上 安裝 `azdata`。
+此文章描述如何使用 `pip` 在 Windows、Linux 或 macOS/OS X 上安裝 `azdata` 工具。
 
-對於 Windows 與 Linux (Ubuntu 發行版本)，使用[套件管理員](./deploy-install-azdata-installer.md)安裝比較容易。
+> [!TIP]
+> 為了提供更簡單的體驗，`azdata` 可以使用適用於 Windows、Linux (Ubuntu、Debian、RHEL、CentOS、openSUSE 與 SLE 發行版本) 與 macOS 的[套件管理員](./deploy-install-azdata.md)來安裝。
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> 必要條件
 
-`azdata` 是以 Python 撰寫的命令列公用程式，可讓叢集管理員透過 REST API 啟動及管理資料。 所需的最低 Python 版本為 3.5。 您也必須擁有 `pip`，才能下載及安裝 `azdata` 工具。 下列說明提供適用於 Windows 和 Ubuntu 的範例。 如需在其他平台上安裝 Python，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
-此外也請安裝及更新最新版的 `requests` Python 套件：
+`azdata` 是以 Python 撰寫的命令列公用程式，可讓叢集系統管理員透過 REST API 來啟動及管理資料資源。 所需的最低 Python 版本為 3.5。 需要 `pip` 才能下載及安裝 `azdata` 工具。 下面的指示提供適用於 Windows、Linux (Ubuntu) 與 macOS/OS X 的範例。如需在其他平台上安裝 Python 的詳細資訊，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download) \(英文\)。 此外也請安裝及更新最新版的 `requests` Python 套件：
 
 ```bash
 pip3 install -U requests
 ```
 
-> [!IMPORTANT]
-> 若要安裝較新版的巨量資料叢集，必須在升級 `azdata` 及安裝新版之前，先備份您的資料，並刪除舊叢集。 如需詳細資訊，請參閱[升級為新版本](../../big-data-cluster/deployment-upgrade.md)。
-
 ## <a name="windows-azdata-installation"></a><a id="windows"></a> Windows `azdata` 安裝
 
-1. 在 Windows 用戶端上，從 [https://www.python.org/downloads/](https://www.python.org/downloads/) 下載所需的 Python 套件。 針對 Python 3.5.3 和更新版本，在您安裝 Python 時也會一併安裝 pip3。 
+1. 在 Windows 用戶端上，從 [https://www.python.org/downloads/](https://www.python.org/downloads/) 下載所需的 Python 套件。 針對 Python 3.5.3 與更新版本，在您安裝 Python 時也會一併安裝 pip3。
 
-   > [!TIP] 
+   > [!TIP]
    > 安裝 Python3 時，請選取將 Python 新增至您的 `PATH`。 若安裝時未採取此動作，也可以在之後尋找 pip3 的位置，然後手動將其新增至您的`PATH`。
 
 1. 開啟新的 Windows PowerShell 工作階段，讓其取得最新的路徑，其中包含 Python。
 
-1. 如果您已安裝任何舊版的 `azdata`，請務必先解除安裝，然後安裝最新版本。
+1. 從 SQL Server 2019 CU5 版本開始，azdata 與伺服器之間有獨立的語意版本。 如果您在這之前已安裝任何舊版的 `azdata`，請務必先解除安裝，然後安裝最新版本。
 
-   對於 CTP 3.2 或 RC1，請執行下列命令。
+   例如，針對 2019-cu4，請執行下列命令：
 
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   或
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   ```powershell
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu4/requirements.txt
    ```
 
-1. 使用下列命令安裝 `azdata`：
+  > [!NOTE]
+  > 在上面的範例中，請將 `2019-cu6` 取代為 `azdata` 安裝的版本與 CU。 
+
+1. 安裝 `azdata`。
 
    ```powershell
    pip3 install -r https://aka.ms/azdata
@@ -78,25 +74,24 @@ pip3 install -U requests
    sudo apt-get install -y unixodbc-dev
    ```
 
-1. 升級 pip3：
+1. 升級 pip3。
 
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
 
-1. 如果您已安裝任何舊版的 `azdata`，請務必先解除安裝，然後安裝最新版本。
+1. 從 SQL Server 2019 CU5 版本開始，azdata 與伺服器之間有獨立的語意版本。 如果您在這之前已安裝任何舊版的 `azdata`，請務必先解除安裝，然後安裝最新版本。
 
-   對於 CTP 3.2 或 RC1，請執行下列命令。
+   例如，針對 `2019-cu6`，請執行下列命令：
 
    ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   或
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu6/requirements.txt
    ```
 
-1. 使用下列命令安裝 `azdata`：
+  > [!NOTE]
+  > 在上面的範例中，請將 `2019-cu6` 取代為 `azdata` 安裝的版本與 CU。
+
+1. 安裝 `azdata`。
 
    ```bash
    pip3 install -r https://aka.ms/azdata --user
@@ -111,32 +106,32 @@ pip3 install -U requests
 
 1. 在 macOS 用戶端上，安裝 [Homebrew](https://brew.sh) (若還未安裝)：
 
-   ```
+   ```bash
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    ```
 
 1. 安裝 Python 及 pip (最低版本 3.0)：
 
-   ```
+   ```bash
    brew install python3
    ```
 
 1. 安裝相依性：
 
-   ```
+   ```bash
    pip3 install -U requests
    brew install freetds
    ```
 
-1. 您先前如有安裝任何舊版工具，請務必先解除安裝，然後再安裝 `azdata` 的最新版本。 下列命令會移除 `azdata` 的版本。
+1. 從 SQL Server 2019 CU5 版本開始，azdata 與伺服器之間有獨立的語意版本。 如果您在這之前已安裝任何舊版的 `azdata`，請務必先解除安裝，然後安裝最新版本。 例如，下列命令會移除 `azdata` 的 RC1 版本：
 
-   ```
+   ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. 使用下列命令安裝 `azdata`：
+1. 安裝 `azdata`。
 
-   ```
+   ```bash
    pip3 install -r https://aka.ms/azdata
    ```
 

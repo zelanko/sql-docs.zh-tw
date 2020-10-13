@@ -1,8 +1,8 @@
 ---
-title: Node.js Driver for SQL Server | Microsoft Docs
+title: Node.js Driver for SQL Server
 description: Tedious 模組是開放原始碼 (TDS 通訊協定的 JavaScript 實作)，支援所有最新的 SQL Server 版本。
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 10/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ac747a2ab737fc5368fcf1beb22a15399bfb896
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cf8d7e1455e437549dc86c691b55559fce486827
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631918"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808764"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
@@ -26,7 +26,8 @@ ms.locfileid: "81631918"
   
 您可以在 Windows、Linux 或 macOS 上使用 Node.js 連線到 SQL Database。  
   
-## <a name="getting-started"></a>開始使用  
+## <a name="get-started"></a>開始使用  
+
 * [步驟 1：設定 Node.js 開發的開發環境](step-1-configure-development-environment-for-node-js-development.md)  
 * [步驟 2：建立 Node.js 開發的 SQL 資料庫](step-2-create-a-sql-database-for-node-js-development.md)  
 * [步驟 3：使用 Node.js 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
@@ -34,12 +35,20 @@ ms.locfileid: "81631918"
 ## <a name="documentation"></a>文件  
   
 [GitHub 上的 Tedious 模組文件](https://tediousjs.github.io/tedious/) \(英文\)  
-  
-## <a name="community"></a>社群  
+
+## <a name="support"></a>支援
+
+適用於 Node.js 的 Tedious 是由社群支援的軟體。 Microsoft 貢獻了 Tedious 開放原始碼社群，而且是位於 [https://github.com/tediousjs/tedious](https://github.com/tediousjs/tedious) 之存放庫中的積極參與者。 不過，此軟體不提供 Microsoft 支援服務。
+
+若要取得協助，請在 Tedious 的 GitHub 存放庫中[提出問題](https://github.com/tediousjs/tedious/issues)，或瀏覽其他 Node.js 社群資源。
+
+## <a name="community-resources"></a>社群資源
+
 * [Azure Node.js 開發人員中心](https://azure.microsoft.com/develop/nodejs/)  
 * [參與 nodejs.org](https://nodejs.org/en/get-involved/)
 
 ## <a name="code-examples"></a>程式碼範例
+
 * [在 Windows 上開始使用 Node.js](https://www.microsoft.com/sql-server/developer-get-started/node/windows/) \(英文\)
 * [在 macOS 上開始使用 Node.js](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) \(英文\)
 * [在 Ubuntu 上開始使用 Node.js](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/) \(英文\)

@@ -1,7 +1,7 @@
 ---
 title: 什麼是 SQL Server 語言延伸模組？
 titleSuffix: ''
-description: 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 藉由使用擴充性架構，即可在外部程式碼中使用關聯式資料。
+description: 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 在 SQL Server 2019 中，支援 Java、R 與 Python。 藉由使用擴充性架構，即可在外部程式碼中使用關聯式資料。
 author: dphansen
 ms.author: davidph
 ms.date: 08/19/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a7e79d6253c531ef2a008a7284fa8d7cd0365999
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645921"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765795"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>什麼是 SQL Server 語言延伸模組？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88645921"
 
 語言延伸模組會使用擴充性架構執行外部程式碼。 程式碼執行與核心引擎流程隔離，但與 SQL Server 查詢執行完全整合。 它們可讓您執行資料所在的程式碼，而不必透過網路提取資料。
 
-外部語言是使用 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) 定義的。 系統預存程序 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 用來當作執行程式碼的介面使用。
+外部語言是使用 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) 定義的。 系統預存程序 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 用來當作執行程式碼的介面使用。
 
 語言延伸模組提供多項優點：
 
@@ -53,9 +53,9 @@ ms.locfileid: "88645921"
 
 + **安裝[適用於 Java 的 Microsoft 擴充性 SDK](how-to/extensibility-sdk-java-sql-server.md)**，在 SQL Server 上執行 Java 程式碼
 
-+ **使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)**，在 SQL Server 上執行外部程式碼
++ **使用 [Azure Data Studio](../azure-data-studio/what-is.md) 或 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)**，在 SQL Server 上執行外部程式碼
 
-+ **使用系統預存程序 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)**，在 SQL Server 上執行 Java 程式碼。
++ **使用系統預存程序 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)**，在 SQL Server 上執行 Java 程式碼。
 
 ### <a name="step-3-write-your-first-code"></a>步驟 3：撰寫您的第一個程式碼
 
@@ -69,5 +69,7 @@ ms.locfileid: "88645921"
 
 ## <a name="next-steps"></a>後續步驟
 
++ 安裝[適用於 SQL Server 的 Python 自訂執行階段](../machine-learning/install/custom-runtime-python.md)
++ 安裝[適用於 SQL Server 的 R 自訂執行階段](../machine-learning/install/custom-runtime-r.md)
 + 安裝 [Windows 的 SQL Server 語言延伸模組](install/install-sql-server-language-extensions-on-windows.md)或 [Linux 的 SQL Server 語言延伸模組](../linux/sql-server-linux-setup-language-extensions.md)
 + 安裝[適用於 Java 的 Microsoft 擴充性 SDK](how-to/extensibility-sdk-java-sql-server.md)

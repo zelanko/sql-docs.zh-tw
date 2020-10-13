@@ -1,114 +1,117 @@
 ---
-title: 使用安裝程式在 Linux 上安裝 azdata
-titleSuffix: ''
-description: 了解如何使用安裝程式來安裝 azdata 工具 (Linux)。
+title: 使用 apt 安裝 azdata
+description: 了解如何使用 apt 來安裝 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914968"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725284"
 ---
 # <a name="install-azdata-with-apt"></a>使用 apt 安裝 `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-本文描述如何在 Linux 上安裝 `azdata`。 您必須先使用 `pip` 安裝 `azdata`，才能開始使用這些套件管理員。
+針對具有 `apt` 的 Linux 發行版本，有一個 `azdata-cli` 的套件。 該 CLI 套件已在使用 `apt` 的 Linux 版本上進行測試：
+
+- Ubuntu 16.04、Ubuntu 18.04
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a name="install-azdata-for-linux"></a><a id="linux"></a>安裝適用於 Linux 的 `azdata`
+## <a name="install-with-apt"></a>使用 apt 安裝
 
-`azdata` 安裝套件可用於具有 `apt` 的 Ubuntu。
+>[!IMPORTANT]
+> `azdata-cli` 的 RPM 套件相依於 python3 套件。 在您的系統上，這可能是早於 *Python 3.6.x* 需求的 Python 版本。 如果這對您造成問題，請尋找替代的 python3 套件，或遵循使用 [`pip`](../install/deploy-install-azdata-pip.md) 的手動安裝指示。
 
-### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>使用 apt (Ubuntu) 安裝 `azdata`
+1. 安裝所需的相依性以安裝 `azdata-cli`。
 
->[!NOTE]
->`azdata` 套件不會使用系統 Python，而會安裝自己的 Python 解譯器。
+   ```bash
+   sudo apt-get update
+   sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
+   ```
 
-1. 取得安裝程序所需的套件：
+2. 匯入 Microsoft 存放庫金鑰。
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
-    ```
+   ```bash
+   curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+   gpg --dearmor |
+   sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+   ```
 
-2. 下載及安裝簽署金鑰：
-
-    ```bash
-    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
-    ```
-
-3. 新增 `azdata` 存放庫資訊。
+3. 建立本機存放庫資訊。
 
    針對 Ubuntu 16.04 用戶端，執行：
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    針對 Ubuntu 18.04 用戶端，執行：
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
-4. 更新存放庫資訊並安裝 `azdata`：
+   針對 Ubuntu 20.04 用戶端，執行：
 
     ```bash
-    sudo apt-get update
-    sudo apt-get install -y azdata-cli
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
     ```
 
-5. 確認安裝：
+4. 安裝 `azdata-cli`。
 
-    ```bash
-    azdata --version
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y azdata-cli
+   ```
 
-### <a name="update"></a>更新
+## <a name="verify-install"></a>確認安裝
 
-僅升級 `azdata`：
+```bash
+azdata
+azdata --version
+```
+
+## <a name="update"></a>更新
+
+使用 `apt-get update` 與 `apt-get install` 命令來更新 `azdata-cli`。
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>解除安裝
+## <a name="uninstall"></a>解除安裝
 
-1. 使用 apt-get remove 解除安裝：
+1. 從系統移除套件。
 
-    ```bash
-    sudo apt-get remove -y azdata-cli
-    ```
+   ```bash
+   sudo apt-get remove -y azdata-cli
+   ```
 
-2. 移除 `azdata` 存放庫資訊：
+2. 如果您不打算重新安裝 `azdata-cli`，請移除存放庫資訊。
 
-    >[!NOTE]
-    >若您計劃在未來安裝 `azdata`，就無須執行此步驟
+   ```bash
+   sudo rm /etc/apt/sources.list.d/azdata-cli.list
+   ```
 
-    ```bash
-    sudo rm /etc/apt/sources.list.d/azdata-cli.list
-    ```
+3. 移除存放庫金鑰。
 
-3. 移除簽署金鑰：
+   ```bash
+   sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
+   ```
 
-    ```bash
-    sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
-    ```
+4. 移除不再需要的相依性。
 
-4. 移除任何 Azdata CLI 一併安裝但不需要的相依性：
-
-    ```bash
-    sudo apt autoremove
-    ```
+   ```bash
+   sudo apt autoremove
+   ```
 
 ## <a name="next-steps"></a>後續步驟
 

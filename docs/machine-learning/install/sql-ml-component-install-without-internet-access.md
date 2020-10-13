@@ -1,23 +1,25 @@
 ---
-title: 在沒有網際網路存取的情況下安裝
-description: 在隔離在網路防火牆後方的電腦上安裝 SQL Server 機器學習 R 與 Python。
+title: 在沒有網際網路存取的情況下進行離線安裝
+description: 在隔離在網路防火牆後方的電腦上進行含 Python 與 R 的 SQL Server 機器學習服務的離線安裝。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487641"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636152"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在沒有網際網路存取的電腦上安裝 SQL Server 機器學習 R 和 Python
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>在沒有網際網路存取的電腦上進行含 Python 與 R 的 SQL Server 機器學習服務的離線安裝
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+此文章說明如何在隔離在網路防火牆後方且沒有網際網路存取的電腦上進行 SQL Server 機器學習服務的離線安裝。
 
 根據預設，安裝程式會連線到 Microsoft 下載網站以取得適用於 SQL Server 上機器學習的必要及更新元件。 如果防火牆條件約束防止安裝程式抵達這些網站，您可以使用已連線到網際網路的裝置來下載這些檔案，將檔案傳輸到離線伺服器，然後再執行安裝程式。
 
@@ -180,7 +182,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
-1. 在 [控制台] 中，按一下 [系統及安全性]   > [系統]   > [進階系統設定]   > [環境變數]  。
+1. 在 [控制台] 中，按一下 [系統及安全性] > [系統] > [進階系統設定] > [環境變數]。
 
 2. 建立新的使用者或系統變數。 
 

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772387"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785104"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 Python 指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集
 
@@ -75,17 +75,23 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure 訂用帳戶識別碼** | 用於 AKS 的 Azure 訂用帳戶識別碼。 您可以從另一個命令列執行 `az account list` 以列出您所有訂用帳戶及其識別碼。 |
    | **Azure 資源群組** | 要為 AKS 叢集建立的 Azure 資源群組名稱。 |
    | **Azure 區域** | 新 AKS 叢集的 Azure 區域 (預設為 **westus**)。 |
-   | **機器大小** | 要在 AKS 叢集中用於節點的[機器大小](/azure/virtual-machines/windows/sizes) (預設為 **Standard_L8s**)。 |
+   | **機器大小** | 要在 AKS 叢集中用於節點的[機器大小](/azure/virtual-machines/windows/sizes) (預設為 **Standard_D16s_v3**)。 |
    | **背景工作節點** | AKS 叢集中的背景工作角色節點數目 (預設為 **1**)。 |
    | **叢集名稱** | AKS 叢集和巨量資料叢集的名稱。 您巨量資料叢集的名稱只能由小寫英數字元組成，且不能有空格。 (預設為 **sqlbigdata**)。 |
    | **密碼** | 控制器、HDFS/Spark 閘道和主要執行個體的密碼 (預設為 **MySQLBigData2019**)。 |
    | **使用者名稱** | 控制器使用者的使用者名稱 (預設：**admin**)。 |
 
    > [!IMPORTANT]
-   > 預設的 **Standard_L8s** 機器大小可能無法在每個 Azure 區域中使用。 如果您選擇不同的機器大小，請確定可在叢集中節點之間連結的磁碟總數大於或等於 24。 叢集中的每個持續性磁碟區宣告，都需要連結的磁碟。 目前，巨量資料叢集需要 24 個持續性磁碟區宣告。 例如，[Standard_L8s](/azure/virtual-machines/lsv2-series) 機器大小支援 32 個連結的磁碟，因此您可以使用此機器大小的單一節點來評估巨量資料叢集。
+   > 預設的 **Standard_D16s_v3** 機器大小可能無法在每個 Azure 區域中使用。 如果您選擇不同的機器大小，請確定可在叢集中節點之間連結的磁碟總數大於或等於 24。 叢集中的每個持續性磁碟區宣告，都需要連結的磁碟。 目前，巨量資料叢集需要 24 個持續性磁碟區宣告。
+   >
+   >執行下列命令來識別可用的 VM 類型。
+   >
+   >```azurecli-interactive
+   >az vm list-sizes --query "sort_by(@,&name)[?contains(name,'Standard_D16s')]" -l westus2 -o table
+   >```
 
    > [!NOTE]
-   > 部署巨量資料叢集期間無法使用 SQL Server `sa` 帳戶。 新系統管理員登入會佈建於 SQL Server 的主要執行個體中，而其名稱即是為**使用者名稱**輸入所指定的名稱，密碼則會對應到**密碼**輸入。 佈建控制器管理使用者時，會使用相同的**使用者名稱**與**密碼**值。 在 SQL Server 2019 CU5 之前部署的叢集上，閘道 (Knox) 僅支援**根**使用者，且密碼與上述相同。
+   > 部署巨量資料叢集期間無法使用 SQL Server `sa` 帳戶。 新系統管理員登入會佈建於 SQL Server 主要執行個體中，而其名稱即是為**使用者名稱**輸入所指定的名稱，密碼則對應到**密碼**輸入。 佈建控制器管理使用者時，會使用相同的**使用者名稱**與**密碼**值。 在 SQL Server 2019 CU5 之前部署的叢集上，閘道 (Knox) 僅支援**根**使用者，且密碼與上述相同。
    >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. 指令碼會使用您指定的參數來開始建立 AKS 叢集。 此步驟需要幾分鐘的時間。

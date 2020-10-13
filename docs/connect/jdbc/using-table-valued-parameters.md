@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631936"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727469"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 
@@ -35,8 +35,8 @@ ms.locfileid: "81631936"
   
 | 資源                                                                                                             | 描述                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| 《SQL Server 線上叢書》中的[資料表值參數 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkId=98363) | 描述如何建立及使用資料表值參數                             |
-| SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 說明用來宣告資料表值參數的使用者定義資料表類型 |
+| 《SQL Server 線上叢書》中的[資料表值參數 (資料庫引擎)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) | 描述如何建立及使用資料表值參數                             |
+| SQL Server 線上叢書中的[使用者定義資料表類型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))                  | 說明用來宣告資料表值參數的使用者定義資料表類型 |
 | CodePlex 的 [Microsoft SQL Server 資料庫引擎](https://go.microsoft.com/fwlink/?LinkId=120507) \(英文\) 一節        | 包含示範如何使用 SQL Server 特性與功能的範例  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
@@ -53,7 +53,7 @@ ms.locfileid: "81631936"
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數類型  
 
-資料表值參數是以使用 Transact-SQL `CREATE TYPE` 陳述式所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表類型並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱《SQL Server 線上叢書》中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+資料表值參數是以使用 Transact-SQL `CREATE TYPE` 陳述式所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表類型並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱《SQL Server 線上叢書》中的[使用者定義資料表類型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -265,11 +265,11 @@ pStmt.execute();
 | 名稱                                                          | 描述                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | 初始化 SQLServerDataTable 的新的執行個體。    |
-| public Iterator<Entry\<Integer, Object[]>> getIterator()      | 擷取資料表資料列上的迭代器。 |
+| 公用迭代器<Entry\<Integer, Object[]>> getIterator()      | 擷取資料表資料列上的迭代器。 |
 | public void addColumnMetadata(String columnName, int sqlType) | 新增指定之資料行的中繼資料。              |
 | public void addColumnMetadata(SQLServerDataColumn column)     | 新增指定之資料行的中繼資料。              |
 | public void addRow(Object... values)                          | 將一個資料列新增至資料表。              |
-| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | 擷取此資料表的資料行中繼資料。       |
+| 公用地圖\<Integer, SQLServerDataColumn> getColumnMetadata() | 擷取此資料表的資料行中繼資料。       |
 | public void clear()                                           | 清除此資料表。                              |
 
 ### <a name="sqlserverdatacolumn"></a>SQLServerDataColumn
@@ -315,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>另請參閱
 
-[JDBC 驅動程式概觀](overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](overview-of-the-jdbc-driver.md)

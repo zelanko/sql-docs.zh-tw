@@ -2,7 +2,7 @@
 description: Create an ActiveX Script Job Step
 title: Create an ActiveX Script Job Step
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 10/06/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,47 +14,37 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1d602a87258cd126d217353e94c0c600870e5a61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8bac45061aa165808202b2a08b71618bd6513954
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418224"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784997"
 ---
-# <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+# <a name="create-an-activex-script-job-step"></a>建立 ActiveX 指令碼作業步驟
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+從 SQL Server 2016 開始，已不再支援 ActiveX 子系統。 將使用 ActiveX Script 的任何現有作業步驟轉換成 [PowerShell 指令碼作業步驟](create-a-powershell-script-job-step.md)。 使用 PowerShell 進行任何未來的開發。
 
 > [!IMPORTANT]  
-> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [SQL Server 中的 Azure SQL ManagSQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱[來自 SQL Server 的 Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) \(部分機器翻譯\)。
 
-本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立與定義執行 ActiveX Script 的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。  
+此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 SQL Server 2014 與更舊版本中建立並定義執行 ActiveX 指令碼的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。  
 
-**重要** [!INCLUDEssNoteDepFutureAvoid]
-  
--   **開始之前：**  
-  
-    [限制事項](#Restrictions)  
-  
-    [安全性](#Security)  
-  
--   **若要使用下列項目建立 Transact-SQL 作業步驟：**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server 管理物件](#SMO)  
-  
 ## <a name="before-you-begin"></a>開始之前  
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制事項  
+
 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
   
 ### <a name="security"></a><a name="Security"></a>安全性  
+
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="use-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>若要建立 ActiveX 指令碼作業步驟  
   
@@ -78,7 +68,7 @@ ms.locfileid: "88418224"
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
-#### <a name="to-create-an-activex-script-job-step"></a>若要建立 ActiveX 指令碼作業步驟  
+#### <a name="to-create-an-activex-script-job-step"></a>若要建立 ActiveX Script 作業步驟  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   

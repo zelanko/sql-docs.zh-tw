@@ -8,14 +8,14 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 06/20/2018
-ms.openlocfilehash: 40c95546496b6b79aeb95bc63db7750646f833fc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.reviewer: drskwier; sstein
+ms.date: 10/02/2020
+ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990141"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721579"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -25,14 +25,24 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 |平台|下載|發行日期|版本|Build
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2143544)|2020 年 9 月 18 日| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143659)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143497)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
+|[Windows](#get-sqlpackage-for-windows)|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2143544)|2020 年 9 月 18 日| 18.6 | 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143659)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143497)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6| 15.0.4897.1 |
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。 若要下載其他語言，請參閱[可用的語言](#available-languages)一節。
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="dacfx"></a>DacFx
+DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) 是一個與將資料庫部署整合到應用程式管線相關的機制。  DacServices API 可透過 nuget 在套件中取得，[Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx)。  目前的 DacFx version 版本為 150.4897.1。
+
+透過 .NET CLI 安裝 nuget 套件是使用下列命令來完成的：
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> 其他 nuget 套件是以 DacFx 名稱 "Microsoft.SqlServer.DacFx.x64" 與 "Microsoft.SqlServer.DacFx.x86" 發行的。 這兩種平台的支援由 "Microsoft.SqlServer.DACFx" 套件涵蓋。 應該對此套件進行新的參考，而不是 x64 或 x86 變體。
 
 ## <a name="get-sqlpackage-for-windows"></a>取得適用於 Windows 的 sqlpackage
 
@@ -129,7 +139,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
 
-sqlpackage 可在 Windows、macOS 與 Linux 上執行，而且是使用 .NET Core 3.1 建置的。  [.NET Core 3.1 OS 需求](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)] 適用於 sqlpackage。
+sqlpackage 可在 Windows、macOS 與 Linux 上執行，而且是使用 .NET Core 3.1 建置的。  [.NET Core 3.1 OS 需求](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)適用於 sqlpackage。
 
 ### <a name="windows-x64"></a>Windows (x64)
 
@@ -168,6 +178,7 @@ sqlpackage .NET Core macOS：
 
 sqlpackage .NET Core Linux：  
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
+
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -5,23 +5,24 @@ description: 了解如何使用 yum 來安裝 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 7f2f06c22b56e2afbe7c51198efbbfe1eecbc8c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914898"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725266"
 ---
 # <a name="install-azdata-with-yum"></a>使用 yum 安裝 `azdata`
+
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 針對具有 `yum` 的 Linux 發行版本，有一個 `azdata-cli` 的套件。 該 CLI 套件已在使用 `yum` 的 Linux 版本上進行測試：
 
 - RHEL 7、RHEL 8
-
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -30,13 +31,19 @@ ms.locfileid: "90914898"
 >[!IMPORTANT]
 > `azdata-cli` 的 RPM 套件相依於 python3 套件。 在您的系統上，這可能是早於 *Python 3.6.x* 需求的 Python 版本。 如果這對您造成問題，請尋找替代的 python3 套件，或遵循使用 [`pip`](../install/deploy-install-azdata-pip.md) 的手動安裝指示。
 
-1. 匯入 Microsoft 存放庫金鑰
+1. 安裝所需的相依性以安裝 `azdata-cli`。
+
+   ```bash
+   sudo yum install -y curl
+   ```
+
+1. 匯入 Microsoft 存放庫金鑰。
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-1. 建立本機存放庫資訊
+1. 建立本機存放庫資訊。
 
    針對 RHEL 7 用戶端，請執行：
 
@@ -50,7 +57,7 @@ ms.locfileid: "90914898"
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
-1. 使用 `yum install` 命令安裝
+1. 安裝 `azdata-cli`。
 
    ```bash
    sudo yum install azdata-cli
@@ -58,7 +65,7 @@ ms.locfileid: "90914898"
 
 ## <a name="verify-install"></a>確認安裝
 
-```
+```bash
 azdata
 azdata --version
 ```
@@ -73,13 +80,13 @@ sudo yum update azdata-cli
 
 ## <a name="uninstall"></a>解除安裝
 
-1. 從系統移除套件
+1. 從系統移除套件。
 
    ```bash
    sudo yum remove azdata-cli
    ```
 
-1. 如果您不打算重新安裝 `azdata-cli`，請移除存放庫資訊
+1. 如果您不打算重新安裝 `azdata-cli`，請移除存放庫資訊。
 
    ```bash
    sudo rm /etc/yum.repos.d/azdata-cli.repo
