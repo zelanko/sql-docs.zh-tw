@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df3eaf968bb43b9b6e3adac1027f8fe1a49db2d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8799b58a43c5456141694ded0d82f87afd88eb60
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426880"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988420"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>建立伺服器連線檔案 (MySQLToSQL)
 您可以在腳本檔案的 [伺服器] 區段或個別的伺服器連接檔案中指定伺服器資訊。 伺服器連接檔案的命令列參數為、 `-c <serverconnectionfile>` 。 如果腳本檔案和伺服器連接檔案中同時出現相同的伺服器識別碼，則會考慮腳本檔中的伺服器定義。  
@@ -92,5 +92,4 @@ ms.locfileid: "88426880"
 操作主控台的下一個步驟是 [執行 SSMA 主控台 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[ (MySQL) 執行 SSMA 主控台 ](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[ (MySQL) 執行 SSMA 主控台 ](./executing-the-ssma-console-mysqltosql.md)  

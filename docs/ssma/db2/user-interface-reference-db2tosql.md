@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ae2a0f65d638af965b7dbb933a38c0b3b0e151e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454160"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988484"
 ---
 # <a name="user-interface-reference-db2tosql"></a>消費者介面參考 (DB2ToSQL) 
 本節包含適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 Migration Assistant (SSMA) 的說明主題。  
@@ -30,7 +30,7 @@ ms.locfileid: "88454160"
 |[連接到 DB2 資料庫 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用 [ **連接到 DB2** ] 對話方塊來連接到您想要遷移的 DB2 資料庫。|  
 |[連接至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用 [ **連接到 SQL Server** ] 對話方塊，即可連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您要遷移至的實例。|  
 |[資料移轉報表 &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|顯示將資料從 DB2 遷移至的結果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|[資料移轉設定](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|您可以使用 [ **擴充資料移轉設定** ] 索引標籤來撰寫資料移轉的自訂查詢。|  
+|[資料移轉設定](./data-migration-settings-db2tosql.md)|您可以使用 [ **擴充資料移轉設定** ] 索引標籤來撰寫資料移轉的自訂查詢。|  
 |[編輯類型對應 &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用 [ **新增類型對應** ] 或 [ **編輯類型對應** ] 對話方塊，即可建立或修改來源和目標資料庫與資料庫物件之間的資料類型對應。|  
 |[全域設定 &#40;編輯器&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|使用 [ **通用設定** ] 對話方塊的 [編輯器] 頁面，即可設定程式碼編輯器選項。|  
 |[&#40;對話方塊的全域設定&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|使用 [ **通用設定** ] 對話方塊的 [對話方塊] 頁面，即可設定預設對話方塊和警告設定。|  
@@ -49,4 +49,3 @@ ms.locfileid: "88454160"
 ## <a name="see-also"></a>另請參閱  
 [消費者入門與 SSMA for DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [將 DB2 資料庫移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

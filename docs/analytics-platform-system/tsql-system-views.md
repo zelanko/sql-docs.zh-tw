@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 52a0941a6b53a039463240f5a39987ef2a528a56
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 87a6585d225617889c32167fdebcc79bd89c761c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778497"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987204"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平臺系統平行處理資料倉儲的系統檢視
 分析平臺系統 (AP) SQL Server 平行資料倉儲 (PDW) 的系統檢視。
@@ -230,7 +230,7 @@ ms.locfileid: "88778497"
 <!--Image references-->
 
 <!--Article references-->
-[SQL Data Warehouse reference overview]: sql-data-warehouse-overview-reference.md
+[Azure Synapse Analytics reference overview]: sql-data-warehouse-overview-reference.md
 
 <!--MSDN references-->
 

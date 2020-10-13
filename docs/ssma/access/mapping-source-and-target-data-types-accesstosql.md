@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497845"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988674"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型 (AccessToSQL) 
 Access 資料庫類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型不同。 當您將 Access 資料庫物件轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時，您必須指定如何對應資料類型與的存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以接受預設資料類型對應，也可以自訂對應，如下列程式所示。  
   
 ## <a name="default-mappings"></a>預設對應  
-SSMA 具有一組預設的資料類型對應。 如需預設對應清單，請參閱 [專案設定 (類型對應) ](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+SSMA 具有一組預設的資料類型對應。 如需預設對應清單，請參閱 [專案設定 (類型對應) ](./project-settings-type-mapping-accesstosql.md)。  
   
 ## <a name="customizing-data-type-mappings"></a>自訂資料類型對應  
 藉由使用 [ **專案設定** ] 對話方塊，您可以自訂專案中所有資料庫和資料庫物件的對應類型。 專案的類型對應會套用至所有沒有自訂類型對應的資料庫和資料庫物件。  
@@ -93,4 +93,3 @@ SSMA 具有一組預設的資料類型對應。 如需預設對應清單，請�
   
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

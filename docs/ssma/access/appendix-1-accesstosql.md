@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ea9a89eadfd03f31573fd3a25e41e8bb8c1ed73f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88b8566b0ed3b264f09f0307251dcf9e69270e19
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418574"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987668"
 ---
 # <a name="appendix---1-accesstosql"></a>附錄-1 (AccessToSQL) 
 SSMA 主控台命令列選項的快速流覽：  
   
-|Sl。 否。|參數|必要？|Switch 引數|允許的值|  
+|Sl。 不可以。|參數|必要？|Switch 引數|允許的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/腳本|是|scriptfile|有效的 XML 檔案名。<br /><br />主控台腳本定義檔。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 檔案名。 如果腳本檔中使用了變數，則必須指定此檔案。|  
@@ -32,5 +32,4 @@ SSMA 主控台命令列選項的快速流覽：
 |8|-?|否|不適用|不適用|  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 (存取) ](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[執行 SSMA 主控台 (存取) ](./executing-the-ssma-console-accesstosql.md)  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3163da352fa925a821287fc1447fd8b6b5e89cdb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480524"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988494"
 ---
 # <a name="project-settings-migration-accesstosql"></a> (遷移)  (AccessToSQL) 的專案設定
 [遷移專案設定] 可讓您設定資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的方式。  
@@ -29,7 +29,7 @@ ms.locfileid: "88480524"
   
 -   使用 [ **預設專案設定** ] 對話方塊，即可設定所有專案的設定選項。 若要存取遷移設定，請在 [ **工具** ] 功能表上選取 [ **預設專案設定**]，在您要存取設定的 [ **遷移目標版本** ] 下拉式方塊中，選取您要存取設定的專案類型，按一下左窗格底部的 **[一般** ]，然後按一下 [ **遷移**]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查條件約束**  
 指定 SSMA 是否應該在將資料加入至資料表時檢查條件約束。  
   
@@ -88,5 +88,4 @@ ms.locfileid: "88480524"
 資料移轉期間所使用的批次大小。 每個批次之後會記錄一筆交易。 依預設，所有配置的批次大小為10000。  
   
 ## <a name="see-also"></a>另請參閱  
-[消費者介面參考 (存取) ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[消費者介面參考 (存取) ](./user-interface-reference-accesstosql.md)  

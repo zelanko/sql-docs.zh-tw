@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373054"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988194"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>建立和管理專案 (AccessToSQL) 
 若要將 Access 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，您必須先建立 SSMA 專案。 專案是一個檔案，其中包含您想要遷移至或 SQL Azure 之 Access 資料庫的相關中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接收已遷移物件和資料之目標實例或 sql azure 的中繼資料、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接資訊和專案設定。  
@@ -39,19 +39,19 @@ SSMA 包含數個用於轉換和同步處理資料庫物件以及轉換資料的
   
 3.  在左窗格中，按一下 [ **轉換**]。  
   
-4.  在右窗格中，檢查選項。 如需這些選項的詳細資訊，請參閱 [ (轉換) 的專案設定 ](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)。  
+4.  在右窗格中，檢查選項。 如需這些選項的詳細資訊，請參閱 [ (轉換) 的專案設定 ](./project-settings-conversion-accesstosql.md)。  
   
 5.  視需要變更選項。  
   
 6.  針對 [ **遷移**]、[ **GUI**] 和 [ **類型對應** ] 頁面重複上述步驟。  
   
-    -   如需有關遷移選項的詳細資訊，請參閱 [ (遷移) 的專案設定 ](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+    -   如需有關遷移選項的詳細資訊，請參閱 [ (遷移) 的專案設定 ](./project-settings-migration-accesstosql.md)。  
   
-    -   如需使用者介面選項的詳細資訊，請參閱 [ (GUI) 的專案設定 ](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+    -   如需使用者介面選項的詳細資訊，請參閱 [ (GUI) 的專案設定 ](../sybase/project-settings-gui-sybasetosql.md)。  
   
-    -   如需資料類型對應設定的詳細資訊，請參閱 [專案設定 (類型對應) ](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+    -   如需資料類型對應設定的詳細資訊，請參閱 [專案設定 (類型對應) ](./project-settings-type-mapping-accesstosql.md)。  
   
-    -   如需有關 SQL Azure 設定的詳細資訊，請參閱 [Sql azure) 的專案設定 (](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)。  
+    -   如需有關 SQL Azure 設定的詳細資訊，請參閱 [Sql azure) 的專案設定 (](./project-settings-azure-sql-db-accesstosql.md)。  
   
 **注意** 只有當您在建立專案時選取 [遷移至 SQL Azure] 時，才會提供 SQL Azure 設定。  
   
@@ -90,7 +90,7 @@ SSMA 會建立專案檔。 您現在可以執行 [新增一或多個 Access 資�
   
         儲存中繼資料可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請不要選取任何核取方塊。  
   
-    2.  按一下 [檔案] 。  
+    2.  按一下 **[儲存]** 。  
   
         SSMA 會剖析存取架構，並將中繼資料儲存至專案檔。  
   
@@ -115,4 +115,3 @@ SSMA 會建立專案檔。 您現在可以執行 [新增一或多個 Access 資�
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [新增和移除 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
-  

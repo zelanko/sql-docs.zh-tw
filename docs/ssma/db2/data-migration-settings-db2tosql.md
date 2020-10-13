@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c741287bdb6986dcc84de752c6158f4c7ab6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422982"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984874"
 ---
 # <a name="data-migration-settings-db2tosql"></a>資料移轉設定 (DB2ToSQL) 
   
 ## <a name="data-migration-settings"></a>資料移轉設定  
 **資料移轉設定** 可讓使用者撰寫自訂查詢以進行資料移轉。  
   
--   當 [ **擴充資料移轉選項** ] 設定為 [ **顯示** ]，並且在 [專案設定] 中設定為 [ **隱藏** ] 時，就可以使用此索引標籤。 如需有關專案遷移設定的詳細資訊，請參閱 [ (遷移) 的專案設定 ](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 。  
+-   當 [ **擴充資料移轉選項** ] 設定為 [ **顯示** ]，並且在 [專案設定] 中設定為 [ **隱藏** ] 時，就可以使用此索引標籤。 如需有關專案遷移設定的詳細資訊，請參閱 [ (遷移) 的專案設定 ](./project-settings-migration-db2tosql.md) 。  
   
 -   將在資料表節點的 [ **資料移轉設定** ] 索引標籤中，執行自訂 SQL 語句的剖析。  
   
@@ -53,5 +53,4 @@ ms.locfileid: "88422982"
 -   **取消：** 按一下 [ **取消** ]，以在進行變更之前還原存在的設定。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 DB2 資料移轉至 SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
-  
+[將 DB2 資料移轉至 SQL Server](./migrating-db2-data-into-sql-server-db2tosql.md)  

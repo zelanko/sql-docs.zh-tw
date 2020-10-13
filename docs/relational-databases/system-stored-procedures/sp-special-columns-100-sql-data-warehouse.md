@@ -1,6 +1,6 @@
 ---
-description: 'sp_special_columns_100 (SQL 資料倉儲) '
-title: sp_special_columns_100 (SQL 資料倉儲) |Microsoft Docs
+description: 'sp_special_columns_100 (Azure Synapse Analytics) '
+title: 'sp_special_columns_100 (Azure Synapse Analytics) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725029"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987808"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL 資料倉儲) 
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   傳回一組用來唯一識別資料表中某個資料列的最佳資料行。 另外，也傳回交易更新資料列中的任何值時，所自動更新的資料行。  
@@ -31,7 +31,7 @@ ms.locfileid: "91725029"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|資料列識別碼的實際範圍。 可以是 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回0。 這個欄位一律會傳回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 只有在定位於資料列時，才能夠確保資料列識別碼有效。 如果有另一項交易更新或刪除這個資料列，後來再利用資料列識別碼來重新選取時，便不會傳回資料列。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 確保在目前交易的持續時間裡，資料列識別碼有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 確保在工作階段的持續時間裡，資料列識別碼有效 (跨越交易界限)。|  
-|COLUMN_NAME|**sysname**|傳回的 *資料表*之每個資料行的資料行名稱。 這個欄位一律會傳回值。|  
+|COLUMN_NAME|**sysname**|傳回的 *資料表* 之每個資料行的資料行名稱。 這個欄位一律會傳回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 資料類型。|  
 |TYPE_NAME|**sysname**|與資料來源相關的資料類型名稱;例如 **char**、 **Varchar**、 **money**或 **text**。|  
 |PRECISION|**整數**|資料來源之資料行的有效位數。 這個欄位一律會傳回值。|  

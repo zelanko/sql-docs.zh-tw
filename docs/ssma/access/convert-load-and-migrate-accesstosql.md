@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e541bf7cecf1614fc7fcdb1bf44cb8d71910bc13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f6b1db29b03d0ea0b2f6704039a1436107a4fd9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372914"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987641"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>轉換、載入和遷移 (AccessToSQL) 
 
@@ -29,13 +29,12 @@ ms.locfileid: "88372914"
   
 頁面的 [ **遷移資料物件** ] 區段也包含 [ **報表** ] 按鈕。 您可以選取此按鈕來查看資料移轉報表。  
   
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 **Report**  
 顯示相關聯的轉換或遷移報表。  
   
 ## <a name="see-also"></a>另請參閱
 
-[消費者介面參考 (存取) ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[消費者介面參考 (存取) ](./user-interface-reference-accesstosql.md)  
 [移轉精靈](migration-wizard-accesstosql.md)  
-  

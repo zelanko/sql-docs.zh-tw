@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418554"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985096"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a> (DB2ToSQL) 轉換 DB2 架構
 當您連接到 DB2、連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並設定專案和資料對應選項之後，您可以將 DB2 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。  
@@ -147,8 +147,7 @@ ms.locfileid: "88418554"
 -   您可以從遷移中排除物件。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [中繼資料瀏覽器] 和 [Db2 中繼資料瀏覽器] 中，清除專案旁的核取方塊，然後將物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並從 DB2 遷移資料。  
   
 ## <a name="next-step"></a>後續步驟  
-遷移程式的下一個步驟是將已 [轉換的物件載入 SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)中。  
+遷移程式的下一個步驟是將已 [轉換的物件載入 SQL Server](./loading-converted-database-objects-into-sql-server-db2tosql.md)中。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 DB2 資料移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

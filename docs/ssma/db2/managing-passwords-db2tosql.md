@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472477"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987414"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密碼 (DB2ToSQL) 
 本節說明如何保護資料庫密碼以及在伺服器之間匯入或匯出的程式：  
@@ -139,5 +139,4 @@ _匯出功能_ 會從本機受保護的儲存體讀取伺服器識別碼和密�
 8. 確認密碼： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[執行 SSMA 主控台](./executing-the-ssma-console-db2tosql.md)  

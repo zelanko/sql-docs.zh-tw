@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472505"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987444"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>將 DB2 架構對應至 SQL Server 架構 (DB2ToSQL) 
 在 DB2 中，每個資料庫都有一個或多個架構。 根據預設，SSMA 會將 DB2 架構中的所有物件遷移至架構的名稱為的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 不過，您可以自訂 DB2 架構與資料庫之間的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -60,9 +60,8 @@ DB2 資料庫包含架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssn
 1.  在 [架構對應] 索引標籤下，選取任何資料列，然後按一下 [ **重設為預設值** ]，還原成預設的資料庫和架構。  
   
 ## <a name="next-steps"></a>後續步驟  
-如果您想要分析 DB2 物件至物件的轉換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以 [ (SSMA 一般) 來進行資料移轉報表 ](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)。  
+如果您想要分析 DB2 物件至物件的轉換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以 [ (SSMA 一般) 來進行資料移轉報表 ](../sybase/data-migration-report-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [連接至 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [將 DB2 資料庫移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488291"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988651"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>將存取資料移轉至 SQL Server Azure SQL Database (AccessToSQL) 
 當您成功建立資料庫物件至之後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以將資料從存取權遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  
   
 ## <a name="setting-migration-options"></a>設定遷移選項  
-在您將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，請先在 [ **專案設定** ] 對話方塊中，檢查項目遷移選項。 在這個對話方塊中，您可以設定遷移批次大小、表鎖、條件約束檢查、插入觸發程式引發、身分識別和 null 值處理，以及如何處理超出範圍的日期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱 [ (遷移) 的專案設定 ](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+在您將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之前，請先在 [ **專案設定** ] 對話方塊中，檢查項目遷移選項。 在這個對話方塊中，您可以設定遷移批次大小、表鎖、條件約束檢查、插入觸發程式引發、身分識別和 null 值處理，以及如何處理超出範圍的日期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需詳細資訊，請參閱 [ (遷移) 的專案設定 ](./project-settings-migration-accesstosql.md)。  
   
 ## <a name="migrating-data"></a>遷移資料  
 遷移資料是一項大量載入作業，可將資料列移入或移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 中的交易。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每一筆交易中要載入或 SQL Azure 的資料列數，都是在專案設定中設定。  
@@ -57,4 +57,3 @@ ms.locfileid: "88488291"
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [設定轉換和遷移選項](setting-conversion-and-migration-options-accesstosql.md)  
-  

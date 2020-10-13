@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454300"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987524"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 (類型對應)  (AccessToSQL) 
 型別對應專案設定可讓您設定 SSMA 專案的預設型別對應。 您也可以指定個別資料庫物件的類型對應。 如需詳細資訊，請參閱 [對應來源和目標資料類型](mapping-source-and-target-data-types-accesstosql.md)。  
@@ -33,11 +33,11 @@ ms.locfileid: "88454300"
   
 -   使用 [ **預設專案設定** ] 對話方塊，即可設定所有專案的設定選項。 若要存取型別對應設定，請在 [ **工具** ] 功能表上，選取 [ **預設專案設定**]，選取 [/Changed 從 **遷移目標版本** ] 下拉式清單中需要觀看設定的 [遷移專案類型]，然後按一下左窗格中的 [ **類型對應** ]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源類型**  
 要對應的存取資料類型。  
   
-**目標型別**  
+**目標類型**  
 指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取資料類型的目標或 SQL Azure 資料類型。  
   
 下表顯示來源與目標資料類型之間的預設對應。  
@@ -75,5 +75,4 @@ ms.locfileid: "88454300"
   
 ## <a name="see-also"></a>另請參閱  
 [對應來源和目標資料類型](mapping-source-and-target-data-types-accesstosql.md)  
-[消費者介面參考 (存取) ](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[消費者介面參考 (存取) ](./user-interface-reference-accesstosql.md)  

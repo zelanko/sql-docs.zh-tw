@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418464"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988634"
 ---
 # <a name="conversion-settings-mysqltosql"></a>轉換設定 (MySQLToSQL)
 [ **設定** ] 索引標籤可讓使用者設定節點層級設定。 此索引標籤將會出現在下列的元資料庫節點上：  
@@ -76,5 +76,4 @@ ms.locfileid: "88418464"
     3.  在 **按一下 [** 套用] 按鈕時，使用者所做的設定會儲存在串聯喜好設定檔案中。  
   
 ## <a name="see-also"></a>另請參閱  
-[專案設定 (轉換)  (MySQL 轉換成 SQL) ](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[專案設定 (轉換)  (MySQL 轉換成 SQL) ](./project-settings-conversion-mysqltosql.md)  

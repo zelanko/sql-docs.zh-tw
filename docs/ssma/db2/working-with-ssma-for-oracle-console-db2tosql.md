@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8c83a3992c66ef244e63f578725793551fb22be9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9266aa52fe59439ea91f071f134bbe5680aa5e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472485"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988461"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 主控台 (DB2ToSQL) 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您現在可以透過命令列的主控台應用程式，存取 DB2 的 Migration Assistant (SSMA) 版本。 腳本檔案會形成應用程式的輸入，以執行命令。 作為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
@@ -38,5 +38,4 @@ ms.locfileid: "88472485"
 |[針對 &#40;DB2ToSQL&#41;進行疑難排解 ](../../ssma/db2/troubleshooting-db2tosql.md)|提供有關修正遷移問題的簡短資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
-[使用 SSMA for DB2 主控台消費者入門](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
-  
+[使用 SSMA for DB2 主控台消費者入門](./getting-started-with-ssma-for-db2-console-db2tosql.md)  

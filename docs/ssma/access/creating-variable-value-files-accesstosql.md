@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320874"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985031"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL) 
 變數值檔案是一種 XML 檔案，其中包含命令的參數值 (例如，通常會在伺服器遷移之間變更的來源或目的地伺服器名稱) 。 發生大量的資料庫移轉時，會在主要腳本檔案中建立多個變數檔案來儲存每個來源伺服器的值，並在命令列中使用 **-v** 參數進行參考。 此行為有助於在多個變數檔案中，以變數值來維護一些腳本檔案中的靜態值。  
@@ -95,5 +95,4 @@ ms.locfileid: "88320874"
 操作主控台的下一個步驟是 [建立伺服器連接檔案 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[建立伺服器連接檔案 (存取) ](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
-  
+[建立伺服器連接檔案 (存取) ](./creating-the-server-connection-files-accesstosql.md)  
