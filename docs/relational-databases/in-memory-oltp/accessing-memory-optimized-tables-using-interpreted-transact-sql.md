@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d61c6e1ebb1d417ebe3f95f588a1e2b12b6b5f3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f9b8d6981d17d8ef490402fa03d51910ed270fff
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246265"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867379"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -95,11 +95,10 @@ ms.locfileid: "87246265"
   
 - 將 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) 資料庫選項設定為 [ON]。  
   
-在 [自動認可模式](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)下執行之查詢所存取的記憶體最佳化資料表不需要隔離等級資料表提示。  
+在 [自動認可模式](../../odbc/reference/develop-app/auto-commit-mode.md)下執行之查詢所存取的記憶體最佳化資料表不需要隔離等級資料表提示。  
   
 ## <a name="see-also"></a>另請參閱
 
 [記憶體內部 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
-[移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

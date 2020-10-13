@@ -12,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ee5476020cfcece9bf9168bc048f3a0f3d34b635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e437a9ab920ac7f6774fad58c5927d8d43db1fb4
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475352"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005647"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88475352"
 |狀態|**nvarchar(40)**|此資料表的複寫資料表快取狀態。|' NotReady '、' Ready '|  
   
 ## <a name="example"></a>範例
-這個範例會聯結 sys. pdw_replicated_table_cache_state 與 sys. 資料表，以抓取資料表名稱和複寫資料表快取的狀態。
+此範例會聯結 sys.pdw_replicated_table_cache_state 與 sys. 資料表，以抓取資料表名稱和複寫資料表快取的狀態。
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -41,5 +41,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>後續步驟  
- 如需 SQL 資料倉儲和平行處理資料倉儲的所有瀏覽目錄清單，請參閱 [Sql 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
+ 如需 Azure Synapse Analytics 和平行處理資料倉儲的所有目錄檢視清單，請參閱 [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
   

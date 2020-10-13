@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482481"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891128"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 
@@ -38,7 +38,7 @@ ms.locfileid: "88482481"
 
 這是因為從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始，所有的查詢最佳化工具變更都會繫結至最新的[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)；因此，計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 資料庫選項變更為最新版本時變更。 此功能會結合查詢存放區，可讓您在升級過程中對查詢效能擁有絕佳層級的控制。 
 
-如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 所導入的查詢最佳化工具變更的詳細資訊，請參閱[使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃](https://msdn.microsoft.com/library/dn673537.aspx)。
+如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 所導入的查詢最佳化工具變更的詳細資訊，請參閱[使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃](/previous-versions/dn673537(v=msdn.10))。
 
 ### <a name="steps-to-resolve"></a>解決步驟
 
@@ -67,7 +67,7 @@ ms.locfileid: "88482481"
 5.  重新撰寫查詢來使用 `DISABLE_PARAMETER_SNIFFING` 提示。 除非使用 `OPTION(RECOMPILE)`、`WITH RECOMPILE` 或 `OPTIMIZE FOR <value>`，否則完全停用參數探查，其效果與使用區域變數技巧相同。
 
 > [!TIP] 
-> 運用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 計劃分析功能來快速確認這是否是問題。 詳細資訊可從[這裡](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)取得。
+> 運用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 計劃分析功能來快速確認這是否是問題。 詳細資訊可從[這裡](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier)取得。
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 遺漏索引
 
@@ -166,8 +166,8 @@ ms.locfileid: "88482481"
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料
 
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[記憶體最佳化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[記憶體最佳化資料表](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [使用者定義的函式](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[資料表變數和資料列估計 - 第 1 部分](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[資料表變數和資料列估計 - 第 2 部分](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[資料表變數和資料列估計 - 第 1 部分](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[資料表變數和資料列估計 - 第 2 部分](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [執行計畫快取與重複使用](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

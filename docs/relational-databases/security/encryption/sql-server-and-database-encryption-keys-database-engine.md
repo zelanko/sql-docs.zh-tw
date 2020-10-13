@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279334"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866592"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "86279334"
 >  如果您遺失對上述金鑰的所有存取權，您也會遺失用這些金鑰維護安全之物件、連接和資料的存取權。 您可以還原服務主要金鑰 (如這裡所顯示的連結中所述)，或者回到原始加密系統來復原存取。 並沒有其他「捷徑」可復原存取。  
   
 ## <a name="in-this-section"></a>本節內容  
- [服務主要金鑰](../../../relational-databases/security/encryption/service-master-key.md)  
+ [服務主要金鑰]()  
  提供服務主要金鑰和其最佳作法的簡短說明。  
   
  [可延伸金鑰管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -105,5 +105,4 @@ ms.locfileid: "86279334"
  [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [加入和移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

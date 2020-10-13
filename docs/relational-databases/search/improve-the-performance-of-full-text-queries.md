@@ -11,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18cd0b40213fc14542c5ef58ee12f0ee011dd08a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783d2a0e80728f323b5b9d25048c10189df695a3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427940"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868047"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改善全文檢索查詢的效能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "88427940"
 -   若為包含選擇性關聯述詞的應用程式，當使用選擇性關聯式述詞與非選擇性全文檢索述詞的查詢撰寫成使用查詢最佳化工具時，這些查詢可能會具有最佳效能。 這樣做可讓查詢最佳化工具決定它是否可利用述詞或範圍下推來產生有效的查詢計畫。 這種方法比較簡單，而且通常會比將關聯式資料當做全文檢索資料進行索引更有效率。  
   
 ## <a name="related-resources"></a>相關資源  
- [SQL Server 2008 全文檢索搜尋：內部和增強功能](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 全文檢索搜尋：內部和增強功能](/previous-versions/sql/sql-server-2008/cc721269(v=sql.100))  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0be95e3bbdf796f8f1a888c6f5b18e7fda95f542
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110998"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867328"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ GO
 ###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> 建立資源集區和設定記憶體  
  設定記憶體最佳化資料表的記憶體時，應該依據 MIN_MEMORY_PERCENT 規劃容量，而不是依據 MAX_MEMORY_PERCENT。  如需有關 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的詳細資訊，請參閱 [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 這樣可以為記憶體最佳化資料提供更可預測的記憶體可用性，因為 MIN_MEMORY_PERCENT 會對其他資源集區造成記憶體壓力，以確保記憶體可被接受。 若要確保記憶體可用，並幫助避免記憶體不足狀況，MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值應相同。 如需以認可記憶體數量為基礎，可用於記憶體最佳化資料表的記憶體百分比，請參閱以下的 [可用記憶體最佳化資料表和索引的記憶體百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 。  
   
- 請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)，以了解有關在 VM 環境下作業的詳細資訊。  
+ 請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](/previous-versions/sql/sql-server-2016/dn529286(v=sql.130))，以了解有關在 VM 環境下作業的詳細資訊。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼會建立名為 Pool_IMOLTP 的資源集區，而且一半的記憶體可供它使用。  建立集區之後，資源管理員會重新設定為包含 Pool_IMOLTP。  
   
@@ -143,7 +143,7 @@ GO
  此時，資料庫已繫結至資源集區。  
   
 ##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
- 如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)主題，以了解詳細資訊。  
+ 如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  請參閱[最佳做法：在 VM 環境使用記憶體內部 OLTP](/previous-versions/sql/sql-server-2016/dn529286(v=sql.130))主題，以了解詳細資訊。  
   
 1.  使用 `ALTER RESOURCE POOL` 變更 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   
@@ -216,5 +216,4 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [刪除資源集區](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
-  
   

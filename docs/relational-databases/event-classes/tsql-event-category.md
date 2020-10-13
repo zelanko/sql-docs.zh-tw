@@ -15,12 +15,12 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 585e69e546489f4130e7200f819244f89620492b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3e5584fbb893543a0f0c1652a215d3bd4f363d1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494251"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867267"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件類別目錄
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,6 +41,5 @@ ms.locfileid: "88494251"
 |[XQuery 靜態類型事件類別](../../relational-databases/event-classes/xquery-static-type-event-class.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 XQuery 運算式時發生。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-SQL 參考 &#40;資料庫引擎41;](../../t-sql/transact-sql-reference-database-engine.md)  
-  
+ [Transact-SQL 參考 &#40;資料庫引擎41;](../../t-sql/language-reference.md)  
   

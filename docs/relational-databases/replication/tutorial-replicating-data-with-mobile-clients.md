@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720695"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866906"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 對於在中央伺服器與只是偶爾連線的行動用戶端之間移動資料的問題，合併式複寫是一個很好的解決方案。 您可以使用複寫精靈，輕鬆設定及管理合併式複寫拓撲。 
 
-本教學課程告訴您，如何為行動用戶端設定複寫拓撲。 如需合併式複寫的詳細資訊，請參閱[合併式複寫概觀](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)。
+本教學課程告訴您，如何為行動用戶端設定複寫拓撲。 如需合併式複寫的詳細資訊，請參閱[合併式複寫概觀](./merge/merge-replication.md)。
   
 ## <a name="what-you-will-learn"></a>學習內容  
 本教學課程會教導您如何使用合併式複寫，從中央資料庫發行資料給一或多個行動使用者，讓每一個使用者都取得獨一無二篩選的資料子集。 
@@ -48,14 +48,14 @@ ms.locfileid: "85720695"
   
 - 除 SQL Server Express 或 SQL Server Compact 之外，在訂閱者伺服器 (目的地) 安裝任何版本的 SQL Server。 在本教學課程中建立的發行集不支援 SQL Server Express 或 SQL Server Compact。 
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 有關在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。  
+- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 有關在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](../backup-restore/restore-a-database-backup-using-ssms.md)。  
  
   
 >[!NOTE]
 > - 相差兩個版本以上的 SQL Server 執行個體不支援複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫拓撲中支援的 SQL Server 版本)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](../security/authentication-access/server-level-roles.md)。  
   
   
 **完成此教學課程的估計時間：60 分鐘**  
@@ -91,7 +91,7 @@ ms.locfileid: "85720695"
    >
    > 如果您使用的組建早於 SQL Server 2017，畫面底部會出現訊息，通知您在雙向複寫中使用此資料行可能會遺失資料。 為達到本教學課程的目的，您可以忽略此訊息。 不過，除非您使用的是受支援的組建，否則不應該在生產環境中複寫此資料類型。
    > 
-   > 如需複寫 **hierarchyid** 資料類型的詳細資訊，請參閱[在複寫中使用 hierarchyid 資料行](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)。
+   > 如需複寫 **hierarchyid** 資料類型的詳細資訊，請參閱[在複寫中使用 hierarchyid 資料行](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables)。
     
   
 7. 在 [篩選資料表的資料列]  頁面上，選取 [新增]  ，然後選取 [新增篩選]  。  
@@ -281,7 +281,6 @@ ms.locfileid: "85720695"
 - [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [同步處理資料](../../relational-databases/replication/synchronize-data.md)  
 - [同步處理提取訂閱](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

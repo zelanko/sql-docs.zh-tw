@@ -14,12 +14,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce93ba3d2049315911ec7297991bf7ce416fab64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cf573478ce602b15718a54cfb71b03b243d601b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756849"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867046"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
 
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  關鍵字會緊密地對應到 SQL 追蹤事件的目前群組。  
   
 ### <a name="targets"></a>目標  
- 目標是事件取用者。 目標會處理事件 (在引發事件的執行緒上同步處理，或是在系統提供的執行緒上非同步處理)。 擴充的事件會提供幾個目標，您可適當地使用這些目標來導向事件輸出。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)＞。  
+ 目標是事件取用者。 目標會處理事件 (在引發事件的執行緒上同步處理，或是在系統提供的執行緒上非同步處理)。 擴充的事件會提供幾個目標，您可適當地使用這些目標來導向事件輸出。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))＞。  
   
 ### <a name="actions"></a>動作  
  動作是針對事件的程式設計形式的回應或回應序列。 動作會繫結至事件，而每一個事件都可以有一組獨特的動作。  
@@ -220,6 +220,5 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 擴充的事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
-  
+ [SQL Server 擴充的事件目標](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

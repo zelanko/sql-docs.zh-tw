@@ -14,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fa4511be07d5bb0e9a69d0db4515926824600cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa0e0e6c3b44e07568240d879fdb6d0829e6ffc
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717696"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868112"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
 
@@ -89,8 +89,7 @@ ms.locfileid: "85717696"
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 擴充的事件目錄資料表 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
+ [SQL Server 擴充的事件目錄資料表 &#40;Transact-SQL&#41;](../system-tables/system-tables-transact-sql.md)   
  [使用 system_health 工作階段](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
-  
   

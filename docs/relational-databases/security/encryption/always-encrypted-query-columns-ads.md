@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493816"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866701"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>搭配 Azure Data Studio 使用 Always Encrypted 查詢資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-本文描述如何使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 來查詢以 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的資料行。 您可以使用 Azure Data Studio 進行：
+本文描述如何使用 [Azure Data Studio](../../../azure-data-studio/what-is.md) 來查詢以 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 加密的資料行。 您可以使用 Azure Data Studio 進行：
 - 擷取加密資料行中儲存的加密文字值。 
 - 擷取加密資料行中儲存的純文字值。  
 - 傳送目標為加密資料行的純文字值 (例如，在 `INSERT` 或 `UPDATE` 陳述式中，以及在 `SELECT` 陳述式中作為 `WHERE` 子句的查閱參數)。 
@@ -113,7 +113,7 @@ ms.locfileid: "88493816"
 
 ## <a name="parameterization-for-always-encrypted"></a>Always Encrypted 的參數化
 
-[Always Encrypted 的參數化] 是 Azure Data Studio 18.1 和更新版本中的一個功能，可將 Transact-SQL 變數自動轉換為查詢參數 ([SqlParameter 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)的執行個體)。 這讓底層的 [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) 能夠偵測目標為加密資料行的資料，並且在將此類資料傳送至資料庫之前，先進行加密。
+[Always Encrypted 的參數化] 是 Azure Data Studio 18.1 和更新版本中的一個功能，可將 Transact-SQL 變數自動轉換為查詢參數 ([SqlParameter 類別](/dotnet/api/microsoft.data.sqlclient.sqlparameter)的執行個體)。 這讓底層的 [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) 能夠偵測目標為加密資料行的資料，並且在將此類資料傳送至資料庫之前，先進行加密。
   
 未啟用參數化時，Microsoft .NET Data Provider for SQL Server 會以非參數化的查詢傳遞您在查詢視窗中撰寫的每一個陳述式。 如果查詢包含目標為加密資料行的常值或 Transact-SQL 變數，.NET Framework Data Provider for SQL Server 就無法在將查詢傳送至資料庫之前先加以偵測並加密。 如此一來，查詢將因 (純文字的常值 Transact-SQL 變數與加密資料行之間) 類型不符而導致失敗。 例如，假設 `SSN` 資料行已加密，下列查詢將因未啟用參數化而失敗。   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio 會使用 Intellisense，來告知您哪些變數可以成功參數化，以及哪些參數化嘗試失敗 (與原因)。   
 
-在查詢視窗中，會以資訊訊息底線標示可成功參數化的變數宣告。 如果您將滑鼠暫留在以資訊訊息底線標示的宣告陳述式上，您會看到包含參數化程序結果的訊息，包括所產生 [SqlParameter 類別](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) \(英文\) 物件的主要屬性 (變數對應至：[SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)、[Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size)、[Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision)、[Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale)、[SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue))。 您也可以在 [問題] 檢視中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [問題] 檢視，請選取 [檢視] > [問題]。    
+在查詢視窗中，會以資訊訊息底線標示可成功參數化的變數宣告。 如果您將滑鼠暫留在以資訊訊息底線標示的宣告陳述式上，您會看到包含參數化程序結果的訊息，包括所產生 [SqlParameter 類別](/dotnet/api/microsoft.data.sqlclient.sqlparameter) \(英文\) 物件的主要屬性 (變數對應至：[SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype)、[Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size)、[Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision)、[Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale)、[SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue))。 您也可以在 [問題] 檢視中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [問題] 檢視，請選取 [檢視] > [問題]。    
 
 
 

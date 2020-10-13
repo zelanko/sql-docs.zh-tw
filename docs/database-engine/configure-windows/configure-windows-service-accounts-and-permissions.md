@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c3a609c9d9cdf4f01fea153fa85316920b674e88
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f02f8883b0a6f913eee65047a183d013c75b800b
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670308"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834346"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 
@@ -68,6 +68,7 @@ ms.locfileid: "91670308"
 
 |SQL Server 版本|Path|
 |-|-|
+|SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|

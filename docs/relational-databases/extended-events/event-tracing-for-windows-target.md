@@ -15,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28658f7f420976efe51d84a86123fe037965ab48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733691"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868010"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 
@@ -28,9 +28,9 @@ ms.locfileid: "85733691"
 
   使用 Windows 事件追蹤 (ETW) 當做目標之前，我們建議您最好具備 ETW 的實用知識。 ETW 追蹤會搭配擴充事件一起使用，或是當做擴充事件的事件取用者使用。 下列外部連結提供取得有關 ETW 之背景資訊的起點：  
   
--   [Windows 事件](https://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows 事件](/windows/win32/events/windows-events)  
   
--   [使用 ETW 改善偵錯和效能調整](https://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [使用 ETW 改善偵錯和效能調整](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)  
   
  ETW 目標是單一目標，但是此目標可加入至許多工作階段。 如果某個事件在許多工作階段上引發，只會在每次發生事件時，將該事件傳播至 ETW 目標一次。 在每一個處理序上，擴充事件引擎則限制為單一執行個體。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85733691"
     > [!IMPORTANT]  
     >  當第一個工作階段啟動之後，將無法變更檔案路徑。  
   
--   受控物件格式 (MOF) 檔案位於 *\<your install path>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。
+-   受控物件格式 (MOF) 檔案位於 *\<your install path>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](/windows/win32/wmisdk/managed-object-format--mof-) (管理物件格式)。
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
@@ -99,5 +99,4 @@ ADD TARGET package0.etw_classic_sync_target
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  
-  
   

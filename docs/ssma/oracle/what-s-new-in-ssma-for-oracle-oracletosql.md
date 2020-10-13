@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497961"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005748"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 的新功能 (OracleToSQL) 
 
@@ -73,7 +73,7 @@ SSMA for Oracle 的8.9 版包含下列變更：
 * 新增對基本 `ALTER TRIGGER` / `ALTER INDEX` DDL (啟用/停用等等的支援 ) 
 * 改進符合內建函數名稱的資料行轉換
 * 產生可供資料行篩選的唯一索引 `NULL`
-* 改善 Azure SQL 資料倉儲的變數宣告轉換
+* 改善 Azure Synapse Analytics 的變數宣告轉換
 * 修正專案名稱中特殊字元的問題
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
@@ -85,7 +85,7 @@ SSMA for Oracle 的8.9 版包含下列變更：
 * 改進分析子句的轉換 `OVER PARTITION`
 * 分析函數的新轉換 `LEAD`
 * 子查詢分解子句的新轉換
-* `REPLICATE`適用于 AZURE SQL 資料倉儲的新散發選項
+* `REPLICATE`Azure Synapse Analytics 的新散發選項
 * 全新的 Oracle 語法剖析器，進一步改善轉換效能
 
 ## <a name="ssma-v87"></a>SSMA v 8。7
@@ -251,7 +251,7 @@ SSMA for Oracle 的7.5 版包含下列變更：
 
 SSMA for Oracle 的7.4 版包含下列變更：
 
-* SSMA for Oracle 現在支援 Azure SQL 資料倉儲作為遷移的目標平臺。
+* SSMA for Oracle 現在支援作為遷移目標平臺的 Azure Synapse Analytics。
 
   ![[新增專案] 視窗](../media/new-project.png)
   * 支援如下圖所示的資料倉儲儲存選項：
@@ -397,7 +397,7 @@ SSMA for Oracle 的2011年7月發行版本包含下列變更：
 * 改善的資料移轉效能 `Simple` 以及 `Bulk` 記錄復原模式。
 * 已新增舊版 SSMA 所建立專案的回溯相容性支援 (v4.0 和4.2 版) 。
 * 已新增將 SSMA for Oracle v4.0 產品並存安裝 (SxS) 舊版 SSMA (v4.0 和4.2 版) 的功能。
-* 新增報告使用者自訂類型的支援 (包括子類型、 `VARRAY` 、 `NESTED TABLE` 、物件資料表和物件檢視) ，以及在 PL/SQL 區塊中使用特殊錯誤訊息的使用方式。
+* 新增報表 User-Defined 類型的支援 (包括子類型、 `VARRAY` 、 `NESTED TABLE` 、物件資料表和物件檢視) 及其在 PL/SQL 區塊中的使用方式，以及特殊的錯誤訊息。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -405,7 +405,7 @@ SSMA for Oracle 的2010年7月版本已新增：
 
 * 支援遷移至 SQL Server 2008 R2。
 * 用於命令列執行的新 SSMA 主控台應用程式。
-* 支援使用伺服器端和用戶端資料移轉引擎進行資料移轉。
+* 支援使用 Server-Side 和 Client-Side 資料移轉引擎進行資料移轉。
 * 在資料移轉中支援「自訂 SELECT」語句。
 * 支援從 Oracle 11g R2 進行遷移。
 

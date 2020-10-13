@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a607c3e5d379bc935a94326a33b5fc2a9e1b3b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7703c4ebe7c05dd266866170bf499f3d370ee6c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88405814"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867128"
 ---
 # <a name="define-an-article"></a>定義發行項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88405814"
 -   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? 、'、\、/、<、>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
   
 ##  <a name="security"></a><a name="Security"></a> Security  
- 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+ 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](/previous-versions/aa719848(v=vs.71)) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<Publication>] 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。  
@@ -160,5 +160,4 @@ ms.locfileid: "88405814"
  [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)   
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
   

@@ -19,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af77dc8f8ac53b650b0c04de3ffc46e00df97483
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670371"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006521"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -46,7 +46,7 @@ sp_droprolemember [ @rolename = ] 'role' ,
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL 資料倉儲和平行處理資料倉儲的語法
+### <a name="syntax-for-both-azure-synapse-analytics-and-parallel-data-warehouse"></a>Azure Synapse Analytics 和平行處理資料倉儲的語法
 
 ```syntaxsql  
 sp_droprolemember 'role' ,  

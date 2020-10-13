@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d40e02cfccc84e910650dbac4dbeab0b6edd8353
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f86e9cf97c82ead3059d846f9709aa7a0c87d99
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498457"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810809"
 ---
 # <a name="schedule-traces"></a>排程追蹤
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,6 +47,5 @@ ms.locfileid: "88498457"
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [自動化管理工作 &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
-  
+ [自動化管理工作 &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
   

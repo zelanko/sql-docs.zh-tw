@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36eef2c38d708b3634d669830e34f46a8480e138
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718081"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809704"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "85718081"
   
      在 *「線上檔案還原」* (Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
   
-     如需線上頁面和檔案還原支援的資訊，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 如需線上還原的詳細資訊，請參閱[線上還原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
+     如需線上頁面和檔案還原支援的資訊，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。 如需線上還原的詳細資訊，請參閱[線上還原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
   
     > [!TIP]  
     >  如果您想要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，先執行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 陳述式來使資料庫離線：ALTER DATABASE *database_name* SET OFFLINE。  
@@ -141,5 +141,4 @@ RESTORE LOG database_name FROM <tail_log_backup>
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

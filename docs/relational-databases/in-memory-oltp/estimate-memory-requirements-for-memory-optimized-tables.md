@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93cbaac67010b89f3aca07abb11b7e59459cb4c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c54b396ea05fd78abfe7c05026d23e37a0f18585
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537049"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866955"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "89537049"
 
 不論是建立新的記憶體最佳化資料表，或是將現有的磁碟資料表移轉至 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表，請務必適當地估計每個資料表的記憶體需求，以便您可以佈建具有足夠記憶體的伺服器。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
   
-如果您想從磁碟資料表移轉至記憶體最佳化資料表，請在進行本主題之前，先參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 主題，以取得最適合移轉之資料表的指引。 [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 底下的所有主題，提供從磁碟資料表移轉至記憶體最佳化資料表的指引。 
+如果您想從磁碟資料表移轉至記憶體最佳化資料表，請在進行本主題之前，先參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 主題，以取得最適合移轉之資料表的指引。 [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) 底下的所有主題，提供從磁碟資料表移轉至記憶體最佳化資料表的指引。 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>估計記憶體需求的基本指引
 
@@ -132,7 +132,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 如果您想建立新的資料表，則需要估計陣列大小，或在部署前從測試收集資料。  
   
-如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱 [雜湊索引](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
+如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱 [雜湊索引](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130))。  
   
 #### <a name="setting-the-hash-index-array-size"></a>設定雜湊索引陣列大小  
   
@@ -194,5 +194,4 @@ SELECT * FRON t_hk
   
 ## <a name="see-also"></a>另請參閱
 
-[移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

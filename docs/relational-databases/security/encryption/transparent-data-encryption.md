@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227046"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866637"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 
@@ -51,12 +51,12 @@ TDE 會保護待用資料，亦即資料檔和記錄檔。 這讓您必須遵循
 >
 >**相關主題：**
 >
-> - [Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
-> - [開始使用 SQL 資料倉儲中的透明資料加密 (TDE)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
+> - [Azure SQL Database 的透明資料加密](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
+> - [開始使用 SQL 資料倉儲中的透明資料加密 (TDE)](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [將 TDE 保護的資料庫移至另一個 SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [使用 EKM 在 SQL Server 上啟用 TDE](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
-> - [SQL Server 安全性部落格上的 TDE 常見問題集](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
+> - [SQL Server 安全性部落格上的 TDE 常見問題集](/archive/blogs/sqlsecurity/feature-spotlight-transparent-data-encryption-tde)
 
 ## <a name="about-tde"></a>關於 TDE
 
@@ -64,7 +64,7 @@ TDE 會保護待用資料，亦即資料檔和記錄檔。 這讓您必須遵循
 
 ### <a name="information-applicable-to-sssds"></a>適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的資訊
 
-搭配使用 TDE 和 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 會自動建立儲存在 master 資料庫中的伺服器層級憑證。 若要移動 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 資料庫，無需為移動作業解密資料庫。 如需搭配使用 TDE 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的詳細資訊，請參閱[使用 Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
+搭配使用 TDE 和 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 會自動建立儲存在 master 資料庫中的伺服器層級憑證。 若要移動 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 資料庫，無需為移動作業解密資料庫。 如需搭配使用 TDE 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的詳細資訊，請參閱[使用 Azure SQL Database 的透明資料加密](/azure/azure-sql/database/transparent-data-encryption-tde-overview)。
 
 ### <a name="information-applicable-to-ssnoversion"></a>適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資訊
 
@@ -324,12 +324,12 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 ## <a name="related-content"></a>相關內容
 
-[Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-[開始使用 SQL 資料倉儲中的透明資料加密 (TDE)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
+[Azure SQL Database 的透明資料加密](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
+[開始使用 SQL 資料倉儲中的透明資料加密 (TDE)](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server 加密](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server 和資料庫加密金鑰 (資料庫引擎)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
 ## <a name="see-also"></a>另請參閱
 
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)  
+[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 205f1f3bbb4268545848903aa8b71915f746c601
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74c27195e3adbb39714a2df23ef041615262ffc2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882169"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867850"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上啟用 TDE
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -159,6 +159,5 @@ ms.locfileid: "85882169"
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-  
+ [Azure SQL Database 的透明資料加密](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
   

@@ -15,17 +15,17 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723275"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867185"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估 In-Memory OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估 In-Memory OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](/previous-versions/dn673538(v=msdn.10))。  
   
  直接針對生產資料庫，或是具有類似生產工作負載之作用中工作負載的測試資料庫，執行交易效能分析報表。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85723275"
     > [!IMPORTANT]  
     >  資料庫系統的效能取決於各種不同的因素，並不是所有因素都可由交易效能收集器來觀察和測量。 因此，交易效能分析報表不保證實際的效能增益將會符合預測 (如果進行了任何預測)。  
   
- 若您在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或[下載 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 時，選取 [管理工具 - 基本] 或 [管理工具 - 進階]，則會安裝交易效能分析報表和移轉建議程式作為 SQL Server Management Studio (SSMS) 的一部分。    
+ 若您在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或[下載 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 時，選取 [管理工具 - 基本] 或 [管理工具 - 進階]，則會安裝交易效能分析報表和移轉建議程式作為 SQL Server Management Studio (SSMS) 的一部分。    
   
 ## <a name="transaction-performance-analysis-reports"></a>交易效能分析報表  
  若要在**物件總管**中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]、[標準報表] 和 [交易效能分析概觀]。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
@@ -174,6 +174,5 @@ ms.locfileid: "85723275"
     -   <object_name> 的移轉檢查清單報表，是 folder_path2 所指定位置中的唯一報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.index_columns (Transact-SQL)
-title: sys. index_columns (Transact-sql) |Microsoft Docs
+title: sys.index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccbbac037400f0addda79c3fc61adfb0b971f3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e77661ec4ddd9a53a5279dd433d20ab58e4263d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546794"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006529"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "89546794"
 |**key_ordinal**|**tinyint**|索引鍵資料行組中的序數 (以 1 為基底)。<br /><br /> 0 = 不是索引鍵資料行，或是 XML 索引、資料行存放區索引或空間索引。<br /><br /> 注意： XML 或空間索引不可以是索引鍵，因為基礎資料行是無法比較的，也就是說，它們的值無法排序。|  
 |**partition_ordinal**|**tinyint**|分割區資料行組中的序數 (以 1 為基底)。 叢集資料行存放區索引最多可以有 1 個分割區資料行。<br /><br /> 0 = 不是分割區資料行。|  
 |**is_descending_key**|**bit**|1 = 索引鍵資料行是以遞減方式排序。<br /><br /> 0 = 索引鍵資料行是以遞增方式排序，或者資料行是資料行存放區索引或雜湊索引的一部分。|  
-|**is_included_column**|**bit**|1 = 資料行是利用 CREATE INDEX INCLUDE 子句加入索引中的非索引鍵資料行，或者資料行是資料行存放區索引的一部分。<br /><br /> 0 = 資料行並未加入。<br /><br /> 因為資料行是叢集索引鍵的一部分，所以不會列在 **sys. index_columns**中，因此會隱含地加入資料行。<br /><br /> 因為是分割區資料行而隱含新增的資料行會當做 0 傳回。| 
-|**column_store_order_ordinal**</br> 適用于： Azure SQL 資料倉儲 (預覽) |**tinyint**|序數 (以1為基礎) 在排序的叢集資料行存放區索引中的 order 資料行集合內。|
+|**is_included_column**|**bit**|1 = 資料行是利用 CREATE INDEX INCLUDE 子句加入索引中的非索引鍵資料行，或者資料行是資料行存放區索引的一部分。<br /><br /> 0 = 資料行並未加入。<br /><br /> 因為資料行是叢集索引鍵的一部分，所以不會列在 **sys.index_columns**中。<br /><br /> 因為是分割區資料行而隱含新增的資料行會當做 0 傳回。| 
+|**column_store_order_ordinal**</br> 適用于： Azure Synapse Analytics (預覽) |**tinyint**|序數 (以1為基礎) 在排序的叢集資料行存放區索引中的 order 資料行集合內。|
   
 ## <a name="permissions"></a>權限
 

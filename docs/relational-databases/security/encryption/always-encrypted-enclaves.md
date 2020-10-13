@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435445"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867246"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 > [!IMPORTANT]
 > Microsoft 強烈建議先為您的資料庫啟用[高速資料庫復原 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，**再**使用隨機加密進行加密，以在啟用記憶體保護區的資料行上建立第一個索引。
 
-若透過[傳統式資料庫復原處理序](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)) 復原對索引進行的變更，SQL Server 必須等待應用程式將資料行的資料行加密金鑰提供給記憶體保護區，這可能會花費很長的時間。 ADR 可大幅減少因為無法在記憶體保護區內的快取中取得資料行加密金鑰，而需延遲的復原作業數。 因此，它可以透過將封鎖新交易的機會降至最低，來大幅增加資料庫的可用性。 啟用 ADR 後，雖然 SQL Server 仍需要資料行加密金鑰來完成清理舊的資料版本，但它會以背景工作的形式進行，不會影響資料庫的可用性或使用者交易。 但是，您仍然可能會在錯誤記錄中看到錯誤訊息，指出因缺少資料行加密金鑰而無法完成清理作業。
+若透過[傳統式資料庫復原處理序](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)) 復原對索引進行的變更，SQL Server 必須等待應用程式將資料行的資料行加密金鑰提供給記憶體保護區，這可能會花費很長的時間。 ADR 可大幅減少因為無法在記憶體保護區內的快取中取得資料行加密金鑰，而需延遲的復原作業數。 因此，它可以透過將封鎖新交易的機會降至最低，來大幅增加資料庫的可用性。 啟用 ADR 後，雖然 SQL Server 仍需要資料行加密金鑰來完成清理舊的資料版本，但它會以背景工作的形式進行，不會影響資料庫的可用性或使用者交易。 但是，您仍然可能會在錯誤記錄中看到錯誤訊息，指出因缺少資料行加密金鑰而無法完成清理作業。
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>使用決定性加密啟用記憶體保護區資料行上的索引
 
@@ -187,5 +187,3 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 - [使用具有安全記憶體保護區的 Always Encrypted 查詢資料行](always-encrypted-enclaves-query-columns.md)
 - [為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [使用具有安全記憶體保護區的 Always Encrypted 在資料行上建立及使用索引](always-encrypted-enclaves-create-use-indexes.md)
-
-

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13e6fd165c65aa8aeaed4394ec91a17c82b72097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482232"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867659"
 ---
 # <a name="provision-enclave-enabled-keys"></a>佈建已啟用記憶體保護區的金鑰
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88482232"
 
 一般而言，[使用 PowerShell 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)中所描述 PowerShell 的 Always Encrypted 金鑰佈建工作流程 (搭配或不搭配角色隔離)，其也適用於已啟用記憶體保護區的金鑰。 本節描述已啟用記憶體保護區的金鑰特定詳細資料。
 
-SqlServer PowerShell 模組會使用 `-AllowEnclaveComputations` 參數延伸 [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 和 [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) Cmdlet，允許您在佈建流程期間指定已啟用記憶體保護區的資料行主要金鑰。 其中任何一個 Cmdlet 都會建立本機物件，包含資料行主要金鑰的屬性 (儲存在 Azure Key Vault 或 Windows 憑證存放區中)。 若進行指定，`-AllowEnclaveComputations` 屬性便會在本機物件中將金鑰標記為已啟用記憶體保護區。 這也會使 Cmdlet 存取參考的資料行主要金鑰 (位於 Azure Key Vault 或 Windows 憑證存放區中)，以對金鑰屬性進行數位簽署。 在您為已啟用記憶體保護區資料行的新主要金鑰建立設定物件後，您便可以在後續引動 [**New-SqlColumnMasterKey**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcolumnmasterkey) Cmdlet 時使用該金鑰，來建立描述資料庫中新金鑰的中繼資料物件。
+SqlServer PowerShell 模組會使用 `-AllowEnclaveComputations` 參數延伸 [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 和 [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) Cmdlet，允許您在佈建流程期間指定已啟用記憶體保護區的資料行主要金鑰。 其中任何一個 Cmdlet 都會建立本機物件，包含資料行主要金鑰的屬性 (儲存在 Azure Key Vault 或 Windows 憑證存放區中)。 若進行指定，`-AllowEnclaveComputations` 屬性便會在本機物件中將金鑰標記為已啟用記憶體保護區。 這也會使 Cmdlet 存取參考的資料行主要金鑰 (位於 Azure Key Vault 或 Windows 憑證存放區中)，以對金鑰屬性進行數位簽署。 在您為已啟用記憶體保護區資料行的新主要金鑰建立設定物件後，您便可以在後續引動 [**New-SqlColumnMasterKey**](/powershell/module/sqlserver/new-sqlcolumnmasterkey) Cmdlet 時使用該金鑰，來建立描述資料庫中新金鑰的中繼資料物件。
 
 佈建已啟用記憶體保護區資料行加密金鑰的過程，與佈建未啟用記憶體保護區資料行加密金鑰的過程沒有任何不同。 您只需要確認用來加密新資料行加密金鑰的資料行主要金鑰已啟用記憶體保護區。
 
@@ -76,7 +76,7 @@ SqlServer PowerShell 模組會使用 `-AllowEnclaveComputations` 參數延伸 [*
 > SqlServer PowerShell 模組目前不支援佈建儲存在硬體安全性模組 (使用 CNG 或 CAPI) 中已啟用記憶體保護區的金鑰。
 
 ### <a name="example---provision-enclave-enabled-keys-using-windows-certificate-store"></a>範例 - 使用 Windows 憑證存放區佈建已啟用記憶體保護區的金鑰
-以下端對端範例會示範如何佈建已啟用記憶體保護區的金鑰，並儲存 Windows 憑證存放區中的資料行主要金鑰。 指令碼是以[不使用角色隔離的 Windows 憑證存放區 (範例)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example) 中範例為基礎。 值得注意的是在 [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) Cmdlet 中使用了 `-AllowEnclaveComputations` 參數；此為兩個範例中工作流程間的唯一差異。
+以下端對端範例會示範如何佈建已啟用記憶體保護區的金鑰，並儲存 Windows 憑證存放區中的資料行主要金鑰。 指令碼是以[不使用角色隔離的 Windows 憑證存放區 (範例)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example) 中範例為基礎。 值得注意的是在 [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) Cmdlet 中使用了 `-AllowEnclaveComputations` 參數；此為兩個範例中工作流程間的唯一差異。
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -107,8 +107,8 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ### <a name="example---provision-enclave-enabled-keys-using-azure-key-vault"></a>範例 - 使用 Azure Key Vault 佈建已啟用記憶體保護區的金鑰
 以下端對端範例會示範如何佈建啟用記憶體保護區的金鑰，並將資料行主要金鑰儲存在 Azure Key Vault 中。 指令碼是以[不使用角色隔離的 Azure Key Vault (範例)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example) 中範例為基礎。 請務必注意已啟用記憶體保護區金鑰與未啟用記憶體保護區金鑰工作流程間的兩項差異。 
-- 在以下指令碼中，[**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 使用 `-AllowEnclaveComputations` 參數來讓新資料行主要金鑰啟用記憶體保護區。 
-- 以下指令碼會在呼叫 [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) Cmdlet 前，呼叫 [**Add-SqlAzureAuthenticationContext**](https://docs.microsoft.com/powershell/module/sqlserver/add-sqlazureauthenticationcontext) Cmdlet 來登入 Azure。 先登入 Azure 是必要的，因為 `-AllowEnclaveComputations` 參數會讓 **New-SqlAzureKeyVaultColumnMasterKeySettings** 呼叫 Azure Key Vault 來簽署資料行主要金鑰的屬性。
+- 在以下指令碼中，[**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) 使用 `-AllowEnclaveComputations` 參數來讓新資料行主要金鑰啟用記憶體保護區。 
+- 以下指令碼會在呼叫 [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) Cmdlet 前，呼叫 [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) Cmdlet 來登入 Azure。 先登入 Azure 是必要的，因為 `-AllowEnclaveComputations` 參數會讓 **New-SqlAzureKeyVaultColumnMasterKeySettings** 呼叫 Azure Key Vault 來簽署資料行主要金鑰的屬性。
 
 ```powershell
 # Create a column master key in Azure Key Vault.
@@ -156,4 +156,4 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ## <a name="see-also"></a>另請參閱  
 - [教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](always-encrypted-enclaves-manage-keys.md)
-- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

@@ -12,12 +12,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5711115843a32b18a1a16f50cd8eaf79fefb2f63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537077"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868023"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體內部 OLTP 的效能改善
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ go
   
 2.  如果您決定建立新的測試資料庫，請使用 [Azure 入口網站](https://portal.azure.com) 來建立名為 **imoltp**的資料庫。  
   
- 如果您想要使用 Azure 入口網站進行這項作業的指示，請參閱 [開始使用 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
+ 如果您想要使用 Azure 入口網站進行這項作業的指示，請參閱 [開始使用 Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart)。  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>步驟 2:建立記憶體最佳化資料表和 NCSProc  
  此步驟建立記憶體最佳化資料表和原生編譯的預存程序 (NCSProc)。 執行下列動作：  
@@ -198,5 +198,4 @@ go
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

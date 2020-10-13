@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834759"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869308"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85834759"
 在還原每個記錄備份時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會重新套用記錄中的所有修改，以向前復原所有交易。 在還原最後一個記錄備份後，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 接著會使用記錄資訊來復原在該點尚未完成的所有交易。 如需詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="supporting-transactional-replication"></a>支援異動複寫
-「記錄讀取器代理程式」會監視設定異動複寫的各資料庫交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。 如需詳細資訊，請參閱 [異動複寫的運作方式](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))。
+「記錄讀取器代理程式」會監視設定異動複寫的各資料庫交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。 如需詳細資訊，請參閱 [異動複寫的運作方式](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支援高可用性和災害復原解決方案
 待命伺服器方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、資料庫鏡像和記錄傳送都是高度依賴交易記錄。 
@@ -192,5 +192,4 @@ ms.locfileid: "85834759"
 [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

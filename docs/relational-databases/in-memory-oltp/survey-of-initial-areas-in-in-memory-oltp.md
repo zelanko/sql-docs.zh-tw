@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d150330a700b8580f561c4459d50ceab355eb8de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942892"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866677"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 
@@ -72,7 +72,7 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 有兩個主要案例︰  
   
 - 「批次作業分析」 指的是在營業時間後或在具有交易資料複本的次要硬體上執行的彙總程序。  
-  - [Azure SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 也與批次作業分析有關。  
+  - [Azure SQL 資料倉儲](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 也與批次作業分析有關。  
 - 「即時作業分析」 指的是在營業時間內以及在用於交易工作量的主要硬體上執行的彙總程序。  
   
   
@@ -93,24 +93,24 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 #### <a name="real-time-operational-analytics"></a>即時作業分析
 
 1. [即時作業分析使用記憶體內部技術](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [即時作業分析 - 概覽非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [即時作業分析：在 SQL Server 2016 中使用非叢集資料行存放區索引 (NCCI) 的簡單範例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/) \(英文\)
-4. [即時作業分析：SQL Server 2016 中的 DML 作業與非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/) \(英文\)
-5. [即時作業分析：經過篩選的非叢集資料行存放區索引 (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/) \(英文\)
-6. [即時作業分析：非叢集資料行存放區索引 (NCCI) 的壓縮延遲選項](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/) \(英文\)
-7. [即時作業分析：使用 NCCI 的壓縮延遲選項與效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/) \(英文\)
-8. [即時作業分析：記憶體最佳化資料表與資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/) \(英文\)
+2. [即時作業分析 - 概覽非叢集資料行存放區索引 (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)
+3. [即時作業分析：在 SQL Server 2016 中使用非叢集資料行存放區索引 (NCCI) 的簡單範例](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci) \(英文\)
+4. [即時作業分析：SQL Server 2016 中的 DML 作業與非叢集資料行存放區索引 (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016) \(英文\)
+5. [即時作業分析：經過篩選的非叢集資料行存放區索引 (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci) \(英文\)
+6. [即時作業分析：非叢集資料行存放區索引 (NCCI) 的壓縮延遲選項](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci) \(英文\)
+7. [即時作業分析：使用 NCCI 的壓縮延遲選項與效能](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance) \(英文\)
+8. [即時作業分析：記憶體最佳化資料表與資料行存放區索引](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index) \(英文\)
 
 #### <a name="defragment-a-columnstore-index"></a>重組資料行存放區索引
 
-1. [使用 REORGANIZE 命令的資料行存放區索引磁碟重組](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)
-2. [REORGANIZE 的資料行存放區索引合併原則](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+1. [使用 REORGANIZE 命令的資料行存放區索引磁碟重組](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [REORGANIZE 的資料行存放區索引合併原則](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>資料大量匯入
 
-1. [叢集資料行存放區：大量載入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/) \(英文\)
-2. [叢集資料行存放區索引：資料載入最佳化 - 最低限度記錄](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/) \(英文\)
-3. [叢集資料行存放區索引：資料載入最佳化 - 平行大量匯入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/) \(英文\)
+1. [叢集資料行存放區：大量載入](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data) \(英文\)
+2. [叢集資料行存放區索引：資料載入最佳化 - 最低限度記錄](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging) \(英文\)
+3. [叢集資料行存放區索引：資料載入最佳化 - 平行大量匯入](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import) \(英文\)
 
 
 
@@ -128,7 +128,7 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 CREATE TABLE 陳述式上的 T-SQL 關鍵字 MEMORY_OPTIMIZED 是建立資料表使其存在於使用中的記憶體上而非磁碟上的方式。  
   
   
-[記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 會在使用中記憶體中有一個代表它自己的表示方式，並在磁碟中有第二個表示方式副本。  
+[記憶體最佳化資料表](./sample-database-for-in-memory-oltp.md) 會在使用中記憶體中有一個代表它自己的表示方式，並在磁碟中有第二個表示方式副本。  
   
 - 磁碟副本是在伺服器或資料庫關機然後重新啟動之後用於例行復原。 您和您的程式碼完全看不到這個記憶體加磁碟雙重性。  
   
@@ -144,14 +144,14 @@ CREATE PROCEDURE 陳述式上的 T-SQL 關鍵字 NATIVE_COMPILATION 是建立原
   
 有三種類型的原生編譯模組：  
   
-- [原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+- [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)。  
 - 原生編譯的使用者定義函數 (UDF)，也就是純量。  
 - 原生編譯的觸發程序。  
   
   
 #### <a name="availability-in-azure-sql-database"></a>Azure SQL Database 中的可用性  
   
-記憶體內部 OLTP 和資料行存放區可在 Azure SQL Database 中使用。 如需詳細資訊，請參閱[在 SQL Database 中使用記憶體內部技術最佳化效能](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)。
+記憶體內部 OLTP 和資料行存放區可在 Azure SQL Database 中使用。 如需詳細資訊，請參閱[在 SQL Database 中使用記憶體內部技術最佳化效能](/azure/sql-database/sql-database-in-memory)。
   
   
 <a name="ensure-compatibility-level-gteq-130-99c"></a>  
@@ -452,7 +452,7 @@ PRINT @mesg;
 - 原生編譯的觸發程序 (原生觸發程序)。  
   - 記憶體最佳化資料表中只允許使用原生編譯的觸發程序。  
 - 原生編譯的 [資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
-  - [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
+  - [使用記憶體最佳化提升暫存資料表與資料表變數效能](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)  
   
 原生編譯使用者定義函數 (UDF) 的執行速度比解譯的 UDF 還要快。 以下是使用 UDF 時所需考慮的數個事項：  
   
@@ -463,7 +463,7 @@ PRINT @mesg;
   
 如需原生 UDF 效能的測試資料和說明，請參閱︰  
   
-  - [在 SQL Server 2016 中使用原生編譯的 UDF 來降低 RBAR 影響](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
+  - [在 SQL Server 2016 中使用原生編譯的 UDF 來降低 RBAR 影響](/archive/blogs/sqlcat/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016)  
   - [原生編譯使用者定義函式](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)部落格文章，作者 Gail Shaw，日期為 2016 年 1 月。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
@@ -472,11 +472,11 @@ PRINT @mesg;
   
 請參閱下列其他討論記憶體最佳化資料表特殊考量的文章：  
   
-- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   - [判斷是否應將資料表或預存程序移植至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio 中的交易效能分析報告可協助您評估記憶體內部 OLTP 是否能改善您資料庫應用程式的效能。  
   - 請使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 協助您將磁碟資料庫資料表移轉至記憶體內部 OLTP。   
-- [備份、還原及復原記憶體最佳化資料表](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [備份、還原及復原記憶體最佳化資料表](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   - 記憶體最佳化資料表所使用的儲存空間可能會遠超過它在記憶體中的大小，而且會影響資料庫備份的大小。  
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 包含 T-SQL 中記憶體最佳化資料表交易的重試邏輯相關資訊。  
@@ -490,7 +490,7 @@ PRINT @mesg;
 
 下文及其在目錄 (TOC) 中的分支文件，會詳細說明原生編譯的預存程序。
 
-- [原生編譯的預存程序](natively-compiled-stored-procedures.md)
+- [原生編譯的預存程序](./a-guide-to-query-processing-for-memory-optimized-tables.md)
   
 <a name="related-links-43f"></a>  
   
@@ -501,4 +501,4 @@ PRINT @mesg;
 下列文章提供程式碼，示範您可以使用記憶體內部 OLTP 達到的效能提升︰  
   
 - [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)提供一個展示較大潛在效能提升的小規模示範。  
-- [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。  
+- [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。

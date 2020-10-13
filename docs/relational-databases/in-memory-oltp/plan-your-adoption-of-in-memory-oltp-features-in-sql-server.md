@@ -12,12 +12,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722406"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867095"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85722406"
 
 下列小節將討論您計劃採用及實作記憶體內部功能時，您必須考慮的因素。 許多說明資訊位於︰
 
-- [使用記憶體內部 OLTP 改善 Azure SQL Database 中的應用程式效能](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [使用記憶體內部 OLTP 改善 Azure SQL Database 中的應用程式效能](/azure/azure-sql/in-memory-oltp-configure)
 
 
 
@@ -42,7 +42,7 @@ ms.locfileid: "85722406"
 
 - [使用記憶體最佳化資料表的需求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [SQL Database 定價層建議](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [SQL Database 定價層建議](/azure/azure-sql/database/service-tiers-vcore)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 預測使用中的記憶體數量
@@ -59,8 +59,8 @@ ms.locfileid: "85722406"
 
 對於裝載於 Azure SQL Database 雲端服務的資料庫，您所選的服務層會影響資料庫允許使用的使用中記憶體數量。 您應該規劃使用警示來監視資料庫的記憶體使用量。 如需詳細資料，請參閱：
 
-- 檢閱您的[定價層](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)適用的記憶體內部 OLTP 儲存體限制
-- [監視記憶體內部 OLTP 儲存體](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- 檢閱您的[定價層](/azure/sql-database/sql-database-purchase-models)適用的記憶體內部 OLTP 儲存體限制
+- [監視記憶體內部 OLTP 儲存體](/azure/azure-sql/in-memory-oltp-monitor-space)
 
 #### <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
 
@@ -261,7 +261,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 在 Transact-SQL 模組使用不受支援功能的情況下，如需將其移轉至原生編譯的考量，請參閱：
 
-- [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 除了 Transact-SQL 特定項目上的限制，針對原生編譯的 T-SQL 模組所支援的查詢運算子也有一些限制。 由於這些限制，原生編譯的預存程序並不適用於處理大型資料集的分析查詢。
 
@@ -297,12 +297,10 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 您可以讓您的 Transact-SQL 指令碼更能應付可能的交易錯誤，方法是在指令碼新增「重試邏輯」。 在 UPDATE 和 DELETE 呼叫很頻繁時，或是另一個資料表中的外部索引鍵參考了記憶體最佳化的資料表時，重試邏輯更可能有幫助。 如需詳細資料，請參閱：
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/) (經記憶體最佳化資料表的交易相依性限制 - 錯誤 41839)
+- [Transaction dependency limits with memory optimized tables - Error 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839) (經記憶體最佳化資料表的交易相依性限制 - 錯誤 41839)
 
 
 
 ## <a name="related-links"></a>相關連結
 
 - [In-Memory OLTP (記憶體中最佳化)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-

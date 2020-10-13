@@ -1,7 +1,7 @@
 ---
 description: 'sp_pdw_remove_network_credentials (SQL 資料倉儲) '
 title: sp_pdw_remove_network_credentials
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 548779915a1d3a1753a99b16ac95969c755cbb19
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 4c65a7c67dde39e9a382180f0e01e2bf06cbbee3
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988774"
+ms.locfileid: "92005783"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL 資料倉儲) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

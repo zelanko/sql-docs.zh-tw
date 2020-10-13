@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8921009e0c16b799da40940ead5ef49643538b6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001169"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866668"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>準備資料以進行大量匯出或匯入
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86001169"
   
      若要從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro 或 Visual FoxPro 資料表 (.dbf) 檔案或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作表 (.xls) 檔案大量匯入資料，您必須將該資料轉換成符合前述限制的 CSV 檔案。 副檔名通常為 .csv。 然後，您就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業中，將此 .csv 檔案當做資料檔使用。  
   
-     在 32 位元系統 (SQL Server 2014 和以下版本) 上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入 ](../../t-sql/functions/openrowset-transact-sql.md) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  針對 CSV 資料，schema.ini 檔案中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Text IISAM 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等。)此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱[初始化文字資料來源驅動程式](https://msdn.microsoft.com/library/office/ff834391.aspx)、[如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)、[如何：使用 Jet OLE DB Provider 4.0 連線到 ISAM 資料庫 ](https://go.microsoft.com/fwlink/?LinkId=128505)，以及[如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔](https://go.microsoft.com/fwlink/?LinkId=128501)。  
+     在 32 位元系統 (SQL Server 2014 和以下版本) 上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入 ](../../t-sql/functions/openrowset-transact-sql.md) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  針對 CSV 資料，schema.ini 檔案中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Text IISAM 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等。)此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱[初始化文字資料來源驅動程式](/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver)、[如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)、[如何：使用 Jet OLE DB Provider 4.0 連線到 ISAM 資料庫 ](https://go.microsoft.com/fwlink/?LinkId=128505)，以及[如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔](https://go.microsoft.com/fwlink/?LinkId=128501)。  
   
  此外，將資料從資料檔大量匯入到資料表中需要下列：  
   
@@ -97,5 +97,4 @@ ms.locfileid: "86001169"
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [使用字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   
  [使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
-  
   

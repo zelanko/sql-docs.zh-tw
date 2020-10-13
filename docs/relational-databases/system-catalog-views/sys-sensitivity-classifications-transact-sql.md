@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809344"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006005"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91809344"
 下列範例會傳回資料表，其中列出資料庫中每個已分類資料行的資料表名稱、資料行名稱、標籤、標籤識別碼、資訊類型、資訊類型識別碼、排名和順位描述。
 
 > [!NOTE]
-> 標籤是 Azure SQL 資料倉儲的關鍵字。
+> 標籤是 Azure Synapse Analytics 的關鍵字。
 
 ```sql
 SELECT

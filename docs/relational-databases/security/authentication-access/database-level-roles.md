@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624855"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867425"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -97,7 +97,7 @@ ms.locfileid: "91624855"
 |**loginmanager** | 可以建立及刪除虛擬 master 資料庫的登入。|
 
 > [!NOTE]
-> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Azure Synapse 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取權](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
+> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 Azure Synapse 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取權](/azure/azure-sql/database/logins-create-manage)。 
 
 某些資料庫角色不適用於 Azure SQL 或 Synapse SQL：
 - **db_backupoperator** 不適用於 Azure SQL 資料庫 (非受控執行個體) 與 Synapse SQL 無伺服器集區，因為無法使用備份和還原 T-SQL 命令。
@@ -153,5 +153,4 @@ ms.locfileid: "91624855"
  [保護 SQL Server 的安全](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80c8c535c5463a6639c752a68e20fd95c54899b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bcb047dc1d998eb797a3bca7b6d09699f8585d2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729241"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867541"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
 
@@ -56,7 +56,7 @@ ms.locfileid: "85729241"
 |---------------------------|---------|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services 服務 &#40;SSIS 服務&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|設定要搭配使用的防火牆 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[設定 Windows 防火牆以允許 Analysis Services 存取](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|設定要搭配使用的防火牆 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[設定 Windows 防火牆以允許 Analysis Services 存取](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |開啟防火牆的特定通訊埠以啟用存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |使用通道繫結與服務繫結，設定驗證擴充保護的支援|[使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |
@@ -144,7 +144,7 @@ Windows Defender 應用程式控制 (WDAC) 會防止未經授權的程式碼執�
   
 |如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|連接、設定與控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|連接、設定與控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
 |從命令提示字元連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並執行查詢|[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)|  
 |網路組態和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)|  
 |使用以原則為基礎的管理來啟用及停用功能|[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -165,8 +165,7 @@ Windows Defender 應用程式控制 (WDAC) 會防止未經授權的程式碼執�
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 2012 安全性最佳做法 - 作業和系統管理工作](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
-[SQL Server 安全性部落格](https://blogs.msdn.microsoft.com/sqlsecurity/)  
-[安全性最佳做法和標籤安全性白皮書](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[SQL Server 安全性部落格](/archive/blogs/sqlsecurity/)  
+[安全性最佳做法和標籤安全性白皮書](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [資料列層級安全性](../../relational-databases/security/row-level-security.md)   
 [保護 SQL Server 智慧財產權](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  

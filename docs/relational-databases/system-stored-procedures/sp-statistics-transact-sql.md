@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd7e49443d6166b8a7da809b0b2e96fd2ddb927f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810749"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005958"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91810749"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
      [ , [ @table_owner = ] 'owner' ]   
@@ -86,7 +86,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- None  
+ 無  
   
 ## <a name="remarks"></a>備註  
  結果集中的索引會依資料行 **NON_UNIQUE**、 **TYPE**、 **INDEX_NAME**和 **SEQ_IN_INDEX**以遞增順序顯示。  

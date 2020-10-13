@@ -14,12 +14,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d80d0e1deee504d4dd5a2d8ce49303a799f66fb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c0c573d3271346e8e42fa0fb1a06fba0b20a136
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790846"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866789"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用擴充事件監視系統活動
 
@@ -125,6 +125,5 @@ ms.locfileid: "85790846"
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [擴充的事件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [擴充的事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
-  
+ [SQL Server 擴充的事件目標](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

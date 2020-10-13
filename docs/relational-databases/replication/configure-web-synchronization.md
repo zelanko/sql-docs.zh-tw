@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455613"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868129"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455613"
   
  **若要設定 Web 同步處理的 IIS**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455613"
   
 -   每個發行集應使用個別的 IIS 虛擬目錄。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 執行時所使用的帳戶也是在同步處理期間連接至發行者和散發者的帳戶。 這個帳戶必須對應至發行者和散發者的 SQL 登入帳戶。 如需詳細資訊，請參閱[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 中的＜設定 SQL Server Replication Listener 的權限＞一節。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 執行時所使用的帳戶也是在同步處理期間連接至發行者和散發者的帳戶。 這個帳戶必須對應至發行者和散發者的 SQL 登入帳戶。 如需詳細資訊，請參閱[設定 Web 同步處理的 IIS](./configure-iis-7-for-web-synchronization.md) 中的＜設定 SQL Server Replication Listener 的權限＞一節。  
   
 -   您可以利用 FTP，將快照集從發行者傳遞到執行 IIS 的電腦。 快照集永遠是利用 HTTPS，從執行 IIS 的電腦傳遞到「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455613"
   
 ## <a name="see-also"></a>另請參閱  
  [合併式複寫的 Web 同步處理](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

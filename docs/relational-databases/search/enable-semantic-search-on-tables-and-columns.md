@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465009"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867466"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 加入語意索引  
- 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](./create-and-manage-full-text-indexes.md)。  
 
 ## <a name="alter-a-semantic-index"></a>改變語意索引
   
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 卸除語意索引  
- 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](./create-and-manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -281,5 +281,4 @@ GO
 ##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> 問題：針對特定資料行進行搜尋時未傳回結果  
  **您是否針對 Unicode 語言指定了非 Unicode LCID？**  
  您可以針對 LCID 代表只有 Unicode 字詞之語言 (例如俄文 LCID 1049) 的非 Unicode 資料行類型啟用語意索引。 在此情況下，這個資料行的語意索引永遠不會傳回任何結果。  
-  
   

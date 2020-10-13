@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942626"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866537"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "86942626"
 您可以在建立新連接或變更現有的連接時，使用 [連接到伺服器] 對話方塊來啟用或停用 Always Encrypted。 
 
 若要啟用 (停用) Always Encrypted：
-1. 開啟 [連接到伺服器] 對話方塊 (如需詳細資料，請參閱[連接到 SQL Server 執行個體](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance))。
+1. 開啟 [連接到伺服器] 對話方塊 (如需詳細資料，請參閱[連接到 SQL Server 執行個體](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance))。
 1. 按一下 [選項 >>]。
 1. 如果您使用 SSMS 18 或更新版本：
     1. 選取 [Always Encrypted] 索引標籤。
@@ -109,7 +109,7 @@ ms.locfileid: "86942626"
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Always Encrypted 的參數化   
  
-[Always Encrypted 的參數化] 是 SQL Server Management Studio 中的一項功能，可將 Transact-SQL 變數自動轉換為查詢參數 ( [SqlParameter 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的執行個體)。 (至少需要 SSMS 17.0 版。)這讓基礎的 .NET Framework Data Provider for SQL Server 能夠偵測目標為加密資料行的資料，並且在將這類資料傳送至資料庫之前，先進行加密。 
+[Always Encrypted 的參數化] 是 SQL Server Management Studio 中的一項功能，可將 Transact-SQL 變數自動轉換為查詢參數 ( [SqlParameter 類別](/dotnet/api/system.data.sqlclient.sqlparameter)的執行個體)。 (至少需要 SSMS 17.0 版。)這讓基礎的 .NET Framework Data Provider for SQL Server 能夠偵測目標為加密資料行的資料，並且在將這類資料傳送至資料庫之前，先進行加密。 
   
 未啟用參數化時，.NET Framework Data Provider 會以非參數化的查詢傳遞您在 [查詢編輯器] 中撰寫的每一個陳述式。 如果查詢包含目標為加密資料行的常值或 Transact-SQL 變數，.NET Framework Data Provider for SQL Server 就無法在將查詢傳送至資料庫之前先偵測並加密它們。 如此一來，查詢將因 (純文字的常值 Transact-SQL 變數與加密資料行之間) 類型不符而導致失敗。 例如，假設 `SSN` 資料行已加密，下列查詢將因未啟用參數化而失敗。   
 
@@ -173,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 若要成功嘗試進行參數化：   
 - 針對要參數化之變數初始化所使用的常值類型必須符合變數宣告中的類型。   
-- 如果變數的宣告類型是日期類型或時間類型，就必須使用字串，以下列其中一個遵循 [ISO 8601 規範的格式](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles)來初始化變數。    
+- 如果變數的宣告類型是日期類型或時間類型，就必須使用字串，以下列其中一個遵循 [ISO 8601 規範的格式](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles)來初始化變數。    
 
 以下是將產生參數化錯誤的 Transact-SQL 變數宣告範例：   
 ```sql
@@ -183,7 +183,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio 會使用 Intellisense，來告知您哪些變數可以成功參數化，以及哪些參數化嘗試失敗 (與原因)。   
 
-在 [查詢編輯器] 中，會以警告底線標示可成功參數化的變數宣告。 如果您將滑鼠停留在以警告底線標示的宣告陳述式上，您會看到參數化程序的結果，包括所產生 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件 (變數要與其對應) 的主要屬性值：[SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、[Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、[Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、[Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、[SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)。 您也可以在 [錯誤清單]  檢視的 [警告]  索引標籤中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。    
+在 [查詢編輯器] 中，會以警告底線標示可成功參數化的變數宣告。 如果您將滑鼠停留在以警告底線標示的宣告陳述式上，您會看到參數化程序的結果，包括所產生 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) 物件 (變數要與其對應) 的主要屬性值：[SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype)、[Size](/dotnet/api/system.data.sqlclient.sqlparameter.size)、[Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision)、[Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale)、[SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue)。 您也可以在 [錯誤清單]  檢視的 [警告]  索引標籤中，查看已成功地參數化的所有變數的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。    
 
 如果 SQL Server Management Studio 已嘗試將變數參數化，但參數化失敗，則將會以錯誤底線標示變數的宣告。 如果您將滑鼠停留在已使用錯誤底線標示的宣告陳述式上，您會取得有關錯誤的結果。 您也可以在 [錯誤清單]  檢視的 [錯誤]  索引標籤中，查看所有變數的參數化錯誤的完整清單。 若要開啟 [錯誤清單]  檢視，從主功能表選取 [檢視]  ，然後選取 [錯誤清單] 。   
 

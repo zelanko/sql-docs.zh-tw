@@ -19,12 +19,12 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f29b054b32a1c265aae703c7ccd24014d9e2e96a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 756b50b22b470ec8dcf3f54467af78e71558ea1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545959"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006483"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89545959"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_sproc_columns [[@procedure_name = ] 'name']   
     [ , [@procedure_owner = ] 'owner']   

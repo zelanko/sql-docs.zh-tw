@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116568"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810524"
 ---
 # <a name="statistics"></a>統計資料
 
@@ -121,7 +121,7 @@ ORDER BY s.name;
 您可以使用下列指導方針，在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的環境中啟用追蹤旗標 2371：
 
  - 如果您未發現因統計資料過期造成的效能問題，則不需要啟用此追蹤旗標。
- - 如果您是在 SAP 系統上，請啟用此追蹤旗標。  如需詳細資訊，請參閱此[部落格](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) \(英文\)。
+ - 如果您是在 SAP 系統上，請啟用此追蹤旗標。  如需詳細資訊，請參閱此[部落格](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) \(英文\)。
  - 如果您因為目前的自動更新未頻繁地觸發，而必須依賴夜間作業來更新統計資料，請考慮啟用追蹤旗標 2371 來減少閾值。
   
 在編譯查詢及執行快取查詢計劃之前，查詢最佳化工具會檢查是否有過期的統計資料。 在編譯查詢之前，查詢最佳化工具會使用查詢述詞中的資料行、資料表和索引檢視表來判斷哪些統計資料可能已過期。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。  
@@ -406,4 +406,4 @@ GO
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

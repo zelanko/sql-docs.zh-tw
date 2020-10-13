@@ -12,12 +12,12 @@ ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6edd36bacc7c2316ac747156b7d1ccdbb0e4f7ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a2e755e50bc48e418ceabd0b2334746dc6e7885d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551575"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867512"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>In-Memory OLTP 的 SQL Server Integration Services 支援
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89551575"
  您也可以使用 ADO .NET 來源和 OLE DB 來源叫用原生編譯預存程序，不過我們建議您使用 ODBC 來源。 如果您設定由 ADO .NET 來源執行原生編譯的預存程序，則會看見錯誤訊息，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的資料提供者 (其為 ADO .NET 來源預設使用) 不支援執行原生編譯的預存程序。 您可以將 ADO .NET 來源設定為使用 ODBC 資料提供者、OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 不過，請注意，ODBC 來源的執行效能比使用 ODBC 資料提供者的 ADO .NET 來源更佳。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體中 OLTP 的 SQL Server 支援](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [記憶體中 OLTP 的 SQL Server 支援](./transact-sql-support-for-in-memory-oltp.md)  
   

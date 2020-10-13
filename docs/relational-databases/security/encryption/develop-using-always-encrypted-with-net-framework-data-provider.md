@@ -12,24 +12,24 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 857823bf01c537842a3d18e23c003d38ac6b68d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765028"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867949"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>搭配 .NET Framework Data Provider for SQL Server 使用 [永遠加密]
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-本文提供有關如何使用 [Always Encrypted](always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 與 [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) 來開發 .NET 應用程式的資訊。
+本文提供有關如何使用 [Always Encrypted](always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 與 [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/) 來開發 .NET 應用程式的資訊。
 
 [永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 .NET Framework Data Provider for SQL Server 等啟用了 [永遠加密] 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料，達成此目的。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱[使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)和[使用 Always Encrypted 搭配安全記憶體保護區開發應用程式](always-encrypted-enclaves-client-development.md)。
 
 ## <a name="prerequisites"></a>Prerequisites
 
 - 在資料庫中設定永遠加密。 這牽涉到佈建永遠加密金鑰，以及設定加密所選資料庫資料行。 如果您的資料庫尚未設定 Always Encrypted，請遵循 [Always Encrypted 入門](always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的指示。
-- 請確定您的開發電腦上安裝了 .NET Framework 4.6.1 版或更新版本。 如需詳細資料，請參閱 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)。 您也需要確定 .NET Framework 4.6 版或更新版本已設定為開發環境中的目標 .NET Framework 版本。 若您使用 Visual Studio，請參閱[如何：以 .NET Framework 版本為目標](https://msdn.microsoft.com/library/bb398202.aspx)。 
+- 請確定您的開發電腦上安裝了 .NET Framework 4.6.1 版或更新版本。 如需詳細資料，請參閱 [.NET Framework 4.6](/dotnet/framework/)。 您也需要確定 .NET Framework 4.6 版或更新版本已設定為開發環境中的目標 .NET Framework 版本。 若您使用 Visual Studio，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。 
 
 > [!NOTE]
 > 特定版本的 .NET Framework 版本永遠加密支援層級各異。 如需詳細資訊，請參閱下文的＜永遠加密 API 參考＞一節。
@@ -57,7 +57,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 個別查詢也可以啟用 [永遠加密]。 請參閱後文的 **控制永遠加密的影響效能** 一節。
 啟用 Always Encrypted 並不足以保證加密或解密成功。 您還需要確定︰
-- 應用程式要有 [檢視任何資料行的主要金鑰定義]  和 [檢視任何資料行的加密金鑰定義]  資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱 [一律加密 (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7)的＜權限＞一節。
+- 應用程式要有 [檢視任何資料行的主要金鑰定義]  和 [檢視任何資料行的加密金鑰定義]  資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱 [一律加密 (Database Engine)](./always-encrypted-database-engine.md#database-permissions)的＜權限＞一節。
 - 應用程式可以加密查詢的資料庫資料行，存取保護資料行加密金鑰的資料行主要金鑰。
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>啟用具有安全記憶體保護區的 Always Encrypted
@@ -78,7 +78,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
 
-應用程式查詢一旦啟用 [永遠加密]，您就可以使用標準的 ADO.NET API (請參閱 [擷取和修改 ADO.NET 中的資料](https://msdn.microsoft.com/library/ms254937(v=vs.110).aspx)) 或 [System.Data.SqlClient 命名空間](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) 中定義的 [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)API，擷取或修改加密資料庫資料行中的資料。 假設您的應用程式具有必要的資料庫權限，而且可以存取資料行主要金鑰，則 .NET Framework Data Provider for SQL Server 會加密所有目標加密資料行的查詢參數，以及解密擷取自加密資料行的資料，這些資料行會傳回 .NET 類型的純文字值，並對應到為資料庫結構描述之資料行設定的 SQL Server 資料類型。
+應用程式查詢一旦啟用 [永遠加密]，您就可以使用標準的 ADO.NET API (請參閱 [擷取和修改 ADO.NET 中的資料](/dotnet/framework/data/adonet/retrieving-and-modifying-data)) 或 [System.Data.SqlClient 命名空間](/dotnet/framework/data/adonet/sql/) 中定義的 [.NET Framework Data Provider for SQL Server](/dotnet/api/system.data.sqlclient)API，擷取或修改加密資料庫資料行中的資料。 假設您的應用程式具有必要的資料庫權限，而且可以存取資料行主要金鑰，則 .NET Framework Data Provider for SQL Server 會加密所有目標加密資料行的查詢參數，以及解密擷取自加密資料行的資料，這些資料行會傳回 .NET 類型的純文字值，並對應到為資料庫結構描述之資料行設定的 SQL Server 資料類型。
 若未啟用 Always Encrypted，使用目標加密資料行參數的查詢就會失敗。 只要查詢沒有以加密資料行為目標的參數，查詢就仍然可以從加密資料行擷取資料。 不過，.NET Framework Data Provider for SQL Server 不會嘗試解密任何從加密資料行擷取的值，而應用程式則會收到二進位的加密資料 (位元組陣列形態)。
 
 下表摘要說明查詢的行為，視 [永遠加密] 是否啟用而定︰
@@ -111,9 +111,9 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 本例會將資料列插入病患資料表。 請注意：
 - 範例程式碼中沒有任何需要加密的特定項目。 .NET Framework Data Provider for SQL Server 會自動偵測並加密以加密資料行為目標的 *paramSSN* 和 *paramBirthdate* 參數。 這讓加密對應用程式變得透明化。 
-- 插入至資料庫資料行的值，包括加密的資料行，會傳遞為 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件。 雖然將值傳送到未加密的資料行時，使用 **SqlParameter** 為選擇性 (但強烈建議使用，因有利於防止 SQL 插入式攻擊)，但對以加密資料行為目標的值為必要。 如果插入 SSN 或 BirthDate 資料行中的值當作內嵌在查詢陳述式中的常值傳遞，則查詢會失敗；因為 .NET Framework Data Provider for SQL Server 無法判斷目標加密資料行的值，所以不會加密值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
+- 插入至資料庫資料行的值，包括加密的資料行，會傳遞為 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) 物件。 雖然將值傳送到未加密的資料行時，使用 **SqlParameter** 為選擇性 (但強烈建議使用，因有利於防止 SQL 插入式攻擊)，但對以加密資料行為目標的值為必要。 如果插入 SSN 或 BirthDate 資料行中的值當作內嵌在查詢陳述式中的常值傳遞，則查詢會失敗；因為 .NET Framework Data Provider for SQL Server 無法判斷目標加密資料行的值，所以不會加密值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
 - 設定為 ANSI (非 Unicode) 字串，以 SSN 資料行為目標的參數資料類型，會對應到 char/varchar SQL Server 資料類型。 如果參數類型先前設為 Unicode 字串 (String)，並對應至 nchar/nvarchar，則查詢會失敗，因為 Always Encrypted 不支援從已加密 nchar/nvarchar 值轉換成已加密 char/varchar 值。 如需資料類型對應的相關資訊，請參閱 [SQL Server 資料型別對應](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 。
-- 插入 BirthDate 資料行的參數資料類型，使用 [SqlParameter.SqlDbType 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)明確設定為目標 SQL Server 資料類型，不依賴隱含地將 .NET 類型對應至使用 [SqlParameter.DbType 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)時套用的 SQL Server 資料類型。 [DateTime 結構](https://msdn.microsoft.com/library/system.datetime.aspx) 預設會對應至日期時間 SQL Server 資料類型。 因為 BirthDate 資料行的資料類型是日期，且 [永遠加密] 不支援將加密的日期時間值轉換成加密的日期值，所以使用預設的對應會造成錯誤。 
+- 插入 BirthDate 資料行的參數資料類型，使用 [SqlParameter.SqlDbType 屬性](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype)明確設定為目標 SQL Server 資料類型，不依賴隱含地將 .NET 類型對應至使用 [SqlParameter.DbType 屬性](/dotnet/api/system.data.sqlclient.sqlparameter.dbtype)時套用的 SQL Server 資料類型。 [DateTime 結構](/dotnet/api/system.datetime) 預設會對應至日期時間 SQL Server 資料類型。 因為 BirthDate 資料行的資料類型是日期，且 [永遠加密] 不支援將加密的日期時間值轉換成加密的日期值，所以使用預設的對應會造成錯誤。 
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -255,7 +255,7 @@ System.Data.SqlClient.SqlException (0x80131904): Operand type clash: varchar is 
 ```
 
 若要避免這類錯誤，請確定︰
-- (針對連接字串或特定查詢的 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 物件) 以加密資料行為目標的應用程式查詢已啟用 [永遠加密]。
+- (針對連接字串或特定查詢的 [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) 物件) 以加密資料行為目標的應用程式查詢已啟用 [永遠加密]。
 - 您可以使用 SqlParameter 傳送以加密資料行為目標的資料。 下例顯示對加密資料行 (SSN) 以常值/常數錯誤篩選 (不是傳遞 SqlParameter 物件內常值的查詢)。 
 
 
@@ -271,7 +271,7 @@ cmd.ExecuteNonQuery();
 
 若要加密參數值或解密查詢結果的資料，.NET Framework Data Provider for SQL Server 需要取得為目標資料行設定的資料行加密金鑰。 資料行加密金鑰是以加密形式存放在資料庫中繼資料。 每個資料行加密金鑰都有對應的資料行主要金鑰，主要金鑰是用於加密資料行加密金鑰。 資料庫中繼資料不儲存資料行主要金鑰，它只包含金鑰存放區的相關資訊，金鑰存放區包含特定的資料行主要金鑰以及金鑰在金鑰存放區中的位置。
 
-若要取得資料行加密金鑰的純文字值，.NET Framework Data Provider for SQL Server 會先取得有關資料行加密金鑰及其對應資料行主要金鑰的中繼資料，然後使用中繼資料的資訊連絡包含資料行主要金鑰的金鑰存放區，解密加密的資料行加密金鑰。 .NET Framework Data Provider for SQL Server 使用資料行主要金鑰存放區提供者與金鑰存放區進行通訊，這是衍生自 [SqlColumnEncryptionKeyStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)的類別執行個體。
+若要取得資料行加密金鑰的純文字值，.NET Framework Data Provider for SQL Server 會先取得有關資料行加密金鑰及其對應資料行主要金鑰的中繼資料，然後使用中繼資料的資訊連絡包含資料行主要金鑰的金鑰存放區，解密加密的資料行加密金鑰。 .NET Framework Data Provider for SQL Server 使用資料行主要金鑰存放區提供者與金鑰存放區進行通訊，這是衍生自 [SqlColumnEncryptionKeyStoreProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider)的類別執行個體。
 
 
 取得資料行加密金鑰的程序︰
@@ -298,8 +298,8 @@ cmd.ExecuteNonQuery();
 | 類別 | 描述 | 提供者 (查閱) 名稱 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 類別| Windows 憑證存放區的提供者。 | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意︰** .NET Framework 4.6.1 和更新版本才有這個提供者。 |支援以下功能的金鑰存放區提供者：[Microsoft Cryptography API：新一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。  | MSSQL_CNG_STORE|
-| [SqlColumnEncryptionCspProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**注意︰** .NET Framework 4.6.1 或更新版本才有這個提供者。| 支援 [Microsoft Cryptography API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx)的金鑰存放區提供者。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。| MSSQL_CSP_PROVIDER |
+|[SqlColumnEncryptionCngProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) <br><br>**注意︰** .NET Framework 4.6.1 和更新版本才有這個提供者。 |支援以下功能的金鑰存放區提供者：[Microsoft Cryptography API：新一代 (CNG) API](/windows/win32/seccng/cng-portal)。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。  | MSSQL_CNG_STORE|
+| [SqlColumnEncryptionCspProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncspprovider)<br><br>**注意︰** .NET Framework 4.6.1 或更新版本才有這個提供者。| 支援 [Microsoft Cryptography API (CAPI)](/previous-versions/visualstudio/aa266944(v=vs.60))的金鑰存放區提供者。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。| MSSQL_CSP_PROVIDER |
   
 應用程式程式碼不需要任何變更即可使用這些提供者，但請注意下列事項︰
 
@@ -308,11 +308,11 @@ cmd.ExecuteNonQuery();
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
 
-Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 .NET Framework Data Provider for SQL Server 不包含 Azure 金鑰保存庫的內建資料行主要金鑰存放區提供者，但可以 Nuget 套件形式提供，讓您輕鬆與應用程式相整合。 如需詳細資訊，請參閱 [一律加密 - 透過資料加密並將您的加密金鑰儲存在 Azure 金鑰保存庫，來保護 SQL Database 中的機密資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)。
+Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 .NET Framework Data Provider for SQL Server 不包含 Azure 金鑰保存庫的內建資料行主要金鑰存放區提供者，但可以 Nuget 套件形式提供，讓您輕鬆與應用程式相整合。 如需詳細資訊，請參閱 [一律加密 - 透過資料加密並將您的加密金鑰儲存在 Azure 金鑰保存庫，來保護 SQL Database 中的機密資料](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)。
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>實作自訂資料行主要金鑰存放區提供者
 
-如果您想要將資料行主要金鑰儲存在現有提供者不支援的金鑰存放區中，您可以擴充 [SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) 以及使用 [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx) 方法來註冊提供者，以實作自訂提供者。
+如果您想要將資料行主要金鑰儲存在現有提供者不支援的金鑰存放區中，您可以擴充 [SqlColumnEncryptionCngProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) 以及使用 [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) 方法來註冊提供者，以實作自訂提供者。
 
 
 ```cs
@@ -347,7 +347,7 @@ public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 
 當存取加密的資料行時，.NET Framework Data Provider for SQL Server 會以清晰簡明的方式尋找並呼叫正確的資料行主要金鑰存放區提供者，來解密資料行加密金鑰。 一般來說，一般應用程式程式碼不會直接呼叫資料行主要金鑰存放區提供者。 但是您可以明確具現化和呼叫提供者，以程式設計方式佈建和管理永遠加密金鑰︰產生加密的資料行加密金鑰和解密資料行加密金鑰 (例如作為部分資料行主要金鑰輪替)。 如需詳細資訊，請參閱 [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。
 只有使用自訂的金鑰存放區提供者時，才可能需要實作您自己的金鑰管理工具。 使用存放在金鑰存放區的金鑰時，凡是有內建提供者或位在 Azure 金鑰保存庫者，皆可使用 SQL Server Management Studio 或 PowerShell 等現有的工具，來管理和佈建金鑰。
-下例示範產生資料行加密金鑰以及使用 [SqlColumnEncryptionCertificateStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx) 加密具有憑證的金鑰。
+下例示範產生資料行加密金鑰以及使用 [SqlColumnEncryptionCertificateStoreProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) 加密具有憑證的金鑰。
 
 
 ```cs
@@ -392,7 +392,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 ### <a name="query-metadata-caching"></a>查詢中繼資料快取
 
-在 .NET Framework 4.6.2 和更新版本中，.NET Framework Data Provider for SQL Server 會快取每項查詢陳述式的 **sys.sp_describe_parameter_encryption** 結果。 因此，如果執行多次相同的查詢陳述式，驅動程式就只會呼叫一次 **sys.sp_describe_parameter_encryption** 。 查詢陳述式的加密中繼資料快取大幅減少了從資料庫擷取中繼資料的效能成本。 預設啟用快取。 您可以將 [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) 設為 false 以停用參數中繼資料快取，但除非是像以下所述的罕見情況，否則不建議這樣做︰
+在 .NET Framework 4.6.2 和更新版本中，.NET Framework Data Provider for SQL Server 會快取每項查詢陳述式的 **sys.sp_describe_parameter_encryption** 結果。 因此，如果執行多次相同的查詢陳述式，驅動程式就只會呼叫一次 **sys.sp_describe_parameter_encryption** 。 查詢陳述式的加密中繼資料快取大幅減少了從資料庫擷取中繼資料的效能成本。 預設啟用快取。 您可以將 [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) 設為 false 以停用參數中繼資料快取，但除非是像以下所述的罕見情況，否則不建議這樣做︰
 
 請考慮有後列兩個不同結構描述的資料庫︰s1 和 s2。 每個結構描述都有一份同名的資料表︰t。 s1.t 和 s2.t 資料表的定義是相同的，除了與加密相關的屬性：名為 c 的資料行在 s1.t 中並未加密，但在 s2.t 中則會加密。 資料庫有兩位使用者︰u1 和 u2。 u1 使用者的預設結構描述是 s1。 u2 的預設結構描述是 s2。 .NET 應用程式會開啟兩個資料庫連線，模擬 u1 使用者在一個連線，而 u2 使用者在另一個連線。 應用程式在使用者 u1 的連線上傳送具有以 c 資料行為目標之參數的查詢 (查詢不指定結構描述，所以假設使用預設的使用者結構描述)。 接下來，應用程式在 u2 使用者的連線上傳送相同的查詢。 如已啟用查詢中繼資料快取，在第一次查詢後，即會以指出 c 資料行的中繼資料填入快取，c 是查詢參數的目標且未加密。 當第二次查詢有相同的查詢陳述式時，就會使用儲存在快取中的資訊。 結果，驅動程式傳送查詢時不會加密參數 (這是不正確的，因為目標資料行 s2.t.c 有加密)，將參數的純文字值洩漏給伺服器。 伺服器會偵測到不相容，並強制驅動程式重新整理快取，因此應用程式會明確重新傳送具有正確加密參數值的查詢。 這種情況應該停用快取，以免向伺服器洩漏機密值。 
 
@@ -406,7 +406,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 > [!NOTE]
 > 設定查詢層級的 [永遠加密] 會限制實作參數加密中繼資料快取之 .NET 4.6.2 和更新版本的效能優勢。
 
-若要控制個別查詢的 [永遠加密] 行為，您需要使用 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)的這個建構函式。 以下是一些實用的方針：
+若要控制個別查詢的 [永遠加密] 行為，您需要使用 [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) 和 [SqlCommandColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)的這個建構函式。 以下是一些實用的方針：
 - 如果用戶端應用程式透過資料庫連接傳送的大多數查詢都會存取加密資料行：
     - 將**資料行加密設定**連接字串關鍵字設為 [啟用]  。
     - 對不會存取任何加密資料行的個別查詢設定 **SqlCommandColumnEncryptionSetting.Disabled** 。 這會停用呼叫 sys.sp_describe_parameter_encryption 以及嘗試解密結果集內的任何值。
@@ -457,7 +457,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 > [!NOTE]
 > .NET Framework 4.6 和 4.6.1 永遠不會收回快取中的資料行加密金鑰項目。 這表示，針對給定的加密資料行加密金鑰，驅動程式在應用程式存留期間會連絡一次金鑰存放區。
 
-基於安全性考量，在 .NET Framework 4.6.2 和更新版本中，請在可設定的存留時間間隔之後收回快取項目。 預設的存留時間值是 2 小時。 如果應用程式的純文字中對多久可以快取資料行加密金鑰有更嚴格的安全性需求，則您可以使用 [SqlConnection.ColumnEncryptionKeyCacheTtl 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl.aspx)變更它。 
+基於安全性考量，在 .NET Framework 4.6.2 和更新版本中，請在可設定的存留時間間隔之後收回快取項目。 預設的存留時間值是 2 小時。 如果應用程式的純文字中對多久可以快取資料行加密金鑰有更嚴格的安全性需求，則您可以使用 [SqlConnection.ColumnEncryptionKeyCacheTtl 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl)變更它。 
 
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>對遭入侵的 SQL Server 啟用額外保護
@@ -468,7 +468,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 .NET Framework Data Provider for SQL Server 將參數型查詢傳送到 SQL Server 之前，會先要求 SQL Server (藉由呼叫 [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) 分析查詢陳述式，並提供查詢中哪些參數應該加密的資訊。 遭入侵的 SQL Server 執行個體可能會傳送指出此參數未鎖定加密資料行的中繼資料，因而誤導 .NET Framework Data Provider for SQL Server，儘管資料庫的資料行已加密。 結果，.NET Framework Data Provider for SQL Server 就可能不加密參數值，將它以純文字傳送給遭入侵的 SQL Server 執行個體。
 
-為避免這類的攻擊，應用程式可將參數的 [SqlParameter.ForceColumnEncryption 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx) 設為 true。 如果從伺服器收到的中繼資料，指出參數不需要加密，就會導致 .NET Framework Data Provider for SQL Server 擲回例外狀況。
+為避免這類的攻擊，應用程式可將參數的 [SqlParameter.ForceColumnEncryption 屬性](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption) 設為 true。 如果從伺服器收到的中繼資料，指出參數不需要加密，就會導致 .NET Framework Data Provider for SQL Server 擲回例外狀況。
 
 雖然使用 **SqlParameter.ForceColumnEncryption 屬性** 有助於提高安全性，但也會降低用戶端應用程式的加密透明度。 如果更新資料庫結構描述來變更加密的資料行集合，您可能也需要變更應用程式。
 
@@ -500,7 +500,7 @@ SqlDataReader reader = cmd.ExecuteReader();
 
 SQL Server 為鎖定加密資料行的查詢參數以及從加密資料行擷取的結果所傳回的加密中繼資料，包括識別金鑰存放區的資料行主要金鑰的金鑰路徑，以及金鑰存放區的金鑰位置。 如果 SQL Server 執行個體遭到入侵，它可能會傳送金鑰路徑將 .NET Framework Data Provider for SQL Server 導向到受攻擊者控制的位置。 如果金鑰存放區需要驗證應用程式，這可能會洩漏金鑰存放區認證。 
 
-為避免此種攻擊，應用程式可以使用 [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx)，指定給定伺服器的受信任金鑰路徑清單。 如果 .NET Framework Data Provider for SQL Server 收到受信任金鑰路徑清單以外的金鑰路徑，就會擲回例外狀況。 
+為避免此種攻擊，應用程式可以使用 [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)，指定給定伺服器的受信任金鑰路徑清單。 如果 .NET Framework Data Provider for SQL Server 收到受信任金鑰路徑清單以外的金鑰路徑，就會擲回例外狀況。 
 
 雖然設定受信任的金鑰路徑會改善應用程式安全性，但您每次輪換資料行主要金鑰 (每次變更資料行主要金鑰路徑) 時，都必須變更應用程式的密碼和/或設定。 
 
@@ -527,7 +527,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 - 請確定目標資料表的加密組態與來源資料表的組態完全一致。 特別是，這兩份資料表都必須加密相同的資料行，且這些資料行必須使用相同的加密類型和相同的加密金鑰來加密。 注意︰如果任一目標資料行的加密方式不同於其對應的來源資料行，您將無法在複製作業後，解密目標資料表中的資料。 資料會損毀。
 - 設定這兩個資料庫對來源資料表和目標資料表的連線，但不啟用 [永遠加密]。 
-- 設定 AllowEncryptedValueModifications 選項 (請參閱 [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx))。 注意:指定 AllowEncryptedValueModifications 時請小心，這可能會導致資料庫損毀，因為 .NET Framework Data Provider for SQL Server 不會檢查資料是否確實加密，或是否使用和目標資料行相同的加密類型、演算法和金鑰正確加密。
+- 設定 AllowEncryptedValueModifications 選項 (請參閱 [SqlBulkCopyOptions](/dotnet/api/system.data.sqlclient.sqlbulkcopyoptions))。 注意:指定 AllowEncryptedValueModifications 時請小心，這可能會導致資料庫損毀，因為 .NET Framework Data Provider for SQL Server 不會檢查資料是否確實加密，或是否使用和目標資料行相同的加密類型、演算法和金鑰正確加密。
 
 .NET Framework 4.6.1 和更新版本中提供 AllowEncryptedValueModifications 選項。
 
@@ -558,7 +558,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>永遠加密 API 參考
 
-**命名空間：** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**命名空間：** [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)
 
 **組件：** System.Data (位於 System.Data.dll 中)
 
@@ -567,41 +567,24 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 |名稱|描述|導入 .NET 版本
 |:---|:---|:---
-|[SqlColumnEncryptionCertificateStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 憑證存放區的金鑰存放區提供者。|  4.6
-|[SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft Cryptography API 的金鑰存放區提供者：新一代 (CNG)。|  4.6.1
-|[SqlColumnEncryptionCspProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)|Microsoft CAPI 架構密碼編譯服務提供者 (CSP) 的金鑰存放區提供者。|4.6.1  
-|[SqlColumnEncryptionKeyStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)|金鑰存放區提供者的基底類別。|  4.6
-|[SqlCommandColumnEncryptionSetting 列舉](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)|讓資料庫連接得以加密和解密的設定。|4.6  
-|[SqlConnectionColumnEncryptionSetting 列舉](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnectioncolumnencryptionsetting.aspx)|可對個別查詢控制永遠加密行為的設定。|4.6  
-| [SqlConnectionStringBuilder.ColumnEncryptionSetting 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting.aspx)|在連接字串中取得及設定 [永遠加密]。|4.6|
-| [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) | 啟用和停用加密查詢中繼資料快取。 | 4.6.2
-| [SqlConnection.ColumnEncryptionKeyCacheTtl 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl.aspx) | 取得及設定資料行加密金鑰快取項目的存留時間。 | 4.6.2
-|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx)|可讓您為資料庫伺服器設定受信任的金鑰路徑清單。 如果驅動程式在處理應用程式查詢時，接收到不在清單上的金鑰路徑，則查詢會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，此類 SQL Server 會提供假的金鑰路徑，而可能會導致遺漏金鑰存放區認證。|  4.6
-|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders 方法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx)|可讓您註冊自訂金鑰存放區提供者。 它是一個字典，會將金鑰存放區提供者名稱對應至金鑰存放區提供者實作。|  4.6
+|[SqlColumnEncryptionCertificateStoreProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Windows 憑證存放區的金鑰存放區提供者。|  4.6
+|[SqlColumnEncryptionCngProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)|Microsoft Cryptography API 的金鑰存放區提供者：新一代 (CNG)。|  4.6.1
+|[SqlColumnEncryptionCspProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncspprovider)|Microsoft CAPI 架構密碼編譯服務提供者 (CSP) 的金鑰存放區提供者。|4.6.1  
+|[SqlColumnEncryptionKeyStoreProvider 類別](/dotnet/api/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider)|金鑰存放區提供者的基底類別。|  4.6
+|[SqlCommandColumnEncryptionSetting 列舉](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)|讓資料庫連接得以加密和解密的設定。|4.6  
+|[SqlConnectionColumnEncryptionSetting 列舉](/dotnet/api/system.data.sqlclient.sqlconnectioncolumnencryptionsetting)|可對個別查詢控制永遠加密行為的設定。|4.6  
+| [SqlConnectionStringBuilder.ColumnEncryptionSetting 屬性](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|在連接字串中取得及設定 [永遠加密]。|4.6|
+| [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) | 啟用和停用加密查詢中繼資料快取。 | 4.6.2
+| [SqlConnection.ColumnEncryptionKeyCacheTtl 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl) | 取得及設定資料行加密金鑰快取項目的存留時間。 | 4.6.2
+|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|可讓您為資料庫伺服器設定受信任的金鑰路徑清單。 如果驅動程式在處理應用程式查詢時，接收到不在清單上的金鑰路徑，則查詢會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，此類 SQL Server 會提供假的金鑰路徑，而可能會導致遺漏金鑰存放區認證。|  4.6
+|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders 方法](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|可讓您註冊自訂金鑰存放區提供者。 它是一個字典，會將金鑰存放區提供者名稱對應至金鑰存放區提供者實作。|  4.6
 |[SqlCommand 建構函式 (String、SqlConnection、SqlTransaction、SqlCommandColumnEncryptionSetting)](https://msdn.microsoft.com/library/dn956511\(v=vs.110\).aspx)|可讓您對個別查詢控制永遠加密的行為。|  4.6
-|[SqlParameter.ForceColumnEncryption 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx)|強制將參數加密。 如果 SQL Server 向驅動程式告知參數不需要加密，使用該參數的查詢就會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，此類 SQL Server 會將不正確的加密中繼資料提供給用戶端，而可能導致資料洩露。|4.6  
-|新的 [連接字串](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) 關鍵字： `Column Encryption Setting=enabled`|啟用或停用連線的永遠加密功能。| 4.6 
+|[SqlParameter.ForceColumnEncryption 屬性](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption)|強制將參數加密。 如果 SQL Server 向驅動程式告知參數不需要加密，使用該參數的查詢就會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，此類 SQL Server 會將不正確的加密中繼資料提供給用戶端，而可能導致資料洩露。|4.6  
+|新的 [連接字串](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) 關鍵字： `Column Encryption Setting=enabled`|啟用或停用連線的永遠加密功能。| 4.6 
   
 
 ## <a name="see-also"></a>另請參閱
 
 - [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [永遠加密部落格](https://docs.microsoft.com/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
-- [SQL Database 教學課程：透過 Always Encrypted 來保護敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [永遠加密部落格](/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
+- [SQL Database 教學課程：透過 Always Encrypted 來保護敏感性資料](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

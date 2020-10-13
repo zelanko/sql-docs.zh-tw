@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901868"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867912"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>進階合併式複寫 - 衝突偵測與解決方法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "85901868"
  檢視衝突最直接的方法是使用 [複寫衝突檢視器]，該檢視器可從 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 取得 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也提供允許查詢衝突資料表的預存程序)。 「衝突檢視器」和「互動解析程式」是類似的工具，不過「互動解析程式」可讓您在同步處理發生時解決衝突，而「衝突解析程式」是設計用來在已解決衝突後檢視衝突。 如果系統資料表中仍有可用的衝突中繼資料 (衝突中繼資料依預設會保留 14 天)，您可以在「衝突檢視器」中覆寫衝突解決結果，不過如果經常需要直接介入，請考慮使用「互動解析程式」。  
   
 > [!NOTE]  
->  「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
+>  「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)。  
   
  「衝突檢視器」會顯示下列三個系統資料表中的資訊：  
   
@@ -148,9 +148,8 @@ ms.locfileid: "85901868"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計：[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計：[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [同步處理資料](../../../relational-databases/replication/synchronize-data.md)  
-  
   

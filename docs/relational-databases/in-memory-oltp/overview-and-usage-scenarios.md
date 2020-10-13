@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9502743c1765561fd82f52e601983ec0bb8cc9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722424"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867114"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 
@@ -29,7 +29,7 @@ ms.locfileid: "85722424"
 
 ## <a name="in-memory-oltp-overview"></a>記憶體內部 OLTP 概觀
 
-記憶體內部 OLTP 可以為正確的工作負載提供絕佳的效能提升。 有位客戶 (BWIN) 只使用一部執行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的電腦，運用記憶體內部 OLTP，設法[達到每秒 120 萬個要求](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)。 另一位客戶 (Quorum) 利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的記憶體內部 OLTP，設法加倍工作負載，同時[減少 70% 的資源使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 雖然有客戶在某些案例中見識到效能提升最多可達 30 倍，但您看到的提升程度會取決於工作負載。
+記憶體內部 OLTP 可以為正確的工作負載提供絕佳的效能提升。 有位客戶 (BWIN) 只使用一部執行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的電腦，運用記憶體內部 OLTP，設法[達到每秒 120 萬個要求](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)。 另一位客戶 (Quorum) 利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的記憶體內部 OLTP，設法加倍工作負載，同時[減少 70% 的資源使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 雖然有客戶在某些案例中見識到效能提升最多可達 30 倍，但您看到的提升程度會取決於工作負載。
 
 現在，這個效能提升來自何處？ 在本質上，記憶體內部 OLTP 是藉由讓資料存取和交易執行更有效率，以及移除並行執行交易之間的鎖定和閂鎖競爭，來提升交易處理的效能︰因為它在記憶體內部，所以速度不快；因為它已針對記憶體內部的資料進行最佳化，所以速度很快。 資料儲存體、存取和處理演算法均已重新設計，可充分利用關於記憶體內部與高度並行運算的最新增強功能。
 
@@ -122,11 +122,11 @@ ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。
 
 #### <a name="implementation-considerations"></a>實作考量
 
-若要開始使用，請參閱：[Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/) (使用記憶體最佳化改善暫存資料表與資料表變數效能)。
+若要開始使用，請參閱：[Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization) (使用記憶體最佳化改善暫存資料表與資料表變數效能)。
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- 客戶僅需將傳統 TVP 替換為記憶體最佳化 TVP，就能改善 40% 的效能：[High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/) (在 Azure 中使用記憶體內部 OLTP 高速擷取 IoT 資料)
+- 客戶僅需將傳統 TVP 替換為記憶體最佳化 TVP，就能改善 40% 的效能：[High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure) (在 Azure 中使用記憶體內部 OLTP 高速擷取 IoT 資料)
 - SentryOne 在其企業延展性改善的過程中，藉由將 tempdb 中的資料表換成記憶體內部 OLTP 資料表，來大幅改善其監視解決方案中的資料擷取容量，幾乎沒有延遲：[解決方案提供者藉資料監視創新之力突破效能限制](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)。
 
 ### <a name="etl-extract-transform-load"></a>ETL (擷取轉換載入)
@@ -222,12 +222,12 @@ GO
 
 ## <a name="resources-to-learn-more"></a>值得深入了解的資源
 
-- [可讓 T-SQL 擁有更快效能的記憶體內部 OLTP 技術](https://msdn.microsoft.com/library/mt694156.aspx)
+- [可讓 T-SQL 擁有更快效能的記憶體內部 OLTP 技術](./survey-of-initial-areas-in-in-memory-oltp.md)
 - 如需使用記憶體內部 OLTP 的效能示範，請參閱： [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [說明記憶體內部 OLTP 並顯示示範的 17 分鐘影片](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
 - [啟用記憶體內部 OLTP 並設定建議選項的指令碼](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 - [主要的記憶體內部 OLTP 文件](in-memory-oltp-in-memory-optimization.md)
 - [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/) (Azure SQL Database 中記憶體內部 OLTP 的效能與資源使用率優點)
-- [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
-- [使用 SQL Database 中的記憶體內部技術將效能最佳化](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [使用記憶體最佳化提升暫存資料表與資料表變數效能](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [使用 SQL Database 中的記憶體內部技術將效能最佳化](/azure/sql-database/sql-database-in-memory)
 - [系統版本設定時態表與記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

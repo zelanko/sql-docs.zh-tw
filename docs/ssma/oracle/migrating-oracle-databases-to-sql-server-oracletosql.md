@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 98070662e3e097aea0edc6c0879a8c63e4bb5850
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933439"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005866"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>將 Oracle 資料庫移轉到 SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適用于 Oracle 的 Migration Assistant (SSMA) 是全方位的環境，可協助您快速將 Oracle 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 AZURE SQL 資料倉儲。 您可以使用 SSMA for Oracle 來查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 AZURE Sql 資料倉儲，然後將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 Azure Sql 資料倉儲。 請注意，您無法遷移 SYS 和系統 Oracle 架構。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle 是全方位的環境，可協助您快速將 Oracle 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 Azure Synapse Analytics。 您可以使用 SSMA for Oracle 來查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 Azure Synapse Analytics，然後將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 Azure Synapse Analytics。 請注意，您無法遷移 SYS 和系統 Oracle 架構。
   
 ## <a name="recommended-migration-process"></a>建議的遷移程式  
-若要成功將物件和資料從 Oracle 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 AZURE SQL 資料倉儲，請使用下列程式：
+若要成功地將物件和資料從 Oracle 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database 或 Azure Synapse Analytics，請使用下列程式：
   
 1.  [建立新的 SSMA 專案](working-with-ssma-projects-oracletosql.md)。  
   

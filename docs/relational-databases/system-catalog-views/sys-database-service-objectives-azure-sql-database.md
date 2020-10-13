@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809225"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006042"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
-傳回 Azure SQL database 或 Azure SQL 資料倉儲的版本 (服務層級) 、服務目標 (定價層) 和彈性集區名稱（如果有的話）。 若已登入 Azure SQL Database 伺服器中的 master 資料庫，則傳回所有資料庫的相關資訊。 對於 Azure SQL 資料倉儲，您必須連線到 master 資料庫。  
+針對 Azure SQL database 或 Azure Synapse Analytics，傳回 (服務層級) 、服務目標 (定價層) 和彈性集區名稱（如果有的話）。 若已登入 Azure SQL Database 伺服器中的 master 資料庫，則傳回所有資料庫的相關資訊。 針對 Azure Synapse Analytics，您必須連接到 master 資料庫。  
   
   
  如需定價的詳細資訊，請參閱 [SQL Database 選項和效能： SQL Database 定價](https://azure.microsoft.com/pricing/details/sql-database/) 和 [SQL 資料倉儲定價](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)。  
   
- 若要變更服務設定，請參閱 [ALTER database (Azure SQL Database) ](../../t-sql/statements/alter-database-transact-sql.md) 和 [Alter DATABASE (Azure SQL 資料倉儲) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)。  
+ 若要變更服務設定，請參閱 [ALTER database (Azure SQL Database) ](../../t-sql/statements/alter-database-transact-sql.md) 和 [alter database (Azure Synapse Analytics) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)。  
   
  Sys.database_service_objectives view 包含下列資料行。  
   

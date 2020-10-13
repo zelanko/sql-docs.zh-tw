@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb0c19820d7f3dcb4ff60c39d0cf3cbd6661b062
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 67122a47bfa252ae9a55f6e7b5d2bba72ffd06c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727589"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866928"
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91727589"
 
 動態資料遮罩的目的在於限制機密限制的曝光，防止不該存取資料的使用者檢視該資料。 動態資料遮罩並不是用來防止資料庫使用者直接連接到資料庫，以及執行會讓機密資料片段曝光的全面查詢。 動態資料遮罩旨在補足其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能 (稽核、加密、資料列層級安全性...)，強烈建議您額外搭配這些功能使用此功能，讓資料庫中的敏感性資料獲得更妥善的保護。  
   
-動態資料遮罩提供於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，並且使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來設定。 如需使用 Azure 入口網站設定動態資料遮罩的詳細資訊，請參閱[開始使用 SQL 資料庫動態資料遮罩 (Azure 入口網站)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
+動態資料遮罩提供於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，並且使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來設定。 如需使用 Azure 入口網站設定動態資料遮罩的詳細資訊，請參閱[開始使用 SQL 資料庫動態資料遮罩 (Azure 入口網站)](/azure/azure-sql/database/dynamic-data-masking-overview)。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>定義動態資料遮罩
  您可以在資料庫中的資料行定義遮罩規則，以模糊該資料行中的資料。 遮罩有四種類型。  
@@ -195,4 +195,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [開始使用 SQL 資料庫動態資料遮罩 (Azure 入口網站)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [開始使用 SQL 資料庫動態資料遮罩 (Azure 入口網站)](/azure/azure-sql/database/dynamic-data-masking-overview)

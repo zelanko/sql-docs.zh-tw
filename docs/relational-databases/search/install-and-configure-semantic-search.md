@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3339525dbf67ee6dd1a4e4ae3b75215dd2c05d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404074"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868065"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ GO
   
  **2.附加語意語言統計資料庫。**
    
- 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用 **FOR ATTACH** 語法呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)，將資料庫附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
+ 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用 **FOR ATTACH** 語法呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)，將資料庫附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
  資料庫名稱預設是 **semanticsdb**。 您可以選擇性地在附加資料庫時提供該資料庫不同的名稱。 您在後續步驟註冊資料庫時，必須提供此名稱。  
   
@@ -146,5 +146,4 @@ GO
   
 ###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> 安裝 Microsoft Office 和其他 Microsoft 文件類型的最新篩選  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](https://www.microsoft.com/download/details.aspx?id=17062)。 (這裡不會是 Office 2013 或 Office 2016 的 Filter Pack 版本)。
-  
   

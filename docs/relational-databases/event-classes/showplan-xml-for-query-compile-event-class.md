@@ -13,12 +13,12 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8e9756022e5536f941ac73734df41b74bf13aa2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad5b4033fdffd55f4a25717911e53b9b04e0aa22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384094"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866776"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88384094"
   
  Showplan XML For Query Compile 事件類別會顯示完整的編譯時期資料，因此包含此事件類別的追蹤會造成顯著的效能負擔。 若要減少此問題，此事件類別請限用於追蹤對特定問題的短期監視。  
   
- Showplan XML 文件有與其相關聯的結構描述。 您可以在 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到這個結構描述，或者它會成為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的一部分。  
+ Showplan XML 文件有與其相關聯的結構描述。 您可以在 [Microsoft 網站](/previous-versions/aa720019(v=vs.71))上找到這個結構描述，或者它會成為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的一部分。  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Showplan XML for Query Compile 事件類別資料行  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88384094"
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

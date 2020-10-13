@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0524aa4738ae7003d763422c20db17e39e89e964
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896797"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867845"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85896797"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可延伸金鑰管理可讓 EKM/HSM 協力廠商在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中註冊其模組。 註冊之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者就可以使用儲存在 EKM 模組上的加密金鑰。 這可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存取這些模組支援的進階加密功能 (例如大量加密和解密) 和金鑰管理函數 (例如金鑰過時和金鑰輪替)。  
   
- 在 Azure VM 中執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用儲存在 [Azure 金鑰保存庫](https://go.microsoft.com/fwlink/?LinkId=521401)中的金鑰。 如需詳細資訊，請參閱 [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
+ 在 Azure VM 中執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用儲存在 [Azure 金鑰保存庫](/azure/key-vault/general/basic-concepts)中的金鑰。 如需詳細資訊，請參閱 [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
   
 ## <a name="ekm-configuration"></a>EKM 組態  
  並非每一個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用可延伸金鑰管理。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -169,5 +169,4 @@ DECRYPTION BY EKM_AKey1
  [備份資料庫主要金鑰](../../../relational-databases/security/encryption/back-up-a-database-master-key.md)   
  [還原資料庫主要金鑰](../../../relational-databases/security/encryption/restore-a-database-master-key.md)   
  [在兩部伺服器上建立相同的對稱金鑰](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
   

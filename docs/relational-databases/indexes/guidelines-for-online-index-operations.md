@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480922"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867676"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480922"
 - 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]  
-> 並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 並非所有版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都可以使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
 
 下表顯示可在線上執行的索引作業、從這些線上作業排除的索引，以及可繼續的索引限制。 也包含其他限制。  
 
@@ -81,11 +81,11 @@ ms.locfileid: "89480922"
   
 儘管我們推薦線上作業，但您應該評估您的環境與特定要求。 離線執行索引作業可能會是最佳方式。 若要達到這種方式，在作業期間，使用者僅能有限地存取資料，但是將更快完成作業且使用較少的資源。  
   
-在執行 SQL Server 2016 的多處理器電腦上，索引陳述式可能會如同其他查詢，使用更多處理器來執行與索引陳述式建立關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。 如需支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+在執行 SQL Server 2016 的多處理器電腦上，索引陳述式可能會如同其他查詢，使用更多處理器來執行與索引陳述式建立關聯的掃描和排序作業。 您可以使用 MAXDOP 索引選項控制線上索引作業專用的處理器數目。 以此方式，您就可以平衡索引作業所使用的資源以及使用者並行所使用的資源。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。 如需支援平行索引作業之 SQL Server 版本的詳細資訊，請參閱[版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 因為索引作業的最終階段會保留 S-lock 或 Sch-M 鎖定，所以在明確的使用者交易 (例如 BEGIN TRANSACTION...COMMIT 區塊) 內執行線上索引作業時要特別小心。 這樣做導致交易完後才執行鎖定，而妨礙使用者進行並行作業。  
   
-當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [運作方式：線上索引重建 - 可能會導致片段增加](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation)。  
+當線上索引重建可搭配 `MAX DOP > 1` 和 `ALLOW_PAGE_LOCKS = OFF` 選項執行時，可能會增加片段。 如需詳細資訊，請參閱 [運作方式：線上索引重建 - 可能會導致片段增加](/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation)。  
   
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素
 
@@ -134,4 +134,4 @@ ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 僅適用於分別支援線上和可繼續�
 - [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

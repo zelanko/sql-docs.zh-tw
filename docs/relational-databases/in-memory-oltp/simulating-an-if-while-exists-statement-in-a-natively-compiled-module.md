@@ -12,12 +12,12 @@ ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f62b799a124eb7ed47ffad9e63d0433172984c18
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e75e403a7f7a9c623961d0be1ddbfe44ff40ac3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735019"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867531"
 ---
 # <a name="simulating-an-if-while-exists-statement-in-a-natively-compiled-module"></a>在原生編譯模組中模擬 IF-WHILE EXISTS 陳述式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,6 @@ IF @exists = 1
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯預存程序的移轉問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [原生編譯預存程序的移轉問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
  [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
-  
   

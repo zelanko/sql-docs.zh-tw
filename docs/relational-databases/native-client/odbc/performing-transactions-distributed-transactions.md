@@ -18,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892258"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005971"
 ---
 # <a name="create-a-distributed-transaction"></a>建立分散式交易
 
@@ -64,7 +64,7 @@ _ (1) _ 您可以叫用無 ODBC 的 MSDTC。 在這種情況下，MSDTC 會變�
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>雲端中 SQL Database 的 c # 替代方案
 
-Azure SQL Database 或 Azure SQL 資料倉儲都不支援 MSDTC。
+Azure SQL Database 或 Azure Synapse Analytics 都不支援 MSDTC。
 
 不過，您可以藉由讓您的 c # 程式使用 .NET 類別 [system.object](/dotnet/api/system.transactions.transactionscope)，為 SQL Database 建立分散式交易。
 

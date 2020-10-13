@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3f261fe1a543844bfb7b38e3889c0077abcaee2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77aa77821afc42c3fa45bf0012003ea100671480
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88325631"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810114"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -255,7 +255,6 @@ LSN 148 是交易記錄中最後一個記錄。 當記錄於 LSN 147 的檢查�
 [加速資料庫復原](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[了解 SQL Server 中的記錄與復原，作者 Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[了解 SQL Server 中的記錄與復原，作者 Paul Randal](/previous-versions/technet-magazine/dd392031(v=msdn.10))    
 [《SQL Server Transaction Log Management》，作者 Tony Davis 和 Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
-  
   

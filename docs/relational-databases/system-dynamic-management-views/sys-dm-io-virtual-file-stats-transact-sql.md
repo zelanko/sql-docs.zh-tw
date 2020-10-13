@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_virtual_file_stats (Transact-SQL)
-title: sys. dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330c14ca06fab7a67c580c1aa1337d1d5c7699cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532331"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005620"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89532331"
   傳回資料和記錄檔的 I/O 統計資料。 這個動態管理檢視會取代 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 函數。  
   
 > [!NOTE]  
->  若要從呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_io_virtual_file_stats**。 
+>  若要從呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ，請使用名稱 **sys.dm_pdw_nodes_io_virtual_file_stats**。 
 
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +48,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -89,7 +89,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|使用者等候檔案完成 I/O 的總時間 (以毫秒為單位)。|  
 |**size_on_disk_bytes**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
 |**file_handle**|**varbinary**|這個檔案的 Windows 檔案控制代碼。|  
-|**io_stall_queued_read_ms**|**bigint**|不適**用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_read_ms**|**bigint**|不適**用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
 |**io_stall_queued_write_ms**|**bigint**|不適**用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
 |**pdw_node_id**|**int**|**適用對象：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分佈的節點識別碼。
  
@@ -114,7 +114,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. 傳回 tempdb 中檔案的統計資料
 
-**適用于：** Azure SQL 資料倉儲
+**適用于：** Azure Synapse Analytics
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

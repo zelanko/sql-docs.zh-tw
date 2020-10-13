@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867718"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>大量存取 Azure Blob 儲存體中資料的範例
 
@@ -40,7 +40,7 @@ ms.locfileid: "85650851"
 下列所有範例都需要參考一個共用存取簽章的資料庫範圍認證。
 
 > [!IMPORTANT]
-> 必須透過使用 `SHARED ACCESS SIGNATURE` 識別的資料庫範圍認證建立外部資料來源。 若要建立儲存體帳戶的共用存取簽章，請參閱 Azure 入口網站之儲存體帳戶屬性頁面上的 [共用存取簽章] 屬性。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
+> 必須透過使用 `SHARED ACCESS SIGNATURE` 識別的資料庫範圍認證建立外部資料來源。 若要建立儲存體帳戶的共用存取簽章，請參閱 Azure 入口網站之儲存體帳戶屬性頁面上的 [共用存取簽章] 屬性。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 使用必須為 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 建立資料庫範圍認證。 使用針對 Blob 儲存體帳戶所產生的 SAS 權杖。 請確認您的 SAS 權杖沒有前置 `?`、您至少擁有應載入物件的讀取權限，以及到期期間是否有效 (所有日期都是 UTC 時間)。
 

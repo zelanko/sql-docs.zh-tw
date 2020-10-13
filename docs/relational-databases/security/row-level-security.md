@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e3fc990d2da5c651003224a8d6f60234f02c78
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380073"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867961"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
@@ -39,7 +39,7 @@ ms.locfileid: "91380073"
   
 使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)建立的述詞來實作 RLS。  
 
-**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
+**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](../../sql-server/what-s-new-in-sql-server-2016.md))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
 > Azure Synapse 僅支援篩選述詞。 Azure Synpase 目前不支援封鎖述詞。

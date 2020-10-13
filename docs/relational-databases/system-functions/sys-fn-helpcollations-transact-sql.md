@@ -1,6 +1,6 @@
 ---
 description: sys.fn_helpcollations (Transact-SQL)
-title: sys. fn_helpcollations (Transact-sql) |Microsoft Docs
+title: sys.fn_helpcollations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bec27f5d1f49abb1b05beaa1b17509c6cdf1ca5b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427830"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006567"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -58,7 +58,7 @@ fn_helpcollations ()
  下列範例會傳回開頭是 `L` 字母，而且是二進位排序定序的所有定序名稱。
 
 > [!Note]
-> 針對 fn_helpcollations ( # A1 的 Azure SQL 資料倉儲查詢必須在 master 資料庫中執行。  
+> Azure Synapse Analytics 對 fn_helpcollations ( # A1 的查詢必須在 master 資料庫中執行。  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -85,4 +85,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[適用于 Azure SQL 資料倉儲的資料庫定序支援](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Azure Synapse Analytics 的資料庫定序支援](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

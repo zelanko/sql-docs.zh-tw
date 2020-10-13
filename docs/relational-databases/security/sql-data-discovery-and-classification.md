@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737042"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867765"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-資料探索與分類引進內建至 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 的新工具，可用來**探索**、**分類**、**標記** & **報告**您資料庫中的敏感性資料。
+資料探索與分類引進內建至 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 的新工具，可用來**探索**、**分類**、**標記** & **報告**您資料庫中的敏感性資料。
 探索和分類最敏感的資料 (商務、財務、醫療等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：
 * 協助符合資料隱私權標準。
 * 控制存取以及強化包含高敏感性資料之資料庫/資料行的安全性。
 
 > [!NOTE]
-> 資料探索與分類由 **SQL Server 2012 和更新版本所支援，且可搭配 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/sql-database/sql-database-data-discovery-and-classification/)。
+> 資料探索與分類由 **SQL Server 2012 和更新版本所支援，且可搭配 [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概觀
 資料探索與分類引進一組進階服務，形成目標為保護資料的新 SQL Information Protection 範例，而不只是資料庫：
@@ -93,7 +93,7 @@ ms.locfileid: "85737042"
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>搭配 SSMS 管理資訊保護原則
 
-您可以使用 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更新版本來管理資訊保護原則：
+您可以使用 [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) 或更新版本來管理資訊保護原則：
 
 1. 在 SQL Server Management Studio (SSMS) 中，連線至 SQL Server。
 
@@ -116,7 +116,7 @@ ms.locfileid: "85737042"
 SQL Server 2019 引進 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系統目錄檢視。 此檢視會傳回資訊類型和敏感度標籤。 
 
 > [!NOTE]
-> 此檢視需要 **VIEW ANY SENSITIVITY CLASSIFICATION** 權限。 如需相關資訊，請參閱 [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15)。
+> 此檢視需要 **VIEW ANY SENSITIVITY CLASSIFICATION** 權限。 如需相關資訊，請參閱 [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15)。
 
 在 SQL Server 2019 執行個體上，查詢 `sys.sensitivity_classifications` 以檢閱所有分類資料行，以及其對應的分類。 例如： 
 
@@ -190,27 +190,27 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 您可以使用 T-SQL 新增/移除資料行分類，以及擷取整個資料庫的所有分類。
 
-- 新增/更新一或多個資料行的分類：[ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
-- 從一或多個資料行移除分類：[DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+- 新增/更新一或多個資料行的分類：[ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- 從一或多個資料行移除分類：[DROP SENSITIVITY CLASSIFICATION](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 您可以使用 PowerShell Cmdlet 來新增/移除資料行分類，以及擷取所有分類並取得整個資料庫的建議。
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
-- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps) \(英文\)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps) \(英文\)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
 
 ---
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>後續步驟
 
-針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
+針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/azure-sql/database/data-discovery-and-classification-overview)。
 
 請考慮套用資料行層級安全性機制來保護敏感資料行：
 
-* [動態資料遮罩](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking)以模糊化使用中的敏感資料行。
-* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) 以加密靜止的敏感資料行。
+* [動態資料遮罩](./dynamic-data-masking.md)以模糊化使用中的敏感資料行。
+* [Always Encrypted](./encryption/always-encrypted-database-engine.md) 以加密靜止的敏感資料行。
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_partition_stats (Transact-SQL)
-title: sys. dm_db_partition_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544768"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006017"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89544768"
   針對目前資料庫中的每個資料分割，各傳回其頁面和資料列計數資訊。  
   
 > [!NOTE]  
-> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_db_partition_stats**。 Sys. dm_pdw_nodes_db_partition_stats 中的 partition_id 與 Azure SQL 資料倉儲的 sys. 分割目錄查看中的 partition_id 不同。
+> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_db_partition_stats**名稱。 Sys.dm_pdw_nodes_db_partition_stats 中的 partition_id 與 Azure Synapse Analytics 之 sys. 分割目錄檢視中的 partition_id 不同。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與**sys.** 分割目錄檢視中的**partition_id**值相同，但 Azure SQL 資料倉儲除外。|  
+|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與**sys.** 分割目錄檢視中的**partition_id**值相同，但 Azure Synapse Analytics 除外。|  
 |object_id|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
@@ -67,7 +67,7 @@ ms.locfileid: "89544768"
  個別資料表或索引的總計數可以藉由加入所有相關資料分割的計數來取得。  
   
 ## <a name="permissions"></a>權限  
- 需要 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 許可權，才能查詢 **sys. dm_db_partition_stats** 動態管理檢視。 如需有關動態管理檢視之許可權的詳細資訊，請參閱 [&#40;transact-sql&#41;的動態管理檢視和函數 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 許可權，才能查詢 **sys.dm_db_partition_stats** 動態管理檢視。 如需有關動態管理檢視之許可權的詳細資訊，請參閱 [&#40;transact-sql&#41;的動態管理檢視和函數 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>範例  
   

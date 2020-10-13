@@ -19,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5085fce0bec1568b940fbffd369effd0a6d31c8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546203"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006512"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89546203"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
      [ , [ @table_owner = ] owner ]   

@@ -12,12 +12,12 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76acc2e061ff550d2da90b167637ad7efa76b1d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5a63dbcec2960bf2da5c801fbeac0ea7e524043
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723161"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867884"
 ---
 # <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 SQL_VARIANT
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -125,6 +125,5 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉至 In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [移轉至 In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

@@ -8,12 +8,12 @@ ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 41ed6122e2ff75220d0fc45a75d4769804d0638c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989911"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867215"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
 
@@ -113,7 +113,7 @@ vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
 # For multi-instance SQL deployments, use
-# vm.transparent_hugepages=madvice
+# vm.transparent_hugepages=madvise
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
 net.core.rmem_max = 4194304

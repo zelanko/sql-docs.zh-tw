@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784008"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867601"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 的金鑰管理概觀
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85784008"
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>管理永遠加密金鑰的工具
 
-永遠加密金鑰可透過 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)進行管理：
+永遠加密金鑰可透過 [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) 和 [PowerShell](../../../powershell/sql-server-powershell.md)進行管理：
 
 - **SQL Server Management Studio (SSMS)** - 提供結合與金鑰存放區存取和資料庫存取相關之工作的對話方塊和精靈，因此 SSMS 雖然不支援角色隔離，但可讓您輕鬆地設定金鑰。 如需使用 SSMS 管理金鑰的詳細資訊，請參閱：
     - [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ ms.locfileid: "85784008"
 
 ## <a name="see-also"></a>另請參閱
 - [一律加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [永遠加密精靈教學課程 (Azure 金鑰保存庫)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [永遠加密精靈教學課程 (Windows 憑證存放區)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [永遠加密精靈教學課程 (Azure 金鑰保存庫)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [永遠加密精靈教學課程 (Windows 憑證存放區)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

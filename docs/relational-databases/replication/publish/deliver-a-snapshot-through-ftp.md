@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8d912f3fd344c535d6101a0598750e61763f6ccf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d809281ec96263d94ccb1ec85b2028d8c16477f8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475542"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869096"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -160,11 +160,11 @@ ms.locfileid: "88475542"
 3.  (選擇性) 若要停用 FTP 快照集傳遞，請在發行集資料庫的發行者上執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 針對 `@property` 指定 `enabled_for_internet` 的值，並為 `@value` 指定 `false` 的值。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
- 下列範例會建立允許訂閱者的合併式發行集，以使用 FTP 存取快照集資料。 當訂閱者存取 FTP 共用位置時，應該使用安全 VPN 連接。 **sqlcmd** 指令碼變數是用來提供登入和密碼值。 如需詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ 下列範例會建立允許訂閱者的合併式發行集，以使用 FTP 存取快照集資料。 當訂閱者存取 FTP 共用位置時，應該使用安全 VPN 連接。 **sqlcmd** 指令碼變數是用來提供登入和密碼值。 如需詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  
   
- 下列範例會建立合併式發行集的訂閱，其中的訂閱者會使用 FTP 取得快照集。 當訂閱者存取 FTP 共用位置時，應該使用安全 VPN 連接。 **sqlcmd** 指令碼變數是用來提供登入和密碼值。 如需詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ 下列範例會建立合併式發行集的訂閱，其中的訂閱者會使用 FTP 取得快照集。 當訂閱者存取 FTP 共用位置時，應該使用安全 VPN 連接。 **sqlcmd** 指令碼變數是用來提供登入和密碼值。 如需詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
  [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_2.sql)]  
   
@@ -174,5 +174,4 @@ ms.locfileid: "88475542"
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [使用快照集初始化訂閱](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-  
   
