@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_nodes_tables (Transact-sql) '
-title: sys. pdw_nodes_tables (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_nodes_tables (Transact-sql) '
+title: sys.pdw_nodes_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a115b3ff132658dcfc2746fc9899fcfafce411ae
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475356"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035761"
 ---
-# <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-sql) 
+# <a name="syspdw_nodes_tables-transact-sql"></a>sys.pdw_nodes_tables (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   針對主體所擁有的每個資料表物件，以及已授與主體某些許可權的資料表物件，各包含一個資料列。  
@@ -46,6 +46,6 @@ ms.locfileid: "88475356"
 |pdw_node_id|**int**|節點的唯一識別碼 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

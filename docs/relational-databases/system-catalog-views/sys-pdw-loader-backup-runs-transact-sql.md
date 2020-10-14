@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_loader_backup_runs (Transact-sql) '
-title: sys. pdw_loader_backup_runs (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_loader_backup_runs (Transact-sql) '
+title: sys.pdw_loader_backup_runs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490252"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036976"
 ---
-# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-sql) 
+# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   包含中進行中和已完成之備份和還原作業的相關資訊 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，以及中的進行中和已完成的備份、還原和載入作業的相關資訊 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 此資訊在系統重新啟動之後會持續存留。  
@@ -38,8 +38,8 @@ ms.locfileid: "88490252"
 |database_name|**nvarchar(255)**|這項作業內容的資料庫名稱||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|要求操作之使用者的識別碼。||  
-|session_id|**nvarchar(32)**|執行作業之會話的識別碼。|請參閱 [sys. dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
-|request_id|**nvarchar(32)**|執行作業的要求識別碼。 若為載入，這是與此載入相關聯的目前或最後一個要求。|請參閱 [sys. dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
+|session_id|**nvarchar(32)**|執行作業之會話的識別碼。|請參閱 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|request_id|**nvarchar(32)**|執行作業的要求識別碼。 若為載入，這是與此載入相關聯的目前或最後一個要求。|請參閱 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
 |status|**Nvarchar (16) **|執行的狀態。|「已取消」、「已完成」、「失敗」、「已排入佇列」、「正在執行」|  
 |progress|**int**|已完成的百分比。|0 到 100|  
 |命令|**nvarchar(4000)**|由使用者所提交之命令的完整文字。|如果超過4000個字元 (計算空間) ，則會截斷。|  
@@ -48,6 +48,6 @@ ms.locfileid: "88490252"
 |rows_inserted|**bigint**|插入資料庫資料表中的資料列數目 (s) 做為這項作業的一部分。||  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480450"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038021"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密碼 (OracleToSQL)
 本節說明如何保護資料庫密碼，以及在伺服器之間匯入或匯出資料庫密碼的程式。
@@ -132,5 +132,4 @@ SSMA 主控台應用程式可讓您將本機電腦上的檔案中已加密的資
 8. 請確認密碼： xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
 ## <a name="see-also"></a>另請參閱  
-[ (Oracle) 執行 SSMA 主控台 ](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[ (Oracle) 執行 SSMA 主控台 ](./executing-the-ssma-console-oracletosql.md)  

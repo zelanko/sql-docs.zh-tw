@@ -11,19 +11,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7df7afd3e58c93d2d9a4e30ef87039cdca9b5dc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a46cdca0d713dc9d33cc919e312a500d867fbfbd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492332"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038051"
 ---
 # <a name="data-migration-settings-oracletosql"></a>資料移轉設定 (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>資料移轉設定  
 **資料移轉設定** 可讓使用者撰寫自訂查詢以進行資料移轉。  
   
--   當 [ **擴充資料移轉選項** ] 設定為 [ **顯示** ]，並且在 [專案設定] 中設定為 [ **隱藏** ] 時，就可以使用此索引標籤。 如需有關專案遷移設定的詳細資訊，請參閱 [ (遷移) 的專案設定 ](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 。  
+-   當 [ **擴充資料移轉選項** ] 設定為 [ **顯示** ]，並且在 [專案設定] 中設定為 [ **隱藏** ] 時，就可以使用此索引標籤。 如需有關專案遷移設定的詳細資訊，請參閱 [ (遷移) 的專案設定 ](./project-settings-migration-oracletosql.md) 。  
   
 -   將在資料表節點的 [ **資料移轉設定** ] 索引標籤中，執行自訂 SQL 語句的剖析。  
   
@@ -55,4 +55,3 @@ ms.locfileid: "88492332"
   
 ## <a name="see-also"></a>另請參閱  
 [將 Oracle 資料移轉至 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
-  

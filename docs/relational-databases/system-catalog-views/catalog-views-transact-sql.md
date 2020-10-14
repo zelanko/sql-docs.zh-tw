@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546884"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038295"
 ---
 # <a name="system-catalog-views-transact-sql"></a> (Transact-sql) 的系統目錄檢視
 
@@ -46,7 +46,7 @@ ms.locfileid: "89546884"
 - 衍生檢視包含資料行的超集和資料列的子集。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能會在資料行清單結尾加入資料行，擴充任何系統目錄檢視的定義。 我們建議您不要 \* 在實際執行程式碼中使用從 *sys. CATALOG_VIEW_NAME* 中選取的語法，因為傳回的資料行數目可能會變更並中斷您的應用程式。
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能會在資料行清單結尾加入資料行，擴充任何系統目錄檢視的定義。 建議您不要 \* 在實際執行程式碼中使用從 *SYS.CATALOG_VIEW_NAME* 中選取的語法，因為傳回的資料行數目可能會變更並中斷您的應用程式。
 
  將目錄檢視組織成下列類別目錄：
 
@@ -109,7 +109,7 @@ ms.locfileid: "89546884"
         
         [空間資料目錄檢視](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Azure Synapse Analytics 和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Stretch Database &#40;Transact-sql&#41;的目錄檢視 ](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

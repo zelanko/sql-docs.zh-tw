@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 2135b567509ef9df5f3c8df7a317a9ea45b92ec7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 63b415b74692e58b453cd483983844bfa9d724d4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006413"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034571"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-sql) 
 
@@ -38,4 +38,4 @@ ms.locfileid: "92006413"
 
 ## <a name="next-steps"></a>後續步驟
   
-如需 Azure Synapse Analytics 和平行處理資料倉儲的所有目錄檢視清單，請參閱 [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。 若要建立工作負載分類器，請參閱 [建立工作負載分類器](../../t-sql/statements/create-workload-classifier-transact-sql.md)。 如需工作負載分類的詳細資訊，請參閱 Azure Synapse Analytics [工作負載分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 和 [工作負載重要性](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+如需 Azure Synapse Analytics 和平行處理資料倉儲的所有目錄檢視清單，請參閱 [Azure Synapse Analytics 和平行處理資料倉儲目錄的觀點](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。 若要建立工作負載分類器，請參閱 [建立工作負載分類器](../../t-sql/statements/create-workload-classifier-transact-sql.md)。 如需工作負載分類的詳細資訊，請參閱 Azure Synapse Analytics [工作負載分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) 和 [工作負載重要性](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

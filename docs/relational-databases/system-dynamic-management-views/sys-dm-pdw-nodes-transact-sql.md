@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_nodes (Transact-sql) '
-title: sys. dm_pdw_nodes (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_nodes (Transact-sql) '
+title: sys.dm_pdw_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b999f7e10baece4566ebe0dd87b96b92eaabac53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b758dafadc743ffc6c51c6d1c94ab3a5ea597e2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474754"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037681"
 ---
-# <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-sql) 
+# <a name="sysdm_pdw_nodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   保存中所有節點的相關資訊 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] 。 它會針對設備中的每個節點列出一個資料列。  
@@ -35,6 +35,6 @@ ms.locfileid: "88474754"
 |region|**nvarchar(32)**|節點執行所在的區域。|' PDW '、' HDINSIGHT '|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

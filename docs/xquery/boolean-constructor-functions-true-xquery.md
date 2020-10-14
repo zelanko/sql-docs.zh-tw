@@ -1,6 +1,6 @@
 ---
-title: true 函數（XQuery） |Microsoft Docs
-description: 瞭解會傳回布林值 True 的 XQuery 函數 true （）。
+title: true 函數 (XQuery) |Microsoft Docs
+description: '瞭解會傳回布林值 True ( # A1 的 XQuery 函數 true。'
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3661757a2352c5a4a968e58c8676aec609391652
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8dc3582cb34c80f488005f5a2eaf1c6022c5e1be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914637"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035791"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式 - true (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種 **xml** 類型資料行中。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. 使用 true() XQuery 布林函數  
- 下列範例會查詢不具類型的**xml**變數。 如果 "aaa" 是屬性值， **value （）** 方法中的運算式會傳回布林值**true （）** 。 **Xml**資料類型的**value （）** 方法會將布林值轉換成位，並傳回它。  
+ 下列範例會查詢不具類型的 **xml** 變數。 如果 "aaa" 為屬性值，則 **值 ( # B1 ** 方法中的運算式會傳回布林值 **True ( # B3 ** 。 **Xml**資料類型** ( # B1**方法的值會將布林值轉換成位並將其傳回。  
   
 ```  
 DECLARE @x XML  
@@ -48,11 +48,11 @@ go
 -- result = 1  
 ```  
   
- 在下列範例中，查詢是針對具類型的**xml**資料行所指定。 `if`運算式會檢查 <> 元素的具類型布林值，並據以傳回已建立 `ROOT` 的 XML。 本範例將執行下列動作：  
+ 在下列範例中，查詢是針對具類型的 **xml** 資料行所指定。 `if`運算式會檢查 <> 專案的具類型布林值，並據以傳回已建立 `ROOT` 的 XML。 本範例將執行下列動作：  
   
--   建立 XML 架構集合，以定義 `ROOT` xs： boolean 類型的 <> 元素。  
+-   建立 XML 架構集合，該集合會定義 `ROOT` xs： boolean 類型的 <> 元素。  
   
--   使用 XML 架構集合，建立具有具類型**xml**資料行的資料表。  
+-   使用 XML 架構集合，建立具有具類型 **xml** 資料行的資料表。  
   
 -   將 XML 執行個體儲存在資料行中，並查詢它。  
   
@@ -90,6 +90,5 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;XQuery&#41;的布林函式函數](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
-  
+ [&#40;XQuery&#41;的布林函式函數 ](./xquery-functions-against-the-xml-data-type.md)  
   

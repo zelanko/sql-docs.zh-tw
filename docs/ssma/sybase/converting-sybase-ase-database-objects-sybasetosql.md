@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 076f1d8a5f3227d906ddb76b0352a57eb80d4915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66384c27490bbc9d330f5f2d186bad1b4f4b97ee
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492341"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038859"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>將 SAP ASE 資料庫物件轉換 (SybaseToSQL) 
 當您連線到 SAP 調適型 Server Enterprise (ASE) 、連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE sql 並設定專案和資料對應選項之後，您可以將 SAP 自我調整 Server enterprise (ASE) 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql database 物件。  
@@ -154,8 +154,7 @@ ms.locfileid: "88492341"
 -   您可以從遷移中排除物件。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 AZURE Sql 中繼資料瀏覽器和 Sybase 中繼資料瀏覽器中，先清除專案旁的核取方塊，然後再將物件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 azure sql，並從 SAP ASE 遷移資料。  
   
 ## <a name="next-steps"></a>後續步驟  
-遷移程式的下一個步驟是將 [轉換的資料庫物件載入 SQL Server/SQL Azure (SybaseToSQL) ](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)。  
+遷移程式的下一個步驟是將 [轉換的資料庫物件載入 SQL Server/SQL Azure (SybaseToSQL) ](./loading-converted-database-objects-into-sql-server-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 SAP ASE 資料庫移轉至 SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

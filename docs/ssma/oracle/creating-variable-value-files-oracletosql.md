@@ -14,12 +14,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 766bbd6b8908983726a18d5d66bf9700600e66e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b97455172dbed11a8d29168946decca7b3b919e4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468799"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039202"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>建立變數值檔案 (OracleToSQL)
 變數值檔案是一個 XML 檔案，其中包含命令的參數值，例如，通常會從一部伺服器遷移到另一個伺服器的來源或目的地伺服器名稱。 發生大量的資料庫移轉時，系統會在命令列中使用 **-v** 參數，在主腳本檔案中建立並參考用來儲存每個來源伺服器值的多個變數檔案。 這有助於在多個變數檔案中，以變數值來維護一些腳本檔案中的靜態值。  
@@ -92,5 +92,4 @@ ms.locfileid: "88468799"
 操作主控台的下一個步驟是 [建立伺服器連接檔案 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[ (Oracle) 建立伺服器檔案 ](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
-  
+[ (Oracle) 建立伺服器檔案 ](./creating-the-server-connection-files-oracletosql.md)  

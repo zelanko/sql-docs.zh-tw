@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 71c6a40db00734c487ff8de5e97bcd4d7c7b5d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f2d3a53cb12a0d7762137a44cc12ec6f06a5d81
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492267"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036697"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>建立變數值檔案 (SybaseToSQL)
 變數值檔案是一個 XML 檔案，其中包含命令的參數值，例如，通常會從一部伺服器遷移到另一個伺服器的來源或目的地伺服器名稱。 發生大量的資料庫移轉時，系統會在命令列中使用 **-v** 參數，在主腳本檔案中建立並參考用來儲存每個來源伺服器值的多個變數檔案。 這有助於在多個變數檔案中，以變數值來維護一些腳本檔案中的靜態值。  
@@ -94,5 +94,4 @@ ms.locfileid: "88492267"
 操作主控台的下一個步驟是 [建立伺服器連接檔案 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[ (Sybase) 建立伺服器檔案 ](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
-  
+[ (Sybase) 建立伺服器檔案 ](./creating-the-server-connection-files-sybasetosql.md)  

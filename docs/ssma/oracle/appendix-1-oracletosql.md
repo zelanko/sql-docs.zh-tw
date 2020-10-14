@@ -11,17 +11,17 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c9e605f33615fa09b87a3c58353689db9eeecdd7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1b6f9c7dc71bec58dd101f2fa7cb9f30f7f7ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463262"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037381"
 ---
 # <a name="appendix---1-oracletosql"></a>附錄 - 1 (OracleToSQL)
 SSMA 主控台命令列選項的快速流覽：  
   
-|Sl。 否。|參數|必要？|Switch 引數|允許的值|  
+|Sl。 不可以。|參數|必要？|Switch 引數|允許的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/腳本|是|scriptfile|有效的 XML 檔案名。<br /><br />主控台腳本定義檔。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 檔案名。<br /><br />如果腳本檔中使用了變數，則必須指定此檔案。|  
@@ -33,5 +33,4 @@ SSMA 主控台命令列選項的快速流覽：
 |8|-?|否|不適用|不適用|  
   
 ## <a name="see-also"></a>另請參閱  
-[ (Oracle) 執行 SSMA 主控台 ](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[ (Oracle) 執行 SSMA 主控台 ](./executing-the-ssma-console-oracletosql.md)  

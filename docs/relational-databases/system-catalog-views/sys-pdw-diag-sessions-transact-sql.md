@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_diag_sessions (Transact-sql) '
-title: sys. pdw_diag_sessions (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_diag_sessions (Transact-sql) '
+title: sys.pdw_diag_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4615bce79c1a748a76a9af02d1991585e4550e12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8fade6ec60ada411ee78027d01f9616e499f755
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420022"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036741"
 ---
-# <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-sql) 
+# <a name="syspdw_diag_sessions-transact-sql"></a>sys.pdw_diag_sessions (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   保存有關系統上已建立之各種診斷會話的資訊。  
@@ -34,6 +34,6 @@ ms.locfileid: "88420022"
 |**database_id**|**int**|屬於診斷會話範圍的資料庫識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 790431cd6effe4d1b3d21db46325782e05419e4f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: ba671ad6d1d9c39e6b3b0dcaa2dd422d526ccaa0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834194"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035301"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "91834194"
 ## <a name="permissions"></a>權限  
  需要伺服器的 `VIEW SERVER STATE` 權限。  
 
-## <a name="see-also"></a>請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>另請參閱  
+ [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
- ## <a name="next-steps"></a>下一步
+ ## <a name="next-steps"></a>後續步驟
  如需更多開發秘訣，請參閱 [SQL 資料倉儲開發概觀](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。

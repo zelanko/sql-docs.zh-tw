@@ -1,6 +1,6 @@
 ---
-description: 'sys. pdw_health_alerts (Transact-sql) '
-title: sys. pdw_health_alerts (Transact-sql) |Microsoft Docs
+description: 'sys.pdw_health_alerts (Transact-sql) '
+title: sys.pdw_health_alerts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b2da23d973042638f39e52ed7c1173422a97eeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2e265a7905313a988a15fb29de0a8c86b397ac8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475404"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036744"
 ---
-# <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-sql) 
+# <a name="syspdw_health_alerts-transact-sql"></a>sys.pdw_health_alerts (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   儲存可能發生在系統上之不同警示的屬性;這是警示的目錄資料表。  
@@ -26,7 +26,7 @@ ms.locfileid: "88475404"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|警示的唯一識別碼。<br /><br /> 此視圖的索引鍵。|NOT NULL|  
-|component_id|**int**|此警示適用的元件識別碼。 元件是一般的元件識別碼，例如「電源供應」，而不是安裝特有的元件識別碼。 請參閱 [sys. pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
+|component_id|**int**|此警示適用的元件識別碼。 元件是一般的元件識別碼，例如「電源供應」，而不是安裝特有的元件識別碼。 請參閱 [sys.pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
 |alert_name|**nvarchar(255)**|警示的名稱。|NOT NULL|  
 |狀態|**nvarchar(32)**|警示的狀態。|NOT NULL<br /><br /> 可能的值：<br /><br /> 手術<br /><br /> 'NonOperational'<br /><br /> 降級<br /><br /> 沒有|  
 |severity|**nvarchar(32)**|警示的嚴重性。|NOT NULL<br /><br /> 可能的值：<br /><br /> 資訊<br /><br /> 條<br /><br /> 錯誤|  
@@ -37,6 +37,6 @@ ms.locfileid: "88475404"
 |condition_value|**bit**|指出是否允許在系統操作期間發生警示。|NULL<br /><br /> 可能值<br /><br /> 0-不產生警示。<br /><br /> 1-產生警示。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

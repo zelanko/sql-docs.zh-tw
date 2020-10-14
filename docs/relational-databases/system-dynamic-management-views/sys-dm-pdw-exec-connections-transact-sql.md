@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_exec_connections (Transact-sql) '
-title: sys. dm_pdw_exec_connections (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_exec_connections (Transact-sql) '
+title: sys.dm_pdw_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 25b5edb0d1c89042b876fc0cefac278b867fb5ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 507853f50ede1c652e81b24d60121deadad239d3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474756"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035381"
 ---
-# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-sql) 
+# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   傳回有關與這個 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 執行個體建立之連接及每一個連接之詳細資料的資訊。  
@@ -41,8 +41,8 @@ ms.locfileid: "88474756"
   
 | 寄件者 | 收件者 | 關聯性 |
 | ---- | -- | ------------ |
-|dm_pdw_exec_sessions。 session_id|dm_pdw_exec_connections。 session_id|一對一|  
-|dm_pdw_exec_requests。 connection_id|dm_pdw_exec_connections。 connection_id|多對一|  
+|dm_pdw_exec_sessions dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections dm_pdw_exec_connections.session_id|一對一|  
+|dm_pdw_exec_requests dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections dm_pdw_exec_connections.connection_id|多對一|  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  收集查詢自有連接相關資訊的典型查詢。  
@@ -59,7 +59,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

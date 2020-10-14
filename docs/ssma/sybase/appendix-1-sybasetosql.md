@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8feb8a1a7de67ecac01946f025545eb3536d977c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46b1d3bd60a3a2603cb0a317e0d2bbc3a206c3ea
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372524"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038842"
 ---
 # <a name="appendix---1-sybasetosql"></a>附錄 - 1 (SybaseToSQL)
 SSMA 主控台命令列選項的快速流覽：  
   
-|Sl。 否。|參數|必要？|Switch 引數|允許的值|  
+|Sl。 不可以。|參數|必要？|Switch 引數|允許的值|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/腳本|是|scriptfile|有效的 XML 檔案名。<br /><br />主控台腳本定義檔。|  
 |2|-v/variable|否|variablevaluefile|有效的 XML 檔案名。<br /><br />如果腳本檔中使用了變數，則必須指定此檔案。|  
@@ -34,5 +34,4 @@ SSMA 主控台命令列選項的快速流覽：
 |8|-?|否|不適用|不適用|  
   
 ## <a name="see-also"></a>另請參閱  
-[ (Sybase) 執行 SSMA 主控台 ](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[ (Sybase) 執行 SSMA 主控台 ](./executing-the-ssma-console-sybasetosql.md)  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492413"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038271"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
 若要將 MySQL 資料庫遷移至 SQL Server 或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含下列資訊的檔案：  
@@ -54,7 +54,7 @@ SSMA 包含數個設定，可用於轉換和載入資料庫、遷移資料，以
   
 -   如需同步處理至 SQL Server 之設定的相關資訊，請參閱 [&#40;同步處理&#41; &#40;MySQLToSQL&#41;的專案設定 ](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)。  
   
--   如需 GUI 設定的詳細資訊，請參閱 [ (gui 的專案設定)  (SSMA 一般) ](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+-   如需 GUI 設定的詳細資訊，請參閱 [ (gui 的專案設定)  (SSMA 一般) ](../sybase/project-settings-gui-sybasetosql.md)。  
   
 -   如需資料類型對應設定的詳細資訊，請參閱 [&#40;類型對應的專案設定&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
@@ -106,7 +106,7 @@ SSMA 會建立專案檔。
   
 1.  針對顯示 **遺漏中繼資料**狀態的每個資料庫，選取資料庫名稱旁邊的核取方塊。 儲存中繼資料可能需要幾分鐘的時間。 如果您不想在此時儲存中繼資料，請不要選取任何核取方塊。  
   
-2.  按一下 [檔案] 。  
+2.  按一下 [檔案]  。  
   
 SSMA 會剖析 MySQL 架構，並將中繼資料儲存至專案檔。  
   
@@ -137,4 +137,3 @@ SSMA 會剖析 MySQL 架構，並將中繼資料儲存至專案檔。
 [將 MySQL 資料庫遷移至 SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [連接至 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [連接至 Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-  

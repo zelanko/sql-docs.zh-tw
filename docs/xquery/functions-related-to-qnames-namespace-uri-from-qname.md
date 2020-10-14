@@ -1,6 +1,6 @@
 ---
-title: 命名空間-從-QName （XQuery）開始的 uri |Microsoft Docs
-description: 瞭解如何使用命名空間-從 QName 取得的 uri 函式來抓取 QName 的命名空間 URI。
+title: 命名空間-uri-從 QName (XQuery) |Microsoft Docs
+description: 瞭解如何使用命名空間 uri-自 QName 函式來取出 QName 的命名空間 URI。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91174fa3ef113a7944ef02bb62e7088acd344f3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 035b92b719431b5a9b74f951f20d51911a41d59c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720033"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035770"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>與 QNames 相關的函式 - namespace-uri-from-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  傳回字串，代表 *$arg*所指定之 QName 的命名空間 uri。 如果 *$arg*是空的序列，則結果會是空的序列。  
+  傳回字串，表示 *$arg*所指定之 QName 的命名空間 uri。 如果 *$arg* 是空的序列，則結果為空的序列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,17 +39,16 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  是傳回其命名空間 URI 的 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種 **xml** 類型資料行中。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. 從 QName 擷取命名空間 URI  
- 如需實用範例，請參閱[從 QName &#40;XQuery&#41;的本機名稱](../xquery/functions-related-to-qnames-local-name-from-qname.md)。  
+ 如需實用的範例，請參閱 [本機名稱-從 QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)。  
   
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Namespace-uri from-QName （）** 函數會傳回 xs： string 的實例，而不是 Xs： anyURI。  
+-   **命名空間-uri-從 QName ( # B1**函數會傳回 xs： string 的實例，而非 Xs： anyURI。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 QNames &#40;XQuery&#41;相關的函數](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [QNames &#40;XQuery&#41;的相關函數 ](./functions-related-to-qnames-expanded-qname.md)  
   

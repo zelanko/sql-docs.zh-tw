@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3b71f795855c8edecf5fb4cfc0d752181257310f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ec67a6dd1346efc4199d3ebec22589ae8ee741b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418264"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036612"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您現在可以在命令列透過主控台應用程式存取 Migration Assistant (SSMA) ，Sybase 調適型 Server Enterprise (ASE) 的版本。 腳本檔案會形成應用程式的輸入，以執行命令。 作為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
@@ -38,5 +38,4 @@ ms.locfileid: "88418264"
 |[針對 &#40;SybaseToSQL&#41;進行疑難排解 ](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供有關修正遷移問題的簡短資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
-[消費者入門適用于 Sybase 主控台的 SSMA (SybaseToSQL) ](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
-  
+[消費者入門適用于 Sybase 主控台的 SSMA (SybaseToSQL) ](./getting-started-with-ssma-for-sybase-console-sybasetosql.md)  

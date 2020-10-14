@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_pdw_node_status (Transact-sql) '
-title: sys. dm_pdw_node_status (Transact-sql) |Microsoft Docs
+description: 'sys.dm_pdw_node_status (Transact-sql) '
+title: sys.dm_pdw_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbe3aae7c707d836bafff703c8e86adffe4d1cd9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 267b2aa14e85f77af91a0cf1a5640a16ee158215
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531075"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035311"
 ---
-# <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-sql) 
+# <a name="sysdm_pdw_node_status-transact-sql"></a>sys.dm_pdw_node_status (Transact-sql) 
 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  保存有關 [sys. dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 有關所有設備節點的效能和狀態的額外資訊 (。 它會針對設備中的每個節點列出一個資料列。  
+  保存有關所有設備節點的效能和狀態 ([sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 的額外資訊。 它會針對設備中的每個節點列出一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
@@ -44,6 +44,6 @@ ms.locfileid: "89531075"
 |error_id|**Nvarchar (36) **|在此節點上發生最後一個錯誤的唯一識別碼。||  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

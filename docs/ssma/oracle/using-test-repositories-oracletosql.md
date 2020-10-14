@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320074"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035137"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用測試存放庫 (OracleToSQL)
 SSMA 測試存放庫會儲存 SSMA 測試人員測試案例和測試結果，以供稍後使用。 存放庫資料會儲存在**ssmatesterdb**資料庫的架構**ssma_oracle_utilities**的 SQL Server 資料表**TestCaseRepository**和**RunTestCaseResultRepository**中。  
@@ -50,7 +50,7 @@ SSMA 測試存放庫會儲存 SSMA 測試人員測試案例和測試結果，以
   
 -   按一下 [ **編輯** ] 按鈕，執行測試案例嚮導並變更選取的測試。  
   
--   按一下 [ **執行** ] 按鈕，開啟 [執行中的 [測試案例 (OracleToSQL) ](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) ] 對話方塊，並執行選取的測試。  
+-   按一下 [ **執行** ] 按鈕，開啟 [執行中的 [測試案例 (OracleToSQL) ](./running-test-cases-oracletosql.md) ] 對話方塊，並執行選取的測試。  
   
 ## <a name="test-results-repository"></a>測試結果存放庫  
 您可以在 [**測試案例**] 視窗之儲存機制的 [**測試結果**] 頁面上，查看測試結果存放庫。 按一下 [**測試人員**] 功能表中的 [**測試結果**] 來開啟它。  
@@ -78,4 +78,3 @@ SSMA 測試存放庫會儲存 SSMA 測試人員測試案例和測試結果，以
 ## <a name="see-also"></a>另請參閱  
 [執行測試案例 &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [測試遷移的資料庫物件 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  
