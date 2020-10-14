@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ba671ad6d1d9c39e6b3b0dcaa2dd422d526ccaa0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: f03d7b8c8b840c86cd462381d24ada70ded15147
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035301"
+ms.locfileid: "92059468"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "92035301"
  [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>後續步驟
- 如需更多開發秘訣，請參閱 [SQL 資料倉儲開發概觀](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。
+ 如需更多開發秘訣，請參閱 [Azure Synapse Analytics 開發總覽](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8546b7b345dfdab44674c9d6960389ffed133329
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 985c1eff05d5b1d3323d8b99818a48258b6c5ed4
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991229"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059076"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>使用 ADO 物件的 ADO 程式設計人員指南
 本檔概述如何使用 ADO 物件來處理來自各種資料來源的資料。 首先，簡介會摘要說明安裝、使用和轉散發 ADO 元件的新功能和需求。 下一節將討論各種類型 ADO 物件的使用。 最後，附錄會討論各種 Microsoft 提供的資料和服務提供者、錯誤訊息，以及有關如何在多個程式設計語言中使用 ADO 的秘訣，以及範例和詞彙。
@@ -27,7 +27,7 @@ ms.locfileid: "88991229"
 
 -   [簡介](./ado-introduction.md)
 
--   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
+-   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15&preserve-view=true)
 
 -   [ (RDS) 的遠端資料服務 ](./remote-data-service/remote-data-service-rds.md)
 
@@ -35,4 +35,4 @@ ms.locfileid: "88991229"
 
 -   [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [附錄](./appendixes/appendix-a-providers.md?view=sql-server-ver15)
+-   [附錄](./appendixes/appendix-a-providers.md?view=sql-server-ver15&preserve-view=true)

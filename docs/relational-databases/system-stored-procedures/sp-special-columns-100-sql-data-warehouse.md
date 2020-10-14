@@ -14,12 +14,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 03397db88a1a99e2fbf661662311537671bfa862
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987808"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059446"
 ---
 # <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -101,7 +101,7 @@ EXEC sp_special_columns_100 @table_name = 'FactFinance';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲預存程式](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+ [Azure Synapse Analytics 預存程式](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

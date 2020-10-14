@@ -1,5 +1,5 @@
 ---
-description: 'sp_pdw_add_network_credentials (SQL 資料倉儲) '
+description: 'sp_pdw_add_network_credentials (Azure Synapse Analytics) '
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a91960dc4dad3909e18003309bcd7f12f1461b67
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004541"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059341"
 ---
-# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL 資料倉儲) 
+# <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   這會將網路認證儲存在中 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，並將它們與伺服器產生關聯。 例如，您可以使用這個預存程式來授與 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 適當的讀取/寫入權限，以便在目標伺服器上執行資料庫備份和還原作業，或建立用於 TDE 的憑證備份。  
@@ -80,7 +80,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  若要透過自動程式執行資料庫備份，請務必使用備份伺服器的「不會」 IP 位址。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_pdw_remove_network_credentials &#40;SQL 資料倉儲&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

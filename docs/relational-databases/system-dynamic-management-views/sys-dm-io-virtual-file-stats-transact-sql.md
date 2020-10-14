@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005620"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059616"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|資料庫名稱。</br></br>若為 SQL 資料倉儲，這是儲存在 pdw_node_id 所識別之節點上的資料庫名稱。 每個節點都有一個具有13個檔案的 tempdb 資料庫。 每個節點在每個散發中也都有一個資料庫，而且每個散發資料庫都有5個檔案。 例如，如果每個節點都包含4個散發，結果會顯示每個 pdw_node_id 20 個散發資料庫檔案。 
+|**database_name**|**sysname**|資料庫名稱。</br></br>針對 Azure Synapse Analytics，這是 pdw_node_id 所識別之節點上儲存的資料庫名稱。 每個節點都有一個具有13個檔案的 tempdb 資料庫。 每個節點在每個散發中也都有一個資料庫，而且每個散發資料庫都有5個檔案。 例如，如果每個節點都包含4個散發，結果會顯示每個 pdw_node_id 20 個散發資料庫檔案。 
 |**database_id**|**smallint**|資料庫的識別碼。|  
 |**file_id**|**smallint**|檔案的識別碼。|  
 |**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型為**int** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  

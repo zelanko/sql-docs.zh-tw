@@ -13,19 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037709"
+ms.locfileid: "92059516"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) 
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 當查詢正在執行時，監視即時資料倉儲查詢進度。   
   
-## <a name="table-returned"></a>傳回的資料表  
+## <a name="table-returned"></a>傳回的資料表
+  
 傳回的計數器是以每個執行緒的每個運算子為基礎。 結果是動態的，且不符合現有選項的結果，例如 `SET STATISTICS XML ON` 在查詢完成時只會建立輸出。  
   
 |資料行名稱|資料類型|描述|  
@@ -68,15 +70,18 @@ ms.locfileid: "92037709"
 |actual_read_row_count|**bigint**|套用剩餘的述詞之前，由運算子讀取的資料列數目。| 
 |estimated_read_row_count|**bigint**|**適用于：** 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 開始。 <br/>在套用剩餘的述詞之前，要由運算子讀取的資料列數目。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
+
 [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15)中的相同備註也適用。  
 
 ## <a name="permissions"></a>權限  
  需要伺服器的 `VIEW SERVER STATE` 權限。  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>後續步驟
- 如需更多開發秘訣，請參閱 [SQL 資料倉儲開發概觀](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)。
+ ## <a name="next-steps"></a>後續步驟 
+
+Azure Synapse Analytics 開發總覽] (/azure/sql-data-warehouse/sql-data-warehouse-overview-develop) 。
