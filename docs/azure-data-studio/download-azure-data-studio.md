@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 9/30/2020
-ms.openlocfilehash: 2e8d8175daebc99cd414e9deef4bb8692f4de833
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 0d318fedc053c4d01db2fc192375c499daa4573d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589317"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987837"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -178,7 +178,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
 
 ## <a name="supported-sql-offerings"></a>支援的 SQL 供應項目
 
-- 此版本的 Azure Data Studio 適用於所有 [SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援版本](https://support.microsoft.com/lifecycle?C2=1044)，並提供支援以使用 Azure SQL Database 和 Azure SQL 資料倉儲中的最新雲端功能。 Azure Data Studio 也提供 Azure SQL 受控執行個體的預覽支援。
+- 此版本的 Azure Data Studio 適用所有 [SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援版本](https://support.microsoft.com/lifecycle?C2=1044)，並支援使用 Azure SQL Database 及 Azure Synapse Analytic 中最新的雲端功能。 Azure Data Studio 也提供 Azure SQL 受控執行個體的預覽支援。
 
 ## <a name="upgrade-from-sql-operations-studio"></a>從 SQL Operations Studio 升級
 

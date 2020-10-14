@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: dfa93f660ca6e5a70dc81da3be4cbd25834b28d8
-  ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+  ms.openlocfilehash: 66daa6925947d55676da896c3f69e6eec7babf61
+  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/25/2020
-  ms.locfileid: "91364025"
+  ms.lasthandoff: 10/13/2020
+  ms.locfileid: "91987816"
 landingContent:
 - title: 關於 Azure Data Studio
   linkLists:
@@ -37,7 +37,7 @@ landingContent:
       url: quickstart-sql-server.md
     - text: 連線及查詢 Azure SQL 資料庫
       url: quickstart-sql-database.md
-    - text: 連線及查詢 Azure SQL 資料倉儲中的資料
+    - text: 連線及查詢 Azure Synapse Analytics 中的資料
       url: quickstart-sql-dw.md
     - text: 連線及查詢 PostgreSQL 中的資料
       url: quickstart-postgres.md
