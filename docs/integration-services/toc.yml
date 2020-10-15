@@ -1560,7 +1560,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: 將資料載入 SQL Server 或 SQL Database
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: 將資料載入 SQL 資料倉儲中
+- name: 將資料載入 Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: 異動資料擷取
   items:

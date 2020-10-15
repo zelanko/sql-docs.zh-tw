@@ -14,7 +14,7 @@
       href: quickstart-sql-server.md
     - name: 連線與查詢 Azure SQL Database
       href: quickstart-sql-database.md
-    - name: 連線與查詢 Azure SQL 資料倉儲
+    - name: 連線並查詢 Azure Synapse Analytics
       href: quickstart-sql-dw.md
     - name: 連線與查詢 PostgreSQL
       href: quickstart-postgres.md
