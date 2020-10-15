@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967489"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987254"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」  為
 - 新的「資料庫一致性檢查程式 (DBCC)」  會在內部執行，以偵測可能的資料損毀問題。
 - 可即時查詢外部資料而不需事先匯入的「直接查詢」  功能，現已支援更多資料來源，包括 Azure SQL、Oracle 和 Teradata。 
 - 許多新的「DAX (資料存取運算式) 函式」  。
-- 新的 **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** \(機器翻譯\) 命名空間，可管理表格式模式執行個體和模型。 
-- [Analysis Services 管理物件 (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) \(機器翻譯\) 已經重構以包含第二個組件 **Microsoft.AnalysisServices.Core.dll**。
+- 新的 **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** \(機器翻譯\) 命名空間，可管理表格式模式執行個體和模型。 
+- [Analysis Services 管理物件 (AMO)](/dotnet/api/) \(機器翻譯\) 已經重構以包含第二個組件 **Microsoft.AnalysisServices.Core.dll**。
 
-請參閱 [Analysis Services 引擎 (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)。 
+請參閱 [Analysis Services 引擎 (SSAS)](/analysis-services/what-s-new-in-analysis-services)。 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - 支援「Always On 可用性群組」 
@@ -97,13 +97,13 @@ Microsoft 在此版本中徹底翻新了 Reporting Services。
 請參閱 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) \(機器翻譯\)。
 
 ## <a name="next-steps"></a>後續步驟   
-- [SQL Server 安裝程式](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [SQL Server 安裝程式](../database-engine/install-windows/install-sql-server.md)   
 - [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 資料工作表](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [SQL Server 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)
+- [SQL Server 版本支援的功能](./editions-and-components-of-sql-server-2016.md)
 - [安裝 SQL Server 2016 的硬體與軟體需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [從安裝精靈安裝 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [安裝程式和服務安裝](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [安裝程式和服務安裝](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [新的 SQL PowerShell 模組](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

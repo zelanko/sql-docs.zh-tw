@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 522d18c5eca3f9200f69b68e3f269ce01212a608
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d1a544f300e6e49e5355294a1e0f99515482113
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934227"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934644"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934227"
   
 ## <a name="creating-a-reporting-services-service-application"></a>建立 Reporting Services 服務應用程式
 
- 您可以使用 SharePoint 管理中心或 PowerShell 指令碼建立 Reporting Services 服務應用程式。 如需使用 SharePoint 管理中心的詳細資訊，請參閱[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)中的＜建立 Reporting Services 服務應用程式＞一節。 如需建立服務應用程式的範例 PowerShell 指令碼，請參閱本主題稍後的＜PowerShell＞一節。  
+ 您可以使用 SharePoint 管理中心或 PowerShell 指令碼建立 Reporting Services 服務應用程式。 如需使用 SharePoint 管理中心的詳細資訊，請參閱[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)中的＜建立 Reporting Services 服務應用程式＞一節。 如需建立服務應用程式的範例 PowerShell 指令碼，請參閱本主題稍後的＜PowerShell＞一節。  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>修改服務應用程式與 Proxy 群組的關聯
 

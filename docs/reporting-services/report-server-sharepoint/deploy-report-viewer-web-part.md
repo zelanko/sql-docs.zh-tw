@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767024"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933557"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -53,7 +53,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
 1. 在 SharePoint 伺服器上，使用 [以系統管理員身分執行] 選項開啟 SharePoint 管理介面。
 
-2. 執行 [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) 以新增伺服器陣列解決方案。
+2. 執行 [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) 以新增伺服器陣列解決方案。
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
     此指令程式會傳回方案的名稱、方案識別碼及 Deployed=False。 在下個步驟中，您將部署方案。
 
-3. 執行 [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) Cmdlet 以部署伺服器陣列解決方案。
+3. 執行 [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) Cmdlet 以部署伺服器陣列解決方案。
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
 6. 開啟每個網站並按一下 [網站動作]，為其他網站集合重複執行。
 
-(選擇性) 您也可以使用 [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx) Cmdlet，在所有網站上使用 PowerShell 啟用此功能。
+(選擇性) 您也可以使用 [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature) Cmdlet，在所有網站上使用 PowerShell 啟用此功能。
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

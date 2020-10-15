@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373164"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987244"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
 
@@ -159,17 +159,17 @@ ms.locfileid: "88373164"
 
 - 2012 及較舊版本：&nbsp; SQL Server 2012 及較舊的版本並未使用版本設定系統。
     - **SQL Server - 舊版**的特殊 moniker 旨在隱藏幾乎所有文章。 少見的例外狀況是舊版客戶可能一次只需要幾篇文章。
-    - [SQL Server 的先前版本，2012-2005](../toc/previous-versions-sql-server.md)
+    - [SQL Server 的先前版本，2012-2005](./previous-versions-sql-server.md)
 
 - 2014：&nbsp; 版本設定系統已為 SQL Server 2014 實作一半。 您可以在版本設定控制項中選擇 SQL Server 2014，它會正常運作。 但是在內部，2014 的檔案仍僅專屬於 2014，也就是和 2008 的檔案僅專屬於 2008 相同。
-    - [SQL Server 2014 離線文件](/sql/sql-server/sql-server-offline-documentation)
+    - [SQL Server 2014 離線文件](./sql-server-offline-documentation.md)
 
 - 2016 及更新版本：&nbsp; 版本設定系統已為 SQL Server 2016 及更新版本完全實作。
-    - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
+    - [歡迎使用 SQL Server 文件 2016 及更新版本](./index.yml?preserve-view=true&view=sql-server-2016)
     - [SQL Server 2016 離線文件](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[SQL Server 的先前版本，2014-2005](../toc/previous-versions-sql-server.md)  
+[SQL Server 的先前版本，2014-2005](./previous-versions-sql-server.md)  
 [SQL Server 文件導覽指南](sql-docs-navigation-guide.md)  
-[如何參與 SQL Server 文件](sql-server-docs-contribute.md)  
+[如何參與 SQL Server 文件](sql-server-docs-contribute.md)

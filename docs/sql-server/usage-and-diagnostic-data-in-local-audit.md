@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362506"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987270"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用狀況和診斷資料收集的本機稽核 (CEIP)
 
@@ -333,7 +333,7 @@ DBA 必須自行管理目錄的檔案清除工作，以避免耗用太多磁碟�
 
 **是否有用戶端或工具，可用於讀取此 JSON 輸出？**
 可以使用 [記事本]、Visual Studio 或您選擇的任何 JSON 讀取器來讀取輸出。
-或者，您可以如下所示，在 SQL Server 執行個體中讀取 JSON 檔案並分析資料。 如需如何在 SQL Server 中讀取 JSON 檔案的詳細資訊，請瀏覽 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 將 JSON 檔案匯入到 SQL Server)。
+或者，您可以如下所示，在 SQL Server 執行個體中讀取 JSON 檔案並分析資料。 如需如何在 SQL Server 中讀取 JSON 檔案的詳細資訊，請瀏覽 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)(使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 將 JSON 檔案匯入到 SQL Server)。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

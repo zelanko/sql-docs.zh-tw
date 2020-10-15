@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396107"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986624"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理  
 有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 此文章中的方式包括停用訂用帳戶以中斷資料來源連線。 並非所有的方法都可以使用這兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。 下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
@@ -60,7 +60,7 @@ ms.locfileid: "87396107"
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：**使用 Windows PowerShell 停用單一訂用帳戶：** 使用下列 PowerShell 指令碼停用特定的訂用帳戶。 更新指令碼中的伺服器名稱和訂用帳戶識別碼。  
+![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：**使用 Windows PowerShell 停用單一訂用帳戶：** 使用下列 PowerShell 指令碼停用特定的訂用帳戶。 更新指令碼中的伺服器名稱和訂用帳戶識別碼。  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有停用的訂用帳戶：** 使用下列 PowerShell 指令碼列出目前原生模式報表伺服器上所有已停用的訂用帳戶。 更新伺服器名稱。  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有停用的訂用帳戶：** 使用下列 PowerShell 指令碼列出目前原生模式報表伺服器上所有已停用的訂用帳戶。 更新伺服器名稱。  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 啟用所有停用的訂用帳戶：** 使用下列 PowerShell 指令碼啟用所有目前已停用的訂用帳戶。 更新伺服器名稱。  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 啟用所有停用的訂用帳戶：** 使用下列 PowerShell 指令碼啟用所有目前已停用的訂用帳戶。 更新伺服器名稱。  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell「停用」所有訂用帳戶：** 使用下列 PowerShell 指令碼列出要停用的「所有」  訂用帳戶。  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell「停用」所有訂用帳戶：** 使用下列 PowerShell 指令碼列出要停用的「所有」  訂用帳戶。  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 暫停共用排程  
  如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。  
   
--   **SharePoint 模式：** ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")：在 [網站設定]  中，選取 [管理共用排程]  。 選取排程，然後按一下 [暫停選取的排程]  。  
+-   **SharePoint 模式：** ![SharePoint 設定](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")：在 [網站設定]  中，選取 [管理共用排程]  。 選取排程，然後按一下 [暫停選取的排程]  。  
   
 -   **原生模式：** 在入口網站中，從入口網站畫面頂端的功能表列中，選取 [設定]  按鈕 ![[設定] 按鈕](media/ssrs-portal-settings-gear.png)，然後從下拉式功能表中選取 [網站設定]  。 選取 [排程]  索引標籤，以顯示 [排程] 頁面。 選取您想要啟用或停用的排程旁核取方塊，然後分別選取 [啟用]  或 [停用]  按鈕來執行所需的動作。 [狀態] 欄會據此更新為「已停用」或「已啟用」。  
   
@@ -177,4 +177,3 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [安全性實體項目](../../reporting-services/security/securable-items.md) 
-  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934277"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934711"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934277"
 
  如需有關安裝及設定的詳細資訊，請參閱以下主題：  
   
--   [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)。  
+-   [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)。  
   
 -   [將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "87934277"
   
 - 所有源自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式頁面、工具、錯誤、警告和訊息，都會由 Reporting Services 執行個體所使用的語言以其中一種 Reporting Services 語言來顯示。  
   
-- 您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](https://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
+- 您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
   
 - SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
   
@@ -129,8 +129,8 @@ ms.locfileid: "87934277"
   
 |**Task**|**連結**|  
 |--------------|--------------|  
-|安裝和設定 SharePoint 模式之 Reporting Services 的詳細步驟。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)和[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
-|新增額外的報表伺服器，藉以向外延展您的 Reporting Services SharePoint 部署。|[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和 [SharePoint 中 SQL Server BI 功能的部署拓撲](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。|  
+|安裝和設定 SharePoint 模式之 Reporting Services 的詳細步驟。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)和[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
+|新增額外的報表伺服器，藉以向外延展您的 Reporting Services SharePoint 部署。|[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和 [SharePoint 中 SQL Server BI 功能的部署拓撲](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130))。|  
 |新增針對檢視和報表項目安裝之 Reporting Services 元件的其他 SharePoint Web 前端。|[將其他 Reporting Services Web 前端新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |在 SharePoint 內設定報表伺服器的電子郵件。|[設定 Reporting Services 服務應用程式的電子郵件](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |此版本的最新資訊位於 TechNet Wiki 上。|[SQL Server 2012 Reporting Services 提示、祕訣和疑難排解](https://go.microsoft.com/fwlink/?LinkId=221297)。|  
@@ -138,6 +138,6 @@ ms.locfileid: "87934277"
 ## <a name="next-steps"></a>後續步驟
 
 [安裝或解除安裝適用於 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
-[SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
+[SharePoint 網站上的報表檢視器 Web 組件](./report-viewer-web-part-sharepoint-site.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

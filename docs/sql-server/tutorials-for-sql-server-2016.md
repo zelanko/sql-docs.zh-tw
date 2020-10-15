@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4709bbbfa17cdf33cfd13a20486a213fcc5a05
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 45195437003088ea0be588f69d1c98329fb37cc9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934237"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987304"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -21,28 +21,28 @@ ms.locfileid: "87934237"
      
 -   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。    
 -   若要下載 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表搭配 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 教學課程使用，請前往 [SQL Server 2012 的 Power View 範例](https://go.microsoft.com/fwlink/?LinkId=220734)。  
-- 查看 [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
+- 查看 [sql-server-samples](../samples/wide-world-importers-what-is.md) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
 
  
 ## <a name="current-tutorials"></a>目前的教學課程  
   
 |技術|描述|  
 |--------------|---------------|  
-|[Analysis Services 教學課程 &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
+|[Analysis Services 教學課程 &#40;SSAS&#41;](/analysis-services/analysis-services-tutorials-ssas)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
 |[Database Engine 教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  
 |[企業資訊管理教學課程](https://wiki.scn.sap.com/wiki/display/EIM/EIM+Tutorials)|了解如何使用 Microsoft EIM 技術管理企業中的資訊。|  
 |[Integration Services 教學課程](../integration-services/integration-services-tutorials.md)|了解如何建立及部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。|  
 |[複寫教學課程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來設定及執行複寫拓撲。|  
 |[Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何建立基本報表和訂閱。|  
-|[SQL Server Machine Learning 教學課程](../machine-learning/tutorials/sql-server-r-tutorials.md)|了解如何使用 R 或 Python 處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料。 從 [!INCLUDE[tsql](../includes/tsql-md.md)] 執行 R 或 Python 指令碼。|  
+|[SQL Server Machine Learning 教學課程](../machine-learning/tutorials/r-tutorials.md)|了解如何使用 R 或 Python 處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料。 從 [!INCLUDE[tsql](../includes/tsql-md.md)] 執行 R 或 Python 指令碼。|  
   
  ## <a name="previously-published-tutorials"></a>先前發行的教學課程 
   
  - [適用於 SQL Server 2014 的教學課程](https://www.quackit.com/sql_server/sql_server_2014/tutorial/)  
   
- - [適用於 SQL Server 2012 的教學課程](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
+ - [適用於 SQL Server 2012 的教學課程](/previous-versions/sql/sql-server-2012/hh231699(v=sql.110))  
   
- - [適用於 SQL Server 2008 R2 的教學課程](https://msdn.microsoft.com/library/ms167593.aspx)   
+ - [適用於 SQL Server 2008 R2 的教學課程](/previous-versions/sql/sql-server-2008-r2/ms167593(v=sql.105))   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

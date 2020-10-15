@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b0546f18d5026caf7e0a141eb58bd62efa2188
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497141"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034869"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88497141"
 > 若要建立全文檢索索引，您必須先對使用外部工具的資料庫建立全文檢索，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Enterprise Manager。  
 > 
 > [!NOTE]
-> 並非每個 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
+> 並非每個 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 ## <a name="options"></a>選項  
 **選取的全文檢索索引**  
@@ -95,6 +95,5 @@ ms.locfileid: "88497141"
 顯示這個資料庫中擁有唯一單一資料行索引的所有資料行名稱的清單。 這些資料行可用來建立全文檢索索引。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用全文檢索索引精靈](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
-[CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
-  
+[使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)  
+[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  

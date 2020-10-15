@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b6618f89ab0bdf31ef71e779a3d69fe675d5e2d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4e8aca7775191a5a4b0ea6bf1e4269ca2a4b2ea4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245725"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987484"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services 回溯相容性
 了解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的行為變更。 這涵蓋不能再使用或已排程在未來版本中移除的功能。
@@ -36,6 +36,5 @@ ms.locfileid: "87245725"
 |[SQL Server 2016 中的 SQL Server Reporting Services 行為變更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中已變更的功能。|  
   
 ## <a name="see-also"></a>另請參閱  
- [回溯相容性 | Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a) \(機器翻譯\)  
-  
+ [回溯相容性 | Analysis Services](/analysis-services/analysis-services-backward-compatibility?viewFallbackFrom=sql-server-ver15) \(機器翻譯\)  
   

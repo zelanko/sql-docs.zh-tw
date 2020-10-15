@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0197c453f2eaeda872eac7ec639fdb56eb7545ce
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902300"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986972"
 ---
 # <a name="planning-a-sql-server-installation"></a>規劃 SQL Server 安裝
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85902300"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的這一節將說明如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
   
 ## <a name="see-also"></a>另請參閱  
- [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [高可用性解決方案 &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [安裝容錯移轉叢集之前](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
- [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)

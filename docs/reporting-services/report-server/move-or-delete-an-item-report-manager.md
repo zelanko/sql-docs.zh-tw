@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3b615a45df3d9e45338514423700a706980eee0
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c02d85c3230502f3360039b132e8328e40d06d28
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84535496"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987154"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
   您發行至報表伺服器的報表和報表相關項目會儲存在資料夾中。 您可以將項目移至不同的資料夾，報表伺服器會自動維護這些項目的參考。 刪除某個項目之前，請考慮是否有其他項目相依於該項目。  
@@ -40,7 +40,7 @@ ms.locfileid: "84535496"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>若要從內容頁面中移動項目  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../web-portal-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要移動的項目。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "84535496"
  或者，您可以巡覽至要移動的物件、按一下 [屬性]，然後按一下頁面頂端的 [移動]。  
   
 ## <a name="delete-an-item"></a>刪除項目  
- 刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找某個項目的相依項目，請參閱[相依項目頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e)。  
+ 刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找某個項目的相依項目，請參閱[相依項目頁面 &#40;報表管理員&#41;](../web-portal-ssrs-native-mode.md)。  
   
 #### <a name="to-delete-a-report-or-item"></a>若要刪除報表或項目  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../web-portal-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要刪除的項目。  
   
@@ -72,7 +72,6 @@ ms.locfileid: "84535496"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [內容頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [內容頁面 &#40;報表管理員&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

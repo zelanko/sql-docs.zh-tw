@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 276e6e9f1ad326b0b3930d729fe233f2e4cbb7c6
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: c310b902889b8dc78b81609439f09ba2d6e4beb7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255620"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934893"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>運算式中的運算子 (報表產生器及 SSRS)
   運算子是一個符號，代表套用至運算式中一個或多個詞彙的動作。 在運算式中支援下列的運算子類別：算術、比較、串連、邏輯或位元，以及位元移位。  
@@ -78,10 +78,9 @@ ms.locfileid: "84255620"
 |>>|執行位元模式的算術右移位。|  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式對話方塊](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [運算式對話方塊](/previous-versions/sql/)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [運算式對話方塊 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [運算式對話方塊 &#40;報表產生器&#41;](./expressions-report-builder-and-ssrs.md)  
   

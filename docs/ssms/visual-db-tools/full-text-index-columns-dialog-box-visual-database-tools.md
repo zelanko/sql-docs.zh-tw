@@ -13,12 +13,12 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3af68e931a6165389f5200d07b8920dc33aadb36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4670e9b18ede820b703d824f87878de24e576fc3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479985"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034877"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +40,9 @@ ms.locfileid: "88479985"
 列出可用的語言。 從下拉式清單選擇適合您資料行資料的語言。 例如，如果您使用英文作業系統，但您要索引含有德文文字的資料行，則請從下拉式清單中選擇 [德文]，以提升索引的效能。  
   
 **統計語意**  
-選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](../../relational-databases/search/semantic-search-sql-server.md)。  
   
 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言]**** 之前選取 [統計語意]****，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
   
 ## <a name="see-also"></a>另請參閱  
 [全文檢索索引對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
-  

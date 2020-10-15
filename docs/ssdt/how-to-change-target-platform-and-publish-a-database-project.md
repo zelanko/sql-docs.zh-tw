@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942464"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987214"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：變更目標平台及發佈資料庫專案
 
@@ -43,7 +43,7 @@ SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤
   
 3.  請注意，下列錯誤顯示在 [錯誤清單]**** 窗格中：SQL70015: SQL Azure 不支援 '檔案群組參考和資料分割配置'。  
   
-    SSDT 會自動根據目標平台來驗證指令碼。 在這種情況下，由於 SQL Azure 不支援檔案群組，SSDT 傳回錯誤。 如需在 SQL Azure 中不支援的 Transact\-SQL 陳述式清單，請參閱[部分支援的 Transact-SQL 陳述式 (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)。  
+    SSDT 會自動根據目標平台來驗證指令碼。 在這種情況下，由於 SQL Azure 不支援檔案群組，SSDT 傳回錯誤。 如需在 SQL Azure 中不支援的 Transact\-SQL 陳述式清單，請參閱[部分支援的 Transact-SQL 陳述式 (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100))。  
   
 4.  移除 `ON` 子句。 請注意，該錯誤隨即從 [錯誤清單] 中消失。  
   
@@ -68,4 +68,3 @@ SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤
 **指定目標平台為 Microsoft SQL Server 2012 的專案可能會與 SQL Server 2008 產生相容性問題**    如果這類專案包含 Microsoft SQL Server 2012 中引入的實體 (例如序列物件)，則發行作業將會失敗。  
   
 如果物件述詞在新建立的全文檢索索引上使用 **CONTAINS** 或 **FREETEXT**，且使用了異動指令碼，則部署將會失敗。 如果在部署期間啟用了 [包括異動指令碼] 的選項，則程序和檢視表會定義在交易內部，而全文檢索索引會定義在交易外部 (位於部署指令碼的結尾)。 由於指令碼的這種排序次序，所以系統將無法根據全文檢索索引解析使用 CONTAINS 或 FREETEXT 的程序或檢視表，因而產生部署錯誤。  
-  

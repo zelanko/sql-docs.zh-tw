@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893922"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987534"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：從 Team Foundation Build 執行 SQL Server 單元測試
 
@@ -23,15 +23,15 @@ ms.locfileid: "85893922"
   
 -   [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [操作說明：在建置應用程式之後設定和執行已排定的測試](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) \(機器翻譯\)  
+-   [操作說明：在建置應用程式之後設定和執行已排定的測試](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100)) \(機器翻譯\)  
   
--   [建立基本組建定義](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [建立基本組建定義](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 使用這些程序之前，您必須先執行下列工作來設定工作環境：  
   
 -   安裝 Team Foundation Build 和 Team Foundation 版本控制。 您或許需要在不同的電腦上安裝 Team Foundation Build 和 Team Foundation 版本控制。  
   
--   將 MicrosoftSQL Server Data Tools Build Utilities 安裝在與 Team Foundation Build 相同的電腦上。 若要安裝 SQL Server Data Tools Build Utilities，請先執行系統管理安裝點。 如需有關系統管理安裝點的詳細資訊，請參閱[安裝 SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md)。 然後從用於管理安裝點的位置 (/location)，將 SSDTBuildUtilties.msi 安裝到組建伺服器。  
+-   將 MicrosoftSQL Server Data Tools Build Utilities 安裝在與 Team Foundation Build 相同的電腦上。 若要安裝 SQL Server Data Tools Build Utilities，請先執行系統管理安裝點。 如需有關系統管理安裝點的詳細資訊，請參閱[安裝 SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md)。 然後從用於管理安裝點的位置 (/location)，將 SSDTBuildUtilties.msi 安裝到組建伺服器。  
   
 -   連線到 Visual Studio Team Foundation Server 的執行個體。  
   
@@ -215,22 +215,22 @@ ms.locfileid: "85893922"
   
 1.  連接到執行 Team Foundation Server 的電腦。  
   
-    如需詳細資訊，請參閱[使用原始檔控制總管](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)。  
+    如需詳細資訊，請參閱[使用原始檔控制總管](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100))。  
   
 2.  如果您的方案原本不在原始檔控制中，請將它加入至原始檔控制。  
   
-    如需詳細資訊，請參閱[將專案或方案加入至版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
+    如需詳細資訊，請參閱[將專案或方案加入至版本控制](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))。  
   
 3.  按一下 [檢視]，然後按一下 [暫止簽入]。  
   
 4.  簽入方案的所有檔案。  
   
-    如需詳細資訊，請參閱[簽入暫止的變更](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)。  
+    如需詳細資訊，請參閱[簽入暫止的變更](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100))。  
   
     > [!NOTE]  
     > 您可能會有控管自動化測試之建立與管理方式的特定小組程序。 例如，此程序可能會要求您必須先在本機驗證組建，然後再簽入該程式碼以及將要針對程式碼執行的測試。  
   
-    在 [方案總管] 中，掛鎖圖示會出現在每一個檔案的旁邊，指出它已簽入。 如需詳細資訊，請參閱[檢視版本控制檔案和資料夾屬性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
+    在 [方案總管] 中，掛鎖圖示會出現在每一個檔案的旁邊，指出它已簽入。 如需詳細資訊，請參閱[檢視版本控制檔案和資料夾屬性](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100))。  
   
     您的測試可用於 Team Foundation Build。 您現在可以建立包含想要執行之測試的組建定義。  
   
@@ -280,11 +280,10 @@ ms.locfileid: "85893922"
   
 3.  確認 [組建定義]****、[組建代理程式]**** 和 [此組建的置放資料夾]**** 欄位中的值都正確無誤，然後按一下 [佇列]****。  
   
-    [Build 總管] 的 [已佇列] 索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
+    [Build 總管] 的 [已佇列] 索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  
-[建立基本組建定義](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[將組建排入佇列](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[監視執行中組建的進度](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[建立基本組建定義](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[將組建排入佇列](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[監視執行中組建的進度](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

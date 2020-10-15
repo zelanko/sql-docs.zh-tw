@@ -12,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fe50faeeb134ca9162f5de25b6c775d3b6eea829
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545520"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986945"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -25,7 +25,7 @@ ms.locfileid: "84545520"
 > [!NOTE]  
 >  效能物件是用來監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  本主題內容：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84545520"
   
  下表將列出 **ReportServer:Service** 效能物件所包含的計數器。  
   
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -77,7 +77,7 @@ ms.locfileid: "84545520"
 ##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint 模式報表伺服器)  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中已新增 **ReportServerSharePoint:Service** 效能物件。  
   
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -90,7 +90,7 @@ ms.locfileid: "84545520"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName "ReportServerSharePoint:Service" 的效能計數器清單：  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName "ReportServerSharePoint:Service" 的效能計數器清單：  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -100,5 +100,4 @@ ms.locfileid: "84545520"
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [MSRS 2011 Web Service 和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
   

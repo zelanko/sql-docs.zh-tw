@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8f7d43c03e95ed66b9b0cd2d9c1b8ee39cdb42c5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248580"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987492"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -99,7 +99,7 @@ ms.locfileid: "87248580"
   
 -   **認證。** 認證是驗證資訊，您必須提供這項資訊才能存取外部資料。  
   
-     認證用於建立內嵌資料來源、執行查詢，或是在處理報表時擷取資料。 資料來源連線的擁有者會決定您必須用於存取資料的認證類型。 認證會與報表伺服器、SharePoint 網站或報表撰寫環境中本機電腦上的資料連接分開管理。 根據資料來源的類型而定，認證可加以儲存並避免提示，或者設定為提示每一位使用者。 您需要的認證可能會依據您從電腦或是報表伺服器連接到資料來源而有所不同。 如需詳細資訊，請參閱 [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+     認證用於建立內嵌資料來源、執行查詢，或是在處理報表時擷取資料。 資料來源連線的擁有者會決定您必須用於存取資料的認證類型。 認證會與報表伺服器、SharePoint 網站或報表撰寫環境中本機電腦上的資料連接分開管理。 根據資料來源的類型而定，認證可加以儲存並避免提示，或者設定為提示每一位使用者。 您需要的認證可能會依據您從電腦或是報表伺服器連接到資料來源而有所不同。 如需詳細資訊，請參閱 [在報表產生器中指定認證](/previous-versions/sql/)。  
   
 ### <a name="report-datasets"></a>報表資料集 
  在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 資料集取決於包含外部資料來源之相關資訊的資料連接。 資料本身不會包含在報表定義中。 資料集包含查詢命令、欄位集合、參數、篩選，以及包含區分大小寫和定序的資料選項。 資料集有以下兩種不同的類型：  
@@ -121,11 +121,11 @@ ms.locfileid: "87248580"
   
  資料區可用於啟用一般資料視覺效果：資料表、矩陣或清單中的數字和文字；以圖形方式顯示在圖表或量測計中，也可以根據地圖的地理顯示。 資料表、矩陣與清單都是以 Tablix 資料區為基礎，可在需要時擴充以顯示資料集中的所有資料。 Tablix 資料區支援多個資料列與資料行群組，而且同時支援靜態與動態資料列和資料行。 圖表會使用各種圖表格式顯示多個數列和類別目錄群組。 量測計則會顯示資料集的單一值或彙總值。 地圖會將空間資料顯示為地圖元素，其外觀會隨著資料集中的彙總資料而改變。  
   
--   **資料表。** 資料表是逐一呈現資料列的資料區域。 資料表資料行是靜態的：您可以在設計報表時決定資料行的數目。 資料表資料列是動態的：它們會向下展開以容納資料。 您可以將群組加入至資料表，然後資料表就會依據選取的欄位或運算式組織資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **資料表。** 資料表是逐一呈現資料列的資料區域。 資料表資料行是靜態的：您可以在設計報表時決定資料行的數目。 資料表資料列是動態的：它們會向下展開以容納資料。 您可以將群組加入至資料表，然後資料表就會依據選取的欄位或運算式組織資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](./report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
--   **矩陣。** 「矩陣」(Matrix) 也稱為交叉資料表。 矩陣資料區域同時包含動態資料行和資料列：它們會展開以容納資料。 矩陣可以有動態資料行和資料列，以及靜態資料行和資料列。 資料行或資料列可以包含其他資料行或資料列，而且可用來分組資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **矩陣。** 「矩陣」(Matrix) 也稱為交叉資料表。 矩陣資料區域同時包含動態資料行和資料列：它們會展開以容納資料。 矩陣可以有動態資料行和資料列，以及靜態資料行和資料列。 資料行或資料列可以包含其他資料行或資料列，而且可用來分組資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](./report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
--   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](./report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 -   **圖表。** 圖表會以圖形方式來呈現資料。 橫條圖、圓形圖和折線圖都是圖表的範例，但另外還有許多其他支援的樣式。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
@@ -213,5 +213,4 @@ ms.locfileid: "87248580"
  [Reporting Services 功能及工作 &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [技術參考 &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-  
   

@@ -11,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718505"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987564"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
+SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](/sql/linux/) 文件
 
 [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477)**試用：** [下載 SQL Server 2017 版 - 2017 年 10 月](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 - SSDT 的 DAX 編輯器。 (CTP 2.0)
 - 編碼提示，這是一種進階功能，可針對大型記憶體內部表格式模型的資料重新整理進行最佳化。 (CTP 1.3)
 - 支援表格式模型的 **1400 相容性層級**。 若要建立新的或升級現有的表格式模型專案至 1400 相容性層級，請下載並安裝 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
-- 1400 相容性層級之表格式模型的最新 [取得資料]  體驗。 請參閱 [Analysis Services 小組部落格](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
+- 1400 相容性層級之表格式模型的最新 [取得資料]  體驗。 請參閱 [Analysis Services 小組部落格](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services)。 (CTP 1.1)
 - [隱藏成員]  屬性，可隱藏不完全階層中的空白成員。 (CTP 1.1)
 - 新的 [詳細資料列]  終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
 - DAX **IN** 運算子，可指定多個值。 (CTP 1.1)
@@ -94,7 +94,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 無法再透過 SQL Server 安裝程式安裝 SQL Server Reporting Services。 請前往 Microsoft 下載中心以[下載 Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。 
 - 報表現在提供留言功能，可新增觀點並與其他人共同作業。 您也可以在留言內包含附件。
-- 在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+- 在最新版的報表產生器和 SQL Server Data Tools 中，您可以藉由在查詢設計工具中拖放所需的欄位，來對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 請參閱 [Reporting Services 部落格](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)。
 - 為了進行現代化應用程式的開發和自訂，SSRS 現在支援完全符合 OpenAPI 的 RESTful API。 您現在可以在 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) 上找到完整的 API 規格和文件。
 
 如需詳細資訊，請參閱 [SQL Server Reporting Services (SSRS) 的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
@@ -118,7 +118,7 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 
 ## <a name="next-steps"></a>後續步驟
 - 請參閱 [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)。
-- 了解 [Linux 上的 SQL Server 2017 新功能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)。
+- 了解 [Linux 上的 SQL Server 2017 新功能](../linux/sql-server-linux-whats-new.md)。
 - 了解 [SQL Server 2016 的新功能](what-s-new-in-sql-server-2016.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
