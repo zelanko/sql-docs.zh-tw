@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442372"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988297"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>升級容錯移轉叢集執行個體 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87442372"
   
  這個程序會導致停機時間僅會包含整個容錯移轉叢集升級期間的單一容錯移轉時間和資料庫升級指令碼執行時間。  
   
- 若要在升級程序期間控制叢集節點的容錯移轉行為，請從命令提示字元執行升級作業，然後使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ 若要在升級程序期間控制叢集節點的容錯移轉行為，請從命令提示字元執行升級作業，然後使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
 
  ## <a name="upgrade-with-installation-media"></a>使用安裝媒體升級 
   
@@ -83,7 +83,7 @@ ms.locfileid: "87442372"
   
 7.  在 [選取執行個體] 頁面中，指定要升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]執行個體。 按一下 [下一步]，繼續進行。  
   
-8.  在 [特徵選取] 頁面上，系統會預先選取要升級的功能。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 若要在完成升級作業後，將功能加入升級的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 執行個體，請參閱 [將功能加入 SQL Server 2016 的執行個體 &#40;安裝程式&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
+8.  在 [特徵選取] 頁面上，系統會預先選取要升級的功能。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 若要在完成升級作業後，將功能加入升級的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 執行個體，請參閱 [將功能加入 SQL Server 2016 的執行個體 &#40;安裝程式&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)。  
   
      右窗格會顯示選取功能的必要條件。 SQL Server 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。 為了節省時間，您應該在每個節點上預先安裝這些必要條件。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87442372"
   
 10. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
-11. 在 [全文檢索搜尋升級] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+11. 在 [全文檢索搜尋升級] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](../../../database-engine/install-windows/install-sql-server.md)。  
   
 12. 在 **[錯誤報告]** 頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的資訊，這可協助改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。  
   
@@ -140,8 +140,7 @@ ms.locfileid: "87442372"
   
 -   [變更資料庫相容性模式並使用查詢存放區](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [善用新的 SQL Server 2016 功能](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [善用新的 SQL Server 2016 功能](../../what-s-new-in-sql-server-2017.md)  
   
 
-  
   

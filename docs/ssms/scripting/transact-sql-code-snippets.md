@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5a805fe8c32828dffc740959385ba599641ac03b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480698"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036218"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 程式碼片段
 
@@ -28,11 +28,11 @@ ms.locfileid: "89480698"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何插入現有的程式碼片段，例如 CREATE TABLE 或 SELECT 程式碼片段。|[插入 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|描述如何在 BEGIN、IF 或 WHILE 區塊中封入一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|[插入範圍陳述式 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
-|描述如何在插入程式碼片段之後，完成建立完整的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或區塊。|[完成 Transact-SQL 程式碼片段](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
-|描述如何建立您自己的自訂程式碼片段，並將其加入至一組 SQL Server 程式碼片段。|[新增 Transact-SQL 程式碼片段](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
+|描述如何插入現有的程式碼片段，例如 CREATE TABLE 或 SELECT 程式碼片段。|[插入 Transact-SQL 程式碼片段](./insert-transact-sql-snippets.md)|  
+|描述如何在 BEGIN、IF 或 WHILE 區塊中封入一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|[插入範圍陳述式 Transact-SQL 程式碼片段](./insert-surround-with-transact-sql-snippets.md)|  
+|描述如何在插入程式碼片段之後，完成建立完整的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或區塊。|[完成 Transact-SQL 程式碼片段](./complete-transact-sql-snippets.md)|  
+|描述如何建立您自己的自訂程式碼片段，並將其加入至一組 SQL Server 程式碼片段。|[新增 Transact-SQL 程式碼片段](./add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>另請參閱
 
-[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

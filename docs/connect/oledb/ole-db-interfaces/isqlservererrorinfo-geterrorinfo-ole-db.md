@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 717a866203bfc7f96311ff0c4f28ffb11f745ac7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b365238ad6941bf82c8b130e56313313d9e814fa
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726930"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081547"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,6 +90,5 @@ SSERRORINFO;
  結構中的指標會參考 *ppErrorStrings* 引數所傳回之字串中的地址。  
   
 ## <a name="see-also"></a>另請參閱  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   

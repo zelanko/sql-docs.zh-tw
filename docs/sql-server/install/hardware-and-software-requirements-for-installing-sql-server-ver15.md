@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 89088af9d3758a710db5bd1ee313835087bad832
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288320"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987649"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019：硬體和軟體需求
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "89288320"
 
 
 > [!IMPORTANT]
-> PolyBase 功能有其他的硬體和軟體需求。 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
+> PolyBase 功能有其他的硬體和軟體需求。 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/polybase-guide.md)。  
   
 
 ##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> 作業系統支援 
@@ -176,7 +176,7 @@ ms.locfileid: "89288320"
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前支援具有標準原生磁區大小 512 位元組及 4 KB 的磁碟機。  磁區大小大於 4 KB 的硬碟可能會在嘗試於其上儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案時產生錯誤。  請參閱 [SQL Server 中的硬碟磁區大小支援界限](https://support.microsoft.com/kb/926930) \(機器翻譯\)，以取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中硬碟磁區大小支援的詳細資訊。 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 務必確定在所有叢集節點上為 tempdb 資料和記錄檔指定的路徑都是有效的。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。
 - 共用儲存  
-- [儲存空間直接存取 \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+- [儲存空間直接存取 \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - SMB 檔案共用  
     - 獨立或叢集安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案不支援 SMB 儲存體。 請改用直接連結存放裝置、存放區域網路或 S2D。 
     - SMB 儲存體可由 Windows 檔案伺服器或第三方 SMB 存放裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱[＜安裝 SQL Server 與 SMB 檔案共用儲存體＞](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
@@ -206,5 +206,3 @@ ms.locfileid: "89288320"
 ## <a name="next-steps"></a>後續步驟
 
 檢閱安裝 SQL Server 的硬體和軟體需求之後，即可開始[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)或檢閱 [SQL Server 的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。
-
-

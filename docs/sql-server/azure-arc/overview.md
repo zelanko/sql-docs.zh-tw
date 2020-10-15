@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987984"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>已啟用 Azure Arc 的 SQL Server (預覽)
 
@@ -49,7 +49,7 @@ SQL Server 可以安裝在執行 Windows 或 Linux 的虛擬或實體機器上�
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-為了達到最佳安全性，建議您在 Azure 中建立具有前述最低權限的自訂角色。 若要進一步了解如何在 Azure 中建立具有這些權限的自訂角色，請參閱[自訂角色概觀](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview)。 若要新增角色指派，請參閱[使用 Azure 入口網站來新增或移除角色指派](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal)或[使用 Azure RBAC 和 Azure CLI 來新增或移除角色指派](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli)。
+為了達到最佳安全性，建議您在 Azure 中建立具有前述最低權限的自訂角色。 若要進一步了解如何在 Azure 中建立具有這些權限的自訂角色，請參閱[自訂角色概觀](/azure/active-directory/users-groups-roles/roles-custom-overview)。 若要新增角色指派，請參閱[使用 Azure 入口網站來新增或移除角色指派](/azure/role-based-access-control/role-assignments-portal)或[使用 Azure RBAC 和 Azure CLI 來新增或移除角色指派](/azure/role-based-access-control/role-assignments-cli)。
 
 ### <a name="azure-subscription-and-service-limits"></a>Azure 訂用帳戶與服務限制
 

@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480207"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034913"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
 
@@ -163,5 +163,4 @@ ms.locfileid: "88480207"
 > 某些命令只有在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 顯示相關內容時才能使用。 如果功能表上沒有任何命令可用，此功能表項目就無法使用。  
   
 ## <a name="see-also"></a>另請參閱  
-[SQL Server Management Studio 中的功能](../ssms/features-in-sql-server-management-studio.md)  
-  
+[SQL Server Management Studio 中的功能](./sql-server-management-studio-ssms.md)  

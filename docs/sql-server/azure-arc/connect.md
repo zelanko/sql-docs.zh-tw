@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990301"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987994"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>將 SQL Server 連線到 Azure Arc
 
@@ -22,7 +22,7 @@ ms.locfileid: "90990301"
 ## <a name="prerequisites"></a>必要條件
 
 * 您的電腦至少已安裝一個 SQL Server 執行個體
-* 針對 Windows 電腦，您已安裝 Azure PowerShell。 依照指示來[安裝 Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps)。
+* 針對 Windows 電腦，您已安裝 Azure PowerShell。 依照指示來[安裝 Azure PowerShell](/powershell/azure/install-az-ps)。
 * 針對 Linux 電腦，您已下載 Azure CLI 並連線您的 Azure 帳戶。 依照指示來[安裝 Azure CLI](/cli/azure/install-azure-cli-apt)。
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "90990301"
 3. 選取訂用帳戶、資源群組、Azure 區域和主機作業系統。 如有需要，也可指定您的網路用來連線到網際網路的 Proxy。
 
 > [!IMPORTANT]
-> 如果裝載 SQL Server 執行個體的電腦已經[連線到 Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal)，請務必選取包含對應 [電腦 - Azure Arc] 資源的相同資源群組。
+> 如果裝載 SQL Server 執行個體的電腦已經[連線到 Azure Arc](/azure/azure-arc/servers/onboard-portal)，請務必選取包含對應 [電腦 - Azure Arc] 資源的相同資源群組。
 
 ![伺服器詳細資料](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "90990301"
 
 ### <a name="windows"></a>Windows
 
-1. 啟動 __powershell.exe__ 的系統管理執行個體，並使用您的 Azure 認證登入您的 PowerShell 模組。 遵循[登入指示](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in)。
+1. 啟動 __powershell.exe__ 的系統管理執行個體，並使用您的 Azure 認證登入您的 PowerShell 模組。 遵循[登入指示](/powershell/azure/install-az-ps#sign-in)。
 
 2. 執行下載的指令碼
 
@@ -69,7 +69,7 @@ ms.locfileid: "90990301"
 
 ### <a name="linux"></a>Linux
 
-1. 使用 Azure CLI 以您的 Azure 認證登入。 遵循[登入指示](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)
+1. 使用 Azure CLI 以您的 Azure 認證登入。 遵循[登入指示](/cli/azure/authenticate-azure-cli)
 
 2. 將執行權限授予下載的指令碼並加以執行。
 

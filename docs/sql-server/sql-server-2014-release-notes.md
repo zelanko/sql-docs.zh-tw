@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111119"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988534"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ SQL Server 2014 SP2 包含適用於 SQL Server 2014 SP1 CU7 的已發行 Hotfix 
 
 |功能|描述|取得詳細資訊|
 |---|---|---|
-|自動軟體式 NUMA 資料分割|您可以在回報每一 NUMA 節點含 8 個以上 CPU 的系統上自動設定軟體式 NUMA。|[軟體式 NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|緩衝集區擴充|可讓 SQL Server 緩衝集區擴充到 8 TB 以上。|[緩衝集區擴充](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|動態記憶體物件調整| 根據節點與核心數目動態分割記憶體物件。 這項增強功能讓 SQL 2014 SP2 之後的版本不需要使用追蹤旗標 8048。|[動態記憶體物件調整](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|適用於 DBCC CHECK* 命令的 MAXDOP 提示|搭配 sp_configure 值以外的 MAXDOP 設定執行 DBCC CHECKDB 時，這項改善非常有用。|[提示 (Transact-SQL) - 查詢](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|SOS_RWLock 的執行緒同步鎖定改善|不需要 SOS_RWLock 的執行緒同步鎖定，而改用類似於記憶體內部 OLTP 的無鎖定技術。 |[SOS_RWLock 重新設計](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|自動軟體式 NUMA 資料分割|您可以在回報每一 NUMA 節點含 8 個以上 CPU 的系統上自動設定軟體式 NUMA。|[軟體式 NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|緩衝集區擴充|可讓 SQL Server 緩衝集區擴充到 8 TB 以上。|[緩衝集區擴充](../database-engine/configure-windows/buffer-pool-extension.md)|
+|動態記憶體物件調整| 根據節點與核心數目動態分割記憶體物件。 這項增強功能讓 SQL 2014 SP2 之後的版本不需要使用追蹤旗標 8048。|[動態記憶體物件調整](/archive/blogs/sql_server_team/dynamic-memory-object-scaling)|
+|適用於 DBCC CHECK* 命令的 MAXDOP 提示|搭配 sp_configure 值以外的 MAXDOP 設定執行 DBCC CHECKDB 時，這項改善非常有用。|[提示 (Transact-SQL) - 查詢](../t-sql/queries/hints-transact-sql-query.md)|
+|SOS_RWLock 的執行緒同步鎖定改善|不需要 SOS_RWLock 的執行緒同步鎖定，而改用類似於記憶體內部 OLTP 的無鎖定技術。 |[SOS_RWLock 重新設計](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |空間原生實作|空間查詢效能已顯著改善。|[SQL Server 2012 和 2014 中的空間效能改善](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 的可支援性和診斷改善
 
 |功能|描述|取得詳細資訊|
 |---|---|---|
-|AlwaysOn 逾時記錄|已新增「租用逾時」訊息的記錄功能，以便記錄目前的時間和預期的續約時間。 |[已改善 AlwaysOn 可用性群組租用逾時的診斷](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
+|AlwaysOn 逾時記錄|已新增「租用逾時」訊息的記錄功能，以便記錄目前的時間和預期的續約時間。 |[已改善 AlwaysOn 可用性群組租用逾時的診斷](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |AlwaysOn XEvent 和效能計數器|全新的 AlwaysOn XEvent 和效能計數器，可改善對 AlwaysOn 延遲問題進行疑難排解時的診斷。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 和 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |變更追蹤清除|全新的預存程序 sp_flush_CT_internal_table_on_demand 可視需要清除變更追蹤內部資料表。|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |資料庫複製|使用新的 DBCC 命令，藉由複製結構描述、中繼資料及統計資料 (但不含資料)，以對現有的生產資料庫進行疑難排解。 複製的資料庫不適合用於生產環境。|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF 新增項目|新的 DMF sys.dm_db_incremental_stats_properties 會公開每個資料分割的資訊，以用於累加統計資料。|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|可擷取 SQL Server 中輸入緩衝區的 DMF|現已提供可擷取工作階段/要求 (sys.dm_exec_input_buffer) 輸入緩衝區的新 DMF。 其功能相當於 DBCC INPUTBUFFER。|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|可擷取 SQL Server 中輸入緩衝區的 DMF|現已提供可擷取工作階段/要求 (sys.dm_exec_input_buffer) 輸入緩衝區的新 DMF。 其功能相當於 DBCC INPUTBUFFER。|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |支援複寫的 DROP DDL|可讓您從資料庫和發行集卸除資料表 (其是以發行項的形式隨附於異動複寫發行集中)。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|SQL 服務帳戶的 IFI 權限|判斷立即檔案初始化 (IFI) 是否在 SQL Server 服務啟動時生效。|[資料庫檔案初始化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|SQL 服務帳戶的 IFI 權限|判斷立即檔案初始化 (IFI) 是否在 SQL Server 服務啟動時生效。|[資料庫檔案初始化](../relational-databases/databases/database-instant-file-initialization.md)
 |記憶體授與 - 處理問題|透過限定記憶體授與以防止記憶體競爭的做法，您即可在執行查詢同時利用診斷提示。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|每個運算子的查詢執行輕量型分析 |可最佳化每個運算子的查詢執行統計資料收集情況，例如資料列的實際數目等。|[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)
+|每個運算子的查詢執行輕量型分析 |可最佳化每個運算子的查詢執行統計資料收集情況，例如資料列的實際數目等。|[Developers Choice:Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (開發人員選擇：查詢進度 - 隨時隨地)
 |查詢執行的診斷|現在，查詢執行計畫中會回報實際讀取的資料列，以協助改善查詢效能的疑難排解。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |針對 tempdb 溢出的查詢執行診斷|現在，Hash Warning 和 Sort Warnings 已具備可追蹤實體 I/O 統計資料、已使用的記憶體，以及受影響的資料列等其他資料行。 |[改善 temptdb 溢出診斷](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |temptdb 可支援性 |您可以使用新的 tempdb 檔案數 Errorlog 訊息，而且 tempdb 資料檔案會在伺服器啟動時變更。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -82,7 +82,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 ### <a name="download-pages-and-more-information-for-sp1"></a>SP1 的下載頁面和詳細資訊
 
 - [下載 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 已發行 - 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 已發行 - 已更新](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -103,7 +103,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 1.  將 SQL Server 2014 CTP 2 資料庫附加到 SQL Server 2014 RTM 執行個體。    
 2.  將 SQL Server 2014 CTP 2 上所建立的資料庫備份還原至 SQL Server 2014 RTM 執行個體。    
 3.  就地升級至 SQL Server 2014 RTM。
-4.  輪流升級至 SQL Server 2014 RTM。 您必須先切換到手動容錯移轉模式，才能起始輪流升級。 如需詳細資料，請參閱[在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器](https://msdn.microsoft.com/library/dn178483.aspx)。    
+4.  輪流升級至 SQL Server 2014 RTM。 您必須先切換到手動容錯移轉模式，才能起始輪流升級。 如需詳細資料，請參閱[在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
 5.  SQL Server 2014 CTP 2 中安裝之交易效能收集組所收集的資料無法透過 SQL Server 2014 RTM 中的 SQL Server Management Studio 來檢視，反之亦然。
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>從 SQL Server 2014 RTM 降級至 SQL Server 2014 CTP 2  
@@ -158,7 +158,7 @@ SQL Server 2014 Standard 版的變更如下：
 -   最大記憶體已經從 64 GB 增加至 128 GB。  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>記憶體最佳化 Advisor 會對預設條件約束標示不相容的旗標  
-**問題：** SQL Server Management Studio 中的 Memory Optimized Advisor，會將所有預設條件約束標示為不相容。 並非所有預設條件約束在記憶體最佳化資料表中都有受到支援，此 Advisor 不會區分支援與未支援類型的預設條件約束。 支援的預設條件約束包括：在原生編譯之預存程序內受支援的所有常數、運算式和內建函式。 若要查看以原生方式編譯之預存程序內所支援的函數清單，請參閱 [原生編譯的預存程序中支援的建構](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)。  
+**問題：** SQL Server Management Studio 中的 Memory Optimized Advisor，會將所有預設條件約束標示為不相容。 並非所有預設條件約束在記憶體最佳化資料表中都有受到支援，此 Advisor 不會區分支援與未支援類型的預設條件約束。 支援的預設條件約束包括：在原生編譯之預存程序內受支援的所有常數、運算式和內建函式。 若要查看以原生方式編譯之預存程序內所支援的函數清單，請參閱 [原生編譯的預存程序中支援的建構](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014)。  
   
 **因應措施：** 如果您要使用這個 Advisor 來識別封鎖程式，請忽略相容的預設條件約束。 若要使用 Memory Optimization Advisor 來移轉具有相容預設條件約束的資料表，但沒有其他封鎖器，請遵循下列步驟進行：  
   
@@ -348,7 +348,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
     這項因應措施可讓精靈完成在 Azure 中新增複本的工作。  
   
-2.  當精靈完成之後，您必須在 Azure 中完成接聽程式的組態，如 [Azure 中 AlwaysOn 可用性群組的接聽程式設定](https://msdn.microsoft.com/library/dn376546.aspx)中所述  
+2.  當精靈完成之後，您必須在 Azure 中完成接聽程式的組態，如 [Azure 中 AlwaysOn 可用性群組的接聽程式設定](/previous-versions/azure/dn376546(v=azure.100))中所述  
   
 ### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
@@ -361,7 +361,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱 [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
   
-2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)。  
+2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)。  
   
 **詳細資訊：**  
   
@@ -376,7 +376,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱 [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
   
-2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)。  
+2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)。  
   
 **詳細資訊：**  
   

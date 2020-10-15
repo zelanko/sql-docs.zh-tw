@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60b44b3676f7943cb6a2e5c1fdb7981ca47c965f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522990"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035936"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的範本
 
@@ -34,7 +34,7 @@ ms.locfileid: "87522990"
 
 若要完成本教學課程，您需要 SQL Server Management Studio 和 SQL Server 存取權。
 
-* 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安裝 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 
 * 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "87522990"
 
 熟悉 SSMS 的最佳方式是實際練習。 這些「教學課程」  與「操作方式」  文章可協助您使用 SSMS 內所提供的各種功能。  這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
 
-* [連線至執行個體並對其進行查詢](../tutorials/connect-query-sql-server.md)
+* [連線至執行個體並對其進行查詢](../quickstarts/connect-query-sql-server.md)
 * [指令碼](../tutorials/scripting-ssms.md)
 * [SSMS 組態](../tutorials/ssms-configuration.md)
 * [使用 SSMS 的其他提示與訣竅](../tutorials/ssms-tricks.md)

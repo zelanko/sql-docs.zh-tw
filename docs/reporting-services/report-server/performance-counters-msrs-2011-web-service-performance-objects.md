@@ -17,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 21975c380bc948c9f8a514da40a42fd1f422c125
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 482ff4d53e85214daf89f010f23a05ce4da0fb26
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545530"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986041"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>效能計數器 MSRS 2011 Web Service、效能物件
   本主題描述 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 效能物件的效能計數器。 這些物件是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式部署的一部分。  
@@ -30,7 +30,7 @@ ms.locfileid: "84545530"
 > [!NOTE]  
 >  這些效能物件會監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](/dotnet/framework/debug-trace-profile/runtime-profiling)(https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  如需 SharePoint 模式效能計數器的資訊，請參閱 [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "84545530"
 |**Total Snapshot Updates**|報表執行快照集更新總數|  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
- ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")下列 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 "msr" 的計數器集合：  
+ ![PowerShell 相關內容](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")下列 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 "msr" 的計數器集合：  
   
 ```  
 get-counter -listset msr*  
@@ -128,5 +128,4 @@ get-counter -listset msr*
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
-  
   

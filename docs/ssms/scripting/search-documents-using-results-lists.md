@@ -16,12 +16,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162790e2f0c025a1f28ad60e982d2f0cdb2b1095
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901629"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036363"
 ---
 # <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,9 +65,8 @@ ms.locfileid: "88901629"
  依預設，取代資訊會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽取代項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
- [以互動方式搜尋文件](../../relational-databases/scripting/search-documents-interactively.md)   
- [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [使用規則運算式搜尋文字](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [搜尋和取代](./search-and-replace.md)   
+ [以互動方式搜尋文件](./search-documents-interactively.md)   
+ [使用萬用字元搜尋文字](./search-text-with-wildcards.md)   
+ [使用規則運算式搜尋文字](./search-text-with-regular-expressions.md)  
   

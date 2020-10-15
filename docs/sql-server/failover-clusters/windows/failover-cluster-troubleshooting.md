@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111017"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988287"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111017"
 -   使用擴充預存程序及 COM 物件。  
   
 ## <a name="basic-troubleshooting-steps"></a>基本疑難排解步驟  
- 第一個診斷步驟是執行全新的叢集驗證檢查。 如需驗證的詳細資料，請參閱 [Failover Cluster Step-by-Step Guide:Validating Hardware for a Failover Cluster](https://technet.microsoft.com/library/cc732035.aspx) (容錯移轉叢集逐步指南：驗證容錯移轉叢集的硬體)。  您不需要中斷任何服務就可完成此作業，而不會影響任何線上叢集資源。 一旦安裝容錯移轉叢集功能之後，就能隨時執行驗證，包括在部署叢集之前、在叢集建立期間，以及在叢集正在執行時。 事實上，若叢集正在使用中，即可執行其他測試，來檢查是否遵循適用於高可用性工作量的最佳做法。 在這些大量測試中，其中只有一些會影響執行中的叢集工作負載，而這些全都位於儲存分類中，因此，略過這整個類別是避免干擾性測試的簡單方法。  
+ 第一個診斷步驟是執行全新的叢集驗證檢查。 如需驗證的詳細資料，請參閱 [Failover Cluster Step-by-Step Guide:Validating Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) (容錯移轉叢集逐步指南：驗證容錯移轉叢集的硬體)。  您不需要中斷任何服務就可完成此作業，而不會影響任何線上叢集資源。 一旦安裝容錯移轉叢集功能之後，就能隨時執行驗證，包括在部署叢集之前、在叢集建立期間，以及在叢集正在執行時。 事實上，若叢集正在使用中，即可執行其他測試，來檢查是否遵循適用於高可用性工作量的最佳做法。 在這些大量測試中，其中只有一些會影響執行中的叢集工作負載，而這些全都位於儲存分類中，因此，略過這整個類別是避免干擾性測試的簡單方法。  
 容錯移轉叢集隨附內建防護措施，避免在驗證期間執行儲存測試時發生意外的停機時間。 如果叢集在初始驗證時有任何線上群組，而且仍保留選取儲存測試，就會提示使用者確認他們是否想要執行所有測試 (並導致停機時間)，或略過測試任何線上群組的磁碟以避免產生停機時間。 如果測試中已排除整個儲存分類，則不會顯示此提示。 這將進行叢集驗證，但不會產生停機時間。  
   
 #### <a name="how-to-revalidate-your-cluster"></a>如何重新驗證您的叢集  
@@ -189,5 +189,4 @@ ms.locfileid: "91111017"
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [擴充預存程序運作方式](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [擴充預存程序的執行特性](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

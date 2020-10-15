@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934109"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987224"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 
@@ -105,9 +105,9 @@ ms.locfileid: "87934109"
 擴充的 Transact-SQL 驗證是資料庫專案系統中的一項功能，可讓開發人員在建置階段將其資料庫專案提交至 Transact-SQL 編譯器服務，以便根據 SQL Server 引擎的剖析器和解譯器驗證程式碼。  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Transact-SQL 編譯器服務是以 Microsoft SQL Server 2012 資料庫引擎為基礎的元件。 這項服務可以驗證 DDL 陳述式的語法和語意，而且其精確度與 Microsoft SQL Server 2012 資料庫引擎相同。 這也就表示編譯器服務不支援 Microsoft SQL Server 2012 中已淘汰的語法或功能。 如需已取代功能的詳細資訊，請參閱 [SQL Server 2012 中已中止的資料庫引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。  
+Transact-SQL 編譯器服務是以 Microsoft SQL Server 2012 資料庫引擎為基礎的元件。 這項服務可以驗證 DDL 陳述式的語法和語意，而且其精確度與 Microsoft SQL Server 2012 資料庫引擎相同。 這也就表示編譯器服務不支援 Microsoft SQL Server 2012 中已淘汰的語法或功能。 如需已取代功能的詳細資訊，請參閱 [SQL Server 2012 中已中止的資料庫引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)。  
   
-為了驗證資料庫專案，Compiler Service 會建立部分自主資料庫並且根據該資料庫模擬 DDL 陳述式的執行。 如需詳細資訊，請參閱 [部分自主資料庫](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
+為了驗證資料庫專案，Compiler Service 會建立部分自主資料庫並且根據該資料庫模擬 DDL 陳述式的執行。 如需詳細資訊，請參閱 [部分自主資料庫](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110))。  
   
 Compiler Service 具有兩種限制分類。  
   
@@ -132,7 +132,7 @@ Compiler Service 具有兩種限制分類。
 -   SQL Azure 中繼資料定序 (Compiler Service 會使用 SQL Server 2012 部分自主資料庫中繼資料定序 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>啟用/停用擴充驗證  
-直接從 Azure SQL Database 建立的資料庫專案或其目標平台設定為 SQL Azure 的專案預設會啟用擴充的 Transact-SQL 驗證。 針對 SQL Azure 或是以 SQL Server 2012 為目標的應用程式範圍資料庫進行開發時，建議您使用擴充驗證。 如需應用程式範圍資料庫的詳細資訊，請參閱 [部分自主資料庫](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
+直接從 Azure SQL Database 建立的資料庫專案或其目標平台設定為 SQL Azure 的專案預設會啟用擴充的 Transact-SQL 驗證。 針對 SQL Azure 或是以 SQL Server 2012 為目標的應用程式範圍資料庫進行開發時，建議您使用擴充驗證。 如需應用程式範圍資料庫的詳細資訊，請參閱 [部分自主資料庫](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110))。  
   
 此外，當您開發 SQL Server 2008/R2 的應用程式範圍資料庫時，也可以使用擴充驗證功能，以達到與 Microsoft SQL Server 2012 和 SQL Azure 相容的目的。  
   
@@ -154,21 +154,21 @@ Compiler Service 具有兩種限制分類。
     ![檔案屬性](../ssdt/media/ssdt-evf.gif "檔案屬性")  
   
 ### <a name="special-considerations-for-collations"></a>定序的特殊考量  
-如需部分自主資料庫中之定序的詳細資訊，請參閱 [自主資料庫定序](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  
+如需部分自主資料庫中之定序的詳細資訊，請參閱 [自主資料庫定序](/previous-versions/sql/sql-server-2012/ff929080(v=sql.110))。  
   
 ## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
-如需組件選項的詳細資訊，請參閱 [組件資訊對話方塊](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)。  
+如需組件選項的詳細資訊，請參閱 [組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box?queryresult=true)。  
   
-如需簽署的詳細資訊，請參閱 **專案設計工具、簽署頁** 主題的＜ [組件簽署](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) ＞一節。  
+如需簽署的詳細資訊，請參閱 **專案設計工具、簽署頁** 主題的＜ [組件簽署](/visualstudio/ide/reference/signing-page-project-designer?queryresult=true) ＞一節。  
   
 ## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 與 SQLCLR 建置  
 **[SQLCLR]** 和 **[SQLCLR 建置]** 屬性頁包含許多在專案中使用 SQL CLR 物件的設定。 具體來說， **[SQLCLR]** 屬性頁含有權限等級設定，可設定對 SQLCLR 組件的權限。 此頁亦提供「產生 DDL」設定，可控制是否要為已新增至專案的 SQLCLR 物件產生動態資料語言 (DDL)。 **[SQLCLR 建置]** 屬性頁包含所有的編譯器選項，可用來設定專案中 SQLCLR 程式碼的編譯組態。  
   
 **[SQLCLR 建置]** 屬性頁包含了建置 SQL CLR 物件時所用的進階建置設定。 根據 (VB or C#) 用於撰寫 SQL CLR 物件程式碼的語言而定，提供的選項有所不同。  
   
-1.  如果物件是以 C# 撰寫，您可以按一下 [SQLCLR 建置] 屬性頁中的 [進階] 按鈕來存取選項。 C# 選項的描述可以在[進階建置設定對話方塊 (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx) 找到。  
+1.  如果物件是以 C# 撰寫，您可以按一下 [SQLCLR 建置] 屬性頁中的 [進階] 按鈕來存取選項。 C# 選項的描述可以在[進階建置設定對話方塊 (C#)](/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp) 找到。  
   
-2.  如果以 VB 撰寫物件，您可以先在 **[語言]** 中選擇 VB，然後按一下 **[進階]** 。 VB 選項的描述可以在[進階編譯器設定對話方塊 (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx) 找到  
+2.  如果以 VB 撰寫物件，您可以先在 **[語言]** 中選擇 VB，然後按一下 **[進階]** 。 VB 選項的描述可以在[進階編譯器設定對話方塊 (Visual Basic)](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic) 找到  
   
 
 ## <a name="build"></a><a name="bkmk_build"></a>建置  
@@ -228,10 +228,9 @@ Compiler Service 具有兩種限制分類。
 |進階...|否|此命令按鈕可讓您指定選項以控制事件和部署的行為。|  
   
 ## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>參考路徑  
-您可以使用這個頁面定義與跨資料庫參考相關的伺服器和資料庫變數。 此外，您也可以指定那些變數的值。 如需詳細資訊，請參閱 [在資料庫專案中使用參考](https://msdn.microsoft.com/library/bb386242.aspx)。  
+您可以使用這個頁面定義與跨資料庫參考相關的伺服器和資料庫變數。 此外，您也可以指定那些變數的值。 如需詳細資訊，請參閱 [在資料庫專案中使用參考](/previous-versions/visualstudio/visual-studio-2010/bb386242(v=vs.100))。  
   
 ## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>程式碼分析  
 您可以使用程式碼分析，找出指令碼中的潛在問題，例如設計、命名和效能問題。 資料庫專案的規則會組織成預先定義的規則集，並且以特定方面為目標，您可以在 **[專案屬性]** 屬性頁的 **[程式碼分析]** 索引標籤中啟用或停用任何規則。 在相同索引標籤中，您可以指定要在每次建置專案時自動執行程式碼分析，或指定是否將警告視為錯誤。  
   
-若要手動使用程式碼分析，請以滑鼠右鍵按一下 [方案總管] 中的專案，再選取 [執行程式碼分析]。 程式碼分析警告列在 **[錯誤清單]** 視窗中。 按兩下警告即可巡覽至有問題的原始程式碼，而且使用 [顯示錯誤說明]**** 快顯功能表也可以檢視警告的其他資訊與可能的修正方法。 如需程式碼分析的詳細資訊，請參閱[分析資料庫程式碼以改善程式碼品質](https://msdn.microsoft.com/library/dd172133.aspx)。  
-  
+若要手動使用程式碼分析，請以滑鼠右鍵按一下 [方案總管] 中的專案，再選取 [執行程式碼分析]。 程式碼分析警告列在 **[錯誤清單]** 視窗中。 按兩下警告即可巡覽至有問題的原始程式碼，而且使用 [顯示錯誤說明]**** 快顯功能表也可以檢視警告的其他資訊與可能的修正方法。 如需程式碼分析的詳細資訊，請參閱[分析資料庫程式碼以改善程式碼品質](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100))。  

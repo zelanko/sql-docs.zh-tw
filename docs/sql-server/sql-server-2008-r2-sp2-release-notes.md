@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570307"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988264"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89570307"
 新增動態管理檢視 (DMV) **sys.dm_db_stats_properties**。 您可以使用這個 DMV，傳回目前資料庫中所指定之資料表或索引檢視表的統計資料屬性。 例如，這個 DMV 會傳回取樣的資料列數目以及長條圖中的步驟數目。  
   
 ## <a name="20-before-you-install"></a>2.0 安裝之前  
-如需有關如何安裝 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的詳細資訊，請參閱 [SQL Server 2008 R2 服務文件](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)。  
+如需有關如何安裝 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的詳細資訊，請參閱 [SQL Server 2008 R2 服務文件](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105))。  
   
 如需有關如何開始使用並安裝 SQL Server 2008 R2 的一般資訊，請參閱 SQL Server 2008 R2 讀我檔案。 安裝媒體中提供此讀我檔案文件。
   
@@ -65,4 +65,3 @@ ms.locfileid: "89570307"
   
 ## <a name="see-also"></a>另請參閱  
 [如何判斷 SQL Server 的版本](https://support.microsoft.com/kb/321185)  
-  

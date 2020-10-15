@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195124"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987834"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -899,7 +899,7 @@ Console.WriteLine(result.DeploymentReport);
 **Analysis Services 與 Reporting Services**
 
 使用大型 DAX 運算式時，SSAS 表格式設計工具 DAX 剖析器已經改善效能。
-如需詳細資訊，請參閱 [Analysis Services 部落格文章 (英文)](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)。
+如需詳細資訊，請參閱 [Analysis Services 部落格文章 (英文)](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular)。
 
 ### <a name="fixed--improved-this-month"></a>本月份修正/改進內容
 
@@ -935,11 +935,11 @@ Console.WriteLine(result.DeploymentReport);
 
 **新功能**
 
-SqlPackage.exe 和 Data-Tier Application Framework (DacFx) API 現在支援結構描述比較。 如需詳細資料，請參閱  [SqlPackage 與 Data-Tier Application Framework 的結構描述比較](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) \(英文\)。
+SqlPackage.exe 和 Data-Tier Application Framework (DacFx) API 現在支援結構描述比較。 如需詳細資料，請參閱  [SqlPackage 與 Data-Tier Application Framework 的結構描述比較](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) \(英文\)。
 
 **Analysis Services - SSDT 表格式 (SSAS) 的整合式工作區模式**
 
-SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作區模式，則 SSDT 表格式會自動在背景啟動此執行個體，讓您可以在模型設計師中新增及檢視資料表、資料行和資料，無需提供外部工作區伺服器執行個體。 整合式工作區模式不會變更 SSDT 表格式與工作區伺服器及資料庫搭配運作的方式。 變更之處在於 SSDT 表格式裝載工作區資料庫的位置。 若要啟用整合式工作區模式，請在建立新的表格式專案時顯示的 [表格式模型設計師] 對話方塊中選取 [整合式工作區] 選項。 對於目前使用明確工作區伺服器的現有表格式專案，您可以在於 [方案總管] 中選取 Model.bim 檔案時顯示的 [屬性] 視窗中將 [整合式工作區模式] 參數設定為 True，切換到整合式工作區模式。 如需詳細資訊，請參閱 [Analysis Services 部落格文章 (英文)](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)。
+SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作區模式，則 SSDT 表格式會自動在背景啟動此執行個體，讓您可以在模型設計師中新增及檢視資料表、資料行和資料，無需提供外部工作區伺服器執行個體。 整合式工作區模式不會變更 SSDT 表格式與工作區伺服器及資料庫搭配運作的方式。 變更之處在於 SSDT 表格式裝載工作區資料庫的位置。 若要啟用整合式工作區模式，請在建立新的表格式專案時顯示的 [表格式模型設計師] 對話方塊中選取 [整合式工作區] 選項。 對於目前使用明確工作區伺服器的現有表格式專案，您可以在於 [方案總管] 中選取 Model.bim 檔案時顯示的 [屬性] 視窗中將 [整合式工作區模式] 參數設定為 True，切換到整合式工作區模式。 如需詳細資訊，請參閱 [Analysis Services 部落格文章 (英文)](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular)。
 
 **更新和修正**
 **資料庫工具︰**
@@ -1012,7 +1012,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 **新功能**  
 - **Always Encrypted 支援：** 針對包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 與命令列工具 (SqlPackage.exe) 新增 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
 - **時態表增強支援：** 透過在改變之前取消連結時態表，然後在完成之後再重新連結來簡化體驗。 這表示時態表在支援的作業方面有其他資料表類型 (標準、記憶體內部) 的同位。 
-- **SqlPackage.exe 和安裝變更：** 從 SQL Server 引擎隔離出 SSDT 的變更以及 SSMS 更新。 如需詳細資訊，請參閱 [SSDT 和 SqlPackage.exe 安裝和更新的變更 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)。
+- **SqlPackage.exe 和安裝變更：** 從 SQL Server 引擎隔離出 SSDT 的變更以及 SSMS 更新。 如需詳細資訊，請參閱 [SSDT 和 SqlPackage.exe 安裝和更新的變更 (英文)](/archive/blogs/ssdt/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates)。
 
 
 **更新和修正**
@@ -1050,12 +1050,12 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 組建編號：  &nbsp; 14.0.60525.0  
 適用於 SQL Server 2016。 
 
-SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入 SQL Server 2016 RTM 之最新更新的支援，和各種錯誤 (bug) 修正。 如需詳細資訊，請參閱 [2016 年 6 月的 SQL Server Data Tools GA 更新 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)。
+SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入 SQL Server 2016 RTM 之最新更新的支援，和各種錯誤 (bug) 修正。 如需詳細資訊，請參閱 [2016 年 6 月的 SQL Server Data Tools GA 更新 (英文)](/archive/blogs/ssdt/sql-server-data-tools-ga-update-for-june-2016)。
 
 ## <a name="additional-resources"></a>其他資源
 
 - [下載 SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
-- [Database Engine 的新功能](https://msdn.microsoft.com/library/bb510411.aspx)
-- [Analysis Services 的新功能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [Database Engine 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Analysis Services 的新功能](/analysis-services/what-s-new-in-analysis-services)
 - [Integration Services 的新功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

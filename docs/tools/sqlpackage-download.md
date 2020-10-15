@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drskwier; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6b84916d94a77c0ab832ceee902f9c5d4f95dc2b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721579"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081957"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -33,7 +33,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。 若要下載其他語言，請參閱[可用的語言](#available-languages)一節。
 
 ## <a name="dacfx"></a>DacFx
-DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) 是一個與將資料庫部署整合到應用程式管線相關的機制。  DacServices API 可透過 nuget 在套件中取得，[Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx)。  目前的 DacFx version 版本為 150.4897.1。
+DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) 是一個與將資料庫部署整合到應用程式管線相關的機制。  DacServices API 可透過 nuget 在套件中取得，[Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx)。  目前的 DacFx version 版本為 150.4897.1。
 
 透過 .NET CLI 安裝 nuget 套件是使用下列命令來完成的：
 

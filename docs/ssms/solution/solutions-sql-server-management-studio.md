@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61e10c2e90e7b3942e36c59a2f395b84a7fb3ea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3bc061995a9b8b1765fd6188fe79a03e4acf62a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468540"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035974"
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,5 +57,4 @@ ms.locfileid: "88468540"
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  
 [專案 &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[方案總管原始檔控制](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
-  
+[方案總管原始檔控制](./solution-explorer.md)  

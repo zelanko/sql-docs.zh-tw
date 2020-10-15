@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901590"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036297"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
 
@@ -52,6 +52,6 @@ ms.locfileid: "88901590"
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [指定叫用計數](../../relational-databases/scripting/specify-a-hit-count.md)   
- [指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [指定中斷點條件](./specify-a-breakpoint-condition.md)   
+ [指定叫用計數](./specify-a-hit-count.md)   
+ [指定中斷點動作](./specify-a-breakpoint-action.md)

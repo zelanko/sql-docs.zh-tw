@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519028"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987964"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：設定 SQL Server 單元測試執行
 
@@ -30,7 +30,7 @@ ms.locfileid: "85519028"
 -   **結構描述部署**： 「資料庫專案」(Database Project) 是資料庫的離線表示。 資料庫專案代表「資料庫物件」(Database Object) 的結構，但不包含資料。 當您在資料庫專案中變更「結構描述」(Schema) 之後，可以在實際資料庫中測試這些變更。 在結構描述部署步驟中，您要測試的資料庫物件會從資料庫專案複製到要執行測試的資料庫。 如需有關結構描述部署的詳細資訊，請參閱[部署資料庫結構描述](#DeployingDBSchema)。  
   
     > [!NOTE]  
-    > 測試不會在方案資料夾中執行，而是在本機硬碟上的另一個資料夾中執行。 雖然您可以設定測試部署的各部分，但通常不需要針對單元測試設定部署。 如需有關測試部署的詳細資訊，請參閱[執行測試](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)。  
+    > 測試不會在方案資料夾中執行，而是在本機硬碟上的另一個資料夾中執行。 雖然您可以設定測試部署的各部分，但通常不需要針對單元測試設定部署。 如需有關測試部署的詳細資訊，請參閱[執行測試](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100))。  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>指定連接字串  
   
@@ -85,4 +85,3 @@ ms.locfileid: "85519028"
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [使用 SQL Server 單元測試驗證資料庫程式碼](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

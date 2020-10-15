@@ -15,12 +15,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9342ab54effc66185c6b4fe1df21f214f7da9842
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: bd4bcf579688bd00c845a9c51a724e623805daf7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901700"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036091"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>在 Management Studio 中使用屬性視窗
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,5 @@ ms.locfileid: "88901700"
 4.  在 [SQL 查詢編輯器] 的 [執行計畫]**** 索引標籤中，按一下運算子的圖示來檢視 [屬性] 視窗中之運算子的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性視窗 &#40;Management Studio&#41;](https://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
-  
+ [屬性視窗 &#40;Management Studio&#41;](../properties-window-management-studio.md)  
   

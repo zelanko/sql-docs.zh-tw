@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897468"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987544"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計劃
 
@@ -46,7 +46,7 @@ ms.locfileid: "85897468"
   
 -   建立類別庫專案並加入必要參考。  
   
--   定義繼承自 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 且名稱為 DeploymentUpdateReportContributor 的類別。  
+-   定義繼承自 [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) 且名稱為 DeploymentUpdateReportContributor 的類別。  
   
 -   覆寫 OnExecute 方法。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85897468"
   
     ```  
   
-    現在您已經定義繼承自 DeploymentPlanExecutor 的部署參與者。 在建置和部署程序期間，自訂參與者是從標準擴充目錄載入。 部署計畫執行參與者是由 [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx) 屬性加以識別。  
+    現在您已經定義繼承自 DeploymentPlanExecutor 的部署參與者。 在建置和部署程序期間，自訂參與者是從標準擴充目錄載入。 部署計畫執行參與者是由 [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute) 屬性加以識別。  
   
     參與者需要這個屬性，才能設定為可搜尋的。 看起來應類似下列範例：  
   
@@ -249,9 +249,9 @@ ms.locfileid: "85897468"
             }  
     ```  
   
-    將 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 物件傳遞給 OnExecute 方法，以存取任何指定的引數、來源和目標資料庫模型、組建屬性和擴充檔。 在這個範例中，我們會取得模型，然後呼叫 Helper 函數以輸出模型資訊。 我們使用基底類別的 PublishMessage Helper 方法，回報所發生的任何錯誤。  
+    將 [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) 物件傳遞給 OnExecute 方法，以存取任何指定的引數、來源和目標資料庫模型、組建屬性和擴充檔。 在這個範例中，我們會取得模型，然後呼叫 Helper 函數以輸出模型資訊。 我們使用基底類別的 PublishMessage Helper 方法，回報所發生的任何錯誤。  
   
-    其他相關類型和方法包括：[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 和 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)。  
+    其他相關類型和方法包括：[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)、[ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult)、[DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle) 和 [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions)。  
   
     下一步，您會定義挖掘部署計畫詳細資料的協助程式類別。  
   
@@ -524,11 +524,11 @@ ms.locfileid: "85897468"
   
     |**程式碼區域**|**有用的型別**|  
     |-----------------|--------------------|  
-    |類別成員|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |類別成員|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)、[ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult)、[DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |WriteReport 方法|XmlWriter 和 XmlWriterSettings|  
-    |ReportPlanOperations 方法|相關型別包含：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />還有一些其他步驟 (如需步驟的完整清單，請參閱 API 文件)。|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |ReportPlanOperations 方法|相關型別包含：[DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)、[SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep)、[SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep)、[SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep)、[CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep)、[AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep)、[DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep)。<br /><br />還有一些其他步驟 (如需步驟的完整清單，請參閱 API 文件)。|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     下一步，您會建置類別庫。  
   
@@ -738,10 +738,9 @@ ms.locfileid: "85897468"
     藉由在執行時分析部署計畫，可以回報在部署中包含的任何資訊，也可以根據該計畫的步驟採取其他動作。  
   
 ## <a name="next-steps"></a>後續步驟  
-您可以建立其他工具，執行 XML 輸出檔案的處理。 這只是 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的一個例子。 您也可以建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 以在計畫執行前變更部署計畫。  
+您可以建立其他工具，執行 XML 輸出檔案的處理。 這只是 [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) 的一個例子。 您也可以建立 [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) 以在計畫執行前變更部署計畫。  
   
 ## <a name="see-also"></a>另請參閱  
-[逐步解說：延伸資料庫專案組建，以產生模型統計資料](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[逐步解說：延伸資料庫專案部署以修改部署計畫](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[使用組建和部署參與者自訂資料庫建置和部署](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[逐步解說：延伸資料庫專案組建，以產生模型統計資料](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[逐步解說：延伸資料庫專案部署以修改部署計畫](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[使用組建和部署參與者自訂資料庫建置和部署](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee09f89463151f0dcf5c1fcd2c1f82a72ba8f350
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895844"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988184"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在專案中使用 Microsoft SQL Server 2012 物件
 
 在這個範例中，您會將一個序列物件加入至以 Microsoft SQL Server 2012 為目標的資料庫專案。  
   
-序列在 Microsoft SQL Server 2012 中導入。 序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。  如需有關序列物件的詳細資訊，請參閱[序號](../relational-databases/sequence-numbers/sequence-numbers.md)。 如需 Microsoft SQL Server 2012 新功能的資訊，請參閱 [SQL Server 2012 的新功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
+序列在 Microsoft SQL Server 2012 中導入。 序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。  如需有關序列物件的詳細資訊，請參閱[序號](../relational-databases/sequence-numbers/sequence-numbers.md)。 如需 Microsoft SQL Server 2012 新功能的資訊，請參閱 [SQL Server 2012 的新功能](/previous-versions/sql/sql-server-2012/bb500435(v=sql.110))。  
   
 > [!WARNING]  
 > 下列程序利用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)和[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)小節中的程序所建立的實體。  
@@ -68,4 +68,3 @@ ms.locfileid: "85895844"
 3.  按 [執行查詢] 按鈕。  
   
 4.  在 [SQL Server 物件總管] 中，巡覽至資料庫的 [Products] 資料表。 按一下滑鼠右鍵選取 [檢視資料] 檢查新加入的資料列。  
-  

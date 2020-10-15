@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901514"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036231"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901514"
 
 ## <a name="breakpoints"></a>中斷點
 
-中斷點會告知偵錯工具要在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業。 如需中斷點的詳細資訊，請參閱 [Transact-SQL 中斷點](../../relational-databases/scripting/transact-sql-breakpoints.md)。  
+中斷點會告知偵錯工具要在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業。 如需中斷點的詳細資訊，請參閱 [Transact-SQL 中斷點](./transact-sql-breakpoints.md)。  
   
 ## <a name="controlling-statement-execution"></a>控制陳述式執行
 
@@ -67,4 +67,4 @@ ms.locfileid: "88901514"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Transact-SQL 偵錯工具資訊](./transact-sql-debugger-information.md)

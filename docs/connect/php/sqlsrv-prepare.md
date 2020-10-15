@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51f1bd58c872516ffdf79d3a957b7c4674b82cd8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 41fc8b3ae6185183b3d81988874b23ea926077e2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726668"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081267"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,7 +90,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
-## <a name="example"></a>範例  
+## <a name="example-1"></a>範例 1  
 下列範例會準備及執行陳述式。 若執行陳述式 (請參閱 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md))，其會更新 AdventureWorks 資料庫之 *Sales.SalesOrderDetail* 資料表中的欄位。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
@@ -137,7 +137,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="example-2"></a>範例 2  
 下列範例示範如何準備陳述式，然後以不同的參數值重新加以執行。 此範例會更新 AdventureWorks 資料庫中 *Sales.SalesOrderDetail* 資料表的 *OrderQty* 資料行。 更新執行之後，將會查詢資料庫以確認更新已成功。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
@@ -225,7 +225,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > 建議在將值繫結至 [decimal 或 numeric 資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
-## <a name="example"></a>範例  
+## <a name="example-3"></a>範例 3  
 此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```

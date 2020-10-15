@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7a5b108cf263e284e557526c21a3bb399dcc979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8653d0b07ee5774acf0cbc22ce4a24a2d727f4b8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462954"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036041"
 ---
 # <a name="create-a-new-solution"></a>建立新方案
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,5 +42,4 @@ ms.locfileid: "88462954"
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  
-[從原始檔控制開啟方案](https://docs.microsoft.com/sql/azure-data-studio/source-control)  
-  
+[從原始檔控制開啟方案](../../azure-data-studio/source-control.md)  

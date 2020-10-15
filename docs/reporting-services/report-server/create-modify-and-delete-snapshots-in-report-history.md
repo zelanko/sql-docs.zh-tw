@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c686ff203b9a080424fb46e50c42a6edefd7655
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2119850a1352c8c959fafcb5ce5168072e9ccd29
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548030"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987174"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
   報表記錄是報表快照集的集合。 您可以加入和刪除快照集，或修改影響報表記錄儲存區的屬性，來維護報表記錄。 您可以用手動方式或依據排程來建立報表記錄。  
@@ -27,7 +27,7 @@ ms.locfileid: "84548030"
  報表記錄中的快照集可以由建立的日期及時間加以識別。 日期及時間是以查詢的執行時間為準。  
   
 ## <a name="creating-snapshots-in-report-history"></a>在報表記錄中建立快照集  
- 您可以用手動方式建立快照集，如果是可以自動執行的報表，就能夠依排定間隔建立快照集。 若要自動執行，報表必須使用預存認證，或完全不使用認證。 此外，若報表使用參數，您必須指定報表執行時使用的預設值。 您可以在報表的屬性頁面指定預存認證和參數值。 如需詳細資訊，請參閱[參數屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
+ 您可以用手動方式建立快照集，如果是可以自動執行的報表，就能夠依排定間隔建立快照集。 若要自動執行，報表必須使用預存認證，或完全不使用認證。 此外，若報表使用參數，您必須指定報表執行時使用的預設值。 您可以在報表的屬性頁面指定預存認證和參數值。 如需詳細資訊，請參閱[參數屬性頁面 &#40;報表管理員&#41;](/previous-versions/sql/sql-server-2016/ms189700(v=sql.130))。  
   
  當您在建立報表快照集時，下列元素會和報表快照集一起儲存在報表伺服器資料庫中：  
   
@@ -60,9 +60,8 @@ ms.locfileid: "84548030"
   
 ## <a name="see-also"></a>另請參閱  
  [建立報表記錄 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../web-portal-ssrs-native-mode.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [將快照集加入報表記錄 &#40;報表管理員&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
-  
   

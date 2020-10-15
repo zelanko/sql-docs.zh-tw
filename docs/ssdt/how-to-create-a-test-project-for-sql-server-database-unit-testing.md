@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5a10fdbc94858a9fe3f5b523fdd43b505e2563f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243529"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987554"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：建立 SQL Server 資料庫單元測試的測試專案
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243529"
 |不同的 SQL Server 單元測試是否需要針對測試執行或測試驗證存取不同的資料庫連接？|如果是，您就需要多個測試專案。 您無法針對測試執行指定多個資料庫連接。 不過，您可以針對測試驗證指定不同的資料庫連接。|  
 |您是否想要針對不同的單元測試部署不同的資料庫專案？|如果是，您就需要多個測試專案。 測試專案只能部署單一資料庫專案。|  
   
-如需上述每個問題的詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 您也可以提供自己的 [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 實作，作為建立多個測試專案的替代方案。  
+如需上述每個問題的詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。 您也可以提供自己的 [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 實作，作為建立多個測試專案的替代方案。  
   
 您有三個選項可以將測試專案加入至包含資料庫專案的方案：  
   
@@ -56,4 +56,3 @@ ms.locfileid: "87243529"
   
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

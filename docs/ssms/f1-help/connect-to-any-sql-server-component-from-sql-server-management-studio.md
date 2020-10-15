@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497420"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034901"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
 
@@ -51,6 +51,5 @@ ms.locfileid: "88497420"
 [方案總管] 可讓您在專案中儲存相關的查詢、指令碼、連接和其他相關的資訊。 每個指令碼專案都包含名為 **連線**的節點，讓您可以從中儲存一或多個連線。 若要新增連線，請以滑鼠右鍵選取 [連線] ，然後選取 [新增連線]。 若要存取儲存的連線，請展開 [連線]，然後選取兩次該連線。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會開啟該連線所關聯的查詢視窗。 儲存好之後，指令碼會保留它們與特定連接的關聯。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[使用 SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [物件總管](../../ssms/object/object-explorer.md)  
-  

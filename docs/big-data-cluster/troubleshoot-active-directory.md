@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772883"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891068"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>對 SQL Server 巨量資料叢集 Active Directory 整合進行疑難排解
 
@@ -123,7 +123,7 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>原因
 
-在上述範例中，因為網域群組的範圍是網域本機，所以部署無法為網域使用者建立登入。 使用全域或通用範圍群組。 [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 說明 AD 群組範圍需求。
+在上述範例中，因為網域群組的範圍是網域本機，所以部署無法為網域使用者建立登入。 使用全域或通用範圍群組。 [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deploy.md) 說明 AD 群組範圍需求。
 
 ## <a name="verify"></a>Verify
 
