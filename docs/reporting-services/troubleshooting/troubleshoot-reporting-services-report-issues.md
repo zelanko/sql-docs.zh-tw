@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662806"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988372"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>針對 Reporting Services 報表問題進行疑難排解
 本主題可協助您對下列問題進行疑難排解： [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 報表設計、預覽報表、以原生模式或 SharePoint 模式將報表發行至報表伺服器、在報表伺服器上檢視報表，或是將報表匯出為不同的檔案格式。  
@@ -38,7 +38,7 @@ ms.locfileid: "80662806"
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證查詢和認證  
 將複雜查詢加入報表之前，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證複雜查詢。   
   
-如需詳細資訊，請參閱 [Database Engine 查詢編輯器](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 和 [使用物件總管管理物件](~/ssms/object/manage-objects-by-using-object-explorer.md)。  
+如需詳細資訊，請參閱 [Database Engine 查詢編輯器](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) 和 [使用物件總管管理物件](~/ssms/object/manage-objects-by-using-object-explorer.md)。  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>使用在用戶端上快取的報表資料分析問題報表  
 當報表作者在 Business Intelligence Development Studio 中建立報表時，撰寫用戶端會將資料快取為 .rdl.data 檔案，供您預覽報表時使用。 每當查詢變更時，快取也會隨之更新。 若要對報表問題進行偵錯，設定不要重新整理報表資料可能會很有用，因為這樣可以避免資料在偵錯期間發生變更。   
@@ -60,5 +60,3 @@ ms.locfileid: "80662806"
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

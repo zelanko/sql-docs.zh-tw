@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1c017a50c2c5806012547d87fd67786e8121510a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479910"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038128"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建置資料庫專案
 
@@ -68,6 +68,5 @@ ms.locfileid: "89479910"
 方案是由一或多個指令碼專案所組成。 專案是由一或多個指令碼或連接所組成。 專案也可包含非指令碼檔案。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[使用 SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [方案 &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
-  

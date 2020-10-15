@@ -10,19 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 08/06/2020
-ms.openlocfilehash: 9a3b653a0e82eed4bffdf88461474a999eef152d
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: ba4b1362a3f435617f36c75fbcf0e8371169f990
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714176"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005166"
 ---
 # <a name="how-to-enable-the-tcp-protocol"></a>如何啟用 TCP 通訊協定
 
 ## <a name="how-to-enable-the-tcp-protocol-when-connected-to-the-console-with-sqlps"></a>在使用 SQLPS 連線至主控台時如何啟用 TCP 通訊協定。
 
-> [!Note]
-> **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **[SqlServer](sql-server-powershell.md)** 模組。
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 1. 開啟命令提示字元，並輸入：
 
@@ -92,10 +91,6 @@ ms.locfileid: "88714176"
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
-
-
-
-
 
 ## <a name="next-steps"></a>後續步驟
 

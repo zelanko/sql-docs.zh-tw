@@ -16,12 +16,12 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a86053b5d9f7cfbe0a09a63794e63f2fc690f4f1
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 7f5e6f93c102c4f08d2f52e0359e77d2c450a74d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902009"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039105"
 ---
 # <a name="complete-transact-sql-snippets"></a>完成 Transact-SQL 程式碼片段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "88902009"
 3.  從清單中選取項目，或輸入您選擇的取代項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [插入 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-transact-sql-snippets.md)   
- [插入範圍陳述式 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [插入 Transact-SQL 程式碼片段](./insert-transact-sql-snippets.md)   
+ [插入範圍陳述式 Transact-SQL 程式碼片段](./insert-surround-with-transact-sql-snippets.md)  
   

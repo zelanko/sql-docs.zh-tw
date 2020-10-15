@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115752"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988364"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91115752"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務：** 請針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務確認並執行下列其他動作：  
   
--   如果 SQL 代理程式設定為事件轉送，請修正登錄設定。 如需詳細資訊，請參閱[指定事件轉送伺服器 &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)。  
+-   如果 SQL 代理程式設定為事件轉送，請修正登錄設定。 如需詳細資訊，請參閱[指定事件轉送伺服器 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)。  
   
 -   當電腦/叢集網路名稱已重新命名時，請修正主要伺服器 (MSX) 和目標伺服器 (TSX) 執行個體名稱。 如需詳細資訊，請參閱下列主題：  
   
@@ -84,5 +84,4 @@ ms.locfileid: "91115752"
   
 ## <a name="see-also"></a>另請參閱  
  [重新命名主控 SQL Server 獨立式執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
   

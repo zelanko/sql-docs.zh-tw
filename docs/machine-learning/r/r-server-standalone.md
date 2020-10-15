@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179957"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956909"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什麼是 SQL Server 中的獨立 Machine Learning Server 或 R 伺服器？
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,7 +24,7 @@ SQL Server 提供獨立於 SQL Server 執行的獨立 R 伺服器或 Machine Lea
 在 SQL Server 2016 中，這項功能稱為 **R Server (獨立式)** ，且僅限於 R。 在 SQL Server 2017 中，它稱為 **Machine Learning Server (獨立式)** ，且包括 R 和 Python。  
 
 > [!Note]
-> 如同 SQL Server 安裝程式所安裝，獨立伺服器的功能相當於非 SQL 品牌版本的 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用者案例，包括遠端執行、運作化和 Web 服務，以及 R 和 Python 程式庫的完整集合。
+> 如同 SQL Server 安裝程式所安裝，獨立伺服器的功能相當於非 SQL 品牌版本的 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)，支援相同的使用者案例，包括遠端執行、運作化和 Web 服務，以及 R 和 Python 程式庫的完整集合。
 
 ## <a name="components"></a>元件
 
@@ -48,7 +48,7 @@ R 和 Python 開發人員通常會選擇獨立伺服器，以超越開放原始�
 
 隨著獨立伺服器與 SQL Server 分離，R 和 Python 環境會使用基礎作業系統和獨立伺服器 (而不是 SQL Server) 中提供的標準工具進行設定、保護和存取。 SQL Server 關聯式資料並沒有內建支援。 如果想要使用 SQL Server 資料，您可以建立資料來源物件和連接，就像從任何用戶端所做的一樣。
 
-如果您同時需要本機和遠端計算，獨立伺服器也可以當成 SQL Server 的附屬電腦，作為強大的開發環境。 獨立伺服器上的 R 和 Python 套件與資料庫引擎安裝所提供的套件相同，允許程式碼可攜性和[計算內容切換](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)。
+如果您同時需要本機和遠端計算，獨立伺服器也可以當成 SQL Server 的附屬電腦，作為強大的開發環境。 獨立伺服器上的 R 和 Python 套件與資料庫引擎安裝所提供的套件相同，允許程式碼可攜性和[計算內容切換](/machine-learning-server/r/concept-what-is-compute-context)。
 
 ## <a name="how-to-get-started"></a>如何開始使用
 
@@ -72,15 +72,15 @@ R 和 Python 開發人員通常會選擇獨立伺服器，以超越開放原始�
 
 使用來自 RevoScaleR、revoscalepy 和機器學習演算法的函式來撰寫 R 或 Python 指令碼。
   
-  + [在 25 個函式中探索 R 和 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler) (英文)：開始使用基本 R 命令，然後進行 RevoScaleR 可散發分析函式，以提供高效能 R 解決方案以及進行調整。 包含許多最熱門 R 模型建立套件 (例如 	K-Means 叢集、決策樹及決策樹系) 的可平行處理版本，以及資料操作工具。
+  + [在 25 個函式中探索 R 和 RevoScaleR](/machine-learning-server/r/tutorial-r-to-revoscaler) (英文)：開始使用基本 R 命令，然後進行 RevoScaleR 可散發分析函式，以提供高效能 R 解決方案以及進行調整。 包含許多最熱門 R 模型建立套件 (例如 	K-Means 叢集、決策樹及決策樹系) 的可平行處理版本，以及資料操作工具。
 
-  + [快速入門：使用 microsoftml Python 套件的二元分類範例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml) (英文)：使用來自 microsoftml 的函式和已知的乳癌資料集，建立二元分類模型。
+  + [快速入門：使用 microsoftml Python 套件的二元分類範例](/machine-learning-server/python/quickstart-binary-classification-with-microsoftml) (英文)：使用來自 microsoftml 的函式和已知的乳癌資料集，建立二元分類模型。
 
 選擇工作的最佳語言。 R 最適合難以使用 SQL 來實作的統計計算。 對於資料的集合型作業，請利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的能力來達到最大效能。 使用記憶體內部資料庫引擎，以快速計算資料行。
 
 ### <a name="step-4-operationalize-your-solution"></a>步驟 4：讓您的解決方案運作
 
-獨立伺服器可以使用非 SQL 品牌 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) (英文) 的 [運作化](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) (英文) 功能。 您可以設定獨立伺服器以運作，其具備以 Web 服務形式部署和裝載程式碼、執行診斷、測試 Web 服務容量等優點。
+獨立伺服器可以使用非 SQL 品牌 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) (英文) 的 [運作化](//machine-learning-server/what-is-operationalization) (英文) 功能。 您可以設定獨立伺服器以運作，其具備以 Web 服務形式部署和裝載程式碼、執行診斷、測試 Web 服務容量等優點。
 
 ### <a name="step-5-maintain-your-server"></a>步驟 5：維護您的伺服器
 
@@ -93,4 +93,3 @@ SQL Server 會定期發佈累積更新。 套用累積更新可增加現有安�
 ## <a name="see-also"></a>另請參閱
 
  [安裝 R 伺服器 (獨立式) 或 Machine Learning Server (獨立式)](../install/sql-machine-learning-standalone-windows-install.md)
-

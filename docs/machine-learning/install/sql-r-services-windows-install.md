@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487651"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956763"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "88487651"
 
 + 需要資料庫引擎執行個體。 您無法僅安裝 R，不過可藉由累加方式，將其新增至現有的執行個體。
 
-+ 針對商務持續性，R 服務支援 [Always On 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 您必須在每個節點上都安裝 R 服務，並設定套件。
++ 針對商務持續性，R 服務支援 [Always On 可用性群組](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。 您必須在每個節點上都安裝 R 服務，並設定套件。
 
 + 請勿在 SQL Server Always On 容錯移轉叢集執行個體 (FCI) 上安裝 R 服務。 用來隔離 R 程序的安全性機制，與 SQL Server Always On 容錯移轉叢集執行個體環境不相容。
 
@@ -91,7 +91,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
     + Database Engine 服務
     + R Services (資料庫內)
 
-1. 在安裝程式完成之後，如果系統要求您重新啟動電腦，請立即重新啟動。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
+1. 在安裝程式完成之後，如果系統要求您重新啟動電腦，請立即重新啟動。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
@@ -110,7 +110,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 ##  <a name="enable-script-execution"></a>啟用指令碼執行
 
-1. 開啟 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+1. 開啟 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 或 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 1. 連線到安裝 R Services 的執行個體，按一下 [新增查詢] 開啟查詢視窗，然後執行下列命令：
 
@@ -181,7 +181,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 1. 從已經安裝的基準執行個體開始：SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2。
 
-1. 移至累積更新清單：[適用於 Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. 移至累積更新清單：[適用於 Microsoft SQL Server 的最新更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. 選取最新的服務套件 (尚未安裝為基準執行個體) 及累積更新。 可執行檔會自動下載並解壓縮。
 
@@ -205,7 +205,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 * [SQL Server 機器學習服務的防火牆組態](../../machine-learning/security/firewall-configuration.md)。
 * [啟用其他網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 * [啟用遠端連線](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)。
-* [管理磁碟配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) (英文)，以避免外部指令碼執行耗盡磁碟空間的工作。
+* [管理磁碟配額](/windows/desktop/fileio/managing-disk-quotas) (英文)，以避免外部指令碼執行耗盡磁碟空間的工作。
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

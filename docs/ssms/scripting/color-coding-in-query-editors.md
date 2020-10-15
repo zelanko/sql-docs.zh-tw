@@ -15,18 +15,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0361e410c73a18b2901ff11487a58925ce32fa8
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: d83afc075542a3dce2bfeb13272194efc661f7f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093477"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039104"
 ---
 # <a name="color-coding-in-query-editors"></a>查詢編輯器中的色彩編碼
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-在程式碼編輯器中輸入的文字會指派至類別目錄；每一個類別目錄都會以色彩識別。 這些色彩可協助您快速地找到程式碼中的文字。 例如，註解會以深綠色突顯出來。 下表將列出最常見的色彩。 您可以檢視色彩及其類別目錄的完整清單，也可以使用 [工具] 和 [選項] 功能表來設定自訂的色彩配置。 如需如何變更預設色彩的詳細資訊，請參閱 [變更字型色彩、大小與樣式](../../relational-databases/scripting/change-font-color-size-and-style.md)。  
+在程式碼編輯器中輸入的文字會指派至類別目錄；每一個類別目錄都會以色彩識別。 這些色彩可協助您快速地找到程式碼中的文字。 例如，註解會以深綠色突顯出來。 下表將列出最常見的色彩。 您可以檢視色彩及其類別目錄的完整清單，也可以使用 [工具] 和 [選項] 功能表來設定自訂的色彩配置。 如需如何變更預設色彩的詳細資訊，請參閱 [變更字型色彩、大小與樣式](./change-font-color-size-and-style.md)。  
   
 ## <a name="default-code-colors"></a>預設程式碼色彩  
   
@@ -43,8 +43,7 @@ ms.locfileid: "89093477"
 |深灰色|操作員|  
   
 ## <a name="status-bar"></a>狀態列  
- 您可以在 [物件總管] 中設定已註冊的伺服器或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 伺服器，讓 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 狀態列中顯示不同的色彩。 這可協助您在同時開啟多個視窗時，識別每個編輯器視窗所連接的伺服器。 如需設定狀態列色彩的詳細資訊，請參閱[狀態列 &#40;Database Engine 查詢編輯器&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)。  
+ 您可以在 [物件總管] 中設定已註冊的伺服器或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 伺服器，讓 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 狀態列中顯示不同的色彩。 這可協助您在同時開啟多個視窗時，識別每個編輯器視窗所連接的伺服器。 如需設定狀態列色彩的詳細資訊，請參閱[狀態列 &#40;Database Engine 查詢編輯器&#41;](./status-bar-database-engine-query-editor.md)。  
   
  某些類型的編輯器不會顯示狀態列，或不支援多種色彩。  
-  
   

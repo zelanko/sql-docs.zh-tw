@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197203"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935564"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -61,7 +61,7 @@ ms.locfileid: "86197203"
   
 2.  前往 **[網站設定]** 。  
   
-    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
+    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
   
     -   在 SharePoint 2010，按一下 **[網站動作]** ，然後按一下 **[網站設定]** 。  
   
@@ -173,5 +173,4 @@ ms.locfileid: "86197203"
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)  
-  
   

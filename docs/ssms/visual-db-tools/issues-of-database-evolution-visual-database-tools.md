@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314624"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037765"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>資料庫演進問題 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,5 @@ ms.locfileid: "88314624"
 不論您如何變更資料庫設計，您應該保留一份變更記錄。 方法之一就是保留您對實際執行資料庫進行的所有 SQL 指令碼修改。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [多使用者環境 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

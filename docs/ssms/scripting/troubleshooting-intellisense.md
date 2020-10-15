@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901868"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036081"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>識別 IntelliSense 的問題 - SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901868"
   
      依預設，許多 IntelliSense 功能都會自動運作，但您可以停用任何功能。  
   
-     即使已停用自動完成陳述式的功能，您也可以使用 IntelliSense 功能。 如需詳細資訊，請參閱[設定 IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)。  
+     即使已停用自動完成陳述式的功能，您也可以使用 IntelliSense 功能。 如需詳細資訊，請參閱[設定 IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)。  
   
 ## <a name="database-engine-query-intellisense"></a>Database Engine 查詢 IntelliSense  
  下列問題適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查詢編輯器：  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 功能不支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 參數說明不支援某些物件中的參數，例如擴充預存程序。 如需詳細資訊，請參閱 [IntelliSense 所支援的 Transact-SQL 語法](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 功能不支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 參數說明不支援某些物件中的參數，例如擴充預存程序。 如需詳細資訊，請參閱 [IntelliSense 所支援的 Transact-SQL 語法](./transact-sql-syntax-supported-by-intellisense.md)。  
   
 -   只有當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體時，才能使用 IntelliSense。 當查詢編輯器連接至舊版 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，則無法使用 IntelliSense。  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901868"
 -   完成清單不包含您沒有權限的資料庫物件。 IntelliSense 旗標會參考您沒有權限的物件。 例如，如果您開啟其他使用者撰寫的指令碼，對於該使用者擁有權限而您沒有權限之物件的任何參考，都會標示為不正確。  
   
 -   如果您喪失與 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的連接，完成清單可能會停止運作。 請重新連接到該執行個體。  
-  
   

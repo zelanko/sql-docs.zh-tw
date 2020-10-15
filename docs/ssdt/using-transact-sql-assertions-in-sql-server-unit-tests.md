@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898987"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987744"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
 
@@ -79,11 +79,10 @@ ms.locfileid: "85898987"
   
 @ErrorState 是 1 - 127 之間的任意整數。 您可以使用此整數來區別在程式碼中不同位置引發之單一錯誤的出現項目。  
   
-如需詳細資訊，請參閱 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 [如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)主題會提供在 SQL Server 單元測試中使用 RAISERROR 的範例。  
+如需詳細資訊，請參閱 [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md)。 [如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)主題會提供在 SQL Server 單元測試中使用 RAISERROR 的範例。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [使用 SQL Server 單元測試驗證資料庫程式碼](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [操作說明：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

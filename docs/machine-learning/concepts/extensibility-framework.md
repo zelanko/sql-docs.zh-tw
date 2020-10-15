@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173310"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956518"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充性結構 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88173310"
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer 和 SQL Satellite
 
-**BxlServer** 是 Microsoft 提供的可執行檔，可以管理 SQL Server 和語言執行階段之間的通訊。 它會針對 Windows 建立用於包含外部指令碼工作階段的工作物件 (或針對 Linux 建立命名空間)。 它也會為每個外部指令碼作業佈建安全工作資料夾，並使用 SQL Satellite 來管理外部執行階段和 SQL Server 之間的資料傳輸。 如果您在作業執行時執行[處理序總管](https://technet.microsoft.com/sysinternals/processexplorer.aspx)，您可能會看到一或多個 BxlServer 執行個體。
+**BxlServer** 是 Microsoft 提供的可執行檔，可以管理 SQL Server 和語言執行階段之間的通訊。 它會針對 Windows 建立用於包含外部指令碼工作階段的工作物件 (或針對 Linux 建立命名空間)。 它也會為每個外部指令碼作業佈建安全工作資料夾，並使用 SQL Satellite 來管理外部執行階段和 SQL Server 之間的資料傳輸。 如果您在作業執行時執行[處理序總管](/sysinternals/downloads/process-explorer)，您可能會看到一或多個 BxlServer 執行個體。
 
 事實上，BxlServer 是一種語言執行階段環境的隨附項目，可以搭配 SQL Server 來傳輸資料及管理工作。 BXL 代表「二進位交換語言」(Binary Exchange Language)，是指用來在 SQL Server 和外部處理序之間有效率地移動資料的資料格式。 BxlServer 也是 Microsoft R Client 和 Microsoft R Server 等相關產品的重要部分。
 
@@ -139,7 +139,7 @@ SQL Satellite 使用的自訂資料格式，已針對在 SQL Server 和外部指
 
 + **其他通訊協定**
 
-  可能需要以「區塊」運作或將資料傳輸回遠端用戶端的處理序也可以使用 [XDF 檔案格式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf) \(英文\)。 實際的資料傳輸是透過已編碼的 Blob 來進行。
+  可能需要以「區塊」運作或將資料傳輸回遠端用戶端的處理序也可以使用 [XDF 檔案格式](/machine-learning-server/r/concept-what-is-xdf) \(英文\)。 實際的資料傳輸是透過已編碼的 Blob 來進行。
 
 ## <a name="see-also"></a>另請參閱
 

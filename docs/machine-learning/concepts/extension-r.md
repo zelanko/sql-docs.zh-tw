@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02516b35a75c39c967b916d2e424362114008480
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173266"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956508"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中的 R 語言延伸模組
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88173266"
 
 SQL Server 包含開放原始碼和專屬套件。 系統會透過下列 Microsoft 開放原始碼 R 發行版本來安裝基底 R 程式庫：Microsoft R Open (MRO)。 目前的 R 使用者應該只需進行極少修改，即可移植其 R 程式碼，並在 SQL Server 上以外部處理序的形式執行。 MRO 是獨立安裝的 SQL 工具，並在擴充性架構中的核心引擎處理序外部執行。 在安裝期間，您必須同意開放原始碼授權條款。 之後，您就可以執行標準 R 套件，而不需進一步修改，如同您在 R 的任何其他開放原始碼發行版本中一樣。 
 
-SQL Server 不會修改基底 R 可執行檔，但您必須使用安裝程式所安裝的 R 版本，因為該版本是專屬套件據以建立和測試的版本。 如需 MRO 與 R 基底發行版本 (透過 CRAN 取得) 之間的差異詳細資訊，請參閱 [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability) (R 語言和 Microsoft R 產品及功能的互通性)。
+SQL Server 不會修改基底 R 可執行檔，但您必須使用安裝程式所安裝的 R 版本，因為該版本是專屬套件據以建立和測試的版本。 如需 MRO 與 R 基底發行版本 (透過 CRAN 取得) 之間的差異詳細資訊，請參閱 [Interoperability with R language and Microsoft R products and features](/r-server/what-is-r-server-interoperability) (R 語言和 Microsoft R 產品及功能的互通性)。
 
 您可以在與執行個體建立關聯的資料夾中，找到安裝程式安裝的 R 基底套件發行版本。 例如，如果您已在 SQL Server 預設執行個體上安裝 R 服務，則根據預設，R 程式庫會位於 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` 資料夾中。 同樣地，根據預設，與預設執行個體建立關聯的 R 工具會位於 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin` 資料夾中。
 
@@ -40,8 +40,8 @@ Microsoft 為平行和分散式工作負載新增的 R 套件包含下列程式�
 
 | 程式庫 | 描述 |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 支援資料來源物件和資料探索、操作、轉換和視覺化。 RevoScaleR 支援建立遠端計算內容，以及各種可調整的機器學習模型，例如 **rxLinMod**。 API 已經最佳化，可分析因過大而無法納入記憶體的資料集，以及執行分散在數個核心或處理器上的計算。 RevoScaleR 套件也支援 .XDF 檔案格式，以便更快速移動和儲存用於分析的資料。 XDF 格式會使用單欄式儲存體、具可攜性，且可用來從各種來源載入然後操作資料，包括文字、SPSS 或 ODBC 連線。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含已針對速度和正確性最佳化的機器學習演算法，以及適用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
+| [**RevoScaleR**](/machine-learning-server/r-reference/revoscaler/revoscaler) | 支援資料來源物件和資料探索、操作、轉換和視覺化。 RevoScaleR 支援建立遠端計算內容，以及各種可調整的機器學習模型，例如 **rxLinMod**。 API 已經最佳化，可分析因過大而無法納入記憶體的資料集，以及執行分散在數個核心或處理器上的計算。 RevoScaleR 套件也支援 .XDF 檔案格式，以便更快速移動和儲存用於分析的資料。 XDF 格式會使用單欄式儲存體、具可攜性，且可用來從各種來源載入然後操作資料，包括文字、SPSS 或 ODBC 連線。 |
+| [**MicrosoftML**](/r-server/r/concept-what-is-the-microsoftml-package) | 包含已針對速度和正確性最佳化的機器學習演算法，以及適用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
 
 ## <a name="using-r-in-sql-server"></a>在 SQL Server 中使用 R
 

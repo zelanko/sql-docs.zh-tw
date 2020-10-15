@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c8bc141152f907154b1108ffb53f42daac7e462
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 20fce8623266a733bb777b0cd3153ad593cfded0
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114586"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988057"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -321,7 +321,7 @@ ms.locfileid: "91114586"
 ## <a name="next-steps"></a>後續步驟
 - [完成資料庫引擎升級](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [變更資料庫相容性模式並使用查詢存放區](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [善用新的 SQL Server 2016 功能](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [善用新的 SQL Server 2016 功能](../../what-s-new-in-sql-server-2017.md)
 - [升級 SQL Server 容錯移轉叢集執行個體](upgrade-a-sql-server-failover-cluster-instance.md)
 - [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [將功能新增至 SQL Server 2016 的執行個體 (安裝程式)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [將功能新增至 SQL Server 2016 的執行個體 (安裝程式)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

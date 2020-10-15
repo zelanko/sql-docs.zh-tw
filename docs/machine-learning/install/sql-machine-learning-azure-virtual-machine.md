@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180486"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956969"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>在 Azure 虛擬機器上搭配 Python 與 R 安裝 SQL Server 機器學習服務
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "88180486"
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>在 Azure 中佈建 SQL Server 虛擬機器
 
-如需逐步指示，請參閱[如何在 Azure 入口網站中佈建 Windows SQL Server 虛擬機器](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision) \(部分機器翻譯\)。 
+如需逐步指示，請參閱[如何在 Azure 入口網站中佈建 Windows SQL Server 虛擬機器](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision) \(部分機器翻譯\)。 
 
-[設定 SQL Server 設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) \(部分機器翻譯\) 步驟是您將機器學習服務新增到執行個體的步驟。
+[設定 SQL Server 設定](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) \(部分機器翻譯\) 步驟是您將機器學習服務新增到執行個體的步驟。
 
 <a name="firewall"></a>
 

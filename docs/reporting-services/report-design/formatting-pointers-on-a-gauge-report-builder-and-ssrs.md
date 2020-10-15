@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8c0ee25b36c64a8b151c6d816d47dd0e8c1e90b4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939228"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935029"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的指標 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計指標會指出量測計目前的值。   
@@ -44,7 +44,7 @@ ms.locfileid: "87939228"
  您可以指定僅能在星形量測計之指標上方或下方繪製的指針端點。 所有指針端點樣式都可以使用無法修改的內建漸層繪製。 但 **RoundedDark** 樣式除外，您可以在其中指定漸層色彩與漸層樣式。  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> 設定貼齊間隔  
- 貼齊間隔會定義捨入值的倍數。 根據預設，量測計將指向您在資料窗格中指定之欄位的確切值。 不過，您可以向上或向下捨入確切值，以便讓指標貼齊預設的間隔。 例如，如果量測計的值為 34.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 35。 如果量測計的值為 31.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 30。 如需詳細資訊，請參閱 [設定量測計的貼齊間隔 (報表產生器及 SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)。  
+ 貼齊間隔會定義捨入值的倍數。 根據預設，量測計將指向您在資料窗格中指定之欄位的確切值。 不過，您可以向上或向下捨入確切值，以便讓指標貼齊預設的間隔。 例如，如果量測計的值為 34.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 35。 如果量測計的值為 31.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 30。 如需詳細資訊，請參閱 [設定量測計的貼齊間隔 (報表產生器及 SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> 將影像指定為星形量測計的指標  
  除了指標樣式的內建清單之外，您也可以將影像指定為指標。 這在使用影像取代現有的指針指標樣式時是最有效果的。 影像會附加在指標上，但是所有指標功能都適用。 當影像用於指標時，色彩與漸層選項則不適用。  
@@ -55,5 +55,4 @@ ms.locfileid: "87939228"
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288280"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956616"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>使用 R 在 SQL Server 上建立 SSIS 和 SSRS 工作流程
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "89288280"
 
 下列範例源自於已淘汰的 MSDN 部落格文章，作者為 Jimmy Wong，URL：`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-這個範例會示範如何使用 SSIS 將工作自動化。 您可以使用 SQL Server Management Studio 來建立具有內嵌 R 的預存程序，然後從 SSIS 套件中的 [執行 T-SQL 工作](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) 執行這些預存程序。
+這個範例會示範如何使用 SSIS 將工作自動化。 您可以使用 SQL Server Management Studio 來建立具有內嵌 R 的預存程序，然後從 SSIS 套件中的 [執行 T-SQL 工作](../../integration-services/control-flow/execute-t-sql-statement-task.md) 執行這些預存程序。
 
-若要逐步執行此範例，您需要熟悉 Management Studio、SSIS、SSIS 設計師、套件設計以及 T-SQL。 SSIS 套件使用了三個[執行 T-SQL 工作](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)，其分別為將訓練資料插入資料表、建立資料模型，以及對資料進行評分以取得預測輸出。
+若要逐步執行此範例，您需要熟悉 Management Studio、SSIS、SSIS 設計師、套件設計以及 T-SQL。 SSIS 套件使用了三個[執行 T-SQL 工作](../../integration-services/control-flow/execute-t-sql-statement-task.md)，其分別為將訓練資料插入資料表、建立資料模型，以及對資料進行評分以取得預測輸出。
 
 ### <a name="load-training-data"></a>載入訓練資料
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-在 SSIS 設計師中，建立 [執行 SQL 工作](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)，以執行您剛才定義的預存程序。 **SQLStatement** 的指令碼會移除現有的資料、指定要插入的資料，然後呼叫預存程序來提供資料。
+在 SSIS 設計師中，建立 [執行 SQL 工作](../../integration-services/control-flow/execute-sql-task.md)，以執行您剛才定義的預存程序。 **SQLStatement** 的指令碼會移除現有的資料、指定要插入的資料，然後呼叫預存程序來提供資料。
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-使用 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)，建立可產生線性模型的預存程序。 在 SQL Server 中，RevoScaleR 和 revoscalepy 程式庫會自動在 R 和 Python 工作階段中啟用，因此您不需要匯入程式庫。
+使用 [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod)，建立可產生線性模型的預存程序。 在 SQL Server 中，RevoScaleR 和 revoscalepy 程式庫會自動在 R 和 Python 工作階段中啟用，因此您不需要匯入程式庫。
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-在 SSIS 設計師中，建立 [執行 SQL 工作](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)，以執行 **generate_iris_rx_model** 預存程序。 該模型會序列化並儲存至 ssis_iris_models 資料表。 **SQLStatement** 的指令碼如下所示：
+在 SSIS 設計師中，建立 [執行 SQL 工作](../../integration-services/control-flow/execute-sql-task.md)，以執行 **generate_iris_rx_model** 預存程序。 該模型會序列化並儲存至 ssis_iris_models 資料表。 **SQLStatement** 的指令碼如下所示：
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 您現在已經有載入訓練資料並產生模型的程式碼，剩下的唯一步驟就是使用模型來產生預測。 
 
-若要這麼做，請將 R 指令碼放入 SQL 查詢中，以觸發 ssis_iris_model 上的 [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 內建 R 函式。 則名為 **predict_species_length** 的預存程序便會完成這項工作。
+若要這麼做，請將 R 指令碼放入 SQL 查詢中，以觸發 ssis_iris_model 上的 [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) 內建 R 函式。 則名為 **predict_species_length** 的預存程序便會完成這項工作。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-在 SSIS 設計師中，建立 [執行 SQL 工作](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)，以執行 **predict_species_length** 預存程序，以產生預測的花瓣長度。
+在 SSIS 設計師中，建立 [執行 SQL 工作](../../integration-services/control-flow/execute-sql-task.md)，以執行 **predict_species_length** 預存程序，以產生預測的花瓣長度。
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

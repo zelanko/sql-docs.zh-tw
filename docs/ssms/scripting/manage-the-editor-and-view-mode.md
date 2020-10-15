@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093424"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038974"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
 
@@ -91,7 +91,7 @@ ms.locfileid: "89093424"
  當啟用虛擬空間模式時，游標會從行尾折返到下一行的第一個字元，反之亦然。  
   
 ## <a name="displaying-line-numbers"></a>顯示行號  
- 您可以在程式碼中開啟顯示行號的功能。 在導覽程式碼時，行號非常有用。 如需詳細資訊，請參閱 [導覽程式碼與文字](../../relational-databases/scripting/navigate-code-and-text.md)。  
+ 您可以在程式碼中開啟顯示行號的功能。 在導覽程式碼時，行號非常有用。 如需詳細資訊，請參閱 [導覽程式碼與文字](./navigate-code-and-text.md)。  
   
 > [!NOTE]  
 >  開啟顯示行號的功能，不表示列印文件時會有行號。 若要列印行號，您必須在 **[檔案]** 功能表的 **[版面設定]** 命令中，選取 **[行號]** 核取方塊。  
@@ -122,5 +122,4 @@ ms.locfileid: "89093424"
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>同時隱藏所有工具視窗  
   
 1.  在 **[視窗]** 功能表上，按一下 **[自動全部隱藏]** 。  
-  
   

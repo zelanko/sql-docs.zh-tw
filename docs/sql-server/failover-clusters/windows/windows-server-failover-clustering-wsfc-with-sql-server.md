@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9854bef628a04871e0c173847651df0b64c83088
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896664"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988111"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85896664"
   
 -   **容錯移轉協調。** 每個資源都是設定為在主要節點上裝載，而且每個資源都可以自動或手動轉移至一個或多個次要節點。 以健全狀況為主的容錯移轉原則會控制節點之間資源擁有權的自動轉移。 在發生容錯移轉時，節點和託管應用程式會收到通知，以便它們可以適當反應。  
   
- 如需詳細資訊，請參閱 [容錯移轉叢集概觀](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)。  
+ 如需詳細資訊，請參閱 [容錯移轉叢集概觀](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))。  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 技術和 WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* 是利用 WSFC 的高可用性和災害復原方案。 AlwaysOn 功能提供彈性的整合式解決方案，以提高應用程式可用性、提供更佳的硬體投資報酬率，以及簡化高可用性部署和管理。  
@@ -85,7 +85,7 @@ ms.locfileid: "85896664"
 >  如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>執行個體層級高可用性與 AlwaysOn 容錯移轉叢集執行個體搭配使用  
- AlwaysOn「容錯移轉叢集執行個體」(FCI)  是在 WSFC 中跨多個節點安裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 這種類型的執行個體相依於儲存體和虛擬網路名稱的資源。 儲存體可以使用光纖通道、iSCSI、FCoE 或 SAS 做為共用磁碟儲存體，或透過[儲存空間直接存取 (S2D) (英文)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview) 來使用本機掛接的儲存體。 虛擬網路名稱資源相依於一個或多個虛擬 IP 位址，每個位址都位於不同的子網路。 SQL Server 服務和 SQL Server Agent 服務也是資源，而且也都相依於儲存體和虛擬網路名稱資源。  
+ AlwaysOn「容錯移轉叢集執行個體」(FCI)  是在 WSFC 中跨多個節點安裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 這種類型的執行個體相依於儲存體和虛擬網路名稱的資源。 儲存體可以使用光纖通道、iSCSI、FCoE 或 SAS 做為共用磁碟儲存體，或透過[儲存空間直接存取 (S2D) (英文)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) 來使用本機掛接的儲存體。 虛擬網路名稱資源相依於一個或多個虛擬 IP 位址，每個位址都位於不同的子網路。 SQL Server 服務和 SQL Server Agent 服務也是資源，而且也都相依於儲存體和虛擬網路名稱資源。  
   
  在發生容錯移轉時，WSFC 服務會將執行個體的資源擁有權轉移到指定的容錯移轉節點。 然後 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會在容錯移轉節點上重新啟動，而且資料庫會照常復原。 在任何給定的時刻，只有一個叢集節點可以裝載 FCI 和基礎資源。  
   
@@ -175,13 +175,13 @@ ms.locfileid: "85896664"
   
 -   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [儲存空間直接存取 \(S2D\) 概觀 (英文)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [儲存空間直接存取 \(S2D\) 概觀 (英文)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Windows Server 2008 R2 中的容錯移轉叢集](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 容錯移轉叢集指令程式](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -190,4 +190,3 @@ ms.locfileid: "85896664"
  [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [透過強制仲裁執行 WSFC 災害復原 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 支援 Windows Server 2016 儲存空間直接存取 (英文)](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
-  

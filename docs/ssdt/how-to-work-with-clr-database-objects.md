@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893851"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988681"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何：使用 CLR 資料庫物件
 
-除了使用 Transact\-SQL 程式語言以外，還可以使用 .NET Framework 語言來建立擷取及更新資料的資料庫物件。 以受控碼撰寫的資料庫物件稱為 SQL Server Common Language Runtime (CLR) 資料庫物件。 如需使用 SQL Server 中裝載的 CLR 資料庫物件之優點的說明，以及如何在 Transact\-SQL 與 CLR 之間擇一使用，請參閱 [CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md)和[使用受控碼來建立資料庫物件的優點](https://msdn.microsoft.com/library/k2e1fb36.aspx) \(機器翻譯\)。  
+除了使用 Transact\-SQL 程式語言以外，還可以使用 .NET Framework 語言來建立擷取及更新資料的資料庫物件。 以受控碼撰寫的資料庫物件稱為 SQL Server Common Language Runtime (CLR) 資料庫物件。 如需使用 SQL Server 中裝載的 CLR 資料庫物件之優點的說明，以及如何在 Transact\-SQL 與 CLR 之間擇一使用，請參閱 [CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md)和[使用受控碼來建立資料庫物件的優點](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100)) \(機器翻譯\)。  
   
 若要使用 SQL Server Data Tools 建立 CLR 資料庫物件，您可以建立一個資料庫專案，然後在其中加入 CLR 資料庫物件。 不同於舊版 Visual Studio，您不必建立個別的 CLR 專案，再從資料庫專案加入其參考。 建置和發行資料庫專案時，會同時自動發行專案中的 CLR 物件。 這些 CLR 物件發行後，它們可以被呼叫和執行，就像任何其他資料庫物件一樣。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "85893851"
   
 若要啟用 CLR 資料庫物件偵錯，請開啟 [SQL Server 物件總管]。 以滑鼠右鍵按一下含有您要偵錯之 CLR 資料庫成品的伺服器，然後選擇 [允許 SQL/CLR 偵錯]。 訊息方塊隨即出現並顯示警告：「請注意，當偵錯時，此伺服器上的所有受控執行緒都將停止。 是否要在此伺服器上啟用 SQL CLR 偵錯？」。 當您對 CLR 資料庫物件進行偵錯時，中斷執行就會中斷伺服器上的所有執行緒，並影響其他使用者。 因此，您不應在實際執行伺服器上偵錯 CLR 資料庫物件的應用程式。 您也應注意，一旦啟動偵錯之後，就無法再變更 [SQL Server 物件總管] 中的設定。 啟動下一個偵錯工作階段前，在 [SQL Server 物件總管] 中進行的變更不會生效。  
   
-如需有關建置 CLR 資料庫物件之需求的詳細資訊，請參閱[利用 Common Language Runtime (CLR) 整合建立資料庫物件](https://msdn.microsoft.com/library/ms131046.aspx)。  
+如需有關建置 CLR 資料庫物件之需求的詳細資訊，請參閱[利用 Common Language Runtime (CLR) 整合建立資料庫物件](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。  
   
 > [!WARNING]  
 > 下列程序使用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)和[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)小節中的程序所建立的實體。  
@@ -103,6 +103,5 @@ ms.locfileid: "85893851"
   
 ## <a name="see-also"></a>另請參閱  
 [CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md) \(機器翻譯\)  
-[使用受控碼來建立資料庫物件的優點](https://msdn.microsoft.com/library/k2e1fb36.aspx) \(機器翻譯\)  
-[利用 Common Language Runtime (CLR) 整合組建資料庫物件](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[使用受控碼來建立資料庫物件的優點](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100)) \(機器翻譯\)  
+[利用 Common Language Runtime (CLR) 整合組建資料庫物件](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

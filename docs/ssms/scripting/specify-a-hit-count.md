@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901415"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036276"
 ---
 # <a name="specify-a-hit-count"></a>指定叫用計數
 
@@ -47,7 +47,7 @@ ms.locfileid: "88901415"
   
  如果您想要追蹤中斷點的叫用次數，而不讓中斷點中斷執行，請使用非常高的值來指定叫用次數，如此中斷點就絕對不會中斷。  
   
- 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 如需指定其他動作的資訊，請參閱 [指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)。  
+ 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 如需指定其他動作的資訊，請參閱 [指定中斷點動作](./specify-a-breakpoint-action.md)。  
   
 #### <a name="to-specify-a-hit-count"></a>若要指定叫用次數  
   
@@ -78,6 +78,5 @@ ms.locfileid: "88901415"
 4.  按一下 **[確定]** 或 **[取消]** 結束對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [指定中斷點條件](./specify-a-breakpoint-condition.md)  
   

@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990351"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988004"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>大規模地將 SQL Server 執行個體連線到 Azure Arc
 
-您可以使用[針對單一電腦產生的相同指令碼](connect.md)，將安裝在多部 Windows 或 Linux 電腦上的多個 SQL Server 執行個體連線到 Azure Arc。 指令碼會連線每部電腦，並將其上安裝的 SQL Server 執行個體註冊至 Azure Arc。為了獲得最佳體驗，我們建議使用 Azure Active Directory [服務主體](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals)。 服務主體是特殊的受限管理身分識別，僅可獲得將機器連線至 Azure，以及針對已啟用 Azure Arc 的伺服器和已啟用 Azure Arc 的 SQL Server 建立 Azure資源所需的最小權限。 這是比使用較高權限帳戶 (例如租用戶系統管理員) 更安全的做法，並且遵循我們的存取控制安全性最佳做法。  
+您可以使用[針對單一電腦產生的相同指令碼](connect.md)，將安裝在多部 Windows 或 Linux 電腦上的多個 SQL Server 執行個體連線到 Azure Arc。 指令碼會連線每部電腦，並將其上安裝的 SQL Server 執行個體註冊至 Azure Arc。為了獲得最佳體驗，我們建議使用 Azure Active Directory [服務主體](/azure/active-directory/develop/app-objects-and-service-principals)。 服務主體是特殊的受限管理身分識別，僅可獲得將機器連線至 Azure，以及針對已啟用 Azure Arc 的伺服器和已啟用 Azure Arc 的 SQL Server 建立 Azure資源所需的最小權限。 這是比使用較高權限帳戶 (例如租用戶系統管理員) 更安全的做法，並且遵循我們的存取控制安全性最佳做法。  
 
 用來安裝和設定 Connected Machine 代理程式的安裝方法，需要您使用的自動化方法具有機器的系統管理員權限。 在 Linux 上請使用根帳戶，在 Windows 上則必須是本機系統管理員群組的成員。
 

@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480152"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037592"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88480152"
   
 -   本機伺服器群組  
   
-     使用本機伺服器群組可輕鬆地連接您經常管理的伺服器。 本機伺服器和非本機伺服器都會在本機伺服器群組中註冊。 本機伺服器群組對於每一位使用者而言都是唯一的。 如需如何共用已註冊之伺服器的相關資訊，請參閱 [匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) 和 [匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。  
+     使用本機伺服器群組可輕鬆地連接您經常管理的伺服器。 本機伺服器和非本機伺服器都會在本機伺服器群組中註冊。 本機伺服器群組對於每一位使用者而言都是唯一的。 如需如何共用已註冊之伺服器的相關資訊，請參閱 [匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) 和 [匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。  
   
     > [!NOTE]  
     >  我們建議您盡可能使用 Windows 驗證。  
@@ -98,7 +98,7 @@ ms.locfileid: "88480152"
      按一下即可儲存已註冊的伺服器設定。  
   
 ## <a name="multiserver-queries"></a>多伺服器查詢  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢編輯器] 視窗可以同時連接及查詢多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此查詢傳回的結果可以合併到單一結果窗格，或者可以在不同的結果窗格中傳回。 還有一個選擇如下：[查詢編輯器] 所包含的資料行可提供產生每一個資料列的伺服器名稱，以及連接到提供每一個資料列之伺服器所用的登入。 如需如何執行多伺服器查詢的詳細資訊，請參閱[同時對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢編輯器] 視窗可以同時連接及查詢多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此查詢傳回的結果可以合併到單一結果窗格，或者可以在不同的結果窗格中傳回。 還有一個選擇如下：[查詢編輯器] 所包含的資料行可提供產生每一個資料列的伺服器名稱，以及連接到提供每一個資料列之伺服器所用的登入。 如需如何執行多伺服器查詢的詳細資訊，請參閱[同時對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)。  
   
  若要針對本機伺服器群組內的所有伺服器執行查詢，請以滑鼠右鍵按一下伺服器群組，並指向 [連接]  ，然後按一下 [新增查詢]  。 在新的 [查詢編輯器] 視窗中執行查詢時，將會使用包含使用者驗證內容的預存連接資訊，針對此群組中的所有伺服器來執行。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所註冊但是未儲存密碼的伺服器將會連接失敗。  
   
@@ -106,7 +106,6 @@ ms.locfileid: "88480152"
   
 ## <a name="see-also"></a>另請參閱  
  [在物件總管中隱藏系統物件](../object/hide-system-objects-in-object-explorer.md)   
- [匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

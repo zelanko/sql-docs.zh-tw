@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245731"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935320"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>將快照集加入至報表記錄
 
@@ -71,7 +71,7 @@ ms.locfileid: "87245731"
 - [設定報表的執行屬性 &#40;報表管理員&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [排程](../../reporting-services/subscriptions/schedules.md)   
-- [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [報表管理員 &#40;SSRS 原生模式&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ ms.locfileid: "87245731"
 - [設定報表的執行屬性 (入口網站)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [限制報表記錄 (入口網站)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [排程](../../reporting-services/subscriptions/schedules.md)   
-- [入口網站 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [入口網站 &#40;SSRS 原生模式&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491744"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038931"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88491744"
 展開以顯示 [運算式]**** 屬性欄位。  
   
 **運算式**  
-顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱[使用條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
+顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱[使用條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
 **識別類別目錄**  
 展開以顯示 [名稱]**** 與 [描述]**** 屬性。  
@@ -69,5 +69,5 @@ ms.locfileid: "88491744"
   
 ## <a name="see-also"></a>另請參閱
 
-[使用條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[使用條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [索引 - 索引鍵對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

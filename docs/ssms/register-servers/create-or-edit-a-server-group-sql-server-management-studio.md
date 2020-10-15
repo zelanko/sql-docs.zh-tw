@@ -18,12 +18,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ecf61bca3e0780aefedb989ab0d7bd3ead83a3bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 00caef8ecdd73814d60ce2c98c65ba0fc4083379
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480140"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037595"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>建立或編輯伺服器群組 (SQL Server Management Studio)
 
@@ -50,4 +50,4 @@ ms.locfileid: "88480140"
 
 ## <a name="see-also"></a>另請參閱
 
-[註冊伺服器](../../tools/sql-server-management-studio/register-servers.md)
+[註冊伺服器](./register-servers.md)

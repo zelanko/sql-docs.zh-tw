@@ -4,7 +4,6 @@ description: 了解 Windows PowerShell 提供者用來公開資料階層的路�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54a37555038b3757ebff61faad8717c6a800ff1c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 4f889fa93b78782a368ba36085a393f8b79fdb91
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714296"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006103"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 識別碼
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會使用 Windows PowerShell 路徑中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼可能包含 Windows PowerShell 路徑中不支援的字元。 當您使用 Windows PowerShell 路徑中的識別碼時，必須逸出這些字元或針對這些字元使用特殊編碼。  
   
-> [!NOTE]
-> 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
-> 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Windows PowerShell 路徑中的 SQL Server 識別碼  
- Windows PowerShell 提供者會使用與 Windows 檔案系統類似的路徑結構來公開資料階層。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的路徑。 如果是 [!INCLUDE[ssDE](../includes/ssde-md.md)]，磁碟機會設定為 SQLSERVER:、第一個資料夾會設定為 \SQL，而且資料庫物件會當做容器和項目來參考。 這是預設 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 執行個體中 [!INCLUDE[ssDE](../includes/ssde-md.md)]資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
+
+Windows PowerShell 提供者會使用與 Windows 檔案系統類似的路徑結構來公開資料階層。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的路徑。 如果是 [!INCLUDE[ssDE](../includes/ssde-md.md)]，磁碟機會設定為 SQLSERVER:、第一個資料夾會設定為 \SQL，而且資料庫物件會當做容器和項目來參考。 這是預設 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 執行個體中 [!INCLUDE[ssDE](../includes/ssde-md.md)]資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417934"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037646"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
 
@@ -29,7 +29,7 @@ ms.locfileid: "88417934"
 
 1. 在**物件總管**，按一下 [連線] > [資料庫引擎...]****。
 
-   ![連線](../media/connect-to-server/connect-db-engine.png)
+   ![connect](../media/connect-to-server/connect-db-engine.png)
 
 1. 填寫 [連線至伺服器]**** 表單，並按一下 [連線]****：
 
@@ -58,7 +58,7 @@ ms.locfileid: "88417934"
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [下載 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
-[Analysis Services (英文)](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure 儲存體](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Analysis Services (英文)](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Integration Services](../../integration-services/sql-server-integration-services.md)  
+[Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Azure 儲存體](../f1-help/connect-to-microsoft-azure-storage.md)

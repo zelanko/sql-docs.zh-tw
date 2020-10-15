@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32adf127957504d85d071e7b59ad0ab6a0590547
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abc9fccd9c81f26b872a991c05a2d653384ad123
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462941"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036901"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
   
- 若要了解已註冊的伺服器，並取得如何處理它們的連結，請移至 [註冊伺服器](../../tools/sql-server-management-studio/register-servers.md) 主題。 
+ 若要了解已註冊的伺服器，並取得如何處理它們的連結，請移至 [註冊伺服器](./register-servers.md) 主題。 
  
 
  按一下即可儲存 [已註冊的伺服器] 設定。 
@@ -147,4 +147,3 @@ ms.locfileid: "88462941"
 
  
  
-  

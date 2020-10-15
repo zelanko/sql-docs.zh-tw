@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179189"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956671"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 來安裝 R 套件
 
@@ -33,12 +33,12 @@ ms.locfileid: "88179189"
 
 | 函式 | 描述 |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) \(英文\) | 判斷遠端 SQL Server 上執行個體程式庫的路徑。 |
-| [rxFindPackage (英文)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 取得遠端 SQL Server 上一或多個套件的路徑。 |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) \(英文\) | 從遠端 R 用戶端呼叫此函式來從指定的存放庫，或是透過讀取本機儲存的壓縮套件，於 SQL Server 計算內容中安裝套件。 此函式會檢查相依性，並確保所有相關的套件都可以安裝至 SQL Server，就像本機計算內容中的 R 套件安裝一樣。 若要使用此選項，您必須在伺服器和資料庫上啟用套件管理。 用戶端和伺服器環境都必須具有相同版本的 RevoScaleR。 |
-| [rxInstalledPackages (英文)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 取得在指定計算內容中所安裝之套件的清單。 |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) \(英文\) | 針對指定的計算內容，複製檔案系統和資料庫之間的套件程式庫相關資訊。 |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) \(英文\) | 從指定的計算內容中移除套件。 其也會計算相依性，並確保會移除 SQL Server 上的其他套件不再使用的套件，以便釋出資源。 |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) \(英文\) | 判斷遠端 SQL Server 上執行個體程式庫的路徑。 |
+| [rxFindPackage (英文)](/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 取得遠端 SQL Server 上一或多個套件的路徑。 |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) \(英文\) | 從遠端 R 用戶端呼叫此函式來從指定的存放庫，或是透過讀取本機儲存的壓縮套件，於 SQL Server 計算內容中安裝套件。 此函式會檢查相依性，並確保所有相關的套件都可以安裝至 SQL Server，就像本機計算內容中的 R 套件安裝一樣。 若要使用此選項，您必須在伺服器和資料庫上啟用套件管理。 用戶端和伺服器環境都必須具有相同版本的 RevoScaleR。 |
+| [rxInstalledPackages (英文)](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 取得在指定計算內容中所安裝之套件的清單。 |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) \(英文\) | 針對指定的計算內容，複製檔案系統和資料庫之間的套件程式庫相關資訊。 |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) \(英文\) | 從指定的計算內容中移除套件。 其也會計算相依性，並確保會移除 SQL Server 上的其他套件不再使用的套件，以便釋出資源。 |
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -56,14 +56,14 @@ ms.locfileid: "88179189"
 
 ## <a name="client-connections"></a>用戶端連接
 
-用戶端工作站可以是位於相同網路上的 [Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) \(英文\) 或 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) (資料科學家通常會使用免費的開發人員版本)。
+用戶端工作站可以是位於相同網路上的 [Microsoft R 用戶端](/machine-learning-server/r-client/install-on-windows) \(英文\) 或 [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) (資料科學家通常會使用免費的開發人員版本)。
 
-從遠端 R 用戶端呼叫套件管理函式時，您必須先使用 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 函式建立計算內容物件。 之後，針對您使用的每個套件管理函式，請將計算內容以引數的形式傳遞。
+從遠端 R 用戶端呼叫套件管理函式時，您必須先使用 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 函式建立計算內容物件。 之後，針對您使用的每個套件管理函式，請將計算內容以引數的形式傳遞。
 
 使用者身分識別通常會在設定計算內容時指定。 如果您在建立計算內容時不指定使用者名稱和密碼，系統會使用執行 R 程式碼的使用者身分識別。
 
 1. 從 R 命令列，定義針對執行個體和資料庫的連接字串。
-2. 使用 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 建構函式來使用連接字串定義 SQL Server 計算內容。
+2. 使用 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 建構函式來使用連接字串定義 SQL Server 計算內容。
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -74,7 +74,7 @@ ms.locfileid: "88179189"
     packageList <- c("e1071", "mice")
     ```
 
-4. 呼叫 [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) \(英文\) 並傳遞計算內容，以及包含套件名稱的字串變數。
+4. 呼叫 [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) \(英文\) 並傳遞計算內容，以及包含套件名稱的字串變數。
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
