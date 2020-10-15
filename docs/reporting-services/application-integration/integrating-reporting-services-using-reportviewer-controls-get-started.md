@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569958"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891508"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>使用報表檢視器控制項整合 Reporting Services - 開始使用
 
-報表檢視器控制項可以用來將 Reporting Services RDL 報表整合到 WebForms 和 WinForms 應用程式。 如需最新更新的詳細資料，請參閱[變更記錄](changelog.md)。
+報表檢視器控制項可以用來將 Reporting Services RDL 報表整合到 WebForms 和 WinForms 應用程式。 如需最新更新的詳細資料，請參閱[變更記錄](./release-notes-ssrs-application-integration.md)。
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>將報表檢視器控制項新增至新的 Web 專案
 
@@ -270,9 +270,8 @@ ms.locfileid: "89569958"
 
 ## <a name="forum-feedback"></a>論壇意見反應
 
-讓小組了解 [Reporting Services 論壇](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)上的問題。
+讓小組了解 [Reporting Services 論壇](/answers/topics/sql-server-reporting-services.html)上的問題。
 
 ## <a name="see-also"></a>另請參閱
 
-[報表檢視器控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[報表檢視器控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

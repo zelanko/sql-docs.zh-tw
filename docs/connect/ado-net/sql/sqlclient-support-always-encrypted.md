@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a15c888abefba554bb4170039eea23988a6615fd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fbfa8e19599294df827756da495fbe4eb43c479d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725659"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081607"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>搭配 Microsoft .NET Data Provider for SQL Server 使用 Always Encrypted
 
@@ -561,7 +561,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[SqlConnection.ColumnEncryptionKeyCacheTtl 屬性](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)|取得及設定資料行加密金鑰快取項目的存留時間。|
 |[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths 屬性](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|可讓您為資料庫伺服器設定受信任的金鑰路徑清單。 如果驅動程式在處理應用程式查詢時，接收到不在清單上的金鑰路徑，則查詢會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，此類 SQL Server 會提供假的金鑰路徑，而可能會導致遺漏金鑰存放區認證。|
 |[SqlConnection.RegisterColumnEncryptionKeyStoreProviders 方法](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|可讓您註冊自訂金鑰存放區提供者。 它是一個字典，會將金鑰存放區提供者名稱對應至金鑰存放區提供者實作。|
-|[SqlCommand 建構函式 (String、SqlConnection、SqlTransaction、SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|可讓您對個別查詢控制永遠加密的行為。|
+|[SqlCommand 建構函式 (String、SqlConnection、SqlTransaction、SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0&preserve-view=true#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|可讓您對個別查詢控制永遠加密的行為。|
 |[SqlParameter.ForceColumnEncryption 屬性](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|強制將參數加密。 如果 SQL Server 向驅動程式告知參數不需要加密，使用該參數的查詢就會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，此類 SQL Server 會將不正確的加密中繼資料提供給用戶端，而可能導致資料洩露。|
 |[連接字串](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) \(英文\) 關鍵字：`Column Encryption Setting=enabled`|啟用或停用連線的永遠加密功能。|
 

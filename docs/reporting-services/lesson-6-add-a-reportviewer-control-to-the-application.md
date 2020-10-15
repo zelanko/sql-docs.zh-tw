@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a1874b3253136a12973a60e6619e199995b5314
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245097"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891548"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 課：將 ReportViewer 控制項新增至應用程式
 使用 [報表精靈] 設計子報表之後，下一步是要將 ReportViewer 控制項加入至網站應用程式。 如果您是使用 ASP.NET 報表網站，它會將 ReportViewer 控制項新增至 default.aspx 頁面。   
@@ -31,7 +31,7 @@ ms.locfileid: "87245097"
   
 5.  在 [選擇報表] 方塊中，選取您建立的父報表。  
   
-    當您選取報表時，報表中所使用的資料來源執行個體會自動建立。 產生的程式碼會具現化每個 DataTable (及其 [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 容器)。 [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) 控制項會新增至設計介面，對應報表中使用的每個資料來源。 此資料來源控制項會自動設定。  
+    當您選取報表時，報表中所使用的資料來源執行個體會自動建立。 產生的程式碼會具現化每個 DataTable (及其 [DataSet](/dotnet/api/system.data.dataset) 容器)。 [ObjectDataSource](/dotnet/api/system.web.ui.webcontrols.objectdatasource) 控制項會新增至設計介面，對應報表中使用的每個資料來源。 此資料來源控制項會自動設定。  
   
 6.  在 [建置] 功能表上，按一下 [建置網站]。  
   
@@ -39,5 +39,3 @@ ms.locfileid: "87245097"
   
 ## <a name="next-task"></a>下一項工作  
 您已成功將 ReportViewer 控制項加入至網站應用程式。 接下來您將在父報表上加入鑽研動作。 請參閱[第 7 課：在父報表上新增鑽研動作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)。  
-  
-

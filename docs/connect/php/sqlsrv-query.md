@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c2b60fa120863c5ca33fb21ae158649b1d1adcf
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726680"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081097"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
-## <a name="example"></a>範例  
+## <a name="example-1"></a>範例 1  
 在下列範例中，會將單一資料列插入 AdventureWorks 資料庫的 *Sales.SalesOrderDetail* 資料表中。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="example-2"></a>範例 2  
 下列範例會更新 AdventureWorks 資料庫之 *Sales.SalesOrderDetail* 資料表中的欄位。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
@@ -159,7 +159,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > 建議在將值繫結至 [decimal 或 numeric 資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
-## <a name="example"></a>範例  
+## <a name="example-3"></a>範例 3  
 此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```
@@ -183,7 +183,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>範例
+## <a name="example-4"></a>範例 4
 此程式碼範例示範如何建立 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 類型的資料表，並擷取插入的資料。
 
 ```

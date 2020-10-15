@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727444"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081517"
 ---
 # <a name="data-classification"></a>資料分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91727444"
 ## <a name="overview"></a>概觀
 基於管理敏感性資料的目的，SQL Server 和 Azure SQL Server 引進了提供具有敏感性中繼資料之資料庫資料行的功能，讓用戶端應用程式能夠根據資料保護原則來處理不同類型的敏感性資料 (例如，健康情況、財務等)。
 
-如需如何將分類指派給資料行的詳細資訊，請參閱 [SQL 資料探索與分類](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017)。
+如需如何將分類指派給資料行的詳細資訊，請參閱 [SQL 資料探索與分類](../../relational-databases/security/sql-data-discovery-and-classification.md)。
 
 Microsoft ODBC Driver 17.2 允許使用 SQL_CA_SS_DATA_CLASSIFICATION 欄位識別碼，透過 SQLGetDescField 來擷取此中繼資料。
 

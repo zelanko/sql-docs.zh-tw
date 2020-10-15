@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3cc136efcf016a84325c40e6bbebc2a71741f86e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7f6e6e631b32aa7eab8d6c56c8b6f9e2cf03752f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248596"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891198"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>建立具有參數的鑽研 (RDLC) 報表 - ReportViewer
-[鑽研](https://technet.microsoft.com/library/ff519554.aspx) 報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以[本機模式報表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)建立包含參數和查詢的鑽研報表。  
+[鑽研](./report-design/drillthrough-reports-report-builder-and-ssrs.md) 報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以[本機模式報表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)建立包含參數和查詢的鑽研報表。  
   
 ## <a name="requirements"></a>需求  
 若要使用此逐步解說，您必須能夠存取 **AdventureWorks2014** 範例資料庫。 如需如何取得 **AdventureWorks2014** 範例資料庫的詳細資訊，請參閱 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。  
   
-本逐步解說假設您熟悉 Transaction-SQL 查詢以及 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 和 [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 物件。  
+本逐步解說假設您熟悉 Transaction-SQL 查詢以及 ADO.NET [DataSet](/dotnet/api/system.data.dataset) 和 [DataTable](/dotnet/api/system.data.datatable) 物件。  
   
 使用 Visual Studio 2015 和 ASP.NET Web 應用程式，建立包含 ReportViewer 控制項的 ASP.NET 網頁。 控制項會設定為檢視您所建立的報表。 在此逐步解說中，您會使用 Microsoft Visual C# 建立應用程式。  
   
@@ -40,5 +40,3 @@ ms.locfileid: "87248596"
 ## <a name="see-also"></a>另請參閱  
 [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
 [使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
-  
-

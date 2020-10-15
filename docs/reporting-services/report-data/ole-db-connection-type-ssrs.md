@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 554622ce583bb314609c9000b1398ffbca4b6718
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bff06284226c67a0f784b9e77bbe85dd056edb09
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458218"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891138"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 連接類型 (SSRS)
   若要加入來自 OLE DB 資料提供者的資料，您必須具有以 OLE DB 類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 資料處理延伸模組為基礎。  
@@ -58,7 +58,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  若要成功擷取您想要的資料，您必須提供資料提供者支援的查詢語法。 參數支援會因資料提供者而異。 如需詳細資訊，請參閱所選取資料提供者的特定主題。 例如：  
   
--   [Analysis Services OLE DB 提供者 &#40;Analysis Services - 多維度資料&#41;](https://docs.microsoft.com/analysis-services/instances/data-providers-used-for-analysis-services-connections
+-   [Analysis Services OLE DB 提供者 &#40;Analysis Services - 多維度資料&#41;](/analysis-services/instances/data-providers-used-for-analysis-services-connections
 )  
    
   
@@ -100,5 +100,4 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

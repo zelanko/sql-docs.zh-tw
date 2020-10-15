@@ -1,10 +1,7 @@
 ---
 title: 查詢運算式和統一資源名稱 | Microsoft Docs
 description: 了解查詢運算式，其會列舉物件模型階層中的一或多個物件，以及有關可唯一識別單一物件的統一資源名稱 (URNs)。
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714116"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081897"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
 
@@ -27,15 +27,11 @@ ms.locfileid: "88714116"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元會使用與 XPath 運算式類似的兩種運算式字串類型。 查詢運算式是字串，其中指定一組用來列舉物件模型階層中之一個或多個物件的準則。 統一資源名稱 (URN) 是可唯一識別單一物件的特定查詢運算式字串類型。  
 
-> [!NOTE]
-> 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
-> 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
-  
 ## <a name="syntax"></a>語法  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -50,48 +46,48 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
+
+## <a name="arguments"></a>引數
+
+*Object*  
+指定運算式字串之該節點所代表的物件類型。 每個物件都代表這些 SMO 物件模型命名空間的集合類別：  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
+
+<xref:Microsoft.SqlServer.Management.Dmf>  
+
+<xref:Microsoft.SqlServer.Management.Facets>  
+
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
+
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+
+例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
+
+\@*PropertyName*  
+指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
   
-## <a name="arguments"></a>引數  
- *Object*  
- 指定運算式字串之該節點所代表的物件類型。 每個物件都代表這些 SMO 物件模型命名空間的集合類別：  
+\@*BooleanPropertyName*=true()  
+列舉指定之布林屬性設定為 TRUE 的所有物件。  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+\@*BooleanPropertyName*=false()  
+列舉指定之布林屬性設定為 FALSE 的所有物件。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+contains(\@*StringPropertyName*, '*PatternString*')  
+列舉指定之字串屬性包含至少一個 '*PatternString*' 中指定之字元集的所有物件。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+\@*StringPropertyName*='*PatternString*'  
+列舉指定之字串屬性值與 '*PatternString*' 中指定之字元模式完全相同的所有物件。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
- <xref:Microsoft.SqlServer.Management.Dmf>  
-  
- <xref:Microsoft.SqlServer.Management.Facets>  
-  
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
- 例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
-  
- \@*PropertyName*  
- 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
-  
- \@*BooleanPropertyName*=true()  
- 列舉指定之布林屬性設定為 TRUE 的所有物件。  
-  
- \@*BooleanPropertyName*=false()  
- 列舉指定之布林屬性設定為 FALSE 的所有物件。  
-  
- contains(\@*StringPropertyName*, '*PatternString*')  
- 列舉指定之字串屬性包含至少一個 '*PatternString*' 中指定之字元集的所有物件。  
-  
- \@*StringPropertyName*='*PatternString*'  
- 列舉指定之字串屬性值與 '*PatternString*' 中指定之字元模式完全相同的所有物件。  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- 列舉指定之日期屬性值與 '*DateString*' 中指定之日期相符的所有物件。 *DateString* 必須遵循 yyyy-mm-dd hh:mi:ss.mmm 格式。  
+\@*DatePropertyName*= datetime('*DateString*')  
+列舉指定之日期屬性值與 '*DateString*' 中指定之日期相符的所有物件。 *DateString* 必須遵循 yyyy-mm-dd hh:mi:ss.mmm 格式。  
   
 |DateString 元件|描述|  
 |-|-|  
@@ -112,18 +108,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
   
 ## <a name="remarks"></a>備註  
- 查詢運算式是列舉 SMO 模型階層中之節點的字串。 每個節點都具有指定準則的篩選運算式，用於決定要列舉位於該節點的哪些物件。 查詢運算式是以 XPath 運算式語言建立模型。 查詢運算式會實作 XPath 所支援之運算式的小型子集，而且也具有在 XPath 中找不到的某些延伸模組。 XPath 運算式是字串，其中指定一組用來列舉 XML 文件之一個或多個標記的準則。 如需有關 XPath 的詳細資訊，請參閱 [W3C XPath Language](http://www.w3.org/TR/xpath20/)(W3C XPath 語言)。  
-  
- 查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
-  
- 如果未針對物件指定 *\<FilterExpression>* ，則會列舉位於該節點的所有物件。  
+
+查詢運算式是列舉 SMO 模型階層中之節點的字串。 每個節點都具有指定準則的篩選運算式，用於決定要列舉位於該節點的哪些物件。 查詢運算式是以 XPath 運算式語言建立模型。 查詢運算式會實作 XPath 所支援之運算式的小型子集，而且也具有在 XPath 中找不到的某些延伸模組。 XPath 運算式是字串，其中指定一組用來列舉 XML 文件之一個或多個標記的準則。 如需有關 XPath 的詳細資訊，請參閱 [W3C XPath Language](http://www.w3.org/TR/xpath20/)(W3C XPath 語言)。  
+
+查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
+
+如果未針對物件指定 *\<FilterExpression>* ，則會列舉位於該節點的所有物件。  
   
 ## <a name="uniform-resource-names-urn"></a>統一資源名稱 (URN)  
- URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  
+
+URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## <a name="examples"></a>範例  
   
@@ -169,8 +167,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Invoke-PolicyEvaluation 指令程式](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+- [Invoke-PolicyEvaluation 指令程式](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

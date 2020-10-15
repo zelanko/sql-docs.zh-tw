@@ -25,18 +25,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9727e0ac0270b32fe4df943e6ab91d2748cc7994
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e275d0465f436e20ac590e40a001fb8c335a573
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88319014"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92032942"
 ---
 # <a name="operators"></a>運算子
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+> [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  
   
@@ -125,8 +125,7 @@ ms.locfileid: "88319014"
 |工作|主題|  
 |-|-|  
 |與建立操作員相關的工作|[建立操作員](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|與指派警示相關的工作|[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定義對警示的回應 &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|與指派警示相關的工作|[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定義對警示的回應 &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)<br /><br />[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱  
 [Database Mail](../../relational-databases/database-mail/database-mail.md)  
-  

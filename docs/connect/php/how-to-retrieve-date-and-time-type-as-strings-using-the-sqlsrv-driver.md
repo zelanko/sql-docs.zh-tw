@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 2dd1bd53b5ce3304b48fe8ed022e538d4d705154
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410960"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081437"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "87410960"
 
 PDO_SQLSRV 驅動程式預設會以字串形式傳回日期和時間類型。 若要以 PHP DateTime 物件的形式加以擷取，請參閱[如何：使用 PDO_SQLSRV 以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
-## <a name="example"></a>範例
+## <a name="example-1"></a>範例 1
 下列範例說明指定要以字串的形式擷取日期和時間類型的語法。
 
 ```php
@@ -50,7 +50,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>範例
+## <a name="example-2"></a>範例 2
 下列範例說明您可以在擷取字串時指定 UTF-8，以字串的形式擷取日期，即使在透過 `"ReturnDatesAsStrings" => false` 建立連接時亦然。
 
 ```php
@@ -87,7 +87,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>範例
+## <a name="example-3"></a>範例 3
 下列範例說明如何藉由在連接字串中指定 UTF-8 和 `"ReturnDatesAsStrings" => true`，以字串的形式擷取日期。
 
 ```php
@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>範例
+## <a name="example-4"></a>範例 4
 下列範例說明如何以 PHP 類型的形式擷取日期。 `'ReturnDatesAsStrings'=> false` 。
 
 ```php
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>範例
+## <a name="example-5"></a>範例 5
 陳述式層級的 ReturnDatesAsStrings 選項會覆寫相對應的連線選項。
 
 ```php

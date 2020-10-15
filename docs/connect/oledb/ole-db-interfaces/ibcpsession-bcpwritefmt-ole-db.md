@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e758d5bb93238cf2fd006486b61df065c14ac3c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c088997b86fa8f0a5bd87d6497f9945c3ca2da8d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726929"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081387"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ HRESULT BCPWriteFmt(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) 介面。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  

@@ -8,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b544e7220d82d8368aec2a44c861e44b1e96398
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 96c470f52cb5c76601f4d7a7b6b97fd69290152f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988437"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891828"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>建立資料連接字串 - 報表產生器 & SSRS
 
@@ -37,7 +37,7 @@ ms.locfileid: "87988437"
 |Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 **Microsoft Azure SQL Database**。 如需詳細資訊，請參閱 [Azure SQL 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|將資料來源類型設為 **Microsoft SQL Server Parallel Data Warehouse**。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本機伺服器上的 Analysis Services 資料庫|`data source=localhost;initial catalog=Adventure Works DW`|將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或 [DMX 的 Analysis Services 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
-|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)。|  
+|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](/analysis-services/tabular-models/perspectives-ssas-tabular)。|  
 |Oracle 伺服器|`data source=myserver`|將資料來源類型設為 **Oracle**。 Oracle 用戶端工具必須安裝在報表設計師電腦和報表伺服器上。 如需詳細資訊，請參閱 [Oracle 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)。|  
 |SAP NetWeaver BI 資料來源|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|將資料來源類型設為 **SAP NetWeaver BI**。 如需詳細資訊，請參閱 [SAP NetWeaver BI 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
 |Hyperion Essbase 資料來源|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|將資料來源類型設為 **Hyperion Essbase**。 如需詳細資訊，請參閱 [Hyperion Essbase 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。|  
@@ -55,7 +55,7 @@ ms.locfileid: "87988437"
  如需連線到這些資料來源類型所需組態的詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 下特定資料連線文章。  
   
 ##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> 密碼中的特殊字元  
- 如果您設定 ODBC 或 SQL 資料來源以提示密碼或將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (例如：標點符號) 的密碼時，某些基礎資料來源驅動程式無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。 如果無法變更密碼，您可以洽詢資料庫管理員，將適當的認證儲存在伺服器上，做為系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件中的 [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)。  
+ 如果您設定 ODBC 或 SQL 資料來源以提示密碼或將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (例如：標點符號) 的密碼時，某些基礎資料來源驅動程式無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。 如果無法變更密碼，您可以洽詢資料庫管理員，將適當的認證儲存在伺服器上，做為系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件中的 [OdbcConnection.ConnectionString](/dotnet/api/system.data.odbc.odbcconnection.connectionstring)。  
   
 ##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> 以運算式為基礎的連接字串  
  以運算式為基礎的連接字串是在執行階段進行評估。 例如，您可以將資料來源指定為參數，包括連接字串中的參數參考，並允許使用者選擇報表的資料來源。 例如，假設有一家跨國企業，在許多國家 (地區) 有資料伺服器。 執行銷售報表的使用者可以在執行報表之前，使用以運算式為基礎的連接字串，來選取特定國家 (地區) 的資料來源。  

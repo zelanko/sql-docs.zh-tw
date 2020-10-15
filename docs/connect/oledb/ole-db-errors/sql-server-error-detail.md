@@ -17,19 +17,19 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 265919d6117298ee1501aa4773a944e7e13f95d2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 527f69fddc65e31d72b65726fe4b7ace5434af60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727146"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081477"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 錯誤詳細資料
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會定義提供者特定的錯誤介面 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15)。 此介面會傳回有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的詳細資料，在命令執行或資料列集作業失敗時非常有用。  
+  OLE DB Driver for SQL Server 會定義提供者特定的錯誤介面 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)。 此介面會傳回有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的詳細資料，在命令執行或資料列集作業失敗時非常有用。  
   
  取得 **ISQLServerErrorInfo** 介面存取權的方法有兩種。  
   

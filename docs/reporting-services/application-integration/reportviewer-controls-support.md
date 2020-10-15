@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 06/03/2020
-ms.openlocfilehash: 43d1e84377f7d08718ec4452b6b3376c627064ba
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 087be959ea39ba9b223b7bd5ae0e3e343d90a594
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423192"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891478"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>報表檢視器最新分支版本的支援
 
@@ -28,4 +28,4 @@ ms.locfileid: "84423192"
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/) \(英文\)
 - [ASP.Net Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/) \(英文\)
 
-如需有關「報表檢視器」控制項目前版本的詳細資訊，您可以檢閱以下[部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2016/11/30/report-viewer-2016-control-update-now-available/) \(英文\)。
+如需有關「報表檢視器」控制項目前版本的詳細資訊，您可以檢閱以下[部落格](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available) \(英文\)。

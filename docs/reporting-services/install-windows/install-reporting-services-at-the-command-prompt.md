@@ -11,18 +11,18 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4d02c4130ae089ba7b625688b8e4c6c227cc1c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 532bbc5c8061a02e5e05ec56b5f6a1853f252d42
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498061"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890841"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援從 SQL Server 安裝程式進行命令列安裝。 本主題包含數個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的命令列安裝範例。 如需所有 SQL Server 元件之可用命令列選項的完整描述，請參閱[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 本主題不會就 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的命令列選項進行說明。 如需增益集的命令安裝相關資訊，請參閱 [使用安裝檔 rsSharePoint.msi 安裝增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援從 SQL Server 安裝程式進行命令列安裝。 本主題包含數個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的命令列安裝範例。 如需所有 SQL Server 元件之可用命令列選項的完整描述，請參閱[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。 本主題不會就 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的命令列選項進行說明。 如需增益集的命令安裝相關資訊，請參閱 [使用安裝檔 rsSharePoint.msi 安裝增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。
 
 ##  <a name="native-mode-reporting-services"></a><a name="bkmk_native_mode"></a> 原生模式 Reporting Services
 
@@ -87,6 +87,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [SysPrep 參數](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[從命令提示字元安裝 PowerPivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
+[從命令提示字元安裝 PowerPivot](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
