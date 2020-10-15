@@ -13,12 +13,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbf692581a7ad2cb6d1e2bb5ad600b65fc63d7c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901965"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036401"
 ---
 # <a name="replace-in-files"></a>檔案中取代
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ ms.locfileid: "88901965"
  指出如何解譯在 [尋找目標] 或 [取代成] 文字方塊中所輸入的特殊字元。 選項包含 **[萬用字元]** 和 **[規則運算式]** 。  
   
  **[規則運算式]**  
- 定義要比對之文字模式的特殊標記法。 如需清單，請參閱 [使用規則運算式搜尋文字](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
+ 定義要比對之文字模式的特殊標記法。 如需清單，請參閱 [使用規則運算式搜尋文字](./search-text-with-regular-expressions.md)。  
   
  **萬用字元**  
- 例如星號 (`*`) 和問號 (`?`) 等特殊字元，代表一或多個字元。 如需清單，請參閱 [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)。  
+ 例如星號 (`*`) 和問號 (`?`) 等特殊字元，代表一或多個字元。 如需清單，請參閱 [使用萬用字元搜尋文字](./search-text-with-wildcards.md)。  
   
  **尋找下列檔案類型**  
  此清單指出要在 [查詢] 所指定之目錄中搜尋的檔案類型。 如果此方塊保留空白，則會搜尋 [查詢] 所指定之目錄中的所有檔案。  
@@ -155,4 +155,4 @@ ms.locfileid: "88901965"
  此工具列索引標籤會將對話方塊變更為 [Find in Symbols (符號中尋找)] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

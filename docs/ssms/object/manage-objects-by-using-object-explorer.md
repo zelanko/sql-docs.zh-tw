@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19caca02569f477570236eb2b71adceb388b1358
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491891"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037216"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88491891"
 當物件總管連接到伺服器時，您可以利用 [物件總管] 的連接設定來開啟新的 [程式碼編輯器] 視窗。 若要開啟新的 [程式碼編輯器] 視窗，請在物件總管中，以滑鼠右鍵按一下伺服器名稱，再按一下 [新增查詢]****。 若要利用特定資料庫來開啟 [程式碼編輯器] 視窗，請以滑鼠右鍵按一下資料庫名稱，再按一下 [新增查詢]****。 當開啟 Analysis Services 伺服器的新查詢時，您可以選取 DMX、MDX 或 XMLA 查詢。  
   
 ### <a name="start-powershell"></a>啟動 PowerShell  
-您可以啟動 PowerShell 工作階段，其方式是以滑鼠右鍵按一下物件總管樹狀結構中的大多數資料夾和物件，然後選取 [啟動 PowerShell]。 這樣會啟動 PowerShell 工作階段，此工作階段已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支援，而且路徑會設定為您在 [物件總管] 中以滑鼠右鍵按一下的物件。 然後您可以在互動式 PowerShell 環境中輸入 PowerShell 命令。 如需詳細資訊，請參閱 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+您可以啟動 PowerShell 工作階段，其方式是以滑鼠右鍵按一下物件總管樹狀結構中的大多數資料夾和物件，然後選取 [啟動 PowerShell]。 這樣會啟動 PowerShell 工作階段，此工作階段已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支援，而且路徑會設定為您在 [物件總管] 中以滑鼠右鍵按一下的物件。 然後您可以在互動式 PowerShell 環境中輸入 PowerShell 命令。 如需詳細資訊，請參閱 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [物件總管](../../ssms/object/object-explorer.md)  
@@ -61,4 +61,3 @@ ms.locfileid: "88491891"
 [從物件總管連接到執行個體](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [物件總管詳細資料窗格](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)  
-  

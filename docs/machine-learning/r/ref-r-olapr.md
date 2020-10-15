@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f9677022eb07a8810f3ea9c5dcffeaa716e7c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f34a6d26e48c1a77d7e289b197495d707bb9fd12
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179922"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956869"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR (SQL Server 機器學習服務中的 R 套件)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ library(olapR)
 
 ## <a name="full-reference-documentation"></a>完整參考文件
 
-**olapr** 套件分散在多個 Microsoft 產品中，但不論您是從 SQL Server 或其他產品中取得該套件，使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)只會發佈至 Microsoft Machine Learning Server [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
+**olapr** 套件分散在多個 Microsoft 產品中，但不論您是從 SQL Server 或其他產品中取得該套件，使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](/machine-learning-server/r-reference/olapr/olapr)只會發佈至 Microsoft Machine Learning Server [R 參考](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="availability-and-location"></a>可用性和位置
 

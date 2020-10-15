@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882922"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987934"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 
@@ -40,7 +40,7 @@ ms.locfileid: "85882922"
 在其中一個單元測試偵測到預存程序錯誤之後，您更正該錯誤並重新執行測試。  
   
 ## <a name="prerequisites"></a>必要條件  
-若要完成此逐步解說，您必須能夠連接到您有權建立及部署資料庫的資料庫伺服器 (或 LocalDB 資料庫)。 如需詳細資訊，請參閱 [Visual Studio 資料庫功能的必要權限](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
+若要完成此逐步解說，您必須能夠連接到您有權建立及部署資料庫的資料庫伺服器 (或 LocalDB 資料庫)。 如需詳細資訊，請參閱 [Visual Studio 資料庫功能的必要權限](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100))。  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>建立包含資料庫結構描述的指令碼  
   
@@ -992,4 +992,3 @@ ms.locfileid: "85882922"
 [使用 SQL Server 單元測試驗證資料庫程式碼](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [操作說明：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [操作說明：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894023"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985074"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
 
@@ -56,12 +56,12 @@ ms.locfileid: "85894023"
   
 |**類別**|**方法/屬性**|**說明**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|查詢模型以取得物件資訊，這是模型應用程式開發介面的主要進入點。 只可以查詢最上層型別，例如資料表或檢視表，資料行這類的型別只可以透過周遊模型找到。 如果未指定 ModelTypeClass 篩選，會傳回所有最上層型別。|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|尋找與目前 TSqlObject 參考之項目的關聯性。 例如，針對資料表，這會傳回例如資料表資料行的物件。 在此情況下，ModelRelationshipClass 篩選可用來指定查詢的精確關聯性 (例如使用 "Table.Columns" 篩選確保只會傳回資料行)。<br /><br />有一些類似的方法，例如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 如需詳細資訊，請參閱應用程式開發介面文件。|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|查詢模型以取得物件資訊，這是模型應用程式開發介面的主要進入點。 只可以查詢最上層型別，例如資料表或檢視表，資料行這類的型別只可以透過周遊模型找到。 如果未指定 ModelTypeClass 篩選，會傳回所有最上層型別。|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|尋找與目前 TSqlObject 參考之項目的關聯性。 例如，針對資料表，這會傳回例如資料表資料行的物件。 在此情況下，ModelRelationshipClass 篩選可用來指定查詢的精確關聯性 (例如使用 "Table.Columns" 篩選確保只會傳回資料行)。<br /><br />有一些類似的方法，例如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 如需詳細資訊，請參閱應用程式開發介面文件。|  
   
 **唯一識別您的參與者**  
   
-在建置程序期間，自訂參與者是從標準擴充目錄載入。 組建參與者是由 [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 屬性加以識別。 參與者需要這個屬性，才能設定為可搜尋的。 這個屬性應看起來如下：  
+在建置程序期間，自訂參與者是從標準擴充目錄載入。 組建參與者是由 [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute) 屬性加以識別。 參與者需要這個屬性，才能設定為可搜尋的。 這個屬性應看起來如下：  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "85894023"
   
 -   建立類別庫專案並加入必要參考。  
   
--   定義繼承自 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 且名稱為 ModelStatistics 的類別。  
+-   定義繼承自 [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) 且名稱為 ModelStatistics 的類別。  
   
 -   覆寫 OnExecute 方法。  
   
@@ -594,4 +594,3 @@ Relationships
 ## <a name="see-also"></a>另請參閱  
 [使用組建和部署參與者自訂資料庫建置和部署](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [逐步解說：延伸資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

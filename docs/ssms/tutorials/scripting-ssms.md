@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662037"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038959"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中撰寫物件指令碼
 
@@ -43,11 +43,11 @@ ms.locfileid: "91662037"
 
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 
-* 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安裝 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 * 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 * 下載 [AdventureWorks2016 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases) \(英文\)。
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。 
 
 ## <a name="script-queries-from-the-gui"></a>從 GUI 撰寫查詢指令碼
 
@@ -146,7 +146,7 @@ ms.locfileid: "91662037"
    ![編寫物件的指令碼](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > 當您針對 [要編寫指令碼的資料類型] 選項選取 [結構描述及資料] 時，便可以為資料庫的資料編寫指令碼。 不過，這並不適用於大型資料庫。 此工作所需的記憶體，會比 SSMS 所能配置的還要多。 這項限制並不會影響小型資料庫。 如果您想要移動更大型資料庫的資料，請使用 [[匯入和匯出精靈]](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
+   > 當您針對 [要編寫指令碼的資料類型] 選項選取 [結構描述及資料] 時，便可以為資料庫的資料編寫指令碼。 不過，這並不適用於大型資料庫。 此工作所需的記憶體，會比 SSMS 所能配置的還要多。 這項限制並不會影響小型資料庫。 如果您想要移動更大型資料庫的資料，請使用 [[匯入和匯出精靈]](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
 6. 依序選取 [確定]  和 [下一步]  。
 
@@ -199,7 +199,7 @@ ms.locfileid: "91662037"
 
 ## <a name="script-extended-events"></a>撰寫擴充事件的指令碼
 
-本節說明如何撰寫[擴充事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)的指令碼。
+本節說明如何撰寫[擴充事件](../../relational-databases/extended-events/extended-events.md)的指令碼。
 
 1. 連線至執行 SQL Server 的伺服器。
 
@@ -226,7 +226,7 @@ ms.locfileid: "91662037"
 
 熟悉 SSMS 的最佳方式是實際練習。 這些「教學課程」  與「操作方式」  文章可協助您使用 SSMS 內所提供的各種功能。 這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
 
-* [連線至執行個體並對其進行查詢](connect-query-sql-server.md)
+* [連線至執行個體並對其進行查詢](../quickstarts/connect-query-sql-server.md)
 * [在 SSMS 中使用範本](../template/templates-ssms.md)
 * [SSMS 組態](ssms-configuration.md)
 * [使用 SSMS 的其他提示與訣竅](ssms-tricks.md)

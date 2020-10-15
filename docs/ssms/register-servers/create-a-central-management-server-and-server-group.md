@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370832"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037611"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>建立中央管理伺服器和伺服器群組
 
@@ -65,7 +65,7 @@ ms.locfileid: "88370832"
   
 4.  在 **[已註冊的伺服器]**，輸入伺服器名稱和選擇性描述。  
   
-5.  從 [連接屬性]**** 索引標籤，檢閱或修改網路和連接屬性。 如需詳細資訊，請參閱[連接到伺服器 &#40;連接屬性頁面&#41; Database Engine](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
+5.  從 [連接屬性]**** 索引標籤，檢閱或修改網路和連接屬性。 如需詳細資訊，請參閱[連接到伺服器 &#40;連接屬性頁面&#41; Database Engine](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
 6.  按一下 **[測試]** 測試連接。  
   
@@ -79,13 +79,12 @@ ms.locfileid: "88370832"
   
 3.  在 [已註冊的伺服器]**** 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [新增伺服器註冊]****。  
   
-4.  從 [新增伺服器註冊]，選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[建立新的已註冊伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)。 適當地加入其他伺服器。  
+4.  從 [新增伺服器註冊]，選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[建立新的已註冊伺服器 &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)。 適當地加入其他伺服器。  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>若要同時針對數個組態目標執行查詢  
   
--   在您建立中央管理伺服器、一個或多個伺服器群組以及一個或多個已註冊的伺服器之後，就可以同時針對整個群組執行查詢。 如需有關如何同時執行伺服器群組中伺服器之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的詳細資訊，請參閱[同時針對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)。  
+-   在您建立中央管理伺服器、一個或多個伺服器群組以及一個或多個已註冊的伺服器之後，就可以同時針對整個群組執行查詢。 如需有關如何同時執行伺服器群組中伺服器之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的詳細資訊，請參閱[同時針對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用中央管理伺服器管理多部伺服器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

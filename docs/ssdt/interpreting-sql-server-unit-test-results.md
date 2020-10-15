@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 028f92e064b41d68e8c168f22faa479f1c29f559
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893837"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988174"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解譯 SQL Server 單元測試結果
 
@@ -23,18 +23,17 @@ ms.locfileid: "85893837"
   
 若要查看與測試結果有關的詳細資訊，請在 [測試結果] 視窗中按兩下該測試結果，即可顯示 [測試結果詳細資料] 頁面。 如需測試結果的詳細資訊，請按兩下測試結果。  
   
-如需如何變更 [測試結果]**** 視窗顯示內容的詳細資訊，請參閱[如何：在測試視窗中加入或移除資料行 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx) 或[如何：在測試視窗中加入或移除資料行 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx)。  
+如需如何變更 [測試結果]**** 視窗顯示內容的詳細資訊，請參閱[如何：在測試視窗中加入或移除資料行 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182508(v=vs.100)) 或[如何：在測試視窗中加入或移除資料行 (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182508(v=vs.110))。  
   
 ## <a name="storing-test-results"></a>儲存測試結果  
-單元測試的結果會自動儲存在硬碟的檔案中，而這些檔案的副檔名為 .trx。 .trx 檔案是一種包含測試回合詳細資料的 XML 檔案。 您可以從之前的測試回合載入 .trx 檔案，以便檢閱這些測試回合的結果或是重新執行之前的測試。 如需詳細資訊，請參閱[如何：重新執行測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)。  
+單元測試的結果會自動儲存在硬碟的檔案中，而這些檔案的副檔名為 .trx。 .trx 檔案是一種包含測試回合詳細資料的 XML 檔案。 您可以從之前的測試回合載入 .trx 檔案，以便檢閱這些測試回合的結果或是重新執行之前的測試。 如需詳細資訊，請參閱[如何：重新執行測試 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100))。  
   
 > [!NOTE]  
 > 您不可以從遠端執行單元測試。  
   
 如果您的小組使用 Visual Studio Team Foundation Server Team 專案協助管理其工作，您也可以將測試資料發行至 SQL Server 資料庫 (又稱為「作業存放區」)。  
   
-如需如何儲存測試結果、重複使用測試結果以及將測試結果與小組分享的詳細資訊，請參閱[如何：在 Visual Studio 2010 中儲存和開啟測試結果](https://msdn.microsoft.com/library/ms404662(VS.100).aspx)或[如何：在 Visual Studio 2012 中儲存和開啟測試結果](https://msdn.microsoft.com/library/ms404662.aspx)。  
+如需如何儲存測試結果、重複使用測試結果以及將測試結果與小組分享的詳細資訊，請參閱[如何：在 Visual Studio 2010 中儲存和開啟測試結果](/previous-versions/visualstudio/visual-studio-2010/ms404662(v=vs.100))或[如何：在 Visual Studio 2012 中儲存和開啟測試結果](/previous-versions/ms404662(v=vs.140))。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  
-  

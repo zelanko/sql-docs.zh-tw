@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200296"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988594"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 終止支援選項 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88200296"
 - 升級至目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 - 購買[延伸安全性更新訂閱](https://www.microsoft.com/cloud-platform/extended-security-updates)。 
 - 將您的工作負載依現況移轉到 Azure 虛擬機器，以取得[免費的延伸安全性更新](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)。
-- 將您的工作負載移轉到 [Azure SQL Database 服務](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。 
+- 將您的工作負載移轉到 [Azure SQL Database 服務](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。 
 
 如需規劃升級或移轉並將其自動化的詳細資訊、指導方針和工具，請參閱 [SQL Server 2005 終止支援](https://www.microsoft.com/sql-server/sql-server-2005)和 [SQL Server 2008 終止支援](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)。  
 
@@ -241,7 +241,7 @@ ms.locfileid: "88200296"
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-若現代化應用程式、可調式應用程式、行動應用程式及 Web 應用程式使用 JSON 資料，且需要兼具強大的查詢及交易資料處理功能，可以考慮使用 Azure Cosmos DB。 如需詳細資訊，請參閱 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)。 如需匯入資料的資訊，請參閱[將資料匯入 Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/import-data/)。
+若現代化應用程式、可調式應用程式、行動應用程式及 Web 應用程式使用 JSON 資料，且需要兼具強大的查詢及交易資料處理功能，可以考慮使用 Azure Cosmos DB。 如需詳細資訊，請參閱 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)。 如需匯入資料的資訊，請參閱[將資料匯入 Cosmos DB](/azure/cosmos-db/import-data/)。
 
 Azure Cosmos DB 具有下列優點：
 - 您的文件會編製索引，讓您可以使用熟悉的 SQL 語法加以查詢。
@@ -274,7 +274,7 @@ Azure 表格儲存體具有下列優點：
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > 如果此表格與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 週期頁面之間有任何不一致，則 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 週期會取代此表格，因為此表格僅供大致參考之用。  
@@ -286,5 +286,4 @@ Azure 表格儲存體具有下列優點：
 [延伸安全性更新 (ESU) 概觀](sql-server-extended-security-updates.md)   
 [免費的延伸安全性更新 (ESU) 以依現況移轉到 Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [SQL Server VM 概觀](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
-[Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview)    
-
+[Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview)

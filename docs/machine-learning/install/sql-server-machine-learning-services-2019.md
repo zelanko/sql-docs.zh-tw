@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179234"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956739"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019：機器學習服務的隔離變更
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "88179234"
 
 ## <a name="changes-to-isolation-mechanism"></a>隔離機制的變更
 
-在 Windows 上，SQL Server 2019 安裝程式會變更外部程序的隔離機制。 這項變更會以 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 取代本機背景工作角色帳戶，這是在 Windows 上執行的用戶端應用程式的隔離技術。 
+在 Windows 上，SQL Server 2019 安裝程式會變更外部程序的隔離機制。 這項變更會以 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 取代本機背景工作角色帳戶，這是在 Windows 上執行的用戶端應用程式的隔離技術。 
 
 修改後，系統管理員沒有任何特定的動作項目。 在新的或升級的伺服器上，從 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 執行的所有外部指令碼和程式碼會自動遵循新的隔離模型。 
 
@@ -39,7 +39,7 @@ ms.locfileid: "88179234"
 
 在舊版中，**SQLRUserGroup** 包含用來隔離和執行外部程序的本機 Windows 使用者帳戶 (MSSQLSERVER00-MSSQLSERVER20) 集區。 當需要外部程序時，SQL Server Launchpad 服務會取得可用的帳戶，並使用它來執行程序。 
 
-在 SQL Server 2019 中，安裝程式不會再建立本機背景工作角色帳戶。 而是透過 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 來達成隔離。 在執行時，當在預存程序或查詢中檢測到內嵌指令碼或程式碼時，SQL Server 會呼叫 Launchpad，並要求特定延伸模組的啟動器。 Launchpad 會在其身分識別的處理序中叫用適當的執行階段環境，並具現化 AppContainer 以包含它。 這種變更很有用，因為已不再需要本機帳戶和密碼管理。 此外，在禁止本機使用者帳戶的安裝上，去除本機使用者帳戶相依性表示您現在可以使用此功能。
+在 SQL Server 2019 中，安裝程式不會再建立本機背景工作角色帳戶。 而是透過 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 來達成隔離。 在執行時，當在預存程序或查詢中檢測到內嵌指令碼或程式碼時，SQL Server 會呼叫 Launchpad，並要求特定延伸模組的啟動器。 Launchpad 會在其身分識別的處理序中叫用適當的執行階段環境，並具現化 AppContainer 以包含它。 這種變更很有用，因為已不再需要本機帳戶和密碼管理。 此外，在禁止本機使用者帳戶的安裝上，去除本機使用者帳戶相依性表示您現在可以使用此功能。
 
 正如 SQL Server 所實作，AppContainers 是一種內部機制。 雖然您不會在處理序監視器中看到 AppContainers 的實體辨識項，但是您可以在安裝程式所建立的輸出防火牆規則中找到它們，以避免處理序進行網路呼叫。
 

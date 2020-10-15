@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9263d11f271249d7fa31b1a3f3af83a21c04c793
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173291"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956501"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中的 Python 語言延伸模組
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -42,8 +42,8 @@ Microsoft 為平行和分散式工作負載新增的 Python 套件包含下列�
 
 | 程式庫 | 描述 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支援資料來源物件和資料探索、操作、轉換和視覺化。 RevoScaleR 支援建立遠端計算內容，以及各種可調整的機器學習模型，例如 **rxLinMod**。 如需詳細資訊，請參閱 [revoscalepy 模組與 SQL Server](../python/ref-py-revoscalepy.md)。  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含已針對速度和正確性最佳化的機器學習演算法，以及適用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [microsoftml 模組與 SQL Server](../python/ref-py-microsoftml.md)。 |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支援資料來源物件和資料探索、操作、轉換和視覺化。 RevoScaleR 支援建立遠端計算內容，以及各種可調整的機器學習模型，例如 **rxLinMod**。 如需詳細資訊，請參閱 [revoscalepy 模組與 SQL Server](../python/ref-py-revoscalepy.md)。  |
+| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含已針對速度和正確性最佳化的機器學習演算法，以及適用於處理文字和影像的內嵌轉換。 如需詳細資訊，請參閱 [microsoftml 模組與 SQL Server](../python/ref-py-microsoftml.md)。 |
 
 Microsoftml 和 revoscalepy 緊密結合；在 microsoftml 中使用的資料來源會定義為 revoscalepy 物件。 Revoscalepy 傳送至 microsoftml 的計算內容限制。 也就是說，所有功能都可供本機作業使用，但切換到遠端計算內容需要 RxInSqlServer。
 
@@ -102,7 +102,7 @@ Microsoftml 和 revoscalepy 緊密結合；在 microsoftml 中使用的資料來
 ## <a name="next-steps"></a>後續步驟
 
 + [SQL Server 中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)
-+ [RevoScaleR 函式參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [RevoScaleR 函式參考](/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server 中的擴充性架構](extensibility-framework.md)
 + [SQL Server 中的 R 和機器學習延伸模組](extension-r.md)
 + [取得 Python 套件資訊](../package-management/python-package-information.md)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179989"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956573"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 的效能 - 資料最佳化
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 許多 RevoScaleR 演算法都支援參數來控制產生定型模型的方法。 雖然模型的精確度和正確性很重要，但演算法的效能可能同樣重要。 若要在精確度與定型時間之間取得平衡，您可以修改型參數來提高計算速度，而且在許多案例中，您可以在不降低精確度或正確性的情況下提升效能。
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` 支援 `maxDepth` 參數，其可控制決策樹深度。 因為增加 `maxDepth`，就會降低效能，因此分析增加深度的優點與效能影響很重要。
 
     您可以控制時間複雜性和預測精確度之間的平衡，方式則是調整如下的參數：`maxNumBins`、`maxDepth`、`maxComplete` 與 `maxSurrogate`。 將深度增加到超過 10 或 15 以上，會讓計算付出很高的代價。
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     若公式中的第一個相依變數是因數變數，請嘗試使用 `cube` 引數。
     
     當 `cube` 設定為 `TRUE` 時，就會使用資料分割的反向來執行迴歸，這樣可能比較快，而且所使用的記憶體比標準迴歸計算還要少。 如果公式含有大量變數，就會顯著提升效能。
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     若第一個相依變數是因數變數，請嘗試使用 `cube` 引數。
     
@@ -153,31 +153,31 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + 支援文章：[RxDForest 與 rxDTree 的效能調整選項](https://support.microsoft.com/kb/3104235) \(機器翻譯\)
 
-+ 控制模型的方法可納入增效樹狀結構模型中：[使用推測漸層增效估計模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting) \(英文\)
++ 控制模型的方法可納入增效樹狀結構模型中：[使用推測漸層增效估計模型](/r-server/r/how-to-revoscaler-boosting) \(英文\)
 
-+ 有關 RevoScaleR 如何移動及處理資料的概觀：[在 ScaleR 中撰寫自訂區塊化演算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms) \(英文\)
++ 有關 RevoScaleR 如何移動及處理資料的概觀：[在 ScaleR 中撰寫自訂區塊化演算法](/r-server/r/how-to-developer-write-chunking-algorithms) \(英文\)
 
-+ RevoScaleR 的程式設計模型：[在 RevoScaleR 中管理執行緒](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads) \(英文\)
++ RevoScaleR 的程式設計模型：[在 RevoScaleR 中管理執行緒](/r-server/r/how-to-developer-manage-threads) \(英文\)
 
-+ [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest) 的函式參考
++ [rxDForest](/r-server/r-reference/revoscaler/rxdforest) 的函式參考
 
-+ [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees) 的函式參考
++ [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees) 的函式參考
 
 ### <a name="use-microsoftml"></a>使用 MicrosoftML
 
 我們也建議您查看新的 **MicrosoftML** 套件，其提供可使用 RevoScaleR 所提供之計算內容與轉換的可調整規模機器學習演算法。
 
-+ [開始使用 MFA SDK](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) \(英文\)
++ [開始使用 MFA SDK](/r-server/r/concept-what-is-the-microsoftml-package) \(英文\)
 
-+ [如何選擇 MicrosoftML 演算法](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet) \(英文\)
++ [如何選擇 MicrosoftML 演算法](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet) \(英文\)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>使用 Microsoft R Server 運作解決方案
 
-若您的案例牽涉到使用已儲存模型的快速預測或將機器學習整合到應用程式中，您可以使用 Microsoft R Server 中的[運作化](https://docs.microsoft.com/r-server/what-is-operationalization) \(英文\) 功能 (先前稱為 DeployR)。
+若您的案例牽涉到使用已儲存模型的快速預測或將機器學習整合到應用程式中，您可以使用 Microsoft R Server 中的[運作化](/r-server/what-is-operationalization) \(英文\) 功能 (先前稱為 DeployR)。
 
-+ 身為**資料科學家**，請使用 [mrsdeploy 套件](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) \(英文\) 來與其他電腦共用 R 程式碼，並將 R 分析整合至 Web、電腦、行動裝置與儀表板應用程式。[如何在 R Server 中發佈及管理 R web 服務](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r) \(英文\)
++ 身為**資料科學家**，請使用 [mrsdeploy 套件](/r-server/r-reference/mrsdeploy/mrsdeploy-package) \(英文\) 來與其他電腦共用 R 程式碼，並將 R 分析整合至 Web、電腦、行動裝置與儀表板應用程式。[如何在 R Server 中發佈及管理 R web 服務](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r) \(英文\)
 
-+ 身為**系統管理員**，請了解如何管理套件、監視 Web 節點與計算節點，以及控制 R 作業的安全性：[如何在 R 中與 Web 服務互動及取用服務](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r) \(英文\)
++ 身為**系統管理員**，請了解如何管理套件、監視 Web 節點與計算節點，以及控制 R 作業的安全性：[如何在 R 中與 Web 服務互動及取用服務](/r-server/operationalize/how-to-consume-web-service-interact-in-r) \(英文\)
 
 ## <a name="articles-in-this-series"></a>此系列中的文章
 

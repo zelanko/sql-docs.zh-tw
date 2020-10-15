@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e60acfeb4f8a785fa55ee8df70003b9b8b42f13b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b523b792889c21a0b1d00ea3ab3ea3ac6fbf2aa
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114640"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988394"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>移除容錯移轉叢集執行個體 (安裝程式)
 
@@ -39,7 +39,7 @@ ms.locfileid: "91114640"
   
 -   如果解除安裝具有多個 SQL IP 叢集資源的容錯移轉叢集，您必須使用容錯移轉叢集管理員或 PowerShell 移除其他 SQL IP 資源。  
   
- 如需命令提示字元語法的資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ 如需命令提示字元語法的資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ### <a name="to-uninstall-a-ssnoversion-failover-cluster-instance"></a>解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體
   
@@ -47,5 +47,4 @@ ms.locfileid: "91114640"
   
 ## <a name="see-also"></a>另請參閱  
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

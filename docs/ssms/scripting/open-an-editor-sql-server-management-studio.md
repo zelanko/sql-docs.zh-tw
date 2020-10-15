@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093471"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036481"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ ms.locfileid: "89093471"
 ### <a name="using-the-fileopen-menu"></a>使用檔案/開啟功能表  
  在 **[檔案]** 功能表上，按一下 **[開啟]** ，然後導覽至檔案，並開啟該檔案。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可開啟適用副檔名的編輯器類型、將檔案內容複製到編輯器視窗，也可視需要開啟連接對話方塊。 例如，如果您開啟副檔名為 .sql 的檔案，則 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會開啟 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗、複製 .sql 檔案中的內容，並開啟連接對話方塊。 如果您開啟之檔案的副檔名沒有相關聯的特定編輯器，則 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會開啟文字編輯器視窗，並複製該檔案的內容。  
   
- 如需詳細資訊，請參閱 [使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+ 如需詳細資訊，請參閱 [使副檔名與程式碼編輯器相關聯](./associate-file-extensions-to-a-code-editor.md)。  
   
 ### <a name="using-the-toolbar"></a>使用工具列  
  在 **[標準]** 工具列上，按下列其中一個按鈕：  

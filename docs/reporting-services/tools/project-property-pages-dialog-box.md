@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7935ed0f792293eab2f3f9afa3ac71a1ecf0faf9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909998"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988580"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
@@ -83,7 +83,7 @@ ms.locfileid: "86909998"
 
 ## <a name="next-steps"></a>後續步驟
 
-[發行報表](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[發行報表](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))   
 [將報表發行到 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
 [設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [報表設計師 F1 說明](../../reporting-services/tools/report-designer-f1-help.md)  

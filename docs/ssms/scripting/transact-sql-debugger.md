@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480381"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036127"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
 
@@ -47,7 +47,7 @@ ms.locfileid: "89480381"
 
     如果您想要偵錯預存程序或函數，則可以逐步執行模組。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會開啟新的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗 (填入模組的原始程式碼)，並讓此視窗進入偵錯模式，然後暫停執行模組的第一個陳述式。 接著，您就可以透過設定中斷點或逐步執行程式碼，逐一導覽模組程式碼。  
 
-如需偵錯工具如何讓您巡覽程式碼的詳細資訊，請參閱 [逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+如需偵錯工具如何讓您巡覽程式碼的詳細資訊，請參閱 [逐步執行 Transact-SQL 程式碼](./step-through-transact-sql-code.md)。  
 
 ## <a name="viewing-debugger-information"></a>檢視偵錯工具資訊
 
@@ -69,11 +69,11 @@ ms.locfileid: "89480381"
 
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具進行遠端偵錯。|[先設定防火牆規則再執行 TSQL 偵錯工具](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|描述如何啟動、停止和控制偵錯工具的作業。|[執行 Transact-SQL 偵錯工具](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼。|[逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|描述如何使用偵錯工具來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料 (例如參數和變數) 以及系統資訊。|[Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|描述如何設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具進行遠端偵錯。|[先設定防火牆規則再執行 TSQL 偵錯工具](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|描述如何啟動、停止和控制偵錯工具的作業。|[執行 Transact-SQL 偵錯工具](./run-the-transact-sql-debugger.md)|  
+|描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼。|[逐步執行 Transact-SQL 程式碼](./step-through-transact-sql-code.md)|  
+|描述如何使用偵錯工具來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料 (例如參數和變數) 以及系統資訊。|[Transact-SQL 偵錯工具資訊](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>另請參閱
 
-[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

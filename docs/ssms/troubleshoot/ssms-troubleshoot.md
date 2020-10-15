@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 3363414382df2eb73a21dd32a9daa3a950c6907a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990361"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035904"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>在 SQL Server Management Studio (SSMS) 損毀之後取得診斷資料
 
@@ -28,7 +28,7 @@ ms.locfileid: "90990361"
 
 若要擷取診斷資訊以針對 SSMS 損毀或停止回應進行疑難排解，請遵循下列步驟。
 
-1. 下載 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
+1. 下載 [ProcDump](/sysinternals/downloads/procdump)。
 
 2. 將下載項目解壓縮到資料夾。
 
@@ -62,7 +62,7 @@ ms.locfileid: "90990361"
 
 若要擷取診斷資訊以針對 SSMS 的 OutOfMemoryException 進行疑難排解，請遵循下列步驟。
 
-1. 下載 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
+1. 下載 [ProcDump](/sysinternals/downloads/procdump)。
 
 2. 將下載項目解壓縮到資料夾。
 

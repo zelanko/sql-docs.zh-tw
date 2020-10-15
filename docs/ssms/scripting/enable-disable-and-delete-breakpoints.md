@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901268"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039049"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>啟用、停用以及刪除中斷點
 
@@ -29,7 +29,7 @@ ms.locfileid: "88901268"
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>中斷點視窗  
- **[中斷點]** 視窗會列出一些資訊，例如中斷點所在的程式碼行。 在 **[中斷點]** 視窗中，您也可以刪除、停用和啟用中斷點。 如需有關 **[中斷點]** 視窗的詳細資訊，請參閱＜ [[中斷點] Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)＞。  
+ **[中斷點]** 視窗會列出一些資訊，例如中斷點所在的程式碼行。 在 **[中斷點]** 視窗中，您也可以刪除、停用和啟用中斷點。 如需有關 **[中斷點]** 視窗的詳細資訊，請參閱＜ [[中斷點] Window](./transact-sql-debugger-breakpoints-window.md)＞。  
   
  停用中斷點會讓中斷點無法暫停執行，但是會將定義保留在原處，讓您可以在之後想要啟用中斷點時使用。 刪除中斷點，即會永久刪除中斷點。 您必須切換新的中斷點，以暫停陳述式的執行。  
   
@@ -101,6 +101,5 @@ ms.locfileid: "88901268"
 -   在 **[中斷點]** 視窗的工具列上，按一下 **[刪除所有中斷點]** 按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [切換中斷點](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [切換中斷點](./toggle-a-breakpoint.md)  
   

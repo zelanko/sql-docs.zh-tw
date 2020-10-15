@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1a946efdd8da5a64d2475164a1b8057c7b41554f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226819"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956790"
 ---
 # <a name="plot-histograms-in-python"></a>以 Python 繪製長條圖 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "91226819"
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database。 如需了解如何註冊，請參閱 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+* Azure SQL Database。 如需了解如何註冊，請參閱 [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 受控執行個體。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* Azure SQL 受控執行個體。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)。
 
 * 請參閱 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)，以將範例資料庫還原到 Azure SQL 受控執行個體。
 ::: moniker-end
@@ -93,5 +93,3 @@ df.hist(bins=10)
 顯示畫面會顯示 FactInternetSales 資料表中客戶的年齡分佈。
 
 ![Pandas 長條圖](./media/python-histogram.png)
-
-

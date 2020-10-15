@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e6744d8296272dab3b8c774f57e2d60e3ac5858
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: eca7c941bbf64c0e9f159c868e35413415b18136
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901504"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036201"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 中斷點
 
@@ -39,15 +39,14 @@ ms.locfileid: "88901504"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何指定您要暫停偵錯工具的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|[切換中斷點](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
-|描述如何暫時停用中斷點，稍後再重新予以啟用。 同時描述如何刪除中斷點。|[啟用、停用以及刪除中斷點](../../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)|  
-|描述如何指定條件，而條件定義是否依據所指定 Transact-SQL 運算式的評估結果來中斷中斷點。|[指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
-|描述如何指定叫用計數，而叫用計數只有在包含中斷點的陳述式已經執行指定的次數時才會導致中斷點中斷。|[指定叫用計數](../../relational-databases/scripting/specify-a-hit-count.md)|  
-|描述如何指定篩選，而篩選只會中斷所指定處理序或執行緒的中斷點。|[指定中斷點篩選條件](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|描述如何指定 [叫用時] 動作，而此動作是在執行中斷點陳述式時執行的自訂作業。 範例為列印訊息。|[指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
-|描述如何編輯中斷點的位置。|[編輯中斷點位置](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
+|描述如何指定您要暫停偵錯工具的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|[切換中斷點](./toggle-a-breakpoint.md)|  
+|描述如何暫時停用中斷點，稍後再重新予以啟用。 同時描述如何刪除中斷點。|[啟用、停用以及刪除中斷點](./enable-disable-and-delete-breakpoints.md)|  
+|描述如何指定條件，而條件定義是否依據所指定 Transact-SQL 運算式的評估結果來中斷中斷點。|[指定中斷點條件](./specify-a-breakpoint-condition.md)|  
+|描述如何指定叫用計數，而叫用計數只有在包含中斷點的陳述式已經執行指定的次數時才會導致中斷點中斷。|[指定叫用計數](./specify-a-hit-count.md)|  
+|描述如何指定篩選，而篩選只會中斷所指定處理序或執行緒的中斷點。|[指定中斷點篩選條件](./specify-a-breakpoint-filter.md)|  
+|描述如何指定 [叫用時] 動作，而此動作是在執行中斷點陳述式時執行的自訂作業。 範例為列印訊息。|[指定中斷點動作](./specify-a-breakpoint-action.md)|  
+|描述如何編輯中斷點的位置。|[編輯中斷點位置](./edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)  
-  
+ [Transact-SQL 偵錯工具資訊](./transact-sql-debugger-information.md)  
   

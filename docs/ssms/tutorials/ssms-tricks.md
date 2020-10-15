@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724509"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038912"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和訣竅
 
@@ -41,9 +41,9 @@ ms.locfileid: "91724509"
 
 若要測試此文章所提供的步驟，您需要 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQL 伺服器的存取權，以及 AdventureWorks 資料庫。 
 
-* 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安裝 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 * 安裝 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 開發人員版本](https://www.microsoft.com/sql-server/sql-server-downloads)。
-* 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 若要了解如何在 SSMS 中還原資料庫，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+* 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 若要了解如何在 SSMS 中還原資料庫，請參閱[還原資料庫](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>註解與取消註解您的 T-SQL 程式碼
 
@@ -286,7 +286,7 @@ ms.locfileid: "91724509"
 
 熟悉 SSMS 的最佳方式是實際練習。 這些「教學課程」  與「操作方式」  文章可協助您使用 SSMS 內所提供的各種功能。  這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
 
-* [連線至執行個體並對其進行查詢](connect-query-sql-server.md)
+* [連線至執行個體並對其進行查詢](../quickstarts/connect-query-sql-server.md)
 * [指令碼](scripting-ssms.md)
 * [在 SSMS 中使用範本](../template/templates-ssms.md)
 * [SSMS 組態](ssms-configuration.md)

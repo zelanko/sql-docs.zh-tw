@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179990"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956570"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能：結果和資源
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ CPU 親和性會在繼續比對案例中強制執行，以評估對 R 作業的�
 
 + [如何判斷適用於 64 位元版本 Windows 的適當分頁檔大小](https://support.microsoft.com/kb/2860880)
 
-+ [了解 NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [了解 NUMA](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [SQL Server 如何支援 NUMA](https://technet.microsoft.com/library/ms180954.aspx)
++ [SQL Server 如何支援 NUMA](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [軟體 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [軟體 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>了解 SQL Server 最佳化
 
 + [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [記憶體最佳化的資料表簡介](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ [示範：記憶體內部 OLTP 的效能改善](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [示範：記憶體內部 OLTP 的效能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [資料壓縮](../../relational-databases/data-compression/data-compression.md)
 
@@ -383,7 +383,7 @@ CPU 親和性會在繼續比對案例中強制執行，以評估對 R 作業的�
 
 + [資源管理員](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Resource Governor 簡介](https://technet.microsoft.com/library/bb895232.aspx)
++ [Resource Governor 簡介](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [設定 Resource Governor 的範例](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/) \(英文\)
 
@@ -391,7 +391,7 @@ CPU 親和性會在繼續比對案例中強制執行，以評估對 R 作業的�
 
 + [DISKSPD 儲存體負載產生器/效能測試工具 (英文)](https://github.com/microsoft/diskspd)
 
-+ [FSUtil 公用程式參考 (英文)](https://technet.microsoft.com/library/cc753059.aspx)
++ [FSUtil 公用程式參考 (英文)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## <a name="other-articles-in-this-series"></a>此系列的其他文章

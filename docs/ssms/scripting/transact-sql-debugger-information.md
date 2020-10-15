@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902102"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036171"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 偵錯工具 - 資訊
 
@@ -70,10 +70,10 @@ ms.locfileid: "88902102"
   
  您可以在 [區域變數]****、[監看式]**** 或 [快速監看式]**** 視窗中，以滑鼠右鍵按一下資料列，然後選取 [編輯值]****，藉以設定變數的資料值。 [區域變數] 視窗、[監看式] 視窗和 [快速監看式] 對話方塊中的 [值] 資料行支援都文字、XML 和 HTML 資料視覺化檢視。 這些視覺化檢視是以 [值] 資料行最右邊的放大鏡資料提示表示。 您可以使用這些視覺化檢視，在符合資料類型的顯示中檢視文字、XML 或 HTML 資料值，例如在瀏覽器視窗中檢視 XML 檔。  
   
- 在偵錯模式中，當您將滑鼠指標移到識別碼上方時，[快速諮詢]**** 快顯就會顯示運算式的名稱及其目前值。 如需詳細資訊，請參閱[快速諮詢 &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)。  
+ 在偵錯模式中，當您將滑鼠指標移到識別碼上方時，[快速諮詢]**** 快顯就會顯示運算式的名稱及其目前值。 如需詳細資訊，請參閱[快速諮詢 &#40;IntelliSense&#41;](./quick-info-intellisense.md)。  
   
 ## <a name="breakpoints"></a>中斷點  
- 您可以使用 [中斷點] 視窗來檢視和管理目前已設定的中斷點。 如需詳細資訊，請參閱 [逐步執行 TRANSACT-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+ 您可以使用 [中斷點] 視窗來檢視和管理目前已設定的中斷點。 如需詳細資訊，請參閱 [逐步執行 TRANSACT-SQL 程式碼](./step-through-transact-sql-code.md)。  
   
 ## <a name="call-stacks"></a>呼叫堆疊  
  [呼叫堆疊]**** 視窗會顯示目前的執行位置，以及有關執行作業如何從原始編輯器視窗通過任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (函數、預存程序或觸發程序) 而到達目前執行位置的資訊。 [呼叫堆疊] 視窗中的每個資料列都稱為堆疊框架，而且代表下列任何一個項目：  
@@ -104,13 +104,12 @@ ms.locfileid: "88902102"
  在偵錯模式中，[結果] 和 [訊息] 索引標籤仍然會在 [查詢編輯器] 中處於使用中狀態。 [結果] 索引標籤會繼續顯示在偵錯工作階段期間執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的結果集。 [訊息] 索引標籤會繼續顯示系統訊息，例如 *xx* 個資料列受影響，以及 PRINT 和 RAISERROR 陳述式的輸出。  
   
 ## <a name="see-also"></a>另請參閱  
- [本機視窗](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [監看式視窗](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [快速監看式對話方塊](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [中斷點視窗](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [呼叫堆疊視窗](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [執行緒視窗](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [輸出視窗](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [本機視窗](./transact-sql-debugger-locals-window.md)   
+ [監看式視窗](./transact-sql-debugger-watch-window.md)   
+ [快速監看式對話方塊](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [中斷點視窗](./transact-sql-debugger-breakpoints-window.md)   
+ [呼叫堆疊視窗](./transact-sql-debugger-call-stack-window.md)   
+ [執行緒視窗](./transact-sql-debugger-threads-window.md)   
+ [輸出視窗](./transact-sql-debugger-output-window.md)   
+ [Transact-SQL 偵錯工具](./transact-sql-debugger.md)  
   

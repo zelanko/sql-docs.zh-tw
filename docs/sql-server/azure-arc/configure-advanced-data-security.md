@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a51ec53b5b5e928bd19dd66cb1ac6a8da162e817
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990371"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988024"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>為已啟用 Azure Arc 的 SQL Server 執行個體設定進階資料安全性
 
@@ -77,7 +77,7 @@ ms.locfileid: "90990371"
 
    ![弱點報告](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. 按一下任何安全性警示以取得完整詳細資料，並在 [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview) 中進一步探索攻擊。 下圖是暴力密碼破解警示的範例。
+1. 按一下任何安全性警示以取得完整詳細資料，並在 [Azure Sentinel](/azure/sentinel/overview) 中進一步探索攻擊。 下圖是暴力密碼破解警示的範例。
 
    ![暴力密碼破解警示](media/configure-advanced-data-security/brute-force-alert.png)
 

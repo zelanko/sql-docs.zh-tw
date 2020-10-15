@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: bcac629eef24a68f66d1e7043f5cedb5ff8923e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b9c676b9c9bdef3f7172da60406239ba50f8c86
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497376"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037551"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
 
@@ -85,4 +85,4 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
 
 ## <a name="see-also"></a>另請參閱
 
-[建立新的已註冊伺服器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
+[建立新的已註冊伺服器 (SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)

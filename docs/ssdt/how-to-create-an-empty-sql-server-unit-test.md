@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518818"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988692"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>如何：建立空白 SQL Server 單元測試
 
@@ -96,10 +96,9 @@ ms.locfileid: "85518818"
 -   加入測試條件或其他判斷提示陳述式來驗證指令碼的結果。  
   
 > [!NOTE]  
-> 結果不明的測試條件是加入到每一個測試中的預設條件。 包含這個測試條件的目的為要指出尚未實作測試驗證。 當您已經加入其他測試條件之後，請從測試中刪除這個測試條件。 如需詳細資訊，請參閱[如何：將測試條件新增至資料庫單元測試](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
+> 結果不明的測試條件是加入到每一個測試中的預設條件。 包含這個測試條件的目的為要指出尚未實作測試驗證。 當您已經加入其他測試條件之後，請從測試中刪除這個測試條件。 如需詳細資訊，請參閱[如何：將測試條件新增至資料庫單元測試](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱  
 [操作說明：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[建立單元測試](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[建立單元測試](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

@@ -16,12 +16,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adce5f66d608c4c359962ed35bbf5090cf323e53
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902058"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039142"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>使副檔名與程式碼編輯器相關聯
 
@@ -58,6 +58,5 @@ ms.locfileid: "88902058"
 4.  在 **[編輯器]** 方塊中，依序按一下要用來開啟此檔案類型的程式碼編輯器、 **[新增]** 及 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [Ssms 公用程式](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms 公用程式](../ssms-utility.md)  
   

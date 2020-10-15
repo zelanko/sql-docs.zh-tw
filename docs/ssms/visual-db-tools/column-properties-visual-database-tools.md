@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480078"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038924"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88480078"
 展開以顯示其餘屬性。  
   
 **資料類型**  
-顯示選取之資料行的資料類型。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+顯示選取之資料行的資料類型。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 **識別值增量**  
 針對識別欄位之每個後續的資料列，顯示將加到 [識別值種子]**** 的遞增量。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
@@ -95,7 +95,7 @@ ms.locfileid: "88480078"
 顯示資料行的資料類型是否允許 Null 值。  
   
 **資料類型**  
-顯示選取之資料行的資料類型。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+顯示選取之資料行的資料類型。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 **預設值或繫結**  
 沒有為此資料行指定值時，顯示此資料行的預設值。 下拉式清單包含資料來源中所定義的所有全域預設值。 若要將資料行繫結到全域預設值，請從下拉式清單中選取。 此外，若要為資料行建立預設條件約束，請直接將預設值當作文字輸入。  
@@ -143,7 +143,7 @@ ms.locfileid: "88480078"
 指出用來建立資料行索引的語言。  
   
 **統計語意**  
-選取是否要針對選取的資料行啟用統計語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+選取是否要針對選取的資料行啟用統計語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](../../relational-databases/search/semantic-search-sql-server.md)。  
   
 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則 **[統計語意]** 選項會設定為 **[否]** ，而且無法修改。 如果您在選取 **[語言]** 之前針對 **[統計語意]** 選項選取 **[是]**，則 **[語言]** 欄中的可用語言將受限為有語意語言模型支援的語言。  
   
@@ -188,4 +188,3 @@ ms.locfileid: "88480078"
   
 > [!NOTE]  
 > 每個資料列的 **varchar(max)** 資料類型長度都會不同。 sp_help 會傳回 (-1) 當作 **varchar(max)** 資料行的長度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會顯示 -1 當作資料行大小。  
-  

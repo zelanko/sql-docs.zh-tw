@@ -9,25 +9,25 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 00ead49bdc0aa14304b3c95f0bee51329f6ad163
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178958"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956659"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL (CREATE EXTERNAL LIBRARY) 在 SQL Server 上安裝 R 套件
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 此文章說明如何在已啟用機器學習的 SQL Server 執行個體上安裝新的 R 套件。 有多種安裝方法可以選擇。 T-SQL 最適合不熟悉 R 的伺服器管理員採用。
 
-[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 陳述式可讓您在不需要直接執行 R 或 Python 程式碼的情況下，將套件或套件集新增至執行個體或特定資料庫。 不過，此方法需要套件準備與其他資料庫權限。
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) 陳述式可讓您在不需要直接執行 R 或 Python 程式碼的情況下，將套件或套件集新增至執行個體或特定資料庫。 不過，此方法需要套件準備與其他資料庫權限。
 
 + 所有套件都必須以本機壓縮檔案 (而非以視需要從網際網路下載) 的形式提供。
 
 + 所有相依性都必須依名稱與版本來識別，並包含在 ZIP 檔案中。 如果必要套件無法使用 (包括下游套件相依性)，此陳述式會失敗。 
 
-+ 您必須是 **db_owner** 或在資料庫角色中擁有 CREATE EXTERNAL LIBRARY 權限。 如需詳細資訊，請參閱 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
++ 您必須是 **db_owner** 或在資料庫角色中擁有 CREATE EXTERNAL LIBRARY 權限。 如需詳細資訊，請參閱 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)。
 
 ## <a name="download-packages-in-archive-format"></a>以封存格式下載套件
 
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>另請參閱
 
 + [取得 R 套件資訊](r-package-information.md)
-+ [R 教學課程](../tutorials/sql-server-r-tutorials.md)
++ [R 教學課程](../tutorials/r-tutorials.md)

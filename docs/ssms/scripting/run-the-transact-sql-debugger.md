@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901961"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036382"
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
 
@@ -42,7 +42,7 @@ ms.locfileid: "88901961"
 
 啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的需求如下：
 
-- 如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至另一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就必須設定偵錯工具進行遠端偵錯。 如需詳細資訊，請參閱 [先設定防火牆規則再執行 TSQL 偵錯工具](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。
+- 如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至另一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就必須設定偵錯工具進行遠端偵錯。 如需詳細資訊，請參閱 [先設定防火牆規則再執行 TSQL 偵錯工具](./configure-firewall-rules-before-running-the-tsql-debugger.md)。
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必須在屬於系統管理員 (sysadmin) 固定伺服器角色成員的 Windows 帳戶底下執行。
 
@@ -114,8 +114,8 @@ ms.locfileid: "88901961"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)
-- [逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL 偵錯工具](./transact-sql-debugger.md)
+- [逐步執行 Transact-SQL 程式碼](./step-through-transact-sql-code.md)
+- [Transact-SQL 偵錯工具資訊](./transact-sql-debugger-information.md)
+- [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)
