@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 77b8f5845f8fb3aea8712b6b63e54e10e62e2c6a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227119"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081727"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -123,7 +123,7 @@ ms.locfileid: "91227119"
 |**is_accelerated_database_recovery_on**|**bit**|指出是否已啟用加速資料庫復原 (ADR) 。<br />1 = ADR 已啟用<br />0 = ADR 已停用<br />**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_tempdb_spill_to_remote_store**|**bit**|指出是否已啟用 tempdb 溢出至遠端存放區。<br />1 = 已啟用<br />0 = 已停用<br />**適用**于： [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2。 雖然這項功能會推出到所有區域，但請檢查部署至您的實例的版本和最新的 [Azure Synapse 版本](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) 資訊，並 Gen2 功能可用性的 [升級排程](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) 。|
 |**is_stale_page_detection_on**|**bit**|指出是否已啟用過時的頁面偵測。<br />1 = 已啟用過時頁面偵測<br />0 = 已停用過時的頁面偵測<br />**適用**于： [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2。 雖然這項功能會推出到所有區域，但請檢查部署至您的實例的版本和最新的 [Azure Synapse 版本](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) 資訊，並 Gen2 功能可用性的 [升級排程](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) 。|
-|**is_memory_optimized_enabled**|**bit**|指出是否已針對資料庫啟用某些記憶體中的功能，例如 [混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 不會反映 [記憶體內部 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或設定狀態。 <br />1 = 已啟用記憶體優化功能<br />0 = 已停用記憶體優化功能<br />**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_memory_optimized_enabled**|**bit**|指出是否已針對資料庫啟用某些 In-Memory 功能，例如 [混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 不會反映 [記憶體內部 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或設定狀態。 <br />1 = 已啟用記憶體優化功能<br />0 = 已停用記憶體優化功能<br />**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
   
 ## <a name="permissions"></a>權限
 
@@ -157,7 +157,7 @@ FROM sys.databases;
   
 ```sql
 -- Execute from the master database.  
-SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
+SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percent_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
