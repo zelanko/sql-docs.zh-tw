@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ed1a61d719063643d0fef3c1c0598e45cec54555
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3968ea4001b4ada8940f4434bfbb2eff35840850
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893878"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988204"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>如何：執行 SQL Server 單元測試
 
@@ -58,7 +58,6 @@ ms.locfileid: "85893878"
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  
-[操作說明：從 Microsoft Visual Studio 2010 執行自動化的測試](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[從命令列執行自動化測試 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[測試應用程式 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
-  
+[操作說明：從 Microsoft Visual Studio 2010 執行自動化的測試](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))  
+[從命令列執行自動化測試 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182486(v=vs.100))  
+[測試應用程式 (Visual Studio 2012)](/azure/devops/test/overview)  

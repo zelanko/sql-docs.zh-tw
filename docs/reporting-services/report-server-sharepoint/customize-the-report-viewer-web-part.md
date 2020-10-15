@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: fa3f4741e4b1eec0acc218c3be3a4df73c0ed694
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767045"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935062"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
 
@@ -85,7 +85,7 @@ ms.locfileid: "83767045"
 |參數區域寬度|您可以選擇度量單位和值。 預設值是 200 像素。 此屬性的唯一需求為大於零。|  
 |文件引導模式|在報表中定義的報表導覽控制項，用來提供報表特定區段的單鍵存取。 此模式於 HTML 報表中提供。 文件引導模式會在報表檢視區域旁的可摺疊區域中顯示。 有效的值包括 **Displayed**、 **Collapsed**和 **Hidden**。 如果已定義報表的文件引導模式，除非在 Web 組件屬性中標記為隱藏或摺疊，否則此區域會根據預設展開。 如果文件引導模式為摺疊，則可以按一下箭號將它展開。|  
 |文件引導模式區域寬度|您可以選擇度量單位和值。 預設值是 200 像素。 此屬性的唯一需求為大於零。|  
-|載入參數|擷取報表的參數屬性。 並非所有報表都有參數。 如果報表沒有參數，則不會傳回任何值。 如果您要為剛剛上傳的報表設定屬性，則可能會收到錯誤，指出資料來源連接已刪除。 如果發生此錯誤，請重設連接，然後在指定連接之後完成設定參數屬性。 如需如何設定連線的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。<br /><br /> 為了獲得最佳結果，在按一下 [載入參數] 之前，請先按一下 **[套用]** 。<br /><br /> 載入參數屬性之後，就可利用您在報表的參數屬性頁面中使用的方式設定屬性。 如需如何設定參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
+|載入參數|擷取報表的參數屬性。 並非所有報表都有參數。 如果報表沒有參數，則不會傳回任何值。 如果您要為剛剛上傳的報表設定屬性，則可能會收到錯誤，指出資料來源連接已刪除。 如果發生此錯誤，請重設連接，然後在指定連接之後完成設定參數屬性。 如需如何設定連線的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](/previous-versions/sql/)。<br /><br /> 為了獲得最佳結果，在按一下 [載入參數] 之前，請先按一下 **[套用]** 。<br /><br /> 載入參數屬性之後，就可利用您在報表的參數屬性頁面中使用的方式設定屬性。 如需如何設定參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
 
 ## <a name="customizing-the-toolbar"></a>自訂工具列
 
@@ -95,13 +95,13 @@ ms.locfileid: "83767045"
 
 ## <a name="customizing-the-viewing-area"></a>自訂檢視區域
 
- 檢視區域可用來顯示報表。 報表檢視區域會與參數區域和認證區域共用 (如果使用的話)。 如果需要認證，認證區域就會出現在空的報表檢視區域旁邊。 等使用者提供認證並執行報表之後，認證區域就會關閉。 若要自訂提示使用者設定認證的文字，請修改資料來源連接屬性。 如需詳細資訊，請參閱[建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 檢視區域可用來顯示報表。 報表檢視區域會與參數區域和認證區域共用 (如果使用的話)。 如果需要認證，認證區域就會出現在空的報表檢視區域旁邊。 等使用者提供認證並執行報表之後，認證區域就會關閉。 若要自訂提示使用者設定認證的文字，請修改資料來源連接屬性。 如需詳細資訊，請參閱[建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](/previous-versions/sql/)。  
   
  參數區域提供執行報表之前輸入值的欄位。 只有在報表定義包括參數時才會使用此區域。 當顯示參數或認證區域時，報表檢視會調整成使用 Web 組件的剩餘寬度。 您可以設定 Web 組件上的屬性，以自訂參數的寬度。 您也可以定義頁面上個別參數旁出現的標籤。 如需如何修改參數標籤的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
- [SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint 網站上的報表檢視器 Web 組件](./report-viewer-web-part-sharepoint-site.md)   
  [將報表檢視器 Web 組件新增至網頁](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

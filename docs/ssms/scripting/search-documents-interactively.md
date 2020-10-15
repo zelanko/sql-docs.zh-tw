@@ -15,12 +15,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5808e51f9311a90f84527bce104d25c673198953
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901922"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036364"
 ---
 # <a name="search-documents-interactively"></a>以互動方式搜尋文件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,10 +64,9 @@ ms.locfileid: "88901922"
  [取代全部] 命令會取代所有搜尋相符項目，其中包括您利用 [尋找下一個] 按鈕所略過的相符項目。 若要取消 [取代全部]，請在關閉任何檔案之前，按一下 [編輯] 功能表中的 [恢復]。  
   
 ## <a name="see-also"></a>另請參閱  
- [以累加方式搜尋作用中的文件](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [搜尋和取代](../../relational-databases/scripting/search-and-replace.md)   
- [使用結果清單搜尋文件](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [使用規則運算式搜尋文字](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [以累加方式搜尋作用中的文件](./search-an-active-document-incrementally.md)   
+ [搜尋和取代](./search-and-replace.md)   
+ [使用結果清單搜尋文件](./search-documents-using-results-lists.md)   
+ [使用萬用字元搜尋文字](./search-text-with-wildcards.md)   
+ [使用規則運算式搜尋文字](./search-text-with-regular-expressions.md)  
   

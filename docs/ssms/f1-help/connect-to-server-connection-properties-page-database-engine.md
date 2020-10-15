@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5031cafdcb62d840d26950682d3490e5f252ee72
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370844"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037241"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 
@@ -76,5 +76,4 @@ ms.locfileid: "88370844"
 儲存 [已註冊的伺服器]**** 中的設定。  
   
 ## <a name="see-also"></a>另請參閱  
-[連接屬性對話方塊](../../ssms/f1-help/connection-properties-dialog-box.md)  
-  
+[連接屬性對話方塊]()  

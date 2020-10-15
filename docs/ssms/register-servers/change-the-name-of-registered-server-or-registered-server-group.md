@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/02/2016
-ms.openlocfilehash: 28ed9e04486fe587ea3bd25d6659283846a6fa8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c02287203533d75038a909bd962c9afc70858d2b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491793"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037624"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>變更已註冊之伺服器或已註冊之伺服器群組的名稱
 
@@ -46,4 +46,4 @@ ms.locfileid: "88491793"
 
 ## <a name="see-also"></a>另請參閱
 
-[變更伺服器的註冊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)
+[變更伺服器的註冊 &#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)

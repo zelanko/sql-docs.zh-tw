@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179167"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956689"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>在 SQL Server 上使用 Python 工具來安裝套件
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88179167"
 
 若要在 SQL Server 上安裝可於指令碼中使用的新 Python 套件，您要在機器學習服務的執行個體中安裝該套件。 如果您有多個機器學習服務的執行個體，則必須將套件新增至每一個執行個體。
 
-下列範例中所安裝的套件是 [CNTK](https://docs.microsoft.com/cognitive-toolkit/)，此架構適用於進行 Microsoft 所提供的深度學習，可支援自訂、定型及共用不同類型的神經網路。
+下列範例中所安裝的套件是 [CNTK](/cognitive-toolkit/)，此架構適用於進行 Microsoft 所提供的深度學習，可支援自訂、定型及共用不同類型的神經網路。
 
 ### <a name="for-offline-install-download-the-python-package"></a>若要離線安裝，請下載 Python 套件
 
@@ -63,7 +63,7 @@ ms.locfileid: "88179167"
 > [!IMPORTANT]
 > 請確定您取得的是套件的 Windows 版本。 如果檔案的結尾是 .gz，則它可能不是正確的版本。
 
-如需下載適用於多個平台與適用於多個 Python 版本的 CNTK 架構詳細資訊，請參閱[在電腦上安裝 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine) \(英文\)。
+如需下載適用於多個平台與適用於多個 Python 版本的 CNTK 架構詳細資訊，請參閱[在電腦上安裝 CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine) \(英文\)。
 
 ### <a name="locate-the-python-library"></a>找出 Python 程式庫
 
@@ -123,5 +123,5 @@ import cntk
 ## <a name="see-also"></a>另請參閱
 
 + [取得 Python 套件資訊](python-package-information.md)
-+ [SQL Server 機器學習服務的 Python 教學課程](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server 機器學習服務的 Python 教學課程](../tutorials/python-tutorials.md)
 + [適用於 CNTK 的 Python API](https://cntk.ai/pythondocs/tutorials.html) \(英文\)。

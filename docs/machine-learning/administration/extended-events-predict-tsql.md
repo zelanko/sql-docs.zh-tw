@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171793"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956841"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視預測 PREDICT T-SQL 陳述式
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88171793"
 
 ## <a name="table-of-extended-events"></a>擴充事件表
 
-下列擴充事件在支援 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL 陳述式的所有 SQL Server 版本上都可用。 
+下列擴充事件在支援 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 陳述式的所有 SQL Server 版本上都可用。 
 
 |NAME |object_type|description| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 使用 PREDICT 來擷取評分工作階段效能的相關資訊：
 
-1. 使用 Management Studio 或其他支援的[工具](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)來建立新的擴充事件工作階段。
+1. 使用 Management Studio 或其他支援的[工具](../../relational-databases/extended-events/extended-events-tools.md)來建立新的擴充事件工作階段。
 2. 將事件 `predict_function_completed` 與 `predict_model_cache_hit` 新增到工作階段。
 3. 啟動擴充事件工作階段。
 4. 執行使用 PREDICT 的查詢。
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 如需擴充事件 (有時稱為 XEvents) 以及如何在工作階段中追蹤事件的詳細資訊，請參閱下列文章：
 
 + [使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼](extended-events.md)
-+ [擴充事件概念與架構](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [在 SSMS 中設定事件擷取](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [在物件總管中管理事件工作階段](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [擴充事件概念與架構](../../relational-databases/extended-events/extended-events.md)
++ [在 SSMS 中設定事件擷取](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [在物件總管中管理事件工作階段](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

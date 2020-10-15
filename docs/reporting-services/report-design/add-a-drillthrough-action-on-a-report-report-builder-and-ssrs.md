@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8540ade9e1c13dac159c20ffade0d5b0c1652071
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2e4286b0c9d2b8f83926f8208c1b5f5da5c20deb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689516"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935378"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
   當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」* (Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
@@ -59,8 +59,7 @@ ms.locfileid: "83689516"
 7.  若要測試連結，請執行報表，然後按一下這個連結設定所在的報表項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [動作屬性對話方塊 &#40;報表產生器和 SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [動作屬性對話方塊 &#40;報表產生器和 SSRS&#41;](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)   
  [格式化圖表上的資料點 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
-  
   

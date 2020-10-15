@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7f711ae8b90762003f903b7fd4a59771c5d3f53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178685"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956980"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務在 Azure Data Studio 筆記本中執行 Python 和 R 指令碼
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-了解如何使用 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/azure-data-studio/what-is)在 [Azure Data Studio](../sql-server-machine-learning-services.md) 筆記本中執行 Python 和 R 指令碼。 Azure Data Studio 是跨平台的資料庫工具。
+了解如何使用 [SQL Server 機器學習服務](../../azure-data-studio/what-is.md)在 [Azure Data Studio](../sql-server-machine-learning-services.md) 筆記本中執行 Python 和 R 指令碼。 Azure Data Studio 是跨平台的資料庫工具。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 在您的工作站電腦上[下載並安裝 Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。 Azure Data Studio 為跨平台產品，可在 Windows、macOS 和 Linux 上執行。
+- 在您的工作站電腦上[下載並安裝 Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)。 Azure Data Studio 為跨平台產品，可在 Windows、macOS 和 Linux 上執行。
 
 - 已安裝並啟用 SQL Server 機器學習服務的伺服器。 您可以在 Windows、Linux 或巨量資料叢集上使用機器學習服務：
 
@@ -123,7 +123,7 @@ SQL 筆記本包含程式碼和文字資料格。 程式碼資料格可用來透
 
 ## <a name="next-steps"></a>後續步驟
 
-- [如何在 Azure Data Studio 中使用筆記本](../../azure-data-studio/notebooks-guidance.md)
-- [建立並執行 SQL Server 筆記本](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
+- [如何在 Azure Data Studio 中使用筆記本](../../azure-data-studio/notebooks/notebooks-guidance.md)
+- [建立並執行 SQL Server 筆記本](../../azure-data-studio/notebooks/notebooks-sql-kernel.md)
 - [快速入門：使用 SQL Server 機器學習服務來執行簡單的 Python 指令碼](../tutorials/quickstart-python-create-script.md)
 - [快速入門：使用 SQL Server 機器學習服務來執行簡單的 R 指令碼](../tutorials/quickstart-r-create-script.md)

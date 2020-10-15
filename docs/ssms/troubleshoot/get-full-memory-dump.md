@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: a15ce5e05e54b6196d363e8967c33fa4ad190295
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d6055d14fd6edbc711c950aa194cd9b553cb3b78
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990263"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035915"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
 
@@ -27,7 +27,7 @@ ms.locfileid: "90990263"
 
 若要擷取診斷資訊以進行疑難排解，請遵循下列步驟。
 
-1. 下載 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
+1. 下載 [ProcDump](/sysinternals/downloads/procdump)。
 
 2. 將下載項目解壓縮到資料夾。
 
@@ -61,7 +61,7 @@ ms.locfileid: "90990263"
 
 若要擷取診斷資訊以針對 SSMS 的 OutOfMemoryException 進行疑難排解，請遵循下列步驟。
 
-1. 下載 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
+1. 下載 [ProcDump](/sysinternals/downloads/procdump)。
 
 2. 將下載項目解壓縮到資料夾。
 

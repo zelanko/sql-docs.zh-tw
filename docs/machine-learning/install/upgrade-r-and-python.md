@@ -8,26 +8,26 @@ ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: af8999f35d0dbab75b50381d521904d4c9e28f8f
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 2036fda1d483bdfb04a205f5a2e3bf6d86119b1b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624845"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956723"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用繫結在 SQL Server 機器學習服務中升級 Python 和 R 執行階段
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-本文說明如何使用名為**繫結**的安裝程序，在 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 機器學習服務](../sql-server-machine-learning-services.md)中升級 R 或 Python 執行階段。 您可以透過「繫結」至 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server)，取得 [Python 和 R 的較新版本](#version-map)。
+本文說明如何使用名為**繫結**的安裝程序，在 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 機器學習服務](../sql-server-machine-learning-services.md)中升級 R 或 Python 執行階段。 您可以透過「繫結」至 [Microsoft Machine Learning Server](/machine-learning-server)，取得 [Python 和 R 的較新版本](#version-map)。
 
 > [!IMPORTANT]
 > 本文說明用來升級 R 和 Python 執行階段的舊方法，名為*繫結*。 如果您已安裝 **SQL Server 2016 Services Pack (SP) 2 的累積更新 (CU) 14 或更新版本**，或 **SQL Server 2017 的累積更新 (CU) 22 或更新版本**，則應參閱如何[將預設的 R 或 Python 語言執行階段變更為更新版本](change-default-language-runtime-version.md)。
 
 ## <a name="what-is-binding"></a>何謂繫結？
 
-繫結是一種安裝程序，會使用來自 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) 的較新的可執行檔、程式庫與工具，取代 **R_SERVICES** 與 **PYTHON_SERVICES** 資料夾的內容。
+繫結是一種安裝程序，會使用來自 [Microsoft Machine Learning Server](/machine-learning-server) 的較新的可執行檔、程式庫與工具，取代 **R_SERVICES** 與 **PYTHON_SERVICES** 資料夾的內容。
 
-維護模型所包含的上傳元件已經變更。 服務更新現在符合[現代化生命週期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)上的 [Microsoft R Server 與 Machine Learning Server 支援時間表](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) \(英文\)。
+維護模型所包含的上傳元件已經變更。 服務更新現在符合[現代化生命週期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)上的 [Microsoft R Server 與 Machine Learning Server 支援時間表](/machine-learning-server/resources-servicing-support) \(英文\)。
 
 除了元件版本和服務更新以外，繫結不會變更安裝的基礎：
 
@@ -46,10 +46,10 @@ ms.locfileid: "91624845"
 針對 SQL Server 2016 R Services 客戶，繫結提供：
 
 - 已更新的 R 套件。
-- 不是原始安裝 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) \(英文\)) 一部分的新套件
-- 適用於情感分析和影像偵測的預先定型機器學習[模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)。
+- 不是原始安裝 ([MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) \(英文\)) 一部分的新套件
+- 適用於情感分析和影像偵測的預先定型機器學習[模型](/machine-learning-server/install/microsoftml-install-pretrained-models)。
 
-所有繫結都可以在 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) \(英文\) 的每個新主要和次要版本推出時進一步重新整理。
+所有繫結都可以在 [Microsoft Machine Learning Server](/machine-learning-server/index) \(英文\) 的每個新主要和次要版本推出時進一步重新整理。
 ::: moniker-end
 
 ## <a name="version-map"></a>版本對應
@@ -61,14 +61,14 @@ ms.locfileid: "91624845"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-元件 |初始版本 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) | [Machine Learning Server 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) |  [Machine Learning Server 9.4.7](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) \(英文\)
+元件 |初始版本 | [R Server 9.0.1](/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) | [Machine Learning Server 9.3](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) |  [Machine Learning Server 9.4.7](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\)
 ----------|----------------|----------------|--------------|---------|-------|-------|
 Microsoft R Open (MRO) (R) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 | R 3.5.2
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
+[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[預先定型的模型](/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[olapR](/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -77,21 +77,21 @@ Microsoft R Open (MRO) (R) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3
 元件 |初始版本 | Machine Learning Server 9.3 | Machine Learning Server 9.4.7 |
 ----------|----------------|---------|---------|
 Microsoft R Open (MRO) (R) | R 3.3.3 | R 3.4.3 | R 3.5.2 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | 1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
+[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | 1.0 |
+[olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
 Anaconda 4.2 (Python 3.5)  | 4.2/3.5.2 | 4.2/3.5.2 |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
-[預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
+[revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
+[microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[預先定型的模型](/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>元件升級的運作方式
 
 當您將現有的 Python 和 R 安裝繫結至 Machine Learning Server 時，可執行檔、Python 和 R 程式庫都會升級。
 
-當您在具有 Python 或 R 整合的現有 SQL Server 資料庫引擎執行個體上執行安裝程式時，[Microsoft Machine Learning Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) 會執行繫結。 
+當您在具有 Python 或 R 整合的現有 SQL Server 資料庫引擎執行個體上執行安裝程式時，[Microsoft Machine Learning Server 安裝程式](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) 會執行繫結。 
 
 安裝程式會偵測現有的功能，並提示您重新繫結至 Machine Learning Server。
 
@@ -134,7 +134,7 @@ Anaconda 4.2 (Python 3.5)  | 4.2/3.5.2 | 4.2/3.5.2 |
 
 1. 關閉 SSMS 和目前與 SQL Server 連線的任何其他工具。 繫結會覆寫程式檔案。 如果 SQL Server 有已開啟的工作階段，繫結將會失敗，並顯示繫結錯誤碼 6。
 
-1. 將 Microsoft Machine Learning Server 下載到您要升級執行個體的電腦上。 我們建議使用[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer) \(英文\)。
+1. 將 Microsoft Machine Learning Server 下載到您要升級執行個體的電腦上。 我們建議使用[最新版本](/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer) \(英文\)。
 
 1. 將資料夾解壓縮並啟動位於 MLSWIN93 之下的 ServerSetup.exe。
 
@@ -158,9 +158,9 @@ Anaconda 4.2 (Python 3.5)  | 4.2/3.5.2 | 4.2/3.5.2 |
 
 下列指示說明如何放置檔案以進行離線安裝。
 
-1. 下載 MLSWIN93 安裝程式。 它會以單一壓縮檔案的形式下載。 我們建議您使用[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)，但是您也可以安裝[舊版](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)。
+1. 下載 MLSWIN93 安裝程式。 它會以單一壓縮檔案的形式下載。 我們建議您使用[最新版本](/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)，但是您也可以安裝[舊版](/machine-learning-server/install/r-server-install-windows-offline#download-required-components)。
 
-1. 下載 .cab 檔案。 下列連結適用於 9.3 版本。 如果您需要舊版，可以在 [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components) 中找到其他連結。 回想一下，您只能將 Python/Anaconda 新增至 SQL Server 機器學習服務執行個體。 Python 與 R 都存在預先定型模型；.cab 會以您所使用的語言提供模型。
+1. 下載 .cab 檔案。 下列連結適用於 9.3 版本。 如果您需要舊版，可以在 [R Server 9.1](/machine-learning-server/install/r-server-install-windows-offline#download-required-components) 中找到其他連結。 回想一下，您只能將 Python/Anaconda 新增至 SQL Server 機器學習服務執行個體。 Python 與 R 都存在預先定型模型；.cab 會以您所使用的語言提供模型。
 
     | 功能 | 下載 |
     |---------|----------|
@@ -287,7 +287,7 @@ SqlBindR.exe 無法藉由升級至 Microsoft R Server 9.0.1 來還原原始套�
 
 較新的 SqlBindR 版本會自動還原 R 原始功能，而不需要重新安裝 R 元件或重新修補伺服器。 不過，您必須安裝在初始安裝之後可能已新增的任何 R 套件更新。
 
-使用 R 命令使用資料庫中的記錄將已安裝的套件同步處理到檔案系統。 如需詳細資訊，請參閱 [SQL Server 的 R 套件管理](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server)。
+使用 R 命令使用資料庫中的記錄將已安裝的套件同步處理到檔案系統。 如需詳細資訊，請參閱 [SQL Server 的 R 套件管理](../package-management/install-additional-r-packages-on-sql-server.md)。
 
 ### <a name="problems-with-overwritten-sqlbinrini-file-in-sql-server"></a>SQL Server 中遭覆寫之 sqlbinr.ini 檔案的問題
 
@@ -320,9 +320,9 @@ Microsoft Machine Learning Server 9.2.1 和 9.3 不會有這個問題。
 
 ## <a name="see-also"></a>另請參閱
 
-+ [變更預設的 R 或 Python 語言執行階段版本](https://docs.microsoft.com/sql/machine-learning/install/change-default-language-runtime-version)
-+ [安裝適用於 Windows 的 Machine Learning Server (已連線到網際網路)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-+ [安裝適用於 Windows 的 Machine Learning Server (離線)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
-+ [Machine Learning Server 中的已知問題](https://docs.microsoft.com/machine-learning-server/resources-known-issues)
-+ [舊版 R Server 的功能公告](https://docs.microsoft.com/r-server/whats-new-in-r-server)
-+ [已淘汰，不再支援或變更功能](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features) \(英文\)
++ [變更預設的 R 或 Python 語言執行階段版本](./change-default-language-runtime-version.md)
++ [安裝適用於 Windows 的 Machine Learning Server (已連線到網際網路)](/machine-learning-server/install/machine-learning-server-windows-install)
++ [安裝適用於 Windows 的 Machine Learning Server (離線)](/machine-learning-server/install/machine-learning-server-windows-offline)
++ [Machine Learning Server 中的已知問題](/machine-learning-server/resources-known-issues)
++ [舊版 R Server 的功能公告](/r-server/whats-new-in-r-server)
++ [已淘汰，不再支援或變更功能](/machine-learning-server/resources-deprecated-features) \(英文\)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c1ea82680da039b9f38c7a3c308fd07bfa1cd89
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 659f5ed939e9dfd3a93fd638701c94cf7c27264b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778900"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935096"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>格式化文字方塊中的文字 (報表產生器及 SSRS)
   您可以在文件方塊中，單獨地對文字任何一部分進行格式化，並且在同一個文字方塊中，混合使用預留文字與靜態文字。 混合格式與加入預留位置文字的功能可以讓您針對報表中的文字建立合併列印或範本。 您可以使用預留位置來個別定義和格式化任何運算式。  
@@ -46,7 +46,7 @@ ms.locfileid: "84778900"
   
 ### <a name="to-format-text-and-placeholders-differently-in-the-same-text-box"></a>若要在相同的文字方塊中使用不同的方式格式化文字和預留位置  
   
-1.  在 **[插入]** 索引標籤上，按一下 **[清單]** 。 按一下設計介面，然後拖曳滑鼠來建立一個所需大小的方塊。 **[資料集屬性]** 對話方塊隨即開啟。 您可以使用共用資料集或在報表中內嵌資料集。 如需詳細資訊，請按一下[資料集屬性對話方塊、查詢 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 或[資料集屬性對話方塊、查詢](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)。  
+1.  在 **[插入]** 索引標籤上，按一下 **[清單]** 。 按一下設計介面，然後拖曳滑鼠來建立一個所需大小的方塊。 **[資料集屬性]** 對話方塊隨即開啟。 您可以使用共用資料集或在報表中內嵌資料集。 如需詳細資訊，請按一下[資料集屬性對話方塊、查詢 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 或[資料集屬性對話方塊、查詢](/previous-versions/sql/)。  
   
 2.  在 **[插入]** 索引標籤上，按一下 **[文字方塊]** 。 在清單中按一下，然後拖曳滑鼠來建立一個所需大小的方塊。  
   
@@ -72,6 +72,5 @@ ms.locfileid: "84778900"
  [將 HTML 新增至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
-  
+ [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)  
   

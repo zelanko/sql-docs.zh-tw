@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 14591802d542ac15448836a5b46e005f59026367
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681517"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935224"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>將包含多個資料範圍的數列顯示在圖表上
 
@@ -66,7 +66,7 @@ ms.locfileid: "84681517"
 [格式化圖表](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [圖表的 3D、浮凸和其他效果](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [圖表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[軸屬性對話方塊、軸選項](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[軸屬性對話方塊、軸選項](/previous-versions/sql/)   
 [將小配量收集成一個圓形圖](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

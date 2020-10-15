@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a08bda94128619aa9bf8c190652654ebd765d03
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462996"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035482"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88462996"
 在功能表上選取工具時，指定會傳遞至該工具的變數。 啟動工具或命令時，引數可以指定會傳遞至該工具或命令的值。 例如，值可以指定檔案名稱或目錄。 請利用箭頭按鈕，從預先定義的引數清單中選取。 您可以加入一個以上。 如需預先定義的引數及其定義的完整清單，請參閱 [外部工具的引數](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 您也可以視所使用的命令或工具來輸入自訂引數 (例如，命令列參數)。  
   
 **使用輸出視窗**  
-開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的 [輸出] 視窗以顯示執行命令的輸出。 並非所有的工具都能以 [輸出] 視窗中所顯示的格式來輸出。 如需詳細資訊，請參閱 [輸出視窗](../relational-databases/scripting/transact-sql-debugger-output-window.md)。  
+開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的 [輸出] 視窗以顯示執行命令的輸出。 並非所有的工具都能以 [輸出] 視窗中所顯示的格式來輸出。 如需詳細資訊，請參閱 [輸出視窗](./scripting/transact-sql-debugger-output-window.md)。  
   
 **將輸出視為 Unicode**  
 將輸出解譯為 Unicode。  
@@ -78,4 +78,3 @@ ms.locfileid: "88462996"
 ## <a name="see-also"></a>另請參閱  
 [外部工具的引數](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [一般使用者介面元素](../ssms/general-user-interface-elements.md)  
-  

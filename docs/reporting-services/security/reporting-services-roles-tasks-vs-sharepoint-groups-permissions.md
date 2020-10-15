@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 577f31593aae858596ac08c4aa7f44e121a22ce8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2abd5aa8f15a0213a8eccee0965688cf626abc02
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480706"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988144"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作與SharePoint 群組權限
   本主題會比較 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  
@@ -63,7 +63,7 @@ ms.locfileid: "88480706"
 |---|**權限等級群組：** 例如 [檢視者] 群組的 [僅檢視]。|  
 |**工作：** 例如「管理報表」。|**權限：** 例如，在 [僅檢視] 群組中有檢視項目、檢視版本和檢視應用程式頁面的清單相關權限。|  
   
- 如需有關 SharePoint 權限的詳細資訊，請參閱＜ [權限等級和權限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) ＞和＜ [在 SharePoint 2013 中決定權限層級及群組](https://technet.microsoft.com/library/cc262690.aspx)＞。  
+ 如需有關 SharePoint 權限的詳細資訊，請參閱＜ [權限等級和權限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) ＞和＜ [在 SharePoint 2013 中決定權限層級及群組](/SharePoint/sites/determine-permission-levels-and-groups-in-sharepoint-server)＞。  
   
 ##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> 比較原生模式角色和 SharePoint 群組  
  下表會比較 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中的預先定義角色定義與標準 SharePoint 群組。 如果 SharePoint 群組不符合您所需要的特定角色，您可以在 SharePoint 中建立自訂群組，並指派權限等級。  
@@ -118,5 +118,4 @@ ms.locfileid: "88480706"
  [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定義](../../reporting-services/security/role-definitions.md)   
  [預先定義的角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
   

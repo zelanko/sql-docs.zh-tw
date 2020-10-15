@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee55a195e449b333fd2d0f71f8426ab2cf73928d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7c09057dab83f8aedf05256245afed845b0153f6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759758"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035961"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,6 +34,5 @@ ms.locfileid: "88759758"
 [方案總管](../ssms/solution/solution-explorer.md)  
 介紹方案總管，方案總管會提供專案及其檔案之組織好的檢視，您隨時可以存取用來合併它們的命令。  
   
-[方案總管原始檔控制](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
+[方案總管原始檔控制](./solution/solution-explorer.md)  
 描述 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何與原始檔控制產品整合為一。  
-  

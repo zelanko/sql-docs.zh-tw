@@ -20,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: dd50ab7a771dd0cd479716c94fa26110198822b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd61a8a290f8863d13c2052d0a50835461c5aae
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468545"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038388"
 ---
 # <a name="register-servers"></a>註冊伺服器
 
@@ -69,23 +69,22 @@ ms.locfileid: "88468545"
   
 |**說明**|**主題**|  
 |---------------------|---------------|  
-|註冊本機伺服器執行個體|[註冊連接的伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
-|註冊伺服器|[建立新的已註冊伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  
-|檢視已註冊的伺服器|[在 SQL Server Management Studio 中檢視已註冊的伺服器](../../tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md)|  
-|移除已註冊的伺服器|[移除已註冊的伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md)|  
-|變更伺服器的註冊|[變更伺服器的註冊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)|  
-|連接到已註冊的伺服器|[連接至已註冊的伺服器 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)|  
-|中斷與已註冊伺服器的連接|[中斷與註冊伺服器的連接 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md)|  
-|移動已註冊的伺服器或伺服器群組|[移動已註冊的伺服器或已註冊的伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)|  
-|變更已註冊伺服器或伺服器群組的名稱|[變更已註冊的伺服器或已註冊的伺服器群組名稱 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md)|  
-|建立或編輯伺服器群組|[建立或編輯伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)|  
-|移除伺服器群組|[移除伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-server-group-sql-server-management-studio.md)|  
-|匯出已註冊的伺服器資訊|[匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)|  
-|匯入已註冊的伺服器資訊|[匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)|  
-|建立中央管理伺服器和伺服器群組|[建立中央管理伺服器與伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)|  
-|同時對多部伺服器執行陳述式|[同時針對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)|  
+|註冊本機伺服器執行個體|[註冊連接的伺服器 &#40;SQL Server Management Studio&#41;](./register-a-connected-server-sql-server-management-studio.md)|  
+|註冊伺服器|[建立新的已註冊伺服器 &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)|  
+|檢視已註冊的伺服器|[在 SQL Server Management Studio 中檢視已註冊的伺服器](./view-registered-servers-in-sql-server-management-studio.md)|  
+|移除已註冊的伺服器|[移除已註冊的伺服器 &#40;SQL Server Management Studio&#41;](./remove-a-registered-server-sql-server-management-studio.md)|  
+|變更伺服器的註冊|[變更伺服器的註冊 &#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)|  
+|連接到已註冊的伺服器|[連接至已註冊的伺服器 &#40;SQL Server Management Studio&#41;](./connect-to-a-registered-server-sql-server-management-studio.md)|  
+|中斷與已註冊伺服器的連接|[中斷與註冊伺服器的連接 &#40;SQL Server Management Studio&#41;](./disconnect-from-a-registered-server-sql-server-management-studio.md)|  
+|移動已註冊的伺服器或伺服器群組|[移動已註冊的伺服器或已註冊的伺服器群組 &#40;SQL Server Management Studio&#41;](./move-a-registered-server-or-registered-server-group.md)|  
+|變更已註冊伺服器或伺服器群組的名稱|[變更已註冊的伺服器或已註冊的伺服器群組名稱 &#40;SQL Server Management Studio&#41;](./change-the-name-of-registered-server-or-registered-server-group.md)|  
+|建立或編輯伺服器群組|[建立或編輯伺服器群組 &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)|  
+|移除伺服器群組|[移除伺服器群組 &#40;SQL Server Management Studio&#41;](./remove-a-server-group-sql-server-management-studio.md)|  
+|匯出已註冊的伺服器資訊|[匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)|  
+|匯入已註冊的伺服器資訊|[匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)|  
+|建立中央管理伺服器和伺服器群組|[建立中央管理伺服器與伺服器群組 &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md)|  
+|同時對多部伺服器執行陳述式|[同時針對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [遠端伺服器](../../database-engine/configure-windows/remote-servers.md)  
-  
   

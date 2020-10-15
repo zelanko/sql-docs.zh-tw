@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f9b9ddfd58beed00a00c3512b5db51e7a3a7907c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901484"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036206"
 ---
 # <a name="toggle-a-breakpoint"></a>切換中斷點
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901484"
   
  如果在一行中有多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，您可以切換每個陳述式的中斷點。 如果按一下視窗左邊灰色列，會切換行中第一個陳述式的中斷點。 藉由反白顯示陳述式的任何部分或將游標移至陳述式，然後按下 F9 或按一下 [偵錯]**** 功能表上的 [切換中斷點]****，可切換後續陳述式的中斷點。 如果在一行中有多個中斷點，左邊灰色列中只有一個中斷點圖像。  
   
- 切換中斷點之後，您可以針對中斷點執行各種動作，例如編輯其屬性或暫時予以停用。 如需詳細資訊，請參閱 [Transact-SQL 中斷點](../../relational-databases/scripting/transact-sql-breakpoints.md)。  
+ 切換中斷點之後，您可以針對中斷點執行各種動作，例如編輯其屬性或暫時予以停用。 如需詳細資訊，請參閱 [Transact-SQL 中斷點](./transact-sql-breakpoints.md)。  
   
 ## <a name="toggle-a-breakpoint"></a>切換中斷點  
  **切換 Transact-SQL 陳述式上的中斷點**  
@@ -45,5 +45,4 @@ ms.locfileid: "88901484"
     -   按 F9 鍵。  
   
     -   在 [偵錯] 功能表上，按一下 [切換中斷點]。  
-  
   

@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901524"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036261"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901524"
   
 -   使用者可指定要執行的單一 **陳述式，或者將公用程式指向包含要執行之** 陳述式的文字檔，來提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
--   [查詢編輯器中的](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 模式 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+-   [查詢編輯器中的](./edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 模式 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 -   SQL Server 管理物件 (SMO)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901524"
  在 `3> GO` 這一行後面的那幾行，是 `SELECT` 陳述式的輸出。 產生輸出後， `sqlcmd` 會重設 `sqlcmd` 提示字元，並顯示 `1>`。 在 `EXIT` 行輸入 `1>`之後，[命令提示字元] 視窗會顯示和您初次開啟這個視窗時同樣的一行。 這表示 `sqlcmd` 已經結束其工作階段。 您現在可以輸入另一個 `EXIT` 命令，來關閉 [命令提示字元] 視窗。  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 執行 Transact-SQL 指令碼檔案  
- 您可以使用 **sqlcmd** 來執行資料庫指令碼檔案。 指令碼檔案是文字檔，其中混合了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、 **sqlcmd** 命令及指令碼變數。 如需如何編寫指令碼變數的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 **sqlcmd** 在指令碼檔案中使用陳述式、命令及指令碼變數的方式，與它使用互動方式輸入陳述式及命令的方式類似。 主要的差別在於 **sqlcmd** 會讀取整個輸入檔而不暫停，而不是等待使用者輸入陳述式、命令及指令碼變數。  
+ 您可以使用 **sqlcmd** 來執行資料庫指令碼檔案。 指令碼檔案是文字檔，其中混合了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、 **sqlcmd** 命令及指令碼變數。 如需如何編寫指令碼變數的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](./sqlcmd-use-with-scripting-variables.md)。 **sqlcmd** 在指令碼檔案中使用陳述式、命令及指令碼變數的方式，與它使用互動方式輸入陳述式及命令的方式類似。 主要的差別在於 **sqlcmd** 會讀取整個輸入檔而不暫停，而不是等待使用者輸入陳述式、命令及指令碼變數。  
   
  建立資料庫指令碼檔案有許多不同的方式：  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>深入了解 sqlcmd  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [使用查詢編輯器編輯 SQLCMD 指令碼](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [以指令碼變數使用 sqlcmd](./sqlcmd-use-with-scripting-variables.md)   
+ [使用查詢編輯器編輯 SQLCMD 指令碼](./edit-sqlcmd-scripts-with-query-editor.md)   
  [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
  [建立 CmdExec 作業步驟](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c7335d6a9f2fd1993ce66a6fd56f0f14d111a7e9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 81a36f15a68d3b122a0ba7651c11bfb22fbfa2e2
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523040"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988554"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 
@@ -122,7 +122,7 @@ ms.locfileid: "87523040"
 |每個資料庫的記錄檔案數|1|
 |每部電腦的磁碟區數|3|
 
-<sup>*</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公用程式所支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受控執行個體數量上限可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)。
+<sup>*</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公用程式所支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受控執行個體數量上限可能會根據伺服器的硬體組態而有所不同。 如需入門資訊，請參閱 [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](./editions-and-components-of-sql-server-2016.md)。
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料層應用程式物件
 

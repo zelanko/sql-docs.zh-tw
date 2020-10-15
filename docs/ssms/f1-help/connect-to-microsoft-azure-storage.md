@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417924"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035467"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 
@@ -32,7 +32,7 @@ ms.locfileid: "88417924"
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。
 
    >[!NOTE]
-   > 您只能連線到[一般目的儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)。 連線到其他類型的儲存體帳戶可能會造成類似下面的錯誤：
+   > 您只能連線到[一般目的儲存體帳戶](/azure/storage/common/storage-introduction#azure-storage-services)。 連線到其他類型的儲存體帳戶可能會造成類似下面的錯誤：
    >
    >  其中一個 HTTP 標頭之值的格式不正確。 (Microsoft.SqlServer.StorageClient)。
    >
@@ -43,4 +43,3 @@ ms.locfileid: "88417924"
 3.  **使用安全端點 (HTTPS)** - 這個選項會利用網路 Web 伺服器的加密通訊和安全識別。  
   
 4.  **儲存帳戶金鑰** - 這個選項會將您的密碼儲存在加密的檔案中。  
-  

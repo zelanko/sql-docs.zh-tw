@@ -16,19 +16,19 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51402e1a0017f80b192bde54d7ef53aff99f61d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c92732dc2cb4fcd817a8c954fa9d29048cd57bd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491592"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038403"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 您可以從查詢移除資料表或任何資料表值物件。  
   
 > [!NOTE]  
-> 移除資料表或資料表值物件並不會從資料庫刪除任何東西，只是從目前的查詢中移除。 如需從資料庫移除資料表的詳細資料，請參閱[如何：刪除資料庫中的資料表](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)。  
+> 移除資料表或資料表值物件並不會從資料庫刪除任何東西，只是從目前的查詢中移除。 如需從資料庫移除資料表的詳細資料，請參閱[如何：刪除資料庫中的資料表](../../relational-databases/tables/delete-tables-database-engine.md)。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>若要移除資料表或表格化物件  
   
@@ -46,4 +46,3 @@ ms.locfileid: "88491592"
 [指定搜尋準則](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [摘要查詢結果](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [執行查詢的基本作業](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-  

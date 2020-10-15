@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901913"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039013"
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 程式碼片段
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901913"
 ## <a name="inserting-snippets"></a>插入程式碼片段  
  您可以使用 [插入程式碼片段] 功能表開啟分類的程式碼片段清單，從中選擇。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段包含取代點：建議與該點相關語法的文字。 例如，CREATE TABLE 程式碼片段有資料表名稱、資料行名稱和資料行資料類型等元素的取代點。 在插入程式碼片段之後，您必須變更取代文字，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [完成 Transact-SQL 程式碼片段](../../relational-databases/scripting/complete-transact-sql-snippets.md)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段包含取代點：建議與該點相關語法的文字。 例如，CREATE TABLE 程式碼片段有資料表名稱、資料行名稱和資料行資料類型等元素的取代點。 在插入程式碼片段之後，您必須變更取代文字，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [完成 Transact-SQL 程式碼片段](./complete-transact-sql-snippets.md)。  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>藉由使用插入程式碼片段功能表，插入程式碼片段  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901913"
 3.  按兩下程式碼片段，或從程式碼片段選擇器中選取程式碼片段，然後按 TAB 或 ENTER。  
   
 ## <a name="see-also"></a>另請參閱  
- [插入範圍陳述式 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [插入範圍陳述式 Transact-SQL 程式碼片段](./insert-surround-with-transact-sql-snippets.md)  
   

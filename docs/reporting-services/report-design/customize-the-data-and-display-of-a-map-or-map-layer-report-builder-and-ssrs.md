@@ -22,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdc1069f0dfd9d12307d27ec7e2309f2ef0a9aec
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5516a294c8cd3dfb331db7c447982099c513ad99
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480583"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935005"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  
@@ -87,7 +87,7 @@ ms.locfileid: "89480583"
   
 -   解析度與簡化 在繪製時間與線條和多邊形的詳細外框之間選擇一個平衡點。  
   
- 若要變更這些選項，以滑鼠右鍵按一下地圖檢視區，然後使用 [地圖檢視區屬性對話方塊、一般](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) 頁面與相關的頁面。  
+ 若要變更這些選項，以滑鼠右鍵按一下地圖檢視區，然後使用 [地圖檢視區屬性對話方塊、一般](./maps-report-builder-and-ssrs.md) 頁面與相關的頁面。  
   
 ##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> 變更圖例的選項  
  圖例可協助使用者解譯地圖上的資料。  
@@ -122,7 +122,7 @@ ms.locfileid: "89480583"
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
- 如需詳細資訊，請參閱 [Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://docs.microsoft.com/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
+ 如需詳細資訊，請參閱 [Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> 變更圖層上地圖元素的選項  
  在以空間資料為基礎的圖層上，地圖元素為點、線條或多邊形。 您可以為地圖元素設定下列選項。 不會是否內嵌地圖元素，這些選項都會套用到圖層上的所有地圖元素：  
@@ -163,5 +163,4 @@ ms.locfileid: "89480583"
 ## <a name="see-also"></a>另請參閱  
  [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

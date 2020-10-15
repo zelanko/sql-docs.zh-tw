@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283549"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956515"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的 Resource Governor 管理 Python 與 R 工作負載
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,9 +38,9 @@ Python 與 R 中的機器學習演算法需要大量計算。 視您的工作負
 
 您也可以選擇使用關聯的工作負載群組與分類器來建立自訂**外部資源集區**，以針對來自特定程式、主機或您提供之其他準則的要求決定資源配置。 外部資源集區是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中引進的資源集區類型，可協助管理資料庫引擎外部的 R 與 Python 執行階段。
 
-1. [啟用資源控管](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (預設為關閉)。
+1. [啟用資源控管](../../relational-databases/resource-governor/enable-resource-governor.md) (預設為關閉)。
 
-2. 執行 [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) 以建立並設定資源集區，然後執行 [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) 來加以實作。
+2. 執行 [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 以建立並設定資源集區，然後執行 [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) 來加以實作。
 
 3. 建立工作負載群組以進行細微的配置，例如在定型及評分之間。
 

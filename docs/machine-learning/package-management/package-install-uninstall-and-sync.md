@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179687"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956612"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>適用於 SQL Server 的 R 套件同步
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88179687"
 
 提供此功能的目的，是為了讓使用者能較輕鬆地備份與 SQL Server 資料庫相關聯的 R 套件集合。 透過使用此功能，系統管理員不僅可以還原資料庫，更可以還原使用該資料庫的資料科學家所使用的任何 R 套件。
 
-此文章描述套件同步功能，以及如何使用 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) \(英文\) 函式來執行下列工作：
+此文章描述套件同步功能，以及如何使用 [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) \(英文\) 函式來執行下列工作：
 
 + 同步整個 SQL Server 資料庫的套件清單
 
@@ -56,7 +56,7 @@ ms.locfileid: "88179687"
 1. 伺服器管理員會為 SQL Server 執行個體啟用該功能。
 2. 針對每個資料庫，系統管理員會使用資料庫角色，將安裝或共用 R 套件的能力授與個別使用者。
 
-完成此作業之後，您便可以使用 RevoScaleR 函式 (例如 [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) \(英文\)) 來將套件安裝到資料庫。  關於使用者及其所能使用之套件的相關資訊會儲存在 SQL Server 執行個體中。 
+完成此作業之後，您便可以使用 RevoScaleR 函式 (例如 [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) \(英文\)) 來將套件安裝到資料庫。  關於使用者及其所能使用之套件的相關資訊會儲存在 SQL Server 執行個體中。 
 
 每當您使用套件管理函式來新增套件時，系統將會同時更新 SQL Server 和檔案系統中的記錄。 此資訊可以用來還原整個資料庫的套件資訊。
 
@@ -74,7 +74,7 @@ ms.locfileid: "88179687"
 
 ## <a name="how-package-synchronization-works"></a>套件同步如何運作
 
-若要使用套件同步，請呼叫 [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages) \(英文\)，其為 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\) 中的新函式。 
+若要使用套件同步，請呼叫 [rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages) \(英文\)，其為 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\) 中的新函式。 
 
 針對每個對 `rxSyncPackages` 的呼叫，您必須指定 SQL Server 執行個體和資料庫。 然後，請列出要同步的套件，或是指定套件範圍。
 

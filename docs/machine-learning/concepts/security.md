@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989833"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956506"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性結構
 
@@ -153,7 +153,7 @@ SQL Server 也會維護呼叫使用者身分識別與用來啟動附屬處理序
 
 ## <a name="appcontainer-isolation"></a>AppContainer 隔離
 
-隔離是透過 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 來達成。 在執行階段，當在預存程序或查詢中偵測到外部指令碼時，SQL Server 會呼叫啟動控制板，並要求延伸模組特定啟動器。 Launchpad 會在其身分識別的處理序中叫用適當的執行階段環境，並具現化 AppContainer 以包含它。 這種變更很有用，因為已不再需要本機帳戶和密碼管理。 此外，在禁止本機使用者帳戶的安裝上，去除本機使用者帳戶相依性表示您現在可以使用此功能。
+隔離是透過 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 來達成。 在執行階段，當在預存程序或查詢中偵測到外部指令碼時，SQL Server 會呼叫啟動控制板，並要求延伸模組特定啟動器。 Launchpad 會在其身分識別的處理序中叫用適當的執行階段環境，並具現化 AppContainer 以包含它。 這種變更很有用，因為已不再需要本機帳戶和密碼管理。 此外，在禁止本機使用者帳戶的安裝上，去除本機使用者帳戶相依性表示您現在可以使用此功能。
 
 正如 SQL Server 所實作，AppContainers 是一種內部機制。 雖然您不會在處理序監視器中看到 AppContainers 的實體辨識項，但是您可以在安裝程式所建立的輸出防火牆規則中找到它們，以避免處理序進行網路呼叫。 如需詳細資訊，請參閱 [SQL Server 機器學習服務的防火牆組態](../../machine-learning/security/firewall-configuration.md)。
 
@@ -216,7 +216,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 「隱含驗證」  描述連線要求行為，其中在 AppContainer 下執行的外部處理序，在資料或作業的回送要求上會顯示為 SQL Server 的受信任使用者身分識別。 就概念而言，在指定受信任連線的SQL Server 連接字串中，或在來自外部處理序 (例如 R 或 Python 指令碼) 的要求上，隱含驗證對於 Windows 驗證而言不再是唯一。 這有時候也稱為「回送」  。
 
-藉由管理身分識別和認證，AppContainer 可以防止利用使用者認證來存取資源或登入其他環境。 AppContainer 環境會建立識別碼，其利用使用者和應用程式的組合身分識別，因此認證對每個使用者/應用程式配對而言都是唯一的，且應用程式無法模擬使用者。 如需詳細資訊，請參閱 [AppContainer 隔離](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation)。
+藉由管理身分識別和認證，AppContainer 可以防止利用使用者認證來存取資源或登入其他環境。 AppContainer 環境會建立識別碼，其利用使用者和應用程式的組合身分識別，因此認證對每個使用者/應用程式配對而言都是唯一的，且應用程式無法模擬使用者。 如需詳細資訊，請參閱 [AppContainer 隔離](/windows/win32/secauthz/appcontainer-isolation)。
 
 如需回送連線的詳細資料，請參閱[從 Python 或 R 指令碼對 SQL Server 的回送連線](../connect/loopback-connection.md)。
 

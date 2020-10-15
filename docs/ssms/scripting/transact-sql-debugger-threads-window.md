@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc8d20024999e51509fdc45c054123667b94ee8
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: da80bf7a847e6724eaad79d2efd86a0b095b6b52
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901824"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036130"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL 偵錯工具 - 執行緒視窗
 
@@ -63,7 +63,7 @@ ms.locfileid: "88901824"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不支援這個功能。  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)   
+ [Transact-SQL 偵錯工具](./transact-sql-debugger.md)   
+ [Transact-SQL 偵錯工具資訊](./transact-sql-debugger-information.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)  
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)

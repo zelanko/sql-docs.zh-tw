@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7403bdc38692d843de266a64e8b44245ee966555
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458500"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935158"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>搭配報表使用 Office 資料連線 (.odc)
   在少數情況下，您可以使用現有的 Office 資料連線 (.odc) 檔案來提供連接資訊給 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 建立共用資料來源時，您可以使用 .odc 檔案來取代 .rsds 檔案。 報表伺服器使用 .odc 檔案的方式與使用 .rsds 檔案相同。報表伺服器會讀取檔案，找出資料來源類型、連接字串和認證資訊。  
@@ -45,7 +45,7 @@ ms.locfileid: "86458500"
   
  如果您不熟悉 .odc 檔案，可以依照下列指示來建立及匯出檔案。 為 OLE DB 資料來源建立 .odc 檔案的簡單方式為使用 Excel 2007 和資料連線精靈。 但請注意，這個精靈並不會建立資料來源，您必須擁有已經定義的外部資料來源。  
   
- 現有的 .odc 檔案必須與報表與查詢完全相容，您才能使用該檔案。 如果發生需要大幅修改報表或 .odc 檔案的錯誤，則應為報表建立新的 .rsds 檔案。 如需如何建立使用 .rsds 檔案之共用資料來源的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 現有的 .odc 檔案必須與報表與查詢完全相容，您才能使用該檔案。 如果發生需要大幅修改報表或 .odc 檔案的錯誤，則應為報表建立新的 .rsds 檔案。 如需如何建立使用 .rsds 檔案之共用資料來源的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](/previous-versions/sql/)。  
   
 ### <a name="to-create-and-export-an-odc-file"></a>建立及匯出 .odc 檔案  
   
@@ -101,5 +101,4 @@ ms.locfileid: "86458500"
   
 ## <a name="see-also"></a>另請參閱  
  [建立、修改和刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
-  
   
