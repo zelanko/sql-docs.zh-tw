@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245117"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892068"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 課：定義子報表的資料連接和資料表
 設計父報表之後，下一步是要建立子報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2014 資料庫。  
@@ -62,7 +62,7 @@ ms.locfileid: "87245117"
     > [!WARNING]  
     > 務必取消核取 [建立方法以直接將更新傳送至資料庫 (GenerateDBDirectMethods)]  
   
-    現在您已完成設定 ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 作為報表的資料來源。 在 Visual Studio 中的 DataSet 設計工具頁面上，應該會看到您加入的 **DataTable** ，並且列出查詢中指定的資料行。 根據查詢，DataSet2 包含 PurhcaseOrderDetail 資料表中的資料。  
+    現在您已完成設定 ADO.NET [DataTable](/dotnet/api/system.data.datatable) 作為報表的資料來源。 在 Visual Studio 中的 DataSet 設計工具頁面上，應該會看到您加入的 **DataTable** ，並且列出查詢中指定的資料行。 根據查詢，DataSet2 包含 PurhcaseOrderDetail 資料表中的資料。  
   
 11. 儲存檔案。  
   
@@ -70,5 +70,3 @@ ms.locfileid: "87245117"
   
 ## <a name="next-task"></a>下一項工作  
 您已成功建立子報表的資料連接和資料表。 接下來您將使用 [報表精靈] 設計子報表。 請參閱[第 5 課：使用 [報表精靈] 設計子報表](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)。  
-  
-

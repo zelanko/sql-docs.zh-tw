@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550588"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986129"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>安裝 SQL Server 文件以在 SSMS 中離線檢視
 
@@ -22,7 +22,7 @@ ms.locfileid: "89550588"
 
 此文章說明如何在 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 中下載及檢視離線 SQL Server 內容。 離線內容可讓您在沒有網際網路連線的情況下存取文件 (但是一開始需要網際網路連線來下載文件)。
 
-離線文件適用於 SQL Server 2012 版及更新版本。 雖然您可[線上檢視舊版內容](https://docs.microsoft.com/previous-versions/sql/)，但離線選項提供一種存取舊版內容的便利方式。
+離線文件適用於 SQL Server 2012 版及更新版本。 雖然您可[線上檢視舊版內容](/previous-versions/sql/)，但離線選項提供一種存取舊版內容的便利方式。
 
 - [SQL Server 2016 及更新版本](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -171,6 +171,6 @@ ms.locfileid: "89550588"
 若要深入了解封存的內容和 [說明檢視器]，請參考下方連結。
 
 - [SQL Server 線上文件](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
-- [SQL Server 2014 線上文件](https://docs.microsoft.com/previous-versions/sql/2014)
+- [SQL Server 2014 線上文件](/previous-versions/sql/2014)
 - [舊版的 SQL Server 線上文件](previous-versions-sql-server.md)
 - [SQL 文件的版本控制系統](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

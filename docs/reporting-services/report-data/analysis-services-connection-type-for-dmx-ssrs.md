@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e44b1872f3962f27666bf68b1f661b9804b8880b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: acb81c5dc8533e4870b540dda7c091eb37542d2c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458980"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891818"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Analysis Services Connection Type for DMX (SSRS)
   當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源建立資料集時，報表設計師會在偵測到有效的 Cube 時顯示多維度運算式 (MDX) 查詢設計工具。 如果未偵測到任何 Cube，但是有提供資料採礦模型，報表設計師會顯示資料採礦延伸模組 (DMX) 查詢設計工具。 若要切換 MDX 與 DMX 設計工具，請按一下工具列上的 [命令類型 DMX] (![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")) 按鈕。 使用 DMX 查詢設計工具，透過圖形元素以互動方式建立 DMX 查詢。 若要使用 DMX 查詢設計工具，您指定的資料來源必須已經具有提供資料的資料採礦模型。 查詢結果會轉換成扁平化的資料列集，以提供報表使用。  
   
 > [!NOTE]  
->  設計報表之前，您必須先培訓模型。 如需詳細資訊，請參閱 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
+>  設計報表之前，您必須先培訓模型。 如需詳細資訊，請參閱 [資料採礦方案](/analysis-services/data-mining/data-mining-solutions)。  
   
 ## <a name="design-mode"></a>設計模式  
  DMX 查詢設計工具會在設計模式中開啟。 設計模式包含一個用來選取單一資料採礦模型和輸入資料表的圖形設計介面，以及一個用來指定預測查詢的方格。 DMX 查詢設計工具另有兩種模式：查詢模式和結果模式。 在查詢模式中，會以 [查詢] 窗格取代設計模式中的方格，您可以利用這個窗格來輸入 DMX 查詢。 在 [結果] 模式中，查詢傳回的結果集會出現在資料方格中。  
@@ -46,8 +46,7 @@ ms.locfileid: "86458980"
  如需如何管理報表參數和查詢參數間關聯性的詳細資訊，請參閱[將查詢參數與報表參數建立關聯 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)。 如需參數的詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
+ [資料採礦方案](/analysis-services/data-mining/data-mining-solutions)   
  [查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   

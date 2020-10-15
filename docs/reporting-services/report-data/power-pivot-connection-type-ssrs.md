@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba0c6616c2a99007a379a71e0169b2bac85e5be5
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c83a33e56bca1cba9fab1c5e3ef873e9aa312f8a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458003"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891728"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取資料。  
@@ -62,7 +62,6 @@ ms.locfileid: "86458003"
 -   報表只包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services MDX 查詢設計工具使用者介面 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Analysis Services MDX 查詢設計工具使用者介面 &#40;報表產生器&#41;](/previous-versions/sql/)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 425f864e31f1280fd31852de44a40d5e2d5c61ef
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246477"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891718"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle 連線類型 (SSRS 和 Power BI 報表伺服器)
 
@@ -114,7 +114,7 @@ Data Source="Oracle"; Unicode="True"
   
  如需詳細資訊，請參閱下列文章：  
   
--   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
+-   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [如何新增 NETWORK SERVICE 安全性主體的權限 (機器翻譯)](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>替代資料延伸模組 
@@ -137,5 +137,4 @@ Data Source="Oracle"; Unicode="True"
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

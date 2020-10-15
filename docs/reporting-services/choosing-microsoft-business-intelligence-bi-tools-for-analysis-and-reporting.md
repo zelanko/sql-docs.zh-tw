@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d6880689d05328b09c4f50b87ef8182c1c927afa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395296"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891208"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 
@@ -35,17 +35,16 @@ ms.locfileid: "87395296"
 |建立功能強大的資料模型||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |執行自助式預測分析||||||[適用於 Excel 的資料採礦增益集](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
 |將資料視覺化及探索資料||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D 地圖](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
-|使用自然語言查詢發問|||||[問與答](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
-|使用行動裝置存取報表||||[HTML 5 (支援檢視 <10 MB 檔案)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (支援檢視 <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 裝置上的 Power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 裝置上的 Power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Power BI for Windows 10 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
-|共同作業和共用|||[SharePoint 網站](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint 團隊網站](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 網站](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
+|使用自然語言查詢發問|||||[問與答](/power-bi/consumer/end-user-q-and-a)|
+|使用行動裝置存取報表||||[HTML 5 (支援檢視 <10 MB 檔案)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (支援檢視 <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 裝置上的 Power BI 行動裝置應用程式](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 裝置上的 Power BI 行動裝置應用程式](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Power BI for Windows 10 行動裝置應用程式](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|共同作業和共用|||[SharePoint 網站](/sharepoint/getting-started)|[SharePoint 團隊網站](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 網站](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**公司 BI**|IT 專業人員||||||  
-|建立多維度/表格式公司模型||||||[Analysis Services (英文)](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
+|建立多維度/表格式公司模型||||||[Analysis Services (英文)](/analysis-services/analysis-services-overview)|  
 |建立特定資料視覺效果|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
-|建立儀表板|||[SharePoint 儀表板](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint 服務](https://technet.microsoft.com/library/ee424392.aspx)||[Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
+|建立儀表板|||[SharePoint 儀表板](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint 服務](/SharePoint/administration/performancepoint-services-overview)||[Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |建立營運報表||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |建立自訂和內嵌報表|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**進階分析**|資料科學家||||||  
 |執行自助式預測分析||||||[適用於 Excel 的資料採礦增益集](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
-|使用資料採礦演算法||||||[Analysis Services 中的資料採礦](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R 服務](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|使用資料採礦演算法||||||[Analysis Services 中的資料採礦](/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R 服務](../machine-learning/r/sql-server-r-services.md?viewFallbackFrom=sql-server-ver15)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426230"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081257"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>傳回值  
 如果下一個結果已成功成為作用中，將會傳回布林值 **true** 。 如果在讓下一個結果成為作用中時發生錯誤，則傳回 **false** 。 如果沒有其他結果可供使用，則傳回 **null** 。  
   
-## <a name="example"></a>範例  
+## <a name="example-1"></a>範例 1  
 下列範例會建立並執行一個預存程序，將產品評論插入 *Production.ProductReview* 資料表中，然後選取指定產品的所有評論。 執行預存程序之後，將會取用第一個結果 (預存程序中的 INSERT 查詢所影響的資料列數目)，而不會呼叫 **sqlsrv_next_result**。 下一個結果 (預存程序中的 SELECT 查詢所傳回的資料列) 可藉由呼叫 **sqlsrv_next_result** 成為可用結果，並可透過 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 加以取用。  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 執行具有輸出參數的預存程序時，建議您先取用所有其他結果，再存取輸出參數的值。 如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)。  
   
-## <a name="example"></a>範例  
+## <a name="example-2"></a>範例 2  
 下列範例會執行一個批次查詢，擷取指定產品識別碼的產品評論資訊、插入產品的評論，然後再次擷取指定產品識別碼的產品評論資訊。 新插入的產品評論將包含在批次查詢的最終結果集內。 此範例會使用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) ，從批次查詢的一個結果移至下一個。  
   
 > [!NOTE]  

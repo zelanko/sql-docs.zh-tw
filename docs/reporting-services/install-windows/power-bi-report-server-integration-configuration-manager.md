@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991864"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891298"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
@@ -24,9 +24,9 @@ ms.locfileid: "88991864"
 
 除了使用中的網際網路連線，您還可以瀏覽至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服務，以下是完成 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]整合的需求。
 
-- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱[什麼是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱[什麼是 Azure Active Directory？](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- **受管理的租用戶︰** 您要在其中釘選報表項目的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板必須是 Azure AD 受管理租用戶的一部分。  組織首次訂閱 Microsoft 365 和 Microsoft Intune 等 Azure 服務時，受管理的租用戶便會自動建立。   目前不支援病毒式租用戶。  如需詳細資訊，請參閱 [什麼是 Azure AD 目錄？](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的＜什麼是 Azure AD 租用戶＞和＜如何取得 Azure AD 目錄＞二節。
+- **受管理的租用戶︰** 您要在其中釘選報表項目的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板必須是 Azure AD 受管理租用戶的一部分。  組織首次訂閱 Microsoft 365 和 Microsoft Intune 等 Azure 服務時，受管理的租用戶便會自動建立。   目前不支援病毒式租用戶。  如需詳細資訊，請參閱 [什麼是 Azure AD 目錄？](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)中的＜什麼是 Azure AD 租用戶＞和＜如何取得 Azure AD 目錄＞二節。
 
 - 執行 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合的使用者需為 Azure AD 租用戶的成員，該租用戶為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系統管理員以及 ReportServer 目錄資料庫的系統管理員。
 
@@ -46,7 +46,7 @@ ms.locfileid: "88991864"
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> 整合並註冊報表伺服器
 
-從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成下列步驟。 如需詳細資訊，請參閱 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成下列步驟。 如需詳細資訊，請參閱[報表伺服器設定管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 1. 選取 [ [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合] 頁面。
 

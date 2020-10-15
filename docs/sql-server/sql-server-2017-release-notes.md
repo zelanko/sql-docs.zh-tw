@@ -11,12 +11,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245600"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985624"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "87245600"
 ## <a name="more-information"></a>詳細資訊
 - [SQL Server Reporting Services 版本資訊](../reporting-services/release-notes-reporting-services.md)的限制及問題。
 - [機器學習服務的已知問題](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
-- [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
+- [SQL Server 更新中心 - 所有已支援版本的連結和資訊](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

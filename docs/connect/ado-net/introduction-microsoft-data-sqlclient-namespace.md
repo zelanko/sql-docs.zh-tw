@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725699"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081467"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空間簡介
 
@@ -218,7 +218,7 @@ UTF-8 支援不需要進行任何應用程式程式碼變更。 這些 SqlClient
 
 ### <a name="authentication"></a>驗證
 
-您可以使用 _Authentication_ 連接字串選項來指定不同的驗證模式。 如需詳細資訊，請參閱 [SqlAuthenticationMethod 的文件](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2) \(部分機器翻譯\)。
+您可以使用 _Authentication_ 連接字串選項來指定不同的驗證模式。 如需詳細資訊，請參閱 [SqlAuthenticationMethod 的文件](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true) \(部分機器翻譯\)。
 
 > [!NOTE]
 > 自訂金鑰存放區提供者 (例如 Azure Key Vault 提供者) 將需要更新，才能支援 Microsoft.Data.SqlClient。 同樣地，記憶體保護區提供者也必須更新，才能支援 Microsoft.Data.SqlClient。

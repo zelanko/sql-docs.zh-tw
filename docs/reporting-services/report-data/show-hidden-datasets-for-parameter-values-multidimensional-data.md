@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4118c7ad1cccb46a08ec200eef223f62010cf45e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455250"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890816"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>顯示參數值的隱藏資料集 - 多維度資料
   您的報表可能包含自動產生的資料集 (也稱為隱藏的資料集)，而這些資料集預設不會顯示在 [報表資料] 窗格中。 這些資料集是以下列方式建立的：  
@@ -36,8 +36,7 @@ ms.locfileid: "86455250"
   
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具 &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Reporting Services 查詢設計工具](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Reporting Services 查詢設計工具](/previous-versions/sql/)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247234"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891488"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
@@ -29,9 +29,6 @@ ms.locfileid: "87247234"
 ## <a name="in-this-section"></a>本節內容  
  [報表設計師 F1 說明](../reporting-services/tools/report-designer-f1-help.md)  
  提供報表設計師與其相關對話方塊、報表精靈和影像精靈的說明。  
-  
- [Reporting Services 組態管理員說明主題](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- 提供用於部署及管理報表伺服器執行個體之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態工具的說明。  
   
  [Management Studio F1 說明中的報表伺服器](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  針對用來在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中管理報表和報表伺服器的對話方塊提供其說明。  

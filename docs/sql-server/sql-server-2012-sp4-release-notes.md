@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 395acfc882bdd4277a260f53eba4da8acf57d85f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111697"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986049"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -208,11 +208,11 @@ SQL Server 2012 Express Service Pack 1 (SP1) 版本包含完整版本的 SQL Ser
 ### <a name="sql-server-data-tier-application-framework-dacfx"></a>SQL Server 資料層應用程式架構 (DACFx)  
 **就地升級支援**  
   
-此版本的資料層應用程式架構 (DACFx) 支援從舊版就地升級，因此不需要在升級至此版本之前移除舊版 DACFx 安裝。 您可以在 [此處](https://msdn.microsoft.com/library/dn702988.aspx)尋找未來的 DACFx 版本。  
+此版本的資料層應用程式架構 (DACFx) 支援從舊版就地升級，因此不需要在升級至此版本之前移除舊版 DACFx 安裝。 您可以在 [此處](/previous-versions/sql/sql-server-2016/dn702988(v=sql.130))尋找未來的 DACFx 版本。  
   
 **支援選擇性 XML 索引**  
   
-SQL Server 2012 SP1 加入對 [選擇性 XML 索引 (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)的支援，這個新的 SQL Server 功能會提供新的方式來建立提升效能及效率的 XML 資料行資料索引。  
+SQL Server 2012 SP1 加入對 [選擇性 XML 索引 (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md)的支援，這個新的 SQL Server 功能會提供新的方式來建立提升效能及效率的 XML 資料行資料索引。  
   
 DACFx 現在對所有的 DAC 案例及用戶端工具都支援 SXI 索引。 只有在 SSDT 的最新版本才支援 SXI。 SSDT RTM 和 2012 年 9 月版不支援 SXI。  
   
@@ -232,7 +232,7 @@ DACFx 先前並不能將資料表上定義的檢查條件約束狀態 (WITH CHEC
   
 -   匯入 BACPAC - 匯入 .bacpac 檔案以全新建立或填入空的 SQL Server 或 Azure SQL Database。  
   
-MSDN 上的完整 SqlPackage.exe 文件可以在 [此處](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)找到。  
+MSDN 上的完整 SqlPackage.exe 文件可以在 [此處](../tools/sqlpackage.md)找到。  
   
 **套件相容性**  
   
@@ -243,11 +243,11 @@ MSDN 上的完整 SqlPackage.exe 文件可以在 [此處](https://msdn.microsoft
 -   此版本可以使用舊版 DACFx 建立的所有 DAC 封裝。  
   
 ## <a name="see-also"></a>另請參閱
-- [安裝 SQL Server 2012 服務更新](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [安裝 SQL Server 2012 服務更新](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [如何識別 SQL Server 版本與版本類型](https://support.microsoft.com/help/321185)
-- [安裝 SQL Server 2012 服務更新](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [安裝 SQL Server 2012 服務更新](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [如何識別 SQL Server 版本與版本類型](https://support.microsoft.com/help/321185) 
 - [如何判斷 SQL Server 的版本](https://support.microsoft.com/kb/321185)  
-- [SQL Server 2014 各版本所支援的功能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [SQL Server 2014 各版本所支援的功能](./editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

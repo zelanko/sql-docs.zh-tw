@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15b2001e7e6c0a747b77cb51df0bf38c17856d99
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f806ff605b8f35f112de4c16216e0da24d2df31c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727199"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081997"
 ---
 # <a name="errors"></a>Errors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91727199"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以傳回多個錯誤。 應用程式可以呼叫與 ISQLErrorInfo 和 IErrorRecords 結合的 [IMultipleResults::GetResult](/previous-versions/windows/desktop/ms721289(v=vs.85))，一次擷取一個伺服器錯誤。  
   
- OLE DB Driver for SQL Server 會公開 OLE DB 記錄加強的 **IErrorInfo**、自訂 **ISQLErrorInfo**，以及提供者特定的 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 錯誤物件介面。  
+ OLE DB Driver for SQL Server 會公開 OLE DB 記錄加強的 **IErrorInfo**、自訂 **ISQLErrorInfo**，以及提供者特定的 [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) 錯誤物件介面。  
   
  如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)) (資料存取追蹤)。 如需有關 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中加入之錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   

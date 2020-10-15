@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: b53e71c4c302145af14c1f2e37f30fe0e3c8f8e2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6d82bfd3c49576a35b24f5a04cdc2c03dceeb766
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725719"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081497"
 ---
 # <a name="data-discovery-and-classification-in-sqlclient"></a>SqlClient 中的資料探索與分類
 
@@ -24,7 +24,7 @@ ms.locfileid: "91725719"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-[資料探索與分類](../../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017)是一組進階服務，用於探索、分類、標記和報告資料庫中的敏感性資料。 SqlClient 提供 API，可在基礎來源支援時公開唯讀資料探索和分類資訊。 這項資訊可透過 SqlDataReader 存取。
+[資料探索與分類](../../../relational-databases/security/sql-data-discovery-and-classification.md)是一組進階服務，用於探索、分類、標記和報告資料庫中的敏感性資料。 SqlClient 提供 API，可在基礎來源支援時公開唯讀資料探索和分類資訊。 這項資訊可透過 SqlDataReader 存取。
 
 此範例應用程式會示範如何存取 SqlDataReader 的資料分類屬性。
 
