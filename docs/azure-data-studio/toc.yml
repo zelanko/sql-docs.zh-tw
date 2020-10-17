@@ -59,7 +59,7 @@
         - name: PowerShell 延伸模組
           href: extensions/powershell-extension.md
         - name: SandDance 延伸模組
-          href: sanddance-extension.md
+          href: extensions/sanddance-extension.md
         - name: 結構描述比較延伸模組
           href: extensions/schema-compare-extension.md
         - name: SQL Database Projects 延伸模組
@@ -84,10 +84,10 @@
           href: extensions/sql-server-profiler-extension.md
     - name: 延伸模組製作
       items:
-        - name: 擴充性概觀
-          href: extensibility.md
         - name: 延伸模組製作
           href: extensions/extension-authoring.md
+        - name: 擴充性概觀
+          href: extensibility.md
         - name: 擴充性 API
           href: extensibility-apis.md
         - name: 金鑰對應延伸模組
@@ -102,6 +102,8 @@
           href: extensions/wizard-extension.md
     - name: 整合式終端機 (PowerShell、Bash)
       href: integrated-terminal.md
+    - name: 預覽功能
+      href: preview-features.md
     - name: 伺服器群組
       href: server-groups.md
     - name: 原始檔控制
@@ -122,8 +124,12 @@
           href: notebooks/notebooks-kqlmagic.md
     - name: 部署
       items:
+        - name: 部署 Azure SQL DataBase
+          href: deploy-azure-sql-database.md
         - name: 部署 Azure SQL Edge
           href: deploy-azure-sql-edge.md
+        - name: 部署 Azure 虛擬機器上的 SQL Server
+          href: deploy-azure-sql-server-vm.md
     - name: 儀表板與見解小工具
       href: insight-widgets.md
     - name: 程式碼片段

@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810185"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155071"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91810185"
 
 針對 Machine Learning 服務， [Python](../../machine-learning/concepts/extension-python.md) 和 [R](../../machine-learning/concepts/extension-r.md) 是支援的語言。 針對語言延伸模組，支援 JAVA，但必須使用 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)來定義。
 
-若要執行 **sp_execute_external_script**，您必須先安裝 Machine Learning 服務或語言擴充功能。 如需詳細資訊，請參閱在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安裝 SQL Server Machine Learning Services (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[上安裝 SQL Server 語言擴充](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)功能。
+若要執行 **sp_execute_external_script**，您必須先安裝 Machine Learning 服務或語言擴充功能。 如需詳細資訊，請參閱在 Windows 和[linux](../../linux/sql-server-linux-setup-machine-learning.md)[上安裝 SQL Server Machine Learning Services (Python 和 R) ](../../machine-learning/install/sql-machine-learning-services-windows-install.md) ，或在 Windows 和[Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)[上安裝 SQL Server 語言擴充](../../language-extensions/install/windows-java.md)功能。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -322,7 +322,7 @@ GO
 
 若要計分，您也可以使用原生 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式，其會避免呼叫 Python 或 R 執行階段，因此一般來說速度更快。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 + [SQL 機器學習](../../machine-learning/index.yml)
 + [SQL Server 語言擴充](../../language-extensions/language-extensions-overview.md)功能。 
