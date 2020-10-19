@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 701150a6d4ef8667b5d2fef631dc0d6a04701388
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 3919719b19cadb63e54a54dc5786f955a11ab5f5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004754"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115730"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -133,7 +133,7 @@ SQL Server Management Studio 18.6：
 
 ## <a name="ssms-system-requirements"></a>SSMS 系統需求
 
-搭配最新推出的服務套件使用時，這一版 SSMS 支援下列 64 位元平台：
+搭配最新推出的服務套件使用時，最新版的 SSMS 支援下列 64 位元平台：
 
 支援的作業系統：
 
@@ -152,7 +152,7 @@ SQL Server Management Studio 18.6：
 - 硬碟空間：最少 2 GB 至 10 GB 的可用空間
 
 > [!NOTE]
-> SSMS 僅能在 Windows 上執行。 若您需要能在 Windows 以外作業系統上執行的工具，我們建議使用 Azure Data Studio。 Azure Data Studio 是一個跨平台工具，可在 macOS、Linux 與 Windows 上執行。 如需詳細資料，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
+> SSMS 僅以適用於 Windows 的 32 位元應用程式形式提供。 若您需要能在 Windows 以外作業系統上執行的工具，我們建議使用 Azure Data Studio。 Azure Data Studio 是一個跨平台工具，可在 macOS、Linux 與 Windows 上執行。 如需詳細資料，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

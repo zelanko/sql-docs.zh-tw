@@ -1840,13 +1840,13 @@
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 建立
-              href: ./relational-databases/tables/graph-edge-constraints.md
+              href: relational-databases/tables/create-edge-constraints.md
             - name: 刪除
-              href: ./relational-databases/tables/graph-edge-constraints.md
+              href: relational-databases/tables/delete-edge-constraint.md
             - name: 修改
-              href: ./relational-databases/tables/graph-edge-constraints.md
+              href: relational-databases/tables/modify-edge-constraint.md
             - name: 檢視
-              href: ./relational-databases/tables/graph-edge-constraints.md
+              href: relational-databases/tables/view-edge-constraint-properties.md
         - name: 主索引鍵
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
           items:
@@ -2270,7 +2270,7 @@
   items:
     - name: 撰寫用戶端程式 >
       displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
-      href: ./connect/homepage-sql-connection-programming.md
+      href: connect/index.md
     - name: 資料層應用程式
       href: relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -2705,10 +2705,12 @@
               href: language-extensions/language-extensions-overview.md
             - name: 新功能
               href: language-extensions/language-extensions-whats-new.md
+            - name: Java 語言延伸模組概觀
+              href: language-extensions/java-overview.md
         - name: 安裝
           items:
             - name: 在 Windows 上安裝 語言延伸模組
-              href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+              href: language-extensions/install/windows-java.md
         - name: 教學課程
           items:
             - name: "在 Java\_中使用 RegEx 搜尋字串"
@@ -4823,7 +4825,7 @@
     - name: 移轉文件
       href: sql-server/migrate/index.yml
     - name: SQL Server Integration Services (SSIS) >
-      href: ./integration-services/sql-server-integration-services.md
+      href: integration-services/index.md
     - name: 大量複製公用程式 (bcp)
       href: tools/bcp-utility.md
     - name: Azure 移轉服務 >
@@ -5313,7 +5315,7 @@
                 - name: 篩選發行的資料
                   href: relational-databases/replication/merge/filter-published-data-for-merge-replication.md
                 - name: 檢視衝突資訊
-                  href: ./relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
+                  href: relational-databases/replication/view-conflict-information-for-merge-publications.md
                 - name: 衝突解決
                   items:
                     - name: 選擇解決器
@@ -7035,7 +7037,7 @@
     - name: 聯結
       href: relational-databases/performance/joins.md
     - name: 指令碼
-      href: ./ssms/scripting/database-engine-scripting.md
+      href: relational-databases/scripting/database-engine-scripting.md
     - name: 子查詢
       href: relational-databases/performance/subqueries.md
     - name: 資料虛擬化 (Polybase)
@@ -7091,7 +7093,7 @@
                 - name: 將資料虛擬化
                   href: relational-databases/polybase/data-virtualization.md
                 - name: 將 CSV 檔案虛擬化
-                  href: ./big-data-cluster/data-virtualization-csv.md
+                  href: relational-databases/polybase/data-virtualization-csv.md
             - name: 疑難排解
               items:
                 - name: 監視與疑難排解
@@ -7218,11 +7220,11 @@
       href: machine-learning/
     - name: Analytics Platform System >
       displayName: 'APS, PDW, Parallel Data Warehouse'
-      href: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
+      href: analytics-platform-system/index.md
     - name: SQL Server Analysis Services (SSAS) >
-      href: /analysis-services/analysis-services-overview
+      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
     - name: SQL Server Reporting Services (SSRS) >
-      href: ./reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      href: reporting-services/index.md
     - name: Master Data Services
       displayName: MDS
       href: master-data-services/master-data-services-overview-mds.md
@@ -8294,7 +8296,7 @@
         - name: Azure Active Directory 支援
           href: ssdt/azure-active-directory.md
         - name: SQL Server 工具
-          href: ./tools/overview-sql-tools.md
+          href: ssdt/sql-server-tools.md
         - name: 專案導向的離線資料庫開發
           href: ssdt/project-oriented-offline-database-development.md
           items:
@@ -8649,7 +8651,7 @@
                     - name: 指令碼產生精靈支援的物件
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: 查詢與文字編輯器
-                  href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15
+                  href: 'https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15'
                   items:
                     - name: XML 編輯器
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -9069,7 +9071,7 @@
                 - name: 查詢與文字編輯器
                   href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
                 - name: Database Engine 查詢編輯器
-                  href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
+                  href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                 - name: XML 編輯器
                   href: ssms/scripting/xml-editor-sql-server-management-studio.md
                 - name: 設定編輯器
@@ -9145,7 +9147,7 @@
                 - name: 從 SQL Server Management Studio 連接到任何 SQL Server 元件
                   href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
                 - name: 連接屬性對話方塊
-                  href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
+                  href: ssms/f1-help/connection-properties-dialog-box.md
                 - name: 連線到伺服器 - 資料庫引擎
                   href: ssms/f1-help/connect-to-server-database-engine.md
                 - name: 連線到伺服器 - 屬性頁面 - 資料庫引擎
@@ -9153,31 +9155,31 @@
                 - name: 連線到伺服器 - 登入 - 資料庫引擎
                   href: ssms/f1-help/connect-to-server-login-page-database-engine.md
                 - name: 登入 - 連線到 SSAS 伺服器
-                  href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
+                  href: ssms/f1-help/connect-to-server-login-page-analysis-services.md
                 - name: 連線到 SSAS
-                  href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
+                  href: ssms/f1-help/connect-to-server-analysis-services.md
                 - name: 連線到 SSAS 伺服器 (連線屬性頁面)
-                  href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
+                  href: ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md
                 - name: 登入 - 連線到 SSRS 伺服器
-                  href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+                  href: ssms/f1-help/connect-to-server-login-page-reporting-services.md
                 - name: 連線到 SSRS 伺服器
-                  href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+                  href: ssms/f1-help/connect-to-server-reporting-services.md
                 - name: 連線到 SSRS 伺服器 (連線屬性頁面)
-                  href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+                  href: ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md
                 - name: 瀏覽伺服器 (本機伺服器)
-                  href: ./tools/configuration-manager/sql-server-browser-service.md
+                  href: ssms/f1-help/browse-for-servers-local-servers.md
                 - name: 連線到伺服器 (其他連線參數)
-                  href: ./relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+                  href: ssms/f1-help/connect-to-server-additional-connection-parameters-page.md
                 - name: 瀏覽伺服器 (網路伺服器)
-                  href: ./tools/configuration-manager/sql-server-browser-service.md
+                  href: ssms/f1-help/browse-for-servers-network-servers.md
                 - name: 密碼已過期
-                  href: ./relational-databases/security/choose-an-authentication-mode.md
+                  href: ssms/f1-help/password-expired.md
                 - name: 連線到 SSIS 伺服器
-                  href: ./integration-services/service/integration-services-service-ssis-service.md
+                  href: ssms/f1-help/connect-to-server-integration-services.md
                 - name: 連線到 SSIS 伺服器 (登入頁面)
-                  href: ./integration-services/service/integration-services-service-ssis-service.md
+                  href: ssms/f1-help/connect-to-server-login-page-integration-services.md
                 - name: 連線到 SSIS 伺服器 (連線屬性頁面)
-                  href: ./integration-services/service/integration-services-service-ssis-service.md
+                  href: ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md
             - name: 功能表說明
               items:
                 - name: 'SQL Server Management Studio 功能表說明 [SQL Server]'
@@ -9963,7 +9965,7 @@
             - name: 在 Docker 上安裝 SQL Server 機器學習服務
               href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: 安裝 SQL Server 語言延伸模組
-              href: linux/sql-server-linux-setup-language-extensions.md
+              href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: 設定存放庫
               href: linux/sql-server-linux-change-repo.md
         - name: 設定
@@ -9996,7 +9998,7 @@
             - name: 連線程式庫
               href: linux/sql-server-linux-develop-connectivity-libraries.md
             - name: 使用 Visual Studio Code
-              href: ./tools/visual-studio-code/sql-server-develop-use-vscode.md
+              href: linux/sql-server-linux-develop-use-vscode.md
             - name: 使用 SSDT
               href: linux/sql-server-linux-develop-use-ssdt.md
         - name: 管理
@@ -10133,7 +10135,7 @@
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
         - name: Microsoft Q&A >>
-          href: /answers/products/sql-server
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: 提交意見反應 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10142,7 +10144,7 @@
   items:
     - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure Synapse Analytics >
+    - name: Azure SQL 資料倉儲 >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: Azure VM 上的 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -10167,7 +10169,7 @@
         - name: 教育性資源
           href: sql-server/educational-sql-resources.yml
         - name: Microsoft Learn >>
-          href: /learn/
+          href: 'https://docs.microsoft.com/learn/'
         - name: Channel 9 上的 SQL >>
           href: 'https://channel9.msdn.com/Search'
     - name: 説明
@@ -10175,7 +10177,7 @@
         - name: 取得說明
           href: sql-server/sql-server-get-help.md
         - name: Microsoft Q&A >>
-          href: /answers/products/sql-server
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
@@ -10189,11 +10191,11 @@
         - name: SQL Server >>
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
         - name: 資料庫引擎 >>
-          href: /archive/blogs/sqlserverstorageengine/
+          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
         - name: 安全性 >>
-          href: /archive/blogs/sqlsecurity/
+          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
         - name: Data Tools >>
-          href: /archive/blogs/ssdt/
+          href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: 意見反應
       items:
         - name: SQL 文件 >>
@@ -11883,7 +11885,7 @@
               href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
             - name: sys.spatial_reference_systems
               href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-        - name: Azure Synapse Analytics
+        - name: SQL 資料倉儲
           href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
           items:
             - name: sys.pdw_column_distribution_properties
@@ -12490,7 +12492,7 @@
           items:
             - name: sys.dm_db_objects_disabled_on_compatibility_level_change
               href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-        - name: Azure Synapse Analytics 和平行處理資料倉儲
+        - name: SQL 資料倉儲與平行處理資料倉儲
           href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
           items:
             - name: sys.dm_pdw_component_health_active_alerts
@@ -14171,7 +14173,7 @@
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
             - name: sp_delete_backup
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-        - name: Azure Synapse Analytics
+        - name: SQL 資料倉儲
           href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
           items:
             - name: sp_datatype_info_90
@@ -16244,7 +16246,7 @@
               items:
                 - name: AT TIME ZONE
                   href: t-sql/queries/at-time-zone-transact-sql.md
-                - name: 別名 (Azure Synapse Analytics、平行處理資料倉儲)
+                - name: 別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲)
                   href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: EXPLAIN
                   href: t-sql/queries/explain-transact-sql.md
@@ -16258,7 +16260,7 @@
                   href: t-sql/queries/readtext-transact-sql.md
                 - name: 搜尋條件
                   href: t-sql/queries/search-condition-transact-sql.md
-                - name: 子查詢 (Azure Synapse Analytics、平行處理資料倉儲)
+                - name: 子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: 資料表值建構函式
                   href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16578,7 +16580,7 @@
                   href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
                   href: t-sql/statements/create-function-transact-sql.md
-                - name: FUNCTION (Azure Synapse Analytics)
+                - name: FUNCTION (SQL 資料倉儲)
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
@@ -16638,11 +16640,11 @@
                   href: t-sql/statements/create-synonym-transact-sql.md
                 - name: TABLE
                   href: t-sql/statements/create-table-transact-sql.md
-                - name: TABLE (Azure Synapse Analytics)
+                - name: TABLE (Azure SQL 資料倉儲)
                   href: t-sql/statements/create-table-azure-sql-data-warehouse.md
                 - name: TABLE (SQL Graph)
                   href: t-sql/statements/create-table-sql-graph.md
-                - name: TABLE AS SELECT (Azure Synapse Analytics)
+                - name: TABLE AS SELECT (Azure SQL 資料倉儲)
                   href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
                 - name: TABLE IDENTITY (屬性)
                   href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16902,7 +16904,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: 權限：GRANT、DENY、REVOKE (Azure Synapse Analytics、平行處理資料倉儲)
+                - name: 權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
