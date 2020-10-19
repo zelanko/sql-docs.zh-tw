@@ -1,6 +1,6 @@
 ---
-description: 'sys. database_query_store_options (Transact-sql) '
-title: sys. database_query_store_options (Transact-sql) |Microsoft Docs
+description: 'sys.database_query_store_options (Transact-sql) '
+title: sys.database_query_store_options (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/27/2020
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f145ef3109ed9ba755ee006a218313d5a7956df4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d1c77693808a1571069e9b921e7efe017d55a514
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551492"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175922"
 ---
-# <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-sql) 
+# <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   傳回這個資料庫的查詢存放區選項。  
@@ -42,7 +42,7 @@ ms.locfileid: "89551492"
 |**desired_state_desc**|**nvarchar(60)**|查詢存放區所需作業模式的文字描述：<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|指出查詢存放區的操作模式。 除了使用者需要的預期狀態清單之外，實際狀態可能會是錯誤狀態。<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = 錯誤|  
 |**actual_state_desc**|**nvarchar(60)**|查詢存放區實際操作模式的文字描述。<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> 在某些情況下，實際狀態與預期狀態不同：<br />-如果資料庫設定為唯讀模式，或如果查詢存放區大小超過其設定的配額，查詢存放區可能會在唯讀模式中運作，即使使用者已指定讀寫也是一樣。<br />-在極端案例中查詢存放區可能因為內部錯誤而進入錯誤狀態。 從開始 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ，如果發生這種情況，查詢存放區可以 `sp_query_store_consistency_check` 在受影響的資料庫中執行預存程式來復原。 如果執行 `sp_query_store_consistency_check` 無法運作，或者您使用的是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，您將需要藉由執行來清除資料 `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
-|**readonly_reason**|**int**|當 **desired_state_desc** READ_WRITE，而且 **actual_state_desc** 是 READ_ONLY 時， **readonly_reason** 會傳回一個位對應，指出查詢存放區在唯讀模式中的原因。<br /><br /> **1** -資料庫處於唯讀模式<br /><br /> **2** -資料庫處於單一使用者模式<br /><br /> **4** -資料庫處於緊急模式<br /><br /> **8** -資料庫是次要複本 (適用于 Always On 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 異地複寫) 。 此值只能在 **可讀取** 的次要複本上有效觀察到<br /><br /> **65536** -查詢存放區已達到選項設定的大小限制 `MAX_STORAGE_SIZE_MB` 。 如需此選項的詳細資訊，請參閱 [ALTER DATABASE SET options (transact-sql) ](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br /> **131072** -查詢存放區中的不同語句數目已達內部記憶體限制。 請考慮移除您不需要的查詢，或升級至較高的服務層級，以啟用將查詢存放區傳送至讀寫模式。<br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **262144** -等候保存在磁片上的記憶體中專案大小，已達內部記憶體限制。 在記憶體中的專案保存在磁片上之前，查詢存放區將會暫時處於唯讀模式。 <br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **524288** -資料庫已達到磁片大小限制。 查詢存放區是使用者資料庫的一部分，因此，如果資料庫沒有其他可用的空間，這表示查詢存放區無法再成長。<br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 <br /> <br /> 若要將查詢存放區的作業模式切換回讀寫，請參閱使用查詢存放區， **確認查詢存放區會持續收集查詢資料** 的 [最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)區段。|  
+|**readonly_reason**|**int**|當 **desired_state_desc** READ_WRITE，而且 **actual_state_desc** 是 READ_ONLY 時， **readonly_reason** 會傳回一個位對應，指出查詢存放區在唯讀模式中的原因。<br /><br /> **1** -資料庫處於唯讀模式<br /><br /> **2** -資料庫處於單一使用者模式<br /><br /> **4** -資料庫處於緊急模式<br /><br /> **8** -資料庫是次要複本 (適用于 Always On 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 異地複寫) 。 此值只能在 **可讀取** 的次要複本上有效觀察到<br /><br /> **65536** -查詢存放區已達到選項設定的大小限制 `MAX_STORAGE_SIZE_MB` 。 如需此選項的詳細資訊，請參閱 [ALTER DATABASE SET options (transact-sql) ](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br /> **131072** -查詢存放區中的不同語句數目已達內部記憶體限制。 請考慮移除您不需要的查詢，或升級至較高的服務層級，以啟用將查詢存放區傳送至讀寫模式。<br /><br /><br /> **262144** -等候保存在磁片上的記憶體中專案大小，已達內部記憶體限制。 在記憶體中的專案保存在磁片上之前，查詢存放區將會暫時處於唯讀模式。 <br /><br /><br /> **524288** -資料庫已達到磁片大小限制。 查詢存放區是使用者資料庫的一部分，因此，如果資料庫沒有其他可用的空間，這表示查詢存放區無法再成長。<br /><br /> <br /> 若要將查詢存放區的作業模式切換回讀寫，請參閱使用查詢存放區， **確認查詢存放區會持續收集查詢資料** 的 [最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)區段。|  
 |**current_storage_size_mb**|**bigint**|磁片上的查詢存放區大小（以 mb 為單位）。|  
 |**flush_interval_seconds**|**bigint**|定期將查詢存放區資料排清到磁片的期間（以秒為單位）。 預設值為 **900** (15 分鐘) 。<br /><br /> 使用語句進行變更 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` 。|  
 |**interval_length_minutes**|**bigint**|統計資料匯總間隔（以分鐘為單位）。 不允許任意值。 使用下列其中一項：1、5、10、15、30、60和1440分鐘。 預設值為 **60** 分鐘。|  
@@ -60,16 +60,16 @@ ms.locfileid: "89551492"
  需要 `VIEW DATABASE STATE` 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. query_coNtext_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys. query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_coNtext_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   
