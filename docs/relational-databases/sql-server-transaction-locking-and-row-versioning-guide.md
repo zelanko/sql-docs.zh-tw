@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480940"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868194"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 動態鎖定
  使用像資料列鎖定等低層級鎖定，可藉由降低兩個交易同時要求相同片段的資料鎖定之可能性來增加並行。 使用低層級鎖定也會增加鎖定的數目以及需要管理鎖定的資源。 使用高層級的資料表或頁面鎖定可降低額外負荷，但必須花費降低並行的成本。  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![鎖定成本與並行成本](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用動態鎖定策略來判斷最具成本效益的鎖定。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在執行查詢時會依照結構描述與查詢的特性，自動決定最合適的鎖定類型。 例如，為了降低鎖定的額外負荷，最佳化工具在進行索引掃描時可能會選擇頁面層級的鎖定。  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 下列範例顯示按一下上方結果之第一個連結後的輸出：
 
@@ -2080,8 +2080,15 @@ GO
   
 -   在交易中儘可能存取最少的資料量。  
     這會減少鎖定的資料列數量，因而降低了交易之間的競爭。  
+    
+-   盡可能避免封閉式鎖定提示，例如 holdlock。 
+    像 HOLDLOCK 或 SERIALIZABLE 隔離等級的提示，即便有共用鎖定並減少並行要求，也會造成處理序等候
+
+-   當可能的隱含交易會因本質導致無法預期的行為時，請避免使用隱含交易。 請參閱[隱含交易和並行問題](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
+
+-   使用精簡的[填滿因數](indexes/specify-fill-factor-for-an-index.md)設計索引 減少填滿因數有助於防止或減少索引頁的片段，特別是從磁碟擷取時，從而減少索引搜尋時間。 若要檢視資料表或檢視的資料與索引片段資訊，您可以使用 sys.dm_db_index_physical_stats。 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>避免並行與資源問題  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>隱含交易和避免並行與資源問題  
  若要避免並行與資源的問題，請小心管理隱含交易。 使用隱含交易時，`COMMIT` 或 `ROLLBACK`之後的下一個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式會自動啟動一個新的交易。 這可能造成交易在應用程式瀏覽資料時，或甚至在需要使用者輸入時被開啟。 保護資料修改所需的最後一筆交易完成之後，請關閉隱含交易，直到交易再度需要保護資料修改為止。 這個程序讓「 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 」在應用程式瀏覽資料及取得使用者輸入時使用自動認可模式。  
   
  此外，啟用快照隔離等級時，雖然新交易不會佔用鎖定，但長時間執行的交易仍然會阻礙從 `tempdb`移除舊版本。  
@@ -2112,8 +2119,8 @@ GO
  您可能必須使用 KILL 陳述式。 但是，請小心使用此陳述式，尤其是執行重要處理序時。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)。  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料   
-[資料列版本設定的額外負荷](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[資料列版本設定的額外負荷](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [擴充事件](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

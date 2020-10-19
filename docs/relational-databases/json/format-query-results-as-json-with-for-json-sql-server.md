@@ -15,18 +15,18 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7862fa1b8454fba689edda2f8a451320315c1021
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499311"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765713"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-將 **FOR JSON** 子句新增至 **SELECT** 陳述式，以將查詢結果格式化為 JSON，或將 SQL Server 中的資料匯出為 JSON。 使用 **FOR JSON** 子句，將來自應用程式的 JSON 輸出格式設定委派給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以簡化用戶端應用程式。
+將 **FOR JSON** 子句新增至 **SELECT** 陳述式，以將查詢結果格式化為 JSON，或將 SQL Server 中的資料匯出為 JSON。 使用 **FOR JSON** 子句，將來自應用程式的 JSON 輸出格式設定委派給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以簡化用戶端應用程式。 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 是 JSON 查詢的建議使用查詢編輯器，因為此編輯器會自動格式化 JSON 結果 (如本文所示)，而非顯示一般字串。
   
  當您使用 **FOR JSON** 子句時，您可以明確指定 JSON 輸出的結構，或讓 SELECT 陳述式的結構決定輸出。  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 641896fb407beabdedbd30d98cc8d94d16d31efe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991876"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784784"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88991876"
 
 將有關敏感度分類的中繼資料新增至一或多個資料庫資料行。 分類可包含敏感度標籤和資訊類型。
 
-若是 SQL Server，這是在 SQL Server 2019 中導入的。
+若是 SQL Server，則此為在 SQL Server 2012 中導入。
 
 將資料庫環境中的機密資料分類，可協助達到擴充可見度和更佳的防護。 [開始使用 SQL 資訊保護](https://aka.ms/sqlip)中可以找到其他資訊
 

@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024367"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834216"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 
@@ -54,6 +54,9 @@ WITH IDENTITY = 'identity_name'
 *credential_name* 指定要所建立資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。
 
 IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos (Windows Active Directory 或 MIT KDC) 時，請勿在 IDENTITY 引數中使用網域名稱。 它應只是帳戶名稱。
+
+> [!IMPORTANT]
+> 適用於 PolyBase 的 SQL、Oracle、Teradata 和 MongoDB ODBC 連接器僅支援基本驗證，不支援 Kerberos 驗證。
 
 > [!NOTE]
 > 如果 Azure Blob 儲存體中的容器已針對匿名存取啟用，則不需要 WITH IDENTITY。 如需查詢 Azure Blob 儲存體的範例，請參閱[從儲存在 Azure Blob 儲存體上的檔案匯入資料表](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)。

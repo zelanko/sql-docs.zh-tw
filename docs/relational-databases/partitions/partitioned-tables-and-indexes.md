@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470357"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891008"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設最多支援 15,000 個資料分割。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的舊版本中，預設的資料分割數量不得超過 1,000 個。 在 x86 系統中雖能建立超過 1,000 個資料表或索引，但不予支援。  
@@ -48,7 +48,7 @@ ms.locfileid: "88470357"
 下列詞彙適用於資料表和索引資料分割。  
   
 ### <a name="partition-function"></a>分割區函數  
-一種資料庫物件，可定義資料表或索引的資料列如何根據某些資料行 (稱為分割資料行) 的值對應至資料分割集。 也就是說，分割區函數會定義資料表擁有的分割區數目，以及分割區界限的定義方式。 例如，如果資料表包含銷售訂單資料，您可能想要根據 **datetime** 資料行 (例如銷售日期) 將資料表分割為 12 個 (每月) 分割區。  
+一種資料庫物件，其可定義資料表或索引的資料列如何根據某些資料行 (稱為分割資料行) 的值對應至資料分割集。 分割資料行中的每個值都是分割區函數其輸入，而函數會傳回分割值。 分割區函數會定義分割區的數目，以及資料表擁有的分割區界限。 例如，如果資料表包含銷售訂單資料，您可能想要根據 **datetime** 資料行 (例如銷售日期) 將資料表分割為 12 個 (每月) 分割區。  
   
 ### <a name="partition-scheme"></a>分割區配置 
 將分割區函數的資料分割對應至一組檔案群組的資料庫物件。 將分割區放在不同檔案群組的主要理由是可以確保能夠對分割區獨立執行備份作業。 這是因為您可以對個別檔案群組執行備份。  
@@ -129,9 +129,8 @@ ms.locfileid: "88470357"
  您可能會發現下列資料分割資料表和索引策略和實作白皮書十分有用。  
 -   [使用 SQL Server 2008 的資料分割資料表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Project REAL:Data Lifecycle - Partitioning](https://technet.microsoft.com/library/cc966424.aspx) (專案 REAL：資料生命週期 - 資料分割)    
--   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [大量載入至資料分割資料表](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Project REAL:Data Lifecycle - Partitioning](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10)) (專案 REAL：資料生命週期 - 資料分割)    
+-   [分割資料表和索引上的查詢處理增強功能](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [建立大規模關聯式資料倉儲的前 10 大最佳作法](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf)，位於 _SQLCAT 指南：關聯式工程_中
-  
   

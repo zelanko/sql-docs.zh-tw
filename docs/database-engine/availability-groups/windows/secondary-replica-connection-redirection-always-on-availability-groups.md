@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669839"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866557"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 
@@ -89,7 +89,7 @@ ms.locfileid: "91669839"
 
 下圖代表可用性群組。
 
-![原始可用性群組](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![具有主要、次要和非同步次要複本的可用性群組](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 下列 Transact-SQL 指令碼會建立此 AG。 在此範例中，每個複本都會指定 `READ_WRITE_ROUTING_URL`。
 ```sql
@@ -144,18 +144,13 @@ GO
 
 在下圖中，用戶端應用程式會使用 `ApplicationIntent=ReadWrite` 連線至 COMPUTER02。 連線會重新導向至主要複本。 
 
-![原始可用性群組](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![電腦 2 的連線會重新導向至主要複本](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 次要複本會將讀取/寫入呼叫重新導向至主要複本。 與任一複本的讀取/寫入連線將會重新導向至主要複本。 
 
 在下圖中，已將主要複本手動容錯移轉至 COMPUTER02。 用戶端應用程式會使用 `ApplicationIntent=ReadWrite` 連線至 COMPUTER01。 連線會重新導向至主要複本。 
 
-![原始可用性群組](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>SQL Server 執行個體離線
-
-如果連接字串中指定的 SQL Server 執行個體無法使用 (發生中斷)，則不論目標伺服器上的複本所扮演的角色為何，連線都會失敗。 若要避免長時間應用程式關閉，請在連接字串中設定替代 `FailoverPartner`。 應用程式必須實作重試邏輯，以容納在實際容錯移轉期間未上線的主要和次要複本。 如需連接字串的詳細資訊，請參閱 [SqlConnection.ConnectionString 屬性](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring)。
+![連線重新導向至 computer2 的新主要複本](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,7 +1,7 @@
 ---
 title: 存取外部資料：SQL Server - PolyBase
 description: 了解如何在 SQL Server 執行個體上使用 PolyBase 查詢位於另一個 SQL Server 執行個體中的外部資料。 建立外部資料表以參考外部資料。
-ms.date: 12/13/2019
+ms.date: 10/06/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3bb2528613bc4e13cf5c3559e8d257e64e276fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741329"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834020"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
@@ -27,11 +27,13 @@ ms.locfileid: "85741329"
 
 如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](polybase-installation.md)。 安裝文章說明必要條件。 安裝後，也請務必[啟用 PolyBase](polybase-installation.md#enable)。
 
+SQL Server 的外部資料源使用 SQL 驗證。
+
 在建立資料庫範圍認證之前，必須建立[主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。 
 
 ## <a name="configure-a-sql-server-external-data-source"></a>設定 SQL Server 外部資料來源
 
-若要查詢來自 SQL Server 資料來源的資料，您必須建立外部資料表參考外部資料。 本節提供建立這些外部資料表的範例程式碼。 
+若要查詢來自 SQL Server 資料來源的資料，您必須建立外部資料表參考外部資料。 本節提供建立這些外部資料表的範例程式碼。
  
 如需最佳查詢效能，請在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)。
 
@@ -47,6 +49,8 @@ ms.locfileid: "85741329"
     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
+   >[!IMPORTANT]
+   >適用於 PolyBase 的 SQL ODBC 連接器僅支援基本驗證，不支援 Kerberos 驗證。
 
 1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。 下列範例將：
 
@@ -72,7 +76,7 @@ ms.locfileid: "85741329"
     WITH FULLSCAN;
   ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >當您建立外部資料來源之後，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令透過該來源建立可查詢的資料表。
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 連接器相容類型

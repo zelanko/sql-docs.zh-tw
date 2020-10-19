@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741759"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834041"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>設定 PolyBase 存取 MongoDB 中的外部資料
 
@@ -49,6 +49,10 @@ ms.locfileid: "85741759"
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > 適用於 PolyBase 的 MongoDB ODBC 連接器僅支援基本驗證，不支援 Kerberos 驗證。    
+    
 1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 
     ```sql
@@ -72,7 +76,9 @@ ms.locfileid: "85741759"
     ```
 
 >[!IMPORTANT] 
->當您建立外部資料來源之後，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令透過該來源建立可查詢的資料表。 
+>當您建立外部資料來源之後，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令透過該來源建立可查詢的資料表。
+>
+>如需範例，請參閱[建立 MongoDB 的外部資料表](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb)。
 
 ## <a name="flattening"></a>壓平合併
 針對來自 MongoDB 文件集合的巢狀及重複資料會啟用壓平合併。 使用者必須啟用 `create an external table`，並明確指定可能具有巢狀和/或重複資料之 MongoDB 文件集合的關聯式結構描述。 JSON 巢狀/重複資料類型會以下列方式壓平合併

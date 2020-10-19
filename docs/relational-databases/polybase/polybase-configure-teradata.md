@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ec09eca0568d1213fce850362be7c889af3a3258
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31ce6dbde09a9be1a69e6f024dc885f5cd38dfc8
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722226"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833798"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>設定 PolyBase 存取 Teradata 中的外部資料
 
@@ -52,6 +52,9 @@ ms.locfileid: "85722226"
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+
+   > [!IMPORTANT] 
+   > 適用於 PolyBase 的 Teradata ODBC 連接器僅支援基本驗證，不支援 Kerberos 驗證。
 
 1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 

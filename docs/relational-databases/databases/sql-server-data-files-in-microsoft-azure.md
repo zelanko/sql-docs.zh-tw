@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715494"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987584"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ ON
   
  **資料庫錯誤**  
   
-1.  *建立資料庫時發生錯誤*   
-    解決方案：請檢閱以下連結中第 4 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-4-restore-database-to-virtual-machine-from-url.md)。  
+**建立資料庫時發生錯誤**的解決方案：請檢閱以下連結中第 4 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-4-restore-database-to-virtual-machine-from-url.md)。  
   
-2.  *執行 Alter 陳述式時發生錯誤*   
-    解決方案：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱以下連結中第 7 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+**執行 Alter 陳述式時發生錯誤** 解決方式：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱以下連結中第 7 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-3.  *錯誤碼 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*   
+**錯誤碼 - 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"**   
 
-    解決方案：目前，這項新增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 5120 *無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"* 。  
+解決方案：目前，這項新增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 5120 *無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"* 。  
   
-     若要解決此問題，請先判斷您是否需要讓 ServerA 存取 Azure 儲存體中的資料庫檔案。 如果不需要，移除 ServerA 與 Azure 儲存體中資料庫檔案之間的任何連線即可。 若要這樣做，請遵循下列步驟：  
-  
-    1.  使用 ALTER Database 陳述式，將 Server A 的檔案路徑設定為本機資料夾。  
-  
-    2.  將 Server A 中的資料庫設為離線。  
-  
-    3.  然後，將資料庫檔案從 Azure 儲存體複製到 ServerA 中的本機資料夾。這樣可確保 ServerA 在本機仍然具有資料庫的複本。  
-  
-    4.  將資料庫設為上線。  
+若要解決此問題，請先判斷您是否需要讓 ServerA 存取 Azure 儲存體中的資料庫檔案。 如果不需要，移除 ServerA 與 Azure 儲存體中資料庫檔案之間的任何連線即可。 若要這樣做，請遵循下列步驟：  
+
+1.  使用 ALTER Database 陳述式，將 Server A 的檔案路徑設定為本機資料夾。  
+
+2.  將 Server A 中的資料庫設為離線。  
+
+3.  然後，將資料庫檔案從 Azure 儲存體複製到 ServerA 中的本機資料夾。這樣可確保 ServerA 在本機仍然具有資料庫的複本。  
+
+4.  將資料庫設為上線。
+
+**錯誤碼 833 - 完成 I/O 要求需時超過 15 秒** 
+   
+   此錯誤表示儲存系統無法滿足 SQL Server 工作負載的需求。 請減少應用層的 IO 活動，或增加儲存層的輸送量功能。 若要深入了解，請參閱[錯誤 833](../errors-events/mssqlserver-833-database-engine-error.md)。 如果效能問題持續發生，請考慮將檔案移到其他儲存層，例如 Premium 或 UltraSSD。 如需 Azure VM 上的 SQL Server，請參閱[最佳化儲存體效能](/azure/virtual-machines/premium-storage-performance)。
+
 
 ## <a name="next-steps"></a>後續步驟  
   

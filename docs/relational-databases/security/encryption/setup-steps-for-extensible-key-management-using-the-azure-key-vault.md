@@ -2,7 +2,7 @@
 title: 使用 Azure Key Vault 設定透明資料加密 (TDE) 可延伸金鑰管理
 description: 安裝及設定適用於 Azure Key Vault 的 SQL Server 連接器。
 ms.custom: seo-lt-2019
-ms.date: 08/12/2020
+ms.date: 10/08/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: e5b18c46f602d24339c092b8f3e622b2a915baeb
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+author: Rupp29
+ms.author: arupp
+ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042868"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866609"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>使用 Azure Key Vault 設定 SQL Server TDE 可延伸金鑰管理
 
@@ -34,7 +34,7 @@ ms.locfileid: "90042868"
   
 - 您必須擁有 Azure 訂用帳戶。
   
-- 安裝 [Azure PowerShell 5.2.0 或更新版本](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+- 安裝 [Azure PowerShell 5.2.0 或更新版本](/powershell/azure/)。  
 
 - 建立 Azure Active Directory (Azure AD) 執行個體。
 
@@ -61,7 +61,7 @@ ms.locfileid: "90042868"
 
       ![[所有 Azure 服務] 窗格的螢幕擷取畫面](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. 執行下列動作，向 Azure Active Directory 註冊應用程式。 (如需詳細逐步指示，請參閱 [Azure Key Vault 部落格文章](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)的 "Get an identity for the application" 一節。)
+1. 執行下列動作，向 Azure Active Directory 註冊應用程式。 (如需詳細逐步指示，請參閱 [Azure Key Vault 部落格文章](/archive/blogs/kv/azure-key-vault-step-by-step)的 "Get an identity for the application" 一節。)
 
     a. 在 [Azure Active Directory 概觀] 窗格中，選取 [應用程式註冊]。
 
@@ -85,7 +85,7 @@ ms.locfileid: "90042868"
 
     f. 在 [憑證和祕密] 窗格的 [值] 下方，選取用戶端密碼值旁的 [複製] 按鈕，以用於在 SQL Server 中建立非對稱金鑰。
 
-    ![[憑證和祕密] 窗格的螢幕擷取畫面](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![祕密值的螢幕擷取畫面](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     g. 在左窗格中選取 [概觀]，然後在 [應用程式 (用戶端) 識別碼] 方塊中，複製要用來在 SQL Server 中建立非對稱金鑰的值。
 
@@ -160,7 +160,7 @@ SQL Server Database Engine 將使用在此處建立的金鑰保存庫和金鑰�
 > [!IMPORTANT]
 > 建立金鑰保存庫的訂用帳戶所在預設 Azure AD 執行個體，必須與建立 Azure AD 服務主體的預設 Azure AD 執行個體相同。 如果想要使用並非預設執行個體的 Azure AD 執行個體來建立 SQL Server 連接器服務主體，則必須在 Azure 帳戶中變更預設 Azure AD 執行個體才能建立金鑰保存庫。 若要了解如何將預設 Azure AD 執行個體變更為想要使用的執行個體，請參閱 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)的＜常見問題集＞一節。  
   
-1. 使用下列命令來安裝並登入 [Azure PowerShell 5.2.0 或更新版本](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)：  
+1. 使用下列命令來安裝並登入 [Azure PowerShell 5.2.0 或更新版本](/powershell/azure/)：  
   
     ```powershell  
     Connect-AzAccount  
@@ -266,7 +266,7 @@ SQL Server Database Engine 將使用在此處建立的金鑰保存庫和金鑰�
 
 - 在本機硬體安全模組 (HSM) 裝置上建立加密金鑰。 請確認使用對稱的 RSA 2048 金鑰，以支援 SQL Server。
 - 將加密金鑰匯入至 Azure 金鑰保存庫。 下一節將描述這個程序。
-- 在第一次使用 Azure 金鑰保存庫中的金鑰之前，請先備份 Azure 金鑰保存庫金鑰。 如需詳細資訊，請參閱 [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 命令。
+- 在第一次使用 Azure 金鑰保存庫中的金鑰之前，請先備份 Azure 金鑰保存庫金鑰。 如需詳細資訊，請參閱 [Backup-AzureKeyVaultKey]() 命令。
 - 每當對金鑰進行任何變更時 (例如新增 ACL、新增標籤、新增金鑰屬性)，請務必先另行備份 Azure Key Vault 金鑰。
 
   > [!NOTE]
@@ -340,7 +340,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 > - 從 1.0.3.0 版開始，SQL Server 連接器會相關的錯誤訊息報告至 Windows 事件記錄，以供疑難排解之用。
 > - 從 1.0.4.0 版開始已支援私人 Azure 雲端，包括 Azure 中國、Azure 德國和 Azure Government。
 > - 1\.0.5.0 版中的憑證指紋演算法有重大變更。 您在升級至 1.0.5.0 之後可能會遇到資料庫還原失敗。 如需詳細資訊，請參閱[知識庫文章 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
-> - **從 1.0.7.0 版開始，SQL Server 連接器支援篩選訊息和網路要求重試邏輯。**
+> - **從 1.0.5.0 版開始 (時間戳記：2020 年 9 月)，SQL Server 連接器支援篩選訊息和網路要求重試邏輯。**
   
   ![[SQL Server 連接器安裝精靈] 的螢幕擷取畫面](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

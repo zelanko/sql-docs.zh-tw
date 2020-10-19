@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216767"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810004"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 - 屬性為 `ROWGUIDCOL` 的資料行。  
 - 包含非 bin2 定序的字串 (`varchar`、`char` 等) 資料行。  
 - 使用隨機化加密時，叢集和非叢集索引索引鍵的資料行 (支援確定性加密)。
-- 使用隨機化加密時，全文檢索索引索引鍵的資料行 (支援決定性加密)。  
+- 包含在全文檢索索引中的資料行 (Always Encrypted 不支援[全文檢索搜尋](../../../relational-databases/search/full-text-search.md))。  
 - 計算資料行。
 - 計算資料行所參考之資料行 (當運算式執行 Always Encrypted 不支援的作業)。  
 - 疏鬆資料行集合。  

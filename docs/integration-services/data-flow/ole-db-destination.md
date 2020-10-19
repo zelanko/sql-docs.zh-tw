@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477790"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987635"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477790"
   
 |快速載入選項|描述|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 **KILOBYTES_PER_BATCH** = \<positive integer value**>**。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 **KILOBYTES_PER_BATCH** =  *\<positive integer value>* 。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
 |ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<column name> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意:如果您使用 ORDER 選項依照資料表的叢集索引來排序輸入資料，將可改善效能。|  
   

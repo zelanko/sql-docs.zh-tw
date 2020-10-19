@@ -1,8 +1,8 @@
 ---
-description: 重複的資料表結構
-title: 重複的資料表結構 | Microsoft Docs
+description: 建立資料表的複製複本，不含資料列資料。
+title: 複製資料表 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/05/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb4e0ebc6160dce0a1f6db3ee4d59141712e78a6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725019"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765810"
 ---
-# <a name="duplicate-table-structures"></a>重複的資料表結構
+# <a name="duplicate-tables"></a>複製資料表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立新的資料表，然後從現有的資料表複製資料行資訊，藉以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中複製現有的資料表。  
+您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立新的資料表，然後從現有的資料表複製資料行資訊，藉以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中複製現有的資料表。  
   
 > [!IMPORTANT]  
 >  這個作業只會複製資料表的結構，不會複製任何資料表資料列。  
@@ -85,5 +85,3 @@ ms.locfileid: "91725019"
 4.  移除新資料表不需要的任何資料行。  
   
 5.  按一下 **[執行]** 。  
-  
-  

@@ -9,12 +9,12 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7107c1489521f733eb685887e6c1bcc543a2c147
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725229"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987849"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 資源總管探索和管理 Azure SQL 資源
 
@@ -101,4 +101,4 @@ Azure 資源總管提供快速存取，協助您連線到 SQL Server 和資料�
 ## <a name="next-steps"></a>後續步驟
 
 - [使用 [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] 連線及查詢 Azure SQL Database](quickstart-sql-database.md)
-- [使用 [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] 連線及查詢 Azure SQL 資料倉儲中的資料](quickstart-sql-dw.md)
+- [使用 [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] 以連線至及查詢 Azure Synapse Analytics 中的資料](quickstart-sql-dw.md)

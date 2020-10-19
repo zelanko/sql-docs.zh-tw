@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 36f400579f91260260d65d022019cf6c01f1b439
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624830"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987620"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91624830"
 ## <a name="overview"></a>概觀
   為了備份至 Microsoft Azure Blob 儲存體服務或從中還原，請務必了解這些元件以及它們之間的互動方式。  
   
- 在您的 Azure 訂用帳戶內建立 Azure 儲存體帳戶是這個程序的第一個步驟。 這個儲存體帳戶是系統管理帳戶，有以儲存體帳戶建立之所有容器和物件的完整系統管理權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Azure 儲存體帳戶名稱及其存取金鑰值來驗證和讀寫 Blob 至 Microsoft Azure Blob 儲存體服務，或使用針對特定容器產生的共用存取簽章 Token 授與它讀寫權限。 如需 Azure 儲存體帳戶的詳細資訊，請參閱[關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)，如需共用存取簽章的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。  
+ 在您的 Azure 訂用帳戶內建立 Azure 儲存體帳戶是這個程序的第一個步驟。 這個儲存體帳戶是系統管理帳戶，有以儲存體帳戶建立之所有容器和物件的完整系統管理權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Azure 儲存體帳戶名稱及其存取金鑰值來驗證和讀寫 Blob 至 Microsoft Azure Blob 儲存體服務，或使用針對特定容器產生的共用存取簽章 Token 授與它讀寫權限。 如需 Azure 儲存體帳戶的詳細資訊，請參閱[關於 Azure 儲存體帳戶](/azure/storage/common/storage-account-create)，如需共用存取簽章的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](/azure/storage/common/storage-sas-overview)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。  
   
 ###  <a name="backup-to-block-blob-vs-page-blob"></a><a name="blockbloborpageblob"></a> 備份至區塊 Blob 與分頁 Blob 
  Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 SQL Server 備份可以使用這兩種 Blob 類型，視所使用的 Transact-SQL 語法而定：如果認證中使用儲存體金鑰，則會使用分頁 Blob；如果使用共用存取簽章，就會使用區塊 Blob。
@@ -46,15 +46,15 @@ ms.locfileid: "91624830"
 - 備份至多個區塊 Blob
 
 ###  <a name="microsoft-azure-blob-storage-service"></a><a name="Blob"></a> Microsoft Azure Blob 儲存體服務  
- **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Microsoft Azure Blob 儲存體服務，請先建立 Azure 儲存體帳戶。 如需詳細資訊，請參閱 [建立儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
+ **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Microsoft Azure Blob 儲存體服務，請先建立 Azure 儲存體帳戶。 如需詳細資訊，請參閱 [建立儲存體帳戶](/azure/storage/common/storage-account-create)。  
   
  **容器：** 容器會提供一組 Blob 的群組，且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Microsoft Azure Blob 服務，您至少必須建立根容器。 您可以針對容器產生共用存取簽章 Token，並僅對特定容器的物件授與存取權。  
   
- **Blob：** 任何類型和大小的檔案。 Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以使用這兩種 Blob 類型，視所用的 Transact-SQL 語法而定。 您可以使用下列 URL 格式來定址 Blob： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 如需 Microsoft Azure Blob 儲存體服務的詳細資訊，請參閱 [以 .NET 開始使用 Azure Blob 儲存體](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 如需分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob、附加 Blob 和分頁 Blob](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
+ **Blob：** 任何類型和大小的檔案。 Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以使用這兩種 Blob 類型，視所用的 Transact-SQL 語法而定。 您可以使用下列 URL 格式來定址 Blob： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 如需 Microsoft Azure Blob 儲存體服務的詳細資訊，請參閱 [以 .NET 開始使用 Azure Blob 儲存體](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 如需分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob、附加 Blob 和分頁 Blob](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs)。  
   
  ![Azure Blob 儲存體](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
   
- **Azure 快照集：** 在某個時點間取得的 Azure Blob 快照集。 如需詳細資訊，請參閱 [建立 Blob 的快照集](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+ **Azure 快照集：** 在某個時點間取得的 Azure Blob 快照集。 如需詳細資訊，請參閱 [建立 Blob 的快照集](/rest/api/storageservices/Creating-a-Snapshot-of-a-Blob)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件  
  **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 "WITH FORMAT" 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
@@ -81,8 +81,6 @@ ms.locfileid: "91624830"
 
 ##  <a name="limitations"></a><a name="limitations"></a> 限制  
   
--   不支援備份至進階儲存體。  
-  
 -   SQL Server 會將使用分頁 Blob 支援的備份大小上限限制為 1 TB。 使用區塊 Blob 支援的備份大小上限則會限制為大約 200 GB (50,000 個區塊 * 4MB 的 MAXTRANSFERSIZE)。 區塊 Blob 支援等量分割，以支援實質上較大的備份大小。  
   
     > [!IMPORTANT]  
@@ -107,6 +105,8 @@ ms.locfileid: "91624830"
 - 如果您的伺服器透過 Proxy 伺服器存取 Azure，您必須使用追蹤旗標 1819，然後透過下列其中一個方法來設定 WinHTTP Proxy 設定：
    - Windows XP 或 Windows Server 2003 與更早版本上的 [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) 公用程式。 
    - Windows Vista 與 Windows Server 2008 或更新版本上的 [netsh.exe](/windows/win32/winsock/netsh-exe) 公用程式。 
+
+- 不支援 [Azure Blob 儲存體的不可變儲存體](/azure/storage/blobs/storage-blob-immutable-storage)。 將**不可變儲存體**原則設定為 False。 
   
 ## <a name="supported-arguments--statements"></a>支援的引數與陳述式
 
@@ -277,10 +277,10 @@ ms.locfileid: "91624830"
 >  如需搭配使用 SQL Server 2016 和 Microsoft Azure Blob 儲存體服務的教學課程，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="create-a-shared-access-signature"></a><a name="SAS"></a> 建立共用存取簽章  
- 下列範例會建立共用存取簽章，可用在新建立的容器上建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證。 此指令碼會建立關聯到預存存取原則的共用存取簽章。 如需詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 這個指令碼也會撰寫在 SQL Server 上建立認證所需的 T-SQL 命令。 
+ 下列範例會建立共用存取簽章，可用在新建立的容器上建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證。 此指令碼會建立關聯到預存存取原則的共用存取簽章。 如需詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](/azure/storage/common/storage-sas-overview)。 這個指令碼也會撰寫在 SQL Server 上建立認證所需的 T-SQL 命令。 
 
 > [!NOTE] 
-> 此範例需要 Microsoft Azure Powershell。 如需安裝及使用 Azure Powershell 的資訊，請參閱 [如何安裝和設定 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+> 此範例需要 Microsoft Azure Powershell。 如需安裝及使用 Azure Powershell 的資訊，請參閱 [如何安裝和設定 Azure PowerShell](/powershell/azure/)。  
 > 這些指令碼是使用 Azure PowerShell 5.1.15063 所驗證。 
 
 
@@ -414,5 +414,4 @@ Write-Host $tSql
  [SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

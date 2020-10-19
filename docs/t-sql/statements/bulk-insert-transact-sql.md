@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83ccbac5d01fca3e7ca237e0debedcd4c1ad9e83
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1b8e0ae12bb4b0d0f7cce0ca5ff690af83531be0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688804"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891148"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -472,27 +472,9 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
-存取儲存體帳戶的另一種方式是透過[受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)。 若要執行這項操作，請遵循[步驟 1 到 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps)，將 SQL Database 設定為可透過受控識別存取儲存體，之後即可實作如下所示的程式碼範例
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-BULK INSERT Sales.Invoices
-FROM 'inv-2017-12-08.csv'
-WITH (DATA_SOURCE = 'MyAzureBlobStorage');
-```
 
 > [!IMPORTANT]
-> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
+> Azure SQL 僅支援從 Azure Blob 儲存體讀取。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 從 Azure Blob 儲存體中的檔案匯入資料並指定錯誤檔
 

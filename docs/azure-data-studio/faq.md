@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1413903521019e9b2c95b11143d7e0039fc8e103
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 0231111907d1f342aeda6aea5a9d824a56f40e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745968"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987567"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio 常見問題集
 
@@ -181,9 +181,9 @@ SQL PowerShell 目前可以在 PowerShell 資源庫上取得，而您可以在 W
 
 開發人員和 DBA 通常是 Azure Data Studio 的使用者。
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio 是否與 Azure SQL 資料倉儲整合？
+## <a name="does-azure-data-studio-integrate-with-azure-synapse-analytics"></a>Azure Data Studio 是否與 Azure Synapse Analytics 整合？
 
-是。 Azure SQL 資料倉儲的 Azure Data Studio 支援目前處於預覽階段，Azure SQL 受控執行個體與 SQL Server 2019 巨量資料亦然。
+是。 Azure Synapse Analytics 的 Azure Data Studio 支援和 Azure SQL 受控執行個體及 SQL Server 2019 巨量資料，目前皆處於預覽階段。
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>為什麼 Azure Data Studio 對 SQL Server 的新版本來說很重要？
 

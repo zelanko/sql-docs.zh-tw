@@ -38,16 +38,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: bd7a5056761f6b249caea00463637c90f8ba5a49
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671151"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847338"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 此文章說明 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中用於開發解決方案的 CREATE MATERIALIZED VIEW AS SELECT T-SQL 陳述式。 此文章也提供程式碼範例。
 
@@ -113,6 +113,11 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 Azure 資料倉儲中具體化檢視類似 SQL Server 中的索引檢視表。它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   
 
+>[!Note]
+>雖然 CREATE MATERIALIZED VIEW 不支援 COUNT、DISTINCT、COUNT(DISTINCT 運算式) 或 COUNT_BIG (DISTINCT 運算式)，但使用這些函數的 SELECT 查詢仍可因具體化檢視獲得更快效能，因為 Synapse SQL 最佳化工具可在使用者查詢中自動重新寫入這些彙總，以符合現有的具體化檢視。  如需詳細資料，請參閱本文中的範例一節。 
+
+CREATE MATERIALIZED VIEW AS SELECT 中不支援 APPROX_COUNT_DISTINCT。
+
 只有具體化檢視才支援 CLUSTERED COLUMNSTORE INDEX。 
 
 具體化檢視無法參考其他檢視。  
@@ -146,6 +151,49 @@ SQL Server Management Studio 中的 EXPLAIN 計畫與圖形化預估執行計畫
 ## <a name="permissions"></a>權限
 
 需要 1) REFERENCES 與 CREATE VIEW 權限，或 2) 要在其中建立檢視之結構描述上的 CONTROL 權限。 
+
+## <a name="example"></a>範例
+A. 此範例示範儘管查詢使用 CREATE MATERIALIZED VIEW 中不支援的函數 (例如 COUNT(DISTINCT 運算式))，Synapse SQL 最佳化工具也能自動使用具體化檢視來執行查詢，以提高效能。 原本需要數秒鐘才能完成的查詢，現在只需要不到一秒即可完成，且無須進行任何使用者查詢變更。   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
 
   
 ## <a name="see-also"></a>另請參閱

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603372"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892438"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ GO
 - 只包含常數的算術運算式，例如 1+1, 5/3*2。
 - 只包含常數的邏輯運算式，例如 1=1 和 1>2 AND 3>4。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 視為可摺疊的內建函式，包括 `CAST` 和 `CONVERT`。 如果內建函數只包含其輸入，並且不含其他內容資訊 (例如 SET 選項、語言設定、資料庫選項和加密金鑰) 時，此內建函數通常是可摺疊。 非決定性函數不可摺疊。 決定性內建函數可摺疊，但有一些例外。
-- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15)。
+- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
 
 > [!NOTE] 
 > 例外之一是大型物件類型。 若摺疊處理序的輸出類型為大型物件類型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)，或 XML)，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊此運算式。
@@ -1030,7 +1030,7 @@ WHERE ProductID = 63;
     如需資料指標的詳細資訊，請參閱 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
     
 -   **遞迴查詢**        
-    如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
+    如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](/previous-versions/sql/legacy/aa175801(v=sql.80))。
 
 -   **多重陳述式資料表值函式 (MSTVF)**         
     如需 MSTVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
@@ -1270,7 +1270,8 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 針對許多平行計畫提升了資料分割資料表上的查詢處理效能、變更了平行計畫和序列計畫的表示方式，並增強了編譯時間和執行階段執行計畫內所提供的資料分割資訊。 本主題將描述這些改進的功能、提供如何解譯資料分割資料表和索引之查詢執行計畫的指引，以及提供用來改善資料分割物件上之查詢效能的最佳做法。 
 
 > [!NOTE]
-> 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer 和 Evaluation 版本才支援資料分割資料表和索引。
+> 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 出現前，僅於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Enterprise、Developer 和 Evaluation 版支援資料分割資料表和索引。   
+> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 開始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 標準版也支援資料分割資料表和索引。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新資料分割感知的搜尋作業
 
@@ -1435,7 +1436,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 請使用具有快速處理器的伺服器並盡量多使用您可以負擔的處理器核心，以充分利用平行查詢處理功能。
 * 確定伺服器擁有足夠的 I/O 控制器頻寬。 
 * 在每一個大型資料分割資料表上建立叢集索引，以充分利用 B 型樹狀結構的掃描最佳化。
-* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (資料載入效能指南) 技術白皮書中的最佳做法建議。
+* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)) (資料載入效能指南) 技術白皮書中的最佳做法建議。
 
 ### <a name="example"></a>範例
 
