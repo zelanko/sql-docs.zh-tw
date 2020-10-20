@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425880"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197130"
 ---
 # <a name="script-task"></a>指令碼工作
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425880"
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請參閱下列主題：  
   
--   [指令碼工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [指令碼工作編輯器 &#40;一般頁面&#41;]()  
   
--   [指令碼工作編輯器 &#40;指令碼頁面&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [指令碼工作編輯器 &#40;指令碼頁面&#41;]()  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請參閱下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>以程式設計的方式設定指令碼工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請參閱以下主題：  
@@ -123,7 +123,7 @@ ms.locfileid: "88425880"
   
  當您為此工作建立指令碼之後，就無法變更 **[ScriptLanguage]** 屬性的值。  
   
- 若要為指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)。  
+ 若要為指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page]()。  
   
  **EntryPoint**  
  將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段呼叫的方法指定為指令碼工作程式碼的進入點。 指定的方法必須位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 專案的 ScriptMain 類別內。ScriptMain 類別是指令碼範本所產生的預設類別。  
@@ -148,5 +148,4 @@ ms.locfileid: "88425880"
 ## <a name="related-content"></a>相關內容  
   
 -   shareourideas.com 上的技術文件： [如何在 C# 中傳送包含傳遞通知的電子郵件](https://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
-  
   

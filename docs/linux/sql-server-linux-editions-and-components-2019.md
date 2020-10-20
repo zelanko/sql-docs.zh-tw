@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 566750ead98f817d995c258ce992c94d9404be44
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785118"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115417"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
 
@@ -247,7 +247,5 @@ Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的�
  [SQL Server 2019 的版本及支援功能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 的版本及支援功能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 的版本及支援功能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [SQL Server 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server 的產品規格](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [SQL Server 安裝](../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server 的產品規格](../sql-server/index.yml)

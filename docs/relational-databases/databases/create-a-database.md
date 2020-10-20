@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631025"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195612"
 ---
 # <a name="create-a-database"></a>建立資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
 
 > [!NOTE]
-> 若要使用 T-SQL 在 Azure SQL Database 中建立資料庫，請參閱[在 Azure SQL Database 中建立資料庫](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database)。
+> 若要使用 T-SQL 在 Azure SQL Database 中建立資料庫，請參閱[在 Azure SQL Database 中建立資料庫](../../t-sql/statements/create-database-transact-sql.md)。
   
  **本主題內容**  
   
@@ -134,12 +134,11 @@ LOG ON
 GO  
 ```  
   
- 如需範例，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 如需範例，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

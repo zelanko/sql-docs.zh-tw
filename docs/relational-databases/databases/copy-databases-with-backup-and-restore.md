@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763550"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115725"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>使用備份與還原複製資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以藉由還原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本所建立的使用者資料庫備份，建立新的資料庫。 但是， **無法還原使用舊版**所建立的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]備份。 此外，任何舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都無法還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份。  
   
->**重要！** SQL Server 2016 使用與之前版本不同的預設路徑。 因此，若要還原舊版預設位置中建立的資料庫備份，您就必須使用 MOVE 選項。 如需有關新預設路徑的詳細資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 如需移動資料庫檔案的詳細資訊，請參閱本主題稍後的「移動資料庫檔案」。  
+> [!IMPORTANT]
+> SQL Server 2016 使用與之前版本不同的預設路徑。 因此，若要還原舊版預設位置中建立的資料庫備份，您就必須使用 MOVE 選項。 如需有關新預設路徑的詳細資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 如需移動資料庫檔案的詳細資訊，請參閱本主題稍後的「移動資料庫檔案」。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>使用備份與還原來複製資料庫的一般步驟  
  當您使用備份與還原將資料庫複製到 SQL Server 的另一個執行個體時，來源和目的地電腦可為執行 SQL Server 的任何平台。  

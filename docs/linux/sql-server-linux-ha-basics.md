@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785129"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115641"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>適用於 Linux 部署的 SQL Server 可用性基本概念
 
@@ -216,7 +216,7 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 當它進入虛擬化的 AG 和 FCI 時，請確定已針對指定 Pacemaker 叢集的節點設定反親和性。 在 AG 或 FCI 設定中設定以取得高可用性時，裝載 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 應該永遠不會在相同的 Hypervisor 主機上執行。 例如，如果已部署兩個節點的 FCI，則「至少」必須有三部 Hypervisor 主機，以便在某部主機發生故障時，讓其中一部裝載節點的 VM 能夠在某處執行，特別是使用「即時移轉」或 vMotion 之類的功能時。
 
 如需更多詳細資訊，請參閱：
--   Hyper-V 文件：[使用客體叢集以提供高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx) \(英文\)
+-   Hyper-V 文件：[使用客體叢集以提供高可用性](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11)) \(英文\)
 -   白皮書 (專為 Windows 型部署所撰寫，但大部分的概念仍適用)：[使用 VMware vSphere 規劃高可用性、任務關鍵性 SQL Server 部署](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf) \(英文\)
 
 ### <a name="networking"></a>網路功能

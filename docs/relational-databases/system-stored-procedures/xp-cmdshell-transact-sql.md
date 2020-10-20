@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541013"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257605"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,14 +65,15 @@ The command(s) completed successfully.
   
 ## <a name="remarks"></a>備註  
  **Xp_cmdshell**所產生的 Windows 進程具有與服務帳戶相同的安全性許可權 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 
+> [!IMPORTANT]
+>  **xp_cmdshell** 是一項非常強大的功能，而且預設為停用。 您可以使用以原則為基礎的管理或執行**sp_configure**來啟用和停用**xp_cmdshell** 。 如需詳細資訊，請參閱 [介面區](../../relational-databases/security/surface-area-configuration.md) 設定和 [Xp_cmdshell Server configuration 選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
- **xp_cmdshell** 會以同步方式運作。 完成 command-shell 命令時，才會將控制權傳回呼叫端。  
-  
- 您可以使用以原則為基礎的管理或執行**sp_configure**來啟用和停用**xp_cmdshell** 。 如需詳細資訊，請參閱 [介面區](../../relational-databases/security/surface-area-configuration.md) 設定和 [Xp_cmdshell Server configuration 選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
-  
+ **xp_cmdshell** 會以同步方式運作。 完成 command-shell 命令時，才會將控制權傳回呼叫端。 
+ 
 > [!IMPORTANT]
 >  如果在批次內執行 **xp_cmdshell** ，並傳回錯誤，批次將會失敗。 這是行為的變更。 在較舊版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批次中，將會繼續執行。  
-  
+ 
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell Proxy 帳戶  
  當使用者呼叫的使用者不是 **系統管理員（sysadmin** ）固定伺服器角色的成員時， **xp_cmdshell** 會使用儲存在名為 **# #xp_cmdshell_proxy_account # #** 的認證中的帳戶名稱和密碼來連接到 Windows。 如果此 proxy 認證不存在， **xp_cmdshell** 將會失敗。  
   

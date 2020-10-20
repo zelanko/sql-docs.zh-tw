@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227462"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038892"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>交易 (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果因為執行階段陳述式錯誤以外的錯誤而讓明確交易無法順利完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會自動復原交易，並釋放交易所佔用的一切資源。 例如，如果用戶端與 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 執行個體之間的網路連線已中斷，或用戶端登出應用程式，該連線任何尚未認可的交易會在網路通知該執行個體發生中斷時全部復原。  
   
- 如果在批次中發生執行階段陳述式錯誤，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行為會與將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** 設定為 **ON** 一致，整個交易也會復原。 如需 **XACT_ABORT** 設定的詳細資訊，請參閱 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)。  
+ 如果在批次中發生執行階段陳述式錯誤，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行為會與將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** 設定為 **ON** 一致，整個交易也會復原。 如需 **XACT_ABORT** 設定的詳細資訊，請參閱 [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)。  
   
 ## <a name="general-remarks"></a>一般備註  
  工作階段在指定的時間只能執行一個交易。不支援儲存點和巢狀交易。  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>限制事項  
  您不能在發出 COMMIT 陳述式之後復原交易，因為資料修改已成為資料庫的永久部份。  
   
- 在明確交易中不能使用 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
+ 在明確交易中不能使用 [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) 和 [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) 命令。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 沒有交易共用機制。 這表示在任何給定的時間點，只有一個工作階段可以在系統中進行任何交易。  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

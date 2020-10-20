@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430980"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197209"
 ---
 # <a name="execute-process-task"></a>執行處理工作
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430980"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>屬性設定  
  當「執行處理」工作執行自訂應用程式時，此工作會透過下列一個或兩個方法提供輸入給應用程式：  
   
--   您在 [StandardInputVariable]  屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   您在 [StandardInputVariable]  屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
 -   您在 **Arguments** 屬性設定中指定的引數。 (例如，如果工作使用 Word 開啟文件，則引數可能命名為 .doc 檔)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430980"
   
  您可以使用運算式來設定各種「執行處理」工作屬性。  
   
- 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫中的 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)主題。  
+ 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫中的 [Console.ReadLine 方法](/dotnet/api/system.console.readline)主題。  
   
  當您使用 **Arguments** 屬性設定「執行處理」工作來提供輸入時，請執行下列其中一個步驟來取得引數：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430980"
   
 -   如果您使用 Microsoft Visual C# 撰寫應用程式，請使用 **Main** 方法。  
   
-     如需詳細資訊，請參閱《C# 程式設計手冊》中的 [命令列引數 (C# 程式設計手冊)](https://go.microsoft.com/fwlink/?LinkId=129406)主題。  
+     如需詳細資訊，請參閱《C# 程式設計手冊》中的 [命令列引數 (C# 程式設計手冊)](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)主題。  
   
  「執行處理」工作也包含 **StandardOutputVariable** 和 **StandardErrorVariable** 屬性，分別用來指定使用應用程式的標準輸出和錯誤輸出。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430980"
  **StandardInputVariable**  
  選取變數來提供處理序的輸入，或按一下 [\<**New variable...**>] 以建立新的變數：  
   
- **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](../integration-services-ssis-variables.md)  
   
  **StandardOutputVariable**  
  選取變數來擷取處理序的輸出，或按一下 [\<**New variable...**>] 以建立新的變數。  
@@ -145,5 +145,4 @@ ms.locfileid: "88430980"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
-  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf329c6537df49ace1ae78bba64e146641e1e664
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630947"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195033"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -246,5 +246,4 @@ ms.locfileid: "85630947"
 
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  

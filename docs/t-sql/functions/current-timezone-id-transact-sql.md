@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bf98755fe784c00c9dce71a45b74a0a8cc03950
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 936b4f0ea8353b71b26808f1911890149057b234
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115211"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036853"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -72,6 +72,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>另請參閱
 
-[SQL 受控執行個體的時區](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL 受控執行個體的時區](/azure/sql-database/sql-database-managed-instance-timezone)
 
-[CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)
+[CURRENT_TIMEZONE()](./current-timezone-transact-sql.md)

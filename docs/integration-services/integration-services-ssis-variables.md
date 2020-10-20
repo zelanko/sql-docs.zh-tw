@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449764"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193822"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449764"
 ## <a name="system-and-user-defined-variables"></a>系統及使用者定義變數  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援兩種類型的變數：使用者自訂變數和系統變數。 使用者自訂變數由封裝開發人員定義，而系統變數則由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定義。 您可以根據封裝需要建立許多使用者自訂變數，但無法建立其他系統變數。  
   
- 所有的變數 (系統變數和使用者定義變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 所有的變數 (系統變數和使用者定義變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](./control-flow/execute-sql-task.md)。  
   
 > [!NOTE]  
 >  使用者自訂變數和系統變數的名稱會區分大小寫。  
@@ -79,7 +79,7 @@ ms.locfileid: "88449764"
   
  針對不同的容器類型可使用一組不同的系統變數。 如需封裝及其元素所使用之系統變數的詳細資訊，請參閱 [系統變數](../integration-services/system-variables.md)。  
   
- 如需變數之實際使用狀況的詳細資訊，請參閱 [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 如需變數之實際使用狀況的詳細資訊，請參閱 [在封裝中使用變數]()。  
   
 ## <a name="properties-of-variables"></a>變數屬性  
  您可以透過在 [變數]**** 視窗或 [屬性]**** 視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
@@ -114,7 +114,7 @@ ms.locfileid: "88449764"
   
  變數建立於封裝範圍之內，或封裝中的容器、工作或事件處理常式範圍之內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，且可以由封裝內的所有容器使用。 同樣地，在容器 (例如「For 迴圈」容器) 範圍中定義的變數可由「For 迴圈」容器內的所有工作或容器使用。  
   
- 如果封裝使用「執行封裝」工作來執行其他封裝，則在呼叫封裝或「執行封裝」工作範圍中定義的變數可用於所呼叫的封裝，方法是使用「父封裝變數」組態類型。 如需相關資訊，請參閱 [Package Configurations](../integration-services/packages/package-configurations.md)。  
+ 如果封裝使用「執行封裝」工作來執行其他封裝，則在呼叫封裝或「執行封裝」工作範圍中定義的變數可用於所呼叫的封裝，方法是使用「父封裝變數」組態類型。 如需相關資訊，請參閱 [Package Configurations](./packages/legacy-package-deployment-ssis.md)。  
   
 **IncludeInDebugDump**  
  指出偵錯傾印檔案中是否要包含變數值。  
@@ -159,13 +159,13 @@ ms.locfileid: "88449764"
   
  **資料流程運算式** ：使用變數在運算式中提供值，「衍生的資料行」和「條件式分割」轉換會使用這些運算式擴展資料行，或將資料列導向不同的轉換輸出。 例如， `@varSalutation + LastName`運算式會串連 `VarSalutation` 變數和 `LastName` 資料行中的值。 `Income < @HighIncome` 運算式會將 `Income` 資料行中、值小於 `HighIncome` 變數中的值的資料列導向輸出。 如需詳細資訊，請參閱[衍生的資料行轉換](../integration-services/data-flow/transformations/derived-column-transformation.md)、[條件式分割轉換](../integration-services/data-flow/transformations/conditional-split-transformation.md) 和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- **優先順序條件約束運算式**：提供要在優先順序條件約中使用的值，決定受條件約束的可執行檔是否執行。 這些運算式可以和執行結果 (成功、失敗、完成) 一起使用，或取代執行結果。 例如，如果 `@varMax > @varMin`運算式評估為 **true**，可執行檔就會執行。 如需詳細資訊，請參閱 [將運算式加入優先順序條件約束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+ **優先順序條件約束運算式**：提供要在優先順序條件約中使用的值，決定受條件約束的可執行檔是否執行。 這些運算式可以和執行結果 (成功、失敗、完成) 一起使用，或取代執行結果。 例如，如果 `@varMax > @varMin`運算式評估為 **true**，可執行檔就會執行。 如需詳細資訊，請參閱 [將運算式加入優先順序條件約束](./control-flow/precedence-constraints.md)。  
   
- **參數和傳回碼** ：提供值給輸入參數，或儲存輸出參數和傳回碼的值。 您可以將變數對應到參數和傳回值來完成這個動作。 例如，如果您將 `varProductId` 變數設為 23 並執行 `SELECT * from Production.Product WHERE ProductID = ?`SQL 陳述式，查詢就會擷取 `ProductID` 為 23 的產品。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ **參數和傳回碼** ：提供值給輸入參數，或儲存輸出參數和傳回碼的值。 您可以將變數對應到參數和傳回值來完成這個動作。 例如，如果您將 `varProductId` 變數設為 23 並執行 `SELECT * from Production.Product WHERE ProductID = ?`SQL 陳述式，查詢就會擷取 `ProductID` 為 23 的產品。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](./control-flow/execute-sql-task.md)。  
   
  **For 迴圈運算式** ：提供要在「For 迴圈」的初始化、評估和指派運算式中使用的值。 例如，如果 `varCount` 變數為 2 且 `varMaxCount` 為 10，初始化運算式為 `@varCount`，評估運算式為  `@varCount < @varMaxCount`且指派運算式為 `@varCount =@varCount +1`，則迴圈就會重複 8 次。 如需詳細資訊，請參閱 [For 迴圈容器](../integration-services/control-flow/for-loop-container.md)為止。  
   
- **父封裝變數組態** ：將值從父封裝傳遞到子封裝。 子封裝可以使用父封裝變數組態存取父封裝中的變數。 例如，如果子封裝必須使用和父封裝相同的日期，子封裝就可以定義父封裝變數組態，指定由父封裝中之 GETDATE 函數設定的變數。 如需詳細資訊，請參閱 [執行封裝工作](../integration-services/control-flow/execute-package-task.md) 和 [封裝組態](../integration-services/packages/package-configurations.md)。  
+ **父封裝變數組態** ：將值從父封裝傳遞到子封裝。 子封裝可以使用父封裝變數組態存取父封裝中的變數。 例如，如果子封裝必須使用和父封裝相同的日期，子封裝就可以定義父封裝變數組態，指定由父封裝中之 GETDATE 函數設定的變數。 如需詳細資訊，請參閱 [執行封裝工作](../integration-services/control-flow/execute-package-task.md) 和 [封裝組態](./packages/legacy-package-deployment-ssis.md)。  
   
  **指令碼工作和指令碼元件** ：提供唯讀和讀取/寫入變數的清單到「指令碼」工作或「指令碼」元件、更新指令碼中的讀取/寫入變數，然後在指令碼內或指令碼外使用更新的值。 例如，在程式碼 `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`中，指令碼變數 `numberOfCars` 會由變數 `NumberOfCars`中的值更新。 如需詳細資訊，請參閱 [在指令碼工作中使用變數](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)。  
 
@@ -189,7 +189,7 @@ ms.locfileid: "88449764"
   
 6.  選擇性地按一下**方格選項**圖示，在 [變數方格選項]**** 對話方塊中選取要顯示的其他資料行，然後按一下 [確定]****。  
   
-7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)定義。  
+7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性]()定義。  
   
 8.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
@@ -320,9 +320,9 @@ ms.locfileid: "88449764"
 8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>使用設定動態更新變數  
- 若要動態地更新變數，您可以建立變數的組態，使用封裝部署組態，然後在部署封裝時更新組態檔中的變數值。 在執行階段，封裝會使用更新的變數值。 如需詳細資訊，請參閱 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
+ 若要動態地更新變數，您可以建立變數的組態，使用封裝部署組態，然後在部署封裝時更新組態檔中的變數值。 在執行階段，封裝會使用更新的變數值。 如需詳細資訊，請參閱 [建立封裝組態](./packages/legacy-package-deployment-ssis.md)。  
 
 ## <a name="related-tasks"></a>相關工作  
  [在子套件中使用變數和參數的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [在資料流程元件中將查詢參數對應至變數](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [在資料流程元件中將查詢參數對應至變數](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

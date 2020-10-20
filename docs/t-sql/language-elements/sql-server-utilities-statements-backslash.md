@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2437daed52cb8b4a79431465f8a27e5464185e23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e88c66f5f70845c1b6adbab669f44915afe85b8e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459278"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195429"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜線 (行接續符號) (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "88459278"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 <first section of string> \  
 <continued section of string>  
 ```  
@@ -69,10 +69,9 @@ ms.locfileid: "88459278"
 
 下列範例會使用反斜線和歸位字元，將字元字串分成兩行。  
   
-```  
+```sql  
 SELECT 'abc\  
 def' AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -87,10 +86,9 @@ def' AS [ColumnResult];
 
 下列範例會使用反斜線和歸位字元，將二進位字串分成兩行。  
 
-```  
+```sql  
 SELECT 0xabc\
 def AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

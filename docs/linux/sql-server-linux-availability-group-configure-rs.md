@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b1472c1cbe3bdb9611ffcb06ff3404c28c431545
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 4c0057327466773d759752ad6760b2e736b84ebb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784841"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115951"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>設定 SQL Server 可用性群組供 Linux 上的讀取級別使用
 
@@ -82,6 +82,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>後續步驟
 
-* [設定分散式可用性群組](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [設定分散式可用性群組](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [深入了解可用性群組](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [執行強制手動容錯移轉](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

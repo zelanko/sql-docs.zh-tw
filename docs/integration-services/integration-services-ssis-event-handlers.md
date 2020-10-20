@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235bd7cd4a46441156b4e4d2b262daf76c6faa23
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449830"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193870"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
 
@@ -76,7 +76,7 @@ ms.locfileid: "88449830"
 ## <a name="run-time-events"></a>執行階段事件  
  下表列出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的事件處理常式，並描述引發事件處理常式執行的執行階段事件。  
   
-|事件處理常式|事件|  
+|事件處理常式|Event - 事件|  
 |-------------------|-----------|  
 |**OnError**|**OnError** 事件的事件處理常式。 當發生錯誤時，可執行檔會引發此事件。|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** 事件的事件處理常式。 當可執行檔的執行狀態變更時，它會引發此事件。|  
@@ -100,7 +100,7 @@ ms.locfileid: "88449830"
   
  當 [事件處理常式]**** 索引標籤為使用中時，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中 [工具箱] 的 [控制流程項目]**** 和 [維護計畫工作]**** 節點，會包含用於在事件處理常式中建立控制流程的工作及容器。 [資料流程來源]****、[轉換]**** 及 [資料流程目的地]**** 節點包含用於在事件處理常式中建立資料流程的資料來源、轉換及目的地。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
- [事件處理常式]**** 索引標籤還包含 [連線管理員]**** 區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ [事件處理常式]**** 索引標籤還包含 [連線管理員]**** 區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](./connection-manager/integration-services-ssis-connections.md)。  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在事件處理常式索引標籤上新增事件處理常式  
   
@@ -129,11 +129,10 @@ ms.locfileid: "88449830"
 ## <a name="set-the-properties-of-an-event-handler"></a>設定事件處理常式的屬性  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]**** 視窗中，或以程式設計方式設定屬性。  
   
- 如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](./control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何將事件處理常式加入封裝的相關資訊，請參閱 [將事件處理常式加入封裝中](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
-  
+ 如需如何將事件處理常式加入封裝的相關資訊，請參閱 [將事件處理常式加入封裝中]()。  
   

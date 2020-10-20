@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467685"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194961"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467685"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. 在子查詢中使用 NULL，仍會傳回結果集  
  下列範例在子查詢中指定 `NULL` 來傳回結果集，使用 `EXISTS` 仍會評估為 TRUE。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. 利用 EXISTS 和 IN 來比較查詢  
  下列範例比較語意相等的兩項查詢。 第一項查詢使用 `EXISTS`，第二項查詢使用 `IN`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  下列查詢使用 `IN`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. 利用 EXISTS 和 = ANY 來比較查詢  
  下列範例會顯示兩項查詢，它們用來尋找與供應商同名的商店。 第一項查詢使用 `EXISTS`，第二項查詢使用 `=``ANY`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  下列查詢使用 `= ANY`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. 利用 EXISTS 和 IN 來比較查詢  
  下列範例會顯示尋找開頭是 `P` 之部門員工的查詢。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  下列查詢使用 `IN`。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. 使用 NOT EXISTS  
  NOT EXISTS 的作用與 EXISTS 相反。 如果子查詢未傳回任何資料列，便滿足 NOT EXISTS 中的 WHERE 子句。 下列範例會尋找不在部門中，且名稱開頭是 `P` 的員工。  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. 使用 EXISTS  
  下列範例會識別 `ProspectiveBuyer` 資料表中的任何資料列是否與 `DimCustomer` 資料表中的資料列相符。 只有當兩個資料表中的 `LastName` 和 `BirthDate` 都相符時，此查詢才會傳回資料列。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. 使用 NOT EXISTS  
  NOT EXISTS 的作用與 EXISTS 相反。 如果子查詢未傳回任何資料列，便滿足 NOT EXISTS 中的 WHERE 子句。 下列範例會在 `DimCustomer` 資料表中尋找 `LastName` 和 `BirthDate` 均與 `ProspectiveBuyers` 資料表中的任何項目不符的資料列。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

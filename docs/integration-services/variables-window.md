@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495096"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193736"
 ---
 # <a name="variables-window"></a>變數視窗
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495096"
  從清單中選取變數，然後按一下 [刪除變數]****。  
   
  **方格選項**  
- 按一下以開啟 [變數方格選項]**** 對話方塊，在其中您可以變更資料行選取範圍以及將篩選套用到 [變數]**** 視窗。 如需詳細資訊，請參閱 [變數方格選項](../integration-services/variable-grid-options.md)。  
+ 按一下以開啟 [變數方格選項]**** 對話方塊，在其中您可以變更資料行選取範圍以及將篩選套用到 [變數]**** 視窗。 如需詳細資訊，請參閱 [變數方格選項]()。  
   
  **名稱**  
  檢視變數名稱。 您可以更新使用者定義變數的名稱。  
@@ -116,8 +116,7 @@ ms.locfileid: "88495096"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)   
- [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [在封裝中使用變數](./integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [產生套件執行的傾印檔案](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

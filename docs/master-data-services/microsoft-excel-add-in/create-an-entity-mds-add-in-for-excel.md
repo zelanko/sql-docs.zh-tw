@@ -1,5 +1,6 @@
 ---
-title: 建立實體 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+description: 建立實體 (適用於 Excel 的 MDS 增益集)
+title: 建立實體
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bae68b9b241f14af1267eaf84e32dc97a39b8ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257686"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>建立實體 (適用於 Excel 的 MDS 增益集)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，系統管理員可以建立新的實體來儲存資料。 當您建立實體時，應該至少載入要儲存的資料樣本。  
   
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 [系統管理]  和總管  功能區域的權限。  
+-   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)。  
   
 -   您必須有要在其中建立實體的現有模型。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -52,29 +53,29 @@ ms.locfileid: "68092457"
   
 2.  選取要載入到新實體的資料格。  
   
-3.  在 [主要資料]  索引標籤的 [建立模型]  群組中，按一下 [建立實體]  。  
+3.  在 [主要資料]**** 索引標籤的 [建立模型]**** 群組中，按一下 [建立實體]****。  
   
 4.  如果系統提示您連接到 MDS 儲存機制，請連接。  
   
-5.  在 [建立實體]  對話方塊中，保持預設的範圍，或加以變更以套用至要載入的資料。  
+5.  在 [建立實體]**** 對話方塊中，保持預設的範圍，或加以變更以套用至要載入的資料。  
   
-6.  請不要清除 [我的資料有標題]  核取方塊。  
+6.  請不要清除 [我的資料有標題]**** 核取方塊。  
   
 7.  從 **[模型]** 清單中選取模型。  
   
 8.  從 **[版本]** 清單中選取版本。  
   
-9. 在 [新實體名稱]  方塊中，輸入實體的名稱。  
+9. 在 [新實體名稱]**** 方塊中，輸入實體的名稱。  
   
 10. 從 **Code** 清單中，選取包含唯一識別碼的資料行或讓系統自動產生代碼。  
   
-11. 選擇性。 從 [名稱]  清單中，選取包含每個成員名稱的資料行。  
+11. 選擇性。 從 [名稱]**** 清單中，選取包含每個成員名稱的資料行。  
   
 12. 按一下 [確定]  。 成功建立實體時，畫面上會顯示新標頭資料列，反白顯示資料格，而且更新工作表名稱以符合實體名稱。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   若要檢視發生的錯誤，請按一下 [發行和驗證]  群組中的 [顯示狀態]  。 ValidationStatus 和 InputStatus 資料行隨即顯示。 如需詳細資訊，請參閱[驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
+-   若要檢視發生的錯誤，請按一下 [發行和驗證]**** 群組中的 [顯示狀態]****。 ValidationStatus 和 InputStatus 資料行隨即顯示。 如需詳細資訊，請參閱[驗證資料 &#40;MDS 適用於 Excel 的增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   確認屬性已建立為預期的資料類型。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 1d917c3f205f6b4b8d5872cf0b853316ed6e913d
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 8babcb8b849360ba4a025d62a8e89f5ad92175c2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990127"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115935"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門：在 SUSE Linux Enterprise Server 上安裝 SQL Server 並建立資料庫
 
@@ -54,12 +54,12 @@ ms.locfileid: "90990127"
 
 ::: moniker-end
 
-若要在您自己的機器上安裝 SUSE Linux Enterprise Server，請前往 [https://www.suse.com/products/server](https://www.suse.com/products/server)。 您也可以在 Azure 中建立 SLES 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並於呼叫 `az vm create`時使用 `--image SLES`。
+若要在您自己的機器上安裝 SUSE Linux Enterprise Server，請前往 [https://www.suse.com/products/server](https://www.suse.com/products/server)。 您也可以在 Azure 中建立 SLES 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](/azure/virtual-machines/linux/tutorial-manage-vm)，並於呼叫 `az vm create`時使用 `--image SLES`。
 
 如果您先前已安裝 SQL Server 的 CTP 或 RC 版本，您必須先移除舊的存放庫，然後遵循這些步驟進行。 如需詳細資訊，請參閱[為 SQL Server 2017 和 2019 設定 Linux 存放庫](sql-server-linux-change-repo.md)。
 
 > [!NOTE]
-> 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](https://msdn.microsoft.com/commandline/wsl/about)作為安裝目標。
+> 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](/windows/wsl/about)作為安裝目標。
 
 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 

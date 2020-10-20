@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e5b846689aad98940dc719ef13bd8125b2dacb31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb8926a8f9cb79c215674063c3f732ea7cb5cd7e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392484"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194843"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
 
@@ -152,8 +152,7 @@ ms.locfileid: "88392484"
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../integration-services/data-flow/data-flow.md)   
  [使用轉換來轉換資料](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [以路徑連接元件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [以路徑連接元件](./connect-components-in-a-data-flow.md)   
  [資料流程工作](../../integration-services/control-flow/data-flow-task.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
-  
   

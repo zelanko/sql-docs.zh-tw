@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2eb7f7274075450c3372f264f4f78c36f0059524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92dd1a4351c9cfdc1bedb0958e370e382b08ecc0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477615"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197064"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
 
@@ -42,7 +42,7 @@ ms.locfileid: "88477615"
 ## <a name="configuration-of-the-multicast-transformation"></a>設定多點傳送轉換  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需有關可以程式設計方式設定之屬性的詳細資訊，請參閱＜ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)＞。  
+ 如需有關可以程式設計方式設定之屬性的詳細資訊，請參閱＜ [Common Properties](../set-the-properties-of-a-data-flow-component.md)＞。  
   
 ## <a name="related-tasks"></a>相關工作  
  如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
@@ -60,5 +60,4 @@ ms.locfileid: "88477615"
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   
