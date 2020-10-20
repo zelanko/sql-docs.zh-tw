@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b19fb7a9ab60f5f89a12ab3311c39f0611d233f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45181333134ff1150d4a121bf3201e78b1c2fde0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477841"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194175"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
 
@@ -49,7 +49,7 @@ ms.locfileid: "88477841"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [原始檔案自訂屬性](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -67,5 +67,4 @@ ms.locfileid: "88477841"
 ## <a name="see-also"></a>另請參閱  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
-  
   

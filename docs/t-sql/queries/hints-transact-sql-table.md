@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288233"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035831"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 如果 SET 選項不具已篩選之索引的必要值，查詢最佳化工具將不會考慮索引提示。 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
-NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢集索引的檢視表。 如果查詢包含同時在索引檢視表和基底資料表中的資料行參考，而且查詢最佳化工具判斷使用索引檢視表能夠提供最好的查詢執行方法，則查詢最佳化工具會使用檢視表的索引。 此功能稱為*索引檢視表比對*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，只有特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援由查詢最佳化工具自動使用索引檢視表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱 [SQL Server 2016 版本所支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)、[SQL Server 2017 版本所支援的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)與 [SQL Server 2019 版本所支援的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
+NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢集索引的檢視表。 如果查詢包含同時在索引檢視表和基底資料表中的資料行參考，而且查詢最佳化工具判斷使用索引檢視表能夠提供最好的查詢執行方法，則查詢最佳化工具會使用檢視表的索引。 此功能稱為*索引檢視表比對*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，只有特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援由查詢最佳化工具自動使用索引檢視表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱 [SQL Server 2016 版本所支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 版本所支援的功能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)與 [SQL Server 2019 版本所支援的功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
 不過，若要讓查詢最佳化工具考慮比對索引檢視表，或使用由 NOEXPAND 提示所參考的索引檢視表，就必須將下列 SET 選項設為 ON。  
 
@@ -482,5 +482,4 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
-  
   

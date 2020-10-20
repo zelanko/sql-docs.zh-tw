@@ -1,5 +1,6 @@
 ---
-title: 重新整理資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+description: 重新整理資料 (適用於 Excel 的 MDS 增益集)
+title: 重新整理資料
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4f01d93394caf538931fc60e9d3484792e225a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9fe89ec7abff9a3440b72bb00d4aaee86837ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257775"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要從 MDS 存放庫取得最新資訊，而不開啟新的工作表時，請重新整理資料。 您可以重新整理所有資料格或資料格的選取範圍。 當您已經插入含有自訂公式或不在 MDS 中管理之資料的資料行，而且想要加以保留時，這樣做可能很有用。  
   
@@ -43,14 +44,14 @@ ms.locfileid: "68074455"
 > -   當您重新整理時，系統會刪除 MDS 管理之資料格的註解。  
   
 ## <a name="how-to-refresh-mds-managed-data"></a>如何重新整理 MDS 管理的資料  
- 在功能區的 [連接和載入]  群組中，[重新整理]  按鈕有兩個選項，分別是 [全部重新整理]  和 [重新整理選取項目]  。 功能區按鈕的預設動作是 [全部重新整理]  。 若要使用來自伺服器的值重新整理整份工作表，按一下 [重新整理]  按鈕，或選擇 [全部重新整理]  選項。 若僅要重新整理工作表中的部分資料格，請選取資料格 (必須是一個連續的選取範圍)，然後選擇 [重新整理選取項目]  選項。  
+ 在功能區的 [連接和載入]**** 群組中，[重新整理]**** 按鈕有兩個選項，分別是 [全部重新整理]**** 和 [重新整理選取項目]****。 功能區按鈕的預設動作是 [全部重新整理]****。 若要使用來自伺服器的值重新整理整份工作表，按一下 [重新整理]**** 按鈕，或選擇 [全部重新整理]**** 選項。 若僅要重新整理工作表中的部分資料格，請選取資料格 (必須是一個連續的選取範圍)，然後選擇 [重新整理選取項目]**** 選項。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
 |建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|將 MDS 資料載入 Excel 中。|[將資料從 Master Data Services 匯入至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|將 MDS 資料載入 Excel 中。|[將資料從 Master Data Services 匯出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

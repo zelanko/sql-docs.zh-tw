@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088878"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115631"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供者
 
-連線到 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  此提供者可讓您巡覽 SQL Server 執行個體，如同您在物件總管中巡覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與巡覽您的網域帳戶可存取的 SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) (設定步驟)。
+連線到 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)。  此提供者可讓您巡覽 SQL Server 執行個體，如同您在物件總管中巡覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與巡覽您的網域帳戶可存取的 SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) (設定步驟)。
 
 您也可以搭配 SQL Server PowerShell 提供者使用 SQL 驗證。 若要這麼做，請使用 `New-PSDrive` Cmdlet 建立新的 PSDrive，並提供適當的認證進行連線。
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-如果您需要查看執行個體上的所有資料庫，其中一個選項是使用 [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) Cmdlet。
+如果您需要查看執行個體上的所有資料庫，其中一個選項是使用 [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) Cmdlet。
 
 ## <a name="examine-sql-server-error-logs"></a>檢查 SQL Server 錯誤記錄檔
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>另請參閱
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [SqlServer Cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [SqlServer Cmdlet](/powershell/module/sqlserver)

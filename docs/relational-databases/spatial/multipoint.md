@@ -13,15 +13,15 @@ ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f149e930c29be9a94ed6eee60efadd1a4f91d8d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a64b2d0e640a2c16fc04491e9db307fca82633a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403295"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006287"
 ---
 # <a name="multipoint"></a>MultiPoint
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **MultiPoint** 是零或多個點的集合。 **MultiPoint** 執行個體的界限是空的。  
   
 ## <a name="examples"></a>範例  

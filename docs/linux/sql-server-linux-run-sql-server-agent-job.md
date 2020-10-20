@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088818"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115827"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上建立及執行 SQL Server Agent 作業
 
@@ -39,7 +39,7 @@ SQL Server 作業被用來在 SQL Server 資料庫中定期執行相同的命令
 下列先決條件為選擇性：
 
 * 具有 SSMS 的 Windows 電腦：
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 以進行選擇性的 SSMS 步驟。
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) 以進行選擇性的 SSMS 步驟。
 
 ## <a name="enable-sql-server-agent"></a>啟用 SQL Server Agent
 
@@ -81,7 +81,7 @@ SQL Server 作業被用來在 SQL Server 資料庫中定期執行相同的命令
 下列步驟會使用 Transact-SQL 命令在 Linux 上建立 SQL Server Agent 作業。 該作業會針對範例資料庫 **SampleDB** 執行每日備份。
 
 > [!TIP]
-> 您可以使用任何 T-SQL 用戶端來執行這些命令。 例如，在 Linux 上您可以使用 [sqlcmd](sql-server-linux-setup-tools.md) 或 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。 從遠端 Windows Server，您也可以在 SQL Server Management Studio 中執行查詢，或是使用 UI 介面來進行作業管理，其將於下一節中描述。
+> 您可以使用任何 T-SQL 用戶端來執行這些命令。 例如，在 Linux 上您可以使用 [sqlcmd](sql-server-linux-setup-tools.md) 或 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)。 從遠端 Windows Server，您也可以在 SQL Server Management Studio 中執行查詢，或是使用 UI 介面來進行作業管理，其將於下一節中描述。
 
 1. 使用 [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) 以建立名為 `Daily SampleDB Backup` 的作業。
 
@@ -200,4 +200,4 @@ SQL Server 作業被用來在 SQL Server 資料庫中定期執行相同的命令
 接下來，請探索建立及管理作業的其他功能：
 
 > [!div class="nextstepaction"]
->[SQL Server Agent 文件](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[SQL Server Agent 文件](../ssms/agent/sql-server-agent.md)

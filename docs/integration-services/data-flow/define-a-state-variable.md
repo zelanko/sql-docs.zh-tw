@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349344"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195395"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349344"
   
  不要指定變數值做為其定義的一部分。 此值必須是由 CDC 控制工作所設定。  
   
- 如果您打算將 CDC 控制工作與 **[自動狀態持續性]** 搭配使用，CDC 狀態變數將會從您指定的資料庫狀態資料表讀取，並在其值變更時更新回該相同的資料表。 如需有關狀態變數的詳細資訊，請參閱＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞和＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)＞。  
+ 如果您打算將 CDC 控制工作與 **[自動狀態持續性]** 搭配使用，CDC 狀態變數將會從您指定的資料庫狀態資料表讀取，並在其值變更時更新回該相同的資料表。 如需有關狀態變數的詳細資訊，請參閱＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞和＜ [CDC Control Task Editor](../control-flow/cdc-control-task.md)＞。  
   
  如果您不打算將 CDC 控制工作與 [自動狀態持續性] 搭配使用，則必須從上次封裝執行時儲存其值的永續性儲存體中載入變數值，並在目前處理範圍已完成處理時將變數值寫回該永續性儲存體。  
   
 ## <a name="see-also"></a>另請參閱  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [CDC 控制工作編輯器](../control-flow/cdc-control-task.md)  
   

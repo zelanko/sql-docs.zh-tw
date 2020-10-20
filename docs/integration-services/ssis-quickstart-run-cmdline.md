@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc97eb4c3c8d554a86a773910508c2d1ba936459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9efc610f33e2f58a8c1ae66b43480fb1d1da164
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495410"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195822"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>從命令提示字元使用 DTExec.exe 執行 SSIS 套件
 
@@ -26,7 +26,7 @@ ms.locfileid: "88495410"
 > [!NOTE]
 > 本文中描述的方法尚未以部署到 Azure SQL Database 伺服器的套件測試。
 
-如需 `DTExec.exe` 的詳細資訊，請參閱 [dtexec 公用程式](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)。
+如需 `DTExec.exe` 的詳細資訊，請參閱 [dtexec 公用程式](./packages/dtexec-utility.md)。
 
 ## <a name="supported-platforms"></a>支援的平台
 
@@ -58,4 +58,4 @@ ms.locfileid: "88495410"
     - [使用 Transact-SQL 執行 SSIS 套件 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
-    - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 
+    - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480890"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196482"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
 
@@ -86,7 +86,7 @@ ms.locfileid: "89480890"
   
  這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」  的第一項工作會針對在名為「處理變更」  之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
   
- 如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md) 和 [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)。  
+ 如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md) 和 [CDC 控制工作編輯器](../control-flow/cdc-control-task.md)。  
   
  下圖顯示「處理變更」  資料流程，就概念上說明變更的處理方式。  
   
@@ -104,11 +104,11 @@ ms.locfileid: "89480890"
   
  [CDC 來源](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC 來源編輯器 &#40;連線管理員頁面&#41;](./cdc-source.md)  
   
- [CDC 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC 來源編輯器 &#40;資料行頁面&#41;](./cdc-source.md)  
   
- [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](./cdc-source.md)  
   
  如需有關 CDC 分隔器的詳細資訊，請參閱：  
   
@@ -217,9 +217,8 @@ ms.locfileid: "89480890"
   
 -   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](https://go.microsoft.com/fwlink/?LinkId=252961)。  
   
--   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](https://technet.microsoft.com/sqlserver/jj218898)(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
+-   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](/previous-versions/dn912438(v=msdn.10))(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

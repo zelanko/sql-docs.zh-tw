@@ -12,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4814fe709fb28141d00fd5302feab845d39d5331
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f58faca8cb3e83057cef9c2e214ffcccabf9dd9f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458518"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196192"
 ---
 # <a name="database-engine-tutorials"></a>Database Engine 教學課程
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "86458518"
 [教學課程：資料庫引擎使用者入門](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 本教學課程將說明如何連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]的執行個體。  
   
-[教學課程：SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+[教學課程：SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
 本教學課程將為您介紹用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供設定、監視和管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的圖形介面。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫和資料倉儲。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  
   
 [教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -58,5 +58,3 @@ ms.locfileid: "86458518"
 [TechNet WIKI：SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734) (SQL Server 2012 範例)  
   
   
-  
-

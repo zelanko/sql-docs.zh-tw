@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180007"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115701"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
 
@@ -178,7 +178,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
    sudo systemctl restart mssql-server
    ```
 
-如需詳細資訊，請參閱[對於 Linux 上 SQL Server 的客戶意見反應](sql-server-linux-customer-feedback.md)和 [SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
+如需詳細資訊，請參閱[對於 Linux 上 SQL Server 的客戶意見反應](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md)和 [SQL Server 隱私權聲明](../sql-server/sql-server-privacy.md)。
 
 ## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> 變更預設資料或記錄目錄位置
 
@@ -476,7 +476,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-如需詳細資訊，請參閱[對於 Linux 上 SQL Server 的客戶意見反應](sql-server-linux-customer-feedback.md)。
+如需詳細資訊，請參閱[對於 Linux 上 SQL Server 的客戶意見反應](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md)。
 
 ## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> 變更 SQL Server 地區設定
 
@@ -728,7 +728,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf 格式
 
-下列 **/var/opt/mssql/mssql.conf** 檔案提供適用於每個設定的範例。 您可以視需要使用此格式，手動對 **mssql.conf** 檔案進行變更。 如果您手動變更檔案，則必須先重新啟動 SQL Server 之後才能套用變更。 若要搭配 Docker 使用 **mssql.conf** 檔案，您必須讓 Docker [保存您的資料](sql-server-linux-configure-docker.md)。 首先，將完整的 **mssql.conf** 檔案新增至您的主機目錄，然後執行該容器。 [客戶意見反應](sql-server-linux-customer-feedback.md)中有一個這類範例。
+下列 **/var/opt/mssql/mssql.conf** 檔案提供適用於每個設定的範例。 您可以視需要使用此格式，手動對 **mssql.conf** 檔案進行變更。 如果您手動變更檔案，則必須先重新啟動 SQL Server 之後才能套用變更。 若要搭配 Docker 使用 **mssql.conf** 檔案，您必須讓 Docker [保存您的資料](./sql-server-linux-docker-container-deployment.md)。 首先，將完整的 **mssql.conf** 檔案新增至您的主機目錄，然後執行該容器。 [客戶意見反應](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md)中有一個這類範例。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

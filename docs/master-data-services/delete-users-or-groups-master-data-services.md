@@ -1,5 +1,6 @@
 ---
-title: 刪除使用者或群組 (Master Data Services) | Microsoft Docs
+description: 刪除使用者或群組 (Master Data Services)
+title: 刪除使用者或群組
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 81b16bc5b2bc8f2158a82733fb96f5144b7d15f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48ddbf53a44bf0d34abe725595bba255e6fa4fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258077"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>刪除使用者或群組 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   當您不再希望使用者或群組存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]時，可以刪除他們。  
   
@@ -43,15 +44,15 @@ ms.locfileid: "67906270"
   
 ### <a name="to-delete-users-or-groups"></a>若要刪除使用者或群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
   
-2.  若要刪除使用者，請停留在 **[使用者]** 頁面。 若要刪除群組，請按一下功能表列上的 [管理群組]  。  
+2.  若要刪除使用者，請停留在 **[使用者]** 頁面。 若要刪除群組，請按一下功能表列上的 [管理群組]****。  
   
 3.  在方格中，選取要刪除之使用者或群組的資料列。  
   
-4.  按一下 **[刪除選取的使用者]** 或 **[刪除選取的群組]** 。  
+4.  按一下 **[刪除選取的使用者]** 或 **[刪除選取的群組]**。  
   
-5.  在確認對話方塊中按一下 **[確定]** 。  
+5.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  

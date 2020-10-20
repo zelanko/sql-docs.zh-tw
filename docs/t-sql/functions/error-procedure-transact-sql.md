@@ -25,12 +25,12 @@ ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62baf237cef1e0a918068e60d9267d6e0097fd5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: b56435467fcb9ec42dd637a312c7596c870d048c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116775"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195540"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
@@ -149,8 +149,9 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 8134        16            1           usp_ExampleProc  Divide by zero error encountered.  6
 
 (1 row(s) affected)
+
 ``` 
- 
+
   
 ## <a name="see-also"></a>另請參閱  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   

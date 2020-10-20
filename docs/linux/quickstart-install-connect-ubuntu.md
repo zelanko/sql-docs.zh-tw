@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438110"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115956"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：在 Ubuntu 上安裝 SQL Server 並建立資料庫
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "86438110"
 
 Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
 
-若要在自己的機器上安裝 Ubuntu 18.04，請前往 <http://releases.ubuntu.com/bionic/>。 您也可以在 Azure 中建立 Ubuntu 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+若要在自己的機器上安裝 Ubuntu 18.04，請前往 <http://releases.ubuntu.com/bionic/>。 您也可以在 Azure 中建立 Ubuntu 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](/azure/virtual-machines/linux/tutorial-manage-vm)。
 
 > [!NOTE]
-> 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](https://msdn.microsoft.com/commandline/wsl/about)作為安裝目標。
+> 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](/windows/wsl/about)作為安裝目標。
 
 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 
 > [!NOTE]
 > 從 SQL Server 2017 CU20 開始支援 Ubuntu 18.04。 如果您想要搭配 Ubuntu 18.04 使用此文章中的指示，請確定您使用正確的[存放庫路徑](sql-server-linux-change-repo.md) (`18.04`，而不是 `16.04`)。
 >
-> 如果您是以較低的版本執行 SQL Server，可能可以[修改](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/) \(英文\) 設定。
+> 如果您是以較低的版本執行 SQL Server，可能可以[修改](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts) \(英文\) 設定。
 
 ::: moniker-end
 
@@ -66,10 +66,10 @@ Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
 
 Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
 
-若要在自己的機器上安裝 Ubuntu 18.04，請前往 <http://releases.ubuntu.com/bionic/>。 您也可以在 Azure 中建立 Ubuntu 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+若要在自己的機器上安裝 Ubuntu 18.04，請前往 <http://releases.ubuntu.com/bionic/>。 您也可以在 Azure 中建立 Ubuntu 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](/azure/virtual-machines/linux/tutorial-manage-vm)。
 
 > [!NOTE]
-> 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](https://msdn.microsoft.com/commandline/wsl/about)作為安裝目標。
+> 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](/windows/wsl/about)作為安裝目標。
 
 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 

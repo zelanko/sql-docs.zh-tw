@@ -1,5 +1,6 @@
 ---
-title: 建立分葉成員 (Master Data Services) | Microsoft Docs
+description: 建立分葉成員 (Master Data Services)
+title: 建立分葉成員
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257815"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您可建立分葉成員以將主要資料新增至系統。 如果您想要加入大量資料，請改用暫存表格。 如需詳細資訊，請參閱[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
+  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您可建立分葉成員以將主要資料新增至系統。 如果您想要加入大量資料，請改用暫存表格。 如需詳細資訊，請參閱  [從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  您也可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 匯入資料。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 **[總管]** 功能區域的權限。  
+-   您必須擁有存取 [ **Explorer** ] 功能區域的許可權。  
   
 -   您至少必須擁有要新增成員之實體分葉模型物件的 **建立** 或 **更新** 權限。 建立權限可讓您建立成員和只編輯 Code 屬性。 更新權限可讓您更新其他屬性。  
   
@@ -42,15 +43,15 @@ ms.locfileid: "67906738"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
   
-2.  如果您是使用者，請從 [版本]  清單中選取開啟的版本。 如果您是系統管理員，請從 [版本]  清單中選取狀態為開啟或鎖定的版本。  
+2.  如果您是使用者，請從 [版本]**** 清單中選取開啟的版本。 如果您是系統管理員，請從 [版本]**** 清單中選取狀態為開啟或鎖定的版本。  
   
-3.  按一下 **[總管]** 。  
+3.  按一下 **[總管]**。  
   
-4.  從功能表列指向 [實體]  ，然後按一下要新增成員的實體名稱。  
+4.  從功能表列指向 [實體]****，然後按一下要新增成員的實體名稱。  
   
-5.  按一下 [加入成員]  。  
+5.  按一下 [ **加入成員**]。  
   
-6.  填妥 [詳細資料]  窗格中的欄位。  
+6.  填妥 [詳細資料]**** 窗格中的欄位。  
   
      如為網域型屬性，且屬性已套用篩選，則篩選父屬性就會限制屬性值清單。  
   

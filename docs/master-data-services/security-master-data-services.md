@@ -1,5 +1,6 @@
 ---
-title: 安全性 (Master Data Services) | Microsoft Docs
+title: 安全性
+description: 瞭解 Master Data Services 中的安全性，包括使用者類型、如何設定 Excel 增益集的安全性、安全性和相關工作。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,31 +11,31 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257825"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全性可確保使用者具有執行工作所需之特定主要資料的存取權，並避免使用者存取不應使用的資料。  
   
  您也可以使用安全性讓某位使用者成為特定模型和功能區域的管理員 (例如，讓某位使用者建立 Customer 模型的版本，或提供某位使用者設定安全性權限的能力)。  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安全性是以本機或 Active Directory 網域使用者和群組為基礎。 MDS 安全性可讓您使用更精細的詳細資料層級，來決定使用者可以存取的資料。 由於此資料粒度，安全性很輕易就會變得複雜，因此使用重疊的使用者和群組時要特別小心。 如需詳細資訊，請參閱[重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安全性是以本機或 Active Directory 網域使用者和群組為基礎。 MDS 安全性可讓您使用更精細的詳細資料層級，來決定使用者可以存取的資料。 由於此資料粒度，安全性很輕易就會變得複雜，因此使用重疊的使用者和群組時要特別小心。 如需詳細資訊，請參閱 [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
-  您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 [使用者及群組的權限] 功能區域中，使用 Web 服務指派安全性存取權。  
+ **** 您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 [使用者及群組的權限] 功能區域中，使用 Web 服務指派安全性存取權。  
   
 ## <a name="types-of-users"></a>使用者類型  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的使用者類型有兩種：  
   
--    在 [總管] 功能區域中存取資料的使用者。  
+-   **** 在 [總管] 功能區域中存取資料的使用者。  
   
--    可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   **** 可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何設定安全性  
  若要提供存取 MDS 之資料或功能的使用者或群組權限，您必須指派：  
@@ -63,11 +64,11 @@ ms.locfileid: "68085676"
 |透過將權限指派給階層節點，來將權限指派給成員值。|[指派階層成員權限 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
- [使用者和群組 &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [系統管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [&#40;Master Data Services&#41;的使用者和群組 ](../master-data-services/users-and-groups-master-data-services.md)   
+ [功能區域許可權 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [模型物件使用權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [階層成員許可權 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

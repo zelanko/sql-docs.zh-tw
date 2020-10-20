@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393546"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196492"
 ---
 # <a name="flexible-file-task"></a>彈性檔案工作
 
@@ -29,7 +29,7 @@ ms.locfileid: "88393546"
 
 - 本機檔案系統
 - [Azure Blob 儲存體](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) \(部分機器翻譯\)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) \(部分機器翻譯\)
 
 彈性檔案工作是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
 
@@ -62,12 +62,12 @@ ms.locfileid: "88393546"
 ***服務主體權限設定的注意事項***
 
 若要讓**測試連線**正常執行 (Blob 儲存體或 Data Lake Storage Gen2)，則應將服務主體至少指派給儲存體帳戶的**儲存體 Blob 資料讀取者**角色。
-此操作可透過 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 完成。
+此操作可透過 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 完成。
 
 針對 Blob 儲存體，指派至少**儲存體 Blob 資料讀取者**和**儲存體 Blob 資料參與者**角色來分別授與讀取和寫入權限。
 
-針對 Data Lake Storage Gen2，權限由 RBAC 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 決定。
-請注意，ACL 會使用應用程式註冊服務主體的物件識別碼 (OID) 進行設定，如[此處](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所詳述。
+針對 Data Lake Storage Gen2，權限由 RBAC 和 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 決定。
+請注意，ACL 會使用應用程式註冊服務主體的物件識別碼 (OID) 進行設定，如[此處](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所詳述。
 這不同於與 RBAC 設定搭配使用的應用程式 (用戶端) 識別碼。
 當安全性主體透過內建角色或自訂角色獲得 RBAC 資料權限時，在要求授權時會先評估這些權限。
 如果要求作業是由安全性主體的 RBAC 指派授權，則會立即解決授權，且不會執行任何額外的 ACL 檢查。
@@ -76,4 +76,4 @@ ms.locfileid: "88393546"
 - 針對讀取權限，請至少授與**執行**權限 (從來源檔案系統開始)，以及所要複製檔案的**讀取**權限。 或者，使用 RBAC 至少授與**儲存體 Blob 資料讀取者**角色。
 - 針對寫入權限，請至少授與**執行**權限 (從接收檔案系統開始)，以及接收資料夾的**寫入**權限。 或者，使用 RBAC 至少授與**儲存體 Blob 資料參與者**角色。
 
-如需詳細資料，請參閱[這篇](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
+如需詳細資料，請參閱[這篇](/azure/storage/blobs/data-lake-storage-access-control)文章。

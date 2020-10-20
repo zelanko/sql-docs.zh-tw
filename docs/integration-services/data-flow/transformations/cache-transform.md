@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495726"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194650"
 ---
 # <a name="cache-transform"></a>快取轉換
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495726"
   
  當您想要設定「查閱轉換」以完整快取模式執行時，可以使用快取連接管理員。 在這個模式中，參考資料集會在「查閱轉換」執行之前載入快取中。  
   
- 如需如何透過快取連線管理員和「快取轉換」轉換設定完整快取模式中「查閱轉換」的指示，請參閱 [使用快取連線管理員以完整快取模式實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
+ 如需如何透過快取連線管理員和「快取轉換」轉換設定完整快取模式中「查閱轉換」的指示，請參閱 [使用快取連線管理員以完整快取模式實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
   
  如需快取參考資料集的詳細資訊，請參閱 [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495726"
   
  在單一封裝中，只有「快取轉換」可以將資料寫入至相同的快取連接管理員。 如果封裝包含多個「快取轉換」，則在封裝執行時呼叫的第一個「快取轉換」會將資料寫入連接管理員。 後續「快取轉換」的寫入作業會失敗。  
   
- 如需詳細資訊，請參閱[快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+ 如需詳細資訊，請參閱[快取連線管理員](../../connection-manager/cache-connection-manager.md)。  
   
 ## <a name="configuration-of-the-cache-transform"></a>快取轉換的組態  
  您可以將快取連接管理員設定為將資料儲存至快取檔案 (.caw)。  
@@ -65,7 +65,7 @@ ms.locfileid: "88495726"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>快取轉換編輯器 (連接管理員頁面)
   使用 **[快取轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，即可選取現有的快取連接管理員或建立新的快取連接管理員。  
   
- 若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)＞。  
+ 若要深入了解快取連接管理員，請參閱＜ [Cache Connection Manager](../../connection-manager/cache-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
  **[完整快取]**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495726"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)  
-  
   

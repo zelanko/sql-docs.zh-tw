@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477757"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194651"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
 
@@ -60,7 +60,7 @@ ms.locfileid: "88477757"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -97,10 +97,9 @@ ms.locfileid: "88477757"
  輸入預設輸出的名稱，或使用預設值。  
   
  **設定錯誤輸出**  
- 使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊來指定如何處理錯誤。  
+ 使用 [ [設定錯誤輸出](../error-handling-in-data.md) ] 對話方塊來指定如何處理錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

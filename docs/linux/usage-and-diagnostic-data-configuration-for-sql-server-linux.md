@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902342"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115724"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>設定 Linux 上 SQL Server 的使用狀況與診斷資料收集
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902342"
 
 根據預設，Microsoft SQL Server 會收集客戶如何使用應用程式的相關資訊。 具體來說，SQL Server 會收集有關安裝體驗、使用情況和效能的相關資訊。 這些資訊可協助 Microsoft 改善產品，以進一步滿足客戶需求。 例如，Microsoft 會收集客戶所遇到之錯誤代碼的相關資訊，以便修正相關錯誤、改善如何使用 SQL Server 的相關文件，以及判斷是否應將功能加入到產品中以滿足客戶。
 
-本文件提供關於所收集的資訊種類、如何設定 Linux 上的 Microsoft SQL Server，以將所收集資訊傳送給 Microsoft 的詳細資料。 SQL Server 2017 包含隱私權聲明，其中說明我們會 (與不會) 向使用者收集的資訊。 如需詳細資訊，請參閱[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
+本文件提供關於所收集的資訊種類、如何設定 Linux 上的 Microsoft SQL Server，以將所收集資訊傳送給 Microsoft 的詳細資料。 SQL Server 2017 包含隱私權聲明，其中說明我們會 (與不會) 向使用者收集的資訊。 如需詳細資訊，請參閱[隱私權聲明](../sql-server/sql-server-privacy.md)。
 
 具體來說，Microsoft 不會透過此機制傳送下列類型的資訊：
 
@@ -56,7 +56,7 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
    ```
    
 ### <a name="on-docker"></a>在 Docker 上
-若要停用 Docker 上的使用方式和診斷資料收集，您必須讓 Docker [保存您的資料](sql-server-linux-configure-docker.md)。 
+若要停用 Docker 上的使用方式和診斷資料收集，您必須讓 Docker [保存您的資料](./sql-server-linux-docker-container-deployment.md)。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ Microsoft SQL Server 2017 包含一些啟用網際網路的功能，而這些功
    ```
    
 ### <a name="on-docker"></a>在 Docker 上
-若要在 Docker 上啟用本機稽核，您必須讓 Docker [保存您的資料](sql-server-linux-configure-docker.md)。 
+若要在 Docker 上啟用本機稽核，您必須讓 Docker [保存您的資料](./sql-server-linux-docker-container-deployment.md)。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

@@ -38,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d51a3b2339fc1b44897bf3be9087b086bb81878
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 55a88376c7c12870455b2d575ffcb0da601c0dda
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226794"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187656"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -211,7 +211,7 @@ ms.locfileid: "91226794"
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. 搭配 LIKE 和 ESCAPE 語法使用 WHERE  
  下列範例會搜尋 `LargePhotoFileName` 資料行有 `green_` 字元的資料列，且會使用 `ESCAPE` 選項，因為 _ 是萬用字元。 在未指定 `ESCAPE` 選項的情況下，查詢會搜尋任何包含 `green` 一字後面再接著 _ 字元以外之任何單一字元的描述值。  
   
-```sql
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -222,7 +222,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. 搭配 Unicode 資料使用 WHERE 和 LIKE 語法  
  下列範例會利用 `WHERE` 子句來擷取在美國 (`US`) 以外，名稱開頭是 `Pa` 的城巿中，任何公司的郵寄地址。  
   
-```sql
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -237,7 +237,7 @@ AND City LIKE N'Pa%' ;
 ### <a name="c-using-where-with-like"></a>C. 搭配 LIKE 使用 WHERE  
  下列範例會搜尋 `LastName` 資料行有 `and` 字元的資料列。  
   
-```sql
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -248,7 +248,7 @@ WHERE LastName LIKE '%and%';
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. 搭配 Unicode 資料使用 WHERE 和 LIKE 語法  
  下列範例會使用 `WHERE` 子句，以在 `LastName` 資料行上執行 Unicode 搜尋。  
   
-```sql
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21b00ef447dd9312fc0ad3b4bb41cc414f91ff0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471131"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196702"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -142,7 +142,7 @@ GO
   
  如需建立範例資料庫與此範例使用之快照的程式碼，請參閱：  
   
--   對於 **Sales** 資料庫與 **sales_snapshot0600** 快照集，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 中的＜使用檔案群組建立資料庫＞和＜建立資料庫快照集＞。  
+-   對於 **Sales** 資料庫與 **sales_snapshot0600** 快照集，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 中的＜使用檔案群組建立資料庫＞和＜建立資料庫快照集＞。  
   
 -   對於 **sales_snapshot1200** 快照集，請參閱 [建立資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
@@ -172,5 +172,4 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [資料庫鏡像和資料庫快照集 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
-  
   

@@ -13,12 +13,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99f0c8b66e45fafa806848efa2f979fbbb0da054
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 731c7b77fca5ae7c2cc4f85e3387d3daf93b4bce
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417094"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196640"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88417094"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-Creating a new diagnostics session:  
+-- Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
 <session_xml>::  
@@ -49,10 +49,10 @@ CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';
    </Capture>  
 <Session>  
   
-Retrieving results for a diagnostics session:  
+-- Retrieving results for a diagnostics session:  
 SELECT * FROM master.sysdiag.diagnostics_name ;  
   
-Removing results for a diagnostics session:  
+-- Removing results for a diagnostics session:  
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   

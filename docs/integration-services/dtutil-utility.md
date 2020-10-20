@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41d40f419497ccb2917052ac477c888a9338c135
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392154"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195260"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
@@ -268,7 +268,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  此範例使用的雜湊不是真正的雜湊。  
   
- 如需詳細資訊，請參閱＜ [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)＞的＜CertMgr＞一節。  
+ 如需詳細資訊，請參閱＜ [Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))＞的＜CertMgr＞一節。  
   
 ### <a name="encrypt-examples"></a>加密範例  
  下列範例會利用完整的封裝加密和密碼，將檔案基礎的 PackageToEncrypt.dtsx 加密成檔案基礎的 EncryptedPackage.dts。 用於加密的密碼是 *EncPswd*。  
@@ -279,5 +279,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## <a name="see-also"></a>另請參閱  
 [執行 Integration Services (SSIS) 套件](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

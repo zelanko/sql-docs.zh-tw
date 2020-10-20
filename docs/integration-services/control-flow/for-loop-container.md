@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a8c0bb1cb003605ec863b41e2194bad4e3cf3e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d95b3894351d156444b22e5b20c4cf5ed259990
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393564"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196502"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
 
@@ -67,9 +67,9 @@ ms.locfileid: "88393564"
   
 2.  將工作和容器加入「For 迴圈」容器。 如需詳細資訊，請參閱 [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
-3.  使用優先順序條件約束連接「For 迴圈」容器中的工作和容器。 如需詳細資訊，請參閱 [使用預設的優先順序條件約束來連接工作和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
+3.  使用優先順序條件約束連接「For 迴圈」容器中的工作和容器。 如需詳細資訊，請參閱 [使用預設的優先順序條件約束來連接工作和容器](./precedence-constraints.md)。  
   
-4.  設定「For 迴圈」容器。 如需詳細資訊，請參閱 [設定 For 迴圈容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)為止。  
+4.  設定「For 迴圈」容器。 如需詳細資訊，請參閱 [設定 For 迴圈容器]()為止。  
 
 ##  <a name="configure-the-for-loop-container"></a>設定 For 迴圈容器
 此程序描述如何使用 [For 迴圈編輯器]  對話方塊設定「For 迴圈」容器。  
@@ -122,7 +122,7 @@ ms.locfileid: "88393564"
   
  在運算式中指定變數時，必須在變數名稱之前加上 at 符號 (@)。 例如，對於名為 **Counter** 的變數，請在 For 迴圈容器所使用的運算式中輸入 @Counter。 如果您在變數中包括命名空間屬性，則您必須使用括號將變數與命名空間括起來。 例如，對於 **MyNamespace** 命名空間中的 **Counter** 變數，請鍵入 [@MyNamespace::Counter]。  
   
- 「For 迴圈」容器使用的變數必須定義在「For 迴圈」容器的範圍內，或封裝容器階層中任何更高容器的範圍內。 例如，「For 迴圈」容器可以使用其範圍內定義的變數，也可以使用封裝範圍內定義的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 「For 迴圈」容器使用的變數必須定義在「For 迴圈」容器的範圍內，或封裝容器階層中任何更高容器的範圍內。 例如，「For 迴圈」容器可以使用其範圍內定義的變數，也可以使用封裝範圍內定義的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式文法提供完整的運算子及函數集合，以實作評估、初始化或指派所使用的複雜運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
@@ -130,5 +130,4 @@ ms.locfileid: "88393564"
 ## <a name="see-also"></a>另請參閱  
  [控制流程](../../integration-services/control-flow/control-flow.md)   
  [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
   

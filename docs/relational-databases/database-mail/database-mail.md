@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 36dbf63620fa42d923605e83505b3f13212528ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1097198ea9d1545068494bb198b24c8aa5d2cc6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476267"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194410"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Database Mail 是從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) \(部分機器翻譯\) 傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
+  Database Mail 是從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-index) \(部分機器翻譯\) 傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
   
 > [!NOTE] 
-> Database Mail 適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) \(部分機器翻譯\)，但不適用 Azure SQL 資料庫的單一與彈性集區。 
+> Database Mail 適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance-index) \(部分機器翻譯\)，但不適用 Azure SQL 資料庫的單一與彈性集區。 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> 使用 Database Mail 的優點  
  Database Mail 具有可靠性、延展性、安全性及可支援性。  
@@ -127,6 +127,5 @@ ms.locfileid: "88476267"
 -   [Database Mail 記錄與稽核](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
 -   [設定 SQL Server Agent Mail 使用 Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
-  
   
   

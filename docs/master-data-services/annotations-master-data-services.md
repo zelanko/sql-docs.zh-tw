@@ -1,5 +1,6 @@
 ---
-title: 註解 (Master Data Services) | Microsoft Docs
+description: 註解 (Master Data Services)
+title: 註解
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9b6416383e332819e45bec6e6cbe42ece163edb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 592669feb90076b84c472f3e9e18a948276173c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255207"
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，註解是指您輸入以提供交易之相關詳細資料的註解。  
   
  您可以為交易加上註解，以便提供有關為何採取某項動作的原因。 您必須選取一個交易來加入相關的註解。 註解會與交易一起顯示在：  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的總管  功能區域。  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的總管**** 功能區域。  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 [版本管理]  功能區域。  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 [版本管理]**** 功能區域。  
   
 -   MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]。  
   

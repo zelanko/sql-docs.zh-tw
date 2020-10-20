@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902327"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115861"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中還原 SQL Server 資料庫
 
@@ -85,7 +85,7 @@ ms.locfileid: "85902327"
    此命令會建立具有 Developer 版本 (預設值) 的 SQL Server 2017 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。 選擇性的 `-v sql1data:/var/opt/mssql` 參數會建立名為 **sql1ddata** 的資料磁碟區容器。 這會用來保存 SQL Server 所建立的資料。
 
    > [!IMPORTANT]
-   > 此範例使用 Docker 中的資料磁碟區容器。 請注意，如果您改為選擇對應主機目錄，此方法在 Mac 和 Windows 上的 Docker 有限制。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md#persist)。
+   > 此範例使用 Docker 中的資料磁碟區容器。 請注意，如果您改為選擇對應主機目錄，此方法在 Mac 和 Windows 上的 Docker 有限制。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](./sql-server-linux-docker-container-configure.md#persist)。
 
 1. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
@@ -97,7 +97,7 @@ ms.locfileid: "85902327"
    docker ps -a
    ```
 
-1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ ms.locfileid: "85902327"
    docker ps -a
    ```
 
-1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ ms.locfileid: "85902327"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>將備份檔案複製到容器中
 
-本教學課程使用 [Wide World Importers 範例資料庫](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用下列步驟將 Wide World Importers 資料庫備份檔案下載並複製到您的 SQL Server 容器中。
+本教學課程使用 [Wide World Importers 範例資料庫](../samples/wide-world-importers-what-is.md)。 使用下列步驟將 Wide World Importers 資料庫備份檔案下載並複製到您的 SQL Server 容器中。
 
 1. 首先，使用 **docker exec** 來建立備份資料夾。 下列命令會在 SQL Server 容器內建立 **/var/opt/mssql/backup** 目錄。
 
@@ -208,7 +208,7 @@ ms.locfileid: "85902327"
 備份檔案現在已位於容器內。 還原備份之前，請務必了解備份內的邏輯檔案名稱和檔案類型。 下列 Transact-SQL 命令會使用容器中的 **sqlcmd** 來檢查備份及執行還原。
 
 > [!TIP]
-> 此教學課程會使用容器內的 **sqlcmd**，因為容器已預先安裝此工具。 不過，您也可以將 Transact-SQL 陳述式與容器外的其他用戶端工具 (例如 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 或 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)) 搭配執行。 若要連線，請使用已對應至容器中連接埠 1433 的主機連接埠。 在此範例中，這是主機電腦上的 **localhost,1401**，以及遠端的 **Host_IP_Address,1401**。
+> 此教學課程會使用容器內的 **sqlcmd**，因為容器已預先安裝此工具。 不過，您也可以將 Transact-SQL 陳述式與容器外的其他用戶端工具 (例如 [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) 或 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)) 搭配執行。 若要連線，請使用已對應至容器中連接埠 1433 的主機連接埠。 在此範例中，這是主機電腦上的 **localhost,1401**，以及遠端的 **Host_IP_Address,1401**。
 
 1. 執行容器內的 **sqlcmd** 以列出備份內的邏輯檔案名稱和路徑。 這會使用 **RESTORE FILELISTONLY** Transact-SQL 陳述式來完成。
 
@@ -545,4 +545,4 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 接下來，請檢閱其他 Docker 設定和疑難排解案例：
 
 > [!div class="nextstepaction"]
->[Docker 上 SQL Server 2017 的設定指南](sql-server-linux-configure-docker.md)
+>[Docker 上 SQL Server 2017 的設定指南](./sql-server-linux-docker-container-deployment.md)

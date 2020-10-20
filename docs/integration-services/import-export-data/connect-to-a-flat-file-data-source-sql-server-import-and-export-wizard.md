@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495641"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195183"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -261,7 +261,7 @@ ms.locfileid: "88495641"
  **[重新整理]**  
  按一下 [重新整理]****，即可檢視變更要略過之資料列數的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
  
-如需 [預覽] 頁面的詳細資訊，請參閱下列 Integration Services 參考頁面 - [一般檔案連接管理員編輯器 &#40;預覽頁面&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)。
+如需 [預覽] 頁面的詳細資訊，請參閱下列 Integration Services 參考頁面 - [一般檔案連接管理員編輯器 &#40;預覽頁面&#41;](../connection-manager/flat-file-connection-manager.md)。
 
 ## <a name="connect-to-a-flat-file-destination"></a>連線至一般檔案目的地
 一般檔案目的地只會有單頁的選項，如下列螢幕擷取畫面所示。 瀏覽並選取檔案，然後確認 [格式]**** 區段中的設定。
@@ -303,4 +303,3 @@ ms.locfileid: "88495641"
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

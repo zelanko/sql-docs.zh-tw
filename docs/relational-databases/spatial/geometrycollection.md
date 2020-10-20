@@ -14,15 +14,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2c7be1815002208ffea6e08ea4b7200579a78e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8af9fceff99881b5b6d2ddaa343adba949b70853
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455400"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006321"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **GeometryCollection** 是零或多個 **geometry** 或 **geography** 執行個體的集合。 **GeometryCollection** 可以是空的。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 執行個體  

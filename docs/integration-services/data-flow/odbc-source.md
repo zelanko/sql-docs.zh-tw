@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392114"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194760"
 ---
 # <a name="odbc-source"></a>ODBC 來源
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392114"
   
 -   標準輸出資料行。  
   
- 根據錯誤行為設定，ODBC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)。  
+ 根據錯誤行為設定，ODBC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](./odbc-destination.md)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
  如需有關 ODBC 來源支援之資料類型的資訊，請參閱＜Connector for Open Database Connectivity (ODBC)＞。  
@@ -195,5 +195,4 @@ ms.locfileid: "88392114"
   
 #### <a name="redirect-flow"></a>重新導向流程  
  導致錯誤或截斷的資料列會導向至 ODBC 來源的錯誤輸出。  
-  
   

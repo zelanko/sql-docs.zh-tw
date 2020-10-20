@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430650"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194575"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 
@@ -37,9 +37,9 @@ ms.locfileid: "88430650"
     
 首先，您會執行一些部署的準備工作。 您會在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立一個新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案，並且將現有的封裝和資料檔加入至該專案中。 您不需要從頭開始建立新的封裝，而是使用針對這個教學課程所建立的已完成的封裝。 您在這個教學課程中並不會修改封裝的功能，不過，在您將封裝加入至專案之後，若能在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中開啟封裝並檢閱各個封裝的內容，可能會很有幫助。 因為您可以藉由檢查封裝，而了解封裝的相依性 (例如記錄檔) 以及封裝的其他有趣功能。    
     
-在為部署做準備時，您還要更新封裝以使用組態。 組態會使封裝和封裝物件的屬性，在執行階段變成可更新的狀態。 在這個教學課程中，您會使用組態來更新記錄檔和文字檔的連接字串，以及封裝所使用之 XML 和 XSD 檔案的位置。 如需詳細資訊，請參閱 [封裝組態](../integration-services/packages/package-configurations.md) 和 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。    
+在為部署做準備時，您還要更新封裝以使用組態。 組態會使封裝和封裝物件的屬性，在執行階段變成可更新的狀態。 在這個教學課程中，您會使用組態來更新記錄檔和文字檔的連接字串，以及封裝所使用之 XML 和 XSD 檔案的位置。 如需詳細資訊，請參閱 [封裝組態](./packages/legacy-package-deployment-ssis.md) 和 [建立封裝組態](./packages/legacy-package-deployment-ssis.md)。    
     
-當您確認封裝可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中順利執行之後，就要建立用來安裝封裝的部署配套。 這個部署配套將會包含您已加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中的封裝檔案和其他項目、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 自動納入的封裝相依性，以及您所建立的部署公用程式。 如需詳細資訊，請參閱 [建立部署公用程式](../integration-services/packages/create-a-deployment-utility.md)。    
+當您確認封裝可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中順利執行之後，就要建立用來安裝封裝的部署配套。 這個部署配套將會包含您已加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中的封裝檔案和其他項目、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 自動納入的封裝相依性，以及您所建立的部署公用程式。 如需詳細資訊，請參閱 [建立部署公用程式](./packages/legacy-package-deployment-ssis.md)。    
     
 接下來，您會將部署配套複製到目標電腦上，然後執行「封裝安裝精靈」來安裝封裝和封裝相依性。 封裝將會安裝在 msdb SQL Server 資料庫中，而支援檔案和輔助檔案則會安裝在檔案系統中。 由於部署的封裝會使用組態，因此您要更新組態使用新值，才能讓封裝在新的環境中順利執行。    
     
@@ -98,5 +98,3 @@ ms.locfileid: "88430650"
     
 [第 3 課：安裝 SSIS 套件](../integration-services/lesson-3-install-ssis-packages.md)    
 在這一課中，您會將部署配套複製到目標電腦上、安裝封裝，然後執行封裝。    
-    
-

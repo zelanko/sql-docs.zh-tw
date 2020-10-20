@@ -1,6 +1,7 @@
 ---
-title: 適用於 Microsoft Excel 的 Master Data Services 增益集 | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+title: 概觀
+description: 瞭解如何使用適用於 Excel 的 Master Data Services 增益集將資料從 Master Data Services 載入至 Excel，並將其發行回 Master Data Services。
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec0059471e10db953db26cfdd4c7b620a3378316
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074593"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257790"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，您可以將資料的篩選清單從 MDS 載入 Excel 中，以便將它當做任何其他資料使用。 完成之後，您可以將資料發行回 MDS，以便進行集中儲存。 安全性會決定您可以檢視和更新的資料。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074593"
 ## <a name="downloads"></a>下載 
 >*  從[此 Microsoft 下載中心頁面](https://www.microsoft.com/download/details.aspx?id=56838)下載適用於 Excel 的 SQL Server 2016 SP2 Master Data Services 增益集。 
 >* 從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836867)下載適用於 SQL Server 2017 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。
->*  Master Data Services 增益集下載適用於 Excel 的 SQL Server 2019 ctp[這個 Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=2086948)。 
+>*  從 [這個 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=2086948)下載 SQL SERVER 2019 CTP 的適用於 Excel 的 Master Data Services 增益集。 
  
   
 ## <a name="terms"></a>詞彙  
@@ -42,17 +43,17 @@ ms.locfileid: "68074593"
   
 -   *model* 是指資料的容器。 您可以建立這些容器的版本，而且通常最新版本就是最近使用的版本。 如需詳細資訊，請參閱[模型 &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)。  
   
--   *entity* 是指資料的清單。 您可以將實體視為資料庫中的資料表。  例如，Color 實體可能會包含色彩的清單。 如需詳細資訊，請參閱[實體 &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)。  
+-   *entity* 是指資料的清單。 您可以將實體視為資料庫中的資料表。 **** 例如，Color 實體可能會包含色彩的清單。 如需詳細資訊，請參閱[實體 &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)。  
   
--   「成員」  是指資料列 (記錄)。 每個實體都包含成員。 **Blue**是成員的範例。 如需詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
+-   「成員」 ** 是指資料列 (記錄)。 每個實體都包含成員。 **Blue**是成員的範例。 如需詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
   
--   *attribute* 是指資料行。 每個成員都具有屬性。 例如，**Blue** 成員的 **Code** 屬性是 **B**。如需屬性的詳細資訊，請參閱[屬性 &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)。  
+-   *attribute* 是指資料行。 每個成員都具有屬性。 例如， **Blue**成員的**Code**屬性是**B**。如需屬性的詳細資訊，請參閱[Master Data Services&#41;的屬性 &#40;](../../master-data-services/attributes-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 建立  儲存機制的連接。|[連接到 MDS 存放庫 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 建立  儲存機制的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |將 MDS 管理的資料載入 Excel 中。|[將資料從 Master Data Services 匯出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |儲存捷徑查詢，讓您日後可以用來開啟目前顯示之 MDS 管理的資料。|[儲存捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |與其他人共用捷徑。|[以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
@@ -73,7 +74,7 @@ ms.locfileid: "68074593"
   
 -   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

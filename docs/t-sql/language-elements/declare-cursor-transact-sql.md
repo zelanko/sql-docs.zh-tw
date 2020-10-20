@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecef1c20be4350646cb98fb96db8152074a97dda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a75da0d64957e87997e65fd135c332065a5fa31
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445498"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196629"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,8 +194,8 @@ FETCH NEXT FROM vend_cursor;
 ```sql  
 SET NOCOUNT ON;  
   
-DECLARE @vendor_id int, @vendor_name nvarchar(50),  
-    @message varchar(80), @product nvarchar(50);  
+DECLARE @vendor_id INT, @vendor_name NVARCHAR(50),  
+    @message VARCHAR(80), @product NVARCHAR(50);  
   
 PRINT '-------- Vendor Products Report --------';  
   

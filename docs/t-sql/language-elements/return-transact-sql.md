@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 837c84bbeda46bf78d670124cc2d33f820fe9891
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417084"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195518"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88417084"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 RETURN [ integer_expression ]   
 ```  
   
@@ -68,7 +67,7 @@ RETURN [ integer_expression ]
 ### <a name="a-returning-from-a-procedure"></a>A. 從程序傳回  
  下列範例會顯示當執行 `findjobs` 時，如果未在參數中指定任何使用者名稱，`RETURN` 會在訊息傳給使用者畫面之後，使程序結束。 如果指定了使用者名稱，便會從適當的系統資料表中，擷取這位使用者在目前資料庫中所建立之所有物件的名稱。  
   
-```  
+```sql  
 CREATE PROCEDURE findjobs @nm sysname = NULL  
 AS   
 IF @nm IS NULL  
@@ -88,10 +87,10 @@ ELSE
 ### <a name="b-returning-status-codes"></a>B. 傳回狀態碼  
  下列範例會檢查指定連絡人之識別碼的州/省份。 如果是華盛頓州 (`WA`)，傳回的狀態就是 `1`。 任何其他狀況 (`2` 值不是 `WA`，或 `StateProvince` 沒有相符的資料列) 都會傳回 `ContactID`。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PROCEDURE checkstate @param varchar(11)  
+CREATE PROCEDURE checkstate @param VARCHAR(11)  
 AS  
 IF (SELECT StateProvince FROM Person.vAdditionalContactInfo WHERE ContactID = @param) = 'WA'  
     RETURN 1  
@@ -102,8 +101,8 @@ GO
   
  下列範例會顯示執行 `checkstate` 的傳回狀態。 首先顯示在華盛頓州的連絡人，其次顯示不在華盛頓州的連絡人，之後，顯示無效的連絡人。 您必須先宣告 `@return_status` 本機變數，才能使用它。  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '2';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -121,8 +120,8 @@ GO
   
  指定不同的連絡號碼來重新執行查詢。  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '6';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -139,8 +138,8 @@ GO
   
  指定另一個連絡號碼來重新執行查詢。  
   
-```  
-DECLARE @return_status int  
+```sql  
+DECLARE @return_status INT  
 EXEC @return_status = checkstate '12345678901';  
 SELECT 'Return Status' = @return_status;  
 GO  

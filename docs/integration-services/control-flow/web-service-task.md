@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477900"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196002"
 ---
 # <a name="web-service-task"></a>Web 服務工作
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477900"
   
  WSDL 檔案會列出 Web 服務提供的方法、方法需要的輸入參數、方法傳回的回應，以及如何與 Web 服務通訊。  
   
- 如果方法使用輸入參數，則 Web 服務工作需要參數值。 例如，某個 Web 服務方法依據您的身高建議應購買之滑雪板的長度，則該方法需要在輸入參數中提交您的身高。 參數值可由在工作中定義的字串，或是由在工作或父容器範圍中定義的變數提供。 使用變數的優點就是可讓您利用封裝組態或指令碼，以動態方式更新參數值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[封裝組態](../../integration-services/packages/package-configurations.md)。  
+ 如果方法使用輸入參數，則 Web 服務工作需要參數值。 例如，某個 Web 服務方法依據您的身高建議應購買之滑雪板的長度，則該方法需要在輸入參數中提交您的身高。 參數值可由在工作中定義的字串，或是由在工作或父容器範圍中定義的變數提供。 使用變數的優點就是可讓您利用封裝組態或指令碼，以動態方式更新參數值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[封裝組態](../packages/legacy-package-deployment-ssis.md)。  
   
  許多 Web 服務方法都不使用輸入參數。 例如，某個 Web 服務方法取得出生於目前月份之總統的姓名，該方法不需要輸入參數，因為 Web 服務可以從本機決定目前月份。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477900"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>以程式設計方式設定 Web 服務工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列其中一個主題：  
@@ -93,7 +93,7 @@ ms.locfileid: "88477900"
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題：** [HTTP 連接管理員](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 連接管理員編輯器 &#40;伺服器頁面&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **相關主題：** [HTTP 連接管理員](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 連接管理員編輯器 &#40;伺服器頁面&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  鍵入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **(...)** 並找出此檔案。  
@@ -176,13 +176,13 @@ ms.locfileid: "88477900"
  **檔案**  
  在清單中選取檔案連線管理員，或按一下 \<**New Connection...**> 以建立新的連線管理員。  
   
- **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  
  在清單中選取變數，或按一下 \<**New Variable...**> 以建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>相關內容  
- 影片，[如何：technet.microsoft.com 上的影片：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=259642) \(英文\)。  
+ 影片，[如何：technet.microsoft.com 上的影片：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)](/previous-versions/dn912438(v=msdn.10)) \(英文\)。

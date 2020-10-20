@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ebed637551110df71897dc17afe0c1a959eb0e5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425630"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194584"
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
 
@@ -52,7 +52,7 @@ ms.locfileid: "88425630"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -99,5 +99,4 @@ ms.locfileid: "88425630"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
  [樞紐轉換](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
-  
   

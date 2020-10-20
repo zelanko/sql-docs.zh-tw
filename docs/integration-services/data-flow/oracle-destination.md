@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430780"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195360"
 ---
 # <a name="oracle-destination"></a>Oracle 目的地
 
@@ -200,7 +200,7 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 **錯誤行為**
 
 選取 Oracle 來源應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。
-**相關小節**：[資料中的錯誤處理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**相關小節**：[資料中的錯誤處理](./error-handling-in-data.md?view=sql-server-2017)
 
 **截斷**
 

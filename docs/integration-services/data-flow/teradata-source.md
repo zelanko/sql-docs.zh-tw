@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484474"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194700"
 ---
 # <a name="connect-to-the-teradata-source"></a>連線到 Teradata 來源
 
@@ -31,7 +31,7 @@ Teradata 來源使用下列方法從 Teradata 資料庫擷取資料：
 
 您可以記錄 Teradata 來源對 Teradata 平行傳輸器 (TPT) API 所執行的呼叫。 若要這樣做，請啟用套件記錄，然後在套件層級選取 [診斷]**** 事件。
 
-您可以透過啟用開放式資料庫連接 (ODBC) 驅動程式管理員追蹤，記錄 Teradada 來源對 Teradata ODBC 驅動程式所執行的 ODBC 呼叫。 如需詳細資訊，請參閱[如何使用 ODBC 資料來源系統管理員產生 ODBC 追蹤](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options) \(部分機器翻譯\)。
+您可以透過啟用開放式資料庫連接 (ODBC) 驅動程式管理員追蹤，記錄 Teradada 來源對 Teradata ODBC 驅動程式所執行的 ODBC 呼叫。 如需詳細資訊，請參閱[如何使用 ODBC 資料來源系統管理員產生 ODBC 追蹤](../../odbc/admin/setting-tracing-options.md) \(部分機器翻譯\)。
 
 ## <a name="parallelism"></a>平行處理原則
 

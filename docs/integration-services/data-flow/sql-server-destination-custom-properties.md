@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 06ca0836b3c588e8b598ae60b47e540562f18802
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de7b5eb166ab200a0a5217cb4c95eed7216520d5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425790"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194753"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目的地自訂屬性
 
@@ -49,6 +49,5 @@ ms.locfileid: "88425790"
  如需詳細資訊，請參閱 [SQL Server 目的地](../../integration-services/data-flow/sql-server-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

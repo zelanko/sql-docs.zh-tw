@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088737"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115795"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>針對 Linux 上的 SQL Server 進行疑難排解
 
@@ -42,11 +42,11 @@ ms.locfileid: "88088737"
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > 此技術的其中一個例外與 Azure VM 相關。 針對 Azure VM，請[在 Azure 入口網站中尋找 VM 的公用 IP](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)。
+   > 此技術的其中一個例外與 Azure VM 相關。 針對 Azure VM，請[在 Azure 入口網站中尋找 VM 的公用 IP](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)。
 
 - 如果適用，請確認您已在防火牆上開啟 SQL Server 連接埠 (預設值為 1433)。
 
-- 針對 Azure VM，請確認您有[適用於預設 SQL Server 連接埠的網路安全性群組規則](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)。
+- 針對 Azure VM，請確認您有[適用於預設 SQL Server 連接埠的網路安全性群組規則](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)。
 
 - 確認使用者名稱和密碼未包含任何錯字、額外空格或不正確的大小寫。
 
@@ -90,7 +90,7 @@ ms.locfileid: "88088737"
    ```
 
 > [!TIP]
-> 如需更多 Docker 疑難排解秘訣，請參閱[針對 SQL Server Docker 容器進行疑難排解](sql-server-linux-configure-docker.md#troubleshooting)。
+> 如需更多 Docker 疑難排解秘訣，請參閱[針對 SQL Server Docker 容器進行疑難排解](./sql-server-linux-docker-container-troubleshooting.md)。
 
 ## <a name="access-the-log-files"></a>存取記錄檔
    
@@ -109,7 +109,7 @@ SQL Server 引擎在 Linux 和 Docker 安裝中都會記錄至 /var/opt/mssql/lo
    ```
 ## <a name="extended-events"></a>擴充事件
 
-透過 SQL 命令可以查詢擴充事件。  如需有關擴充事件的詳細資訊，可以在[這裡](https://technet.microsoft.com/library/bb630282.aspx)找到：
+透過 SQL 命令可以查詢擴充事件。  如需有關擴充事件的詳細資訊，可以在[這裡](../relational-databases/extended-events/extended-events.md)找到：
 
 ## <a name="crash-dumps"></a>損毀傾印 
 
@@ -197,7 +197,7 @@ SQL Server 引擎在 Linux 和 Docker 安裝中都會記錄至 /var/opt/mssql/lo
 
 - [查詢存放區](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [系統動態管理檢視 (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [SQL Server Management Studio 中的效能儀表板](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [SQL Server Management Studio 中的效能儀表板](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>常見問題
 
