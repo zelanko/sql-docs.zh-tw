@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: 2a9c81bf046d30bd997409389ca91d213a01437f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d0a90d6346e4d56516f452b949449b2483fada7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893077"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115361"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 效能功能逐步解說
 
@@ -158,7 +158,7 @@ SQL Server 支援原生編譯預存程序，可存取經記憶體最佳化的資
 如需記憶體內部 OLTP 的詳細資訊，請參閱下列主題：
 
 - [快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
-- [移轉至 In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
+- [移轉至 In-Memory OLTP](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
 - [使用記憶體最佳化加快暫存資料表與資料表變數的速度](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [監視與疑難排解記憶體使用量](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [In-Memory OLTP (記憶體中最佳化)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

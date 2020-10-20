@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425620"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194606"
 ---
 # <a name="union-all-transformation"></a>聯集全部轉換
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425620"
 ## <a name="configuration-of-the-union-all-transformation"></a>聯集全部轉換的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱 [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱 [通用屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
  如需有關如何設定屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -68,5 +68,4 @@ ms.locfileid: "88425620"
   
 ## <a name="related-tasks"></a>相關工作  
  [使用聯集全部轉換來合併資料](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   

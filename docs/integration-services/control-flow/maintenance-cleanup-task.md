@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b24e6085e255e6e6a66d499b6c23e4cba91cf7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0994268d1e6ba95e7f4f3bc1bbe3875ec4f57358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392544"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197182"
 ---
 # <a name="maintenance-cleanup-task"></a>維護清除工作
 
@@ -47,10 +47,9 @@ ms.locfileid: "88392544"
 -   [維護清除工作 &#40;維護計畫&#41;](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
-  
   

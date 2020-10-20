@@ -22,12 +22,12 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ceef62e268cc34f036423b2e55b56152d24ea2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8bf1b3c571806aaaca17894c52c4673709074261
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361324"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187878"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88361324"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 NULLIF ( expression , expression )  
 ```  
   

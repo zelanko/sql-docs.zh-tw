@@ -16,16 +16,16 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809527"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006221"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 空間資料有兩種類型： **geometry** 資料類型支援平面或 Euclidean (扁平表面) 資料。 **geometry** 資料類型同時符合「開放式地理空間協會 (Open Geospatial Consortium, OGC) 的 SQL 簡單特徵規格」1.1.0 版，且符合 SQL MM (ISO 標準)。
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 **geography** 資料類型，可儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。

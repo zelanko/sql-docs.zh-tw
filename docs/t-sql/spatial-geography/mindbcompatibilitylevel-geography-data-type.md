@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b10c1e637dbfbf6dbff923b212372aec48a22f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfce4111cfcfb296689754e18aeea37878636543
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422402"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038081"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,6 +94,5 @@ END
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server Database Engine 回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [SQL Server Database Engine 回溯相容性](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
   

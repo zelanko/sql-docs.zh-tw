@@ -20,12 +20,12 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 873bff9e761f83f0b15493810d0c684afa189748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 808fbbb25bbd91071e4274d29133da11e420d8fc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459234"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196800"
 ---
 # <a name="unary-operators---negative"></a>一元運算子 - 負
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "88459234"
 ### <a name="a-setting-a-variable-to-a-negative-value"></a>A. 將變數設為負值  
  下列範例會將變數設為負值。  
   
-```  
+```sql 
 USE tempdb;  
 GO  
-DECLARE @MyNumber decimal(10,2);  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = -123.45;  
 SELECT @MyNumber AS NegativeValue;  
 GO  
@@ -85,14 +85,13 @@ NegativeValue
 ### <a name="b-changing-a-variable-to-a-negative-value"></a>B. 將變數變更為負值  
  下列範例會將變數改成負值。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = 5;  
 SELECT @Num1 AS VariableValue, -@Num1 AS NegativeValue;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -111,7 +110,7 @@ VariableValue NegativeValue
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 傳回正常數的負值  
  下列範例會傳回正常數的負值。  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - 17 FROM DimEmployee;  
@@ -126,7 +125,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 傳回負常數的正值  
  下列範例會傳回負常數的正值。  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
@@ -141,7 +140,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 傳回資料行的負值  
  下列範例會傳回 `dimEmployee` 資料表中每一位員工 `BaseRate` 值的負值。  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT - BaseRate FROM DimEmployee;  

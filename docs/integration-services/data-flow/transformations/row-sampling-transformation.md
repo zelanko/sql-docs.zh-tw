@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1520897196180ca3d181e76120fe35c6b81e45db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d84ebaadb1bee24c400d8fde34eae2e3d422774a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430640"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195291"
 ---
 # <a name="row-sampling-transformation"></a>資料列取樣轉換
 
@@ -56,7 +56,7 @@ ms.locfileid: "88430640"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -82,5 +82,4 @@ ms.locfileid: "88430640"
   
 ## <a name="related-tasks"></a>相關工作  
  [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
-  
   

@@ -26,12 +26,12 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 795030b16c25b9bf97795e16df4c03cfb7bbea15
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0b0c259abda86eef45cc241453caae074d845c3e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805868"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195507"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -114,10 +114,10 @@ ROLLBACK { TRAN | TRANSACTION }
 ```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int);  
+CREATE TABLE ValueTable ([value] INT);  
 GO  
   
-DECLARE @TransactionName varchar(20) = 'Transaction1';  
+DECLARE @TransactionName VARCHAR(20) = 'Transaction1';  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  

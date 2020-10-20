@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5238049681cfb8ec71ea27a444a4e41bf7c64703
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495574"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196384"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈)
 
@@ -68,7 +68,7 @@ ms.locfileid: "88495574"
 ODBC 驅動程式未列在資料來源的下拉式清單中。 若要使用 ODBC 驅動程式連線，請從選取 **.NET Framework Data Provider for ODBC** 作為資料來源開始。 此提供者作用為 ODBC 驅動程式的包裝函式。
 
 > [!TIP]
-> **取得最新的驅動程式**. 下載 [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql)。
+> **取得最新的驅動程式**. 下載 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
 以下是您選取 .NET Framework Data Provider for ODBC 之後立即看到的一般畫面。
 
@@ -120,8 +120,8 @@ SQL Server 的名稱。
 
 > [!IMPORTANT]
 > SQL Server 2012 之後的 SQL Server 版本不支援 Microsoft OLE DB Provider for SQL Server 和 SQL Server Native Client。 請改用 ODBC 驅動程式。 若要深入了解如何轉換至 ODBC 驅動程式，請參閱下列部落格文章。
->   -   [Microsoft 正在調整 ODBC 進行原生關聯式資料存取](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
->   -   [介紹新 Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
+>   -   [Microsoft 正在調整 ODBC 進行原生關聯式資料存取](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)
+>   -   [介紹新 Microsoft ODBC Drivers for SQL Server](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server)
 
 ## <a name="other-data-providers-and-more-info"></a>其他資料提供者和其他資訊
 如需如何使用這裡未列出的資料提供者連線至 SQL Server 的資訊，請參閱 [SQL Server 連接字串](https://www.connectionstrings.com/sql-server/)。 此協力廠商網站也會包含此頁面上所述之資料提供者和連線參數的詳細資訊。
@@ -129,4 +129,3 @@ SQL Server 的名稱。
 ## <a name="see-also"></a>另請參閱
 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

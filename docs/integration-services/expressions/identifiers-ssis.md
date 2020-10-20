@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34d66b1dd07bfc167c71c97de51474cc6c63dd2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c73fe0f45976cf9beade00d2a02abd31dead7419
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391224"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194530"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
 
@@ -106,7 +106,7 @@ ms.locfileid: "88391224"
 ## <a name="unique-variable-names"></a>唯一變數名稱  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援自訂變數並提供一組系統變數。 自訂變數預設屬於 **使用者** 命名空間，而系統變數則屬於 **系統** 命名空間。 您可以為自訂變數建立額外的命名空間，並更新命名空間的名稱，以符合應用程式的需要。 運算式產生器會列出所有命名空間中適用的變數。  
   
- 所有變數都有範圍且屬於命名空間。 變數擁有封裝範圍，或封裝中容器或工作的範圍。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的運算式產生器只會列出範圍內的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 所有變數都有範圍且屬於命名空間。 變數擁有封裝範圍，或封裝中容器或工作的範圍。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的運算式產生器只會列出範圍內的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
  運算式中使用的變數必須有唯一名稱，運算式評估工具才能正確評估運算式。 如果封裝使用多個同名的變數，則其命名空間必須有所區別。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供由兩個冒號 (::) 組成的命名空間解析運算子，可用於指出變數所屬的命名空間。 例如，下列運算式使用兩個名稱為 **Count**的變數；其中一個屬於 **使用者** 命名空間，另一個屬於 **MyNamespace** 命名空間。  
   
@@ -127,5 +127,4 @@ ms.locfileid: "88391224"
   
 ## <a name="related-content"></a>相關內容  
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=746575)  
-  
   

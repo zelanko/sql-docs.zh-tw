@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: cf3289d9d233da56c22739d3912045c2cdaa7554
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c80562f844c096bd836d9db8f57ae408c6602d3d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476176"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196203"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>將保存的記錄緩衝區新增至資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,6 +83,6 @@ ALTER DATABASE <MyDB> SET MULTI_USER;
   
 ## <a name="next-steps"></a>接下來的步驟
 
-- [How It Works (It Just Runs Faster):Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) (運作方式 (只是執行速度較快)：NVDIMM 上的非揮發性記憶體 SQL Server 結尾記錄快取)
+- [How It Works (It Just Runs Faster):Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm) (運作方式 (只是執行速度較快)：NVDIMM 上的非揮發性記憶體 SQL Server 結尾記錄快取)
 - [Data exposed:Latency and Durability with SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016) (已公開的資料：SQL Server 2016 的延遲和持久性)
-- [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (使用 Windows Server 2016/SQL Server 2016 SP1 中的儲存類別記憶體加速交易認可延遲)
+- [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1) (使用 Windows Server 2016/SQL Server 2016 SP1 中的儲存類別記憶體加速交易認可延遲)

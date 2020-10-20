@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbda2ed08797343b328cf5764a5e73dc9b418e3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457001"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195837"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
 
@@ -93,7 +93,7 @@ ms.locfileid: "88457001"
 ### <a name="event-handlers-tab"></a>事件處理常式索引標籤  
  您可以在 [事件處理常式]  索引標籤的設計介面上，建構封裝中的事件。請在 [事件處理常式]  索引標籤上，選取要建立事件處理常式的封裝或封裝物件，然後選取要與事件處理常式產生關聯的事件。 事件處理常式具有控制流程和選擇性的資料流程。  
   
- 如需詳細資訊，請參閱 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)(將事件處理常式加入封裝中)。  
+ 如需詳細資訊，請參閱 [Add an Event Handler to a Package](./integration-services-ssis-event-handlers.md)(將事件處理常式加入封裝中)。  
   
 ### <a name="package-explorer-tab"></a>封裝總管索引標籤  
  封裝可能相當複雜，其中包括許多工作、連接管理員、變數和其他元素等。 封裝總管檢視可讓您查看封裝元素的完整清單。  
@@ -108,7 +108,7 @@ ms.locfileid: "88457001"
 #### <a name="connection-managers-area"></a>連接管理員區域  
  您可以在 [連線管理員]  區域中，加入及修改封裝所使用的連線管理員。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含可以連接到各種不同的資料來源 (例如文字檔、OLE DB 資料庫及 .NET 提供者) 的連線管理員。  
   
- 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](./connection-manager/integration-services-ssis-connections.md)。  
  
 ## <a name="control-flow-tab"></a>控制流程索引標籤
 使用 **設計師的** [控制流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。  
@@ -191,5 +191,4 @@ ms.locfileid: "88457001"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 使用者介面](../integration-services/integration-services-user-interface.md)  
-  
   

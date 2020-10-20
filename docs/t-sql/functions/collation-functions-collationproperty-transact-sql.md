@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116132"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035931"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>定序函式 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ COLLATIONPROPERTY( collation_name , property )
   
 |屬性名稱|描述|  
 |---|---|
-|**CodePage**|定序的非 Unicode 字碼頁。 這是用於 **varchar** 資料的字元集。 請參閱 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) (附錄 G DBCS/Unicode 對應資料表) 和 [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) (附錄 H 字碼頁) 來翻譯這些值，以及查看其字元對應。<br /><br />基底資料類型：**int**|  
-|**LCID**|定序的 Windows 地區設定識別碼。 這是用於排序與比較規則的文化特性。 請參閱 [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) (LCID 結構)，以翻譯這些值 (您必須先轉換成 **varbinary**)。<br /><br />基底資料類型：**int**|  
+|**CodePage**|定序的非 Unicode 字碼頁。 這是用於 **varchar** 資料的字元集。 請參閱 [Appendix G DBCS/Unicode Mapping Tables](/previous-versions/cc194886(v=msdn.10)) (附錄 G DBCS/Unicode 對應資料表) 和 [Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10)) (附錄 H 字碼頁) 來翻譯這些值，以及查看其字元對應。<br /><br />基底資料類型：**int**|  
+|**LCID**|定序的 Windows 地區設定識別碼。 這是用於排序與比較規則的文化特性。 請參閱 [LCID Structure](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8) (LCID 結構)，以翻譯這些值 (您必須先轉換成 **varbinary**)。<br /><br />基底資料類型：**int**|  
 |**ComparisonStyle**|Windows 的定序比較樣式。 若是二進位定序，會傳回 0 - (\_BIN) 及 (\_BIN2) 兩者皆然 - 以及區分所有屬性時 - (\_CS\_AS\_KS\_WS) 和 (\_CS\_AS\_KS\_WS\_SC) 和 (\_CS\_AS\_KS\_WS\_VSS)。 位元遮罩值：<br /><br /> 忽略大小寫：1<br /><br /> 忽略腔調字：2<br /><br /> 忽略假名：65536<br /><br /> 忽略寬度：131072<br /><br /> 注意：variation-selector-sensitive (\_VSS) 選項仍不會在此值中表示，即使它會影響比較行為也是一樣。<br /><br />基底資料類型：**int**|  
 |**版本**|定序版本。 傳回值介於 0 到 3 之間的值。<br /><br /> 名稱含有 "140" 的定序) 都會傳回 3。<br /><br /> 名稱含有 "100" 的定序) 都會傳回 2。<br /><br /> 名稱含有 "90" 的定序) 都會傳回 1。<br /><br /> 所有其他定序都會傳回 0。<br /><br />基底資料型別：**tinyint**|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>請參閱
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

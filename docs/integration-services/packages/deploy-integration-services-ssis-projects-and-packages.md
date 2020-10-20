@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425220"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196365"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
 
@@ -95,7 +95,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 
 如需本節中所述錯誤及 SSIS 服務帳戶所需權限的詳細資訊，請參閱下列部落格文章：
  
-- [System.ComponentModel.Win32Exception: 部署 SSIS 專案時，用戶端沒有這項特殊權限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: 部署 SSIS 專案時，用戶端沒有這項特殊權限](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -114,7 +114,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
     -   若是在舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中建立專案，在您於 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中開啟專案檔案後，請將專案轉換為專案部署模型。  
   
         > [!NOTE]  
-        >  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要建立專案中的封裝可以共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+        >  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要建立專案中的封裝可以共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))。  
   
          根據您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 還是從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [Integration Services 專案轉換精靈]****，此精靈會執行不同的轉換工作。  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   [Integration Services 專案轉換精靈]**** 會將專案轉換為專案部署模型。  
   
 > [!NOTE]  
->  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要在專案中建立可以透過封裝共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+>  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要在專案中建立可以透過封裝共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))。  
   
  **您想要做什麼事？**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  選擇性地輸入專案描述。  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> 設定 [更新執行封裝工作] 頁面上的選項  
- 更新執行封裝工作包含在封裝中，以使用專案參考。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
+ 更新執行封裝工作包含在封裝中，以使用專案參考。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../control-flow/execute-package-task.md)＞。  
   
  **父封裝**  
  列出使用「執行封裝」工作執行子封裝之封裝的名稱。  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  在專案儲存到 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中之前，不會儲存專案轉換。  
   
  **儲存報表**  
- 按一下可將專案轉換的摘要儲存在 .xml 檔案中。  
+ 按一下可將專案轉換的摘要儲存在 .xml 檔案中。

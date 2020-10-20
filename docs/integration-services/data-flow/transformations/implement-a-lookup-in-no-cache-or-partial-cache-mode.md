@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430670"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194164"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
 
@@ -108,11 +108,10 @@ ms.locfileid: "88430670"
     > [!NOTE]  
     >  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器]**** 的 [連接]**** 頁面上所指定的資料表名稱。  
   
-13. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+13. 若要設定錯誤輸出，按一下 **[錯誤輸出]** 頁面，然後設定錯誤處理選項。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](./lookup-transformation.md)。  
   
 14. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468040"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038342"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88468040"
 |[字串函式](string-functions-transact-sql.md)|執行作業來處理字串 (**char** 或 **varchar**) 輸入值，並傳回字串或數值。|  
 |[系統函式](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|執行作業和傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的值、物件和設定的相關資訊。|  
 |[系統統計函式](system-statistical-functions-transact-sql.md)|傳回系統的統計資訊。|  
-|[文字和影像函式](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|執行作業來處理文字或影像輸入值或資料行，以及傳回值的相關資訊。|  
+|[文字和影像函式](./text-and-image-functions-textptr-transact-sql.md)|執行作業來處理文字或影像輸入值或資料行，以及傳回值的相關資訊。|  
   
 ## <a name="function-determinism"></a>函數決定性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內建函數可能具決定性或不具決定性。 如果每當利用一組特定輸入值來呼叫函數時，函數都會傳回相同的值，這些函數便是具決定性。 如果每次呼叫時都可能傳回不同結果，即便使用同一組特定的輸入值也是如此，這些函數便是不具決定性。 如需詳細資訊，請參閱[確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
@@ -83,5 +83,4 @@ ms.locfileid: "88468040"
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [使用預存程序 &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

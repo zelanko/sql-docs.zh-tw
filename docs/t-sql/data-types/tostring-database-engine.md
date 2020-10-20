@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5f12eefb4f84b7ee936bfcbd736c3d22ba9162c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d1460c83488f7ba708f737e7c9bb7bd46819152
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459928"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037461"
 ---
 # <a name="tostring-database-engine"></a>ToString (Database Engine)
 
@@ -121,8 +121,7 @@ this.ToString()
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[Hierarchyid 資料類型方法參考](./hierarchyid-data-type-method-reference.md)  
 [階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

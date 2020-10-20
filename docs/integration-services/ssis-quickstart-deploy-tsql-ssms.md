@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495445"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195189"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 部署 SSIS 專案
 
@@ -28,7 +28,7 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 ## <a name="prerequisites"></a>必要條件
 
-開始之前，請確定您有最新版的 SQL Server Management Studio。 若要下載 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+開始之前，請確定您有最新版的 SQL Server Management Studio。 若要下載 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。
 
 ## <a name="supported-platforms"></a>支援的平台
 
@@ -103,4 +103,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
-    - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 
+    - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md)

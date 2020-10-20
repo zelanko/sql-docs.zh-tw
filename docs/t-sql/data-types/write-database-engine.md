@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f62ec1073df44ff755277e60bd61906c25ed4723
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: eb08d6f4d10a5cdf0047022185e24828b3ae37b5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116122"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037449"
 ---
 # <a name="write-database-engine"></a>Write (Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,6 +61,5 @@ byte[] encoding = stream.ToArray();
 [Read &#40;資料庫引擎&#41;](../../t-sql/data-types/read-database-engine.md)  
 [ToString &#40;資料庫引擎&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
-  
+[Hierarchyid 資料類型方法參考](./hierarchyid-data-type-method-reference.md)
   

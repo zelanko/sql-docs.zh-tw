@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17650c2fd72996ea0d8f0eb080fbc170d779fdbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0af6a36d456b52791f2cafccc9c017f644893975
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495711"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194634"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡資料分佈器轉換
 
@@ -42,6 +42,5 @@ ms.locfileid: "88495711"
  請注意，如果 SSIS 封裝的瓶頸是由於資料可從來源讀取的速度，則 BDD 元件對於提升效能並沒有幫助。 如果 SSIS 封裝的瓶頸是因為目的地不支援平行處理原則，則 BDD 沒有用；不過，您可以平行執行所有轉換，並使用聯集全部轉換結合 BDD 轉換之不同輸出路徑傳出的輸出資料，再將資料傳送至目的地。  
   
 > [!IMPORTANT]  
->  如需使用轉換的示範簡報，請參閱 TechNet Library 上的 [平衡型資料分配器影片](https://go.microsoft.com/fwlink/?LinkID=226278) 。  
-  
+>  如需使用轉換的示範簡報，請參閱 TechNet Library 上的 [平衡型資料分配器影片](/previous-versions/dn912438(v=msdn.10)) 。  
   

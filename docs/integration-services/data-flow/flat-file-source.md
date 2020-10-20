@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c52bae62d70212ea735ec9d0d7eb25cf8af76551
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477830"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197094"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
 
@@ -50,7 +50,7 @@ ms.locfileid: "88477830"
     > [!NOTE]  
     >  「一般檔案」來源使用的「一般檔案」連接管理員，必須設定成使用分隔符號格式將零長度字串解譯為 Null。 如果連接管理員使用固定寬度或不齊右格式，則由空格組成的資料就無法解譯為 Null 值。  
   
- 一般檔案來源輸出中的輸出資料行包含 FastParse 屬性。 FastParse 可指定資料行要使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供之速度較快，但不區分地區設定的快速剖析常式，或要使用會區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。  
+ 一般檔案來源輸出中的輸出資料行包含 FastParse 屬性。 FastParse 可指定資料行要使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供之速度較快，但不區分地區設定的快速剖析常式，或要使用會區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](./parsing-data.md) 和 [標準剖析](./parsing-data.md)。  
   
  輸出資料行也包含 UseBinaryFormat 屬性。 您可使用此屬性在檔案中實作二進位資料的支援，例如具有壓縮之十進位格式的資料。 UseBinaryFormat 預設為 [false]****。 如果您想要使用二進位格式，請將 UseBinaryFormat 設為 [true]****，並將輸出資料行上的資料類型設為 **DT_BYTES**。 當您執行這個動作時，一般檔案來源會略過資料轉換，並將資料直接傳遞到輸出資料行。 然後您就可以使用「衍生的資料行」或「資料轉換」等轉換，將 **DT_BYTES** 資料轉換成不同的資料類型，或者您可以在「指令碼」轉換中撰寫自訂指令碼來解譯資料。 您也可以撰寫自訂的資料流程元件來解譯資料。 如需您可將 **DT_BYTES** 轉換為何種資料類型的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "88477830"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -138,5 +138,4 @@ ms.locfileid: "88477830"
 ## <a name="see-also"></a>另請參閱  
  [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
-  
   

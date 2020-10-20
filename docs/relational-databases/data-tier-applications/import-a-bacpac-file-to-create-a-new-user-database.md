@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412434"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195580"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412434"
   
  **針對 Azure SQL Database：**  
   
- - **[匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 提供使用 Azure 入口網站、PowerShell、SSMS 或 SqlPackage 的逐步指示。  
- - 請參閱 **[SQL Database 選項和效能︰了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** ，以取得不同服務層的詳細外觀。  
+ - **[匯入 BACPAC 檔案以建立新的 Azure SQL Database](/azure/azure-sql/database/database-import)** 提供使用 Azure 入口網站、PowerShell、SSMS 或 SqlPackage 的逐步指示。  
+ - 請參閱 **[SQL Database 選項和效能︰了解每個服務層的可用項目](/azure/azure-sql/database/purchasing-models)** ，以取得不同服務層的詳細外觀。  
 
 ### <a name="validation-page"></a>驗證頁面  
  您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
@@ -144,8 +144,7 @@ ms.locfileid: "88412434"
  按一下 [關閉]**** 以關閉精靈。  
   
 ## <a name="see-also"></a>另請參閱  
-[匯入 BACPAC 檔案以建立新的 Azure SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[匯入 BACPAC 檔案以建立新的 Azure SQL 資料庫](/azure/azure-sql/database/database-import)  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [匯出資料層應用程式](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

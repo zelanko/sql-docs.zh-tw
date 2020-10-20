@@ -11,15 +11,15 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6e73e4fbfbef45cb55f75ca193cb462ae1abeb5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868169"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006329"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **CurvePolygon** 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  
   
 > [!IMPORTANT]  

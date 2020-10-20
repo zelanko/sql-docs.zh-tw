@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 240d0b023b92c99c59c62a4fcaab1185e41de9f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 328c7feba7e11a6ef59e12ac499ef8522cb9a7de
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467602"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196789"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(不小於) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88467602"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 expression !< expression  
 ```  
   

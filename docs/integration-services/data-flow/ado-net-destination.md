@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412744"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194870"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
 
@@ -33,7 +33,7 @@ ms.locfileid: "91412744"
 
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
   
- 您可使用 ADO NET 目的地以連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的詳細資訊，請參閱[一般指導方針與限制 (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 您可使用 ADO NET 目的地以連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的詳細資訊，請參閱[一般指導方針與限制 (Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100))。  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO NET 目的地疑難排解  
  您可以記錄 ADO NET 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 ADO NET 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ADO NET 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "91412744"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO NET 自訂屬性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "91412744"
   
  您可使用 .NET Data Provider for SQL Server (SqlClient) 連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果您選取 [盡可能使用大量插入]  ，並將 [錯誤]  選項設定為 [重新導向資料列]  ，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤]  選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
+ 如果您選取 [盡可能使用大量插入]  ，並將 [錯誤]  選項設定為 [重新導向資料列]  ，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤]  選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;]()。  
   
 > [!NOTE]
 >  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您就必須使用執行 SQL 工作，在 ADO NET 目的地前後啟用及停用 IDENTITY_INSERT 陳述式。 (識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可將來源資料表中的明確值插入至目的地資料表中的識別欄位。)  
@@ -171,5 +171,4 @@ ms.locfileid: "91412744"
   
  **套用**  
  將錯誤處理選項套用至選取的資料格。  
-  
   

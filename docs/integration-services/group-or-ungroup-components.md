@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a83bebf92ddbf4e14d08518283547cb35594c290
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cd88383577694d5bef248baea5004056d239136
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430180"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195200"
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
 
@@ -66,6 +66,5 @@ ms.locfileid: "88430180"
   
 ## <a name="see-also"></a>另請參閱  
  [在控制流程中加入或刪除工作或容器](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用預設的優先順序條件約束來連接工作和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
-  
+ [使用預設的優先順序條件約束來連接工作和容器](./control-flow/precedence-constraints.md)  
   

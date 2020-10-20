@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 99dd26d2eec49212ae1603cc2acb8e7464dfbd2b
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 9f7914db08efd8a00e0fbcc0c69d6df0d9d8de26
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210603"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037096"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91210603"
 |**260**|列印擴充預存程序動態連結程式庫 (DLL) 的版本控制相關資訊。 如需 **GetXpVersion()** 的詳細資訊，請參閱[建立擴充預存程序](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)。<br /><br />**範圍：** 全域或工作階段|
 |**272**|當伺服器意外重新啟動或容錯移轉至次要伺服器時，停用識別預先配置以避免識別欄位的值不連貫。 請注意，識別快取可用來改善含有識別欄位之資料表上的 INSERT 效能。<br /><br />**注意：** 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，若要在資料庫層級完成這項作業，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 IDENTITY_CACHE 選項。<br /><br />**範圍**：只限全域|
 |**460**|將資料截斷訊息識別碼 [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 取代成訊息識別碼 [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4468101) \(機器翻譯\)。<br /><br />從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，若要在資料庫層級完成此作業，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 VERBOSE_TRUNCATION_WARNINGS 選項。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 和更新版本的組建。<br /><br />**注意：** 從資料庫相容性層級 150 開始，訊息識別碼 2628 是預設值，且此追蹤旗標沒有任何作用。<br /><br />**範圍**：全域或工作階段|
-|**610**|控制以最低限度方式插入索引資料表的行為。 從 SQL Server 2016 開始不需要此追蹤旗標，因為預設會針對索引資料表開啟最低限度記錄功能。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，當大量載入作業導致系統配置新的頁面時，如果符合最低限度記錄的其他所有先決條件，則依序填滿新頁面的所有資料列會以最低限度方式記錄。 插入到現有頁面 (未配置新頁面) 以維持索引順序的資料列仍會完整記錄，這些是載入期間因頁面分割而移除的資料列。 此外也必須開啟索引的 ALLOW_PAGE_LOCKS (預設為開啟) 以啟用最低限度記錄作業，因為配置期間需要頁面鎖定，也因此只會記錄頁面或範圍配置。 如需詳細資訊，請參閱[資料載入效能指南 ](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)) (英文)。<br /><br />**範圍**：全域或工作階段|
+|**610**|控制以最低限度方式插入索引資料表的行為。 從 SQL Server 2016 開始不需要此追蹤旗標，因為預設會針對索引資料表開啟最低限度記錄功能。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，當大量載入作業導致系統配置新的頁面時，如果符合最低限度記錄的其他所有先決條件，則依序填滿新頁面的所有資料列會以最低限度方式記錄。 插入到現有頁面 (未配置新頁面) 以維持索引順序的資料列仍會完整記錄，這些是載入期間因頁面分割而移除的資料列。 此外也必須開啟索引的 ALLOW_PAGE_LOCKS (預設為開啟) 以啟用最低限度記錄作業，因為配置期間需要頁面鎖定，也因此只會記錄頁面或範圍配置。 如需詳細資訊，請參閱[資料載入效能指南 ](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)) (英文)。<br /><br />**範圍**：全域或工作階段|
 |**634**|停用背景資料行存放區壓縮工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對含有未壓縮資料的資料行存放區索引資料列群組，定期執行 Tuple Mover 背景工作，一次壓縮一個資料列群組。<br /><br />壓縮資料行存放區可提升查詢效能，但同時也會耗用系統資源。 您可以手動控制資料行存放區的壓縮時間，方法是在您選擇的時間，停用追蹤旗標為 634 的背景壓縮工作，然後明確地叫用 ALTER INDEX...REORGANIZE 或 ALTER INDEX...REBUILD。<br /><br />**範圍：** 只限全域|
 |**652**|停用頁面預先提取掃描。 如果開啟追蹤旗標 652，在掃描取用這些資料庫頁面之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會再將資料庫頁面帶入緩衝集區。 如此一來，受益於頁面預先擷取功能的查詢就會展現較低效能。 <br /><br />**範圍**：全域或工作階段|
 |**661**|停用準刪除記錄移除程序。 追蹤旗標 661 會停用準刪除記錄移除程序。 準刪除記錄是刪除作業的結果。 當刪除記錄時，已刪除的記錄會保留為準刪除記錄。 稍後再由准刪除記錄移除程序清除刪除的記錄。 當停用此程序時，不會清除已刪除的記錄。 所以，不會釋出已刪除記錄所耗用的空間。 此行為會影響空間耗用量和掃描工作的效能。 如需詳細資訊，請參閱[准刪除清除程式指南](../../relational-databases/ghost-record-cleanup-process-guide.md) <br /><br />**範圍**：只限全域|
@@ -187,7 +187,7 @@ ms.locfileid: "91210603"
 |**9495**|在 INSERT...SELECT 作業的插入期間停用平行處理原則，這項規則同時套用至使用者和暫存資料表。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3180087) \(機器翻譯\)<br /><br />**範圍**：全域或工作階段| 
 |**9567**|在自動植入期間，針對 Always On 可用性群組啟用資料流的壓縮。 在自動植入期間，壓縮可以大幅縮短傳輸時間，而且會增加處理器負載。 如需詳細資訊，請參閱[自動初始化 Always On 可用性群組](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：全域或工作階段|
 |**9571**|停用對預設資料庫路徑進行可用性群組自動植入。 如需詳細資訊，請參閱 [磁碟配置](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)。<br /><br />**範圍**：全域或工作階段| 
-|**9576**|針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 引進的可用性群組容錯移轉，停用增強的錯誤集合。 如需詳細資訊，請參閱 [SQL Server 可用性群組 – 增強的資料庫層級容錯移轉](https://docs.microsoft.com/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)。<br /><br />**範圍**：只限全域| 
+|**9576**|針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU10、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 引進的可用性群組容錯移轉，停用增強的錯誤集合。 如需詳細資訊，請參閱 [SQL Server 可用性群組 – 增強的資料庫層級容錯移轉](/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover)。<br /><br />**範圍**：只限全域| 
 |**9591**|在 Always On 可用性群組中停用記錄區塊壓縮。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的同步和非同步複本預設會使用記錄區塊壓縮。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，只有非同步複本會使用壓縮。 <br /><br />**範圍**：全域或工作階段|
 |**9592**|啟用同步可用性群組的記錄資料流壓縮。 因為壓縮會增加延遲，所以在同步可用性群組上預設會停用這項功能。 如需詳細資訊，請參閱 [微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：全域或工作階段| 
 |**9929**|將記憶體中的檢查點檔案大小減少至各 1 MB。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3147012) \(機器翻譯\)。<br /><br />**範圍**：只限全域|  

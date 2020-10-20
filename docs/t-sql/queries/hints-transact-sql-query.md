@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 623c29594f1ceec2051eeec6e0a533fc948413dc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: effad55b1fd1eec856aa412700a751e36e588b37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116627"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035838"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -355,7 +355,7 @@ ROBUST PLAN
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，則為追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
    > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。  
-   > 若要深入了解此提示，請參閱 [Developer's Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員精選：提示查詢執行模型)。
+   > 若要深入了解此提示，請參閱 [Developer's Choice:Hinting Query Execution model](/archive/blogs/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員精選：提示查詢執行模型)。
     
 *  'QUERY_PLAN_PROFILE'      
  為查詢啟用輕量分析。 當包含這個新提示的查詢完成時，便會發出一個新的擴充事件 (query_plan_profile)。 此擴充事件會公開執行統計資料和與 query_post_execution_showplan 擴充事件相似的執行計畫 XML，但僅限包含新提示的查詢。    
@@ -658,4 +658,3 @@ OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
-  

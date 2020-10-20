@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73394ed84f1222e98bf2e7605f378918f8e6be45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba23ece6d37251dd3eebe4ba73c7fdc1a9672fa8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477595"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197034"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
 
@@ -56,7 +56,7 @@ ms.locfileid: "88477595"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -79,5 +79,4 @@ ms.locfileid: "88477595"
   
  **使用下列隨機種子**  
  指定轉換用來建立取樣之隨機號碼產生器的取樣種子。 只建議用於開發和測試。 如果未指定隨機種子，轉換會使用 Microsoft Windows 滴答計數。  
-  
   

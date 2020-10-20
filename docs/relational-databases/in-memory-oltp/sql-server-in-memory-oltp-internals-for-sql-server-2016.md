@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
-author: jodebrui
-ms.author: jodebrui
-ms.openlocfilehash: 4f9b1e77d082ad5e42a9818272fc1c4a48b44968
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+author: kevin-farlee
+ms.author: kfarlee
+ms.openlocfilehash: 1df603174fb4f17fef0f04ea41fa4b95154ab247
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529379"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175963"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016 的 SQL Server 記憶體內部 OLTP 內部
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

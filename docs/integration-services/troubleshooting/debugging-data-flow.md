@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 227414c3527633c941f7db123cd75083e1b6207b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc8ff10121320da5b291c3c10cdcdac36f0cc364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495167"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194042"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
 
@@ -214,7 +214,7 @@ order by source_component_name desc
 9. 在 [要顯示的資料行] 區域中，選取要在資料檢視器中顯示的資料行。 根據預設，所有可用的資料行都會選取，並且在 [顯示的資料行]  清單中列出。 將不想使用的資料行移至 [未使用的資料行]  清單，方法是選取它們然後按一下向左箭號。  
   
     > [!NOTE]  
-    >  在此方格中，代表 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值會以 ISO 8601 格式化字串的形式出現，而且空格分隔符號會取代 **T** 分隔符號。 代表 DT_DATE 和 DT_FILETIME 資料類型的值包括小數秒的七位數。 由於 DT_FILETIME 資料類型只會儲存小數秒的三位數，所以此方格會將其餘四位數顯示為零。 代表 DT_DBTIMESTAMP 資料類型的值包括小數秒的三位數。 如果是代表 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值，則小數秒的位數會對應到針對資料行資料類型指定的小數位數。 如需 ISO 8601 格式的詳細資訊，請參閱 [日期和時間格式](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
+    >  在此方格中，代表 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值會以 ISO 8601 格式化字串的形式出現，而且空格分隔符號會取代 **T** 分隔符號。 代表 DT_DATE 和 DT_FILETIME 資料類型的值包括小數秒的七位數。 由於 DT_FILETIME 資料類型只會儲存小數秒的三位數，所以此方格會將其餘四位數顯示為零。 代表 DT_DBTIMESTAMP 資料類型的值包括小數秒的三位數。 如果是代表 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值，則小數秒的位數會對應到針對資料行資料類型指定的小數位數。 如需 ISO 8601 格式的詳細資訊，請參閱 [日期和時間格式](../data-flow/parsing-data.md)。 如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   
 10. 按一下 [確定]  。  
 
@@ -274,9 +274,8 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  啟用詳細資訊記錄層次和加入資料點選會致使資料整合方案執行更多 I/O 作業。 因此，建議您只有在進行疑難排解時才加入資料點選。  
   
 ### <a name="video"></a>影片  
- 這部 [TechNet 上的影片](https://technet.microsoft.com/sqlserver/dn600163) 示範了如何在 SQL Server 2012 SSISDB 目錄中加入/使用資料點選，協助您以程式設計方式對封裝進行偵錯及在執行階段擷取部分結果。 該影片也將討論如何列出/移除這些資料點選，以及在 SSIS 封裝中使用資料點選的最佳作法。  
+ 這部 [TechNet 上的影片](../../sql-server/index.yml) 示範了如何在 SQL Server 2012 SSISDB 目錄中加入/使用資料點選，協助您以程式設計方式對封裝進行偵錯及在執行階段擷取部分結果。 該影片也將討論如何列出/移除這些資料點選，以及在 SSIS 封裝中使用資料點選的最佳作法。  
  
 ## <a name="see-also"></a>另請參閱  
  [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
-  
   

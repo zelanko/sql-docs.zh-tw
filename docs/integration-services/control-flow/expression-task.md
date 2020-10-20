@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52ed6a20fa7b125b3d95d854a6e380512cc1e424
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afbfe24c671d8dae1089ca1e1acb892d5d388372
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393864"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196543"
 ---
 # <a name="expression-task"></a>運算式工作
 
@@ -35,9 +35,8 @@ ms.locfileid: "88393864"
  如需使用運算式來設定屬性的範例，請參閱＜ **Use Property Expressions in Packages** ＞中的＜ [範例屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)＞一節。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在資料流程元件中使用運算式](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [在資料流程元件中使用運算式](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>相關內容  
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=746575)  
-  
   

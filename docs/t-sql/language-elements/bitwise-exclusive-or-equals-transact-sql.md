@@ -23,12 +23,12 @@ ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 753895903264d3047fce823c247ce122fcda48cb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3cf085f4fd8f8cb9931858a82a7cfff3ea0e2a74
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396217"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189241"
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (位元排除 OR 指派) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "87396217"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 expression ^= expression  
 ```  
   

@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2563d0029f9330dc07402e190d8553c8f509ef97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c23b16efed8909186d17cfcfafc6e91f283ef3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449865"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193890"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 語言參考
 
@@ -40,7 +40,6 @@ ms.locfileid: "88449865"
  [預存程序 &#40;Integration Services 目錄&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
  呼叫預存程序，即可加入、移除或修改 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件和設定。  
   
- [函式 &#40;Integration Services 目錄&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
+ [函式 &#40;Integration Services 目錄&#41;](./functions-dm-execution-performance-counters.md)  
  呼叫函數以管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
-  
   

@@ -26,12 +26,12 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe64aa29987ee280a79afd66faed94cbbc89540e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7d027a1173962da36ccbefa9084311a496b70e8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417174"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189230"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (位元互斥 OR) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88417174"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 expression ^ expression  
 ```  
   
@@ -70,7 +70,7 @@ expression ^ expression
 ## <a name="examples"></a>範例  
  下列範例會使用 **int** 資料類型來建立資料表以儲存原始值，並將兩個值插入到單一資料列中。  
   
-```  
+```sql  
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);
@@ -81,7 +81,7 @@ GO
   
  下列查詢在 `a_int_value` 和 `b_int_value` 資料行上執行位元互斥 OR 運算。  
   
-```  
+```sql  
 SELECT a_int_value ^ b_int_value  
 FROM bitwise;  
 GO  

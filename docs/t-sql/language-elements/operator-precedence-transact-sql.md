@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d95c22ef26f7e0cbecad3c0f2e6b04f2ac8c8b37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eab9aaf31173a9aaa40b6cfb32c27dbaf6474428
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467571"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187309"
 ---
 # <a name="operator-precedence-transact-sql"></a>運算子優先順序 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88467571"
  當運算式中兩個運算子有相同的優先順序層級時，會依據它們在運算式中的位置，由左至右來評估它們。 例如，在下列 `SET` 陳述式所用的運算式中，會先評估減法運算子，再評估加法運算子。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
 SELECT @MyNumber;  
@@ -57,7 +57,7 @@ SELECT @MyNumber;
  例如，在下列 `SET` 陳述式所用的運算式中，乘法運算子的優先順序高於加法運算子。 乘法作業會優先受到求值；運算式結果為 `13`。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
 SELECT @MyNumber;  
@@ -66,7 +66,7 @@ SELECT @MyNumber;
  在下列 `SET` 陳述式所用的運算式中，括號會使系統優先求值加法。 運算式結果是 `18`。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
 SELECT @MyNumber;  
@@ -75,7 +75,7 @@ SELECT @MyNumber;
  如果運算式有巢狀括號，最內層的巢狀運算式最先評估。 下列範例包含巢狀括號，最內層的一組巢狀括號中的運算式是 `5 - 3`。 這個運算式會產生 `2` 值。 之後，加法運算子 (`+`) 會將這個結果加上 `4`，得出值 `6`。 最後，`6` 再乘以 `2`，得出運算式結果 `12`。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   
 -- yields an expression result of 12.  

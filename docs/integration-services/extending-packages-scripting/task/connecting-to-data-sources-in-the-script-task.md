@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d54dc51681e96ba34ec33f1a899f61983145c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dc8024520e561ec9c89081c665c8172a1fb9441
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430230"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194110"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
 
@@ -93,6 +93,5 @@ ms.locfileid: "88430230"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連線](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [建立連線管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [建立連線管理員](../../connection-manager/integration-services-ssis-connections.md)  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be606f7aa8f42b9966f6b1a2d1e3e21095b03916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386444"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196215"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -286,6 +286,5 @@ $fileStream.Close()
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
-  
+ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   

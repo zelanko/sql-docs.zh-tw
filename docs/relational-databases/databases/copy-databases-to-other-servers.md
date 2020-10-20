@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2a347556196ff6732ef979fd36e93aff06611448
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55560b212f692b19513d211a69f38efb80b75883
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194390"
 ---
 # <a name="copy-databases-to-other-servers"></a>複製資料庫至其他伺服器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,5 @@ ms.locfileid: "85763603"
   
 -   使用產生指令碼精靈來發行資料庫  
   
-     您可以使用產生指令碼精靈，將某個資料庫從本機電腦傳送至 Web 主控提供者。 如需詳細資訊，請參閱 [產生和發佈指令碼精靈](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
-  
+     您可以使用產生指令碼精靈，將某個資料庫從本機電腦傳送至 Web 主控提供者。 如需詳細資訊，請參閱 [產生和發佈指令碼精靈](../../ssms/scripting/generate-and-publish-scripts-wizard.md)。  
   

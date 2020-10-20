@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 747e9798918debf5a69c5013cec5fb7077b2da41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b4e23b3f9296153772b1aaead04f48ba5f151a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430790"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197117"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
 
@@ -51,7 +51,7 @@ ms.locfileid: "88430790"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88430790"
 ## <a name="see-also"></a>另請參閱  
  [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
-  
   

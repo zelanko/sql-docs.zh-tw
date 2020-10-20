@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392104"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194774"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392104"
  ODBC 目的地具有一個一般輸出和一個錯誤輸出。  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 載入選項  
- ODBC 目的地可以使用兩種存取載入模組其中之一。 您會在 [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md) 設定模式。 兩種模式為：  
+ ODBC 目的地可以使用兩種存取載入模組其中之一。 您會在 [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](./odbc-source.md) 設定模式。 兩種模式為：  
   
 -   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392104"
   
 -   標準輸出資料行。  
   
- 根據錯誤行為設定，ODBC 目的地支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)。  
+ 根據錯誤行為設定，ODBC 目的地支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](./odbc-source.md)。  
   
 ## <a name="parallelism"></a>平行處理原則  
  可針對相同電腦或不同電腦上的相同資料表或不同資料表平行執行的 ODBC 目的地元件數目不受限制 (除了一般全域工作階段限制之外)。  
@@ -67,11 +67,11 @@ ms.locfileid: "88392104"
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;]()  
   
--   [ODBC 目的地編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目的地編輯器 &#40;對應頁面&#41;]()  
   
--   [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;]()  
   
  **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392104"
   
 #### <a name="redirect-flow"></a>重新導向流程  
  導致錯誤或截斷的資料列會導向至 ODBC 目的地的錯誤輸出。 如需詳細資訊，請參閱＜ODBC 目的地＞。  
-  

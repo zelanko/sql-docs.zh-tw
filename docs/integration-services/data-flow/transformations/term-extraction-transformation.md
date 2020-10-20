@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05e63dfc96f14db84feefe92165a952fb4207fd8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67bb55d536c34d8312694d366594819b0f87e595
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425700"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195922"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
 
@@ -181,7 +181,7 @@ ms.locfileid: "88425700"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "88425700"
  提供輸出資料行的名稱，其中將包含每個所擷取詞彙的分數。  
   
  **設定錯誤輸出**  
- 使用 [[設定錯誤輸出]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](../error-handling-in-data.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  
@@ -223,7 +223,7 @@ ms.locfileid: "88425700"
  選取包含排除詞彙之資料表或檢視中的資料行。  
   
  **設定錯誤輸出**  
- 使用 [[設定錯誤輸出]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](../error-handling-in-data.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
   使用 [詞彙擷取轉換編輯器]  對話方塊的 [進階]  索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
@@ -254,9 +254,8 @@ ms.locfileid: "88425700"
  指定擷取是否區分大小寫。 預設值為 **False**。  
   
  **設定錯誤輸出**  
- 使用 [[設定錯誤輸出]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](../error-handling-in-data.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../../integration-services/integration-services-error-and-message-reference.md)   
- [詞彙查閱轉換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [詞彙查閱轉換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)

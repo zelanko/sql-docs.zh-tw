@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5187cdcfcb6ffc66ed2985123256ebf3943163a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d40281b9c233b55b41cfc8fc18040fb3e6c4d927
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495897"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195965"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
 
@@ -102,7 +102,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>WMI 事件監看員工作的程式設計組態  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
@@ -133,7 +133,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **WMIConnectionName**  
  在清單中選取 WMI 連線管理員，或按一下 \<**New WMI Connection...**> 來建立新的連線管理員。  
   
- **相關主題：** [WMI 連線管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 連線管理員編輯器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **相關主題：** [WMI 連線管理員](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 連線管理員編輯器](../connection-manager/wmi-connection-manager.md)  
   
  **WQLQuerySourceType**  
  選取工作執行之 WQL 查詢的來源類型。 這個屬性具有下表中所列的選項。  
@@ -172,11 +172,10 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **WQLQuerySource**  
  在清單中選取檔案連線管理員，或按一下 [\<**New connection...**>] 以建立新的連線管理員。  
   
- **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../connection-manager/file-connection-manager.md)  
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = 變數  
  **WQLQuerySource**  
  在清單中選取變數，或按一下 \<**New variable...**> 來建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](../integration-services-ssis-variables.md)  

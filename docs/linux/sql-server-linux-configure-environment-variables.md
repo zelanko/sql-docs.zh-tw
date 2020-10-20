@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a09f79c3e5dec6c181855119e36ff0d4f0d7210e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899629"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115524"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用環境變數在 Linux 上設定 SQL Server 設定
 
@@ -128,7 +128,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> 在容器中執行生產版本的程序將有些微差異。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。
+> 在容器中執行生產版本的程序將有些微差異。 如需詳細資訊，請參閱[執行生產容器映像](./sql-server-linux-docker-container-deployment.md#production)。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->

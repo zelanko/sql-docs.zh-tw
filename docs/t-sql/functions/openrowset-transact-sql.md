@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0c60e9fb687ffc4cc17626b75462c29a91cdb075
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 895940f1a0f53c010e7088d02cf12cbfc0a0ff63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115946"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037731"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -532,7 +532,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
-存取儲存體帳戶的另一種方式是透過[受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)。 若要執行這項操作，請遵循[步驟 1 到 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps)，將 SQL Database 設定為可透過受控識別存取儲存體，之後即可實作如下所示的程式碼範例
+存取儲存體帳戶的另一種方式是透過[受控識別](/azure/active-directory/managed-identities-azure-resources/overview)。 若要執行這項操作，請遵循[步驟 1 到 3](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps)，將 SQL Database 設定為可透過受控識別存取儲存體，之後即可實作如下所示的程式碼範例
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';

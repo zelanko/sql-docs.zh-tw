@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807030"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196142"
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ Transact-SQL 區域變數是一種物件，可保存特定類型的單一資料�
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ DECLARE 陳述式會以下列方式將 Transact-SQL 變數初始化：
 
 例如，以下 **DECLARE** 陳述式會建立一個名為 **\@mycounter** 的區域變數，其資料類型為 int。  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 若要宣告一個以上的本機變數，請在第一個定義的本機變數後加上逗號，再指定下一個本機變數名稱與資料類型。
 
 例如，以下的 **DECLARE** 陳述式建立三個名為 **\@LastName**、**\@FirstName** 和 **\@StateProvince** 的區域變數，均初始化為 NULL：  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 變數的範圍是可以參考變數的 Transact-SQL 陳述式範圍。 變數範圍會維持在宣告點上，直到宣告批次或預存程序的結尾為止。 例如，下列指令碼會產生語法錯誤，因為變數是在某個批次中宣告並在其他批次中參考：  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 變數具有區域範圍並且只能在定義變數的批次或程序中看到。 在下列範例中，為執行 sp_executesql 所建立的巢狀範圍沒有在較高範圍中宣告變數的存取權，並會傳回錯誤。  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ GO
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ GO
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

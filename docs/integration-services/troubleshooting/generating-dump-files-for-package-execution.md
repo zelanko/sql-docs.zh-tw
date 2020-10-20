@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913741"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193770"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案
 
@@ -35,7 +35,7 @@ ms.locfileid: "86913741"
   
      呼叫此預存程序，使執行中的封裝暫停並建立傾印檔案。  
   
- 如果您要使用套件部署模型，請使用 **dtexec** 公用程式或 **dtutil** 公用程式，在命令列指定偵錯傾印選項以建立偵錯傾印檔案。 如需詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md) 和 [dtutil 公用程式](../../integration-services/dtutil-utility.md)。 如需套件部署模型的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](https://msdn.microsoft.com/library/hh213290.aspx)和[舊版套件部署 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)。   
+ 如果您要使用套件部署模型，請使用 **dtexec** 公用程式或 **dtutil** 公用程式，在命令列指定偵錯傾印選項以建立偵錯傾印檔案。 如需詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md) 和 [dtutil 公用程式](../../integration-services/dtutil-utility.md)。 如需套件部署模型的詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../packages/deploy-integration-services-ssis-projects-and-packages.md)和[舊版套件部署 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)。   
   
 ## <a name="debug-dump-file-format"></a>偵錯傾印檔案格式  
  當您指定偵錯傾印選項時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 就會建立下列偵錯傾印檔案：  
@@ -55,4 +55,4 @@ ms.locfileid: "86913741"
 |最近的訊息|最近系統所發出的訊息。 包括每則訊息的時間、類型、描述和執行緒識別碼。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp:2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID:2368           (ThreadID)<br /><br /> [E:3]         Event Name:OnError                        (EventName)<br /><br /> [E:3]         Source Name:              (SourceName)<br /><br /> [E:3]         Source ID:                      (SourceID)<br /><br /> [E:3]         Execution ID:               (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description:元件遺漏、未註冊、無法升級或遺漏必要的介面。 這個元件的連絡資訊是 "__"。|  
   
 ## <a name="related-information"></a>相關資訊  
-[執行套件對話方塊](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[執行套件對話方塊](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34df520dcb0f193e2b548a909ea10cd4113995fc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307398"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196652"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較運算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "88307398"
   
  在 WHERE 子句中使用含 **Boolean** 資料類型的運算式，來篩選符合搜尋條件，且在 IF 和 WHILE 之類流程控制語言陳述式中的資料列，例如：  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
-DECLARE @MyProduct int;  
+DECLARE @MyProduct INT;  
 SET @MyProduct = 750;  
 IF (@MyProduct <> 0)  
    SELECT ProductID, Name, ProductNumber  

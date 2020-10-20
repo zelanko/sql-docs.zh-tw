@@ -22,12 +22,12 @@ ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2194ef6762e6c036eb8d9dd096f29607ceb5fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bded455f287aca7fd4f4b66491c931b618c7f93c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459389"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196617"
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (除法指派) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88459389"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 expression /= expression  
 ```  
   
@@ -57,7 +57,7 @@ expression /= expression
 ## <a name="examples"></a>範例  
 下列範例會將變數設為 17。 然後使用 `/=` 運算子，將變數設定為其原始值的一半。  
 ```sql  
-DECLARE @myVariable decimal(5,2);
+DECLARE @myVariable DECIMAL(5,2);
 SET @myVariable = 17.5;
 SET @myVariable /= 2;
 SELECT @myVariable AS ResultVariable;  

@@ -32,12 +32,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781600"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196206"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85781600"
   
  DLM 一開始會探討專案設計與意圖，接著探討資料庫開發、測試、建置、部署、維護、監視和備份活動，最後再探討資料封存。 本主題將提供 DLM 各階段的概觀：從資料庫開發開始，然後依序進行建置、部署和監視動作。 同時也包含資料管理活動，以及資料可攜性作業，例如匯入/匯出、備份、移轉和同步。  
   
- 若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)(資料庫生命週期管理 (DLM))。  
+ 若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))(資料庫生命週期管理 (DLM))。  
   
 ## <a name="see-also"></a>另請參閱  
  [Azure 首頁](https://www.windowsazure.com/)   
@@ -53,5 +53,4 @@ ms.locfileid: "85781600"
  [Azure 管理中心](https://www.windowsazure.com/manage/overview/)   
  [Azure 團隊部落格](https://www.windowsazure.com/community/blog/)   
  [Azure 支援選項](https://www.windowsazure.com/support/contact/)  
-  
   

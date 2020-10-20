@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484601"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194272"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484601"
   
  傳送或接收訊息時，「訊息佇列」工作會使用下列四種訊息類型之一：資料檔、字串、字串訊息至變數或變數。 只有接收訊息時才能使用「字串訊息至變數」訊息類型。  
   
- 工作使用 MSMQ 連接管理員以連接到訊息佇列。 如需詳細資訊，請參閱 [MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)。 如需有關 Message Queuing 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)。  
+ 工作使用 MSMQ 連接管理員以連接到訊息佇列。 如需詳細資訊，請參閱 [MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)。 如需有關 Message Queuing 的詳細資訊，請參閱 [MSDN Library](../../sql-server/index.yml)。  
   
  「訊息佇列」工作要求安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 **[要安裝的元件]** 頁面或 **[特徵選取]** 頁面上選取要安裝的一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件的部分子集。 這些元件對特定的工作有用，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能會受到限制。 例如， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 選項會安裝設計某個封裝所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，但不會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，因此「訊息佇列」工作將無法運作。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的完整安裝，您必須在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [要安裝的元件] **頁面上選取** 。 如需安裝及執行「訊息佇列」工作的詳細資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484601"
  如需有關以程式設計方式來設定這些屬性的詳細資訊，請參閱《開發人員指南》中 **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** 類別的文件。  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="message-queue-task-editor-general-page"></a>訊息佇列工作編輯器 (一般頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[一般頁面]** ，即可命名和描述訊息佇列工作、指定訊息格式以及指出工作是否傳送或接收訊息。  
@@ -123,7 +123,7 @@ ms.locfileid: "88484601"
  **MSMQConnection**  
  選取現有的 MSMQ 連線管理員或按一下 \<**New connection...**>，即可建立新的連線管理員。  
   
- **相關主題**：[MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **相關主題**：[MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../connection-manager/msmq-connection-manager.md)  
   
  **訊息**  
  指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]** ，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]** ，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]** 。  
@@ -233,7 +233,7 @@ ms.locfileid: "88484601"
  **變數**  
  輸入變數名稱，或按一下 \<**New variable...**>，然後設定新的變數。  
   
- **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484601"
  **變數**  
  鍵入要保存已接收訊息的變數名稱，或按一下 \<**New variable...**>，然後設定新的變數。  
   
- **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>選取變數
   使用 [選取變數]  對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數]  清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數]  清單中的變數。  
@@ -299,9 +299,8 @@ ms.locfileid: "88484601"
  **新增變數**  
  建立新變數。  
   
- **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
-  
   

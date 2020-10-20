@@ -26,12 +26,12 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 0c9944d3541ba47bcb6670aaf703d66d59ee9b5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c39bea9bb6899caeb0e86e8a911bdf36cfb10b7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459328"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195475"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 
@@ -96,7 +96,7 @@ SELECT @*local_variable* 通常用來將單一值傳回給變數。 不過，當
 ```sql  
 -- Uses AdventureWorks    
   
-DECLARE @var1 varchar(30);         
+DECLARE @var1 VARCHAR(30);         
 SELECT @var1 = 'Generic Name';         
 SELECT @var1 = Name         
 FROM Sales.Store         
@@ -118,7 +118,7 @@ SELECT @var1 AS 'Company Name';
 ```sql  
 -- Uses AdventureWorks  
   
-DECLARE @var1 varchar(30)   
+DECLARE @var1 VARCHAR(30)   
 SELECT @var1 = 'Generic Name'   
 SELECT @var1 = (SELECT Name   
 FROM Sales.Store   

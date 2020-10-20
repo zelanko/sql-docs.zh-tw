@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425610"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194546"
 ---
 # <a name="xml-source"></a>XML 來源
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425610"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [XML 來源自訂屬性](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88425610"
 |值|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
-|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**：[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**：[在套件中使用變數](../integration-services-ssis-variables.md)|  
 |來自變數的 XML 資料|從變數中擷取 XML 資料。|  
   
  **使用內嵌結構描述**  
@@ -174,4 +174,4 @@ ms.locfileid: "88425610"
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用 XML 來源來擷取資料](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [使用 XML 來源來擷取資料](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

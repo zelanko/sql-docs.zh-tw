@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 2f884cbc8a3d35b5e806090202516fc3f1ff4e01
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: b73efafc87f456ef8728a3bf1b5e4eec0b954782
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864615"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194116"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄 (SSISDB)
 
@@ -29,10 +29,10 @@ ms.locfileid: "87864615"
 - 登入資訊 
 
 > [!IMPORTANT]
-> 目前，需要在 Azure Data Factory 中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 Azure-SSIS IR 是在 Azure 上執行 SSIS 套件的執行階段環境。 如需處理序的逐步解說，請參閱[在 Azure 中部署和執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
+> 目前，需要在 Azure Data Factory 中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 Azure-SSIS IR 是在 Azure 上執行 SSIS 套件的執行階段環境。 如需處理序的逐步解說，請參閱[在 Azure 中部署和執行 SSIS 套件](/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>Prerequisites
-開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio (SSMS)。 如果 SSISDB 目錄資料庫裝載在 SQL 受控執行個體上，請確定您有 17.6 版或更新版本的 SSMS。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio (SSMS)。 如果 SSISDB 目錄資料庫裝載在 SQL 受控執行個體上，請確定您有 17.6 版或更新版本的 SSMS。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>從 Azure 入口網站取得連線資訊
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
