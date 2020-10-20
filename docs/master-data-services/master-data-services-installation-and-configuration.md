@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823749"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195802"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -47,7 +47,7 @@ ms.locfileid: "87823749"
 - 若要在 Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您巡覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從**[這裡](https://www.microsoft.com/silverlight/)** 安裝 Silverlight 5。
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 虛擬機器上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-根據預設，當您加速已安裝的 Azure 虛擬機器時 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 也會一併安裝。 
+依預設，當您啟動已安裝的 Azure 虛擬機器時 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 也會一併安裝。 
 
 您的下一個步驟是安裝 Internet Information Services (IIS)。 請參閱[安裝和設定 IIS](#InstallIIS) 一節。 
 
@@ -110,12 +110,12 @@ ms.locfileid: "87823749"
   
  如需使用安裝程式來安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的詳細資訊，請參閱[從安裝精靈 &#40;安裝程式&#41; 安裝 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
- 如需使用命令提示字元安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。 當您使用命令提示字元時， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 可當做功能參數。  
+ 如需使用命令提示字元安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。 當您使用命令提示字元時， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 可當做功能參數。  
   
  如需安裝前工作的簡短描述與詳細資訊連結，請參閱 [安裝 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)。  
   
 ##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> 設定資料庫和網站  
- **若要使用來設定資料庫和網站[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
+ **若要使用來設定資料庫和網站 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
@@ -128,16 +128,16 @@ ms.locfileid: "87823749"
   
 2.  按一下 [建立資料庫]****，然後按一下 [建立資料庫精靈]**** 中的 [下一步]****。  
   
-3.  在 [**資料庫伺服器**] 頁面上，指定 SQL Server 實例。 
+3.  在 [ **資料庫伺服器** ] 頁面上，指定 SQL Server 實例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為受控實例的主機。 例如： `xxxxxx.xxxxxx.database.windows.net` 。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 新增 SQL Server 受控執行個體的支援。 將 **SQL Server 實例** 的值設定為受控實例的主機。 例如： `xxxxxx.xxxxxx.database.windows.net` 。
 
-4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步] 。
+4. 選取 **驗證類型** ，然後按一下 [ **測試連接** ]，確認您可以使用所選驗證類型的認證來連線到資料庫。 按 [下一步] 。
 
     >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]若要連接到受控實例，請使用下列其中一種驗證類型：
     >
-    >- Azure Active Directory 整合式驗證：**目前的使用者-Active Directory 整合**
-    >- SQL Server 驗證： **SQL Server 帳戶**。
+    >- Azure Active Directory 整合式驗證：**目前的使用者-Active Directory 整合**式
+    >- SQL Server Authentication： **SQL Server 帳戶**。
     >
     >在 SQL 受控執行個體中，使用者必須是 `sysadmin` 固定伺服器角色的成員。
 
@@ -162,7 +162,7 @@ ms.locfileid: "87823749"
   
      如需 [建立資料庫精靈]**** 中的設定詳細資訊，請參閱[建立資料庫精靈 &#40;Master Data Services 組態管理員&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。  
   
-7.  在的 [**資料庫**設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，按一下 [**選取資料庫**]。  
+7.  在的 [ **資料庫** 設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，按一下 [ **選取資料庫**]。  
   
 8.  按一下 **「連接」**，並選取您在步驟 7 中建立的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，然後按一下 **「確定」**。 
 
@@ -185,7 +185,7 @@ ms.locfileid: "87823749"
   
     -   輸入您在步驟 5 中為資料庫 [系統管理員帳戶]**** 輸入的相同使用者名稱，並輸入密碼，然後按一下 [確定]****。  
   
-         **或**  
+         **等於**  
   
     -   選取其他使用者名稱，並輸入密碼，然後按一下 [確定]。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "87823749"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 按一下 [套用]。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網站位址為 [HTTPs://*server name* / *web application*/]。 
+15. 按一下 [套用]。 [組態完成]**** 訊息方塊隨即顯示。 按一下訊息方塊中的 [確定]****，以啟動 Web 應用程式。 網址為 HTTPs://*伺服器名稱* / *web 應用程式*。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -272,17 +272,17 @@ ms.locfileid: "87823749"
   
      下圖顯示部署 product_en.pkg 範例模型的命令。  
   
-     ![用於部署產品範例模型的命令列](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "用於部署產品範例模型的命令列")  
+     ![用來部署產品範例模型的命令列](../master-data-services/media/mds-commandprompt-deployingsamplemodel-product.png "用來部署產品範例模型的命令列")  
   
 4.  若要檢視範例模型，請執行下列動作：  
   
     1.  瀏覽至您設定的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 網站。 請參閱 [設定資料庫和網站](#SetUpWeb) 一節。  
   
-         網站位址為 [HTTPs://*server name* / *web application*/]。  
+         網址為 HTTPs://*伺服器名稱* / *web 應用程式*。  
   
     2.  從 [模型]**** 清單方塊中選取一個模型，然後按一下 [總管]****。  
   
-         ![MDS 網站，首頁。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS 網站，首頁。")  
+         ![MDS 網站、首頁。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS 網站、首頁。")  
   
 ## <a name="next-step"></a>後續步驟  
  為資料建立新的模型和實體。 請參閱[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md) 和[建立實體 &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)。  
@@ -294,5 +294,4 @@ ms.locfileid: "87823749"
  [主資料管理員 Web 應用程式](../master-data-services/master-data-manager-web-application.md)   
  [[資料庫設定] 頁面 &#40;Master Data Services 組態管理員&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Master Data Services &#40;MDS&#41; 的新功能](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

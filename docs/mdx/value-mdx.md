@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d6bf8edd7cbeefefa723c1acc374daa8d2c9407
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52224625f5e2e6fc70ca9a76f750ed374108c52c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449610"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196726"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -33,7 +33,7 @@ Member_Expression[.Value]
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **值**函數會以字串形式傳回指定成員的值。 **值**引數是選擇性的，因為成員的值是成員的預設屬性，而如果沒有指定其他值，則是針對成員傳回的值。 如需有關成員屬性的詳細資訊，請參閱 [&#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 的內建成員屬性，以及 [&#40;Mdx&#41;的使用者自訂成員屬性 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
+ **值**函數會以字串形式傳回指定成員的值。 **值**引數是選擇性的，因為成員的值是成員的預設屬性，而如果沒有指定其他值，則是針對成員傳回的值。 如需有關成員屬性的詳細資訊，請參閱 [&#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 的內建成員屬性，以及 [&#40;Mdx&#41;的使用者自訂成員屬性 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回成員值，並且會明確傳回成員名稱。  
@@ -59,5 +59,4 @@ from [Adventure Works]
  [MDX&#41;名稱 &#40;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

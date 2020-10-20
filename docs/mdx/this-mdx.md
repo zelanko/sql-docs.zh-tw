@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e00435741516fd1ed1942506084c26192b6d47da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b55a416a14d0b837d134e7f9d8520d77cc13e375
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413094"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192328"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -76,6 +76,5 @@ This
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [計算](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
-  
+ [計算](/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   

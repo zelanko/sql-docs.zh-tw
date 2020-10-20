@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483901"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196984"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義 - CREATE MEMBER
 
@@ -48,9 +48,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  定義導出成員屬性值的有效純量運算式。  
   
 ## <a name="remarks"></a>備註  
- CREATE MEMBER 陳述式定義的導出成員可在整個工作階段中使用，因此，亦可用於工作階段期間的多個查詢。 如需詳細資訊，請參閱 [建立會話範圍匯出成員 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
+ CREATE MEMBER 陳述式定義的導出成員可在整個工作階段中使用，因此，亦可用於工作階段期間的多個查詢。 如需詳細資訊，請參閱 [建立 Session-Scoped 匯出成員 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
   
- 您也可以定義供單一查詢使用的導出成員。 若要定義受限於單一查詢的導出成員，您可以在 SELECT 陳述式中使用 WITH 子句。 如需詳細資訊，請參閱 [建立查詢範圍匯出成員 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
+ 您也可以定義供單一查詢使用的導出成員。 若要定義受限於單一查詢的導出成員，您可以在 SELECT 陳述式中使用 WITH 子句。 如需詳細資訊，請參閱 [建立 Query-Scoped 匯出成員 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
   
  *Property_Name* 可以參考標準或選擇性的匯出成員屬性。 本主題稍後會列出標準成員屬性。 使用 CREATE MEMBER 建立但沒有 **會話** 值的匯出成員具有會話範圍。 此外，導出成員定義內的字串會以雙引號分隔。 這跟以 OLE DB 定義的方法不同，以 OLE DB 定義的方法指定以單引號來分隔字串。  
   
@@ -62,7 +62,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  導出成員可發生在下表列出的其中一個範圍內。  
   
  查詢範圍  
- 導出成員的可見性與存留期間受限於查詢。 導出成員是在個別查詢中定義。 查詢範圍可覆寫工作階段範圍。 如需詳細資訊，請參閱 [建立查詢範圍匯出成員 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
+ 導出成員的可見性與存留期間受限於查詢。 導出成員是在個別查詢中定義。 查詢範圍可覆寫工作階段範圍。 如需詳細資訊，請參閱 [建立 Query-Scoped 匯出成員 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)。  
   
  工作階段範圍  
  導出成員的可見性與存留期間受限於其建立所在的工作階段。 如果在匯出成員上發出 DROP MEMBER 語句， (存留期就會小於會話持續時間。 ) CREATE MEMBER 語句會使用會話範圍建立匯出成員。  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [DROP MEMBER 語句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [UPDATE MEMBER 語句 &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
  [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

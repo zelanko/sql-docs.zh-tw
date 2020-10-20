@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429700"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192288"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
 
 
-  本檔包含 MDX 所支援之 [Visual Basic for Applications](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) 函式中所有可用 VBA 函數的交叉參考;此外，當 DAX 語言的功能等價時，此清單會包含附注。  
+  本檔包含 MDX 所支援之 [Visual Basic for Applications](/office/vba/Language/Reference/functions-visual-basic-for-applications) 函式中所有可用 VBA 函數的交叉參考;此外，當 DAX 語言的功能等價時，此清單會包含附注。  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函數參考  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88429700"
 |FileAttr|不支援||  
 |FileDateTime|不支援||  
 |FileLen|不支援||  
-|篩選|不支援|**警告** MDX 會實作為相同名稱的不同函數;篩選 (Set_Expression，Logical_Expression) 函式會根據指定引數中的搜尋條件，傳回根據搜尋條件篩選指定集合所產生的集合。<br /><br /> **警告** DAX 會使用相同的名稱來執行不同的函數;篩選 (\<table> ， \<filter>) 函數會從指定的引數傳回代表另一個資料表或運算式之子集的資料表。|  
+|Filter|不支援|**警告** MDX 會實作為相同名稱的不同函數;篩選 (Set_Expression，Logical_Expression) 函式會根據指定引數中的搜尋條件，傳回根據搜尋條件篩選指定集合所產生的集合。<br /><br /> **警告** DAX 會使用相同的名稱來執行不同的函數;篩選 (\<table> ， \<filter>) 函數會從指定的引數傳回代表另一個資料表或運算式之子集的資料表。|  
 |修正|僅限 MDX||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|不支援||  
@@ -136,8 +136,8 @@ ms.locfileid: "88429700"
 |Second|DAX、MDX||  
 |Seek|不支援||  
 |Sgn|DAX、MDX||  
-|Shell|不支援||  
-|正弦值|僅限 MDX||  
+|殼層|不支援||  
+|Sin|僅限 MDX||  
 |SLN|僅限 MDX||  
 |Space|僅限 MDX||  
 |Spc|不支援||  
@@ -152,7 +152,7 @@ ms.locfileid: "88429700"
 |SYD|僅限 MDX||  
 |索引標籤|不支援||  
 |Tan|僅限 MDX||  
-|Time|不支援||  
+|時間|不支援||  
 |計時器|僅限 MDX||  
 |TimeSerial|僅限 MDX||  
 |TimeValue|DAX、MDX||  
@@ -165,5 +165,4 @@ ms.locfileid: "88429700"
 |Weekday|DAX、MDX||  
 |WeekdayName|不支援||  
 |Year|DAX、MDX||  
-  
   

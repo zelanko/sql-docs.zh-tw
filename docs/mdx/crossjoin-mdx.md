@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 759feb8b64a06e6238d338d4d619dd1433819dda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7929238ecb672dd6c537772dafb15422ca52bce3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387534"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196052"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -47,7 +47,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
   (x2，y*n*) ,..., (x*n*，y1) ， (x*n*，y2) ,..., (xn，y*n*) }  
   
 > [!IMPORTANT]  
->  如果交叉聯結中的集合是由相同維度之不同屬性階層的 Tuple 組成，這個函數只會傳回實際存在的 Tuple。 如需詳細資訊，請參閱 [MDX &#40;Analysis Services&#41;的重要概念 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
+>  如果交叉聯結中的集合是由相同維度之不同屬性階層的 Tuple 組成，這個函數只會傳回實際存在的 Tuple。 如需詳細資訊，請參閱 [MDX &#40;Analysis Services&#41;的重要概念 ](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
   
 ## <a name="examples"></a>範例  
  下列查詢會示範在查詢的資料行軸和資料列軸上使用 Crossjoin 函數的範例：  
@@ -130,5 +130,4 @@ WHERE (Measures.[Internet Sales Amount],
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

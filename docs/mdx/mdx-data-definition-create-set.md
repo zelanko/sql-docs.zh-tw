@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d8aa29715753cfb169d87df3a31230eeec9397f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483881"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193950"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 資料定義 - CREATE SET
 
@@ -50,9 +50,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>備註  
  命名集是建立以供再次使用的維度成員集合 (或定義集合的運算式)。 例如，命名集可以定義一個維度成員集合，此集合是由依銷售業績排名的前十名商店所組成。 這組可以靜態方式定義，或藉由像是 [TopCount](../mdx/topcount-mdx.md)的函式來定義。 然後就可以在需要前十名商店的集合之時，使用此命名集。  
   
- CREATE SET 陳述式建立的命名集可在整個工作階段中使用，因此，此命名集可用於工作階段中的多個查詢。 如需詳細資訊，請參閱 [建立會話範圍匯出成員 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
+ CREATE SET 陳述式建立的命名集可在整個工作階段中使用，因此，此命名集可用於工作階段中的多個查詢。 如需詳細資訊，請參閱 [建立 Session-Scoped 匯出成員 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)。  
   
- 您也可以定義供單一查詢使用的命名集。 若要定義這類集合，您可以在 SELECT 陳述式中使用 WITH 子句。 如需 WITH 子句的詳細資訊，請參閱 [建立查詢範圍命名集 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
+ 您也可以定義供單一查詢使用的命名集。 若要定義這類集合，您可以在 SELECT 陳述式中使用 WITH 子句。 如需 WITH 子句的詳細資訊，請參閱 [建立 Query-Scoped 命名集 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
   
  *Set_Expression*子句可以包含任何支援 MDX 語法的函數。 使用未指定 SESSION 子句的 CREATE SET 陳述式而建立的集合會有工作階段範圍。 使用 WITH 子句來建立含查詢範圍的集合。  
   
@@ -62,7 +62,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  使用者自訂集合可發生在下表列出的其中一個範圍內。  
   
  查詢範圍  
- 集合的可見性與存留時間受限於查詢。 集合是在個別查詢中定義。 查詢範圍可覆寫工作階段範圍。 如需詳細資訊，請參閱 [建立查詢範圍命名集 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
+ 集合的可見性與存留時間受限於查詢。 集合是在個別查詢中定義。 查詢範圍可覆寫工作階段範圍。 如需詳細資訊，請參閱 [&#40;MDX&#41;建立 Query-Scoped 命名集 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)。  
   
  工作階段範圍  
  集合的可見性與存留時間受限於其建立所在的工作階段。 如果在集合上發出 DROP SET 語句， (存留期就會小於會話持續時間。 ) CREATE SET 語句會建立具有會話範圍的集合。 使用 WITH 子句來建立含查詢範圍的集合。  
@@ -103,5 +103,4 @@ SELECT [Core Products] ON 0
 ## <a name="see-also"></a>另請參閱  
  [DROP SET 語句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6ec4d0e86c2719613527ec7ea8206f980deebc3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff995f08ffef27abca65db10ff2cd38f2dd01e95
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429760"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196962"
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 指令碼 - CALCULATE
 
@@ -29,7 +29,7 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>引數  
- None  
+ 無  
   
 ## <a name="remarks"></a>備註  
  當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立 Cube 時，CALCULATE 陳述式會自動包含在 Cube 的 MDX 指令碼中，做為第一個陳述式。 CALCULATE 陳述式會告知 Cube 中的每個資料格，從較低資料粒度的資料格彙總。 在彙總資料格之後，如果您隨後使用運算式擴展較低資料粒度的資料格，則會影響較高資料粒度資料格的彙總值。 大部分的狀況下，您可能希望發生此彙總，但您也可以移除它，或在這個陳述式前先執行其他陳述式。  
@@ -41,7 +41,6 @@ CALCULATE
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [MDX 腳本基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
- [定義指派和其他指令碼命令](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+ [MDX 腳本基礎 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
+ [定義指派和其他指令碼命令](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

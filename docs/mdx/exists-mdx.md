@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c879d9091c692cfa7a93490b34c70ad84fa81c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494911"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193970"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  傳回屬於第一個指定集合並且與第二個指定集合中一或多個 Tuple 同時存在的 Tuple 集合。 這個函數會手動執行自動存在功能自動執行的動作。 如需自動存在的詳細資訊，請參閱 [MDX &#40;Analysis Services&#41;的重要概念 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
+  傳回屬於第一個指定集合並且與第二個指定集合中一或多個 Tuple 同時存在的 Tuple 集合。 這個函數會手動執行自動存在功能自動執行的動作。 如需自動存在的詳細資訊，請參閱 [MDX &#40;Analysis Services&#41;的重要概念 ](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
   
  如果提供了選擇性的 \<Measure Group Name> ，函數會傳回與第二個集合中的一或多個元組存在的元組，以及在指定之量值群組的事實資料表中具有相關聯資料列的元組。  
   
@@ -99,5 +99,4 @@ FROM [Adventure Works]
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [非空白的 &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
-  
   

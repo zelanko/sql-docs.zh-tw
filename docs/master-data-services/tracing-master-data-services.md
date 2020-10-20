@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480418"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195032"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480418"
   
 -   警告和 ActivityTracing 訊息會啟用追蹤。  
   
-     如需詳細資訊，請參閱 [SourceLevels 列舉類型](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels)。  
+     如需詳細資訊，請參閱 [SourceLevels 列舉類型](/dotnet/api/system.diagnostics.sourcelevels)。  
   
 -   記錄會儲存在 WebApplication 資料夾下的 Logs 資料夾中。 預設位置是 C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs。  
   
@@ -71,5 +71,4 @@ ms.locfileid: "89480418"
   
 ## <a name="external-resources"></a>外部資源  
  msdn.com 上的部落格文章： [疑難排解記錄改進](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)。  
-  
   

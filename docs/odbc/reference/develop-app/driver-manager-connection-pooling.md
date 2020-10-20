@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483081"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195570"
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連線共用
 連線共用可讓應用程式使用來自不需要重新建立以供每次使用之連接集區的連接。 一旦建立連線並將其放入集區之後，應用程式就可以重複使用該連接，而不需要執行完整的連接程式。  
@@ -60,11 +60,11 @@ ms.locfileid: "88483081"
     > [!NOTE]  
     >  要求的連接如何符合共用的連接，是由 SQL_ATTR_CP_MATCH 環境屬性所決定。 如需詳細資訊，請參閱 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。  
   
-     使用連接共用的 ODBC 應用程式應該在應用程式初始化期間呼叫 [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) ，並在應用程式關閉時呼叫 [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) 。  
+     使用連接共用的 ODBC 應用程式應該在應用程式初始化期間呼叫 [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) ，並在應用程式關閉時呼叫 [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) 。  
   
 5.  在連接完成時呼叫 **SQLDisconnect** 。 連接會傳回連接集區，並可供重複使用。  
   
- 如需深入討論，請參閱 [Microsoft 資料存取元件中的](https://go.microsoft.com/fwlink/?LinkId=120776)共用。  
+ 如需深入討論，請參閱 [Microsoft 資料存取元件中的](/previous-versions/ms810829(v=msdn.10))共用。  
   
 ## <a name="connection-pooling-considerations"></a>連接共用考慮  
  使用 SQL 命令 (執行下列任何動作，而不是透過 ODBC API) 可能會影響連接的狀態，並在連接共用為作用中時造成未預期的問題：  
@@ -86,4 +86,4 @@ ms.locfileid: "88483081"
 ## <a name="see-also"></a>另請參閱  
  [連接到資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft 資料存取元件中的共用](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft 資料存取元件中的共用](/previous-versions/ms810829(v=msdn.10))

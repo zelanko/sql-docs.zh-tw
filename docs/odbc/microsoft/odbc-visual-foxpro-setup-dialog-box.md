@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60d65d23a3a72f0194145c9a567f274e2e07ff74
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340704"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194323"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 設定對話方塊
 [ **ODBC Visual Foxpro 安裝程式** ] 對話方塊可讓您加入或變更 Visual foxpro 資料來源。  
   
- 若要下載驅動程式，請參閱 [Visual FOXPRO ODBC 驅動程式下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。  
+ 若要下載驅動程式，請參閱 [Visual FOXPRO ODBC 驅動程式下載網站](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10))。  
   
 ## <a name="dialog-box-options"></a>對話方塊選項  
  **資料來源名稱**  

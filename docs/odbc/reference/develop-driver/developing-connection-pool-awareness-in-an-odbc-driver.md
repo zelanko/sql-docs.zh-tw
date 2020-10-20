@@ -1,6 +1,6 @@
 ---
 description: 在 ODBC 驅動程式中開發連線集區覺察
-title: 在 ODBC 驅動程式中開發連接集區感知 |Microsoft Docs
+title: 在 ODBC 驅動程式中開發 Connection-Pool 認知 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476270"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192308"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驅動程式中開發連線集區覺察
 本主題討論開發 ODBC 驅動程式的詳細資料，其中包含驅動程式如何提供連接共用服務的相關資訊。  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>啟用驅動程式感知連接共用  
+## <a name="enabling-driver-aware-connection-pooling"></a>啟用 Driver-Aware 連接共用  
  驅動程式必須執行下列 ODBC 服務提供者介面 (SPI) 函數：  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -68,7 +68,7 @@ ms.locfileid: "88476270"
 ## <a name="the-connection-rating"></a>連接分級  
  相較于建立新的連接，您可以藉由重設某些連接 (資訊（例如，在共用連接中的資料庫) ）來取得較佳的效能。 因此，您可能不想讓資料庫名稱在您的索引鍵屬性集內。 否則，您可以為每個資料庫建立不同的集區，這在中介層應用程式中可能不適合，客戶使用不同的連接字串。  
   
- 每當您重複使用具有某些屬性不符的連接時，您應該根據新的應用程式要求重設不相符的屬性，讓傳回的連接與應用程式要求相同， (查看 [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368) 函式) 中 SQL_ATTR_DBC_INFO_TOKEN 屬性的討論。 但是，重設這些屬性可能會降低效能。 例如，重設資料庫需要對伺服器進行網路呼叫。 因此，請重複使用完全相符的連接（如果有的話）。  
+ 每當您重複使用具有某些屬性不符的連接時，您應該根據新的應用程式要求重設不相符的屬性，讓傳回的連接與應用程式要求相同， (查看 [SQLSetConnectAttr](../syntax/sqlsetconnectattr-function.md) 函式) 中 SQL_ATTR_DBC_INFO_TOKEN 屬性的討論。 但是，重設這些屬性可能會降低效能。 例如，重設資料庫需要對伺服器進行網路呼叫。 因此，請重複使用完全相符的連接（如果有的話）。  
   
  驅動程式中的評等函式可以使用新的連線要求來評估現有的連接。 例如，驅動程式的評等功能可以判斷：  
   

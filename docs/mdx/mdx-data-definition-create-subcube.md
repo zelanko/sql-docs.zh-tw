@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477020"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193940"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義 - CREATE SUBCUBE
 
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Subcube 內容中建立的工作階段物件會在卸除 Subcube 時一併卸除。  
   
- 如需 subcube 的詳細資訊，請參閱 [在 mdx 中建立 subcube &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
+ 如需 subcube 的詳細資訊，請參閱 [在 mdx 中建立 subcube &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)。  
   
 ## <a name="example"></a>範例  
  下列範例會建立 Subcube，將明顯 Cube 空間限制於國家 (地區) 為加拿大的成員。 然後，它會使用 **成員** 函式來傳回地理位置使用者定義階層之國家（地區）層級的所有成員-僅傳回加拿大的國家/地區。  
@@ -90,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  產生結果如下：  
   
-|商務類型 + 類別|All Products|Accessories|Clothing|  
+|商務類型 + 類別|All Products|Accessories|服飾|  
 |-|-|-|-|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
@@ -118,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  產生下列不同結果：  
   
-|商務類型 + 類別|All Products|Accessories|Clothing|  
+|商務類型 + 類別|All Products|Accessories|服飾|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -127,9 +127,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] 和 [All Resellers] 的資料行與資料列個別包含所有成員的總計，而不只是可見成員的總計。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX &#40;Analysis Services&#41;的重要概念 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX &#40;Analysis Services&#41;的重要概念 ](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [&#40;MDX&#41;卸載子多維資料語句 ](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
-  
   

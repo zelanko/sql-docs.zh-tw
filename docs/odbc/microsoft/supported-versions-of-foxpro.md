@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e964b4a8627ed3190efd63bbbc908c2282b15fee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6884ae8c00f4aab4ca920cf619dc658a68bccc4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471480"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196913"
 ---
 # <a name="supported-versions-of-foxpro"></a>支援的 FoxPro 版本
 您可以使用 Microsoft® Visual FoxPro® ODBC 驅動程式來存取儲存在 FoxPro 資料表中的資料。 支援下列版本的 FoxPro 資料：  
@@ -39,4 +39,4 @@ ms.locfileid: "88471480"
   
  如需如何連接到資料來源的詳細資訊，請參閱 [加入 Visual FoxPro 資料來源](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)。  
   
- 若要下載驅動程式，請參閱 [Visual FOXPRO ODBC 驅動程式下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。
+ 若要下載驅動程式，請參閱 [Visual FOXPRO ODBC 驅動程式下載網站](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10))。

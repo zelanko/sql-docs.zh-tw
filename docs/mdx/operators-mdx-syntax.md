@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471770"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193488"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 
@@ -76,14 +76,14 @@ ms.locfileid: "88471770"
   
 -   XOR  
   
--   或者  
+-   OR  
   
  如需 MDX 中運算子的詳細資訊，請參閱 mdx [運算子參考 &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
 ### <a name="determining-results"></a>決定結果  
  當您將簡單的運算式組合成複雜的運算式時，結合了資料類型優先順序規則的運算子規則，即可決定結果值的資料類型。  
   
- 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需定序的詳細資訊，請參閱 [&#40;Analysis Services&#41;的語言和 ](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)定序。  
+ 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需定序的詳細資訊，請參閱 [&#40;Analysis Services&#41;的語言和 ](/analysis-services/languages-and-collations-analysis-services)定序。  
   
  另外也有一些規則，根據簡單運算式的有效位數、小數位數與長度，決定結果的有效位數、小數位數與長度。  
   
@@ -93,13 +93,12 @@ ms.locfileid: "88471770"
 |原始類型|所需類型|轉換|  
 |-------------------|-----------------|----------------|  
 |層級|設定|\<level>。成員|  
-|階層|member|\<hierarchy>. defaultmember|  
-|member|Tuple|(\<Member>)|  
-|Tuple|member|\<tuple>。專案 (0) |  
+|階層|成員|\<hierarchy>. defaultmember|  
+|成員|Tuple|(\<Member>)|  
+|Tuple|成員|\<tuple>。專案 (0) |  
 |Tuple|純量|\<tuple>。值|  
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 運算子參考 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 語法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

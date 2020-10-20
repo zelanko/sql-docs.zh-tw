@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7291a8d2c57d4a996893146e8e855df234ed0139
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea373dc4ffe7eb01b19969288afce45489ab4e8c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413134"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196032"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -52,6 +52,5 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 的關鍵概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
-  
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   

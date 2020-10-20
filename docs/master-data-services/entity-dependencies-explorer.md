@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389294"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192401"
 ---
 # <a name="entity-dependencies-explorer"></a>Entity Dependencies (實體相依性) 總管
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389294"
   
 它有助於回答「誰正在使用我的實體，且其做法為何？」問題。 此檢視與 [衍生階層] 總管頁面類似，但它包含的範圍更廣。 它會顯示所有 DBA 關聯性，而不只是定義為特定階層一部分的 DBA 關聯性。 不需要階層定義，因為只會從現有 DBA 推斷所顯示的階層結構。  
   
-在 [總管] 頁面功能表中，[Entity Dependencies] (實體相依性) 功能表項目會列出模型中至少有一個實體所相依的所有實體 (即至少有一個實體具有參考所列實體的 DBA)。 實體名稱旁邊會顯示相依性 (直接和間接) 數目，並依這個數目排序清單，而且大量參考的實體會在頂端。 下列螢幕擷取畫面取自 [範例資料](https://msdn.microsoft.com/library/master-data-services-sample.aspx)的客戶模型，並顯示有 7 個實體參考 BigArea 實體 (直接或間接)：  
+在 [總管] 頁面功能表中，[Entity Dependencies] (實體相依性) 功能表項目會列出模型中至少有一個實體所相依的所有實體 (即至少有一個實體具有參考所列實體的 DBA)。 實體名稱旁邊會顯示相依性 (直接和間接) 數目，並依這個數目排序清單，而且大量參考的實體會在頂端。 下列螢幕擷取畫面取自 [範例資料](./sql-server-samples-model-deployment-packages-mds.md)的客戶模型，並顯示有 7 個實體參考 BigArea 實體 (直接或間接)：  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ ms.locfileid: "88389294"
   
   
   
-  
-

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491382"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193464"
 ---
 # <a name="using-set-expressions"></a>使用集合運算式
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491382"
   
  是由三個 tuple 所組成，每一個 tuple 都包含 Product 維度之 Product Category 階層上之成員及 Date 維度之 Calendar 階層上之成員的兩個明確參考。  
   
- 如需傳回集合的函式範例，請參閱 [使用成員、元組和集合 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+ 如需傳回集合的函式範例，請參閱 [使用成員、元組和集合 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX &#40;運算式&#41;](../mdx/expressions-mdx.md)  
-  
   

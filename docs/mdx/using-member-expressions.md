@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e833d8d579841a3fc15aad89612a1d25b71fd0f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ea5e8c9d70a63c4ab935083606f6d4084713e77
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494822"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194362"
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
 
@@ -60,9 +60,8 @@ Dimension_Name
  存在著許多會傳回成員的 MDX 函數。 如需完整清單，請參閱 mdx [函數參考 &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  如需有關成員名稱及成員索引鍵的詳細資訊，請參閱 [使用成員、元組和集合 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
+>  如需有關成員名稱及成員索引鍵的詳細資訊，請參閱 [使用成員、元組和集合 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX &#40;運算式&#41;](../mdx/expressions-mdx.md)  
-  
   

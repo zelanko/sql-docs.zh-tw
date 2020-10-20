@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d571ed020c1b36ea2e09beca7d2ccbef5899951f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbdae47b3ede8ad2b22258e83a69b4f2776115d9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500471"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192338"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -36,7 +36,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  成員屬性名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **Properties**函數會傳回指定成員屬性的指定成員值。 成員屬性可以是任何內建成員屬性，例如 **名稱**、 **識別碼**、索引 **鍵**或 **標題**，也可以是使用者定義的成員屬性。 如需詳細資訊，請參閱 [&#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 的內建成員屬性，以及 [&#40;Mdx&#41;的使用者自訂成員屬性 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
+ **Properties**函數會傳回指定成員屬性的指定成員值。 成員屬性可以是任何內建成員屬性，例如 **名稱**、 **識別碼**、索引 **鍵**或 **標題**，也可以是使用者定義的成員屬性。 如需詳細資訊，請參閱 [&#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 的內建成員屬性，以及 [&#40;Mdx&#41;的使用者自訂成員屬性 ](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
  依預設，值會強制轉型成字串。 如果指定了 **類型** ，則傳回值為強型別。  
   
@@ -106,7 +106,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用成員屬性 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [使用成員屬性 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

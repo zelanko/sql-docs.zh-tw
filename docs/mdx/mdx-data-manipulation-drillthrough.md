@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387034"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196182"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 資料操作 - DRILLTHROUGH
 
@@ -50,7 +50,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  MDX 陳述式可指定主旨資料格。 **MAXROWS**引數所指定的值會指出產生的資料列集應該傳回的最大資料列數。  
   
- 根據預設，傳回的資料列數上限為 10,000 個資料列。 這表示，如果您將 **MAXROWS** 保留為未指定，則會得到10000個或更少的資料列。 如果這個值對您的案例而言太低，您可以將 **MAXROWS** 設定為較高的數位，例如 `MAXROWS 20000` 。 如果整體太低，您可以藉由變更 **OLAP\Query\DefaultDrillthroughMaxRows** 伺服器屬性來增加預設值。 如需變更這個屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)。  
+ 根據預設，傳回的資料列數上限為 10,000 個資料列。 這表示，如果您將 **MAXROWS** 保留為未指定，則會得到10000個或更少的資料列。 如果這個值對您的案例而言太低，您可以將 **MAXROWS** 設定為較高的數位，例如 `MAXROWS 20000` 。 如果整體太低，您可以藉由變更 **OLAP\Query\DefaultDrillthroughMaxRows** 伺服器屬性來增加預設值。 如需變更這個屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](/analysis-services/server-properties/server-properties-in-analysis-services)。  
   
  除非另有指定，否則所傳回的資料行會包含與指定量值之量值群組相關的所有維度 (多對多維度除外) 之全部資料粒度屬性。 Cube 維度前面有 $，以區分維度和量值群組。 **RETURN**子句用來指定由「鑽取」查詢所傳回的資料行。 下列函數可以套用至單一屬性，或由 **RETURN** 子句來測量。  
   
@@ -99,5 +99,4 @@ RETURN
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 資料動作陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

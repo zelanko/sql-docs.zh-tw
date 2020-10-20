@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 284456995d163c04bc315424ea04b76f17dc228e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfc26c52cbd478979cbbaad4a69e66bc58138a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421922"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194020"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 
@@ -49,7 +49,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
 ## <a name="remarks"></a>備註  
  此函數會傳回依階層排序的子成員集合，並加入第一個集合中有指定，同時也出現在第二個集合中的成員。 若第一個集合包含父成員及一或多個子系，父成員將不會向下鑽研。 第一個集合可以是任何維度，但第二個集合只能包含一維集合。 會保留第一個集合中原始成員的順序，但在函數之結果集中的所有子成員則在其父成員底下。 函數會擷取屬於第一個集合並且也存在第二個集合內之每個成員的子系，來建構結果集。 如果指定了 **遞迴** ，函式會繼續以遞迴方式比較結果集的成員與第二個集合，並針對結果集中的每一個成員，取得也出現在第二個集合中的子系，直到第二個集合中找不到來自結果集的成員為止。  
   
- 查詢 XMLA 屬性 **MdpropMdxDrillFunctions** ，可讓您驗證服務器為切入函數提供的支援層級;如需詳細資訊，請參閱 [&#40;xmla&#41;支援的 Xmla 屬性 ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
+ 查詢 XMLA 屬性 **MdpropMdxDrillFunctions** ，可讓您驗證服務器為切入函數提供的支援層級;如需詳細資訊，請參閱 [&#40;xmla&#41;支援的 Xmla 屬性 ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 。  
   
  第一個集合可以包含 Tuple，而非成員。 Tuple 向下鑽研是 OLE DB 的擴充功能，會傳回 Tuple 集合而不是傳回成員。  
   
@@ -83,5 +83,4 @@ SELECT DrilldownMember
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785164"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196889"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>如何調試 CLR 資料庫物件
 
@@ -47,7 +47,7 @@ ms.locfileid: "91785164"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的偵錯遵循每個連接模型。 偵錯工具僅會偵測及偵錯其與用戶端之連接的活動。 因為偵錯工具的功能不受連接類型的限制，所以可以對表格式資料流 (TDS) 及 HTTP 連接進行偵錯。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許偵錯現有的連接。 偵錯支援在伺服器上執行的常式內的所有通用偵錯功能。 偵錯工具與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可透過分散式元件物件模式 (COM) 進行互動。  
   
-如需有關調試 managed 預存程式、函數、觸發程式、使用者定義型別和匯總的詳細資訊和案例，請參閱 Visual Studio 檔中的 [SQL SERVER CLR Integration Database 的調試](https://go.microsoft.com/fwlink/?LinkId=120378) 程式。  
+如需有關調試 managed 預存程式、函數、觸發程式、使用者定義型別和匯總的詳細資訊和案例，請參閱 Visual Studio 檔中的 [SQL SERVER CLR Integration Database 的調試](/previous-versions/ms165050(v=vs.100)) 程式。  
   
 必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 TCP/IP 網路通訊協定，才能針對遠端開發、偵錯和開發使用 Visual Studio。 如需在伺服器上啟用 TCP/IP 通訊協定的詳細資訊，請參閱 [設定用戶端通訊](../../database-engine/configure-windows/configure-client-protocols.md)協定。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "91785164"
 2. 建立新的 SQL CLR 類型 (c # ) ：
 
    1. 在 **方案總管**中，以滑鼠右鍵按一下專案，然後選取 [ **加入**]、[ **新增專案 ...**]。 
-   1. 從 [ **加入新專案** ] 視窗中，選取 [ **Sql Clr c # 預存**程式]、 **[Sql clr c # 使用者定義函式**]、[Sql clr c #] **使用者定義**型別、SQL Clr c # **觸發**程式、 **sql clr c # 匯總**或 **類別**。
+   1. 從 [ **加入新專案** ] 視窗中，選取 [ **Sql Clr c # 預存**程式]、 **[sql clr c #] User-Defined**函式、 **sql clr c # User-Defined 類型**、 **Sql**Clr c # 觸發程式、 **sql clr c # 匯總**或 **類別**。
    1. 指定新類型之來源檔案的名稱， **然後選取 [新增]**。
 
 3. 將新類型的程式碼加入至文字編輯器。 如需範例預存程式的範例程式碼，請參閱本文中的下列範例一節。
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>後續步驟
   
-如需使用 Visual Studio 對 managed 程式碼進行偵錯工具的詳細資訊，請參閱 Visual Studio 檔中的 [managed 程式碼的調試](https://go.microsoft.com/fwlink/?LinkId=120377) 程式。  
+如需使用 Visual Studio 對 managed 程式碼進行偵錯工具的詳細資訊，請參閱 Visual Studio 檔中的 [managed 程式碼的調試](/visualstudio/debugger/debugging-managed-code) 程式。  
 
 如需詳細資訊，請參閱 [Common Language Runtime 整合程式設計概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

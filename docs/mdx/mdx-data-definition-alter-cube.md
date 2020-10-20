@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 052d533e503f5b82f506ec119684acbbfe7cdd5f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480606"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192348"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 資料定義 - ALTER CUBE
 
 
-  改變指定 Cube 的結構，通常用來支援維度回寫。 如需在應用程式中使用回寫的詳細資訊，請參閱這篇 blog 文章： [使用 Analysis Services (Blog 建立回寫應用程式) ](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
+  改變指定 Cube 的結構，通常用來支援維度回寫。 如需在應用程式中使用回寫的詳細資訊，請參閱這篇 blog 文章： [使用 Analysis Services (Blog 建立回寫應用程式) ](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  請注意，並行維度回寫可能會導致死結，其中第一個回寫由於第二個回寫保留共用鎖定而無法認可。 在此情況下，雖然不會產生錯誤，但是也無法進行作業。 最後，這兩個回寫會逾時，而系統會回復變更。  
   
@@ -166,5 +166,4 @@ CELL CALCULATION Calculation_Name
   
 ## <a name="see-also"></a>另請參閱  
  [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

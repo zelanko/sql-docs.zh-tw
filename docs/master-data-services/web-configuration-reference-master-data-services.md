@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34e3e849a86cb23c3974b32b9d3d8c0721601274
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456757"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196092"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
 
@@ -32,16 +32,16 @@ ms.locfileid: "88456757"
 |組態元素|描述|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自訂元素。 將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
-|**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
-|**system. web**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178348) 。|  
-|**啟動**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<startup> 元素](https://go.microsoft.com/fwlink/?LinkId=178349)。|  
-|**運行**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<runtime> 元素](https://go.microsoft.com/fwlink/?LinkId=178350)。|  
-|**system.codedom**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<system.codedom> 元素](https://go.microsoft.com/fwlink/?LinkId=178351)。|  
-|**副檔名**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web.extensions 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178352) 。|  
-|**system.webServer**|包含 IIS 項目的區段群組。 如需詳細資訊，請參閱 MSDN Library 中的 [system.webServer 區段群組 \[IIS 7 設定結構描述\]](https://go.microsoft.com/fwlink/?LinkId=178353)。|  
-|**system.serviceModel**|WCF 元素。 如需詳細資訊，請參閱 [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) MSDN library 中的。|  
-|**system.diagnostics**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<system.diagnostics> 元素](https://go.microsoft.com/fwlink/?LinkId=178355)。|  
-|**appSettings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [appSettings 項目 (一般設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178356) 。|  
+|**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) 。|  
+|**system. web**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web 項目 (ASP.NET 設定結構描述)](/previous-versions/dotnet/netframework-4.0/dayb112d(v=vs.100)) 。|  
+|**啟動**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<startup> 元素](/dotnet/framework/configure-apps/file-schema/startup/startup-element)。|  
+|**運行**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<runtime> 元素](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element)。|  
+|**system.codedom**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<system.codedom> 元素](/dotnet/framework/configure-apps/file-schema/compiler/system-codedom-element)。|  
+|**副檔名**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web.extensions 項目 (ASP.NET 設定結構描述)](/previous-versions/dotnet/netframework-4.0/bb546044(v=vs.100)) 。|  
+|**system.webServer**|包含 IIS 項目的區段群組。 如需詳細資訊，請參閱 MSDN Library 中的 [system.webServer 區段群組 \[IIS 7 設定結構描述\]](/previous-versions/iis/settings-schema/ms689429(v=vs.90))。|  
+|**system.serviceModel**|WCF 元素。 如需詳細資訊，請參閱 [\<system.serviceModel>](/dotnet/framework/configure-apps/file-schema/wcf/system-servicemodel) MSDN library 中的。|  
+|**system.diagnostics**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的[ \<system.diagnostics> 元素](/dotnet/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element)。|  
+|**appSettings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [appSettings 項目 (一般設定結構描述)](/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)) 。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 元素  
  **\<masterDataServices>** 元素是用來將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到資料庫的自訂元素 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
@@ -56,7 +56,7 @@ ms.locfileid: "88456757"
   
 ### <a name="elements-and-attributes"></a>元素和屬性  
   
-|Item|描述|  
+|項目|描述|  
 |----------|-----------------|  
 |**instance**|子元素。 包含指定 Web 服務和資料庫連接字串之資訊的屬性。|  
 |**virtualPath**|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這會對應至**path** **\<application>** IIS ApplicationHost.config 檔案中專案下元素的 path 屬性 **\<site>** 。|  
@@ -72,5 +72,4 @@ ms.locfileid: "88456757"
    <instance virtualPath="/MDS" siteName="Contoso" connectionName="MDSDB" serviceName="MDS1" />  
 </masterDataServices>  
 ```  
-  
   

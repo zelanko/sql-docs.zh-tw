@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37f23c75d8a947e52daf47ef9648ccbd1587b9a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88341124"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192298"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用 Cube 及 Subcube 運算式
 
@@ -70,10 +70,9 @@ ms.locfileid: "88341124"
  子工作的子工作識別碼會顯示為 *Subcube_Name*。 的形式出現在 MDX 陳述式的標記法描述內。  
   
 ## <a name="see-also"></a>另請參閱  
- [基本 MDX 查詢 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [在 MDX 中建立 Subcube &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [基本 MDX 查詢 &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [在 MDX 中建立 Subcube &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [&#40;MDX&#41;建立子多維資料語句 ](../mdx/mdx-data-definition-create-subcube.md)   
  [MDX &#40;運算式&#41;](../mdx/expressions-mdx.md)   
  [SCOPE 陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
-  
   

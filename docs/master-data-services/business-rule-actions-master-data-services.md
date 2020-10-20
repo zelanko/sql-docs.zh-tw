@@ -1,6 +1,6 @@
 ---
 title: 商務規則動作
-description: 在 Master Data Services 中，商務規則會造成動作。 瞭解預設值動作、變更值動作、驗證動作，以及外部動作。
+description: 在 Master Data Services 中，商務規則會造成動作。 深入瞭解預設值動作、變更值動作、驗證動作和外部動作。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 18f95be4c33c1d9695a16f7183407e177bc02925
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813682"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193662"
 ---
 # <a name="business-rule-actions-master-data-services"></a>商務規則動作 (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "85813682"
   
 |值名稱|描述|  
 |----------------|-----------------|  
-|**預設為**|選取的屬性 **預設為** 特定的屬性、特定的屬性值或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
+|**預設值為**|選取的屬性 **預設為** 特定的屬性、特定的屬性值或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**預設為產生的值**|選取的屬性 **預設為產生的值** ，這個值取決於輸入開始和增量值。<br /><br /> 此動作僅適用於文字及數值。|  
 |**預設為串連值**|選取的屬性 **預設為串連值** ，這個值取決於指定多個屬性。<br /><br /> 此動作適用於文字及連結值。|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "85813682"
 |---------------------|-----------------|  
 |**需要**|選取的屬性 **為需要的**，表示不能為 null 或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**無效**|選取的屬性 **無效**。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
-|**必須包含模式**|選取的屬性 **必須包含指定的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的[正則運算式語言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此動作適用於文字及連結值。|  
+|**必須包含模式**|選取的屬性 **必須包含指定的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需正則運算式的詳細資訊，請參閱 MSDN Library 中的 [正則運算式語言元素](/dotnet/standard/base-types/regular-expression-language-quick-reference) 。<br /><br /> 此動作適用於文字及連結值。|  
 |**必須是唯一的**|選取的屬性 **必須獨立或與定義的屬性結合時是唯一的** 。<br /><br /> **最佳作法** ：結合此動作與強制性條件，以確保訂閱系統中索引欄位的有效性。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。<br /><br /> **注意**：如果第一個屬性的類型是 DateTime，則無法與類型為 Numeric 或 Text 的屬性一起使用。 如果第一個屬性的類型是 Numeric，則無法與類型為 DateTime 的屬性一起使用。|  
 |**必須具有下列其中一個值**|選取的屬性 **必須具有清單中指定的其中一個值** 。<br /><br /> 此動作適用於文字值。|  
 |**必須大於**|選取的屬性 **必須大於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此動作適用於文字、數字及日期值。|  
@@ -70,11 +70,10 @@ ms.locfileid: "85813682"
   
 |動作名稱|描述|  
 |-----------------|-----------------|  
-|**啟動工作流程**|起始外部工作流程。 造成此動作發生的資料會傳遞給工作流程。 如需詳細資訊，請參閱 [Master Data Services 的 SharePoint 工作流程整合](https://msdn.microsoft.com/library/gg690195.aspx)。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
+|**啟動工作流程**|起始外部工作流程。 造成此動作發生的資料會傳遞給工作流程。 如需詳細資訊，請參閱 [Master Data Services 的 SharePoint 工作流程整合](/previous-versions/sql/sql-server-2008-r2/gg690195(v=msdn.10))。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [商務規則條件 &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480314"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193648"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
 
@@ -72,11 +72,10 @@ ms.locfileid: "89480314"
 |實體系統管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是實體系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定實體中所有物件和成員的所有權限。<br /><br /> 如果實體變更需要核准時，就可以核准暫止的變更集。|  
   
 ## <a name="external-resources"></a>外部資源  
- 請參考 msdn.com 上的 [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(安全性改進) 部落格文章。  
+ 請參考 msdn.com 上的 [Security Improvements](/archive/blogs/e7/improvements-to-autoplay)(安全性改進) 部落格文章。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立模型系統管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [建立 Master Data Services 資料庫](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
   

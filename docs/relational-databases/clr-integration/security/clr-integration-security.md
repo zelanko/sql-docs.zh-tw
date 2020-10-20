@@ -1,6 +1,6 @@
 ---
 title: CLR 整合安全性 |Microsoft Docs
-description: SQL Server 與 .NET Framework CLR 安全性整合，會管理物件之間的存取。 在物件上執行的安全性檢查取決於涉及的呼叫。
+description: SQL Server 與 .NET Framework CLR 安全性的整合會管理物件之間的存取。 針對物件執行的安全性檢查取決於所涉及的呼叫。
 ms.custom: ''
 ms.date: 07/22/2020
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947081"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196866"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 
@@ -47,10 +47,10 @@ ms.locfileid: "87947081"
  [主機保護屬性和 CLR 整合程式設計](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  提供不允許在 SAFE 和 EXTERNAL_ACCESS 組件中使用之主機保護屬性 (HPA) 值的相關資訊。  
   
- [CLR 整合安全性中的連結](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [CLR 整合安全性中的連結]()  
  描述使用者程式碼片段如何在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中彼此呼叫。  
   
- [模擬和 CLR 整合安全性](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [模擬和 CLR 整合安全性](../data-access/impersonation-and-credentials-for-connections.md)  
  討論 Managed 程式碼如何使用模擬來存取外部資源。  
   
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
@@ -60,5 +60,4 @@ ms.locfileid: "87947081"
   
 ## <a name="see-also"></a>另請參閱  
  [管理 CLR 整合組件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   
