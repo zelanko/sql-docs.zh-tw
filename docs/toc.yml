@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: 非根容器
               href: big-data-cluster/non-root-containers.md
+            - name: 待用加密
+              items:
+                - name: 概念與設定
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: SQL Server TDE
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: HDFS 加密區域
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Spark 作業
           items:
             - name: 在 Azure Data Studio 中提交 Spark 作業
