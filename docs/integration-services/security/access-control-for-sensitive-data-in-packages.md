@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430130"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192428"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>封裝中的敏感性資料存取控制
 
@@ -66,9 +66,9 @@ ms.locfileid: "88430130"
 |----------------------|-----------------|  
 |不要儲存機密 (**DontSaveSensitive**)|儲存封裝時，隱藏封裝中的機密屬性值。 此保護等級不加密，但是會防止標記為機密資料的屬性與封裝一起儲存，因此其他使用者無法使用機密資料。 如果其他使用者開啟封裝，則機密資訊會以空白取代，該使用者必須提供機密資訊。<br /><br /> 與 **dtutil** 公用程式 (dtutil.exe) 搭配使用時，這個保護等級會對應至值 0。|  
 |以密碼加密全部 (**EncryptAllWithPassword**)|使用密碼加密整個封裝。 封裝是使用建立或匯出封裝時使用者提供的密碼來加密的。 若要在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師 中開啟封裝，或是使用 **dtexec** 命令提示公用程式來執行封裝，使用者必須提供封裝密碼。 如果沒有密碼，使用者就無法存取或執行封裝。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 3。|  
-|以使用者金鑰加密全部 (**EncryptAllWithUserKey**)|使用以目前使用者設定檔為基礎的金鑰加密整個封裝。 只有建立或匯出封裝的使用者，才可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師 中開啟封裝，或是使用 **dtexec** 命令提示公用程式來執行封裝。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 4。<br /><br /> 注意：對於使用使用者金鑰的保護等級， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用 DPAPI 標準。 如需 DPAPI 的詳細資訊，請參閱 MSDN Library，網址為 [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|以使用者金鑰加密全部 (**EncryptAllWithUserKey**)|使用以目前使用者設定檔為基礎的金鑰加密整個封裝。 只有建立或匯出封裝的使用者，才可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師 中開啟封裝，或是使用 **dtexec** 命令提示公用程式來執行封裝。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 4。<br /><br /> 注意：對於使用使用者金鑰的保護等級， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用 DPAPI 標準。 如需 DPAPI 的詳細資訊，請參閱 MSDN Library，網址為 [https://msdn.microsoft.com/library](/previous-versions/ms995355(v=msdn.10))。|  
 |以密碼加密機密 (**EncryptSensitiveWithPassword**)|使用密碼僅加密封裝中的機密屬性值。 DPAPI 用於此加密。 機密資料會做為封裝的一部份進行儲存，但該資料會使用建立或匯出封裝時目前使用者所提供的密碼進行加密。 若要在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中開啟封裝，使用者必須提供封裝密碼。 如果未提供密碼，則會開啟封裝但不提供機密資料，目前的使用者必須為機密資料提供新值。 如果使用者嘗試在未提供密碼的情況下執行封裝，則封裝執行會失敗。 如需密碼和命令列執行的詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 2。|  
-|以使用者金鑰加密機密 (**EncryptSensitiveWithUserKey**)|使用以目前使用者設定檔為基礎的金鑰，僅加密封裝中的機密屬性值。 只有使用相同設定檔的相同使用者才可以載入封裝。 如果其他使用者開啟封裝，則機密資訊會以空白取代，且目前的使用者必須為機密資料提供新值。 如果使用者嘗試執行封裝，則封裝執行會失敗。 DPAPI 用於此加密。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 1。<br /><br /> 注意：對於使用使用者金鑰的保護等級， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用 DPAPI 標準。 如需 DPAPI 的詳細資訊，請參閱 MSDN Library，網址為 [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408)。|  
+|以使用者金鑰加密機密 (**EncryptSensitiveWithUserKey**)|使用以目前使用者設定檔為基礎的金鑰，僅加密封裝中的機密屬性值。 只有使用相同設定檔的相同使用者才可以載入封裝。 如果其他使用者開啟封裝，則機密資訊會以空白取代，且目前的使用者必須為機密資料提供新值。 如果使用者嘗試執行封裝，則封裝執行會失敗。 DPAPI 用於此加密。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 1。<br /><br /> 注意：對於使用使用者金鑰的保護等級， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用 DPAPI 標準。 如需 DPAPI 的詳細資訊，請參閱 MSDN Library，網址為 [https://msdn.microsoft.com/library](/previous-versions/ms995355(v=msdn.10))。|  
 |依賴伺服器儲存體進行加密 (**ServerStorage**)|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色保護整個封裝。 在將封裝儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫時，才支援此選項。 此外，SSISDB 目錄會使用 **ServerStorage** 保護等級<br /><br /> 將封裝從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]儲存到檔案系統時不支援此選項。|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保護等級設定和 SSISDB 目錄  
@@ -163,4 +163,3 @@ ms.locfileid: "88430130"
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
  [安全性概觀 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil 公用程式](../../integration-services/dtutil-utility.md)  
-  

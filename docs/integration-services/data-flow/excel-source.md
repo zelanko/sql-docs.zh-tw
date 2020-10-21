@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484569"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192748"
 ---
 # <a name="excel-source"></a>Excel 來源
 
@@ -56,7 +56,7 @@ ms.locfileid: "88484569"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel 自訂屬性](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88484569"
 |值|描述|  
 |-----------|-----------------|  
 |資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：** [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：** [在套件中使用變數](../integration-services-ssis-variables.md)|  
 |SQL (命令)|使用 SQL 查詢從 Excel 檔案中擷取資料。 |  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   

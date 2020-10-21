@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd3951ce785fc8444009a0af9442a85a41b0fbfa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484233"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193158"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>資料流程元件的設計階段方法
 
@@ -105,7 +105,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022) 中的＜通用類型轉換＞與＜實作類型轉換子＞。  
+ 如需詳細資訊，請參閱 [MSDN Library](../../../sql-server/index.yml) 中的＜通用類型轉換＞與＜實作類型轉換子＞。  
   
  您可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 屬性，為自訂屬性值指定自訂編輯器對話方塊，如下列範例所示。 首先，如果您找不到符合需求的現有 UI 類型編輯器類別，您必須建立一個繼承自 **System.Drawing.Design.UITypeEditor** 的自訂類型編輯器。  
   
@@ -139,9 +139,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022) 中的＜實作 UI 類型編輯器＞。  
+ 如需詳細資訊，請參閱 [MSDN Library](../../../sql-server/index.yml) 中的＜實作 UI 類型編輯器＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程元件的執行階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

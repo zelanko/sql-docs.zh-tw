@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58e6e75f520bcd966cf2b1ae8e2edbc0f7a568f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afccf7296d27331d7b76ba5e4978faca2126060f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484413"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194652"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>將資料品質規則套用至資料來源
 
@@ -31,8 +31,7 @@ ms.locfileid: "88484413"
   
 1.  建立封裝。  
   
-2.  加入並設定 DQS 清理轉換。 如需相關資訊，請參閱 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
+2.  加入並設定 DQS 清理轉換。 如需相關資訊，請參閱 [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md)。  
   
 3.  將 DQS 清理轉換連接至資料來源。  
-  
   

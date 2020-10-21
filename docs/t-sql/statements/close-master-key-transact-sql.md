@@ -23,12 +23,12 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1520b668c1b187849720a074870c04e9c564cb5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 44884bdfe8b5981ade28508a016e8e3f3b78bfb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724159"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193248"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91724159"
   
 ## <a name="syntax"></a>語法  
   
-```syntaxsql
+```syntaxsql  
 CLOSE MASTER KEY  
 ```  
 
@@ -58,7 +58,7 @@ CLOSE MASTER KEY
   
 ## <a name="examples"></a>範例  
   
-```sql
+```sql  
 USE AdventureWorks2012;  
 CLOSE MASTER KEY;  
 GO  
@@ -66,7 +66,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```sql
+```sql  
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO   

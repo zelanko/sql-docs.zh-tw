@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 50c8e19dd3ed6782a7a8fe8532ab0edb61cceb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e278c50b6a467660c827e3e59181945fdb9985e7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360404"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035801"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ CLR 傳回類型：**SqlGeography**
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周)  
   
-理論與計算所得之緩衝區間的誤差為 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 _tolerance_ 參數的值。 如需有關範圍的詳細資訊，請參閱 [geography 資料類型方法參考](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
+理論與計算所得之緩衝區間的誤差為 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 _tolerance_ 參數的值。 如需有關範圍的詳細資訊，請參閱 [geography 資料類型方法參考](./stequals-geography-data-type.md)。  
   
 這個方法並不精確。  
   
@@ -89,5 +89,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ## <a name="see-also"></a>另請參閱  
 [STBuffer &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [地理例項上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
   

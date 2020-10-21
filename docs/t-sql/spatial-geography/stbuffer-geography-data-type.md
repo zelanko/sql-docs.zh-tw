@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417044"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038311"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88417044"
   
  最大距離限制允許緩衝建構盡可能有彈性。  
   
- 理論與計算所得之緩衝區間的誤差為 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 如需有關範圍的詳細資訊，請參閱 [geography 資料類型方法參考](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
+ 理論與計算所得之緩衝區間的誤差為 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 如需有關範圍的詳細資訊，請參閱 [geography 資料類型方法參考](./stequals-geography-data-type.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `LineString``geography` 執行個體。 然後它會使用 `STBuffer()`，傳回此例項之 1 公尺內的區域。  
@@ -79,5 +79,4 @@ SELECT @g.STBuffer(1).ToString();
 ## <a name="see-also"></a>另請參閱  
  [BufferWithTolerance &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [地理位置例項上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
   

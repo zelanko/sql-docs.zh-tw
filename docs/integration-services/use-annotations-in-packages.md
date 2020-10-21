@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495111"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193760"
 ---
 # <a name="use-annotations-in-packages"></a>使用封裝中的註解
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495111"
   
  當您按 ENTER 鍵時，文字會折行。 註解方塊會自動在您加入其他文字行時放大。 封裝註解會以純文字格式保存在封裝檔案的 CDATA 區段中。  
   
- 如需對封裝檔案格式所做變更的詳細資訊，請參閱 [SSIS 封裝格式](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)。  
+ 如需對封裝檔案格式所做變更的詳細資訊，請參閱 [SSIS 封裝格式](./integration-services-ssis-packages.md)。  
   
  當您儲存封裝時，「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」會在封裝中儲存註解。  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495111"
   
 7.  若要將註解加入群組，請在註解上按一下滑鼠右鍵，然後按一下 [群組]****。  
   
-8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]**。  
+8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]**。

@@ -23,12 +23,12 @@ ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b075362e04c8cc60c62b5d28bd40f2815dee988
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 859f6a3315711811fb6587c52f3b80c0a0f05575
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540513"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196522"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
 
@@ -58,7 +58,7 @@ SET FMTONLY { ON | OFF }
 
 剖析 Transact-SQL 批次時，`SET FMTONLY ON` 沒有任何作用； 在執行階段的執行期間才會發生效果。
 
-預設值是 `OFF`。
+預設值為 `OFF`。
 
 ## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
@@ -77,58 +77,58 @@ Issue 2246 inspired this code example, and the replacement of the two pre-existi
 -->
 
 ```sql
-go
-SET NoCount ON;
+SET NOCOUNT ON;
+GO
 
-go
 DROP PROCEDURE IF EXISTS prc_gm29;
 
-DROP Table IF EXISTS #tabTemp41;
-DROP Table IF EXISTS #tabTemp42;
-go
+DROP TABLE IF EXISTS #tabTemp41;
+DROP TABLE IF EXISTS #tabTemp42;
+GO
 
 CREATE TABLE #tabTemp41
 (
-   KeyInt41        int           not null,
-   Name41          nvarchar(16)  not null,
-   TargetDateTime  datetime      not null  default GetDate()
+   KeyInt41        INT           NOT NULL,
+   Name41          NVARCHAR(16)  NOT NULL,
+   TargetDateTime  DATETIME      NOT NULL  DEFAULT GetDate()
 );
 
 CREATE TABLE #tabTemp42
 (
-   KeyInt42 int          not null,   -- JOIN-able to KeyInt41.
-   Name42   nvarchar(16) not null
+   KeyInt42 INT          NOT NULL,   -- JOIN-able to KeyInt41.
+   Name42   NVARCHAR(16) NOT NULL
 );
-go
+GO
 
-INSERT into #tabTemp41 (KeyInt41, Name41) values (10, 't41-c');
-INSERT into #tabTemp42 (KeyInt42, Name42) values (10, 't42-p');
-go
+INSERT INTO #tabTemp41 (KeyInt41, Name41) VALUES (10, 't41-c');
+INSERT INTO #tabTemp42 (KeyInt42, Name42) VALUES (10, 't42-p');
+GO
 
 CREATE PROCEDURE prc_gm29
 AS
-begin
-SELECT * from #tabTemp41;
-SELECT * from #tabTemp42;
+BEGIN
+SELECT * FROM #tabTemp41;
+SELECT * FROM #tabTemp42;
 
 SELECT t41.KeyInt41, t41.TargetDateTime, t41.Name41, t42.Name42
-   from
-                 #tabTemp41 as t41
-      INNER JOIN #tabTemp42 as t42 on t42.KeyInt42 = t41.KeyInt41
-end;
-go
+   FROM
+                 #tabTemp41 AS t41
+      INNER JOIN #tabTemp42 AS t42 on t42.KeyInt42 = t41.KeyInt41
+END;
+GO
 
 SET DATEFORMAT mdy;
 
 SET FMTONLY ON;
 EXECUTE prc_gm29;   -- Returns multiple tables.
 SET FMTONLY OFF;
-go
+GO
+
 DROP PROCEDURE IF EXISTS prc_gm29;
 
-DROP Table IF EXISTS #tabTemp41;
-DROP Table IF EXISTS #tabTemp42;
-go
+DROP TABLE IF EXISTS #tabTemp41;
+DROP TABLE IF EXISTS #tabTemp42;
+GO
 
 /****  Actual Output:
 [C:\JunkM\]

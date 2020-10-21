@@ -10,14 +10,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c2d0edde6ca50074f05ff51eca0de38ec947f31a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 29a8d7074d88af68605831529ca0e92e58a6129e
+ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834029"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92134816"
 ---
-# <a name="configure-polybase-to-access-external-data-in-oracled"></a>設定 PolyBase 存取 Oracle 中的外部資料
+# <a name="configure-polybase-to-access-external-data-in-oracle"></a>設定 PolyBase 存取 Oracle 中的外部資料
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -1,5 +1,6 @@
 ---
-title: 驗證資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+description: 驗證資料 (適用於 Excel 的 MDS 增益集)
+title: 驗證資料
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48124bf61c39a24f07ede4a184db70a85b040b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b878dcc17cf5ea23b1c5eccca58cdab39cfb7524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257885"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行資料時，會進行下列兩種驗證類型：  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074386"
  在每種情況下，有效資料都會發行到 MDS 儲存機制。 無效資料已反白顯示，而且在狀態資料行中顯示錯誤的詳細資料。  
   
 ## <a name="when-validation-occurs"></a>當發生驗證時  
- 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行新的或已變更的資料時，或當您手動套用商務規則時，會發生驗證。  
+ 在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，當您發行新的或變更的資料時，或當您手動套用商務規則時，就會進行驗證。  
   
  當商務規則失敗時，資料仍然會發行到 MDS 儲存機制。 當輸入驗證失敗時，資料就不會發行到儲存機制。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68074386"
   
  如需其他狀態的資訊，請參閱[驗證狀態 &#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md)。  
   
-|[狀態]|描述|  
+|狀態|描述|  
 |------------|-----------------|  
 |驗證失敗|對 MDS 管理員所定義的商務規則，資料列中一個或多個值的驗證失敗。|  
 |驗證成功|資料列中的所有值已經通過商務規則驗證。|  
@@ -47,12 +48,12 @@ ms.locfileid: "68074386"
 ## <a name="input-statuses"></a>輸入狀態  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，可能出現下列幾種輸入狀態：  
   
-|[狀態]|描述|  
+|狀態|描述|  
 |------------|-----------------|  
 |錯誤|資料列中一或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
 |新資料列|資料列中的值尚未發行到 MDS 儲存機制。|  
 |唯讀|登入的使用者有資料列中一個或多個值的唯讀權限，而且值無法更新。|  
-|未變更|工作表中尚未變更資料列中的任何值。 這不表示儲存機制中的值尚未變更；若要取得工作表中最新的資料，請在 [連接和載入]  群組中，請按一下 [載入或重新整理]  。<br /><br /> 這是每個資料列的預設值。|  
+|未變更|工作表中尚未變更資料列中的任何值。 這不表示儲存機制中的值尚未變更；若要取得工作表中最新的資料，請在 [連接和載入]**** 群組中，請按一下 [載入或重新整理]****。<br /><br /> 這是每個資料列的預設值。|  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -63,6 +64,6 @@ ms.locfileid: "68074386"
   
 ## <a name="related-content"></a>相關內容  
   
--   [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

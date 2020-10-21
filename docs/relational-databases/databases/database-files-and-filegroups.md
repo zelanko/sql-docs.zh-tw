@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 58c4cd1b0f3df19365772aa3bee751ac73a7cd1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756259"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192278"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -216,9 +216,9 @@ GO
 如需交易記錄檔管理建議的詳細資訊，請參閱[管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 
 ## <a name="related-content"></a>相關內容  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)    
  [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
  [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
  [分頁與範圍架構指南](../../relational-databases/pages-and-extents-architecture-guide.md)    
- [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     
+ [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)

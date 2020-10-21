@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc9b1025bc4b3d4399203d12253a1aa9caa38883
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4d6f406aa50176e60cabd72e348f1daeb0c56d3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477882"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197123"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>依據變更類型來導向 CDC 資料流
 
@@ -25,7 +25,7 @@ ms.locfileid: "88477882"
 
   若要加入及設定 CDC 分隔器轉換，封裝至少必須包含一個資料流程工作及一個 CDC 來源。  
   
- 加入至封裝的 CDC 來源必須已選取 NetCDC 處理模式。 如需選取處理模式的詳細資訊，請參閱 [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)。  
+ 加入至封裝的 CDC 來源必須已選取 NetCDC 處理模式。 如需選取處理模式的詳細資訊，請參閱 [CDC 來源編輯器 &#40;連線管理員頁面&#41;](./cdc-source.md)。  
   
 ### <a name="to-direct-the-cdc-stream-according-to-the-type-of-change"></a>若要依據變更類型來導向 CDC 資料流  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88477882"
   
 ## <a name="see-also"></a>另請參閱  
  [CDC 分隔器](../../integration-services/data-flow/cdc-splitter.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088923"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115684"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 一旦裝置以 `ndctl` 設定，並建立與裝載之後，您就可以將資料庫檔案放在其中或建立新的資料庫。
 
-因為 PMEM 裝置為 O_DIRECT (直接 I/O) 安全，所以請考慮啟用追蹤旗標 3979 以停用強制的排清機制。 如需詳細資訊，請參閱 [FUA 支援](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)。 [FUA 內部](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/)一文涵蓋強制單位存取內部。
+因為 PMEM 裝置為 O_DIRECT (直接 I/O) 安全，所以請考慮啟用追蹤旗標 3979 以停用強制的排清機制。 如需詳細資訊，請參閱 [FUA 支援](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux)。 [FUA 內部](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals)一文涵蓋強制單位存取內部。
 
 ## <a name="next-steps"></a>後續步驟
 

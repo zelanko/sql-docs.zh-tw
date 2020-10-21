@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ddf7e26e4eba9a3120d5a0052e29e8a763689556
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e80ddcc6a21eecfea98fbe44aa985066c1a92736
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449665"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193787"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 課：新增和設定 Foreach 迴圈容器
 
@@ -90,8 +90,7 @@ ms.locfileid: "88449665"
 [步驟 3：修改一般檔案連線管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+[設定 Foreach 迴圈容器](./control-flow/foreach-loop-container.md)  
+[在套件中使用變數](./integration-services-ssis-variables.md)  
   
   

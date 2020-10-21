@@ -19,12 +19,12 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33bf02ad0b9f4718fc9d8e80596176304a8794f6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 54f5a626fc9c442ceb620904f98894d4ce04bf0d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396623"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193261"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (字串串連指派) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "87396623"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 expression += expression  
 ```  
   
@@ -54,7 +53,7 @@ expression += expression
   
  += 運算子無法在沒有變數的情況下使用。 例如，下列程式碼將會造成錯誤：  
   
-```  
+```sql  
 SELECT 'Adventure' += 'Works'  
 ```  
   
@@ -62,8 +61,8 @@ SELECT 'Adventure' += 'Works'
 ### <a name="a-concatenation-using--operator"></a>A. 使用 += 運算子的串連
  下列範例會使用 `+=` 運算子串連。  
   
-```  
-DECLARE @v1 varchar(40);  
+```sql  
+DECLARE @v1 VARCHAR(40);  
 SET @v1 = 'This is the original.';  
 SET @v1 += ' More text.';  
 PRINT @v1;  
@@ -76,10 +75,10 @@ PRINT @v1;
 ### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>B. 使用 += 運算子進行串連時的評估順序
 下列範例會串連多個字串來形成一個長字串，然後嘗試計算最終字串的長度。 此範例示範使用串連運算子時的評估順序和截斷規則。 
 
-```
-DECLARE @x varchar(4000) = replicate('x', 4000)
-DECLARE @z varchar(8000) = replicate('z',8000)
-DECLARE @y varchar(max);
+```sql
+DECLARE @x VARCHAR(4000) = REPLICATE('x', 4000)
+DECLARE @z VARCHAR(8000) = REPLICATE('z',8000)
+DECLARE @y VARCHAR(max);
  
 SET @y = '';
 SET @y += @x + @z;

@@ -2,7 +2,7 @@
   href: ../machine-learning/index.yml
 - name: Microsoft SQL 文件 >
   href: ../index.yml
-- name: 概觀
+- name: 總覽
   expanded: true
   items:
     - name: 什麼是機器學習服務 (Python 和 R)？
@@ -374,7 +374,7 @@
 - name: 資源
   items:
     - name: 版本資訊 2019 >
-      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+      href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
     - name: 版本資訊 2017 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: 版本資訊 2016 >

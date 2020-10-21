@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4c2ec582a2900986906ee127ad48462dcb43c58
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1696a1fdcf2e27b8c13b24cbc5ae5b7a43cb1eec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227219"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196815"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  您可以指定 -1，以傳回與錯誤相關聯的嚴重性值，如下列範例所示。  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -186,7 +186,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  通常連續引數會取代連續轉換規格；第一個引數會取代第一個轉換規格，第二個引數會取代第二個轉換規格，依此類推。 例如，在下列 `RAISERROR` 陳述式中，`N'number'` 的第一個引數會取代 `%s` 的第一個轉換規格，而第二個引數 `5` 則會取代 `%d.` 的第二個轉換規格。  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -200,7 +200,7 @@ GO
   
  例如，下列兩個 `RAISERROR` 陳述式都會傳回相同的字串。 一個在引數清單中指定寬度和有效位數值；另一個在轉換規格中指定寬度和有效位數值。  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -225,7 +225,7 @@ GO
 > [!NOTE]  
 >  RAISERROR 只會產生由 1 到 127 之狀態的錯誤。 因為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能會引發狀態為 0 的錯誤，我們建議您在傳送 ERROR_STATE 的值給 RAISERROR 的狀態參數之前，先檢查它傳回的錯誤狀態。  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -257,7 +257,7 @@ END CATCH;
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. 在 sys.messages 中建立特定訊息  
  下列範例會顯示如何引發儲存在 sys.message 目錄檢視表的訊息。 使用 `sp_addmessage` 系統預存程序，可將訊息加入 sys.messages 目錄檢視表中成為訊息編號 `50005`。  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -275,7 +275,7 @@ GO
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. 使用區域變數來提供訊息文字  
  下列程式碼範例會顯示如何使用本機變數為 `RAISERROR` 陳述式提供訊息文字。  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459171"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035879"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>課程 1：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "88459171"
 ## <a name="prerequisites"></a>必要條件
 若要完成本教學課程，您需要 SQL Server Management Studio 和 SQL Server 執行個體存取權。 
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
 
 如果您沒有 SQL Server 執行個體，請建立一個。 請從下列連結選取平台來建立 SQL Server 執行個體。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
 - **Windows**: [下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [下載 Docker 上的 SQL Server 2017](../linux/quickstart-install-connect-docker.md).
 
 ## <a name="create-a-database"></a>建立資料庫
 和許多 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一樣，[`CREATE DATABASE`](statements/create-database-transact-sql.md) 陳述式也有一個必要參數，亦即資料庫的名稱。` CREATE DATABASE` 另外還有許多選擇性參數，例如要用來放置資料庫檔案的磁碟位置。 當執行 `CREATE DATABASE` 但未指定任何選擇性參數時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對這些參數的大部分會使用預設值。
@@ -241,7 +241,7 @@ ms.locfileid: "88459171"
         [數學函數 &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Text 和 Image 函數 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [Text 和 Image 函數 &#40;Transact-SQL&#41;](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ ms.locfileid: "88459171"
 請前往下一篇文章以深入了解：
 > [!div class="nextstepaction"]
 > [後續步驟](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

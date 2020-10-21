@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ad75032f362b3cbdef46eb247d1fd524275055f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0434642595fb334c138e1c3d1764384760a38407
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919604"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193368"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "86919604"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-  
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  
 ```  
@@ -68,14 +67,14 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>A. 移除執行個體中所有的查詢通知訂閱  
  下列範例會移除執行個體中所有的查詢通知訂閱。  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;  
 ```  
   
 ### <a name="b-removing-a-single-query-notification-subscription"></a>B. 移除單一查詢通知訂閱  
  下列範例會移除識別碼為 `73` 的查詢通知訂閱。  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   

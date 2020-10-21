@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 966371e30811f82f9be25711f9bf600bbddbcc8d
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: fc7f3e5ef6561338f6177f1810f6af2b92c7064a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522900"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192681"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87522900"
 本文說明如何在 SQL Server Integration Services (SSIS) 資料流程中設定 Power Query 來源的屬性。 Power Query 是一種技術，可讓您使用 Excel/Power BI Desktop 連線到各種資料來源並轉換資料。 如需詳細資訊，請參閱 [Power Query - 概觀與學習](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d) \(機器翻譯\) 一文。 Power Query 所產生的指令碼可以複製並貼到 SSIS 資料流程中的 Power Query 來源並加以設定。
   
 > [!NOTE]
-> 針對目前的預覽版本，Power Query 來源只能在 Azure Data Factory (ADF) 中的 SQL Server 2017/2019 和 Azure-SSIS Integration Runtime (IR) 上使用。 您可於[此處](https://www.microsoft.com/download/details.aspx?id=100619)下載並安裝 SQL Server 2017/2019 的最新 Power Query 來源。 Azure-SSIS IR 的 Power Query 來源已預先安裝。 若要佈建 Azure-SSIS IR，請參閱[在 ADF 中佈建 SSIS](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 一文。
+> 針對目前的預覽版本，Power Query 來源只能在 Azure Data Factory (ADF) 中的 SQL Server 2017/2019 和 Azure-SSIS Integration Runtime (IR) 上使用。 您可於[此處](https://www.microsoft.com/download/details.aspx?id=100619)下載並安裝 SQL Server 2017/2019 的最新 Power Query 來源。 Azure-SSIS IR 的 Power Query 來源已預先安裝。 若要佈建 Azure-SSIS IR，請參閱[在 ADF 中佈建 SSIS](/azure/data-factory/tutorial-deploy-ssis-packages-azure) 一文。
 
 ## <a name="configure-the-power-query-source"></a>設定 Power Query 來源
 
@@ -70,7 +70,7 @@ ms.locfileid: "87522900"
 
 ![PQ 來源 [連線管理員編輯器] 種類](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](/power-bi/desktop-data-source-prerequisites) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
+在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](/power-bi/desktop-data-source-prerequisites) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
 
 對於**資料來源路徑**，您可以輸入不需驗證資訊，即可組成連接字串的資料來源特有屬性。 例如，適用於 **SQL** 資料來源的路徑格式為 `<Server>;<Database>`。 您可以選取 [編輯]  按鈕，以將值指派給組成路徑的資料來源特有屬性。
 
@@ -82,9 +82,9 @@ ms.locfileid: "87522900"
 
 ### <a name="current-limitations"></a>目前的限制
 
--   目前無法在 Azure-SSIS IR 上使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法在該處安裝；因此請暫時改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱**自訂 Azure-SSIS IR** 一文中的 [ORACLE 標準 ODBC](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 範例。
+-   目前無法在 Azure-SSIS IR 上使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法在該處安裝；因此請暫時改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱**自訂 Azure-SSIS IR** 一文中的 [ORACLE 標準 ODBC](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 範例。
 
 -   目前無法以自訂安裝的狀態在 Azure-SSIS IR 上使用 **Web** 資料來源，所以請暫時以無自訂安裝的狀態在 Azure-SSIS IR 上使用。
 
 ## <a name="next-steps"></a>後續步驟
-了解如何在 Azure-SSIS IR 中執行 SSIS 封裝以作為 ADF 管線中的第一級活動。 請參閱[執行 SSIS 封裝活動執行階段](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)一文。
+了解如何在 Azure-SSIS IR 中執行 SSIS 封裝以作為 ADF 管線中的第一級活動。 請參閱[執行 SSIS 封裝活動執行階段](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)一文。

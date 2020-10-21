@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eee7131c831215278a8754efa913add075cfb57d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4180ef12f33562a9c2bbb3349aef0acd1a0d1653
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449771"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193823"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
 
@@ -163,7 +163,6 @@ ms.locfileid: "88449771"
 -   位於 www.mssqltips.com 的部落格項目： [如何在 SQL Server Integration Services SSIS 中使用交易](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
 ## <a name="see-also"></a>另請參閱  
- [繼承的交易](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
- [多個交易](https://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
-  
+ [繼承的交易]()   
+ [多個交易]()  
   

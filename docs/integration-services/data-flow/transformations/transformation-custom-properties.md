@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed5b4ad8fb62b326f48c85dced98fdb2686750c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425690"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194618"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
 
@@ -56,9 +56,9 @@ ms.locfileid: "88425690"
 
   除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特定的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
   
- 本主題將列出並描述各種資料流程轉換的自訂屬性。 如需大部分資料流程物件通用之屬性的詳細資訊，請參閱 [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 本主題將列出並描述各種資料流程轉換的自訂屬性。 如需大部分資料流程物件通用之屬性的詳細資訊，請參閱 [通用屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
- 您可以使用屬性運算式來設定轉換的某些屬性。 如需詳細資訊，請參閱 [可以使用運算式設定的資料流程屬性](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)。  
+ 您可以使用屬性運算式來設定轉換的某些屬性。 如需詳細資訊，請參閱 [可以使用運算式設定的資料流程屬性](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))。  
   
 ## <a name="transformations-with-custom-properties"></a>含有自訂屬性的轉換  
 
@@ -159,7 +159,7 @@ ms.locfileid: "88425690"
 |ValidateExternalMetadata|Boolean|指出快取轉換是否在設計階段使用外部資料來源進行驗證。 如果此屬性設定為 [False]  ，就會在執行階段根據外部資料來源進行驗證。<br /><br /> 預設值為 [True]  。|  
 |AvailableInputColumns|String|可用輸入資料行的清單。|  
 |InputColumns|String|選取之輸入資料行的清單。|  
-|CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器  之 [資料行]  頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
+|CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器  之 [資料行]  頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../connection-manager/cache-connection-manager.md)|  
   
 ##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 字元對應轉換自訂屬性  
  字元對應轉換只有元件層級上所有資料流程元件通用的屬性。  
@@ -211,7 +211,7 @@ ms.locfileid: "88425690"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 **False**。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 .<br /><br /> 注意:雖然您無法在 [資料轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|FastParse|Boolean|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 **False**。 如需詳細資訊，請參閱 [快速剖析](../parsing-data.md) 和 [標準剖析](../parsing-data.md)。 .<br /><br /> 注意:雖然您無法在 [資料轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |SourceInputColumnLineageId|整數|屬於輸出資料行來源之輸入資料行的 **LineageID** 。|  
   
  資料轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
@@ -370,7 +370,7 @@ ms.locfileid: "88425690"
 |DefaultCodePage|整數|無法從資料來源中取得字碼頁資訊時要使用的預設字碼頁。|  
 |MaxMemoryUsage|整數|查閱資料表的快取大小上限。 此屬性的預設值為 **25**，表示快取大小沒有任何限制。|  
 |MaxMemoryUsage64|整數|在 64 位元電腦上，查閱資料表的快取大小上限。|  
-|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤]  (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器]  對話方塊的 [錯誤輸出]  頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出]  (1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤]  (0)。|  
+|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 [將無相符項目的資料列視為錯誤]  (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器]  對話方塊的 [錯誤輸出]  頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](./lookup-transformation.md)。<br /><br /> 當屬性設定為 [將無相符項目的資料列傳送至無相符結果輸出]  (1)，資料列就不會被視為錯誤。<br /><br /> 預設值是 [將無相符項目的資料列視為錯誤]  (0)。|  
 |ParameterMap|String|歷程識別碼的分號分隔清單，而這些歷程識別碼會對應至 **SqlCommand** 陳述式中使用的參數。|  
 |ReferenceMetadataXML|String|轉換從查閱資料表中複製到輸出之資料行的中繼資料。|  
 |SqlCommand|String|填入查閱資料表的 SELECT 陳述式。|  
@@ -656,8 +656,7 @@ ms.locfileid: "88425690"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [路徑屬性](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [可以使用運算式設定的資料流程屬性](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
-  
+ [通用屬性](../set-the-properties-of-a-data-flow-component.md)   
+ [路徑屬性](../integration-services-paths.md)   
+ [可以使用運算式設定的資料流程屬性](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
   

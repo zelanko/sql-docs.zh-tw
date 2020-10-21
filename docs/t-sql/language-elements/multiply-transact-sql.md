@@ -21,12 +21,12 @@ ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4265eac0332833e2a3fdae2957e3ef37b7b62707
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a94c49a193d4ca0589fa733576acda27c2e0e92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467637"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193309"
 ---
 # <a name="-multiplication-transact-sql"></a>* (乘法) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467637"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 expression * expression  
 ```  
   
@@ -53,7 +53,7 @@ expression * expression
 ## <a name="examples"></a>範例  
  下列範例會擷取產品識別碼、名稱、清單價目以及 `Product` 資料表中所有越野車的新清單價目。 新的清單價目是利用 `*` 算數運算子，將 `ListPrice` 乘以 `1.15` 計算得出。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID, Name, ListPrice, ListPrice * 1.15 AS NewPrice  
@@ -66,7 +66,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會在 `dimEmployee` 資料表中擷取員工的名字和姓氏，並針對每位員工計算 `VacationHours` 的工資。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate * VacationHours AS VacationPay  

@@ -26,12 +26,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3c5c380472013176cdbe7ff745c588107d216b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467628"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193328"
 ---
 # <a name="-modulus-transact-sql"></a>% (模數) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467628"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 dividend % divisor  
 ```  
   
@@ -66,18 +66,18 @@ dividend % divisor
 ### <a name="a-simple-example"></a>A. 簡單範例  
  下列範例會將 38 這個數字除以 5。 結果中會產生 7 的整數部分，並示範模數如何傳回餘數 3。  
   
-```  
+```sql  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. 在資料表中使用資料行的範例  
  下列範例會傳回產品識別碼、產品單價以及將每個產品價格 (轉換為整數值) 除以訂購產品數的模數 (餘數)。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(100)ProductID, UnitPrice, OrderQty,  
-   CAST((UnitPrice) AS int) % OrderQty AS Modulo  
+   CAST((UnitPrice) AS INT) % OrderQty AS Modulo  
 FROM Sales.SalesOrderDetail;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
 ### <a name="c-simple-example"></a>C：簡單範例  
  下列範例示範 3 除以 2 時，`%` 運算子所傳回的結果。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(1) 3%2 FROM dimEmployee;  

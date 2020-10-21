@@ -1,5 +1,6 @@
 ---
-title: 概觀：從資料表匯入資料 (Master Data Services) | Microsoft Docs
+title: 從資料表匯入資料
+description: 在 Master Data Services 中為您的資料建立模型之後，從資料表匯入資料，並對資料進行變更。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257547"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概觀：從資料表匯入資料 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中為資料建立模型之後，即可開始新增資料，並對資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68097386"
 >  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]已淘汰對 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序提供支援。  
   
 ## <a name="deactivating-and-deleting-members-mds"></a>停用和刪除成員 (MDS)  
- 停用表示可以重新啟用該成員。 如果重新啟用成員，即會還原成員在階層和集合中的屬性及成員資格。 之前的所有交易會完整無缺。 系統管理員可以在主要資料的 [版本管理]  功能區域中，看到停用的交易。  
+ 停用表示可以重新啟用該成員。 如果重新啟用成員，即會還原成員在階層和集合中的屬性及成員資格。 之前的所有交易會完整無缺。 系統管理員可以在主要資料的 [版本管理] **** 功能區域中，看到停用的交易。  
   
  刪除表示從系統中永久清除該成員。 該成員的所有交易、所有關聯性及所有屬性都會遭到永久刪除。  
   
@@ -89,11 +90,11 @@ ms.locfileid: "68097386"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列幾種類型的暫存預存程序。  
   
--   stg.udp_\<名稱>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<名稱>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<名稱>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  模型中的每個實體，都有三個對應至分葉成員、合併的成員以及關聯性暫存資料表的預存程序。  下圖顯示貨幣、客戶及產品實體的暫存預存程序。  
   

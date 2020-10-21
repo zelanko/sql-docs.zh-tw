@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449795"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193840"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
 
@@ -62,13 +62,13 @@ ms.locfileid: "88449795"
   
  您還可在工作或資料流程元件對話方塊或 [屬性] 視窗中輸入查詢，以提供直接輸入。  
   
- 如需詳細資訊，請參閱 [查詢產生器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)。  
+ 如需詳細資訊，請參閱 [查詢產生器]()。  
   
 ## <a name="sql-in-files"></a>檔案中的 SQL  
  「執行 SQL」工作的 SQL 陳述式也可位於個別檔案中。 例如，在執行封裝時，您可以使用工具 (例如， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的「查詢編輯器」) 撰寫查詢、將查詢儲存至檔案，然後從檔案讀取該查詢。 檔案只能包含要執行的 SQL 陳述式和註解。 若要使用在檔案中儲存的 SQL 陳述式，您必須提供指定檔案名稱和位置的檔案連接。 如需相關資訊，請參閱 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)。  
   
 ## <a name="sql-in-variables"></a>變數中的 SQL  
- 如果「執行 SQL」工作中的 SQL 陳述式來源是一個變數，則您要提供包含查詢之變數的名稱。 變數的 Value 屬性包含查詢文字。 您可以將變數的 ValueType 屬性設為字串資料類型，然後將 SQL 陳述式輸入或複製到 Value 屬性中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 如果「執行 SQL」工作中的 SQL 陳述式來源是一個變數，則您要提供包含查詢之變數的名稱。 變數的 Value 屬性包含查詢文字。 您可以將變數的 ValueType 屬性設為字串資料類型，然後將 SQL 陳述式輸入或複製到 Value 屬性中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](./integration-services-ssis-variables.md)。  
 
 ## <a name="query-builder-dialog-box"></a>查詢產生器對話方塊
 使用 **[查詢產生器]** 對話方塊，即可建立要在執行 SQL 工作中使用的查詢、OLE DB 來源和 OLE DB 目的地，以及查閱轉換。  
@@ -85,9 +85,9 @@ ms.locfileid: "88449795"
   
  [查詢產生器]**** 對話方塊中的圖形工具，可以讓您使用拖放作業建構查詢。 依預設，[查詢產生器] 對話方塊會建構 SELECT 查詢，不過您也可以建立 INSERT、UPDATE 或 DELETE 查詢。 在 **[查詢產生器]** 對話方塊中，可以剖析和執行所有類型的 SQL 陳述式。 如需封裝中 SQL 陳述式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。  
   
- 若要深入了解 Transact-SQL 語言及其語法，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../t-sql/transact-sql-reference-database-engine.md)。  
+ 若要深入了解 Transact-SQL 語言及其語法，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../t-sql/language-reference.md)。  
   
- 您也可以在查詢中使用變數以提供值給輸入參數、擷取輸出參數的值以及儲存傳回碼。 若要深入了解如何在套件所用的查詢中使用變數，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)、[OLE DB 來源](../integration-services/data-flow/ole-db-source.md)和 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。 若要深入了解如何在執行 SQL 工作中使用變數，請參閱 [執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [執行 SQL 工作中的結果集](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
+ 您也可以在查詢中使用變數以提供值給輸入參數、擷取輸出參數的值以及儲存傳回碼。 若要深入了解如何在套件所用的查詢中使用變數，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)、[OLE DB 來源](../integration-services/data-flow/ole-db-source.md)和 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。 若要深入了解如何在執行 SQL 工作中使用變數，請參閱 [執行 SQL 工作中的參數和傳回碼](./control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的結果集](./control-flow/execute-sql-task.md)。  
   
  「查閱」和「模糊」查閱轉換也可以使用具有參數和傳回碼的變數。 OLE DB 來源的相關資訊也適用於這兩個轉換。  
   
@@ -119,4 +119,3 @@ ms.locfileid: "88449795"
 |**SQL** 窗格|以 SQL 文字顯示查詢。 在 **[圖表]** 窗格和 **[方格]** 窗格中所做的變更會出現在此處，而在此處所做的變更會出現在 **[圖表]** 窗格和 **[方格]** 窗格中。|  
 |**結果** 窗格|當您在工具列上按一下 **[執行]** 時，會顯示查詢的結果。| 
 
-  

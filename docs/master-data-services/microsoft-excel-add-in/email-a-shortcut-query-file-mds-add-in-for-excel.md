@@ -1,5 +1,6 @@
 ---
-title: 以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+description: 以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
+title: 以電子郵件傳送捷徑查詢檔案
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a9c800ecf5eabd6c97ab3f0c96dec998d911d11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9dae0ad64323ea2879f0e752fd8a8d737bf003d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257621"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，當您想要確定其他人與您使用的資料相同時，請將捷徑查詢檔案以電子郵件傳送給其他人。 您應該共用查詢，而不是儲存工作表並以電子郵件傳送。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68092402"
   
 1.  確定工作表中的資料是使用您想要共用的格式。 如需篩選資料和重新排序資料行的詳細資訊，請參閱[在匯出之前篩選資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md) 和[重新排序資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)。  
   
-2.  在 [儲存和傳送]  群組中，按一下 [傳送查詢]  。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
+2.  在 [儲存和傳送]**** 群組中，按一下 [傳送查詢]****。 隨即開啟電子郵件，並附加捷徑查詢檔案。  
   
 ## <a name="next-steps"></a>後續步驟  
   

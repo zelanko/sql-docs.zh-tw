@@ -2,7 +2,7 @@
   href: ../integration-services/sql-server-integration-services.md
 - name: 歡迎使用 SQL Server >
   href: ../sql-server/index.yml
-- name: 概觀
+- name: 總覽
   items:
     - name: SQL Server 2016 Integration Services 的新功能
       href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md
@@ -50,9 +50,9 @@
     - name: 教學課程 - 在 Azure 中部署和執行套件
       href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
     - name: 使用 Windows 驗證連線到資料
-      href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+      href: /azure/data-factory/ssis-azure-connect-with-windows-auth
     - name: 儲存檔案及連線到檔案共用
-      href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+      href: /azure/data-factory/ssis-azure-files-file-shares
     - name: 連線到 Azure 中的 SSIS 目錄
       href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
     - name: 驗證部署到 Azure 的套件
@@ -327,7 +327,7 @@
           href: ../integration-services/control-flow/message-queue-task.md
           items:
             - name: 選取變數
-              href: ../integration-services/control-flow/select-variables.md
+              href: ./control-flow/message-queue-task.md
             - name: 選取封裝
               href: ../integration-services/control-flow/select-a-package.md
         - name: 通知操作員工作
@@ -630,7 +630,7 @@
       href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
         - name: DQS 清理連接管理員
-          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+          href: ./connection-manager/dqs-cleansing-connection-manager.md
         - name: 將資料品質規則套用至資料來源
           href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
         - name: 將資料行對應到複合定義域
@@ -657,9 +657,9 @@
         - name: 以沒有快取或部分快取模式實作查閱
           href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
         - name: 使用快取連線管理員以完整快取模式實作查閱轉換
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
         - name: 使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
         - name: 針對查閱轉換來建立及部署快取
           href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
         - name: 建立關聯性
@@ -668,7 +668,7 @@
           href: ../integration-services/data-flow/transformations/cache-transform.md
           items:
             - name: 快取連接管理員
-              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+              href: ./connection-manager/cache-connection-manager.md
     - name: 合併轉換
       href: ../integration-services/data-flow/transformations/merge-transformation.md
     - name: Merge Join Transformation
@@ -934,7 +934,7 @@
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
 - name: 擴增
   items:
-    - name: 概觀
+    - name: 總覽
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 在單一電腦上開始使用 SSIS Scale Out
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
@@ -1846,7 +1846,7 @@
 - name: 資源
   items:
     - name: SSIS 論壇 >>
-      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
+      href: /answers/topics/sql-server-integration-services.html
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: SSIS 部落格 >>

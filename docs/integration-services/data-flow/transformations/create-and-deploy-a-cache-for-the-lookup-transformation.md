@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477737"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192680"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477737"
   
  查閱轉換會藉由聯結已連接資料來源輸入資料行中的資料與參考資料集中的資料行來執行查閱。  
   
- 您可以使用快取連接管理員和快取轉換轉換來建立快取檔案。 如需詳細資訊，請參閱 [快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [快取轉換](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+ 您可以使用快取連接管理員和快取轉換轉換來建立快取檔案。 如需詳細資訊，請參閱 [快取連線管理員](../../connection-manager/cache-connection-manager.md) 和 [快取轉換](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
  若要深入了解查閱轉換和快取檔案，請參閱 [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477737"
     > [!NOTE]  
     >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。  
   
-     如需詳細資訊，請參閱 [快取連線管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
+     如需詳細資訊，請參閱 [快取連線管理員編輯器](../../connection-manager/cache-connection-manager.md)。  
   
 7.  視需要設定快取轉換。  
   
-     如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
+     如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](./cache-transform.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](./cache-transform.md)。  
   
 8.  執行封裝。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477737"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所要封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案，然後再開啟封裝。  
   
-2.  選擇性地建立封裝設定。 如需詳細資訊，請參閱 [建立封裝組態](../../../integration-services/packages/create-package-configurations.md)。  
+2.  選擇性地建立封裝設定。 如需詳細資訊，請參閱 [建立封裝組態](../../packages/legacy-package-deployment-ssis.md)。  
   
 3.  藉由執行下列工作，將快取檔案加入至專案：  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477737"
   
      檔案便會出現在方案總管的 [其他]  資料夾中。  
   
-4.  將專案設定為建立部署公用程式，然後建立專案。 如需詳細資訊，請參閱 [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)。  
+4.  將專案設定為建立部署公用程式，然後建立專案。 如需詳細資訊，請參閱 [建立部署公用程式](../../packages/legacy-package-deployment-ssis.md)。  
   
      資訊清單檔 \<*project name*>.SSISDeploymentManifest.xml 會建立，並列出專案中的其他檔案、套件以及套件組態。  
   
-5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
+5.  將封裝部署到檔案系統。 如需詳細資訊，請參閱 [使用部署公用程式來部署封裝](../../packages/legacy-package-deployment-ssis.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立部署公用程式](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [建立部署公用程式](../../packages/legacy-package-deployment-ssis.md)  
   

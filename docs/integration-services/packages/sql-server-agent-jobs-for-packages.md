@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425190"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192468"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425190"
 -   [疑難排解已排程封裝](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所安裝的服務，可讓您透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，以自動化並排程工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須先執行，作業才能自動執行。 如需詳細資訊，請參閱 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所安裝的服務，可讓您透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，以自動化並排程工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須先執行，作業才能自動執行。 如需詳細資訊，請參閱 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)。  
   
  當您連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體時，[SQL Server Agent] 節點會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中。  
   
- 若要自動化週期性工作，請使用 [新增作業] 對話方塊建立作業。 如需詳細資訊，請參閱 [實作作業](https://docs.microsoft.com/sql/ssms/agent/implement-jobs)。  
+ 若要自動化週期性工作，請使用 [新增作業] 對話方塊建立作業。 如需詳細資訊，請參閱 [實作作業](../../ssms/agent/implement-jobs.md)。  
   
- 建立作業後，您必須加入至少一個步驟。 作業可以包含多個步驟，且每個步驟都能執行不同的工作。 如需詳細資訊，請參閱 [Manage Job Steps](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps)。  
+ 建立作業後，您必須加入至少一個步驟。 作業可以包含多個步驟，且每個步驟都能執行不同的工作。 如需詳細資訊，請參閱 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)。  
   
- 在建立作業和步驟後，您就可以建立執行該作業的排程。 不過，您也可以建立以手動方式執行的未排程作業。 如需詳細資訊，請參閱 [建立及附加排程至作業](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs)。  
+ 在建立作業和步驟後，您就可以建立執行該作業的排程。 不過，您也可以建立以手動方式執行的未排程作業。 如需詳細資訊，請參閱 [建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
- 透過設定通知選項可以加強作業，例如，指定作業完成時要向其傳送電子郵件的操作員，或加入警示。 如需詳細資訊，請參閱 [警示](https://docs.microsoft.com/sql/ssms/agent/alerts)。  
+ 透過設定通知選項可以加強作業，例如，指定作業完成時要向其傳送電子郵件的操作員，或加入警示。 如需詳細資訊，請參閱 [警示](../../ssms/agent/alerts.md)。  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業來排程 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，必須加入至少一個步驟，並將該步驟的類型設為 [SQL Server Integration Services 封裝]。 作業可以包含多個步驟，且每個步驟都能執行不同的封裝。  
@@ -64,14 +64,14 @@ ms.locfileid: "88425190"
   
  如需詳細資訊，請參閱 [使用 SQL Server Agent 排程封裝](#schedule)。  
   
- 如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式執行套件的影片，請參閱影片首頁的[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)，位於 MSDN Library。  
+ 如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式執行套件的影片，請參閱影片首頁的[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))，位於 MSDN Library。  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> 疑難排解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟可能無法啟動封裝，即使封裝在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及從命令列都順利執行。 此問題有一些常見的原因，以及數個建議的解決方案。 如需詳細資訊，請參閱下列資源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)  
   
--   影片，[疑難排解：使用 SQL Server Agent 執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141772)，位於 MSDN Library。  
+-   影片，[疑難排解：使用 SQL Server Agent 執行套件 (SQL Server 影片)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))，位於 MSDN Library。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟啟動封裝後，封裝執行可能失敗，也可能會成功，但產生非預期的結果。 您可以使用下列工具對這些問題進行疑難排解。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425190"
 
         > **注意：** 如果 Proxy 帳戶所使用認證的密碼變更，您就需要更新認證密碼。 否則，作業步驟將會失敗。  
 
-        如需設定 SQL Server Agent 服務帳戶的資訊，請參閱[設定 SQL Server Agent 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)。  
+        如需設定 SQL Server Agent 服務帳戶的資訊，請參閱[設定 SQL Server Agent 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)。  
 
 8.  在 [封裝來源] 清單方塊中，按一下封裝的來源，然後設定作業步驟的選項。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425190"
     ||**密碼**|  
     ||**套件**<br /><br /> 按一下省略符號按鈕並選取封裝。<br /><br /> 您會在**物件總管**的 [存放的封裝] 節點下，選取資料夾中的封裝。|  
     |**套件**<br /><br /> 這些是儲存在檔案系統中之封裝的索引標籤選項。|**套件**<br /><br /> 輸入封裝檔的完整路徑，或按一下省略符號按鈕選取封裝。|  
-    |**組態**|加入 XML 組態檔，以特定組態執行封裝。 使用封裝組態在執行階段更新封裝屬性的值。<br /><br /> 此選項對應至 **dtexec** 的 **/ConfigFile**選項。<br /><br /> 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](../../integration-services/packages/package-configurations.md)＞。 如需如何建立封裝組態的資訊，請參閱 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)。|  
+    |**組態**|加入 XML 組態檔，以特定組態執行封裝。 使用封裝組態在執行階段更新封裝屬性的值。<br /><br /> 此選項對應至 **dtexec** 的 **/ConfigFile**選項。<br /><br /> 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](./legacy-package-deployment-ssis.md)＞。 如需如何建立封裝組態的資訊，請參閱 [建立封裝組態](./legacy-package-deployment-ssis.md)。|  
     |**命令檔**|在另一個檔案中，指定要以 **dtexec**執行的其他選項。<br /><br /> 例如，您可以納入包含 /Dump *errorcode* 選項的檔案，以便在封裝執行過程中發生一個或多個指定的事件時，產生偵錯傾印檔案。<br /><br /> 您可以建立多個檔案，然後使用 [命令檔] 選項指定適當的檔案，藉此以不同的選項組合執行封裝。<br /><br /> [命令檔] 選項對應至 **dtexec** 的 **/CommandFile** 選項。|  
     |**資料來源**|檢視包含在封裝中的連接管理員。 若要修改連接字串，請按一下連接管理員，然後按一下連接字串。<br /><br /> 此選項對應至 **dtexec** 的 **/Connection**選項。|  
     |**執行選項**|**發生驗證警告時封裝就失敗**<br /> 指出是否將警告訊息視為錯誤。 如果您選取此選項，而在驗證期間發生警告，則封裝會在驗證期間失敗。 此選項對應至 **dtexec** 的 **/WarnAsError**選項。<br /><br /> **驗證封裝但不執行**<br /> 指出在驗證階段之後，是否停止執行封裝 (並不會實際執行封裝)。 此選項對應至 **dtexec** 的 **/Validate**選項。<br /><br /> **覆寫 MacConcurrentExecutables 屬性**<br /> 指定封裝可以同時執行的可執行檔數量。 值為 -1，表示封裝可以執行的最大可執行檔數目，等於執行封裝之電腦上的處理器總數再加 2。 此選項對應至 **dtexec** 的 **/MaxConcurrent**選項。<br /><br /> **啟用封裝檢查點**<br /> 指出在執行封裝期間，封裝是否要使用檢查點。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此選項對應至 **dtexec** 的 **/CheckPointing**選項。<br /><br /> **覆寫重新啟動選項**<br /> 指出是否為封裝上的 **CheckpointUsage** 屬性設定新值。 從 [重新啟動選項] 清單方塊中選取值。<br /><br /> 此選項對應至 **dtexec** 的 **/Restart**選項。<br /><br /> **使用 32 位元執行階段**<br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425190"
   
 -   [網站上的知識庫文件：](https://support.microsoft.com/kb/918760)從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   影片，[疑難排解：使用 SQL Server Agent 執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141772)，位於 MSDN Library  
+-   影片，[疑難排解：使用 SQL Server Agent 執行套件 (SQL Server 影片)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))，位於 MSDN Library  
   
--   影片，[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)，位於 MSDN Library  
+-   影片，[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))，位於 MSDN Library  
   
 -   位於 mssqltips.com 的技術文件： [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(使用 Windows PowerShell 檢查 SQL Server Agent 作業)  
   
 -   mssqltips.com 上的技術文件： [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)(於 SQL Agent 作業已啟用或停用時自動警示)  
   
 -   mssqltips.com 上的部落格文章： [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)(將 SQL 代理程式工作設定成寫入 Windows 事件記錄檔)。  
-  
   

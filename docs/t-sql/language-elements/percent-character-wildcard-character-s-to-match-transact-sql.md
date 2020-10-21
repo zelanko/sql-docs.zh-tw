@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a0c232b2849f2fcfc7bf7d0a946714b15f753fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b9a47ebd388c5720a8016763d36eac3b913ce14
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307546"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191104"
 ---
 # <a name="percent-character-wildcard---characters-to-match-transact-sql"></a>百分比字元 (萬用字元 - 相符的字元) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88307546"
 ## <a name="examples"></a>範例  
  下列範例會傳回 `Person` 的 `AdventureWorks2012` 資料表中，所有以 `Dan` 開頭的人員名字。  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

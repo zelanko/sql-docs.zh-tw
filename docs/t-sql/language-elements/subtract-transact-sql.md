@@ -23,12 +23,12 @@ ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cfe1427b432645915c6becec53df5e879a2d9b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a00105749ac9ce600f5972e539dc8664472e9dd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445406"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193292"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減法) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88445406"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 expression - expression  
 ```  
   
@@ -59,7 +59,7 @@ expression - expression
   
  **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(TaxRate) - MIN(TaxRate) AS 'Tax Rate Difference'  
@@ -75,10 +75,10 @@ GO
   
  適用於：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @altstartdate datetime;  
+DECLARE @altstartdate DATETIME;  
 SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
@@ -98,7 +98,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
 ### <a name="c-using-subtraction-in-a-select-statement"></a>C：在 SELECT 陳述式中使用減法  
  下列範例會從 `dimEmployee` 資料表，計算基本稅率最高的員工與稅率最低的員工之間的基本稅率差。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference  

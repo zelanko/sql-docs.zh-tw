@@ -21,12 +21,12 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96255682b2ae3e9ed73d71972b42b90bd12f4cd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 396297b13eb14c090533548514b045b6c7e8e683
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919624"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193388"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ELSE
 ```sql
 -- Uses AdventureWorksDW  
 
-DECLARE @maxWeight float, @productKey integer  
+DECLARE @maxWeight FLOAT, @productKey INTEGER  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
 IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   

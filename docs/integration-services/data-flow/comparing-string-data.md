@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7aa3d507527ea18e9d9296ee9b9cd10989932d5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3acbc95c624c7d3e548656bc8118c154a19badc2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457380"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192727"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
 
@@ -87,7 +87,6 @@ ms.locfileid: "88457380"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)   
- [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
-  
+ [快速剖析](./parsing-data.md)   
+ [Standard Parse](./parsing-data.md)  
   

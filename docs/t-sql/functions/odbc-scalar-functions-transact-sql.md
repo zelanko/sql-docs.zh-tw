@@ -53,20 +53,22 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: d54867712e48662ebb35d4d278710d06f06732a3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116624"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192198"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 [ODBC 純量函式](https://go.microsoft.com/fwlink/?LinkID=88579)。 這些陳述式會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行解譯。 它們可用於預存程序和使用者自訂函數中。 這些項目包括字串、數值、時間、日期、間隔和系統函數。  
   
-## <a name="usage"></a>使用量  
- `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
+## <a name="usage"></a>使用方式  
+ ```syntaxsql
+ SELECT {fn <function_name> [ (<argument>,....n) ] }
+ ```
   
 ## <a name="functions"></a>函式  
  下表將列出不會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中重複的 ODBC 純量函式。  
@@ -89,8 +91,8 @@ ms.locfileid: "91116624"
   
 |函式|描述|  
 |--------------|-----------------|  
-|CURRENT_DATE( ) (ODBC 3.0)|傳回目前的日期。|  
-|CURDATE( ) (ODBC 3.0)|傳回目前的日期。|  
+|CURRENT_DATE( ) (ODBC 3.0)|傳回目前日期。|  
+|CURDATE( ) (ODBC 3.0)|傳回目前日期。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|傳回目前的當地時間。 其中 time-precision 引數會決定傳回值的秒數有效位數。|  
 |CURTIME() (ODBC 3.0)|傳回目前的當地時間。|  
 |DAYNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的日期部分包含資料來源專用的日期名稱。 例如，若為使用英文的資料來源，則名稱為 Sunday 到 Saturday 或 Sun. 到 Sat.； 。 若為使用德文的資料來源，則名稱為 Sonntag 到 Samstag。|
@@ -108,7 +110,8 @@ ms.locfileid: "91116624"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. 在預存程序中使用 ODBC 函數  
  下列範例會在預存程序中使用 ODBC 函數：  
   
-```sql  
+
+```sql 
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -135,7 +138,6 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
-  
 ```  
   
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. 在 SELECT 陳述式中使用 ODBC 函數  
