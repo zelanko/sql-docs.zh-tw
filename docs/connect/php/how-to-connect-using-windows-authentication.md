@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634832"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081757"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81634832"
   
 如果 Windows 驗證不是可行的選項，請參閱[如何：使用 SQL Server 驗證進行連線](how-to-connect-using-sql-server-authentication.md)。  
   
-## <a name="example"></a>範例  
+## <a name="sqlsrv-example"></a>SQLSRV 範例  
 使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驅動程式，下列範例會使用 Windows 驗證來連接 SQL Server 的本機執行個體。 建立連接之後，會向伺服器查詢正在存取資料庫之使用者的登入。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV 範例  
 下列範例使用 PDO_SQLSRV 驅動程式來完成與前一個範例相同的工作。  
   
 ```  

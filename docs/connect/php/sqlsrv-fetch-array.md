@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391803"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080638"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 如果結果集包含多個沒有名稱的資料行，則最後一個未命名資料行的值將會指派給空字串 ("") 索引鍵。  
   
-## <a name="example"></a>範例  
+## <a name="associative-array-example"></a>關聯陣列範例  
 下列範例會以關聯 **陣列**的形式擷取結果集的每個資料列。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="indexed-array-xample"></a>索引陣列範例  
 下列範例會以數值索引陣列的形式擷取結果集的每個資料列。  
   
 範例會針對具有指定的日期，以及存貨數量 (*StockQty*) 小於指定值的產品，從 AdventureWorks 資料庫的 *Purchasing.PurchaseOrderDetail* 資料表中擷取產品資訊。  

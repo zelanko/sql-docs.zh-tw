@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 250e522e922dc282f14628ae625a4a28db97787e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c354b399b80e668261b95f8b65f987da547c855
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866286"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934733"
 ---
-# <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>設定和管理加密金鑰 (SSRS 組態管理員)
+# <a name="configure-and-manage-encryption-keys-report-server-configuration-manager"></a>設定和管理加密金鑰 (報表伺服器組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中之認證和連線資訊的安全。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可透過用於保護敏感性資料的公開、私密和對稱金鑰組合來支援加密。 當您安裝或設定報表伺服器時，對稱金鑰會在報表伺服器起始設定期間建立，供報表伺服器用來對儲存於報表伺服器中之機密資料進行加密。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存報表伺服器資料庫中之機密資料的每一個報表伺服器執行個體，建立一組公開金鑰和私密金鑰。  
   
  加密金鑰的管理包括建立對稱金鑰的備份副本，以及了解還原、刪除或變更金鑰的時機和方法。 如果您移轉報表伺服器安裝架構或設定向外延展部署，您必須擁有一份對稱金鑰的備份，才能將其套用於新的安裝架構。  
@@ -44,20 +44,20 @@ ms.locfileid: "74866286"
 -   在向外延展部署中加入或移除報表伺服器執行個體，其中多個報表伺服器共用單一報表伺服器資料庫和能加解密該資料庫的對稱金鑰。  
   
 ## <a name="in-this-section"></a>本節內容  
- [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [初始化報表伺服器 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
  說明如何建立加密金鑰。  
   
  [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  說明如何備份加密金鑰，並還原金鑰以復原或移轉報表伺服器安裝。  
   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [儲存加密的報表伺服器資料 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  描述報表伺服器的加密。  
   
- [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [刪除和重新建立加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  說明如何以新版本取代對稱金鑰，以及如果無法驗證對稱金鑰，應如何重新建立。  
   
- [加入和移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [新增和移除向外延展部署的加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  說明如何加入和移除加密金鑰，以控制哪些報表伺服器屬於向外延展部署的一部分。  
   
 ## <a name="see-also"></a>另請參閱  
-[Reporting Services 組態管理員 (原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+[報表伺服器組態管理員 (原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

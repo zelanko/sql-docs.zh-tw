@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 11ca08618f0b8d7675e8ec74ec259d4225d44aba
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680693"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080617"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>如何：停用 Multiple Active Resultsets (MARS)。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88680693"
   
     連接無法處理這項作業，因為有某個陳述式具有擱置的結果。  若要讓連接可供其他查詢使用，請擷取所有結果，並取消或釋放陳述式。 如需 MultipleActiveResultSets 連接的詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
   
-## <a name="example"></a>範例  
+## <a name="sqlsrv-example"></a>SQLSRV 範例  
 下列範例說明如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驅動程式停用 MARS 支援。  
   
 ```  
@@ -60,7 +60,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV 範例  
 下列範例說明如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驅動程式來停用 MARS 支援。  
   
 ```  

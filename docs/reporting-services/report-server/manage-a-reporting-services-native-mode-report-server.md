@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547953"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935111"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
-  本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  
+  本節包含使用報表伺服器組態管理員設定原生模式報表伺服器執行個體的程序。  
   
 ## <a name="in-this-section"></a>本節內容  
  本章節的主題將組織成數個類別，好讓您可以更輕鬆地找到所要的指示。 第一節包含原生模式報表伺服器之基本組態工作的主題， 第二節包含進階組態主題， 第三節包含設定報表伺服器於 SharePoint 整合模式下執行的主題。  
   
 ### <a name="basic-configuration"></a>基本組態  
- [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  提供啟動 Reporting Services 組態工具的步驟。  
   
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [設定服務帳戶 &#40;報表伺服器組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  說明如何指定報表伺服器服務的帳戶和密碼資訊。  
   
  [為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  說明如何手動為報表伺服器註冊 SPN，該伺服器會在使用 Kerberos 驗證之網路的網域使用者帳戶之下執行。  
   
- [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [設定 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  說明如何建立用來存取報表伺服器 Web 服務和 Web 入口網站的一或多個 URL。  
   
- [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [建立原生模式報表伺服器資料庫 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  提供建立報表伺服器資料庫的步驟。 這是部署 Reporting Services 安裝的必要步驟。  
   
 ### <a name="advanced-or-optional-configuration"></a>進階或選擇性組態  
- [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [設定原生模式報表伺服器向外延展部署 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供設定多個報表伺服器來共用報表伺服器資料庫的步驟。  
   
  [Reporting Services 中的電子郵件傳遞](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90b9a9174f849ac8ec8cb0c1c9674395d5b38325
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027269"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005732"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
 
@@ -178,7 +178,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Microsoft ODBC Driver 17 和更新版本才支援 Always Encrypted
 - Linux 和 macOS 上非 UTF8 地區設定的支援
   - Microsoft ODBC Driver 17 和更新版本才支援 Linux 和 macOS 上的非 UTF8 地區設定
-- Azure SQL 資料倉儲的支援
+- 支援 Azure Synapse Analytics
 - Azure SQL 受控執行個體的支援
 
 ## <a name="43"></a>4.3

@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746148"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081567"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio 中的原始檔控制
 
@@ -22,12 +22,12 @@ Azure Data Studio 支援版本/原始檔控制的 Git。
 
 ## <a name="git-support-in-azure-data-studio"></a>Azure Data Studio 中的 Git 支援
 
-Azure Data Studio 隨附 Git 原始檔控制管理員 (SCM)，但仍需要[安裝 Git (2.0.0 或更新版本)](https://git-scm.com/download) 才能使用這些功能。 
+Azure Data Studio 隨附 Git 原始檔控制管理員 (SCM)，但仍需要[安裝 Git (2.0.0 或更新版本)](https://git-scm.com/download) 才能使用這些功能。
 
 ## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 存放庫
 
 1. 在 [檔案] 功能表下，選取 [開啟資料夾...]
-2. 瀏覽至包含 Git 所追蹤檔案的資料夾，然後按一下 [選取資料夾]。 您可以在這裡選取本機存放庫中的子資料夾。
+2. 瀏覽至包含 Git 追蹤檔案的資料夾，然後選取 [選取資料夾]。 您可以在這裡選取本機存放庫中的子資料夾。
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新的 Git 存放庫
 

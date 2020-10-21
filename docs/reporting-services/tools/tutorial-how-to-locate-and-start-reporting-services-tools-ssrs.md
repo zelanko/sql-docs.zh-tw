@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462163"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934959"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
 
 本教學課程介紹設定報表伺服器、管理報表伺服器內容和作業，以及建立並發行分頁和行動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表所使用的工具。 如果您已經熟悉這些工具，可以移至其他教學課程，了解使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的技巧。 如需其他教學課程，請參閱 [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)。
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Reporting Services 組態管理員 (原生模式)
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> 報表伺服器組態管理員 (原生模式)
 使用原生模式組態管理員來完成下列動作：
 
 - 指定服務帳戶。
@@ -43,15 +43,15 @@ ms.locfileid: "84462163"
 
 **安裝：** 安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式時，會同時安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定管理員。 如需詳細資訊，請參閱 [安裝 Reporting Services 原生模式報表伺服器](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)。
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>啟動 Reporting Services 組態管理員
+### <a name="to-start-the-report-server-configuration-manager"></a>啟動報表伺服器組態管理員
 
-1. 在 Windows 的 [開始] 畫面上，輸入 **reporting** ，然後在 [應用程式]  搜尋結果中，按一下 [Reporting Services 組態管理員]  。
+1. 在 Windows 的 [開始] 畫面上，鍵入 **reporting**，然後在 [應用程式] 搜尋結果中，按一下 [報表伺服器組態管理員]。
 
-    ![啟動時的 Reporting Services 組態管理員](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "啟動時的 Reporting Services 組態管理員")
+    ![啟動時的報表伺服器組態管理員](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "啟動時的報表伺服器組態管理員")
 
     **Or**
 
-    依序按一下 **[開始]** 、 **[程式集]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[Reporting Services 組態管理員]** 。
+    依序按一下 [開始]、[程式集]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具] 和 [報表伺服器組態管理員]。
 
     **[報表伺服器安裝執行個體選取範圍]** 對話方塊隨即出現，以便讓您選取所要設定的報表伺服器執行個體。
 
@@ -67,7 +67,7 @@ ms.locfileid: "84462163"
 
     ![Reporting Services 組態工具](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 組態工具")
 
- **後續步驟：** [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 和[Reporting Services 設定管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+ **後續步驟：** [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 和[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 ## <a name="web-portal-native-mode"></a>入口網站 (原生模式)
 
@@ -81,7 +81,7 @@ ms.locfileid: "84462163"
 
 1. 開啟瀏覽器。 如需支援之瀏覽器和瀏覽器版本的資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。
 
-2. 在網頁瀏覽器的網址列中，輸入入口網站 URL。 根據預設，URL 為 `https://<serverName>/reports`的技巧。 您可以使用 Reporting Services 組態工具，以確認伺服器名稱和 URL。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中所用 URL 的詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。
+2. 在網頁瀏覽器的網址列中，輸入入口網站 URL。 根據預設，URL 為 `https://<serverName>/reports`的技巧。 您可以使用 Reporting Services 組態工具，以確認伺服器名稱和 URL。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所用 URL 的詳細資訊，請參閱[設定報表伺服器 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。
 
 3. 入口網站會在瀏覽器視窗中開啟。 啟動頁面是 [主資料夾] 資料夾。 視權限而定，您可能會看到其他資料夾、報表超連結，以及啟動頁面之內的資源檔案。 您也可能會在工具列上看其他按鈕和命令。
 

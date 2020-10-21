@@ -1,30 +1,25 @@
 ---
 title: 從命令提示字元安裝
-description: 執行 SQL Server 命令列安裝程式，以將含 R 與 Python 的機器學習服務新增到 SQL Server 資料庫引擎執行個體。
+description: 執行 SQL Server 命令列安裝程式，以使用 Python 與 R 將機器學習服務新增到 SQL Server 資料庫引擎執行個體。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624755"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956760"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>從命令列安裝含 R 與 Python 的 SQL Server 機器學習服務
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-此文章提供從命令列安裝 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的指示：
-
-+ [新的資料庫內執行個體](#indb)
-+ [新增至現有的資料庫引擎執行個體](#add-existing)
-+ [無訊息安裝](#silent)
-+ [新獨立伺服器](#shared-feature)
+本文提供從命令列使用 Python 與 R 安裝 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的指示。
 
 您可以指定與安裝程式使用者介面的無訊息、基本或完整互動。 本文補充[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，涵蓋 R 和 Python 機器學習元件唯一的參數。
 
@@ -39,7 +34,6 @@ ms.locfileid: "91624755"
 + 請勿在網域控制站上安裝。 安裝程式的機器學習服務部分將會失敗。
 
 + 請避免在同一部電腦上安裝獨立和資料庫內執行個體。 獨立伺服器會爭用相同資源，而損害這兩個安裝的效能。
-
 
 ## <a name="command-line-arguments"></a>命令列引數
 
@@ -202,7 +196,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 安裝程式完成時，您會有一部伺服器、Microsoft 套件、R 和 Python 的開放原始碼發佈、工具、範例，以及屬於散發套件一部分的指令碼。 
 
-若要開啟 R 主控台視窗，請前往 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`，然後按兩下 [RGui.exe]  。 不熟悉 R 嗎？ 嘗試此教學課程：[基本 R 命令和 RevoScaleR 函式：25 個常見範例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
+若要開啟 R 主控台視窗，請前往 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`，然後按兩下 [RGui.exe]  。 不熟悉 R 嗎？ 嘗試此教學課程：[基本 R 命令和 RevoScaleR 函式：25 個常見範例](/machine-learning-server/r/tutorial-r-to-revoscaler)。
 
 若要開啟 Python 命令，請前往 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`，然後按兩下 [python.exe]  。
 

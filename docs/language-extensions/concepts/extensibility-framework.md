@@ -1,7 +1,7 @@
 ---
 title: SQL Server 語言延伸模組中的擴充性架構
 titleSuffix: ''
-description: 了解用於「SQL Server 語言延伸模組」的擴充性架構，此架構可讓您在 SQL Server 中執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
+description: 了解用於「SQL Server 語言延伸模組」的擴充性架構，此架構可讓您在 SQL Server 中執行外部程式碼。 SQL Server 2019 支援 Java、Python 和 R。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765690"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935370"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 語言延伸模組中的擴充性架構
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-了解用於「SQL Server 語言延伸模組」的擴充性架構，此架構可讓您在 SQL Server 中執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
+了解用於「SQL Server 語言延伸模組」的擴充性架構，此架構可讓您在 SQL Server 中執行外部程式碼。 SQL Server 2019 支援 Java、Python 和 R。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 
 ## <a name="background"></a>背景
 
-擴充性架構的用途是提供 SQL Server 和外部語言 (例如 Java) 之間的介面。 藉由在受 SQL Server 管理的安全架構中執行信任的語言，資料庫管理員可以維護安全性，同時允許資料科學家存取企業資料。
+擴充性架構其用途是提供 SQL Server 和外部語言之間的介面。 藉由在受 SQL Server 管理的安全架構中執行信任的語言，資料庫管理員可以維護安全性，同時允許資料科學家存取企業資料。
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -53,10 +53,6 @@ The following diagram visually describes opportunities and benefits of the exten
 ## <a name="launchpad"></a>Launchpad
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 是一項服務，可管理負責執行指令碼之外部處理序的存留時間、資源和安全性界限。 這如同全文索引及查詢服務啟動個別的主機來處理全文查詢。 啟動控制板服務只會啟動由 Microsoft 發行之信任的啟動器，或是經 Microsoft 認證符合效能和資源管理要求的啟動器。
-
-| 信任的啟動器 | 分機 | SQL Server 版本 |
-|-------------------|-----------|---------------------|
-| 適用於 Java 的 JavaLauncher.dll | Java 延伸模組 | SQL Server 2019 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務會以使用 [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) 執行隔離的 **SQLRUserGroup** 執行。
 

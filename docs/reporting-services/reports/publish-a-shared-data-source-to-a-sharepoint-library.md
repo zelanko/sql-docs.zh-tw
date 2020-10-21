@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0a60966d6ba73a7669562d406b460f749303ca56
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510099"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988600"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  
@@ -29,7 +29,7 @@ ms.locfileid: "79510099"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  按一下 [專案]  功能表上的 [屬性]  。 \<專案>  [屬性頁]  對話方塊隨即開啟。  
+2.  按一下 [專案]  功能表上的 [屬性]  。 [屬性頁] _\<project>_  對話方塊隨即開啟。  
   
 3.  選擇您用來發行至 SharePoint 網站的 [組態]  。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "79510099"
 9. 在方案總管中，以滑鼠右鍵按一下您要發行的共用資料來源，然後按一下 [部署]  。 資料來源便會發行到 **TargetDataSourceFolder**中指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
   
     > [!NOTE]  
-    >  當您將共用資料來源發行到 SharePoint 網站時，副檔名會變更為 .rsds。 您可以直接在 SharePoint 網站上編輯及管理共用資料來源。 如需詳細資訊，請參閱[建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+    >  當您將共用資料來源發行到 SharePoint 網站時，副檔名會變更為 .rsds。 您可以直接在 SharePoint 網站上編輯及管理共用資料來源。 如需詳細資訊，請參閱[建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](/previous-versions/sql/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將報表發行到 SharePoint 文件庫](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
@@ -57,5 +57,4 @@ ms.locfileid: "79510099"
  [設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [將報表發行至報表伺服器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
  [搭配報表使用 Office 資料連接 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
-  
   

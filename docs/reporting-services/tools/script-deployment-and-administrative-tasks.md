@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1716581451737a20951cf941bb57b81c8d14e5e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3e0cfd07bafed3bc79a57b3f139852db9e13e1c
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918424"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933767"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
 
@@ -46,14 +46,14 @@ ms.locfileid: "86918424"
 |Task|方法|  
 |----------|--------------|  
 |安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|您可以從命令列執行安裝程式，以執行自動安裝。<br /><br /> 只有當您指定預設組態選項，而且系統符合該安裝類型的所有需求時，才可以使用安裝程式來安裝及設定報表伺服器。 如果您無法安裝預設組態，必須執行僅限檔案的安裝。|  
-|設定服務帳戶。|服務帳戶一開始是透過安裝程式設定的。 若要讓服務帳戶的變更當做安裝後工作自動化，您必須撰寫呼叫報表伺服器 WMI 提供者的自訂程式碼。 並沒有任何命令提示公用程式或指令碼範本可以使用程式設計方式設定服務帳戶。<br /><br /> 如果編碼需求讓您無法自動化這個步驟，您可以藉由執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，以手動方式輕鬆地設定帳戶。 如需詳細資訊，請參閱[設定服務帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。|  
-|設定報表伺服器 Web 服務與報表管理員 URL。|您必須撰寫自訂程式碼來呼叫報表伺服器 WMI 提供者。 並沒有任何命令列公用程式或指令碼範本可以用來設定 URL。<br /><br /> 如果您想要避免撰寫程式碼，您可以執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具手動設定 URL。 如需詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。|  
-|建立報表伺服器資料庫。|您必須撰寫自訂程式碼來呼叫報表伺服器 WMI 提供者。 並沒有任何命令提示公用程式或指令碼範本可以用來建立報表伺服器資料庫和 RSExecRole。<br /><br /> 如果您想要避免撰寫程式碼，您可以執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具手動建立資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。|  
-|設定報表伺服器資料庫連接。|如果您要變更連接字串、帳戶或密碼，或驗證類型，請執行 **rsconfig** 公用程式來設定連接。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 和 [rsconfig 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)。<br /><br /> 但是不能使用 rsconfig.exe 來建立或升級資料庫。 資料庫和 RSExecRole 必須已經存在。|  
-|設定向外延展部署。|請從下列自動化向外延展部署的方法中進行選擇：<br /><br /> -   執行 rskeymgmt.exe 公用程式，將報表伺服器執行個體聯結到現有的安裝。 如需詳細資訊，請參閱[新增和移除向外延展部署的加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br />-   撰寫可對報表伺服器 WMI 提供者執行的自訂程式碼。|  
+|設定服務帳戶。|服務帳戶一開始是透過安裝程式設定的。 若要讓服務帳戶的變更當做安裝後工作自動化，您必須撰寫呼叫報表伺服器 WMI 提供者的自訂程式碼。 並沒有任何命令提示公用程式或指令碼範本可以使用程式設計方式設定服務帳戶。<br /><br /> 如果編碼需求讓您無法自動化這個步驟，您可以藉由執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，以手動方式輕鬆地設定帳戶。 如需詳細資訊，請參閱[設定服務帳戶 &#40;報表伺服器組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。|  
+|設定報表伺服器 Web 服務與報表管理員 URL。|您必須撰寫自訂程式碼來呼叫報表伺服器 WMI 提供者。 並沒有任何命令列公用程式或指令碼範本可以用來設定 URL。<br /><br /> 如果您想要避免撰寫程式碼，您可以執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具手動設定 URL。 如需詳細資訊，請參閱[設定 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。|  
+|建立報表伺服器資料庫。|您必須撰寫自訂程式碼來呼叫報表伺服器 WMI 提供者。 並沒有任何命令提示公用程式或指令碼範本可以用來建立報表伺服器資料庫和 RSExecRole。<br /><br /> 如果您想要避免撰寫程式碼，您可以執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具手動建立資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。|  
+|設定報表伺服器資料庫連接。|如果您要變更連接字串、帳戶或密碼，或驗證類型，請執行 **rsconfig** 公用程式來設定連接。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 和 [rsconfig 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)。<br /><br /> 但是不能使用 rsconfig.exe 來建立或升級資料庫。 資料庫和 RSExecRole 必須已經存在。|  
+|設定向外延展部署。|請從下列自動化向外延展部署的方法中進行選擇：<br /><br /> -   執行 rskeymgmt.exe 公用程式，將報表伺服器執行個體聯結到現有的安裝。 如需詳細資訊，請參閱[新增和移除向外延展部署的加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。<br />-   撰寫可對報表伺服器 WMI 提供者執行的自訂程式碼。|  
 |備份加密金鑰。|請從下列自動化加密金鑰備份的方法中進行選擇：<br /><br /> -   執行 rskeymgmt.exe 公用程式來備份這些金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。<br />-   撰寫可對報表伺服器 WMI 提供者執行的自訂程式碼。|  
 |設定報表伺服器電子郵件。|撰寫可對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者執行的自訂程式碼。 提供者支援電子郵件組態設定的子集。<br /><br /> 雖然 RSReportServer.config 檔案包含所有設定，但請不要以自動方式使用檔案。 亦即，請不要使用批次檔複製檔案到其他報表伺服器。 每個組態檔都包含適用於目前執行個體的值。 這些值對其他報表伺服器執行個體無效。<br /><br /> 如需設定的詳細資訊，請參閱[電子郵件設定 - Reporting Services 原生模式 (組態管理員)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
-|設定自動執行帳戶。|請從下列讓自動處理帳戶組態自動化的方法中進行選擇：<br /><br /> -   執行 rsconfig.exe 公用程式來設定此帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br />-   撰寫可呼叫報表伺服器 WMI 提供者的自訂程式碼。|  
+|設定自動執行帳戶。|請從下列讓自動處理帳戶組態自動化的方法中進行選擇：<br /><br /> -   執行 rsconfig.exe 公用程式來設定此帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br />-   撰寫可呼叫報表伺服器 WMI 提供者的自訂程式碼。|  
 |在另一部報表伺服器上部署現有的內容，包括資料夾階層、角色指派、報表、訂閱、排程、資料來源和資源。|重新建立現有報表伺服器環境的最佳方式，就是將報表伺服器資料庫複製到新的報表伺服器執行個體。<br /><br /> 替代方式是撰寫以程式設計方式重新建立現有報表伺服器內容的自訂程式碼。 不過，請注意，訂閱、報表快照集和報表記錄不能以程式設計方式重新建立。<br /><br /> 某些部署會因為將這兩種技術一起使用而獲益 (也就是還原報表伺服器資料庫，然後執行會針對特定安裝而修改報表伺服器資料庫的自訂程式碼)。<br /><br /> 如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。<br /><br /> 如需重新放置報表伺服器資料庫的詳細資訊，請參閱[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。 如需有關以程式設計方式建立報表伺服器環境的詳細資訊，請參閱本主題的「使用指令碼來移轉報表伺服器內容和資料夾」一節。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>自動化伺服器部署的工具和技術  

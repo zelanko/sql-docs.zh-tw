@@ -1,6 +1,6 @@
 ---
 title: SSDT 中的 Azure Active Directory
-description: 了解 SQL Server Data Tools (SSDT) 針對 Azure SQL Database 及 Azure SQL 資料倉儲提供的 Azure Active Directory 驗證方法。
+description: 了解 SQL Server Data Tools (SSDT) 針對 Azure SQL Database 和 Azure Synapse Analytics 提供的 Azure Active Directory 驗證方法。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480841"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005918"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) 驗證方法。
+SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis) 驗證方法。
 
 在 Visual Studio 中，開啟 [SQL Server 物件總管] (位於 [檢視] 功能表)，然後選取 [新增 SQL Server]：
 
@@ -32,7 +32,7 @@ SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](ht
 本文討論 [Azure 雲端](https://azure.microsoft.com/)中適用於下列「Azure SQL 產品」清單的 Azure AD：
 
 - Azure SQL Database
-- Azure SQL 資料倉儲
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Active Directory 密碼驗證
 
@@ -41,18 +41,18 @@ SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](ht
 - 您從未與 Azure 同盟的網域中使用認證來登入 Windows，或
 - 您針對 Azure AD 使用 Azure AD 驗證，而它是以初始或用戶端網域為依據。
 
-如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。  
+如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/sql-database/sql-database-aad-authentication)。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 整合式驗證
 
-「Active Directory 整合式驗證」** 是使用 Azure Active Directory (Azure AD) 中的身分識別連線到所列 Azure SQL 產品的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+「Active Directory 整合式驗證」** 是使用 Azure Active Directory (Azure AD) 中的身分識別連線到所列 Azure SQL 產品的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 互動式驗證
 
-「Active Directory 互動式驗證」** 適用於使用 SSDT 連線到所列 Azure SQL 產品的情況，但僅限於 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 或更新版本。
+「Active Directory 互動式驗證」** 適用於使用 SSDT 連線到所列 Azure SQL 產品的情況，但僅限於 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 或更新版本。
 
 - [下載並安裝 .NET Framework 的任何版本](https://www.microsoft.com/net/download/all)。
-- [Visual Studio 2017 15.6 版](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)或更新版本。
+- [Visual Studio 2017 15.6 版](/visualstudio/releasenotes/vs2017-relnotes)或更新版本。
 
 #### <a name="multi-factor-authentication-mfa"></a>Multi-Factor Authentication (MFA)
 
@@ -86,9 +86,9 @@ MFA 強制執行是由 Azure AD 透過此額外的 MFA 快顯視窗來提供。
 
 ## <a name="see-also"></a>另請參閱  
 
-[多重要素驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[搭配使用 Azure Active Directory 驗證和 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[多重要素驗證](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[搭配使用 Azure Active Directory 驗證和 SQL Database](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT 團隊部落格](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[DACFx API 參考](https://msdn.microsoft.com/library/dn645454.aspx)  
-[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[SSDT 團隊部落格](/archive/blogs/ssdt/)  
+[DACFx API 參考](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

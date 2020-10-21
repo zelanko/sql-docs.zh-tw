@@ -1,50 +1,46 @@
 ---
-title: 載入 Windows PowerShell 中的 SMO 組件 | Microsoft Docs
+title: 載入 Windows PowerShell 中的 SMO 組件
 description: 了解如何在不使用 SQL Server PowerShell 提供者的 Windows PowerShell 指令碼中載入 SQL Server 管理物件 (SMO) 組件。
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 673e94da44cbdd46a8873468b4421a1a8ea4e037
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 0879219da144a234f89de7434630cbf3d15c01bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714226"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005383"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>載入 Windows PowerShell 中的 SMO 組件
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-本文描述如何在未使用 SQL Server PowerShell 提供者的 Windows PowerShell 指令碼中載入 SQL Server 管理物件 (SMO) 組件。  
-  
-> [!NOTE]
-> 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
-> 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
+本文描述如何在不使用 SQL Server PowerShell 提供者的 Windows PowerShell 指令碼中載入 SQL Server 管理物件 (SMO) 組件。  
 
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 載入 SMO 組件的慣用機制是載入 **SqlServer** 模組。 模組中所含的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會自動載入 SMO 組件，也會實作可擴充 PowerShell 指令碼中 SMO 物件使用性的功能。
-  
+
 有兩種情況您可能必須直接載入 SMO 組件：  
-  
--   如果您的指令碼在第一個命令之前先參考 SMO 物件，而該命令會從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 嵌入式管理單元參考提供者或指令程式。  
-  
--   您想要從不使用提供者或 Cmdlet 的另一個語言 (例如 C# 或 Visual Basic) 移植 SMO 程式碼。  
-  
-## <a name="example-loading-the-sql-server-management-objects"></a>範例：載入 SQL Server 管理物件  
- 下列程式碼會載入 SMO 組件：  
-  
-```  
-#  
+
+- 如果您的指令碼在第一個命令之前先參考 SMO 物件，而該命令會從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 嵌入式管理單元參考提供者或指令程式。  
+
+- 您想要從不使用提供者或 Cmdlet 的其他語言 (例如：C# 或 Visual Basic) 中移植 SMO 程式碼。  
+
+## <a name="example-loading-the-sql-server-management-objects"></a>範例：載入 SQL Server 管理物件
+
+下列程式碼會載入 SMO 組件：  
+
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
-  
-$ErrorActionPreference = "Stop"  
+
+$ErrorActionPreference = "Stop"
   
 $sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
@@ -58,7 +54,7 @@ else
     $sqlpsPath = [System.IO.Path]::GetDirectoryName($item.Path)  
 }  
   
-$assemblylist =   
+$assemblylist =
 "Microsoft.SqlServer.Management.Common",  
 "Microsoft.SqlServer.Smo",  
 "Microsoft.SqlServer.Dmf ",  
@@ -88,11 +84,10 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+```
+
+## <a name="see-also"></a>另請參閱
+
+- [SQL Server PowerShell](sql-server-powershell.md)

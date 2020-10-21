@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866315"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933548"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>設定自動執行帳戶 (報表伺服器組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
   
 -   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。
@@ -41,7 +41,7 @@ ms.locfileid: "74866315"
   
  若要指定此帳戶，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具或 **rsconfig** 公用程式。 設定自動執行帳戶的最簡單方法，是執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並在 [執行帳戶] 頁面中指定認證。  
   
-1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。 如需指示，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。 如需指示，請參閱[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在 [執行帳戶] 頁面上，選取 [指定執行帳戶]  。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866315"
   
 3.  輸入下列命令，即可在本機報表伺服器執行個體上設定帳戶：  
   
-     **rsconfig -e -u\<網域/使用者名稱> -p\<密碼>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** 可支援其他引數。 如需語法的詳細資訊及若要檢視命令範例，請參閱 [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) (rsconfig 公用程式 &#40;SSRS&#41;)。
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866315"
  帳戶資訊會隨即從 RSReportServer.config 檔案中移除。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 (SSRS 原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [報表伺服器組態管理員 (SSRS 原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

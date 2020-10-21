@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725466"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081307"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -31,7 +31,7 @@ ms.locfileid: "91725466"
     * **ActiveDirectoryMSI**
         * 從驅動程式 **v7.2** 版開始支援，可以從已啟用「身分識別」支援的 Azure 資源內，使用 `authentication=ActiveDirectoryMSI` 連線到 Azure SQL Database/資料倉儲。 此外，使用此驗證模式時，您也可以在 Connection/DataSource 屬性中指定 **msiClientId**，其必須包含用來取得建立連線之 **accessToken** 的受控識別用戶端識別碼。
     * **ActiveDirectoryIntegrated**
-        * 從驅動程式 **v6.0** 版開始支援，可使用 `authentication=ActiveDirectoryIntegrated` 來連線到使用整合式驗證的 Azure SQL Database/資料倉儲。 若要使用此驗證模式，您必須將內部部署 Active Directory 同盟服務 (ADFS) 與雲端中的 Azure Active Directory 建立同盟。 設定後，您可以將原生程式庫 'mssql-jdbc_auth-\<version>-\<arch>.dll' 新增至 Windows 作業系統上的應用程式類別路徑，或為跨平台驗證支援設定 Kerberos 票證，藉以連線。 登入已加入網域的電腦之後，您將能夠在系統不提示輸入認證的情況下存取 Azure SQL Database/SQL 資料倉儲。
+        * 從驅動程式 **v6.0** 版開始支援，可使用 `authentication=ActiveDirectoryIntegrated` 來連線到使用整合式驗證的 Azure SQL Database/資料倉儲。 若要使用此驗證模式，您必須將內部部署 Active Directory 同盟服務 (ADFS) 與雲端中的 Azure Active Directory 建立同盟。 設定後，您可以將原生程式庫 'mssql-jdbc_auth-\<version>-\<arch>.dll' 新增至 Windows 作業系統上的應用程式類別路徑，或為跨平台驗證支援設定 Kerberos 票證，藉以連線。 登入已加入網域的電腦之後，您將能夠在系統不提示輸入認證的情況下存取 Azure SQL Database/Azure Synapse Analytics。
     * **ActiveDirectoryPassword**
         * 從驅動程式 **v6.0** 版開始支援，可使用 `authentication=ActiveDirectoryPassword` 來連線到使用 Azure AD 使用者名稱和密碼的 Azure SQL Database/資料倉儲。
     * **SqlPassword**
@@ -286,8 +286,8 @@ You have successfully logged on as: <your user name>
     11. 在 [金鑰] 區段底下，填入名稱欄位，選取金鑰的持續時間，然後儲存設定 (值欄位保留空白) 以建立金鑰。 儲存之後，值欄位應該會自動填入，請複製所產生的值。 這是用戶端密碼。
     12. 在左側導覽面板中，按一下 [Azure Active Directory]。 在 [應用程式註冊] 下，尋找 [結束點] 索引標籤。複製 [OATH 2.0 權杖端點] 底下的 URL，這是您的 STS URL。
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. 以 Azure Active Directory 管理員身分登入 Azure SQL Server 的使用者資料庫，並使用 T-SQL 命令為您的應用程式主體佈建自主資料庫使用者。 如需建立 Azure Active Directory 管理員和自主資料庫使用者的詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](/azure/azure-sql/database/authentication-aad-overview) \(部分機器翻譯\)。
+    ![Azure 入口網站應用程式註冊端點 - STS URL](media/jdbc_aad_token.png)  
+2. 以 Azure Active Directory 管理員身分登入 Azure SQL Server 的使用者資料庫，並使用 T-SQL 命令為您的應用程式主體佈建自主資料庫使用者。 如需建立 Azure Active Directory 系統管理員和自主資料庫使用者的詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database 或 Azure Synapse Analytics](/azure/azure-sql/database/authentication-aad-overview)。
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

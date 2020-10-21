@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 28cfd7e9a78646527bb8c0508535a1475159e35c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834508"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891078"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -93,7 +93,7 @@ SQL Server 2019 的累積更新 6 (CU6) 版本。
 此版本包含次要修正與增強功能。 下列文章包含與這些更新相關的資訊：
 
 - [以 Active Directory 模式管理巨量資料叢集存取](manage-user-access.md)
-- [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md)
+- [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deploy.md)
 - [部署高可用性 SQL Server 巨量資料叢集](deployment-high-availability.md)
 - [設定 SQL Server 巨量資料叢集](configure-cluster.md)
 - [在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
@@ -175,11 +175,11 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 - **受影響的版本**：到最新的累積更新
 
-- **問題和對客戶的影響**︰在升級期間，Sparkhead 傳回 404 錯誤。
+- **問題和對客戶的影響**︰在升級期間，`sparkhead` 傳回 404 錯誤。
 
 - **因應措施**：升級 BDC 之前，請確定沒有作用中的 Livy 工作階段或批次工作。 依照[從支援的版本升級](deployment-upgrade.md#upgrade-from-supported-release)底下的指示執行，以避免這種情況。 
 
-   如果 Livy 在升級程序期間傳回 404 錯誤，請在這兩個 Sparkhead 節點上重新啟動 Livy 伺服器。 例如：
+   如果 Livy 在升級程序期間傳回 404 錯誤，請在這兩個 `sparkhead` 節點上重新啟動 Livy 伺服器。 例如：
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

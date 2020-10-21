@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062307"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005664"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的版本資訊
 
@@ -361,9 +361,9 @@ Microsoft JDBC Driver 7.0 for SQL Server 現在會從 `java.sql.Connection` 類�
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>已新增連線屬性：useBulkCopyForBatchInsert
 
-Microsoft JDBC Driver 7.0 for SQL Server 會引進新的連線屬性 `useBulkCopyForBatchInsert`。 僅 Azure SQL 資料倉儲支援此屬性。
+Microsoft JDBC Driver 7.0 for SQL Server 會引進新的連線屬性 `useBulkCopyForBatchInsert`。 僅 Azure Synapse Analytics 支援此屬性。
 
-預設會停用此屬性。 當您要將大量資料推送到 Azure SQL 資料倉儲時，可以啟用它來提升使用者應用程式的效能。 啟用此屬性會變更批次插入作業的行為，以切換到使用者提供資料的大量複製作業。 如需這個屬性及其限制的詳細資訊，請參閱[使用大量複製 API 執行批次插入作業](use-bulk-copy-api-batch-insert-operation.md)。
+預設會停用此屬性。 當要將大量資料推送到 Azure Synapse Analytics 時，可啟用此屬性以提升使用者應用程式的效能。 啟用此屬性會變更批次插入作業的行為，以切換到使用者提供資料的大量複製作業。 如需這個屬性及其限制的詳細資訊，請參閱[使用大量複製 API 執行批次插入作業](use-bulk-copy-api-batch-insert-operation.md)。
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>已新增連線屬性：cancelQueryTimeout
 

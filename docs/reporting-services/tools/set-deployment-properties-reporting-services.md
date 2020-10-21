@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512334"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891648"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512334"
  使用組態管理員可在專案組態中建立及管理專案屬性的集合。 組態管理員是 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支援的功能， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以它為基礎。  
   
 > [!NOTE]  
-> 請不要將這項功能與 Reporting Services 組態管理員搞混，後者是用來在安裝之後設定 Reporting Services。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
+> 請不要將這項功能與報表伺服器組態管理員搞混，後者用於在安裝後設定 Reporting Services。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
 >
 > [!NOTE]  
 > 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，從報表伺服器專案或解決方案發行報表的動作稱為「部署報表」。  

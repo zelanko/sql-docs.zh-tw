@@ -1,6 +1,6 @@
 ---
-title: 使用 Azure SQL 資料倉儲進行連線及查詢
-description: 本快速入門說明如何使用 Azure Data Studio 連線到 Azure SQL 資料倉儲並執行查詢
+title: 使用 Azure Synapse Analytics 進行連線及查詢
+description: 本快速入門示範如何使用 Azure Data Studio 連線到 Azure Synapse Analytics 專用 SQL 集區並執行查詢。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766367"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005490"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門：使用 Azure Data Studio 來連線及查詢 Azure SQL 資料倉儲中的資料
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入門：使用 Azure Data Studio 以連線及查詢在 Azure Synapse Analytics 中使用專用 SQL 集區的資料
 
-本快速入門示範如何使用 Azure Data Studio 來連線到 Azure SQL 資料倉儲，然後使用 Transact-SQL 陳述式以建立、插入及選取資料。 
+本快速入門示範如何使用 Azure Data Studio 連線到在 Azure Synapse Analytics 中使用專用 SQL 集區，然後使用 Transact-SQL 陳述式建立、插入及選取資料。 
 
 ## <a name="prerequisites"></a>必要條件
-若要完成本快速入門，則需要 Azure Data Studio 與 Azure SQL 資料倉儲。
+您需要 Azure Data Studio 與 Azure Synapse Analytics 的專用 SQL 集區，才能完成本快速入門。
 
 - [安裝 Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)。
 
-如果您還沒有 SQL 資料倉儲，請參閱[建立 SQL 資料倉儲](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
+如果還沒有專用的 SQL 集區，請參閱[建立專用的 SQL 集區](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
 
 請記住伺服器名稱和登入認證！
 
 
-## <a name="connect-to-your-data-warehouse"></a>連線到您的資料倉儲
+## <a name="connect-to-your-dedicated-sql-pool"></a>連線到專用 SQL 集區
 
-使用 Azure Data Studio 來建立與 Azure SQL 資料倉儲伺服器之間的連線。
+使用 Azure Data Studio 建立對 Azure Synapse Analytics 伺服器的連線。
 
 1. 第一次執行 Azure Data Studio 時，應該會開啟 [連線] 頁面。 如果沒有看到 [連線] 頁面，請按一下 [伺服器] 提要欄位中的 [新增連線] 或**新增連線**圖示：
    
@@ -58,7 +58,7 @@ ms.locfileid: "88766367"
 
 4. 成功連線之後，您的伺服器就會在 [伺服器] 提要欄位中開啟。
 
-## <a name="create-the-tutorial-data-warehouse"></a>建立教學課程資料倉儲
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>建立專用 SQL 集區的教學課程
 1. 以滑鼠右鍵按一下您的伺服器，然後在物件總管中選取 [新增查詢]。
 
 1. 將下列程式碼片段貼到查詢編輯器，然後按一下 [執行]：
@@ -145,4 +145,4 @@ ms.locfileid: "88766367"
 
 ## <a name="next-steps"></a>後續步驟
 
-現在您已成功連線到 Azure SQL 資料倉儲並執行查詢，請嘗試[程式碼編輯器教學課程](tutorial-sql-editor.md)。
+成功連線到 Azure Synapse Analytics 並執行查詢後，請嘗試[程式碼編輯器教學課程](tutorial-sql-editor.md)。

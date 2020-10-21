@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3539b53864f14c9d88f92a07f5217d619084c3fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484981"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891928"
 ---
 # <a name="install-sql-server-reporting-services"></a>安裝 SQL Server Reporting Services
 
@@ -68,7 +68,7 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
     > [!NOTE]
     > 預設路徑為 C:\Program Files\Microsoft SQL Server Reporting Services。
 
-7. 成功安裝之後，選取 [設定報表伺服器]  啟動 Reporting Services 設定管理員。
+7. 成功安裝之後，請選取 [設定報表伺服器] 以啟動報表伺服器組態管理員。
 
 ## <a name="configure-your-report-server"></a>設定報表伺服器
 

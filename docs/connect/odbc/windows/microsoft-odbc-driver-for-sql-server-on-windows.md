@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38d897f60b5e3ed9278214c8dae8525c72668e20
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4b52e3df054a0c13846741237000855c079c842b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727355"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005896"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是獨立的 ODBC 驅動程式，可提供應用程式開發介面 (API) 以實作 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的標準 ODBC 介面。
 
-Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也可以升級目前使用較舊 ODBC 驅動程式的舊版應用程式。 ODBC Driver for SQL Server 支援連線到 Azure SQL Database、Azure SQL 資料倉儲和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也可以升級目前使用較舊 ODBC 驅動程式的舊版應用程式。 ODBC Driver for SQL Server 支援連線到 Azure SQL Database、Azure Synapse Analytics 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
 
 ## <a name="summary"></a>摘要
 

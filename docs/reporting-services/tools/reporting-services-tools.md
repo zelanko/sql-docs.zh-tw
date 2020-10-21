@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8adb6775be47b2d064e97c74e6888c64af75fe2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b19b5aed9dcd3f40bb603606eeb0ae4df43beb0b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915011"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892298"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組圖形和指令碼工具，支援在受控環境中開發與使用豐富的報表功能。 此工具集包含開發工具、組態與管理工具，以及報表檢視工具。 本文提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中各個工具與其存取方式的簡短概觀。  
@@ -50,11 +50,11 @@ ms.locfileid: "86915011"
   
 |工具|說明|如何存取|  
 |----------|-----------------|-------------------|  
-|Reporting Services 組態管理員|請使用此工具設定 Reporting Services 安裝。 可用的工作包括：<br /><br />  設定報表伺服器服務帳戶。<br /><br /> 建立及設定一個或多個 Web 服務 URL。<br /><br /> 設定入口網站 URL<br /><br /> 建立及設定報表伺服器資料庫。<br /><br /> 設定向外延展部署。<br /><br /> 備份、還原或取代用於加密已儲存之連接字串和認證的對稱金鑰。<br /><br /> 設定自動執行帳戶。<br /><br /> 設定訂閱設定。<br /><br /> 設定電子郵件傳遞的 SMTP 伺服器。<br /><br /> 設定 Power BI 服務 (雲端)。<br /><br /> 注意:Reporting Services 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。<br /><br /> 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。|開始功能表|  
+|報表伺服器組態管理員|請使用此工具設定 Reporting Services 安裝。 可用的工作包括：<br /><br />  設定報表伺服器服務帳戶。<br /><br /> 建立及設定一個或多個 Web 服務 URL。<br /><br /> 設定入口網站 URL<br /><br /> 建立及設定報表伺服器資料庫。<br /><br /> 設定向外延展部署。<br /><br /> 備份、還原或取代用於加密已儲存之連接字串和認證的對稱金鑰。<br /><br /> 設定自動執行帳戶。<br /><br /> 設定訂閱設定。<br /><br /> 設定電子郵件傳遞的 SMTP 伺服器。<br /><br /> 設定 Power BI 服務 (雲端)。<br /><br /> 注意：報表伺服器組態管理員無助於管理報表伺服器內容、啟用其他功能，或授與伺服器存取權。<br /><br /> 如需詳細資訊，請參閱[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。|開始功能表|  
 |SQL Server Management Studio|使用此工具即可在單一環境中管理一個或多個報表伺服器執行個體，包括：<br /><br /> 管理本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器屬性<br /><br /> 修改角色定義<br /><br /> 關閉您不要使用的報表伺服器功能<br /><br /> 管理作業<br /><br /> 管理共用排程|開始功能表|   
 |Rsconfig 公用程式|使用此工具可設定及管理連線到報表伺服器資料庫的報表伺服器。 您也可以使用它來指定自動執行報表處理所使用的使用者帳戶。<br /><br /> 如需詳細資訊，請參閱[報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)。|命令提示字元|  
 |Rskeymgmt 公用程式|使用此工具可以：<br /><br /> 擷取、還原、建立及刪除用於加密報表伺服器資料的對稱金鑰<br /><br /> 在向外延展部署中加入報表伺服器執行個體<br /><br /> <br /><br /> 如需詳細資訊，請參閱[報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)。|命令提示字元|  
-|Windows Management Instrumentation (WMI) 類別|使用這些類別可自動化 Reporting Services 組態管理員中的組態工作，且無須使用圖形化使用者介面。<br /><br /> 如需詳細資訊，請參閱 [以程式設計方式存取 WMI 提供者](../../reporting-services/accessing-the-wmi-provider-programmatically.md)。|Visual Basic 指令碼|  
+|Windows Management Instrumentation (WMI) 類別|使用這些類別可自動化報表伺服器組態管理員中的組態工作，且無須使用圖形化使用者介面。<br /><br /> 如需詳細資訊，請參閱 [以程式設計方式存取 WMI 提供者](../../reporting-services/accessing-the-wmi-provider-programmatically.md)。|Visual Basic 指令碼|  
   
 ### <a name="sharepoint-integrated-mode"></a>SharePoint 整合模式  
  在 SharePoint 模式中，Reporting Services 是在 SharePoint 架構中的服務應用程式，並且直接透過 SharePoint 進行管理  

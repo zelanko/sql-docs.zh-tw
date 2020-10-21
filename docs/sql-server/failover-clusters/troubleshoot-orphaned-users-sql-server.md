@@ -20,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115343"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006253"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>針對孤立使用者進行疑難排解 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  輸出會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證使用者及對應的安全性識別碼 (SID)，這些使用者皆為目前資料庫中的使用者，且並未與任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入相連結。  
 
-**SQL 資料庫和 SQL 資料倉儲**
+**SQL Database 和 Azure Synapse Analytics**
 
-`sys.server_principals` 資料表不適用於 SQL 資料庫或 SQL 資料倉儲。 請執行下列步驟來識別這些環境中的孤立使用者：
+SQL Database 或 Azure Synapse Analytics 不提供 `sys.server_principals` 資料表。 請執行下列步驟來識別這些環境中的孤立使用者：
 
 1. 連接到 `master` 資料庫，然後使用下列查詢選取登入的 SID：
     ```

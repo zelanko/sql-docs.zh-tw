@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042849"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935455"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>設定報表伺服器服務帳戶 (報表伺服器組態管理員)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "90042849"
   
 ## <a name="updating-an-expired-password"></a>更新已過期的密碼
 
- 如果報表伺服器服務是以網域帳戶執行，且在您可以於 Reporting Services 設定管理員內更新密碼以前，密碼就已經過期，則要先指定新的密碼，才能啟動該服務。  
+ 如果報表伺服器服務是以網域帳戶執行，且在可於報表伺服器組態管理員內更新密碼以前密碼就已經過期，則要先指定新的密碼才能啟動該服務。  
   
  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務帳戶密碼已過期，則當您嘗試連接至報表伺服器時便會發生 **rsReportServerDatabaseUnavailable** 錯誤。 重設密碼即可解決此錯誤。  
   
@@ -115,5 +115,4 @@ ms.locfileid: "90042849"
   
 ## <a name="next-steps"></a>後續步驟
 
- [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [設定報表伺服器 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [報表伺服器組態管理員 &#40; 原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

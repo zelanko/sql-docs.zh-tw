@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: 您可使用擴充性架構來撰寫 SQL Server 的程式設計語言延伸模組。 Microsoft SQL Server 擴充性架構 API 是一種可供語言延伸模組用來與 SQL Server 互動及交換資料的 API。
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765775"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956859"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>SQL Server 的擴充性架構 API
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 您可使用擴充性架構來撰寫 SQL Server 的程式設計語言延伸模組。 Microsoft SQL Server 擴充性架構 API 是一種可供語言延伸模組用來與 SQL Server 互動及交換資料的 API。
 
-身為語言延伸模組作者，您可搭配[適用於 SQL Server 的開放原始碼 Java 語言延伸模組](../how-to/extensibility-sdk-java-sql-server.md)來使用此參考，以了解如何使用此 API 來撰寫自己的語言延伸模組。 您可在 [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions) 找到 Java 語言延伸模組的原始程式碼。
+身為語言延伸模組作者，您可使用此參考和開放原始碼語言延伸模組，以了解如何使用此 API 撰寫自己的語言延伸模組。 您可在 [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions) 找到語言延伸模組的原始程式碼。
 
 您可在下方找到所有 API 函數的相關語法和引數資訊。
 
@@ -36,7 +36,7 @@ ms.locfileid: "91765775"
 
 ## <a name="init"></a>Init
 
-此函數只會呼叫一次，並用來將執行階段初始化以便執行。 例如，Java 延伸模組會將 JVM 初始化。
+此函數只會呼叫一次，並用來將執行階段初始化以便執行。 
 
 ### <a name="syntax"></a>語法
 
@@ -81,7 +81,7 @@ SQLRETURN Init(
 
 ## <a name="initsession"></a>InitSession
 
-此函數會針對每一工作階段呼叫一次，並將工作階段特定的設定初始化。
+此函數每個工作階段會呼叫一次，以初始化工作階段的特定設定。
 
 ### <a name="syntax"></a>語法
 
@@ -262,7 +262,7 @@ SQLRETURN InitParam(
 *StrLen_or_Ind*  
 \[輸入\] 整數值 (表示 *ParamValue* 的位元組長度) 或 SQL_NULL_DATA (表示資料為 NULL)。
 
-如果資料行不可為 Null，且不是下列其中一種資料類型，則可忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY、SQL_C_NUMERIC 或 SQL_C_TYPE_TIMESTAMP。 否則會指向具有 \[RowsNumber\] 個元素的有效陣列，其中每個元素都包含其長度或 Null 指標資料。
+如果資料行不可為 Null，且不代表下列其中一個資料類型，則可忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY、SQL_C_NUMERIC 或 SQL_C_TYPE_TIMESTAMP。 否則會指向具有 \[RowsNumber\] 個元素的有效陣列，其中每個元素都包含其長度或 Null 指標資料。
 
 *InputOutputType*  
 \[輸入\] 參數的類型。 *InputOutputType* 引數是下列其中一個值：
@@ -304,7 +304,7 @@ SQLRETURN Execute(
 \[輸入\] *Data* 中的資料列數目。
 
 *Data*  
-\[輸入\] 二維陣列，其包含 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中 `@input_data_1` 的結果集。
+\[輸入\] 二維陣列，其包含`@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 的結果集。
 
 資料行總數是在 [InitSession](#initsession) 呼叫中收到的 *InputSchemaColumnsNumber*。 每個資料行都包含 *RowsNumber* 個元素，這些元素應該根據 [InitColumn](#initcolumn) 中的資料行類型予以解譯。
 
@@ -407,19 +407,19 @@ SQLRETURN GetResults(
 \[輸出\]，緩衝區的指標，其包含 *Data* 中的資料列數目。
 
 *Data*  
-\[輸出\] 延伸模組所配置二維陣列的指標，其中包含 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中 `@script` 的結果集。
+\[輸出\] 延伸模組配置的二維陣列指標，其包含 `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 的結果集。
 
 資料行總數應該是在 [Execute](#execute) 呼叫中擷取的 *OutputSchemaColumnsNumber*。 每個資料行都應該包含 *RowsNumber* 個元素，這些元素應該根據 [GetResultColumn](#getresultcolumn) 中的資料行類型予以解譯。
 
 *StrLen_or_Ind*  
-\[輸出\] 延伸模組所配置二維陣列的指標，其中包含 *Data* 中每個值的長度/NULL 指標。 每個資料格的可能值：
+\[輸出\] 延伸模組配置的二維陣列指標，其包含 *Data* 中每個值的長度/NULL 指標。 每個資料格的可能值：
 
 - n，其中 n > 0。 表示資料長度 (以位元組為單位)
 - SQL_Null_DATA，表示 NULL 值。
 
 資料行總數應該是在 [Execute](#execute) 呼叫中收到的 *OutputSchemaColumnsNumber*。 每個資料行都包含 *RowsNumber* 個元素，這些元素應該根據 [GetResultColumn](#getresultcolumn) 中的資料行類型予以解譯。
 
-如果一個資料行不可為 Null，且不是下列其中一種資料類型，則會忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY [新增日期]。 否則會指向具有 *RowsNumber* 個元素的有效陣列，每個元素都包含其長度或 Null 指標資料。
+如果一個資料行不可為 Null，且不代表下列其中一個資料類型，則會忽略 StrLen_or_Ind\[col\]：SQL_C_CHAR、SQL_C_WCHAR 和 SQL_C_BINARY [新增日期]。 否則會指向具有 *RowsNumber* 個元素的有效陣列，每個元素都包含其長度或 Null 指標資料。
 
 ## <a name="getoutputparam"></a>GetOutputParam
 
@@ -583,7 +583,7 @@ SQLRETURN InstallExternalLibrary(
 \[輸入\] LibraryInstallDirectory 字串的長度。
 
 *LibraryError*  
-\[輸出\] 選擇性的輸出參數。 如果在程式庫安裝期間發生錯誤，LibraryError 會指向描述錯誤的字串。
+\[輸出\] 選擇性的輸出參數。 如果在程式庫安裝期間發生錯誤，則 LibraryError 會指向描述錯誤的字串。
 
 *LibraryErrorLength*  
 \[輸出\] LibraryError 字串的長度。
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>後續步驟
 
 - [適用於 SQL Server 的 Microsoft Extensibility SDK for Java](../how-to/extensibility-sdk-java-sql-server.md)
+- [Python 自訂執行階段](../../machine-learning/install/custom-runtime-python.md)
+- [R 自訂執行階段](../../machine-learning/install/custom-runtime-r.md)。

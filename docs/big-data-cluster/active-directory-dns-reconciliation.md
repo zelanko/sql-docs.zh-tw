@@ -1,19 +1,19 @@
 ---
 title: 巨量資料叢集部署中的 Active Directory 與 Kubernetes DNS 協調
-description: 管理巨量資料叢集存取
-author: mihaelablendea
-ms.author: mihaelab
+description: 在 Active Directory 模式中設定 SQL Server 巨量資料叢集的 DNS 協調
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279424"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892458"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>巨量資料叢集部署中的 Active Directory 與 Kubernetes DNS 協調
 
@@ -89,6 +89,6 @@ BDC 所部署 CoreDNS 服務會有註冊的靜態內部 IP，其可從所有 Pod
 
 ## <a name="next-steps"></a>後續步驟
 
-- [以 Active Directory 模式部署 SQL Server 巨量資料叢集](deploy-active-directory.md)
+- [以 Active Directory 模式部署 SQL Server 巨量資料叢集](active-directory-deploy.md)
 - [以 Active Directory 模式管理巨量資料叢集存取](active-directory-objects.md)
 - [在相同的 Active Directory 網域中部署多個 SQL Server 巨量資料叢集](active-directory-deployment-background.md)

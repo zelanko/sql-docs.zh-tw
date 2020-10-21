@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726887"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004558"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連線
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) \(英文\) 是一種中央使用者識別碼管理技術，可作為 [SQL Server 驗證](how-to-connect-using-sql-server-authentication.md)的替代方案。 Azure AD 允許您使用使用者名稱與密碼、Windows 整合式驗證或 Azure AD 存取權杖，透過 Azure AD 中的同盟識別身分來連線到 Microsoft Azure SQL Database 與 SQL 資料倉儲。 PHP Drivers for SQL Server 會提供這些功能的部分支援。
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) \(英文\) 是一種中央使用者識別碼管理技術，可作為 [SQL Server 驗證](how-to-connect-using-sql-server-authentication.md)的替代方案。 Azure AD 允許使用使用者名稱與密碼、Windows 整合式驗證或 Azure AD 存取權杖，透過 Azure AD 中的同盟識別身分來連線到 Microsoft Azure SQL Database 和 Azure Synapse Analytics 。 PHP Drivers for SQL Server 會提供這些功能的部分支援。
 
 若要使用 Azure AD，請使用 **Authentication** 或 **AccessToken** 關鍵字 (它們彼此互斥)，如下表所示。 如需更多的技術詳細資料，請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../odbc/using-azure-active-directory.md)。
 

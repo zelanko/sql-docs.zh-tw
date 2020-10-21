@@ -3,18 +3,18 @@ title: Python 和 R 的已知問題
 description: 本文描述 Python 和 R 元件的已知問題或限制，這些元件會在 SQL Server 機器學習服務和 SQL Server 2016 R Services 中提供。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495019"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059556"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的已知問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -603,7 +603,7 @@ go
 
 此問題已在 SQL Server 2017 累積更新 3 (CU3) 中修正。 
 
-### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.不支援 numeric、decimal 及 money 資料類型
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.不支援數值、小數和貨幣資料類型
 
 從 SQL Server 2017 累積更新 12 (CU12) 開始，在搭配使用 Python 與 `sp_execute_external_script` 時，不支援 WITH RESULT SETS 中的 numeric、decimal 及 money 資料類型。 可能出現以下訊息：
 
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9.無法使用 **sqlmlutils** 來安裝 **tensorflow** 套件
 
-[sqlmlutils 套件](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)是用來在 SQL Server 2019 中安裝 Python 套件。 不過，您無法使用 sqlmlutils 來安裝 **tensorflow** 套件。 Tensorflow 套件相依於較新版本的 numpy，而不是安裝在 SQL Server 中的版本。 不過，numpy 是預先安裝的系統套件，當嘗試安裝 tensorflow 時，sqlmlutils 無法更新該套件。
+[sqlmlutils 套件](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15)是用來在 SQL Server 2019 中安裝 Python 套件。 您必須下載、安裝及更新 [Microsoft Visual C++ 2015-2019 可轉散發套件 (x64)](https://visualstudio.microsoft.com/downloads/)。 不過，您無法使用 sqlmlutils 來安裝 **tensorflow** 套件。 Tensorflow 套件相依於較新版本的 numpy，而不是安裝在 SQL Server 中的版本。 不過，numpy 是預先安裝的系統套件，當嘗試安裝 tensorflow 時，sqlmlutils 無法更新該套件。
 
 **因應措施**
 

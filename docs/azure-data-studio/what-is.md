@@ -1,6 +1,6 @@
 ---
 title: 什麼是 Azure Data Studio
-description: Azure Data Studio 是在 Windows、macOS 和 Linux 上執行，以便管理 SQL Server、Azure SQL Database 和 Azure SQL 資料倉儲的免費輕量型工具。
+description: Azure Data Studio 是在 Windows、macOS 和 Linux 上執行，並用於管理 SQL Server、Azure SQL Database 和 Azure Synapse Analytics 的免費輕量型工具。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: overview
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: ae2f5e45d9de660c8c03bd3b71a9e18864df5aa8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 5db337327ef9f848f76a41603da760a6cbc8fcdc
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114412"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005423"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 

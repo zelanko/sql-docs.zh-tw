@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7cbe27857ba31dc8b91ac8d93ae08ca8dd219f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446078"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934670"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 加密金鑰 - 初始化報表伺服器
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為何使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
  加密金鑰有一部分是以報表伺服器服務的設定檔資訊為根據。 如果您變更用來執行報表伺服器服務的使用者識別，就必須隨之更新金鑰。 如果您是使用 Reporting Services 組態工具來變更識別，則會自動幫您處理這個步驟。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "88446078"
   
 ## <a name="how-to-initialize-a-report-server"></a>如何將報表伺服器初始化  
   
--   若要將報表伺服器初始化，請使用 Reporting Services 組態工具。 您建立和設定報表伺服器資料庫時，會自動進行初始化。 如需詳細資訊，請參閱 [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)主題中受支援的版本。  
+-   若要將報表伺服器初始化，請使用 Reporting Services 組態工具。 您建立和設定報表伺服器資料庫時，會自動進行初始化。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
--   若要針對向外延展部署將報表伺服器初始化，您可以使用 Reporting Services 組態工具中的 [初始化] 頁面，或 **RSKeymgmt** 公用程式。 若要遵循逐步指示，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
+-   若要針對向外延展部署將報表伺服器初始化，您可以使用 Reporting Services 組態工具中的 [初始化] 頁面，或 **RSKeymgmt** 公用程式。 若要遵循逐步指示，請參閱[設定原生模式報表伺服器向外延展部署 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 > [!NOTE]  
 >  **RSKeymgmt** 是一個主控台應用程式，您可以從主控屬於向外延展部署之報表伺服器執行個體之電腦上的命令列執行。 您執行公用程式時，要指定引數來選取您要初始化的遠端報表伺服器執行個體。  
   
- 唯有安裝識別碼與公開金鑰之間有配對時，報表伺服器才會初始化。 如果配對成功，就會建立允許可回覆加密的對稱金鑰。 如果配對失敗，則會停用報表伺服器，這時系統應會要求您套用備份金鑰，或者刪除加密資料 (如果備份金鑰無法使用或無效)。 如需報表伺服器所使用之加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+ 唯有安裝識別碼與公開金鑰之間有配對時，報表伺服器才會初始化。 如果配對成功，就會建立允許可回覆加密的對稱金鑰。 如果配對失敗，則會停用報表伺服器，這時系統應會要求您套用備份金鑰，或者刪除加密資料 (如果備份金鑰無法使用或無效)。 如需報表伺服器所用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;報表伺服器組態設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
   
 > [!NOTE]  
 >  您也可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者，以程式設計方式將報表伺服器初始化。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
@@ -69,6 +69,6 @@ ms.locfileid: "88446078"
  若要確認報表伺服器初始化，請在命令視窗中鍵入 **https://\<servername>/reportserver**，來偵測報表伺服器 Web 服務。 如果發生 **RSReportServerNotActivated** 錯誤，初始化就會失敗。  
   
 ## <a name="see-also"></a>另請參閱
-[設定和管理加密金鑰 (SSRS 組態管理員)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+[設定和管理加密金鑰 (報表伺服器組態管理員)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
   
   

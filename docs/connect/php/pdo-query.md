@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f194c043ded9b8f663a6bcbfdb77ef408461468
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726786"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081847"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +62,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 PDO::exec 的行為；如需詳細�
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
-## <a name="example"></a>範例  
+## <a name="query-example"></a>查詢範例  
 此範例顯示數個查詢。  
   
 ```  
@@ -118,7 +118,7 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>範例
+## <a name="sql_variant-example"></a>Sql_variant 範例
 此程式碼範例示範如何建立 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 類型的資料表，並擷取插入的資料。
 
 ```

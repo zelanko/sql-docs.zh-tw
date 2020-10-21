@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 9b5f4230aacedcff2ecdffedb943ae39097fc1d4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547270"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934996"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>報表伺服器資料庫 (SSRS 原生模式)
   報表伺服器是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存中繼資料和物件定義的無狀態伺服器。 原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會使用兩個資料庫來分隔永續性資料儲存與暫時儲存需求。 兩個資料庫會一起建立，並依名稱繫結。 根據預設，資料庫名稱分別為 **ReportServer** 與 **ReportServerTempDB**。  
@@ -37,7 +37,7 @@ ms.locfileid: "84547270"
   
  所有對報表伺服器資料庫的存取，都必須透過報表伺服器處理。 若要存取報表伺服器資料庫中的內容，您可以使用報表伺服器管理工具 (例如，入口網站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) 或程式設計介面 (例如，URL 存取、報表伺服器 Web 服務，或 Windows Management Instrumentation (WMI) 提供者)。  
   
- 報表伺服器資料庫的連接通常是透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員定義。 但是，如果您選擇安裝預設組態，則可以在安裝過程中定義它。 如需報表伺服器連接到資料庫的詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+ 報表伺服器資料庫的連接通常是透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員定義。 但是，如果您選擇安裝預設組態，則可以在安裝過程中定義它。 如需報表伺服器連線到資料庫的詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="report-server-database"></a>報表伺服器資料庫  
  報表伺服器資料庫是儲存下列內容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：  
@@ -65,9 +65,9 @@ ms.locfileid: "84547270"
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQL Server 容錯移轉叢集中裝載報表伺服器資料庫](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [儲存加密的報表伺服器資料 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [建立報表伺服器資料庫 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Reporting Services 的備份與還原作業](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

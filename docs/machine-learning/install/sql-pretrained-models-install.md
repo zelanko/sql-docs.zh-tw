@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86aad616cc8c9fc54adc2fffd14bfc663acf3887
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179718"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956749"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server上安裝預先定型的機器學習模型
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-此文章說明如何使用 Powershell 將適用於「情緒分析」  與「影像特徵化」  的預先定型免費機器學習模型新增到具有 R 或 Python 整合的 SQL Server 執行個體。 預先定型的模型是由 Microsoft 所建置並可立即使用，並新增至執行個體作為安裝後工作。 如需有關這些模型的詳細資訊，請參閱此文章的[資源](#bkmk_resources)一節。
+本文說明如何使用 Powershell 將「情緒分析」與「影像特徵化」其預先定型免費機器學習模型新增到整合了 R 或 Python 的 SQL Server 執行個體。 預先定型的模型是由 Microsoft 所建置並可立即使用，並新增至執行個體作為安裝後工作。 如需有關這些模型的詳細資訊，請參閱此文章的[資源](#bkmk_resources)一節。
 
 安裝完成後，預先定型的模型會被視為支援 MicrosoftML (R) 與 MicrosoftML (Python) 程式庫中特定函式的實作詳細資料。 您不應該(也不能) 檢視、自訂或重新定型模型，也不能將它們視為自訂程式碼中的獨立資源或配對其他函式。 
 
@@ -27,8 +27,8 @@ ms.locfileid: "88179718"
 
 | R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用量 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 根據文字輸入產生正負情緒分數。 |
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 從影像檔案輸入擷取文字資訊。 |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | 根據文字輸入產生正負情緒分數。 |
+| [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | 從影像檔案輸入擷取文字資訊。 |
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -39,15 +39,15 @@ ms.locfileid: "88179718"
 必須啟用外部指令碼，而且 SQL Server LaunchPad 服務必須為執行中。 安裝指示提供啟用及驗證這些功能的步驟。 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-[MicrosoftML R 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)或 [microsoftml Python 套件](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含預先定型的模型。
+[MicrosoftML R 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package)或 [microsoftml Python 套件](/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含預先定型的模型。
 
 [SQL Server 機器學習服務](sql-machine-learning-services-windows-install.md)同時包括機器學習程式庫的兩個語言版本，因此您不需採取任何進一步的動作，就能符合此先決條件。 因為程式庫存在，所以您可以使用此文章中所述的 PowerShell 指令碼將預先定型的模型新增到這些程式庫。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[MicrosoftML R 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)包含預先定型的模型。
+[MicrosoftML R 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package)包含預先定型的模型。
 
-[SQL Server R Services](sql-r-services-windows-install.md) (僅限 R) 預設不包括 [MicrosoftML 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 若要新增 MicrosoftML，您必須執行[元件升級](../install/upgrade-r-and-python.md)。 元件升級的其中一個優點是您可以同時新增預先定型的模型，讓您不需要執行 PowerShell 指令碼。 不過，如果您已升級，而且一開始錯過新增預先定型的模型，您可以依照此文章所述執行 PowerShell 指令碼。 這適用於兩個版本的 SQL Server。 在您執行之前，請確認 MicrosoftML 程式庫存在於 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。
+[SQL Server R Services](sql-r-services-windows-install.md) (僅限 R) 預設不包括 [MicrosoftML 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 若要新增 MicrosoftML，您必須執行[元件升級](../install/upgrade-r-and-python.md)。 元件升級的其中一個優點是您可以同時新增預先定型的模型，讓您不需要執行 PowerShell 指令碼。 不過，如果您已升級，而且一開始錯過新增預先定型的模型，您可以依照此文章所述執行 PowerShell 指令碼。 這適用於兩個版本的 SQL Server。 在您執行之前，請確認 MicrosoftML 程式庫存在於 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。
 ::: moniker-end
 
 <a name="file-location"></a>
@@ -215,5 +215,5 @@ R 與 Python 模型的安裝路徑如下所示：
 
 + [SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)
 + [升級 SQL Server 執行個體中的 R 與 Python 元件](../install/upgrade-r-and-python.md)
-+ [ R 的 MicrosoftML 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) \(英文\)
-+ [ Python 的 microsoftml 套件](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) \(英文\)
++ [ R 的 MicrosoftML 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package) \(英文\)
++ [ Python 的 microsoftml 套件](/machine-learning-server/python-reference/microsoftml/microsoftml-package) \(英文\)

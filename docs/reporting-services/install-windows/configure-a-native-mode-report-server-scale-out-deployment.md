@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459998"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890872"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>設定原生模式報表伺服器向外延展部署
 
@@ -62,7 +62,7 @@ Reporting Services 原生模式支援向外延展部署模型，它可讓您在�
   
          若要避免在將伺服器執行個體連接到共用資料庫時發生資料庫相容錯誤，請確定所有的執行個體都是相同的版本。 例如，如果您使用 SQL Server 2016 報表伺服器執行個體來建立報表伺服器資料庫，則相同部署中的所有其他執行個體也都必須為 SQL Server 2016。  
   
-    -   使用 Reporting Services 組態管理員可將每一部報表伺服器連接到共用資料庫。 您一次只能連接並設定一個報表伺服器。  
+    -   使用報表伺服器組態管理員可將每一部報表伺服器連線到共用資料庫。 您一次只能連接並設定一個報表伺服器。  
   
     -   使用 Reporting Services 組態工具可完成向外延展，其方式是將新的報表伺服器執行個體加入已經連接至報表伺服器資料庫的第一個報表伺服器執行個體。  
   

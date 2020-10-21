@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603388"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935574"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>建立報表伺服器資料庫 (SSRS 組態管理員)  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>建立報表伺服器資料庫 (報表伺服器組態管理員)  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
  ### <a name="native-mode"></a>原生模式
  您可以利用下列方式建立原生模式報表伺服器資料庫：  
   
-- **自動**： 如果您選擇預設設定選項來進行安裝，就會使用 [SQL Server 安裝精靈]。 在 [SQL Server 安裝精靈] 中，這個選項會是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [僅安裝]  選項，就必須使用 Reporting Services 組態管理員建立資料庫。  
+- **自動**： 如果您選擇預設設定選項來進行安裝，就會使用 [SQL Server 安裝精靈]。 在 [SQL Server 安裝精靈] 中，這個選項會是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果選擇 [僅安裝] 選項，則必須使用報表伺服器組態管理員以建立資料庫。  
   
 - **手動**： 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來裝載報表伺服器資料庫，就必須手動建立資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
@@ -85,7 +85,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-如果您在遠端電腦上建立報表伺服器資料庫，請設定連線以使用網域使用者帳戶，或是擁有網路存取權的服務帳戶。 如果您使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請考慮報表伺服器要用來連線到執行個體的認證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+如果您在遠端電腦上建立報表伺服器資料庫，請設定連線以使用網域使用者帳戶，或是擁有網路存取權的服務帳戶。 如果您使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請考慮報表伺服器要用來連線到執行個體的認證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 > [!IMPORTANT]  
 > 報表伺服器與裝載報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，可以在不同的網域中。 若是網際網路部署，常會使用位於防火牆後方的伺服器。 
@@ -98,6 +98,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 
 ## <a name="next-steps"></a>後續步驟
 
-閱讀 [Reporting Services 組態管理員](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)相關內容。  
+請參閱[報表伺服器組態管理員](reporting-services-configuration-manager-native-mode.md)。  
 
 更多問題嗎？ 歡迎到 [Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)提問。

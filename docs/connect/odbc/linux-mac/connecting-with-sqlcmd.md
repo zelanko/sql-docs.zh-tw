@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab5cad910efcf73ab5b708f6a6a9bbf55c0df9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727413"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987904"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -215,9 +215,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 系統 DSN 會儲存在 ODBC SysConfigDir 目錄的 `odbc.ini` 檔案中 (標準安裝的 `/etc/odbc.ini`)。 使用者 DSN 會儲存在使用者主目錄的 `.odbc.ini` 中 (`~/.odbc.ini`)。
 
+在 Windows 系統上，系統和使用者 DSN 會儲存在登錄中，並透過 odbcad32.exe 管理。 bcp 和 sqlcmd 不支援檔案 DSN。
+
 如需驅動程式支援的項目清單，請參閱 [DSN 與連接字串關鍵字和屬性](../dsn-connection-string-attribute.md)。
 
-DSN 中只需要 DRIVER 項目，但若要連線到伺服器，`sqlcmd` 或 `bcp` 將需要 SERVER 項目中的值。  
+DSN 中只需要 DRIVER 項目，但若要連線到遠端伺服器，則 `sqlcmd` 或 `bcp` 的 SERVER 元素中需要有值。 如果 SERVER 元素是空的或不存在於 DSN 中，則 `sqlcmd` 和 `bcp` 會嘗試連線到本機系統的預設執行個體。
+
+在 Windows 系統上使用 bcp 時， [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 和較舊版本需要 SQL Native Client 11 驅動程式 (sqlncli11.dll)，而 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 和更新版本則需要 Microsoft ODBC Driver 17 for SQL Server 驅動程式 (msodbcsql17.dll)。  
 
 如果在 DSN 和 `sqlcmd` 或 `bcp` 命令列中指定相同的選項，命令列選項會覆寫 DSN 中使用的值。 例如，如果 DSN 有 DATABASE 項目，而 `sqlcmd` 命令列包含 **-d**，將會使用傳遞至 **-d** 的值。 如果在 DSN 中指定 **Trusted_Connection=yes**，則會使用 Kerberos 驗證，並且會忽略所提供的使用者名稱 ( **-U**) 和密碼 ( **-P**)。
 

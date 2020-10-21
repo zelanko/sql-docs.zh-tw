@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454574"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934837"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -122,7 +122,7 @@ ms.locfileid: "88454574"
 
  安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新執行個體之前，請務必備份目前安裝中的所有檔案。  
   
-1. 備份報表伺服器資料庫的加密金鑰。 這個步驟對於移轉是否成功很重要。 之後在移轉程序中，您必須針對報表伺服器還原此金鑰，以便重新取得加密資料的存取權。 若要備份金鑰，請使用 Reporting Services 組態管理員。  
+1. 備份報表伺服器資料庫的加密金鑰。 這個步驟對於移轉是否成功很重要。 之後在移轉程序中，您必須針對報表伺服器還原此金鑰，以便重新取得加密資料的存取權。 若要備份金鑰，請使用報表伺服器組態管理員。  
   
 2. 使用備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的任何支援方法來備份報表伺服器資料庫。 如需詳細資訊，請參閱[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) 中有關如何備份報表伺服器資料庫的指示。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88454574"
   
 1. 判斷組件是否受到支援或需要重新編譯：
 
-    * 自訂安全性延伸模組必須使用 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 介面重新撰寫。
+    * 自訂安全性延伸模組必須使用 [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) 介面重新撰寫。
   
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
   
@@ -237,15 +237,15 @@ ms.locfileid: "88454574"
 > [!IMPORTANT]
 >  如果向外延展部署中有任何報表伺服器是在線上且尚未移轉，則這些伺服器可能會遭遇 *rsInvalidReportServerDatabase* 例外狀況，因為它們在連線至已升級版本時使用的是舊版結構描述。  
 
-如果您移轉的報表伺服器是設定為向外延展部署的共用資料庫，則必須在設定報表伺服器服務之前，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除所有舊加密金鑰。 如果未移除金鑰，移轉後的報表伺服器會嘗試在向外延展部署模式中初始化。 如需詳細資訊，請參閱[新增和移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 和[設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
+如果您移轉的報表伺服器是設定為向外延展部署的共用資料庫，則必須在設定報表伺服器服務之前，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除所有舊加密金鑰。 如果未移除金鑰，移轉後的報表伺服器會嘗試在向外延展部署模式中初始化。 如需詳細資訊，請參閱[新增和移除向外延展部署的加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 和[設定和管理加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
 
 您無法利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來刪除向外延展金鑰， 而是必須使用 SQL Server Management Studio，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除舊金鑰。 請刪除 Keys 資料表中的所有資料列。 此動作會清除資料表，使其僅用於還原對稱金鑰，其步驟如下所示。  
 
 刪除金鑰之前，建議您先備份對稱加密金鑰。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來備份金鑰。 請開啟 [設定管理員]，然後按一下 [加密金鑰] 索引標籤，再按一下 [備份]  按鈕。 您也可以編寫 WMI 指令碼命令，備份加密金鑰。 如需 WMI 的詳細資訊，請參閱 [BackupEncryptionKey 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
   
-1. 啟動 Reporting Services 設定管理員，並連線到您安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1. 啟動報表伺服器組態管理員，並連線到所安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2. 設定報表伺服器和入口網站的 URL。 如需詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+2. 設定報表伺服器和入口網站的 URL。 如需詳細資訊，請參閱[設定 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
 3. 設定報表伺服器資料庫，並且從先前安裝中選取現有的報表伺服器資料庫。 在成功設定後，報表伺服器服務就會重新啟動，而在建立報表伺服器資料庫的連線之後，資料庫就會自動升級為 SQL Server Reporting Services。 如需如何執行您用來建立或選取報表伺服器資料庫之 [變更資料庫精靈] 的詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
@@ -300,6 +300,6 @@ ms.locfileid: "88454574"
 * [報表伺服器資料庫](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Reporting Services 回溯相容性](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [報表伺服器組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

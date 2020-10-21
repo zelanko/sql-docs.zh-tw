@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6d978ab86f2e6f6a1ed85345685eb1da00928a6
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603349"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934772"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 TLS 連線
 
@@ -86,12 +86,12 @@ ms.locfileid: "91603349"
   
  TLS 繫結是 Microsoft Windows 中的共用資源。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或其他工具 (像是 IIS 管理員) 所做的變更，可能會影響同一部電腦上的其他應用程式。 最佳做法是使用相同的工具編輯用來建立繫結的繫結。  例如，如果您使用 Configuration Manager 來建立 TLS 繫結，則建議您使用 Configuration Manager 來管理繫結的生命週期。 如果您使用 IIS 管理員建立繫結，則建議您使用 IIS 管理員管理繫結的生命週期。 如果在電腦上安裝 IIS 之後才安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，則最好在設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之前先檢閱 IIS 中的 TLS 設定。  
   
- 如果您使用 Reporting Services 組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 TLS 繫結，TLS 可能無法再於執行 Internet Information Services (IIS) 的伺服器或另一部 HTTP.SYS 伺服器的網站上運作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼：**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** 移除此登錄機碼時，也會移除 IIS 的 TLS 繫結。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 TLS。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。 若要解決此問題，請使用 IIS 管理員還原您網站的 TLS 繫結。 若要在未來避免此問題，請使用 IIS 管理員移除 TLS 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章：[移除 SSL 繫結之後 SSL 便不再有用 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) \(英文\)。  
+ 如果使用報表伺服器組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 TLS 繫結，則 TLS 可能無法再於執行 Internet Information Services (IIS) 的伺服器其網站或另一部 HTTP.SYS 伺服器的網站上運作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼：**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** 移除此登錄機碼時，也會移除 IIS 的 TLS 繫結。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 TLS。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。 若要解決此問題，請使用 IIS 管理員還原您網站的 TLS 繫結。 若要在未來避免此問題，請使用 IIS 管理員移除 TLS 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章：[移除 SSL 繫結之後 SSL 便不再有用 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [設定報表伺服器 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

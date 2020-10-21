@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759795"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987374"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>報表伺服器的入口網站 (SSRS 原生模式)
 
@@ -48,7 +48,7 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 
 部分入口網站功能只在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中提供。 如需詳細資訊，請參閱 [SQL Server 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
-在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者](security/grant-user-access-to-a-report-server-report-manager.md)
+在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
 > 如果您在伺服器執行所在的本機電腦上瀏覽至入口網站，可能會看到一則訊息，指出不允許您檢視這個資料夾。 這是因為通用存取控制 (UAC)，而且您不是以系統管理員身分執行瀏覽器所導致。您不能以系統管理員身分執行 Microsoft Edge。您必須使用 Internet Explorer。 您可以從遠端瀏覽器至伺服器，或是以系統管理員身分啟動 Internet Explorer 並瀏覽至入口網站。 如果您想要從遠端使用入口網站，就必須為您的帳戶提供資料夾上的內容管理員權限。  
@@ -115,7 +115,7 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 ## <a name="see-also"></a>另請參閱
 
 [使用 SQL Server 行動報表發行工具建立行動報表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[設定 URL (SSRS 組態管理員)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[設定 URL (報表伺服器組態管理員)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [規劃 Reporting Services 瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [SQL Server 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

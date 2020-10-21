@@ -1,20 +1,20 @@
 ---
 title: Active Directory 物件
 titleSuffix: SQL Server Big Data Cluster
-description: 了解 Active Directory 網域中的 SQL Server 巨量資料叢集部署。
-author: mihaelablendea
-ms.author: mihaelab
+description: 描述針對 SQL Server巨量資料叢集所建立的 Active Directory 物件。
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
-ms.topic: conceptual
+ms.date: 09/30/2020
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4f8736beeac2e92d25092c60c3fe7e60127ea94
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: fcd045c07e7300478e811b2bbc4b9a0f5dfaab52
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942740"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892448"
 ---
 # <a name="auto-generated-active-directory-objects"></a>已自動產生 Active Directory 物件
 
@@ -467,6 +467,6 @@ Pod 尾碼 (-x) 代表下面的變數 Pod 識別碼。 以下名稱不包含使�
 
 ## <a name="next-steps"></a>後續步驟
 
-[在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md)
+[在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deploy.md)
 
 [在相同的 Active Directory 網域中部署多個 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deployment-background.md)

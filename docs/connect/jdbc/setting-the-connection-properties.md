@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9793fb9a130fdca5c11af671f7fd3412530a6a98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a322af478215a215975942fb2b055a6cff755dfe
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727559"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081697"
 ---
 # <a name="setting-the-connection-properties"></a>設定連線屬性
 
@@ -57,7 +57,7 @@ ms.locfileid: "91727559"
 | cancelQueryTimeout<br/><br/>int<br/><br/>-1 | 從 Microsoft JDBC Driver 6.4 for SQL Server 開始，此屬性可用來取消在連線上設定的 **queryTimeout**。 如果 SQL Server 的 TCP 連線以無訊息方式卸載，則查詢執行會停止回應，且不會擲回例外狀況。 當連線上也設定 'queryTimeout' 時，此屬性才適用。 <br/><br/>驅動程式會等候 **cancelQueryTimeout** + **queryTimeout** 的總秒數，然後中斷連線並關閉通道。 <br/><br/>此屬性的預設值為 -1，而行為是無限期地等候。 |
 | clientCertificate<br/><br/>String<br/><br/>null | 指定要用於用戶端憑證驗證之憑證的位置。 JDBC 驅動程式將會支援 PFX、PEM、DER 與 CER 副檔名。 <br/><br/>如需詳細資訊，請參閱[回送案例的用戶端憑證驗證](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
 | clientKey <br/><br/>String<br/><br/>null | 針對 clientCertificate 屬性所指定的 PEM、DER 與 CER 憑證，指定私密金鑰的位置。 <br/><br/>如需詳細資訊，請參閱[回送案例的用戶端憑證驗證](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
-| clientKeyPassword <br/><br/>String<br/><br/>null | 指定用於存取 clientKey 檔案之私密金鑰的選擇性密碼字串。 <br/><br/>如需詳細資訊，請參閱[回送案例的用戶端憑證驗證](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
+| clientKeyPassword <br/><br/>String<br/><br/>null | 指定存取 clientKey 檔案私密金鑰的選擇性密碼字串。 <br/><br/>如需詳細資訊，請參閱[回送案例的用戶端憑證驗證](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md)。 |
 | columnEncryptionSetting<br/><br/>String<br/>["Enabled" &#124; "Disabled"]<br/><br/>已停用 | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，設為 "Enabled" 會使用 Always Encrypted (AE) 功能。 如有啟用 AE，JDBC 驅動程式會透明加密及解密儲存在 SQL Server 中經過加密之資料庫資料行中的敏感性資料。<br/><br/> 如需 **columnEncryptionSetting** 的詳細資訊，請參閱[搭配 JDBC 驅動程式使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md) 以取得更多詳細資料。<br/><br/> **注意：** Always Encrypted 可在 SQL Server 2016 或更新版本中取得。 |
 | databaseName,<br/>[資料庫]<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 要連接的資料庫名稱。 <br/><br/>如果沒有指定，將連接到預設資料庫。 |
 | delayLoadingLobs<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | 新增旗標以指出是否要串流從 ResultSet 擷取的所有 LOB 物件。 將此屬性設定為 "false" 會在不串流的情況下，將整個 LOB 物件載入記憶體。 |
@@ -109,7 +109,7 @@ ms.locfileid: "91727559"
 | trustStorePassword<br/><br/>String<br/><br/>null | 用於檢查 trustStore 資料完整性的密碼。<br/><br/> 如果有設定 trustStore 屬性，但是未設定 trustStorePassword 屬性，就不會檢查 trustStore 的完整性。<br/><br/> 當 trustStore 和 trustStorePassword 屬性都未指定時，驅動程式會使用 JVM 系統屬性 "javax.net.ssl.trustStore" 和 "javax.net.ssl.trustStorePassword"。 如果未指定 "javax.net.ssl.trustStorePassword" 系統屬性，就不會檢查 trustStore 的完整性。<br/><br/> 如果未設定 trustStore 屬性，但是有設定 trustStorePassword 屬性，JDBC 驅動程式會使用 "javax.net.ssl.trustStore" 指定的檔案作為信任存放區，並使用指定的 trustStorePassword 來檢查信任存放區的完整性。 當用戶端應用程式不要在 JVM 系統屬性中儲存密碼時，可能需要這個動作。<br/><br/> **注意：** 只有當連線是使用 TLS 連線，且 **trustServerCertificate** 屬性設定為 "false" 時，trustStorePassword 屬性才會影響憑證 trustStore 查閱。 |
 | trustStoreType<br/><br/>String<br/><br/>JKS | 設定此屬性來指定要用於 FIPS 模式信任存放區類型。 <br/><br/>可能的值為 **PKCS12** 或由 FIPS 提供者所定義的類型。 |
 | useBulkCopyFor...<br/>BatchInsert<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _useBulkCopyForBatchInsert_<br/><br/> 從 Microsoft JDBC Driver 7.0 for SQL Server 開始，在使用 `java.sql.PreparedStatement` 執行批次插入作業時，可以啟用此連接屬性以利用大量複製 API 來改善效能。 <br/><br/>只有當目標伺服器的類型是 **Azure 資料倉儲**時，此功能才會運作。 此功能預設為停用，設定為 "true" 可加以啟用。 <br/></br> **重要事項：** 此功能僅支援完全參數化的 INSERT 查詢。 如果 INSERT 查詢是由其他 SQL 查詢結合，或包含值型式的資料，則執行會回復為基本批次插入作業。 <br/><br/> 如需如何使用此屬性的詳細資訊，請參閱[使用大量複製 API 執行批次插入作業](use-bulk-copy-api-batch-insert-operation.md)|
-| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | Microsoft JDBC Driver for SQL Server 從 v7.4 開始提供從伺服器查詢參數中繼資料的替代方式：指定 **useFmtOnly** 連接屬性。 將此屬性設定為 "true"，以指定驅動程式在查詢參數中繼資料時，應該使用 `SET FMTONLY` 邏輯。 此功能預設為關閉，而且不建議使用此屬性，因為 `SET FMTONLY` 已標記為淘汰。 提供使用 **useFmtOnly** 只是作為 [`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md?view=sql-server-2017) \(部分機器翻譯\) 中已知問題和限制的因應措施。<br/><br/> 此功能目前只支援單一 `SELECT/INSERT/UPDATE/DELETE` 查詢。 嘗試搭配不支援的查詢/多個查詢使用此功能，會導致驅動程式嘗試剖析查詢，但很可能會導致例外狀況。<br/><br/> 如需詳細資訊，請參閱[透過 useFmtOnly 擷取 ParameterMetaData](../../connect/jdbc/using-usefmtonly.md)。 |
+| useFmtOnly<br /><br />boolean<br />["true" &#124; "false"]<br /><br />false | Microsoft JDBC Driver for SQL Server 從 v7.4 開始提供從伺服器查詢參數中繼資料的替代方式：指定 **useFmtOnly** 連接屬性。 將此屬性設定為 "true"，以指定驅動程式在查詢參數中繼資料時，應該使用 `SET FMTONLY` 邏輯。 此功能預設為關閉，而且不建議使用此屬性，因為 `SET FMTONLY` 已標記為淘汰。 提供使用 **useFmtOnly** 只是作為 [`sp_describe_undeclared_parameters`](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) \(部分機器翻譯\) 中已知問題和限制的因應措施。<br/><br/> 此功能目前只支援單一 `SELECT/INSERT/UPDATE/DELETE` 查詢。 嘗試搭配不支援的查詢/多個查詢使用此功能，會導致驅動程式嘗試剖析查詢，但很可能會導致例外狀況。<br/><br/> 如需詳細資訊，請參閱[透過 useFmtOnly 擷取 ParameterMetaData](../../connect/jdbc/using-usefmtonly.md)。 |
 | userName,<br/>user<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 資料庫使用者，如果連線使用 SQL 使用者和密碼。<br/><br/>針對使用主體名稱和密碼的 Kerberos 連線，此屬性是設定為 Kerberos 主體名稱。 |
 | workstationID<br/><br/>String<br/>[&lt;=128 char]<br/><br/>&lt;空字串&gt; | 工作站識別碼。 用以識別各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分析與記錄工具中的特定工作站。 <br/><br/>若未指定，將會使用 &lt;空字串&gt;。 |
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | 設定為 "true"，以指定驅動程式傳回例外狀況的 XOPEN 相容狀態碼。 <br/><br/>預設為傳回 SQL 99 狀態碼。 |

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373465"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935483"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
@@ -154,7 +154,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 |ComputerNamePhysicalDnsHostname|本機電腦的 DNS 主機名稱。 如果本機電腦是叢集中的一個節點，則會使用本機電腦的 DNS 主機名稱，而非叢集虛擬伺服器的名稱。|  
 |ComputerNamePhysicalNetBIOS|本機電腦的 NetBIOS 名稱。 如果本機電腦是叢集中的一個節點，則會使用本機電腦的 NetBIOS 名稱，而非叢集虛擬伺服器的名稱。|  
   
-如需詳細資訊，請參閱[為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 和[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
+如需詳細資訊，請參閱[為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) 和[關於 URL 保留項目和註冊 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
   
 ## <a name="next-steps"></a>後續步驟
 

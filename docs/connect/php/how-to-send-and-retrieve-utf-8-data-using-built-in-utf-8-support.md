@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c7c914306258394bde91d64e5cb84665d62ab2b4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726809"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081397"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91726809"
   
 您可以將 UTF-8 或 SQLSRV_ENC_CHAR 傳遞至 **CharacterSet**，但您無法傳遞 SQLSRV_ENC_BINARY。 預設編碼為 SQLSRV_ENC_CHAR。  
   
-## <a name="example"></a>範例  
+## <a name="connection-example"></a>連線範例  
 下列範例在建立連接時，如何藉由指定 UTF-8 字元集來傳送及擷取 UTF-8 編碼資料。 此範例會更新 Production.ProductReview 資料表中指定的檢閱識別碼的「註解」資料行。 此範例也會擷取新的更新資料，並加以顯示。 請注意，「註解」資料行屬於 **nvarchar(3850)** 類型。 同時請注意，資料在傳送到伺服器之前，會使用 PHP **utf8_encode** 函式轉換成 UTF-8 編碼。 此作業僅供示範使用。 在實際的應用程式案例中，您會從 UTF-8 編碼資料著手。  
   
 此範例假設本機電腦上已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
   
 如需儲存 Unicode 資料的資訊，請參閱 [使用 Unicode 資料](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))。  
   
-## <a name="example"></a>範例  
+## <a name="column-example"></a>資料行範例  
 下列範例類似於第一個範例，但此範例不會在連接上指定 UTF-8 字元集，而會說明如何在資料行上指定 UTF-8 字元集。  
   
 ```  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866331"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934748"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>建立原生模式報表伺服器資料庫 (報表伺服器組態管理員)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "74866331"
  建立或設定報表伺服器資料庫是多重步驟的程序。 在您建立報表伺服器資料庫之前，請考慮您要如何指定以下項目：  
   
  **選取資料庫伺服器**  
- 檢閱支援的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，以及[建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md) 主題中受支援的版本。  
+ 同時檢閱支援的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，以及[建立報表伺服器資料庫 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md) 主題中支援的版本。  
   
  **啟用 TCP/IP 連接**  
  針對 [!INCLUDE[ssDE](../../includes/ssde-md.md)]啟用 TCP/IP 連接。 某些版本的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 依預設並不會啟用 TCP/IP。 本主題將提供指示。  
@@ -47,7 +47,7 @@ ms.locfileid: "74866331"
  **決定報表伺服器認證**  
  決定報表伺服器將如何連接到報表伺服器資料庫。 認證類型包括網域使用者帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫使用者帳戶或報表伺服器服務帳戶。  
   
- 這些認證會加密並儲存於 RSReportServer.config 檔案中。 報表伺服器會將這些認證用於對報表伺服器資料庫的進行中連接。 如果您想要使用 Windows 使用者帳戶或資料庫使用者帳戶，請務必指定已經存在的帳戶。 雖然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員將會建立登入並設定必要的權限，但是它不會為您建立帳戶。 如需詳細資訊，請參閱 [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)主題中受支援的版本。  
+ 這些認證會加密並儲存於 RSReportServer.config 檔案中。 報表伺服器會將這些認證用於對報表伺服器資料庫的進行中連接。 如果您想要使用 Windows 使用者帳戶或資料庫使用者帳戶，請務必指定已經存在的帳戶。 雖然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員將會建立登入並設定必要的權限，但是它不會為您建立帳戶。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
  **決定報表伺服器語言**  
  選擇要為報表伺服器指定的語言。 當使用者使用不同語言版本的瀏覽器連接到伺服器時，預先定義的角色名稱、描述和 [我的報表] 資料夾並不會以不同的語言顯示。  
@@ -73,7 +73,7 @@ ms.locfileid: "74866331"
   
 ### <a name="to-create-a-local-report-server-database"></a>若要建立本機報表伺服器資料庫  
   
-1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在 [資料庫] 頁面上，選取 [變更資料庫]  。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74866331"
   
 4.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   
-    1.  輸入您想要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。 此精靈將會顯示本機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，它會當做預設執行個體 (如果有的話) 來執行。 否則，您必須輸入要使用的伺服器和執行個體。 具名執行個體會依照以下格式來指定：\<伺服器名稱>\\<執行個體名稱\>。  
+    1.  輸入您想要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。 此精靈將會顯示本機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，它會當做預設執行個體 (如果有的話) 來執行。 否則，您必須輸入要使用的伺服器和執行個體。 具名執行個體會依照以下格式指定：\<servername>\\<執行個體名稱\>。  
   
     2.  輸入用於與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之單次連接的認證，以便建立報表伺服器資料庫。 如需有關如何使用這些認證的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "74866331"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員提供了變更認證精靈，可引導您重新設定報表伺服器用來連接報表伺服器資料庫之帳戶的步驟。 當您變更認證時，組態管理員將會在報表伺服器目前使用之報表伺服器資料庫的資料庫伺服器上，更新所有的權限和資料庫登入資訊。 
 
-1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在 [資料庫] 頁面上，選取 [變更認證]  。 
 
@@ -151,6 +151,6 @@ ms.locfileid: "74866331"
 
 [設定報表伺服器資料庫連線](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[報表伺服器組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

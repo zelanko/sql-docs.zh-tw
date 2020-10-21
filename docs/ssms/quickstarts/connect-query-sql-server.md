@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662790"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038381"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>快速入門：使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢
 
@@ -35,12 +35,12 @@ ms.locfileid: "91662790"
 
 若要完成此文章，您需要 SQL Server Management Studio 與 SQL Server 執行個體的存取權。
 
-* 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+* 安裝 [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)。
 
 若您沒有 SQL Server 執行個體存取權，請從下列連結選取您的平台。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
 
 * **Windows**：[下載 SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-* **macOS**：[下載 Docker 上的 SQL Server 2019](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+* **macOS**：[下載 Docker 上的 SQL Server 2019](../../linux/quickstart-install-connect-docker.md)。
 
 ## <a name="connect-to-a-sql-server-instance"></a>連接到 SQL Server 執行個體
 
@@ -54,7 +54,7 @@ ms.locfileid: "91662790"
 
     * 針對**伺服器類型**，選取 [資料庫引擎]**** \(通常為預設選項)。
     * 針對**伺服器名稱**，輸入您 SQL Server 執行個體的名稱。 (本文使用了主機名稱 NODE5 [NODE5\SQL2016ST] 上的執行個體名稱 SQL2016ST)。若您不確定如何判斷 SQL Server 執行個體名稱，請參閱[使用 SSMS 的其他提示與祕訣](../tutorials/ssms-tricks.md#find-sql-server-instance-name)。
-    * 針對**驗證**，請選取 [Windows 驗證]****。 本文使用 Windows 驗證，但 SQL Server 登入亦受支援。 若您選取 [SQL 登入]****，系統會提示您輸入使用者名稱與密碼。 如需驗證類型的詳細資訊，請參閱[連線至伺服器 (資料庫引擎)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
+    * 針對**驗證**，請選取 [Windows 驗證]****。 本文使用 Windows 驗證，但 SQL Server 登入亦受支援。 若您選取 [SQL 登入]****，系統會提示您輸入使用者名稱與密碼。 如需驗證類型的詳細資訊，請參閱[連線至伺服器 (資料庫引擎)](../f1-help/connect-to-server-database-engine.md)。
 
     ![[伺服器名稱] 欄位與使用 SQL Server 執行個體的選項](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91662790"
 * 連線到 SQL Azure 資料庫 - 在此案例中為 msftestserver.database.windows.net：![連線到 SQL Azure 資料庫](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> 在本文中，您之前使用「Windows 驗證」連線到內部部署 SQL Server，但 SQL Azure 資料庫不支援這個方法。 因此，此影像顯示使用 SQL 驗證連線到 SQL Azure 資料庫。 如需詳細資訊，請參閱 [SQL 內部部署驗證](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 驗證](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)。
+> 在本文中，您之前使用「Windows 驗證」連線到內部部署 SQL Server，但 SQL Azure 資料庫不支援這個方法。 因此，此影像顯示使用 SQL 驗證連線到 SQL Azure 資料庫。 如需詳細資訊，請參閱 [SQL 內部部署驗證](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 驗證](/azure/sql-database/sql-database-security-overview#access-management)。
 
 ## <a name="create-a-database"></a>建立資料庫
 
@@ -198,7 +198,7 @@ ms.locfileid: "91662790"
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-您也可以使用 Azure Data Studio 來連接及查詢 [SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md) 和 [Azure SQL 資料倉儲](../../azure-data-studio/quickstart-sql-dw.md)。
+您也可以使用 Azure Data Studio 來連線及查詢 [SQL Server](../../azure-data-studio/quickstart-sql-server.md) ([Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md)) 和 [Azure Synapse Analytics](../../azure-data-studio/quickstart-sql-dw.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

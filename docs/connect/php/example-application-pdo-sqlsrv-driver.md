@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629166"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081747"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，�
 -   本機電腦上已安裝 SQL Server 2005 或 SQL Server 2008，並附加 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。  
 -   已安裝網頁瀏覽器。  
   
-## <a name="demonstrates"></a>示範  
+## <a name="adventureworks-example"></a>AdventureWorks 範例  
 AdventureWorks Product Reviews 範例應用程式會示範下列工作：  
   
 -   如何使用 Windows 驗證開啟 SQL Server 連接。  
@@ -46,8 +46,7 @@ AdventureWorks Product Reviews 範例應用程式會示範下列工作：
 -   如何擷取資料。  
 -   如何檢查錯誤。  
   
-## <a name="example"></a>範例  
-AdventureWorks Product Reviews 範例應用程式會針對名稱包含使用者所輸入字串的產品，從資料庫傳回產品資訊。 在傳回的產品清單中，使用者可以查看評論、查看影像、上傳影像，以及撰寫所選產品的評論。  
+此範例會針對其名稱包含使用者輸入字串的產品，從資料庫傳回產品資訊。 在傳回的產品清單中，使用者可以查看評論、查看影像、上傳影像，以及撰寫所選產品的評論。  
   
 將下列程式碼放入名為 adventureworks_demo_pdo.php 的檔案中：  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="lob-example"></a>LOB 範例  
 photo.php 指令碼針對指定的 **ProductID**傳回產品相片。 此指令碼是從 adventureworks_demo.php 指令碼呼叫。  
   
 將下列程式碼放入名為 photo_pdo.php 的檔案中：  

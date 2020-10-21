@@ -6,15 +6,15 @@ ms.technology: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: matteot, aanelson
+ms.reviewer: matteot, drskwier
 ms.custom: ''
-ms.date: 06/11/2020
-ms.openlocfilehash: 3165a56d93ba78c387be0cdd23ef0c225b31c336
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.date: 10/14/2020
+ms.openlocfilehash: 21730bf32e66c5954b2447037286dfdc10717e9c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714066"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081537"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>安裝 SQL Server PowerShell 模組
 
@@ -35,8 +35,8 @@ ms.locfileid: "88714066"
 
 如需說明主題，請移至：
 
-- [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) \(英文\) Cmdlet。
-- [SQLPS](https://docs.microsoft.com/powershell/module/sqlps) \(英文\) Cmdlet。
+- [SqlServer](/powershell/module/sqlserver) \(英文\) Cmdlet。
+- [SQLPS](/powershell/module/sqlps) \(英文\) Cmdlet。
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
@@ -49,7 +49,7 @@ ms.locfileid: "88714066"
 
 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) 不會安裝兩個 PowerShell 模組的任何一個。 若要搭配 Azure Data Studio 使用 PowerShell，請從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver) \(英文\) 安裝 **SqlServer** 模組。
 
-您可以使用 [PowerShell 擴充功能](../azure-data-studio/powershell-extension.md)，在 Azure Data Studio 中提供豐富的 PowerShell 編輯器支援。
+您可以使用 [PowerShell 擴充功能](../azure-data-studio/extensions/powershell-extension.md)，在 Azure Data Studio 中提供豐富的 PowerShell 編輯器支援。
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>安裝或更新 SqlServer 模組
 
@@ -118,14 +118,14 @@ Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobb
 
 ### <a name="troubleshooting"></a>疑難排解
 
-如果安裝時遇到問題，請參閱 [Install-Module 文件](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1)和 [Install-Module 參考](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)。
+如果安裝時遇到問題，請參閱 [Install-Module 文件](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1)和 [Install-Module 參考](/powershell/module/powershellget/Install-Module)。
 
 ## <a name="using-a-specific-version-of-the-sqlserver-module"></a>使用特定版本的 SqlServer 模組
 
 若要使用特定版本的模組，可以使用類似下列命令匯入具有特定版本號碼的模組：
 
 ```powershell
-Import-Module SqlServer -Version 21.1.18080
+Import-Module SqlServer -Version 21.1.18218
 ```
 
 ## <a name="pre-release-versions-of-the-sqlserver-module"></a>SqlServer 模組的發行前版本
@@ -150,7 +150,7 @@ Find-Module SqlServer -AllowPrerelease
 您可以嘗試使用下列命令：
 
 ```powershell
-Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
+Install-Module SqlServer -RequiredVersion 21.1.18218-preview -AllowPrerelease
 ```
 
 ## <a name="sql-server-powershell-on-linux"></a>Linux 上的 SQL Server PowerShell
@@ -163,6 +163,13 @@ Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 
 - [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - 包含 DSC 資源的模組，用於 Microsoft SQL Server 的部署和組態。
 
+## <a name="cmdlet-reference"></a>Cmdlet 參考
+
+- [SqlServer Cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQLPS Cmdlet](https://docs.microsoft.com/powershell/module/sqlps)
+
 ## <a name="next-steps"></a>後續步驟
 
-[SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell Cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
+- [使用 PowerShell 搭配 Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497202"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891588"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>設定 Reporting Services 來使用主體別名 (SAN)
 
@@ -33,11 +33,11 @@ Reporting Services 及 Power BI 報表伺服器中的 URL 可設定為使用 TLS
   
 1.  啟動報表伺服器組態管理員。  
   
-     如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+     如需詳細資訊，請參閱[報表伺服器組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 2.  在 [Web 服務 URL]  頁面上，選取 TLS/SSL 連接埠和 TLS/SSL 憑證。  
   
-     ![Reporting Services 組態管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 組態管理員")  
+     ![報表伺服器組態管理員](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "報表伺服器組態管理員")  
   
      Configuration Manager 會針對連接埠註冊 TLS/SSL 憑證。  
   
@@ -155,7 +155,7 @@ Reporting Services 及 Power BI 報表伺服器中的 URL 可設定為使用 TLS
 ## <a name="see-also"></a>另請參閱
 
  [RsReportServer.config 設定檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [報表伺服器組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [修改 Reporting Services 設定檔](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [設定報表伺服器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

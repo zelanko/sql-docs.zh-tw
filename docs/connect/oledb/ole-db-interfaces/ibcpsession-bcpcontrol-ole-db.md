@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPControl method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b3d050fcfd04538036b3982aaaf1ccca5fa8e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dfb42fe378d428dbe272bb135492ab93c6eb619c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726999"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081827"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ HRESULT BCPControl(
 |BCP_OPTION_ABORT|停止已經進行的大量複製作業。 您可以用 BCP_OPTION_ABORT 的 *eOption* 引數來呼叫 **BCPControl** 方法，從另一個執行緒停止正在執行的大量複製作業。 *iValue* 引數會被忽略。|  
 |BCP_OPTION_BATCH|每一批次中的資料列數目。 預設值為 0，表示資料擷取時，會指出資料表中的所有資料列，或資料複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔案中的所有資料列。 小於 1 的值會將 BCP_OPTION_BATCH 重設為預設值。|  
 |BCP_OPTION_DELAYREADFMT|這是布林值，如果設定為 true，就會導致 [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 在執行時讀取。 如果為 false (預設值)，IBCPSession::BCPReadFmt 將會立即讀取格式檔案。 如果 **BCP_OPTION_DELAYREADFMT** 為 true 而且您呼叫 IBCPSession::BCPColumns 或 IBCPSession::BCPColFmt，就會發生順序錯誤。<br /><br /> 如果您在呼叫 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` 和 IBCPSession::BCPWriteFmt 之後呼叫 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`，也會發生順序錯誤。<br /><br /> 如需詳細資訊，請參閱[中繼資料探索](../../oledb/features/metadata-discovery.md)。|  
-|BCP_OPTION_FILECP|*iValue* 引數包含資料檔案的程式碼頁面數目。 您可以指定程式碼頁面的數目，例如 1252 或 850，或以下任一個值：<br /><br /> BCP_FILECP_ACP：檔案中的資料是在用戶端的 Microsoft Windows® 程式碼頁面。<br /><br /> BCP_FILECP_OEMCP：檔案中的資料是在用戶端的 OEM 程式碼頁面 (預設)。<br /><br /> BCP_FILECP_RAW：檔案中的資料是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程式碼頁面。|  
+|BCP_OPTION_FILECP|*iValue* 引數包含資料檔案的程式碼頁面數目。 您可以指定程式碼頁面的數目，例如 1252 或 850，或以下任一個值：<br /><br /> BCP_FILECP_ACP：檔案中的資料是在用戶端的 Microsoft Windows® 程式碼頁面中。<br /><br /> BCP_FILECP_OEMCP：檔案中的資料是在用戶端的 OEM 程式碼頁面 (預設)。<br /><br /> BCP_FILECP_RAW：檔案中的資料是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程式碼頁面。|  
 |BCP_OPTION_FILEFMT|資料檔案格式的版本號碼。 這個號碼可以是 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]) 或 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])。 預設值是 110。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。  例如，若要將從 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 伺服器文字資料行所取得的資料匯入至 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新伺服器的 **varchar(max)** 資料行中，您必須指定版本號碼為 80。 同樣地，當您從 **varchar(max)** 資料行匯出資料時，如果指定版本號碼為 80，則資料會以 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 格式加以儲存，就像儲存文字資料行的格式一樣，並可以匯入至 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 伺服器的文字資料行。|  
 |BCP_OPTION_FIRST|要複製的檔案或資料表的資料列。 預設值為 1，小於 1 的值會將這個選項重設為預設。|  
 |BCP_OPTION_FIRSTEX|如果是 BCP Out 作業，則指定將資料庫資料表第一個資料列複製到資料檔案中。<br /><br /> 如果是 BCP In 作業，則指定將資料檔案的第一個資料列複製到資料庫資料表中。<br /><br /> *iValue* 參數必須是包含值的 64 位元組帶正負號整數之位址。 可傳遞至 BCPFIRSTEX 的最大值為 2^63-1。|  
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) 介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) 介面。  
   
  E_UNEXPECTED  
  此方法的呼叫是非預期的。 例如，在呼叫這個函數之前，不會呼叫 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  

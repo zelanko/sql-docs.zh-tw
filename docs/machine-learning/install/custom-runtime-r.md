@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227157"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956291"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 R 自訂執行階段
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-本文說明如何安裝自訂執行階段，以使用 SQL Server 執行 R 指令碼。 R 適用的自訂執行階段可用於下列案例：
+本文說明如何安裝自訂執行階段，以使用 SQL Server 執行 R 指令碼。 自訂執行階段使用以擴充性架構為基礎的語言延伸模組技術來執行外部程式碼。 R 適用的自訂執行階段可用於下列案例：
 
 + 安裝具備擴充性架構的 SQL Server。
 
@@ -71,7 +71,7 @@ ms.locfileid: "91227157"
     + Database Engine 服務
     + 機器學習服務和語言延伸模組
 
-1. 在安裝程式完成之後，如果系統要求您重新啟動電腦，請立即重新啟動。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
+1. 在安裝程式完成之後，如果系統要求您重新啟動電腦，請立即重新啟動。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。
 
 ## <a name="install-r"></a>安裝 R
 

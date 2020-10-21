@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988470"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935187"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 連線類型 (SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87988470"
 > [!NOTE]  
 > 當開啟 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的連接時，請將連接逾時設定為 30 秒。
   
-如需詳細資訊，請參閱[docs.microsoft.com 上的 Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)。  
+如需詳細資訊，請參閱[docs.microsoft.com 上的 Microsoft Azure SQL Database](/azure/sql-database/)。  
   
 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
@@ -55,7 +55,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - 使用預存的使用者名稱和密碼。 為了交涉在資料庫包含的報表資料不同於報表伺服器時發生的雙躍點，請選取使用認證做為 Windows 認證的選項。 您也可以選擇在連線到資料來源之後模擬已驗證的使用者。  
   
-- 不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+- 不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
@@ -79,7 +79,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的圖形化查詢設計工具會為群組和彙總提供內建的支援，幫助您撰寫僅擷取摘要資料的查詢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言功能包括 GROUP BY 子句、DISTINCT 關鍵字以及如 SUM 和 COUNT 等彙總。 以文字為基礎的查詢設計工具提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言的完整支援，包括群組和彙總。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的圖形化查詢設計工具會為群組和彙總提供內建的支援，幫助您撰寫僅擷取摘要資料的查詢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言功能包括 GROUP BY 子句、DISTINCT 關鍵字以及如 SUM 和 COUNT 等彙總。 以文字為基礎的查詢設計工具提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言的完整支援，包括群組和彙總。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/language-reference.md)。  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> 使用 Text 查詢類型
 
@@ -161,9 +161,9 @@ WHERE EmployeeID = (@EmpID)
 當您以適當方式設定下列項目時，便支援此案例：
 
 - 已在報表伺服器上安裝[適用於 SQL Server 的 Active Directory 驗證程式庫 (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742)。
-- [Active Directory 同盟服務](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services)已設為跨內部部署 Active Directory (AD) 及 AAD 同盟。
-- [Kerberos 限制委派 (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)已從報表伺服器設定至 ADFS 伺服器。
-- 設定報表/資料來源以檢視報表使用者的身分向 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) 驗證。
+- [Active Directory 同盟服務](/windows-server/identity/active-directory-federation-services)已設為跨內部部署 Active Directory (AD) 及 AAD 同盟。
+- [Kerberos 限制委派 (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview)已從報表伺服器設定至 ADFS 伺服器。
+- 設定報表/資料來源以檢視報表使用者的身分向 [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) 驗證。
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ WHERE EmployeeID = (@EmpID)
   
 ## <a name="see-also"></a>另請參閱
 
-[docs.microsoft.com 上的 Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)  
+[docs.microsoft.com 上的 Microsoft Azure SQL Database](/azure/sql-database/)  
 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

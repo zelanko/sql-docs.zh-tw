@@ -1,5 +1,5 @@
 ---
-description: 組態檔中的 URL (SSRS 組態管理員)
+description: 組態檔中的 URL (報表伺服器組態管理員)
 title: 組態檔中的 URL (組態管理員) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3382a5d51a46d1fb2fdbe33f94ca56e398bfd3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17eaa59595b8a35fe1d9aa7fa3c69e6d0b39860f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472660"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934499"
 ---
-# <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>組態檔中的 URL (SSRS 組態管理員)
+# <a name="urls-in-configuration-files--report-server-configuration-manager"></a>組態檔中的 URL (報表伺服器組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在 RSReportServer.config 檔案中。 在這個檔案中，URL 和 URL 保留項目都有組態設定。 這些組態設定的用途與修改規則大不相同。 如果您習慣修改組態檔來微調部署，本主題將可幫助您了解每一個 URL 設定的使用方式。  
   
 ## <a name="url-settings-in-rsreportserverconfig-file"></a>RSReportServer.config 檔案中的 URL 設定  
@@ -28,9 +28,9 @@ ms.locfileid: "88472660"
   
 -   若要檢視 **URLReservations** 區段中每個元素的描述，請參閱 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) (RsReportServer.config 組態檔)。  
   
--   如果只需 **UrlString** 項目的語法詳細資訊，請參閱 [URL 保留項目語法 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。  
+-   如果只需 **UrlString** 元素的語法詳細資訊，請參閱 [URL 保留項目語法 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。  
   
--   如需有關如何設定 URL 以供應用程式存取的指示，請參閱 [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+-   如需有關如何設定 URL 以供應用程式存取的指示，請參閱[設定 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
 #### <a name="urls-for-report-access"></a>供報表存取的 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一個報表伺服器電子郵件傳遞延伸模組，可用來傳送報表連結或附加檔案。 當傳遞報表時，就會建構報表連結。 此報表伺服器電子郵件傳遞延伸模組會使用組態檔中的 **UrlRoot** 設定來建立此連結。 **UrlRoot** 也會用來解析透過自動報表處理產生之轉譯報表中的連結。  
@@ -57,5 +57,5 @@ ms.locfileid: "88472660"
 |**ReportServerExternalUrl**|選擇性。 除非您自行加入，否則這個元素不會包含在 RSReportServer.config 檔案中。<br /><br /> 只有當您要使用 SharePoint 2.0 Web 組件，而且希望使用者能夠擷取報表，並在新的瀏覽器視窗中開啟此報表時，才設定這個元素。<br /><br /> 在不同的瀏覽器視窗中存取時，將 \<**ReportServerExternalUrl**> 新增至 \<**ReportServerUrl**> 元素底下，然後將其設定為可解析為報表伺服器執行個體的完整報表伺服器名稱。 請勿刪除 \<**ReportServerUrl**>。<br /><br /> 下列範例說明語法：<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|這個值是由 SharePoint 2.0 Web 組件使用。<br /><br /> 舊版中曾經建議您設定這個值，以便將「報表產生器」部署在供網際網路存取的報表伺服器上， 這是未經測試的部署狀況。 如果您過去使用這項設定來支援「報表產生器」的網際網路存取，現在應該考慮改用替代的策略。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [設定報表伺服器 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [設定 URL &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480610"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005839"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -34,7 +34,7 @@ ms.locfileid: "88480610"
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> 在瀏覽器中編輯
 
-您可以在瀏覽器中對 SQL Server 內容進行簡單的編輯，再提交到 Microsoft。 如需詳細資訊，您可以查看 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)。 
+您可以在瀏覽器中對 SQL Server 內容進行簡單的編輯，再提交到 Microsoft。 如需詳細資訊，您可以查看 [Microsoft Docs 參與者指南概觀](/contribute/#quick-edits-to-existing-documents)。 
 
 下列步驟會摘要說明流程： 
 
@@ -59,10 +59,10 @@ ms.locfileid: "88480610"
 
 若要使用此方法參與編輯，請參閱下列文章：
 
-- [建立 GitHub 帳戶](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [安裝內容撰寫工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [本機設定 Git 存放庫](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [使用工具來參與編輯](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [建立 GitHub 帳戶](/contribute/get-started-setup-github)
+- [安裝內容撰寫工具](/contribute/get-started-setup-tools)
+- [本機設定 Git 存放庫](/contribute/get-started-setup-local)
+- [使用工具來參與編輯](/contribute/how-to-write-workflows-major)
 
 如果您送出對文件集的重大變更提取要求時，就會收到一個 GitHub 註解，要求您提交線上的**貢獻授權合約 (CLA)** 。 您必須填妥線上表單，系統才會接受您的提取要求。
 
@@ -107,13 +107,13 @@ ms.locfileid: "88480610"
 - 如需常用 include 檔案的清單，請參閱 [SQL Server 版本和 applies-to include 檔案](applies-to-includes.md)。
 - 查看其他涵蓋相同功能或相關工作的文章。 如果您要編輯這篇文章，可以複製 Markdown 以取得 applies-to include 連結 (您可以取消編輯而不送出)。
 - 搜尋 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目錄，找出包含 "applies-to" 文字的檔案。 您可以使用 GitHub 中的 [尋找] 按鈕快速篩選。 按一下檔案以查看呈現的方式。
-- 請注意命名慣例。 如果名稱中有 x，它們通常是預留位置，表示不支援服務。 比方說，**appliesto-xx-xxxx-asdw-xxx-md.md** 表示只支援 Azure SQL 資料倉儲，因為只拼寫出 **asdw**，而其他欄位均為 x。
+- 請注意命名慣例。 如果名稱中有 x，它們通常是預留位置，表示不支援服務。 例如，**appliesto-xx-xxxx-asdw-xxx-md.md** 表示只支援 Azure Synapse Analytics，因為只拼寫出 **asdw**，而其他欄位均使用 x。
 - 某些 include 會指定版本號碼，例如 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**。 當您知道某項功能是由特定版本的 SQL Server 導入時，請只使用該版本的 include。
 
 ## <a name="contributor-resources"></a>參與者資源
 
-- [docs.microsoft.com 的參與者指南](https://docs.microsoft.com/contribute/)
-- [Microsoft 樣式指南](https://docs.microsoft.com/teamblog/style-guide)
+- [docs.microsoft.com 的參與者指南](/contribute/)
+- [Microsoft 樣式指南](/teamblog/style-guide)
 - [Markdown 基本概念](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

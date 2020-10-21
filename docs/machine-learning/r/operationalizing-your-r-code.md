@@ -3,18 +3,18 @@ title: 在預存程序中部署 R 程式碼
 description: 在 SQL Server 預存程序中內嵌 R 語言程式碼，以便讓任何有權存取 SQL Server 資料庫的用戶端應用程式使用。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/28/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288260"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956614"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 機器學習服務中使用預存程序以便讓 R 程式碼能夠運作
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "89288260"
 + [在 SQL Server 中建立及執行簡單的 R 指令碼](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-如需使用預存程序來將 R 程式碼部署到實際執行環境的更完整範例，請參閱[教學課程：適用於 SQL 開發人員的 R 資料分析](../../machine-learning/tutorials/r-taxi-classification-introduction.md)。
+如需使用預存程序將 R 程式碼部署到生產的更完整範例，請參閱 [R 教學課程：使用二元分類預測紐約市計程車車資](../tutorials/r-taxi-classification-introduction.md)。
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>將適用於 SQL 的 R 程式碼最佳化的指導方針
 
@@ -39,7 +39,7 @@ ms.locfileid: "89288260"
 
 ## <a name="integrate-r-and-python-with-applications"></a>將 R 和 Python 與應用程式整合
 
-由於您可以從預存程序執行 R 或 Python，因此，能夠從任何可傳送 T-SQL 陳述式和處理結果的應用程式執行指令碼。 例如，您可以使用 Integration Services 中的[執行 T-SQL 工作](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)，或使用另一個可執行預存程序的作業排程器，來將模型重新定型。
+由於您可以從預存程序執行 R 或 Python，因此，能夠從任何可傳送 T-SQL 陳述式和處理結果的應用程式執行指令碼。 例如，您可以使用 Integration Services 中的[執行 T-SQL 工作](../../integration-services/control-flow/execute-t-sql-statement-task.md)，或使用另一個可執行預存程序的作業排程器，來將模型重新定型。
 
 評分是一項重要工作，可輕易地進行自動化，或從外部應用程式啟動。 您可以事先使用 R 或 Python 或預存程序來將模型定型，並[以二進位格式儲存模型](../tutorials/walkthrough-build-and-save-the-model.md)到資料表。 然後，使用下列其中一個選項，將模型當作預存程序呼叫的一部分載入到變數，以便從 T-SQL 進行評分：
 
@@ -47,10 +47,15 @@ ms.locfileid: "89288260"
 + 單一資料列評分，用於從應用程式呼叫
 + [原生評分](../predictions/native-scoring-predict-transact-sql.md)，用於從 SQL Server 進行快速批次預測，而不需呼叫 R
 
-此逐步解說提供在批次和單一資料列模式中使用預存程序進行評分的範例：
+下列教學課程提供在批次和單一資料列模式中使用預存程序評分的範例：
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [適用於 SQL Server 中 R 的端對端資料科學逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+::: moniker-end
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ [R 教學課程：使用二元分類預測紐約市計程車車資](../tutorials/r-taxi-classification-introduction.md)
+::: moniker-end
 
 ## <a name="boost-performance-and-scale"></a>提升效能與規模
 
@@ -58,8 +63,12 @@ ms.locfileid: "89288260"
 
 如果您的 R 解決方案使用複雜的彙總或牽涉到大型資料集，就能運用 SQL Server 的高效率記憶體內部彙總及資料行存放區索引，讓 R 程式碼能夠處理統計計算與評分。
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>針對其他平台或計算內容調整 R 程式碼
 
 當您在 SQL Server 安裝程式中使用[獨立伺服器選項](../install/sql-machine-learning-standalone-windows-install.md)時，或在安裝非 SQL 品牌的產品 Microsoft Machine Learning Server (先前稱為 **Microsoft R Server**) 時，您針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料執行的相同 R 程式碼就能用於其他資料來源 (例如透過 HDFS 的 Spark)：
 
-+ [Machine Learning Server 文件](https://docs.microsoft.com/r-server/) \(英文\)
++ [Machine Learning Server 文件](/r-server/) \(英文\)
+
+::: moniker-end

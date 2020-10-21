@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417884"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035993"
 ---
 # <a name="ssms-utility"></a>SSMS 公用程式
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417884"
 
 **SSMS** 公用程式會開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果有指定， **Ssms** 也會建立伺服器的連接，且會開啟查詢、指令碼、檔案、專案和方案。
 
-您可以指定包含查詢、專案或方案的檔案。 如果提供了連接資訊，且檔案類型與這個類型的伺服器相關聯，包含查詢的檔案會自動連接伺服器。 例如，.sql 檔案會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔案則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [MDX 查詢編輯器] 視窗。 而 **SQL Server 解決方案和專案** 則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟。 
+您可以指定包含查詢、專案或方案的檔案。 如果提供了連接資訊，且檔案類型與這個類型的伺服器相關聯，包含查詢的檔案會自動連接伺服器。 例如，.sql 檔案會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔案則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [MDX 查詢編輯器] 視窗。 而 **SQL Server 解決方案和專案** 則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟。
 
 > [!NOTE]
 > **Ssms** 公用程式不會執行查詢。 若要從命令列中執行查詢，請使用 **sqlcmd** 公用程式。 
@@ -62,7 +62,10 @@ Ssms
 
 [ **-U** _username_] 與「SQL 驗證」連線時的使用者名稱
 
-[ **-P** _password_] 利用「SQL 驗證」來連線時的密碼
+> [!Note]
+> SSMS 18.0 版已移除 **-P**。
+>
+> 因應措施：嘗試使用 UI 連線到伺服器一次，並儲存密碼。
 
 [ **-E**] 使用 Windows 驗證進行連線
 
@@ -91,40 +94,40 @@ Ssms
 
 下列指令碼會在命令提示字元之下，利用預設值來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ：
 
-```
+```console
   Ssms
 ```
 
 下列指令碼會使用 *Active Directory - 整合*，從命令提示字元開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 下列指令碼會在命令提示字元之下，將程式碼編輯器設為伺服器 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，在不呈現開頭顯示畫面的情況下，利用 Windows 驗證來開啟 `ACCTG and the database AdventureWorks2012,` ：
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthEndQuery 指令碼。
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會在名稱為 `developer`的電腦上開啟 NewReportsProject 專案：
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthlyReports 方案： 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[使用 SQL Server Management Studio](./sql-server-management-studio-ssms.md)

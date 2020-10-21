@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 9a815f72ef466442c601d0720243f9476a0cfc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646220"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081667"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ PDOException
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
-## <a name="example"></a>範例  
+## <a name="example-with-database"></a>附資料庫的範例  
 此範例說明如何使用 Windows 驗證連接到伺服器，並指定資料庫。  
   
 ```  
@@ -70,7 +70,7 @@ PDOException
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="example-without-database"></a>不附資料庫的範例  
 此範例說明如何在後續指定資料庫，以連接到伺服器。  
   
 ```  

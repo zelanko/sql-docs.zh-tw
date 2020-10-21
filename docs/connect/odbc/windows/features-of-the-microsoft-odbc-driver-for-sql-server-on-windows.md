@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5fc07a171e42338ca76d51d66c04af187cb6beda
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922087"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005904"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +42,7 @@ ODBC Driver 13.1 for SQL Server 包含舊版 (11) 的所有功能，並且增加
   
 一律加密可讓用戶端將用戶端應用程式內的機密資料進行加密，且永遠不會顯示 SQL Server 的加密金鑰。 安裝在用戶端電腦上且啟用一律加密的驅動程式，透過自動將 SQL Server 用戶端應用程式中的機密資料進行加密與解密，進而達成此目的。 驅動程式會先將敏感資料行中的資料進行加密，才會將資料傳遞至 SQL Server，並自動重寫查詢以保留應用程式的語意。 同樣地，驅動程式會以透明的方式，將查詢結果中加密資料庫資料行所儲存的資料進行解密。 如需詳細資訊，請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)。
  
-Azure Active Directory 可讓使用者、DBA 和應用程式設計人員透過 Azure Active Directory (Azure AD) 中的身分識別，使用 Azure Active Directory 驗證作為連線到 Microsoft Azure SQL Database 與 Microsoft SQL Server 2016 的機制。 如需詳細資訊，請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md) 和[使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](/azure/sql-database/sql-database-aad-authentication)。   
+Azure Active Directory 可讓使用者、DBA 和應用程式設計人員透過 Azure Active Directory (Azure AD) 中的身分識別，使用 Azure Active Directory 驗證作為連線到 Microsoft Azure SQL Database 與 Microsoft SQL Server 2016 的機制。 如需詳細資訊，請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md) 和[使用 Azure Active Directory 驗證連線到 SQL Database 或 Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication)。   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver 11 for SQL Server  
 

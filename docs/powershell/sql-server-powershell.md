@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714326"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081887"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714326"
 
 **[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
+有兩個 SQL Server PowerShell 模組， **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** 和 **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** 。
 
-舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。
+**SqlServer** 模組是要使用的最新 PowerShell 模組。
 
-若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
+**SQLPS** 模組隨附於 SQL Server 安裝 (用於回溯相容性)，但不再更新。
 
-若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
+**SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，且加入新的 Cmdlet 以支援 SQL 最新功能。
+
+舊版 **SqlServer** 模組「曾」隨附於 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)，但僅限 SSMS 16.x 版。
+
+若要使用 PowerShell 搭配 SSMS 17.0 及更新版本，請從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/SqlServer) 安裝 **SqlServer** 模組。
+
+您也可以使用 [PowerShell 搭配 Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)。
 
 **為什麼模組未從 SQLPS 變更為 SqlServer？**
 
@@ -47,7 +53,7 @@ ms.locfileid: "88714326"
 
 **SqlServer** 模組隨附於：
 
-- [PowerShell 提供者](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers)，可啟用類似於檔案系統路徑的簡單導覽機制。 您可建置類似於檔案系統路徑的路徑，其中的磁碟機與 SQL Server 管理物件模型建立關聯，且節點是根據物件模型類別。 然後，您可以使用熟悉的命令 (例如 **cd** 和 **dir** ) 來巡覽路徑，其方式類似於在命令提示字元視窗中巡覽資料夾。 您可以使用其他命令 (例如 **ren** 或 **del**)，在路徑中的節點上執行動作。
+- [PowerShell 提供者](/powershell/module/microsoft.powershell.core/about/about_providers)，可啟用類似於檔案系統路徑的簡單導覽機制。 您可建置類似於檔案系統路徑的路徑，其中的磁碟機與 SQL Server 管理物件模型建立關聯，且節點是根據物件模型類別。 然後，您可以使用熟悉的命令 (例如 **cd** 和 **dir** ) 來巡覽路徑，其方式類似於在命令提示字元視窗中巡覽資料夾。 您可以使用其他命令 (例如 **ren** 或 **del**)，在路徑中的節點上執行動作。
 
 - 一組 Cmdlet，可支援一些動作，例如執行包含 Transact-SQL 或 XQuery 陳述式的 **sqlcmd** 指令碼。  
 
@@ -55,13 +61,13 @@ ms.locfileid: "88714326"
 
 ## <a name="sql-server-versions"></a>SQL Server 版本
 
-SQL PowerShell Cmdlet 可用來管理 Azure SQL Database、Azure SQL 資料倉儲及所有[支援的 SQL Server 產品](https://support.microsoft.com/lifecycle/search/1044)執行個體。
+SQL PowerShell Cmdlet 可用來管理 Azure SQL Database、Azure Synapse Analytics 及所有[支援的 SQL Server 產品](https://support.microsoft.com/lifecycle/search/1044)其執行個體。
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>含有 PowerShell 路徑不支援之字元的 SQL Server 識別碼
 
 **Encode-Sqlname** 和 **Decode-Sqlname** Cmdlet 可協助您指定內含 PowerShell 路徑所不支援之字元的 SQL Server 識別碼。 如需詳細資訊，請參閱 [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)。
 
-使用 **Convert-UrnToPath** Cmdlet 將資料庫引擎物件其唯一資源名稱轉換為 SQL Server PowerShell 提供者的路徑。 如需詳細資訊，請參閱 [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)。
+使用 **Convert-UrnToPath** Cmdlet 將資料庫引擎物件其唯一資源名稱轉換為 SQL Server PowerShell 提供者的路徑。 如需詳細資訊，請參閱 [Convert URNs to SQL Server Provider Paths](/powershell/module/sqlserver/Convert-UrnToPath)。
   
 ## <a name="query-expressions-and-unique-resource-names"></a>查詢運算式和唯一的資源名稱  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>Cmdlet 參考
 
-- [SqlServer Cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS Cmdlet](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer Cmdlet](/powershell/module/sqlserver)
+- [SQLPS Cmdlet](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>後續步驟
 
-[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)
+- [下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)
+- [SQL Server PowerShell Cmdlet](/powershell/module/sqlserver)
+- [使用 PowerShell 搭配 Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

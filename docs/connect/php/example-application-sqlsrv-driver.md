@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728350"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081737"
 ---
 # <a name="example-application-sqlsrv-driver"></a>範例應用程式 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ AdventureWorks Product Reviews 範例應用程式是使用 [!INCLUDE[ssDriverPHP
 -   本機電腦上已安裝 SQL Server 2005 或 SQL Server 2008，並附加 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。  
 -   已安裝網頁瀏覽器。  
   
-## <a name="demonstrates"></a>示範  
+## <a name="adventureworks-example"></a>AdventureWorks 範例  
 AdventureWorks Product Reviews 範例應用程式會示範下列工作：  
   
 -   如何使用 Windows 驗證開啟 SQL Server 連接。  
@@ -52,8 +52,7 @@ AdventureWorks Product Reviews 範例應用程式會示範下列工作：
 -   如何以資料流的形式傳送資料。  
 -   如何檢查錯誤。  
   
-## <a name="example"></a>範例  
-AdventureWorks Product Reviews 範例應用程式會針對名稱包含使用者所輸入字串的產品，從資料庫傳回產品資訊。 在傳回的產品清單中，使用者可以查看評論、查看影像、上傳影像，以及撰寫所選產品的評論。  
+此範例會針對其名稱包含使用者輸入字串的產品，從資料庫傳回產品資訊。 在傳回的產品清單中，使用者可以查看評論、查看影像、上傳影像，以及撰寫所選產品的評論。  
   
 將下列程式碼放入名為 adventureworks_demo.php 的檔案中：  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="lob-example"></a>LOB 範例  
 photo.php 指令碼針對指定的 **ProductID**傳回產品相片。 此指令碼是從 adventureworks_demo.php 指令碼呼叫。  
   
 將下列程式碼放入名為 photo.php 的檔案中：  

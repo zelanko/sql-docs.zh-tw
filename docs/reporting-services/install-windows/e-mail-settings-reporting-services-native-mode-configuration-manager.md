@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866001"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892078"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
 因為 SQL Server Reporting Services 包含一個電子郵件傳遞延伸模組，所以您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
 
-根據預設，系統並不會設定報表伺服器電子郵件傳遞延伸模組。 您必須使用 Reporting Services 組態管理員，以最低限度的方式設定此延伸模組。 若要設定進階屬性，則必須編輯 RSReportServer.config 檔案。 如果您無法將報表伺服器設定為使用此延伸模組，則可以改成將報表傳遞到共用資料夾。 如需詳細資訊，請參閱＜File Share Delivery in Reporting Services＞(Reporting Services 中的檔案共用傳遞)。
+根據預設，系統並不會設定報表伺服器電子郵件傳遞延伸模組。 您必須使用報表伺服器組態管理員，才能以最低限度的方式設定此延伸模組。 若要設定進階屬性，則必須編輯 RSReportServer.config 檔案。 如果您無法將報表伺服器設定為使用此延伸模組，則可以改成將報表傳遞到共用資料夾。 如需詳細資訊，請參閱＜File Share Delivery in Reporting Services＞(Reporting Services 中的檔案共用傳遞)。
 
 ## <a name="configuration-requirements"></a>組態需求
 
@@ -41,16 +41,16 @@ ms.locfileid: "74866001"
 
 若要為電子郵件傳遞設定報表伺服器，請執行下列步驟：
 
-- 如果您只是要指定 SMTP 伺服器和一個擁有傳送電子郵件之權限的使用者帳戶，請使用 Reporting Services 組態管理員。 這些是設定報表伺服器電子郵件傳遞延伸模組時所需的最小設定。
+- 如果只是要指定 SMTP 伺服器和有權傳送電子郵件的使用者帳戶，請使用報表伺服器組態管理員。 這些是設定報表伺服器電子郵件傳遞延伸模組時所需的最小設定。
 
 - (選擇性) 請使用文字編輯器在 RSreportserver.config 檔案中指定其他設定。 這個檔案包含報表伺服器電子郵件傳遞的所有組態設定。 如果您要使用本機 SMTP 伺服器，或要設定只能對特定主機進行電子郵件傳遞的限制，則必須在這些檔案中指定其他設定。 如需尋找和修改組態檔的詳細資訊，請參閱 [Modify a Reporting Services Configuration File (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。
 
 > [!NOTE] 
 > 報表伺服器電子郵件設定是以 CDO 為基礎。 如果您想要取得有關特定設定的詳細資料，可以參考 CDO 產品文件集。
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>使用 Reporting Services 管理員設定報表伺服器電子郵件
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>使用報表伺服器組態管理員設定報表伺服器電子郵件
 
-1. 啟動 Reporting Services 組態管理員，並連接到報表伺服器執行個體。
+1. 啟動報表伺服器組態管理員，並連線到報表伺服器執行個體。
 
 2. 在 [寄件者地址]  中輸入要產生的電子郵件 [寄件者:]  欄位中使用的電子郵件地址。 
 
@@ -137,12 +137,12 @@ ms.locfileid: "74866001"
 
 - `<SMTPServerPort>` 預設設定為連接埠 25。
 - `<SMTPAuthenticate>` 指定報表伺服器如何連接到遠端 SMTP 伺服器。 預設值是 **0** (或無驗證)。 在此情況下，連接是透過匿名存取。 依照您的網域組態，報表伺服器和 SMTP 伺服器可能必須是同一網域的成員。
-- 若要傳送電子郵件至限制的通訊群組清單 (例如，只接受來自已驗證帳戶之內送訊息的通訊群組清單)，請將 `<SMTPAuthenticate>` 設為 **1** 或 **2**。 如果設為 **1**，就也要設定 `<SendUserName>` 和 `<SendPassword>`。 建議透過 Reporting Services 組態管理員執行此作業，因為它會加密 `<SendUserName>` 和 `<SendPassword>`的值。
+- 若要傳送電子郵件至限制的通訊群組清單 (例如，只接受來自已驗證帳戶之內送訊息的通訊群組清單)，請將 `<SMTPAuthenticate>` 設為 **1** 或 **2**。 如果設為 **1**，就也要設定 `<SendUserName>` 和 `<SendPassword>`。 建議透過報表伺服器組態管理員執行此作業，因為這樣會加密 `<SendUserName>` 和 `<SendPassword>` 值。
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>若要為報表伺服器設定遠端 SMTP 服務
 
 > [!NOTE] 
-> 建議您透過 Reporting Services 組態管理員設定郵件伺服器。
+> 建議透過報表伺服器組態管理員設定郵件伺服器。
 
 1. 確認報表伺服器 Windows 服務擁有 SMTP 伺服器的 **Send As** 權限。
 
@@ -154,7 +154,7 @@ ms.locfileid: "74866001"
      
 5. 在 `<SMTPServer>`中，輸入 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。
 
-6. 將 `<SendUsing>` 設為 **2** 值以使用報表伺服器的服務帳戶。 將 `<SendUsing>` 設為 **1** 值以進行基本驗證。 如果設為 **1**，即必須另外提供 `<SendUserName>` 和 `<SendPassword>`的值。 如果想要加密這些值，請在 Reporting Services 組態管理員內設定驗證。
+6. 將 `<SendUsing>` 設為 **2** 值以使用報表伺服器的服務帳戶。 將 `<SendUsing>` 設為 **1** 值以進行基本驗證。 如果設為 **1**，即必須另外提供 `<SendUserName>` 和 `<SendPassword>`的值。 如果想要加密這些值，請在報表伺服器組態管理員內設定驗證。
 
 7. 如果 `<SMTPAuthenticate>` 設為 1 或 2，請將 **設為** 1 `<SendUsing>` 值。
 
@@ -222,7 +222,7 @@ ms.locfileid: "74866001"
 17. 儲存檔案。
   
 ## <a name="see-also"></a>另請參閱  
-[Reporting Services 組態管理員 (原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[報表伺服器組態管理員 (原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

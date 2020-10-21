@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426300"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080667"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ SELECT SCOPE_IDENTITY()
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>範例  
+## <a name="object-example"></a>物件範例  
 下列範例會以 PHP 物件的形式，擷取結果集的每個資料列。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="class-example"></a>類別範例  
 下列範例會以指令碼中定義之 *Product* 類別的執行個體形式，擷取結果集的每個資料列。 範例會針對具有指定到期日 (*DueDate*)，以及存貨數量 (*StockQty*) 小於指定值的產品，從 AdventureWorks 資料庫的 *Purchasing.PurchaseOrderDetail* 和 *Production.Product* 資料表中擷取產品資訊。 此範例強調在對 **sqlsrv_fetch_object**的呼叫中指定類別時所套用的某些規則：  
   
 -   *$product* 變數是 *Product* 類別的執行個體，因為「產品」是以 *$className* 參數指定的，且 *Product* 類別存在。  

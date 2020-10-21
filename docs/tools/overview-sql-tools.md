@@ -1,6 +1,6 @@
 ---
 title: SQL 工具概觀
-description: SQL Server、Azure SQL (Azure SQL database、Azure SQL 受控執行個體、SQL 虛擬機器) 和 Azure SQL 資料倉儲的 SQL 查詢和管理工具。
+description: SQL Server、Azure SQL (Azure SQL Database、Azure SQL 受控執行個體、SQL 虛擬機器) 和 Azure Synapse Analytics 的 SQL 查詢和管理工具。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1c46afa8b1edbbb548c5367197327de72e2acd27
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 668ab3177cb49cfcbafc81500325740c941046d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603512"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006627"
 ---
 # <a name="sql-tools-overview"></a>SQL 工具概觀
 
@@ -37,7 +37,7 @@ ms.locfileid: "91603512"
 | 工具 | 描述 | 作業系統 |
 |:--|:--|:--|
 | [ **![ADS 影像](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | 一種可執行隨選 SQL 查詢、檢視結果並將其儲存為文字、JSON 或 Excel 的輕量編輯器。 在熟悉的物件瀏覽體驗中編輯資料、管理您慣用的資料庫連線，以及瀏覽資料庫物件。 | **Windows</br>macOS</br>Linux** |
-| [ **![SSMS 影像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 管理具有完整 GUI 支援的 SQL Server 執行個體或資料庫。 存取、設定、管理、掌管和開發 SQL Server、Azure SQL Database 和 SQL 資料倉儲的所有元件。 可提供單一的完整公用程式，其結合廣泛圖形工具及豐富的指令碼編輯器，使開發人員與資料庫管理員 (不管其技術水準如何) 都能夠存取 SQL。 | **Windows** |
+| [ **![SSMS 影像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | 管理具有完整 GUI 支援的 SQL Server 執行個體或資料庫。 存取、設定、管理、掌管和開發 SQL Server、Azure SQL Database 和 Azure Synapse Analytics 的所有元件。 可提供單一的完整公用程式，其結合廣泛圖形工具及豐富的指令碼編輯器，使開發人員與資料庫管理員 (不管其技術水準如何) 都能夠存取 SQL。 | **Windows** |
 | [ **![SSDT 影像](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | 一個新式開發工具，可用來建置 SQL Server 關聯式資料庫、Azure SQL 資料庫、Analysis Services (AS) 資料模型、Integration Services (IS) 套件和 Reporting Services (RS) 報表。 有了 SSDT，您即可設計和部署任何 SQL Server 內容類型，如同在 **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** 中開發應用程式一樣容易。 | **Windows** |
 | [ **![VS Code 影像](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | Visual Studio Code 的 **[mssql 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** 是正式的 SQL Server 延伸模組，可在 Visual Studio Code 中支援對 SQL Server 的連線，以及豐富的 T-SQL 編輯體驗。 在輕量編輯器中撰寫 T-SQL 指令碼。 | **Windows</br>macOS</br>Linux** |
 

@@ -3,31 +3,31 @@ title: 轉換 R 與 SQL 資料類型
 description: 檢閱資料科學與機器學習解決方案中 R 與 SQL Server 之間的隱含與明確資料類型轉換。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a200917a21e664a21b4186ca1d643bfb0e275869
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2cd8a40fc1c85b8a58216a4c15ff0d1bb56df1da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179973"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892238"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 與 SQL Server 之間的資料類型對應
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-針對在 SQL Server 機器學服服務 R 整合功能上執行的 R 解決方案，請檢閱不支援的資料類型清單，以及當資料在 R 程式庫與 SQL Server 之間傳遞時，可能會隱含執行的資料類型轉換。
+本文列出在 SQL Server 機器學習服務中使用 R 整合功能時，所支援資料類型及所執行的資料類型轉換。
 
 ## <a name="base-r-version"></a>基底 R 版本
 
-SQL Server 2016 R Services 與具有 R 的 SQL Server 機器學習服務，與特定的 Microsoft R Open 發行版本相符。 例如，最新版本的 SQL Server 機器學習服務是建置在 Microsoft R Open 3.3.3 之上。
+SQL Server 2016 R Services 與具有 R 的 SQL Server 機器學習服務與特定 Microsoft R Open 版本保持一致。 例如，最新版 SQL Server 2019 機器學習服務的建置基礎為 Microsoft R Open 3.5.2。
 
-若要檢視與特定 SQL Server 執行個體關聯的 R 版本，請開啟 **RGui**。 針對預設執行個體，路徑如下：`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+若要檢視與特定 SQL Server 執行個體建立關聯的 R 版本，請在 SQL 執行個體中開啟 **RGui**。 例如，SQL Server 2019 預設執行個體的路徑會是：`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`。
 
-此工具會載入基底 R 與其他程式庫。 在工作階段啟動時載入的每個套件，都會在通知中提供套件版本資訊。 
+此工具會載入基底 R 與其他程式庫。 在工作階段啟動時載入的每個套件，都會在通知中提供套件版本資訊。
 
 ## <a name="r-and-sql-data-types"></a>R 與 SQL 資料類型
 
@@ -35,32 +35,32 @@ SQL Server 2016 R Services 與具有 R 的 SQL Server 機器學習服務，與�
 
 此節列出所提供的隱含轉換，並列出不支援的資料類型。 針對在 R 與 SQL Server 之間對應資料類型，我們提供一些指導方針。
 
-## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R 與 SQL Server 之間的隱含資料類型轉換
+## <a name="implicit-data-type-conversions"></a>隱含資料類型轉換
 
 下表顯示在 R 指令碼中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料，然後傳回給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，資料類型和值的變更。
 
-|SQL 類型|R 類別|RESULT SET 類型|註解|
-|-|-|-|-|
-|**bigint**|`numeric`|**float**|使用 `sp_execute_external_script` 執行 R 指令碼允許以 bigint 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 R 最多只支援 53 位元整數，之後會開始出現精確度遺失的情況。|
-|**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|只允許作為輸入參數和輸出|
-|**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|由於在未明確設定 *stringsAsFactors* 參數的情況下建立輸入資料框架 (input_data_1)，因此資料行類型將取決於 R 中的 *default.stringsAsFactors()*|
-|**datetime**|`POSIXct`|**datetime**|以 GMT 來表示|
-|**date**|`POSIXct`|**datetime**|以 GMT 來表示|
-|**decimal(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 來執行 R 指令碼，以允許將 decimal 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 `sp_execute_external_script` 與 R 指令碼不支援資料類型的完整範圍，且會改變最後幾個小數位數，特別是分數的小數位數。|
-|**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
-|**money**|`numeric`|**float**|使用 `sp_execute_external_script` 來執行 R 指令碼，以允許將 money 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 有時候，美分值不精確，且會發出警告：警告：無法精確地表示美分值。  |
-|**numeric(p,s)**|`numeric`|**float**|使用 `sp_execute_external_script` 執行 R 指令碼，以允許將 numeric 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 `sp_execute_external_script` 與 R 指令碼不支援資料類型的完整範圍，且會改變最後幾個小數位數，特別是分數的小數位數。|
-|**real**|`numeric`|**float**||
-|**smalldatetime**|`POSIXct`|**datetime**|以 GMT 來表示|
-|**smallint**|`integer`|**int**||
-|**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
-|**uniqueidentifier**|`character`|**varchar(max)**||
-|**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|只允許作為輸入參數和輸出|
-|**varbinary(max)**|`raw`|**varbinary(max)**|只允許作為輸入參數和輸出|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|由於在未明確設定 *stringsAsFactors* 參數的情況下建立輸入資料框架 (input_data_1)，因此資料行類型將取決於 R 中的 *default.stringsAsFactors()*|
+| SQL 類型                         | R 類別     | RESULT SET 類型    | 註解            |
+|----------------------------------|-------------|--------------------|---------------------|
+| **bigint**                       | `numeric`   | **float**          | 使用 `sp_execute_external_script` 執行 R 指令碼允許以 bigint 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 R 最多只支援 53 位元整數，之後會開始出現精確度遺失的情況。                                                                                         |
+| **binary(n)**<br /> n <= 8000    | `raw`       | **varbinary(max)** | 只允許作為輸入參數和輸出 |
+| **bit**                          | `logical`   | **bit**            |                     |
+| **char(n)**<br /> n <= 8000      | `character` | **varchar(max)**   | 由於在未明確設定 *stringsAsFactors* 參數的情況下建立輸入資料框架 (input_data_1)，因此資料行類型將取決於 R 中的 *default.stringsAsFactors()*                                                                                                                                                                                                                                           |
+| **datetime**                     | `POSIXct`   | **datetime**       | 以 GMT 來表示  |
+| **date**                         | `POSIXct`   | **datetime**       | 以 GMT 來表示  |
+| **decimal(p,s)**                 | `numeric`   | **float**          | 使用 `sp_execute_external_script` 來執行 R 指令碼，以允許將 decimal 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 `sp_execute_external_script` 與 R 指令碼不支援資料類型的完整範圍，且會改變最後幾個小數位數，特別是分數的小數位數。 |
+| **float**                        | `numeric`   | **float**          |                     |
+| **int**                          | `integer`   | **int**            |                     |
+| **money**                        | `numeric`   | **float**          | 使用 `sp_execute_external_script` 來執行 R 指令碼，以允許將 money 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 有時候，美分值不精確，且會發出警告：警告：無法精確地表示美分值。                                               |
+| **numeric(p,s)**                 | `numeric`   | **float**          | 使用 `sp_execute_external_script` 執行 R 指令碼，以允許將 numeric 資料類型作為輸入資料。 不過，由於其會轉換成 R 的數值類型，因此極高值或具有小數點的值會出現精確度遺失情況。 `sp_execute_external_script` 與 R 指令碼不支援資料類型的完整範圍，且會改變最後幾個小數位數，特別是分數的小數位數。 |
+| **real**                         | `numeric`   | **float**          |                     |
+| **smalldatetime**                | `POSIXct`   | **datetime**       | 以 GMT 來表示  |
+| **smallint**                     | `integer`   | **int**            |                     |
+| **smallmoney**                   | `numeric`   | **float**          |                     |
+| **tinyint**                      | `integer`   | **int**            |                     |
+| **uniqueidentifier**             | `character` | **varchar(max)**   |                     |
+| **varbinary(n)**<br /> n <= 8000 | `raw`       | **varbinary(max)** | 只允許作為輸入參數和輸出 |
+| **varbinary(max)**               | `raw`       | **varbinary(max)** | 只允許作為輸入參數和輸出 |
+| **varchar(n)**<br /> n <= 8000   | `character` | **varchar(max)**   | 由於在未明確設定 *stringsAsFactors* 參數的情況下建立輸入資料框架 (input_data_1)，因此資料行類型將取決於 R 中的 *default.stringsAsFactors()*                                                                                                                                                                                                                                           |
 
 ## <a name="data-types-not-supported-by-r"></a>R 不支援的資料類型
 
@@ -72,15 +72,15 @@ SQL Server 2016 R Services 與具有 R 的 SQL Server 機器學習服務，與�
 
 ## <a name="data-types-that-might-convert-poorly"></a>轉換效果可能不佳的資料類型
 
-+ 除了 **datetimeoffset** 之外，大部分的 datetime 類型應該都能順利運作 
-+ 支援大部分的數值資料類型，但 **money** 和 **smallmoney** 的轉換可能會失敗
++ 除了 **datetimeoffset** 之外，大部分的日期時間類型應該都能順利運作。
++ 支援大部分的數值資料類型，但 **money** 和 **smallmoney** 的轉換可能會失敗。
 + 支援 **varchar**，但由於 SQL Server 一般使用 Unicode，因此建議您盡可能使用 **nvarchar** 及其他 Unicode 文字資料類型。
 + 來自 RevoScaleR 函數庫且具有 rx 前置詞的函數，可以處理 SQL 二進位資料類型 (**binary** 和 **varbinary**)，但在大部分案例中，這些類型都需要特別處理。 大部分的 R 程式碼都無法搭配二進位資料行使用。
 
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 
-## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>SQL Server 2016 與舊版之間的資料類型變更
+## <a name="changes-in-data-types-between-sql-server-versions"></a>SQL Server 各版本間的資料類型變更
 
 Microsoft SQL Server 2016 和更新版本包含資料類型轉換和幾個其他作業的改進。 這些改進大部分都為處理浮點數類型提供更高的精確度，以及對傳統 **datetime** 類型的作業做出次要變更。
 
@@ -89,7 +89,7 @@ Microsoft SQL Server 2016 和更新版本包含資料類型轉換和幾個其他
 如需詳細資訊，請參閱[處理某些資料類型和不常見作業的 SQL Server 2016 改進 (機器翻譯)](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon-)。
  
 
-## <a name="verify-r-and-sql-data-schemas-in-advance"></a>預先驗證 R 和 SQL 資料結構描述 
+## <a name="verify-r-and-sql-data-schemas-in-advance"></a>預先驗證 R 和 SQL 資料結構描述
 
 一般而言，當您不清楚如何在 R 中使用特定的資料類型或資料結構時，皆可使用  `str()` 函數以取得 R 物件的內部結構和類型。 函數的結果會列印到 R 主控台，也會顯示在 **的 [訊息]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]索引標籤查詢結果中。 
 
@@ -153,19 +153,19 @@ outputDataSet <- inputDataSet'
 
 從這裡開始，您可以看到下列資料類型轉換會與這項查詢一起以隱含方式執行：
 
--   **資料行 C1**。 資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `integer` 而在輸出結果集中則為 **ssNoversion** 。  
++ **資料行 C1**。 資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `integer` 而在輸出結果集中則為 **ssNoversion** 。  
   
-     未執行任何類型轉換。  
+  未執行任何類型轉換。  
   
--   **資料行 C2**。 資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `factor` 而在輸出結果集中則為 **varchar(max)** 。  
++ **資料行 C2**。 資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `factor` 而在輸出結果集中則為 **varchar(max)** 。  
   
-     請注意輸出的變更方式；來自 R 的任何字串 (因素或一般字串) 不管字串的長度為何，皆會以 **varchar(max)** 表示。  
+  請注意輸出的變更方式；來自 R 的任何字串 (因素或一般字串) 不管字串的長度為何，皆會以 **varchar(max)** 表示。  
   
--   **資料行 C3**。  資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `character` 而在輸出結果集中則為 **varchar(max)** 。
++ **資料行 C3**。  資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `character` 而在輸出結果集中則為 **varchar(max)** 。
   
-     請注意所發生的資料類型轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 **ssNoversion** ，但 R 則否，因此識別項會表示為字串。
+  請注意所發生的資料類型轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 **ssNoversion** ，但 R 則否，因此識別項會表示為字串。
   
--   **資料行 C4**。 資料行包含由 R 指令碼產生且不存在於原始資料的值。
++ **資料行 C4**。 資料行包含由 R 指令碼產生且不存在於原始資料的值。
 
 
 ## <a name="example-2-dynamic-column-selection-using-r"></a>範例 2：使用 R 進行動態資料行選取
@@ -182,3 +182,4 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>另請參閱
 
++ [Python 與 SQL Server 之間的資料類型對應](../python/python-libraries-and-data-types.md)

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d11586f380354d0cef98039fbe95d2f9ed3287b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725632"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081457"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 
@@ -107,7 +107,7 @@ Null 值是特殊的，它們的儲存和指派語意在不同類型系統和儲
   
 - <xref:System.Data.DataRow.IsNull%2A> 方法會針對 `true` 和 `DbNull.Value` 傳回 `INullable.Null`。  
   
-## <a name="assigning-null-values"></a>指派 Null 值  
+## <a name="assigning-null-values-to-sqltypes"></a>將 Null 值指派給 SqlTypes  
 所有 <xref:System.Data.SqlTypes> 執行個體的預設值均為 Null。  
   
 <xref:System.Data.SqlTypes> 中的 Null 是類型專屬的，無法以單一值表示，例如 `DbNull`。 使用 `IsNull` 屬性來檢查 Null。  

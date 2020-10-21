@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454560"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933761"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454560"
   
  發生下列任何事件時，就必須還原加密金鑰的備份副本。  
   
--   變更報表伺服器 Windows 服務帳戶名稱或重設密碼。 當您使用 Reporting Services 組態管理員時，備份金鑰是服務帳戶名稱變更作業的一部分。  
+-   變更報表伺服器 Windows 服務帳戶名稱或重設密碼。 當使用報表伺服器組態管理員時，服務帳戶名稱變更作業必須涵括備份金鑰。  
   
     > [!NOTE]
     > 重設密碼和變更密碼不同。 密碼重設需要覆寫網域控制站上之帳戶資訊的權限。 您忘記密碼或不知道特定密碼時，會由系統管理員執行密碼重設。 只有密碼重設需要對稱金鑰還原。 定期變更帳戶密碼並不需要重設對稱金鑰。  
@@ -47,7 +47,7 @@ ms.locfileid: "88454560"
 
  備份對稱金鑰的程序是將金鑰寫入您指定的檔案，然後使用您提供的密碼將金鑰加密。 對稱金鑰絕不能以未加密的狀態儲存，因此您將金鑰儲存到磁碟時，必須提供密碼將其加密。 檔案建立之後，您必須將其儲存在安全的位置，並 **記住用來解除檔案鎖定的密碼** 。 若要備份對稱金鑰，您可以使用下列工具：  
   
- **原生模式** ：Reporting Services 組態管理員或 **rskeymgmt** 公用程式。  
+ **原生模式：** 報表伺服器組態管理員或 **rskeymgmt** 公用程式。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454560"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - 報表伺服器組態管理員 (原生模式)  
   
 1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454560"
   
 -   刪除先前儲存的對稱金鑰資料 (例如，先前部署中已存在於報表伺服器資料庫中的金鑰資訊)。  
   
- 若要還原加密金鑰，檔案上必須有一個加密金鑰的副本。 您也必須知道解除鎖定儲存之副本的密碼。 如果您有金鑰和密碼，就可以執行 Reporting Services 組態工具或 **rskeymgmt** 公用程式來還原金鑰。 對稱金鑰必須和鎖定與解除鎖定目前儲存在報表伺服器資料庫中之加密資料的金鑰相同。 如果您還原無效的副本，報表伺服器將無法存取目前儲存在報表伺服器資料庫中的加密資料。 萬一發生這種情形，如果無法還原有效的金鑰，就必須刪除所有的加密值。 如果因故無法還原加密金鑰 (例如，您若沒有備份副本)，則必須刪除現有的金鑰和加密內容。 如需詳細資訊，請參閱[刪除和重新建立加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 如需建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 若要還原加密金鑰，檔案上必須有一個加密金鑰的副本。 您也必須知道解除鎖定儲存之副本的密碼。 如果您有金鑰和密碼，就可以執行 Reporting Services 組態工具或 **rskeymgmt** 公用程式來還原金鑰。 對稱金鑰必須和鎖定與解除鎖定目前儲存在報表伺服器資料庫中之加密資料的金鑰相同。 如果您還原無效的副本，報表伺服器將無法存取目前儲存在報表伺服器資料庫中的加密資料。 萬一發生這種情形，如果無法還原有效的金鑰，就必須刪除所有的加密值。 如果因故無法還原加密金鑰 (例如，您若沒有備份副本)，則必須刪除現有的金鑰和加密內容。 如需詳細資訊，請參閱[刪除和重新建立加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 如需建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 還原加密金鑰 - Reporting Services 組態管理員 (原生模式)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 還原加密金鑰 - 報表伺服器組態管理員 (原生模式)  
   
-1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
+1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
 2.  在 [加密金鑰] 頁面上，選取 [還原]****。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454560"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [設定和管理加密金鑰 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

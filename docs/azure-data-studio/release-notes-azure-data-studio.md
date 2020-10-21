@@ -1,5 +1,5 @@
 ---
-title: 版本資訊
+title: Azure Data Studio 版本資訊
 description: 本文包含 Azure Data Studio 從 2017 年 11 月至今版本的版本資訊。 針對許多摘要問題，請參閱其他詳細資料的連結。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725099"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059186"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](./download-azure-data-studio.md)**
+
+## <a name="october-2020"></a>2020 年 10 月
+
+2020 年 10 月 14 日 &nbsp; / &nbsp; 版本：1.23.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| ------ | ------- |
+| Azure SQL Edge | 支援 Azure SQL Edge 物件。 |
+| 錯誤修正 | 如需完整的修正清單，請參閱 [GitHub 的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed)。 |
+| 資料庫| 支援相同的資料庫參考。 |
+| 擴充功能更新 | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[結構描述比較](extensions/schema-compare-extension.md)</br>SQL 評估</br>[SQL Database 專案](extensions/sql-database-project-extension.md)</br>[SQL Server 匯入](extensions/sql-server-import-extension.md) |
+| 新的部署功能 | 已新增 Azure SQL DB 和 VM 部署。 |
+| PowerShell | 已新增 PowerShell 核心結果串流支援。 |
 
 ## <a name="september-2020-hotfix"></a>2020 年 9 月 (Hotfix)
 
@@ -28,7 +43,7 @@ ms.locfileid: "91725099"
 
 | 變更 | 詳細資料 |
 | ------ | ------- |
-| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1) \(英文\)。 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 的 Bug 和問題](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1)。 |
 
 ## <a name="september-2020"></a>2020 年 9 月
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725099"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 修正 Bug #11372 物件總管拖放資料表不正確地包裝資料表名稱 | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| 修正 Bug #11356 深色佈景主題現在是預設佈景主題 | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| 修正 Bug #11372 物件總管拖放資料表不正確地包裝資料表名稱 | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| 修正 Bug #11356 深色佈景主題現在是預設佈景主題 | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>已知問題
@@ -90,7 +105,6 @@ ms.locfileid: "91725099"
 | 已新增 Azure 帳戶圖示至活動列 | 使用者現在可以輕鬆地查看要從哪裡登入 Azure |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed) \(英文\)。 |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>2020 年 6 月
 
@@ -882,7 +896,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| [建立防火牆規則] 對話方塊現在可用來協助連線到 Azure SQL Database 和 Azure SQL 資料倉儲。 | &nbsp; |
+| [建立防火牆規則] 對話方塊現可協助連線到 Azure SQL Database 和 Azure Synapse Analytics。 | &nbsp; |
 | 已新增 Windows 安裝程式，以及 Linux DEB 和 RPM 安裝套件。 | &nbsp; |
 | 管理儀表板視覺效果版面配置編輯器。 | &nbsp; |
 | 「編寫指令碼為 Alter」和「編寫指令碼為 Execute」 命令。 | &nbsp; |
@@ -904,7 +918,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 
 - [連線與查詢 SQL Server](quickstart-sql-server.md)
 - [連線與查詢 Azure SQL Database](quickstart-sql-database.md)
-- [連線與查詢 Azure 資料倉儲](quickstart-sql-dw.md)
+- [連線並查詢 Azure Synapse Analytics](quickstart-sql-dw.md)
 
 Azure Data Studio 的參與者：
 

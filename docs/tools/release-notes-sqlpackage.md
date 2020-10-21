@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989431"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005977"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | 已新增 SQL Server 2019 的安全記憶體保護區匯入和匯出支援 |
 | 部署 | 已新增支援在從 Azure SQL Database 匯出時忽略已啟用變更資料擷取的資料表 |
 | 部署 | 已在 Azure SQL Database 中新增索引選項 OPTIMIZE_FOR_SEQUENTIAL_KEY 的支援 |
-| 部署 | 已新增 Azure SQL 資料倉儲的識別欄位支援 | 
+| 部署 | 已新增 Azure Synapse Analytics 的識別欄位支援 | 
 | [說明] | 輸出 help (/?) 中的 sqlpackage 版本並支援 /version 參數 | 
 
 ### <a name="fixes"></a>修正
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 部署 | 已修正針對 .NET Core 部署時的 dacpac 註冊問題 | 
 | 部署 | 已修正 .NET Core 處理 /accessToken (/at) 參數時的 sqlpackage | 
 | 部署 | 允許預存程序中的 ALTER TABLE 陳述式作為非最上層陳述式 | 
-| 部署 | 已將具體化檢視的 Azure SQL 資料倉儲驗證修正為不區分大小寫 | 
+| 部署 | 已將具體化檢視的 Azure Synapse Analytics 驗證修正為不區分大小寫 | 
 
 ### <a name="known-issues"></a>已知問題
 | 功能 | 詳細資料 |
 | :------ | :------ |
-| 部署 | 尚未支援 Azure SQL 資料倉儲工作負載管理功能 (工作負載群組和工作負載分類器) | 
+| 部署 | 尚不支援 Azure Synapse Analytics 工作負載管理功能 (工作負載群組和工作負載分類器) | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>特性
 | 功能 | 詳細資料 |
 | :------ | :------ |
-| 部署 | SQL Server 2008 及更新版本、Azure SQL Database 和 Azure SQL 資料倉儲現在支援資料敏感度分類 |
-| 部署 | 新增資料表條件約束的 Azure SQL 資料倉儲支援 |
-| 部署 | 新增已排序叢集資料行存放區索引的 Azure SQL 資料倉儲支援 |
+| 部署 | SQL Server 2008 及更新版本、Azure SQL Database 和 Azure Synapse Analytics 現已支援資料敏感度分類 |
+| 部署 | 新增 Azure Synapse Analytics 的資料表條件約束支援 |
+| 部署 | 新增 Azure Synapse Analytics 的已排序叢集資料行存放區索引支援 |
 | 部署 | 新增外部資料來源 (適用於 Oracle、Teradata、MongoDB/CosmosDB、ODBC、巨量資料叢集) 的支援，以及 SQL Server 2019 巨量資料叢集的外部資料表 |
 | 部署 | 新增 SQL Database Edge 執行個體作為支援的版本 |
 | 部署 | 支援格式為 '\<server>.\<dnszone>.database.windows.net' 的受控執行個體伺服器名稱 |
-| 部署 | 新增 Azure SQL 資料倉儲中複製命令的支援 |
-| 部署 | 新增發佈期間的部署選項 'IgnoreTablePartitionOptions'，以避免當 Azure SQL 資料倉儲資料表上的資料分割函數變更時重新建立資料表 |
+| 部署 | 在 Azure Synapse Analytics 中新增複製命令支援 |
+| 部署 | 新增發佈期間的部署選項 'IgnoreTablePartitionOptions'，以避免當 Azure Synapse Analytics 資料表上的資料分割函數變更時重新建立資料表 |
 | .NET Core | 新增 .NET Core 版本 sqlpackage 中 Microsoft.Data.SqlClient 的支援 |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 部署 | 修正產生 AlterAnyDatabaseScopedConfiguration 和 AlterAnySensitivityClassification 權限的 GRANT 陳述式 |
 | 部署 | 修正無法辨識的外部指令碼權限 |
 | 部署 | 修正內嵌屬性 - 屬性的隱含新增不應顯示差異，但明確提及應透過指令碼顯示 |
-| 部署 | 已解決變更具體化視圖 (MV) 所參考資料表會導致產生 Azure SQL 資料倉儲 MV 不支援的 Alter View 陳述式 |
-| 部署 | 修正在將資料行新增至具有 Azure SQL 資料倉儲資料的資料表時，發佈失敗的問題 |
-| 部署 | 修正當變更 Azure SQL 資料倉儲的發佈資料行類型 (資料遺失案例) 時，更新指令碼應將資料移至新的資料表 |
+| 部署 | 已解決變更具體化檢視 (MV) 參考放資料表會產生 Azure Synapse Analytics MV 不支援的 Alter View 陳述式此問題 |
+| 部署 | 修正將資料行新增至具有 Azure Synapse Analytics 資料的資料表時發佈失敗此問題 |
+| 部署 | 修正變更 Azure Synapse Analytics 的發佈資料行類型 (資料遺失案例) 時，更新指令碼應將資料移至新的資料表此問題 |
 | ScriptDom | 修正 ScriptDom Bug，此 Bug 導致其無法辨識在內嵌索引後面定義的內嵌條件約束 |
 | ScriptDom | 修正 ScriptDom SYSTEM_TIME 在批次陳述式中遺漏右括弧 |
 | Always Encrypted | 修正 sqlpackage 重新連線且暫存資料表已消失時無法卸除 #tmpErrors 資料表，因為暫存資料表會在連線停止時消失 |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 詳細資料 |
 | :------ | :------ |
-| 部署 | 新增對部署至 Azure SQL 資料倉儲的支援 (GA)。 | 
+| 部署 | 新增部署至 Azure Synapse Analytics 的支援 (GA)。 | 
 | 平台 | 適用於 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
 | 安全性 | 移除 SHA1 程式碼簽署。 |
 | 部署 | 新增支援全新的 Azure 資料庫版本：GeneralPurpose、BusinessCritical、Hyperscale |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 功能 | 詳細資料 |
 | :------ | :------ |
-| 部署 | 新增對部署至 Azure SQL 資料倉儲的支援 (預覽) 。 | 
+| 部署 | 新增部署至 Azure Synapse Analytics 的支援 (預覽)。 | 
 | 部署 | 將 /p:DatabaseLockTimeout=(INT32 '60') 參數新增至 sqlpackage。 | 
 | 部署 | 將 /p:LongRunningCommandTimeout=(INT32) 參數新增至 sqlpackage。 |
 | 匯出/解壓縮 | 將 /p:TempDirectoryForTableData=(STRING) 參數新增至 sqlpackage。 |

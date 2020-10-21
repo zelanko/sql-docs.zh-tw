@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea0b098296ef5e4617fffc1f172ecdb30a94d0e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df897731d0172a2d496446e3ee6a12d6320a0d0b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248102"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934737"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  
@@ -57,7 +57,7 @@ reportpath
   
 ### <a name="syntax-description"></a>語法描述  
  *rswebserviceurl*  
- 報表伺服器 Web 服務 URL。 針對原生模式，其為 Reporting Services 設定管理員中設定之報表伺服器執行個體的 Web 服務 URL (請參閱[設定報表伺服器 URL &#40;SSRS 設定管理員&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md))。 例如：  
+ 報表伺服器 Web 服務 URL。 針對原生模式，這是在 Reporting Services 組態管理員中所設定報表伺服器執行個體的 Web 服務 URL (請參閱[設定報表伺服器 URL &#40;報表伺服器組態管理員&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md))。 例如：  
   
 ```  
 https://myrshost/reportserver  

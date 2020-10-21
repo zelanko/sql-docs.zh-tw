@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725879"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892488"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 內部部署與 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,8 +37,8 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 > [!IMPORTANT]
 > 下列必要條件其執行者必須是有足夠權限可建立這些叢集層級物件的 OpenShift 叢集系統管理員 (叢集系統管理員叢集角色)。 如需 OpenShift 中叢集角色的詳細資訊，請參閱 [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html) (使用 RBAC 定義與套用權限)。
 
-1. 請確定 OpenShift 上的 **pidsLimit** 設定已更新，可容納 SQL Server 的工作負載。 OpenShift 中的預設值對工作負載等生產環境而言太低。 我們建議至少使用 **4096** 的值，但最佳值取決於 SQL Server 中的「最大背景工作角色執行緒」設定，以及 OpenShift 主機節點上的 CPU 處理器數目。 
-    - 若要了解如何更新 OpenShift 叢集的 **pidsLimit**，請使用[這些指示]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 請注意，**4.3.5** 之前的 OpenShift 版本有缺陷，會導致更新的值無法生效。 請務必將 OpenShift 升級至最新版本。 
+1. 請確定 OpenShift 上的 `pidsLimit` 設定已更新，可容納 SQL Server 的工作負載。 OpenShift 中的預設值對工作負載等生產環境而言太低。 建議至少使用 `4096` 的值，但最佳值取決於 SQL Server 的 `max worker threads` 設定，以及 OpenShift 主機節點的 CPU 處理器數目。 
+    - 若要了解如何更新 OpenShift 叢集的 `pidsLimit`，請使用[這些指示]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 請注意，`4.3.5` 之前的 OpenShift 版本有缺陷，會導致更新的值無法生效。 請務必將 OpenShift 升級至最新版本。 
     - 為協助根據環境和規劃的 SQL Server 工作負載計算出最佳值，您可使用以下評估和範例：
 
     |處理器數目|預設最大背景工作角色執行緒|每個處理器的預設背景工作角色數目|最小 pidsLimit 值|
@@ -56,7 +56,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
     ```
 
     > [!NOTE]
-    > BDC 其自訂 SCC 是以具有其他權限的 OpenShift 內建「非根」SCC 為基礎。 若要深入了解 OpenShift 中的安全性內容條件約束，請參閱 [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html) (管理安全性內容條件約束)。 如需「非根」SCC 上層其巨量資料叢集需要哪些額外權限的詳細資訊，請下載[這裡](https://aka.ms/sql-bdc-openshift-security)的白皮書。
+    > BDC 的自訂 SCC 是以具有其他權限的 OpenShift 中內建 `nonroot` SCC 為基礎。 若要深入了解 OpenShift 中的安全性內容條件約束，請參閱 [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html) (管理安全性內容條件約束)。 如需 `nonroot` SCC 上層巨量資料叢集所需額外權限的詳細資訊，請下載[這裡](https://aka.ms/sql-bdc-openshift-security)的白皮書。
 
 3. 建立命名空間/專案：
 
@@ -104,7 +104,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   針對 ARO 的部署，建議從其中一個 *aro-* 設定檔開始，其包含適合此環境的 *serviceType* 和 *storageClass* 預設值。 例如：
+   針對 ARO 的部署，建議從其中一個 `aro-` 設定檔開始，其包含適合此環境的 `serviceType` 和 `storageClass` 預設值。 例如：
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 1. 自訂組態檔 control.json 和 bdc.json。 以下是一些額外的資源，其可引導完成支援各種使用案例的自訂內容：
 
    - [Storage](concept-data-persistence.md)
-   - [AD 相關設定](deploy-active-directory.md)
+   - [AD 相關設定](active-directory-deploy.md)
    - [其他自訂內容](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>部署組態檔中的 OpenShift 特定設定
 
-SQL Server 2019 CU5 引進兩個功能參數，以控制 Pod 與節點計量的集合。 在 OpenShift 的內建設定檔中，這些參數預設為 *false*，因為監視容器需要[特殊權限的安全性內容](https://www.openshift.com/blog/managing-sccs-in-openshift)，這會放寬 BDC 部署所在命名空間的部分安全性條件約束。
+SQL Server 2019 CU5 引進兩個功能參數，以控制 Pod 與節點計量的集合。 在 OpenShift 的內建設定檔中，這些參數預設為 `false`，因為監視容器需要[特殊權限的安全性內容](https://www.openshift.com/blog/managing-sccs-in-openshift)，這會放寬 BDC 部署所在命名空間的部分安全性條件約束。
 
 ```json
     "security": {

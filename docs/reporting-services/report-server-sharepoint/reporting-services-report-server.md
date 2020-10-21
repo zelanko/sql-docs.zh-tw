@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934247"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934680"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>比較原生報表伺服器和 SharePoint Reporting Services 報表伺服器
 
@@ -40,7 +40,7 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
   
  Reporting Services 報表伺服器支援兩種報表伺服器執行個體的部署模式：  
   
--   **原生模式**：包括 SharePoint Web 組件的原生模式，在該模式下，報表伺服器會當作透過 Reporting Services 元件專門提供所有處理和管理能力的應用程式伺服器執行。 您可以使用 Reporting Services 設定管理員和 SQL Server Management Studio 來設定原生模式報表伺服器。  
+-   **原生模式**：包括 SharePoint Web 組件的原生模式，在該模式下，報表伺服器會當作透過 Reporting Services 元件專門提供所有處理和管理能力的應用程式伺服器執行。 您可使用報表伺服器組態管理員和 SQL Server Management Studio 來設定原生模式報表伺服器。  
   
 -   **SharePoint 模式**：在該模式下，報表伺服器會安裝為 SharePoint 伺服器陣列的一部分。  您可以使用 PowerShell 命令或 SharePoint 內容管理頁面來部署和設定 SharePoint 模式。  
   
@@ -137,8 +137,8 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
   
 |Task|連結|  
 |----------|----------|  
-|檢閱硬體及軟體需求。|第 1 課：建立 Windows Azure 儲存體物件[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)。|  
-|以 SharePoint 模式安裝 Reporting Services。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|檢閱硬體及軟體需求。|第 1 課：建立 Windows Azure 儲存體物件[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130))。|  
+|以 SharePoint 模式安裝 Reporting Services。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |說明如何針對報表伺服器 Web 服務和 Windows 服務微調記憶體設定。|[設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |說明建議的設定步驟為遠端管理的報表伺服器。|[設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 | 提供有關在原生報表伺服器執行個體上設定 [我的報表] 可用性的指示。|[啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

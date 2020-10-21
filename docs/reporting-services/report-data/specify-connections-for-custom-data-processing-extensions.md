@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f236fe67a8d551cd7a7ada15550770c34503c026
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: dbfb5f58cae73931acf1c856b7e2675d50c8dc47
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455350"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934652"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>為自訂資料處理延伸模組指定連接
   您可以在報表伺服器中建立或使用協力廠商自訂資料處理延伸模組，以便強化支援之資料來源的資料處理功能，或支援預設 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝未提供的其他資料來源類型。 不同的實作，處理連接的方式也不同。 下列實作適用於資料處理延伸模組：  
@@ -52,7 +52,7 @@ ms.locfileid: "86455350"
 |整合式安全性|如果您的資料提供者支援它，您可以使用 Windows 整合式安全性。 您可以利用目前使用者的認證來傳送要求。<br /><br /> 定義連接字串時，請務必包含指定整合式安全性的引數 (例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的連接可能在連接字串中包含 **Integrated Security=SSPI** )。|  
 |Windows 驗證|如果您的資料提供者支援它，您可以使用 Windows 網域使用者帳戶。 在呼叫資料處理延伸模組之前，報表伺服器會模擬使用者帳戶。<br /><br /> 定義連接字串時，請務必包含指定整合式安全性的引數 (例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的連接可能在連接字串中包含 **Integrated Security=SSPI** )。|  
 |資料庫認證|透過自訂 .NET 資料提供者進行的連接不支援資料庫驗證。 在所有情況下，報表伺服器的連接都會失敗。|  
-|無認證|您可以搭配自訂 .NET 資料提供者使用 [無認證] 選項。 如果指定自動執行帳戶，連接字串會判斷所使用的認證。 報表伺服器會模擬自動執行帳戶來進行連接。<br /><br /> 如果未定義自動執行帳戶，報表伺服器的連接會失敗。 如需定義帳戶的詳細資訊，請參閱 [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
+|無認證|您可以搭配自訂 .NET 資料提供者使用 [無認證] 選項。 如果指定自動執行帳戶，連接字串會判斷所使用的認證。 報表伺服器會模擬自動執行帳戶來進行連接。<br /><br /> 如果未定義自動執行帳戶，報表伺服器的連接會失敗。 如需定義此帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection 的連接  
  如果您使用僅支援 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>的自訂資料處理延伸模組，您必須以下列方式指定連接：  
@@ -76,7 +76,7 @@ ms.locfileid: "86455350"
 |無認證|如果指定自動執行帳戶，連接字串會判斷所使用的認證。<br /><br /> 如果未定義自動執行帳戶，報表伺服器的連接會失敗。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [設定自動執行帳戶 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

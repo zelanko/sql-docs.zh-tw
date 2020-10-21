@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 9a3fa6a8e427417b8c165f031cf5bd2295e9a50a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076753"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005598"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 
@@ -42,7 +42,7 @@ ms.locfileid: "90076753"
 
 > 如需在 Linux 上使用 bcp 的資訊，請參閱[在 Linux 上安裝 sqlcmd 與 bcp](../linux/sql-server-linux-setup-tools.md)。
 >
-> 如需使用 bcp 搭配 Azure SQL 資料倉儲的詳細資訊，請參閱[使用 bcp 載入資料](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 如需使用 bcp 搭配 Azure Synapse Analytics 的詳細資訊，請參閱[使用 bcp 載入資料](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
 **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定的格式在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
 
@@ -64,8 +64,8 @@ ms.locfileid: "90076753"
 組建編號：15.0.2000.5<br>
 發行日期：2020 年 9 月 11 日
 
-新版本的 SQLCMD 支援 Azure AD 驗證，其包含 SQL Database、SQL 資料倉儲，以及 Always Encrypted 功能的多重要素驗證 (MFA) 支援。
-新的 BCP 支援 Azure AD 驗證，其包含 SQL Database 與 SQL 資料倉儲的多重要素驗證 (MFA) 支援。
+新版本的 SQLCMD 支援 Azure AD 驗證，包括 SQL Database、Azure Synapse Analytics 和 Always Encrypted 功能的 Multi-Factor Authentication (MFA) 支援。
+新的 BCP 支援 Azure AD 驗證，包括 SQL Database 與 Azure Synapse Analytics 的 Multi-Factor Authentication (MFA) 支援。
 
 ### <a name="system-requirements"></a>系統需求
 
@@ -181,7 +181,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果指定 -d database_name 和三部分名稱 (database_name.schema.table，作為第一個參數傳遞至 bcp.exe)，將會發生錯誤，因為您無法指定資料庫名稱兩次。 如果 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
 
 **-D**<a name="D"></a>  
-使傳遞至 `bcp` `-S` 選項的值解譯為資料來源名稱 (DSN)。 如需詳細資訊，請參閱[使用 sqlcmd 進行連線](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的 「sqlcmd 和 bcp 中的 DSN 支援」。
+使傳遞至 `bcp` `-S` 選項的值解譯為資料來源名稱 (DSN)。 DSN 可用來內嵌驅動程式選項，以簡化命令列；施行無法從命令列存取的驅動程式選項，例如 MultiSubnetFailover；或協助保護機密認證不被視為命令列引數。 如需詳細資訊，請參閱[使用 sqlcmd 進行連線](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的 「sqlcmd 和 bcp 中的 DSN 支援」。
+
 
  **-e** _**err\_file**_<a name="e"></a>  
  指定錯誤檔的完整路徑，該錯誤檔用來儲存 **bcp** 公用程式無法從檔案傳送至資料庫的任何資料列。 **bcp** 命令所產生的錯誤訊息，會送往使用者的工作站。 如果未使用這個選項，就不會建立錯誤檔。  
@@ -215,7 +216,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>
 
- 這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要 [14.0.3008.27 版或更新版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[利用 SQL Database 和 SQL 資料倉儲使用 Azure Active Directory 驗證來驗證](/azure/sql-database/sql-database-aad-authentication)。 
+ 這個參數在連線到 Azure SQL Database 或 Azure Synapse Analytics 時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要 [14.0.3008.27 版或更新版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證以用於 SQL Database 或 Azure Synapse Analytics 驗證](/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!IMPORTANT]
 > **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。
@@ -258,7 +259,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 互動式**  
 
-   Azure SQL Database 與 SQL 資料倉儲的 Azure AD 互動式驗證，可讓您使用支援多重要素驗證的互動式方法。 如需詳細資訊，請參閱 [Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。
+   Azure SQL Database 與 Azure Synapse Analytics 的 Azure AD 互動式驗證，其允許使用支援 Multi-Factor Authentication 的互動式方法。 如需詳細資訊，請參閱 [Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。
 
    Azure AD 互動需要 **bcp** [15.0.1000.34 版](#download-the-latest-version-of-bcp-utility) 或更新版本，以及 [ODBC 17.2 版或更新版本](https://aka.ms/downloadmsodbcsql)。  
 
@@ -404,13 +405,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 網路使用者的安全性認證、 *login_id*及 *password* 不是必要的選項。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。
 
 > [!IMPORTANT]
-> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
+> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連線到 SQL Database 或 Azure Synapse Analytics，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
   
  **-U** _**login\_id**_<a name="U"></a>  
  指定用來連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的登入識別碼。  
   
 > [!IMPORTANT]
-> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。
+> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連線到 SQL Database 或 Azure Synapse Analytics 時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。
   
  **-v**<a name="v"></a>  
  報告 **bcp** 公用程式版本號碼和著作權。  

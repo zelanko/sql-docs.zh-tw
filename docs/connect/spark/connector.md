@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 47412f3781274fa242c03975295cdc5ba66b1669
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284806"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867240"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 連接器：SQL Server 和 Azure SQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "89284806"
 
 [Apache Spark](https://spark.apache.org/) 是用於進行大規模資料處理的整合分析引擎。
 
-您可以從來源建置連接器，或從 GitHub 的 [發行] 區段下載 jar。 如需此連接器的最新資訊，請參閱 [SQL Spark 連接器 GitHub 存放庫](https://github.com/microsoft/sql-spark-connector)。
+您可透過 Maven 座標將連接器匯入至專案：`com.microsoft.azure:spark-mssql-connector:1.0.0`。 您也可以從來源建置連接器，或從 GitHub 的 [發行] 區段下載 Jar。 如需此連接器的最新資訊，請參閱 [SQL Spark 連接器 GitHub 存放庫](https://github.com/microsoft/sql-spark-connector)。
 
 ## <a name="supported-features"></a>支援的功能
 
@@ -53,10 +53,11 @@ ms.locfileid: "89284806"
 
 | 選項 | 預設 | 描述 |
 | --------- | ------------------ | ------------------------------------------ |
-| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` 或 `NO_DUPLICATES`。 `NO_DUPLICATES` 在執行程式重新啟動的情況下會實作可靠的插入 |
-| `dataPoolDataSource` | `none` | `none` 表示未設定此值，連接器應寫入至 SQL Server 的單一執行個體。 將此值設定為資料來源名稱，會寫入至 SQL Server 巨量資料叢集中的資料集區資料表|
+| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` 或 `NO_DUPLICATES`。 `NO_DUPLICATES` 會在執行程式重新啟動情況下會實作可靠的插入 |
+| `dataPoolDataSource` | `none` | `none` 表示未設定此值，且連接器應寫入至 SQL Server 的單一執行個體。 將此值設定為資料來源名稱，以在巨量資料叢集中寫入資料集區資料表|
 | `isolationLevel` | `READ_COMMITTED` | 指定隔離等級 |
 | `tableLock` | `false` | 使用 `TABLOCK` 選項執行插入可改善寫入效能 |
+| `schemaCheckEnabled` | `true` | 設定為 false 時，會停用 strict 資料框架和 SQL 資料表結構描述檢查 |
 
 其他[大量複製選項](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)可設定為 `dataframe` 上的選項，將會在寫入時傳遞至 `bulkcopy` API
 
@@ -227,3 +228,5 @@ jdbc_df = spark.read \
 ## <a name="next-steps"></a>後續步驟
 
 瀏覽 [SQL Spark 連接器 GitHub 存放庫](https://github.com/microsoft/sql-spark-connector)。
+
+如需隔離等級的資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。

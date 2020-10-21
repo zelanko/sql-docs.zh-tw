@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: dd2d1feb1ae156d685dbd18595447a248836eba9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646608"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081417"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ $*driver_options*：選擇性 (混合) 驅動程式特定選項。 例如，您�
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
 
-## <a name="example"></a>範例  
+## <a name="parameter-example"></a>參數範例  
 此程式碼範例說明在 $contact 繫結至參數之後，變更值並將會使傳入查詢中的值隨之變更。  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="output-parameter-example"></a>輸出參數範例  
 此程式碼範例說明如何存取輸出參數。  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > 當輸出參數繫結至 bigint 類型時，如果值最後可能超過 [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 的範圍，則搭配 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 使用 PDO::PARAM_INT 可能導致「值超出範圍」例外狀況。 因此，請改為使用預設的 PDO::PARAM_STR 並提供結果字串的大小，在大部分情況下為 21。 其為任何 bigint 值的最大位數數目 (包含負號)。 
 
-## <a name="example"></a>範例  
+## <a name="inputoutput-example"></a>輸入/輸出範例  
 此程式碼範例說明如何使用輸入/輸出參數。  
   
 ```  
@@ -124,7 +124,7 @@ echo $input1;
 > [!NOTE]
 > 建議在將值繫結至 [decimal 或 numeric 資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
-## <a name="example"></a>範例  
+## <a name="decimal-input-example"></a>十進位輸入範例  
 此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```
