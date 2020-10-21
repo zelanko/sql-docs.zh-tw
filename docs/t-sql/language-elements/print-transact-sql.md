@@ -24,12 +24,12 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be33ffe8e52349e2eb7daad69b0648ae9ea53494
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cde37d6a90b82bb43095e1138116cd98ae198f9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307304"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191333"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88307304"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```syntaxsql  
 PRINT msg_str | @local_variable | string_expr  
 ```  
   
@@ -72,7 +72,7 @@ PRINT msg_str | @local_variable | string_expr
 ### <a name="a-conditionally-executing-print-if-exists"></a>A. 有條件地執行列印 (IF EXISTS)  
  這個範例會利用 `PRINT` 陳述式，有條件地傳回訊息。  
   
-```  
+```sql  
 IF @@OPTIONS & 512 <> 0  
     PRINT N'This user has SET NOCOUNT turned ON.';  
 ELSE  
@@ -83,19 +83,19 @@ GO
 ### <a name="b-building-and-displaying-a-string"></a>B. 建立及顯示字串  
  下列範例會將 `GETDATE` 函數的結果轉換成 `nvarchar` 資料類型，且會將它和 `PRINT` 傳回的常值文字串連起來。  
   
-```  
+```sql  
 -- Build the message text by concatenating  
 -- strings and expressions.  
 PRINT N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
+    + RTRIM(CAST(GETDATE() AS NVARCHAR(30)))  
     + N'.';  
 GO  
 -- This example shows building the message text  
 -- in a variable and then passing it to PRINT.  
 -- This was required in SQL Server 7.0 or earlier.  
-DECLARE @PrintMessage nvarchar(50);  
+DECLARE @PrintMessage NVARCHAR(50);  
 SET @PrintMessage = N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
+    + RTRIM(CAST(GETDATE() AS NVARCHAR(30)))  
     + N'.';  
 PRINT @PrintMessage;  
 GO  
@@ -106,7 +106,7 @@ GO
 ### <a name="c-conditionally-executing-print"></a>C. 有條件地執行列印  
  這個範例會利用 `PRINT` 陳述式，有條件地傳回訊息。  
   
-```  
+```sql  
 IF DB_ID() = 1  
     PRINT N'The current database is master.';  
 ELSE  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa32eb175339d3fa02afdf41e0c90471a7ef8ee5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449845"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193880"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) 開發和管理工具
 
@@ -52,7 +52,7 @@ ms.locfileid: "88449845"
   
 -   將封裝的複本儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫、[!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區及檔案系統。  
   
- 如需 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的詳細資訊，請參閱 [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/hh272686.aspx)。  
+ 如需 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的詳細資訊，請參閱 [SQL Server Data Tools (SSDT)](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))。  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會提供 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，您可以使用該服務管理封裝、監視執行中封裝以及判斷 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的影響及資料歷程。  
@@ -65,4 +65,4 @@ ms.locfileid: "88449845"
   
 -   執行「執行封裝」公用程式產生執行 **dtexec** 命令提示字元公用程式 (dtexec.exe) 時使用的命令列。  
   
--   將封裝匯入和匯出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫、「[!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區」及檔案系統。  
+-   將封裝匯入和匯出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫、「[!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區」及檔案系統。

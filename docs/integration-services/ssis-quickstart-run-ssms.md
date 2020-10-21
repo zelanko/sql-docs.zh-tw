@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477236"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193058"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件
 
@@ -27,7 +27,7 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 ## <a name="prerequisites"></a>必要條件
 
-開始之前，請確定您有最新版的 SQL Server Management Studio (SSMS)。 若要下載 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+開始之前，請確定您有最新版的 SQL Server Management Studio (SSMS)。 若要下載 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。
 
 Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連接埠，讓您成功連線。
 
@@ -86,4 +86,4 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
     - [使用 Transact-SQL 執行 SSIS 套件 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [從命令提示字元執行 SSIS 套件](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 執行 SSIS 套件](ssis-quickstart-run-powershell.md)
-    - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md) 
+    - [使用 C# 執行 SSIS 套件](./ssis-quickstart-run-dotnet.md)

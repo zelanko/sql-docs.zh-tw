@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0c01d66062747788bd9bf05ca8cf06e8e5088a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 933f79938c641ff1efd6a4143a788888c9362608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430760"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192708"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 
@@ -43,6 +43,5 @@ ms.locfileid: "88430760"
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
+ [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](./odbc-source.md)  
   

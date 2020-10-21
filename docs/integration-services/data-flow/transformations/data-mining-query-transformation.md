@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c7a2e6ffd3dcf8544dabfd010ea7a1161dc9bf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8791836a066b658fb6775ce1cbf30f30c7d7d4a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477750"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192645"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477750"
 
   「資料採礦查詢」轉換會對資料採礦模型執行預測查詢。 這項轉換包含用來建立「資料採礦延伸模組」(DMX) 查詢的查詢產生器。 查詢產生器可讓您建立自訂陳述式，以便使用 DMX 語言對照現有採礦模型評估轉換輸入資料。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../../dmx/data-mining-extensions-dmx-reference.md)。  
   
- 如果模型是在相同的資料採礦結構上建立，則一項轉換可執行多項預測查詢。 如需詳細資訊，請參閱 [資料採礦查詢工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
+ 如果模型是在相同的資料採礦結構上建立，則一項轉換可執行多項預測查詢。 如需詳細資訊，請參閱 [資料採礦查詢工具](/analysis-services/data-mining/data-mining-query-tools)。  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>設定資料採礦查詢轉換  
  「資料採礦查詢」轉換會使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 連接管理員連接到包含採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "88477750"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -74,4 +74,3 @@ ms.locfileid: "88477750"
   
  **建立新查詢**  
  按一下 [建立新查詢]****，即可使用圖形化查詢產生器建立資料採礦延伸模組 (DMX) 查詢。  
-  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733869"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193430"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733869"
  使用這個頁面可選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器和管理資料倉儲。 管理資料倉儲是一種關聯式資料庫，它將會儲存收集而來的資料。  
   
 > [!NOTE]  
->  您必須具備適當的權限等級，才能在伺服器上建立管理資料倉儲。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 您也必須具備適當的權限等級，才能建立管理資料倉儲角色的登入。  
+>  您必須具備適當的權限等級，才能在伺服器上建立管理資料倉儲。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。 您也必須具備適當的權限等級，才能建立管理資料倉儲角色的登入。  
   
  **伺服器名稱**  
  指定將主控管理資料倉儲的伺服器名稱。  
@@ -139,5 +139,4 @@ ms.locfileid: "85733869"
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

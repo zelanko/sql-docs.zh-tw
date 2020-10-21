@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449810"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193848"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449810"
 ### <a name="configurations"></a>組態  
  組態是屬性值配對，用來定義封裝及其執行時的工作、容器、變數、連接，以及事件處理常式的屬性。 使用組態即可更新屬性，而不需修改封裝。 當封裝執行時，便會載入組態資訊並更新屬性值。 例如，組態可更新連接的連接字串。  
   
- 在不同電腦上安裝封裝時，組態會先儲存並隨著封裝部署。 安裝封裝時，可更新組態中的值，以便於不同環境中支援封裝。 如需詳細資訊，請參閱 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
+ 在不同電腦上安裝封裝時，組態會先儲存並隨著封裝部署。 安裝封裝時，可更新組態中的值，以便於不同環境中支援封裝。 如需詳細資訊，請參閱 [建立封裝組態](./packages/legacy-package-deployment-ssis.md)。  
   
 ### <a name="logging-and-log-providers"></a>記錄和記錄提供者  
  記錄是封裝執行時所收集的封裝資訊集合。 例如，記錄可提供封裝執行的開始和結束時間。 記錄提供者會定義封裝及其容器和工作可用來記錄執行階段資訊的目的地類型與格式。 記錄與封裝相關，但封裝中的工作和容器可將資訊記錄至任何封裝記錄中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種用來記錄的內建記錄提供者。 例如， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文字檔的記錄提供者。 您也可以建立自訂的記錄提供者，並用它們進行記錄。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -117,5 +117,4 @@ ms.locfileid: "88449810"
 -   [在 SQL Server Data Tools 中建立套件](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   請參閱《開發人員指南》中的[以程式設計方式建置套件](../integration-services/building-packages-programmatically/building-packages-programmatically.md)。 
-  
   

@@ -1,6 +1,7 @@
 ---
-title: 適用於 Excel 的 MDS 增益集中的資料品質比對 | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: 適用於 Excel 的 MDS 增益集中的資料品質比對
+title: 資料品質比對
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32e22f93dff6edb90c89896fca3495d27ac34dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13b02667ef1ded9c18b070e69ed63b7bb15db5cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257634"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在新增資料之前，比較新資料與已在 MDS 中受控的資料，有助於確保不會新增重複或不精準的資料。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68092405"
   
 -   安裝 DQS 時，會建立預設知識庫 (DQS 資料)。 若您選擇使用預設知識庫 (而沒有透過 Data Quality Client 將比對原則加入預設知識庫)，您必須將工作表中的資料行對應至知識庫的網域，然後再指派權數值給您所選擇的網域。  
   
--   您可以使用 Data Quality Client 建立含有比對原則的新知識庫，或是將比對原則加入預設知識庫。 在此情況下，加權值是由您已建立的比對原則所決定，您只需要將資料行對應至定義域。 如需相關資訊，請參閱 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
+-   您可以使用 Data Quality Client 建立含有比對原則的新知識庫，或是將比對原則加入預設知識庫。 在此情況下，加權值是由您已建立的比對原則所決定，您只需要將資料行對應至定義域。 如需相關資訊，請參閱 [建立訂閱](../../data-quality-services/create-a-matching-policy.md)。  
   
  如需有關知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68092405"
   
 ## <a name="related-content"></a>相關內容  
   
--   [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [資料比對](../../data-quality-services/data-matching.md)  
   

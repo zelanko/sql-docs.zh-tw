@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456885"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193720"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
 
@@ -78,7 +78,7 @@ ms.locfileid: "88456885"
 -   已改善相應放大中套件執行的 SSISDB 記錄效能。 事件訊息和訊息內容記錄現在會以批次模式寫入至 SSISDB，而非逐一寫入。 以下是這項改善的一些其他注意事項：        
     - SQL Server Management Studio (SSMS) 目前版本中的某些報表，現在不會針對擴增中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線]** 報表、[錯誤內容]** 報表，以及 [Integration Service 儀表板] 中的 [連線資訊]** 區段。
     - 已新增資料行 **event_message_guid**。 在相應放大中查詢這些執行記錄時，請使用此資料行來聯結 [catalog].[event_message_context] 檢視與 [catalog].[event_messages] 檢視，而非使用 **event_message_id**。
--   若要取得 SSIS 相應放大的管理應用程式，請[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 或更新版本。
+-   若要取得 SSIS 相應放大的管理應用程式，請[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 或更新版本。
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>SQL Server 2017 CTP 2.0 的 SSIS 新功能
 
@@ -113,4 +113,3 @@ SQL Server 2017 CTP 1.1 沒有任何新 SSIS 功能。
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Microsoft Dynamics Online 資源的支援
 
 OData 來源和 OData 連接管理員現在支援連接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 摘要。
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495302"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192400"
 ---
 # <a name="system-variables"></a>系統變數
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495302"
  此規則也適用於使用者自訂變數。 但是，由於系統變數的資料類型無法變更，而且您必須修改這些變數的用法以符合其資料類型，因此使用者自訂變數比較有彈性。 參數繫結中使用之使用者自訂變數所定義的資料類型，通常與其對應參數的資料類型相容。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在執行 SQL 工作中將查詢參數對應至變數](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [在執行 SQL 工作中將查詢參數對應至變數](./control-flow/execute-sql-task.md)  
   

@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-author: jodebrui
-ms.author: jodebrui
+author: kevin-farlee
+ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9502743c1765561fd82f52e601983ec0bb8cc9c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6f759c6cb9b13b75216f5927d078f45996378ab8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867114"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175982"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 

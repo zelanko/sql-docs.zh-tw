@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 125e1b8fdadc04a7d3ba08807a72ef594b42388e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785064"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115851"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用備份與還原將 SQL Server 資料庫從 Windows 移轉至 Linux
 
@@ -37,7 +37,7 @@ SQL Server 的備份與還原功能是將資料庫從 Windows 上的 SQL Server 
 
 * 具有下列各項的 Windows 電腦：
   * 已安裝 [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)。
-  * 已安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+  * 已安裝 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。
   * 要移轉的目標資料庫。
 
 * 已安裝下列各項的 Linux 電腦：
@@ -78,7 +78,7 @@ SQL Server 的備份與還原功能是將資料庫從 Windows 上的 SQL Server 
 
 1. 在 Windows 電腦上安裝支援 **scp** (安全複製) 和 **ssh** (遠端登入) 命令的 Bash Shell。 兩個範例如下：
 
-   * [適用於 Linux 的 Windows 子系統](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * [適用於 Linux 的 Windows 子系統](/windows/wsl/about) (Windows 10)
    * Git Bash Shell ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. 在 Windows 上開啟 Bash 工作階段。

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3421b1c839504c01ecb256530cb579c18f043b86
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484505"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192793"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
 
@@ -47,7 +47,7 @@ ms.locfileid: "88484505"
 ## <a name="execution-value"></a>執行值  
  執行值 (在工作的 **ExecutionValue** 屬性中定義) 會傳回值 1，因為與其他傳送工作不同，「傳送資料庫」工作只能傳送一個資料庫。  
   
- 透過將使用者定義變數指派給「傳送資料庫」工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 透過將使用者定義變數指派給「傳送資料庫」工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送資料庫」工作包含下列自訂記錄項目：  
@@ -84,7 +84,7 @@ ms.locfileid: "88484505"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>傳送資料庫工作的程式設計組態  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
@@ -210,4 +210,4 @@ ms.locfileid: "88484505"
   
  輸入網路檔案共用位置，或是按一下瀏覽來找出網路檔案共用位置。  
   
- 當您以離線模式傳送資料庫時，在將資料庫檔案傳送到 **[目的資料夾]** 位置之前，會將其複製到 **[網路檔案共用]** 位置。  
+ 當您以離線模式傳送資料庫時，在將資料庫檔案傳送到 **[目的資料夾]** 位置之前，會將其複製到 **[網路檔案共用]** 位置。

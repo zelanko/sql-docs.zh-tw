@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006545"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175909"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006545"
  
  若要探索指定情況下無法進行記錄截斷的原因，請使用 **sys.database** 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行。 如需詳細資訊，請參閱 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。 如需可能延遲記錄截斷之其他因素的描述，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
-> **重要！！**  
+> [!IMPORTANT]  
 >  如果發生 9002 錯誤時資料庫處於復原狀態，請在解決問題後，使用 [ALTER DATABASE *資料庫名稱* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 來復原資料庫。  
   
  寫滿交易記錄的替代回應方式包括：  
@@ -61,8 +61,8 @@ ms.locfileid: "86006545"
   
  **若要建立交易記錄備份**  
   
-> **重要**  
->  如果資料庫已損毀，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+> [!IMPORTANT]  
+> 如果資料庫已損毀，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
 -   [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006545"
 ### <a name="move-the-log-file-to-a-different-disk"></a>將記錄檔移至不同的磁碟  
  如果無法在目前包含記錄檔的磁碟機上，釋出足夠的磁碟空間，請考慮將檔案移動到有足夠空間的其他磁碟機。  
   
-> **重要！！** 記錄檔絕不可放在壓縮檔案系統上。  
+> [!IMPORTANT]
+> 記錄檔絕不可放在壓縮檔案系統上。  
   
  **移動記錄檔**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006545"
   
 -   使用 ALTER DATABASE 陳述式，設定 FILEGROWTH 選項的非零成長遞增，藉以開啟自動成長。  
   
-> **注意** ：無論是哪一種情況，如果已達到目前的大小限制，都需增加 MAXSIZE 值。  
+> [!NOTE]
+> 無論是哪一種情況，如果已達到目前的大小限制，都需增加 MAXSIZE 值。  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>在不同的磁碟上加入記錄檔  
  使用 ALTER DATABASE <database_name> ADD LOG FILE，在含有足夠空間的不同磁碟上加入資料庫的新記錄檔。  

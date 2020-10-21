@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522890"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192456"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -98,9 +98,9 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 在 Azure 虛擬機器中，此設定步驟需要額外的步驟。 這些概念和步驟的完整說明不在本文範圍內。
 
-1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)。
+1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](/azure/active-directory-domain-services/create-instance)。
 
-2. 您必須設定 Azure Load Balancer。 這是可用性群組接聽程式的需求。 如需詳細資訊，請參閱[教學課程：在 Azure 入口網站中使用基本負載平衡器，將內部流量負載平衡到 VM](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
+2. 您必須設定 Azure Load Balancer。 這是可用性群組接聽程式的需求。 如需詳細資訊，請參閱[教學課程：在 Azure 入口網站中使用基本負載平衡器，將內部流量負載平衡到 VM](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.更新 SSISDB 中的 Scale Out Master 位址
 

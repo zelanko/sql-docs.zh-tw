@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47df12a85a22251a9cd962834e8e2a97170a4528
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360324"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038316"
 ---
 # <a name="point-geography-data-type"></a>Point (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Point ( Lat, Long, SRID )
  這是 **float** 運算式，代表所要產生之 **Point** 的 X 座標。 如需有關有效緯度和經度值的詳細資訊，請參閱 [Point](../../relational-databases/spatial/point.md)。  
   
  *SRID*  
- 這是 **int** 運算式，代表要傳回之**地理**執行個體的[空間參考識別碼](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)。  
+ 這是 **int** 運算式，代表要傳回之**地理**執行個體的[空間參考識別碼](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 > [!NOTE]  
 >  引數的點 (geography 資料類型) 的方法有相較於 WKT 為反轉的座標。  
@@ -68,4 +68,4 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [擴充的靜態地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)

@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477812"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197082"
 ---
 # <a name="flexible-file-source"></a>彈性檔案來源
 
@@ -28,7 +28,7 @@ ms.locfileid: "88477812"
 以下為目前支援的儲存體服務：
 
 - [Azure Blob 儲存體](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) \(部分機器翻譯\)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) \(部分機器翻譯\)
   
 若要查看適用於彈性檔案來源的編輯器，可在資料流程設計師上拖放 [彈性檔案來源]****，然後按兩下以開啟編輯器。
   
@@ -51,7 +51,7 @@ ms.locfileid: "88477812"
 - **escapeChar：** 用來逸出輸入檔內容中資料行分隔符號的特殊字元。 您無法為資料表同時指定 escapeChar 和 quoteChar。 只允許一個字元。 無預設值。
 - **quoteChar：** 用來為字串值加上引號的字元。 系統會將引號字元內資料行和資料列分隔符號視為字串值的一部分。 這個屬性同時適用於輸入和輸出資料集。 您無法為資料表同時指定 escapeChar 和 quoteChar。 只允許一個字元。 無預設值。
 - **nullValue：** 用來代表 Null 值的一或多個字元。 **預設**值是 \N。
-- **encodingName：** 指定編碼名稱。 請參閱 [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) 屬性。
+- **encodingName：** 指定編碼名稱。 請參閱 [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8) 屬性。
 - **skipLineCount：** 表示從輸入檔讀取資料時會略過非空白資料列的數目。 如果同時指定 skipLineCount 和 firstRowAsHeader，則會先略過行，然後從輸入檔讀取標頭資訊。
 - **treatEmptyAsNull：** 指定從輸入檔讀取資料時是否將 Null 或空字串視為 Null 值。 **預設**值為 True。
 
@@ -60,16 +60,16 @@ ms.locfileid: "88477812"
 **服務主體權限設定的注意事項**
 
 若要讓**測試連線**正常執行 (Blob 儲存體或 Data Lake Storage Gen2)，則應將服務主體至少指派給儲存體帳戶的**儲存體 Blob 資料讀取者**角色。
-此操作可透過 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 完成。
+此操作可透過 [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 完成。
 
 針對 Blob 儲存體，至少指派**儲存體 Blob 資料讀取器**角色來授與讀取權限。
 
-針對 Data Lake Storage Gen2，權限由 RBAC 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 決定。
-請注意，ACL 會使用應用程式註冊服務主體的物件識別碼 (OID) 進行設定，如[此處](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所詳述。
+針對 Data Lake Storage Gen2，權限由 RBAC 和 [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 決定。
+請注意，ACL 會使用應用程式註冊服務主體的物件識別碼 (OID) 進行設定，如[此處](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所詳述。
 這不同於與 RBAC 設定搭配使用的應用程式 (用戶端) 識別碼。
 當安全性主體透過內建角色或自訂角色獲得 RBAC 資料權限時，在要求授權時會先評估這些權限。
 如果要求作業是由安全性主體的 RBAC 指派授權，則會立即解決授權，且不會執行任何額外的 ACL 檢查。
 或者，如果安全性主體不具有 RBAC 指派，或要求作業不符合指派的權限，則會執行 ACL 檢查來判斷安全性主體是否已獲授權執行要求作業。
 針對讀取權限，請至少授與**執行**權限 (從來源檔案系統開始)，以及所要讀取檔案的**讀取**權限。
 或者，使用 RBAC 至少授與**儲存體 Blob 資料讀取者**角色。
-如需詳細資料，請參閱[這篇](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
+如需詳細資料，請參閱[這篇](/azure/storage/blobs/data-lake-storage-access-control)文章。
