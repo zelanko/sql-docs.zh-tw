@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e1d40b856409ab1e4d7859c818f1259133dc60b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe9c40aa87d4ee1cdc7b719e06911de9a1f167
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477235"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193131"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
 
@@ -55,7 +55,7 @@ ms.locfileid: "88477235"
   
  如需如何利用指令碼元件以使用連線管理員的一般資訊，請參閱[在指令碼元件中連線至資料來源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器]  之 [連線管理員]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
+ 如需 [指令碼轉換編輯器]  之 [連線管理員]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../data-flow/transformations/script-component.md)。  
   
 ### <a name="configuring-outputs-and-output-columns"></a>設定輸出和輸出資料行  
  來源元件沒有輸入，而且支援一或多個輸出。 在 [指令碼轉換編輯器]  的 [輸入及輸出]  頁面上，預設已建立單一輸出，但是尚未建立輸出資料行。 在編輯器的此頁面上，您可能會需要或想要設定下列項目。  
@@ -71,7 +71,7 @@ ms.locfileid: "88477235"
   
 -   通常，在相同 **ExclusionGroup** 中的多個輸出都有相同的輸出資料行。 然而，如果您正在建立模擬的錯誤輸出，可能會想要加入更多的資料行以儲存錯誤資訊。 如需資料流程引擎如何處理錯誤資料列的資訊，請參閱[使用資料流程元件中的錯誤輸出](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 不過，在指令碼元件中，您必須撰寫自已的程式碼，以適當的錯誤資訊填入其他資料行。 如需詳細資訊，請參閱[模擬指令碼元件的錯誤輸出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../data-flow/transformations/script-component.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
  如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
@@ -80,7 +80,7 @@ ms.locfileid: "88477235"
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器]  的 [指令碼]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 如需 [指令碼轉換編輯器]  的 [指令碼]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../data-flow/transformations/script-component.md)。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>在程式碼設計模式中編寫來源元件的指令碼  
  在您已為元件設定中繼資料之後，請開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以撰寫自訂指令碼。 若要開啟 VSTA，請在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 撰寫指令碼，視為 **ScriptLanguage** 屬性選取的指令碼語言而定。  
@@ -394,5 +394,4 @@ ms.locfileid: "88477235"
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [開發自訂來源元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
-  
   

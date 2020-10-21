@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e18a7b006b3fc48682b4de2d6c2ba0b233bfd24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ce79b8cc4d0a8fff0dda5bf833f918285eb4c7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457080"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192432"
 ---
 # <a name="reuse-of-package-objects"></a>重複使用封裝物件
 
@@ -46,8 +46,7 @@ ms.locfileid: "88457080"
   
 -   [複製封裝物件](../integration-services/copy-package-objects.md)  
   
--   [複製專案項目](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [複製專案項目](./integration-services-ssis-projects-and-solutions.md)  
   
--   [將套件儲存為套件範本](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
-  
+-   [將套件儲存為套件範本](./save-packages.md)  
   

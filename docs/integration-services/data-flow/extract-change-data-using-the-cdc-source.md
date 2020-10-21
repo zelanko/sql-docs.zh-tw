@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb1fc17be92259e0fe642c90f760c375e5eacb0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430880"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192729"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
 
@@ -76,8 +76,7 @@ ms.locfileid: "88430880"
 15. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [CDC 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [CDC 來源編輯器 &#40;連線管理員頁面&#41;](./cdc-source.md)   
+ [CDC 來源編輯器 &#40;資料行頁面&#41;](./cdc-source.md)   
+ [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](./cdc-source.md)  
   

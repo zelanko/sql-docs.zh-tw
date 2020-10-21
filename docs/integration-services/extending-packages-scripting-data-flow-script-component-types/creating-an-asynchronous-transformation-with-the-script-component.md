@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d271139edbde0f1c67467b6fe880f916fb6c5142
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495607"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193108"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用指令碼元件建立非同步轉換
 
@@ -53,7 +53,7 @@ ms.locfileid: "88495607"
   
  在 [指令碼轉換編輯器]**** 的 [輸入資料行]**** 頁面上，資料行清單會從資料流程中的上游元件輸出顯示可用的資料行。 選取要轉換或通過的資料行。 將任何您要就地轉換的資料行標示成「讀取/寫入」。  
   
- 如需 [指令碼轉換編輯器] 的 [輸入資料行] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 如需 [指令碼轉換編輯器] 的 [輸入資料行] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../data-flow/transformations/script-component.md)。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>設定輸入、輸出及輸出資料行  
  轉換元件支援一或多個輸出。  
@@ -70,7 +70,7 @@ ms.locfileid: "88495607"
   
 -   您可能會想要加入更多的資料行來包含其他資訊。 您必須撰寫自己的程式碼，才能用資料填滿其他資料行。 如需重新產生標準錯誤輸出之行為的資訊，請參閱[模擬指令碼元件的錯誤輸出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../data-flow/transformations/script-component.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
  如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
@@ -79,7 +79,7 @@ ms.locfileid: "88495607"
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器] 的 [指令碼] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 如需 [指令碼轉換編輯器] 的 [指令碼] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../data-flow/transformations/script-component.md)。  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>在程式碼設計模式中編寫非同步轉換元件的指令碼  
  在您設定好元件的所有中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  來開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼] 頁面上 **ScriptLanguage** 屬性的指令碼語言。  
@@ -238,5 +238,4 @@ public class ScriptMain:
  [了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [開發具有非同步輸出的自訂轉換元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
   

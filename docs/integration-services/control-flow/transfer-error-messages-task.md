@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9eb09d094ff5ce907479dacd848ca2a6010cee92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa0bf307931b25b72a56e069e9f1c45b9e6c8b5d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392914"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192778"
 ---
 # <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
 
@@ -53,7 +53,7 @@ ms.locfileid: "88392914"
  該工作並不報告錯誤訊息傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 透過將使用者定義的變數指派給 [傳送錯誤訊息] 工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 透過將使用者定義的變數指派給 [傳送錯誤訊息] 工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送錯誤訊息」工作包含下列自訂記錄項目：  
@@ -81,7 +81,7 @@ ms.locfileid: "88392914"
 ## <a name="related-tasks"></a>相關工作  
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
   使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。   
@@ -134,5 +134,4 @@ ms.locfileid: "88392914"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  
-  
   

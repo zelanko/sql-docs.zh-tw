@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7c93711eae4a6a2eea397940811089f366e47829
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896966"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115921"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證
 
@@ -53,9 +53,9 @@ ms.locfileid: "85896966"
 ## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> 建立用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 AD 使用者並設定 SPN
 
 > [!NOTE]
-> 下列步驟會使用您的[完整網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在 **Azure** 上，您必須先 **[建立名稱](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** ，然後繼續執行。
+> 下列步驟會使用您的[完整網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在 **Azure** 上，您必須先 **[建立名稱](/azure/virtual-machines/linux/portal-create-fqdn)** ，然後繼續執行。
 
-1. 在您的網域控制站上執行 [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令，以建立密碼永不過期的新 AD 使用者。 下列範例會將帳戶命名為 `mssql`，但帳戶名稱可以是您喜歡的任何名稱。 系統將提示您輸入該帳戶的新密碼。
+1. 在您的網域控制站上執行 [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell 命令，以建立密碼永不過期的新 AD 使用者。 下列範例會將帳戶命名為 `mssql`，但帳戶名稱可以是您喜歡的任何名稱。 系統將提示您輸入該帳戶的新密碼。
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -69,8 +69,8 @@ ms.locfileid: "85896966"
 2. 使用 **setspn.exe** 工具來設定此帳戶的 ServicePrincipalName (SPN)。 SPN 必須與下列範例中所指定的格式完全相同。 您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機上執行 `hostname --all-fqdns`，以尋找 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機電腦的完整網域名稱。 除非您已將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設定為使用不同的連接埠號碼，否則 TCP 通訊埠應為 1433。
 
    ```PowerShell
-   setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
    ```
 
    > [!NOTE]
@@ -96,11 +96,11 @@ ms.locfileid: "85896966"
    ```bash
    kinit user@CONTOSO.COM
    kvno user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
+   kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > SPN 可能需要幾分鐘的時間才能傳播到您的網域，特別是當網域很大時。 如果您收到錯誤 (`kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`)，請稍候幾分鐘，然後再試一次。</br></br> 只有在伺服器已加入 AD 網域 (涵蓋在上一節中) 時，上述命令才會生效。
+   > SPN 可能需要幾分鐘的時間才能傳播到您的網域，特別是當網域很大時。 如果您收到錯誤 (`kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM`)，請稍候幾分鐘，然後再試一次。</br></br> 只有在伺服器已加入 AD 網域 (涵蓋在上一節中) 時，上述命令才會生效。
 
 1. 在 Windows 機器命令提示字元中，使用下列命令，以 [**ktpass**](/windows-server/administration/windows-commands/ktpass) 為每個 SPN 新增 Keytab 項目：
 

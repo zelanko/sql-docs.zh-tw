@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0136b994f064a01a66d4c0884499172b1dab894b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392644"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197202"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
 
@@ -79,7 +79,7 @@ ms.locfileid: "88392644"
   
  如需利用撰寫程式的方式將工作加入封裝的詳細資訊，請參閱 [以程式設計方式加入工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
   
- 每項工作均可使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 每項工作均可使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱 [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 ## <a name="tasks-connections-and-groups"></a>工作連接和群組  
  如果工作包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
@@ -88,5 +88,4 @@ ms.locfileid: "88392644"
   
 ## <a name="related-tasks"></a>相關工作  
  [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7162d2eb4c718330fb3fec38dceddc4f0bf8e04e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349164"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192765"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
 
@@ -86,7 +86,7 @@ ms.locfileid: "88349164"
  「傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件」工作並不報告物件傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 工作之 **ExecutionValue** 屬性中儲存的執行值會傳回已傳送的物件數目。 透過將使用者定義變數指派給「傳送 SQL Server 物件」工作的 **ExecValueVariable** 屬性，可將與物件傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 工作之 **ExecutionValue** 屬性中儲存的執行值會傳回已傳送的物件數目。 透過將使用者定義變數指派給「傳送 SQL Server 物件」工作的 **ExecValueVariable** 屬性，可將與物件傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](../integration-services-ssis-variables.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送 SQL Server 物件」工作包含下列自訂記錄項目：  
@@ -117,7 +117,7 @@ ms.locfileid: "88349164"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>以程式設計方式設定傳送 SQL Server 物件工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  
@@ -331,7 +331,7 @@ ms.locfileid: "88349164"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
- [傳送 SQL Server 物件工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [傳送 SQL Server 物件工作編輯器 &#40;一般頁面&#41;]()   
  [運算式頁面](../../integration-services/expressions/expressions-page.md)   
  [大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

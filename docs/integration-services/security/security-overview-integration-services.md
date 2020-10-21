@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487678"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193780"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487678"
   
  如果您將組態儲存在檔案系統，而非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，請務必保護包含封裝組態檔的資料夾。  
   
- 如需有關組態的詳細資訊，請參閱＜ [Package Configurations](../../integration-services/packages/package-configurations.md)＞。  
+ 如需有關組態的詳細資訊，請參閱＜ [Package Configurations](../packages/legacy-package-deployment-ssis.md)＞。  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>控制 Integration Services 服務的存取  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務列出已儲存的封裝。 為防止未經授權的使用者檢視本機與遠端電腦上儲存之封裝的資訊，並藉以得知私人資訊，請限制對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務之電腦的存取。  
@@ -121,7 +121,7 @@ ms.locfileid: "88487678"
 ### <a name="configuration-files"></a>組態檔  
  如果組態中含有機密資訊，例如登入和密碼資訊，則應考慮將組態儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，或使用存取控制清單 (ACL) 來限制對儲存檔案之位置或資料夾的存取權，且只允許特定帳戶擁有其存取權。 通常，您可以將存取權授與您允許執行封裝的帳戶，以及負責管理和疑難排解封裝的帳戶，其工作可能包括檢閱組態、檢查點和記錄檔的內容。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供更安全的儲存體，因為它可以提供伺服器和資料庫層級的保護。 若要將組態儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態類型。 若要儲存至檔案系統，則可以使用 XML 組態類型。  
   
- 如需詳細資訊，請參閱 [封裝組態](../../integration-services/packages/package-configurations.md)、 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)和 [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
+ 如需詳細資訊，請參閱 [封裝組態](../packages/legacy-package-deployment-ssis.md)、 [建立封裝組態](../packages/legacy-package-deployment-ssis.md)和 [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
 ### <a name="checkpoint-files"></a>檢查點檔案  
  同樣地，如果封裝使用的檢查點檔案包含機密資訊，應使用存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 檢查點檔案儲存有關封裝進度和目前變數值的目前狀態資訊。 例如，封裝可能包括含有電話號碼的自訂變數。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
@@ -147,4 +147,4 @@ ms.locfileid: "88487678"
   
 -   [使用數位憑證來簽署封裝](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [設定或變更封裝的保護等級](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [設定或變更封裝的保護等級](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

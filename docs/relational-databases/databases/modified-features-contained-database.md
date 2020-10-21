@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465401"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194302"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465401"
  在自主資料庫外部使用時，ALTER DATABASE 的語法與用於非自主資料庫的語法有所不同。 這些變更可防止跨越資料庫界限。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- 自主資料庫的 CREATE DATABASE 語法與非自主資料庫的語法有所不同。 如需新語法需求和允許事項的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 自主資料庫的 CREATE DATABASE 語法與非自主資料庫的語法有所不同。 如需新語法需求和允許事項的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)。  
   
 ## <a name="temporary-tables"></a>暫存資料表  
  雖然自主資料庫允許使用本機暫存資料表，不過其行為與非自主資料庫的資料表行為有所不同。 在非自主資料庫中，暫存資料表資料是在 **tempdb**的定序中定序。 在自主資料庫中，暫存資料表資料是在自主資料庫的定序中定序。  
@@ -55,5 +55,4 @@ ms.locfileid: "88465401"
 ## <a name="see-also"></a>另請參閱  
  [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)   
  [自主資料庫](../../relational-databases/databases/contained-databases.md)  
-  
   

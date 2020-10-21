@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227215"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191748"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "91227215"
   
  在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 之類的程式設計語言中，運算式一律會評估得出單一結果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 選取清單中的運算式會遵循這個規則的變化：此運算式會針對結果集中的每個資料列個別進行評估。 在結果集的每個資料列中，單一運算式可以有不同的值，但每個資料列只能有運算式的單一值。 例如，在下列 `SELECT` 陳述式中，選取清單中的 `ProductID` 參考和 `1+2` 一詞都是運算式：  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, 1+2  

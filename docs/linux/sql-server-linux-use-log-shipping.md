@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897198"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115791"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
@@ -30,7 +30,7 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
 - 在次要 SQL Server 執行個體上還原交易記錄備份檔案
 
 ## <a name="prerequisites"></a>Prerequisites
-- [在 Linux 上安裝 SQL Server Agent](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [在 Linux 上安裝 SQL Server Agent](./sql-server-linux-setup-sql-agent.md)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>使用 CIFS 設定記錄傳送的網路共用 
 
@@ -319,5 +319,3 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

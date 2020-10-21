@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385804"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192576"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385804"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
   > [!NOTE]
-  > 受控執行個體上的 SQL Agent 一律設定為使用 Database Mail，因此本內容不適用於受控執行個體。 在受控執行個體中，您需要有一個稱為 **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 的設定檔，才能將 SQL Agent 與 Database Mail 繫結。 
+  > 受控執行個體上的 SQL Agent 一律設定為使用 Database Mail，因此本內容不適用於受控執行個體。 在受控執行個體中，您需要有一個稱為 **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 的設定檔，才能將 SQL Agent 與 Database Mail 繫結。 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385804"
 -   [運算子](../../ssms/agent/operators.md)  
   
      操作員是可接收電子通知之人員或群組使用的別名  
-  
   

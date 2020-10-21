@@ -24,12 +24,12 @@ ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbf878b6e5dd7023e45a9057e1195c76a26ecb7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209f40363ee4f5566604d301c8ade1d9116217
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467972"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196722"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ LTRIM ( character_expression )
  下列範例會利用 LTRIM 來移除字元運算式中的開頭空白。  
   
 ```sql  
-SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
+SELECT LTRIM('     Five spaces are at the beginning of this string.');  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

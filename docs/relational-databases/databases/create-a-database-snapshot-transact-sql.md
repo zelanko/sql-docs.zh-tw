@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e1d10976a795570a1bfded3d4d379284dc317b3
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 39110067ea0abb2722da0ee88f70946d2875ccee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847348"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192566"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中 *source_**database_name* 是來源資料庫，*logical_file_name* 是參考檔案時 SQL Server 中所使用的邏輯名稱，*os_file_name* 是建立檔案時作業系統所使用的路徑和檔案名稱，而 *database_snapshot_name* 是要還原資料庫的目標快照集名稱。 如需此語法的完整描述，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)資料庫快照集的唯一方式。  
+     其中 *source_**database_name* 是來源資料庫，*logical_file_name* 是參考檔案時 SQL Server 中所使用的邏輯名稱，*os_file_name* 是建立檔案時作業系統所使用的路徑和檔案名稱，而 *database_snapshot_name* 是要還原資料庫的目標快照集名稱。 如需此語法的完整描述，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)資料庫快照集的唯一方式。  
   
     > [!NOTE]  
     >  建立資料庫快照集時，CREATE DATABASE 陳述式中不允許記錄檔、離線檔案、還原檔案與無用檔案。  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> B. 在 Sales 資料庫上建立快照集  
- 此範例會在 `sales_snapshot1200`資料庫上建立資料庫快照集 `Sales` 。 此資料庫是在 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)中的「建立含有檔案群組的資料庫」的範例部分所建立。  
+ 此範例會在 `sales_snapshot1200`資料庫上建立資料庫快照集 `Sales` 。 此資料庫是在 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)中的「建立含有檔案群組的資料庫」的範例部分所建立。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -179,8 +179,6 @@ GO
 -   [卸除資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
-  
-

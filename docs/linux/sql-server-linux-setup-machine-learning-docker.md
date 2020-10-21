@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 128510b920e171b39bddacebca89624289d67213
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173741"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115738"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>在 Docker 上安裝 SQL Server 機器學習服務 (Python 與 R)
 
@@ -93,7 +93,7 @@ ms.locfileid: "88173741"
    ```
   
    > [!NOTE]
-   > 在容器中執行生產環境 SQL Server 版本的程序會稍有不同。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果您使用相同的容器名稱和連接埠，則本逐步解說的其餘部分仍適用於生產環境容器。
+   > 在容器中執行生產環境 SQL Server 版本的程序會稍有不同。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](./sql-server-linux-docker-container-deployment.md)。 如果您使用相同的容器名稱和連接埠，則本逐步解說的其餘部分仍適用於生產環境容器。
 
 2. 若要檢視 Docker 容器，請執行 `docker ps` 命令：
 
@@ -101,7 +101,7 @@ ms.locfileid: "88173741"
    sudo docker ps -a
    ```
 
-3. 若 **STATUS** 資料行顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 資料行中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
+3. 若 **STATUS** 資料行顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 資料行中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
 
  
     輸出：
@@ -130,4 +130,4 @@ Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 
 R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
 + [快速入門：在 T-SQL 中執行 R](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [教學課程：適用於 R 開發人員的資料庫內分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../machine-learning/tutorials/r-taxi-classification-introduction.md)

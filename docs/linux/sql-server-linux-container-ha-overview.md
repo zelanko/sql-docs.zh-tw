@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c4d14e0b7f76aaebd0a0bdac00c93267b91d0ab8
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: d7e15c070b17fd0a3682f5572c9b7cd3ce2c1dee
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785111"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115651"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
 
@@ -43,5 +43,5 @@ SQL Server 2017 和更新版本支援 Kubernetes 上的容器。
 ## <a name="next-steps"></a>接下來的步驟
 
 若要在 Azure Kubernetes Service (AKS) 中部署 SQL Server 容器，請參閱這些範例：
-* [在 Docker 容器中部署 SQL Server](sql-server-linux-configure-docker.md)
+* [在 Docker 容器中部署 SQL Server](./sql-server-linux-docker-container-deployment.md)
 * [在 Kubernetes 中部署 SQL Server 容器](tutorial-sql-server-containers-kubernetes.md)

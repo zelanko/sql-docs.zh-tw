@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8aa4a0c94f0728162230c5a282cbac7410643a4b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425590"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194544"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
 
@@ -30,7 +30,7 @@ ms.locfileid: "88425590"
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整數|用來存取 XML 資料的模式。|  
-|UseInlineSchema|布林值|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 **False**。|  
+|UseInlineSchema|Boolean|一個值，指出是否要使用 XML 來源中的內嵌結構描述定義。 此屬性的預設值為 **False**。|  
 |XMLData|String|要從中擷取 XML 資料的檔案或變數。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
 |XMLSchemaDefinition|String|結構描述定義檔 (.xsd) 的路徑和檔案名稱。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   
@@ -45,6 +45,5 @@ ms.locfileid: "88425590"
  如需詳細資訊，請參閱 [XML 來源](../../integration-services/data-flow/xml-source.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

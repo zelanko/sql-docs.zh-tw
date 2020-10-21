@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421082"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192588"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421082"
  測試電子郵件訊息的 **mailitem_id** 。  
   
  **疑難排解**  
- 按一下以開啟《線上叢書》的 [Database Mail 疑難排解](https://msdn.microsoft.com/library/ms188663.aspx)主題。  
+ 按一下以開啟《線上叢書》的 [Database Mail 疑難排解](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))主題。  
   
  [Database Mail 組態精靈](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421082"
 6.  執行指令碼以建立組態。  
   
 7.  此指令碼不會將資料庫使用者存取權授與給設定檔。 因此，依預設只有 **系統管理員** 固定安全性角色的成員才能使用此設定檔。 如需授與設定檔存取權限的詳細資訊，請參閱 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)。  
-  
   

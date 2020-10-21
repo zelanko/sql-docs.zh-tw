@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987584"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192848"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Azure 磁碟與企業級商務持續性和災害復原解決方案相容。 如�
 ### <a name="azure-storage-concepts"></a>Azure 儲存體概念  
 使用 Azure 功能中的 SQL Server 資料檔案時，您必須在 Azure 中建立儲存體帳戶和容器。 然後，您必須建立 SQL Server 認證，其中包括容器原則的相關資訊以及存取容器所需的共用存取簽章。  
 
-在 [Microsoft Azure](https://azure.microsoft.com) 中，[Azure 儲存體](https://azure.microsoft.com/services/storage/)帳戶代表存取 Blob 之命名空間的最高層級。 儲存體帳戶可以包含不限制數目的容器，只要其總大小低於儲存體限制即可。 如需有關儲存體限制的最新資訊，請參閱 [Azure 訂閱與服務限制、配額及條件約束](https://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器會提供一組 [Blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage) 的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限制數目的容器。 同樣地，容器可以儲存不限數目的 Blob。 Azure 儲存體可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 這項新功能使用的是分頁 Blob，而且當檔案中的位元組範圍經常修改時，更有效率。 您可以使用以下 URL 格式存取 Blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
+在 [Microsoft Azure](https://azure.microsoft.com) 中，[Azure 儲存體](https://azure.microsoft.com/services/storage/)帳戶代表存取 Blob 之命名空間的最高層級。 儲存體帳戶可以包含不限制數目的容器，只要其總大小低於儲存體限制即可。 如需有關儲存體限制的最新資訊，請參閱 [Azure 訂閱與服務限制、配額及條件約束](/azure/azure-subscription-service-limits)。 容器會提供一組 [Blob](/azure/storage/common/storage-introduction#blob-storage) 的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限制數目的容器。 同樣地，容器可以儲存不限數目的 Blob。 Azure 儲存體可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 這項新功能使用的是分頁 Blob，而且當檔案中的位元組範圍經常修改時，更有效率。 您可以使用以下 URL 格式存取 Blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
 
 ### <a name="azure-billing-considerations"></a>Azure 計費考量  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >如果有任何作用中參考指向容器中的資料檔案，則嘗試刪除相對應的 SQL Server 認證會失敗。
 
-如需詳細資訊，請參閱 [管理 Azure 儲存體資源的存取](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
+如需詳細資訊，請參閱 [管理 Azure 儲存體資源的存取](/azure/storage/blobs/storage-manage-access-to-resources)  
 
 ### <a name="security"></a>安全性  
  以下是將 SQL Server 資料檔案儲存在 Azure 儲存體中的安全性考量和需求。
@@ -120,7 +120,7 @@ ON
   
 - 使用 Azure 功能中的 SQL Server 資料檔案時，您的儲存體帳戶不支援異地備援。 如果儲存體帳戶進行異地備援，然後進行異地容錯移轉，可能會發生資料庫損毀。  
   
-- 如需容量限制，請參閱 [Blob 儲存體簡介](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)。  
+- 如需容量限制，請參閱 [Blob 儲存體簡介](/azure/storage/blobs/storage-blobs-introduction)。  
   
 - 您無法使用 Azure 儲存體功能中的 SQL Server 資料檔案，將記憶體內部 OLTP 資料儲存在 Blob 儲存體中。 這是因為記憶體內部 OLTP 相依於 **FileStream** ，而在目前版本的功能中，不支援將 **FileStream** 資料儲存在 Azure 儲存體中。  
   
@@ -166,10 +166,10 @@ ON
     解決方案：當您嘗試卸除的認證仍然由 Azure 儲存體作用中資料庫檔案使用時，就可能會看見此錯誤。 若要卸除認證，您必須先刪除具有此資料庫檔案的相關聯 Blob。 若要刪除擁有使用中租用的 Blob，您必須先釋放租用。  
   
 - *尚未在容器上正確建立共用存取簽章。*    
-     解決方案：請確定您已經在容器上正確建立共用存取簽章。 請檢閱以下連結中第 2 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
+     解決方案：請確定您已經在容器上正確建立共用存取簽章。 請檢閱以下連結中第 2 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)。  
   
 - *尚未正確建立 SQL Server 認證。*    
-    解決方案：請確定您已經針對 [識別] 欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-3-database-backup-to-url.md)。  
+    解決方案：請確定您已經針對 [識別] 欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url)。  
   
  **租用 Blob 錯誤：**  
   

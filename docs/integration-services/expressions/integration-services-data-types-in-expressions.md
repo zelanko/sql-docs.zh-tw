@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425530"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196411"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
 
@@ -135,12 +135,11 @@ ms.locfileid: "88425530"
  許多運算和函數的結果都需要預定的資料類型。 此資料類型可能是引數的資料類型，或運算式評估工具轉換結果的資料類型。 例如，邏輯 OR 運算子 (||) 的結果固定為布林、ABS 函數的結果為引數的數值資料類型，而乘法的結果為可保留結果且不會遺失的最小數值資料類型。 如需結果之資料類型的詳細資訊，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在資料流程元件中使用運算式](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [在資料流程元件中使用運算式](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>相關內容  
   
 -   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=746575)  
   
 -   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
-  
   

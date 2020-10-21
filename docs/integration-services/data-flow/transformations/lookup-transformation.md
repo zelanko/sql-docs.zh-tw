@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480901"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193211"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480901"
 
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
   
- 參考資料集可以是快取檔案、現有的資料表或檢視、新資料表或 SQL 查詢的結果。 「查閱」轉換會使用 OLE DB 連接管理員或快取連接管理員來連接到參考資料集。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
+ 參考資料集可以是快取檔案、現有的資料表或檢視、新資料表或 SQL 查詢的結果。 「查閱」轉換會使用 OLE DB 連接管理員或快取連接管理員來連接到參考資料集。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [快取連線管理員](../../connection-manager/cache-connection-manager.md)  
   
  您可以利用下列方式設定「查閱」轉換：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480901"
   
  下列是將快取保存至檔案的其他優點：  
   
--   ***在多個封裝間共用快取檔案。如需詳細資訊，請參閱***  [使用快取連線管理員以完整快取模式實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
+-   ***在多個封裝間共用快取檔案。如需詳細資訊，請參閱***  [使用快取連線管理員以完整快取模式實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
   
 -   使用封裝部署快取檔案， ***接著就可以在多部電腦上使用資料。*** 如需詳細資訊，請參閱 [針對查閱轉換來建立及部署快取](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480901"
   
      此快取選項與 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]中用於「查閱」轉換的完整快取選項相容。  
   
--   參考資料集是從資料流程中已連接的資料來源或從快取檔案產生，然後在「查閱」轉換執行之前載入至快取。 您可以使用快取連接管理員或是快取轉換來存取資料集。 如需詳細資訊，請參閱 [快取連線管理員](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [快取轉換](../../../integration-services/data-flow/transformations/cache-transform.md)。  
+-   參考資料集是從資料流程中已連接的資料來源或從快取檔案產生，然後在「查閱」轉換執行之前載入至快取。 您可以使用快取連接管理員或是快取轉換來存取資料集。 如需詳細資訊，請參閱 [快取連線管理員](../../connection-manager/cache-connection-manager.md) 和 [快取轉換](../../../integration-services/data-flow/transformations/cache-transform.md)。  
   
 -   參考資料集是藉由在執行「查閱」轉換期間使用資料表、檢視或 SQL 查詢而產生。 在參考資料集中具有相符項目的資料列，以及在資料集中沒有相符項目的資料列，都可以載入至快取。  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480901"
   
 -   [以沒有快取或部分快取模式來實作查閱](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [使用快取連線管理員以完整快取模式來實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [使用快取連線管理員以完整快取模式來實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [使用 OLE DB 連線管理員以完整快取模式來實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [使用 OLE DB 連線管理員以完整快取模式來實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相關內容  
   
--   位於 msdn.microsoft.com 的影片： [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   位於 msdn.microsoft.com 的影片： [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))  
   
 -   位於 blogs.msdn.com 的部落格項目： [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(使用查閱轉換快取模式的最佳做法)  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480901"
  從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的資料表。  
   
 > [!NOTE]  
->  如果在 **[查閱轉換編輯器]** 的 **[進階]** 頁面上指定 SQL 陳述式，則該 SQL 陳述式會覆寫並取代此處所選取的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;進階頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)＞。  
+>  如果在 **[查閱轉換編輯器]** 的 **[進階]** 頁面上指定 SQL 陳述式，則該 SQL 陳述式會覆寫並取代此處所選取的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;進階頁面&#41;]()＞。  
   
  **新增**  
  使用 [建立資料表]  對話方塊建立新的資料表。  
@@ -270,7 +270,7 @@ ms.locfileid: "89480901"
  修改用來產生參考資料集的 SQL 陳述式。  
   
 > [!NOTE]  
->  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器]**** 的 [連接]**** 頁面上所指定的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;連接頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)＞。  
+>  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器]**** 的 [連接]**** 頁面上所指定的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;連接頁面&#41;]()＞。  
   
  **設定參數**  
  使用 [設定查詢參數]**** 對話方塊，即可將輸入資料行對應至參數。  
@@ -283,5 +283,4 @@ ms.locfileid: "89480901"
  [詞彙查閱轉換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

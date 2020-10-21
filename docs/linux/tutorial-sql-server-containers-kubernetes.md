@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e9234e6d429dcd95fa9556426871a4726f4f7f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808604"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155102"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes Service (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 * **Kubernetes 叢集**
    - 本教學課程需要使用 Kubernetes 叢集。 這些步驟會使用 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) 來管理叢集。 
 
-   - 請參閱[部署 Azure Kubernetes Service (AKS) 叢集](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)，以使用 `kubectl` 在 AKS 中建立單一節點 Kubernetes 叢集並進行連線。 
+   - 請參閱[部署 Azure Kubernetes Service (AKS) 叢集](/azure/aks/tutorial-kubernetes-deploy-cluster)，以使用 `kubectl` 在 AKS 中建立單一節點 Kubernetes 叢集並進行連線。 
 
    >[!NOTE]
    >為了防止節點失敗，Kubernetes 叢集需要一個以上的節點。
@@ -175,6 +175,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -296,9 +297,9 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 您可以使用下列應用程式來連接到 SQL Server 執行個體。 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -349,4 +350,4 @@ Kubernetes 會自動重新建立 Pod，以復原 SQL Server 執行個體，並�
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
->[Kubernetes 簡介](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes 簡介](/azure/aks/intro-kubernetes)

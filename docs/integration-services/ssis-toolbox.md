@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487661"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192371"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487661"
  > [!NOTE]
 > 若工具箱未出現，請前往 [檢視]-> [其他視窗]-> [SSIS 工具箱]。
  
-您可以按一下該元件，從工具箱底部檢視其說明，從而獲取更多有關於該元件的資訊。 另有一些元件還備有範例，示範如何設定及使用這些元件可供您使用。 這類的範例可從 [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189)上取得。 若要從 **[SSIS 工具箱]** 存取範例，請按一下顯示在描述底下的 **[尋找範例]** 連結。  
+您可以按一下該元件，從工具箱底部檢視其說明，從而獲取更多有關於該元件的資訊。 另有一些元件還備有範例，示範如何設定及使用這些元件可供您使用。 這類的範例可從 [MSDN](/samples/browse/)上取得。 若要從 **[SSIS 工具箱]** 存取範例，請按一下顯示在描述底下的 **[尋找範例]** 連結。  
   
 > [!NOTE]
 > 您無法從工具箱中*移除*已經安裝的元件。  
@@ -65,5 +65,4 @@ ms.locfileid: "88487661"
   
 ## <a name="refresh-the-ssis-toolbox"></a>重新整理 SSIS 工具箱  
   
-1.  在 SSIS 工具箱中按一下滑鼠右鍵，然後按一下 [重新整理工具箱]****。  
-
+1.  在 SSIS 工具箱中按一下滑鼠右鍵，然後按一下 [重新整理工具箱]****。

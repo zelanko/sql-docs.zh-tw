@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487165"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195666"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88487165"
  您可以從位於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更新版本之執行個體的資料庫中擷取 DAC。 如果您針對從 DAC 部署的資料庫來執行擷取程序，則只會擷取資料庫中物件的定義。 此程序不會參考 **msdb** 中註冊的 DAC (**中的** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 擷取程序不會在目前的 Database Engine 執行個體中註冊 DAC 定義。 如需有關註冊 DAC 的詳細資訊，請參閱＜ [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)＞。  
   
 ##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
- DAC 只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中進行擷取。 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法擷取 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
+ DAC 只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中進行擷取。 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法擷取 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))＞。  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  擷取 DAC 至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限。 擷取 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是擷取 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 sysadmin 固定伺服器角色的成員或是內建 SQL Server 系統管理員帳戶 **sa** 也可以擷取 DAC。  
@@ -163,5 +163,4 @@ $extractionunit.Extract($dacpacPath)
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

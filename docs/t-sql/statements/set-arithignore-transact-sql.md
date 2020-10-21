@@ -24,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ca2f675704741c0bd48c8ffbf6be6037065075c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: add8da1ae3655364eaf20e15cec0b8f26af5ea26
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670841"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196562"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,11 +65,10 @@ SET ARITHIGNORE OFF
   
  若要檢視此設定的目前設定，請執行下列查詢。  
   
-```  
+```sql  
 DECLARE @ARITHIGNORE VARCHAR(3) = 'OFF';  
 IF ( (128 & @@OPTIONS) = 128 ) SET @ARITHIGNORE = 'ON';  
 SELECT @ARITHIGNORE AS ARITHIGNORE;  
-  
 ```  
   
 ## <a name="permissions"></a>權限  
@@ -78,7 +77,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
 ## <a name="examples"></a>範例  
  下列範例會示範如何搭配這兩類查詢錯誤來使用這兩個 `SET ARITHIGNORE` 設定。  
   
-```  
+```sql  
 SET ARITHABORT OFF;  
 SET ANSI_WARNINGS OFF  
 GO  
@@ -107,12 +106,11 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會示範除以零和溢位錯誤。 這個範例不會傳回這些錯誤的錯誤訊息，因為 ARITHIGNORE 是 OFF。  
   
-```  
+```sql  
 -- SET ARITHIGNORE OFF and testing.  
 SET ARITHIGNORE OFF;  
 SELECT 1 / 0 AS DivideByZero;  
 SELECT CAST(256 AS TINYINT) AS Overflow;  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

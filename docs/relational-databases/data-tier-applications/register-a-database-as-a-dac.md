@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b328f2fc32cf784caef1192bc8143b3ed9d1ffbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b528471bdba9125950cc885e91ee2194e446d851
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494727"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196242"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88494727"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  DAC 註冊只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫上執行。 如果已經針對資料庫註冊 DAC，將無法執行 DAC 註冊。 例如，如果資料庫是藉由部署 DAC 所建立，您將無法執行 [註冊資料層應用程式精靈]。  
   
- 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法註冊 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
+ 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法註冊 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))＞。  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中註冊 DAC 至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限、 **sys.sql_expression_dependencies**的 SELECT 權限，以及 **dbcreator** 固定伺服器角色的成員資格。 **系統管理員** 固定伺服器角色的成員或是內建 SQL Server 系統管理員帳戶 **sa** 也可以註冊 DAC。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中註冊不包含登入的 DAC，需要 **dbmanager** 或 **serveradmin** 角色的成員資格。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中註冊包含登入的 DAC，需要 **loginmanager** 或 **serveradmin** 角色的成員資格。  
@@ -178,5 +178,4 @@ $registerunit.Register()
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

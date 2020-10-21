@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989968"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195170"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>排程部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件執行
 
@@ -44,13 +44,13 @@ ms.locfileid: "90989968"
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
 
-如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
+如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](/azure/sql-database/sql-database-elastic-jobs-overview)。
 
 ### <a name="prerequisites"></a>Prerequisites
 
 您必須執行下列動作，才能使用彈性作業來排程 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的 SSIS 套件：
 
-1.  安裝和設定彈性資料庫作業元件。 如需詳細資訊，請參閱[安裝彈性資料庫作業概觀](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)。
+1.  安裝和設定彈性資料庫作業元件。 如需詳細資訊，請參閱[安裝彈性資料庫作業概觀](/azure/sql-database/sql-database-elastic-jobs-service-installation)。
 
 2. 建立作業可用來將命令傳送至 SSIS 目錄資料庫的資料庫範圍認證。 如需詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
@@ -166,17 +166,17 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 
 若要排程 Data Factory 管線，請使用下列其中一個觸發程序：
 
-- [排程觸發程序](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [排程觸發程序](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [輪轉視窗觸發程序](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [輪轉視窗觸發程序](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [事件架構觸發程序](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [事件架構觸發程序](/azure/data-factory/how-to-create-event-trigger)
 
 若要執行 SSIS 套件作為 Data Factory 管線的一部分，請使用下列其中一個活動：
 
-- [執行 SSIS 套件活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
+- [執行 SSIS 套件活動](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
 
-- [預存程序活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
+- [預存程序活動](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
 
 ## <a name="next-steps"></a>後續步驟
 

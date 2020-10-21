@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: ced5df4a63cf6fbfed9e47a59a5c7f626de3874b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 661fbd184750fbb912ef44d28c7d6cdf2d68c917
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882708"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115821"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>使用 SQL Server 移轉小幫手 (SSMA)，將移轉至 Linux 的資料庫移轉自動化
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本文介紹 [SQL Server 移轉小幫手 (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx)，可協助您從 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 輕鬆將資料庫移轉至 Linux 上的 SQL Server。 SSMA 是 Windows 應用程式，因此當您的 Windows 電腦可以連線至 Linux 遠端 SQL Server 執行個體時，請使用 SSMA。 
+本文介紹 [SQL Server 移轉小幫手 (SSMA)](../ssma/sql-server-migration-assistant.md)，可協助您從 Microsoft Access、DB2、MySQL、Oracle 和 Sybase 輕鬆將資料庫移轉至 Linux 上的 SQL Server。 SSMA 是 Windows 應用程式，因此當您的 Windows 電腦可以連線至 Linux 遠端 SQL Server 執行個體時，請使用 SSMA。 
 
 SSMA 支援各種不同的來源資料庫，包括 Oracle、MySQL、Sybase、DB2 和 Linux 上的 Microsoft Access 到 SQL Server，並可協助您自動化移轉工作，例如：
 
@@ -37,9 +37,8 @@ SSMA 支援各種不同的來源資料庫，包括 Oracle、MySQL、Sybase、DB2
 - [SSMA for Oracle](https://aka.ms/ssmafororacle)
 - [適用於 Sybase ASE 的 SSMA](https://aka.ms/ssmaforsybase) 
 
-接下來，請遵循 [SQL Server 移轉小幫手 (SSMA )](https://msdn.microsoft.com/library/mt613434.aspx)，將來源資料庫移轉至 Linux 上的 SQL Server。
+接下來，請遵循 [SQL Server 移轉小幫手 (SSMA )](../ssma/sql-server-migration-assistant.md)，將來源資料庫移轉至 Linux 上的 SQL Server。
 
 ## <a name="see-also"></a>另請參閱
 - [Microsoft 資料移轉部落格](https://blogs.msdn.microsoft.com/datamigration)
-- [SQL Server 移轉小幫手 (SSMA) 部落格](https://blogs.msdn.microsoft.com/ssma/)
-
+- [SQL Server 移轉小幫手 (SSMA) 部落格](/archive/blogs/ssma/)

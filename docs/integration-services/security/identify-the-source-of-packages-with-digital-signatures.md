@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487771"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192418"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
 
@@ -71,7 +71,7 @@ ms.locfileid: "88487771"
 |3|封鎖無效和不受信任的簽章以及未簽署的封裝<br /><br /> 此設定也會封鎖自我產生的簽章。|  
   
 > [!NOTE]  
->  **BlockedSignatureStates** 的建議設定為 3。 此設定會提供最大程度的保護，以防範無效或不受信任的未簽署封裝或簽章。 但是，建議設定未必適合所有情況。 如需簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)(程式碼簽署簡介) 主題。  
+>  **BlockedSignatureStates** 的建議設定為 3。 此設定會提供最大程度的保護，以防範無效或不受信任的未簽署封裝或簽章。 但是，建議設定未必適合所有情況。 如需簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[Introduction to Code Signing](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))(程式碼簽署簡介) 主題。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>實作封裝的簽署原則  
   
@@ -104,11 +104,11 @@ ms.locfileid: "88487771"
   
     -   向發行憑證的公開商業憑證授權單位取得憑證。  
   
-    -   從可以讓組織在內部發行憑證的憑證伺服器取得憑證。 您必須將用來簽署憑證的根憑證加入至 **[信任根憑證授權單位]** 存放區。 若要加入根憑證，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的「憑證」嵌入式管理單元。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證服務](https://go.microsoft.com/fwlink/?LinkId=100755)＞(英文) 主題。  
+    -   從可以讓組織在內部發行憑證的憑證伺服器取得憑證。 您必須將用來簽署憑證的根憑證加入至 **[信任根憑證授權單位]** 存放區。 若要加入根憑證，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的「憑證」嵌入式管理單元。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證服務](/windows/win32/seccrypto/certificate-services)＞(英文) 主題。  
   
-    -   建立僅供測試用途的自訂憑證。 憑證建立工具 (Makecert.exe) 會產生供測試用途的 X.509 憑證。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證建立工具 (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)＞主題。  
+    -   建立僅供測試用途的自訂憑證。 憑證建立工具 (Makecert.exe) 會產生供測試用途的 X.509 憑證。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證建立工具 (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))＞主題。  
   
-     如需有關憑證的詳細資訊，請參閱「憑證」嵌入式管理單元的線上說明。 如需有關如何簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[使用 Authenticode 簽署與檢查程式碼](https://go.microsoft.com/fwlink/?LinkId=78100)主題。  
+     如需有關憑證的詳細資訊，請參閱「憑證」嵌入式管理單元的線上說明。 如需有關如何簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[使用 Authenticode 簽署與檢查程式碼](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))主題。  
   
 -   確定憑證已經啟用程式碼簽署。 若要判斷憑證是否已啟用程式碼簽署，請在「憑證」嵌入式管理單元中檢閱憑證的屬性。  
   
@@ -153,5 +153,4 @@ ms.locfileid: "88487771"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
  [安全性概觀 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
-  
   

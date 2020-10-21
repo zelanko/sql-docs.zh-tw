@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024340"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195552"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -40,9 +40,9 @@ ms.locfileid: "91024340"
   > [!IMPORTANT]
   > Azure SQL Database 單一資料庫和彈性集區支援儲存在 `tempdb` 中，只限於資料庫層級的全域暫存資料表和全域暫存預存程序。 
   >
-  > 相同 SQL 資料庫中的所有使用者工作階段，均會共用全域暫存資料表與全域暫存預存程序。 其他 SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) \(部分機器翻譯\) 與 SQL Server 支援相同的暫存物件。
+  > 相同 SQL 資料庫中的所有使用者工作階段，均會共用全域暫存資料表與全域暫存預存程序。 其他 SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance) \(部分機器翻譯\) 與 SQL Server 支援相同的暫存物件。
   >
-  > 針對 Azure SQL Database 單一資料庫與彈性集區，只適用 master 資料庫與 `tempdb` 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server) \(部分機器翻譯\)。 如需 Azure SQL Database 單一資料庫與彈性集區內容中 `tempdb` 的討論，請參閱 [Azure SQL Database 單一資料庫和彈性集區中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 
+  > 針對 Azure SQL Database 單一資料庫與彈性集區，只適用 master 資料庫與 `tempdb` 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器？](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server) \(部分機器翻譯\)。 如需 Azure SQL Database 單一資料庫與彈性集區內容中 `tempdb` 的討論，請參閱 [Azure SQL Database 單一資料庫和彈性集區中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 
   >
   > 針對 Azure SQL 受控執行個體，則會套用所有系統資料庫。
 
@@ -149,7 +149,7 @@ ms.locfileid: "91024340"
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>以 vCore 為基礎的服務層 tempdb 大小
 
-請參閱[以 vCore 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits) \(部分機器翻譯\)。
+請參閱[以 vCore 為基礎的資源限制](/azure/sql-database/sql-database-vcore-resource-limits) \(部分機器翻譯\)。
 
 ## <a name="restrictions"></a>限制
 
@@ -223,7 +223,7 @@ GO
 - `tempdb` 中的所有配置都使用統一範圍。 不再需要[追蹤旗標 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 - 針對主要檔案群組，`AUTOGROW_ALL_FILES` 屬性已開啟且無法修改。
 
-如需 `tempdb` 中效能改善的詳細資訊，請參閱部落格文章 [TEMPDB - 檔案和追蹤旗標與更新！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)\(英文\)。
+如需 `tempdb` 中效能改善的詳細資訊，請參閱部落格文章 [TEMPDB - 檔案和追蹤旗標與更新！](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my)\(英文\)。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>經記憶體最佳化的 tempdb 中繼資料
 `tempdb` 中繼資料競爭一直以來都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行許多工作負載的可擴縮性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進了一個新功能，其為[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分：經記憶體最佳化的 tempdb 中繼資料。 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [移動資料庫檔案](../../relational-databases/databases/move-database-files.md)    
-  

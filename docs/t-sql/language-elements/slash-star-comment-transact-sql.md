@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 161c90803b636ff8aacd67f773c739b0d0153150
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459227"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195428"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜線星形 (區塊註解) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88459227"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```syntaxsql
 /*  
 text_of_comment  
 */  
@@ -61,8 +60,8 @@ text_of_comment
   
  例如，下列程式碼會產生錯誤。  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
@@ -73,21 +72,20 @@ GO
   
  若要暫時解決這個錯誤，請進行下列變更。  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
 */ */  
 SELECT @@VERSION;  
 GO  
-  
 ```  
   
 ## <a name="examples"></a>範例  
  下列範例會利用註解來說明程式碼區段應該執行的動作。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 /*  

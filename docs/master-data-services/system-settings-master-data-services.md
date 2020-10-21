@@ -1,5 +1,6 @@
 ---
-title: 系統設定 (Master Data Services) | Microsoft Docs
+title: 系統設定
+description: 瞭解如何針對與 Master Data Services 資料庫相關聯的所有 web 應用程式和 web 服務設定系統設定。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2384d6fa7831c38ff68f495485555701f2a1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f95aed9433ea58f14c183d4de008e5df6642926
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92258093"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   針對與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務，您可以設定系統設定。  
   
- 這些設定中有許多都是可在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 的 [資料庫]  頁面上設定。 有些設定可在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 [系統設定] 資料表 (mdm.tblSystemSetting) 中設定。  
+ 這些設定中有許多都是可在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 的 [資料庫]**** 頁面上設定。 有些設定可在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 [系統設定] 資料表 (mdm.tblSystemSetting) 中設定。  
   
  這些設定會依下列類別目錄分組：  
   
@@ -34,9 +35,9 @@ ms.locfileid: "68085603"
   
 -   [版本管理設定](#Versions)  
   
--   [暫存設定](#Staging)  
+-   [預備設定](#Staging)  
   
--   [總管設定](#Explorer)  
+-   [Explorer 設定](#Explorer)  
   
 -   [Excel 增益集設定](#xls)  
   
@@ -48,7 +49,7 @@ ms.locfileid: "68085603"
   
 -   [未使用](#NotUsed)  
   
-##  <a name="General"></a> 一般設定  
+##  <a name="general-settings"></a><a name="General"></a> 一般設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
@@ -58,85 +59,85 @@ ms.locfileid: "68085603"
 |**用戶端逾時**|**ClientTimeOut**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 返回到首頁之前非使用狀態的秒數。 預設值為 **300** 秒 (5 分鐘)。|  
 |**每批次的資料列數目**|**RowsPerBatch**|Web 服務傳回之每個批次中所要擷取的記錄數目。 預設值為 **50**。|  
 ||**ApplicationName**|事件記錄檔中顯示的文字。 預設值為 **MDM**。|  
-||**SiteTitle**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 瀏覽器標題列中顯示的文字。 預設值為 [主資料管理員]  。|  
-|**記錄保留 (天)**|**LogRentionDays**|記錄的保留天數。 預設值為 -1，表示不會清除記錄檔資料表。<br /><br /> 若值為 0，則只保留當天資料的記錄資料表。 且會截斷前一天的資料記錄。<br /><br /> 若值大於 0，記錄資料保留的天數由值指定。|  
+||**SiteTitle**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 瀏覽器標題列中顯示的文字。 預設值為 [主資料管理員]****。|  
+|**記錄保留天數**|**LogRentionDays**|記錄的保留天數。 預設值為 -1，表示不會清除記錄檔資料表。<br /><br /> 若值為 0，則只保留當天資料的記錄資料表。 且會截斷前一天的資料記錄。<br /><br /> 若值大於 0，記錄資料保留的天數由值指定。|  
   
-##  <a name="Versions"></a> 版本管理設定  
+##  <a name="version-management-settings"></a><a name="Versions"></a> 版本管理設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
-|**僅複製認可的版本**|**CopyOnlyCommittedVersion**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，決定使用者是否可以複製狀態為 [已認可]  的模型版本，或是複製任何狀態的版本。 預設值是 [是]  或 **1**，表示使用者只能複製 [已認可]  的版本。 變更為 [否]  或 **2** 則會允許使用者複製所有版本。|  
+|**僅複製認可的版本**|**CopyOnlyCommittedVersion**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，決定使用者是否可以複製狀態為 [已認可]**** 的模型版本，或是複製任何狀態的版本。 預設值是 [是]**** 或 **1**，表示使用者只能複製 [已認可]**** 的版本。 變更為 [否]**** 或 **2** 則會允許使用者複製所有版本。|  
   
  如需詳細資訊，請參閱[版本 &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)。  
   
-##  <a name="Staging"></a> 暫存設定  
+##  <a name="staging-settings"></a><a name="Staging"></a> 暫存設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
-|**記錄所有暫存交易**|**StagingTransactionLogging**|僅適用於 SQL Server 2008 R2。 決定在將暫存記錄載入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，是否要記錄交易。 預設值是 [關閉]  或 **2**。 變更為 [開啟]  或 **1** 則會開啟記錄功能。|  
-|**暫存批次間隔**|**StagingBatchInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [整合管理]  功能區域中，從選取 [啟動批次]  後到開始處理批次前所經過的秒數。 預設值為 **60** 秒 (1 分鐘)。|  
+|**記錄所有暫存交易**|**StagingTransactionLogging**|僅適用於 SQL Server 2008 R2。 決定在將暫存記錄載入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，是否要記錄交易。 預設值是 [關閉]**** 或 **2**。 變更為 [開啟]**** 或 **1** 則會開啟記錄功能。|  
+|**暫存批次間隔**|**StagingBatchInterval**|在  [整合管理][!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，從選取 [啟動批次]**** 後到開始處理批次前所經過的秒數。 預設值為 **60** 秒 (1 分鐘)。|  
   
- 如需詳細資訊，請參閱[概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+ 如需詳細資訊，請參閱 [總覽：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
-##  <a name="Explorer"></a> 總管設定  
+##  <a name="explorer-settings"></a><a name="Explorer"></a> 總管設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
-|**階層中預設的成員數目**|**HierarchyChildNodeLimit**|在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的 [檔案總管]  功能區域中，於顯示 [...其他...]  之前，每個階層節點中所顯示的成員數目上限。 您可以按一下 [...其他...]  來顯示下一個成員群組。 預設值為 **50**。|  
-|**顯示階層中預設的名稱**|**ShowNamesInHierarchy**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管  功能區域中，決定檢視階層時所選取的預設設定。<br /><br /> 預設值是 [是]  或 **1**，表示每個成員的名稱和程式碼都會顯示。 變更為 [否]  或 **2** 則只會顯示程式碼。|  
-|**清單中網域屬性的數目**|**DBAListRowLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管  功能區域中，當您按兩下方格中的網域屬性值時所顯示的屬性數目。 預設值為 **50**。 如果有超過 50 個成員存在，則會改為顯示可搜尋對話方塊。|  
-||**GridFilterDefaultFuzzySimilarityLevel**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管  功能區域中，使用 [比對]  篩選準則時所使用的相似度層級。 預設值為 **0.3**。 設定的值愈接近 **1** ，傳回的相符項目就愈接近搜尋準則。 設定成 **1** 則會傳回完全相符的項目。|  
+|**階層中預設的成員數目**|**HierarchyChildNodeLimit**|在的 [檔案總管][!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，於顯示 [...其他...]**** 之前，每個階層節點中所顯示的成員數目上限。 您可以按一下 [...其他...]**** 來顯示下一個成員群組。 預設值為 **50**。|  
+|**顯示階層中預設的名稱**|**ShowNamesInHierarchy**|在  總管[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，決定檢視階層時所選取的預設設定。<br /><br /> 預設值是 [是]**** 或 **1**，表示每個成員的名稱和程式碼都會顯示。 變更為 [否]**** 或 **2** 則只會顯示程式碼。|  
+|**清單中網域屬性的數目**|**DBAListRowLimit**|在  總管[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，當您按兩下方格中的網域屬性值時所顯示的屬性數目。 預設值為 **50**。 如果有超過 50 個成員存在，則會改為顯示可搜尋對話方塊。|  
+||**GridFilterDefaultFuzzySimilarityLevel**|在  總管[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，使用 [比對]**** 篩選準則時所使用的相似度層級。 預設值是 **0.3**。 設定的值愈接近 **1** ，傳回的相符項目就愈接近搜尋準則。 設定成 **1** 則會傳回完全相符的項目。|  
   
-##  <a name="xls"></a> Excel 增益集設定  
+##  <a name="add-in-for-excel-settings"></a><a name="xls"></a> Excel 增益集設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
 |在網站首頁上顯示 Excel 增益集的文字|ShowAddInText|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，顯示讓使用者下載 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的連結。|  
 |網站首頁 Excel 增益集的安裝路徑|AddInURL|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，如果顯示指向 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 的連結，則是使用者按一下連結之後前往的位置。|  
   
-##  <a name="BusinessRules"></a> 商務規則設定  
+##  <a name="business-rule-settings"></a><a name="BusinessRules"></a> 商務規則設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
-|**要遞增新商務規則的數目依據**|**BusinessRuleDefaultPriorityIncrement**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [系統管理]  功能區域中，每個新商務規則之優先順序遞增的數目。 預設值為 **10**。|  
-|**要套用商務規則的成員數目**|**BusinessRuleRealtimeMemberCount**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管  功能區域中，方格中要套用商務規則的成員數目上限。 在 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 中，使用中工作表中要套用商務規則的成員數目上限。 預設值為 **10000**。|  
-|**商務規則的使用者指令碼優先執行**|**BusinessRuleUserScriptExecuteFirst**|一般來說，商務規則動作執行順序是 「預設值」、「變更值」、「驗證」、「外部動作」、「使用者定義的動作指令碼」。 如果此設定變更為 **1**，則「使用者定義的動作指令碼」是商務規則動作執行的第一個步驟。 此設定是隱藏的設定。 預設值是 **0**。|  
+|**要遞增新商務規則的數目依據**|**BusinessRuleDefaultPriorityIncrement**|在  [系統管理][!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，每個新商務規則之優先順序遞增的數目。 預設值為 **10**。|  
+|**要套用商務規則的成員數目**|**BusinessRuleRealtimeMemberCount**|在  總管[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，方格中要套用商務規則的成員數目上限。 在 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中，使用中工作表中要套用商務規則的成員數目上限。 預設值為 **10000**。|  
+|**商務規則的使用者指令碼優先執行**|**BusinessRuleUserScriptExecuteFirst**|一般來說，商務規則動作執行順序是 「預設值」、「變更值」、「驗證」、「外部動作」、「使用者定義的動作指令碼」。 如果此設定變更為 **1**，則「使用者定義的動作指令碼」是商務規則動作執行的第一個步驟。 此設定是隱藏的設定。 預設值為 **0**。|  
   
  如需詳細資訊，請參閱[商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)。  
   
-##  <a name="Notifications"></a> 通知設定  
+##  <a name="notification-settings"></a><a name="Notifications"></a> 通知設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
 |**通知的主資料管理員 URL**|**MDMRootURL**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，其為電子郵件通知中所用的連結，例如 `https://constoso/mds`。|  
 |**通知電子郵件間隔**|**NotificationInterval**|傳送電子郵件的頻率 (以秒為單位)。 預設值為 **120** 秒 (2 分鐘)。|  
 |**單一電子郵件中的通知數**|**NotificationsPerEmail**|將在單一通知電子郵件中列出的驗證問題最大數目。 如果存在其他問題，則這些問題將不包含在該電子郵件中，但會在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中提供。|  
-|**預設電子郵件格式**|**EmailFormat**|所有電子郵件通知的格式。 預設值是 **HTML** 或 **1**。 資料庫設定 **2** 表示 [文字]  。<br /><br /> 注意:您可以在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中覆寫個別使用者的這個項目，其方式是在使用者的 [一般]  索引標籤上變更並儲存 [電子郵件格式]  。|  
-|**電子郵件地址的規則運算式**|**EmailRegExPattern**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [使用者及群組的權限]  功能區域中，用來驗證在使用者 [一般]  索引標籤上輸入之電子郵件地址的規則運算式。如需規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](https://go.microsoft.com/fwlink/?LinkId=164401) 。|  
+|**預設電子郵件格式**|**EmailFormat**|所有電子郵件通知的格式。 預設值是 **HTML** 或 **1**。 資料庫設定 **2** 表示 [文字]****。<br /><br /> 注意：您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中覆寫個別使用者的此項目，方式為在使用者的 [一般]**** 索引標籤上變更並儲存 [電子郵件格式]****。|  
+|**電子郵件地址的規則運算式**|**EmailRegExPattern**|在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **使用者和群組的許可權** ] 功能區域中，用來驗證在使用者 **[一般** ] 索引標籤上輸入之電子郵件地址的正則運算式。如需正則運算式的詳細資訊，請參閱 MSDN library 中的 [正則運算式語言元素](/dotnet/standard/base-types/regular-expression-language-quick-reference) 。|  
 |**Database Mail 帳戶**|**EmailProfilePrincipalAccount**|顯示傳送電子郵件通知時所要使用的 Database Mail 帳戶。 預設的設定檔是 **mds_email_user**。|  
 |**Database Mail 設定檔**|**DatabaseMailProfile**|傳送電子郵件通知時所要使用的 Database Mail 設定檔。 預設值是空白。|  
 ||**ValidationIssueHTML**|當商務規則驗證失敗時，使用者所取得 HTML 格式的電子郵件文字。|  
 ||**ValidationIssueText**|當商務規則驗證失敗時，使用者所取得純文字格式的電子郵件文字。|  
-||**VersionStatusChangeText**|當版本狀態變更時，使用者所取得純文字格式的電子郵件文字。 只有具有整個模型之 [更新]  權限的使用者才會收到此電子郵件。|  
-||**VersionStatusChangeHTML**|當版本狀態變更時，使用者所取得 HTML 格式的電子郵件文字。 只有具有整個模型之 [更新]  權限的使用者才會收到此電子郵件。|  
+||**VersionStatusChangeText**|當版本狀態變更時，使用者所取得純文字格式的電子郵件文字。 只有具有整個模型之 [更新]**** 權限的使用者才會收到此電子郵件。|  
+||**VersionStatusChangeHTML**|當版本狀態變更時，使用者所取得 HTML 格式的電子郵件文字。 只有具有整個模型之 [更新]**** 權限的使用者才會收到此電子郵件。|  
   
  如需詳細資訊，請參閱[通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)。  
   
-##  <a name="Security"></a> 安全性設定  
+##  <a name="security-settings"></a><a name="Security"></a> 安全性設定  
   
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [使用者及群組的權限]  功能區域中，[階層成員]  索引標籤上設定之使用者和群組權限的套用頻率 (以秒為單位)。 預設值為 **3600** 秒 (60 分鐘)。|  
+||**SecurityMemberProcessInterval**|在  [使用者及群組的權限][!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** 功能區域中，[階層成員]**** 索引標籤上設定之使用者和群組權限的套用頻率 (以秒為單位)。 預設值為 **3600** 秒 (60 分鐘)。|  
 
-##  <a name="Performance"></a> 效能設定  
+##  <a name="performance-settings"></a><a name="Performance"></a> 效能設定  
 
 |組態管理員設定|系統設定|描述|  
 |-----------------------------------|--------------------|-----------------|  
-|**啟用效能改善設定**|**PerformanceImprovementEnable**|我們預設為啟用這項設定 (**設為 1**)，因此載入權限相關頁面可取得相當好的效能。 但在此情況下，建立/修改實體、屬性、使用者或群組的效能則很低。 若要避免這個問題，您可以停用這項設定 (**設為 0**)。 變更這項設定之後， 您必須執行 "**EXEC [mdm].[udpPerformanceToggleSwitch];** " 命令，才能確保檢視及資料正確無誤。|  
+|**啟用效能改善設定**|**PerformanceImprovementEnable**|我們預設為啟用這項設定 (**設為 1**)，因此載入權限相關頁面可取得相當好的效能。 但在此情況下，建立/修改實體、屬性、使用者或群組的效能則很低。 若要避免這個問題，您可以停用這項設定 (**設為 0**)。 變更這項設定之後， 您必須執行 "**EXEC [mdm].[udpPerformanceToggleSwitch];**" 命令，才能確保檢視及資料正確無誤。|  
   
  如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   
-##  <a name="NotUsed"></a> 未使用  
+##  <a name="not-used"></a><a name="NotUsed"></a> 未使用  
  [系統設定] 資料表中不使用下列設定。  
   
 -   **SecurityMode**  
@@ -157,5 +158,4 @@ ms.locfileid: "68085603"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫物件安全性 &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
-  
   

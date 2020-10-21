@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed482982ecee2de572bc4241f199a7d16abc47d1
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875567"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193498"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -428,7 +428,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="locale"></a><a name="Locale_Defn"></a> 地區設定    
-地區設定是一組與某個地點或文化特性建立關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
+地區設定是一組與某個地點或文化特性建立關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)。    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> 字碼頁    
 字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為「字元集」或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     
@@ -655,4 +655,4 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)     
 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
-[單位元組和多位元組字元集](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
+[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

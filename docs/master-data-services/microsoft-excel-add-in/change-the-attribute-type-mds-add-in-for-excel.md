@@ -1,5 +1,6 @@
 ---
-title: 變更屬性類型 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+description: 變更屬性類型 (適用於 Excel 的 MDS 增益集)
+title: 變更屬性類型
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fd0e7f0acbe6792a5d303d50ef66014ebc5c1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257550"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當資料類型或是允許的字元數目不正確時，管理員可以變更屬性類型。  
   
@@ -31,9 +32,9 @@ ms.locfileid: "68092486"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 [系統管理]  和總管  功能區域的權限。  
+-   您必須擁有存取 [系統管理]**** 和總管**** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱系統 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)。  
   
 -   必須有現有的模型、實體和屬性存在。  
   
@@ -43,11 +44,11 @@ ms.locfileid: "68092486"
   
 2.  在您想要變更的資料行中按一下任何資料格。  
   
-3.  在 [建立模型]  群組中，按一下 [屬性內容]  。  
+3.  在 [建立模型]**** 群組中，按一下 [屬性內容]****。  
   
-4.  在 [屬性內容]  對話方塊中，視需要更新設定。  
+4.  在 [屬性內容]**** 對話方塊中，視需要更新設定。  
   
-5.  按一下 [確定 **Deploying Office Solutions**]。  
+5.  按一下 [確定]  。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>當您變更屬性類型時會發生什麼情況？  
  如果對屬性具有任何相依性 (例如，有任何 MDS 商務規則或衍生階層參考屬性)，則無法變更屬性的資料類型。 您收到一則錯誤，指出無法修改屬性類型，因為它是由物件所參考。  

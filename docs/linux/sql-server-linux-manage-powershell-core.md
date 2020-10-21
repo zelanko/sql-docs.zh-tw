@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: fed5ca919a78f3051ba7677f46f786b7c62f9b27
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: d9df9281926008ddac99b6827c41a0b6e73b2290
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088851"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115596"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
 
@@ -21,16 +21,16 @@ ms.locfileid: "88088851"
 
 ## <a name="cross-platform-editor-options"></a>跨平台編輯器選項
 
-以下所有的 PowerShell Core 步驟都適用於一般終端，您也可以從 VS Code 或 Azure Data Studio 內的終端執行。  VS Code 和 Azure Data Studio 都可在 macOS 和 Linux 上使用。  如需 Azure Data Studio 的詳細資訊，請參閱[此快速入門](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server) \(部分機器翻譯\)。  您也可能想要考慮為它使用 [PowerShell 延伸模組](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension) \(部分機器翻譯\)。
+以下所有的 PowerShell Core 步驟都適用於一般終端，您也可以從 VS Code 或 Azure Data Studio 內的終端執行。  VS Code 和 Azure Data Studio 都可在 macOS 和 Linux 上使用。  如需 Azure Data Studio 的詳細資訊，請參閱[此快速入門](../azure-data-studio/quickstart-sql-server.md) \(部分機器翻譯\)。  您也可能想要考慮為它使用 [PowerShell 延伸模組](../azure-data-studio/extensions/powershell-extension.md) \(部分機器翻譯\)。
 
 ## <a name="installing-powershell-core"></a>安裝 PowerShell Core
 
 如需在各種支援和實驗性平台上安裝 PowerShell Core 的詳細資訊，請參閱下列文章：
 
-- [在 Windows 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [在 Linux 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [在 macOS 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [在 ARM 上安裝 PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [在 Windows 上安裝 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
+- [在 Linux 上安裝 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [在 macOS 上安裝 PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [在 ARM 上安裝 PowerShell Core](/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
 
 ## <a name="install-the-sqlserver-module"></a>安裝 SqlServer 模組
 
@@ -108,7 +108,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供者
 
-連線到 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用提供者可讓您瀏覽 SQL Server 執行個體，如同您在 [物件總管] 中瀏覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與巡覽您的網域帳戶可存取的 SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) (設定步驟)。
+連線到 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)。  使用提供者可讓您瀏覽 SQL Server 執行個體，如同您在 [物件總管] 中瀏覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與巡覽您的網域帳戶可存取的 SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) (設定步驟)。
 
 您也可以搭配 SQL Server PowerShell 提供者使用 SQL 驗證。 若要這麼做，請使用 `New-PSDrive` Cmdlet 來建立新的 PSDrive，並提供適當的認證來進行連線。
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>探索 PS Core 中目前可用的 Cmdlet
-雖然 SqlServer 模組目前在 Windows PowerShell 中有 109 個 Cmdlet，但 PSCore 只提供 109 個中的 62 個。 以下包含目前可用的 62 個 Cmdlet 完整清單。  如需 SqlServer 模組中所有 Cmdlet 的深入文件，請參閱 SqlServer [Cmdlet 參考](https://docs.microsoft.com/powershell/module/sqlserver/) \(英文\)。
+雖然 SqlServer 模組目前在 Windows PowerShell 中有 109 個 Cmdlet，但 PSCore 只提供 109 個中的 62 個。 以下包含目前可用的 62 個 Cmdlet 完整清單。  如需 SqlServer 模組中所有 Cmdlet 的深入文件，請參閱 SqlServer [Cmdlet 參考](/powershell/module/sqlserver/) \(英文\)。
 
 下列命令會顯示您所使用的 PowerShell 版本上所有可用的 Cmdlet。
 
@@ -272,4 +272,4 @@ SELECT Name
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>另請參閱
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
