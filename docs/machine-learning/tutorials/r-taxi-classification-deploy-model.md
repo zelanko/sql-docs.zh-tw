@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173595"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196264"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 教學課程：在 SQL 預存程序中執行預測
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + 此 SELECT 陳述式可從資料庫取得序列化模型，並將模型儲存在 R 變數 `mod` 中，以使用 R 進一步處理。
 
-+ 您可以從預存程序的第一個參數 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，取得計分的新案例。 讀取查詢資料之後，這些資料列會儲存在預設資料框架 `InputDataSet`中。 此資料框架會傳遞至 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中的 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 函數，再由此函數產生分數。
++ 您可以從預存程序的第一個參數 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，取得計分的新案例。 讀取查詢資料之後，這些資料列會儲存在預設資料框架 `InputDataSet`中。 此資料框架會傳遞至 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中的 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 函數，再由此函數產生分數。
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ GO
    @dropoff_longitude = -73.977303
    ```
 
-   或者，對於[參數至預存程序](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)使用下列這種較短的形式：
+   或者，對於[參數至預存程序](../../relational-databases/stored-procedures/specify-parameters.md)使用下列這種較短的形式：
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

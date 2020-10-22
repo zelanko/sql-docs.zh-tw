@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a6fe6713479c0a9c62c1f56e358c27084dc9bbdc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178795"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195160"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：搭配 SQL Server 資料使用 RevoScaleR R 函式
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 在這個多部分的教學課程系列中，會為您介紹與資料科學相關聯工作的一些 **RevoScaleR** 函式。 在此程序中，您將會了解如何建立遠端計算內容、在本機與遠端計算內容之間移動資料，以及在遠端 SQL Server 上執行 R 程式碼。 您也會了解如何在本機與遠端伺服器上分析及繪製資料，以及如何建立及部署模型。
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 是 Microsoft R 套件，可提供資料科學和機器學習工作負載的分散式和平行處理。 針對 SQL Server 中的 R 開發，**RevoScaleR** 是其中一個核心內建套件，包含用來建立資料來源物件、設定計算內容、管理套件的功能，以及最重要的功能：從匯入到視覺效果和分析，端對端使用資料。 SQL Server 中的機器學習演算法相依於 **RevoScaleR** 資料來源。 基於 **RevoScaleR** 的重要性，知道何時以及如何呼叫其函式是必要的技能。 
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 是 Microsoft R 套件，可提供資料科學和機器學習工作負載的分散式和平行處理。 針對 SQL Server 中的 R 開發，**RevoScaleR** 是其中一個核心內建套件，包含用來建立資料來源物件、設定計算內容、管理套件的功能，以及最重要的功能：從匯入到視覺效果和分析，端對端使用資料。 SQL Server 中的機器學習演算法相依於 **RevoScaleR** 資料來源。 基於 **RevoScaleR** 的重要性，知道何時以及如何呼叫其函式是必要的技能。 
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -29,7 +29,7 @@ ms.locfileid: "88178795"
   
 + [資料庫權限](../security/user-permission.md) 和 SQL Server 資料庫使用者登入
 
-+ [Transact-SQL](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [Transact-SQL](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + IDE，例如 RStudio 或 R 包含內建 RGUI.EXE 工具
 

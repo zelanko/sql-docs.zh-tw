@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179717"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193655"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立資料分割模型
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 在 SQL Server 2019 中，資料分割模型是透過分割資料來建立與定型模型的能力。 針對自然分割成指定分類配置的分層資料 (例如地理區域、日期和時間、年齡或性別)，您可以在整個資料集上執行指令碼，並能夠對維持不變的資料分割區進行模型化、定型並評分所有這些作業。 
 
-資料分割模型會透過 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 上的兩個新參數來啟用：
+資料分割模型會透過 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 上的兩個新參數來啟用：
 
 + **input_data_1_partition_by_columns**，指定要作為資料分割依據的資料行。
 + **input_data_1_order_by_columns** 指定要作為排序依據的資料行。 
@@ -39,7 +39,7 @@ ms.locfileid: "88179717"
 
 + 足夠的系統資源。 資料集很大，且定型作業會耗用大量資源。 可能的話，請使用至少具有 8 GB RAM 的系統。 或者，您可以使用較小的資料集來因應資源條件約束。 縮減資料集的指示是內嵌的。 
 
-+ 適用於 T-SQL 查詢執行的工具，例如 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
++ 適用於 T-SQL 查詢執行的工具，例如 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，您可以[下載並還原](demo-data-nyctaxi-in-sql.md)至本機資料庫引擎執行個體。 檔案大小約為 90 MB。
 
@@ -105,7 +105,7 @@ GO
 
 本教學課程會將 R 指令碼包裝在預存程序中。 在此步驟中，您會建立使用 R 建立輸入資料集的預存程序、建立用於預測提示結果的分類模型，然後將模型儲存在資料庫中。
 
-在此指令碼使用的參數輸入中，您會看到 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**。 回想一下，這些參數是進行資料分割模型所使用的機制。 參數會作為輸入傳遞至 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 來處理資料分割，而外部指令碼會針對每個資料分割執行一次。 
+在此指令碼使用的參數輸入中，您會看到 **input_data_1_partition_by_columns** 和 **input_data_1_order_by_columns**。 回想一下，這些參數是進行資料分割模型所使用的機制。 參數會作為輸入傳遞至 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 來處理資料分割，而外部指令碼會針對每個資料分割執行一次。 
 
 針對此預存程序，[使用平行處理原則](#parallel)以加快完成的時間。
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>平行執行
 
-請注意，[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 輸入包含用來啟用平行處理的 `@parallel=1`。 與舊版不同的是，在 SQL Server 2019 中，設定 `@parallel=1` 會對查詢最佳化工具提供更強的提示，讓平行執行成為更有可能的結果。
+請注意，[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 輸入包含用來啟用平行處理的 `@parallel=1`。 與舊版不同的是，在 SQL Server 2019 中，設定 `@parallel=1` 會對查詢最佳化工具提供更強的提示，讓平行執行成為更有可能的結果。
 
 根據預設，查詢最佳化工具通常會在具有超過 256 個資料列的資料表上執行 `@parallel=1`，但如果您可以如本指令碼所示來藉由設定 `@parallel=1` 明確地處理此項作業。
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 來反覆運算分割資料的作業。 如需深入了解如何在預存程序中呼叫外部指令碼，以及如何使用 RevoScaleR 函式，請繼續進行下列教學課程。
+在本教學課程中，您已使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 來反覆運算分割資料的作業。 如需深入了解如何在預存程序中呼叫外部指令碼，以及如何使用 RevoScaleR 函式，請繼續進行下列教學課程。
 
 > [!div class="nextstepaction"]
 > [R 和 SQL Server 的逐步解說](walkthrough-data-science-end-to-end-walkthrough.md)
-

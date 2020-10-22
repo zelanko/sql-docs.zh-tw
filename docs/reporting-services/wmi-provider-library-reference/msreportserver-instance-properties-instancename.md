@@ -1,4 +1,5 @@
 ---
+description: InstanceName 屬性 (WMI MSReportServer_Instance)
 title: InstanceName 屬性 (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ebf8c2c9c86dcd117beb522c92e36b2086dafc45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257805"
 ---
 # <a name="msreportserver_instance-properties---instancename"></a>MSReportServer_Instance 屬性 - InstanceName
   在特定電腦上傳回報表伺服器執行個體的名稱。 唯讀。  

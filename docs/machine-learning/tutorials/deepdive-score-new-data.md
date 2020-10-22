@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195080"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>對新資料評分 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 8；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 8；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
 在此教學課程中，您將會使用在上一個教學課程中建立的羅吉斯迴歸模型，為另一個使用相同獨立變數作為輸入的資料集評分。
 
@@ -59,7 +59,7 @@ ms.locfileid: "88178603"
   
 4. 基於謹慎起見，請檢查輸出資料表是否存在。 如果已經有同名的資料表存在，當您嘗試寫入新的資料表時，就會收到錯誤。
   
-    若要這樣做，請呼叫函數 [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) 和 [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)，並傳遞資料表名稱作為輸入。
+    若要這樣做，請呼叫函數 [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) 和 [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)，並傳遞資料表名稱作為輸入。
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -68,7 +68,7 @@ ms.locfileid: "88178603"
     + **rxSqlServerTableExists** 會查詢 ODBC 驅動程式，如果資料表存在便傳回 TRUE，否則為 FALSE。
     + **rxSqlServerDropTable** 會執行 DDL，如果資料表順利卸除便傳回 TRUE，否則為 FALSE。
 
-5. 執行 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 來建立分數，並將它們儲存在資料來源 sqlScoreDS 中定義的新資料表。
+5. 執行 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 來建立分數，並將它們儲存在資料來源 sqlScoreDS 中定義的新資料表。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -80,7 +80,7 @@ ms.locfileid: "88178603"
         overwrite = TRUE)
     ```
   
-    **rxPredict** 函數是支援在遠端計算內容中執行的另一個函數。 您可以使用 **rxPredict** 函式，從根據 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)或 [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) 的模型建立分數。
+    **rxPredict** 函數是支援在遠端計算內容中執行的另一個函數。 您可以使用 **rxPredict** 函式，從根據 [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit)或 [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm) 的模型建立分數。
   
     - 在此，參數 *writeModelVars* 設為 **TRUE** 。 這表示估計所用的變數將會包含在新的資料表中。
   
@@ -118,7 +118,7 @@ ms.locfileid: "88178603"
 
      此範例中，您可以看到使用 **RxSqlServerData** 資料來源物件，根據 SQL 查詢、函數或預存程序定義任意資料集，然後在您的 R 程式碼中使用它們有多容易。 變數不會儲存實際的值，而只會儲存資料來源定義。唯有在您將它用於例如 **rxImport**的函數中時，才會執行查詢來產生值。
       
-2. 呼叫 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函式將值放入可跨計算內容共用的資料框架。
+2. 呼叫 [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 函式將值放入可跨計算內容共用的資料框架。
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

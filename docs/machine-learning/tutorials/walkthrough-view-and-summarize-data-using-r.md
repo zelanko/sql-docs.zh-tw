@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179750"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195070"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>使用 R 來檢視及摘要 SQL Server 資料 (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -69,11 +69,11 @@ ms.locfileid: "88179750"
 
     - 在工作站與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦之間來回序列化 R 物件時，R 會使用暫存目錄。 您可以指定本機目錄以用來做為 *sqlShareDir*，或接受預設值。
   
-    - 使用 *sqlWait* 來指出您是否想讓 R 等待來自伺服器的結果。  如需有關等待與非等待作業之比較的討論，請參閱 [Microsoft R 中 RevoScaleR 的分散式計算與平行計算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
+    - 使用 *sqlWait* 來指出您是否想讓 R 等待來自伺服器的結果。  如需有關等待與非等待作業之比較的討論，請參閱 [Microsoft R 中 RevoScaleR 的分散式計算與平行計算](/r-server/r/how-to-revoscaler-distributed-computing)。
   
     - 使用引數 *sqlConsoleOutput* 來指出您不想看到來自 R 主控台的輸出。
 
-4. 您需呼叫 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)建構函式，以使用變數和已經定義的連接字串來建立計算內容物件，並將新物件儲存在 R 變數 *sqlcc* 中。
+4. 您需呼叫 [RxInSqlServer](/r-server/r-reference/revoscaler/rxinsqlserver)建構函式，以使用變數和已經定義的連接字串來建立計算內容物件，並將新物件儲存在 R 變數 *sqlcc* 中。
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -85,14 +85,14 @@ ms.locfileid: "88179750"
     rxSetComputeContext(sqlcc)
     ```
 
-    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 會以隱藏方式傳回先前作用中的計算內容，讓您可以使用它
-    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 會傳回作用中計算內容
+    + [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 會以隱藏方式傳回先前作用中的計算內容，讓您可以使用它
+    + [rxGetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 會傳回作用中計算內容
     
     請注意，設定計算內容只會影響使用 **RevoScaleR** 套件中函式的作業；計算內容不會影響開放原始碼 R 作業的執行方式。
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>使用 RxSqlServer 來建立資料來源
 
-使用 Microsoft R 程式庫 (例如 RevoScaleR 和 MicrosoftML) 時，「資料來源」  係指您使用 RevoScaleR 函式來建立的物件。 資料來源物件會指定您要用於工作 (例如模型定型或特徵擷取) 的某組資料。 您可以從各種來源 (包括 SQL Server) 取得資料。 如需目前支援的來源清單，請參閱 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) \(英文\)。
+使用 Microsoft R 程式庫 (例如 RevoScaleR 和 MicrosoftML) 時，「資料來源」  係指您使用 RevoScaleR 函式來建立的物件。 資料來源物件會指定您要用於工作 (例如模型定型或特徵擷取) 的某組資料。 您可以從各種來源 (包括 SQL Server) 取得資料。 如需目前支援的來源清單，請參閱 [RxDataSource](/r-server/r-reference/revoscaler/rxdatasource) \(英文\)。
 
 您在稍早已定義連接字串，並將該資訊儲存在 R 變數中。 您可以重複使用該連線資訊來指定想要取得的資料。
 
@@ -104,7 +104,7 @@ ms.locfileid: "88179750"
 
     我們在這裡使用了 TOP 子句來加快執行速度，但查詢所傳回的實際資料列可能依順序而有所不同。 因此，您的摘要結果可能也與下面所列出的不同。 請隨意移除 TOP 子句。
 
-2. 將查詢定義做為引數傳遞至 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 函數。
+2. 將查詢定義做為引數傳遞至 [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 函數。
 
     ```R
     inDataSource <- RxSqlServerData(
@@ -120,7 +120,7 @@ ms.locfileid: "88179750"
   
     + 引數 *rowsPerRead* 對於管理記憶體使用量和有效率的計算而言很重要。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中的大多數增強型分析函數會分區塊處理資料並累積中繼結果，然後在讀取所有資料之後，傳回最終計算結果。  藉由新增 *rowsPerRead* 參數，您可以控制讀入每個區塊以進行處理的資料列數目。  如果此參數的值太大，資料存取可能會較慢，因為您沒有足夠的記憶體，無法有效率地處理這樣大的資料區塊。  在某些系統上，將 *rowsPerRead* 設定為過小的值也可能使效能變慢。
 
-3. 目前，您已建立 *inDataSource* 物件，但它並未包含任何資料。 必須在您執行 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 或 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)之類的函式之後，才會將資料從 SQL 查詢提取至本機環境。
+3. 目前，您已建立 *inDataSource* 物件，但它並未包含任何資料。 必須在您執行 [rxImport](/r-server/r-reference/revoscaler/rxdatastep) 或 [rxSummary](/r-server/r-reference/revoscaler/rxsummary)之類的函式之後，才會將資料從 SQL 查詢提取至本機環境。
 
     不過，既然您已定義資料物件，您便可以使用它作為其他函式的引數。
 
@@ -128,7 +128,7 @@ ms.locfileid: "88179750"
 
 在本節中，您將試用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中所提供、數個支援遠端計算內容的函式。 您可以將 R 函式套用至資料來源，來探索、摘要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料及為其繪製圖表。
 
-1. 呼叫函式 [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo)以取得資料來源中之變數及其資料類型的清單。
+1. 呼叫函式 [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo)以取得資料來源中之變數及其資料類型的清單。
 
     **rxGetVarInfo** 是一個便利的函式；您可以在任何資料框架上或在遠端資料物件中的一組資料上呼叫它，以取得最大值和最小值、資料類型，以及因數資料行中的層級數目等資訊。
     
@@ -153,7 +153,7 @@ ms.locfileid: "88179750"
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. 現在，呼叫 RevoScaleR 函式 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) 以取得有關個別變數的更詳細統計資料。
+2. 現在，呼叫 RevoScaleR 函式 [rxSummary](/r-server/r-reference/revoscaler/rxsummary) 以取得有關個別變數的更詳細統計資料。
 
     rxSummary 以 R `summary` 函式為基礎，但有一些額外的功能和優點。 rxSummary 可在多個計算內容中運作，並且支援區塊化。  您也可以使用 rxSummary 來轉換值，或根據因數層級進行摘要。
     
@@ -205,7 +205,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> 當此作業執行時，您可以使用[處理序總管](https://technet.microsoft.com/sysinternals/processexplorer.aspx) 或 SQL Profiler 之類的工具，來查看如何使用 SQL Server 服務來建立連線及執行 R 程式碼。
+> 當此作業執行時，您可以使用[處理序總管](/sysinternals/downloads/process-explorer) 或 SQL Profiler 之類的工具，來查看如何使用 SQL Server 服務來建立連線及執行 R 程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 

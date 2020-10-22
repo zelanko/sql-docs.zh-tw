@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c963405245b28efd40949c8fe1f8d6227d4119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 203645002fcd6c46d1c1f786450e2c0c69e10d67
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179907"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195785"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>從 SQL Server 使用 ODBC 儲存和載入 R 物件
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +45,7 @@ SQL Server R Services 可以將序列化的 R 物件儲存到資料表中，並�
 
 - `rxListKeys` 會以索引鍵/值組的格式列出所有可用物件。 這可協助您決定 R 物件的名稱和版本。
 
-如需每個函式語法的詳細說明，請參閱 R 說明。 [ScaleR 參考](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)中也會提供詳細資料。
+如需每個函式語法的詳細說明，請參閱 R 說明。 [ScaleR 參考](/r-server/r-reference/revoscaler/revoscaler)中也會提供詳細資料。
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>如何使用 ODBC 將 R 物件儲存到 SQL Server 中
 

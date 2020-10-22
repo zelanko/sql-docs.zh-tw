@@ -6,18 +6,19 @@ ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
+- sql.data.tools.sqlserverobjectexplorer
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2fa96a9175124e3aa1bc5f0e7008422fafe85aab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42506560d69a8d5b64be5f955a240518c82881d3
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883445"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358856"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 

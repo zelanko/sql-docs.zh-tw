@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765736"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155048"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91765736"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-+ SQL Server 2019 資料庫引擎執行個體，其中包含 [Windows](../install/install-sql-server-language-extensions-on-windows.md) 或 [Linux](../../linux/sql-server-linux-setup-language-extensions.md) 上的擴充性架構和 Java 程式設計延伸模組。 如需詳細資訊，請參閱 [SQL Server 2019 中的語言延伸模組](../language-extensions-overview.md)。 如需有關程式碼撰寫需求的詳細資訊，請參閱[如何在 SQL Server 中呼叫 Java](../how-to/call-java-from-sql.md)。
++ SQL Server 2019 資料庫引擎執行個體，其中包含 [Windows](../install/windows-java.md) 或 [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md) 上的擴充性架構和 Java 程式設計延伸模組。 如需詳細資訊，請參閱 [SQL Server 2019 中的語言延伸模組](../language-extensions-overview.md)。 如需有關程式碼撰寫需求的詳細資訊，請參閱[如何在 SQL Server 中呼叫 Java](../how-to/call-java-from-sql.md)。
 
 + 可執行 T-SQL 的 SQL Server Management Studio 或 Azure Data Studio。
 
@@ -255,7 +255,7 @@ GO
 > [!NOTE]
 > 如果您在上一個步驟中使用外部程式庫，請略過此步驟。 建議的方式是從您的 `.jar` 檔案建立外部程式庫。
 
-如果您不想要使用外部程式庫，則必須設定所需的權限。 只有在處理序識別可存取您的程式碼時，指令碼執行才會成功。 您可以在[安裝指南](../install/install-sql-server-language-extensions-on-windows.md)中找到設定權限的詳細資訊。
+如果您不想要使用外部程式庫，則必須設定所需的權限。 只有在處理序識別可存取您的程式碼時，指令碼執行才會成功。 您可以在[安裝指南](../install/windows-java.md)中找到設定權限的詳細資訊。
 
 ### <a name="on-linux"></a>在 Linux 上
 

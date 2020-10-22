@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035461"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344064"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) 查詢編輯器
 
@@ -300,8 +305,8 @@ Microsoft Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出用
 | 將文字從指令碼的一個位置拖放至新位置。| [拖放文字](../scripting/drag-and-drop-text.md) |
 | 如何設定書籤，以便更容易尋找重要的程式碼片段。 | [管理書籤](../scripting/manage-bookmarks.md) |
 | 如何列印視窗或方格中的指令碼或結果。| [列印程式碼與結果](../scripting/print-code-and-results.md) |
-| 檢視及使用 MDX 查詢編輯器的基本功能。 | [建立 Analysis Services 指令碼](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| 檢視及使用 DMX 查詢編輯器的基本功能。 | [建立 DMX 查詢](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| 檢視及使用 MDX 查詢編輯器的基本功能。 | [建立 Analysis Services 指令碼](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| 檢視及使用 DMX 查詢編輯器的基本功能。 | [建立 DMX 查詢](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | 檢視及使用 XML/A 編輯器中的基本功能。 | [XML 編輯器](../scripting/xml-editor-sql-server-management-studio.md) |
 | 如何使用資料庫引擎查詢編輯器中的 sqlcmd 功能。| [編輯 SQLCMD 指令碼](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | 如何在資料庫引擎查詢編輯器中使用程式碼片段。 程式碼片段是常用陳述式或區塊的範本，可自訂或擴充成包含網站專屬的程式碼片段。| [T-SQL 程式碼片段](../scripting/add-transact-sql-snippets.md) |

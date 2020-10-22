@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173444"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195120"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 與 XDF 檔案之間移動資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 13 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 13 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
 在此教學課程中，您將了解如何使用 XDF 檔案，在遠端與本機計算內容之間傳輸資料。 將資料儲存在 XDF 檔案中，可讓您對資料執行轉換。
 
-完成時，使用檔案中的資料來建立新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 函式可以將轉換套用至資料，並執行資料框架與 .xdf 檔案之間的轉換。
+完成時，使用檔案中的資料來建立新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 函式可以將轉換套用至資料，並執行資料框架與 .xdf 檔案之間的轉換。
   
 ## <a name="create-a-sql-server-table-from-an-xdf-file"></a>從 XDF 檔案建立 SQL Server 資料表
 
@@ -65,7 +65,7 @@ ms.locfileid: "88173444"
     rxSetComputeContext("local")
     ```
     
-    [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 函式可以將資料從任何支援的資料來源匯入到本機 XDF 檔案。 當您想要對資料執行許多不同的分析，但想要避免一再地執行相同的查詢時，使用資料的本機複本會很方便。
+    [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 函式可以將資料從任何支援的資料來源匯入到本機 XDF 檔案。 當您想要對資料執行許多不同的分析，但想要避免一再地執行相同的查詢時，使用資料的本機複本會很方便。
 
 5. 藉由將先前定義為引數的變數傳遞給 **RxSqlServerData**，以建立資料來源物件。
   
@@ -86,7 +86,7 @@ ms.locfileid: "88173444"
   
     **rxImport** 函式傳回的 `localDs` 物件是輕量型 **RxXdfData** 資料來源物件，代表儲存在本機磁碟上的資料檔案 `ccFraud.xdf`。
   
-7. 對 XDF 檔案呼叫 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) ，確認資料結構描述相同。
+7. 對 XDF 檔案呼叫 [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) ，確認資料結構描述相同。
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -115,4 +115,4 @@ ms.locfileid: "88173444"
 若要加深對於 **RevoScaleR** 的知識，您可以返回 R 教學課程清單，逐步執行您可能錯過的任何練習。 或者，請檢閱目錄中的操作說明文章，以取得一般工作的相關資訊。
 
 > [!div class="nextstepaction"]
-> [適用於 SQL Server 的 R 教學課程](sql-server-r-tutorials.md)
+> [適用於 SQL Server 的 R 教學課程](./r-tutorials.md)

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956292"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155066"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 Python 自訂執行階段
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91956292"
   > [!NOTE]
   > Python 自訂執行階段需要 SQL Server 2019 的累積更新 (CU) 3 或更新版本。
 
-+ [Windows 上具備擴充性架構的 SQL Server 語言延伸模組](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
++ [Windows 上具備擴充性架構的 SQL Server 語言延伸模組](../../language-extensions/install/windows-java.md)。
 
 + [Python 3.7]( https://www.python.org/downloads/release/python-379/)。
 
@@ -170,7 +170,7 @@ GO
   > [!NOTE]
   > Python 自訂執行階段需要 SQL Server 2019 的累積更新 (CU) 3 或更新版本。
 
-+ [Linux 上具備擴充性架構的 SQL Server 語言延伸模組](../../linux/sql-server-linux-setup-language-extensions.md)。
++ [Linux 上具備擴充性架構的 SQL Server 語言延伸模組](../../linux/sql-server-linux-setup-language-extensions-java.md)。
 
 + [Python 3.7](https://www.python.org/downloads/release/python-379/)。
 

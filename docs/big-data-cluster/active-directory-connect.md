@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8da3642d0a650ea10c54b7ed8e46a54fba2971
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 547337ea7573429bcccc1eb9b9c36914f286a2a5
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898676"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257305"
 ---
 # <a name="connect-big-data-clusters-2019-active-directory-mode"></a>連線 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]：Active Directory 模式
 
@@ -57,7 +57,7 @@ sqlcmd -S <DNS name for master instance>,31433 -E
 
 ### <a name="connect-to-controller-with-ad-authentication-from-linuxmac"></a>從 Linux/Mac 使用 AD 驗證連線到控制器
 
-您可透過兩個選項以使用 `azdata` 和 AD 驗證來連線到控制器端點。 您可使用 *--endpoint/-e* 參數：
+您可透過兩個選項以使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 和 AD 驗證來連線到控制器端點。 您可使用 *--endpoint/-e* 參數：
 
 ```bash
 kinit <username>@<domain name>

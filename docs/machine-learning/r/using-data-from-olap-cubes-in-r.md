@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180441"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195762"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP Cube 的資料
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88180441"
 
 OLAP 是線上分析處理 (Online Analytical Processing) 的簡稱。 OLAP 解決方案廣泛用於擷取和儲存一段時間的重要商務資料。 OLAP 資料可供各種工具、儀表板和視覺效果取用，以進行商務分析。 如需詳細資訊，請參閱[線上分析處理](https://en.wikipedia.org/wiki/Online_analytical_processing)。
 
-Microsoft 提供 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services)，可讓您以「Cube」  或「表格式模型」  的形式來設計、部署和查詢 OLAP 資料。 Cube 是多維度資料庫。 「維度」  如同資料的 Facet 或 R 中的因子：您可以使用維度來識別您想要彙總或分析的某些特定資料子集。 例如，「時間」是很重要的維度，因此許多 OLAP 解決方案都包含多個預設定義的行事曆，以便在配量和彙總資料時使用。 
+Microsoft 提供 [Analysis Services](/analysis-services/analysis-services-overview)，可讓您以「Cube」  或「表格式模型」  的形式來設計、部署和查詢 OLAP 資料。 Cube 是多維度資料庫。 「維度」  如同資料的 Facet 或 R 中的因子：您可以使用維度來識別您想要彙總或分析的某些特定資料子集。 例如，「時間」是很重要的維度，因此許多 OLAP 解決方案都包含多個預設定義的行事曆，以便在配量和彙總資料時使用。 
 
 基於效能的考量，OLAP 資料庫通常會事先計算摘要 (或彙總  )，然後將其儲存，以便快速擷取。 摘要的基礎是「量值」  ，其代表可套用至數值資料的公式。 您可以使用維度來定義資料的子集，然後透過該資料來進算量值。 例如，您可以使用量值來計算特定產品線在多個季度中減去稅金後的總銷售額、報告特定供應商的平均運送成本和年初至今累計的薪資支付總額等等。
 
@@ -95,11 +95,11 @@ MDX (多維度運算式的簡稱) 是用來查詢 Cube 的語言。 MDX 查詢�
 
 如需有關這兩種模型類型的一般資訊，請參閱下列文章：
 
-+ [比較多維度和表格式模型](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [比較多維度和表格式模型](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 如需查詢伺服器屬性的相關資訊，請參閱下列文章：
 
-+ [OLE DB for OLAP 結構描述資料列集](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [OLE DB for OLAP 結構描述資料列集](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>不支援回寫
 
@@ -107,9 +107,9 @@ MDX (多維度運算式的簡稱) 是用來查詢 Cube 的語言。 MDX 查詢�
 
 一般來說，即使已啟用 Cube 的回寫功能，也只能支援有限的作業，而且可能需要額外的設定。 我們建議您針對這類作業使用 MDX。
 
-+ [可寫入維度](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [可寫入的資料分割](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [設定資料格資料的自訂存取權](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [可寫入維度](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [可寫入的資料分割](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [設定資料格資料的自訂存取權](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>長時間執行的 MDX 查詢會封鎖 Cube 處理
 

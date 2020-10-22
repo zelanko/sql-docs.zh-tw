@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d006c3e9662e8e2d4d6486b991d8543ef96b7565
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179923"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195808"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (SQL Server 機器學習服務中的 R 套件)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88179923"
   
 ## <a name="full-reference-documentation"></a>完整參考文件
 
-**sqlrutils** 套件分散在多個 Microsoft 產品中，但不論是在 SQL Server 或其他產品中取得該套件，其使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)只會發佈至 Microsoft Machine Learning Server [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
+**sqlrutils** 套件分散在多個 Microsoft 產品中，但不論是在 SQL Server 或其他產品中取得該套件，其使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](/machine-learning-server/r-reference/revoscaler/revoscaler)只會發佈至 Microsoft Machine Learning Server [R 參考](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="functions-list"></a>函式清單
 
@@ -43,16 +43,16 @@ ms.locfileid: "88179923"
 
 |函式 | 說明 |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 執行 SQL 預存程序。|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 取得預存程序的輸入參數清單。| 
-|[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| 定義 SQL Server 中將用於 R 資料框架的資料來源。 您可以指定用來儲存輸入資料的 data.frame 名稱，以及取得資料的查詢，或預設值。 只支援簡單 SELECT 查詢。 | 
-|[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| 定義將內嵌在 T-SQL 指令碼中的單一輸入參數。 您必須提供參數的名稱和其 R 資料類型。| 
-|[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| 產生在 R 函式傳回包含 data.frame 的清單時所需的中繼資料物件。 *OutputData* 物件用來儲存取自清單的單一 data.frame 名稱。| 
-|[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | 產生在 R 函式傳回清單時所需的中繼資料物件。 *OutputParameter* 物件會儲存清單單一成員的名稱和資料類型，並假設該成員 **不** 是資料框架。 |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 向資料庫註冊預存程序。|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| 將查詢指派給預存程序的輸入資料參數。| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| 將查值指派給預存程序的輸入參數。| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 預存程序物件。|
+|[executeStoredProcedure](/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 執行 SQL 預存程序。|
+|[getInputParameters](/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 取得預存程序的輸入參數清單。| 
+|[InputData](/machine-learning-server/r-reference/sqlrutils/inputdata)| 定義 SQL Server 中將用於 R 資料框架的資料來源。 您可以指定用來儲存輸入資料的 data.frame 名稱，以及取得資料的查詢，或預設值。 只支援簡單 SELECT 查詢。 | 
+|[InputParameter](/machine-learning-server/r-reference/sqlrutils/inputparameter)| 定義將內嵌在 T-SQL 指令碼中的單一輸入參數。 您必須提供參數的名稱和其 R 資料類型。| 
+|[OutputData](/machine-learning-server/r-reference/sqlrutils/outputdata)| 產生在 R 函式傳回包含 data.frame 的清單時所需的中繼資料物件。 *OutputData* 物件用來儲存取自清單的單一 data.frame 名稱。| 
+|[OutputParameter](/machine-learning-server/r-reference/sqlrutils/outputparameter) | 產生在 R 函式傳回清單時所需的中繼資料物件。 *OutputParameter* 物件會儲存清單單一成員的名稱和資料類型，並假設該成員 **不** 是資料框架。 |
+|[registerStoredProcedure](/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 向資料庫註冊預存程序。|
+|[setInputDataQuery](/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| 將查詢指派給預存程序的輸入資料參數。| 
+|[setInputParameterValue](/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| 將查值指派給預存程序的輸入參數。| 
+|[StoredProcedure](/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 預存程序物件。|
 
 
 ## <a name="how-to-use-sqlrutils"></a>如何使用 sqlrutils
@@ -107,4 +107,3 @@ ms.locfileid: "88179923"
 ## <a name="see-also"></a>另請參閱
 
 [如何使用 sqlrutils 建立預存程序](how-to-create-a-stored-procedure-using-sqlrutils.md)
-

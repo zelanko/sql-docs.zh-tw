@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725866"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257208"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725866"
 SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器。 這是安裝和設定步驟的概觀：
 
 - 在單一 VM、VM 叢集、Azure Kubernetes Service (AKS)、Red Hat OpenShift 或 Azure Red Hat OpenShift (ARO) 中設定 Kubernetes 叢集。
-- 在您的用戶端電腦上安裝叢集設定工具 `azdata`。
+- 在您的用戶端電腦上安裝叢集設定工具 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。
 - 在 Kubernetes 叢集中部署 SQL Server 巨量資料叢集。
 
 ## <a name="supported-platforms"></a>支援的平台
@@ -77,7 +77,7 @@ kubectl config view
 
 部署 SQL Server 2019 巨量資料叢集之前，請先[安裝巨量資料工具](deploy-big-data-tools.md)：
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/extensions/data-virtualization-extension.md)
@@ -91,10 +91,10 @@ kubectl config view
 
 ## <a name="default-configurations"></a><a id="configfile"></a> 預設組態
 
-巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以從 `azdata` 中可用的內建部署設定檔開始自訂叢集部署。 
+巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以從 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 中可用的內建部署設定檔開始自訂叢集部署。 
 
 > [!NOTE]
-> 巨量資料叢集部署所需容器映像會裝載於 Microsoft 容器登錄 (`mcr.microsoft.com`) 的 `mssql/bdc` 存放庫中。 根據預設，這些設定已包含在 `azdata` 所隨附每個部署設定檔的 `control.json` 設定檔中。 此外，每個版本的容器映像標籤也會預先填入相同設定檔。 如果您需要將容器映像提取到自己的私人容器登錄中，以及/或修改容器登錄/存放庫設定，請遵循[＜離線安裝＞](deploy-offline.md)一文中的指示
+> 巨量資料叢集部署所需容器映像會裝載於 Microsoft 容器登錄 (`mcr.microsoft.com`) 的 `mssql/bdc` 存放庫中。 根據預設，這些設定已包含在 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 所隨附每個部署設定檔的 `control.json` 設定檔中。 此外，每個版本的容器映像標籤也會預先填入相同設定檔。 如果您需要將容器映像提取到自己的私人容器登錄中，以及/或修改容器登錄/存放庫設定，請遵循[＜離線安裝＞](deploy-offline.md)一文中的指示
 
 執行此命令來尋找可用的範本：
 
@@ -117,7 +117,7 @@ SQL Server 2019 CU5 提供下列範本：
 
 您可以執行 `azdata bdc create` 來部署巨量資料叢集。 這會提示您選擇其中一個預設組態，然後引導您完成部署。
 
-第一次執行 `azdata` 時，您必須包含 `--accept-eula=yes` 以接受使用者授權合約 (EULA)。
+第一次執行 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 時，您必須包含 `--accept-eula=yes` 以接受使用者授權合約 (EULA)。
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ azdata bdc create --accept-eula=yes
 |---|---|---|
 | `AZDATA_USERNAME` | 必要 |SQL Server 巨量資料叢集管理員的使用者名稱。 SQL Server 主要執行個體中會建立具有相同名稱的系統管理員登入。 基於安全性最佳做法，`sa` 帳戶已停用。 <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | 必要 |以上所建立使用者帳戶的密碼。 在 SQL Server 2019 CU5 之前部署的叢集上，`root` 使用者會使用相同的密碼來保護 Knox 閘道和 HDFS。 |
-| `ACCEPT_EULA`| 第一次使用 `azdata` 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula=yes`。|
+| `ACCEPT_EULA`| 第一次使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 如果未設定為環境變數，您可以在第一次使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令時包含 `--accept-eula=yes`。|
 | `DOCKER_USERNAME` | 選用 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
 | `DOCKER_PASSWORD` | 選用 |用來存取上述私人存放庫的密碼。 |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > 使用 `--all` 參數時，這些命令之輸出會包含 Kibana 和 Grafana 儀表板的 URL，以取得更詳細分析。
 
-除了使用 `azdata`，您也可以使用 Azure Data Studio 來尋找端點和狀態資訊。 如需使用 `azdata` 和 Azure Data Studio 來檢視叢集狀態的詳細資訊，請參閱[如何檢視巨量資料叢集的狀態](view-cluster-status.md)。
+除了使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]，您也可以使用 Azure Data Studio 來尋找端點和狀態資訊。 如需使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 和 Azure Data Studio 來檢視叢集狀態的詳細資訊，請參閱[如何檢視巨量資料叢集的狀態](view-cluster-status.md)。
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> 連線到叢集
 

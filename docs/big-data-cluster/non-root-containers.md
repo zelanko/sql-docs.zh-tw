@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218138"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257118"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>非根巨量資料叢集容器
 
@@ -47,7 +47,7 @@ SQL Server 2019 CU5 引入對非根容器的支援。 確定在所有支援的�
 
 Azure Data Studio 會以透明的方式控制透過閘道變更的連線認證，以在 [物件總管] 中啟用 HDFS 瀏覽體驗，或透過筆記本提交 Spark 作業。 安裝[最新版的 Azure Data Studio 測試人員組建](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio)。 此組建包含此使用案例的必要變更。
 
-至於必須提供認證以透過閘道存取服務的其他案例 (例如，使用 `azdata` 登入、存取 Spark 的 Web 儀表板)，請務必使用正確的認證。 如果您的目標是在 CU5 之前部署的現有叢集，即使叢集升級至 CU5 之後，仍會繼續使用 `root` 使用者名稱來連線到閘道。 如果使用 CU5 組建部署新的叢集，則要提供對應至 `AZDATA_USERNAME` 環境變數的使用者名稱來登入。
+至於必須提供認證以透過閘道存取服務的其他案例 (例如，使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 登入、存取 Spark 的 Web 儀表板)，請務必使用正確的認證。 如果您的目標是在 CU5 之前部署的現有叢集，即使叢集升級至 CU5 之後，仍會繼續使用 `root` 使用者名稱來連線到閘道。 如果使用 CU5 組建部署新的叢集，則要提供對應至 `AZDATA_USERNAME` 環境變數的使用者名稱來登入。
 
 ## <a name="configuration-file-switches"></a>組態檔參數
 

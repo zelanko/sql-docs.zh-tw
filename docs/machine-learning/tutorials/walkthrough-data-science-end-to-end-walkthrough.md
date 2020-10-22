@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179745"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192618"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用 R 資料科學家的 SQL 開發
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88179745"
 
 + [資料庫權限](../security/user-permission.md) 和 SQL Server 資料庫使用者登入
 
-+ [Transact-SQL](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [Transact-SQL](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + [紐約市計程車示範資料庫](demo-data-nyctaxi-in-sql.md)
 
@@ -47,7 +47,7 @@ ms.locfileid: "88179745"
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 > [!NOTE]
-> 如果您使用 [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) 或 [資料科學虛擬機器](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/)，而不是 R 用戶端，則 RevoScaleR 的路徑是 C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
+> 如果您使用 [Machine Learning Server](/machine-learning-server/) 或 [資料科學虛擬機器](/azure/machine-learning/data-science-virtual-machine/)，而不是 R 用戶端，則 RevoScaleR 的路徑是 C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 

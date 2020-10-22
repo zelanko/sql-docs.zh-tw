@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178775"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195140"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定義和使用計算內容 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 4；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 4；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在上一個教學課程中，您已使用 **RevoScaleR** 函式來檢查資料物件。 本課程介紹 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 函式，其可讓您定義遠端 SQL Server 的計算內容。 使用遠端計算內容，您可以將 R 執行從本機工作階段轉移到伺服器上的遠端工作階段。 
+在上一個教學課程中，您已使用 **RevoScaleR** 函式來檢查資料物件。 本課程介紹 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 函式，其可讓您定義遠端 SQL Server 的計算內容。 使用遠端計算內容，您可以將 R 執行從本機工作階段轉移到伺服器上的遠端工作階段。 
 
 > [!div class="checklist"]
 > * 了解遠端 SQL Server 計算內容的元素
@@ -63,7 +63,7 @@ ms.locfileid: "88178775"
   
     *RxInSqlServer* 的 **wait** 引數支援下列選項：
   
-    -   **TRUE**： 工作將會設定為封鎖，而且在完成或失敗之前都不會傳回。  如需詳細資訊，請參閱 [Machine Learning Server 中的分散式和平行計算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing) (英文)。
+    -   **TRUE**： 工作將會設定為封鎖，而且在完成或失敗之前都不會傳回。  如需詳細資訊，請參閱 [Machine Learning Server 中的分散式和平行計算](/machine-learning-server/r/how-to-revoscaler-distributed-computing) (英文)。
   
     -   **FALSE**： 工作會設定為封鎖，而且會立即傳回，讓您繼續執行其他 R 程式碼。 不過，即使在非封鎖模式中，也必須在執行工作時保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與用戶端的連線。
 
@@ -90,9 +90,9 @@ ms.locfileid: "88178775"
     
     **RxInSqlServer** 的語法與先前用來定義資料來源的 **RxSqlServerData** 函式的語法幾乎相同。 但是，有一些重要的差異。
       
-    - 資料來源物件 (使用 [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)函數所定義) 指定資料的儲存位置。
+    - 資料來源物件 (使用 [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)函數所定義) 指定資料的儲存位置。
     
-    - 相反地，計算內容 (使用 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函式所定義) 表示進行彙總和其他計算的位置。
+    - 相反地，計算內容 (使用 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函式所定義) 表示進行彙總和其他計算的位置。
     
     定義計算內容不會影響您可能會在工作站上執行的任何其他泛型 R 計算，而且不會變更資料的來源。 例如，您可以將本機文字檔定義為資料來源，但將計算內容變更為 SQL Server，並且執行 SQL Server 電腦上資料的所有讀取和摘要。
 
@@ -135,7 +135,7 @@ ms.locfileid: "88178775"
   
    在此範例中，*traceLevel* 屬性設定為 7，表示「顯示所有追蹤資訊」。
 
-2. 使用 [rxSetComputeCoNtext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 函式，依名稱指定啟用追蹤的計算內容。
+2. 使用 [rxSetComputeCoNtext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 函式，依名稱指定啟用追蹤的計算內容。
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

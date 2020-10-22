@@ -9,25 +9,25 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f5cebd0fa6f45530ea5853cf365ea60a4c535ad
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 02b30a427865774a313b999c62376fd83aa4e632
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179707"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193630"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>使用 Python 搭配 revoscalepy 建立可在 SQL Server 上遠端執行的模型
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-Microsoft 的 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python 程式庫提供資料科學演算法，以進行資料探索、視覺化、轉換和分析。 在 SQL Server 的 Python 整合案例中，此程式庫具有策略重要性。 **revoscalepy** 函數可以在多核心伺服器上平行執行。 您可以在中央伺服器和用戶端工作站 (個別的實體電腦，全部都具有相同的 **revoscalepy** 程式庫) 的分散式架構中，撰寫在本機啟動的 Python 程式碼，然後將執行作業轉移至資料所在的遠端 SQL Server 執行個體。
+Microsoft 的 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python 程式庫提供資料科學演算法，以進行資料探索、視覺化、轉換和分析。 在 SQL Server 的 Python 整合案例中，此程式庫具有策略重要性。 **revoscalepy** 函數可以在多核心伺服器上平行執行。 您可以在中央伺服器和用戶端工作站 (個別的實體電腦，全部都具有相同的 **revoscalepy** 程式庫) 的分散式架構中，撰寫在本機啟動的 Python 程式碼，然後將執行作業轉移至資料所在的遠端 SQL Server 執行個體。
 
 您可以在下列 Microsoft 產品和發佈中找到 **revoscalepy**：
 
 + [SQL Server 機器學習服務 (資料庫內)](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server (非 SQL，獨立伺服器)](https://docs.microsoft.com/machine-learning-server/index)
-+ [用戶端 Python 程式庫 (適用於開發工作站)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
++ [Microsoft Machine Learning Server (非 SQL，獨立伺服器)](/machine-learning-server/index)
++ [用戶端 Python 程式庫 (適用於開發工作站)](/machine-learning-server/install/python-libraries-interpreter) 
 
-此練習會示範如何根據 [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) (**revoscalepy** 的其中一個演算法，可接受計算內容做為輸入) 建立線性回歸模型。 您在此練習中執行的程式碼會從本機將程式碼執行移至遠端運算環境，這是由啟用遠端計算內容的 **revoscalepy** 函數所啟用。
+此練習會示範如何根據 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) (**revoscalepy** 的其中一個演算法，可接受計算內容做為輸入) 建立線性回歸模型。 您在此練習中執行的程式碼會從本機將程式碼執行移至遠端運算環境，這是由啟用遠端計算內容的 **revoscalepy** 函數所啟用。
 
 完成本教學課程時，您將學會如何：
 
@@ -50,11 +50,11 @@ Microsoft 的 [revoscalepy](https://docs.microsoft.com/machine-learning-server/p
 
 這個範例示範在遠端計算內容中建立 Python 模型的流程，您可透過這項流程從用戶端工作，不過需要選擇實際執行作業的遠端環境，例如 SQL Server、Spark 或 Machine Learning Server。 遠端計算內容的目標是為了將計算帶入資料所在的位置。
 
-若要在 SQL Server 中執行 Python 程式碼，需要 **revoscalepy** 套件。 這是 Microsoft 所提供的特殊 Python 套件，類似於 R 語言的 **RevoScaleR** 套件。 **revoscalepy** package 支援建立計算內容，並在本機工作站與遠端伺服器之間，提供傳遞資料和模型的基礎結構。 支援資料庫內程式碼執行的 **revoscalepy** 函數為 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)。
+若要在 SQL Server 中執行 Python 程式碼，需要 **revoscalepy** 套件。 這是 Microsoft 所提供的特殊 Python 套件，類似於 R 語言的 **RevoScaleR** 套件。 **revoscalepy** package 支援建立計算內容，並在本機工作站與遠端伺服器之間，提供傳遞資料和模型的基礎結構。 支援資料庫內程式碼執行的 **revoscalepy** 函數為 [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)。
 
-在這個課程中，您會根據 [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) (**revoscalepy** 中的函數，支援相當大型資料集的回歸) 使用 SQL Server 中的資料將線性模型定型。 
+在這個課程中，您會根據 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) (**revoscalepy** 中的函數，支援相當大型資料集的回歸) 使用 SQL Server 中的資料將線性模型定型。 
 
-本課程也會示範基本概念，讓您了解如何在 Python 中設定及使用 **SQL Server 計算內容**。 如需計算內容如何與其他平台搭配使用，以及支援哪些計算內容的討論，請參閱 [Machine Learning Server 中指令碼執行的計算內容](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)。
+本課程也會示範基本概念，讓您了解如何在 Python 中設定及使用 **SQL Server 計算內容**。 如需計算內容如何與其他平台搭配使用，以及支援哪些計算內容的討論，請參閱 [Machine Learning Server 中指令碼執行的計算內容](/machine-learning-server/r/concept-what-is-compute-context)。
 
 
 ## <a name="run-the-sample-code"></a>執行範例程式碼
@@ -129,9 +129,9 @@ def test_linmod_sql():
 
 + Python 變數 (例如 `sql_query` 和 `sql_connection_string` 定義資料的來源)。 
 
-    將這些變數傳遞至 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) 的函數，以執行名為 `data_source` 的**資料來源物件**。
+    將這些變數傳遞至 [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) 的函數，以執行名為 `data_source` 的**資料來源物件**。
 
-+ 您可以使用 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 的函數建立**計算內容物件**。 產生的**計算內容物件** 會命名為 `sql_cc`。
++ 您可以使用 [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 的函數建立**計算內容物件**。 產生的**計算內容物件** 會命名為 `sql_cc`。
 
     這個範例會假設資料位於您將用來做為計算內容的同一個 SQL Server 執行個體上，並依此重複使用您在資料來源中使用的相同連接字串。 
     
@@ -153,13 +153,13 @@ def test_linmod_sql():
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-此計算內容會在 [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) 的呼叫中重複使用：
+此計算內容會在 [rxsummary](/machine-learning-server/python-reference/revoscalepy/rx-summary) 的呼叫中重複使用：
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
 #### <a name="set-a-compute-context-explicitly-using-rx_set_compute_context"></a>使用 rx_set_compute_context 明確設定計算內容
 
-函數 [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) 可讓您在已定義的計算內容之間切換。
+函數 [rx_set_compute_context](/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) 可讓您在已定義的計算內容之間切換。
 
 設定使用中的計算內容之後，它會保持使用中，直到您變更為止。
 

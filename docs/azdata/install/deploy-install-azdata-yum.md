@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f2f06c22b56e2afbe7c51198efbbfe1eecbc8c4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 35afcae7bb5cef31bd59b53688c2eec07ee74a7c
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725266"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257501"
 ---
-# <a name="install-azdata-with-yum"></a>使用 yum 安裝 `azdata`
+# <a name="install-azure-data-cli-azdata-with-yum"></a>使用 yum 安裝 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

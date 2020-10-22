@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 38b00fd3a5f300a4038c6c302c1311a2f135d97b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f9a089bb123698a8a06c92bb1a95e8b2c3956907
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180399"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193035"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服務設定
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,16 +27,16 @@ ms.locfileid: "88180399"
 
 根據預設，SQL Server Launchpad 會設定為在 **NT Service\MSSQLLaunchpad** 下執行，此帳戶已佈建用來執行外部指令碼的所有必要權限。 從這個帳戶移除權限可能會導致 Launchpad 無法啟動或存取應執行外部指令碼的 SQL Server 執行個體。
 
-如果您修改服務帳戶，請務必使用[本機安全性原則主控台](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings)。
+如果您修改服務帳戶，請務必使用[本機安全性原則主控台](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings)。
 
 下表列出此帳戶所需的權限。
 
 | 群組原則設定 | 固定名稱 |
 |----------------------|---------------|
-| [調整處理序的記憶體配額](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
-| [略過周遊檢查](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
-| [登入為服務](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
-| [取代處理序層級權杖](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
+| [調整處理序的記憶體配額](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [略過周遊檢查](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [登入為服務](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [取代處理序層級權杖](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 如需執行 SQL Server 服務所需權限的詳細資訊，請參閱[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 

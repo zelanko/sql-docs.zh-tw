@@ -4,18 +4,20 @@ description: 了解 SQL Server Data Tools 搭配連線資料庫的運作方式�
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
+f1_keywords:
+- sql.data.tools.sqlserverobjectexplorer
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 340df9136dd674f4d340779dfc3d2d5e4db32042
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b1b9e9d3bcdfbd9ca02b26da9c20cc086081502e
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519068"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300338"
 ---
 # <a name="connected-database-development"></a>連接的資料庫開發
 

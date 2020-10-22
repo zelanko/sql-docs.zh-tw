@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180462"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195772"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>與 R 搭配使用的 SQL Server 設定
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180462"
 本文是一系列文章中的第二篇，會根據兩個案例研究來描述 R Services 的效能最佳化。  本文會針對用來執行 SQL Server R Services 的電腦，提供關於其硬體和網路的設定指導方針。 文中也有相關資訊可讓您了解如何設定解決方案中所使用的 SQL Server 執行個體、資料庫或資料表。 由於在 SQL Server 中使用 NUMA 會讓硬體與資料庫最佳化之間的界線變得模糊，因此第三節會詳細討論 CPU 親和與資源治理。
 
 > [!TIP]
-> 如果您不熟悉 SQL Server，強烈建議您另外檢閱 SQL Server 效能微調指南：[監視和微調效能](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)。
+> 如果您不熟悉 SQL Server，強烈建議您另外檢閱 SQL Server 效能微調指南：[監視和微調效能](../../relational-databases/performance/monitor-and-tune-for-performance.md)。
 
 ## <a name="hardware-optimization"></a>硬體最佳化
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 如果查詢傳回單一記憶體節點 (節點 0)，表示您沒有硬體 NUMA，或硬體設定為交錯 (非 NUMA)。 SQL Server 也會在有四個以下的 CPU 時，或在至少一個節點只有一個 CPU 時，忽略硬體 NUMA。
 
-如果您的電腦有多個處理器，但沒有硬體 NUMA，您也可以使用[軟體 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)，將 CPU 細分成較小的群組。  在 SQL Server 2016 和 SQL Server 2017 中，啟動 SQL Server 服務時就會自動啟用軟體 NUMA 功能。
+如果您的電腦有多個處理器，但沒有硬體 NUMA，您也可以使用[軟體 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)，將 CPU 細分成較小的群組。  在 SQL Server 2016 和 SQL Server 2017 中，啟動 SQL Server 服務時就會自動啟用軟體 NUMA 功能。
 
 當軟體 NUMA 啟用時，SQL Server 會自動為您管理節點；不過，若要針對特定工作負載來最佳化，您可以停用「軟親和性」  並手動設定軟體 NUMA 節點的 CPU 親和性。 這會讓您更能掌控要將哪些工作負載指派給哪些節點，特別是如果您要使用的 SQL Server 版本可支援資源治理的話。 藉由指定 CPU 親和性並讓資源集區與 CPU 群組相符，您就可以減少延遲，並確保能在相同的 NUMA 節點內執行相關的處理序。
 
@@ -164,7 +164,7 @@ FROM sys.dm_os_memory_clerks
 
 **其他資源：**
 
-+ [SQL Server 中的軟體 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server 中的軟體 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     如何將軟體 NUMA 節點對應到 CPU
 
@@ -178,7 +178,7 @@ R 有一個令人頭痛的問題，那就是其通常是在單一 CPU 上進行�
 
 有多種方式可以改善特徵工程的效能。 您可以將 R 程式碼最佳化並讓特徵擷取在模型化程序中進行，也可以將特徵工程程序移到 SQL 來進行。
 
-- 使用 R。您可以定義函式，然後在定型期間將函式作為引數傳遞至 [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform)。 如果模型支援平行處理，則可以使用多個 CPU 來處理特徵工程工作。 透過這種方法，資料科學小組發現，評分時間方面的效能提升了 16%。 不過，此方法需要有支援平行處理的模型，以及可使用平行計劃來執行的查詢。
+- 使用 R。您可以定義函式，然後在定型期間將函式作為引數傳遞至 [rxTransform](/r-server/r-reference/revoscaler/rxtransform)。 如果模型支援平行處理，則可以使用多個 CPU 來處理特徵工程工作。 透過這種方法，資料科學小組發現，評分時間方面的效能提升了 16%。 不過，此方法需要有支援平行處理的模型，以及可使用平行計劃來執行的查詢。
 
 - 搭配使用 R 與 SQL 計算內容。 在有隔離的資源可執行不同批次的多處理器環境中，您可以藉由隔離每個批次所用的 SQL 查詢，從資料表中擷取資料並將資料限制在相同的工作負載群組上，從而提升效率。 用來隔離批次的方法包括分割，以及使用 PowerShell 來平行執行個別查詢。
 

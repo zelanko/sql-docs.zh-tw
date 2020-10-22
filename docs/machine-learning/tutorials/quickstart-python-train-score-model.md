@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834056"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194447"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入門：透過 SQL 機器學習，建立 Python 的預測模型並為其評分
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "91834056"
 
 在此步驟中，您需執行程序來執行內嵌程式碼，並建立定型和序列化模型做為輸出。 
 
-儲存在您資料庫中以便重複使用的模型，皆序列化為位元組資料流，並儲存在資料庫資料表中的 VARBINARY(MAX) 資料行。 模型在建立、定型、序列化並儲存到資料庫之後，就可以由其他程式或評分工作負載中的 [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 函數來呼叫。
+儲存在您資料庫中以便重複使用的模型，皆序列化為位元組資料流，並儲存在資料庫資料表中的 VARBINARY(MAX) 資料行。 模型在建立、定型、序列化並儲存到資料庫之後，就可以由其他程式或評分工作負載中的 [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) 函數來呼叫。
 
 1. 執行下列指令碼以執行程序。 執行預存程序的特定陳述式是第四行的 `EXECUTE`。
 

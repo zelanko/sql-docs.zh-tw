@@ -12,16 +12,17 @@ helpviewer_keywords:
 - queries [SQL Server], columns
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
+- sql13.SWB.SELECTCOLUMNS.F1
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: fd9549a5758d622d93183df2389ac3ca69f92327
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 64fab261a34cb1473aec8fd64323272822819cfa
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497072"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300819"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在圖表窗格中顯示資料行名稱 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

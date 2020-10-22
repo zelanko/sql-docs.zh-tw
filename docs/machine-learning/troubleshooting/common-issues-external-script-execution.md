@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570284"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194520"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>疑難排解 Launchpad 服務以及在 SQL Server 中執行外部指令碼的問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "89570284"
 
 ## <a name="determine-whether-launchpad-is-running"></a>判斷啟動控制板是否在執行中
 
-1. 開啟 [服務]  面板 (Services.msc)。 或者，從命令列中輸入 **SQLServerManager13.msc** 或 **SQLServerManager14.msc**，以開啟 [SQL Server 組態管理員](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)。
+1. 開啟 [服務]  面板 (Services.msc)。 或者，從命令列中輸入 **SQLServerManager13.msc** 或 **SQLServerManager14.msc**，以開啟 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。
 
 2. 記下用於執行啟動控制板的服務帳戶。 已啟用 R 或 Python 的每個執行個體都應該有自己的啟動控制板服務執行個體。 例如，具名執行個體的服務可能會類似 _MSSQLLaunchpad$InstanceName_。
 
@@ -121,7 +121,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 如果您已經安裝並啟用機器學習服務，但在嘗試執行 R 或 Python 指令碼時發生此錯誤，表示執行個體的啟動控制板服務已經停止執行。
 
-1. 在 Windows 命令提示字元中，開啟 SQL Server 組態管理員。 如需詳細資訊，請參閱 [SQL Server 組態管理員](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)。
+1. 在 Windows 命令提示字元中，開啟 SQL Server 組態管理員。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。
 
 2. 以滑鼠右鍵按一下執行個體的 SQL Server 啟動控制板，然後選取 [屬性]  。
 
@@ -223,7 +223,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 因應措施是，您可以在 SQL Server 和 R Services 安裝所在的磁碟區上啟用 8.3 標記法。 然後，您必須在 R Services 組態檔中提供工作目錄的簡短名稱。
 
-1. 若要啟用 8.3 標記法，請執行 fsutil 公用程式配合 *8dot3name* 引數，如下所示︰[fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx)。
+1. 若要啟用 8.3 標記法，請執行 fsutil 公用程式配合 *8dot3name* 引數，如下所示︰[fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11))。
 
 2. 啟用 8.3 標記法後，開啟 RLauncher.config 檔案並記下 `WORKING_DIRECTORY` 的屬性。 如需如何尋找此檔案的詳細資訊，請參閱[機器學習服務資料收集疑難排解](data-collection-ml-troubleshooting-process.md)。
 

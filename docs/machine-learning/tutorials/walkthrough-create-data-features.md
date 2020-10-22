@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173592"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192628"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 來建立資料特徵 (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) \(英文\) 可以接受包含有效 SELECT 查詢的查詢 (以 _sqlQuery_ 參數的引數形式提供)，或是資料表物件的名稱 (以 _table_ 參數的形式提供)。
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) \(英文\) 可以接受包含有效 SELECT 查詢的查詢 (以 _sqlQuery_ 參數的引數形式提供)，或是資料表物件的名稱 (以 _table_ 參數的形式提供)。
     
     - 如果您想要對資料表中的資料進行取樣，便必須使用 _sqlQuery_ 參數，使用 T-SQL TABLESAMPLE 子句定義範例參數，然後將 _rowBuffering_ 引數設定為 FALSE。
 
@@ -91,7 +91,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     rxSetComputeContext("local");
     ```
 
-5. 呼叫 [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) \(英文\) 函數以取得特徵工程資料，然後將 `env$ComputeDist` 函數套用到記憶體中的資料。
+5. 呼叫 [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) \(英文\) 函數以取得特徵工程資料，然後將 `env$ComputeDist` 函數套用到記憶體中的資料。
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + rxDataStep 函數支援多種可用來修改就地資料的方法。 如需詳細資訊，請參閱此文件：[如何在 Microsoft R 中對資料進行轉換及子集化](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform) \(英文\)
+    + rxDataStep 函數支援多種可用來修改就地資料的方法。 如需詳細資訊，請參閱此文件：[如何在 Microsoft R 中對資料進行轉換及子集化](/r-server/r/how-to-revoscaler-data-transform) \(英文\)
     
     不過，關於 rxDataStep 有幾個值得注意的重點： 
     
@@ -117,7 +117,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
 
     在較大的資料集上執行上述程式碼時，也有可能會產生警告訊息。 當資料列數目乘以要建立之資料行數目的結果超過設定值 (預設為 3,000,000) 時，rxDataStep 會傳回警告，而且傳回資料框架中的資料列數目將會被截斷。 若要移除該警告，您可以修改 rxDataStep 函數中的 _maxRowsByCols_ 引數。 不過，如果 _maxRowsByCols_ 太大，您可能會在將資料框架載入記憶體時遇到問題。
 
-7. 或者，您可以呼叫 [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) \(英文\) 來檢查已轉換資料來源的結構描述。
+7. 或者，您可以呼叫 [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) \(英文\) 來檢查已轉換資料來源的結構描述。
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
 
 在本練習中，了解如何使用 SQL 函數取代自訂 R 函數來完成相同的工作。 
 
-切換至 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或另一個查詢編輯器來執行 T-SQL 指令碼。
+切換至 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 或另一個查詢編輯器來執行 T-SQL 指令碼。
 
 1. 使用名為 *fnCalculateDistance* 的 SQL 函數。 NYCTaxi_Sample 資料庫中應該已有此函數。 在 [物件總管] 中，透過瀏覽此路徑來確認該函數是否存在：[Databases] > [NYCTaxi_Sample] > [Programmability] > [Functions] > [Scalar-valued Functions] > dbo.fnCalculateDistance。
 
@@ -252,4 +252,3 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 
 > [!div class="nextstepaction"]
 > [建置 R 模型並儲存至 SQL](walkthrough-build-and-save-the-model.md)
-

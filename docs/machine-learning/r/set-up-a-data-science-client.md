@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7d3b2da6c649c514dff31225253292642212cd41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178895"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195784"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上設定用於 R 開發的資料科學用戶端
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 當您在 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 或 [SQL Server 機器學習服務 (資料庫內)](../install/sql-machine-learning-services-windows-install.md) 安裝中納入 R 語言選項時，SQL Server 2016 或更新版本中便會提供 R 整合。 
 
-若要開發和部署適用於 SQL Server 的 R 解決方案，請在開發工作站上安裝 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，以取得 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 和其他 R 程式庫。 遠端 SQL Server 執行個體上也需要的 RevoScaleR 程式庫會協調兩個系統之間的計算要求。 
+若要開發和部署適用於 SQL Server 的 R 解決方案，請在開發工作站上安裝 [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client)，以取得 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 和其他 R 程式庫。 遠端 SQL Server 執行個體上也需要的 RevoScaleR 程式庫會協調兩個系統之間的計算要求。 
 
 請在本文中了解如何設定 R 用戶端開發工作站，以便與已啟用機器學習和 R 整合的遠端 SQL Server 互動。 在完成本文中的步驟之後，您將會獲得與 SQL Server 上相同的 R 程式庫。 您也會知道如何將本機 R 工作階段的計算推送到 SQL Server 上的遠端 R 工作階段。
 
@@ -34,7 +34,7 @@ ms.locfileid: "88178895"
 
 ## <a name="commonly-used-tools"></a>常用工具
 
-無論您是不熟悉 SQL 的 R 開發人員，還是不熟悉 R 及資料庫內分析的 SQL 開發人員，您都會需要 R 開發工具和 T-SQL 查詢編輯器 (例如 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)) 來執行資料庫內分析的所有功能。
+無論您是不熟悉 SQL 的 R 開發人員，還是不熟悉 R 及資料庫內分析的 SQL 開發人員，您都會需要 R 開發工具和 T-SQL 查詢編輯器 (例如 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)) 來執行資料庫內分析的所有功能。
 
 針對簡單的 R 開發案例，您可以使用 RGUI 可執行檔 (隨附於 MRO 和 SQL Server 中的基底 R 散發套件)。 本文會說明如何針對本機和遠端的 R 工作階段使用 RGUI。 為了提高生產力，您應該使用功能完整的 IDE，例如 [RStudio 或 Visual Studio](#install-ide)。
 
@@ -42,7 +42,7 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 
 ## <a name="1---install-r-packages"></a>1 - 安裝 R 套件
 
-多項產品和服務皆有提供 Microsoft 的 R 套件。 在本機工作站上，建議您安裝 Microsoft R Client。 R Client 會提供 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)、[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、[SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) 和其他 R 套件。
+多項產品和服務皆有提供 Microsoft 的 R 套件。 在本機工作站上，建議您安裝 Microsoft R Client。 R Client 會提供 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)、[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)、[SQLRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) 和其他 R 套件。
 
 1. [下載 Microsoft R Client](https://aka.ms/rclient/download)。
 
@@ -103,7 +103,7 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 
 ## <a name="5---test-connections"></a>5 - 測試連線
 
-在驗證步驟中，請使用 **RGUI** 和 RevoScaleR 來確認是否能與遠端伺服器連線。 SQL Server 必須啟用[遠端連線](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)功能，而且您必須具有權限，包括使用者登入資訊和所要連線的目標資料庫。 
+在驗證步驟中，請使用 **RGUI** 和 RevoScaleR 來確認是否能與遠端伺服器連線。 SQL Server 必須啟用[遠端連線](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)功能，而且您必須具有權限，包括使用者登入資訊和所要連線的目標資料庫。 
 
 下列步驟採用示範資料庫 ([NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)) 和 Windows 驗證。
 
@@ -219,8 +219,8 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 如果您還沒有用來處理 R 的慣用 IDE，建議您使用 **Visual Studio R 工具**。
 
 + [下載 Visual Studio R 工具 (RTVS)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
-+ [安裝指示](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - Visual Studio 的數個版本中都有提供 RTVS。
-+ [開始使用 Visual Studio R 工具](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
++ [安裝指示](/visualstudio/rtvs/installing-r-tools-for-visual-studio) - Visual Studio 的數個版本中都有提供 RTVS。
++ [開始使用 Visual Studio R 工具](/visualstudio/rtvs/getting-started-with-r)
 
 ### <a name="connect-to-sql-server-from-rtvs"></a>從 RTVS 連線至 SQL Server
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178425"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196232"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 建立圖表和繪圖 (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88178425"
 
 ## <a name="create-a-histogram"></a>建立長條圖
 
-1. 使用 [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 函數來產生第一個繪圖。  rxHistogram 函數會提供類似開放原始碼 R 套件中的功能，但是可以在遠端執行內容中執行。
+1. 使用 [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) 函數來產生第一個繪圖。  rxHistogram 函數會提供類似開放原始碼 R 套件中的功能，但是可以在遠端執行內容中執行。
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ ms.locfileid: "88178425"
 
     + 自訂函數 *mapPlot* 採用兩個引數︰您先前使用 RxSqlServerData 所定義的現有資料物件，以及從用戶端傳遞的地圖表示法。
     + 在以 *ds* 變數開頭的行當中，rxImport 用來從先前建立的資料來源 *inDataSource* 載入記憶體資料。 (該資料來源只包含 1000 列；如果您想要建立具有更多資料點的對應，可以用不同的資料來源替代。)
-    + 只要使用開放原始碼 R 函數，就必須將資料載入至本機記憶體中的資料框架。 不過，您可透過呼叫 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 函數，藉此在遠端計算內容的記憶體中執行工作。
+    + 只要使用開放原始碼 R 函數，就必須將資料載入至本機記憶體中的資料框架。 不過，您可透過呼叫 [rxImport](/r-server/r-reference/revoscaler/rximport) 函數，藉此在遠端計算內容的記憶體中執行工作。
 
 2. 將計算內容變更為本機，並載入建立地圖所需的程式庫。
 
@@ -89,7 +89,7 @@ ms.locfileid: "88178425"
 
     + 開頭為 `googmap` 的行會在所指定座標的中心產生地圖。
 
-3. 切換至 SQL Server 計算內容，然後將繪圖函數包裝在 [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) 中呈現結果，如下所示。 rxExec 函數是 **RevoScaleR** 套件的一部分，並支援在遠端計算內容中執行任意 R 函數。
+3. 切換至 SQL Server 計算內容，然後將繪圖函數包裝在 [rxExec](/r-server/r-reference/revoscaler/rxexec) 中呈現結果，如下所示。 rxExec 函數是 **RevoScaleR** 套件的一部分，並支援在遠端計算內容中執行任意 R 函數。
 
     ```R
     rxSetComputeContext(sqlcc)
