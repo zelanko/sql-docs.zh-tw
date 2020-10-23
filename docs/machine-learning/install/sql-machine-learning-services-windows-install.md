@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956985"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155056"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -110,7 +110,7 @@ ms.locfileid: "91956985"
      核取此選項可新增 Microsoft Python 套件、Python 3.5 可執行檔，以及從 Anaconda 散發套件選取程式庫。
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   如需安裝及使用 Java 的相關資訊，請參閱[在 Windows 上安裝 SQL Server 語言延伸模組](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
+   如需安裝及使用 Java 的相關資訊，請參閱[在 Windows 上安裝 SQL Server 語言延伸模組](../../language-extensions/install/windows-java.md)。
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"

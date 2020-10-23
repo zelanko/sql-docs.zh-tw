@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180338"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193683"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 教學課程：探索及視覺化資料
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 在這個五部分教學課程系列的第二部分中，您已探索範例資料並產生一些繪圖。 稍後，您將了解如何在 Python 中序列化繪圖物件，然後將這些物件還原序列化並製作繪圖。
 
-在這五部分教學課程系列的第二部分中，您會在此步驟中檢閱範例資料，然後使用 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 提供的 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 以及基礎 R 中的泛型 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 函式產生一些繪圖。
+在這五部分教學課程系列的第二部分中，您會在此步驟中檢閱範例資料，然後使用 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 提供的 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) 以及基礎 R 中的泛型 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 函式產生一些繪圖。
 
 本文的主要目標是示範如何從預存程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 呼叫 R 函式，並將結果儲存為應用程式檔案格式：
 
@@ -83,7 +83,7 @@ ms.locfileid: "88180338"
 > 從 SQL Server 2019 開始，隔離機制會要求您授與繪圖檔案儲存所在目錄的適當權限。 如需有關如何設定這些權限的詳細資訊，請參閱 [Windows 上 SQL Server 2019 中的檔案權限區段：機器學習服務的隔離變更](../install/sql-server-machine-learning-services-2019.md#file-permissions)
 ::: moniker-end
 
-若要建立繪圖，請使用 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，這是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的一個增強型 R 函數。 此步驟會根據 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢提供的資料繪製長條圖。 您可以將此函式包裝在預存程序 (**RxPlotHistogram**) 中。
+若要建立繪圖，請使用 [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram)，這是 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 中提供的一個增強型 R 函數。 此步驟會根據 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢提供的資料繪製長條圖。 您可以將此函式包裝在預存程序 (**RxPlotHistogram**) 中。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下 **NYCTaxi_Sample** 資料庫，然後選取 [新查詢]  。
 
@@ -114,7 +114,7 @@ ms.locfileid: "88180338"
 
 此指令碼中需了解的重點包括下列各項：
   
-+ `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。 若是以外部程序執行的 R 指令碼，在指令碼輸入，以及在 SQL Server 上啟動 R 工作階段的 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 系統預存程序輸入之間，應該要有一對一的對應。
++ `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。 若是以外部程序執行的 R 指令碼，在指令碼輸入，以及在 SQL Server 上啟動 R 工作階段的 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 系統預存程序輸入之間，應該要有一對一的對應。
   
 + 在 R 指令碼中，會定義變數 (`image_file`) 以儲存影像。
 
