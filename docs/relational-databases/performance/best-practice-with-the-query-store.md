@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891048"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194320"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 
@@ -434,7 +434,7 @@ WHERE is_forced_plan = 1;
 > 若您要將查詢存放區用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 工作負載深入解析，請盡快擬定計劃，安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) 中的效能延展性改進功能。 若沒有這些改進功能，當資料庫承受繁重的工作負載時，可能會發生執行緒同步鎖定競爭，伺服器效能可能會變慢。 尤其是，您可能會在 `QUERY_STORE_ASYNC_PERSIST` 執行緒同步鎖定或 `SPL_QUERY_STORE_STATS_COOKIE_CACHE` 執行緒同步鎖定時發現嚴重的爭用。 套用此改進功能後，查詢存放區將不會再造成執行緒同步鎖定競爭。
 
 > [!IMPORTANT]
-> 若要將查詢存放區用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 中的 Just-In-Time 工作負載見解，請盡快規劃安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 中的效能延展性改善功能。 若沒有這項改進功能，當資料庫承受繁重的臨機操作工作負載時，查詢存放區可能會使用大量的記憶體，而伺服器效能可能會變慢。 套用這項改進功能後，查詢存放區將會對其各種元件可使用的記憶體數量施加內部限制，並且可在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重獲足夠的記憶體之前，自動將作業模式變更為唯讀。 請注意，查詢存放區內部記憶體限制有可能變更，因此並未載於文件中。  
+> 若要將查詢存放區用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 中的 Just-In-Time 工作負載見解，請盡快規劃安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22，以及 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 中的效能可擴縮性改善功能。 若沒有這項改進功能，當資料庫承受繁重的臨機操作工作負載時，查詢存放區可能會使用大量的記憶體，而伺服器效能可能會變慢。 套用這項改進功能後，查詢存放區將會對其各種元件可使用的記憶體數量施加內部限制，並且可在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 重獲足夠的記憶體之前，自動將作業模式變更為唯讀。 請注意，查詢存放區內部記憶體限制有可能變更，因此並未載於文件中。  
 
 ## <a name="see-also"></a>另請參閱
 

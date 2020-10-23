@@ -14,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc15af15be20b4ba1bbcd5566c5e63ac0d7226f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490922"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006588"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 
@@ -194,7 +194,7 @@ OUTER APPLY OPENJSON(skills)
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>將 SQL Server 資料轉換為 JSON 或匯出 JSON
 
 >[!NOTE]
->目前不支援將 Azure SQL 資料倉儲資料轉換成 JSON 或匯出 JSON。
+>不支援將 Azure Synapse Analytics 資料轉換成 JSON 或匯出 JSON。
 
 將 **FOR JSON** 子句加入至 **SELECT** 陳述式，以將 SQL Server 資料或 SQL 查詢結果格式化為 JSON。 使用 **FOR JSON** 將您用戶端應用程式的 JSON 輸出格式設定委派給 SQL Server。 如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   

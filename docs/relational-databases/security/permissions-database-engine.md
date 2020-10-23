@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009398"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081947"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中，指派給登入與伺服器角色的權限會在伺服器層級管理，而指派給資料庫使用者與資料庫角色的權限則會在資料庫層級進行管理。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 模型的權限與資料庫權限系統相同，但無法使用伺服器層級的權限。 本主題包含完整的權限清單。 如需權限的一般實作，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的權限總數是 237。 大部分的權限適用於所有平台，但某些無法適用。 例如，無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上授與伺服器層級權限，而且少數權限只有在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上才有意義。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公開 230 個權限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公開 219 個權限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公開 214 個權限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公開 195 個權限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主題指出最新版本中的新主題。
+[!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] 的權限總數是 248。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 會公開 254 個權限。 大部分的權限適用於所有平台，但某些無法適用。 例如，無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上授與伺服器層級權限，而且少數權限只有在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上才有意義。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 會公開 238 個權限。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公開 230 個權限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公開 219 個權限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公開 214 個權限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公開 195 個權限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主題指出最新版本中的新主題。
 
 一旦您了解權限後，可以透過 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 陳述式，將伺服器層級權限套用至登入和資料庫層級權限使用者。 例如：   
 ```sql

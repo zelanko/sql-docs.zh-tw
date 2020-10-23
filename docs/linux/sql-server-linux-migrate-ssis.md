@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088868"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115839"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>使用 SSIS 在 Linux 上擷取、轉換和載入資料
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088868"
 
 本文說明如何在 Linux 上執行 SQL Server Integration Services (SSIS) 套件。 SSIS 可擷取來自多個來源和格式的資料、轉換和清理資料，然後將資料載入多個目的地，藉此解決複雜的資料整合問題。 
 
-在 Linux 上執行的 SSIS 套件可以連接到在 Windows 內部部署或雲端、在 Linux 上或是在 Docker 中執行的 Microsoft SQL Server。 套件也可以連接到 Azure SQL Database、Azure SQL 資料倉儲、ODBC 資料來源、一般檔案及其他資料來源，包括 ADO.NET 來源、XML 檔案和 OData 服務。
+在 Linux 上執行的 SSIS 套件可以連接到在 Windows 內部部署或雲端、在 Linux 上或是在 Docker 中執行的 Microsoft SQL Server。 其也可以連線到 Azure SQL Database、Azure Synapse Analytics、ODBC 資料來源、一般檔案及其他資料來源，包括 ADO.NET 來源、XML 檔案和 OData 服務。
 
 如需 SSIS 功能的詳細資訊，請參閱 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
@@ -94,7 +94,7 @@ ms.locfileid: "88088868"
 
 ## <a name="more-info-about-ssis"></a>SSIS 的詳細資訊
 
-Microsoft SQL Server Integration Services (SSIS) 是一種用於建置高效能資料整合解決方案的平台，其中包括資料倉儲的擷取、轉換和載入 (ETL) 套件。 如需 SSIS 的詳細資訊，請參閱 [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services)。
+Microsoft SQL Server Integration Services (SSIS) 是一種用於建置高效能資料整合解決方案的平台，其中包括資料倉儲的擷取、轉換和載入 (ETL) 套件。 如需 SSIS 的詳細資訊，請參閱 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
 SSIS 包含下列功能：
 - 用於在 Windows 上建置和偵錯套件的圖形化工具和精靈

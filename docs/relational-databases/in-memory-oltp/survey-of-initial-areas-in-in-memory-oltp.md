@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866677"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005682"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 
@@ -72,8 +72,8 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 有兩個主要案例︰  
   
 - 「批次作業分析」 指的是在營業時間後或在具有交易資料複本的次要硬體上執行的彙總程序。  
-  - [Azure SQL 資料倉儲](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 也與批次作業分析有關。  
-- 「即時作業分析」 指的是在營業時間內以及在用於交易工作量的主要硬體上執行的彙總程序。  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 也與批次作業分析有關。  
+- 「即時作業分析」指的是在營業時間內以及在用於交易工作負載的主要硬體上執行的彙總程序。  
   
   
 目前文章的焦點是放在 OLTP，而不是分析。 如需資料行存放區索引如何將分析帶入 SQL 的資訊，請參閱：  
@@ -97,9 +97,9 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
 3. [即時作業分析：在 SQL Server 2016 中使用非叢集資料行存放區索引 (NCCI) 的簡單範例](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci) \(英文\)
 4. [即時作業分析：SQL Server 2016 中的 DML 作業與非叢集資料行存放區索引 (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016) \(英文\)
 5. [即時作業分析：經過篩選的非叢集資料行存放區索引 (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci) \(英文\)
-6. [即時作業分析：非叢集資料行存放區索引 (NCCI) 的壓縮延遲選項](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci) \(英文\)
+6. [即時作業分析：非叢集資料行存放區索引 (NCCI) 的壓縮延遲選項](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
 7. [即時作業分析：使用 NCCI 的壓縮延遲選項與效能](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance) \(英文\)
-8. [即時作業分析：記憶體最佳化資料表與資料行存放區索引](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index) \(英文\)
+8. [即時作業分析：記憶體最佳化資料表與資料行存放區索引](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>重組資料行存放區索引
 

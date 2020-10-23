@@ -2,7 +2,7 @@
 description: CREATE FUNCTION (Azure Synapse Analytics)
 title: CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671161"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037051"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中建立使用者定義函數。 使用者定義函式是一種 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式，它會接受參數、執行動作 (例如複雜計算) 並且將該動作的結果傳回成值。 傳回值必須是純量 (單一) 值。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
+  在 [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中建立使用者定義函數。 使用者定義函式是一種 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式，它會接受參數、執行動作 (例如複雜計算) 並且將該動作的結果傳回成值。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，傳回值必須是純量 (單一) 值。 在 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 中，CREATE FUNCTION 可以使用內嵌資料表值函式 (預覽) 的語法來傳回資料表，或是使用純量函式的語法傳回單一值。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
   
 -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，例如 SELECT  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671161"
   
 -   取代預存程序  
   
+-   使用內嵌函式作為安全性原則的篩選述詞  
+  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>引數  
  *schema_name*  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  指定純量函數傳回的純量值。  
+
+ *select_stmt* **適用於**：Azure Synapse Analytics  
+ 這是單一 SELECT 陳述式，可定義內嵌資料表值函式 (預覽) 的傳回值。
+
+ TABLE **適用於**：Azure Synapse Analytics  
+ 指定資料表值函式 (TVF) 的傳回值是資料表。 只有常數和 @*local_variables* 才能傳遞給 TVF。
+
+ 在內嵌 TVF (預覽) 中，TABLE 傳回值是透過單一 SELECT 陳述式定義。 內嵌函數沒有相關聯的傳回變數。
   
  **\<function_option>::=** 
   
@@ -140,13 +164,15 @@ RETURNS return_data_type
 -   當您要建立函數時，指定 WITH SCHEMABINDING 子句。 這可以確保系統無法修改函數定義中參考的物件 (除非同時修改函數)。  
   
 ## <a name="interoperability"></a>互通性  
- 以下是函數中的有效陳述式：  
+ 以下是純量值函式中的有效陳述式：  
   
 -   指派陳述式。  
   
 -   流程控制陳述式 (但不包括 TRY...CATCH 陳述式)。  
   
 -   DECLARE 陳述式 - 定義區域資料變數。  
+
+在內嵌資料表值函式 (預覽) 中，僅允許單一 SELECT 陳述式。
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  使用者定義函數不能用來執行修改資料庫狀態的動作。  
@@ -193,6 +219,45 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>A. 建立內嵌資料表值函式 (預覽)
+ 下列範例會建立內嵌資料表值函式以傳回模組上的某些重要資訊，並依 `objectType` 參數篩選。 其包含會在搭配 DEFAULT 參數呼叫函式時傳回所有模組的預設值。 此範例會利用在[中繼資料](#metadata)中提到的一些系統目錄檢視。
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+接著可以使用下列內容呼叫函式，以傳回所有檢視 (**V**) 物件：
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. 合併內嵌資料表值函式 (預覽) 的結果
+ 這個簡單的範例會使用先前所建立的內嵌 TVF，示範如何使用 CROSS APPLY 將其結果與其他資料表合併。 在這裡，我們會選取來自 sys.objects 和 `ModulesByType` 結果的所有資料行，以取得符合 *type* 資料行的所有資料列。 如需使用 APPLY 的詳細資料，請參閱 [FROM 子句與 JOIN、APPLY、PIVOT](../../t-sql/queries/from-transact-sql.md)。
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   

@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005628"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006600"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "86005628"
 
 固定伺服器角色和固定資料庫角色具有預先設定且無法變更的權限。 若要判斷哪些使用者是固定伺服器角色成員，請執行下列查詢：    
 > [!NOTE]
->  不適用於沒有伺服器層級權限的 SQL Database 或 SQL 資料倉儲。 SQL Server 2012 已新增 `sys.server_principals` 的 `is_fixed_role` 資料行。 舊版 SQL Server 則不需要。  
+>  不適用於沒有伺服器層級權限的 SQL Database 或 Azure Synapse Analytics。 SQL Server 2012 已新增 `sys.server_principals` 的 `is_fixed_role` 資料行。 舊版 SQL Server 則不需要。  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ Windows 使用者使用根據 Windows 群組的登入進行連線時，某些活
 
 下列查詢會傳回一份已在伺服器層級授與或拒絕的權限清單。 這個查詢應該在 master 資料庫中執行。   
 > [!NOTE]
->  在 SQL Database 或 SQL Data Warehouse 上，無法授與或查詢伺服器層級權限。   
+>  在 SQL Database 或 Azure Synapse Analytics 上，無法授與或查詢伺服器層級權限。   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

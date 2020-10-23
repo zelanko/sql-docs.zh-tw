@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495409"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005736"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 部署 SSIS 專案
 
@@ -23,7 +23,7 @@ ms.locfileid: "88495409"
 
 此快速入門示範如何使用 Visual Studio Code 連線至 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式將 SSIS 專案部署至 SSIS 目錄。
 
-Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式碼編輯器，包含連線至 Microsoft SQL Server、Azure SQL Database 或 Azure SQL Data Warehouse 的 `mssql` 延伸模組。 如需 VS Code 的詳細資訊，請參閱 [Visual Studio Code](https://code.visualstudio.com/)。
+Visual Studio Code 是適用於 Windows、macOS 和 Linux 且支援延伸模組的程式碼編輯器，這些延伸模組包含用來連線至 Microsoft SQL Server、Azure SQL Database 或 Azure Synapse Analytics 的 `mssql` 延伸模組。 如需 VS Code 的詳細資訊，請參閱 [Visual Studio Code](https://code.visualstudio.com/)。
 
 ## <a name="prerequisites"></a>必要條件
 

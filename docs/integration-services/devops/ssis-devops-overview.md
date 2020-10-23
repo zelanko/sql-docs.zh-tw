@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823480"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194081"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SQL Server Integration Services (SSIS) DevOps 工具 Azure DevOps 延伸模組
 
 [SSIS DevOps 工具](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)延伸模組可在 **Azure DevOps** Marketplace 中取得。
 
-如果您沒有 **Azure DevOps** 組織，請先註冊 [Azure Pipelines ](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然後按照[步驟](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)新增 **SSIS DevOps 工具**延伸模組。
+如果您沒有 **Azure DevOps** 組織，請先註冊 [Azure Pipelines ](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然後按照[步驟](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)新增 **SSIS DevOps 工具**延伸模組。
 
 **SSIS DevOps 工具**包括 **SSIS 建置**工作、**SSIS 部署**發行工作，以及 **SSIS 目錄組態工作**。
 
@@ -58,13 +58,13 @@ ms.locfileid: "87823480"
 
 #### <a name="output-path"></a>輸出路徑
 
-儲存建置結果的個別資料夾路徑，可以透過[發行組建成品工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops) \(英文\) 發行為組建成品。
+儲存建置結果的個別資料夾路徑，可以透過[發行組建成品工作](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops) \(英文\) 發行為組建成品。
 
 ### <a name="limitations-and-known-issues"></a>限制與已知問題
 
 - SSIS 建置工作依賴 Visual Studio 和 SSIS 設計工具，這在建置代理程式上是必要的。 因此，若要在管線中執行 SSIS 建置工作，您必須針對 Microsoft 裝載的代理程式選擇 **vs2017-win2016**，或在自我裝載的代理程式上安裝 Visual Studio 和 SSIS 設計工具 (VS2017 + SSDT2017，或者 VS2019 + SSIS 專案延伸模組)。
 
-- 若要使用任何現成可用的元件 (包括 SSIS Azure Feature Pack 和其他協力廠商元件) 來建置 SSIS 專案，必須在執行管線代理程式的電腦上安裝這些現成可用的元件。  針對 Microsoft 裝載的代理程式，使用者可以在執行 SSIS 建置工作之前，新增 [PowerShell 指令碼工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) \(英文\) 或[命令列指令碼工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) \(英文\) 下載並安裝元件。 面下面是可用於安裝 Azure Feature Pack 的範例 PowerShell 指令碼： 
+- 若要使用任何現成可用的元件 (包括 SSIS Azure Feature Pack 和其他協力廠商元件) 來建置 SSIS 專案，必須在執行管線代理程式的電腦上安裝這些現成可用的元件。  針對 Microsoft 裝載的代理程式，使用者可以在執行 SSIS 建置工作之前，新增 [PowerShell 指令碼工作](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) \(英文\) 或[命令列指令碼工作](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) \(英文\) 下載並安裝元件。 面下面是可用於安裝 Azure Feature Pack 的範例 PowerShell 指令碼： 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ SSIS 目錄組態 JSON 檔案的來源。 可以是「檔案路徑」或「內�
 
 SSIS 目錄組態 JSON 檔案的路徑。 只有當選取 [檔案路徑] 作為組態檔來源時，才會顯示此屬性。
 
-若要在組態 JSON 檔案中使用[管線變數](/azure/devops/pipelines/process/variables)，則必須在這項工作之前新增[檔案轉換工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以將組態值替代為管線變數。 如需詳細資訊，請參閱 [JSON 變數替代](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution) (英文)。
+若要在組態 JSON 檔案中使用[管線變數](/azure/devops/pipelines/process/variables)，則必須在這項工作之前新增[檔案轉換工作](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以將組態值替代為管線變數。 如需詳細資訊，請參閱 [JSON 變數替代](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution) (英文)。
 
 #### <a name="inline-configuration-json"></a>內嵌組態 JSON
 

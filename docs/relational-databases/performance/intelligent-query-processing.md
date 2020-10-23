@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b02f1325e97cc27b9ae0457bc964f25150851144
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
+ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396597"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92134866"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -364,7 +364,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 
 這兩項技術會盡可能地利用彼此的優勢。 例如，批次模式彙總可作為資料行存放區索引的一部分進行評估。 壓縮過的資料行存放區資料也會透過更有效率地搭配批次模式聯結和批次模式彙總，使用執行長度限制編碼來處理。 
  
-但是，重要的是要了解這兩個功能是獨立的：
+但是，請務必了解這兩個功能是獨立的：
 * 您可以取得使用資料行存放區索引的資料列模式計畫。
 * 您可以取得只使用資料列存放區索引的批次模式計畫。 
 

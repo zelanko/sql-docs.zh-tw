@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864046"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004671"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 
@@ -41,7 +41,7 @@ ms.locfileid: "91864046"
 
  在自主的資料庫使用者模型中，master 資料庫中的登入不存在。 相反地，使用者資料庫中就會發生驗證程序，而且使用者資料庫中的資料庫使用者在 master 資料庫中沒有相關聯的登入。 自主資料庫使用者模型支援 Windows 驗證和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]兩者中使用。 若要以自主資料庫使用者身分連接，連接字串必須永遠包含使用者資料庫的參數，讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 知道哪一個資料庫負責管理驗證程序。 自主資料庫使用者的活動僅限於驗證資料庫，因此，當以自主資料庫使用者身分連接時，必須在使用者所需的每個資料庫中獨立建立資料庫使用者帳戶。 若要變更資料庫， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用者必須建立新的連接。 如果另一個資料庫中有相同的使用者， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的自主資料庫使用者可以變更資料庫。  
   
-**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]支援以 Azure Active Directory 身分識別作為自主資料庫使用者。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支援使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者，但 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 則不支援。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/azure-sql/database/authentication-aad-overview)。 使用 Azure Active Directory 驗證時，可以使用 Active Directory 通用驗證建立來自 SSMS 的連接。  系統管理員可以將通用驗證設定為需要 Multi-Factor Authentication，以透過撥打電話、簡訊、智慧卡和 PIN 碼或	行動裝置應用程式通知，來驗證身分識別。 如需詳細資訊，請參閱 [適用於與 SQL Database 和 SQL 資料倉儲搭配使用之 Azure AD MFA 的 SSMS 支援](/azure/azure-sql/database/authentication-mfa-ssms-overview)。  
+**Azure：** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]支援以 Azure Active Directory 身分識別作為自主資料庫使用者。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支援使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者，但 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 則不支援。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/azure-sql/database/authentication-aad-overview)。 使用 Azure Active Directory 驗證時，可以使用 Active Directory 通用驗證建立來自 SSMS 的連接。  系統管理員可以將通用驗證設定為需要 Multi-Factor Authentication，以透過撥打電話、簡訊、智慧卡和 PIN 碼或	行動裝置應用程式通知，來驗證身分識別。 如需詳細資訊，請參閱[適用於與 SQL Database 和 Azure Synapse Analytics 搭配使用之 Azure AD MFA 的 SSMS 支援](/azure/azure-sql/database/authentication-mfa-ssms-overview)。  
   
  針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，由於連接字串中一律要有資料庫名稱，因此從傳統模式切換至自主資料庫使用者模型時，不需要對連接字串進行變更。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接，資料庫的名稱必須加入至連接字串 (如果尚不存在)。  
   

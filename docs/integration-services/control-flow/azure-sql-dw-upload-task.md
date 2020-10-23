@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725971"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006207"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725971"
 
 
 
-**Azure SQL DW 上傳工作**可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure SQL 資料倉儲 (DW)。
-該工作會利用 PolyBase 來改善效能，如 [Azure SQL 資料倉儲上傳模式及策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文所述。
+**Azure SQL DW 上傳工作**可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure Synapse Analytics (DW)。
+該工作會利用 PolyBase 來改善效能，如 [Azure Synapse Analytics 載入模式及策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文所述。
 目前支援的來源資料檔案格式為使用 UTF8 編碼的分隔文字。
 從檔案系統複製時，資料會先上傳到 Azure Blob 儲存體暫存，再到 Azure SQL DW。 因此，會需要 Azure Blob 儲存體。
 

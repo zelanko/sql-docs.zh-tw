@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f83f95fa17e99c20754bbde9d1d4a7fb388df74b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887846"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115683"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>使用 SSMS 或 Windows 上的 SqlPackage，在 Linux 上匯出和匯入資料庫
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-本文說明如何使用 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 和 [SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx) 在 Linux 上的 SQL Server 上匯出和匯入資料庫。 SSMS 和 SqlPackage 是 Windows 應用程式，因此當您的 Windows 電腦可以連線至 Linux 遠端 SQL Server 執行個體時，請使用這項技術。
+本文說明如何使用 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 和 [SqlPackage](../tools/sqlpackage.md) 在 Linux 上的 SQL Server 上匯出和匯入資料庫。 SSMS 和 SqlPackage 是 Windows 應用程式，因此當您的 Windows 電腦可以連線至 Linux 遠端 SQL Server 執行個體時，請使用這項技術。
 
 您應一律安裝並使用最新版本的 SQL Server Management Studio (SSMS)，如[在 Windows 上使用 SSMS 連線至 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md) 中所述
 
@@ -32,7 +32,7 @@ ms.locfileid: "85887846"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. 在 [物件總管] 中連線至您的來源資料庫。 來源資料庫可以位於在內部部署執行或在雲端中執行的 Microsoft SQL Server (在 Linux、Windows 或 Docker 上，以及 Azure SQL Database 或 Azure SQL 資料倉儲)。
+2. 在 [物件總管] 中連線至您的來源資料庫。 來源資料庫可以位於在內部部署或雲端中、於 Linux、Windows 或 Docker 上執行的 Microsoft SQL Server，以及 Azure SQL Database 或 Azure Synapse Analytics 中。
 
 3. 以滑鼠右鍵按一下 [物件總管] 中的來源資料庫，指向 [工作]  ，然後按一下 [匯出資料層應用程式...] 
 
@@ -50,7 +50,7 @@ ms.locfileid: "85887846"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. 連線至您在 [物件總管] 中的目標伺服器。 目標伺服器可以是在內部部署執行或在雲端中執行的 Microsoft SQL Server (在 Linux、Windows 或 Docker 上，以及 Azure SQL Database 或 Azure SQL 資料倉儲)。
+2. 連線至您在 [物件總管] 中的目標伺服器。 目標伺服器可以是在內部部署或雲端中、於 Linux、Windows 或 Docker 上執行的 Microsoft SQL Server，以及 Azure SQL Database 或 Azure Synapse Analytics。
 
 3. 以滑鼠右鍵按一下 [物件總管] 中的 [資料庫]  資料夾，然後按一下 [匯入資料層應用程式...] 
 
@@ -64,7 +64,7 @@ ms.locfileid: "85887846"
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage 命令列選項
 
-您也可以使用 SQL Server Data Tools (SSDT) 命令列工具 ([SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx)) 來匯出和匯入 BACPAC 檔案。
+您也可以使用 SQL Server Data Tools (SSDT) 命令列工具 ([SqlPackage](../tools/sqlpackage.md)) 來匯出和匯入 BACPAC 檔案。
 
 下列範例命令會匯出 BACPAC 檔案：
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>另請參閱
-如需如何使用 SSMS 的詳細資訊，請參閱 [使用 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)。 如需 SqlPackage 的詳細資訊，請參閱 [SqlPackage 參考文件](https://msdn.microsoft.com/library/hh550080.aspx)。
+如需如何使用 SSMS 的詳細資訊，請參閱 [使用 SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)。 如需 SqlPackage 的詳細資訊，請參閱 [SqlPackage 參考文件](../tools/sqlpackage.md)。

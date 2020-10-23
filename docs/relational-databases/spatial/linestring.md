@@ -14,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455390"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006303"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **LineString** 是代表一連串的點及連線這些點之線段的一維物件。  
   
 ## <a name="linestring-instances"></a>LineString 執行個體  
@@ -58,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
-**LineString** 執行個體必須符合下列準則，才會是有效的。  
+LineString 執行個體必須符合下列準則，才會是有效的。  
   
 1.  系統必須接受 **LineString** 執行個體。  
-2.  如果 **LineString** 執行個體不是空的，則它至少必須包含兩個相異點。  
+2.  如果 LineString 執行個體不是空的，則其至少必須包含兩個相異點。  
 3.  **LineString** 執行個體本身不得在兩個或多個連續點的間隔上重疊。  
   
 下面是有效的 **LineString** 執行個體。  

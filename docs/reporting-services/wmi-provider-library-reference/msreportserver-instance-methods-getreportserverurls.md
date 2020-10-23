@@ -1,4 +1,5 @@
 ---
+description: GetReportServerUrls 方法 (WMI MSReportServer_Instance)
 title: GetReportServerUrls 方法 (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3b3e0f7e521cd2a105a3cf093c0a179bd7306d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257521"
 ---
 # <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance 方法 - GetReportServerUrls
   傳回使用者可用來存取報表伺服器和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL 清單。  

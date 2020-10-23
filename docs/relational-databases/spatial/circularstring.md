@@ -12,21 +12,21 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d7aada1fca725dde6247e621a1ed6ca190c99f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 759d76a49f095c9ba28a1a1a5b6503442ccaef88
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455426"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006382"
 ---
 # <a name="circularstring"></a>CircularString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **CircularString** 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
   
 ## <a name="circularstring-instances"></a>CircularString 執行個體  
  下圖顯示有效的 **CircularString** 執行個體：  
   
- ![5ff17e34-b578-4873-9d33-79500940d0bc](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
+ ![CircularString 範例](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
  如果 **CircularString** 執行個體是空的或包含奇數點 n (其中 n > 1)，則會接受此執行個體。 下面是已接受的 **CircularString** 執行個體。  

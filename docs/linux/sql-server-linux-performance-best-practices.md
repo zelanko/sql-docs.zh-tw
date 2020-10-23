@@ -4,16 +4,16 @@ description: 此文章提供了在 Linux 上執行 SQL Server 的效能最佳作
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 41ed6122e2ff75220d0fc45a75d4769804d0638c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ddeb5d106de872b507c88a199050cfc883a63a4c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867215"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005683"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
 
@@ -85,10 +85,10 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>虛擬位址空間的核心設定
 
-**vm.max_map_count** 的預設設定 (也就是 65536) 可能不足以安裝 SQL Server。 基於這個理由，請將 SQL Server 部署的 **vm.max_map_count** 值變更為 262144，並參閱[使用微調的 mssql 設定檔提出的 Linux 設定](#proposed-linux-settings-using-a-tuned-mssql-profile)一節，以進一步微調這些核心參數。 vm.max_map_count 的最大值為 2147483647。
+**vm.max_map_count** 的預設設定 (也就是 65536) 可能不足以安裝 SQL Server。 基於這個理由，請將 SQL Server 部署的 **vm.max_map_count** 值至少變更為 262144，並參閱[使用已微調 MSSQL 設定檔的建議 Linux 設定](#proposed-linux-settings-using-a-tuned-mssql-profile)一節，以進一步微調這些核心參數。 vm.max_map_count 的最大值為 2147483647。
 
 ```bash
-sysctl -w vm.max_map_count=262144
+sysctl -w vm.max_map_count=1600000
 ```
 
 ### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>使用已微調 MSSQL 設定檔的建議 Linux 設定

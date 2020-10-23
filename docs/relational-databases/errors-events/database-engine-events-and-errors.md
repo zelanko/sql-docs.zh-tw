@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
-ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
+ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84158617"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194247"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 
@@ -1626,6 +1626,7 @@ ORDER BY message_id
 |    3281    |    10    |    否    |    已釋放及起始 '%ls' 的倒轉。    |
 |    3283    |    16    |    否    |    檔案 "%ls" 無法正確初始化。 請檢查錯誤記錄檔，以取得更多詳細資料。    |
 |    3284    |    16    |    否    |    尚未調準裝置 '%ls' 上的檔案標記。 請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '%d' 類似可能值。    |
+|    3285    |    10    |    是    |    似乎尚未調準裝置 '%ls' 上的檔案標記。 還原作業將會使用效率較低的 I/O 繼續進行。  若要避免此情況，請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '%d' 類似可能值。    |
 |    3301    |    21    |    是    |    交易記錄包含一筆無效的記錄 (logop %d)。 記錄已損毀。 請從完整備份還原資料庫，或修復資料庫。    |
 |    3302    |    21    |    是    |    在資料庫 '%.*ls' 中重做記錄的作業時，無法到達位於記錄檔記錄識別碼 %S_LSN 的記錄檔結尾。 這表示記錄檔記錄識別碼 %S_LSN 附近發生損毀。 請從完整備份還原資料庫，或修復資料庫。    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    是    |    重做資料庫 '%.*ls' 已記錄的作業時，記錄識別碼 %S_LSN 發生錯誤。 一般而言，之前是將該錯誤記錄為 Windows 事件記錄檔服務的錯誤。 請從完整備份還原資料庫，或修復資料庫。    |
@@ -6780,7 +6781,7 @@ ORDER BY message_id
 |    18338    |    10    |    否    |    理由：無法從指定的檔案名稱判斷資料庫名稱。    |
 |    18339    |    10    |    否    |    理由：無法開啟登入屬性中指定的資料庫。    |
 |    18340    |    10    |    否    |    理由：無法儲存資料庫名稱和定序。 請檢查先前的錯誤。    |
-|    18341    |    10    |    否    |    。 理由：目前的定序與連接重設時的資料庫定序不符。    |
+|    18341    |    10    |    否    |    . 理由：目前的定序與連接重設時的資料庫定序不符。    |
 |    18342    |    10    |    否    |    理由：無法將環境變更通知傳送到記錄傳送夥伴節點。    |
 |    18343    |    10    |    否    |    理由：無法在此連接上重新驗證登入時擷取資料庫名稱或將資料庫對應到某個項目。    |
 |    18344    |    10    |    否    |    理由：不允許在此連接上重新驗證登入時用未指定共用的登入連接。    |
@@ -9110,4 +9111,4 @@ ORDER BY message_id
 ## <a name="see-also"></a>另請參閱
 
 [了解 Database Engine 錯誤](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[導致 Database Engine 錯誤的原因和解決方案](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408) \(機器翻譯\)
+[導致 Database Engine 錯誤的原因和解決方案](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130)) \(機器翻譯\)

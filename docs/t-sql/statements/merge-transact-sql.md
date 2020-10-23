@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227296"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098847"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 從與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>引數
 
 WITH \<common_table_expression>  
@@ -212,6 +230,16 @@ DEFAULT VALUES
 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## <a name="remarks"></a>備註
+>[!NOTE]
+> 在 Azure Synapse Analytics 中，MERGE 命令 (預覽) 與 SQL 伺服器和 Azure SQL 資料庫之間具有下列差異。  
+> - MERGE 更新是以 DELETE 和 INSERT 配對的形式實作。 MERGE 更新的受影響資料列計數會包含已刪除和已插入的資料列。 
+> - 下表說明對具有不同散發類型之資料表的支援：
+
+>|Azure Synapse Analytics 中的 MERGE 子句|支援的 TARGET 散發資料表| 支援的 SOURCE 散發資料表|註解|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH、ROUND_ROBIN、REPLICATE |所有散發類型||  
+>|**NOT MATCHED BY TARGET**|HASH |所有散發類型|使用 UPDATE/DELETE FROM…JOIN 來同步兩個資料表。 |
+>|**NOT MATCHED BY SOURCE**|所有散發類型|所有散發類型|使用 UPDATE/DELETE FROM…JOIN 來同步兩個資料表。||  
 
 必須至少指定三個 MATCHED 子句中的一個，但可依任何順序指定這些子句。 在同一個 MATCHED 子句中，不能更新變數一次以上。  
   
@@ -224,7 +252,8 @@ MERGE 陳述式需要使用分號 (;) 做為陳述式結束字元。 若 MERGE �
 當資料庫相容性層級設定為 100 或更高時，MERGE 是完全保留的關鍵字。 雖然 MERGE 陳述式也可以在 90 和 100 資料庫相容性層級底下使用，但是當資料庫相容性層級設定為 90 時，此關鍵字並不會完全保留。  
   
 使用佇列更新複寫時，不應該使用 **MERGE** 陳述式。 **MERGE** 與佇列更新觸發程序不相容。 請將 **MERGE** 陳述式取代成 Insert 或 Update 陳述式。  
-  
+
+
 ## <a name="trigger-implementation"></a>觸發程序實作
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 MERGE 陳述式中指定的每個插入、更新或刪除動作，引發目標資料表上定義的對應 AFTER 觸發程序，但並不能保證哪一個動作會最先或最後引發觸發程序。 為相同動作所定義的觸發程序會接受您指定的順序。 如需有關設定觸發程序引發順序的詳細資訊，請參閱[指定第一個及最後一個觸發程序](../../relational-databases/triggers/specify-first-and-last-triggers.md)。  
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. 使用 MERGE 對圖形資料庫中的目標邊緣資料表執行 INSERT 或 UPDATE
 
 在此範例中，您會建立 `Person` 和 `City` 節點資料表以及 `livesIn` 邊緣資料表。 您將在 `livesIn` 邊緣使用 MERGE 陳述式，以在 `Person` 與 `City` 之間還未存在邊緣時插入新資料列。 如果邊緣已經存在，則您只需更新 `livesIn` 邊緣上的 StreetAddress 屬性。
-
-> [!NOTE]
-> 下列範例適用於從 2019 版開始的 SQL Server。
 
 ```sql
 -- CREATE node and edge tables

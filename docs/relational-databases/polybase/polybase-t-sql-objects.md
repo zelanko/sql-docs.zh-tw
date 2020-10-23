@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891338"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005708"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 參考
 
@@ -121,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>建立 Azure Blob 儲存體的外部資料表  
-適用於：SQL Server (自 2016 版開始)、Azure SQL 資料倉儲、平行處理資料倉儲
+適用於：SQL Server (從 2016 版開始)、Azure Synapse Analytics、平行處理資料倉儲
 
 **1.建立資料庫範圍認證**  
 
@@ -196,7 +196,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>建立 Azure Data Lake Store 的外部資料表
-適用於：Azure SQL 資料倉儲
+適用於：Azure Synapse Analytics
 
 如需詳細資訊，請參閱[使用 Azure Data Lake Store 載入](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 

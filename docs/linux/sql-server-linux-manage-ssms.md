@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883921"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115614"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio 來管理 Linux 上的 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "85883921"
 > [!TIP]
 > 如果您沒有要在其上執行 SSMS 的 Windows 電腦，請考慮使用新的 [Azure Data Studio](../azure-data-studio/index.yml)。 它提供用來管理 SQL Server 的圖形化工具，並可在 Linux 和 Windows 上執行。
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) 是 Microsoft 針對開發和管理需求免費提供的部分 SQL 工具套件。 SSMS 是一種整合式環境，可存取、設定、管理及開發 SQL Server 的所有元件。 它可以連線到內部部署、Docker 容器和雲端中任何平台上執行的 SQL Server。 它也會連線到 Azure SQL Database 和 Azure SQL 資料倉儲。 SSMS 使用許多豐富指令碼編輯器來合併一群非常廣泛的圖形工具，使所有技術層級的開發人員及系統管理員都能夠存取 SQL Server。
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) 是 Microsoft 針對開發和管理需求免費提供的部分 SQL 工具套件。 SSMS 是一種整合式環境，可存取、設定、管理及開發 SQL Server 的所有元件。 它可以連線到內部部署、Docker 容器和雲端中任何平台上執行的 SQL Server。 其也會連線到 Azure SQL Database 和 Azure Synapse Analytics。 SSMS 使用許多豐富指令碼編輯器來合併一群非常廣泛的圖形工具，使所有技術層級的開發人員及系統管理員都能夠存取 SQL Server。
 
 SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行下列作業的工具：
 
@@ -107,7 +107,7 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 
 3. 在 [新增資料庫] 對話方塊中，輸入新資料庫的名稱，然後按一下 [確定]
 
-隨即在您的伺服器中成功建立新資料庫。 如果您想要使用 T-SQL 建立新的資料庫，請參閱 [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md)。
+隨即在您的伺服器中成功建立新資料庫。 如果您想要使用 T-SQL 建立新的資料庫，請參閱 [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md)。
 
 ### <a name="drop-a-database"></a>卸除資料庫
 
@@ -143,6 +143,6 @@ SSMS 為 SQL Server 提供一組廣泛的開發和管理功能，包括可執行
 ## <a name="see-also"></a>另請參閱
 - [什麼是 SSMS？](../ssms/sql-server-management-studio-ssms.md)
 - [使用 SSMS 匯出和匯入資料庫](sql-server-linux-migrate-ssms.md)
-- [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [教學課程：SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [伺服器效能與活動監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)

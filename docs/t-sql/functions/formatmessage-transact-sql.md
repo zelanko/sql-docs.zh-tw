@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47eb4bb9e66f7f4fa9a84b694ebd8915f0c60d31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 510c39bb15235b37a23894a4ff5e3bef9c2f51f5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459710"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081787"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459710"
 ## <a name="syntax"></a>語法  
   
 ```syntaxsql
-FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
+FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value [ ,...n ] ] )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -52,6 +52,11 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
  這是括在單引號中的字串，且包含參數值預留位置。 這個錯誤訊息最多可有 2,047 個字元。 如果訊息包含 2,048 個或更多字元，則只會顯示前 2,044 個字元，並且會加上省略符號以表示該訊息已被截斷。 請注意，由於內部儲存行為的緣故，替代參數比輸出顯示耗用更多字元。  如需有關訊息字串結構以及字串中參數用法的資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md) 中 *msg_str* 引數的說明。  
+
+ *@msg_variable*  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+  
+ 為 nvarchar 或 varchar 變數，其中包含符合上述 *msg_string* 之準則規範的字串。  
   
  *param_value*  
  這是訊息中所用的參數值。 它可以是多個參數值。 您必須依照預留位置變數在訊息中的出現順序來指定這些值。 最多可有 20 個值。  

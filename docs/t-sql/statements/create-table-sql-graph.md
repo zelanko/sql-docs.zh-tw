@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688667"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005583"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -117,7 +117,10 @@ CREATE TABLE
  建立邊緣資料表。  
  
  *table_constraint*   
- 指定 PRIMARY KEY、UNIQUE、FOREIGN KEY、CONNECTION 條件約束、CHECK 條件約束的屬性，或新增至資料表的 DEFAULT 定義屬性
+ 指定 PRIMARY KEY、UNIQUE、FOREIGN KEY、CONNECTION 條件約束、CHECK 條件約束，或新增至資料表的 DEFAULT 定義的屬性。
+ 
+ > [!NOTE]   
+ > CONNECTION 條件約束僅適用於邊緣資料表類型。
  
  ON { partition_scheme | filegroup | "default" }    
  指定儲存資料表的分割區配置或檔案群組。 如果指定了 partition_scheme，資料表便是一份分割區資料表，其分割區儲存在 partition_scheme 指定的一組檔案群組中 (其具有一或多個檔案群組)。 如果指定了 filegroup，資料表會儲存在具名檔案群組中。 檔案群組必須在資料庫內。 如果指定了 default，或完全未指定 ON，資料表就會儲存在預設檔案群組中。 CREATE TABLE 所指定的資料表儲存機制無法進行後續的改變。
@@ -125,7 +128,8 @@ CREATE TABLE
  ON {partition_scheme | filegroup | "default"}    
  PRIMARY KEY 或 UNIQUE 條件約束中也可指定此項目。 這些條件約束會建立索引。 如果指定了 filegroup，索引會儲存在具名檔案群組中。 如果指定了 default，或完全未指定 ON，索引就會儲存在與資料表相同的檔案群組中。 如果 PRIMARY KEY 或 UNIQUE 條件約束建立叢集索引，資料表的資料頁面會儲存在索引的相同檔案群組中。 如果指定了 CLUSTERED 或常數建立了叢集索引，且所指定 partition_scheme 與資料表定義的 partition_scheme 或 filegroup 不同 (反之亦然)，則只會遵守條件約束定義，其他一概予以忽略。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
+
 不支援建立暫存資料表作為節點或邊緣資料表。  
 
 不支援建立節點或邊緣資料表作為時態表。
@@ -163,6 +167,16 @@ CREATE TABLE
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+下一個範例會模擬**只有**人可以成為其他人朋友的規則，這表示此邊緣不允許參考 Person 以外的任何其他節點。
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

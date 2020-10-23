@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891008"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005993"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以選擇性地在資料庫中的多個檔案群組之間散佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設最多支援 15,000 個資料分割。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的舊版本中，預設的資料分割數量不得超過 1,000 個。 在 x86 系統中雖能建立超過 1,000 個資料表或索引，但不予支援。  
@@ -40,9 +40,12 @@ ms.locfileid: "91891008"
   
 -   您可以提升查詢效能，不過這要視您經常執行的查詢類型和硬體組態而定。 例如，當分割資料行與要在其上聯結資料表的資料行相同時，查詢最佳化工具可以更快速地同等聯結 (equi-join) 兩個或更多資料分割資料表間的查詢。 請參閱以下的[查詢](#queries)以取得進一步資訊。
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一次會存取一台磁碟機，而這樣會降低效能。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
   
 此外，您可以啟用分割區層級的鎖定擴大 (而非整個資料表) 來提升效能。 這可以減少資料表上的鎖定競爭。 若要允許鎖定擴大到資料分割，以減少鎖定競爭，請將 `ALTER TABLE` 陳述式的 `LOCK_ESCALATION` 選項設定為 AUTO。 
+
+> [!TIP]
+> 資料表或索引的分割區可以置於單一檔案群組 (例如 `PRIMARY` 檔案群組) 或多個檔案群組上。 使用分層式儲存體時，使用多個檔案群組可讓您將特定的分割區指派至特定的儲存層。 所有其他資料分割優點皆適用，無論所使用的檔案群組數目為何，或是特定檔案群組上的分割區位置為何。
   
 ## <a name="components-and-concepts"></a>元件和概念  
 下列詞彙適用於資料表和索引資料分割。  
@@ -114,6 +117,8 @@ ms.locfileid: "91891008"
 -  定義相同數目的資料分割。
 -  為資料分割定義相同的界限值。
 如此一來，因為資料分割本身可以聯結，所以查詢最佳化工具處理聯結的速度會更快。 如果查詢所聯結的兩個資料表並未共置或未根據聯結欄位進行資料分割，則資料分割的存在，實際上可能會使查詢速度變慢，而非變快。
+
+如需查詢處理中分割區處理的詳細資訊，請參閱[分割資料表和索引上的查詢處理增強功能](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes)。
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>資料分割索引作業期間，統計資料運算的行為會改變  
  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，並不會在建立或重建資料分割索引之後掃描資料表中所有的資料列建立統計資料。 反之，查詢最佳化工具會使用預設的採樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `FULLSCAN` 時請使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS`。  

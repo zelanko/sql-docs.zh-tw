@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df2cae92398fdffafd4ef0e998c6f26a8103991
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 409e87d937641386747ccf5210551aadb3f5b761
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869452"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195553"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "91869452"
 > 若您使用 Windows 驗證模式來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並於之後將其變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 驗證模式，就會先停用 **sa** 登入。 這將造成狀態 7 錯誤：「使用者 'sa' 登入失敗。」若要啟用 **sa** 登入，請參閱[變更伺服器驗證模式](~/database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="user-action"></a>使用者動作  
-如果您正嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接，請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在混合驗證模式下設定。  
+如果您正嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接，請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在混合驗證模式下設定。 如需變更 SQL Server 驗證模式的詳細資訊，請檢閱[變更伺服器驗證模式](https://docs.microsoft.com/sql/database-engine/configure-windows/change-server-authentication-mode)
   
 如果您正嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接，請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入存在而且您的拼字正確無誤。  
   

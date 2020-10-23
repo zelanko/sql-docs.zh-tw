@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915873"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197035"
 ---
 # <a name="install-integration-services-ssis"></a>安裝 Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ ms.locfileid: "86915873"
 
 - **SQL Server Data Tools (SSDT)** 。 我們已中止 Visual Studio 2019 的 SSDT 獨立安裝程式。 針對 Visual Studio 2019，您現在可以從 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview) 取得 SSIS 設計工具延伸模組。
 
-- **Integration Services Feature Pack for Azure**： 若要下載並安裝 Feature Pack，請參閱 [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017)。 安裝 Feature Pack 時，可讓您的套件連線到 Azure 雲端中的儲存體和分析服務，包括下列服務：
+- **Integration Services Feature Pack for Azure**： 若要下載並安裝 Feature Pack，請參閱 [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017)。 安裝 Feature Pack 時，可讓您的套件連線到 Azure 雲端中的儲存體和分析服務，包括下列服務：
 
   - Azure Blob 儲存體。
 
@@ -123,7 +123,7 @@ ms.locfileid: "86915873"
 
   - Azure Data Lake Store。
 
-  - Azure SQL 資料倉儲。
+  - Azure Synapse Analytics。
 
   - Azure Data Lake Storage (Gen2)。
 

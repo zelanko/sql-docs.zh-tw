@@ -12,17 +12,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670658"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005795"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>將 Azure VM 設定為可用性群組中的次要複本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   使用 [新增 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
-  
+
+>  [!IMPORTANT]  
+>  Azure 建立和處理資源的部署模型有二種：資源管理員和傳統。 本文涵蓋之內容包括使用傳統部署模型。 Microsoft 建議讓大部分的新部署使用 Resource Manager 模式。 如果您是使用 Resource Manager 模型來部署 Azure 虛擬機器，此文章中的步驟便不適用。   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  如果您從未將任何可用性複本加入可用性群組中，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的＜伺服器執行個體＞和＜可用性群組和複本＞二節。  
@@ -47,6 +49,12 @@ ms.locfileid: "91670658"
  如果您想要允許 [將複本加入至可用性群組精靈] 管理資料庫鏡像端點，也需要 CONTROL ON ENDPOINT 權限。  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用加入 Azure 複本精靈 (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  [加入 Azure 複本精靈] 僅支援以傳統部署模型建立的虛擬機器。 新的虛擬機器部署應該使用較新的 Resource Manager 模型。 如果您是搭配 Resource Manager 使用虛擬機器，您應該使用 Transact-SQL 命令 (未顯示於此) 手動新增次要 Azure 複本。 此精靈並無法在 Resource Manager 的案例中運作。 
+>
+>  SQL Server Management Studio 的最新版本 (18.x 與 17.x 版) 中並未提供 [加入 Azure 複本] 精靈。
+        
  您可以從 [指定複本頁面](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)啟動 [加入 Azure 複本精靈]。 存取這個頁面的方式有兩種：  
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  

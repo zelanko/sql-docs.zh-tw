@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896500"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115481"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發 Linux 上 SQL Server 的應用程式
 
@@ -24,7 +24,7 @@ ms.locfileid: "85896500"
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> 這些開發選項也可讓您以其他平台上的 SQL Server 為目標。 應用程式可以將在內部部署或雲端執行的 SQL Server (在 Linux、Windows 或在 MacOS 的 Docker 上) 設為目標。 或者，您也可以將 Azure SQL Database 和 Azure SQL 資料倉儲設為目標。
+> 這些開發選項也可讓您以其他平台上的 SQL Server 為目標。 應用程式可以將在內部部署或雲端執行的 SQL Server (在 Linux、Windows 或在 MacOS 的 Docker 上) 設為目標。 或者，您也可以將目標設為 Azure SQL Database 和 Azure Synapse Analytics。
 
 ## <a name="try-the-tutorials"></a>試用教學課程
 
@@ -62,7 +62,7 @@ ms.locfileid: "85896500"
 
 您可以在 Linux、macOS 和 Windows 上使用適用於 [Visual Studio Code](https://code.visualstudio.com) 的新 [mssql 延伸模組](https://aka.ms/mssql-marketplace)。 如需逐步解說，請參閱下列教學課程：
 
-- [使用 Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [使用 Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 您也可以使用適用於 Linux 的原生新命令列工具。 這些工具包括下列項目：
 

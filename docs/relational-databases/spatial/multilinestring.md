@@ -14,15 +14,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403266"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006301"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **MultiLineString** 是零或多個 **geometry** 或 **geographyLineString** 執行個體的集合。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 執行個體  
@@ -45,7 +45,7 @@ ms.locfileid: "88403266"
 -   圖 6 是簡單、封閉的 **MultiLineString** 執行個體。 它是封閉的，因為它的所有元素都是封閉的。 因為它的所有元素在內部都不相交，所以它是簡單的。  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 若要接受 **MultiLineString** 執行個體，則該執行個體必須是空的，或是僅由可接受的 **LineString** 執行個體組成。 如需已接受之 **LineString** 執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md)。 以下為已接受之 **MultiLineString** 執行個體的範例。  
+ 若要接受 **MultiLineString** 執行個體，則該執行個體必須是空的，或是僅由接受的 **LineString** 執行個體所組成。 如需已接受之 **LineString** 執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md)。 以下為已接受之 **MultiLineString** 執行個體的範例。  
   
 ```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

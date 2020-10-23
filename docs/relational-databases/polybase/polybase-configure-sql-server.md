@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834020"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005845"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
@@ -81,7 +81,7 @@ SQL Server 的外部資料源使用 SQL 驗證。
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 連接器相容類型
 
-您可以對可辨識 SQL Server 連線的其他資料來源建立連線。 使用 SQL Server PolyBase 連接器來建立 Azure SQL 資料倉儲和 Azure SQL Database 的外部資料表。 若要完成此工作，請遵循上述相同步驟進行。 請確定資料庫範圍認證、伺服器位址、連接埠及位置字串皆與您想要連線之相容資料來源的對應設定相互關聯。
+您可以對可辨識 SQL Server 連線的其他資料來源建立連線。 使用 SQL Server PolyBase 連接器來建立 Azure Synapse Analytics 和 Azure SQL Database 的外部資料表。 若要完成此工作，請遵循上述相同步驟進行。 請確定資料庫範圍認證、伺服器位址、連接埠及位置字串皆與您想要連線之相容資料來源的對應設定相互關聯。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645775"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006129"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645775"
 
 將 SQL Server 或 Azure SQL Database 中的資料表重新命名。
 
-若要重新命名 Azure SQL 資料倉儲或平行處理資料倉儲中的資料表，請使用 t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) 陳述式。 
+若要重新命名 Azure Synapse Analytics 或平行處理資料倉儲中的資料表，請使用 t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) 陳述式。 
   
 > [!CAUTION]  
 >  在重新命名資料表之前請仔細考慮。 如果現有的查詢、檢視表、使用者定義函數、預存程序或程式參考此資料表，則名稱修改將會使這些物件失效。  

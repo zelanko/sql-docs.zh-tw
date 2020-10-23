@@ -30,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869064"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004811"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍，取決於主體定義的範圍：Windows、伺服器、資料庫；以及主體是否為不可分割或集合。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 此主題適用於所有版本的 SQL Server，但 SQL Database 或 SQL 資料倉儲中的伺服器層級主體有一些限制。 
+  「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍，取決於主體定義的範圍：Windows、伺服器、資料庫；以及主體是否為不可分割或集合。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 此主題適用於所有版本的 SQL Server，但 SQL Database 或 Azure Synapse Analytics 中伺服器層級主體有一些限制。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server 層級主體  
   

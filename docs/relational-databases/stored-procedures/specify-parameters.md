@@ -16,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332329"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005858"
 ---
 # <a name="specify-parameters"></a>指定參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GO
 >  如果預設值是包含內嵌空白或標點的字串，或是以數字開頭 (例如 6xxx)，就必須將它括在單引號中。  
 
 > [!NOTE] 
-> 在 Azure SQL 資料倉儲或 Parallel Data Warehouse 中不支援預設參數。 
+> 在 Azure Synapse Analytics 或平行處理資料倉儲中不支援預設參數。 
   
  如果無法指定適當的數值做為參數的預設值，您可以指定 NULL 做為預設值。 在沒有參數值的狀況下執行程序時，最好讓程序傳回自訂的訊息  
   
