@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
-title: sys. dm_xtp_gc_queue_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539226"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439481"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "89539226"
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
 
-|欄名|類型|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|佇列的唯一識別碼。|  
 |total_enqueues|**bigint**|自從伺服器啟動之後加入這個佇列中的記憶體回收工作項目的總數。|  
@@ -55,7 +55,7 @@ ms.locfileid: "89539226"
 ## <a name="user-scenario"></a>使用者案例  
  此輸出顯示，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在 4 核心上執行，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已經相似化為 4 核心：  
   
- 此輸出顯示，佇列中沒有任何要處理的工作項目。 對於佇列 0 而言，自從 SQL 啟動以來已清除佇列的總工作項目數為 15625，而最大佇列深度一直是 215625。  
+ 此輸出顯示，佇列中沒有任何要處理的工作項目。 針對佇列0，自 SQL 啟動後已取消佇列的工作專案總數為15625，而佇列深度上限為15625。  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

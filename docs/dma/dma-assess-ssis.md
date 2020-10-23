@@ -14,16 +14,16 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726311"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439402"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 執行 SQL Server 整合服務遷移評定
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要評估 SQL Server Integration Service (SSIS) 套件，下列元件必須隨 Data Migration Assistant 安裝：
 
@@ -55,12 +55,12 @@ DMA 需要以 **系統管理員** 存取權執行，才能評估封裝存放區�
 1.  (選擇性) 輸入包含 SSIS 套件的資料夾路徑。
 1.  (選擇性) 輸入套件加密密碼（如果適用）。
 1. 按一下 [連接到來源 SQL server **]** 。
-  ![新增來源](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![螢幕擷取畫面：顯示 [連接到伺服器] 窗格，其中包含 [輸入包含 SSIS 套件的資料夾路徑] 選項，並輸入套件加密密碼（如果有可用的選項）。](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>新增要評估的來源
 
 1. 選取要評估的 SSIS 封裝儲存體類型，然後選取 [ **新增**]。
-![新增來源](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![顯示 [新增來源] 窗格的螢幕擷取畫面。](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. 如果需要評估多個資料夾，請選取 [ **新增來源** ] 以開啟 [連接飛出視窗] 功能表。
 1. 按一下 [開始評估]****。
   ![開始評量](media/dma-assess-ssis/dma-assess-ssis-assess.png)
