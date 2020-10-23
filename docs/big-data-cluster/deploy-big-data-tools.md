@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725889"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257228"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -29,13 +29,13 @@ ms.locfileid: "91725889"
 | 工具 | 必要 | 描述 | 安裝 |
 |---|---|---|---|
 | `python` | 是 | Python 是具有動態語意的直譯物件導向高階程式設計語言。 SQL Server 巨量資料叢集的許多部分都使用 python。 | [安裝 python](#python)|
-| `azdata` | 是 | 用於安裝和管理巨量資料叢集的命令列工具。 | [安裝](../azdata/install/deploy-install-azdata.md) |
+| [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] | 是 | 用於安裝和管理巨量資料叢集的命令列工具。 | [安裝](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | 是 | 用於監視基礎 Kuberentes 叢集的命令列工具 ([詳細資訊](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \(英文\) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) \(英文\) |
 | **Azure Data Studio** | 是 | 用於查詢 SQL Server 的跨平台圖形化工具。 | [安裝](../azure-data-studio/download-azure-data-studio.md) |
 | **資料虛擬化延伸模組** | 是 | 提供 [資料虛擬化精靈] 之 Azure Data Studio 的延伸模組。 | [安裝](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **Azure CLI**<sup>2</sup> | 對於 AKS | 用於管理 Azure 服務的新式命令列介面。 與 AKS 巨量資料叢集部署搭配使用 ([詳細資訊](/cli/azure/?view=azure-cli-latest))。 | [安裝](/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure CLI**<sup>2</sup> | 對於 AKS | 用於管理 Azure 服務的新式命令列介面。 與 AKS 巨量資料叢集部署搭配使用 ([詳細資訊](/cli/azure/?view=azure-cli-latest&preserve-view=true))。 | [安裝](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
 | **mssql-cli** | 選用 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](../tools/mssql-cli.md) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \(英文\) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) \(英文\) |
-| **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](../tools/sqlcmd-utility.md?view=sql-server-ver15) \(部分機器翻譯\))。 您可能需要先安裝 Microsoft ODBC Driver 11 for SQL Server，才能安裝 SQLCMD 套件。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \(英文\) \| [Linux](../linux/sql-server-linux-setup-tools.md) \(英文\) |
+| **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](../tools/sqlcmd-utility.md) \(部分機器翻譯\))。 您可能需要先安裝 Microsoft ODBC Driver 11 for SQL Server，才能安裝 SQLCMD 套件。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \(英文\) \| [Linux](../linux/sql-server-linux-setup-tools.md) \(英文\) |
 | `curl` <sup>3</sup> | 對於某些指令碼 | 使用 URL 傳送資料的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \(英文\) \| Linux：安裝 curl 套件 |
 | `oc` | 必須具備才能進行 Red Hat OpenShift 和 Azure Redhat OpenShift 部署。 |`oc` 是 Open Shift 命令列介面 (CLI)。 | [Installing the CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli) (安裝 CLI)
 
@@ -56,7 +56,7 @@ ms.locfileid: "91725889"
 
 上表提供與巨量資料叢集搭配使用的所有常用工具。 需要哪些工具取決於您的案例。 但一般而言，下列工具對於管理、連線及查詢叢集最為重要：
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - **Azure Data Studio**
 - **資料虛擬化延伸模組**

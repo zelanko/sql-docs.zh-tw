@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db549cf5b3ee7620806c1b87713211d5eb201c90
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d8b04d384d7ee5f846197ff3465b9c0914ca94c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178852"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196312"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>使用 R 計算摘要統計資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 5；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 5；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
 此教學課程會使用在先前教學課程中建立的資料來源和計算內容，來執行高效能的 R 指令碼。 在此教學課程中，您將會使用本機和遠端伺服器計算內容來執行下列工作：
 
@@ -46,13 +46,13 @@ ms.locfileid: "88178852"
     rxSetComputeContext(sqlCompute)
     ```
 
-2. 呼叫 [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 函式並傳遞必要引數，例如公式及資料來源，以及將結果指派給變數 `sumOut`。
+2. 呼叫 [rxSummary](/machine-learning-server/r-reference/revoscaler/rxsummary) 函式並傳遞必要引數，例如公式及資料來源，以及將結果指派給變數 `sumOut`。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 語言提供許多彙總函式，但 **RevoScaleR** 中的 **rxSummary** 支援在各種遠端計算內容上執行，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需類似函式的詳細資訊，請參閱[使用 RevoScaleR 建立資料摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
+    R 語言提供許多彙總函式，但 **RevoScaleR** 中的 **rxSummary** 支援在各種遠端計算內容上執行，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需類似函式的詳細資訊，請參閱[使用 RevoScaleR 建立資料摘要](/machine-learning-server/r/how-to-revoscaler-data-summaries)。
   
 3. 將 sumOut 的內容列印到主控台。
   

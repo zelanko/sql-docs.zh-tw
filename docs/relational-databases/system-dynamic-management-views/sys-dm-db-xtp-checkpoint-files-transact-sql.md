@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_files (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-sql) |Microsoft Docs
 description: 顯示檢查點檔案的相關資訊，包括檔案大小、實體位置和交易識別碼。 瞭解此視圖與 SQL Server 版本的差異。
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 010b043bbaab3a5ce1712d32b1e94f800fa630d3
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542269"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412663"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "89542269"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 與較新版本的差異很大，在 [SQL Server 2014](#bkmk_2014)的主題中將會討論較低的部分。  
   
- 如需詳細資訊，請參閱 [建立和管理記憶體優化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
+ 如需詳細資訊，請參閱 [建立和管理 Memory-Optimized 物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本  
  下表描述從開始的資料行 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|欄名|類型|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 在 [sys. database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)中與 file_id 聯結。|  
-|container_guid|**uniqueidentifier**|容器的 GUID，其為根、資料或差異檔案的一部分。 與 sys. database_files 資料表中的 file_guid 聯結。|  
+|container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 使用 [sys.database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)中的 file_id 聯結。|  
+|container_guid|**uniqueidentifier**|容器的 GUID，其為根、資料或差異檔案的一部分。 與 sys.database_files 資料表中的 file_guid 聯結。|  
 |checkpoint_file_id|**uniqueidentifier**|檢查點檔案的 GUID。|  
 |relative_file_path|**nvarchar(256)**|相對於對應容器的檔案路徑。|  
 |file_type|**smallint**|-1 代表免費<br /><br /> 0適用于資料檔案。<br /><br /> 1代表差異檔案。<br /><br /> 2為根檔案<br /><br /> 3適用于大型資料檔案|  
@@ -65,14 +65,14 @@ ms.locfileid: "89542269"
 |end_checkpoint_id|**bigint**|結束檢查點的識別碼。|  
 |last_updated_checkpoint_id|**bigint**|更新此檔案之最後一個檢查點的識別碼。|  
 |encryption_status|**smallint**|0、1、2|  
-|encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => 使用金鑰1加密<br /><br /> 2 = 使用金鑰2加密>。 只對作用中的檔案有效。|  
+|encryption_status_desc|**nvarchar(60)**|0 = 未加密><br /><br /> 1 => 使用金鑰1加密<br /><br /> 2 = 使用金鑰2加密>。 只對作用中的檔案有效。|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表描述的資料行 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|欄名|類型|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 在 [sys. database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)中與 file_id 聯結。|  
+|container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 使用 [sys.database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)中的 file_id 聯結。|  
 |container_guid|**uniqueidentifier**|資料或差異檔案所屬之容器的 GUID。|  
 |checkpoint_file_id|**GUID**|資料或差異檔案的識別碼。|  
 |relative_file_path|**nvarchar(256)**|資料或差異檔案的路徑 (相對於容器的位置)。|  
@@ -86,7 +86,7 @@ ms.locfileid: "89542269"
 |deleted_row_count|**bigint**|差異檔案中已刪除的資料列數。|  
 |drop_table_deleted_row_count|**bigint**|資料檔案中受到卸除資料表影響的資料列數目。 當 state 資料行等於 1 時，適用於資料檔案。<br /><br /> 顯示已卸除的資料表中刪除的資料列計數。 在完成已卸除之資料表中資料列的記憶體回收及取得檢查點之後，就會編譯 drop_table_deleted_row_count 統計資料。 如果您在卸除資料表統計資料反映於這個資料行之前重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，統計資料將會在復原期間更新。 復原程序不會從已卸除的資料表中載入資料列。 載入階段會編譯已卸除之資料表的統計資料，並在復原完成時於這個資料行中報告。|  
 |狀態|**int**|0-預先建立<br /><br /> 1-下建設<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 4-合併來源<br /><br /> 5-備份/HA 需要<br /><br /> 6-轉換成標記<br /><br /> 7-標記|  
-|state_desc|**nvarchar(60)**|預先建立-一組較小的資料和差異檔案組（也稱為成對的檢查點檔案組） (Cfp) 會保留預先配置，以最小化或消除在執行交易時，配置新檔案的任何等候。 其為配置全額，即資料檔案大小為 128MB 且差異檔案大小為 8 MB 但不含資料。 CFP 數目是依邏輯處理器或排程器的數目來計算 (每個核心一個，無上限)，最少為 8 個。 這是具有記憶體最佳化資料表的資料庫固定的儲存負擔。<br /><br /> 在 Cfp 中，會在最後一個檢查點之後儲存剛插入且可能已刪除的資料列集。<br /><br /> 使用中 - 包含來自先前已關閉之檢查點的已插入和刪除的資料列。 這些 CFP 包含了在資料庫重新啟動時套用交易記錄的使用中部分之前所需的所有已插入和刪除的資料列。 這些 CFP 的大小大約是記憶體最佳化資料表的記憶體中大小的兩倍，前提是合併作業透過交易式工作負載維持在最新狀態。<br /><br /> 合併目標-CFP 會儲存合併原則所識別之 CFP (s) 的合併資料列。 一旦安裝合併之後，「合併目標」就會轉換為「使用中」狀態。<br /><br /> 合併來源-安裝合併作業之後，來源 Cfp 會標示為合併來源。 請注意，合併原則評估工具可識別多個合併，但是 CFP 只能參與一個合併作業。<br /><br /> 備份/HA 的必要項-在安裝合併且合併目標 CFP 是永久性檢查點的一部分時，合併來源 Cfp 會轉換為此狀態。 包含記憶體最佳化資料表的資料庫需要這個狀態下的 CFP 來確定其作業的正確性。  例如，若要從持久性檢查點復原來回到過去。 CFP 要等到記錄截斷點移出其交易範圍後才可標示為記憶體回收。<br /><br /> 在轉換成標記時，記憶體內部 OLTP 引擎不需要這些 Cfp，而且可以進行垃圾收集。 此狀態表示這些 CFP 正在等候背景執行緒將其轉換到下一個狀態，也就是「標記」。<br /><br /> 標記-這些 Cfp 正在等候 filestream 垃圾收集行程進行垃圾收集。  ([sp_filestream_force_garbage_collection &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)) |  
+|state_desc|**nvarchar(60)**|預先建立-一組較小的資料和差異檔案組（也稱為成對的檢查點檔案組） (Cfp) 會保留預先配置，以最小化或消除在執行交易時，配置新檔案的任何等候。 其為配置全額，即資料檔案大小為 128MB 且差異檔案大小為 8 MB 但不含資料。 CFP 數目是依邏輯處理器或排程器的數目來計算 (每個核心一個，無上限)，最少為 8 個。 這是具有記憶體最佳化資料表的資料庫固定的儲存負擔。<br /><br /> 在 Cfp 中，會在最後一個檢查點之後儲存剛插入且可能已刪除的資料列集。<br /><br /> 使用中 - 包含來自先前已關閉之檢查點的已插入和刪除的資料列。 這些 CFP 包含了在資料庫重新啟動時套用交易記錄的使用中部分之前所需的所有已插入和刪除的資料列。 這些 CFP 的大小大約是記憶體最佳化資料表的記憶體中大小的兩倍，前提是合併作業透過交易式工作負載維持在最新狀態。<br /><br /> 合併目標-CFP 會儲存合併原則所識別之 CFP (s) 的合併資料列。 一旦安裝合併之後，「合併目標」就會轉換為「使用中」狀態。<br /><br /> 合併來源-安裝合併作業之後，來源 Cfp 會標示為合併來源。 請注意，合併原則評估工具可識別多個合併，但是 CFP 只能參與一個合併作業。<br /><br /> 備份/HA 的必要項-在安裝合併且合併目標 CFP 是永久性檢查點的一部分時，合併來源 Cfp 會轉換為此狀態。 包含記憶體最佳化資料表的資料庫需要這個狀態下的 CFP 來確定其作業的正確性。  例如，若要從持久性檢查點復原來回到過去。 CFP 要等到記錄截斷點移出其交易範圍後才可標示為記憶體回收。<br /><br /> 在轉換成標記時，In-Memory OLTP 引擎不需要這些 Cfp，而且可以進行垃圾收集。 此狀態表示這些 CFP 正在等候背景執行緒將其轉換到下一個狀態，也就是「標記」。<br /><br /> 標記-這些 Cfp 正在等候 filestream 垃圾收集行程進行垃圾收集。  ([sp_filestream_force_garbage_collection &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)) |  
 |lower_bound_tsn|**bigint**|檔案中包含之交易的下限。 如果 state 資料行不是 2、3 或 4 則為 Null。|  
 |upper_bound_tsn|**bigint**|檔案中包含之交易的上限。 如果 state 資料行不是 2、3 或 4 則為 Null。|  
 |last_backup_page_count|**int**|上一次備份所決定的邏輯頁計數。 當 state 資料行設定為 2、3、4 或 5 時適用。 如果頁面計數未知則為 NULL。|  
@@ -99,7 +99,7 @@ ms.locfileid: "89542269"
  需要伺服器的 `VIEW DATABASE STATE` 權限。  
   
 ## <a name="use-cases"></a>使用案例  
- 您可以估計記憶體內部 OLTP 所使用的儲存體，如下所示：  
+ 您可以估計 In-Memory OLTP 使用的儲存體，如下所示：  
   
 ```  
 -- total storage used by In-Memory OLTP  

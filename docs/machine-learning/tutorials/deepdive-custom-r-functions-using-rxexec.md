@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178785"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195150"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>使用 rxExec 在 SQL Server 上執行自訂 R 函式 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 14；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 14；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
 在此教學課程中，您將會使用模擬資料來示範如何執行在遠端伺服器上執行的自訂 R 函式。
 
-您可以藉由透過 [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 傳遞函數的方式，在 SQL Server 的內容中執行自訂 R 函數，前提是指令碼所需的任何程式庫也安裝在此伺服器，而且這些程式庫與 R 的基礎映像發佈相容。 
+您可以藉由透過 [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec) 傳遞函數的方式，在 SQL Server 的內容中執行自訂 R 函數，前提是指令碼所需的任何程式庫也安裝在此伺服器，而且這些程式庫與 R 的基礎映像發佈相容。 
 
 **RevoScaleR** 中的 **rxExec** 函數會提供一個機制來執行您所需的任何 R 指令碼。 此外，**rxExec** 能夠在單一伺服器中明確地將工作散發到多個核心，擴充受限於原生 R 引擎資源限制式的指令碼。
 

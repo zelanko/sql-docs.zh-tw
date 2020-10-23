@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059556"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196342"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的已知問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -136,7 +136,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 如果下列兩個敘述中任一個為真，即會顯示此訊息。
 
 + 您已使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 的安裝精靈，在用戶端電腦上安裝 R Server (獨立)。
-+ 您已使用[單獨的 Windows 安裝程式](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) \(英文\) 來安裝 Microsoft R Server。
++ 您已使用[單獨的 Windows 安裝程式](/machine-learning-server/install/r-server-install-windows) \(英文\) 來安裝 Microsoft R Server。
 
 為確保伺服器和用戶端會使用相同版本，您可能需要使用「繫結」(支援 Microsoft R Server 9.0 和更新版本)，來升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷您的 R Services 版本是否支援升級，請參閱[使用 SqlBindR.exe 升級 R Services 的執行個體](../install/upgrade-r-and-python.md)。
 
@@ -254,7 +254,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 ### <a name="15-installation-or-upgrade-error-on-fips-enabled-servers"></a>15.啟用 FIPS 的伺服器上具有安裝或升級錯誤
 
-如果在啟用[聯邦資訊處理標準 (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 的伺服器上安裝 SQL Server 2019 與**機器學習服務和語言延伸模組**功能，或升級 SQL Server 執行個體，將會收到下列錯誤：
+如果在啟用[聯邦資訊處理標準 (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 的伺服器上安裝 SQL Server 2019 與**機器學習服務和語言延伸模組**功能，或升級 SQL Server 執行個體，將會收到下列錯誤：
 
 > 安裝擴充性功能時發生錯誤，錯誤訊息如下：AppContainer 建立失敗，錯誤訊息為「無」，表示這個實作不是 Windows Platform FIPS 驗證加密演算法的一部分。
 
@@ -268,7 +268,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 本節包含在 SQL Server 上執行 R 的特定已知問題，以及一些與 Microsoft 所發佈之 R 程式庫和工具 (包括 RevoScaleR) 相關的問題。
 
-如需可能影響 R 解決方案的其他已知問題，請參閱 [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) \(英文\) 網站。
+如需可能影響 R 解決方案的其他已知問題，請參閱 [Machine Learning Server](/machine-learning-server/resources-known-issues) \(英文\) 網站。
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.在 SQL Server 上的非預設位置中執行 R 指令碼時，發生拒絕存取的警告
 
@@ -288,7 +288,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 > 錯誤發生於 memDecompress(data, type = decompress) 內部錯誤 - memDecompress(2) 中的 3。
 
-如果您使用最新版的序列化函數 ([rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) \(英文\)) 來儲存模型，但您將模型還原序列化所在的 SQL Server 執行個體具有舊版 RevoScaleR API (來自 SQL Server 2017 CU2 或更早版本)，則會引發此錯誤。
+如果您使用最新版的序列化函數 ([rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) \(英文\)) 來儲存模型，但您將模型還原序列化所在的 SQL Server 執行個體具有舊版 RevoScaleR API (來自 SQL Server 2017 CU2 或更早版本)，則會引發此錯誤。
 
 因應措施是，您可以將 SQL Server 2017 執行個體升級為 CU3 或更新版本。
 
@@ -300,7 +300,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 如果您使用決策樹或決策樹系方法建立模型，並指定學習速度，則相較於使用 `rxPredict`，在使用 `sp_rxpredict` 或 SQL `PREDICT` 函數時，您可能會看到不一致的結果。
 
-原因在於 API 中所發生的錯誤，此 API 會處理序列化的模型並受限於 `learningRate` 參數：例如，在 [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \(英文\) 中，或
+原因在於 API 中所發生的錯誤，此 API 會處理序列化的模型並受限於 `learningRate` 參數：例如，在 [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) \(英文\) 中，或
 
 此問題已在即將推出的服務版本中解決。
 
@@ -396,7 +396,7 @@ data <- RxSqlServerData(
 
 當 R 傳回二進位資料類型 (R **raw** 資料類型) 時，必須在輸出資料框架中傳送此值。
 
-利用 **raw** 以外的資料類型，加上 OUTPUT 關鍵字，就能將參數值和預存程序的結果一起傳回。 如需詳細資訊，請參閱[參數](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)。
+利用 **raw** 以外的資料類型，加上 OUTPUT 關鍵字，就能將參數值和預存程序的結果一起傳回。 如需詳細資訊，請參閱[參數](../../relational-databases/stored-procedures/parameters.md)。
 
 如果您想要使用包含類型為 **raw** 之值的多個輸出集，可行的因應措施之一是對預存程序進行多次呼叫，或者，使用 ODBC 來將結果集傳回到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
@@ -544,7 +544,7 @@ SQL Server 2019 包含會影響使用平行執行之 R 指令碼的迴歸。 範
 
 ## <a name="python-script-execution-issues"></a>Python 指令碼執行問題
 
-本節包含在 SQL Server 上執行 Python 的特定已知問題，以及與 Microsoft 所發佈之 Python 套件相關的問題，包括 [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) \(英文\) 和 [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package) \(英文\)。
+本節包含在 SQL Server 上執行 Python 的特定已知問題，以及與 Microsoft 所發佈之 Python 套件相關的問題，包括 [revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) \(英文\) 和 [microsoftml](/r-server/python-reference/microsoftml/microsoftml-package) \(英文\)。
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1.如果模型的路徑太長，呼叫預先定型的模型即會失敗
 
@@ -554,12 +554,12 @@ SQL Server 2019 包含會影響使用平行執行之 R 指令碼的迴歸。 範
 
 + 當您安裝預先定型的模型時，請選擇自訂位置。
 + 如果可能，在含有較短路徑的自訂安裝路徑 (例如 C:\SQL\MSSQL14.MSSQLSERVER) 底下，安裝 SQL Server 執行個體。
-+ 使用 Windows 公用程式 [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) \(英文\)，來建立將模型檔案對應至較短路徑的永久連結。
++ 使用 Windows 公用程式 [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc788097(v=ws.11)) \(英文\)，來建立將模型檔案對應至較短路徑的永久連結。
 + 更新至最新服務版本。
 
 ### <a name="2-error-when-saving-serialized-model-to-sql-server"></a>2.將序列化模型儲存至 SQL Server 時發生錯誤
 
-當您將模型傳遞至遠端 SQL Server 執行個體，並嘗試使用 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) \(英文\) 中的 `rx_unserialize` 函數來讀取二進位模型時，您可能收到下列錯誤： 
+當您將模型傳遞至遠端 SQL Server 執行個體，並嘗試使用 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) \(英文\) 中的 `rx_unserialize` 函數來讀取二進位模型時，您可能收到下列錯誤： 
 
 > NameError: 尚未定義名稱 'rx_unserialize_model'
 

@@ -169,7 +169,7 @@
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <> (不等於)
           href: ../mdx/not-equal-to-mdx.md
-        - name: = (等於)
+        - name: '= (等於)'
           href: ../mdx/equal-to-mdx.md
         - name: '> (大於)'
           href: ../mdx/greater-than-mdx.md
@@ -200,7 +200,7 @@
           href: ../mdx/ancestors-mdx.md
         - name: Ascendants
           href: ../mdx/ascendants-mdx.md
-        - name: Avg
+        - name: 平均
           href: ../mdx/avg-mdx.md
         - name: 軸
           href: ../mdx/axis-mdx.md
@@ -252,9 +252,9 @@
           href: ../mdx/datamember-mdx.md
         - name: DefaultMember
           href: ../mdx/defaultmember-mdx.md
-        - name: Descendants
+        - name: 子系
           href: ../mdx/descendants-mdx.md
-        - name: 維度
+        - name: 尺寸
           href: ../mdx/dimension-mdx.md
         - name: 維度
           href: ../mdx/dimensions-mdx.md
@@ -262,7 +262,7 @@
           href: ../mdx/distinct-mdx.md
         - name: DistinctCount
           href: ../mdx/distinctcount-mdx.md
-        - name: 除
+        - name: 除以
           href: ../mdx/divide-mdx.md
         - name: DrilldownLevel
           href: ../mdx/drilldownlevel-mdx.md
@@ -348,7 +348,7 @@
           href: ../mdx/leaves-mdx.md
         - name: 層級
           href: ../mdx/level-mdx.md
-        - name: Levels
+        - name: 等級
           href: ../mdx/levels-mdx.md
         - name: LinkMember
           href: ../mdx/linkmember-mdx.md
@@ -368,7 +368,7 @@
           href: ../mdx/max-mdx.md
         - name: MeasureGroupMeasures
           href: ../mdx/measuregroupmeasures-mdx.md
-        - name: 中位數
+        - name: Median
           href: ../mdx/median-mdx.md
         - name: Members (集合)
           href: ../mdx/members-set-mdx.md
@@ -378,11 +378,11 @@
           href: ../mdx/membertostr-mdx.md
         - name: MemberValue
           href: ../mdx/membervalue-mdx.md
-        - name: 最小值
+        - name: Min
           href: ../mdx/min-mdx.md
         - name: Mtd
           href: ../mdx/mtd-mdx.md
-        - name: 名稱
+        - name: Name
           href: ../mdx/name-mdx.md
         - name: NameToSet
           href: ../mdx/nametoset-mdx.md
@@ -396,7 +396,7 @@
           href: ../mdx/openingperiod-mdx.md
         - name: 單
           href: ../mdx/order-mdx.md
-        - name: Ordinal
+        - name: 序數
           href: ../mdx/ordinal-mdx.md
         - name: ParallelPeriod
           href: ../mdx/parallelperiod-mdx.md
@@ -412,7 +412,7 @@
           href: ../mdx/properties-mdx.md
         - name: Qtd
           href: ../mdx/qtd-mdx.md
-        - name: Rank
+        - name: 排名
           href: ../mdx/rank-mdx.md
         - name: RollupChildren
           href: ../mdx/rollupchildren-mdx.md
@@ -476,7 +476,7 @@
           href: ../mdx/value-mdx.md
         - name: Var
           href: ../mdx/var-mdx.md
-        - name: Variance
+        - name: 變異數
           href: ../mdx/variance-mdx.md
         - name: VarianceP
           href: ../mdx/variancep-mdx.md

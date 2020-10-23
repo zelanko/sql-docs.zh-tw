@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035361"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412504"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql) 
 
@@ -46,6 +46,7 @@ ms.locfileid: "92035361"
 |classifier_name|**sysname**|針對利用資源的要求，用於指派資源和重要性的分類器名稱。||
 |resource_allocation_percentage|**decimal (5，2) **|配置給要求的資源數量百分比。</br>適用於：Azure Synapse Analytics|
 |result_cache_hit|**int**|詳細說明已完成的查詢是否使用結果集快取。  </br>適用於：Azure Synapse Analytics| 1 = 結果集快取點擊 </br> 0 = 結果集快取遺漏 </br> 負整數值 = 未使用結果集快取的原因。  如需詳細資訊，請參閱備註一節。|
+|command2|**Nvarchar9max) **|保存使用者提交要求的完整文字。 保存超過4000個字元的查詢。|任何有效的查詢或要求文字。 Null = 長度為4000個字元的查詢，針對這些查詢，可以在命令列底下找到全文檢索。|
 ||||
   
 ## <a name="remarks"></a>備註 

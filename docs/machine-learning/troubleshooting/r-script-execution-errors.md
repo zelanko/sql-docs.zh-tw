@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569909"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196330"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server 中常見的 R 指令碼錯誤
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89569909"
 
 2. 檢閱訊息以查看輸入資料或輸出資料是否包含具有不相容或不受支援資料類型的資料行。 例如，SQL 資料庫上的查詢通常會傳回都不支援的 GUID 或 RowGUID。 如需詳細資訊，請參閱 [R 程式庫和資料類型](../r/r-libraries-and-data-types.md)。
 
-3. 請檢閱個別 R 函式的說明頁面，以判斷 SQL Server 計算內容是否支援所有參數。 如需 ScaleR 說明，請使用內嵌 R 說明命令，或參閱[套件參考](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)。
+3. 請檢閱個別 R 函式的說明頁面，以判斷 SQL Server 計算內容是否支援所有參數。 如需 ScaleR 說明，請使用內嵌 R 說明命令，或參閱[套件參考](/r-server/r-reference/revoscaler/revoscaler)。
 
 如果 R 執行階段正常運作，但您的指令碼傳回錯誤，建議您嘗試在專用的 R 開發環境 (例如 Visual Studio R 工具) 中嘗試對指令碼偵錯。
 

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875557"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257178"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行 SQL Server 巨量資料叢集的離線部署
 
@@ -77,7 +77,6 @@ ms.locfileid: "89875557"
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ ms.locfileid: "89875557"
 
 ## <a name="install-tools-offline"></a>離線安裝工具
 
-巨量資料叢集部署需要幾項工具，包括 **Python**、`azdata` 和 **kubectl**。 遵循下列步驟，在離線伺服器上安裝這些工具。
+巨量資料叢集部署需要幾項工具，包括 **Python**、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 和 **kubectl**。 遵循下列步驟，在離線伺服器上安裝這些工具。
 
 ### <a name="install-python-offline"></a><a id="python"></a> 離線安裝 python
 
@@ -143,7 +142,7 @@ ms.locfileid: "89875557"
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> 離線安裝 azdata
 
-1. 在能存取網際網路並具有 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的電腦上執行下列命令，將所有 `azdata` 套件下載至目前的資料夾。
+1. 在能存取網際網路並具有 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的電腦上執行下列命令，將所有 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 套件下載至目前的資料夾。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ ms.locfileid: "89875557"
 
 ## <a name="deploy-from-private-repository"></a>從私人存放庫部署
 
-若要從私人存放庫部署，請使用[部署指南](deployment-guidance.md)中所述的步驟，但使用可指定您私人 Docker 存放庫資訊的自訂部署設定檔。 下列 `azdata` 命令示範如何在名為 `control.json` 的自訂部署設定檔中變更 Docker 設定：
+若要從私人存放庫部署，請使用[部署指南](deployment-guidance.md)中所述的步驟，但使用可指定您私人 Docker 存放庫資訊的自訂部署設定檔。 下列 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令示範如何在名為 `control.json` 的自訂部署設定檔中變更 Docker 設定：
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

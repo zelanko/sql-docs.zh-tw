@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173469"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194510"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>針對 SQL 機器學習進行疑難排解收集資料
 
@@ -36,7 +36,7 @@ SQL Server 2017 與更新版本具有 Python 語言整合。 您無法在先前�
 
 一般而言，當您選取 R Services 功能或機器學習服務功能時所安裝的 Microsoft R 版本，是由 SQL Server 組建編號所決定。 如果您升級或修補 SQL Server，您也必須升級或修補其 R 元件。
 
-如需版本與 R 元件下載連結的清單，請參閱[在沒有網際網路存取的電腦上安裝機器學習元件](/sql/machine-learning/install/sql-ml-component-install-without-internet-access)。 可以存取網際網路的電腦上，系統會自動識別並安裝所需的 R 版本。
+如需版本與 R 元件下載連結的清單，請參閱[在沒有網際網路存取的電腦上安裝機器學習元件](../install/sql-ml-component-install-without-internet-access.md)。 可以存取網際網路的電腦上，系統會自動識別並安裝所需的 R 版本。
 
 您可以在稱為「繫結」的程序中，與 SQL Server 資料庫引擎分開升級 R 伺服器元件。 因此，您在 SQL Server 中執行 R 程式碼時所使用的 R 版本可能視已安裝的 SQL Server 版本，以及是否已將伺服器移轉到最新的 R 版本而異。
 

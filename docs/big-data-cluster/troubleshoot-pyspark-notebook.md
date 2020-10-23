@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206042"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257070"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>針對 `pyspark` 筆記本進行疑難排解
 
@@ -30,7 +30,7 @@ Azure Data Studio 與 SQL Server BDC 上的 `livy` 端點通訊。
 
 此疑難排解步驟需要具備：
 
-1. 已安裝 `azdata`，且已將組態正確地設定為叢集。
+1. 已安裝 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]，且已將組態正確地設定為叢集。
 2. 熟悉執行 Linux 命令及一些記錄疑難排解技能。
 
 ## <a name="troubleshooting-steps"></a>疑難排解步驟
@@ -127,7 +127,7 @@ Azure Data Studio 與 SQL Server BDC 上的 `livy` 端點通訊。
 
 1. 檢查應用程式識別碼與個別 application_master 與容器記錄。
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="檢查應用程式識別碼":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="失敗的資料格":::
 
 1. 檢閱 YARN 應用程式記錄檔。
 
@@ -165,7 +165,7 @@ Azure Data Studio 與 SQL Server BDC 上的 `livy` 端點通訊。
 
 1. 檢閱 SPARK UI。
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Spark UI":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="失敗的資料格":::
 
    向下鑽研至尋找錯誤的階段工作。
 

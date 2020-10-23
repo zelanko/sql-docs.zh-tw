@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956291"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155089"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 R 自訂執行階段
 
@@ -37,7 +37,7 @@ ms.locfileid: "91956291"
 
 + [Windows 適用的 SQL Server 2019 (累積更新 3 或更新版本)](../../database-engine/install-windows/install-sql-server.md)。
 
-+ [Windows 上具備擴充性架構的 SQL Server 語言延伸模組](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
++ [Windows 上具備擴充性架構的 SQL Server 語言延伸模組](../../language-extensions/install/windows-java.md)。
 
 + [R 版本 3.3 或更新版本](https://cran.r-project.org/) (英文)。
 
@@ -196,7 +196,7 @@ GO
 + [Linux 適用的 SQL Server 2019 (累積更新 3 或更新版本)](../../linux/sql-server-linux-setup.md)。
 在 Linux 上安裝 SQL Server 之前，您必須設定 Microsoft 存放庫。 如需詳細資訊，請參閱[設定存放庫](../../linux/sql-server-linux-change-repo.md)。
 
-+ [Linux 上具備擴充性架構的 SQL Server 語言延伸模組](../../linux/sql-server-linux-setup-language-extensions.md)。
++ [Linux 上具備擴充性架構的 SQL Server 語言延伸模組](../../linux/sql-server-linux-setup-language-extensions-java.md)。
 
 + [R 版本 3.3 或更新版本](https://cran.r-project.org/) (英文)。
 

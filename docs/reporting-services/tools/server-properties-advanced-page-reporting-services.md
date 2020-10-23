@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/17/2020
+ms.date: 10/19/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d5132ad1ea115e051a4c9d4ba898aa53ddeb98a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988740"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194273"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>伺服器屬性進階頁面 - Power BI 報表伺服器和 Reporting Services
 
@@ -57,7 +57,7 @@ ms.locfileid: "91988740"
 <CustomHeaders>
     <Header>
         <Name>X-Frame-Options</Name>
-        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
         <Value>SAMEORIGIN</Value>
     </Header>
 </CustomHeaders>
@@ -93,8 +93,8 @@ ms.locfileid: "91988740"
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
-        <Pattern>\/Reports\/mobilereport</Pattern>
-        <Value>max-age=86400</Value>
+        <Pattern>(.+)\/Reports\/mobilereport(.+)</Pattern>
+        <Value>max-age=86400; includeSubDomains=true</Value>
     </Header>
     <Header>
         <Name>Embed</Name>
@@ -104,7 +104,7 @@ ms.locfileid: "91988740"
 </CustomHeaders>
 ```
 
-上述 XML 中的第一個標頭，會將 `Strict-Transport-Security: max-age=86400` 標頭新增至相符的要求。
+上述 XML 中的第一個標頭，會將 `Strict-Transport-Security: max-age=86400; includeSubDomains=true` 標頭新增至相符的要求。
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex 相符且將設定 HSTS 標頭
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report - 不相符
 

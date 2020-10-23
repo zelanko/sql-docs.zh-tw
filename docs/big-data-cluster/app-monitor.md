@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa5ae6a8834659f7a1098cd9d8fbaee6beef359e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1391b88f2762293aa4eebf255682605bf5b6b1e0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725032"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257278"
 ---
 # <a name="monitor-applications-with-azdata-and-grafana-dashboard"></a>使用 azdata 與 Grafana 儀表板監視應用程式
 
@@ -26,7 +26,7 @@ Grafana 是最佳雲端原生虛擬化工具之一，可用來為 Kubernetes 中
 ## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 2019 巨量資料叢集](deployment-guidance.md)
-- [azdata 命令列公用程式](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 

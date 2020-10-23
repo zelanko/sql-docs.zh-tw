@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0120faa6d3989df7b7ae1c5da63c37423dead540
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178596"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195100"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查詢及修改 SQL Server 資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 3 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 3 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
 在上一個教學課程中，您已將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在此教學課程中，您可以使用 **RevoScaleR** 來探索及修改資料：
 
@@ -33,7 +33,7 @@ ms.locfileid: "88178596"
 
 使用 R IDE 或 RGui.exe 來執行 R 指令碼。 
 
-首先，取得一份資料行和其資料類型的清單。 您可以使用 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 函式並指定您想要分析的資料來源。 視您的 **RevoScaleR** 版本而定，您也可以使用 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
+首先，取得一份資料行和其資料類型的清單。 您可以使用 [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 函式並指定您想要分析的資料來源。 視您的 **RevoScaleR** 版本而定，您也可以使用 [rxGetVarNames](/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)

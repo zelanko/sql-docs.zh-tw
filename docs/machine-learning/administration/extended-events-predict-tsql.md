@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956841"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115280"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視預測 PREDICT T-SQL 陳述式
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 了解如何使用擴充事件來監視 SQL Server 機器學習服務中的 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 陳述式及針對其進行疑難排解。
 
@@ -25,22 +25,22 @@ ms.locfileid: "91956841"
 
 下列擴充事件在支援 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 陳述式的所有 SQL Server 版本上都可用。 
 
-|NAME |object_type|description| 
-|----|----|----|
-|predict_function_completed |event  |內建執行時間明細|
-|predict_model_cache_hit |event|從 PREDICT 函式模型快取中擷取模型時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
-|predict_model_cache_insert |event  |   當模型 插入到 PREDICT 函式模型快取時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。    |
-|predict_model_cache_miss   |event|在 PREDICT 函式模型快取中找不到模型時發生。 經常發生此事件可能表示 SQL Server 需要更多記憶體。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
-|predict_model_cache_remove |event| 從 PREDICT 函式的模型快取移除模型時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
+| NAME                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | event       | 內建執行時間明細|
+| predict_model_cache_hit    | event       | 從 PREDICT 函式模型快取中擷取模型時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
+| predict_model_cache_insert | event       | 當模型 插入到 PREDICT 函式模型快取時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。   |
+| predict_model_cache_miss   | event       | 在 PREDICT 函式模型快取中找不到模型時發生。 經常發生此事件可能表示 SQL Server 需要更多記憶體。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
+| predict_model_cache_remove | event       | 從 PREDICT 函式的模型快取移除模型時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
 
 ## <a name="query-for-related-events"></a>查詢相關事件
 
 若要查看針對這些事件傳回的所有資料行清單，請在 SQL Server Management Studio 中執行下列查詢：
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>範例

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178705"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196246"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建置 R 模型並儲存至 SQL Server (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-在此步驟中，瞭解如何建立機器學習模型，並將模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 儲存模型之後，可以使用系統預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼進行呼叫。
+在此步驟中，瞭解如何建立機器學習模型，並將模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 儲存模型之後，可以使用系統預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 或 [PREDICT (T-SQL) 函數](../../t-sql/queries/predict-transact-sql.md)直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼進行呼叫。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -67,7 +67,7 @@ GO
 
 模型是二進位分類器，可預測計程車司機是否可能在特定車程收到小費。 您將使用在上一課中建立的資料來源，利用羅吉斯迴歸來定型小費分類器。
 
-1. 呼叫 [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 函數 (包含在 **RevoScaleR** 封裝中) 來建立羅吉斯迴歸模型。 
+1. 呼叫 [rxLogit](/r-server/r-reference/revoscaler/rxlogit) 函數 (包含在 **RevoScaleR** 封裝中) 來建立羅吉斯迴歸模型。 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ GO
 
 現在，已建立模型，您可以用來預測司機是否可能在特定車程收到小費。
 
-1. 首先，使用 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 函數定義用於儲存評分結果的資料來源物件。
+1. 首先，使用 [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 函數定義用於儲存評分結果的資料來源物件。
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ GO
   
     + 若要建立可儲存預測值的資料表，執行 rxSqlServer 資料函數的 SQL 登入必須具有資料庫中的 DDL 權限。 如果登入無法建立資料表，則陳述式會失敗。
 
-2. 呼叫 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 函數來產生結果。
+2. 呼叫 [rxPredict](/r-server/r-reference/revoscaler/rxpredict) 函數來產生結果。
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ GO
 
 ## <a name="plot-model-accuracy"></a>繪製模型的精確度
 
-若要瞭解模型的精確度，您可以使用 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 函數來繪製接收者作業曲線。 因為 rxRoc 是支援遠端運算內容之 RevoScaleR 套件所提供的其中一個新函數，所以您有兩個選項︰
+若要瞭解模型的精確度，您可以使用 [rxRoc](/r-server/r-reference/revoscaler/rxroc) 函數來繪製接收者作業曲線。 因為 rxRoc 是支援遠端運算內容之 RevoScaleR 套件所提供的其中一個新函數，所以您有兩個選項︰
 
 + 您可以使用 rxRoc 函數在遠端電腦內容中執行繪圖，然後將繪圖傳回給本機用戶端。
 
@@ -173,7 +173,7 @@ GO
 
 您可以在命令提示字元中執行 `rxGetComputeContext()`，以確認計算內容是本機的。 傳回值應為「RxLocalSeq 計算內容」。
 
-1. 對於本機計算內容，此流程極為相同。 使用 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 函數，將指定的資料帶入本機 R 環境。
+1. 對於本機計算內容，此流程極為相同。 使用 [rxImport](/r-server/r-reference/revoscaler/rximport) 函數，將指定的資料帶入本機 R 環境。
 
     ```R
     scoredOutput = rxImport(scoredOutput)

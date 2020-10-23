@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d8f4419e468bfd0f82f064f59d9b3bdd1036f15
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178634"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195088"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 轉換資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 9 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 9 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
 在此教學課程中，您將會了解在分析的各個階段用於轉換資料的 **RevoScaleR** 函式。
 
@@ -31,7 +31,7 @@ ms.locfileid: "88178634"
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>使用 rxDataStep 轉換變數
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 函數會一次處理一個資料區塊，從一個資料來源讀取並寫入另一個資料來源。 您可以指定要轉換的資料行、要載入的轉換等等。
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 函數會一次處理一個資料區塊，從一個資料來源讀取並寫入另一個資料來源。 您可以指定要轉換的資料行、要載入的轉換等等。
 
 為了讓此範例更有趣，讓我們使用另一個 R 套件中的函式來轉換資料。 **boot** 套件是其中一個「建議」的套件；也就是說， **boot** 會隨附於每個 R 版本，但未在啟動時自動載入。 因此，在針對 R 整合所設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，應該已經可以使用此套件。
 
@@ -76,7 +76,7 @@ ms.locfileid: "88178634"
         overwrite = TRUE)
     ```
 
-    當您定義要套用至每個資料行的轉換時，您也可以指定執行轉換所需的任何其他 R 套件。  如需您可以執行的轉換類型詳細資訊，請參閱[如何使用 RevoScaleR 轉換資料和建立子集](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform) (英文)。
+    當您定義要套用至每個資料行的轉換時，您也可以指定執行轉換所需的任何其他 R 套件。  如需您可以執行的轉換類型詳細資訊，請參閱[如何使用 RevoScaleR 轉換資料和建立子集](/machine-learning-server/r/how-to-revoscaler-data-transform) (英文)。
   
 6. 呼叫 **rxGetVarInfo** 檢視新資料集裡的變數摘要。
   

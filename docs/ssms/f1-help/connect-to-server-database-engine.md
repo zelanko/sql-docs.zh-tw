@@ -12,18 +12,19 @@ f1_keywords:
 - SQL13.SWB.CONNECTION.LOGIN.SQLSERVER.F1
 - sql13.swb.connection.login.sqlserver.f1
 - sql13.swb.manageSS2k.f1
+- connect-to-server-database-engine
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 68e1644b786c4afc05d0d2219371c70cf53b198a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 83ff5d5ffae698c49655ef65e8e5d5171eae31ac
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030727"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300685"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
 

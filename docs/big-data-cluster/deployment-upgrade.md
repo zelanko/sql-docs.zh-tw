@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725847"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257188"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ ms.locfileid: "91725847"
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. 更新 `azdata`。
+1. 更新 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。
 
-   遵循安裝 `azdata` 的指示。 
+   遵循安裝 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 的指示。 
    - [Windows 安裝程式](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux 搭配 APT](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux 搭配 YUM](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux 搭配 Zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >如果 `azdata` 是使用 `pip` 安裝的，您必須先手動加以移除，再使用 Windows 安裝程式或 Linux 套件管理員安裝。
+   >如果 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 是使用 `pip` 安裝的，您必須先手動加以移除，再使用 Windows 安裝程式或 Linux 套件管理員安裝。
 
 1. 更新巨量資料叢集。
 
@@ -131,7 +131,7 @@ ms.locfileid: "91725847"
 
 ### <a name="backup-and-delete-the-old-cluster"></a>備份和刪除舊叢集
 
-在 SQL Server 2019 GDR1 版本之前部署的巨量資料叢集沒有就地升級。 升級至新版本的唯一方法是手動移除並重新建立叢集。 每個版本都有與先前版本不相容的唯一 `azdata` 版本。 此外，如果新版容器映像是在以不同舊版部署的叢集上下載的，則最新映像可能會與叢集上的舊版映像不相容。 若在容器設定的部署設定檔中使用 `latest` 映像標籤，系統會提取新版映像。 根據預設，每個發行版本都有一個對應到 SQL Server 發行版本的特定映像標籤。 若要升級至最新版本，請遵循下列步驟：
+在 SQL Server 2019 GDR1 版本之前部署的巨量資料叢集沒有就地升級。 升級至新版本的唯一方法是手動移除並重新建立叢集。 每個版本都有與先前版本不相容的唯一 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本。 此外，如果新版容器映像是在以不同舊版部署的叢集上下載的，則最新映像可能會與叢集上的舊版映像不相容。 若在容器設定的部署設定檔中使用 `latest` 映像標籤，系統會提取新版映像。 根據預設，每個發行版本都有一個對應到 SQL Server 發行版本的特定映像標籤。 若要升級至最新版本，請遵循下列步驟：
 
 1. 在刪除舊叢集之前，請先備份 SQL Server 主要執行個體和 HDFS 上的資料。 針對 SQL Server 主要執行個體，您可以使用 [SQL Server 備份和還原](data-ingestion-restore-database.md)。 針對 HDFS，您[可以使用 `curl` 來複製資料](data-ingestion-curl.md)。
 
@@ -142,18 +142,18 @@ ms.locfileid: "91725847"
    ```
 
    > [!Important]
-   > 使用符合您叢集的 `azdata` 版本。 請勿使用較新版本的 `azdata` 來刪除舊叢集。
+   > 使用符合您叢集的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本。 請勿使用較新版本的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 來刪除舊叢集。
 
    > [!Note]
    > 發出 `azdata bdc delete` 命令會導致刪除巨量資料叢集名稱所識別命名空間中建立的所有物件，但不會刪除命名空間本身。 命名空間只要是空的且其中未建立任何其他應用程式，就可以重複用於後續部署。
 
-1. 將舊版 `azdata` 解除安裝。
+1. 將舊版 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 解除安裝。
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. 安裝最新版 `azdata`。 下列命令會從最新版本安裝 `azdata`：
+1. 安裝最新版 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 下列命令會從最新版本安裝 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]：
 
    **Windows：**
 
@@ -168,11 +168,11 @@ ms.locfileid: "91725847"
    ```
 
    > [!IMPORTANT]
-   > 針對每個版本，`azdata` 的 `n-1` 版本路徑會有所變更。 即使您先前已安裝 `azdata`，您還是必須從最新的路徑重新安裝，才能建立新的叢集。
+   > 針對每個版本，[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 的 `n-1` 版本路徑會有所變更。 即使您先前已安裝 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]，您還是必須從最新的路徑重新安裝，才能建立新的叢集。
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> 確認 azdata 版本
 
-在您部署新的巨量資料叢集之前，請使用 `--version` 參數，確認您所使用的是最新版 `azdata`：
+在您部署新的巨量資料叢集之前，請使用 `--version` 參數，確認您所使用的是最新版 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]：
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>安裝新版本
 
-在您移除先前的巨量資料叢集並安裝最新的 `azdata` 之後，請使用目前的部署指示來部署新巨量資料叢集。 如需詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)。 接著，還原任何必要的資料庫或檔案。
+在您移除先前的巨量資料叢集並安裝最新的 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 之後，請使用目前的部署指示來部署新巨量資料叢集。 如需詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)。 接著，還原任何必要的資料庫或檔案。
 
 ## <a name="next-steps"></a>後續步驟
 

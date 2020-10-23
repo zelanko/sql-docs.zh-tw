@@ -3,21 +3,21 @@ title: 授與執行 Python 和 R 指令碼的權限
 description: 了解如何對使用者授與在 SQL Server 機器學習服務中執行外部 Python 及 R 指令碼的權限，並將讀取、寫入或資料定義語言 (DDL) 權限授與資料庫。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c961c2c4df15fdff7b1e2f3d5b1815c50d69771
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c7fa9d7702fb93fd4fe8334f873eb1b66c0f61d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180396"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115148"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務，授與使用者執行 Python 及 R 指令碼的權限
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 了解如何對使用者授與在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中執行外部 Python 及 R 指令碼的權限，並將讀取、寫入或資料定義語言 (DDL) 權限授與資料庫。
 
