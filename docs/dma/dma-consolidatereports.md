@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727799"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523915"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 評估企業及整合評估報告
 
@@ -96,7 +96,7 @@ ms.locfileid: "91727799"
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![如果您要使用 SQL Server 資料表，SQL Server 資料表內容的螢幕擷取畫面。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 如果此資料庫不在工具電腦上，請確定工具電腦具有此 SQL Server 實例的網路連線能力。
 
@@ -110,10 +110,10 @@ ms.locfileid: "91727799"
 
 - ServerName
 - InstanceName
-- Port
+- 連接埠
 - AssessmentFlag
 
-![SQL Server 資料表內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![使用實例清查時，SQL Server 資料表內容的螢幕擷取畫面。](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>執行調整規模的評量
 
@@ -123,7 +123,7 @@ ms.locfileid: "91727799"
 
 下表說明與 dmaDataCollector 函數相關聯的參數。
 
-|參數  |描述 |
+|參數  |說明 |
 |---------|---------|
 |**getServerListFrom** | 您的清查。 可能的值為 **SqlServer** 和 **CSV**。<br/>如需詳細資訊，請參閱 [建立 SQL server 的清查](#create-inventory)。 |
 |**csvPath** | CSV 清查檔案的路徑。  只有當 **getServerListFrom** 設定為  **CSV**時，才會使用。 |
@@ -147,7 +147,7 @@ ms.locfileid: "91727799"
 
 下表說明與 dmaProcessor 函數相關聯的參數。
 
-|參數  |描述 |
+|參數  |說明 |
 |---------|---------|
 |**processTo** | 將處理 JSON 檔案的位置。 可能的值為 **SQLServer** 和 **AzureSQLDatabase**。 |
 |**serverName** | 將處理資料的 SQL Server 實例。  如果您針對**processTo**參數指定**AzureSQLDatabase** ，則只包含 SQL Server 名稱 (不包含 database.windows.net) 。 以 Azure SQL Database 為目標時，系統會提示您輸入兩次登入。第一個是您的 Azure 租使用者認證，而第二個則是您的 Azure SQL Server 系統管理員登入。 |

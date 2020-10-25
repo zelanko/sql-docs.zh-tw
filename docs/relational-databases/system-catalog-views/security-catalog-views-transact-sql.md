@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 09137e36c0b96193d5b9c48ebf8bbe5cf52a52ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b88ffbcc84dfc6e6ac35b6689938f5a0c5cdaccf
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475501"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496936"
 ---
 # <a name="security-catalog-views-transact-sql"></a>安全性目錄檢視 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "88475501"
 :::row-end:::
 :::row:::
     :::column:::
-        [sys. column_master_key_definitions](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
+        [sys.column_master_keys](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
     :::column-end:::
     :::column:::
         [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)

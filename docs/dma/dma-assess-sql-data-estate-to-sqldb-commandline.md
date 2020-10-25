@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867697"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496809"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD：評定遷移至 Azure SQL SQL Server 資料資產的就緒程度 
 
@@ -28,7 +28,12 @@ ms.locfileid: "91867697"
 
 [Data Migration Assistant (DMA) ](dma-overview.md) 可協助您評估特定 Azure sql 目標的 SQL Server 實例，並量測 SQL Server 資料庫移轉至 Azure sql 的就緒程度。 將 DMA 評定結果上傳至 Azure Migrate 中樞，以取得整個資料資產的集中式就緒程度。 
 
-本文將指導您使用 DMA 命令列介面 (DMACMD) ，大規模執行評量，並將結果上傳至 Azure Migrate hub。 或者，您可以改為使用 [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) 來執行評量。 
+本文將指導您使用 DMA 命令列介面 (DMACMD) ，大規模執行評量，並將結果上傳至 Azure Migrate hub。 或者，您可以改為使用 [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) 來執行評量。
+
+若要深入瞭解，請參閱下列 Channel9 影片：
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>必要條件 
 
@@ -87,7 +92,7 @@ C:\Program Files\Microsoft Data Migration Assistant\DmaCmd.exe /Action=Assess /A
 |**XML 元素** |**[定義]**  |
 |---------|---------|
 |`AssessmentName`|評量的名稱|
-|`AssessmentSourcePlatform`|來源 SQL Server 平臺。 預設值為 `SqlOnPrem`。|
+|`AssessmentSourcePlatform`|來源 SQL Server 平臺。 預設值是 `SqlOnPrem`。|
 |`AssessmentTargetPlatform`|以 SQL Server 平臺為目標。  </br> `AzureSqlDatabase` 適用于 Azure SQL Database 目標。 </br> `ManagedSqlServer` 適用于 Azure SQL 受控執行個體目標。 </br></br>**AzureSQLMI**評估 SQL 受控執行個體目標的評估範例。|
 |`AssessmentDatabases`|如果您需要評估實例中的所有資料庫，請只指定實例名稱，否則會列出每一行中的特定資料庫。 </br></br>**AzureSQLMI**評估範例中的所有資料庫 `Servername\SQL2017` ，以及實例中的兩個特定資料庫 `Servername\SQL2016` 。  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | 指定結果檔的格式。 `.DMA`、 `.JSON` 和 `.CSV` 分別。 按兩下 `.DMA` 以在 DMA UI 中開啟。 <br> `AssessmentResultDma` 需要將評量結果上傳至 Azure Migrate hub。  |
@@ -134,8 +139,9 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 - 執行評量的時間取決於資料庫物件的數目。 可能的話，請避免在生產系統上執行評量，並改為卸載至虛擬機器或預備伺服器，尤其是針對具有大量物件的資料庫。 
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md) \(英文\)
 * [Data Migration Assistant： Configuration settings](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant：最佳作法](../dma/dma-bestpractices.md)
+

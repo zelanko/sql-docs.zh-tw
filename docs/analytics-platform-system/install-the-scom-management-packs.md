@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379410"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523823"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安裝適用于 Analytics Platform System 的 SQL Server Operations Manager (SCOM) 管理套件
 請遵循下列步驟，下載並安裝適用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理套件。 需要有管理元件，才能從 SCOM 監視 SQL Server PDW。  
@@ -47,9 +47,9 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  按一下 [Install] 。  
+4.  按一下 [Install]  。  
   
-    ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![[確認安裝步驟] 上的 [SQL Server 設備基本監視 MP 安裝程式] 的螢幕擷取畫面，其中的 [安裝] 選項以紅色圓圈表示。](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  按一下 [關閉]。  
   
@@ -67,9 +67,9 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  按一下 [Install] 。  
+4.  按一下 [Install]  。  
   
-    ![確認安裝](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![PDWMP 安裝程式的螢幕擷取畫面，其中的 [確認] 安裝步驟中以紅色圈起的安裝選項。](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  按一下 [關閉]。  
   
