@@ -128,6 +128,8 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: 安全性
           href: big-data-cluster/concept-security.md
+        - name: 系統管理資源
+          href: big-data-cluster/view-cluster-status.md
         - name: Active Directory 模式
           items:
             - name: 必要條件
@@ -332,14 +334,30 @@
           items:
             - name: 連線
               href: big-data-cluster/connect-to-big-data-cluster.md
-            - name: 檢視叢集狀態
-              href: big-data-cluster/view-cluster-status.md
             - name: 使用控制器儀表板來管理
               href: big-data-cluster/manage-with-controller-dashboard.md
             - name: 管理現有筆記本
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: 使用 Spark 執行筆記本
               href: big-data-cluster/notebooks-tutorial-spark.md
+            - name: 列出作業筆記本
+              href: big-data-cluster/cluster-manage-notebooks.md
+        - name: 監視
+          items:
+            - name: 使用 Azure Data Studio 來監視
+              href: big-data-cluster/cluster-monitor-ads.md
+            - name: 使用 Cmdlet 來監視
+              href: big-data-cluster/cluster-monitor-cmdlet.md
+            - name: 使用筆記本來監視
+              href: big-data-cluster/cluster-common-notebooks.md
+            - name: 監視 - Grafana
+              href: big-data-cluster/cluster-monitor-grafana.md
+            - name: 記錄 - Kibana
+              href: big-data-cluster/cluster-logging-kibana.md
+            - name: 列出監視筆記本
+              href: big-data-cluster/cluster-monitor-notebooks.md
+            - name: 列出記錄筆記本
+              href: big-data-cluster/cluster-logging-notebooks.md
         - name: 效能
           items:
             - name: 微調指南
@@ -388,6 +406,8 @@
                   href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: 針對 HDFS 系統管理員權限進行疑難排解
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+            - name: 叢集疑難排解筆記本
+              href: big-data-cluster/cluster-troubleshooter-notebooks.md
     - name: 參考
       items:
         - name: BDC 合作夥伴
@@ -8301,10 +8321,10 @@
           href: ssdt/release-notes-ssdt.md
         - name: 舊版的 SSDT 與 SSDT-BI
           href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+        - name: SQL Server Data Tools
+          href: ssdt/sql-server-data-tools.md
         - name: Azure Active Directory 支援
           href: ssdt/azure-active-directory.md
-        - name: SQL Server 工具
-          href: ssdt/sql-server-tools.md
         - name: 專案導向的離線資料庫開發
           href: ssdt/project-oriented-offline-database-development.md
           items:
