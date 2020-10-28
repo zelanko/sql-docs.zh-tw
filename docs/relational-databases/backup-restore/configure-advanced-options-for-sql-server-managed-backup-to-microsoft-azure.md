@@ -2,22 +2,24 @@
 title: 受控備份 - 設定進階選項
 description: 本教學課程描述如何在預設選項不符合需求時，為 SQL Server 到 Microsoft Azure 的受控備份設定進階選項。
 titleSuffix: to Microsoft Azure
-ms.custom: seo-lt-2019
-ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.managedbackup.configure.f1
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.reviewer: ''
+ms.openlocfilehash: 95bf7a69d525721c1610b989cc142d9ab754a7ee
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748473"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358891"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>設定 Microsoft Azure 的 SQL Server 受控備份進階選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,15 +10,16 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
+- sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30d6302a53101e41c85292b776b1128421520e95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 549970e81b86a8331c2d41afc3b01fab3eb7160b
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423632"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300733"
 ---
 # <a name="add-or-edit-join"></a>加入或編輯聯結
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "88423632"
   
     -   如果是加入新聯結，請選取 **[使用產生器建立陳述式]** 或 **[手動寫入聯結陳述式]** 。 如果您一開始是以手動寫入聯結，就無法使用產生器。  
   
-         如果選取使用產生器，請使用方格中的資料行 ([結合]、[已篩選的資料表資料行] 、[運算子] 和 [聯結的資料表資料行] ) 來建立聯結陳述式。 方格中的每個資料行均包含一個下拉式清單方塊，可讓您選取兩個資料行和一個運算子 ( **=** 、 **<>** 、 **<=** 、 **\<**, **>=** 、 **>** 、**like**)。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及一對以上的資料行，請從 **[結合]** 資料行中選取一個結合 ( **[AND]** 或 **[OR]** )，然後輸入兩個或更多的資料行及另一個運算子。  
+         如果選取使用產生器，請使用方格中的資料行 ([結合]、[已篩選的資料表資料行] 、[運算子] 和 [聯結的資料表資料行] ) 來建立聯結陳述式。 方格中的每個資料行均包含一個下拉式清單方塊，可讓您選取兩個資料行和一個運算子 ( **=** 、 **<>** 、 **<=** 、 **\<**, **>=** 、 **>** 、 **like** )。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及一對以上的資料行，請從 **[結合]** 資料行中選取一個結合 ( **[AND]** 或 **[OR]** )，然後輸入兩個或更多的資料行及另一個運算子。  
   
          如果選取手動寫入陳述式，請在 **[聯結陳述式]** 文字區域寫入聯結陳述式。 使用 **[已篩選的資料表資料行]** 清單方塊和 **[聯結的資料表資料行]** 清單方塊，將資料行拖放到 **[聯結陳述式]** 文字區域。  
   

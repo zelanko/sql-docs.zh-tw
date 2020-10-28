@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbce72e7fc8e309700098424e7ca1830dab1b1af
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: ecba395399d758bbab2cae59ec4400554d3c665a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227180"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300602"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -252,7 +252,7 @@ NONCLUSTERED
 
 單一複合式索引鍵中最多只能結合 32 個資料行。 複合索引鍵中的所有資料行都必須在相同的資料表或檢視表中。 針對叢集索引，組合索引值的允許大小上限是 900 個位元組，非叢集索引則為 1,700 個位元組。 針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，限制為 16 個資料行與 900 個位元組。
 
-屬於大型物件 (LOB) 資料類型 **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml** 或 **image** 的資料行無法指定為索引的索引鍵資料行。 此外，即使 CREATE INDEX 陳述式中未參考 **ntext**、**text** 或 **image** 資料行，檢視定義也不能包含這些資料行。
+屬於大型物件 (LOB) 資料類型 **ntext** 、 **text** 、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、 **xml** 或 **image** 的資料行無法指定為索引的索引鍵資料行。 此外，即使 CREATE INDEX 陳述式中未參考 **ntext** 、 **text** 或 **image** 資料行，檢視定義也不能包含這些資料行。
 
 如果 CLR 使用者定義型別支援二進位排序，您可以在該型別的資料行上建立索引。 只要方法標示為具決定性且不執行資料存取作業，您也可以在定義為使用者定義型別資料行方法引動過程的計算資料行上建立索引。 如需編製 CLR 使用者定義類型資料行索引的詳細資訊，請參閱 [CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。
 
@@ -264,9 +264,9 @@ INCLUDE **(** _column_ [ **,** ... *n* ] **)**
 
 資料行名稱在 INCLUDE 清單中不能重複，且不能同時做為索引鍵資料行和非索引鍵資料行。 如果資料表上有定義叢集索引，非叢集索引一定會包含叢集索引資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。
 
-允許所有的資料類型，除了 **text**、 **ntext**和 **image**以外。 如果任一個指定的非索引鍵資料行屬於 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 資料類型，就必須離線 (ONLINE = OFF) 建立或重建索引。
+允許所有的資料類型，除了 **text** 、 **ntext** 和 **image** 以外。 如果任一個指定的非索引鍵資料行屬於 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型，就必須離線 (ONLINE = OFF) 建立或重建索引。
 
-具決定性之精確或非精確的計算資料行都可以當做內含資料行。 從 **image**、**ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為內含資料行，就可包含於非索引鍵的資料行中。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。
+具決定性之精確或非精確的計算資料行都可以當做內含資料行。 從 **image** 、 **ntext** 、 **text** 、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為內含資料行，就可包含於非索引鍵的資料行中。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。
 
 如需建立 XML 索引的資訊，請參閱 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)。
 
@@ -289,14 +289,14 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 ON *partition_scheme_name* **( _column_name_ )**      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
+指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name* 。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
 
 > [!NOTE]
 > 當您分割一個非唯一的叢集索引時，如果尚未指定分割區資料行，依預設，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它加入至叢集索引鍵清單。 當您分割一個非唯一的非叢集索引時，如果尚未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的非索引鍵 (內含) 資料行。
 
-如果未指定 _partition_scheme_name_ 或 _filegroup_，且已分割資料表，則會使用相同的分割資料行，將索引放在與基礎資料表相同的資料分割配置中。
+如果未指定 _partition_scheme_name_ 或 _filegroup_ ，且已分割資料表，則會使用相同的分割資料行，將索引放在與基礎資料表相同的資料分割配置中。
 
 > [!NOTE]
 > 您無法在 XML 索引上指定分割區配置。 如果基底資料表已分割，XML 索引會使用與資料表相同的分割區配置。
@@ -305,13 +305,13 @@ ON *partition_scheme_name* **( _column_name_ )**
 
 ON _filegroup_name_      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)
 
 在指定的檔案群組上建立指定的索引。 如果未指定位置，且資料表或檢視表未分割，則索引會使用與基礎資料表或檢視表相同的檔案群組。 此檔案群組必須已存在。
 
 ON **"** default **"**      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在與資料表或檢視相同的檔案群組或分割區結構描述上建立所指定索引。
 
@@ -322,7 +322,7 @@ ON **"** default **"**
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)
 
 指定在建立叢集索引時，資料表之 FILESTREAM 資料的位置。 FILESTREAM_ON 子句允許將 FILESTREAM 資料移到不同的 FILESTREAM 檔案群組或分割區配置。
 
@@ -353,14 +353,14 @@ _database_name_
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此物件可以是與叢集資料行存放區索引一併儲存的資料表。
 
-當 *database_name* 是目前的資料庫或 _database_name_ 是 `tempdb`，且 _object_name_ 的開頭為 # 時，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援三部分名稱格式 _database_name_.[_schema_name_]._object_name_。
+當 *database_name* 是目前的資料庫或 _database_name_ 是 `tempdb`，且 _object_name_ 的開頭為 # 時，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援三部分名稱格式 _database_name_ .[ _schema_name_ ]. _object_name_ 。
 
 **\<relational_index_option\>::=**       
 指定當您建立索引時所需使用的選項。
 
 PAD_INDEX = { ON | **OFF** }      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定索引填補。 預設值為 OFF。
 
@@ -376,7 +376,7 @@ OFF 或未指定 _fillfactor_
 
 FILLFACTOR **=** _fillfactor_      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 如果 *fillfactor* 是 100，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。
 
@@ -389,7 +389,7 @@ FILLFACTOR **=** _fillfactor_
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否要將暫時排序結果儲存在 **tempdb** 中。 預設值為 OFF (除了 Azure SQL Database 超大規模資料庫以外)。若是超大規模資料庫中的所有索引建置作業，除非使用可繼續的索引重建，否則 SORT_IN_TEMPDB 一律會是 ON。
 
@@ -399,7 +399,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 OFF      
 中繼排序結果會儲存在與用來儲存索引相同的資料庫中。
 
-除了建立索引時使用者資料庫中所需的空間以外，**tempdb** 還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。
+除了建立索引時使用者資料庫中所需的空間以外， **tempdb** 還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。
 
 在與舊版本相容的語法中，WITH SORT_IN_TEMPDB 相當於 WITH SORT_IN_TEMPDB = ON。
 
@@ -418,7 +418,7 @@ OFF
 
 在與舊版本相容的語法中，WITH IGNORE_DUP_KEY 相當於 WITH IGNORE_DUP_KEY = ON。
 
-STATISTICS_NORECOMPUTE = { ON | **OFF**}      
+STATISTICS_NORECOMPUTE = { ON | **OFF** }      
 指定是否要重新計算散發統計資料。 預設值為 OFF。
 
 開啟      
@@ -436,9 +436,9 @@ OFF
 
 STATISTICS_INCREMENTAL = { ON | **OFF** }     
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若為 **OFF**，則會卸除統計資料樹狀結構，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。
+若設定為 **ON** ，所建立的統計資料會以每個資料分割統計資料為依據。 若為 **OFF** ，則會卸除統計資料樹狀結構，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF** 。
 
 如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：
 
@@ -474,7 +474,7 @@ ONLINE = { ON | **OFF** }
 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。
 
 > [!IMPORTANT]
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。
 
 開啟      
 索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 這可使基礎資料表和索引的查詢或更新能夠進行。 在作業開始時，共用 (S) 鎖定會在來源物件上保留一段很短的時間。 在作業結束時，如果正在建立非叢集索引，則有一段短時間會在來源上取得 S (共用) 鎖定；或者，當以線上方式建立或卸除叢集索引時，以及正在重建叢集索引或非叢集索引時，則會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。
@@ -491,14 +491,14 @@ OFF
 - 在檢視上的初始唯一叢集索引
 - 停用的叢集索引
 - 資料行存放區索引
-- 叢集索引 (如果基礎資料表包含 LOB 資料類型 (**image**、**ntext**、**text**) 及空間類型)
+- 叢集索引 (如果基礎資料表包含 LOB 資料類型 ( **image** 、 **ntext** 、 **text** ) 及空間類型)
 - **varchar(max)** 和 **varbinary(max)** 資料行不得為索引的一部分。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，當資料表包含 **varchar(max)** 或 **varbinary(max)** 資料行時，可以使用 **ONLINE** 選項來建置或重建包含其他資料行的叢集索引。 當基底資料表包含 **varchar(max)** 或 **varbinary(max)** 資料行時，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不允許 **ONLINE** 選項
 
 如需詳細資訊，請參閱[線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)。
 
-RESUMABLE **=** { ON | **OFF**}      
+RESUMABLE **=** { ON | **OFF** }      
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  指定線上索引作業是否為可繼續的作業。
 
@@ -508,9 +508,9 @@ RESUMABLE **=** { ON | **OFF**}
  OFF      
 索引作業不是可繼續的作業。
 
-MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** 搭配使用 (需要 **ONLINE = ON**)   
+MAX_DURATION **=** *time* [ **MINUTES** ] 與 **RESUMABLE = ON** 搭配使用 (需要 **ONLINE = ON** )   
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指出可繼續的線上索引作業在暫停之前的執行時間 (以分鐘為單位指定的一個整數值)。
 
@@ -521,7 +521,7 @@ MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** 搭配使用 (需
 > 資料行存放區索引不支援可繼續的線上索引重建。
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否允許資料列鎖定。 預設值是 ON。
 
@@ -532,7 +532,7 @@ OFF
 不使用資料列鎖定。
 
 ALLOW_PAGE_LOCKS = { **ON** | OFF }      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否允許頁面鎖定。 預設值是 ON。
 
@@ -543,12 +543,12 @@ OFF
 不使用頁面鎖定。
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱[循序索引鍵](#sequential-keys)一節以取得詳細資訊。
 
 MAXDOP = *max_degree_of_parallelism*      
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在索引作業期間，覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。
 
@@ -566,7 +566,7 @@ MAXDOP = *max_degree_of_parallelism*
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。
 
 > [!NOTE]
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。
 
 DATA_COMPRESSION      
 針對指定的索引、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：
@@ -582,8 +582,8 @@ PAGE
 
 如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ... _n_ ] **)**       
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此索引，ON PARTITIONS 引數將會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區索引的所有分割區。
 
@@ -701,7 +701,7 @@ CREATE INDEX 陳述式的最佳化方式與其他任何查詢一樣。 若要儲
 
 UNIQUE 或 PRIMARY KEY 條件約束只要符合索引作業的所有條件就可以包含計算資料行。 更具體的說法是，計算資料行必須具決定性且精確，或是具決定性且一直保存。 如需確定性的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
 
-從 **image**、**ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為索引鍵資料行或非索引鍵資料行，就可編製索引以作為索引鍵或內含的非索引鍵資料行。 例如，您無法在計算的 **xml** 資料行上建立主要 XML 索引。 如果索引鍵大小超過 900 個位元組，畫面上會顯示警告訊息。
+從 **image** 、 **ntext** 、 **text** 、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為索引鍵資料行或非索引鍵資料行，就可編製索引以作為索引鍵或內含的非索引鍵資料行。 例如，您無法在計算的 **xml** 資料行上建立主要 XML 索引。 如果索引鍵大小超過 900 個位元組，畫面上會顯示警告訊息。
 
 在計算資料行上建立索引，可能會使先前有效的插入或更新作業失敗。 當計算資料行導致算術錯誤時，就可能發生這類失敗。 例如在下表中，雖然計算資料行 `c` 導致算術錯誤，但 INSERT 陳述式仍可運作。
 
@@ -726,9 +726,9 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>指定索引選項
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在回溯相容語法中，WITH *option_name* 相當於 WITH **(** \<option_name> **= ON )** 。 當您設定索引選項時，適用下列規則：
 
-- 只能使用 WITH (**_option\_name_ = ON | OFF**) 來指定新的索引選項。
-- 不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING, ONLINE = ON**) 會造成陳述式失敗。
-- 當您建立 XML 索引時，必須搭配 WITH (**_option_name_= ON | OFF**) 來指定選項。
+- 只能使用 WITH ( **_option\_name_ = ON | OFF** ) 來指定新的索引選項。
+- 不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH ( **DROP_EXISTING, ONLINE = ON** ) 會造成陳述式失敗。
+- 當您建立 XML 索引時，必須搭配 WITH ( **_option_name_ = ON | OFF** ) 來指定選項。
 
 ## <a name="drop_existing-clause"></a>DROP_EXISTING 子句
 您可以利用 DROP_EXISTING 子句來重建索引、加入或卸除資料行、修改選項、修改資料行排序次序，或變更分割區配置或檔案群組。
@@ -754,14 +754,14 @@ INSERT INTO t1 VALUES (1, 0);
 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 可繼續的索引作業
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可繼續索引作業適用下列方針：
 
 - 線上索引建立已使用 `RESUMABLE = ON` 選項指定為可繼續的作業。
 - 指定索引的中繼資料中不會保存 RESUMABLE 選項，並且僅適用於目前 DDL 陳述式的持續時間。 因此，必須明確指定 `RESUMABLE = ON` 子句，才能啟用可繼續性。
 - 只有 `RESUMABLE = ON` 選項支援 MAX_DURATION 選項。
-- RESUMABLE 選項的 MAX_DURATION 可指定建置索引時的時間間隔。 使用此時間之後，索引建置就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的建置。 MAX_DURATION 的**時間**是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週 (7 \* 24 \* 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。
+- RESUMABLE 選項的 MAX_DURATION 可指定建置索引時的時間間隔。 使用此時間之後，索引建置就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的建置。 MAX_DURATION 的 **時間** 是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週 (7 \* 24 \* 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。
 - 若要立即暫停索引作業，您可以停止 (Ctrl-C) 進行中的命令，執行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令，或執行 `KILL <session_id>` 命令。 暫停命令之後，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令繼續執行該命令。
 - 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
 - 可繼續的索引不支援 `SORT_IN_TEMPDB = ON` 選項。
@@ -797,7 +797,7 @@ INSERT INTO t1 VALUES (1, 0);
 如果 `ALLOW_ROW_LOCKS = OFF` 且 `ALLOW_PAGE_LOCK = OFF`，您存取索引時，只允許資料表層級的鎖定。
 
 ## <a name="sequential-keys"></a>循序索引鍵
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 最後一頁的插入競爭是大量並行的執行緒在嘗試將資料列插入具備循序索引鍵的索引時，經常發生的一種效能問題。 當開頭的索引鍵資料行包含總是在增加 (或減少) 的值 (例如識別欄位或預設為目前日期/時間的日期) 時，便會將索引視為循序。 因為要插入的索引鍵是循序的，所有新的資料列都會在索引結構的結尾插入，也就是位於相同的頁面。 這會導致頁面在記憶體中互相競爭，可觀察到的結果就是數個執行緒不明所以地在 PAGELATCH_EX 持續等待頁面。
 
@@ -1054,7 +1054,7 @@ GO
 ### <a name="j-create-a-partitioned-index"></a>J. 建立資料分割索引
 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中現有的分割區配置 `TransactionsPS1` 上建立非叢集分割區索引。 此範例假設您已安裝分割區索引範例。
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 建立、繼續、暫停及中止可繼續的索引作業
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>N. 基本語法
 建立、繼續、暫停及中止可繼續的索引作業       
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1206,4 +1206,4 @@ WITH (DROP_EXISTING = ON);
 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)     
 [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)    
 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)     
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)     
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)

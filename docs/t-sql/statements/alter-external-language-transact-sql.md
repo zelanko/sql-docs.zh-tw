@@ -11,12 +11,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28972df677bc52ed9128331bd279a1ee5802f8e7
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688411"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300429"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -99,7 +99,7 @@ ALTER EXTERNAL LANGUAGE language_name
 
 這有可能向外部語言執行階段提供一組參數。 外部處理序啟動之後，參數值會提供給外部執行階段。 但在外部處理序啟動之前，語言延伸模組可以存取環境變數。
 
-.**external_lang_env_variables**
+. **external_lang_env_variables**
 
 這可能會在外部處理序啟動之前，向外部語言執行階段提供一組環境變數。 例如，執行階段本身的主目錄即為環境變數範例。 例如：JRE_HOME。
 
@@ -111,11 +111,11 @@ ALTER EXTERNAL LANGUAGE language_name
 
 ## <a name="remarks"></a>備註
 
-目前，不支援 **PARAMETERS** 和 **ENVIRONMENT_VARIABLES**。
+目前，不支援 **PARAMETERS** 和 **ENVIRONMENT_VARIABLES** 。
 
 ## <a name="permissions"></a>權限
 
-需要 `ALTER ANY EXTERNAL LANGUAGE` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員的使用者，都有更改外部語言的權限。 金對其他所有使用者，您必須使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 陳述式指定 ALTER ANY EXTERNAL LANGUAGE 為權限，明確授與其權限。
+需要 `ALTER ANY EXTERNAL LANGUAGE` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員的使用者，都有更改外部語言的權限。 金對其他所有使用者，您必須使用 [GRANT](./grant-database-permissions-transact-sql.md) 陳述式指定 ALTER ANY EXTERNAL LANGUAGE 為權限，明確授與其權限。
 
 ## <a name="examples"></a>範例
 
@@ -134,4 +134,4 @@ GO
 [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

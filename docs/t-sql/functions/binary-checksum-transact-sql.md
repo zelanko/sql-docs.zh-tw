@@ -20,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c8caff3b757de461c79081976623ec493efffc4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116825"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255456"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,6 +40,8 @@ ms.locfileid: "91116825"
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
@@ -79,7 +81,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
   
 例如，"McCavity" 和 "Mccavity" 字串的 `BINARY_CHECKSUM` 值不同。 反之，在不區分大小寫的伺服器中，`CHECKSUM` 就會針對那些字串傳回相同的總和檢查碼值。 您應該避免比較 `CHECKSUM` 值與 `BINARY_CHECKSUM` 值。
  
-`BINARY_CHECKSUM` 支援任意長度的類型 **varbinary(max)**，並支援最多 255 個字元的類型 **nvarchar(max)**。
+`BINARY_CHECKSUM` 支援任意長度的類型 **varbinary(max)** ，並支援最多 255 個字元的類型 **nvarchar(max)** 。
   
 ## <a name="examples"></a>範例  
 此範例使用 `BINARY_CHECKSUM` 來偵測資料表資料列中的變更。

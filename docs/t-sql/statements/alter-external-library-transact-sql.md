@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 61ece1ff1d43d0a60d136ce140bcc6e1ae8f8259
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d2a53c17787810aa3ebdd47c64810caab42844c2
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688401"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300451"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "90688401"
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> 在 Azure SQL 受控執行個體中，您可更改程式庫，做法為移除程式庫，然後使用 **sqlmlutils** 來安裝變更的版本。 如需 **sqlmlutils** 的詳細資訊，請參閱[使用 sqlmlutils 安裝 Python 套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安裝新的 R 套件](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)。
+> 在 Azure SQL 受控執行個體中，您可更改程式庫，做法為移除程式庫，然後使用 **sqlmlutils** 來安裝變更的版本。 如需 **sqlmlutils** 的詳細資訊，請參閱 [使用 sqlmlutils 安裝 Python 套件](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)和 [使用 sqlmlutils 安裝新的 R 套件](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -196,13 +196,13 @@ WITH ( LANGUAGE = <language> )
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 **language**
 
-指定套件的語言。 在 Azure SQL 受控執行個體中，此值可以是 **R** 或 **Python**。
+指定套件的語言。 在 Azure SQL 受控執行個體中，此值可以是 **R** 或 **Python** 。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-指定套件的語言。 此值可以是 **R**、**Python** 或外部語言的名稱 (請參閱[建立外部語言](create-external-language-transact-sql.md))。
+指定套件的語言。 此值可以是 **R** 、 **Python** 或外部語言的名稱 (請參閱 [建立外部語言](create-external-language-transact-sql.md))。
 ::: moniker-end
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -225,7 +225,7 @@ SQL 執行個體中已預先安裝一些套件 (稱為「系統套件」)。 使
 
 ## <a name="permissions"></a>權限
 
-根據預設，**dbo** 使用者或 **db_owner** 角色的任何成員都有執行 ALTER EXTERNAL LIBRARY 的權限。 此外，建立外部程式庫的使用者可以改變該外部程式庫。
+根據預設， **dbo** 使用者或 **db_owner** 角色的任何成員都有執行 ALTER EXTERNAL LIBRARY 的權限。 此外，建立外部程式庫的使用者可以改變該外部程式庫。
 
 ## <a name="examples"></a>範例
 
@@ -278,4 +278,4 @@ SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

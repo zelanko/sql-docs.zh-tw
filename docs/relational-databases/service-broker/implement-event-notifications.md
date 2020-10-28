@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447964"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679007"
 ---
 # <a name="implement-event-notifications"></a>實作事件通知
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +38,12 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
  接收事件通知的目標服務必須遵照這項預先存在的合約。  
   
- **若要建立目標服務**：  
+ **若要建立目標服務** ：  
   
 1.  建立要接收訊息的佇列。  
   
     > [!NOTE]  
-    >  佇列會接收下列訊息類型： `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
+    >  佇列會接收下列訊息類型： `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
   
 2.  在參考事件通知合約的佇列上建立服務。  
   
@@ -60,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

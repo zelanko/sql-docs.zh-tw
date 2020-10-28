@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: dc8975a1454996ffbbab38e3e443f3f3847dc8a1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: dd4de5567d2bafd21b321dc388068b6ee6c24ed5
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115456"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523923"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 建立 Linux 的 SQL Server 資料庫
 
@@ -43,17 +43,17 @@ SSDT 17.0 RC 或更新版本支援 Linux 上的 SQL Server。
 
 1. 啟動 Visual Studio。
 
-2. 在 [檢視]  功能表上，選取 **Team Explorer**。 
+2. 在 [檢視]  功能表上，選取 **Team Explorer** 。 
 
 3. 在 [連線]  頁面上，按一下 [本機 Git 存放庫]  區段中的 [新增]  。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="Screenshot of the Local Git Repository section with the New option called out." style="width: 300px;"/>
 
-4. 按一下頁面底部的 [新增]  。 建立本機 Git 存放庫之後，請按兩下 **SSDTRepo**。
+4. 按一下頁面底部的 [新增]  。 建立本機 Git 存放庫之後，請按兩下 **SSDTRepo** 。
 
 5. 按一下 [解決方案]  區段中的 [新增]  。 在 [新增專案]  對話方塊中，選取 [其他語言]  節點下的 [SQL Server]  。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out." style="width: 480px;"/>
 
 6. 鍵入 **TutorialDB** 名稱，然後按一下 [確定]  以建立新的資料庫專案。
 
@@ -61,7 +61,7 @@ SSDT 17.0 RC 或更新版本支援 Linux 上的 SQL Server。
 
 1. 在 [檢視]  功能表上，選取 [方案總管]  。
 
-2. 以滑鼠右鍵按一下 [方案總管] 中的 **TutorialDB**，以開啟資料庫專案功能表。
+2. 以滑鼠右鍵按一下 [方案總管] 中的 **TutorialDB** ，以開啟資料庫專案功能表。
 
 3. 選取 [新增]  底下的 [資料表]  。
 
@@ -69,7 +69,7 @@ SSDT 17.0 RC 或更新版本支援 Linux 上的 SQL Server。
 
 4. 使用資料表設計工具，新增「名稱 `nvarchar(50)`」和「位置 `nvarchar(50)`」這兩個資料行，如下圖所示。 當您在設計工具中新增資料行時，SSDT 會產生 `CREATE TABLE` 指令碼。
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="Screenshot of the table designer with the Name and Location values called out." style="width: 480px;"/>
 
 5. 儲存 **Table1.sql** 檔案。
 
@@ -77,7 +77,7 @@ SSDT 17.0 RC 或更新版本支援 Linux 上的 SQL Server。
 
 1. 開啟 **TutorialDB** 上的資料庫專案功能表，然後選取 [建置]  。 SSDT 會編譯專案中的 .sql 原始程式碼檔案，並建置資料層應用程式套件 (dacpac) 檔案。 這可用來將資料庫發佈至 Linux 上的 SQL Server 執行個體。 
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="Screenshot showing the TutorialDB with the Build option called out." style="width: 400px;"/>
 
 2. 在 Visual Studio 中，查看 [輸出]  視窗的建置成功訊息。 
 

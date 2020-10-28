@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227080"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300841"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ SET ANSI_WARNINGS ON
   
 -   當設為 ON 時，如果彙總函式 (如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT) 中出現 Null 值，就會產生警告訊息。 當設為 OFF 時，不會產生警告訊息。  
   
--   當設為 ON 時，除以零和算術溢位錯誤會造成陳述式的回復，且會產生錯誤訊息。 當設為 OFF 時，除以零和算術溢位錯誤會造成傳回 Null 值。 如果在 **character**、Unicode 或 **binary** 資料行中嘗試 INSERT 或 UPDATE，且新值長度超過資料行的大小上限時，除以零或算術溢位錯誤會造成傳回 Null 值。 如果 SET ANSI_WARNINGS 為 ON，INSERT 或 UPDATE 就會依 ISO 標準的指定加以取消。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
+-   當設為 ON 時，除以零和算術溢位錯誤會造成陳述式的回復，且會產生錯誤訊息。 當設為 OFF 時，除以零和算術溢位錯誤會造成傳回 Null 值。 如果在 **character** 、Unicode 或 **binary** 資料行中嘗試 INSERT 或 UPDATE，且新值長度超過資料行的大小上限時，除以零或算術溢位錯誤會造成傳回 Null 值。 如果 SET ANSI_WARNINGS 為 ON，INSERT 或 UPDATE 就會依 ISO 標準的指定加以取消。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
   
 > [!NOTE]  
 > 在來源或目標是 **binary** 或 **varbinary** 資料的任何轉換作業中，當發生截斷時，不論 SET 選項為何，都不會發出任何警告或錯誤。  
@@ -76,7 +76,7 @@ SET ANSI_WARNINGS ON
 > [!IMPORTANT]
 > ANSI_WARNINGS 應該設為 ON，以便執行分散式查詢。  
   
-用戶端，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式、適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者與適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Microsoft JDBC 驅動程式會自動使用連線旗標將 ANSI_WARNINGS 設定為開啟。 在連接之前，您可以在應用程式的 ODBC 資料來源或 ODBC 連接屬性中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_WARNINGS 預設值是 OFF。 如需詳細資訊，請參閱表格式資料流 (TDS) 通訊協定規格中的 [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) \(英文\)。 
+用戶端，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式、適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者與適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Microsoft JDBC 驅動程式會自動使用連線旗標將 ANSI_WARNINGS 設定為開啟。 在連接之前，您可以在應用程式的 ODBC 資料來源或 ODBC 連接屬性中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_WARNINGS 預設值是 OFF。 如需詳細資訊，請參閱表格式資料流 (TDS) 通訊協定規格中的 [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) \(英文\)。 
 
 當 ANSI_DEFAULTS 是 ON 時，會啟用 ANSI_WARNINGS。  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

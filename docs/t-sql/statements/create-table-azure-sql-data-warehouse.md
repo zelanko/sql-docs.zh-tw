@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989812"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300211"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  將包含新資料表之資料庫的名稱。 預設為目前資料庫。  
   
  *schema_name*  
- 資料表的結構描述。 指定*結構描述*是選擇性的。 如果空白，將會使用預設結構描述。  
+ 資料表的結構描述。 指定 *結構描述* 是選擇性的。 如果空白，將會使用預設結構描述。  
   
  *table_name*  
  新資料表的名稱。 若要建立本機暫存資料表，請在資料表名稱前面加上 #。  如需暫存資料表的說明和指導方針，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中的暫存資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
@@ -140,7 +140,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `HEAP` 將資料表儲存為堆積。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
  將資料表儲存為具有一或多個索引鍵資料行的叢集索引。 此行為會依資料列儲存資料。 使用 *index_column_name* 指定索引中一或多個索引鍵資料行的名稱。  如需詳細資訊，請參閱「一般備註」中的「資料列存放區資料表」。
  
  `LOCATION = USER_DB` 此選項已淘汰。 在語法上仍會接受，但已不再需要且不會再影響行為。   
@@ -158,7 +158,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> 資料表資料分割選項
 如需使用資料表資料分割的指導方針，請參閱[在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
 建立一或多個資料表資料分割。 這些資料分割是水平資料表配量，可讓您將作業套用至資料列子集，無論資料表是儲存為堆積、叢集索引，或叢集資料行存放區索引。 和散發資料行不同，資料表資料分割不會決定每個資料列儲存所在的散發。 反之，資料表資料分割會決定資料列在每個散發內的分組方式和儲存方式。  
 
 | 引數 | 說明 |
@@ -166,7 +166,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 |*partition_column_name*| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將用來分割資料列的資料行。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會以遞增順序排序資料分割資料行值。 從低到高順序會以 `LEFT` 規格由 `RIGHT` 到 `RANGE` 排序。 |  
 | `RANGE LEFT` | 指定屬於左邊 (較低的值) 資料分割的界限值。 預設值為 LEFT。 |
 | `RANGE RIGHT` | 指定屬於右邊 (較高的值) 資料分割的界限值。 | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定資料分割的界限值。 *boundary_value* 是常數運算式。 不得為 NULL。 它必須符合或可以隱含轉換為 *partition_column_name* 的資料類型。 無法在進行隱含轉換期間截斷，因此值的大小和級別不會和 *partition_column_name* 的資料類型相符<br></br><br></br>如果指定 `PARTITION` 子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將會建立包含一個資料分割的資料分割資料表。 如果適用，您隨後可以將資料表分割成兩個資料分割。<br></br><br></br>如果您指定一個界限值，產生的資料表會有兩個資料分割，一個用於低於界限值的值，一個用於高於界限值的值。 如果將資料分割移動到非資料分割資料表中，非資料分割資料表將會接收資料，但其中繼資料中將不會有資料分割界限。| 
+| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | 指定資料分割的界限值。 *boundary_value* 是常數運算式。 不得為 NULL。 它必須符合或可以隱含轉換為 *partition_column_name* 的資料類型。 無法在進行隱含轉換期間截斷，因此值的大小和級別不會和 *partition_column_name* 的資料類型相符<br></br><br></br>如果指定 `PARTITION` 子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將會建立包含一個資料分割的資料分割資料表。 如果適用，您隨後可以將資料表分割成兩個資料分割。<br></br><br></br>如果您指定一個界限值，產生的資料表會有兩個資料分割，一個用於低於界限值的值，一個用於高於界限值的值。 如果將資料分割移動到非資料分割資料表中，非資料分割資料表將會接收資料，但其中繼資料中將不會有資料分割界限。| 
 
  請參閱＜範例＞一節中的[建立資料分割資料表](#PartitionedTable)。
 
@@ -178,16 +178,16 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 使用者可以查詢 **sys.index_columns** 中的 **column_store_order_ordinal** 資料行，以取得資料表排序所在的資料行，以及排序中的順序。  
 
-瀏覽[使用已排序叢集資料行存放區索引的效能微調](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)以取得詳細資料。   
+瀏覽[使用已排序叢集資料行存放區索引的效能微調](/azure/sql-data-warehouse/performance-tuning-ordered-cci)以取得詳細資料。   
 
 ### <a name="data-type"></a><a name="DataTypes"></a> 資料類型
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支援最常使用的資料類型。 下方是所支援資料類型的清單，以及它們的詳細資料和儲存體位元組。 若要進一步了解資料類型和使用方式，請參閱 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中的資料表資料類型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
-如需資料類型轉換表，請參閱 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的＜隱含轉換＞一節。
+如需資料類型轉換表，請參閱 [CAST 和 CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md) 的＜隱含轉換＞一節。
 
 >[!NOTE]
->請參閱[日期與時間資料類型及函式 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) 以取得詳細資料。
+>請參閱[日期與時間資料類型及函式 &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) 以取得詳細資料。
 
 `datetimeoffset` [ ( *n* ) ]  
  *n* 的預設值是 7。  
@@ -219,7 +219,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *n* 的預設值是 `7`。  
   
  `float` [ ( *n* ) ]  
- 用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 *n* 可決定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 `1` 與 `53` 之間。 *n* 的預設值是 `53`。  
+ 用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 *n* 可決定有效位數和儲存體大小。 如果指定 *n* ，則其值必須介於 `1` 與 `53` 之間。 *n* 的預設值是 `53`。  
   
 | *n* 值 | Precision | 儲存體大小 |  
 | --------: | --------: | -----------: |  
@@ -240,7 +240,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  可儲存的最大十進位數總數，小數點左右兩側都包括在內。 有效位數必須是從 `1` 到最大有效位數 `38` 之間的值。 預設有效位數是 `18`。  
   
  *scale*  
- 小數點右側所能儲存的最大十進位數。 *小數位數*必須是從 `0` 到 *有效位數* 之間的值。 只有在已指定 *precision* 的情況下，您才能指定 *scale*。 預設小數位數為 `0`，因此 `0` <= *scale* <= *precision*。 最大儲存體大小會隨著有效位數而不同。  
+ 小數點右側所能儲存的最大十進位數。 *小數位數* 必須是從 `0` 到 *有效位數* 之間的值。 只有在已指定 *precision* 的情況下，您才能指定 *scale* 。 預設小數位數為 `0`，因此 `0` <= *scale* <= *precision* 。 最大儲存體大小會隨著有效位數而不同。  
   
 | Precision | 儲存體位元組  |  
 | ---------: |-------------: |  
@@ -326,7 +326,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 若要將資料列存放區資料表變更為資料行存放區資料表，請卸除資料表中所有現有的索引，然後建立叢集資料行存放區索引。 如需範例，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
 
 如需詳細資訊，請參閱這些文章：
-- [資料行存放區索引建立版本功能摘要](https://msdn.microsoft.com/library/dn934994/)
+- [資料行存放區索引建立版本功能摘要](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
 - [在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]中編製資料表的索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -596,5 +596,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
-  
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 

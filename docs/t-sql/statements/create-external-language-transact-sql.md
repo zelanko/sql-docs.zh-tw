@@ -10,20 +10,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24bdf85af4a165a77694af5e65c262fdf5b97edd
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136385"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300142"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-從指定的檔案路徑或位元組資料流，註冊資料庫中的外部延伸模組。 此陳述式可作為一般機制，供資料庫管理員在 SQL Server 支援的任何 OS 平台上註冊新外部語言延伸模組。 如需詳細資訊，請參閱[語言延伸模組](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
+從指定的檔案路徑或位元組資料流，註冊資料庫中的外部延伸模組。 此陳述式可作為一般機制，供資料庫管理員在 SQL Server 支援的任何 OS 平台上註冊新外部語言延伸模組。 如需詳細資訊，請參閱[語言延伸模組](../../language-extensions/language-extensions-overview.md)。
 
 > [!NOTE]
-> **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。 如需如何使用 **R** 和 **Python** 的詳細資訊，請參閱 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/)。
+> **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。 如需如何使用 **R** 和 **Python** 的詳細資訊，請參閱 [SQL Server 機器學習服務](../../machine-learning/index.yml)。
 
 ## <a name="syntax"></a>語法
 
@@ -99,7 +99,7 @@ FROM <file_spec> [ ,...2 ]
 
 這有可能向外部語言執行階段提供一組參數。 外部處理序啟動之後，參數值會提供給外部執行階段。 但在外部處理序啟動之前，語言延伸模組可以存取環境變數。
 
-.**external_lang_env_variables**
+. **external_lang_env_variables**
 
 這可能會在外部處理序啟動之前，向外部語言執行階段提供一組環境變數。 例如，執行階段本身的主目錄即為環境變數範例。 例如：JRE_HOME。
 
@@ -109,7 +109,7 @@ FROM <file_spec> [ ,...2 ]
 
 ## <a name="permissions"></a>權限
 
-需要 `CREATE EXTERNAL LANGUAGE` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員使用者都有建立外部語言的權限。 針對其他所有使用者，您必須使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 陳述式指定 CREATE EXTERNAL LANGUAGE 作為權限，以明確授與權限給他們。
+需要 `CREATE EXTERNAL LANGUAGE` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員使用者都有建立外部語言的權限。 針對其他所有使用者，您必須使用 [GRANT](./grant-database-permissions-transact-sql.md) 陳述式指定 CREATE EXTERNAL LANGUAGE 作為權限，以明確授與權限給他們。
 
 若要修改程式庫，需要個別的權限 `ALTER ANY EXTERNAL LANGUAGE`。
 
@@ -166,4 +166,4 @@ TO mylogin;
 [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

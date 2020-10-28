@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645948"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300392"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ CREATE COLUMN MASTER KEY key_name
     |'MSSQL_CERTIFICATE_STORE'|Windows 憑證存放區| 
     |'MSSQL_CSP_PROVIDER'|支援 Microsoft CryptoAPI 的存放區，例如硬體安全性模組 (HSM)。|
     |'MSSQL_CNG_STORE'|支援 Cryptography API: Next Generation 的存放區，例如硬體安全性模組 (HSM)。|  
-    |'AZURE_KEY_VAULT'|請參閱[開始使用 Azure Key Valut](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|請參閱[開始使用 Azure Key Valut](/azure/key-vault/general/overview)|  
     |'MSSQL_JAVA_KEYSTORE'| Java 金鑰存放區。}
   
 
@@ -101,7 +101,7 @@ key_path
      其中：  
   
     *CertificateStoreLocation*  
-    憑證存放區位置必須是目前的使用者或本機電腦。 如需詳細資訊，請參閱 [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx) (本機電腦和目前使用者憑證存放區)。  
+    憑證存放區位置必須是目前的使用者或本機電腦。 如需詳細資訊，請參閱 [Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores) (本機電腦和目前使用者憑證存放區)。  
   
     *CertificateStore*  
     憑證存放區名稱，例如 'My'。  
@@ -166,7 +166,7 @@ ENCLAVE_COMPUTATIONS
 指定資料行主要金鑰已啟用記憶體保護區。 您可以將所有使用資料行主要金鑰加密的資料行加密金鑰與伺服器端安全記憶體保護區共用，並將它們用於記憶體保護區內部的計算。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 *簽章*  
-二進位常值，它是數位簽署「金鑰路徑」** 和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+二進位常值，它是數位簽署「金鑰路徑」  和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -252,4 +252,3 @@ WITH (
 * [具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [永遠加密的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990151"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300551"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT (CTAS) 是最重要的 T-SQL 功能之一。 這是一種
 -   查詢或匯入的外部資料。  
 
 > [!NOTE]  
-> 因為 CTAS 擴充了原本的資料表建立功能，所以本主題不再重複討論 CREATE TABLE 主題。 我們將重點放在描述 CTAS 和 CREATE TABLE 陳述式之間的差異。 如需 CREATE TABLE 詳細資訊，請參閱 [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) 陳述式。 
+> 因為 CTAS 擴充了原本的資料表建立功能，所以本主題不再重複討論 CREATE TABLE 主題。 我們將重點放在描述 CTAS 和 CREATE TABLE 陳述式之間的差異。 如需 CREATE TABLE 詳細資訊，請參閱 [CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) 陳述式。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,13 +81,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>引數  
-如需詳細資訊，請參閱 CREATE TABLE 中的[引數小節](https://msdn.microsoft.com/library/mt203953/#Arguments)。  
+如需詳細資訊，請參閱 CREATE TABLE 中的[引數小節](./create-table-azure-sql-data-warehouse.md#Arguments)。  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>資料行選項
 `column_name` [ ,...`n` ]   
- 資料行名稱不允許 CREATE TABLE 中提到的[資料行選項](https://msdn.microsoft.com/library/mt203953/#ColumnOptions)。  您反而應該為新資料表提供一個由一或多個資料行名稱構成的選擇性清單。 新資料表中的資料行，將使用您指定的名稱。 當您指定資料行名稱時，資料行清單中的資料行數目必須與選取結果中的資料行數目相符。 如果您未指定任何資料行名稱，新目標資料表就會使用選取陳述式結果中的資料行名稱。 
+ 資料行名稱不允許 CREATE TABLE 中提到的[資料行選項](./create-table-azure-sql-data-warehouse.md#ColumnOptions)。  您反而應該為新資料表提供一個由一或多個資料行名稱構成的選擇性清單。 新資料表中的資料行，將使用您指定的名稱。 當您指定資料行名稱時，資料行清單中的資料行數目必須與選取結果中的資料行數目相符。 如果您未指定任何資料行名稱，新目標資料表就會使用選取陳述式結果中的資料行名稱。 
   
  您無法指定任何其他資料行選項，例如資料類型、定序或可 Null 性。 這些屬性每個都是從 `SELECT` 陳述式的結果衍生而來的。 不過，您可以使用 SELECT 陳述式來變更屬性。 如需範例，請參閱[使用 CTAS 來變更資料行的屬性](#ctas-change-column-attributes-bk)。   
 
@@ -98,14 +98,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE TABLE 不同，後者有預設值。 
 
-如需詳細資訊以及了解如何選擇最佳散發資料行，請參閱 CREATE TABLE 中的[資料表散發選項](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)小節。 
+如需詳細資訊以及了解如何選擇最佳散發資料行，請參閱 CREATE TABLE 中的[資料表散發選項](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions)小節。 
 
 <a name="table-partition-options-bk"></a>
 
 ### <a name="table-partition-options"></a>資料表資料分割選項
 即使來源資料表已經過分割，CTAS 陳述式預設仍會建立未分割的資料表。 若要使用 CTAS 陳述式來建立資料分割資料表，您必須指定資料分割選項。 
 
-如需詳細資訊，請參閱 CREATE TABLE 中的[資料表資料分割選項](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions)小節。
+如需詳細資訊，請參閱 CREATE TABLE 中的[資料表資料分割選項](./create-table-azure-sql-data-warehouse.md#TablePartitionOptions)小節。
 
 <a name="select-options-bk"></a>
 
@@ -127,12 +127,12 @@ CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE 
 ## <a name="permissions"></a>權限  
 CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 
-如需資料表的建立權限，請參閱 CREATE TABLE 中的[權限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 
+如需資料表的建立權限，請參閱 CREATE TABLE 中的[權限](./create-table-azure-sql-data-warehouse.md#Permissions)。 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>一般備註
-如需詳細資訊，請參閱 CREATE TABLE 中的[ 一般備註](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks)。
+如需詳細資訊，請參閱 CREATE TABLE 中的[ 一般備註](./create-table-azure-sql-data-warehouse.md#GeneralRemarks)。
 
 <a name="limitations-bk"></a>
 
@@ -147,7 +147,7 @@ CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>鎖定行為  
- 如需詳細資訊，請參閱 CREATE TABLE 中的[鎖定行為](https://msdn.microsoft.com/library/mt203953/#LockingBehavior)。
+ 如需詳細資訊，請參閱 CREATE TABLE 中的[鎖定行為](./create-table-azure-sql-data-warehouse.md#LockingBehavior)。
  
 <a name="performance-bk"></a>
  
@@ -847,8 +847,5 @@ OPTION (MAXDOP 1);
  [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)  
   
-  
-
-

@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624815"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300283"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "91624815"
 
 - 使用具有較低權限的使用者來載入，而不需要對資料倉儲設定嚴格的 CONTROL 權限
 - 執行單一 T-SQL 陳述式，而不需要建立任何額外的資料庫物件
-- 適當地剖析並載入 CSV 檔案，其中**分隔符號** (字串、欄位、資料列) **會在字串分隔資料行中** **逸出**
+- 適當地剖析並載入 CSV 檔案，其中 **分隔符號** (字串、欄位、資料列) **會在字串分隔資料行中** **逸出**
 - 在不使用共用存取簽章 (SAS) 公開儲存體帳戶金鑰的情況下，指定更精細的權限模型
 - 針對 ERRORFILE 位置 (REJECTED_ROW_LOCATION) 使用不同的儲存體帳戶
 - 自訂每個目標資料行的預設值，並指定要載入特定目標資料行的來源資料欄位
@@ -43,9 +43,9 @@ ms.locfileid: "91624815"
 
 請瀏覽下列文件，以取得使用 COPY 陳述式的完整範例和快速入門：
 
-- [快速入門：使用 COPY 陳述式大量載入資料](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [快速入門：使用 COPY 陳述式和其支援驗證方法的範例](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [快速入門：使用豐富的 Synapse Studio UI 建立 COPY 陳述式 (工作區預覽)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [快速入門：使用 COPY 陳述式大量載入資料](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [快速入門：使用 COPY 陳述式和其支援驗證方法的範例](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [快速入門：使用豐富的 Synapse Studio UI 建立 COPY 陳述式 (工作區預覽)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>語法  
 
@@ -75,7 +75,7 @@ WITH
 ## <a name="arguments"></a>引數  
 
 *schema_name*  
-如果執行作業之使用者的預設結構描述是指定之資料表的結構描述，則是選擇性的。 如果未指定*結構描述*，且執行 COPY 作業之使用者的預設結構描述與指定的資料表不同，則會取消 COPY，而且會傳回錯誤訊息。  
+如果執行作業之使用者的預設結構描述是指定之資料表的結構描述，則是選擇性的。 如果未指定 *結構描述* ，且執行 COPY 作業之使用者的預設結構描述與指定的資料表不同，則會取消 COPY，而且會傳回錯誤訊息。  
 
 *table_name*  
 這是要將資料 COPY 到其中之資料表的名稱。 目標資料表可以是臨時或永久資料表，而且必須已經存在於資料庫中。 
@@ -95,8 +95,8 @@ WITH
 *外部位置*</br>
 這是包含資料的檔案暫存之處。 目前支援 Azure Data Lake Storage (ADLS) Gen2 和 Azure Blob 儲存體：
 
-- Blob 儲存體的*外部位置*： https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2 的*外部位置*： https://<account>. dfs.core.windows.net/<container>/<path>
+- Blob 儲存體的 *外部位置* ： https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2 的 *外部位置* ： https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > Blob 端點也適用於 ADLS Gen2，且目前能夠執行最佳效能。 當驗證方法不需要 .dfs 時，請使用 .blob 端點。
@@ -141,9 +141,9 @@ WITH
 |  **Azure Blob 儲存體**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1：此驗證方法需要外部位置路徑中的 .blob 端點 ( **.blob**.core.windows.net)。
+1：此驗證方法需要外部位置路徑中的 .blob 端點 ( **.blob** .core.windows.net)。
 
-2：此驗證方法需要外部位置路徑中的 .dfs 端點 ( **.dfs**.core.windows.net)。
+2：此驗證方法需要外部位置路徑中的 .dfs 端點 ( **.dfs** .core.windows.net)。
 
 
 > [!NOTE]  
@@ -157,7 +157,7 @@ WITH
   - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*可提供您儲存體帳戶中資源的委派存取。*
   -  所需最小權限：READ 和 LIST
   
-- 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
+- 使用 [*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
 
   - *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET：AAD 應用程式服務主體金鑰*
@@ -179,7 +179,7 @@ WITH
   - 所需的最小 RBAC 角色：適用於 AAD 使用者的儲存體 Blob 資料參與者或儲存體 Blob 資料擁有者
 
 *ERRORFILE = 目錄位置*</br>
-*ERRORFILE* 僅適用於 CSV。 指定 COPY 陳述式內，已拒絕資料列和相應錯誤檔案應寫入的目錄。 您可以指定儲存體帳戶的完整路徑，或指定相對於容器的路徑。 如果指定的路徑不存在，則會代表您建立一個路徑。 會建立名稱為 "_rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 
+*ERRORFILE* 僅適用於 CSV。 指定 COPY 陳述式內，已拒絕資料列和相應錯誤檔案應寫入的目錄。 您可以指定儲存體帳戶的完整路徑，或指定相對於容器的路徑。 如果指定的路徑不存在，則會代表您建立一個路徑。 會建立名稱為 " _rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 
 
 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料夾中，寫入了兩種類型的檔案，分別是原因 (錯誤r) 檔案和資料 (資料列) 檔案，每個檔案都會預先附加 queryID、distributionID 和檔案 guid。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符首碼。
 
@@ -196,7 +196,7 @@ WITH
   - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*可提供您儲存體帳戶中資源的委派存取。*
   - 所需最小權限：READ、LIST、WRITE、CREATE、DELETE
   
-- 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
+- 使用 [*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
   - *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>*
   - *SECRET：AAD 應用程式服務主體金鑰*
   - 所需的最小 RBAC 角色：儲存體 Blob 資料參與者或儲存體 Blob 資料擁有者
@@ -437,7 +437,7 @@ COPY 命令是否會有更好的效能，需取決於您的工作負載。 為�
 
 COPY 陳述式或 PolyBase (包括在管線中使用時) 不支援使用受控識別 (MSI) 進行驗證。 您可能會遇到類似的錯誤訊息：
 
-com.microsoft.sqlserver.jdbc.SQLServerException:*受控服務識別尚未在此伺服器上啟用。* 請啟用受控服務識別並再試一次。
+com.microsoft.sqlserver.jdbc.SQLServerException: *受控服務識別尚未在此伺服器上啟用。* 請啟用受控服務識別並再試一次。
 
 當儲存體帳戶與 VNet 相關聯時，需要 MSI 驗證。 如果您的儲存體帳戶已附加至 VNet，則必須使用 BCP/Bulk Insert 來載入資料，而不是 COPY 或 PolyBase。
 

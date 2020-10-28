@@ -14,12 +14,12 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 571771403d665bd6d668fcce7037e06db6ffa33d
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037051"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300650"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,7 +106,7 @@ RETURNS TABLE
  *parameter_data_type*  
  參數資料類型。 針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中支援的所有純量資料類型皆允許。 時間戳記 (rowversion) 資料類型是不支援的類型。  
   
- [ =*default* ]  
+ [ = *default* ]  
  這是參數的預設值。 如果已定義 *default* 值，則不需為該參數指定值，即可執行函式。  
   
  如果函數的參數有預設值，則必須在呼叫函數來擷取該預設值時指定關鍵字 DEFAULT。 這個行為與使用預存程序中具有預設值的參數不一樣，因為在預存程序中，省略參數也意味著使用預設值。  
@@ -117,16 +117,16 @@ RETURNS TABLE
  *function_body*  
  一連串的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  function_body 無法包含 SELECT 陳述式，且無法參考資料庫資料。  function_body 無法參考資料表或檢視。 函式主體可以呼叫其他具決定性的函式，但是無法呼叫非決定性函式。 
   
- 在純量函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
+ 在純量函式中， *function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
   
  *scalar_expression*  
  指定純量函數傳回的純量值。  
 
- *select_stmt* **適用於**：Azure Synapse Analytics  
+ *select_stmt* **適用於** ：Azure Synapse Analytics  
  這是單一 SELECT 陳述式，可定義內嵌資料表值函式 (預覽) 的傳回值。
 
- TABLE **適用於**：Azure Synapse Analytics  
- 指定資料表值函式 (TVF) 的傳回值是資料表。 只有常數和 @*local_variables* 才能傳遞給 TVF。
+ TABLE **適用於** ：Azure Synapse Analytics  
+ 指定資料表值函式 (TVF) 的傳回值是資料表。 只有常數和 @ *local_variables* 才能傳遞給 TVF。
 
  在內嵌 TVF (預覽) 中，TABLE 傳回值是透過單一 SELECT 陳述式定義。 內嵌函數沒有相關聯的傳回變數。
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-接著可以使用下列內容呼叫函式，以傳回所有檢視 (**V**) 物件：
+接著可以使用下列內容呼叫函式，以傳回所有檢視 ( **V** ) 物件：
 ```sql
 select * from dbo.ModulesByType('V');
 ```
@@ -260,8 +260,8 @@ GO
 ```
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
+ [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
   
   
 

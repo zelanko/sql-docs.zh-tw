@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b8e0ae12bb4b0d0f7cce0ca5ff690af83531be0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 852957ca30b73c1b252c27a4581679f360f1e96e
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891148"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300725"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -85,13 +85,13 @@ BULK INSERT
 
 *database_name* 這是指定的資料表或檢視表所在資料庫名稱。 如果未指定，這就是目前的資料庫。
 
-*schema_name* 這是資料表或檢視表結構描述的名稱。 如果執行大量匯入作業之使用者的預設結構描述，是指定之資料表或檢視表的結構描述，則 *schema_name* 為選擇性。 如果未指定 *schema*，且執行大量匯入作業之使用者的預設結構描述與指定的資料表或檢視表不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤訊息，且會取消大量匯入作業。
+*schema_name* 這是資料表或檢視表結構描述的名稱。 如果執行大量匯入作業之使用者的預設結構描述，是指定之資料表或檢視表的結構描述，則 *schema_name* 為選擇性。 如果未指定 *schema* ，且執行大量匯入作業之使用者的預設結構描述與指定的資料表或檢視表不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤訊息，且會取消大量匯入作業。
 
 *table_name* 這是要大量匯入資料到其中之資料表或檢視表的名稱。 您只能使用所有資料行都參考相同基底資料表的檢視表。 如需有關將資料載入至檢視表中之限制的詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。
 
 **'** _data_file_ **'** 這是含有要匯入至指定的資料表或檢視表中資料的資料檔案完整路徑。 BULK INSERT 可以從磁碟或 Azure Blob 儲存體中匯入資料 (其中包括網路、磁碟片、硬碟等)。
 
-*data_file* 必須指定執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器中的有效路徑。 如果 *data_file* 是一個遠端檔案，請指定「通用命名慣例」(UNC) 名稱。 UNC 名稱的格式為 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*。 例如：
+*data_file* 必須指定執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器中的有效路徑。 如果 *data_file* 是一個遠端檔案，請指定「通用命名慣例」(UNC) 名稱。 UNC 名稱的格式為 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName* 。 例如：
 
 ```sql
 BULK INSERT Sales.Orders
@@ -122,7 +122,7 @@ CHECK_CONSTRAINTS 指定在大量匯入作業期間，必須檢查目標資料�
 > [!NOTE]
 > MAXERRORS 選項不適用於條件約束檢查。
 
-CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } 指定資料檔中的資料字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。 如需範例，請參閱[指定字碼頁](#d-specifying-a-code-page)。
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } 指定資料檔中的資料字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char** 、 **varchar** 或 **text** 資料行時，CODEPAGE 才會相關。 如需範例，請參閱[指定字碼頁](#d-specifying-a-code-page)。
 
 > [!IMPORTANT]
 > 針對 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]，Linux 上不支援 CODEPAGE 選項。 針對 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]，CODEPAGE 只允許使用 **'RAW'** 選項。
@@ -132,8 +132,8 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 
 |CODEPAGE 值|描述|
 |--------------------|-----------------|
-|ACP|將 **char**、**varchar** 或 **text** 資料類型的資料行，從 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
-|OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
+|ACP|將 **char** 、 **varchar** 或 **text** 資料類型的資料行，從 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
+|OEM (預設值)|將 **char** 、 **varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
 |RAW|不進行字碼頁之間的轉換；這是最快的選項。|
 |*code_page*|特定字碼頁編號，如 850。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|
 | &nbsp; | &nbsp; |
@@ -147,7 +147,7 @@ DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenati
 |**char** (預設值)|字元格式。<br /><br /> 如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。|
 |**native**|原生 (資料庫) 資料類型。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立原生資料檔案。<br /><br /> 原生值提供了效能比 char 值更高的替代項。 在多個 SQL Server 執行個體之間，使用不包含任何擴充/雙位元組字集 (DBCS) 字元的資料檔大量傳送資料時，建議使用原生格式。<br /><br /> 如需詳細資訊，請參閱[使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。|
 |**widechar**|Unicode 字元。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。|
-|**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|
+|**widenative**|原生 (資料庫) 資料類型，但在 **char** 、 **varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative** 。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|
 | &nbsp; | &nbsp; |
 
 ERRORFILE **='** _file_name_ **'** 指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
@@ -181,7 +181,7 @@ KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ 以 *kilobytes_per_batch* 指定
 
 LASTROW **=** _last_row_ 指定所要載入最後一個資料列的號碼。 預設值是 0，表示指定之資料檔案中的最後一個資料列。
 
-MAXERRORS **=** _max_errors_ 指定取消大量匯入作業之前所允許的資料語法錯誤數目上限。 大量匯入作業所無法匯入的每個資料列都會被忽略，且會當做一項錯誤來計算。 如果未指定 *max_errors*，則預設值為 10。
+MAXERRORS **=** _max_errors_ 指定取消大量匯入作業之前所允許的資料語法錯誤數目上限。 大量匯入作業所無法匯入的每個資料列都會被忽略，且會當做一項錯誤來計算。 如果未指定 *max_errors* ，則預設值為 10。
 
 > [!NOTE]
 > MAX_ERRORS 選項不適用於條件約束檢查，或是轉換 **money** 和 **bigint** 資料類型。
@@ -194,7 +194,7 @@ ROWS_PER_BATCH **=** _rows_per_batch_ 指出資料檔案中大約有多少資料
 
 依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (值 > 0)，伺服器會使用這個值將大量匯入作業最佳化。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。
 
-TABLOCK 指定在大量匯入作業期間，取得資料表層級鎖定。 如果資料表沒有索引，且指定了 TABLOCK，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為是由資料表選項 **table lock on bulk load**所決定。 在大量匯入作業期間保留鎖定，會減少競爭資料表鎖定的情況，在某些情況下，可以大幅提升效能。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。
+TABLOCK 指定在大量匯入作業期間，取得資料表層級鎖定。 如果資料表沒有索引，且指定了 TABLOCK，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為是由資料表選項 **table lock on bulk load** 所決定。 在大量匯入作業期間保留鎖定，會減少競爭資料表鎖定的情況，在某些情況下，可以大幅提升效能。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。
 
 就資料行存放區索引而言， 鎖定行為不同之處在於其內部分割為多個資料列集，每個執行緒都會藉由在允許以並行資料載入工作階段進行平行資料載入的資料列集上採取 X 鎖定，以獨佔方式將資料載入到每個資料列集。 使用 TABLOCK 選項將導致執行緒在資料表上採取 X 鎖定 (不同於傳統資料列集的 BU 鎖定)，這會防止其他並行執行緒同時載入資料。
 
@@ -212,7 +212,7 @@ WITH ( FORMAT='CSV');
 FIELDQUOTE **=** 'field_quote' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
 
-FORMATFILE **=** '_format_file_path_' 指定格式檔案的完整路徑。 格式檔描述包含預存回應的資料檔案，這些預存回應是利用 **bcp** 公用程式在相同資料表或檢視表上建立的。 在下列情況下，應該使用格式檔：
+FORMATFILE **=** ' _format_file_path_ ' 指定格式檔案的完整路徑。 格式檔描述包含預存回應的資料檔案，這些預存回應是利用 **bcp** 公用程式在相同資料表或檢視表上建立的。 在下列情況下，應該使用格式檔：
 
 - 資料檔案包含比資料表或檢視表更多或更少的資料行。
 - 資料行的順序不同。
@@ -295,7 +295,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 ## <a name="general-remarks"></a>一般備註
 
-如需 BULK INSERT 陳述式、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式及 **bcp** 命令的比較，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。
+如需 BULK INSERT 陳述式、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式及 **bcp** 命令的比較，請參閱 [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。
 
 如需有關準備資料以進行大量匯入的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。
 
@@ -330,7 +330,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 如果使用者是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，則會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序帳戶的安全性設定檔。 使用 SQL Server 驗證的登入無法於 Database Engine 外部進行驗證。 因此，一旦使用 SQL Server 驗證的登入起始 BULK INSERT 命令，將會使用 SQL Server 處理序帳戶 (即 SQL Server Database Engine 服務所使用的帳戶) 的安全性內容建立與資料的連接。 為了能夠成功讀取來源資料，您必須授與 SQL Server Database Engine 所使用的帳戶對來源資料的存取權。相反地，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者是使用 Windows 驗證登入，則該使用者只能讀取其使用者帳戶可存取的檔案，而與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔無關。
 
-使用 **sqlcmd** 或 **osql** 來執行 BULK INSERT 陳述式時，如果將一部電腦的資料插入到第二部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，然後使用 UNC 路徑指定第三部電腦上的 *data_file*時，您可能會收到 4861 錯誤。
+使用 **sqlcmd** 或 **osql** 來執行 BULK INSERT 陳述式時，如果將一部電腦的資料插入到第二部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，然後使用 UNC 路徑指定第三部電腦上的 *data_file* 時，您可能會收到 4861 錯誤。
 
 若要解決這個錯誤，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並指定一個使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理帳戶之安全性設定檔的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，或設定 Windows 來啟用安全性帳戶委派。 如需有關如何使某個使用者帳戶受到信任而委派的詳細資訊，請參閱 Windows 說明。
 

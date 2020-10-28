@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 8fbb5128236808e6ac7ca833aa82280c68ca1263
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024260"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300540"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -99,11 +99,11 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<登入名稱>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<登入名稱>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合 [識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
-ASSWORD **=** '*password*' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+ASSWORD **=** ' *password* ' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
-密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
+密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name* 。
 
 PASSWORD **=** *hashed\_password* 僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。
 
@@ -113,7 +113,7 @@ MUST_CHANGE 只適用於 SQL Server 登入。 如果有包含這個選項，第�
 
 CREDENTIAL **=** _credential\_name_ 對應到新 SQL Server 登入的認證名稱。 認證必須已存在於伺服器中。 目前這個選項只會將認證連結到登入。 認證無法對應至系統管理員 (sa) 登入。
 
-SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 (**binary(16)** ) 常值。 例如： `SID = 0x14585E90117152449347750164BA00A7` 。
+SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 ( **binary(16)** ) 常值。 例如： `SID = 0x14585E90117152449347750164BA00A7` 。
 
 DEFAULT_DATABASE **=** _database_ 指定要指派給登入的預設資料庫。 如果不包括這個選項，預設資料庫將設為 master。
 
@@ -142,7 +142,7 @@ ASYMMETRIC KEY *asym_key_name* 指定與這項登入建立關聯的非對稱金�
 - 只有當您建立 SQL Server 登入時，才支援預先雜湊處理密碼。
 - 如果指定 MUST_CHANGE，則 CHECK_EXPIRATION 和 CHECK_POLICY 必須設為 ON。 否則，陳述式便會失敗。
 - 不支援 CHECK_POLICY = OFF 和 CHECK_EXPIRATION = ON 的結合。
-- 當 CHECK_POLICY 設為 OFF 時，*lockout_time* 會重設，且 CHECK_EXPIRATION 會設為 OFF。
+- 當 CHECK_POLICY 設為 OFF 時， *lockout_time* 會重設，且 CHECK_EXPIRATION 會設為 OFF。
 
 > [!IMPORTANT]
 > CHECK_EXPIRATION 和 CHECK_POLICY 只會在 Windows Server 2003 和更新版本中強制執行。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。
@@ -155,7 +155,7 @@ ASYMMETRIC KEY *asym_key_name* 指定與這項登入建立關聯的非對稱金�
 
 ## <a name="permissions"></a>權限
 
-- 只有具備伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色之成員資格的使用者才能建立登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
+- 只有具備伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色之成員資格的使用者才能建立登入。 如需詳細資訊，請參閱[伺服器層級角色](/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 - 如果使用 **CREDENTIAL** 選項，則也需要伺服器的 **ALTER ANY CREDENTIAL** 權限。
 
 ## <a name="after-creating-a-login"></a>建立登入之後
@@ -182,7 +182,7 @@ GO
 
 下列範例會針對特定的使用者建立登入，並指派密碼。 `MUST_CHANGE` 選項需要使用者在第一次連接到伺服器時變更這個密碼。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -197,7 +197,7 @@ GO
 
 下列範例會針對特定使用者建立登入 (透過使用者)。 此登入會對應到認證。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -209,7 +209,7 @@ GO
 
 下列範例會從 master 的憑證建立特定使用者的登入。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 USE MASTER;
@@ -225,7 +225,7 @@ GO
 
 下列範例會從 Windows 網域帳戶建立登入。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;
@@ -316,13 +316,13 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 Azure SQL Database 中的單一和集區資料庫以及 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的資料庫僅支援 SQL 登入。 若要建立 Azure Active Directory 使用者帳戶，或建立未與登入建立關聯的使用者帳戶，請使用 [CREATE USER](create-user-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[管理 Azure SQL Database 中的登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
+*login_name* 指定建立的登入名稱。 Azure SQL Database 中的單一和集區資料庫以及 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中的資料庫僅支援 SQL 登入。 若要建立 Azure Active Directory 使用者帳戶，或建立未與登入建立關聯的使用者帳戶，請使用 [CREATE USER](create-user-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[管理 Azure SQL Database 中的登入](/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
 
 PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
-密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
+密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name* 。
 
-SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
+SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 ( **binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 
 ## <a name="remarks"></a>備註
 
@@ -330,7 +330,7 @@ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，�
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。
 
 > [!IMPORTANT]
-> 如需在 Azure SQL Database 中使用登入和使用者的資訊，請參閱[管理 Azure SQL Database 中的登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
+> 如需在 Azure SQL Database 中使用登入和使用者的資訊，請參閱[管理 Azure SQL Database 中的登入](/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
 
 ## <a name="login"></a>登入
 
@@ -338,17 +338,17 @@ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，�
 
 **CREATE LOGIN** 陳述式必須是批次中唯一的陳述式。
 
-在連線至 SQL Database 的一些方法中 (例如 **sqlcmd**)，您必須使用 *\<login>* @ *\<server>* 標記法，將 SQL Database 伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL Database 伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
+在連線至 SQL Database 的一些方法中 (例如 **sqlcmd** )，您必須使用 *\<login>* @ *\<server>* 標記法，將 SQL Database 伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL Database 伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
 
-在 SQL Database 中，必須連線至 master 資料庫以適當的權限建立登入。 如需詳細資訊，請參閱[建立其他登入和具有系統管理權限的使用者](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions) (機器翻譯)。
+在 SQL Database 中，必須連線至 master 資料庫以適當的權限建立登入。 如需詳細資訊，請參閱[建立其他登入和具有系統管理權限的使用者](/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions) (機器翻譯)。
 
-SQL Server 規則可供建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
+SQL Server 規則可供建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver** ，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
 在 SQL Database 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
 ## <a name="permissions"></a>權限
 
-只有 master 資料庫中的伺服器層級主體登入 (由佈建程序所建立) 或 `loginmanager` 資料庫角色成員，才能建立新登入。 如需詳細資訊，請參閱[建立其他登入和具有系統管理權限的使用者](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions) (機器翻譯)。
+只有 master 資料庫中的伺服器層級主體登入 (由佈建程序所建立) 或 `loginmanager` 資料庫角色成員，才能建立新登入。 如需詳細資訊，請參閱[建立其他登入和具有系統管理權限的使用者](/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions) (機器翻譯)。
 
 ## <a name="examples"></a>範例
 
@@ -440,16 +440,16 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 FROM EXTERNAL PROVIDER </br>
 指定登入適用於 Azure AD 驗證。
 
-PASSWORD **=** '*password*' 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+PASSWORD **=** ' *password* ' 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
-密碼會區分大小寫。 密碼長度應一律至少 10 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
+密碼會區分大小寫。 密碼長度應一律至少 10 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name* 。
 
-SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
+SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 ( **binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 
 ## <a name="remarks"></a>備註
 
 - 密碼會區分大小寫。
-- 已引入新語法，用來建立對應至 Azure AD 帳戶的伺服器層級主體 (**FROM EXTERNAL PROVIDER**)
+- 已引入新語法，用來建立對應至 Azure AD 帳戶的伺服器層級主體 ( **FROM EXTERNAL PROVIDER** )
 - 指定 **FROM EXTERNAL PROVIDER** 時：
 
   - Login_name 必須表示可在 Azure AD 中供目前 Azure SQL 受控執行個體存取的現有 Azure AD 帳戶 (使用者、群組或應用程式)。 針對 Azure AD 主體，CREATE LOGIN 語法需要：
@@ -457,18 +457,18 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
     - 適用於 Azure AD 群組和 Azure AD 應用程式之 Azure AD 物件的 DisplayName。
   - 不能使用 **PASSWORD** 選項。
 - 根據預設，若省略 **FROM EXTERNAL PROVIDER** 子句，即會建立一般的 SQL 登入。
-- Azure AD 登入可顯示在 sys.server_principals 中，若為對應至 Azure AD 使用者的登入，類型資料行值會設為 **E** 且 type_desc 會設為 **EXTERNAL_LOGIN**若為對應至 Azure AD 群組的登入，則類型資料行值會設為 **X** 且 type_desc 值會設為 **EXTERNAL_GROUP**。
+- Azure AD 登入可顯示在 sys.server_principals 中，若為對應至 Azure AD 使用者的登入，類型資料行值會設為 **E** 且 type_desc 會設為 **EXTERNAL_LOGIN** 若為對應至 Azure AD 群組的登入，則類型資料行值會設為 **X** 且 type_desc 值會設為 **EXTERNAL_GROUP** 。
 - 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。
 
 > [!IMPORTANT]
-> 如需在 Azure SQL Database 中使用登入和使用者的資訊，請參閱[管理 Azure SQL Database 中的登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
+> 如需在 Azure SQL Database 中使用登入和使用者的資訊，請參閱[管理 Azure SQL Database 中的登入](/azure/sql-database/sql-database-manage-logins) (機器翻譯)。
 
 ## <a name="logins-and-permissions"></a>登入和權限
 
-只有 master 資料庫中的伺服器層級主體登入 (由佈建處理序所建立) 或者是 `securityadmin` 或 `sysadmin` 資料庫角色的成員，才能建立新登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
+只有 master 資料庫中的伺服器層級主體登入 (由佈建處理序所建立) 或者是 `securityadmin` 或 `sysadmin` 資料庫角色的成員，才能建立新登入。 如需詳細資訊，請參閱[伺服器層級角色](/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 
-根據預設，授與 master 中新建立 Azure AD 登入的標準權限如下：**CONNECT SQL** 和 **VIEW ANY DATABASE**。
+根據預設，授與 master 中新建立 Azure AD 登入的標準權限如下： **CONNECT SQL** 和 **VIEW ANY DATABASE** 。
 
 ### <a name="sql-managed-instance-logins"></a>SQL 受控執行個體登入
 
@@ -484,8 +484,8 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
 建立登入之後，登入就可以連線至受控執行個體，但只會有授與 **public** 角色的權限。 請考慮執行下列其中一些活動。
 
 - 若要從 Azure AD 登入來建立 Azure AD 使用者，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) \(機器翻譯\)、[其他伺服器層級的系統管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) \(機器翻譯\)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ... **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非管理員角色](/azure/sql-database/sql-database-manage-logins#non-administrator-users) \(機器翻譯\)、[其他伺服器層級的系統管理角色](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) \(機器翻譯\)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ... **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
   - 使用下列命令將 `sysadmin` 角色新增至 Azure AD 登入： `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
 
@@ -637,9 +637,9 @@ CREATE LOGIN login_name
 
 PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
-密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
+密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name* 。
 
- SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 針對 SQL Analytics，這是由 `0x01060000000000640000000000000000` 加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
+ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 針對 SQL Analytics，這是由 `0x01060000000000640000000000000000` 加上代表 GUID 的 16 位元組組成的 32 位元組 ( **binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 
 ## <a name="remarks"></a>備註
 
@@ -657,23 +657,23 @@ PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用�
 
 若要建立登入，您必須連接至 master 資料庫。
 
-SQL Server 規則可供建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
+SQL Server 規則可供建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver** ，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
 驗證連線所需的登入資料，以及伺服器層級防火牆規則，會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-如需登入的詳細資訊，請參閱[管理資料庫和登入](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) \(部分機器翻譯\)。
+如需登入的詳細資訊，請參閱[管理資料庫和登入](/azure/sql-database/sql-database-manage-logins) \(部分機器翻譯\)。
 
 ## <a name="permissions"></a>權限
 
-只有 master 資料庫中的伺服器層級主體登入 (由佈建程序所建立) 或 `loginmanager` 資料庫角色成員，才能建立新登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
+只有 master 資料庫中的伺服器層級主體登入 (由佈建程序所建立) 或 `loginmanager` 資料庫角色成員，才能建立新登入。 如需詳細資訊，請參閱[伺服器層級角色](/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 
 ## <a name="after-creating-a-login"></a>建立登入之後
 
 建立登入之後，登入就可以連線至 Azure Synapse，但是只會取得授與 **public** 角色的權限。 請考慮執行下列其中一些活動。
 
 - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) \(機器翻譯\)、[其他伺服器層級的系統管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) \(機器翻譯\)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ... **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非管理員角色](/azure/sql-database/sql-database-manage-logins#non-administrator-users) \(機器翻譯\)、[其他伺服器層級的系統管理角色](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) \(機器翻譯\)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ... **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
 
@@ -764,11 +764,11 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<登入名稱>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<登入名稱>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合 [識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
-ASSWORD **='** _password_' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+ASSWORD **='** _password_ ' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
-密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
+密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name* 。
 
 MUST_CHANGE 只適用於 SQL Server 登入。 如果有包含這個選項，第一次使用新登入時，SQL Server 會提示使用者輸入新密碼。
 
@@ -790,7 +790,7 @@ WINDOWS 指定將登入對應到 Windows 登入。
 - 密碼會區分大小寫。
 - 如果指定 MUST_CHANGE，則 CHECK_EXPIRATION 和 CHECK_POLICY 必須設為 ON。 否則，陳述式便會失敗。
 - 不支援 CHECK_POLICY = OFF 和 CHECK_EXPIRATION = ON 的結合。
-- 當 CHECK_POLICY 設為 OFF 時，*lockout_time* 會重設，且 CHECK_EXPIRATION 會設為 OFF。
+- 當 CHECK_POLICY 設為 OFF 時， *lockout_time* 會重設，且 CHECK_EXPIRATION 會設為 OFF。
 
 > [!IMPORTANT]
 > CHECK_EXPIRATION 和 CHECK_POLICY 只會在 Windows Server 2003 和更新版本中強制執行。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。
@@ -801,7 +801,7 @@ WINDOWS 指定將登入對應到 Windows 登入。
 
 ## <a name="permissions"></a>權限
 
-只有具備伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色之成員資格的使用者才能建立登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
+只有具備伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色之成員資格的使用者才能建立登入。 如需詳細資訊，請參閱[伺服器層級角色](/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 
 ## <a name="after-creating-a-login"></a>建立登入之後
 

@@ -24,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11142e761dd575dc5d07c16fdda854f7c2eca683
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547528"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300153"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -170,9 +170,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>範例 A：從 dll 建立組件  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
- 下列範例假設 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 範例是安裝在機電腦的預設位置，而且 HelloWorld.csproj 範例應用程式已經編譯。 如需詳細資訊，請參閱 [Hello World 範例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。  
+ 下列範例假設 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 範例是安裝在機電腦的預設位置，而且 HelloWorld.csproj 範例應用程式已經編譯。 如需詳細資訊，請參閱 [Hello World 範例](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130))。  
   
 ```sql  
 CREATE ASSEMBLY HelloWorld   
@@ -185,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>範例 B：從組件位元建立組件  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  使用您的組件位元取代範例位元 (不完整或無效)。  
   
@@ -204,6 +204,5 @@ WITH PERMISSION_SET = SAFE;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
-  
+ [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
   

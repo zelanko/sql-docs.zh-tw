@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fcb156d48e619a0d5ac399bf4c04a91720d3f0d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196612"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679177"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,8 +74,8 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-
--- Azure Synapse Analytics 和平行處理資料倉儲的語法  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DECLARE   
 {{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]  
@@ -84,120 +84,119 @@ DECLARE
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## Arguments
+## <a name="arguments"></a>引數
 @*local_variable*  
- Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
+ 此為變數的名稱。 變數名稱的開頭必須是 at (@) 符號。 區域變數名稱必須遵循[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
 *data_type*  
- Is any system-supplied, common language runtime (CLR) user-defined table type, or alias data type. A variable cannot be of **text**, **ntext**, or **image** data type.  
+ 這是任何系統提供的 Common Language Runtime (CLR) 使用者定義資料表類型或別名資料類型。 變數的資料類型不可以是 **text** 、 **ntext** 或 **image** 。  
   
- For more information about system data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about CLR user-defined types or alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 如需系統資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。 如需有關 CLR 使用者自訂類型或別名資料類型的詳細資訊，請參閱 [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
  =*value*  
- Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+ 以內嵌方式指派值給變數。 此值可以是常數或運算式，但是它必須符合變數宣告類型，或是必須可隱含轉換成該類型。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 @*cursor_variable_name*  
- Is the name of a cursor variable. Cursor variable names must begin with an at (@) sign and conform to the rules for identifiers.  
+ 這是資料指標變數的名稱。 資料指標變數名稱的開頭必須是 at (@) 符號，且必須符合識別碼的規則。  
   
 CURSOR  
- Specifies that the variable is a local cursor variable.  
+ 指定變數是本機資料指標變數。  
   
 @*table_variable_name*  
- Is the name of a variable of type **table**. Variable names must begin with an at  (@) sign and conform to the rules for identifiers.  
+ 這是 **table** 類型的變數名稱。 變數名稱的開頭必須是 at (@) 符號，且必須符合識別碼的規則。  
   
 <table_type_definition>  
-Defines the **table** data type. The table declaration includes column definitions, names, data types, and constraints. The only constraint types allowed are PRIMARY KEY, UNIQUE, NULL, and CHECK. An alias data type cannot be used as a column scalar data type if a rule or default definition is bound to the type.
+定義 **table** 資料類型。 資料表宣告包括資料行定義、名稱、資料類型和條件約束。 允許使用的條件約束類型只有 PRIMARY KEY、UNIQUE、NULL 和 CHECK。 如果規則或預設定義繫結至別名資料類型，就無法利用別名資料類型來當做資料行純量資料類型。
   
-\<table_type_definiton>
-Is a subset of information used to define a table in CREATE TABLE. Elements and essential definitions are included here. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+\<table_type_definiton> 是在 CREATE TABLE 中用來定義資料表的部分資訊。 這裡包括元素和必要定義。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
  *n*  
- Is a placeholder indicating that multiple variables can be specified and assigned values. When declaring **table** variables, the **table** variable must be the only variable being declared in the DECLARE statement.  
+ 這是一個預留位置，表示可以指定多個變數，且可以指派這些變數的值。 當宣告 **table** 變數時， **table** 變數必須是 DECLARE 陳述式所宣告的唯一變數。  
   
  *column_name*  
- Is the name of the column in the table.  
+ 這是資料表中之資料行的名稱。  
   
  *scalar_data_type*  
- Specifies that the column is a scalar data type.  
+ 指定資料行是一種純量資料類型。  
   
  *computed_column_expression*  
- Is an expression defining the value of a computed column. It is computed from an expression using other columns in the same table. For example, a computed column can have the definition **cost** AS **price \* qty**. The expression can be a noncomputed column name, constant, built-in function, variable, or any combination of these connected by one or more operators. The expression cannot be a subquery or a user-defined function. The expression cannot reference a CLR user-defined type.  
+ 這是定義計算資料行值的運算式。 它是從運算式中，利用相同資料表中其他資料行計算而得。 例如，計算資料行的定義可以是 **cost** AS **price \* qty** 。運算式可以是非計算的資料行名稱、常數、內建函式、變數，或這些項目由一或多個運算子連接的任何組合。 運算式不能是子查詢或使用者定義函數。 運算式不能參考 CLR 使用者定義類型。  
   
- [ COLLATE *collation_name*]  
- Specifies the collation for the column. *collation_name* can be either a Windows collation name or an SQL collation name, and is applicable only for columns of the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types. If not specified, the column is assigned either the collation of the user-defined data type (if the column is of a user-defined data type) or the collation of the current database.  
+ [ COLLATE *collation_name* ]  
+ 指定資料行的定序。 *collation_name* 可以是 Windows 定序名稱，也可以是 SQL 定序名稱，而且只適用於 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 和 **ntext** 等資料類型的資料行。 若未指定，便會將使用者定義資料類型的定序指派給這個資料行 (如果資料行是使用者定義資料類型)，否則，便會指派目前資料庫的定序。  
   
- For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)。  
   
  DEFAULT  
- Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp** or those with the IDENTITY property. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a system function, such as a SYSTEM_USER(); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
+ 指定在插入期間未明確提供值時，提供給資料行的值。 除了定義為 **timestamp** 或含有 IDENTITY 屬性的資料行之外，任何資料行都可以套用 DEFAULT 定義。 當卸除資料表時，便會移除 DEFAULT 定義。 預設值只能使用常數值 (如字元字串)、系統函數 (如 SYSTEM_USER()) 或 NULL。 若要維護與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性，您可以將條件約束名稱指派給 DEFAULT。  
   
  *constant_expression*  
- Is a constant, NULL, or a system function used as the default value for the column.  
+ 這是用來當做資料行預設值的常數、NULL 或系統函數。  
   
  IDENTITY  
- Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a unique incremental value for the column. Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the seed and increment, or neither. If neither is specified, the default is (1,1).  
+ 指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來結合 PRIMARY KEY 條件約束一起使用，當做資料表的唯一資料列識別碼。 可以將 IDENTITY 屬性指派給 **tinyint** 、 **smallint** 、 **int** 、 **decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
   
  *seed*  
- Is the value used for the very first row loaded into the table.  
+ 這是載入資料表的第一個資料列所用的值。  
   
  *increment*  
- Is the incremental value added to the identity value of the previous row that was loaded.  
+ 這是加入先前載入的資料列之識別值的累加值。  
   
  ROWGUIDCOL  
- Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.  
+ 指出新資料行是一個資料列全域唯一識別碼資料行。 每個資料表只能有一個 **uniqueidentifier** 資料行指定為 ROWGUIDCOL 資料行。 ROWGUIDCOL 屬性只能指派給 **uniqueidentifier** 資料行。  
   
  NULL | NOT NULL  
- Indicates if null is allowed in the variable. The default is NULL.  
+ 指出變數中是否允許 null。 預設值是 NULL。  
   
  PRIMARY KEY  
- Is a constraint that enforces entity integrity for a given column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.  
+ 這是一個條件約束，它利用唯一索引來強制執行一個或多個給定資料行的實體完整性。 每份資料表都只能建立一個 PRIMARY KEY 條件約束。  
   
  UNIQUE  
- Is a constraint that provides entity integrity for a given column or columns through a unique index. A table can have multiple UNIQUE constraints.  
+ 這是一個條件約束，它利用唯一索引來提供一個或多個給定資料行的實體完整性。 一份資料表可以有多個 UNIQUE 條件約束。  
   
  CHECK  
- Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns.  
+ 這是一個條件約束，藉由限制可能輸入一個或多個資料行的值，強制執行範圍完整性。  
   
  *logical_expression*  
- Is a logical expression that returns TRUE or FALSE.  
+ 這是一個傳回 TRUE 或 FALSE 的邏輯運算式。  
   
-## Remarks  
- Variables are often used in a batch or procedure as counters for WHILE, LOOP, or for an IF...ELSE block.  
+## <a name="remarks"></a>備註  
+ 批次或程序通常會利用變數來當做 WHILE、LOOP 或 IF...ELSE 區塊的計數器。  
   
- Variables can be used only in expressions, not in place of object names or keywords. To construct dynamic SQL statements, use EXECUTE.  
+ 變數只能用在運算式中，不能用來取代物件名稱或關鍵字。 若要建構動態 SQL 陳述式，請使用 EXECUTE。  
   
- The scope of a local variable is the batch in which it is declared.  
+ 本機變數的範圍是宣告它的批次。  
  
- A table variable is not necessarily memory resident. Under memory pressure, the pages belonging to a table variable can be pushed out to tempdb.
+ 資料表變數不一定會常駐記憶體。 在記憶體壓力下，屬於資料表變數的分頁可以推送到 tempdb。
   
- A cursor variable that currently has a cursor assigned to it can be referenced as a source in a:  
+ 下列陳述式可以將目前指派了資料指標的資料指標變數當做一項來源來參考：  
   
--   CLOSE statement.  
+-   CLOSE 陳述式。  
   
--   DEALLOCATE statement.  
+-   DEALLOCATE 陳述式。  
   
--   FETCH statement.  
+-   FETCH 陳述式。  
   
--   OPEN statement.  
+-   OPEN 陳述式。  
   
--   Positioned DELETE or UPDATE statement.  
+-   定位 DELETE 或 UPDATE 陳述式。  
   
--   SET CURSOR variable statement (on the right side).  
+-   SET CURSOR 變數陳述式 (在右側)。  
   
- In all of these statements, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error if a referenced cursor variable exists but does not have a cursor currently allocated to it. If a referenced cursor variable does not exist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises the same error raised for an undeclared variable of another type.  
+ 在所有的這些陳述式中，如果參考的資料指標變數存在，但目前未配置資料指標給它，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便會引發錯誤。 如果所參考的資料指標變數不存在，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便會產生其他類型之未宣告的變數所產生的相同錯誤。  
   
- A cursor variable:  
+ 資料指標變數：  
   
--   Can be the target of either a cursor type or another cursor variable. For more information, see [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   可以是資料指標類型或另一個資料指標變數的目標。 如需詳細資訊，請參閱 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)。  
   
--   Can be referenced as the target of an output cursor parameter in an EXECUTE statement if the cursor variable does not have a cursor currently assigned to it.  
+-   如果資料指標變數目前未指派任何資料指標，就可以在 EXECUTE 陳述式中，將它當做輸出資料指標參數的目標來參考。  
   
--   Should be regarded as a pointer to the cursor.  
+-   應該視為指向資料指標的指標。  
   
-## Examples  
+## <a name="examples"></a>範例  
   
-### A. Using DECLARE  
- The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.  
+### <a name="a-using-declare"></a>A. 使用 DECLARE  
+ 下列範例會利用名稱為 `@find` 的本機變數來擷取開頭是 `Man` 的所有姓氏的連絡資訊。  
   
 ```sql  
 USE AdventureWorks2012;  

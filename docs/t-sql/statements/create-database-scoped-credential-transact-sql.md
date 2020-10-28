@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834216"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300938"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 指定要所建立資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。
 
-IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos (Windows Active Directory 或 MIT KDC) 時，請勿在 IDENTITY 引數中使用網域名稱。 它應只是帳戶名稱。
+IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)。 使用 Kerberos (Windows Active Directory 或 MIT KDC) 時，請勿在 IDENTITY 引數中使用網域名稱。 它應只是帳戶名稱。
 
 > [!IMPORTANT]
 > 適用於 PolyBase 的 SQL、Oracle、Teradata 和 MongoDB ODBC 連接器僅支援基本驗證，不支援 Kerberos 驗證。
@@ -85,7 +85,7 @@ SECRET **='** _secret_ **'** 指定外寄驗證所需的祕密。 從 Azure Blob
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用資料庫範圍認證將擴充事件檔案寫入 Azure Blob 儲存體。
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 將資料庫範圍認證用於彈性集區。 如需詳細資訊，請參閱[彈性集區可協助您管理及調整多個 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 將資料庫範圍認證用於彈性集區。 如需詳細資訊，請參閱[彈性集區可協助您管理及調整多個 Azure SQL Database](/azure/azure-sql/database/elastic-pool-overview)
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用資料庫範圍認證存取 Azure Blob 儲存體的資料。 如需詳細資訊，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。 
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 下列範例會建立可以用於建立[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md) (可在 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 中供 PolyBase 使用) 的資料庫範圍認證。
 
 Azure Data Lake Store 將 Azure Active Directory 應用程式用於「服務對服務驗證」。
-請先[建立 AAD 應用程式](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)並記錄您的 client_id、OAuth_2.0_Token_EndPoint 和金鑰，然後再嘗試建立資料庫範圍認證。
+請先[建立 AAD 應用程式](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)並記錄您的 client_id、OAuth_2.0_Token_EndPoint 和金鑰，然後再嘗試建立資料庫範圍認證。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
