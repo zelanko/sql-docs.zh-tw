@@ -1,6 +1,6 @@
 ---
-title: 使用 apt 安裝 azdata
-description: 了解如何使用 apt 來安裝 azdata 工具。
+title: 使用 apt 安裝 Azure Data CLI (azdata)
+description: 了解如何使用 apt 來安裝 Azure Data CLI (azdata) 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -8,14 +8,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2f248978e09be4670d702805873a5ae6f4f7c9de
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725284"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257461"
 ---
-# <a name="install-azdata-with-apt"></a>使用 apt 安裝 `azdata`
+# <a name="install-azure-data-cli-azdata-with-apt"></a>使用 apt 安裝 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

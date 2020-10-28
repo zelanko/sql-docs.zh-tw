@@ -1,7 +1,7 @@
 ---
-title: 使用 Windows Installer 安裝 azdata
+title: 使用 Windows Installer 安裝 Azure Data CLI (azdata)
 titleSuffix: ''
-description: 了解如何使用安裝程式來安裝 azdata 工具。
+description: 了解如何使用安裝程式來安裝 Azure Data CLI (azdata) 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b36b69206f6a50c3c24a5ed059f52a7f2edd6c68
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 9dd953a78a992a9a5fed7135ae0aee02f88e4de9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784744"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257491"
 ---
-# <a name="install-azdata-with-windows-installer"></a>使用 Windows Installer 來安裝 `azdata`
+# <a name="install-azure-data-cli-azdata-with-windows-installer"></a>使用 Windows Installer 來安裝 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -44,4 +44,4 @@ ms.locfileid: "91784744"
 
 如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]？](../../big-data-cluster/big-data-cluster-overview.md)
 
-使用 azdata 搭配[已啟用 Azure Arc 的資料服務](/azure/azure-arc/data/)
+搭配使用 `azdata` 與[已啟用 Azure Arc 的資料服務](/azure/azure-arc/data/)

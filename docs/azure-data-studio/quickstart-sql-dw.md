@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115880"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257330"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入門：使用 Azure Data Studio 以連線及查詢在 Azure Synapse Analytics 中使用專用 SQL 集區的資料
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入門：使用 Azure Data Studio 以透過 Azure Synapse Analytics 中的專用 SQL 集區來連線及查詢資料
 
 本快速入門示範如何使用 Azure Data Studio 連線至 Azure Synapse Analytics 中的專用 SQL 集區。
 
@@ -34,7 +34,7 @@ ms.locfileid: "92115880"
 
 使用 Azure Data Studio 建立對 Azure Synapse Analytics 伺服器的連線。
 
-1. 第一次執行 Azure Data Studio 時，應該會開啟 [連線] 頁面。 如果沒有看到 [連線] 頁面，請選取 [伺服器] 提要欄位中的 [新增連線] 或**新增連線**圖示：
+1. 第一次執行 Azure Data Studio 時，應該會開啟 [連線] 頁面。 如果沒有看到 [連線] 頁面，請選取 [伺服器] 提要欄位中的 [新增連線] 或 **新增連線** 圖示：
    
    ![新增連線圖示](media/quickstart-sql-dw/new-connection-icon.png)
 
@@ -42,7 +42,7 @@ ms.locfileid: "92115880"
 
    |   設定    | 建議的值 | 描述 |
    |--------------|-----------------|-------------| 
-   | **伺服器名稱** | 完整伺服器名稱 | 例如，名稱看起來應該像這樣：**sqlpoolservername.database.windows.net**。 |
+   | **伺服器名稱** | 完整伺服器名稱 | 例如，名稱看起來應該像這樣： **sqlpoolservername.database.windows.net** 。 |
    | **驗證** | SQL 登入| 本教學課程使用 SQL 驗證。 |
    | **使用者名稱** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
@@ -77,7 +77,7 @@ ms.locfileid: "92115880"
 
 查詢編輯器仍會連線到 *master* 資料庫，但我們想要在 *TutorialDB* 資料庫中建立資料表。 
 
-1. 將連線內容變更為 **TutorialDB**：
+1. 將連線內容變更為 **TutorialDB** ：
 
 2. 將下列程式碼片段貼至查詢編輯器，然後選取 [執行]：
 
@@ -139,5 +139,6 @@ ms.locfileid: "92115880"
 如果不打算繼續使用在本文中建立的範例資料庫，請[刪除資源群組](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>後續步驟
+如需詳細資訊，請造訪[使用 Azure Data Studio 連線到 Synapse SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)。
 
 成功連線到 Azure Synapse Analytics 並執行查詢後，請嘗試[程式碼編輯器教學課程](tutorial-sql-editor.md)。

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 126bb1ae7daddbaeb4d0ab72440051807f71cd5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ef2a1097d07494ca74ed2afe50c93922de83838c
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725829"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257168"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>管理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的 HDFS 權限
 
@@ -22,7 +22,7 @@ ms.locfileid: "91725829"
 
 以 HDFS 作為檔案系統類似於使用 POSIX 取得檔案權限的 Linux 檔案系統。 除了傳統 POSIX 權限模型，HDFS 也支援 POSIX 存取控制清單 (ACL)。 如需詳細資訊，請參閱[有關 ACL 的 Apache Hadoop 文章](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29)。
 
-下列各節提供如何使用 `azdata` CLI 來管理 HDFS 檔案和目錄權限的範例。
+下列各節提供如何使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 來管理 HDFS 檔案和目錄權限的範例。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -31,7 +31,7 @@ ms.locfileid: "91725829"
   
 ## <a name="hdfs-shell"></a>HDFS 殼層
 
-`azdata` 中的 `hdfs` 殼層功能可讓您直接在殼層中發出命令，以管理 HDFS 檔案和目錄權限。 其基礎機制使用 WebHdfs 呼叫來發出命令
+[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 中的 `hdfs` 殼層功能可讓您直接在殼層中發出命令，以管理 HDFS 檔案和目錄權限。 其基礎機制使用 WebHdfs 呼叫來發出命令
 
 下列命令會開啟殼層。
 
@@ -72,7 +72,7 @@ acl modify: Change completed.
 }
 ```
 
-## <a name="create-a-directory-in-hdfs-using-azdata"></a>使用 `azdata` 在 HDFS 中建立目錄
+## <a name="create-a-directory-in-hdfs-using-azure-data-cli-azdata"></a>使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 在 HDFS 中建立目錄
 
 在路徑 `/sales` 中建立名為 `data` 的目錄。
 
@@ -110,7 +110,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 ## <a name="setting-acls-on-files-and-directories"></a>在檔案和目錄上設定 ACL
 
-若要在 HDFS 的檔案和目錄上設定 ACL，請使用 `azdata` 命令。
+若要在 HDFS 的檔案和目錄上設定 ACL，請使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 命令。
 
 在目錄上設定 ACL，並為具名使用者 *`tom`* 提供 *`data`* 目錄的讀取、寫入和執行權限。 
 
@@ -133,6 +133,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## <a name="next-steps"></a>後續步驟
 
-- [`azdata` 參考](../azdata/reference/reference-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 參考](../azdata/reference/reference-azdata.md)
 
 - [什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)

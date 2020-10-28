@@ -1,25 +1,25 @@
 ---
-title: 安裝 azdata
+title: 安裝 Azure Data CLI (azdata)
 titleSuffix: ''
-description: 了解如何安裝 azdata 工具。
+description: 了解如何安裝 Azure Data CLI (azdata) 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 83da4e1554e1a6fa112c6fc8f629d30cbcb97d4d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 82aa3a2795328804a10a76e9ecd8af80f3bf7152
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725250"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257393"
 ---
-# <a name="install-azdata"></a>安裝 `azdata`
+# <a name="install-azure-data-cli-azdata"></a>安裝 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-`azdata` 是以 Python 撰寫的命令列公用程式，可透過 REST API 啟動及管理資料服務。 
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] 是以 Python 撰寫的命令列公用程式，可透過 REST API 啟動及管理資料服務。 
 
 ## <a name="find-latest-version"></a>尋找最新版本
 

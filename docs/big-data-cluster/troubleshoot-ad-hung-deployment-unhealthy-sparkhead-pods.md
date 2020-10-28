@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898668"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257098"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>AD 模式部署停止回應 - 狀況不良的 `sparkhead` Pod
 
@@ -101,12 +101,12 @@ zookeeper-2       2/2     Running   0          3d13h 
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> 收集記錄的方法有許多個。 您可以使用 Azure Data Studio 中的筆記本，而不使用 `azdata` 來複製記錄。
+> 收集記錄的方法有許多個。 您可以使用 Azure Data Studio 中的筆記本，而不使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 來複製記錄。
 > 在 Azure Data Studio 中，連線到 Kubernetes 叢集，然後執行適當的疑難排解筆記本。 以下是筆記本的範例。
 >
 > - TSG027 - 觀察叢集部署
 > - TSG061 - 取得 BDC 命名空間中 Pod 的所有容器記錄結尾
-> - TSG001 - 執行 `azdata` copy-logs
+> - TSG001 - 執行 `azdata copy-logs`
 >
   
 ## <a name="inspect-the-logs"></a>檢查記錄

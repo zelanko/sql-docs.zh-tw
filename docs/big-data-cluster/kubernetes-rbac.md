@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879039"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257129"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Kubernetes RBAC 模型與其對管理 BDC 之使用者和服務帳戶的影響
 
@@ -25,7 +25,7 @@ ms.locfileid: "87879039"
 
 ## <a name="role-required-for-deployment"></a>部署所需的角色
 
-BDC 使用服務帳戶 (例如 `sa-mssql-controller` 或 `master`) 來協調叢集 Pod、服務、高可用性、監視等的佈建。當 BDC 部署啟動時 (例如 `azdata bdc create`)，`azdata` 會執行下列動作：
+BDC 使用服務帳戶 (例如 `sa-mssql-controller` 或 `master`) 來協調叢集 Pod、服務、高可用性、監視等的佈建。當 BDC 部署啟動時 (例如 `azdata bdc create`)，[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 會執行下列動作：
 
 1. 檢查提供的命名空間是否存在。
 2. 如果不存在，則其會建立一個，並套用 `MSSQL_CLUSTER` 標籤。
@@ -105,7 +105,7 @@ BDC 使用服務帳戶 (例如 `sa-mssql-controller` 或 `master`) 來協調叢�
 ## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>BDC Pod 內的預設服務帳戶使用狀況
 
 如需更緊密的安全性模型，SQL Server 2019 CU5 預設會針對 BDC Pod 內預設 Kubernetes 服務帳戶的認證停用掛接。 這同時適用於 CU5 或更新版本中的新部署與升級的部署。
-Pod 內的認證權杖可用來存取 Kubernetes API 伺服器，而權限層級則取決於 Kubernetes 授權原則設定。 如果您有需要還原成先前 CU5 行為的特定使用案例，在 CU6 中，我們將引進新的功能開關，因此您只能在部署時開啟自動掛接。 您可以使用 control.json 設定部署檔案，並將 *automountServiceAccountToken* 設定為 *true*，以達到這個目的。 執行此命令，以使用 `azdata` CLI 更新您 *control.json* 自訂設定檔中的此設定： 
+Pod 內的認證權杖可用來存取 Kubernetes API 伺服器，而權限層級則取決於 Kubernetes 授權原則設定。 如果您有需要還原成先前 CU5 行為的特定使用案例，在 CU6 中，我們將引進新的功能開關，因此您只能在部署時開啟自動掛接。 您可以使用 control.json 設定部署檔案，並將 *automountServiceAccountToken* 設定為 *true* ，以達到這個目的。 執行此命令，以使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 更新您 *control.json* 自訂設定檔中的此設定： 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"

@@ -3,24 +3,24 @@ title: 查詢 Oracle 中的外部資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集中的 Oracle 資料。 您會透過 Oracle 中的資料建立外部資料表，然後執行查詢。
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772843"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196082"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程：查詢 SQL Server 巨量資料叢集中的 Oracle
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>教學課程：從 SQL Server 巨量資料叢集查詢 Oracle
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集中的 Oracle 資料。 若要執行本教學課程，您要能夠存取 Oracle 伺服器。 如果您無法存取，本教學課程可讓您了解 SQL Server 巨量資料叢集中，外部資料來源的資料虛擬化運作方式。
+本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集中的 Oracle 資料。 若要執行本教學課程，您要能夠存取 Oracle 伺服器。 需要具有外部物件讀取權限的 Oracle 使用者帳戶。 支援 Oracle Proxy 使用者驗證。 如果您無法存取，本教學課程可讓您了解 SQL Server 巨量資料叢集中，外部資料來源的資料虛擬化運作方式。
 
 在本教學課程中，您會了解如何：
 
@@ -67,7 +67,7 @@ ms.locfileid: "85772843"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
+1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -90,6 +90,30 @@ ms.locfileid: "85772843"
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### <a name="optional-oracle-proxy-authentication"></a>選用：Oracle Proxy 驗證
+
+Oracle 支援 Proxy 驗證，以提供精細的存取控制。 Proxy 使用者會使用其認證來連線到 Oracle 資料庫，並在資料庫中模擬另一位使用者。 
+
+相較於模擬的使用者，Proxy 使用者可以設定為具有有限的存取權。 例如，您可以使用所模擬使用者的特定資料庫角色，允許 Proxy 使用者進行連線。 透過 Proxy 使用者連線到 Oracle 資料庫的使用者身分識別會保留在連線中，即使有多個使用者使用 Proxy 驗證進行連線也一樣。 這可讓 Oracle 強制執行存取控制，並代表實際的使用者稽核所採取的動作。
+
+如果您的案例需要使用 Oracle Proxy 使用者，請 __以下列內容取代先前的步驟 4 和 5__ 。
+
+4. 建立資料庫範圍認證以連線到 Oracle 伺服器。 在下列陳述式中，為您的 Oracle 伺服器提供適當的 Oracle Proxy 使用者認證。
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. 建立指向 Oracle 伺服器的外部資料來源。
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## <a name="create-an-external-table"></a>建立外部資料表

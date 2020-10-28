@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730683"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257246"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
@@ -37,7 +37,7 @@ ms.locfileid: "85730683"
 
 巨量資料叢集有五個進入點
 
-* 主要執行個體 - 用來透過資料庫工具和如 SSMS 或 Azure Data Studio 之類的應用程式存取叢集中 SQL Server 主要執行個體的 TDS 端點。 使用來自 Azdata 的 HDFS 或 SQL Server 命令時，視作業而定，該工具將會連線到其他端點。
+* 主要執行個體 - 用來透過資料庫工具和如 SSMS 或 Azure Data Studio 之類的應用程式存取叢集中 SQL Server 主要執行個體的 TDS 端點。 使用來自 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 的 HDFS 或 SQL Server 命令時，視作業而定，該工具將會連線到其他端點。
 
 * 用來存取 HDFS 檔案的閘道，Spark (Knox) - 用來存取服務 (例如 webHDFS 與 Spark) 的 HTTPS 端點。
 
@@ -59,16 +59,23 @@ ms.locfileid: "85730683"
 
 安全的巨量資料叢集是指在 SQL Server 與 HDFS/Spark 之間，針對驗證和授權案例提供一致且連貫的支援。 驗證是驗證使用者或服務識別的程序，並確保其為所宣稱的身分。 授權是指根據要求使用者的識別，授與或拒絕對特定資源的存取。 此步驟是在透過驗證識別使用者之後執行。
 
-巨量資料內容中的授權通常是透過存取控制清單 (ACL) 執行，這會建立使用者識別與特定權限的關聯。 HDFS 透限制對服務 API、HDFS 檔案與作業執行的存取來支援授權。
+巨量資料內容中的授權會透過存取控制清單 (ACL) 執行，這會建立使用者識別與特定權限的關聯。 HDFS 透限制對服務 API、HDFS 檔案與作業執行的存取來支援授權。
 
-## <a name="encryption-and-other-security-mechanisms"></a>加密及其他安全性機制
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>傳輸中加密及其他安全性機制
 
 針對用戶端和外部端點之間，以及叢集內元件之間通訊的加密，是搭配 TLS/SSL 使用憑證來保護。
 
 SQL Server 與 SQL Server 之間的所有通訊 (例如與資料集區通訊的 SQL 主要執行個體) 都是使用 SQL 登入來保護。
 
 > [!IMPORTANT]
->  巨量資料叢集會使用 etcd 來儲存認證。 最佳做法是，您必須確定 Kubernetes 叢集已設定為使用待用的 etcd 加密。 根據預設，不會加密儲存在 etcd 中的祕密。 Kubernetes 文件提供此管理工作的詳細資料： https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 和 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 。
+>  巨量資料叢集會使用 `etcd` 來儲存認證。 最佳做法是，您必須確定 Kubernetes 叢集已設定為使用待用的 `etcd` 加密。 根據預設，不會加密儲存在 `etcd` 中的祕密。 Kubernetes 文件提供此管理工作的詳細資料： https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 和 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 。
+
+## <a name="data-encryption-at-rest"></a>待用資料加密
+
+SQL Server 巨量資料叢集的待用加密功能集可支援 SQL Server 和 HDFS 元件應用程式層級加密的核心案例。 請遵循[待用加密概念和設定指南](encryption-at-rest-concepts-and-configuration.md)一文來取得完整的功能使用指南。
+
+> [!IMPORTANT]
+> 針對所有 SQL Server 巨量資料叢集部署，建議使用磁碟區加密。 在 Kubernetes 叢集中設定的客戶提供存放磁碟區也應該加密，以作為待用資料加密的完整方法。 SQL Server 巨量資料叢集的待用加密功能是額外一層安全性，可針對 SQL Server 資料和記錄檔提供應用程式層級的加密，以及 HDFS 加密區域支援。
 
 
 ## <a name="basic-administrator-login"></a>基本系統管理員登入

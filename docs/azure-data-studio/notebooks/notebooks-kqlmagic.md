@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226968"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300491"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio 中的 Kqlmagic
 
@@ -31,7 +31,7 @@ ms.locfileid: "91226968"
 
 本節中的步驟都會在 Azure Data Studio 筆記本中執行。
 
-1. 建立新的筆記本，並將**核心**變更為 *Python 3*。
+1. 建立新的筆記本，並將 **核心** 變更為 *Python 3* 。
 
    ![新增筆記本](media/notebooks-kqlmagic/install-new-notebook.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91226968"
    ```
 
    > [!Note]
-   > 如果 `Samples@help` 要求輸入密碼，則可將其保留空白，然後按 **Enter**。
+   > 如果 `Samples@help` 要求輸入密碼，則可將其保留空白，然後按 **Enter** 。
 
    ![説明](media/notebooks-kqlmagic/install-help.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "91226968"
    > [!Note]
    > 當每次在 Azure Data Studio 中建立新筆記本時，都必須載入 Kqlmagic 延伸模組。
 
-1. 驗證**核心**已設為 *Python3*。
+1. 驗證 **核心** 已設為 *Python3* 。
 
    ![核心變更](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -157,7 +157,7 @@ ms.locfileid: "91226968"
 
 ### <a name="load-and-authenticate-kqlmagic-for-application-insights"></a><a name="appin-load-auth"></a> 載入及驗證適用於 Application Insights 的 Kqlmagic
 
-1. 驗證**核心**已設為 *Python3*。
+1. 驗證 **核心** 已設為 *Python3* 。
 
    ![核心](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -212,7 +212,7 @@ ms.locfileid: "91226968"
 
 ### <a name="load-and-authenticate-kqlmagic-for-azure-monitor-logs"></a><a name="aml-load-auth"></a> 載入及驗證適用於 Azure 監視器的 Kqlmagic
 
-1. 驗證**核心**已設為 *Python3*。
+1. 驗證 **核心** 已設為 *Python3* 。
 
    ![變更](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -254,8 +254,10 @@ ms.locfileid: "91226968"
 
 深入了解筆記本和 Kqlmagic：
 
+- [適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組 (預覽)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
+- [建立並執行 Kusto (KQL) 筆記本 (預覽)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [使用 Jupyter Notebook 和 Kqlmagic 延伸模組來分析 Azure 資料總管中的資料](/azure/data-explorer/Kqlmagic) (機器翻譯)
-- [Jupyter 筆記本和 Jupyter 實驗室的延伸模組 (Magic) 可供獲得使用 Kusto、Application Insights 和 LogAnalytics 資料的筆記本體驗](https://github.com/Microsoft/jupyter-Kqlmagic)
+- [Jupyter 筆記本和 Jupyter 實驗室的延伸模組 (Magic)](https://github.com/Microsoft/jupyter-Kqlmagic) \(英文\)，其可在使用 Kusto、Application Insights 和 LogAnalytics 資料時提供筆記本體驗。
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [如何在 Azure Data Studio 中使用筆記本](./notebooks-guidance.md)

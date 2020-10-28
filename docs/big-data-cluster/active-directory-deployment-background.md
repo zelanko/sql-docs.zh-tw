@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892498"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257338"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>在相同的 Active Directory 網域中部署多個 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -140,7 +140,7 @@ AD 網域或網域控制站無須進行任何變更，即可在相同的 Active 
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>如何還原回 CU5 之前的行為？
 
-在某些情況下，您可能無法容納新引入的 `subdomain` 參數。 例如，您必須部署 CU5 之前的版本，但您已經升級了 `azdata` CLI。 雖然這不太可能，但是若必須還原到 CU5 之前的行為，可在 `control.json` 的 Active Directory 區段中，將 `useSubdomain` 參數設為 `false`。
+在某些情況下，您可能無法容納新引入的 `subdomain` 參數。 例如，您必須部署 CU5 之前的版本，但您已經升級了 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 雖然這不太可能，但是若必須還原到 CU5 之前的行為，可在 `control.json` 的 Active Directory 區段中，將 `useSubdomain` 參數設為 `false`。
 
 針對這種情況，下列範例將 `useSubdomain` 設定為 `false`。
 

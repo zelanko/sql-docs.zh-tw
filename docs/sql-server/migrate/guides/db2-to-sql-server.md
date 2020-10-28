@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c7d4e0507667429e4f97674ef302a7d5aed8102
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91510189"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258005"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>移轉指南：DB2 到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91510189"
 若要將 DB2 資料庫移轉至 SQL Server，則需要：
 
 - 驗證是否支援來源環境。
-- 下載[適用於 DB2 的 SQL Server 移轉小幫手 (SSMA)](https://www.microsoft.com/download/details.aspx?id=54254) (英文)。
+- [適用於 DB2 的 SQL Server 移轉小幫手 (SSMA)](https://www.microsoft.com/download/details.aspx?id=54254)。
 
 
 
@@ -41,7 +41,7 @@ ms.locfileid: "91510189"
 
 符合先決條件後，您即可開始探索環境的拓撲，並評定移轉的可行性。 
 
-### <a name="assess-and-convert"></a>評定及轉換
+### <a name="assess"></a>評定 
 
 使用 SQL Server 移轉小幫手 (SSMA) 建立評定。 
 
@@ -82,7 +82,7 @@ ms.locfileid: "91510189"
 
 1. 您可藉由選取 [DB2 Metadata Explorer] 中資料表來變更每個資料表的類型對應。 
 
-### <a name="schema-conversion"></a>結構描述轉換 
+### <a name="convert-schema"></a>轉換結構描述 
 
 若要轉換結構描述，請遵循以下步驟：
 
@@ -121,7 +121,7 @@ ms.locfileid: "91510189"
    :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
 
 1. 提供 DB2 及 SQL Server 執行個體的連線詳細資料。 
-1. 查看**資料移轉報表**。 
+1. 查看 **資料移轉報表** 。 
 
    :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
 
@@ -141,10 +141,10 @@ ms.locfileid: "91510189"
 
 資料庫移轉的測試方法包含下列活動：
 
-1. **開發驗證測試**：若要測試資料庫移轉，則需要使用 SQL 查詢。 您必須建立驗證查詢，以針對來源及目標資料庫執行。 驗證查詢應涵蓋已定義的範圍。
-1. **設定測試環境**：測試環境應該包含來源資料庫及目標資料庫的複本。 請務必隔離測試環境。
-1. **執行驗證測試**：對來源及目標執行驗證測試，然後分析結果。
-1. **執行效能測試**：對來源及目標執行效能測試，然後分析並比較結果。
+1. **開發驗證測試** ：若要測試資料庫移轉，則需要使用 SQL 查詢。 您必須建立驗證查詢，以針對來源及目標資料庫執行。 驗證查詢應涵蓋已定義的範圍。
+1. **設定測試環境** ：測試環境應該包含來源資料庫及目標資料庫的複本。 請務必隔離測試環境。
+1. **執行驗證測試** ：對來源及目標執行驗證測試，然後分析結果。
+1. **執行效能測試** ：對來源及目標執行效能測試，然後分析並比較結果。
 
    > [!NOTE]
    > 如需開發及執行後續移轉驗證測試的協助，請考慮合作夥伴 [QuerySurge](https://www.querysurge.com/company/partners/microsoft) 所提供的資料品質解決方案。 

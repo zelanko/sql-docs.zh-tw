@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891028"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257088"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>AD 模式部署已停止 - 缺少 DC 的反向對應區域項目
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 將記錄解壓縮，並找出 `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`。
 
 > [!TIP]
-> 收集記錄的方法有許多個。 您可以使用 Azure Data Studio 中的筆記本，而不使用 `azdata` 來複製記錄。
+> 收集記錄的方法有許多個。 您可以使用 Azure Data Studio 中的筆記本，而不使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 來複製記錄。
 > 在 Azure Data Studio 中，連線到 Kubernetes 叢集，然後執行適當的疑難排解筆記本。 以下是筆記本的範例。
 >
 > - TSG027 - 觀察叢集部署
 > - TSG061 - 取得 BDC 命名空間中 Pod 的所有容器記錄結尾
-> - TSG001 - 執行 `azdata` copy-logs
+> - TSG001 - 執行 `azdata copy-logs`
 >
 
 ## <a name="inspect-the-logs"></a>檢查記錄

@@ -4,16 +4,16 @@ ms.prod: sql
 ms.topic: include
 ms.date: 01/07/2020
 ms.author: mikeray
-ms.openlocfilehash: 401d214495cd8df8ec3401c0b18db8ebe8773226
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c15fb58bb076724402ab72f81e58ce46c8b7b1e
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721526"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257391"
 ---
 ### <a name="pythonpip-installation"></a>Python/Pip 安裝
 
-您可以使用 yum、apt 或 zypper 在 Linux 上安裝 `azdata`，或使用 Homebrew 安裝套件管理員在 MacOS 上安裝。 您必須先安裝必要的 Python 與 pip，才能開始使用這些套件管理員。
+您可以使用 yum、apt 或 zypper 在 Linux 上安裝 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]，或使用 Homebrew 安裝套件管理員在 MacOS 上安裝。 您必須先安裝必要的 Python 與 pip，才能開始使用這些套件管理員。
 
 >[!IMPORTANT]
 >在繼續之前，您必須先移除已安裝到全域系統 Python 的任何 `azdata` 安裝。 新的安裝程式或原生套件會將 `azdata` 新增到您的路徑，而且不可能知道哪一個是第一個。

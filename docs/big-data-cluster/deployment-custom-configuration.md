@@ -9,25 +9,25 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725859"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257198"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-從 `azdata` 管理工具內建的預先定義組態設定檔集合開始，您可以輕鬆地修改預設設定，使其更符合 BDC 工作負載需求。 設定檔結構可讓您針對資源的每項服務進行細微設定更新。
+從 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 管理工具內建的預先定義組態設定檔集合開始，您可以輕鬆地修改預設設定，使其更符合 BDC 工作負載需求。 設定檔結構可讓您針對資源的每項服務進行細微設定更新。
 
 觀看這段 13 分鐘的影片，以取得巨量資料叢集設定的概觀：
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
-> 如需如何部署高可用性服務的詳細資料，請參閱有關如何針對任務關鍵性元件 (例如 [SQL Server 主要](deployment-high-availability.md)或 [HDFS 名稱節點](deployment-high-availability-hdfs-spark.md)) 設定**高可用性**的文章。
+> 如需如何部署高可用性服務的詳細資料，請參閱有關如何針對任務關鍵性元件 (例如 [SQL Server 主要](deployment-high-availability.md)或 [HDFS 名稱節點](deployment-high-availability-hdfs-spark.md)) 設定 **高可用性** 的文章。
 
 您也可以設定資源層級設定，或更新資源中所有服務的設定。 以下是 `bdc.json` 的結構摘要：
 
@@ -648,7 +648,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.j
 }
 ```
 
-您可以手動編輯 `control.json`，並將上述區段新增至 `spec`，或可建立如下的修補檔 `elasticsearch-patch.json`，並使用 `azdata` CLI 來修補 `control.json` 檔案：
+您可以手動編輯 `control.json`，並將上述區段新增至 `spec`，或可建立如下的修補檔 `elasticsearch-patch.json`，並使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 來修補 `control.json` 檔案：
 
 ```json
 {
@@ -677,7 +677,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>開啟/關閉 Pod 與節點計量集合
 
-SQL Server 2019 CU5 已啟用兩個功能參數，以控制 Pod 與節點計量的集合。 如果監視 Kubernetes 基礎結構使用了不同的解決方案，您可將 *control.json* 部署組態檔中的 *allowNodeMetricsCollection* 和 *allowPodMetricsCollection* 設為 *false*，以關閉 Pod 與主機節點的內建計量集合。 在 OpenShift 環境中，因為收集 Pod 與節點計量需要特殊權限的功能，所以這些設定在內建部署設定檔中預設為 *false*。
+SQL Server 2019 CU5 已啟用兩個功能參數，以控制 Pod 與節點計量的集合。 如果監視 Kubernetes 基礎結構使用了不同的解決方案，您可將 *control.json* 部署組態檔中的 *allowNodeMetricsCollection* 和 *allowPodMetricsCollection* 設為 *false* ，以關閉 Pod 與主機節點的內建計量集合。 在 OpenShift 環境中，因為收集 Pod 與節點計量需要特殊權限的功能，所以這些設定在內建部署設定檔中預設為 *false* 。
 請執行此命令，以使用 *azdata* CLI 更新您自訂組態檔中的這些設定值：
 
 ```bash

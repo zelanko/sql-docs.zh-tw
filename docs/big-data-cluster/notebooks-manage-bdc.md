@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e54c9b01a58ba6eeeeda2fb74ca422d9d90ae45c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9020f8745c22a9e6382b6538d5bf650c17e923e4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725775"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196120"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 筆記本管理 SQL Server 巨量資料叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725775"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供包含筆記本的 Azure Data Studio 延伸模組。 筆記本提供了文件和程式碼，可供您用來在 Azure Data Studio 中管理 SQL Server 2019 巨量資料叢集。
 
-[筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)原本是實作為開放原始碼專案，而現已合併至 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) \(部分機器翻譯\)。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
+[筆記本](../azure-data-studio/notebooks/notebooks-guidance.md)原本是實作為開放原始碼專案，而現已合併至 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) \(部分機器翻譯\)。 您現在可以將 Markdown 用於文字儲存格中的文字，也可以使用其中一個可用的核心，在程式碼儲存格中撰寫程式碼。
 
 您可以使用筆記本來部署 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的巨量資料叢集。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91725775"
 
 您需要下列必要元件才能開啟筆記本：
 
-* 最新版的 [Azure Data Studio Insiders 組建](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts) \(英文\)
+* 最新版的 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 * 在 Azure Data Studio 中安裝 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 延伸模組
 
 除了以上必要元件之外，若要部署 SQL Server 2019 巨量資料叢集叢集，您也需要：
@@ -50,7 +50,7 @@ ms.locfileid: "91725775"
 
 1. 選取 [檢視]   > [命令調色盤]  。
 
-2. 輸入 **Jupyter Book：SQL Server 2019 指南**。
+2. 輸入 **Jupyter Book：SQL Server 2019 指南** 。
 
 內含包含 SQL Server 巨量資料叢集相關疑難排解筆記本之 Jupyter Book 的 Jupyter Book viewlet 將會開啟。
 

@@ -3,21 +3,21 @@ title: 使用自訂報表監視指令碼
 description: 使用 SQL Server Management Studio (SSMS) 中的自訂報表來監視外部指令碼 (Python 與 R) 的執行、使用的資源、診斷問題，以及調整 SQL Server 機器學習服務中的效能。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847358"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115284"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 中的自訂報表監視 Python 與 R 指令碼的執行
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 使用 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 中的自訂報表來監視外部指令碼 (Python 與 R) 的執行、使用的資源、診斷問題，以及調整 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中的效能。
 
@@ -40,6 +40,11 @@ ms.locfileid: "91847358"
 若要使用這些報表，請遵循下列步驟：
 
 1. 從 GitHub 下載適用於 SQL Server 機器學習服務的 [SSMS 自訂報表](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)。
+
+   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   >[!NOTE]
+   > Azure SQL 受控執行個體不支援自訂報告 **ML 服務 - 設定執行個體** 。
+   ::: moniker-end
 
 2. 將報表複製到 Management Studio
 
