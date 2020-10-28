@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542100"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907379"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系統資訊架構視圖 (Transact-sql) 
 
@@ -41,7 +41,7 @@ ms.locfileid: "89542100"
 |---------------------|-----------------------------------------------|
 |資料庫|目錄|
 |結構描述|結構描述|
-|Object|Object|
+|物件|物件|
 |使用者自訂資料類型|網域|
 
 這個名稱對應慣例適用於下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 相容的檢視。
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>權限  
+資訊架構視圖中中繼資料的可見度限制為使用者所擁有或已授與使用者某些許可權的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
+
+> [!NOTE]  
+> 資訊架構視圖會定義為全伺服器，因此無法在使用者資料庫的內容中拒絕。 若要撤銷或拒絕存取 (選取) ，必須使用 master 資料庫。 根據預設，public 角色對所有資訊架構視圖都具有 SELECT 許可權，但內容受限於中繼資料可見度規則。
 
 ## <a name="see-also"></a>另請參閱
 
