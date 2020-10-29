@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 31eeef17d539682b2d7061edec4891ad4c39c43b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257330"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439262"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入門：使用 Azure Data Studio 以透過 Azure Synapse Analytics 中的專用 SQL 集區來連線及查詢資料
 
@@ -36,7 +36,7 @@ ms.locfileid: "92257330"
 
 1. 第一次執行 Azure Data Studio 時，應該會開啟 [連線] 頁面。 如果沒有看到 [連線] 頁面，請選取 [伺服器] 提要欄位中的 [新增連線] 或 **新增連線** 圖示：
    
-   ![新增連線圖示](media/quickstart-sql-dw/new-connection-icon.png)
+   ![[連線] 頁面的螢幕擷取畫面，其中已呼叫新增連線圖示。](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. 本文使用「SQL 登入」，但「Windows 驗證」亦受支援。 使用「您的」Azure SQL 伺服器的伺服器名稱、使用者名稱和密碼填入欄位如下：
 

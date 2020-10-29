@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: e86a46603aeac49d0622f17c0520eb7d16970948
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.date: 10/27/2020
+ms.openlocfilehash: 3dec5e211db8ae21d7b5425c4d66c727bf1b4efd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412635"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734654"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -43,17 +43,17 @@ SQL Server Management Studio (SSMS) 是整合式環境，可用於管理任何 S
 
 :::image type="icon" source="media/download-icon.png" border="false"::: **[下載 SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果先前已安裝 SSMS 18 的 GA 版本，則在安裝 SSMS 18.7 時系統會將其升級為 18.7。
+SSMS 18.7.1 是 SSMS 最新的正式發行 (GA) 版本。 如果先前已安裝 SSMS 18 的 GA 版本，則在安裝 SSMS 18.7.1 時系統會將其升級為 18.7.1。
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-- 版本號碼：18.7
-- 組建編號：15.0.18357.0
-- 發行日期：2020 年 10 月 20 日
+- 版本號碼：18.7.1
+- 組建編號：15.0.18358.0
+- 發行日期：2020 年 10 月 27 日
 
 若您有意見或建議，或是要回報問題，則連絡 SSMS 小組的最佳方式是透過 [SQL Server 使用者意見反應](https://aka.ms/sqlfeedback)。
 
-SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 會與舊版本並行安裝，以便於使用者能夠同時使用這兩種版本。 不過，如果已安裝的是 SSMS 18.x「預覽」版本，則必須先將其解除安裝再安裝 SSMS 18.7。 可以前往 [說明] > [關於]  視窗，以查看您是否有預覽版本。
+SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 會與舊版本並行安裝，以便於使用者能夠同時使用這兩種版本。 不過，如果已安裝的是 SSMS 18.x「預覽」版本，則必須先將其解除安裝再安裝 SSMS 18.7.1。 可以前往 [說明] > [關於]  視窗，以查看您是否有預覽版本。
 
 如果電腦中包含並存安裝的 SSMS，請確認已針對您的特定需求啟動正確的版本。 最新版本會標記為 **Microsoft SQL Server Management Studio 18**
 
@@ -64,8 +64,8 @@ SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 
 
 此版 SSMS 提供下列語言版本：
 
-SQL Server Management Studio 18.7：  
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
+SQL Server Management Studio 18.7.1：  
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模組為透過 PowerShell 資源庫個別安裝的模組。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
@@ -74,7 +74,7 @@ SQL Server Management Studio 18.7：
 
 如需此版本中最新功能的詳細資訊，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
 
-此版本有一些[已知問題](release-notes-ssms.md#known-issues-187)。
+此版本有一些[已知問題](release-notes-ssms.md#known-issues-1871)。
 
 ## <a name="previous-versions"></a>舊版
 
