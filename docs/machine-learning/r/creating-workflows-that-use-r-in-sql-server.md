@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956616"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793755"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>使用 R 在 SQL Server 上建立 SSIS 和 SSRS 工作流程
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 您現在已經有載入訓練資料並產生模型的程式碼，剩下的唯一步驟就是使用模型來產生預測。 
 
-若要這麼做，請將 R 指令碼放入 SQL 查詢中，以觸發 ssis_iris_model 上的 [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) 內建 R 函式。 則名為 **predict_species_length** 的預存程序便會完成這項工作。
+若要這麼做，請將 R 指令碼放入 SQL 查詢中，以觸發 ssis_iris_model 上的 [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 內建 R 函式。 則名為 **predict_species_length** 的預存程序便會完成這項工作。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 31eeef17d539682b2d7061edec4891ad4c39c43b
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439262"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793695"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入門：使用 Azure Data Studio 以透過 Azure Synapse Analytics 中的專用 SQL 集區來連線及查詢資料
 
@@ -136,7 +136,7 @@ ms.locfileid: "92439262"
 
 ## <a name="clean-up-resources"></a>清除資源
 
-如果不打算繼續使用在本文中建立的範例資料庫，請[刪除資源群組](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)。
+如果不打算繼續使用在本文中建立的範例資料庫，請[刪除資源群組](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>後續步驟
 如需詳細資訊，請造訪[使用 Azure Data Studio 連線到 Synapse SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio)。

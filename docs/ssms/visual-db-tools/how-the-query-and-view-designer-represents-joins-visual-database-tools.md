@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462793"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439352"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查詢和檢視設計工具表示聯結的方式 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ ms.locfileid: "88462793"
   
 |**聯結線圖示**|**說明**|  
 |----------------------|-------------------|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 圖示")|內部聯結 (使用等號建立)。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 圖示")|使用「大於」運算子的內部聯結。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools 圖示")|外部聯結，將包括左邊資料表的所有資料列，即使該資料表在相關資料表並沒有相符項目。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools 圖示")|外部聯結，將包括右邊資料表的所有資料列，即使該資料表在相關資料表中並沒有相符項目。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools 圖示")|完整的外部聯結，將同時包括兩邊資料表的所有資料列，即使該資料表在相關資料表中並沒有相符項目。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|內部聯結 (使用等號建立)。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|使用「大於」運算子的內部聯結。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|外部聯結，將包括左邊資料表的所有資料列，即使該資料表在相關資料表並沒有相符項目。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|外部聯結，將包括右邊資料表的所有資料列，即使該資料表在相關資料表中並沒有相符項目。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|完整的外部聯結，將同時包括兩邊資料表的所有資料列，即使該資料表在相關資料表中並沒有相符項目。|  
   
 聯結線結束部分的符號可表示聯結的類型。 下表即列出聯結的類型和聯結線結束部分所顯示的圖示。  
   
 |**聯結線結束部分所顯示的圖示**|**聯結類型**|  
 |---------------------------------|--------------------|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools 圖示")|一對一聯結。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools 圖示")|一對多聯結。|  
-|![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools 圖示")|查詢和檢視設計師無法決定聯結類型。 當您手動建立某個聯結後，常會發生這種情況。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|一對一聯結。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|一對多聯結。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|查詢和檢視設計師無法決定聯結類型。 當您手動建立某個聯結後，常會發生這種情況。|  
   
 ## <a name="sql-pane"></a>SQL 窗格  
 SQL 陳述式有數種方法來表示聯結。 確切的語法則視您使用的資料庫和您定義聯結的方式而定。  
   
 聯結資料表的語法選項包括：  
   
--   **FROM 子句的 JOIN 限定詞**。   關鍵字 INNER 和 OUTER 將指定聯結類型。 這為 ANSI 92 SQL 的標準語法。  
+-   **FROM 子句的 JOIN 限定詞** 。   關鍵字 INNER 和 OUTER 將指定聯結類型。 這為 ANSI 92 SQL 的標準語法。  
   
     例如，如果您根據每個資料表中的 `publishers` 資料行來聯結 `pub_info` 和 `pub_id` 資料表，將產生以下 SQL 陳述式：  
   
@@ -72,7 +72,7 @@ SQL 陳述式有數種方法來表示聯結。 確切的語法則視您使用的
   
     如果您要建立外部聯結，LEFT OUTER 或 RIGHT OUTER 等字樣將取代 INNER 一字。  
   
--   **WHERE 子句將比較兩個資料表中的資料行**。   如果資料庫不支援 JOIN 語法 (或者您自行輸入該語法)，則將出現 WHERE 子句。 如果在 WHERE 子句中建立聯結，FROM 子句將同時出現這兩個資料表名稱。  
+-   **WHERE 子句將比較兩個資料表中的資料行** 。   如果資料庫不支援 JOIN 語法 (或者您自行輸入該語法)，則將出現 WHERE 子句。 如果在 WHERE 子句中建立聯結，FROM 子句將同時出現這兩個資料表名稱。  
   
     例如，下列陳述式即聯結了 `publishers` 和 `pub_info` 資料表。  
   

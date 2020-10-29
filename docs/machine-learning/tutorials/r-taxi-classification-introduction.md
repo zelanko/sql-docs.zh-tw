@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 在這五部分的教學課程系列中，您將了解如何使用 SQL 機器學習將 R 程式碼內嵌在 SQL Server 預存程序和 T-SQL 函式中，以使用二元分類來預測紐約市計程車車資。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173596"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412563"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 教學課程：使用二元分類預測紐約市計程車車資
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -72,6 +72,10 @@ ms.locfileid: "88173596"
 + 安裝 [R 程式庫](../package-management/r-package-information.md)
 
 + [授與執行 Python 指令碼的權限](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ 從 SQL Server 2019 開始，隔離機制會要求您授與繪圖檔案儲存所在目錄的適當權限。 如需有關如何設定這些權限的詳細資訊，請參閱 [Windows 上 SQL Server 2019 中的檔案權限區段：機器學習服務的隔離變更](../install/sql-server-machine-learning-services-2019.md#file-permissions)
+::: moniker-end
 
 + 還原[紐約市計程車示範資料庫](demo-data-nyctaxi-in-sql.md)
 

@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 60d56f5374878e182373ec48246fde915e58eaf5
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: c25dec226017415577aef9f96fa19f2c52c337e8
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80502156"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92438212"
 ---
- ![是](media/yes-icon.png)SQL Server Reporting Services (2019 與更新版本)
+ :::image type="icon" source="media/yes-icon.png":::SQL Server Reporting Services (2019 與更新版本)

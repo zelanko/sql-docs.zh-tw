@@ -10,10 +10,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "87243265"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
@@ -28,7 +28,7 @@ ms.locfileid: "87243265"
   
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]。  
   
-3.  在 [新增資料庫] 對話方塊的 [資料庫名稱] 中，鍵入*訂閱者*。 
+3.  在 [新增資料庫] 對話方塊的 [資料庫名稱] 中，鍵入 *訂閱者* 。 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  按一下工具列上的 [新增查詢] 按鈕。  

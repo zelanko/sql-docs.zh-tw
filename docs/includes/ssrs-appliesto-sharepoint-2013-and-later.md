@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 02/11/2020
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: dfa181f74dad49c5e54536ad540dcbf07e912e82
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 88132ffa0fbb261c4a717dbffb315ad982c64039
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80501569"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92438888"
 ---
- ![是](media/yes-icon.png)SharePoint 2013 及更新版本
+ :::image type="icon" source="media/yes-icon.png":::SharePoint 2013 及更新版本

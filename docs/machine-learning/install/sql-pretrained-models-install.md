@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956749"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793745"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server上安裝預先定型的機器學習模型
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91956749"
 
 | R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用量 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | 根據文字輸入產生正負情緒分數。 |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | 根據文字輸入產生正負情緒分數。 |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | 從影像檔案輸入擷取文字資訊。 |
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -106,7 +106,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ### <a name="r-verification-steps"></a>R 驗證步驟
 
-1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64 的 **RGUI.EXE**。
+1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64 的 **RGUI.EXE** 。
 
 2. 在命令提示字元中，貼上下列 R 指令碼。
 
@@ -146,7 +146,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ### <a name="python-verification-steps"></a>Python 驗證步驟
 
-1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES 的 **Python.EXE**。
+1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES 的 **Python.EXE** 。
 
 2. 在命令提示字元中，貼上下列 Python 指令碼
 
@@ -196,7 +196,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ## <a name="research-and-resources"></a>研究與資源
 
-目前可用的模型為適用於情緒分析與影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型都是使用 Microsoft 的[計算網路工具組](https://cntk.ai/Features/Index.html) (或稱 **CNTK**) 來定型的。
+目前可用的模型為適用於情緒分析與影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型都是使用 Microsoft 的 [計算網路工具組](https://cntk.ai/Features/Index.html) (或稱 **CNTK** ) 來定型的。
 
 每個網路的設定都是以下列參考實作為基礎：
 

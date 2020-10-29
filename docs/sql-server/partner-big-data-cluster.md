@@ -9,12 +9,12 @@ ms.technology: big-data-cluster
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 67881767174d3af101ba0541573730af999c5cf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1e2a4b6790375b9db06376e12ac649bf37093902
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914314"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793785"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>SQL Server 巨量資料叢集合作夥伴
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -94,4 +94,4 @@ ms.locfileid: "86914314"
 <!--Docs-->
 [netapp_docs]:https://blog.netapp.com/microsoft-sql-server-big-data-clusters-with-storagegrid/
 [streamsets_docs]:https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Destinations/SQLServerBDCBulk.html#concept_hjv_5nn_r3b
-[purestorage_docs]:https://www.purestorage.com/pure-folio/docs.html
+[purestorage_docs]:https://www.purestorage.com/docs.html?item=/type/pdf/subtype/doc/path/content/dam/purestorage/pdf/datasheets/ps_ds3p_entry-level-storage_03.pdf

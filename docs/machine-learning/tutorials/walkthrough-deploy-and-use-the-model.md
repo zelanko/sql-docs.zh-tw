@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193640"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793775"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型，並將其用於 SQL Server (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "92193640"
 本文示範在評分中使用模型的兩個最常見方式：
 
 > [!div class="checklist"]
-> * **批次評分模式**會產生多個預測
-> * **個別評分模式**一次產生一個預測
+> * **批次評分模式** 會產生多個預測
+> * **個別評分模式** 一次產生一個預測
 
 ## <a name="batch-scoring"></a>批次評分
 
-建立一個預存程序 *PredictTipBatchMode*，它會透過傳遞 SQL 查詢或資料表作為輸入，產生多個預測。 系統會傳回結果的資料表，您可以將其直接插入資料表或寫入至檔案。
+建立一個預存程序 *PredictTipBatchMode* ，它會透過傳遞 SQL 查詢或資料表作為輸入，產生多個預測。 系統會傳回結果的資料表，您可以將其直接插入資料表或寫入至檔案。
 
 - 取一組輸入資料做為 SQL 查詢
 - 呼叫您在上一課中儲存的定型羅吉斯迴歸模型
@@ -74,7 +74,7 @@ ms.locfileid: "92193640"
 
     + 您可以使用 SELECT 陳述式，從 SQL 資料表呼叫預存模型。 系統會從資料表擷取模型作為 **varbinary(max)** 資料，儲存在 SQL 變數 _\@lmodel2_ 中，並將其當作 *mod* 參數，傳遞到系統預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 當作評分輸入使用的資料會定義為 SQL 查詢，並以字串形式儲存在 SQL 變數 _\@輸入_中。 從資料庫擷取資料時，它會儲存在名為 *InputDataSet* 的資料框架中，其只是 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序中輸入資料的預設名稱；您可以視需要使用參數 _\@input_data_1_name_ 來定義另一個變數名稱。
+    + 當作評分輸入使用的資料會定義為 SQL 查詢，並以字串形式儲存在 SQL 變數 _\@輸入_ 中。 從資料庫擷取資料時，它會儲存在名為 *InputDataSet* 的資料框架中，其只是 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序中輸入資料的預設名稱；您可以視需要使用參數 _\@input_data_1_name_ 來定義另一個變數名稱。
 
     + 預存程序會從 **RevoScaleR** 程式庫呼叫 rxPredict 函式來產生分數。
 
@@ -192,13 +192,13 @@ ms.locfileid: "92193640"
     END
     ```
 
-2. 在 SQL Server Management Studio 中，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 程序 (或 **EXECUTE**) 來呼叫預存程序，並將必要的輸入傳遞給它。 例如，請嘗試在 Management Studio 中執行此陳述式：
+2. 在 SQL Server Management Studio 中，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 程序 (或 **EXECUTE** ) 來呼叫預存程序，並將必要的輸入傳遞給它。 例如，請嘗試在 Management Studio 中執行此陳述式：
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    傳入此處的值分別供 _passenger\_count_、_trip_distance_、_trip\_time\_in\_secs_、_pickup\_latitude_、_pickup\_longitude_、_dropoff\_latitude_ 和 _dropoff\_longitude_ 變數使用。
+    傳入此處的值分別供 _passenger\_count_ 、 _trip_distance_ 、 _trip\_time\_in\_secs_ 、 _pickup\_latitude_ 、 _pickup\_longitude_ 、 _dropoff\_latitude_ 和 _dropoff\_longitude_ 變數使用。
 
 3. 若要從 R 程式碼執行這個相同的呼叫，您只需定義包含整個預存程序呼叫的 R 變數，如下所示：
 
@@ -206,7 +206,7 @@ ms.locfileid: "92193640"
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    傳入此處的值分別供 _passenger\_count_、_trip\_distance_、_trip\_time\_in\_secs_、_pickup\_latitude_、_pickup\_longitude_、_dropoff\_latitude_ 和 _dropoff\_longitude_ 變數使用。
+    傳入此處的值分別供 _passenger\_count_ 、 _trip\_distance_ 、 _trip\_time\_in\_secs_ 、 _pickup\_latitude_ 、 _pickup\_longitude_ 、 _dropoff\_latitude_ 和 _dropoff\_longitude_ 變數使用。
 
 4. 呼叫 `sqlQuery` (從 **RODBC** 封裝)，並傳遞連接字串以及包含預存程序呼叫的字串變數。
 
@@ -230,4 +230,4 @@ ms.locfileid: "92193640"
 + [資料科學案例和解決方案範本](data-science-scenarios-and-solution-templates.md)
 + [資料庫內的進階分析](r-taxi-classification-introduction.md)
 + [Machine Learning Server 操作指南](/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server 其他資源](//machine-learning-server/resources-more)
++ [Machine Learning Server 其他資源](/machine-learning-server/resources-more)

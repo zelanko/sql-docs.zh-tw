@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988004"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734379"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>大規模地將 SQL Server 執行個體連線到 Azure Arc
 
@@ -79,10 +79,10 @@ ms.locfileid: "91988004"
 
 每部目的電腦都必須安裝 [Azure CLI](/cli/azure/install-azure-cli)。 如果已提供服務主體認證且沒有其他使用者已經登入，則註冊指令碼會自動以服務主體認證登入 Azure。 使用下列步驟，連線多部 Linux 電腦上的 SQL Server 執行個體。
 
-1. 使用 ['az ad sp create-for-rbac'](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac)命令建立服務主體。 
+1. 使用 ['az ad sp create-for-rbac'](/cli/azure/ad/sp#az_ad_sp_create_for_rbac)命令建立服務主體。
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output

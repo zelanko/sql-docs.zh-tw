@@ -13,15 +13,15 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258005"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734662"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>移轉指南：DB2 到 SQL Server
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 此移轉指南會教導如何使用適用於 DB2 的 SQL Server 移轉小幫手，以將使用者資料庫從 DB2 移轉至 SQL Server。 
 
@@ -161,49 +161,6 @@ ms.locfileid: "92258005"
 |[Azure 上 DB2 LUW 單純擴充 - 設定指南](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/DB2%20PureScale%20on%20Azure.pdf)|本指南可作為 DB2 實作計畫的起點。 雖然商業需求將會不同，但相同的模式皆適用。 此架構模式也可用於 Azure 上的 OLAP 應用程式。|
 
 這些資源是在資料 SQL Ninja 計畫中開發，由 Azure 資料群組工程小組贊助。 資料 SQL Ninja 計畫其核心宗旨是要為複雜的現代化步驟除去障礙並加速其過程，並將資料平台移轉機會與 Microsoft 的 Azure 資料平台相比較。 如果您認為組織想參與資料 SQL Ninja 計畫，請連絡帳戶小組並要求其提交提名。
-
-## <a name="partners"></a>合作夥伴
-
-下列合作夥伴也可以提供替代方法來進行移轉： 
-
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blitzz-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.blitzz.io/product)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blueprint-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://bpcs.com/what-we-do)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/cognizant-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.cognizant.com/partners/microsoft)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/dxc-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.dxc.technology/application_services/offerings/139843/142343-application_services_for_microsoft_azure)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/hvr-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.hvr-software.com/solutions/azure-data-integration/)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/infosys-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.infosys.com/services/)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/ispirer-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/querysurge-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.querysurge.com/company/partners/microsoft)
-   :::column-end:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](http://www.scalabilityexperts.com/products/index.html)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/wipro-logo.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::](https://www.wipro.com/analytics/)
-   :::column-end:::
-:::row-end:::
 
 ## <a name="next-steps"></a>後續步驟
 
