@@ -4,7 +4,7 @@ title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -25,18 +25,21 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098847"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679084"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-從與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。  
+從與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。 
+
+> [!NOTE]
+> MERGE 目前處於預覽狀態，適用於 Azure Synapse Analytics。
   
 **效能提示：** 當兩個資料表有複雜的比對的特性時，MERGE 陳述式的條件式行為表現最佳。 例如沒有資料列時插入資料列，或資料列相符時更新資料列。 只要根據另一個資料表的資料列更新資料表，就能以基本 INSERT、UPDATE 及 DELETE 陳述式來改善效能及延展性。 例如：  
   
@@ -193,7 +196,7 @@ INDEX ( index_val [ ,...n ] )
 在目標資料表上指定一或多個索引的名稱或識別碼，以用於與來源資料表執行隱含聯結。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 \<output_clause>  
-針對 *target_table* 中每個更新、插入或刪除的資料列傳回一個資料列 (不依特定順序)。 您可以在輸出子句中指定 **$action**。 **$action** 是一個 **nvarchar(10)** 類型的資料行，會為每個資料列傳回下列其中一個值：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。 如需此子句的引數和行為詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
+針對 *target_table* 中每個更新、插入或刪除的資料列傳回一個資料列 (不依特定順序)。 您可以在輸出子句中指定 **$action** 。 **$action** 是一個 **nvarchar(10)** 類型的資料行，會為每個資料列傳回下列其中一個值：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。 如需此子句的引數和行為詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 指定利用最佳化工具提示來自訂 Database Engine 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
@@ -212,10 +215,10 @@ UPDATE SET \<set_clause>
 \<merge_not_matched>  
 指定要插入目標資料表的值。  
   
-(*column_list*)  
+( *column_list* )  
 要插入資料的一或多個目標資料表資料行清單。 必須將資料行指定為單一部分名稱，否則 MERGE 陳述式會失敗。 *column_list* 必須以括弧括住，並以逗號分隔。  
   
-VALUES ( *values_list*)  
+VALUES ( *values_list* )  
 以逗號分隔的常數、變數或運算式清單，這些項目會傳回要插入至目標資料表的值。 運算式不能包含 EXECUTE 陳述式。  
   
 DEFAULT VALUES  
@@ -233,6 +236,7 @@ DEFAULT VALUES
 >[!NOTE]
 > 在 Azure Synapse Analytics 中，MERGE 命令 (預覽) 與 SQL 伺服器和 Azure SQL 資料庫之間具有下列差異。  
 > - MERGE 更新是以 DELETE 和 INSERT 配對的形式實作。 MERGE 更新的受影響資料列計數會包含已刪除和已插入的資料列。 
+> - 在預覽期間，MERGE 命令無法與具有 UNIQUE 條件約束的資料表搭配使用。  未來版本會盡快修正此問題。
 > - 下表說明對具有不同散發類型之資料表的支援：
 
 >|Azure Synapse Analytics 中的 MERGE 子句|支援的 TARGET 散發資料表| 支援的 SOURCE 散發資料表|註解|  

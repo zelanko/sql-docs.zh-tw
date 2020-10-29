@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867946"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679256"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
@@ -28,13 +28,13 @@ ms.locfileid: "91867946"
 此文章說明如何找出並解決造成資料庫 (設定為使用 [Azure Key Vault 中的透明資料加密 (TDE) 搭配客戶管理金鑰](/azure/sql-database/transparent-data-encryption-byok-azure-sql)) 變得無法存取的 Azure Key Vault 金鑰存取問題。
 
 ## <a name="introduction"></a>簡介
-當 TDE 設定為在 Azure Key Vault 中使用客戶管理金鑰時，資料庫必須持續存取此 TDE 保護裝置才能保持在線上。  如果邏輯 SQL Server 無法存取 Azure Key Vault 中的客戶管理 TDE 保護裝置，資料庫將會開始拒絕所有連線，而不會出現相應的錯誤訊息，並在 Azure 入口網站中將其狀態變更為*無法存取*。
+當 TDE 設定為在 Azure Key Vault 中使用客戶管理金鑰時，資料庫必須持續存取此 TDE 保護裝置才能保持在線上。  如果邏輯 SQL Server 無法存取 Azure Key Vault 中的客戶管理 TDE 保護裝置，資料庫將會開始拒絕所有連線，而不會出現相應的錯誤訊息，並在 Azure 入口網站中將其狀態變更為「無法存取」。
 
 在前 8 小時，如果基礎 Azure Key vault 金鑰存取問題已解決，資料庫將會自動修復並自動上線。 這表示在所有間歇性和暫時性網路中斷的情況下，使用者不需要採取動作，資料庫就會自動上線。 在大部分情況下，使用者必須採取動作，才能解決基礎金鑰保存庫的金鑰存取問題。 
 
 如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。 除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的其他所有動作。 當使用客戶管理金鑰加密的資料庫無法存取時，也無法將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
 
-在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如，[容錯移轉群組](/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤**都會遺失**。 因此，建議使用[動作群組](/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
+在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如， [容錯移轉群組](/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤 **都會遺失** 。 因此，建議使用[動作群組](/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>導致資料庫變得無法存取的常見錯誤
 

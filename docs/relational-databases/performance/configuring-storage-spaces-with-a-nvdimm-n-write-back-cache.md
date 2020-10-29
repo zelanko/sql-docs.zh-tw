@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891888"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679234"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891888"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Windows Powershell 視窗的螢幕擷取畫面，其中顯示 Get-PhysicalDisk Cmdlet 的輸出。](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  使用 NVDIMM-N 裝置時，您不再需要明確選取可作為回寫式快取目標的裝置。  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![選取 FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "選取 FriendlyName")  
+ ![Windows Powershell 視窗的螢幕擷取畫面，其中顯示 $pd Cmdlet 的輸出。](../../relational-databases/performance/media/select-friendlyname.png "選取 FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>建立存放集區  
  您可以透過包含 PhysicalDisks 的 $pd 變數，輕鬆地使用 New-StoragePool PowerShell Cmdlet 建立存放集區。  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Windows Powershell 視窗的螢幕擷取畫面，其中顯示 New-StoragePool Cmdlet 的輸出。](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>建立虛擬磁碟和磁碟區  
  建立集區之後，下一個步驟是對虛擬磁碟進行切割及格式化。 在本例中，只會建立一個虛擬磁碟，而且可以使用 New-Volume PowerShell Cmdlet 簡化此程序：  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Windows Powershell 視窗的螢幕擷取畫面，其中顯示 New-Volume Cmdlet 的輸出。](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  虛擬磁碟已建立、初始化並以 NTFS 格式化。 下列螢幕擷取畫面顯示它具有 300 GB 的大小與 1 GB 的寫入快取大小，並將裝載於 NVDIMM-N。  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Windows Powershell 視窗的螢幕擷取畫面，其中顯示 Get-VirtualDisk Cmdlet 的輸出。](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  您現在可以檢視伺服器中顯示的這個新磁碟區。 您現在可以使用此磁碟機來儲存 SQL Server 交易記錄。  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![[這部電腦] 頁面上檔案總管視窗的螢幕擷取畫面，其中顯示 Log_Space 磁碟機。](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 10 中的 Windows 儲存空間](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
