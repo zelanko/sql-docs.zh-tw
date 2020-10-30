@@ -10,19 +10,19 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: 66daa6925947d55676da896c3f69e6eec7babf61
-  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+  ms.openlocfilehash: c1d5d77e80df6d611f906c4286de35add10c05f8
+  ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/13/2020
-  ms.locfileid: "91987816"
+  ms.lasthandoff: 10/30/2020
+  ms.locfileid: "93035964"
 landingContent:
 - title: 關於 Azure Data Studio
   linkLists:
   - linkListType: overview
     links:
     - text: 什麼是 Azure Data Studio？
-      url: what-is.md
+      url: what-is-azure-data-studio.md
   - linkListType: download
     links:
     - text: 下載 Azure Data Studio
