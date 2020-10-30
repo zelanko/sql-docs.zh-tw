@@ -4,22 +4,30 @@ description: 瞭解針對每個版本的 Sybase (SybaseToSQL) SQL Server 移轉�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497792"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036059"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>適用于 SAP ASE 的 SSMA 新功能 (SybaseToSQL) 
 
 本文列出適用于 SAP ASE 的 SQL Server 移轉小幫手 (SSMA)  (先前針對 Sybase) 每個版本中變更的 SSMA。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+除了許多協助工具改進之外，適用于 SAP ASE 的 SSMA v 8.15 版還包含下列變更：
+
+* 改造評量報告以在新式瀏覽器中工作
+* 使用資料庫提供的授權單位進行 Azure AD authentication
+* 改善從檔案載入之語句的命名
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -73,7 +81,7 @@ SSMA for SAP ASE 的8.7 版本在圖形化使用者介面中有輕微的修正�
 
 除了針對改善可用性和效能而設計的一組目標修正之外，也藉由新增可讓使用者在轉換的程式碼中省略 SSMA 擴充屬性的設定，來增強 SSMA for SAP ASE 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA for SAP ASE 中，流覽至 [**工具**  >  **專案設定**  >  **一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
+若要利用這項設定，請在 SSMA for SAP ASE 中，流覽至 [ **工具**  >  **專案設定**  >  **一般**  >  **轉換** ]，然後在 [ **其他** ] 下，將 [ **省略擴充屬性** ] 設定的值更新為 **[是]** 。
 
 ![省略擴充屬性設定](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -129,7 +137,7 @@ SSMA for SAP ASE 的8.7 版本在圖形化使用者介面中有輕微的修正�
 
   ![SQL Database MI 專案](../media/ssma-newproject-sqldbmi.png)
 
-* 轉換後的 **修正程式**。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
+* 轉換後的 **修正程式** 。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
 
 * 初步的資料庫/架構選取。
 
@@ -154,7 +162,7 @@ SSMA for SAP ASE 的8.7 版本在圖形化使用者介面中有輕微的修正�
 
 適用于 SAP ASE 的 SSMA 7.8 版包含下列變更：
 
-* 在 [ **專案設定**] 中反白顯示變更類型對應。
+* 在 [ **專案設定** ] 中反白顯示變更類型對應。
 * 使用者停用遙測的能力。
 
 ## <a name="ssma-v77"></a>SSMA 7。7
@@ -182,7 +190,7 @@ SSMA for SAP ASE 的7.7 版包含下列變更：
 
 SSMA for Sybase 的7.4 版包含下列變更：
 
-* **查詢超時**選項現在可在來源和目標的架構物件探索期間使用。
+* **查詢超時** 選項現在可在來源和目標的架構物件探索期間使用。
 
   ![query timeout 選項](../media/query-timeout_red.png)
 * 根據客戶的意見反應，已改善目標修正的品質和轉換度量。
@@ -299,7 +307,7 @@ SSMA for Sybase 的2010年7月版本已新增：
 
 * 支援遷移至 SQL Server 2008 R2。
 * 用於命令列執行的新 SSMA 主控台應用程式。
-* 支援使用伺服器端和用戶端資料移轉引擎進行資料移轉。
+* 支援使用 Server-Side 和 Client-Side 資料移轉引擎進行資料移轉。
 * 在資料移轉中支援「自訂 SELECT」語句。
 * 支援從 Sybase ASE 15.0.3 版和15.5 進行遷移。
 
@@ -341,7 +349,7 @@ SSMA for Sybase 的2006年11月版本包含下列變更：
   * 的使用者訊息錯誤號碼 `RAISERROR` 。
   * `UPDATE` 包含未解析識別碼的語句。
 * 已加入新的遷移選項，可讓您指定 SSMA 處理日期範圍之外之日期的方式 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
-* 在 [ **sql** ] 索引標籤上新增**格式化的 sql**設定，以將程式碼格式化以改善可讀性。
+* 在 [ **sql** ] 索引標籤上新增 **格式化的 sql** 設定，以將程式碼格式化以改善可讀性。
 * Bug 修正，包括：
   * SSMA 現在會在 `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` `TABLOCK` 資料表的 `TABLOCKX` 後續查詢中加入或提示，以轉換語句 `SELECT` 。
   * 在字元運算式中使用二進位類型時，現在會新增必要的轉換。

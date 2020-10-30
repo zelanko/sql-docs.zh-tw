@@ -4,22 +4,31 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手 (SSMA) 存取 (Acc
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497919"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036054"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能 (AccessToSQL) 
 
 本文列出每個版本的 SQL Server 移轉小幫手 (SSMA) 存取變更。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+除了許多協助工具改進之外，SSMA for Access 的8.15 版本也包含下列變更：
+
+* 忽略針對外鍵自動建立的索引
+* 改造評量報告以在新式瀏覽器中工作
+* 使用資料庫提供的授權單位進行 Azure AD authentication
+* 改善從檔案載入之語句的命名
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -78,7 +87,7 @@ SSMA for Access 的8.7 版本已改善查詢中函式的轉換 `IIF` ，以及�
 
 除了針對改善可用性和效能而設計的一組目標修正之外，也藉由新增可讓使用者在轉換的程式碼中省略 SSMA 擴充屬性的設定，來增強 SSMA for Access 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA 中，流覽至 [**工具**  >  **專案設定**  >  **一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
+若要利用這項設定，請在 SSMA 中，流覽至 [ **工具**  >  **專案設定**  >  **一般**  >  **轉換** ]，然後在 [ **其他** ] 下，將 [ **省略擴充屬性** ] 設定的值更新為 **[是]** 。
 
 ![省略擴充屬性設定](../access/media/ssma-omit-extended-properties.png)
 
@@ -130,7 +139,7 @@ SSMA for Access 的8.0 版可利用專為改善品質和轉換度量而設計的
 
   ![SQL MI 專案](../media/ssma-newproject-sqldbmi.png)
 
-* 轉換後的 **修正程式**。 若要深入瞭解[，請參閱。](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)
+* 轉換後的 **修正程式** 。 若要深入瞭解[，請參閱。](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)
 
 * 初步的資料庫/架構選取。
 
@@ -176,7 +185,7 @@ SSMA for Access 的 v1.0 版本增強了許多改進功能，可確保更適合�
 
 SSMA for Access 的7.4 版包含下列變更：
 
-* **查詢超時**選項現在可在來源和目標的架構物件探索期間使用。
+* **查詢超時** 選項現在可在來源和目標的架構物件探索期間使用。
 
   ![query timeout 選項](../media/query-timeout_red.png)
 
