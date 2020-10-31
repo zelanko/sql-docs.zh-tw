@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059341"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067309"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,24 +34,23 @@ ms.locfileid: "92059341"
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
-
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引數  
- '*target_server_name*'  
+ ' *target_server_name* '  
  指定目標伺服器主機名稱或 IP 位址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將使用傳遞至此預存程式的使用者名稱和密碼認證來存取此伺服器。  
   
  若要透過「不會」網路進行連線，請使用目標伺服器的 [不限] IP 位址。  
   
  *target_server_name* 定義為 Nvarchar (337) 。  
   
- '*user_name*'  
+ ' *user_name* '  
  指定擁有存取目標伺服器之許可權的 user_name。 如果目標伺服器的認證已存在，則會將其更新為新的認證。  
   
  *user_name* 定義為 Nvarchar (513) 。  
   
- '*密碼*ꞌ  
- 指定 *user_name*的密碼。  
+ ' *密碼* ꞌ  
+ 指定 *user_name* 的密碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
