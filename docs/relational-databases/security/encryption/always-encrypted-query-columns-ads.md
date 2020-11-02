@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866701"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679045"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>搭配 Azure Data Studio 使用 Always Encrypted 查詢資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91866701"
 ### <a name="example"></a>範例
 假設 `SSN` 是 `Patients` 資料表中的加密資料行，如果已針對資料庫連接停用 Always Encrypted，以下所示的查詢將擷取二進位的加密文字值。   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![SELECT * FROM [dbo].[Patients] 查詢，以及該查詢結果顯示為二進位加密文字值的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>擷取加密資料行中儲存的純文字值    
 此節描述如何將加密資料行中所儲存的資料，當做加密文字來擷取。
@@ -52,7 +52,7 @@ ms.locfileid: "91866701"
 ### <a name="example"></a>範例
 假設 SSN 是 `Patients` 資料表中的加密資料行，如果已針對資料庫連接啟用 Always Encrypted，而且您有權存取針對 `SSN` 資料行設定的資料行主要金鑰，則以下所示的查詢將傳回純文字值。   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![SELECT * FROM [dbo].[Patients] 查詢，以及該查詢結果顯示為純文字值的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>傳送目標為加密資料行的純文字值       
 此節描述如何執行查詢，其會傳送以加密資料行為目標的值。 例如，依儲存於加密資料行中的值來插入、更新或篩選的查詢：
@@ -71,16 +71,16 @@ ms.locfileid: "91866701"
 ### <a name="example"></a>範例
 假設 `SSN` 是 `Patients` 資料表中的加密 `char(11)` 資料行，下列指令碼會嘗試在 SSN 資料行中尋找包含 `'795-73-9838'` 的資料列。 如果已針對資料庫連接啟用 Always Encrypted、已針對查詢視窗啟用 Always Encrypted 的參數化，而且您可以存取為 `SSN` 資料行設定的資料行主要金鑰，則會傳回結果。   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN 查詢，以及該查詢結果的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>查詢加密資料行的權限
 
-若要對加密資料行執行任何查詢 (包括以加密文字擷取資料的查詢)，您需要資料庫中的**檢視任何資料行的主要金鑰定義**和**檢視任何資料行的加密金鑰定義**權限。
+若要對加密資料行執行任何查詢 (包括以加密文字擷取資料的查詢)，您需要資料庫中的 **檢視任何資料行的主要金鑰定義** 和 **檢視任何資料行的加密金鑰定義** 權限。
 
 除了上述權限，若要將任何查詢結果解密或加密任何查詢參數 (透過參數化 Transact-SQL 變數來產生)，您還需要權限來存取保護目標資料行的資料行主要金鑰：
 
-- **憑證存放區 - 本機電腦：** 您必須有憑證 (當成資料行主要金鑰使用) 的**讀取**權，或為電腦上的系統管理員。   
-- **Azure Key Vault：** 您需要有包含資料行主要金鑰的金鑰保存庫 **get**、**unwrapKey** 和 **verify** 權限。
+- **憑證存放區 - 本機電腦：** 您必須有憑證 (當成資料行主要金鑰使用) 的 **讀取** 權，或為電腦上的系統管理員。   
+- **Azure Key Vault：** 您需要有包含資料行主要金鑰的金鑰保存庫 **get** 、 **unwrapKey** 和 **verify** 權限。
 
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
@@ -103,7 +103,7 @@ ms.locfileid: "91866701"
 3. 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)]，且您的 SQL Server 執行個體已設定安全記憶體保護區，您可以指定記憶體保護區通訊協定和記憶體保護區證明 URL。 如果您的 SQL Server 執行個體未使用安全記憶體保護區，請確定將 [證明通訊協定] 和 [記憶體保護區證明 URL] 欄位留白。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md)。
 4. 按一下 [確定]，以關閉 [進階屬性]。
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![說明如何針對連線啟用 Always Encrypted 步驟的短片。](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
 > 若要在現有查詢視窗中，於啟用和停用 Always Encrypted 之間切換，請按一下 [中斷連線]，然後按一下 [連線] 並完成上述步驟，以使用 [Always Encrypted] 欄位的所需值重新連線到您的資料庫。 
@@ -134,7 +134,7 @@ WHERE [SSN] = @SSN
 3. 選取或取消選取 [啟用 Always Encrypted 的參數化] 。
 4. 關閉 [設定] 視窗。
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![說明如何啟用/停用 Always Encrypted 參數化的短片。](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > [Always Encrypted 的參數化] 僅適用於使用已啟用 Always Encrypted 資料庫連接的查詢視窗 (請參閱[針對資料庫連接啟用和停用 Always Encrypted](#enabling-and-disabling-always-encrypted-for-a-database-connection))。 如果查詢視窗使用尚未啟用 Always Encrypted 的資料庫連接，則不會將任何 Transact-SQL 變數參數化。

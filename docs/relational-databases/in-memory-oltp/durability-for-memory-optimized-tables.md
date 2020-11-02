@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537048"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497027"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

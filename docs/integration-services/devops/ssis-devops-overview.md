@@ -9,20 +9,20 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194081"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343650"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SQL Server Integration Services (SSIS) DevOps 工具 Azure DevOps 延伸模組
 
 [SSIS DevOps 工具](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)延伸模組可在 **Azure DevOps** Marketplace 中取得。
 
-如果您沒有 **Azure DevOps** 組織，請先註冊 [Azure Pipelines ](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然後按照[步驟](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)新增 **SSIS DevOps 工具**延伸模組。
+如果您沒有 **Azure DevOps** 組織，請先註冊 [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然後按照 [步驟](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)新增 **SSIS DevOps 工具** 延伸模組。
 
-**SSIS DevOps 工具**包括 **SSIS 建置**工作、**SSIS 部署**發行工作，以及 **SSIS 目錄組態工作**。
+**SSIS DevOps 工具** 包括 **SSIS 建置** 工作、 **SSIS 部署** 發行工作，以及 **SSIS 目錄組態工作** 。
 
 - **[SSIS 建置](#ssis-build-task)** 工作支援在專案部署模型或套件部署模型中建置 dtproj 檔案。
 
@@ -50,7 +50,7 @@ ms.locfileid: "92194081"
 
 要建置之專案資料夾或檔案的路徑。 如果指定了資料夾路徑，SSIS 建置工作會以遞迴方式搜尋此資料夾下的所有 dtproj 檔案，並建置所有檔案。
 
-專案路徑不能是*空的*，設定為 **.** 以從存放庫的根資料夾建立。
+專案路徑不能是 *空的* ，設定為 **.** 以從存放庫的根資料夾建立。
 
 #### <a name="project-configuration"></a>專案組態
 
@@ -62,7 +62,7 @@ ms.locfileid: "92194081"
 
 ### <a name="limitations-and-known-issues"></a>限制與已知問題
 
-- SSIS 建置工作依賴 Visual Studio 和 SSIS 設計工具，這在建置代理程式上是必要的。 因此，若要在管線中執行 SSIS 建置工作，您必須針對 Microsoft 裝載的代理程式選擇 **vs2017-win2016**，或在自我裝載的代理程式上安裝 Visual Studio 和 SSIS 設計工具 (VS2017 + SSDT2017，或者 VS2019 + SSIS 專案延伸模組)。
+- SSIS 建置工作依賴 Visual Studio 和 SSIS 設計工具，這在建置代理程式上是必要的。 因此，若要在管線中執行 SSIS 建置工作，您必須針對 Microsoft 裝載的代理程式選擇 **vs2017-win2016** ，或在自我裝載的代理程式上安裝 Visual Studio 和 SSIS 設計工具 (VS2017 + SSDT2017，或者 VS2019 + SSIS 專案延伸模組)。
 
 - 若要使用任何現成可用的元件 (包括 SSIS Azure Feature Pack 和其他協力廠商元件) 來建置 SSIS 專案，必須在執行管線代理程式的電腦上安裝這些現成可用的元件。  針對 Microsoft 裝載的代理程式，使用者可以在執行 SSIS 建置工作之前，新增 [PowerShell 指令碼工作](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) \(英文\) 或[命令列指令碼工作](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) \(英文\) 下載並安裝元件。 面下面是可用於安裝 Azure Feature Pack 的範例 PowerShell 指令碼： 
 
@@ -90,8 +90,8 @@ cat log.txt
 
 目的地類型。 目前的 SSIS 部署工作支援兩種類型：
 
-- *檔案系統*：將 SSISDeploymentManifest 檔案及其相關聯的檔案部署至指定的檔案系統。 支援內部部署和 Azure 檔案共用。
-- *SSISDB*：將 ISPAC 檔案部署到指定的 SSIS 目錄，其可裝載於內部部署 SQL Server 或 Azure-SSIS Integration Runtime 上。
+- *檔案系統* ：將 SSISDeploymentManifest 檔案及其相關聯的檔案部署至指定的檔案系統。 支援內部部署和 Azure 檔案共用。
+- *SSISDB* ：將 ISPAC 檔案部署到指定的 SSIS 目錄，其可裝載於內部部署 SQL Server 或 Azure-SSIS Integration Runtime 上。
 
 #### <a name="destination-server"></a>目的地伺服器
 
@@ -315,8 +315,8 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |---------|---------|---------|
 |NAME|參數的名稱。|<li>參數可以是專案參數或套件參數。 <li>如果參數不存在，則予以略過。 <li>如果參數是連線管理員屬性，則名稱格式應為 **CM.\<Connection Manager Name>.\<Property Name>** 。 |
 |容器|參數的容器。|<li>如果參數是專案參數，則 *container* 應該是專案名稱。 <li>如果是套件參數，則 *container* 應該是副檔名為 **.dtsx** 的套件名稱。|
-|value|參數的值。|<li>當 *valueType* 是 *referenced* 時：此值是 *string* 類型的環境變數參考。 <li> 當 *valueType* 是 *literal* 時：此屬性支援任何有效的 *boolean*、*number* 和 *string* JSON 值。 <li> 系統會將此值轉換成目標參數類型。 如果無法轉換，則會發生錯誤。<li> *null* 值無效。 該工作將略過此參數物件，並發出警告。|
-|valueType|參數值類型。|有效類型包括： <br> *literal*：*value* 屬性代表常值。 <br> *referenced*：*value* 屬性代表環境變數參考。|
+|value|參數的值。|<li>當 *valueType* 是 *referenced* 時：此值是 *string* 類型的環境變數參考。 <li> 當 *valueType* 是 *literal* 時：此屬性支援任何有效的 *boolean* 、 *number* 和 *string* JSON 值。 <li> 系統會將此值轉換成目標參數類型。 如果無法轉換，則會發生錯誤。<li> *null* 值無效。 該工作將略過此參數物件，並發出警告。|
+|valueType|參數值類型。|有效類型包括： <br> *literal* ： *value* 屬性代表常值。 <br> *referenced* ： *value* 屬性代表環境變數參考。|
 
 ##### <a name="reference-attributes"></a>參考屬性
 
@@ -344,6 +344,12 @@ SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來�
 |sensitive|環境變數的值是否具敏感性。|有效輸入包括： <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-103"></a>1\.0.3 版
+
+發行日期：2020 年 10 月 21 日
+
+- 允許為 SSIS 部署工作和 SSIS 目錄設定工作指定連接字串尾碼。
 
 ### <a name="version-102"></a>1\.0.2 版
 

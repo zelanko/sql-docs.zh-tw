@@ -1,6 +1,6 @@
 建立資源管理員工作負載群組，並將工作負載群組與資源管理員資源集區產生關聯。 並非每個 [!INCLUDE[msCoName](msconame-md.md)][!INCLUDE[ssNoVersion](ssnoversion-md.md)] 版本中都可使用 Resource Governor。 如需 [!INCLUDE[ssNoVersion](ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。
 
-![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 語法慣例](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -24,7 +24,7 @@ CREATE WORKLOAD GROUP group_name
 ## <a name="arguments"></a>引數
 
 *group_name*</br>
-這是工作負載群組的使用者定義名稱。 *group_name* 是英數字元，最多可有 128 個字元，而且在 [!INCLUDE[ssNoVersion](ssnoversion-md.md)] 的執行個體內必須是唯一的，並須符合[識別碼](../relational-databases/databases/database-identifiers.md)的規則。
+這是工作負載群組的使用者定義名稱。 *group_name* 是英數字元，最多可有 128 個字元，而且在 [!INCLUDE[ssNoVersion](ssnoversion-md.md)] 的執行個體內必須是唯一的，並須符合 [識別碼](../relational-databases/databases/database-identifiers.md)的規則。
 
 IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
 指定要求在工作負載群組中的相對重要性。 下列任一個為其重要性，其中 MEDIUM 為預設值：
@@ -73,17 +73,17 @@ REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
 > 到達記憶體授權的逾時值時，查詢不一定會失敗。 只有當有太多並行的查詢正在執行時，查詢才會失敗。 否則，查詢可能只會得到最小的記憶體授權，導致查詢效能降低。
 
 MAX_DOP = *value*</br>
-為平行查詢執行指定**平行處理原則的最大程度 (MAXDOP)** 。 *value* 必須是 0 或正整數。 *value* 允許範圍是從 0 至 64。 *value* 的預設設定 0 會使用全域設定。 MAX_DOP 會以下列方式處理：
+為平行查詢執行指定 **平行處理原則的最大程度 (MAXDOP)** 。 *value* 必須是 0 或正整數。 *value* 允許範圍是從 0 至 64。 *value* 的預設設定 0 會使用全域設定。 MAX_DOP 會以下列方式處理：
 
 > [!NOTE]
-> 工作負載群組 MAX_DOP 會覆寫[平行處理原則的最大程度伺服器組態](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)與 **MAXDOP** [資料庫範圍組態](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+> 工作負載群組 MAX_DOP 會覆寫 [平行處理原則的最大程度伺服器組態](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)與 **MAXDOP** [資料庫範圍組態](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請使用 **MAXDOP** [查詢提示](../t-sql/queries/hints-transact-sql-query.md)。 將平行處理原則的最大程度設定為查詢提示非常有效，只要它不預期工作負載群組 MAX_DOP。 如果 MAXDOP 查詢提示值超過使用 Resource Governor 所設定的值，[!INCLUDE[ssDEnoversion](ssdenoversion-md.md)] 就會使用 Resource Governor `MAX_DOP` 值。 MAXDOP [查詢提示](../t-sql/queries/hints-transact-sql-query.md)一律會覆寫[平行處理原則的最大程度伺服器組態](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 >
 > 若要在資料庫層級完成此操作，請使用 **MAXDOP** [資料庫範圍設定](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 >
-> 若要在伺服器層級完成此操作，請使用**平行處理原則的最大程度 (MAXDOP)** [伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+> 若要在伺服器層級完成此操作，請使用 **平行處理原則的最大程度 (MAXDOP)** [伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 GROUP_MAX_REQUESTS = *value*</br>
 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須為 0 或正整數。 *value* 的預設值為 0，會允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。
@@ -97,7 +97,7 @@ USING { *pool_name* |  **"default"** }</br>
 > 預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。
 
 EXTERNAL external_pool_name | "default"</br>
-**適用於**：[!INCLUDE[ssNoVersion](ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](sssql15-md.md)] 起)。
+**適用於** ：[!INCLUDE[ssNoVersion](ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](sssql15-md.md)] 起)。
 
 工作負載群組可指定外部資源集區。 您可以定義工作負載群組，並與兩個集區產生關聯：
 

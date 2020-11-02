@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ed1b0cb22d26895d5b01e59d36ede00f44ce4cd1
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867765"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439495"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-資料探索與分類引進內建至 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 的新工具，可用來**探索**、**分類**、**標記** & **報告**您資料庫中的敏感性資料。
+資料探索與分類引進內建至 [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) 的新工具，可用來 **探索** 、 **分類** 、 **標記** & **報告** 您資料庫中的敏感性資料。
 探索和分類最敏感的資料 (商務、財務、醫療等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：
 * 協助符合資料隱私權標準。
 * 控制存取以及強化包含高敏感性資料之資料庫/資料行的安全性。
 
 > [!NOTE]
-> 資料探索與分類由 **SQL Server 2012 和更新版本所支援，且可搭配 [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/sql-database/sql-database-data-discovery-and-classification/)。
+> 資料探索與分類由 **SQL Server 2012 和更新版本所支援，且可搭配 [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) 或更新版本使用** 。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概觀
 資料探索與分類引進一組進階服務，形成目標為保護資料的新 SQL Information Protection 範例，而不只是資料庫：
@@ -49,47 +49,47 @@ ms.locfileid: "91867765"
 
 2. 在 SSMS 物件總管中，以滑鼠右鍵按一下您想要分類的資料庫，然後選擇 [工作]   > [資料探索與分類]   > [分類資料]  。
 
-   ![瀏覽窗格][0]
+   ![顯示 [SSMS 物件總管] 的螢幕擷取畫面，其中已選取 [工作] > [資料探索與分類] > [將資料分類...]。][0]
 
-3. 分類引擎會掃描您資料庫中是否有資料行包含潛在敏感度資料，並提供**建議的資料行分類**清單：
+3. 分類引擎會掃描您資料庫中是否有資料行包含潛在敏感度資料，並提供 **建議的資料行分類** 清單：
 
     * 若要檢視建議的資料行分類清單，請按一下頂端的建議通知方塊或視窗底部的建議面板：
 
-        ![瀏覽窗格][2]
+        ![顯示通知的螢幕擷取畫面，其指出我們找到 39 個資料行含有分類建議。 請按一下這裡進行檢視。][2]
 
-        ![瀏覽窗格][3]
+        ![顯示通知的螢幕擷取畫面，其指出有 39 個資料行含有分類建議 (按一下以檢視)。][3]
 
     * 檢閱建議清單：
         * 若要接受特定資料行的建議，請核取相關資料列左側資料行中的核取方塊。 您也可以核取建議資料表標頭中的核取方塊，以將「所有建議」  標記為已接受。
 
         * 您也可以使用下拉式方塊來變更建議的「資訊類型」和「敏感度標籤」。        
 
-        ![瀏覽窗格][4]
+        ![顯示建議清單的螢幕擷取畫面。][4]
 
     * 若要套用選取的建議，請按一下藍色的 [Accept selected recommendations]\(接受選取的建議)  按鈕。若要套用選取的建議，請按一下藍色的 接受選取的建議按鈕。
 
-        ![瀏覽窗格][5]
+        ![[接受選取的建議] 按鈕的螢幕擷取畫面。][5]
 
-4. 您也可以**手動分類**資料行作為 (以及) 建議分類的替代方法：
+4. 您也可以 **手動分類** 資料行作為 (以及) 建議分類的替代方法：
 
     * 按一下視窗上方功能表中的 [新增分類]  。
 
-        ![瀏覽窗格][6]
+        ![顯示頂端功能表的螢幕擷取畫面，其中已標註 [新增分類] 選項。][6]
 
     * 在開啟的內容視窗中，選取結構描述 > 資料表 > 您想要分類的資料行，以及資訊類型和敏感度標籤。 然後按一下內容視窗底部的藍色 [新增分類]  按鈕。
 
-        ![瀏覽窗格][7]
+        ![顯示 [新增分類] 內容視窗的螢幕擷取畫面。][7]
 
 5. 若要完成您的分類，並使用新的分類中繼資料持續標示 (標記) 資料庫資料行，請按一下視窗上方功能表中的 [儲存]  。
 
-    ![瀏覽窗格][8]
+    ![顯示頂端功能表的螢幕擷取畫面，其中已標註 [儲存] 選項。][8]
 
 
-6. 若要產生具有完整資料庫分類狀態摘要的報表，請按一下視窗上方功能表中的 [檢視報告]  。 (您也可以使用 SSMS 產生報告。 以滑鼠右鍵按一下您想要產生報告的資料庫，然後選擇 [工作]   > [資料探索與分類]   > [產生報告]  )
+6. 若要產生具有完整資料庫分類狀態摘要的報表，請按一下視窗上方功能表中的 [檢視報告]  。 (您也可以使用 SSMS 產生報告。 以滑鼠右鍵按一下您想要產生報告的資料庫，然後選擇 [工作] > [資料探索與分類] > [產生報告])
 
-    ![瀏覽窗格][9]
+    ![顯示頂端功能表的螢幕擷取畫面，其中已標註 [檢視報表] 選項。][9]
 
-    ![瀏覽窗格][10]
+    ![顯示 [SQL 資料分類報表] 的螢幕擷取畫面。][10]
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>搭配 SSMS 管理資訊保護原則
 
@@ -97,15 +97,15 @@ ms.locfileid: "91867765"
 
 1. 在 SQL Server Management Studio (SSMS) 中，連線至 SQL Server。
 
-2. 在 SSMS 物件總管中，以滑鼠右鍵按一下您的其中一個資料庫，然後選擇 [工作]   > [資料探索與分類]  。
+2. 在 SSMS 物件總管中，以滑鼠右鍵按一下您的其中一個資料庫，然後選擇 [工作] > [資料探索與分類]。
 
    下列功能表選項可讓您管理資訊保護原則：
 
-* **設定資訊保護原則檔案**：使用在所選取 JSON 檔案中所定義的資訊保護原則。
+* **設定資訊保護原則檔案** ：使用在所選取 JSON 檔案中所定義的資訊保護原則。
 
-* **匯出資訊保護原則**：將資訊保護原則匯出為 JSON 檔案。
+* **匯出資訊保護原則** ：將資訊保護原則匯出為 JSON 檔案。
 
-* **重設資訊保護原則**：將資訊保護原則重設為預設資訊保護原則。
+* **重設資訊保護原則** ：將資訊保護原則重設為預設資訊保護原則。
 
 > [!IMPORTANT]
 > 資訊保護原則檔案不會儲存在 SQL Server 中。

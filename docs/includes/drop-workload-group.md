@@ -1,6 +1,6 @@
 卸除現有使用者定義的資源管理員工作負載群組。
 
-![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 語法慣例](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
 

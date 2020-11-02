@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422892"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638981"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ DBCC FREESYSTEMCACHE
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引數
-( 'ALL' [,_pool\_name_ ] )  
+( 'ALL' [, _pool\_name_ ] )  
 ALL 會指定所有支援的快取。  
 _pool\_name_ 會指定 Resource Governor 集區快取。 僅會釋放與此集區相關的項目。  
   
@@ -62,7 +62,11 @@ NO_INFOMSGS
 隱藏所有參考訊息。  
   
 ## <a name="remarks"></a>備註  
-執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計劃快取。 清除計畫快取會導致重新編譯所有未來執行計畫，且可能會導致查詢效能突然暫時降低。 對於計劃快取中，各個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄會包含下列資訊訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計劃快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計劃快取。 清除計畫快取會導致重新編譯所有未來執行計畫，且可能會導致查詢效能突然暫時降低。 針對計劃快取中每個清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息： 
+
+>`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
+
+ 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 ## <a name="result-sets"></a>結果集  
 DBCC FREESYSTEMCACHE 會傳回：「DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。

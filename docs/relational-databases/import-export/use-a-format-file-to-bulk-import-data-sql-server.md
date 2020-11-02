@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: b893b6dc0c3ad11225d1144f757f206fcf5500d5
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005579"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678969"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "92005579"
 ## <a name="before-you-begin"></a>開始之前
 * 如果格式檔案要與 Unicode 字元資料檔案搭配使用，則所有的輸入欄位都必須是 Unicode 文字字串 (也就是固定大小或以字元結束的 Unicode 字串)。
 * 若要大量匯出或匯入 [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) 資料，請在格式檔案中使用下列其中一種資料類型：
-  * SQLCHAR 或 SQLVARYCHAR (資料是使用用戶端字碼頁或定序所隱含的字碼頁所傳送)
+  * SQLCHAR 或 SQLVARCHAR (資料是使用用戶端字碼頁或定序所隱含的字碼頁所傳送)
   * SQLNCHAR 或 SQLNVARCHAR (資料會以 Unicode 傳送)
-  * SQLBINARY 或 SQLVARYBIN (未經任何轉換即傳送這份資料)。
+  * SQLBINARY 或 SQLVARBIN (未經任何轉換即傳送這份資料)。
 * Azure SQL Database 和 Azure Synapse Analytics 只支援 [bcp](../../tools/bcp-utility.md)。  如需相關資訊，請參閱：
   * [將資料載入 Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [將資料從 SQL Server 載入 Azure Synapse Analytics (一般檔案)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
@@ -142,8 +142,8 @@ Notepad D:\BCP\myFirstImport.xml
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>

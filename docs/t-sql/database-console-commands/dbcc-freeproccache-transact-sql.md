@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957009"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639001"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ ms.locfileid: "91957009"
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>語法  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語法：
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)] 的語法：
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的語法：
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -63,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 ## <a name="arguments"></a>引數
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
+*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)** ，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
+*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)** ，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name* 是 Resource Governor 資源集區的名稱。 *pool_name* 是 **sysname**，並可以藉由查詢 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動態管理檢視來取得。  
+*pool_name* 是 Resource Governor 資源集區的名稱。 *pool_name* 是 **sysname** ，並可以藉由查詢 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動態管理檢視來取得。  
  若要將 Resource Governor 工作負載群組與資源集區產生關聯，請查詢 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 動態管理檢視。 如需工作階段之工作負載群組的相關資訊，請查詢 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動態管理檢視。  
 
   
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>備註  
 請利用 DBCC FREEPROCCACHE 小心清除計畫快取。 清除程序 (計畫) 快取會使所有計畫被收回，且傳入的查詢執行會編譯新的計畫，而非重複使用任何先前的快取計畫。 
 
-當新的編譯數目增加時，可能會造成查詢效能突然暫時降低。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+當新的編譯數目增加時，可能會造成查詢效能突然暫時降低。 針對計劃快取中每個清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄會包含下列資訊訊息：
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 下列重新設定作業也會清除程序快取：
 -   存取檢查快取 Bucket 計數  

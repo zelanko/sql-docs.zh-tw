@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 276cb3535e3ee0623816aa329446e81b2feaf12e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: d0dd2b33c5f37b58e1442c4ba4cef2a4f38f293c
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745618"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439272"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>教學課程：使用 Azure Data Studio 啟用資料表空間使用量範例見解小工具
 
@@ -27,7 +27,7 @@ ms.locfileid: "88745618"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB* 。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
 
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -38,15 +38,15 @@ Azure Data Studio 具有內建範例小工具，其可監視資料庫中資料�
 
 1. 按 **Ctrl+Shift+P** 開啟 [命令選擇區]，開啟 [使用者設定]。
 
-2. 在搜尋方塊中鍵入 *settings*，然後選取 [Preferences:Open User Settings] \(喜好設定: 開啟使用者設定\)。
+2. 在搜尋方塊中鍵入 *settings* ，然後選取 [Preferences:Open User Settings] \(喜好設定: 開啟使用者設定\)。
 
-3. 在 [設定搜尋] 輸入方塊中鍵入 *dashboard*，然後尋找 **dashboard.database.widgets**。
+3. 在 [設定搜尋] 輸入方塊中鍵入 *dashboard* ，然後尋找 **dashboard.database.widgets** 。
 
 4. 若要自訂 **dashboard.database.widgets** 設定，您需要編輯 [使用者設定] 區段中的 **dashboard.database.widgets** 項目。
 
-   ![搜尋設定](media/tutorial-table-space-sql-server/search-settings.png)
+   ![顯示 [使用者設定] 區段的螢幕擷取畫面，其中已標註 [儀表板] > [資料庫小工具] 區段。](media/tutorial-table-space-sql-server/search-settings.png)
 
-   如果 [使用者設定] 區段中沒有 **dashboard.database.widgets**，請將滑鼠移至 [預設設定] 資料行中的 **dashboard.database.widgets** 文字上方，然後按一下出現在文字左邊的*齒輪*圖示，並按一下 [複製為設定 JSON]。 如果快顯視窗顯示 [在設定中取代]，請勿點選！ 移至右方的 [使用者設定] 資料行並尋找 **dashboard.database.widgets** 區段，然後繼續進行下一個步驟。
+   如果 [使用者設定] 區段中沒有 **dashboard.database.widgets** ，請將滑鼠移至 [預設設定] 資料行中的 **dashboard.database.widgets** 文字上方，然後按一下出現在文字左邊的 *齒輪* 圖示，並按一下 [複製為設定 JSON]。 如果快顯視窗顯示 [在設定中取代]，請勿點選！ 移至右方的 [使用者設定] 資料行並尋找 **dashboard.database.widgets** 區段，然後繼續進行下一個步驟。
 
 5. 在 **dashboard.database.widgets** 區段中，新增下列幾行：
 
@@ -65,7 +65,7 @@ Azure Data Studio 具有內建範例小工具，其可監視資料庫中資料�
 
    **dashboard.database.widgets** 區段應該如下圖所示：
 
-    ![搜尋設定](./media/tutorial-table-space-sql-server/insight-table-space.png)
+    ![settings.json 檔案的螢幕擷取畫面，其中包含 dashboard.database.widgets 陣列的第一個物件。](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 6. 按 **Ctrl+S** 儲存設定。
 

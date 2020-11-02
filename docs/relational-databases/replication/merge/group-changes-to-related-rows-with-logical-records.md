@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867001"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524029"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>使用邏輯記錄分組相關資料列的變更
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91867001"
   
  ![三個資料表邏輯記錄，只具有資料行名稱](../../../relational-databases/replication/merge/media/logical-records-01.gif "三個資料表邏輯記錄，只具有資料行名稱")  
   
- 在此關聯性中， **Customers** 資料表為父資料表，具有一個主索引鍵資料行 **CustID**。 **Orders** 資料表有一個主索引鍵資料行 **OrderID**，且 **CustID** 資料行上存在外部索引鍵條件約束 (參考 **Customers** 資料表中的 **CustID** 資料行)。 同樣地， **OrderItems** 資料表也具有一個主索引鍵資料行 **OrderItemID**，且 **OrderID** 資料行上存在外部索引鍵條件約束 (參考到 **Orders** 資料表中的 **OrderID** 資料行)。  
+ 在此關聯性中， **Customers** 資料表為父資料表，具有一個主索引鍵資料行 **CustID** 。 **Orders** 資料表有一個主索引鍵資料行 **OrderID** ，且 **CustID** 資料行上存在外部索引鍵條件約束 (參考 **Customers** 資料表中的 **CustID** 資料行)。 同樣地， **OrderItems** 資料表也具有一個主索引鍵資料行 **OrderItemID** ，且 **OrderID** 資料行上存在外部索引鍵條件約束 (參考到 **Orders** 資料表中的 **OrderID** 資料行)。  
   
  在此範例中，邏輯記錄是由 **Orders** 資料表中與單一 **CustID** 值相關的所有資料列以及 **OrderItems** 資料表中與 **Orders** 資料表中那些資料列相關的所有資料列所組成。 下圖顯示 Customer2 之邏輯記錄在三個資料表中的所有資料列：  
   
- ![具有值的三個資料表邏輯記錄](../../../relational-databases/replication/merge/media/logical-records-02.gif "具有值的三個資料表邏輯記錄")  
+ ![含有值的三個資料表邏輯記錄第一個螢幕擷取畫面。](../../../relational-databases/replication/merge/media/logical-records-02.gif "具有值的三個資料表邏輯記錄")  
   
  若要定義發行項之間的邏輯記錄關聯性，請參閱＜ [定義合併資料表發行項之間的邏輯記錄關聯性](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91867001"
 ### <a name="the-application-of-changes-as-a-unit"></a>將變更當做一個單位  
  如果合併處理中斷 (例如出現連接被卸除)，則在使用了邏輯記錄的情況下，部分完成的那組相關複寫變更會回復。 例如存在以下情況，「訂閱者」新增了一個新訂單 ( **OrderID** = 6)，並在 **OrderItems** 資料表中新增了兩個新的資料列，即 **OrderID** = 6，其 **OrderItemID** = 10， **OrderItemID** = 11。  
   
- ![具有值的三個資料表邏輯記錄](../../../relational-databases/replication/merge/media/logical-records-04.gif "具有值的三個資料表邏輯記錄")  
+ ![含有值的三個資料表邏輯記錄第二個螢幕擷取畫面。](../../../relational-databases/replication/merge/media/logical-records-04.gif "具有值的三個資料表邏輯記錄")  
   
  如果複寫處理在 **OrderID** = 6 的 **Orders** 資料列完成後，但在 **OrderItems** 10 和 11 完成之前中斷，並且未使用邏輯記錄，則 **OrderID** = 6 的 **OrderTotal** 值將與 **OrderItems** 資料列之 **OrderAmount** 值的總和不一致。 如果使用了邏輯記錄， **OrderID** = 6 的 **Orders** 資料列不會得到認可，直至複寫了相關的 **OrderItems** 變更。  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91867001"
   
      ![具有超過一個父系資料表的子系資料表](../../../relational-databases/replication/merge/media/logical-records-03.gif "具有超過一個父系資料表的子系資料表")  
   
-     無法使用邏輯記錄來代表此關聯性中的三個資料表，因為 **ClassMembers** 中的資料列並未與單一主索引鍵資料列相關聯。 資料表 **Classes** 和 **ClassMembers** 仍然可以組成邏輯記錄，資料表 **ClassMembers** 和 **Students**也可以，但是三個資料表一起則不行。  
+     無法使用邏輯記錄來代表此關聯性中的三個資料表，因為 **ClassMembers** 中的資料列並未與單一主索引鍵資料列相關聯。 資料表 **Classes** 和 **ClassMembers** 仍然可以組成邏輯記錄，資料表 **ClassMembers** 和 **Students** 也可以，但是三個資料表一起則不行。  
   
 -   發行集不能包含循環聯結篩選關聯性。  
   
-     以包含資料表 **Customers**、 **Orders**和 **OrderItems**為例，如果 **Orders** 資料表同樣具有參考到 **OrderItems** 資料表的外部索引鍵條件約束，則無法使用邏輯記錄。  
+     以包含資料表 **Customers** 、 **Orders** 和 **OrderItems** 為例，如果 **Orders** 資料表同樣具有參考到 **OrderItems** 資料表的外部索引鍵條件約束，則無法使用邏輯記錄。  
   
 ## <a name="performance-implications-of-logical-records"></a>邏輯記錄的效能含意  
  邏輯記錄功能會帶來效能成本。 如果不使用邏輯記錄，複寫代理程式可以同時處理給定發行項的所有變更，同時由於變更會按資料列逐一套用，因此套用變更所需的鎖定及交易記錄檔要求便最小。  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943002"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524015"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>搭配使用外部資料表精靈與 ODBC 資料來源
 
@@ -28,7 +28,7 @@ ms.locfileid: "86943002"
 
 ## <a name="start-the-external-table-wizard"></a>啟動外部資料表精靈
 
-以使用  azdata cluster endpoints list[**命令取得的**sql-server-master](../../big-data-cluster/deployment-guidance.md#endpoints) 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
+以使用  azdata cluster endpoints list [**命令取得的** sql-server-master](../../big-data-cluster/deployment-guidance.md#endpoints) 端點 IP 位址/連接埠號碼來連線到主要執行個體。 展開 [物件總管] 中的 [資料庫]  節點。 然後選取您想要將資料從現有 SQL Server 執行個體虛擬化到其中的其中一個資料庫。 以滑鼠右鍵按一下資料庫，然後選取 [建立外部資料表]  以啟動 [虛擬化資料精靈]。 您也可以從命令選擇區啟動 [虛擬化資料精靈]。 使用 Ctrl+Shift+P (在 Windows 中) 或 Cmd+Shift+P (在 Mac 中)。
 
 ![虛擬化資料精靈](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>選取資料來源
@@ -58,13 +58,13 @@ ms.locfileid: "86943002"
 
 下一個步驟是設定認證。 輸入認證的名稱。 此名稱是資料庫範圍認證，可用來安全地儲存您所建立外部資料來源的登入資訊。 例如 `TestCred`。 輸入使用者名稱與密碼以連線到資料來源。
 
-![外部資料來源認證](media/data-virtualization/data-source-credentials.png)
+![顯示 [步驟 3 - 建立與資料來源的連線] 的螢幕擷取畫面。](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>外部資料表對應
 
 在下一個頁面上，選取您想要建立外部檢視的資料表。 當您選取父資料庫時，也會包含子資料表。 選取資料表之後，對應資料表會出現在右側。 您可以在這裡進行類型變更。 您也可以變更所選取外部資料表本身的名稱。
 
-![外部資料來源認證](media/data-virtualization/data-table-map.png)
+![顯示 [步驟 4 - 將資料來源物件對應至外部資料表] 的螢幕擷取畫面。](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >若要變更對應檢視，請按兩下另一個選取的資料表。

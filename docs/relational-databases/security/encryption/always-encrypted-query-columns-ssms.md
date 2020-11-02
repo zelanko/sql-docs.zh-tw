@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866537"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679037"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91866537"
 ### <a name="example"></a>範例
 假設 `SSN` 是 `Patients` 資料表中的加密資料行，如果已針對資料庫連接停用 Always Encrypted，以下所示的查詢將擷取二進位的加密文字值。   
 
-![always-encrypted-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
+![SELECT [SSN] FROM [dbo].[Patients] 查詢，以及該查詢結果顯示為二進位加密文字值的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>擷取加密資料行中儲存的純文字值    
 擷取加密資料行的值做為純文字 (以便將值解密)：   
@@ -49,7 +49,7 @@ ms.locfileid: "91866537"
 ### <a name="example"></a>範例
 假設 SSN 是 `char(11)` 資料表中加密的 `Patients` 資料行，如果已針對資料庫連接啟用 Always Encrypted，而且您有權存取針對 `SSN` 資料行設定的資料行主要金鑰，則以下所示的查詢將傳回純文字值。   
 
-![always-encrypted-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
+![SELECT [SSN] FROM [Clinic].[dbo].[Patients] 查詢，以及該查詢結果顯示為純文字值的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>傳送目標為加密資料行的純文字值       
 執行查詢以傳送目標為加密資料行的值，例如，利用儲存於加密資料行中的值來插入、更新或據以篩選的查詢：
@@ -63,7 +63,7 @@ ms.locfileid: "91866537"
 ### <a name="example"></a>範例
 假設 `SSN` 是 `char(11)` 資料表中加密的 `Patients` 資料行，以下指令碼將嘗試在 SSN 資料行中尋找包含 `'795-73-9838'` 的資料列，並傳回 `LastName` 資料行的值，但前提是已針對資料庫連線啟用 Always Encrypted、已針對 [查詢編輯器] 視窗啟用 [Always Encrypted 的參數化]，而且您有權存取針對 `SSN` 資料行設定的資料行主要金鑰。   
 
-![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
+![DECLARE @SSN CHAR(11) = '795-73-9838' SELECT [LastName] FROM [dbo].[Patients] WHERE [SSN] = @SSN 查詢，以及該查詢結果的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>查詢加密資料行的權限
 
@@ -72,7 +72,7 @@ ms.locfileid: "91866537"
 除了上述權限，若要將任何查詢結果解密或加密任何查詢參數 (透過參數化 Transact-SQL 變數來產生)，您還需要權限來存取保護目標資料行的資料行主要金鑰：
 
 - **憑證存放區 - 本機電腦** 您必須具有當成資料行主要金鑰使用之憑證的 `Read` 權限，或為電腦上的系統管理員。   
-- **Azure Key Vault**：您需要包含資料行主要金鑰的保存庫 `get`、`unwrapKey` 和 `verify` 權限。
+- **Azure Key Vault** ：您需要包含資料行主要金鑰的保存庫 `get`、`unwrapKey` 和 `verify` 權限。
 - **金鑰存放區提供者 (KSP)** ：必要權限和認證 (您在使用金鑰存放區或金鑰時可能收到提示) 取決於存放區和 KSP 設定。   
 - **密碼編譯服務提供者 (CSP)** ：必要權限和認證 (您在使用金鑰存放區或金鑰時可能會收到提示) 取決於存放區和 CSP 設定。
 
@@ -99,7 +99,7 @@ ms.locfileid: "91866537"
 1. 如果您使用 SSMS 17 或更舊版本：
     1. 選取 [其他屬性] 索引標籤。
     1. 若要啟用 Always Encrypted，請鍵入 `Column Encryption Setting = Enabled`。 若要停用 Always Encrypted，請指定 `Column Encryption Setting = Disabled`，或從 [其他屬性] 索引標籤中移除 [資料行加密設定] 的設定 (預設值為 [停用])。   
- 1. 按一下 [ **連接**]。
+ 1. 按一下 [ **連接** ]。
 
 > [!TIP]
 > 在已針對現有的 [查詢編輯器] 視窗啟用和停用的 Always Encrypted 之間進行切換：   
@@ -189,11 +189,11 @@ SQL Server Management Studio 會使用 Intellisense，來告知您哪些變數�
 
 以下螢幕擷取畫面顯示六個變數宣告的範例。 SQL Server Management Studio 已成功將前三個變數參數化。 最後三個變數不符合參數化的必要條件情況，因此，SQL Server Management Studio 未嘗試將它們參數化 (未以任何方式標示它們的宣告)。
 
-![always-encrypted-parameter-warnings](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
+![顯示六個變數宣告範例的螢幕擷取畫面，包含三個成功參數化的宣告、三個失敗的宣告，以及相關聯的警告訊息。](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
  
 以下另一個示範顯示了兩個參數，其符合參數化的必要條件情況，但參數化嘗試因為變數未正確初始化而失敗。    
  
-![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
+![顯示兩個變數宣告範例的螢幕擷取畫面，宣告最終失敗，並包含相關聯的錯誤訊息。](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
 > [!NOTE]
 > 由於 Always Encrypted 支援一組有限的類型轉換子集，因此，在許多情況下，會要求 Transact-SQL 變數的資料類型與其設定為目標的目標資料庫資料行的類型相同。 例如，假設 `SSN` 資料表中 `Patients` 資料行的類型是 `char(11)`，以下查詢將會失敗，因為 `@SSN` 變數的類型為 `nchar(11)`，不符合資料行的類型。   

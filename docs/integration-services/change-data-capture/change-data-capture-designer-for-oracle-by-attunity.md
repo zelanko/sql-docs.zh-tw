@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd8252fab91afb8b9a457f0c05f76bb8b77ecf78
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484711"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255715"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
 
@@ -33,7 +33,11 @@ ms.locfileid: "88484711"
   
 -   CDC 執行個體屬性編輯器：此對話方塊是用來編輯任何現有的 Oracle CDC 服務執行個體。 如需有關編輯 CDC 執行個體屬性的詳細資訊，請參閱＜ [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)＞。  
   
- 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 是 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+ 根據對應的 SQL Server 版本，從以下連結下載適用於 Attunity Oracle 的 Microsoft 異動資料擷取設計工具：
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 
   
 ## <a name="in-this-documentation"></a>在此文件集中  
   

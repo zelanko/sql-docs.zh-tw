@@ -19,12 +19,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: c1cb7a34a29d55c9480eca83d2a2777b22fa1b62
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acbd75ed614f6f7a2c018fb537b01528fe166e80
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538082"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496962"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "89538082"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -58,7 +58,7 @@ ms.locfileid: "89538082"
         [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_** &nbsp;
+        **_\* SQL 受控執行個體\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -79,7 +79,7 @@ ms.locfileid: "89538082"
         [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -169,7 +169,7 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
 
 變更 min_percentage_resource 和 cap_percentage_resource 需要清空正在變更之工作負載群組中正在執行的要求。  減少 min_percentage_resource 時，釋放的資源會傳回共用集區，讓其他工作負載群組中的要求能夠利用。  相反地，增加 min_percentage_resource 則會等候直到只使用共用集區所需資源的要求完成。  變更工作負載群組作業將具有共用資源的優先存取權，在共用集區中等待執行的其他要求則往後排。  如果 min_percentage_resource 的總和超過 100%，則 ALTER WORKLOAD GROUP 要求立即失敗。 
 
-**鎖定行為**變更工作負載群組需要對所有工作負載群組執行全域鎖定。  變更工作負載群組的要求會排入已提交的 create 或 drop 工作負載群組要求的後面。  如果一次提交一批 alter 陳述式，則會依其提交順序處理。  
+**鎖定行為** 變更工作負載群組需要對所有工作負載群組執行全域鎖定。  變更工作負載群組的要求會排入已提交的 create 或 drop 工作負載群組要求的後面。  如果一次提交一批 alter 陳述式，則會依其提交順序處理。  
 
 ## <a name="see-also"></a>另請參閱
 

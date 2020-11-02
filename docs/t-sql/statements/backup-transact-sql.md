@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d043d7613467381b0c19dfb2ac2ee2ee4ec0e523
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: e4763f4c4f28ad4787785b4e5838155fb9a05f10
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529419"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496868"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ ms.locfileid: "91529419"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -205,12 +205,12 @@ DATABASE 指定完整的資料庫備份。 如果指定了檔案和檔案群組�
 > [!NOTE]
 > 建立典型的記錄備份之後，除非您指定 `WITH NO_TRUNCATE` 或 `COPY_ONLY`，否則有些交易記錄檔記錄會變成非使用中狀態。 當一個或多個虛擬記錄檔案中的所有記錄變成非使用中狀態之後，記錄會發生截斷。 如果記錄在例行的記錄備份之後並未截斷，可能會發生延遲記錄截斷。 如需詳細資訊，請參閱[可能會延遲記錄截斷的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。
 
-{ _database\_name_ |  **@** _database\_name\_var_ } 這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
+{ _database\_name_ |  **@** _database\_name\_var_ } 這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_ ) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_ )，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
 > [!NOTE]
 > 資料庫鏡像合作關係中的鏡像資料庫無法備份。
 
-\<file_or_filegroup> [ **,** ...*n* ] 只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或指定要包含在部分備份中的唯讀檔案或檔案群組。
+\<file_or_filegroup> [ **,** ... *n* ] 只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或指定要包含在部分備份中的唯讀檔案或檔案群組。
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } 這是要包含在備份中的檔案邏輯名稱，或是其值等於該檔案邏輯名稱的變數。
 
@@ -223,7 +223,7 @@ FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\
 
 如需詳細資訊，請參閱[完整檔案備份](../../relational-databases/backup-restore/full-file-backups-sql-server.md)和[備份檔案和檔案群組](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ] 指定部分備份。 部分備份包含資料庫中所有的讀取/寫入檔案：主要檔案群組和任何一種讀取/寫入次要檔案群組，以及任何指定的唯讀檔案或檔案群組。
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ... _n_ ] ] 指定部分備份。 部分備份包含資料庫中所有的讀取/寫入檔案：主要檔案群組和任何一種讀取/寫入次要檔案群組，以及任何指定的唯讀檔案或檔案群組。
 
 READ_WRITE_FILEGROUPS 指定要在部分備份進行備份的所有讀取/寫入檔案群組。 如果資料庫是唯讀的，READ_WRITE_FILEGROUPS 只會包括主要檔案群組。
 
@@ -236,13 +236,13 @@ FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ 
 
 如需部分備份的詳細資訊，請參閱[部分備份](../../relational-databases/backup-restore/partial-backups-sql-server.md)。
 
-TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)集合是未鏡像的媒體集，或鏡像媒體集內的第一個鏡像 (已為其宣告了一或多個 MIRROR TO 子句)。
+TO \<backup_device> [ **,** ... *n* ] 指出隨附的 [備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)集合是未鏡像的媒體集，或鏡像媒體集內的第一個鏡像 (已為其宣告了一或多個 MIRROR TO 子句)。
 
 \<backup_device>
 
 指定備份作業要使用的邏輯或實體備份裝置。
 
-{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **適用對象：** SQL Server 這是用來備份資料庫的備份裝置邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果備份裝置名稱是以變數 (@*logical_device_name_var*) 提供，就可將它指定為字串常數 (@_logical\_device\_name\_var_ **=** 邏輯備份裝置名稱) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **適用對象：** SQL Server 這是用來備份資料庫的備份裝置邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果備份裝置名稱是以變數 (@ *logical_device_name_var* ) 提供，就可將它指定為字串常數 (@ _logical\_device\_name\_var_ **=** 邏輯備份裝置名稱) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
 { DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **適用對象：** DISK、TAPE 和 URL 適用於 SQL Server。
 指定磁碟檔案或磁帶裝置，或是 Microsoft Azure Blob 儲存體服務。 URL 格式可用來建立備份至 Microsoft Azure 儲存體服務。 如需詳細資訊和範例，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程：SQL Server 備份及還原至 Microsoft Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。
@@ -250,9 +250,9 @@ TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relatio
 > [!NOTE]
 > NUL 磁碟裝置將捨棄傳送給它的所有資訊，而且只應用於測試。 這不適用於生產環境。
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，當您備份至 URL 時，可以只備份到單一裝置。 為了在備份到 URL 時能夠備份到多部裝置，您必須使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本，且必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) \(英文\)。
+> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，當您備份至 URL 時，可以只備份到單一裝置。 為了在備份到 URL 時能夠備份到多部裝置，您必須使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本，且必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) \(英文\)。
 
-**URL 適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本)。
+**URL 適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本)。
 
 在 BACKUP 陳述式內指定磁碟裝置之前，該裝置不需要存在。 如果實體裝置存在，且 BACKUP 陳述式並未指定 INIT 選項，就會將備份附加至裝置中。
 
@@ -266,7 +266,7 @@ TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relatio
 
 *n* 這是一個預留位置，表示可以在逗號分隔清單中指定最多達 64 個備份裝置。
 
-MIRROR TO \<backup_device> [ **,** ...*n* ] 指定一組最多三個的次要備份裝置，其中每個裝置都會鏡像處理 TO 子句中所指定的備份裝置。 MIRROR TO 子句必須指定與 TO 子句相同的備份裝置類型和數目。 最大 MIRROR TO 子句數目是 3。
+MIRROR TO \<backup_device> [ **,** ... *n* ] 指定一組最多三個的次要備份裝置，其中每個裝置都會鏡像處理 TO 子句中所指定的備份裝置。 MIRROR TO 子句必須指定與 TO 子句相同的備份裝置類型和數目。 最大 MIRROR TO 子句數目是 3。
 
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版本才提供這個選項。
 
@@ -285,10 +285,10 @@ MIRROR TO \<backup_device> [ **,** ...*n* ] 指定一組最多三個的次要備
 
 指定要搭配備份作業使用的選項。
 
-CREDENTIAL **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本)。
+CREDENTIAL **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本)。
 只有當建立備份到 Microsoft Azure Blob 儲存體服務時才使用。
 
-FILE_SNAPSHOT **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
+FILE_SNAPSHOT **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 使用 Azure Blob 儲存體服務來儲存所有 SQL Server 資料庫檔案時，用來建立資料庫檔案的 Azure 快照集。 如需詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集備份會以一致的狀態建立資料庫檔案 (資料和記錄檔) 的 Azure 快照集。 一組一致的 Azure 快照集會組成一個備份，並記錄於備份檔案中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之間的唯一差異是，後者也會截斷交易記錄，但前者不會。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集備份，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立備份鏈結所需的初始完整備份之後，只需使用單一交易記錄備份就能將資料庫還原至交易記錄備份的時間點。 此外，只需要兩個交易記錄備份，就能將資料庫還原至這兩個交易記錄備份時間之間的時間點。
 
@@ -360,10 +360,10 @@ NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } 指定備份組的�
 > [!IMPORTANT]
 > 這些選項只會防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆寫檔案。 您可以利用其他方法來清除磁帶，並利用作業系統來刪除磁碟檔案。 如需有關期限驗證的詳細資訊，請參閱這個主題中的 SKIP 和 FORMAT。
 
-EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 指定備份組到期且可加以覆寫的時間。 如果這個日期是以變數 (@_date\_var_) 提供，則它必須遵照所設定的系統 **datetime** 格式，且必須指定為下列其中一項：
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 指定備份組到期且可加以覆寫的時間。 如果這個日期是以變數 (@ _date\_var_ ) 提供，則它必須遵照所設定的系統 **datetime** 格式，且必須指定為下列其中一項：
 
-- 字串常數 (@_date\_var_ **=** date)
-- 字元字串資料類型的變數 (**ntext** 或 **text** 資料類型除外)
+- 字串常數 (@ _date\_var_ **=** date)
+- 字元字串資料類型的變數 ( **ntext** 或 **text** 資料類型除外)
 - **smalldatetime**
 - **datetime** 變數
 
@@ -372,12 +372,12 @@ EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } 指定備份組到
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
 
-如需如何指定 **datetime** 值的相關資訊，請參閱[日期和時間類型](../../t-sql/data-types/date-and-time-types.md)。
+如需如何指定 **datetime** 值的相關資訊，請參閱 [日期和時間類型](../../t-sql/data-types/date-and-time-types.md)。
 
 > [!NOTE]
 > 若要忽略到期日，請使用 `SKIP` 選項。
 
-RETAINDAYS **=** { *days* |  **@** _days\_var_ } 指定必須經過多少天之後，才能覆寫這個備份媒體集。 如果是以變數 ( **@** _days\_var_) 提供，就必須將它指定為整數。
+RETAINDAYS **=** { *days* |  **@** _days\_var_ } 指定必須經過多少天之後，才能覆寫這個備份媒體集。 如果是以變數 ( **@** _days\_var_ ) 提供，就必須將它指定為整數。
 
 **媒體集選項**
 
@@ -386,7 +386,7 @@ RETAINDAYS **=** { *days* |  **@** _days\_var_ } 指定必須經過多少天之�
 { **NOINIT** | INIT } 控制備份作業要附加至還是覆寫備份媒體上的現有備份組。 預設是附加至媒體上的最新備份組 (NOINIT)。
 
 > [!NOTE]
-> 如需 { **NOINIT** | INIT } 與 { **NOSKIP** | SKIP } 間之互動的相關資訊，請參閱本主題稍後的[備註](#general-remarks)。
+> 如需 { **NOINIT** | INIT } 與 { **NOSKIP** | SKIP } 間之互動的相關資訊，請參閱本主題稍後的 [備註](#general-remarks)。
 
 NOINIT 指出將備份組附加至指定的媒體集，以保留現有的備份組。 如果定義了媒體集的媒體密碼，您就必須提供密碼。 NOINIT 是預設值。
 
@@ -440,7 +440,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 指定要�
 緩衝區使用的總空間可由下列公式判斷：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
-> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) \(英文\) 部落格文章。
+> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) \(英文\) 部落格文章。
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。
 
@@ -481,7 +481,7 @@ RESTART 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，沒有�
 
 **監視選項**
 
-STATS [ **=** _percentage_ ] 每次另一個 *percentage* 完成時就會顯示一則訊息，用來量測進度。 如果省略 *percentage*，每完成 10%，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會顯示一則訊息。
+STATS [ **=** _percentage_ ] 每次另一個 *percentage* 完成時就會顯示一則訊息，用來量測進度。 如果省略 *percentage* ，每完成 10%，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會顯示一則訊息。
 
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。
 
@@ -661,7 +661,7 @@ GO
 
 ### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> 還原 SQL Server 備份
 
-若要還原資料庫，並選擇性地復原它以使其上線，或是還原檔案或檔案群組，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **還原**工作。 如需詳細資訊，請參閱[還原和復原概觀](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
+若要還原資料庫，並選擇性地復原它以使其上線，或是還原檔案或檔案群組，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **還原** 工作。 如需詳細資訊，請參閱[還原和復原概觀](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
 
 ## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> 關於 BACKUP 選項的其他考量
 
@@ -696,7 +696,7 @@ BACKUP 支援 `RESTART` 選項，以提供與舊版 [!INCLUDE[ssNoVersion](../..
 
 只要作業系統支援資料庫的定序，便可以執行跨平台的備份作業，即使在不同類型的處理器之間，也是如此。
 
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，設定**大於 65536 (64 KB)** 的 `MAXTRANSFERSIZE` 會針對[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果未指定 `MAXTRANSFERSIZE` 或使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，則搭配 TDE 加密資料庫的備份壓縮就會直接壓縮已加密頁面，且可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，設定 **大於 65536 (64 KB)** 的 `MAXTRANSFERSIZE` 會針對 [透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果未指定 `MAXTRANSFERSIZE` 或使用了 `MAXTRANSFERSIZE = 65536` (64 KB)，則搭配 TDE 加密資料庫的備份壓縮就會直接壓縮已加密頁面，且可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) \(英文\)。
 
 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 開始，不再需要設定 `MAXTRANSFERSIZE` 來啟用搭配 TDE 的這個最佳化壓縮演算法。 如果備份命令指定了 `WITH COMPRESSION`，或 *backup compression default* 伺服器組態設為 1，則 `MAXTRANSFERSIZE` 會自動增加至 128K，以啟用最佳化演算法。 如果在備份命令上指定了值大於 64K 的 `MAXTRANSFERSIZE`，則會接受提供的值。 換句話說，SQL Server 永遠不會自動降低值，其只會增加。 如果需要使用 `MAXTRANSFERSIZE = 65536` 備份 TDE 加密的資料庫，則必須指定 `WITH NO_COMPRESSION`，或確定 *backup compression default* 伺服器組態設為 0。
 
@@ -942,7 +942,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_** &nbsp;
+        **_\* SQL 受控執行個體\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -953,7 +953,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 ## <a name="azure-sql-managed-instance"></a>Azure SQL 受控執行個體
 
-備份放置於/裝載於 Azure SQL 受控執行個體的 SQL 資料庫。 SQL [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)有自動備份，而且可讓使用者建立完整資料庫的 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。
+備份放置於/裝載於 Azure SQL 受控執行個體的 SQL 資料庫。 SQL [受控執行個體](/azure/sql-database/sql-database-managed-instance)有自動備份，而且可讓使用者建立完整資料庫的 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。
 
 ## <a name="syntax"></a>語法
 
@@ -998,7 +998,7 @@ DATABASE 指定完整的資料庫備份。 在資料庫備份期間，Azure SQL 
 
 當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 SQL 受控執行個體自動備份進行還原，請參閱[將資料庫還原到受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
 
-{ *database_name* |  **@** _database\_name\_var_ } 這是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
+{ *database_name* |  **@** _database\_name\_var_ } 這是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 ( **@** _database\_name\_var_ ) 的形式提供，您還可以將這個名稱指定為字串常數 ( **@** _database\_name\_var_ **=** _database name_ )，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。
 
 如需詳細資訊，請參閱[完整檔案備份](../../relational-databases/backup-restore/full-file-backups-sql-server.md)和[備份檔案和檔案群組](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。
 
@@ -1007,7 +1007,7 @@ TO URL
 指定要用於備份作業的 URL。 URL 格式可用來建立備份至 Microsoft Azure 儲存體服務。
 
 > [!IMPORTANT]
-> 為了在備份到 URL 時能夠備份到多部裝置，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) \(英文\)。
+> 為了在備份到 URL 時能夠備份到多部裝置，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) \(英文\)。
 
 *n* 這是一個預留位置，表示可以在逗號分隔清單中指定最多達 64 個備份裝置。
 
@@ -1057,7 +1057,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 指定要�
 緩衝區使用的總空間可由下列公式判斷：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
-> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) \(英文\) 部落格文章。
+> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition) \(英文\) 部落格文章。
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。
 
@@ -1094,7 +1094,7 @@ RESTART 沒有任何作用。 這個版本接受這個選項的目的，是為�
 
 **監視選項**
 
-STATS [ **=** _percentage_ ] 每次另一個 *percentage* 完成時就會顯示一則訊息，用來量測進度。 如果省略 *percentage*，每完成 10%，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會顯示一則訊息。
+STATS [ **=** _percentage_ ] 每次另一個 *percentage* 完成時就會顯示一則訊息，用來量測進度。 如果省略 *percentage* ，每完成 10%，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會顯示一則訊息。
 
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。
 
@@ -1106,7 +1106,7 @@ STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 �
 
 ### <a name="permissions"></a>權限
 
-BACKUP DATABASE 權限預設為**系統管理員**固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。
+BACKUP DATABASE 權限預設為 **系統管理員** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。
 
 URL 的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。
 
@@ -1132,7 +1132,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* 分析<br />平台系統 (PDW) \*_** &nbsp;
@@ -1145,7 +1145,7 @@ WITH STATS = 5, COPY_ONLY;
 
 建立[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫的備份，並將備份儲存在應用裝置外、使用者指定的網路位置中。 請搭配 [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) 使用此陳述式來進行災害復原，或將資料庫從一個設備複製到另一個設備。
 
-**在您開始前**，請先參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Acquire and Configure a Backup Server＞(取得並設定備份伺服器)。
+**在您開始前** ，請先參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Acquire and Configure a Backup Server＞(取得並設定備份伺服器)。
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中有兩種類型的備份。 「完整資料庫備份」會備份整個[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫。 「差異資料庫備份」僅包含自上次進行完整備份之後所做的變更。 使用者資料庫的備份會包含資料庫使用者及資料庫角色。 master 資料庫的備份會包含登入。
 
@@ -1176,7 +1176,7 @@ BACKUP DATABASE database_name
 
 *database_name* 要建立備份的資料庫名稱。 此資料庫可以是 master 資料庫或使用者資料庫。
 
-TO DISK = '\\\\*UNC_path*\\*backup_directory*'[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 將寫入備份檔案的目的地網路路徑和目錄。 例如 '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
+TO DISK = '\\\\*UNC_path*\\*backup_directory* '[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 將寫入備份檔案的目的地網路路徑和目錄。 例如 '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
 
 - 備份目錄名稱的路徑必須已經存在，且必須以完整通用命名慣例 (UNC) 路徑的形式指定。
 - 備份目錄 *backup_directory* 必須是在執行備份命令之前不存在的目錄。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會建立備份目錄。
@@ -1193,7 +1193,7 @@ NAME = **'** _backup \_name_ **'** 指定備份的名稱。 備份名稱可以�
 - 名稱最多可有 128 個字元。
 - 不可包含路徑。
 - 開頭必須是字母、數字字元或底線 (_)。 允許的特殊字元是底線 (\_)、連字號 (-) 或空格 space ( )。 備份名稱的結尾不可以是空格字元。
-- 如果 *backup_name*已經存在於指定的位置中，陳述式將會失敗。
+- 如果 *backup_name* 已經存在於指定的位置中，陳述式將會失敗。
 
 此名稱會儲存在中繼資料中，並且會在使用 RESTORE HEADERONLY 來還原備份標頭時顯示。
 
@@ -1207,7 +1207,7 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 
 ## <a name="permissions"></a>權限
 
-需要 **BACKUP DATABASE** 權限或 **db_backupoperator** 固定資料庫角色的成員資格。 新增至 **db_backupoperator** 固定資料庫角色的一般使用者無法備份 master 資料庫。 只有 **sa**、網狀架構系統管理員或 **sysadmin** 固定伺服器角色的成員才能備份 master 資料庫。
+需要 **BACKUP DATABASE** 權限或 **db_backupoperator** 固定資料庫角色的成員資格。 新增至 **db_backupoperator** 固定資料庫角色的一般使用者無法備份 master 資料庫。 只有 **sa** 、網狀架構系統管理員或 **sysadmin** 固定伺服器角色的成員才能備份 master 資料庫。
 
 需要具備備份目錄之存取、建立及寫入權限的 Windows 帳戶。 您也必須將 Windows 帳戶名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。 若要將這些網路認證新增至 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，請使用 [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 預存程序。
 

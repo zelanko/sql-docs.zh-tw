@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb0773d4c89b7b9879b0ff250e9ffaf6e465654
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024350"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496941"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,32 +63,32 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>引數
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** 是要在資料庫中建立之資料表的一到三部分的名稱。 就外部資料表而言，只有資料表中繼資料會儲存在關聯式資料庫中。 
 
- **LOCATION = '*hdfs_folder*'** 會指定要將 SELECT 陳述式的結果寫入到外部資料來源上的哪個位置。 此位置是一個資料夾名稱，而且可以選擇性地包含 Hadoop 叢集或 Blob 儲存體之根資料夾的相對路徑。 如果此位置尚未存在，PolyBase 將會建立路徑與資料夾。
+ **LOCATION = ' *hdfs_folder* '** 會指定要將 SELECT 陳述式的結果寫入到外部資料來源上的哪個位置。 此位置是一個資料夾名稱，而且可以選擇性地包含 Hadoop 叢集或 Blob 儲存體之根資料夾的相對路徑。 如果此位置尚未存在，PolyBase 將會建立路徑與資料夾。
 
-外部檔案會寫入至 *hdfs_folder* 並命名為 *QueryID_date_time_ID.format*，其中 *ID* 是一個累加識別碼，而 *format* 則是所匯出資料的格式。 QID776_20160130_182739_0.orc 即為一例。
+外部檔案會寫入至 *hdfs_folder* 並命名為 *QueryID_date_time_ID.format* ，其中 *ID* 是一個累加識別碼，而 *format* 則是所匯出資料的格式。 QID776_20160130_182739_0.orc 即為一例。
 
  **DATA_SOURCE = *external_data_source_name*** 會指定包含儲存或將儲存外部資料之位置的外部資料來源物件名稱。 此位置為 Hadoop 叢集或 Azure Blob 儲存體。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
  **FILE_FORMAT = *external_file_format_name*** 會指定包含外部資料檔案格式之外部檔案格式物件的名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
- 執行這個 CREATE EXTERNAL TABLE AS SELECT 陳述式時，不適用 **REJECT 選項**。 而是在這裡指定這類選項，以便讓資料庫能夠在稍後從外部資料表匯入資料時加以使用。 稍後，當 CREATE TABLE AS SELECT 陳述式從外部資料表選取資料時，資料庫將會使用拒絕選項來決定在停止匯入之前，可允許發生匯入失敗的資料列數目或百分比。
+ 執行這個 CREATE EXTERNAL TABLE AS SELECT 陳述式時，不適用 **REJECT 選項** 。 而是在這裡指定這類選項，以便讓資料庫能夠在稍後從外部資料表匯入資料時加以使用。 稍後，當 CREATE TABLE AS SELECT 陳述式從外部資料表選取資料時，資料庫將會使用拒絕選項來決定在停止匯入之前，可允許發生匯入失敗的資料列數目或百分比。
 
    - **REJECT_VALUE = *reject_value*** 會指定在資料庫終止匯入之前，允許匯入失敗的資料列值或百分比。
 
    - **REJECT_TYPE = **value** | percentage** 會指明要以 常值或百分比形式指定 REJECT_VALUE 選項。
 
-      - 如果 REJECT_VALUE 是常值，不是百分比，即會使用 **value**。 當失敗的資料列數目超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。
+      - 如果 REJECT_VALUE 是常值，不是百分比，即會使用 **value** 。 當失敗的資料列數目超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。
 
         例如，如果 REJECT_VALUE = 5 且 REJECT_TYPE = value，資料庫將會在五個資料列匯入失敗之後停止匯入資料列。
 
-      - 如果 REJECT_VALUE 是百分比，不是常值，即會使用 **percentage**。 當失敗的資料列「百分比」超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。 失敗的資料列百分比會每隔一段時間就計算一次。
+      - 如果 REJECT_VALUE 是百分比，不是常值，即會使用 **percentage** 。 當失敗的資料列「百分比」超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。 失敗的資料列百分比會每隔一段時間就計算一次。
 
-   - 當 REJECT_TYPE = percentage 時，**REJECT_SAMPLE_VALUE = *reject_sample_value*** 為必要項，這會指定要在資料庫重新計算失敗的資料列百分比之前嘗試匯入的資料列數目。
+   - 當 REJECT_TYPE = percentage 時， **REJECT_SAMPLE_VALUE = *reject_sample_value*** 為必要項，這會指定要在資料庫重新計算失敗的資料列百分比之前嘗試匯入的資料列數目。
 
-      例如，如果 REJECT_SAMPLE_VALUE = 1000，資料庫將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value*，資料庫就會嘗試載入另外 1000 個資料列。 資料庫會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
+      例如，如果 REJECT_SAMPLE_VALUE = 1000，資料庫將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value* ，資料庫就會嘗試載入另外 1000 個資料列。 資料庫會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
 
      > [!NOTE]
-     >  由於資料庫每隔一段時間就會計算失敗的資料列百分比，因此，實際的失敗資料列百分比可能會超過 *reject_value*。
+     >  由於資料庫每隔一段時間就會計算失敗的資料列百分比，因此，實際的失敗資料列百分比可能會超過 *reject_value* 。
 
      **範例：**
 
@@ -110,14 +110,14 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
 - 將包含新資料表之本機結構描述的 **ALTER SCHEMA** 權限，或 **db_ddladmin** 固定資料庫角色的成員資格。
 - **CREATE TABLE** 權限或 **db_ddladmin** 固定資料庫角色的成員資格。
-- *select_criteria*中所參考之任何物件上的 **SELECT** 權限。
+- *select_criteria* 中所參考之任何物件上的 **SELECT** 權限。
 
  登入需要下列所有權限：
 
 - **ADMINISTER BULK OPERATIONS**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **寫入**權限，以便對 Hadoop 叢集上或 Blob 儲存體中的外部資料夾進行讀取和寫入。
+- **寫入** 權限，以便對 Hadoop 叢集上或 Blob 儲存體中的外部資料夾進行讀取和寫入。
 
  > [!IMPORTANT]
  >  ALTER ANY EXTERNAL DATA SOURCE 權限可授與任何主體建立及修改任何外部資料來源物件的能力，因此也能為其授與存取資料庫上所有資料庫範圍認證的能力。 您必須將此權限視為具高度權限，而且只能將其授與系統中受信任的主體。
@@ -136,7 +136,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  外部資料表名稱和定義會儲存在資料庫中繼資料中。 資料會儲存在外部資料來源中。
 
- 外部檔案命名為 *QueryID_date_time_ID.format*，其中 *ID* 是累加識別碼，而 *format* 是匯出的資料格式。 QID776_20160130_182739_0.orc 即為一例。
+ 外部檔案命名為 *QueryID_date_time_ID.format* ，其中 *ID* 是累加識別碼，而 *format* 是匯出的資料格式。 QID776_20160130_182739_0.orc 即為一例。
 
  CREATE EXTERNAL TABLE AS SELECT 陳述式一律會建立一個沒有分割的資料表，即使來源資料表已分割也一樣。
 
@@ -175,7 +175,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 - /r
 - /n
 
-若要使用包含這些字元的 CREATE EXTERNAL TABLE AS SELECT，您必須先將資料 CREATE EXTERNAL TABLE AS SELECT 到文字分隔檔案，然後就可以使用外部工具，將其轉換成 Parquet 或 ORC。
+若要使用包含這些字元的 CREATE EXTERNAL TABLE AS SELECT，則必須先執行 CREATE EXTERNAL TABLE AS SELECT 陳述式將資料匯出到分隔符號文字檔，然後即可使用外部工具將其轉換成 Parquet 或 ORC。
 
 ## <a name="locking"></a>鎖定
  在 SCHEMARESOLUTION 上採取共用鎖定。
@@ -186,7 +186,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  下列範例會使用來自來源資料表 `dimCustomer` 的資料行定義與資料，來建立名為 `hdfsCustomer` 的新外部資料表。
 
- 資料表定義會儲存在資料庫中，而 SELECT 陳述式的結果則會匯出至位於 Hadoop 外部資料來源 *customer_ds* 上的 '/pdwdata/customer.tbl' 檔案。 此檔案會根據外部檔案格式 *customer_ff*來格式化。
+ 資料表定義會儲存在資料庫中，而 SELECT 陳述式的結果則會匯出至位於 Hadoop 外部資料來源 *customer_ds* 上的 '/pdwdata/customer.tbl' 檔案。 此檔案會根據外部檔案格式 *customer_ff* 來格式化。
 
  檔案名稱會由資料庫產生並包含查詢識別碼，以方便根據產生檔案的查詢來調整該檔案。
 

@@ -146,7 +146,7 @@ FCI 未遺失任何資料，但基礎的共用儲存體是單一失敗點，因�
  
 在叢集類型為 None 的可用性群組之外，可用性群組要求所有複本都屬於相同的基礎叢集，無論是 WSFC 或 Pacemaker。 這表示在上圖中，WSFC 會延伸到兩個不同的資料中心工作，這會增加複雜度。 無論平台 (Windows Server 或 Linux)。 跨距離延展叢集會增加複雜性。 SQL Server 2016 引進的分散式可用性群組，能讓可用性群組跨越在不同叢集上設定的可用性群組。 如此即可減少所有節點參與相同叢集的需求，使設定災害復原更為容易。 如需分散式可用性群組的詳細資訊，請參閱[分散式可用性群組](../database-engine/availability-groups/windows/distributed-availability-groups.md)。
 
-![分散式可用性群組](media/sql-server-ha-story/image11.png)
+![分散式可用性群組的圖表。](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>AlwaysOn 容錯移轉叢集執行個體
 
@@ -216,7 +216,7 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 分散式可用性群組的設計是用來跨越可用性群組組態，無論可用性群組下的這兩個基礎叢集是兩個不同的 WSFC、Linux 發行版本，或一個在 WSFC、一個在 Linux。 分散式可用性群組會是具有跨平台解決方案的主要方法。 分散式可用性群組也是移轉的主要解決方案，例如從 Windows Server 的 SQL Server 基礎結構轉換成 Linux 的，如果這是貴公司想要做的事。 如前所述，可用性群組，特別是分散式可用性群組，會將無法使用應用程式的時間降至最低。 跨 WSFC 和 Pacemaker 的分散式可用性群組範例如下所示。
 
-![分散式可用性群組](media/sql-server-ha-story/image9.png)
+![此圖表顯示跨 WSFC 和 Pacemaker 的分散式可用性群組。](media/sql-server-ha-story/image9.png)
  
 如果使用 None 叢集類型設定可用性群組，它可以跨 Windows Server 和 Linux，以及多個 Linux 發行版本。 因為這不是真正的高可用性組態，所以不應用於任務關鍵部署，但可用於讀取級別或移轉/升級案例。
 
@@ -233,7 +233,7 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 透過可用性群組調整可讀取的資料庫複本，首次引進是在 SQL Server 2016 的分散式可用性群組中。 這可讓公司不僅在當地有資料庫的唯讀複本，還可以最少量的組態在地區及全球擁有資料庫的唯讀複本，且因為在本地執行查詢，而減少網路流量和延遲。 每個可用性群組的主要複本皆可植入兩個其他可用性群組，即使它不是完整的讀取/寫入複本，因此每個分散式可用性群組最多可以支援 27 份可讀取的資料。 
 
-![分散式可用性群組](media/sql-server-ha-story/image11.png)
+![此圖表顯示與讀取級別相關的分散式可用性群組。](media/sql-server-ha-story/image11.png)
 
 從 SQL Server 2017 開始，便可建立近乎即時的唯讀解決方案，設定叢集類型為 None 的可用性群組。 如果目標是使用可用性群組取得可讀取的次要複本而不是可用性，這樣做會移除使用 WSFC 或 Pacemaker 的複雜性，並以簡單的部署方法提供可用性群組的可讀取優點。 
 

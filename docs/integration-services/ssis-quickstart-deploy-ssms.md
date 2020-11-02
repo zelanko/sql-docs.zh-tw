@@ -1,20 +1,22 @@
 ---
+title: 使用 SSMS 部署 SSIS 專案
 description: 使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案
-title: 使用 SSMS 部署 SSIS 專案 | Microsoft Docs
-ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.prod_service: integration-services
-ms.custom: ''
 ms.technology: integration-services
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47cce068cada1a40ec3fda76013ec428ef5d7e11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 05/21/2018
+ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195185"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344549"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案
 
@@ -48,8 +50,8 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 若要將專案部署到 Azure SQL Database，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]****，然後選取 [SQL 資料庫]**** 頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀]**** 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]**** 選項，請將滑鼠指標暫留在伺服器名稱上。 
+2. 從左側功能表中選取 [SQL 資料庫]  ，然後選取 [SQL 資料庫]  頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]  選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 
 ## <a name="authentication-methods-for-deployment"></a>適用於部署的驗證方法
@@ -74,40 +76,40 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 
-3. 按一下 [ **連接**]。 [物件總管] 視窗會在 SSMS 中開啟。 
+3. 按一下 [ **連接** ]。 [物件總管] 視窗會在 SSMS 中開啟。 
 
 4. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>啟動 [Integration Services 部署精靈]
-1. 在 [物件總管] 中，展開 [Integration Services 目錄]**** 節點和 [SSISDB]**** 節點之後，請展開資料夾。
+1. 在 [物件總管] 中，展開 [Integration Services 目錄]  節點和 [SSISDB]  節點之後，請展開資料夾。
 
-2.  選取 [專案]**** 節點。
+2.  選取 [專案]  節點。
 
-3.  以滑鼠右鍵按一下 [專案]**** 節點，然後選取 [部署專案]****。 即會開啟 [Integration Services 部署精靈]。 您可以從目前的目錄或檔案系統部署專案。
+3.  以滑鼠右鍵按一下 [專案]  節點，然後選取 [部署專案]  。 即會開啟 [Integration Services 部署精靈]。 您可以從目前的目錄或檔案系統部署專案。
 
 ## <a name="deploy-a-project-with-the-wizard"></a>使用精靈部署專案
-1. 在精靈的 [簡介]**** 頁面上，檢閱簡介。 按一下 [下一步]**** 開啟 [選取來源]**** 頁面。
+1. 在精靈的 [簡介]  頁面上，檢閱簡介。 按一下 [下一步]  開啟 [選取來源]  頁面。
 
-2. 在 [選取來源]**** 頁面上，選取要部署的現有 SSIS 專案。
-    -   若要在開發環境中建置專案來部署您建立的專案部署檔案，請選取 [專案部署檔案]****，並輸入 .ispac 檔案的路徑。
-    -   若要部署已部署到 SSIS 目錄資料庫中的專案，請選取 [Integration Services 目錄]****，然後輸入伺服器名稱以及該專案在目錄中的路徑。
-    按一下 [下一步] **** ，以查看 [選取目的地] **** 頁面。
+2. 在 [選取來源]  頁面上，選取要部署的現有 SSIS 專案。
+    -   若要在開發環境中建置專案來部署您建立的專案部署檔案，請選取 [專案部署檔案]  ，並輸入 .ispac 檔案的路徑。
+    -   若要部署已部署到 SSIS 目錄資料庫中的專案，請選取 [Integration Services 目錄]  ，然後輸入伺服器名稱以及該專案在目錄中的路徑。
+    按一下 [下一步]  ，以查看 [選取目的地]  頁面。
   
-3.  在 [選取目的地]**** 頁面上，選取專案目的地。
+3.  在 [選取目的地]  頁面上，選取專案目的地。
     -   輸入完整伺服器名稱。 如果目標伺服器是 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。
-    -   提供驗證資訊，然後選取 [連線]****。 請參閱此文章中的[部署中的驗證方法](#authentication-methods-for-deployment)。
-    -   然後選取 [瀏覽]**** 在 SSISDB 中選取目標資料夾。
-    -   然後選取 [下一步]**** 開啟 [檢閱]**** 頁面。 (只有在您選取 [連線]**** 之後，才會啟用 [下一步]**** 按鈕。)
+    -   提供驗證資訊，然後選取 [連線]  。 請參閱此文章中的[部署中的驗證方法](#authentication-methods-for-deployment)。
+    -   然後選取 [瀏覽]  在 SSISDB 中選取目標資料夾。
+    -   然後選取 [下一步]  開啟 [檢閱]  頁面。 (只有在您選取 [連線]  之後，才會啟用 [下一步]  按鈕。)
   
-4.  在 [檢閱]**** 頁面上，檢閱您選取的設定。
-    -   您可以按一下 **[上一步]**，或按一下左窗格中的任何步驟來變更您的選取項目。
-    -   按一下 [部署] **** 開始部署程序。
+4.  在 [檢閱]  頁面上，檢閱您選取的設定。
+    -   您可以按一下 **[上一步]** ，或按一下左窗格中的任何步驟來變更您的選取項目。
+    -   按一下 [部署]  開始部署程序。
 
-5.  如果您要部署到 Azure SQL Database 伺服器，[驗證]**** 頁面會開啟並檢查專案中的套件，尋找是否存在可能會導致套件無法在 Azure SSIS Integration Runtime 中如預期般執行的已知問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](lift-shift/ssis-azure-validate-packages.md)。
+5.  如果您要部署到 Azure SQL Database 伺服器，[驗證]  頁面會開啟並檢查專案中的套件，尋找是否存在可能會導致套件無法在 Azure SSIS Integration Runtime 中如預期般執行的已知問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](lift-shift/ssis-azure-validate-packages.md)。
 
-6.  完成部署程序之後，會開啟 [結果]**** 頁面。 此頁面會顯示每個動作執行成功或失敗。
-    -   如果動作失敗，請按一下 [結果]**** 資料行中的 [失敗]**** 以顯示錯誤的說明。
-    -   選擇性地按一下 [儲存報表]****，將結果儲存至 XML 檔案。
+6.  完成部署程序之後，會開啟 [結果]  頁面。 此頁面會顯示每個動作執行成功或失敗。
+    -   如果動作失敗，請按一下 [結果]  資料行中的 [失敗]  以顯示錯誤的說明。
+    -   選擇性地按一下 [儲存報表]  ，將結果儲存至 XML 檔案。
     -   按一下 [關閉] 結束精靈。
 
 ## <a name="next-steps"></a>後續步驟

@@ -28,12 +28,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e00e040e74faf9e37b58a258dfe93a84388be767
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 14ff75ebf7d8498ed35d5e2a0e5ef55cec14831c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497759"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679074"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ SET ARITHABORT ON
 > [!NOTE]  
 >  如果 SET ARITHABORT 和 SET ARITHIGNORE 都不是 ON，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 NULL，並在查詢執行之後，傳回一則警告訊息。  
   
-當 ANSI_WARNINGS 的值為 ON 且將資料庫相容性層級設為 90 或更高時，則不論其值設定為何，ARITHABORT 都會隱含為 ON。 如果資料庫的相容性層級設定為 80 或更低，ARITHABORT 選項就必須明確地設定為 ON。  
+當 ANSI_WARNINGS 的值為 ON 且將資料庫相容性層級設為 90 或更高時，不論其值設定為何，ARITHABORT 都會隱含為 ON。 如果資料庫的相容性層級設定為 80 或更低，ARITHABORT 選項就必須明確地設定為 ON。  
   
 進行運算式評估時，如果 SET ARITHABORT 為 OFF，而且 INSERT、UPDATE 或 DELETE 陳述式遇到算術、溢位、除以零或網域錯誤，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會插入或更新 NULL 值。 如果目標資料行不可為 Null，插入或更新動作就會失敗，而使用者會看見錯誤。  
   
@@ -118,35 +118,35 @@ INSERT INTO t1
 VALUES (255, 1);  
 GO  
   
-PRINT '*** SET ARITHABORT ON';  
+PRINT '**_ SET ARITHABORT ON';  
 GO  
 -- SET ARITHABORT ON and testing.  
 SET ARITHABORT ON;  
 GO  
   
-PRINT '*** Testing divide by zero during SELECT';  
+PRINT '_*_ Testing divide by zero during SELECT';  
 GO  
 SELECT a / b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Testing divide by zero during INSERT';  
+PRINT '_*_ Testing divide by zero during INSERT';  
 GO  
 INSERT INTO t2  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
   
-PRINT '*** Testing tinyint overflow';  
+PRINT '_*_ Testing tinyint overflow';  
 GO  
 INSERT INTO t2  
 SELECT a + b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Resulting data - should be no data';  
+PRINT '_*_ Resulting data - should be no data';  
 GO  
-SELECT *   
+SELECT _   
 FROM t2;  
 GO  
   
@@ -161,29 +161,29 @@ SET ARITHABORT OFF;
 GO  
   
 -- This works properly.  
-PRINT '*** Testing divide by zero during SELECT';  
+PRINT '**_ Testing divide by zero during SELECT';  
 GO  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
   
 -- This works as if SET ARITHABORT was ON.  
-PRINT '*** Testing divide by zero during INSERT';  
+PRINT '_*_ Testing divide by zero during INSERT';  
 GO  
 INSERT INTO t2  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
-PRINT '*** Testing tinyint overflow';  
+PRINT '_*_ Testing tinyint overflow';  
 GO  
 INSERT INTO t2  
 SELECT a + b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Resulting data - should be 0 rows';  
+PRINT '_*_ Resulting data - should be 0 rows';  
 GO  
-SELECT *   
+SELECT _   
 FROM t2;  
 GO  
   

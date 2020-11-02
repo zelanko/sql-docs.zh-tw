@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809094"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524063"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -106,17 +106,17 @@ GO
 
 1. 選取 [選取備份目的地] 對話方塊上的 [新增容器] 以啟動 [連線至 Microsoft 訂用帳戶] 視窗。 
 
-   ![備份目的地](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![[選取備份目的地] 對話方塊視窗的螢幕擷取畫面，其中已標註 [新增容器] 選項。](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. 選取 [登入] 以登入 Azure 入口網站，然後繼續完成登入程序。 
-1. 從下拉式清單選取您的**訂用帳戶**。 
-1. 從下拉式清單中選取您的**儲存體帳戶**。 
+1. 從下拉式清單選取您的 **訂用帳戶** 。 
+1. 從下拉式清單中選取您的 **儲存體帳戶** 。 
 1. 從下拉式清單選取您先前建立的容器。 
-1. 選取 [建立認證] 以產生您的*共用存取簽章 (SAS)* 。  **儲存此值，因為您將需要它才能進行還原。**
+1. 選取 [建立認證] 以產生您的 *共用存取簽章 (SAS)* 。  **儲存此值，因為您將需要它才能進行還原。**
 
    ![建立認證](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-1. 選取 [確定] 以關閉 [連線至 Microsoft 訂用帳戶] 視窗。 這會在 [選取備份目的地] 對話方塊上填入 *Azure 儲存體容器*值。 選取 [確定] 以選擇選取的儲存體容器，並關閉對話方塊。 
+1. 選取 [確定] 以關閉 [連線至 Microsoft 訂用帳戶] 視窗。 這會在 [選取備份目的地] 對話方塊上填入 *Azure 儲存體容器* 值。 選取 [確定] 以選擇選取的儲存體容器，並關閉對話方塊。 
 1. 目前，您可以跳到下一節中的步驟 4 以快速建立資料庫備份，或關閉 [備份資料庫] 精靈以改為使用 Transact-SQL 備份資料庫來繼續。 
 
 
@@ -206,7 +206,7 @@ GO
 
 1. 從下拉式清單選取容器，然後貼到您在建立認證時儲存的共用存取簽章 (SAS)。 
 
-   ![備份目的地](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+   ![[選取備份檔案位置] 對話方塊的螢幕擷取畫面，其中已填入 [共用存取簽章] 欄位。](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
 1. 選取 [確定] 以選取備份檔案位置。 
 1. 展開 [容器] 並選取您的備份檔案所在的容器。 

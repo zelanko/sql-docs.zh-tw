@@ -25,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0355e777d05ba9b8257f57a65999e6973c53b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458853"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497010"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88458853"
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,7 +284,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -456,7 +456,7 @@ GO
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_**
+        **_\* SQL 受控執行個體\*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -533,7 +533,7 @@ ALTER LOGIN login_name
 
 ### <a name="arguments-applicable-to-sql-and-azure-ad-logins"></a>適用於 SQL 和 Azure AD 登入的引數
 
-*login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 Azure AD 登入必須指定為 user@domain。 例如 john.smith@contoso.com，或指定為 Azure AD 群組或應用程式名稱。 針對 Azure AD 登入，*login_name* 必須對應至 master 資料庫中建立的現有 Azure AD 登入。
+*login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 Azure AD 登入必須指定為 user@domain。 例如 john.smith@contoso.com，或指定為 Azure AD 群組或應用程式名稱。 針對 Azure AD 登入， *login_name* 必須對應至 master 資料庫中建立的現有 Azure AD 登入。
 
 ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，且依然可以模擬。
 
@@ -590,7 +590,7 @@ DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。
 
 如果 CHECK_POLICY 設為 OFF，CHECK_EXPIRATION 就不可設為 ON。 具有這些選項組合的 ALTER LOGIN 陳述式會失敗。
 
-您無法使用含 DISABLE 引數的 ALTER_LOGIN 來拒絕存取 Windows 群組。 這是原廠設定。 例如，ALTER_LOGIN [*domain\group*] DISABLE 將傳回下列錯誤訊息：
+您無法使用含 DISABLE 引數的 ALTER_LOGIN 來拒絕存取 Windows 群組。 這是原廠設定。 例如，ALTER_LOGIN [ *domain\group* ] DISABLE 將傳回下列錯誤訊息：
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -655,7 +655,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 與更新版本，以及 Azure SQL 受控執行個體。
+**適用於** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 與更新版本，以及 Azure SQL 受控執行個體。
 
 ```sql
 ALTER LOGIN Mary5
@@ -685,7 +685,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 與更新版本，以及 Azure SQL 受控執行個體。
+**適用於** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 與更新版本，以及 Azure SQL 受控執行個體。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -721,7 +721,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -890,7 +890,7 @@ GO
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -972,7 +972,7 @@ UNLOCK 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] �
 
 如果 CHECK_POLICY 設為 OFF，CHECK_EXPIRATION 就不可設為 ON。 具有這些選項組合的 ALTER LOGIN 陳述式會失敗。
 
-您無法使用含 DISABLE 引數的 ALTER_LOGIN 來拒絕存取 Windows 群組。 這是原廠設定。 例如，ALTER_LOGIN [*domain\group*] DISABLE 將傳回下列錯誤訊息：
+您無法使用含 DISABLE 引數的 ALTER_LOGIN 來拒絕存取 Windows 群組。 這是原廠設定。 例如，ALTER_LOGIN [ *domain\group* ] DISABLE 將傳回下列錯誤訊息：
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN TestUser WITH

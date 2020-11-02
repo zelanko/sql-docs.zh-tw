@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123035"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496746"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL Database Projects 延伸模組 (預覽)
 
 SQL Database Projects 延伸模組 (預覽) 適用於在以專案為基礎的開發環境中開發 SQL 資料庫。 
+
 
 ## <a name="features"></a>特性
 
@@ -32,6 +33,10 @@ SQL Database Projects 延伸模組 (預覽) 適用於在以專案為基礎的開
 8. 部署單一專案。
 9. 從部署設定檔載入連線詳細資料 (SQL Windows 驗證) 與 SQLCMD 變數。
 
+觀看這段簡短的 10 分鐘影片，以取得 Azure Data Studio 中 SQL Database 專案延伸模組的簡介：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a name="install-the-sql-database-projects-extension"></a>安裝 SQL Database Projects 延伸模組
 
 1. 開啟延伸模組管理員以存取可用的延伸模組。  若要這樣做，請選取延伸模組圖示，或在 [檢視] 功能表中選取 [延伸模組]。
@@ -39,7 +44,7 @@ SQL Database Projects 延伸模組 (預覽) 適用於在以專案為基礎的開
 
    ![安裝擴充功能](media/sql-database-projects-extension/install-database-projects.png)
 
-3. 選取您想要的延伸模組並加以**安裝**。
+3. 選取您想要的延伸模組並加以 **安裝** 。
 4. 選取 [重新載入]，啟用此延伸模組 (只有當您第一次安裝延伸模組時才需要)。
 5. 從活動列選取檔案圖示，或從 [檢視] 功能表中選取 [總管]。 [Projects] \(專案\) 的新 Viewlet 隨即可供使用。
 

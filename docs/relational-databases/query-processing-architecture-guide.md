@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 62ea3f9484c232112317af9f0cb7bf8d8facde2f
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892438"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639021"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,9 +127,9 @@ GO
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
-> -  ***[預估的執行計畫](../relational-databases/performance/display-the-estimated-execution-plan.md)***，這是已編譯的計畫，且是由查詢最佳化工具所產生。        
-> -  ***[實際執行計畫](../relational-databases/performance/display-an-actual-execution-plan.md)***：這與編譯過的計畫相同，再加上其執行內容。 這包括執行完成之後可用的執行階段資訊，例如執行警告；在較新版的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中則是執行的經過時間與所使用的 CPU 時間。        
-> -  ***[即時查詢統計資料](../relational-databases/performance/live-query-statistics.md)***：這與編譯過的計畫相同，加上其執行內容。 這包括執行過程中的執行階段資訊，會每秒更新一次。 舉例來說，執行階段資訊包括流經運算子的實際資料列數。       
+> -  [估計執行計劃](../relational-databases/performance/display-the-estimated-execution-plan.md)*_，這是已編譯的計劃，且是由查詢最佳化工具所產生。        
+> -  [實際執行計劃](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ _*_ ，這與已編譯的計劃相同，再加上其執行內容。 這包括執行完成之後可用的執行階段資訊，例如執行警告；在較新版的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中則是執行的經過時間與所使用的 CPU 時間。        
+> -  [即時查詢統計資料](../relational-databases/performance/live-query-statistics.md) _*_ _*_ ，這與已編譯的計劃相同，再加上其執行內容。 這包括執行過程中的執行階段資訊，會每秒更新一次。 舉例來說，執行階段資訊包括流經運算子的實際資料列數。       
 
 ### <a name="processing-a-select-statement"></a>處理 SELECT 陳述式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理單一 SELECT 陳述式所使用的基本步驟如下： 
@@ -145,10 +145,10 @@ GO
 
 #### <a name="foldable-expressions"></a>可摺疊運算式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在下列運算式類型中使用常數摺疊：
-- 只包含常數的算術運算式，例如 1+1, 5/3*2。
+- 只包含常數的算術運算式，例如 1+1、5/3_2。
 - 只包含常數的邏輯運算式，例如 1=1 和 1>2 AND 3>4。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 視為可摺疊的內建函式，包括 `CAST` 和 `CONVERT`。 如果內建函數只包含其輸入，並且不含其他內容資訊 (例如 SET 選項、語言設定、資料庫選項和加密金鑰) 時，此內建函數通常是可摺疊。 非決定性函數不可摺疊。 決定性內建函數可摺疊，但有一些例外。
-- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
+- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
 
 > [!NOTE] 
 > 例外之一是大型物件類型。 若摺疊處理序的輸出類型為大型物件類型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)，或 XML)，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊此運算式。
@@ -426,8 +426,8 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有一個記憶體集區，可用來儲存執行計畫以及資料緩衝區。 配置給執行計畫或資料緩衝區的集區百分比，會依系統的狀態而動態調整。 記憶體集區中用來儲存執行計畫的那一部分，稱為計畫快取。
 
 計畫快取有兩個可用於存放經過編譯的計畫：
--  **物件計畫**快取存放區 (OBJCP) 用於持續性物件 (預存程序、函數和觸發程序) 相關的計畫。
--  **SQL 計畫**快取存放區 (SQLCP) 用於與自動參數化、動態或預查詢相關的計畫。
+-  **物件計畫** 快取存放區 (OBJCP) 用於持續性物件 (預存程序、函數和觸發程序) 相關的計畫。
+-  **SQL 計畫** 快取存放區 (SQLCP) 用於與自動參數化、動態或預查詢相關的計畫。
 
 下列查詢提供這兩個快取存放區的憶體使用量相關資訊：
 
@@ -438,8 +438,8 @@ WHERE name LIKE '%plans%';
 
 > [!NOTE]
 > 計畫快取有兩個額外存放區，但不會用於存放計畫：     
-> -  **繫結樹狀結構**快取存放區 (PHDR) 用於檢視、條件約束與預設值計畫編譯期間所使用的資料結構。 這些結構稱為繫結樹狀結構或 Algebrizer 樹狀結構。      
-> -  **擴充預存程序**快取存放區 (XPROC) 用於預先定義的系統程序，例如 `sp_executeSql`，或是使用 DLL 而不是 Transact-SQL 陳述式定義的 `xp_cmdshell`。 快取的結構只包含程序實作的函式名稱與 DLL 名稱。      
+> -  **繫結樹狀結構** 快取存放區 (PHDR) 用於檢視、條件約束與預設值計畫編譯期間所使用的資料結構。 這些結構稱為繫結樹狀結構或 Algebrizer 樹狀結構。      
+> -  **擴充預存程序** 快取存放區 (XPROC) 用於預先定義的系統程序，例如 `sp_executeSql`，或是使用 DLL 而不是 Transact-SQL 陳述式定義的 `xp_cmdshell`。 快取的結構只包含程序實作的函式名稱與 DLL 名稱。      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行計畫具有下列主要元件： 
 
@@ -540,17 +540,17 @@ GO
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>為相同的查詢快取多個計畫 
 查詢與執行計畫在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中都是獨一無二的，與指紋非常類似：
--  **查詢計畫雜湊**是針對指定查詢之執行計畫計算所得的二進位雜湊值，可用於專門識別類似的執行計畫。 
--  **查詢雜湊**是針對 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢文字計算所得的二進位雜湊值，可用於專門識別查詢。 
+-  **查詢計畫雜湊** 是針對指定查詢之執行計畫計算所得的二進位雜湊值，可用於專門識別類似的執行計畫。 
+-  **查詢雜湊** 是針對 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢文字計算所得的二進位雜湊值，可用於專門識別查詢。 
 
-您可以使用**計畫控制代碼**，從計畫快取中擷取經過編譯的計畫，但該代碼只是暫時性識別碼，只在計畫仍保留在快取中時，才會保持不變。 計畫控制代碼是從整個批次中經過編譯之計畫衍生而來的雜湊值。 即使在批次中有一或多個陳述式重新編譯，經過編譯之計畫的計畫控制代碼仍維持不變。
+您可以使用 **計畫控制代碼** ，從計畫快取中擷取經過編譯的計畫，但該代碼只是暫時性識別碼，只在計畫仍保留在快取中時，才會保持不變。 計畫控制代碼是從整個批次中經過編譯之計畫衍生而來的雜湊值。 即使在批次中有一或多個陳述式重新編譯，經過編譯之計畫的計畫控制代碼仍維持不變。
 
 > [!NOTE]
 > 若是針對批次編譯計畫，而不是針對單一陳述式，可以使用計畫控制代碼與陳述式位移，擷取批次中個別陳述式的計畫。     
 > `sys.dm_exec_requests` DMV 包含每一筆記錄的 `statement_start_offset` 與 `statement_end_offset` 資料行，而這些記錄會參考目前正在執行之批次或保存物件目前正在執行的陳述式。 如需詳細資訊，請參閱 [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。       
 > `sys.dm_exec_query_stats` DMV 也包含每一筆記錄的這些資料行，而這些記錄會參考批次中的陳述式位置或保存物件的位置。 如需詳細資訊，請參閱 [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)。     
 
-批次的實際 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字會儲存在計畫快取的個別記憶體空間中，稱為 **SQL 管理員**快取 (SQLMGR)。 您可以使用 **SQL 控制代碼**，從 SQL 管理員快取中擷取經過編譯之計畫的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字。此項文字是暫時性的識別碼，只在計畫快取中至少有一個計畫仍在參考該代碼時，才會保持不變。 SQL 控制代碼是從整個批次文字衍生而來的雜湊值，而且在每個批次都是獨一無二。
+批次的實際 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字會儲存在計畫快取的個別記憶體空間中，稱為 **SQL 管理員** 快取 (SQLMGR)。 您可以使用 **SQL 控制代碼** ，從 SQL 管理員快取中擷取經過編譯之計畫的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字。此項文字是暫時性的識別碼，只在計畫快取中至少有一個計畫仍在參考該代碼時，才會保持不變。 SQL 控制代碼是從整個批次文字衍生而來的雜湊值，而且在每個批次都是獨一無二。
 
 > [!NOTE]
 > 一如經過編譯的計畫般，每個批次的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字包括註解在內，均會加以儲存。 SQL 控制代碼包括整個批次文字的 MD5 雜湊值，而且在每個批次都是獨一無二。
@@ -695,7 +695,9 @@ sql_handle
 * 執行計畫經常被參考，所以它的成本永遠都不會變成零。 計畫依然在計畫快取中，而且除非有記憶體壓力且目前成本為零，否則不會移除計畫。
 * 系統會插入特定執行計畫，但在記憶體壓力存在之前，不會再次參考它。 由於特定計畫會以目前成本為零來初始化，所以當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 檢查執行計畫時，它將會看到目前成本為零，並從計畫快取中移除此計畫。 當記憶體壓力不存在時，特定執行計畫會留在計畫快取中，且目前成本為零。
 
-若要手動從快取中移除單一計畫或所有計畫，請使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 可清除範圍中之資料庫的程序 (計畫) 快取。
+若要手動從快取中移除單一計畫或所有計畫，請使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) 也可用來清除任何快取，包括計劃快取。 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 可清除範圍中之資料庫的程序 (計畫) 快取。 透過 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) 和 [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) 變更部分組態設定也會導致從計劃快取中移除方案。 您可在 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) 一文其＜備註＞一節中找到這些組態設定的清單。 這類組態變更會將下列資訊訊息記錄在錯誤記錄檔中：
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
 ### <a name="recompiling-execution-plans"></a>重新編譯執行計畫
 
@@ -1075,15 +1077,15 @@ WHERE ProductID = 63;
 ### <a name="degree-of-parallelism"></a><a name="DOP"></a> 平行處理原則的程度
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會針對平行查詢執行或索引資料定義語言 (DDL) 作業的每一個執行個體，自動偵測最佳程度的平行處理原則。 其作法是依據下列條件： 
 
-1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否**在搭載多個微處理器或 CPU 的電腦上執行**，例如對稱式微處理電腦 (SMP)。 具有一個以上 CPU 的電腦，才能使用平行查詢。 
+1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否 **在搭載多個微處理器或 CPU 的電腦上執行** ，例如對稱式微處理電腦 (SMP)。 具有一個以上 CPU 的電腦，才能使用平行查詢。 
 
-2. **是否有足夠的背景工作執行緒可以使用**。 每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
+2. **是否有足夠的背景工作執行緒可以使用** 。 每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
 
-3. **已執行之查詢或索引作業的類型**。 建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
+3. **已執行之查詢或索引作業的類型** 。 建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
 
-4. **要處理的資料列數量是否足夠**。 如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
+4. **要處理的資料列數量是否足夠** 。 如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
 
-5. **是否能使用目前的散發統計資料**。 如果無法使用平行處理原則的最高程度，則在放棄平行計畫前，會先考慮降低程度。 例如，當您在檢視中建立叢集索引時，因為叢集索引尚未存在，所以無法評估散發統計資料。 在此情況下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 無法為索引作業提供平行處理原則的最高程度。 然而，有些運算子 (如排序及掃描) 仍可從平行執行獲益。
+5. **是否能使用目前的散發統計資料** 。 如果無法使用平行處理原則的最高程度，則在放棄平行計畫前，會先考慮降低程度。 例如，當您在檢視中建立叢集索引時，因為叢集索引尚未存在，所以無法評估散發統計資料。 在此情況下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 無法為索引作業提供平行處理原則的最高程度。 然而，有些運算子 (如排序及掃描) 仍可從平行執行獲益。
 
 > [!NOTE]
 > 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer 和 Evaluation 版本才可使用平行索引作業。
@@ -1103,7 +1105,7 @@ WHERE ProductID = 63;
 #### <a name="overriding-degrees-of-parallelism"></a>覆寫平行處理原則的程度
 平行處理原則的程度設定平行計畫執行中所要使用的處理器數量。 此設定可在各種層級上設定：
 
-1.  伺服器層級：使用**最大平行處理原則程度 (MAXDOP)** [伺服器設定選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用對象：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+1.  伺服器層級：使用 **最大平行處理原則程度 (MAXDOP)** [伺服器設定選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用對象：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
     > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] 引入自動建議，於安裝過程設定 MAXDOP 伺服器設定選項時提供。 安裝程式使用者介面可讓您接受建議的設定，或輸入您自己的值。 如需詳細資訊，請參閱[資料庫引擎設定 - MaxDOP 頁面](../sql-server/install/instance-configuration.md#maxdop)。

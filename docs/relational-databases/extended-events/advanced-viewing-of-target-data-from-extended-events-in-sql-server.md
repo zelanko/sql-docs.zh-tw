@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869312"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523976"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
 
@@ -271,7 +271,7 @@ SSMS 顯示篩選如下︰
 - 「資料行值」  篩選。
 
 
-時間篩選與資料行篩選之間的關聯性是布林值 '*AND*'。
+時間篩選與資料行篩選之間的關聯性是布林值 ' *AND* '。
 
 
 ![[篩選] 對話方塊上的時間範圍和資料行篩選](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
@@ -290,7 +290,7 @@ SSMS 顯示篩選如下︰
 
 在擴充事件工具列上，[群組]  按鈕會啟動對話方塊，以用來將指定資料行的顯示資料群組在一起。 下一個螢幕擷取畫面顯示一個對話方塊，用來依 *name* 資料行進行群組。
 
-![[工具列] > [群組] 按鈕，然後是 [群組] 對話方塊](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![此螢幕擷取畫面顯示已選取 [群組] 的工具列和 [群組] 對話方塊。](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 群組達成之後，顯示會有新的外觀，如下所示。
 
@@ -301,13 +301,13 @@ SSMS 顯示篩選如下︰
 #### <a name="d42-aggregation"></a>D.4.2 彙總
 
 
-群組顯示的資料之後，即可繼續彙總其他資料行中的資料。  下一個螢幕擷取畫面顯示群組資料是透過 *count*進行彙總。
+群組顯示的資料之後，即可繼續彙總其他資料行中的資料。  下一個螢幕擷取畫面顯示群組資料是透過 *count* 進行彙總。
 
-![[工具列] > [彙總] 按鈕，然後是 [彙總] 對話方塊](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![此螢幕擷取畫面顯示已選取 [匯總] 的工具列和 [彙總] 對話方塊。](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 彙總達成之後，顯示會有新的外觀，如下所示。
 
-![[工具列] > [彙總] 按鈕，然後是 [彙總] 對話方塊](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![顯示已新增 COUNT (計數) 值的畫面其螢幕擷取畫面。](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991849"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439392"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,8 +85,8 @@ ms.locfileid: "88991849"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有兩種範圍類型︰ 
 
-* **制式**的範圍將由一個物件所擁有；範圍中的所有八個頁面只能被擁有的物件所使用。
-* **混合**的範圍最多可被八個物件所共用。 範圍中的 8 個分頁都可以由不同的物件所擁有。
+* **制式** 的範圍將由一個物件所擁有；範圍中的所有八個頁面只能被擁有的物件所使用。
+* **混合** 的範圍最多可被八個物件所共用。 範圍中的 8 個分頁都可以由不同的物件所擁有。
 
 ![統一與混合範圍](../relational-databases/media/extents.gif)
 
@@ -97,7 +97,7 @@ ms.locfileid: "88991849"
 > [!NOTE]
 > 最高到 (並包含) [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，追蹤旗標 1118 可以用來將預設配置變更為一律使用統一範圍。 如需此追蹤旗標的詳細資訊，請參閱 [DBCC TRACEON - 追蹤旗標](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，會針對 tempdb 自動啟用 TF 1118 所提供的功能。 對於使用者資料庫，此行為由 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 選項 (預設值設定為 OFF) 所控制，而且追蹤旗標 1118 沒有作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，會針對 tempdb 與所有使用者資料庫自動啟用 TF 1118 所提供的功能。 對於使用者資料庫，此行為由 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 選項 (預設值設定為 OFF) 所控制，而且追蹤旗標 1118 沒有作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，`sys.dm_db_database_page_allocations` 系統函數可以報告資料庫、資料表、索引與資料分割的分頁配置資訊。
 
@@ -182,7 +182,7 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 只在它無法在現有的範圍中找到一個擁有足夠空間來保存插入之資料列的頁面時，才會配置新的範圍給配置單位。 
 
-<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用**比例式填滿配置演算法**，從檔案群組中的可用範圍來配置範圍。 若在相同的檔案群組有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用 **比例式填滿配置演算法** ，從檔案群組中的可用範圍來配置範圍。 若在相同的檔案群組有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
 
 ## <a name="tracking-modified-extents"></a>追蹤修改的範圍 
 

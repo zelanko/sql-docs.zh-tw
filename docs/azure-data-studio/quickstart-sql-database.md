@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766437"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439292"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>快速入門：使用 Azure Data Studio 連線及查詢 Azure SQL 資料庫
 
@@ -39,13 +39,13 @@ ms.locfileid: "88766437"
 
 1. 第一次執行 Azure Data Studio 時，應該會開啟 [歡迎使用] 頁面。 如果您沒有看到 [歡迎使用] 頁面，請選取 [說明] > [歡迎使用]。 選取 [新增連線]，開啟 [連線] 窗格：
    
-   ![新增連線圖示](media/quickstart-sql-database/new-connection-icon.png)
+   ![顯示 [歡迎使用 Azure Delta Studio] 對話方塊的螢幕擷取畫面，其中已標註 [下一個連線] 選項。](media/quickstart-sql-database/new-connection-icon.png)
 
 2. 此文章使用 SQL 登入，但也支援 Windows 驗證。 使用 Azure SQL 伺服器的伺服器名稱、使用者名稱和密碼填入下列欄位：
 
    | 設定       | 建議的值 | 描述 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **伺服器名稱** | 完整伺服器名稱 | 如下所示：**servername.database.windows.net**。 |
+   | **伺服器名稱** | 完整伺服器名稱 | 如下所示： **servername.database.windows.net** 。 |
    | **驗證** | SQL 登入| 本教學課程使用 SQL 驗證。 |
    | **使用者名稱** | 伺服器系統管理員帳戶使用者名稱 | 用來建立伺服器之帳戶的使用者名稱。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶密碼 | 用來建立伺服器之帳戶的密碼。 |
@@ -53,7 +53,7 @@ ms.locfileid: "88766437"
    | **資料庫名稱** | 保留空白 | 您在這裡只會連線至伺服器。 |
    | **伺服器群組** | 選取 <Default> | 您可以將此欄位設定為您所建立的特定伺服器群組。 | 
 
-   ![新增連線圖示](media/quickstart-sql-database/new-connection-screen.png)  
+   ![[Azure Data Studio - 連線] 頁面的螢幕擷取畫面。](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. 選取 [連接]。
 

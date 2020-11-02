@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 858e479346231fdce6b41e402b0fd7e606a76bbd
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.openlocfilehash: 1472a8d7117fb45fc7f9d4adb04f690ed9662ea2
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570611"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412668"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 *data_type*  
-目標資料類型。 這包括 **xml**、**bigint** 和 **sql_variant**。 無法使用別名資料類型。
+目標資料類型。 這包括 **xml** 、 **bigint** 和 **sql_variant** 。 無法使用別名資料類型。
   
 *length*  
 可指定目標資料類型長度的選擇性整數，用於允許使用者指定長度的資料類型。 預設值是 30。
@@ -75,17 +75,17 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 指定 CONVERT 函式如何轉譯 *expression* 的整數運算式。 針對樣式值 NULL，會傳回 NULL。 *data_type* 可決定範圍。 
   
 ## <a name="return-types"></a>傳回類型
-傳回轉譯為 *data_type* 的 *expression*。
+傳回轉譯為 *data_type* 的 *expression* 。
   
 ## <a name="date-and-time-styles"></a>日期和時間樣式  
-針對日期或時間資料類型 *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，從日期和時間類型轉換成 **datetimeoffset** 時，唯一支援的樣式為 0 或 1。 所有其他轉換樣式都會傳回錯誤 9809。
+針對日期或時間資料類型 *expression* ， *style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，從日期和時間類型轉換成 **datetimeoffset** 時，唯一支援的樣式為 0 或 1。 所有其他轉換樣式都會傳回錯誤 9809。
   
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用科威特演算法來支援阿拉伯文樣式的日期格式。
   
 |不含世紀 (yy) (<sup>1</sup>)|含世紀 (yyyy)|標準|輸入/輸出 (<sup>3</sup>)|  
 |---|---|--|---|
-|-|**0** 或 **100** (<sup>1,</sup><sup>2</sup>)|datetime 和 smalldatetime 的預設值|mon dd yyyy hh:miAM (或 PM)|  
+|-|**0** 或 **100** ( <sup>1,</sup><sup>2</sup>)|datetime 和 smalldatetime 的預設值|mon dd yyyy hh:miAM (或 PM)|  
 |**1**|**101**|美式英文|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|  2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|英式英文/法文|  3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
@@ -94,24 +94,24 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mon yy<br /> 106 = dd mon yyyy|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
 |**8** 或 **24**|**108**|-|hh:mi:ss|  
-|-|**9** 或 **109** (<sup>1,</sup><sup>2</sup>)|預設值 + 毫秒|mon dd yyyy hh:mi:ss:mmmAM (或 PM)|  
+|-|**9** 或 **109** ( <sup>1,</sup><sup>2</sup>)|預設值 + 毫秒|mon dd yyyy hh:mi:ss:mmmAM (或 PM)|  
 |**10**|**110**|USA| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
 |**11**|**111**|日本| 11 = yy/mm/dd<br /> 111 = yyyy/mm/dd|  
 |**12**|**112**|ISO| 12 = yymmdd<br /> 112 = yyyymmdd|  
-|-|**13** 或 **113** (<sup>1,</sup><sup>2</sup>)|歐洲預設值 + 毫秒|dd mon yyyy hh:mi:ss:mmm (24 小時)|  
+|-|**13** 或 **113** ( <sup>1,</sup><sup>2</sup>)|歐洲預設值 + 毫秒|dd mon yyyy hh:mi:ss:mmm (24 小時)|  
 |**14**|**114**|-|hh:mi:ss:mmm (24 小時)|  
-|-|**20** 或 **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss (24 小時)|  
-|-|**21** 或 **25** 或 **121** (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 標準 (使用毫秒) 預設值|yyyy-mm-dd hh:mi:ss.mmm (24 小時)|  
+|-|**20** 或 **120** ( <sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss (24 小時)|  
+|-|**21** 或 **25** 或 **121** ( <sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 標準 (使用毫秒) 預設值|yyyy-mm-dd hh:mi:ss.mmm (24 小時)|  
 |**22**|-|美式英文| mm/dd/yy hh:mi:ss AM (或 PM)|
 |-|**23**|ISO8601|yyyy-mm-dd|
-|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (無空格)<br /><br /> **注意：** 針對毫秒 (mmm) 值 0，不會顯示毫秒十進位小數值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。| 
-|-|**127**(<sup>6, 7</sup>)|具有時區 Z 的 ISO8601。|yyyy-mm-ddThh:mi:ss.mmmZ (無空格)<br /><br /> **注意：** 針對毫秒 (mmm) 值 0，不會顯示毫秒十進位值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
-|-|**130** (<sup>1,</sup><sup>2</sup>)|回曆 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 在此樣式中，**mon** 代表完整月份名稱的多 Token 回曆 Unicode 表示法。 這個值無法在 SSMS 的預設美國安裝中正確呈現。|  
-|-|**131** (<sup>2</sup>)|回曆 (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
+|-|**126** ( <sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (無空格)<br /><br /> **注意：** 針對毫秒 (mmm) 值 0，不會顯示毫秒十進位小數值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。| 
+|-|**127** ( <sup>6, 7</sup>)|具有時區 Z 的 ISO8601。|yyyy-MM-ddThh:mm:ss.fffZ (無空格)<br /><br /> **注意：** 針對毫秒 (mmm) 值 0，不會顯示毫秒十進位值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
+|-|**130** ( <sup>1,</sup><sup>2</sup>)|回曆 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 在此樣式中， **mon** 代表完整月份名稱的多 Token 回曆 Unicode 表示法。 這個值無法在 SSMS 的預設美國安裝中正確呈現。|  
+|-|**131** ( <sup>2</sup>)|回曆 (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> 這些樣式值會傳回不具決定性的結果。 其中包括所有 (yy) (不含世紀) 樣式和 (yyyy) (含世紀) 樣式的子集。
   
-<sup>2</sup> 預設值 (**0** 或 **100**、**9** 或 **109**、**13** 或 **113**、**20** 或 **120**、**23** 和 **21** 或 **25** 或 **121**) 一律會傳回世紀 (yyyy)。
+<sup>2</sup> 預設值 ( **0** 或 **100** 、 **9** 或 **109** 、 **13** 或 **113** 、 **20** 或 **120** 、 **23** 和 **21** 或 **25** 或 **121** ) 一律會傳回世紀 (yyyy)。
 
 <sup>3</sup> 當轉換成 **datetime** 時輸入；當轉換成字元資料時輸出。
 
@@ -131,7 +131,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 使用包含時間的樣式將字元資料轉換成 **datetimeoffset** 時，會將時區位移附加至結果。
   
 ## <a name="float-and-real-styles"></a>float 和 real 樣式
-針對 **float** 或 **real** *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
+針對 **float** 或 **real** *expression* ， *style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
   
 |值|輸出|  
 |---|---|
@@ -142,7 +142,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**126、128、129**|基於舊版原因而納入；未來版本可能會取代這些值。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 樣式
-針對 **money** 或 **smallmoney** *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
+針對 **money** 或 **smallmoney** *expression* ， *style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
   
 |值|輸出|  
 |---|---|
@@ -152,7 +152,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**126**|轉換成 char(n) 或 varchar(n) 時，相當於樣式 2|  
   
 ## <a name="xml-styles"></a>xml 樣式
-針對 **xml** *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
+針對 **xml** *expression* ， *style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
   
 |值|輸出|  
 |---|---|
@@ -162,15 +162,15 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**3**|保留無意義的空白字元，並啟用有限的內部 DTD 子集處理。|  
   
 ## <a name="binary-styles"></a>二進位樣式
-針對 **binary(n)** 、**char(n)** 、**varbinary(n)** 或 **varchar(n)** *expression*，*style* 可以具有下表中所顯示的其中一個值。 此表中未列出的樣式值將傳回錯誤。
+針對 **binary(n)** 、 **char(n)** 、 **varbinary(n)** 或 **varchar(n)** *expression* ， *style* 可以具有下表中所顯示的其中一個值。 此表中未列出的樣式值將傳回錯誤。
   
 |值|輸出|  
 |---|---|
-|**0** (預設)|將 ASCII 字元轉譯成二進位位元組，或將二進位位元組轉譯成 ASCII 字元。 每個字元或位元組都會以 1:1 的方式轉換。<br /><br /> 針對二進位 *data_type*，會在結果的左側新增字元 0x。|  
-|**1**、**2**|針對二進位 *data_type*，運算式必須是字元運算式。 *expression* 必須具有**偶數**個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設為 1，則運算式的前兩個字元必須是 0x。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type*，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 字元 0x 會新增到 *style* 2 之已轉換結果的左側。|  
+|**0** (預設)|將 ASCII 字元轉譯成二進位位元組，或將二進位位元組轉譯成 ASCII 字元。 每個字元或位元組都會以 1:1 的方式轉換。<br /><br /> 針對二進位 *data_type* ，會在結果的左側新增字元 0x。|  
+|**1** 、 **2**|針對二進位 *data_type* ，運算式必須是字元運算式。 *expression* 必須具有 **偶數** 個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設為 1，則運算式的前兩個字元必須是 0x。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type* ，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 字元 0x 會新增到 *style* 2 之已轉換結果的左側。|  
   
 ## <a name="implicit-conversions"></a>隱含的轉換
-隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint**、**sql_variant** 和 **xml**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
+隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint** 、 **sql_variant** 和 **xml** 。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant** 。
   
 > [!TIP]  
 > [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)提供此圖表，可下載為 PNG 檔案。  
@@ -186,26 +186,26 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 > [!TIP]
 > 本節稍後會有[轉換中資料類型優先順序效果](#precedence-example)的實際範例。
 
-當您在 **datetimeoffset** 與字元類型 **char**、**nchar**、**nvarchar** 和 **varchar** 之間轉換時，轉換過之時區位移部分的 HH 和 MM 應該永遠是兩位數。 例如 -08:00。
+當您在 **datetimeoffset** 與字元類型 **char** 、 **nchar** 、 **nvarchar** 和 **varchar** 之間轉換時，轉換過之時區位移部分的 HH 和 MM 應該永遠是兩位數。 例如 -08:00。
   
 > [!NOTE]   
 > 由於 Unicode 資料使用的位元組數目一律是偶數，因此，在 **binary** 或 **varbinary** 和 Unicode 支援的資料類型之間轉換時，要特別小心。 例如，下列轉換不會傳回十六進位值 41。 它會傳回十六進位值 4100：`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
   
 ## <a name="large-value-data-types"></a>大數值資料類型
-大數值資料類型具有與小數值資料類型相同的隱含和明確轉換行為，明確地說，就是 **nvarchar**、**varbinary** 和 **varchar** 資料類型。 不過，請考慮下列指導方針：
+大數值資料類型具有與小數值資料類型相同的隱含和明確轉換行為，明確地說，就是 **nvarchar** 、 **varbinary** 和 **varchar** 資料類型。 不過，請考慮下列指導方針：
 -   從 **image** 轉換成 **varbinary(max)** (反之亦然) 是一種隱含轉換，而 **text** 與 **varchar(max)** 以及 **ntext** 與 **nvarchar(max)** 之間的轉換亦是如此。  
--   從大數值資料類型 (如 **varchar(max)** ) 轉換成較小的對應資料類型 (如 **varchar**) 是隱含的轉換，但如果大數值的大小超過較小資料類型的指定長度，則會予以截斷。  
--   從 **nvarchar**、**varbinary** 或 **varchar** 轉換成其對應的大數值資料類型是透過隱含的方式進行。  
+-   從大數值資料類型 (如 **varchar(max)** ) 轉換成較小的對應資料類型 (如 **varchar** ) 是隱含的轉換，但如果大數值的大小超過較小資料類型的指定長度，則會予以截斷。  
+-   從 **nvarchar** 、 **varbinary** 或 **varchar** 轉換成其對應的大數值資料類型是透過隱含的方式進行。  
 -   從 **sql_variant** 資料類型轉換為大數值資料類型為明確的轉換。  
 -   大數值資料類型無法轉換成 **sql_variant** 資料類型。  
   
-如需從 **xml** 資料類型轉換的詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。
+如需從 **xml** 資料類型轉換的詳細資訊，請參閱 [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。
   
 ## <a name="xml-data-type"></a>xml 資料型別
-當您將 **xml** 資料類型明確或隱含地轉換成字串或二進位資料類型時，**xml** 資料類型的內容會根據定義的一組規則進行序列化。 如需如需這些規則的相關資訊，請參閱[定義 XML 資料的序列化](../../relational-databases/xml/define-the-serialization-of-xml-data.md)。 如需從其他資料類型轉換成 **xml** 資料類型的資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。
+當您將 **xml** 資料類型明確或隱含地轉換成字串或二進位資料類型時， **xml** 資料類型的內容會根據定義的一組規則進行序列化。 如需如需這些規則的相關資訊，請參閱[定義 XML 資料的序列化](../../relational-databases/xml/define-the-serialization-of-xml-data.md)。 如需從其他資料類型轉換成 **xml** 資料類型的資訊，請參閱 [建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。
   
 ## <a name="text-and-image-data-types"></a>text 和 image 資料類型
-**text** 和 **image** 資料類型不支援自動資料類型轉換。 您可以將 **text** 資料明確地轉換成字元資料，並將 **image** 資料轉換成 **binary** 或 **varbinary**，但最大長度是 8000 位元組。 如果您嘗試進行不正確的轉換 (例如，將包含字母的字元運算式轉換成 **int**)，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息。
+**text** 和 **image** 資料類型不支援自動資料類型轉換。 您可以將 **text** 資料明確地轉換成字元資料，並將 **image** 資料轉換成 **binary** 或 **varbinary** ，但最大長度是 8000 位元組。 如果您嘗試進行不正確的轉換 (例如，將包含字母的字元運算式轉換成 **int** )，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回一則錯誤訊息。
   
 ## <a name="output-collation"></a>輸出定序  
 如果 CAST 或 CONVERT 函式輸出字元字串，並且收到字元字串輸入，則輸出的定序和定序標籤會與輸入相同。 如果輸入不是字元字串，輸出會使用預設的資料庫定序及強制預設的定序標籤。 如需詳細資訊，請參閱[定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)。
@@ -215,15 +215,15 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>截斷和捨入結果
-將字元或二進位運算式 (**binary**、**char**、**nchar**、**nvarchar**、**varbinary** 或 **varchar**) 轉換成不同資料類型的運算式時，轉換作業可能會截斷輸出資料、僅局部顯示輸出資料，或傳回錯誤。 如果結果太短無法顯示，則會發生這些情況。 會截斷轉換成 **binary**、**char**、**nchar**、**nvarchar**、**varbinary** 或 **varchar** (下表中所顯示的轉換除外)。
+將字元或二進位運算式 ( **binary** 、 **char** 、 **nchar** 、 **nvarchar** 、 **varbinary** 或 **varchar** ) 轉換成不同資料類型的運算式時，轉換作業可能會截斷輸出資料、僅局部顯示輸出資料，或傳回錯誤。 如果結果太短無法顯示，則會發生這些情況。 會截斷轉換成 **binary** 、 **char** 、 **nchar** 、 **nvarchar** 、 **varbinary** 或 **varchar** (下表中所顯示的轉換除外)。
   
 |來源資料類型|目標資料類型|結果|  
 |---|---|---|
-|**int**、**smallint** 或 **tinyint**|**char**|*|  
+|**int** 、 **smallint** 或 **tinyint**|**char**|*|  
 ||**varchar**|*|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
-|**money**、**smallmoney**、**numeric**、**decimal**、**float** 或 **real**|**char**|E|  
+|**money** 、 **smallmoney** 、 **numeric** 、 **decimal** 、 **float** 或 **real**|**char**|E|  
 ||**varchar**|E|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
@@ -279,7 +279,7 @@ Gail        Erickson      Ms.    *
 |**money**|**int**|Round|  
 |**money**|**numeric**|Round|  
 |**float**|**int**|Truncate|  
-|**float**|**numeric**|Round<br /><br /> 如果您將使用科學記號標記法的 **float** 值轉換成 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 有效位數超過 17 的任何值都會捨入為零。|  
+|**float**|**numeric**|Round<br /><br /> 如果您將使用科學記號標記法的 **float** 值轉換成 **decimal** 或 **numeric** ，就會限制為只有 17 個有效位數的值。 有效位數超過 17 的任何值都會捨入為零。|  
 |**float**|**datetime**|Round|  
 |**datetime**|**int**|Round|  
   
@@ -301,7 +301,7 @@ SELECT  CAST(10.6496 AS INT) as trunc1,
   
 `SELECT CAST(10.3496847 AS money);`
   
-將非數值 **char**、**nchar**、**nvarchar** 或 **varchar** 資料轉換成 **decimal**、**float**、**int** 或 **numeric** 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤訊息。 當空字串 (" ") 被轉換為 **numeric** 或 **decimal** 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會傳回錯誤。
+將非數值 **char** 、 **nchar** 、 **nvarchar** 或 **varchar** 資料轉換成 **decimal** 、 **float** 、 **int** 或 **numeric** 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤訊息。 當空字串 (" ") 被轉換為 **numeric** 或 **decimal** 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會傳回錯誤。
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>某些日期時間轉換不具決定性
 
@@ -329,9 +329,9 @@ SELECT CAST (@x AS NVARCHAR(3));
 使用 SC 定序時，`CONVERT` 的行為類似 `CAST` 的行為。 如需詳細資訊，請參閱[定序和 Unicode 支援 - 增補字元](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)。
   
 ## <a name="compatibility-support"></a>相容性支援
-在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，**time** 和 **datetime2** 資料類型上之 CAST 和 CONVERT 作業的預設樣式為 121，但任一類型用於計算資料行運算式時除外。 若為計算資料行，預設樣式為 0。 當您建立計算資料行、將它們用於包含自動參數化的查詢或用於條件約束定義時，這種行為就會影響計算資料行。
+在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中， **time** 和 **datetime2** 資料類型上之 CAST 和 CONVERT 作業的預設樣式為 121，但任一類型用於計算資料行運算式時除外。 若為計算資料行，預設樣式為 0。 當您建立計算資料行、將它們用於包含自動參數化的查詢或用於條件約束定義時，這種行為就會影響計算資料行。
   
-在[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)高於及等於 110 的情況下，**time** 和 **datetime2** 資料類型上的 CAST 和 CONVERT 作業一律具有 121 作為預設樣式。 如果查詢仰賴舊的行為，則請使用低於 110 的相容性層級，或在受影響的查詢中明確指定 0 樣式。
+在 [相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)高於及等於 110 的情況下， **time** 和 **datetime2** 資料類型上的 CAST 和 CONVERT 作業一律具有 121 作為預設樣式。 如果查詢仰賴舊的行為，則請使用低於 110 的相容性層級，或在受影響的查詢中明確指定 0 樣式。
 
 |[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)值|CAST 和 CONVERT 的預設樣式<sup>1</sup>|計算資料行的預設樣式|  
 |------------|------------|------------|
@@ -767,7 +767,7 @@ SELECT @notastring + '1'
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. 使用 CAST 和 CONVERT  
-此範例會擷取定價第一位數是 `3` 的產品名稱，而且會將這些產品的 `ListPrice` 轉換成 **int**。其會使用 `AdventureWorksDW2016` 資料庫。
+此範例會擷取定價第一位數是 `3` 的產品名稱，而且會將這些產品的 `ListPrice` 轉換成 **int** 。其會使用 `AdventureWorksDW2016` 資料庫。
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  

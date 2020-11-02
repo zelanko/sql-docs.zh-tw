@@ -26,31 +26,31 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227202"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344909"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   從資料庫中擷取資料列，並可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一個或多個資料表選取一個或多個資料列或資料行。 SELECT 陳述式的完整語法很複雜，但主要子句可摘要如下：  
   
-[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
+[ WITH { [[ XMLNAMESPACES ,]](../../t-sql/xml/with-xmlnamespaces.md) [[ \<common_table_expression> ]](../../t-sql/queries/with-common-table-expression-transact-sql.md) } ]
   
- SELECT *select_list* [ INTO *new_table* ]  
+ [SELECT *select_list*](../../t-sql/queries/select-clause-transact-sql.md) [ [INTO *new_table*](../../t-sql/queries/select-into-clause-transact-sql.md) ]  
   
- [ FROM *table_source* ] [ WHERE *search_condition* ]  
+ [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
   
- [ GROUP BY *group_by_expression* ]  
+ [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
   
- [ HAVING *search_condition* ]  
+ [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ ORDER BY *order_expression* [ ASC | DESC ] ]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
- 您可以在查詢之間使用 UNION、EXCEPT 和 INTERSECT 運算子來比較它們的結果，或將它們的結果結合成單一結果集。  
+ 您可在查詢之間使用 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)、[EXCEPT 及 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) 運算子來將其結果結合成單一結果集或加以比較。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,7 @@ ms.locfileid: "91227202"
 <SELECT statement> ::=    
     [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> [,...n] ] } ]  
     <query_expression>   
-    [ ORDER BY { order_by_expression | column_position [ ASC | DESC ] }   
-  [ ,...n ] ]   
+    [ ORDER BY <order_by_expression> ] 
     [ <FOR Clause>]   
     [ OPTION ( <query_hint> [ ,...n ] ) ]   
 <query_expression> ::=   
@@ -188,7 +187,7 @@ SELECT <select_criteria>
 > [!WARNING]
 > 通常會按照上述順序。 不過，在一些不常見的情況下，順序可能會有不同。
 >
-> 例如，假設您在檢視表上有叢集索引，而該檢視表排除某些資料表資料列，且檢視表的 SELECT 資料行清單使用 CONVERT 將資料類型從 *varchar* 變更為 *integer*。 在此情況下，CONVERT 的執行順序可能會在 WHERE 子句之前。 這確實是不常見的情況。 如果在您的案例中順序相當重要，通常可以修改您的檢視表來避免順序不同。 
+> 例如，假設您在檢視表上有叢集索引，而該檢視表排除某些資料表資料列，且檢視表的 SELECT 資料行清單使用 CONVERT 將資料類型從 *varchar* 變更為 *integer* 。 在此情況下，CONVERT 的執行順序可能會在 WHERE 子句之前。 這確實是不常見的情況。 如果在您的案例中順序相當重要，通常可以修改您的檢視表來避免順序不同。 
 
 ## <a name="permissions"></a>權限  
  選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 或是需要 **db_datareader** 或 **db_owner** 固定資料庫角色中的成員資格，或 **sysadmin** 固定伺服器角色中的成員資格。 使用 **SELECTINTO** 來建立新資料表也需要 **CREATE TABLE** 權限，以及擁有新資料表結構描述上的 **ALTERSCHEMA** 權限。  

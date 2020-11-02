@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727591"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678920"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -122,7 +122,7 @@ Java 組建架構 (32/64 位元) 應該符合要使用的 SSIS 執行階段架�
 9. 選取 [確定]  以關閉 [系統內容]  對話方塊。
 
 > [!TIP]
-> 如果您使用 Parquet 格式並遇到錯誤，指出「叫用 Java 時發生錯誤，訊息:**java.lang.OutOfMemoryError:Java heap space**」，您可以新增環境變數 *`_JAVA_OPTIONS`* ，以調整 JVM 的最小/最大堆積大小。
+> 如果您使用 Parquet 格式並遇到錯誤，指出「叫用 Java 時發生錯誤，訊息: **java.lang.OutOfMemoryError:Java heap space** 」，您可以新增環境變數 *`_JAVA_OPTIONS`* ，以調整 JVM 的最小/最大堆積大小。
 >
 >![JVM 堆積](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> 如果您使用 Parquet 格式並遇到錯誤，指出「叫用 Java 時發生錯誤，訊息:**java.lang.OutOfMemoryError:Java heap space**」，您可以在 *`main.cmd`* 中新增命令，以調整 JVM 的最小/最大堆積大小。 範例：
+> 如果您使用 Parquet 格式並遇到錯誤，指出「叫用 Java 時發生錯誤，訊息: **java.lang.OutOfMemoryError:Java heap space** 」，您可以在 *`main.cmd`* 中新增命令，以調整 JVM 的最小/最大堆積大小。 範例：
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
@@ -180,18 +180,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  使用 Azure HDInsight Blob 下載工作，從 Azure Blob 儲存體下載 Pig/登錄區輸出資料。
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![顯示 SSIS Azure 連接器巨量資料案例的螢幕擷取畫面。](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>案例：管理雲端中的資料
  您可以使用 SSIS 封裝中的 Azure Blob 目的地，將輸出資料寫入 Azure Blob 儲存體，或者使用 Azure Blob 來源，從 Azure Blob 儲存體讀取資料。
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![顯示從 OLE DB 來源到 Azure Blob 目的地的資料流程螢幕擷取畫面。](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![顯示從 Azure Blob 來源到 OLE DB 目的地的資料流程螢幕擷取畫面。](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  您可以搭配 Azure Blob 列舉程式使用 Foreach 迴圈容器，來處理多個 Bob 檔案中的資料。
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![顯示控制流程 Foreach 迴圈容器的螢幕擷取畫面。](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>版本資訊
 

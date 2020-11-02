@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: a70ae767aa0f9ed079b616402f3857e03fc3d9dc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867832"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679058"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867832"
    
  下圖比較使用 Azure 金鑰保存庫系統的傳統服務管理金鑰階層。  
   
- ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+ ![比較傳統服務管理金鑰階層與 Azure Key Vault 系統的圖表。](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
   
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器是作為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與 Azure 金鑰保存庫之間的橋接器，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以運用 Azure 金鑰保存庫服務的延展性、高效能和高可用性。 下圖代表金鑰階層架構在具有 Azure 金鑰保存庫和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的 EKM 提供者架構中的運作方式。  

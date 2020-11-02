@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723499"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496908"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -64,7 +64,7 @@ ms.locfileid: "91723499"
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -176,13 +176,13 @@ CREATE DATABASE database_snapshot_name
 
 *database_name* 這是新資料庫的名稱。 資料庫名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。
 
-除非沒有指定記錄檔的邏輯名稱，否則 *database_name* 最多可有 128 個字元。 如果未指定邏輯記錄檔名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會就藉由在 *database_name* 附加後置詞，來產生記錄檔的 *logical_file_name* 和 *os_file_name*。 這會將 *database_name* 限制為 123 個字元，使所產生的邏輯檔案名稱不超過 128 個字元。
+除非沒有指定記錄檔的邏輯名稱，否則 *database_name* 最多可有 128 個字元。 如果未指定邏輯記錄檔名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會就藉由在 *database_name* 附加後置詞，來產生記錄檔的 *logical_file_name* 和 *os_file_name* 。 這會將 *database_name* 限制為 123 個字元，使所產生的邏輯檔案名稱不超過 128 個字元。
 
-如果未指定資料檔案名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用 *database_name* 同時作為 *logical_file_name* 和 *os_file_name*。 預設路徑是從登錄取得。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [伺服器屬性] ([資料庫設定] 頁面)來變更預設路徑。 變更預設路徑需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+如果未指定資料檔案名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用 *database_name* 同時作為 *logical_file_name* 和 *os_file_name* 。 預設路徑是從登錄取得。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [伺服器屬性] ([資料庫設定] 頁面)來變更預設路徑。 變更預設路徑需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
+**適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
 指定資料庫的內含項目狀態。 NONE = 非自主資料庫 PARTIAL = 部分自主資料庫
 
@@ -208,7 +208,7 @@ COLLATE *collation_name* 指定資料庫的預設定序。 定序名稱可以是
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 指定資料庫層級的非交易式 FILESTREAM 存取層級。
 
@@ -219,7 +219,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於**：[!INCLUDE
 |FULL|已啟用 FILESTREAM FileTables 的完整非交易式存取。|
 
 DIRECTORY_NAME = \<directory_name>
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本
+**適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本
 
 Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有 Database_Directory 名稱之間，此名稱必須是唯一的。 不論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序設定為何，唯一性比較不區分大小寫。 在此資料庫中建立 FileTable 之前，應該先設定這個選項。
 
@@ -227,25 +227,25 @@ Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
+  **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱[設定 default full-text language 伺服器設定選項](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
+  **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱[設定 default language 伺服器設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
+  **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱[設定 nested triggers 伺服器設定選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
+  **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱 [transform noise words 伺服器設定選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。
 
@@ -276,7 +276,7 @@ Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  指定此選項時，會在位於存放裝置類別記憶體 (NVDIMM-N 非揮發性儲存體) 所支援磁碟裝置上的磁碟區，建立交易記錄緩衝區，也就是持續記錄緩衝區。 如需詳細資訊，請參閱[使用存放裝置類別記憶體加速交易認可延遲](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) \(英文\)。 **適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和更新版本。
+  指定此選項時，會在位於存放裝置類別記憶體 (NVDIMM-N 非揮發性儲存體) 所支援磁碟裝置上的磁碟區，建立交易記錄緩衝區，也就是持續記錄緩衝區。 如需詳細資訊，請參閱[使用存放裝置類別記憶體加速交易認可延遲](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) \(英文\)。 **適用於** ：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和更新版本。
 
 FOR ATTACH [ WITH \< attach_database_option > ] 指定資料庫是藉由[附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md)一組現有的作業系統檔案所建立。 必須有一個指定主要檔案的 \<filespec> 項目。 任何檔案如果其路徑與第一次建立資料庫或最後一次附加資料庫時的路徑不同，則其 \<filespec> 項目是唯一所需的其他 <filespec> 項目。 您必須針對這些檔案指定 \<filespec> 項目。
 
@@ -315,14 +315,14 @@ ERROR_BROKER_CONVERSATIONS 結束所有交談，並顯示一則指出已附加�
 - 如果您將資料庫附加至不同的伺服器執行個體，則不論版本為何，都必須在附加作業完成後，執行 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 來移除複寫。
 
 > [!NOTE]
-> 附加作業可搭配 **Vardecimal** 儲存格式運作，但 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必須至少升級至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2。 您不能將使用 Vardecimal 儲存格式的資料庫附加到舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關 **Vardecimal** 儲存格式的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。
+> 附加作業可搭配 **Vardecimal** 儲存格式運作，但 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必須至少升級至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2。 您不能將使用 Vardecimal 儲存格式的資料庫附加到舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關 **Vardecimal** 儲存格式的詳細資訊，請參閱 [資料壓縮](../../relational-databases/data-compression/data-compression.md)。
 
 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。 如需如何使用附加來升級資料庫的資訊，請參閱[使用卸離與附加來升級資料庫](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)。
 
 > [!IMPORTANT]
 > 建議您不要附加來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，同時也檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。
 > [!NOTE]
-> 附加資料庫時，**TRUSTWORTHY** 和 **DB_CHAINING** 選項沒有任何作用。
+> 附加資料庫時， **TRUSTWORTHY** 和 **DB_CHAINING** 選項沒有任何作用。
 
 FOR ATTACH_REBUILD_LOG 指定資料庫是藉由附加一組現有的作業系統檔案所建立。 這個選項只適用於讀取/寫入資料庫。 必須要有一個 *\<filespec>* 項目用來指定主要檔案。 如果遺漏一個或多個交易記錄檔，記錄檔就會重建。 ATTACH_REBUILD_LOG 會自動建立新的 1 MB 記錄檔。 這個檔案會放置在預設的記錄檔位置中。 如需此位置的資訊，請參閱[檢視或變更資料及記錄檔的預設位置 - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)。
 
@@ -347,7 +347,7 @@ FOR ATTACH_REBUILD_LOG 需要下列項目：
 
 NAME *logical_file_name* 指定檔案的邏輯名稱。 除非指定其中一個 FOR ATTACH 子句，否則指定 FILENAME 時，NAME 是必要的。 FILESTREAM 檔案群組不能命名為 PRIMARY。
 
-*logical_file_name* 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。 *Logical_file_name* 在資料庫中必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。
+*logical_file_name* 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。 *Logical_file_name* 在資料庫中必須是唯一的，且必須符合 [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。
 
 FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** } 指定作業系統 (實體) 檔案名稱。
 
@@ -355,7 +355,7 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** } 指�
 
 當指定檔案的 UNC 路徑時，可以設定 SIZE、MAXSIZE 和 FILEGROWTH 參數。
 
-如果檔案在原始磁碟分割中，*os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區上只能建立一個資料檔案。
+如果檔案在原始磁碟分割中， *os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區上只能建立一個資料檔案。
 
 除非檔案是唯讀次要檔案，或者，資料庫是唯讀的，否則資料檔案不應該放在壓縮的檔案系統中。 記錄檔永遠不應放在壓縮的檔案系統中。
 
@@ -377,7 +377,7 @@ SIZE *size* 指定檔案的大小。
 
 MAXSIZE *max_size* 指定檔案所能成長的大小上限。 將 *os_file_name* 指定為 UNC 路徑時，不能指定 MAXSIZE。
 
-*max_size* 這是檔案大小上限。 可以使用 KB、MB、GB 及 TB 後置詞。 預設值是 MB。 請指定一個整數，不包括小數點。 如果未指定 *max_size*，檔案就會成長到磁碟已滿為止。 *Max_size* 是一個整數值。 如果是大於 2147483647 的值，請使用較大的單位。
+*max_size* 這是檔案大小上限。 可以使用 KB、MB、GB 及 TB 後置詞。 預設值是 MB。 請指定一個整數，不包括小數點。 如果未指定 *max_size* ，檔案就會成長到磁碟已滿為止。 *Max_size* 是一個整數值。 如果是大於 2147483647 的值，請使用較大的單位。
 
 UNLIMITED 指定檔案可成長直到磁碟已滿。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定為無限成長的記錄檔，大小上限是 2 TB，資料檔案的大小上限是 16 TB。
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM 指定檔案群組會將 FILESTREAM 二進位大型物件 (B
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本
+**適用於** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本
 
 指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP - 記憶體內部最佳化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 MEMORY_OPTIMIZED_DATA 檔案群組。 如需可建立檔案群組來儲存記憶體最佳化資料的程式碼範例，請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。
 
@@ -485,7 +485,7 @@ AS SNAPSHOT OF *source_database_name* 指定要建立的資料庫是 *source_dat
 
 當指定不含其他大小參數的 `CREATE DATABASE <database_name>` 陳述式時，會將主要資料檔案之大小設為與模型資料庫中主要檔案的大小相同。
 
-除非指定 `FOR ATTACH`，否則每個新資料庫都會從模型資料庫繼承資料庫選項設定。 例如，在模型資料庫及您建立的任何新資料庫中，auto shrink 資料庫選項會設定為 **true**。 如果您在 model 資料庫中變更選項，您建立的任何新資料庫也會使用這些新的選項設定。 變更 model 資料庫中的作業不會影響現有的資料庫。 如果在 CREATE DATABASE 陳述式上指定 FOR ATTACH，新資料庫就會繼承原始資料庫的資料庫選項設定。
+除非指定 `FOR ATTACH`，否則每個新資料庫都會從模型資料庫繼承資料庫選項設定。 例如，在模型資料庫及您建立的任何新資料庫中，auto shrink 資料庫選項會設定為 **true** 。 如果您在 model 資料庫中變更選項，您建立的任何新資料庫也會使用這些新的選項設定。 變更 model 資料庫中的作業不會影響現有的資料庫。 如果在 CREATE DATABASE 陳述式上指定 FOR ATTACH，新資料庫就會繼承原始資料庫的資料庫選項設定。
 
 ## <a name="viewing-database-information"></a>檢視資料庫資訊
 
@@ -869,7 +869,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -908,7 +908,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::=
 {
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
+  MAXSIZE = { 100 MB | 500 MB | 1 ... 1024 ... 4096 GB }
   | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
     { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
@@ -995,7 +995,6 @@ MAXSIZE 指定資料庫的大小上限。 MAXSIZE 對於指定的 EDITION (服�
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |:---|:---|:---|:---|:---|:---|
 |100 MB|√|√|√|√|√|
-|250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
 |2 GB|√ (D)|√|√|√|√|
@@ -1299,7 +1298,7 @@ CREATE DATABASE test_zone_redundancy
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_**
+        **_\* SQL 受控執行個體\*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1383,7 +1382,7 @@ CREATE DATABASE TestDB1;
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1515,7 +1514,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1549,11 +1548,11 @@ WITH (
 
 *database_name* 新資料庫的名稱。 如需所允許資料庫名稱的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「物件命名規則」和「保留的資料庫名稱」。
 
-AUTOGROW = ON | **OFF** 指定此資料庫的 *replicated_size*、*distributed_size* 和 *log_size* 參數是否將會視需要自動成長至超出其指定大小。 預設值是 **OFF**。
+AUTOGROW = ON | **OFF** 指定此資料庫的 *replicated_size* 、 *distributed_size* 和 *log_size* 參數是否將會視需要自動成長至超出其指定大小。 預設值是 **OFF** 。
 
-如果 AUTOGROW 設為 ON，在每次插入資料、更新資料或進行其他動作而導致所需儲存空間大於已配置大小時，*replicated_size*、*distributed_size*和 *log_size* 就會視需要成長 (不在初始指定大小的區塊中)。
+如果 AUTOGROW 設為 ON，在每次插入資料、更新資料或進行其他動作而導致所需儲存空間大於已配置大小時， *replicated_size* 、 *distributed_size* 和 *log_size* 就會視需要成長 (不在初始指定大小的區塊中)。
 
-如果 AUTOGROW 設為 OFF，大小就不會自動成長。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 在嘗試進行需要 *replicated_size*、*distributed_size* 或 *log_size* 成長至超出其指定值的動作時，將會傳回錯誤。
+如果 AUTOGROW 設為 OFF，大小就不會自動成長。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 在嘗試進行需要 *replicated_size* 、 *distributed_size* 或 *log_size* 成長至超出其指定值的動作時，將會傳回錯誤。
 
 只能針對所有大小將 AUTOGROW 設為 ON 或 OFF。 例如，如果為 *log_size* 將 AUTOGROW 設為 ON，就不得不為 *replicated_size* 將 AUTOGROW 設為 ON。
 
@@ -1561,15 +1560,15 @@ AUTOGROW = ON | **OFF** 指定此資料庫的 *replicated_size*、*distributed_s
 
 如果 AUTOGROW 設為 ON，將允許複寫資料表成長至超出此限制。
 
-當 AUTOGROW 設為 OFF 時，如果使用者嘗試建立新的複寫資料表、在現有的複寫資料表中插入資料，或更新現有的複寫資料表而導致大小增加至超出 *replicated_size*，便會傳回錯誤。
+當 AUTOGROW 設為 OFF 時，如果使用者嘗試建立新的複寫資料表、在現有的複寫資料表中插入資料，或更新現有的複寫資料表而導致大小增加至超出 *replicated_size* ，便會傳回錯誤。
 
 *distributed_size* [ GB ] 一個正數。 配置給「跨設備」分散式資料表 (和相對應資料) 的總空間大小 (以整數或小數 GB 為單位)。 對於最低和最高 *distributed_size* 需求，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值與最大值」。
 
 如果 AUTOGROW 設為 ON，將允許分散式資料表成長至超出此限制。
 
-當 AUTOGROW 設為 OFF 時，如果使用者嘗試建立新的分散式資料表、在現有的分散式資料表中插入資料，或更新現有的分散式資料表而導致大小增加至超出 *distributed_size*，便會傳回錯誤。
+當 AUTOGROW 設為 OFF 時，如果使用者嘗試建立新的分散式資料表、在現有的分散式資料表中插入資料，或更新現有的分散式資料表而導致大小增加至超出 *distributed_size* ，便會傳回錯誤。
 
-*log_size* [ GB ] 一個正數。 *跨設備*交易記錄的大小 (以整數或十進位 GB 為單位)。
+*log_size* [ GB ] 一個正數。 *跨設備* 交易記錄的大小 (以整數或十進位 GB 為單位)。
 
 對於最低和最高 *log_size* 需求，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值與最大值」。
 
@@ -1579,7 +1578,7 @@ AUTOGROW = ON | **OFF** 指定此資料庫的 *replicated_size*、*distributed_s
 
 ## <a name="permissions"></a>權限
 
-需要 master 資料庫中的 `CREATE ANY DATABASE` 權限，或**系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。
+需要 master 資料庫中的 `CREATE ANY DATABASE` 權限，或 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。
 
 下列範例會將建立資料庫的權限提供給資料庫使用者 Fay。
 
@@ -1602,9 +1601,9 @@ GO
 
 建立資料庫時，「每個計算節點上」都必須有足夠的可用空間，以配置下列大小的總和：
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表大小為 *replicated_table_size*。
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表大小為 (*distributed_table_size* / 計算節點數目)。
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會記錄 (*log_size* / 計算節點數目) 的大小。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表大小為 *replicated_table_size* 。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表大小為 ( *distributed_table_size* / 計算節點數目)。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會記錄 ( *log_size* / 計算節點數目) 的大小。
 
 ## <a name="locking"></a>鎖定
 

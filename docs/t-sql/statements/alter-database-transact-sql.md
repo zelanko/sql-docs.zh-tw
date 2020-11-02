@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725909"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497030"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "91725909"
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -135,12 +135,12 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name*：這是要修改的資料庫名稱。
+*database_name* ：這是要修改的資料庫名稱。
 
 > [!NOTE]
 > 自主資料庫無法使用這個選項。
 
-CURRENT **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
+CURRENT **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 指定應該改變正在使用中的目前資料庫。
 
@@ -151,12 +151,12 @@ COLLATE *collation_name* 指定資料庫的定序。 *collation_name* 可以是 
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法變更定序。
 
-使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主資料庫時，會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設定序 (**Latin1_General_100_CI_AS_WS_KS_SC**) 來維護內部的目錄資訊。
+使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主資料庫時，會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設定序 ( **Latin1_General_100_CI_AS_WS_KS_SC** ) 來維護內部的目錄資訊。
 
 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE](~/t-sql/statements/collations.md)。
 
 **\<delayed_durability_option> ::=** 
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
+**適用於** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
 
 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)及[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。
 
@@ -205,7 +205,7 @@ COLLATE *collation_name* 指定資料庫的定序。 *collation_name* 可以是 
 - 您是資料庫目前唯一的使用者。
 - 沒有結構描述繫結的物件相依於資料庫的定序。
 
-如果相依於資料庫定序的下列物件存在於資料庫中，ALTER DATABASE*database_name*COLLATE 陳述式將會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會針對每一個封鎖 `ALTER` 動作的物件傳回錯誤訊息：
+如果相依於資料庫定序的下列物件存在於資料庫中，ALTER DATABASE *database_name* COLLATE 陳述式將會失敗。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會針對每一個封鎖 `ALTER` 動作的物件傳回錯誤訊息：
 
 - 使用 SCHEMABINDING 建立的使用者定義函式和檢視
 - 計算資料行
@@ -252,7 +252,7 @@ GO
 
 下列範例會使用 `testdb`S 定序來建立名為 `SQL_Latin1_General_CP1_CI_A` 的資料庫，然後將 `testdb` 資料庫的定序變更為 `COLLATE French_CI_AI`。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 USE master;
@@ -295,7 +295,7 @@ GO
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -403,7 +403,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name*：這是要修改的資料庫名稱。
+*database_name* ：這是要修改的資料庫名稱。
 
 CURRENT：指定應該改變正在使用中的目前資料庫。
 
@@ -462,7 +462,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定資料庫
 |1024 GB|N/A|√|√|√|√ (D)|
 |從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)*|N/A|N/A|N/A|N/A|√|
 
-\* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。 P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 如需 DTU 模型的資源限制的額外詳細資訊，請參閱 [DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。
+\* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。 P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 如需 DTU 模型的資源限制的額外詳細資訊，請參閱 [DTU 資源限制](/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。
 
 對於 DTU 模型，若指定了 MAXSIZE 值，則此值必須為上表中所示適用於所指定服務層的有效值。
 
@@ -558,7 +558,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定資料庫
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |資料大小上限 (GB)|1280|1536|2048|4096|4096|
 
-當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 如需有關虛擬核心模型資源限制的其他詳細資訊，請參閱[虛擬核心資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 如需有關虛擬核心模型資源限制的其他詳細資訊，請參閱[虛擬核心資源限制](/azure/sql-database/sql-database-dtu-resource-limits)。
 
 以下規則會套用到 MAXSIZE 和 EDITION 引數：
 
@@ -586,9 +586,9 @@ SERVICE_OBJECTIVE
 
   - 指定計算大小 (服務目標)。 服務目標的可用值為：`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。
 
-如需服務目標描述和大小、版本及服務目標組合的詳細資訊，請參閱 [Azure SQL Database 服務層和效能層級](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) \(部分機器翻譯\)、[DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\) 和[虛擬核心資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。 目前已移除對 PRS 服務目標的支援。 如有疑問，請使用此電子郵件別名： premium-rs@microsoft.com。
+如需服務目標描述和大小、版本及服務目標組合的詳細資訊，請參閱 [Azure SQL Database 服務層和效能層級](/azure/azure-sql/database/purchasing-models) \(部分機器翻譯\)、[DTU 資源限制](/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\) 和[虛擬核心資源限制](/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。 目前已移除對 PRS 服務目標的支援。 如有疑問，請使用此電子郵件別名： premium-rs@microsoft.com。
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 若要將現有的資料庫新增至彈性集區，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL，並提供彈性集區的名稱。 您也可以使用此選項將資料庫變更至相同伺服器內的不同彈性集區。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要從彈性集區中移除資料庫，請使用 ALTER DATABASE 將 SERVICE_OBJECTIVE 設定為單一資料庫計算大小 (服務目標)。
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 若要將現有的資料庫新增至彈性集區，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL，並提供彈性集區的名稱。 您也可以使用此選項將資料庫變更至相同伺服器內的不同彈性集區。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區](/azure/azure-sql/database/elastic-pool-overview)。 若要從彈性集區中移除資料庫，請使用 ALTER DATABASE 將 SERVICE_OBJECTIVE 設定為單一資料庫計算大小 (服務目標)。
 
 > [!NOTE]
 > 超大規模服務層中的資料庫不得新增至彈性集區。
@@ -763,7 +763,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_** &nbsp;
+        **_\* SQL 受控執行個體\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -834,7 +834,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name*：這是要修改的資料庫名稱。
+*database_name* ：這是要修改的資料庫名稱。
 
 CURRENT：指定應該改變正在使用中的目前資料庫。
 
@@ -899,7 +899,7 @@ ALTER DATABASE WideWorldImporters
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -998,7 +998,7 @@ MAXSIZE 預設為 245,760 GB (240 TB)。
 
 資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。 壓縮成資料行存放區格式的資料大小沒有大小限制，因此不受 MAXSIZE 限制。
 
-SERVICE_OBJECTIVE 指定計算大小 (服務目標)。 如需適用於 Azure Synapse 之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(部分機器翻譯\)。
+SERVICE_OBJECTIVE 指定計算大小 (服務目標)。 如需適用於 Azure Synapse 之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(部分機器翻譯\)。
 
 ## <a name="permissions"></a>權限
 
@@ -1011,9 +1011,9 @@ SERVICE_OBJECTIVE 指定計算大小 (服務目標)。 如需適用於 Azure Syn
 
 ## <a name="general-remarks"></a>一般備註
 
-目前資料庫必須是與您變更的資料庫不同的資料庫，因此**必須在連線至 master 資料庫時執行 ALTER**。
+目前資料庫必須是與您變更的資料庫不同的資料庫，因此 **必須在連線至 master 資料庫時執行 ALTER** 。
 
-SQL Analytics 中的 COMPATIBILITY_LEVEL 預設已設定為 130 且無法變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
+SQL Analytics 中的 COMPATIBILITY_LEVEL 預設已設定為 130 且無法變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](./alter-database-transact-sql-compatibility-level.md)。
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL 僅適用於已佈建資源 (集區)。
@@ -1030,7 +1030,7 @@ SQL Analytics 中的 COMPATIBILITY_LEVEL 預設已設定為 130 且無法變更�
 
 ## <a name="examples"></a>範例
 
-執行這些範例之前，請確定您要變更的資料庫不是目前資料庫。 目前資料庫必須是與您變更的資料庫不同的資料庫，因此**必須在連線至 master 資料庫時執行 ALTER**。
+執行這些範例之前，請確定您要變更的資料庫不是目前資料庫。 目前資料庫必須是與您變更的資料庫不同的資料庫，因此 **必須在連線至 master 資料庫時執行 ALTER** 。
 
 ### <a name="a-change-the-name-of-the-database"></a>A. 變更資料庫的名稱
 
@@ -1060,7 +1060,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ## <a name="see-also"></a>另請參閱
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [Azure Synapse Analytics 參考文章清單](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) \(部分機器翻譯\)
+- [Azure Synapse Analytics 參考文章清單](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements) \(部分機器翻譯\)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1073,7 +1073,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1142,7 +1142,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 非同步統計資料更新選項 
 
 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。
 
-如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)。
+如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。
 
 ## <a name="permissions"></a>權限
 

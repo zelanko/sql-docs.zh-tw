@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725951"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679008"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85725951"
  
 您需要建立認證和登入，並建立資料庫加密金鑰來加密資料和資料庫中的記錄檔。 若要加密資料庫，則需要資料庫的 **CONTROL** 權限。 下圖顯示使用 Azure 金鑰保存庫時的加密金鑰階層。  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![顯示使用 Azure Key Vault 時的加密金鑰階層圖表。](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證來供 Database Engine 用於 TDE**  
   
@@ -50,15 +50,15 @@ ms.locfileid: "85725951"
      使用下列方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼：  
   
     -   編輯 `IDENTITY` 引數 (`ContosoDevKeyVault`)，以指向您的 Azure 金鑰保存庫。
-        - 如果您使用的是**全域 Azure**，請用第 II 部分中的 Azure Key Vault 名稱來取代 `IDENTITY` 引數。
+        - 如果您使用的是 **全域 Azure** ，請用第 II 部分中的 Azure Key Vault 名稱來取代 `IDENTITY` 引數。
         - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 21Vianet 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。   
   
     -   將 `SECRET` 引數的第一個部分取代為第 I 部分中的 Azure Active Directory **用戶端識別碼** 。在此範例中， **用戶端識別碼** 是 `EF5C8E094D2A4A769998D93440D8115D`。
   
         > [!IMPORTANT]  
-        >  您必須移除 **用戶端識別碼**中的連字號。  
+        >  您必須移除 **用戶端識別碼** 中的連字號。  
   
-    -   使用第 I 部分中的**用戶端密碼**，完成 `SECRET` 引數的第二個部分。在此範例中，第 1 部分的**用戶端密碼**是 `ReplaceWithAADClientSecret`。 
+    -   使用第 I 部分中的 **用戶端密碼** ，完成 `SECRET` 引數的第二個部分。在此範例中，第 1 部分的 **用戶端密碼** 是 `ReplaceWithAADClientSecret`。 
   
     -   SECRET 引數的最終字串將是一連串較長的字母和數字，不含連字號。
   
@@ -118,11 +118,11 @@ ms.locfileid: "85725951"
   
      使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，透過使用物件總管連接到您的資料庫，來確認已開啟 TDE。 以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [管理資料庫加密]。  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![顯示 [物件總管] 中已選取 [工作] > [管理資料庫加密] 的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      在 **[管理資料庫加密]** 對話方塊中，確認已開啟 TDE，以及哪個非對稱金鑰正在加密 DEK。  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![在 [管理資料庫加密] 對話方塊中，已選取 [開啟資料庫加密] 選項，並在黃色橫幅中，描述「現在已開啟 TDE」的螢幕擷取畫面。](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      或者，您可以執行下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 加密狀態 3 表示加密的資料庫。  
   
@@ -149,15 +149,15 @@ ms.locfileid: "85725951"
      使用下列方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼：  
   
     -   編輯 `IDENTITY` 引數 (`ContosoDevKeyVault`)，以指向您的 Azure 金鑰保存庫。
-        - 如果您使用的是**全域 Azure**，請用第 II 部分中的 Azure Key Vault 名稱來取代 `IDENTITY` 引數。
+        - 如果您使用的是 **全域 Azure** ，請用第 II 部分中的 Azure Key Vault 名稱來取代 `IDENTITY` 引數。
         - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 21Vianet 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。    
   
     -   將 `SECRET` 引數的第一個部分取代為第 I 部分中的 Azure Active Directory **用戶端識別碼** 。在此範例中， **用戶端識別碼** 是 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
-        >  您必須移除 **用戶端識別碼**中的連字號。  
+        >  您必須移除 **用戶端識別碼** 中的連字號。  
   
-    -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 I 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字， *不含連字號*。   
+    -   使用第 I 部分中的 `SECRET` 用戶端密碼 **，完成** 引數的第二個部分。在此範例中，第 I 部分中的 **用戶端密碼** 是 `Replace-With-AAD-Client-Secret`。 `SECRET` 引數的最終字串將是一連串較長的字母和數字， *不含連字號* 。   
   
         ```sql  
         USE master;  
@@ -217,7 +217,7 @@ ms.locfileid: "85725951"
     
     若要還原使用 TDE 加密的資料庫備份，目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須先有一份用於加密的非對稱金鑰保存庫金鑰。 以下是達成此目的的方法：  
     
-    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要：** 為了使金鑰的指紋符合資料庫備份上所記錄指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
+    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要：** 為了使金鑰的指紋符合資料庫備份上所記錄指紋，金鑰必須命名為與之前原始名稱 **相同的金鑰保存庫金鑰名稱** 。
     
     - 將步驟 1 和 2 套用在目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上。
     

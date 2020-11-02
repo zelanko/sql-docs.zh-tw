@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227272"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496887"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -65,7 +65,7 @@ ms.locfileid: "91227272"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+        [SQL 受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -336,7 +336,7 @@ RESTORE LOG 可以包括一份檔案清單，讓您在向前復原期間建立�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每一個版本都會使用與舊版不同的預設路徑。 因此，若要還原在舊版備份之預設位置中所建立的資料庫，就必須使用 MOVE 選項。 如需有關新預設路徑的資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
-將舊版資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級過程就會根據 **upgrade_option** 伺服器屬性的設定來匯入、重設或重建這些索引。 如果升級選項設定為匯入 (**upgrade_option** = 2) 或重建 (**upgrade_option** = 0)，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 若要變更 **upgrade_option** 伺服器屬性的設定，請使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
+將舊版資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級過程就會根據 **upgrade_option** 伺服器屬性的設定來匯入、重設或重建這些索引。 如果升級選項設定為匯入 ( **upgrade_option** = 2) 或重建 ( **upgrade_option** = 0)，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 若要變更 **upgrade_option** 伺服器屬性的設定，請使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
 
 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。
 
@@ -349,7 +349,7 @@ RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指�
 
 在明確或隱含的交易中，不允許使用 RESTORE。
 
-損毀的 **master**資料庫必須利用特殊程序來還原。 如需詳細資訊，請參閱[系統資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。
+損毀的 **master** 資料庫必須利用特殊程序來還原。 如需詳細資訊，請參閱[系統資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。
 
 還原資料庫時，系統會清除所要還原資料庫的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 
 
@@ -740,7 +740,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />受控執行個體 \*_**
+        **_\* SQL 受控執行個體\*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -887,7 +887,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL 受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**
@@ -901,7 +901,7 @@ WHERE r.command = 'RESTORE DATABASE'
 將[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用者資料庫從資料庫備份還原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 資料庫會從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) 命令先前所建立的備份還原。 您可以使用備份和還原作業來建置災害復原計劃，或將資料庫從一個應用裝置移至另一個應用裝置。
 
 > [!NOTE]
-> 還原 master 時，會包括還原應用裝置登入資訊。 若要還原 master，請使用**設定管理員**工具中的[還原 master 資料庫](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)頁面。 能夠存取控制節點的系統管理員將可執行這項作業。 如需有關[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫備份的詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Backup and Restore＞(備份和還原)。
+> 還原 master 時，會包括還原應用裝置登入資訊。 若要還原 master，請使用 **設定管理員** 工具中的 [還原 master 資料庫](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)頁面。 能夠存取控制節點的系統管理員將可執行這項作業。 如需有關[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫備份的詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Backup and Restore＞(備份和還原)。
 
 ## <a name="syntax"></a>語法
 
@@ -933,7 +933,7 @@ RESTORE DATABASE *database_name* 指定將使用者資料庫還原至名為 *dat
 
 還原使用者資料庫時，會將完整資料庫備份及視需要將差異備份還原至應用裝置。 還原使用者資料庫時，會包括還原資料庫使用者和資料庫角色。
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory*' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 還原備份檔案的來源網路路徑及目錄。 例如 FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
+FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 還原備份檔案的來源網路路徑及目錄。 例如 FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
 
 *_directory* 指定包含完整或差異備份的目錄名稱。 例如，您可以在完整或差異備份上執行 RESTORE HEADERONLY 作業。
 

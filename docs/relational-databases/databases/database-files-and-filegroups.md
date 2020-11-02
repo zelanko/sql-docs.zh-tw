@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192278"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496998"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -212,6 +212,7 @@ GO
 - 將同一個聯結查詢用到的不同資料表，放在不同的檔案群組內。 此步驟可改善效能，因為可用平行磁碟 I/O 會搜尋聯結資料。
 - 把存取量大的資料表和屬於這些資料表的非叢集索引，放在不同的檔案群組中。 使用不同的檔案群組可改善效能，因為檔案如果位於不同實體磁碟上，可進行平行 I/O。
 - 請勿將交易記錄檔放在有其他檔案和檔案群組的同一個實體磁碟上。
+- 若需要使用 [Diskpart](/windows-server/administration/windows-commands/diskpart) 之類工具來擴充資料庫檔案所在的磁碟區或分割區，則應該先備份所有系統和使用者資料庫，並先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 此外，一旦磁碟區擴充成功之後，您應該考慮執行 [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 命令，以確保磁碟區上所有資料庫的實體完整性。
 
 如需交易記錄檔管理建議的詳細資訊，請參閱[管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 

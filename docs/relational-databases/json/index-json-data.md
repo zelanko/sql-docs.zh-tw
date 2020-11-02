@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499235"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439467"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88499235"
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>使用計算資料行的索引 JSON 屬性  
-將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」** 來篩選或排序查詢結果。  
+將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」  來篩選或排序查詢結果。  
 
 ### <a name="example"></a>範例 
 在此範例中，假設 AdventureWorks `SalesOrderHeader` 資料表含有 `Info` 資料行，其中包含關於銷售訂單的各種資訊 (JSON 格式)。 例如，它包含客戶、銷售人員、收件和帳單地址等相關資訊。 而您要使用資料行 `Info` 的值來篩選客戶的銷售訂單。
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>此範例中的執行計畫
 以下是此範例中的查詢執行計畫。  
   
-![執行計畫](../../relational-databases/json/media/jsonindexblog1.png "執行計畫")  
+![顯示此範例執行計劃的螢幕擷取畫面。](../../relational-databases/json/media/jsonindexblog1.png "執行計畫")  
   
 SQL Server 會使用索引搜尋非叢集索引，並尋找滿足指定條件的資料列，而不會掃描整個資料表。 接著，其會在 `SalesOrderHeader` 資料表中使用索引鍵查詢，以擷取查詢中參考的其他資料行 -  在此範例中為 `SalesOrderNumber` 和 `OrderDate`。  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  若您查看實際執行計劃，會發現其使用來自非叢集索引的排序值。  
   
- ![執行計畫](../../relational-databases/json/media/jsonindexblog2.png "執行計畫")  
+ ![顯示執行計劃的螢幕擷取畫面，該計劃會使用來自非叢集索引的排序值。](../../relational-databases/json/media/jsonindexblog2.png "執行計畫")  
   
  雖然查詢具有 `ORDER BY` 子句，但執行計畫不會使用 Sort 運算子。 JSON 索引已根據塞爾維亞文 (斯拉夫) 規則執行排序。 因此，SQL Server 可在結果已排序的情況下，使用非叢集索引。  
   
  不過，若您變更 `ORDER BY` 運算式的定序 (例如在 `JSON_VALUE` 函式後方新增 `COLLATE French_100_CI_AS_SC`)，則會得到不同的查詢執行計畫。  
   
- ![執行計畫](../../relational-databases/json/media/jsonindexblog3.png "執行計畫")  
+ ![顯示不同執行計劃的螢幕擷取畫面。](../../relational-databases/json/media/jsonindexblog3.png "執行計畫")  
   
  由於索引中的值順序不符合法文定序規則，因此 SQL Server 無法使用索引來排序結果。 因此，其會使用法文定序規則新增 Sort 運算子來排序結果。  
  

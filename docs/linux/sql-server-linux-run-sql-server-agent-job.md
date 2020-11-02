@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115827"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524043"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上建立及執行 SQL Server Agent 作業
 
@@ -179,9 +179,9 @@ SQL Server 作業被用來在 SQL Server 資料庫中定期執行相同的命令
 
 1. 建立新的作業排程。
 
-   ![作業排程](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![[新增作業] 對話方塊的螢幕擷取畫面，其中已醒目提示 [排程] 選項，並已標註 [新增] 選項。](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![作業排程](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![[新增作業] 對話方塊的螢幕擷取畫面，其中已標註 [確定] 選項。](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. 啟動作業。
 
