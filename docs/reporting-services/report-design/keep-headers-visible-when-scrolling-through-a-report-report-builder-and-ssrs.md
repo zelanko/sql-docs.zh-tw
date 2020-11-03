@@ -9,30 +9,30 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255489"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907106"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
   若要避免資料列和資料行的標籤在轉譯報表之後捲動到檢視畫面以外，可以將資料列或資料行的標題凍結。  
   
  如何控制資料列和資料行取決於您擁有資料表還是矩陣。 如果您有資料表，請設定靜態成員 (資料列和資料行標題) 來維持可見度。 如果您有矩陣，請設定資料列和資料行群組標頭來維持可見度。  
   
- 如果您將報表匯出到 Excel，標頭將不會自動凍結。 您可以在 Excel 中凍結窗格。 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的**頁首和頁尾**一節。  
+ 如果您將報表匯出到 Excel，標頭將不會自動凍結。 您可以在 Excel 中凍結窗格。 如需詳細資訊，請參閱 [匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的 **頁首和頁尾** 一節。  
   
 > [!NOTE]  
 >  即使資料表包含資料列和資料行群組，您還是無法在捲動時維持這些群組標頭的可見度  
   
  下圖顯示一個資料表。  
   
- ![Table](../../reporting-services/report-design/media/table.png "Table")  
+ ![資料表的螢幕擷取畫面。](../../reporting-services/report-design/media/table.png "Table")  
   
  下圖顯示一個矩陣。  
   
- ![矩陣](../../reporting-services/report-design/media/matrix.png "矩陣")  
+ ![矩陣的螢幕擷取畫面。](../../reporting-services/report-design/media/matrix.png "矩陣")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "84255489"
   
      ![Tablix 成員屬性](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix 成員屬性")  
   
-4.  在 [屬性] 窗格中，將 **FixedData** 設為 **True**。  
+4.  在 [屬性] 窗格中，將 **FixedData** 設為 **True** 。  
   
 5.  針對您要在捲動時保持可見的相鄰成員重複這個步驟。  
   

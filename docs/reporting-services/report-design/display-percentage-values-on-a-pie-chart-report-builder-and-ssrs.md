@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 6068c871bd96908e501c552e0388050aedfa47bf
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681397"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907226"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖上顯示百分比值 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，圖例預設會顯示類別。 您也可能想要在圖例或圓形圖配量本身中顯示百分比。   
 
-![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![顯示圓形圖配量百分比的圓形圖螢幕擷取畫面。](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
  如果您想要先使用範例資料嘗試此功能，[教學課程：將圓形圖新增至報表 (報表產生器)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) 會引導您將百分比新增至圓形圖配量。
  
@@ -32,15 +32,15 @@ ms.locfileid: "84681397"
   
 3.  在設計介面上，以滑鼠右鍵按一下標籤，然後選取 [數列標籤屬性]。 [數列標籤屬性] 對話方塊便會出現。  
   
-4.  針對 [標籤資料] 選項輸入 **#PERCENT**。  
+4.  針對 [標籤資料] 選項輸入 **#PERCENT** 。  
   
-5.  (選擇性) 若要指定標籤所顯示的小數位數，請輸入 "#PERCENT{P*n*}"，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 "#PERCENT{P0}"。  
+5.  (選擇性) 若要指定標籤所顯示的小數位數，請輸入 "#PERCENT{P *n* }"，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 "#PERCENT{P0}"。  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>若要在圓形圖的圖例中顯示百分比值  
   
 1.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [數列屬性]。 [數列屬性] 對話方塊隨即顯示。  
   
-2.  在 [圖例] 中，針對 [自訂圖例文字] 屬性鍵入 **#PERCENT**。  
+2.  在 [圖例] 中，針對 [自訂圖例文字] 屬性鍵入 **#PERCENT** 。  
   
 ## <a name="see-also"></a>另請參閱  
 * [教學課程：將圓形圖新增至報表 (報表產生器)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)

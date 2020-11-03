@@ -26,19 +26,19 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e33750c6c62b1de3b889399fca46dbf5aa83b3fd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935207"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907276"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
   
  加入、移除或變更圖層選項的一個最簡單的方法，就是使用地圖圖層精靈。 您也可以從 [地圖] 窗格手動變更選項。 若要顯示 [地圖]  窗格，按一下報表設計介面上的地圖。 下圖顯示此窗格的幾個部分：  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![[地圖圖層] 區段的螢幕擷取畫面，其中指出 [圖層工具列]、[圖層可見性]、[圖層名稱]、[空間資料來源類型]、[圖層類型]、[調整縮放比例] 及 [調整檢視中心] 等選項。](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  地圖圖層是以它們顯示在 [地圖] 窗格中的順序，由下而上繪製。 在上圖中，圖格圖層會最先繪製，而多邊形圖層則是最後繪製。 稍後繪製的圖層可能會隱藏圖層上先前繪製的地圖元素。 您可以使用 [地圖] 窗格工具列上的方向鍵來變更圖層的順序。 若要顯示或隱藏圖層，請切換可見性圖示。 您可以在 [圖層資料]  屬性對話方塊的 [可見性]  頁面上，變更圖層的透明度。  
   
@@ -46,12 +46,12 @@ ms.locfileid: "91935207"
   
 |符號|描述|使用時機|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|地圖圖層精靈|若要使用精靈加入圖層，按一下 [新增圖層精靈]  。|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|加入圖層|若要手動加入圖層，按一下 [加入圖層]  ，然後按一下要加入之地圖圖層的類型。|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|多邊形圖層|加入地圖圖層，此圖層會顯示以多組多邊形座標為基礎的區域或形狀。|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|線條圖層|加入地圖圖層，此圖層會顯示以多組線條座標為基礎的路徑或路線。|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|點圖層|加入地圖圖層，此圖層會顯示以多組點座標為基礎的位置。|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|影像分割圖層|加入地圖圖層，此圖層會顯示對應至檢視區所定義之目前地圖檢視區域的 Bing 地圖底圖。|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmaplayerwizard.gif":::|地圖圖層精靈|若要使用精靈加入圖層，按一下 [新增圖層精靈]  。|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmapaddlayer.gif":::|加入圖層|若要手動加入圖層，按一下 [加入圖層]  ，然後按一下要加入之地圖圖層的類型。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif":::|多邊形圖層|加入地圖圖層，此圖層會顯示以多組多邊形座標為基礎的區域或形狀。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaplinelayer.gif":::|線條圖層|加入地圖圖層，此圖層會顯示以多組線條座標為基礎的路徑或路線。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappointlayer.gif":::|點圖層|加入地圖圖層，此圖層會顯示以多組點座標為基礎的位置。|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaptilelayer.gif":::|影像分割圖層|加入地圖圖層，此圖層會顯示對應至檢視區所定義之目前地圖檢視區域的 Bing 地圖底圖。|  
   
  [地圖] 窗格的底部為地圖檢視區域。 若要變更地圖的置中或縮放選項，請使用方向鍵調整檢視置中，並使用滑動軸調整縮放層級。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "91935207"
     > [!NOTE]  
     >  雖然您可以手動加入地圖圖層並加以設定，我們建議您最好使用地圖圖層精靈來新增圖層。 若要在 [地圖] 窗格工具列啟動精露，請按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-3.  以滑鼠右鍵按一下圖層，然後按一下 [圖層資料]。  
+3.  以滑鼠右鍵按一下圖層，然後按一下 [圖層資料]  。  
   
 4.  在 [使用以下來源的空間資料]  中，選取空間資料的來源。 這些選項會隨著您選取的項目而不同。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "91935207"
   
 3.  按一下 **[可見性]** 。  
   
-4.  在 [透明度選項]  中，輸入表示透明度百分比的值，例如 **40**。 透明度百分比為零 (0) 表示圖層是不透明的。 透明度百分比為 100，則表示您在報表中看不到圖層。  
+4.  在 [透明度選項]  中，輸入表示透明度百分比的值，例如 **40** 。 透明度百分比為零 (0) 表示圖層是不透明的。 透明度百分比為 100，則表示您在報表中看不到圖層。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +209,7 @@ ms.locfileid: "91935207"
   
 3.  按一下 **[可見性]** 。  
   
-4.  在 [透明度選項]  中，輸入表示透明度百分比的值，例如 **40**。  
+4.  在 [透明度選項]  中，輸入表示透明度百分比的值，例如 **40** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -219,7 +219,7 @@ ms.locfileid: "91935207"
   
 2.  在 [圖層] 窗格中按一下圖格圖層，即可選取它。 [屬性] 窗格會顯示圖格圖層屬性。  
   
-3.  在 [屬性] 窗格中，將 UseSecureConnection 設定為 **True**。  
+3.  在 [屬性] 窗格中，將 UseSecureConnection 設定為 **True** 。  
   
  Bing Maps Web 服務的連線將會使用 HTTP SSL 服務來擷取這個圖層的 Bing 地圖底圖。 傳輸層安全性 (TLS) 先前稱為安全通訊端層 (SSL)。
   

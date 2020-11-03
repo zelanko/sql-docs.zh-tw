@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258457"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678883"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連線資訊 (Reporting Services)
 
 在第 1 課，您已經將 [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] 編頁報表加入至 Tutorial 專案。
   
-在本課中，您將定義*資料來源*、報表從關聯式資料庫或其他來源存取資料所使用的連線資訊。
+在本課中，您將定義 *資料來源* 、報表從關聯式資料庫或其他來源存取資料所使用的連線資訊。
 
 針對此報表，您將 AdventureWorks2016 範例資料庫作為資料來源。 本教學課程假設此資料庫位於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體中，並安裝在本機電腦上。  
 
@@ -28,7 +28,7 @@ ms.locfileid: "75258457"
 
 1. 在 [報表資料]  窗格中，選取 [新增]   > [資料來源]  。 如果看不到 [報表資料]  窗格，則選取 [檢視]  功能表 > [報表資料]  。
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![已選取 [新增] > [資料來源] 的 [報表資料] 窗格螢幕擷取畫面。](media/ssrs-table-tutorial-2-new-data-source.png)
 
     [資料來源屬性]  對話方塊隨即開啟，並顯示 [一般]  區段。
 

@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 3820bee4c008bb82a2c1ffdb8a4a6bfb00335958
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255697"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907262"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)
 移動平均是數列中資料的平均，是根據定義的一段時間而計算。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，您可以在圖表上顯示移動平均以識別明顯的趨勢。  
 
-![report-builder-column-chart-tutorial](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![銷售圖的螢幕擷取畫面。](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  「移動平均」公式是技術分析中最常使用的價格指標。 您也可以從圖表上的數列衍生許多其他公式 (包括平均、中間值和標準差等)。 在指定移動平均時，每個公式都可能有一或多個必須指定的參數。  
  

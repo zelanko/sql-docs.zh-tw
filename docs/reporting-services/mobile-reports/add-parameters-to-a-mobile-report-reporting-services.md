@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36bf305d4685f18e1c6df9129716ae9de84d4f84
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448290"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907286"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>將參數加入行動報表中 | Reporting Services
 您可以使用參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，讓您和您報表的讀者可以篩選報表。 使用參數的報表也可以是[從來源報表鑽研](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)的目標。 
@@ -49,11 +49,11 @@ ms.locfileid: "79448290"
      
 8. 選取 [預覽]  查看報表的外觀。 在此報表中，選擇清單使用類別目錄參數。
 
-   ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
+   ![已標註選擇清單 1 的報表預覽螢幕擷取畫面。](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    
 9. 當您在選擇清單中選取值時，會將報表篩選為只顯示該值。在此案例中為「附屬應用程式」。
 
-   ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
+   ![已標註選擇清單 1 且已選取 [附屬應用程式] 選項的報表預覽螢幕擷取畫面。](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
 ### <a name="see-also"></a>另請參閱  
 -  [使用特定查詢字串參數開啟行動報表](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)

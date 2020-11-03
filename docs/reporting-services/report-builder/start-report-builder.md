@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290766"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907036"
 ---
 # <a name="start-report-builder"></a>啟動報表產生器
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290766"
   
  第一次從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站或處於 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 啟動[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]時，系統會提示您從 Microsoft 下載中心進行下載。 
  
-![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+![正在開啟報表產生器訊息的螢幕擷取畫面。](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  您或系統管理員也可以 [從 Microsoft 下載中心將報表產生器安裝在電腦上](https://go.microsoft.com/fwlink/?LinkID=219138)。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md) 中的＜使用系統管理員伺服器安裝報表產生器＞。
  
@@ -40,7 +40,7 @@ ms.locfileid: "80290766"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 入口網站啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 https://\<*伺服器名稱*>/reports。  
+1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 是 https://\<*servername*>/reports。  
   
 2.  在 Web 入口網站的頂端列中，選取 [新增]   > [編頁報表]  。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "80290766"
   
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 隨即開啟，而且您可以在報表伺服器上建立分頁報表或開啟報表。  
   
-     **注意**：如果 [新增文件]  功能表未列出 [報表產生器報表]  、[報表產生器模型]  或 [報表資料來源]  ，則必須將其內容類型加入至 SharePoint 文件庫。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+     **注意** ：如果 [新增文件]  功能表未列出 [報表產生器報表]  、[報表產生器模型]  或 [報表資料來源]  ，則必須將其內容類型加入至 SharePoint 文件庫。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
 
 ## <a name="next-steps"></a>後續步驟
 

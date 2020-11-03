@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448239"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907326"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>依行動報表中的資料行或資料列群組資料 | Reporting Services
 您可以在許多圖表類型中，使用 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]依資料行或資料列來組織資料。 請遵循下列逐步指示。
@@ -27,19 +27,19 @@ ms.locfileid: "79448239"
 
 1. 將 [比較總計圖表]  從 [配置]  索引標籤拖曳至設計介面，並放大圖表。
 
-2. 選取 [資料]  索引標籤。您會看到 SimulatedTable 資料表包含一系列的資料行 **Metric1** 至 **Metric5**，以及 **Comparison1** 至 **Comparison5**。 
+2. 選取 [資料]  索引標籤。您會看到 SimulatedTable 資料表包含一系列的資料行 **Metric1** 至 **Metric5** ，以及 **Comparison1** 至 **Comparison5** 。 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![行動報表資料群組資料行的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
 3. 在 [資料屬性]  窗格中，[主要數列]  是 [SimulatedTable]  。 選取 [主要數列]  旁邊方塊中的箭頭，您會看到 **Metric1** 至 **Metric5** 處於選取狀態。
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![[主要數列] 旁邊選項的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    同樣地，您會看到 [比較數列]   -- **Comparison1** 至 **Comparison5** 處於選取狀態。
    
 4. 選取 [預覽]  。
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![比較總計圖表預覽的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    圖表中的每個橫條各代表資料表中的一個資料行。 較粗的橫條是 [矩陣] 資料行，較細的橫條是 [比較] 資料行。
 
@@ -49,15 +49,15 @@ ms.locfileid: "79448239"
 
 7. 選取 [資料]  索引標籤。現在 SimulatedTable 資料表會包含 [類別目錄]  、[矩陣]  和 [比較]  資料行，以及類別目錄 A 至 E。 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![行動報表資料群組資料列的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  在 [資料屬性]  窗格中，現在會有 [類別目錄資料行] 方塊，其中列出 SimulatedTable 中的 [類別目錄] 資料行。 在 [主要數列] 中，您可以挑選使用哪些資料行來顯示值。 根據預設， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 會選取 Metric1 至 Metric5 作為主要數列，並選取 Comparison1 至 Comparison5 作為比較數列。 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![[比較數列] 旁邊選項的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
 9. 選取 [預覽]  。
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![已更新的比較總計圖表預覽螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    現在，圖表中的每個橫條各代表 [類別目錄] 資料行中每個類別目錄的值。
 

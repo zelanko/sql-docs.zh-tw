@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e346ff2f6d5b4951e7ce0e3af81914b15b34ac15
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448316"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907316"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
 有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」  或資料表：
@@ -25,7 +25,7 @@ ms.locfileid: "79448316"
 ## <a name="simple-data-grid"></a>簡易資料格
 最基本的簡易資料格可顯示多個含有自訂格式和標頭的資料行。 
 
-![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
+![行動報表簡易資料格的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
 
 將資料格加入設計介面之後，您可以將它連接到實際資料。
 
@@ -41,7 +41,7 @@ ms.locfileid: "79448316"
 ##  <a name="indicator-data-grid"></a>指示器資料格
 您可以將含有量測計的資料行加入指示器資料格。
 
-![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
+![行動報表指示器資料格的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
 
 1. 將指示器資料格從 [配置]  索引標籤拖曳至設計方格，並調整為您想要的大小。
 
@@ -56,7 +56,7 @@ ms.locfileid: "79448316"
 ## <a name="chart-data-grid"></a>圖表資料格
 您可以將含有量測計或圖表的資料行加入圖表資料格。 
 
-![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
+![行動報表圖表資料格的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
 
 當您將圖表資料行加入資料格時，您必須加入個別資料表，以提供資料給每個資料列中的圖表。 此第二個資料表必須與主資料表共用一個欄位，以將每個資料列連結至其關聯的圖表資料。 
 

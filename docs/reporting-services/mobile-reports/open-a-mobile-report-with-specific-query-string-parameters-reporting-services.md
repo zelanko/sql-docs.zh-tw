@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: abcdda5a396451508df78610eeb4f7bc417484d5
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448390"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907346"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>使用特定查詢字串參數開啟行動報表 | Reporting Services
 如果您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表具有參數與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 資料來源，則可以在報表 URL 中包括查詢字串參數，以使用您指定的值來自動開啟報表。 
@@ -24,11 +24,11 @@ ms.locfileid: "79448390"
 
 2. 在資料表底部的索引標籤上尋找資料集的名稱，以及您要的欄位名稱。 
     
-    ![mobile-report-publisher-parameter-data-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
+    ![行動報表發行工具參數資料檢視的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
     
 2.  URL 的語法取決於您的資料來源。 
 
-     **SQL Server Analysis Services 資料來源**：使用查詢字串參數建置 URL，格式如下︰
+     **SQL Server Analysis Services 資料來源** ：使用查詢字串參數建置 URL，格式如下︰
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 
@@ -36,7 +36,7 @@ ms.locfileid: "79448390"
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **SQL Server 資料來源**：查詢字串參數大致相同，但是在欄位名稱前要有 \@ 符號：
+     **SQL Server 資料來源** ：查詢字串參數大致相同，但是在欄位名稱前要有 \@ 符號：
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 
@@ -47,7 +47,7 @@ ms.locfileid: "79448390"
     
 3.  此 URL 會在伺服器上開啟報表，並自動篩選至您指定的參數值。
 
-    ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
+    ![行動報表發行工具參數入口網站檢視的螢幕擷取畫面，其中有箭頭指向 URL 及框住此文字 ?TimeChartLoD.@category=Clothing 的方框。](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
 ### <a name="see-also"></a>另請參閱
 

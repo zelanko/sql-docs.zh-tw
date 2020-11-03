@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462062"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907236"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集圓形圖上的小配量 (報表產生器及 SSRS)
 配量太多的圓形圖看起來很雜亂。 了解在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中將圓形圖中的許多小配量收集成一個單一配量。
@@ -23,7 +23,7 @@ ms.locfileid: "84462062"
  
  如果您想要先使用範例資料嘗試此功能，[教學課程：將圓形圖新增至報表 (報表產生器)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) 會引導您將許多小配量收集成單一配量。
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![顯示「其他」配量的報表產生器圓形圖螢幕擷取畫面。](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  您也可以將小扇區收集成第二個圓形圖，此圖會成為第一個圓形圖的收集扇區的註標。 第二個圓形圖會繪製在原始圓形圖的右方。  
   
@@ -38,26 +38,26 @@ ms.locfileid: "84462062"
   
 3.  在 [一般]  區段中，展開 [CustomAttributes]  節點。  
   
-4.  將 CollectedStyle 屬性設定為 **SingleSlice**。  
+4.  將 CollectedStyle 屬性設定為 **SingleSlice** 。  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![顯示如何設定單一配量屬性的報表產生器圓形圖螢幕擷取畫面。](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  設定收集的臨界值及臨界值類型。 下列範例是設定收集臨界值的常見方式。  
   
     -   **依百分比。** 例如，將圓形圖上少於 10% 的任何扇區收集成單一扇區：  
   
-         將 CollectedThresholdUsePercent 屬性設定為 **True**。  
+         將 CollectedThresholdUsePercent 屬性設定為 **True** 。  
   
-         將 CollectedThreshold 屬性設定為 **10**。  
+         將 CollectedThreshold 屬性設定為 **10** 。  
   
         > [!NOTE]  
-        >  如果將 CollectedStyle 設定為 **SingleSlice**、將 CollectedThreshold 設定為大於 **100** 的值，且將 CollectedThresholdUsePercent 設定為 **True**，則圖表會擲回例外狀況；因為它無法計算百分比。 若要解決此問題，請將 CollectedThreshold 設定為小於 **100** 的值。  
+        >  如果將 CollectedStyle 設定為 **SingleSlice** 、將 CollectedThreshold 設定為大於 **100** 的值，且將 CollectedThresholdUsePercent 設定為 **True** ，則圖表會擲回例外狀況；因為它無法計算百分比。 若要解決此問題，請將 CollectedThreshold 設定為小於 **100** 的值。  
   
     -   **依資料值。** 例如，將圓形圖上小於 5000 的任何扇區收集成單一扇區：  
   
-         將 CollectedThresholdUsePercent 屬性設定為 **False**。  
+         將 CollectedThresholdUsePercent 屬性設定為 **False** 。  
   
-         將 CollectedThreshold 屬性設定為 **5000**。  
+         將 CollectedThreshold 屬性設定為 **5000** 。  
   
 6.  將 CollectedLabel 屬性設為字串，代表會在收集的扇形區上顯示的文字標籤。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "84462062"
   
 1.  請遵循上述步驟 1 - 3。  
   
-2.  將 CollectedStyle 屬性設定為 **CollectedPie**。  
+2.  將 CollectedStyle 屬性設定為 **CollectedPie** 。  
   
-3.  將 CollectedThresholdproperty 設為一個代表臨界值的值，達到該值時小扇形區會收集為一個扇形區。 當 CollectedStyle 屬性設為 **CollectedPie**時，CollectedThresholdUsePercentproperty 屬性一律會設定為 **True**，而收集臨界值一律會以百分比測量。  
+3.  將 CollectedThresholdproperty 設為一個代表臨界值的值，達到該值時小扇形區會收集為一個扇形區。 當 CollectedStyle 屬性設為 **CollectedPie** 時，CollectedThresholdUsePercentproperty 屬性一律會設定為 **True** ，而收集臨界值一律會以百分比測量。  
   
 4.  (選擇性) 設定 CollectedColor、CollectedLabel、CollectedLegendText 和 CollectedToolTip 屬性。 所有其他名為 "Collected" 的屬性都不適用於收集的圓形圖。  
   

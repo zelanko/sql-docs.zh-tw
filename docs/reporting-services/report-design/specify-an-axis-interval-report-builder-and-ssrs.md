@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934942"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907176"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
 了解如何藉由設定 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的軸間隔，在圖表中變更類別 (x) 軸中標籤及刻度的數目。
@@ -36,24 +36,24 @@ ms.locfileid: "91934942"
 
 此直條圖中，水平標籤間隔設定為 Auto。
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![X 軸間隔設定為 [自動] 之報表產生器直條圖預覽的螢幕擷取畫面。](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  以滑鼠右鍵按一下類別軸，然後按一下 [水平軸屬性]。   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![顯示如何設定 X 軸標籤的報表產生器直條圖螢幕擷取畫面。](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。 
+2.  在 [水平軸屬性] 對話方塊 > [軸選項] 索引標籤上，將 [間隔] 設為 **1** 以顯示每個類別群組標籤。 若要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2** 。 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![顯示如何將 X 軸間隔設定為一的報表產生器直條圖螢幕擷取畫面。](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    現在直條圖會顯示其所有的水平軸標籤。
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  在設定軸間隔後，所有的自動標籤都會停用。 如果指定軸間隔的值，則可能會看到非預期的標籤行為，依類別目錄軸上有多少類別而定。  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     現在直條圖會顯示其所有的水平軸標籤。
+     
+     ![顯示 X 軸標籤的報表產生器直條圖預覽螢幕擷取畫面。](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  在設定軸間隔後，所有的自動標籤都會停用。 如果指定軸間隔的值，則可能會看到非預期的標籤行為，依類別目錄軸上有多少類別而定。  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>變更 [屬性] 窗格中的標籤間隔
 
@@ -61,15 +61,15 @@ ms.locfileid: "91934942"
 
 1.  在報表設計檢視中，按一下圖表，然後選取水平軸標籤。
 
-3. 在 [屬性] 窗格中，將 LabelInterval 設為 **1**。
+3. 在 [屬性] 窗格中，將 LabelInterval 設為 **1** 。
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![顯示如何設定標籤間隔的報表產生器直條圖螢幕擷取畫面。](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     這個圖表與在設計檢視中相同。 
     
 5.  按一下 **[執行]** 預覽報表。
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![顯示標籤間隔為一的報表產生器直條圖預覽螢幕擷取畫面。](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     現在，圖表會顯示其所有標籤。
   

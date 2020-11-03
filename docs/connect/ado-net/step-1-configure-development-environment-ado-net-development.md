@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 433f94f07aaefc98a94959ce995cf5d966536e08
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081297"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439365"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步驟 1:設定 ADO.NET 開發的開發環境
 
@@ -30,9 +30,9 @@ ms.locfileid: "92081297"
 
 ### <a name="adonet-for-windows"></a>ADO.NET (適用於 Windows)
 
-- ![圈住下載箭頭的 Framework](../../ssms/media/download-icon.png)[下載並安裝 .NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../ssms/media/download-icon.png"::: [下載及安裝 .NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- 安裝 Visual Studio Community 或類似的整合式開發環境 (IDE)，以撰寫和編譯 C# 原始程式碼。 Microsoft 現在 *免費*提供 Visual Studio Community。  
+- 安裝 Visual Studio Community 或類似的整合式開發環境 (IDE)，以撰寫和編譯 C# 原始程式碼。 Microsoft 現在 *免費* 提供 Visual Studio Community。  
     - [下載 Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
     - [免費 Visual Studio 的更多選項](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
@@ -41,4 +41,4 @@ ms.locfileid: "92081297"
 
 您可以從下列位置取得下載適用於各種作業系統之 .NET Core 的連結：
 
-- ![圈住下載箭頭的 Core](../../ssms/media/download-icon.png)[下載並安裝 .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../ssms/media/download-icon.png"::: [下載及安裝 .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

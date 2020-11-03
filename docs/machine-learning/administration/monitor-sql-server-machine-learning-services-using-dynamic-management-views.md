@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115534"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679213"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (DMV) 來監視 SQL Server 機器學習服務
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -251,8 +251,8 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 |--------------------------|--------------|
 | pool_name                | 資源集區的名稱。 SQL Server 資源集區前面會加上 `SQL Server`，而外部資源集區前面會加上 `External Pool`。 |
 | total_cpu_usage_hours    | Resource Govenor 統計資料重設之後的累積 CPU 使用量 (以毫秒為單位)。 |
-| read_io_completed_total  | 重設資源管理員統計資料之後完成的讀取 IO 總數。              |
-| write_io_completed_total | 重設資源管理員統計資料之後完成的寫入 IO 總數。             |
+| read_io_completed_total  | Resource Governor 統計資料重設之後完成的讀取 IO 總數。              |
+| write_io_completed_total | Resource Governor 統計資料重設之後完成的寫入 IO 總數。             |
 
 ## <a name="installed-packages"></a>已安裝的套件
 

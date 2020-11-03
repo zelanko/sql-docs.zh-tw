@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890846"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496983"
 ---
 # <a name="install-report-builder"></a>安裝報表產生器
 
@@ -37,7 +37,7 @@ ms.locfileid: "91890846"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- 在整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站上，如果 [新增文件] **** 功能表未列出 [報表產生器報表] ****、[報表產生器模型] **** 和 [報表資料來源] ****，則必須將其內容類型加入 SharePoint 文件庫。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+ 在整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站上，如果 [新增文件]  功能表未列出 [報表產生器報表] 、[報表產生器模型] 和 [報表資料來源] ，則必須將其內容類型加入 SharePoint 文件庫。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
 
 ::: moniker-end
  
@@ -54,20 +54,20 @@ ms.locfileid: "91890846"
   
 ##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> 從下載網站安裝[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
-1.  在 [Microsoft 下載中心的報表產生器頁面](https://go.microsoft.com/fwlink/?LinkID=734968) ，按一下 [下載] ****。  
+1.  在 [Microsoft 下載中心的報表產生器頁面](https://go.microsoft.com/fwlink/?LinkID=734968) ，按一下 [下載] 。  
   
-2.  完成下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 之後，按一下 [執行]****。  
+2.  完成下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 之後，按一下 [執行]。  
   
      隨即啟動 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 精靈。  
   
-3.  接受授權合約條款，然後按一下 [下一步] ****。  
+3.  接受授權合約條款，然後按一下 [下一步] 。  
   
 4.  在 **[預設的目標伺服器]** 頁面上，選擇性地提供目標報表伺服器的 URL (如果它與預設值不同的話)。 按 [下一步]  。  
   
     > [!NOTE]  
-    >  如果您計畫在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]連線至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 您也可以透過 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [選項]**** 對話方塊執行此作業。  
+    >  如果您計畫在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]連線至報表伺服器時使用它，此時提供伺服器的 URL 比較方便。 您也可以透過 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [選項] 對話方塊執行此作業。  
   
-5.  按一下 [安裝]**** 完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的安裝程序。  
+5.  按一下 [安裝] 完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的安裝程序。  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>從共用安裝[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -81,25 +81,25 @@ ms.locfileid: "91890846"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>若要從命令列安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
 
- 您也可以執行[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的命令列安裝，並提供引數來自訂安裝。 除了標準的 MSI 內建參數以外，您還可以使用[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]所提供的自訂參數：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 會指定[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的根安裝資料夾。 REPORTSERVERURL 會指定[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]用來在伺服器上儲存報表的預設報表伺服器。  
+ 您也可以執行[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的命令列安裝，並提供引數來自訂安裝。 除了標準的 MSI 內建參數以外，您還可以使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 提供的自訂參數：RBINSTALLDIR 和 RBSERVERURL。 RBINSTALLDIR 會指定[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的根安裝資料夾。 RBSERVERURL 會指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用來在伺服器上儲存報表的預設報表伺服器。  
   
  如果您想要進行完全無訊息的安裝 (完全沒有使用者介面互動)，請指定 **/quiet** 選項。 根據設計，quiet 選項旗標會隱藏安裝錯誤。 因此，當您使用 quiet 選項時，建議您加入 **/l** 選項 (指定記錄)。   
   
-1.  在 [Microsoft 下載中心的報表產生器頁面](https://go.microsoft.com/fwlink/?LinkID=734968)，按一下 [下載]****。  
+1.  在 [Microsoft 下載中心的報表產生器頁面](https://go.microsoft.com/fwlink/?LinkID=734968)，按一下 [下載]。  
   
-2.  完成下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 之後，按一下 [儲存]****。  
+2.  完成下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 之後，按一下 [儲存]。  
   
 3.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-4.  在 [開啟] **** 方塊中輸入 **cmd.**。  
+4.  在 [開啟]  方塊中輸入 **cmd.** 。  
   
 5.  在 [命令提示字元] 視窗中，巡覽至儲存 ReportBuilder.msi 的資料夾。  
   
 6.  輸入下列格式的命令：  
   
-     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     安裝[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的兩個專屬選項是：RBINSTALLDIR 和 REPORTSERVERURL。 您不需要在命令列中包含這些引數。 以下為基準命令：  
+     安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的兩個特定選項是：RBINSTALLDIR 和 RBSERVERURL。 您不需要在命令列中包含這些引數。 以下為基準命令：  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -111,9 +111,9 @@ ms.locfileid: "91890846"
   
      設定預設 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 網站最為實用。 如需詳細資訊，請參閱 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)。  
   
--   按一下 [報表產生器] **** 。  
+-   按一下 [報表產生器]  。  
   
-     若您在現有伺服器清單中沒有看到報表伺服器，請關閉 [開啟報表]**** 對話方塊，然後按一下 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的 [連線]****，以連線至伺服器。  
+     若您在現有伺服器清單中沒有看到報表伺服器，請關閉 [開啟報表] 對話方塊，然後按一下 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的 [連線]，以連線至伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)   

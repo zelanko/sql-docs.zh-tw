@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95b153be1b4dc5a45effeb678ca0ccef83f06e6e
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448030"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907336"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用鑽研建立索引標籤式的行動報表
 了解如何使用鑽研報表和參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，使其外觀和行為類似索引標籤式報表。
 
 例如，在此報表中，頂端的量測計會充當索引標籤。 當您按一下 Transportation 量測計時，圖表中的其餘資料會以傳輸資料進行篩選。
 
-![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
+![顯示已選取運輸量測計的 Financials - Transportation 報表螢幕擷取畫面。](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
 在幕後，這實際上是一組五份不同的報表，各有不同的參數可篩選報表，以符合報表頂端所選取的量測計。 您先建立共五份報表，然後針對這五份報表，您將其他四個量測計鑽研至其他四份報表。
 
@@ -37,11 +37,11 @@ ms.locfileid: "79448030"
     * 儲存體
     * Misc Expenses
 
-   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![有五個量測計的 Sales 報表。](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
 2. 將 Sales 量測計的 [輔色]  設為 [開啟]  ，以和報表其餘部分形成對比--本例中為黑色上的白色。
 
-    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![銷售量測計的螢幕擷取畫面：紅色箭號指向位在 [開啟] 的輔色滑桿。](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
 3. 儲存到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表伺服器。
 
@@ -62,7 +62,7 @@ ms.locfileid: "79448030"
 
 1. 在 Sales 報表中，選取 Transportation 量測計。
 
-    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![Sales 報表的螢幕擷取畫面：紅色箭號從運輸量測計指到 [鑽研目標] 選項。](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
 2. 選取 [版面配置]  索引標籤，然後在 [視覺屬性]  窗格中，選取 [鑽研目標]  。
 
@@ -70,11 +70,11 @@ ms.locfileid: "79448030"
 
 4. 巡覽並選取鑽研目的地的報表，本例中為 "Financials - Transportation"。
 
-    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![已標註 [Financials - Transportation] 選項的 [從伺服器開啟] 對話方塊螢幕擷取畫面。](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
 5. 在 [設定目標報表]  ，選取篩選報表的參數，然後選取 [套用]  。
 
-   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![顯示 Financials - Transportation 報表參數的 [設定目標報表] 區段螢幕擷取畫面。](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
 6. 針對 Sales 報表中的其他量測計一一重複這些步驟。 
 
@@ -92,11 +92,11 @@ ms.locfileid: "79448030"
 
 2. 請注意，每個量測計的右上角都有鑽研圖示。
 
-    ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
+    ![燃料量測計的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
 3. 選取其中一個量測計，移至報表篩選後的量測計資料。
 
-   ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
+   ![顯示 Financials - Transportation 報表的螢幕擷取畫面：紅色箭號指向以紅色方塊框住的運輸量測計。](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
 ### <a name="see-also"></a>另請參閱
     

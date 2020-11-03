@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 204885c83b400be7f134a7c8a5e622f3c3488797
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448289"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907306"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>在行動報表中加入量測計 | Reporting Services
 量測計是行動報表中使用最廣泛的基本視覺效果。 它們會顯示資料集中的單一值 (只有值或和目標比較的值)。
@@ -43,7 +43,7 @@ ms.locfileid: "79448289"
 
 4. [選用] 若要變更彙總，請選取 [選項]  ，然後選取不同的彙總。
    
-   >**注意**：當您變更主要值的彙總時，您可能也會想要變更比較值的彙總，雖然在某些情況下您可能會想要混合使用彙總方法。  
+   >**注意** ：當您變更主要值的彙總時，您可能也會想要變更比較值的彙總，雖然在某些情況下您可能會想要混合使用彙總方法。  
 
 ## <a name="filter-a-gauge"></a>篩選量測計
   
@@ -53,7 +53,7 @@ ms.locfileid: "79448289"
 
 2. 在 [Filtered by (篩選條件)] 下選取您想要篩選量測計的導覽器。
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![[主要值] 的 [選項] 已展開的螢幕擷取畫面，其中已選取 [依產品清單篩選] 選項。](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## <a name="set-visual-properties-for-a-gauge"></a>設定量測計的視覺屬性
   

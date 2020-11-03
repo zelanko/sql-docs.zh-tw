@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765737"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914335"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765737"
 
 從 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]可讓您部署在 Kubernetes 上執行之 SQL Server、Spark 和 HDFS 容器的可調式叢集。 這些元件會並存執行，可供您讀取、寫入和處理來自 Transact-SQL 或 Spark 的巨量資料，讓您輕鬆地結合與分析具有大量巨量資料的高價值關聯式資料。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引進 SQL Server 巨量資料叢集。
-
-使用 SQL Server 巨量資料叢集可執行下列動作：
+請利用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 來執行下列動作：
 
 - 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](./deploy-get-started.md)。 
 - 讀取、寫入及處理來自 Transact-SQL 或 Spark 的巨量資料。
@@ -45,7 +43,7 @@ ms.locfileid: "88765737"
 
 ### <a name="data-virtualization"></a>資料虛擬化
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]可以利用 [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md) 來查詢外部資料來源，而不需移動或複製資料。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 為資料源引進新的連接器。
+藉由利用 [PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查詢外部資料來源，無須移動或複製資料。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 為資料源引進新的連接器。
 
 ![資料虛擬化](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -75,7 +73,7 @@ SQL Server 巨量資料叢集包含可調整的 HDFS「存放集區」  。 這�
 - 常見管理工作的內建程式碼片段。
 - 能夠瀏覽 HDFS、上傳檔案、預覽檔案及建立目錄。
 - 能夠建立、開啟並執行與 Jupyter 相容的筆記本。
-- 資料虛擬化精靈可簡化外部資料來源的建立流程 (由**資料虛擬化延伸模組**啟用)。
+- 資料虛擬化精靈可簡化外部資料來源的建立流程 (由 **資料虛擬化延伸模組** 啟用)。
 
 ## <a name="architecture"></a><a id="architecture"></a> 架構
 
@@ -96,7 +94,7 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 
 ### <a name="big-data-clusters-architecture"></a>巨量資料叢集架構
 
-下圖顯示 SQL Server 的巨量資料叢集元件。
+下圖顯示 SQL Server 巨量資料叢集的元件：
 
 ![架構概觀](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -106,7 +104,7 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 
 ### <a name="compute-pool"></a><a id="computeplane"></a> 計算集區
 
-計算集區會將計算資源提供給叢集。 其中包含在 Linux Pod 上執行 SQL Server 的節點。 計算集區中的 Pod 會分割成 *SQL 計算執行個體*，以進行特定的處理工作。 
+計算集區會將計算資源提供給叢集。 其中包含在 Linux Pod 上執行 SQL Server 的節點。 計算集區中的 Pod 會分割成 *SQL 計算執行個體* ，以進行特定的處理工作。 
 
 ### <a name="data-pool"></a><a id="dataplane"></a> 資料集區
 
@@ -121,4 +119,4 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 
 ## <a name="next-steps"></a>後續步驟
 
-如需部署 SQL Server 巨量資料叢集的詳細資訊，請參閱[開始使用 SQL Server 巨量資料叢集](deploy-get-started.md)。
+如需部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的詳細資訊，請參閱[開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)。

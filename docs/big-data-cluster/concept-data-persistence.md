@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765687"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907356"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性
 
@@ -36,7 +36,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
 
 - 計算存放集區大小需求時，必須考慮用來設定 HDFS 的複寫因子。  複寫因子可在部署時於叢集部署組態檔中進行設定。 開發/測試設定檔 (例如 `aks-dev-test` 或 `kubeadm-dev-test`) 的預設值為 2，至於針對生產環境部署建議的設定檔 (例如 `kubeadm-prod`)，其預設值為 3。 基於最佳做法，建議使用至少為 3 的 HDFS 複寫因子來設定巨量資料叢集生產環境部署。 複寫因子值會影響存放集區中的執行個體數目：基本上，您必須部署至少與複寫因子值一樣多的存放集區執行個體。 此外，必須據此調整儲存體的大小，並將在 HDFS 中複寫資料的次數計為與複寫因子值一樣多次。 您可在[這裡](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)深入了解 HDFS 中的資料複寫。 
 
-- 從 SQL Server 2019 CU1 版本開始，您就無法修改部署後的儲存體組態設定。 此限制不僅可以防止您在部署後修改每個執行個體的永久性磁碟區宣告大小，還可以防止您執行範圍調整作業。 因此，在部署巨量資料叢集之前，請務必先規劃儲存體配置。
+- 自 SQL Server 2019 CU1 版本開始，BDC 不允許在部署後更新儲存體組態設定。 此條件約束可以防止您使用 BDC 作業，在部署後修改每個執行個體的永久性磁碟區宣告大小，或調整任何集區的規模。 因此，在部署巨量資料叢集之前，請務必先規劃儲存體配置。 但您可以直接使用 Kubernetes API 擴充永久性磁碟區大小。 這樣就不會更新 BDC 中繼資料，而且您會看到組態叢集中繼資料中的磁碟區大小不一致。
 
 - 透過在 Kubernetes 上部署為容器化應用程式，以及透過使用具狀態集合與永續性儲存體等功能，Kubernetes 可確保 Pod 會在發生健康情況問題時重新啟動，並連接到相同的永續性儲存體。 但萬一節點失敗，而且必須在另一個節點上重新啟動 Pod，如果儲存體位於失敗節點的本機，則會提高無法使用的風險。 為了降低此風險，您必須設定其他備援，並啟用[高可用性功能](deployment-high-availability.md)或使用遠端備援儲存體。 以下概觀適用於巨量資料叢集中各種元件的儲存體選項：
 
@@ -71,7 +71,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
     }
 ```
 
-巨量資料叢集的部署會使用永續性儲存體來儲存各種元件的資料、中繼資料與記錄。 您可以自訂在部署過程中建立的永久性磁碟區宣告大小。 建議的最佳做法是使用具有保留** [回收原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) \(英文\) 的儲存類別。
+巨量資料叢集的部署會使用永續性儲存體來儲存各種元件的資料、中繼資料與記錄。 您可以自訂在部署過程中建立的永久性磁碟區宣告大小。 建議的最佳做法是使用具有保留 [回收原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) \(英文\) 的儲存類別。
 
 > [!WARNING]
 > 在沒有永續性儲存體的情況下執行可以在測試環境中運作，但是它可能會導致無法正常運作的叢集。 在 Pod 重新啟動時，叢集中繼資料和/或使用者資料會永久遺失。 建議不要在此設定下執行。
@@ -83,7 +83,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
 AKS 隨附[兩個內建的儲存類別](/azure/aks/azure-disks-dynamic-pv/) `default` 與 `managed-premium`，以及其所適用的動態佈建程式。 您可以指定其中一個，或建立您自己的儲存類別，以部署已啟用永續性儲存體的巨量資料叢集。 根據預設，AKS `aks-dev-test` 的內建叢集設定檔會隨附永續性儲存體設定，以使用 `default` 儲存類別。
 
 > [!WARNING]
-> 使用內建儲存類別 `default` 和 `managed-premium` 建立的永續性磁碟區具有「刪除」** 的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告會遭到刪除，然後永久性磁碟區也是。 您可以透過使用 `azure-disk` 佈建程式搭配 `Retain` 回收原則來建立自訂儲存類別，如[概念儲存體](/azure/aks/concepts-storage/#storage-classes)中所述。
+> 使用內建儲存類別 `default` 和 `managed-premium` 建立的永續性磁碟區具有「刪除」的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告會遭到刪除，然後永久性磁碟區也是。 您可以透過使用 `azure-disk` 佈建程式搭配 `Retain` 回收原則來建立自訂儲存類別，如[概念儲存體](/azure/aks/concepts-storage/#storage-classes)中所述。
 
 ## <a name="storage-classes-for-kubeadm-clusters"></a>`kubeadm` 叢集的儲存類別 
 

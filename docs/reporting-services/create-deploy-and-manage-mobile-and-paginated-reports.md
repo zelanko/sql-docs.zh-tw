@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291145"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679200"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 
@@ -38,9 +38,9 @@ SSRS 解決方案會以彈性方式提供正確的資訊給需要的使用者。
 
 SQL Server Reporting Services 提供更新產品套件：
 
-* **「傳統」分頁報表**已經過更新，因此您可以建立具有現代化外觀的報表，並提供更新工具和新功能來建立這些報表。
+* **「傳統」分頁報表** 已經過更新，因此您可以建立具有現代化外觀的報表，並提供更新工具和新功能來建立這些報表。
 * **新的行動報表** 具有可配合不同裝置和不同保留方式調整的回應式配置。
-* 您可以在任何新式瀏覽器中檢視的**新式入口網站** 。 在新的入口網站，您可以組織並顯示行動與分頁的 Reporting Services 報表和 KPI。 您也可以在入口網站上儲存 Excel 活頁簿。
+* 您可以在任何新式瀏覽器中檢視的 **新式入口網站** 。 在新的入口網站，您可以組織並顯示行動與分頁的 Reporting Services 報表和 KPI。 您也可以在入口網站上儲存 Excel 活頁簿。
 
 請繼續閱讀以深入了解各項內容。
 
@@ -54,7 +54,7 @@ SQL Server Reporting Services 提供更新產品套件：
 
 ## <a name="paginated-reports"></a>分頁報表
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![電腦畫面和平板電腦裝置上的編頁報表圖片。](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列印最佳化的固定版面配置文件，例如 PDF 和 Word 檔案。
 
@@ -67,7 +67,7 @@ Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列�
 
 ## <a name="mobile-reports"></a>行動報表
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![電腦畫面和平板電腦裝置上的行動報表圖片。](../reporting-services/media/ssrs-mobile-reports.png)
 
 行動運算改變了我們需要使用的裝置，這表示今日的使用者有不同的報告需求。 當您採用平板電腦和手機時，並不適合使用固定式配置報表體驗。 針對寬螢幕電腦所設計的內容並不適合用於小型手機螢幕，此螢幕不僅更小，而且還有直向或橫向。
 
@@ -79,7 +79,7 @@ Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列�
 
 ## <a name="web-portal"></a>入口網站
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![入口網站膝上型電腦的圖片。](../reporting-services/media/ssrs-web-portal.png)
 
 原生模式 Reporting Services 使用者的首頁，就是您可以在大部分瀏覽器中檢視的新式入口網站。 您可以在新的入口網站中存取您所有的 Reporting Services 行動裝置、分頁報表和 KPI。 KPI 可以在瀏覽器中呈現關鍵業務指標概覽，而不必開啟報表。
 

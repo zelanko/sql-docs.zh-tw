@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: f70911bbb2f7907e5fa083622ae11d9e947aa592
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 10/27/2020
+ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257875"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734640"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -25,6 +25,64 @@ ms.locfileid: "92257875"
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。
 
 ## <a name="current-ssms-release"></a>目前的 SSMS 版本
+
+### <a name="1871"></a>18.7.1
+
+![下載](media/download-icon.png) [下載 SSMS 18.7](download-sql-server-management-studio-ssms.md)
+
+- 版本號碼：18.7.1
+- 組建編號：15.0.18358.0
+- 發行日期：2020 年 10 月 27 日
+
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
+
+SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
+
+#### <a name="whats-new-in-1871"></a>18.7.1 的新功能
+
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
+
+#### <a name="bug-fixes-in-1871"></a>18.7.1 的 Bug 修正
+
+| 新項目 | 詳細資料 |
+|----------|---------|
+| 查詢存放區 | 在查詢存放區的 [物件總管] 節點上按一下滑鼠右鍵時，所擲回的已修正錯誤。 |
+
+
+#### <a name="known-issues-1871"></a>已知問題 (18.7.1)
+
+| 新項目 | 詳細資料 | 因應措施 |
+|----------|---------|------------|
+| Analysis Services | 透過 msmdpump.dll 連線到 SSAS 時發生錯誤。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)。 | N/A |
+| Analysis Services | 在罕見的情況下，使用升級安裝程式時，在升級 SSMS 後嘗試開啟 DAX 編輯器時可能會有「物件未設定成物件的執行個體」錯誤。 | 若要解決此問題，請將 SSMS 解除安裝，然後再重新安裝。 |
+| 一般 SSMS | [新的伺服器稽核規格] 對話方塊可能會導致 SSMS 損毀，並出現存取違規錯誤。 | N/A |
+| 一般 SSMS | 使用 SMO 的 SSMS 延伸模組應以新 SSMS 特定 SMO v161 套件為目標重新編譯。 您可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 取得預覽版本 </br></br> 針對 Microsoft.SqlServer.SqlManagementObjects 套件 160 以前版本所編譯的延伸模組仍然會正常運作。 | N/A |
+| Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 因應措施：移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 | N/A |
+| Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 因應措施：在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些登錄區內，針對我們嘗試連線的特定 Integration Services 版本，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'得 | N/A |
+| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics SQL 隨選在 SSMS 中利用物件總管，您需要 SSMS 18.7 或更新版本。 |
+
+針對其他已知問題，您可參考 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server)並為產品小組提供意見反應。
+
+## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
+
+選取相關區段中的下載連結，以下載舊版的 SSMS。
+
+| SSMS 版本 | 組建編號 | 發行日期 |
+|--------------|--------------|--------------|
+| [18.7](#187) | 15.0.18357.0 | 2020 年 10 月 20 日 |
+| [18.6](#186) | 15.0.18338.0 | 2020 年 7 月 22 日 |
+| [18.5.1](#1851) | 15.0.18333.0 | 2020 年 6 月 9 日 |
+| [18.5](#185) | 15.0.18330.0 | 2020 年 4 月 7 日 |
+| [18.4](#184) | 15.0.18206.0 | 2019 年 11 月 4 日 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2 日 |
+| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
+| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
+| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
 
 ### <a name="187"></a>18.7
 
@@ -38,7 +96,7 @@ ms.locfileid: "92257875"
 
 SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
 
-### <a name="whats-new-in-187"></a>18.7 的新功能
+#### <a name="whats-new-in-187"></a>18.7 的新功能
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -53,7 +111,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 執行程序表 | 已新增 PREDICT 運算子。 |
 | XEvent UI | 已新增使用 wait_type 名稱來編寫擴充事件指令碼的功能。 使用者要求在 wait_type 篩選述詞中使用 map_value 資料行 (而非 map_key) 的值，因為金鑰值會在版本升級期間變更。 修正：已新增核取方塊並給予使用者選項，以選擇要針對 wait_type 篩選述詞值使用 map_value 或 map_key。 |
 
-### <a name="bug-fixes-in-187"></a>18.7 中的錯誤 (Bug) 修正
+#### <a name="bug-fixes-in-187"></a>18.7 中的錯誤 (Bug) 修正
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -101,28 +159,8 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | 使用 SMO 的 SSMS 延伸模組應以新 SSMS 特定 SMO v161 套件為目標重新編譯。 您可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 取得預覽版本 </br></br> 針對 Microsoft.SqlServer.SqlManagementObjects 套件 160 以前版本所編譯的延伸模組仍然會正常運作。 | N/A |
 | Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 因應措施：移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 | N/A |
 | Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 因應措施：在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些登錄區內，針對我們嘗試連線的特定 Integration Services 版本，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'得 | N/A |
-| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics SQL 隨選在 SSMS 中利用物件總管，您需要 SSMS 18.7 或更新版本。
-
-針對其他已知問題，您可參考 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server)並為產品小組提供意見反應。
-
-## <a name="previous-ssms-releases"></a>舊版 SSMS
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
-
-選取相關區段中的下載連結，以下載舊版的 SSMS。
-
-| SSMS 版本 | 組建編號 | 發行日期 |
-|--------------|--------------|--------------|
-| [18.6](#186) | 15.0.18338.0 | 2020 年 7 月 22 日 |
-| [18.5.1](#1851) | 15.0.18333.0 | 2020 年 6 月 9 日 |
-| [18.5](#185) | 15.0.18330.0 | 2020 年 4 月 7 日 |
-| [18.4](#184) | 15.0.18206.0 | 2019 年 11 月 4 日 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2 日 |
-| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
-| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
-| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
-| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
+| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics SQL 隨選在 SSMS 中利用物件總管，您需要 SSMS 18.7 或更新版本。 |
+| 查詢存放區 | 查詢存放區的 [物件總管] 節點會在按一下滑鼠右鍵時擲回錯誤。 | 展開節點並以滑鼠右鍵按一下個別的子選項，可直接存取項目。 |
 
 ### <a name="186"></a>18.6
 
@@ -134,7 +172,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
 
-### <a name="whats-new-in-186"></a>18.6 的新功能
+#### <a name="whats-new-in-186"></a>18.6 的新功能
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -147,7 +185,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 新增在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (先前稱為 SQL Azure DW) 上撰寫動態資料遮罩指令碼的支援。 |
 | SMO/指令碼 | 新增在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (先前稱為 SQL DW) 上撰寫安全性原則指令碼的支援。 |
 
-### <a name="bug-fixes-in-186"></a>18.6 中的 Bug 修正
+#### <a name="bug-fixes-in-186"></a>18.6 中的 Bug 修正
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -193,7 +231,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
 
-### <a name="bug-fixes-in-1851"></a>18.5.1 中的 Bug 修正
+#### <a name="bug-fixes-in-1851"></a>18.5.1 中的 Bug 修正
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -202,7 +240,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | Analysis Services | 修正讓使用者無法使用行動數據權限查詢 SSAS 2017 及更早版本的問題。 |
 | 一般 SSMS | [資料表設計工具 - 修正嘗試在資料表設計工具格線中嘗試 TAB 時發出的嗶聲](https://feedback.azure.com/forums/908035/suggestions/40318435) |
 
-### <a name="known-issues-1851"></a>已知問題 (18.5.1)
+#### <a name="known-issues-1851"></a>已知問題 (18.5.1)
 
 | 新項目 | 詳細資料 | 因應措施 |
 |----------|---------|------------|
@@ -221,7 +259,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
-### <a name="whats-new-in-185"></a>18.5 的新功能
+#### <a name="whats-new-in-185"></a>18.5 的新功能
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -242,7 +280,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name 和 engineEdition 欄位現在可以包含一般逗號分隔清單 (平台  ：\[*Windows* 、 *Linux*\])，而不只是規則運算式 (平台  ： *\/Windows\|Linux\/* )
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 13 個評定規則。 如需詳細資訊，請移至 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))。 |
 
-### <a name="bug-fixes-in-185"></a>18.5 中的錯誤 (Bug) 修正
+#### <a name="bug-fixes-in-185"></a>18.5 中的錯誤 (Bug) 修正
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -298,7 +336,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - XTPHashAvgChainBuckets 規則中有錯誤的說明連結。 |
 | XEvent UI | 已修正格線中的項目在游標暫留時選取的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/38262124)及 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921)。 |
 
-### <a name="known-issues-185"></a>已知問題 (18.5)
+#### <a name="known-issues-185"></a>已知問題 (18.5)
 
 | 新項目 | 詳細資料 | 因應措施 |
 |----------|---------|------------|
@@ -432,7 +470,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
-### <a name="whats-new-in-182"></a>18.2 的新功能
+#### <a name="whats-new-in-182"></a>18.2 的新功能
 
 | 新項目 | 詳細資料 |
 |----------|---------|
@@ -623,7 +661,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |資料分類|在 SMO 中新增 [資料分類] 功能。 資料行物件公開了新的屬性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId，及 IsClassified (唯讀)。 如需詳細資訊，請參閱 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |資料分類|在 [資料分類] 飛出視窗中新增 [分類報告] 功能表項目。|
 |資料分類| 已更新建議。|
-|資料庫相容性層級升級|在 [資料庫名稱] > [工作] > [資料庫升級] 下方新增選項。 這會啟動新的 **Query Tuning Assistant (QTA) (查詢調整小幫手)** 來引導使用者完成下列程序：收集效能基準資料，再升級資料庫相容性層級。 升級至想要的資料庫相容性層級。  針對相同的工作負載，收集第二輪的效能資料。 偵測工作負載迴歸，並提供經過測試的建議來提升工作負載效能。  這類似於[查詢存放區使用案例](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中所述的資料庫升級程序，不同之處是在最後一個步驟中，QTA 不會依賴先前已知良好的狀態來產生建議。|
+|資料庫相容性層級升級|在 [資料庫名稱] ***_ > _[工作]*  *_ > _[資料庫升級]* *下方新增選項。這會啟動新的* Query Tuning Assistant (QTA)** 引導使用者完成下列流程：收集效能基準資料，再升級資料庫相容性層級。 升級至想要的資料庫相容性層級。  針對相同的工作負載，收集第二輪的效能資料。 偵測工作負載迴歸，並提供經過測試的建議來提升工作負載效能。  這類似於[查詢存放區使用案例](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中所述的資料庫升級程序，不同之處是在最後一個步驟中，QTA 不會依賴先前已知良好的狀態來產生建議。|
 |資料層應用程式精靈|新增使用圖形資料表匯入/匯出資料層應用程式的支援。|
 |一般檔案匯入精靈|新增邏輯，通知使用者匯入可能會導致重新命名資料行。|
 |Integration Services (SSIS)|新增支援，允許客戶對 Azure Government 雲端中 Azure-SSIS IR 上的 SSIS 套件進行排程。|

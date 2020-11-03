@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680594"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678914"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>如何使用 Visual Studio Code 將應用程式部署至 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -153,7 +153,7 @@ azdata bdc endpoint list
 
 如果您按一下 `Links`，您將會發現您可以存取已部署應用程式的 `swagger.json`，因此您可以自行撰寫會呼叫您應用程式的用戶端：
 
-![Swagger](media/vs-extension/swagger.png)
+![顯示 swagger.json 檔案的 VS Code UI 螢幕擷取畫面。](media/vs-extension/swagger.png)
 
 請參閱[取用巨量資料叢集上的應用程式](app-consume.md)以取得詳細資訊。
 

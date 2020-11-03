@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e480c0b24a05a42ba7cb53a3d35125a7e2b3976
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e371d024f9166988663439fdcce54a06e13a1c4f
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934907"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439282"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -71,25 +71,25 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |設定|描述|[模式]|  
 |-------------|-----------------|----------|  
 |**Dsn**|將連接字串指定給主控報表伺服器資料庫的資料庫伺服器。 當您建立報表伺服器資料庫時，這個值會加密並加入至組態檔。 如果是 SharePoint，資料庫連接資訊會取自 SharePoint 組態資料庫。|N、S|  
-|**ConnectionType**|指定報表伺服器用於連接到報表伺服器資料庫的認證類型。 有效值為 **Default** 和 **Impersonate**。 如果將報表伺服器設定為使用**登入或服務帳戶連接到報表伺服器資料庫，則會指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果報表伺服器是使用 Windows 帳戶連接到報表伺服器資料庫，則會指定**Impersonate** 。|N|  
-|**LogonUser, LogonDomain, LogonCred**|儲存報表伺服器用於連接至報表伺服器資料庫所使用之網域帳戶的網域、使用者名稱和密碼。 當報表伺服器連接設定使用網域帳戶時，會建立 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 如需報表伺服器資料庫連線的詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
+|**ConnectionType**|指定報表伺服器用於連接到報表伺服器資料庫的認證類型。 有效值為 **Default** 和 **Impersonate** 。 如果將報表伺服器設定為使用 **登入或服務帳戶連接到報表伺服器資料庫，則會指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果報表伺服器是使用 Windows 帳戶連接到報表伺服器資料庫，則會指定 **Impersonate** 。|N|  
+|**LogonUser, LogonDomain, LogonCred**|儲存報表伺服器用於連接至報表伺服器資料庫所使用之網域帳戶的網域、使用者名稱和密碼。 當報表伺服器連接設定使用網域帳戶時，會建立 **LogonUser** 、 **LogonDomain** 和 **LogonCred** 的值。 如需報表伺服器資料庫連線的詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
 |**InstanceID**|報表伺服器執行個體的識別碼。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 此值會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 根據預設，這個值為 **MSRS12** _\<instancename>_ 。 請勿修改此設定。 以下為完整值的範例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的範例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|安裝程式建立之報表伺服器安裝的識別碼。 此值會設定為 GUID。 請勿修改此設定。|N|  
 |**SecureConnectionLevel**|指定 Web 服務呼叫必須使用傳輸層安全性 (TLS) (先前稱為安全通訊端層 (SSL)) 的程度。 這項設定同時用於報表伺服器 Web 服務和入口網站。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定使用 HTTP 或 HTTPS 的 URL 時，就會設定這個值。 在 SQL Server 2008 R2 中，SecureConnectionLevel 會變成 on/off 開關。 對於 SQL Server 2008 R2 之前的版本，有效值範圍是從 0 到 3，其中 0 是最不安全的值。 如需詳細資訊，請參閱 [ConfigurationSetting 方法 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)、[使用安全的 Web 服務方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)和[在原生模式報表伺服器上設定 TLS 連線](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|預設值為 False。<br /><br /> 指定是否停用強制將表單和自訂驗證所使用的 Cookie 標記為安全。 從 SQL Server 2012 開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會自動將搭配自訂驗證延伸模組所使用的表單驗證 Cookie (在傳送給用戶端時) 標示為安全 Cookie。 藉由變更這個屬性，報表伺服器管理員和自訂安全性延伸模組作者可以還原成之前的行為，該行為可讓自訂安全性延伸模組作者判斷是否將 Cookie 標示為安全 Cookie。 建議針對表單驗證使用安全 Cookie，以防止網路探查和重新執行攻擊。|N|  
-|**CleanupCycleMinutes**|指定一個時限 (分鐘)，超過此時限後，舊有的工作階段和過期的快照集，便會從報表伺服器資料庫中移除。 有效值範圍是從 0 到最大整數。 預設值為 10。 將該值設為 0 會停用資料庫清除處理序。|N、S|  
+|**CleanupCycleMinutes**|指定一個時限 (分鐘)，超過此時限後，舊有的工作階段和過期的快照集，便會從報表伺服器資料庫中移除。 有效值範圍是從 1 到最大的整數。 預設值為 10。 |N、S|  
 |**MaxActiveReqForOneUser**|指定一個使用者同時可以處理的報表最大數目。 一旦達到限制，系統就會拒絕進一步的報表處理要求。 有效值為 1 到最大整數。 預設值為 20。<br /><br /> 請注意，大部分要求的處理速度很快，因此單一使用者不太可能同時擁有 20 個以上的開啟連接。 如果使用者同時開啟超過 15 個密集處理的報表，您可能需要增加此值。<br /><br /> 以 SharePoint 整合模式執行的報表伺服器會忽略這項設定。|N、S|  
 |**MaxActiveReqForAnonymous**|指定可同時處理的匿名要求數目上限。 達到限制之後，系統就會拒絕進一步的處理要求。 有效值為 1 到最大整數。 預設值為 200。
 |**DatabaseQueryTimeout**|指定一個時限 (秒)，超過此時限後，與報表伺服器資料庫的連接便會逾時。此值傳遞至 System.Data.SQLClient.SQLCommand.CommandTimeout 屬性。 有效值的範圍為 0 到 2147483647。 預設值是 120。 值為 0 會指定無限等候時間，因此不建議您這樣做。|N|  
 |**AlertingCleanupCycleMinutes**|預設值為 20。<br /><br /> 決定清除儲存在警示資料庫中所儲存暫存資料的頻率。|S|  
 |**AlertingDataCleanupMinutes**|預設值是 360。<br /><br /> 判斷用於建立或編輯警示定義的工作階段資料會在警示資料庫內保留多久。 預設為 6 小時。|S|  
-|**AlertingExecutionLogCleanup**Minutes|預設值是 10080。<br /><br /> 判斷要保留警示執行記錄值多久。 預設值為 7 天。|S|  
+|**AlertingExecutionLogCleanup** Minutes|預設值是 10080。<br /><br /> 判斷要保留警示執行記錄值多久。 預設值為 7 天。|S|  
 |**AlertingMaxDataRetentionDays**|預設值是 180。<br /><br /> 判斷在警示的資料尚未變更時，要保留必要的警示資料多久來避免重複的警示訊息。|S|  
 |**RunningRequestsScavengerCycle**|指定取消遺棄與過期要求的頻率。 此指定值的單位是秒。 有效值範圍是從 0 到最大整數。 預設值是 60。|N、S|  
 |**RunningRequestsDbCycle**|指定報表伺服器評估執行中作業，以檢查作業是否超過報表執行逾時的頻率，以及何時在入口網站的 [管理作業] 頁面中，顯示執行中作業的資訊。 此指定值的單位是秒。 有效值的範圍為 0 到 2147483647。 預設值是 60。|N、S|  
 |**RunningRequestsAge**|指定間隔秒數，超過此秒數後，執行中作業的狀態便會從新作業變更成執行中作業。 有效值的範圍為 0 到 2147483647。 預設值是 30。|N、S|  
-|**MaxScheduleWait**|指定要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [下次執行時間] **時，報表伺服器 Windows 服務等候** Agent 服務更新排程的秒數。 有效值的範圍從 1 到 60。<br /><br /> 在預設組態檔中，MaxScheduleWait 會設為 **5**。<br /><br /> 如果報表伺服器找不到或無法讀取組態檔，則伺服器會將 MaxScheduleWait 預設為 1。|N、S|  
-|**DisplayErrorLink**|指出錯誤發生時，是否顯示「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 說明及支援」網站的連結。 此連結出現在錯誤訊息中。 使用者可以按一下此連結，以便開啟網站上的更新錯誤訊息內容。 有效值包括 **True** (預設值) 和 **False**。|N、S|  
+|**MaxScheduleWait**|指定要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [下次執行時間] **時，報表伺服器 Windows 服務等候** Agent 服務更新排程的秒數。 有效值的範圍從 1 到 60。<br /><br /> 在預設組態檔中，MaxScheduleWait 會設為 **5** 。<br /><br /> 如果報表伺服器找不到或無法讀取組態檔，則伺服器會將 MaxScheduleWait 預設為 1。|N、S|  
+|**DisplayErrorLink**|指出錯誤發生時，是否顯示「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 說明及支援」網站的連結。 此連結出現在錯誤訊息中。 使用者可以按一下此連結，以便開啟網站上的更新錯誤訊息內容。 有效值包括 **True** (預設值) 和 **False** 。|N、S|  
 |**WebServiceuseFileShareStorage**|指定是否將快取報表與暫存快照集 (報表伺服器 Web 服務為使用者工作階段持續時間所建立的)，儲存在檔案系統上。 有效值為 **True** 和 **False** (預設值)。 如果此值設定為 false，暫存資料會儲存在 reportservertempdb 資料庫中。|N、S|  
 |**ProcessTimeout**|指定報表伺服器處理序監視器在停止服務前，等待任何服務活動作業完成的秒數。 有效值範圍是從 0 到最大整數。 預設為 150。 根據預設這項設定會停用，且可透過移除註解語法 (```<!-- and -->```) 來啟用。|N|  
 |**ProcessTimeoutGcExtension**|指定報表伺服器處理序監視器在停止服務前，等待服務活動作業完成的秒數。 這項設定只有在 .NET 記憶體回收正在進行，且已經到達 ProcessTimeout 值的時候才會適用。 有效值範圍是從 0 到最大整數。 預設值是 30。 根據預設這項設定會停用，且可透過移除註解語法 (```<!-- and -->```) 來啟用。|N|  
@@ -117,12 +117,12 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**URL**|包含應用程式的一或多個 URL 保留項目。|N|  
 |**UrlString**|指定適用於 HTTP.SYS 的 URL 語法。 如需語法的詳細資訊，請參閱 [URL 保留項目語法 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。|N|  
 |**AccountSid**|指定建立保留的 URL 時使用之帳戶的安全性識別碼 (SID)。 這應該是報表伺服器服務執行時使用的帳戶。 如果 SID 與服務帳戶不符，報表伺服器可能就無法接聽該 URL 的要求。|N|  
-|**AccountName**|指定對應至 **AccountSid**的可讀取帳戶名稱。 雖然系統不會使用此設定，但是它會顯示在檔案中，讓您可以輕易地判斷用於 URL 保留項目的帳戶。|N|  
+|**AccountName**|指定對應至 **AccountSid** 的可讀取帳戶名稱。 雖然系統不會使用此設定，但是它會顯示在檔案中，讓您可以輕易地判斷用於 URL 保留項目的帳戶。|N|  
   
 ##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> Authentication (RSReportServer.config 檔)  
  **Authentication** 會指定報表伺服器所接受的一個或多個驗證類型。 預設設定和預設值是這個區段可用之設定和值的子集。 只有預設設定會自動加入。 若要加入其他設定，您必須使用文字編輯器，將元素結構加入至 RSReportServer.config 檔，然後設定其值。  
   
- 預設值包括 **RSWindowsNegotiate** 和 **EnableAuthPersistance** 設為 **True** 的 **RSWindowsNTLM**：  
+ 預設值包括 **RSWindowsNegotiate** 和 **EnableAuthPersistance** 設為 **True** 的 **RSWindowsNTLM** ：  
   
 ```  
    <Authentication>  
@@ -140,18 +140,18 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|描述|[模式]|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|指定一或多種驗證類型。 有效值為：**RSWindowsNegotiate**、**RSWindowsKerberos**、**RSWindowsNTLM**、**RSWindowsBasic** 和 **Custom**。<br /><br /> **RSWindows** 類型和 **Custom** 互斥。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**和 **RSWindowsBasic** 是累計的，而且可以一起使用，如本節前面的預設值範例所示。<br /><br /> 如果您預期會收到來自各種使用不同驗證類型之用戶端應用程式或瀏覽器的要求，指定多種驗證類型就是必要的做法。<br /><br /> 請勿移除 **RSWindowsNTLM**，否則瀏覽器支援會限制在部分支援的瀏覽器類型。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N|  
+|**AuthenticationTypes**|指定一或多種驗證類型。 有效值為： **RSWindowsNegotiate** 、 **RSWindowsKerberos** 、 **RSWindowsNTLM** 、 **RSWindowsBasic** 和 **Custom** 。<br /><br /> **RSWindows** 類型和 **Custom** 互斥。<br /><br /> **RSWindowsNegotiate** 、 **RSWindowsKerberos** 、 **RSWindowsNTLM** 和 **RSWindowsBasic** 是累計的，而且可以一起使用，如本節前面的預設值範例所示。<br /><br /> 如果您預期會收到來自各種使用不同驗證類型之用戶端應用程式或瀏覽器的要求，指定多種驗證類型就是必要的做法。<br /><br /> 請勿移除 **RSWindowsNTLM** ，否則瀏覽器支援會限制在部分支援的瀏覽器類型。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N|  
 |**RSWindowsNegotiate**|報表伺服器接受 Kerberos 或 NTLM 安全性 Token。 當報表伺服器在原生模式下執行，而且服務帳戶為網路服務時，此為預設值。 當報表伺服器在原生模式下執行，而且服務帳戶設定成網域使用者帳戶時，會省略此設定。<br /><br /> 如果網域帳戶設定成報表伺服器服務帳戶，而且服務主要名稱 (SPN) 未設定成報表伺服器，此設定可能會防止使用者登入伺服器。|N|  
 |**EnableAuthPersistance**|伺服器接受 NTLM 安全性 Token。<br /><br /> 如果您移除此設定，瀏覽器支援會受到某些支援之瀏覽器類型的限制。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N、S|  
 |**RSWindowsKerberos**|伺服器接受 Kerberos 安全性 Token。<br /><br /> 當您在限制委派驗證配置中使用 Kerberos 驗證時，請使用此設定或 RSWindowsNegotiate。|N|  
 |**RSWindowsBasic**|不使用認證建立連線時，伺服器會接受基本認證並發出挑戰/回應。<br /><br /> 基本驗證會以清楚的文字，將認證傳入 HTTP 要求中。 如果您使用基本驗證，請使用 TLS 來加密進出報表伺服器的網路流量。 若要檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本驗證的範例組態語法，請參閱 [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)。|N|  
 |**Custom**|如果您在報表伺服器電腦上部署了自訂安全性延伸模組，請指定這個值。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)＞。|N|  
-|**LogonMethod**|這個值會指定 **RSWindowsBasic**的登入類型。 如果您指定了 **RSWindowsBasic**，這個值就是必要項目。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> **2** = 網路登入，用於驗證純文字密碼的高效能伺服器<br /><br /> **3** = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> <br /><br /> 注意:[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
-|**Realm**|這個值是用於 **RSWindowsBasic**。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
-|**DefaultDomain**|這個值是用於 **RSWindowsBasic**。 它可用於決定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|N|  
-|**RSWindowsExtendedProtectionLevel**|預設值是 **off**。 如需詳細資訊，請參閱＜ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)＞|N|  
-|**RSWindowsExtendedProtectionScenario**|****|N|  
-|**EnableAuthPersistence**|決定要在連接時或針對每個要求執行驗證。<br /><br /> 有效值為 **True** (預設值) 或 **False**。 如果設定為 **True**，來自相同連接的後續要求就會採用第一個要求的模擬內容。<br /><br /> 如果您正使用 Proxy 伺服器軟體 (例如 ISA Server) 來存取報表伺服器，這個值就必須設定為 **False** 。 使用 Proxy 伺服器可讓多位使用者使用 Proxy 伺服器的單一連接。 在這個狀況中，您應該停用驗證持續性機制，以便個別驗證每個使用者要求。 如果您沒有將 **EnableAuthPersistence** 設定為 **False**，則所有使用者都將使用第一個要求的模擬內容來進行連接。|N、S|  
+|**LogonMethod**|這個值會指定 **RSWindowsBasic** 的登入類型。 如果您指定了 **RSWindowsBasic** ，這個值就是必要項目。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> **2** = 網路登入，用於驗證純文字密碼的高效能伺服器<br /><br /> **3** = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> <br /><br /> 注意:[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
+|**Realm**|這個值是用於 **RSWindowsBasic** 。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
+|**DefaultDomain**|這個值是用於 **RSWindowsBasic** 。 它可用於決定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|N|  
+|**RSWindowsExtendedProtectionLevel**|預設值是 **off** 。 如需詳細資訊，請參閱＜ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)＞|N|  
+|**RSWindowsExtendedProtectionScenario**|The default value is <bpt id="p1">**</bpt>Proxy<ept id="p1">**</ept>|N|  
+|**EnableAuthPersistence**|決定要在連接時或針對每個要求執行驗證。<br /><br /> 有效值為 **True** (預設值) 或 **False** 。 如果設定為 **True** ，來自相同連接的後續要求就會採用第一個要求的模擬內容。<br /><br /> 如果您正使用 Proxy 伺服器軟體 (例如 ISA Server) 來存取報表伺服器，這個值就必須設定為 **False** 。 使用 Proxy 伺服器可讓多位使用者使用 Proxy 伺服器的單一連接。 在這個狀況中，您應該停用驗證持續性機制，以便個別驗證每個使用者要求。 如果您沒有將 **EnableAuthPersistence** 設定為 **False** ，則所有使用者都將使用第一個要求的模擬內容來進行連接。|N、S|  
   
 ##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service (RSReportServer.config 檔)  
  **Service** 會指定以整體方式套用至服務的應用程式設定。  
@@ -161,19 +161,19 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|描述|[模式]|  
 |-------------|-----------------|----------|  
-|**IsSchedulingService**|指定報表伺服器是否要維護一組對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者所建立之排程與訂閱的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Agent 作業。 有效值包括 **True** (預設值) 和 **False**。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S,P|  
-|**IsNotificationService**|指定報表伺服器是否處理通知和傳遞。 有效值包括 **True** (預設值) 和 **False**。 當值為 **False**時，不會傳遞訂閱。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S,P|  
-|**IsEventService**|指定服務處理序事件是否位於事件佇列中。 有效值包括 **True** (預設值) 和 **False**。 當值為 **False**時，報表伺服器不會執行排程或訂閱的作業。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S,P|  
+|**IsSchedulingService**|指定報表伺服器是否要維護一組對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者所建立之排程與訂閱的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Agent 作業。 有效值包括 **True** (預設值) 和 **False** 。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S,P|  
+|**IsNotificationService**|指定報表伺服器是否處理通知和傳遞。 有效值包括 **True** (預設值) 和 **False** 。 當值為 **False** 時，不會傳遞訂閱。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S,P|  
+|**IsEventService**|指定服務處理序事件是否位於事件佇列中。 有效值包括 **True** (預設值) 和 **False** 。 當值為 **False** 時，報表伺服器不會執行排程或訂閱的作業。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S,P|  
 |**IsAlertingService**|預設值為 **True**|S|  
 |**PollingInterval**|指定報表伺服器之事件資料表輪詢的間隔 (以秒計)。 有效值範圍是從 0 到最大整數。 預設值為 10。|N,S,P|  
-|**IsDataModelRefreshService**|指定服務是否會處理為 Power BI 報表排程的資料模型重新整理事件。 有效值包括 **True** (預設值) 和 **False**。 當值為 **False** 時，報表伺服器便不會為排程資料模型重新整理執行作業。|N|  
+|**IsDataModelRefreshService**|指定服務是否會處理為 Power BI 報表排程的資料模型重新整理事件。 有效值包括 **True** (預設值) 和 **False** 。 當值為 **False** 時，報表伺服器便不會為排程資料模型重新整理執行作業。|N|  
 |**WindowsServiceUseFileShareStorage**|指定是否將快取報表與暫存快照集 (報表伺服器服務為使用者工作階段持續時間所建立) 儲存在檔案系統上。 有效值為 **True** 和 **False** (預設值)。|N,S,P|  
 |**MemorySafetyMargin**|指定 **WorkingSetMaximum** 百分比，其定義中度與低度壓力狀況之間的界限。 預設值是 80。 如需 **WorkingSetMaximum** 和設定可用記憶體的詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N,S,P|  
-|**MemoryThreshold**|指定 **WorkingSetMaximum** 的百分比，以便定義高度與中度壓力狀況之間的界限。 預設值是 **90**。 此值應該大於針對 **MemorySafetyMargin**所設定的值。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N,S,P|  
+|**MemoryThreshold**|指定 **WorkingSetMaximum** 的百分比，以便定義高度與中度壓力狀況之間的界限。 預設值是 **90** 。 此值應該大於針對 **MemorySafetyMargin** 所設定的值。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N,S,P|  
 |**WorkingSetMaximum**|指定記憶體閾值，在到達這個閾值後，便不會授與報表伺服器應用程式任何新的記憶體配置要求。 根據預設，報表伺服器會將 WorkingSetMaximum 設為電腦上可用的記憶體數量。 這個值是在服務啟動時偵測的。 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N|  
 |**WorkingSetMinimum**|指定記憶體耗用量的下限。 若整體記憶體使用量低於此限制，報表伺服器將不會釋放記憶體。 根據預設，這個值會在服務啟動時計算，且初始記憶體配置要求是 **WorkingSetMaximum** 的 60%。 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 若想要自訂這個值，則必須將 **WorkingSetMaximum** 元素新增到 RSReportServer.config 檔案。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N| 
 |**RecycleTime**|指定應用程式網域的回收時間，以分鐘測量。 有效值範圍是從 0 到最大整數。 預設值是 720。|N、S|  
-|**MaxAppDomainUnloadTime**|指定在回收作業過程中，允許應用程式網域卸載的時間間隔。 如果回收未在此時間週期內完成，應用程式網域中的所有處理都會停止。 如需詳細資訊，請參閱＜ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)＞。<br /><br /> 此值的單位是分鐘。 有效值範圍是從 0 到最大整數。 預設值是 **30**。|N,S,P|  
+|**MaxAppDomainUnloadTime**|指定在回收作業過程中，允許應用程式網域卸載的時間間隔。 如果回收未在此時間週期內完成，應用程式網域中的所有處理都會停止。 如需詳細資訊，請參閱＜ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)＞。<br /><br /> 此值的單位是分鐘。 有效值範圍是從 0 到最大整數。 預設值是 **30** 。|N,S,P|  
 |**MaxQueueThreads**|指定報表伺服器 Windows 服務用於同時處理訂閱和通知的執行緒數目。 有效值範圍是從 0 到最大整數。 預設值是 0。 如果您選擇 0，則報表伺服器會決定最大的執行緒數目。 如果您指定整數，您所指定的值會設定一次可以建立的執行緒數目上限。 如需報表伺服器 Windows 服務如何管理記憶體來執行處理的詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N,S,P|  
 |**UrlRoot**|報表伺服器傳遞延伸模組所使用，用於撰寫以電子郵件和檔案共用訂閱傳遞報表所使用的 URL，也會由報表處理在使用 Globals!ReportServerUrl 解析運算式時使用。 此值必須是可從中存取已發行報表之報表伺服器的有效 URL 位址。 報表伺服器所使用，用於產生離線或自動存取的 URL。 這些 URL 會在匯出的報表中，由傳遞延伸模組所使用，用於撰寫包含在傳遞訊息中的 URL，例如電子郵件中的連結。 報表伺服器會根據下列行為，決定報表中的 URL：<br /><br /> 當 **UrlRoot** 是空的 (預設值)，而且有 URL 保留項目時，報表伺服器會自動以針對 ListReportServerUrls 方法產生 URL 的相同方式決定 URL。 系統會使用 ListReportServerUrls 方法所傳回第一個 URL。 或者，如果 SecureConnectionLevel 大於零 (0)，則會使用第一個 TLS URL。<br /><br /> 當 **UrlRoot** 設定為特定的值時，系統會使用明確值。<br /><br /> 當 **UrlRoot** 是空的，而且沒有設定任何 URL 保留項目時，轉譯報表與電子郵件連結中的 URL 會不正確。|N,S,P|  
 |**UnattendedExecutionAccount**|指定報表伺服器用來執行報表的使用者名稱、密碼和網域。 這些值經過加密。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具或 **rsconfig** 公用程式即可設定這些值。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;報表伺服器組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> SharePoint 模式中，您集合執行帳戶的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式使用 SharePoint 集中管理。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|N,P|  
@@ -181,8 +181,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**IsWebServiceEnabled**|指定報表伺服器 Web 服務是否回應 SOAP 與 URL 存取要求。 當您使用原則型式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用服務時，將會設定這個值。|N、S|  
 |**IsReportManagerEnabled**|此設定已在 SQL Server 2016 Reporting Services 累積更新 2 之後淘汰。 入口網站會一律啟用。|N|  
 |**FileShareStorageLocation**|指定檔案系統上儲存暫存快照集的單一資料夾。 雖然您可以將資料夾路徑指定為 UNC 路徑，但是不建議您這麼做。 預設值為空白。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S,P|  
-|**IsRdceEnabled**|指定是否啟用報表定義自訂延伸模組 (RDCE)。 有效值為 **True** 和 **False**。|N,S,P|
-|**IsDataModelRefreshService**|指定伺服器是否應處理 Power BI 報表重新整理。 有效值為 **True** 和 **False**。|P|
+|**IsRdceEnabled**|指定是否啟用報表定義自訂延伸模組 (RDCE)。 有效值為 **True** 和 **False** 。|N,S,P|
+|**IsDataModelRefreshService**|指定伺服器是否應處理 Power BI 報表重新整理。 有效值為 **True** 和 **False** 。|P|
 |**MaxCatalogConnectionPoolSizePerProcess**|指定連線到伺服器目錄時，連線集區的大小上限。 預設值為 0。 若選擇 0，則報表伺服器會為 reportingservices.exe 處理序決定連線的數量上限；針對其他處理序，則為 [SQL 用戶端預設](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize)。|P|  
 
   
@@ -191,11 +191,11 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  下表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
   
-|設定|說明|[模式]|  
+|設定|描述|[模式]|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|指定入口網站對其建立連線的報表伺服器 URL。 只有當您要將入口網站設定成連接線另一個執行個體或遠端電腦中的報表伺服器時，才應該修改這個值。|N、S|  
 |**ReportBuilderTrustLevel**|請勿修改這個值，因為它是無法設定的。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中，報表產生器只能以 **FullTrust** 執行。 如需停用部分信任模式的詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N、S|  
-|**PageCountMode**|(僅適用於入口網站) 這項設定會指定報表伺服器要在轉譯報表之前或檢視報表時計算頁面計數值。 有效值為 **Estimate** (預設值) 和 **Actual**。 在使用者檢視報表時，請使用 **Estimate** 來計算頁面計數資訊。 起初，頁面計數設定為 2 (代表目前的頁面加上一個額外頁面)，但是會隨著使用者在報表中逐次翻頁而向上調整。 如果您想要在顯示報表之前預先計算頁面計數，請使用 **Actual** 。 提供**Actual** 的目的，是為了與舊版相容。 請注意，如果您將 **PageCountMode** 設定為 **Actual**，則系統必須處理整份報表才能取得有效的頁面計數，因而增加顯示報表之前的等候時間。|N、S|  
+|**PageCountMode**|(僅適用於入口網站) 這項設定會指定報表伺服器要在轉譯報表之前或檢視報表時計算頁面計數值。 有效值為 **Estimate** (預設值) 和 **Actual** 。 在使用者檢視報表時，請使用 **Estimate** 來計算頁面計數資訊。 起初，頁面計數設定為 2 (代表目前的頁面加上一個額外頁面)，但是會隨著使用者在報表中逐次翻頁而向上調整。 如果您想要在顯示報表之前預先計算頁面計數，請使用 **Actual** 。 提供 **Actual** 的目的，是為了與舊版相容。 請注意，如果您將 **PageCountMode** 設定為 **Actual** ，則系統必須處理整份報表才能取得有效的頁面計數，因而增加顯示報表之前的等候時間。|N、S|  
   
 ##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> 延伸模組 (RSReportServer.config 檔) 原生模式  
  ＜延伸模組＞一節會出現在 **僅適用於原生模式** 報表伺服器的 rsreportserver.config 檔案中。 SharePoint 模式報表伺服器的延伸模組資訊儲存在 SharePoint 組態資料庫中，而且會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式設定。  
@@ -237,7 +237,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  如需傳遞延伸模組的詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- 所有傳遞延伸模組都具有 **Extension Name**、 **MaxRetries**、 **SecondsBeforeRetry**和 **Configuration**。 這些共用設定會優先記載。 延伸模組特有設定的描述接著列於第二個表格中。  
+ 所有傳遞延伸模組都具有 **Extension Name** 、 **MaxRetries** 、 **SecondsBeforeRetry** 和 **Configuration** 。 這些共用設定會優先記載。 延伸模組特有設定的描述接著列於第二個表格中。  
   
 |設定|描述|  
 |-------------|-----------------|  
@@ -249,9 +249,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="file-share-delivery-extension-configuration-settings"></a><a name="bkmk_fileshare_extension"></a> 檔案共用傳遞延伸模組組態設定  
  檔案共用傳遞會將已經匯出成應用程式檔案格式的報表傳送至網路上的共用資料夾。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)＞。  
   
-|設定|說明|  
+|設定|描述|  
 |-------------|-----------------|  
-|**ExcludedRenderFormats**、 **RenderingExtension**|這些設定是用於刻意排除無法搭配檔案共用傳遞使用的匯出格式。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
+|**ExcludedRenderFormats** 、 **RenderingExtension**|這些設定是用於刻意排除無法搭配檔案共用傳遞使用的匯出格式。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> 報表伺服器電子郵件延伸模組組態設定  
  報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
@@ -270,14 +270,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**EmbeddedRenderFormats、RenderingExtension**|指定用於將報表封裝在電子郵件訊息之主體中的轉譯格式。 報表中的影像會後續內嵌在報表中。 有效值為 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定透過「管理所有訂閱」工作啟用訂閱時，使用者可以從報表訂閱選取的轉譯格式。 如果未設定此值，就可以使用所有未刻意排除的轉譯格式。|  
 |**ExcludedRenderFormats、RenderingExtension**|刻意排除與給定傳遞延伸模組配合不良的格式。 您無法排除同一個轉譯延伸模組的多個執行個體， 如果您排除多個執行個體，就會在報表伺服器讀取組態檔時產生錯誤。 預設會排除用於電子郵件傳遞的下列延伸模組：<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|此值使用 **DefaultHostName**。<br /><br /> 如果 **SendEmailToUserAlias** 設定為 **True**，就會自動將定義個別訂閱的使用者指定為報表的收件者。 **[收件者]** 欄位是隱藏的。 如果值為 **False**，則看得到 [收件者]  欄位。 如果您希望充分控制報表散發，請將此值設定為 **True** 。 有效值如下：<br /><br /> **True**=使用建立訂閱之使用者的電子郵件地址。 這是預設值。<br /><br /> **False**=可以指定任何電子郵件地址。|  
-|**DefaultHostName**|此值使用 **SendEmailToUserAlias**。<br /><br /> 指定當 **SendEmailToUserAlias** 設定為 true 時，表示附加到使用者別名之主機名稱的字串值。 此值可以是網域名稱系統 (DNS) 名稱或 IP 位址。|  
-|**PermittedHosts**|藉由明確地指定哪些主機可以接收電子郵件傳遞，來限制報表散發。 **PermittedHosts**中，將每個主機指定為一個 **HostName** 元素，其值為 IP 位址或 DNS 名稱。<br /><br /> 只有主機所定義的電子郵件帳戶為有效收件者。 如果您指定 **DefaultHostName**，務必要將該主機包含為 **PermittedHosts** 的 **HostName**元素。 此值必須是一或多個 DNS 名稱或 IP 位址。 依預設，未設定此值。 如果未設定此值，便不限制誰可以接收電子郵件報表。|  
+|**SendEmailToUserAlias**|此值使用 **DefaultHostName** 。<br /><br /> 如果 **SendEmailToUserAlias** 設定為 **True** ，就會自動將定義個別訂閱的使用者指定為報表的收件者。 **[收件者]** 欄位是隱藏的。 如果值為 **False** ，則看得到 [收件者]  欄位。 如果您希望充分控制報表散發，請將此值設定為 **True** 。 有效值如下：<br /><br /> **True** =使用建立訂閱之使用者的電子郵件地址。 這是預設值。<br /><br /> **False** =可以指定任何電子郵件地址。|  
+|**DefaultHostName**|此值使用 **SendEmailToUserAlias** 。<br /><br /> 指定當 **SendEmailToUserAlias** 設定為 true 時，表示附加到使用者別名之主機名稱的字串值。 此值可以是網域名稱系統 (DNS) 名稱或 IP 位址。|  
+|**PermittedHosts**|藉由明確地指定哪些主機可以接收電子郵件傳遞，來限制報表散發。 **PermittedHosts** 中，將每個主機指定為一個 **HostName** 元素，其值為 IP 位址或 DNS 名稱。<br /><br /> 只有主機所定義的電子郵件帳戶為有效收件者。 如果您指定 **DefaultHostName** ，務必要將該主機包含為 **PermittedHosts** 的 **HostName** 元素。 此值必須是一或多個 DNS 名稱或 IP 位址。 依預設，未設定此值。 如果未設定此值，便不限制誰可以接收電子郵件報表。|  
   
 ####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> 報表伺服器 SharePoint 文件庫延伸模組組態  
  報表伺服器文件庫會將已經匯出成應用程式檔案格式的報表傳送至文件庫。 只有設定為在 SharePoint 整合模式中執行的報表伺服器可以使用這個傳遞延伸模組。 如需詳細資訊，請參閱＜ [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)＞。  
   
-|設定|說明|  
+|設定|描述|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats、RenderingExtension**|這些設定是用於刻意排除無法搭配文件庫傳遞使用的匯出格式。 系統會排除 HTMLOWC、RGDI 和 Null 傳遞延伸模組。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。|  
   
@@ -289,9 +289,9 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|描述|  
 |-------------|-----------------|  
-|**DefaultDeliveryExtension**|此設定會決定會先顯示在訂閱定義頁面之傳遞類型清單中的傳遞延伸模組。 只有一個傳遞延伸模組可以包含這項設定。 有效值包括 **True** 或 **False**。 當此值設定為 **True**時，表示該延伸模組為預設選取項目。|  
+|**DefaultDeliveryExtension**|此設定會決定會先顯示在訂閱定義頁面之傳遞類型清單中的傳遞延伸模組。 只有一個傳遞延伸模組可以包含這項設定。 有效值包括 **True** 或 **False** 。 當此值設定為 **True** 時，表示該延伸模組為預設選取項目。|  
 |**Configuration**|指定傳遞延伸模組的組態選項。 您可以針對每一個傳遞延伸模組設定預設轉譯格式。 有效值是在 rsreportserver.config 檔案的轉譯區段中，所註明的轉譯延伸模組名稱。|  
-|**DefaultRenderingExtension**|指定傳遞延伸模組是否為預設值。 報表伺服器電子郵件是預設的傳遞延伸模組。 有效值包括 **True** 或 **False**。 如果有多個延伸模組包含 **True**值，就會將第一個延伸模組視為預設的延伸模組。|  
+|**DefaultRenderingExtension**|指定傳遞延伸模組是否為預設值。 報表伺服器電子郵件是預設的傳遞延伸模組。 有效值包括 **True** 或 **False** 。 如果有多個延伸模組包含 **True** 值，就會將第一個延伸模組視為預設的延伸模組。|  
   
 ###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> 轉譯延伸模組一般組態  
  指定用於報表呈現的預設 (而且可能是自訂的) 轉譯延伸模組。  
@@ -400,7 +400,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxConnections**|指定 Bing Maps Web 服務的連接數目上限。|  
 |**逾時**|指定等候 Bing Maps Web 服務回應的逾時 (以秒為單位)。|  
 |**AppID**|指定要用於 Bing Maps Web 服務的應用程式識別碼 (AppID)。 **(預設值)** 會指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設 AppID。<br /><br /> 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 除非您必須針對自己的 Bing Maps 授權合約指定自訂 AppID，否則請勿變更此值。 變更 AppID 時，您不需要重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，即可讓變更生效。|  
-|**CacheLevel**|根據 System.Net.Cache 的 HttpRequestCacheLevel 列舉型別指定值。 預設值為 **Default**。 如需詳細資訊，請參閱 [HttpRequestCacheLevel 列舉型別](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
+|**CacheLevel**|根據 System.Net.Cache 的 HttpRequestCacheLevel 列舉型別指定值。 預設值為 **Default** 。 如需詳細資訊，請參閱 [HttpRequestCacheLevel 列舉型別](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
 ##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> 原生模式報表伺服器的預設組態檔  
  預設情況下，rsreportserver.config 檔案會安裝到以下位置：  

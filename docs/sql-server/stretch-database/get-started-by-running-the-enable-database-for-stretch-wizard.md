@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454351"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523948"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454351"
   
 1.  在 SQL Server Management Studio 的 [物件總管] 中，選取要啟用 Stretch 的資料庫。  
   
-2.  按一下滑鼠右鍵並選取 [工作]****，然後依序選取 [Stretch]**** 和 [啟用]****，來啟動精靈。  
+2.  按一下滑鼠右鍵並選取 [工作]，然後依序選取 [Stretch] 和 [啟用]，來啟動精靈。  
   
 ##  <a name="introduction"></a><a name="Intro"></a> 簡介  
  檢閱精靈的用途及必要條件。  
@@ -69,31 +69,31 @@ ms.locfileid: "88454351"
 |**Name**|指定資料庫中資料表的名稱。|  
 |(沒有標題)|這個資料行中的符號可能代表警告，您仍然可以選取 Stretch 的資料表。 它也可能代表封鎖的問題，使您無法選取 Stretch 的資料表，比方說，因為資料表使用不支援的資料類型。 將滑鼠停留在工具提示中的符號上，來顯示詳細資訊。 如需詳細資訊，請參閱 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。|  
 |**已延展**|指出資料表是否已經針對 Stretch 啟用。|  
-|**移轉**|您可以移轉整個資料表 (**整份資料表**)，或者您可以指定篩選資料表中現有的資料行。 如果您想要使用不同的篩選函數來選取要移轉的資料列，請在結束精靈之後執行 ALTER TABLE 陳述式來指定篩選函數。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。 如需如何套用函數的詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。|  
+|**移轉**|您可以移轉整個資料表 ( **整份資料表** )，或者您可以指定篩選資料表中現有的資料行。 如果您想要使用不同的篩選函數來選取要移轉的資料列，請在結束精靈之後執行 ALTER TABLE 陳述式來指定篩選函數。 如需有關篩選函數的詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。 如需如何套用函數的詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 或 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。|  
 |**資料列**|指定資料表中的資料列數目。|  
 |**大小 (KB)**|指定資料表的大小 (KB)。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>選擇性地提供資料列篩選  
- 如果您想要提供篩選函數來選取要移轉的資料列，請在 [選取資料表]**** 頁面執行下列其中一項操作。  
+ 如果您想要提供篩選函數來選取要移轉的資料列，請在 [選取資料表] 頁面執行下列其中一項操作。  
   
-1.  在 [選取要延展的資料表]**** 清單中，按一下資料表之資料列中的 [整份資料表]****。 [選取要延展的資料列]**** 對話方塊隨即開啟。  
+1.  在 [選取要延展的資料表] 清單中，按一下資料表之資料列中的 [整份資料表]。 [選取要延展的資料列] 對話方塊隨即開啟。  
   
      ![定義以日期為基礎的篩選述詞](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定義以日期為基礎的篩選述詞")  
   
-2.  在 [選取要延展的資料列]**** 對話方塊中，選取 [選擇資料列]****。  
+2.  在 [選取要延展的資料列] 對話方塊中，選取 [選擇資料列]。  
   
-3.  在 [名稱]**** 欄位中，提供篩選函數的名稱。  
+3.  在 [名稱] 欄位中，提供篩選函數的名稱。  
   
 4.  針對 **Where** 子句，選取資料表中的資料行、挑選一個運算子，並提供值。  
   
-5.  按一下 [檢查]**** 以測試函數。 如果函數從資料表傳回結果 - 也就是有要移轉的資料列符合條件 - 測試會回報**成功**。  
+5.  按一下 [檢查] 以測試函數。 如果函數從資料表傳回結果 - 也就是有要移轉的資料列符合條件 - 測試會回報 **成功** 。  
 
 > [!NOTE] 
 > 顯示篩選查詢的文字方塊是唯讀的。 您無法編輯文字方塊中的查詢。
   
-6.  按一下 [完成] 返回 [選取資料表]**** 頁面。  
+6.  按一下 [完成] 返回 [選取資料表] 頁面。  
 
-篩選函數只有在您完成精靈時才會建立在 SQL Server 中。 在那之前，您可以回到 [選取資料表]**** 頁面，變更或重新命名篩選函數。
+篩選函數只有在您完成精靈時才會建立在 SQL Server 中。 在那之前，您可以回到 [選取資料表] 頁面，變更或重新命名篩選函數。
 
 ![定義篩選述詞之後的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2b.png "定義篩選述詞之後的 [選取資料表] 頁面")
 
@@ -116,7 +116,7 @@ ms.locfileid: "88454351"
   
 3.  選取要用於 Stretch Database 的 Azure 區域。
     -   如果您建立新的伺服器，該伺服器就會建立於此區域中。  
-    -   如果您在所選區域中有現有的伺服器，精靈會在您選擇 [現有伺服器]**** 時列出它們。
+    -   如果您在所選區域中有現有的伺服器，精靈會在您選擇 [現有伺服器] 時列出它們。
   
      若要將延遲降至最低，請挑選您的 SQL Server 所在的 Azure 區域。 如需區域的詳細資訊，請參閱 [Azure 區域](https://azure.microsoft.com/regions/)。  
   
@@ -138,9 +138,9 @@ ms.locfileid: "88454351"
   
         2.  選取驗證方法。  
   
-            -   如果您選取 [SQL Server 驗證]****，請提供系統管理員登入與密碼。  
+            -   如果您選取 [SQL Server 驗證]，請提供系統管理員登入與密碼。  
   
-            -   選取 [Active Directory 整合式驗證] **** ，使用適用於 SQL Server 的同盟服務帳戶，來與遠端 Azure 伺服器通訊。 如果選取的伺服器未與 Azure Active Directory 整合，則不會出現此選項。
+            -   選取 [Active Directory 整合式驗證]  ，使用適用於 SQL Server 的同盟服務帳戶，來與遠端 Azure 伺服器通訊。 如果選取的伺服器未與 Azure Active Directory 整合，則不會出現此選項。
   
          ![選取現有的 Azure 伺服器 - Stretch Database 精靈](../../sql-server/stretch-database/media/stretch-wizard-5.png "選取現有的 Azure 伺服器 - Stretch Database 精靈")  
   
@@ -149,11 +149,11 @@ ms.locfileid: "88454351"
   
  如果資料庫主要金鑰已存在，請為其輸入密碼。  
   
- ![Stretch Database 精靈的 [安全認證] 頁面](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database 精靈的 [安全認證] 頁面")  
+ ![顯示 [Stretch Database 精靈] 的 [安全認證] 頁面螢幕擷取畫面，其中 [密碼] 文字方塊為空白。](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database 精靈的 [安全認證] 頁面")  
   
  如果資料庫沒有現有的主要金鑰，請輸入強式密碼來建立資料庫主要金鑰。  
   
- ![Stretch Database 精靈的 [安全認證] 頁面](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 精靈的 [安全認證] 頁面")  
+ ![顯示 [Stretch Database 精靈] 的 [安全認證] 頁面螢幕擷取畫面，其中 [新密碼] 和 [確認密碼] 文字方塊已填入內容。](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 精靈的 [安全認證] 頁面")  
   
  如需資料庫主要金鑰的詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) 和[建立資料庫主要金鑰](../../relational-databases/security/encryption/create-a-database-master-key.md)。 如需精靈所建立之認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "88454351"
  ![ 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   
 ##  <a name="summary"></a><a name="Summary"></a> 摘要  
- 檢閱您輸入的值、在精靈中選取的選項，以及在 Azure 上估計的成本。 然後選取 [完成] **** 以啟用 Stretch。  
+ 檢閱您輸入的值、在精靈中選取的選項，以及在 Azure 上估計的成本。 然後選取 [完成]  以啟用 Stretch。  
   
  ![Stretch Database 精靈的 [摘要] 頁面](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 精靈的 [摘要] 頁面")  
   

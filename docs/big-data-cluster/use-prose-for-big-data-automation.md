@@ -5,22 +5,24 @@ description: 本文說明如何使用 Azure Data Studio 中的 PROSE Code Accele
 author: dphansen
 ms.author: davidph
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3357757c0cca35be0b3410795cfd89ca75f34dc3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725759"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638971"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE Code Accelerator 進行資料整頓
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-PROSE Code Accelerator 會為您的資料整頓工作產生可讀取的 Python 程式碼。 當您在 Azure Data Studio 的筆記本中工作時，您可以順暢地將產生的程式碼與手寫的程式碼融合在一起。 本文提供如何使用 Code Accelerator 的概觀。
+PROSE Code Accelerator 會為您的資料整頓工作產生可讀取的 Python 程式碼。 在 Azure Data Studio 中的筆記本工作時，您可以將產生的程式碼與手寫的程式碼融合在一起。
+
+本文提供如何使用 Code Accelerator 的概觀。
 
  > [!NOTE]
  > Program Synthesis using Examples (也稱為 PROSE) 是一項 Microsoft 技術，使用 AI 產出人們看得懂的程式碼。 該技術會去分析使用者的意圖和資料、產出數個候選程式，然後透過排名演算法挑選最佳程式。 若要深入了解 PROSE 技術，請瀏覽 [PROSE 首頁](https://microsoft.github.io/prose/)。
@@ -41,9 +43,11 @@ import prose.codeaccelerator as cx
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>將檔案中的資料讀入資料框架
 
-將檔案讀入資料框架通常涉及查看檔案的內容，並判斷要傳遞至資料載入程式庫的正確參數。 視檔案的複雜度而定，識別正確的參數可能需要反覆查看多次。
+將檔案讀入資料框架涉及查看檔案的內容，及判斷要傳遞至資料載入程式庫的正確參數。
 
-PROSE Code Accelerator 藉由分析資料檔案的結構，然後自動產出程式碼以載入檔案，來解決此問題。 在大多數情況下，產出的程式碼可以正確地剖析資料。 在少數情況下，您可能需要調整程式碼以符合您的需求。
+視檔案的複雜度而定，識別正確的參數可能需要反覆查看多次。
+
+PROSE Code Accelerator 藉由分析資料檔案的結構，然後自動產出程式碼以載入檔案，來解決此問題。 產生的程式碼通常可以正確剖析資料。 在少數情況下，您可能需要調整程式碼以符合您的需求。
 
 請考慮下列範例：
 
@@ -90,9 +94,9 @@ Code Accelerator 可以產出程式碼，將分隔、JSON 和固定寬度的檔�
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>修正資料框架中的資料類型
 
-Pandas 或 Pyspark 資料框架經常會出現錯誤資料類型。 這通常是因為資料行中有幾項不合格的值所造成。 因此，整數會解讀為浮點數或字串，而日期會解讀為字串。 手動修正資料類型所花費的心力會與資料行數目成正比。
+Pandas 或 Pyspark 資料框架經常會出現錯誤的資料類型。 因為資料行中有幾個不合格的值，所以發生資料類型錯誤。 因此，整數會解讀為浮點數或字串，而日期會解讀為字串。 手動修正資料類型所花費的心力會與資料行數目成正比。
 
-您可以在這些情況下使用 `DetectTypesBuilder` 方法。 它會分析資料，並產出程式碼來修正資料類型，而不是以黑箱方式修正資料類型。 此程式碼可作為起點。 您可以視需要檢閱、使用或修改。
+您可以在這些情況下使用 `DetectTypesBuilder` 方法。 其會分析資料並產生程式碼，以修正資料類型。 此程式碼可作為起點。 您可以視需要檢閱、使用或修改。
 
 ```python
 import prose.codeaccelerator as cx
@@ -110,7 +114,7 @@ builder.learn().code()
 
 ## <a name="identifying-patterns-in-strings"></a>識別字串中的模式
 
-另一個常見的案例是在字串資料行中偵測模式，以便清除或分組。 例如，您可能有一個日期資料行，其中包含多種不同格式的日期。 若要將值標準化，您可能需要使用規則運算式來撰寫條件陳述式。
+p.
 
 
 |資料列|名稱                      |BirthDate      |

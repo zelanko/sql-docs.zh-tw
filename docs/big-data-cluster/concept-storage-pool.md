@@ -9,24 +9,24 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257238"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914287"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>什麼是存放集區 ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])？
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>SQL Server 巨量資料叢集中的存放集區是什麼？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-此文章說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中的「SQL Server 存放集區」角色。 下列各節描述 SQL 存放集區的架構和功能。
+本文說明 SQL Server 巨量資料叢集中的「SQL Server 存放集區」角色。 下列各節說明存放集區的架構和功能。
 
 ## <a name="storage-pool-architecture"></a>存放集區架構
 
-存放集區是 SQL Server BDC 生態系統中的本機 HDFS (Hadoop) 叢集。 其提供非結構化與半結構化資料的永續性儲存體。 資料檔案 (例如 Parquet 或分隔的文字) 可以儲存在存放集區中。 為讓儲存體變成永續性，集區中的每個 Pod 都有附加的永久性磁碟區。 存放集區檔案可以透過 SQL Server 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 或直接使用 Apache Knox Gateway 來存取。
+存放集區是 SQL Server 巨量資料叢集中的本機 HDFS (Hadoop) 叢集。 其提供非結構化與半結構化資料的永續性儲存體。 資料檔案 (例如 Parquet 或分隔的文字) 可以儲存在存放集區中。 集區中的每個 Pod 都要附加永久性磁碟區，才能讓儲存體變成永久性。 存放集區檔案可以透過 SQL Server 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 或直接使用 Apache Knox Gateway 來存取。
 
-傳統 HDFS 設定是由一組已附加存放裝置的商用硬體電腦所組成。 資料會分散在各個節點的區塊中，以供容錯及平行處理用途使用。 叢集中的其中一個節點會當作名稱節點使用，並包含有關資料節點中檔案的中繼資料資訊。
+傳統 HDFS 設定是由一組已附加存放裝置的商用硬體電腦所組成。 資料會分散在各個節點的區塊中，以供容錯及平行處理用途使用。 叢集中某一個節點會當作名稱節點使用，並包含資料節點中的檔案中繼資料資訊。
 
 ![傳統 HDFS 設定](media/concept-storage-pool/classic-hdfs-setup.png)
 

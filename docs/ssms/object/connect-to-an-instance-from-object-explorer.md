@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037646"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523965"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
 
@@ -27,25 +27,25 @@ ms.locfileid: "92037646"
   
 ## <a name="connecting-to-a-server"></a>連接至伺服器  
 
-1. 在**物件總管**，按一下 [連線] > [資料庫引擎...]****。
+1. 在 **物件總管** ，按一下 [連線] > [資料庫引擎...]。
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![連線](../media/connect-to-server/connect-db-engine.png)
 
-1. 填寫 [連線至伺服器]**** 表單，並按一下 [連線]****：
+1. 填寫 [連線至伺服器] 表單，並按一下 [連線]：
 
    ![連線至伺服器](../media/connect-to-server/connect.png)
 
-1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...]**** \(如果沒有，請跳至步驟 6)
+1. 若您連線至 Azure SQL Server，系統可能會提示您登入以建立防火牆規則。 按一下 [登入...]\(如果沒有，請跳至步驟 6)
 
-   ![防火牆](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![已標註 [登入] 選項的 [新增防火牆規則] 對話方塊螢幕擷取畫面。](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. 登入成功後，表單會預先填入您的特定 IP 位址。 若您的 IP 位址常常變更，可能會讓其他位址更容易進行存取，因此，請選取最適合您環境的選項。 
 
-   ![防火牆](../media/connect-to-server/new-firewall-rule.png)
+   ![已選取 [新增我的用戶端 IP 位址] 選項且已標註 [確定] 選項的 [新增防火牆規則] 對話方塊螢幕擷取畫面。](../media/connect-to-server/new-firewall-rule.png)
 
-1. 若要建立防火牆規則並連線至伺服器，請按一下 [確定]****。
+1. 若要建立防火牆規則並連線至伺服器，請按一下 [確定]。
 
-1. 成功連線後，伺服器會顯示在**物件總管**中：
+1. 成功連線後，伺服器會顯示在 **物件總管** 中：
 
    ![已連接](../media/connect-to-server/connected.png)
 

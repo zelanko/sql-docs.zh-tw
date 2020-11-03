@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862750"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793815"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什麼是 SQL Server 的延伸安全性更新？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "87862750"
 ## <a name="overview"></a>概觀
 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已達其支援週期的尾端之後，選擇為您的伺服器註冊延伸安全性更新 (ESU) 訂閱，並保持受保護狀態長達三年，直到您準備好升級至較新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或移轉到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 此訂閱有兩種方式：
 -  可以為您的內部部署或託管環境伺服器購買。
--  將內部部署伺服器移轉至 Azure 虛擬機器時，預設為免費和啟用。 然後，您可以在 Azure 入口網站中，使用 **SQL Server 登錄**服務來註冊終止支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並在有更新可用時予以下載。 
+-  將內部部署伺服器移轉至 Azure 虛擬機器時，預設為免費和啟用。 然後，您可以在 Azure 入口網站中，使用 **SQL Server 登錄** 服務來註冊終止支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並在有更新可用時予以下載。 
 
 Microsoft 建議在有 ESU 修補程式可用時立即套用，以確保您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體受到保護。 如需 ESU 的詳細資訊，請參閱 [ESU 常見問題集頁面](https://www.microsoft.com/cloud-platform/extended-security-updates)。
 
@@ -35,7 +35,7 @@ Microsoft 建議在有 ESU 修補程式可用時立即套用，以確保您的 [
 ## <a name="what-are-extended-security-updates"></a>什麼是延伸安全性更新
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的延伸安全性更新 (ESU) 包含安全性更新的佈建，適用於已購買延伸支援更新訂閱的客戶。
 
-一旦發現資訊安全弱點，且 [Microsoft 安全回應中心 (MSRC)](https://portal.msrc.microsoft.com) 將其分級為**重大**時，就可以使用 ESU (**如有需要**)。 因此，不會定期發行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU。
+一旦發現資訊安全弱點，且 [Microsoft 安全回應中心 (MSRC)](https://portal.msrc.microsoft.com) 將其分級為 **重大** 時，就可以使用 ESU ( **如有需要** )。 因此，不會定期發行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU。
 
 ESU 不包含：
 - 新功能
@@ -52,11 +52,11 @@ ESU 不包含技術支援，但您可以使用有效的支援合約 (例如[軟�
 ESU 可供在 Azure、內部部署或主控環境中執行其工作負載的客戶使用。
 
 ### <a name="azure-virtual-machines"></a>Azure 虛擬機器
-如果您將工作負載移轉到 Azure 虛擬機器 (IaaS)，則將可以在終止支援後存取長達三年的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 延伸安全性更新，除了執行虛擬機器的費用以外，**沒有額外費用**。 客戶不需要軟體保證，即可在 Azure 中收到延伸安全性更新。 
+如果您將工作負載移轉到 Azure 虛擬機器 (IaaS)，則將可以在終止支援後存取長達三年的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 延伸安全性更新，除了執行虛擬機器的費用以外， **沒有額外費用** 。 客戶不需要軟體保證，即可在 Azure 中收到延伸安全性更新。 
 
-當虛擬機器設定為使用[自動修補](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)時，在 **Windows Server 2008 R2 和更新版本**上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虛擬機器會透過現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新通道來自動接收 ESU。
+當虛擬機器設定為使用 [自動修補](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)時，在 **Windows Server 2008 R2 和更新版本** 上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虛擬機器會透過現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新通道來自動接收 ESU。
 
-在 **Windows Server 2008** 上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虛擬機器 (VM)，或 **「尚未」  設定使用[自動修補](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** 的 VM，將需要如[內部部署或託管環境](#on-premises-or-hosted-environments)一節中所述，手動下載並部署 ESU 修補程式。
+在 **Windows Server 2008** 上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虛擬機器 (VM)，或 **「尚未」  設定使用 [自動修補](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** 的 VM，將需要如 [內部部署或託管環境](#on-premises-or-hosted-environments)一節中所述，手動下載並部署 ESU 修補程式。
 
 ### <a name="on-premises-or-hosted-environments"></a>內部部署或託管環境
 如果您有軟體保證，則可在終止支援日期後，根據 Enterprise 合約 (EA)、Enterprise Subscription 合約 (EAS)、伺服器和雲端註冊 (SCE) 或註冊教育解決方案 (EES) 購買長達三年的延伸安全性更新 (ESU)。 您可以只針對需要涵蓋的伺服器購買 ESU。 您可以直接向 Microsoft 或 Microsoft 授權合作夥伴購買 ESU。 
@@ -84,18 +84,18 @@ ESU 合約涵蓋的客戶必須遵循下列步驟來下載和部署 ESU 修補�
 1. 在搜尋方塊中鍵入 `SQL Server registry`。  
 1. 選擇由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 所發佈的 [SQL Server 登錄]  選項，然後選取 [建立]  。 
 
-   ![選擇 SQL Server 登錄服務](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![顯示如何建立 SQL Server 登錄的 Auzre 入口網站螢幕擷取畫面。](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
 1. 在 [專案詳細資料]  下，從下拉式清單選擇您的訂用帳戶。 然後選擇現有的 [資源群組]  ，或選取 [新建]  為新 SQL Server 登錄服務建立新的資源群組。 
-1. 在 [服務詳細資料]  下，提供新 **SQL Server 登錄**資源的名稱和區域： 
+1. 在 [服務詳細資料]  下，提供新 **SQL Server 登錄** 資源的名稱和區域： 
 
-   ![選擇 SQL Server 登錄服務](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![顯示 [基本] 索引標籤的 SQL Server 登錄螢幕擷取畫面。](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
-1. 選取 [檢閱 + 建立]  ，以檢閱 **SQL Server 登錄**的詳細資料。 通過驗證之後，選取 [建立]  。 
+1. 選取 [檢閱 + 建立]  ，以檢閱 **SQL Server 登錄** 的詳細資料。 通過驗證之後，選取 [建立]  。 
 
 ## <a name="register-instances-for-esus"></a>針對 ESU 註冊執行個體
 
-部署 **SQL Server 登錄**資源之後，您可以選擇註冊[單一](#single-sql-server-instance) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，也可以[大量](#multiple-sql-server-instances-in-bulk)註冊多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 您必須在 SQL Server 登錄範圍內註冊至少一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，才能下載任何 ESU 套件。 
+部署 **SQL Server 登錄** 資源之後，您可以選擇註冊 [單一](#single-sql-server-instance) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，也可以 [大量](#multiple-sql-server-instances-in-bulk)註冊多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 您必須在 SQL Server 登錄範圍內註冊至少一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，才能下載任何 ESU 套件。 
 
 ### <a name="single-sql-server-instance"></a>單一 SQL Server 執行個體
 
@@ -146,7 +146,7 @@ ESU 合約涵蓋的客戶必須遵循下列步驟來下載和部署 ESU 修補�
 ### <a name="formatting-requirements-for-csv-file"></a>CSV 檔案的格式需求
 - 以逗號分隔值
 - 不可使用單引號或雙引號括住值
-- 資料行名稱不區分大小寫，但必須**命名**如下： 
+- 資料行名稱不區分大小寫，但必須 **命名** 如下： 
   - NAME
   - version
   - edition
@@ -209,7 +209,7 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 
 ## <a name="configure-regional-redundancy"></a>設定區域備援 
 
-需要針對其 **SQL Server 登錄**區域備援的客戶可以在兩個不同區域中建立註冊資料。 客戶接著可以根據 **SQL Server 登錄**服務可用性，從任一區域下載安全性更新。 
+需要針對其 **SQL Server 登錄** 區域備援的客戶可以在兩個不同區域中建立註冊資料。 客戶接著可以根據 **SQL Server 登錄** 服務可用性，從任一區域下載安全性更新。 
 
 針對區域備援，必須在兩個不同的區域中建立 **SQL Server registry** 服務，而且您的 SQL Server 清查必須在這兩個服務之間分割。 如此一來，您的 SQL Server 其中一半會向一個區域的登錄服務中註冊，然後您的 SQL Server 其中另一半會向另一個區域中的登錄服務註冊。 
 
@@ -219,11 +219,11 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
   
    :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="範例上傳檔案":::
 
-1. 在一個區域中建立第一個 **SQL Server 登錄**服務，然後向其大量註冊其中一個 CSV 檔案。 例如，在**美國西部**區域中建立第一個 **SQL Server 登錄**服務，然後使用 upload1.csv 檔案來大量註冊您的 SQL 伺服器。 
-1. 在第二個區域中建立第二個 **SQL Server 登錄**服務，然後向其大量註冊另一個 CSV 檔案。 例如，在**美國東部**區域中建立第二個 **SQL Server 登錄**服務，然後使用 upload2.csv 檔案大量註冊您的 SQL Server。 
+1. 在一個區域中建立第一個 **SQL Server 登錄** 服務，然後向其大量註冊其中一個 CSV 檔案。 例如，在 **美國西部** 區域中建立第一個 **SQL Server 登錄** 服務，然後使用 upload1.csv 檔案來大量註冊您的 SQL 伺服器。 
+1. 在第二個區域中建立第二個 **SQL Server 登錄** 服務，然後向其大量註冊另一個 CSV 檔案。 例如，在 **美國東部** 區域中建立第二個 **SQL Server 登錄** 服務，然後使用 upload2.csv 檔案大量註冊您的 SQL Server。 
 
 
-當您的資料註冊了兩個不同的 **SQL Server 登錄**資源之後，您就能夠根據服務可用性從任一區域下載安全性更新。 
+當您的資料註冊了兩個不同的 **SQL Server 登錄** 資源之後，您就能夠根據服務可用性從任一區域下載安全性更新。 
 
 
 ## <a name="faq"></a>常見問題集
@@ -248,7 +248,7 @@ Enterprise、Datacenter、Standard、Web 和 Workgroup 版的 [!INCLUDE[ssKatmai
 
 **延伸安全性更新包含什麼內容？** 
 
-延伸安全性更新包含 [Microsoft 安全回應中心 (MSRC)](https://portal.msrc.microsoft.com/) 分級為**重大**的安全性更新佈建和佈告欄，自 2019 年 7 月 9 日起最多提供三年。 如果適用的話，就會散發延伸安全性更新。 延伸安全性更新不包含技術支援，但您可以使用其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援方案來協助解決延伸安全性更新所涵蓋工作負載的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 問題。 延伸安全性更新不包含新功能、功能改善或客戶要求的修正。 不過，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能會包含經判定為必要的非安全性問題修正。
+延伸安全性更新包含 [Microsoft 安全回應中心 (MSRC)](https://portal.msrc.microsoft.com/) 分級為 **重大** 的安全性更新佈建和佈告欄，自 2019 年 7 月 9 日起最多提供三年。 如果適用的話，就會散發延伸安全性更新。 延伸安全性更新不包含技術支援，但您可以使用其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援方案來協助解決延伸安全性更新所涵蓋工作負載的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 問題。 延伸安全性更新不包含新功能、功能改善或客戶要求的修正。 不過，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能會包含經判定為必要的非安全性問題修正。
 
 **為什麼 SQL Server 2008 和 2008 R2 的延伸安全性更新只會提供「重大」更新？**
 
@@ -323,7 +323,7 @@ Azure 目前不支援共用儲存體叢集。 如需如何在 Azure 上設定高
 - [SQL Server 2008/2008 R2 終止支援頁面](https://aka.ms/sqleos)
 - [延伸安全性更新常見問題集 (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft 安全性回應中心 (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [使用 Azure 自動化來管理 Windows 更新](/azure/automation/automation-tutorial-update-management)
+- [使用 Azure 自動化來管理 Windows 更新](/azure/automation/update-management/overview)
 - [SQL Server VM 自動修補](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Microsoft 資料移轉指南](https://datamigration.microsoft.com/)
 - [Azure Migrate：將目前 SQL Server 2008/2008 R2 移至 Azure VM 的隨即轉移選項](https://azure.microsoft.com/services/azure-migrate/)

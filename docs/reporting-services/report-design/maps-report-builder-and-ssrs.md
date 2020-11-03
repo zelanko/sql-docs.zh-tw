@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881911"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907256"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -58,7 +58,7 @@ ms.locfileid: "84881911"
  若要視覺化地圖上的資料，分析資料和空間資料必須擁有關聯性。 當空間資料與分析資料來自相同的來源時，關聯性是已知的。 當空間資料和分析資料來自不同的來源，您必須指定要將兩者產生關聯的符合欄位。  
   
 ### <a name="spatial-data"></a>空間資料  
- 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」*(Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
+ 空間資料由多組座標所組成。 資料來源中的空間資料可以是單一點、多個點、單一線條、多個線條，或一組多邊形。 每組座標都會定義一個 *「地圖元素」* (Map Element)，例如，表示某個縣市外框的多邊形、表示路段圖的線條，或是表示城市位置的點。  
   
  空間資料以下列其中一個座標系統為基礎：  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84881911"
   
  若要使用圖層，在報表設計介面上選取一個地圖來顯示 [地圖] 窗格。 [地圖] 窗格會顯示針對地圖所定義之圖層的清單。 使用此窗格選取圖層來變更選項、變更圖層的繪製程序、加入圖層或執行「地圖圖層精靈」、隱藏或顯示圖層，以及變更地圖檢視區的檢視置中與縮放層級。 下圖顯示檢視區：  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![[地圖圖層] 區段的螢幕擷取畫面，其中指出 [圖層工具列]、[圖層可見性]、[圖層名稱]、[空間資料來源類型]、[圖層類型]、[調整縮放比例] 及 [調整檢視中心] 等選項。](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  如需地圖圖層的詳細資訊，請參閱 [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

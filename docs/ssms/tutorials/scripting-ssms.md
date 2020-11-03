@@ -6,10 +6,6 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.topic: tutorial
 keywords: SQL Server, SSMS, SQL Server Management Studio, 指令碼, 撰寫指令碼
-author: markingmyname
-ms.author: maghan
-ms.reviewer: sstein
-ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +15,16 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein
+ms.date: 03/13/2018
+ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038959"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638933"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中撰寫物件指令碼
 
@@ -95,7 +95,7 @@ ms.locfileid: "92038959"
 
 ## <a name="script-databases"></a>撰寫資料庫指令碼
 
-下一節將教導您如何使用 [撰寫指令碼為]  和 [產生指令碼]  選項來撰寫資料庫指令碼。 [撰寫指令碼為]  選項會重新建立資料庫及其設定選項。 您可以使用 [產生指令碼]  選項為結構描述和資料編寫指令碼。 在本節中，您會建立兩個新的資料庫。 您使用 [撰寫指令碼為]  選項來建立 *AdventureWorks2016a*。 您使用 [產生指令碼]  選項來建立 *AdventureWorks2016b*。
+下一節將教導您如何使用 [撰寫指令碼為]  和 [產生指令碼]  選項來撰寫資料庫指令碼。 [撰寫指令碼為]  選項會重新建立資料庫及其設定選項。 您可以使用 [產生指令碼]  選項為結構描述和資料編寫指令碼。 在本節中，您會建立兩個新的資料庫。 您使用 [撰寫指令碼為]  選項來建立 *AdventureWorks2016a* 。 您使用 [產生指令碼]  選項來建立 *AdventureWorks2016b* 。
 
 ### <a name="script-a-database-by-using-the-script-option"></a>使用 [指令碼] 選項來編寫資料庫指令碼
 
@@ -113,7 +113,7 @@ ms.locfileid: "92038959"
 
 5. 在鍵盤上，選取 Ctrl+F 以開啟 [尋找]  對話方塊。 選取向下箭號以開啟 [取代]  選項。 在上方的 [尋找]  行輸入 AdventureWorks2016，並在下方的 [取代]  行輸入 AdventureWorks2016a。
 
-6. 選取 [全部取代]  以將所有 *AdventureWorks2016* 的執行個體取代為 *AdventureWorks2016a*。 
+6. 選取 [全部取代]  以將所有 *AdventureWorks2016* 的執行個體取代為 *AdventureWorks2016a* 。 
 
     ![尋找並取代](media/scripting-ssms/findandreplace.png)
 
@@ -152,9 +152,9 @@ ms.locfileid: "92038959"
 
 7. 在 [摘要] 上選取 [下一步]。 然後再次選取 [下一步]  以在 [新增查詢]  視窗中產生指令碼。
 
-8. 在鍵盤上，開啟 [尋找]  對話方塊 (Ctrl+F)。 選取向下箭號以開啟 [取代]  選項。 在上方的 [尋找]  行中，輸入 *AdventureWorks2016*。 在下方的 [取代]  行中，輸入 *AdventureWorks2016b*。
+8. 在鍵盤上，開啟 [尋找]  對話方塊 (Ctrl+F)。 選取向下箭號以開啟 [取代]  選項。 在上方的 [尋找]  行中，輸入 *AdventureWorks2016* 。 在下方的 [取代]  行中，輸入 *AdventureWorks2016b* 。
 
-9. 選取 [全部取代]  以將所有 *AdventureWorks2016* 的執行個體取代為 *AdventureWorks2016b*。
+9. 選取 [全部取代]  以將所有 *AdventureWorks2016* 的執行個體取代為 *AdventureWorks2016b* 。
 
     ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
@@ -179,7 +179,7 @@ ms.locfileid: "92038959"
 6. 選取 [執行]  來執行查詢。 這個動作會刪除 *Errorlog* 資料表，然後重新建立它。 
 
     >[!NOTE]
-    > 在 AdventureWorks2016 資料庫中，*Errorlog* 資料表預設是空的。 因此刪除該資料表並不會遺失任何資料。 但是，在具有資料的資料表上執行這些步驟，則可能會導致資料遺失。
+    > 在 AdventureWorks2016 資料庫中， *Errorlog* 資料表預設是空的。 因此刪除該資料表並不會遺失任何資料。 但是，在具有資料的資料表上執行這些步驟，則可能會導致資料遺失。
 
 ## <a name="script-stored-procedures"></a>撰寫預存程序的指令碼
 
@@ -195,7 +195,7 @@ ms.locfileid: "92038959"
 
 5. 以滑鼠右鍵按一下預存程序 **dbo.uspGetBillOfMaterials** > [產生預存程序的指令碼為]   > [DROP 並 CREATE 至]   > [新增查詢編輯器視窗]  ：
 
-    ![撰寫預存程序的指令碼](media/scripting-ssms/scriptstoredprocedure.PNG)
+    ![撰寫預存程序的指令碼](media/scripting-ssms/script-stored-procedure.png)
 
 ## <a name="script-extended-events"></a>撰寫擴充事件的指令碼
 
@@ -213,7 +213,7 @@ ms.locfileid: "92038959"
 
     ![擴充新增查詢編輯器視窗工作階段](media/scripting-ssms/scriptxevents.png)
 
-6. 在 [新增查詢編輯器視窗]  中，將工作階段的名稱從 *system_health* 修改為 *system_health2*。 選取 [執行]  來執行查詢。
+6. 在 [新增查詢編輯器視窗]  中，將工作階段的名稱從 *system_health* 修改為 *system_health2* 。 選取 [執行]  來執行查詢。
 
 7. 以滑鼠右鍵按一下 [物件總管] 中的 [工作階段]。 選取 [重新整理]  來查看新的擴充事件工作階段。 工作階段旁邊的綠色圖示表示工作階段正在執行中。 紅色圖示表示工作階段已停止。
 

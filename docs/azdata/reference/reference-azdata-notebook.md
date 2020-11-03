@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd3d46ece53f15b694b28083e36d5cb991e2b411
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 4a0e171861d01d7a3afe7904905d373aa5e57639
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358116"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678729"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -39,7 +39,7 @@ azdata notebook view --path -p
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
-檢視筆記本。  除非遇到輸出中包含錯誤的儲存格，否則顯示所有儲存格。  在這種情況下，輸出就會停止。
+檢視筆記本。  除非輸出中有包含錯誤的儲存格，否則會顯示所有儲存格。  在這種情況下，輸出就會停止。
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
@@ -114,5 +114,5 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
 
-如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata](..\install\deploy-install-azdata.md)。
+如需如何安裝 **azdata** 工具的詳細資訊，請參閱 [安裝 azdata](..\install\deploy-install-azdata.md)。
 

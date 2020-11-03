@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448207"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907080"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中，您加入 *「導覽器」* (Navigator)，以依時間或依選取項目來篩選視覺效果中的資料。 
@@ -65,13 +65,13 @@ ms.locfileid: "79448207"
 
 1. 選取視覺效果，並選取 [資料]  索引標籤，然後在 [資料屬性]  窗格中，選取欄位名稱旁邊的 [選項]  。
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![[類別資料行] 的 [選項] 已展開的螢幕擷取畫面，其中已選取 [依州/區域篩選] 選項。](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. 在 [篩選依據]  下，選取選擇清單。
 
 如果您在預覽或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站中檢視行動報表，並且在選擇清單中選取值，則會篩選行動報表中的其他視覺效果。
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![顯示行動報表的螢幕擷取畫面，其中已從 [州/區域] 清單中選取 [華盛頓州]，以及傳回結果中呈現華盛頓州的城市。](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>計分卡方格  
   
@@ -96,13 +96,13 @@ ms.locfileid: "79448207"
 
 7. 視需要為值指標命名，從資料表中選擇其來源資料行，然後選取格式化的方式。  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![顯示新分數可用選項的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
 8. 設定資料屬性之後，請在 [Tables Filtered by Selection List ] (選擇清單所篩選的資料表)  下選取要篩選的資料表以及要作為篩選依據的資料行。 此資料行需要比對選擇清單之索引鍵資料行中的值。 
 
 如果您在預覽或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 入口網站中檢視行動報表，並且在計分卡方格中選取值，則會篩選行動報表中的其他視覺效果。
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![行動報表計分卡格線的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>設定所篩選的視覺效果  
   
@@ -112,7 +112,7 @@ ms.locfileid: "79448207"
 
 1. 選取視覺效果，並選取 [資料]  索引標籤，然後在 [資料屬性]  窗格中，選取欄位名稱旁邊的 [選項]  。
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![[類別資料行] 的 [選項] 已展開的另一個螢幕擷取畫面，其中已選取 [依州/區域篩選] 選項。](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. 在 [篩選依據]  下，選取導覽器。 多個導覽器可以篩選每個視覺效果。
   

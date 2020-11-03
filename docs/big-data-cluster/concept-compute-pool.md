@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866812"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914315"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>SQL Server 巨量資料叢集的計算集區是什麼？
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的計算集區？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文描述 SQL Server 巨量資料叢集中「SQL Server 計算集區」的角色。 計算集區為巨量資料叢集提供向外延展的計算資源。 其可用來卸載 SQL Server 主要執行個體的計算工作或中繼結果集。 以下各節會描述計算集區的架構、功能和使用案例。
+此文章說明 SQL Server 巨量資料叢集中「SQL Server 計算集區」的角色。 計算集區為 SQL Server 巨量資料叢集提供向外延展的計算資源。 其可用來卸載 SQL Server 主要執行個體的計算工作或中繼結果集。 以下各節會描述計算集區的架構、功能和使用案例。
 
 您也可以觀看這段 5 分鐘的影片，以取得計算集區簡介：
 
@@ -34,27 +34,27 @@ ms.locfileid: "91866812"
 
 ## <a name="scale-out-groups"></a>向外延展群組
 
-計算集區可作為 PolyBase 向外延展群組，以便在不同的外部資料來源 (例如 SQL Server、Oracle、MongoDB、Teradata 和 HDFS) 上進行分散式查詢。 使用 Kubernetes 中的計算 Pod，巨量資料叢集可將為 PolyBase 向外延展群組建立和設定計算 Pod 的流程自動化。
+計算集區可作為 PolyBase 向外延展群組，以便在不同的外部資料來源 (例如 SQL Server、Oracle、MongoDB、Teradata 和 HDFS) 上進行分散式查詢。 使用 Kubernetes 中的計算 Pod，SQL Server 巨量資料叢集可將為 PolyBase 向外延展群組建立和設定計算 Pod 的流程自動化。
 
 ## <a name="compute-pool-scenarios"></a>計算集區案例
 
 使用計算集區的案例包括：
 
-- 提交至主要執行個體的查詢，使用[儲存體集區](concept-storage-pool.md)中的一或多個資料表時。
+- 當查詢提交至主要執行個體時，使用位於[存放集區](concept-storage-pool.md)中的一或多個資料表。
 
-- 提交至主要執行個體的查詢，使用[資料集區](concept-data-pool.md)中具有循環配置資源散發的一或多個資料表時。
+- 當查詢提交至主要執行個體時，使用位於[資料集區](concept-data-pool.md)中具有循環配置資源散發的一或多個資料表。
 
-- 提交至主要執行個體的查詢，使用具有 SQL Server、Oracle、MongoDB 和 Teradata 外部資料來源的**資料分割**資料表時。 本案例必須啟用查詢提示 OPTION (FORCE SCALEOUTEXECUTION)。
+- 提交至主要執行個體的查詢，使用具有 SQL Server、Oracle、MongoDB 和 Teradata 外部資料來源的 **資料分割** 資料表時。 本案例必須啟用查詢提示 OPTION (FORCE SCALEOUTEXECUTION)。
 
-- 提交至主要執行個體的查詢，使用 [HDFS 階層處理](hdfs-tiering.md)中的一或多個資料表時。
+- 當查詢提交至主要執行個體時，使用位於 [HDFS 階層處理](hdfs-tiering.md)中的一或多個資料表。
 
-**不**使用計算集區的案例包括：
+**不** 使用計算集區的案例包括：
 
 - 提交至主要執行個體的查詢，使用外部 Hadoop HDFS 叢集中的一或多個資料表時。
 
 - 提交至主要執行個體的查詢，使用 Azure Blob 儲存體中的一或多個資料表時。
 
-- 提交至主要執行個體的查詢，使用具有 SQL Server、Oracle、MongoDB 和 Teradata 外部資料來源的**非資料分割**資料表時。
+- 提交至主要執行個體的查詢，使用具有 SQL Server、Oracle、MongoDB 和 Teradata 外部資料來源的 **非資料分割** 資料表時。
 
 - 啟用查詢提示 OPTION (DISABLE SCALEOUTEXECUTION) 時。
 

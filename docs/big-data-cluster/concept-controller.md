@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358426"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914332"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集上的控制器？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-控制器會裝載用於部署和管理大型資料叢集的核心邏輯。 其負責與 Kubernetes、SQL Server 執行個體 (為叢集的一部分) 和其他元件 (例如 HDFS 和 Spark) 的互動。
+控制器會裝載部署和管理 SQL Server 巨量資料叢集所用的核心邏輯。 其負責與 Kubernetes、SQL Server 執行個體 (為叢集的一部分) 和其他元件 (例如 HDFS 和 Spark) 的互動。
 
 控制器服務提供下列核心功能：
 

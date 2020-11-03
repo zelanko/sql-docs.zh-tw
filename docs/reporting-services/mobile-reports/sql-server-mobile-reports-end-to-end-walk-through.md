@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462352"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907246"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
 逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
@@ -78,7 +78,7 @@ ms.locfileid: "84462352"
    
 4. 在 [名稱] 欄位中，以下列格式輸入您儲存資料來源的伺服器名稱：   
    
-   名稱： https://*localhost*/ReportServer  
+   名稱： https:// *localhost* /ReportServer  
    類型的項目：資料來源 (*.rsds)  
    
 5. 按一下 [開啟]  ，並巡覽至您在該伺服器上建立的資料來源。  
@@ -115,7 +115,7 @@ ms.locfileid: "84462352"
      
 5. 選擇您想要的彙總。 KPI 只能顯示一個數字，因此欄位將會彙總以顯示該數字。
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![顯示 [平均彙總] 區段的 [從 AWSalesYTD 選擇欄位] 區段螢幕擷取畫面。](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. 按一下 [確定]  。
 
@@ -188,7 +188,7 @@ ms.locfileid: "84462352"
    *  [數值表示方式]  、[色彩表示方式]  以及 [自訂中間值]  都必須是包含數值的欄位。 
    *  [群組依據]  是類別，因此它是一個文字欄位。
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![[資料屬性] 區段的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. 選取 [預覽]  以查看使用您的資料更新的樹狀圖。  
 
@@ -202,17 +202,17 @@ ms.locfileid: "84462352"
 
    請注意，在 [視覺屬性]  中，預設為 [數值愈高愈好]  ，且 [差異標籤]  為 [目標的百分比]  。 它有預設的 [範圍停止]  ，雖然您可以進行變更，但目前請將它保持預設值。
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![行動報表環圈圖視覺效果屬性的 [設定範圍] 區段螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
 3. 在 [資料]  索引標籤上，選取包含您資料的資料表並選取 [主要值]  欄位，並在 [比較值]  中選取您想要與之比較的欄位。
 
 4. 您可以選擇不同的彙總，以分別得出 [主要值]  和 [比較值]  的數字。 根據預設，它會是總和。
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![[選項] 或 [比較值] 的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. 選取 [預覽]  查看其外觀。 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![行動報表環圈圖預覽的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>將選擇清單新增為篩選條件
 
@@ -220,11 +220,11 @@ ms.locfileid: "84462352"
 
 1. 在 [配置]  索引標籤上，將選擇清單拖曳至樹狀圖右側，然後拖曳右下角，使它為兩個正方形寬，五個正方形高 (與畫布同高)。 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![行動報表選擇清單的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
 2. 在 [資料]  索引標籤上的 [資料屬性]  ，請針對您想要進行篩選的資料欄位設定 [索引鍵]  和 [標籤]  。
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![行動報表選擇清單的 [資料屬性] 區段螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>針對手機建立行動報表  
   

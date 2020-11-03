@@ -8,12 +8,12 @@ description: 了解如何透過品牌套件以建立符合企業的入口網站�
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888126"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907206"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
@@ -98,8 +98,8 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 適用於 Reporting Services 的 Colors.json 檔案有兩個主要類別 (其中的項目已分組)。  
   
-- **介面**︰包含 Reporting Services 入口網站特有的項目。  
-- **佈景主題**︰包含您所建立的行動報表特有的項目。  
+- **介面** ︰包含 Reporting Services 入口網站特有的項目。  
+- **佈景主題** ︰包含您所建立的行動報表特有的項目。  
   
 介面區段分成下列群組。  
   
@@ -116,7 +116,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
 
 當第一次您連線到具備行動報表發行工具的伺服器時，該伺服器就已部署品牌封裝，而佈景主題將加入至您可在應用程式右上方功能表中使用的可用佈景主題。  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![[選擇調色盤] 對話方塊的螢幕擷取畫面。](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 接著可針對您建立的任何行動報表使用該佈景主題，即使它們不在您已部署該佈景主題的同一部伺服器上。   
   
@@ -134,11 +134,11 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 2.  選取 [站台設定]  。  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![已標註 [網站設定] 選項的 [設定] 下拉式清單螢幕擷取畫面。](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  選取 [建立品牌]  。  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![已選取 [建立品牌] 選項的 [網站設定] 頁面螢幕擷取畫面。](../reporting-services/media/ssrsbranding.png) 
   
 **目前安裝的品牌封裝** 將顯示已上傳的封裝名稱，或顯示 [無]。  
   
@@ -150,7 +150,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

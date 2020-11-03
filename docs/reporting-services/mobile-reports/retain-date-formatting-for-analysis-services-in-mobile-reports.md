@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fef66452820975107e06e20a4085978163d957d
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448450"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907076"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>保留行動報表中 Analysis Services 的日期格式
 在報表產生器中將量值加入共用資料集中，讓 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 資料來源中的日期在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]中保留其資料類型。
@@ -27,15 +27,15 @@ ms.locfileid: "79448450"
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>建立量值來保留日期欄位資料類型
 
-1. 建立量值以保留有問題之日期欄位的值，然後在運算式欄位中，選擇日期的階層/層級，並附加 **.CurrentMember.MemberValue**。 例如：
+1. 建立量值以保留有問題之日期欄位的值，然後在運算式欄位中，選擇日期的階層/層級，並附加 **.CurrentMember.MemberValue** 。 例如：
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![已標註 [運算式] 文字方塊的 [導出成員產生器] 對話方塊螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. 現在您可以將此導出成員附加至這組資料行，方法是將它從左下方的 [導出成員] 清單拖放至右邊的資料行方格。  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![已標註 [導出成員] 區段的查詢設計工具螢幕擷取畫面。](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### <a name="see-also"></a>另請參閱
 

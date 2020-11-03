@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773656"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914307"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的主要執行個體？
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文說明 SQL Server 2019 巨量資料叢集中的「SQL Server 主要執行個體」角色。 主要執行個體是在巨量資料叢集中執行的 SQL Server 執行個體，可管理連線能力、向外延展查詢、中繼資料與使用者資料庫，以及機器學習服務。
+本文說明 SQL Server 巨量資料叢集中的「SQL Server 主要執行個體」角色。 主要執行個體是在 SQL Server 巨量資料叢集中執行的 SQL Server 執行個體，可管理連線能力、向外延展查詢、中繼資料與使用者資料庫，以及機器學習服務。
 
 SQL Server 主要執行個體提供下列功能：
 
@@ -36,8 +36,8 @@ SQL Server 主要執行個體包含向外延展查詢引擎，可用來將查詢
 
 除了標準 SQL Server 系統資料庫之外，SQL 主要執行個體還包含下列項目：
 
-- 保存 HDFS 資料表中繼資料的中繼資料資料庫
-- 資料平面分區對應
+- 保存 HDFS 資料表中繼資料的中繼資料資料庫。
+- 資料平面分區對應。
 - 可存取叢集資料平面的外部資料表詳細資料。
 - 定義於使用者資料庫的 PolyBase 外部資料來源和外部資料表。
 
@@ -51,9 +51,9 @@ SQL Server 機器學習服務是資料庫引擎的附加元件功能，可用於
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>巨量資料叢集中的機器學習服務優點
 
-SQL Server 2019 可讓您輕鬆地將巨量資料聯結到維度資料 (通常儲存在企業資料庫中)。 當巨量資料不只是由組織的部分單位掌控，還包含在報表、儀表板和應用程式裡時，將可大幅提升價值。 同時，資料科學家可以繼續使用 Spark/HDFS 生態系統工具，並輕鬆即時地存取 SQL Server 主要執行個體中的資料，以及可「透過」SQL Server 主要執行個體存取之外部資料來源中的資料。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 讓您輕鬆地將巨量資料聯結到維度資料 (通常儲存在企業資料庫中)。 當巨量資料不只是由組織的部分單位掌控，還包含在報表、儀表板和應用程式裡時，將可大幅提升價值。 同時，資料科學家可以繼續使用 Spark/HDFS 生態系統工具，並輕鬆即時地存取 SQL Server 主要執行個體中的資料，以及可「透過」SQL Server 主要執行個體存取之外部資料來源中的資料。
 
-藉由 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，您可以使用企業資料湖來執行更多工作。 SQL Server 開發人員和分析師可以：
+藉由 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，您可以使用企業資料湖來執行更多工作。 SQL Server 開發人員和分析師可以：
 
 * 建置從企業資料湖取用資料的應用程式。
 * 透過 Transact-SQL 查詢的所有資料去推論。

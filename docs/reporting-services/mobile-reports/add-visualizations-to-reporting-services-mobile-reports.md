@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447984"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907186"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>將視覺效果新增至 Reporting Services 行動報表
 圖表是資料視覺效果中不可或缺的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中用來涵蓋各種案例的圖表。 
@@ -55,7 +55,7 @@ ms.locfileid: "79447984"
   
 時間圖表是 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中的最基本圖表。 圖表的時間 (和日期) 軸將會自動設定到資料表中第一個有效的日期/時間欄位。  
 
-![行動報表的時間圖表](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![行動報表時間圖表的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. 將 [時間圖表]  從 [配置]  索引標籤拖曳至設計介面，然後調整其大小。
 
@@ -75,7 +75,7 @@ ms.locfileid: "79447984"
   
 不同於時間圖表，在類別圖表中，您可以對 X 軸上的日期/時間欄位以外的欄位進行群組。 此群組 (稱為「類別座標」  ) 必須針對字串欄位，而不是數值欄位。
 
-![行動報表的類別圖表](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![行動報表類別圖表的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. 將 [類別圖表]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
@@ -85,7 +85,7 @@ ms.locfileid: "79447984"
   
 ## <a name="totals-charts"></a>總計圖表  
 
-![行動報表的總計圖表](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![行動報表總計圖表的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 總計圖表可完成兩個不同的動作： 
 * 它不會呈現多個數列，只會呈現所定義之主要數列的總和或總計。 
@@ -97,7 +97,7 @@ ms.locfileid: "79447984"
   
 時間、類別和總計圖表也可當作「比較圖」  使用。 在比較圖中，您不僅可以指定主要數列，還可以指定第二個比較數列。 主要和比較數列的顯示方式有三種。
 
-![行動報表的比較時間圖表](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![行動報表比較時間圖表的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. 將其中一個 [比較圖]  (時間、類別或總計) 從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
@@ -120,7 +120,7 @@ ms.locfileid: "79447984"
 * **行動報表中的** 圓形圖 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 可以是圓形、環形或總計在中心的環形。 圓形圖適用於顯示整體不同部分的相對大小。 太多扇形會使其難以閱讀。
 * **漏斗圖** 通常可用來顯示程序中的各階段，例如銷售階段。
 
-![行動報表的漏斗圖](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![行動報表漏斗圖的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>將圓形圖和漏斗圖資料依資料列或資料行結構化
 1. 將 [圓形圖]  或 [漏斗圖]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
@@ -137,14 +137,14 @@ ms.locfileid: "79447984"
   
 樹狀圖顯示度量的方式，是將其值套用至矩形格線中磚的大小和色彩。 
 
-![行動報表的群組樹狀圖](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![行動報表群組矩形式樹狀結構圖的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. 將 [樹狀圖]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 2.  選取 [資料]  索引標籤，然後在 [資料屬性]  窗格中： 
 
      * 在 [數值表示方式]  下，針對磚的大小選取一個數值欄位。
      * 在 [色彩表示方式]  下，針對磚的色彩選取一個數值欄位。 
-     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您才可以使用 [自訂中間值]  。
+     * [選擇性] **自訂中間值** ：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您才可以使用 [自訂中間值]  。
      
          中間值會決定方塊的色彩。 計量越符合中間值，顏色就越接近綠色。 反之則接近紅色。
      
@@ -175,15 +175,15 @@ ms.locfileid: "79447984"
 
 1. 將 [瀑布圖]  從 [配置]  索引標籤拖曳至設計介面，調整其大小，然後視需要[取得其資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)。
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![行動報表瀑布圖圖示的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
 2.  選取 [資料]  索引標籤，然後在 [資料屬性]  窗格中，針對 [類別座標]  選取您資料中的類別欄位，並針對 [主要數列]  選取數值欄位： 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![行動報表瀑布資料的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. 選取 [配置]  索引標籤以查看瀑布圖的預覽。
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![行動報表瀑布圖的螢幕擷取畫面。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    虧損的月份 (例如二月、六月及七月) 是以紅色顯示。 
    盈利的月份 (例如九月、十月及十一月) 是以綠色顯示。 

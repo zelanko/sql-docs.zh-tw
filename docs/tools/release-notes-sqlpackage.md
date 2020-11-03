@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005977"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496706"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>修正
 | 功能 | 詳細資料 |
 | :------ | :------ | 
-| 部署 | 以非系統管理員 (sysadmin) 使用者身分修正以 Azure SQL Database 受控執行個體作為目標時所產生的錯誤部署指令碼  | 
+| 部署 | 已修正以非系統管理員 (non-sysadmin) 使用者身分將 Azure SQL 受控執行個體作為目標時，所產生的錯誤部署指令碼  | 
 | 部署 | 已修正在執行指令碼動作時載入部署參與者的問題 | 
 | [說明] | 當作業花費的時間超過 1 天時，在 sqlpackage 中輸出正確的經歷時間 | 
 | 部署 | 已修正針對 .NET Core 部署時的 dacpac 註冊問題 | 
