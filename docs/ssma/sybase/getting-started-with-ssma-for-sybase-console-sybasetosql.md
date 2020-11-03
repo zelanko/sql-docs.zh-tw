@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418314"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235365"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 主控台消費者入門 (SybaseToSQL) 
 本章節說明啟動和開始使用 SSMA for Sybase 主控台應用程式的程式。 本文也列出一般 SSMA 主控台輸出視窗中所使用的慣例。  
@@ -53,7 +53,7 @@ ms.locfileid: "88418314"
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項時，主控台程式會在主控台上顯示 (資訊、錯誤等等 ) 的結果和訊息，或是在必要時將其重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，白色的文字訊息表示腳本檔案命令;綠色的色彩表示提示輸入使用者輸入，依此類推。  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![顯示 SSMA 主控台 Sybase 輸出範例的螢幕擷取畫面。](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
 下表顯示主控台輸出的色彩解讀：  
   

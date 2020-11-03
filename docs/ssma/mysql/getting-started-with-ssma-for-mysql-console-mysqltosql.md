@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463437"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235185"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>開始使用 SSMA for MySQL 主控台 (MySQLToSQL)
 本節說明啟動和開始使用 MySQL 主控台應用程式的程式。 本文也列出一般 SSMA 主控台輸出視窗中所使用的慣例。  
@@ -26,7 +26,7 @@ ms.locfileid: "88463437"
 ## <a name="launching-ssma-console"></a>啟動 SSMA 主控台  
 使用下列步驟來啟動 SSMA 主控台應用程式：  
   
-1.  移至 [ **開始** ]，然後指向 [ **所有程式**]。  
+1.  移至 [ **開始** ]，然後指向 [ **所有程式** ]。  
   
 2.  按一下 [ **適用于 MySQL 的 SQL Server 移轉小幫手命令提示** 字元] 快捷方式。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88463437"
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項時，主控台程式會 (資訊、錯誤等等顯示結果和訊息，) 到主控台上的使用者或需要時，重新導向至 xml 輸出檔。 輸出中的每個訊息類型都是以唯一的色彩表示。 例如，白色的文字訊息表示腳本檔案命令;綠色的色彩表示提示輸入使用者輸入，依此類推。  
   
-![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
+![顯示 SSMA 主控台 MySQL 輸出範例的螢幕擷取畫面。](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 下表中的主控台輸出色彩解讀：  
   

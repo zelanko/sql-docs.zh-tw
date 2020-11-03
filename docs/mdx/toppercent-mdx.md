@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412856"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243537"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -42,7 +42,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **TopPercent**函式會計算指定之數值運算式的總和，並對指定的集合進行評估，並以遞減順序排序集合。 然後，此函數會傳回最高值的元素，它們的總和值累計百分比至少是指定的百分比。 這個函數會傳回累計總計至少是指定百分比之集合的最小子集。 傳回從最大到最小排列的元素。  
+ **TopPercent** 函式會計算指定之數值運算式的總和，並對指定的集合進行評估，並以遞減順序排序集合。 然後，此函數會傳回最高值的元素，它們的總和值累計百分比至少是指定的百分比。 這個函數會傳回累計總計至少是指定百分比之集合的最小子集。 傳回從最大到最小排列的元素。  
   
 > [!WARNING]  
 >  如果 *Numeric_Expression*  傳回任何負數值，則 **TopPercent** 只會傳回一個 (1) 資料列。  
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  如同 [BottomPercent](../mdx/bottompercent-mdx.md) 函式， **TopPercent** 函數一律會中斷階層。  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例  
+
+### <a name="a-return-toppercent"></a>A. 傳回 TopPercent
+
  下列範例為 Bike 類別目錄傳回實現轉售商銷售前 10% 的最佳城市。 結果以遞減順序排序，開頭為具有最高銷售值的城市。  
   
 ```  
@@ -68,11 +71,11 @@ WHERE([Product].[Product Categories].[Bikes])
   
  上述運算式會產生下列結果：  
   
-|城市|Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
-|Seattle|$1209418.16|  
+|西雅圖|$1209418.16|  
 |Paris|$1170425.18|  
   
  原始資料集可透過下列查詢取得，並傳回 588 個資料列：  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>範例  
- 下列逐步解說將協助您瞭解 *Numeric_Expression*中的負數值效果。 首先讓我們建立可顯示行為的一些內容。  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. 瞭解負數值的效果
+
+ 下列逐步解說將協助您瞭解 *Numeric_Expression* 中的負數值效果。 首先讓我們建立可顯示行為的一些內容。  
   
  下列查詢傳回轉銷商 'Sales Amount'、'Total Product Cost' 和 'Gross Profit' 的資料表，依收益的遞減順序排序。 請注意，只有負值的收益，因此最小的損失會顯示在最上方。  
   

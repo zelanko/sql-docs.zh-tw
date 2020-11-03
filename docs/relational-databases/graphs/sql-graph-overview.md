@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494188"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235624"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "88494188"
 
 
 ### <a name="create-graph-objects"></a>建立繪圖物件
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 擴充功能可讓使用者建立節點或邊緣資料表。 節點和邊緣都可以有相關聯的屬性。 由於節點和邊緣會儲存為數據表，因此在節點或邊緣資料表上支援所有在關聯式資料表上支援的作業。 請看以下範例：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 擴充功能可讓使用者建立節點或邊緣資料表。 節點和邊緣都可以有相關聯的屬性。 由於節點和邊緣會儲存為數據表，因此在節點或邊緣資料表上支援所有在關聯式資料表上支援的作業。 範例如下：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![person-好友-資料表](../../relational-databases/graphs/media/person-friends-tables.png "Person 節點和朋友 edge 資料表")  
+![顯示節點和邊緣的圖表會儲存為數據表。](../../relational-databases/graphs/media/person-friends-tables.png "Person 節點和朋友 edge 資料表")  
 節點和邊緣會儲存為數據表  
 
 ### <a name="query-language-extensions"></a>查詢語言延伸模組  
@@ -89,7 +89,7 @@ AND Person1.Name = 'John';
 ## <a name="shortest-path"></a>最短路徑
 [SHORTEST_PATH](./sql-graph-shortest-path.md)函數會尋找圖形中任何2個節點之間的最短路徑，或從指定的節點開始到圖形中的所有其他節點。 最短路徑也可以用來在圖形中尋找可轉移的關閉或任意長度的周遊。 
 
- ## <a name="next-steps"></a>後續步驟  
+ ## <a name="next-steps"></a>下一步  
 讀取 [SQL Graph 資料庫-架構](./sql-graph-architecture.md)
    
 

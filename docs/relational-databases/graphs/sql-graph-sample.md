@@ -1,6 +1,6 @@
 ---
 title: SQL Graph 資料庫範例 |Microsoft Docs
-description: 快速範例，可協助您開始使用 SQL graph 資料庫中引進的新語法。
+description: 快速範例可協助您開始使用 SQL graph 資料庫中引進的新語法。
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,25 +15,25 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331048"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235538"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 建立圖形資料庫並執行一些模式比對查詢
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-這個範例會提供一個 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 腳本來建立具有節點和邊緣的圖形資料庫，然後使用新的 MATCH 子句來比對一些模式，並透過圖形進行遍歷。 這個範例腳本會在 Azure SQL Database 和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+這個範例會提供一個 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 腳本，用來建立具有節點和邊緣的圖形資料庫，然後使用新的 MATCH 子句來比對某些模式並跨越圖形。 此範例腳本適用于 Azure SQL Database 和 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>範例架構
 
-這個範例會如 [圖 1] 所示，建立具有人員、餐廳和 City 節點的假設社交網路的圖形架構。 這些節點會使用朋友、贊、LivesIn 和 LocatedIn 邊緣彼此連接。
+此範例會針對具有人員、餐廳和城市節點的假設社交網路，建立圖表架構（如圖1所示）。 這些節點會使用朋友、贊、LivesIn 和 LocatedIn 邊緣彼此連接。
 
-![人員-城市-餐廳-資料表](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 資料庫範例")  
-圖1：具有餐廳、city、person 節點和 LivesIn、LocatedIn、贊邊緣的範例架構。
+![此圖顯示具有餐廳、city、person 節點和 LivesIn、LocatedIn、贊邊的範例架構。](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph 資料庫範例")  
+圖1：使用餐廳、city、person 節點和 LivesIn、LocatedIn、贊邊的範例架構。
 
 ## <a name="sample-script"></a>範例指令碼
 
@@ -161,10 +161,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>指令碼說明  
-此腳本會使用新的 T-sql 語法來建立節點和邊緣資料表。 示範如何使用語句將資料插入節點和邊緣資料表 `INSERT` ，同時示範如何使用 `MATCH` 子句進行模式比對和導覽。
+此腳本會使用新的 T-sql 語法來建立節點和邊緣資料表。 示範如何使用語句，將資料插入至節點和邊緣資料表 `INSERT` ，也會示範如何使用 `MATCH` 子句進行模式比對和導覽。
 
 |Command    |注意
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |建立圖形節點或邊緣資料表  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |插入至節點或邊緣資料表  |
-|[MATCH &#40;Transact-sql&#41;](../../t-sql/queries/match-sql-graph.md)  |使用 MATCH 來比對模式或跨越圖表  |
+|[&#40;Transact-sql&#41;相符 ](../../t-sql/queries/match-sql-graph.md)  |使用 MATCH 來比對模式或跨越圖形  |
