@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edf15fb4e6e9d58389ed110c3bca9db1cca147ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca55276a6108cd53ffae82fd4c40089023da20fb
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430030"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243601"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -35,10 +35,13 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 ## <a name="arguments"></a>引數  
  [ @data_tap_id = ] *data_tap_id*  
- 使用 catalog.add_data_tap 預存程序來建立之資料點選的唯一識別碼。 *data_tap_id* 是 **bigint**。  
+ 使用 catalog.add_data_tap 預存程序來建立之資料點選的唯一識別碼。 *data_tap_id* 是 **bigint** 。  
   
 ## <a name="remarks"></a>備註  
- 如果封裝包含多個具有相同名稱的資料流程工作，則會將資料點選加入具有給定名稱的第一個資料流程工作。  
+
+- 如果封裝包含多個具有相同名稱的資料流程工作，則會將資料點選加入具有給定名稱的第一個資料流程工作。  
+  
+- 若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態]  資料行中的值為 1)。  
   
 ## <a name="return-codes"></a>傳回碼  
  0 (成功)  
@@ -48,9 +51,6 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="result-set"></a>結果集  
  None  
   
-## <a name="remarks"></a>備註  
- 若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態]  資料行中的值為 1)。  
-  
 ## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
@@ -58,7 +58,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致預存程序失敗的情況。  

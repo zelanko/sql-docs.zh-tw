@@ -10180,6 +10180,8 @@
   items:
     - name: 概觀
       href: sql-server/azure-arc/overview.md
+    - name: 版本資訊
+      href: sql-server/azure-arc/release-notes.md
     - name: 連線
       href: sql-server/azure-arc/connect.md
     - name: 大規模連線

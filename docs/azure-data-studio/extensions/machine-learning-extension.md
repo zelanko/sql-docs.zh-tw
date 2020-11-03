@@ -9,16 +9,16 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725143"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035974"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的機器學習延伸模組 (預覽)
 
-適用於 [Azure Data Studio](../what-is.md) 的機器學習延伸模組可讓您管理套件、匯入機器學習模型、進行預測，以及建立筆記本來執行 SQL 資料庫的實驗。 此延伸模組目前為預覽狀態。
+適用於 [Azure Data Studio](../what-is-azure-data-studio.md) 的機器學習延伸模組可讓您管理套件、匯入機器學習模型、進行預測，以及建立筆記本來執行 SQL 資料庫的實驗。 此延伸模組目前為預覽狀態。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -68,7 +68,7 @@ _安裝這些元件：_
 
 1. 在 Azure Data Studio 中開啟延伸模組管理員。 您可以選取延伸模組圖示，或在 [檢視] 功能表中選取 [延伸模組]。
 
-1. 在 [已啟用] 延伸模組底下，尋找**機器學習**延伸模組。
+1. 在 [已啟用] 延伸模組底下，尋找 **機器學習** 延伸模組。
 
 1. 選取 [管理] 圖示。
 
@@ -107,7 +107,7 @@ _安裝這些元件：_
 
 1. 在左側功能表中的 [一般] 底下，選取 [機器學習]。
 
-遵循**後續步驟**底下的連結，以查看如何使用機器學習延伸模組來管理套件、進行預測，以及在資料庫中匯入模型。
+遵循 **後續步驟** 底下的連結，以查看如何使用機器學習延伸模組來管理套件、進行預測，以及在資料庫中匯入模型。
 
 ## <a name="next-steps"></a>後續步驟
 

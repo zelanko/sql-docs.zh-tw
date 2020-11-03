@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890908"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734671"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出
 
@@ -176,7 +176,7 @@ ms.locfileid: "91890908"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     您也可以透過 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
+     您也可以透過 [https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
   
 6.  建立工作負載及 XML 輸入檔之後，即可準備將輸入檔提交至 **dta** 命令列公用程式，以進行分析。 請確定您有指定 **-ox** 公用程式引數的 XML 輸出檔名稱。 這樣會以 **Configuration** 元素中所指定的建議組態來建立 XML 輸出檔。 若您想再執行一次 Database Engine Tuning Advisor，以檢查另一個以該輸出檔為基礎的假設組態，則您可以複製輸出檔的 **Configuration** 元素內容，並貼到新的 XML 輸入檔或原來的 XML 輸入檔中。 如需有關 XML 輸入檔與 **dta** 公用程式一起使用的資訊，請參閱 [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的＜使用 dta 公用程式微調資料庫＞。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "91890908"
 4.  按兩下微調工作階段名稱，其資訊就會載入到 Database Engine Tuning Advisor。 載入工作階段資訊後，您可以選擇其中任何一個索引標籤來檢視此微調工作階段的相關資訊。  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>以假設組態評估現有的微調工作階段  
- 使用下列步驟來評估現有的微調工作階段。 評估現有的微調工作階段牽涉到檢視與編輯其建議，然後重新微調。 例如，您決定只要在 **table1**上建立索引，您從現有的微調建議中刪除索引檢視與分割。 接著，Database Engine Tuning Advisor 會建立新的微調工作階段，並使用已編輯的建議作為假設組態，來微調您資料庫的工作負載。 這表示 Database Engine Tuning Advisor 會微調資料庫的工作負載 (就如同已實作編輯後的建議)，讓您可以執行有限的假設條件分析。 稱之為有限的假設條件分析的原因是，當您使用 Database Engine Tuning Advisor GUI 時只能選擇現有建議的子集。 若要執行完整的模擬分析，您必須指定全新的假設組態 (此組態不能是任何先前微調工作階段的子集)，您必須使用 Database Engine Tuning Advisor XML 輸入檔來搭配 **dta** 命令列公用程式。  
+ 使用下列步驟來評估現有的微調工作階段。 評估現有的微調工作階段牽涉到檢視與編輯其建議，然後重新微調。 例如，您決定只要在 **table1** 上建立索引，您從現有的微調建議中刪除索引檢視與分割。 接著，Database Engine Tuning Advisor 會建立新的微調工作階段，並使用已編輯的建議作為假設組態，來微調您資料庫的工作負載。 這表示 Database Engine Tuning Advisor 會微調資料庫的工作負載 (就如同已實作編輯後的建議)，讓您可以執行有限的假設條件分析。 稱之為有限的假設條件分析的原因是，當您使用 Database Engine Tuning Advisor GUI 時只能選擇現有建議的子集。 若要執行完整的模擬分析，您必須指定全新的假設組態 (此組態不能是任何先前微調工作階段的子集)，您必須使用 Database Engine Tuning Advisor XML 輸入檔來搭配 **dta** 命令列公用程式。  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>若要評估現有的微調工作階段  
   
@@ -219,7 +219,7 @@ ms.locfileid: "91890908"
   
 6.  在 **[動作]** 功能表上，按一下 **[評估建議]** 。 Database Engine Tuning Advisor 會建立使用已編輯建議作為假設組態的新微調工作階段。 若要以 XML 檢視假設組態，請選擇 **[按一下此處以查看組態區段]** 。  
   
-7.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱**，並且確保已指定正確的 **[工作負載]** 。  
+7.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱** ，並且確保已指定正確的 **[工作負載]** 。  
   
 8.  在 **[微調選項]** 索引標籤上，您可以指定微調時間或任何 **[進階選項]** 。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "91890908"
   
 2.  在 **[動作]** 功能表上，按一下 **[複製工作階段]** 。  
   
-3.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱**，並且確保已指定正確的 **[工作負載]** 。  
+3.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱** ，並且確保已指定正確的 **[工作負載]** 。  
   
 4.  在 **[微調選項]** 索引標籤上，您可以指定微調時間，Database Engine Tuning Advisor 應該考慮建立的實體設計結構，以及考慮應該在其建議中卸除的項目。  
   

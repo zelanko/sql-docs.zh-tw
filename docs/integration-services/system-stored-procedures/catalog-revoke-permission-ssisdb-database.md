@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0475b5adb825339c2c3c7a0927aabbea2bf889ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5386c10a85d548a59e68b33009d5ed46e95d85d0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422092"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243638"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 
@@ -41,16 +41,16 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引數  
  [ @object_type = ] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint** _。_  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。 *object_type* 是 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
- 安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  
+ 安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint** 。  
   
  [ @principal_id = ] *principal_id*  
- 要撤銷其權限之主體的識別碼。 *principal_id* 是 **int**。  
+ 要撤銷其權限之主體的識別碼。 *principal_id* 是 **int** 。  
   
  [ @permission_type = ] *permission_type*  
- 權限的類型。 *permission_type* 是 **smallint**。  
+ 權限的類型。 *permission_type* 是 **smallint** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功)  
@@ -68,9 +68,6 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="remarks"></a>備註  
- None  
-  
 ## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
@@ -78,7 +75,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="remarks"></a>備註  
  如果指定 permission_type，則預存程序會移除已明確指派給物件主體的權限。 即使沒有這種類型的執行個體，程序還是會傳回成功的程式碼值 (`0`)。 如果省略 permission_type，則預存程序會移除物件主體的所有權限。  

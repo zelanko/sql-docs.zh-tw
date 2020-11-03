@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688074"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067465"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY 指定憑證的私密金鑰會載入到 SQL Server。
 
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  指定通往私密金鑰的完整路徑 (包括檔案名稱)。 這個參數可以是本機路徑或是通往網路位置的 UNC 路徑。 這個檔案會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容中被存取。 當您使用這個選項時，請確定服務帳戶有權存取指定的檔案。
  
  如果只指定檔案名稱，該檔案會儲存在執行個體的預設使用者資料夾中。 此資料夾不一定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾。 如果是 SQL Server Express LocalDB，執行個體的預設使用者資料夾是 `%USERPROFILE%` 環境變數為建立該執行個體的帳戶所指定的路徑。  
   
- BINARY ='*private_key_bits*'  
- **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
+ BINARY =' *private_key_bits* '  
+ **適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  指定為二進位常數的私密金鑰位元。 這些位元可以是加密形式。 如果加密的話，使用者必須提供解密密碼。 不會針對這個密碼執行密碼原則檢查。 私密金鑰位元應該採用 PVK 檔案格式。  
   
- DECRYPTION BY PASSWORD ='*current_password*'  
+ DECRYPTION BY PASSWORD =' *current_password* '  
  指定私密金鑰解密所需的密碼。  
   
- ENCRYPTION BY PASSWORD ='*new_password*'  
+ ENCRYPTION BY PASSWORD =' *new_password* '  
  指定用來加密資料庫內憑證之私密金鑰的密碼。 *new_password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d4235e64f59814075a5d0d57e24d5345b9876a0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425360"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243679"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減) (SSIS 運算式)
 
@@ -44,10 +44,9 @@ numeric_expression1 - numeric_expression2
  由兩個引數的資料類型決定。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
 ## <a name="remarks"></a>備註  
- 用括號括住一元減號運算式，以確保運算式以正確的順序接受評估。  
-  
-## <a name="remarks"></a>備註  
- 如果任一個運算元為 Null，則結果為 Null。  
+ - 用括號括住一元減號運算式，以確保運算式以正確的順序接受評估。  
+
+ - 如果任一個運算元為 Null，則結果為 Null。  
   
 ## <a name="expression-examples"></a>運算式範例  
  此範例會減去數值常值。  

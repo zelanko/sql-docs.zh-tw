@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 8284300858be0dc8bcbf8bdf8f381e839fd7ae96
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92060862"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035995"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Azure Data Studio 中的預覽功能
 
@@ -32,7 +32,7 @@ ms.locfileid: "92060862"
 
 您可隨時在 [設定] 中啟用或停用預覽功能。
 
-1. 選取左下角的**齒輪**圖示，然後從操作功能表中選取 [設定]。 這會開啟 [設定] 索引標籤。
+1. 選取左下角的 **齒輪** 圖示，然後從操作功能表中選取 [設定]。 這會開啟 [設定] 索引標籤。
 
    ![在 ADS 中存取 [設定] 的齒輪圖示](./media/settings/open-settings-menu.png)
 
@@ -97,4 +97,4 @@ ms.locfileid: "92060862"
 
 ## <a name="next-steps"></a>後續步驟
 
-* [Azure Data Studio](what-is.md)
+* [Azure Data Studio](what-is-azure-data-studio.md)

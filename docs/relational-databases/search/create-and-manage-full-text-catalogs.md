@@ -8,6 +8,7 @@ ms.technology: search
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.fulltextsearch.ftcatalog.general.f1
+- sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff19e0cd9ef6b88dae2410edbc4cae74e911c1a0
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344000"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067336"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
 
@@ -43,13 +44,13 @@ GO
 ``` 
 
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>使用 Management Studio 建立全文檢索目錄
-1.  在物件總管中，展開伺服器，並展開 [資料庫]  ，然後展開您要在其中建立全文檢索目錄的資料庫。  
+1.  在物件總管中，展開伺服器，並展開 [資料庫]，然後展開您要在其中建立全文檢索目錄的資料庫。  
   
-2.  展開 [儲存體]  ，然後以滑鼠右鍵按一下 [全文檢索目錄]  。  
+2.  展開 [儲存體]，然後以滑鼠右鍵按一下 [全文檢索目錄]。  
   
-3.  選取 [新增全文檢索目錄]  。  
+3.  選取 [新增全文檢索目錄]。  
   
-4.  在 [新增全文檢索目錄]  對話方塊中，為您要重新建立的目錄指定資訊。 如需詳細資訊，請參閱[全文檢索搜尋](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。  
+4.  在 [新增全文檢索目錄] 對話方塊中，為您要重新建立的目錄指定資訊。 如需詳細資訊，請參閱[全文檢索搜尋](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。  
   
     > [!NOTE]  
     >  全文檢索目錄識別碼從 00005 開始，每次新增一個目錄時識別碼便增加一號。  
@@ -86,27 +87,27 @@ GO
 執行 Transact-SQL 陳述式 [ALTER FULLTEXT CATALOG ...REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)，或在 SQL Server Management Studio (SSMS) 中執行下列事項。
 
-1.  在 SSMS 中，於物件總管中，展開伺服器，並展開 [資料庫]  ，然後展開含有您要重建其全文檢索目錄的資料庫。  
+1.  在 SSMS 中，於物件總管中，展開伺服器，並展開 [資料庫]，然後展開含有您要重建其全文檢索目錄的資料庫。  
   
-2.  展開 [儲存體]  ，然後展開 [全文檢索目錄]  。  
+2.  展開 [儲存體]，然後展開 [全文檢索目錄]。  
   
-3.  以滑鼠右鍵按一下要重建的全文檢索目錄名稱，然後選取 [重建]  。  
+3.  以滑鼠右鍵按一下要重建的全文檢索目錄名稱，然後選取 [重建]。  
   
-4.  出現 [您要刪除全文檢索目錄，並重建目錄嗎?]  問題時，按一下 [確定]  。  
+4.  出現 [您要刪除全文檢索目錄，並重建目錄嗎?] 問題時，按一下 [確定]。  
   
-5.  在 [重建全文檢索目錄]  對話方塊中，按一下 [關閉]  。  
+5.  在 [重建全文檢索目錄] 對話方塊中，按一下 [關閉]。  
    
 ##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> 重建資料庫的所有全文檢索目錄  
 
-1.  在 SSMS 中，於物件總管中，展開伺服器，並展開 [資料庫]  ，然後展開含有您要重建之全文檢索目錄的資料庫。  
+1.  在 SSMS 中，於物件總管中，展開伺服器，並展開 [資料庫]，然後展開含有您要重建之全文檢索目錄的資料庫。  
   
-2.  展開 [儲存體]  ，然後以滑鼠右鍵按一下 [全文檢索目錄]  。  
+2.  展開 [儲存體]，然後以滑鼠右鍵按一下 [全文檢索目錄]。  
   
-3.  選取 [全部重建]  。  
+3.  選取 [全部重建]。  
   
-4.  出現 [您要刪除所有全文檢索目錄，並重建這些目錄嗎?]  問題時，按一下 [確定]  。  
+4.  出現 [您要刪除所有全文檢索目錄，並重建這些目錄嗎?] 問題時，按一下 [確定]。  
   
-5.  在 [重建所有全文檢索目錄]  對話方塊中，按一下 [關閉]  。  
+5.  在 [重建所有全文檢索目錄] 對話方塊中，按一下 [關閉]。  
   
   
   
@@ -115,11 +116,11 @@ GO
 執行 Transact-SQL 陳述式 [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)，或在 SQL Server Management Studio (SSMS) 中執行下列事項。
 
-1.  在 SSMS 中，於物件總管中，依序展開伺服器、[資料庫]  ，並展開含有您要移除之全文檢索目錄的資料庫。  
+1.  在 SSMS 中，於物件總管中，依序展開伺服器、[資料庫]，並展開含有您要移除之全文檢索目錄的資料庫。  
   
-2.  展開 [儲存體]  ，再展開 [全文檢索目錄]  。  
+2.  展開 [儲存體]，再展開 [全文檢索目錄]。  
   
-3.  以滑鼠右鍵按一下要移除的全文檢索目錄，然後選取 [刪除]  。  
+3.  以滑鼠右鍵按一下要移除的全文檢索目錄，然後選取 [刪除]。  
   
 4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
 
