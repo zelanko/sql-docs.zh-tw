@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544664"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294395"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89544664"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|用來識別備份組的唯一備份組識別碼。 識別，主索引鍵。|  
 |**backup_set_uuid**|**uniqueidentifier**|用來識別備份組的唯一備份組識別碼。|  
-|**media_set_id**|**int**|用來識別備份組所在媒體集的唯一媒體集識別碼。 參考 **backupmediaset (media_set_id) **。|  
+|**media_set_id**|**int**|用來識別備份組所在媒體集的唯一媒體集識別碼。 參考 **backupmediaset (media_set_id)** 。|  
 |**first_family_number**|**tinyint**|備份組啟動時所在之媒體的家族號碼。 可以是 NULL。|  
 |**first_media_number**|**smallint**|備份組啟動時所在之媒體的媒體號碼。 可以是 NULL。|  
 |**last_family_number**|**tinyint**|備份組結束時所在之媒體的家族號碼。 可以是 NULL。|  
@@ -56,7 +56,7 @@ ms.locfileid: "89544664"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主要版本號碼。 可以是 NULL。|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次要版本號碼。 可以是 NULL。|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組建編號。 可以是 NULL。|  
-|**time_zone**|**smallint**|本機時間 (備份作業所在位置) 和國際標準時間 (UTC) 的時差，間隔是 15 分鐘。 值可以是 -48 至 +48，頭尾包括在內。 127 值表示未知。 例如，-20 是美東標準時間 (EST) 或 UTC 之後 5 小時。 可以是 NULL。|  
+|**time_zone**|**smallint**|備份作業開始 (的本地時間之間的差異) 和國際標準時間 (UTC) 在備份作業開始時的15分鐘間隔內。 值可以是 -48 至 +48，頭尾包括在內。 127 值表示未知。 例如，-20 是美東標準時間 (EST) 或 UTC 之後 5 小時。 可以是 NULL。|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 次要版本號碼。 可以是 NULL。|  
 |**first_lsn**|**numeric(25,0)**|備份組中第一個或最舊記錄檔記錄的記錄序號。 可以是 NULL。|  
 |**last_lsn**|**numeric(25,0)**|備份組之後下一個記錄檔記錄的記錄序號。 可以是 NULL。|  
@@ -90,14 +90,14 @@ ms.locfileid: "89544664"
 |**has_incomplete_metadata**|**bit**|1 = 包含不完整中繼資料的結尾記錄備份。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。|  
 |**is_force_offline**|**bit**|1 = 當取得備份時，利用 NORECOVERY 選項使資料庫離線。|  
 |**is_copy_only**|**bit**|1 = 僅限複製的備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。|  
-|**first_recovery_fork_guid**|**uniqueidentifier**|起始復原分岔的識別碼。 這對應于 RESTORE HEADERONLY 的 **FirstRecoveryForkID** 。<br /><br /> 若為資料備份， **first_recovery_fork_guid** 等於 **last_recovery_fork_guid**。|  
-|**last_recovery_fork_guid**|**uniqueidentifier**|結尾復原分岔的識別碼。 這對應于 RESTORE HEADERONLY 的 **RecoveryForkID** 。<br /><br /> 若為資料備份， **first_recovery_fork_guid** 等於 **last_recovery_fork_guid**。|  
-|**fork_point_lsn**|**numeric(25,0)**|如果 **first_recovery_fork_guid** 不等於 **last_recovery_fork_guid**，這就是分叉點的記錄序號。 否則，這個值是 NULL。|  
+|**first_recovery_fork_guid**|**uniqueidentifier**|起始復原分岔的識別碼。 這對應于 RESTORE HEADERONLY 的 **FirstRecoveryForkID** 。<br /><br /> 若為資料備份， **first_recovery_fork_guid** 等於 **last_recovery_fork_guid** 。|  
+|**last_recovery_fork_guid**|**uniqueidentifier**|結尾復原分岔的識別碼。 這對應于 RESTORE HEADERONLY 的 **RecoveryForkID** 。<br /><br /> 若為資料備份， **first_recovery_fork_guid** 等於 **last_recovery_fork_guid** 。|  
+|**fork_point_lsn**|**numeric(25,0)**|如果 **first_recovery_fork_guid** 不等於 **last_recovery_fork_guid** ，這就是分叉點的記錄序號。 否則，這個值是 NULL。|  
 |**database_guid**|**uniqueidentifier**|資料庫的唯一識別碼。 這對應于 RESTORE HEADERONLY 的 **restore headeronly bindingid** 。 當還原資料庫時，會指派一個新值。|  
 |**family_guid**|**uniqueidentifier**|建立時原始資料庫的唯一識別碼。 當還原資料庫時，即使還原成不同的名稱，這個值也會維持不變。|  
 |**differential_base_lsn**|**numeric(25,0)**|差異備份的基底 LSN。 適用于單一的差異備份;差異備份中包含 Lsn 大於或等於 **differential_base_lsn** 的變更。<br /><br /> 若為 multibased 差異，此值為 Null，而且基底 LSN 必須在檔案層級上判斷 (請參閱 [backupfile &#40;transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)) 。<br /><br /> 如果是非差異備份類型，這個值永遠是 NULL。|  
 |**differential_base_guid**|**uniqueidentifier**|如果是單一基底差異備份，這個值就是差異基底的唯一識別碼。<br /><br /> 如果是多重基底差異備份，這個值就是 NULL，差異基底必須取決於檔案層級。<br /><br /> 如果是非差異備份類型，這個值就是 NULL。|  
-|**compressed_backup_size**|**數值 (20、0) **|儲存於磁碟上之備份的總位元組數。<br /><br /> 若要計算壓縮比率，請使用 **compressed_backup_size** 和 **backup_size**。<br /><br /> 在 **msdb** 升級期間，這個值會設定為 Null。 這表示非壓縮的備份。|  
+|**compressed_backup_size**|**數值 (20、0)**|儲存於磁碟上之備份的總位元組數。<br /><br /> 若要計算壓縮比率，請使用 **compressed_backup_size** 和 **backup_size** 。<br /><br /> 在 **msdb** 升級期間，這個值會設定為 Null。 這表示非壓縮的備份。|  
 |**key_algorithm**|**nvarchar(32)**|用於加密備份的加密演算法。 NO_Encryption 值表示備份未加密。|  
 |**encryptor_thumbprint**|**varbinary(20)**|加密程式指模，可用來尋找資料庫中的憑證或非對稱金鑰。 在備份未加密的情況下，這個值是 NULL。|  
 |**encryptor_type**|**nvarchar(32)**|使用的加密程式類型：憑證或非對稱金鑰。 . 在備份未加密的情況下，這個值是 NULL。|  

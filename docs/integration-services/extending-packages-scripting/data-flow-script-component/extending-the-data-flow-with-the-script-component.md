@@ -1,5 +1,5 @@
 ---
-description: Extending the Data Flow with the Script Component
+description: 使用指令碼元件來擴充資料流程
 title: 使用指令碼元件擴充資料流程 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -32,7 +32,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/17/2020
 ms.locfileid: "88425390"
 ---
-# <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
+# <a name="extending-the-data-flow-with-the-script-component"></a>使用指令碼元件來擴充資料流程
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425390"
  下列主題提供有關指令碼元件的詳細資訊。  
   
  [在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
- 您在 [指令碼轉換編輯器]**** 中設定的屬性會影響指令碼元件程式碼的功能和效能。  
+ 您在 [指令碼轉換編輯器] 中設定的屬性會影響指令碼元件程式碼的功能和效能。  
   
  [編碼和偵錯指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
  您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開發環境來開發包含在指令碼元件中的指令碼。  
