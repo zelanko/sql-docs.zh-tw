@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678903"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328583"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-sql) 
 
@@ -41,11 +41,11 @@ ms.locfileid: "92678903"
 |database_id|**int**|明確內容 (所使用的資料庫識別碼，例如，使用 DB_X) 。|請參閱 [sys. 資料庫中的識別碼 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |命令|**nvarchar(4000)**|保存使用者提交要求的完整文字。|任何有效的查詢或要求文字。 超過4000個位元組的查詢會被截斷。|  
 |resource_class|**Nvarchar (20)**|用於此要求的工作負載群組。 |靜態資源類別</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>靜態資源類別</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|要求執行的重要性設定。  這是此工作負載群組中的要求以及共用資源的工作負載群組之間的相對重要性。  分類器中指定的重要性會覆寫工作負載群組的重要性設定。</br>適用於：Azure SQL 資料倉儲|NULL</br>low</br>below_normal</br>一般 (預設) </br>above_normal</br>high|
-|group_name|**sysname** |針對利用資源的要求，group_name 是執行要求的工作負載群組的名稱。  如果要求不使用資源，group_name 為 null。</br>適用於：Azure SQL 資料倉儲|
+|importance|**nvarchar(128)**|要求執行的重要性設定。  這是此工作負載群組中的要求以及共用資源的工作負載群組之間的相對重要性。  分類器中指定的重要性會覆寫工作負載群組的重要性設定。</br>適用於：Azure Synapse Analytics|NULL</br>low</br>below_normal</br>一般 (預設) </br>above_normal</br>high|
+|group_name|**sysname** |針對利用資源的要求，group_name 是執行要求的工作負載群組的名稱。  如果要求不使用資源，group_name 為 null。</br>適用於：Azure Synapse Analytics|
 |classifier_name|**sysname**|針對利用資源的要求，用於指派資源和重要性的分類器名稱。||
-|resource_allocation_percentage|**decimal (5，2)**|配置給要求的資源數量百分比。</br>適用於：Azure SQL 資料倉儲|
-|result_cache_hit|**int**|詳細說明已完成的查詢是否使用結果集快取。  </br>適用於：Azure SQL 資料倉儲| 1 = 結果集快取點擊 </br> 0 = 結果集快取遺漏 </br> 負整數值 = 未使用結果集快取的原因。  如需詳細資訊，請參閱備註一節。|
+|resource_allocation_percentage|**decimal (5，2)**|配置給要求的資源數量百分比。</br>適用於：Azure Synapse Analytics|
+|result_cache_hit|**int**|詳細說明已完成的查詢是否使用結果集快取。  </br>適用於：Azure Synapse Analytics| 1 = 結果集快取點擊 </br> 0 = 結果集快取遺漏 </br> 負整數值 = 未使用結果集快取的原因。  如需詳細資訊，請參閱備註一節。|
 |client_correlation_id|**nvarchar(255)**|用戶端會話的選擇性使用者定義名稱。  若要為會話設定，請呼叫 sp_set_session_coNtext ' client_correlation_id '，' <CorrelationIDName> '。  執行 `SELECT SESSION_CONTEXT(N'client_correlation_id')` 以取得其值。|
 ||||
 
@@ -81,4 +81,4 @@ Result_cache_hit 資料行中的負整數值是無法快取查詢結果集之所
   
 ## <a name="see-also"></a>另請參閱
 
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
