@@ -14,12 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6447c5088e0fd338618a4601abf47c8b3344d796
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868211"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364739"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,9 +185,9 @@ from @Items
     }  
     ```  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="a-use-row-streaming-one-row-per-call"></a>A. 使用資料列資料流程，每個呼叫一個資料列
  此範例顯示您可以使用資料列串流，每次呼叫 SQLPutData 一個資料列，使用 ODBC TVP，類似于您可能使用 BCP.exe 將資料載入資料庫。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
@@ -215,7 +215,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>程式碼  
+#### <a name="code"></a>程式碼  
   
 ```cpp
 #define UNICODE  
@@ -373,9 +373,7 @@ EXIT:
 }  
 ```  
   
-## <a name="example"></a>範例  
-  
-### <a name="description"></a>描述  
+### <a name="b-use-row-streaming-multiple-rows-per-call"></a>B. 使用資料列資料流程，每個呼叫多個資料列  
  此範例顯示您可以使用資料列串流、每次呼叫 SQLPutData 的多個資料列，以及 ODBC TVP，類似于您可能使用 BCP.exe 將資料載入資料庫。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
@@ -403,7 +401,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>程式碼  
+#### <a name="code"></a>程式碼  
   
 ```cpp
 #define UNICODE  

@@ -14,12 +14,12 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2622fc28743da2e2eed4224e7a2f0eb21c09e665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1cf4610efc2ea021b8cd9260f463af079d28dc9
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423778"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364821"
 ---
 # <a name="set-cursor-options-odbc"></a>設定資料指標選項 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,10 @@ ms.locfileid: "88423778"
   
  您可以透過設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或是設定 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，控制所使用的資料指標類型。 您不應該混合使用這兩種指定資料指標行為的方法。  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例  
+
+### <a name="a-set-a-dynamic-cursor"></a>A. 設定動態資料指標
+
  下列範例會配置陳述式控制代碼、使用資料列版本設定開放式並行存取來設定動態資料指標類型，然後執行 SELECT。  
   
 ```  
@@ -48,7 +51,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CONCURRENCY, SQLPOINTER)SQL_CONCUR_ROW
 retcode = SQLExecDirect(hstmt1, SELECT au_lname FROM authors", SQL_NTS);  
 ```  
   
-## <a name="example"></a>範例  
+### <a name="b-set-a-scrollable-sensitive-cursor"></a>B. 設定可滾動且敏感的資料指標
  下列範例會配置陳述式控制代碼、設定可捲動的感應式資料指標，然後執行 SELECT。  
   
 ```  
