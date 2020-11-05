@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344064"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364830"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) 查詢編輯器
 
@@ -94,7 +94,7 @@ SSMS 中的編輯器會共用一般架構。 文字編輯器實作基本的功�
 
 執行選取的程式碼，或是在未選取任何程式碼時，執行所有查詢編輯器程式碼。
 
-您也可以透過選取 F5 或從[捷徑功能表](#execute-using-the-context-menu)**執行**查詢。
+您也可以透過選取 F5 或從 [捷徑功能表](#execute-using-the-context-menu)**執行** 查詢。
 
 ### <a name="cancel-executing-query-using-the-editor-toolbar"></a>取消執行查詢 (使用編輯器工具列)
 
@@ -158,7 +158,7 @@ SSMS 中的編輯器會共用一般架構。 文字編輯器實作基本的功�
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>將結果存檔 (使用編輯器工具列)
 
-執行查詢時，會開啟 [儲存結果]  對話方塊。 在 **[儲存於]** 中，選取您想要用來儲存檔案的資料夾。 在 [檔案名稱] 中，輸入檔案的名稱，然後選取 [儲存] 以將查詢結果儲存為具有 .rpt 副檔名的**報告**檔案。 若要使用進階選項，請選取 [儲存] 按鈕上的向下箭頭，然後選取 [使用編碼方式儲存]。
+執行查詢時，會開啟 [儲存結果]  對話方塊。 在 **[儲存於]** 中，選取您想要用來儲存檔案的資料夾。 在 [檔案名稱] 中，輸入檔案的名稱，然後選取 [儲存] 以將查詢結果儲存為具有 .rpt 副檔名的 **報告** 檔案。 若要使用進階選項，請選取 [儲存] 按鈕上的向下箭頭，然後選取 [使用編碼方式儲存]。
 
 您也可以透過選取 Ctrl + Shift + F 或從[捷徑功能表](#results-using-the-context-menu)以文字傳回結果。
 
@@ -264,7 +264,7 @@ Microsoft Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出用
 
 - **以方格顯示結果** - 在 [結果]  視窗中以一或多個方格傳回查詢結果。
 
-- **將結果存檔** - 當查詢執行時，會開啟 [儲存結果]  對話方塊。 在 **[儲存於]** 中，選取您想要用來儲存檔案的資料夾。 在 [檔案名稱] 中，輸入檔案的名稱，然後選取 [儲存] 以將查詢結果儲存為具有 .rpt 副檔名的**報告**檔案。 若要使用進階選項，請選取 [儲存] 按鈕上的向下箭頭，然後選取 [使用編碼方式儲存]。
+- **將結果存檔** - 當查詢執行時，會開啟 [儲存結果]  對話方塊。 在 **[儲存於]** 中，選取您想要用來儲存檔案的資料夾。 在 [檔案名稱] 中，輸入檔案的名稱，然後選取 [儲存] 以將查詢結果儲存為具有 .rpt 副檔名的 **報告** 檔案。 若要使用進階選項，請選取 [儲存] 按鈕上的向下箭頭，然後選取 [使用編碼方式儲存]。
 
 ### <a name="properties-window-using-the-context-menu"></a>屬性視窗 (使用捷徑功能表)
 

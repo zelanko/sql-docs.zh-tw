@@ -6,24 +6,25 @@ ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
+- sql.data.tools.sqleditor
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b6a045900509fbf7aff58f477f079747e413bf0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c9bb76ddd3ee5f5c0828f5c9ef181f98e26f94d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883169"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067070"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>使用 Transact-SQL 編輯器，編輯及執行指令碼
 
-Transact\-SQL 編輯器為您在使用指令碼時提供豐富的編輯和偵錯體驗。 使用 [檢視程式碼] 快顯功能表開啟連線的資料庫或專案中的資料庫實體時，會叫用這個編輯器。 從 [SQL Server 物件總管] 使用 [新增查詢]**** 快顯功能表，或將新的指令碼物件加入至資料庫專案時，也會自動開啟這個編輯器。  
+Transact\-SQL 編輯器為您在使用指令碼時提供豐富的編輯和偵錯體驗。 使用 [檢視程式碼] 快顯功能表開啟連線的資料庫或專案中的資料庫實體時，會叫用這個編輯器。 從 [SQL Server 物件總管] 使用 [新增查詢] 快顯功能表，或將新的指令碼物件加入至資料庫專案時，也會自動開啟這個編輯器。  
   
-如果要對尚未連線的資料庫執行查詢，您也可以使用 [SQL]**** -> [Transact\-SQL 編輯器]**** 功能表選項中的 [新增查詢連接]**** 對話方塊，連線到資料庫並啟動 Transact\-SQL 編輯器。  
+如果要對尚未連線的資料庫執行查詢，您也可以使用 [SQL] -> [Transact\-SQL 編輯器] 功能表選項中的 [新增查詢連接] 對話方塊，連線到資料庫並啟動 Transact\-SQL 編輯器。  
   
 Transact\-SQL 編輯器包含撰寫及編輯 Transact\-SQL 指令碼的主要 [T-SQL] 窗格。 這個編輯器支援 IntelliSense 與語法色彩編碼，可以提高複雜陳述式的可讀性。 它還支援尋找和取代、大量註解、自訂字型和色彩，以及顯示行號。 您也可以變更編輯器中的指令碼執行依據的資料庫。 如需詳細資訊，請參閱[如何：複製現有的資料庫](../ssdt/how-to-clone-an-existing-database.md)。 [結果] 窗格會將查詢結果顯示在方格或文字中。 您也可以將查詢結果重新導向至檔案。 [訊息] 窗格會顯示指令碼執行時傳回的錯誤、警告和參考用訊息。 當用戶端統計資料已啟用時，[統計資料] 窗格會分類顯示查詢執行的資訊。 [執行計畫] 窗格會顯示 SQL Server 所選的資料擷取方法，並顯示特定陳述式與查詢的執行成本。  
   

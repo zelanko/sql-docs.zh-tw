@@ -1,8 +1,6 @@
 ---
-description: 開啟查詢和檢視表設計工具 (Visual Database Tools)
 title: 開啟查詢設計工具和檢視表設計師
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: 開啟查詢和檢視表設計工具 (Visual Database Tools)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,15 +14,19 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56d9aec3b6768a45ddad6fec107fded037656eb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369284"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067338"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>開啟查詢和檢視表設計工具 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+
 在開啟檢視的定義、顯示查詢或檢視的結果，或者建立或開啟查詢時，[查詢和檢視設計師] 會開啟。 這包含四個個別的窗格：  
   
 -   [圖表] 窗格會以圖形顯示您從資料連接所選取的資料表或資料表值物件。 同時還會顯示資料表或物件之間的任何聯結關聯性。  
@@ -37,21 +39,21 @@ ms.locfileid: "88369284"
   
 -   這些窗格可以用來使用查詢和檢視。  
   
--   開啟檢視或查詢時，某些窗格或所有窗格會一併開啟。 哪些窗格會開啟，會根據 [選項]**** 對話方塊中的設定以及所連接的資料庫管理系統而定。 預設值是四個窗格全部開啟。  
+-   開啟檢視或查詢時，某些窗格或所有窗格會一併開啟。 哪些窗格會開啟，會根據 [選項] 對話方塊中的設定以及所連接的資料庫管理系統而定。 預設值是四個窗格全部開啟。  
   
 ### <a name="to-open-the-query-and-view-designer-for-a-view"></a>開啟檢視的查詢和檢視設計師  
   
-1.  在物件總管中，以滑鼠右鍵按一下您要開啟的檢視，然後按一下 [設計]**** 或 [開啟檢視]****。  
+1.  在物件總管中，以滑鼠右鍵按一下您要開啟的檢視，然後按一下 [設計] 或 [開啟檢視]。  
   
-    如果您選擇 [設計]****，查詢和檢視表設計工具窗格即會依照 [選項]**** 對話方塊中選取的選項開啟。 如果您選擇 [開啟檢視]****，只有 [結果] 窗格預設會開啟。  
+    如果您選擇 [設計]，查詢和檢視表設計工具窗格即會依照 [選項] 對話方塊中選取的選項開啟。 如果您選擇 [開啟檢視]，只有 [結果] 窗格預設會開啟。  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>若要開啟現有查詢的查詢和檢視設計師  
   
-1.  在方案總管中，展開 [查詢]**** 資料夾。  
+1.  在方案總管中，展開 [查詢] 資料夾。  
   
 2.  按兩下要開啟的查詢。  
   
-3.  反白顯示查詢陳述式，在反白顯示區域上按一下滑鼠右鍵，然後按一下 [在編輯器中設計查詢]****。  
+3.  反白顯示查詢陳述式，在反白顯示區域上按一下滑鼠右鍵，然後按一下 [在編輯器中設計查詢]。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

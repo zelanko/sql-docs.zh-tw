@@ -7,22 +7,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
+- Microsoft.Data.Relational.Design.PW.RelationshipsDescriptor.OnDelete
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518778"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364390"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
 
-[SQL Server 物件總管]**** 中新的 [SQL Server]**** 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
+[SQL Server 物件總管] 中新的 [SQL Server] 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
   
 例如，您可以在 [資料庫] 節點底下建立新的資料庫。 您也可以選取特定的資料庫，然後使用新的資料表設計工具，快速建立或編輯資料表定義及其相關的程式設計物件。 從資料表設計工具中，您可以切換到指令碼窗格，讓您能夠直接編輯定義這個資料表的指令碼。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "85518778"
   
 2.  以滑鼠右鍵按一下 [資料庫] 節點，再選取 [加入新的資料庫]。  
   
-3.  將新的資料庫重新命名為 **Trade**。  
+3.  將新的資料庫重新命名為 **Trade** 。  
   
 ### <a name="to-create-new-tables-using-the-table-designer"></a>若要使用資料表設計工具建立新的資料表  
   
