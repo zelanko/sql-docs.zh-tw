@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6b1685a4d93d14b3cd49a4c9a4a031943a5b9f7e
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864060"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243827"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91864060"
 - 使用舊版 Windows 時，請在 [開始] 功能表上依序指向 [所有程式] 和 [[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server Management Studio]。  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>啟動 SQL Server 組態管理員  
-- 在目前的 Windows 版本上，於 [開始] 頁面上輸入**組態管理員**，然後按一下 [SQL Server *版本*組態管理員]。   
+- 在目前的 Windows 版本上，於 [開始] 頁面上輸入 **組態管理員** ，然後按一下 [SQL Server *版本* 組態管理員]。   
 - 使用舊版 Windows 時，請在 [開始] 功能表上依序指向 [所有程式]、[[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
 
 ## <a name="connecting-with-management-studio"></a><a name="connect"></a>連接 Management Studio  
@@ -75,13 +75,13 @@ ms.locfileid: "91864060"
 
 2.  選取 [資料庫引擎]。
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![顯示 [連線] 下拉式清單且已標註 [資料庫引擎] 選項的 [物件總管] 螢幕擷取畫面。](../relational-databases/media/object-explorer.png)
 
-3.  在 [伺服器名稱] 方塊中，輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的名稱。 若為 SQL Server 的預設執行個體，則伺服器名稱為電腦名稱。 如果是 SQL Server 的具名執行個體，伺服器名稱會是 _\<computer_name\>_ **\\** _\<instance_name\>_ ，例如 **ACCTG_SRVR\SQLEXPRESS**。 下列螢幕擷取畫面會顯示連接至名為 'PracticeComputer' 之電腦上的預設 (未命名) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 執行個體。 登入 Windows 的使用者是來自 Contoso 網域的 Mary。 使用 Windows 驗證時，即無法變更使用者名稱。 
+3.  在 [伺服器名稱] 方塊中，輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的名稱。 若為 SQL Server 的預設執行個體，則伺服器名稱為電腦名稱。 如果是 SQL Server 的具名執行個體，伺服器名稱會是 _\<computer_name\>_ **\\** _\<instance_name\>_ ，例如 **ACCTG_SRVR\SQLEXPRESS** 。 下列螢幕擷取畫面會顯示連接至名為 'PracticeComputer' 之電腦上的預設 (未命名) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 執行個體。 登入 Windows 的使用者是來自 Contoso 網域的 Mary。 使用 Windows 驗證時，即無法變更使用者名稱。 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![已標註 [伺服器名稱] 文字方塊的 [連線到伺服器] 對話方塊螢幕擷取畫面。](../relational-databases/media/connect-to-server.png)
 
-4.  按一下 [ **連接**]。
+4.  按一下 [ **連接** ]。
 
 > [!NOTE]
 > 本教學課程假設您不熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 而且沒有特殊連接問題。 這應該適用於大部分的人，並且保持本教學課程的簡單性。 如需詳細疑難排解步驟，請參閱 [針對 SQL Server Database Engine 的連接進行疑難排解](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。 
@@ -98,12 +98,12 @@ ms.locfileid: "91864060"
 
 2.  在 [一般] 頁面的 [登入名稱] 方塊中，以下列格式輸入 Windows 登入：`<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![已標註 [登入名稱] 文字方塊的 [登入 - 新增] 對話方塊螢幕擷取畫面。](../relational-databases/media/new-login.png)
 
 3.  在 [預設資料庫] 方塊中，選取 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (如果有的話)。 否則，請選取 [master]。  
 4.  在 [伺服器角色] 頁面上，如果新登入將成為管理員，請按一下 [系統管理員 (sysadmin)]，否則保留空白。  
 5.  在 [使用者對應] 頁面上，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫選取 [對應] \(如果有的話)。 否則，請選取 [master]。 請注意，[使用者] 方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
-6.  在 [預設結構描述] 方塊中輸入 **dbo**，將登入對應到資料庫擁有者結構描述。   
+6.  在 [預設結構描述] 方塊中輸入 **dbo** ，將登入對應到資料庫擁有者結構描述。   
 7.  接受 [安全性實體] 和 [狀態] 方塊的預設值，並按一下 [確定] 來建立登入。  
 
 > [!IMPORTANT]  

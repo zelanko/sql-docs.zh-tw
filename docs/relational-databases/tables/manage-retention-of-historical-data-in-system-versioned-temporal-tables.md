@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810675"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243599"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統建立版本之時態表中的歷程記錄資料保留
 
@@ -180,7 +180,7 @@ COMMIT ;
 
 下圖顯示保存 6 個月資料的初始資料分割組態。
 
-![資料分割](../../relational-databases/tables/media/partitioning.png "資料分割")
+![顯示保存六個月資料的初始資料分割組態圖表。](../../relational-databases/tables/media/partitioning.png "資料分割")
 
 > [!NOTE]
 > 如需在設定資料分割時使用 RANGE LEFT 與 RANGE RIGHT 的效能含意，請參閱下文中的資料表資料分割效能考量。
@@ -189,7 +189,7 @@ COMMIT ;
 
 下圖說明週期性資料分割維護工作 (請參閱下文中的詳細步驟)。
 
-![資料分割 2](../../relational-databases/tables/media/partitioning2.png "資料分割 2")
+![顯示週期性資料分割維護工作的圖表。](../../relational-databases/tables/media/partitioning2.png "資料分割 2")
 
 週期性資料分割維護工作的詳細步驟如下︰
 
@@ -323,7 +323,7 @@ COMMIT TRANSACTION
 
 讓我們先以視覺化方式說明 RANGE LEFT 和 RANGE RIGHT 選項的意義：
 
-![資料分割 3](../../relational-databases/tables/media/partitioning3.png "資料分割 3")
+![顯示 RANGE LEFT 與 RANGE RIGHT 選項的圖表。](../../relational-databases/tables/media/partitioning3.png "資料分割 3")
 
 當您將資料分割函數定義為 RANGE LEFT 時，指定的值是資料分割的上限。 當您使用 RANGE RIGHT 時，指定的值是資料分割的下限。 當您使用 MERGE RANGE 作業來移除資料分割函數定義中的界限時，基礎實作也會移除包含界限的資料分割。 如果該資料分割不是空的，系統會將資料移動到 MERGE RANGE 作業產生的資料分割。
 
@@ -332,11 +332,11 @@ COMMIT TRANSACTION
 - RANGE LEFT 案例：在 RANGE LEFT 案例中，最低的分割區界限屬於分割區 1，由於該分割區是空的 (在分割區切換移出後)，所以 MERGE RANGE 不會引發任何資料移動。
 - RANGE RIGHT 案例：在 RANGE RIGHT 案例中，最低的分割區界限屬於分割區 2，由於我們假設切換移出已將分割區 1 清空，因此分割區 2 不是空的。在該案例中，MERGE RANGE 將會引發資料移動 (資料分割 2 的資料將移動到資料分割 1)。 若要避免資料移動，滑動視窗案例中的 RANGE RIGHT 需要隨時保持清空的資料分割 1。 相較於 RANGE LEFT 案例，這表示如果我們使用 RANGE RIGHT，應該要建立及維護一個額外的資料分割，。
 
-**結論**：在滑動資料分割中使用 RANGE LEFT 的管理作業較為簡單，也能避免資料移動。 不過，定義 RANGE RIGHT 的資料分割界限則稍微簡單一些，因為您不需要應付日期時間的對時問題。
+**結論** ：在滑動資料分割中使用 RANGE LEFT 的管理作業較為簡單，也能避免資料移動。 不過，定義 RANGE RIGHT 的資料分割界限則稍微簡單一些，因為您不需要應付日期時間的對時問題。
 
 ## <a name="using-custom-cleanup-script-approach"></a>使用自訂清除指令碼方法
 
-當 Stretch Database 和資料表資料分割方法均不可行時，第三種方法是使用自訂清除指令碼刪除記錄資料表中的資料。 唯有當 **SYSTEM_VERSIONING = OFF**時，您才可以刪除歷程記錄資料表中的資料。 為了避免資料不一致，請在維護期間 (當修改資料的工作負載未作用時) 或交易內 (有效地封鎖其他工作負載) 執行清除作業。 這項作業需要目前和歷程記錄資料表的 **CONTROL** 權限。
+當 Stretch Database 和資料表資料分割方法均不可行時，第三種方法是使用自訂清除指令碼刪除記錄資料表中的資料。 唯有當 **SYSTEM_VERSIONING = OFF** 時，您才可以刪除歷程記錄資料表中的資料。 為了避免資料不一致，請在維護期間 (當修改資料的工作負載未作用時) 或交易內 (有效地封鎖其他工作負載) 執行清除作業。 這項作業需要目前和歷程記錄資料表的 **CONTROL** 權限。
 
 為了盡可能避免阻礙一般應用程式和使用者查詢，於交易內執行清除指令碼時，請在設定延遲的情況下以較小的區塊刪除資料。 對於每個要刪除的資料區塊來說，雖然所有案例都沒有最合適的大小，不過在單一交易中刪除 10,000 個以上的資料列就可能會造成顯著影響。
 
@@ -344,7 +344,7 @@ COMMIT TRANSACTION
 
 下圖說明如何安排單一資料表的清除邏輯，以減少對執行中工作負載的影響。
 
-![自訂清除指令碼圖表](../../relational-databases/tables/media/customcleanupscriptdiagram.png "自訂清除指令碼圖表")
+![顯示如何安排單一資料表的清除邏輯，以減少對執行中工作負載影響的圖表。](../../relational-databases/tables/media/customcleanupscriptdiagram.png "自訂清除指令碼圖表")
 
 以下是一些實作程序的高階指導方針。 將清除邏輯排程為每天執行，並且逐一處理所有需要清除資料的時態表。 使用 SQL Server Agent 或其他工具來排程這個程序：
 
@@ -494,7 +494,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database 如何刪除過時資料列？
 
-清除處理序取決於歷程記錄資料表的索引配置。 請務必注意*只有包含叢集索引 (B 型樹狀目錄或資料行存放區）的歷程記錄資料表可以設定有限的保留原則*。 建立的背景工作可利用有限的保留期間為所有時態表執行過時資料清除。 資料列存放區 (B 型樹狀目錄) 叢集索引的清除邏輯會刪除較小區塊 (最多 10 K) 中的過時資料列，最大限度地減輕資料庫記錄和 I/O 子系統的壓力。 雖然清除邏輯會利用必要的 B 型樹狀目錄索引，但無法絶對保證早於保留期間之資料列的刪除順序。 因此，*請勿在應用程式中對清除順序採用任何相依性*。
+清除處理序取決於歷程記錄資料表的索引配置。 請務必注意 *只有包含叢集索引 (B 型樹狀目錄或資料行存放區）的歷程記錄資料表可以設定有限的保留原則* 。 建立的背景工作可利用有限的保留期間為所有時態表執行過時資料清除。 資料列存放區 (B 型樹狀目錄) 叢集索引的清除邏輯會刪除較小區塊 (最多 10 K) 中的過時資料列，最大限度地減輕資料庫記錄和 I/O 子系統的壓力。 雖然清除邏輯會利用必要的 B 型樹狀目錄索引，但無法絶對保證早於保留期間之資料列的刪除順序。 因此， *請勿在應用程式中對清除順序採用任何相依性* 。
 
 叢集資料行存放區清除工作可一次移除整個資料列群組 (每個通常包含 1 百萬個資料列)，這是非常有效率的方法，特別是在高速產生歷程記錄資料時。
 

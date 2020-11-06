@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497030"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235385"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -68,23 +68,30 @@ ms.locfileid: "92497030"
 
 ## <a name="overview-sql-server"></a>概觀：SQL Server
 
-在 SQL Server 中，此陳述式可修改資料庫或與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此陳述式可修改資料庫或與資料庫建立關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。
 
-由於長度的關係，ALTER DATABASE 語法會分成多篇文章。
+由於長度的關係，`ALTER DATABASE` 語法會分成多篇文章。
 
-ALTER DATABASE 目前文章會提供變更資料庫名稱和定序的語法與相關資訊。
+ALTER DATABASE   
+目前的文章會提供變更資料庫名稱和定序的語法與相關資訊。
 
-[ALTER DATABASE 檔案和檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 提供在資料庫中新增和移除檔案及檔案群組的語法與相關資訊，以及變更檔案及檔案群組屬性的語法與相關資訊。
+[ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
+提供在資料庫中新增和移除檔案及檔案群組的語法與相關資訊，以及變更檔案及檔案群組屬性的語法與相關資訊。
 
-[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md) 提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。
+[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。
 
-[ALTER DATABASE 資料庫鏡像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 為與資料庫鏡像相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
+[ALTER DATABASE 資料庫鏡像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+可為與資料庫鏡像相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
 
-[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 提供在 Always On 可用性群組的次要複本上設定次要資料庫的 ALTER DATABASE [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 選項語法與相關資訊。
+[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
+為 ALTER DATABASE 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 選項，提供在 Always On 可用性群組的次要複本上設定次要資料庫的語法與相關資訊。
 
-[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
+[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
+可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
 
-[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 提供與資料庫範圍設定 (用於個別的資料庫層級設定，例如查詢最佳化及查詢執行相關行為) 相關的語法。
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+提供與資料庫範圍設定 (用於個別的資料庫層級設定，例如查詢最佳化及查詢執行相關行為) 相關的語法。
 
 ## <a name="syntax"></a>語法
 
@@ -140,13 +147,16 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > 自主資料庫無法使用這個選項。
 
-CURRENT **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
+CURRENT   
+**適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 指定應該改變正在使用中的目前資料庫。
 
-MODIFY NAME **=** _new_database_name_ 使用指定為 *new_database_name* 的名稱來重新命名資料庫。
+MODIFY NAME **=** _new_database_name_   
+使用指定為 *new_database_name* 的名稱來重新命名資料庫。
 
-COLLATE *collation_name* 指定資料庫的定序。 *collation_name* 可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，就會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的定序指派給資料庫。
+COLLATE *collation_name*   
+指定資料庫的定序。 *collation_name* 可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，就會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的定序指派給資料庫。
 
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法變更定序。
@@ -155,12 +165,13 @@ COLLATE *collation_name* 指定資料庫的定序。 *collation_name* 可以是 
 
 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE](~/t-sql/statements/collations.md)。
 
-**\<delayed_durability_option> ::=** 
-**適用於** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
+**\<delayed_durability_option> ::=**    
+**適用對象** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
 
 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)及[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。
 
-**\<file_and_filegroup_options>::=** 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**\<file_and_filegroup_options>::=**    
+如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -311,13 +322,16 @@ GO
 
 在 Azure SQL Database 中，使用此陳述式來修改資料庫。 使用此陳述式變更資料庫名稱、變更資料庫的版本和服務目標、新增或移除彈性集區的資料庫、設定資料庫選項、新增或移除具有地理複寫關聯性的次要資料庫，以及設定資料庫相容性層級。
 
-由於長度的關係，ALTER DATABASE 語法會分成多篇文章。
+由於長度的關係，`ALTER DATABASE` 語法會分成多篇文章。
 
-ALTER DATABASE 目前文章會提供變更資料庫名稱和定序的語法與相關資訊。
+ALTER DATABASE   
+目前的文章會提供變更資料庫名稱和定序的語法與相關資訊。
 
-[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls) 提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。
+[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)    
+提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。
 
-[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls) 可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
+[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)   
+可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -403,18 +417,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name* ：這是要修改的資料庫名稱。
+*database_name*   
+這是要修改之資料庫的名稱。
 
-CURRENT：指定應該改變正在使用中的目前資料庫。
+CURRENT   
+指定應該改變正在使用中的目前資料庫。
 
-MODIFY NAME **=** _new_database_name_ 使用指定為 *new_database_name* 的名稱來重新命名資料庫。 下列範例會將資料庫 `db1` 的名稱變更為 `db2`：
+MODIFY NAME **=** _new_database_name_   
+使用指定為 *new_database_name* 的名稱來重新命名資料庫。 下列範例會將資料庫 `db1` 的名稱變更為 `db2`：
 
 ```sql
 ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale']) 變更資料庫的服務層級。
+MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale'])   
+變更資料庫的服務層。
 
 下列範例會將版本變更為 `Premium`：
 
@@ -426,12 +444,14 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > 如果為資料庫 MAXSIZE 屬性設定的值超出該版本所支援的有效範圍，EDITION 變更就會失敗。
 
-MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) 會變更資料庫的時間點還原備份與長期保留備份 (如果已設定) 的儲存體備援。 這些變更會套用至所有未來建立的備份。 現有備份會繼續使用先前的設定。 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO'])   
+變更資料庫時間點還原備份與長期保留備份 (若已設定) 的儲存體備援。 這些變更會套用至所有未來建立的備份。 現有備份會繼續使用先前的設定。 
 
 > [!IMPORTANT]
-> Azure SQL Database 的 BACKUP_STORAGE_REDUNDANCY 選項僅適用於東南亞 Azure 區域的公開預覽。  
+> Azure SQL 資料庫的 BACKUP_STORAGE_REDUNDANCY 選項在巴西南部推出公開預覽，且僅在 Azure 區域的東南亞正式推出。  
 
-MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定資料庫的大小上限。 大小上限必須符合資料庫的有效 EDITION 屬性值集合。 變更資料庫的大小上限可能也會造成資料庫版本變更。
+MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)   
+指定資料庫的大小上限。 大小上限必須符合資料庫的有效 EDITION 屬性值集合。 變更資料庫的大小上限可能也會造成資料庫版本變更。
 
 > [!NOTE]
 > **MAXSIZE** 引數不適用於超大規模服務層中的單一資料庫。 超大規模服務層資料庫會視需要成長，最多 100 TB。 SQL Database 服務會自動新增儲存體；您不需要設定大小上限。
@@ -565,14 +585,15 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) 指定資料庫
 - 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果將 EDITION 設為 Standard，而未指定 MAXSIZE，則 MAXSIZE 會自動設定為 250 MB。
 - 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 General Purpose 而 MAXSIZE 設定為 32 GB。
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>) 指定計算大小 (服務目標)。 下列範例會將進階資料庫的服務目標變更為 `P6`：
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)   
+指定計算大小 (服務目標)。 下列範例會將進階資料庫的服務目標變更為 `P6`：
 
 ```sql
 ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```
 
-SERVICE_OBJECTIVE
+SERVICE_OBJECTIVE   
 
 - **針對單一和集區資料庫**
 
@@ -588,13 +609,13 @@ SERVICE_OBJECTIVE
 
 如需服務目標描述和大小、版本及服務目標組合的詳細資訊，請參閱 [Azure SQL Database 服務層和效能層級](/azure/azure-sql/database/purchasing-models) \(部分機器翻譯\)、[DTU 資源限制](/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\) 和[虛擬核心資源限制](/azure/sql-database/sql-database-dtu-resource-limits) \(部分機器翻譯\)。 目前已移除對 PRS 服務目標的支援。 如有疑問，請使用此電子郵件別名： premium-rs@microsoft.com。
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 若要將現有的資料庫新增至彈性集區，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL，並提供彈性集區的名稱。 您也可以使用此選項將資料庫變更至相同伺服器內的不同彈性集區。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區](/azure/azure-sql/database/elastic-pool-overview)。 若要從彈性集區中移除資料庫，請使用 ALTER DATABASE 將 SERVICE_OBJECTIVE 設定為單一資料庫計算大小 (服務目標)。
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)   
+若要將現有的資料庫新增至彈性集區，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL，並提供彈性集區的名稱。 您也可以使用此選項將資料庫變更至相同伺服器內的不同彈性集區。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區](/azure/azure-sql/database/elastic-pool-overview)。 若要從彈性集區中移除資料庫，請使用 ALTER DATABASE 將 SERVICE_OBJECTIVE 設定為單一資料庫計算大小 (服務目標)。
 
 > [!NOTE]
 > 超大規模服務層中的資料庫不得新增至彈性集區。
 
-ADD SECONDARY ON SERVER \<partner_server_name>
-
+ADD SECONDARY ON SERVER \<partner_server_name>   
 在夥伴伺服器上使用相同名稱來建立異地複寫次要資料庫，其中將本機資料庫設定為異地複寫主要資料庫，然後開始以非同步方式將資料從主要端複寫到新的次要端。 如果次要端上已經有相同名稱的資料庫，命令就會失敗。 此命令會在伺服器的 master 資料庫上執行，該伺服器裝載了成為主要資料庫的本機資料庫。
 
 > [!IMPORTANT]
@@ -603,7 +624,8 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 > [!IMPORTANT]
 > 根據預設，會使用與主要或來源資料庫相同的備份儲存體備援來建立次要資料庫。 不支援透過 T-SQL 在建立次要資料庫時變更備份儲存體備援。 
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO } 未指定 ALLOW_CONNECTIONS 時，預設設定為 ALL。 如果設定為 ALL，就是允許所有具備適當權限的登入進行連線的唯讀資料庫。
+WITH ALLOW_CONNECTIONS { **ALL** | NO }   
+未指定 ALLOW_CONNECTIONS 時，預設會設定為 ALL。 如果設定為 ALL，就是允許所有具備適當權限的登入進行連線的唯讀資料庫。
 
 WITH SERVICE_OBJECTIVE { `S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_8`、`GP_Fsv2_10`、`GP_Fsv2_12`、`GP_Fsv2_14`、`GP_Fsv2_16`、`GP_Fsv2_18`、`GP_Fsv2_20`、`GP_Fsv2_24`、`GP_Fsv2_32`、`GP_Fsv2_36`、`GP_Fsv2_72`、`GP_S_Gen5_1`、`GP_S_Gen5_2`、`GP_S_Gen5_4`、`GP_S_Gen5_6`、`GP_S_Gen5_8`、`GP_S_Gen5_10`、`GP_S_Gen5_12`、`GP_S_Gen5_14`、`GP_S_Gen5_16`、`GP_S_Gen5_18`、`GP_S_Gen5_20`、`GP_S_Gen5_24`、`GP_S_Gen5_32`、`GP_S_Gen5_40`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_8`、`BC_M_10`、`BC_M_12`、`BC_M_14`、`BC_M_16`、`BC_M_18`、`BC_M_20`、`BC_M_24`、`BC_M_32`、`BC_M_64`、`BC_M_128` }
 
@@ -779,17 +801,21 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 ## <a name="overview-azure-sql-managed-instance"></a>概觀：Azure SQL 受控執行個體
 
-在 Azure SQL 受控執行個體中，使用此陳述式來設定資料庫選項。
+在 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] 中，使用此陳述式來設定資料庫選項。
 
-由於長度的關係，ALTER DATABASE 語法會分成多篇文章。
+由於長度的關係，`ALTER DATABASE` 語法會分成多篇文章。
 
-ALTER DATABASE 目前文章提供的語法與相關資訊可用於設定檔案和檔案群組選項、設定資料庫選項，以及設定資料庫相容性層級。  
+ALTER DATABASE   
+目前的文章提供的語法與相關資訊，可用於設定檔案和檔案群組選項、設定資料庫選項，以及設定資料庫相容性層級。  
   
-[ALTER DATABASE 檔案和檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 提供在資料庫中新增和移除檔案及檔案群組的語法與相關資訊，以及變更檔案及檔案群組屬性的語法與相關資訊。  
+[ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   
+提供在資料庫中新增和移除檔案及檔案群組的語法與相關資訊，以及變更檔案及檔案群組屬性的語法與相關資訊。  
   
-[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi) 提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。  
+[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)   
+提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。  
   
-[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi) 可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。  
+[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+可為與資料庫相容性層級相關的 ALTER DATABASE SET 選項提供語法與相關資訊。  
 
 ## <a name="syntax"></a>語法
 
@@ -834,9 +860,11 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name* ：這是要修改的資料庫名稱。
+*database_name*   
+這是要修改之資料庫的名稱。
 
-CURRENT：指定應該改變正在使用中的目前資料庫。
+CURRENT   
+指定應該改變正在使用中的目前資料庫。
 
 ## <a name="remarks"></a>備註
 
@@ -913,11 +941,12 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-synapse-analytics"></a>概觀：Azure Synapse Analytics
 
-在 Azure Synapse 中，'ALTER DATABASE' 會修改資料庫的名稱、大小上限或服務目標。
+在 Azure Synapse 中，`ALTER DATABASE` 會修改資料庫的名稱、大小上限或服務目標。
 
-由於長度的關係，ALTER DATABASE 語法會分成多篇文章。
+由於長度的關係，`ALTER DATABASE` 語法會分成多篇文章。
 
-[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md) 提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。
+[ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -984,11 +1013,14 @@ ALTER DATABASE { database_name | Current }
 
 ## <a name="arguments"></a>引數
 
-*database_name* 指定要修改的資料庫名稱。
+*database_name*   
+指定要修改的資料庫名稱。
 
-MODIFY NAME = *new_database_name* 使用指定為 *new_database_name* 的名稱重新命名資料庫。
+MODIFY NAME = *new_database_name*   
+使用指定為 *new_database_name* 的名稱來重新命名資料庫。
 
-MAXSIZE 預設為 245,760 GB (240 TB)。
+MAXSIZE   
+預設為 245,760 GB (240 TB)。
 
 **適用範圍：** 針對「計算第 1 代」最佳化
 
@@ -998,7 +1030,8 @@ MAXSIZE 預設為 245,760 GB (240 TB)。
 
 資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。 壓縮成資料行存放區格式的資料大小沒有大小限制，因此不受 MAXSIZE 限制。
 
-SERVICE_OBJECTIVE 指定計算大小 (服務目標)。 如需適用於 Azure Synapse 之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(部分機器翻譯\)。
+SERVICE_OBJECTIVE   
+指定計算大小 (服務目標)。 如需適用於 Azure Synapse 之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(部分機器翻譯\)。
 
 ## <a name="permissions"></a>權限
 
@@ -1114,31 +1147,40 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>引數
 
-*database_name* 要修改的資料庫名稱。 若要顯示設備上資料庫的清單，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。
+*database_name*   
+要修改之資料庫的名稱。 若要顯示設備上資料庫的清單，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。
 
-AUTOGROW = { ON | OFF } 更新 AUTOGROW 選項。 當 AUTOGROW 為 ON 時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會視需要針對複寫資料表、分散式資料表及交易記錄自動提高配置的空間，以適應儲存空間需求的增長。 當 AUTOGROW 為 OFF 時，如果複寫資料表、分散式資料表或交易記錄超過大小上限設定，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]就會傳回錯誤。
+AUTOGROW = { ON | OFF }   
+更新 AUTOGROW 選項。 當 AUTOGROW 為 ON 時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會視需要針對複寫資料表、分散式資料表及交易記錄自動提高配置的空間，以適應儲存空間需求的增長。 當 AUTOGROW 為 OFF 時，如果複寫資料表、分散式資料表或交易記錄超過大小上限設定，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]就會傳回錯誤。
 
-REPLICATED_SIZE = *size* [GB] 指定每個計算節點的新 GB 上限，用來儲存要改變資料庫中的所有複寫資料表。 如果您正在規劃設備儲存空間，就必須將 REPLICATED_SIZE 乘以設備中計算節點的數目。
+REPLICATED_SIZE = *size* [GB]   
+指定每個計算節點的新 GB 上限，以用來儲存要改變之資料庫中的所有複寫資料表。 如果您正在規劃設備儲存空間，就必須將 REPLICATED_SIZE 乘以設備中計算節點的數目。
 
-DISTRIBUTED_SIZE = *size* [GB] 指定每個資料庫的新 GB 上限，用來儲存要改變資料庫中的所有分散式資料表。 此大小會分佈於設備中的所有計算節點上。
+DISTRIBUTED_SIZE = *size* [GB]   
+指定每個資料庫的新 GB 上限，以用來儲存要改變之資料庫中的所有分散式資料表。 此大小會分佈於設備中的所有計算節點上。
 
-LOG_SIZE = *size* [GB] 指定每個資料庫的新 GB 上限，用來儲存要改變資料庫中的所有交易記錄。 此大小會分佈於設備中的所有計算節點上。
+LOG_SIZE = *size* [GB]   
+指定每個資料庫的新 GB 上限，以用來儲存要改變之資料庫中的所有交易記錄。 此大小會分佈於設備中的所有計算節點上。
 
-ENCRYPTION { ON | OFF } 設定資料庫要加密 (ON) 或是不要加密 (OFF)。 只有在將 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) \(英文\) 設為 **1** 時，才能針對[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]設定加密。 您必須先建立資料庫加密金鑰，才能設定透明資料加密。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。
+ENCRYPTION { ON | OFF }   
+設定資料庫要加密 (ON) 或是不要加密 (OFF)。 只有在將 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) \(英文\) 設為 **1** 時，才能針對[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]設定加密。 您必須先建立資料庫加密金鑰，才能設定透明資料加密。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } 自動建立統計資料選項 AUTO_CREATE_STATISTICS 為 ON 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有長條圖的資料行建立的。
+SET AUTO_CREATE_STATISTICS { ON | OFF }   
+當自動建立統計資料選項 AUTO_CREATE_STATISTICS 為 ON 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有長條圖的資料行建立的。
 
 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。
 
 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } 自動更新統計資料選項 AUTO_UPDATE_STATISTICS 為 ON 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當作業插入、更新、刪除或合併變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並且比較修改次數與臨界值，藉以判斷統計資料可能過期的時間。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
+SET AUTO_UPDATE_STATISTICS { ON | OFF }   
+當自動更新統計資料選項 AUTO_UPDATE_STATISTICS 為 ON 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當作業插入、更新、刪除或合併變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並且比較修改次數與臨界值，藉以判斷統計資料可能過期的時間。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
 
 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。
 
 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 非同步統計資料更新選項 AUTO_UPDATE_STATISTICS_ASYNC 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用CREATE STATISTICS 陳述式所建立的統計資料。
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }   
+非同步統計資料更新選項 AUTO_UPDATE_STATISTICS_ASYNC 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用CREATE STATISTICS 陳述式所建立的統計資料。
 
 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。
 

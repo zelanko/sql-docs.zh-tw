@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746188"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243387"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：將「五個最慢速查詢」範例小工具新增至資料庫儀表板
 
@@ -30,7 +30,7 @@ Azure Data Studio 包含數個現成的見解小工具。 本教學課程示範�
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB* 。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
 
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
 
@@ -54,11 +54,11 @@ Azure Data Studio 包含數個現成的見解小工具。 本教學課程示範�
 
 1. 按 **Ctrl+Shift+P** 開啟 [命令選擇區]，開啟 [使用者設定]。
 
-2. 在搜尋方塊中鍵入 *settings*，然後選取 [Preferences:Open User Settings] \(喜好設定: 開啟使用者設定\)。
+2. 在搜尋方塊中鍵入 *settings* ，然後選取 [Preferences:Open User Settings] \(喜好設定: 開啟使用者設定\)。
 
    ![開啟使用者設定命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. 在設定搜尋方塊中鍵入 *dashboard*，然後尋找 **dashboard.database.widgets**，接著按一下 [*在 settings.json 中編輯*]。
+3. 在設定搜尋方塊中鍵入 *dashboard* ，然後尋找 **dashboard.database.widgets** ，接著按一下 [ *在 settings.json 中編輯* ]。
 
    ![搜尋設定](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -136,7 +136,7 @@ Azure Data Studio 包含數個現成的見解小工具。 本教學課程示範�
 
 5. 檢視查詢的執行計畫：
 
-   ![執行程序表](./media/tutorial-qds-sql-server/showplan.png)
+   ![顯示查詢執行計劃的螢幕擷取畫面。](./media/tutorial-qds-sql-server/showplan.png)
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -147,7 +147,7 @@ Azure Data Studio 包含數個現成的見解小工具。 本教學課程示範�
 > * 檢視資料庫最慢速查詢的詳細資料
 > * 檢視慢速查詢的查詢執行計畫
 
-若要了解如何啟用**資料表空間使用量**範例深入解析，請完成下一個教學課程：
+若要了解如何啟用 **資料表空間使用量** 範例深入解析，請完成下一個教學課程：
 
 > [!div class="nextstepaction"]
 > [啟用資料表空間範例深入解析小工具](tutorial-table-space-sql-server.md)

@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784883"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235652"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - NFS - Linux 上的 SQL Server
 
@@ -36,7 +36,7 @@ NFS (或網路檔案系統) 是在 Linux (而非 Windows) 的領域中共用磁�
 
 確定您的安全性標準已針對存取強制執行。 設定資料夾時，請確定只有參與 FCI 的伺服器才能看見 NFS 資料夾。 下面顯示 Linux 型 NFS 解決方案上已修改的 /etc/exports 範例，其中資料夾已限制為 FCIN1 和 FCIN2。
 
-![05-nfsacl][1]
+![顯示 Linux 型 NFS 解決方案上已修改的/etc/exports 範例的螢幕擷取畫面，其中資料夾已限制為 FCIN1 和 FCIN2。][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -132,7 +132,7 @@ NFS (或網路檔案系統) 是在 Linux (而非 Windows) 的領域中共用磁�
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![mount 命令與顯示不含任何參數的命令回應螢幕擷取畫面。][2]
 
    * 切換成 mssql 使用者。 如果成功，您將不會收到任何通知。
 
@@ -228,7 +228,7 @@ NFS (或網路檔案系統) 是在 Linux (而非 Windows) 的領域中共用磁�
 
    * 若要進行測試，請在該資料夾中建立資料庫。 下列範例使用 sqlcmd 來建立資料庫，將內容切換至它，驗證檔案存在於 OS 層級，然後刪除暫存位置。 您可以使用 SSMS。
 
-    ![15-createtestdatabase][4]
+    ![sqlcmd 命令與命令回應的螢幕擷取畫面。][4]
  
    * 將共用取消掛接 
 

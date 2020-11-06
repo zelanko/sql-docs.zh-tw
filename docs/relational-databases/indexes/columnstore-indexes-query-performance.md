@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408794"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036106"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 
@@ -38,7 +38,7 @@ ms.locfileid: "88408794"
     
 -   **運用資料表分割。** 您可以分割資料行存放區索引，然後使用分割區刪除來減少可掃描之資料列群組的數量。 例如，一個事實資料表儲存客戶的購物記錄，及按季尋找特定客戶購物記錄的一般查詢模式，您可以將插入順序與自訂資料行上的分割區結合。 每個資料分割都會包含特定客戶按時間排序的資料列。 此外，如果需要從資料行存放區移除資料，請考慮使用資料表分割。 退出並截斷不再需要的資料分割是一個有效率的策略，可刪除資料，而不會產生較小的資料列群組所引進的片段。    
 
--   **避免刪除大量資料**。 從資料列群組移除已壓縮的資料列不是同步作業。 解壓縮資料列群組、刪除資料列然後將其重新壓縮，會十分昂貴。 因此，如果您刪除已壓縮資料列群組中的資料，仍會針對這些資料列群組進行掃描，即使其傳回較少的資料列也一樣。 如果數個資料列群組的已刪除資料列數目夠大，而足以合併到較少的資料列群組，則重新組織資料行存放區會增加索引品質，並改善查詢效能。 如果您的資料刪除程序通常會清空整個資料列群組，請考慮使用資料表分割、退出不再需要的資料分割，並將其截斷，而不是刪除資料列。 
+-   **避免刪除大量資料** 。 從資料列群組移除已壓縮的資料列不是同步作業。 解壓縮資料列群組、刪除資料列然後將其重新壓縮，會十分昂貴。 因此，如果您刪除已壓縮資料列群組中的資料，仍會針對這些資料列群組進行掃描，即使其傳回較少的資料列也一樣。 如果數個資料列群組的已刪除資料列數目夠大，而足以合併到較少的資料列群組，則重新組織資料行存放區會增加索引品質，並改善查詢效能。 如果您的資料刪除程序通常會清空整個資料列群組，請考慮使用資料表分割、退出不再需要的資料分割，並將其截斷，而不是刪除資料列。 
 
     > [!NOTE]
     > 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 這可改善一段時間的資料行存放區索引品質。   
@@ -95,7 +95,7 @@ ms.locfileid: "88408794"
  如需資料列群組的詳細資訊，請參閱[資料行存放區索引設計指導方針](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。    
     
 ### <a name="batch-mode-execution"></a>批次模式執行    
- 批次模式執行是指一次處理一組資料列集合 (最多通常 900 個資料列)，以提升執行效率。 例如，查詢 `SELECT SUM (Sales) FROM SalesData` 會彙總 SalesData 資料表的總銷售量。 在批次模式執行中，查詢執行引擎會計算群組中 900 個值的彙總。 這會將中繼資料、存取成本和其他類型的負擔分散到批次中的所有資料列上，而不是將成本花費在每個資料列上，因此可以大幅減少程式碼路徑。 當情況允許時，批次模式執行會在壓縮的資料上作業，並刪除某些資料列處理的交換運算子。 這樣能依據重要順序來加快分析查詢的執行。    
+ [批次模式執行](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)是指一次處理一組資料列 (通常最多 900 個資料列)，以提升執行效率。 例如，查詢 `SELECT SUM (Sales) FROM SalesData` 會彙總 SalesData 資料表的總銷售量。 在批次模式執行中，查詢執行引擎會計算群組中 900 個值的彙總。 這會將中繼資料、存取成本和其他類型的負擔分散到批次中的所有資料列上，而不是將成本花費在每個資料列上，因此可以大幅減少程式碼路徑。 當情況允許時，批次模式執行會在壓縮的資料上作業，並刪除某些資料列處理的交換運算子。 這樣能依據重要順序來加快分析查詢的執行。    
     
  並非所有查詢執行操作子都能在批次模式中執行。 例如，Insert、Delete 或 Update 等 DML 作業是以資料列為單位來執行。 批次模式運算子的目標是加速查詢效能的運算子，例如 Scan、Join、Aggregate、Sort 等等。 因為資料行存放區索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進，所以仍需要一些努力來擴增可在批次模式中執行的運算子。 下表根據產品版本顯示在批次模式中執行的運算子。    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408794"
 |視窗彙總||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新運算子。|    
     
 <sup>1</sup> 適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層、標準層 - S3 及更新版本，和所有 vCore 層，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+如需詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)。
     
 ### <a name="aggregate-pushdown"></a>彙總下推    
  彙總計算從 SCAN 擷取符合之資料列並在「批次模式」中彙總其值的一般執行路徑。 儘管這提供良好的效能，但在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，可將彙總作業推入 SCAN 節點，若符合下列條件，則能夠以依據重要順序提升「批次模式」執行上彙總運算的效能： 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300176"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043851"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -493,7 +493,7 @@ WITH
 
 建立認證時的其他注意事項和指引：
 
-- 若要將 Azure 儲存體的資料載入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，請使用 Azure 儲存體金鑰。
+- 若要從 Azure 儲存體將資料載入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，請使用共用存取簽章 (SAS 權杖)。
 - 只有在資料受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
 - 當 `TYPE` = `BLOB_STORAGE` 時，必須使用 `SHARED ACCESS SIGNATURE` 作為身分識別來建立認證。 此外，SAS 權杖應設定如下：
   - 設定為祕密時，請排除前置 `?`

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad1dea00f71039a3dfb37386bfd7ebe63b53a6d6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990251"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235642"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,9 +47,9 @@ CONTEXT_INFO()
 ## <a name="return-value"></a>傳回值
 **context_info** 值。
   
-若並未設定 **context_info**：
--   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，會傳回 NULL。  
--   在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，會傳回工作階段特定的 GUID。  
+若並未設定 **context_info** ：
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 Null。  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 會傳回工作階段特定的 GUID。  
   
 ## <a name="remarks"></a>備註  
 Multiple Active Result Set (MARS) 可讓應用程式在同一個連線上，同時執行多個批次或要求。 當其中一個 MARS 連線批次執行 SET CONTEXT_INFO 時，當 `CONTEXT_INFO` 函數在與 SET 陳述式相同的批次中執行時，`CONTEXT_INFO` 函數會傳回新的內容值。 如果 `CONTEXT_INFO` 函數在一或多個其他連線批次中執行時，`CONTEXT_FUNCTION` 不會傳回新的值，除非這些批次是在執行 SET 陳述式的批次完成之後才開始執行。

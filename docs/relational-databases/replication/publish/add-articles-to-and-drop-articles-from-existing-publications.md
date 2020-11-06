@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04e4fe2f3adc13b02b5aafb4f2cc49ab05d09d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923674"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907366"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "86923674"
  新增發行項涉及的動作包括：在發行集中新增發行項、建立發行集的新快照集、同步處理訂閱以套用新發行項的結構描述和資料。  
   
 > [!NOTE]
->  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 **\@processing_order** 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+>  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 **\@processing_order** 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1** ；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2** ，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 1.  透過下列方法之一新增一或多個發行項：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "86923674"
  如上所提到的，在某些情況下，卸除發行項需要卸除、重新建立並同步處理訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)和[同步處理資料](../../../relational-databases/replication/synchronize-data.md)。  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更新版本和 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更新版本，支援使用 **DROP TABLE** DLL 命令為參與異動複寫的發行項卸除資料表。 如果發行集支援 DROP TABLE DDL，則 DROP TABLE 作業會從發行集和資料庫卸除資料表。 記錄讀取器代理程式會為卸除資料表的散發資料庫張貼清理命令，並執行發行者中繼資料的清理。 如果記錄讀取器尚未處理參考卸除資料表的所有記錄檔記錄，就會忽略與卸除資料表建立關聯的新命令。 已處理的記錄會傳遞至散發資料庫中。 如果散發代理程式在記錄讀取器清理過時 (已卸除) 的發行項之前先處理它們，它們可能會套用在訂閱者資料庫上。 所有異動複寫發行集的**預設**設定為不支援 DROP TABLE DLL。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 具有這項改良功能的更多詳細資料。
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更新版本和 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更新版本，支援使用 **DROP TABLE** DDL 命令為參與異動複寫的發行項卸除資料表。 如果發行集支援 DROP TABLE DDL，則 DROP TABLE 作業會從發行集和資料庫卸除資料表。 記錄讀取器代理程式會為卸除資料表的散發資料庫張貼清理命令，並執行發行者中繼資料的清理。 如果記錄讀取器尚未處理參考卸除資料表的所有記錄檔記錄，就會忽略與卸除資料表建立關聯的新命令。 已處理的記錄會傳遞至散發資料庫中。 如果散發代理程式在記錄讀取器清理過時 (已卸除) 的發行項之前先處理它們，它們可能會套用在訂閱者資料庫上。 所有異動複寫發行集的 **預設** 設定為不支援 DROP TABLE DDL。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 具有這項改良功能的更多詳細資料。
 
   
 ## <a name="see-also"></a>另請參閱  

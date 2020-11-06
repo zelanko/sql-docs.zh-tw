@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 5e78e131e9a328a49bd63182e7ae74db54c50d92
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784907"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235629"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - SMB - Linux 上的 SQL Server
 
@@ -30,7 +30,7 @@ ms.locfileid: "91784907"
 - SMB 共用應為高可用性。
 - 必須在 SMB 共用上妥善設定安全性。 以下是來自 /etc/samba/smb.conf 的範例，其中 SQLData1 是共用的名稱。
 
-![05-smbsource][1]
+![顯示 SQLData1 是共用名稱的螢幕擷取畫面。][1]
 
 ## <a name="instructions"></a>Instructions
 

@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430240"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243664"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>函式 - dm_execution_performance_counters
 
@@ -35,7 +35,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
  [ @execution_id = ] *execution_id*  
  包含一個或多個封裝之執行的唯一識別碼。 以「執行封裝」工作執行的封裝，會與父封裝在相同執行中執行。  
   
- 如果沒有指定的執行識別碼，則會傳回多個執行的效能統計資料。 如果您是 **ssis_admin** 資料庫角色的成員，則會傳回所有執行中之執行的效能統計資料。  如果您不是 **ssis_admin** 資料庫角色的成員，則會傳回您具有讀取權限之執行中執行的效能統計資料。 *execution_id* 是 **BigInt**。  
+ 如果沒有指定的執行識別碼，則會傳回多個執行的效能統計資料。 如果您是 **ssis_admin** 資料庫角色的成員，則會傳回所有執行中之執行的效能統計資料。  如果您不是 **ssis_admin** 資料庫角色的成員，則會傳回您具有讀取權限之執行中執行的效能統計資料。 *execution_id* 是 **BigInt** 。  
   
 ## <a name="remarks"></a>備註  
  下表列出 dm_execution_performance_counter 函數傳回的計數器名稱值。  
@@ -61,17 +61,21 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |資料行名稱|資料行類型|描述|備註|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** 是無效的值。|包含封裝之執行的唯一識別碼。||  
-|counter_name|**nvarchar(128)**|計數器的名稱。|請參閱值的**備註**一節。|  
+|counter_name|**nvarchar(128)**|計數器的名稱。|請參閱值的 **備註** 一節。|  
 |counter_value|**BigInt**|計數器傳回的值。||  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例  
+
+### <a name="a-return-statistics-for-a-running-execution"></a>A. 傳回執行中執行作業的統計資料
+
  在下列範例中，函數會傳回識別碼為 34 之執行中執行作業的統計資料。  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>範例  
+### <a name="b-return-statistics-for-all-running-executions"></a>B. 傳回所有執行中執行作業的統計資料
+
  在下列範例中，函數會依據您的權限傳回 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之所有執行作業的統計資料。  
   
 ```sql
@@ -86,7 +90,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述會導致函數失敗的情況。  

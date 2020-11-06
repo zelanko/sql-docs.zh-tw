@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194094"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067326"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
 
@@ -52,17 +52,17 @@ ms.locfileid: "92194094"
 
 1. 開啟 SQL Server Management Studio。
 
-2. **連線至伺服器**。 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
+2. **連線至伺服器** 。 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
    | 設定       | 建議的值 | 描述 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
-   | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 如果您需要伺服器名稱，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。 |
+   | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示： **mysqldbserver.database.windows.net** 。 如果您需要伺服器名稱，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。 |
    | **驗證** | SQL Server 驗證 | 您無法使用 Windows 驗證連線到 Azure SQL Database。 |
    | **登入** | 伺服器系統管理員帳戶 | 您在建立伺服器時所指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時所指定的密碼。 |
 
-3. **連線至 SSISDB 資料庫**。 選取 [選項]  以展開 [連線至伺服器]  對話方塊。 在展開的 [連線至伺服器]  對話方塊中，選取 [連線屬性]  索引標籤。在 [連線至資料庫]  欄位中，選取或輸入 `SSISDB`。
+3. **連線至 SSISDB 資料庫** 。 選取 [選項]  以展開 [連線至伺服器]  對話方塊。 在展開的 [連線至伺服器]  對話方塊中，選取 [連線屬性]  索引標籤。在 [連線至資料庫]  欄位中，選取或輸入 `SSISDB`。
 
 4. 然後選取 [連線]  。 [物件總管] 視窗會在 SSMS 中開啟。 
 
@@ -91,26 +91,26 @@ ms.locfileid: "92194094"
 
 2. 在 [選取來源]  頁面上，選取要部署的現有 SSIS 專案。
     -   若要部署您建立的專案部署檔案，請選取 [專案部署檔案]  ，並輸入 .ispac 檔案的路徑。
-    -   若要部署位於 SSIS 目錄中的專案，請選取 [Integration Services 目錄]  ，然後輸入伺服器名稱以及該專案在目錄中的路徑。
-    -   選取 [下一步]  查看 [選取目的地]  頁面。
+    -   若要部署位於 SSIS 目錄中的專案，請選取 [Integration Services 目錄]  ，然後輸入伺服器名稱以及該專案在目錄中的路徑。 在此步驟中，只有位於 SQL Server 所裝載 SSISDB 中的專案可以重新部署。
+    -   選取 [下一步] 查看 [選取目的地] 頁面。
   
-3.  在 [選取目的地]  頁面上，選取專案目的地。
+3.  在 [選取目的地] 頁面上，選取專案目的地。
     -   輸入完整伺服器名稱，格式如下：`<server_name>.database.windows.net`。
-    -   提供驗證資訊，然後選取 [連線]  。
-    -   然後選取 [瀏覽]  在 SSISDB 中選取目標資料夾。
-    -   然後選取 [下一步]  開啟 [檢閱]  頁面。 (只有在您選取 [連線]  之後，才會啟用 [下一步]  按鈕。)
+    -   提供驗證資訊，然後選取 [連線]。
+    -   然後選取 [瀏覽] 在 SSISDB 中選取目標資料夾。
+    -   然後選取 [下一步] 開啟 [檢閱] 頁面。 (只有在您選取 [連線] 之後，才會啟用 [下一步] 按鈕。)
   
-4.  在 [檢閱]  頁面上，檢閱您選取的設定。
+4.  在 [檢閱] 頁面上，檢閱您選取的設定。
     -   您可以選取 **[上一步]** ，或選取左窗格中的任何步驟來變更您的選取項目。
-    -   選取 [部署]  來啟動部署程序。
+    -   選取 [部署] 來啟動部署程序。
 
     > [!NOTE]
-    > 如果您收到**沒有使用中的背景工作代理程式。(.Net SqlClient 資料提供者)** 錯誤訊息，請確認 Azure-SSIS Integration Runtime 正在執行。 如果您在 Azure SSIS IR 處於停止狀態時嘗試部署，就會發生這個錯誤。
+    > 如果您收到 **沒有使用中的背景工作代理程式。(.Net SqlClient 資料提供者)** 錯誤訊息，請確認 Azure-SSIS Integration Runtime 正在執行。 如果您在 Azure SSIS IR 處於停止狀態時嘗試部署，就會發生這個錯誤。
 
-5.  完成部署程序之後，會開啟 [結果]  頁面。 此頁面會顯示每個動作執行成功或失敗。
-    -   如果動作失敗，請選取 [結果]  資料行中的 [失敗]  以顯示錯誤的說明。
-    -   選擇性：選取 [儲存報表...]  ，將結果儲存到 XML 檔案。
-    -   選取 [關閉]  結束此精靈。
+5.  完成部署程序之後，會開啟 [結果] 頁面。 此頁面會顯示每個動作執行成功或失敗。
+    -   如果動作失敗，請選取 [結果] 資料行中的 [失敗] 以顯示錯誤的說明。
+    -   選擇性：選取 [儲存報表...]，將結果儲存到 XML 檔案。
+    -   選取 [關閉] 結束此精靈。
 
 ## <a name="deploy-a-project-with-powershell"></a>使用 PowerShell 部署專案
 
@@ -180,17 +180,17 @@ Write-Host "All done."
 
 1. 在 SSMS 的 [物件總管] 中，選取您要執行的套件。
 
-2. 按一下滑鼠右鍵並選取 [執行]  ，以開啟 [執行套件]  對話方塊。
+2. 按一下滑鼠右鍵並選取 [執行]，以開啟 [執行套件] 對話方塊。
 
-3.  在 [執行套件]  對話方塊中，使用 [參數]  、[連線管理員]  和 [進階]  索引標籤上的設定，設定套件執行。
+3.  在 [執行套件] 對話方塊中，使用 [參數]、[連線管理員] 和 [進階] 索引標籤上的設定，設定套件執行。
 
-4.  選取 [確定]  以執行套件。
+4.  選取 [確定] 以執行套件。
 
 ## <a name="monitor-the-running-package-in-ssms"></a>監視 SSMS 的執行中套件
 
-若要檢視 Integration Services 伺服器上目前正在執行中的 Integration Services 作業 (例如，部署、驗證及套件執行) 的狀態，請使用 [作用中的作業]  對話方塊。 若要開啟 [作用中的作業]  對話方塊，請以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [作用中的作業]  。
+若要檢視 Integration Services 伺服器上目前正在執行中的 Integration Services 作業 (例如，部署、驗證及套件執行) 的狀態，請使用 [作用中的作業] 對話方塊。 若要開啟 [作用中的作業] 對話方塊，請以滑鼠右鍵按一下 [SSISDB]，然後選取 [作用中的作業]。
 
-您也可以在 [物件總管] 中選取套件，並按一下滑鼠右鍵，然後依序選取 [報表]  、[標準報表]  和 [所有執行]  。
+您也可以在 [物件總管] 中選取套件，並按一下滑鼠右鍵，然後依序選取 [報表]、[標準報表] 和 [所有執行]。
 
 如需如何監視 SSMS 之執行中套件的詳細資訊，請參閱[監視執行中的套件和其他作業](../performance/monitor-running-packages-and-other-operations.md)。
 

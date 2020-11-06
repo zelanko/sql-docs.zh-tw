@@ -2,7 +2,7 @@
 title: 權限 (Database Engine) | Microsoft Docs
 description: 請參閱此 SQL Server 權限的完整清單，找出哪些權限適用於您所使用的平台。
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081947"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243618"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081947"
 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中，指派給登入與伺服器角色的權限會在伺服器層級管理，而指派給資料庫使用者與資料庫角色的權限則會在資料庫層級進行管理。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 模型的權限與資料庫權限系統相同，但無法使用伺服器層級的權限。 本主題包含完整的權限清單。 如需權限的一般實作，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] 的權限總數是 248。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 會公開 254 個權限。 大部分的權限適用於所有平台，但某些無法適用。 例如，無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上授與伺服器層級權限，而且少數權限只有在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上才有意義。
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 會公開 238 個權限。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公開 230 個權限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公開 219 個權限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公開 214 個權限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公開 195 個權限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主題指出最新版本中的新主題。
+新版本會逐漸採用新的權限。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 會公開 238 個權限。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公開 230 個權限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公開 219 個權限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公開 214 個權限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公開 195 個權限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主題指出最新版本中的新權限。
 
 一旦您了解權限後，可以透過 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 陳述式，將伺服器層級權限套用至登入和資料庫層級權限使用者。 例如：   
 ```sql
@@ -55,11 +55,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可以是任何伺服器安全性實體。  
   
-     授與 *伺服器安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
+     授與 *伺服器安全性實體* 的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
   
 -   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可以是資料庫層級上的任何安全性實體。  
   
-     授與 *資料庫安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
+     授與 *資料庫安全性實體* 的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
   
 -   TAKE OWNERSHIP  
   
@@ -75,11 +75,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   CREATE \<*Server Securable*>  
   
-     為被授與者授與建立 *伺服器安全性實體*的能力。  
+     為被授與者授與建立 *伺服器安全性實體* 的能力。  
   
 -   CREATE \<*Database Securable*>  
   
-     為被授與者授與建立 *資料庫安全性實體*的能力。  
+     為被授與者授與建立 *資料庫安全性實體* 的能力。  
   
 -   CREATE \<*Schema-contained Securable*>  
   
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 權限檢查演算法的摘要  
- 檢查權限可能很複雜。 權限檢查演算法包含重疊的群組成員資格和擁有權鏈結 (明確和隱含權限)，而且可能會受到包含安全性實體之安全性實體類別的權限影響。 此演算法的一般程序是收集所有相關的權限。 如果找不到任何封鎖的 DENY，此演算法就會搜尋提供足夠存取權的 GRANT。 此演算法包含三個基本元素： **安全性內容**、 **權限空間**和 **必要權限**。  
+ 檢查權限可能很複雜。 權限檢查演算法包含重疊的群組成員資格和擁有權鏈結 (明確和隱含權限)，而且可能會受到包含安全性實體之安全性實體類別的權限影響。 此演算法的一般程序是收集所有相關的權限。 如果找不到任何封鎖的 DENY，此演算法就會搜尋提供足夠存取權的 GRANT。 此演算法包含三個基本元素： **安全性內容** 、 **權限空間** 和 **必要權限** 。  
   
 > [!NOTE]  
 >  您無法授與、拒絕或撤銷 sa、dbo、實體擁有者、information_schema、sys 或自己的權限。  
@@ -404,18 +404,18 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 2.  如果擁有權鏈結適用，而且先前鏈結中的物件存取權檢查通過了安全性檢查，就會允許存取。  
   
-3.  彙總與呼叫者相關聯的伺服器層級、資料庫層級和簽署模組識別，以便建立 **安全性內容**。  
+3.  彙總與呼叫者相關聯的伺服器層級、資料庫層級和簽署模組識別，以便建立 **安全性內容** 。  
   
-4.  針對該 **安全性內容**，收集授與或拒絕 **權限空間**的所有權限。 您可以將權限明確陳述為 GRANT、GRANT WITH GRANT 或 DENY，否則這些權限可能是隱含或涵蓋的權限 GRANT 或 DENY。 例如，結構描述的 CONTROL 權限隱含資料表的 CONTROL， 而且資料表的 CONTROL 隱含 SELECT。 因此，如果您已授與結構描述的 CONTROL，就會授與資料表的 SELECT。 如果您已拒絕資料表的 CONTROL，就會拒絕資料表的 SELECT。  
+4.  針對該 **安全性內容** ，收集授與或拒絕 **權限空間** 的所有權限。 您可以將權限明確陳述為 GRANT、GRANT WITH GRANT 或 DENY，否則這些權限可能是隱含或涵蓋的權限 GRANT 或 DENY。 例如，結構描述的 CONTROL 權限隱含資料表的 CONTROL， 而且資料表的 CONTROL 隱含 SELECT。 因此，如果您已授與結構描述的 CONTROL，就會授與資料表的 SELECT。 如果您已拒絕資料表的 CONTROL，就會拒絕資料表的 SELECT。  
   
     > [!NOTE]  
     >  資料行層級權限的 GRANT 會覆寫物件層級的 DENY。  
   
-5.  識別 **必要權限**。  
+5.  識別 **必要權限** 。  
   
-6.  如果您在 **權限空間** 中針對物件 **安全性內容** 的任何識別直接或隱含拒絕 **必要權限**，權限檢查就會失敗。  
+6.  如果您在 **權限空間** 中針對物件 **安全性內容** 的任何識別直接或隱含拒絕 **必要權限** ，權限檢查就會失敗。  
   
-7.  如果您沒有拒絕 **必要權限** ，而且 **必要權限** 包含 **權限空間** 中任何物件 **安全性內容**之任何識別的直接或隱含 GRANT 或 GRANT WITH GRANT 權限，就會通過權限檢查。  
+7.  如果您沒有拒絕 **必要權限** ，而且 **必要權限** 包含 **權限空間** 中任何物件 **安全性內容** 之任何識別的直接或隱含 GRANT 或 GRANT WITH GRANT 權限，就會通過權限檢查。  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>資料行層級權限的特殊考量
 

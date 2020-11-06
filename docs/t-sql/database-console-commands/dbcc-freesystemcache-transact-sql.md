@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638981"
+ms.locfileid: "92734635"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>引數
 ( 'ALL' [, _pool\_name_ ] )  
 ALL 會指定所有支援的快取。  
-_pool\_name_ 會指定 Resource Governor 集區快取。 僅會釋放與此集區相關的項目。  
+_pool\_name_ 會指定 Resource Governor 集區快取。 僅會釋放與此集區相關的項目。 若要列出可用的集區名稱，請執行：
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+大部分 (但非全部) 的快取都可以使用此命令來個別釋放。
   
 MARK_IN_USE_FOR_REMOVAL   
 不再使用目前所用的項目之後，分別從其對應的快取中，以非同步的方式釋出這些項目。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 執行之後，於快取中建立的新項目皆不受影響。  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 隱藏所有參考訊息。  
   
 ## <a name="remarks"></a>備註  
-執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計劃快取。 清除計畫快取會導致重新編譯所有未來執行計畫，且可能會導致查詢效能突然暫時降低。 針對計劃快取中每個清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息： 
+執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計劃快取。 清除計畫快取會導致重新編譯所有未來執行計畫，且可能會導致查詢效能突然暫時降低。 針對計畫快取中每個已清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

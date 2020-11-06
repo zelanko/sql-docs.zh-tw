@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784912"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235667"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - iSCSI - Linux 上的 SQL Server
 
@@ -47,7 +47,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![iface 命令與命令回應的螢幕擷取畫面。][6]
  
 2.  編輯 `/var/lib/iscsi/ifaces/iSCSIIfaceName`。 請確定下列值已完全填寫：
 
@@ -58,7 +58,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
 
     請參閱下列範例：
 
-    ![iSCSITargetSettings][2]
+    ![檔案的螢幕擷取畫面，其中檔案已完全填寫。][2]
 
 3.  尋找 iSCSI 目標。
 
@@ -68,7 +68,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
 
      \<iSCSINetName> 是網路的唯一/易記名稱，\<TargetIPAddress> 是 iSCSI 目標的 IP 位址，而 \<TargetPort> 是 iSCSI 目標的連接埠。 
 
-    ![iSCSITargetResults][3]
+    ![discovery 命令與命令回應的螢幕擷取畫面。][3]
 
  
 4.  登入目標
@@ -95,7 +95,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![grep 命令與顯示已連結 SCSI 磁碟的命令回應螢幕擷取畫面。][7]
 
 7.  在 iSCSI 磁碟上建立實體磁碟區。
 
@@ -197,7 +197,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![ls 命令與命令回應的螢幕擷取畫面。][8]
 
    * 輸入 `exit` 以切換回根使用者。
 
@@ -321,7 +321,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
 
    *    若要進行測試，請在該資料夾中建立資料庫。 下列所示範例會使用 sqlcmd 來建立資料庫，將內容切換至它，確認檔案存在於 OS 層級，然後刪除暫存位置。 您可以使用 SSMS。
   
-        ![50-ExampleCreateSSMS][9]
+        ![sqlcmd 命令與命令回應的螢幕擷取畫面。][9]
 
    *    將共用取消掛接 
 
@@ -355,7 +355,7 @@ iSCSI 會使用網路將磁碟從一部已知為目標的伺服器呈現給其�
 
     \<ListOfVGsNotUsedByPacemaker> 是步驟 20 的輸出中，FCI 將不會使用的磁碟區群組清單。 將每一個放在引號中，並以逗號分隔。 範例如下所示。
 
-    ![55-ListOfVGs][11]
+    ![顯示 volume_list 值範例的螢幕擷取畫面。][11]
 
 17. 當 Linux 啟動時，它會裝載檔案系統。 為確保只有 Pacemaker 可以裝載 iSCSI 磁碟，請重建根檔案系統映像。 
 

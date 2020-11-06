@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28d8fbb68542055be87ed8ebafd3d95b224ccf63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544324"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734626"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,8 +73,8 @@ ALTER PARTITION SCHEME 陳述式可以新增檔案群組或選取現有的檔案
 > [!NOTE]  
 >  資料行存放區索引的限制：當資料表上存在資料行存放區索引時，僅可分割空的資料分割。 執行此作業之前，您必須先卸除或停用資料行存放區索引。  
   
-MERGE [ RANGE ( *boundary_value*) ]  
-卸除分割區，並將該分割區中現有的所有值合併到剩餘的分割區中。 RANGE (*boundary_value*) 必須是現有的界限值，已卸除之資料分割中的值會合併到其中。 除非有剩餘的分割區會使用最初保存 *boundary_value* 的檔案群組，或者已用 NEXT USED 屬性來標示這個檔案群組，否則，此引數會從資料分割配置中移除該檔案群組。 合併的分割區存在於一開始未保存 *boundary_value* 的檔案群組中。 *boundary_value* 是可以參考變數 (包括使用者定義型別變數) 或函數 (包括使用者自訂函數) 的常數運算式。 它無法參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 *boundary_value* 必須完全符合或可隱含轉換成其對應分割資料行的資料類型。 您也無法以值的大小和小數位數不符合其對應 *input_parameter_type* 之值的方式，在隱含轉換期間截斷 *boundary_value*。  
+MERGE [ RANGE ( *boundary_value* ) ]  
+卸除分割區，並將該分割區中現有的所有值合併到剩餘的分割區中。 RANGE ( *boundary_value* ) 必須是待捨棄分割區的現有界限值。 除非有剩餘的分割區會使用最初保存 *boundary_value* 的檔案群組，或者已用 NEXT USED 屬性來標示這個檔案群組，否則，此引數會從資料分割配置中移除該檔案群組。 合併的分割區存在於一開始未保存 *boundary_value* 的檔案群組中。 *boundary_value* 是可以參考變數 (包括使用者定義型別變數) 或函數 (包括使用者自訂函數) 的常數運算式。 它無法參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 *boundary_value* 必須完全符合或可隱含轉換成其對應分割資料行的資料類型。 您也無法以值的大小和小數位數不符合其對應 *input_parameter_type* 之值的方式，在隱含轉換期間截斷 *boundary_value* 。  
   
 > [!NOTE]  
 >  資料行存放區索引的限制：包含資料行存放區索引的兩個非空白分割區無法合併。 在執行此作業之前，您必須卸除或停用資料行存放區索引  

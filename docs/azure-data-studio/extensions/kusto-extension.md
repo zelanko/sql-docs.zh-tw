@@ -8,17 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.date: 10/29/2020
+ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098697"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067200"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Kusto (KQL) 延伸模組 (預覽)
 
-適用於 [Azure Data Studio](../what-is.md) 的 Kusto (KQL) 延伸模組可讓您連線及查詢 [Azure 資料總管](/azure/data-explorer/data-explorer-overview)叢集。
+適用於 [Azure Data Studio](../what-is-azure-data-studio.md) 的 Kusto (KQL) 延伸模組可讓您連線及查詢 [Azure 資料總管](/azure/data-explorer/data-explorer-overview)叢集。
 
 使用者可撰寫和執行 KQL 查詢，以及使用 [Kusto 核心](../notebooks/notebooks-kusto-kernel.md)搭配 IntelliSense 來撰寫筆記本。
 
@@ -55,7 +55,7 @@ ms.locfileid: "92098697"
 
 在 [Azure 入口網站](https://ms.portal.azure.com/#home)中尋找您的 Azure 資料總管叢集，然後尋找叢集的 URI。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Kusto 延伸模組":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 不過，您可以立即開始使用 *help.kusto.windows.net* 叢集。
 
@@ -82,7 +82,7 @@ ms.locfileid: "92098697"
     7. 將 [名稱 (選擇性)] 保留空白。
         1. 您可以使用此欄位來為您的伺服器提供別名。
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Kusto 延伸模組":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="連線詳細資料":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>如何在 Azure Data Studio 中查詢 Azure 資料總管資料庫
 
@@ -114,29 +114,27 @@ StormEvents
 
 2. 尋找 [Kusto (KQL)] 延伸模組。
 
-3. 選取 [管理]**** 圖示。
+3. 選取 [管理] 圖示。
 
 4. 選取 [延伸模組設定] 圖示。
 
 延伸模組設定看起來像這樣：
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto 延伸模組":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto (KQL) 延伸模組設定":::
 
 ## <a name="sanddance-visualization"></a>SandDance 視覺效果
 
 Azure Data Studio 中的 [SandDance 延伸模組](sanddance-extension.md)與 Kusto (KQL) 延伸模組將豐富的互動式視覺效果整合在一起。 從 KQL 查詢結果集，選取 [視覺化檢視] 按鈕以啟動 [SandDance](https://sanddance.js.org/)。
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto 延伸模組":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance 視覺效果":::
 
 ## <a name="known-issues"></a>已知問題
 
 | 詳細資料 | 因應措施 |
 |---------|------------|
-| [Kusto 連線 Viewlet 在重載之後無法運作](https://github.com/microsoft/azuredatastudio/issues/12475)。 | N/A |
-| [無法自動重新連線](https://github.com/microsoft/azuredatastudio/issues/11830)。 | 中斷 Azure 資料總管叢集的連線並重新連線。 |
-| [重新整理 Kusto 叢集似乎無法正確地重新連線](https://github.com/microsoft/azuredatastudio/issues/11824)。 | 中斷 Azure 資料總管叢集的連線並重新連線。 |
-| [連線至叢集應會顯示叢集儀表板，而不是資料庫](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
-| 針對 Azure 資料叢集資料庫中的每個資料表，只能使用 [選取前 1000 個] 的選項，而不是 [取用 10 個]。 | N/A |
+| [在 Kusto 筆記本中，當程式碼資料格執行發生錯誤後，難以在已儲存的別名連線上變更資料庫連線](https://github.com/microsoft/azuredatastudio/issues/12384) | 關閉筆記本並重新開啟，然後連線到正確的資料庫叢集 |
+| [在 Kusto 筆記本中，無法在未儲存的別名連線上變更資料庫連線](https://github.com/microsoft/azuredatastudio/issues/12843) |從 [連線] Viewlet 建立新連線，並使用別名儲存。 然後建立新的筆記本，並連線到稍早儲存的連線 | 
+| [在 Kusto 筆記本中，建立新的 ADX 連線時，資料庫下拉式清單為空白](https://github.com/microsoft/azuredatastudio/issues/12666) | 從 [連線] Viewlet 建立新連線，並使用別名儲存。 然後建立新的筆記本，並連線到稍早儲存的連線 |
 
 您可以提出[功能要求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)，以提供意見反應給產品小組。  
 您可以提出[錯誤 (bug)](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)，以提供意見反應給產品小組。

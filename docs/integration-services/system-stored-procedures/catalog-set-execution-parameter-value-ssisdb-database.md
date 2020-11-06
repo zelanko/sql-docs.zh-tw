@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425110"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243644"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
 
@@ -40,7 +40,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 ## <a name="arguments"></a>引數  
  [ @execution_id = ] *execution_id*  
- 執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint**。  
+ 執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint** 。  
   
  [ @object_type = ] *object_type*  
  參數類型。  
@@ -63,20 +63,20 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  使用 `20` 值表示專案參數，或使用 `30` 值表示封裝參數。  
   
- *object_type* 是 **smallint**。  
+ *object_type* 是 **smallint** 。  
   
  [ @parameter_name = ] *parameter_name*  
- 參數名稱。 *parameter_name* 是 **nvarchar(128)**。  
+ 參數名稱。 *parameter_name* 是 **nvarchar(128)** 。  
   
  [ @parameter_value = ] *parameter_value*  
- 參數的值。 *parameter_value* 是 **sql_variant**。  
+ 參數的值。 *parameter_value* 是 **sql_variant** 。  
   
 ## <a name="remarks"></a>備註  
  若要找出用於給定執行的參數值，請查詢 catalog.execution_parameter_values 檢視。  
   
  若要指定套件執行期間所記錄的資訊範圍，請將 *parameter_name* 設為 LOGGING_LEVEL，並將 *parameter_value* 設為下列其中一個值。  
   
- 將 *object_type*參數設為 50。  
+ 將 *object_type* 參數設為 50。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -114,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|一個或多個事件代碼|  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例  
+
+### <a name="a-generate-dump-files-for-errors"></a>A. 產生錯誤的傾印檔案
+
  下列範例指定 Integration Services 伺服器在封裝執行期間發生任何錯誤時產生傾印檔案。  
   
 ```sql
@@ -122,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>範例  
+### <a name="b-generate-dump-files-for-events"></a>B. 產生事件的傾印檔案
+
  下列範例指定 Integration Services 伺服器在封裝執行期間發生事件時產生傾印檔案，以及指定會導致伺服器產生檔案的事件。  
   
 ```sql
@@ -147,7 +151,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  

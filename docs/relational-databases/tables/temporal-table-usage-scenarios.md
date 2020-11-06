@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809188"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243573"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 
@@ -33,7 +33,7 @@ ms.locfileid: "91809188"
 下圖顯示「員工」資料表案例，其中的資料樣本包括目前 (以藍色標示) 和歷程記錄的資料列版本 (以灰色標示)。
 圖表的右邊以視覺化的方式在時間軸上呈現資料列版本，以及透過時態表上不同的查詢類型 (不管包含或不包含 SYSTEM_TIME 子句) 來顯示您所選取的資料列。
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![顯示第一個時態表使用方式案例的圖表。](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>在新的資料表上針對資料稽核啟用系統版本設定
 
@@ -175,7 +175,7 @@ FROM Employee
 
 下圖顯示用於庫存管理的簡化資料模型：
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![顯示用於庫存管理的簡化資料模型圖表。](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 下列程式碼範例將 ProductInventory 建立為記憶體內已系統版本設定時態表，並在記錄資料表上具有叢集資料行存放區索引 (根據預設，這會取代資料列存放區索引)：
 
@@ -261,7 +261,7 @@ END;
 
 spUpdateInventory 預存程序可能會在庫存中插入新產品，或更新特定位置的產品數量。 商務邏輯非常簡單，且專注在持續維持最新狀態的準確度之上。它會透過資料表更新對 [數量] 欄位進行遞增 / 遞減，同時系統建立版本的資料表會明確地將歷程記錄的維度新增到資料中，如下列圖表所示。
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![顯示時態表使用方式的圖表，包含目前的記憶體內使用量及叢集資料行存放區中的歷史使用量。](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 現在，對最新狀態的查詢工作將可以從原生編譯的模組上有效地執行：
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 下圖顯示單一產品的資料歷程記錄，這可以透過在 Power Query、Power BI 或類似的商務智慧工具中匯入上述檢視，來輕鬆地進行轉譯：
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![顯示單項產品資料歷程記錄的圖表。](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 時態表可以在此案例中用來執行其他類型的時間移動分析，例如重新建構「位於 (AS OF)」過去任何時間點的庫存狀態，或比較屬於不同時間的快照集。
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 下圖顯示針對 SELECT 查詢產生的執行計畫。 下列說明處理 Temporal 關係所包含的所有複雜度，都會由 SQL Server 引擎負責處理：
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![顯示針對 SELECT 查詢產生的執行計劃圖表，說明 SQL Server 引擎會完全負責處理時態性關聯的所有複雜性。](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 使用下列程式碼來比較兩個時間點 (一天前和一個月前) 的產品庫存狀況：
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 下圖顯示經過一段時間的購買情況：
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![顯示一段時間內購買情況的圖表。](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 假設平日的已購買產品數目擁有較小的差異，下列查詢將會識別單一的極端值 - 這些樣本與其最近的樣本之間有著顯著差異 (2 倍)，同時位於周圍的樣本差異並不顯著 (低於 20%)：
 
@@ -466,7 +466,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
 
 下列說明顯示在涉及 2 個 SCD (DimLocation 和 DimProduct) 和一個事實資料表的簡單案例中使用時態表的方式。
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![顯示如何在涉及 2 個 SCD (DimLocation 與 DimProduct) 與一個事實資料表的簡單案例中使用時態表的圖表。](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 若要在報表中使用上述 SCD，您必須有效地調整查詢。 例如，您可能會想要計算過去六個月中的總銷售量，以及每個資本的平均銷售產品數目。 請注意，上述兩個計量都需要關聯來自事實資料表和維度的資料，這些資料可能會變更其對於分析相當重要的屬性 (DimLocation.NumOfCustomers、DimProduct.UnitPrice)。 下列查詢將能正確地計算所需的計量：
 
@@ -539,13 +539,13 @@ UPDATE Employee
 
 下圖顯示程序引動過程之前和之後的資料列狀態。 紅色矩形標示目前不正確的資料列版本，而綠色矩形則從歷程記錄標示正確的版本。
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![顯示程序引動過程之前與之後資料列狀態的螢幕擷取畫面](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![顯示已更正資料列的螢幕擷取畫面。](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 這個修復預存程序可以定義為接受確切時間戳記，而非資料列版本。 它會把資料列還原為於提供之時間點作用的任何版本 (例如 AS OF 時間點)。
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 針對相同的資料範例，下圖說明具有時間條件的修復案例。 醒目提示的項目為 @asOf 參數、在歷程記錄中於提供之時間點作用的選取資料列，以及修復作業後在目前資料表中的新資料列版本：
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![顯示具有時間條件的修復案例螢幕擷取畫面。](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 資料更正可以成為資料倉儲和報告系統中自動資料載入的一部分。 如果剛更新的值並不正確，在許多情況下，從歷程記錄還原為先前的版本已是可接受的移轉。 下圖顯示對此程序進行自動化的方式：
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![顯示如何將流程自動化的圖表。](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408634"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036107"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408634"
 ## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要  
  本表會摘要說明資料行存放區索引的重要功能以及提供它們的產品。  
 
-|資料行存放區索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|多執行緒查詢的批次模式執行|是|是|是|是|是|是| 
-|單一執行緒查詢的批次模式執行|||是|是|是|是|  
-|封存壓縮選項||是|是|是|是|是|  
-|快照集隔離和讀取認可快照集隔離|||是|是|是|是| 
-|建立資料表時指定資料行存放區索引|||是|是|是|是|  
-|AlwaysOn 支援資料行存放區索引|是|是|是|是|是|是| 
-|AlwaysOn 可讀取次要支援唯讀的非叢集資料行存放區索引|是|是|是|是|是|是|  
-|AlwaysOn 可讀取次要支援可更新的資料行存放區索引|||是|是|||  
-|堆積或 B-tree 的唯讀非叢集資料行存放區索引|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|  
-|堆積或 B-tree 的可更新非叢集資料行存放區索引|||是|是|是|是|  
-|有非叢集資料行存放區索引的堆積或 B-tree 允許其他的 B-tree 索引|是|是|是|是|是|是|  
-|可更新的叢集資料行存放區索引||是|是|是|是|是|  
-|叢集資料行存放區索引的 B-tree 索引|||是|是|是|是|  
-|記憶體最佳化資料表的資料行存放區索引|||是|是|是|是|  
-|非叢集資料行存放區索引定義支援使用篩選的條件|||是|是|是|是|  
-|`CREATE TABLE` 和 `ALTER TABLE` 中資料行存放區索引的壓縮延遲選項|||是|是|是|是|
-|資料行存放區索引可以具有非保存的計算資料行||||是|||   
+|資料行存放區索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|多執行緒查詢的批次模式執行|是|是|是|是|是|是|是| 
+|單一執行緒查詢的批次模式執行|||是|是|是|是|是|  
+|封存壓縮選項||是|是|是|是|是|是|  
+|快照集隔離和讀取認可快照集隔離|||是|是|是|是|是| 
+|建立資料表時指定資料行存放區索引|||是|是|是|是|是|  
+|AlwaysOn 支援資料行存放區索引|是|是|是|是|是|是|是| 
+|AlwaysOn 可讀取次要支援唯讀的非叢集資料行存放區索引|是|是|是|是|是|是|是|  
+|AlwaysOn 可讀取次要支援可更新的資料行存放區索引|||是||是是|||  
+|堆積或 B-tree 的唯讀非叢集資料行存放區索引|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|  
+|堆積或 B-tree 的可更新非叢集資料行存放區索引|||是|是|是|是|是|  
+|有非叢集資料行存放區索引的堆積或 B-tree 允許其他的 B-tree 索引|是|是|是|是|是|是|是|  
+|可更新的叢集資料行存放區索引||是|是|是||是是|是|  
+|叢集資料行存放區索引的 B-tree 索引|||是|是||是是|是|  
+|記憶體最佳化資料表的資料行存放區索引|||是|是||是是|是|  
+|非叢集資料行存放區索引定義支援使用篩選的條件|||是|是|是|是|是|  
+|`CREATE TABLE` 和 `ALTER TABLE` 中資料行存放區索引的壓縮延遲選項|||是|是|是|是|是|
+|資料行存放區索引可以具有非保存的計算資料行||||是|是|||   
+|Tuple Mover 背景合併支援||||||是|是|是|
   
  <sup>1</sup> 若要建立唯讀的非叢集資料行存放區索引，請將索引儲存在唯讀的檔案群組中。  
  
@@ -58,13 +59,13 @@ ms.locfileid: "88408634"
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 新增這些新功能。
 
 ### <a name="functional"></a>函數
-- 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 之前，需要進行索引重新組織作業，才能合併包含部分刪除之資料的資料列群組。 這可改善一段時間的資料行存放區索引品質。 
+- 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，背景合併工作將會協助 Tuple Mover，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 之前，需要進行索引重新組織作業，才能合併包含部分刪除之資料的資料列群組。 這可改善一段時間的資料行存放區索引品質。 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 新增這些新功能。
 
 ### <a name="functional"></a>函數
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引中不支援保存的計算資料行。 您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引中不支援保存的計算資料行。 您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 會加入索引鍵增強功能，以改善資料行存放區索引的效能和彈性。 這些改善會強化資料倉儲案例，並進行即時作業分析。  

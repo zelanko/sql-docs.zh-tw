@@ -20,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114842"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235504"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,10 +49,10 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  要傳回的值。 *scalar_expression* 可以是資料行、子查詢，或其他結果為單一值的任意運算式。 不允許其他分析函數。  
 
  [ 忽略 Null | 尊重 Null ]     
- **適用於**：Azure SQL Edge
+ **適用於** ：Azure SQL Edge
 
- 忽略 Null - 在計算分割區的最後一個值時，忽略資料集中的 null 值。     
- 尊重 Null - 在計算分割區的最後一個值時，尊重資料集中的 null 值。     
+ IGNORE NULLS - 在計算分割區的第一個值時，忽略資料集中的 Null 值。     
+ RESPECT NULLS - 在計算分割區的第一個值時，採用資料集中的 Null 值。     
  
   如需詳細資訊，請參閱[輸入遺漏值](/azure/azure-sql-edge/imputing-missing-values/)。
   

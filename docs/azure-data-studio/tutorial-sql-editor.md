@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745708"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243377"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>教學課程：使用 Transact-SQL 編輯器建立資料庫物件 - Azure Data Studio
 
@@ -30,7 +30,7 @@ ms.locfileid: "88745708"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB* 。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -40,7 +40,7 @@ ms.locfileid: "88745708"
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 提供搜尋小工具，快速尋找資料庫物件。 結果清單提供與所選物件相關的常見工作操作功能表，例如對資料表 [編輯資料]。
 
-1. 開啟 [伺服器] 提要欄位 (**Ctrl+G**)，展開 [資料庫]，然後選取 [TutorialDB]。 
+1. 開啟 [伺服器] 提要欄位 ( **Ctrl+G** )，展開 [資料庫]，然後選取 [TutorialDB]。 
 
 1. 以滑鼠右鍵按一下 [TutorialDB]，然後從操作功能表選取 [管理]，開啟 [TutorialDB 儀表板]：
 
@@ -53,7 +53,7 @@ ms.locfileid: "88745708"
 
    ![快速搜尋小工具](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯第一個資料列中的 [電子郵件] 資料行，輸入 *orlando0\@adventure-works.com*，然後按 **Enter** 儲存變更。
+1. 編輯第一個資料列中的 [電子郵件] 資料行，輸入 *orlando0\@adventure-works.com* ，然後按 **Enter** 儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
@@ -64,15 +64,15 @@ Azure Data Studio 提供許多內建的 T-SQL 程式碼片段，其用來快速�
 
 1. 按 **Ctrl+N** 開啟新的查詢編輯器。
 
-2. 在編輯器中鍵入 **sql**，按向下鍵到 **sqlCreateStoredProcedure**，然後按 *Tab* 鍵 (或 *Enter*) 載入建立預存程序程式碼片段。
+2. 在編輯器中鍵入 **sql** ，按向下鍵到 **sqlCreateStoredProcedure** ，然後按 *Tab* 鍵 (或 *Enter* ) 載入建立預存程序程式碼片段。
 
-   ![程式碼片段清單](./media/tutorial-sql-editor/snippet-list.png)
+   ![顯示編輯器中已鍵入 [sql] 且已標註 [sqlCreateStoredProcedure] 選項的查詢編輯器螢幕擷取畫面。](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 建立預存程序程式碼片段已設定兩個可快速編輯的欄位：[StoredProcedureName] 和 [SchemaName]。 選取 [StoredProcedureName]，按一下滑鼠右鍵並選取 [變更所有發生次數]。 現在鍵入 *getCustomer*，所有的 *StoredProcedureName* 項目都會變更為 *getCustomer*。
+3. 建立預存程序程式碼片段已設定兩個可快速編輯的欄位：[StoredProcedureName] 和 [SchemaName]。 選取 [StoredProcedureName]，按一下滑鼠右鍵並選取 [變更所有發生次數]。 現在鍵入 *getCustomer* ，所有的 *StoredProcedureName* 項目都會變更為 *getCustomer* 。
 
-   ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
+   ![顯示已標註 [變更所有發生次數] 選項的查詢編輯器螢幕擷取畫面。](./media/tutorial-sql-editor/snippet.png)
 
-5. 將所有出現的 *SchemaName* 變更為 *dbo*。 
+5. 將所有出現的 *SchemaName* 變更為 *dbo* 。 
 6. 此程式碼片段會包含需要更新的預留位置參數和本文。 *EXECUTE* 陳述式也會包含預留位置文字，因為它不知道程序將擁有多少參數。 在本教學課程中，請更新程式碼片段，使其看起來像下列程式碼：
 
     ```sql
@@ -106,7 +106,7 @@ Azure Data Studio 提供許多內建的 T-SQL 程式碼片段，其用來快速�
     GO
     ```
     
-5. 若要建立預存程序並進行測試回合，請按 **F5**。
+5. 若要建立預存程序並進行測試回合，請按 **F5** 。
 
 現在已建立預存程序，且 [結果] 窗格會以 JSON 顯示傳回的客戶。 若要查看格式化的 JSON，請按一下傳回的記錄。 
 
@@ -117,8 +117,8 @@ Azure Data Studio 可供使用查看定義功能來檢視物件定義。 此區�
 
 1. 按 **Ctrl+N** 開啟新的編輯器。 
 
-2. 在編輯器中鍵入 *sql*，按向下鍵到 *sqlCreateStoredProcedure*，然後按 *Tab* 鍵 (或 *Enter*) 載入建立預存程序程式碼片段。
-3. 在 [StoredProcedureName] 鍵入 *setCustomer*，並在 [SchemaName] 鍵入 *dbo*
+2. 在編輯器中鍵入 *sql* ，按向下鍵到 *sqlCreateStoredProcedure* ，然後按 *Tab* 鍵 (或 *Enter* ) 載入建立預存程序程式碼片段。
+3. 在 [StoredProcedureName] 鍵入 *setCustomer* ，並在 [SchemaName] 鍵入 *dbo*
 
 3. 將 @param 預留位置取代為下列參數定義：
 
@@ -177,7 +177,7 @@ Azure Data Studio 可供使用查看定義功能來檢視物件定義。 此區�
    GO
    ```
 
-8. 若要建立 *setCustomer* 預存程序，請按 **F5**。
+8. 若要建立 *setCustomer* 預存程序，請按 **F5** 。
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用將查詢結果另存為 JSON，測試 setCustomer 預存程序
 
@@ -225,7 +225,7 @@ Azure Data Studio 可供使用查看定義功能來檢視物件定義。 此區�
 > * 使用 [查看定義] 和 [移至定義]，了解資料庫物件詳細資料
 
 
-若要了解如何啟用**五個最慢速查詢**小工具，請完成下一個教學課程：
+若要了解如何啟用 **五個最慢速查詢** 小工具，請完成下一個教學課程：
 
 > [!div class="nextstepaction"]
 > [啟用慢速查詢範例深入解析小工具](tutorial-qds-sql-server.md)

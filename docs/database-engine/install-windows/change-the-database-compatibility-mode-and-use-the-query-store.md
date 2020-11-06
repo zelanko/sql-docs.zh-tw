@@ -15,12 +15,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895397"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243697"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 
@@ -46,7 +46,7 @@ ms.locfileid: "85895397"
   
 如需將查詢處理器程式碼升級至最新版，建議遵循以下工作流程，其說明請參閱[查詢存放區使用案例的在升級至較新 SQL Server 期間保持效能穩定性一節](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![將查詢處理器升級至最新版程式碼的建議工作流程圖表。](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 開始，可以使用 [查詢調整小幫手] 引導使用者完成建議的工作流程。 如需詳細資訊，請參閱[使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
  

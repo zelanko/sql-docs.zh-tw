@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 建立適用於 SQL Server、Azure SQL Database、Azure Synapse Analytics，以及 Analytics Platform System 的資料庫語法
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496908"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235395"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -979,7 +979,7 @@ CATALOG_COLLATION 指定中繼資料目錄的預設定序。 *DATABASE_DEFAULT* 
 BACKUP_STORAGE_REDUNDANCY 會為資料庫指定時間點還原與長期保留備份的複寫方式。 異地還原或從區域中斷復原的能力，只有在使用「異地」備份儲存體備援建立資料庫時才可使用。 除非明確指定，否則以 T-SQL 建立的資料庫會使用異地備援備份儲存體。 
 
 > [!IMPORTANT]
-> Azure SQL Database 的 BACKUP_STORAGE_REDUNDANCY 選項僅適用於東南亞 Azure 區域的公開預覽。  
+> Azure SQL 資料庫的 BACKUP_STORAGE_REDUNDANCY 選項在巴西南部推出公開預覽，且僅在 Azure 區域的東南亞正式推出。  
 
 EDITION 指定資料庫的服務層級。
 

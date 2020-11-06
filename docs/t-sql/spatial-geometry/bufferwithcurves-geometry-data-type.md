@@ -16,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1249cafc3fd10cdded36ed7d73f190c38d02f5d
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427070"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235521"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "88427070"
 
 ## <a name="arguments"></a>引數  
  *distance*  
- 這是一個 **float**，指出形成緩衝的點與 **geometry** 執行個體相距的最大可能距離。  
+ 這是一個 **float** ，指出形成緩衝的點與 **geometry** 執行個體相距的最大可能距離。  
   
 ## <a name="return-types"></a>傳回型別
-SQL Server 傳回類型：**geometry**  
+SQL Server 傳回類型： **geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回類型： **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外狀況  
- 下列準則會擲回 **ArgumentException**。  
+ 下列準則會擲回 **ArgumentException** 。  
   
 -   沒有參數傳遞至此方法，例如 `@g.BufferWithCurves()`  
   
@@ -57,7 +57,7 @@ SQL Server 傳回類型：**geometry**
 ## <a name="remarks"></a>備註  
  下圖顯示由這個方法傳回的 geometry 執行個體範例。  
   
- ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
+ ![顯示由這個方法傳回 geometry 執行個體範例的圖表。](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
   
  下表顯示針對不同距離值所傳回的結果。  
   
@@ -69,7 +69,7 @@ SQL Server 傳回類型：**geometry**
 |distance > 0|所有維度|**CurvePolygon** 或 **GeometryCollection** 執行個體|  
   
 > [!NOTE]  
->  因為 *distance* 是 **float**，所以非常小的值在計算中可等同於零。 發生這種情況時，會傳回呼叫端 **geometry** 執行個體的複本。 請參閱 [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)。  
+>  因為 *distance* 是 **float** ，所以非常小的值在計算中可等同於零。 發生這種情況時，會傳回呼叫端 **geometry** 執行個體的複本。 請參閱 [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)。  
   
  負數緩衝會移除幾何界限之給定距離內的所有點。 下圖中，負數緩衝顯示為圓形淺色陰影區域。 點線是原始多邊形的界限，實線是結果多邊形的界限。  
   
