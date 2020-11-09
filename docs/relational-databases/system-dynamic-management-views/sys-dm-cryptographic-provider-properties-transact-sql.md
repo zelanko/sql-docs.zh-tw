@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_properties (Transact-SQL)
-title: sys. dm_cryptographic_provider_properties (Transact-sql) |Microsoft Docs
+title: sys.dm_cryptographic_provider_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e8ff6159cea1f6ca723ed83a73f045f5746967c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 419793e94cc85a8dba1e29f4b79694820518eaad
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542344"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384651"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89542344"
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|密碼編譯提供者的識別碼。|  
 |guid|**uniqueidentifier**|唯一的提供者 GUID。|  
-|provider_version|**nvarchar(256)**|格式為 '*aa.bb.cccc.dd*' 之提供者的版本。|  
-|sqlcrypt_version|**nvarchar(256)**|密碼編譯 API 的主要版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，格式為 '*aa.bb.cccc.dd*'。|  
+|provider_version|**nvarchar(256)**|格式為 ' *aa.bb.cccc.dd* ' 之提供者的版本。|  
+|sqlcrypt_version|**nvarchar(256)**|密碼編譯 API 的主要版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，格式為 ' *aa.bb.cccc.dd* '。|  
 |friendly_name|**nvarchar(2048)**|提供者所提供的名稱。|  
 |authentication_type|**nvarchar(256)**|WINDOWS、BASIC 或 OTHER。|  
 |symmetric_key_support|**tinyint**|0 (不支援)<br /><br /> 1 (支援)|  
@@ -49,8 +49,8 @@ ms.locfileid: "89542344"
 |symmetric_key_import|**tinyint**|0 (不支援)<br /><br /> 1 (支援)|  
 |symmetric_key_persistance|**tinyint**|0 (不支援)<br /><br /> 1 (支援)|  
   
-## <a name="remarks"></a>備註  
- sys.dm_cryptographic_provider_properties 檢視表會公開讓人看到。  
+## <a name="permissions"></a>權限  
+ 公用可以看到 **sys.dm_cryptographic_provider_properties** view。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
