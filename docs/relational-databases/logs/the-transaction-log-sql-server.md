@@ -62,11 +62,11 @@ ms.locfileid: "91869308"
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支援高可用性和災害復原解決方案
 待命伺服器方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、資料庫鏡像和記錄傳送都是高度依賴交易記錄。 
 
-在 **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 案例**中，資料庫的每個更新 (主要複本) 都會立即在另一個完整的資料庫複本 (次要複本) 中重製。 主要複本會立即將每個記錄檔記錄傳送至次要複本，而它會將收到的記錄檔記錄套用到可用性群組資料庫，以持續向前復原。 如需詳細資訊，請參閱 [Always On 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+在 **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 案例** 中，資料庫的每個更新 (主要複本) 都會立即在另一個完整的資料庫複本 (次要複本) 中重製。 主要複本會立即將每個記錄檔記錄傳送至次要複本，而它會將收到的記錄檔記錄套用到可用性群組資料庫，以持續向前復原。 如需詳細資訊，請參閱 [Always On 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-在**記錄傳送案例**中，主要伺服器會傳送主要資料庫的使用中交易記錄至一或多個目的地。 每個次要伺服器都會將記錄檔還原至其本機次要資料庫。 如需詳細資訊，請參閱 [關於記錄傳送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
+在 **記錄傳送案例** 中，主要伺服器會傳送主要資料庫的使用中交易記錄至一或多個目的地。 每個次要伺服器都會將記錄檔還原至其本機次要資料庫。 如需詳細資訊，請參閱 [關於記錄傳送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
 
-在**資料庫鏡像案例**中，主體資料庫的每個更新都會立即在另一個完整的個別資料庫複本 (鏡像資料庫) 中重製。 主體伺服器執行個體會立即傳送每個記錄檔記錄到鏡像伺服器執行個體，而它會將傳入的記錄檔記錄套用至鏡像資料庫，以持續向前復原。 如需詳細資訊，請參閱 [資料庫鏡像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
+在 **資料庫鏡像案例** 中，主體資料庫的每個更新都會立即在另一個完整的個別資料庫複本 (鏡像資料庫) 中重製。 主體伺服器執行個體會立即傳送每個記錄檔記錄到鏡像伺服器執行個體，而它會將傳入的記錄檔記錄套用至鏡像資料庫，以持續向前復原。 如需詳細資訊，請參閱 [資料庫鏡像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
 
 ##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>交易記錄特性
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 交易記錄的特性： 
@@ -96,7 +96,7 @@ ms.locfileid: "91869308"
 > 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
 > 不過，請記住[可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)。 如果壓縮記錄檔之後再次需要儲存空間，交易記錄檔將再次成長，並且會因此在記錄檔成長作業期間，導入效能額外負荷。
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> 可能會延遲記錄截斷的因素  
  當記錄檔記錄有一段很長的時間維持在使用中狀態時，交易記錄截斷會延遲，並填滿交易記錄，就像我們在這個長主題前面所提的一樣。  
   
 > [!IMPORTANT]
@@ -144,10 +144,10 @@ ms.locfileid: "91869308"
   
 -   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   將新的資料插入或附加至 **text**、**ntext** 及 **image** 資料類型資料行時的 [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 和 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
+-   將新的資料插入或附加至 **text** 、 **ntext** 及 **image** 資料類型資料行時的 [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 和 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
     > [!WARNING]
-    > `WRITETEXT` 與 `UPDATETEXT` 陳述式**已被取代**，所以您應該避免在新的應用程式中加以使用。  
+    > `WRITETEXT` 與 `UPDATETEXT` 陳述式 **已被取代** ，所以您應該避免在新的應用程式中加以使用。  
   
 -   如果資料庫設定為簡單或大量記錄復原模式，則不管作業是離線執行或線上執行，某些索引 DDL 作業都是以最低限度的方式記錄。 以最低限度方式記錄的索引作業如下：  
   
@@ -156,12 +156,12 @@ ms.locfileid: "91869308"
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 作業。  
   
         > [!WARNING]
-        > `DBCC DBREINDEX` 陳述式**已被淘汰**；請避免在新的應用程式中使用。  
+        > `DBCC DBREINDEX` 陳述式 **已被淘汰** ；請避免在新的應用程式中使用。  
   
         > [!NOTE]
         > 索引建置作業會使用最低限度記錄，但在同時執行備份時可能會有所延遲。 此延遲是在使用簡單或大量記錄復原模式時，由最低限度記錄之緩衝集區頁面的同步處理需求所造成。 
       
-    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆積重建 (如果適用)。 `DROP INDEX`作業期間的索引頁取消配置**一律**經完整記錄。
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆積重建 (如果適用)。 `DROP INDEX`作業期間的索引頁取消配置 **一律** 經完整記錄。
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **管理交易記錄**  
