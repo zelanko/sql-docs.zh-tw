@@ -15,12 +15,12 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab5397eb8ddcce4b4e455382cf40affee05d29bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b4d0d49cda095b57b4625f3d1308978d7ded3f2
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420932"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364697"
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,10 +59,4 @@ ms.locfileid: "88420932"
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   
  [組件 &#40;Database Engine&#41](../../relational-databases/clr-integration/assemblies-database-engine.md)  
-  
-   
-  
-## <a name="see-also"></a>另請參閱  
- [擴充事件](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+

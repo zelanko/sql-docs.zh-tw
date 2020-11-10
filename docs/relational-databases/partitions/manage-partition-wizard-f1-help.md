@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891018"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364670"
 ---
 # <a name="manage-partition-wizard"></a>管理磁碟分割精靈 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91891018"
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取資料庫、以滑鼠右鍵按一下您想要建立資料分割的資料表、指向 [儲存體]，然後按一下 [管理資料分割]。  
   
-     **注意**：如果 [管理資料分割] 無法使用，表示您可能選取了不包含資料分割的資料表。 請在 [儲存體] 子功能表中按一下 [建立資料分割]，然後使用 [建立資料分割精靈] 來建立資料表的資料分割。  
+     **注意** ：如果 [管理資料分割] 無法使用，表示您可能選取了不包含資料分割的資料表。 請在 [儲存體] 子功能表中按一下 [建立資料分割]，然後使用 [建立資料分割精靈] 來建立資料表的資料分割。  
   
  如需資料分割和索引的一般資訊，請參閱 [分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "91891018"
 ### <a name="sliding-window-scenario"></a>滑動視窗案例  
  若要以滑動視窗案例管理資料分割，請選取 [以滑動視窗案例管理分割資料]。  
   
-## <a name="ui-element-list"></a>UI 元素清單  
+### <a name="ui-element-list"></a>UI 元素清單  
  **建立用於切換資料分割的臨時資料表**  
  針對您要切換移入或切換移出現有資料分割資料表的資料建立臨時資料表。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "91891018"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 選取資料分割切換移入選項頁面  
  使用 [選取資料分割切換移入選項] 頁面，選取您想要切換移入資料分割資料表的暫存資料表。  
   
-## <a name="ui-element-list"></a>UI 元素清單  
+### <a name="ui-element-list"></a>UI 元素清單  
  **顯示所有資料分割**  
  選取此選項可顯示所有資料分割，包括目前在資料分割資料表中的資料分割。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "91891018"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 選取資料分割切換移出選項頁面  
  使用 [選取資料分割切換移出選項] 頁面，選取資料分割和暫存資料表來保存您想要切換移出資料分割資料表的分割資料。  
   
-## <a name="ui-element-list"></a>UI 元素清單  
+### <a name="ui-element-list"></a>UI 元素清單  
  **資料分割方格**  
  顯示您所選取之資料分割的資料分割名稱、[左界限]、[右界限]、[檔案群組] 和 [資料列計數]。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91891018"
   
  您也可以在臨時資料表中建立存在來源資料分割內的相同索引。 臨時資料表會自動包含以來源資料分割元素為基礎的條件約束。 這個條件約束通常是根據來源資料分割的界限值產生。  
   
-## <a name="ui-element-list"></a>UI 元素清單  
+### <a name="ui-element-list"></a>UI 元素清單  
  **臨時資料表名稱**  
  為臨時資料表建立名稱，或接受顯示在編輯方塊中的預設名稱。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "91891018"
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  使用 [摘要] 頁面，即可檢閱您在先前頁面中選取的選項。  
   
-## <a name="ui-element-list"></a>UI 元素清單  
+### <a name="ui-element-list"></a>UI 元素清單  
  **檢閱您的選取項目**  
  針對精靈的每一頁，顯示您所選取的項目。 按一下節點即可展開並檢視您先前選取的選項。  
   
