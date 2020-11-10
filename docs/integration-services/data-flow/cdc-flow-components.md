@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196482"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384616"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
 
@@ -31,11 +31,11 @@ ms.locfileid: "92196482"
   
  Change Data Capture Components by Attunity 如下所示：  
   
- **CDC 控制流程元件**：  
+ **CDC 控制流程元件** ：  
   
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)  
   
- **CDC 資料流程元件**：  
+ **CDC 資料流程元件** ：  
   
  [CDC 來源](../../integration-services/data-flow/cdc-source.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "92196482"
 ## <a name="installation"></a>安裝  
  本節描述 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]CDC 元件的安裝程序。  
   
- SSIS 之 CDC 元件隨附於適用於 Microsoft SQL ServerÂ® 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 中。 此下載是 SQL Server Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+ SSIS 之 CDC 元件隨附於適用於 Microsoft SQL ServerÂ® 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 中。 此下載是 SQL Server Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://www.microsoft.com/download/details.aspx?id=56833)下載 Feature Pack 的元件。  
   
 ### <a name="version-support"></a>版本支援
 
@@ -94,7 +94,7 @@ ms.locfileid: "92196482"
   
  此圖所說明的步驟如下：  
   
--   **資料表 X 的變更**是讀取對資料表 X 所做變更的 CDC 來源，這些變更是在父控制流程中決定的 CDC 處理範圍內進行。  
+-   **資料表 X 的變更** 是讀取對資料表 X 所做變更的 CDC 來源，這些變更是在父控制流程中決定的 CDC 處理範圍內進行。  
   
 -   **CDC 分隔器 X** 是用來將變更分割成插入、刪除和更新。 此案例會假設 CDC 來源設定成產生淨變更，以便以平行方式處理不同的變更類型。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "92196482"
 |2-ILEND (初始載入結束)|這是初始載入封裝順利結束時存在的狀態。 這個狀態會在 CDC 控制工作的 MarkInitialLoadEnd 作業呼叫之後出現。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  
 |3-ILUPDATE (初始載入更新)|這是在初始載入之後仍在處理初始處理範圍時第一次執行更新封裝之後存在的狀態。 這個狀態會在 CDC 控制工作的 **GetProcessingRange** 作業呼叫之後出現。<br /><br /> 如果正在使用 **_$reprocessing** 資料行，它就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  
 |4-TFEND (Trickle 摘要更新結束)|這是一般 CDC 回合所預期的狀態。 這種狀態表示上一個回合已順利完成，而且可以啟動具有新處理範圍的新回合。|  
-|5-TFSTART (Trickle 摘要更新開始)|這是在 CDC 控制工作的 **GetProcessingRange** 作業呼叫之後，後續執行更新封裝時存在的狀態。<br /><br /> 這種狀態表示一般 CDC 回合已啟動，但是沒有完成或者尚未全部完成 (**MarkProcessedRange**)。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  
+|5-TFSTART (Trickle 摘要更新開始)|這是在 CDC 控制工作的 **GetProcessingRange** 作業呼叫之後，後續執行更新封裝時存在的狀態。<br /><br /> 這種狀態表示一般 CDC 回合已啟動，但是沒有完成或者尚未全部完成 ( **MarkProcessedRange** )。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  
 |6-TFREDO (重新處理 Trickle 摘要更新)|這是在 TFSTART 之後發生 **GetProcessingRange** 時的狀態。 這種狀態表示上一個回合並未順利完成。<br /><br /> 如果正在使用 __$reprocessing 資料行，它就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
 |7-ERROR|CDC 群組處於 ERROR 狀態。|  
   

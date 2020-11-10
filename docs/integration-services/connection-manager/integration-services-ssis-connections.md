@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720729"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384898"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
 
@@ -115,7 +115,7 @@ ms.locfileid: "91720729"
 |類型|描述|主題|  
 |----------|-----------------|-----------|  
 |ORACLE|連線到 Oracle \<version info\> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
-|SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)＞。|  
+|SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44277)＞。|  
 |TERADATA|連線到 Teradata \<version info\> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)。|  
   
 ### <a name="custom-connection-managers"></a>自訂連接管理員  
@@ -142,7 +142,7 @@ ms.locfileid: "91720729"
   
  執行階段中會使用正確的版本，而且就算您在設計階段中指定了 32 位元版本的提供者也沒有關係。 即使封裝是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行，還是可以執行 64 位元版本的提供者。  
   
-  兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為 **true**，執行階段會尋找並使用 64 位元提供者；如果 Run64BitRuntime 是 **false**，執行階段便會尋找並使用 32 位元提供者。 如需可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services (SSIS) 和 Studio 環境](../integration-services-ssis-development-and-management-tools.md)。   
+  兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為 **true** ，執行階段會尋找並使用 64 位元提供者；如果 Run64BitRuntime 是 **false** ，執行階段便會尋找並使用 32 位元提供者。 如需可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services (SSIS) 和 Studio 環境](../integration-services-ssis-development-and-management-tools.md)。   
 
 ## <a name="add-a-connection-manager"></a>新增連線管理員
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 在建立套件時新增連線管理員  

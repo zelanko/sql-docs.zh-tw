@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523903"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384726"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity 的已知錯誤和解決方法
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "92523903"
 - CDC for Oracle 執行個體會在您啟動它時停止回應，且不會擷取變更。 Oracle 伺服器記憶體可能會增加，直到記憶體不足或損毀為止。
 - [2672759](https://support.microsoft.com/kb/2672759)：當您使用 Microsoft Change Data Capture for Oracle by Attunity 服務時，出現錯誤訊息："ORA-00600: internal error code"。 新增 SOURCE 層級追蹤，並確認您是否收到相同的 ORA-00600 錯誤。 已由 Oracle 修補程式下載項目修正。
 - 多個分割區
-    - 當您在 Oracle 資料表上使用超過 10 個分割區時，CDC 執行個體無法擷取資料表的所有變更。 當 Oracle 資料表定義了 10 個以上的分割區時，只會從最後 10 個分割區中擷取變更。 已於 _SQL Server 2012 的 Service Pack 1 版本_ 中修正。 請參閱 [SP1 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=35580)。 
+    - 當您在 Oracle 資料表上使用超過 10 個分割區時，CDC 執行個體無法擷取資料表的所有變更。 當 Oracle 資料表定義了 10 個以上的分割區時，只會從最後 10 個分割區中擷取變更。 已於 _SQL Server 2012 的 Service Pack 1 版本_ 中修正。 請參閱 [SP1 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=35575)。 
 - 變更遺失
-    - 事件的擷取可能會進入無限迴圈，並停止擷取新的資料變更 (與 Oracle Bug 5623813 相關)。 當 Oracle RAC 環境在執行 CDC 執行個體的停止或繼續時，可能會略過/遺失變更。 這表示 SQL Server 的異動資料擷取將遺失重要資料列，因此資料倉儲或訂閱系統中會遺失資料。 已於 _SQL Server 2012 的 Service Pack 1 版本_ 中修正。 請參閱 [SP1 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=35580)
+    - 事件的擷取可能會進入無限迴圈，並停止擷取新的資料變更 (與 Oracle Bug 5623813 相關)。 當 Oracle RAC 環境在執行 CDC 執行個體的停止或繼續時，可能會略過/遺失變更。 這表示 SQL Server 的異動資料擷取將遺失重要資料列，因此資料倉儲或訂閱系統中會遺失資料。 已於 _SQL Server 2012 的 Service Pack 1 版本_ 中修正。 請參閱 [SP1 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=35575)
 - SQL 中資料行的雙倍寬度
     - 建立 CDC for Oracle 執行個體時，在要針對 SQL Server 執行的指令碼中，可變寬度資料類型資料行長度會是指令碼中所建立 SQL Server 資料表的兩倍。 例如，若您嘗試在 Oracle 資料表的 VARCHAR2(10) 資料行上追蹤變更，則在部署指令碼中，SQL Server 資料表的對應資料行是 NVARCHAR(20)。 於 _SQL Server 2012 SP1 的累計更新 2_ 或 _SQL Server 2012 的累計更新 5_ 中修正，如 KB [2769673](https://support.microsoft.com/kb/2769673) 中所述。 
 - 已截斷 DDL 資料
@@ -97,7 +97,7 @@ ms.locfileid: "92523903"
 
 ### <a name="management-console"></a>管理主控台
 
-在左窗格中醒目提示 CDC 執行個體時，您可以在 Oracle Change Data Capture 設計工具的管理主控台中，看到 [狀態]  訊息欄位中的錯誤。 
+在左窗格中醒目提示 CDC 執行個體時，您可以在 Oracle Change Data Capture 設計工具的管理主控台中，看到 [狀態] 訊息欄位中的錯誤。 
 
 ### <a name="query-trace-table"></a>查詢追蹤資料表
 
@@ -105,11 +105,11 @@ ms.locfileid: "92523903"
 
 ### <a name="save-output-from-basic-logging"></a>儲存基本記錄的輸出 
 
-若要擷取診斷資訊，請在 Oracle Change Data Capture 管理主控台的 [狀態] 索引標籤上，選取 [收集診斷資訊]  。 
+若要擷取診斷資訊，請在 Oracle Change Data Capture 管理主控台的 [狀態] 索引標籤上，選取 [收集診斷資訊]。 
 
 ![顯示 Oracle 異動資料擷取管理主控台中 [狀態] 索引標籤的螢幕擷取畫面，其中已標註 [收集診斷資訊] 選項。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
-選擇 [開始時間]，並選取記錄檔的位置。 然後選取 [建立]  來啟動診斷資訊收集。 
+選擇 [開始時間]，並選取記錄檔的位置。 然後選取 [建立] 來啟動診斷資訊收集。 
 
 ![[收集 testTA 的診斷資訊] 對話方塊的螢幕擷取畫面。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
@@ -119,13 +119,13 @@ ms.locfileid: "92523903"
 
 ![顯示 [動作] 底下 [屬性] 選項的螢幕擷取畫面。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
-重現錯誤，然後選取 [收集診斷資訊]  選項來收集記錄。 
+重現錯誤，然後選取 [收集診斷資訊] 選項來收集記錄。 
 
 ![Oracle 異動資料擷取管理主控台中 [狀態] 索引標籤的另一個螢幕擷取畫面，其中已標註 [收集診斷資訊] 選項。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## <a name="ora-00942-table-of-view-does-not-exist"></a>ORA-00942 視圖的資料表不存在 
 
-這是 CDC 執行個體的 [狀態]  訊息欄位中所顯示常見錯誤。 此執行個體會重試多次，因此狀態圖示會暫時變成綠色，但之後會失敗並出現紅色驚嘆號和 UNEXPECTED 狀態。 
+這是 CDC 執行個體的 [狀態] 訊息欄位中所顯示常見錯誤。 此執行個體會重試多次，因此狀態圖示會暫時變成綠色，但之後會失敗並出現紅色驚嘆號和 UNEXPECTED 狀態。 
 
 ![顯示 CDC 執行個體 [狀態] 訊息欄位中所顯示常見錯誤的螢幕擷取畫面。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
@@ -151,7 +151,7 @@ ms.locfileid: "92523903"
 
 安裝程式檔案資料夾 `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm` 中所包含的說明檔中，會詳細說明所有必要權限的清單。  如需完整清單，請參閱 .chm 檔案中標題為＜連線到 Oracle 源資料庫＞的頁面。
 
-您可以從左窗格中選取 CDCInstance，然後在 [CDC 設計工具]  視窗內的 [動作] 最右側窗格中選取 [屬性] 按鈕，以設定使用者帳戶。 您可以從 [屬性] 對話方塊頁面變更 Oracle 記錄挖掘驗證帳戶。
+您可以從左窗格中選取 CDCInstance，然後在 [CDC 設計工具] 視窗內的 [動作] 最右側窗格中選取 [屬性] 按鈕，以設定使用者帳戶。 您可以從 [屬性] 對話方塊頁面變更 Oracle 記錄挖掘驗證帳戶。
 
 ![顯示 [testTA 屬性] 對話方塊的 [Oracle] 索引標籤其螢幕擷取畫面。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

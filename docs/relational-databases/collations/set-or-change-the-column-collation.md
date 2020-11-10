@@ -14,16 +14,16 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c57021e300168a5e912dfce4ce1e0c62f728dfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465600"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384806"
 ---
 # <a name="set-or-change-the-column-collation"></a>設定或變更資料行定序
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**和 **ntext** 資料的資料庫定序：  
+  您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 和 **ntext** 資料的資料庫定序：  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 COLLATE 子句，如以下範例所示。 
 
@@ -68,7 +68,7 @@ ms.locfileid: "88465600"
         GO
         DROP TABLE dbo.MyTable;
         GO
-        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable';
         GO
         ```
 
@@ -88,13 +88,13 @@ ms.locfileid: "88465600"
 -   CHECK 條件約束  
 -   FOREIGN KEY 條件約束  
   
- 當您使用 **tempdb**時， [COLLATE](~/t-sql/statements/collations.md) 子句會包含 *database_default* 選項，將暫存資料表中的資料行指定為使用連線的目前使用者資料庫預設定序，而非 **tempdb**的定序。  
+ 當您使用 **tempdb** 時， [COLLATE](~/t-sql/statements/collations.md) 子句會包含 *database_default* 選項，將暫存資料表中的資料行指定為使用連線的目前使用者資料庫預設定序，而非 **tempdb** 的定序。  
   
 ## <a name="collations-and-text-columns"></a>定序與 text 資料行  
  您可以插入或更新 **text** 資料行的值，該資料行定序與資料庫預設定序的字碼頁不同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以隱含方式將該值轉換為資料行定序。  
   
 ## <a name="collations-and-tempdb"></a>定序與 tempdb  
- **tempdb** 資料庫在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時建置，且預設定序與 **model** 資料庫相同。 通常與執行個體的預設定序相同。 如果建立使用者資料庫，並指定與 **model**不同的預設定序，使用者資料庫的預設定序就會與 **tempdb**不同。 所有暫存預存程序或暫存資料表會在 **tempdb**中建立及儲存。 這表示暫存資料表中所有隱含的資料行，與暫存預存程序中所有可強迫的常數、變數與參數，都會與建在永久資料表和預存程序中的同等物件具有不同的定序。  
+ **tempdb** 資料庫在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時建置，且預設定序與 **model** 資料庫相同。 通常與執行個體的預設定序相同。 如果建立使用者資料庫，並指定與 **model** 不同的預設定序，使用者資料庫的預設定序就會與 **tempdb** 不同。 所有暫存預存程序或暫存資料表會在 **tempdb** 中建立及儲存。 這表示暫存資料表中所有隱含的資料行，與暫存預存程序中所有可強迫的常數、變數與參數，都會與建在永久資料表和預存程序中的同等物件具有不同的定序。  
   
  這將造成使用者自訂資料庫與系統資料庫物件之間的定序不相符。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體使用 Latin1_General_CS_AS 定序，而您執行下列陳述式：  
   
@@ -127,7 +127,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
  為避免此錯誤，您可以使用以下任一種替代方法：  
   
--   指定暫存資料表的資料行使用使用者資料庫的預設定序，而不使用 **tempdb**的預設定序。 這使得暫存資料表可配合多個資料庫中格式類似的資料表 (如果系統有這樣的需求)。  
+-   指定暫存資料表的資料行使用使用者資料庫的預設定序，而不使用 **tempdb** 的預設定序。 這使得暫存資料表可配合多個資料庫中格式類似的資料表 (如果系統有這樣的需求)。  
   
     ```sql  
     CREATE TABLE #TestTempTab  

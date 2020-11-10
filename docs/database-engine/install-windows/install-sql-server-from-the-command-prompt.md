@@ -85,20 +85,20 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 380a3b3f08d0e9f974ceee5356401461a33925fb
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639011"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418035"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
-  
-  在執行 SQL Server 安裝程式之前，檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
-  
- 在命令提示字元中安裝新的 SQL Server 執行個體，可讓您指定要安裝的功能以及這些功能應該設定的方式。 您也可以指定與安裝程式使用者介面的無訊息、基本或完整互動。  
+
+在執行 SQL Server 安裝程式之前，檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
+
+在命令提示字元中安裝新的 SQL Server 執行個體，可讓您指定要安裝的功能以及這些功能應該設定的方式。 您也可以指定與安裝程式使用者介面的無訊息、基本或完整互動。  
 
 若要從命令提示字元安裝，請開啟系統管理命令提示字元，並巡覽至 setup.exe 位於 [SQL Server 安裝媒體](https://www.microsoft.com/sql-server/sql-server-downloads)內的位置。 執行 `setup.exe` 命令，以及完成所嘗試執行動作的必要參數和選擇性參數：
 
@@ -858,7 +858,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Worker|包含適用於 Integration Services 擴增的擴增背景工作角色。| 
 |MDS||安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  
 |SQL_SHARED_MPY||安裝適用於 [SQL Server 2017 Machine Learning Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 的 Python 套件 |  
-|SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016) 或 [SQL Server Machine Learning Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 的 R 套件 |  
+|SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 或 [SQL Server Machine Learning Server (獨立式)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) 的 R 套件 |  
 |工具*||安裝用戶端工具和《SQL Server 線上叢書》元件。|  
 ||BC|安裝回溯相容性元件。|  
 ||Conn|安裝連接元件。|
@@ -870,9 +870,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 現在位於與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式不同的獨立安裝程式中。 如需詳細資料，請參閱[安裝 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-**LocalDB 是在安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任何 SKU 時可用的選項。 如需詳細資訊，請參閱 [SQL Server 2016 Express LocalDB](../configure-windows/sql-server-express-localdb.md)。 
-  
-### <a name="feature-parameter-examples"></a>功能參數範例：  
+### <a name="feature-parameter-examples"></a>功能參數範例：
   
 |參數和值|描述| 
 |---------------|-----------------|  
@@ -882,49 +880,51 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|安裝《SQL Server 線上叢書》元件，以檢視並管理說明內容。|  
 |/FEATURES=SQLEngine,PolyBase|安裝 PolyBase 引擎。|  
   
-##  <a name="role-parameters"></a><a name="RoleParameters"></a> 角色參數  
- 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。 
-  
- AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。 
-  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> 角色參數
+
+安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。
+
+AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。
+
 |角色|描述|安裝...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|在現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 具名執行個體。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 的安裝程式<br /><br /> SQL Server 線上叢書|  
 |SPI_AS_NewFarm|在全新且未設定的 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 SQL Server 安裝程式將會在功能角色安裝期間設定伺服陣列。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> SQL Server 線上叢書<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 組態工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|安裝適用於目前版本的所有功能。<br /><br /> 將目前的使用者新增至 SQL Server **系統管理員** 固定伺服器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本上，以及當作業系統不是網域控制站時， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶。<br /><br /> 在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本中，預設會啟用這個角色。 針對其他所有版本，則不會啟用此角色，但是可以透過 UI 或使用命令列參數指定。|對於 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本，請僅安裝適用於此版本的功能。 對於其他版本，則安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 參數可以結合會覆寫 **AllFeatures_WithDefaults** 參數設定的其他參數。 例如，使用 **AllFeatures_WithDefaults** 參數與 **/Features=RS** 參數會覆寫安裝所有功能的命令，而僅安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但接受 **AllFeatures_WithDefaults** 參數則會使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的預設服務帳戶。<br /><br /> 使用 **AllFeatures_WithDefaults** 參數與 **/ADDCURRENTUSERASSQLADMIN=FALSE** 時，不會以目前的使用者自動擴展提供對話方塊。 新增 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** 來指定 SQL Server Agent 的服務帳戶與密碼。|  
-  
-##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> 使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為  
-若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您必須在容錯移轉叢集節點上執行安裝程式 (從被動節點開始，一次一個)。 安裝程式會根據容錯移轉叢集執行個體中的節點總數以及已經升級的節點數目，判斷容錯移轉至升級節點的時機。 如果半數以上的節點都已經升級，安裝程式預設會讓系統容錯移轉至升級的節點。 
- 
-若要在升級程序期間控制叢集節點的容錯移轉行為，請在命令提示字元中執行升級作業，然後在升級作業讓節點離線之前，使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為。 這個參數的用法如下所示：  
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=0 不會將叢集擁有權 (移動群組) 轉交給升級的節點，而且在升級結束時，不會將這個節點新增至 SQL Server 叢集可能擁有者的清單。 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=1 會將叢集擁有權 (移動群組) 轉交給升級的節點，而且在升級結束時，會將這個節點新增至 SQL Server 叢集可能擁有者的清單。 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=2 是預設設定。 如果沒有指定這個參數，就會使用此設定。 這項設定表示 SQL Server 安裝程式將會視需要管理叢集擁有權 (移動群組)。 
-  
-##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> 執行個體識別碼或 InstanceID 組態  
- 執行個體識別碼或 /InstanceID 參數是用來指定您可以安裝執行個體元件的位置以及執行個體的登錄路徑。 INSTANCEID 的值是字串而且應該為唯一。 
-  
--   SQL 執行個體識別碼：`MSSQLxx.<INSTANCEID>`  
-  
--   AS 執行個體識別碼：`MSASxx.<INSTANCEID>`  
-  
--   RS 執行個體識別碼：`MSRSxx.<INSTANCEID>`  
-  
+|AllFeatures_WithDefaults|安裝適用於目前版本的所有功能。<br /><br /> 將目前的使用者新增至 SQL Server **系統管理員** 固定伺服器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本上，以及當作業系統不是網域控制站時， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶。<br /><br /> 在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本中，預設會啟用這個角色。 針對其他所有版本，則不會啟用此角色，但是可以透過 UI 或使用命令列參數指定。|對於 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本，請僅安裝適用於此版本的功能。 對於其他版本，則安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 參數可以結合會覆寫 **AllFeatures_WithDefaults** 參數設定的其他參數。 例如，使用 **AllFeatures_WithDefaults** 參數與 **/Features=RS** 參數會覆寫安裝所有功能的命令，而僅安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但接受 **AllFeatures_WithDefaults** 參數則會使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的預設服務帳戶。<br /><br /> 使用 **AllFeatures_WithDefaults** 參數與 **/ADDCURRENTUSERASSQLADMIN=FALSE** 時，不會以目前的使用者自動擴展提供對話方塊。 新增 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** 來指定 SQL Server Agent 的服務帳戶與密碼。|
+
+## <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> 使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為  
+若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您必須在容錯移轉叢集節點上執行安裝程式 (從被動節點開始，一次一個)。 安裝程式會根據容錯移轉叢集執行個體中的節點總數以及已經升級的節點數目，判斷容錯移轉至升級節點的時機。 如果半數以上的節點都已經升級，安裝程式預設會讓系統容錯移轉至升級的節點。
+
+若要在升級程序期間控制叢集節點的容錯移轉行為，請在命令提示字元中執行升級作業，然後在升級作業讓節點離線之前，使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為。 這個參數的用法如下所示：
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=0 不會將叢集擁有權 (移動群組) 轉交給升級的節點，而且在升級結束時，不會將這個節點新增至 SQL Server 叢集可能擁有者的清單。 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=1 會將叢集擁有權 (移動群組) 轉交給升級的節點，而且在升級結束時，會將這個節點新增至 SQL Server 叢集可能擁有者的清單。 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=2 是預設設定。 如果沒有指定這個參數，就會使用此設定。 這項設定表示 SQL Server 安裝程式將會視需要管理叢集擁有權 (移動群組)。 
+
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> 執行個體識別碼或 InstanceID 組態
+
+執行個體識別碼或 /InstanceID 參數是用來指定您可以安裝執行個體元件的位置以及執行個體的登錄路徑。 INSTANCEID 的值是字串而且應該為唯一。 
+
+- SQL 執行個體識別碼：`MSSQLxx.<INSTANCEID>`
+
+- AS 執行個體識別碼：`MSASxx.<INSTANCEID>`
+
+- RS 執行個體識別碼：`MSRSxx.<INSTANCEID>`
+
 可感知執行個體的元件會安裝至下列位置：  
-  
-`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<ASInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<RSInstanceID>`  
-  
+
+`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<ASInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<RSInstanceID>`
+
 > [!NOTE]
 > 如果您沒有在命令列上指定 INSTANCEID，安裝程式預設會以 \<INSTANCENAME> 取代 \<INSTANCEID>。 
-  
-## <a name="see-also"></a>另請參閱  
- [從安裝精靈安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [安裝 SQL Server 2016 Business Intelligence 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)     
+
+## <a name="see-also"></a>另請參閱
+- [從安裝精靈安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
+- [安裝 SQL Server 2016 Business Intelligence 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)
