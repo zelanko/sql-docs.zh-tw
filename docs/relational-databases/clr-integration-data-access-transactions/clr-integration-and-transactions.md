@@ -1,6 +1,6 @@
 ---
 title: CLR 整合和交易 |Microsoft Docs
-description: '[System.object] 命名空間提供與 ADO.NET 和 SQL Server CLR 整合完全整合的交易架構。'
+description: 針對 CLR 整合和交易，系統交易和 ADO.NET 會一起運作，以擴充和簡化在 managed 應用程式中使用本機和分散式交易的方式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd65fce2f2a2bdf2ce25f4811063f7f9d56d2e15
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737658"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521129"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 整合和交易
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [ **System.object** ] 命名空間提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common LANGUAGE runtime （CLR）整合完全整合的交易架構。 在受控應用程式**中，交易會和 ADO.NET**共同合作，以擴充和簡化本機和分散式交易的使用。  
+  System.string **命名空間提供的交易架構** ，與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common LANGUAGE runtime (CLR) 整合完全整合。 System.string 和 ADO.NET 會一起運作，以擴充和簡化在受控應用程式中使用本機和分散式交易的 **方式。**  
   
 > [!NOTE]  
 >  CLR 使用者定義程序 (UDP) 不能與執行所在的同一台伺服器建立連接 (回送連接)，也不能編列在相同的交易中。 如果嘗試這麼做，系統就會封鎖連接嘗試，而控制權將不會傳回給 UDP。 這樣將導致 UDP 上產生逾時錯誤 (訊息 1206)。  
@@ -41,7 +41,7 @@ ms.locfileid: "85737658"
  描述如何存取目前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上於同處理序 (In-Process) 中執行的交易。  
   
  [使用 System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- 描述如何在受控應用程式中使用**system.string 應用程式**開發介面（API）。  
+ 描述如何在您的受控應用程式中使用 (API) 的「 **系統交易** 」應用程式設計介面。  
   
  [交易存留期間](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  描述在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序中所啟動的交易和在 CLR 應用程式中所啟動的交易在存留期間上的差異。  

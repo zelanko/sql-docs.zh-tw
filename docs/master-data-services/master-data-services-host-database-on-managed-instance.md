@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194430"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521087"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在受控實例上裝載 MDS 資料庫
 
@@ -52,7 +52,7 @@ ms.locfileid: "92194430"
      - .NET 擴充性 4.5
      - ASP.NET 3.5
      - ASP.NET 4.5
-     - ISAPI 擴充功能
+     - ISAPI 擴充程式
      - ISAPI 篩選
      - 一般 HTTP 功能
      - 預設文件
@@ -93,26 +93,26 @@ ms.locfileid: "92194430"
 
 1. 開啟 `Setup.exe` ，並遵循安裝精靈中的步驟。
 
-2. 在 [功能選擇]**** 頁面中，選取 [共用功能]**** 底下的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。
+2. 在 [功能選擇] 頁面中，選取 [共用功能] 底下的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。
 此動作會安裝：
    - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
    - 組件
    - Windows PowerShell 嵌入式管理單元
    - Web 應用程式和服務的資料夾和檔案。
 
-   ![mds-SQLServer2019-Config-MI-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "mds-SQLServer2019-Config-MI_SQLFeatureSelection")  
+   ![顯示 [特徵選取] 頁面的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "mds-SQLServer2019-Config-MI_SQLFeatureSelection")  
 
 ### <a name="set-up-the-database-and-website"></a>設定資料庫和網站
 
 1. 連接 Azure 虛擬網路，以確保您可以連線到受控實例。
 
-   ![mds-SQLServer2019-Config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-Config-MI_P2SVPNConnect")
+   ![與 Azure 虛擬網路連線的測試 MI VPN 螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-Config-MI_P2SVPNConnect")
 
 1. 開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，然後選取左窗格中的 [ **資料庫** 設定]。
 
-1. 選取 [ **建立資料庫** ] 以開啟 [ **建立資料庫]**。 選取 [下一步] 。
+1. 選取 [ **建立資料庫** ] 以開啟 [ **建立資料庫]** 。 選取 [下一步]。
 
-1. 在 [ **資料庫伺服器** ] 頁面上，完成 [ **SQL Server 實例** ] 欄位，然後選擇 [ **驗證類型**]。 選取 [ **測試連接** ] 以確認您可以使用您的認證，透過所選的驗證類型連線到資料庫。 選取 [下一步] 。
+1. 在 [ **資料庫伺服器** ] 頁面上，完成 [ **SQL Server 實例** ] 欄位，然後選擇 [ **驗證類型** ]。 選取 [ **測試連接** ] 以確認您可以使用您的認證，透過所選的驗證類型連線到資料庫。 選取 [下一步]。
 
    > [!NOTE]
    > - SQL Server 實例看起來會像這樣 `xxxxxxx.xxxxxxx.database.windows.net` 。
@@ -121,53 +121,53 @@ ms.locfileid: "92194430"
 
    您的驗證必須包含受控實例的「 **系統管理員** 」規則。
 
-   ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
+   ![[建立資料庫] 嚮導的 [資料庫伺服器] 頁面的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
-1. 在 [資料庫名稱]**** 欄位中輸入名稱。 （選擇性）若要選取 Windows 定序，請清除 [ **SQL Server 預設定序]** 核取方塊，然後選取一或多個可用的選項。 例如，區分 **大小寫**。 選取 [下一步] 。
+1. 在 [資料庫名稱] 欄位中輸入名稱。 （選擇性）若要選取 Windows 定序，請清除 [ **SQL Server 預設定序]** 核取方塊，然後選取一或多個可用的選項。 例如，區分 **大小寫** 。 選取 [下一步]。
 
-   ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
+   ![[建立資料庫] 的 [資料庫] 頁面的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")
 
 1. 在 [ **使用者名稱** ] 欄位中，指定預設超級使用者的 Windows 帳戶 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 。 超級使用者可以存取所有功能區域，而且可以新增、刪除及更新所有模型。
 
-   ![mds-SQLServer2019-Config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "mds-SQLServer2019-Config-MI_createDBUserName")
+   ![[建立資料庫] Wizard 的 [系統管理員帳戶] 頁面的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "mds-SQLServer2019-Config-MI_createDBUserName")
 
 1. 選取 [ **下一步]** 以查看資料庫設定的摘要 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 。 再次選取  **[下一步]** 以建立資料庫。 您將會看到 [ **進度] 和 [完成]** 頁面。
 
-1. 建立並設定資料庫之後，請選取 **[完成]**。
+1. 建立並設定資料庫之後，請選取 **[完成]** 。
 
    如需有關 [ **建立資料庫嚮導]** 中設定的詳細資訊，請參閱 [建立資料庫嚮導 &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。
 
-1. 在的 [ **資料庫** 設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，選擇 [ **選取資料庫**]。
+1. 在的 [ **資料庫** 設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，選擇 [ **選取資料庫** ]。
 
-1. 選取 [ **連接]**，選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 資料庫，然後選取 **[確定]**。
+1. 選取 [ **連接]** ，選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 資料庫，然後選取 **[確定]** 。
 
-   ![mds-SQLServer2019-Config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
+   ![[連接到資料庫] 對話方塊的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
 
 1. 在中 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，選取左窗格中的 [ **Web** 設定]。
 
-1. 在 [ **網站** ] 清單方塊中，選擇 [ **預設的網站**]，然後選取 [ **建立** ] 以建立 Web 應用程式。
+1. 在 [ **網站** ] 清單方塊中，選擇 [ **預設的網站** ]，然後選取 [ **建立** ] 以建立 Web 應用程式。
 
-   ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
+   ![[Master Data Services 組態管理員] 對話方塊的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
    > [!NOTE]
-   > 如果您選取 [ **預設**的網站]，就必須另外建立 web 應用程式。 如果您在清單方塊中選擇 [ **建立新網站** ]，則會自動建立應用程式。
+   > 如果您選取 [ **預設** 的網站]，就必須另外建立 web 應用程式。 如果您在清單方塊中選擇 [ **建立新網站** ]，則會自動建立應用程式。
 
-1. 在 [ **應用程式集** 區] 區段中，輸入不同的使用者名稱，輸入密碼，然後選取 **[確定]**。
+1. 在 [ **應用程式集** 區] 區段中，輸入不同的使用者名稱，輸入密碼，然後選取 **[確定]** 。
 
-   ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
+   ![[應用程式管理] 對話方塊的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
 
    > [!NOTE]
    > 請確定使用者可以使用您最近建立的 Active Directory 整合式驗證來存取資料庫。 或者，您可以在稍後變更連接 `web.config` 。
 
-   如需 [ **建立 Web 應用程式** ] 對話方塊的詳細資訊，請參閱 [&#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;的 [建立 web 應用程式] ](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)對話方塊。
+   如需 [ **建立 Web 應用程式** ] 對話方塊的詳細資訊，請參閱 [&#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;的 [建立 web 應用程式]](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)對話方塊。
 
-1. 在 [web**應用程式**] 視窗的 [ **web**設定] 窗格中，選取您已建立的應用程式，然後選擇 [**將應用程式與資料庫建立關聯**] 區段中的 [**選取**]。
+1. 在 [web **應用程式** ] 視窗的 [ **web** 設定] 窗格中，選取您已建立的應用程式，然後選擇 [ **將應用程式與資料庫建立關聯** ] 區段中的 [ **選取** ]。
 
-1. 選取 [ **連接]** ，然後選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 您要與 web 應用程式產生關聯的資料庫。 選取 [確定]  。
+1. 選取 [ **連接]** ，然後選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 您要與 web 應用程式產生關聯的資料庫。 選取 [確定]。
 
    您已完成網站的設定。 [ **Web** 設定] 頁面現在會顯示您所選取的網站、您建立的 Web 應用程式，以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 與應用程式相關聯的資料庫。
 
-   ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
+   ![Web 設定區段的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
 
 1. 選取 [套用]。 您會看到設定 **完成** 訊息。 在訊息方塊中選取 **[確定]** ，以啟動 web 應用程式。 網址為 `http://server name/web application/` 。
 
@@ -201,30 +201,30 @@ MDS 也支援 Active Directory 密碼驗證和 SQL Server 驗證，如下列範�
 
 ### <a name="upgrade-ssmdsshort_md"></a>升級 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
-安裝 **SQL Server 2019 累積更新**。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 將會自動更新。
+安裝 **SQL Server 2019 累積更新** 。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 將會自動更新。
 
 ### <a name="upgrade-sql-server"></a>升級 SQL Server
 
-您可能會收到錯誤： `The client version is incompatible with the database version` 安裝 **SQL Server 2019 累積更新**之後。
-![mds-SQLServer2019-Config-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "mds-SQLServer2019-Config-MI_UpgradeDBPage")
+您可能會收到錯誤： `The client version is incompatible with the database version` 安裝 **SQL Server 2019 累積更新** 之後。
+![Master Data Services 錯誤的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "mds-SQLServer2019-Config-MI_UpgradeDBPage")
 
 若要修正此問題，您需要升級資料庫版本：
 
 1. 開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，然後選取左窗格中的 [  **資料庫** 設定]。
 
-1. 在的 [ **資料庫** 設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，選擇 [ **選取資料庫**]。
+1. 在的 [ **資料庫** 設定] 頁面上 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ，選擇 [ **選取資料庫** ]。
 
-1. 選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 您與 web 應用程式相關聯的資料庫。 選取 **[連接**]，然後選取 **[確定]**。
+1. 選擇 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 您與 web 應用程式相關聯的資料庫。 選取 **[連接** ]，然後選取 **[確定]** 。
 
-   ![mds-SQLServer2019-Config-MI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_ConnectDBName")
+   ![[連接到 Master Data Service 資料庫] 對話方塊的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_ConnectDBName")
 
 1. 選取 **升級資料庫 ...** .
 
-   ![mds-SQLServer2019-Config-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "mds-SQLServer2019-Config-MI_SelectUpgradeDB")
+   ![[升級資料庫] 選項的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "mds-SQLServer2019-Config-MI_SelectUpgradeDB")
 
-1. 在 [升級資料庫] 嚮導的 [**歡迎使用**] 頁面上，選取 [**下一步]** ，然後在 [**升級審核**] 頁面
+1. 在 [升級資料庫] 嚮導的 [ **歡迎使用** ] 頁面上，選取 [ **下一步]** ，然後在 [ **升級審核** ] 頁面
 
-   ![mds-SQLServer2019-Config-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "mds-SQLServer2019-Config-MI_UpgradeDBWizard")
+   ![[升級資料庫] Wizard 的 [升級審核] 頁面的螢幕擷取畫面。](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "mds-SQLServer2019-Config-MI_UpgradeDBWizard")
 
 1. 當所有工作都完成之後，請選取 **[完成]** 。
 

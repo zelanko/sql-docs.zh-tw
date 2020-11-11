@@ -1,6 +1,6 @@
 ---
 title: 設定 PolyBase Hadoop 安全性
-description: 說明如何在平行處理資料倉儲中設定 PolyBase，以連線至外部 Hadoop。
+description: 提供各種設定設定的參考，這些設定會影響連接到 Hadoop 的 AP PolyBase。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,26 +9,26 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3c0db3807b45d28f99ef1a3da571675bd6d8ac48
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243494"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520955"
 ---
 # <a name="configure-polybase-hadoop-security"></a>設定 PolyBase Hadoop 安全性
 
-本文提供各種設定的參考，這些設定會影響連線到 Hadoop 的 AP PolyBase。 如需 PolyBase 的相關逐步解說，請參閱[什麼是 polybase](configure-polybase-connectivity-to-external-data.md)。
+本文提供各種設定的參考，這些設定會影響連接到 Hadoop 的 AP PolyBase。 如需 PolyBase 的相關逐步解說，請參閱 [何謂 polybase](configure-polybase-connectivity-to-external-data.md)。
 
 > [!NOTE]
 > 在 AP 上，所有計算節點和控制節點上都需要 XML 檔案的變更。
 > 
-> 修改 AP 中的 XML 檔案時，請特別小心。 任何遺漏的標記或不想要的字元，都會使 xml 檔案失效，而阻礙此功能的 usablilty。
+> 修改 AP 中的 XML 檔案時，請特別小心。 任何遺失的標記或不需要的字元都可能使 xml 檔案無效，而阻礙功能的 usablilty。
 > Hadoop 設定檔位於下列路徑：  
 > ```  
 > C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf 
 > ``` 
-> 對 xml 檔案所做的任何變更都需要重新開機服務，才會生效。
+> 對 xml 檔案所做的任何變更都需要服務重新開機才會生效。
 
 ## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 設定
 
@@ -42,13 +42,13 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
    </property> 
 ```
 
-## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Kerberos 設定  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a> Kerberos 設定  
 
 請注意，根據預設，向 Kerberos 受保護叢集驗證 PolyBase 時，需要 hadoop.rpc.protection 設定為「驗證」。 這會導致 Hadoop 節點之間的資料通訊未加密。 若要使用 hadoop.rpc.protection 的「隱私權」或「完整性」設定，請更新 PolyBase 伺服器上的 core-site.xml 檔案。 如需詳細資訊，請參閱上一節：[連線至 Hadoop 叢集與 Hadoop.rpc.protection](#rpcprotection)。
 
 若要使用 MIT KDC 連接到受 Kerberos 保護的 Hadoop 叢集，所有 AP 計算節點和控制節點都需要下列變更：
 
-1. 在 [AP] 的安裝路徑中尋找 Hadoop 設定目錄。 通常其路徑如下：  
+1. 在 [AP 的安裝路徑] 中尋找 Hadoop 設定目錄。 通常其路徑如下：  
 
    ```  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf  
@@ -114,8 +114,8 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
 
 4. 建立資料庫範圍的認證物件，以指定每個 Hadoop 使用者的驗證資訊。 請參閱 [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL 物件)。
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 加密區域設定
-如果您使用 Hadoop 加密區域修改 core-site.xml 並 hdfs-site.xml 如下所示。 提供 KMS 服務執行時使用對應埠號碼的 ip 位址。 CDH 上的 KMS 預設埠是16000。
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a> Hadoop 加密區域設定
+如果您使用 Hadoop 加密區域修改 core-site.xml，並 hdfs-site.xml 如下所示。 使用對應的埠號碼，提供 KMS 服務執行所在的 ip 位址。 CDH 上的 KMS 預設埠是16000。
 
 **core-site.xml**
 ```xml
