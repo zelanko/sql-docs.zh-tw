@@ -246,7 +246,7 @@ object_id   TableName                   index_id    IndexName                   
 - **db_owner** 資料庫角色
 - **sysadmin** 伺服器角色
 
-<sup>1</sup>**db_ddladmin** 資料庫角色具有[最低權限](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)。
+<sup>1</sup>**db_ddladmin** 資料庫角色具有 [最低權限](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)。
 
 ### <a name="remove-fragmentation-using-ssmanstudiofull"></a><a name="SSMSProcedureReorg"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 移除片段
 
@@ -401,13 +401,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!WARNING]
 > 您可以對包含超過 1,000 個分割區的資料表，建立及重建不以資料表為準的索引，但不予支援。 此做法可能會導致在作業期間效能降低或耗用過多記憶體。 Microsoft 建議當分割區數超過 1,000 個時，才使用[對齊的索引](../partitions/partitioned-tables-and-indexes.md#aligned-index)。
 
-如果索引所在的檔案群組**離線**或設定為 [唯讀]，便無法重新組織或重建該索引。 當指定 `ALL` 關鍵字，且有一或多個索引在離線或唯讀檔案群組中時，陳述式會失敗。
+如果索引所在的檔案群組 **離線** 或設定為 [唯讀]，便無法重新組織或重建該索引。 當指定 `ALL` 關鍵字，且有一或多個索引在離線或唯讀檔案群組中時，陳述式會失敗。
 
 統計：
 
-- **建立**或**重建**索引之後，即可藉由掃描資料表中所有的資料列來建立或更新統計資料。 不過，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，並不會在建立或重建資料分割索引之後，透過掃描資料表中的所有資料列來建立或更新統計資料。 反之，查詢最佳化工具會使用預設的取樣演算法來產生這些統計資料。 如果要在掃描資料表中所有資料列時取得分割區索引的統計資料，請使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 或 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 搭配 `FULLSCAN` 子句。
+- **建立** 或 **重建** 索引之後，即可藉由掃描資料表中所有的資料列來建立或更新統計資料。 不過，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，並不會在建立或重建資料分割索引之後，透過掃描資料表中的所有資料列來建立或更新統計資料。 反之，查詢最佳化工具會使用預設的取樣演算法來產生這些統計資料。 如果要在掃描資料表中所有資料列時取得分割區索引的統計資料，請使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 或 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 搭配 `FULLSCAN` 子句。
 
-- **重新組織**索引時，不會更新統計資料。
+- **重新組織** 索引時，不會更新統計資料。
 
 當 `ALLOW_PAGE_LOCKS` 設定為 OFF 時，無法重新組織索引。
 
