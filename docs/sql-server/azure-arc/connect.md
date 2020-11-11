@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987994"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235562"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>將 SQL Server 連線到 Azure Arc
 
@@ -24,6 +24,10 @@ ms.locfileid: "91987994"
 * 您的電腦至少已安裝一個 SQL Server 執行個體
 * 針對 Windows 電腦，您已安裝 Azure PowerShell。 依照指示來[安裝 Azure PowerShell](/powershell/azure/install-az-ps)。
 * 針對 Linux 電腦，您已下載 Azure CLI 並連線您的 Azure 帳戶。 依照指示來[安裝 Azure CLI](/cli/azure/install-azure-cli-apt)。
+* 已註冊 **Microsoft.AzureData** 資源提供者。 如需資源提供者的詳細資訊，請參閱＜Azure 資源提供者和類型＞。
+    * 在 PowerShell 上，執行 `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
+    * 在 Linux 上，執行 `az provider register --namespace 'Microsoft.AzureData`
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>產生 SQL Server 的註冊指令碼

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248537"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043824"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您將使用含有一般函數和運算子的運算式，來建立功能強大且靈活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。 
@@ -25,7 +25,7 @@ ms.locfileid: "87248537"
   
 此圖顯示報表，與您將要建立的報表相似。  
   
-![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![使用運算式的報表產生器報表螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 完成此教學課程的估計時間：30 分鐘。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "87248537"
   
 10. 在查詢設計工具工具列上，按一下 **[執行]** \( **!** )。 結果集會顯示下列資料行中的 23 列資料：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 及 LastPurchase。  
 
-    ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![[新增資料表或矩陣精靈] 中 [設計查詢] 步驟的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. 按 [下一步] 。  
   
@@ -113,13 +113,13 @@ ms.locfileid: "87248537"
   
     [加總] 不再套用至 YTDPurchase。  
     
-    ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![[值] 清單的螢幕擷取畫面，其中顯示已準備要清除的 [加總] 選項。](../reporting-services/media/report-builder-expression-not-sum.png)
   
 15. 按 [下一步] 。  
   
 16. 在 [選擇配置] 頁面上，保留所有預設設定，然後按一下 [下一步]。  
 
-    ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![[新增資料表或矩陣精靈] 中 [選擇配置] 步驟的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
 17. 按一下 [完成] 。  
   
@@ -129,9 +129,9 @@ ms.locfileid: "87248537"
   
 1.  在 [報表資料] 窗格中，展開 [資料來源] 資料夾。  
   
-2.  以滑鼠右鍵按一下 **DataSource1**，然後按一下 [資料來源屬性]。  
+2.  以滑鼠右鍵按一下 **DataSource1** ，然後按一下 [資料來源屬性]。  
   
-3.  在 [名稱] 方塊中，鍵入 **ExpressionsDataSource**。  
+3.  在 [名稱] 方塊中，鍵入 **ExpressionsDataSource** 。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -139,28 +139,28 @@ ms.locfileid: "87248537"
   
 1.  在 [報表資料] 窗格中，展開 [資料集] 資料夾。  
   
-2.  以滑鼠右鍵按一下 **DataSet1**，然後按一下 [資料集屬性]。  
+2.  以滑鼠右鍵按一下 **DataSet1** ，然後按一下 [資料集屬性]。  
 
-    ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![顯示如何在報表產生器中存取 [資料集屬性] 的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
-3.  在 [名稱] 方塊中，輸入**運算式**。  
+3.  在 [名稱] 方塊中，輸入 **運算式** 。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.顯示名字、縮寫和姓氏  
-在本節中，您在運算式中使用 **Left** 函數和 **Concatenate** (**&**) 運算子，以將結果評估為包括縮寫和姓氏的名稱。 您可以逐步建立運算式，或是在程序中先略過，再從教學課程將運算式複製/貼上至 [運算式]**** 對話方塊中。   
+在本節中，您在運算式中使用 **Left** 函數和 **Concatenate** ( **&** ) 運算子，以將結果評估為包括縮寫和姓氏的名稱。 您可以逐步建立運算式，或是在程序中先略過，再從教學課程將運算式複製/貼上至 [運算式] 對話方塊中。   
   
 1.  以滑鼠右鍵按一下 **StateProvince** 資料行，指向 [插入資料行]，然後按一下 [左方]。  
   
     新資料行就會新增至 **StateProvince** 資料行的左方。 
     
-    ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![顯示如何在報表中插入左方資料行的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  按一下新資料行的標頭，並輸入 **名稱**。  
+2.  按一下新資料行的標頭，並輸入 **名稱** 。  
   
 3.  以滑鼠右鍵按一下 [名稱] 資料行的資料格，然後按一下 [運算式]。  
 
-    ![report-builder-expression-tutorial-insert-expression](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![顯示如何在報表中插入運算式的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
 4.  在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [文字]。  
   
@@ -168,11 +168,11 @@ ms.locfileid: "87248537"
   
     **Left** 函數隨即新增至運算式中。  
     
-    ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![顯示如何將 Left 函數加入運算式的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  在 [類別目錄] 清單中，按一下 [欄位 (運算式)]。  
   
-7.  在 [值] 清單中，按兩下 **FirstName**。  
+7.  在 [值] 清單中，按兩下 **FirstName** 。  
   
 8.  輸入 **, 1)**  
   
@@ -182,11 +182,11 @@ ms.locfileid: "87248537"
 
     如此會在運算式之後新增句號和空格。
   
-10. 在 [值] 清單中，按兩下 **LastName**。  
+10. 在 [值] 清單中，按兩下 **LastName** 。  
   
     完成的運算式為： `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
-    ![report-builder-expression-tutorial-complete-name-expression](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![顯示如何將 LastName 值加入運算式的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -201,11 +201,11 @@ ms.locfileid: "87248537"
   
 2.  選取 [上次購買] 資料行中的資料格，然後在 [主資料夾] 索引標籤 > [數字] 區段中，選取 [日期]。  
 
-    ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![顯示如何將 [上次購買] 資料行設定為 [日期] 的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
 3.  此外，在 [數字] 區段中，按一下 [預留位置樣式] 旁的箭號，然後選取 [範例值]。 
 
-    ![report-builder-expression-tutorial-sample-values](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![顯示報表產生器中 [範例值] 選項的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     現在您可以看到所選取的格式化範例。 
   
@@ -219,13 +219,13 @@ ms.locfileid: "87248537"
 
 2. 在 [主資料夾] 索引標籤 > [段落] 區段中，選取 [左方]。 
 
-    ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![顯示如何在報表產生器中將標題格式化的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. 按一下 **[執行]** 預覽報表。 
 
 以下是到目前為止的報表，日期、貨幣和資料行標頭都已格式化。
 
-![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![顯示格式化報表預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4.使用色彩顯示性別  
@@ -240,7 +240,7 @@ ms.locfileid: "87248537"
   
     新資料行就會新增至 **名稱** 資料行的左方。  
   
-2.  按一下新資料行的標頭，並輸入 **M/F**。  
+2.  按一下新資料行的標頭，並輸入 **M/F** 。  
   
 ### <a name="to-add-a-rectangle"></a>若要加入矩形  
   
@@ -248,17 +248,17 @@ ms.locfileid: "87248537"
   
      如此矩形就會加入至資料格。  
      
-     ![report-builder-expression-tutorial-insert-rectangle](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![顯示如何插入矩形的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. 拖曳 [M/F] 和 [名稱] 之間的資料行分隔線，讓 [M/F] 資料行變得較窄。
 
-    ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![顯示如何讓資料行變得較窄的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>使用色彩顯示性別  
   
 1.  在 [M/F] 資料行的資料格中，以滑鼠右鍵按一下矩形，然後按一下 [矩形屬性]。  
   
-2.  在 [矩形屬性] 對話方塊 > [填滿] 索引標籤中，按一下 [填滿色彩] 旁邊的 [運算式 **fx**] 按鈕。  
+2.  在 [矩形屬性] 對話方塊 > [填滿] 索引標籤中，按一下 [填滿色彩] 旁邊的 [運算式 **fx** ] 按鈕。  
   
 3.  在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [程式流程]。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "87248537"
 
 8. 在 [類別目錄] 清單中，按一下 [常數]，然後在 [值] 方塊中，按一下 [矢菊花藍]。
 
-    ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![顯示如何使用色彩來顯示性別的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. 在它後面輸入一個逗號。 
   
@@ -286,13 +286,13 @@ ms.locfileid: "87248537"
   
     完成的運算式為： `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
-    ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![顯示 [運算式] 對話方塊中完整運算式的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
 12. 按一下 [確定]，再按一下 [確定] 以關閉 [矩形屬性] 對話方塊。  
   
 14. 按一下 **[執行]** 預覽報表。  
 
-    ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![顯示 [M/F] 資料行預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### <a name="to-format-the-color-rectangles"></a>格式化色彩矩形
 
@@ -304,11 +304,11 @@ ms.locfileid: "87248537"
     - BorderStyle = Solid
     - BorderWidth = 5pt
     
-    ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![顯示如何將 [M/F] 資料行中色彩矩形格式化的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. 按一下 [執行] 來重新預覽報表。 這次色彩區塊周圍有空白。
 
-    ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![顯示 [M/F] 資料行中格式化矩形預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5.查閱 CountryRegion 名稱  
 在本節中，您會建立 CountryRegion 資料集並使用 **Lookup** 函數顯示國家/地區的名稱，而不是國家/地區的識別碼。  
@@ -358,7 +358,7 @@ ms.locfileid: "87248537"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>若要查閱 CountryRegion 資料集中的值  
   
-1.  按一下 [國家/地區識別碼] 資料行標題，並刪除文字：**識別碼**，使其顯示為 [國家/地區]。  
+1.  按一下 [國家/地區識別碼] 資料行標題，並刪除文字： **識別碼** ，使其顯示為 [國家/地區]。  
   
 2.  以滑鼠右鍵按一下 [國家/地區] 資料行的資料格，然後按一下 [運算式]。  
   
@@ -391,7 +391,7 @@ ms.locfileid: "87248537"
   
     新資料行就會新增至 [上次購買] 資料行的右方。  
   
-3.  在資料行標頭中，輸入 **天前**。  
+3.  在資料行標頭中，輸入 **天前** 。  
   
 4.  以滑鼠右鍵按一下 [天前] 資料行的資料格，然後按一下 [運算式]。  
   
@@ -414,7 +414,7 @@ ms.locfileid: "87248537"
   
     完成的運算式為： `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
-    ![report-builder-expression-tutorial-date-since-last-purchase](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![顯示自上次購買後完整日期運算式的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -431,7 +431,7 @@ ms.locfileid: "87248537"
   
     新資料行就會新增至 [YTD 購買] 資料行的右方。  
   
-2.  按一下資料行標頭，並輸入 **平均銷售增減**。  
+2.  按一下資料行標頭，並輸入 **平均銷售增減** 。  
   
 ### <a name="to-add-an-indicator"></a>若要加入指標  
   
@@ -441,7 +441,7 @@ ms.locfileid: "87248537"
   
 2.  在圖示集的 [方向性] 群組中，按一下三個灰色箭頭的圖示集。  
 
-    ![report-builder-expression-tutorial-select-indicator](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![顯示如何新增指標的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -473,7 +473,7 @@ ms.locfileid: "87248537"
   
 17. 在具有向下鍵的資料列中，按一下 [開始] 值的文字方塊右邊的 **fx** 按鈕。  
 
-    ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![顯示如何選取 [開始] 文字方塊旁 fx 按鈕的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
 18. 在 [運算式] 對話方塊中，展開 [一般函數]，並按一下 [數學]。  
   
@@ -493,15 +493,15 @@ ms.locfileid: "87248537"
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. 在 [結束] 值的文字方塊中，輸入 **0**。  
+31. 在 [結束] 值的文字方塊中，輸入 **0** 。  
   
 32. 按一下具有橫向箭號的資料列，然後按一下 [刪除]。  
 
-    ![report-builder-expression-tutorial-delete-indicator-state](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![顯示如何刪除指標的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     現在只有兩個箭號，向上或向下。
   
-33. 在具有向上鍵的資料列中，於 [開始] 方塊中輸入 **0**。  
+33. 在具有向上鍵的資料列中，於 [開始] 方塊中輸入 **0** 。  
   
 34. 按一下 [結束] 值的文字方塊右邊的 **fx** 按鈕。  
   
@@ -513,7 +513,7 @@ ms.locfileid: "87248537"
   
 38. 按一下 **[執行]** 預覽報表。  
 
-    ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![顯示 [平均銷售增減] 資料行預覽的螢幕擷取畫面，其中包含所有新指標。](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8.製作帶狀報表  
 建立參數，讓報表讀者可以指定套用至報表中交替資料列的色彩，使其變成帶狀報表。  
@@ -524,13 +524,13 @@ ms.locfileid: "87248537"
   
 2.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 [參數]，然後按一下 [加入參數]。  
 
-    ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![顯示如何新增參數的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     **[報表參數屬性]** 對話方塊隨即開啟。  
   
-3.  在 [提示] 中，鍵入**選擇色彩**  
+3.  在 [提示] 中，鍵入 **選擇色彩**  
   
-4.  在 [名稱] 中，輸入 **RowColor**。  
+4.  在 [名稱] 中，輸入 **RowColor** 。  
   
 5.  在 [可用的值] 索引標籤上，按一下 [指定值]。  
   
@@ -538,7 +538,7 @@ ms.locfileid: "87248537"
   
 8.  在 [標籤] 方塊中，鍵入 **Yellow**  
   
-9. 在 [值] 方塊中，輸入 **Yellow**。  
+9. 在 [值] 方塊中，輸入 **Yellow** 。  
   
 10. 按一下 [新增] 。  
   
@@ -556,9 +556,9 @@ ms.locfileid: "87248537"
   
 17. 在 [標籤] 方塊中，鍵入 **Pink**  
   
-18. 在 [值] 方塊中，輸入 **Pink**。  
+18. 在 [值] 方塊中，輸入 **Pink** 。  
 
-    ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![[報表參數屬性] 對話方塊的螢幕擷取畫面，其中顯示 [選擇此參數可用的值] 步驟。](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -566,9 +566,9 @@ ms.locfileid: "87248537"
   
 1.   選取資料列中所有儲存格，但 [M/F] 資料行中的儲存格除外，它有自己的背景色彩。  
 
-     ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![顯示已選取資料列中資料格的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
-4.  在 [屬性] 窗格中，按一下 **BackgroundColor**。 
+4.  在 [屬性] 窗格中，按一下 **BackgroundColor** 。 
 
      如果看不到 [屬性] 窗格，請在 [檢視] 索引標籤上選取 [屬性] 方塊。  
   
@@ -576,7 +576,7 @@ ms.locfileid: "87248537"
   
 5.  按一下向下鍵，然後按一下 [運算式]。  
 
-    ![report-builder-expression-tutorial-banded-color-property](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![[屬性] 方塊的螢幕擷取畫面，其中顯示如何將運算式與 BackgroundColor 建立關聯。](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
 6.  在 [運算式] 對話方塊中，展開 [一般函數]，然後按一下 [程式流程]。  
   
@@ -592,7 +592,7 @@ ms.locfileid: "87248537"
   
     完成的運算式為： `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
-    ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![顯示完整帶狀色彩運算式的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -604,13 +604,13 @@ ms.locfileid: "87248537"
   
 3.  在 [選擇色彩] 清單中，選取報表中非白色區間的色彩。  
     
-    ![report-builder-expression-tutorial-select-color](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![顯示如何選擇非白色區間色彩的螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
 4.  按一下 **[檢視報表]** 。  
   
     報表隨即呈現，而且交替的資料列會使用您選擇的背景。 
     
-    ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![顯示色彩交替的資料列預覽螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="optional-add-a-report-title"></a><a name="Title"></a>(選擇性) 加入報表標題  
 加入報表的標題。  
@@ -619,7 +619,7 @@ ms.locfileid: "87248537"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
-2.  輸入 **銷售比較摘要**，然後選取文字。  
+2.  輸入 **銷售比較摘要** ，然後選取文字。  
   
 3.  在 [主資料夾] 索引標籤的 [字型] 方塊中，設定︰
 
@@ -652,7 +652,7 @@ ms.locfileid: "87248537"
 
 現在您的報表讀者可以在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站檢視您的報表。
 
-![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![顯示每個可見運算式的已完成新報表螢幕擷取畫面。](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## <a name="see-also"></a>另請參閱  

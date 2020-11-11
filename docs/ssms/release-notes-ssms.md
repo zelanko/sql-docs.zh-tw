@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734640"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364780"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -123,7 +123,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | Analysis Services | 已修正在嘗試透過 msmdpump.dll 連線到 SSAS 時可能會導致錯誤的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696) \(英文\)。 |
 | 備份/還原 | 已修正選取 [檢視連線屬性] 會導致 HostDistribution 屬性針對 SQL 2016 及更早版本遺失之 SMO 錯誤的問題。 |
 | 資料庫設計工具 | 已修正問題，其會導致 SSMS 在處理十進位數字時損毀。 |
-| 資料庫圖表 | 已修正在使用資料庫圖表時，[新增資料表] 對話視窗可能未正確顯示，因而導致 SSMS 損毀或停止回應的問題。 |
+| 資料庫圖表 | 已修正在使用資料庫圖表時，[新增資料表] 對話方塊未正確顯示，因而導致 SSMS 損毀或停止回應的問題。 |
 | 資料庫鏡像 | 已修正造成鏡像設定失敗的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281) \(英文\)。 |
 | 一般 SSMS | 已修正嘗試連線到 Azure SQL DB 可能會需要數秒鐘時間的問題 (使用者資料庫中的 SQL 登入)。 |
 | 一般 SSMS | 已修正 SSMS 無法處理/顯示所擷取鎖死 (.xdl 檔案) 的問題。 |
@@ -164,7 +164,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 
 ### <a name="186"></a>18.6
 
-![下載](media/download-icon.png) [下載 SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![下載](media/download-icon.png) [下載 SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - 版本號碼：18.6
 - 組建編號：15.0.18338.0

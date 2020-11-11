@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985724"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235485"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -86,7 +86,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 | |已針對涉及批次模式運算子的死結改善 XML 死結圖表，並新增更多屬性至 SyncPoint 資源。| |
 |動態重新載入部分複寫代理程式設定檔參數   |   在目前的複寫代理程式實作中，對代理程式設定檔參數所做的任何變更，都需要停止並重新啟動代理程式。 此改善可讓參數以動態方式重新載入，而不需要重新啟動複寫代理程式。   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![水平軸的螢幕擷取畫面。](media/horizontal-bar.png)
 
 ## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含截至 SQL Server 2016 RTM CU3 的所有累計更新，包括安全性更新 MS16-136。 它包含 SQL Server 2016 累積更新提供的解決方案彙總，截至並且包含最新的累積更新 - CU3 和 2016 年 11 月 8 日發行的安全性更新 MS16-136。
@@ -134,7 +134,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 - [SQL Server 2016 Service Pack 1 版本資訊](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [SQL Server 更新中心](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)提供所有支援版本的連結和資訊，包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的 Service Pack
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![水平軸的另一個螢幕擷取畫面。](media/horizontal-bar.png)
 
 ##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch)
@@ -151,15 +151,15 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 
     如已安裝 SQL Server 2016，請依序執行下列步驟︰
 
-    1.  下載適當的 *vcredist_\*exe*。
+    1.  下載適當的 *vcredist_\*exe* 。
     1.  停止資料庫引擎所有執行個體的 SQL Server 服務。
-    1.  安裝 **KB 3138367**。
+    1.  安裝 **KB 3138367** 。
     1.  重新啟動電腦。
 
 
  - 安裝  [KB 3164398 - SQL Server 2016 MSVCRT 必要條件的重大更新](https://support.microsoft.com/kb/3164398)。
 
-    如果使用 **KB 3164398**，就可以在 SQL Server 安裝期間，透過 Microsoft Update 或從 Microsoft 下載中心安裝。
+    如果使用 **KB 3164398** ，就可以在 SQL Server 安裝期間，透過 Microsoft Update 或從 Microsoft 下載中心安裝。
 
     - **在 SQL Server 2016 安裝期間：** 如果執行 SQL Server 安裝程式的電腦可以存取網際網路，則 SQL Server 安裝程式會檢查更新是否為完整 SQL Server 安裝的一部分。 如果您接受更新，安裝程式會在安裝期間下載並更新二進位檔案。
 
@@ -207,7 +207,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 
 
 ###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> 產品文件 (GA)
- **問題和對客戶的影響：** SQL Server 2016 文件的可下載版本尚未提供。 當您嘗試使用 Help Library 管理員 **從線上安裝內容**時，您會看到 SQL Server 2012 及 SQL Server 2014 文件，但沒有 SQL Server 2016 文件的選項。
+ **問題和對客戶的影響：** SQL Server 2016 文件的可下載版本尚未提供。 當您嘗試使用 Help Library 管理員 **從線上安裝內容** 時，您會看到 SQL Server 2012 及 SQL Server 2014 文件，但沒有 SQL Server 2016 文件的選項。
 
  **因應措施：** 使用下列其中一項因應措施：
 

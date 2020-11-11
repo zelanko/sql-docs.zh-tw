@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245695"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043733"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖新增至報表 (報表產生器)
 在本教學課程中，您會使用[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立橫條圖。 接著新增篩選，並加強圖表。 
@@ -27,7 +27,7 @@ ms.locfileid: "87245695"
   
 下圖顯示您將建立的橫條圖，其中從最大到最小 (2015 年銷售額) 順序列出 2014 和 2015 年前五名銷售人員的銷售額。  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![報表產生器橫條圖的螢幕擷取畫面。](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "87245695"
   
 4.  在 [選擇資料集] 頁面上，按一下 [建立資料集]，然後按一下 [下一步]。  
   
-5.  在 [選擇與資料來源的連線]**** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]****。 您可能需要輸入使用者名稱和密碼。  
+5.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "87245695"
   
 2.  以滑鼠右鍵按一下垂直軸，然後按一下 [垂直軸屬性]。  
   
-3.  在 [軸範圍和間隔] 的 [間隔] 方塊中，鍵入 **1**。  
+3.  在 [軸範圍和間隔] 的 [間隔] 方塊中，鍵入 **1** 。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -200,7 +200,7 @@ ms.locfileid: "87245695"
   
 1.  切換到報表設計檢視。  
   
-2.  選取圖表頂端的 [圖表標題] 這幾個字，然後鍵入：**2014 年與 2015 年的銷售額**。  
+2.  選取圖表頂端的 [圖表標題] 這幾個字，然後鍵入： **2014 年與 2015 年的銷售額** 。  
   
 3.  在 [屬性] 窗格中，於選取標題的情況下，將 [色彩] 設為 [黑色]，並將 [字型大小] 設為 [12 pt]。 
   
@@ -225,7 +225,7 @@ ms.locfileid: "87245695"
 
 8.  以滑鼠右鍵按一下水平軸，然後選取 [顯示軸標題]。
   
-7.  在 [軸標題] 方塊中，鍵入 **Sales in thousands**，然後按 Enter。  
+7.  在 [軸標題] 方塊中，鍵入 **Sales in thousands** ，然後按 Enter。  
 
     >**注意：** 鍵入時，[軸標題] 方塊會顯示在垂直軸上。 但是，當您按 Enter 時，它會移至水平軸。
   
@@ -248,7 +248,7 @@ ms.locfileid: "87245695"
   
 6.  在 [運算式] 中，鍵入 **[Sum(SalesYear2015)]** 。 這樣會建立基礎運算式 `=Sum(Fields!SalesYear2015.Value)`，如果您按一下 [fx] 按鈕可以看到此運算式。  
   
-7.  確認資料類型是 **Text**。  
+7.  確認資料類型是 **Text** 。  
   
 8.  在 [運算子] 中，從下拉式清單選取 [前 N 個]。  
   
@@ -266,7 +266,7 @@ ms.locfileid: "87245695"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
-2.  輸入 **銷售橫條圖**並按 ENTER，然後輸入 **2015 年前五名銷售人員**，其外觀如下：  
+2.  輸入 **銷售橫條圖** 並按 ENTER，然後輸入 **2015 年前五名銷售人員** ，其外觀如下：  
   
     **銷售橫條圖**  
   
@@ -288,7 +288,7 @@ ms.locfileid: "87245695"
   
 2.  按一下 [檔案] > [另存新檔]。  
   
-3.  在 [名稱] 中，鍵入 **Sales Bar Chart**。  
+3.  在 [名稱] 中，鍵入 **Sales Bar Chart** 。  
 
     您可以將它儲存至電腦或報表伺服器。
   

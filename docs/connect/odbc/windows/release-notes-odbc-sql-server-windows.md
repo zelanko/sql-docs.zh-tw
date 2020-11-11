@@ -2,7 +2,7 @@
 title: Windows 上的 ODBC Driver for SQL Server 版本資訊
 description: 此版本資訊文章描述 Windows 上每個 Microsoft ODBC Driver for SQL Server 版本中的變更。
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898813"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043809"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 版本資訊
 
@@ -169,6 +169,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Azure Active Directory 受控識別 (系統與使用者指派) 驗證模式。 | 請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md)。 |
 | 針對 Always Encrypted 資料行串流輸入參數的能力。 | 請參閱[使用 Always Encrypted 時的 ODBC 驅動程式限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分散式交易。 | [使用 XA 交易](../use-xa-with-dtc.md)。 |
+| 更新的 Visual C++ 可轉散發套件 | 已將執行階段相依性升級為 Visual C++ 2017 可轉散發套件 ([x64 下載](https://aka.ms/vs/15/release/vc_redist.x64.exe)、[x86 下載](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 

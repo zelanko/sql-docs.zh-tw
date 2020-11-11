@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935564"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043839"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -23,7 +23,7 @@ ms.locfileid: "91935564"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]** 、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
@@ -69,11 +69,11 @@ ms.locfileid: "91935564"
   
 4.  尋找 **[報表伺服器整合功能]** 並按一下 **[停用]** 。  
   
-     ![rs_reportserver_integration_active](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
+     ![報表伺服器整合功能的螢幕擷取畫面，其中顯示 [停用] 和 [啟用] 選項。](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
   
 5.  重新整理瀏覽器，然後按一下 **[報表伺服器整合功能]** 的 **[啟動]** 。  
   
-     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![報表伺服器整合功能的螢幕擷取畫面，其中顯示 [啟用] 選項。](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2013)  
   
@@ -107,14 +107,14 @@ ms.locfileid: "91935564"
   
 5.  在 **[從下列位置選取網站內容類型]** ，選取 **[SQL Server Reporting Services 內容類型]** 。  
   
-6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]**，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
+6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]** ，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
   
 7.  若要加入 **[報表模型]** 和 **[報表資料來源]** 內容類型，請重複上一個步驟。  
   
 8.  當您完成新增內容類型後，按一下 **[確定]** 。  
   
     > [!NOTE]  
-    >   如果在 [新增內容類型] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面上看不到 **** 內容類型群組 [SQL Server Reporting Services 內容類型] **** ，表示下列有一條件成立：  
+    >   如果在 [新增內容類型] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面上看不到  內容類型群組 [SQL Server Reporting Services 內容類型]  ，表示下列有一條件成立：  
   
     -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "91935564"
   
 5.  在 **[選取內容類型]** 區段的 **[從下列位置選取網站內容類型]** 中，按一下箭號選取 **[SQL Server Reporting Services 內容類型]** 。  
   
-6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]**，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
+6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]** ，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
   
 7.  若要加入 **[報表模型]** 和 **[報表資料來源]** 內容類型，請重複上一個步驟。  
   

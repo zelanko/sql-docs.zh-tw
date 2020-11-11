@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 23796da12c2b987dfad6f023d40e9975cb301e28
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245685"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043765"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖新增至報表 (報表產生器)
 在本教學課程中，您將建立包含直條圖的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，而直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 
@@ -27,7 +27,7 @@ ms.locfileid: "87245685"
   
 下圖顯示您將建立的直條圖，內含移動平均。  
   
-![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+![顯示報表產生器直條圖的螢幕擷取畫面。](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
 > 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "87245685"
   
 4.  在 [選擇資料集] 頁面上，按一下 [建立資料集]，然後按一下 [下一步]。  
   
-5.  在 [選擇與資料來源的連線]**** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]****。 您可能需要輸入使用者名稱和密碼。  
+5.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -105,13 +105,13 @@ ms.locfileid: "87245685"
   
     圖表就會加入至設計介面。 請注意，新的直條圖只會顯示代表性資料。 圖例會顯示 Sales Date A、Sales Date B 等，只會提供報表的外觀。 
     
-    ![report-builder-column-chart-1-design-view](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    ![設計檢視中報表產生器直條圖的螢幕擷取畫面。](../reporting-services/media/report-builder-column-chart-1-design-view.png)
   
 7.  按一下圖表，即可顯示圖表控點。 拖曳圖表的右下角，即可增加圖表的大小。 請注意，報表設計介面的大小會放大，以容納圖表的大小。  
   
 8.  按一下 **[執行]** 預覽報表。  
 
-    ![report-builder-column-chart-1-preview](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    ![顯示報表產生器直條圖預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-column-chart-1-preview.png)
 
 請注意，圖表並未在水平軸上標示每個類別目錄。 根據預設，只有容納在軸旁的標籤才會包含在內。 
   
@@ -132,7 +132,7 @@ ms.locfileid: "87245685"
   
 日期會以您所選取的日期格式顯示。 圖表仍然未在水平軸上標示每個類別目錄。 
 
-![report-builder-column-chart-2-preview](../reporting-services/media/report-builder-column-chart-2-preview.png)
+![報表產生器直條圖的螢幕擷取畫面，其中顯示日期格式。](../reporting-services/media/report-builder-column-chart-2-preview.png)
   
 您可以透過旋轉標籤和指定間隔，自訂標籤顯示。  
   
@@ -152,13 +152,13 @@ ms.locfileid: "87245685"
   
     水平軸的範例文字會旋轉 90 度。  
     
-    ![report-builder-column-chart-rotate-x-axis](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    ![設計檢視中報表產生器直條圖的螢幕擷取畫面，其中已旋轉 X 軸文字。](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
 9. 按一下 **[執行]** 預覽報表。  
   
 在圖表上，會旋轉標籤。  
 
-![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+![顯示報表產生器直條圖預覽的螢幕擷取畫面，其中已旋轉 X 軸文字。](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
 ## <a name="5-move-the-legend"></a><a name="Legend"></a>5.移動圖例  
 圖例是從類別目錄和數列資料自動建立。 您可以移動直條圖之圖表區域下方的圖例。  
@@ -181,7 +181,7 @@ ms.locfileid: "87245685"
     
 1.  切換到報表設計檢視。  
   
-2.  選取圖表頂端的 [圖表標題] 這幾個字，然後鍵入 **Store Sales Order Totals**。  
+2.  選取圖表頂端的 [圖表標題] 這幾個字，然後鍵入 **Store Sales Order Totals** 。  
   
 3.  按一下 **[執行]** 預覽報表。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "87245685"
   
 12. 按一下 **[執行]** 預覽報表。  
 
-    ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    ![顯示報表產生器直條圖預覽的螢幕擷取畫面，其中已正確標示 Y 軸。](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
 ## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.顯示水平 (x) 軸上的所有標籤
 
@@ -226,13 +226,13 @@ ms.locfileid: "87245685"
 
 3. 在 [屬性] 窗格中，將 LabelInterval 設為 1。
 
-    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![顯示如何設定報表產生器直條圖標籤間隔的螢幕擷取畫面。](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     這個圖表與在設計檢視中相同。 
     
 5.  按一下 **[執行]** 預覽報表。
 
-    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![顯示報表產生器直條圖預覽的螢幕擷取畫面，其中已將標籤間隔設定為一。](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     現在，圖表會顯示其所有標籤。
   
@@ -246,7 +246,7 @@ ms.locfileid: "87245685"
   
 3.  以滑鼠右鍵按一下 [值] 區域中的 [Sum(Sales)] 欄位，然後按一下 [新增導出數列]。  
 
-     ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+     ![顯示如何將導出數列新增至報表產生器直條圖的螢幕擷取畫面。](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
 4.  在 [公式] 中，確認已選取 [移動平均]。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "87245685"
   
 圖表會顯示一條線，代表依照日期區分之總銷售量的移動平均 (每四個日期的平均)。 深入了解如何 [將移動平均新增至圖表](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)。 
 
-![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
+![報表產生器直條圖的螢幕擷取畫面，其中描述移動平均。](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
 ## <a name="10-add-a-report-title"></a><a name="Title"></a>10.加入報表標題  
   
@@ -268,7 +268,7 @@ ms.locfileid: "87245685"
   
 2.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
-3.  輸入 **銷售圖表**並按 ENTER，然後輸入 **2015 年 1 月到 12 月**，其外觀如下：  
+3.  輸入 **銷售圖表** 並按 ENTER，然後輸入 **2015 年 1 月到 12 月** ，其外觀如下：  
   
     **銷售圖表**  
   
@@ -294,7 +294,7 @@ ms.locfileid: "87245685"
 
     您可以將它儲存至電腦或報表伺服器。
   
-3.  在 [名稱] 中，鍵入 **Sales Order Column Chart**。  
+3.  在 [名稱] 中，鍵入 **Sales Order Column Chart** 。  
   
 4.  按一下 [檔案] 。  
   

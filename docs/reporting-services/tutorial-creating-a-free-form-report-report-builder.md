@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3a4bada590dc9bea822aadffd102b49e75d10cf
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247457"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043825"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。
 
-![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
+![報表產生器自由格式報表的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 此報表會依領域將資訊分組，並顯示各領域的銷售經理姓名以及詳細和摘要銷售資訊。 您一開始會使用清單資料區作為自由格式報表的基礎，然後新增含有影像的裝飾面板、插入資料的靜態文字、顯示詳細資訊的資料表，以及 (選擇性) 顯示摘要資訊的圓形圖和直條圖。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "87247457"
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料來源]。  
   
-2.  在 [名稱] 方塊中，輸入：**ListDataSource**  
+2.  在 [名稱] 方塊中，輸入： **ListDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]** 。  
   
-4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入：**資料來源 = \<servername>**  
+4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入： **資料來源 = \<servername>**  
   
     **\<servername>** (例如 Report001) 指定已安裝 SQL Server 資料庫引擎執行個體的電腦名稱。 由於此報表的資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫只用來剖析查詢。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "87247457"
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料集]。  
   
-2.  在 [名稱] 方塊中，輸入：**ListDataset**。  
+2.  在 [名稱] 方塊中，輸入： **ListDataset** 。  
   
-3.  按一下 [使用內嵌在我的報表中的資料集] ，並確認資料來源是 **ListDataSource**。  
+3.  按一下 [使用內嵌在我的報表中的資料集] ，並確認資料來源是 **ListDataSource** 。  
   
 4.  確認已選取 **[文字]** 查詢類型，然後按一下 **[查詢設計工具]** 。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "87247457"
   
     查詢結果會成為可供報表顯示的資料。  
   
-    ![report-builder-free-form-tutorial-data](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
+    ![查詢設計工具的螢幕擷取畫面，其中顯示可在報表產生器自由格式報表中顯示的資料。](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -132,7 +132,7 @@ ms.locfileid: "87247457"
   
 2.  按一下清單方塊內部，並以滑鼠右鍵按一下清單頂端的列，然後按一下 [Tablix 屬性]。  
   
-    ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
+    ![顯示報表產生器自由格式報表中 [Tablix 屬性] 選項的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
 3.  從 **[資料集名稱]** 下拉式清單中，選取 **[ListDataset]** 。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "87247457"
   
 1.  在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料] 群組，然後指向 **[加入群組]** ，再按一下 **[父群組]** 。  
   
-    ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
+    ![顯示如何將 [父群組] 新增至報表產生器自由格式報表的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
 2.  在 [群組依據] 清單中，選取 `[Territory].`  
   
@@ -158,7 +158,7 @@ ms.locfileid: "87247457"
   
 4.  以滑鼠右鍵按一下清單中的 [Territory] 資料行，再按一下 **[刪除資料行]** 。  
   
-    ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
+    ![顯示如何從報表產生器自由格式報表中刪除資料行的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
 5.  選取 [只刪除資料行]。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "87247457"
   
 報表左側現在會有由淺灰色矩形組成的垂直圖形，如下圖所示。  
   
-![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
+![報表產生器的螢幕擷取畫面，其中顯示由淺灰色矩形組成的垂直圖形。](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
 ## <a name="4-add-free-form-text"></a><a name="Text"></a>4.加入自由格式文字  
 您可以新增文字方塊以顯示在每個報表頁面上重複的靜態文字，還有資料欄位。  
@@ -200,13 +200,13 @@ ms.locfileid: "87247457"
   
 2.  在 [插入] 索引標籤 > [文字方塊] 上。 按一下清單的左上角，在您先前新增的矩形內，並拖曳形成大約寬 3.45 英吋且高約 5 英吋的文字方塊。  
   
-3.  將游標置於文字方塊內，然後輸入：**Newsletter for**。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
+3.  將游標置於文字方塊內，然後輸入： **Newsletter for** 。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
   
     ![新增電子報標題文字](../reporting-services/media/tutorial-newsletterfor.png "新增電子報標題文字")  
   
 4.  將 `[Territory]` 欄位從 [報表資料] 窗格中的 ListDataSet 拖曳到 "Newsletter for " 之後。  
   
-    ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
+    ![顯示如何將 [Territory] 欄位拖曳至報表產生器自由格式報表的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-territory-field.png)
   
 5.  選取文字和 `[Territory]` 欄位。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "87247457"
   
     *  [Segoe Semibold]。
     *  [16 pt]。
-    *  **黑色**。  
+    *  **黑色** 。  
    
 15. 將滑鼠游標置於您在步驟 9 至步驟 13 加入的文字下方，然後複製並貼入下列無意義的文字：  
   
@@ -243,9 +243,9 @@ ms.locfileid: "87247457"
   
       *  [Segoe UI]。
       *  [10 pt]。
-      *  **黑色**。  
+      *  **黑色** 。  
  
-20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰ **Congratulations on your total sales of**，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
+20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰ **Congratulations on your total sales of** ，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
   
 21. 將 [Sales] 欄位拖曳到文字方塊中，置於您在前一個步驟輸入的文字後面，然後輸入一個驚嘆號 (!)。  
 
@@ -255,7 +255,7 @@ ms.locfileid: "87247457"
   
       *  [Segoe Semibold]。
       *  [16 pt]。
-      *  **黑色**。  
+      *  **黑色** 。  
   
 22. 只選取 `[Sales]` 欄位，然後以滑鼠右鍵按一下欄位 > [運算式]。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "87247457"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
+    ![顯示報表產生器自由格式報表中文字方塊的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-text-box.png)
  
 29. 在仍然選取 `[Sum(Sales)]` 的情況下，在 [主資料夾] 索引標籤 > [數字] 群組 > [貨幣]。  
   
@@ -275,13 +275,13 @@ ms.locfileid: "87247457"
   
 31. 選取清單方塊。 選取兩個雙箭號，然後將它移至頁面頂端。  
 
-    ![report-builder-drag-list](../reporting-services/media/report-builder-drag-list.png)
+    ![顯示如何在報表產生器自由格式報表中拖曳清單的螢幕擷取畫面。](../reporting-services/media/report-builder-drag-list.png)
   
 32. 按一下 **[執行]** 預覽報表。  
   
 報表會顯示靜態文字，而且每個報表頁面含有與特定領域相關的資料。 銷售額則格式化為貨幣。  
   
-![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
+![顯示報表產生器自由格式報表中電子報頁面預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
 ## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5.加入資料表以顯示銷售詳細資料  
 使用新增資料表和矩陣精靈，將資料表加入至自由格式報表。 在完成精靈之後，您將要手動加入一個總計資料列。  
@@ -313,11 +313,11 @@ ms.locfileid: "87247457"
   
 12. 在選取資料表的情況下，於 [資料列群組] 窗格中以滑鼠右鍵按一下 [詳細資料] > [新增總計] > [之後]。  
   
-    ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
+    ![顯示如何將總計新增至報表產生器自由格式報表的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-table-totals.png)
   
-13. 選取 Product 資料行中的資料格並輸入 **Total**。
+13. 選取 Product 資料行中的資料格並輸入 **Total** 。
 
-    ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
+    ![[Product] 資料行中資料格的螢幕擷取畫面，其中已鍵入 Total。](../reporting-services/media/report-builder-free-form-type-total.png)
 
 12. 選取 [SalesDate] 欄位。 在 [主資料夾] 索引標籤 > [數字]，將 [預設] 變更為 [日期]。
 
@@ -327,7 +327,7 @@ ms.locfileid: "87247457"
   
 報表會顯示含有銷售額詳細資料及總計的資料表。  
   
-![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
+![顯示報表產生器自由格式報表中資料表預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-with-table.png)
    
 ## <a name="6-save-the-report"></a><a name="Save"></a>6.儲存報表  
 您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。  
@@ -344,7 +344,7 @@ ms.locfileid: "87247457"
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  在 **[名稱]** 中，將預設名稱取代為 **SalesInformationByTerritory**。  
+4.  在 **[名稱]** 中，將預設名稱取代為 **SalesInformationByTerritory** 。  
   
 5.  按一下 [檔案] 。  
   
@@ -356,7 +356,7 @@ ms.locfileid: "87247457"
   
 2.  按一下 **[桌面]** 、 **[我的文件]** 或 **[我的電腦]** ，然後瀏覽到您要儲存報表的資料夾。  
   
-3.  在 **[名稱]** 中，將預設名稱取代為 **SalesInformationByTerritory**。  
+3.  在 **[名稱]** 中，將預設名稱取代為 **SalesInformationByTerritory** 。  
   
 4.  按一下 [檔案] 。  
   
@@ -384,7 +384,7 @@ ms.locfileid: "87247457"
   
 2.  在 [插入] 索引標籤 > [報表項目] >  [矩形]。 將清單方塊內的矩形拖曳到資料表的右邊，形成大約寬 2.25 英吋且高 7.9 英吋的矩形。  
   
-3.  在選取新矩形的情況下，在 [屬性] 窗格中，讓 **BorderColor**成為 LightGrey、 **BorderStyle**成為 Solid、 **BorderWidth**成為 2pt。 
+3.  在選取新矩形的情況下，在 [屬性] 窗格中，讓 **BorderColor** 成為 LightGrey、 **BorderStyle** 成為 Solid、 **BorderWidth** 成為 2pt。 
 
 4. 對齊矩形和資料表的上緣。  
   
@@ -406,12 +406,12 @@ ms.locfileid: "87247457"
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰**Product Quantities Sold**。  
+10. 選取圖表標題，然後輸入︰ **Product Quantities Sold** 。  
   
 12. 在 [主資料夾] 索引標籤 > [字型]，讓標題成為︰
-    * **字型** **Segoe UI Semibold**。
-    * **大小** **12 pt**。
-    * **色彩** **黑色**。  
+    * **字型** **Segoe UI Semibold** 。
+    * **大小** **12 pt** 。
+    * **色彩** **黑色** 。  
 
 13. 以滑鼠右鍵按一下圖例 > [圖例屬性]。
 
@@ -421,7 +421,7 @@ ms.locfileid: "87247457"
 
 16. 視需要拖曳，讓圖表區域變高。
 
-     ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
+     ![顯示要將圓形圖新增至報表產生器自由格式報表的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-pie.png)
   
 ## <a name="to-add-a-column-chart"></a>加入直條圖  
   
@@ -445,19 +445,19 @@ ms.locfileid: "87247457"
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰**Product Sales**。  
+10. 選取圖表標題，然後輸入︰ **Product Sales** 。  
   
 12. 在 [主資料夾] 索引標籤 > [字型]，讓標題成為︰
-    * **字型** **Segoe UI Semibold**。
-    * **大小** **12 pt**。
-    * **色彩** **黑色**。  
+    * **字型** **Segoe UI Semibold** 。
+    * **大小** **12 pt** 。
+    * **色彩** **黑色** 。  
   
 15. 以滑鼠右鍵按一下圖例，然後按一下 **[刪除圖例]** 。  
   
     > [!NOTE]  
     > 當為小型圖表時，移除圖例會讓圖表更容易閱讀。  
   
-    ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
+    ![顯示要將直條圖新增至報表產生器自由格式報表的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-column.png)
 
 12. 選取圖表軸，然後在 [主資料夾] 索引標籤 > [數字] > [貨幣]。
 
@@ -470,13 +470,13 @@ ms.locfileid: "87247457"
   
     在 [屬性] 窗格中， **Name** 屬性會顯示該矩形的名稱。  
   
-    ![report-builder-free-form-rectangle-name](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
+    ![顯示如何在報表產生器自由格式報表中檢視 Name 屬性的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
   
 2.  按一下圓形圖。  
   
 3.  在 [屬性]  窗格中，確認 **Parent** 屬性包含矩形的名稱。  
   
-     ![report-builder-free-form-pie-parent](../reporting-services/media/report-builder-free-form-pie-parent.png) 
+     ![顯示如何在報表產生器自由格式報表中檢視 Parent 屬性的螢幕擷取畫面。](../reporting-services/media/report-builder-free-form-pie-parent.png) 
   
 4.  按一下直條圖，然後重複步驟 3。  
   

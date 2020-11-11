@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245665"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043741"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖新增至報表 (報表產生器)
 在本教學課程中，您會在 Reporting Services 分頁報表中建立圓形圖。 您將新增百分比，並將小配量合併為單一配量。
@@ -23,7 +23,7 @@ ms.locfileid: "87245665"
 
 此圖顯示您將建立的圓形圖。 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![報表產生器圓形圖的螢幕擷取畫面。](../reporting-services/media/report-builder-pie-chart-final.png)
   
 如果圓形圖上的資料點過多，資料點標籤可能會太擁擠而難以閱讀。 在該情況下，請考慮將多個小配量合併成一個較大配量。 將資料彙總成少數資料點時，圓形圖會更容易讀取。  
  
@@ -51,7 +51,7 @@ ms.locfileid: "87245665"
   
 4.  在 [選擇資料集] 頁面上，按一下 [建立資料集]，然後按一下 [下一步]。  
   
-5.  在 [選擇與資料來源的連線]**** 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]****。 您可能需要輸入使用者名稱和密碼。  
+5.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源，然後按一下 [下一步]。 您可能需要輸入使用者名稱和密碼。  
   
     > [!NOTE]  
     > 只要您有適當的權限，選擇哪一種資料來源都無關緊要。 因為您不會從資料來源取得資料。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -94,7 +94,7 @@ ms.locfileid: "87245665"
   
     圖表就會加入至設計介面。 您看不到圓形圖的實際值，而是看到產品 1、產品 2 等等，以了解圖表的外觀。  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![設計檢視中報表產生器圓形圖的螢幕擷取畫面。](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  按一下圖表，即可顯示圖表控點。 拖曳圖表的右下角，使其變大。 請注意，報表設計介面也會變大，以容納圖表的大小。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "87245665"
   
 報表會顯示畫分有八個配量的圓形圖，每一塊表示一個產品。 現在，您會看到實際產品，而且每個配量的大小都代表該產品的銷售量。 其中 3 塊配量極少。  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![顯示報表產生器圓形圖預覽的螢幕擷取畫面。](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3.在每一塊配量中顯示百分比  
 在圓形圖的每個配量上，您可以顯示這個配量相較於整個圓形圖的百分比。  
@@ -114,9 +114,9 @@ ms.locfileid: "87245665"
   
 3.  以滑鼠右鍵按一下標籤，然後按一下 [數列標籤屬性]。  
   
-4.  在 [標籤資料] 方塊中，選取 **#PERCENT**。  
+4.  在 [標籤資料] 方塊中，選取 **#PERCENT** 。  
     
-5.  (選擇性) 若要指定標籤所顯示的小數位數，請在 [標籤資料]**** 方塊中，於 **#PERCENT** 後面輸入 **{Pn}**，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 **#PERCENT{P0}** 。  
+5.  (選擇性) 若要指定標籤所顯示的小數位數，請在 [標籤資料] 方塊中，於 **#PERCENT** 後面輸入 **{Pn}** ，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 **#PERCENT{P0}** 。  
 
 6.  若要以百分比顯示值，UseValueAsLabel 屬性必須為 False。 如果系統提示您在 [確認動作] 對話方塊中設定這個值，請按一下 [是]。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "87245665"
   
 報表會顯示每個圓形圖配量佔整體的百分比。  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![顯示報表產生器圓形圖預覽的螢幕擷取畫面，其中顯示每個配量所佔百分比。](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4.將較小的配量收集成一塊配量  
 圓形圖中有 3 塊配量極少。 您可以將多個小配量合併為一個代表這三個配量的較大「其他」配量。  
@@ -142,19 +142,19 @@ ms.locfileid: "87245665"
   
 4.  在 [一般]  區段中，展開 [CustomAttributes]  節點。  
   
-5.  將 **CollectedStyle** 屬性設定為 **SingleSlice**。  
+5.  將 **CollectedStyle** 屬性設定為 **SingleSlice** 。  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![顯示如何在報表產生器圓形圖中設定單一配量屬性的螢幕擷取畫面。](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  確認 **CollectedThreshold** 屬性設定為 5。  
   
-7.  確認 **CollectedThresholdUsePercent** 屬性設定為 **True**。  
+7.  確認 **CollectedThresholdUsePercent** 屬性設定為 **True** 。  
   
 8.  在 [主資料夾] 索引標籤上，按一下 [執行] 預覽報表。  
   
 在圖例中，您現在會看到「其他」類別目錄。 新的圓形圖配量會將低於 5% 的所有配量結合成一個佔整個圓形圖 6% 的配量。  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![顯示報表產生器圓形圖如何從圖表頂端 90 度開始的螢幕擷取畫面。](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5.在頂端開始繪製圓形圖值 
 
@@ -166,13 +166,13 @@ ms.locfileid: "87245665"
 
 2. 選取圓形圖本身。
 
-3. 在 [屬性] 窗格的 [自訂屬性] 底下，將 PieStartAngle 從 **0** 變更為 **270**。
+3. 在 [屬性] 窗格的 [自訂屬性] 底下，將 PieStartAngle 從 **0** 變更為 **270** 。
 
 4. 按一下 [執行] 以預覽報表。
 
 現在，圓形圖配量是依照字母順序，並且於頂端開始，而且結束於「其他」配量。
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![顯示報表產生器圓形圖如何從頂端開始的螢幕擷取畫面。](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6.加入報表標題  
   
@@ -182,7 +182,7 @@ ms.locfileid: "87245665"
 
 2. 在設計介面上，按一下 [按一下以新增標題]。  
   
-2.  輸入 **Camera and Camcorder Sales**並按 ENTER，然後輸入 **As a Percentage of Total Sales**，它看起來如下：  
+2.  輸入 **Camera and Camcorder Sales** 並按 ENTER，然後輸入 **As a Percentage of Total Sales** ，它看起來如下：  
   
     **Camera and Camcorder Sales**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "87245665"
   
 2.  在 [檔案] 功能表上，按一下 [儲存]。  
   
-3.  在 [名稱] 中，鍵入 **Sales Pie Chart**。  
+3.  在 [名稱] 中，鍵入 **Sales Pie Chart** 。  
   
 4.  按一下 [檔案] 。  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243595"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243787"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>使用共用資料集 - Web 入口網站
 
@@ -32,7 +32,7 @@ ms.locfileid: "87243595"
   
 2.  選取 [資料集]。  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![顯示 [新增] 下拉式清單的螢幕擷取畫面，其中已標註 [資料集] 選項。](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  將會啟動 [報表產生器]，或提示您下載它。  
   
@@ -49,19 +49,19 @@ ms.locfileid: "87243595"
 > [!NOTE]
 > 如果您在資料夾中沒有看到共用資料集，請確定您正在檢視資料集。 您可以從入口網站右上角的功能表列選取 [檢視]。 請確定已選取 [資料集]。  
   
-1.  針對您要管理的資料庫選取**省略符號 (...)** 。  
+1.  針對您要管理的資料庫選取 **省略符號 (...)** 。  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![顯示使用者選取資料集省略符號選項的螢幕擷取畫面。](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  選取 [管理] 會開啟編輯畫面。  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![顯示已選取省略符號選項並標註 [管理] 選項的螢幕擷取畫面。](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>屬性
   
 在 [屬性] 畫面中，您可以變更該資料集的 [名稱] 和 [描述]。 您也可以 [刪除]、[移動]、[在報表產生器中編輯]、[下載] 或 [取代]。  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![顯示 [Edit Company Sales] \(編輯公司銷售\) 對話方塊中 [屬性] 畫面的螢幕擷取畫面。](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Caching
   
@@ -69,19 +69,19 @@ ms.locfileid: "87243595"
   
 1.  [永遠以最新的資料執行此報表] 會在要求時針對資料來源進行查詢。  
   
-2.  [快取此報表的複本並在可用時加以使用]**** 會將資料的暫存複本置於快取中，以供使用此資料集的項目使用。 快取通常會改善效能，因為資料是從快取傳回，而非再次執行資料集查詢。  
+2.  [快取此報表的複本並在可用時加以使用] 會將資料的暫存複本置於快取中，以供使用此資料集的項目使用。 快取通常會改善效能，因為資料是從快取傳回，而非再次執行資料集查詢。  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![顯示 [Edit Company Sales] \(編輯公司銷售\) 對話方塊中 [快取] 畫面的螢幕擷取畫面，其中已選取 [永遠以最新的資料執行此報表] 選項。](../reporting-services/media/ssrsdataset-caching1.png)  
   
 選取 [快取此報表的複本並在可用時加以使用] 會顯示更多選項。  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![顯示 [Edit Company Sales] \(編輯公司銷售\) 對話方塊中 [快取] 畫面的螢幕擷取畫面，其中已選取 [快取此報表的複本並在可用時加以使用] 選項。](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>快取到期  
   
 您可以控制是否要讓共用資料集的快取在一段時間後到期，您也可以選擇用排程來控制。 您可以使用共用排程。  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![顯示已選取 [快取於排程逾期] 選項的螢幕擷取畫面。](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > 設定到期時間不會重新整理快取。 若沒有快取重新整理計劃，則會在資料集下次執行的時候重新整理資料。  
@@ -98,7 +98,7 @@ ms.locfileid: "87243595"
   
 當您完成之後，即可選取 [建立快取重新整理計劃]。  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![[Edit Company Sales] \(編輯公司銷售\) 對話方塊的螢幕擷取畫面，其中顯示 [建立快取重新整理計劃] 選項。](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > 必須正在執行 SQL Server Agent 才能建立快取重新整理計劃。  

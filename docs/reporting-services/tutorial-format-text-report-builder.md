@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 833efefc3cf79e6a4939a46e15fd80acb493f541
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248117"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243799"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：將文字格式化 (報表產生器)
 
@@ -22,7 +22,7 @@ ms.locfileid: "87248117"
 
 使用資料來源和資料集設定空白報表之後，您可以挑選想要瀏覽的格式。 下圖顯示報表，與您將要建立的報表相似。  
   
-![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
+![格式化報表產生器報表的螢幕擷取畫面。](../reporting-services/media/report-build-format-report.png) 
   
 您在某個步驟故意出錯，所以知道錯誤的原因是什麼。 接著您要更正錯誤以便達到想要的效果。  
     
@@ -51,14 +51,14 @@ ms.locfileid: "87248117"
 
     如果看不到 [報表資料] 窗格，請檢查 [檢視] 索引標籤上的 [報表資料]。
   
-2.  在 [名稱] 方塊中，輸入：**TextDataSource**  
+2.  在 [名稱] 方塊中，輸入： **TextDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]** 。  
   
 4.  驗證連線類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中鍵入：`Data Source = <servername>`  
   
     > [!NOTE]  
-    > `<servername>`運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 本教學課程無須任何特定資料，只需要 SQL Server 資料庫的連線。 如果您已有資料來源連接列於 [資料來源連接]**** 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > `<servername>`運算式 (例如 Report001) 會指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 本教學課程無須任何特定資料，只需要 SQL Server 資料庫的連線。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -66,9 +66,9 @@ ms.locfileid: "87248117"
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料集]。  
   
-2.  確認資料來源為 **TextDataSource**。  
+2.  確認資料來源為 **TextDataSource** 。  
   
-3.  在 [名稱] 方塊中，輸入：**TextDataset。**  
+3.  在 [名稱] 方塊中，輸入： **TextDataset。**  
   
 4.  確認已選取 **[文字]** 查詢類型，然後按一下 **[查詢設計工具]** 。  
   
@@ -131,13 +131,13 @@ ms.locfileid: "87248117"
   
 2.  按一下 **[執行]** 。  
   
-    您只會看到一筆記錄 **Fernando Ross**，這是查詢中依字母為第一順位的記錄。 欄位並未重複成顯示該欄位內的其他記錄。  
+    您只會看到一筆記錄 **Fernando Ross** ，這是查詢中依字母為第一順位的記錄。 欄位並未重複成顯示該欄位內的其他記錄。  
   
 3.  按一下 **[設計]** 返回 [設計] 檢視。  
   
 4.  選取文字方塊中的運算式 `<Expr>` 。  
   
-5.  在 [屬性] 窗格中，您會看到 [值]**** 屬性如下 (若未看見 [屬性] 窗格，請檢查 [檢視]**** 索引標籤上的 [屬性]****)：  
+5.  在 [屬性] 窗格中，您會看到 [值] 屬性如下 (若未看見 [屬性] 窗格，請檢查 [檢視] 索引標籤上的 [屬性])：  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -180,11 +180,11 @@ ms.locfileid: "87248117"
   
 1.  在 [插入] 索引標籤 > [資料表] > [資料表精靈]。  
   
-2.  在 [新增資料表或矩陣精靈] 的 [選擇資料集]**** 頁面上，按一下 [選擇這份報表中現有的資料集或共用資料集]**** > [TextDataset (在此報表中)]**** > [下一步]****。  
+2.  在 [新增資料表或矩陣精靈] 的 [選擇資料集] 頁面上，按一下 [選擇這份報表中現有的資料集或共用資料集] > [TextDataset (在此報表中)] > [下一步]。  
   
-3.  在 [排列欄位]**** 頁面上，將 [Territory]****、[LinkText]**** 和 [Product]**** 欄位拖曳到 [資料列群組]****，並將 [Sales]**** 欄位拖曳到 [值]****，然後按一下 [下一步]****。  
+3.  在 [排列欄位] 頁面上，將 [Territory]、[LinkText] 和 [Product] 欄位拖曳到 [資料列群組]，並將 [Sales] 欄位拖曳到 [值]，然後按一下 [下一步]。  
 
-    ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![顯示如何在報表產生器中排列文字欄位的螢幕擷取畫面。](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  在 [選擇配置] 頁面上，清除 [展開/摺疊群組] 核取方塊以便看見整個資料表，然後按一下 [下一步]。 
   
@@ -194,21 +194,21 @@ ms.locfileid: "87248117"
   
     資料表看起來似乎沒問題，不過卻有兩個總計資料列。 [LinkText] 資料行不需要 [Total] 資料列。  
     
-    ![report-builder-format-2-totals](../reporting-services/media/report-builder-format-2-totals.png)
+    ![顯示報表產生器報表中兩個總計的螢幕擷取畫面。](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  按一下 **[設計]** 返回 [設計] 檢視。  
   
-9. 選取 [LinkText]**** 資料行中的 [Total]**** 資料格，然後按住 SHIFT 鍵並選取其右邊的兩個資料格：[Product]**** 資料行中的空白資料格，以及 [Sales]**** 資料行中的 `[Sum(Sales)]` 資料格。  
+9. 選取 [LinkText] 資料行中的 [Total] 資料格，然後按住 SHIFT 鍵並選取其右邊的兩個資料格：[Product] 資料行中的空白資料格，以及 [Sales] 資料行中的 `[Sum(Sales)]` 資料格。  
   
 11. 在選取這三個資料格之後，以滑鼠右鍵按一下其中一個資料格，然後按一下 [刪除資料列]。  
 
-    ![report-builder-format-delete-rows](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![顯示如何從報表產生器報表中刪除資料列的螢幕擷取畫面。](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. 按一下 **[執行]** 。  
 
     現有，它只有一個 [總計] 資料列。
     
-    ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
+    ![顯示報表產生器報表中一個總計的螢幕擷取畫面。](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>加入超連結至報表  
 在本節中，您要加入超連結指向上一節資料表中的文字。  
@@ -231,7 +231,7 @@ ms.locfileid: "87248117"
   
     文字現在看起來就像一個連結。  
     
-    ![report-builder-format-hyperlink](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![顯示報表產生器報表中超連結文字的螢幕擷取畫面。](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. 按一下該連結。 如果您的電腦已連接至網際網路，瀏覽器將會開啟報表產生器說明主題。  
   
@@ -246,20 +246,20 @@ ms.locfileid: "87248117"
   
 4.  如果 [屬性] 窗格並未開啟，請選取 [檢視] 索引標籤上的 [屬性] 核取方塊。  
   
-5.  在 [屬性] 窗格中，尋找 WritingMode 屬性，並將其從 **Default** 變更為 **Rotate270**。  
+5.  在 [屬性] 窗格中，尋找 WritingMode 屬性，並將其從 **Default** 變更為 **Rotate270** 。  
  
     > [!NOTE]  
     > 當 [屬性] 窗格中的屬性組織成類別目錄時，WritingMode 會位於 [當地語系化] 類別目錄中。 請確定您已選取資料格，而不是文字。 WritingMode 是文字方塊的屬性，並非文字的屬性。  
 
-    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![報表產生器報表中 [Territory] 欄位的螢幕擷取畫面。](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  在 [主資料夾]**** 索引標籤 > [段落]**** 區段上，選取 [中間]**** 和 [置中]****，將文字定位在儲存格的垂直及水平中心。  
+6.  在 [主資料夾] 索引標籤 > [段落] 區段上，選取 [中間] 和 [置中]，將文字定位在儲存格的垂直及水平中心。  
   
 8.  按一下 [執行]\( **!** )。  
   
 如今 `[Territory]` 資料格中的文字已呈垂直方向，從資料格底部往上書寫。  
 
-![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![顯示 [Territory] 值已旋轉 270 度的螢幕擷取畫面。](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="format-currency"></a><a name="FormatCurrency"></a>將貨幣格式化  
   
@@ -269,9 +269,9 @@ ms.locfileid: "87248117"
   
 3.  在 [主資料夾] 索引標籤 > [數字] 群組 > [貨幣] 按鈕。  
   
-4.  (選擇性)     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [ **$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
+4.  (選擇性)     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [ **$12,345.00** ]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
 
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![報表產生器中 [範例值] 選項的螢幕擷取畫面。](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (選擇性) 在 [主資料夾] 索引標籤的 [數字] 群組中，按一下[減少小數位數] 按鈕兩次，顯示沒有分的貨幣數字。  
   
@@ -279,13 +279,13 @@ ms.locfileid: "87248117"
   
 報表如今已顯示格式化的資料，更容易閱讀。  
 
-![report-build-format-report](../reporting-services/media/report-build-format-report.png)
+![顯示重新格式化報表組建格式報表的螢幕擷取畫面。](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>顯示 HTML 格式的文字  
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
-2.  在 [插入]**** 索引標籤上，按一下 [文字方塊]****，然後在設計介面上按一下並拖曳，以在資料表底下建立大約 4 英吋寬、3 英吋高的文字方塊。  
+2.  在 [插入] 索引標籤上，按一下 [文字方塊]，然後在設計介面上按一下並拖曳，以在資料表底下建立大約 4 英吋寬、3 英吋高的文字方塊。  
   
 3.  複製以下文字並將其貼入文字方塊中：  
   
@@ -321,7 +321,7 @@ ms.locfileid: "87248117"
   
 文字方塊中的文字會顯示成標頭、段落和項目符號清單。  
   
-![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
+![顯示報表產生器報表中格式化文字的螢幕擷取畫面。](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="save-the-report"></a><a name="Save"></a>儲存報表  
 您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。  

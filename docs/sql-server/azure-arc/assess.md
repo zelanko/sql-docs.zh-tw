@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257998"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294382"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>在已啟用 Azure Arc 的 SQL Server 執行個體上設定 SQL 評定
 
@@ -37,11 +37,22 @@ SQL 評定會提供機制供您評估 SQL Server 的設定。 本文提供在已
    > [!div class="mx-imgBorder"]
    > [ ![螢幕擷取畫面，顯示 SQL Server - Azure Arc 資源的環境健康情況畫面。](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. 指定資料收集機器上的工作目錄。 預設會使用 `C:\sql_assessment\work_dir`。 在收集和分析期間，資料會暫時儲存在該資料夾中。 如果資料夾不存在，則會自動建立。
+> [!IMPORTANT]
+> 如果未安裝 MMA 延伸模組，您將無法起始隨選 SQL 評定。
 
-1. 選取 [下載設定指令碼]。 將下載的指令碼複製到目標電腦。
+2. 選取帳戶類型。 如果您有受控服務帳戶，則其可讓您直接從入口網站起始 SQL 評定。 請指定帳戶名稱。
 
-1. 開啟 **powershell.exe** 的管理員執行個體，然後執行下列其中一個程式碼區塊：
+> [!NOTE]
+> 指定「受控的服務帳戶」會啟用 [Configure SQL Assessment] \(設定 SQL 評定\) 按鈕，讓您可藉由部署 *CustomScriptExtension* ，以從入口網站起始評定。 因為一次只能部署一個 *CustomScriptExtension* ，所以執行後會自動移除 SQL 評定的指令碼延伸模組。 如果已將另一個 *CustomScriptExtension* 部署到主機電腦，則不會啟用 [Configure SQL Assessment] \(設定 SQL 評定\) 按鈕。
+
+3. 如果想要變更預設值，請指定資料收集電腦上的工作目錄。 預設會使用 `C:\sql_assessment\work_dir`。 在收集和分析期間，資料會暫時儲存在該資料夾中。 如果資料夾不存在，則會自動建立。
+
+4. 如果按一下 [Configure SQL Assessment] \(設定 SQL 評定\) 從入口網站起始 SQL 評定，則會顯示標準部署泡泡。
+
+> [!div class="mx-imgBorder"]
+   > [ ![顯示 CustomScriptExtension 部署的螢幕擷取畫面。](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. 如果想要從目標電腦起始 SQL 評定，請按一下 [下載組態指令碼]，將下載的指令碼複製到目標電腦，然後在 **powershell.exe** 的管理執行個體中執行下列其中一個程式碼區塊：
 
    * _網域帳戶_ ：系統會提示您輸入使用者帳戶和密碼。
 
@@ -61,7 +72,7 @@ SQL 評定會提供機制供您評估 SQL Server 的設定。 本文提供在已
 > 指令碼會排程名為 *SQLAssessment* 的工作，以觸發資料收集。 此工作會在您執行指令碼後的一小時內執行。 然後每隔七天重複執行一次。
 
 > [!TIP]
-> 您可以將工作修改為在不同的日期和時間執行，或甚至強制其立即執行。 在工作排程器程式庫中，尋找 [Microsoft] > [Operations Management Suite] > [AOI] **\*\*\***  > [評定] > [SQLAssessment]。
+> 您可將工作修改為在不同的日期和時間執行，或甚至強制其立即執行。 在工作排程器程式庫中，尋找 [Microsoft] > [Operations Management Suite] > [AOI] **\*\*\***  > [評定] > [SQLAssessment]。
 
 ## <a name="view-sql-assessment-results"></a>檢視 SQL 評定結果
 

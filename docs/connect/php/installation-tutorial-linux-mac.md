@@ -1,7 +1,7 @@
 ---
 title: Drivers for PHP 的 Linux 和 macOS 安裝
 description: 在這些指示中，您將了解如何在 Linux 或 macOS 上安裝 Microsoft Drivers for PHP for SQL Server。
-ms.date: 09/22/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 8d256e7cabf26b280988afe08d8e795466141688
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115538"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243731"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程
 下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 20.04；RedHat 7 和 8；Debian 8、9 和 10；Suse 12 和 15；Alpine 3.11，以及 macOS 10.13、10.14 及 10.15 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache Web 伺服器，以及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)的小節。
 
-這些指示預設會使用 `pecl install` 安裝 PHP 7.4。 您可能需要先執行 `pecl channel-update pecl.php.net`。 請注意，部分支援的 Linux 發行版本會預設為 PHP 7.1 或更早版本，但最新版本的 PHP drivers for SQL Server 並不支援這些版本。請參閱每節開頭的注意事項以改為安裝 PHP 7.2 或 7.3。
+這些指示預設會使用 `pecl install` 安裝 PHP 7.4。 您可能需要先執行 `pecl channel-update pecl.php.net`。 部分支援的 Linux 發行版本會預設為 PHP 7.1 或更早版本，但適用於 SQL Server 的最新版 PHP 驅動程式並不支援這些版本。 請參閱每節開頭的注意事項以改為安裝 PHP 7.2 或 7.3。
 
 同時包含在 Ubuntu 上安裝 PHP FastCGI Process Manager (PHP-FPM) 的指示。 如果使用 nginx Web 伺服器而非 Apache，便會需要此項目。
 
@@ -267,7 +267,7 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>在 Suse 12 和 15 上安裝驅動程式
 
 > [!NOTE]
-> 在下列指示中，使用您的 Suse 版本來取代 `<SuseVersion>`；如果您要使用 Suse Enterprise Linux 15，則它將會是 SLE_15 或 SLE_15_SP1。 針對 Suse 12，請使用 SLE_12_SP4 (或更新版本，若適用的話)。 並非所有 PHP 版本都可供適用於 Suse Linux 的所有版本使用，請參閱 `http://download.opensuse.org/repositories/devel:/languages:/php` 以查看哪些版本的 Suse 具有可用的預設版本 PHP，或 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 以查看哪些其他版本的 PHP 可供哪些版本的 Suse 使用。
+> 在下列指示中，使用您的 Suse 版本來取代 `<SuseVersion>`；如果您要使用 Suse Enterprise Linux 15，則它將會是 SLE_15 或 SLE_15_SP1。 針對 Suse 12，請使用 SLE_12_SP4 (或更新版本，若適用的話)。 並非所有 PHP 版本都可供 Suse Linux 的所有版本使用。 請參閱 `http://download.opensuse.org/repositories/devel:/languages:/php` 以查看哪些版本的 Suse 具有可用的預設 PHP 版本，或參閱 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 以查看哪些其他 PHP 版本可供哪些版本的 Suse 使用。
 
 > [!NOTE]
 > 適用於 PHP 7.4 的套件並不適用於 Suse 12。 若要安裝 PHP 7.2，使用下列 URL 來取代以下的存放庫 URL：`https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`。
@@ -316,7 +316,7 @@ sudo systemctl restart apache2
 > PHP 的預設版本為 7.3。 Alpine 3.11 的其他存放庫可能會提供其他版本的 PHP。 您可以改為從來源編譯 PHP。
 
 ### <a name="step-1-install-php"></a>步驟 1： 安裝 PHP
-適用於 Alpine 的 PHP 套件可以在 `edge/community` 存放庫中找到。 請在其 WIKI 頁面上查看[啟用社群存放庫](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) \(英文\)。 將下列行新增至 `/etc/apt/repositories`，並以 Alpine 存放庫鏡像的 URL 取代 `<mirror>`：
+適用於 Alpine 的 PHP 套件可以在 `edge/community` 存放庫中找到。 請在其 WIKI 頁面上查看 [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) (啟用社群存放庫)。 將下列行新增至 `/etc/apt/repositories`，並以 Alpine 存放庫鏡像的 URL 取代 `<mirror>`：
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -367,7 +367,7 @@ brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
-PHP 現在應該位於您的路徑中：執行 `php -v` 以確認您正在執行正確的 PHP 版本。 如果 PHP 不在您的路徑中或不是正確版本，請執行下列命令：
+PHP 現在應該位於您的路徑中。 執行 `php -v` 以確認正在執行正確的 PHP 版本。 如果 PHP 不在您的路徑中或不是正確版本，請執行下列命令：
 ```bash
 brew link --force --overwrite php@7.4
 ```
@@ -407,7 +407,7 @@ sudo apachectl restart
 ## <a name="testing-your-installation"></a>測試您的安裝
 
 若要測試此範例指令碼，在系統的文件根目錄中建立名為 testsql.php 的檔案。 這在 Ubuntu、Debian 和 Redhat 上為 `/var/www/html/`、在 SUSE 上為 `/srv/www/htdocs`、在 Alpine 上為 `/var/www/localhost/htdocs`，或是在 macOS 上為 `/usr/local/var/www`。 將下列指令碼複製到其中，適當地取代伺服器、資料庫、使用者名稱和密碼。
-```
+```php
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
@@ -415,6 +415,15 @@ $connectionOptions = array(
     "uid" => "yourUsername",
     "pwd" => "yourPassword"
 );
+
+function exception_handler($exception) {
+    echo "<h1>Failure</h1>";
+    echo "Uncaught exception: " , $exception->getMessage();
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+set_exception_handler('exception_handler');
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -434,7 +443,7 @@ if ($stmt === false) {
 }
 ?>
 
-<h1> Results : </h1>
+<h1> Success Results : </h1>
 
 <?php
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -447,6 +456,7 @@ sqlsrv_close($conn);
 function formatErrors($errors)
 {
     // Display errors
+    echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
     foreach ($errors as $error) {
         echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
@@ -456,7 +466,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-將您的瀏覽器指向 https://localhost/testsql.php (macOS 上的 https://localhost:8080/testsql.php )。 您現在應該能夠連線到您的 SQL Server/Azure SQL 資料庫。
+將您的瀏覽器指向 https://localhost/testsql.php (macOS 上的 https://localhost:8080/testsql.php )。 您現在應該能夠連線到您的 SQL Server/Azure SQL 資料庫。 如果看不到顯示 SQL 版本資訊的成功訊息，請參閱[支援資源](support-resources-for-the-php-sql-driver.md)以取得提供協助的位置。
 
 ## <a name="see-also"></a>另請參閱  
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

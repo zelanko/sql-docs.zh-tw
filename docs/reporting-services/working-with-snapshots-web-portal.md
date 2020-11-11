@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247417"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243807"
 ---
 # <a name="working-with-snapshots-web-portal"></a>使用快照集 (入口網站)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-您可以控制是否要為報表建立快照集，方法是選取報表的**省略符號 (...)**，並選取 [管理]****，然後選取 [快取]**** 或 [歷程記錄快照集]****。  
+您可以控制是否要為報表建立快照集，方法是選取報表的 **省略符號 (...)** ，並選取 [管理]，然後選取 [快取] 或 [歷程記錄快照集]。  
   
 > [!NOTE]
 > 需要啟動 SQL Server Agent 服務。  
@@ -31,7 +31,7 @@ ms.locfileid: "87247417"
   
 您可以透過下列方式建立快照集。  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![顯示 [Edit Company Sales] \(編輯公司銷售\) 對話方塊中 [快取] 畫面的螢幕擷取畫面，其中包含指定螢幕擷取畫面底下三個步驟的 1、2 和 3 洋紅色數字圓圈。](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  在 [快取] 頁面上，選取 [永遠針對預先產生的快照集執行此報表] 啟用建立快照集的選項。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "87247417"
   
 若要產生記錄快照集，報表必須可以自動執行 (亦即它必須使用預存認證；參數化的報表必須包含所有參數的預設參數值)。 可以手動或以排程作業來產生報表記錄。 報表的記錄屬性決定建立報表記錄的方式。  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![顯示 [Edit Company Sales] \(編輯公司銷售\) 對話方塊中 [記錄快照集] 畫面的螢幕擷取畫面，其中包含指定螢幕擷取畫面底下三個步驟的 1、2 和 3 洋紅色數字圓圈。](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  若要建立記錄快照集，請選取 [+ 新增記錄快照集]。 這會處理報表並將一個項目加入清單。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "87247417"
   
 選取 [排程及設定] 會提供其他選項，以排程及控制所建立之快照集的保留期。  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![顯示 [排程] 和 [進階] 區段的螢幕擷取畫面。](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
 您可以選擇為快照集建立排程以開始建立。 您也可以防止其他人員建立新的快照集。 取消核取 [允許人員手動建立快照集] 將會停用 [+ 新增記錄快照集] 按鈕。  
   

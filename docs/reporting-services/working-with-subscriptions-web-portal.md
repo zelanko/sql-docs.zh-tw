@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243548"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243742"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243548"
 > 需要啟動 SQL Server Agent 服務。   
   
 ![管理訂閱](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-選取報表的**省略符號 (...)** ，並依序選取 [管理] 和 [訂閱]，即可到達 [訂閱] 頁面。  
+選取報表的 **省略符號 (...)** ，並依序選取 [管理] 和 [訂閱]，即可到達 [訂閱] 頁面。  
   
 從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱] 來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "87243548"
 ## <a name="type-of-subscription"></a>訂閱的類型  
 您可以選取 [標準訂用帳戶] 和 [資料驅動訂用帳戶]。  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![顯示 [訂閱類型] 區段的螢幕擷取畫面。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 資料驅動訂閱會在每次執行訂閱時查詢訂閱者資料庫中的訂閱資訊。 資料驅動訂閱會使用查詢結果來判斷訂閱者收件者、傳遞設定和報表參數值。 在執行時期，報表伺服器執行查詢來取得訂閱設定所用的值。   
   
@@ -57,7 +57,7 @@ ms.locfileid: "87243548"
   
 傳遞延伸模組是否可用，取決於該模組是否安裝和設定於報表伺服器。 報表伺服器電子郵件是預設傳遞延伸模組，但您必須先加以設定才能夠使用。 檔案共用傳遞不需要進行設定，但您必須先定義共用資料夾，才能加以使用。  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![顯示 [目的地] 和 [傳遞選項 (Windows 檔案共用)] 區段的螢幕擷取畫面。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 系統會根據您所選取的傳遞延伸模組顯示下列設定：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "87243548"
 ## <a name="data-driven-subscription-dataset"></a>資料驅動訂閱資料集  
 針對資料驅動訂閱，您必須定義用於訂閱的資料集。 選取 [編輯資料集] 提供該資訊。  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![顯示 [資料集] 區段的螢幕擷取畫面。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 您需要先提供用於查詢的 **資料來源** 。 這可以是共用資料來源，或者您可以提供自訂資料來源。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "87243548"
   
 -   結果集中的資料列會決定產生的報表傳遞數目。 如果您有 10,000 個資料列，報表伺服器就會產生 10,000 個通知和傳遞。  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![顯示 [查詢] 區段的螢幕擷取畫面。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
-接著，您可以驗證查詢。 您也可以定義 **查詢逾時**。  
+接著，您可以驗證查詢。 您也可以定義 **查詢逾時** 。  
   
 在您建立查詢之後，即可指派必要欄位的值。 您可以輸入手動資料，或從您所建立的資料集中選取欄位。 
 

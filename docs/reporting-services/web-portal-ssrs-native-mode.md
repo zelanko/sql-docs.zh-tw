@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987374"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243753"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>報表伺服器的入口網站 (SSRS 原生模式)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987374"
 
 Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入口網站中，您可以檢視報表、行動報表、KPI，以及完整巡覽報表伺服器執行個體中的項目。 您也可以使用入口網站來管理單一報表伺服器執行個體。
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![顯示 SQL Server Reporting Services 入口網站的螢幕擷取畫面。](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>什麼是入口網站
 
@@ -86,15 +86,15 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 
 您可以藉由選取右上角的 [檢視]，來控制要顯示的內容。 如果您選取 [顯示隱藏項]，則這些項目將以較淡的色彩來顯示。
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![[檢視] 下拉式清單的螢幕擷取畫面，其中已選取 [顯示隱藏項目] 選項。](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![顯示 [編頁報表] 選項無法使用的螢幕擷取畫面。](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI Desktop 報表與 Excel 活頁簿
 
 您可以上傳、組織及管理 Power BI Desktop 報表和 Excel 活頁簿的權限。 它們會在入口網站中分組在一起。
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![顯示 [Power BI Desktop 報表] 區段和 [Excel 活頁簿] 區段的螢幕擷取畫面。](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 將檔案儲存於 Reporting Services 內，類似於其他資源檔案。 選取這其中一個項目，即會將它們本機下載至您的桌面上。 您可以將它們重新上傳至報表伺服器，藉以儲存所做的變更。
 
@@ -102,7 +102,7 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 
 輸入搜尋字詞，即會看到您可以存取的所有項目。 結果會分類成 KPI、報表、資料集，以及其他項目。 您可以與結果互動，並將它們加到我的最愛。
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![顯示 SQL Server Reporting Services 入口網站的螢幕擷取畫面，其中已標註搜尋文字方塊。](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>入口網站工作
 

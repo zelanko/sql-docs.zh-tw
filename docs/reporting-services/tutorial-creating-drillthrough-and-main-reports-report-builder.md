@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238391"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364640"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -166,7 +166,7 @@ ms.locfileid: "87238391"
   
 7.  按 [下一步] 。  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 將資料組織為群組  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. 將鑽研報表資料組織成群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -192,7 +192,7 @@ ms.locfileid: "87238391"
   
 6.  按 [下一步] 。  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 加入小計和總計  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. 新增鑽研報表小計和總計  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -241,7 +241,7 @@ ms.locfileid: "87238391"
   
 7.  以滑鼠右鍵按一下走勢圖。  
   
-8.  在 [圖表資料] 窗格中，按一下**新增欄位**圖示，然後按一下 [Sales_Amount]。  
+8.  在 [圖表資料] 窗格中，按一下 **新增欄位** 圖示，然後按一下 [Sales_Amount]。  
   
 9. 以滑鼠右鍵按一下 `Sales_Return_Amount` 資料行，然後將資料行加入至該資料行的右側。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "87238391"
   
 11. 以滑鼠右鍵按一下走勢圖。  
   
-12. 在 [圖表資料] 窗格中，按一下**新增欄位** 圖示，然後按一下 [Sales_Return_Amount]。  
+12. 在 [圖表資料] 窗格中，按一下 **新增欄位** 圖示，然後按一下 [Sales_Return_Amount]。  
   
 13. 若要預覽報表，按一下 **[執行]** 。  
   
@@ -280,7 +280,7 @@ ms.locfileid: "87238391"
   
 報表標題包含第一個產品類別目錄的名稱。 稍後，在您當做鑽研報表執行此報表之後，產品類別目錄名稱將會動態變更，以反映在主報表中按下之產品類別目錄的名稱。  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5.更新參數屬性  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5.設定隱藏的參數屬性  
 參數預設是可見的，但不適合這個報表。 您將要更新鑽研報表的參數屬性。  
   
 #### <a name="to-hide-a-parameter"></a>若要隱藏參數  
@@ -294,7 +294,7 @@ ms.locfileid: "87238391"
   
 3.  在 **[一般]** 索引標籤上，按一下 **[隱藏]** 。  
   
-4.  在 **[提示]** 方塊中，輸入 **Product Category**。  
+4.  在 **[提示]** 方塊中，輸入 **Product Category** 。  
   
     > [!NOTE]  
     > 參數是隱藏的，因此絕不會使用這個提示。  
@@ -329,7 +329,7 @@ ms.locfileid: "87238391"
   
 5.  導覽到您將儲存報表的文件庫。  
   
-6.  在 **[名稱]** 方塊中，將預設名稱取代為 **ResellerVSOnlineDrillthrough**。  
+6.  在 **[名稱]** 方塊中，將預設名稱取代為 **ResellerVSOnlineDrillthrough** 。  
   
     > [!NOTE]  
     > 您會將主報表儲存至相同的位置。 如果您想要將主報表和鑽研報表儲存到不同的網站或文件庫，必須在主報表中更新 **[移至報表]** 動作的路徑。  
@@ -349,7 +349,7 @@ ms.locfileid: "87238391"
  
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]** 。  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. 指定資料連接  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. 新增內嵌資料來源  
 您會將內嵌的資料來源儲存到主報表。  
   
 #### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
@@ -388,7 +388,7 @@ ms.locfileid: "87238391"
   
 14. 按 [下一步] 。  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. 建立 MDX 查詢  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. 建立內嵌資料集  
 接著，建立內嵌的資料集。 若要這樣做，您將使用查詢設計工具建立篩選、參數、導出成員，以及資料集本身。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
@@ -444,7 +444,7 @@ ms.locfileid: "87238391"
   
 2.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
   
-3.  將 Sales Quantity 量值拖曳至 [運算式]**** 方塊，並鍵入減號字元 (-)，然後將 Sales Return Quantity 量值拖曳至 [運算式]**** 方塊，將其放置在減號字元後面。  
+3.  將 Sales Quantity 量值拖曳至 [運算式] 方塊，並鍵入減號字元 (-)，然後將 Sales Return Quantity 量值拖曳至 [運算式] 方塊，將其放置在減號字元後面。  
   
     下列程式碼顯示運算式：  
   
@@ -452,7 +452,7 @@ ms.locfileid: "87238391"
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  在 [名稱] 中，輸入 **Net QTY**，然後按一下 **[確定]** 。  
+4.  在 [名稱] 中，輸入 **Net QTY** ，然後按一下 **[確定]** 。  
   
     [導出成員] 窗格會列出 **Net QTY** 導出成員。  
   
@@ -460,7 +460,7 @@ ms.locfileid: "87238391"
   
 6.  在 [中繼資料] 窗格中，展開 [量值]，然後展開 Sales。  
   
-7.  將 Sales Amount 量值拖曳至 [運算式]**** 方塊，並鍵入減號字元 (-)，然後將 Sales Return Amount 量值拖曳至 [運算式]**** 方塊，將其放置在減號字元後面。  
+7.  將 Sales Amount 量值拖曳至 [運算式] 方塊，並鍵入減號字元 (-)，然後將 Sales Return Amount 量值拖曳至 [運算式] 方塊，將其放置在減號字元後面。  
   
     下列程式碼顯示運算式：  
   
@@ -468,7 +468,7 @@ ms.locfileid: "87238391"
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  在 **[名稱]** 方塊中輸入  **Net Sales**，然後按一下 **[確定]** 。[導出成員] 窗格會列出 **Net Sales** 導出成員。  
+8.  在 **[名稱]** 方塊中輸入  **Net Sales** ，然後按一下 **[確定]** 。[導出成員] 窗格會列出 **Net Sales** 導出成員。  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>建立資料集  
   
@@ -486,7 +486,7 @@ ms.locfileid: "87238391"
   
 6.  按 [下一步] 。  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 將資料組織為群組  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. 將主報表資料組織成群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -505,7 +505,7 @@ ms.locfileid: "87238391"
   
     步驟 3 和步驟 4 指定了矩陣中要顯示的資料。  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 加入小計和總計  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. 新增主報表小計和總計  
 您可以在報表中顯示小計和總計。 主報表中的資料會顯示為指標，而且您將會在完成精靈後移除總計。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>若要加入小計和總計  
@@ -590,7 +590,7 @@ ms.locfileid: "87238391"
   
 5.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]** 旁邊的向下鍵。 選取 `Net_QTY`。  
   
-6.  在 `[Sum(Net QTY)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的**資料格，重複步驟 2 到 5。  
+6.  在 `[Sum(Net QTY)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的** 資料格，重複步驟 2 到 5。  
   
 #### <a name="to-add-an-indicator-for-net-sales-values"></a>若要加入 Net Sales 值的指標  
   
@@ -602,11 +602,11 @@ ms.locfileid: "87238391"
   
 4.  以滑鼠右鍵按一下指標，然後在 [量測計資料] 窗格中，按一下 **[(未指定)]** 旁邊的向下鍵。 選取 `Net_Sales`。  
   
-5.  在 `[Sum(Net_Sales)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的**資料格，重複步驟 1 到 4。  
+5.  在 `[Sum(Net_Sales)]` [總計] `[Product_Category_Name]` 內，針對 **資料列群組中的** 資料格，重複步驟 1 到 4。  
   
 6.  若要預覽報表，按一下 **[執行]** 。  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5.更新參數屬性  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5.設定內部參數屬性  
 參數預設是可見的，但不適合這個報表。 您將更新參數屬性，讓參數變成內部的。  
   
 #### <a name="to-make-the-parameter-internal"></a>若要將參數變成內部的  
@@ -655,7 +655,7 @@ ms.locfileid: "87238391"
   
 5.  導覽到您要儲存報表的文件庫。  
   
-6.  在 **[名稱]** 中，將預設名稱取代成 **ResellerVSOnlineMain**。  
+6.  在 **[名稱]** 中，將預設名稱取代成 **ResellerVSOnlineMain** 。  
   
     > [!IMPORTANT]  
     > 將主報表儲存到儲存鑽研報表的相同位置。 若要將主報表和鑽研報表儲存到不同的網站或文件庫，請確認主報表中的 **[移至報表]** 動作指向鑽研報表的正確路徑。  

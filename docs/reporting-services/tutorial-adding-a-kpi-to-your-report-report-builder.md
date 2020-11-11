@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245645"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043711"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 新增至報表 (報表產生器)
 在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。  
@@ -23,7 +23,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 您將建立的報表應類似下圖。  
   
-![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
+![報表產生器 KPI 報表的螢幕擷取畫面。](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
@@ -139,13 +139,13 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
       資料表會加入至設計介面。 這個資料表具有五個資料行和五個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。 [資料行群組] 窗格是空的。  
       
-      ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![顯示資料列群組的螢幕擷取畫面。](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. 按一下 **[執行]** 預覽報表。  
   
 資料表會針對特定日期銷售的每個產品顯示產品名稱、銷售數量和銷售總額。 資料會先依銷售日期排列，然後再依子類別排列。 
 
-![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
+![顯示基本報表產生器 KPI 資料表的螢幕擷取畫面。](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>格式化日期和貨幣
 現在，我們來加寬資料行，並設定日期和貨幣格式。
@@ -160,7 +160,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [$12,345.00]。 如果未顯示範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![已選取報表產生器 [範例值] 選項的螢幕擷取畫面。](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (選擇性) 在 [主資料夾] 索引標籤的 [數字] 群組中，按一下[減少小數位數] 按鈕兩次，顯示沒有分的貨幣數字。
 
@@ -172,7 +172,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 12. 按一下 **[執行]** 預覽報表。  
  
-![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![報表產生器 KPI 報表的螢幕擷取畫面，其中已將數字格式化。](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3.使用背景色彩顯示 KPI  
 您可以將背景色彩設定成執行報表時評估的運算式。  
@@ -183,9 +183,9 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
     請確定您已選取該資料格 (而不是資料格中的文字)，才能檢視 [文字方塊屬性]。 
     
-    ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
+    ![報表產生器 [文字方塊屬性] 選項的螢幕擷取畫面。](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  在 [填滿]**** 索引標籤上，按一下 [填滿色彩]**** 旁的 [fx]**** 按鈕，然後在 [設定運算式對象: BackgroundColor]**** 欄位中輸入下列運算式：  
+2.  在 [填滿] 索引標籤上，按一下 [填滿色彩] 旁的 [fx] 按鈕，然後在 [設定運算式對象: BackgroundColor] 欄位中輸入下列運算式：  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -197,7 +197,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 在顯示子類別銷售額的小計資料列中，資料格的背景色彩會根據銷售總和的值變成紅色、黃色或綠色。  
 
-![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
+![報表產生器 KPI 報表的螢幕擷取畫面，其中以色彩標示特定資料格。](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4.使用量測計顯示 KPI  
 量測計可說明資料集中的單一值。 這個教學課程使用水平的線性量測計，因為它的形狀一目了然，即使很小並用於資料表資料格內，也很容易閱讀。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
@@ -208,7 +208,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 2.  在資料表中，以滑鼠右鍵按一下 [Sales] 資料行的資料行控點 > [插入資料行] > [右方]。 新的資料行就會加入至此資料表。  
 
-    ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![顯示如何將資料行插入報表產生器 KPI 報表的螢幕擷取畫面。](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  在資料行標題中，輸入 **線性 KPI** 。  
   
@@ -224,7 +224,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     當您將 `Sales` 欄位放置到量測計上時，該欄位會移至 [值] 清單，並使用內建的 Sum 函式進行彙總。  
    
-    ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![顯示如何將 [Sales] 欄位拖曳至報表產生器 KPI 報表的螢幕擷取畫面。](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. 在 [量測計資料] 窗格中，按一下 [LinearPointer1] > [指標屬性] 旁的箭號。  
   
@@ -252,7 +252,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     量測計中綠色橫條的水平長度會根據 KPI 的值而變更。  
   
-![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
+![顯示已將 [線性 KPI] 資料行新增至報表產生器 KPI 報表的螢幕擷取畫面。](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5.使用指標顯示 KPI  
 指標是小型的簡單量測計，可一目了然資料值。 由於指標的尺寸小加上簡單明瞭，因此常用於資料表和矩陣。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
@@ -279,7 +279,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 9. 在 [Values and States (值和狀態)] 索引標籤的 [值] 方塊中，選取 [Sum(Sales)]。 請不要變更任何其他選項。  
   
-    根據預設，整個資料區域會進行資料同步處理，而您會在 [同步處理範圍]**** 方塊中看到值 **Tablix1**，這是報表中的資料表資料區域的名稱。  
+    根據預設，整個資料區域會進行資料同步處理，而您會在 [同步處理範圍] 方塊中看到值 **Tablix1** ，這是報表中的資料表資料區域的名稱。  
   
     在此報表中，您也可以變更子類別小計資料格中放置之指標的範圍，以同步處理 [SalesDate] 欄位。  
   
@@ -287,7 +287,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 11. 按一下 **[執行]** 預覽報表。  
 
-![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
+![顯示已將 [警示燈 KPI] 資料行新增至報表產生器 KPI 報表的螢幕擷取畫面。](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6.加入報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本節中，您將使用自動放置在報表主體頂端的文字方塊。  
@@ -298,9 +298,9 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
-2.  輸入 **產品銷售 KPI**，然後按一下文字方塊外部。  
+2.  輸入 **產品銷售 KPI** ，然後按一下文字方塊外部。  
   
-3.  選擇性地以滑鼠右鍵按一下包含**產品銷售 KPI** 的文字方塊，並按一下 [文字方塊屬性]****，然後在 [字型] 索引標籤上選取不同的字型樣式、大小和色彩。  
+3.  選擇性地以滑鼠右鍵按一下包含 **產品銷售 KPI** 的文字方塊，並按一下 [文字方塊屬性]，然後在 [字型] 索引標籤上選取不同的字型樣式、大小和色彩。  
   
 4.  按一下 **[執行]** 預覽報表。  
   
@@ -317,7 +317,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  將 [名稱] 中的預設名稱取代為**產品銷售 KPI**。  
+4.  將 [名稱] 中的預設名稱取代為 **產品銷售 KPI** 。  
   
 5.  按一下 [檔案] 。  
   
@@ -330,9 +330,9 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 2.  按一下 [桌面]、[我的文件] 或 [我的電腦]，然後瀏覽到您要儲存報表的資料夾。  
   
 > [!NOTE]  
-> 如果您無法存取報表伺服器，請按一下 [桌面]****、[我的文件]**** 或 [我的電腦]****，然後將報表儲存到您的電腦。  
+> 如果您無法存取報表伺服器，請按一下 [桌面]、[我的文件] 或 [我的電腦]，然後將報表儲存到您的電腦。  
   
-1.  將 [名稱] 中的預設名稱取代為**產品銷售 KPI**。  
+1.  將 [名稱] 中的預設名稱取代為 **產品銷售 KPI** 。  
   
 2.  按一下 [檔案] 。  
   

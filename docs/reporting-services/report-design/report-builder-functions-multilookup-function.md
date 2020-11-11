@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: b8db1d2a7fe18264c81d7585e02babef65b3346d
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462382"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364570"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>報表產生器函式 - Multilookup 函式
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  
@@ -31,19 +31,19 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>參數  
  *source_expression*  
- (**VariantArray**) 在目前範圍中評估並指定要查閱之名稱或索引鍵集合的運算式。 例如，如果是多值參數 `=Parameters!IDs.value`。  
+ ( **VariantArray** ) 在目前範圍中評估並指定要查閱之名稱或索引鍵集合的運算式。 例如，如果是多值參數 `=Parameters!IDs.value`。  
   
  *destination_expression*  
- (**Variant**) 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如： `=Fields!ID.Value` 。  
+ ( **Variant** ) 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如： `=Fields!ID.Value` 。  
   
  *result_expression*  
- (**Variant**) 對資料集的每個資料列進行評估，而且指定要擷取之值的運算式，其中 *source_expression* = *destination_expression*。 例如： `=Fields!Name.Value` 。  
+ ( **Variant** ) 對資料集的每個資料列進行評估，而且指定要擷取之值的運算式，其中 *source_expression* = *destination_expression* 。 例如： `=Fields!Name.Value` 。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"Colors"。  
   
 ## <a name="return"></a>傳回  
- 傳回 **VariantArray**或在沒有相符項目時傳回 **Nothing** 。  
+ 傳回 **VariantArray** 或在沒有相符項目時傳回 **Nothing** 。  
   
 ## <a name="remarks"></a>備註  
  使用 **Multilookup** 可從具有一對一關聯性的每一組名稱/值組的資料集內擷取一組值。 **MultiLookup** 等於針對一組名稱或索引鍵呼叫 **Lookup** 。 例如，如果是根據主索引鍵識別碼的多值參數，您可以在資料表中的文字方塊內使用運算式中的 **Multilookup** ，從未繫結至參數或資料表的資料集擷取關聯的值。  
@@ -60,7 +60,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  適用以下限制：  
   
--   當套用所有篩選運算式之後，便會評估**Multilookup** 。  
+-   當套用所有篩選運算式之後，便會評估 **Multilookup** 。  
   
 -   只支援一層的查閱。 來源、目的地或結果運算式不能包含查閱函數的參考。  
   
@@ -84,7 +84,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) 和[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例
+
+### <a name="a-use-multilookup-function"></a>A. 使用 MultiLookup 函數
  假設資料集 "Category" 包含 CategoryList 欄位，這個欄位是包含以逗號分隔之類別目錄識別碼的清單，例如 "2, 4, 2, 1"。  
   
  CategoryNames 資料集包含類別目錄識別碼和類別目錄名稱，如下表所示。  
@@ -96,7 +98,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|元件|  
   
- 若要查閱對應到識別碼清單的名稱，請使用 **Multilookup**。 您必須先將此清單分割成字串陣列、呼叫 **Multilookup** 來擷取類別目錄名稱，並將結果串連成一個字串。  
+ 若要查閱對應到識別碼清單的名稱，請使用 **Multilookup** 。 您必須先將此清單分割成字串陣列、呼叫 **Multilookup** 來擷取類別目錄名稱，並將結果串連成一個字串。  
   
  當下列運算式置於繫結至 Category 資料集之資料區中的文字方塊內時，將會顯示 "Bikes, Components, Bikes, Accessories"：  
   
@@ -106,7 +108,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>範例  
+### <a name="b-use-multilookup-with-multivalue-parameter"></a>B. 使用具有多重值參數的 MultiLookup  
  假設 ProductColors 資料集包含色彩識別碼欄位 ColorID 及色彩值欄位 Color，如下表所示。  
   
 |ColorID|Color|  

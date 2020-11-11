@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061050"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364440"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
 
@@ -40,15 +40,14 @@ ms.locfileid: "85061050"
   
  如需詳細資訊，請參閱[不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)。  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>將報表項目加入至文件引導模式中  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> 將報表項目新增至文件引導模式  
   
 1.  在 [設計] 檢視中，選取要加入至文件引導模式的報表項目，例如資料表、矩陣或量測計。 該報表項目的屬性會出現在 [屬性] 窗格中。  
   
     > [!NOTE]  
     >  若要選取 Tablix 資料區，請在任何資料格中按一下來顯示資料列和資料行控點，然後按一下角控點。  
   
-2.  在 [屬性] 窗格中，輸入您希望在文件引導模式中出現在 **[DocumentMapLabel]** 屬性內的文字，或是輸入評估為某個標籤的運算式。 例如，輸入 **Sales Chart**。  
+2.  在 [屬性] 窗格中，輸入您希望在文件引導模式中出現在 **[DocumentMapLabel]** 屬性內的文字，或是輸入評估為某個標籤的運算式。 例如，輸入 **Sales Chart** 。  
   
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請在 **[檢視]** 索引標籤的 **[顯示/隱藏]** 群組中，選取 **[屬性]** 。  
@@ -58,8 +57,7 @@ ms.locfileid: "85061050"
 4.  按一下 **[執行]** 。 報表便會執行，而且文件引導模式會顯示您所建立的標籤。 按一下任何連結，即可跳至包含該項目的報表頁面。  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>將唯一的群組值加入至文件引導模式中  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> 將唯一的群組值新增至文件引導模式  
   
 1.  在 [設計] 檢視中，選取包含您希望顯示在文件引導模式中之群組的資料表、矩陣或清單。 [群組] 窗格會顯示資料列和資料行群組。  
   
@@ -75,8 +73,7 @@ ms.locfileid: "85061050"
   
 7.  按一下 **[執行]** 。 報表便會執行，而且文件引導模式會顯示群組值。 按一下任何連結，即可跳至包含該項目的報表頁面。  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>在檢視報表時隱藏文件引導模式  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> 在檢視報表時隱藏文件引導模式  
   
 1.  在 Web 入口網站中，瀏覽至具有文件引導模式的報表。  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245655"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043804"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖新增至報表 (報表產生器)
 
@@ -22,7 +22,7 @@ ms.locfileid: "87245655"
   
 走勢圖和資料橫條是簡單的小圖表，可在極小空間中傳達大量資訊，通常用於 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表中的資料表與矩陣。 您將建立的報表應類似下圖。  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![顯示報表產生器走勢圖的螢幕擷取畫面。](../reporting-services/media/report-builder-sparkline-final.png)  
      
 完成此教學課程的估計時間：30 分鐘。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "87245655"
   
 4.  在查詢設計工具的工具列上，按一下 [執行]\( **!** )。  
   
-    查詢隨即執行，並顯示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**欄位的結果集。  
+    查詢隨即執行，並顯示 **SalesDate** 、 **Subcategory** 、 **Product** 、 **Sales** 和 **Quantity** 欄位的結果集。  
   
 5.  按 [下一步] 。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "87245655"
   
 8.  將 [SalesDate] 拖曳至 [資料行群組]。  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![顯示如何排列欄位的螢幕擷取畫面。](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. 按 [下一步] 。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "87245655"
   
     *  第三個資料列會針對資料表出現一次，以顯示總計。  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![顯示如何選擇配置的螢幕擷取畫面。](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. 按 [下一步] 。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "87245655"
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
-    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**Product**。 [資料行群組] 窗格會顯示一個資料行群組：**SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
+    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組： **Product** 。 [資料行群組] 窗格會顯示一個資料行群組： **SalesDate** 。 詳細資料是資料集查詢擷取的所有資料。  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![顯示報表產生器群組窗格的螢幕擷取畫面。](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. 按一下 **[執行]** 預覽報表。  
 
@@ -168,15 +168,15 @@ ms.locfileid: "87245655"
   
 2.  在 **SalesDate** 資料行中，按一下第二列的資料格 (位於欄標題資料列底下)。 按住 Ctrl 鍵，然後選取含有 `[Sum(Sales)]`的所有資料格。 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![顯示如何選取 [Sum(Sales)] 的螢幕擷取畫面。](../reporting-services/media/report-builder-select-sum-sales.png) 
   
 3.  在 [主資料夾] 索引標籤 > [數字] 群組中，按一下 [貨幣]。 這些資料格就會變更為顯示格式化貨幣。  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![顯示 [Sum(Sales)] 已取代為預留位置貨幣值的螢幕擷取畫面。](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [ **$12,345.00**]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
+    如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [ **$12,345.00** ]。 如果您看不到範例貨幣值，請按一下 [數字] 群組中的 [預留位置樣式] > [範例值]。  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![顯示已選取 [範例值] 選項的螢幕擷取畫面。](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (選擇性) 將資料格式化為日期  
 根據預設， **SalesDate** 欄位會同時顯示日期和時間資訊。 您可以將該欄位格式化，以便只顯示日期。  
@@ -199,23 +199,23 @@ ms.locfileid: "87245655"
   
 3.  按一下滑鼠右鍵，指向 [插入資料行]，然後按一下 [左方]。  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![顯示如何插入左方資料行的螢幕擷取畫面。](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  在新的資料行中，以滑鼠右鍵按一下 `[Product]` 資料列中的資料格 > [插入] > [走勢圖]。  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![顯示如何插入走勢圖的螢幕擷取畫面。](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  在 [選取走勢圖類型] 對話方塊中，確定已選取 [Column] 資料列的第一個走勢圖，然後按一下 [確定]。  
   
 6.  按一下走勢圖以顯示 [圖表資料] 窗格。  
   
-7.  按一下 [值] 方塊的加號 (+)，再按一下 **Sales**。 
+7.  按一下 [值] 方塊的加號 (+)，再按一下 **Sales** 。 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![顯示如何將值新增至報表產生器走勢圖的螢幕擷取畫面。 ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     **Sales** 欄位內的值現在即為走勢圖的值。  
   
-8.  按一下 [類別目錄群組] 方塊的加號 (+)，再按一下 **SalesDate**。  
+8.  按一下 [類別目錄群組] 方塊的加號 (+)，再按一下 **SalesDate** 。  
   
 9. 按一下 [執行] 以預覽報表。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "87245655"
   
     同時，每一列內最高的橫條都和該列等高。 這也會產生誤導，因為每一列的最大值其實並不相等：Budget Movie-Maker 的最大值為 $10,400，但 Slim Digital 的最大值為 $26,576，是其兩倍以上。 然而，這兩列內最大值橫條的高度幾乎一樣， 所有走勢圖都必須使用相同的縮放比例。  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![顯示報表產生器走勢圖未對齊的螢幕擷取畫面。](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4.垂直與水平對齊走勢圖  
 走勢圖應使用相同的度量，否則會很難讀取。 每一個走勢圖的水平和垂直軸都需要符合其餘的走勢圖。  
@@ -250,7 +250,7 @@ ms.locfileid: "87245655"
   
 現在，每個走勢圖中的所有橫條都與其他走勢圖的橫條對齊，並以相對高度呈現。  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![顯示報表產生器走勢圖已對齊的螢幕擷取畫面。](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7.(選擇性) 變更資料行寬度  
 根據預設，資料表中的每個資料格都會包含一個文字方塊。 頁面轉譯時，文字方塊會垂直展開以容納文字。 在轉譯的報表中，每一個資料列都會依照資料列中最高的轉譯文字方塊高度展開。 設計介面上資料列的高度對於轉譯報表中資料列的高度並無影響。  
@@ -276,9 +276,9 @@ ms.locfileid: "87245655"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
-2.  輸入 **Sales by Date**，然後按一下文字方塊外部。  
+2.  輸入 **Sales by Date** ，然後按一下文字方塊外部。  
   
-3.  選取包含 **Product Sales**的文字方塊。  
+3.  選取包含 **Product Sales** 的文字方塊。  
   
 4.  在 [主資料夾] 索引標籤 > [字型] 群組 > [色彩] 中，請選取 [藍綠色]。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "87245655"
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  將 [名稱] 中的預設名稱取代為 **Product Sales**。  
+4.  將 [名稱] 中的預設名稱取代為 **Product Sales** 。  
   
 5.  按一下 [檔案] 。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "87245655"
   
 2.  按一下 [桌面]、[我的文件] 或 [我的電腦]，然後瀏覽到您要儲存報表的資料夾。  
   
-3.  將 [名稱] 中的預設名稱取代為 **Product Sales**。  
+3.  將 [名稱] 中的預設名稱取代為 **Product Sales** 。  
   
 4.  按一下 [檔案] 。  
   
