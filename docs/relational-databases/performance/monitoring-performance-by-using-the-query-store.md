@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243420"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418019"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 
@@ -75,7 +75,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 >
 > 查詢存放區根據預設不會收集原生編譯預存程序的資料。 請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集原生編譯預存程序的資料。
 
-**等候統計資料**是另一種可協助您針對 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 效能進行疑難排解的來源資訊。 等候統計資料長久以來只能在執行個體層級取得，難以回溯至特定查詢。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，查詢存放區會包含追蹤等候統計資料的維度。下列範例會啟用查詢存放區來收集等候統計資料。
+**等候統計資料** 是另一種可協助您針對 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 效能進行疑難排解的來源資訊。 等候統計資料長久以來只能在執行個體層級取得，難以回溯至特定查詢。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，查詢存放區會包含追蹤等候統計資料的維度。下列範例會啟用查詢存放區來收集等候統計資料。
 
 ```sql
 SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
@@ -93,9 +93,9 @@ SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
 
 查詢存放區包含三個存放區：
 
-- **計劃存放區**以保存執行計劃資訊。
-- **執行階段統計資料存放區**以保存執行統計資料資訊。
-- **等候統計資料存放區**以保存等候統計資料資訊。
+- **計劃存放區** 以保存執行計劃資訊。
+- **執行階段統計資料存放區** 以保存執行統計資料資訊。
+- **等候統計資料存放區** 以保存等候統計資料資訊。
 
 計劃存放區中可為查詢儲存的不重複計劃數目，受限於 **max_plans_per_query** 組態選項。 為了增強效能，資訊會以非同步方式寫入存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。
 
@@ -116,7 +116,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構") ![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構")
 
-選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式方塊，可供依據各種準則來篩選查詢：**持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。
+選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式方塊，可供依據各種準則來篩選查詢： **持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。
 
 選取計劃即可以圖形方式檢視查詢計劃。 按鈕可用來檢視來源查詢、強制執行及取消強制執行查詢計畫、在格線和圖表格式之間切換、比較所選取的計畫 (如果選取了多個)，以及重新整理顯示。
 
@@ -128,9 +128,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。
 
-在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
+在查詢存放區中，等候類型會合併到 **等候類別** 。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
 
-選取 [查詢等候統計資料]，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料] 窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間彙總準則：平均值、最大值、最小值、標準差及**總計** (預設)。
+選取 [查詢等候統計資料]，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料] 窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間彙總準則：平均值、最大值、最小值、標準差及 **總計** (預設)。
 
 ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料")
 
@@ -138,9 +138,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細檢視](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細檢視")
 
-使用頂端的下拉式清單方塊，根據所選取等候類別的各種等候時間準則來篩選查詢：平均值、最大值、最小值、標準差及**總計** (預設)。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。
+使用頂端的下拉式清單方塊，根據所選取等候類別的各種等候時間準則來篩選查詢：平均值、最大值、最小值、標準差及 **總計** (預設)。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。
 
-**等候類別**會將不同的等候類型合併到本質類似的貯體中。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。
+**等候類別** 會將不同的等候類型合併到本質類似的貯體中。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。
 
 以下範例示範如何在查詢存放區引入等候類別之前及之後深入了解您的工作負載：
 
@@ -233,7 +233,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -241,11 +241,13 @@ INNER JOIN sys.query_store_query_text AS Txt
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> 在極端的案例中，查詢存放區可能會因為內部錯誤而進入錯誤狀態。 從 SQL Server 2017 (14.x) 開始，您可以透過在受影響的資料庫中執行 sp_query_store_consistency_check 預存程序來復原查詢存放區。 如需 actual_state_desc 資料行描述中所述的詳細資訊，請參閱 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> 主要使用方式案例
 
