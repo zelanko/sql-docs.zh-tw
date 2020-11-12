@@ -2,7 +2,7 @@
   href: ../machine-learning/index.yml
 - name: Microsoft SQL 文件 >
   href: ../index.yml
-- name: 總覽
+- name: 概觀
   expanded: true
   items:
     - name: 什麼是機器學習服務 (Python 和 R)？
@@ -341,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: 效能
       items:
-        - name: R
+        - name: R 程式碼效能
           items:
-            - name: R 中的效能微調概觀
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: 效能微調伺服器設定
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: 效能微調 - R 中的資料最佳化
+            - name: R 中的資料最佳化
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: R 中的結果效能微調
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: 使用 R 程式碼剖析函式
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: 參考
