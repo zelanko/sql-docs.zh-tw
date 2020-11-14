@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 495bb8455c3e13b88d2d3ae6b400c5c0f2167604
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482971"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631674"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>對資料指標和已備妥陳述式的交易影響
-認可或回復交易對資料指標和存取計畫會有下列影響：  
+認可或回復交易對資料指標和存取計畫會有下列其中一項影響：  
   
--   所有資料指標都會關閉，而且會刪除該連接上備妥語句的存取計畫。  
+-   所有資料指標都會關閉，且該連接上備妥語句的存取計畫會遭到刪除，或  
   
--   所有資料指標都會關閉，且該連接上備妥語句的存取計畫會維持不變。  
+-   所有資料指標都會關閉，且該連接上備妥語句的存取計畫仍維持不變，或 
   
 -   所有資料指標都會保持開啟狀態，而該連接上備妥之語句的存取計畫仍會保持不變。  
   

@@ -2731,10 +2731,10 @@
           items:
             - name: 什麼是語言延伸模組？
               href: language-extensions/language-extensions-overview.md
+            - name: 什麼是 Java 語言延伸模組？
+              href: language-extensions/java-overview.md
             - name: 新功能
               href: language-extensions/language-extensions-whats-new.md
-            - name: Java 語言延伸模組概觀
-              href: language-extensions/java-overview.md
         - name: 安裝
           items:
             - name: 在 Windows 上安裝 語言延伸模組

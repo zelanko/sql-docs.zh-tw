@@ -8,12 +8,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f248978e09be4670d702805873a5ae6f4f7c9de
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 4508db56c0246f181f9244fe0a3b853a3e91eb24
+ms.sourcegitcommit: 4b7ecc080795c5f90322d60df5c0550884f48140
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257461"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334447"
 ---
 # <a name="install-azure-data-cli-azdata-with-apt"></a>使用 apt 安裝 [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "92257461"
    針對 Ubuntu 20.04 用戶端，執行：
 
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"
     ```
 
 4. 安裝 `azdata-cli`。

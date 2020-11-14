@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92193727"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384861"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
 
@@ -288,7 +288,7 @@ ms.locfileid: "92193727"
  Excel 連線管理員、Excel 來源和 Excel 目的地現在明確支援 Excel 2016 資料來源。  
 
 ####  <a name="connector-for-sap-bw-for-sql-server-2016-released"></a><a name="SAPBW"></a> 已發行 Connector for SAP BW for SQL Server 2016  
- 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作為 SQL Server 2016 Feature Pack 的一部分發行。 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作為 SQL Server 2016 Feature Pack 的一部分發行。 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)。
  
 #### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> 已發行 Connectors v4.0 for Oracle and Teradata
 已發行 Microsoft Connectors v4.0 for Oracle and Teradata。 若要下載連接器，請參閱 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -311,7 +311,7 @@ ms.locfileid: "92193727"
 
 #### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> 已發佈對 Azure Synapse Analytics 的支援
 
-最新版的 Azure Feature Pack 包含用來將資料填入 SQL 資料倉儲的 Azure SQL DW 上傳工作。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
+最新版 Azure Feature Pack 包含用來將資料填入 Azure Synapse Analytics 的 Azure SQL DW 上傳工作。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
 ## <a name="usability-and-productivity"></a>可用性和產能  
  
@@ -349,7 +349,7 @@ ms.locfileid: "92193727"
  [SQL Server 匯入和匯出精靈] 現在可以從 Azure Blob 儲存體匯入資料，並將資料儲存至其中。 如需詳細資訊，請參閱[選擇資料來源 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) 和[選擇目的地 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="change-data-capture-designer-and-service-for-oracle-for-microsoft-sql-server-2016-released"></a><a name="CDCOracle"></a> 已發行 Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016  
- 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作為 SQL Server 2016 Feature Pack 的一部分發行。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。  
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作為 SQL Server 2016 Feature Pack 的一部分發行。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833)。  
   
 ####  <a name="cdc-components-updated-for-sql-server-2016"></a><a name="cdc2016"></a> 已針對 SQL Server 2016 更新 CDC 元件  
  CDC (異動資料擷取) 控制工作、來源和分隔器轉換元件已更新，可與 SQL Server 2016 完全相容。 沒有任何新功能，也沒有任何行為變更。  

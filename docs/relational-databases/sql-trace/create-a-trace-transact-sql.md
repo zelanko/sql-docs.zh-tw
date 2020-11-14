@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb19a7e3dc1ef6c1fc2bcc1c1416c79b2a6c5e4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402574"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364790"
 ---
 # <a name="create-a-trace-transact-sql"></a>建立追蹤 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88402574"
   
 ### <a name="to-create-a-trace"></a>若要建立追蹤  
   
-1.  執行 **sp_trace_create** 並加上必要的參數，以建立新的追蹤。 新的追蹤會處於停止狀態 (*status* 為 **0**)。  
+1.  執行 **sp_trace_create** 並加上必要的參數，以建立新的追蹤。 新的追蹤會處於停止狀態 ( *status* 為 **0** )。  
   
 2.  執行 **sp_trace_setevent** 並加上必要的參數，以選取要追蹤的事件和資料行。  
   
@@ -36,11 +36,13 @@ ms.locfileid: "88402574"
      **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的現有追蹤上執行。  
   
     > [!IMPORTANT]  
-    >  與一般的預存程序不同，所有 SQL Server Profiler 預存程序 (<strong>sp_trace_*xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+    >  與一般的預存程序不同，所有 SQL Server Profiler 預存程序 ( <strong>sp_trace_ *xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例
+
  下列程式碼將示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立追蹤。 這個程式碼含有三個區段：建立追蹤、擴展追蹤檔案以及停止追蹤。 您可以透過加入想要追蹤的事件，自訂追蹤。 如需事件和資料行的清單，請參閱 [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)來建立追蹤。  
   
+### <a name="a-create-a-trace"></a>A. 建立追蹤
  下列程式碼會建立追蹤、將事件加入至追蹤，然後啟動追蹤：  
   
 ```  
@@ -73,7 +75,7 @@ GO
   
 ```  
   
-## <a name="example"></a>範例  
+### <a name="b-populate-the-trace-file"></a>B. 填入追蹤檔案
  此時您已經建立並啟動追蹤，請執行下列程式碼，使用活動來擴展追蹤。  
   
 ```  
@@ -84,7 +86,7 @@ GO
   
 ```  
   
-## <a name="example"></a>範例  
+### <a name="c-stop-the-trace"></a>C. 停止追蹤
  您可以隨時停止並重新啟動追蹤。 在這個範例中，請執行下列程式碼來停止追蹤、關閉追蹤，然後刪除追蹤定義。  
   
 ```  
@@ -100,7 +102,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>範例  
+### <a name="d-examine-the-trace-file"></a>D. 檢查追蹤檔案
  若要檢查追蹤檔案，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來開啟 SampleTrace.trc 檔案。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379776"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405045"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -36,6 +36,9 @@ ms.locfileid: "91379776"
 STRING_SPLIT 需要為至少 130 的相容性層級。 當層級小於 130 時，SQL Server 無法找到 STRING_SPLIT 函式。
 
 若要變更資料庫的相容性層級，請參閱[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
+
+> [!NOTE]
+> Azure Synapse Analytics 中的 STRING_SPLIT 不需要相容性組態。
 
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,22 +53,22 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引數
 
  *string*  
- 這是任何字元類型 (例如 **nvarchar**、**varchar**、**nchar** 或 **char**) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何字元類型 (例如 **nvarchar** 、 **varchar** 、 **nchar** 或 **char** ) 的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *separator*  
- 這是任何字元類型 (例如 **nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
+ 這是任何字元類型 (例如 **nvarchar(1)** 、 **varchar(1)** 、 **nchar(1)** 或 **char(1)** ) 的單一字元 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
   
 ## <a name="return-types"></a>傳回型別  
 
-傳回資料列為子字串的單資料行資料表。 資料行的名稱是 **value**。 如果任何輸入引數是 **nvarchar** 或 **nchar**，則傳回 **nvarchar**。 否則傳回 **varchar**。 傳回類型的長度與字串引數的長度相同。  
+傳回資料列為子字串的單資料行資料表。 資料行的名稱是 **value** 。 如果任何輸入引數是 **nvarchar** 或 **nchar** ，則傳回 **nvarchar** 。 否則傳回 **varchar** 。 傳回類型的長度與字串引數的長度相同。  
   
 ## <a name="remarks"></a>備註  
 
-**STRING_SPLIT** 輸入有已分隔之子字串的字串，並輸入一個字元作為分隔符號 (delimiter) 或分隔符號 (separator)。 STRING_SPLIT 輸出單一資料行資料表，其資料列包含子字串。 輸出資料行的名稱為 **value**。
+**STRING_SPLIT** 輸入有已分隔之子字串的字串，並輸入一個字元作為分隔符號 (delimiter) 或分隔符號 (separator)。 STRING_SPLIT 輸出單一資料行資料表，其資料列包含子字串。 輸出資料行的名稱為 **value** 。
 
 輸出資料列可能為任何順序。 子字串的順序「不」  保證與輸入字串的相同。 您可以在 SELECT 陳述式上使用 ORDER BY 子句的 (`ORDER BY value`)，以覆寫最終的排序次序。
 
-0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，且不得包含在 STRING_SPLIT 中。
+0x0000 ( **char(0)** ) 是 Windows 定序中未定義的字元，且不得包含在 STRING_SPLIT 中。
 
 當輸入字串包含兩個或更多個連續出現的分隔符號字元時，會出現長度為零的空白子字串。 空白子字串視為純文字子字串來處理。 您可以使用 WHERE 子句將包含空白字串的任何資料列篩選掉 (`WHERE value <> ''`)。 如果輸入字串是 NULL，則 STRING_SPLIT 資料表值函數會傳回空白資料表。  
 

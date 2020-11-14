@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866281"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384537"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 
@@ -59,7 +59,7 @@ ms.locfileid: "74866281"
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a>適用於 SharePoint 2010 產品的 <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services 增益集
 
-在 SQL Server 2016 版本中，增益集可以在 [SQL Server 安裝精靈] 的 [特徵選取] 頁面中一併安裝。 如果您要分別下載和安裝增益集，可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用於 Microsoft® SharePoint® 技術 2010 的 Microsoft® SQL Server® 2012 Reporting Services 增益集](https://go.microsoft.com/fwlink/?LinkID=207242) 頁面線上取得這個檔案的最新版本。
+在 SQL Server 2016 版本中，增益集可以在 [SQL Server 安裝精靈] 的 [特徵選取] 頁面中一併安裝。 如果您要分別下載和安裝增益集，可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用於 Microsoft® SharePoint® 技術 2010 的 Microsoft® SQL Server® 2012 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=56052) 頁面線上取得這個檔案的最新版本。
 
 ## <a name="next-steps"></a>後續步驟
 

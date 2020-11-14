@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 189d0a2997b256f9c9b615fc81b5b9ed3ef46a5c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4760e4928421e0acdeca22f31a00cb148b82019c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918726"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384367"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 對 LocalDB 的支援
 
@@ -42,7 +42,7 @@ server=(localdb)\\myInstance
   
 連線到 LocalDB 資料庫時，不允許使用 `User Instance=True`。  
   
-您可以從 [Microsoft SQL Server 2012 功能套件](https://www.microsoft.com/download/en/details.aspx?id=29065)下載 LocalDB。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您將需要 SQL Server 2012 中的 sqlcmd，您也可以從 SQL Server 2012 功能套件取得 sqlcmd。  
+您可以從 [Microsoft SQL Server 2012 功能套件](https://www.microsoft.com/download/details.aspx?id=56041)下載 LocalDB。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您將需要 SQL Server 2012 中的 sqlcmd，您也可以從 SQL Server 2012 功能套件取得 sqlcmd。  
   
 ## <a name="programmatically-create-a-named-instance"></a>以程式設計方式建立具名執行個體  
 應用程式可以建立具名執行個體，並指定資料庫，如下所示：  

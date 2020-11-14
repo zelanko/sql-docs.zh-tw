@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986049"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384665"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 - **新增 DMF 以取代 DBCC INPUTBUFFER** - 引進以 session_id 作為參數的新動態管理函數 sys.dm_input_buffer 來取代 DBCC INPUTBUFFER
 - **針對可用性群組的讀取路由失敗增強 XEvent** - 目前，只有存在路由清單，但路由清單中沒有伺服器可供連接時，才會引發 read_only_rout_fail XEvent。 這項改善包含其他資訊以協助進行疑難排解，它也會在引發 XEvent 的字碼指標上展開。 
 - **已改善使用可用性群組容錯移轉處理 Service Broker 的功能** - 目前，在 AG 容錯移轉期間啟用可用性群組資料庫上的 Service Broker 時，所有來自主要複本的 Service Broker 連接都會保持開啟狀態。 這項改善會關閉所有在 AG 容錯移轉期間開啟的這類連接。
-- **自動軟體式 NUMA 資料分割** - 在 SQL 2014 SP2 中，於伺服器層級啟用追蹤旗標 8079 時會導入自動[軟體式 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) 資料分割。 在啟動期間啟用追蹤旗標 8079 時，SQL Server 2014 SP2 會查閱硬體配置，並在系統報告每個 NUMA 節點上有 8 個或更多個 CPU 時自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。 建議先使用自動軟體式 NUMA 測試工作負載的效能，再於生產環境中將它開啟。
+- **自動軟體式 NUMA 資料分割** - 在 SQL 2014 SP2 中，於伺服器層級啟用追蹤旗標 8079 時會導入自動 [軟體式 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) 資料分割。 在啟動期間啟用追蹤旗標 8079 時，SQL Server 2014 SP2 會查閱硬體配置，並在系統報告每個 NUMA 節點上有 8 個或更多個 CPU 時自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。 建議先使用自動軟體式 NUMA 測試工作負載的效能，再於生產環境中將它開啟。
 
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 版本資訊
 
@@ -69,7 +69,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 ## <a name="service-pack-2-release-notes"></a>Service Pack 2 版本資訊
   
 ### <a name="download-pages"></a>下載頁面 
-- [SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=43340)
 - [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)
 
 使用下表，根據您目前安裝的版本來識別要下載的檔案位置與名稱。 下載頁面會提供系統需求與基本安裝指示。  
@@ -82,13 +82,13 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 |32 位元版本的 SQL Server 2012 用戶端和管理能力工具 (包括 SQL Server 2012 Management Studio)|將用戶端和管理能力工具升級為 32 位元版本的 SQL Server 2012 SP2|**SQL Server 2012 SP2 Express 下載頁面**<arch>**的**<lang>**SQLEXPR_** SQLServer2012SP2-KB2958429- [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32 位元版本的 SQL Server 2012 Management Studio Express|升級為 32 位元版本的 SQL Server 2012 SP2 Management Studio Express|**SQL Server 2012 SP2 Express 下載頁面**<arch>**的**<lang>**SQLEXPR_** SQLServer2012SP2-KB2958429- [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32 位元版本的任何 SQL Server 2012 版本，以及 32 位元版本的用戶端和管理能力工具 (包括 SQL Server 2012 RTM Management Studio)|將所有產品升級為 32 位元版本的 SQL Server 2012 SP2|**SQL Server 2012 SP2 Express 下載頁面**<arch>**的**<lang>**SQLEXPRADV_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)。|  
-|來自 [Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=29065) 或 [Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)的一或多個 32 位元版本的工具|將工具升級為 32 位元版本的 Microsoft SQL Server 2012 SP2 功能套件|來自 Microsoft [SQL Server 2012 SP2 功能套件下載頁面](https://go.microsoft.com/fwlink/?LinkID=401008)的一個或多個工具|  
+|來自 [Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=56041) 或 [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)的一或多個 32 位元版本的工具|將工具升級為 32 位元版本的 Microsoft SQL Server 2012 SP2 功能套件|來自 Microsoft [SQL Server 2012 SP2 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=43340)的一個或多個工具|  
 |64 位元安裝：|||  
 |任何 SQL Server 2012 版本的 64 位元版本|升級為 64 位元版本的 SQL Server 2012 SP2|來自<arch>-<langid>SQL Server 2012 SP2 下載頁面 [的 SQLServer2012SP2-KB2958429-](https://go.microsoft.com/fwlink/?LinkID=401006).exe|  
 |64 位元版本的 SQL Server 2012 RTM Express|升級為 64 位元版本的 SQL Server 2012 SP2|**SQL Server 2012 SP2 Express 下載頁面**<arch>**的**<lang>**SQLEXPR_** SQLServer2012SP2-KB2958429- [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64 位元版本的 SQL Server 2012 用戶端和管理能力工具 (包括 SQL Server 2012 Management Studio)|將用戶端和管理能力工具升級為 64 位元版本的 SQL Server 2012 SP2|**SQL Server 2012 SP2 Express 下載頁面**<arch>**的**<lang>**SQLEXPR_** SQLServer2012SP2-KB2958429- [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64 位元版本的 SQL Server 2012 Management Studio Express|升級為 64 位元版本的 SQL Server 2012 SP2 Management Studio Express|**SQL Server 2012 SP2 Express 下載頁面**<arch>**的**<lang>**SQLEXPR_** SQLServer2012SP2-KB2958429- [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|來自 [Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=29065) 或 [Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)的一或多個 64 位元版本的工具|將工具升級為 64 位元版本的 Microsoft SQL Server 2012 SP2 功能套件|來自 Microsoft [SQL Server 2012 SP2 功能套件下載頁面](https://go.microsoft.com/fwlink/?LinkID=401008)的一個或多個工具|   
+|來自 [Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=56041) 或 [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)的一或多個 64 位元版本的工具|將工具升級為 64 位元版本的 Microsoft SQL Server 2012 SP2 功能套件|來自 Microsoft [SQL Server 2012 SP2 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=43340)的一個或多個工具|   
 
 
 ## <a name="service-pack-1-release-notes"></a>Service Pack 1 版本資訊
@@ -108,22 +108,22 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 |32 位元版本的 SQL Server 2012 用戶端和管理能力工具 (包括 SQL Server 2012 Management Studio)|將用戶端和管理能力工具升級為 32 位元版本的 SQL Server 2012 SP1|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |32 位元版本的 SQL Server 2012 Management Studio Express|升級為 32 位元版本的 SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |32 位元版本的任何 SQL Server 2012 版本， **以及** 32 位元版本的用戶端和管理能力工具 (包括 SQL Server 2012 RTM Management Studio)|將所有產品升級為 32 位元版本的 SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)中一個或多個 32 位元版本的工具|將工具升級為 32 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一個或多個檔案|  
+|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)中一個或多個 32 位元版本的工具|將工具升級為 32 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)中的一個或多個檔案|  
 |無 32 位元的 SQL Server 2012 安裝|安裝包括 SP1 的 32 位元 Server 2012 (已預先安裝 SP1 的新執行個體)|SQLServer2012SP1-FullSlipstream-x86-CHT.exe **以及** SQLServer2012SP1-FullSlipstream-x86-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |無 32 位元的 SQL Server 2012 Management Studio 安裝|安裝包括 SP1 的 32 位元 SQL Server 2012 Management Studio|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |無 32 位元版本的 SQL Server 2012 RTM Express|安裝包括 SP1 的 32 位元 SQL Server 2012 Express|SQLEXPR32_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
-|32 位元的 **SQL Server 2008** 或 **SQL Server 2008 R2**安裝|**就地升級** 為包括 SP1 的 32 位元 SQL Server 2012|SQLServer2012SP1-FullSlipstream-x86-CHT.exe **以及** SQLServer2012SP1-FullSlipstream-x86-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|32 位元的 **SQL Server 2008** 或 **SQL Server 2008 R2** 安裝|**就地升級** 為包括 SP1 的 32 位元 SQL Server 2012|SQLServer2012SP1-FullSlipstream-x86-CHT.exe **以及** SQLServer2012SP1-FullSlipstream-x86-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |**64 位元安裝：**|||  
 |任何 SQL Server 2012 版本的 64 位元版本|升級為 64 位元版本的 SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |64 位元版本的 SQL Server 2012 RTM Express|升級為 64 位元版本的 SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |64 位元版本的 SQL Server 2012 用戶端和管理能力工具 (包括 SQL Server 2012 Management Studio)|將用戶端和管理能力工具升級為 64 位元版本的 SQL Server 2012 SP1|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |64 位元版本的 SQL Server 2012 Management Studio Express|升級為 64 位元版本的 SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |64 位元版本的任何 SQL Server 2012 版本， **以及** 64 位元版本的用戶端和管理能力工具 (包括 SQL Server 2012 RTM Management Studio)|將所有產品升級為 64 位元版本的 SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)中一個或多個 64 位元版本的工具|將工具升級為 64 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一個或多個檔案|  
+|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)中一個或多個 64 位元版本的工具|將工具升級為 64 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)中的一個或多個檔案|  
 |無 64 位元的 SQL Server 2012 安裝|安裝包括 SP1 的 64 位元 Server 2012 (已預先安裝 SP1 的新執行個體)|SQLServer2012SP1-FullSlipstream-x64-CHT.exe， **以及** SQLServer2012SP1-FullSlipstream-x64-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |無 64 位元的 SQL Server 2012 Management Studio 安裝|安裝 64 位元的 SQL Server 2012 Management Studio，包括 SP1|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |無 64 位元版本的 SQL Server 2012 RTM Express|安裝 64 位元的 SQL Server 2012 Express，包括 SP1|SQLEXPR_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|64 位元的 **SQL Server 2008** 或 **SQL Server 2008 R2**安裝|**就地升級** 為包括 SP1 的 64 位元 SQL Server 2012|SQLServer2012SP1-FullSlipstream-x64-CHT.exe， **以及** SQLServer2012SP1-FullSlipstream-x64-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|64 位元的 **SQL Server 2008** 或 **SQL Server 2008 R2** 安裝|**就地升級** 為包括 SP1 的 64 位元 SQL Server 2012|SQLServer2012SP1-FullSlipstream-x64-CHT.exe， **以及** SQLServer2012SP1-FullSlipstream-x64-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>這個 Service Pack 所修正的已知問題  
 如需這個 Service Pack 所修正之錯誤和已知問題的完整清單，請參閱 [這份知識庫文件](https://support.microsoft.com/kb/2674319)。   
@@ -154,7 +154,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>在安裝 Reporting Services 之前，安裝並設定 SharePoint Server 2013  
-**問題：** 安裝 SQL Server Reporting Services (SSRS) **之前**，請先完成下列需求。  
+**問題：** 安裝 SQL Server Reporting Services (SSRS) **之前** ，請先完成下列需求。  
   
 1.  執行 SharePoint 2013 產品準備工具。  
   
@@ -165,7 +165,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 **因應措施：** 若您在設定 SharePoint 伺服器陣列之前，即已安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，所要採取的因應措施取決於所安裝的其他元件。  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013 中的 Power View 需要使用 Microsoft.AnalysisServices.SPClient.dll  
-**問題**：[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不會安裝必要的元件：**Microsoft.AnalysisServices.SPClient.dll**。 如果您在 SharePoint 模式下安裝 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，但並未下載及安裝 PowerPivot for SharePoint 2013 安裝程式套件 **spPowerPivot.msi** ，則 Power View 將無法運作且會出現下列徵兆。  
+**問題** ：[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不會安裝必要的元件： **Microsoft.AnalysisServices.SPClient.dll** 。 如果您在 SharePoint 模式下安裝 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，但並未下載及安裝 PowerPivot for SharePoint 2013 安裝程式套件 **spPowerPivot.msi** ，則 Power View 將無法運作且會出現下列徵兆。  
   
 **徵兆：** 當您嘗試建立 Power View 報表時，會出現類似下列錯誤訊息：  
   
@@ -175,19 +175,19 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
   
 -   「連接字串屬性 'User Identity' 不支援值 'SharePoint Principal'。」  
   
-**因應措施：** 在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 (**spPowerPivot.msi**)。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)下載此功能套件。  
+**因應措施：** 在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 ( **spPowerPivot.msi** )。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)下載此功能套件。  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>執行已排定的資料重新整理之後，PowerPivot 活頁簿中的 Power View 工作表被刪除  
-**問題**：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]  ，將會刪除所有 Power View 工作表。  
+**問題** ：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]  ，將會刪除所有 Power View 工作表。  
   
-**因應措施**：若要搭配 Power View 活頁簿使用 [排定的資料重新整理]  ，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
+**因應措施** ：若要搭配 Power View 活頁簿使用 [排定的資料重新整理]  ，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>不正確的 SQL Server 2012 版本中提供了 DQS  
 **問題：** 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 版本中，除了 Enterprise、Business Intelligence 和 Developer Edition 之外的所有 SQL Server 版本，都會提供 Data Quality Services (DQS) 功能。 安裝 SQL Server 2012 SP1 之後，除了 Enterprise、Business Intelligence 和 Developer Edition 以外，所有版本都不再提供 DQS。  
   
-**因應措施**：若在不支援的版本中使用 DQS，請升級為支援的版本，或從應用程式中移除這項功能的相依性。  
+**因應措施** ：若在不支援的版本中使用 DQS，請升級為支援的版本，或從應用程式中移除這項功能的相依性。  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -201,7 +201,7 @@ SQL Server 2012 Express Service Pack 1 (SP1) 版本包含完整版本的 SQL Ser
   
 **因應措施：** 若要將 CDC 元件升級為最新版本：  
   
-1.  從 [SQL Server 2012 SP1 功能套件下載頁面](https://go.microsoft.com/fwlink/p/?LinkID=268266)下載 Attunity Oracle Change Data Capture (CDC) 服務的 .msi 檔案。  
+1.  從 [SQL Server 2012 SP1 功能套件下載頁面](https://www.microsoft.com/download/details.aspx?id=35575)下載 Attunity Oracle Change Data Capture (CDC) 服務的 .msi 檔案。  
   
 2.  執行 .msi 檔案。  
   

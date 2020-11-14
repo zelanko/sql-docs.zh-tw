@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
+ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043851"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93417406"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -678,6 +678,7 @@ WITH
 
 ## <a name="syntax"></a>語法
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -686,6 +687,15 @@ WITH
     [ [ , ] TYPE = HADOOP ]
 [ ; ]
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
+WITH
+(    LOCATION = '<prefix>://<path>[:<port>]'
+) 
+[;]
+```
+---
 
 ## <a name="arguments"></a>引數
 

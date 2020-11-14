@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1cbf760c16d6de88906d03f511315ae6caec335
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811787"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384307"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>診斷與解決 SQL Server 的閂鎖競爭
 
@@ -65,7 +65,7 @@ SQL Server 的頁面有 8 KB，可以儲存多筆資料列。 為提高並行工
 
 閂鎖模式具有不同的相容性等級，例如共用閂鎖 (SH) 與更新 (UP) 或保留 (KP) 閂鎖相容，但與終結閂鎖 (DT) 不相容。 只要閂鎖彼此相容，就可以在相同的結構上同時取得多個閂鎖。 當執行緒嘗試取得模式不相容的閂鎖時，會排進佇列，等候指示資源可用的訊號。 SOS_Task 類型的執行緒同步鎖定是透過實施對佇列的序列化存取，用以保護等候佇列。 您必須取得此執行緒同步鎖定，才能將項目新增至佇列。 當釋放不相容的閂鎖時，SOS_Task 執行緒同步鎖定也會通知佇列中的執行緒，讓等候中的執行緒取得相容的閂鎖並繼續工作。 在釋放閂鎖要求時，會依先進先出 (FIFO) 的順序處理等候佇列。 閂鎖遵循此 FIFO 系統以確保公平，並防止耗盡執行緒。
 
-下表列出閂鎖模式相容性 (**Y** 表示相容，**N** 表示不相容)：
+下表列出閂鎖模式相容性 ( **Y** 表示相容， **N** 表示不相容)：
 
 |閂鎖模式 |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
@@ -89,16 +89,16 @@ SQL Server 的頁面有 8 KB，可以儲存多筆資料列。 為提高並行工
 
 累計等候資訊是由 SQL Server 追蹤，可用動態管理檢視 (DMW) *sys.dm_os_wait_stats* 存取。 SQL Server 採用 *sys.dm_os_wait_stats* DMV 中對應之 "wait_type" 所定義的三種閂鎖等候類型：
 
-* **緩衝區 (BUF) 閂鎖：** 用來保證索引和使用者物件資料頁的一致性。 也可以用來保護 SQL Server 用於系統物件的資料頁存取權。 例如，管理配置的頁面可以受到緩衝區閂鎖的保護。 這些包括頁面可用空間 (PFS)、全域配置對應 (GAM)、共用全域配置對應 (SGAM) 及索引配置對應 (IAM) 頁面。 緩衝區閂鎖會在 *sys.dm_os_wait_stats* 中回報，其 *wait_type* 為 **PAGELATCH\_\*** 。
+* **緩衝區 (BUF) 閂鎖：** 用來保證索引和使用者物件資料頁的一致性。 也可以用來保護 SQL Server 用於系統物件的資料頁存取權。 例如，管理配置的頁面可以受到緩衝區閂鎖的保護。 這些包括頁面可用空間 (PFS)、全域配置對應 (GAM)、共用全域配置對應 (SGAM) 及索引配置對應 (IAM) 頁面。 緩衝區閂鎖會在 *sys.dm_os_wait_stats* 中回報，其 *wait_type* 為 * *PAGELATCH\_\** _。
 
-* **非緩衝區 (非 BUF) 閂鎖：** 用來保證緩衝集區頁面以外，所有記憶體內部結構的一致性。 所有非緩衝區閂鎖的等待都會回報 *wait_type* 為 **LATCH\_\*** 。
+_ **非緩衝區 (非 BUF) 閂鎖：** 用來保證緩衝集區頁面以外，所有記憶體內部結構的一致性。 所有非緩衝區閂鎖的等待都會回報 *wait_type* 為 * *LATCH\_\** _。
 
-* **IO 閂鎖：** 緩衝區閂鎖的子集，當受到緩衝區閂鎖保護的相同結構，需要使用 I/O 作業載入緩衝集區時，保證這些結構的一致性。 IO 閂鎖可防止其他執行緒將相同的頁面載入具有不相容閂鎖的緩衝集區。 與 *wait_type* 為 **PAGEIOLATCH\_\*** 相關聯。
+_ **IO 閂鎖：** 緩衝區閂鎖的子集，當受到緩衝區閂鎖保護的相同結構需要使用 I/O 作業載入緩衝集區時，其保證這些結構的一致性。 IO 閂鎖可防止其他執行緒將相同的頁面載入具有不相容閂鎖的緩衝集區。 與 *wait_type* 為 * *PAGEIOLATCH\_\** _ 建立關聯。
 
    > [!NOTE]
    > 如果看到大量的 PAGEIOLATCH 等候，即表示 SQL Server 正在等候 I/O 子系統。 雖然一定的 PAGEIOLATCH 等候時間量是預期的正常行為，但如果平均 PAGEIOLATCH 等候時間持續超過 10 毫秒 (ms)，建議您調查 I/O 子系統的運作忙碌情形。
 
-如果在檢查 *sys.dm_os_wait_stats* DMV 時遇到非緩衝區閂鎖，您必須檢查 *sys.dm_os_latch_waits*，以取得非緩衝區閂鎖的累計等候資訊明細。 所有緩衝區閂鎖等候都會分類在「緩衝區」閂鎖類別下，其餘則用來分類非緩衝區閂鎖。
+如果在檢查 _sys.dm_os_wait_stats* DMV 時遇到非緩衝區閂鎖，則必須檢查 *sys.dm_os_latch_waits* ，以取得非緩衝區閂鎖的累計等候資訊明細。 所有緩衝區閂鎖等候都會分類在「緩衝區」閂鎖類別下，其餘則用來分類非緩衝區閂鎖。
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>SQL Server 閂鎖競爭的徵兆和成因
 
@@ -112,7 +112,7 @@ SQL Server 的頁面有 8 KB，可以儲存多筆資料列。 為提高並行工
 
 ### <a name="performance-when-latch-contention-is-resolved"></a>解決閂鎖競爭後的效能
 
-如下圖所示，SQL Server 不再出現頁面閂鎖等候的瓶頸，而按每秒交易量測量的輸送量增加了 300%。 這是使用**搭配計算資料行使用雜湊分割**技術所完成，本文稍後會說明此技術。 這項效能改進會在具有大量核心和大量並行要求的系統中實施。
+如下圖所示，SQL Server 不再出現頁面閂鎖等候的瓶頸，而按每秒交易量測量的輸送量增加了 300%。 這是使用 **搭配計算資料行使用雜湊分割** 技術所完成，本文稍後會說明此技術。 這項效能改進會在具有大量核心和大量並行要求的系統中實施。
 
 ![輸送量改善透過雜湊資料分割實現](./media/diagnose-resolve-latch-contention/image6.png)
 
@@ -163,7 +163,7 @@ SQL Server 的頁面有 8 KB，可以儲存多筆資料列。 為提高並行工
 
 3. 判斷與閂鎖相關的佔比。
 
-累計等候資訊可自 *sys.dm_os_wait_stats* DMV 取得。 最常見的閂鎖競爭類型就是緩衝區閂鎖競爭，觀察到 *wait_type* 為 **PAGELATCH\_\*** 的閂鎖，等候時間增加。 非緩衝區閂鎖會集合在 **LATCH\*** 等候類型下。 如下圖所示，您應該先對使用 *sys.dm_os_wait_stats* DMV 的系統等候採取累計查看，以判斷緩衝區或非緩衝區閂鎖所佔據的整體等候時間百分比。 如果遇到非緩衝區閂鎖，則也必須檢查 *sys.dm_os_latch_stats* DMV。
+累計等候資訊可自 *sys.dm_os_wait_stats* DMV 取得。 最常見的閂鎖競爭類型就是緩衝區閂鎖競爭，觀察到 *wait_type* 為 * *PAGELATCH\_\** _ 的閂鎖其等候時間增加。 非緩衝區閂鎖會分組在 _*LATCH\**_ 等候類型下。 如下圖所示，您應該先使用 _sys.dm_os_wait_stats* DMV 查看系統的累計等候時間，以判斷緩衝區或非緩衝區閂鎖所造成的整體等候時間百分比。 如果遇到非緩衝區閂鎖，則也必須檢查 *sys.dm_os_latch_stats* DMV。
 
 下圖說明 *sys.dm_os_wait_stats* 和 *sys.dm_os_latch_stats* DMV 傳回的資訊關聯性。
 
@@ -175,23 +175,23 @@ SQL Server 的頁面有 8 KB，可以儲存多筆資料列。 為提高並行工
 
 下列閂鎖等候時間的量值，是閂鎖競爭過量會影響應用程式效能的指標：
 
-* **平均頁面閂鎖等候時間會隨輸送量增加而增加**：如果平均頁面閂鎖等候時間隨輸送量增加而增加，且平均緩衝區閂鎖等候時間也增加超過預期的磁碟回應時間，建議您使用 *sys.dm_os_waiting_tasks* DMV 檢查目前的等候中工作。 如果在隔離的情況下進行分析，平均值可能會產生誤導，因此可能時請務必查看系統的實際狀況，以了解工作負載的特性。 尤其要檢查任何頁面上的 PAGELATCH_EX 及/或 PAGELATCH_SH 要求等候是否很多。 請遵循下列步驟，診斷隨輸送量增加的平均頁面閂鎖等候時間：
+* **平均頁面閂鎖等候時間會隨輸送量增加而增加** ：如果平均頁面閂鎖等候時間隨輸送量增加而增加，且平均緩衝區閂鎖等候時間也增加超過預期的磁碟回應時間，建議您使用 *sys.dm_os_waiting_tasks* DMV 檢查目前的等候中工作。 如果在隔離的情況下進行分析，平均值可能會產生誤導，因此可能時請務必查看系統的實際狀況，以了解工作負載的特性。 尤其要檢查任何頁面上的 PAGELATCH_EX 及/或 PAGELATCH_SH 要求等候是否很多。 請遵循下列步驟，診斷隨輸送量增加的平均頁面閂鎖等候時間：
 
    * 使用範例指令碼[查詢依工作階段識別碼排序的 sys.dm_os_waiting_tasks](#waiting-tasks-script1) 或[計算一段時間內的等候時間](#calculate-waits-over-a-time-period)，查看目前等待的工作並測量平均閂鎖等候時間。 
    * 使用範例指令碼[查詢緩衝區描述項以判斷造成閂鎖競爭的物件](#query-buffer-descriptors)，以判斷發生競爭的索引和基礎資料表。 
    * 使用效能監視計數器 **MSSQL% InstanceName%\\Wait Statistics\\Page Latch Waits\\Average Wait Time** 或執行 *sys.dm_os_wait_stats* DMV，以測量平均頁面閂鎖等候時間。
 
    > [!NOTE]
-   > 若要計算特定等候類型 (*sys.dm_os_wait_stats* 傳回為 *wt_:type*) 的平均等候時間，請將總等候時間 (傳回為 *wait_time_ms*) 除以等待工作的數目 (傳回為 *waiting_tasks_count*)。
+   > 若要計算特定等候類型 ( *sys.dm_os_wait_stats* 傳回為 *wt_:type* ) 的平均等候時間，請將總等候時間 (傳回為 *wait_time_ms* ) 除以等待工作的數目 (傳回為 *waiting_tasks_count* )。
 
-* **尖峰負載期間耗在閂鎖等候類型的總等候時間百分比**：如果整體等候時間的平均閂鎖等候時間百分比與應用程式負載的增加呈正比，則閂鎖競爭可能會影響效能，應予調查。
+* **尖峰負載期間耗在閂鎖等候類型的總等候時間百分比** ：如果整體等候時間的平均閂鎖等候時間百分比與應用程式負載的增加呈正比，則閂鎖競爭可能會影響效能，應予調查。
 
    使用 [SQLServer：等候統計資料物件](./performance-monitor/sql-server-wait-statistics-object.md)效能計數器測量頁面閂鎖等候和非頁面閂鎖等候。 然後比較這些效能計數器的值，及 CPU、I/O、記憶體和網路輸送量相關效能計數器的值。 例如，交易數/秒和批次要求數/秒，是兩個很好的資源使用率量值。
 
    > [!NOTE]
    > 因為此 DMW 會測量自上次 SQL Server 執行個體啟動後的等候時間，或使用 DBCC SQLPERF 重設的累計等候統計資料，所以 *sys.dm_os_wait_stats* DMV 不包含每個等候類型的相對等候時間，。 若要計算每個等候類型的相對等候時間，請拍攝 *sys.dm_os_wait_stats* 在尖峰負載前後的快照集，然後計算差異。 範例指令碼[計算一段時間內的等候時間](#calculate-waits-over-a-time-period)可用於此用途。
 
-   僅限**非實際執行環境**，請使用下列命令清除 *sys.dm_os_wait_stats* DMV：
+   僅限 **非實際執行環境** ，請使用下列命令清除 *sys.dm_os_wait_stats* DMV：
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
@@ -202,15 +202,15 @@ SQL Server 的頁面有 8 KB，可以儲存多筆資料列。 為提高並行工
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **輸送量不會隨著應用程式負載增加以及可供 SQL Server 使用的 CPU 數目增加而增加，還會在某些情況下減少**：[閂鎖競爭範例](#example-of-latch-contention)中會說明這一點。
+* **輸送量不會隨著應用程式負載增加以及可供 SQL Server 使用的 CPU 數目增加而增加，還會在某些情況下減少** ： [閂鎖競爭範例](#example-of-latch-contention)中會說明這一點。
 
-* **CPU 使用率不會隨應用程式工作負載增加而增加**：如果系統上的 CPU 使用率未同時間隨著應用程式輸送量增加而增加，這就表示 SQL Server 正在等待什麼，亦即閂鎖競爭的徵兆。
+* **CPU 使用率不會隨應用程式工作負載增加而增加** ：如果系統上的 CPU 使用率未同時間隨著應用程式輸送量增加而增加，這就表示 SQL Server 正在等待什麼，亦即閂鎖競爭的徵兆。
 
 分析根本原因。 即使前文的每項條件都成立，造成效能問題的根本原因仍可能在他處。 事實上，在大多數情況下，不那麼理想的 CPU 使用率是由其他類型的等候所造成，例如封鎖鎖定、I/O 相關的等候或網路相關問題。 根據經驗法則，在繼續進行更深入的分析之前，最好先解決佔整體等候時間最大比例的資源等候。
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>分析目前的等候緩衝區閂鎖
 
-緩衝區閂鎖競爭資訊清單會隨出現在 *sys.dm_os_wait_stats* DMV 中，**PAGELATCH\_\*** 或 **PAGEIOLATCH\_\*** 為 *wait_type* 之閂鎖的等候時間增加而增加。 若要即時查看系統，請在系統上執行下列查詢，以聯結 *sys.dm_os_wait_stats*、*sys.dm_exec_sessions* 和 *sys.dm_exec_requests* DMV。 此結果可用以判斷目前伺服器的執行工作階段等候類型。
+如 _sys.dm_os_wait_stats* DMV 所示，對於具有 * *PAGELATCH\_\** _ 或 _*PAGEIOLATCH\_\**_ *wait_type* 的閂鎖，緩衝區閂鎖爭用會表現為使這類閂鎖的等候時間增加。 若要即時查看系統，請在系統上執行下列查詢，以聯結 *sys.dm_os_wait_stats* 、 *sys.dm_exec_sessions* 和 *sys.dm_exec_requests* DMV。 此結果可用以判斷目前伺服器的執行工作階段等候類型。
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -257,7 +257,7 @@ select * from sys.dm_os_latch_stats where latch_class <> 'BUFFER' order by wait_
 | **Max_wait_time_ms** | 任何要求耗費在此閂鎖類型上的最長時間 (毫秒)。 |
 
 > [!NOTE]
-> 這個 DMV 傳回的值是自上次伺服器重新啟動或 DMV 重設後的累計。 在長時間執行的系統上，這表示有些統計資料 (例如 *Max_wait_time_ms*) 不太實用。 下列命令可以用來重設此 DMV 的等候統計資料：
+> 這個 DMV 傳回的值是自上次伺服器重新啟動或 DMV 重設後的累計。 在長時間執行的系統上，這表示有些統計資料 (例如 *Max_wait_time_ms* ) 不太實用。 下列命令可以用來重設此 DMV 的等候統計資料：
 >
 > ```sql
 > DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR)

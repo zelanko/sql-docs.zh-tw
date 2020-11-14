@@ -1,6 +1,6 @@
 ---
-title: 使用 SQL Server Integration Services (SSIS) 將資料載入 Azure Synapse Analytics | Microsoft Docs
-description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，以將來自各種資料來源的資料移至 Azure Synapse Analytics。
+title: 使用 SQL Server Integration Services (SSIS) 將資料載入 Azure Synapse Analytics
+description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，以將來自各種資料來源的資料移至 Azure Synapse Analytics 中專用 SQL 集區。
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,18 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192498"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328503"
 ---
-# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure Synapse Analytics
+# <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure Synapse Analytics 中的專用 SQL 集區
 
-[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
-
-
-建立 SQL Server Integration Services (SSIS) 套件，以將資料載入 [Azure Synapse Analytics](/azure/sql-data-warehouse/index)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
+建立 SQL Server Integration Services (SSIS) 套件，以將資料載入 Azure Synapse Analytics 中的專用 SQL 集區](/azure/sql-data-warehouse/index)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 
 本文示範如何執行下列作業：
 
@@ -41,8 +39,8 @@ SSIS 的詳細簡介超出本文範圍。 如需詳細資訊，請參閱下列�
 
 - [如何建立 ETL 套件](ssis-how-to-create-an-etl-package.md)
 
-## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>使用 SSIS 將資料載入 SQL 資料倉儲的選項
-SQL Server Integration Services (SSIS) 是彈性的工具組，可提供各種不同選項以針對 SQL 資料倉儲進行連線和資料的載入。
+## <a name="options-for-loading-data-into-azure-synapse-analytics-with-ssis"></a>使用 SSIS 將資料載入 Azure Synapse Analytics 的各種選項
+SQL Server Integration Services (SSIS) 是具有彈性的工具組，其提供與 Azure Synapse Analytics 連線並載入資料的多種選項。
 
 1. 提供最佳效能的慣用方法是建立使用 [Azure SQL DW 上傳工作](control-flow/azure-sql-dw-upload-task.md)的套件來載入資料。 此工作會同時封裝來源和目的地資訊。 它假設您的來源資料是儲存在本機的分隔符號文字檔。
 
@@ -54,7 +52,7 @@ SQL Server Integration Services (SSIS) 是彈性的工具組，可提供各種�
 1. **SQL Server Integration Services (SSIS)** 。 SSIS 是 SQL Server 的元件，並且需要 SQL Server 的授權版本或是開發人員或評估版本。 若要取得 SQL Server 的評估版本，請參閱[評估 SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。
 2. **Visual Studio** (選擇性)。 若要取得免費的 Visual Studio Community Edition，請參閱 [Visual Studio Community][Visual Studio Community]。 如果您不想要安裝 Visual Studio，您可以只安裝 SQL Server Data Tools (SSDT)。 SSDT 會安裝具有有限功能的 Visual Studio 版本。
 3. **適用於 Visual Studio 的 SQL Server Data Tools (SSDT)** 。 若要取得適用於 Visual Studio 的 SQL Server Data Tools，請參閱[下載 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
-4. **Azure Synapse Analytics 資料庫和權限**。 本教學課程會連線到 SQL 資料倉儲執行個體，並將資料載入至其中。 您必須有連線、建立資料表和載入資料的權限。
+4. **Azure Synapse Analytics 資料庫和權限** 。 本教學課程會連線至 Azure Synapse Analytics 執行個體中的專用 SQL 集區，並將資料載入其中。 您必須有連線、建立資料表和載入資料的權限。
 
 ## <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
 1. 啟動 Visual Studio。
@@ -80,7 +78,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 - [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW 上傳工作是 Feature Pack 的元件。
 
-- [Azure Blob 儲存體](/azure/storage/)帳戶。 SQL DW 上傳工作會將資料從 Azure Blob 儲存體載入 Azure Synapse Analytics。 您可以載入已在 Blob 儲存體中的檔案，或從您的電腦載入檔案。 如果您選取電腦上的檔案，SQL DW 上傳工作會先將其上傳至 Blob 儲存體暫存，再將其載入 SQL 資料倉儲。
+- [Azure Blob 儲存體](https://docs.microsoft.com/azure/storage/)帳戶。 SQL DW 上傳工作會將資料從 Azure Blob 儲存體載入 Azure Synapse Analytics。 您可以載入已在 Blob 儲存體中的檔案，或從您的電腦載入檔案。 如果選取電腦上的檔案，則 SQL DW 上傳工作會先將其上傳至 Blob 儲存體以暫存，再將其載入專用 SQL 集區。
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>新增並設定 SQL DW 上傳工作
 
@@ -98,7 +96,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 1. 使用 Azure Blob 上傳工作將資料暫存於 Azure Blob 儲存體。 若要取得 Azure Blob 上傳工作，請下載 [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。
 
-2. 然後使用 SSIS 執行 SQL 工作以啟動會將資料載入至 SQL 資料倉儲的 PolyBase 指令碼。 如需將資料從 Azure Blob 儲存體載入 SQL 資料倉儲 (但未使用 SSIS) 的範例，請參閱[教學課程：將資料載入 Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw)。
+2. 然後使用 SSIS 執行 SQL 工作以啟動會將資料載入專用 SQL 集區的 PolyBase 指令碼。 如需將資料從 Azure Blob 儲存體載入專用 SQL 集區 (但未使用 SSIS) 的範例，請參閱[教學課程：將資料載入 Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw)。
 
 ## <a name="option-2---use-a-source-and-destination"></a>選項 2 - 使用來源和目的地
 
@@ -106,7 +104,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 本教學課程使用 SQL Server 作為資料來源。 SQL Server 會在內部部署或 Azure 虛擬機器上執行。
 
-若要連線到 SQL Server 和 SQL 資料倉儲，您可以使用 ADO.NET 連線管理員以及來源和目的地，或 OLE DB 連線管理員以及來源和目的地。 本教學課程採用 ADO.NET，因為它的設定選項最少。 OLE DB 會提供比 ADO.NET 稍微更好的效能。
+若要連線到 SQL Server 與專用 SQL 集區，可使用 ADO.NET 連線管理員加上來源與目的地，或使用 OLE DB 連線管理員加上來源與目的地。 本教學課程採用 ADO.NET，因為它的設定選項最少。 OLE DB 會提供比 ADO.NET 稍微更好的效能。
 
 捷徑是使用 [SQL Server 匯入和匯出精靈] 來建立基本套件。 然後，儲存套件，並在 Visual Studio 或 SSDT 中開啟以進行檢視和自訂。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈匯入和匯出資料](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
@@ -114,17 +112,17 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 若要使用此選項設定教學課程，您需要下列項目：
 
-1. **範例資料**。 本教學課程使用儲存在 SQL Server 中 AdventureWorks 範例資料庫內的範例資料，作為要載入 SQL 資料倉儲的來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 範例資料庫][AdventureWorks 2014 Sample Databases]。
+1. **範例資料** 。 本教學課程使用儲存在 SQL Server 中 AdventureWorks 範例資料庫內的範例資料，作為要載入專用 SQL 集區的來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 範例資料庫][AdventureWorks 2014 Sample Databases]。
 
-2. **防火牆規則**。 您必須使用本機電腦的 IP 位址針對 SQL 資料倉儲建立防火牆規則，然後才能將資料上傳到 SQL 資料倉儲。
+2. **防火牆規則** 。 您必須先在專用 SQL 集區上，為本機電腦的 IP 位址建立防火牆規則，然後才能將資料上傳到專用 SQL 集區。
 
 ### <a name="create-the-basic-data-flow"></a>建立基本資料流程
 1. 將 [資料流程工作] 從 [工具箱] 拖曳至設計介面的中央 (在 [控制流程] 索引標籤上)。
    
     ![Visual Studio 的螢幕擷取畫面，其中顯示正在將 [資料流程工作] 拖曳至 [設計] 窗格的 [控制流程] 索引標籤中。][02]
 2. 按兩下 [資料流程工作] 以切換到 [資料流程] 索引標籤。
-3. 從 [工具箱] 的 [其他來源] 清單中，將 [ADO.NET 來源] 拖曳至設計介面。 保持選取來源配接器，在 [屬性] 窗格中將其名稱變更為 **SQL Server 來源**。
-4. 從 [工具箱] 的 [其他目的地] 清單中，將 [ADO.NET 目的地] 拖曳至設計介面的 [ADO.NET 來源] 底下。 保持選取目的地配接器，在 [屬性] 窗格中將其名稱變更為 **SQL DW 目的地**。
+3. 從 [工具箱] 的 [其他來源] 清單中，將 [ADO.NET 來源] 拖曳至設計介面。 保持選取來源配接器，在 [屬性] 窗格中將其名稱變更為 **SQL Server 來源** 。
+4. 從 [工具箱] 的 [其他目的地] 清單中，將 [ADO.NET 目的地] 拖曳至設計介面的 [ADO.NET 來源] 底下。 保持選取目的地配接器，在 [屬性] 窗格中將其名稱變更為 **SQL DW 目的地** 。
    
     ![正在將目的地配接器拖曳至來源配接器正下方位置的螢幕擷取畫面。][09]
 
@@ -175,9 +173,9 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 3. 在 [設定 ADO.NET 連線管理員] 對話方塊中，按一下 [新增] 按鈕以開啟 [連線管理員] 對話方塊並建立新的資料連線。
 4. 在 [連線管理員] 對話方塊中，執行下列事項。
    1. 針對 [提供者]，選取 [SqlClient 資料提供者]。
-   2. 針對 [伺服器名稱]，輸入 SQL 資料庫倉儲名稱。
+   2. 在 [伺服器名稱] 中，輸入專用 SQL 集區的名稱。
    3. 在 [登入伺服器] 區段中，選取 [使用 SQL Server 驗證] 並輸入驗證資訊。
-   4. 在 [連線到資料庫] 區段中，選取現有的 SQL 資料倉儲資料庫。
+   4. 在 [連線到資料庫] 區段中，選取現有的專用 SQL 集區資料庫。
    5. 按一下 **[測試連接]** 。
    6. 在報告連線測試結果的對話方塊中，按一下 [確定] 以返回 [連線管理員] 對話方塊。
    7. 在 [連線管理員] 對話方塊中，按一下 [確定] 以返回 [設定 ADO.NET 連線管理員] 對話方塊。
@@ -187,9 +185,9 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
     ![[建立資料表] 對話方塊的螢幕擷取畫面。 其中顯示用於建立目的地資料表的 SQL 程式碼。][12a]
 7. 在 [建立資料表] 對話方塊中，執行下列事項。
    
-   1. 將目的地資料表的名稱變更為 **SalesOrderDetail**。
-   2. 移除 **rowguid** 資料行。 SQL 資料倉儲中不支援 **uniqueidentifier** 資料類型。
-   3. 將 **LineTotal** 資料行的資料類型變更為 **money**。 SQL 資料倉儲中不支援 **decimal** 資料類型。 如需所支援資料類型的相關資訊，請參閱 [CREATE TABLE (Azure Synapse Analytics、平行處理資料倉儲)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]。
+   1. 將目的地資料表的名稱變更為 **SalesOrderDetail** 。
+   2. 移除 **rowguid** 資料行。 專用 SQL 集區中不支援 **uniqueidentifier** 資料類型。
+   3. 將 **LineTotal** 資料行的資料類型變更為 **money** 。 專用 SQL 集區中不支援 **decimal** 資料類型。 如需所支援資料類型的相關資訊，請參閱 [CREATE TABLE (Azure Synapse Analytics、平行處理資料倉儲)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]。
       
        ![[建立資料表] 對話方塊的螢幕擷取畫面，其中包含用於建立 SalesOrderDetail 資料表，並以 LineTotal 作為 money 資料行且沒有 rowguid 資料行的程式碼。][12b]
    4. 按一下 [確定] 以建立資料表，並返回 [ADO.NET 目的地編輯器]。

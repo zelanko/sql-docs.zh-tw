@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005918"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300363"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -45,11 +45,11 @@ SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](/a
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 整合式驗證
 
-「Active Directory 整合式驗證」** 是使用 Azure Active Directory (Azure AD) 中的身分識別連線到所列 Azure SQL 產品的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/sql-database/sql-database-aad-authentication)。
+「Active Directory 整合式驗證」是使用 Azure Active Directory (Azure AD) 中的身分識別連線到所列 Azure SQL 產品的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 互動式驗證
 
-「Active Directory 互動式驗證」** 適用於使用 SSDT 連線到所列 Azure SQL 產品的情況，但僅限於 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 或更新版本。
+「Active Directory 互動式驗證」適用於使用 SSDT 連線到所列 Azure SQL 產品的情況，但僅限於 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 或更新版本。
 
 - [下載並安裝 .NET Framework 的任何版本](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 15.6 版](/visualstudio/releasenotes/vs2017-relnotes)或更新版本。
@@ -80,7 +80,7 @@ MFA 強制執行是由 Azure AD 透過此額外的 MFA 快顯視窗來提供。
 - 只有在連線到本文開頭所列的 Azure SQL 產品時，才支援「Active Directory 互動式驗證」。 SQL Server (內部部署或 VM 上) 不提供支援。
 - [伺服器總管] 的連線對話方塊中不支援「Active Directory 互動式驗證」。 您必須搭配使用 SSDT 和 [SQL Server 物件總管] 來連線。
 - 與目前登入 Visual Studio 帳戶的單一登入整合不支援 SSDT。
-- 在 Visual Studio 安裝期間安裝到 Extensions 目錄的 SQLPackage.exe，並不是要從該位置使用。 若要以 Azure AD 使用 SQLPackage.exe，請前往 [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
+- 在 Visual Studio 安裝期間安裝到 Extensions 目錄的 SQLPackage.exe，並不是要從該位置使用。 若要搭配 Azure AD 使用 SQLPackage.exe，請移至[資料層應用程式架構](https://www.microsoft.com/download/details.aspx?id=55088) 
 - Azure AD 驗證不支援 SSDT 資料比較。  
 
 
@@ -90,5 +90,4 @@ MFA 強制執行是由 Azure AD 透過此額外的 MFA 快顯視窗來提供。
 [搭配使用 Azure Active Directory 驗證和 SQL Database](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 團隊部落格](/archive/blogs/ssdt/)  
-[DACFx API 參考](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
 [下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 895940f1a0f53c010e7088d02cf12cbfc0a0ff63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4019a1e661b14825532596091918f2f14eac1e92
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037731"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405065"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -82,17 +82,17 @@ OPENROWSET
 
 ## <a name="arguments"></a>引數
 
-### <a name="provider_name"></a>'*provider_name*'
+### <a name="provider_name"></a>' *provider_name* '
 這是一個字元字串，代表在登錄中指定之 OLE DB 提供者的易記名稱 (或 PROGID)。 *provider_name* 沒有預設值。 提供者名稱範例包括 `Microsoft.Jet.OLEDB.4.0`、`SQLNCLI` 或 `MSDASQL`。
 
-### <a name="datasource"></a>'*datasource*'
+### <a name="datasource"></a>' *datasource* '
 這是一個對應至特定 OLE DB 資料來源的字串常數。 *datasource* 是指要傳遞到提供者的 IDBProperties 介面，將提供者初始化所用的 DBPROP_INIT_DATASOURCE 屬性。 這個字串通常都包含資料庫檔案的名稱、資料庫伺服器的名稱，或是提供者尋找資料庫所用的名稱。
 資料來源可以是 `Microsoft.Jet.OLEDB.4.0` 提供者的檔案路徑 `C:\SAMPLES\Northwind.mdb'`，或 `SQLNCLI` 提供者的連接字串 `Server=Seattle1;Trusted_Connection=yes;`。
 
-### <a name="user_id"></a>'*user_id*'
+### <a name="user_id"></a>' *user_id* '
 這是一個字串常數，代表傳遞到指定之 OLE DB 提供者的使用者名稱。 *user_id* 會指定連線的安全性內容，而且會當做 DBPROP_AUTH_USERID 屬性傳入來初始化提供者。 *user_id* 不可以是 Microsoft Windows 登入名稱。
 
-### <a name="password"></a>'*password*'
+### <a name="password"></a>' *password* '
 這是一個字串常數，代表傳遞到 OLE DB 提供者的使用者密碼。 *password* 在將提供者初始化時，會當做 DBPROP_AUTH_PASSWORD 屬性來傳入。 *password* 不可以是 Microsoft Windows 密碼。
 
 ```sql
@@ -104,7 +104,7 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-### <a name="provider_string"></a>'*provider_string*'
+### <a name="provider_string"></a>' *provider_string* '
 這是一個提供者特定的連接字串，會當做 DBPROP_INIT_PROVIDERSTRING 屬性傳入來初始化 OLE DB 提供者。 *provider_string* 通常會封裝將提供者初始化所需的所有連線資訊。 如需由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者辨識的關鍵字清單，請參閱[初始化和授權屬性](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。
 
 ```sql
@@ -125,7 +125,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-### <a name="query"></a>'*query*'
+### <a name="query"></a>' *query* '
 這是傳給提供者，並且由提供者執行的字串常數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體不會處理這項查詢，但會處理提供者傳回的查詢結果，亦即通過查詢。 如果提供者不是透過資料表名稱，而只透過命令語言使用其資料表資料，通過查詢將會很實用。 只要查詢提供者支援 OLE DB Command 物件與其必要介面，遠端伺服器就支援通過查詢。 如需詳細資訊，請參閱 [SQL Server Native Client &#40;OLE DB&#41; 參考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)。
 
 ```sql
@@ -141,7 +141,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!IMPORTANT]
 > Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
-BULK 選項的引數可讓您全力控制在哪裡開始和結束資料讀取、如何處理錯誤以及如何解譯資料。 例如，您可以指定讓資料檔當做 **varbinary**、**varchar** 或 **nvarchar** 類型的單一資料列、單一資料行資料列集加以讀取。 預設行為將在接下來的引數描述中加以描述。
+BULK 選項的引數可讓您全力控制在哪裡開始和結束資料讀取、如何處理錯誤以及如何解譯資料。 例如，您可以指定讓資料檔當做 **varbinary** 、 **varchar** 或 **nvarchar** 類型的單一資料列、單一資料行資料列集加以讀取。 預設行為將在接下來的引數描述中加以描述。
 
  如需有關如何使用 BULK 選項的詳細資訊，請參閱本主題稍後的＜備註＞。 如需有關 BULK 選項所需權限的詳細資訊，請參閱本主題稍後的「權限」。
 
@@ -150,7 +150,7 @@ BULK 選項的引數可讓您全力控制在哪裡開始和結束資料讀取、
 
 如需準備資料進行大量匯入的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md) 方面的知識。
 
-#### <a name="bulk-data_file"></a>BULK '*data_file*'
+#### <a name="bulk-data_file"></a>BULK ' *data_file* '
 這是要將資料複製到目標資料表之資料檔的完整路徑。
 
 ```sql
@@ -168,7 +168,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="bulk-error-handling-options"></a>BULK 錯誤處理選項
 
 ##### <a name="errorfile"></a>ERRORFILE
-`ERRORFILE` ='*file_name*' 指定用於收集資料列的檔案，其中資料列的格式錯誤且無法轉換成 OLE DB 資料列集。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
+`ERRORFILE` =' *file_name* ' 指定用於收集資料列的檔案，其中資料列的格式錯誤且無法轉換成 OLE DB 資料列集。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
 
 錯誤檔是在開始執行命令時建立。 如果檔案已經存在，就會引發錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這個檔案會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。
 **適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
@@ -214,7 +214,7 @@ SELECT * FROM OPENROWSET(
 
 如果資料檔中的實際資料列並未根據指定的順序來排序，或是指定了 UNIQUE 提示而且有重複的索引鍵存在，則會傳回錯誤。
 
-當使用 ORDER 時，需要資料行別名。 資料行別名清單必須參考由 BULK 子句所存取的衍生資料表。 ORDER 子句中所指定的資料行名稱會參考這個資料行別名清單。 無法指定大數值類型 (**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 與 **xml**) 和大型物件 (LOB) 類型 (**text**、**ntext** 和 **image**) 資料行。
+當使用 ORDER 時，需要資料行別名。 資料行別名清單必須參考由 BULK 子句所存取的衍生資料表。 ORDER 子句中所指定的資料行名稱會參考這個資料行別名清單。 無法指定大數值類型 ( **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 與 **xml** ) 和大型物件 (LOB) 類型 ( **text** 、 **ntext** 和 **image** ) 資料行。
 
 ##### <a name="single_blob"></a>SINGLE_BLOB
 將 *data_file* 的內容當作 **varbinary(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
@@ -223,10 +223,10 @@ SELECT * FROM OPENROWSET(
 > 建議您只使用 SINGLE_BLOB 選項匯入 XML 資料，而不要使用 SINGLE_CLOB 和 SINGLE_NCLOB，因為只有 SINGLE_BLOB 支援所有的 Windows 編碼轉換。
 
 ##### <a name="single_clob"></a>SINGLE_CLOB
-以 ASCII 格式讀取 *data_file*，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
+以 ASCII 格式讀取 *data_file* ，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
 
 ##### <a name="single_nclob"></a>SINGLE_NCLOB
-以 UNICODE 格式讀取 *data_file*，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
+以 UNICODE 格式讀取 *data_file* ，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
 
 ```sql
 SELECT *
@@ -236,7 +236,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>BULK 輸入檔格式選項
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' } 指定資料檔案中資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的 **char** **varchar**或 **text** 資料行時，CODEPAGE 才會相關。
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| ' *code_page* ' } 指定資料檔案中資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的 **char** **varchar** 或 **text** 資料行時，CODEPAGE 才會相關。
 
 > [!IMPORTANT]
 > 在 Linux 上，`CODEPAGE` 不是支援的選項。
@@ -246,8 +246,8 @@ SELECT *
 
 |CODEPAGE 值|描述|
 |--------------------|-----------------|
-|ACP|將 **char**、**varchar** 或 **text** 資料類型的資料行，從 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
-|OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
+|ACP|將 **char** 、 **varchar** 或 **text** 資料類型的資料行，從 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
+|OEM (預設值)|將 **char** 、 **varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|
 |RAW|不進行字碼頁之間的轉換。 這是最快的選項。|
 |*code_page*|指出在哪一個來源字碼頁，將資料檔中的字元資料加以編碼；例如 850。<br /><br /> **重要**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|
 
@@ -264,7 +264,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 ##### <a name="formatfile"></a>FORMATFILE
-`FORMATFILE` ='*format_file_path*' 指定格式檔案的完整路徑。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：XML 和非 XML。
+`FORMATFILE` =' *format_file_path* ' 指定格式檔案的完整路徑。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：XML 和非 XML。
 
 您必須使用格式檔，才能定義結果集中的資料行類型。 不過，當指定 SINGLE_CLOB、SINGLE_BLOB 或 SINGLE_NCLOB 時，就不需要格式檔，這是唯一的例外狀況。
 
@@ -314,7 +314,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>大量匯入 SQLCHAR、SQLNCHAR 或 SQLBINARY 資料
 
-OPENROWSET(BULK...) 會假設，如果未指定，則 SQLCHAR、SQLNCHAR 或 SQLBINARY 資料的最大長度不會超過 8000 個位元組。 如果要匯入的資料位於 LOB 資料欄位中，該欄位包含了超過 8000 個位元組的任何 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 物件，您必須使用 XML 格式檔案來定義資料欄位的最大長度。 若要指定最大長度，請編輯格式檔案，並宣告 MAX_LENGTH 屬性。
+OPENROWSET(BULK...) 會假設，如果未指定，則 SQLCHAR、SQLNCHAR 或 SQLBINARY 資料的最大長度不會超過 8000 個位元組。 如果要匯入的資料位於 LOB 資料欄位中，該欄位包含了超過 8000 個位元組的任何 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 物件，您必須使用 XML 格式檔案來定義資料欄位的最大長度。 若要指定最大長度，請編輯格式檔案，並宣告 MAX_LENGTH 屬性。
 
 > [!NOTE]
 > 自動產生的格式檔案不會指定 LOB 欄位的長度或最大長度。 但是，您可以編輯格式檔案，並手動指定長度或最大長度。
@@ -520,43 +520,18 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
+> Azure SQL Database 只支援使用 SAS 權杖從 Azure Blob 儲存體讀取。
 
-存取儲存體帳戶的另一種方式是透過[受控識別](/azure/active-directory/managed-identities-azure-resources/overview)。 若要執行這項操作，請遵循[步驟 1 到 3](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps)，將 SQL Database 設定為可透過受控識別存取儲存體，之後即可實作如下所示的程式碼範例
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
-
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
-```
 ### <a name="additional-examples"></a>其他範例
 
 如需示範如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 的其他範例，請參閱下列主題：
