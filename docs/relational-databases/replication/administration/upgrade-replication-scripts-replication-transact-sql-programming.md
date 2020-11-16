@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923436"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364684"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升級複寫指令碼 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "86923436"
   
  這些安全性改進會影響現有指令碼中的下列預存程序，讓您可以明確地指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帳戶，並在這些帳戶下執行複寫代理程式工作，對權限可以有更多的控制：  
   
--   **sp_addpublication_snapshot**:  
+-   **sp_addpublication_snapshot** :  
   
      現在當您執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 時，應該以 `@job_login` 和 `@job_password` 提供 Windows 認證，以建立散發者端執行快照集代理程式的作業。  
   
--   **sp_addpushsubscription_agent**：  
+-   **sp_addpushsubscription_agent** ：  
   
      現在應該執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 以明確地新增作業並提供 Windows 認證 (`@job_login` 和 `@job_password`)，藉此在散發者端執行散發代理程式作業。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
   
--   **sp_addmergepushsubscription_agent**：  
+-   **sp_addmergepushsubscription_agent** ：  
   
      現在應該執行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 以明確地新增作業並提供 Windows 認證 (`@job_login` 和 `@job_password`)，藉此在散發者端執行合併代理程式作業。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
   
--   **sp_addpullsubscription_agent**：  
+-   **sp_addpullsubscription_agent** ：  
   
      現在當您執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 時，應該以 `@job_login` 和 `@job_password` 提供 Windows 認證，以建立在訂閱者端執行散發代理程式的作業。  
   
--   **sp_addmergepullsubscription_agent**：  
+-   **sp_addmergepullsubscription_agent** ：  
   
      現在當您執行 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 時，應該以 `@job_login` 和 `@job_password` 提供 Windows 認證，以建立在訂閱者端執行合併代理程式的作業。  
   
--   **sp_addlogreader_agent**：  
+-   **sp_addlogreader_agent** ：  
   
      現在應該執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 以手動新增作業並提供 Windows 認證，藉此在散發者端執行記錄讀取器代理程式。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立交易式發行集時自動完成。  
   
--   **sp_addqreader_agent**：  
+-   **sp_addqreader_agent** ：  
   
      現在應該執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) 以手動新增作業並提供 Windows 認證，藉此在散發者端執行佇列讀取器代理程式。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立支援佇列更新的交易式發行集時自動完成。  
   
@@ -112,38 +112,41 @@ ms.locfileid: "86923436"
   
     -   如果是發送訂閱，請在發行者端執行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定 `@subscriber`、`@subscriber_db`、`@publication`，在散發者端執行的合併代理程式用於 `@job_name` 和 `@job_password` 的 Windows 認證，以及此代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)。 此項作業會在執行 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)之後完成。 如需詳細資訊，請參閱 [建立發送訂閱](../../../relational-databases/replication/create-a-push-subscription.md)。  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>A. 用於建立交易式發行集的 SQL Server 2000 指令碼
+
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會針對 Product 資料表建立交易式發行集。 此發行集支援立即更新，且使用佇列更新做為容錯移轉。 為了利於閱讀，已經移除了預設的參數。  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. 用於建立交易式發行集的 SQL Server 2005 與更新版本指令碼
  下列是前述指令碼的升級範例 (此指令碼會建立交易式發行集)，能成功地執行於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本。 此發行集支援立即更新，且使用佇列更新做為容錯移轉。 已明確地宣告新參數的預設值。  
   
 > [!NOTE]  
->  Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
+>   Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. 用於建立合併式發行集的 SQL Server 2000 指令碼
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會針對 Customers 資料表建立合併式發行集。 為了利於閱讀，已經移除了預設的參數。  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D. 用於建立合併式發行集的 SQL Server 2005 與更新版本指令碼
  下列是前述指令碼的升級範例 (此指令碼會建立合併式發行集)，能成功地執行於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本。 已明確地宣告新參數的預設值。  
   
 > [!NOTE]  
->  Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
+>   Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. 用於建立目標為交易式發行集之發送訂閱的 SQL Server 2000 指令碼
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會建立交易式發行集的發送訂閱。 為了利於閱讀，已經移除了預設的參數。  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. 用於建立目標為交易式發行集之發送訂閱的 SQL Server 2005 與更新版本指令碼
  下列是前述指令碼的升級範例 (此指令碼會建立交易式發行集的發送訂閱)，能成功地執行於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本。 已明確地宣告新參數的預設值。  
   
 > [!NOTE]  
@@ -151,42 +154,42 @@ ms.locfileid: "86923436"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. 用於建立目標為合併式發行集之發送訂閱的 SQL Server 2000 指令碼
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會建立合併式發行集的發送訂閱。 為了利於閱讀，已經移除了預設的參數。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. 用於建立目標為合併式發行集之發送訂閱的 SQL Server 2005 與更新版本指令碼
  下列是前述指令碼的升級範例 (此指令碼會建立合併式發行集的發送訂閱)，能成功地執行於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本。 已明確地宣告新參數的預設值。  
   
 > [!NOTE]  
->  Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
+>   Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. 用於建立目標為交易式發行集之提取訂閱的 SQL Server 2000 指令碼
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會建立交易式發行集的提取訂閱。 為了利於閱讀，已經移除了預設的參數。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. 用於建立目標為交易式發行集之提取訂閱的 SQL Server 2005 與更新版本指令碼
  下列是前述指令碼的升級範例 (此指令碼會建立交易式發行集的提取訂閱)，能成功地執行於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本。 已明確地宣告新參數的預設值。  
   
 > [!NOTE]  
->  Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
+>   Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. 用於建立目標為合併式發行集之提取訂閱的 SQL Server 2000 指令碼
  下列的 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 指令碼範例會建立合併式發行集的提取訂閱。 為了利於閱讀，已經移除了預設的參數。  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>範例  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. 用於建立目標為合併式發行集之提取訂閱的 SQL Server 2005 與更新版本指令碼
  下列是前述指令碼的升級範例 (此指令碼會建立合併式發行集的提取訂閱)，能成功地執行於 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本。 已明確地宣告新參數的預設值。  
   
 > [!NOTE]  
->  Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
+>   Windows 認證是在執行階段使用 **sqlcmd** 指令碼變數提供的。  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   
