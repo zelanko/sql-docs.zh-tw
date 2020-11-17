@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: 6ea5bc72ee2f4b5bf421f73a27a85d80a421e00f
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 669379b4db1bd2c975875c443fe6a80e38926a5c
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036676"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570875"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
-Azure Data Studio 是跨平台資料庫工具，適合在 Windows、macOS 和 Linux 上使用 Microsoft 系列內部部署和雲端資料平台的資料專業人員。
+Azure Data Studio 是供資料專業人員在 Windows、macOS 和 Linux 上使用內部部署和雲端資料平台的跨平台資料庫工具。
 
 Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
 

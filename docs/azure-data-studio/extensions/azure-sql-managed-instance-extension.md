@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: eee9b2874fe879a544725bf2243075703149e34d
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725199"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570915"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 Azure SQL 受控執行個體儀表板 (預覽)
 
@@ -50,7 +50,7 @@ Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure
 
 當您選取 [受控執行個體]  索引標籤中的第二個窗格時，您會取得建議和警示，以協助最佳化您的受控執行個體。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="受控執行個體屬性":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="受控執行個體建議":::
 
 您可能會看到下列一些建議：
 
@@ -67,7 +67,7 @@ Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure
 
 [受控執行個體]  索引標籤中的第三個窗格會顯示您受控執行個體中的資料庫複本狀態。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="受控執行個體屬性":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="受控執行個體複本":::
 
 在一般用途服務層級上，每個資料庫都有單一 (主要) 複本。 在業務關鍵層級執行個體上，每個資料庫都有一個主要複本和三個次要複本，其中一個是用於唯讀工作負載。 在 [複本]  窗格上，您可以監視同步程序並確認所有次要複本都與主要複本同步。
 
@@ -75,7 +75,7 @@ Azure SQL 受控執行個體延伸模組提供一個儀表板，以便在 [Azure
 
 [受控執行個體]  的第四個窗格會顯示最新和最相關的 SQL 錯誤記錄檔項目。
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="受控執行個體屬性":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="受控執行個體記錄項目":::
 
 雖然您的受控執行個體會發出大量記錄項目，但它們大部分都是內部/系統資訊。 此外，某些記錄項目會顯示實體資料庫名稱 (`GUID` 值)，而非實際邏輯資料庫名稱。
 
@@ -87,9 +87,9 @@ SQL 受控執行個體延伸模組會根據 [Dimitri Furman 方法](https://tech
 
 ## <a name="code-of-conduct"></a>管理辦法
 
-此專案採用了 [Microsoft 開放原始碼管理辦法][https://opensource.microsoft.com/codeofconduct/ ]。
+此專案採用了 [Microsoft 開放原始碼管理辦法](https://opensource.microsoft.com/codeofconduct/)。
 
-如需詳細資訊，請參閱[管理辦法常見問題集][https://opensource.microsoft.com/codeofconduct/faq/ ]，如有其他問題或意見，請連絡 [opencode@microsoft.com ][mailto:opencode@microsoft.com- ]。
+如需詳細資訊，請參閱[管理辦法常見問題集](https://opensource.microsoft.com/codeofconduct/faq/)，如有其他問題或意見，請連絡 [opencode@microsoft.com](mailto:opencode@microsoft.com)。
 
 ## <a name="next-steps"></a>後續步驟
 

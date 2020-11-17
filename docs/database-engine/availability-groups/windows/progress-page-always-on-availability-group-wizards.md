@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.progress.f1
 - sql13.swb.newagwizard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2c11f154d37543488cebbc0bf6bafb1f002253f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a019b061fb6352e00ab717e70661be260ad879fe
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888094"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584064"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

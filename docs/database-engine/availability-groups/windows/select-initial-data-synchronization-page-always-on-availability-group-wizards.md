@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.newagwizard.selectinitialdatasync.f1
 - sql13.swb.addreplicawizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 995191f37a40bbc1b3cd0fb11ddf79f3952527ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c0cd3c7b805451701c1fb1e412750e922a554485
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883155"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583910"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>選取初始資料同步頁面 (Always On 可用性群組精靈)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

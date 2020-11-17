@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aa433db303e80610fb8f109d8a0905f888348c1b
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6633eae12aa231b4b4a97b1c663d6b2e15339ee2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671136"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583704"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "91671136"
 -   在容錯移轉 AG 之前，請確認容錯移轉目標的同步處理狀態為 SYNCHRONIZED。  
 
   > [!WARNING]
-  > 在已安裝較舊 SQL Server 版本的伺服器上安裝新執行個體或 SQL Server 新版本時，可能會意外**導致較舊 SQL Server 版本所裝載的任何可用性群組中斷。** 這是因為在執行個體或 SQL Server 版本的安裝期間，SQL Server 高可用性模組 (RHS.EXE) 會開始升級。 這會導致伺服器上主要角色中的現有可用性群組暫時中斷。 因此，當您在已裝載較舊 SQL Server 版本 (具有可用性群組) 的系統中安裝新版 SQL Server 時，強烈建議您執行下列其中一項：
+  > 在已安裝較舊 SQL Server 版本的伺服器上安裝新執行個體或 SQL Server 新版本時，可能會意外 **導致較舊 SQL Server 版本所裝載的任何可用性群組中斷。** 這是因為在執行個體或 SQL Server 版本的安裝期間，SQL Server 高可用性模組 (RHS.EXE) 會開始升級。 這會導致伺服器上主要角色中的現有可用性群組暫時中斷。 因此，當您在已裝載較舊 SQL Server 版本 (具有可用性群組) 的系統中安裝新版 SQL Server 時，強烈建議您執行下列其中一項：
   > - 在維護期間安裝新版 SQL Server。 
   > - 將可用性群組容錯移轉至次要複本，因此它在新的 SQL Server 執行個體安裝期間不是主要。 
   

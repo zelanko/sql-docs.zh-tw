@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793695"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570922"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>快速入門：使用 Azure Data Studio 以透過 Azure Synapse Analytics 中的專用 SQL 集區來連線及查詢資料
 
@@ -42,7 +42,7 @@ ms.locfileid: "92793695"
 
    |   設定    | 建議的值 | 描述 |
    |--------------|-----------------|-------------| 
-   | **伺服器名稱** | 完整伺服器名稱 | 例如，名稱看起來應該像這樣： **sqlpoolservername.database.windows.net** 。 |
+   | **伺服器名稱** | 完整伺服器名稱 | 例如，名稱看起來應該像這樣：**sqlpoolservername.database.windows.net**。 |
    | **驗證** | SQL 登入| 本教學課程使用 SQL 驗證。 |
    | **使用者名稱** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
@@ -77,7 +77,7 @@ ms.locfileid: "92793695"
 
 查詢編輯器仍會連線到 *master* 資料庫，但我們想要在 *TutorialDB* 資料庫中建立資料表。 
 
-1. 將連線內容變更為 **TutorialDB** ：
+1. 將連線內容變更為 **TutorialDB**：
 
 2. 將下列程式碼片段貼至查詢編輯器，然後選取 [執行]：
 
@@ -118,7 +118,7 @@ ms.locfileid: "92793695"
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="在 TutorialDB 資料庫中建立資料表":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="在資料表中建立資料列":::
 
 ## <a name="view-the-result"></a>檢視結果
 
@@ -131,7 +131,7 @@ ms.locfileid: "92793695"
 
 2. 查詢的結果隨即顯示：
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="在 TutorialDB 資料庫中建立資料表":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="View the results":::
 
 
 ## <a name="clean-up-resources"></a>清除資源

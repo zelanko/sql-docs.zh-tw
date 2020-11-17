@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f641836a7e465f4276f0970ee15a1bea4ee45283
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 926dfad7107c4c5459223969c2995d141838341c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898055"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583797"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

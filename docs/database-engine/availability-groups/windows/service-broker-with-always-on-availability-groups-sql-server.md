@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Service Broker, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8b9b95e53ad920c712fe9d5da02f0f9a0b4f1095
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332247"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583858"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "87332247"
 4.  **確定 msdb 包含 AutoCreatedLocal 路由或特定服務的路由。**  
   
     > [!NOTE]  
-    >  根據預設，每個使用者資料庫 (包括 **msdb**) 都包含 **AutoCreatedLocal**路由。 此路由會比對所有服務名稱和 Broker 執行個體，並指定訊息應在目前執行個體內傳遞。 **AutoCreatedLocal** 的優先權低於明確指定與遠端執行個體通訊之特定服務的路由。  
+    >  根據預設，每個使用者資料庫 (包括 **msdb**) 都包含 **AutoCreatedLocal** 路由。 此路由會比對所有服務名稱和 Broker 執行個體，並指定訊息應在目前執行個體內傳遞。 **AutoCreatedLocal** 的優先權低於明確指定與遠端執行個體通訊之特定服務的路由。  
   
      如需建立路由的相關資訊，請參閱 [Service Broker 路由範例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版本的《線上叢書》中) 和 [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md)的相關資訊。  
   

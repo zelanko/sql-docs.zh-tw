@@ -14,14 +14,14 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 25103e53ab29e9a19872ea1563f98607f3821b67
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 14a7b2fbb5834ae45c5262f73ffc81a684bba300
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669758"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583829"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91669758"
 
 ### <a name="enabling-database-level-health-detection"></a>啟用資料庫層級健全狀況偵測
 
-雖然通常會建議使用它，但是資料庫健全狀況選項**預設為關閉**，以保留與舊版預設設定的回溯相容性。
+雖然通常會建議使用它，但是資料庫健全狀況選項 **預設為關閉**，以保留與舊版預設設定的回溯相容性。
 
 有幾種簡單的方法可以啟用資料庫層級健全狀況偵測設定：
 
