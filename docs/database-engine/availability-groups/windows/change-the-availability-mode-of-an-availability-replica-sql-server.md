@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ae19a0e0446a6b0bb7c1d21456d92171e633f441
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dcafb8cdd2bdd2d03b3a302ffcb29e3cd5bbf469
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728009"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584585"
 ---
 # <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>變更 Always On 可用性群組內複本的可用性模式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

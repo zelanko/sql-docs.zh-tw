@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724599"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584860"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>將唯讀工作負載卸載至 Always On 可用性群組的次要複本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -153,18 +153,18 @@ ms.locfileid: "91724599"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> 索引  
  若要將可讀取次要複本上的唯讀工作負載最佳化，您可能會想要在次要資料庫的資料表上建立索引。 因為您無法在次要資料庫上進行結構描述或資料變更，所以請在主要資料庫中建立索引，並允許透過重做處理序將變更傳送到次要資料庫。  
   
- 若要監視次要複本的索引使用活動，請查詢 **sys.dm_db_index_usage_stats**動態管理檢視的 **user_seeks**、 **user_scans** 和 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 資料行。  
+ 若要監視次要複本的索引使用活動，請查詢 **sys.dm_db_index_usage_stats** 動態管理檢視的 **user_seeks**、 **user_scans** 和 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 資料行。  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> 唯讀存取資料庫的統計資料  
  資料表資料行和索引檢視表的統計資料可用來最佳化查詢計劃。 對於可用性群組而言，在主要資料庫上建立和維護的統計資料會自動保存至次要資料庫，做為交易記錄檔記錄應用的一部分。 然而，次要資料庫上的唯讀工作負載所需的統計資料，可能與主要資料庫上所建立的統計資料不同。 但因次要資料庫受限為唯讀存取，所以無法在次要資料庫上建立統計資料。  
   
- 為了解決此問題，次要複本會在 **tempdb**中建立及維護次要資料庫的暫時統計資料。 暫時統計資料名稱會附加後置詞 suffix _readonly_database_statistic，以便區分暫時統計資料與主要資料庫中保存的永久統計資料。  
+ 為了解決此問題，次要複本會在 **tempdb** 中建立及維護次要資料庫的暫時統計資料。 暫時統計資料名稱會附加後置詞 suffix _readonly_database_statistic，以便區分暫時統計資料與主要資料庫中保存的永久統計資料。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以建立和更新暫時統計資料。 但是，您可以使用永久統計資料所使用的相同工具來刪除暫時統計資料及監控其屬性：  
   
 -   使用 [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式刪除暫時統計資料。  
   
--   使用 **sys.stats** 和 **sys.stats_columns** 目錄檢視監視統計資料。 **sys_stats** 包含 **is_temporary**資料行，以表示哪些統計資料為永久性而哪些統計資料為暫時性。  
+-   使用 **sys.stats** 和 **sys.stats_columns** 目錄檢視監視統計資料。 **sys_stats** 包含 **is_temporary** 資料行，以表示哪些統計資料為永久性而哪些統計資料為暫時性。  
   
  主要或次要複本上的記憶體最佳化資料表都不支援自動統計資料更新。 您必須監視次要複本的查詢效能和計劃，並且視需要手動更新主要複本的統計資料。 不過，系統會自動建立主要和次要複本的遺漏統計資料。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "91724599"
   
 ####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> 限制事項  
   
--   因為暫時統計資料會儲存在 **tempdb**中，所以重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
+-   因為暫時統計資料會儲存在 **tempdb** 中，所以重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
   
 -   後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 當您在主要資料庫上建立統計資料時，將無法使用這個後置詞。 如需詳細資訊，請參閱[統計資料](../../../relational-databases/statistics/statistics.md)。  
   
@@ -207,9 +207,9 @@ GO
   
 -   在以磁碟為基礎之資料表案例中，可讀取的次要複本需要 **tempdb** 的空間主要基於以下兩個原因：  
   
-    -   快照集隔離等級會將資料列版本複製到 **tempdb**中。  
+    -   快照集隔離等級會將資料列版本複製到 **tempdb** 中。  
   
-    -   在 **tempdb**中建立和維護次要資料庫的暫時統計資料。 暫時統計資料會導致 **tempdb**略微增大。 如需詳細資訊，請參閱本節稍後的 [唯讀存取資料庫的統計資料](#Read-OnlyStats)。  
+    -   在 **tempdb** 中建立和維護次要資料庫的暫時統計資料。 暫時統計資料會導致 **tempdb** 略微增大。 如需詳細資訊，請參閱本節稍後的 [唯讀存取資料庫的統計資料](#Read-OnlyStats)。  
   
 -   當您設定一個或多個次要複本的讀取權時，主要資料庫會在已刪除、修改或插入的資料列上增加 14 個位元組的額外負擔，以便在以磁碟為基礎之資料表的次要資料庫上，儲存資料列版本的指標。 此 14 個位元組的額外負擔會轉至次要資料庫。 將 14 個位元組的負擔增加到資料列時，可能會發生頁面分割。  
   

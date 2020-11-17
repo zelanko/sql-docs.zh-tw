@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fc0568a32bae1f9c31fe4d20ff6ae2139d325acd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 12d7db7b49c15954240843b13d750ea1d64503f3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724610"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584897"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性群組內複本的用戶端連線類型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

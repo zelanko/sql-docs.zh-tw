@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4a9f6aea0fe042752c5443d1de9b200494f57828
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 69311c69270a45880d6802c8b3b3a9f350eab37a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895427"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584895"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>將支援的備份卸載至可用性群組次要複本
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85895427"
   
      跨任何複本 (主要或次要) 上所做的記錄檔備份可確保記錄檔鏈結一致，無論其可用性模式為何 (同步認可或非同步認可)。  
   
--   若要備份次要資料庫，次要複本必須能夠與主要複本通訊，而且必須處於 **SYNCHRONIZED** 或 **SYNCHRONIZING**狀態。  
+-   若要備份次要資料庫，次要複本必須能夠與主要複本通訊，而且必須處於 **SYNCHRONIZED** 或 **SYNCHRONIZING** 狀態。  
 
 在分散式可用性群組中，可在與使用中的主要複本所在相同之可用性群組中的次要複本上，或在任何次要可用性群組的主要複本上執行備份。 因為次要複本只會與其所屬可用性群組中的主要複本通訊，所以無法在次要可用性群組中的次要複本上執行備份。 只有直接與全域主要複本通訊的複本才能執行備份作業。
 

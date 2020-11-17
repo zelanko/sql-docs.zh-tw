@@ -14,19 +14,19 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488648"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674234"
 ---
 # <a name="column-properties-general-page"></a>資料行屬性 (一般頁面)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   使用此頁面來檢視選取之資料行的屬性。  
   
- 此頁面的資訊是唯讀的。 若要修改資料行，請關閉 [資料行屬性]**** 對話方塊，展開物件總管中的資料表和資料行，以滑鼠右鍵按一下資料行，然後按一下 [設計]****。  
+ 此頁面的資訊是唯讀的。 若要修改資料行，請關閉 [資料行屬性] 對話方塊，展開物件總管中的資料表和資料行，以滑鼠右鍵按一下資料行，然後按一下 [設計]。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -39,7 +39,7 @@ ms.locfileid: "88488648"
  資料行可保存的資料類型。 如果資料類型是系統資料類型，就會顯示系統資料類型。 如果資料類型是使用者自訂的資料類型，就會顯示組成使用者自訂資料類型的系統資料類型。  
   
  **主索引鍵**  
- 指出資料行是否為主索引鍵。 可能的值為 **True**和 **False**。  
+ 指出資料行是否為主索引鍵。 可能的值為 **True** 和 **False**。  
   
  **允許 Null**  
  指出資料行是否接受 Null 值。 可能的值為 **True** 和 **False**。  
@@ -57,7 +57,7 @@ ms.locfileid: "88488648"
  指出識別欄位的初始資料列值。  
   
  **識別值增量**  
- [識別值增量]**** 屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大現有資料列識別值的數值。  
+ [識別值增量] 屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大現有資料列識別值的數值。  
   
  **預設繫結**  
  資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設繫結。 若未繫結預設值，此選項可為空白。  

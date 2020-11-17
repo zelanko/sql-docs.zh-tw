@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: a6849f13f8182285749c7a95801ee111e7ba0130
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
+ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624675"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94617926"
 ---
 # <a name="build-a-database-project-from-command-line"></a>從命令列建置資料庫專案
 
@@ -24,7 +24,7 @@ ms.locfileid: "91624675"
 
 1. 安裝並設定[適用於 Azure Data Studio 的 SQL 資料庫專案延伸模組](sql-database-project-extension.md)。
 
-2. 需要有下列 .NET Core dll 與目標檔案 `Microsoft.Data.Tools.Schema.SqlTasts.targets`，才能在適用於 SQL 資料庫專案之 Azure Data Studio 延伸模組所支援的所有平台中，從命令列建置 SQL 資料庫專案。 這些檔案是在 Azure Data Studio 介面中完成的第一個組建期間由延伸模組所建立，並放置於 `BuildDirectory` 之下延伸模組的資料夾中。  例如，在 Linux 上，這些檔案會放置於 `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\` 中。  將這 10 個檔案複製到可存取的新資料夾，或記下其位置。  在此文件中，此位置將稱為 `DotNet Core build folder`。
+2. 需要有下列 .NET Core dll 與目標檔案 `Microsoft.Data.Tools.Schema.SqlTasks.targets`，才能在適用於 SQL 資料庫專案之 Azure Data Studio 延伸模組所支援的所有平台中，從命令列建置 SQL 資料庫專案。 這些檔案是在 Azure Data Studio 介面中完成的第一個組建期間由延伸模組所建立，並放置於 `BuildDirectory` 之下延伸模組的資料夾中。  例如，在 Linux 上，這些檔案會放置於 `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\` 中。  將這 10 個檔案複製到可存取的新資料夾，或記下其位置。  在此文件中，此位置將稱為 `DotNet Core build folder`。
 
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll

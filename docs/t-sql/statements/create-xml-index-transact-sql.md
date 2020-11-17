@@ -1,15 +1,11 @@
 ---
+title: CREATE XML INDEX (Transact-SQL)
 description: CREATE XML INDEX (Transact-SQL)
-title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- XML_TSQL
 - CREATE_XML_INDEX_TSQL
 - XML INDEX
 - CREATE_XML_TSQL
@@ -17,7 +13,6 @@ f1_keywords:
 - CREATE XML
 - CREATE XML INDEX
 - XML_INDEX_TSQL
-- FOR_XML_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -28,12 +23,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a1ca67466a58dea0b374d9da14e66de64ba02d81
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/10/2017
+ms.openlocfilehash: bd8f6e580290a0b10c833f9ee94158c69eb09229
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300508"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674216"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -170,7 +168,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  中繼排序結果會儲存在與用來儲存索引相同的資料庫中。  
   
- 除了建立索引時使用者資料庫中所需的空間以外， **tempdb** 還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
+ 除了建立索引時使用者資料庫中所需的空間以外，**tempdb** 還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
  IGNORE_DUP_KEY **=OFF**  
  對於 XML 索引沒有任何作用，因為索引類型絕對不是唯一的。 請勿將這個選項設定為 ON，否則會引發錯誤。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 07b77c85c882d8755e1717a5cfe8ce49df9ae275
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ffd564df011932a0b40c0eff2426049fc3f6c315
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727989"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584550"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>變更 Always On 可用性群組內複本的容錯移轉模式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "91727989"
   
 如需這些參數的詳細資訊，請參閱 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
   
-下列範例 (在 *MyAG* 可用性群組的主要複本上輸入) 會針對位於 *COMPUTER01*電腦的預設伺服器執行個體上的可用性複本，將容錯移轉模式變更為自動容錯移轉。  
+下列範例 (在 *MyAG* 可用性群組的主要複本上輸入) 會針對位於 *COMPUTER01* 電腦的預設伺服器執行個體上的可用性複本，將容錯移轉模式變更為自動容錯移轉。  
   
 ```sql
 ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  

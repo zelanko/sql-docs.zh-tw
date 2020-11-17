@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b06cd16ff624cd22f7e3977f437588f75bcc5ad0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e06e94693f8f6102962b08893878ba5ac249cb3b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114278"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584614"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Always On 可用性群組中的可用性複本已中斷連線
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

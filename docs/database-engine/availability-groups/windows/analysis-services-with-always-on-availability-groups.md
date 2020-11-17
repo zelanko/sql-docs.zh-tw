@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726559"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584764"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
 
@@ -167,7 +167,7 @@ ms.locfileid: "91726559"
   
 4.  部署解決方案，並在完成時停止追蹤。  
   
-     在追蹤視窗中，您應該會看到 **Microsoft SQL Server Analysis Services**應用程式中的事件。 您應該會看到 **SELECT** 陳述式從裝載次要複本之伺服器執行個體上的資料庫擷取資料，證明透過接聽程式建立與次要複本的連接。  
+     在追蹤視窗中，您應該會看到 **Microsoft SQL Server Analysis Services** 應用程式中的事件。 您應該會看到 **SELECT** 陳述式從裝載次要複本之伺服器執行個體上的資料庫擷取資料，證明透過接聽程式建立與次要複本的連接。  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>步驟 2：執行規劃的容錯移轉以測試組態  
   
