@@ -3,37 +3,37 @@ title: 資料的效能微調
 description: 此文章討論在 SQL Server 中執行之 R 或 Python 指令碼的效能最佳化。 它也說明您可以用來更新 R 程式碼的方法，以提高效能並避免已知的問題。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 10/20/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: d7ba1afc4fd63309fedca141dd4d71800fd54c6b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956573"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384830"
 ---
-# <a name="performance-for-r-services---data-optimization"></a>R Services 的效能 - 資料最佳化
+# <a name="performance-tuning-and-data-optimization-for-r"></a>適用於 R 的效能微調和資料最佳化
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-此文章是一系列文章中的第三篇，會根據兩個案例研究來說明 R Services 的效能最佳化。 此文章討論在 SQL Server 中執行之 R 或 Python 指令碼的效能最佳化。 它也說明您可以用來更新 R 程式碼的方法，以提高效能並避免已知的問題。
+此文章討論在 SQL Server 中執行之 R 或 Python 指令碼的效能最佳化。 您也可以使用這些方法來更新 R 程式碼，以提高效能並避免已知的問題。
 
 ## <a name="choosing-a-compute-context"></a>選擇計算內容
 
-在 SQL Server 2016 與 2017 中，您可以在執行 R 或 Python 指令碼時，使用**本機**或 **SQL** 計算內容。
+在 SQL Server 中，您可以在執行 R 或 Python 指令碼時，使用 **本機** 或 **SQL** 計算內容。
 
-使用**本機**計算內容時，會在您的電腦上執行分析，而不是在伺服器上執行。 因此，如果您要從 SQL Server 取得要在程式碼中使用的資料，則必須透過網路擷取資料。 因此網路傳送而產生的效能影響，取決於所傳送的資料大小、網路速度，以及同一時間發生的其他網路傳送。
+使用 **本機** 計算內容時，會在您的電腦上執行分析，而不是在伺服器上執行。 因此，如果您要從 SQL Server 取得要在程式碼中使用的資料，則必須透過網路擷取資料。 因此網路傳送而產生的效能影響，取決於所傳送的資料大小、網路速度，以及同一時間發生的其他網路傳送。
 
-使用 **SQL Server 計算內容**時，會在伺服器上執行程式碼。 若要從 SQL Server 取得資料，資料應該位於執行分析的伺服器本機，因此不會產生任何網路額外負荷。 若需要從其他來源匯入資料，請考慮事先安排 ETL。
+使用 **SQL Server 計算內容** 時，會在伺服器上執行程式碼。 若要從 SQL Server 取得資料，資料應該位於執行分析的伺服器本機，因此不會產生任何網路額外負荷。 若需要從其他來源匯入資料，請考慮事先安排 ETL。
 
 使用大型資料集時，您一律應使用 SQL 計算內容。
 
 ## <a name="factors"></a>因素
 
-R 語言具有「因數」  的概念，這是類別資料的特殊變數。 資料科學家通常會在其公式中使用因素變數，因為將類別變數當作因素來處理可確保機器學習服務函式會正確處理資料。 如需詳細資訊，請參閱 [R 入門：因數變數](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/) \(英文\)
+R 語言具有「因數」的概念，這是類別資料的特殊變數。 資料科學家通常會在其公式中使用因素變數，因為將類別變數當作因素來處理可確保機器學習服務函式會正確處理資料。
 
 根據設計，因數變數可以從字串轉換為整數，然後再轉換回來以進行儲存或處理。 R `data.frame` 函式會將所有字串當作因數變數來處理，除非 *stringsAsFactors* 引數設定為 **False**。 這表示字串會自動轉換成整數以進行處理，然後對應回原始字串。
 
@@ -79,15 +79,15 @@ c("fruit" = c(type = "factor", levels= c("apple", "orange", "banana")))
 
 有兩種方式可利用 SQL Server 中的 R 達到平行處理：
 
--   **使用 \@parallel.** 使用 `sp_execute_external_script` 預存程序來執行 R 指令碼時，請將 `@parallel` 參數設為 `1`。 若您的 R 指令碼**不**使用具有其他處理機制的 RevoScaleR函式，這是最佳方法。 若您的指令碼使用 RevoScaleR 函式 (通常會加上 "rx")，平行處理會自動執行，因此您不需要明確地將 `@parallel` 設定為 `1`。
++ **使用 \@parallel.** 使用 `sp_execute_external_script` 預存程序來執行 R 指令碼時，請將 `@parallel` 參數設為 `1`。 若您的 R 指令碼 **不** 使用具有其他處理機制的 RevoScaleR函式，這是最佳方法。 若您的指令碼使用 RevoScaleR 函式 (通常會加上 "rx")，平行處理會自動執行，因此您不需要明確地將 `@parallel` 設定為 `1`。
 
-    若可以平行處理 R 指令碼，而且可平行處理 SQL 查詢，則資料庫引擎將建立多個平行處理序。 可以建立的處理序數目上限等於執行個體的**平行處理的最大深度** (MAXDOP) 設定。 接著，所有處理常式都會執行相同的指令碼，但只會接收部分資料。
-    
-    因此，此方法不適用於一定要看到所有資料的指令碼，例如將模型定型時。 不過，在以平行方式執行工作 (例如批次預測) 時非常實用。 如需使用平行處理原則搭配 `sp_execute_external_script` 的詳細資訊，請參閱[在 Transact-SQL 中使用 R 程式碼](../tutorials/quickstart-r-create-script.md)中的**進階提示︰平行處理**一節。
+  若可以平行處理 R 指令碼，而且可平行處理 SQL 查詢，則資料庫引擎將建立多個平行處理序。 可以建立的處理序數目上限等於執行個體的 [平行處理原則的最大程度] \(MAXDOP\) 設定。 接著，所有處理常式都會執行相同的指令碼，但只會接收部分資料。
+  
+  因此，此方法不適用於一定要看到所有資料的指令碼，例如將模型定型時。 不過，在以平行方式執行工作 (例如批次預測) 時非常實用。 如需使用平行處理原則搭配 `sp_execute_external_script` 的詳細資訊，請參閱 [在 Transact-SQL 中使用 R 程式碼](../tutorials/quickstart-r-create-script.md)中的 **進階提示︰平行處理** 一節。
 
--   **使用 numTasks =1。** 在 SQL Server 計算內容中使用 **rx** 函式時，請將 _numTasks_ 參數的值設定為您要建立的處理序數目。 建立的處理序數目一律不能超過 **MAXDOP**；不過，建立的實際處理序數目是由資料庫引擎所決定，而且可能會比您要求的少。
++ **使用 numTasks =1。** 在 SQL Server 計算內容中使用 **rx** 函式時，請將 _numTasks_ 參數的值設定為您要建立的處理序數目。 建立的處理序數目一律不能超過 **MAXDOP**；不過，建立的實際處理序數目是由資料庫引擎所決定，而且可能會比您要求的少。
 
-    如果可以平行處理 R 指令碼，而且可平行處理 SQL 查詢，則 SQL Server 將在執行 rx 函式時建立多個平行處理序。 建立的實際處理序數目取決於各種不同的因數，例如，資源管理、目前的資源使用量、其他工作階段，以及搭配 R 指令碼使用之查詢的查詢執行計畫。
+  如果可以平行處理 R 指令碼，而且可平行處理 SQL 查詢，則 SQL Server 將在執行 rx 函式時建立多個平行處理序。 實際所建立的處理序數目會取決於數種不同的因素。 這些包括資源治理、目前的資源使用量、其他工作階段，以及搭配 R 指令碼使用之查詢的查詢執行計畫。
 
 ## <a name="query-parallelization"></a>查詢平行處理
 
@@ -114,11 +114,11 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 另一個會影響效能的常見錯誤是查詢擷取的資料行數比所需的還多。 例如，如果公式僅以三個資料行為基礎，但您的來源資料表有 30 個資料行，則會不必要地移動資料。
 
- + 避免使用 `SELECT *`！
- + 請花一些時間檢閱資料集中的資料行，並只找出分析所需的資料行
- + 從查詢移除任何包含與 R 程式碼不相容之資料類型的資料行，例如 GUID 與 rowguids
- + 檢查是否有不支援的日期和時間格式
- + 建立會選取特定值或轉換資料行以避免轉換錯誤的檢視，而不是載入資料表
++ 避免使用 `SELECT *`！
++ 請花一些時間檢閱資料集中的資料行，並只找出分析所需的資料行
++ 從查詢移除任何包含與 R 程式碼不相容之資料類型的資料行，例如 GUID 與 rowguids
++ 檢查是否有不支援的日期和時間格式
++ 建立會選取特定值或轉換資料行以避免轉換錯誤的檢視，而不是載入資料表
 
 ## <a name="optimizing-the-machine-learning-algorithm"></a>最佳化機器學習演算法
 
@@ -133,23 +133,23 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree` 支援 `maxDepth` 參數，其可控制決策樹深度。 因為增加 `maxDepth`，就會降低效能，因此分析增加深度的優點與效能影響很重要。
+  `rxDTree` 支援 `maxDepth` 參數，其可控制決策樹深度。 因為增加 `maxDepth`，就會降低效能，因此分析增加深度的優點與效能影響很重要。
 
-    您可以控制時間複雜性和預測精確度之間的平衡，方式則是調整如下的參數：`maxNumBins`、`maxDepth`、`maxComplete` 與 `maxSurrogate`。 將深度增加到超過 10 或 15 以上，會讓計算付出很高的代價。
+  您可以控制時間複雜性和預測精確度之間的平衡，方式則是調整如下的參數：`maxNumBins`、`maxDepth`、`maxComplete` 與 `maxSurrogate`。 將深度增加到超過 10 或 15 以上，會讓計算付出很高的代價。
 
 + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
-    若公式中的第一個相依變數是因數變數，請嘗試使用 `cube` 引數。
-    
-    當 `cube` 設定為 `TRUE` 時，就會使用資料分割的反向來執行迴歸，這樣可能比較快，而且所使用的記憶體比標準迴歸計算還要少。 如果公式含有大量變數，就會顯著提升效能。
+  若公式中的第一個相依變數是因數變數，請嘗試使用 `cube` 引數。
+  
+  當 `cube` 設定為 `TRUE` 時，就會使用資料分割的反向來執行迴歸，這樣可能比較快，而且所使用的記憶體比標準迴歸計算還要少。 如果公式含有大量變數，就會顯著提升效能。
 
 + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
-    若第一個相依變數是因數變數，請嘗試使用 `cube` 引數。
-    
-    當 `cube` 設定為 `TRUE` 時，演算法會使用資料分割反向，這可能比較快且使用較少的記憶體。 如果公式含有大量變數，就會顯著提升效能。
+  若第一個相依變數是因數變數，請嘗試使用 `cube` 引數。
+  
+  當 `cube` 設定為 `TRUE` 時，演算法會使用資料分割反向，這可能比較快且使用較少的記憶體。 如果公式含有大量變數，就會顯著提升效能。
 
-如需有關 RevoScaleR 最佳化的其他指導方針，請參閱下列文章：
+如需 RevoScaleR 最佳化的詳細資訊，請參閱下列文章：
 
 + 支援文章：[RxDForest 與 rxDTree 的效能調整選項](https://support.microsoft.com/kb/3104235) \(機器翻譯\)
 
@@ -171,20 +171,8 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [如何選擇 MicrosoftML 演算法](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet) \(英文\)
 
-### <a name="operationalize-a-solution-using-microsoft-r-server"></a>使用 Microsoft R Server 運作解決方案
+## <a name="next-steps"></a>後續步驟
 
-若您的案例牽涉到使用已儲存模型的快速預測或將機器學習整合到應用程式中，您可以使用 Microsoft R Server 中的[運作化](/r-server/what-is-operationalization) \(英文\) 功能 (先前稱為 DeployR)。
++ 如需可用來改善 R 程式碼效能的 R 函式，請參閱[使用 R 分析函式來改善效能](using-r-code-profiling-functions.md)。
 
-+ 身為**資料科學家**，請使用 [mrsdeploy 套件](/r-server/r-reference/mrsdeploy/mrsdeploy-package) \(英文\) 來與其他電腦共用 R 程式碼，並將 R 分析整合至 Web、電腦、行動裝置與儀表板應用程式。[如何在 R Server 中發佈及管理 R web 服務](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r) \(英文\)
-
-+ 身為**系統管理員**，請了解如何管理套件、監視 Web 節點與計算節點，以及控制 R 作業的安全性：[如何在 R 中與 Web 服務互動及取用服務](/r-server/operationalize/how-to-consume-web-service-interact-in-r) \(英文\)
-
-## <a name="articles-in-this-series"></a>此系列中的文章
-
-[R 的效能調整 - 簡介](sql-server-r-services-performance-tuning.md)
-
-[R 的效能調整 - SQL Server 設定](sql-server-configuration-r-services.md)
-
-[R 的效能調整 - R 程式碼和資料最佳化](r-and-data-optimization-r-services.md)
-
-[效能調整 - 案例研究結果](performance-case-study-r-services.md)
++ 如需 SQL Server 上效能微調的更完整資訊，請參閱 [SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)。

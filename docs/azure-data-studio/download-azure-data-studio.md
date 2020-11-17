@@ -8,67 +8,66 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/20/2020
-ms.openlocfilehash: b3363e9b5b8872d3a78d7c5c0fa7f70a80c8d6f9
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 11/12/2020
+ms.openlocfilehash: 23e7ee0063ad8e5a3e8dd8653cfd5aab8a1753bc
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257361"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570935"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
-Azure Data Studio 在 Windows、macOS 和 Linux 上執行。
+Azure Data Studio 是供資料專業人員在 Windows、macOS 和 Linux 上使用內部部署和雲端資料平台的跨平台資料庫工具。
 
-下載並安裝最新版本：
+Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。 如需 Azure Data Studio 的詳細資訊，請瀏覽[什麼是 Azure Data Studio](what-is-azure-data-studio.md)。
 
-> [!NOTE]
-> 如果您是從 SQL Operations Studio 更新，並想要保留您的設定、鍵盤快速鍵或程式碼片段，請參閱[移動使用者設定](#move-user-settings)。
+## <a name="download-the-latest-release"></a>下載最新版本
 
-|平台|下載|發行日期| 版本 |
-|--------|--------|------------|---------|
-| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2145989)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2145990)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2145864) | 2020 年 10 月 14 日 | 1.23.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2145865) | 2020 年 10 月 14 日 | 1.23.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866) | 2020 年 10 月 14 日 | 1.23.0 |
+| 平台 | 下載 | 發行日期 | 版本 |
+|----------|----------|--------------|---------|
+| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2148607)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2148907)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2148908) | 2020 年 11 月 12 日 | 1.24.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2148710) | 2020 年 11 月 12 日 | 1.24.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708) | 2020 年 11 月 12 日 | 1.24.0 |
 
-如需最新版本的詳細資訊，請參閱[版本資訊](./release-notes-azure-data-studio.md)。
+**如需最新版本的詳細資訊，請參閱[版本資訊](./release-notes-azure-data-studio.md)。**
 
 ## <a name="get-azure-data-studio-for-windows"></a>取得適用於 Windows 的 Azure Data Studio
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
-此版本的 Azure Data Studio 包含標準的 Windows Installer 體驗，以及 .zip 檔案。
+此版本的 Azure Data Studio 包含標準的 Windows Installer 體驗和 .zip 檔案。
 
-建議使用「使用者安裝程式」，因為其無需系統管理員權限，因而可簡化安裝和升級程序。 使用者安裝程式位於使用者的 Local AppData (LOCALAPPDATA) 資料夾底下，因此不需要系統管理員權限。 使用者安裝程式也提供更流暢的背景更新體驗。 如需詳細資訊，請參閱 [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows) (適用於 Windows 的使用者安裝程式)。
+建議使用「使用者安裝程式」，因為這不需要系統管理員權限，可簡化安裝和升級程序。 使用者安裝程式位於使用者的 Local AppData (LOCALAPPDATA) 資料夾底下，因此不需要系統管理員權限。 使用者安裝程式也提供更流暢的背景更新體驗。 如需詳細資訊，請參閱 [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows) (適用於 Windows 的使用者安裝程式)。
 
 **使用者安裝程式** (建議)
 
-1. 下載並執行[適用於 Windows 的 Azure Data Studio 使用者安裝程式](https://go.microsoft.com/fwlink/?linkid=2145989)。
+1. 下載並執行[適用於 Windows 的 Azure Data Studio 使用者安裝程式](https://go.microsoft.com/fwlink/?linkid=2148607)。
 2. 啟動 Azure Data Studio 應用程式。
 
 **系統安裝程式**
 
-1. 下載並執行[適用於 Windows 的 Azure Data Studio 系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2145990)。
+1. 下載並執行[適用於 Windows 的 Azure Data Studio 系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2148907)。
 2. 啟動 Azure Data Studio 應用程式。
 
 **壓縮檔**
 
-1. 下載[適用於 Windows 的 Azure Data Studio .zip](https://go.microsoft.com/fwlink/?linkid=2145864)。
+1. 下載[適用於 Windows 的 Azure Data Studio .zip](https://go.microsoft.com/fwlink/?linkid=2148908)。
 2. 瀏覽至下載的檔案並解壓縮。
 3. `\azuredatastudio-windows\azuredatastudio.exe`執行
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[適用於 macOS 的 Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2145865)。
+1. 下載[適用於 macOS 的 Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2148710)。
 2. 若要展開壓縮檔的內容，請按兩下檔案。
 3. 若要在「啟動控制板」中提供 Azure Data Studio，請將 *Azure Data Studio.app* 拖曳至 [應用程式] 資料夾。
 
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
 1. 使用下列其中一種安裝程式或 tar.gz 封存，以下載適用於 Linux 的 Azure Data Studio：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708)
 1. 若要解壓縮檔案並啟動 Azure Data Studio，請開啟新的終端機視窗並鍵入下列命令：
 
    **Debian 安裝：**
@@ -131,7 +130,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
 
-Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平台：
+Azure Data Studio 可在 Windows、macOS 和 Linux 上執行，且受下列平台支援：
 
 ### <a name="windows"></a>Windows
 
@@ -163,8 +162,8 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
 
 | 推薦項目/基本安裝 | CPU 核心 | 記憶體/RAM |
 |---------------------|-----------|------------|
-| 建議         |     4     |   8 GB     |
-|   最小值           |     2     |   4 GB     |
+|     建議     |     4     |   8 GB     |
+|     最小值         |     2     |   4 GB     |
 
 ## <a name="check-for-updates"></a>檢查更新
 
@@ -174,11 +173,11 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
 
 ## <a name="supported-sql-offerings"></a>支援的 SQL 供應項目
 
-- 此版本的 Azure Data Studio 適用所有 [SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援版本](https://support.microsoft.com/lifecycle?C2=1044)，並支援使用 Azure SQL Database 及 Azure Synapse Analytic 中最新的雲端功能。 Azure Data Studio 也提供 Azure SQL 受控執行個體的預覽支援。
+- 此版本的 Azure Data Studio 適用所有 [SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)] 的支援版本](https://support.microsoft.com/lifecycle?C2=1044)，並支援使用 Azure SQL Database 及 Azure Synapse Analytic 中最新的雲端功能。 Azure Data Studio 也提供 Azure SQL 受控執行個體的預覽支援。
 
 ## <a name="move-user-settings"></a>移動使用者設定
 
-如果您想要移動自訂設定、鍵盤快速鍵或程式碼片段，請遵循下列步驟。 如果正在從 SQL Operations Studio 版升級到 Azure Data Studio，請務必執行這項作業。
+如果您要將 SQL Operations Studio 更新為 Azure Data Studio，並保留自己的設定、鍵盤快速鍵或程式碼片段，請遵循下列步驟。
 
 如果您已有 Azure Data Studio，或是從未安裝或自訂 SQL Operations Studio，則可以略過本節。
 
@@ -188,13 +187,13 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
 
 2. 以滑鼠右鍵按一下頂端的 [使用者設定] 索引標籤，然後選取 [在總管中顯示]
 
-   ![啟動總管，該總管會帶您前往本機檔案系統](./media/download/reveal-in-explorer.png)
+   ![啟動總管，將帶您前往本機檔案系統](./media/download/reveal-in-explorer.png)
 
-3. 複製此資料夾中的所有檔案，然後儲存在本機磁碟上容易找到的位置 (例如 [文件] 資料夾)。
+3. 複製此資料夾中的所有檔案，儲存在本機磁碟上容易找到的位置，例如文件資料夾。
 
    ![使用檔案並複製到您的位置](./media/download/copy-settings.png)
 
-4. 在您的新版 Azure Data Studio 中，遵循步驟 1-2，然後在步驟 3 中，將您儲存的內容貼到資料夾。 您也可以將設定、按鍵繫結關係或程式碼片段手動複製到各自的位置。
+4. 在新版的 Azure Data Studio 中，依步驟 1-2 作業，然後在步驟 3 中，將您儲存的內容貼到資料夾。 您也可以將設定、按鍵繫結關係或程式碼片段手動複製到各自的位置。
 
 5. 如果覆寫現有的安裝，請在安裝前先刪除舊的安裝目錄，以避免在連線到資源總管中的 Azure 帳戶時發生錯誤。
 
@@ -202,7 +201,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
 
 您也可以使用命令提示字元指令來安裝 Azure Data Studio。
 
-若要在沒有 GUI 提示的背景中安裝 Azure Data Studio，且您是使用 Windows 平台，請遵循下列步驟。
+若要在沒有 GUI 提示的背景中安裝 Azure Data Studio，而且使用 Windows 平台，請遵循下列步驟。
 
 1. 啟動權限較高的命令提示字元。
 
@@ -215,7 +214,7 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
     範例：
 
     ```console
-    %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
+    %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
     ```
 
     > [!Note]
@@ -239,6 +238,8 @@ Azure Data Studio 在 Windows、macOS 和 Linux 上執行，並支援下列平�
 
 若要開始使用，請參閱下列其中一個快速入門：
 
+- [什麼是 Azure Data Studio](what-is-azure-data-studio.md)
+- [Azure Data Studio 版本資訊](release-notes-azure-data-studio.md)
 - [連線與查詢 SQL Server](quickstart-sql-server.md)
 - [連線與查詢 Azure SQL Database](quickstart-sql-database.md)
 - [連線與查詢 Azure 資料倉儲](quickstart-sql-dw.md)

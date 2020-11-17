@@ -135,7 +135,13 @@
             - name: 必要條件
               href: big-data-cluster/active-directory-prerequisites.md
             - name: 部署
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: 單純的 AD 部署
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: 規劃 AD on AKS
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: 教學課程 - AD on AKS
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: 連線
               href: big-data-cluster/active-directory-connect.md
             - name: 相同 AD 網域中的多個 BDC
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: 安裝 SQL Server Integration Services
               href: linux/sql-server-linux-setup-ssis.md
-            - name: 安裝 SQL Server 機器學習服務
+            - name: 安裝 SQL Server Machine Learning Services (Python 與 R)
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: 在 Docker 上安裝 SQL Server 機器學習服務
+            - name: 在 Docker 上安裝 SQL Server 機器學習服務 (Python 與 R)
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: 安裝 SQL Server 語言延伸模組
+            - name: 安裝 SQL Server Java 語言延伸模組
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: 設定存放庫
               href: linux/sql-server-linux-change-repo.md

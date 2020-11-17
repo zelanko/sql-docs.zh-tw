@@ -1,7 +1,7 @@
 ---
 title: 掛接 ADLS Gen2 進行 HDFS 階層處理
 titleSuffix: How to mount ADLS Gen2
-description: 本文說明如何設定 HDFS 階層處理，以將外部 Azure Data Lake Storage 檔案系統掛接到 SQL Server 2019 巨量資料叢集上的 HDFS。
+description: 此文章提供如何使用 Azure Data Lake Storage Gen2 資料來源來設定 HDFS 階層處理的範例。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730651"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521035"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
@@ -43,11 +43,11 @@ ms.locfileid: "85730651"
 
 若要使用 OAuth 認證來掛接，您必須遵循下列步驟：
 
-1. 前往 [Azure 入口網站](https://portal.azure.com)
+1. 移至 [Azure 入口網站](https://portal.azure.com)
 1. 瀏覽至 [Azure Active Directory]。 左側導覽列上應會顯示此服務。
 1. 從右側導覽列中選取 [應用程式註冊]，然後建立新的註冊
 1. 建立 Web 應用程式並遵循精靈。 **請記下您此處建立之用程式的稱**。 您必須將此名稱新增至您的 ADLS 帳戶作為授權使用者。 另請記下您選取此應用時，概觀中顯示的應用程式用戶端識別碼。
-1. 建立 Web 應用程式之後，請移至 [憑證及密碼] 並建立**新的用戶端密碼**，然後選取金鑰期間。 **新增**此密碼。
+1. 建立 Web 應用程式之後，請移至 [憑證及密碼] 並建立 **新的用戶端密碼**，然後選取金鑰期間。 **新增** 此密碼。
 1. 返回 [應用程式註冊] 頁面，然後按一下頂端的 [端點]。 **記下 OAuth 權杖端點 (v2)** URL
 1. 您現在應該已記下 OAuth 的下列項目：
 

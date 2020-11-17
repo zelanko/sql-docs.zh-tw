@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990013"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447104"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
@@ -211,6 +211,8 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 - 若要從另一部伺服器上所建立備份成功還原已啟用 TDE 的資料庫，則必須確定已同時在 SQL Server 執行個體主機以及包含的 AG 主機上還原[必要憑證](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。 如需如何備份和還原憑證的範例，請參閱[此處](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)。
 - 使用 `sp_configure` 執行伺服器組態設定等特定作業會需要連接到 SQL Server 執行個體 `master` 資料庫，而不是可用性群組 `master`。 您無法使用對應的主要端點。 請遵循[指示](#instance-connect)來公開端點並連接到 SQL Server 執行個體，然後執行 `sp_configure`。 當您手動公開端點來連接到 SQL Server 執行個體 `master` 資料庫時，只能使用 SQL 驗證。
 - 雖然可用性群組中包含 msdb 資料庫，而且 SQL Agent 作業會複寫到整個群組，作業只會根據主要複本上的排程執行。
+- 不支援針對自主可用性群組使用複寫功能。 作為自主 AG 之一部分的 SQL Server 執行個體，無論是在執行個體層級或自主 AG 層級，皆無法當作散發者或發行者運作。
+- 不支援在建立資料庫期間新增檔案群組。 作為因應措施，您可以先建立資料庫，然後發出 ALTER DATABASE 陳述式以新增任何檔案群組。
 - 在 SQL Server 2019 CU2 版本之前，因 `CREATE DATABASE` 與 `RESTORE DATABASE` 以外的工作流程 (例如 `CREATE DATABASE FROM SNAPSHOT`) 而建立的資料庫不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
 
 ## <a name="next-steps"></a>後續步驟

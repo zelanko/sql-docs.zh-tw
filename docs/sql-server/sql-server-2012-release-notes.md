@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111144"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384657"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重新命名網路名稱之後，SQL Server 2008、2008 R2 Analysis Services 容錯移轉叢集升級到 SQL Server 2012 可能會失敗  
 **問題：** 在您使用 Windows 叢集系統管理員工具變更 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 容錯移轉叢集執行個體的網路名稱之後，升級作業可能會失敗。  
   
-**因應措施：** 若要解決這個問題，請根據[這篇知識庫文章](https://support.microsoft.com/kb/955784)中解決方法章節的指示來更新 ClusterName 登錄項目。  
+**因應措施：** 若要解決這個問題，請根據 [這篇知識庫文章](https://support.microsoft.com/kb/955784)中解決方法章節的指示來更新 ClusterName 登錄項目。  
   
 ### <a name="15-installing-sql-server-2012-on-windows-server-2008-r2-server-core-service-pack-1"></a>1.5 在 Windows Server 2008 R2 Server Core Service Pack 1 上安裝 SQL Server 2012  
 您可以在 Windows Server 2008 R2 Server Core SP1 上安裝 SQL Server，但有以下限制：  
@@ -206,7 +206,7 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 Sync Framework 未包含在安裝套件中  
 **問題：** Sync Framework 未包含在 SQL Server 2012 安裝套件中。  
   
-**因應措施：** 從[這個 Microsoft 下載中心頁面](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)下載適當的 Sync Framework 版本。  
+**因應措施：** 從 [這個 Microsoft 下載中心頁面](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)下載適當的 Sync Framework 版本。  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 如果您解除安裝 Visual Studio 2010 Service Pack 1，就必須修復 SQL Server 2012 執行個體才能還原特定元件  
 **問題**：[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 安裝相依於 Visual Studio 2010 Service Pack 1 的某些元件。 如果您解除安裝 Service Pack 1，某些共用元件就會降級為其原始版本，而且系統會從電腦中完全移除幾個其他元件。  
@@ -630,7 +630,7 @@ Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並�
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 包括 StreamInsight 2.0。 StreamInsight 2.0 需要 Microsoft SQL Server 2012 授權和 .NET Framework 4.0。 其中包含許多效能改良和幾個錯誤修正。 如需詳細資訊，請參閱 [Microsoft StreamInsight 2.0 版本資訊](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)。 若要個別下載 StreamInsight 2.0，請瀏覽 Microsoft 下載中心的 [Microsoft StreamInsight 2.0 下載頁面](https://go.microsoft.com/fwlink/?LinkId=241593) 。  
+SQL Server 2012 包括 StreamInsight 2.1。 StreamInsight 2.1 需要 Microsoft SQL Server 2012 授權與 .NET Framework 4.0。 其中包含許多效能改良和幾個錯誤修正。 如需詳細資訊，請參閱 [Microsoft StreamInsight 2.1 版本資訊](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx) \(英文\)。 若要個別下載 StreamInsight 2.1，請瀏覽 Microsoft 下載中心的 [Microsoft StreamInsight 2.1 下載頁面](https://www.microsoft.com/download/details.aspx?id=30149)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
