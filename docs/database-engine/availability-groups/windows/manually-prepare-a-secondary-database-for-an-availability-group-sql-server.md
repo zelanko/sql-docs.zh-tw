@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aaf5b4f4c8e93d3f36ddbd4768ebf2e453112fae
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 114a47009a1920ba3068f97701c785fa4666040e
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726364"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584184"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>針對 Always On 可用性群組準備次要資料庫
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "91726364"
         > [!IMPORTANT]  
         >  如果主要與次要資料庫的路徑名稱不同，您將無法加入檔案。 這是因為接收加入檔案作業的記錄時，次要複本的伺服器執行個體會嘗試將新檔案放在主要資料庫所使用的相同路徑中。  
   
-         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至名為 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On1 *) 之*遠端執行個體的資料目錄，其中裝載另一個叢集節點的次要複本。 然後，資料和記錄檔就會還原至 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
+         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至名為 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On1 *) 之* 遠端執行個體的資料目錄，其中裝載另一個叢集節點的次要複本。 然後，資料和記錄檔就會還原至 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
   
         ```  
         RESTORE DATABASE MyDB1  

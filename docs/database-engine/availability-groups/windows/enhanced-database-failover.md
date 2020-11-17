@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-author: MashaMSFT
+author: cawrites
 ms.reviewer: mikeray
-ms.author: mathoma
-ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.author: chadam
+ms.openlocfilehash: 8a0e98398868676c6b7e5c3cdcaae1172a7a785a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894435"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584272"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>啟用增強型資料庫容錯移轉至 Always On 可用性群組中的資料庫
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

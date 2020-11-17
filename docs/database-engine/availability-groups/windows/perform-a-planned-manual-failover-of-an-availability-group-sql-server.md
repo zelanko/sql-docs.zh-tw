@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f34a3a3ce7ddf6c80127fbdfb5cdd0298466633b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670896"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584128"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91670896"
 -   目標次要複本目前必須與主要複本同步。 該次要複本上的所有次要資料庫皆必須聯結至可用性群組。 其也必須與其對應的主要資料庫同步 (亦即，本機次要資料庫必須為 SYNCHRONIZED)。 
   
     > [!TIP] 
-    >  若要判斷次要複本的容錯移轉整備，請查詢 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動態管理檢視中的 **is_failover_ready** 資料行。 或者，您可以查看 [AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的**容錯移轉整備**資料行。 
+    >  若要判斷次要複本的容錯移轉整備，請查詢 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動態管理檢視中的 **is_failover_ready** 資料行。 或者，您可以查看 [AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的 **容錯移轉整備** 資料行。 
 -   只有在目標次要複本上才支援這個工作。 您必須連接到裝載目標次要複本的伺服器執行個體。 
   
 ###  <a name="security"></a><a name="Security"></a> Security 

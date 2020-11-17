@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727899"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584247"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91727899"
   
  指定可用性複本支援的容錯移轉形式是由 [容錯移轉模式] 屬性所指定。 指定可用性複本的可能容錯移轉模式取決於複本的[可用性模式](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)，如下所示：  
   
--   **同步認可複本**支援兩個設定：自動或手動。 「自動」設定同時支援自動容錯移轉和手動容錯移轉。 若要避免資料遺失，自動容錯移轉和已規劃的容錯移轉要求容錯移轉目標必須是同步處理狀態良好的同步認可次要複本 (這表示容錯移轉目標上的每個次要資料庫與對應的主要資料庫同步處理)。 當次要複本不符合上述兩項條件時，只會支援強制容錯移轉。 請注意，在角色處於 RESOLVING 狀態的複本中也支援強制容錯移轉。  
+-   **同步認可複本** 支援兩個設定：自動或手動。 「自動」設定同時支援自動容錯移轉和手動容錯移轉。 若要避免資料遺失，自動容錯移轉和已規劃的容錯移轉要求容錯移轉目標必須是同步處理狀態良好的同步認可次要複本 (這表示容錯移轉目標上的每個次要資料庫與對應的主要資料庫同步處理)。 當次要複本不符合上述兩項條件時，只會支援強制容錯移轉。 請注意，在角色處於 RESOLVING 狀態的複本中也支援強制容錯移轉。  
   
 -   **非同步認可複本** 僅支援手動容錯移轉模式。 此外，因為它們絕對不會同步處理，所以僅支援強制容錯移轉。  
   

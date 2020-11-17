@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 855ed087fb8276e83db72c7ca6a12a22f0225eef
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727927"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584368"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "91727927"
     >  當您透過 WSFC 叢集 (容錯移轉叢集管理員 GUI) 建立可用性群組接聽程式時， **RegisterAllProvidersIP** 會預設為 0 (false)。  
   
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> HostRecordTTL 設定  
- 根據預設，用戶端會快取叢集 DNS 記錄 20 分鐘。  透過減少快取記錄的 **HostRecordTTL**存留時間 (TTL)，舊版用戶端就可以更快速地重新連接。  不過，減少 **HostRecordTTL** 設定也可能導致傳輸至 DNS 伺服器的流量增加。  
+ 根據預設，用戶端會快取叢集 DNS 記錄 20 分鐘。  透過減少快取記錄的 **HostRecordTTL** 存留時間 (TTL)，舊版用戶端就可以更快速地重新連接。  不過，減少 **HostRecordTTL** 設定也可能導致傳輸至 DNS 伺服器的流量增加。  
   
 ###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> 停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼  
  下列 PowerShell 範例會示範如何針對接聽程式資源設定 **RegisterAllProvidersIP** 和 **HostRecordTTL** 叢集參數。  系統將會快取 DNS 記錄 5 分鐘，而不是預設的 20 分鐘。  對於無法使用 **MultiSubnetFailover** 參數的舊版用戶端而言，修改這兩個叢集參數可能會減少容錯移轉之後連接至正確 IP 位址的時間。  將 `yourListenerName` 取代為您要變更的接聽程式名稱。  

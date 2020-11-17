@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 634dcdb3f3682b133e19d25b041819e22300a932
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727822"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584135"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>什麼是 Always On 可用性群組？
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91727822"
   
  或者，您可以設定一個或多個次要複本以支援對次要資料庫的唯讀存取，而且您可以設定任何次要複本以允許在次要資料庫上進行備份。  
 
- SQL Server 2017 引進兩個不同的可用性群組架構。 *AlwaysOn 可用性群組*提供高可用性、災害復原和讀取級別平衡。 這些可用性群組需要叢集管理員。 在 Windows 中，容錯移轉叢集提供叢集管理員。 在 Linux 中，您可以使用 Pacemaker。 另一個架構是「讀取級別可用性群組」  。 讀取級別可用性群組針對唯讀工作負載提供複本，但未針對高可用性。 在讀取級別可用性群組，沒有叢集管理員。 
+ SQL Server 2017 引進兩個不同的可用性群組架構。 *AlwaysOn 可用性群組* 提供高可用性、災害復原和讀取級別平衡。 這些可用性群組需要叢集管理員。 在 Windows 中，容錯移轉叢集提供叢集管理員。 在 Linux 中，您可以使用 Pacemaker。 另一個架構是「讀取級別可用性群組」  。 讀取級別可用性群組針對唯讀工作負載提供複本，但未針對高可用性。 在讀取級別可用性群組，沒有叢集管理員。 
  
  在 Windows 上針對 HA 部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，需要 Windows Server 容錯移轉叢集 (WSFC)。 給定可用性群組的每個可用性複本都必須位在相同 WSFC 的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。 
 

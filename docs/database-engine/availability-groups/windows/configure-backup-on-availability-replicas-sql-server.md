@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1d9a6dc56f0c61e454d368215cb37f4a2f5602c2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726456"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584483"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>在 Always On 可用性群組的次要複本上設定備份
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -178,7 +178,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  使用這類邏輯編寫備份作業的指令碼，可讓您指定備份作業以相同排程在每個可用性複本上執行。 每一個作業都會查看相同的資料，以判斷應該執行哪一個作業，如此一來，只有其中一個排程作業會實際進行到備份階段。  萬一發生容錯移轉，指令碼或作業都不需要修改。 此外，如果您重新設定可用性群組以加入可用性複本，備份作業管理只需要複製或排程備份作業。 如果您移除可用性複本，只需從原先裝載該複本的伺服器執行個體刪除備份作業。  
   
 > [!TIP]  
->  如果您使用[維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)來建立指定的備份作業，此作業就會自動包含呼叫並檢查 **sys.fn_hadr_backup_is_preferred_replica** 函數的指令碼邏輯。 不過，此備份作業不會傳回「這不是慣用的複本...」訊息。請務必在裝載可用性群組之可用性複本的每一個伺服器執行個體上，為每個可用性資料庫建立作業。  
+>  如果您使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)來建立指定的備份作業，此作業就會自動包含呼叫並檢查 **sys.fn_hadr_backup_is_preferred_replica** 函數的指令碼邏輯。 不過，此備份作業不會傳回「這不是慣用的複本...」訊息。請務必在裝載可用性群組之可用性複本的每一個伺服器執行個體上，為每個可用性資料庫建立作業。  
   
 ##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a> 若要取得有關備份喜好設定的資訊  
  下列檢視表可用於取得次要備份的相關資訊。  

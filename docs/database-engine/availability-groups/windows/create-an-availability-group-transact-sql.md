@@ -10,14 +10,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e79175a6194b282fa57514146a63d9102dd33833
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6235f980627ad56d18330031c3bae6995eb45d2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727948"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584404"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "91727948"
   
 -   伺服器執行個體必須支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
--   *MyDb1* 與 *MyDb2*這兩個範例資料庫必須存在於將裝載主要複本的伺服器執行個體上。 下列程式碼範例會建立及設定這兩個資料庫，並建立每一個資料庫的完整備份。 在您打算建立範例可用性群組的伺服器執行個體上，執行這些程式碼範例。 此伺服器執行個體將會裝載範例可用性群組的初始主要複本。  
+-   *MyDb1* 與 *MyDb2* 這兩個範例資料庫必須存在於將裝載主要複本的伺服器執行個體上。 下列程式碼範例會建立及設定這兩個資料庫，並建立每一個資料庫的完整備份。 在您打算建立範例可用性群組的伺服器執行個體上，執行這些程式碼範例。 此伺服器執行個體將會裝載範例可用性群組的初始主要複本。  
   
     1.  下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 範例會建立這些資料庫，並加以更改為使用完整復原模式：  
   
@@ -100,7 +100,7 @@ ms.locfileid: "91727948"
         GO  
         ```  
   
-    2.  下列程式碼範例會建立 *MyDb1* 與 *MyDb2*的完整資料庫備份。 此程式碼範例會使用虛構的備份共用 \\\\*FILESERVER*\\*SQLbackups*。  
+    2.  下列程式碼範例會建立 *MyDb1* 與 *MyDb2* 的完整資料庫備份。 此程式碼範例會使用虛構的備份共用 \\\\*FILESERVER*\\*SQLbackups*。  
   
         ```sql  
         -- Backup sample databases:  
@@ -154,7 +154,7 @@ ms.locfileid: "91727948"
   
      如果伺服器執行個體的服務帳戶在不同的網域使用者之下執行，請在每一個伺服器執行個體上建立其他伺服器執行個體的登入，並授與此登入存取本機資料庫鏡像端點的權限。  
   
-     下列程式碼範例將示範用來建立登入，並在端點上授與其權限的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 遠端伺服器執行個體的網域帳戶在這裡會以 *domain_name*\\*user_name*來表示。  
+     下列程式碼範例將示範用來建立登入，並在端點上授與其權限的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 遠端伺服器執行個體的網域帳戶在這裡會以 *domain_name*\\*user_name* 來表示。  
   
     ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -171,7 +171,7 @@ ms.locfileid: "91727948"
   
 4.  在使用者資料庫所在的伺服器執行個體上，建立可用性群組。  
   
-     下列程式碼範例會在建立 *MyDb1* 與 *MyDb2* 範例資料庫的伺服器執行個體上建立名為 *MyAG*的可用性群組。 先指定本機伺服器執行個體，即 `AgHostInstance`COMPUTER01 *上的* 。 這個執行個體將會裝載初始主要複本。 接著指定遠端伺服器執行個體，即 *COMPUTER02*上的預設伺服器執行個體，以裝載次要複本。 這兩個可用性複本都是設定為具有手動容錯移轉的非同步認可模式 (對於非同步認可複本，手動容錯移轉表示在可能遺失資料的情況下強制容錯移轉)。  
+     下列程式碼範例會在建立 *MyDb1* 與 *MyDb2* 範例資料庫的伺服器執行個體上建立名為 *MyAG* 的可用性群組。 先指定本機伺服器執行個體，即 `AgHostInstance`COMPUTER01 *上的* 。 這個執行個體將會裝載初始主要複本。 接著指定遠端伺服器執行個體，即 *COMPUTER02* 上的預設伺服器執行個體，以裝載次要複本。 這兩個可用性複本都是設定為具有手動容錯移轉的非同步認可模式 (對於非同步認可複本，手動容錯移轉表示在可能遺失資料的情況下強制容錯移轉)。  
   
     ```sql
     -- Create the availability group, MyAG:   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9cf9343673732daee37aacb0a37943dc8be67616
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b16442c03b2a7ea11d1db9c7768e2c259b667e47
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727830"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584124"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>「監視 Always On 可用性群組的工具」
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91727830"
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**[物件總管詳細資料]** 窗格會顯示您所連接之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上裝載的可用性群組基本資訊。<br /><br /> **\*\* 提示 \*\*** ：使用此窗格選取多個可用性群組、複本或資料庫，並為所選物件執行例行的系統管理工作，例如，從可用性群組移除多個可用性複本或資料庫。|[使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**[屬性]** 對話方塊可讓您檢視可用性群組、複本或接聽程式的屬性，並在某些情況下變更其值。|-   [檢視可用性群組屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)<br />-   [檢視可用性複本屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)<br />-   [檢視可用性群組接聽程式屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)|  
 |系統監視器|**SQLServer:Availability Replica** 效能物件含有效能計數器，可報告可用性複本的相關資訊。|[SQL Server、可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列計數器與監視可用性資料庫上的交易記錄活動特別相關： **Log Flush Write Time (ms)** 、 **Log Flushes/sec**、 **Log Pool Cache Misses/sec**、 **Log Pool Disk Reads/sec**以及 **Log Pool Requests/sec**。|[SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md) 以及 [SQL Server、Databases 物件](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列計數器與監視可用性資料庫上的交易記錄活動特別相關： **Log Flush Write Time (ms)** 、 **Log Flushes/sec**、 **Log Pool Cache Misses/sec**、 **Log Pool Disk Reads/sec** 以及 **Log Pool Requests/sec**。|[SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md) 以及 [SQL Server、Databases 物件](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   

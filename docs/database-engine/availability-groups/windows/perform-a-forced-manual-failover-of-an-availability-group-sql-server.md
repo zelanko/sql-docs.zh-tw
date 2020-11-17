@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abffb23eda73db16481e9b91402b843a4088a33a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 35a0f41a9ad2d0e4ae8128e7cb98838c1a83747d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670921"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584146"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的強制手動容錯移轉 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -247,7 +247,7 @@ ms.locfileid: "91670921"
 ##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> 範例案例：使用強制容錯移轉從重大錯誤復原  
  如果主要複本失敗且沒有可用的已同步次要複本，則強制可用性群組進行容錯移轉可能會是適當的反應。 強制容錯移轉是否恰當取決於：(1) 您是否預期主要複本離線的時間超過服務等級合約 (SLA) 容忍範圍，以及 (2) 您是否願意承擔資料可能遺失的風險，而讓主要資料庫盡快恢復可用。 如果您決定可用性群組需要強制容錯移轉，實際的強制容錯移轉只不過是多步驟程序中的一個步驟。  
   
- 為了說明使用強制容錯移轉從重大錯誤復原所需的步驟，本主題會介紹一個可能的災害復原案例。 範例案例會考慮原始拓撲是由主控三個同步認可可用性複本 (包括主要複本) 的主要資料中心，以及主控兩個非同步認可次要複本的遠端資料中心所組成的可用性群組。 下圖說明此範例可用性群組的原始拓撲。 可用性群組是由多重子網路 WSFC 叢集所主控，其中三個節點位於主要資料中心 (**節點 01**、 **節點 02**和 **節點 03**)，兩個位於遠端資料中心 (**節點 04** 和 **節點 05**)。  
+ 為了說明使用強制容錯移轉從重大錯誤復原所需的步驟，本主題會介紹一個可能的災害復原案例。 範例案例會考慮原始拓撲是由主控三個同步認可可用性複本 (包括主要複本) 的主要資料中心，以及主控兩個非同步認可次要複本的遠端資料中心所組成的可用性群組。 下圖說明此範例可用性群組的原始拓撲。 可用性群組是由多重子網路 WSFC 叢集所主控，其中三個節點位於主要資料中心 (**節點 01**、 **節點 02** 和 **節點 03**)，兩個位於遠端資料中心 (**節點 04** 和 **節點 05**)。  
   
  ![可用性群組的原始拓撲](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-origtopology.gif "可用性群組的原始拓撲")  
   
@@ -273,7 +273,7 @@ ms.locfileid: "91670921"
 |步驟|動作|連結|  
 |----------|------------|-----------|  
 |**1.**|DBA 或網路管理員確認 WSFC 叢集擁有狀況良好的仲裁。 在此範例中，需要強制仲裁。|[WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
-|**2.**|DBA 連接到延遲最少的伺服器執行個體，(在 **節點 04**上)，並執行強制手動容錯移轉。 強制容錯移轉會將此次要複本轉換成主要角色，並且暫停其餘次要複本上的次要資料庫 (在 **節點 05**上)。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (查詢 **end_of_log_lsn** 資料行。 如需詳細資訊，請參閱本主題前面的 [建議](#Recommendations))。|  
+|**2.**|DBA 連接到延遲最少的伺服器執行個體，(在 **節點 04** 上)，並執行強制手動容錯移轉。 強制容錯移轉會將此次要複本轉換成主要角色，並且暫停其餘次要複本上的次要資料庫 (在 **節點 05** 上)。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (查詢 **end_of_log_lsn** 資料行。 如需詳細資訊，請參閱本主題前面的 [建議](#Recommendations))。|  
 |**3.**|DBA 手動繼續其餘次要複本上的每個次要資料庫。|[繼續可用性資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
   
 ###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> 讓可用性群組恢復其原始拓撲  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eed9c3c7644345da76cda9882844e553691b9683
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 30a4403819da8f88ea8fac50f2b3e6c6f62eab3b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727866"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584267"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91727866"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的 FCI 和 **Always On 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的 FCI 和 **Always On 可用性群組** 內 **節點數目** 的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 13c92b7783605eb501a73522d0820be9856588a6
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 500a114f399d1a2161bd20d6bcd02771bf9195e6
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565539"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584151"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87565539"
  **資料行名稱：** ag_name、ag_id、ag_resource_id、ag_group_id  
   
 > [!NOTE]  
->  另請參閱本主題稍後[監視可用性複本](#AvReplicas)一節中的 **sys.dm_hadr_availability_replica_cluster_nodes** 和 **sys.dm_hadr_availability_replica_cluster_states**，以及[監視可用性資料庫](#AvDbs)一節中的 **sys.availability_databases_cluster** 和 **sys.dm_hadr_database_replica_cluster_states**。  
+>  另請參閱本主題稍後 [監視可用性複本](#AvReplicas)一節中的 **sys.dm_hadr_availability_replica_cluster_nodes** 和 **sys.dm_hadr_availability_replica_cluster_states**，以及 [監視可用性資料庫](#AvDbs)一節中的 **sys.availability_databases_cluster** 和 **sys.dm_hadr_database_replica_cluster_states**。  
   
  如需 WSFC 叢集和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的相關資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) 和[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df4daf119464ccf90c751f97daeea0379d8e8a21
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727979"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584466"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ GO
 ## <a name="create-first-availability-group"></a>建立第一個可用性群組
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一個叢集上建立主要可用性群組  
-在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」****。 Server1 在此範例中是全域主要。        
+在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」。 Server1 在此範例中是全域主要。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -111,7 +111,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>建立第二個可用性群組  
- 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」****。 在此範例中，server3 是轉寄站。 
+ 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」。 在此範例中，server3 是轉寄站。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -181,7 +181,7 @@ GO
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>取消自動植入轉寄站
 
-無論出於什麼原因，若在同步兩個可用性群組「之前」__ 必須取消轉寄站的初始化，請透過將轉寄站的 SEEDING_MODE 參數設為 MANUAL 並立即取消植入來 ALTER 分散式可用性群組。 在全域主要上執行命令： 
+無論出於什麼原因，若在同步兩個可用性群組「之前」必須取消轉寄站的初始化，請透過將轉寄站的 SEEDING_MODE 參數設為 MANUAL 並立即取消植入來 ALTER 分散式可用性群組。 在全域主要上執行命令： 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

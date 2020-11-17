@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0915b57e7bd73ab4991ae14c222669fd309f7d6a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 306d77b9bf980179ff69514e0e609fc109c78632
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726397"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584367"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>建立 Always On 可用性群組的叢集 DTC 資源
 
@@ -26,7 +26,7 @@ ms.locfileid: "91726397"
 
 本逐步解說會配合[針對 SQL Server 可用性群組叢集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的需求，來建立叢集 DTC 資源和 SQL Server 可用性群組。
 
-本逐步解說使用 PowerShell 和 Transact-SQL (T-SQL) 指令碼。  許多 T-SQL 指令碼必須啟用 **SQLCMD 模式** 。  如需 **SQLCMD 模式**的詳細資訊，請參閱 [在查詢編輯器中啟用 SQLCMD 指令碼](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  您必須匯入 PowerShell 模組 **FailoverClusters** 。  如需匯入 PowerShell 模組的詳細資訊，請參閱[匯入 PowerShell 模組](/powershell/scripting/developer/module/importing-a-powershell-module)。  本逐步解說具有下列基本原則：
+本逐步解說使用 PowerShell 和 Transact-SQL (T-SQL) 指令碼。  許多 T-SQL 指令碼必須啟用 **SQLCMD 模式** 。  如需 **SQLCMD 模式** 的詳細資訊，請參閱 [在查詢編輯器中啟用 SQLCMD 指令碼](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  您必須匯入 PowerShell 模組 **FailoverClusters** 。  如需匯入 PowerShell 模組的詳細資訊，請參閱[匯入 PowerShell 模組](/powershell/scripting/developer/module/importing-a-powershell-module)。  本逐步解說具有下列基本原則：
 - 已符合 [AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) 中的所有需求。  
 - 網域為 `contoso.lab`。
 - 使用者在即將建立 DTC 網路名稱資源的 OU 中具有建立電腦物件權限。
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.設定 [不能肯定的交易解析] 
-此指令碼會將未決交易的 [不能肯定的交易解析]  伺服器設定選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
+此指令碼會將未決交易的 [不能肯定的交易解析]  伺服器設定選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式** 的 `SQLNODE1` 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************
@@ -157,7 +157,7 @@ GO
 ```
 
 ## <a name="4-create-test-databases"></a>4.建立測試資料庫
-此指令碼會在 `SQLNODE1` 上建立名為 `AG1` 的資料庫，並在 `SQLNODE2` 上建立名為 `dtcDemoAG1` 的資料庫。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
+此指令碼會在 `SQLNODE1` 上建立名為 `AG1` 的資料庫，並在 `SQLNODE2` 上建立名為 `dtcDemoAG1` 的資料庫。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的** 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************
@@ -215,7 +215,7 @@ GO
 ----------------------------------------------------------------
 ```
 ## <a name="5---create-endpoints"></a>5. 建立端點
-此指令碼會建立在 TCP 通訊埠 `5022` 上接聽的端點 `AG1_endpoint`。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
+此指令碼會建立在 TCP 通訊埠 `5022` 上接聽的端點 `AG1_endpoint`。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的** 執行下列 T-SQL 指令碼。
 
 ```sql  
 /**********************************************
@@ -248,7 +248,7 @@ GO
 ```
 
 ## <a name="6---prepare-databases-for-availability-group"></a>6. 準備可用性群組的資料庫
-此指令碼會在 `SQLNODE1` 上備份 `AG1`，並將它還原至 `SQLNODE2`。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
+此指令碼會在 `SQLNODE1` 上備份 `AG1`，並將它還原至 `SQLNODE2`。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的** 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7. 建立可用性群組
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必須使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句建立。  您目前無法改變現有可用性群組。  [新增可用性群組精靈] 不允許您啟用新可用性群組的 DTC 支援。  下列指令碼會建立新的可用性群組，並加入次要。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必須使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句建立。  您目前無法改變現有可用性群組。  [新增可用性群組精靈] 不允許您啟用新可用性群組的 DTC 支援。  下列指令碼會建立新的可用性群組，並加入次要。  在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的** 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************
@@ -561,7 +561,7 @@ END
  ```
 
 ### <a name="execute-a-distributed-transaction"></a>執行分散式交易
-此指令碼會先傳回目前的 DTC 交易統計資料，  再使用 `SQLNODE1` 和 `SQLNODE2`上的資料庫來執行分散式交易。  然後，指令碼會再次傳回 DTC 交易統計資料，其計數現在應該會增加。  實際連接到 `SQLNODE1` ，並在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的**執行下列 T-SQL 指令碼。
+此指令碼會先傳回目前的 DTC 交易統計資料，  再使用 `SQLNODE1` 和 `SQLNODE2`上的資料庫來執行分散式交易。  然後，指令碼會再次傳回 DTC 交易統計資料，其計數現在應該會增加。  實際連接到 `SQLNODE1` ，並在 SSMS 中，對 `SQLNODE1` SQLCMD 模式 **的** 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************

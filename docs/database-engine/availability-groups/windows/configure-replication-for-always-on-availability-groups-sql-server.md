@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 085b8788ba15349cca5b3ab445bf5c093207f72b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 505982d700608d34e909248b02ade932d470c4b5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115067"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584439"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -176,7 +176,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 在每個可用性群組複本主機上， **sp_validate_replica_hosts_as_publishers** 預存程序應該從具有足夠授權的登入執行，以便查詢可用性群組的相關資訊。 與 **sp_validate_redirected_publisher**不同之處在於，它會使用呼叫端的認證，而不會使用保留在 msdb.dbo.MSdistpublishers 中的登入來連接到可用性群組複本。  
+ 在每個可用性群組複本主機上， **sp_validate_replica_hosts_as_publishers** 預存程序應該從具有足夠授權的登入執行，以便查詢可用性群組的相關資訊。 與 **sp_validate_redirected_publisher** 不同之處在於，它會使用呼叫端的認證，而不會使用保留在 msdb.dbo.MSdistpublishers 中的登入來連接到可用性群組複本。  
   
 > [!NOTE]  
 >  在驗證不允許讀取存取或需要指定讀取意圖的次要複本主機時，**sp_validate_replica_hosts_as_publishers** 會失敗並發生下列錯誤。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 54d9036e6ce4165f4480339926624f1480c154aa
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1604aa22c53a24fa565061325b3c68a1640c490c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727956"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584441"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>設定對 Always On 可用性群組中次要複本的唯讀存取
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "91727956"
      主要複本的資料庫允許所有連接。 這是預設值。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
- 下列範例會將次要複本加入名為 *AG2*的可用性群組。 接著指定一個獨立伺服器執行個體 *COMPUTER03\HADR_INSTANCE*，以裝載新的可用性複本。 將此複本設定為只允許主要角色的讀寫連接以及只允許次要角色的讀取意圖連接。  
+ 下列範例會將次要複本加入名為 *AG2* 的可用性群組。 接著指定一個獨立伺服器執行個體 *COMPUTER03\HADR_INSTANCE*，以裝載新的可用性複本。 將此複本設定為只允許主要角色的讀寫連接以及只允許次要角色的讀取意圖連接。  
   
 ```  
 ALTER AVAILABILITY GROUP AG2   
@@ -141,12 +141,12 @@ GO
          不允許直接連接次要複本的資料庫，這些資料庫也不可用於讀取存取。 這是預設值。  
   
          **AllowReadIntentConnectionsOnly**  
-         次要複本的資料庫只允許 Application Intent 屬性設為 **ReadOnly**的連接。 如需有關這個屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
+         次要複本的資料庫只允許 Application Intent 屬性設為 **ReadOnly** 的連接。 如需有關這個屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
          **AllowAllConnections**  
          次要複本的資料庫允許所有連接進行唯讀存取。  
   
-    -   若要設定主要角色的連接存取，請指定 **ConnectionModeInPrimaryRole**_primary_role_keyword_參數，其中 *primary_role_keyword* 等於下列值之一︰  
+    -   若要設定主要角色的連接存取，請指定 **ConnectionModeInPrimaryRole**_primary_role_keyword_ 參數，其中 *primary_role_keyword* 等於下列值之一︰  
   
          **AllowReadWriteConnections**  
          不允許 Application Intent 連接屬性設為 ReadOnly 的連接。 當 Application Intent 屬性設為 ReadWrite 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
