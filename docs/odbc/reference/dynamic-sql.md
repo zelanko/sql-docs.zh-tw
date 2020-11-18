@@ -2,7 +2,7 @@
 description: 動態 SQL
 title: 動態 SQL |Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/16/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86164b1bc5d98475d4e2f0980ce433d33e5d858f
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494579"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704173"
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 雖然靜態 SQL 在許多情況下都能順利運作，但還是有一個應用程式類別無法事先判斷資料存取。 例如，假設試算表允許使用者輸入查詢，試算表接著會將該查詢傳送至 DBMS 以取得資料。 撰寫試算表程式時，程式設計人員顯然無法得知這項查詢的內容。  
@@ -32,7 +32,7 @@ ms.locfileid: "88494579"
   
  執行動態 SQL 語句最簡單的方式是使用 EXECUTE IMMEDIATE 語句。 這個語句會將 SQL 語句傳遞至 DBMS 以進行編譯和執行。  
   
- EXECUTE IMMEDIATE 語句的其中一個缺點是，DBMS 必須在每次執行語句時，逐一處理 SQL 語句的五個步驟。 如果有許多語句是以動態方式執行，則此程式所牽涉到的負擔可能會很大，而且如果這些語句很類似，則會很浪費。 為了解決這種情況，動態 SQL 提供了一種優化形式的執行，稱為「準備執行」，其會使用下列步驟：  
+ EXECUTE IMMEDIATE 語句的其中一個缺點是，DBMS 必須在每次執行語句時，逐一 [處理 SQL 語句的五個步驟](processing-a-sql-statement.md) 。 如果有許多語句是以動態方式執行，則此程式所牽涉到的負擔可能會很大，而且如果這些語句很類似，則會很浪費。 為了解決這種情況，動態 SQL 提供了一種優化形式的執行，稱為「準備執行」，其會使用下列步驟：  
   
 1.  程式會在緩衝區中建立 SQL 語句，就如同在 EXECUTE IMMEDIATE 語句中一樣。 問號 (？ ) 可以取代為語句文字中任何位置的常數，以指出稍後將會提供常數的值，而不是主變數。 問號稱為「參數標記」（parameter 標記）。  
   
