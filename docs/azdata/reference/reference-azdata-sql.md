@@ -173,5 +173,5 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
 
-如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata](..\install\deploy-install-azdata.md)。
+如需如何安裝 **azdata** 工具的詳細資訊，請參閱 [安裝 azdata](..\install\deploy-install-azdata.md)。
 

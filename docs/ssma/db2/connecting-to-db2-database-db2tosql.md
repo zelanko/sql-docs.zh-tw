@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d0ac703c8ea155f33ecb713b98a26f0c39b5a695
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987454"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870069"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>連接到 DB2 資料庫 (DB2ToSQL) 
 
@@ -86,7 +86,7 @@ DB2 資料庫的相關中繼資料不會自動重新整理。 DB2 中繼資料�
 
 1. 請確定您已連線到資料庫。
 2. 在 [DB2 中繼資料瀏覽器] 中，選取您要更新的每個架構或資料庫物件旁的核取方塊。
-3. 以滑鼠右鍵按一下 [ **架構**] 或個別的架構或資料庫物件，然後選取 [ **從資料庫**重新整理]。
+3. 以滑鼠右鍵按一下 [ **架構**] 或個別的架構或資料庫物件，然後選取 [ **從資料庫** 重新整理]。
 
    如果您沒有使用中的連接，SSMA 會顯示 [ **連接到 DB2** ] 對話方塊，讓您可以連接。
   
@@ -101,7 +101,7 @@ DB2 資料庫的相關中繼資料不會自動重新整理。 DB2 中繼資料�
 
 ## <a name="next-step"></a>後續步驟
 
-- 遷移程式的下一個步驟是 [連接到 SQL Server](./connecting-to-sql-server-db2etosql.md)。
+- 遷移程式的下一個步驟是 [連接到 SQL Server](./connecting-to-sql-server-db2tosql.md)。
 
 ## <a name="see-also"></a>另請參閱
 

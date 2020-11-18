@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987444"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869539"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>將 DB2 架構對應至 SQL Server 架構 (DB2ToSQL) 
 在 DB2 中，每個資料庫都有一個或多個架構。 根據預設，SSMA 會將 DB2 架構中的所有物件遷移至架構的名稱為的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 不過，您可以自訂 DB2 架構與資料庫之間的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -23,7 +23,7 @@ ms.locfileid: "91987444"
 ## <a name="db2-and-sql-server-schemas"></a>DB2 和 SQL Server 架構  
 DB2 資料庫包含架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多個資料庫，每一個資料庫都可以有多個架構。  
   
-架構的 DB2 概念會對應到資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 概念和其架構的其中一個。 例如，DB2 可能會有一個名為 **HR**的架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能具有名為 **HR**的資料庫，而該資料庫內的架構為架構。 其中一個架構是 **dbo** (或資料庫擁有者) 架構。 根據預設，DB2 schema **hr** 將會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和 schema **hr. dbo**。 SSMA 指的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構與架構的組合。  
+架構的 DB2 概念會對應到資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 概念和其架構的其中一個。 例如，DB2 可能會有一個名為 **HR** 的架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能具有名為 **HR** 的資料庫，而該資料庫內的架構為架構。 其中一個架構是 **dbo** (或資料庫擁有者) 架構。 根據預設，DB2 schema **hr** 將會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和 schema **hr. dbo**。 SSMA 指的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫和架構與架構的組合。  
   
 您可以修改 DB2 和架構之間的對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -34,7 +34,7 @@ DB2 資料庫包含架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssn
   
 1.  在 [DB2 中繼資料瀏覽器] 中，選取 [ **架構**]。  
   
-    當您選取個別的資料庫、**架構**資料夾或個別的架構時，也可以使用 [**架構對應**] 索引標籤。 [ **架構對應** ] 索引標籤中的清單是針對選取的物件自訂的。  
+    當您選取個別的資料庫、**架構** 資料夾或個別的架構時，也可以使用 [**架構對應**] 索引標籤。 [ **架構對應** ] 索引標籤中的清單是針對選取的物件自訂的。  
   
 2.  在右窗格中，按一下 [ **架構對應** ] 索引標籤。  
   
@@ -63,5 +63,5 @@ DB2 資料庫包含架構。 的實例 [!INCLUDE[ssNoVersion](../../includes/ssn
 如果您想要分析 DB2 物件至物件的轉換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您可以 [ (SSMA 一般) 來進行資料移轉報表 ](../sybase/data-migration-report-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[連接至 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[連接至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [將 DB2 資料庫移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

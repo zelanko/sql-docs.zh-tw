@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fbfb89d7b8e78ee43b74eb420eed7a23738932d5
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e31d4b1d31cb186276d8424f8c49450cb4ce9406
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987599"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869526"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>將 DB2 資料庫移轉至 SQL Server (DB2ToSQL) 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 是全方位的環境，可協助您快速地將 DB2 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database。 您可以使用 SSMA for DB2 來查看資料庫物件和資料、評估要遷移的資料庫、將資料庫物件遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database，然後將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database。 請注意，您無法遷移 SYS 和 SYSTEM DB2 架構。  
@@ -29,7 +29,7 @@ ms.locfileid: "91987599"
   
 2.  [連接到 DB2 資料庫](./connecting-to-db2-database-db2tosql.md)。  
   
-3.  [連接到 SQL Server](./connecting-to-sql-server-db2etosql.md)。  
+3.  [連接到 SQL Server](./connecting-to-sql-server-db2tosql.md)。  
   
 4.  [將 DB2 架構對應至 SQL Server 架構](./mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988456"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869476"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA Projects (DB2ToSQL) 
 若要將 DB2 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必須先建立 SSMA 專案。 專案是包含下列資訊的檔案：  
@@ -28,7 +28,7 @@ ms.locfileid: "91988456"
   
 -   專案設定。  
   
-當您開啟專案時，它會與 DB2 和進行中斷連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這可讓您離線工作。 如需重新連接的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱 [連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。  
+當您開啟專案時，它會與 DB2 和進行中斷連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 這可讓您離線工作。 如需重新連接的相關資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請參閱 [連接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)。  
   
 ## <a name="reviewing-default-project-settings"></a>查看預設專案設定  
 SSMA 包含數個設定，可用於轉換和載入資料庫物件、遷移資料，以及同步處理 SSMA 與 DB2 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 預設設定適用于許多使用者。 不過，在建立新的 SSMA 專案之前，您應該先檢查設定。 如果您想要的話，可以變更將用於所有新專案的預設設定。  
@@ -60,7 +60,7 @@ SSMA 包含數個設定，可用於轉換和載入資料庫物件、遷移資料
   
 **若要建立專案**  
   
-1.  按一下 [檔案] 功能表上的 [新增專案]。********  
+1.  按一下 [檔案] 功能表上的 [新增專案]。  
   
     [新增專案]  對話方塊隨即出現。  
   
@@ -92,7 +92,7 @@ SSMA 包含數個設定，可用於轉換和載入資料庫物件、遷移資料
   
     如果專案中的架構已變更或尚未轉換，SSMA 會提示您載入並儲存中繼資料。 載入和儲存中繼資料可讓您離線工作。 它也可讓您將完整的專案檔傳送給其他人，例如技術支援人員。 如果系統提示您儲存中繼資料，請執行下列動作：  
   
-    1.  針對顯示 **遺漏中繼資料**狀態的每個架構，選取資料庫名稱旁邊的核取方塊。  
+    1.  針對顯示 **遺漏中繼資料** 狀態的每個架構，選取資料庫名稱旁邊的核取方塊。  
   
         儲存中繼資料可能需要幾分鐘的時間。 如果您還沒有想要儲存中繼資料，請勿選取任何核取方塊。  
   
@@ -113,7 +113,7 @@ SSMA 包含數個設定，可用於轉換和載入資料庫物件、遷移資料
   
 2.  若要重新連接到 DB2，請 **在 [檔案** ] 功能表上，按一下 [ **重新連接到 db2**]。  
   
-3.  若要重新連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請**File**在 [檔案] 功能表上，按一下 [**重新連接] 以 SQL Server**。  
+3.  若要重新連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請 **File** 在 [檔案] 功能表上，按一下 [**重新連接] 以 SQL Server**。  
   
 ## <a name="next-step"></a>後續步驟  
 遷移程式的下一個步驟是 [連接到 DB2 資料庫](./connecting-to-db2-database-db2tosql.md)。  
@@ -121,4 +121,4 @@ SSMA 包含數個設定，可用於轉換和載入資料庫物件、遷移資料
 ## <a name="see-also"></a>另請參閱  
 [將 DB2 資料庫移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [連接到 DB2 資料庫 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[連接至 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[連接至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  

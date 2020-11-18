@@ -3,7 +3,7 @@ title: 在 SQL Server (OracleToSQL) 上安裝 SSMA 元件 |Microsoft Docs
 description: 瞭解如何在執行 SQL Server 的電腦上安裝 SSMA 擴充功能套件和 Oracle 提供者，以支援 Oracle 資料庫轉換。
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/14/2020
+ms.date: 11/16/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7acabfac10c3eb6e7afa1fbfbb2f546b0ae4137d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 64850d1a701491f0dc5817576a568fdc3ebc2483
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006442"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870096"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server (OracleToSQL) 上安裝 SSMA 元件
 
@@ -26,11 +26,11 @@ ms.locfileid: "92006442"
 
 ## <a name="ssma-for-oracle-extension-pack"></a>SSMA for Oracle 擴充功能套件
 
-SSMA 延伸模組套件會將 **sysdb** 和 **ssmatesterdb** 資料庫加入至指定的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 資料庫 **sysdb** 包含遷移資料所需的資料表和預存程式，以及模擬 Oracle 系統函數的使用者定義函數。 **Ssmatesterdb**資料庫包含測試人員元件所需的資料表和程式。
+SSMA 延伸模組套件會部署擴充預存程式，並將 **sysdb** 和 **ssmatesterdb** 資料庫加入至指定的實例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 擴充預存程式提供模擬 Oracle 功能和 behaiov 所需的功能，而 **sysdb** 資料庫則包含遷移資料所需的資料表和預存程式。 **Ssmatesterdb** 資料庫包含測試人員元件 (（如果已安裝) ）所需的資料表和程式。
 
 此外，當您將資料移轉至時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在使用伺服器端資料移轉引擎來遷移資料時建立代理程式作業。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>先決條件
 
 在上安裝 SSMA for Oracle server 元件之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請確定系統符合下列需求：
 
@@ -52,12 +52,12 @@ SSMA 延伸模組套件會將 **sysdb** 和 **ssmatesterdb** 資料庫加入至�
 
 若要安裝延伸模組套件：
 
-1. 複製**SSMAforOracleExtensionPack_*n*** 的 (，其中*n*是) 到執行之電腦的組建編號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-2. 按兩下 [ **SSMAforOracleExtensionPack_*n*.msi**。
-3. 在 [歡迎]  頁面上，選取 [下一步]  。
+1. 複製 **SSMAforOracleExtensionPack_ *n*** 的 (，其中 *n* 是) 到執行之電腦的組建編號。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+2. 按兩下 [ **SSMAforOracleExtensionPack_ *n*.msi**。
+3. 在 [歡迎使用]  頁面，按 [下一步]  。
 4. 在 [ **使用者授權合約** ] 頁面上，閱讀授權合約。 如果您同意，請選取 **[我接受合約** ] 選項，然後按 **[下一步]**。
 5. 在 [ **選擇安裝類型** ] 頁面上，選取 [ **一般**]。
-6. 在 [已可安裝] **** 頁面上，選取 [安裝] ****。
+6. 在 [已可安裝]  頁面上，選取 [安裝] 。
 7. 在 [ **完成安裝的第一個步驟** ] 頁面上，選取 **[下一步]**。
   
    新的對話方塊隨即出現。 選取延伸模組套件類型。
@@ -79,11 +79,11 @@ SSMA 延伸模組套件會將 **sysdb** 和 **ssmatesterdb** 資料庫加入至�
 
 11. 在下一個頁面上，選取 [ **安裝公用程式資料庫 *n* ] 並安裝延伸套件程式庫**，其中 *n* 是版本號碼。 如果您計畫使用測試人員功能，請選取 [ **安裝測試人員資料庫** ] 核取方塊，然後選取 **[下一步]**。
 
-    **Sysdb**資料庫是使用資料移轉所需的資料表和預存程式所建立， (使用伺服器端資料移轉引擎) 在此資料庫中建立的。
+    **Sysdb** 資料庫是使用資料移轉所需的資料表和預存程式所建立， (使用伺服器端資料移轉引擎) 在此資料庫中建立的。
 
     如果選取 [ **安裝測試人員資料庫** ] 選項，則會建立 **ssmatesterdb** 資料庫。
 
-12. 安裝完成之後，會出現提示，詢問您是否要在的另一個實例上安裝公用程式資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、選取 **[是]**，然後選取 **[下一步**]，或是結束嚮導，請**Exit**選取 [**否**]，然後選取 [結束]。
+12. 安裝完成之後，會出現提示，詢問您是否要在的另一個實例上安裝公用程式資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、選取 **[是]**，然後選取 **[下一步**]，或是結束嚮導，請 **Exit** 選取 [**否**]，然後選取 [結束]。
 
 13. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或中使用 `sqlcmd` 公用程式，執行下列腳本以啟用 CLR：
 
@@ -100,11 +100,17 @@ SSMA 延伸模組套件會將 **sysdb** 和 **ssmatesterdb** 資料庫加入至�
 
 ### <a name="sql-server-database-objects"></a>SQL Server 資料庫物件
 
-在您安裝延伸模組套件之後， **sysdb**資料庫中就會出現**ssma_oracle 的 bcp _migration_packages**資料表。
+在您安裝延伸模組套件之後， **sysdb** 資料庫中就會出現 **ssma_oracle 的 bcp _migration_packages** 資料表。
 
 每次您將資料移轉至時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA 會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業。 這些作業會命名為 **ssma_oracle 資料移轉封裝 {GUID}**，而且會顯示在 [作業] 資料夾的 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式] 節點中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
 
-## <a name="see-also"></a>另請參閱
+此外，也會將下列擴充預存程式加入至 **master** 資料庫：
+
+- `xp_ora2ms_exec2`
+- `xp_ora2ms_exec2_ex`
+- `xp_ora2ms_versioninfo2`
+
+## <a name="see-also"></a>請參閱
 
 - [安裝 SSMA for Oracle 用戶端](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [將 Oracle 資料庫移轉到 SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)
