@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059186"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584801"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>2020 年 11 月
+
+2020 年 11 月 12 日 &nbsp; / &nbsp; 版本：1.24.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| ------ | ------- |
+| 錯誤修正 | 如需完整的修正清單，請參閱 [GitHub 的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed)。 |
+| 連線對話方塊 | 已為連線對話方塊新增瀏覽索引標籤。 |
+| 延伸模組更新 | 已發行 Postgres 延伸模組的更新。 |
+| 新增 Notebook 功能 | 已將新功能新增至 SQL，以支援筆記本。 <br/> 已將新功能新增至 Notebook 參數化支援。 <br/>  已將新功能新增至 SQL 筆記本的結果串流。 |
+| Python 安裝 | PROSE 套件已從預設的 Python 安裝中移除。 |
+
+### <a name="known-issues-1240"></a>已知問題 (1.24.0)
+
+| 新項目 | 詳細資料 | 因應措施 |
+|----------|---------|------------|
+| Azure Arc 延伸模組 | [已知問題：](https://github.com/microsoft/azuredatastudio/issues/13319)Arc MIAA & PG 部署的 [Script to Notebook] 按鈕不會在撰寫筆記本指令碼之前執行欄位驗證。 這表示，如果使用者在密碼確認輸入中輸入錯誤的密碼，最後可能會使得筆記本具有錯誤的密碼值。| 不過 [部署] 按鈕會如預期般運作，因此使用者應該可以改為加以使用。 |
+| 物件總管 | 1\.24.0 之前的 ADS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics SQL 隨選在 Azure Data Studio 中使用物件總管，您必須使用 Azure Data Studio 1.24.0 或更新版本。 |
+
+針對其他已知問題，您可參考 [Azure Data Studio 使用者意見反應](https://github.com/microsoft/azuredatastudio)並為產品小組提供意見反應。
 
 ## <a name="october-2020"></a>2020 年 10 月
 
@@ -468,7 +491,7 @@ ms.locfileid: "92059186"
 - [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427) \(英文\)：在核心準備好進行 Spark 之前，於資料格上按一下執行會產生重大錯誤 **因應措施：** 等到核心載入之後，再執行任何資料格
 - [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493) \(英文\)：已使用 SQL 驗證從 SSMS 中啟動 ADS - 提示使用者提供密碼 **因應措施：** 立即使用 Windows 驗證。 
 - [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494) \(英文\)：無法安裝 SQL 筆記本功能 <br/>
-**因應措施：** 遵循[此處](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832) \(英文\) 的因應措施步驟。 
+**因應措施：** 遵循 [此處](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832) \(英文\) 的因應措施步驟。 
 - [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503) \(英文\)：無法直接從下載資料夾開啟 Azure Data Studio (Mac) <br />
 **因應措施：** 解壓縮應用程式之後將電腦重新啟動。 將會進行調查。 
 - [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539) \(英文\)：Notebook 另存新檔會遺失連線內容 <br />
@@ -486,7 +509,7 @@ ms.locfileid: "92059186"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已新增**適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](./extensions/sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./extensions/sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](./extensions/sql-server-import-extension.md) |
+| 已新增 **適用於 SQL Server 延伸模組套件的管理元件**。 | 這可讓您更輕鬆地安裝 SQL Server 管理相關的延伸模組。 這包括：<br/>&bull; &nbsp; [SQL Server Agent](./extensions/sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./extensions/sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server 匯入](./extensions/sql-server-import-extension.md) |
 | 已在 Profiler 延伸模組中新增篩選擴充事件支援。 | &nbsp; |
 | 已新增「另存檔案為 XML」功能，可將 T-SQL 結果儲存為 XML。 | &nbsp; |
 | 已新增資料層應用程式精靈改進。 | &bull; &nbsp; 已新增 [產生指令碼] 按鈕<br/>&bull; &nbsp; 已新增檢視來提供部署期間可能遺失資料的警告。 |
@@ -713,10 +736,10 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | **適用於 SQL Operations Studio _Preview_ 的 SQL Server Profiler** 延伸模組初始版本。 | &nbsp; |
-| 新的 **SQL 資料倉儲**延伸模組包含豐富的可自訂儀表板 Widget，可呈現您資料倉儲的深入解析。 | 這會將管理和調整您資料倉儲的重要案例解除鎖定，以確保它已針對一致性效能進行最佳化。 |
+| 新的 **SQL 資料倉儲** 延伸模組包含豐富的可自訂儀表板 Widget，可呈現您資料倉儲的深入解析。 | 這會將管理和調整您資料倉儲的重要案例解除鎖定，以確保它已針對一致性效能進行最佳化。 |
 | **編輯資料「篩選和排序」** 支援。 | &nbsp; |
 | **適用於 SQL Operations Studio _Preview_ 的 SQL Server Agent** 延伸模組增強功能，可用於 [作業] 和 [作業記錄] 檢視。 | &nbsp; |
-| 已改進**精靈與對話方塊 UI 產生器架構**擴充性 API。 | &nbsp; |
+| 已改進 **精靈與對話方塊 UI 產生器架構** 擴充性 API。 | &nbsp; |
 | 更新 VS Code 平台原始程式碼。 | 已整合下列版本：<br/>&bull; &nbsp; [2018 年 3 月 (1.22)](https://code.visualstudio.com/updates/v1_22) \(英文\)<br/>&bull; &nbsp; [2018 年 4 月 (1.23)](https://code.visualstudio.com/updates/v1_23) \(英文\) |
 | &nbsp; | &nbsp; |
 
@@ -812,7 +835,7 @@ Azure Data Studio 的正式發行版本 (先前稱為 SQL Operations Studio)。
 | [Explorer 中的錯誤和警告](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) \(英文\)。 | 快速導覽至程式碼基底中的錯誤。 |
 | [在視窗之間拖放、複製並貼上](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) \(英文\)。 | 在開啟的 SQL Operations Studio 視窗之間移動檔案。 |
 | [Git 子模組支援](https://code.visualstudio.com/updates/v1_20#_git-submodules) \(英文\)。 | 在巢狀 Git 存放庫上執行 Git 作業。 |
-| [終端機螢幕助讀程式支援](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) \(英文\)。 | 整合式終端機現在具有**已將螢幕助讀程式最佳化**模式。 |
+| [終端機螢幕助讀程式支援](https://code.visualstudio.com/updates/v1_20#_screen-reader-support) \(英文\)。 | 整合式終端機現在具有 **已將螢幕助讀程式最佳化** 模式。 |
 | [中央編輯器版面配置](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout) \(英文\)。 | 將您的程式碼檢視畫面最大化。 |
 | [水平搜尋結果 (預覽)](https://code.visualstudio.com/updates/v1_21#_horizontal-search) \(英文\)。 | 您現在可以在水平面板中檢視搜尋結果。 |
 | &nbsp; | &nbsp; |

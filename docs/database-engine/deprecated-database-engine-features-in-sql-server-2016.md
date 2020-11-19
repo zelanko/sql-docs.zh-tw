@@ -45,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 中已淘汰的功能
- 下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。  
+ 下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱** 值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。  
   
 |類別|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
@@ -150,7 +150,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|三部分和四部分資料行參考。|兩部分名稱是符合標準的行為。|兩部分以上的資料行名稱|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|加上引號的字串，在 SELECT 清單中當做運算式的資料行別名使用：<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|當做資料行別名的字串常值|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|編號程序。|無。 請勿使用。|ProcNums|160|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|DROP INDEX 中的*table_name.index_name* 語法|DROP INDEX 中的*index_name* ON *table_name* 語法。|具有兩部分名稱的 DROP INDEX|163|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|DROP INDEX 中的 *table_name.index_name* 語法|DROP INDEX 中的 *index_name* ON *table_name* 語法。|具有兩部分名稱的 DROP INDEX|163|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|不是以分號結束 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。|以分號 ( ; ) 結束 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。|None|None|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|GROUP BY ALL|搭配 UNION 或衍生資料表使用自訂的依案例方案。|GROUP BY ALL|169|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|當做 DML 陳述式中之資料行名稱的 ROWGUIDCOL。|使用 $rowguid。|ROWGUIDCOL|182|  
@@ -167,7 +167,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |工具|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|None|  
 |追蹤管理物件|Microsoft.SqlServer.Management.Trace 命名空間 (包含 SQL Server 追蹤和重新執行物件的 API)|追蹤組態︰ <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 追蹤讀取︰ <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 追蹤重新執行：None|||  
 |SQL 追蹤預存程序、函數和目錄檢視|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[擴充事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
-|Set 選項|用於**SET ROWCOUNT** 、 **INSERT**, **UPDATE**陳述式的 **DELETE**|TOP 關鍵字|SET ROWCOUNT|109|  
+|Set 選項|用於 **SET ROWCOUNT** 、 **INSERT**, **UPDATE** 陳述式的 **DELETE**|TOP 關鍵字|SET ROWCOUNT|109|  
 
   
 > [!NOTE]  

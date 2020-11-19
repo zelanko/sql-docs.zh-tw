@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b37413dd6450999e6671858073805dea5a5424e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412577"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521141"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -356,25 +356,25 @@ column_name <data_type>
 
 ## <a name="arguments"></a>引數
 
-*database_name* 這是建立資料表的資料庫名稱。 *database_name* 必須指定現有資料庫的名稱。 如果未指定， *database_name* 會預設為目前的資料庫。 目前連接的登入必須與 *database_name* 指定的資料庫中現有使用者識別碼有關聯，且這個使用者識別碼必須具有 CREATE TABLE 權限。
+*database_name* 這是建立資料表的資料庫名稱。 *database_name* 必須指定現有資料庫的名稱。 如果未指定，*database_name* 會預設為目前的資料庫。 目前連接的登入必須與 *database_name* 指定的資料庫中現有使用者識別碼有關聯，且這個使用者識別碼必須具有 CREATE TABLE 權限。
 
 *schema_name* 這是新資料表所屬的結構描述名稱。
 
 *table_name* 這是新資料表的名稱。 資料表名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 *table_name* 最多可有 128 個字元，但本機暫存資料表名稱 (名稱前附加一個數字符號 (#)) 除外，其不可超過 116 個字元。
 
-AS FileTable **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。
+AS FileTable **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。
 
 將新資料表建立為 FileTable。 因為 FileTable 有固定的結構描述，所以您不必指定資料行。 如需詳細資訊，請參閱 [FileTable](../../relational-databases/blob/filetables-sql-server.md)。
 
 *column_name*
-*computed_column_expression* 這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 這個資料行是從使用相同資料表之其他資料行的運算式得出的。 例如，計算資料行的定義可以是 **cost** AS **price**  \* **qty** 。這個運算式可以是非計算的資料行名稱、常數、函式、變數，以及一或多個運算子所連接這些項目的任何組合。 這個運算式不能是子查詢，也不能包含別名資料類型。
+*computed_column_expression* 這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 這個資料行是從使用相同資料表之其他資料行的運算式得出的。 例如，計算資料行的定義可以是 **cost** AS **price**  \* **qty**。這個運算式可以是非計算的資料行名稱、常數、函式、變數，以及一或多個運算子所連接這些項目的任何組合。 這個運算式不能是子查詢，也不能包含別名資料類型。
 
 計算資料行可用在選取清單、WHERE 子句、ORDER BY 子句中，或任何能夠使用規則運算式的其他位置中，但下列狀況例外：
 
 - 計算資料行必須標示為 PERSISTED，才能參與 FOREIGN KEY 或 CHECK 條件約束。
 - 如果以決定性的運算式定義計算資料行的值，而且索引資料行允許結果的資料類型，則計算資料行可以用來做為索引的索引鍵資料行，或任何 PRIMARY KEY 或 UNIQUE 條件約束的一部分。
 
-   例如，如果資料表有整數資料行 **a** 和 **b** ，您可以建立計算資料行 **a+b** 的索引，但不能建立計算資料行 computed column **a+DATEPART(dd, GETDATE())** 的索引，因為在後續叫用時，值可能會改變。
+   例如，如果資料表有整數資料行 **a** 和 **b**，您可以建立計算資料行 **a+b** 的索引，但不能建立計算資料行 computed column **a+DATEPART(dd, GETDATE())** 的索引，因為在後續叫用時，值可能會改變。
 
 - 計算資料行不能是 INSERT 或 UPDATE 陳述式的目標。
 
@@ -383,18 +383,18 @@ AS FileTable **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會依據所用的運算式，來自動判斷計算資料行的 Null 屬性。 大部分運算式的結果都會視為可為 Null，即使只存在不可為 Null 的資料行也是如此，這是因為可能出現的反向溢位或溢位也會產生 NULL 結果。 請將 `COLUMNPROPERTY` 函式與 **AllowsNull** 屬性搭配使用，以調查資料表中任何計算資料行的 Null 屬性。 您可以利用 *check_expression* 常數來指定 `ISNULL`，便能將可為 Null 的運算式變成不可為 Null，其中常數是用來替代任何 NULL 結果的非 Null 值。 以 Common Language Runtime (CLR) 使用者定義型別運算式為基礎的計算資料行，需要類型的 REFERENCES 權限。
 
-PERSISTED 指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]會實際將計算值儲存在資料表中，以及在計算資料行所依賴的任何其他資料行有了更新時，也會更新這些值。 將計算資料行標示為 `PERSISTED`，可讓您在具決定性但不精確的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 任何計算資料行只要作為分割資料表的分割資料行，即必須明確標示 `PERSISTED`。 指定 `PERSISTED` 時， *computed_column_expression* 必須具決定性。
+PERSISTED 指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]會實際將計算值儲存在資料表中，以及在計算資料行所依賴的任何其他資料行有了更新時，也會更新這些值。 將計算資料行標示為 `PERSISTED`，可讓您在具決定性但不精確的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 任何計算資料行只要作為分割資料表的分割資料行，即必須明確標示 `PERSISTED`。 指定 `PERSISTED` 時，*computed_column_expression* 必須具決定性。
 
-ON { *partition_scheme* | *filegroup* |  **"default"** } 指定儲存資料表的分割區配置或檔案群組。 如果指定了 *partition_scheme* ，資料表便是一份分割區資料表，其分割區儲存在由 *partition_scheme* 指定之一個或多個檔案群組所組成的檔案群組集中。 如果指定了 *filegroup* ，資料表會儲存在具名檔案群組中。 檔案群組必須在資料庫內。 如果指定了 **"default"** ，或完全未指定 ON，資料表就會儲存在預設檔案群組中。 CREATE TABLE 所指定的資料表儲存機制無法進行後續的改變。
+ON { *partition_scheme* | *filegroup* |  **"default"** } 指定儲存資料表的分割區配置或檔案群組。 如果指定了 *partition_scheme* ，資料表便是一份分割區資料表，其分割區儲存在由 *partition_scheme* 指定之一個或多個檔案群組所組成的檔案群組集中。 如果指定了 *filegroup*，資料表會儲存在具名檔案群組中。 檔案群組必須在資料庫內。 如果指定了 **"default"** ，或完全未指定 ON，資料表就會儲存在預設檔案群組中。 CREATE TABLE 所指定的資料表儲存機制無法進行後續的改變。
 
-ON { *partition_scheme* | *filegroup* |  **"default"** } 也可以指定於 PRIMARY KEY 或 UNIQUE 條件約束中。 這些條件約束會建立索引。 如果指定了 *filegroup* ，索引會儲存在具名檔案群組中。 如果指定了 **"default"** ，或完全未指定 ON，索引就會儲存在與資料表相同的檔案群組中。 如果 `PRIMARY KEY` 或 `UNIQUE` 條件約束建立了叢集索引，資料表的資料頁面就會儲存在索引的相同檔案群組中。 如果指定了 `CLUSTERED`，或常數建立了叢集索引，且指定了不同於資料表定義的 *partition_scheme* 或 *filegroup* 的 *partition_scheme* (反之亦然)，則只會接受常數定義，其他一概予以忽略。
+ON {*partition_scheme* | *filegroup* |  **"default"** } 也可以指定於 PRIMARY KEY 或 UNIQUE 條件約束中。 這些條件約束會建立索引。 如果指定了 *filegroup*，索引會儲存在具名檔案群組中。 如果指定了 **"default"** ，或完全未指定 ON，索引就會儲存在與資料表相同的檔案群組中。 如果 `PRIMARY KEY` 或 `UNIQUE` 條件約束建立了叢集索引，資料表的資料頁面就會儲存在索引的相同檔案群組中。 如果指定了 `CLUSTERED`，或常數建立了叢集索引，且指定了不同於資料表定義的 *partition_scheme* 或 *filegroup* 的 *partition_scheme* (反之亦然)，則只會接受常數定義，其他一概予以忽略。
 
 > [!NOTE]
-> 在這個內容中， *default* 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON **"default"** 或 ON **[** default **]** 。 如果指定了 **"default"** ，目前工作階段的 `QUOTED_IDENTIFIER` 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+> 在這個內容中，*default* 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON **"default"** 或 ON **[** default **]** 。 如果指定了 **"default"** ，目前工作階段的 `QUOTED_IDENTIFIER` 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 >
 > 建立分割資料表之後，請考慮將資料表的 `LOCK_ESCALATION` 選項設定為 `AUTO`。 如此一來可以讓鎖定從資料表擴大至分割區 (HoBT) 階層，進而改善並行作業。 如需詳細資訊，請參閱 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** } 指示 **text** 、 **ntext** 、 **image** 、 **xml** 、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 及 CLR 使用者定義型別資料行 (包括幾何及地理) 儲存在指定的檔案群組。
+TEXTIMAGE_ON { *filegroup*|  **"default"** } 指示 **text**、**ntext**、**image**、**xml**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 及 CLR 使用者定義型別資料行 (包括幾何及地理) 儲存在指定的檔案群組。
 
 如果資料表中沒有大數值資料行，即不可使用 `TEXTIMAGE_ON`。 如果指定了 `TEXTIMAGE_ON`partition_scheme *，便不能指定* 。 如果指定了 **"default"** ，或完全未指定 `TEXTIMAGE_ON`，大數值資料行就會儲存在預設檔案群組中。 `CREATE TABLE` 所指定的任何大數值資料行的儲存體皆無法進行後續的改變。
 
@@ -405,7 +405,7 @@ TEXTIMAGE_ON { *filegroup*|  **"default"** } 指示 **text** 、 **ntext** 、 *
 >
 > 在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 `TEXTIMAGE_ON "default"` 或 `TEXTIMAGE_ON [default]`。 如果指定了 **"default"** ，目前工作階段的 `QUOTED_IDENTIFIER` 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
-FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和更新版本)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILESTREAM`。
+FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和更新版本)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILESTREAM`。
 
 為 FILESTREAM 資料指定檔案群組。
 
@@ -430,7 +430,7 @@ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **�
 - 依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型的別名資料類型。 別名資料類型是利用 `CREATE TYPE` 陳述式建立的，在這之後才能在資料表定義中使用它們。 在 `CREATE TABLE` 陳述式期間，可以覆寫別名資料類型的 NULL 或 NOT NULL 指派。 不過，長度規格無法變更；在 `CREATE TABLE` 陳述式中無法指定別名資料類型的長度。
 - CLR 使用者定義型別。 CLR 使用者定義型別是利用 `CREATE TYPE` 陳述式來建立的，之後，才能在資料表定義中使用它們。 若要建立 CLR 使用者定義型別的資料行，便需要類型的 REFERENCES 權限。
 
-若未指定 *type_schema_name* ，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會按照以下順序參考 *type_name* ：
+若未指定 *type_schema_name*，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會按照以下順序參考 *type_name*：
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。
 - 目前資料庫中之目前使用者的預設結構描述。
@@ -442,7 +442,7 @@ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **�
 
 *scale* 這是所指定資料類型的小數位數。 如需有關有效小數位數值的詳細資訊，請參閱[有效位數、小數位數和長度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。
 
-**max** ：只適用於 **varchar** 、 **nvarchar** 與 **varbinary** 資料類型，可用來儲存 2^31 位元組的字元和二進位資料以及 2^30 位元組的 Unicode 資料。
+**max**：只適用於 **varchar**、**nvarchar** 與 **varbinary** 資料類型，可用來儲存 2^31 位元組的字元和二進位資料以及 2^30 位元組的 Unicode 資料。
 
 CONTENT 指定 *column_name* 中 **xml** 資料類型的每個執行個體都可以包含多個最上層項目。 CONTENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。 若未指定，CONTENT 便是預設行為。
 
@@ -456,7 +456,7 @@ DEFAULT 指定在插入期間未明確提供值時，提供給資料行的值。
 
 *memory_optimized_constant_expression* 這是支援作為資料行預設值的常數、NULL 或系統函數。 必須在原生編譯的預存程序中受到支援。 如需原生編譯預存程序中的內建函數詳細資訊，請參閱[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。
 
-IDENTITY 指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來搭配 PRIMARY KEY 條件約束一起使用，做為資料表的唯一資料列識別碼。 可以將 `IDENTITY` 屬性指派給 **tinyint** 、 **smallint** 、 **int** 、 **bigint** 、 **decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。
+IDENTITY 指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來搭配 PRIMARY KEY 條件約束一起使用，做為資料表的唯一資料列識別碼。 可以將 `IDENTITY` 屬性指派給 **tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。
 
 *seed* 這是載入資料表第一個資料列所用的值。
 
@@ -464,32 +464,32 @@ IDENTITY 指出新資料行是識別欄位。 當新資料列加入資料表時�
 
 NOT FOR REPLICATION 在 `CREATE TABLE` 陳述式中，可以為 IDENTITY 屬性、FOREIGN KEY 條件約束和 CHECK 條件約束指定 `NOT FOR REPLICATION` 子句。 如果為 `IDENTITY` 屬性指定了這個子句，當複寫代理程式執行插入時，值不會在識別欄位中累加。 如果條件約束指定了這個子句，當複寫代理程式執行插入、更新或刪除作業時，不會強制執行這個條件約束。
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定系統會使用規定的 `datetime2` 資料行來記載記錄會在什麼開始時間或結束時間算是有效的。 資料行必須定義為 `NOT NULL`。 如果您嘗試將其指定為 `NULL`，系統將會擲回錯誤。 如果未明確指定期間資料行的 NOT NULL，系統會將資料行預設為 `NOT NULL`。 使用這個引數再加上 `PERIOD FOR SYSTEM_TIME` 和 `WITH SYSTEM_VERSIONING = ON` 引數，在資料表上啟用系統版本設定。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-您可以使用 **HIDDEN** 旗標來標註其中一個或兩個期間資料行，以便隱含地隱藏這些資料行，這樣 **SELECT \* FROM** _`<table>`_ 便不會傳回那些資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。 若要變更現有期間資料行的 **HIDDEN** 屬性，必須卸除 **PERIOD** ，然後以不同的隱藏旗標重新建立。
+您可以使用 **HIDDEN** 旗標來標註其中一個或兩個期間資料行，以便隱含地隱藏這些資料行，這樣 **SELECT \* FROM** _`<table>`_ 便不會傳回那些資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。 若要變更現有期間資料行的 **HIDDEN** 屬性，必須卸除 **PERIOD**，然後以不同的隱藏旗標重新建立。
 
-INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] ( *column_name* [ ASC | DESC ] [ ,... *n* ] ) **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] ) **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定要在資料表上建立索引。 這可以是叢集的索引或非叢集索引。 索引將包含列示的資料行，並會以遞增或遞減順序來排序資料。
 
-INDEX *index_name* CLUSTERED COLUMNSTORE **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+INDEX *index_name* CLUSTERED COLUMNSTORE **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定要以單欄式格式來儲存整個資料表並具有叢集資料行存放區索引。 這一律會包含資料表中的所有資料行。 因為資料列會經過整理來取得資料行存放區壓縮的優點，所以不會以字母或數字的順序來排序資料。
 
-INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE ( *column_name* [ ,... *n* ] ) **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] ) **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定要在資料表上建立非叢集資料行存放區索引。 基礎資料表可以是資料列存放區堆積或叢集索引，或非叢集資料行存放區索引。 在所有情況下，在資料表上建立非叢集資料行存放區索引時，會將資料行的第二個資料複本儲存至索引。
 
 非叢集資料行存放區索引會當作是叢集資料行存放區索引來加以排序和管理。 因為資料行可能會受到限制，而且以次要索引的形式存在於資料表上，因此被稱為非叢集資料行存放區索引。
 
-ON _partition\_scheme\_name_ **(** _column\_name_ **)** 指定資料分割配置，這會定義要作為資料分割索引分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name* 。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
+ON _partition\_scheme\_name_ **(** _column\_name_ **)** 指定資料分割配置，這會定義要作為資料分割索引分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
 
 > [!NOTE]
 > 當您分割一個非唯一的叢集索引時，如果尚未指定分割區資料行，依預設，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它加入至叢集索引鍵清單。 當您分割一個非唯一的非叢集索引時，如果尚未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的非索引鍵 (內含) 資料行。
 
-如果未指定 *partition_scheme_name* 或 *filegroup* ，且已分割資料表，則會使用相同的分割資料行，將索引放在與基礎資料表相同的資料分割配置中。
+如果未指定 *partition_scheme_name* 或 *filegroup*，且已分割資料表，則會使用相同的分割資料行，將索引放在與基礎資料表相同的資料分割配置中。
 
 > [!NOTE]
 > 您無法在 XML 索引上指定分割區配置。 如果基底資料表已分割，XML 索引會使用與資料表相同的分割區配置。
@@ -502,7 +502,7 @@ ON **"default"** ：在預設檔案群組上建立指定的索引。
 
 在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON **"default"** 或 ON **[default]** 。 如果指定了 "default"，目前工作階段的 `QUOTED_IDENTIFIER` 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 更新版本)。
+[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 更新版本)。
 
 指定在建立叢集索引時，資料表之 FILESTREAM 資料的位置。 FILESTREAM_ON 子句允許將 FILESTREAM 資料移到不同的 FILESTREAM 檔案群組或分割區配置。
 
@@ -534,7 +534,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } **確定性加密** 使用的�
 
 資料行必須為合格的資料類型。
 
-ALGORITHM **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
+ALGORITHM **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
 
 必須為 **'AEAD_AES_256_CBC_HMAC_SHA_256'** 。
 
@@ -542,7 +542,7 @@ ALGORITHM **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 SPARSE 指出此資料行是疏鬆資料行。 疏鬆資料行的儲存體會針對 Null 值最佳化。 疏鬆資料行無法指定為 NOT NULL。 如需有關疏鬆資料行的其他限制和詳細資訊，請參閱[使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。
 
-MASKED WITH ( FUNCTION = ' *mask_function* ') **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
+MASKED WITH ( FUNCTION = ' *mask_function* ') **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
 
 指定動態資料遮罩。 *mask_function* 是遮罩函式的名稱並具備適當的參數。 可用的函式有四個：
 
@@ -553,7 +553,7 @@ MASKED WITH ( FUNCTION = ' *mask_function* ') **適用於** ：[!INCLUDE[ssNoVer
 
 如需函式參數，請參閱[動態資料遮罩](../../relational-databases/security/dynamic-data-masking.md)。
 
-FILESTREAM **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和更新版本)
+FILESTREAM **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和更新版本)
 
 僅適用於 **varbinary(max)** 資料行。 指定 FILESTREAM 儲存體來儲存 **varbinary(max)** BLOB 資料。
 
@@ -563,7 +563,7 @@ ROWGUIDCOL 資料行無法卸除，而且當資料表有定義 FILESTREAM 資料
 
 當有針對資料行指定 FILESTREAM 儲存屬性時，該資料行的所有值都會儲存在檔案系統的 FILESTREAM 資料容器內。
 
-COLLATE *collation_name* 指定資料行的定序。 定序名稱可以是 Windows 定序名稱，也可以是 SQL 定序名稱。 *collation_name* 僅適用於 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 和 **ntext** 資料類型的資料行。 若未指定，當資料行是使用者自訂資料類型時，便會將使用者自訂資料類型的定序指派給這個資料行，否則，便會指派資料庫的預設定序。
+COLLATE *collation_name* 指定資料行的定序。 定序名稱可以是 Windows 定序名稱，也可以是 SQL 定序名稱。 *collation_name* 僅適用於 **char**、**varchar**、**text**、**nchar**、**nvarchar** 和 **ntext** 資料類型的資料行。 若未指定，當資料行是使用者自訂資料類型時，便會將使用者自訂資料類型的定序指派給這個資料行，否則，便會指派資料庫的預設定序。
 
 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)和 [SQL 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
 
@@ -585,7 +585,7 @@ CLUSTERED | NONCLUSTERED 指出針對 PRIMARY KEY 或 UNIQUE 條件約束建立�
 
 FOREIGN KEY REFERENCES 這是一個條件約束，它提供一或多個資料行中資料的參考完整性。 FOREIGN KEY 條件約束要求資料行中的每個值存在於所參考之資料表中的一個或多個對應的被參考資料行中。 FOREIGN KEY 條件約束所參考的資料行，必須是所參考的資料表中的 PRIMARY KEY 或 UNIQUE 條件約束，或是所參考的資料表之 UNIQUE INDEX 中所參考的資料行。 計算資料行的外部索引鍵也必須標示為 PERSISTED。
 
-[ _schema\_name_ **.** ] *referenced_table_name* ] 這是 FOREIGN KEY 條件約束所參考資料表的名稱及其所屬結構描述。
+[ _schema\_name_ **.** ] *referenced_table_name*] 這是 FOREIGN KEY 條件約束所參考資料表的名稱及其所屬結構描述。
 
 **(** *ref_column* [ **,** ... *n* ] **)** 這是 FOREIGN KEY 條件約束所參考資料表中的一個資料行或資料行清單。
 
@@ -603,7 +603,7 @@ SET DEFAULT 如果刪除父資料表中對應的資料列，所有組成外部�
 
 如果資料表上已有 `INSTEAD OF` 觸發程序 `ON DELETE`，便無法定義 `ON DELETE CASCADE`。
 
-例如在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中， **ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性。 **ProductVendor.BusinessEntityID** 外部索引鍵會參考 **Vendor.BusinessEntityID** 主索引鍵。
+例如在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，**ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性。 **ProductVendor.BusinessEntityID** 外部索引鍵會參考 **Vendor.BusinessEntityID** 主索引鍵。
 
 如果在 **Vendor** 資料表的某個資料列上執行 `DELETE` 陳述式，且指定了 **ProductVendor.BusinessEntityID** 的 `ON DELETE CASCADE` 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中的一個或多個相依資料列。 如果有任何相依的資料列存在，就會刪除 **ProductVendor** 資料表中的相依資料列，以及 **Vendor** 資料表中所參考的資料列。
 
@@ -623,7 +623,7 @@ SET DEFAULT 當更新父資料表中對應的資料列時，所有組成外部�
 
 如果變更的資料表上已有 `INSTEAD OF` 觸發程序 `ON UPDATE`，便無法定義 `ON UPDATE CASCADE`、`SET NULL` 或 `SET DEFAULT`。
 
-例如在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中， **ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性： **ProductVendor.BusinessEntity** 外部索引鍵會參考 **Vendor.BusinessEntityID** 主索引鍵。
+例如在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，**ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性：**ProductVendor.BusinessEntity** 外部索引鍵會參考 **Vendor.BusinessEntityID** 主索引鍵。
 
 如果在 **Vendor** 資料表的某資料列上執行 UPDATE 陳述式，且指定了 **ProductVendor.BusinessEntityID** 的 ON UPDATE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一個或多個相依的資料列。 如果有任何相依的資料列存在，就會更新 **ProductVendor** 資料表中的相依資料列，以及 **Vendor** 資料表中所參考的資料列。
 
@@ -651,11 +651,11 @@ WITH FILLFACTOR **=** _fillfactor_ 指定用來儲存索引資料的每個索引
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS 這是資料行集的名稱。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 如需資料行集的詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。
 
-PERIOD FOR SYSTEM_TIME ( *system_start_time_column_name* , *system_end_time_column_name* ) **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* ) **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定資料行的名稱，系統會使用這個資料行來記載某一筆記錄的有效期。 使用這個引數再加上 GENERATED ALWAYS AS ROW { START | END } 和 WITH SYSTEM_VERSIONING = ON 引數，在資料表上啟用系統版本設定。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
-COMPRESSION_DELAY **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+COMPRESSION_DELAY **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 為了記憶體最佳化，延遲會指定資料列在資料表中至少要保持不變多少分鐘；等過了這段時間後，就可以將它壓縮到資料行存放區索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會其根據上次更新時間來選取要壓縮的特定資料列。 例如，如果資料列要在兩小時的時間內頻繁變更，您可以設定 `COMPRESSION_DELAY = 120 Minutes`，以確保在 SQL Server 壓縮資料列之前，會先完成更新。
 
@@ -677,19 +677,19 @@ PAGE 使用頁面壓縮來壓縮資料表或指定的分割區。
 
 COLUMNSTORE
 
-**適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 只適用於資料行存放區索引，包括非叢集資料行存放區索引和叢集資料行存放區索引。 COLUMNSTORE 會指定要利用最高效能的資料行存放區壓縮方式來進行壓縮。 這是典型的選擇。
 
-COLUMNSTORE_ARCHIVE **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+COLUMNSTORE_ARCHIVE **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 只適用於資料行存放區索引，包括非叢集資料行存放區索引和叢集資料行存放區索引。 COLUMNSTORE_ARCHIVE 將進一步將資料表或分割區壓縮成較小的大小。 這可用於封存，或是其他需要較小儲存體，而且可負擔更多時間來儲存和擷取的狀況。
 
 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ... *n* ] **)** 指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此資料表，此 `ON PARTITIONS` 引數將會產生錯誤。 如果未提供 `ON PARTITIONS` 子句，`DATA_COMPRESSION` 選項將會套用到分割資料表的所有分割區。
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)** 指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此資料表，此 `ON PARTITIONS` 引數將會產生錯誤。 如果未提供 `ON PARTITIONS` 子句，`DATA_COMPRESSION` 選項將會套用到分割資料表的所有分割區。
 
-可以使用以下方式來指定 *partition_number_expression* ：
+可以使用以下方式來指定 *partition_number_expression*：
 
 - 提供分割區的分割區編號，例如：`ON PARTITIONS (2)`
 - 為數個個別資料分割提供以逗號分隔的資料分割編號，例如：`ON PARTITIONS (1, 5)`
@@ -732,18 +732,18 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF } 若設為 ON，當您存取索引時，�
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF } 若設為 ON，當您存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。 當設為 OFF 時，不會使用頁面鎖定。 預設值是 ON。
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **適用對象** ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。 <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。 <BR>
 指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱 CREATE INDEX 頁面的[循序索引鍵](./create-index-transact-sql.md#sequential-keys)一節以取得詳細資訊。
 
 FILETABLE_DIRECTORY = *directory_name*
 
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。
 
 指定 Windows 相容的 FileTable 目錄名稱。 在資料庫的所有 FileTable 目錄名稱之間，此名稱必須是唯一的。 無論定序設定為何，唯一性比較皆不會區分大小寫。 如果未指定此值，就會使用 FileTable 的名稱。
 
 FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILETABLE`。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILETABLE`。
 
 指定定序名稱，用於套用至 FileTable 中的 **Name** 資料行。 定序必須不區分大小寫，以符合 Windows 作業系統檔案命名語義。 如果未指定此值，就會使用資料庫預設定序。 如果資料庫預設定序區分大小寫，則會引發錯誤，而且 CREATE TABLE 作業會失敗。
 
@@ -752,26 +752,26 @@ FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 database_default 指定所要使用的資料庫預設定序。 此定序不可區分大小寫。
 
 FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 更新版本)。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 更新版本)。
 
 指定在 FileTable 上自動建立的主索引鍵條件約束所要使用的名稱。 如果未指定此值，系統就會產生條件約束的名稱。
 
 FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 更新版本)。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 更新版本)。
 
 指定當系統在 FileTable 的 **stream_id** 資料行上，自動建立唯一條件約束時，所要使用的名稱。 如果未指定此值，系統就會產生條件約束的名稱。
 
 FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 更新版本)。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 更新版本)。
 
 指定當系統在 FileTable 的 **parent_path_locator** 和 **name** 資料行上，自動建立唯一條件約束時，所要使用的名稱。 如果未指定此值，系統就會產生條件約束的名稱。
 
-SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* . *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
+SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
 
 如果符合資料類型、 可 Null 性條件約束和主索引鍵條件約束需求，就會啟用資料表的系統版本設定。 如果未使用 `HISTORY_TABLE` 引數，系統會在與目前資料表相同的檔案群組中，產生一個與目前資料表的結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 根據預設，歷程記錄資料表會採 **PAGE** 壓縮處理。 如果使用 `HISTORY_TABLE` 引數來建立連結，並使用現有的記錄資料表，則會在目前的資料表和指定的資料表之間建立連結。 若目前的資料表已分割，則會在預設檔案群組上建立歷程記錄資料表，這是因為資料分割設定不會自動從目前的資料表複寫至歷程記錄資料表。 若在建立歷程記錄資料表時指定歷程記錄資料表名稱，則您必須指定結構描述和資料表名稱。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設執行資料一致性檢查。 使用這個引數再加上 `PERIOD FOR SYSTEM_TIME` 和 `GENERATED ALWAYS AS ROW { START | END }` 引數，在資料表上啟用系統版本設定。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 建立已啟用或停用 Stretch Database 的新資料表。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -779,11 +779,11 @@ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRA
 
 當您透過指定 `ON` 來啟用資料表的 Stretch 時，您可以選擇性指定 `MIGRATION_STATE = OUTBOUND` 來立即開始移轉資料或指定 `MIGRATION_STATE = PAUSED` 來延後移轉資料。 預設值是 `MIGRATION_STATE = OUTBOUND`。 如需如何為資料表啟用 Stretch 的詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。
 
-**必要條件** 。 為資料表啟用 Stretch 之前，您必須在伺服器和資料庫上啟用 Stretch。 如需詳細資訊，請參閱 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。
+**必要條件**。 為資料表啟用 Stretch 之前，您必須在伺服器和資料庫上啟用 Stretch。 如需詳細資訊，請參閱 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。
 
-**權限** 。 為資料庫或資料表啟用 Stretch 時，需要 db_owner 權限。 為資料表啟用 Stretch 時，也需要資料表的 ALTER 權限。
+**權限**。 為資料庫或資料表啟用 Stretch 時，需要 db_owner 權限。 為資料表啟用 Stretch 時，也需要資料表的 ALTER 權限。
 
-[ FILTER_PREDICATE = { null | *predicate* } ] **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
+[ FILTER_PREDICATE = { null | *predicate* } ] **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 更新版本)。
 
 您現在可以指定一個篩選述詞，以選取要從同時包含歷史資料和目前資料的資料表中移轉哪些資料列。 此述詞必須呼叫確定性內嵌資料表值函式。 如需詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 和[使用篩選函數來選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。
 
@@ -792,9 +792,9 @@ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRA
 
 若您未指定篩選器述詞，則會遷移整個資料表。
 
-當您指定篩選述詞時，也必須指定 *MIGRATION_STATE* 。
+當您指定篩選述詞時，也必須指定 *MIGRATION_STATE*。
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 - 指定 `OUTBOUND` 以將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 - 指定 `INBOUND` 以將資料表的遠端資料從 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 複製回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後停用資料表的 Stretch。 如需詳細資訊，請參閱 [停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
@@ -817,35 +817,35 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用於** ：[!INCLUDE[ssN
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
   指定資料表的保留期間原則。 保留期間是使用正整數值和資料部分單位的組合來指定。   
 
-MEMORY_OPTIMIZED **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 Azure SQL 受控執行個體不支援經記憶體最佳化的資料表。
+MEMORY_OPTIMIZED **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 Azure SQL 受控執行個體不支援經記憶體最佳化的資料表。
 
 值為 ON 時，會指出資料表為記憶體最佳化。 記憶體最佳化資料表是記憶體中 OLTP 功能的一部分，可用來最佳化交易處理的效能。 若要開始使用記憶體內部 OLTP，請參閱[快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 如需有關經記憶體最佳化的資料表詳細資訊，請參閱：[經記憶體最佳化的資料表](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)。
 
 預設值 OFF 表示資料表是以磁碟為基礎。
 
-DURABILITY **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+DURABILITY **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 若值為 `SCHEMA_AND_DATA`，表示資料表是持久的，也就是說，變更會保存在磁碟上，即使重新啟動或容錯移轉，也不會受到影響。 SCHEMA_AND_DATA 是預設值。
 
 若值為 `SCHEMA_ONLY`，表示資料表是非持久的。 資料表結構描述會保存，但是在資料庫重新啟動或容錯移轉時，任何資料更新都不會保存。 `DURABILITY = SCHEMA_ONLY` 只能用於 `MEMORY_OPTIMIZED = ON`。
 
 > [!WARNING]
-> 使用 **DURABILITY = SCHEMA_ONLY** , 和 **READ_COMMITTED_SNAPSHOT** 建立的資料表，在使用 **ALTER DATABASE** 進行變更時， 資料表中的資料會遺失。
+> 使用 **DURABILITY = SCHEMA_ONLY**, 和 **READ_COMMITTED_SNAPSHOT** 建立的資料表，在使用 **ALTER DATABASE** 進行變更時， 資料表中的資料會遺失。
 
-BUCKET_COUNT **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
+BUCKET_COUNT **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
 
 指出應該在雜湊索引中建立的貯體數目。 雜湊索引中 BUCKET_COUNT 的最大值是 1,073,741,824。 如需貯體計數的詳細資訊，請參閱[經記憶體最佳化之資料表上的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
 Bucket_count 是必要的引數。
 
-INDEX **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
+INDEX **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。
 
 您必須指定資料行和資料表索引，作為 CREATE TABLE 陳述式的一部分。 如需在記憶體最佳化資料表上新增和移除索引的詳細資料，請參閱：[改變記憶體最佳化資料表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-HASH **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+HASH **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 表示已建立雜湊索引。
 
@@ -865,7 +865,7 @@ HASH **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 您可以建立本機和全域暫存資料表。 本機暫存資料表只在目前工作階段中才可以看見，全域暫存資料表則是所有工作階段都能夠看見。 暫存資料表不能進行分割。
 
-請用一個數字符號來做為本機暫存資料表名稱的前置詞 (# *table_name* )，用兩個數字符號做為全域暫存資料表名稱的前置詞 (## *table_name* )。
+請用一個數字符號來做為本機暫存資料表名稱的前置詞 (#*table_name*)，用兩個數字符號做為全域暫存資料表名稱的前置詞 (##*table_name*)。
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會利用 `CREATE TABLE` 陳述式中指定給 *table_name* 的值來參考暫存資料表，例如：
 
@@ -880,7 +880,7 @@ VALUES (1);
 
 如果在單一預存程序或批次內，建立了多個暫存資料表，它們必須有不同的名稱。
 
-如果您在建立或存取站存資料表時加入了 *schema_name* ，系統會予以忽略。 所有暫存資料表都會建立在 dbo 結構描述中。
+如果您在建立或存取站存資料表時加入了 *schema_name*，系統會予以忽略。 所有暫存資料表都會建立在 dbo 結構描述中。
 
 如果本機暫存資料表建立在多位使用者可以同時執行的預存程序或應用程式中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須能夠區分不同使用者所建立的資料表。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部將數值後置詞附加至每個本機暫存資料表名稱上，以便區分它們。 **tempdb** 內的 **sysobjects** 資料表所儲存的暫存資料表完整名稱，由 CREATE TABLE 陳述式所指定的資料表名稱和系統產生的數值後置詞組成。 為了允許後置詞，指定給本機暫存名稱的 *table_name* 不能超出 116 個字元。
 
@@ -1022,12 +1022,12 @@ Test1Col
   CHECK CONSTRAINTS 和規則會在 INSERT 和 UPDATE 陳述式期間，提供相同的資料驗證功能。
 
 - 當一個或多個資料行有規則和一個或多個 CHECK 條件約束存在時，會評估所有限制。
-- 在 **text** 、 **ntext** 或 **image** 資料行上，無法定義 CHECK 條件約束。
+- 在 **text**、**ntext** 或 **image** 資料行上，無法定義 CHECK 條件約束。
 
 ## <a name="additional-constraint-information"></a>其他條件約束資訊
 
 - 您無法使用 `DROP INDEX` 卸除為條件約束建立的索引；條件約束必須使用 `ALTER TABLE` 來卸除。 建立給條件約束及條件約束所使用的索引，可以利用 `ALTER INDEX ... REBUILD` 來重建。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。
-- 條件約束名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，不過，名稱開頭不能是數字符號 (#)。 如果未提供 *constraint_name* ，就會將系統產生的名稱指派給條件約束。 條件約束名稱會出現在強制違規的任何錯誤訊息中。
+- 條件約束名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，不過，名稱開頭不能是數字符號 (#)。 如果未提供 *constraint_name*，就會將系統產生的名稱指派給條件約束。 條件約束名稱會出現在強制違規的任何錯誤訊息中。
 - 在 `INSERT`、`UPDATE` 或 `DELETE` 陳述式中違反條件約束時，陳述式便會結束。 不過，當 `SET XACT_ABORT` 設為 OFF 時，如果陳述式在明確的交易中，就會繼續處理交易。 當 `SET XACT_ABORT` 設為 ON 時，就會回復整個交易。 您也可以藉由檢查 `@@ERROR` 系統函式，將 `ROLLBACK TRANSACTION` 陳述式與交易定義搭配使用。
 - 當 `ALLOW_ROW_LOCKS = ON` 且 `ALLOW_PAGE_LOCK = ON` 時，您存取索引時就允許資料列層級、分頁層級和資料表層級的鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會選擇適當的鎖定，且可以將鎖定從資料列或頁面鎖定擴大到資料表鎖定。 如果 `ALLOW_ROW_LOCKS = OFF` 且 `ALLOW_PAGE_LOCK = OFF`，當您存取索引時，只允許資料表層級的鎖定。
 - 如果資料表有 FOREIGN KEY 或 CHECK CONSTRAINTS 和觸發程序，就會先評估條件約束的條件，再執行觸發程序。
@@ -1044,7 +1044,7 @@ Test1Col
 
 |資料行資料類型|規則|
 |----------------------|----------|
-|別名資料型別|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會使用建立資料類型時所指定的 Null 屬性。 若要判斷資料類型的預設可 Null 性，請使用 **sp_help** 。|
+|別名資料型別|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會使用建立資料類型時所指定的 Null 屬性。 若要判斷資料類型的預設可 Null 性，請使用 **sp_help**。|
 |CLR 使用者定義型別 (CLR user-defined type)|Null 屬性取決於資料行定義。|
 |系統提供的資料類型|如果系統提供的資料類型只有一個選項，將會優先使用。 **timestamp** 資料類型必須是 NOT NULL。 當利用 SET 將任何工作階段設定設為 ON 時：<br />**ANSI_NULL_DFLT_ON** = ON，指派 NULL。 <br />**ANSI_NULL_DFLT_OFF** = ON，指派 NOT NULL。<br /><br /> 當利用 ALTER DATABASE 來設定任何資料庫設定：<br />**ANSI_NULL_DEFAULT_ON** = ON，指派 NULL。 <br />**ANSI_NULL_DEFAULT_OFF** = ON，指派 NOT NULL。<br /><br /> 若要檢視 ANSI_NULL_DEFAULT 的資料庫設定，請使用 **sys.databases** 目錄檢視表|
 
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. 建立一個系統版本設定磁碟時態表
 
-**適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 下列範例顯示如何建立與新記錄資料表連結的時態表，以及如何建立與現有記錄資料表連結至的時態表。 請注意，若要為「系統版本設定」啟用資料表，則必須為時態表定義一個要啟用的主索引鍵。 如需範例來示範如何在現有資料表新增或移除系統版本設定，請參閱[範例](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)中的「系統版本設定」。 如需使用案例，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)。
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. 建立一個系統版本設定的記憶體最佳化時態表
 
-**適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 下列範例示範如何建立一個與新磁碟記錄資料表連結的系統版本設定記憶體最佳化時態表。
 
@@ -1603,7 +1603,7 @@ SELECT * FROM tempdb.sys.database_files;
 
 ### <a name="w-enable-data-retention-policy-on-a-table"></a>W. 在資料表上啟用資料保留原則
 
-下列範例會建立啟用資料保留，且保留期間為 1 週的資料表。 此範例僅適用於 **Azure SQL Edge** 。
+下列範例會建立啟用資料保留，且保留期間為 1 週的資料表。 此範例僅適用於 **Azure SQL Edge**。
 
 ```sql
 CREATE TABLE [dbo].[data_retention_table] 

@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|遇到了具有 WITH APPEND 子句的 CREATE TRIGGER 陳述式。 請改為重新建立整個觸發程序。 每次在 DDL 陳述式中使用時發生一次。|  
 |CREATE_DROP_DEFAULT|遇到了 CREATE DEFAULT 或 DROP DEFAULT 語法。 請使用 CREATE TABLE 或 ALTER TABLE 的 DEFAULT 選項來重寫命令。 每次編譯時發生一次。|  
 |CREATE_DROP_RULE|遇到了 CREATE RULE 語法。 請使用條件約束重寫命令。 每次編譯時發生一次。|  
-|資料類型：text、ntext 或 image|遇到 **text**、 **ntext**或 **image** 資料類型。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|資料類型：text、ntext 或 image|遇到 **text**、 **ntext** 或 **image** 資料類型。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
 ||資料庫已變更為相容性層級 80 的總次數。 請在下次發行之前，規劃升級資料庫和應用程式。 啟動相容性層級為 80 的資料庫時也會發生。|  
 |資料庫相容性層級 100、110。 120|資料庫相容性層級變更的總次數。 請針對將來的版本規劃升級資料庫和應用程式。 啟動已被取代的相容性層級的資料庫時也會發生。|  
 |DATABASE_MIRRORING|遇到針對資料庫鏡像功能的參考。 計劃升級至 Always On 可用性群組，如果您執行不支援 Always On 可用性群組的 SQL Server 版本，則計劃移轉至記錄傳送。|  
@@ -266,10 +266,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|遇到 sysusers 的參考。 請改用 sys.database_principals。 每次編譯時發生一次。|  
 |沒有 WITH 的資料表提示|遇到了一個使用資料表提示但未使用 WITH 關鍵字的陳述式。 請修改陳述式，使其包含 WITH 字。 每次編譯時發生一次。|  
 |Text in row 資料表選項|遇到 'text in row' 資料表選項的參考。 請改用 sp_tableoption 'large value types out of row'。 每次查詢時發生一次。|  
-|TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
-|TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
 |timestamp|DDL 陳述式中遇到之已被取代的 **timestamp** 資料類型的總次數。 請改用 **rowversion** 資料類型。|  
-|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext**和 **image** 資料類型語法。 每次查詢時發生一次。|  
+|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text**、 **ntext** 和 **image** 資料類型語法。 每次查詢時發生一次。|  
 |USER_ID|遇到 USER_ID 函數的參考。 請改用 DATABASE_PRINCIPAL_ID 函數。 每次編譯時發生一次。|  
 |針對連結的伺服器使用 OLEDB||  
 |Vardecimal 儲存格式|遇到了 **vardecimal** 儲存格式的使用。 請改用資料壓縮。|  
