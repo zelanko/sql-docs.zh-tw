@@ -5,18 +5,18 @@ description: 在這個四部分教學課程系列的第三部分中，您將使�
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c6ea97c242df2fc22e1b7a0a9d0d828e8f3859a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 597cbdc270c902b6c13f17b6fe66a369357a539d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178731"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870292"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中建立預測模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88178731"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-本教學課程系列的第三部分假設您已滿足[**第一部分**](r-predictive-model-introduction.md)的必要條件，並已完成[**第二部分**](r-predictive-model-prepare-data.md)中的步驟。
+本教學課程系列的第三部分假設您已滿足 [**第一部分**](r-predictive-model-introduction.md)的必要條件，並已完成 [**第二部分**](r-predictive-model-prepare-data.md)中的步驟。
 
 ## <a name="train-two-models"></a>定型兩個模型
 

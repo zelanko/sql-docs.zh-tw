@@ -5,18 +5,18 @@ description: 在這個教學課程系列的第三部分 (總共四個部分) 中
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d56b3cb50c268a2af74ec4bfacebf8049a4518d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 62c7a271a7caf3afa588a48c0ac54ef86a38f785
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178452"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870325"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中建置群集模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88178452"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* 本教學課程系列的第三部分假設您已滿足[**第一部分**](r-clustering-model-introduction.md)的必要條件，並已完成[**第二部分**](r-clustering-model-prepare-data.md)中的步驟。
+* 本教學課程系列的第三部分假設您已滿足 [**第一部分**](r-clustering-model-introduction.md)的必要條件，並已完成 [**第二部分**](r-clustering-model-prepare-data.md)中的步驟。
 
 ## <a name="define-the-number-of-clusters"></a>定義叢集數目
 

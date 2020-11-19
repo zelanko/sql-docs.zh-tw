@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155089"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870047"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 R 自訂執行階段
 
@@ -160,7 +160,7 @@ net stop MSSQLLAUNCHPAD$MSSQLSERVER
 net start MSSQLLAUNCHPAD$MSSQLSERVER
 ```
 
-也可以在系統的**服務**應用程式中用滑鼠右鍵按一下 [SQL Server Launchpad] 服務，然後選取 [重新啟動] 命令。 或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md) 來重新啟動服務。
+也可以在系統的 **服務** 應用程式中用滑鼠右鍵按一下 [SQL Server Launchpad] 服務，然後選取 [重新啟動] 命令。 或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md) 來重新啟動服務。
 
 ## <a name="download-r-language-extension"></a>下載 R 語言延伸模組
 
@@ -233,7 +233,7 @@ sudo zypper install mssql-server-extensibility
 ## <a name="install-r"></a>安裝 R
 
 >[!NOTE]
->若是 SQL 機器學習服務，R 已經安裝在 `/opt/microsoft/ropen/3.5.2/lib64/R`。 如果您想要繼續使用此路徑做為 R_HOME，請跳至**安裝 Rcpp** 的下一個步驟。 
+>若是 SQL 機器學習服務，R 已經安裝在 `/opt/microsoft/ropen/3.5.2/lib64/R`。 如果您想要繼續使用此路徑做為 R_HOME，請跳至 **安裝 Rcpp** 的下一個步驟。 
 
 如果您想要使用不同的 R 執行階段，必須先移除 `microsoft-r-open-mro`，才能繼續安裝新的版本。 Ubuntu 範例：
 
@@ -303,7 +303,7 @@ sudo apt-get -y install r-base-core
 
 2. 請確定可以載入 **libR.so**。
 
-    + 在 **/etc/ld.so.conf.d**中建立 custom-r.conf 檔案。
+    + 在 **/etc/ld.so.conf.d** 中建立 custom-r.conf 檔案。
 
     ```bash
     sudo vi /etc/ld.so.conf.d/custom-r.conf

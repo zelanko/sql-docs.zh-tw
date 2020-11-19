@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 02/29/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155056"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870486"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -41,7 +41,7 @@ ms.locfileid: "92155056"
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> 根據預設，系統會在 **SQL Server 巨量資料叢集**上安裝機器學習服務。 如果您使用的是**巨量資料叢集**，即無須遵循此文章中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../../big-data-cluster/machine-learning-services.md)。
+> 根據預設，系統會在 **SQL Server 巨量資料叢集** 上安裝機器學習服務。 如果您使用的是 **巨量資料叢集**，即無須遵循此文章中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 
 > [!IMPORTANT]
@@ -123,7 +123,7 @@ ms.locfileid: "92155056"
    
    > [!NOTE]
    > 
-   > 請勿選取 [Machine Learning 伺服器 (獨立式)] 的選項。 在**共用功能**下安裝 Machine Learning Server 的選項，旨在不同的電腦上使用。
+   > 請勿選取 [Machine Learning 伺服器 (獨立式)] 的選項。 在 **共用功能** 下安裝 Machine Learning Server 的選項，旨在不同的電腦上使用。
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
@@ -171,7 +171,7 @@ ms.locfileid: "92155056"
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
+僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出 [會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
 1. 在 [控制台] 中，按一下 [系統及安全性] > [系統] > [進階系統設定] > [環境變數]。
 
@@ -230,7 +230,7 @@ ms.locfileid: "92155056"
 
    將 **run_value** 設定為 1。
     
-2. 開啟 [服務] 面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 您應該為每個安裝 R 或 Python 的資料庫引擎執行個體都提供一個服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
+2. 開啟 [服務] 面板或 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務** 正在執行。 您應該為每個安裝 R 或 Python 的資料庫引擎執行個體都提供一個服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。 
    
 3. 如果啟動控制板正在執行，您就能執行簡單的 Python 與 R 指令碼，以確認外部指令碼執行階段可以與 SQL Server 通訊。
 

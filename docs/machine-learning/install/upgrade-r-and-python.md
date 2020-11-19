@@ -5,23 +5,23 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/30/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2036fda1d483bdfb04a205f5a2e3bf6d86119b1b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956723"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870450"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用繫結在 SQL Server 機器學習服務中升級 Python 和 R 執行階段
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-本文說明如何使用名為**繫結**的安裝程序，在 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 機器學習服務](../sql-server-machine-learning-services.md)中升級 R 或 Python 執行階段。 您可以透過「繫結」至 [Microsoft Machine Learning Server](/machine-learning-server)，取得 [Python 和 R 的較新版本](#version-map)。
+本文說明如何使用名為 **繫結** 的安裝程序，在 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 或 [SQL Server 2017 機器學習服務](../sql-server-machine-learning-services.md)中升級 R 或 Python 執行階段。 您可以透過「繫結」至 [Microsoft Machine Learning Server](/machine-learning-server)，取得 [Python 和 R 的較新版本](#version-map)。
 
 > [!IMPORTANT]
-> 本文說明用來升級 R 和 Python 執行階段的舊方法，名為*繫結*。 如果您已安裝 **SQL Server 2016 Services Pack (SP) 2 的累積更新 (CU) 14 或更新版本**，或 **SQL Server 2017 的累積更新 (CU) 22 或更新版本**，則應參閱如何[將預設的 R 或 Python 語言執行階段變更為更新版本](change-default-language-runtime-version.md)。
+> 本文說明用來升級 R 和 Python 執行階段的舊方法，名為 *繫結*。 如果您已安裝 **SQL Server 2016 Services Pack (SP) 2 的累積更新 (CU) 14 或更新版本**，或 **SQL Server 2017 的累積更新 (CU) 22 或更新版本**，則應參閱如何 [將預設的 R 或 Python 語言執行階段變更為更新版本](change-default-language-runtime-version.md)。
 
 ## <a name="what-is-binding"></a>何謂繫結？
 

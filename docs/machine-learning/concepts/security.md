@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956506"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869996"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性結構
 
@@ -77,7 +76,7 @@ SQL Server 的資料庫登入與角色資料安全性模型會延伸至外部指
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部處理 (啟動控制板) 中使用的服務
 
-擴充性架構會將一個新的 NT 服務新增至 SQL Server 安裝中的[服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)：[**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)。
+擴充性架構會將一個新的 NT 服務新增至 SQL Server 安裝中的 [服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)：[**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
 
 資料庫引擎會使用 SQL Server **Launchpad** 服務，將外部指令碼工作階段具現化為個別處理序。 
 此處理序會以低權限帳戶執行。 此帳戶與 SQL Server、啟動控制板本身以及用來執行預存程序或主查詢的使用者身分識別不同。 以低權限帳戶在個別處理序中執行指令碼，是 SQL Server 中外部指令碼安全性與隔離模型的基礎。
@@ -93,7 +92,7 @@ SQL Server 也會維護呼叫使用者身分識別與用來啟動附屬處理序
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部處理 (啟動控制板) 中使用的服務
 
-擴充性架構會將一個新的 NT 服務新增至 SQL Server 安裝中的[服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)：[**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)。
+擴充性架構會將一個新的 NT 服務新增至 SQL Server 安裝中的 [服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)：[**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
 
 資料庫引擎會使用 SQL Server **Launchpad** 服務，將外部指令碼工作階段具現化為個別處理序。 
 此程式會在啟動控制板使用者身分識別下執行，但會在 AppContainer 內包含新增的限制。 在 AppContainer 下的個別處理序中執行指令碼，是 SQL Server 中外部指令碼安全性與隔離模型的基礎。
@@ -129,7 +128,7 @@ SQL Server 也會維護呼叫使用者身分識別與用來啟動附屬處理序
 
 + 使用者帳戶集區的大小為靜態，預設值是 20，這支援 20 個同時工作階段。 可同時啟動的外部執行階段工作階段數目受限於此使用者帳戶集區大小。 
 
-+ 集區中的背景工作角色帳戶名稱格式為 SQLInstanceName*nn*。 例如，在預設的執行個體上，**SQLRUserGroup** 包含名為 MSSQLSERVER01、MSSQLSERVER02、依此類推的帳戶 (最多 MSSQLSERVER20)。
++ 集區中的背景工作角色帳戶名稱格式為 SQLInstanceName *nn*。 例如，在預設的執行個體上，**SQLRUserGroup** 包含名為 MSSQLSERVER01、MSSQLSERVER02、依此類推的帳戶 (最多 MSSQLSERVER20)。
 
 平行處理的工作不會耗用其他帳戶。 例如，如果使用者執行使用平行處理的評分工作，則會為所有執行緒重複使用相同的背景工作角色帳戶。 如果您想要大量使用機器學習服務，您可以增加用來執行外部指令碼的帳戶數目。 如需詳細資訊，請參閱[在 SQL Server 機器學習服務中調整外部指令碼的同時執行](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md)。
 
@@ -250,7 +249,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 從外部指令碼執行階段傳送或接收資料時，不支援[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。 原因是外部處理序是在 SQL Server 處理序之外執行。 因此，外部執行階段所使用的資料並不受資料庫引擎的加密功能所保護。 此行為與在 SQL Server 電腦上執行的任何其他用戶端不同，這些用戶端會從資料庫讀取資料並建立複本。
 
-因此，TDE **不會**套用至您在外部指令碼中使用的任何資料、儲存到磁碟的任何資料或任何持續性中繼結果。 不過，其他類型的加密 (例如，在檔案或資料夾層級套用的 Windows BitLocker 加密或協力廠商加密) 仍適用。
+因此，TDE **不會** 套用至您在外部指令碼中使用的任何資料、儲存到磁碟的任何資料或任何持續性中繼結果。 不過，其他類型的加密 (例如，在檔案或資料夾層級套用的 Windows BitLocker 加密或協力廠商加密) 仍適用。
 
 在 [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 的情況下，外部執行階段不會有加密金鑰的存取權。 因此，資料無法傳送到指令碼。
 

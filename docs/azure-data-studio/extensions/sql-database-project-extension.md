@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/22/2020
-ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496746"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704163"
 ---
 # <a name="sql-database-projects-extension-preview"></a>SQL Database Projects 延伸模組 (預覽)
 
@@ -44,7 +44,7 @@ SQL Database Projects 延伸模組 (預覽) 適用於在以專案為基礎的開
 
    ![安裝擴充功能](media/sql-database-projects-extension/install-database-projects.png)
 
-3. 選取您想要的延伸模組並加以 **安裝** 。
+3. 選取您想要的延伸模組並加以 **安裝**。
 4. 選取 [重新載入]，啟用此延伸模組 (只有當您第一次安裝延伸模組時才需要)。
 5. 從活動列選取檔案圖示，或從 [檢視] 功能表中選取 [總管]。 [Projects] \(專案\) 的新 Viewlet 隨即可供使用。
 
@@ -56,14 +56,11 @@ SQL Database Projects 延伸模組 (預覽) 適用於在以專案為基礎的開
 
 ## <a name="known-limitations"></a>已知限制
 
-1. 目前不支援在 Azure Data Studio Viewlet 中新增專案參考及載入現有的專案參考。
-2. Azure Data Studio Viewlet 中目前不支援將檔案載入為連結，不過，檔案將會載入到樹狀結構的最上層，而組建將如預期般納入這些檔案。
-3. 目前不支援在 Viewlet 中新增及載入部署前後指令碼，但如果您在專案中手動新增這些檔案，則將會在組建階段接受這些檔案。
-4. 在 DacFx 的 .NET Core 版本中，不支援專案中的 SQLCLR 物件。
-5. 工作 (組建/發佈) 並非使用者定義。
-6. 發佈 DacFx 所定義的目標。
-7. 原始程式碼控制的整合與新專案的建立作業，不會自動建立 .gitignore 檔案。
-8. WSL 環境支援有限。
+- Azure Data Studio Viewlet 中目前不支援將檔案載入為連結，不過，檔案將會載入到樹狀結構的最上層，而組建將如預期般納入這些檔案。
+- 在 DacFx 的 .NET Core 版本中，不支援專案中的 SQLCLR 物件。
+- 工作 (組建/發佈) 並非使用者定義。
+- 發佈 DacFx 所定義的目標。
+- WSL 環境支援有限。
 
 ## <a name="next-steps"></a>接下來的步驟
 

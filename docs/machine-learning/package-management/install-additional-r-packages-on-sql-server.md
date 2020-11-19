@@ -7,22 +7,21 @@ ms.date: 06/04/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1019497f8f6b2c87843cf443a83f1a8683da1800
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: d3f7c61420dc1b85f7f40854dce9931d25aef895
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956699"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870489"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上。 您安裝的套件可用於使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 陳述式在資料庫中執行的 R 指令碼。
+本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，將新的 R 套件安裝到 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)和 [巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上。 您安裝的套件可用於使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 陳述式在資料庫中執行的 R 指令碼。
 
 > [!NOTE]
 > 本文所述的 **sqlmlutils** 套件是用來將 R 套件新增至 SQL Server 2019 或更新版本。 SQL Server 2017 及舊版請參閱[使用 R 工具安裝套件](./install-r-packages-standard-tools.md?view=sql-server-2017)。
@@ -39,7 +38,7 @@ ms.locfileid: "91956699"
 
 ### <a name="other-considerations"></a>其他考量
 
-- 套件安裝是您在提供給 **sqlmlutils**的連線資訊中指定的 SQL 執行個體、資料庫和使用者專用的。 若要在多個 SQL 執行個體或資料庫中使用套件，或將其用於不同的使用者，您必須個別為其安裝套件。 例外狀況是，如果套件是由 `dbo` 的成員所安裝，則套件會是*公用*的，且會與所有使用者共用。 如果使用者安裝了較新版本的公用套件，公用套件將不受影響，但該使用者將可存取較新的版本。
+- 套件安裝是您在提供給 **sqlmlutils** 的連線資訊中指定的 SQL 執行個體、資料庫和使用者專用的。 若要在多個 SQL 執行個體或資料庫中使用套件，或將其用於不同的使用者，您必須個別為其安裝套件。 例外狀況是，如果套件是由 `dbo` 的成員所安裝，則套件會是 *公用* 的，且會與所有使用者共用。 如果使用者安裝了較新版本的公用套件，公用套件將不受影響，但該使用者將可存取較新的版本。
 
 - 在 SQL Server 中執行的 R 指令碼只能使用安裝在預設執行個體程式庫中的套件。 SQL Server 無法從外部程式庫載入套件，即使該程式庫位於相同電腦上也一樣。 這包括隨其他 Microsoft 產品安裝的 R 程式庫。
 
@@ -152,7 +151,7 @@ ms.locfileid: "91956699"
 
 如果您用來連線到 SQL Server 的用戶端電腦可以存取網際網路，則可以使用 **sqlmlutils** 透過網際網路尋找 **glue** 套件與任何相依性，然後從遠端將套件安裝到 SQL Server 執行個體。
 
-1. 在用戶端電腦上，開啟 RStudio，並建立新的 **R 指令碼**檔案。
+1. 在用戶端電腦上，開啟 RStudio，並建立新的 **R 指令碼** 檔案。
 
 1. 使用下列 R 指令碼，使用 **sqlmlutils** 安裝 **glue** 套件。 替換為您自己的 SQL Server 資料庫連線資訊。
 
@@ -168,12 +167,12 @@ ms.locfileid: "91956699"
    ```
 
    > [!TIP]
-   > **scope** 可以是 **PUBLIC** 或 **PRIVATE**。 資料庫管理員可以使用公開範圍來安裝所有使用者都可以使用的套件。 私人範圍可讓套件僅供安裝套件的使用者使用。 若未指定範圍，預設範圍是**私人**。
+   > **scope** 可以是 **PUBLIC** 或 **PRIVATE**。 資料庫管理員可以使用公開範圍來安裝所有使用者都可以使用的套件。 私人範圍可讓套件僅供安裝套件的使用者使用。 若未指定範圍，預設範圍是 **私人**。
 
 ### <a name="add-the-package-offline"></a>離線新增套件
 
-若用戶端電腦沒有網際網路連線，您可以透過可以存取網際網路的電腦，使用**miniCRAN** 來下載 **glue** 套件。 接著，將該套件複製到用戶端電腦，以便離線安裝套件。
-如需有關安裝 **miniCRAN** 的詳細資訊，請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
+若用戶端電腦沒有網際網路連線，您可以透過可以存取網際網路的電腦，使用 **miniCRAN** 來下載 **glue** 套件。 接著，將該套件複製到用戶端電腦，以便離線安裝套件。
+如需有關安裝 **miniCRAN** 的詳細資訊，請參閱 [安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
 
 在可以存取網際網路的電腦上：
 
@@ -212,7 +211,7 @@ ms.locfileid: "91956699"
 
 在用戶端電腦上：
 
-1. 開啟 RStudio，並建立新的 **R 指令碼**檔案。
+1. 開啟 RStudio，並建立新的 **R 指令碼** 檔案。
 
 1. 使用下列 R 指令碼，使用 **sqlmlutils** 安裝 **glue** 套件。 以您自己的 SQL Server 資料庫連線資訊取代 (如果您未使用 Windows 驗證，請新增 `uid` 和 `pwd` 參數)。
 
@@ -227,7 +226,7 @@ ms.locfileid: "91956699"
    ```
 
    > [!TIP]
-   > **scope** 可以是 **PUBLIC** 或 **PRIVATE**。 資料庫管理員可以使用公開範圍來安裝所有使用者都可以使用的套件。 私人範圍可讓套件僅供安裝套件的使用者使用。 若未指定範圍，預設範圍是**私人**。
+   > **scope** 可以是 **PUBLIC** 或 **PRIVATE**。 資料庫管理員可以使用公開範圍來安裝所有使用者都可以使用的套件。 私人範圍可讓套件僅供安裝套件的使用者使用。 若未指定範圍，預設範圍是 **私人**。
 
 ## <a name="use-the-package"></a>使用套件
 

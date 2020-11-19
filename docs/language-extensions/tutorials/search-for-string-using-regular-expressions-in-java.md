@@ -4,16 +4,16 @@ description: 本教學課程示範如何使用「SQL Server 語言延伸模組�
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 21d981c75881d0d971b0f27757015792237f12e3
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155048"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870129"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -263,7 +263,7 @@ GO
 
 ### <a name="on-windows"></a>在 Windows 上
 
-在包含已編譯之 Java 程式碼的資料夾中，將「讀取和執行」權限授與 **SQLRUserGroup** 和**所有應用程式封裝** SID。
+在包含已編譯之 Java 程式碼的資料夾中，將「讀取和執行」權限授與 **SQLRUserGroup** 和 **所有應用程式封裝** SID。
 
 整個樹狀結構都必須擁有權限 (從根父系到最後一個子資料夾)。
 
@@ -321,7 +321,7 @@ GO
 
 + 當您編譯類別時，**pkg** 子資料夾應該包含全部三個類別的已編譯器程式碼。
 
-+ 如果您沒有使用外部程式庫，請檢查*每個*資料夾的權限 (從 **root** 到 **pkg** 子資料夾)，以確保執行外部處理序的安全性識別擁有讀取和執行程式碼的權限。
++ 如果您沒有使用外部程式庫，請檢查 *每個* 資料夾的權限 (從 **root** 到 **pkg** 子資料夾)，以確保執行外部處理序的安全性識別擁有讀取和執行程式碼的權限。
 
 ## <a name="next-steps"></a>後續步驟
 

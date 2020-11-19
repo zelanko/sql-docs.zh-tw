@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956671"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870108"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 來安裝 R 套件
 
@@ -48,9 +47,9 @@ ms.locfileid: "91956671"
 
 + 您具有連線至伺服器和資料庫，以及執行 R 命令權限。 您必須是資料庫角色的成員，其能允許您在指定的執行個體和資料庫上安裝套件。
 
-  + 處於**共用範圍**中的套件，可以由屬於特定資料庫中 `rpkgs-shared` 角色的使用者安裝。 此角色中的所有使用者都可以將共用套件解除安裝。
+  + 處於 **共用範圍** 中的套件，可以由屬於特定資料庫中 `rpkgs-shared` 角色的使用者安裝。 此角色中的所有使用者都可以將共用套件解除安裝。
 
-  + 處於**私人範圍**中的套件，可以由屬於資料庫中 `rpkgs-private` 角色的任何使用者安裝。 不過，使用者只能查看並解除安裝自己的套件。
+  + 處於 **私人範圍** 中的套件，可以由屬於資料庫中 `rpkgs-private` 角色的任何使用者安裝。 不過，使用者只能查看並解除安裝自己的套件。
 
   + 資料庫擁有者可以使用共用或私人套件。
 
@@ -111,7 +110,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>在遠端 SQL Server 計算內容上取得套件路徑
 
-此範例會取得計算內容 **上**RevoScaleR`sqlcc` 套件的路徑。
+此範例會取得計算內容 **上** RevoScaleR`sqlcc` 套件的路徑。
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -127,7 +126,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>取得多個封裝的位置
 
-下列範例會取得計算內容 **上**RevoScaleR**和**lattice`sqlcc` 套件的路徑。 若要取得多個套件的相關資訊，請傳遞包含套件名稱的字串向量。
+下列範例會取得計算內容 **上** RevoScaleR **和** lattice`sqlcc` 套件的路徑。 若要取得多個套件的相關資訊，請傳遞包含套件名稱的字串向量。
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)

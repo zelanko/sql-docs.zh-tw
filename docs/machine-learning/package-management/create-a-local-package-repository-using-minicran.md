@@ -8,15 +8,14 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f792898232017b0573813b7fb73e6f783e6e3936
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956719"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870466"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 建立本機 R 套件存放庫
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "91956719"
 
 完成後，**miniCRAN** 會建立內部一致的存放庫，其中包含選取的套件及所有必要的相依性。 您可以將此本機存放庫移至伺服器，並且在沒有網際網路連線的情況下繼續安裝套件。
 
-有經驗的 R 使用者通常會在已下載套件的描述檔案中尋找相依套件清單。 不過，**匯入**中列出的套件可能具有第二層相依性。 基於這個理由，建議使用 **miniCRAN** 來組合必要套件的完整集合。
+有經驗的 R 使用者通常會在已下載套件的描述檔案中尋找相依套件清單。 不過，**匯入** 中列出的套件可能具有第二層相依性。 基於這個理由，建議使用 **miniCRAN** 來組合必要套件的完整集合。
 
 ## <a name="why-create-a-local-repository"></a>為何要建立本機存放庫
 
@@ -75,7 +74,7 @@ local_repo <- "C:/miniCRANZooPackages"
 
 安裝並載入 **miniCRAN** 之後，建立清單來指定您想要下載的其他套件。
 
-**請勿**將相依性新增至此初始清單。 **miniCRAN** 所使用的 **igraph** 套件會自動產生相依性清單。 如需如何使用所產生之相依性關係圖的詳細資訊，請參閱[使用 miniCRAN 來識別套件相依性](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html) \(英文\)。
+**請勿** 將相依性新增至此初始清單。 **miniCRAN** 所使用的 **igraph** 套件會自動產生相依性清單。 如需如何使用所產生之相依性關係圖的詳細資訊，請參閱[使用 miniCRAN 來識別套件相依性](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html) \(英文\)。
 
 1. 將目標套件 "zoo" 和 "forecast" 新增至變數。
 

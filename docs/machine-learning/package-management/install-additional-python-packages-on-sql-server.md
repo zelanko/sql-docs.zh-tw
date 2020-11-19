@@ -7,21 +7,20 @@ ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 229b0843fc8602457328921eaa6ff8991f4b5655
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b77fb8eac5b2c14bb181e2e10d9a32721ccec42b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956709"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870391"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，以將新 Python 套件安裝到 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的執行個體，以及[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)。 您安裝的套件可用於使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 陳述式在資料庫中執行的 Python 指令碼。
+本文描述如何使用 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 套件中的函式，以將新 Python 套件安裝到 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的執行個體，以及 [巨量資料叢集](../../big-data-cluster/machine-learning-services.md)。 您安裝的套件可用於使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL 陳述式在資料庫中執行的 Python 指令碼。
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -51,7 +50,7 @@ ms.locfileid: "91956709"
 
 + Python 套件程式庫位於 SQL Server 執行個體的 Program Files 資料夾中，而且根據預設，在此資料夾中安裝需要系統管理員權限。 如需詳細資訊，請參閱[套件程式庫位置](../package-management/python-package-information.md#default-python-library-location)。
 
-+ 套件安裝是您在提供給 **sqlmlutils**的連線資訊中指定的 SQL 執行個體、資料庫和使用者專用的。 若要在多個 SQL 執行個體或資料庫中使用套件，或將其用於不同的使用者，您必須個別為其安裝套件。 例外狀況是，如果套件是由 `dbo` 的成員所安裝，則套件會是*公用*的，且會與所有使用者共用。 如果使用者安裝了較新版本的公用套件，公用套件將不受影響，但該使用者將可存取較新的版本。
++ 套件安裝是您在提供給 **sqlmlutils** 的連線資訊中指定的 SQL 執行個體、資料庫和使用者專用的。 若要在多個 SQL 執行個體或資料庫中使用套件，或將其用於不同的使用者，您必須個別為其安裝套件。 例外狀況是，如果套件是由 `dbo` 的成員所安裝，則套件會是 *公用* 的，且會與所有使用者共用。 如果使用者安裝了較新版本的公用套件，公用套件將不受影響，但該使用者將可存取較新的版本。
 
 + 新增套件之前，請考慮套件是否適合用於 SQL Server 環境。
 
@@ -77,7 +76,7 @@ ms.locfileid: "91956709"
 1. 在 [Azure Data Studio 中的 Python 核心程序筆記本](../../azure-data-studio/notebooks/notebooks-python-kernel.md)內，按一下 [管理套件]。
 1. 按一下 [新增] 。
 1. 在 [搜尋 Pip 套件] 欄位中輸入 "sqlmlutils"，然後按一下 [搜尋]。
-1. 選取所要安裝的**套件版本** (建議安裝最新版本)。
+1. 選取所要安裝的 **套件版本** (建議安裝最新版本)。
 1. 按一下 [安裝]，然後按一下 [關閉]。
 
 ### <a name="from-python-command-line"></a>從 Python 命令列

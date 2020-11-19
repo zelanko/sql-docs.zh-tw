@@ -9,15 +9,14 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 93e6dfc69a1587e1eef1d06cd5c13f8592f57488
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2c9d971efb90f51562bfa59c73802e577dd8d511
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173455"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870386"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習來部署模型以分類客戶
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "88173455"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* 本教學課程系列的第四部分假設您已滿足[**第一部分**](python-clustering-model.md)的必要條件，並已完成[**第二部分**](python-clustering-model-prepare-data.md)和[**第三部分**](python-clustering-model-build.md)中的步驟。
+* 本教學課程系列的第四部分假設您已滿足 [**第一部分**](python-clustering-model.md)的必要條件，並已完成 [**第二部分**](python-clustering-model-prepare-data.md)和 [**第三部分**](python-clustering-model-build.md)中的步驟。
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>建立一個會產生模型的預存程序
 

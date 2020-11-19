@@ -4,16 +4,16 @@ description: 在使用 SQL Server 語言延伸模組執行 Java 程式碼時，�
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c324fca6893af35cafe6e9f65eccd0e8a0e478f9
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 076b20d277ef8608fd8c9fc30b4bce303d4ef06b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180279"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870161"
 ---
 # <a name="create-a-java-jar-file-from-class-files"></a>從類別檔案建立 Java jar 檔案
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

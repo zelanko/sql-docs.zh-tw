@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55e02294fcf59b4dc8d826f468b21ff8718492ef
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956672"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869948"
 ---
 # <a name="install-packages-with-r-tools"></a>使用 R 工具來安裝套件
 

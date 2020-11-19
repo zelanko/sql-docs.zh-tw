@@ -5,16 +5,16 @@ description: 了解如何使用「SQL Server 語言延伸模組」，從 SQL Ser
 author: dphansen
 ms.author: davidph
 ms.date: 06/25/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: c4d12382cf1e498b33f202bb1b775ba63458a5a5
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765805"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870177"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>如何在 SQL Server 語言延伸模組中呼叫 Java 執行階段
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "91765805"
 
 1. 將 **.class** 或 **.jar** 檔案放在您的 [Java Classpath](#classpath) 中。 
 
-2. 使用[外部程式庫](#external-library) DDL，將 **.jar** 檔案中的已編譯類別與其他相依性上傳至資料庫。 
+2. 使用 [外部程式庫](#external-library) DDL，將 **.jar** 檔案中的已編譯類別與其他相依性上傳至資料庫。 
 
 > [!NOTE]
 > 一般建議使用 **.jar** 檔案，而不是個別的 **.class** 檔案。 這在 Java 中是常見的作法，可讓整體體驗變得更容易。 另請參閱[如何從類別檔案建立 jar 檔案](create-a-java-jar-file-from-class-files.md)。
