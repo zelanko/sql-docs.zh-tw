@@ -38,7 +38,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 > 下列必要條件其執行者必須是有足夠權限可建立這些叢集層級物件的 OpenShift 叢集系統管理員 (叢集系統管理員叢集角色)。 如需 OpenShift 中叢集角色的詳細資訊，請參閱 [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html) (使用 RBAC 定義與套用權限)。
 
 1. 請確定 OpenShift 上的 `pidsLimit` 設定已更新，可容納 SQL Server 的工作負載。 OpenShift 中的預設值對工作負載等生產環境而言太低。 建議至少使用 `4096` 的值，但最佳值取決於 SQL Server 的 `max worker threads` 設定，以及 OpenShift 主機節點的 CPU 處理器數目。 
-    - 若要了解如何更新 OpenShift 叢集的 `pidsLimit`，請使用[這些指示]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 請注意，`4.3.5` 之前的 OpenShift 版本有缺陷，會導致更新的值無法生效。 請務必將 OpenShift 升級至最新版本。 
+    - 若要了解如何更新 OpenShift 叢集的 `pidsLimit`，請使用[這些指示]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 請注意，`4.3.5` 之前的 OpenShift 版本有瑕疵，會導致更新的值無法生效。 請務必將 OpenShift 升級至最新版本。 
     - 為協助根據環境和規劃的 SQL Server 工作負載計算出最佳值，您可使用以下評估和範例：
 
     |處理器數目|預設最大背景工作角色執行緒|每個處理器的預設背景工作角色數目|最小 pidsLimit 值|
