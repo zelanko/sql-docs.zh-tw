@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947945"
+ms.locfileid: "94983054"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在 Analytics Platform System 中設定 Windows Server Update Services (WSUS) 
 這些指示會逐步引導您完成使用 Windows Server Update Services (WSUS) Configuration Wizard 設定 WSUS for Analytics Platform System 的步驟。 您必須先設定 WSUS，才能將軟體更新套用至設備。 WSUS 已安裝在設備的 VMM 虛擬機器上。  
@@ -156,7 +156,7 @@ ms.locfileid: "94947945"
   
     針對將針對分析平臺系統裝置同步處理的更新，選取 **重大更新**、 **安全性更新** 和 **更新彙總套件** ，然後按 **[下一步]**。  
   
-    ![選擇分類](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![選擇分類](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql-伺服器-pdw-wsus-選擇分類")  
   
 10. 設定同步處理排程。  
   
