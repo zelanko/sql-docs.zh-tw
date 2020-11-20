@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727769"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947928"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>為您的內部部署資料庫識別正確的 Azure SQL Database/受控執行個體 SKU
 
@@ -38,12 +38,14 @@ ms.locfileid: "91727769"
 
 下列指示可協助您判斷 SKU 建議，並在 Azure 中使用 DMA 來布建對應的單一資料庫 () 或受控實例 (s) 。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 下載並安裝最新版本的 [DMA](https://aka.ms/get-dma)。 如果您已經有舊版的工具，請開啟它，系統就會提示您升級 DMA。
 - 確定您的電腦具有 [PowerShell 5.1 版](https://www.microsoft.com/download/details.aspx?id=54616) 或更新版本，才能執行所有腳本。 如需如何找出電腦上所安裝之 PowerShell 版本的相關資訊，請參閱 [下載並安裝 Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)。
+  > [!NOTE]
+  > 為了收集電腦資訊，資料收集腳本會使用已在 PowerShell 6 中淘汰的 Get-WmiObject Cmdlet。 若要在 PowerShell 6 或7中執行此腳本，您必須使用較新的 CIM Cmdlet 來取代 WMI Cmdlet。
 - 確定您的電腦已安裝 Azure Powershell 模組。 如需詳細資訊，請參閱 [安裝 Azure PowerShell 課程模組](/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
-- 確認收集效能計數器所需的 PowerShell 檔案 **SkuRecommendationDataCollectionScript.ps1**已安裝在 [DMA] 資料夾中。
+- 確認收集效能計數器所需的 PowerShell 檔案 **SkuRecommendationDataCollectionScript.ps1** 已安裝在 [DMA] 資料夾中。
 - 確定您要執行此程式的電腦具有裝載資料庫之電腦的系統管理員許可權。
 
 ## <a name="collect-performance-counters"></a>收集效能計數器
@@ -69,7 +71,7 @@ ms.locfileid: "91727769"
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     執行命令之後，程式會將檔案（包括效能計數器）輸出到您指定的位置。 您可以使用這個檔案做為下一個程式部分的輸入，這會針對單一資料庫和受控實例選項提供 SKU 建議。
@@ -111,7 +113,7 @@ ms.locfileid: "91727769"
         - **AzureAuthenticationToken**：設定為憑證權杖。
 
 > [!NOTE]
-> 若要取得 ClientId 和 TenantId 以進行互動式驗證，您需要設定新的 AAD 應用程式。 如需驗證和取得這些認證的詳細資訊，請 [參閱 Microsoft Azure 計費 api 程式碼範例： RATECARD API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)中的 **步驟1：在您的 AAD 租使用者中設定原生用戶端應用程式**中的指示。
+> 若要取得 ClientId 和 TenantId 以進行互動式驗證，您需要設定新的 AAD 應用程式。 如需驗證和取得這些認證的詳細資訊，請 [參閱 Microsoft Azure 計費 api 程式碼範例： RATECARD API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)中的 **步驟1：在您的 AAD 租使用者中設定原生用戶端應用程式** 中的指示。
 
 最後，您可以使用選擇性的引數來指定想要建議的資料庫： 
 
@@ -184,7 +186,7 @@ ms.locfileid: "91727769"
 - **ExclusionReasons** -如果建議階層，此值為空白。 針對不建議的每一層，我們會提供未挑選它的原因。
 - **AppliedRules** -套用之規則的簡短標記法。
 
-最終的建議層 (，也就是**MetricType**) 和值 (也就是在**IsTierRecommended**資料行為 TRUE 的情況下找到**MetricValue**) -反映您的查詢在 Azure 中執行所需的最低 SKU，與您的內部部署資料庫類似的成功率。 針對 Azure SQL 受控執行個體，DMA 目前支援最常使用的8vcore 來 40vcore Sku 的建議。 例如，如果標準層的建議最小 SKU 為 S4，則選擇 S3 或以下會導致查詢超時或無法執行。
+最終的建議層 (，也就是 **MetricType**) 和值 (也就是在 **IsTierRecommended** 資料行為 TRUE 的情況下找到 **MetricValue**) -反映您的查詢在 Azure 中執行所需的最低 SKU，與您的內部部署資料庫類似的成功率。 針對 Azure SQL 受控執行個體，DMA 目前支援最常使用的8vcore 來 40vcore Sku 的建議。 例如，如果標準層的建議最小 SKU 為 S4，則選擇 S3 或以下會導致查詢超時或無法執行。
 
 HTML 檔案以圖形格式包含這項資訊。 它提供了方便使用的方法，可讓您查看最終的建議並布建程式的下一個部分。 HTML 輸出的詳細資訊位於下一節。
 

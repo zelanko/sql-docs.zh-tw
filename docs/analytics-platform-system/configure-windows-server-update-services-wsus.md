@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379576"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947945"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在 Analytics Platform System 中設定 Windows Server Update Services (WSUS) 
 這些指示會逐步引導您完成使用 Windows Server Update Services (WSUS) Configuration Wizard 設定 WSUS for Analytics Platform System 的步驟。 您必須先設定 WSUS，才能將軟體更新套用至設備。 WSUS 已安裝在設備的 VMM 虛擬機器上。  
@@ -39,7 +39,7 @@ ms.locfileid: "91379576"
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>設定 Windows Server Update Services (WSUS)   
   
-1.  登入 **管理主控台**。 在 [**設備狀態**] 索引標籤上，確認 [叢集] 和 [**網路**] 資料行顯示所有**節點的綠色** (或**NA**) 。 確認 **設備狀態**上所有節點的狀態指示器。  
+1.  登入 **管理主控台**。 在 [**設備狀態**] 索引標籤上，確認 [叢集] 和 [**網路**] 資料行顯示所有 **節點的綠色** (或 **NA**) 。 確認 **設備狀態** 上所有節點的狀態指示器。  
   
     -   您可以安全地繼續使用綠色或 NA 指標。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "91379576"
   
     #### <a name="to-launch-the-configuration-wizard"></a>啟動設定向導  
   
-    1.  在 **伺服器管理員的儀表板**中，按一下 [ **工具** ] 功能表上的 [ **Windows Server Update Services**]。  
+    1.  在 **伺服器管理員的儀表板** 中，按一下 [ **工具** ] 功能表上的 [ **Windows Server Update Services**]。  
   
-    2.  在 [ **Update Services** ] 視窗的左窗格中，按一下以展開 [虛擬機器管理] 節點伺服器 (** _appliance_domain_-VMM**) ，然後按一下 [**選項**]。  
+    2.  在 [ **Update Services** ] 視窗的左窗格中，按一下以展開 [虛擬機器管理] 節點伺服器 (**_appliance_domain_-VMM**) ，然後按一下 [**選項**]。  
   
     3.  在 [ **選項** ] 窗格中，按一下 [ **WSUS 伺服器設定向導]** ，以啟動 [設定向導]。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "91379576"
   
     #### <a name="to-update-by-using-microsoft-update"></a>若要使用 Microsoft Update 進行更新  
   
-    1.  如果您選擇與 Microsoft Update 同步處理，則不需要對 [ **選擇上游伺服器** ] 頁面進行任何變更。 按 [下一步]  。  
+    1.  如果您選擇與 Microsoft Update 同步處理，則不需要對 [ **選擇上游伺服器** ] 頁面進行任何變更。 按 [下一步] 。  
   
         ![WSUS 上游伺服器同步處理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -97,7 +97,7 @@ ms.locfileid: "91379576"
   
         ![WSUS 上游伺服器從 WSUS SSL 同步處理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4c.png "WSUS_Wiz4c")  
   
-    3.  如果這是複本伺服器，選取 [這是上游伺服器的複本]**** 核取方塊。 您可以選取 [同步處理 **更新資訊時使用 SSL** ]， **這是上游伺服器的複本**。  
+    3.  如果這是複本伺服器，選取 [這是上游伺服器的複本] 核取方塊。 您可以選取 [同步處理 **更新資訊時使用 SSL** ]， **這是上游伺服器的複本**。  
   
         ![WSUS 上游伺服器複本](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
@@ -113,11 +113,11 @@ ms.locfileid: "91379576"
   
     1.  在 [設定] 的 [ **指定 Proxy 伺服器** ] 頁面上，選取 [ **同步處理時使用 proxy 伺服器** ] 核取方塊，然後在對應的方塊中輸入 (不是) 的 proxy 伺服器 IP 位址和埠號碼 (埠) 80。  
   
-    2.  如果您想要使用特定使用者認證連線到 Proxy 伺服器，選取 [使用使用者認證連線到 Proxy 伺服器]**** 核取方塊，然後在對應的方塊中輸入使用者名稱、網域和使用者密碼。 如果您想要為連線到 proxy 伺服器的使用者啟用基本驗證，請選取 [ **允許基本驗證 (密碼以純文字傳送) ** ] 核取方塊。  
+    2.  如果您想要使用特定使用者認證連線到 Proxy 伺服器，選取 [使用使用者認證連線到 Proxy 伺服器] 核取方塊，然後在對應的方塊中輸入使用者名稱、網域和使用者密碼。 如果您想要為連線到 proxy 伺服器的使用者啟用基本驗證，請選取 [ **允許基本驗證 (密碼以純文字傳送)** ] 核取方塊。  
   
         ![WSUS Proxy 認證](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
-    3.  到目前為止，您已完成 proxy 伺服器設定。 按 [下一步]**** 前往下一個頁面，開始設定同步處理程序。  
+    3.  到目前為止，您已完成 proxy 伺服器設定。 按 [下一步] 前往下一個頁面，開始設定同步處理程序。  
   
 6.  開始連接。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "91379576"
   
     取消選取所有選取的更新。  
   
-    選取 **SQL Server 2012**、 **SQL Server 2014**、 **Windows Server 2012 R2**和 **System Center 2012 R2-Virtual Machine Manager**，然後按一下 **[下一步]**。  
+    選取 **SQL Server 2012**、 **SQL Server 2014**、 **Windows Server 2012 R2**、 **System Center 2012 R2-Virtual Machine Manager**、 **Windows Server 2016** 和 **System center 2016-Virtual Machine Manager** 然後按 **[下一步]**。  
   
 9. 選擇 [分類]。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "91379576"
   
     取消選取所有先前選取的更新。  
   
-    針對將針對分析平臺系統裝置同步處理的更新，選取 **重大更新** 和 **安全性更新** ，然後按 **[下一步]**。  
+    針對將針對分析平臺系統裝置同步處理的更新，選取 **重大更新**、 **安全性更新** 和 **更新彙總套件** ，然後按 **[下一步]**。  
   
     ![選擇分類](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
@@ -166,7 +166,7 @@ ms.locfileid: "91379576"
   
 11. 開始初始同步處理。  
   
-    選取 [ **開始初始同步**處理]，然後按一下 **[下一步]**。  
+    選取 [ **開始初始同步** 處理]，然後按一下 **[下一步]**。  
   
 12. [完成]。  
   
