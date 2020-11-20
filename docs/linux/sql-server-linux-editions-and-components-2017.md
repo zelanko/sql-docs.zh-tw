@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115439"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674166"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的版本及支援功能
 
@@ -210,6 +210,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |平面與 Geodetic 資料類型|是|是|是|是| 
 |進階空間程式庫|是|是|是|是|   
 |匯入/匯出業界標準空間資料格式|是|是|是|是|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> 不支援的功能與服務
 
 Linux 上的 SQL Server 2017 不支援下列功能和服務。 這些功能的支援將隨著時間逐漸啟用。
@@ -225,6 +226,7 @@ Linux 上的 SQL Server 2017 不支援下列功能和服務。 這些功能的�
 | &nbsp; | Filetable、FILESTREAM |
 | &nbsp; | 已設定 EXTERNAL_ACCESS 或 UNSAFE 權限的 CLR 組件 |
 | &nbsp; | 緩衝集區擴充 |
+| &nbsp; | 備份至 URL - 分頁 Blob<sup>1</sup>|
 | **SQL Server Agent** |  子系統：CmdExec、PowerShell、佇列讀取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警示 |
 | &nbsp; | 記錄讀取器代理程式 |
@@ -241,6 +243,8 @@ Linux 上的 SQL Server 2017 不支援下列功能和服務。 這些功能的�
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> 區塊 Blob 支援使用[共用存取簽章](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)備份至 URL。
+
 ## <a name="next-steps"></a>後續步驟
  [SQL Server 2019 的版本及支援功能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 的版本及支援功能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a5c182e7425e51a06b170178ee2716c42c58e115
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890757"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521215"
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91890757"
   
 -   從歷程記錄強制執行先前的計畫 (如果已證實該計畫比較好)。 使用 [迴歸查詢] 中的 [強制計劃] 按鈕，強制執行針對查詢所選取的計劃。  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![顯示計劃摘要的查詢存放區螢幕擷取畫面。](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  如需此案例的詳細描述，請參閱 [Query Store:A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (查詢存放區︰適用於資料庫的飛行資料記錄器) 部落格。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91890757"
   
  開始探勘的最簡單方式是開啟 **中的 [熱門資源取用查詢]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 使用者介面會分成三個窗格︰代表熱門資源取用查詢的長條圖 (左)、所選取查詢的計畫摘要 (右)，以及所選取計畫的視覺化查詢計畫 (下方)。 按一下 [設定]  按鈕，來控制您想要分析的查詢數量以及感興趣的時間間隔。 此外，您可以在不同的資源耗用維度 (持續時間、CPU、記憶體、IO、執行數目) 和基準 (平均、最小值、最大值、總計、標準差) 之間進行選擇。  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![顯示可識別及調整前幾名耗用資源查詢的查詢存放區螢幕擷取畫面。](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  查看右邊的計畫摘要來分析執行歷程記錄，並了解不同的計畫及其執行階段統計資料。 使用下方窗格來檢查不同的計畫，或是以視覺化的並排顯示方式來比較它們 (使用 [比較] 按鈕)。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "91890757"
   
 下圖顯示發生遺漏索引建立情況的查詢存放區分析 (步驟 4)。 開啟 [熱門資源取用查詢] / [計畫摘要] 窗格，即可針對應該會受到索引建立影響的查詢取得這個檢視︰  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![顯示發生遺漏索引建立情況時的查詢存放區分析 (步驟 4) 螢幕擷取畫面。](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 此外，您可以將計畫在索引建立前後的情況並排顯示以進行比較 ([在另一個視窗中比較所選查詢的計畫] 工具列選項，工具列上以紅色方塊標示的選項)。  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![顯示查詢存放區及 [在另一個視窗中比較所選查詢的計劃] 工具列選項的螢幕擷取畫面。](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 索引建立之前的計畫 (plan_id  = 1，上方) 具有遺漏索引提示，而您可以檢查叢集索引掃描是查詢中最耗用資源的運算子 (紅色矩形)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "91890757"
   
 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，所有的查詢最佳化工具變更都會繫結至最新的[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)；因此，計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 變更為最新版本時變更。 此功能會結合查詢存放區，可讓您在升級過程中對查詢效能擁有絕佳層級的控制。 下圖顯示建議的升級工作流程：  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![顯示建議升級工作流程的圖表。](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不變更資料庫相容性層級。 它不會公開最新的查詢最佳化工具變更，但仍會提供較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能 (包括查詢存放區)。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "91890757"
   
  [前幾大耗用資源的查詢] 檢視初步顯示出您工作負載在臨機操作方面的根本情況：  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![[熱門資源耗用查詢] 檢視的螢幕擷取畫面，其中顯示大部分的熱門資源耗用查詢都只執行過一次。](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 使用 [執行計數] 計量來分析您排名最前面的查詢是否是特定的 (這需要您使用 `QUERY_CAPTURE_MODE = ALL` 來執行查詢存放區)。 您可以從上圖看見 90% 的 **前幾大耗用資源的查詢** 只執行了一次。  
   
@@ -157,7 +157,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 若查詢臨機操作工作負載，這是您可能得到的一種結果：  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![如果工作負載使用臨機操作查詢的可能結果螢幕擷取畫面。](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 查詢結果顯示，儘管查詢存放區中有大量的查詢和計畫，但其 query_hash 和 query_plan_hash 實際上是一樣的。 唯一查詢文字和唯一查詢雜湊之間的比率遠大於 1，這表示工作負載是適合用來參數化的候選項目，原因是查詢之間唯一的差異只有提供作為部分查詢文字的常值常數 (參數)。  
   
@@ -199,11 +199,11 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 在您套用這其中任何步驟之後， **熱門資源取用查詢** 將會針對您的工作負載顯示不同的圖片。  
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![顯示不同工作負載圖片的 [熱門資源耗用查詢] 檢視螢幕擷取畫面。](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 在某些情況下，您的應用程式可能產生許多各種不適合用作自動參數化候選項目的查詢。 在此情況下，您會在系統中看到大量查詢，但唯一查詢與唯一 `query_hash` 之間的比率很可能接近 1。  
   
-在此情況下，您可能想要啟用[**針對臨機操作工作負載最佳化**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)伺服器選項，以避免將快取記憶體浪費在可能不會再次執行的查詢上。 若要避免在查詢存放區中擷取這些查詢，請將 `QUERY_CAPTURE_MODE` 設為 `AUTO`。  
+在此情況下，您可能想要啟用 [**針對臨機操作工作負載最佳化**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)伺服器選項，以避免將快取記憶體浪費在可能不會再次執行的查詢上。 若要避免在查詢存放區中擷取這些查詢，請將 `QUERY_CAPTURE_MODE` 設為 `AUTO`。  
   
 ```sql  
 EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE

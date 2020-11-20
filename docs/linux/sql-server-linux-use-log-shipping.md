@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115791"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521088"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115791"
 
 SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會複寫到一或多部次要伺服器上。 簡而言之，來源資料庫的備份會還原到次要伺服器上。 接著，主要伺服器會定期建立交易記錄備份，而次要伺服器會將它們還原，同時更新資料庫的次要複本。 
 
-  ![記錄傳送](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![顯示記錄傳送工作流程的圖表。](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 如本圖所示，記錄傳送工作階段包含下列步驟：
 

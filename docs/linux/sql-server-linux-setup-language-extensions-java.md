@@ -1,86 +1,46 @@
 ---
-title: 在 Linux 上安裝 SQL Server Java 語言延伸模組
-titleSuffix: ''
+title: 在 Linux 上安裝 Java 語言延伸模組
+titleSuffix: SQL Server Language Extensions
 description: 了解如何在 Red Hat、Ubuntu 和 SUSE Linux 上安裝 SQL Server Java 語言延伸模組。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 02/03/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 100ef62ce2c87fa642a8c1ef9ef6307a6d9b9103
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: e859a445bf4283f7f3d56e04997525ac2823193a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155583"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585082"
 ---
-# <a name="install-sql-server-java-language-extensions-on-linux"></a>在 Linux 上安裝 SQL Server Java 語言延伸模組 
+# <a name="install-sql-server-java-language-extension-on-linux"></a>在 Linux 上安裝 SQL Server Java 語言延伸模組
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-「語言延伸模組」是資料庫引擎的附加元件。 雖然您可以[同時安裝資料庫引擎和語言擴充功能](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
+了解如何在 Linux 上安裝適用於 SQL Server 的 [Java 語言延伸模組](../language-extensions/java-overview.md)元件。 Java 語言延伸模組從屬於 [SQL Server 語言延伸模組](../language-extensions/language-extensions-overview.md)，是資料庫引擎的附加元件。 
 
-請遵循此文章中的步驟來安裝 Java 語言擴充功能。
-
-Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如果您已經為資料庫引擎安裝設定來源存放庫，您可以使用相同的存放庫登錄來執行 **mssql-server-extensibility-java** 套件安裝命令。
-
-Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
-
-根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../machine-learning/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
-
-## <a name="uninstall-preview-version"></a>解除安裝預覽版本
-
-如果您已安裝預覽版本 (Community Technical Preview (CTP) 或候選版 (RC))，建議您先解除安裝此版本以移除所有先前的套件，然後安裝 SQL Server 2019。 系統不支援多個版本的並存安裝，且最後幾個預覽 (CTP/RC) 版本中的套件清單已有所變更。
-
-### <a name="1-confirm-package-installation"></a>1.確認套件安裝
-
-首先，建議您檢查先前的安裝是否存在。 下列檔案表示現有安裝存在：checkinstallextensibility.sh、exthost、launchpad。
-
-```bash
-ls /opt/microsoft/mssql/bin
-```
-
-### <a name="2-uninstall-previous-ctprc-packages"></a>2.解除安裝先前的 CTP/RC 套件
-
-在最低套件層級解除安裝。 相依於低層級套件的任何上游套件都會自動解除安裝。
-
-  + 針對 Java 整合，移除 **mssql-server-extensibility-java**
-
-下表中顯示移除套件的命令。
-
-| 平台  | 套件移除命令 | 
-|-----------|----------------------------|
-| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
-
-### <a name="3-install-sql-server-2019"></a>3.安裝 SQL Server 2019
-
-使用此文章中適用於您作業系統的指示，在最高套件層級安裝。
-
-針對每個 OS 特定的安裝指示集，「最高套件層級」  為適用於安裝完整一組套件的**範例 1 - 完整安裝**，或適用於可行安裝所需最少套件數目的**範例 2 - 最小安裝**。
-
-1. 使用適用於您 Linux 發行版本的套件管理員和語法來執行安裝命令： 
-
-   + [RedHat](#RHEL)
-   + [Ubuntu](#ubuntu)
-   + [SUSE](#suse)
+雖然您可以[同時安裝資料庫引擎和語言擴充功能](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。
 
 ## <a name="prerequisites"></a>Prerequisites
 
 + Linux 版本必須[受 SQL Server 支援](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包含 Docker 引擎。 支援的版本包含：
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-
    + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
-
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + 您應該有執行 T-SQL 命令的工具。 必須使用查詢編輯器進行安裝後設定和驗證。 我們推薦 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux) \(部分機器翻譯\)，這是在 Linux 上執行的免費下載。
+
++ Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如果您已經為資料庫引擎安裝設定來源存放庫，您可以使用相同的存放庫登錄來執行 **mssql-server-extensibility-java** 套件安裝命令。
+
++ Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
+
++ 根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../machine-learning/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="package-list"></a>套件清單
 
@@ -93,7 +53,7 @@ ls /opt/microsoft/mssql/bin
 
 <a name="RHEL"></a>
 
-## <a name="install-language-extensions"></a>安裝語言擴充功能
+## <a name="install-java-language-extension"></a>安裝 Java 語言延伸模組
 
 您可以藉由安裝 **mssql-server-extensibility-java**，在 Linux 上安裝語言擴充功能和 Java。 當您安裝 **mssql-server-extensibility-java** 時，套件會自動安裝 JRE 11 (如果尚未安裝)。 它也會將 JVM 路徑新增至名為 JRE_HOME 的環境變數。
 
@@ -218,38 +178,37 @@ Java 功能整合不包含程式庫，但您可以執行 `grep -r JRE_HOME /etc`
 
 <a name="install-all"></a>
 
-## <a name="full-install-of-sql-server-and-language-extensions"></a>SQL Server 和語言擴充功能的完整安裝
+## <a name="full-install-of-sql-server-and-java-language-extension"></a>SQL Server 和 Java 語言延伸模組的完整安裝
 
-藉由在安裝資料庫引擎的命令附加 Java 套件和參數，您可以在一個程序中安裝及設定資料庫引擎和語言擴充功能。
+只要在安裝資料庫引擎的命令中附加 Java 套件和參數，就可以在一個程序中安裝及設定資料庫引擎和 Java 語言延伸模組。
 
 1. 提供包含資料庫引擎以及語言擴充功能的命令列。
 
-  您可以在資料庫引擎安裝中加入 Java 擴充性。
+    您可以在資料庫引擎安裝中加入 Java 擴充性。
 
-  ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
-  ```
+    ```bash
+    sudo yum install -y mssql-server mssql-server-extensibility-java 
+    ```
 
-3. 接受授權合約，並完成安裝後設定。 使用 **mssql-conf** 工具來執行此工作。
+1. 接受授權合約，並完成安裝後設定。 使用 **mssql-conf** 工具來執行此工作。
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf setup
+    ```
 
-  系統會提示您接受資料庫引擎授權合約、選擇版本，以及設定系統管理員密碼。 
+    系統會提示您接受資料庫引擎授權合約、選擇版本，以及設定系統管理員密碼。 
 
-4. 如果系統提示，請重新啟動服務。
+1. 如果系統提示，請重新啟動服務。
 
-  ```bash
-  sudo systemctl restart mssql-server.service
-  ```
+    ```bash
+    sudo systemctl restart mssql-server.service
+    ```
 
 ## <a name="unattended-installation"></a>自動安裝
 
-使用資料庫引擎的[自動安裝](./sql-server-linux-setup.md#unattended) \(部分機器翻譯\)，新增 mssql-server-extensibility-java 的套件。
+使用資料庫引擎的 [自動安裝](./sql-server-linux-setup.md#unattended)，並新增 **mssql-server-extensibility-java** 的套件。
 
 <a name="offline-install"></a>
-
 
 ## <a name="offline-installation"></a>離線安裝
 
@@ -260,7 +219,7 @@ Java 功能整合不包含程式庫，但您可以執行 `grep -r JRE_HOME /etc`
 
 #### <a name="download-site"></a>下載網站
 
-您可以從 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下載套件。 所有適用於 Java 的套件都與資料庫引擎套件共存。 
+您可在 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下載套件。 所有的 Java 套件都與資料庫引擎套件搭配使用。
 
 #### <a name="redhat7-paths"></a>RedHat/7 路徑
 
@@ -276,17 +235,15 @@ Java 功能整合不包含程式庫，但您可以執行 `grep -r JRE_HOME /etc`
 
 #### <a name="suse12-paths"></a>SUSE/12 路徑
 
-
 |Package|下載位置|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>套件清單
-
 取決於您想要使用的擴充功能，下載適用於特定語言的必要套件。 確切的檔案名稱會在尾碼中包含平台資訊，但下面的檔案名稱應該足以讓您判斷要取得的檔案。
 
 ```
-# Core packages 
+# Core packages
 mssql-server-15.0.1000
 mssql-server-extensibility-15.0.1000
 
@@ -296,20 +253,20 @@ mssql-server-extensibility-java-15.0.1000
 
 ## <a name="limitations"></a>限制
 
-+ 目前在 Linux 上無法使用隱含驗證，這表示您無法從進行中的 Java 連線回到伺服器，以存取資料或其他資源。
+目前在 Linux 上無法使用隱含驗證，這表示您無法從進行中的 Java 連線回到伺服器，以存取資料或其他資源。
 
 ### <a name="resource-governance"></a>資源管理
 
-針對外部資源集區的[資源管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)，Linux 與 Windows 之間有同位，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的統計資料在 Linux 上目前有不同單位。 
- 
-| 資料行名稱   | 描述 | Linux 上的值 | 
+針對外部資源集區的[資源管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)，Linux 與 Windows 之間有同位，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的統計資料在 Linux 上目前有不同單位。
+
+| 資料行名稱   | 描述 | Linux 上的值 |
 |---------------|--------------|---------------|
 |peak_memory_kb | 用於資源集區的記憶體數量上限。 | 在 Linux 上，此統計資料是來自 CGroups 記憶體子系統，其中的值為 memory.max_usage_in_bytes |
-|write_io_count | 重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中寫入資料列上的值為 blkio.throttle.io_serviced | 
-|read_io_count | 重設 Resource Governor 統計資料之後發出的讀取 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中讀取資料列上的值為 blkio.throttle.io_serviced | 
+|write_io_count | 重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中寫入資料列上的值為 blkio.throttle.io_serviced |
+|read_io_count | 重設 Resource Governor 統計資料之後發出的讀取 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中讀取資料列上的值為 blkio.throttle.io_serviced |
 |total_cpu_kernel_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者核心時間 (以毫秒為單位)。 | 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中使用者資料列上的值為 cpuacct.stat |  
-|total_cpu_user_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者時間 (以毫秒為單位)。| 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中系統資料列值上的值為 cpuacct.stat | 
-|active_processes_count | 在要求當時正在執行的外部處理序數目。| 在 Linux 上，此統計資料是來自 CGroups pids 記憶體子系統，其中的值為 pids.current | 
+|total_cpu_user_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者時間 (以毫秒為單位)。| 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中系統資料列值上的值為 cpuacct.stat |
+|active_processes_count | 在要求當時正在執行的外部處理序數目。| 在 Linux 上，此統計資料是來自 CGroups pids 子系統，其值為 pids.current |
 
 ## <a name="next-steps"></a>後續步驟
 

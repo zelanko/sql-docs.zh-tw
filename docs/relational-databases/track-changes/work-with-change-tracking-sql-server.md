@@ -23,12 +23,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69e648dddc84de1c136fbf1830e7eeb639bcb5e7
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 28719dc4bc770e2fbb58bc7f6e70b68a84895127
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512304"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447119"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88512304"
  這是用於取得下一次查詢變更時將使用的目前版本。 此版本代表上一次認可的交易版本。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION() 函式  
- 這是用於取得用戶端可以擁有，並仍然可從 CHANGETABLE() 取得有效結果的最小有效版本。 用戶端應該針對此函數所傳回的值，檢查上一次同步處理版本。 如果上一次同步處理版本小於此函數所傳回的版本，用戶端將無法從 CHANGETABLE() 取得有效結果，而且必須重新初始化。  
+ 這是用於取得用戶端可以擁有，並仍然可從 CHANGETABLE() 取得有效結果的最小有效版本。 用戶端應該針對此函數所傳回的值，檢查上一次的同步處理版本。 如果上一次同步處理版本小於此函數所傳回的版本，用戶端將無法從 CHANGETABLE() 取得有效結果，而且必須重新初始化。  
   
 ### <a name="obtaining-initial-data"></a>取得初始資料  
  在應用程式首次取得變更之前，應用程式必須先傳送查詢，以便取得初始資料和同步處理版本。 應用程式必須直接從資料表中取得適當的資料，然後使用 CHANGE_TRACKING_CURRENT_VERSION() 來取得初始版本。 這個版本將在首次取得變更時傳遞給 CHANGETABLE(CHANGES ...)。  

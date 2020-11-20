@@ -9,16 +9,16 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d0e6b5fe9303269f5941ba11d231e1ca18def11
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098805"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521092"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>獨立 SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
 
-獨立 **SSIS DevOps 工具**可為使用者提供一組可執行檔以執行 SSIS CICD 工作。 由於這些可執行檔對 Visual Studio 或 SSIS 執行階段的安裝並沒有任何相依性，因此可以輕鬆地與任何 CICD 平台整合。 所提供的可執行檔為：
+獨立 **SSIS DevOps 工具** 可為使用者提供一組可執行檔以執行 SSIS CICD 工作。 由於這些可執行檔對 Visual Studio 或 SSIS 執行階段的安裝並沒有任何相依性，因此可以輕鬆地與任何 CICD 平台整合。 所提供的可執行檔為：
 
 - SSISBuild.exe：在專案部署模型或套件部署模型中建置 SSIS 專案。
 - SSISDeploy.exe：將 ISPAC 檔案部署到 SSIS 目錄，或是將 DTSX 檔案及其相依性部署到檔案系統。
@@ -128,6 +128,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-011-preview"></a>0\.1.1 版預覽
+
+發行日期：2020 年 11 月 11 日
+
+- 已修正將 ispac 部署至 SSIS 目錄時，SSISDeploy.exe 無法載入組件的問題。
 
 ### <a name="version-010-preview"></a>0\.1.0 版預覽
 

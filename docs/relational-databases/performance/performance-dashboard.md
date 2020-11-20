@@ -2,7 +2,7 @@
 title: 效能儀表板 | Microsoft Docs
 description: 了解 SQL Server Management Studio 效能儀表板，該儀表板會提供 SQL Server 與 Azure SQL 受控執行個體的快速見解。
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863361"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674176"
 ---
 # <a name="performance-dashboard"></a>效能儀表板
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ ms.locfileid: "87863361"
 
 [佔用大量資源的查詢] 報表在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動時會重設，因為系統會清除基礎 DMV 中的資料。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 [查詢存放區] 中找到有關佔用大量資源查詢的詳細資訊。 
 
+
 > [!NOTE]
-> [效能儀表板] 一開始是以 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) 的獨立下載項目形式發行，之後再針對 [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063) 進行更新。
+> [效能儀表板] 一開始是以 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) 的獨立下載項目形式發行，之後再針對 [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063) 進行更新。 雖然 SQL Server Management Studio 報表轉譯器不支援剪貼簿存取報表內包含的文字，但是可以透過獨立報表存取文字。  如果您需要複製報表中的查詢文字，請下載獨立報表。
 
 ## <a name="permissions"></a>權限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要 `VIEW SERVER STATE` 與 `ALTER TRACE` 權限。 在 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。

@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115417"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674191"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
 
@@ -225,6 +225,7 @@ Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的�
 | &nbsp; | Filetable、FILESTREAM |
 | &nbsp; | 已設定 EXTERNAL_ACCESS 或 UNSAFE 權限的 CLR 組件 |
 | &nbsp; | 緩衝集區擴充 |
+| &nbsp; | 備份至 URL - 分頁 Blob<sup>2</sup> |
 | **SQL Server Agent** |  子系統：CmdExec、PowerShell、佇列讀取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警示 |
 | &nbsp; | 受控備份 |
@@ -241,7 +242,9 @@ Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的�
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server 內支援 SQL Server R，但不支援作為獨立套件的 SQL Server R 服務。
-  
+
+<sup>2</sup> 區塊 Blob 支援使用[共用存取簽章](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)備份至 URL。
+
 ## <a name="next-steps"></a>後續步驟
  [SQL Server 2017 的版本及支援功能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 的版本及支援功能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418016"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570945"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
 
@@ -62,7 +62,7 @@ ms.locfileid: "94418016"
 
     右窗格會顯示選取功能的必要條件。 SQL Server 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。
 
-    系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 選取 [下一步] 以繼續。
+    系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 選取 [下一步] 以繼續進行操作。
 
 9. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。
 
@@ -114,7 +114,7 @@ ms.locfileid: "94418016"
 
 19. 您可以使用 [Distributed Replay Controller 組態] 頁面，指定要授與 Distributed Replay Controller 服務之管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Controller 服務。
 
-    選取 [加入目前使用者]  按鈕，以加入要授與 Distributed Replay Controller 服務之存取權限的使用者。 選取 [加入]  按鈕，以加入 Distributed Replay Controller 服務的存取權限。 選取 [移除] 按鈕，以移除 Distributed Replay Controller 服務的存取權限。
+    選取 [新增目前使用者] 按鈕，以新增要授與 Distributed Replay Controller 服務存取權限的使用者。 選取 [新增] 按鈕，以新增 Distributed Replay Controller 服務的存取權限。 選取 [移除] 按鈕，以移除 Distributed Replay Controller 服務的存取權限。
 
     若要繼續，請選取 [下一步]。
 

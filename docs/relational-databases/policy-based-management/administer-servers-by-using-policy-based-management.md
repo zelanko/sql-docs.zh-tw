@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e60a5d8bdb987e3be2016b8b0395f05e83f9f7a9
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890878"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631754"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   原則式管理是用於管理一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的原則式系統。 其用法是為了建立包含條件運算式的條件。 然後，建立將這些條件套用至資料庫目標物件的原則。  
+   原則式管理是用於管理一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的原則式系統。 請使用此系統建立包含條件運算式的條件。 然後，建立將這些條件套用至資料庫目標物件的原則。  
 
 例如，身為資料庫管理員，您可能想要確定特定伺服器未啟用 Database Mail，以便建立設定該伺服器選項的條件和原則。 
    

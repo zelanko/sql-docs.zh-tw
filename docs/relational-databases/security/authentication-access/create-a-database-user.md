@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c18c98192c2806f0b946e5025127151c68009682
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005691"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521173"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86005691"
 ##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> 了解使用者的類型  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會顯示 6 個選項。 下圖在綠色方塊中顯示 6 個選項，並指出它們代表的意義。  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![說明不同使用者類型的圖表。](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>選取使用者的類型  
  **登入或未對應到登入的使用者**  
