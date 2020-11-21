@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778467"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011813"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，擴充 MPP 資料倉儲
 請參閱 Microsoft Analytics Platform System (AP) 最新設備更新的新功能。 AP 是一個將 MPP SQL Server 平行處理資料倉儲的相應放大內部部署設備。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>AP CU 7。7
+發行日期-2020 年11月
+
+### <a name="scvmm2016"></a>SCVMM2016
+AP CU 7.7 軟體將 VMM VM 升級至 Windows Server 2016 並安裝 SCVMM2016。 目前使用中的 SCVMM 2012 R2 的生命循環結束日期為2022年7月。 需要較新的 SCVMM，才能讓 CU 7.7 強制升級。 客戶呼籲要儘快升級至 CU 7.7。
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>作為目標的 SQL Server 2019 的 SSIS 目的地介面卡
+您可以從 [下載網站](https://www.microsoft.com/download/details.aspx?id=57472)下載支援 SQL Server 2019 作為部署目標的新 ap SSIS 目的地介面卡。
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 發行日期-2020 年4月
@@ -87,7 +97,7 @@ AP CU 7.2 支援 TLS 1.2。 用戶端電腦到 AP 和在節點間通訊的 AP �
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase 的 Hadoop 加密區域支援
 PolyBase 現在可以與 Hadoop 加密區域進行通訊。 請參閱 [設定 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)所需的 ap 設定變更。
 
-### <a name="insert-select-maxdop-options"></a>插入-選取 maxdop 選項
+### <a name="insert-select-maxdop-options"></a>Insert-Select maxdop 選項
 我們新增了一 [項功能參數](appliance-feature-switch.md) ，可讓您挑選大於1的 maxdop 設定來進行插入選擇作業。 您現在可以將 maxdop 設定設定為0、1、2或4。 預設值是 1。
 
 > [!IMPORTANT]  
@@ -140,7 +150,7 @@ AP 支援 T-sql [dbcc 命令](../t-sql/database-console-commands/dbcc-transact-s
 ### <a name="bug-fixes"></a>Bug 修正
 我們已使用 AP CU 7.1 升級至 SQL Server 2016 SP2 CU2。 升級會修正以下所述的一些問題。
 
-| 標題 | 描述 |
+| 標題 | 說明 |
 |:---|:---|
 | **可能的元組移動器鎖死** |升級會修正分散式交易和元組移動背景執行緒中長期鎖死的可能性。 安裝 CU 7.1 之後，使用 TF634 來停止元組移動器的客戶，SQL Server 啟動參數或全域追蹤旗標，可以安全地將它移除。 | 
 | **某些延遲/潛在客戶查詢失敗** |在對 CCI 資料表具有可能發生錯誤之嵌套延遲/潛在客戶函式的特定查詢，現在已透過此升級來修正。 | 
@@ -164,7 +174,7 @@ AP 2016 是升級至 AU7 的先決條件。 以下是 AP AU7 中的新功能：
 AP AU7 引進 [Configuration Manager](launch-the-configuration-manager.md)中的功能切換。 >autostatsenabled 和 DmsProcessStopMessageTimeoutInSeconds 現在是可由系統管理員變更的可設定選項。
 
 ### <a name="known-issues"></a>已知問題
-使用 AP AU7 software 時，會提供 Intel BIOS 更新，以修正述為 *推測性執行端通道攻擊*的問題。 攻擊的目標是要利用所謂的 *Spectre 和 Meltdown 弱點*。 雖然與 AP 一起封裝，但 BIOS 更新是以手動方式安裝，而不是在 AU7 software 安裝的 AP 中進行安裝。
+使用 AP AU7 software 時，會提供 Intel BIOS 更新，以修正述為 *推測性執行端通道攻擊* 的問題。 攻擊的目標是要利用所謂的 *Spectre 和 Meltdown 弱點*。 雖然與 AP 一起封裝，但 BIOS 更新是以手動方式安裝，而不是在 AU7 software 安裝的 AP 中進行安裝。
 
 Microsoft 建議所有客戶安裝 BIOS 更新。 Microsoft 已測量核心虛擬位址遮蔽 (KVAS) 、核心頁面資料表間接取值 (KPTI) 和間接分支預測風險降低 (IBP) 在各種環境中的各種 SQL 工作負載的影響。 度量發現某些工作負載的效能大幅降低。 根據結果，建議您先測試啟用 BIOS 更新的效能效果，再將它們部署在生產環境中。 請參閱 [此處](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)的 SQL Server 指引。
 
