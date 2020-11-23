@@ -46,12 +46,14 @@
         - name: SQL Server 安全性
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: 在 SQL Server 中進行驗證
+            - name: 驗證
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: SQL Server 中的應用程式安全性案例
+            - name: Azure Active Directory 驗證
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: 應用程式安全性案例
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: 在 SQL Server 中撰寫安全的動態 SQL
+                - name: 撰寫安全的動態 SQL
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: SQL Server Express 安全性
               href: ../connect/ado-net/sql/sql-server-express-security.md
