@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155102"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810518"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>使用 Azure Kubernetes Service (AKS) 在 Kubernetes 中部署 SQL Server 容器
 
@@ -66,7 +66,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 下列命令會建立 SA 帳戶的密碼：
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -111,7 +111,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 在 Kubernetes 中建立永續性磁碟區宣告。
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 驗證永續性磁碟區宣告。
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
    在先前的步驟中，永續性磁碟區宣告名為 `mssql-data`。 若要查看永續性磁碟區宣告的相關中繼資料，請執行下列命令：
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 驗證永續性磁碟區。
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -244,7 +244,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 建立部署。
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -265,7 +265,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 驗證服務是否正在執行。 執行以下命令：
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -281,13 +281,13 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 您也可以透過執行下列命令來驗證容器是以非根使用者的身分執行：
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     然後執行 'whoami'，即應看到使用者名稱為 mssql。 這是非根使用者。
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -320,7 +320,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 列出執行 SQL Server 的 Pod。
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -328,7 +328,7 @@ Kubernetes 1.6 和更新版本支援[儲存體類別](https://kubernetes.io/docs
 
 1. 刪除 Pod。
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 

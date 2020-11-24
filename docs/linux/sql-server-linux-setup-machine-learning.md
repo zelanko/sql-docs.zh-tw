@@ -2,21 +2,20 @@
 title: 在 Linux 上安裝
 titleSuffix: SQL Server Machine Learning Services
 description: 了解如何在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)：Red Hat、Ubuntu 和 SUSE。
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.date: 03/05/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fc671271d3e998e0329236c6c567438db1a5c48a
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115758"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870004"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -299,7 +298,7 @@ sudo zypper install mssql-mlservices-packages-r
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. 若只需要 R 功能整合，請設定 **MKL_CBWR** 環境變數，以確保輸出與來自 Intel 數學核心程式庫 (MKL) 計算的[一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
+4. 若只需要 R 功能整合，請設定 **MKL_CBWR** 環境變數，以確保輸出與來自 Intel 數學核心程式庫 (MKL) 計算的 [一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
 
    + 在使用者主目錄中編輯或建立名為 `.bash_profile` 的檔案，並將 `export MKL_CBWR="AUTO"` 這一行新增至檔案。
 

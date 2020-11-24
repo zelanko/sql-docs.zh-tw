@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551519"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983112"
 ---
 # <a name="synonyms-database-engine"></a>同義字 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "89551519"
   
 -   提供抽象層來保護用戶端應用程式，避免變更基底物件的名稱或位置。  
   
-例如，以位於伺服器 **Server1** 上 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]的 **Employee**資料表為例。 若要從另一個伺服器 **Server2**參考此資料表，用戶端應用程式使用的名稱必須包含四個部分： **Server1.AdventureWorks.Person.Employee**。 另外，若是資料表的位置已變更 (例如，變更至另一個伺服器)，則必須修改用戶端應用程式以反映該變更。  
+例如，以位於伺服器 **Server1** 上 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]的 **Employee** 資料表為例。 若要從另一個伺服器 **Server2** 參考此資料表，用戶端應用程式使用的名稱必須包含四個部分： **Server1.AdventureWorks.Person.Employee**。 另外，若是資料表的位置已變更 (例如，變更至另一個伺服器)，則必須修改用戶端應用程式以反映該變更。  
   
-若要解決這些問題，您可以在 **Server2**上建立同義字 **EmpTable** ，來代表 **Server1** 的 **Employee**資料表。 現在，用戶端應用程式只需要使用 **EmpTable**單一部分的名稱，即可參考 **Employee** 資料表。 此外，如果 **Employee** 資料表的位置變更，您必須修改同義字 **EmpTable**以指向 **Employee** 資料表的新位置。 由於沒有 ALTER SYNONYM 陳述式，因此您必須先卸除同義字 **EmpTable**，再以相同的名稱重新建立同義字，但要將同義字指向 **Employee**的新位置。  
+若要解決這些問題，您可以在 **Server2** 上建立同義字 **EmpTable** ，來代表 **Server1** 的 **Employee** 資料表。 現在，用戶端應用程式只需要使用 **EmpTable** 單一部分的名稱，即可參考 **Employee** 資料表。 此外，如果 **Employee** 資料表的位置變更，您必須修改同義字 **EmpTable** 以指向 **Employee** 資料表的新位置。 由於沒有 ALTER SYNONYM 陳述式，因此您必須先卸除同義字 **EmpTable**，再以相同的名稱重新建立同義字，但要將同義字指向 **Employee** 的新位置。  
   
 同義字放在結構描述中，如同結構描述中的其他物件一樣，同義字的名稱也必須是唯一的。 您可以為下列資料庫物件建立同義字：  
 
@@ -56,8 +56,6 @@ ms.locfileid: "89551519"
 
         組件 (CLR) 彙總函式
 
-        組件 (CLR) 彙總函式
-
         SQL 資料表值函式
 
         SQL 預存程序
@@ -73,15 +71,15 @@ ms.locfileid: "89551519"
   
 同義字不可為另一個同義字的基底物件，而且同義字不可以參考使用者自訂的彙總函式。  
   
-同義字和基底物件之間只透過名稱繫結。 基底物件的存在性、類型及權限，全部會延遲到執行階段再檢查。 因此，和原始基底物件名稱相同的另一個物件，可以修改、卸除或卸除並取代基底物件。 例如，以同義字 **MyContacts**為例，此同義字參考 **中的** Person.Contact [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]資料表。 如果 **Contact** 資料表被卸除並由名稱為 **Person.Contact**的檢視所取代，則 **MyContacts** 會變成參考 **Person.Contact** 檢視。  
+同義字和基底物件之間只透過名稱繫結。 基底物件的存在性、類型及權限，全部會延遲到執行階段再檢查。 因此，和原始基底物件名稱相同的另一個物件，可以修改、卸除或卸除並取代基底物件。 例如，以同義字 **MyContacts** 為例，此同義字參考 **中的** Person.Contact [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]資料表。 如果 **Contact** 資料表被卸除並由名稱為 **Person.Contact** 的檢視所取代，則 **MyContacts** 會變成參考 **Person.Contact** 檢視。  
   
 同義字的參考不受結構描述的約束。 因此，隨時可以卸除同義字。 不過，如果卸除同義字，已卸除的同義字有可能會留下懸吊參考。 只有等到執行階段才會發現這種參考。  
   
 ## <a name="synonyms-and-schemas"></a>同義字和結構描述  
-如果預設的結構描述不是由您擁有，但您想要建立同義字，則必須使用您擁有的結構描述名稱來限定同義字名稱。 例如，如果您擁有結構描述 **x**，但預設結構描述是 **y** ，且您使用 CREATE SYNONYM 陳述式，則必須以結構描述 **x**作為同義字名稱的前置詞，而非使用單一部分的名稱來命名同義字。 如需如何建立同義字的詳細資訊，請參閱 [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)資料表為例。  
+如果預設的結構描述不是由您擁有，但您想要建立同義字，則必須使用您擁有的結構描述名稱來限定同義字名稱。 例如，如果您擁有結構描述 **x**，但預設結構描述是 **y** ，且您使用 CREATE SYNONYM 陳述式，則必須以結構描述 **x** 作為同義字名稱的前置詞，而非使用單一部分的名稱來命名同義字。 如需如何建立同義字的詳細資訊，請參閱 [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)資料表為例。  
   
 ## <a name="granting-permissions-on-a-synonym"></a>授與同義字的權限  
-只有同義字擁有者、 **db_owner**的成員或 **db_ddladmin** 的成員，才可授與同義字的權限。  
+只有同義字擁有者、 **db_owner** 的成員或 **db_ddladmin** 的成員，才可授與同義字的權限。  
   
 您可以 `GRANT`、`DENY` 及 `REVOKE` 同義字上的任何或所有下列權限：  
 
