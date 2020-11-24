@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192638"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584953"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教學課程的紐約市計程車示範資料
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 本文說明如何設定由[紐約市計程車和禮車委員會](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)公用資料所組成的範例資料庫。 此資料用於適用於 SQL Server 上資料庫內分析的數個 R 和 Python 教學課程。 為了更快速執行範例程式碼，我們建立了代表性的 1% 取樣資料。 在您的系統上，資料庫備份檔案會稍微超過 90MB，在主要資料表中提供一百七十萬個資料列。
 
-若要完成此練習，您應該具備 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 或可還原資料庫備份檔案及執行 T-SQL 查詢的其他工具。
+若要完成此練習，您應該具備 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true) 或可還原資料庫備份檔案及執行 T-SQL 查詢的其他工具。
 
 使用此資料集的教學課程和快速入門包括下列內容：
 
@@ -41,7 +41,7 @@ ms.locfileid: "92192638"
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
 >[!NOTE]
->若要在 [Azure SQL 受控執行個體中的機器學習服務 (預覽)](/azure/azure-sql/managed-instance/machine-learning-services-overview) 上還原範例資料庫，請依照[快速入門：將資料庫還原至 Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)中的指示，使用紐約市計程車示範資料庫 .bak 檔案操作：[https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。
+>若要在 [Azure SQL 受控執行個體中的機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)上還原範例資料庫，請遵循[快速入門：將資料庫還原至 Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)中的指示，使用紐約市計程車示範資料庫 .bak 檔案操作：[https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。
 ::: moniker-end
 
 1. 按一下 [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) 下載資料庫備份檔案。

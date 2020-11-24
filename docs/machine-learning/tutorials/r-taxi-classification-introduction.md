@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412563"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585028"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 教學課程：使用二元分類預測紐約市計程車車資
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92412563"
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [Azure SQL 受控執行個體中的機器學習服務 (預覽)](/azure/azure-sql/managed-instance/machine-learning-services-overview) 中的 R 整合。
+在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [Azure SQL 受控執行個體中機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中的 R 整合。
 ::: moniker-end
 
 您將使用 SQL Server 上的範例資料庫，建置和部署以 R 為基礎的機器學習解決方案。 您將使用 T-SQL、Azure Data Studio 或 SQL Server Management Studio，以及具有 SQL 機器學習和 R 語言支援的資料庫引擎執行個體

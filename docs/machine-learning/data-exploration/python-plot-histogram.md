@@ -2,19 +2,19 @@
 title: 使用 Python 繪製長條圖以進行資料探索
 titleSuffix: SQL machine learning
 description: 了解如何使用 Python 來建立長條圖以將資料視覺化。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: ee708d473e29cd36fe02e18e95eb71c0505dfdd7
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956790"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870138"
 ---
 # <a name="plot-histograms-in-python"></a>以 Python 繪製長條圖 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "91956790"
 ## <a name="prerequisites"></a>必要條件：
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server。 如需了解如何安裝，請參閱[適用於 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或[適用於 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)。
+* [適用於 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或[適用於 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database。 如需了解如何註冊，請參閱 [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 受控執行個體。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * 請參閱 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)，以將範例資料庫還原到 Azure SQL 受控執行個體。
 ::: moniker-end
 
-* Azure Data Studio。 如需了解如何安裝，請參閱 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* Azure Data Studio。 若要安裝，請參閱 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 * 請參閱 [還原範例資料庫](../../samples/adventureworks-install-configure.md)，以取得本文中所使用的範例資料。
 

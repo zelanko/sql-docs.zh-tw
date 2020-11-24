@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db774314d8d10774cbc2bd2b483b17d149695979
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257138"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631684"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -112,10 +112,11 @@ SQL Server 2019 的累積更新 6 (CU6) 版本。
 
 - [以 Active Directory 模式管理巨量資料叢集存取](manage-user-access.md)
 - [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deploy.md)
-- [部署高可用性 SQL Server 巨量資料叢集](deployment-high-availability.md)
-- [設定 SQL Server 巨量資料叢集](configure-cluster.md)
+- [在 AKS 上以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deployment-aks.md)
+- [部署具有高可用性的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-high-availability.md)
+- [設定 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
 - [在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
-- [SQL Server 主要執行個體設定屬性。](reference-config-master-instance.md)
+- [SQL Server 主要執行個體設定屬性](reference-config-master-instance.md)
 - [Apache Spark 與 Apache Hadoop (HDFS) 設定屬性](reference-config-spark-hadoop.md)
 - [Kubernetes RBAC 模型與其對管理 BDC 之使用者與服務帳戶的影響](kubernetes-rbac.md)
 
@@ -191,9 +192,9 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 ### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>HA SQL Server 資料庫加密金鑰加密器輪替
 
-- **受影響的版本** ：所有巨量資料叢集 HA 部署 (不論版本為何)。
+- **受影響的版本**：所有巨量資料叢集 HA 部署 (不論版本為何)。
 
-- **問題和對客戶的影響** ︰使用隨 HA 部署的 SQL Server 時，已加密資料庫的憑證輪替會失敗。 在主要集區上執行下列命令時，將會出現錯誤訊息：
+- **問題和對客戶的影響**︰使用隨 HA 部署的 SQL Server 時，已加密資料庫的憑證輪替會失敗。 在主要集區上執行下列命令時，將會出現錯誤訊息：
     ```
     ALTER DATABASE ENCRYPTION KEY
     ENCRYPTION BY SERVER
@@ -203,11 +204,11 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
     
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>套用累積更新之前的空白 Livy 作業
 
-- **受影響的版本** ：上至 CU6 的所有版本。 已針對 CU8 解決。
+- **受影響的版本**：上至 CU6 的所有版本。 已針對 CU8 解決。
 
-- **問題和對客戶的影響** ︰在升級期間，`sparkhead` 傳回 404 錯誤。
+- **問題和對客戶的影響**︰在升級期間，`sparkhead` 傳回 404 錯誤。
 
-- **因應措施** ：升級 BDC 之前，請確定沒有作用中的 Livy 工作階段或批次工作。 依照[從支援的版本升級](deployment-upgrade.md#upgrade-from-supported-release)底下的指示執行，以避免這種情況。 
+- **因應措施**：升級 BDC 之前，請確定沒有作用中的 Livy 工作階段或批次工作。 依照[從支援的版本升級](deployment-upgrade.md#upgrade-from-supported-release)底下的指示執行，以避免這種情況。 
 
    如果 Livy 在升級程序期間傳回 404 錯誤，請在這兩個 `sparkhead` 節點上重新啟動 Livy 伺服器。 例如：
 
@@ -217,52 +218,52 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 ### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>巨量資料叢集產生的服務帳戶密碼過期
 
-- **受影響的版本** ：與 Active Directory 整合的所有巨量資料叢集部署 (所有版本)
+- **受影響的版本**：與 Active Directory 整合的所有巨量資料叢集部署 (所有版本)
 
-- **問題和對客戶的影響** ︰在巨量資料叢集部署期間，工作流程會產生一組 [服務帳戶](active-directory-objects.md)。視網域控制站中設定的密碼到期原則而定，這些帳戶的密碼可能會過期 (預設為 42 天)。 目前沒有任何機制可輪替 BDC 中所有帳戶的認證，因此一旦符合到期期限，叢集將會變成無法運作。
+- **問題和對客戶的影響**︰在巨量資料叢集部署期間，工作流程會產生一組 [服務帳戶](active-directory-objects.md)。視網域控制站中設定的密碼到期原則而定，這些帳戶的密碼可能會過期 (預設為 42 天)。 目前沒有任何機制可輪替 BDC 中所有帳戶的認證，因此一旦符合到期期限，叢集將會變成無法運作。
 
-- **因應措施** ：將 BDC 服務帳戶的到期原則更新為網域控制站中的「密碼永不過期」。 如需這些帳戶的完整清單，請參閱[自動產生的 Active Directory 物件](active-directory-objects.md)。 此動作可以在到期時間之前或之後完成。 如果是後者，Active Directory 將會重新啟用過期的密碼。
+- **因應措施**：將 BDC 服務帳戶的到期原則更新為網域控制站中的「密碼永不過期」。 如需這些帳戶的完整清單，請參閱[自動產生的 Active Directory 物件](active-directory-objects.md)。 此動作可以在到期時間之前或之後完成。 如果是後者，Active Directory 將會重新啟用過期的密碼。
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>透過閘道端點存取服務的認證
 
-- **受影響的版本** ：從 CU5 開始部署的新叢集。
+- **受影響的版本**：從 CU5 開始部署的新叢集。
 
-- **問題和對客戶的影響** ︰針對使用 SQL Server 2019 CU5 部署的新巨量資料叢集，閘道使用者名稱不會是 **根** 。 如果連線到閘道端點所用應用程式正在使用錯誤的認證，則將看到驗證錯誤。 這項變更是在大型資料叢集中以非根使用者身分執行應用程式的結果 (此為從 SQL Server 2019 CU5 版本開始的新預設行為，當使用 CU5 部署新的巨量資料叢集時，閘道端點其使用者名稱是以透過 **AZDATA_USERNAME** 環境變數傳遞的值為基礎。 這和控制器及 SQL Server 端點所用的使用者名稱相同。 這只會影響新的部署，使用任何舊版部署的現有巨量資料叢集會繼續使用 **根** 。 當叢集使用 Active Directory 驗證進行部署時，不會對認證造成任何影響。 
+- **問題和對客戶的影響**︰針對使用 SQL Server 2019 CU5 部署的新巨量資料叢集，閘道使用者名稱不會是 **根**。 如果連線到閘道端點所用應用程式正在使用錯誤的認證，則將看到驗證錯誤。 這項變更是在大型資料叢集中以非根使用者身分執行應用程式的結果 (此為從 SQL Server 2019 CU5 版本開始的新預設行為，當使用 CU5 部署新的巨量資料叢集時，閘道端點其使用者名稱是以透過 **AZDATA_USERNAME** 環境變數傳遞的值為基礎。 這和控制器及 SQL Server 端點所用的使用者名稱相同。 這只會影響新的部署，使用任何舊版部署的現有巨量資料叢集會繼續使用 **根**。 當叢集使用 Active Directory 驗證進行部署時，不會對認證造成任何影響。 
 
-- **因應措施** ：Azure Data Studio 會以透明方式來控制對閘道變更的連線認證，以在 [物件總管] 中啟用 HDFS 瀏覽體驗。 您必須安裝[最新的 Azure Data Studio 版本](../azure-data-studio/download-azure-data-studio.md)，其中包含解決此使用案例所需的變更。
+- **因應措施**：Azure Data Studio 會以透明方式來控制對閘道變更的連線認證，以在 [物件總管] 中啟用 HDFS 瀏覽體驗。 您必須安裝[最新的 Azure Data Studio 版本](../azure-data-studio/download-azure-data-studio.md)，其中包含解決此使用案例所需的變更。
 針對必須提供認證以透過閘道存取服務的其他案例 (例如，使用 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 登入、存取 Spark 的 Web 儀表板)，則必須確認使用正確的認證。 如果您的目標是在 CU5 之前部署的現有叢集，即使叢集升級至 CU5 之後，仍會繼續使用 **根** 使用者名稱來連線到閘道。 如果使用 CU5 組建部署新的叢集，則要提供對應至 **AZDATA_USERNAME** 環境變數的使用者名稱來登入。
 
 ### <a name="pods-and-nodes-metrics-not-being-collected"></a>未收集 Pod 及節點計量
 
-- **受影響的版本** ：使用 CU5 映像的新叢集及現有叢集
+- **受影響的版本**：使用 CU5 映像的新叢集及現有叢集
 
-- **問題和對客戶的影響** ︰因為與 `telegraf` 用來收集計量 Pod 及主機節點計量的 API 相關安全性修正，客戶可能會注意到計量未被收集。 這可能會發生在新的及現有 BDC 部署中 (升級至 CU5 之後)。 由於該修正程式，Telegraf 現在需要具有全叢集角色權限的服務帳戶。 部署會嘗試建立必要的服務帳戶與叢集角色，但如果部署叢集或執行升級的使用者沒有足夠權限，部署或升級仍會繼續進行 (且出現警告) 並成功，但不會收集 Pod 及節點計量。
+- **問題和對客戶的影響**︰因為與 `telegraf` 用來收集計量 Pod 及主機節點計量的 API 相關安全性修正，客戶可能會注意到計量未被收集。 這可能會發生在新的及現有 BDC 部署中 (升級至 CU5 之後)。 由於該修正程式，Telegraf 現在需要具有全叢集角色權限的服務帳戶。 部署會嘗試建立必要的服務帳戶與叢集角色，但如果部署叢集或執行升級的使用者沒有足夠權限，部署或升級仍會繼續進行 (且出現警告) 並成功，但不會收集 Pod 及節點計量。
 
-- **因應措施** ：您可要求系統管理員建立角色及服務帳戶 (在部署或升級前後)，以及會使用這些角色及帳戶的 BDC。 [本文](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)描述如何建立所需的成品。
+- **因應措施**：您可要求系統管理員建立角色及服務帳戶 (在部署或升級前後)，以及會使用這些角色及帳戶的 BDC。 [本文](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)描述如何建立所需的成品。
 
 ### <a name="azdata-bdc-copy-logs-command-failure"></a>`azdata bdc copy-logs` 命令失敗
 
-- **受影響的版本** ：[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本 *20.0.0*
+- **受影響的版本**：[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 版本 *20.0.0*
 
-- **問題和對客戶的影響** ︰實作 *copy-logs* 命令的前提，是基於假設 `kubectl` 用戶端工具安裝在發出命令的用戶端電腦上。 如果您是從僅安裝 `oc` 工具的用戶端，以針對安裝在 OpenShift 上的 BDC 叢集發出命令，則將收到錯誤： *收集記錄時發生錯誤：[WinError 2] 系統找不到指定的檔案* 。
+- **問題和對客戶的影響**︰實作 *copy-logs* 命令的前提，是基於假設 `kubectl` 用戶端工具安裝在發出命令的用戶端電腦上。 如果您是從僅安裝 `oc` 工具的用戶端，以針對安裝在 OpenShift 上的 BDC 叢集發出命令，則將收到錯誤：*收集記錄時發生錯誤：[WinError 2] 系統找不到指定的檔案*。
 
-- **因應措施** ：在相同的用戶端電腦上安裝 `kubectl` 工具，然後重新發出 `azdata bdc copy-logs` 命令。 如需了解如何安裝 `kubectl` 的指示，請參閱[這裡](deploy-big-data-tools.md)。
+- **因應措施**：在相同的用戶端電腦上安裝 `kubectl` 工具，然後重新發出 `azdata bdc copy-logs` 命令。 如需了解如何安裝 `kubectl` 的指示，請參閱[這裡](deploy-big-data-tools.md)。
 
 ### <a name="deployment-with-private-repository"></a>使用私人存放庫進行部署
 
-- **受影響的版本** ：GDR1、CU1、CU2。 已針對 CU3 解決。
+- **受影響的版本**：GDR1、CU1、CU2。 已針對 CU3 解決。
 
-- **問題和對客戶的影響** ︰從私人存放庫升級具有特定需求
+- **問題和對客戶的影響**︰從私人存放庫升級具有特定需求
 
-- **因應措施** ：如果您使用私人存放庫來預先提取要部署或升級 BDC 的映像，請確定目前的組建映像與目標組建映像都在私人存放庫中。 這可確保成功的復原 (如果有必要)。 此外，如果您在原始部署之後變更私人存放庫的認證，請在升級之前，先更新 Kubernetes 中對應的祕密。 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 不支援透過 `AZDATA_PASSWORD` 與 `AZDATA_USERNAME` 環境變數來更新認證。 使用 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) 更新祕密。 
+- **因應措施**：如果您使用私人存放庫來預先提取要部署或升級 BDC 的映像，請確定目前的組建映像與目標組建映像都在私人存放庫中。 這可確保成功的復原 (如果有必要)。 此外，如果您在原始部署之後變更私人存放庫的認證，請在升級之前，先更新 Kubernetes 中對應的祕密。 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] 不支援透過 `AZDATA_PASSWORD` 與 `AZDATA_USERNAME` 環境變數來更新認證。 使用 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) 更新祕密。 
 
 不支援使用不同的存放庫來進行目前與目標組建升級。
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>升級可能會因為逾時而失敗
 
-- **受影響的版本** ：GDR1、CU1、CU2。 已針對 CU3 解決。
+- **受影響的版本**：GDR1、CU1、CU2。 已針對 CU3 解決。
 
-- **問題和對客戶的影響** ︰升級可能會因為逾時而失敗。
+- **問題和對客戶的影響**︰升級可能會因為逾時而失敗。
 
    下列程式碼顯示失敗看起來的樣子：
 
@@ -279,7 +280,7 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
    當您在 Azure Kubernetes Service (AKS) 中升級 BDC 時，很可能會發生此錯誤。
 
-- **因應措施** ：增加升級的逾時。 
+- **因應措施**：增加升級的逾時。 
 
    若要增加升級的逾時，請編輯升級設定對應。 編輯升級設定對應：
 
@@ -338,14 +339,14 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 ### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>從 Azure Data Studio (ADS) 或 curl 提交 Livy 作業失敗，並出現 500 錯誤
 
-- **問題和對客戶的影響** ︰在 HA 設定中，會使用多個複本來設定 Spark 共用資源 `sparkhead`。 在此情況下，您可能會遇到從 Azure Data Studio (ADS) 或 `curl` 提交 Livy 作業失敗。 若要確認，則對任何 `sparkhead` Pod 執行 `curl` 都會導致拒絕連線。 例如，`curl https://sparkhead-0:8998/` 或 `curl https://sparkhead-1:8998` 會傳回 500 錯誤。
+- **問題和對客戶的影響**︰在 HA 設定中，會使用多個複本來設定 Spark 共用資源 `sparkhead`。 在此情況下，您可能會遇到從 Azure Data Studio (ADS) 或 `curl` 提交 Livy 作業失敗。 若要確認，則對任何 `sparkhead` Pod 執行 `curl` 都會導致拒絕連線。 例如，`curl https://sparkhead-0:8998/` 或 `curl https://sparkhead-1:8998` 會傳回 500 錯誤。
 
    在下列案例中會發生這個情況：
 
    - 每個 Zookeeper 執行個體的 Zookeeper Pod 或處理序都會重新啟動幾次。
    - 當 `sparkhead` Pod 與 Zookeeper Pod 之間的網路連線不可靠時。
 
-- **因應措施** ：重新啟動這兩部 Livy 伺服器。
+- **因應措施**：重新啟動這兩部 Livy 伺服器。
 
    ```bash
    kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
@@ -357,26 +358,26 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 ### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>當主要執行個體在可用性群組中時，建立記憶體最佳化資料表
 
-- **問題和對客戶的影響** ︰您不能使用公開用來連線到可用性群組資料庫 (接聽程式) 的主要端點來建立記憶體最佳化資料表。
+- **問題和對客戶的影響**︰您不能使用公開用來連線到可用性群組資料庫 (接聽程式) 的主要端點來建立記憶體最佳化資料表。
 
-- **因應措施** ：當 SQL Server 主要執行個體是可用性群組設定時，若要建立記憶體最佳化資料表，請 [連線到 SQL Server 執行個體](deployment-high-availability.md#instance-connect)，公開端點，連線到 SQL Server 資料庫，然後在使用新連線所建立的工作階段中建立記憶體最佳化資料表。
+- **因應措施**：當 SQL Server 主要執行個體是可用性群組設定時，若要建立記憶體最佳化資料表，請 [連線到 SQL Server 執行個體](deployment-high-availability.md#instance-connect)，公開端點，連線到 SQL Server 資料庫，然後在使用新連線所建立的工作階段中建立記憶體最佳化資料表。
 
 ### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>插入外部資料表的 Active Directory 驗證模式
 
-- **問題和對客戶的影響** ︰當 SQL Server 主要執行個體處於 Active Directory 驗證模式時，查詢只會從外部資料表 (其中至少有一個外部資料表位於儲存集區) 進行選取，並插入另一個外部資料表中，而此查詢會傳回：
+- **問題和對客戶的影響**︰當 SQL Server 主要執行個體處於 Active Directory 驗證模式時，查詢只會從外部資料表 (其中至少有一個外部資料表位於儲存集區) 進行選取，並插入另一個外部資料表中，而此查詢會傳回：
 
    ```
    Msg 7320, Level 16, State 102, Line 1
    Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- **因應措施** ：使用下列其中一種方式來修改查詢。 將儲存集區資料表聯結至本機資料表，或先插入本機資料表，然後從本機資料表讀取以插入資料集區。
+- **因應措施**：使用下列其中一種方式來修改查詢。 將儲存集區資料表聯結至本機資料表，或先插入本機資料表，然後從本機資料表讀取以插入資料集區。
 
 ### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>透明資料加密功能無法搭配屬於 SQL Server 主要執行個體中可用性群組一部分的資料庫使用
 
-- **問題和對客戶的影響** ︰在 HA 設定中，已啟用加密的資料庫無法在容錯移轉之後使用，因為在每個複本上用來加密的主要金鑰都不同。 
+- **問題和對客戶的影響**︰在 HA 設定中，已啟用加密的資料庫無法在容錯移轉之後使用，因為在每個複本上用來加密的主要金鑰都不同。 
 
-- **因應措施** ：此問題目前沒有任何因應措施。 建議您在修正程式準備就緒之前，不要在此設定中啟用加密。
+- **因應措施**：此問題目前沒有任何因應措施。 建議您在修正程式準備就緒之前，不要在此設定中啟用加密。
 
 ## <a name="next-steps"></a>後續步驟
 

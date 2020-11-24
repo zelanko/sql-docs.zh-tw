@@ -2,19 +2,19 @@
 title: 將 SQL 資料表的資料插入 Python pandas 資料框架
 titleSuffix: SQL machine learning
 description: 了解如何從 SQL 資料表讀取資料，並使用 Python 將資料插入 pandas 資料框架。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 041291804f6fbefe4832398b7c56b2ab97940008
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956835"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870218"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>將 SQL 資料表的資料插入 Python pandas 資料框架
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,22 +24,22 @@ ms.locfileid: "91956835"
 ## <a name="prerequisites"></a>必要條件
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server。 如需了解如何安裝，請參閱 [SQL Server for Windows](../../database-engine/install-windows/install-sql-server.md) 或 [SQL Server for Linux](../../linux/sql-server-linux-overview.md)。
+* [適用於 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或[適用於 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database。 如需了解如何註冊，請參閱 [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 受控執行個體。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
-* 請參閱 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)，以了解如何將範例資料庫還原到 Azure SQL 受控執行個體。
+* 請參閱 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)，以將範例資料庫還原到 Azure SQL 受控執行個體。
 ::: moniker-end
 
-* Azure Data Studio。 如需了解如何安裝，請參閱 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* Azure Data Studio。 若要安裝，請參閱 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
-* [還原範例資料庫](../../samples/adventureworks-install-configure.md)以取得本文中所使用的範例資料。
+* 請參閱 [還原範例資料庫](../../samples/adventureworks-install-configure.md)，以取得本文中所使用的範例資料。
 
 ## <a name="verify-restored-database"></a>驗證還原的資料庫
 
@@ -70,8 +70,8 @@ SELECT * FROM Person.CountryRegion;
 
 建立新的筆記本：
 
-1. 在 Azure Data Studio 中，選取 [檔案]，選取 [新增 Notebook]。
-2. 在筆記本中，選取核心程序 [Python3]，選取 [+code]。
+1. 在 Azure Data Studio 中，選取 [檔案]，然後選取 [新增筆記本]。
+2. 在筆記本中，選取核心 [Python3]，然後選取 [+程式碼]。
 3. 將程式碼貼到筆記本中，選取 [全部執行]。
 
 ```python

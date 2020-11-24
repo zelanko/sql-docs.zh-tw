@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956518"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870026"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充性結構 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,17 +45,17 @@ ms.locfileid: "91956518"
 
 此架構的設計，是為了讓外部指令碼在 SQL Server 的個別處理序中執行，而不是在 SQL Server 上於內部管理資料和作業要求鏈的元件中執行。 取決於 SQL Server 的版本，支援的語言延伸模組包括 [R](extension-r.md)、[Python](extension-python.md) 和協力廠商語言，例如 Java 和 .NET。
 
-  ***Windows 中的元件架構：***
+  **Windows 中的元件架構：** *_
   
   ![Windows 元件架構](../media/generic-architecture-windows.png "元件架構")
   
-  ***Linux 中的元件架構：***
+  _*_Linux 中的元件架構：_*_
 
   ![Linux 元件架構](../media/generic-architecture-linux.png "元件架構")
   
-元件包含**啟動控制板**服務，用來叫用外部執行階段和程式庫特定邏輯，以載入解譯器和程式庫。 啟動器會載入語言執行階段，以及任何專屬模組。 例如，如果您的程式碼包含 RevoScaleR 函式，就會載入 RevoScaleR 解譯器。 **BxlServer** 和 **SQL Satellite** 管理對 SQL Server 的通訊和資料傳輸。 
+元件包含「啟動控制板」服務，用來叫用外部執行階段和程式庫特定邏輯，以載入解譯器和程式庫。 啟動器會載入語言執行階段，以及任何專屬模組。 例如，如果您的程式碼包含 RevoScaleR 函式，就會載入 RevoScaleR 解譯器。 **BxlServer** 和 **SQL Satellite** 管理對 SQL Server 的通訊和資料傳輸。 
 
-在 Linux 中，SQL 會使用**啟動控制板**服務來與每個使用者的不同啟動控制板程序通訊。
+在 Linux 中，SQL 會使用 **啟動控制板** 服務來與每個使用者的不同啟動控制板程序通訊。
 
 <a name="launchpad"></a>
 

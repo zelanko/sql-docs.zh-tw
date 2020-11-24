@@ -2,19 +2,19 @@
 title: 將 Python 資料框架插入至 SQL 資料表
 titleSuffix: SQL machine learning
 description: 如何將資料框架中的資料插入至 SQL 資料表。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f479186a8b1455fab8e8ddac7313193337e42dc9
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 85980bf7bc69190a0e7ae75ee74336a62afd12c6
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956817"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870219"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>將 Python 資料框架插入至 SQL 資料表
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "91956817"
 ## <a name="prerequisites"></a>必要條件
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server。 如需了解如何安裝，請參閱[適用於 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或[適用於 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)。
+* [適用於 Windows 的 SQL Server](../../database-engine/install-windows/install-sql-server.md) 或[適用於 Linux 的 SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database。 如需了解如何註冊，請參閱 [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL 受控執行個體。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)。
+* [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * 請參閱 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)，以將範例資料庫還原到 Azure SQL 受控執行個體。
 ::: moniker-end
 
-* Azure Data Studio。 如需了解如何安裝，請參閱 [Azure Data Studio](../../azure-data-studio/what-is.md)。
+* Azure Data Studio。 若要安裝，請參閱 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 * 請參閱 [還原範例資料庫](../../samples/adventureworks-install-configure.md)，以取得本文中所使用的範例資料。
 

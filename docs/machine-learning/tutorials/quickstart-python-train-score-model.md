@@ -6,17 +6,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6913f80cb96942d7063e4c61caf2c2109ee79a48
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194447"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869978"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>快速入門：透過 SQL 機器學習，建立 Python 的預測模型並為其評分
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "92194447"
 您需要符合下列必要條件，才能執行此快速入門。
 
 - SQL 資料庫位於其中一個平台上：
-  - [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)。 若要了解如何安裝，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)。 若要安裝，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
   - SQL Server 巨量資料叢集。 查看如何[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
-  - Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+  - Azure SQL 受控執行個體機器學習服務。 如需詳細資訊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 - 執行包含 Python 指令碼之 SQL 查詢的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
-- 本練習使用的範例資料是鳶尾花範例資料。 依照[鳶尾花示範資料](demo-data-iris-in-sql.md)中的指示，建立範例資料庫 **irissql**。
+- 本練習使用的範例資料是鳶尾花範例資料。 依照 [鳶尾花示範資料](demo-data-iris-in-sql.md)中的指示，建立範例資料庫 **irissql**。
 
 ## <a name="create-a-stored-procedure-that-generates-models"></a>建立會產生模型的預存程序
 
@@ -99,7 +98,7 @@ ms.locfileid: "92194447"
 
 1. 執行下列指令碼以執行程序。 執行預存程序的特定陳述式是第四行的 `EXECUTE`。
 
-   此特定指令碼會刪除名稱相同 (貝氏機率分類) 的現有模型，以騰出空間給透過重新執行相同程序所建立的新模型。 若未刪除模型會發生錯誤，說明物件已經存在。 當您建立 **irissql** 資料庫時，模型會儲存在名為 **iris_models**的資料表中。
+   此特定指令碼會刪除名稱相同 (貝氏機率分類) 的現有模型，以騰出空間給透過重新執行相同程序所建立的新模型。 若未刪除模型會發生錯誤，說明物件已經存在。 當您建立 **irissql** 資料庫時，模型會儲存在名為 **iris_models** 的資料表中。
 
     ```sql
     DECLARE @model varbinary(max);

@@ -6,17 +6,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a0b1798fb3c9a28a370b2c918d1a856afa1e549b
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 1ad1aba8a87e5668949f3e7810f0ee6066932171
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870153"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>快速入門：使用 Python 搭配 SQL 機器學習的資料結構與物件
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -27,7 +26,7 @@ SQL 機器學習依賴 Python **Pandas** 套件，這非常適合用以處理表
 
 首先要了解的概念包括：
 
-- 資料框架是具有_多個_資料行的資料表。
+- 資料框架是具有 _多個_ 資料行的資料表。
 - 資料框架的單一資料行是一種類似清單的物件，稱為「序列」。
 - 資料框架的單一值稱為儲存格，並依索引存取。
 
@@ -41,9 +40,9 @@ SQL 機器學習依賴 Python **Pandas** 套件，這非常適合用以處理表
 您需要符合下列必要條件，才能執行此快速入門。
 
 - SQL 資料庫位於其中一個平台上：
-  - [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)。 若要了解如何安裝，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
+  - [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)。 若要安裝，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。
   - SQL Server 巨量資料叢集。 查看如何[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
-  - Azure SQL 受控執行個體機器學習服務。 如需了解如何註冊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
+  - Azure SQL 受控執行個體機器學習服務。 如需詳細資訊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 - 執行包含 Python 指令碼之 SQL 查詢的工具。 本快速入門使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
@@ -101,7 +100,7 @@ SQL 機器學習依賴 Python **Pandas** 套件，這非常適合用以處理表
    dtype: float64
    ```
 
-1. 如果您增加**索引**值的數目，但不新增新的**資料**值，則系統會重複資料值來填滿序列。
+1. 如果您增加 **索引** 值的數目，但不新增新的 **資料** 值，則系統會重複資料值來填滿序列。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'

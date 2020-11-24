@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155066"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674136"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 Python 自訂執行階段
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ ms.locfileid: "92155066"
 > [!NOTE]
 > 本文說明如何在 Windows 上安裝 Python 適用的自訂執行階段。 若要在 Linux 上安裝，請查看[如何在 Linux 上安裝 SQL Server 適用的 Python 自訂執行階段](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
 
-
-
 ## <a name="pre-install-checklist"></a>預先安裝檢查清單
 
 安裝 Python 自訂執行階段之前，請先安裝下列項目：
 
-+ [SQL Server 2019 的 Windows CU3 或更新版本](../../database-engine/install-windows/install-sql-server.md)。
-
-  > [!NOTE]
-  > Python 自訂執行階段需要 SQL Server 2019 的累積更新 (CU) 3 或更新版本。
++ [適用於 Windows 的 SQL Server 2019 累積更新 (CU) 3](../../database-engine/install-windows/install-sql-server.md)。
 
 + [Windows 上具備擴充性架構的 SQL Server 語言延伸模組](../../language-extensions/install/windows-java.md)。
 
@@ -87,7 +82,7 @@ ms.locfileid: "92155066"
 
 #### <a name="install-pandas"></a>安裝 pandas
 
-從*已提升權限的*命令提示字元中，安裝 Python 適用的 [pandas](https://pandas.pydata.org/) 套件：
+從 *已提升權限的* 命令提示字元中，安裝 Python 適用的 [pandas](https://pandas.pydata.org/) 套件：
 
 ```bash
 python.exe -m pip install pandas
@@ -107,7 +102,7 @@ python.exe -m pip install pandas
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>授與自訂 Python 安裝資料夾的存取權
 
-從全新*已提升權限的*命令提示字元執行下列 **icacls** 命令，將 PYTHONHOME 的讀取和執行權限授與 **SQL Server Launchpad 服務**和 SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**)。 Launchpad 服務使用者名稱 `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` 是 SQL Server 的執行個體名稱。 這些命令會以遞迴方式授與指定目錄路徑下的所有檔案與資料夾的存取權。
+從全新 *已提升權限的* 命令提示字元執行下列 **icacls** 命令，將 PYTHONHOME 的讀取和執行權限授與 **SQL Server Launchpad 服務** 和 SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**)。 Launchpad 服務使用者名稱 `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` 是 SQL Server 的執行個體名稱。 這些命令會以遞迴方式授與指定目錄路徑下的所有檔案與資料夾的存取權。
 
 將執行個體名稱附加至 `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`)。 在此範例中，INSTANCENAME 是預設執行個體`MSSQLSERVER`。
 
@@ -132,7 +127,7 @@ net stop MSSQLLAUNCHPAD$MSSQLSERVER
 net start MSSQLLAUNCHPAD$MSSQLSERVER
 ```
 
-也可以在系統的**服務**應用程式中用滑鼠右鍵按一下 [SQL Server Launchpad] 服務，然後按一下 [重新啟動] 命令。 或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md) 來重新啟動服務。
+也可以在系統的 **服務** 應用程式中用滑鼠右鍵按一下 [SQL Server Launchpad] 服務，然後按一下 [重新啟動] 命令。 或使用 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md) 來重新啟動服務。
 
 ## <a name="download-python-language-extension"></a>下載 Python 語言延伸模組
 
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>啟用 SQL Server 中的外部指令碼執行
 
-您可以透過針對 SQL Server 執行的預存程序 [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 來執行 Python 中的外部指令碼。 
+您可以透過針對 SQL Server 執行的預存程序 [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 來執行 Python 中的外部指令碼。 
 
 若要啟用外部指令碼，請使用連線至 SQL Server 的 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 來執行下列 SQL 命令。
 

@@ -2,7 +2,7 @@
 title: SQL Server 機器學習服務的新功能
 titleSuffix: ''
 description: 適用於 SQL Server 機器學習服務和 SQL Server 2016 R Services 每個版本的新功能公告。
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -10,17 +10,17 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 287b0fd536e5d3a6c76e8ef3760702da061a90ec
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195060"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810508"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的新功能
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-在我們繼續擴充、延伸並加深資料平台、進階分析及資料科學之間的整合時，便會將機器學習功能新增至每個版本的 SQL Server 中。 
+本文說明每個 [SQL Server 機器學習服務](sql-server-machine-learning-services.md)版本中所包含的新功能。 在我們繼續擴充、延伸並加深資料平台、進階分析及資料科學之間的整合時，便會將機器學習功能新增至每個版本的 SQL Server 中。 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 的新功能
@@ -52,7 +52,7 @@ ms.locfileid: "92195060"
 
 SQL Server 機器學習服務的 R 元件是新一代的 SQL Server 2016 R Services，並具有更新版本的基底 R、RevoScaler 及其他套件。
 
-R 的新功能包括[**套件管理**](package-management/install-r-packages-with-tsql.md)，並具有下列重點： 
+R 的新功能包括 [**套件管理**](package-management/install-r-packages-with-tsql.md)，並具有下列重點： 
 
 + 資料庫角色可協助 DBA 針對套件安裝管理套件及指派權限。
 + [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) 能協助 DBA 以熟悉的 T-SQL 語言來管理套件。
