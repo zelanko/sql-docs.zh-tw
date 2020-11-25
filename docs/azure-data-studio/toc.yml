@@ -154,6 +154,8 @@
   items:
     - name: 常見問題集
       href: faq.md
+    - name: 疑難排解
+      href: troubleshooting.md
     - name: Azure Data Studio GitHub 存放庫 >
       href: 'https://www.github.com/Microsoft/azuredatastudio'
     - name: 回報問題與提出建議 >

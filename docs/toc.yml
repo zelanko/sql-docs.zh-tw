@@ -1872,15 +1872,6 @@
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
         - name: 邊緣條件約束
           href: relational-databases/tables/graph-edge-constraints.md
-          items:
-            - name: 建立
-              href: relational-databases/tables/create-edge-constraints.md
-            - name: 刪除
-              href: relational-databases/tables/delete-edge-constraint.md
-            - name: 修改
-              href: relational-databases/tables/modify-edge-constraint.md
-            - name: 檢視
-              href: relational-databases/tables/view-edge-constraint-properties.md
         - name: 主索引鍵
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
           items:
