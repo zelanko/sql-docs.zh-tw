@@ -1,5 +1,5 @@
 ---
-title: CLR 資料表值函式 |Microsoft Docs
+title: CLR Table-Valued 函式 |Microsoft Docs
 description: 資料表值函數會傳回資料表。 在 SQL Server CLR 整合中，您可以在 managed 程式碼中撰寫資料表值函數。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727901"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125290"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 資料表值函式
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "85727901"
  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您以任何 Managed 語言定義資料表值函式，藉以擴充資料表值函式的功能。 資料是透過 **IEnumerable** 或 **IEnumerator** 物件，從資料表值函式傳回。  
   
 > [!NOTE]  
->  若為數據表值函數，傳回資料表類型的資料行不能包含時間戳記資料行或非 Unicode 字串資料類型資料行 (例如 **char**、 **Varchar**和 **text**) 。 不支援 NOT NULL 條件約束。  
+>  若為數據表值函數，傳回資料表類型的資料行不能包含時間戳記資料行或非 Unicode 字串資料類型資料行 (例如 **char**、 **Varchar** 和 **text**) 。 不支援 NOT NULL 條件約束。  
   
- 如需 CLR 資料表值函式的詳細資訊，請參閱 MSSQLTips [SQL SERVER clr 資料表值函數的簡介！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ 如需 CLR Table-Valued 函式的詳細資訊，請參閱 [SQL SERVER CLR 資料表值函數的簡介！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL 和 CLR 資料表值函式之間的差異  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值函式會將呼叫函數的結果具體化為中繼資料表。 由於 TVF 使用中繼資料表，因此可以透過結果支援條件約束和唯一的索引。 當傳回較大的結果時，這些功能會非常有用。  
@@ -42,7 +42,7 @@ ms.locfileid: "85727901"
  相反地，CLR 資料表值函式則是屬於以資料流模型進行處理的替代方案。 整組結果不需要在單一資料表中具體化。 Managed 函式所傳回的 **IEnumerable** 物件是由呼叫資料表值函式的查詢執行計畫直接呼叫，而且會以累加方式取用結果。 此資料流模型能確保第一個資料列可供使用之後，就立即使用結果，而不會等待整個資料表填入完成。 如果傳回大量的資料列，這也是一個較好的替代方式，因為它們不必整體在記憶體中進行實體化。 例如，Managed 資料表值函式可用來剖析文字檔案，並將每一行以資料列的方式傳回。  
   
 ## <a name="implementing-table-valued-functions"></a>實作資料表數值函數  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件中，將資料表值函式當做類別上的方法實作。 您的資料表值函式程式碼必須執行 **IEnumerable** 介面。 **IEnumerable**介面是在 .NET Framework 中定義。 代表 .NET Framework 中的陣列和集合的類型已經執行 **IEnumerable** 介面。 這樣您就可以輕易地撰寫出能將集合或陣列轉換為結果集的資料表值函式。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件中，將資料表值函式當做類別上的方法實作。 您的資料表值函式程式碼必須執行 **IEnumerable** 介面。 **IEnumerable** 介面是在 .NET Framework 中定義。 代表 .NET Framework 中的陣列和集合的類型已經執行 **IEnumerable** 介面。 這樣您就可以輕易地撰寫出能將集合或陣列轉換為結果集的資料表值函式。  
   
 ## <a name="table-valued-parameters"></a>資料表值參數  
  資料表值參數是傳入到程序或函數中的使用者定義資料表類型，能提供有效的方式將資料的多個資料列傳遞到伺服器。 資料表值參數提供的功能與參數陣列相似，但是具備了更大的彈性並且和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密地整合。 它們也能夠協助您獲得更佳的效能。 資料表值參數也可以減少與伺服器之間的往返次數。 資料能以資料表值參數的形式傳送到伺服器，而不是傳送多個要求到伺服器，例如一併傳送純量參數的清單。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
@@ -79,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   當資料表值函式是從外部資料產生時。 例如，讀取事件記錄檔並將其以資料表的方式公開的資料表值函式。  
   
- **注意** 資料表值函式只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] **InitMethod** 方法中的查詢來執行資料存取，而不能在 **FillRow** 方法中執行。 如果執行查詢，則**InitMethod**應該標記**SqlFunction. DataAccess. Read** attribute 屬性。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ **注意** 資料表值函式只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] **InitMethod** 方法中的查詢來執行資料存取，而不能在 **FillRow** 方法中執行。 如果執行查詢，則 **InitMethod** 應該標記 **SqlFunction. DataAccess. Read** attribute 屬性。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 ## <a name="a-sample-table-valued-function"></a>資料表值函式範例  
  下列資料表值函式會從系統事件記錄檔傳回資訊。 該函數使用包含要讀取之事件記錄檔名稱的單一字串引數。  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  
