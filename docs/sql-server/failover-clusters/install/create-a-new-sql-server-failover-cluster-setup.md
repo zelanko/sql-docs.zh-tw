@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114669"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121226"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>建立新的 Always On 容錯移轉叢集執行個體 (安裝程式)
 
@@ -197,7 +197,7 @@ ms.locfileid: "91114669"
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 資料目錄應位於容錯移轉叢集執行個體的共用叢集磁碟上。  
   
     > [!NOTE]  
-    >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄]**** 設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
+    >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄] 設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
    
 21. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 選取 [下一步] 以繼續操作。  
   

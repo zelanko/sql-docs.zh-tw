@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8f131897a8f45f510237732d528e402f4dc2457a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115629"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127673"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "91115629"
   
 -   若要以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用 Kerberos 驗證，請參閱 [知識庫中的](https://support.microsoft.com/kb/319723) 如何使用 SQL Server Kerberos 驗證 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (機器翻譯)。  
 
--   SQL Server 容錯移轉叢集執行個體 (FCI) 需要已加入網域的叢集節點。 **不支援**下列設定： 
+-   SQL Server 容錯移轉叢集執行個體 (FCI) 需要已加入網域的叢集節點。 **不支援** 下列設定： 
     *   工作群組叢集上的 SQL FCI。 
     *   多網域叢集上的 SQL FCI。   
     *   網域 + 工作群組叢集上的 SQL FCI。 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cad44bde76e3915aeb5f99d8eeb415d89b02359e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988297"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127578"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>升級容錯移轉叢集執行個體 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "91988297"
   
 13. 在升級作業開始之前，系統組態檢查會執行一組額外的規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。  
   
-14. [叢集升級報表] 頁面會顯示容錯移轉叢集執行個體中的節點清單以及每個節點上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件的執行個體版本資訊。 它會顯示資料庫指令碼狀態和複寫指令碼狀態。 此外，它也會顯示當您按一下 [下一步] 時所進行之動作的參考用訊息。 根據已經升級的容錯移轉叢集節點數目和節點總數，安裝程式會顯示當您按一下 [下一步]**** 時所發生的容錯移轉行為。 如果您尚未安裝必要元件，它也會發出可能產生不必要停機時間的警告。   
+14. [叢集升級報表] 頁面會顯示容錯移轉叢集執行個體中的節點清單以及每個節點上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件的執行個體版本資訊。 它會顯示資料庫指令碼狀態和複寫指令碼狀態。 此外，它也會顯示當您按一下 [下一步] 時所進行之動作的參考用訊息。 根據已經升級的容錯移轉叢集節點數目和節點總數，安裝程式會顯示當您按一下 [下一步] 時所發生的容錯移轉行為。 如果您尚未安裝必要元件，它也會發出可能產生不必要停機時間的警告。   
   
 15. [準備升級] 頁面會顯示在安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[升級]** 。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，之後再進行功能安裝。  
   

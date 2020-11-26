@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e4ae7a1c74c7d91596550015df78a89fb8a0c857
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 045240334fd40420064f5e44179ec93373f92de3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988298"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121081"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

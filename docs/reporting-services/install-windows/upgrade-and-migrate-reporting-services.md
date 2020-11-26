@@ -13,10 +13,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91934632"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -27,11 +27,11 @@ ms.locfileid: "91934632"
  
 - **從  Reporting Services 2016 和較舊版本升級至  Reporting Services 2016 和較舊版本：** 您可以在目前安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱本文件中稍後的[SharePoint 模式升級和移轉狀況](#bkmk_sharePoint_scenarios)一節。  
 
-- **從  Reporting Services 2016 和較舊版本升級至  Reporting Services 2017 和更新版本**，與舊版中的升級案例不同。 升級*至* Reporting Services 2016 和較舊版本時，可遵循使用 SQL Server 安裝媒體的就地升級程序。 *從* Reporting Services 2016 和較舊版本升級*至* Reporting Services 2017 和更新版本時，將無法遵循相同的步驟，因為新的 Reporting Services 安裝是獨立產品。 其不再是 SQL Server 安裝媒體的一部分。 
+- **從  Reporting Services 2016 和較舊版本升級至  Reporting Services 2017 和更新版本**，與舊版中的升級案例不同。 升級 *至* Reporting Services 2016 和較舊版本時，可遵循使用 SQL Server 安裝媒體的就地升級程序。 *從* Reporting Services 2016 和較舊版本升級 *至* Reporting Services 2017 和更新版本時，將無法遵循相同的步驟，因為新的 Reporting Services 安裝是獨立產品。 其不再是 SQL Server 安裝媒體的一部分。 
 
     若要從 Reporting Services 2016 和較舊版升級至 Reporting Services 2017 和更新版本，請遵循[移轉 Reporting Services 安裝 (原生模式)](migrate-a-reporting-services-installation-native-mode.md) 一文，並以 Reporting Services 2017 或更新版本作為目的地執行個體。 
 
-- **從  Reporting Services 2017 升級至未來版本**同樣是就地升級案例，因為產品安裝 GUID 相同。 請執行 SQLServerReportingServices.exe 安裝檔案，在目前安裝 Reporting Services 的伺服器上開始進行就地升級。
+- **從  Reporting Services 2017 升級至未來版本** 同樣是就地升級案例，因為產品安裝 GUID 相同。 請執行 SQLServerReportingServices.exe 安裝檔案，在目前安裝 Reporting Services 的伺服器上開始進行就地升級。
   
 - **移轉**：您要安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
 

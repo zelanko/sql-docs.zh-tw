@@ -14,14 +14,14 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8100d6f18803f891ac9ba5607185fdbac782660
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16522114fb7e02517ec7385b6b7c73aa90b4b6b0
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332517"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127497"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87332517"
 ## <a name="considerations"></a>考量
 
 - 若要解除安裝 SQL Server，您必須是具備以服務登入權限的本機管理員。 
-- 若您的電腦有「最低」** 實體記憶體需求，請將分頁檔增加至實體記憶體的兩倍。 虛擬記憶體不足可能會造成 SQL Server 移除不完全。 
+- 若您的電腦有「最低」實體記憶體需求，請將分頁檔增加至實體記憶體的兩倍。 虛擬記憶體不足可能會造成 SQL Server 移除不完全。 
 - 在具備多個 SQL Server 執行個體的系統上，SQL Server 瀏覽器服務只會在移除最後一個 SQL Server 執行個體時解除安裝一次。 SQL Server 瀏覽器服務可以在 [控制台] 中的 [程式和功能] 中手動移除。 
 - 解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除在安裝程序期間所新增的 tempdb 資料檔案。 如果系統資料庫目錄中有名稱模式為 tempdb_mssql_*.ndf 的檔案，則會刪除這些檔案。 
   
@@ -90,7 +90,7 @@ ms.locfileid: "87332517"
   
 1.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
  
-1. 重新整理 [應用程式與功能]**** 視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
+1. 重新整理 [應用程式與功能] 視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
 
 # <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
@@ -111,7 +111,7 @@ ms.locfileid: "87332517"
   
 1.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
  
-1. 重新整理 [程式和功能]**** 視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
+1. 重新整理 [程式和功能] 視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
 
 ---
 

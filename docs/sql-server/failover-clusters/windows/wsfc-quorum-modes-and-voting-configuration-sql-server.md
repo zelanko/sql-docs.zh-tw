@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895146"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127526"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85895146"
   
  不過，如果另一個子網路上的節點在仲裁投票中是視為無回應，但它實際上已上線，另一方面也是狀況良好，最可能的原因是子網路之間的網路通訊失敗。  根據叢集拓撲、仲裁模式和容錯移轉原則組態，該網路通訊失敗實際上可能會建立多組投票節點 (或子網路)。  
   
- 當多個投票節點的子網路能夠獨立建立仲裁時，這稱為「裂腦案例」**。  在這種情況下，在個別仲裁中的節點可能有不同的表現方式，並且互相衝突。  
+ 當多個投票節點的子網路能夠獨立建立仲裁時，這稱為「裂腦案例」。  在這種情況下，在個別仲裁中的節點可能有不同的表現方式，並且互相衝突。  
   
 > [!NOTE]  
 >  只在系統管理員手動執行強制仲裁作業時，或在極罕見狀況下手動執行強制容錯移轉，而明確細分仲裁節點集，裂腦案例才是可能的。  

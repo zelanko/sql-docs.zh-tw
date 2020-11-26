@@ -11,14 +11,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 234657a06ca2162bffc9448a1424820ead00f0c3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bd11ff436649d4e871c09fb2ebba85f56a83ccc4
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988334"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127646"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

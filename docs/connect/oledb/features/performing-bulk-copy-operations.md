@@ -16,11 +16,11 @@ helpviewer_keywords:
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6035f5ac8723e9ccb84735080569468c1b7b33b3
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861320"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123848"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "88861320"
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：維護取用者所提供的識別值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中識別資料行的值是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產生。 OLE DB Driver for SQL Server 會忽略為資料行所繫結的任何值。<br /><br /> VARIANT_TRUE：取用者會繫結為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別資料行提供值的存取子。 在接受 NULL 的資料行上不提供識別屬性，所以取用者會在每個 **IRowsetFastLoad::Insert** 呼叫上提供唯一值。|  
 |SSPROP_FASTLOADKEEPNULLS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：針對具有 DEFAULT 條件約束的資料行維護 NULL。 只對接受 NULL 且套用 DEFAULT 條件約束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行造成影響。<br /><br /> VARIANT_FALSE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入資料行的預設值。<br /><br /> VARIANT_TRUE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入 NULL 作為資料行值。|  
-|SSPROP_FASTLOADOPTIONS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BSTR<br /><br /> 預設值：無<br /><br /> 描述：這個屬性與 **bcp** 公用程式的 **-h** "*hint*[,...*n*]" 選項相同。 將資料大量複製到資料表時，可使用下列字串做為選項。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]):資料檔案中資料的排序次序。 如果載入的資料檔是依照資料表的叢集索引來排序，將可增進大量複製的效能。<br /><br /> **ROWS_PER_BATCH** = *bb*：每一批資料的資料列數目 (如 *bb*)。 伺服器根據 *bb*值，將大量載入最佳化。 根據預設，**ROWS_PER_BATCH** 是未知的。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*：每一批資料的 KB 數目 (如 cc)。 根據預設，**KILOBYTES_PER_BATCH** 是未知的。<br /><br /> **TABLOCK**：在大量複製作業期間必須使用資料表層級鎖定。 這個選項會大幅提升效能，因為只在大量複製作業期間保留鎖定，會減少競爭資料表鎖定的情況。 如果資料表沒有索引，且指定了 **TABLOCK**，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為由資料表選項 **table lock on bulk load** (大量載入時鎖定資料表) 來決定。<br /><br /> **CHECK_CONSTRAINTS**：在大量複製作業期間會檢查 *table_name* 上的任何條件約束。 依預設，會忽略條件約束。<br /><br /> **FIRE_TRIGGER**：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將資料列版本設定用於觸發程序，並將資料列版本儲存在 **tempdb** 的版本存放區內。 因此，即使啟用了觸發程序，也可以使用記錄最佳化。 在觸發程序啟用的情況下，您可能需要先擴充 **tempdb** 的大小，然後才能大量匯入具有大量資料列的批次。|  
+|SSPROP_FASTLOADOPTIONS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BSTR<br /><br /> 預設值：無<br /><br /> 描述：這個屬性與 **bcp** 公用程式的 **-h** "*hint*[,...*n*]" 選項相同。 將資料大量複製到資料表時，可使用下列字串做為選項。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]):資料檔案中資料的排序次序。 如果載入的資料檔是依照資料表的叢集索引來排序，將可增進大量複製的效能。<br /><br /> **ROWS_PER_BATCH** = *bb*：每一批資料的資料列數目 (如 *bb*)。 伺服器根據 *bb* 值，將大量載入最佳化。 根據預設，**ROWS_PER_BATCH** 是未知的。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*：每一批資料的 KB 數目 (如 cc)。 根據預設，**KILOBYTES_PER_BATCH** 是未知的。<br /><br /> **TABLOCK**：在大量複製作業期間必須使用資料表層級鎖定。 這個選項會大幅提升效能，因為只在大量複製作業期間保留鎖定，會減少競爭資料表鎖定的情況。 如果資料表沒有索引，且指定了 **TABLOCK**，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為由資料表選項 **table lock on bulk load** (大量載入時鎖定資料表) 來決定。<br /><br /> **CHECK_CONSTRAINTS**：在大量複製作業期間會檢查 *table_name* 上的任何條件約束。 依預設，會忽略條件約束。<br /><br /> **FIRE_TRIGGER**：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將資料列版本設定用於觸發程序，並將資料列版本儲存在 **tempdb** 的版本存放區內。 因此，即使啟用了觸發程序，也可以使用記錄最佳化。 在觸發程序啟用的情況下，您可能需要先擴充 **tempdb** 的大小，然後才能大量匯入具有大量資料列的批次。|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>使用以檔案為基礎的大量複製作業  
  OLE DB Driver for SQL Server 實作 **IBCPSession** 介面，以公開對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以檔案為基礎之大量複製作業的支援。 **IBCPSession** 介面會實作 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)、[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)、[IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)、[IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)[IBCPSession::BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)、[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)、[IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 和 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。  

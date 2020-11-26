@@ -17,20 +17,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 435cc59989b8a06ac651ccc93f73bdfebec3946d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 6356874ac61790fe27730961e0429db92760bfce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006253"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121242"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>針對孤立使用者進行疑難排解 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的被遺棄使用者，當資料庫中的使用者登入是根據 **master** 資料庫，但登入已不存在於 **master**時就會發生。 當登入遭到刪除，或當資料庫移動到另一個登入不存在的資料庫時，就可能發生。 本主題說明如何尋找被遺棄使用者，並將他們重新對應至登入。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的被遺棄使用者，當資料庫中的使用者登入是根據 **master** 資料庫，但登入已不存在於 **master** 時就會發生。 當登入遭到刪除，或當資料庫移動到另一個登入不存在的資料庫時，就可能發生。 本主題說明如何尋找被遺棄使用者，並將他們重新對應至登入。  
   
 > [!NOTE]  
 >  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
@@ -105,7 +105,7 @@ WITH PASSWORD = '<use_a_strong_password_here>',
 SID = <SID>;  
 ```  
   
- 若要將孤立使用者對應到已存在 **master**中的登入，請在使用者資料庫中執行 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 陳述式，並指定登入名稱。  
+ 若要將孤立使用者對應到已存在 **master** 中的登入，請在使用者資料庫中執行 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 陳述式，並指定登入名稱。  
   
 ```  
 ALTER USER <user_name> WITH Login = <login_name>;  

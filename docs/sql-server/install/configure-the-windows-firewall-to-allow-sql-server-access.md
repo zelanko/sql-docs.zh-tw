@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497712"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120876"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "91497712"
   
 -   **netsh**  
   
-     系統管理員可以使用 **netsh.exe** 工具，在命令提示字元中設定及監視 Windows 電腦，或是利用批次檔執行此作業 **。** 藉由使用 **netsh** 工具，您可以指示輸入適當協助程式的內容命令，讓協助程式執行該命令。 協助程式為一動態連結程式庫 (.dll) 檔案，可為一或多項服務、公用程式或通訊協定提供組態、監視與支援，從而延伸 **netsh** 工具的功能。 所有支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的作業系統都有防火牆協助程式。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也提供進階防火牆協助程式，稱為 **advfirewall**。 本文不會討論使用 **netsh** 的詳細資料。 不過，您可以使用 **netsh**設定本文所描述的許多組態選項。 例如，在命令提示字元中執行下列指令碼，即可開啟  
+     系統管理員可以使用 **netsh.exe** 工具，在命令提示字元中設定及監視 Windows 電腦，或是利用批次檔執行此作業 **。** 藉由使用 **netsh** 工具，您可以指示輸入適當協助程式的內容命令，讓協助程式執行該命令。 協助程式為一動態連結程式庫 (.dll) 檔案，可為一或多項服務、公用程式或通訊協定提供組態、監視與支援，從而延伸 **netsh** 工具的功能。 所有支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的作業系統都有防火牆協助程式。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也提供進階防火牆協助程式，稱為 **advfirewall**。 本文不會討論使用 **netsh** 的詳細資料。 不過，您可以使用 **netsh** 設定本文所描述的許多組態選項。 例如，在命令提示字元中執行下列指令碼，即可開啟  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -88,7 +88,7 @@ ms.locfileid: "91497712"
     netsh advfirewall firewall add rule name = SQLPort dir = in protocol = tcp action = allow localport = 1433 remoteip = localsubnet profile = DOMAIN  
     ```  
   
-     如需有關 **netsh**的詳細資訊，請參閱下列連結：  
+     如需有關 **netsh** 的詳細資訊，請參閱下列連結：  
   
     -   [Netsh 命令語法、內容及格式設定](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709) (如何使用 "netsh advfirewall firewall" 內容而非 "netsh firewall" 內容來控制 Windows Server 2008 和 Windows Vista 的 Windows 防火牆行為)    
@@ -129,7 +129,7 @@ ms.locfileid: "91497712"
   
 ##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>使用具有進階安全性的 Windows Defender 防火牆，將程式例外新增至防火牆
   
-1. 從 [開始] 功能表，鍵入 *wf.msc*。 按 Enter 或選取搜尋結果 wf.msc，以開啟**具有進階安全性的 Windows Defender 防火牆**。
+1. 從 [開始] 功能表，鍵入 *wf.msc*。 按 Enter 或選取搜尋結果 wf.msc，以開啟 **具有進階安全性的 Windows Defender 防火牆**。
 1. 在左窗格中，選取 [輸入規則]  。
 1. 在右窗格的 [動作] 下方，選取 [新增規則]。[新增輸入規則精靈] 隨即開啟。
 1. 在 [規則類型]  上，選取 [程式]  。 選取 [下一步] 。

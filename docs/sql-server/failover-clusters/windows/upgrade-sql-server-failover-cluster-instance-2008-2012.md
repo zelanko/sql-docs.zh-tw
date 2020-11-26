@@ -10,14 +10,14 @@ helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 20fce8623266a733bb777b0cd3153ad593cfded0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8077a17676d38937d82241c2e58b556bd322f8a2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988057"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120989"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -25,7 +25,7 @@ ms.locfileid: "91988057"
 
 ## <a name="prerequisites"></a>Prerequisites
 
--   執行任何移轉策略之前，必須準備具有 Windows Server 2016/2012 R2 的平行 Windows Server 容錯移轉叢集。 所有包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 的節點都必須加入至已安裝平行 FCI 的 Windows 叢集。 在移轉之前，任何獨立電腦都**不得**加入至 Windows Server 容錯移轉叢集。 在移轉之前，應該同步處理新環境上的使用者資料庫。
+-   執行任何移轉策略之前，必須準備具有 Windows Server 2016/2012 R2 的平行 Windows Server 容錯移轉叢集。 所有包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 的節點都必須加入至已安裝平行 FCI 的 Windows 叢集。 在移轉之前，任何獨立電腦都 **不得** 加入至 Windows Server 容錯移轉叢集。 在移轉之前，應該同步處理新環境上的使用者資料庫。
 -   所有目的地執行個體都必須使用相同的執行個體名稱和識別碼來執行與其在原始環境之平行執行個體的相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本，並安裝相同的功能。 在目的地電腦上，安裝路徑和目錄結構應該相同。 這不包含 FCI 虛擬網路名稱，這在移轉之前必須不同。 在目的地執行個體上，應該啟用原始執行個體所啟用的任何功能 (AlwaysOn、FILESTREAM 等等)。
 
 -   在移轉之前，平行叢集應該未安裝 [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]。

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 040136a7867d2a56e8ec97f183227c6b8d7268f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54030568192560200dd365bbffaedc33df1959a6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730760"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127478"
 ---
 # <a name="installation-wizard-help"></a>安裝精靈說明
 
@@ -86,7 +86,7 @@ ms.locfileid: "85730760"
 **執行個體識別碼**：根據預設，執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼] 欄位中指定它。  
   
 > [!IMPORTANT]  
->  透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep，顯示在這個 [執行個體設定]**** 頁面上的執行個體識別碼就是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 程序之準備映像步驟期間所指定的執行個體識別碼。 您無法在完成映像步驟期間指定不同的執行個體識別碼。
+>  透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep，顯示在這個 [執行個體設定] 頁面上的執行個體識別碼就是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 程序之準備映像步驟期間所指定的執行個體識別碼。 您無法在完成映像步驟期間指定不同的執行個體識別碼。
 
 > [!NOTE]  
 >  不支援以底線 (_) 為開頭或是包含數字符號 (#) 或貨幣符號 ($) 的執行個體識別碼。  
@@ -134,10 +134,10 @@ ms.locfileid: "85730760"
   
 |描述|預設目錄|建議|  
 |-----------------|-----------------------|---------------------|  
-|**資料根目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
-|**記錄檔目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
-|**暫存目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |請將暫存目錄放置於高效能的儲存體子系統上。|  
-|**備份目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
+|**資料根目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Data\ |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
+|**記錄檔目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Log\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
+|**暫存目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Temp\ |請將暫存目錄放置於高效能的儲存體子系統上。|  
+|**備份目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Backup\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
   
 ### <a name="considerations"></a>考量  
   
@@ -167,10 +167,10 @@ ms.locfileid: "85730760"
   
 |描述|預設目錄|建議|  
 |-----------------|-----------------------|---------------------|  
-|**資料根目錄** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 針對容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
-|**記錄檔目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
-|**暫存目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |請將暫存目錄放置於高效能的儲存體子系統上。|  
-|**備份目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
+|**資料根目錄** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Data |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 針對容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
+|**記錄檔目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Log |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
+|**暫存目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Temp |請將暫存目錄放置於高效能的儲存體子系統上。|  
+|**備份目錄**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Backup |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
   
 #### <a name="considerations"></a>考量
   
@@ -212,7 +212,7 @@ ms.locfileid: "85730760"
 > [!IMPORTANT]  
 > 您必須在安裝期間針對新的安裝明確提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員。 要等到您完成此步驟之後，安裝程式才允許您繼續。
   
-**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員**：您必須為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定至少一個 Windows 主體。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 [加入目前使用者] 按鈕。 若要從系統管理員清單中加入或移除帳戶，請選取 [加入]**** 或 [移除]****，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中將會有系統管理員權限的使用者、群組或電腦清單。  
+**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員**：您必須為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定至少一個 Windows 主體。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 [加入目前使用者] 按鈕。 若要從系統管理員清單中加入或移除帳戶，請選取 [加入] 或 [移除]，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中將會有系統管理員權限的使用者、群組或電腦清單。  
   
 當您完成清單的編輯之後，請選取 [確定]，然後在組態對話方塊中確認系統管理員清單。 清單完成後，請選取 [下一步]。  
   
@@ -289,9 +289,9 @@ ms.locfileid: "85730760"
 |描述|支援的儲存體類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**資料根目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄設定存取控制清單 (ACL)，並中斷繼承。|  
-|**使用者資料庫目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
-|**使用者資料庫記錄檔目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
-|**備份目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|請設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
+|**使用者資料庫目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data |使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
+|**使用者資料庫記錄檔目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
+|**備份目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Backup|請設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
   
 \* 雖然支援共用磁碟，但我們不建議針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體使用它們。  
   
@@ -302,9 +302,9 @@ ms.locfileid: "85730760"
 |描述|支援的儲存體類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**資料根目錄**|共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
-|**使用者資料庫目錄**|共用儲存體、SMB 檔案伺服器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
-|**使用者資料庫記錄檔目錄**|共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定記錄檔目錄具有足夠的空間。|  
-|**備份目錄**|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|請設定適當的權限來防止資料遺失，並且確定 SQL Server 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
+|**使用者資料庫目錄**|共用儲存體、SMB 檔案伺服器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
+|**使用者資料庫記錄檔目錄**|共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定記錄檔目錄具有足夠的空間。|  
+|**備份目錄**|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|請設定適當的權限來防止資料遺失，並且確定 SQL Server 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應磁碟機。|  
   
 ### <a name="security-considerations"></a>安全性考量
   
@@ -345,8 +345,8 @@ ms.locfileid: "85730760"
   
 |描述|支援的儲存體類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**資料目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> **tempdb** 目錄的最佳做法取決於工作負載和效能需求。 若要將資料檔案分散到數個磁碟區，請指定多個資料夾或磁碟機。|  
-|**記錄目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
+|**資料目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> **tempdb** 目錄的最佳做法取決於工作負載和效能需求。 若要將資料檔案分散到數個磁碟區，請指定多個資料夾或磁碟機。|  
+|**記錄目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
   
 \* 雖然支援共用磁碟，但我們不建議針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體使用它們。  
   
@@ -356,31 +356,31 @@ ms.locfileid: "85730760"
   
 |描述|支援的儲存體類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb 資料目錄**|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> 請確定指定的一或多個目錄 (如果指定了多個檔案) 適用於所有叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。|  
-|**tempdb 記錄目錄**|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。<br /><br /> 請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。<br /><br /> 請確定記錄檔目錄具有足夠的空間。|  
+|**tempdb 資料目錄**|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> 請確定指定的一或多個目錄 (如果指定了多個檔案) 適用於所有叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。|  
+|**tempdb 記錄目錄**|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **提示**：如果您選取 [叢集磁碟選取] 頁面上的 [共用磁碟]，預設為第一個共用磁碟。 如果在 [叢集磁碟選取] 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。<br /><br /> 請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。<br /><br /> 請確定記錄檔目錄具有足夠的空間。|  
   
 ### <a name="ui-element-list"></a>UI 元素清單
 
 根據您的工作負載和需求來設定 **tempdb** 的設定。 下列設定會套用到 **tempdb** 資料檔案︰  
   
-* **檔案數目** 是適用於 **tempdb**的資料檔案總數。 預設值是低於 8 的數字，或是安裝程式偵測到的邏輯核心數目。 基於一般規則，如果邏輯處理器的數目小於或等於 8，則與邏輯處理器使用相同數目的資料檔案。 如果邏輯處理器的數目大於 8，則使用 8 個資料檔案。 如果發生競爭的情況，請以 4 的倍數增加資料檔案數目 (最多為邏輯處理器的數量)，直到競爭縮減到可接受的程度，或者對工作負載或代碼進行更改。
+* **檔案數目** 是適用於 **tempdb** 的資料檔案總數。 預設值是低於 8 的數字，或是安裝程式偵測到的邏輯核心數目。 基於一般規則，如果邏輯處理器的數目小於或等於 8，則與邏輯處理器使用相同數目的資料檔案。 如果邏輯處理器的數目大於 8，則使用 8 個資料檔案。 如果發生競爭的情況，請以 4 的倍數增加資料檔案數目 (最多為邏輯處理器的數量)，直到競爭縮減到可接受的程度，或者對工作負載或代碼進行更改。
   
-* **初始大小 (MB)** 是每個 **tempdb** 資料檔案的初始大小 (MB)。 預設值為 8 MB ([!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 則為 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的初始檔案大小上限為 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始檔案大小上限則為 1024 MB。 所有 **tempdb** 資料檔案的初始大小都一樣。 因為 **tempdb** 會在每次啟動 SQL Server 或容錯移轉重新建立，所以，您應該將大小指定為接近您的工作負載進行正常作業所需的大小。 若要在啟動期間進一步最佳化 **tempdb** 的建立，可啟用[資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+* **初始大小 (MB)** 是每個 **tempdb** 資料檔案的初始大小 (MB)。 預設值為 8 MB ([!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 則為 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的初始檔案大小上限為 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始檔案大小上限則為 1024 MB。 所有 **tempdb** 資料檔案的初始大小都一樣。 因為 **tempdb** 會在每次啟動 SQL Server 或容錯移轉重新建立，所以，您應該將大小指定為接近您的工作負載進行正常作業所需的大小。 若要在啟動期間進一步最佳化 **tempdb** 的建立，可啟用 [資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
 * **初始大小總計 (MB)** 是所有 **tempdb** 資料檔案的累計大小。  
   
 * **自動成長 (MB)** 是以 MB 為單位的空間量，其中的每個 **tempdb** 資料檔案將會在其空間用盡時自動成長。 在 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 和更新版本中，所有資料檔案會依據此設定中指定的數量同時成長。  
   
 * [自動成長總計 (MB)] 是每個自動成長事件的累計大小。  
-* **資料目錄**會顯示所有保留 **tempdb** 資料檔案的目錄。 有多個目錄時，資料檔案會以循環配置資源方式放置於目錄中。 例如，假設您建立 3 個目錄並指定 8 個資料檔案，會在第一個目錄中建立 1、4 和 7 的資料檔案。 資料檔案 2、5 和 8 會建立於第二個目錄中。 資料檔案 3 和 6 則會在第三個目錄中。  
+* **資料目錄** 會顯示所有保留 **tempdb** 資料檔案的目錄。 有多個目錄時，資料檔案會以循環配置資源方式放置於目錄中。 例如，假設您建立 3 個目錄並指定 8 個資料檔案，會在第一個目錄中建立 1、4 和 7 的資料檔案。 資料檔案 2、5 和 8 會建立於第二個目錄中。 資料檔案 3 和 6 則會在第三個目錄中。  
   
 * 若要新增目錄，可按一下 [新增] 。  
   
 * 若要移除目錄，請選取目錄，然後選取 [移除]。  
   
-**Tempdb 記錄檔**是記錄檔的名稱。 此檔案會自動建立。 下列設定只會套用到 **tempdb** 記錄檔︰  
+**Tempdb 記錄檔** 是記錄檔的名稱。 此檔案會自動建立。 下列設定只會套用到 **tempdb** 記錄檔︰  
   
-* [初始大小 (MB)] 是 **tempdb** 記錄檔的初始大小。 預設值為 8 MB ([!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 則為 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的初始檔案大小上限為 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始檔案大小上限則為 1024 MB。 因為 **tempdb** 會在每次啟動 SQL Server 或容錯移轉重新建立，所以，您應該將大小指定為接近您的工作負載進行正常作業所需的大小。 若要在啟動期間進一步最佳化 **tempdb** 的建立，可啟用[資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+* [初始大小 (MB)] 是 **tempdb** 記錄檔的初始大小。 預設值為 8 MB ([!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 則為 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的初始檔案大小上限為 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的初始檔案大小上限則為 1024 MB。 因為 **tempdb** 會在每次啟動 SQL Server 或容錯移轉重新建立，所以，您應該將大小指定為接近您的工作負載進行正常作業所需的大小。 若要在啟動期間進一步最佳化 **tempdb** 的建立，可啟用 [資料庫立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
   > [!NOTE]
   > **Tempdb** 會使用最低限度的記錄。 **Tempdb** 記錄檔無法備份。 它會在每次啟動 SQL Server，或當容錯移轉叢集執行個體時重新建立。
@@ -400,7 +400,7 @@ ms.locfileid: "85730760"
   
 * 如果使用 SMB 檔案伺服器， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須是網域帳戶。  
   
-* 用於安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶應該擁有當作資料目錄使用之 SMB 檔案共用資料夾的**完全控制** NTFS 權限。  
+* 用於安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶應該擁有當作資料目錄使用之 SMB 檔案共用資料夾的 **完全控制** NTFS 權限。  
   
 * 用於安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶應該具有 SMB 檔案伺服器的 SeSecurityPrivilege 權限。 若要授與此權限，請使用檔案伺服器上的 [本機安全性原則] 主控台，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式帳戶新增至 **[管理稽核和安全性記錄檔]** 原則中。 在 [本機安全性原則] 主控台中 [本機原則] 下的 [使用者權限指派] 區段可以找到此設定。  
   
@@ -430,11 +430,11 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> 資料庫引擎設定 - 記憶體頁面
 
-[最小伺服器記憶體] 會決定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]將用於緩衝集區與其他快取的較低記憶體限制。 預設值為 0，而建議的值也是 0。 如需有關**最小伺服器記憶體**之效果的詳細資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
+[最小伺服器記憶體] 會決定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]將用於緩衝集區與其他快取的較低記憶體限制。 預設值為 0，而建議的值也是 0。 如需有關 **最小伺服器記憶體** 之效果的詳細資訊，請參閱 [記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
 
-[最大伺服器記憶體] 會決定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]將用於緩衝集區與其他快取的記憶體上限。 預設值為 2,147,483,647 MB，且根據現有的系統記憶體，計算的建議值會與獨立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的[伺服器記憶體設定選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的記憶體指導方針一致。 如需有關**最大伺服器記憶體**之效果的詳細資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
+[最大伺服器記憶體] 會決定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]將用於緩衝集區與其他快取的記憶體上限。 預設值為 2,147,483,647 MB，且根據現有的系統記憶體，計算的建議值會與獨立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的[伺服器記憶體設定選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)中的記憶體指導方針一致。 如需有關 **最大伺服器記憶體** 之效果的詳細資訊，請參閱 [記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
 
-如果在安裝期間略過此頁面，則使用的預設 [最大伺服器記憶體] 值為 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 預設值 (2,147,483,647 MB)。 一旦您選擇 [建議]**** 選項按鈕，就可以在此頁面上手動設定這些設定，而且您可以在安裝之後修改這些設定。 如需詳細資訊，請參閱 [伺服器記憶體組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
+如果在安裝期間略過此頁面，則使用的預設 [最大伺服器記憶體] 值為 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 預設值 (2,147,483,647 MB)。 一旦您選擇 [建議] 選項按鈕，就可以在此頁面上手動設定這些設定，而且您可以在安裝之後修改這些設定。 如需詳細資訊，請參閱 [伺服器記憶體組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
 
 ### <a name="ui-element-list"></a>UI 元素清單
   

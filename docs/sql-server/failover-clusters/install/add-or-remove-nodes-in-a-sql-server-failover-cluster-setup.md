@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5c65c099af7ffc6346aaf0e73a26c5ee7e16f7ce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988565"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121315"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>在容錯移轉叢集執行個體中新增或移除節點 (安裝程式)
 
@@ -92,7 +92,7 @@ ms.locfileid: "91988565"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要從現有的容錯移轉叢集執行個體中移除節點，請在左側窗格中按一下 [維護]****，然後選取 [從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集移除節點]****。  
+2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要從現有的容錯移轉叢集執行個體中移除節點，請在左側窗格中按一下 [維護]，然後選取 [從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集移除節點]。  
   
 3.  系統組態檢查將會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   

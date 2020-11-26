@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cfeaf90e3765b108c66cd86fc184b9fcdef8a029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4731dbd80cfefbb3f151c8f749127e37e869e8a3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894326"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120908"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85894326"
   
 2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 [進階]**** 索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]****，從清單中選取一值。  
+3.  在 [進階] 索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]，從清單中選取一值。  
   
      這項設定可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝選擇最佳預設定序。  
   

@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412525"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 教學課程：探索及視覺化資料
@@ -51,7 +51,7 @@ ms.locfileid: "92412525"
 
 開發資料科學方案通常會包含大量資料瀏覽和資料視覺化。 首先，需要一分鐘的時間來檢閱範例資料 (如果您還沒檢閱)。
 
-在原始的公用資料集中，計程車識別碼和車程記錄會以不同檔案提供。 不過，為了更輕鬆地使用範例資料，已根據 _medallion_ 、 _hack\_license_ 和 _pickup\_datetime_ 資料行來聯結兩個原始資料集。  也會對記錄進行抽樣，只取得 1% 的原始記錄數目。 產生的向下取樣資料集有 1,703,957 個資料列和 23 個資料行。
+在原始的公用資料集中，計程車識別碼和車程記錄會以不同檔案提供。 不過，為了更輕鬆地使用範例資料，已根據 _medallion_、_hack\_license_ 和 _pickup\_datetime_ 資料行來聯結兩個原始資料集。  也會對記錄進行抽樣，只取得 1% 的原始記錄數目。 產生的向下取樣資料集有 1,703,957 個資料列和 23 個資料行。
 
 **計程車識別碼**
   
@@ -65,7 +65,7 @@ ms.locfileid: "92412525"
   
 + 每筆費用記錄都會包括付款資訊，例如付款類型、總付款金額和小費金額。
   
-+ 最後三個資料行可以用於各種機器學習工作。 _tip\_amount_ 資料行包含連續數值，而且可以當成 **label** 資料行來進行迴歸分析。 _tipped_ 資料行只有是/否值，並且用於二元分類。 _tip\_class_ 資料行有多個 **類別標籤** ，因此可以當成多類別分類工作的標籤使用。
++ 最後三個資料行可以用於各種機器學習工作。 _tip\_amount_ 資料行包含連續數值，而且可以當成 **label** 資料行來進行迴歸分析。 _tipped_ 資料行只有是/否值，並且用於二元分類。 _tip\_class_ 資料行有多個 **類別標籤**，因此可以當成多類別分類工作的標籤使用。
   
   這個逐步解說只會示範二元分類工作；您可以自由地嘗試建立其他兩個機器學習工作 (迴歸和多類別分類) 的模型。
   
@@ -87,7 +87,7 @@ ms.locfileid: "92412525"
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下 **NYCTaxi_Sample** 資料庫，然後選取 [新查詢]  。 或者，在 Azure Data Studio 中，從 [檔案] 功能表中選取 [新增筆記本]，然後連線到資料庫。
 
-2. 貼上下列指令碼，建立繪製長條圖的預存程序。 此範例名為 **RPlotHistogram** 。
+2. 貼上下列指令碼，建立繪製長條圖的預存程序。 此範例名為 **RPlotHistogram**。
 
    ```sql
    CREATE PROCEDURE [dbo].[RPlotHistogram]
@@ -137,7 +137,7 @@ ms.locfileid: "92412525"
     
     *plot* *0xFFD8FFE000104A4649...*
   
-2. 開啟 PowerShell 命令提示字元，並將適當的執行個體名稱、資料庫名稱、使用者名稱和認證提供為引數來執行下列命令。 若是使用 Windows 身分識別的使用者，您可以使用 **-T** 取代 **-U** 和 **-P** 。
+2. 開啟 PowerShell 命令提示字元，並將適當的執行個體名稱、資料庫名稱、使用者名稱和認證提供為引數來執行下列命令。 若是使用 Windows 身分識別的使用者，您可以使用 **-T** 取代 **-U** 和 **-P**。
   
    ```powershell
    bcp "exec RPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
@@ -150,7 +150,7 @@ ms.locfileid: "92412525"
 
    在每個提示字元下，按 ENTER 接受預設值，但不包括這些變更：
 
-   + 針對 **prefix-length of field plot** ，輸入 0。
+   + 針對 **prefix-length of field plot**，輸入 0。
   
    + 如果您想要儲存輸出參數以供日後重複使用，請輸入 **Y** 。
   
@@ -188,7 +188,7 @@ ms.locfileid: "92412525"
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下 **NYCTaxi_Sample** 資料庫，然後選取 [新查詢]  。
 
-2. 貼上下列指令碼，建立繪製長條圖的預存程序。 此範例的名稱是 **RPlotHist** 。
+2. 貼上下列指令碼，建立繪製長條圖的預存程序。 此範例的名稱是 **RPlotHist**。
   
    ```sql
    CREATE PROCEDURE [dbo].[RPlotHist]  

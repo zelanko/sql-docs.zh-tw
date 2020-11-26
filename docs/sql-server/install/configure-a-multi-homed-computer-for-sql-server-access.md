@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894903"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127541"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85894903"
   
 5.  請記下針對您想要設定之每個 IP 位址所列出的 TCP 通訊埠。 在這則範例中，請假設兩個 IP 位址都在接聽預設通訊埠 1433。  
   
-6.  如果您不想要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用的連接埠，請在 [通訊協定]**** 索引標籤中，將 [全部接聽]**** 值變更為 [否]****。然後，在 [IP 位址]**** 索引標籤中，針對您不想要使用的 IP 位址，將 [使用中]**** 值變更為 [否]****。  
+6.  如果您不想要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用的連接埠，請在 [通訊協定] 索引標籤中，將 [全部接聽] 值變更為 [否]。然後，在 [IP 位址] 索引標籤中，針對您不想要使用的 IP 位址，將 [使用中] 值變更為 [否]。  
   
 ## <a name="configuring-windows-firewall-with-advanced-security"></a>設定具有進階安全性的 Windows 防火牆  
  在您知道電腦所使用的 IP 位址以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的通訊埠之後，就可以建立防火牆規則，然後針對特定的 IP 位址設定這些規則。  
@@ -128,7 +128,7 @@ ms.locfileid: "85894903"
   
 3.  在 [本機 IP 位址] 區域中，選取 [這些 IP 位址]，然後按一下 [新增]。  
   
-4.  在 [IP 位址]**** 對話方塊中，選取 [此 IP 位址或子網路]****，然後輸入您想要設定的其中一個 IP 位址。  
+4.  在 [IP 位址] 對話方塊中，選取 [此 IP 位址或子網路]，然後輸入您想要設定的其中一個 IP 位址。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

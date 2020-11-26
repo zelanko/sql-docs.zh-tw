@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988287"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121100"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91988287"
   
 #### <a name="how-to-revalidate-your-cluster"></a>如何重新驗證您的叢集  
   
-1.  在 [容錯移轉叢集] 嵌入式管理單元的主控台樹狀目錄中，確定已選取 [容錯移轉叢集管理]****，然後在 [管理]**** 下方，按一下 [驗證設定]****。  
+1.  在 [容錯移轉叢集] 嵌入式管理單元的主控台樹狀目錄中，確定已選取 [容錯移轉叢集管理]，然後在 [管理] 下方，按一下 [驗證設定]。  
   
 2.  遵循精靈的指示來指定伺服器和測試，然後執行測試。 執行測試之後，會出現 **[摘要]** 頁面。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "91988287"
   
 4.  若要檢視將可協助您解譯結果的說明主題，請按一下 [深入了解叢集驗證測試] 。  
   
- 若要在關閉精靈之後檢視叢集驗證的說明主題，可在 [容錯移轉叢集] 嵌入式管理單元中，依序按一下 [說明]****、[說明主題]**** 及 [內容]**** 索引標籤，展開容錯移轉叢集說明的內容，然後按一下 [驗證容錯移轉叢集設定]****。  驗證精靈完成之後，[摘要報告]  將會顯示結果。 所有測試都必須具備綠色的核取記號來表示通過，或者在某些情況下呈現黃色三角形 (警告)。 尋找問題區域 (紅色 X 或黃色問號) 時，在摘要說明測試結果的報表部分中，按一下個別測試來檢閱詳細資料。 任何紅色 X 的問題都必須加以解決，然後才能疑難排解 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題。  
+ 若要在關閉精靈之後檢視叢集驗證的說明主題，可在 [容錯移轉叢集] 嵌入式管理單元中，依序按一下 [說明]、[說明主題] 及 [內容] 索引標籤，展開容錯移轉叢集說明的內容，然後按一下 [驗證容錯移轉叢集設定]。  驗證精靈完成之後，[摘要報告]  將會顯示結果。 所有測試都必須具備綠色的核取記號來表示通過，或者在某些情況下呈現黃色三角形 (警告)。 尋找問題區域 (紅色 X 或黃色問號) 時，在摘要說明測試結果的報表部分中，按一下個別測試來檢閱詳細資料。 任何紅色 X 的問題都必須加以解決，然後才能疑難排解 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題。  
   
  **安裝更新**  
   
@@ -129,9 +129,9 @@ ms.locfileid: "91988287"
   
 1.  使用「叢集管理員」來判斷含有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的群組是在哪個節點上執行。 就此範例而言，是 **節點 A**。  
   
-2.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **來啟動該電腦上的**服務。 如需使用 **net start**的詳細資訊，請參閱 [手動啟動 SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)。  
+2.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **來啟動該電腦上的** 服務。 如需使用 **net start** 的詳細資訊，請參閱 [手動啟動 SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)。  
   
-3.  啟動**節點 A** 上的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 組態管理員」。檢視伺服器所接聽的管道名稱， 應該類似於 \\\\.\\$$\VIRTSQL\pipe\sql\query。  
+3.  啟動 **節點 A** 上的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 組態管理員」。檢視伺服器所接聽的管道名稱， 應該類似於 \\\\.\\$$\VIRTSQL\pipe\sql\query。  
   
 4.  在用戶端電腦上，啟動「SQL Server 組態管理員」。  
   

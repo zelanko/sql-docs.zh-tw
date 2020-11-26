@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8cdecc3ac5f8b23e947b92a43e469c568c68d740
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fc6afb68622514c5ff8f2c244ff0942ae1f0e1d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988347"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121139"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91988347"
   
 3.  為每個容錯移轉叢集執行個體指定多個 IP 位址。 您可為每個子網路指定多個 IP 位址。 若在相同的子網路上有多個 IP 位址， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 AND。 若正跨多重子網路進行節點的叢集作業， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 OR。  
 
-4.  SQL Server 容錯移轉叢集執行個體 (FCI) 需要已加入網域的叢集節點。 **不支援**下列設定：
+4.  SQL Server 容錯移轉叢集執行個體 (FCI) 需要已加入網域的叢集節點。 **不支援** 下列設定：
     - 工作群組叢集上的 SQL FCI。 
     - 多網域叢集上的 SQL FCI。   
     - 網域 + 工作群組叢集上的 SQL FCI。 

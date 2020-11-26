@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df0e0df9198e1d8abfeb0605a5a13cf0b22059c7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883724"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120920"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>解除安裝及移除 Master Data Services
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請遵循[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能]**** 頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
+   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請遵循[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能] 頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
   
  為避免資料遺失且避免影響系統中的其他電腦，解除安裝程序不會移除或變更某些項目。 請檢閱下表，判斷要保留或移除項目。  
   

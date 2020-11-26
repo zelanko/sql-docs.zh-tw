@@ -5,16 +5,16 @@ ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e465f1e4e8c6cc9e5effb27c1cc97ee7633309eb
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297960"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 終止支援選項 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "91988594"
 ## <a name="understanding-the-sql-server-lifecycle"></a>了解 SQL Server 生命週期
 
 每種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本至少有 10 年的支援，包括 5 年的主要支援，以及 5 年的延伸支援：
--  **主要支援**包含功能、效能、延展性和安全性更新。 
--  **延伸支援**僅包含安全性更新。 
+-  **主要支援** 包含功能、效能、延展性和安全性更新。 
+-  **延伸支援** 僅包含安全性更新。 
 
 **終止支援** (有時也稱為生命週期結束) 表示產品已達其生命週期的尾端，不再為產品提供服務和支援。 如需 Microsoft 週期的詳細資訊，請參閱 [Microsoft 週期原則](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)。
 
@@ -95,7 +95,7 @@ ms.locfileid: "91988594"
 
 ## <a name="extend-support"></a>延伸支援 
 
-如果您尚未準備好升級，且尚未準備好移至雲端，則可購買延伸安全性更新訂閱，以在終止支援日期後收到長達三年的**重大**安全性更新。  
+如果您尚未準備好升級，且尚未準備好移至雲端，則可購買延伸安全性更新訂閱，以在終止支援日期後收到長達三年的 **重大** 安全性更新。  
 
 ### <a name="benefits"></a>優點 
 

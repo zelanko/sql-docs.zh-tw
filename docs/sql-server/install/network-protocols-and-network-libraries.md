@@ -19,14 +19,14 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fafee4f77a665f9409f5b7b6d1a4359765ed3ba
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880451"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127516"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85880451"
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>若要在可從網際網路存取的伺服器上停用 SMB  
   
--   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)]**** 內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks]**** 和 [Client for Microsoft Networks]****。  
+-   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)] 內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks] 和 [Client for Microsoft Networks]。  
   
 ## <a name="endpoints"></a>端點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 導入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的新概念；伺服器端的連接是以 [!INCLUDE[tsql](../../includes/tsql-md.md)] *「端點」* (endpoint) 的概念來表示。 可對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點授與、撤銷和拒絕權限。 依預設，所有使用者對端點都有存取權限，除非權限遭到系統管理員 (sysadmin) 群組的成員或端點擁有者拒絕或撤銷。 GRANT、REVOKE 和 DENY ENDPOINT 語法使用的是系統管理員必須從端點之目錄檢視中取得的端點識別碼。  
