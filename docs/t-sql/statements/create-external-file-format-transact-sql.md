@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255775"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947923"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92255775"
   
 - 分隔符號文字  
   
-- Hive RCFile  
+- Hive RCFile - 不適用於 Azure Synapse Analytics。
   
 - Hive ORC
   
@@ -253,7 +253,7 @@ WITH (
 > [!IMPORTANT]
 > 指定自訂 `DATE_FORMAT` 將會覆寫所有的預設類型格式。 這表示檔案的所有日期時間、日期與時間資料格，都必須有相同的日期格式。 使用覆寫的 `DATE_FORMAT` 時，您不能有格式不同的日期與時間值。
 
-下表提供 **範例日期格式** ：
+下表提供 **範例日期格式**：
   
 關於該表格的注意事項：  
   
