@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636088"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419783"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>設定資料庫測試助理的 Distributed Replay
 
@@ -60,9 +60,9 @@ Distributed Replay 要求您在電腦之間使用通用帳戶。 基於此需求
 只有在控制器電腦上才需要進行此設定。
 
 1. 開啟 dcomcnfg.exe。
-2. 展開 [**元件服務**  >  **電腦**  >  **我的電腦**  >  **DCOM**設定]。
-3. 在 [ **DCOM**設定] 下，以滑鼠右鍵按一下 [ **DReplayController**]，然後選取 [ **屬性**]。
-4. 選取 [安全性]**** 索引標籤。
+2. 展開 [**元件服務**  >  **電腦**  >  **我的電腦**  >  **DCOM** 設定]。
+3. 在 [ **DCOM** 設定] 下，以滑鼠右鍵按一下 [ **DReplayController**]，然後選取 [ **屬性**]。
+4. 選取 [安全性] 索引標籤。
 5. 在 [ **啟動和啟用許可權**] 下，選取 [ **自訂**]，然後選取 [ **編輯**]。
 6. 新增將開始重新執行的使用者。 授與使用者本機啟動和本機啟用許可權。 如果使用者打算從遠端啟動或啟用，請提供使用者遠端啟動和遠端啟用許可權。
 7. 選取 **[確定** ] 以認可變更並返回 [ **安全性** ] 索引標籤。
@@ -91,7 +91,7 @@ Distributed Replay 要求您在電腦之間使用通用帳戶。 基於此需求
 
     Distributed Replay 控制器記錄檔位於 C:\Program Files (x86) \Microsoft SQL Server \<version\> \Tools\DReplayClient\Log。 記錄檔會指出用戶端是否可以向控制器註冊本身。
 
-    如果設定成功，記錄檔會顯示**已向控制器 <控制器名稱 \> 註冊**的訊息。
+    如果設定成功，記錄檔會顯示 **已向控制器 <控制器名稱 \> 註冊** 的訊息。
 
 如需更多的設定選項，請參閱 [設定 Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md)。
 
@@ -99,7 +99,7 @@ Distributed Replay 要求您在電腦之間使用通用帳戶。 基於此需求
 
 您可以使用 Distributed Replay 管理工具來快速測試 Distributed Replay 是否可在環境中正常運作。 在多部用戶端電腦向控制器註冊的環境中，測試設定可能特別有用。 您可能需要安裝 SQL Server Management Studio (SSMS) 才能取得管理工具。
 
-1. 移至 SSMS 安裝位置，並尋找 Distributed Replay 管理工具 dreplay.exe 及其相依元件。
+1. 移至 SSMS 安裝位置，並尋找 Distributed Replay 管理工具 dreplay.exe 及其相依元件。 目前， [ssms 17](../ssms/release-notes-ssms.md#1791) 是最新版本的 ssms，可包含 dreplay.exe。
 2. 在命令提示字元中，執行 `dreplay.exe status -f 1` 。
 
 如果上述步驟成功，主控台輸出會指出控制器可以看到其用戶端處於 `READY` 狀態。
@@ -108,7 +108,7 @@ Distributed Replay 要求您在電腦之間使用通用帳戶。 基於此需求
 
 遠端存取 Distributed Replay 需要開啟在網域或虛擬網路中可見的埠。
 
-1. 開啟 [具有**Advanced Security**的**Windows 防火牆**]。
+1. 開啟 [具有 **Advanced Security** 的 **Windows 防火牆**]。
 2. 移至 [ **輸入規則**]。
 3. 為程式 C:\Program 檔建立新的輸入防火牆規則 (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.exe。
 4. 允許 DReplayController.exe 的所有埠都能存取網域層級，才能從遠端與控制器服務進行通訊。

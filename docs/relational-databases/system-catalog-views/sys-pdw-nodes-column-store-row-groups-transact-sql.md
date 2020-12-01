@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038292"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419829"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "92038292"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|基礎資料表的識別碼。 這是計算節點上的實體資料表，而不是控制節點上邏輯資料表的 object_id。 例如，object_id 與 sys. 資料表中的 object_id 不相符。<br /><br /> 若要與 sys. 資料表聯結，請使用 sys.pdw_index_mappings。|  
-|**index_id**|**int**|*Object_id*資料表上的叢集資料行存放區索引的識別碼。|  
-|**partition_number**|**int**|保存資料列群組 *row_group_id*之資料表分割區的識別碼。 您可以使用 *partition_number* 將此 DMV 聯結至 sys. 分割。|  
+|**index_id**|**int**|*Object_id* 資料表上的叢集資料行存放區索引的識別碼。|  
+|**partition_number**|**int**|保存資料列群組 *row_group_id* 之資料表分割區的識別碼。 您可以使用 *partition_number* 將此 DMV 聯結至 sys. 分割。|  
 |**row_group_id**|**int**|此資料列群組的識別碼。 此號碼在分割區中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|差異資料列群組的 hobt_id，如果資料列群組類型不是差異，則為 NULL。 差異資料列群組是讀取/寫入資料列群組，可接受新記錄。 差異資料列群組具有 [ **開啟** ] 狀態。 差異資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。|  
 |**state**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -45,9 +45,9 @@ ms.locfileid: "92038292"
   
  使用 **sys.pdw_nodes_column_store_row_groups** 來判斷資料列群組中包含的資料列數目，以及資料列群組的大小。  
   
- 當資料列群組中已刪除的資料列數增加到佔總列數的相當大比例時，資料表的效率就會降低。 重建資料行存放區索引可縮小資料表，減少讀取資料表所需的磁碟 I/O。 若要重建資料行存放區索引，請使用**ALTER index**語句的**rebuild**選項。  
+ 當資料列群組中已刪除的資料列數增加到佔總列數的相當大比例時，資料表的效率就會降低。 重建資料行存放區索引可縮小資料表，減少讀取資料表所需的磁碟 I/O。 若要重建資料行存放區索引，請使用 **ALTER index** 語句的 **rebuild** 選項。  
   
- 可更新的資料行存放區首先會將新的資料插入至 **開啟** 的資料列群組，這是 rowstore 格式，有時也稱為 delta 資料表。  一旦開啟的資料列群組已滿，其狀態會變更為 [ **已關閉**]。 已關閉的資料列群組會由元組移動器壓縮成資料行存放區格式，而狀態會變更為 **壓縮**。  Tuple Mover 是背景處理序，會定期喚醒並檢查是否有任何準備好壓縮為資料行存放區資料列群組的關閉資料列群組。  Tuple Mover 也會取消配置其中所有資料列都已刪除的任何資料列群組。 已解除配置的資料列群組會標示為已 **淘汰**。 若要立即執行元組移動器，請使用**ALTER INDEX**語句的重新**組織**選項。  
+ 可更新的資料行存放區首先會將新的資料插入至 **開啟** 的資料列群組，這是 rowstore 格式，有時也稱為 delta 資料表。  一旦開啟的資料列群組已滿，其狀態會變更為 [ **已關閉**]。 已關閉的資料列群組會由元組移動器壓縮成資料行存放區格式，而狀態會變更為 **壓縮**。  Tuple Mover 是背景處理序，會定期喚醒並檢查是否有任何準備好壓縮為資料行存放區資料列群組的關閉資料列群組。  Tuple Mover 也會取消配置其中所有資料列都已刪除的任何資料列群組。 已解除配置的資料列群組會標示為已 **淘汰**。 若要立即執行元組移動器，請使用 **ALTER INDEX** 語句的重新 **組織** 選項。  
   
  當資料行存放區資料列群組已滿時，就會進行壓縮，並停止接受新的資料列。 資料列從壓縮的群組中刪除時仍會持續存在，但會標示為已刪除。 對壓縮的群組進行更新的實作方式，是從壓縮的群組中刪除，然後插入開啟的群組。  
   
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
