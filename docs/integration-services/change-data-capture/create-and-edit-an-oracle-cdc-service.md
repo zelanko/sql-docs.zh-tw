@@ -14,11 +14,11 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496243"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130649"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>建立及編輯 Oracle CDC 服務
 
@@ -27,11 +27,11 @@ ms.locfileid: "88496243"
 
   您會從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC Windows 服務。  
   
- 若要建立新的 Oracle CDC Windows 服務，請從左窗格選取 **[本機 CDC 服務]** ，然後按一下 **[動作]** 窗格中的 **[新增服務]** 。 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]****，然後選取 [新增服務]****。 隨即開啟 [新增 Oracle CDC Windows 服務] 對話方塊。  
+ 若要建立新的 Oracle CDC Windows 服務，請從左窗格選取 **[本機 CDC 服務]** ，然後按一下 **[動作]** 窗格中的 **[新增服務]** 。 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]，然後選取 [新增服務]。 隨即開啟 [新增 Oracle CDC Windows 服務] 對話方塊。  
   
  **OR**  
   
- 若要編輯 CDC 服務屬性，請選取您要編輯屬性的服務，然後按一下 **[動作]** 窗格中的 **[屬性]** 。 您也可以用滑鼠右鍵按一下您要使用的服務，然後選取 [屬性]****。 [CDC 服務屬性] 對話方塊隨即開啟。  
+ 若要編輯 CDC 服務屬性，請選取您要編輯屬性的服務，然後按一下 **[動作]** 窗格中的 **[屬性]** 。 您也可以用滑鼠右鍵按一下您要使用的服務，然後選取 [屬性]。 [CDC 服務屬性] 對話方塊隨即開啟。  
   
  在 [新增 Oracle CDC Windows 服務] 對話方塊或 [CDC 服務屬性] 對話方塊中輸入以下資訊。  
   

@@ -14,11 +14,11 @@ ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d0107e21e71c8330e3990d4fe937e030ecd0e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428960"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128841"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>設定資料收集器的屬性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88428960"
  顯示用於管理資料倉儲的關聯式資料庫名稱。  
   
  **測試連接**  
- 使用設定資料收集時所提供的資訊，測試與指定之 [伺服器]**** 的連接。  
+ 使用設定資料收集時所提供的資訊，測試與指定之 [伺服器] 的連接。  
   
  **快取目錄**  
- 指定在收集而來的資料上傳到管理資料倉儲之前，應該將這些資料儲存在收集資料之系統上的哪一個目錄。 如果未指定 [快取目錄]****，資料收集器會嘗試尋找 %TEMP% 和 %TMP% 環境變數的位置，並使用其中一個位置當做暫存區的預設位置。 如果未設定這些環境變數，就會發生錯誤，而且系統會提示您建立快取目錄。  
+ 指定在收集而來的資料上傳到管理資料倉儲之前，應該將這些資料儲存在收集資料之系統上的哪一個目錄。 如果未指定 [快取目錄]，資料收集器會嘗試尋找 %TEMP% 和 %TMP% 環境變數的位置，並使用其中一個位置當做暫存區的預設位置。 如果未設定這些環境變數，就會發生錯誤，而且系統會提示您建立快取目錄。  
   
 ## <a name="data-collection-properties-advanced-tab"></a>資料收集屬性 (進階索引標籤)  
  使用這個頁面可針對管理資料倉儲的連接來設定重試設定。  

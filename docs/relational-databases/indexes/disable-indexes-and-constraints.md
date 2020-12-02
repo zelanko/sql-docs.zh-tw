@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424170"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130280"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "88424170"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]****。  
+5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]。  
   
 6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "88424170"
   
 3.  按一下加號展開要停用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引]**** 資料夾，並選取 [全部停用]****。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，並選取 [全部停用]。  
   
 5.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要停用的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "88424170"
  顯示建立索引的資料表名稱或檢視名稱。  
   
  **索引類型**  
- 顯示索引的類型：[叢集]****、[非叢集]****、[空間]**** 或 [XML]****。  
+ 顯示索引的類型：[叢集]、[非叢集]、[空間] 或 [XML]。  
   
  **狀態**  
  顯示停用作業的狀態。 執行之後可能的值：  

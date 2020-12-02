@@ -15,11 +15,11 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: eacc75c7f2a5a5ba7993e7f3d574b749b86acd2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455547"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130969"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>點對點 - 點對點複寫中的衝突偵測
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

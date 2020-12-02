@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486869"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130255"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)＞。  
   
- 當您建立唯一的索引時，可以設定忽略重複之索引鍵的選項。 如果此選項設定為 [是]****，且您嘗試透過加入影響多個資料列的資料來建立重複的索引鍵 (使用 INSERT 陳述式)，則不會加入包含重複索引鍵的資料列。 如果此選項設定為 [ **否**]，則整個插入作業會失敗，且所有資料都會回復。  
+ 當您建立唯一的索引時，可以設定忽略重複之索引鍵的選項。 如果此選項設定為 [是]，且您嘗試透過加入影響多個資料列的資料來建立重複的索引鍵 (使用 INSERT 陳述式)，則不會加入包含重複索引鍵的資料列。 如果此選項設定為 [ **否**]，則整個插入作業會失敗，且所有資料都會回復。  
   
 > [!NOTE]  
 >  如果一個以上的資料列中的某單一資料行為 NULL，您將無法建立該單一資料行的唯一索引。 同樣地，如果一個以上的資料列中的一組資料行全為 NULL 的話，您將無法在該組資料行上建立唯一索引。 基於索引目的，這些會被視為重複的值。  
@@ -58,7 +58,7 @@ ms.locfileid: "88486869"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 唯一索引的優點  
   
--   多重資料行唯一索引可保證索引鍵的每一個值組合都是唯一的。 例如，若在 **LastName**、 **FirstName**和 **MiddleName** 資料行的組合上建立唯一索引，則該資料表中不得有兩個資料列具有這些資料行的相同值組合。  
+-   多重資料行唯一索引可保證索引鍵的每一個值組合都是唯一的。 例如，若在 **LastName**、 **FirstName** 和 **MiddleName** 資料行的組合上建立唯一索引，則該資料表中不得有兩個資料列具有這些資料行的相同值組合。  
   
 -   假設每個資料行中的資料是唯一的，您就可以在同一個資料表上建立一個唯一的叢集索引和多個唯一的非叢集索引。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "88486869"
   
 2.  展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要建立唯一索引的資料表，然後選取 [設計]****。  
+3.  以滑鼠右鍵按一下要建立唯一索引的資料表，然後選取 [設計]。  
   
-4.  在 [資料表設計工具]**** 功能表中，選取 [索引/索引鍵]****。  
+4.  在 [資料表設計工具] 功能表中，選取 [索引/索引鍵]。  
   
-5.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
+5.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
   
-6.  從 [選取的主索引鍵/唯一索引鍵或索引]**** 文字方塊中選取新索引。  
+6.  從 [選取的主索引鍵/唯一索引鍵或索引] 文字方塊中選取新索引。  
   
 7.  在主要方格的 [(一般)] 底下，選取 [類型]，然後從清單中選擇 [索引]。  
   

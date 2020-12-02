@@ -12,11 +12,11 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425060"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129645"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description (SSISDB 資料庫)
 
@@ -52,7 +52,7 @@ catalog.set_folder_description [ @folder_name = ] folder_name
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  預存程序會傳回訊息，以確認新資料夾描述的設定。  

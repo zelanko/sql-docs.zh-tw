@@ -26,11 +26,11 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac14d633e221e50fb821d92c0c1a0f61b2ce5efd
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688715"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131272"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ## <a name="permissions"></a>權限  
  需要 CREATE SERVER ROLE 權限或系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
- 此外，也需要登入之 *server_principal* 的 IMPERSONATE、作為 *server_principal*之伺服器角色的 ALTER 權限，或作為 server_principal 之 Windows 群組中的成員資格。  
+ 此外，也需要登入之 *server_principal* 的 IMPERSONATE、作為 *server_principal* 之伺服器角色的 ALTER 權限，或作為 server_principal 之 Windows 群組中的成員資格。  
   
  這會引發 Audit Server Principal Management 事件，且物件類型設定為伺服器角色而事件類型設定為新增。  
   

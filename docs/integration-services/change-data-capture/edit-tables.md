@@ -14,11 +14,11 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d691afbf3f32b249674627b4aa1430075910c68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457711"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130671"
 ---
 # <a name="edit-tables"></a>編輯資料表
 
@@ -37,16 +37,16 @@ ms.locfileid: "88457711"
 -   **安全性角色**：用來取得變更資料之存取權的資料庫角色名稱。 您可以在此資料行中按一下任何資料格，手動編輯 **security_role**。  
   
  **加入資料表**  
- 按一下 [加入資料表]**** 開啟 [資料表選取範圍] 對話方塊，即可[將資料表加入至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)。 當您初次在此工作階段存取 Oracle 資料庫時，您必須 [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)。  
+ 按一下 [加入資料表] 開啟 [資料表選取範圍] 對話方塊，即可[將資料表加入至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)。 當您初次在此工作階段存取 Oracle 資料庫時，您必須 [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)。  
   
  **編輯**  
- 從清單中選取資料表，然後選取 [編輯]**** 開啟該資料表的 [屬性]**** 對話方塊，即可[編輯資料表屬性](../../integration-services/change-data-capture/edit-the-table-properties.md)。  
+ 從清單中選取資料表，然後選取 [編輯] 開啟該資料表的 [屬性] 對話方塊，即可[編輯資料表屬性](../../integration-services/change-data-capture/edit-the-table-properties.md)。  
   
 > [!NOTE]  
 >  您不能針對已經有鏡像資料表的資料表編輯類型對應。 您只能針對新的資料表編輯類型對應。  
   
  **移除**  
- 從清單中選取資料表，並按一下 [移除]****，從 CDC 執行個體中移除此資料表。  
+ 從清單中選取資料表，並按一下 [移除]，從 CDC 執行個體中移除此資料表。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c953e5a707bb197457d76e9d5d4f64635515ffce
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 57c864996d15886eb69ef7caf0f000349b238b9c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807538"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130581"
 ---
 # <a name="back-up-a-transaction-log"></a>備份交易記錄
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91807538"
   
 ### <a name="permissions"></a><a name="Permissions"></a> 權限
 
-需要的 `BACKUP DATABASE` 和 `BACKUP LOG` 權限預設為授與給 **系統管理員**固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 請檢查權限是否正確，再開始進行。
+需要的 `BACKUP DATABASE` 和 `BACKUP LOG` 權限預設為授與給 **系統管理員** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 請檢查權限是否正確，再開始進行。
   
  備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)並不會檢查檔案存取權限。 當您嘗試備份或還原時，在嘗試存取[實體資源](backup-devices-sql-server.md)之前，備份裝置實體檔案的權限問題可能不太明顯。 同樣地，請檢查權限，再開始進行。
 

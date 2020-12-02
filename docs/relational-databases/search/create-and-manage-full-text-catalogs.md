@@ -18,11 +18,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067336"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130928"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
 
@@ -122,7 +122,7 @@ GO
   
 3.  以滑鼠右鍵按一下要移除的全文檢索目錄，然後選取 [刪除]。  
   
-4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
+4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
 
 ## <a name="next-step"></a>後續步驟
 [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)

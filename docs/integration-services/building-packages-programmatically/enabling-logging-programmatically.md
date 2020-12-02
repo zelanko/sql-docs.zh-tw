@@ -25,11 +25,11 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 358bd8e70acba47961909583c153669e21389105
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352134"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130697"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
 
@@ -41,10 +41,10 @@ ms.locfileid: "88352134"
  有好幾種類型的記錄提供者可供容器使用。 這可提供以多種格式建立和儲存記錄資訊的彈性。 在記錄中編列容器物件是兩個步驟的程序：首先啟用記錄，然後選取記錄提供者。 該容器的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> 與 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 屬性是用以指定記錄的事件並選取記錄提供者。  
   
 ## <a name="enabling-logging"></a>啟用記錄  
- 在每個可以執行記錄的容器中所找到的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 屬性，可判斷容器的事件資訊是否記錄到事件記錄檔中。 將會從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 結構指派值給這個屬性，而且預設會從容器的父系繼承。 如果容器是封裝，也因此沒有父系，則屬性會使用 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>，而其預設值為 [已停用]****。  
+ 在每個可以執行記錄的容器中所找到的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 屬性，可判斷容器的事件資訊是否記錄到事件記錄檔中。 將會從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 結構指派值給這個屬性，而且預設會從容器的父系繼承。 如果容器是封裝，也因此沒有父系，則屬性會使用 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>，而其預設值為 [已停用]。  
   
 ### <a name="selecting-a-log-provider"></a>選取記錄提供者  
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 屬性設定為 [已啟用]**** 之後，會將記錄提供者加入容器的 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合以完成該程序。 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合可在 <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> 物件上使用，而且包含為容器所選取的記錄提供者。 會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> 方法以建立提供者並將它加入集合中。 該方法接著會傳回加入集合的記錄提供者。 每個提供者都有該提供者唯一的組態設定，而且這些屬性是使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 屬性來設定。  
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> 屬性設定為 [已啟用] 之後，會將記錄提供者加入容器的 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合以完成該程序。 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> 集合可在 <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> 物件上使用，而且包含為容器所選取的記錄提供者。 會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> 方法以建立提供者並將它加入集合中。 該方法接著會傳回加入集合的記錄提供者。 每個提供者都有該提供者唯一的組態設定，而且這些屬性是使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 屬性來設定。  
   
  下列表格列出可用的記錄提供者、其說明及其 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 資訊。  
   

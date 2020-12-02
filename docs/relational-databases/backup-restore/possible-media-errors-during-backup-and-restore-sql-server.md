@@ -22,14 +22,14 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f0405ddad68df7c4e34d0af17d2e9da81adfe535
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670108"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130334"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在備份和還原期間可能的媒體錯誤 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "85670108"
   
 2.  不論頁面總和檢查碼是否存在，BACKUP 都會產生備份資料流的個別備份總和檢查碼。 還原作業可以選擇性地利用備份總和檢查碼來驗證備份是否損毀。 備份總和檢查碼儲存在備份媒體中，而不是儲存在資料庫頁面中。 在還原時，您可以選擇性地使用備份總和檢查碼。  
   
-3.  備份組會以旗標標示為包含備份總和檢查碼 (在 **msdb..backupset** 的 **has_backup_checksums**資料行中)。 如需詳細資訊，請參閱 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)。  
+3.  備份組會以旗標標示為包含備份總和檢查碼 (在 **msdb..backupset** 的 **has_backup_checksums** 資料行中)。 如需詳細資訊，請參閱 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)。  
 
  在還原作業期間，如果備份媒體上有備份總和檢查碼，依預設 RESTORE 和 RESTORE VERIFYONLY 陳述式都會驗證備份總和檢查碼及分頁總和檢查碼。 如果沒有備份總和檢查碼，這二種還原作業仍會繼續進行，但不會執行任何驗證；這是因為沒有備份總和檢查碼，還原作業就不能確實地驗證分頁總和檢查碼。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85670108"
   
 2.  將錯誤記錄在 SQL Server 錯誤記錄檔中。  
   
-3.  將備份組標示為包含該類型的錯誤 (在 **msdb.backupset** 的 **is_damaged**資料行中)。 如需詳細資訊，請參閱 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)。  
+3.  將備份組標示為包含該類型的錯誤 (在 **msdb.backupset** 的 **is_damaged** 資料行中)。 如需詳細資訊，請參閱 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)。  
   
 4.  發出訊息指出已順利產生備份，但包含分頁錯誤。  
   

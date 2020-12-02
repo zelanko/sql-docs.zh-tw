@@ -12,11 +12,11 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0942fa73c29b14ba5b07b305126e4ba70bfa0cb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477181"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129925"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 

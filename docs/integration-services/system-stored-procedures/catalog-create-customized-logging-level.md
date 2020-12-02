@@ -12,11 +12,11 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7aaf0fb0ccdd285944e5fceaba561bd626317121
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477111"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129907"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
@@ -50,7 +50,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @profile_value = ] *profile_value*  
  您想要新自訂記錄層次記錄的統計資料。  
   
- 統計資料的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理]**** 對話方塊的 [統計資料]**** 索引標籤上的值。  
+ 統計資料的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理] 對話方塊的 [統計資料] 索引標籤上的值。  
   
 -   Execution = 0  
   
@@ -63,7 +63,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @events_value = ] *events_value*  
  您想要新自訂記錄層次記錄的事件。  
   
- 事件的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理]**** 對話方塊的 [事件]**** 索引標籤上的值。  
+ 事件的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理] 對話方塊的 [事件] 索引標籤上的值。  
   
 |沒有事件內容的事件|具有事件內容的事件|  
 |----------------------------------|-------------------------------|  

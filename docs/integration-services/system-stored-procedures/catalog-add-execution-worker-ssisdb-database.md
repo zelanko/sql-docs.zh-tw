@@ -13,11 +13,11 @@ author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456989"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129949"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (SSISDB 資料庫)
 
@@ -54,7 +54,7 @@ Scale Out Worker 的背景工作代理程式識別碼。 *workeragent_id* 是 **
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
  
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  

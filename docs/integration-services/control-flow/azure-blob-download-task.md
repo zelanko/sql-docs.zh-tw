@@ -15,11 +15,11 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6437172ce0336938ad17a8b49bdb81e6fc4a0177
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350024"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130589"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下載工作
 
@@ -28,9 +28,9 @@ ms.locfileid: "88350024"
 
 Azure Blob 下載工作可讓 SSIS 封裝能從 Azure Blob 儲存體下載檔案。
 
-若要加入 **Azure Blob 下載工作**，請將其拖放至 SSIS 設計工具，然後按兩下或按一下滑鼠右鍵，再按一下 [編輯]****，即可看到以下 [Azure Blob 下載工作編輯器]**** 對話方塊。  
+若要加入 **Azure Blob 下載工作**，請將其拖放至 SSIS 設計工具，然後按兩下或按一下滑鼠右鍵，再按一下 [編輯]，即可看到以下 [Azure Blob 下載工作編輯器] 對話方塊。  
   
- **Azure Blob 下載工作**是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  
+ **Azure Blob 下載工作** 是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  
   
  下表提供此對話方塊中欄位的描述。  
 

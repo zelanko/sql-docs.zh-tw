@@ -12,11 +12,11 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c77113417a108632aab150e75011399f9ad3a752
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477079"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129586"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (SSISDB 資料庫)
 
@@ -50,7 +50,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  

@@ -14,11 +14,11 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 85fbbe596954083015a0533995784f31609d1b90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448011"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130199"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88448011"
 ||如果尚未以目標資料庫使用者連接到資料庫，請立刻執行此動作。|  
 ||[建立佇列](../../t-sql/statements/create-queue-transact-sql.md) 來接收事件通知訊息，並 [建立服務](../../t-sql/statements/create-service-transact-sql.md) 來傳遞訊息。|  
 ||在目標服務上[授與 SEND 權限](../../t-sql/statements/grant-transact-sql.md) 給來源資料庫使用者。|  
-|提供來源資料庫的 Service Broker 識別碼給目標伺服器。 此識別碼可利用查詢 **sys.databases** 目錄檢視的 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。 若為伺服器層級事件通知，請使用 **msdb**的 Service Broker 識別碼。|提供目標資料庫的 Service Broker 識別碼給來源伺服器。|  
+|提供來源資料庫的 Service Broker 識別碼給目標伺服器。 此識別碼可利用查詢 **sys.databases** 目錄檢視的 [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。 若為伺服器層級事件通知，請使用 **msdb** 的 Service Broker 識別碼。|提供目標資料庫的 Service Broker 識別碼給來源伺服器。|  
   
  **步驟 4：建立路由及設定伺服器層級驗證。**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88448011"
 |如果 **master** 資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。|如果 **master** 資料庫沒有主要金鑰，請建立主要金鑰。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) 來驗證資料庫。|建立憑證來驗證資料庫。|  
 |[備份憑證](../../t-sql/statements/backup-certificate-transact-sql.md) 到可供目標伺服器存取的檔案。|備份憑證到可供來源伺服器存取的檔案。|  
-|[建立端點](../../t-sql/statements/create-endpoint-transact-sql.md)，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱) 和驗證的憑證名稱。|建立端點，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱**) 和驗證憑證的名稱。|  
+|[建立端點](../../t-sql/statements/create-endpoint-transact-sql.md)，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱) 和驗證的憑證名稱。|建立端點，並指定已同意的 TCP 通訊埠編號、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE 憑證名稱) 和驗證憑證的名稱。|  
 |[建立登入](../../t-sql/statements/create-login-transact-sql.md)，並指定目標伺服器的登入。|建立登入，並指定來源伺服器的登入。|  
 |在端點[授與 CONNECT 權限](../../t-sql/statements/grant-transact-sql.md) 給目標驗證器登入。|在端點授與 CONNECT 權限給來源驗證器登入。|  
 |[建立使用者](../../t-sql/statements/create-user-transact-sql.md)，並指定目標驗證器登入。|建立使用者，並指定來源驗證器登入。|  

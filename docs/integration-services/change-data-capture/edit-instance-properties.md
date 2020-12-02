@@ -12,11 +12,11 @@ ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 926ee3afb3828419a6863e99f27f529d4dcc1bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478074"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130638"
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
 

@@ -22,11 +22,11 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 26fb837dc28b0ac7b2845a64eab800512e508b7b
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497622"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131066"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 
 ## <a name="arguments"></a>引數
  *IF EXISTS*  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
  只有在類型已存在時，才能有條件地將其卸除。  
   

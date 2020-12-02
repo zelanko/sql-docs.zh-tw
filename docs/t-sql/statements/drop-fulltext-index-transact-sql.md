@@ -23,11 +23,11 @@ ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 7883bb6eab65b2877e08c9ad9c0e9c869d4988af
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380424"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131400"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

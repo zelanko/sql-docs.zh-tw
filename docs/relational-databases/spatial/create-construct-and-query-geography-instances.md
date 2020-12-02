@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006336"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130198"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006336"
  [STEndpoint &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> 維度  
- 非空的 **geography** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point** 和 **MultiPoint** 等零維 **geography**沒有長度或區域。 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString**這類一維物件都有長度。 **Polygon、CurvePolygon**和 **MultiPolygon**這類二維執行個體都有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告其內容的最大維度。  
+ 非空的 **geography** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point** 和 **MultiPoint** 等零維 **geography** 沒有長度或區域。 **LineString、CircularString**、 **CompoundCurve** 和 **MultiLineString** 這類一維物件都有長度。 **Polygon、CurvePolygon** 和 **MultiPolygon** 這類二維執行個體都有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告其內容的最大維度。  
   
  **傳回執行個體的維度**  
  [STDimension &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,7 +175,7 @@ ms.locfileid: "92006336"
  [STArea &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- 「空的」**geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
+ 「空的」**geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、 **CompoundCurve** 和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  

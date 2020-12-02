@@ -16,11 +16,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465060"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130948"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88465060"
   
 這個預設位置包含下列檔案：  
   
--   **特定語言**同義字檔案  
+-   **特定語言** 同義字檔案  
 
     安裝程式會在上述位置安裝空的同義字檔案。 系統會針對每個支援的語言提供一個個別的檔案。 系統管理員可以自訂這些檔案。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88465060"
      
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
--   **通用**同義字檔案  
+-   **通用** 同義字檔案  
   
     空的通用同義字檔案：tsGlobal.xml。  
 

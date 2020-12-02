@@ -12,14 +12,14 @@ helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 00cec6d2ce9fcb74151bcbc6e87a58f9b8fbbfe2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670447"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130369"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85670447"
 >  如果備份是在附加至伺服器的多個裝置上進行，則在執行線上還原時，必須有相同數目的裝置可用。  
   
 > [!CAUTION]  
->  使用快照集備份時，您無法執行「線上還原」  。 如需 **快照集備份**的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+>  使用快照集備份時，您無法執行「線上還原」  。 如需 **快照集備份** 的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ## <a name="log-backups-for-online-restore"></a>線上還原的記錄備份  
  在線上還原中，復原點就是還原的資料變成離線或最後一次設為唯讀的時間點。 能夠重建及包含此復原點的交易記錄備份，必須完整備妥。 一般而言，在該時間點後必須有記錄備份，才能涵蓋檔案的復原點。 唯一的例外就是從資料變成唯讀後建立的資料備份中，對唯讀資料所進行的線上還原。 在這種情況下，您不需要有記錄備份。  

@@ -31,11 +31,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300523"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131397"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -177,7 +177,7 @@ CREATE USER user_name
 
 ## <a name="arguments"></a>引數
  *user_name*  
- 指定在這個資料庫內用來識別使用者的名稱。 *user_name* 是一種 **sysname** 。 該名稱長度最多可達 128 個字元。 當建立依據 Windows 主體的使用者時，除非指定另一個使用者名稱，否則 Windows 主體名稱會成為使用者名稱。  
+ 指定在這個資料庫內用來識別使用者的名稱。 *user_name* 是一種 **sysname**。 該名稱長度最多可達 128 個字元。 當建立依據 Windows 主體的使用者時，除非指定另一個使用者名稱，否則 Windows 主體名稱會成為使用者名稱。  
   
  LOGIN *login_name*  
  指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 SQL Server 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立從 Windows 主體所對應的登入時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
@@ -187,11 +187,11 @@ CREATE USER user_name
  WITH DEFAULT_SCHEMA = *schema_name*  
  指定在解析這個資料庫使用者的物件名稱時，伺服器所搜尋到的第一個結構描述。  
   
- ' *windows_principal* '  
+ '*windows_principal*'  
  為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 從 Windows 主體建立使用者時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。
   
- ' *Azure_Active_Directory_principal* '  
- **適用於** ：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
+ '*Azure_Active_Directory_principal*'  
+ **適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
   
  為所要建立的資料庫使用者指定 Azure Active Directory 主體。 *Azure_Active_Directory_principal* 可以是 Azure Active Directory 使用者、Azure Active Directory 群組或 Azure Active Directory 應用程式。 (Azure Active Directory 使用者中不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中使用 Windows 驗證登入；只有資料庫使用者可以)。連接字串必須將自主資料庫指定為初始目錄。
 
@@ -208,8 +208,8 @@ CREATE USER user_name
   
  如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](/azure/azure-sql/database/authentication-aad-overview)。  
   
-WITH PASSWORD = ' *password* '  
- **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+WITH PASSWORD = '*password*'  
+ **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  只能用於自主資料庫。 指定正在建立之使用者的密碼。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。  
   
@@ -217,17 +217,17 @@ WITHOUT LOGIN
  指定使用者不對應到現有的登入。  
   
 CERTIFICATE *cert_name*  
- **適用於** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定目前建立之資料庫使用者的憑證。  
   
 ASYMMETRIC KEY *asym_key_name*  
- **適用於** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定目前建立之資料庫使用者的非對稱金鑰。  
   
 DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
- **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定新使用者的預設語言。 如果已指定使用者的預設語言，但稍後變更資料庫的預設語言，使用者預設語言會保持為指定值。 如果未指定預設語言，則使用者的預設語言將是資料庫的預設語言。 如果未指定使用者的預設語言，而稍後變更資料庫的預設語言，使用者的預設語言會變成資料庫的新預設語言。  
   
@@ -235,12 +235,12 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 >  *DEFAULT_LANGUAGE* 只用於自主資料庫使用者。  
   
 SID = *sid*  
- **適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  僅適用於具有密碼之自主資料庫使用者 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證)。 指定新資料庫使用者的 SID。 如果未選取這個選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將自動指派 SID。 使用 SID 參數即可在多個資料庫中建立具有相同識別 (SID) 的使用者。 當您在多個資料庫中建立使用者以準備 Always On 容錯移轉時，這會很有用。 若要判斷使用者的 SID，請查詢 sys.database_principals。  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這會讓使用者得以在資料表或資料庫間大量複製加密資料，而無須解密資料。 預設值為 OFF。  
   
@@ -380,7 +380,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. 從憑證建立資料庫使用者  
  下列範例會從憑證 `JinghaoLiu` 建立一個資料庫使用者 `CarnationProduction50`。  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -419,7 +419,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. 建立具有密碼的自主資料庫使用者  
  下列範例會建立具有密碼之自主資料庫使用者。 您只能在自主資料庫中執行這個範例。  
   
-**適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 如果 DEFAULT_LANGUAGE 已移除，則這個範例才能運作[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 如果 DEFAULT_LANGUAGE 已移除，則這個範例才能運作[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -434,7 +434,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. 為網域登入建立自主資料庫使用者  
  下列範例會為 Contoso 網域中的登入 Fritz，建立自主資料庫使用者。 您只能在自主資料庫中執行這個範例。  
   
-**適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -446,7 +446,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. 建立具有指定 SID 之自主資料庫使用者  
  下列範例會建立名稱為 CarmenW 的 SQL Server 驗證自主資料庫使用者。 您只能在自主資料庫中執行這個範例。  
   
-**適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 建立使用者以複製加密的資料  
  下列範例會建立一個使用者，以將受 Always Encrypted 功能保護的資料，從某一組資料表 (包含加密的資料行) 複製到其他組具有加密資料行的資料表 (位於相同或不同的資料庫)。  如需詳細資訊，請參閱[移轉透過 Always Encrypted 保護的機密資料](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。  
   
-**適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```sql  
 CREATE USER [Chin]   
@@ -479,7 +479,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> 從 Azure AD 登入建立 **USER** 時，將 *user_name* 指定為來自 **LOGIN** 的相同 *login_name* 。
+> 從 Azure AD 登入建立 **USER** 時，將 *user_name* 指定為來自 **LOGIN** 的相同 *login_name*。
 
 支援從是群組的 Azure AD 登入，將 Azure AD 使用者建立為群組。
 

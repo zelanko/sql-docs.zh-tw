@@ -22,14 +22,14 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d8dd7099a8460d72104a3e6616d75bc5586c82c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d9a264d6b5248f4033dd1bd3e282de4872cd2eb6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718055"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130390"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
 
@@ -217,7 +217,7 @@ GO
   
 -   媒體上的現有備份尚未到期 (若指定了 SKIP，則不會檢查到期日)。  
   
-     到期日會指定備份過期的日期，之後就可以被別的備份覆寫。 建立備份時，可以指定到期日。 依預設，到期日是由 **sp_configure** 所設定的 **media retention**選項來決定。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
+     到期日會指定備份過期的日期，之後就可以被別的備份覆寫。 建立備份時，可以指定到期日。 依預設，到期日是由 **sp_configure** 所設定的 **media retention** 選項來決定。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
   
 -   媒體名稱 (如果提供的話) 不符合備份媒體的名稱。  
   

@@ -14,11 +14,11 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1d5eb987c5dfd62a67bbe6b536b4c2258463741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457715"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130668"
 ---
 # <a name="edit-the-oracle-database-properties"></a>編輯 Oracle 資料庫屬性
 
@@ -39,7 +39,7 @@ ms.locfileid: "88457715"
  電腦與您使用之 Oracle 資料庫之間的 Oracle 連接字串。 這個欄位是唯讀的，而且您無法編輯此資訊。 這是因為連接字串的某些變更可能會讓 Oracle CDC 執行個體完全指向另一個 Oracle 資料庫，因而損毀 **cdc.xdbcdc_config** 資料表中儲存的 CDC 執行個體狀態。 如果需要少量的變更，您可以直接在組態資料表中使用 SQL Server Management Studio 變更連接字串。  
   
  **Oracle 記錄採礦驗證**  
- 若要針對包含記錄採礦者的 Oracle 資料庫輸入驗證認證，請在 [驗證]**** 底下選取下列其中一項：  
+ 若要針對包含記錄採礦者的 Oracle 資料庫輸入驗證認證，請在 [驗證] 底下選取下列其中一項：  
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   

@@ -12,11 +12,11 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c091618be5e414faa15e200fc8b30230f793eaf
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765725"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96130248"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>以 PATH 模式格式化巢狀的 JSON 輸出 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "91765725"
 **PATH** 模式讓您建立包裝函式物件和巢狀複雜屬性。 結果會格式化為 JSON 物件陣列。  
   
 替代方法是使用 **AUTO** 選項，以根據 **SELECT** 陳述式的結構自動格式化輸出。
- -   如需 **AUTO** 選項的詳細資訊，請參閱[使用 AUTO 模式自動格式化 JSON 輸出](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
+ -   如需 **AUTO** 選項的詳細資訊，請參閱 [使用 AUTO 模式自動格式化 JSON 輸出](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
  -   如需這兩個選項的概觀，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。
  
-以下是 **FOR JSON** 子句搭配 **PATH** 選項的一些範例。 使用點分隔資料行名稱，或使用巢狀查詢格式化巢狀結果，如下例所示。 根據預設，null 值不會包含在 **FOR JSON**輸出中。  [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 是 JSON 查詢的建議使用查詢編輯器，因為此編輯器會自動格式化 JSON 結果 (如本文所示)，而非顯示一般字串。
+以下是 **FOR JSON** 子句搭配 **PATH** 選項的一些範例。 使用點分隔資料行名稱，或使用巢狀查詢格式化巢狀結果，如下例所示。 根據預設，null 值不會包含在 **FOR JSON** 輸出中。  [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) 是 JSON 查詢的建議使用查詢編輯器，因為此編輯器會自動格式化 JSON 結果 (如本文所示)，而非顯示一般字串。
 
 ## <a name="example---dot-separated-column-names"></a>範例 - 點分隔資料行名稱  
 下列查詢會將 AdventureWorks `Person` 資料表中的前五個資料列格式化為 JSON。  

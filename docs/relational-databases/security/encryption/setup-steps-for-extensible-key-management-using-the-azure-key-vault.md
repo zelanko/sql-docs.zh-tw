@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866609"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130215"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>使用 Azure Key Vault 設定 SQL Server TDE 可延伸金鑰管理
 
@@ -245,7 +245,7 @@ SQL Server Database Engine 將使用在此處建立的金鑰保存庫和金鑰�
     > [!IMPORTANT]
     > Azure AD 服務主體必須至少具有金鑰保存庫 [取得]、[列出]、[包裝金鑰] 和 [解除包裝金鑰] 的權限。  
   
-    如下列命令所示，您可將**應用程式 (用戶端) 識別碼** ([步驟 1：設定 Azure AD 服務主體](#step-1-set-up-an-azure-ad-service-principal)) 用於 `ServicePrincipalName` 參數。 `Set-AzKeyVaultAccessPolicy` 順利執行時，會以沒有輸出的無訊息模式執行。  
+    如下列命令所示，您可將 **應用程式 (用戶端) 識別碼** ([步驟 1：設定 Azure AD 服務主體](#step-1-set-up-an-azure-ad-service-principal)) 用於 `ServicePrincipalName` 參數。 `Set-AzKeyVaultAccessPolicy` 順利執行時，會以沒有輸出的無訊息模式執行。  
   
     ```powershell  
     Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `  
@@ -406,14 +406,14 @@ SQL Server 連接器安裝也可讓您選擇性地下載 SQL Server 加密的範
     以下列方式修改此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼：  
   
     - 編輯 `IDENTITY` 引數 (`ContosoEKMKeyVault`)，以指向 Azure 金鑰保存庫。
-      - 如果使用的是*全域 Azure*，請使用 Azure 金鑰保存庫名稱來取代 `IDENTITY` 引數 ([步驟 2：建立金鑰保存庫](#step-2-create-a-key-vault))。
+      - 如果使用的是 *全域 Azure*，請使用 Azure 金鑰保存庫名稱來取代 `IDENTITY` 引數 ([步驟 2：建立金鑰保存庫](#step-2-create-a-key-vault))。
       - 如果使用的是「私人 Azure 雲端」(例如 Azure Government、Azure China 21Vianet 或 Azure 德國)，請將 `IDENTITY` 引數取代為[＜使用 PowerShell 建立金鑰保存庫和金鑰＞](#create-a-key-vault-and-key-by-using-powershell)一節的步驟 3 中所傳回保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。
-    - 將 `SECRET` 引數的第一個部分取代為 Azure Active Directory 用戶端識別碼 ([步驟 1：設定 Azure AD 服務主體](#step-1-set-up-an-azure-ad-service-principal))。 在此範例中，**用戶端識別碼**為 `9A57CBC54C4C40E2B517EA677E0EFA00`。  
+    - 將 `SECRET` 引數的第一個部分取代為 Azure Active Directory 用戶端識別碼 ([步驟 1：設定 Azure AD 服務主體](#step-1-set-up-an-azure-ad-service-principal))。 在此範例中，**用戶端識別碼** 為 `9A57CBC54C4C40E2B517EA677E0EFA00`。  
   
       > [!IMPORTANT]
       > 請務必移除應用程式 (用戶端) 識別碼中的連字號。  
   
-    - 使用**用戶端密碼**完成 `SECRET` 引數的第二個部分 ([步驟 1：設定 Azure AD 服務主體](#step-1-set-up-an-azure-ad-service-principal))。  在此範例中，用戶端密碼為 `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`。 `SECRET` 引數最終字串會是一連串較長的字母和數字，不含連字號。  
+    - 使用 **用戶端密碼** 完成 `SECRET` 引數的第二個部分 ([步驟 1：設定 Azure AD 服務主體](#step-1-set-up-an-azure-ad-service-principal))。  在此範例中，用戶端密碼為 `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`。 `SECRET` 引數最終字串會是一連串較長的字母和數字，不含連字號。  
   
     ```sql  
     USE master;  
@@ -466,7 +466,7 @@ SQL Server 連接器安裝也可讓您選擇性地下載 SQL Server 加密的範
 1. 改變新的登入，並將 EKM 認證對應至新的登入。
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

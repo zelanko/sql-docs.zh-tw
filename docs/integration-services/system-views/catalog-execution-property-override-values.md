@@ -12,11 +12,11 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 230e2057c8257a37eb96c683abaf8348307a0cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425090"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129463"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
@@ -36,7 +36,7 @@ ms.locfileid: "88425090"
 |sensitive|**bit**|當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。|  
   
 ## <a name="remarks"></a>備註  
- 這個檢視會針對使用 [執行封裝]**** 對話方塊之 [進階]**** 索引標籤中的 [屬性覆寫]**** 區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑]**** 屬性。  
+ 這個檢視會針對使用 [執行封裝] 對話方塊之 [進階] 索引標籤中的 [屬性覆寫] 區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑] 屬性。  
   
 ## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  
@@ -45,7 +45,7 @@ ms.locfileid: "88425090"
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 > [!NOTE]  
 >  當您擁有在伺服器上執行操作的權限時，也會具有檢視作業資訊的權限。 強制使用資料列層級安全性，只會顯示您具有檢視權限的資料列。  

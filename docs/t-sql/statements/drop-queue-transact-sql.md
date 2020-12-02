@@ -23,11 +23,11 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4bf41bb420ddaaccd0f1899c641a30a17bbb8fcd
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380340"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131165"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

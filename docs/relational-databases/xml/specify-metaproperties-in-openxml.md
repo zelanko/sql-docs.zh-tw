@@ -18,11 +18,11 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728124"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130828"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85728124"
   
  有些中繼屬性的屬性是使用來進行處理。 例如， **xmltext** 中繼屬性的屬性是用來處理溢位。 溢位處理指的是文件中未消耗/未處理的資料。 由 OPENXML 產生之資料列集的其中一個資料行可識別為溢位資料行。 作法是使用 **ColPattern** 參數，將它對應到 *xmltext* 中繼屬性。 然後資料行就會接收溢位資料。 *flags* 參數會判斷資料行是否包含所有資料，或只包含未耗用的資料。  
   
- 以下資料表將列出每個剖析 XML 元素具有的中繼屬性。 這些中繼屬性的屬性可使用命名空間 **urn:schemas-microsoft-com:xml-metaprop**加以存取。 由使用者利用這些中繼屬性直接在 XML 文件中設定的任何值，將予以忽略。  
+ 以下資料表將列出每個剖析 XML 元素具有的中繼屬性。 這些中繼屬性的屬性可使用命名空間 **urn:schemas-microsoft-com:xml-metaprop** 加以存取。 由使用者利用這些中繼屬性直接在 XML 文件中設定的任何值，將予以忽略。  
   
 > [!NOTE]  
 >  您無法在任何 XPath 瀏覽中參考這些中繼屬性。  
@@ -116,7 +116,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 ```  
   
 ### <a name="b-retrieving-the-whole-xml-document"></a>B. 擷取整份 XML 文件  
- 在此範例中，會使用 OPENXML 建立範本 XML 文件的單一資料行資料列集檢視。 此資料行 **Col1**會對應到 **xmltext** 中繼屬性，而成為溢位資料行。 所以，此資料行將接收未耗用的資料。 在此案例中，就是指整份文件。  
+ 在此範例中，會使用 OPENXML 建立範本 XML 文件的單一資料行資料列集檢視。 此資料行 **Col1** 會對應到 **xmltext** 中繼屬性，而成為溢位資料行。 所以，此資料行將接收未耗用的資料。 在此案例中，就是指整份文件。  
   
  然後 SELECT 陳述式會傳回完整的資料列集。  
   

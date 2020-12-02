@@ -12,11 +12,11 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6a8bb809f349ce68b12abaee171928805d1fe0df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430040"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129814"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
 
@@ -66,7 +66,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會造成預存程序引發錯誤的某些條件：  

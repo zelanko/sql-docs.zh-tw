@@ -23,11 +23,11 @@ ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4491f35570a4f60d2a3deb9e4c3271c34f699369
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380367"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131178"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

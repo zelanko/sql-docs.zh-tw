@@ -1,11 +1,11 @@
 ---
-title: 'sys. dm_exec_query_optimizer_memory_gateways (Transact-sql) '
+title: 'sys.dm_exec_query_optimizer_memory_gateways (Transact-sql) '
 description: 傳回用來節流並行查詢優化的資源信號目前狀態
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646398"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503362"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-sql) 
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -54,7 +54,7 @@ Azure SQL Database 需要資料庫中的 VIEW DATABASE STATE 許可權。
 ## <a name="remarks"></a>備註  
 SQL Server 使用分層式閘道方法來節流允許的並行編譯數目。  使用三個閘道，包括 small、medium 和 big。 閘道可透過較大型的編譯記憶體要求取用者，協助防止整體記憶體資源的耗盡。
 
-等候閘道導致延遲編譯。 除了編譯延遲以外，節流的要求也會累積相關的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型可能表示查詢正在使用大量的記憶體進行編譯，而該記憶體已用盡，或有足夠的記憶體可供整體使用，但特定閘道中的可用單位已經用盡。 **Sys. dm_exec_query_optimizer_memory_gateways**的輸出可以用來針對記憶體不足來編譯查詢執行計畫的案例進行疑難排解。  
+等候閘道導致延遲編譯。 除了編譯延遲以外，節流的要求也會累積相關的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型可能表示查詢正在使用大量的記憶體進行編譯，而該記憶體已用盡，或有足夠的記憶體可供整體使用，但特定閘道中的可用單位已經用盡。 **Sys.dm_exec_query_optimizer_memory_gateways** 的輸出可以用來針對記憶體不足來編譯查詢執行計畫的案例進行疑難排解。  
 
 ## <a name="examples"></a>範例  
 

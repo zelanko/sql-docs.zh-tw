@@ -1,1 +1,1 @@
-Microsoft Azure Synapse Analytics (前稱為 SQL 資料倉儲)  
+Microsoft Azure Synapse Analytics  

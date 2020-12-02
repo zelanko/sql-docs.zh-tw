@@ -12,11 +12,11 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3657b4d171dd3cef40fbde37c8a13dceaebd0b20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484105"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129889"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB 資料庫)
 
@@ -60,7 +60,7 @@ catalog.create_environment [ @folder_name = ] folder_name
   
 -   資料庫角色  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將描述可能會引發錯誤或警告的某些條件：  

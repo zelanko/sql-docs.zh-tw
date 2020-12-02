@@ -12,11 +12,11 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495351"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129575"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (SSISDB 資料庫)
 
@@ -74,7 +74,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單將提供可能會引發錯誤或警告的某些條件：  

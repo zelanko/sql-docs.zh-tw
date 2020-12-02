@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869254"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131013"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "91869254"
   
    - 如果 **allow_push** 的值為 **1**，則發送訂閱受到支援。  
   
-   - 如果 **allow_push** 的值為 **0**，請執行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **\@property** 指定 **allow_push**，並針對 **\@value** 指定**true**。  
+   - 如果 **allow_push** 的值為 **0**，請執行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **\@property** 指定 **allow_push**，並針對 **\@value** 指定 **true**。  
   
 2. 在發行集資料庫的發行者上，執行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 將 **\@subscription_type** 的值指定為 **push**。 如需如何更新訂閱的資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "91869254"
   
    - 如果 **allow_push** 的值為 **1**，則發行集支援發送訂閱。  
   
-   - 如果 **allow_push** 的值不為 **1**，請執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **\@property** 指定 **allow_push**，並針對 **\@value** 指定**true**。  
+   - 如果 **allow_push** 的值不為 **1**，請執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **\@property** 指定 **allow_push**，並針對 **\@value** 指定 **true**。  
   
 2. 在發行集資料庫的發行者上，執行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定下列參數：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "91869254"
   
    - **\@subscriber_type**。 針對客訂閱，請指定 **local**。 針對主訂閱，請指定 **global**。  
   
-   - **\@subscription_priority**。 指定主訂閱的訂閱優先權 (從**0.00** 到 **99.99**)。  
+   - **\@subscription_priority**。 指定主訂閱的訂閱優先權 (從 **0.00** 到 **99.99**)。  
   
    如需詳細資訊，請參閱[進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   

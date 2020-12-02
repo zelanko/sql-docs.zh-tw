@@ -16,14 +16,14 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c328ae66b2ec85080b6da14ff054c824405b8be2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695873"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130762"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85695873"
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|為每個次要資料庫儲存一筆監視記錄，包括有助於監視作業的最後備份檔及最後還原檔的相關資訊。|  
   
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>用來監視記錄傳送的預存程序  
- 監視和記錄資訊會儲存在 **msdb**的資料表中，可使用記錄傳送預存程序來存取。 在下表所指定的伺服器上執行這些預存程序。  
+ 監視和記錄資訊會儲存在 **msdb** 的資料表中，可使用記錄傳送預存程序來存取。 在下表所指定的伺服器上執行這些預存程序。  
   
 |預存程序|描述|執行此程序的伺服器|  
 |----------------------|-----------------|---------------------------|  

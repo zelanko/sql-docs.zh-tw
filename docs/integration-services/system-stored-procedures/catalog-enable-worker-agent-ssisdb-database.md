@@ -12,11 +12,11 @@ ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ddacc7a5599344f330779fad11f647b8e153ccfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430050"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129790"
 ---
 # <a name="catalogenable_worker_agent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 資料庫)
 
@@ -57,7 +57,7 @@ GO
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格 
+-   **系統管理員** 伺服器角色的成員資格 
 
 ## <a name="errors-and-warnings"></a>錯誤和警告
 如果背景工作代理程式識別碼無效，則預存程序會傳回錯誤。

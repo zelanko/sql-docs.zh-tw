@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408494"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130260"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,13 +84,13 @@ ms.locfileid: "88408494"
   
 1.  在 [物件總管] 中，展開要在其中建立叢集索引的資料表。  
   
-2.  以滑鼠右鍵按一下 [索引]**** 資料夾，指向 [新增索引]****，然後選取 [叢集索引…]****。  
+2.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [叢集索引…]。  
   
 3.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
 4.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
-5.  在 [從 _table\_name_ 選取資料行]**** 對話方塊中，選取要新增至叢集索引的資料表資料行核取方塊。  
+5.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至叢集索引的資料表資料行核取方塊。  
   
 6.  按一下 [確定]。  
   
@@ -100,19 +100,19 @@ ms.locfileid: "88408494"
   
 1.  在 [物件總管] 中，展開要在其中建立包含叢集索引之資料表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [資料表]**** 資料夾，然後按一下 [新增資料表…]****。  
+2.  以滑鼠右鍵按一下 [資料表] 資料夾，然後按一下 [新增資料表…]。  
   
 3.  像平常一樣，建立新資料表。 如需詳細資訊，請參閱[建立資料表 &#40;Database Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md)。  
   
-4.  以滑鼠右鍵按一下上面建立的新資料表，然後按一下 [設計]****。  
+4.  以滑鼠右鍵按一下上面建立的新資料表，然後按一下 [設計]。  
   
 5.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-6.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
+6.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
   
-7.  從 [選取的主索引鍵/唯一索引鍵或索引]**** 文字方塊中選取新索引。  
+7.  從 [選取的主索引鍵/唯一索引鍵或索引] 文字方塊中選取新索引。  
   
-8.  在方格中，選取 [建立成 CLUSTERED]****，然後從屬性右邊的下拉式清單中選擇 [是]****。  
+8.  在方格中，選取 [建立成 CLUSTERED]，然後從屬性右邊的下拉式清單中選擇 [是]。  
   
 9. 按一下 [關閉] 。  
   

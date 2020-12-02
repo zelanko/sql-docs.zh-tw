@@ -12,11 +12,11 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243644"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129667"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
 
@@ -40,7 +40,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 ## <a name="arguments"></a>引數  
  [ @execution_id = ] *execution_id*  
- 執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint** 。  
+ 執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint**。  
   
  [ @object_type = ] *object_type*  
  參數類型。  
@@ -63,13 +63,13 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  使用 `20` 值表示專案參數，或使用 `30` 值表示封裝參數。  
   
- *object_type* 是 **smallint** 。  
+ *object_type* 是 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 參數名稱。 *parameter_name* 是 **nvarchar(128)** 。  
+ 參數名稱。 *parameter_name* 是 **nvarchar(128)**。  
   
  [ @parameter_value = ] *parameter_value*  
- 參數的值。 *parameter_value* 是 **sql_variant** 。  
+ 參數的值。 *parameter_value* 是 **sql_variant**。  
   
 ## <a name="remarks"></a>備註  
  若要找出用於給定執行的參數值，請查詢 catalog.execution_parameter_values 檢視。  

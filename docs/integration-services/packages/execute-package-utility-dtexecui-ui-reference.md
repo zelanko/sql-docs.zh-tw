@@ -25,11 +25,11 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425280"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130046"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ae00ecf4b71e4614b95f80e428ae88b65b54f35
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695970"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130776"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85695970"
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|根據保留期限，在本機和監視器上清除記錄。|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|移除次要資料庫，以及本機記錄和遠端記錄。|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|從次要伺服器移除與指定之主要伺服器相關的資訊。|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|從 **log_shipping_secondary**、 **log_shipping_secondary_databases**和 **log_shipping_monitor_secondary** 資料表擷取次要資料庫的設定。|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|從 **log_shipping_secondary**、 **log_shipping_secondary_databases** 和 **log_shipping_monitor_secondary** 資料表擷取次要資料庫的設定。|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|這個預存程序會擷取次要伺服器上所指定主要資料庫的設定。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|替指定的記錄傳送代理程式以最新資訊重新整理監視器。|  
   

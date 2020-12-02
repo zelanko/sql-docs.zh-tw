@@ -12,11 +12,11 @@ ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3f5e101e0413381a2b633e758e0d67a0c4c8167b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425150"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129700"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 

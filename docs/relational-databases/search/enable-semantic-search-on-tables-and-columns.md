@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867466"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130932"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ GO
   
  **範例 2：針對許多資料行建立全文檢索和語意索引並延遲索引母體擴展**  
   
- 下列範例會在 AdventureWorks2012 範例資料庫中建立全文檢索目錄 **documents_catalog**。 接著，此範例會建立使用這個新目錄的全文檢索索引。 全文檢索索引是針對 **Production.Document**資料表的 **Title**、 **DocumentSummary** 及 **Document** 資料行而建立，而語意索引則只針對 **Document** 資料行而建立。 這個全文檢索索引會使用新建的全文檢索目錄和現有的唯一索引鍵索引 **PK_Document_DocumentID**。 根據建議，此索引鍵是建立於整數資料行 **DocumentID**上。 此範例會指定英文的 LCID (1033)，這是這些資料行中資料的語言。  
+ 下列範例會在 AdventureWorks2012 範例資料庫中建立全文檢索目錄 **documents_catalog**。 接著，此範例會建立使用這個新目錄的全文檢索索引。 全文檢索索引是針對 **Production.Document** 資料表的 **Title**、 **DocumentSummary** 及 **Document** 資料行而建立，而語意索引則只針對 **Document** 資料行而建立。 這個全文檢索索引會使用新建的全文檢索目錄和現有的唯一索引鍵索引 **PK_Document_DocumentID**。 根據建議，此索引鍵是建立於整數資料行 **DocumentID** 上。 此範例會指定英文的 LCID (1033)，這是這些資料行中資料的語言。  
   
  此範例也會指定關閉變更追蹤，而且不進行母體擴展。 之後在離峰時段，此範例會使用 **ALTER FULLTEXT INDEX** 陳述式，針對新的索引啟動完整母體擴展，並啟用自動變更追蹤。  
   
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建立新的語意索引  
- 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行]**** 頁面上啟用 [統計語意]****。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行] 頁面上啟用 [統計語意]。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 在具有現有全文檢索索引時建立語意索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以加入語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來加入語意索引。  
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 加入語意索引  
- 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](./create-and-manage-full-text-indexes.md)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](./create-and-manage-full-text-indexes.md)。  
 
 ## <a name="alter-a-semantic-index"></a>改變語意索引
   
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 卸除語意索引  
- 您可以在 [全文檢索索引屬性]**** 對話方塊的 [全文檢索索引資料行]**** 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](./create-and-manage-full-text-indexes.md)。  
+ 您可以在 [全文檢索索引屬性] 對話方塊的 [全文檢索索引資料行] 頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](./create-and-manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -237,7 +237,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，以滑鼠右鍵按一下資料行，然後選取 [屬性]****。 在 **[資料行屬性]** 對話方塊的 **[一般]** 頁面上，檢查 **[Statistical Semantics]** 屬性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，以滑鼠右鍵按一下資料行，然後選取 [屬性]。 在 **[資料行屬性]** 對話方塊的 **[一般]** 頁面上，檢查 **[Statistical Semantics]** 屬性的值。  
   
      True 值表示指定的資料行除了啟用全文檢索索引以外，也啟用了語意索引。  
   

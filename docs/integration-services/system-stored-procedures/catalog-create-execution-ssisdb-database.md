@@ -12,11 +12,11 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456933"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129869"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
 
@@ -111,7 +111,7 @@ GO
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
 
  如果 @runinscaleout 是 1，則預存程序需要下列其中一個權限：
  
@@ -119,7 +119,7 @@ GO
 
 -   **ssis_cluster_executor** 資料庫角色的成員資格
 
--   **系統管理員**伺服器角色的成員資格
+-   **系統管理員** 伺服器角色的成員資格
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
  下列清單描述的是可能引發錯誤或警告的某些狀況：  

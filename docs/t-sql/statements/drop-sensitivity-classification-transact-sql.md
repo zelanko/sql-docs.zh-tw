@@ -26,11 +26,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: " >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 6b09e5e60bd7ac1d02f46d191fccd0e2142f8d75
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784767"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131107"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

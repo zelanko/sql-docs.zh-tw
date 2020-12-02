@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364790"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130185"
 ---
 # <a name="create-a-trace-transact-sql"></a>建立追蹤 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364790"
   
 ### <a name="to-create-a-trace"></a>若要建立追蹤  
   
-1.  執行 **sp_trace_create** 並加上必要的參數，以建立新的追蹤。 新的追蹤會處於停止狀態 ( *status* 為 **0** )。  
+1.  執行 **sp_trace_create** 並加上必要的參數，以建立新的追蹤。 新的追蹤會處於停止狀態 (*status* 為 **0**)。  
   
 2.  執行 **sp_trace_setevent** 並加上必要的參數，以選取要追蹤的事件和資料行。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "93364790"
      **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的現有追蹤上執行。  
   
     > [!IMPORTANT]  
-    >  與一般的預存程序不同，所有 SQL Server Profiler 預存程序 ( <strong>sp_trace_ *xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+    >  與一般的預存程序不同，所有 SQL Server Profiler 預存程序 (<strong>sp_trace_ *xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="examples"></a>範例
 

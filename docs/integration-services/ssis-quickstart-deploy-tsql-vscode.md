@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005736"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130015"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 部署 SSIS 專案
 
@@ -43,13 +43,13 @@ Visual Studio Code 是適用於 Windows、macOS 和 Linux 且支援延伸模組�
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中將語言模式設定為 SQL
 
-若要啟用 `mssql` 命令和 T-SQL IntelliSense，請在 Visual Studio Code 中將語言模式設定為 [SQL]****。
+若要啟用 `mssql` 命令和 T-SQL IntelliSense，請在 Visual Studio Code 中將語言模式設定為 [SQL]。
 
 1. 開啟 Visual Studio Code，然後開啟新視窗。 
 
-2. 按一下狀態列右下角的 [純文字]****。
+2. 按一下狀態列右下角的 [純文字]。
  
-3. 在開啟的 [選取語言模式]**** 下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
+3. 在開啟的 [選取語言模式] 下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
 
 ## <a name="supported-authentication-method"></a>支援的驗證方法
 
@@ -63,7 +63,7 @@ Visual Studio Code 是適用於 Windows、macOS 和 Linux 且支援延伸模組�
 
 2. 鍵入 **sqlcon**，並按 **ENTER**。
 
-3. 按 **ENTER** 選取 [Create Connection Profile] (建立連線設定檔)****。 此步驟會建立您 SQL Server 執行個體的連線設定檔。
+3. 按 **ENTER** 選取 [Create Connection Profile] (建立連線設定檔)。 此步驟會建立您 SQL Server 執行個體的連線設定檔。
 
 4. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 

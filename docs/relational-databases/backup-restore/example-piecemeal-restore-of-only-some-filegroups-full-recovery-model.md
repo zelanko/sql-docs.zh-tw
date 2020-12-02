@@ -13,14 +13,14 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server], full recovery model
 - restore sequences [SQL Server], piecemeal
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8d3c461418431dfc9f0074823d21a1a7fed11cd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d181f89a56cf776d5313a2fbd50306249d53b8ec
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737760"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130400"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>範例：僅對部分檔案群組分次還原 (完整復原模式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

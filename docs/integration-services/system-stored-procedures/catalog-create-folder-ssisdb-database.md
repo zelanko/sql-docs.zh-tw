@@ -12,11 +12,11 @@ ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c0c28c81f607f5ab7ddc71d84ae52ea848d9334
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456948"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129858"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
 
@@ -51,7 +51,7 @@ catalog.create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id
   
 -   **ssis_admin** 資料庫角色的成員資格  
   
--   **系統管理員**伺服器角色的成員資格  
+-   **系統管理員** 伺服器角色的成員資格  
   
 ## <a name="errors-and-warnings"></a>錯誤和警告  
 如有同名的資料夾存在，預存程序會傳回錯誤。  

@@ -26,11 +26,11 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497936"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131041"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
