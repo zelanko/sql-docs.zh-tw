@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 711f16dc52a25f03fabcd59dd63e13e5d075ba05
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696260"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125713"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "85696260"
   
 17. 在 **[還原]** 索引標籤上的 **[還原備份時的資料庫狀態]** 下，選擇 **[不復原模式]** 或 **[待命模式]** 選項。  
     > [!IMPORTANT]  
-    > **待命模式**只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\)
+    > **待命模式** 只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\)
   
 18. 如果您選擇 **[待命模式]** 選項，請選擇是否要在還原作業進行時，中斷使用者與次要資料庫的連接。  
   

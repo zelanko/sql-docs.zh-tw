@@ -8,15 +8,15 @@ ms.technology: install
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: bd123a6f634177b455b57229bffb2375aab385dd
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671031"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125848"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 
@@ -86,7 +86,7 @@ ms.locfileid: "91671031"
 ## <a name="develop-and-test-the-upgrade-plan"></a>開發和測試升級計畫  
  最好的方法是將升級視為如同其他 IT 專案。 請組織一個具備資料庫系統管理員、網路、擷取、轉換與載入 (ETL)，以及其他升級所需之技能的升級小組。 該小組需要：  
   
--   **選擇升級方法：** 請參閱[選擇資料庫引擎升級方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
+-   **選擇升級方法：** 請參閱 [選擇資料庫引擎升級方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
 -   **開發復原計畫︰** 如果需要復原，執行此計畫就能還原為原始的環境。  
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564638"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125093"
 ---
 # <a name="use-column-sets"></a>使用資料行集
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88564638"
   
  當資料表中的資料行數目很大，而且個別操作資料行很麻煩時，您應該考慮使用資料行集。 當應用程式在擁有許多資料行的資料表上使用資料行集來選取及插入資料時，可能會看到一些效能上的改善。 但是，當資料表中的資料行上定義許多索引時，資料行集的效能可能會降低。 這是因為執行計畫所需的記憶體數量增加的緣故。  
   
- 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱>** FOR ALL_SPARSE_COLUMNS 關鍵字。  
+ 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱> FOR ALL_SPARSE_COLUMNS 關鍵字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>使用資料行集的指導方針  
  使用資料行集時，請考慮下列指導方針：  
@@ -111,7 +111,7 @@ GO
  在此範例中， `i`資料行未指定任何值，但是插入了 `0` 的值。  
   
 ## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 資料類型  
- **sql_variant** 資料類型可以儲存多種不同的資料類型，例如 **int**、 **char**和 **date**。 資料行集會將與 **sql_variant** 值相關聯的資料類型資訊 (例如小數位數、有效位數和地區設定資訊)，輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
+ **sql_variant** 資料類型可以儲存多種不同的資料類型，例如 **int**、 **char** 和 **date**。 資料行集會將與 **sql_variant** 值相關聯的資料類型資訊 (例如小數位數、有效位數和地區設定資訊)，輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
   
 |資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|長度上限|精確度|調整|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

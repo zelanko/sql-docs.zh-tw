@@ -23,11 +23,11 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b29ee9539e8b6d4da64dfcc0da7c2ef9f4296a87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307745"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124458"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  這是已宣告的資料指標名稱。 如果全域和本機資料指標同時存在且名稱是 *cursor_name*，若指定了 `GLOBAL`，*cursor_name* 就是全域資料指標，如果未指定 `GLOBAL`，則為區域資料指標。  
   
  @*cursor_variable_name*  
- 這是**資料指標**變數的名稱。 @*cursor_variable_name* 的類型必須是 **cursor**。  
+ 這是 **資料指標** 變數的名稱。 @*cursor_variable_name* 的類型必須是 **cursor**。  
   
 ## <a name="remarks"></a>備註  
 處理資料指標的陳述式會利用資料指標名稱或資料指標變數來參考資料指標。 `DEALLOCATE` 會移除資料指標和資料指標名稱或資料指標變數之間的關聯。 如果名稱或變數是最後一個參考資料指標的項目，就會取消配置資料指標，釋出資料指標所用的任何資源。 在 `DEALLOCATE` 時，會釋出用來保護擷取隔離的捲動鎖定。 用來保護更新 (其中包括透過資料指標所進行的定位更新) 的交易鎖定，會保留到交易結束時。  

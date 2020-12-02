@@ -17,11 +17,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890998"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125121"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 
@@ -64,8 +64,8 @@ ms.locfileid: "91890998"
 
 後續更新從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，表示相容性層級為 120 及以上。 層級 120 及以上的 CE 更新併入已更新假設和演算法，適用於新式資料倉儲和 OLTP 工作負載。 根據 CE 70 假設，下列模型假設已從 CE 120 起變更：
 
--  **獨立性**變成**相互關聯**：不同資料行值的結合不需要獨立。 這可能會更類似實際資料查詢。
--  **簡單內含項目**變成**基本內含項目**：使用者可查詢不存在的資料。 舉例來說，就兩個資料表間的相等聯結而言，我們會使用基底資料表長條圖來預估聯結選擇性，然後將述詞選擇性納入考量。
+-  **獨立性** 變成 **相互關聯**：不同資料行值的結合不需要獨立。 這可能會更類似實際資料查詢。
+-  **簡單內含項目** 變成 **基本內含項目**：使用者可查詢不存在的資料。 舉例來說，就兩個資料表間的相等聯結而言，我們會使用基底資料表長條圖來預估聯結選擇性，然後將述詞選擇性納入考量。
   
 **相容性層級：** 您可為 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，來確認資料庫處於特定層級。  
 
@@ -100,14 +100,14 @@ GO
  
 或者從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，使用[查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`。
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**查詢存放區：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管**中的資料庫節點下會顯示**查詢存放區**節點。  
+**查詢存放區：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管** 中的資料庫節點下會顯示 **查詢存放區** 節點。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

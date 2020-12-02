@@ -16,11 +16,11 @@ ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b49f1ab03be85c2c83caf50b548528ff36fd97b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360384"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124323"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

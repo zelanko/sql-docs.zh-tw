@@ -12,11 +12,11 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420842"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125130"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散式查詢：OLE DB 連接
 
@@ -434,7 +434,7 @@ SQL Server 會依照 OLE DB 所指定來使用 OLE DB 錯誤物件。 以下是�
 
 這些對應可由指定連結伺服器的使用者指定，並可透過系統預存程序 `sp_addlinkedsrvlogin` 和 `sp_droplinkedsrvlogin` 進行設定和管理。 藉由透過 `IDBProperties::SetProperties` 設定初始化群組屬性 DBPROP_AUTH_USERID 和 DBPROP_AUTH_PASSWORD，即可在連接建立期間，將由對應決定的使用者識別碼和密碼傳遞給提供者。
 
-當用戶端透過 Windows 驗證連接到 SQL Server 時，如果登入已使用 `sp_addlinkedsrvlogin` 設定 `self` 對應，SQL Server 會在連接建立期間嘗試模擬用戶端的安全性內容，並在提供者上設定 `DBPROP_AUTH_INTEGRATED` 屬性。 此程序稱為「委派」**。
+當用戶端透過 Windows 驗證連接到 SQL Server 時，如果登入已使用 `sp_addlinkedsrvlogin` 設定 `self` 對應，SQL Server 會在連接建立期間嘗試模擬用戶端的安全性內容，並在提供者上設定 `DBPROP_AUTH_INTEGRATED` 屬性。 此程序稱為「委派」。
 
 決定用於連接的安全性內容之後，此安全性內容的驗證，以及對資料來源中資料物件檢查該內容的權限，則完全取決於 OLE DB 提供者。
 

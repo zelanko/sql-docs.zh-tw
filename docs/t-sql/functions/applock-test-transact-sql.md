@@ -23,11 +23,11 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ae3fc6e47bcb375122be6e045c36b5e5f08c2cc0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116885"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124928"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 針對特定資源要取得的鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 *lock_mode* 可具有下列任何一個值：**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
   
 **'** *lock_owner* **'**  
-為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是 **交易** (預設值) 或 **工作階段**。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
   
 ## <a name="return-types"></a>傳回類型
 **smallint**
@@ -71,7 +71,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 **Nonparallelizable**
   
 ## <a name="examples"></a>範例  
-有個別工作階段的兩個使用者 (**使用者 A** 和**使用者 B**)，按照以下順序執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。
+有個別工作階段的兩個使用者 (**使用者 A** 和 **使用者 B**)，按照以下順序執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。
   
 **使用者 A** 執行：
   
@@ -121,7 +121,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**使用者 A** 和**使用者 B** 接著同時執行：
+**使用者 A** 和 **使用者 B** 接著同時執行：
   
 ```sql
 COMMIT TRAN;  

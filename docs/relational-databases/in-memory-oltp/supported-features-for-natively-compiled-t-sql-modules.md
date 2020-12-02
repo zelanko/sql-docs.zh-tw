@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867282"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125201"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ HAVING 子句：
 - 不支援 **ORDER BY** 子句中的 **DISTINCT** 。  
 
 
-- 在**TOP** 子句中使用常數時， **ORDER BY** 與 **TOP** 結合不可大於 8,192。
+- 在 **TOP** 子句中使用常數時， **ORDER BY** 與 **TOP** 結合不可大於 8,192。
   - 如果查詢包含聯結或彙總函數，這個限制可能會降低。 (例如，如果有一個聯結 (兩個資料表)，限制為 4,096 個資料列。 如果使用兩個聯結 (三個資料表)，限制為 2,730 個資料列)。  
   - 您可以在變數中儲存資料列數，以取得大於 8,192 的結果。  
 

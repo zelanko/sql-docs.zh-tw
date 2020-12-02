@@ -22,11 +22,11 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4f6d90dce7df2acb45c28ac7ebb74c4d03817fec
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688054"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124304"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

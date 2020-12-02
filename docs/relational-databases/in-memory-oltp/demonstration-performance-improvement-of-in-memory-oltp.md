@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868023"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125212"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體內部 OLTP 的效能改善
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ go
   
 1.  決定程式碼範例將使用的現有測試資料庫。  
   
-2.  如果您決定建立新的測試資料庫，請使用 [Azure 入口網站](https://portal.azure.com) 來建立名為 **imoltp**的資料庫。  
+2.  如果您決定建立新的測試資料庫，請使用 [Azure 入口網站](https://portal.azure.com) 來建立名為 **imoltp** 的資料庫。  
   
  如果您想要使用 Azure 入口網站進行這項作業的指示，請參閱 [開始使用 Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart)。  
   

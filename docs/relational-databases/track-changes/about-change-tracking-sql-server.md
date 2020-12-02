@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 518c827339b134ab30dd12552ec492d8bda878c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472990"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125062"
 ---
 # <a name="about-change-tracking-sql-server"></a>關於變更追蹤 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "88472990"
 ## <a name="change-tracking-cleanup"></a>變更追蹤清除
 所有資料表的變更追蹤資訊 (已針對變更追蹤啟用) 會儲存在記憶體內部資料列存放區。 與針對變更追蹤啟用的每個資料表建立關聯的變更追蹤資料，會在每個檢查點從記憶體內部資料列存放區排清到對應的磁碟上內部資料表。 在檢查點，記憶體內部資料列存放區也會在資料列移到磁碟上資料表之後清除。
 
-針對變更追蹤啟用的每個資料表都有內部的磁碟資料表，變更追蹤函式用來判斷變更版本以及在特定版本之後變更的資料列。 每次喚醒**自動清除**執行緒時，它會掃描 SQL Server 執行個體上的所有使用者資料庫，識別已啟用變更追蹤的資料庫。 根據資料庫的保留期限設定，會將每個內部磁碟資料表的過期記錄清除。
+針對變更追蹤啟用的每個資料表都有內部的磁碟資料表，變更追蹤函式用來判斷變更版本以及在特定版本之後變更的資料列。 每次喚醒 **自動清除** 執行緒時，它會掃描 SQL Server 執行個體上的所有使用者資料庫，識別已啟用變更追蹤的資料庫。 根據資料庫的保留期限設定，會將每個內部磁碟資料表的過期記錄清除。
 
 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 Service Pack 中新增了預存程序，以便為內部變更追蹤內部資料表執行手動清除。 此預存程序的詳細資訊位於 [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1)。 
   

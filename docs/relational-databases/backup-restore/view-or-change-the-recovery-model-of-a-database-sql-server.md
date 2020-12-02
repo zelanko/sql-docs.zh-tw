@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6f4b1c8c2bcdc3a755a0311d83a08f7b083d4676
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747600"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125313"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85747600"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
 
--   從[完整復原模式或大量記錄復原模式](back-up-a-transaction-log-sql-server.md)切換**之前**，請先[備份交易記錄](recovery-models-sql-server.md)。  
+-   從 [完整復原模式或大量記錄復原模式](back-up-a-transaction-log-sql-server.md)切換 **之前**，請先 [備份交易記錄](recovery-models-sql-server.md)。  
   
 -   在大量記錄模式下無法使用時間點復原。 在需要交易記錄還原的大量記錄復原模式下執行交易，可能會有資料遺失的風險。 若要在災害復原的情況下獲得最佳資料復原能力，請只在下列情況下切換到大量記錄復原模式：  
   

@@ -25,11 +25,11 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 513b7850956ad0bd639edec3c8ec3b4aa876a03a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688306"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124279"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

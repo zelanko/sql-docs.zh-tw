@@ -11,14 +11,14 @@ helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5b3518b9ffb201985c4ebef7de13c24c4345394f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696040"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125654"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>記錄傳送和複寫 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "85696040"
   
 7.  在預存程序成功執行之後重新啟動「記錄讀取器代理程式」。 如需詳細資訊，請參閱[啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
-8.  已經散發至訂閱者的交易可能會在發行者端套用。 為了確保「散發代理程式」嘗試在訂閱者端重新套用這些交易時，不會因錯誤而導致失敗，請指定標題為 **資料一致性錯誤時仍然繼續**的代理程式設定檔。  
+8.  已經散發至訂閱者的交易可能會在發行者端套用。 為了確保「散發代理程式」嘗試在訂閱者端重新套用這些交易時，不會因錯誤而導致失敗，請指定標題為 **資料一致性錯誤時仍然繼續** 的代理程式設定檔。  
   
 ### <a name="log-shipping-with-merge-replication"></a>記錄傳送與合併式複寫  
  請遵循下列程序中的步驟，設定合併式複寫和記錄傳送。  

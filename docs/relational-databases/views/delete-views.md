@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4616d7224ab7697eebdca78e935c96521ccedd3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446350"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125051"
 ---
 # <a name="delete-views"></a>刪除檢視
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88446350"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要刪除的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要刪除的檢視，然後按一下 [刪除]****。  
+2.  以滑鼠右鍵按一下您要刪除的檢視，然後按一下 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   

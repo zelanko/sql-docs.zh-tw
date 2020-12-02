@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 492f663e09f8883d1994d1ee5af2c0ed9acbb111
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e527cbe28eb2685d79d37393396508a0c316677d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748571"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125775"
 ---
 # <a name="upgrade-database-engine"></a>升級 Database Engine
 
@@ -34,11 +34,11 @@ ms.locfileid: "85748571"
   
 3.  [完成資料庫引擎升級](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 在您將資料庫升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 且資料庫上線後，還需要執行其他步驟，包括建立新備份、升級資料庫功能以啟用新功能，以及重新填入全文檢索目錄。 本文會討論這些步驟。  
   
-4.  升級[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料庫上線之後，可能需要採取的其中一個步驟是藉由變更資料庫相容性層級來升級資料庫功能模式，以啟用新功能。 這可以手動或透過查詢調整小幫手來完成。 
+4.  升級 [資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料庫上線之後，可能需要採取的其中一個步驟是藉由變更資料庫相容性層級來升級資料庫功能模式，以啟用新功能。 這可以手動或透過查詢調整小幫手來完成。 
 
     - [變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 在手動變更資料庫相容性層級之後，請使用查詢存放區來監視效能並找出可能的迴歸。 本文會討論這項建議的程序，並提供建議的工作流程。  
 
-    - [使用查詢調整小幫手變更資料庫相容性模式](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。 或者，若要手動變更，請使用**查詢調整小幫手 (QTA)** ，讓其透過建議的程序引導您變更資料庫相容性層級。 本文會討論這項程序，並提供 QTA 工作流程的指示。  
+    - [使用查詢調整小幫手變更資料庫相容性模式](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。 或者，若要手動變更，請使用 **查詢調整小幫手 (QTA)** ，讓其透過建議的程序引導您變更資料庫相容性層級。 本文會討論這項程序，並提供 QTA 工作流程的指示。  
 
     如需變更資料庫相容性層級後可用的新功能和改善行為詳細資訊，請參閱[相容性層級之間的差異](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures)。
 

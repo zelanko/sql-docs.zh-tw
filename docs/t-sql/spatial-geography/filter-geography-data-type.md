@@ -20,11 +20,11 @@ ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4a5e5ff41504184bd8c1aa0805267f38566b5162
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479343"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124318"
 ---
 # <a name="filter-geography-data-type"></a>Filter (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f93bb71a3f6dcbbd98e62cca67a877361c6766db
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718014"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125598"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -203,7 +203,7 @@ ms.locfileid: "85718014"
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>E.  從 Microsoft Azure 儲存體服務還原備份
 
 #### <a name="common-steps"></a>通用步驟
-下列兩個範例會從 Microsoft Azure 儲存體服務中的備份執行 `Sales` 的還原。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前六個步驟只會在此列出一次，所有範例將從**步驟 7** 開始進行。
+下列兩個範例會從 Microsoft Azure 儲存體服務中的備份執行 `Sales` 的還原。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前六個步驟只會在此列出一次，所有範例將從 **步驟 7** 開始進行。
 1.  在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 2.  以滑鼠右鍵按一下 [資料庫]  ，然後選取 [還原資料庫...]  。
 3.  在 [一般]  頁面上，選取 [來源]  區段下的 [裝置]  。

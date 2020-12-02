@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417664"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124943"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -86,7 +86,7 @@ ms.locfileid: "88417664"
   
 時區位移範圍會遵循 XSD 結構描述定義的 W3C XML 標準，而且稍微與 SQL 2003 標準定義 (12:59 至 +14:00) 不同。
   
-選擇性的類型參數「毫秒精確度」** 會指定秒鐘小數部分的位數。 這個值可以是介於 0 至 7 (100 奈秒) 之間的整數。 預設的「毫秒精確度」** 為 100 奈秒 (秒鐘小數部分有七位數)。
+選擇性的類型參數「毫秒精確度」會指定秒鐘小數部分的位數。 這個值可以是介於 0 至 7 (100 奈秒) 之間的整數。 預設的「毫秒精確度」為 100 奈秒 (秒鐘小數部分有七位數)。
   
 這項資料會儲存於資料庫中，而且在伺服器中進行處理、比較、儲存和索引 (如同 UTC)。 時區位移將保留在資料庫中以便日後擷取。
   

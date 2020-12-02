@@ -18,14 +18,14 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 902cb988e52eecedaa8ce95aeb3d922b6daef42c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759128"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125532"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "85759128"
      此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]** 執行相同功能。  
   
      **Database**  
-     指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
+     指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master** 和 tempdb。  
   
     > [!WARNING]  
     >  若要還原受密碼保護的備份，必須使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式。  
@@ -136,7 +136,7 @@ ms.locfileid: "85759128"
     |頁首|值|  
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份的元件：**資料庫**、**檔案**或 **\<blank>** (適用於交易記錄)。|  
+    |**元件**|備份的元件：**資料庫**、**檔案** 或 **\<blank>** (適用於交易記錄)。|  
     |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**Database**|備份作業中所含的資料庫名稱。|  

@@ -15,11 +15,11 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869288"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125139"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91869288"
   
     -   若要以目前使用者的身分連接，請確定已清除 [以其他使用者身分連接]  核取方塊，然後按一下 [確定] 。  
   
-    -   若要以其他使用者的身分連接，請選取 [以其他使用者身分連接]  核取方塊，然後按一下 [設定使用者] 。 當您收到提示時，請輸入使用者認證 (採用 *網域名稱*\\*使用者名稱*格式的使用者名稱)，按一下 [確定] ，然後再按一下 [確定]  連接。  
+    -   若要以其他使用者的身分連接，請選取 [以其他使用者身分連接]  核取方塊，然後按一下 [設定使用者] 。 當您收到提示時，請輸入使用者認證 (採用 *網域名稱*\\*使用者名稱* 格式的使用者名稱)，按一下 [確定] ，然後再按一下 [確定]  連接。  
   
     > [!NOTE]  
     >  如果載入記錄檔所花費的時間太長，您可以在 [記錄檔檢視器] 工具列上按一下 [停止]  。  

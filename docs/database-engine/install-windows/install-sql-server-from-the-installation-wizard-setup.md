@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670432"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125970"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -192,7 +192,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 使用 [Distributed Replay Client 設定] 頁面來指定要授與 Distributed Replay Client 服務管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-     * **控制器名稱**是選擇性的。 預設值是 \<*blank*>。 針對 Distributed Replay Client 服務，輸入用戶端電腦要與其通訊的控制器名稱：  
+     * **控制器名稱** 是選擇性的。 預設值是 \<*blank*>。 針對 Distributed Replay Client 服務，輸入用戶端電腦要與其通訊的控制器名稱：  
   
        * 如已設定控制器，請在設定每個用戶端時輸入該控制器的名稱。  
   
@@ -204,7 +204,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
      * 若要繼續，請選取 [下一步]。  
   
-1. [準備安裝] 頁面會顯示您在安裝期間指定的安裝選項樹狀檢視。 在此頁面上，安裝程式會指出**產品更新**功能為啟用或停用，以及最後的更新版本。  
+1. [準備安裝] 頁面會顯示您在安裝期間指定的安裝選項樹狀檢視。 在此頁面上，安裝程式會指出 **產品更新** 功能為啟用或停用，以及最後的更新版本。  
   
      選取 [安裝] 繼續作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，再安裝所選功能。  
   
@@ -326,14 +326,14 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
     > [!NOTE]  
     > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
     
-    如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop) 頁面。 
+    如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop) 頁面。 
 
-     使用 [資料庫引擎組態 - 記憶體] 頁面來指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在啟動後將使用的**最小伺服器記憶體**與**最大伺服器記憶體**值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議] 選項之後手動指定您自己的值。
+     使用 [資料庫引擎組態 - 記憶體] 頁面來指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在啟動後將使用的 **最小伺服器記憶體** 與 **最大伺服器記憶體** 值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議] 選項之後手動指定您自己的值。
      
     > [!NOTE]  
     > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
     
-    如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory)。 
+    如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory)。 
 
      使用 [資料庫引擎設定 - FILESTREAM] 頁面針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [[資料庫引擎設定 - FILESTREAM] 頁面](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
   
@@ -370,7 +370,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 使用 [Distributed Replay Client 設定] 頁面來指定要授與 Distributed Replay Client 服務管理權限的使用者。 擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-     * **控制器名稱**是選擇性的。 預設值是 \<*blank*>。 針對 Distributed Replay Client 服務，輸入用戶端電腦要與其通訊的控制器名稱：  
+     * **控制器名稱** 是選擇性的。 預設值是 \<*blank*>。 針對 Distributed Replay Client 服務，輸入用戶端電腦要與其通訊的控制器名稱：  
   
        * 如已設定控制器，請在設定每個用戶端時輸入該控制器的名稱。  
   
@@ -382,7 +382,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
      * 若要繼續，請選取 [下一步]。  
   
-1. [準備安裝] 頁面會顯示您在安裝期間指定的安裝選項樹狀檢視。 在此頁面上，安裝程式會指出**產品更新**功能為啟用或停用，以及最後的更新版本。  
+1. [準備安裝] 頁面會顯示您在安裝期間指定的安裝選項樹狀檢視。 在此頁面上，安裝程式會指出 **產品更新** 功能為啟用或停用，以及最後的更新版本。  
   
      選取 [安裝] 繼續作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，再安裝所選功能。  
   
@@ -401,7 +401,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
 ## <a name="next-steps"></a>後續步驟
 
-[設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017)。  
+[設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝](../../database-engine/configure-windows/database-engine-instances-sql-server.md)。  
   
 為了減少系統的可攻擊介面區， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱[介面區設定](../../relational-databases/security/surface-area-configuration.md)。  
   

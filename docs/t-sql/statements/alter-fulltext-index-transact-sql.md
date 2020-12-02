@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688375"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124271"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,7 +86,7 @@ ALTER FULLTEXT INDEX ON table_name
  指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  AUTO  
- 指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」**)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
+ 指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
   
  OFF  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保留索引資料的變更清單。  
@@ -102,9 +102,9 @@ ALTER FULLTEXT INDEX ON table_name
 >  全文檢索索引是要在加入資料行之後擴展還是從全文檢索索引卸除，將取決於是否啟用變更追蹤及是否指定 WITH NO POPULATION 而定。 如需詳細資訊，請參閱[變更追蹤與 NO POPULATION 參數之間的互動](#change-tracking-no-population)。
   
  TYPE COLUMN *type_column_name*  
- 指定用來保存 **varbinary**、**varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar**或 **nvarchar**。  
+ 指定用來保存 **varbinary**、**varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar** 或 **nvarchar**。  
   
- 只有當 *column_name* 指定將資料儲存為二進位資料的 **varbinary**、**varbinary(max)** 或 **image** 資料行，才應指定 TYPE COLUMN *type_column_name*否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
+ 只有當 *column_name* 指定將資料儲存為二進位資料的 **varbinary**、**varbinary(max)** 或 **image** 資料行，才應指定 TYPE COLUMN *type_column_name* 否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
 > [!NOTE]  
 >  建立索引時，全文檢索引擎會使用各資料表資料列之類型資料行中的縮寫，以便識別要為 *column_name* 中的文件使用哪一種全文檢索搜尋篩選。 篩選會將文件載入為二進位資料流、移除格式資訊，並且將文件中的文字傳送到斷詞工具元件。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
@@ -122,7 +122,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
- 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term*否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
+ 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term* 否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
   
  STATISTICAL_SEMANTICS  
  **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
@@ -154,7 +154,7 @@ ALTER FULLTEXT INDEX ON table_name
  指定全文檢索索引要擷取資料表的每個資料列，即使資料列已建立了索引也一樣。  
   
  INCREMENTAL  
- 指定全文檢索索引只擷取前次擴展之後又修改過的資料列。 資料表必須有 **timestamp**類型的資料行，INCREMENTAL 才適用。 如果全文檢索目錄中的資料表並未包含 **timestamp** 類型的資料行，資料表就會進行完整母體擴展。  
+ 指定全文檢索索引只擷取前次擴展之後又修改過的資料列。 資料表必須有 **timestamp** 類型的資料行，INCREMENTAL 才適用。 如果全文檢索目錄中的資料表並未包含 **timestamp** 類型的資料行，資料表就會進行完整母體擴展。  
   
  UPDATE  
  指定處理上次更新變更追蹤索引之後的所有插入、更新或刪除。 資料表上必須啟用變更追蹤擴展，但不應開啟背景更新索引或自動變更追蹤。  

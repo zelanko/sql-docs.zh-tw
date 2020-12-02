@@ -14,11 +14,11 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7161ce97faa4d1baab514df45429592629e2518b
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765734"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125148"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>使用 AUTO 模式自動格式化 JSON 輸出 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "91765734"
 當您指定 **AUTO** 選項時，會根據 SELECT 清單中的資料行順序和其來源資料表自動決定 JSON 輸出格式。 您無法變更此格式。
  
 替代方法是使用 **PATH** 選項來維護輸出的控制權。
--   如需 **PATH** 選項的詳細資訊，請參閱[以 PATH 模式格式化巢狀的 JSON 輸出](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
+-   如需 **PATH** 選項的詳細資訊，請參閱 [以 PATH 模式格式化巢狀的 JSON 輸出](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
 -   如需這兩個選項的概觀，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。
 
 使用 **FOR JSON AUTO** 選項的查詢必須具有 **FROM** 子句。  

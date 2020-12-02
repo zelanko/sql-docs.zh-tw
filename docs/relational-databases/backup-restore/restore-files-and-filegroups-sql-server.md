@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade272bf603b0931d19c66b0ca1009b8cfbb3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 40397b72c72142e65716f48a9e948d079d5a7015
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737688"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125520"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "85737688"
      您必須為不同的媒體集交換磁帶時，這個選項特別有用，例如當伺服器只有一個磁帶機時。  
   
      **限制對還原資料庫的存取**  
-     僅有 **db_owner**、 **dbcreator**或 **系統管理員**的成員可以使用還原資料庫。  
+     僅有 **db_owner**、 **dbcreator** 或 **系統管理員** 的成員可以使用還原資料庫。  
   
      選取此選項相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式的 RESTRICTED_USER 選項。  
   

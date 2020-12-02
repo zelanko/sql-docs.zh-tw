@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6670c42505ef245b06fb2f605ebca078167d1a6c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196592"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124445"
 ---
 # <a name="-division-transact-sql"></a>/ (除法) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ dividend / divisor
 
 ## <a name="arguments"></a>引數
  *dividend*  
- 要執行除法的數值運算式。 *dividend* 可以是數值資料類型類別目錄中任何一個資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
+ 要執行除法的數值運算式。 *dividend* 可以是數值資料類型類別目錄中任何一個資料類型的任何有效 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
   
  *divisor*  
  要除以被除數的數值運算式。 *divisor* 可以是數值資料類型類別目錄中任何一個資料類型的任何有效運算式，但是 **datetime** 和 **smalldatetime** 資料類型除外。  

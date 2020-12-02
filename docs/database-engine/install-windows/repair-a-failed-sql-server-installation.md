@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91c7f3a0ef51b752b2c1460578319929f7ae4113
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 7524ea73ce04db70b75df3b8a4306c7304f475de
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670996"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125819"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修復失敗的 SQL Server 安裝
 
@@ -49,7 +49,7 @@ ms.locfileid: "91670996"
   
 - 您必須在個別的叢集節點上執行修復。 
   
-- 若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]****，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
+- 若要在失敗的「準備」作業之後修復容錯移轉叢集節點，請使用 [移除節點]，然後再次執行「準備」步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
   
 ## <a name="repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>從安裝中心修復失敗的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝 
   

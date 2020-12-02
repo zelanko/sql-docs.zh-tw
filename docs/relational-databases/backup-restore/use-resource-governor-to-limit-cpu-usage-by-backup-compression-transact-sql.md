@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6285ec4a9f06bb44d6502af44aa964b666bb58c1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730883"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125480"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -254,7 +254,7 @@ WHERE session_id > 50;
 GO  
 ```  
   
- 在結果窗格中，**名稱**資料行應該會針對您在分類函數中指定的工作負載群組名稱，列出一或多個工作階段。  
+ 在結果窗格中，**名稱** 資料行應該會針對您在分類函數中指定的工作負載群組名稱，列出一或多個工作階段。  
   
 > [!NOTE]  
 >  如需此 SELECT 陳述式呼叫的動態管理檢視相關資訊，請參閱 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  

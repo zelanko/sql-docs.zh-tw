@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9279f22be324858e2a71ea523cab000c8f7253cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490951"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125152"
 ---
 # <a name="delete-an-index"></a>刪除索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88490951"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想刪除的索引，然後選取 [刪除]****。  
+5.  以滑鼠右鍵按一下您想刪除的索引，然後選取 [刪除]。  
   
 6.  在 **[刪除物件]** 對話方塊中，確認 **[要刪除的物件]** 方格中有正確索引，然後按一下 **[確定]**。  
   
@@ -80,13 +80,13 @@ ms.locfileid: "88490951"
   
 4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-5.  在 [索引/索引鍵]**** 對話方塊中，選取要刪除的索引。  
+5.  在 [索引/索引鍵] 對話方塊中，選取要刪除的索引。  
   
 6.  按一下 **[刪除]** 。  
   
 7.  按一下 [關閉] 。  
   
-8.  在 [檔案]**** 功能表上，選取 [儲存 _table_name_]****。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
