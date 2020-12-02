@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477205"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼執行 SSIS 套件
@@ -36,29 +36,29 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]****，然後選取 [SQL 資料庫]**** 頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀]**** 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]**** 選項，請將滑鼠指標暫留在伺服器名稱上。 
+2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
-5. 按一下 [顯示資料庫連接字串]****。
+5. 按一下 [顯示資料庫連接字串]。
 6. 檢閱完整 **ADO.NET** 連接字串。 您的程式碼可以選擇性地使用 `SqlConnectionStringBuilder`，以使用您提供的個別參數值來重新建立此連接字串。
 
 ## <a name="create-a-new-visual-studio-project"></a>建立新的 Visual Studio 專案
 
-1. 在 Visual Studio 中，依序選擇 [檔案]****、[新增]**** 和 [專案]****。 
-2. 在 [新增專案]**** 對話方塊中，展開 [Visual C#]****。
-3. 選取 [主控台應用程式]****，然後輸入 *run_ssis_project* 作為專案名稱。
-4. 按一下 [確定]****，在 Visual Studio 中建立和開啟新的專案。
+1. 在 Visual Studio 中，依序選擇 [檔案]、[新增] 和 [專案]。 
+2. 在 [新增專案] 對話方塊中，展開 [Visual C#]。
+3. 選取 [主控台應用程式]，然後輸入 *run_ssis_project* 作為專案名稱。
+4. 按一下 [確定]，在 Visual Studio 中建立和開啟新的專案。
 
 ## <a name="add-references"></a>新增參考
-1. 在方案總管中，以滑鼠右鍵按一下 [參考]**** 資料夾，然後選取 [新增參考]****。 [參考管理員]**** 對話方塊隨即開啟。
-2. 在 [參考管理員]**** 對話方塊中，展開 [組件]****，然後選取 [延伸模組]****。
+1. 在方案總管中，以滑鼠右鍵按一下 [參考] 資料夾，然後選取 [新增參考]。 [參考管理員] 對話方塊隨即開啟。
+2. 在 [參考管理員] 對話方塊中，展開 [組件]，然後選取 [延伸模組]。
 3. 選取下列兩個要新增的參考：
     -   Microsoft.SqlServer.Management.Sdk.Sfc
     -   Microsoft.SqlServer.Smo
-4. 按一下 [瀏覽]**** 按鈕，新增 **Microsoft.SqlServer.Management.IntegrationServices** 的參考  (只會在全域組件快取 (GAC) 中安裝此組件)。[選取要參考的檔案] 對話方塊隨即開啟。
-5. 在 [選取要參考的檔案]**** 對話方塊中，巡覽至包含組件的 GAC 資料夾。 此資料夾通常是 `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91`。
-6. 選取資料夾中的組件 (即 .dll 檔案)，然後按一下 [新增]****。
-7. 按一下 [確定]**** 關閉 [參考管理員]**** 對話方塊，然後新增三個參考。 若要確認是否有參考，請檢查方案總管中的 [參考]**** 清單。
+4. 按一下 [瀏覽] 按鈕，新增 **Microsoft.SqlServer.Management.IntegrationServices** 的參考  (只會在全域組件快取 (GAC) 中安裝此組件)。[選取要參考的檔案] 對話方塊隨即開啟。
+5. 在 [選取要參考的檔案] 對話方塊中，巡覽至包含組件的 GAC 資料夾。 此資料夾通常是 `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91`。
+6. 選取資料夾中的組件 (即 .dll 檔案)，然後按一下 [新增]。
+7. 按一下 [確定] 關閉 [參考管理員] 對話方塊，然後新增三個參考。 若要確認是否有參考，請檢查方案總管中的 [參考] 清單。
 
 ## <a name="add-the-c-code"></a>新增 C# 程式碼 
 1. 開啟 **Program.cs**。

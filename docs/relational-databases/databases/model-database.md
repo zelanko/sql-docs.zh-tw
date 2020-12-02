@@ -16,10 +16,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465412"
 ---
 # <a name="model-database"></a>Model 資料庫
@@ -94,7 +94,7 @@ ms.locfileid: "88465412"
   
 -   變更定序。 預設定序是伺服器定序。  
   
--   變更資料庫擁有者。 **model** 是由 **sa**所擁有。  
+-   變更資料庫擁有者。 **model** 是由 **sa** 所擁有。  
   
 -   卸除資料庫。  
   

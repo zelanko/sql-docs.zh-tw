@@ -14,15 +14,15 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce84b55a553b26e6fe9141601987f1e743584699
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493879"
 ---
 # <a name="publication-information-agents-merge-publication"></a>發行集資訊，代理程式 (合併式發行集)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   [代理程式]**** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  
+   [代理程式] 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  
   
 ## <a name="options"></a>選項。  
  如需快照集代理程式的詳細資訊與相關工作，請以滑鼠右鍵按一下代理程式的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  

@@ -14,10 +14,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f4580a7c3a566ba14f5cf20e177760751a451791
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490895"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>從 JSON 輸出移除方括弧 - WITHOUT_ARRAY_WRAPPER 選項
@@ -37,7 +37,7 @@ SELECT 2015 as year, 12 as month, 15 as day
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
 
- 使用**結果** with the **結果**  
+ 使用 **結果** with the **結果**  
   
 ```json  
 {
@@ -47,7 +47,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- 不使用 **WITHOUT_ARRAY_WRAPPER** 選項的**結果** (預設值)  
+ 不使用 **WITHOUT_ARRAY_WRAPPER** 選項的 **結果** (預設值)  
   
 ```json  
 [{
@@ -69,7 +69,7 @@ ORDER BY ModifiedDate
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
   
- 使用**結果** with the **結果**  
+ 使用 **結果** with the **結果**  
   
 ```json  
 {
@@ -87,7 +87,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- 不使用 **WITHOUT_ARRAY_WRAPPER** 選項的**結果** (預設值)  
+ 不使用 **WITHOUT_ARRAY_WRAPPER** 選項的 **結果** (預設值)  
   
 ```json  
 [{

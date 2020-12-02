@@ -18,10 +18,10 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 02e8775089f6e8112452ff2a0ff780bc9a848f31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88497038"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry 資料類型)

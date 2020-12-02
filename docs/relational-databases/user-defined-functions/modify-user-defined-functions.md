@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c86496904351d305cdf21af05275f469db689982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88485292"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
@@ -69,11 +69,11 @@ ms.locfileid: "88485292"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您要修改的函數，然後選取 [修改]****。  
+4.  以滑鼠右鍵按一下您要修改的函數，然後選取 [修改]。  
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  在 [檔案]**** 功能表上，按一下 [儲存 _function_name_]****。  
+6.  在 [檔案] 功能表上，按一下 [儲存 _function_name_]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

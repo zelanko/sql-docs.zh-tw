@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6ac308953d49527d1be7b71e667d7cb573c356ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493994"
 ---
 # <a name="initialize-subscriptions"></a>初始化訂閱
@@ -29,7 +29,7 @@ ms.locfileid: "88493994"
  **訂用帳戶屬性**  
  針對每個需要初始資料集的訂閱者，選取 **[初始化]** 資料行中的核取方塊。 如果清除此核取方塊，則只會初始化複寫中繼資料和程序。 如需不使用快照集初始化訂閱的詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
   
- 在 **[初始化時機]** 資料行的下拉式清單方塊中，選取 **[立即]** ，即可使合併代理程式或散發代理程式在此精靈完成後，將快照集檔案傳送至訂閱者。 選取 **[第一次同步處理時]** ，即可使代理程式在下一個執行排程傳送檔案。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的提取訂閱無法使用 [立即]**** 選項。 合併代理程式或散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的執行個體上執行；因此必須經由其他方法初始化訂閱。  
+ 在 **[初始化時機]** 資料行的下拉式清單方塊中，選取 **[立即]** ，即可使合併代理程式或散發代理程式在此精靈完成後，將快照集檔案傳送至訂閱者。 選取 **[第一次同步處理時]** ，即可使代理程式在下一個執行排程傳送檔案。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的提取訂閱無法使用 [立即] 選項。 合併代理程式或散發代理程式無法在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的執行個體上執行；因此必須經由其他方法初始化訂閱。  
   
 > [!NOTE]  
 >  精靈可能會提示散發者的連接，以便為散發者代理程式或合併代理程式啟動適當的作業。  

@@ -14,10 +14,10 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 26b15222f570304f321337a4b3574c3fa2f3b945
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493995"
 ---
 # <a name="manage-policy-categories"></a>管理原則類別目錄
@@ -44,7 +44,7 @@ ms.locfileid: "88493995"
   
 -   使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，如果未選取 **[託管資料庫訂閱]** 核取方塊，原則類別目錄必須個別套用到伺服器的每一個相關部分，例如一個或多個資料庫或資料表。  
   
--   如果您指定不存在的原則類別目錄，就會建立新的原則類別目錄，而且當您執行此預存程序時，所有資料庫都會託管此訂閱。 如果您之後針對新的類別目錄清除託管的訂閱，只會針對您指定為 *target_object*的資料庫來套用此訂閱。 如需如何變更授權之訂閱設定的詳細資訊，請參閱 [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
+-   如果您指定不存在的原則類別目錄，就會建立新的原則類別目錄，而且當您執行此預存程序時，所有資料庫都會託管此訂閱。 如果您之後針對新的類別目錄清除託管的訂閱，只會針對您指定為 *target_object* 的資料庫來套用此訂閱。 如需如何變更授權之訂閱設定的詳細資訊，請參閱 [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88493995"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]**** 並選取 [管理類別目錄]****。  
+3.  以滑鼠右鍵按一下 [原則管理] 並選取 [管理類別目錄]。  
   
      **[管理原則類別目錄]** 對話方塊中提供下列資訊：  
   

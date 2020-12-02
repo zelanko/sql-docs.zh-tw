@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bc53832315aac772230de80c23fc13505360af4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465513"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
@@ -37,13 +37,13 @@ ms.locfileid: "88465513"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]****。  
+2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]。  
   
  **在 [物件總管] 中檢視資料庫的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫] ****，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]****。  
+2.  展開 [資料庫] ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]。  
   
  **在 [物件總管] 中檢視資料行的定序設定**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88465513"
   
 3.  展開包含資料行的資料表，然後展開 **[資料行]**。  
   
-4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]****。 如果定序屬性為空白，則資料行不是字元資料類型。  
+4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]。 如果定序屬性為空白，則資料行不是字元資料類型。  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **檢視伺服器的定序設定**  

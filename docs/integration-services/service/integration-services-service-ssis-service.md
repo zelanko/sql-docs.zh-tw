@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990391"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
@@ -74,7 +74,7 @@ ms.locfileid: "90990391"
 > [!NOTE]
 > 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
->   在 SSMS [連接到伺服器]**** 對話方塊中，您無法輸入執行舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體。 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。   
+>   在 SSMS [連接到伺服器] 對話方塊中，您無法輸入執行舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體。 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。   
   
  您在一部電腦上只能安裝單一 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的執行個體。 此服務並非特定 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體特有的。 您可以使用執行服務所在之電腦的名稱來連接至服務。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "90990391"
   
 1.  在 **[開始]** 功能表上，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在 [SQL Server 組態管理員]**** 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]****，以滑鼠右鍵按一下 [SQL Server Integration Services]****，然後按一下 [屬性]****。  
+2.  在 [SQL Server 組態管理員] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
   
 3.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，可以執行下列操作：  
   
@@ -111,19 +111,19 @@ ms.locfileid: "90990391"
     -   按一下 **[服務]** 索引標籤，即可檢視服務的相關資訊 (例如主機電腦的名稱)，並指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的啟動模式。  
   
         > [!NOTE]  
-        >  [進階]**** 索引標籤不包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的資訊。  
+        >  [進階] 索引標籤不包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的資訊。  
   
 4.  按一下 [確定]。  
   
-5.  在 [檔案]**** 功能表上，按一下 [結束]****，以關閉 [SQL Server 組態管理員]**** 嵌入式管理單元。  
+5.  在 [檔案] 功能表上，按一下 [結束]，以關閉 [SQL Server 組態管理員] 嵌入式管理單元。  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>使用服務來設定 Integration Services 服務的屬性  
   
 1.  在 **[控制台]** 中，如果您使用「一般檢視」，請按一下 **[系統管理工具]**，如果您使用「類別檢視」，請按一下 **[效能及維護]** ，然後按一下 **[系統管理工具]**。  
   
-2.  按一下 [服務]****。  
+2.  按一下 [服務]。  
   
-3.  在 [服務]**** 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]****，以滑鼠右鍵按一下 [SQL Server Integration Services]****，然後按一下 [屬性]****。  
+3.  在 [服務] 嵌入式管理單元中，尋找服務清單中的 [SQL Server Integration Services]，以滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [屬性]。  
   
 4.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，您可以執行下列動作：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "90990391"
   
 5.  按一下 [確定]。  
   
-6.  或者，如果啟動類型是 [手動] 或 [自動]，則可以用滑鼠右鍵按一下 [SQL Server Integration Services]****，然後按一下 [啟動]、[停止] 或 [重新啟動]****。  
+6.  或者，如果啟動類型是 [手動] 或 [自動]，則可以用滑鼠右鍵按一下 [SQL Server Integration Services]，然後按一下 [啟動]、[停止] 或 [重新啟動]。  
   
-7.  在 [檔案]**** 功能表上，按一下 [結束]****，以關閉 [服務]**** 嵌入式管理單元。  
+7.  在 [檔案] 功能表上，按一下 [結束]，以關閉 [服務] 嵌入式管理單元。  
 
 ## <a name="grant-permissions-to-the-service"></a>將權限授與服務
   在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，Users 群組中的所有使用者預設都能存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 當您安裝目前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，使用者無法存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 因此，服務預設是安全的。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，管理員必須授與該服務的存取權。  
@@ -150,9 +150,9 @@ ms.locfileid: "90990391"
   
 1.  執行 Dcomcnfg.exe。 Dcomcnfg.exe 提供使用者介面，可供修改登錄中的某些設定。  
   
-2.  在 [元件服務]**** 對話方塊中，展開 [元件服務] > [電腦] > [我的電腦] > [DCOM 組態] 節點。  
+2.  在 [元件服務] 對話方塊中，展開 [元件服務] > [電腦] > [我的電腦] > [DCOM 組態] 節點。  
   
-3.  以滑鼠右鍵按一下 **Microsoft SQL Server Integration Services 13.0**，然後按一下 [屬性] ****。  
+3.  以滑鼠右鍵按一下 **Microsoft SQL Server Integration Services 13.0**，然後按一下 [屬性] 。  
   
 4.  在 **[安全性]** 索引標籤上，按一下 **[啟動和啟用權限]** 區域中的 **[編輯]** 。  
   
@@ -229,10 +229,10 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file"></a>修改設定檔  
- 您可以修改組態檔，允許封裝在服務停止時繼續執行、在 [物件總管] 中顯示其他根資料夾，或在檔案系統中指定要由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理的不同資料夾或其他資料夾。 例如，您可以建立屬於 **SqlServerFolder**類型的其他根資料夾來管理其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。  
+ 您可以修改組態檔，允許封裝在服務停止時繼續執行、在 [物件總管] 中顯示其他根資料夾，或在檔案系統中指定要由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理的不同資料夾或其他資料夾。 例如，您可以建立屬於 **SqlServerFolder** 類型的其他根資料夾來管理其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。  
   
 > [!NOTE]  
->  某些字元在資料夾名稱中是無效的。 資料夾名稱的有效字元是由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別 **System.IO.Path** 和 [GetInvalidFilenameChars] **** 欄位所決定。 [GetInvalidFilenameChars]**** 欄位提供無法在傳遞給 **Path** 類別成員之路徑字串引數中指定的平台特定字元陣列。 有效的字元集可能會因檔案系統而不同。 無效的字元通常包括引號 (")、小於 (<) 字元和縱線 (|) 字元。  
+>  某些字元在資料夾名稱中是無效的。 資料夾名稱的有效字元是由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別 **System.IO.Path** 和 [GetInvalidFilenameChars]  欄位所決定。 [GetInvalidFilenameChars] 欄位提供無法在傳遞給 **Path** 類別成員之路徑字串引數中指定的平台特定字元陣列。 有效的字元集可能會因檔案系統而不同。 無效的字元通常包括引號 (")、小於 (<) 字元和縱線 (|) 字元。  
   
  但是，若要管理儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]具名執行個體或遠端執行個體中的封裝，您就必須修改組態檔。 如果您未更新組態檔，就無法使用 **中的** 物件總管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視儲存在具名執行個體或遠端執行個體之 msdb 資料庫中的封裝。 如果您嘗試使用 **[物件總管]** 來檢視這些封裝，您會收到下列錯誤訊息：  
   
@@ -311,11 +311,11 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  依序選取 [檔案]****、[連接物件總管]****，以顯示 [連接到伺服器]**** 對話方塊。  
+2.  依序選取 [檔案]、[連接物件總管]，以顯示 [連接到伺服器] 對話方塊。  
   
-3.  選取 [伺服器類型]**** 清單中的 [Integration Services]****。  
+3.  選取 [伺服器類型] 清單中的 [Integration Services]。  
   
-4.  在 [伺服器名稱]**** 文字方塊中鍵入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的名稱。  
+4.  在 [伺服器名稱] 文字方塊中鍵入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的名稱。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是執行個體特定的。 您可以使用 Integration Services 服務執行所在的電腦名稱來連接此服務。  
@@ -323,32 +323,32 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 5.  按一下 [ **連接**]。  
   
 > [!NOTE]  
->  [瀏覽伺服器]**** 對話方塊不會顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端執行個體。 此外，[連接到伺服器]**** 對話方塊的 [連接選項]**** 索引標籤 (按一下 [選項]**** 按鈕即可顯示) 上的可用選項不適用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連接。  
+>  [瀏覽伺服器] 對話方塊不會顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端執行個體。 此外，[連接到伺服器] 對話方塊的 [連接選項] 索引標籤 (按一下 [選項] 按鈕即可顯示) 上的可用選項不適用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連接。  
   
 ### <a name="eliminating-the-access-is-denied-error"></a>排除「存取遭到拒絕」的錯誤  
  如果不具備足夠權限的使用者試圖連接到遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體，伺服器便會回應「存取遭到拒絕」的錯誤訊息。 只要確保使用者具有 DCOM 權限，就可以避免產生這個錯誤訊息。  
   
 #### <a name="to-configure-rights-for-remote-users-on-windows-server-2003-or-windows-xp"></a>設定 Windows Server 2003 或 Windows XP 遠端使用者的權限  
   
-1.  如果使用者不是本機 Administrators 群組的成員，請將使用者加入「分散式 COM 使用者」群組。 您可以從 [系統管理工具]**** 功能表中的 [電腦管理] MMC 嵌入式管理單元進行這項作業。  
+1.  如果使用者不是本機 Administrators 群組的成員，請將使用者加入「分散式 COM 使用者」群組。 您可以從 [系統管理工具] 功能表中的 [電腦管理] MMC 嵌入式管理單元進行這項作業。  
   
-2.  開啟 [控制台]，依序按兩下 [系統管理工具]****、[元件服務]**** 啟動 [元件服務] MMC 嵌入式管理單元。  
+2.  開啟 [控制台]，依序按兩下 [系統管理工具]、[元件服務] 啟動 [元件服務] MMC 嵌入式管理單元。  
   
-3.  展開控制台左邊窗格中的 [元件服務]**** 節點。 依序展開 [電腦]**** 節點和 [我的電腦]****，然後按一下 [DCOM 設定]**** 節點。  
+3.  展開控制台左邊窗格中的 [元件服務] 節點。 依序展開 [電腦] 節點和 [我的電腦]，然後按一下 [DCOM 設定] 節點。  
   
-4.  選取 [DCOM 設定]**** 節點，然後選取可以設定之應用程式清單中的 SQL Server Integration Services 11.0。  
+4.  選取 [DCOM 設定] 節點，然後選取可以設定之應用程式清單中的 SQL Server Integration Services 11.0。  
   
-5.  以滑鼠右鍵按一下 SQL Server Integration Services 11.0，然後選取 [內容]****。  
+5.  以滑鼠右鍵按一下 SQL Server Integration Services 11.0，然後選取 [內容]。  
   
-6.  在 [SQL Server Integration Services 11.0 內容]**** 對話方塊中，選取 [安全性]**** 索引標籤。  
+6.  在 [SQL Server Integration Services 11.0 內容] 對話方塊中，選取 [安全性] 索引標籤。  
   
-7.  選取 [啟動和啟用權限]**** 底下的 [自訂]****，然後按一下 [編輯]**** 開啟 [啟動權限]**** 對話方塊。  
+7.  選取 [啟動和啟用權限] 底下的 [自訂]，然後按一下 [編輯] 開啟 [啟動權限] 對話方塊。  
   
-8.  在 [啟動權限]**** 對話方塊中，新增或刪除使用者，並指派適當權限給適當的使用者與群組。 可用的權限有本機啟動、遠端啟動、本機啟用以及遠端啟用。 啟動權限可授與或拒絕啟動及停止服務的權限；啟用權限則可以授與或拒絕連接到服務的權限。  
+8.  在 [啟動權限] 對話方塊中，新增或刪除使用者，並指派適當權限給適當的使用者與群組。 可用的權限有本機啟動、遠端啟動、本機啟用以及遠端啟用。 啟動權限可授與或拒絕啟動及停止服務的權限；啟用權限則可以授與或拒絕連接到服務的權限。  
   
 9. 按一下 [確定] 關閉對話方塊。  
   
-10. 在 [存取權限]**** 底下，重複步驟 7 和 8，為適當的使用者和群組指派適當的權限。  
+10. 在 [存取權限] 底下，重複步驟 7 和 8，為適當的使用者和群組指派適當的權限。  
   
 11. 關閉 MMC 嵌入式管理單元。  
   
@@ -358,11 +358,11 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 1.  在命令提示字元執行 **dcomcnfg.exe** 。  
   
-2.  在 [分散式 COM 組態內容]**** 對話方塊的 [應用程式]**** 頁面上，選取 SQL Server Integration Services 11.0，然後按一下 [內容]****。  
+2.  在 [分散式 COM 組態內容] 對話方塊的 [應用程式] 頁面上，選取 SQL Server Integration Services 11.0，然後按一下 [內容]。  
   
-3.  選取 [安全性] 頁面 **** 。  
+3.  選取 [安全性] 頁面  。  
   
-4.  使用兩個分開的對話方塊設定 [存取權限]**** 與 [啟動權限]****。 您無法區分遠端與本機存取，存取權限包含了本機與遠端存取，而啟動權限則包含了本機與遠端啟動。  
+4.  使用兩個分開的對話方塊設定 [存取權限] 與 [啟動權限]。 您無法區分遠端與本機存取，存取權限包含了本機與遠端存取，而啟動權限則包含了本機與遠端啟動。  
   
 5.  關閉對話方塊和 **dcomcnfg.exe**。  
   
@@ -419,26 +419,26 @@ SSIS 不支援認證委派 (有時候稱為「雙躍點」)。 在這種情況�
   
 #### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>使用 Windows 防火牆對話方塊來設定防火牆  
   
-1.  在 [控制台] 中按兩下 [Windows 防火牆]****。  
+1.  在 [控制台] 中按兩下 [Windows 防火牆]。  
   
 2.  在 **[Windows 防火牆]** 對話方塊中，按一下 **[例外狀況]** 索引標籤，然後再按一下 **[加入程式]**。  
   
-3.  在 [新增程式]**** 對話方塊中，按一下 [瀏覽]**** 巡覽至 Program Files\Microsoft SQL Server\100\DTS\Binn 資料夾，然後按一下 MsDtsSrvr.exe，再按一下 [開啟]****。 按一下 **[確定]** 以關閉 **[新增程式]** 對話方塊。  
+3.  在 [新增程式] 對話方塊中，按一下 [瀏覽] 巡覽至 Program Files\Microsoft SQL Server\100\DTS\Binn 資料夾，然後按一下 MsDtsSrvr.exe，再按一下 [開啟]。 按一下 **[確定]** 以關閉 **[新增程式]** 對話方塊。  
   
 4.  在 **[例外狀況]** 索引標籤上，按一下 **[新增連接埠]**。  
   
-5.  在 [新增連接埠]**** 對話方塊的 [名稱]**** 方塊中，輸入 **RPC(TCP/135)** 或其他描述性名稱，在 [連接埠編號]**** 方塊中輸入 **135**，然後選取 [TCP]****。  
+5.  在 [新增連接埠] 對話方塊的 [名稱] 方塊中，輸入 **RPC(TCP/135)** 或其他描述性名稱，在 [連接埠編號] 方塊中輸入 **135**，然後選取 [TCP]。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會一直使用通訊埠 135。 您無法指定不同的通訊埠。  
   
 6.  在 **[新增連接埠]** 對話方塊中，可以選擇性地按一下 **[變更範圍]** 以修改預設範圍。  
   
-7.  在 [變更範圍]**** 對話方塊中，選取 [只有我的網路 (子網路)]**** 或輸入自訂清單，然後按一下 [確定]****。  
+7.  在 [變更範圍] 對話方塊中，選取 [只有我的網路 (子網路)] 或輸入自訂清單，然後按一下 [確定]。  
   
 8.  若要關閉 **[新增連接埠]** 對話方塊，請按一下 **[確定]**。  
   
 9. 若要關閉 **[Windows 防火牆]** 對話方塊，請按一下 **[確定]**。  
   
     > [!NOTE]  
-    >  為了設定 Windows 防火牆，這個程序會使用 [控制台] 中的 [Windows 防火牆]**** 項目。 **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 不過，若要設定 Windows 防火牆，也可以使用 **netsh** 命令列工具或是名為「具有進階安全性的 Windows 防火牆」的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 嵌入式管理單元。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+    >  為了設定 Windows 防火牆，這個程序會使用 [控制台] 中的 [Windows 防火牆] 項目。 **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 不過，若要設定 Windows 防火牆，也可以使用 **netsh** 命令列工具或是名為「具有進階安全性的 Windows 防火牆」的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 嵌入式管理單元。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

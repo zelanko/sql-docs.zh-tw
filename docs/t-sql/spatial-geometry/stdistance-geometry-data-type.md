@@ -19,10 +19,10 @@ ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467363"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
@@ -41,7 +41,7 @@ ms.locfileid: "88467363"
 
 ## <a name="arguments"></a>引數
  *other_geometry*  
- 這是另一個**geometry** 執行個體，用來測量它與叫用 `STDistance()` 所在之執行個體之間的距離。 如果 *other_geometry* 是空的集合，`STDistance()` 會傳回 Null。  
+ 這是另一個 **geometry** 執行個體，用來測量它與叫用 `STDistance()` 所在之執行個體之間的距離。 如果 *other_geometry* 是空的集合，`STDistance()` 會傳回 Null。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  

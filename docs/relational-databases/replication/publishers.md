@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: a2fed319e89864538104904782b28329855dbf08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490528"
 ---
 # <a name="publishers"></a>發行者
@@ -32,7 +32,7 @@ ms.locfileid: "88490528"
  選取可使用這個散發者的伺服器。 按一下發行者旁的屬性按鈕 ( **...** )，即可檢視並設定其他屬性。  
   
  **加入**  
- 如果未列出您要允許的伺服器，請按一下 [加入]****，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。  
+ 如果未列出您要允許的伺服器，請按一下 [加入]，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。  
   
 ## <a name="see-also"></a>另請參閱  
  [[設定散發]](../../relational-databases/replication/configure-distribution.md)   

@@ -14,10 +14,10 @@ ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471134"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>將資料庫設定為單一使用者模式
@@ -63,7 +63,7 @@ ms.locfileid: "88471134"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]。  
   
 3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   

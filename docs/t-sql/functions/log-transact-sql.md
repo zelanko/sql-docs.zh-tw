@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88468002"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -53,7 +53,7 @@ LOG ( float_expression )
 
 ## <a name="arguments"></a>引數
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 **float** 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 **float** 類型或能夠隱含轉換成 **float** 類型的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *base*  
  可設定對數基數的選擇性整數引數。  

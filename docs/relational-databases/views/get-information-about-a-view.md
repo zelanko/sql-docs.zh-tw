@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488597"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
@@ -155,7 +155,7 @@ ms.locfileid: "88488597"
      指定查詢將包含 **TOP** 子句，只會傳回結果集內的前百分之 n 的資料列。  
   
      **With Ties**  
-     指定檢視中會包含 **WITH TIES** 子句。 如果檢視中包含了**WITH TIES** 子句和以百分比為基礎的 **WITH TIES** 子句， **WITH TIES** 非常實用。 如果設定了此選項，而且百分比截止點落在 **ORDER BY** 子句裡一組相同值的資料列中間，將會擴充檢視以將這些資料列全部包含。  
+     指定檢視中會包含 **WITH TIES** 子句。 如果檢視中包含了 **WITH TIES** 子句和以百分比為基礎的 **WITH TIES** 子句， **WITH TIES** 非常實用。 如果設定了此選項，而且百分比截止點落在 **ORDER BY** 子句裡一組相同值的資料列中間，將會擴充檢視以將這些資料列全部包含。  
   
      **更新規格**  
      展開以顯示 **[使用檢視規則更新]** 屬性和 **[檢查選項]** 屬性。  

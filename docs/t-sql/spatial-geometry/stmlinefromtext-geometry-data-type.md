@@ -19,10 +19,10 @@ ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 25aaadff2928c1ed0e20aac626305621c98e9159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472416"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (geometry 資料類型)

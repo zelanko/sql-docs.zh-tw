@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470180"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
@@ -39,7 +39,7 @@ ms.locfileid: "88470180"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>資料驗證如何運作  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 藉由計算「發行者」的資料列計數或總和檢查碼，然後將那些值與「訂閱者」所計算的資料列計數或總和檢查碼相比較，以驗證其資料。 整個發行集資料表計算一個值，整個訂閱資料表也計算一個值，但是 **text**、 **ntext**或 **image** 資料行的資料不包含在其計算中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 藉由計算「發行者」的資料列計數或總和檢查碼，然後將那些值與「訂閱者」所計算的資料列計數或總和檢查碼相比較，以驗證其資料。 整個發行集資料表計算一個值，整個訂閱資料表也計算一個值，但是 **text**、 **ntext** 或 **image** 資料行的資料不包含在其計算中。  
   
  在執行計算時，會暫時以共用鎖定來鎖定正在執行資料列計數或總和檢查碼的資料表，但此計算會迅速完成，並移除共用鎖定，通常只需要數秒鐘。  
   

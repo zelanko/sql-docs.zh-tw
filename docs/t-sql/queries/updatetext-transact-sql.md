@@ -22,10 +22,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8444f4c3421f41cb94cdd716b1c2017f506b80c2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114707"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -68,7 +68,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  這是以零為基底的更新起始位置。 就 **text** 或 **image** 資料行而言，*insert_offset* 是在插入新資料之前，要從現有資料行開頭略過的位元組數。 就 **ntext** 資料行而言，*insert_offset* 則是字元數目 (每個 **ntext** 字元會使用 2 個位元組)。 從這個以零為基底之起始位置開始的現有 **text**、**ntext** 或 **image** 資料，會向右移來騰出空間供新資料使用。 0 值會將新資料插入現有資料的起點。 NULL 值會將新資料附加至現有的資料值。  
   
  *delete_length*  
- 這是要從現有 **text**、**ntext** 或 **image** 資料行中刪除的資料長度，從 *insert_offset*位置開始。 指定 *delete_length* 值時，針對 **text** 和 **image** 資料行，會以位元組為單位來指定，針對 **ntext** 資料行，則以字元為單位來指定。 每個 **ntext** 字元都使用 2 個位元組。 0 值不會刪除任何資料。 值為 NULL 時，會刪除從 *insert_offset* 位置到現有 **text** 或 **image** 資料行結尾的所有資料。  
+ 這是要從現有 **text**、**ntext** 或 **image** 資料行中刪除的資料長度，從 *insert_offset* 位置開始。 指定 *delete_length* 值時，針對 **text** 和 **image** 資料行，會以位元組為單位來指定，針對 **ntext** 資料行，則以字元為單位來指定。 每個 **ntext** 字元都使用 2 個位元組。 0 值不會刪除任何資料。 值為 NULL 時，會刪除從 *insert_offset* 位置到現有 **text** 或 **image** 資料行結尾的所有資料。  
   
  WITH LOG  
  記錄取決於資料庫的實際復原模式。  

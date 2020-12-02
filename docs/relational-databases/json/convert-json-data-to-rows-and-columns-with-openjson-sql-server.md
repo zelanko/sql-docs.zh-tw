@@ -16,10 +16,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499351"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server)
@@ -35,8 +35,8 @@ ms.locfileid: "88499351"
   
 ## <a name="option-1---openjson-with-the-default-output"></a>選項 1 - 具有預設輸出的 OPENJSON
 當您使用 **OPENJSON** 函式而不提供明確的結果結構描述 (也就是在 **OPENJSON** 之後不使用 **WITH** 子句) 時，此函式會傳回包含下列三個資料行的資料表：
-1.  輸入物件中的屬性**名稱** (或輸入陣列中元素的索引)。
-2.  屬性或陣列元素的**值**。
+1.  輸入物件中的屬性 **名稱** (或輸入陣列中元素的索引)。
+2.  屬性或陣列元素的 **值**。
 3.  **類型** (例如字串、數字、布林值、陣列或物件)。
 
 **OPENJSON** 會以個別資料列的方式傳回 JSON 物件的每個屬性，或陣列的每個元素。  
@@ -136,7 +136,7 @@ WITH (
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON 需要相容性層級 130
 
-**OPENJSON** 函數僅適用於 **相容性層級 130**以下。 如果您的資料庫相容性層級低於 130，SQL Server 將找不到且無法執行 **OPENJSON** 函式。 其他內建 JSON 函數適用於所有的相容性層級。
+**OPENJSON** 函數僅適用於 **相容性層級 130** 以下。 如果您的資料庫相容性層級低於 130，SQL Server 將找不到且無法執行 **OPENJSON** 函式。 其他內建 JSON 函數適用於所有的相容性層級。
 
 您可以在 `sys.databases` 檢視或資料庫屬性中查看相容性層級。
 

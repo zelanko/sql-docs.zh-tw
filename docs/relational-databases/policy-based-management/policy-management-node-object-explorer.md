@@ -12,10 +12,10 @@ ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8bdc9732ab9623d4053ee0408873cc533c4564b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493985"
 ---
 # <a name="policy-management-node-object-explorer"></a>原則管理節點 (物件總管)

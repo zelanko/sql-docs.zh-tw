@@ -18,10 +18,10 @@ ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 491c548960fde425b8f2c021d69dce94b95a7b21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472573"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (geography 資料類型)

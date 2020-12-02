@@ -12,10 +12,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990406"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>課程 1-7：新增及設定 OLE DB 目的地
@@ -32,33 +32,33 @@ ms.locfileid: "90990406"
   
 1.  在 [SSIS 工具箱] 中展開 [其他目的地]，將 [OLE DB 目的地] 拖曳至 [資料流程] 索引標籤的設計介面中。將 [OLE DB 目的地] 直接放在 [查閱日期索引鍵] 轉換下面。  
   
-2.  選取 [查閱日期索引鍵]**** 轉換，然後將其藍色箭頭拖曳至新的 [OLE DB 目的地]****，以連接這兩個元件。  
+2.  選取 [查閱日期索引鍵] 轉換，然後將其藍色箭頭拖曳至新的 [OLE DB 目的地]，以連接這兩個元件。  
   
-3.  在 [輸入輸出選擇]**** 對話方塊的 [輸出]**** 清單方塊中，選取 [查閱比對輸出]****，然後選取 [確定]****。  
+3.  在 [輸入輸出選擇] 對話方塊的 [輸出] 清單方塊中，選取 [查閱比對輸出]，然後選取 [確定]。  
   
-4.  在 [資料流程]**** 設計介面上，於新的 [OLE DB 目的地]**** 元件中選取 [OLE DB 目的地]**** 名稱，然後將該名稱變更為**範例 OLE DB 目的地**。  
+4.  在 [資料流程] 設計介面上，於新的 [OLE DB 目的地] 元件中選取 [OLE DB 目的地] 名稱，然後將該名稱變更為 **範例 OLE DB 目的地**。  
   
-5.  按兩下 [範例 OLE DB 目的地]****。  
+5.  按兩下 [範例 OLE DB 目的地]。  
   
-6.  在 [OLE DB 目的地編輯器]**** 對話方塊中，確定在 [OLE DB 連線管理員]**** 方塊中已選取 [localhost.AdventureWorksDW2012]****。  
+6.  在 [OLE DB 目的地編輯器] 對話方塊中，確定在 [OLE DB 連線管理員] 方塊中已選取 [localhost.AdventureWorksDW2012]。  
   
-7.  在 [資料表或檢視表的名稱]**** 方塊中，輸入或選取 **[dbo].[FactCurrencyRate]**。  
+7.  在 [資料表或檢視表的名稱] 方塊中，輸入或選取 **[dbo].[FactCurrencyRate]**。  
  
 8.  如果目前存在名為 **NewFactCurrencyRate** 的資料表，請立即予以刪除。 您將在下一個步驟中建立資料表。
  
-9.  選取 [新增]**** 按鈕以建立新的資料表。  將指令碼中資料表的名稱從 **Sample OLE DB Destination** 變更為 **NewFactCurrencyRate**。  選取 [確定]  。  
+9.  選取 [新增] 按鈕以建立新的資料表。  將指令碼中資料表的名稱從 **Sample OLE DB Destination** 變更為 **NewFactCurrencyRate**。  選取 [確定]  。  
  
-10. 選取 [確定]**** 時，此對話方塊會關閉，而 [資料表或檢視表的名稱]**** 則會自動變更為 **NewFactCurrencyRate**。  
+10. 選取 [確定] 時，此對話方塊會關閉，而 [資料表或檢視表的名稱] 則會自動變更為 **NewFactCurrencyRate**。  
   
-11. 選取 [對應]****。  
+11. 選取 [對應]。  
   
-12. 確認 [AverageRate]****、[CurrencyKey]****、[EndOfDayRate]**** 和 [DateKey]**** 輸入資料行都正確對應到目的地資料行。 如果對應到同名資料行，則表示對應是正確的。  
+12. 確認 [AverageRate]、[CurrencyKey]、[EndOfDayRate] 和 [DateKey] 輸入資料行都正確對應到目的地資料行。 如果對應到同名資料行，則表示對應是正確的。  
   
 13. 選取 [確定]  。  
   
-14. 在 [範例 OLE DB 目的地]**** 目的地上按一下滑鼠右鍵，然後選取 [屬性]****。  
+14. 在 [範例 OLE DB 目的地] 目的地上按一下滑鼠右鍵，然後選取 [屬性]。  
   
-15. 在 [屬性]**** 視窗中，確認 [LocaleID]**** 屬性是設定為 [英文 (美國)]****，[DefaultCodePage]**** 屬性是設為 [1252]****。  
+15. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是設定為 [英文 (美國)]，[DefaultCodePage] 屬性是設為 [1252]。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 8：為第 1 課套件加上註解並設定格式](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

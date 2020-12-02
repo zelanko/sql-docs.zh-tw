@@ -16,10 +16,10 @@ ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 58c43b02c466fa2f5f1bc2b06006855b894cd65c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88497059"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (geometry 資料類型)

@@ -17,10 +17,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470243"
 ---
 # <a name="join-filters"></a>聯結篩選
@@ -39,7 +39,7 @@ ms.locfileid: "88470243"
   
  上述資料表可在應用程式中使用，以支援行動銷售團隊，但這些資料表必須經過篩選，以便 **HumanResources.Employee** 資料表中的每位業務員只會收到其客戶訂單的相關資料。  
   
- 第一步要在父資料表中定義參數化篩選，此範例中的父資料表是 **HumanResources.Employee** 資料表。 此資料表包括 **LoginID**資料行，其中含有格式為 *domain\login*的每位員工的登入。 若要篩選此資料表，以使各員工僅收到與其相關的資料，請指定參數化篩選子句：  
+ 第一步要在父資料表中定義參數化篩選，此範例中的父資料表是 **HumanResources.Employee** 資料表。 此資料表包括 **LoginID** 資料行，其中含有格式為 *domain\login* 的每位員工的登入。 若要篩選此資料表，以使各員工僅收到與其相關的資料，請指定參數化篩選子句：  
   
 ```  
 LoginID = SUSER_SNAME()  

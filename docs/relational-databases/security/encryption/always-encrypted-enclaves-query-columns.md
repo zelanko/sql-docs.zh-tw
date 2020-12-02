@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8daabf320e0f736bcfabc5addb8508320b10bb8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88482221"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 查詢資料行
@@ -25,7 +25,7 @@ ms.locfileid: "88482221"
 
 下列查詢類型牽涉到使用安全記憶體保護區：
 - 使用已啟用記憶體保護區之金鑰來觸發就地密碼編譯作業的查詢 - 請參閱[使用 Transact-SQL 就地設定資料行加密](always-encrypted-enclaves-configure-encryption-tsql.md)。
-- 豐富查詢** - 在資料行 (使用隨機化加密和已啟用記憶體保護區的金鑰加密) 上進行範圍比較或模式比對作業。
+- 豐富查詢 - 在資料行 (使用隨機化加密和已啟用記憶體保護區的金鑰加密) 上進行範圍比較或模式比對作業。
 - 使用隨機化加密和已啟用記憶體保護區的金鑰，在加密資料行上建立或更新索引的查詢。 如需詳細資訊，請參閱[使用具有安全記憶體保護區的 Always Encrypted 在資料行上建立及使用索引](always-encrypted-enclaves-create-use-indexes.md)。
 
 > [!NOTE]

@@ -19,10 +19,10 @@ ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 61304621317ee302585102acdd82198fd90baedd
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115973"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
@@ -47,7 +47,7 @@ MIN_ACTIVE_ROWVERSION ( )
  傳回 **binary(8)** 值。  
   
 ## <a name="remarks"></a>備註  
- MIN_ACTIVE_ROWVERSION 是一個不具確定性的函式，它會傳回目前資料庫中最低的使用中 **rowversion** 值。 在包含 **rowversion** 類型之資料行的資料表上執行插入或更新時，通常會產生新的 **rowversion**值。 如果在資料庫中沒有使用中的值，MIN_ACTIVE_ROWVERSION 會傳回與 @@DBTS + 1 相同的值。  
+ MIN_ACTIVE_ROWVERSION 是一個不具確定性的函式，它會傳回目前資料庫中最低的使用中 **rowversion** 值。 在包含 **rowversion** 類型之資料行的資料表上執行插入或更新時，通常會產生新的 **rowversion** 值。 如果在資料庫中沒有使用中的值，MIN_ACTIVE_ROWVERSION 會傳回與 @@DBTS + 1 相同的值。  
   
  例如，MIN_ACTIVE_ROWVERSION 在類似以下的案例中會很實用：使用 **rowversion** 值將變更集合分組在一起的資料同步處理。 如果應用程式使用 @@DBTS 而非 MIN_ACTIVE_ROWVERSION，有可能會遺漏在同步處理發生時的使用中變更。  
   

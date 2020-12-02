@@ -23,10 +23,10 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e84cc199c94775a38268ab486712c5f5982bdb26
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115454"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)

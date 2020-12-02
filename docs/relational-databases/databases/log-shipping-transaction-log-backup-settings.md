@@ -14,10 +14,10 @@ ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d4aca0ffc4cf4521123c03b71c7e2e4aae72038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465430"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>記錄傳送交易記錄備份設定
@@ -33,7 +33,7 @@ ms.locfileid: "88465430"
  **如果備份資料夾位於主要伺服器上，請輸入該資料夾的本機路徑**  
  如果備份資料夾位於主要伺服器上，請輸入備份資料夾的本機磁碟機代號和路徑。 如果備份資料夾不在主要伺服器上，您可以讓此欄位保留空白。  
   
- 如果您在此指定本機路徑，則 BACKUP 命令將使用此路徑來建立交易記錄備份；否則，如果未指定本機路徑，BACKUP 命令將使用 [備份資料夾的網路路徑]**** 方塊中所指定的網路路徑。  
+ 如果您在此指定本機路徑，則 BACKUP 命令將使用此路徑來建立交易記錄備份；否則，如果未指定本機路徑，BACKUP 命令將使用 [備份資料夾的網路路徑] 方塊中所指定的網路路徑。  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶是在主要伺服器的本機系統帳戶之下執行，您就必須在主要伺服器上建立備份資料夾，然後在此指定該資料夾的本機路徑。 主要伺服器執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須擁有此資料夾的讀取和寫入權限。  

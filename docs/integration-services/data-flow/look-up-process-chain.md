@@ -12,10 +12,10 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28d354fce02498905c61df6b61a35a774d804eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495818"
 ---
 # <a name="look-up-process-chain"></a>查閱 ProcessChain
@@ -40,7 +40,7 @@ ms.locfileid: "88495818"
   
 4.  在 **[處理序鏈結]** 群組方塊中，按一下 **[查閱]** 顯示 **[查閱 ProcessChain]** 對話方塊。  
   
-     只有當 [執行模式]**** 的值是 [P - 觸發處理鏈結]**** 時，才會出現 [處理序鏈結]**** 群組方塊。  
+     只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 時，才會出現 [處理序鏈結] 群組方塊。  
   
 ## <a name="lookup-options"></a>查閱選項  
  在查閱欄位中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱作業就只會比對該欄位中的空白字串。  

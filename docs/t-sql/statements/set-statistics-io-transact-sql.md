@@ -27,10 +27,10 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f0baaa385e86844bed40dfa3f725e11ba298e27c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541251"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)

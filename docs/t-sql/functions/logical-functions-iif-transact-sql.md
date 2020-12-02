@@ -19,10 +19,10 @@ ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b58823a6b9e6b43b3458392d1b9016c0716a2e32
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116357"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>邏輯函式 - IIF (Transact-SQL)
@@ -56,7 +56,7 @@ IIF ( boolean_expression, true_value, false_value )
  從 *true_value* 及 *false_value* 的類型中，傳回優先順序最高的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
- IIF 是一種編寫 CASE 運算式的簡略方法。 其會求得第一個引數所傳遞之布林運算式的解，然後依據求解結果，傳回另外兩個引數之一。 亦即，如果布林運算式為 true，則會傳回 *true_value*如果布林運算式為 false 或不明，則會傳回 *false_value*。 *true_value* 和 *false_value* 可為任何類型。 套用到布林運算式、null 處理及傳回類型之 CASE 運算式的規則也同樣會套用至 IIF。 如需詳細資訊，請參閱 [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)。  
+ IIF 是一種編寫 CASE 運算式的簡略方法。 其會求得第一個引數所傳遞之布林運算式的解，然後依據求解結果，傳回另外兩個引數之一。 亦即，如果布林運算式為 true，則會傳回 *true_value* 如果布林運算式為 false 或不明，則會傳回 *false_value*。 *true_value* 和 *false_value* 可為任何類型。 套用到布林運算式、null 處理及傳回類型之 CASE 運算式的規則也同樣會套用至 IIF。 如需詳細資訊，請參閱 [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)。  
   
  IIF 轉換為 CASE 的事實，對此函數之行為的其他層面也有影響。 由於 IIF 陳述式最多只可巢狀化到層級 10，因此 CASE 運算式最多也只可巢狀化至層級 10。 此外，IIF 會以語意相等之 CASE 運算式，並以遠端處理之 CASE 運算式的所有行為，從遠端處理到其他伺服器。  
   

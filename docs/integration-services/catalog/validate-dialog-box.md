@@ -15,10 +15,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a65f5d8114907472eb03aa06e428927aa1408b7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484906"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
@@ -48,7 +48,7 @@ ms.locfileid: "88484906"
   
 4.  展開包含您要驗證之專案或封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]****。  
+5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]。  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的選項  
  **環境**  

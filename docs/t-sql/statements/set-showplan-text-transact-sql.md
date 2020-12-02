@@ -28,10 +28,10 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 3e80a5acb98e57ea3a3ae1b348c854b5030154a2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89540502"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
@@ -63,7 +63,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|**StmtText**|對於每個類型不是 PLAN_ROW 的資料列，這個資料行都包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。 對於類型是 PLAN_ROW 的資料列，這個資料行包含作業的說明。 這個資料行包含實體運算子，也可能選擇性地包含邏輯運算子。 這個資料行後面可能接著取決於實體運算子的說明。 如需實體運算子的詳細資訊，請參閱 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md) 中**引數**資料行的詳細資訊。|  
+|**StmtText**|對於每個類型不是 PLAN_ROW 的資料列，這個資料行都包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。 對於類型是 PLAN_ROW 的資料列，這個資料行包含作業的說明。 這個資料行包含實體運算子，也可能選擇性地包含邏輯運算子。 這個資料行後面可能接著取決於實體運算子的說明。 如需實體運算子的詳細資訊，請參閱 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md) 中 **引數** 資料行的詳細資訊。|  
 |||
 
  如需在顯示計畫輸出中所能見到之實體和邏輯運算子的詳細資訊，請參閱[執行程序表邏輯及實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

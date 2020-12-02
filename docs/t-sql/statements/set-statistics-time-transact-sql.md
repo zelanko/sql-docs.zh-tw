@@ -26,10 +26,10 @@ ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: abde67780d0eff93a791a2b48654ba712dea6859
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89539803"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
@@ -53,7 +53,7 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
- 當您啟用 [輕量型共用]**** 設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法提供準確的統計資料。  
+ 當您啟用 [輕量型共用] 設定選項時，會啟用 Fiber 模式，但在 Fiber 模式下，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法提供準確的統計資料。  
   
  只有在使用 SET STATISTICS TIME ON 來執行查詢時，才會更新 **sysprocesses** 資料表的 **cpu** 資料行。 當 SET STATISTICS TIME 是 OFF 時，會傳回 **0**。  
   

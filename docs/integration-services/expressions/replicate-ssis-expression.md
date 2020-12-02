@@ -14,10 +14,10 @@ ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66560e6c72a0b6a5d36a2eee744d81eb1c232fda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477440"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 運算式)

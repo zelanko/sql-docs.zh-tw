@@ -15,10 +15,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499767"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
@@ -35,11 +35,11 @@ ms.locfileid: "88499767"
 ##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> 解除封裝資料層應用程式對話方塊  
  **解除封裝 DAC 封裝檔案**  
   
--   在 Windows 檔案總管**** 中，巡覽至 DAC 封裝 (.dacpac) 檔案的位置。  
+-   在 Windows 檔案總管中，巡覽至 DAC 封裝 (.dacpac) 檔案的位置。  
   
 -   使用這兩種方法的其中一種，來開啟 [解除封裝資料層應用程式] 對話方塊：  
   
-    1.  以滑鼠右鍵按一下 DAC 封裝 (.dacpac) 檔案，並選取 [解除封裝]****。  
+    1.  以滑鼠右鍵按一下 DAC 封裝 (.dacpac) 檔案，並選取 [解除封裝]。  
   
     2.  按兩下 DAC 封裝檔案。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88499767"
   
  **檔案將解除封裝至這個資料夾** - 指定放置解除封裝檔案之資料夾的完整路徑。 如果此資料夾已經存在，而且您知道完整路徑，請在方塊中輸入路徑。 如果不存在，請按一下 **[瀏覽]** 按鈕，導覽至資料夾或建立新的資料夾。  
   
- **瀏覽** - 開啟 [瀏覽資料夾]**** 頁面，您可以在這裡導覽檔案階層來選擇資料夾或建立新的資料夾。  
+ **瀏覽** - 開啟 [瀏覽資料夾] 頁面，您可以在這裡導覽檔案階層來選擇資料夾或建立新的資料夾。  
   
  **解除封裝** - 開始解除封裝作業。  
   
@@ -67,12 +67,12 @@ ms.locfileid: "88499767"
   
  **建立新資料夾** - 開啟對話方塊，您可以在其中指定您目前在資料夾階層中選取之資料夾內所要建立的新資料夾名稱。  
   
- **確定** - 放置您在 [解除封裝 DAC 封裝檔案]**** 頁面之 [檔案將解除封裝至這個資料夾]**** 方塊內所選取之資料夾的路徑，並讓您回到這個頁面。  
+ **確定** - 放置您在 [解除封裝 DAC 封裝檔案] 頁面之 [檔案將解除封裝至這個資料夾] 方塊內所選取之資料夾的路徑，並讓您回到這個頁面。  
   
  **取消** - 結束此對話方塊，而不選取資料夾。  
   
 ##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> 檢查 DAC 封裝的內容  
- 在解除封裝之後，您可以檢查 [解除封裝資料層應用程式]**** 對話方塊所產生的檔案。 此對話方塊會在選取的目的地資料夾中建置下列檔案：  
+ 在解除封裝之後，您可以檢查 [解除封裝資料層應用程式] 對話方塊所產生的檔案。 此對話方塊會在選取的目的地資料夾中建置下列檔案：  
   
 1.  Transact-SQL 指令碼，其中包含建立 DAC 中所定義之物件的陳述式。 檔案名稱為 *DACName*.sql，其中 *DACName* 是 DAC 的名稱。  
   

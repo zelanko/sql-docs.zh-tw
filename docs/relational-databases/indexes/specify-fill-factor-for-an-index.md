@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499333"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
@@ -73,7 +73,7 @@ ms.locfileid: "88499333"
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要指定索引填滿因數的資料表，然後選取 [設計]****。  
+3.  以滑鼠右鍵按一下要指定索引填滿因數的資料表，然後選取 [設計]。  
   
 4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88499333"
   
 7.  按一下 [關閉] 。  
   
-8.  在 [檔案]**** 功能表上，選取 [儲存 _table_name_]****。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用物件總管指定索引的填滿因數  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88499333"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下包含您要指定填滿因數的索引，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下包含您要指定填滿因數的索引，然後選取 [屬性]。  
   
 6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   

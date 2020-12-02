@@ -28,10 +28,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 087e3e1d67bce5d8f46f03cdb1cad05578b39b46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479881"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  您可以使用 SELECT INTO 陳述式來產生重複的 **rowversion** 值，**rowversion** 資料行在 SELECT 清單中。 我們不建議您以這個方式來使用 **rowversion**。  
   
-不可為 Null 的**rowversion** 資料行，語意等於 **binary(8)** 資料行。 可為 Null 的 **rowversion** 資料行，語意等於 **varbinary(8)** 資料行。
+不可為 Null 的 **rowversion** 資料行，語意等於 **binary(8)** 資料行。 可為 Null 的 **rowversion** 資料行，語意等於 **varbinary(8)** 資料行。
   
 您可以使用資料列的 **rowversion** 資料行來輕鬆地判斷自上一次讀取以來，是否已對該資料列執行過 update 陳述式。 若已針對該資料列執行 update 陳述式，則 rowversion 值便會更新。 若沒有針對該資料列執行 update 陳述式，則 rowversion 值便會與先前讀取時相同。 若要傳回資料庫目前的 rowversion 值，請使用 [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)。
   
@@ -104,7 +104,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
 
 您也可以將範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式放入交易中。 您可以透過在交易的範圍中查詢 `@t` 變數來擷取資料表已更新的 `myKey` 資料行，而不必重新查詢 `MyTest` 資料表。
 
-下列為使用**時間戳記**語法的相同範例。 以實際的**時間戳記**取代 `<myTS>`。
+下列為使用 **時間戳記** 語法的相同範例。 以實際的 **時間戳記** 取代 `<myTS>`。
 
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  

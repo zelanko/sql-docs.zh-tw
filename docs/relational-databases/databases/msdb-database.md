@@ -17,10 +17,10 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471190"
 ---
 # <a name="msdb-database"></a>msdb 資料庫
@@ -28,12 +28,12 @@ ms.locfileid: "88471190"
 
   **msdb** 資料庫供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來設定警示和作業排程，以及供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和 Database Mail 等其他功能使用。  
   
- 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動在 **msdb**的資料表中維護一份完整的線上備份和還原記錄。 此資訊包括執行備份者的名稱、備份時間，以及在其中儲存備份的裝置或檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用此資訊來提出還原資料庫以及套用任何交易記錄備份的計畫。 即使是以自訂應用程式或協力廠商工具建立備份，所有資料庫的備份事件都會記錄下來。 例如，如果使用會呼叫 SQL Server 管理物件 (SMO) 物件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式來執行備份作業，則事件會記錄在 **msdb** 系統資料表、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。 為了協助您保護儲存在 **msdb**中的資訊，我們建議您考慮將 **msdb** 交易記錄放在容錯儲存體上。  
+ 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動在 **msdb** 的資料表中維護一份完整的線上備份和還原記錄。 此資訊包括執行備份者的名稱、備份時間，以及在其中儲存備份的裝置或檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用此資訊來提出還原資料庫以及套用任何交易記錄備份的計畫。 即使是以自訂應用程式或協力廠商工具建立備份，所有資料庫的備份事件都會記錄下來。 例如，如果使用會呼叫 SQL Server 管理物件 (SMO) 物件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式來執行備份作業，則事件會記錄在 **msdb** 系統資料表、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。 為了協助您保護儲存在 **msdb** 中的資訊，我們建議您考慮將 **msdb** 交易記錄放在容錯儲存體上。  
   
- 依預設， **msdb** 使用的是簡單復原模式。 如果您使用 [備份與還原記錄](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) 資料表，我們建議您針對 **msdb**使用完整復原模式。 如需詳細資訊，請參閱[復原模式 &#40;SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。 請注意，當您安裝或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，只要使用 Setup.exe 重建系統資料庫，就會自動將 **msdb** 的復原模式設定為簡單。  
+ 依預設， **msdb** 使用的是簡單復原模式。 如果您使用 [備份與還原記錄](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) 資料表，我們建議您針對 **msdb** 使用完整復原模式。 如需詳細資訊，請參閱[復原模式 &#40;SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。 請注意，當您安裝或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，只要使用 Setup.exe 重建系統資料庫，就會自動將 **msdb** 的復原模式設定為簡單。  
   
 > [!IMPORTANT]  
->  進行任何更新 **msdb**的作業 (例如備份或還原任何資料庫) 之後，我們建議您備份 **msdb**。 如需詳細資訊，請參閱[系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
+>  進行任何更新 **msdb** 的作業 (例如備份或還原任何資料庫) 之後，我們建議您備份 **msdb**。 如需詳細資訊，請參閱[系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
 ## <a name="physical-properties-of-msdb"></a>msdb 的實體屬性  
  下表列出了 **msdb** 資料與記錄檔的初始組態值。 對於不同版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，這些檔案的大小稍有不同。  

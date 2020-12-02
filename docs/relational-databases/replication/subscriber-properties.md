@@ -17,15 +17,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 366740d950e249d6ad18e97af3094208d4d849fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88493875"
 ---
 # <a name="subscriber-properties"></a>訂閱者屬性
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  [訂閱者屬性]**** 對話方塊包含執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本訂閱者的相關資訊。  
+  [訂閱者屬性] 對話方塊包含執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本訂閱者的相關資訊。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 

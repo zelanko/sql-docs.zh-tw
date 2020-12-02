@@ -19,10 +19,10 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ccc9a860218a6fa39596faaee78908eedf6907a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115993"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465514"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
@@ -32,7 +32,7 @@ ms.locfileid: "88465514"
 
 -   從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始並在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，使用下列任一項：
     -   **char**、**varchar** 及 **varchar(max)** 資料類型 (使用啟用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的定序)，則會使用 UTF-8 來編碼資料。
-    -   **nchar**、**nvarchar** 及 **nvarchar(max)** 資料類型 (使用啟用[增補字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序)，則會使用 UTF-16 來編碼資料。 使用非 SC 定序會導致使用 UCS-2 來編碼資料。      
+    -   **nchar**、**nvarchar** 及 **nvarchar(max)** 資料類型 (使用啟用 [增補字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序)，則會使用 UTF-16 來編碼資料。 使用非 SC 定序會導致使用 UCS-2 來編碼資料。      
 
     這可避免字碼頁轉換問題。 如需其它考量事項，請參閱 [UTF-8 和 UTF-16 間的儲存差異](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。  
 

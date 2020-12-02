@@ -21,10 +21,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ee78ea030b50ee6ab90c5df616f2bd49f163ded2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115889"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -55,9 +55,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 |位元組值|描述|  
 |----------------|-----------------|  
-|**0**|預設為**以屬性為主**的對應。|  
-|**1**|使用**以屬性為主**的對應。 可以和 XML_ELEMENTS 合併使用。 在此情況下，會先套用**屬性中心**對應。 接下來，會針對任何剩餘的資料行套用**項目中心**對應。|  
-|**2**|使用**以元素為主**的對應。 可以和 XML_ATTRIBUTES 合併使用。 在此情況下，會先套用**屬性中心**對應。 接下來，會針對任何剩餘的資料行套用**項目中心**對應。|  
+|**0**|預設為 **以屬性為主** 的對應。|  
+|**1**|使用 **以屬性為主** 的對應。 可以和 XML_ELEMENTS 合併使用。 在此情況下，會先套用 **屬性中心** 對應。 接下來，會針對任何剩餘的資料行套用 **項目中心** 對應。|  
+|**2**|使用 **以元素為主** 的對應。 可以和 XML_ATTRIBUTES 合併使用。 在此情況下，會先套用 **屬性中心** 對應。 接下來，會針對任何剩餘的資料行套用 **項目中心** 對應。|  
 |**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，此標幟會指出所取用的資料不應複製到溢位屬性 **\@mp:xmltext**。|  
   
  _SchemaDeclaration_  
@@ -70,9 +70,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  這是資料列集中資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如果資料行類型與屬性的基礎 **xml** 資料類型不同，則會發生強制型轉。  
   
  *ColPattern*  
- 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (*flags* 指定的**屬性中心**或**項目中心**對應)。  
+ 這是描述 XML 節點應該如何對應到資料行的選擇性、一般 XPath 模式。 若未指定 *ColPattern*，則會發生預設對應 (*flags* 指定的 **屬性中心** 或 **項目中心** 對應)。  
   
- 作為指定為 *ColPattern* 之 XPath 模式會用於指定對應的特殊性質 (針對**屬性中心**和**項目中心**對應)，覆寫或增強 *flags* 指出的預設對應。  
+ 作為指定為 *ColPattern* 之 XPath 模式會用於指定對應的特殊性質 (針對 **屬性中心** 和 **項目中心** 對應)，覆寫或增強 *flags* 指出的預設對應。  
   
  指定為 *ColPattern* 的一般 XPath 模式也支援中繼屬性。  
   
@@ -83,9 +83,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  這是在具有所要結構描述的資料表已經存在且不需要資料行模式的情況下，可以提供的資料表名稱 (而非 *SchemaDeclaration*)。  
   
 ## <a name="remarks"></a>備註  
- WITH 子句會使用 *SchemaDeclaration* 或指定現有的 *TableName*，來提供資料列集格式 (以及其他需要的對應資訊)。 若沒有指定選擇性的 WITH 子句，則會以**邊緣**資料表格式傳回結果。 邊緣資料表代表單一資料表中的細粒 XML 文件結構 (如元素/屬性名稱、文件階層、命名空間、PI 等等)。  
+ WITH 子句會使用 *SchemaDeclaration* 或指定現有的 *TableName*，來提供資料列集格式 (以及其他需要的對應資訊)。 若沒有指定選擇性的 WITH 子句，則會以 **邊緣** 資料表格式傳回結果。 邊緣資料表代表單一資料表中的細粒 XML 文件結構 (如元素/屬性名稱、文件階層、命名空間、PI 等等)。  
   
- 下表說明**邊緣**資料表的結構。  
+ 下表說明 **邊緣** 資料表的結構。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -97,14 +97,14 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**namespaceuri**|**nvarchar**|這是節點的命名空間 URI。 如果值是 NULL，表示沒有命名空間。|  
 |**datatype**|**nvarchar**|這是元素或屬性資料列的實際資料類型，否則為 NULL。 資料類型是從內嵌 DTD 或內嵌結構描述推斷。|  
 |**prev**|**bigint**|這是前一個同層級元素的 XML 識別碼。 如果沒有直接的前一個同層級，則為 NULL。|  
-|**text**|**ntext**|包含文字形式的屬性值或項目內容 (如果**邊緣**資料表項目不需要值，則為 NULL)。|  
+|**text**|**ntext**|包含文字形式的屬性值或項目內容 (如果 **邊緣** 資料表項目不需要值，則為 NULL)。|  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 以 OPENXML 使用簡單的 SELECT 陳述式  
  下列範例會使用 `sp_xml_preparedocument` 來建立 XML 影像的內部表示法。 然後對 XML 文件的內部表示法執行使用 `SELECT` 資料列集提供者的 `OPENXML` 陳述式。  
   
- *flag* 值是設為 `1`。 此值指出**屬性中心**對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 `/ROOT/Customer` 的 *rowpattern* 會識別要處理的 `<Customers>` 節點。  
+ *flag* 值是設為 `1`。 此值指出 **屬性中心** 對應。 因此 XML 屬性是對應到資料列集中的資料行。 指定為 `/ROOT/Customer` 的 *rowpattern* 會識別要處理的 `<Customers>` 節點。  
   
  此處並未指定選擇性的 *ColPattern* (資料行模式) 參數，因為資料行名稱與 XML 屬性名稱相符。  
   
@@ -144,7 +144,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 如果相同的 `SELECT` 陳述式是以 「旗標」** 設為 `2` 的方式 (表示**項目中心**對應) 來執行，則 XML 文件中兩個客戶的 `CustomerID` 及 `ContactName` 值都會以 NULL 傳回，因為 XML 文件中沒有任何名為 `CustomerID` 或 `ContactName` 的項目。  
+ 如果相同的 `SELECT` 陳述式是以 「旗標」設為 `2` 的方式 (表示 **項目中心** 對應) 來執行，則 XML 文件中兩個客戶的 `CustomerID` 及 `ContactName` 值都會以 NULL 傳回，因為 XML 文件中沒有任何名為 `CustomerID` 或 `ContactName` 的項目。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -164,7 +164,7 @@ NULL       NULL
   
 -   資料列集中的 `ProdID` 資料行會對應到 `ProductID` 屬性，而資料列集中的 `Qty` 資料行則會對應到 *rowpattern* 中所識別之節點的 `Quantity` 屬性。  
   
- 雖然**以元素為主**的對應是由 *flags* 參數所指定，但是在 *ColPattern* 中指定的對應會覆寫這個對應。  
+ 雖然 **以元素為主** 的對應是由 *flags* 參數所指定，但是在 *ColPattern* 中指定的對應會覆寫這個對應。  
   
 ```sql  
 DECLARE @idoc INT, @doc VARCHAR(1000);   
@@ -212,9 +212,9 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. 取得邊緣資料表格式的結果  
  下列範例中的取樣 XML 文件是由 `<Customers>`、`<Orders>` 和 `<Order_0020_Details>` 元素組成。 首先，會呼叫 **sp_xml_preparedocument** 以取得文件控制代碼。 接著將這個文件控制代碼傳送到 `OPENXML`。  
   
- 在 `OPENXML` 陳述式中，*rowpattern* (`/ROOT/Customers`) 會識別要處理的 `<Customers>` 節點。 由於並未提供 WITH 子句，因此 `OPENXML` 會以**邊緣**資料表格式傳回資料列集。  
+ 在 `OPENXML` 陳述式中，*rowpattern* (`/ROOT/Customers`) 會識別要處理的 `<Customers>` 節點。 由於並未提供 WITH 子句，因此 `OPENXML` 會以 **邊緣** 資料表格式傳回資料列集。  
   
- 最後，`SELECT` 陳述式會擷取**邊緣**資料表中的所有資料行。  
+ 最後，`SELECT` 陳述式會擷取 **邊緣** 資料表中的所有資料行。  
   
 ```sql  
 DECLARE @idoc INT, @doc VARCHAR(1000);   

@@ -15,10 +15,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490941"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
@@ -39,12 +39,12 @@ ms.locfileid: "88490941"
 ## <a name="parts-of-a-path-expression"></a>路徑運算式的組成部分
  路徑運算式有兩個元件。  
   
-1.  選擇性[路徑模式](#PATHMODE)，其值為 **lax** 或 **strict**。  
+1.  選擇性 [路徑模式](#PATHMODE)，其值為 **lax** 或 **strict**。  
   
 2.  [路徑](#PATH) 本身。  
 
 ##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
- 在路徑運算式的開頭，指定關鍵字 **lax** 或 **strict**以選擇性地宣告路徑模式。 預設值是 **lax**。  
+ 在路徑運算式的開頭，指定關鍵字 **lax** 或 **strict** 以選擇性地宣告路徑模式。 預設值是 **lax**。  
   
 -   在 **lax** 模式中，如果路徑運算式包含錯誤，函數會傳回空白值。 例如，如果您要求值 **$.name**，且 JSON 文字不包含 **name** 索引鍵，則函數會傳回 null，但不會引發錯誤。  
   

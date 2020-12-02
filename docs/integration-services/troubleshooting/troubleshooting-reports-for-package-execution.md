@@ -12,10 +12,10 @@ ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c91d575842410d79411bb5cdd77d5ecff27f13c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495160"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
@@ -33,7 +33,7 @@ ms.locfileid: "88495160"
   
     -   如果封裝已完成，則持續時間 = 結束時間 - 開始時間  
   
-     對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。 例如，您可以按一下 [概觀]**** 顯示執行中工作狀態的高階概觀，或是按一下 [所有訊息]**** 顯示封裝執行過程中已擷取的詳細訊息。  
+     對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。 例如，您可以按一下 [概觀] 顯示執行中工作狀態的高階概觀，或是按一下 [所有訊息] 顯示封裝執行過程中已擷取的詳細訊息。  
   
      您可以按一下 [篩選]  ，然後選取 [篩選設定]  對話方塊中的準則，篩選任何頁面上顯示的資料表。 可用的篩選準則取決於顯示的資料。 您可以在 [篩選設定]  對話方塊中按一下排序圖示，以變更報表的排序次序。  
   

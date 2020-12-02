@@ -17,10 +17,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471382"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
@@ -45,11 +45,11 @@ ms.locfileid: "88471382"
   
 3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]。  
   
-4.  在 [專案設定]**** 索引標籤的 [輸出類型]**** 區段中，選取 [資料層應用程式 (.dacpac 檔案)]**** 核取方塊，然後關閉屬性對話方塊。  
+4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
   
 5.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]。  
   
-6.  使用方案總管**** 開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
+6.  使用方案總管開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
   
 7.  使用 **[結構描述檢視]** 檢閱結構描述中的所有物件，特別是檢閱函數或預存程序這類物件中的程式碼時。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88471382"
   
  **使用精靈檢視資料庫變更**  
   
-1.  執行 [升級資料層應用程式精靈]****，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
+1.  執行 [升級資料層應用程式精靈]，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
 2.  在 **[偵測變更]** 頁面上，檢閱已對資料庫進行之變更的報表。  
   
@@ -111,7 +111,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **使用精靈來報告升級動作**  
   
-1.  執行 [升級資料層應用程式精靈]****，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
+1.  執行 [升級資料層應用程式精靈]，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
 2.  在 **[摘要]** 頁面上，檢閱升級動作的報表。  
   

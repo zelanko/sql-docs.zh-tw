@@ -23,10 +23,10 @@ ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 364bcd6eb68ca7c529c56fae70109b79cbc1dc18
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114736"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (函數) (Transact-SQL)

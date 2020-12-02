@@ -14,10 +14,10 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbf49e07dd37e621ed5a733e8f1ad22e5d057b1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477425"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
@@ -45,7 +45,7 @@ RIGHT(character_expression,integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>備註  
- 如果 *integer_expression* 大於 *character_expression*的長度，函數會傳回 *character_expression*。  
+ 如果 *integer_expression* 大於 *character_expression* 的長度，函數會傳回 *character_expression*。  
   
  如果 *integer_expression* 為零，則函數會傳回長度為 0 的字串。  
   

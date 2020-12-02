@@ -24,16 +24,16 @@ ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bb7b16a18832bbdea950843409b0a17153c7a05b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89547451"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  覆寫目前針對目前連接所設定的**查詢管理員成本限制值**。  
+  覆寫目前針對目前連接所設定的 **查詢管理員成本限制值**。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
  「查詢成本」代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。  
   
 ## <a name="remarks"></a>備註  
- 使用 SET QUERY_GOVERNOR_COST_LIMIT 只適用於目前的連接，在目前連接的期間會持續有效。 請利用 **sp_configure** 的[設定查詢管理員成本限制伺服器組態選項](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)選項來變更伺服器範圍的查詢管理員成本限制值。 如需有關設定這個選項的詳細資訊，請參閱 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 使用 SET QUERY_GOVERNOR_COST_LIMIT 只適用於目前的連接，在目前連接的期間會持續有效。 請利用 **sp_configure** 的 [設定查詢管理員成本限制伺服器組態選項](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)選項來變更伺服器範圍的查詢管理員成本限制值。 如需有關設定這個選項的詳細資訊，請參閱 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
  SET QUERY_GOVERNOR_COST_LIMIT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   

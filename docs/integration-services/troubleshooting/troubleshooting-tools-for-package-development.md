@@ -18,10 +18,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495129"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>疑難排解封裝開發的工具
@@ -34,11 +34,11 @@ ms.locfileid: "88495129"
 ## <a name="troubleshooting-design-time-validation-issues"></a>疑難排解設計階段驗證問題  
  在最新版的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中開啟封裝時，系統會先驗證所有連線，然後才驗證所有資料流程元件，並將緩慢或無法使用的所有連線設為離線工作。 這有助於減少驗證封裝資料流程的延遲。  
   
- 開啟封裝之後，您也可以以滑鼠右鍵按一下 [連接管理員]**** 區域中的連接管理員，然後按一下 [離線工作]**** 來關閉連接。 這可以在 SSIS 設計師中加快作業。  
+ 開啟封裝之後，您也可以以滑鼠右鍵按一下 [連接管理員] 區域中的連接管理員，然後按一下 [離線工作] 來關閉連接。 這可以在 SSIS 設計師中加快作業。  
   
  已設為離線工作的連接將保持離線狀態，直到您執行下列其中一項作業為止：  
   
--   以滑鼠右鍵按一下 SSIS 設計師之 [連接管理員]**** 區域中的連接管理員，然後按一下 [測試連接性]**** 來測試連接。  
+-   以滑鼠右鍵按一下 SSIS 設計師之 [連接管理員] 區域中的連接管理員，然後按一下 [測試連接性] 來測試連接。  
   
      例如，開啟封裝之後，一開始會將連線設為離線工作。 您要修改連接字串來解決問題，然後按一下 **[測試連接性]** 來測試連線。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88495129"
   
 -   **在執行階段前無效的封裝元素上設定 DelayValidation 屬性**。 您可以將封裝元素 (其組態在設計階段無效) 的 **DelayValidation** 設為 **True** ，以避免發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 **DelayValidation** 屬性可以在封裝層級啟用，也可以在封裝所包含的個別工作和容器層級啟用。 一般而言，當您部署封裝時，必須讓相同封裝元素上的這個屬性設為 **True** ，以避免在執行階段發生相同的驗證錯誤。  
   
-     您可以針對資料流程工作設定 **DelayValidation** 屬性，但無法針對個別資料流程元件設定這個屬性。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 **false**中開發封裝時可以用於疑難排解封裝的功能和工具。 不過，當這個屬性的值是 **false**時，元件不會察覺對外部資料來源之中繼資料所做的變更。  
+     您可以針對資料流程工作設定 **DelayValidation** 屬性，但無法針對個別資料流程元件設定這個屬性。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 **false** 中開發封裝時可以用於疑難排解封裝的功能和工具。 不過，當這個屬性的值是 **false** 時，元件不會察覺對外部資料來源之中繼資料所做的變更。  
   
  如果發生驗證時，此封裝所使用的資料庫物件遭到鎖定，驗證程序可能會停止回應。 在這些情況下， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師也會停止回應。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的關聯工作階段，以便繼續驗證。 您也可以使用本章節所述的設定來避開此問題。  
   

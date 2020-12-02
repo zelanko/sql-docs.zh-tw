@@ -12,10 +12,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471981"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>課程 3-3 - 測試已部署的套件
@@ -27,7 +27,7 @@ ms.locfileid: "88471981"
   
 在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程中，則是使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][偵錯] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]功能表上的 **[開始偵錯]** 選項，在 **(** 的開發環境) 中執行封裝。 這時將會以不同的方式執行封裝。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了幾項工具，您可以用來在測試和實際執行環境中執行套件，這些工具為：命令提示字元公用程式 **dtexec** 和「執行套件公用程式」。 「執行封裝公用程式」是以 **dtexec**為基礎所建立的圖形化工具。 這兩項工具都會立即執行封裝。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 還提供了 SQL Server Agent 的子系統，這套子系統是特別設計的，它會將封裝執行排程為 SQL Server Agent 作業中的一個步驟。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了幾項工具，您可以用來在測試和實際執行環境中執行套件，這些工具為：命令提示字元公用程式 **dtexec** 和「執行套件公用程式」。 「執行封裝公用程式」是以 **dtexec** 為基礎所建立的圖形化工具。 這兩項工具都會立即執行封裝。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 還提供了 SQL Server Agent 的子系統，這套子系統是特別設計的，它會將封裝執行排程為 SQL Server Agent 作業中的一個步驟。  
   
 您將會使用「執行封裝公用程式」來執行部署的封裝。 封裝將會直接使用，因此，您不必更新對話方塊中任何頁面上的資訊。 您將會從 [一般] 頁面開始執行封裝，這也就是「執行封裝公用程式」的第一個頁面。 如果需要，可以按一下其他頁面，以查看頁面中所包含的各封裝資訊。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "88471981"
   
     查詢會傳回 31 個資料列。 傳回結果包含文字檔 Customers.txt 中 [YearlyIncome] 資料行值大於 100000 的所有資料列。  
   
-6.  找到 [DeploymentTutorial] 資料夾，以滑鼠右鍵按一下 XML 記錄檔 Deployment Tutorial Log，然後按一下 [開啟]****。 您可以使用「記事本」或其他文字/XML 編輯器來開啟此檔案。  
+6.  找到 [DeploymentTutorial] 資料夾，以滑鼠右鍵按一下 XML 記錄檔 Deployment Tutorial Log，然後按一下 [開啟]。 您可以使用「記事本」或其他文字/XML 編輯器來開啟此檔案。  
   
 ### <a name="to-verify-the-results-of-the-loadxmldata-package"></a>若要確認 LoadXMLData 封裝的結果  
   

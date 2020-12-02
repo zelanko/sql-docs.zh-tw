@@ -12,10 +12,10 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496121"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
@@ -29,7 +29,7 @@ ms.locfileid: "88496121"
   
 1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]** 。  
   
-2.  從左窗格選取 [本機 CDC 服務]**** \ (根層級)。  
+2.  從左窗格選取 [本機 CDC 服務]\ (根層級)。  
   
 3.  您會執行下列其中一項或兩項工作：  
   

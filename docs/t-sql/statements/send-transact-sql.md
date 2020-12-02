@@ -26,10 +26,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a7e4c9c6b58b8dd6853aa545ca457e8ae1ced74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89538019"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)

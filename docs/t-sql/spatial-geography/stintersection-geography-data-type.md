@@ -19,10 +19,10 @@ ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 26df98e23bc24c0f1c112ffa2a07600cc753cb1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88467465"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography 資料類型)

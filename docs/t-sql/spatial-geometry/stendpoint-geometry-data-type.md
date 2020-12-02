@@ -19,10 +19,10 @@ ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ec856db5c9f528135393bdb968ac35de4e94f2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88497021"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry 資料類型)

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88499358"
 ---
 # <a name="modify-an-index"></a>修改索引
@@ -49,7 +49,7 @@ ms.locfileid: "88499358"
   
 3.  展開索引所在的資料表，然後展開 **[索引]**。  
   
-4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]****。  
+4.  以滑鼠右鍵按一下您要修改的索引，然後按一下 [屬性]。  
   
 5.  在 **[索引屬性]** 對話方塊中，進行所需的變更。 例如，您可以在索引鍵中加入或移除資料行，或是變更索引選項的設定。  
   

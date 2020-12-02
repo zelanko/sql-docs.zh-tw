@@ -17,10 +17,10 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e81c953fa5c4b1f98c2badd87942ca436f72105
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477265"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模擬指令碼元件的錯誤輸出
@@ -39,25 +39,25 @@ ms.locfileid: "88477265"
   
 1.  在建立新指令碼元件之前，建立連接管理員並設定資料流程來源，以便從 AdventureWorks 範例資料庫選取地址資料。 就這個只查看 CountryRegionName 資料行的範例而言，您可以直接使用 Person.vStateCountryProvinceRegion 檢視，或是聯結 Person.Address、Person.StateProvince 和 Person.CountryRegion 資料表以選取資料。  
   
-2.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。 開啟**指令碼轉換編輯器**。  
+2.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。 開啟 **指令碼轉換編輯器**。  
   
-3.  在 [指令碼]**** 頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
+3.  在 [指令碼] 頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
   
-4.  按一下 [編輯指令碼]**** 以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
+4.  按一下 [編輯指令碼] 以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
   
 5.  在 **Input0_ProcessInputRow** 方法中，鍵入或貼上下列範例程式碼。  
   
 6.  關閉 VSTA。  
   
-7.  在 [輸入資料行]**** 頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
+7.  在 [輸入資料行] 頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
   
-8.  在 [輸入及輸出]**** 頁面上，新增新的第二個輸出，並將其 **SynchronousInputID** 值設定為輸入的識別碼，這也是預設輸出的 **SynchronousInputID** 屬性值。 將兩個輸出的 **ExclusionGroup** 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
+8.  在 [輸入及輸出] 頁面上，新增新的第二個輸出，並將其 **SynchronousInputID** 值設定為輸入的識別碼，這也是預設輸出的 **SynchronousInputID** 屬性值。 將兩個輸出的 **ExclusionGroup** 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
   
 9. 將額外輸出資料行加入新錯誤輸出，以擷取所需的錯誤資訊，這可能包含發生錯誤的資料行之錯誤碼與識別碼，以及或許還有錯誤描述。 此範例會建立新資料行 ErrorColumn 與 ErrorMessage。 如果您在自己的實作中擷取預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤，請確定加入錯誤號碼的 ErrorCode 資料行。  
   
 10. 請記下指令碼元件將檢查錯誤條件之輸入資料行的識別碼值。 這個範例使用此資料行識別碼以擴展 ErrorColumn 值。  
   
-11. 關閉**指令碼轉換編輯器**。  
+11. 關閉 **指令碼轉換編輯器**。  
   
 12. 將指令碼元件的輸出附加至適當的目的地。 一般檔案目的地對於特定測試而言是最容易設定的。  
   

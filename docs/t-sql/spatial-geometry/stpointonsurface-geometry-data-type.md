@@ -19,10 +19,10 @@ ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 41b91f03aef83bd8a952531cc419869204b3f5e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88497011"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry 資料類型)

@@ -23,10 +23,10 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eea845c7ebe9b40db0d5dfc2b09a7f69d94321f2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115862"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
@@ -55,7 +55,7 @@ ORIGINAL_LOGIN( )
  下列範例會將目前工作階段的執行內容從陳述式的呼叫端切換到 `login1`。  和  函數用來傳回目前工作階段使用者 (內容切換後的使用者)，以及原始登入帳戶。 
  
   >[!NOTE]
-  > 雖然 Azure SQL Database 支援 ORIGINAL_LOGIN 函式，但由於 Azure SQL Database 不支援「以登入身分執行」**，因此下列指令碼會失敗。 
+  > 雖然 Azure SQL Database 支援 ORIGINAL_LOGIN 函式，但由於 Azure SQL Database 不支援「以登入身分執行」，因此下列指令碼會失敗。 
   
 ```sql  
 USE AdventureWorks2012;  

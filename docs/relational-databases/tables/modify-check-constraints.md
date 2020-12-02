@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488555"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
@@ -52,9 +52,9 @@ ms.locfileid: "88488555"
   
 #### <a name="to-modify-a-check-constraint"></a>若要修改檢查條件約束  
   
-1.  在 [物件總管]**** 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]****。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]。  
   
-2.  在 [資料表設計工具]**** 功能表上，按一下 [檢查條件約束...]****。  
+2.  在 [資料表設計工具] 功能表上，按一下 [檢查條件約束...]。  
   
 3.  在 **[檢查條件約束]** 對話方塊的 **[選取的檢查條件約束]** 底下，選取您想要編輯的條件約束。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88488555"
   
 5.  按一下 [關閉] 。  
   
-6.  在 [檔案] **** 功能表上，按一下 [儲存「資料表名稱」__]****。  
+6.  在 [檔案]  功能表上，按一下 [儲存「資料表名稱」]。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  
