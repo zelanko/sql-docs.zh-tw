@@ -1736,7 +1736,7 @@
               href: relational-databases/indexes/columnstore-indexes-query-performance.md
             - name: 即時作業分析
               href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-            - name: 資料倉儲 (data warehouse)
+            - name: Azure Synapse Analytics
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: 重組
               href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -10265,7 +10265,7 @@
                   href: samples/wide-world-importers-oltp-install-configure.md
                 - name: SQL Server 功能
                   href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-            - name: 資料倉儲 (data warehouse)
+            - name: Azure Synapse Analytics
               items:
                 - name: 資料庫目錄
                   href: samples/wide-world-importers-dw-database-catalog.md
