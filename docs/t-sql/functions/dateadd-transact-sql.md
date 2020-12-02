@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d2ec0e37ce2dd4818b0783ca2b0ee97cfecbcb9
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116492"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117900"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -101,7 +101,7 @@ DATEADD (datepart , number , date )
   
 如果下列條件成立：
 
-+ *datepart* 是**月份**
++ *datepart* 是 **月份**
 + *date* 月的天數多於傳回月份
 + *date* 日不存在於傳回月份
 
@@ -237,7 +237,7 @@ nanosecond   2007-01-01 13:10:10.1111111
 ```  
   
 ### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 在單一陳述式中遞增一個以上的 datepart 層級  
-以下每個陳述式都會利用足以同時遞增 *date* 中下一個較高 *datepart* 的 *number*來遞增 *datepart*：
+以下每個陳述式都會利用足以同時遞增 *date* 中下一個較高 *datepart* 的 *number* 來遞增 *datepart*：
   
 ```sql
 DECLARE @datetime2 datetime2;  

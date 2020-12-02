@@ -18,11 +18,11 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194650"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123441"
 ---
 # <a name="cache-transform"></a>快取轉換
 
@@ -56,9 +56,9 @@ ms.locfileid: "92194650"
     > [!NOTE]  
     >  每個輸入資料行都必須對應至目的地資料行，而資料行資料類型也必須相符； 否則，「 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師」會顯示錯誤訊息。  
   
-     您可以使用 [快取連線管理員編輯器]**** 修改資料行資料類型、名稱和其他資料行屬性。  
+     您可以使用 [快取連線管理員編輯器] 修改資料行資料類型、名稱和其他資料行屬性。  
   
- 您可以透過 [ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器]**** 對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 您可以透過 [ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 設計師] 設定屬性。 如需可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "92194650"
   
 ### <a name="options"></a>選項。  
  **[完整快取]**  
- 使用清單方塊來選取現有的快取連線管理員，或使用 [新增]**** 按鈕來建立新的連線。  
+ 使用清單方塊來選取現有的快取連線管理員，或使用 [新增] 按鈕來建立新的連線。  
   
  **新增**  
  使用 [快取連接管理員編輯器] 對話方塊來建立新的連接。  

@@ -12,11 +12,11 @@ ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f45b001faf8f290d36ef8239945a844f78af46fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484621"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123723"
 ---
 # <a name="connection-to-sql-server"></a>連接到 SQL Server
 
@@ -37,7 +37,7 @@ ms.locfileid: "88484621"
   
 -   Windows 驗證  
   
--   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
+-   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 **登入** 和 **密碼**。  
   
 ### <a name="options"></a>選項。  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  

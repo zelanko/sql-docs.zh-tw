@@ -16,11 +16,11 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e980e97adc29cda45dbedb0640f46d0a444c4b2
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076733"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119485"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -40,7 +40,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 ## <a name="arguments"></a>引數
 *expression*  
-任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)但除了 **image**、**sql_variant**、**ntext**或 **text**之外。 
+任何類型的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)但除了 **image**、**sql_variant**、**ntext** 或 **text** 之外。 
 
 ## <a name="return-types"></a>傳回類型
  **bigint**  

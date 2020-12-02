@@ -17,10 +17,10 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5459096926d477795edede0666ce27027310f8f7
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194931"
 ---
 # <a name="select-variables-page"></a>選取變數頁面
@@ -28,9 +28,9 @@ ms.locfileid: "92194931"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [選取變數]**** 對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
+  使用 [選取變數] 對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
   
- 若要開啟 [選取變數]**** 對話方塊，請在 [指令碼轉換編輯器]**** 對話方塊的 [指令碼]**** 頁面上，於 [自訂屬性]**** 底下尋找 [ReadOnlyVariables]**** 或 [ReadWriteVariables]**** 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
+ 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
   
 ## <a name="options"></a>選項  
  選取方塊  

@@ -15,11 +15,11 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425560"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123273"
 ---
 # <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
 
@@ -47,7 +47,7 @@ boolean_expression?expression1:expression2
  為任何有效運算式。  
   
 ## <a name="result-types"></a>結果類型  
- *expression1* 或 *expression2*的資料類型。  
+ *expression1* 或 *expression2* 的資料類型。  
   
 ## <a name="remarks"></a>備註  
  如果 *boolean_expression* 評估為 NULL，則運算式結果為 NULL。 如果選取的運算式 ( *expression1* 或 *expression2* ) 為 NULL，則結果為 NULL。 如果選取的運算式不為 NULL，但未選取的運算式為 NULL，則結果為所選運算式的值。  
@@ -58,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   DT_BYTES 資料類型的結果，其長度為較長引數的長度。  
   
- 運算式組合 *expression1* 和 *expression2*必須評估為有效的資料類型並遵循下列其中一個規則：  
+ 運算式組合 *expression1* 和 *expression2* 必須評估為有效的資料類型並遵循下列其中一個規則：  
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   

@@ -24,11 +24,11 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 91478060af31e142f94730b9df3c0a3cdf2a24ef
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384761"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124095"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  「可延伸金鑰管理」提供者的名稱。  
   
  *path_of_DLL*  
- 實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可延伸金鑰管理介面的 .dll 檔路徑。 使用 **適用於 Microsoft Azure Key Vault 的 SQL Server 連接器** 時，預設位置是 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** 。  
+ 實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可延伸金鑰管理介面的 .dll 檔路徑。 使用 **適用於 Microsoft Azure Key Vault 的 SQL Server 連接器** 時，預設位置是 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**。  
   
 ## <a name="remarks"></a>備註  
  提供者所建立的所有金鑰都會透過其 GUID 參考提供者。 GUID 會跨所有版本的 DLL 保留。  

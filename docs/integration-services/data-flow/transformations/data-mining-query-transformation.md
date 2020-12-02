@@ -19,11 +19,11 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8791836a066b658fb6775ce1cbf30f30c7d7d4a1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192645"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123401"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
 
@@ -54,10 +54,10 @@ ms.locfileid: "92192645"
   
 ### <a name="options"></a>選項。  
  **[連接]**  
- 使用清單方塊來選取現有的 Analysis Services 連接，或使用 [新增]**** 按鈕來建立新的連接，如下所述。  
+ 使用清單方塊來選取現有的 Analysis Services 連接，或使用 [新增] 按鈕來建立新的連接，如下所述。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
   
  **採礦結構**  
  從可用之採礦模型結構的清單中選取。  
@@ -73,4 +73,4 @@ ms.locfileid: "92192645"
  將資料採礦延伸模組 (DMX) 查詢直接輸入文字方塊中。  
   
  **建立新查詢**  
- 按一下 [建立新查詢]****，即可使用圖形化查詢產生器建立資料採礦延伸模組 (DMX) 查詢。  
+ 按一下 [建立新查詢]，即可使用圖形化查詢產生器建立資料採礦延伸模組 (DMX) 查詢。  

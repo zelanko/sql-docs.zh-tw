@@ -9,20 +9,20 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257338"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924165"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>在相同的 Active Directory 網域中部署多個 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-本文說明 SQL Server 2019 CU 5 的更新，其可讓您部署多個 SQL Server 2019 巨量資料叢集，並與相同的 Active Directory 網域整合。
+此文章說明 SQL Server 2019 CU5 的更新，其可讓您部署多個 SQL Server 2019 巨量資料叢集，並與相同的 Active Directory 網域整合。
 
-在 CU5 之前，有兩個問題讓您無法在一個 AD 網域中部署多個 BDC。
+在 SQL 2019 CU5 之前，有兩個問題讓您無法在一個 AD 網域中部署多個 BDC。
 
 - 服務主體名稱與 DNS 網域發生命名衝突
 - 網域帳戶主體名稱
@@ -35,11 +35,11 @@ ms.locfileid: "92257338"
 
 ### <a name="domain-account-principal-names"></a>網域帳戶主體名稱
 
-在部署網域為 Active Directory 的 BDC 期間，在 BDC 內執行的服務會產生多個帳戶主體。 這些基本上都是 AD 使用者帳戶。 在 CU5 之前，這些帳戶的名稱在叢集之間不是唯一的。 此資訊清單會嘗試在兩個不同的叢集中，為 BDC 的特定服務建立相同的使用者帳戶名稱。 第二個部署的叢集會在 AD 中發生衝突，無法建立其帳戶。
+在部署網域為 Active Directory 的 BDC 期間，在 BDC 內執行的服務會產生多個帳戶主體。 這些基本上都是 AD 使用者帳戶。 在 SQL 2019 CU5 之前，這些帳戶的名稱在叢集之間都不是唯一的。 此資訊清單會嘗試在兩個不同的叢集中，為 BDC 的特定服務建立相同的使用者帳戶名稱。 第二個部署的叢集會在 AD 中發生衝突，無法建立其帳戶。
 
 ## <a name="resolution-for-collisions"></a>衝突的解決方式
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>解決 SPN 與 DNS 網域問題的解決方案 - CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>解決 SPN 與 DNS 網域問題的解決方案 - SQL 2019 CU5
 
 由於任兩個叢集中的 SPN 必須不同，所以在部署階段傳入的 DNS 網域名稱也必須不同。 您可以使用部署組態檔新引入的設定，指定不同的 DNS 名稱：`subdomain`。 若兩個叢集之間的子網域不同，而且內部通訊可能會透過這個子網域進行，則 SPN 將會包含達到所需唯一性的子網域。
 
@@ -63,7 +63,7 @@ ms.locfileid: "92257338"
 
 ## <a name="semantics"></a>語意
 
-總而言之，這些都是 CU5 中為網域的多個叢集所新增的參數語意：
+總而言之，這些都是 SQL 2019 CU5 中為網域的多個叢集所新增的參數語意：
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ AD 網域或網域控制站無須進行任何變更，即可在相同的 Active 
 
 這並非必要，但是建議使用。 為個別叢集提供個別的 OU，可協助您管理所產生的使用者帳戶。
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>如何還原回 CU5 之前的行為？
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>如何在 SQL 2019 中還原回 CU5 之前的行為？
 
 在某些情況下，您可能無法容納新引入的 `subdomain` 參數。 例如，您必須部署 CU5 之前的版本，但您已經升級了 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]。 雖然這不太可能，但是若必須還原到 CU5 之前的行為，可在 `control.json` 的 Active Directory 區段中，將 `useSubdomain` 參數設為 `false`。
 

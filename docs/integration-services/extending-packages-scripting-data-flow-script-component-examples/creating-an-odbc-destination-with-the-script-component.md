@@ -17,11 +17,11 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477310"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123049"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
 
@@ -59,15 +59,15 @@ ms.locfileid: "88477310"
   
 4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)為了確保這個範例可運作，上游元件的輸出必須至少包含 **AdventureWorks** 範例資料庫中 **Person.Address** 資料表的 **AddressID** 和 **City** 資料行。  
   
-5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。  
+5.  開啟 **指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。  
   
 6.  在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   
-7.  在 [連線管理員]**** 頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
+7.  在 [連線管理員] 頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
   
-8.  在 [指令碼]**** 頁面上，按一下 [編輯指令碼]****，然後在 **ScriptMain** 類別中輸入下面的指令碼。  
+8.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，然後在 **ScriptMain** 類別中輸入下面的指令碼。  
   
-9. 依序關閉指令碼開發環境和**指令碼轉換編輯器**，然後執行此範例。  
+9. 依序關閉指令碼開發環境和 **指令碼轉換編輯器**，然後執行此範例。  
   
     ```vb  
     Imports System.Data.Odbc  

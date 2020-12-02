@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384861"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
@@ -203,7 +203,7 @@ ms.locfileid: "94384861"
  SSIS 目錄中新的 **RuntimeLineage** 記錄層次會收集在資料流程中追蹤歷程資訊所需的資料。 您可以剖析此歷程資訊，以對應工作間的歷程關聯性。 ISV 和開發人員可以使用此資訊來建置自訂歷程對應工具。 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> SSIS 目錄中新的自訂記錄層級  
- 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊** 。 SQL Server 2016 新增 **RuntimeLineage** 記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
+ 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊**。 SQL Server 2016 新增 **RuntimeLineage** 記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> 資料流程中適用於錯誤的資料行名稱  
  當您在資料流程中包含錯誤至錯誤輸出的資料列重新導向時，則輸出會包含錯誤發生，但不會顯示的資料行名稱的資料行的數值識別項。 現在，有數種方式可用來尋找或顯示發生錯誤的資料行名稱。  

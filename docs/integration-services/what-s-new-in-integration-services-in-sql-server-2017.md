@@ -12,10 +12,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193720"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
@@ -76,7 +76,7 @@ ms.locfileid: "92193720"
 
 -   在相應放大中觸發執行時，您現在可以使用 **Use32BitRuntime** 參數。
 -   已改善相應放大中套件執行的 SSISDB 記錄效能。 事件訊息和訊息內容記錄現在會以批次模式寫入至 SSISDB，而非逐一寫入。 以下是這項改善的一些其他注意事項：        
-    - SQL Server Management Studio (SSMS) 目前版本中的某些報表，現在不會針對擴增中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線]** 報表、[錯誤內容]** 報表，以及 [Integration Service 儀表板] 中的 [連線資訊]** 區段。
+    - SQL Server Management Studio (SSMS) 目前版本中的某些報表，現在不會針對擴增中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線] 報表、[錯誤內容] 報表，以及 [Integration Service 儀表板] 中的 [連線資訊] 區段。
     - 已新增資料行 **event_message_guid**。 在相應放大中查詢這些執行記錄時，請使用此資料行來聯結 [catalog].[event_message_context] 檢視與 [catalog].[event_messages] 檢視，而非使用 **event_message_id**。
 -   若要取得 SSIS 相應放大的管理應用程式，請[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 或更新版本。
 

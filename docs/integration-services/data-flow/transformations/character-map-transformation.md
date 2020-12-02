@@ -20,11 +20,11 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194631"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123426"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
 
@@ -89,7 +89,7 @@ ms.locfileid: "92194631"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
-  使用 [字元對應表轉換編輯器]**** 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
+  使用 [字元對應表轉換編輯器] 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的輸入資料行**  

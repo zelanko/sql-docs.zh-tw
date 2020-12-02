@@ -16,11 +16,11 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3365f6540a95639f2f6d4c607bfdee094c550c1c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431000"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123532"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
 
@@ -57,7 +57,7 @@ ms.locfileid: "88431000"
   
 -   如果您選取檢視五個資料行設定檔的其中一個，要求窗格就會有四個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[資料行]** 和 **[要求識別碼]**。  
   
--   如果您選取檢視候選索引鍵設定檔，要求窗格就會有四個資料行：[設定檔類型]****、[資料表或檢視表]****、[索引鍵資料行]**** 和 [要求識別碼]****。  
+-   如果您選取檢視候選索引鍵設定檔，要求窗格就會有四個資料行：[設定檔類型]、[資料表或檢視表]、[索引鍵資料行] 和 [要求識別碼]。  
   
 -   如果您選取檢視功能相依性設定檔，要求窗格就會有五個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[行列式資料行]**、 **[相依資料行]** 和 **[要求識別碼]**。  
   

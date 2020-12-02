@@ -15,11 +15,11 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496031"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123568"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
 
@@ -97,7 +97,7 @@ ms.locfileid: "88496031"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 控制工作的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [控制流程]**** 索引標籤中，按兩下 CDC 控制工作。  
+2.  在 [控制流程] 索引標籤中，按兩下 CDC 控制工作。  
   
 ### <a name="options"></a>選項  
  **SQL Server CDC 資料庫 ADO.NET 連接管理員**  
@@ -108,17 +108,17 @@ ms.locfileid: "88496031"
   
 -   **標記初始載入開始**：此作業是在從不含快照集的使用中資料庫執行初始載入時使用。 初始載入封裝開始讀取來源資料表之前，系統會在初始載入封裝的開頭叫用此作業，以便在來源資料庫中記錄目前的 LSN。 這需要來源資料庫的連接。  
   
-     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入開始]****，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入開始]，連接管理員中指定的使用者就必須是 **db_owner** 或 **系統管理員**。  
   
 -   **標記初始載入結束**：此作業是在從不含快照集的使用中資料庫執行初始載入時使用。 初始載入封裝讀取來源資料表完成之後，系統會在初始載入封裝的結尾叫用此作業，以便在來源資料庫中記錄目前的 LSN。 這個 LSN 的決定方式如下：記錄進行此作業時的目前時間，然後在 CDC 資料庫中查詢 `cdc.lsn_time_`mapping 資料表，尋找該時間之後發生的變更。  
   
-     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]****，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]，連接管理員中指定的使用者就必須是 **db_owner** 或 **系統管理員**。  
   
 -   **標記 CDC 開始**：此作業會在從快照集資料庫或靜止資料庫進行初始載入時使用。 系統會在初始載入封裝中的任何時間點叫用此作業。 此作業所接受的參數可以是快照集 LSN、快照集資料庫的名稱 (從中自動衍生快照集 LSN)，也可以保留空白 (在此情況中，目前資料庫 LSN 就會當做變更處理封裝的啟始 LSN 使用)。  
   
      此作業是用來取代「標記初始載入開始/結束」作業。  
   
-     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記 CDC 開始]****，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
+     如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記 CDC 開始]，連接管理員中指定的使用者就必須是 **db_owner** 或 **系統管理員**。  
   
 -   **取得處理範圍**：此作業是在叫用使用 CDC 來源資料流程的資料流程之前用於變更處理封裝中。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。  
   

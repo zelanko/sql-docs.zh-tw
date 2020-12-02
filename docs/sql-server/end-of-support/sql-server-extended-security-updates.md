@@ -2,20 +2,20 @@
 title: 什麼是延伸安全性更新？
 description: 了解如何使用 SQL Server 登錄，為您終止支援和生命週期結束的 SQL Server 產品 (例如 SQL Server 2008 和 SQL Server 2008 R2) 取得延伸安全性更新。
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793815"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121296"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>什麼是 SQL Server 的延伸安全性更新？
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ Microsoft 建議在有 ESU 修補程式可用時立即套用，以確保您的 [
 ## <a name="what-are-extended-security-updates"></a>什麼是延伸安全性更新
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的延伸安全性更新 (ESU) 包含安全性更新的佈建，適用於已購買延伸支援更新訂閱的客戶。
 
-一旦發現資訊安全弱點，且 [Microsoft 安全回應中心 (MSRC)](https://portal.msrc.microsoft.com) 將其分級為 **重大** 時，就可以使用 ESU ( **如有需要** )。 因此，不會定期發行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU。
+一旦發現資訊安全弱點，且 [Microsoft 安全回應中心 (MSRC)](https://portal.msrc.microsoft.com) 將其分級為 **重大** 時，就可以使用 ESU (**如有需要**)。 因此，不會定期發行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU。
 
 ESU 不包含：
 - 新功能
@@ -52,7 +52,7 @@ ESU 不包含技術支援，但您可以使用有效的支援合約 (例如[軟�
 ESU 可供在 Azure、內部部署或主控環境中執行其工作負載的客戶使用。
 
 ### <a name="azure-virtual-machines"></a>Azure 虛擬機器
-如果您將工作負載移轉到 Azure 虛擬機器 (IaaS)，則將可以在終止支援後存取長達三年的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 延伸安全性更新，除了執行虛擬機器的費用以外， **沒有額外費用** 。 客戶不需要軟體保證，即可在 Azure 中收到延伸安全性更新。 
+如果您將工作負載移轉到 Azure 虛擬機器 (IaaS)，則將可以在終止支援後存取長達三年的 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 延伸安全性更新，除了執行虛擬機器的費用以外，**沒有額外費用**。 客戶不需要軟體保證，即可在 Azure 中收到延伸安全性更新。 
 
 當虛擬機器設定為使用 [自動修補](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)時，在 **Windows Server 2008 R2 和更新版本** 上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虛擬機器會透過現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新通道來自動接收 ESU。
 
@@ -206,6 +206,39 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
    ![檢查 [安全性更新] 窗格中的可用更新](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. 從這裡下載安全性更新 (如果適用的話)。 
+
+## <a name="supported-regions-and-data-residency"></a>支援的區域與資料落地
+
+**SQL Server 登錄** 服務 (預覽) 可在 Azure 區域的子集中找到。 下表顯示支援的區域與每個區域中的資料落地類型。
+
+| **區域** | **資料存留處** |
+|:--|:--|
+|澳大利亞東部|地理區域|
+|澳大利亞東南部|地理區域|
+|加拿大中部|地理區域|
+|法國中部|地理區域|
+|日本東部|地理區域|
+|日本西部|地理區域|
+|南韓中部|地理區域|
+|南韓南部|地理區域|
+|美國中北部|地理區域|
+|北歐|地理區域|
+|美國中南部|地理區域|
+|東南亞|單一區域|
+|印度南部|地理區域|
+|南非北部|地理區域|
+|英國南部|地理區域|
+|英國西部|地理區域|
+|美國西部|地理區域|
+|美國東部|地理區域|
+|美國中部|地理區域|
+|東亞|地理區域|
+|西歐|地理區域|
+|美國中西部|地理區域|
+|美國西部 2|地理區域|
+|美國東部 2|地理區域|
+
+在具有地理落地的區域中，SQL 登錄服務會在異地備援儲存體帳戶 (GRS) 中維護資料備份。  在具有單一區域落地的區域中，SQL 登錄服務會在區域備援儲存體帳戶 (ZRS) 中維護資料備份。 如需詳細資訊，請參閱[信任中心](https://azuredatacentermap.azurewebsites.net/)。
 
 ## <a name="configure-regional-redundancy"></a>設定區域備援 
 

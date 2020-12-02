@@ -21,11 +21,11 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425310"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122859"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>以指令碼工作擴充封裝
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425310"
  下列主題提供有關指令碼工作的詳細資訊。  
   
  [在指令碼工作編輯器設定指令碼工作](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
- 說明在**指令碼工作編輯器**中設定的屬性如何影響指令碼工作中程式碼的功能與效能。  
+ 說明在 **指令碼工作編輯器** 中設定的屬性如何影響指令碼工作中程式碼的功能與效能。  
   
  [指令碼工作的程式碼撰寫和偵錯](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
  說明如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 來開發包含在指令碼工作中的指令碼。  

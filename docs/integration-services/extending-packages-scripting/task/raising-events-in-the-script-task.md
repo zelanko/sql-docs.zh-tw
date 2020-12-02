@@ -22,10 +22,10 @@ ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f08d7185375906020df764441927f91fe97f7ed
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195250"
 ---
 # <a name="raising-events-in-the-script-task"></a>在指令碼工作中引發事件

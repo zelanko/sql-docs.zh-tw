@@ -17,11 +17,11 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d12ea8d1c1289ef917c5781980af4f09eacfdf18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430520"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123099"
 ---
 # <a name="creating-a-custom-log-provider"></a>建立自訂記錄提供者
 
@@ -48,10 +48,10 @@ ms.locfileid: "88430520"
  設定專案以使用強式名稱金鑰檔案來簽署將產生的組件。  
   
 > [!NOTE]  
->  許多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，以及使用可用連線管理員的篩選下拉式清單，取代 [設定 SSIS 記錄]**** 對話方塊中的 [設定]**** 文字方塊。 不過，在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。  
+>  許多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，以及使用可用連線管理員的篩選下拉式清單，取代 [設定 SSIS 記錄] 對話方塊中的 [設定] 文字方塊。 不過，在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>套用 DtsLogProvider 屬性  
- 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性套用至您已建立的類別，以便將它識別為記錄提供者。 此屬性會提供記錄提供者的名稱和描述等設計階段資訊。 屬性 (Attribute) 的 **DisplayName** 和 **Description** 屬性 (Property) 會對應至顯示在 [設定 SSIS 記錄]**** 編輯器中的 [名稱]**** 和 [描述]**** 資料行，此編輯器會在為 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的套件設定記錄時顯示。  
+ 將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性套用至您已建立的類別，以便將它識別為記錄提供者。 此屬性會提供記錄提供者的名稱和描述等設計階段資訊。 屬性 (Attribute) 的 **DisplayName** 和 **Description** 屬性 (Property) 會對應至顯示在 [設定 SSIS 記錄] 編輯器中的 [名稱] 和 [描述] 資料行，此編輯器會在為 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的套件設定記錄時顯示。  
   
 > [!IMPORTANT]  
 >  未使用屬性 (Attribute) 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> 屬性 (Property)。 不過，您必須為它輸入值，否則自訂記錄提供者將不會顯示在可用記錄提供者的清單中。  

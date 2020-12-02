@@ -14,10 +14,10 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195220"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 設計師選項的 [一般]頁面
@@ -25,15 +25,15 @@ ms.locfileid: "92195220"
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  在 [選項]**** 對話方塊上使用 [Integration Services 設計師]**** 頁面上的 [一般]**** 頁面，指定用來載入、顯示及升級封裝的選項。  
+  在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
   
- 若要開啟 [一般]**** 頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具]**** 功能表上按一下 [選項]****，然後展開 [商業智慧設計師]****，再選取 [Integration Services 設計師]****。  
+ 若要開啟 [一般] 頁面，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [工具] 功能表上按一下 [選項]，然後展開 [商業智慧設計師]，再選取 [Integration Services 設計師]。  
   
 ## <a name="options"></a>選項  
  **載入封裝時檢查數位簽章**  
  選取即可讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在載入封裝時檢查數位簽章。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 將不會檢查此封裝在簽署之後是否已經變更。  
   
- 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章]**** 選項。 如需詳細資訊，請參閱 [透過設定登錄值實作簽署原則](./security/identify-the-source-of-packages-with-digital-signatures.md)。  
+ 如果您設定 **BlockedSignatureStates** 登錄值，此登錄值會覆寫 [載入封裝時檢查數位簽章] 選項。 如需詳細資訊，請參閱 [透過設定登錄值實作簽署原則](./security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
  如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。  
   

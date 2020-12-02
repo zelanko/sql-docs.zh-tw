@@ -33,10 +33,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c7c0a80475989e4fde3e77090239577f9d57c68
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92187646"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -126,7 +126,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName      LastName            City
+FirstName      LastName            City
 ----------     -------------------- --------------- 
 Angela         Barbariol            Snohomish
 David          Barber               Snohomish
@@ -223,7 +223,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -257,7 +257,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -267,7 +267,7 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
+(8 row(s) affected)  
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  

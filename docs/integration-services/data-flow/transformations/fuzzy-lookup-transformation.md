@@ -35,10 +35,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ab0e3826b20df90102bfc97d5d3730b4e83806dd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195942"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
@@ -59,7 +59,7 @@ ms.locfileid: "92195942"
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型之資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行為有效，但將具有 **DT_WSTR** 資料類型之資料行聯結到具有 **int** 資料類型的資料行則為無效。  
+ 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT** 和 **DT_IMAGE** 除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型之資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行為有效，但將具有 **DT_WSTR** 資料類型之資料行聯結到具有 **int** 資料類型的資料行則為無效。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "92195942"
   
  相似度臨界值可在元件和聯結層級進行設定。 僅當轉換在輸入和參考資料表中的資料行之間執行模糊比對時，聯結層級相似度臨界值才可用。 相似度範圍是從 0 到 1。 臨界值愈接近 1，資料列和資料行就愈近似於重複項目。 透過在元件和聯結層級設定 MinSimilarity 屬性，可以指定相似度臨界值。 為滿足在元件層級指定的相似度，所有資料列之所有相符項目的相似度都必須大於或等於在元件層級指定的相似度臨界值。 也就是說，您無法在元件層級指定非常相近的相符，除非資料列或聯結層級的相符具有相同的相似度。  
   
- 每個相符都包括相似度分數和信心分數。 相似度分數是輸入資料錄與「模糊查閱」轉換從參考資料表傳回之資料錄之間文字相似度的數學量值。 信心分數是指特定值在參考資料表眾多相符項目中為最相符項目之可能性的量值。 指派給資料錄的信心分數會視傳回的其他相符資料錄而定。 例如，比對 *St.* 與 *Saint* 會傳回較低的相似度分數，無論其他相符項目為何。 如果 *Saint* 是傳回的唯一相符項目，則信心分數會很高。 如果 *Saint* 和 *St.* 都在參考資料表中，則 *St.* 的信心較高，而 *Saint* 的信心較低。 不過，高相似度可能並不意味著高信心。 例如，如果您是在查閱值 *Chapter 4*，則所傳回的結果 *Chapter 1*、 *Chapter 2*和 *Chapter 3* 都會具有很高的相似度分數，但信心分數卻都較低，原因是並不清楚結果中的哪一個項目是最相符的項目。  
+ 每個相符都包括相似度分數和信心分數。 相似度分數是輸入資料錄與「模糊查閱」轉換從參考資料表傳回之資料錄之間文字相似度的數學量值。 信心分數是指特定值在參考資料表眾多相符項目中為最相符項目之可能性的量值。 指派給資料錄的信心分數會視傳回的其他相符資料錄而定。 例如，比對 *St.* 與 *Saint* 會傳回較低的相似度分數，無論其他相符項目為何。 如果 *Saint* 是傳回的唯一相符項目，則信心分數會很高。 如果 *Saint* 和 *St.* 都在參考資料表中，則 *St.* 的信心較高，而 *Saint* 的信心較低。 不過，高相似度可能並不意味著高信心。 例如，如果您是在查閱值 *Chapter 4*，則所傳回的結果 *Chapter 1*、 *Chapter 2* 和 *Chapter 3* 都會具有很高的相似度分數，但信心分數卻都較低，原因是並不清楚結果中的哪一個項目是最相符的項目。  
   
  相似度分數由介於 0 與 1 之間的十進位值表示，其中相似度分數 1 表示輸入資料行中的值與參考資料表中的值之間完全相符。 信心分數也是介於 0 與 1 之間的十進位值，它表示對相符的信心。 如果找不到可用的相符項目，則會將相似度和信心分數 0 指派給資料列，且從參考資料表複製的輸出資料行將包含 Null 值。  
   
@@ -148,11 +148,11 @@ ms.locfileid: "92195942"
 >  模糊查閱轉換會建立參考資料表的工作副本。 下面描述的索引是使用特殊資料表，而非使用一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 索引在此工作資料表上建立的。 除非您選取 **[維護儲存的索引]**，否則轉換不會修改現有的來源資料表。 在此情況下，它會在參考資料表上建立觸發程序，以根據參考資料表的變更來更新工作資料表和查閱索引資料表。  
   
 > [!NOTE]  
->  在 **[模糊查閱轉換編輯器]** 中無法使用模糊查閱轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]** 來設定這兩個屬性。 此外，只有在 **[進階編輯器]** 中，才可指定大於 100 的 **MaxOutputMatchesPerInput**值。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊查閱轉換」一節。  
+>  在 **[模糊查閱轉換編輯器]** 中無法使用模糊查閱轉換的 **Exhaustive** 和 **MaxMemoryUsage** 屬性，但可使用 **[進階編輯器]** 來設定這兩個屬性。 此外，只有在 **[進階編輯器]** 中，才可指定大於 100 的 **MaxOutputMatchesPerInput** 值。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊查閱轉換」一節。  
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增]**** 來建立新連線。  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
   
  **新增**  
  使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  

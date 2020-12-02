@@ -14,11 +14,11 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484744"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123741"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>將變更套用到目的地
 
@@ -61,7 +61,7 @@ ms.locfileid: "88484744"
   
 3.  在 **[OLE DB 命令的進階編輯器]** 的 **[連接管理員]** 索引標籤上，選取或建立目的地資料庫的 OLE DB 連接管理員。  
   
-4.  在 **[OLE DB 命令的進階編輯器]** 的 **[元件屬性]** 索引標籤上，為 **SqlCommand**輸入一個參數化的 UPDATE 陳述式。  
+4.  在 **[OLE DB 命令的進階編輯器]** 的 **[元件屬性]** 索引標籤上，為 **SqlCommand** 輸入一個參數化的 UPDATE 陳述式。  
   
      例如，用於 Customer 資料表的 UPDATE 陳述式語法可能如下：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "88484744"
   
 4.  在 **[OLE DB 命令的進階編輯器]** 的 **[連接管理員]** 索引標籤上，選取或建立目的地資料庫的 OLE DB 連接管理員。  
   
-5.  在 **[OLE DB 命令的進階編輯器]** 的 **[元件屬性]** 索引標籤上，為 **SqlCommand**輸入一個參數化的 DELETE 陳述式。  
+5.  在 **[OLE DB 命令的進階編輯器]** 的 **[元件屬性]** 索引標籤上，為 **SqlCommand** 輸入一個參數化的 DELETE 陳述式。  
   
      例如，用於 Customer 資料表的 DELETE 陳述式語法可能如下：  
   

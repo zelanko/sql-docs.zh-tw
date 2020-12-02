@@ -14,11 +14,11 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4cb9b5a4c97e178e3acfbd64f1f99f831f116f09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484835"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123765"
 ---
 # <a name="access-the-cdc-designer-console"></a>存取 CDC 設計工具主控台
 
@@ -41,7 +41,7 @@ ms.locfileid: "88484835"
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
+-   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 **登入** 和 **密碼**。  
   
  此登入擁有的資料庫角色必須允許存取 MSXCDCDB 資料庫。 建議最好讓此登入也能存取正在使用的其他任何資料庫，否則使用者將無法檢視這些資料庫中的資料。  
   
@@ -55,10 +55,10 @@ ms.locfileid: "88484835"
  輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
  **加密連接**  
- 針對 Oracle CDC 服務與使用加密連接之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連接]****。**進階**：按一下 [進階]****，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
+ 針對 Oracle CDC 服務與使用加密連接之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連接]。**進階**：按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
  **進階**  
- 按一下 [進階]****，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
+ 按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
  如需 [進階連接屬性] 對話方塊的資訊，請參閱 [進階連接屬性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   

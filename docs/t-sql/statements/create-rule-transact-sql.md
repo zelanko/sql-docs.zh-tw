@@ -31,11 +31,11 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e0b6c3ae3d269b8617d3d032c8aa2d947c211834
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688774"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124008"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ AS condition_expression
  *condition_expression*  
  這是定義規則的一個或多個條件。 規則可以是 WHERE 子句中任何有效的運算式，可以包括算術運算子、關係運算子和述詞 (如 IN、LIKE、BETWEEN) 之類的元素。 規則不能參考資料行或其他資料庫物件。 未參考資料庫物件的內建函數可以包括在內。 無法使用使用者自訂函數。  
   
- *condition_expression*包括一個變數。 每個區域變數前面都會有 @ 記號 ( **@** )。 這個運算式參考 UPDATE 或 INSERT 陳述式所輸入的值。 當建立規則時，您可以使用任何名稱或符號來代表值，但第一個字元必須是 @ 記號 ( **@** )。  
+ *condition_expression* 包括一個變數。 每個區域變數前面都會有 @ 記號 ( **@** )。 這個運算式參考 UPDATE 或 INSERT 陳述式所輸入的值。 當建立規則時，您可以使用任何名稱或符號來代表值，但第一個字元必須是 @ 記號 ( **@** )。  
   
 > [!NOTE]  
 >  請避免建立使用別名資料型別之運算式的規則。 雖然您可以建立使用別名資料型別之運算式的規則，但在規則繫結到資料行或別名資料型別之後，當參考運算式時，會無法編譯運算式。  

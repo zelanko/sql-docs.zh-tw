@@ -16,11 +16,11 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725342"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123706"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
 
@@ -66,10 +66,10 @@ ms.locfileid: "91725342"
   
  查閱轉換會針對參考資料集執行查閱。  
   
- [快取連線管理員編輯器]**** 對話方塊包含下列索引標籤：  
+ [快取連線管理員編輯器] 對話方塊包含下列索引標籤：  
   
 ###  <a name="general-tab"></a><a name="generaltab"></a> General Tab  
- 使用 [快取連線管理員編輯器]**** 對話方塊的 [一般]**** 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
+ 使用 [快取連線管理員編輯器] 對話方塊的 [一般] 索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
 #### <a name="options"></a>選項。  
  **連線管理員名稱**  

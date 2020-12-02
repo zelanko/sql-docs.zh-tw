@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194185"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -118,11 +118,11 @@ ms.locfileid: "92194185"
   
  若要在迴圈的第一次反覆運算中建立檔案，然後在迴圈的後續反覆運算中附加資料列，您需要在設計階段執行下列動作：  
   
-1.  將 WriteOption 屬性設為 [CreateOnce]**** 或 [CreateAlways]****，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
+1.  將 WriteOption 屬性設為 [CreateOnce] 或 [CreateAlways]，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
   
-2.  將 WriteOption 屬性重設為 [Append]**** ValidateExternalMetadata 屬性設定為 [False]****。  
+2.  將 WriteOption 屬性重設為 [Append] ValidateExternalMetadata 屬性設定為 [False]。  
   
- 如果您使用 [TruncateAppend]**** 選項，而不是 [Append]**** 選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend]**** 選項也會要求資料符合檔案格式。  
+ 如果您使用 [TruncateAppend] 選項，而不是 [Append] 選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend] 選項也會要求資料符合檔案格式。  
   
 ## <a name="configuration-of-the-raw-file-destination"></a>原始檔案目的地的組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  

@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193210"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123374"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
 
@@ -36,13 +36,13 @@ ms.locfileid: "92193210"
   
  您可以使用此轉換執行下列工作：  
   
--   將不同資料行的資料串連至衍生的資料行中。 例如，您可以使用運算式 **，將** FirstName **和** LastName **資料行的值結合到名為**FullName `FirstName + " " + LastName`的單一衍生資料行中。  
+-   將不同資料行的資料串連至衍生的資料行中。 例如，您可以使用運算式 **，將** FirstName **和** LastName **資料行的值結合到名為** FullName `FirstName + " " + LastName`的單一衍生資料行中。  
   
 -   使用如 SUBSTRING 的函數從字串資料擷取字元，然後將結果儲存到衍生的資料行中。 例如，您可以使用運算式 **，從** FirstName `SUBSTRING(FirstName,1,1)`資料行中擷取人員的名字縮寫。  
   
--   套用數學函數至數值資料，然後將結果儲存到衍生的資料行中。 例如，您可以使用運算式 **，將數值資料行**SalesTax `ROUND(SalesTax, 2)`的長度和有效位數變更為含有兩位小數的數字。  
+-   套用數學函數至數值資料，然後將結果儲存到衍生的資料行中。 例如，您可以使用運算式 **，將數值資料行** SalesTax `ROUND(SalesTax, 2)`的長度和有效位數變更為含有兩位小數的數字。  
   
--   建立比較輸入資料行和變數的運算式。 例如，您可以使用運算式 **，對照** ProductVersion **資料行中的資料比較變數**Version **，並根據比較結果，使用** Version **或**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`的值。  
+-   建立比較輸入資料行和變數的運算式。 例如，您可以使用運算式 **，對照** ProductVersion **資料行中的資料比較變數** Version **，並根據比較結果，使用** Version **或** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`的值。  
   
 -   擷取日期時間值的部分。 例如，您可以使用運算式 `DATEPART("year",GETDATE())`，利用 GETDATE 和 DATEPART 函數擷取目前的年份。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "92193210"
 -   [使用衍生的資料行轉換來衍生資料行值](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
 ## <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
-  使用 [衍生的資料行轉換編輯器]**** 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
+  使用 [衍生的資料行轉換編輯器] 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
   
 ### <a name="options"></a>選項。  
  **變數和資料行**  
@@ -99,22 +99,22 @@ ms.locfileid: "92193210"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和 [函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **資料類型**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  **長度**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動評估運算式，並且設定字串資料的資料行長度。 這個資料行的值是唯讀的。  
   
  **有效位數**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動根據資料類型來設定數值資料的有效位數。 這個資料行的值是唯讀的。  
   
  **縮放比例**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動根據資料類型來設定數值資料的小數位數。 這個資料行的值是唯讀的。  
   
  **字碼頁**  
- 如果將資料加入新的資料行，[衍生的資料行轉換編輯器]**** 對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]****。  
+ 如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]。  
   
  **設定錯誤輸出**  
  使用 [ [設定錯誤輸出](../error-handling-in-data.md) ] 對話方塊來指定如何處理錯誤。  

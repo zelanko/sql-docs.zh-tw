@@ -17,11 +17,11 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477292"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123033"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
 
@@ -48,21 +48,21 @@ ms.locfileid: "88477292"
   
 3.  從上游元件將錯誤輸出連接至新指令碼元件。  
   
-4.  開啟**指令碼轉換編輯器**，然後在 [指令碼]**** 頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
+4.  開啟 **指令碼轉換編輯器**，然後在 [指令碼] 頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
   
-5.  按一下 [編輯指令碼]**** 以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
+5.  按一下 [編輯指令碼] 以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
   
 6.  關閉 VSTA。  
   
-7.  在指令碼轉換編輯器的 [輸入資料行]**** 頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
+7.  在指令碼轉換編輯器的 [輸入資料行] 頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
   
-8.  在 [輸入及輸出]**** 頁面上新增兩個新的資料行。  
+8.  在 [輸入及輸出] 頁面上新增兩個新的資料行。  
   
-    -   新增新的輸出資料行，類型為**字串**名稱為 **ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
+    -   新增新的輸出資料行，類型為 **字串** 名稱為 **ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
   
-    -   新增另一個新的輸出資料行，類型為**字串**，名稱為 **ColumnName**。 將新資料行的預設長度增加至 255，以支援長值。  
+    -   新增另一個新的輸出資料行，類型為 **字串**，名稱為 **ColumnName**。 將新資料行的預設長度增加至 255，以支援長值。  
   
-9. 關閉**指令碼轉換編輯器**。  
+9. 關閉 **指令碼轉換編輯器**。  
   
 10. 將指令碼元件的輸出附加至適當的目的地。 一般檔案目的地對於特定測試而言是最容易設定的。  
   

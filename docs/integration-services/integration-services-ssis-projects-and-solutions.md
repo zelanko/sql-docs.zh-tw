@@ -20,10 +20,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1918d6cac049fd863426ce320ab774067c350ea5
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92678936"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 專案及解決方案
@@ -110,13 +110,13 @@ ms.locfileid: "92678936"
   
      方案名稱會自動更新為符合專案名稱。  
   
-5.  若要為方案檔建立個別的資料夾，請選取 **[為方案建立目錄]** 。 這是預設選項。  
+5.  若要為方案檔建立個別的資料夾，請選取 **[為方案建立目錄]**。 這是預設選項。  
   
 6.  如果電腦上安裝了原始檔控制軟體，請選取 **[加入至原始檔控制]**  以將專案與原始檔控制相關聯。  
   
 7.  如果原始檔控制軟體是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe，則 **[Visual SourceSafe 登入]** 對話方塊會開啟。 請在 **[Visual SourceSafe 登入]** 中，提供使用者名稱、密碼，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 資料庫的名稱。 按一下 **[瀏覽]** 找出資料庫。  
   
-    > **注意** ：若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具] 功能表上的 [選項]，然後展開 [原始檔控制] 節點。  
+    > **注意**：若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具] 功能表上的 [選項]，然後展開 [原始檔控制] 節點。  
   
 8.  按一下 [確定]  ，將方案加入 **方案總管** 中，並將專案加入方案中。  
 
@@ -124,7 +124,7 @@ ms.locfileid: "92678936"
   
 1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，按一下 [檔案] 功能表上的 [新增] > [專案]。  
   
-2.  在 **[新增專案]** 視窗的 **[已安裝的範本]** 區域中，展開 **[Business Intelligence]** ，然後按一下 **[Integration Services]** 。  
+2.  在 **[新增專案]** 視窗的 **[已安裝的範本]** 區域中，展開 **[Business Intelligence]**，然後按一下 **[Integration Services]**。  
   
 3.  從專案類型清單中選取 **[Integration Services 匯入專案精靈]** 。  
   
@@ -138,11 +138,11 @@ ms.locfileid: "92678936"
   
 8.  按 **[下一步]** ，切換到 **[選取來源]** 頁面。  
   
-9. 如果您要從 **.ispac** 檔匯入，請在 [路徑] 文字方塊中鍵入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]** 。  
+9. 如果您要從 **.ispac** 檔匯入，請在 [路徑] 文字方塊中鍵入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]**。  
   
      如果您要從 [Integration Services 目錄] 匯入，請在 [伺服器名稱] 文字方塊中鍵入資料庫執行個體名稱，或按一下 [瀏覽] ，然後選取包含該目錄的資料庫執行個體。  
   
-     按一下 **[路徑]** 文字方塊旁的 **[瀏覽]** 、展開目錄中的資料夾、選取您要匯入的專案，然後按一下 **[確定]** 。  
+     按一下 **[路徑]** 文字方塊旁的 **[瀏覽]** 、展開目錄中的資料夾、選取您要匯入的專案，然後按一下 **[確定]**。  
   
      按 **[下一步]** ，切換到 **[檢閱]** 頁面。  
   

@@ -17,11 +17,11 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194545"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123295"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>進階 Integration Services 運算式範例
 
@@ -53,7 +53,7 @@ ms.locfileid: "92194545"
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE  && Size != (DT_WSTR,10)@BikeSize  
     ```  
   
--   此範例使用 **CurrencyRate** 資料表。 運算式會比較資料表中和變數的值。 如果 **FromCurrencyCode** 或 **ToCurrencyCode** 資料行中的項目等於變數值，且 **AverageRate** 中的值大於 **EndOfDayRate**中的值，則會傳回 TRUE。  
+-   此範例使用 **CurrencyRate** 資料表。 運算式會比較資料表中和變數的值。 如果 **FromCurrencyCode** 或 **ToCurrencyCode** 資料行中的項目等於變數值，且 **AverageRate** 中的值大於 **EndOfDayRate** 中的值，則會傳回 TRUE。  
   
     ```  
     (FromCurrencyCode == @FromCur || ToCurrencyCode == @ToCur) && AverageRate > EndOfDayRate  
@@ -74,7 +74,7 @@ ms.locfileid: "92194545"
 ## <a name="non-boolean-expressions"></a>非布林運算式  
  非布林運算式可用於「衍生的資料行」轉換、屬性運算式，以及「For 迴圈」容器。  
   
--   這個範例使用 **Contact** 資料表。 運算式會移除 **FirstName**、 **MiddleName**和 **LastName** 資料行中開頭和尾端的空格。 如果不是 Null，則會擷取 **MiddleName** 資料行的第一個字母、串連中間的縮寫與 **FirstName** 和 **LastName**中的值，以及在各值之間插入適當的空格。  
+-   這個範例使用 **Contact** 資料表。 運算式會移除 **FirstName**、 **MiddleName** 和 **LastName** 資料行中開頭和尾端的空格。 如果不是 Null，則會擷取 **MiddleName** 資料行的第一個字母、串連中間的縮寫與 **FirstName** 和 **LastName** 中的值，以及在各值之間插入適當的空格。  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  

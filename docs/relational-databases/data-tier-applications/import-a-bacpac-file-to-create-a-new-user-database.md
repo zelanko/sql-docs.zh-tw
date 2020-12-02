@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195580"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
@@ -92,18 +92,18 @@ ms.locfileid: "92195580"
   
 -   **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
--   **下一步** - 繼續進行 [匯入設定]**** 頁面。  
+-   **下一步** - 繼續進行 [匯入設定] 頁面。  
   
 -   **取消** - 取消作業並關閉精靈。  
   
 ###  <a name="import-settings-page"></a><a name="Import_settings"></a> 匯入設定頁面  
  您可以使用此頁面來指定要匯入之 .bacpac 檔案的位置。  
   
--   **從本機磁碟匯入** - 按一下 [瀏覽...]**** 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
+-   **從本機磁碟匯入** - 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
 -   **從 Azure 匯入** - 從 Microsoft Azure 容器匯入 BACPAC 檔案。 您必須連線到 Microsoft Azure 容器，才能驗證此選項。 請注意，[從 Azure 匯入] 選項也會要求您指定暫存檔案的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
-     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 您可以依照 [名稱]****、[大小]**** 或 [修改日期]**** 排序資料行。  
+     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 您可以依照 [名稱]、[大小] 或 [修改日期] 排序資料行。  
   
      若要繼續進行，請指定要匯入的 .bacpac 檔案，然後按一下 **[開啟]**。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "92195580"
 ###  <a name="results-page"></a><a name="Results"></a> 結果頁面  
  此頁面會報告匯入和建立資料庫作業成功或失敗，並顯示每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  
   
- 按一下 [關閉]**** 以關閉精靈。  
+ 按一下 [關閉] 以關閉精靈。  
   
 ## <a name="see-also"></a>另請參閱  
 [匯入 BACPAC 檔案以建立新的 Azure SQL 資料庫](/azure/azure-sql/database/database-import)  

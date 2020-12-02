@@ -12,15 +12,15 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b7865180ffd1bcf090e51eafd1542e12c97d17ac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194990"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>發行資料庫 (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   您可以使用 [產生和發佈指令碼精靈]****，將整個資料庫或個別的資料庫物件發行至 Web 主控提供者。  
+   您可以使用 [產生和發佈指令碼精靈]，將整個資料庫或個別的資料庫物件發行至 Web 主控提供者。  
   
 > [!NOTE]  
 >  本主題所述的功能在過去是由發行資料庫精靈所提供。 發行功能已經加入至產生和發佈指令碼精靈，而且發行資料庫精靈已經停用。  
@@ -32,7 +32,7 @@ ms.locfileid: "92194990"
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>若要將資料庫發行到 Web 服務  
   
-1.  在物件總管中，展開 [資料庫]****，以滑鼠右鍵按一下資料庫，指向 [工作]****，然後按一下 [產生和發佈指令碼]****。 遵循精靈中的步驟，以便編寫要發行之資料庫物件的指令碼。  
+1.  在物件總管中，展開 [資料庫]，以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [產生和發佈指令碼]。 遵循精靈中的步驟，以便編寫要發行之資料庫物件的指令碼。  
   
 2.  在 **[選擇物件]** 頁面上，選取要發行至 Web 主控服務的物件。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "92194990"
   
     2.  若要指定進階發行選項，請選取 **[發佈到 Web 服務]** 區段中的 **[進階]** 按鈕。  
   
-4.  在 [摘要]**** 頁面上檢閱您的選擇。 按 **[上一步]** 可變更您的選取。 按 **[下一步]** ，發佈您選取的物件。  
+4.  在 [摘要] 頁面上檢閱您的選擇。 按 **[上一步]** 可變更您的選取。 按 **[下一步]** ，發佈您選取的物件。  
   
 5.  在 **[儲存或發佈指令碼]** 頁面上，監視發行的進度。  
 

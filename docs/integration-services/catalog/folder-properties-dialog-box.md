@@ -16,11 +16,11 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351904"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123775"
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
 
@@ -31,15 +31,15 @@ ms.locfileid: "88351904"
   
 ## <a name="to-set-folder-description-and-permissions"></a>若要設定資料夾描述和權限  
   
-1.  以滑鼠右鍵按一下該資料夾，然後選取 [屬性]****。  
+1.  以滑鼠右鍵按一下該資料夾，然後選取 [屬性]。  
   
-2.  在 [一般]**** 頁面上，選取 [一般]**** 底下的 [描述]****，然後選擇性地輸入描述。  
+2.  在 [一般] 頁面上，選取 [一般] 底下的 [描述]，然後選擇性地輸入描述。  
   
-3.  在 [權限]**** 頁面上，按一下 [瀏覽]****，選取一或多個資料庫主題，然後按一下 [確定]****。  
+3.  在 [權限] 頁面上，按一下 [瀏覽]，選取一或多個資料庫主題，然後按一下 [確定]。  
   
-4.  在 [登入或角色]**** 底下選取一個名稱，然後在 [權限]**** 底下指定適當的權限。  
+4.  在 [登入或角色] 底下選取一個名稱，然後在 [權限] 底下指定適當的權限。  
   
-5.  按一下 [確定]**** 接受變更，並關閉 [資料夾屬性]**** 對話方塊。  
+5.  按一下 [確定] 接受變更，並關閉 [資料夾屬性] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 伺服器](../integration-services-ssis-packages.md)   

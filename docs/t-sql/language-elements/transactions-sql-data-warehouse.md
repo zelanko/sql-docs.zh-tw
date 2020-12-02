@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92038892"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>交易 (Azure Synapse Analytics)
@@ -28,9 +28,9 @@ ms.locfileid: "92038892"
   
  交易的開始和結束取決於 AUTOCOMMIT 設定，和 BEGIN TRANSACTION、COMMIT 和 ROLLBACK 陳述式。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支援下列交易類型：  
   
--   *明確交易*會以 BEGIN TRANSACTION 陳述式開始，並以 COMMIT 或 ROLLBACK 陳述式結束。  
+-   *明確交易* 會以 BEGIN TRANSACTION 陳述式開始，並以 COMMIT 或 ROLLBACK 陳述式結束。  
   
--   *自動認可交易*會在工作階段中自動起始，而不會以 BEGIN TRANSACTION 陳述式開始。 當 AUTOCOMMIT 設定為 ON 時，交易中會執行每個陳述式，而且不需要明確的 COMMIT 或 ROLLBACK。 當 AUTOCOMMIT 設定為 OFF 時，就需要 COMMIT 或 ROLLBACK 陳述式，才能決定交易的結果。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中，自動認可交易會在 COMMIT 或 ROLLBACK 陳述式之後，或在 SET AUTOCOMMIT OFF 陳述式之後立即開始。  
+-   *自動認可交易* 會在工作階段中自動起始，而不會以 BEGIN TRANSACTION 陳述式開始。 當 AUTOCOMMIT 設定為 ON 時，交易中會執行每個陳述式，而且不需要明確的 COMMIT 或 ROLLBACK。 當 AUTOCOMMIT 設定為 OFF 時，就需要 COMMIT 或 ROLLBACK 陳述式，才能決定交易的結果。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中，自動認可交易會在 COMMIT 或 ROLLBACK 陳述式之後，或在 SET AUTOCOMMIT OFF 陳述式之後立即開始。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

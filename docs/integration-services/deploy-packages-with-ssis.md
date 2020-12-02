@@ -22,11 +22,11 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194575"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123324"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 
@@ -57,7 +57,7 @@ ms.locfileid: "92194575"
     
 ### <a name="on-the-source-computer"></a>在來源電腦上
 
-要用來建立部署配套的電腦**必須安裝下列元件：**
+要用來建立部署配套的電腦 **必須安裝下列元件：**
 
 - SQL Server。 (從 [SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)來下載免費評估或開發人員版本的 SQL Server。)
 

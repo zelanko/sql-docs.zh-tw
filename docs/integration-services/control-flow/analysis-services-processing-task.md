@@ -17,11 +17,11 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727573"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123675"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
 
@@ -96,7 +96,7 @@ ms.locfileid: "91727573"
  輸入 Analysis Services 處理工作的描述。  
   
 ## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
-  使用 [Analysis Services 處理工作編輯器]**** 對話方塊的 [Analysis Services]**** 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
+  使用 [Analysis Services 處理工作編輯器] 對話方塊的 [Analysis Services] 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
   
  處理表格式模型時，請牢記以下事項：  
   
@@ -110,7 +110,7 @@ ms.locfileid: "91727573"
   
 ### <a name="options"></a>選項  
  **Analysis Services 連接管理員**  
- 在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增]**** 以建立新的連接管理員。  
+ 在清單中選取現有的 Analysis Services 連接管理員，或按一下 [新增] 以建立新的連接管理員。  
   
  **新增**  
  建立新的 Analysis Services 連接管理員。  
@@ -130,7 +130,7 @@ ms.locfileid: "91727573"
  將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件加入清單中。  
   
  **移除**  
- 選取物件，然後按一下 [刪除]****。  
+ 選取物件，然後按一下 [刪除]。  
   
  **影響分析**  
  執行選取之物件的影響分析。  

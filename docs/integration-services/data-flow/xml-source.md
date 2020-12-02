@@ -21,10 +21,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194546"
 ---
 # <a name="xml-source"></a>XML 來源
@@ -37,7 +37,7 @@ ms.locfileid: "92194546"
  XML 檔案中的資料經常會包括階層式關聯性。 例如，XML 資料檔案可代表目錄以及目錄中的項目。 在資料能夠進入資料程序之前，必須先決定 XML 資料檔案中各元素之間的關聯性，並且為檔案中各元素產生輸出。  
   
 ## <a name="schemas"></a>結構描述  
- XML 來源使用結構描述解譯 XML 資料。 XML 來源支援使用 XML 結構描述定義 (XSD) 檔或內嵌結構描述，將 XML 資料翻譯成表格格式。 如果您使用 [XML 來源編輯器] **** 對話方塊設定 XML 來源，則使用者介面可從指定的 XML 資料檔案產生 XSD。  
+ XML 來源使用結構描述解譯 XML 資料。 XML 來源支援使用 XML 結構描述定義 (XSD) 檔或內嵌結構描述，將 XML 資料翻譯成表格格式。 如果您使用 [XML 來源編輯器]  對話方塊設定 XML 來源，則使用者介面可從指定的 XML 資料檔案產生 XSD。  
   
 > [!NOTE]  
 >  不支援 DTD。  
@@ -48,7 +48,7 @@ ms.locfileid: "92194546"
 >  XML 來源不會根據 XSD 驗證 XML 檔案中的資料。  
   
 ## <a name="xml-source-editor"></a>XML 來源編輯器  
- XML 檔案中的資料經常會包括階層式關聯性。 [XML 來源編輯器] **** 對話方塊會使用指定的結構描述產生 XML 來源輸出。 您可以指定 XSD 檔、使用內嵌結構描述，或從指定的 XML 資料檔案產生 XSD。 結構描述必須於設計階段提供。  
+ XML 檔案中的資料經常會包括階層式關聯性。 [XML 來源編輯器]  對話方塊會使用指定的結構描述產生 XML 來源輸出。 您可以指定 XSD 檔、使用內嵌結構描述，或從指定的 XML 資料檔案產生 XSD。 結構描述必須於設計階段提供。  
   
  XML 來源會藉由為包含 XML 檔案中其他元素的每項元素建立輸出的方式，從 XML 資料產生表格式結構。 例如，如果 XML 資料代表目錄以及目錄中的項目，則 XML 來源會為目錄以及目錄所包含的每一種項目建立輸出。 每一個項目的輸出將包含該項目屬性的輸出資料行。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "92194546"
   
  從 XML 資料檔案擷取資料時，該資料會轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 但是，XML 來源無法將 XML 資料轉換成 DT_TIME2 或 DT_DBTIMESTAMP2 資料類型，因為此來源不支援這些資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- XSD 或內嵌結構描述可能會指定元素的資料類型；如果未指定，則 [XML 來源編輯器] **** 對話方塊會指派 Unicode 字串資料類型 (DT_WSTR) 給包含該元素的輸出中的資料行，並將資料行長度設定為 255 個字元。  
+ XSD 或內嵌結構描述可能會指定元素的資料類型；如果未指定，則 [XML 來源編輯器]  對話方塊會指派 Unicode 字串資料類型 (DT_WSTR) 給包含該元素的輸出中的資料行，並將資料行長度設定為 255 個字元。  
   
  如果結構描述指定元素的最大長度，輸出資料行的長度會設為此值。 如果最大長度大於元素轉換成的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型支援的長度，則資料會截斷成該資料類型的最大長度。 例如，如果字串長度為 5000，因為 DT_WSTR 資料類型的最大長度是 4000 個字元，則字串會截斷成 4000 個字元；同樣地，位元組資料會截斷成 DT_BYTES 資料類型的最大長度 8000 個字元。 如果結構描述指定無最大長度，則具有其中一種資料類型的預設資料行長度會設為 255。 XML 來源中的資料截斷會使用與其他資料流程元件中的截斷相同的方式來處理。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "92194546"
   
  XML 來源支援多項規則輸出和多項錯誤輸出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用來設定 XML 來源的 [XML 來源編輯器]**** 對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用來設定 XML 來源的 [XML 來源編輯器] 對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -108,22 +108,22 @@ ms.locfileid: "92194546"
  指定 XML 來源資料本身是否包含定義及驗證其結構和資料的 XSD 結構描述。  
   
  **XSD 位置**  
- 輸入 XSD 結構描述檔案的路徑和檔案名稱，或按一下 [瀏覽]**** 來找出檔案。  
+ 輸入 XSD 結構描述檔案的路徑和檔案名稱，或按一下 [瀏覽] 來找出檔案。  
   
  **瀏覽**  
- 使用 [開啟]**** 對話方塊來找出 XSD 結構描述檔案。  
+ 使用 [開啟] 對話方塊來找出 XSD 結構描述檔案。  
   
  **產生 XSD**  
- 使用 [另存新檔]**** 對話方塊，來選取自動產生之 XSD 結構描述檔案的位置。 編輯器會從 XML 資料的結構中推斷結構描述。  
+ 使用 [另存新檔] 對話方塊，來選取自動產生之 XSD 結構描述檔案的位置。 編輯器會從 XML 資料的結構中推斷結構描述。  
   
 ### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
 #### <a name="data-access-mode--xml-file-location"></a>資料存取模式 = XML 檔案位置  
  **XML 位置**  
- 輸入 XML 資料檔的路徑和檔案名稱，或按一下 [瀏覽]**** 來找出檔案。  
+ 輸入 XML 資料檔的路徑和檔案名稱，或按一下 [瀏覽] 來找出檔案。  
   
  **瀏覽**  
- 使用 [開啟]**** 對話方塊來找出 XML 資料檔。  
+ 使用 [開啟] 對話方塊來找出 XML 資料檔。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>資料存取模式 = 來自變數的 XML 檔案  
  **變數名稱**  
@@ -134,7 +134,7 @@ ms.locfileid: "92194546"
  選取包含 XML 資料的變數。  
   
 ## <a name="xml-source-editor-columns-page"></a>XML 來源編輯器 (資料行頁面)
-  使用 [XML 來源編輯器]**** 對話方塊的 [資料行]**** 節點，即可將輸出資料行對應至外部 (來源) 資料行。  
+  使用 [XML 來源編輯器] 對話方塊的 [資料行] 節點，即可將輸出資料行對應至外部 (來源) 資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -154,7 +154,7 @@ ms.locfileid: "92194546"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [XML 來源編輯器]**** 對話方塊的 [連線管理員]**** 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [XML 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

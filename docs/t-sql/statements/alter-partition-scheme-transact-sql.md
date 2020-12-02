@@ -23,11 +23,11 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 8ca48f836b6d14b85d3f8d0286fd31e60c403afe
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688266"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124261"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 

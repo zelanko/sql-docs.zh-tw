@@ -3,18 +3,18 @@ title: 從命令提示字元安裝
 description: 執行 SQL Server 命令列安裝程式，以使用 Python 與 R 將機器學習服務新增到 SQL Server 資料庫引擎執行個體。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956760"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122772"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>從命令列安裝含 R 與 Python 的 SQL Server 機器學習服務
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "91956760"
 
 ## <a name="command-line-arguments"></a>命令列引數
 
-FEATURES 引數是必要的，如同授權條款合約。 
+**/FEATURES** 引數是必要的，如同授權條款合約。 
 
-透過命令提示字元安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 /QS 參數只會顯示進度、不接受任何輸入，而且不會顯示任何遇到的錯誤訊息。 只有當您指定 /Action=install 時，才支援 /QS 參數。
+透過命令提示字元安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 **/Q** 參數的完整無訊息模式或使用 **/QS** 參數的簡單無訊息模式。 **/QS** 參數只會顯示進度、不接受任何輸入，而且不會顯示任何遇到的錯誤訊息。 只有當您指定 **/Action=install** 時，才支援 **/QS** 參數。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | 引數 | 描述 |

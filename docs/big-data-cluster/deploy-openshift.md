@@ -1,7 +1,7 @@
 ---
 title: 在 OpenShift 上部署
 titleSuffix: SQL Server Big Data Cluster
-description: 了解如何升級 OpenShift 上的 SQL Server 巨量資料叢集。
+description: 了解如何在 OpenShift 上升級 SQL Server 巨量資料叢集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 91c491facec15ea50ee93641ff9482b20e5bbf1a
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892488"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96123983"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 內部部署與 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 > [!IMPORTANT]
 > 下列必要條件其執行者必須是有足夠權限可建立這些叢集層級物件的 OpenShift 叢集系統管理員 (叢集系統管理員叢集角色)。 如需 OpenShift 中叢集角色的詳細資訊，請參閱 [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html) (使用 RBAC 定義與套用權限)。
 
-1. 請確定 OpenShift 上的 `pidsLimit` 設定已更新，可容納 SQL Server 的工作負載。 OpenShift 中的預設值對工作負載等生產環境而言太低。 建議至少使用 `4096` 的值，但最佳值取決於 SQL Server 的 `max worker threads` 設定，以及 OpenShift 主機節點的 CPU 處理器數目。 
+1. 請確定 OpenShift 上的 `pidsLimit` 設定已更新，可容納 SQL Server 的工作負載。 OpenShift 中的預設值對工作負載等生產環境而言太低。 一開始至少使用 `4096`，但最佳值取決於 SQL Server 中的 `max worker threads` 設定，以及 OpenShift 主機節點上的 CPU 處理器數目。 
     - 若要了解如何更新 OpenShift 叢集的 `pidsLimit`，請使用[這些指示]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md)。 請注意，`4.3.5` 之前的 OpenShift 版本有瑕疵，會導致更新的值無法生效。 請務必將 OpenShift 升級至最新版本。 
     - 為協助根據環境和規劃的 SQL Server 工作負載計算出最佳值，您可使用以下評估和範例：
 
@@ -49,7 +49,13 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
     > [!NOTE]
     > 其他程序 (例如備份、CLR、全文檢索、SQLAgent) 也會新增額外負荷，所以請將緩衝區新增至估計值。
 
-2. 使用附加的 [`bdc-scc.yaml`](#bdc-sccyaml-file) 建立自訂的安全性內容條件約束 (SCC)。
+1. 下載自訂資訊安全內容限制式 (SCC) [`bdc-scc.yaml`](#bdc-sccyaml-file)：
+
+    ```console
+    curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
+    ```
+
+1. 將 SCC 套用至叢集。
 
     ```console
     oc apply -f bdc-scc.yaml
@@ -104,7 +110,7 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   針對 ARO 的部署，建議從其中一個 `aro-` 設定檔開始，其包含適合此環境的 `serviceType` 和 `storageClass` 預設值。 例如：
+   針對 ARO 上的部署，建議從其中一個 `aro-` 設定檔開始，其包含適合此環境的 `serviceType` 與 `storageClass` 預設值。 例如：
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -129,19 +135,19 @@ SQL Server 2019 CU5 引進 OpenShift 的 SQL Server 巨量資料叢集支援。 
 
 1. 部署成功後，即可登入並列出外部叢集端點：
 
-```console
-   azdata login -n mssql-cluster
-   azdata bdc endpoint list
-```
+   ```console
+      azdata login -n mssql-cluster
+      azdata bdc endpoint list
+   ```
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>部署組態檔中的 OpenShift 特定設定
 
 SQL Server 2019 CU5 引進兩個功能參數，以控制 Pod 與節點計量的集合。 在 OpenShift 的內建設定檔中，這些參數預設為 `false`，因為監視容器需要[特殊權限的安全性內容](https://www.openshift.com/blog/managing-sccs-in-openshift)，這會放寬 BDC 部署所在命名空間的部分安全性條件約束。
 
 ```json
-    "security": {
-      "allowNodeMetricsCollection": false,
-      "allowPodMetricsCollection": false
+    "security": {
+      "allowNodeMetricsCollection": false,
+      "allowPodMetricsCollection": false
 }
 ```
 
@@ -164,47 +170,9 @@ ARO 的預設儲存類別名稱是 managed-premium (相對於 AKS 的預設儲�
 
 ## <a name="bdc-sccyaml-file"></a>`bdc-scc.yaml` 檔案
 
-```yaml
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
-metadata:
-  annotations:
-    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities.
-  generation: 2
-  name: bdc-scc
-allowHostDirVolumePlugin: false
-allowHostIPC: false
-allowHostNetwork: false
-allowHostPID: false
-allowHostPorts: false
-allowPrivilegeEscalation: true
-allowPrivilegedContainer: false
-allowedCapabilities:
-  - SETUID
-  - SETGID
-  - CHOWN
-  - SYS_PTRACE
-defaultAddCapabilities: null
-fsGroup:
-  type: RunAsAny
-readOnlyRootFilesystem: false
-requiredDropCapabilities:
-  - KILL
-  - MKNOD
-runAsUser:
-  type: MustRunAsNonRoot
-seLinuxContext:
-  type: MustRunAs
-supplementalGroups:
-  type: RunAsAny
-volumes:
-  - configMap
-  - downwardAPI
-  - emptyDir
-  - persistentVolumeClaim
-  - projected
-  - secret
-```
+此部署的 SCC 檔案為：
+
+:::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
 
 ## <a name="next-steps"></a>後續步驟
 

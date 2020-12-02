@@ -24,11 +24,11 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: fc18c47d87ada5b60cb57aba79e1063ce1f38c3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417644"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119653"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88417644"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ DBCC DBREINDEX
 
 ## <a name="arguments"></a>引數
  *table_name*  
- 這是包含要重建之指定索引的資料表名稱。 資料表名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)*的規則。*  
+ 這是包含要重建之指定索引的資料表名稱。 資料表名稱必須遵照 [識別碼](../../relational-databases/databases/database-identifiers.md)*的規則。*  
   
  *index_name*  
  這是要重建的索引名稱。 索引名稱必須符合識別碼的規則。 如果指定 *index_name*，則必須指定 *table_name*。 如果未指定 *index_name* 或其為 " "，就會重建資料表的所有索引。  

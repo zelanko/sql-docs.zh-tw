@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195952"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
@@ -56,7 +56,7 @@ ms.locfileid: "92195952"
   
 -   **_key_in**，唯一識別每個資料列的資料行。  
   
--   **_key_out**，識別一組重複資料列的資料行。 **_key_out** 資料行具有標準資料列中 **_key_in** 資料行的值。 具有與 **_key_out** 相同值的資料列屬於同一群組。 群組的 **_key_out**值與標準資料列中 **_key_in** 的值相對應。  
+-   **_key_out**，識別一組重複資料列的資料行。 **_key_out** 資料行具有標準資料列中 **_key_in** 資料行的值。 具有與 **_key_out** 相同值的資料列屬於同一群組。 群組的 **_key_out** 值與標準資料列中 **_key_in** 的值相對應。  
   
 -   **_score**，介於 0 與 1 之間的值，指出輸入資料列與標準資料列的相似度。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "92195952"
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增]**** 按鈕來建立新的連接。  
+ 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增] 按鈕來建立新的連接。  
   
  **新增**  
  使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
@@ -129,7 +129,7 @@ ms.locfileid: "92195952"
  選取轉換的輸出是否包含輸入資料行。 用來分組的所有資料行，都會自動複製到輸出。 您可以核取此資料行來包含其他資料行。  
   
  **輸入資料行**  
- 選取先前在 [可用的輸入資料行]**** 清單中選取的其中一個輸入資料行。  
+ 選取先前在 [可用的輸入資料行] 清單中選取的其中一個輸入資料行。  
   
  **輸出別名**  
  輸入對應之輸出資料行的描述性名稱。 依預設，輸出資料行的名稱會與輸入資料行的名稱相同。  
@@ -163,7 +163,7 @@ ms.locfileid: "92195952"
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
   
 > [!NOTE]  
->  在 **[模糊群組轉換編輯器]** 中無法使用模糊群組轉換的 **Exhaustive** 和 **MaxMemoryUsage**屬性，但可使用 **[進階編輯器]** 來設定這兩個屬性。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
+>  在 **[模糊群組轉換編輯器]** 中無法使用模糊群組轉換的 **Exhaustive** 和 **MaxMemoryUsage** 屬性，但可使用 **[進階編輯器]** 來設定這兩個屬性。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
   
 ### <a name="options"></a>選項  
  **輸入索引鍵資料行名稱**  

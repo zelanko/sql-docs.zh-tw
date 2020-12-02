@@ -18,11 +18,11 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194651"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123412"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
 
@@ -91,7 +91,7 @@ ms.locfileid: "92194651"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題︰**  [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **相關主題︰**  [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)[運算子 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)和 [函數 &#40;SSIS 運算式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **預設輸出名稱**  
  輸入預設輸出的名稱，或使用預設值。  

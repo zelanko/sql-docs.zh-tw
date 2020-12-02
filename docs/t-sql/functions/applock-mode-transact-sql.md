@@ -22,11 +22,11 @@ ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 40e578837b86b75538e678711293e4adc6b1ac14
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111117"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119544"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。 *resource_name* 是沒有預設值的 **nvarchar(255)** 。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 '*lock_owner*'  
-為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是 **交易** (預設值) 或 **工作階段**。
   
 ## <a name="return-types"></a>傳回類型
 **nvarchar(32)**
@@ -63,7 +63,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**更新**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|[共用]****|**排除**||  
+|[共用]|**排除**||  
   
 *這個鎖定模式是其他鎖定模式的組合，且 sp_getapplock 無法明確地取得它。
   

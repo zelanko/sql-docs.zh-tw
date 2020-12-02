@@ -23,11 +23,11 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 63c809cdc5b676e87b50e13b7ba67a9577e66e6a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549375"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124111"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,13 +64,13 @@ CREATE CONTRACT contract_name
  這是要併入合約之訊息類型的名稱。  
   
  SENT BY   
- 指定哪一個端點可以傳送指定訊息類型的訊息。 合約記錄服務可以用來進行特定交談的訊息。 每一個交談有兩個端點：「起始端」** 端點，這是起始交談的服務，以及「目標」** 端點，這是起始端連絡的服務。  
+ 指定哪一個端點可以傳送指定訊息類型的訊息。 合約記錄服務可以用來進行特定交談的訊息。 每一個交談有兩個端點：「起始端」端點，這是起始交談的服務，以及「目標」端點，這是起始端連絡的服務。  
   
  INITIATOR   
- 表示只有交談起始端可以傳送特定訊息類型的訊息。 開始交談的服務稱為交談的「起始端」**。  
+ 表示只有交談起始端可以傳送特定訊息類型的訊息。 開始交談的服務稱為交談的「起始端」。  
   
  TARGET  
- 表示只有交談目標可以傳送特定訊息類型的訊息。 接受由另一服務起始之交談的服務稱為交談的「目標」**。  
+ 表示只有交談目標可以傳送特定訊息類型的訊息。 接受由另一服務起始之交談的服務稱為交談的「目標」。  
   
  ANY  
  表示起始端和目標兩者都可以傳送這個類型的訊息。  

@@ -22,11 +22,11 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195390"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123493"
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
 
@@ -59,14 +59,14 @@ ms.locfileid: "92195390"
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
-  使用 [維度處理目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連線。  
+  使用 [維度處理目的地編輯器] 對話方塊的 [連線管理員] 頁面，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連線。  
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連接管理員，或按一下 [新增]**** 來建立新的連接管理員。  
+ 從清單中選取現有的連接管理員，或按一下 [新增] 來建立新的連接管理員。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
   
  **可用維度清單**  
  選取要處理的維度。  
@@ -118,10 +118,10 @@ ms.locfileid: "92195390"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]****，則指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]，則指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]****，則指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]，則指定到達錯誤臨界值時要採取的動作。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -165,7 +165,7 @@ ms.locfileid: "92195390"
 |**ReportAndStop**|報告錯誤並停止處理。|  
   
  **錯誤記錄路徑**  
- 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)]**** 按鈕以選取目的地。  
+ 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)] 按鈕以選取目的地。  
   
  **瀏覽 (...)**  
  選取錯誤記錄的路徑。  

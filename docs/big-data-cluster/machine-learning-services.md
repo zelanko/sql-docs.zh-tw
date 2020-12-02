@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: 了解如何對安裝有機器學習服務的 SQL Server 巨量資料叢集主要執行個體，執行 Python 與 R 指令碼。
 author: dphansen
 ms.author: davidph
-ms.date: 04/30/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aa71450a1c16c9239a0dc74403a1989b5a9a1986
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196913"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947963"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>對安裝有機器學習服務的 SQL Server 巨量資料叢集執行 Python 與 R 指令碼
 
@@ -22,7 +22,7 @@ ms.locfileid: "86196913"
 您可以對安裝有[機器學習服務](../machine-learning/index.yml)的 [SQL Server 巨量資料叢集](big-data-cluster-overview.md)主要執行個體，執行 Python 與 R 指令碼。
 
 > [!NOTE]
-> 您也可以對 [SQL Server 語言延伸模組](../language-extensions/language-extensions-overview.md)的主要執行個體，執行 JAVA 程式碼。 執行下列步驟也能啟用語言延伸模組。
+> 您也可以使用 [Java 語言延伸模組](../language-extensions/java-overview.md)，在 SQL Server 巨量資料叢集的主要執行個體上執行 Java 程式碼。 執行下列步驟也將啟用 [SQL Server 語言延伸模組](../language-extensions/language-extensions-overview.md)。
 
 ## <a name="enable-machine-learning-services"></a>啟用機器學習服務
 

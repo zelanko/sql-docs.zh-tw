@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067418"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124118"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -126,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  指定已載入資料庫中之簽署的組件。  
   
- [ EXECUTABLE ] FILE = ' *path_to_file* '  
+ [ EXECUTABLE ] FILE = '*path_to_file*'  
  指定包含憑證之 DER 編碼檔案的完整路徑，包括檔案名稱。 如有使用 EXECUTABLE 選項，該檔案即是已經過憑證簽署的 DLL。 *path_to_file* 可以是本機路徑或通往網路位置的 UNC 路徑。 您可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容中存取這個檔案。 這個帳戶必須有所需的檔案系統權限。  
 
 > [!IMPORTANT]
@@ -134,35 +134,35 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  指定為二進位常數的 ASN 編碼憑證位元組。  
- **適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  WITH PRIVATE KEY  
  指定憑證的私密金鑰必須載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 從組件建立憑證時，這個子句無效。 若要載入從組件所建立憑證的私密金鑰，請使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
   
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  指定通往私密金鑰的完整路徑 (包括檔案名稱)。 *path_to_private_key* 可以是本機路徑或通往網路位置的 UNC 路徑。 您可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容中存取這個檔案。 這個帳戶必須有必要的檔案系統權限。  
   
 > [!IMPORTANT]  
 > 自主資料庫或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 無法使用這個選項。  
   
  BINARY = *private_key_bits*  
- **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定為二進位常數的私密金鑰位元。 這些位元可以是加密形式。 如果加密的話，使用者必須提供解密密碼。 不會針對這個密碼執行密碼原則檢查。 私密金鑰位元應該採用 PVK 檔案格式。  
   
- DECRYPTION BY PASSWORD = ' *key_password* '  
+ DECRYPTION BY PASSWORD = '*key_password*'  
  指定解密從檔案擷取的私密金鑰時所需的密碼。 如果私密金鑰由 Null 密碼保護，則這個子句是選擇性的。 建議您不要將私密金鑰儲存至一個沒有密碼保護的檔案。 如果需要密碼但並未指定，則陳述式會失敗。  
   
- ENCRYPTION BY PASSWORD = ' *password* '  
+ ENCRYPTION BY PASSWORD = '*password*'  
  指定用來加密私密金鑰的密碼。 請只在您要利用密碼來加密憑證時才使用這個選項。 如果省略這個子句，則會使用資料庫主要金鑰加密此私密金鑰。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
- SUBJECT = ' *certificate_subject_name* '  
+ SUBJECT = '*certificate_subject_name*'  
  「主旨」一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
   
- START_DATE = ' *datetime* '  
+ START_DATE = '*datetime*'  
  這是憑證生效的日期。 若未指定，會將 START_DATE 設為等於目前的日期。 START_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。  
   
- EXPIRY_DATE = ' *datetime* '  
+ EXPIRY_DATE = '*datetime*'  
  這是憑證到期的日期。 若未指定，會將 EXPIRY_DATE 設為 START_DATE 之後一年的日期。 EXPIRY_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 會檢查到期日。 使用憑證進行加密的備份也會檢查到期日，而且將不會允許使用已過期之憑證來建立新備份，但將會允許使用已過期的憑證來還原。 不過當憑證用於資料庫加密或 Always Encrypted 時，不會強制執行到期設定。  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  

@@ -15,25 +15,25 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8e081ecc3eecf44e358d5288fa689e2676d21f22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496044"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123653"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 刪除叢集工作
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-**Azure HDInsight 刪除叢集工作**可讓 SSIS 套件刪除指定之 Azure 訂用帳戶和資源群組中的 Azure HDInsight 叢集。
+**Azure HDInsight 刪除叢集工作** 可讓 SSIS 套件刪除指定之 Azure 訂用帳戶和資源群組中的 Azure HDInsight 叢集。
   
-**Azure HDInsight 刪除叢集工作**是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
+**Azure HDInsight 刪除叢集工作** 是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
   
 > [!NOTE]
 > 刪除 HDInsight 叢集可能需要 10~20 分鐘。  
   
-若要加入 **Azure HDInsight 刪除叢集工作**，請將其拖放至 SSIS 設計工具，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯] **** ，即可看到以下 [Azure HDInsight 刪除叢集工作編輯器] **** 對話方塊。  
+若要加入 **Azure HDInsight 刪除叢集工作**，請將其拖放至 SSIS 設計工具，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯]  ，即可看到以下 [Azure HDInsight 刪除叢集工作編輯器]  對話方塊。  
   
 下表提供此對話方塊中欄位的描述。  
   

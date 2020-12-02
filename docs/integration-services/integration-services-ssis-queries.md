@@ -19,10 +19,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193840"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
@@ -83,7 +83,7 @@ ms.locfileid: "92193840"
   
 -   **立即檢視並編輯結果** ：您可以執行您的查詢並使用方格 (您可以捲動並編輯資料庫中的記錄) 中的資料錄集。  
   
- [查詢產生器]**** 對話方塊中的圖形工具，可以讓您使用拖放作業建構查詢。 依預設，[查詢產生器] 對話方塊會建構 SELECT 查詢，不過您也可以建立 INSERT、UPDATE 或 DELETE 查詢。 在 **[查詢產生器]** 對話方塊中，可以剖析和執行所有類型的 SQL 陳述式。 如需封裝中 SQL 陳述式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。  
+ [查詢產生器] 對話方塊中的圖形工具，可以讓您使用拖放作業建構查詢。 依預設，[查詢產生器] 對話方塊會建構 SELECT 查詢，不過您也可以建立 INSERT、UPDATE 或 DELETE 查詢。 在 **[查詢產生器]** 對話方塊中，可以剖析和執行所有類型的 SQL 陳述式。 如需封裝中 SQL 陳述式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。  
   
  若要深入了解 Transact-SQL 語言及其語法，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../t-sql/language-reference.md)。  
   

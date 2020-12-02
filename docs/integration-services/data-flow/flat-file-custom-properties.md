@@ -12,11 +12,11 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06e9cacfa5514648fc69bff0148a4448af536de0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194187"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123482"
 ---
 # <a name="flat-file-custom-properties"></a>一般檔案自訂屬性
 
@@ -31,7 +31,7 @@ ms.locfileid: "92194187"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|包含檔案名稱之輸出資料行的名稱。 如果沒有指定任何名稱，就不會產生包含檔案名稱的輸出資料行。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器]**** 中使用這個屬性，但是可以使用 [進階編輯器]**** 來設定這個屬性。|  
+|FileNameColumnName|String|包含檔案名稱之輸出資料行的名稱。 如果沒有指定任何名稱，就不會產生包含檔案名稱的輸出資料行。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |RetainNulls|Boolean|一個值，指定當「資料轉換管線」引擎處理資料時，是否要將來源檔案的 Null 值保留成 Null 值。 此屬性的預設值為 **False**。|  
   
  一般檔案來源的輸出沒有任何自訂屬性。  
@@ -40,7 +40,7 @@ ms.locfileid: "92194187"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|一個值，指出資料行會使用 DTS 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](./parsing-data.md) 和 [標準剖析](./parsing-data.md)。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器]**** 中使用這個屬性，但是可以使用 [進階編輯器]**** 來設定這個屬性。|  
+|FastParse|Boolean|一個值，指出資料行會使用 DTS 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](./parsing-data.md) 和 [標準剖析](./parsing-data.md)。 此屬性的預設值為 **False**。<br /><br /> 注意：雖然您無法在 [一般檔案來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
   
  如需詳細資訊，請參閱 [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)。  
   

@@ -26,11 +26,11 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0beac97d600e95f48921a5eb8229c0ff5bff9b75
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727590"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123829"
 ---
 # <a name="adding-connections-programmatically"></a>以程式設計方式加入連接
 

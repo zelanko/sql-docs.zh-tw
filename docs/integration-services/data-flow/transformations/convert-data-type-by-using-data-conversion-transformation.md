@@ -16,11 +16,11 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477738"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123415"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>使用資料轉換來轉換資料類型
 
@@ -41,7 +41,7 @@ ms.locfileid: "88477738"
   
 5.  按兩下 [資料轉換]。  
   
-6.  在 [資料轉換編輯器]**** 對話方塊中，於 [可用的輸入資料行]**** 資料表中，選取您要轉換其資料類型之資料行旁邊的核取方塊。  
+6.  在 [資料轉換編輯器] 對話方塊中，於 [可用的輸入資料行] 資料表中，選取您要轉換其資料類型之資料行旁邊的核取方塊。  
   
     > [!NOTE]  
     >  您可以對輸入資料行套用多個資料轉換。  

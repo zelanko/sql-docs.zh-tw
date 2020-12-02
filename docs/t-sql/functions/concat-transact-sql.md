@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43b05f32ecaf1cb1554180fce9b1591dc02c7358
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115555"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118946"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |3.否則為 **nvarchar** 類型且最多 4000 個字元的任何引數<br><br />(**nvarchar**(<= 4000))|**nvarchar**(<= 4000)|  
 |4.在所有其他情況下|**varchar**(<= 8000) (最多 8000 個字元的 **varchar**)，除非其中一個參數是任何長度的 nvarchar。 在該情況下，`CONCAT` 會傳回 **nvarchar(max)** 類型的結果。|  
   
-`CONCAT` 收到長度 <= 4000 個字元的 **nvarchar** 輸入引數或長度 <= 8000 個字元的 **varchar** 輸入引數時，隱含轉換可能會影響結果長度。 其他資料類型在隱含地轉換成字串時，長度會不同。 例如，**int** (14) 的字串長度為 12，而 **float**的長度為 32。 因此，串連兩個整數會傳回長度不超過 24 的結果。
+`CONCAT` 收到長度 <= 4000 個字元的 **nvarchar** 輸入引數或長度 <= 8000 個字元的 **varchar** 輸入引數時，隱含轉換可能會影響結果長度。 其他資料類型在隱含地轉換成字串時，長度會不同。 例如，**int** (14) 的字串長度為 12，而 **float** 的長度為 32。 因此，串連兩個整數會傳回長度不超過 24 的結果。
   
 如果輸入引數沒有支援的大型物件 (LOB) 類型，則無論傳回類型為何，傳回類型的長度都會截斷成 8000 個字元。 這項截斷可以保留空間，讓產生計畫更具效率。
   

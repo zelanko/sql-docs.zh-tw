@@ -14,11 +14,11 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5ec280020b966a1d23b5ebb9dfb2c740692a6d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394964"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123790"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
 
@@ -55,10 +55,10 @@ ms.locfileid: "88394964"
  若選取主體，在您按一下 **[確定]** 並關閉 **[瀏覽所有主體]** 對話方塊時，它們就會加入至父對話方塊中 **[權限]** 頁面上的 **[登入或角色]** 清單。 將主體加入至 **[登入或角色]** 清單後，您可以變更它們在所選專案上的權限。  
   
  **選取資料行**  
- 選取此選項即可將主體加入至父對話方塊中 [權限]**** 頁面上的 [登入或角色]**** 清單。  
+ 選取此選項即可將主體加入至父對話方塊中 [權限] 頁面上的 [登入或角色] 清單。  
   
  **圖示資料行**  
- 與主體之 [類型]**** 對應的圖示。  
+ 與主體之 [類型] 對應的圖示。  
   
  **名稱**  
  主體的名稱。  

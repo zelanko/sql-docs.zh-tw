@@ -18,11 +18,11 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a14261bb60eece1497594a6aa70b46748ed8cd1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480792"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123804"
 ---
 # <a name="adding-tasks-programmatically"></a>以程式設計方式加入工作
 

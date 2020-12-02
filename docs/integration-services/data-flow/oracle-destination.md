@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195360"
 ---
 # <a name="oracle-destination"></a>Oracle 目的地
@@ -55,7 +55,7 @@ Oracle 目的地有錯誤輸出。 此元件的錯誤輸出包含下列輸出資
 
 載入程序中受支援的輸出錯誤類型為：資料轉換、截斷或條件約束違規等等。 請參閱 [Oracle 目的地編輯器 (錯誤輸出頁面)](#oracle-destination-editor-error-output-page)。
 
-[錯誤數目上限 (MaxErrors)]**** 屬性可設定可能發生的錯誤數目上限。 當達到數目上限時，執行會停止並傳回錯誤。 而且，只有在達到數目上限之前的執行記錄才會包含在目標資料表中。 如需詳細設定，請參閱 [Oracle 目的地編輯器 (連線管理員頁面)](#oracle-destination-editor-connection-manager-page)。
+[錯誤數目上限 (MaxErrors)] 屬性可設定可能發生的錯誤數目上限。 當達到數目上限時，執行會停止並傳回錯誤。 而且，只有在達到數目上限之前的執行記錄才會包含在目標資料表中。 如需詳細設定，請參閱 [Oracle 目的地編輯器 (連線管理員頁面)](#oracle-destination-editor-connection-manager-page)。
 
 ## <a name="parallelism"></a>平行處理原則
 
@@ -85,7 +85,7 @@ Oracle 目的地有錯誤輸出。 此元件的錯誤輸出包含下列輸出資
 |BatchSize|整數|大量載入的批次大小。 這是當做批次載入的資料列數目。|只能在批次模式中使用。|
 |DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>**注意**：這個屬性僅由 [進階編輯器] 設定。|用於這兩種模式。|
 |FastLoad|布林值|是否使用快速載入。 預設值為 **false**。 這也可以在 [Oracle 目的地編輯器 (連線管理員頁面)](#oracle-destination-editor-connection-manager-page) 中設定。 |用於這兩種模式。|
-|MaxErrors|整數|停止資料流程之前可以發生的錯誤數目。 預設值為 **0**，表示沒有錯誤數目的限制。<br> 如果已在 [錯誤處理]**** 頁面中選取 [重新導向流程]****。 在達到錯誤數目限制之前，所有錯誤都會在錯誤輸出中傳回。 如需詳細資訊，請參閱[錯誤處理](#error-handling)。|只能在「快速載入」模式中使用。|
+|MaxErrors|整數|停止資料流程之前可以發生的錯誤數目。 預設值為 **0**，表示沒有錯誤數目的限制。<br> 如果已在 [錯誤處理] 頁面中選取 [重新導向流程]。 在達到錯誤數目限制之前，所有錯誤都會在錯誤輸出中傳回。 如需詳細資訊，請參閱[錯誤處理](#error-handling)。|只能在「快速載入」模式中使用。|
 |NoLogging|布林值|資料庫記錄是否已停用。 預設值為 **False**，表示記錄已啟用。|用於這兩種模式。|
 |平行|布林值|是否允許平行載入。 **True** 表示允許其他載入工作階段針對相同的目標資料表執行。<br> 如需詳細資訊，請參閱[平行處理原則](#parallelism)。|只能在「快速載入」模式中使用。|
 |TableName|String|包含所要使用之資料的資料表名稱。|用於這兩種模式。|
@@ -110,13 +110,13 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。
 若要開啟 **[進階編輯器]** 對話方塊：
 
-- 在 Integration Services 專案的 [資料流程]**** 畫面中，以滑鼠右鍵按一下 Oracle 目的地，然後選取 [顯示進階編輯器]****。
+- 在 Integration Services 專案的 [資料流程] 畫面中，以滑鼠右鍵按一下 Oracle 目的地，然後選取 [顯示進階編輯器]。
 
 如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱 [Oracle 目的地自訂屬性](#oracle-destination-custom-properties)。
 
 ## <a name="oracle-destination-editor-connection-manager-page"></a>Oracle 目的地編輯器 (連線管理員頁面)
 
-使用 [Oracle 目的地編輯器]**** 對話方塊的 [連線管理員]**** 頁面，即可選取目的地的 Oracle 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。
+使用 [Oracle 目的地編輯器] 對話方塊的 [連線管理員] 頁面，即可選取目的地的 Oracle 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。
 
 **開啟 Oracle 目的地編輯器的連線管理員頁面**
 
@@ -147,11 +147,11 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 
 **檢視現有的資料**
 
-按一下 [檢視現有的資料]****，最多可檢視您所選取之資料表的 200 個資料列。
+按一下 [檢視現有的資料]，最多可檢視您所選取之資料表的 200 個資料列。
 
 ## <a name="oracle-destination-editor-mappings-page"></a>Oracle 目的地編輯器 (對應頁面)
 
-使用 [Oracle 目的地編輯器]**** 對話方塊的 [對應]**** 頁面，將輸入資料行對應至目的地資料行。
+使用 [Oracle 目的地編輯器] 對話方塊的 [對應] 頁面，將輸入資料行對應至目的地資料行。
 
 **開啟 Oracle 目的地編輯器的對應頁面**
 
@@ -173,7 +173,7 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 
 **輸入資料行**
 
-檢視所選取的輸入資料行。 您可以選取 [< 忽略 >]**** 移除對應，將資料行從輸出排除。
+檢視所選取的輸入資料行。 您可以選取 [< 忽略 >] 移除對應，將資料行從輸出排除。
 
 **目的地資料行**
 

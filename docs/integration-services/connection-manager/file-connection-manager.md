@@ -21,11 +21,11 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728046"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123694"
 ---
 # <a name="file-connection-manager"></a>檔案連接管理員
 
@@ -37,7 +37,7 @@ ms.locfileid: "91728046"
 ## <a name="usage-types-of-the-file-connection-manager"></a>檔案連接管理員的使用類型  
  「檔案」連接管理員的 **FileUsageType** 屬性，會指定如何使用檔案連接。 「檔案」連接管理員可以建立檔案、建立資料夾、使用現有的檔案，或使用現有的資料夾。  
   
- 下表列出 **FileUsageType**的值。  
+ 下表列出 **FileUsageType** 的值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "91728046"
   
 -   指定檔案或資料夾。  
   
- 您可以針對檔案連線管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 但是，若您在使用運算式來指定檔案或資料夾時想要避免驗證錯誤，請在 **檔案連線管理員編輯器**中針對 **檔案/資料夾**，加入檔案或資料夾的路徑。  
+ 您可以針對檔案連線管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 但是，若您在使用運算式來指定檔案或資料夾時想要避免驗證錯誤，請在 **檔案連線管理員編輯器** 中針對 **檔案/資料夾**，加入檔案或資料夾的路徑。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -72,13 +72,13 @@ ms.locfileid: "91728046"
   使用 **[檔案連接管理員編輯器]** 對話方塊，以指定用來連接到檔案或資料夾的屬性。  
   
 > [!NOTE]  
->  您可以針對檔案連線管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 但是，若您在使用運算式來指定檔案或資料夾時想要避免驗證錯誤，請在 **檔案連線管理員編輯器**中針對 **檔案/資料夾**，加入檔案或資料夾的路徑。  
+>  您可以針對檔案連線管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 但是，若您在使用運算式來指定檔案或資料夾時想要避免驗證錯誤，請在 **檔案連線管理員編輯器** 中針對 **檔案/資料夾**，加入檔案或資料夾的路徑。  
   
  若要深入了解檔案連接管理員，請參閱＜ [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項  
  **使用類型**  
- 指定 [檔案連線管理員]**** 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
+ 指定 [檔案連線管理員] 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -88,10 +88,10 @@ ms.locfileid: "91728046"
 |現有的資料夾|使用現有的資料夾。|  
   
  **檔案 / 資料夾**  
- 若為 [檔案]****，請指定要使用的檔案。  
+ 若為 [檔案]，請指定要使用的檔案。  
   
  若為 **[資料夾]**，請指定要使用的資料夾。  
   
  **瀏覽**  
- 使用 [選取檔案]**** 或 [瀏覽資料夾]**** 對話方塊，來選取檔案或資料夾。  
+ 使用 [選取檔案] 或 [瀏覽資料夾] 對話方塊，來選取檔案或資料夾。  
   

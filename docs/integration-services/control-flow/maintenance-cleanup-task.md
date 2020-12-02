@@ -18,10 +18,10 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0994268d1e6ba95e7f4f3bc1bbe3875ec4f57358
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197182"
 ---
 # <a name="maintenance-cleanup-task"></a>維護清除工作
@@ -37,7 +37,7 @@ ms.locfileid: "92197182"
   
  通常您會想移除已經不需要的舊檔案，而且可以設定「維護清除」工作，以刪除已經到達指定存在時間的檔案。 例如，您可以設定工作以刪除存在時間已超過四週的檔案。 您可以使用天數、週數、月數或年數來指定要刪除之檔案的存在時間。 如果沒有指定要刪除之檔案的最低存在時間，則會刪除指定類型的所有檔案。  
   
- 與舊版的「維護清除」工作不同， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版的工作並不會自動刪除指定目錄之子目錄中的檔案。 此條件約束會縮小任何可能利用「維護清除」工作功能惡意刪除檔案之攻擊的介面區。 若要刪除第一層子資料夾，您必須選取 [維護清除工作]**** 對話方塊中的 [包含第一層的子資料夾]**** 選項，明確選擇要執行此動作。  
+ 與舊版的「維護清除」工作不同， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版的工作並不會自動刪除指定目錄之子目錄中的檔案。 此條件約束會縮小任何可能利用「維護清除」工作功能惡意刪除檔案之攻擊的介面區。 若要刪除第一層子資料夾，您必須選取 [維護清除工作] 對話方塊中的 [包含第一層的子資料夾] 選項，明確選擇要執行此動作。  
   
 ## <a name="configuration-of-the-maintenance-cleanup-task"></a>設定維護清除工作  
  您可以透過 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  

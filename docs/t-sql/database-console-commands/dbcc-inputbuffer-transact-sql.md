@@ -25,11 +25,11 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a76fab0c7e0b7e15beb0eb094de4aa66e1644b2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115000"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119597"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,9 +71,9 @@ DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」**** 或「語言事件」****。 如果未偵測到上一個事件，輸出將為「無事件」****。|  
+|**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」或「語言事件」。 如果未偵測到上一個事件，輸出將為「無事件」。|  
 |**參數**|**smallint**|0 = 文字<br /><br /> 1- *n* = 參數|  
-|**EventInfo**|**nvarchar(4000)**|如果 **EventType** 是 RPC，**EventInfo**只會包含程序名稱。 如果 **EventType** 是「語言」，便只會顯示事件的前 4000 個字元。|  
+|**EventInfo**|**nvarchar(4000)**|如果 **EventType** 是 RPC，**EventInfo** 只會包含程序名稱。 如果 **EventType** 是「語言」，便只會顯示事件的前 4000 個字元。|  
   
 例如，當緩衝區內的最後一個事件是 DBCC INPUTBUFFER(11)，DBCC INPUTBUFFER 會傳回下列結果集。
   

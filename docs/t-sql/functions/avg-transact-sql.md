@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e3fbe43f03e202e87ce951042091190f48a4b8c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115316"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119295"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,13 +54,13 @@ DISTINCT
 指定 AVG 只在每個值的唯一一個執行個體上執行，不論該值出現多少次。
   
 *expression*  
-精確數值或近似數值資料型別類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料型別除外。 不允許彙總函式和子查詢。
+精確數值或近似數值資料型別類別的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料型別除外。 不允許彙總函式和子查詢。
   
 OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
-*運算式*的評估結果決定傳回型別。
+*運算式* 的評估結果決定傳回型別。
   
 |運算式結果|傳回類型|  
 |---|---|

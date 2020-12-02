@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77209f40363ee4f5566604d301c8ade1d9116217
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92196722"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
@@ -48,7 +48,7 @@ LTRIM ( character_expression )
 
 ## <a name="arguments"></a>引數
  *character_expression*  
- 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar**的資料類型，但是 **text****ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
+ 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar** 的資料類型，但是 **text****ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-type"></a>傳回類型  
  **varchar** 或 **nvarchar**  

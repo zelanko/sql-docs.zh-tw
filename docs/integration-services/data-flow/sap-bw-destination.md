@@ -12,10 +12,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d46d3598bb309029319c1b74b467983e681b96ac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197045"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
@@ -46,9 +46,9 @@ ms.locfileid: "92197045"
   
 1.  建立新的來源系統：  
   
-    1.  選取 [協力廠商/暫存 BAPI]**** 類型。  
+    1.  選取 [協力廠商/暫存 BAPI] 類型。  
   
-    2.  針對 [目標系統的通訊類型]****，選取 [非 Unicode (非使用中 MDMP 設定)]****。  
+    2.  針對 [目標系統的通訊類型]，選取 [非 Unicode (非使用中 MDMP 設定)]。  
   
     3.  指派適當的程式識別碼。  
   
