@@ -14,10 +14,10 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: afdeac18b14b75461038889fe34b6fd34658991f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457757"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
@@ -47,9 +47,9 @@ ms.locfileid: "88457757"
   
 4.  **[SSISDB]** 節點包含一個或多個資料夾，且每個資料夾包含一個或多個專案。 展開包含您感興趣之專案的資料夾。  
   
-5.  以滑鼠右鍵按一下專案，然後按一下 [版本]****。  
+5.  以滑鼠右鍵按一下專案，然後按一下 [版本]。  
   
- 在 [專案版本]**** 對話方塊中，[版本]**** 資料表會顯示已經在伺服器上部署之專案版本的清單、版本部署的日期和時間、版本還原的日期和時間 (如果已還原)、版本描述，以及版本識別碼。 目前使用中的版本會以資料表之 **[目前]** 資料行中的核取記號表示。  
+ 在 [專案版本] 對話方塊中，[版本] 資料表會顯示已經在伺服器上部署之專案版本的清單、版本部署的日期和時間、版本還原的日期和時間 (如果已還原)、版本描述，以及版本識別碼。 目前使用中的版本會以資料表之 **[目前]** 資料行中的核取記號表示。  
   
 ##  <a name="restore-a-project-version"></a><a name="restore"></a> 還原專案版本  
  若要還原舊版專案，請在 **[版本]** 資料表中選取版本，然後按一下 **[還原至選取的版本]**。 專案便會還原到選取的版本，而且該版本會以 **[版本]** 資料表之 **[目前]** 資料行中的核取記號表示。  

@@ -25,10 +25,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f10b64a81d835a09216a7c8d232c91b13cd024c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430360"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
@@ -52,7 +52,7 @@ ms.locfileid: "88430360"
   
 1.  建立名為 `CurrentImageFile` 的字串變數，並將其值設定為現有影像檔的路徑與檔案名稱。  
   
-2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 頁面上，將 `CurrentImageFile` 變數加入 **ReadOnlyVariables** 屬性。  
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `CurrentImageFile` 變數加入 **ReadOnlyVariables** 屬性。  
   
 3.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "88430360"
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器** 的 [集合]**** 頁面上，將 [Foreach 檔案列舉值]**** 選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
+2.  在 **Foreach 迴圈編輯器** 的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
   
-3.  在 [變數對應]**** 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  
@@ -163,7 +163,7 @@ End Function
   
 2.  另外建立 `MaxThumbSize` 整數變數並指派以像素為單位的值，例如 100。  
   
-3.  在**指令碼工作編輯器**的 [指令碼]**** 頁面上，將兩個變數都新增至 **ReadOnlyVariables** 屬性。  
+3.  在 **指令碼工作編輯器** 的 [指令碼] 頁面上，將兩個變數都新增至 **ReadOnlyVariables** 屬性。  
   
 4.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   
@@ -173,9 +173,9 @@ End Function
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器**的 [集合]**** 頁面上，將 [Foreach 檔案列舉值]**** 選取為 [列舉值]****，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
+2.  在 **Foreach 迴圈編輯器** 的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為 [列舉值]，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
   
-3.  在 [變數對應]**** 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  

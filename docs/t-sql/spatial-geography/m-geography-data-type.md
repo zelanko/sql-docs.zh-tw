@@ -19,10 +19,10 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 77a79972671854e7e8538de7b943545955f61e89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422422"
 ---
 # <a name="m-geography-data-type"></a>M (geography 資料類型)

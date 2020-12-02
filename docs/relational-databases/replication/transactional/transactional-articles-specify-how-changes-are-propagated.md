@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: e7b267c0bfcfc7e12e2dc17c08bb6b18f2f36bf6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "86919898"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>交易式發行項 - 指定變更的傳播方式

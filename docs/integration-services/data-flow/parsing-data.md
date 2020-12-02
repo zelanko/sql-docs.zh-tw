@@ -15,10 +15,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457339"
 ---
 # <a name="parsing-data"></a>剖析資料
@@ -192,7 +192,7 @@ ms.locfileid: "88457339"
 ## <a name="enable-fast-parse"></a>啟用快速剖析
 使用快速剖析的來源或轉換，其每一個資料行都必須設定快速剖析屬性。 若要設定屬性，請使用「一般檔案」來源或「資料轉換」的進階編輯器。  
   
-1.  以滑鼠右鍵按一下 [一般檔案] 來源或 [資料轉換]，然後按一下 [顯示進階編輯器]****。  
+1.  以滑鼠右鍵按一下 [一般檔案] 來源或 [資料轉換]，然後按一下 [顯示進階編輯器]。  
   
 2.  按一下 **[進階編輯器]** 對話方塊中的 **[輸入與輸出屬性]** 索引標籤。  
   

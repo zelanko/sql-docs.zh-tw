@@ -19,10 +19,10 @@ ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 857428b0dee48336ae41f22e79c82a02f2f7b241
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458911"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry 資料類型)

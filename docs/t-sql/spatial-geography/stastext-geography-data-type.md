@@ -19,10 +19,10 @@ ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f89f2c2889d880388f74b563abc9aefe1eb28c82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422312"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography 資料類型)

@@ -17,10 +17,10 @@ ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9ba373a279750e7399881edcc072dc3a086ec5e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88360004"
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography 資料類型)

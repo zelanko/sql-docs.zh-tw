@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420492"
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
@@ -66,7 +66,7 @@ ms.locfileid: "88420492"
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否允許使用備份檔案來初始化訂閱。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
  **允許非 SQL Server 訂閱者**  
- 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 將此選項設定為 [True]****，就會將其他發行集屬性設定為支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 如果訂閱已存在，此選項會是唯讀的；如果 **[允許立即更新訂閱]** 、 **[允許佇列更新訂閱]** 或 **[允許點對點訂閱]** 設定為 **[True]** ，則此選項無法設定為 **[True]**。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 將此選項設定為 [True]，就會將其他發行集屬性設定為支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 如果訂閱已存在，此選項會是唯讀的；如果 **[允許立即更新訂閱]** 、 **[允許佇列更新訂閱]** 或 **[允許點對點訂閱]** 設定為 **[True]** ，則此選項無法設定為 **[True]**。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>資料轉換  
  **允許資料轉換**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420492"
   
 ### <a name="peer-to-peer-replication"></a>點對點複寫  
  **[True]**  
- 僅適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援點對點複寫。 將此選項設定為 **[True]** ，就會將其他發行集屬性設定為支援點對點複寫。 如果訂閱存在，這個選項就是唯讀的。 如果 [允許立即更新訂閱] **** 、[允許佇列更新訂閱] **** 或 [允許非 SQL Server 訂閱者] **** 設定為 [True] **** ，此選項就無法設定為 [True] ****。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
+ 僅適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援點對點複寫。 將此選項設定為 **[True]** ，就會將其他發行集屬性設定為支援點對點複寫。 如果訂閱存在，這個選項就是唯讀的。 如果 [允許立即更新訂閱]  、[允許佇列更新訂閱]  或 [允許非 SQL Server 訂閱者] 設定為 [True]  ，此選項就無法設定為 [True] 。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  **允許點對點衝突偵測**  
  僅適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。 指定這個發行集是否啟用衝突偵測。 若要使用衝突偵測，所有節點都必須執行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本，而且您必須針對所有節點啟用偵測。 若要使用衝突偵測，您也必須指定 [對等建立者識別碼] 的值。如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  

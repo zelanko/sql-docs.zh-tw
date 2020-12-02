@@ -23,10 +23,10 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9e50a3f642bc4ecc9782aea699f49e6403d98c23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457170"
 ---
 # <a name="validating-a-data-flow-component"></a>驗證資料流程元件
@@ -43,9 +43,9 @@ ms.locfileid: "88457170"
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> 值指出，此元件的錯誤可以在設計師中編輯此元件來加以修正。 此錯誤通常是因為自訂屬性或是未指定或設定錯誤的必要連接所造成。  
   
- 最後的錯誤值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，該值指出此元件發現的錯誤只有在直接修改了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性時才應該發生 (不論是編輯封裝 XML 或使用物件模型)。 例如，當元件只加入了單一輸入，但是驗證作業發現 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有一個以上的輸入存在時，就會發生這種錯誤。 若要修復產生這個傳回值的錯誤，只能重設此元件或是使用 [進階編輯器]**** 對話方塊中的 [重設]**** 按鈕。  
+ 最後的錯誤值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，該值指出此元件發現的錯誤只有在直接修改了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性時才應該發生 (不論是編輯封裝 XML 或使用物件模型)。 例如，當元件只加入了單一輸入，但是驗證作業發現 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有一個以上的輸入存在時，就會發生這種錯誤。 若要修復產生這個傳回值的錯誤，只能重設此元件或是使用 [進階編輯器] 對話方塊中的 [重設] 按鈕。  
   
- 除了傳回錯誤值以外，元件還會藉由公佈驗證期間的警告或錯誤來提供意見。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法會提供這項機制。 當呼叫這些方法時，這些事件會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [錯誤清單]**** 視窗內公佈。 然後元件開發人員可以提供有關所發生之錯誤的直接意見給使用者，並在適當的情況下提供修正錯誤的方式。  
+ 除了傳回錯誤值以外，元件還會藉由公佈驗證期間的警告或錯誤來提供意見。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法會提供這項機制。 當呼叫這些方法時，這些事件會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [錯誤清單] 視窗內公佈。 然後元件開發人員可以提供有關所發生之錯誤的直接意見給使用者，並在適當的情況下提供修正錯誤的方式。  
   
  下列程式碼範例會示範已覆寫的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 實作。  
   

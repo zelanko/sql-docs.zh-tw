@@ -19,10 +19,10 @@ ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9e7b33ea60599dc5920d15df18177a34bcdde07c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416974"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (geography 資料類型)

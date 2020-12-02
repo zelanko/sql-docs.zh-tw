@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9ba02ca79db2e79f14483e632eaa6fa77c3d4a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88304733"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
@@ -64,7 +64,7 @@ SET SHOWPLAN_XML 用來傳回應用程式 (如 **sqlcmd** 公用程式) 的輸�
 SET SHOWPLAN_XML 會將資訊當作一組 XML 文件傳回。 SET SHOWPLAN_XML ON 陳述式之後的每個批次都會反映在單一文件的輸出中。 每份文件都包含批次內各陳述式的文字，後面接著執行步驟的詳細資料。 文件會顯示估計的成本、資料列數、存取的索引、執行的運算子類型、聯結順序，以及執行計畫的詳細資訊。
 
 > [!NOTE]
-> 如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]****，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]**** 按鈕。
+> 如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫] 按鈕。
 
 ### <a name="location-of-showplan-output"></a>SHOWPLAN 輸出的位置
 

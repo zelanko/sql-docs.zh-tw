@@ -19,10 +19,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457027"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
@@ -51,7 +51,7 @@ ms.locfileid: "88457027"
 
 -   **AdventureWorksDW2012 範例資料庫**。 若要下載 **AdventureWorksDW2012** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorksDW2012.bak`，並還原備份。  
 
--   **範例資料**檔案。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。
+-   **範例資料** 檔案。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。
 
     - ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
     - 範例套件會假設資料檔案位於資料夾 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`。 如果您將下載解壓縮到其他位置，則您可能需要更新範例套件中多個位置的檔案路徑。

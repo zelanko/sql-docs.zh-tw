@@ -12,10 +12,10 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88461986"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
@@ -38,13 +38,13 @@ ms.locfileid: "88461986"
 
     1.  瀏覽至 [Integration Services 教學課程檔案](https://www.microsoft.com/download/details.aspx?id=56827) \(英文\)。
 
-    2.  選取 [Download] \(下載\)**** 按鈕。
+    2.  選取 [Download] \(下載\) 按鈕。
 
-    3.  選取 [Creating a Simple ETL Package.zip] \(建立簡單的 ETL Package.zip\)**** 檔案，然後選取 [Next] \(下一步\)****。
+    3.  選取 [Creating a Simple ETL Package.zip] \(建立簡單的 ETL Package.zip\) 檔案，然後選取 [Next] \(下一步\)。
 
     4.  下載檔案之後，將其內容解壓縮至本機目錄。  
 
-* 若要安裝並部署 **AdventureWorksDW2012** 範例資料庫，請參閱[安裝及設定 AdventureWorks 範例資料庫 - SQL](../samples/adventureworks-install-configure.md)。
+* 若要安裝並部署 **AdventureWorksDW2012** 範例資料庫，請參閱 [安裝及設定 AdventureWorks 範例資料庫 - SQL](../samples/adventureworks-install-configure.md)。
   
 ## <a name="look-at-the-source-data"></a>查看資料來源
 在本教學課程中，來源資料是名為 **SampleCurrencyData.txt** 之一般檔案中的一組歷史貨幣資料。 來源資料具有下列四個資料行：貨幣的平均匯率、貨幣索引鍵、日期索引鍵和收盤匯率。  
@@ -77,7 +77,7 @@ ms.locfileid: "88461986"
 |EndOfDayRate|FLOAT|None|None|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>將來源資料對應至目的地  
-我們的來源和目的地資料格式分析指出查閱對 **CurrencyKey** 和 **DateKey** 值而言是必要的。 執行這些查閱的轉換會使用來自**DimCurrency** 和 **DimDate** 維度資料表的替代索引鍵來取得這些值。  
+我們的來源和目的地資料格式分析指出查閱對 **CurrencyKey** 和 **DateKey** 值而言是必要的。 執行這些查閱的轉換會使用來自 **DimCurrency** 和 **DimDate** 維度資料表的替代索引鍵來取得這些值。  
   
 |一般檔案資料行|資料表名稱|資料行名稱|資料類型|  
 |--------------------|--------------|---------------|-------------|  

@@ -16,10 +16,10 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88324880"
 ---
 # <a name="improve-access-to-trace-data"></a>改善追蹤資料的存取
@@ -32,15 +32,15 @@ ms.locfileid: "88324880"
   
 ### <a name="to-change-the-temp-environment-variable-in-windows-operating-systems"></a>在 Windows 作業系統中變更 TEMP 環境變數  
   
-1.  在 [開始]**** 功能表上，選擇 [控制台]****，然後按一下 [系統]****。  
+1.  在 [開始] 功能表上，選擇 [控制台]，然後按一下 [系統]。  
   
-2.  在 [系統內容]**** 對話方塊中，按一下 [進階]**** 索引標籤，然後按一下 [環境變數]****。  
+2.  在 [系統內容] 對話方塊中，按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
   
-3.  向下捲動 [系統變數]**** 清單，選取對應於 **TEMP** 變數的資料列，然後按一下 [編輯]****。  
+3.  向下捲動 [系統變數] 清單，選取對應於 **TEMP** 變數的資料列，然後按一下 [編輯]。  
   
-4.  在 [編輯系統變數]**** 對話方塊中，輸入 **temp** 目錄要放在其中之磁碟機和目錄的路徑與名稱。  
+4.  在 [編輯系統變數] 對話方塊中，輸入 **temp** 目錄要放在其中之磁碟機和目錄的路徑與名稱。  
   
-5.  按一下 [確定]**** 來儲存變更。  
+5.  按一下 [確定] 來儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)   

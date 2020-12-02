@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88325846"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "88325846"
   
  如需使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函數的相關資訊和案例，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]****，然後按一下 [新增順序]****，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]****。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]**** 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
+ 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]，然後按一下 [新增順序]，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性] 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) 陳述式或卸除然後重新建立順序物件。  
   
 ## <a name="options"></a>選項  
  **順序名稱**  
@@ -87,7 +87,7 @@ ms.locfileid: "88325846"
  如需有關建立順序選項的詳細資訊，請參閱 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
- 需要 SCHEMA 的 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 權限。  
+ 需要 SCHEMA 的 **CREATE SEQUENCE**、 **ALTER** 或 **CONTROL** 權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  

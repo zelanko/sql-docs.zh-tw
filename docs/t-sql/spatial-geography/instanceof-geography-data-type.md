@@ -19,10 +19,10 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422382"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography 資料類型)

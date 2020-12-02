@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427920"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 複寫 [發行者設定] 對話方塊
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-   [發行者設定]**** 對話方塊，可讓您針對已新增至複寫監視器之左窗格的發行者變更設定。  
+   [發行者設定] 對話方塊，可讓您針對已新增至複寫監視器之左窗格的發行者變更設定。  
   
 ## <a name="options"></a>選項。  
  **發行者連接**  

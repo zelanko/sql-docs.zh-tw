@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408114"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
@@ -95,9 +95,9 @@ COLUMNPROPERTY 函數的 **IsPrecise** 屬性會報告 *computed_column_expressi
 
 ## <a name="data-type-requirements"></a>資料類型需求
   
--   針對計算資料行所定義的 *computed_column_expression* 並不能評估為 **text**、 **ntext**或 **image** 資料類型。  
+-   針對計算資料行所定義的 *computed_column_expression* 並不能評估為 **text**、 **ntext** 或 **image** 資料類型。  
 -   從 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 以及 **xml** 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
--   從 **image**、 **ntext**以及 **text** 資料類型所衍生的計算資料行，只要其資料類型可作為非索引鍵之索引資料行，就可作為非叢集索引中無索引鍵 (內含) 的資料行。  
+-   從 **image**、 **ntext** 以及 **text** 資料類型所衍生的計算資料行，只要其資料類型可作為非索引鍵之索引資料行，就可作為非叢集索引中無索引鍵 (內含) 的資料行。  
 
 
 ## <a name="set-option-requirements"></a>SET 選項需求

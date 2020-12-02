@@ -15,10 +15,10 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 59c44a69bbe994ee7df7337213d26b4a789f5a11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455322"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>設定追蹤篩選 (Transact-SQL)

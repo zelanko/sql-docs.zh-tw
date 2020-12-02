@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88448162"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引
@@ -40,7 +40,7 @@ ms.locfileid: "88448162"
   
  與資料分割有關的第一組屬性是發行項結構描述選項，這些選項可決定是否應將資料分割物件複製到訂閱者。 可透過下列方式來設定這些結構描述選項：  
   
--   在新增發行集精靈的 **[發行項屬性]** 頁面中，或是在 [發行集屬性] 對話方塊中。 若要複製上表所列的物件，請針對 **[複製資料表資料分割配置]** 和 **[複製索引資料分割配置]** 屬性指定 **true**的值。 如需如何存取 [發行項屬性]**** 頁面的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+-   在新增發行集精靈的 **[發行項屬性]** 頁面中，或是在 [發行集屬性] 對話方塊中。 若要複製上表所列的物件，請針對 **[複製資料表資料分割配置]** 和 **[複製索引資料分割配置]** 屬性指定 **true** 的值。 如需如何存取 [發行項屬性] 頁面的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 -   藉由使用下列其中一個預存程序的 *schema_option* 參數：  
   

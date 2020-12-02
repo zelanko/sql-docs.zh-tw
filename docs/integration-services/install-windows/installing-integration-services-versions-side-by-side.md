@@ -15,10 +15,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d57148134c727b03a30d75af415d1e2476dca32d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88345994"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>並存安裝 Integration Services 版本
@@ -32,7 +32,7 @@ ms.locfileid: "88345994"
 ## <a name="designing-and-maintaining-packages"></a>設計和維護封裝  
  若要設計和維護目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝，請使用適用於 Visual Studio 2015 的 SQL Server Data Tools (SSDT)。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
- 在 Integration Services 專案屬性頁面 [組態屬性]**** 的 [一般]**** 索引標籤中，選取 [TargetServerVersion]**** 屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在 Integration Services 專案屬性頁面 [組態屬性] 的 [一般] 索引標籤中，選取 [TargetServerVersion] 屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
 |SQL Server 的目標版本|SSIS 封裝的開發環境|  
 |----------------------------------|-----------------------------------------------|  

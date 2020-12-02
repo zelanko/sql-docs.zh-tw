@@ -19,10 +19,10 @@ ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0e15bc16518c9b5dbc53369a4919f3e289a7d261
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454207"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry 資料類型)

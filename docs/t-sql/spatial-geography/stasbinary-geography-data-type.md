@@ -19,10 +19,10 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7ae9c800cffd7df80ba8447c2e16de745a0009bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88359444"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography 資料類型)

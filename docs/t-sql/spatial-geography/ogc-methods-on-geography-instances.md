@@ -14,10 +14,10 @@ ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 68a3d52312124783fdda1813fb153ab3f6a84369
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459060"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>地理位置例項上的 OGC 方法

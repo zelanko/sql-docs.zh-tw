@@ -16,10 +16,10 @@ ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0a4df3ac3d6ac6b3c4d8cf212d83cc0f71582b86
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459016"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography 資料類型)

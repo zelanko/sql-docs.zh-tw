@@ -26,10 +26,10 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d476bd87096a68be5154cb57563f08ad982e7d3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425320"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>參考指令碼解決方案中的其他組件
@@ -52,7 +52,7 @@ ms.locfileid: "88425320"
   
 2.  加入 Managed 組件的參考。  
   
-     若要加入參考，請在 VSTA 中，於 [加入參考]**** 對話方塊的 [瀏覽]**** 索引標籤上，找到並加入 Managed 組件。  
+     若要加入參考，請在 VSTA 中，於 [加入參考] 對話方塊的 [瀏覽] 索引標籤上，找到並加入 Managed 組件。  
   
  若要 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在執行階段尋找 Managed 組件，您必須執行下列步驟：  
   

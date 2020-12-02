@@ -19,10 +19,10 @@ ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 69290b85b4788f0e35c4fb48cc05222211cd0413
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88305657"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry 資料類型)

@@ -22,15 +22,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88464986"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  您可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述詞或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函式中使用「鄰近字詞」** **NEAR**，以便搜尋彼此接近的單字或片語。 
+  您可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述詞或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函式中使用「鄰近字詞」 **NEAR**，以便搜尋彼此接近的單字或片語。 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR 的概觀  
 **NEAR** 具有下列功能：  
@@ -38,7 +38,7 @@ ms.locfileid: "88464986"
 
 -   您可以依任何順序來搜尋單字或片語，或依特定順序來搜尋單字或片語。
   
--   您可以指定分隔第一個和最後一個搜尋字詞之非搜尋字詞的數目上限 (或「最大距離」**)，以便構成符合項目。  
+-   您可以指定分隔第一個和最後一個搜尋字詞之非搜尋字詞的數目上限 (或「最大距離」)，以便構成符合項目。  
 
 -   如果您指定了詞彙的數目上限，也可以指定符合項目必須按照指定的順序包含搜尋詞彙。
 
@@ -151,9 +151,9 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
     在 CONTAINSTABLE 函數中使用 NEAR 時，文件的叫用次數相對於其長度以及每次叫用中第一個和最後一個搜尋詞彙之間的距離就會影響每份文件的等級。 對於泛型相近詞彙而言，如果符合的搜尋詞彙距離 >50 個邏輯詞彙，針對文件傳回的等級就是 0。 若為沒有指定整數做為最大距離的自訂相近詞彙，只包含間距 >100 個邏輯詞彙之叫用的文件將收到的等級為 0。 如需自訂鄰近搜尋等級的詳細資訊，請參閱[限制 RANK 的搜索結果](../../relational-databases/search/limit-search-results-with-rank.md)。  
   
--   [轉換非搜尋字]**** 伺服器選項  
+-   [轉換非搜尋字] 伺服器選項  
   
-     如果您在鄰近搜尋中指定停用字詞，則 [轉換非搜尋字]**** 的值會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理停用字詞的方式。 如需詳細資訊，請參閱 [轉換非搜尋字伺服器組態選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。   
+     如果您在鄰近搜尋中指定停用字詞，則 [轉換非搜尋字] 的值會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理停用字詞的方式。 如需詳細資訊，請參閱 [轉換非搜尋字伺服器組態選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。   
   
 ## <a name="see-also"></a>另請參閱  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  

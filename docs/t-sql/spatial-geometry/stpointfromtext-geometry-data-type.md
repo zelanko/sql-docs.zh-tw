@@ -19,10 +19,10 @@ ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 469971c7a5b40f97ac67feca3dfb20f25a679486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444986"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry 資料類型)

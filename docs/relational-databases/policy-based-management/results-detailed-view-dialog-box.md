@@ -15,10 +15,10 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88380734"
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊

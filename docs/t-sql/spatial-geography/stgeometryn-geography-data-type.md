@@ -18,10 +18,10 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445240"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography 資料類型)

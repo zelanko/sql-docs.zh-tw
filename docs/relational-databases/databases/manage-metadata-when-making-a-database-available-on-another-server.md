@@ -35,10 +35,10 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88412844"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
@@ -55,7 +55,7 @@ ms.locfileid: "88412844"
   
 -   在另一個伺服器執行個體上附加資料庫的副本。  
   
- 某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式相依於 **master** 和 **msdb** 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 **master** 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 如果應用程式或資料庫維護計畫相依於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，而其中繼資料儲存於 **msdb** 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 同樣的，伺服器層級觸發程序的中繼資料會儲存在 **master**中。  
+ 某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式相依於 **master** 和 **msdb** 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 **master** 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 如果應用程式或資料庫維護計畫相依於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，而其中繼資料儲存於 **msdb** 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 同樣的，伺服器層級觸發程序的中繼資料會儲存在 **master** 中。  
   
  當您將應用程式的資料庫移至其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 **master** 和 **msdb** 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 **master** 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "88412844"
 ##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  如果您在另一個伺服器執行個體上提供的可用資料庫包含加密的資料，而且資料庫主要金鑰受到原始伺服器的服務主要金鑰保護時，可能就必須重新建立服務主要金鑰加密。 *「資料庫主要金鑰」* 是一個用來保護加密資料庫中憑證私密金鑰和非對稱金鑰的對稱金鑰。 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密資料主要金鑰。  
   
- 若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master**中。 通常，每當主要金鑰變更時，儲存在 **master** 中的副本便會以無訊息模式更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
+ 若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master** 中。 通常，每當主要金鑰變更時，儲存在 **master** 中的副本便會以無訊息模式更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
   
  當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _密碼_ **'** 。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
@@ -144,18 +144,18 @@ ms.locfileid: "88412844"
   
   
 ##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
- 使用者定義錯誤訊息位於 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目錄檢視中。 此目錄檢視會存放在 **master**內。 如果資料庫應用程式仰賴使用者定義錯誤訊息，而且此資料庫可在另一個伺服器執行個體上使用時，請使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) ，在目的地伺服器執行個體上加入這些使用者定義訊息。  
+ 使用者定義錯誤訊息位於 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目錄檢視中。 此目錄檢視會存放在 **master** 內。 如果資料庫應用程式仰賴使用者定義錯誤訊息，而且此資料庫可在另一個伺服器執行個體上使用時，請使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) ，在目的地伺服器執行個體上加入這些使用者定義訊息。  
 
   
 ##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （伺服器層級）  
   
 ### <a name="server-level-event-notifications"></a>伺服器層級事件通知  
- 伺服器層級事件通知會存放在 **msdb**中。 因此，如果資料庫應用程式依賴伺服器層級事件通知，就必須在目的地伺服器執行個體上重新建立該事件通知。 若要檢視伺服器執行個體上的事件通知，請使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目錄檢視。 如需詳細資訊，請參閱 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
+ 伺服器層級事件通知會存放在 **msdb** 中。 因此，如果資料庫應用程式依賴伺服器層級事件通知，就必須在目的地伺服器執行個體上重新建立該事件通知。 若要檢視伺服器執行個體上的事件通知，請使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目錄檢視。 如需詳細資訊，請參閱 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
   
- 此外，事件通知是使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]進行傳送。 包含服務的資料庫中不包括內送訊息路由。 但是，外顯路由會儲存在 **msdb**中。 如果服務使用 **msdb** 資料庫中的外顯路由將內送訊息傳送至服務，當您在不同執行個體中附加資料庫時，就必須重新建立此路由。  
+ 此外，事件通知是使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]進行傳送。 包含服務的資料庫中不包括內送訊息路由。 但是，外顯路由會儲存在 **msdb** 中。 如果服務使用 **msdb** 資料庫中的外顯路由將內送訊息傳送至服務，當您在不同執行個體中附加資料庫時，就必須重新建立此路由。  
   
 ### <a name="windows-management-instrumentation-wmi-events"></a>Windows Management Instrumentation (WMI) 事件  
- WMI Provider for Server Events 可讓您使用 Windows Management Instrumentation (WMI) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中監視事件。 如果伺服器層級事件要透過資料庫所依賴的 WMI 提供者來公開，則任何依賴此事件的應用程式必須定義有目的地伺服器執行個體的電腦。 WMI 事件提供者會以 **msdb**中定義的目標服務來建立事件通知。  
+ WMI Provider for Server Events 可讓您使用 Windows Management Instrumentation (WMI) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中監視事件。 如果伺服器層級事件要透過資料庫所依賴的 WMI 提供者來公開，則任何依賴此事件的應用程式必須定義有目的地伺服器執行個體的電腦。 WMI 事件提供者會以 **msdb** 中定義的目標服務來建立事件通知。  
   
 > **注意：** 如需詳細資訊，請參閱 [伺服器事件的 WMI 提供者概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "88412844"
   
  若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]**。  
   
-> **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
+> **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱 [設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和 [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> 權限  
@@ -273,7 +273,7 @@ ms.locfileid: "88412844"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>系統物件的 GRANT、REVOKE 及 DENY 權限  
  系統物件 (例如，預存程序、擴充預存程序、函數和檢視) 的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 [選擇指令碼選項]**** 對話方塊中，將 [編寫物件層級權限的指令碼]**** 選項設定為 [True]****。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 [選擇指令碼選項] 對話方塊中，將 [編寫物件層級權限的指令碼] 選項設定為 [True]。  
   
    > [!IMPORTANT]
    > 當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
@@ -290,7 +290,7 @@ ms.locfileid: "88412844"
   
 > **注意：** 對應的登入只會用於授權以對應憑證或非對稱金鑰簽署的程式碼。 對應的登入無法用於驗證。  
   
- 對應的登入及其權限都位於 **master**中。 如果憑證或非對稱金鑰位於 **master**以外的資料庫中，您就必須在 **master** 中重新建立此項目並將它對應至登入。 如果您將資料庫移動、複製或還原至另一個伺服器執行個體，就必須在目的地伺服器執行個體的 **master** 資料庫中重新建立其憑證或非對稱金鑰、將它對應至登入，然後將所需的伺服器層級權限授與此登入。  
+ 對應的登入及其權限都位於 **master** 中。 如果憑證或非對稱金鑰位於 **master** 以外的資料庫中，您就必須在 **master** 中重新建立此項目並將它對應至登入。 如果您將資料庫移動、複製或還原至另一個伺服器執行個體，就必須在目的地伺服器執行個體的 **master** 資料庫中重新建立其憑證或非對稱金鑰、將它對應至登入，然後將所需的伺服器層級權限授與此登入。  
   
  **若要建立憑證或非對稱金鑰**  
   

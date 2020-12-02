@@ -19,10 +19,10 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 792ea213b39a8b38787c1ed674aa03fc084ea591
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454292"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry 資料類型)

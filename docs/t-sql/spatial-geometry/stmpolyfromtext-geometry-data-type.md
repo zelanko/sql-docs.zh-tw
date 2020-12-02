@@ -19,10 +19,10 @@ ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: aeced0be88d4be33cf5bd46debac8dd455609e1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445040"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (geometry 資料類型)

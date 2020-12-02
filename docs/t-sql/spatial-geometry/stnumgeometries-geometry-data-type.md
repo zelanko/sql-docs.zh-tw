@@ -19,10 +19,10 @@ ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8ef4aa6a47bdb974803d111a023b473c0c49cf0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444935"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry 資料類型)

@@ -19,10 +19,10 @@ ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 76adf5bfff925c74f728d19b6781f346646354fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306180"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (geography 資料類型)

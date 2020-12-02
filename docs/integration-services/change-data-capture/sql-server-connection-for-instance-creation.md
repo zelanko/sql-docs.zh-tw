@@ -12,10 +12,10 @@ ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e1b856327d3e249cd58efe6ccad732f70f900a50
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457615"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>用來建立執行個體的 SQL Server 連接
@@ -25,7 +25,7 @@ ms.locfileid: "88457615"
 
   建立 Oracle CDC 執行個體時的其中一個首要步驟就是在目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上建立 CDC 資料庫。 這個 CDC 資料庫會啟用 SQL Server CDC，而這樣的啟用需要屬於 `sysadmin` 固定伺服器角色成員的登入。  
   
- 如果啟動 [建立 Oracle CDC 執行個體精靈]**** 的使用者不是 `sysadmin` 固定伺服器角色的成員，便會開啟 [連接到 SQL Server]**** 對話方塊，並要求 `sysadmin` 角色成員的認證，才能執行「為 SQL Server CDC 啟用資料庫」工作。 當建立 CDC 資料庫時，將會捨棄 `sysadmin` 登入，而且會使用之前進入 Oracle 設計工具主控台時所使用的原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入繼續工作。  
+ 如果啟動 [建立 Oracle CDC 執行個體精靈] 的使用者不是 `sysadmin` 固定伺服器角色的成員，便會開啟 [連接到 SQL Server] 對話方塊，並要求 `sysadmin` 角色成員的認證，才能執行「為 SQL Server CDC 啟用資料庫」工作。 當建立 CDC 資料庫時，將會捨棄 `sysadmin` 登入，而且會使用之前進入 Oracle 設計工具主控台時所使用的原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入繼續工作。  
   
 ## <a name="task-list"></a>工作清單  
  在 [連接到 SQL Server] 對話方塊中輸入以下資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "88457615"
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
+-   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 **登入** 和 **密碼**。  
   
  此登入擁有的資料庫角色必須允許存取 MSXCDCDB 資料庫。 建議最好讓此登入也能存取正在使用的其他任何資料庫，否則使用者將無法檢視這些資料庫中的資料。  
   

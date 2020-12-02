@@ -12,10 +12,10 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c8f3f026833037c66581ffa95e2e1a736b07091c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390314"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>課程 3-1 - 複製部署配套
@@ -33,9 +33,9 @@ ms.locfileid: "88390314"
   
     如果使用的是預設位置，則部署配套就是 [部署教學課程] 資料夾內的 Bin\Deployment 資料夾。  
   
-2.  以滑鼠右鍵按一下 [Deployment] 資料夾，然後按一下 [複製]****。  
+2.  以滑鼠右鍵按一下 [Deployment] 資料夾，然後按一下 [複製]。  
   
-3.  在目標電腦上找到您要複製此資料夾的公用共用，然後按一下 [貼上]****。  
+3.  在目標電腦上找到您要複製此資料夾的公用共用，然後按一下 [貼上]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [步驟 2:執行封裝安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

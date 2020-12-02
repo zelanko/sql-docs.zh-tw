@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423372"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>使用 Always Encrypted 與 [SQL Server 匯入和匯出精靈] 將資料移轉到資料行或從中移轉 
@@ -48,7 +48,7 @@ ms.locfileid: "88423372"
 若要確保 [SQL Server 匯入和匯出精靈] 可以加密及解密資料，您必須為來源資料庫連接與目的地資料庫連接啟用 Always Encrypted，且必須能夠存取可保護來源和目標資料庫資料行資料的金鑰。 如需詳細資訊，請參閱[針對資料庫連接啟用和停用 Always Encrypted](#enable-and-disable-always-encrypted-for-a-database-connection) 和[在移轉期間加密或解密資料的權限](#permissions-for-encrypting-or-decrypting-data-during-migration)。
 
 ### <a name="keep-data-encrypted-during-migration"></a>在移轉期間讓資料保持加密
-如果您要從來源 SQL Server 資料庫中的加密資料行，將資料複製到相同或另一個 SQL Server 資料庫中的加密資料行，且目標資料行使用與來源資料行**完全相符的**結構描述 (包括相同的資料類型、加密類型和資料行加密金鑰) 時，您可以設定 [SQL Server 匯入和匯出精靈] 來擷取來源資料行中的加密文字，並將加密資料 (加密文字) 插入目標 SQL Server 資料庫中的加密資料行。 
+如果您要從來源 SQL Server 資料庫中的加密資料行，將資料複製到相同或另一個 SQL Server 資料庫中的加密資料行，且目標資料行使用與來源資料行 **完全相符的** 結構描述 (包括相同的資料類型、加密類型和資料行加密金鑰) 時，您可以設定 [SQL Server 匯入和匯出精靈] 來擷取來源資料行中的加密文字，並將加密資料 (加密文字) 插入目標 SQL Server 資料庫中的加密資料行。 
 
 在此案例中，您可以使用支援 SQL Server 的任何資料提供者，以連線到來源或目的地 SQL Server 資料庫。 如果您使用支援 Always Encrypted 來連線到目的地資料庫的提供者，則必須確定已針對資料庫連接停用 Always Encrypted。 如需詳細資訊，請參閱[針對資料庫連接啟用和停用 Always Encrypted](#enable-and-disable-always-encrypted-for-a-database-connection)。
 

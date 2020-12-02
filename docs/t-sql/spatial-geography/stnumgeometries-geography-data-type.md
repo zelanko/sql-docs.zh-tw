@@ -19,10 +19,10 @@ ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fab670e6a334b121850a218cad3c57a9c67def33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459018"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (geography 資料類型)

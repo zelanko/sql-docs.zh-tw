@@ -23,10 +23,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b7b067831ca56d3dc5797aa68e4810a7e9969946
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459953"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text 和 image (Transact-SQL)

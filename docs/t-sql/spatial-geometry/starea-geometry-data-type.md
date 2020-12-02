@@ -19,10 +19,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2dec51b1ce17ed52ed7c6bb6d601b5977eaf2172
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422282"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (geometry 資料類型)

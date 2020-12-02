@@ -15,10 +15,10 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ce0606f8d63015be37b5230a47cb66c82cf1a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88352104"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝

@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449713"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
@@ -48,15 +48,15 @@ ms.locfileid: "88449713"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>若要將封裝加入至部署教學課程專案中  
   
-1.  如果 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 尚未開啟，請按一下 [開始]****，依序指向 [所有程式]**** 和 [Microsoft SQL Server]****，然後按一下 [SQL Server Data Tools]****。  
+1.  如果 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 尚未開啟，請按一下 [開始]，依序指向 [所有程式] 和 [Microsoft SQL Server]，然後按一下 [SQL Server Data Tools]。  
   
-2.  在 [檔案]**** 功能表上，依序按一下 [開啟]****、[專案/方案]**** 和 [部署教學課程]**** 資料夾，然後按一下 [開啟]****，再按兩下 [Deployment Tutorial.sln]****。  
+2.  在 [檔案] 功能表上，依序按一下 [開啟]、[專案/方案] 和 [部署教學課程] 資料夾，然後按一下 [開啟]，再按兩下 [Deployment Tutorial.sln]。  
   
-3.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]****，然後按一下 [現有的封裝]****。  
+3.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]，然後按一下 [現有的封裝]。  
   
 4.  在 [加入現有封裝的複本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-5.  按一下瀏覽 **(…)** 按鈕，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，選取 [DataTransfer.dtsx]****，然後按一下 [開啟]****。  
+5.  按一下瀏覽 **(…)** 按鈕，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，選取 [DataTransfer.dtsx]，然後按一下 [開啟]。  
   
 6.  按一下 [確定]  。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "88449713"
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>若要將輔助檔案加入至部署教學課程專案中  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]****，然後按一下 [現有項目]****。  
+1.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]，然後按一下 [現有項目]。  
   
-2.  在 [加入現有項目 - 部署教學課程]**** 對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data，選取 orders.xml、orders.xsd 和 NewCustomers.txt，然後按一下 [加入]****。  
+2.  在 [加入現有項目 - 部署教學課程] 對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data，選取 orders.xml、orders.xsd 和 NewCustomers.txt，然後按一下 [加入]。  
   
-3.  在 [加入現有項目 - 部署教學課程]**** 對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\，選取 Readme.txt，然後按一下 [加入]****。  
+3.  在 [加入現有項目 - 部署教學課程] 對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\，選取 Readme.txt，然後按一下 [加入]。  
   
 4.  按一下 [ 檔案 ] 功能表上的 [ **全部儲存**]。  
   

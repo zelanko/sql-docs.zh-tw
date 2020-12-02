@@ -19,10 +19,10 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f71295a8df150b7430806c35aae47cca0bc613
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430390"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory
@@ -42,7 +42,7 @@ ms.locfileid: "88430390"
   
 1.  建立三個字串變數 `email`、`name` 和 `title`。 輸入有效的公司電子郵件地址做為 `email` 變數值。  
   
-2.  在 [指令碼工作編輯器]**** 的 [指令碼]**** 頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
+2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `email` 變數加入 **ReadOnlyVariables** 屬性。  
   
 3.  將 `name` 和 `title` 變數加入 **ReadWriteVariables** 屬性。  
   

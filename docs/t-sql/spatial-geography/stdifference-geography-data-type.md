@@ -19,10 +19,10 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 067d49755229cad03fe77ae981cf7673d68f536a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417034"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography 資料類型)

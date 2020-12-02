@@ -19,10 +19,10 @@ ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fddcc951ae438b054c68d6e9755e62388fb098e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422322"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (geography 資料類型)

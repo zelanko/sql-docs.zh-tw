@@ -14,10 +14,10 @@ ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88394494"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
@@ -40,7 +40,7 @@ ms.locfileid: "88394494"
  **建立新的 CDC 服務**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中按一下 **[新增服務]** 。  
   
- 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]****，然後選取 [新增服務]****。  
+ 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]，然後選取 [新增服務]。  
   
  隨即開啟 [新增 Oracle CDC 服務] 對話方塊。  
   

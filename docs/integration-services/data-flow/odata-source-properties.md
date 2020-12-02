@@ -12,10 +12,10 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425840"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
@@ -23,7 +23,7 @@ ms.locfileid: "88425840"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-當您以滑鼠右鍵按一下資料流程中的 [OData 來源]**** 並按一下 [屬性]**** 時，您會看到 [OData 來源]**** 元件的屬性出現在 [屬性]**** 視窗中。  
+當您以滑鼠右鍵按一下資料流程中的 [OData 來源] 並按一下 [屬性] 時，您會看到 [OData 來源] 元件的屬性出現在 [屬性] 視窗中。  
 
 ## <a name="properties"></a>屬性 
 

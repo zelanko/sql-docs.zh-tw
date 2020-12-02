@@ -19,10 +19,10 @@ ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f62f8ae1528ca26fa3a2f78ec5132aaa8ed7cf55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416924"
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry 資料類型)

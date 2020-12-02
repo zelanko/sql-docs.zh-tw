@@ -14,10 +14,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88348944"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
@@ -29,9 +29,9 @@ ms.locfileid: "88348944"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的元件編輯器。 這些編輯器僅包括每個資料流程元件的自訂屬性。  
   
--   [屬性]**** 視窗會列出每個元素的元件層級自訂屬性，以及所有資料流程元素通用的屬性。  
+-   [屬性] 視窗會列出每個元素的元件層級自訂屬性，以及所有資料流程元素通用的屬性。  
   
--   [進階編輯器]**** 對話方塊可讓您存取每一個元件的自訂屬性。 [進階編輯器] 對話方塊也可讓您存取所有資料流程元件的屬性，也就是輸入、輸出、錯誤輸出、資料行和外部資料行的屬性。  
+-   [進階編輯器] 對話方塊可讓您存取每一個元件的自訂屬性。 [進階編輯器] 對話方塊也可讓您存取所有資料流程元件的屬性，也就是輸入、輸出、錯誤輸出、資料行和外部資料行的屬性。  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>使用元件編輯器設定資料流程元件的屬性  
   
@@ -39,7 +39,7 @@ ms.locfileid: "88348944"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [控制流程]**** 索引標籤，然後按兩下包含資料流程 (具有您要檢視及修改其屬性之元件) 的「資料流程」工作。  
+3.  按一下 [控制流程] 索引標籤，然後按兩下包含資料流程 (具有您要檢視及修改其屬性之元件) 的「資料流程」工作。  
   
 4.  按兩下資料流程元件。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "88348944"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [控制流程]**** 索引標籤，然後按兩下包含您要檢視及修改其屬性之元件的「資料流程」工作。  
+3.  按一下 [控制流程] 索引標籤，然後按兩下包含您要檢視及修改其屬性之元件的「資料流程」工作。  
   
-4.  以滑鼠右鍵按一下資料流程元件，然後按一下 [屬性]****。  
+4.  以滑鼠右鍵按一下資料流程元件，然後按一下 [屬性]。  
   
-5.  檢視或修改屬性值，然後關閉 [屬性]**** 視窗。  
+5.  檢視或修改屬性值，然後關閉 [屬性] 視窗。  
   
     > [!NOTE]  
     >  許多屬性都是唯讀的，因此無法修改。  
@@ -70,33 +70,33 @@ ms.locfileid: "88348944"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [控制流程]**** 索引標籤，然後按兩下包含您要檢視或修改之元件的「資料流程」工作。  
+3.  按一下 [控制流程] 索引標籤，然後按兩下包含您要檢視或修改之元件的「資料流程」工作。  
   
-4.  在資料流程設計師中，以滑鼠右鍵按一下資料流程元件，然後按一下 [顯示進階編輯器]****。  
+4.  在資料流程設計師中，以滑鼠右鍵按一下資料流程元件，然後按一下 [顯示進階編輯器]。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，支援多個輸入的資料流程元件無法使用 [進階編輯器]****。  
+    >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，支援多個輸入的資料流程元件無法使用 [進階編輯器]。  
   
-5.  在 [進階編輯器]**** 對話方塊中，執行下列任何一個步驟：  
+5.  在 [進階編輯器] 對話方塊中，執行下列任何一個步驟：  
   
-    -   若要檢視及指定此元件所使用的連接，請按一下 [連線管理員]**** 索引標籤。  
-  
-        > [!NOTE]  
-        >  [連線管理員]**** 索引標籤只可用於使用連線管理員連接到資料來源 (例如檔案和資料庫) 的資料流程元件  
-  
-    -   若要檢視和修改元件層級屬性，請按一下 [元件屬性]**** 索引標籤。  
-  
-    -   若要檢視和修改外部資料行與可用輸出之間的對應，請按一下 [資料行對應]**** 索引標籤。  
+    -   若要檢視及指定此元件所使用的連接，請按一下 [連線管理員] 索引標籤。  
   
         > [!NOTE]  
-        >  [資料行對應]**** 索引標籤只能在檢視或編輯來源或目的地時使用。  
+        >  [連線管理員] 索引標籤只可用於使用連線管理員連接到資料來源 (例如檔案和資料庫) 的資料流程元件  
   
-    -   若要檢視可用輸入資料行的清單並更新輸出資料行的名稱，請按一下 [輸入資料行]**** 索引標籤。  
+    -   若要檢視和修改元件層級屬性，請按一下 [元件屬性] 索引標籤。  
+  
+    -   若要檢視和修改外部資料行與可用輸出之間的對應，請按一下 [資料行對應] 索引標籤。  
+  
+        > [!NOTE]  
+        >  [資料行對應] 索引標籤只能在檢視或編輯來源或目的地時使用。  
+  
+    -   若要檢視可用輸入資料行的清單並更新輸出資料行的名稱，請按一下 [輸入資料行] 索引標籤。  
   
         > [!NOTE]  
         >  [輸入資料行] 索引標籤僅在使用轉換或目的地時可用。 如需詳細資訊，請參閱 [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)。  
   
-    -   若要檢視和修改輸入、輸出及錯誤輸出的屬性，以及檢視和修改其包含之資料行的屬性，請按一下 [輸入與輸出屬性]**** 索引標籤。  
+    -   若要檢視和修改輸入、輸出及錯誤輸出的屬性，以及檢視和修改其包含之資料行的屬性，請按一下 [輸入與輸出屬性] 索引標籤。  
   
         > [!NOTE]  
         >  來源沒有輸入。 除了選擇性的錯誤輸出之外，目的地沒有輸出。  
@@ -152,14 +152,14 @@ ms.locfileid: "88348944"
 |--------------|---------------|-----------------|  
 |描述|String|輸入的描述。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。|  
-|HasSideEffects|布林值|指示當元件未附加到下游元件以及當 **RunInOptimizedMode** 為 **true**時，是否可以從資料流程的執行計畫中移除此元件。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
+|HasSideEffects|布林值|指示當元件未附加到下游元件以及當 **RunInOptimizedMode** 為 **true** 時，是否可以從資料流程的執行計畫中移除此元件。|  
 |ID|整數|可唯一識別輸入的值。|  
 |IdentificationString|String|識別輸入的字串。|  
 |IsSorted|布林值|指示是否要排序輸入中的資料。|  
 |Name|String|輸入的名稱。|  
 |SourceLocale|整數|輸入資料的地區設定識別碼 (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 . 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 . 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "88348944"
 |ComparisonFlags|整數|指定具有字元資料類型之資料行比較的一組旗標。 如需詳細資訊，請參閱 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
 |描述|String|描述輸入資料行。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|指派給輸入資料行之外部中繼資料行的識別碼。|  
 |ID|整數|可唯一識別輸入資料行的值。|  
 |IdentificationString|String|識別輸入資料行的字串。|  
@@ -181,7 +181,7 @@ ms.locfileid: "88348944"
 |LineageIdentificationString|String|包含上游資料行名稱的識別字串。|  
 |Name|String|輸入資料行的名稱。|  
 |SortKeyPosition|整數|指示是否排序資料行、其排序次序以及排序多個資料行之順序的值。 值為 **0** 時，指出資料行並未排序。  如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
 |UpstreamComponentName|String|上游元件的名稱。|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|決定元件如何使用輸入資料行的值。|  
   
@@ -197,16 +197,16 @@ ms.locfileid: "88348944"
 |DeleteOutputOnPathDetached|布林值|決定當從路徑中卸離輸出時，資料流程引擎是否要刪除輸出的值。|  
 |描述|String|描述輸出。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
 |ExclusionGroup|整數|識別一組互斥輸出的值。|  
-|HasSideEffects|布林值|指示當元件未附加到上游元件以及當 **RunInOptimizedMode** 為 **true**時，是否可以從資料流程的執行計畫中移除此元件的值。|  
+|HasSideEffects|布林值|指示當元件未附加到上游元件以及當 **RunInOptimizedMode** 為 **true** 時，是否可以從資料流程的執行計畫中移除此元件的值。|  
 |ID|整數|可唯一識別輸出的值。|  
 |IdentificationString|String|識別輸出的字串。|  
 |IsErrorOut|布林值|指示輸出是否為錯誤輸出。|  
 |IsSorted|布林值|指示是否要排序輸出。 預設值為 **[False]** 。<br /><br /> **\*\* 重要事項 \*\*** 將 **IsSorted** 屬性的值設定為 **True** 時，不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |Name|String|輸出的名稱。|  
 |SynchronousInputID|整數|與輸出同步之輸入的識別碼。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。|  
   
 ###  <a name="output-column-properties"></a><a name="outputcolumns"></a> 輸出資料行屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，輸出包含輸出資料行的集合。 資料流程中元件的輸出資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 介面。  
@@ -218,7 +218,7 @@ ms.locfileid: "88348944"
 |ComparisonFlags|整數|指定具有字元資料類型之資料行比較的一組旗標。 如需詳細資訊，請參閱 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
 |描述|String|描述輸出資料行。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。 預設值為 [失敗元件]****。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。 預設值為 [失敗元件]。|  
 |ExternalMetadataColumnID|整數|指派給輸入資料行之外部中繼資料行的識別碼。|  
 |ID|整數|可唯一識別輸出資料行的值。|  
 |IdentificationString|String|識別輸出資料行的字串。|  
@@ -227,7 +227,7 @@ ms.locfileid: "88348944"
 |Name|String|輸出資料行的名稱。|  
 |SortKeyPosition|整數|指示是否排序資料行、其排序次序以及排序多個資料行之順序的值。 值為 **0** 時，指出資料行並未排序。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |SpecialFlags|整數|包含輸出資料行之特殊旗標的值。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]****、[忽略失敗]**** 和 [重新導向資料列]****。 預設值為 [失敗元件]****。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]、[忽略失敗] 和 [重新導向資料列]。 預設值為 [失敗元件]。|  
   
  輸出資料行也包含一組資料類型屬性。  
   
@@ -306,26 +306,26 @@ ms.locfileid: "88348944"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [控制流程]**** 索引標籤，然後再按包含要在其中實作運算式之資料流程的「資料流程」工作。  
+3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [控制流程] 索引標籤，然後再按包含要在其中實作運算式之資料流程的「資料流程」工作。  
   
-4.  按一下 [資料流程]**** 索引標籤，然後將「條件式分割」或「衍生的資料行」轉換，從 [工具箱]**** 拖曳至設計介面。  
+4.  按一下 [資料流程] 索引標籤，然後將「條件式分割」或「衍生的資料行」轉換，從 [工具箱] 拖曳至設計介面。  
   
 5.  將綠色連接子從來源或轉換拖曳至「條件式分割」或「衍生的資料行」轉換。  
   
 6.  按兩下轉換，以開啟其對話方塊。  
   
-7.  在左窗格中，展開 [變數]****，以顯示系統變數和使用者自訂變數，並展開 [資料行]****，以顯示轉換輸入資料行。  
+7.  在左窗格中，展開 [變數]，以顯示系統變數和使用者自訂變數，並展開 [資料行]，以顯示轉換輸入資料行。  
   
-8.  在右窗格中，展開 [數學函數]****、[字串函數]****、[日期/時間函數]****、[NULL 函數]****、[類型轉換]**** 和 [運算子]****，以存取運算式文法所提供的函數、轉換和運算子。  
+8.  在右窗格中，展開 [數學函數]、[字串函數]、[日期/時間函數]、[NULL 函數]、[類型轉換] 和 [運算子]，以存取運算式文法所提供的函數、轉換和運算子。  
   
 9. 因轉換的不同，請執行下列其中之一，以建立運算式：  
   
-    -   在 [條件式分割轉換編輯器]**** 對話方塊中，將變數、資料行、函數、運算子和轉換拖曳至 [條件]**** 資料行。 您也可以在 [條件]**** 資料行中直接鍵入運算式。  
+    -   在 [條件式分割轉換編輯器] 對話方塊中，將變數、資料行、函數、運算子和轉換拖曳至 [條件] 資料行。 您也可以在 [條件] 資料行中直接鍵入運算式。  
   
-    -   在 [衍生的資料行轉換編輯器]**** 對話方塊中，將變數、資料行、函數、運算子和轉換拖曳至 [運算式]**** 資料行。 您也可以在 [運算式]**** 資料行中直接鍵入運算式。  
+    -   在 [衍生的資料行轉換編輯器] 對話方塊中，將變數、資料行、函數、運算子和轉換拖曳至 [運算式] 資料行。 您也可以在 [運算式] 資料行中直接鍵入運算式。  
   
         > [!NOTE]  
-        >  從 [條件]**** 資料行或 [運算式]**** 資料行移除焦點時，運算式文字可能會反白顯示，指示運算式語法不正確。  
+        >  從 [條件] 資料行或 [運算式] 資料行移除焦點時，運算式文字可能會反白顯示，指示運算式語法不正確。  
   
 10. 按一下 **[確定]**，結束對話方塊。  
   
@@ -339,9 +339,9 @@ ms.locfileid: "88348944"
   
  您可以使用屬性運算式來為封裝之每個部署的執行個體自訂組態。 您也可以使用屬性運算式來指定封裝的執行階段條件約束，其方法是搭配 **dtexec** 命令提示字元公用程式使用 **/set** 選項。 例如，您可以約束「排序」轉換所使用的 **MaximumThreads** ，或是「模糊群組」和「模糊查閱」轉換所使用的 **MaxMemoryUsage** 。 如果未受到約束，這些轉換可能會在記憶體中快取大量的資料。  
   
- 若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性]**** 視窗，其方式是在設計工具的 [控制流程]**** 介面上選取資料流程工作，或是選取設計工具的 [資料流程]**** 索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式]**** 屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器]**** 對話方塊。 下拉 [屬性]**** 清單來選取屬性，然後在 [運算式]**** 文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器]**** 對話方塊。  
+ 若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性] 視窗，其方式是在設計工具的 [控制流程] 介面上選取資料流程工作，或是選取設計工具的 [資料流程] 索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式] 屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器] 對話方塊。 下拉 [屬性] 清單來選取屬性，然後在 [運算式] 文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器] 對話方塊。  
   
- [屬性]**** 清單只會針對您已經放在設計工具之 [資料流程]**** 介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性]**** 清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已經在設計工具介面上放置 ADO NET 來源，則 [屬性]**** 清單會包含 **[ADO NET Source].[SqlCommand]** 屬性的項目。 此清單也會顯示資料流程工作本身的許多屬性。  
+ [屬性] 清單只會針對您已經放在設計工具之 [資料流程] 介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性] 清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已經在設計工具介面上放置 ADO NET 來源，則 [屬性] 清單會包含 **[ADO NET Source].[SqlCommand]** 屬性的項目。 此清單也會顯示資料流程工作本身的許多屬性。  
  
  可以使用屬性運算式來指定下列清單中的屬性值。  
   

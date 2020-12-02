@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417134"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -40,11 +40,11 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>引數
 
- *inputString* 是要搜尋的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *inputString* 可以是任何字元資料類型 (nvarchar、varchar、nchar、char)。
+ *inputString* 是要搜尋的字串 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *inputString* 可以是任何字元資料類型 (nvarchar、varchar、nchar、char)。
 
- *characters* 是包含應取代之字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *characters* 可以是任何字元資料類型。
+ *characters* 是包含應取代之字元的字串 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *characters* 可以是任何字元資料類型。
 
-*translations* 是包含取代字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *translations* 必須與 *characters* 是一樣的資料類型和長度。
+*translations* 是包含取代字元的字串 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *translations* 必須與 *characters* 是一樣的資料類型和長度。
 
 ## <a name="return-types"></a>傳回型別
 

@@ -12,10 +12,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ee2861b40dbe132e7c95b52802bd10ccd46c20c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426090"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何編輯 CDC 執行個體屬性
@@ -35,7 +35,7 @@ ms.locfileid: "88426090"
   
 4.  從 CDC 設計工具主控台右側的 [動作] 窗格中，按一下 **[屬性]**。  
   
-     您也可以用滑鼠右鍵按一下您要編輯屬性的執行個體，然後按一下 [屬性]****。  
+     您也可以用滑鼠右鍵按一下您要編輯屬性的執行個體，然後按一下 [屬性]。  
   
 5.  在屬性編輯器中，於下列索引標籤上編輯屬性：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88426090"
   
          如需有關您可以在此索引標籤上編輯之內容的詳細資訊，請參閱＜ [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)＞。  
   
-    -   **指令碼**：使用 [指令碼]**** 索引標籤可在即將設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
+    -   **指令碼**：使用 [指令碼] 索引標籤可在即將設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
   
          如需有關您可以在此索引標籤上執行之作業的詳細資訊，請參閱＜ [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)＞。  
   

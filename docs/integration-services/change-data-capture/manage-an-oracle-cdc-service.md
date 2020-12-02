@@ -14,10 +14,10 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea4d1beb0a77e6bc7a0456c3f3437c919698bcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426070"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service

@@ -19,10 +19,10 @@ ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8c6643b37d421a5283cd8d44e3fadaf73ae69eab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445205"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography 資料類型)

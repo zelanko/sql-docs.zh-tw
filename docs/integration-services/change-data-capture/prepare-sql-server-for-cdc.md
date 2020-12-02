@@ -14,10 +14,10 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88431080"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>為 CDC 準備 SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "88431080"
   
  如需有關 MSXDBCDC 資料庫的詳細資訊，請參閱＜MSXDBCDC 資料庫＞。  
   
- 在 CDC 服務組態主控台中，按一下 [Prepare SQL Server (準備 SQL Server)]****。 如果無法使用這個選項，請確定已在主控台的左窗格選取 [Local CDC Services (本機 CDC 服務)]****。  
+ 在 CDC 服務組態主控台中，按一下 [Prepare SQL Server (準備 SQL Server)]。 如果無法使用這個選項，請確定已在主控台的左窗格選取 [Local CDC Services (本機 CDC 服務)]。  
   
 ## <a name="options"></a>選項。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88431080"
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 [使用者名稱]**** 和 [密碼]****。  
+-   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 [使用者名稱] 和 [密碼]。  
   
  若要針對 Oracle CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，登入必須擁有 MSXDBCDC 資料庫的寫入權限。 請輸入擁有 MSXDBCDC 資料庫寫入權限之登入的認證，例如 `sysasmin` 角色的成員。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88431080"
 -   **進階**：必要時輸入其他任何連接屬性。  
   
 ### <a name="view-script"></a>檢視指令碼  
- 按一下 [檢視指令碼]****，檢視安裝指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 SQL Server 管理主控台來進行編輯 (必要的話)。 如需準備 SQL Server 指令碼的詳細資訊，請參閱 [為 Oracle CDC 檢視指令碼準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)。  
+ 按一下 [檢視指令碼]，檢視安裝指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 SQL Server 管理主控台來進行編輯 (必要的話)。 如需準備 SQL Server 指令碼的詳細資訊，請參閱 [為 Oracle CDC 檢視指令碼準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何使用 CDC 服務](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   

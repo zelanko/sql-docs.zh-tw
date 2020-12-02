@@ -14,10 +14,10 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9610a734543c9199e54d3f8489d86e03089f10ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430700"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>記錄屬性選項 (緩時變維度精靈)
@@ -25,7 +25,7 @@ ms.locfileid: "88430700"
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [記錄屬性選項]**** 對話方塊，依開始和結束日期來顯示記錄屬性，或者在基於此目的而建立的資料行中記錄記錄屬性。  
+  使用 [記錄屬性選項] 對話方塊，依開始和結束日期來顯示記錄屬性，或者在基於此目的而建立的資料行中記錄記錄屬性。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)＞。  
   
@@ -36,8 +36,8 @@ ms.locfileid: "88430700"
 |選項|描述|  
 |------------|-----------------|  
 |**指出目前記錄的資料行**|選取要指出目前記錄的資料行。|  
-|**目前值**|使用 [True]**** 或 [目前]**** 來顯示記錄是否為目前的。|  
-|**逾期值**|使用 [False]**** 或 [逾期]**** 來顯示記錄是否為記錄值。|  
+|**目前值**|使用 [True] 或 [目前] 來顯示記錄是否為目前的。|  
+|**逾期值**|使用 [False] 或 [逾期] 來顯示記錄是否為記錄值。|  
   
  **使用開始和結束日期以識別目前與逾期記錄**  
  此選項的維度資料表必須包含日期資料行。 如果您選擇依開始和結束日期顯示記錄屬性，則可以使用下列選項：  

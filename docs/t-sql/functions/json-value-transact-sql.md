@@ -19,10 +19,10 @@ ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: f22175349162bac226d41f63ca66743de0668b6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88364414"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "88364414"
 
  從 JSON 字串擷取純量值。  
   
- 若要從 JSON 字串而非純量值擷取物件或陣列，請參閱 [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)。 如需 **JSON_VALUE** 及 **JSON_QUERY** 之間的差異資訊，請參閱[比較 JSON_VALUE 與 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
+ 若要從 JSON 字串而非純量值擷取物件或陣列，請參閱 [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)。 如需 **JSON_VALUE** 及 **JSON_QUERY** 之間的差異資訊，請參閱 [比較 JSON_VALUE 與 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

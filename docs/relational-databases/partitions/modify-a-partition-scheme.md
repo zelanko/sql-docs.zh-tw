@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc39ec02fe5059bb8b1ae561be732244cbb07791
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327174"
 ---
 # <a name="modify-a-partition-scheme"></a>修改資料分割配置
@@ -65,7 +65,7 @@ ms.locfileid: "88327174"
   
 3.  按一下加號展開 **[資料分割配置]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要刪除的資料分割配置，然後選取 [刪除]****。  
+4.  以滑鼠右鍵按一下您想要刪除的資料分割配置，然後選取 [刪除]。  
   
 5.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割配置，然後按一下 **[確定]**。  
   

@@ -19,10 +19,10 @@ ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 154aff97ba24cf2dfd357a123e4075e78a534ecc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445141"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography 資料類型)

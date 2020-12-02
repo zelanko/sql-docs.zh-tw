@@ -22,10 +22,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "87823923"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
@@ -59,7 +59,7 @@ ms.locfileid: "87823923"
 |代理程式|權限|  
 |-----------|-----------------|  
 |快照集代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> -具備快照集共用的讀取、寫入及修改權限。<br /><br /> <br /><br /> 請注意，用來 *連接* 發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。|  
-|記錄讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 選取 **sync_type** 選項 *replication support only*、 *initialize with backup*或 *initialize from lsn*時，記錄讀取器代理程式必須在執行 **sp_addsubscription**之後執行，讓設定指令碼寫入至散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當 **sync_type** 選項設為 *Automatic*時，不需要任何特殊的記錄讀取器代理程式動作。|  
+|記錄讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 選取 **sync_type** 選項 *replication support only*、 *initialize with backup* 或 *initialize from lsn* 時，記錄讀取器代理程式必須在執行 **sp_addsubscription** 之後執行，讓設定指令碼寫入至散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當 **sync_type** 選項設為 *Automatic* 時，不需要任何特殊的記錄讀取器代理程式動作。|  
 |發送訂閱的散發代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> -為 PAL 的成員。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> -如果訂閱是針對非 SQL Server 訂閱者，訂閱者之 OLE DB 提供者的安裝目錄上，就要擁有讀取權限。<br /><br /> -在複寫 LOB 資料時，散發代理程式必須擁有複寫 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 的寫入權限，其中 XX 代表執行個體識別碼。<br /><br /> <br /><br /> 請注意，用於連接  訂閱者的帳戶必須至少為訂閱資料庫中 **db_owner** 固定資料庫角色的成員；或者，如果訂閱為非 SQL Server 訂閱者的訂閱，則應擁有相等權限。<br /><br /> 亦請注意，在散發代理程式上使用 `-subscriptionstreams >= 2` 時，您也必須授與訂閱者的 **View Server State** 權限以偵測死結。|  
 |提取訂閱的散發代理程式|在連接到訂閱者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。 用於連接散發者的帳戶必須：<br /><br /> -為 PAL 的成員。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> -在複寫 LOB 資料時，散發代理程式必須擁有複寫 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 的寫入權限，其中 XX 代表執行個體識別碼。<br /><br /> <br /><br /> 請注意，在散發代理程式上使用 `-subscriptionstreams >= 2` 時，您也必須授與訂閱者的 **View Server State** 權限以偵測死結。|  
 |發送訂閱的合併代理程式|與發行者和散發者建立連接時，需使用代理程式執行時所用的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> -為 PAL 的成員。<br /><br /> -為與發行集資料庫中具有讀取/寫入權限之使用者相關聯的登入。<br /><br /> -擁有快照集共用的讀取權限。<br /><br /> <br /><br /> 請注意，用於連接  訂閱者的帳戶必須至少是訂閱資料庫中 **db_owner** 固定資料庫角色的成員。|  
@@ -85,7 +85,7 @@ ms.locfileid: "87823923"
   
  \*\*針對 Oracle 發行集的發送訂閱，作業名為 **\<Publisher>-\<DistributionDatabase**>，而非 **\<Publisher>-\<PublicationDatabase>** 。  
   
- 在複寫設定期間，指定代理程式應在其下執行的帳戶。 但是，所有作業步驟均在 *Proxy*安全性內容下執行，因此複寫將為您指定的代理程式帳戶在內部執行下列對應：  
+ 在複寫設定期間，指定代理程式應在其下執行的帳戶。 但是，所有作業步驟均在 *Proxy* 安全性內容下執行，因此複寫將為您指定的代理程式帳戶在內部執行下列對應：  
   
 -   先利用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) 陳述式將帳戶對應至認證。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy 使用認證來儲存 Windows 使用者帳戶的相關資訊。  
   

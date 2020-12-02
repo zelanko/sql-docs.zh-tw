@@ -19,10 +19,10 @@ ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e427ca859bf6e1e861ed58bb7fdc4ab2dc869fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444970"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry 資料類型)

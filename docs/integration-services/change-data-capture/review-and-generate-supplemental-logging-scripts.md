@@ -14,10 +14,10 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77a6b4f11ea2e01f43f1be335fad893ee87f1e90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457680"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
@@ -25,7 +25,7 @@ ms.locfileid: "88457680"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  使用 [指令碼]**** 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
+  使用 [指令碼] 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
   
  在您執行指令碼之前，請選取下列其中一項：  
   

@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326904"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
@@ -82,7 +82,7 @@ ms.locfileid: "88326904"
   
 2.  展開 **[資料分割函數]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]****。  
+3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]。  
   
 4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]**。  
 

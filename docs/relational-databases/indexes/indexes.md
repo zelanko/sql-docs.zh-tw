@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408004"
 ---
 # <a name="indexes"></a>索引
@@ -38,7 +38,7 @@ ms.locfileid: "88408004"
 |具有內含資料行的索引|除了索引鍵資料行以外，擴充為含有非索引鍵資料行的非叢集索引。|[建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |導出資料行的索引|從其他一個或多個資料行的值，或特定決定性輸入衍生的資料行索引。|[計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
 |Filtered|最佳化的非叢集索引，特別適合涵蓋從妥善定義的資料子集進行選取的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本，並降低索引儲存成本。|[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [篩選索引設計指導方針](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
-|空間|空間索引可以更有效率地在 **geometry** 資料類型之資料行的空間物件 (「空間資料」**) 上執行特定作業。 空間索引會減少需要套用相當耗成本之空間作業的物件數目。|[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)|  
+|空間|空間索引可以更有效率地在 **geometry** 資料類型之資料行的空間物件 (「空間資料」) 上執行特定作業。 空間索引會減少需要套用相當耗成本之空間作業的物件數目。|[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|在 **xml** 資料類型資料行中，一種細分且持續的 XML 二進位大型物件 (BLOB) 表示法。|[XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |全文檢索|一種特殊類型的 Token 式功能索引，由 Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立與維護。 它可以有效地在字元字串資料中進行複雜字的搜尋。|[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)|  
   

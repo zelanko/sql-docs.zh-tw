@@ -19,10 +19,10 @@ ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: af349e3d79ea8b35854e5c1654d794511b082329
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445072"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (geometry 資料類型)

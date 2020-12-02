@@ -19,10 +19,10 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4ce45e482bac277168afdf65d447a53ebed00ea5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445074"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (geometry 資料類型)

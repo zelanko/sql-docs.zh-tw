@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e254381c043aa4c676541b5919ec8562fa13a6cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428450"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件類別
@@ -40,7 +40,7 @@ ms.locfileid: "88428450"
 |GroupID|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
-|LoginName|**nvarchar**|使用者登入的名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN [!INCLUDE[msCoName](../../includes/msconame-md.md)] username\\*格式的*Windows 登入認證)。|11|是|  
+|LoginName|**nvarchar**|使用者登入的名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN [!INCLUDE[msCoName](../../includes/msconame-md.md)] username\\*格式的* Windows 登入認證)。|11|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|**nvarchar**|Windows 使用者名稱。|6|是|  
 |ServerName|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  

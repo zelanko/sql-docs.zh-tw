@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326019"
 ---
 # <a name="subscription-synchronization-history"></a>訂閱，同步處理記錄
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-   [同步處理記錄]**** 索引標籤會顯示合併代理程式的詳細資訊，包括狀態、發行項統計資料、記錄、資訊訊息及任何錯誤訊息。  
+   [同步處理記錄] 索引標籤會顯示合併代理程式的詳細資訊，包括狀態、發行項統計資料、記錄、資訊訊息及任何錯誤訊息。  
   
 ## <a name="options"></a>選項  
  從 **[檢視]** 功能表中選取要檢視的合併代理程式工作階段，再於 **[合併代理程式工作階段]** 方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[在選取的工作階段中處理的發行項]** 的方格中。  

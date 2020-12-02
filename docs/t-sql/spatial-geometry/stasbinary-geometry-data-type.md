@@ -19,10 +19,10 @@ ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 59416177b8b50855a0b6a0aa694f938f90479b6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426900"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry 資料類型)

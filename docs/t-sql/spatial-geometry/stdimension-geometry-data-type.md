@@ -19,10 +19,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fa206e923e2b7c0b251eca657365bc0d24541806
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416934"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry 資料類型)

@@ -19,10 +19,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445087"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry 資料類型)
@@ -55,7 +55,7 @@ ms.locfileid: "88445087"
   
  在 **LineString**、**CircularString** 和 **CompoundCurve** 執行個體上，近似值演算法會保留執行個體的原始起點和終點。 此演算法接著會將原始執行個體中最偏離結果的點反覆地新增回來。 此處理序會繼續執行，直到任何點的偏差都不會超過所指定容錯為止。  
   
- `Reduce()` 會傳回 **CircularString** 執行個體的 **LineString**、**CircularString**或 **CompoundCurve** 執行個體。  `Reduce()` 會傳回 **CompoundCurve** 執行個體的 **CompoundCurve** 或 **LineString** 執行個體。  
+ `Reduce()` 會傳回 **CircularString** 執行個體的 **LineString**、**CircularString** 或 **CompoundCurve** 執行個體。  `Reduce()` 會傳回 **CompoundCurve** 執行個體的 **CompoundCurve** 或 **LineString** 執行個體。  
   
  在 **Polygon** 執行個體上，近似值演算法會獨立套用到每一個環形。 如果傳回的 **Polygon** 執行個體無效，此方法將會產生 `FormatException`；例如，如果套用 `Reduce()` 來簡化執行個體中的每一個環形，而產生的環形發生重疊，就會建立無效的 **MultiPolygon** 執行個體。  在具有外環但沒有內環的 **CurvePolygon** 執行個體上，`Reduce()` 會傳回 **CurvePolygon**、**LineString** 或 **Point** 執行個體。  如果 **CurvePolygon** 具有內環，則會傳回 **CurvePolygon** 或 **MultiPoint** 執行個體。  
   
@@ -101,7 +101,7 @@ SELECT @g.Reduce(.75).ToString();
  SELECT @g.Reduce(16).ToString();
  ```  
   
- 在這個範例中，請注意，第二個 **SELECT** 陳述式會傳回 **LineString**執行個體：`LineString(0 0, 16 0)`。  
+ 在這個範例中，請注意，第二個 **SELECT** 陳述式會傳回 **LineString** 執行個體：`LineString(0 0, 16 0)`。  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>示範原始起點和終點遺失的範例  
  下列範例示範結果執行個體可能無法保留原始起點和終點的狀況。 因為保留原始起點和終點會導致產生無效的 **LineString** 執行個體，所以會發生此狀況。  

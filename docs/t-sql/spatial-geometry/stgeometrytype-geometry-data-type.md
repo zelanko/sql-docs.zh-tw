@@ -19,10 +19,10 @@ ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b297708cbd8820967463f395d765474c9881189b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454294"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry 資料類型)
@@ -45,7 +45,7 @@ ms.locfileid: "88454294"
  CLR 傳回類型：**SqlString**  
   
 ## <a name="remarks"></a>備註  
- `STGeometryType()` 可傳回的 OGC 類型名稱為 **Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString**和**MultiPolygon**。  
+ `STGeometryType()` 可傳回的 OGC 類型名稱為 **Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString** 和 **MultiPolygon**。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `Polygon` 執行個體，並使用 `STGeometryType()` 確認它是多邊形。  

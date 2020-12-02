@@ -12,10 +12,10 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449630"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>課程 4-2：建立損毀的檔案
@@ -32,7 +32,7 @@ ms.locfileid: "88449630"
   
 1.  在「記事本」或任何其他文字編輯器中，開啟 **Currency_VEB.txt** 檔案。  
   
-2.  使用文字編輯器的尋找和取代功能，來尋找 **VEB** 的所有執行個體，並以 **BAD**取代。  
+2.  使用文字編輯器的尋找和取代功能，來尋找 **VEB** 的所有執行個體，並以 **BAD** 取代。  
   
 3.  在與其他範例資料檔案相同的資料夾中，將已修改的檔案另存為 **Currency_BAD.txt**。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "88449630"
   
     在資料流程的第三次反覆運算中，[查閱貨幣索引鍵] 轉換會嘗試處理 **Currency_BAD.txt** 檔案，但轉換會失敗。 轉換失敗會造成整個套件失敗。  
   
-2.  在 [偵錯]**** 功能表上，選取 [停止偵錯]****。  
+2.  在 [偵錯] 功能表上，選取 [停止偵錯]。  
   
-3.  在設計介面上，選取 [執行結果]**** 索引標籤。  
+3.  在設計介面上，選取 [執行結果] 索引標籤。  
   
 4.  瀏覽記錄並確認已發生下列無法處理的錯誤：  
   

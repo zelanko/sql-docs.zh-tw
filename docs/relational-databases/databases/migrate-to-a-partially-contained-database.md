@@ -14,10 +14,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88410994"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -65,14 +65,14 @@ GO
 #### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 來啟用自主資料庫  
  下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]****。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。  
   
-2.  在 [進階]**** 頁面的 [內含項目]**** 區段中，將 [啟用自主資料庫]**** 選項設定為 [True]****。  
+2.  在 [進階] 頁面的 [內含項目] 區段中，將 [啟用自主資料庫] 選項設定為 [True]。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 將資料庫轉換成部分自主資料庫  
- 您可以透過變更 [內含項目]**** 選項，將資料庫轉換成自主資料庫。  
+ 您可以透過變更 [內含項目] 選項，將資料庫轉換成自主資料庫。  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL，將資料庫轉換成部分自主資料庫  
  下列範例會將名為 `Accounting` 的資料庫轉換成部分自主資料庫。  
@@ -87,9 +87,9 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>使用 Management Studio，將資料庫轉換成部分自主資料庫  
  下列範例會將資料庫轉換成部分自主資料庫。  
   
-1.  在物件總管中，展開 [資料庫]****，以滑鼠右鍵按一下要轉換的資料庫，然後按一下 [屬性]****。  
+1.  在物件總管中，展開 [資料庫]，以滑鼠右鍵按一下要轉換的資料庫，然後按一下 [屬性]。  
   
-2.  在 [選項]**** 頁面上，將 [內含項目類型]**** 選項變更為 [部分]****。  
+2.  在 [選項] 頁面上，將 [內含項目類型] 選項變更為 [部分]。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

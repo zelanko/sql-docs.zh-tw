@@ -19,16 +19,16 @@ ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a8581700ea3145840684cce1e18e24c2f2e1cd3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88359734"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-傳回 **geography** 執行個體的總介面區。 STArea () 的結果，是**地理**執行個體的空間參考識別碼所使用測量平方單位。 例如，如果執行個體的 SRID 是4326，則 STArea () 會以平方公尺傳回結果。  
+傳回 **geography** 執行個體的總介面區。 STArea () 的結果，是 **地理** 執行個體的空間參考識別碼所使用測量平方單位。 例如，如果執行個體的 SRID 是4326，則 STArea () 會以平方公尺傳回結果。  
   
 ## <a name="syntax"></a>語法  
   

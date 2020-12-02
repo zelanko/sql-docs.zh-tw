@@ -12,10 +12,10 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4c09c590d92d97ea56c795db6fe8676d5771277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426050"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance

@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327064"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
@@ -34,7 +34,7 @@ ms.locfileid: "88327064"
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition，請在 [SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=149256)網頁的 [Related Downloads] \(相關下載) 區段中，按一下最新版 Microsoft SQL Server 功能套件的連結。**** 在 **Microsoft SQL Server 功能套件**網頁上，搜尋 **Microsoft OLE DB Provider for DB2**。  
+    -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition，請在 [SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=149256)網頁的 [Related Downloads] \(相關下載) 區段中，按一下最新版 Microsoft SQL Server 功能套件的連結。 在 **Microsoft SQL Server 功能套件** 網頁上，搜尋 **Microsoft OLE DB Provider for DB2**。  
   
     -   如果您使用的是 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   

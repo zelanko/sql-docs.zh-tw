@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 08a1426de0d150684d867135947087e40207f246
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88326504"
 ---
 # <a name="sort-columns"></a>排序資料行
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-   [排序資料行]**** 對話方塊可讓您根據一或多個資料行排序複寫監視器中的方格。 (您也可以按一下「複寫監視器」方格中的資料行標頭，針對單一資料行排序)。 例如，若要根據狀態和連接類型排序 **[所有訂閱]** 索引標籤中的訂閱，請遵循下列步驟進行：  
+   [排序資料行] 對話方塊可讓您根據一或多個資料行排序複寫監視器中的方格。 (您也可以按一下「複寫監視器」方格中的資料行標頭，針對單一資料行排序)。 例如，若要根據狀態和連接類型排序 **[所有訂閱]** 索引標籤中的訂閱，請遵循下列步驟進行：  
   
 1.  在方格的第一個資料列中，從 **[資料行名稱]** 資料行中選取 **[狀態]** ，然後從 **[排序順序]** 資料行中選取值。  
   

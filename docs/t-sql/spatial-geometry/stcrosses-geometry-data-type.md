@@ -19,10 +19,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b7294db9b86f9a356fa7834b89642ec0b1653866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88458932"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry 資料類型)

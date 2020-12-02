@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2dd740b039ae0f7c23ce9b7482201d4fdda32b9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88362444"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
@@ -55,7 +55,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  指定要考量每個唯一值。  
   
  *expression*  
- 這是精確數值或近似數值資料類型類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。 不允許彙總函式和子查詢。  
+ 這是精確數值或近似數值資料類型類別的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。 不允許彙總函式和子查詢。  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_ 會將 FROM 子句所產生結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 _order\_by\_clause_ 可決定執行作業的邏輯順序。 需要 _order\_by\_clause_。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  

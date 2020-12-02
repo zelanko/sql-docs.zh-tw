@@ -19,10 +19,10 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5fe53017aa78bd4025a251611fd6f50c67d4401a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445159"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography 資料類型)

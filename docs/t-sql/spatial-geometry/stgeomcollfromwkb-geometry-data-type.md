@@ -19,10 +19,10 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f780e521ba80822eac4de95e91b8495521e07f60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454310"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry 資料類型)

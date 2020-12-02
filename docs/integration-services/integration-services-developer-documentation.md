@@ -20,10 +20,10 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88346094"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件

@@ -19,10 +19,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3f2d2eead1803745d58cc827b85acd612f925a0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88306036"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography 資料類型)
@@ -47,7 +47,7 @@ ms.locfileid: "88306036"
 ## <a name="remarks"></a>備註  
  一維空間資料類型包括 **LineString**、**CircularString** 及 **CompoundCurve**。 空的一維 **geography** 執行個體會傳回 0。  
   
- `STNumCurves`() 只在簡單類型上運作；它不能與 **geography**集合 (如 **MultiLineString**) 搭配使用。 當 **geography** 執行個體不是一維資料類型時，會傳回 **NULL**。  
+ `STNumCurves`() 只在簡單類型上運作；它不能與 **geography** 集合 (如 **MultiLineString**) 搭配使用。 當 **geography** 執行個體不是一維資料類型時，會傳回 **NULL**。  
   
  針對未初始化的 **geography** 執行個體傳回 **Null**。  
   

@@ -15,10 +15,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6f706093032867835830d0cf98afb86c07e93f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455348"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "88455348"
   
     -   **\@on** (開啟)  
   
-     當您修改 **\@on**參數時，請記住此參數與 **\@columnid** 參數的互動：  
+     當您修改 **\@on** 參數時，請記住此參數與 **\@columnid** 參數的互動：  
   
     |開啟|資料行識別碼|結果|  
     |--------|---------------|------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "88455348"
     ||NOT NULL|會針對特定的事件關閉資料行。|  
   
 > [!IMPORTANT]
->  與一般的預存程序不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序 (<strong>sp_trace_*xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型的轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+>  與一般的預存程序不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序 (<strong>sp_trace_ *xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型的轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

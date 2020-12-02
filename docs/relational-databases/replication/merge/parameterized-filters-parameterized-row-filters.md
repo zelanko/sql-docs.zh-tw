@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423542"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
@@ -55,7 +55,7 @@ ms.locfileid: "88423542"
 >  當為參數化篩選執行比較時，會始終使用資料庫定序。 例如，如果資料庫定序不區分大小寫，但資料表或資料行定序區分大小寫，則比較將不區分大小寫。  
   
 ### <a name="filtering-with-suser_sname"></a>使用 SUSER_SNAME() 篩選  
- 請考慮 **範例資料庫中的** Employee 資料表 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 。 此資料表包括 **LoginID**資料行，其中含有每一位員工的登入，格式為 '*domain\login*'。 若要篩選這個資料表，好讓每一位員工只收到與其相關的資料，請指定以下的篩選子句：  
+ 請考慮 **範例資料庫中的** Employee 資料表 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 。 此資料表包括 **LoginID** 資料行，其中含有每一位員工的登入，格式為 '*domain\login*'。 若要篩選這個資料表，好讓每一位員工只收到與其相關的資料，請指定以下的篩選子句：  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -121,7 +121,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  若要設定篩選選項，請參閱＜ [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md)＞。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>設定使用資料分割群組和保留資料分割變更  
- **使用資料分割群組** 和 **保留資料分割變更** 兩者均可以透過在發行集資料庫中儲存其他中繼資料，提升具有篩選發行項之發行集的同步處理效能。 [使用資料分割群組] **** 選項可以透過使用預先計算的資料分割功能，讓效能大為提升。 依預設，如果發行集中的發行項符合一組需求，此選項會設定為 **true** 。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 如果您的發行項不符合使用預先計算之資料分割的需求，則 [保留資料分割變更] **** 選項會設定為 **true**。  
+ **使用資料分割群組** 和 **保留資料分割變更** 兩者均可以透過在發行集資料庫中儲存其他中繼資料，提升具有篩選發行項之發行集的同步處理效能。 [使用資料分割群組]  選項可以透過使用預先計算的資料分割功能，讓效能大為提升。 依預設，如果發行集中的發行項符合一組需求，此選項會設定為 **true** 。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 如果您的發行項不符合使用預先計算之資料分割的需求，則 [保留資料分割變更]  選項會設定為 **true**。  
   
 ### <a name="setting-partition-options"></a>設定資料分割選項  
  依據「訂閱者」共用已篩選資料表中資料之方式，您可以建立發行項時為 **資料分割選項** 屬性指定一個值。 您可以使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)和 **[發行項屬性]** 對話方塊，將這個屬性設為四個值的其中一個。 使用 **[加入篩選]** 或 **[編輯篩選]** 對話方塊 (在「新增發行集精靈」和 **[發行集屬性]** 對話方塊中可用) 可以將屬性設定為兩個值中的其中之一。 下表簡單說明了可用值：  
@@ -133,7 +133,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |資料分割中的資料為不重疊，資料在訂閱之間共用。 訂閱者無法更新參數化篩選中參考的資料行。|N/A*|**不重疊，共用於訂閱之間**|**2**|  
 |資料分割中的資料不重疊，每一資料分割有單一訂閱。 訂閱者不能更新參數化篩選中參考的資料行。**|**這個資料表中的一個資料列只會提供給一個訂閱**|**不重疊，單一訂閱**|**3**|  
   
- \*如果基礎篩選選項設定為 **0**、**1** 或 **2**，則 [新增篩選]**** 和 [編輯篩選]**** 對話方塊將顯示 [這個資料表中的一個資料列會提供給多個訂閱]****。  
+ \*如果基礎篩選選項設定為 **0**、**1** 或 **2**，則 [新增篩選] 和 [編輯篩選] 對話方塊將顯示 [這個資料表中的一個資料列會提供給多個訂閱]。  
   
  **如果您指定了此選項，則該發行項中的每一資料分割將僅有單一訂閱。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。  
   
@@ -184,7 +184,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   發行項應僅含有一個參數化篩選或聯結篩選。 允許含有參數化篩選且在聯結篩選中為父系。 不允許含有參數化篩選且在聯結篩選中為子系。 同樣也不允許有一個以上的聯結篩選。  
   
--   如果發行者端的兩個資料表含有聯結篩選關聯性，且子資料表的某些資料列在父資料表中沒有對應的資料列，則插入遺漏的父資料列不會導致相關資料列被下載到訂閱者 (資料列使用不重疊資料分割下載)。 例如，如果 **SalesOrderDetail** 資料表中的某些資料列在 **SalesOrderHeader** 資料表中沒有對應的資料列，而且您在 **SalesOrderHeader**中插入了該遺漏的資料列，則該資料列會下載到「訂閱者」，但不會下載 **SalesOrderDetail** 中的對應資料列。  
+-   如果發行者端的兩個資料表含有聯結篩選關聯性，且子資料表的某些資料列在父資料表中沒有對應的資料列，則插入遺漏的父資料列不會導致相關資料列被下載到訂閱者 (資料列使用不重疊資料分割下載)。 例如，如果 **SalesOrderDetail** 資料表中的某些資料列在 **SalesOrderHeader** 資料表中沒有對應的資料列，而且您在 **SalesOrderHeader** 中插入了該遺漏的資料列，則該資料列會下載到「訂閱者」，但不會下載 **SalesOrderDetail** 中的對應資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [以時間為基礎之資料列篩選的最佳做法](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   

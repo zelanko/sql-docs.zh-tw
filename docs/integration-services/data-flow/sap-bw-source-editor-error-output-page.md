@@ -14,10 +14,10 @@ ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85da6a04026b7ae9b0db9a7c22cdb926c6afbd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430720"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 來源編輯器 (錯誤輸出頁面)
@@ -52,7 +52,7 @@ ms.locfileid: "88430720"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [SAP BW 來源編輯器]**** 對話方塊之 [資料行]**** 頁面上所選取的外部 (來源) 資料行。 如需此對話方塊的詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
+ 檢視您在 [SAP BW 來源編輯器] 對話方塊之 [資料行] 頁面上所選取的外部 (來源) 資料行。 如需此對話方塊的詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
   
  **錯誤**  
  指定 SAP BW 來源元件應該在發生錯誤時採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

@@ -16,10 +16,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425240"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
@@ -90,7 +90,7 @@ ms.locfileid: "88425240"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含要設定之封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **方案總管**中，按兩下封裝將其開啟。  
+2.  在 **方案總管** 中，按兩下封裝將其開啟。  
   
 3.  按一下 **[控制流程]** 索引標籤。  
   

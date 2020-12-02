@@ -14,10 +14,10 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06ab429a5e3524485793bdf118f0c4039869f868
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428020"
 ---
 # <a name="view-policies-dialog-box"></a>檢視原則對話方塊
@@ -44,7 +44,7 @@ ms.locfileid: "88428020"
  按一下此超連結可顯示執行記錄報表。  
   
  **評估**  
- 按一下此超連結可開啟 [評估原則]**** 對話方塊來執行此原則。  
+ 按一下此超連結可開啟 [評估原則] 對話方塊來執行此原則。  
   
  **上次執行**  
  上次執行此原則的日期和時間。  

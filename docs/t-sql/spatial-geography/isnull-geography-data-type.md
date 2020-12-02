@@ -18,10 +18,10 @@ ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: cd161c4d14241a6596e2a54ae79cd919fb776c59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422372"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography 資料類型)

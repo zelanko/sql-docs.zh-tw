@@ -19,10 +19,10 @@ ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 43d6372bbe90146004e205d8ac3678196d76712e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416894"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (geometry 資料類型)

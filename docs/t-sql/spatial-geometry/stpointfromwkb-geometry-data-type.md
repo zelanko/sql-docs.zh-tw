@@ -19,10 +19,10 @@ ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c0cb0023b2c51392e881ec5b50038ad69c4bbea2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88416864"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry 資料類型)

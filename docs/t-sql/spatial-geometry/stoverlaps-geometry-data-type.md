@@ -19,10 +19,10 @@ ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88454235"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry 資料類型)
