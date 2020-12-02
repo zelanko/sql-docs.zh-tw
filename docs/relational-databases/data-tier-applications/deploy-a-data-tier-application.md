@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386704"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125271"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "88386704"
   
  如果您變更資料庫名稱，則資料檔和記錄檔的名稱也會變更，以符合新的值。  
   
- 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式]  節點或是**公用程式總管**中 [部署的資料層應用程式]  節點底下的 DAC 節點上。  
+ 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在 **物件總管** 中 [資料層應用程式]  節點或是 **公用程式總管** 中 [部署的資料層應用程式]  節點底下的 DAC 節點上。  
   
  下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時顯示。  
   

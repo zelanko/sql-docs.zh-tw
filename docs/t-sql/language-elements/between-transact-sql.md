@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417184"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128347"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 
 ## <a name="arguments"></a>引數
  *test_expression*  
- 這是要在 *begin_expression* 和 *end_expression* 定義的範圍中測試的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
+ 這是要在 *begin_expression* 和 *end_expression* 定義的範圍中測試的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *test_expression* 的資料類型必須與 *begin_expression* 和 *end_expression* 相同。  
   
  NOT  
  指定執行否定運算的述詞結果。  

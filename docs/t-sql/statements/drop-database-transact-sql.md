@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ae3af2eb84fa18777c0d0fe55503ea60bf5c303
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990281"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127444"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -58,7 +58,7 @@ DROP DATABASE database_name [;]
 ## <a name="arguments"></a>引數
 
 *IF EXISTS*
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。
 
 只有在資料庫已存在時，才能有條件地將其卸除。
 

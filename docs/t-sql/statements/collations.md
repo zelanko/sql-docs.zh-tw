@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547567"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126209"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -153,7 +153,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>B. 其他範例
 
-如需使用 **COLLATE** 的其他範例，請參閱 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 範例 **G. 建立資料庫並指定定序名稱和選項**與 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 範例 **V. 變更資料行定序**。
+如需使用 **COLLATE** 的其他範例，請參閱 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 範例 **G. 建立資料庫並指定定序名稱和選項** 與 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 範例 **V. 變更資料行定序**。
 
 ## <a name="see-also"></a>另請參閱
 

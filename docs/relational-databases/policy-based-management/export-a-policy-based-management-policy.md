@@ -14,11 +14,11 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 62fff3bda286f50b2220dbb1ea4732547e98829f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493996"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127859"
 ---
 # <a name="export-a-policy-based-management-policy"></a>匯出原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88493996"
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要匯出的原則，然後選取 [匯出原則]****。  
+5.  以滑鼠右鍵按一下您想要匯出的原則，然後選取 [匯出原則]。  
   
 6.  在 **[匯出原則]** 對話方塊的位址列中，輸入檔案的路徑和名稱。 或者，在對話方塊的導覽窗格中尋找適當的檔案位置，然後在 **[檔案名稱]** 方塊中輸入 XML 檔案的名稱。  
   

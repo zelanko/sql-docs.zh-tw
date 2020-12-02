@@ -20,11 +20,11 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194821"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127297"
 ---
 # <a name="excel-destination"></a>Excel 目的地
 
@@ -64,14 +64,14 @@ ms.locfileid: "92194821"
   使用 **[Excel 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定資料來源資訊，以及預覽結果。 Excel 目的地會將資料載入 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿中的工作表或具名範圍。  
   
 > [!NOTE]  
->  在 **[Excel 目的地編輯器]** 中無法使用 Excel 目的地的 **CommandTimeout**屬性，但可使用 **[進階編輯器]** 來設定這個屬性。 此外， **[進階編輯器]** 中只會有特定的快速載入選項。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 目的地＞一節。  
+>  在 **[Excel 目的地編輯器]** 中無法使用 Excel 目的地的 **CommandTimeout** 屬性，但可使用 **[進階編輯器]** 來設定這個屬性。 此外， **[進階編輯器]** 中只會有特定的快速載入選項。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)＞的＜Excel 目的地＞一節。  
   
 ### <a name="static-options"></a>靜態選項  
  **Excel 連接管理員**  
- 從清單中選取現有的 Excel 連線管理員，或按一下 [新增]**** 建立新的連線管理員。  
+ 從清單中選取現有的 Excel 連線管理員，或按一下 [新增] 建立新的連線管理員。  
   
  **新增**  
- 使用 [Excel 連線管理員]**** 對話方塊來建立新的連線管理員。  
+ 使用 [Excel 連線管理員] 對話方塊來建立新的連線管理員。  
   
  **資料存取模式**  
  從來源中指定選取資料的方法。  
@@ -86,7 +86,7 @@ ms.locfileid: "92194821"
  從下拉式清單中選取 Excel 目的地。 如果此清單為空，請按一下 **[新增]**。  
   
  **新增**  
- 按一下 [新增]**** 以啟動 [建立工資料表]**** 對話方塊。 按一下 **[確定]** 時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
+ 按一下 [新增] 以啟動 [建立工資料表] 對話方塊。 按一下 **[確定]** 時，對話方塊會建立 **[Excel 連接管理員]** 指向的 Excel 檔案。  
   
  **檢視現有的資料**  
  使用 [預覽查詢結果]  對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
@@ -103,7 +103,7 @@ ms.locfileid: "92194821"
   
 #### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
- 輸入 SQL 查詢的文字，按一下 [建立查詢]**** 來建立查詢，或是按一下 [瀏覽]**** 以找出包含查詢文字的檔案。  
+ 輸入 SQL 查詢的文字，按一下 [建立查詢] 來建立查詢，或是按一下 [瀏覽] 以找出包含查詢文字的檔案。  
   
  **建立查詢**  
  使用 [查詢產生器]  對話方塊，以視覺化的方式來建構 SQL 查詢。  
@@ -131,14 +131,14 @@ ms.locfileid: "92194821"
  檢視每個可用的目的地資料行，不論是否已經對應。  
   
 ## <a name="excel-destination-editor-error-output-page"></a>Excel 目的地編輯器 (錯誤輸出頁面)
-  使用 [Excel 目的地編輯器]**** 對話方塊的 [進階]**** 頁面，即可指定錯誤處理的選項。  
+  使用 [Excel 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定錯誤處理的選項。  
   
 ### <a name="options"></a>選項。  
  **輸入或輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [Excel 來源編輯器]**** 對話方塊的 [連線管理員]**** 節點中所選取的外部 (來源) 資料行。  
+ 檢視您在 [Excel 來源編輯器] 對話方塊的 [連線管理員] 節點中所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

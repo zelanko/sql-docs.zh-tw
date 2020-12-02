@@ -14,11 +14,11 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457396"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127309"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
 
@@ -30,10 +30,10 @@ ms.locfileid: "88457396"
 |作業值|輸出|描述|  
 |------------------------|------------|-----------------|  
 |1|刪除|已刪除的資料列|  
-|2|插入|插入的資料列 (在使用 [Net with Merge (淨 (含合併))]**** CDC 模式時無法使用)|  
-|3|更新|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))]**** CDC 模式時才可使用)|  
+|2|插入|插入的資料列 (在使用 [Net with Merge (淨 (含合併))] CDC 模式時無法使用)|  
+|3|更新|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))] CDC 模式時才可使用)|  
 |4|更新|更新後資料列 (在更新前之後)|  
-|5|更新|合併資料列 (僅在使用 [Net with Merge (淨 (含合併))]**** CDC 模式時才可使用)|  
+|5|更新|合併資料列 (僅在使用 [Net with Merge (淨 (含合併))] CDC 模式時才可使用)|  
 |其他|錯誤||  
   
  您可以使用分隔器連接到預先定義的 INSERT、DELETE 和 UPDATE 輸出，以供進一步處理。  

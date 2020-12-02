@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ce68e817070765a6f84a12c518e71de221734b34
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737793"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126996"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>範例：線上還原讀取/寫入檔案 (完整復原模式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85737793"
   
 3.  線上還原記錄備份。  
   
-     系統管理員會還原已還原之檔案備份後進行的所有記錄備份，並在最新的記錄備份 (步驟 2 所建立的*log_backup3*) 處結束。 還原最後一個備份之後，資料庫就可以復原。  
+     系統管理員會還原已還原之檔案備份後進行的所有記錄備份，並在最新的記錄備份 (步驟 2 所建立的 *log_backup3*) 處結束。 還原最後一個備份之後，資料庫就可以復原。  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  

@@ -17,11 +17,11 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194903"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127387"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
 
@@ -59,7 +59,7 @@ ms.locfileid: "92194903"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]**** 資料夾，然後按一下 [新增 SSIS 封裝]****。  
+2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝] 資料夾，然後按一下 [新增 SSIS 封裝]。  
   
 3.  (選擇性) 將控制流程、資料流程工作和事件處理常式加入封裝。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)、[資料流程](../integration-services/data-flow/data-flow.md)和 [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "92194903"
   
 ## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>選擇專案和其封裝的目標版本  
   
-1.  在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性] **** 以開啟專案的屬性頁。  
+1.  在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。  
   
-2.  在 [組態屬性] **** 的 [一般] **** 索引標籤中，選取 [TargetServerVersion] **** 屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+2.  在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
      ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
   

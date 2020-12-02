@@ -18,11 +18,11 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f689cdae7253c43ca39c06dc09953c4db02d0def
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479931"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126296"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>資料類型同義字 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88479931"
   
 從原始物件衍生的物件 (例如結果集資料行或運算式) 都會被指派基底資料類型。 使用原始物件或任何衍生物件的所有中繼資料函數都將報告基底資料類型，而非同義字，包括：
 
-* 中繼資料作業 (例如**sp_help** 和其他系統預存程序)，
+* 中繼資料作業 (例如 **sp_help** 和其他系統預存程序)，
 * 資訊結構描述檢視，以及
 * 資料存取 API 中繼資料作業，可用來報告資料類型的資料表或結果集資料行。
   

@@ -19,11 +19,11 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037061"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128178"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "92037061"
  *tolerance*  
  這是 **float** 運算式，用來指定緩衝距離的容錯。  
   
- 「容錯」** 係指所傳回線性近似值之理想緩衝距離的最大變異。  
+ 「容錯」係指所傳回線性近似值之理想緩衝距離的最大變異。  
   
  例如，點的理想緩衝距離是圓形，但是這必須由多邊形來模擬。 當容錯越小時，多邊形就會有越多的點，這樣會增加結果的複雜度，但是會減少錯誤。  
   

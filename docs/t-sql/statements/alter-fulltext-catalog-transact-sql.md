@@ -24,11 +24,11 @@ ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: dd983f16907332414cc6f726fb41583f8b928069
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688389"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128111"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ ALTER FULLTEXT CATALOG catalog_name
  目錄和資料庫區分腔調字的預設值相同。  
   
  REORGANIZE  
- 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行「主要合併」**，其中包括將索引作業過程所建立的較小索引合併到單一大型索引中。 合併全文檢索索引片段可以改善效能，並釋出磁碟和記憶體資源。 如果全文檢索目錄經常變更，請定期利用這個命令來重新組織全文檢索目錄。  
+ 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行「主要合併」，其中包括將索引作業過程所建立的較小索引合併到單一大型索引中。 合併全文檢索索引片段可以改善效能，並釋出磁碟和記憶體資源。 如果全文檢索目錄經常變更，請定期利用這個命令來重新組織全文檢索目錄。  
   
  REORGANIZE 也會將內部索引和目錄結構最佳化。  
   

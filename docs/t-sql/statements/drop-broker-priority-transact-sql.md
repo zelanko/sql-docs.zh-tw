@@ -19,11 +19,11 @@ ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4b1ecefa12702aade36144df55600f696e2042e2
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380168"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127449"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

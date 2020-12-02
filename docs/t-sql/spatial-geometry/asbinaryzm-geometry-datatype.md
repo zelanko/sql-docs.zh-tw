@@ -16,11 +16,11 @@ ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 83f6f173213f81f9633d9593f73d115851789cce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445113"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128198"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

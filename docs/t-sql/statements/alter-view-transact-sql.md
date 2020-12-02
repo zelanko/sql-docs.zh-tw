@@ -22,11 +22,11 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9aa2c82f83e20017778a9e5096977dedeb38646d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688598"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126225"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -101,7 +101,7 @@ AS <select_statement>
  這是定義檢視的 SELECT 陳述式。  
   
  WITH CHECK OPTION  
- 強制針對檢視執行的所有資料修改陳述式必須遵循*select_statement* 內所設定的準則。  
+ 強制針對檢視執行的所有資料修改陳述式必須遵循 *select_statement* 內所設定的準則。  
   
 ## <a name="remarks"></a>備註  
  如需 ALTER VIEW 的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)中的＜備註＞一節。  

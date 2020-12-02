@@ -26,11 +26,11 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 046c8fa60fc4bc4930089d8c7e9a87a3480bff23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417594"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126279"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,7 +71,7 @@ WITH NO_INFOMSGS
 |**全球**|指出追蹤旗標是否為全域設定<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**工作階段**|指出追蹤旗標是否針對工作階段而設定<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS 會傳回一個資料行代表追蹤旗標編號，以及一個資料行代表狀態。 其目的是指出追蹤旗標是 ON (1) 還是 OFF (0)。 追蹤旗標編號的資料行標題是**全域追蹤旗標**或**工作階段追蹤旗標**，這會隨著您所檢查的是全域追蹤旗標狀態還是工作階段追蹤旗標狀態而不同。
+DBCC TRACESTATUS 會傳回一個資料行代表追蹤旗標編號，以及一個資料行代表狀態。 其目的是指出追蹤旗標是 ON (1) 還是 OFF (0)。 追蹤旗標編號的資料行標題是 **全域追蹤旗標** 或 **工作階段追蹤旗標**，這會隨著您所檢查的是全域追蹤旗標狀態還是工作階段追蹤旗標狀態而不同。
   
 ## <a name="remarks"></a>備註  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有兩種類型的追蹤旗標：工作階段和全域。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。

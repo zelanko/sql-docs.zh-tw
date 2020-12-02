@@ -15,11 +15,11 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5241cb30244dd3a3ee9371990d5843988ba4e16d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425430"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127110"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)
 
@@ -54,7 +54,7 @@ expression1 <= expression2
 ## <a name="remarks"></a>備註  
  如果比較中的任一個運算式為 Null，則比較結果為 Null。 如果兩個運算式都是 Null，結果則為 Null。  
   
- 運算式集 *expression1* 與 *expression2*必須遵循下列規則之一：  
+ 運算式集 *expression1* 與 *expression2* 必須遵循下列規則之一：  
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   

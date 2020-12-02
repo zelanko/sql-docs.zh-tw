@@ -26,11 +26,11 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344074"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127417"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,10 +52,10 @@ CREATE SEARCH PROPERTY LIST new_list_name
 
 ## <a name="arguments"></a>引數
  *new_list_name*  
- 這是新搜尋屬性清單的名稱。 *new_list_name* 是最多 128 個字元的識別碼。 *new_list_name* 在目前資料庫的所有屬性清單中必須是唯一的，且符合識別碼的規則。 在建立全文檢索索引時，會使用 *new_list_name* 。  
+ 這是新搜尋屬性清單的名稱。 *new_list_name* 是最多 128 個字元的識別碼。 *new_list_name* 在目前資料庫的所有屬性清單中必須是唯一的，且符合識別碼的規則。 在建立全文檢索索引時，會使用 *new_list_name*。  
   
  *database_name*  
- 這是 *source_list_name* 所指定之屬性清單所在的資料庫名稱。 如果未指定， *database_name* 會預設為目前的資料庫。  
+ 這是 *source_list_name* 所指定之屬性清單所在的資料庫名稱。 如果未指定，*database_name* 會預設為目前的資料庫。  
   
  *database_name* 必須指定現有資料庫的名稱。 目前連線的登入必須與 *database_name* 所指定資料庫中的現有使用者識別碼建立關聯。 您也必須有資料庫的必要[權限](#Permissions)。  
   

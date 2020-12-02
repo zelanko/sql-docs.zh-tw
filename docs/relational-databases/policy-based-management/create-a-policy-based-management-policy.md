@@ -14,11 +14,11 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494042"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127927"
 ---
 # <a name="create-a-policy-based-management-policy"></a>建立原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "88494042"
   
 #### <a name="to-create-a-policy"></a>若要建立原則  
   
-1.  在物件總管**** 中，按一下加號，展開您想要建立新原則式管理原則的伺服器。  
+1.  在物件總管中，按一下加號，展開您想要建立新原則式管理原則的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
 3.  按一下加號展開 **[原則管理]**。  
   
-4.  以滑鼠右鍵按一下 [原則]**** 資料夾，然後選取 [新增原則]****。  
+4.  以滑鼠右鍵按一下 [原則] 資料夾，然後選取 [新增原則]。  
   
 5.  在 **[建立新原則]** 對話方塊的 **[名稱]** 方塊中，輸入新原則的名稱。  
   

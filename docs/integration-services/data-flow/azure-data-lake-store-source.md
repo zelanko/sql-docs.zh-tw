@@ -15,11 +15,11 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38de021617ed0454048a3d8cd7f0c5732d09861f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457470"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127330"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 來源
 
@@ -28,7 +28,7 @@ ms.locfileid: "88457470"
 
   **Azure Data Lake Store 來源** 元件可讓 SSIS 套件從 Azure Data Lake Store 讀取資料。 支援的檔案格式：文字和 Avro。
   
- **Azure Data Lake Store 來源**是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  
+ **Azure Data Lake Store 來源** 是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。  
   
 > [!NOTE]
 > 為確保 Azure Data Lake Store 連線管理員及使用它的元件 (即 Azure Data Lake Store 來源及 Azure Data Lake Store 目的地) 能夠連接服務，請務必從 [這裡](https://www.microsoft.com/download/details.aspx?id=49492)下載最新版的 Azure Feature Pack。 
@@ -48,4 +48,4 @@ ms.locfileid: "88457470"
 
 ## <a name="text-qualifier"></a>文字定位項
 
-**Azure Data Lake Store 來源**不支援文字限定詞。 若必須指定文字限定詞，才能正確處理您的檔案，請考慮將檔案下載到您的本機電腦，然後使用**一般檔案來源**處理這些檔案。 「一般檔案來源」可讓您指定文字限定詞。 如需詳細資訊，請參閱[ 一般檔案來源](flat-file-source.md)。
+**Azure Data Lake Store 來源** 不支援文字限定詞。 若必須指定文字限定詞，才能正確處理您的檔案，請考慮將檔案下載到您的本機電腦，然後使用 **一般檔案來源** 處理這些檔案。 「一般檔案來源」可讓您指定文字限定詞。 如需詳細資訊，請參閱[ 一般檔案來源](flat-file-source.md)。

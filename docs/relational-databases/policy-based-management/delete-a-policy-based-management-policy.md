@@ -14,11 +14,11 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470310"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127884"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>刪除原則式管理原則
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88470310"
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]****。  
+5.  以滑鼠右鍵按一下您想要刪除的原則，然後選取 [刪除]。  
   
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的條件，然後按一下 **[確定]**。  
   

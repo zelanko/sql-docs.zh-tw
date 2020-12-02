@@ -15,11 +15,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006347"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127715"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -206,7 +206,7 @@ ms.locfileid: "92006347"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> 維度  
- 非空的 **geometry** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point**和 **MultiPoint** 等零維 **幾何**沒有長度或區域。 **LineString、CircularString、CompoundCurve**和 **MultiLineString**等一維物件有長度。 **Polygon**、 **CurvePolygon**和 **MultiPolygon**等二維執行個體有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告與其內容類型相依的區域。  
+ 非空的 **geometry** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point** 和 **MultiPoint** 等零維 **幾何** 沒有長度或區域。 **LineString、CircularString、CompoundCurve** 和 **MultiLineString** 等一維物件有長度。 **Polygon**、 **CurvePolygon** 和 **MultiPolygon** 等二維執行個體有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告與其內容類型相依的區域。  
   
  **傳回執行個體的維度**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,7 +219,7 @@ ms.locfileid: "92006347"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- 「空的」**geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 執行個體的區域是 0。  
+ 「空的」**geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve** 和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
@@ -272,7 +272,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> 封閉性  
- 「封閉式」__**geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
+ 「封閉式」**geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
   

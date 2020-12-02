@@ -25,11 +25,11 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5cf5d6bcda6670c6cfc9a142be0569bc4bfeaf8e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688195"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128056"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

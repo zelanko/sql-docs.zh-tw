@@ -16,11 +16,11 @@ helpviewer_keywords:
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861811"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127972"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的系統需求
 
@@ -42,7 +42,7 @@ ms.locfileid: "88861811"
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 驗證需求  
 
-使用 Azure Active Directory 驗證方法搭配適用於 SQL Server 18.3 版***以前***的 OLE DB 驅動程式時，請確認已安裝 [SQL Server 的 Active Directory 驗證程式庫](https://go.microsoft.com/fwlink/?LinkID=513072)。 (18.3 版包含屬於其安裝程式套件的相依性。)其他驗證方法或 OLE DB 作業並不需要 ADAL。 如需詳細資訊，請參閱[使用 Azure Active Directory](features/using-azure-active-directory.md)。
+使用 Azure Active Directory 驗證方法搭配 OLE DB driver for SQL Server *_ 18.3 之前的版本時，請確認已安裝 [SQL Server 的 Active Directory 驗證程式庫](https://go.microsoft.com/fwlink/?LinkID=513072)。 (18.3 版包含屬於其安裝程式套件的相依性。)其他驗證方法或 OLE DB 作業並不需要 ADAL。 如需詳細資訊，請參閱[使用 Azure Active Directory](features/using-azure-active-directory.md)。
 
 ## <a name="sql-server-requirements"></a>SQL Server 需求  
 
@@ -56,7 +56,7 @@ ms.locfileid: "88861811"
 
 在升級方面：  
 
-* 可以將英文版本的 OLE DB Driver for SQL Server 升級到任何當地語系化版本的 OLE DB Driver for SQL Server。  
+可以將英文版的 OLE DB Driver for SQL Server 升級到任何當地語系化版本的 OLE DB Driver for SQL Server。  
 * 可以將當地語系化版本的 OLE DB Driver for SQL Server 升級到相同語言之當地語系化版本的 OLE DB Driver for SQL Server。  
 * 可以將當地語系化版本的 OLE DB Driver for SQL Server 升級到英文版本的 OLE DB Driver for SQL Server。  
 * 不可以將當地語系化版本的 OLE DB Driver for SQL Server 升級到不同當地語系化語言之當地語系化版本的 OLE DB Driver for SQL Server。  

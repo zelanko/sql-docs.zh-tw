@@ -21,11 +21,11 @@ ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 46f2f296289263a5ad8e4d315f5aa778792b1639
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472586"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128195"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry 資料類型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

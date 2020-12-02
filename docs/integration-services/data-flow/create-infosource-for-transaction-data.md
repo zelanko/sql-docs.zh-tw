@@ -12,11 +12,11 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b37416ef8283f32909b216508defda671080e30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495915"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127264"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
 

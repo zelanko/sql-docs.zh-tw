@@ -14,11 +14,11 @@ ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 76c60d4561eacda47648d2cac710e64c2ccc1f4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470330"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127917"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>建立新的原則式管理條件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88470330"
   
 #### <a name="to-create-a-condition"></a>建立條件  
   
-1.  在物件總管**** 中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
+1.  在物件總管中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "88470330"
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要建立新條件的 Facet，然後選取 [新增條件]****。  
+5.  以滑鼠右鍵按一下您想要建立新條件的 Facet，然後選取 [新增條件]。  
   
 6.  在 **[建立新條件]** 對話方塊的 **[名稱]** 方塊中，輸入新條件的名稱。  
   

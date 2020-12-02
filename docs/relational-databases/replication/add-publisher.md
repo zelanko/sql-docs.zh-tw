@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 1ce82548d63c88565a48d3930c3a7b9a40884413
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423622"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127836"
 ---
 # <a name="add-publisher"></a>加入發行者
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88423622"
   
 -   **加入 Oracle 發行者...**  
   
-     使用 [連線到伺服器]**** 對話方塊，連線到與 Oracle 發行者建立關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者。  
+     使用 [連線到伺服器] 對話方塊，連線到與 Oracle 發行者建立關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者。  
   
 -   **指定散發者，並加入其發行者...**  
   

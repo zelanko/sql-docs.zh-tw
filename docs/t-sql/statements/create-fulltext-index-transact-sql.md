@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549400"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128007"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ CREATE FULLTEXT INDEX ON table_name
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
 TYPE COLUMN *type_column_name*       
-指定用來保存 **varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar**或 **nvarchar**。  
+指定用來保存 **varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar** 或 **nvarchar**。  
   
 只有當 *column_name* 指定將資料儲存為二進位資料的 **varbinary(max)** 或 **image** 資料行，才應指定 TYPE COLUMN *type_column_name*；否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
@@ -103,7 +103,7 @@ LANGUAGE *language_term*
   
 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或是資料行內所儲存的文字語言不明，您可能適合使用中性 (0x0) 語言資源。 但是，您應該先了解使用中性 (0x0) 語言資源的可能結果。 如需使用中性 (0x0) 語言資源之可能解決方案和結果的資訊，請參閱[在建立全文檢索索引時選擇語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
   
-如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 **xml:lang** 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term*否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
+如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 **xml:lang** 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term* 否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
   
 STATISTICAL_SEMANTICS       
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 
@@ -126,7 +126,7 @@ MANUAL
 指定必須手動傳播追蹤的變更 (藉由呼叫 ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 **AUTO**       
-指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」**)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
+指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
   
 OFF [ `,` NO POPULATION]       
 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保留索引資料的變更清單。 未指定 NO POPULATION 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在建立好索引之後完整擴展索引。  

@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475530"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127770"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475530"
  建立全文檢索索引時，您必須針對每個資料行指定有效的語言名稱。 如果某個語言名稱有效，但是 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 目錄檢視並未傳回該語言名稱，全文檢索搜尋就會尋求相同語系中最接近的可用語言名稱 (如果有的話)。 否則，全文檢索搜尋會尋求中性斷詞工具。 這種尋求的行為可能會影響重新叫用精確度。 因此，在建立全文檢索索引時，我們強烈建議您針對每個資料行指定有效且可用的語言名稱。  
   
 > [!NOTE]  
->  系統會針對適用於全文檢索索引的所有資料類型 (例如 **char** 或 **nchar**) 使用 LCID。 如果您將 **char**、 **varchar**或 **text** 類型資料行的排序次序設定為與 LCID 所識別之語言不同的語言設定，在全文檢索索引和查詢這些資料行期間，系統仍然會使用 LCID。  
+>  系統會針對適用於全文檢索索引的所有資料類型 (例如 **char** 或 **nchar**) 使用 LCID。 如果您將 **char**、 **varchar** 或 **text** 類型資料行的排序次序設定為與 LCID 所識別之語言不同的語言設定，在全文檢索索引和查詢這些資料行期間，系統仍然會使用 LCID。  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> 斷詞  
@@ -101,7 +101,7 @@ ms.locfileid: "88475530"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> 詞幹分析  
- 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」** 是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
+ 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 資料行類型對全文檢索搜尋的影響  

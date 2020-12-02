@@ -15,16 +15,16 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807067"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127420"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **背景工作執行緒上限**選項會設定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範圍內可用來處理查詢要求、登入、登出和類似應用程式要求的背景工作執行緒數目。
+此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **背景工作執行緒上限** 選項會設定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範圍內可用來處理查詢要求、登入、登出和類似應用程式要求的背景工作執行緒數目。
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用作業系統的原生執行緒服務來確保下列條件：
@@ -41,9 +41,9 @@ ms.locfileid: "87807067"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   實際查詢要求數目可超過**背景工作執行緒上限**中設定的值，在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將背景工作執行緒納入集區中，以便下一個可用的背景工作執行緒能處理要求。 背景工作執行緒只會指派給作用中的要求，並會在要求獲得服務之後釋放。 即使提出要求的使用者工作階段或連線保持開啟，也會發生此情況。 
+-   實際查詢要求數目可超過 **背景工作執行緒上限** 中設定的值，在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將背景工作執行緒納入集區中，以便下一個可用的背景工作執行緒能處理要求。 背景工作執行緒只會指派給作用中的要求，並會在要求獲得服務之後釋放。 即使提出要求的使用者工作階段或連線保持開啟，也會發生此情況。 
 
--   **背景工作執行緒上限**伺服器組態選項不會限制引擎內可能繁衍的所有執行緒。 LazyWriter、檢查點、記錄檔寫入器、Service Broker、鎖定管理員等工作所需的系統執行緒，或在此限制外繁衍的執行緒。 可用性群組會使用**背景工作執行緒上限限制**內的一部分背景工作執行緒，但也會使用系統執行緒 (請參閱[可用性群組的執行緒使用量](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage))，如果超過了設定的執行緒數目，則下列查詢會提供產生額外執行緒的系統工作資訊。  
+-   **背景工作執行緒上限** 伺服器組態選項不會限制引擎內可能繁衍的所有執行緒。 LazyWriter、檢查點、記錄檔寫入器、Service Broker、鎖定管理員等工作所需的系統執行緒，或在此限制外繁衍的執行緒。 可用性群組會使用 **背景工作執行緒上限限制** 內的一部分背景工作執行緒，但也會使用系統執行緒 (請參閱 [可用性群組的執行緒使用量](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage))，如果超過了設定的執行緒數目，則下列查詢會提供產生額外執行緒的系統工作資訊。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b800c1fee12b34c17aeb28b252301bd13feef0f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428550"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126850"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88428550"
 |**ObjectName**|**nvarchar**|用於此連接的連接字串。|34|否|  
 |**OwnerName**|**nvarchar**|在本機資料庫鏡像端點上設定的支援驗證方法。 可用的方法超過一種時，接受 (目標) 端點會判斷要先嘗試哪種方法。 可能的值包括：<br /><br /> <br /><br /> **None**： 未設定任何驗證方法。<br /><br /> **NTLM**。 需要 NTLM 驗證。<br /><br /> **KERBEROS**。 需要 Kerberos 驗證。<br /><br /> **NEGOTIATE**。 Windows 會交涉驗證方法。<br /><br /> **CERTIFICATE**。 需要為端點設定的憑證，它是儲存在 **master** 資料庫中。<br /><br /> **NTLM、CERTIFICATE**。 接受使用 NTLM 或端點憑證來進行驗證。<br /><br /> **KERBEROS、CERTIFICATE**。 接受使用 Kerberos 或端點憑證來進行驗證。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 交涉要使用的驗證方法，或可以使用端點憑證來進行驗證。<br /><br /> **CERTIFICATE、NTLM**。 接受使用端點憑證或 NTLM 來進行驗證。<br /><br /> **CERTIFICATE、KERBEROS**。 接受使用端點憑證或 Kerberos 來進行驗證。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受使用端點憑證來進行驗證，或由 Windows 交涉要使用的驗證方法。|37|否|  
 |**ProviderName**|**nvarchar**|用於此連接的連接字串。|46|否|  
-|**RoleName**|**nvarchar**|連接的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
+|**RoleName**|**nvarchar**|連接的角色。 為 **initiator** 或 **target** 其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  

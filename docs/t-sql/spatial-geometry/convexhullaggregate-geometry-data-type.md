@@ -16,11 +16,11 @@ ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f5f27e06872c72244361fe2973b005924a2b85d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472518"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128171"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry 資料類型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

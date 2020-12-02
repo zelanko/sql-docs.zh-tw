@@ -21,11 +21,11 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196452"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127240"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
 
@@ -59,16 +59,16 @@ ms.locfileid: "92196452"
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增]**** 按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
+ 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增] 按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員]**** 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
   
  **採礦結構**  
- 從可用的採礦結構清單中選取，或按一下 [新增]**** 建立新結構。  
+ 從可用的採礦結構清單中選取，或按一下 [新增] 建立新結構。  
   
  **新增**  
- 使用 [資料採礦精靈]**** 來建立新的採礦結構和採礦模型。  
+ 使用 [資料採礦精靈] 來建立新的採礦結構和採礦模型。  
   
  **採礦模型**  
  檢視與選取的採礦結構相關聯的採礦模型清單。  

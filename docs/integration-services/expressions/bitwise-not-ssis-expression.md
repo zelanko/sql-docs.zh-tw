@@ -15,11 +15,11 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430610"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127149"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (位元 Not) (SSIS 運算式)
 
@@ -38,10 +38,10 @@ ms.locfileid: "88430610"
   
 ## <a name="arguments"></a>引數  
  *integer_expression*  
- 是任何整數資料類型的有效運算式。 *integer*_*expression* 是整數，會轉換成二進位數字以進行位元運算。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 是任何整數資料類型的有效運算式。 *integer* _ *expression* 是整數，會轉換成二進位數字以進行位元運算。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>結果類型  
- 傳回 *integer_expression*的資料類型。  
+ 傳回 *integer_expression* 的資料類型。  
   
 ## <a name="remarks"></a>備註  
  None  

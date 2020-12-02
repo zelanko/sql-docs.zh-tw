@@ -29,11 +29,11 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 571da08ba525e2d6dcf143fc6e207266cd1a816d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547770"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127993"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

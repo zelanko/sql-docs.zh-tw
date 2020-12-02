@@ -20,11 +20,11 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869407"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127759"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "91869407"
   
 1.  在 [物件總管] 中，展開伺服器。  
   
-2.  展開 [資料庫]****，然後展開含有您要建立全文檢索停用字詞表的資料庫。  
+2.  展開 [資料庫]，然後展開含有您要建立全文檢索停用字詞表的資料庫。  
   
-3.  展開 [儲存體]****，然後以滑鼠右鍵按一下 [全文檢索停用字詞表]****。  
+3.  展開 [儲存體]，然後以滑鼠右鍵按一下 [全文檢索停用字詞表]。  
   
-4.  選取 [新增全文檢索停用字詞表]****。  
+4.  選取 [新增全文檢索停用字詞表]。  
   
 5.  輸入新的停用字詞表名稱。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "91869407"
   
 3.  展開 **[儲存體]**，然後選取 **[全文檢索停用字詞表]**。  
   
-4.  以滑鼠右鍵按一下要變更屬性的停用字詞表，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下要變更屬性的停用字詞表，然後選取 [屬性]。  
   
 5.  在 [[全文檢索停用字詞表屬性]](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) 對話方塊中：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "91869407"
   
     2.  如果已針對選定動作啟用 **[停用字詞]** 文字方塊，請輸入單一停用字詞。 這個停用字詞必須是唯一的，亦即，尚未存在您所選取之語言的這個停用字詞表中。  
   
-    3.  如果已針對選定動作啟用 [全文檢索語言]**** 清單方塊，請選取語言。  
+    3.  如果已針對選定動作啟用 [全文檢索語言] 清單方塊，請選取語言。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

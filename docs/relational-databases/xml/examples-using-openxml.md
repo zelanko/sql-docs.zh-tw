@@ -28,20 +28,20 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729967"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126311"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>範例  
- 在擷取資料時， *rowpattern* 是用來識別 XML 文件中決定資料列的節點。 另外， *rowpattern* 是以 XPath 模式語言表示，該語言使用於 MSXML XPath 實作中。 例如，如果模式結尾是元素或屬性，則會為 *rowpattern*所選取的每一個元素或屬性節點建立一個資料列。  
+ 在擷取資料時， *rowpattern* 是用來識別 XML 文件中決定資料列的節點。 另外， *rowpattern* 是以 XPath 模式語言表示，該語言使用於 MSXML XPath 實作中。 例如，如果模式結尾是元素或屬性，則會為 *rowpattern* 所選取的每一個元素或屬性節點建立一個資料列。  
   
- *flags* 值提供預設對應。 若在 *SchemaDeclaration* 中未指定 *ColPattern*，則假設為 *flags* 中所指定的對應。 若在 *SchemaDeclaration* 中指定 *ColPattern* ，則略過 *flags*值。 指定的 *ColPattern* 將決定處理溢位和未使用資料的對應 (屬性中心或元素中心) 以及行為。  
+ *flags* 值提供預設對應。 若在 *SchemaDeclaration* 中未指定 *ColPattern*，則假設為 *flags* 中所指定的對應。 若在 *SchemaDeclaration* 中指定 *ColPattern* ，則略過 *flags* 值。 指定的 *ColPattern* 將決定處理溢位和未使用資料的對應 (屬性中心或元素中心) 以及行為。  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. 以 OPENXML 執行簡單的 SELECT 陳述式  
  此範例中的 XML 文件是由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素組成。 OPENXML 陳述式所擷取的客戶資訊是來自於 XML 文件中的兩個資料行資料列集： **CustomerID** 和 **ContactName**。  
@@ -52,9 +52,9 @@ ms.locfileid: "85729967"
   
 -   *rowpattern* (/ROOT/Customer) 識別要處理的 <`Customer`> 節點。  
   
--   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration*中定義之資料列集的資料行。  
+-   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration* 中定義之資料列集的資料行。  
   
--   在 WITH 子句內的 *SchemaDeclaration*中，指定的 *ColName* 值與對應的 XML 屬性名稱相符。 因此不會在 *SchemaDeclaration* 中指定 *ColPattern*參數。  
+-   在 WITH 子句內的 *SchemaDeclaration* 中，指定的 *ColName* 值與對應的 XML 屬性名稱相符。 因此不會在 *SchemaDeclaration* 中指定 *ColPattern* 參數。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 指定 ColPattern 來進行資料列集資料行與 XML 屬性和元素之間的對應  
  此範例將說明如何在選用的 *ColPattern* 參數中指定 XPath 模式，以提供資料列集資料行與 XML 屬性和元素之間的對應。  
   
- 此範例中的 XML 文件是由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素組成。 OPENXML 陳述式所擷取的客戶及訂單資訊是來自於 XML 文件中的資料列集 (**CustomerID**、 **OrderDate**、 **ProdID**及 **Qty**)。  
+ 此範例中的 XML 文件是由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素組成。 OPENXML 陳述式所擷取的客戶及訂單資訊是來自於 XML 文件中的資料列集 (**CustomerID**、 **OrderDate**、 **ProdID** 及 **Qty**)。  
   
  首先，呼叫 **sp_xml_preparedocument** 預存程序以取得文件控制代碼。 接著將此文件控制代碼傳遞至 OPENXML。  
   
@@ -155,11 +155,11 @@ LILAS      Carlos Gonzlez
   
  舉例來說， *flags* 參數值設為 **2** ，表示元素中心的對應。 不過， *ColPattern* 中指定的對應會覆寫此對應。 也就是說， *ColPattern* 中所指定的 XPath 模式會將資料列集的資料行對應到屬性。 這會導致屬性中心的對應。  
   
- 在 WITH 子句內的 *SchemaDeclaration*中，亦使用 *ColName* 與 *ColType* 參數來指定 *ColPattern* 。 選用的 *ColPattern* 是指定的 XPath 模式，它表示下列各項：  
+ 在 WITH 子句內的 *SchemaDeclaration* 中，亦使用 *ColName* 與 *ColType* 參數來指定 *ColPattern* 。 選用的 *ColPattern* 是指定的 XPath 模式，它表示下列各項：  
   
 -   資料列集的 **OrderID**、**CustomerID** 和 **OrderDate** 資料行對應到 *rowpattern* 所識別節點的父系之屬性，且 *rowpattern* 識別 <`OrderDetail`> 節點。 因此，**CustomerID** 和 **OrderDate** 資料行對應到 <`Order`> 元素的 **CustomerID** 和 **OrderDate** 屬性。  
   
--   資料列集的 **ProdID** 及 **Qty** 資料行對應至 **rowpattern** 中所識別節點的 **ProductID** 及 *Quantity*屬性。  
+-   資料列集的 **ProdID** 及 **Qty** 資料行對應至 **rowpattern** 中所識別節點的 **ProductID** 及 *Quantity* 屬性。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -294,9 +294,9 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/root/Customer/Order) 識別要處理的 <`Order`> 節點。  
   
--   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration*中所定義的資料列集資料行。  
+-   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，XML 屬性對應至 *SchemaDeclaration* 中所定義的資料列集資料行。  
   
--   在 WITH 子句內的 *SchemaDeclaration* 中，資料列集資料行名稱 **oid** 和 **amount** 符合相對應的 XML 屬性名稱。 因此未指定 *ColPattern* 參數。 針對資料列集中的 **comment** 資料行， XPath 函數 **text()** 指定為 *ColPattern*。 這將會覆寫 *flags*中所指定之屬性中心的對應，而資料行將包含元素內容的分葉值字串。  
+-   在 WITH 子句內的 *SchemaDeclaration* 中，資料列集資料行名稱 **oid** 和 **amount** 符合相對應的 XML 屬性名稱。 因此未指定 *ColPattern* 參數。 針對資料列集中的 **comment** 資料行， XPath 函數 **text()** 指定為 *ColPattern*。 這將會覆寫 *flags* 中所指定之屬性中心的對應，而資料行將包含元素內容的分葉值字串。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -343,9 +343,9 @@ O4    10000.0       NULL
 ```  
   
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. 在 WITH 子句中指定 TableName  
- 此範例在 WITH 子句中指定 *TableName* ，而不是在 *SchemaDeclaration*中。 若您具有所需結構的資料表，且不需要資料行模式 ( *ColPattern* 參數)，這會是相當有用的方式。  
+ 此範例在 WITH 子句中指定 *TableName* ，而不是在 *SchemaDeclaration* 中。 若您具有所需結構的資料表，且不需要資料行模式 ( *ColPattern* 參數)，這會是相當有用的方式。  
   
- 此範例中的 XML 文件是由 <`Customer`> 和 <`Order`> 元素組成。 OPENXML 陳述式所擷取的訂單資訊是來自於 XML 文件中的三個資料行資料列集 (**oid**、 **date**及 **amount**)。  
+ 此範例中的 XML 文件是由 <`Customer`> 和 <`Order`> 元素組成。 OPENXML 陳述式所擷取的訂單資訊是來自於 XML 文件中的三個資料行資料列集 (**oid**、 **date** 及 **amount**)。  
   
  首先，呼叫 **sp_xml_preparedocument** 預存程序以取得文件控制代碼。 接著將此文件控制代碼傳遞至 OPENXML。  
   
@@ -355,7 +355,7 @@ O4    10000.0       NULL
   
 -   WITH 子句中沒有 *SchemaDeclaration* 。 相反地，有指定資料表名稱。 因此，資料表結構描述是做為資料列集結構描述使用。  
   
--   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，由 *rowpattern*識別的元素屬性是對應到相同名稱的資料列集資料行。  
+-   *flags* 參數值設為 **1** ，表示屬性中心的對應。 因此，由 *rowpattern* 識別的元素屬性是對應到相同名稱的資料列集資料行。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -464,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 指定 rowpattern 結束於屬性  
- 此範例中的 XML 文件是由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素組成。 OPENXML 陳述式所擷取的訂單詳細資訊是來自於 XML 文件中的三的資料行資料列集 (**ProductID**、 **Quantity**和 **OrderID**)。  
+ 此範例中的 XML 文件是由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素組成。 OPENXML 陳述式所擷取的訂單詳細資訊是來自於 XML 文件中的三的資料行資料列集 (**ProductID**、 **Quantity** 和 **OrderID**)。  
   
  首先，呼叫 **sp_xml_preparedocument** 預存程序以取得文件控制代碼。 接著將此文件控制代碼傳遞至 OPENXML。  
   
@@ -476,7 +476,7 @@ EXEC sp_xml_removedocument @docHandle
   
  在 WITH 子句內的 *SchemaDeclaration* 中，亦使用 *ColName* 與 *ColType* 參數來指定 *ColPattern* 。 選用的 *ColPattern* 是指定的 XPath 模式，它表示下列各項：  
   
--   針對資料列集內的**ProdID**資料行指定為 *ColPattern* 的 XPath 模式 ( **.** ) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
+-   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 ( **.** ) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
   
 -   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern*、 **../\@Quantity**，識別內容節點 \<ProductID> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
   
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     **id** (學生識別碼)、 **name**與 **attends** 屬性。 **attends** 屬性為多重值屬性。  
+     **id** (學生識別碼)、 **name** 與 **attends** 屬性。 **attends** 屬性為多重值屬性。  
   
 -   \<Class>  
   
-     **id** (班級識別碼)、 **name**與 **attendedBy** 屬性。 **attendedBy** 屬性為多重值屬性。  
+     **id** (班級識別碼)、 **name** 與 **attendedBy** 屬性。 **attendedBy** 屬性為多重值屬性。  
   
  \<Student> 中的 **attends** 屬性與 \<Class> 中的 **attendedBy** 屬性代表學生與類別資料表之間的 **m:n** 關聯性。 一位學生可以選擇多種學科而一種學科可以收授多位學生。  
   

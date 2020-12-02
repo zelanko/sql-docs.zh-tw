@@ -21,11 +21,11 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 16377e053344c8c5e4a59b367faeac18f51c6945
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459377"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128299"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

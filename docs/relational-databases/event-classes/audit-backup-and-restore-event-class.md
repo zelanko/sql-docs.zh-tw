@@ -13,11 +13,11 @@ ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd3b8ca71c9a251343d001ca269e730acf71a217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384854"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126876"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Audit Backup 和 Restore 事件類別
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
