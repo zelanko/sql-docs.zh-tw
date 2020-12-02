@@ -14,15 +14,15 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809475"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-具有使用自我聯結表達階層式關聯性之資料表的客戶可以使用本課程當做指導方針，將其資料表轉換為階層式結構。 從這種表示法移轉到另一種使用 **hierarchyid**之表示法的步驟非常簡單。 移轉之後，使用者將會有一個精簡而且容易了解的階層式表示法，可以使用數種方式建立索引以便進行有效率的查詢。  
+具有使用自我聯結表達階層式關聯性之資料表的客戶可以使用本課程當做指導方針，將其資料表轉換為階層式結構。 從這種表示法移轉到另一種使用 **hierarchyid** 之表示法的步驟非常簡單。 移轉之後，使用者將會有一個精簡而且容易了解的階層式表示法，可以使用數種方式建立索引以便進行有效率的查詢。  
   
 本課程會檢查現有的資料表、建立包含 **hierarchyid** 資料行的新資料列、使用來源資料表中的資料擴展資料表，然後示範三個索引策略。 這個課程包含下列主題：  
  
@@ -37,11 +37,11 @@ ms.locfileid: "91809475"
 如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](../backup-restore/restore-a-database-backup-using-ssms.md)。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>檢查 Employee 資料表的目前結構
-範例 AdventureWorks2017 (或更新版本) 資料庫在 **HumanResources** 結構描述中包含一個 **Employee** 資料表。 為避免變更原始資料表，此步驟會製作一個名為 **EmployeeDemo** 的 **Employee**資料表複本。 若要簡化範例，您僅能從原始資料表複製五個資料行。 然後，您可以查詢 **HumanResources.EmployeeDemo** 資料表，以便在不使用 **hierarchyid** 資料類型的情況下，檢閱如何將資料表中的資料結構化。  
+範例 AdventureWorks2017 (或更新版本) 資料庫在 **HumanResources** 結構描述中包含一個 **Employee** 資料表。 為避免變更原始資料表，此步驟會製作一個名為 **EmployeeDemo** 的 **Employee** 資料表複本。 若要簡化範例，您僅能從原始資料表複製五個資料行。 然後，您可以查詢 **HumanResources.EmployeeDemo** 資料表，以便在不使用 **hierarchyid** 資料類型的情況下，檢閱如何將資料表中的資料結構化。  
   
 ### <a name="copy-the-employee-table"></a>複製 Employee 資料表  
   
-1.  在 [查詢編輯器] 視窗中執行下列程式碼，以便將資料表結構和資料從 **Employee** 資料表複製到名稱為 **EmployeeDemo**的新資料表。 由於原始的資料表已經使用 hierarchyid，此查詢基本上會使階層扁平化，以擷取員工的經理。 在本課程的後續部分中，我們將會重建此階層。
+1.  在 [查詢編輯器] 視窗中執行下列程式碼，以便將資料表結構和資料從 **Employee** 資料表複製到名稱為 **EmployeeDemo** 的新資料表。 由於原始的資料表已經使用 hierarchyid，此查詢基本上會使階層扁平化，以擷取員工的經理。 在本課程的後續部分中，我們將會重建此階層。
 
    ```sql  
    USE AdventureWorks2017;  
@@ -103,7 +103,7 @@ ms.locfileid: "91809475"
   
 ### <a name="to-create-a-new-table-named-neworg"></a>若要建立名稱為 NewOrg 的新資料表  
   
--   在 [查詢編輯器] 視窗中，執行下列程式碼以建立名稱為 **HumanResources.NewOrg**的新資料表：  
+-   在 [查詢編輯器] 視窗中，執行下列程式碼以建立名稱為 **HumanResources.NewOrg** 的新資料表：  
   
     ```sql   
     CREATE TABLE HumanResources.NewOrg  
@@ -224,7 +224,7 @@ ms.locfileid: "91809475"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
- 您在[使用現有的階層式資料填入資料表]()工作中建立的 **NewOrd** 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
+ 您在 [使用現有的階層式資料填入資料表]()工作中建立的 **NewOrd** 資料表包含所有員工資訊，並使用 **hierarchyid** 資料類型代表階層結構。 此工作會新增索引以支援在 **hierarchyid** 資料行上進行搜尋。  
   
 
 **hierarchyid** 資料行 (**OrgNode**) 是 **NewOrg** 資料表的主要索引鍵。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  
@@ -232,7 +232,7 @@ ms.locfileid: "91809475"
   
 ### <a name="create-index-on-neworg-table-for-efficient-searches"></a>建立 NewOrg 資料表的索引以便進行有效率的搜尋  
   
-1.  為協助在階層的相同層級進行查詢，使用 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) 方法來建立階層中包含層級的計算資料行。 然後，在層級和 **Hierarchyid**上建立複合式索引。 執行下列程式碼以建立計算資料行和廣度優先的索引：  
+1.  為協助在階層的相同層級進行查詢，使用 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) 方法來建立階層中包含層級的計算資料行。 然後，在層級和 **Hierarchyid** 上建立複合式索引。 執行下列程式碼以建立計算資料行和廣度優先的索引：  
   
     ```sql  
     ALTER TABLE HumanResources.NewOrg   
@@ -242,7 +242,7 @@ ms.locfileid: "91809475"
     GO  
     ```  
   
-2.  在 **EmployeeID** 資料行上建立唯一的索引。 這是依 **EmployeeID** 號碼之單一員工的傳統單一查閱。 執行下列程式碼，在 **EmployeeID**上建立索引：  
+2.  在 **EmployeeID** 資料行上建立唯一的索引。 這是依 **EmployeeID** 號碼之單一員工的傳統單一查閱。 執行下列程式碼，在 **EmployeeID** 上建立索引：  
   
     ```sql  
     CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
@@ -290,7 +290,7 @@ ms.locfileid: "91809475"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID**優先索引：資料列會以 **EmployeeID** 順序儲存。  
+    **EmployeeID** 優先索引：資料列會以 **EmployeeID** 順序儲存。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

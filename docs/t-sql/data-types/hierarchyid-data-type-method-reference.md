@@ -20,10 +20,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e9968e1537901de729406c5b0ddc21857e74b886
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037488"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
@@ -34,7 +34,7 @@ ms.locfileid: "92037488"
 **hierarchyid** 資料類型的值代表樹狀目錄階層中的位置。 **hierarchyid** 的值具有下列屬性：
   
 -   極度壓縮  
-     代表樹狀目錄 (含有 *n* 個節點) 中之節點所需的平均位元數目會因平均扇出 (節點子系的平均數目) 而不同。 若為小型扇出 (0-7)，其大小大約是 6\*logA*n* 個位元，其中 A 是平均扇出。 在平均 fanout 為 6 個階層之 100,000 人員的組織階層中，節點會佔用大約 38 位元。 然後，這會四捨五入成 40 位元 (或 5 個位元組)，以便進行儲存。  
+     代表樹狀目錄 (含有 *n* 個節點) 中之節點所需的平均位元數目會因平均扇出 (節點子系的平均數目) 而不同。 若為小型扇出 (0-7)，其大小大約是 6\*logA *n* 個位元，其中 A 是平均扇出。 在平均 fanout 為 6 個階層之 100,000 人員的組織階層中，節點會佔用大約 38 位元。 然後，這會四捨五入成 40 位元 (或 5 個位元組)，以便進行儲存。  
 -   比較是按照深度優先順序  
      假設有兩個 **hierarchyid** 值 (**a** 和 **b**)，**a<b** 就表示在樹狀目錄的深度優先周遊中，a 在 b 前面。 **hierarchyid** 資料類型的索引採用深度優先順序，而且在深度優先周遊中彼此接近的節點會以彼此接近的方式儲存。 例如，某筆記錄的子系會儲存在該記錄旁。 如需詳細資訊，請參閱[階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)。  
 -   支援任意插入和刪除  

@@ -19,10 +19,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c7d84ba6285867f9b37aa26f1fc3f721c75fefb9
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380786"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)

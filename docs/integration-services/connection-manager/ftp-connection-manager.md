@@ -18,10 +18,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91728039"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
@@ -33,7 +33,7 @@ ms.locfileid: "91728039"
   
  當您將 FTP 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。  
   
- 連線管理員的 **ConnectionManagerType** 屬性會設為 [FTP]****。  
+ 連線管理員的 **ConnectionManagerType** 屬性會設為 [FTP]。  
   
  您可以利用下列方式設定 FTP 連接管理員：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "91728039"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
-  使用 [FTP 連線管理員編輯器]**** 對話方塊來指定連接到 FTP 伺服器的屬性。  
+  使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -98,7 +98,7 @@ ms.locfileid: "91728039"
  提供以 KB 為單位的傳輸資料區塊大小。  
   
  **測試連接**  
- 設定 FTP 連線管理員之後，請按一下 [測試連接]**** 以確認連接是可行的。  
+ 設定 FTP 連線管理員之後，請按一下 [測試連接] 以確認連接是可行的。  
   
 ## <a name="see-also"></a>另請參閱  
  [FTP 工作](../../integration-services/control-flow/ftp-task.md)   

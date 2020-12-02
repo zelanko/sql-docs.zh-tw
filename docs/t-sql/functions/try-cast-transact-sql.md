@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379513"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
@@ -46,7 +46,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  要進行轉換的值。 任何有效的運算式。  
   
  *data_type*  
- *運算式*轉換成的資料類型。  
+ *運算式* 轉換成的資料類型。  
   
  *length*  
  指定目標資料類型之長度的選擇性整數。  

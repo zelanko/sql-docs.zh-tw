@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498186"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -99,10 +99,10 @@ ms.locfileid: "91498186"
  指定所接收之訊息的交談或交談群組。 如果忽略這個值，便從下一個可用的交談群組傳回訊息。  
   
  conversation_handle = *conversation_handle*  
- 指定所接收之訊息的交談。 您提供的「交談控制代碼」** 必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
+ 指定所接收之訊息的交談。 您提供的「交談控制代碼」必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  conversation_group_id = *conversation_group_id*  
- 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」** 必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
+ 指定接收的訊息之交談群組。 您提供的「交談群組識別碼」必須為 **uniqueidentifier**，或可轉換為 **uniqueidentifier** 的類型。  
   
  TIMEOUT *timeout*  
  指定陳述式等候訊息的時間 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果未指定這個子句，或逾時為 -**1**，等候時間便沒有限制。 如果等候時間逾時，RECEIVE 會傳回空的結果集。  
@@ -159,7 +159,7 @@ ms.locfileid: "91498186"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|訊息狀態。 針對 RECEIVE 命令傳回的訊息，狀態一律是 **0**。 佇列中的訊息可能會包含下列其中一個值：<br /><br /> **0**=備妥**1**=接收的訊息**2**=尚未完成**3**=保留的傳送訊息|  
+|**status**|**tinyint**|訊息狀態。 針對 RECEIVE 命令傳回的訊息，狀態一律是 **0**。 佇列中的訊息可能會包含下列其中一個值：<br /><br /> **0**=備妥 **1**=接收的訊息 **2**=尚未完成 **3**=保留的傳送訊息|  
 |**priority**|**tinyint**|套用到訊息的交談優先權等級。|  
 |**queuing_order**|**bigint**|佇列中的訊息順序號碼。|  
 |**conversation_group_id**|**uniqueidentifier**|這則訊息所屬的交談群組識別碼。|  
@@ -171,7 +171,7 @@ ms.locfileid: "91498186"
 |**service_contract_id**|**int**|交談遵照的合約之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件識別碼。|  
 |**message_type_name**|**nvarchar(256)**|描述訊息格式的訊息類型名稱。 訊息可以是應用程式訊息類型或 Broker 系統訊息。|  
 |**message_type_id**|**int**|描述訊息的訊息類型之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件識別碼。|  
-|**validation**|**nchar(2)**|用於訊息的驗證。<br /><br /> **E**=空白**N**=無**X**=XML|  
+|**validation**|**nchar(2)**|用於訊息的驗證。<br /><br /> **E**=空白 **N**=無 **X**=XML|  
 |**message_body**|**varbinary(MAX)**|訊息內容。|  
   
 ## <a name="permissions"></a>權限  

@@ -27,10 +27,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 7532adbc05c0df1a9d8a15de59a8700ce67fa1de
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91226988"
 ---
 # <a name="set-statements-transact-sql"></a>SET 陳述式 (Transact-SQL)

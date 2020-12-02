@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809809"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
@@ -111,7 +111,7 @@ ms.locfileid: "91809809"
 
 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置的記憶體可能會超過最大伺服器記憶體設定中所指定的值。 當 [總伺服器記憶體 (KB)] 值已經超過 [目標伺服器記憶體 (KB)] 設定 (由最大伺服器記憶體指定) 時，即可能出現此行為。 如因記憶體分散而導致連續的可用記憶體不足以符合多頁記憶體要求的需求 (大於 8 KB)，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仍可超額配置而不拒絕記憶體要求。 
 
-執行配置之後，*資源監視器*背景工作會開始對所有記憶體取用者要求釋放配置的記憶體，並會嘗試將 [總伺服器記憶體 (KB)] 值降至 [目標伺服器記憶體 (KB)] 規格之下。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的記憶體使用量可能會短時間超過伺服器記憶體設定的上限。 在此情況下，[總伺服器記憶體 (KB)] 效能計數器會讀取超過最大伺服器記憶體及 [目標伺服器記憶體 (KB)] 設定。
+執行配置之後，*資源監視器* 背景工作會開始對所有記憶體取用者要求釋放配置的記憶體，並會嘗試將 [總伺服器記憶體 (KB)] 值降至 [目標伺服器記憶體 (KB)] 規格之下。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的記憶體使用量可能會短時間超過伺服器記憶體設定的上限。 在此情況下，[總伺服器記憶體 (KB)] 效能計數器會讀取超過最大伺服器記憶體及 [目標伺服器記憶體 (KB)] 設定。
 
 下列作業期間通常會觀察到此行為： 
 -  大型資料行存放區索引查詢。
@@ -121,9 +121,9 @@ ms.locfileid: "91809809"
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
-在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)** 、**CLR 配置器**、SQL Server 處理序中 **執行緒堆疊** 的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
+在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供 **多頁配置器 (MPA)** 、**CLR 配置器**、SQL Server 處理序中 **執行緒堆疊** 的記憶體配置，以及 **直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
 
-為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
+為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱 *資料庫引擎服務啟動選項* 的文件頁面。
 
 因為從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，新的「任何大小」分頁配置器也會處理大於 8 KB 的配置，所以 *memory_to_reserve* 值不會包含多頁配置。 除此變更之外，此設定選項的其餘項目皆維持原狀。
 
@@ -142,7 +142,7 @@ ms.locfileid: "91809809"
 
 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 動態使用記憶體時，它會定期查詢系統以判定可用的記憶體量。 維持這個可用記憶體數量可避免作業系統 (OS) 進行分頁。 如果可用記憶體少於這個數量， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將記憶體釋出給 OS。 如果可用記憶體多於這個數量， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能會配置更多記憶體。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只有當工作負載需要更多的記憶體時，它才會增加記憶體。休息中的伺服器不會增加其虛擬位址空間的大小。  
   
-**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** 控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體配置、編譯記憶體、所有快取 (包括緩衝集區)、[查詢執行記憶體授與](#effects-of-min-memory-per-query)、[鎖定管理員記憶體](#memory-used-by-sql-server-objects-specifications)，以及 CLR<sup>1</sup> 記憶體 (基本上任何在 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** 中找到的記憶體 Clerk 皆是)。 
+**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** 控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體配置、編譯記憶體、所有快取 (包括緩衝集區)、[查詢執行記憶體授與](#effects-of-min-memory-per-query)、[鎖定管理員記憶體](#memory-used-by-sql-server-objects-specifications)，以及 CLR <sup>1</sup> 記憶體 (基本上任何在 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** 中找到的記憶體 Clerk 皆是)。 
 
 <sup>1</sup> 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，CLR 記憶體由 max_server_memory 配置進行管理。
 
@@ -163,7 +163,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> 執行緒堆疊的記憶體<sup>1</sup>、CLR<sup>2</sup>、擴充處理序 .dll 檔案、分散式查詢所參考的 OLE DB 提供者、[!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考的自動化物件，以及任何非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DLL 所配置的記憶體，皆**不受**伺服器記憶體上限的限制。
+<a name="stacksizes"></a> 執行緒堆疊的記憶體 <sup>1</sup>、CLR <sup>2</sup>、擴充處理序 .dll 檔案、分散式查詢所參考的 OLE DB 提供者、[!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考的自動化物件，以及任何非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DLL 所配置的記憶體，皆 **不受** 伺服器記憶體上限的限制。
 
 <sup>1</sup> 如需在目前主機中，為指定數量之親和 CPU 而計算出的預設背景工作執行緒相關資訊，請參閱如何[設定最大背景工作執行緒伺服器設定選項](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文件頁面。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 堆疊大小如下：
 
@@ -202,7 +202,7 @@ FROM sys.dm_os_process_memory;
 * 鎖定 (由鎖定管理員保留)：64 位元組 + 每位擁有者 32 位元組   
 * 使用者連線：大約是 (3 \* network_packet_size + 94 KB)    
 
-**網路封包大小**是表格式資料配置 (TDS) 封包的大小，用於在應用程式和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫引擎之間進行通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。
+**網路封包大小** 是表格式資料配置 (TDS) 封包的大小，用於在應用程式和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫引擎之間進行通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。
 
 啟用多個使用中結果集 (MARS) 時，使用者連接大約是 (3 + 3 \*num_logical_connections)\* network_packet_size + 94 KB
 
@@ -217,7 +217,7 @@ FROM sys.dm_os_process_memory;
 > 如需使用此設定的建議，請參閱[設定 min memory per query 伺服器設定選項](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)。
 
 ### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>記憶體授與考量
-針對**資料列模式執行**，在任何情況下，都不得超過初始記憶體授與。 如果需要比初始授與更多的記憶體才能執行**雜湊**或**排序**作業，則這些作業會溢出至磁碟。 溢出的雜湊作業受到 TempDB 中之工作檔案的支援，而溢出的排序作業則受到[工作資料表](../relational-databases/query-processing-architecture-guide.md#worktables)的支援。   
+針對 **資料列模式執行**，在任何情況下，都不得超過初始記憶體授與。 如果需要比初始授與更多的記憶體才能執行 **雜湊** 或 **排序** 作業，則這些作業會溢出至磁碟。 溢出的雜湊作業受到 TempDB 中之工作檔案的支援，而溢出的排序作業則受到[工作資料表](../relational-databases/query-processing-architecture-guide.md#worktables)的支援。   
 
 排序作業期間發生的溢出稱為[排序警告](../relational-databases/event-classes/sort-warnings-event-class.md)。 排序警告會指出不符合記憶體的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 `SELECT` 陳述式中所用之 `ORDER BY` 子句) 的排序作業。
 
@@ -225,12 +225,12 @@ FROM sys.dm_os_process_memory;
 -  當建立輸入不符合可用記憶體時，會發生雜湊遞迴，因而將輸入分割為多個需要個別處理的資料分割。 如果這些資料分割中仍有任何資料分割不符合可用記憶體，則這些資料分割會再分為子資料分割，仍是需要個別處理。 這個分割處理會繼續進行，直到每個資料分割都符合可用記憶體或達到最大遞迴層級為止。
 -  當雜湊作業達到最大遞迴等級時會發生 Hash Bailout，且切換到其他計畫以處理其他的分割資料。 這些事件會導致您的伺服器效能降低。
 
-針對**批次模式執行**，根據預設，初始記憶體授與最高可動態增加到特定內部閾值。 此動態記憶體授與機制的設計是為了允許**雜湊**或**排序**作業的記憶體駐留執行在批次模式中執行。 如果這些作業仍不符合記憶體，則會溢出至磁碟。
+針對 **批次模式執行**，根據預設，初始記憶體授與最高可動態增加到特定內部閾值。 此動態記憶體授與機制的設計是為了允許 **雜湊** 或 **排序** 作業的記憶體駐留執行在批次模式中執行。 如果這些作業仍不符合記憶體，則會溢出至磁碟。
 
 如需執行模式的詳細資訊，請參閱[查詢處理架構指南](../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 ## <a name="buffer-management"></a>緩衝區管理
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的主要用途是為了儲存和擷取資料，因此大量磁碟 I/O 是 Database Engine 的核心特性。 此外，因為磁碟 I/O 作業會秏用許多資源，而且相對上需要較長的時間才能完成，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 非常著重提高 I/O 的效率。 緩衝區管理是達成這種效率的重要元件。 緩衝區管理元件包含兩種機制：可存取及更新資料庫分頁的**緩衝區管理員**，以及可降低資料庫檔案 I/O 的**緩衝快取** (也稱為**緩衝集區**)。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的主要用途是為了儲存和擷取資料，因此大量磁碟 I/O 是 Database Engine 的核心特性。 此外，因為磁碟 I/O 作業會秏用許多資源，而且相對上需要較長的時間才能完成，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 非常著重提高 I/O 的效率。 緩衝區管理是達成這種效率的重要元件。 緩衝區管理元件包含兩種機制：可存取及更新資料庫分頁的 **緩衝區管理員**，以及可降低資料庫檔案 I/O 的 **緩衝快取** (也稱為 **緩衝集區**)。 
 
 ### <a name="how-buffer-management-works"></a>緩衝區管理如何運作
 緩衝區是 8 KB 的記憶體分頁，大小與資料或索引頁相同。 因此，緩衝區快取會分成 8 KB 的分頁。 緩衝區管理員管理從資料庫磁碟檔案將資料或索引頁面讀取到緩衝快取中，以及將修改後頁面重新寫入磁碟的功能。 頁面會保留在緩衝區快取中，直到緩衝區管理員需要緩衝區來讀取更多資料為止。 只有資料修改後，才會重新寫入磁碟。 在重新寫入磁碟之前，可以多次修改緩衝區快取中的資料。 如需詳細資訊，請參閱 [讀取分頁](../relational-databases/reading-pages.md) 和 [寫入分頁](../relational-databases/writing-pages.md)。
@@ -248,9 +248,9 @@ FROM sys.dm_os_process_memory;
 ### <a name="supported-features"></a>支援的功能
 緩衝區管理員支援下列功能：
 
-* 緩衝區管理員可知曉**非統一記憶體存取 (NUMA)** 。 緩衝快取頁面會分散到硬體 NUMA 節點，這可讓執行緒存取本機 NUMA 節點上配置的緩衝區頁面，而不是從外部記憶體中存取。 
+* 緩衝區管理員可知曉 **非統一記憶體存取 (NUMA)** 。 緩衝快取頁面會分散到硬體 NUMA 節點，這可讓執行緒存取本機 NUMA 節點上配置的緩衝區頁面，而不是從外部記憶體中存取。 
 * 緩衝區管理員支援 [熱新增記憶體]，讓使用者無須重新啟動伺服器即可增加實體記憶體。 
-* 緩衝區管理員在 64 位元平台上支援**大型分頁**。 Windows 的不同版本各有特定的頁面大小。
+* 緩衝區管理員在 64 位元平台上支援 **大型分頁**。 Windows 的不同版本各有特定的頁面大小。
 
   > [!NOTE]
   > 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以前，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中建立大型分頁需要[追蹤旗標 834](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
@@ -300,7 +300,7 @@ FROM sys.dm_os_process_memory;
 - 記憶體設定已透過降低 *max server memory* 設定手動降低。 
 - 數個快取之間的內部元件記憶體分配有所變更。
 
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會實作專門用來偵測及處理記憶體壓力的架構，以作為其動態記憶體管理的一部分。 此架構包含稱為**資源監視器**的背景工作。 資源監視器工作會監視外部和內部記憶體指標的狀態。 一旦其中一個指標變更狀態，就會計算對應的通知並予以廣播。 這些通知是來自每個引擎元件的內部訊息，並會儲存在信號緩衝區中。 
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會實作專門用來偵測及處理記憶體壓力的架構，以作為其動態記憶體管理的一部分。 此架構包含稱為 **資源監視器** 的背景工作。 資源監視器工作會監視外部和內部記憶體指標的狀態。 一旦其中一個指標變更狀態，就會計算對應的通知並予以廣播。 這些通知是來自每個引擎元件的內部訊息，並會儲存在信號緩衝區中。 
 
 有兩個信號緩衝區會保存與動態記憶體管理相關的資訊： 
 - 資源監視器信號緩衝區，它會追蹤資源監視器活動，例如是否發出記憶體壓力信號。 此信號緩衝區會根據目前條件為 *RESOURCE_MEMPHYSICAL_HIGH*、*RESOURCE_MEMPHYSICAL_LOW*、*RESOURCE_MEMPHYSICAL_STEADY* 或 *RESOURCE_MEMVIRTUAL_LOW* 來包含狀態資訊。
@@ -343,7 +343,7 @@ FROM sys.dm_os_process_memory;
 > [!NOTE]
 > 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 之前，追蹤旗標 8048 可用來強制以節點為基礎的 PMO 成為以 CPU 為基礎的 PMO。 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，此行為是動態的且由引擎所控制。
 
-從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以動態偵測特定 CMemThread 物件上的爭用，並將物件升階為以每個節點或每個 CPU 為基礎的實作。 一旦升階之後，PMO 就會保持升階，直到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序重新開始為止。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中是否有高 CMEMTHREAD 等候，以及透過觀察 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 資料行 *contention_factor*、*partition_type*、*exclusive_allocations_count* 和 *waiting_tasks_count*，都可以偵測到 CMemThread 爭用。
+從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 可以動態偵測特定 CMemThread 物件上的爭用，並將物件升階為以每個節點或每個 CPU 為基礎的實作。  一旦升階之後，PMO 就會保持升階，直到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序重新開始為止。 [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV 中是否有高 CMEMTHREAD 等候，以及透過觀察 [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV 資料行 *contention_factor*、*partition_type*、*exclusive_allocations_count* 和 *waiting_tasks_count*，都可以偵測到 CMemThread 爭用。
 
 ## <a name="see-also"></a>另請參閱
 [伺服器記憶體伺服器組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

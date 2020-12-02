@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bafff2cafe25587ae65c519bfc2e1896b34117d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379987"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -44,7 +44,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 
 ## <a name="arguments"></a>引數
  *numeric_expression*  
- 這是精確數值或近似數值資料類型類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。  
+ 這是精確數值或近似數值資料類型類別的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。  
   
  *length*  
  這是 *numeric_expression* 捨入到的有效位數。 *length* 必須是 **tinyint**、**smallint** 或 **int** 類型的運算式。當 *length* 是正數時，*numeric_expression* 會捨入到 *length* 所指定的十進位數。 當 *length* 是負數時，*numeric_expression* 會依照 *length* 所指定的方式，在小數點左側捨入。  

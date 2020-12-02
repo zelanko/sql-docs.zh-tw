@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e4083a2e06ced4275af0938e222143fa255ff48
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037511"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "92037511"
 
 ## <a name="arguments"></a>引數
 **nchar** [ ( n ) ]  
-固定大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
+固定大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為 [代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
   
 **nvarchar** [ ( n | **max** ) ]  
-可變大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且可以是 1 到 4,000 之間的值。 **max** 表示儲存大小上限是 2^30-1 個字元 (2 GB)。 儲存大小是 *n* 位元組的兩倍 + 2 位元組。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍 + 2 位元組，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍 + 2 位元組，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
+可變大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且可以是 1 到 4,000 之間的值。 **max** 表示儲存大小上限是 2^30-1 個字元 (2 GB)。 儲存大小是 *n* 位元組的兩倍 + 2 位元組。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍 + 2 位元組，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍 + 2 位元組，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為 [代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
   
 ## <a name="remarks"></a>備註  
-常見的誤解是假設 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，*n* 會定義字元數。 但是在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字串長度 (以**位元組配對**為單位) (0-4,000)。 *n* 一律不會定義可儲存的字元數。 這類似於 [CHAR (*n*) 和 VARCHAR (*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 的定義。   
+常見的誤解是假設 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，*n* 會定義字元數。 但是在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字串長度 (以 **位元組配對** 為單位) (0-4,000)。 *n* 一律不會定義可儲存的字元數。 這類似於 [CHAR (*n*) 和 VARCHAR (*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 的定義。   
 發生誤解的原因是，在使用 Unicode 範圍 0-65,535 中所定義的字元時，每個位元組配對可以儲存一個字元。 不過，在較高的 Unicode 範圍 (65,536-1,114,111) 中，一個字元可能會使用兩個位元組配對。 例如，在定義為 NCHAR(10) 的資料行中，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以儲存 10 個字元，該字元會使用一個位元組配對 (Unicode 範圍 0-65,535)，但使用兩個位元組配對 (Unicode 範圍 65,536-1,114,111) 時，則會小於 10 個字元。 如需 Unicode 儲存和字元範圍的詳細資訊，請參閱 [UTF-8 和 UTF-16 之間的儲存差異](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。     
 
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 當 *n* 不是由 CAST 函式指定時，預設長度為 30。

@@ -22,10 +22,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91380635"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -45,7 +45,7 @@ REVERSE ( string_expression )
 
 ## <a name="arguments"></a>引數
  *string_expression*  
- *string_expression* 是字串或二進位資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *string_expression* 可以是字元或二進位資料的常數、變數或資料行。  
+ *string_expression* 是字串或二進位資料類型的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *string_expression* 可以是字元或二進位資料的常數、變數或資料行。  
   
 ## <a name="return-types"></a>傳回型別  
  **varchar** 或 **nvarchar**  

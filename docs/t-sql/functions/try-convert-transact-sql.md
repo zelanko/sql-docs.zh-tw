@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 82c8807aef206867a8f50eed507e7a3a4cb48e59
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379503"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
@@ -43,7 +43,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 
 ## <a name="arguments"></a>引數
  *data_type [ ( length ) ]*  
- *運算式*轉換成的資料類型。  
+ *運算式* 轉換成的資料類型。  
   
  *expression*  
  要進行轉換的值。  

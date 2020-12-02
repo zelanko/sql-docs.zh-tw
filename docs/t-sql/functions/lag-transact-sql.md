@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 61921766a4b665ceadc5dd4791fa699f1f23d1dc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116694"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
@@ -57,7 +57,7 @@ LAG (scalar_expression [,offset] [,default])
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函數之前，*order_by_clause* 可指定資料順序。 如果指定 *partition_by_clause*，它會決定分割區中的資料次序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回型別  
- 已指定的 *scalar_expression*的資料類型。 如果 *scalar_expression* 可以為 Null 或 *default* 設為 NULL，則會傳回 NULL。  
+ 已指定的 *scalar_expression* 的資料類型。 如果 *scalar_expression* 可以為 Null 或 *default* 設為 NULL，則會傳回 NULL。  
   
 ## <a name="general-remarks"></a>一般備註  
  LAG 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  

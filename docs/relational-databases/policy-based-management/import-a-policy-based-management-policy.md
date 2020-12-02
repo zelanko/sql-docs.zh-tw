@@ -14,10 +14,10 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91412757"
 ---
 # <a name="import-a-policy-based-management-policy"></a>匯入原則式管理原則
@@ -32,15 +32,15 @@ ms.locfileid: "91412757"
   
 ### <a name="to-import-a-policy-instance"></a>若要匯入原則執行個體  
   
-1.  在物件總管**** 中，按一下加號，展開新匯入之原則執行個體所在的伺服器。  
+1.  在物件總管中，按一下加號，展開新匯入之原則執行個體所在的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
 3.  按一下加號展開 **[原則管理]**。  
   
-4.  以滑鼠右鍵按一下 [原則]**** 資料夾，然後選取 [匯入原則]****。  
+4.  以滑鼠右鍵按一下 [原則] 資料夾，然後選取 [匯入原則]。  
   
-5.  在 [匯入]**** 對話方塊中，輸入檔案的路徑和名稱，或使用瀏覽 (**...**) 按鈕找出包含原則的 XML 檔案，然後選取此檔案。 如需有關 **[匯入]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)＞。  
+5.  在 [匯入] 對話方塊中，輸入檔案的路徑和名稱，或使用瀏覽 (**...**) 按鈕找出包含原則的 XML 檔案，然後選取此檔案。 如需有關 **[匯入]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)＞。  
   
 6.  完成後，請按一下 **[確定]** 。  
 

@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65161cafb2ef12e2de120b0e0bd402b722447620
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91670911"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
@@ -58,7 +58,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  這是要使用的物件。 *object_name* 是 **varchar** 或 **nvarchar**。 如果 *object_name* 是 **varchar**，則會隱含地轉換成 **nvarchar**。 資料庫和結構描述名稱的指定是選擇性的。  
   
  **'** *object_type* **'**  
- 這是結構描述範圍物件類型。 *object_type* 是 **varchar** 或 **nvarchar**。 如果 *object_type* 是 **varchar**，則會隱含地轉換成 **nvarchar**。 如需物件類型清單，請參閱 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的**類型**資料行。  
+ 這是結構描述範圍物件類型。 *object_type* 是 **varchar** 或 **nvarchar**。 如果 *object_type* 是 **varchar**，則會隱含地轉換成 **nvarchar**。 如需物件類型清單，請參閱 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的 **類型** 資料行。  
   
 ## <a name="return-types"></a>傳回型別  
  **int**  

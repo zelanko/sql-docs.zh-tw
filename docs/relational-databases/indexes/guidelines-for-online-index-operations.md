@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867676"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
@@ -32,7 +32,7 @@ ms.locfileid: "91867676"
 
 當您執行線上索引作業時，下列指導方針將適用：  
 
-- 當基礎資料表包含下列大型物件 (LOB) 資料類型時，必須離線建立、重建或卸除叢集索引： **image**、 **ntext**和 **text**。  
+- 當基礎資料表包含下列大型物件 (LOB) 資料類型時，必須離線建立、重建或卸除叢集索引： **image**、 **ntext** 和 **text**。  
 - 當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
 - 您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
 - 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。

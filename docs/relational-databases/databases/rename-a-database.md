@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92005510"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
@@ -66,11 +66,11 @@ ms.locfileid: "92005510"
 使用 SQL Server Management Studio，透過下列步驟重新命名 SQL Server 或 Azure SQL 資料庫。
 
   
-1. 在 [物件總管]**** 中，連線至 SQL 執行個體。  
+1. 在 [物件總管] 中，連線至 SQL 執行個體。  
   
 2. 請確定資料庫沒有任何開啟的連線。 如果您使用 SQL Server，則可以[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)關閉任何開啟的連線，並防止其他使用者在您變更資料庫名稱時連線。  
   
-3. 在 [物件總管] 中，展開 [資料庫]****，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]****。  
+3. 在 [物件總管] 中，展開 [資料庫]，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]。  
   
 4. 輸入新的資料庫名稱，然後按一下 **[確定]**。  
   

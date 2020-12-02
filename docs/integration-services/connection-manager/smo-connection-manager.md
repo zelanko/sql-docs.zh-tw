@@ -18,10 +18,10 @@ ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23a54cf3d07772276dbdf21dd7bf752a35121097
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719322"
 ---
 # <a name="smo-connection-manager"></a>SMO 連線管理員
@@ -47,7 +47,7 @@ ms.locfileid: "91719322"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="smo-connection-manager-editor"></a>SMO 連接管理員編輯器
-  使用 [SMO 連線管理員編輯器]**** 來設定傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件的各種工作所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接。  
+  使用 [SMO 連線管理員編輯器] 來設定傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件的各種工作所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接。  
   
  若要深入了解 SMO 連線管理員，請參閱 [SMO 連線管理員](../../integration-services/connection-manager/smo-connection-manager.md)。  
   

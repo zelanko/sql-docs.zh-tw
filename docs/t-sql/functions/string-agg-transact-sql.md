@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa5490a488168716649a913045b38dc04591ce27
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379803"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -105,7 +105,7 @@ FROM Person.Person;
 在 `name` 資料格中找到的 `NULL` 值不會在結果中傳回。   
 
 > [!NOTE]  
-> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果]**** 以正確地查看結果集。       
+> 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果] 以正確地查看結果集。       
 > 根據預設，[以文字顯示結果] 會截斷為 256 個字元。 若要增加此限制，請變更 [每個資料行中顯示的最大字元數] 選項。
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 產生以逗號分隔且不含 NULL 值的名稱清單
@@ -145,7 +145,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
-> 如果使用 Management Studio 查詢編輯器，[以方格顯示結果]**** 選項將無法實作歸位字元。 請切換至 [以文字顯示結果]**** 以正確地查看結果集。
+> 如果使用 Management Studio 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果] 以正確地查看結果集。
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 傳回具有相關標籤的新聞文章
 

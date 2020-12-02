@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d34379bacee3a8d01f8f28c11930aefc5c00ab5
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379833"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -52,7 +52,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  這是總長度。 其中包括小數點、正負號、數字和空格。 預設值為 10。  
   
  *decimal*  
- 這是小數點右方的位數。 *decimal*必須小於或等於 16。 如果 *decimal* 大於 16，則結果就會截斷為小數點右方的十六位數。  
+ 這是小數點右方的位數。 *decimal* 必須小於或等於 16。 如果 *decimal* 大於 16，則結果就會截斷為小數點右方的十六位數。  
   
 ## <a name="return-types"></a>傳回型別  
  **varchar**  

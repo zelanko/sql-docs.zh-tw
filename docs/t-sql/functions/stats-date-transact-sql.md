@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4657f96d1fe67435d547696361b8593d022fb559
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379863"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
@@ -55,7 +55,7 @@ STATS_DATE ( object_id , stats_id )
  統計資料物件的識別碼。  
   
 ## <a name="return-types"></a>傳回型別  
- 成功時傳回 **datetime**。 若未建立統計資料 Blob，則傳回**NULL**。  
+ 成功時傳回 **datetime**。 若未建立統計資料 Blob，則傳回 **NULL**。  
   
 ## <a name="remarks"></a>備註  
  系統函數可以用於選取清單、WHERE 子句以及任何可以使用運算式的位置。  

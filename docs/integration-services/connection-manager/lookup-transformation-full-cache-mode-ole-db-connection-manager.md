@@ -14,10 +14,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719671"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
@@ -44,7 +44,7 @@ ms.locfileid: "91719671"
   
 4.  按兩下來源或前一個轉換以設定元件。  
   
-5.  按兩下查閱轉換，然後在 [查閱轉換編輯器]**** 的 [一般]**** 頁面上，選取 [完整快取]****。  
+5.  按兩下查閱轉換，然後在 [查閱轉換編輯器] 的 [一般] 頁面上，選取 [完整快取]。  
   
 6.  在 **[連接類型]** 區域中，選取 **[OLE DB 連接管理員]**。  
   

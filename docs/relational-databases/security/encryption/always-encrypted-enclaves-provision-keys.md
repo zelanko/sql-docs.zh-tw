@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867659"
 ---
 # <a name="provision-enclave-enabled-keys"></a>佈建已啟用記憶體保護區的金鑰
@@ -40,28 +40,28 @@ ms.locfileid: "91867659"
 
 ## <a name="provision-enclave-enabled-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 佈建已啟用記憶體保護區的金鑰
 在 SQL Server Management Studio 18.3 或更新版本中，您可以：
-- 使用 [新增資料行主要金鑰]**** 對話方塊來佈建已啟用記憶體保護區的資料行主要金鑰。
-- 使用 [新增資料行加密金鑰]**** 對話方塊來佈建已啟用記憶體保護區的資料行加密金鑰。
+- 使用 [新增資料行主要金鑰] 對話方塊來佈建已啟用記憶體保護區的資料行主要金鑰。
+- 使用 [新增資料行加密金鑰] 對話方塊來佈建已啟用記憶體保護區的資料行加密金鑰。
 
 > [!NOTE]
 > [Always Encrypted 精靈](always-encrypted-wizard.md)目前不支援產生已啟用記憶體保護區的金鑰。 但是，您可以先使用上述對話方塊來建立已啟用記憶體保護區的金鑰，然後在執行精靈時，為您所想要加密資料行選取已存在的啟用記憶體保護區資料行加密。
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>使用 [新增資料行主要金鑰] 對話方塊來佈建已啟用記憶體保護區的資料行主要金鑰
-請遵循[使用 [新增資料行主要金鑰] 對話方塊佈建資料行主要金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)中步驟來佈建已啟用記憶體保護區的資料行主要金鑰。 請確認選取 [允許記憶體保護區計算]****。 請參閱以下的螢幕擷取畫面：
+請遵循[使用 [新增資料行主要金鑰] 對話方塊佈建資料行主要金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)中步驟來佈建已啟用記憶體保護區的資料行主要金鑰。 請確認選取 [允許記憶體保護區計算]。 請參閱以下的螢幕擷取畫面：
 
 ![允許記憶體保護區運算](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> 只有在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體包含正確初始化的安全記憶體保護區時，才會出現 [允許記憶體保護區計算]**** 核取方塊。 如需詳細資訊，請參閱[設定 Always Encrypted 的記憶體保護區類型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)。
+> 只有在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體包含正確初始化的安全記憶體保護區時，才會出現 [允許記憶體保護區計算] 核取方塊。 如需詳細資訊，請參閱[設定 Always Encrypted 的記憶體保護區類型](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)。
 
 > [!TIP]
-> 若要檢查特定資料行主要金鑰是否已啟用記憶體保護區，請在 [物件總管] 中以滑鼠右鍵按一下該資料行主要金鑰，並選取 [屬性]****。 若金鑰已啟用記憶體保護區，視窗中便會出現 [記憶體保護區計算: 允許]，其顯示金鑰的屬性。 或者，您可以使用 [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) 檢視。
+> 若要檢查特定資料行主要金鑰是否已啟用記憶體保護區，請在 [物件總管] 中以滑鼠右鍵按一下該資料行主要金鑰，並選取 [屬性]。 若金鑰已啟用記憶體保護區，視窗中便會出現 [記憶體保護區計算: 允許]，其顯示金鑰的屬性。 或者，您可以使用 [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) 檢視。
 
 ### <a name="provision-enclave-enabled-column-encryption-keys-with-the-new-column-encryption-key-dialog"></a>使用 [新增資料行加密金鑰] 對話方塊來佈建已啟用記憶體保護區的資料行加密金鑰
 請遵循[使用 [新增資料行加密金鑰] 對話方塊佈建資料行加密金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)中步驟來佈建已啟用記憶體保護區的資料行加密金鑰。 選取資料行主要金鑰時，請確認該資料行主要金鑰已啟用記憶體保護區。
 
 > [!TIP]
-> 若要檢查特定資料行加密金鑰是否已啟用記憶體保護區，請在 [物件總管] 中以滑鼠右鍵按一下該資料行加密金鑰，並選取 [屬性]****。 若金鑰已啟用記憶體保護區，視窗中便會出現 [記憶體保護區計算: 允許]，其顯示金鑰的屬性。
+> 若要檢查特定資料行加密金鑰是否已啟用記憶體保護區，請在 [物件總管] 中以滑鼠右鍵按一下該資料行加密金鑰，並選取 [屬性]。 若金鑰已啟用記憶體保護區，視窗中便會出現 [記憶體保護區計算: 允許]，其顯示金鑰的屬性。
 
 ## <a name="provision-enclave-enabled-keys-using-powershell"></a>使用 PowerShell 佈建已啟用記憶體保護區的金鑰
 若要使用 PowerShell 佈建來佈建已啟用記憶體保護區的金鑰，您需要 SqlServer PowerShell 模組版本 21.1.18179 或更新版本。

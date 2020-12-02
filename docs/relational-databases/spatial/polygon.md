@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006232"
 ---
 # <a name="polygon"></a>Polygon
@@ -30,7 +30,7 @@ ms.locfileid: "92006232"
 ## <a name="polygon-instances"></a>Polygon 執行個體  
  **Polygon** 執行個體可以從環形組成 (此環形至少有三個相異點)。 **Polygon** 執行個體也可以是空的。  
   
-**Polygon** 的外部和任何內部環形定義了它的界限。 此環形內的空間定義了 **Polygon**的內部。  
+**Polygon** 的外部和任何內部環形定義了它的界限。 此環形內的空間定義了 **Polygon** 的內部。  
   
 下圖顯示 **Polygon** 執行個體的範例。  
   

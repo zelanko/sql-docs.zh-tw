@@ -24,10 +24,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02eaf8552bdbd25788d5a436230b58e3d14d6f9e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116663"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -138,7 +138,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   單一陳述式中為相同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫必須全都使用相同的 **OVER** 子句定義。  
   
--   單一陳述式中參考不同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫可以有不同的** OVER** 子句定義。  
+-   單一陳述式中參考不同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫可以有不同的 **OVER** 子句定義。  
   
 -   套用至 **NEXT VALUE FOR** 函式的 **OVER** 子句不支援 **PARTITION BY** 次子句。  
   
@@ -169,7 +169,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  若要稽核 **NEXT VALUE FOR** 函式，請監視 SCHEMA_OBJECT_ACCESS_GROUP。  
   
 ## <a name="examples"></a>範例  
- 如需建立順序和使用 **NEXT VALUE FOR** 函式產生序號的範例，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 如需建立順序和使用 **NEXT VALUE FOR** 函式產生序號的範例，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  下列範例會使用 `CountBy1` 結構描述中的 `Test` 順序。 執行下列陳述式以建立 `Test.CountBy1` 順序。 範例 C 和 E 使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，所以 `CountBy1` 順序是在該資料庫中建立的。  
   
@@ -230,7 +230,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. 在預設條件約束的定義中使用 NEXT VALUE FOR 函數  
- 支援在預設條件約束的定義中使用 **NEXT VALUE FOR** 函式。 如需在 **CREATE TABLE** 陳述式中使用 **NEXT VALUE FOR** 的範例，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)中的範例 C。 下列範例會使用 `ALTER TABLE`，將順序做為預設值加入至目前資料表。  
+ 支援在預設條件約束的定義中使用 **NEXT VALUE FOR** 函式。 如需在 **CREATE TABLE** 陳述式中使用 **NEXT VALUE FOR** 的範例，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)中的範例 C。 下列範例會使用 `ALTER TABLE`，將順序做為預設值加入至目前資料表。  
   
 ```sql
 CREATE TABLE Test.MyTable  

@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 70350f99ad21f711d02f4fa504bc75d8075b04dd
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379875"
 ---
 # <a name="sqrt-transact-sql"></a>SQRT (Transact-SQL)
@@ -44,7 +44,7 @@ SQRT ( float_expression )
 
 ## <a name="arguments"></a>引數
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 float 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 為 **float** 類型或能夠隱含轉換成 float 類型的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回型別  
  **float**  
