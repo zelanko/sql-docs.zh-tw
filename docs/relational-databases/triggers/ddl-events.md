@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463790"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128637"
 ---
 # <a name="ddl-events"></a>DDL 事件
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "88463790"
         CREATE_FULLTEXT_CATALOG (當指定 **create** 時適用於 CREATE FULLTEXT CATALOG 陳述式和 *sp_fulltextcatalog* )。
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG (當指定 **start_incremental** 、 *start_full*、 *Stop*或 *Rebuild*時，適用於 ALTER FULLTEXT CATALOG 陳述式、 *sp_fulltextcatalog* ，而當指定 **enable** 時，則適用於 *sp_fulltext_database* )。
+        ALTER_FULLTEXT_CATALOG (當指定 **start_incremental** 、 *start_full*、 *Stop* 或 *Rebuild* 時，適用於 ALTER FULLTEXT CATALOG 陳述式、 *sp_fulltextcatalog* ，而當指定 **enable** 時，則適用於 *sp_fulltext_database* )。
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_CATALOG (當指定 **drop** 時，適用於 DROP FULLTEXT CATALOG 陳述式和 *sp_fulltextcatalog* )。
@@ -208,7 +208,7 @@ ms.locfileid: "88463790"
         CREATE_FULLTEXT_INDEX (當指定 **create** 時，適用於 CREATE FULLTEXT INDEX 陳述式和 *sp_fulltexttable* )。
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX (當指定 **start_full** 、 *start_incremental*或 *stop*時，適用於 ALTER FULLTEXT INDEX 陳述式、 *sp_fulltextcatalog* ，而當指定了 **create**或 **drop** 以外的任何動作時，則適用於 *sp_fulltext_column* 和 *sp_fulltext_table* )。
+        ALTER_FULLTEXT_INDEX (當指定 **start_full** 、 *start_incremental* 或 *stop* 時，適用於 ALTER FULLTEXT INDEX 陳述式、 *sp_fulltextcatalog* ，而當指定了 **create** 或 **drop** 以外的任何動作時，則適用於 *sp_fulltext_column* 和 *sp_fulltext_table* )。
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_INDEX (當指定 **drop** 時，適用於 DROP FULLTEXT INDEX 陳述式和 *sp_fulltexttable* )。
@@ -355,13 +355,13 @@ ms.locfileid: "88463790"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE (適用於 CREATE ROLE 陳述式、 **sp_addrole**和 **sp_addgroup**)。
+        CREATE_ROLE (適用於 CREATE ROLE 陳述式、 **sp_addrole** 和 **sp_addgroup**)。
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE (適用於 DROP ROLE 陳述式、 **sp_droprole**和 **sp_dropgroup**)。
+        DROP_ROLE (適用於 DROP ROLE 陳述式、 **sp_droprole** 和 **sp_dropgroup**)。
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -407,7 +407,7 @@ ms.locfileid: "88463790"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA (適用於 CREATE SCHEMA 陳述式、 **sp_addrole**、 **sp_adduser**、 **sp_addgroup**和 **sp_grantdbaccess**)。
+        CREATE_SCHEMA (適用於 CREATE SCHEMA 陳述式、 **sp_addrole**、 **sp_adduser**、 **sp_addgroup** 和 **sp_grantdbaccess**)。
     :::column-end:::
     :::column:::
         ALTER_SCHEMA (適用於 ALTER SCHEMA 陳述式和 **sp_changeobjectowner**)。
@@ -568,13 +568,13 @@ ms.locfileid: "88463790"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER (適用於 CREATE USER 陳述式、 **sp_adduser**和 **sp_grantdbaccess**)。
+        CREATE_USER (適用於 CREATE USER 陳述式、 **sp_adduser** 和 **sp_grantdbaccess**)。
     :::column-end:::
     :::column:::
         ALTER_USER (適用於 ALTER USER 陳述式和 **sp_change_users_login**)。
     :::column-end:::
     :::column:::
-        DROP_USER (適用於 DROP USER 陳述式、 **sp_dropuser**和 **sp_revokedbaccess**)。
+        DROP_USER (適用於 DROP USER 陳述式、 **sp_dropuser** 和 **sp_revokedbaccess**)。
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -724,13 +724,13 @@ ms.locfileid: "88463790"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LOGIN (當用於必須隱含建立的不存在登入時，適用於 CREATE LOGIN 陳述式、 **sp_addlogin**、 **sp_grantlogin**、 **xp_grantlogin**和 **sp_denylogin** )。
+        CREATE_LOGIN (當用於必須隱含建立的不存在登入時，適用於 CREATE LOGIN 陳述式、 **sp_addlogin**、 **sp_grantlogin**、 **xp_grantlogin** 和 **sp_denylogin** )。
     :::column-end:::
     :::column:::
-        ALTER_LOGIN (當指定 **Auto_Fix**時，適用於 ALTER LOGIN 陳述式、 **sp_defaultdb**、 **sp_defaultlanguage**、 **sp_password** 和 *sp_change_users_login* )。
+        ALTER_LOGIN (當指定 **Auto_Fix** 時，適用於 ALTER LOGIN 陳述式、 **sp_defaultdb**、 **sp_defaultlanguage**、 **sp_password** 和 *sp_change_users_login* )。
     :::column-end:::
     :::column:::
-        DROP_LOGIN (適用於 DROP LOGIN 陳述式、 **sp_droplogin**、 **sp_revokelogin**和 **xp_revokelogin**)。
+        DROP_LOGIN (適用於 DROP LOGIN 陳述式、 **sp_droplogin**、 **sp_revokelogin** 和 **xp_revokelogin**)。
     :::column-end:::
 :::row-end:::  
 :::row:::

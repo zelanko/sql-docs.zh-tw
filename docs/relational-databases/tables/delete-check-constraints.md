@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 557c791f0457ef31c1bf5aeca51787f2200a70ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446449"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128719"
 ---
 # <a name="delete-check-constraints"></a>刪除檢查條件約束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88446449"
   
 2.  展開  **[條件約束]**。  
   
-3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]****。  
+3.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]。  
   
 4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   

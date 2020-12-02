@@ -22,15 +22,15 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485368"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128654"
 ---
 # <a name="create-nested-triggers"></a>建立巢狀觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序]**** 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
+  觸發程序執行用來起始另一個觸發程序的動作時，DML 和 DDL 觸發程序就是巢狀觸發程序。 這些動作可以起始化其他觸發程序等等。 DML 與 DDL 觸發程序最多可以巢狀方式嵌套多達 32 層。 您可以透過 [巢狀觸發程序] 伺服器組態選項來控制 AFTER 觸發程序是否可為巢狀。 不論此設定為何，INSTEAD OF 觸發程序 (只有 DML 觸發程序可為 INSTEAD OF 觸發程序) 均可為巢狀。  
   
 > [!NOTE]  
 >  任何從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序對 Managed 程式碼的參考，都會算成 32 層巢狀限制中的一層。 從 Managed 程式碼內叫用的方法，不列入這項限制。  
@@ -62,7 +62,7 @@ AS
   
      當觸發程序引發和執行使相同觸發程序再度引發的動作時，就會發生遞迴。 例如，應用程式會更新資料表 **T3**；這將使觸發程序 **Trig3** 引發。 **Trig3** 會再次更新 **T3** ；這將使觸發程序 **Trig3** 再度引發。  
   
-     在呼叫不同類型的觸發程序 (AFTER 或 INSTEAD OF) 之後，再次呼叫相同的觸發程序時，也會發生直接遞迴。 換句話說，即使在第一次與第二次呼叫之間呼叫了一個或多個 AFTER 觸發程序，第二次呼叫相同 INSTEAD OF 觸發程序時，仍會發生 INSTEAD OF 觸發程序的直接遞迴。 同樣地，即使在第一次與第二次呼叫之間呼叫了一或多個 INSTEAD OF 觸發程序，第二次呼叫相同 AFTER 觸發程序時，仍會發生 AFTER 觸發程序的直接遞迴。 例如，應用程式會更新資料表 **T4**。 這項更新會引發 INSTEAD OF 觸發程序 **Trig4** 。 **Trig4** 會更新資料表 **T5**。 這項更新會引發 AFTER 觸發程序 **Trig5** 。 **Trig5** 會更新資料表 **T4**，而這項更新會再次引發 INSTEAD OF 觸發程序 **Trig4** 。 這個事件鏈結被視為 **Trig4**的直接遞迴。  
+     在呼叫不同類型的觸發程序 (AFTER 或 INSTEAD OF) 之後，再次呼叫相同的觸發程序時，也會發生直接遞迴。 換句話說，即使在第一次與第二次呼叫之間呼叫了一個或多個 AFTER 觸發程序，第二次呼叫相同 INSTEAD OF 觸發程序時，仍會發生 INSTEAD OF 觸發程序的直接遞迴。 同樣地，即使在第一次與第二次呼叫之間呼叫了一或多個 INSTEAD OF 觸發程序，第二次呼叫相同 AFTER 觸發程序時，仍會發生 AFTER 觸發程序的直接遞迴。 例如，應用程式會更新資料表 **T4**。 這項更新會引發 INSTEAD OF 觸發程序 **Trig4** 。 **Trig4** 會更新資料表 **T5**。 這項更新會引發 AFTER 觸發程序 **Trig5** 。 **Trig5** 會更新資料表 **T4**，而這項更新會再次引發 INSTEAD OF 觸發程序 **Trig4** 。 這個事件鏈結被視為 **Trig4** 的直接遞迴。  
   
 -   間接遞迴  
   

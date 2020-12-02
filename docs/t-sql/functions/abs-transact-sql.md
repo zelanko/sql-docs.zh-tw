@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115612"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128580"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ABS ( numeric_expression )
 精確數值或近似數值資料型別類別目錄的運算式。
   
 ## <a name="return-types"></a>傳回型別  
-傳回與 *numeric_expression*相同的類型。
+傳回與 *numeric_expression* 相同的類型。
   
 ## <a name="examples"></a>範例  
 此範例顯示在三個不同數字上使用 `ABS` 函數的結果。

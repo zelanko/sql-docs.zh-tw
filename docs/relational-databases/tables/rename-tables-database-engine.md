@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006129"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128664"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
 
@@ -62,7 +62,7 @@ ms.locfileid: "92006129"
   
 #### <a name="to-rename-a-table"></a>重新命名資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]****。  
+1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]。  
   
 2.  從 **[檢視]** 功能表中選擇 **[屬性]**。  
   

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088166"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129177"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88088166"
   
 -   因為交易標示須耗用記錄空間，所以除非它們在資料庫復原策略中扮演重要的角色，否則不應使用交易標示。  
   
--   標示的交易認可之後，會在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory**資料表中插入一個資料列。  
+-   標示的交易認可之後，會在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory** 資料表中插入一個資料列。  
   
 -   如果標示交易跨越同一資料庫伺服器或不同伺服器上的多個資料庫，則標示會記錄在所有受影響的資料庫之記錄中。 如需詳細資訊，請參閱 [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  STOPATMARK 與 STOPBEFOREMARK 選項都支援選擇性的 AFTER *datetime* 子句。 使用 *datetime* 時，標示名稱不必是唯一的。  
   
- 如果省略 AFTER *datetime* ，向前復原會停在具有指定名稱的第一個標示。 如果指定 AFTER *datetime* ，向前復原會在 *datetime*時或之後，停止於具有指定名稱的第一個標示。  
+ 如果省略 AFTER *datetime* ，向前復原會停在具有指定名稱的第一個標示。 如果指定 AFTER *datetime* ，向前復原會在 *datetime* 時或之後，停止於具有指定名稱的第一個標示。  
   
 > [!NOTE]  
 >  如同所有的時間點還原作業，當資料庫進行大量記錄的作業時，不允許其復原至標示。  

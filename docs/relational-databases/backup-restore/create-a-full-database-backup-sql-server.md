@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809267"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129278"
 ---
 # <a name="create-a-full-database-backup"></a>建立完整資料庫備份
 
@@ -51,7 +51,7 @@ ms.locfileid: "91809267"
 
 ## <a name="permissions"></a><a name="Permissions"></a> 權限
 
-`BACKUP DATABASE` 和 `BACKUP LOG` 權限預設為 **系統管理員**固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。
+`BACKUP DATABASE` 和 `BACKUP LOG` 權限預設為 **系統管理員** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。
 
  備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務必須能夠讀取和寫入裝置，這表示執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務之帳戶必須具備寫入備份裝置的權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)並不會檢查檔案存取權限。 其結果為當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。
 
@@ -176,7 +176,7 @@ GO
 
 1. 依序展開 [資料庫]  及 [系統資料庫]  、以滑鼠右鍵按一下 `master`，然後按一下 [新查詢]  來開啟查詢視窗並連線到您的 `SQLTestDB` 資料庫。
 
-1. 執行下列命令以在 `master` 資料庫中建立[**資料庫主要金鑰**](../../relational-databases/security/encryption/create-a-database-master-key.md)及[**憑證**](../../t-sql/statements/create-certificate-transact-sql.md)。  
+1. 執行下列命令以在 `master` 資料庫中建立 [**資料庫主要金鑰**](../../relational-databases/security/encryption/create-a-database-master-key.md)及 [**憑證**](../../t-sql/statements/create-certificate-transact-sql.md)。  
 
    ```sql
    -- Create the master key

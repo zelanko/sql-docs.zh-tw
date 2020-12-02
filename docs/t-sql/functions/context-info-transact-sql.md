@@ -23,11 +23,11 @@ ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235642"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128521"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ CONTEXT_INFO()
 ## <a name="return-value"></a>傳回值
 **context_info** 值。
   
-若並未設定 **context_info** ：
+若並未設定 **context_info**：
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 Null。  
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 會傳回工作階段特定的 GUID。  
   

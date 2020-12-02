@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448823"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128798"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Database Mail：郵件已排入佇列中，未傳遞 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,13 +47,13 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 如需資料行的詳細說明，請參閱 [sysmail_help_queue_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-queue-sp-transact-sql.md#result-set)。
 
-檢查 **sysmail_event_log** 檢視中是否有活動。 檢視應該包含一個項目，說明已經啟動了 Database Mail 外部程式。 如果 **sysmail_event_log** 檢視中沒有項目，請參閱徵兆[訊息已排入佇列，但 **sysmail_event_log** 中沒有項目](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log)。 如果 **sysmail_event_log** 檢視中有錯誤，請針對特定錯誤進行疑難排解。
+檢查 **sysmail_event_log** 檢視中是否有活動。 檢視應該包含一個項目，說明已經啟動了 Database Mail 外部程式。 如果 **sysmail_event_log** 檢視中沒有項目，請參閱徵兆 [訊息已排入佇列，但 **sysmail_event_log** 中沒有項目](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log)。 如果 **sysmail_event_log** 檢視中有錯誤，請針對特定錯誤進行疑難排解。
 
 如果 **sysmail_event_log** 檢視中有項目，請檢查 **sysmail_allitems** 檢視以取得訊息的狀態。
 
 ## <a name="message-status-unsent"></a>訊息狀態未傳送 
 
-狀態為**未傳送**表示 [Database Mail 外部程式](database-mail-external-program.md)尚未處理電子郵件訊息。 Database Mail 外部程式可能已經在處理訊息時落後；外部程式處理訊息的速率取決於網路狀況、重試逾時、訊息量，以及 SMTP 伺服器的容量。 如果問題持續存在，請考慮使用多個設定檔，將訊息散發於多個 SMTP 伺服器。
+狀態為 **未傳送** 表示 [Database Mail 外部程式](database-mail-external-program.md)尚未處理電子郵件訊息。 Database Mail 外部程式可能已經在處理訊息時落後；外部程式處理訊息的速率取決於網路狀況、重試逾時、訊息量，以及 SMTP 伺服器的容量。 如果問題持續存在，請考慮使用多個設定檔，將訊息散發於多個 SMTP 伺服器。
 
 檢查最近修改日期，以取得成功傳遞的訊息。 如果上次的成功傳遞已經過好一陣子，請檢查 sysmail_event_log 檢視，驗證 Service Broker 是否成功啟動外部程式。 如果上次嘗試並未啟動外部程式，請確認 Database Mail 外部程式是否位於正確目錄，且 SQL Server 服務帳戶是否具有執行可執行檔的權限。
 
@@ -66,11 +66,11 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-sent"></a>訊息狀態已傳送
 
-狀態為**已傳送**表示 Database Mail 外部程式已順利地將電子郵件訊息傳遞至 SMTP 伺服器。 如果訊息並未到達目的地，SMTP 伺服器會接受來自 Database Mail 的訊息，但是沒有將訊息傳遞給最終收件者。 檢查 SMTP 伺服器的記錄檔，或連絡 SMTP 伺服器的系統管理員。 您也可以使用其他用戶端 (如 Outlook Express) 來測試 SMTP 郵件伺服器。
+狀態為 **已傳送** 表示 Database Mail 外部程式已順利地將電子郵件訊息傳遞至 SMTP 伺服器。 如果訊息並未到達目的地，SMTP 伺服器會接受來自 Database Mail 的訊息，但是沒有將訊息傳遞給最終收件者。 檢查 SMTP 伺服器的記錄檔，或連絡 SMTP 伺服器的系統管理員。 您也可以使用其他用戶端 (如 Outlook Express) 來測試 SMTP 郵件伺服器。
 
 ## <a name="message-status-failed"></a>訊息狀態失敗
 
-狀態為失敗，表示 Database Mail 外部程式無法將訊息傳遞至 SMTP 伺服器。 在此情況下，**sysmail_event_log** 檢視會包含來自外部程式的詳細資訊。 如需聯結 **sysmail_faileditems** 和 **sysmail_event_log** 以擷取詳細錯誤訊息的範例查詢，請參閱[檢查使用 Database Mail 傳送之電子郵件訊息的狀態](check-the-status-of-e-mail-messages-sent-with-database-mail.md)。 最常見的失敗原因是目的地位址不正確，或網路發生問題而使外部程式無法到達一或多個容錯移轉帳戶。 SMTP 伺服器的問題也會導致該伺服器拒絕郵件。 請使用 [Database Mail 設定精靈]，將 [記錄層級]**** 變更為 [詳細資訊]****，然後傳送測試郵件來調查失敗點。
+狀態為失敗，表示 Database Mail 外部程式無法將訊息傳遞至 SMTP 伺服器。 在此情況下，**sysmail_event_log** 檢視會包含來自外部程式的詳細資訊。 如需聯結 **sysmail_faileditems** 和 **sysmail_event_log** 以擷取詳細錯誤訊息的範例查詢，請參閱 [檢查使用 Database Mail 傳送之電子郵件訊息的狀態](check-the-status-of-e-mail-messages-sent-with-database-mail.md)。 最常見的失敗原因是目的地位址不正確，或網路發生問題而使外部程式無法到達一或多個容錯移轉帳戶。 SMTP 伺服器的問題也會導致該伺服器拒絕郵件。 請使用 [Database Mail 設定精靈]，將 [記錄層級] 變更為 [詳細資訊]，然後傳送測試郵件來調查失敗點。
 
 
 

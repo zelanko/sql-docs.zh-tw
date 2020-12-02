@@ -16,14 +16,14 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 546029b8615745c64d62da49af5299893d4d7c15
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631368"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129024"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85631368"
 |CONTINUE_AFTER_ERROR|只有在您要備份受損資料庫的結尾時，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 當您在受損資料庫上使用結尾記錄備份時，一般可在記錄備份中擷取到的某些中繼資料可能無法使用。 如需詳細資訊，請參閱本主題中的 [具有不完整備份中繼資料的結尾記錄備份](#IncompleteMetadata)。|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> 具有不完整備份中繼資料的結尾記錄備份  
- 即使資料庫離線、損毀或遺漏資料檔案，結尾記錄備份還是會擷取記錄檔的結尾。 這可能會導致還原資訊命令和 **msdb**產生不完整的中繼資料。 不過，只有中繼資料不完整，所擷取的記錄仍然完整可用。  
+ 即使資料庫離線、損毀或遺漏資料檔案，結尾記錄備份還是會擷取記錄檔的結尾。 這可能會導致還原資訊命令和 **msdb** 產生不完整的中繼資料。 不過，只有中繼資料不完整，所擷取的記錄仍然完整可用。  
   
  如果結尾記錄備份具有不完整的中繼資料， [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **has_incomplete_metadata** 會設為 **1**。 此外，在 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)的輸出中， **HasIncompleteMetadata** 也會設為 **1**。  
   

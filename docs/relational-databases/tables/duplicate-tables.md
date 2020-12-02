@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765810"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128678"
 ---
 # <a name="duplicate-tables"></a>複製資料表
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "91765810"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]****，再按一下 [新增資料表]****。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]，再按一下 [新增資料表]。  
   
-3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]****。  
+3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]。  
   
 4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]**。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "91765810"
   
 6.  從 **[編輯]** 功能表中，按一下 **[貼上]**。  
   
-7.  從 [檔案] **** 功能表中，按一下 [儲存] ****_table name_。  
+7.  從 [檔案]  功能表中，按一下 [儲存] _table name_。  
   
 8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]**。  
 
@@ -78,7 +78,7 @@ ms.locfileid: "91765810"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為]**** 和 [CREATE 至]****，然後選取 [新增查詢編輯器視窗]****。  
+2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為] 和 [CREATE 至]，然後選取 [新增查詢編輯器視窗]。  
   
 3.  變更資料表的名稱。  
   

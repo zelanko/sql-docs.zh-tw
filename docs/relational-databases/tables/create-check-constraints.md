@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419042"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128761"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "88419042"
   
 #### <a name="to-create-a-new-check-constraint"></a>若要建立新的檢查條件約束  
   
-1.  在 [物件總管]**** 中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]****，然後按一下 [新增條件約束]****。  
+1.  在 [物件總管] 中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]，然後按一下 [新增條件約束]。  
   
-2.  在 [檢查條件約束]**** 對話方塊中，按一下 [運算式]**** 欄位，然後按一下省略符號 **(...)**。  
+2.  在 [檢查條件約束] 對話方塊中，按一下 [運算式] 欄位，然後按一下省略符號 **(...)**。  
   
 3.  在 **[檢查條件約束運算式]** 對話方塊中，輸入檢查條件約束的 SQL 運算式。 例如，若要將 `SellEndDate` 資料表之 `Product` 資料行中的項目限制為大於或等於 `SellStartDate` 資料行中日期的值或是 NULL 值，請輸入：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "88419042"
   
 4.  按一下 [確定]。  
   
-5.  在 [識別]**** 類別目錄中，您可以變更檢查條件約束的名稱，並且加入條件約束的描述 (擴充屬性)。  
+5.  在 [識別] 類別目錄中，您可以變更檢查條件約束的名稱，並且加入條件約束的描述 (擴充屬性)。  
   
 6.  在 **[資料表設計工具]** 類別目錄中，您可以設定強制執行條件約束的時間。  
   

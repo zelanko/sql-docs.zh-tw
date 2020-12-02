@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c14d2ab4c8ab3f24272b30df0de5ca9727ffb4bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 30450a1ea8f6304e02ef2b544be31d08f69b51fd
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737796"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129215"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

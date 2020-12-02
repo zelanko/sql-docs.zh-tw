@@ -19,14 +19,14 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d456054b4edd45b15182a511235e640a03337b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4d07b3b4d85f6ef0e62709f66ea5c738a0dc8110
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631242"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129006"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>使用標示的交易以一致的方式復原相關資料庫
 
@@ -70,7 +70,7 @@ ms.locfileid: "85631242"
   
 -   因為交易標示須耗用記錄空間，所以除非它們在資料庫復原策略中扮演重要的角色，否則不應使用交易標示。  
   
--   標示的交易認可之後，會在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory**資料表中插入一個資料列。  
+-   標示的交易認可之後，會在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory** 資料表中插入一個資料列。  
   
 -   如果標示交易跨越同一資料庫伺服器或不同伺服器上的多個資料庫，則標示會記錄在所有受影響的資料庫之記錄中。  
   

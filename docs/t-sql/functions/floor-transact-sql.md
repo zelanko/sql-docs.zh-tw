@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d952142a989823a96a4edace573c8e097b357c6b
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570689"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128447"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ FLOOR ( numeric_expression )
  這是精確數值或近似數值資料類型類別的運算式，但 **bit** 資料類型除外。  
   
 ## <a name="return-types"></a>傳回型別  
- 傳回與 *numeric_expression*相同的類型。  
+ 傳回與 *numeric_expression* 相同的類型。  
   
 ## <a name="examples"></a>範例  
  下列範例會利用 `FLOOR` 函數來顯示正數、負數和貨幣值。  

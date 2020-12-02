@@ -27,11 +27,11 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639001"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128589"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 ## <a name="arguments"></a>引數
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)** ，並可從下列動態管理物件中取得：  
+*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)** ，並可從下列動態管理物件中取得：  
+*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name* 是 Resource Governor 資源集區的名稱。 *pool_name* 是 **sysname** ，並可以藉由查詢 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動態管理檢視來取得。  
+*pool_name* 是 Resource Governor 資源集區的名稱。 *pool_name* 是 **sysname**，並可以藉由查詢 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 動態管理檢視來取得。  
  若要將 Resource Governor 工作負載群組與資源集區產生關聯，請查詢 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 動態管理檢視。 如需工作階段之工作負載群組的相關資訊，請查詢 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動態管理檢視。  
 
   
