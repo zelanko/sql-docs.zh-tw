@@ -1,7 +1,7 @@
 ---
 title: OLE DB Driver for SQL Server 的支援原則
 description: 了解適用於 OLE DB Driver for SQL Server 的支援原則，以及每個驅動程式版本所支援的作業系統與 SQL 資料庫版本。
-ms.date: 08/06/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: aa01dec4758bb91a4b05d65af372ee66c1c53672
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860647"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506417"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的支援原則
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +30,7 @@ OLE DB Driver for SQL Server 已經過測試，並支援下列 SQL Server 版本
 
 | 資料庫版本&nbsp;&#8594;<br />&#8595; 驅動程式版本 | Azure SQL Database | Azure Synapse Analytics | Azure SQL 受控執行個體 | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|18.5|是|是|是|是|是|是|是|是|
 |18.4|是|是|是|是|是|是|是|是|
 |18.3|是|是|是|是|是|是|是|是|
 |18.2|是|是|是|是|是|是|是|是|
@@ -43,6 +44,7 @@ OLE DB Driver for SQL Server 已經過測試，並支援下列 SQL Server 版本
 
 | 作業系統&nbsp;&#8594;<br />&#8595; 驅動程式版本 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|
+|18.5|是|是|是|是|是|是|
 |18.4|是|是|是|是|是|是|
 |18.3|是|是|是|是|是|是|
 |18.2|是|是|是|是|是|是|

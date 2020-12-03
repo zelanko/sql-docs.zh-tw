@@ -2,19 +2,19 @@
 title: 驅動程式功能支援矩陣
 description: 了解 SQL Server 驅動程式支援哪些熱門功能，以及要在何處尋找其相關資訊。
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081427"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419670"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式功能支援矩陣
 
@@ -43,7 +43,7 @@ ms.locfileid: "92081427"
 | [Azure Active Directory 密碼驗證](/azure/sql-database/sql-database-aad-authentication) | 是 | 是 | | 是 |
 | [Azure Active Directory 整合式驗證](/azure/sql-database/sql-database-aad-authentication) | 是 | 是 | | 是 |
 | [Azure Active Directory 互動式 (MFA) 驗證](/azure/sql-database/sql-database-aad-authentication) | 是 | 是 | | 是 |
-| [Azure Active Directory 受控識別驗證](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Azure Active Directory 受控識別驗證](/azure/active-directory/managed-identities-azure-resources/overview) | 是 | 是 | | |
 | [Azure Active Directory 服務主體驗證](/azure/active-directory/develop/app-objects-and-service-principals) | 是 | 是 | | |
 | [Windows 整合式驗證](/windows-server/security/windows-authentication/windows-authentication-overview) | [是](ado-net/sql/authentication-sql-server.md) | [是](ado-net/sql/authentication-sql-server.md) | [是](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [是](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [大量複製](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [是](ado-net/sql/bulk-copy-operations-sql-server.md) | [是](ado-net/sql/bulk-copy-operations-sql-server.md) | [是](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [是](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |

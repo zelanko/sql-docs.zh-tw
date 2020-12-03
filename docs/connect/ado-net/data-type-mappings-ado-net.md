@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 20897f6ffbcf165c38bedac2ed1f8e6ad760cc93
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 03af2a8544763aab7609fd713790622bbb1bfef4
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126416"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419759"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET 中的資料類型對應
 
@@ -41,3 +41,4 @@ ADO.NET 會以一般型別系統為基礎，其會定義在執行階段宣告、
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 資料類型和 ADO.NET](./sql/sql-server-data-types.md)
+- [設定參數](configure-parameters.md)
