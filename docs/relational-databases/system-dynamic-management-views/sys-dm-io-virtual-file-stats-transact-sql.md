@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059616"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535292"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,10 +76,10 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|資料庫名稱。</br></br>針對 Azure Synapse Analytics，這是 pdw_node_id 所識別之節點上儲存的資料庫名稱。 每個節點都有一個具有13個檔案的 tempdb 資料庫。 每個節點在每個散發中也都有一個資料庫，而且每個散發資料庫都有5個檔案。 例如，如果每個節點都包含4個散發，結果會顯示每個 pdw_node_id 20 個散發資料庫檔案。 
+|**database_name**|**sysname**|不適 **用於：**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 資料庫名稱。</br></br>針對 Azure Synapse Analytics，這是 pdw_node_id 所識別之節點上儲存的資料庫名稱。 每個節點都有一個具有13個檔案的 tempdb 資料庫。 每個節點在每個散發中也都有一個資料庫，而且每個散發資料庫都有5個檔案。 例如，如果每個節點都包含4個散發，結果會顯示每個 pdw_node_id 20 個散發資料庫檔案。 
 |**database_id**|**smallint**|資料庫的識別碼。|  
 |**file_id**|**smallint**|檔案的識別碼。|  
-|**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型為**int** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型為 **int** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|對檔案發出的讀取數。|  
 |**num_of_bytes_read**|**bigint**|這個檔案讀取的總位元組數。|  
 |**io_stall_read_ms**|**bigint**|使用者等候在檔案發出讀取的總時間 (以毫秒為單位)。|  
@@ -89,8 +89,8 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|使用者等候檔案完成 I/O 的總時間 (以毫秒為單位)。|  
 |**size_on_disk_bytes**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
 |**file_handle**|**varbinary**|這個檔案的 Windows 檔案控制代碼。|  
-|**io_stall_queued_read_ms**|**bigint**|不適**用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
-|**io_stall_queued_write_ms**|**bigint**|不適**用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
+|**io_stall_queued_read_ms**|**bigint**|不適 **用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_write_ms**|**bigint**|不適 **用於：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
 |**pdw_node_id**|**int**|**適用對象：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分佈的節點識別碼。
  
 ## <a name="remarks"></a>備註
