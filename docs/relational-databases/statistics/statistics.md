@@ -2,7 +2,7 @@
 title: 統計資料
 description: 查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 了解使用查詢最佳化的概念和指導方針。
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/23/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130177"
 ---
 # <a name="statistics"></a>統計資料
 
@@ -38,7 +38,7 @@ ms.locfileid: "91810524"
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 元件和概念  
 ### <a name="statistics"></a>統計資料  
- 查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子 (如果這樣做會改善查詢效能)。  
+ 查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的 *基數* 或資料列數目。 這些 *基數估計值* 可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子 (如果這樣做會改善查詢效能)。  
   
  每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 
 
@@ -71,7 +71,7 @@ ms.locfileid: "91810524"
 -   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。   
   
 #### <a name="density-vector"></a><a name="density"></a>密度向量  
-**密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 當密度降低時，值的選擇性會增加。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 由於 VIN 的密度比製造商低，因此 VIN 的索引會比製造商的索引更具選擇性。 
+**密度** 是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 當密度降低時，值的選擇性會增加。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 由於 VIN 的密度比製造商低，因此 VIN 的索引會比製造商的索引更具選擇性。 
 
 > [!NOTE]
 > 「頻率」是統計資料物件第一個索引鍵資料行中每一個相異值的發生次數資訊，其計算方式為資料列計數乘以密度。 如果資料行具有唯一值，則其最大頻率為 1。
@@ -134,20 +134,23 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
 
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- 非同步統計資料更新選項 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項會處於關閉狀態，而查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。  
+非同步統計資料更新選項 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項會處於關閉狀態，而查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。  
  
- > [!NOTE]
- > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定非同步統計資料更新選項，請在 [資料庫屬性] 視窗的 [選項] 頁面中，將 [自動更新統計資料] 和 [自動非同步更新統計資料] 選項設定為 [True]。
+> [!NOTE]
+> 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定非同步統計資料更新選項，請在 [資料庫屬性] 視窗的 [選項] 頁面中，將 [自動更新統計資料] 和 [自動非同步更新統計資料] 選項設定為 [True]。
   
- 統計資料更新可以是同步 (預設值) 或非同步。 使用同步統計資料更新時，查詢一律會使用最新的統計資料進行編譯和執行。如果統計資料已過期，查詢最佳化工具就會先等候更新的統計資料，然後再編譯並執行查詢。 使用非同步統計資料更新時，查詢就會使用現有的統計資料進行編譯，即使現有的統計資料已過期也一樣。如果統計資料在查詢進行編譯時是過期的，查詢最佳化工具可能會選擇到次佳的查詢計劃。 在非同步更新完成之後進行編譯的查詢將會從使用更新的統計資料中獲益。  
+統計資料更新可以是同步 (預設值) 或非同步。 使用同步統計資料更新時，查詢一律會使用最新的統計資料進行編譯和執行。如果統計資料已過期，查詢最佳化工具就會先等候更新的統計資料，然後再編譯並執行查詢。 使用非同步統計資料更新時，查詢就會使用現有的統計資料進行編譯，即使現有的統計資料已過期也一樣。如果統計資料在查詢進行編譯時是過期的，查詢最佳化工具可能會選擇到次佳的查詢計劃。 在非同步更新完成之後進行編譯的查詢將會從使用更新的統計資料中獲益。  
   
- 當您執行變更資料分佈的作業時 (例如截斷資料表，或大量更新大部分的資料列)，請考慮使用同步統計資料。 如果您沒有在完成此作業之後更新統計資料，使用同步統計資料將可在針對變更的資料執行查詢之前，確保統計資料處於最新狀態。  
+當您執行變更資料分佈的作業時 (例如截斷資料表，或大量更新大部分的資料列)，請考慮使用同步統計資料。 如果您沒有在完成此作業之後更新統計資料，使用同步統計資料將可在針對變更的資料執行查詢之前，確保統計資料處於最新狀態。  
   
- 在下列狀況中，請考慮使用非同步統計資料來達到更可預測的查詢回應時間：  
+在下列狀況中，請考慮使用非同步統計資料來達到更可預測的查詢回應時間：  
   
 * 您的應用程式經常會執行相同的查詢、相似的查詢或相似的快取查詢計劃。 相較於使用同步統計資料更新，使用非同步統計資料更新可能會讓您更容易預測查詢的回應時間，因為查詢最佳化工具不需要等候最新的統計資料，就可以執行傳入的查詢。 這樣會避免延遲某些查詢，但無法避免延遲其他查詢。  
   
 * 您的應用程式遇到等候更新統計資料之一或多個查詢所造成的用戶端要求逾時。 在某些情況下，等候同步統計資料可能會造成具有彙總逾時的應用程式失敗。  
+
+> [!NOTE]
+> 無論 AUTO_UPDATE_STATISTICS_ASYNC 選項為何，本機暫存資料表上的統計資料一律同步更新。 依使用者資料庫設定的 AUTO_UPDATE_STATISTICS_ASYNC 選項，決定同步或非同步更新全域暫存資料表上的統計資料。
 
 非同步統計資料更新是由背景要求執行的。 當要求準備好將更新後的統計資料寫入資料庫時，要求會嘗試取得統計資料中繼資料物件的結構描述修改鎖定。 如果不同工作階段已取得相同物件的鎖定，非同步統計資料更新即會遭到封鎖，直到可取得結構描述修改鎖定為止。 同樣地，需要取得統計資料中繼資料物件結構描述穩定性鎖定，以編譯查詢的工作階段可能也會遭到非同步統計資料更新背景工作階段封鎖，因為後者已取得或正在等待取得結構描述修改鎖定。 因此，針對需要經常進行查詢編譯和統計資料更新的工作負載，使用非同步統計資料可能會增加因鎖定封鎖而產生並行問題的可能性。
 
@@ -248,14 +251,14 @@ GO
 * 確認資料庫不是唯讀的。 若資料庫為唯讀，將無法儲存新統計資料物件。  
 * 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式來建立遺失的統計資料。  
   
-如果唯讀資料庫或唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 **tempdb**中建立及維護暫時性統計資料。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 *_readonly_database_statistic*，以便區分暫時統計資料與永久統計資料。 後置詞 *_readonly_database_statistic* 會保留給由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 已編寫指令碼時，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 *_readonly_database_statistic* 變更為 *_readonly_database_statistic_scripted*。  
+如果唯讀資料庫或唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 **tempdb** 中建立及維護暫時性統計資料。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 *_readonly_database_statistic*，以便區分暫時統計資料與永久統計資料。 後置詞 *_readonly_database_statistic* 會保留給由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 已編寫指令碼時，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 *_readonly_database_statistic* 變更為 *_readonly_database_statistic_scripted*。  
   
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立和更新暫時統計資料。 但是，您可以使用永久統計資料所使用的相同工具來刪除暫時統計資料及監控統計資料屬性：  
   
 * 使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 陳述式刪除暫時統計資料。  
 * 使用 **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** 和 **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** 目錄檢視來監視統計資料。 **sys_stats** 包含 **is_temporary** 資料行，以指示哪些統計資料為永久性及哪些統計資料為暫時性。  
   
- 因為暫時統計資料會儲存在 **tempdb**中，所以重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
+ 因為暫時統計資料會儲存在 **tempdb** 中，所以重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
     
 ## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 何時更新統計資料  
  查詢最佳化工具會判斷統計資料可能過期的時間，然後在查詢計劃需要它們時進行更新。 在某些情況下，您可以讓統計資料的更新頻率高於 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 開啟時的更新頻率，藉以改善查詢計劃，因而改善查詢效能。 您可以使用 UPDATE STATISTICS 陳述式或 sp_updatestats 預存程序來更新統計資料。  

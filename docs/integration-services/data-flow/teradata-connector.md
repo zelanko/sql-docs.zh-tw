@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425760"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Microsoft Connector for Teradata
@@ -65,7 +65,7 @@ Microsoft Connector for Teradata 會使用 Teradata Parallel Transporter 應用�
 
 ## <a name="design-and-execute-ssis-packages"></a>設計並執行 SSIS 套件
 
-Microsoft Connector for Teradata 可提供與 Attunity Teradata Connector 類似的使用者體驗。 使用者可以根據先前的經驗使用 SSDT for VS 2017 或 VS 2019 來設計新的套件，並*以 SQL server 2019 為目標*。
+Microsoft Connector for Teradata 可提供與 Attunity Teradata Connector 類似的使用者體驗。 使用者可以根據先前的經驗使用 SSDT for VS 2017 或 VS 2019 來設計新的套件，並 *以 SQL server 2019 為目標*。
 
 Teradata 來源與目的地位於 [一般] 類別之下。
 
@@ -86,15 +86,15 @@ Teradata 連線管理員會顯示為 "TERADATA"。
 
 若要以 SSDT 設計「以 SQL Server 2017 與以下版本為目標」的 SSIS 套件，您必須擁有 **Microsoft Connector for Teradata** 並安裝相對應版本的 **Microsoft Connector for Teradata by Attunity**。
 
-## <a name="limitationsandknownissues"></a>限制與已知問題
+## <a name="limitations-and-known-issues"></a>限制與已知問題
 
-- Teradata 來源/目的地編輯器， **預設資料庫** 屬性不會生效。 因應措施是在下拉式清單方塊中輸入資料庫名稱，以篩選資料表或檢視。
+- Teradata 來源/目的地編輯器，**預設資料庫** 屬性不會生效。  因應措施是在下拉式清單方塊中輸入資料庫名稱，以篩選資料表或檢視。
 
-- Teradata 來源/目的地編輯器，當輸入  \<database>.<table/view> 時，無法使用對應步驟。 因應措施是輸入  \<database>.<table/view>，然後按一下下拉式按鈕。
+- Teradata 來源/目的地編輯器，當鍵入 \<database>.<table/view> 時，對應步驟不起作用。 因應措施是鍵入 \<database>.<table/view>，然後按一下下拉式按鈕。
 
 - Teradata 來源編輯器，當資料存取模式為 "Table Name – TPT Export" 時，無法顯示檢視。 因應措施是使用 Teradata 來源進階編輯器。
 
-- Teradata 目的地，屬性 'PackMaximum' 不能設定為 'True'。 否則就會發生錯誤。
+- Teradata 目的地，屬性 'PackMaximum' 不能設定為 'True'。  否則就會發生錯誤。
 
 ## <a name="uninstallation"></a>解除安裝
 

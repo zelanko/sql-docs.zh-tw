@@ -5,23 +5,25 @@ description: 了解如何在 Linux 上安裝 SQL Server 機器學習服務 (Pyth
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 03/05/2020
+ms.date: 11/24/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc671271d3e998e0329236c6c567438db1a5c48a
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: d236f70a3fdc3e03909078e366ec1f776b68c689
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870004"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96129434"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-本文會引導您在 Linux 上安裝 [SQL Server 機器學習服務](../machine-learning/index.yml)。 您可使用機器學習服務來在資料庫中執行 Python 和 R 指令碼。
+本文會引導您在 Linux 上安裝 [SQL Server 機器學習服務](../machine-learning//sql-server-machine-learning-services.md)。 您可使用機器學習服務來在資料庫中執行 Python 和 R 指令碼。
+
+您可在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上安裝機器學習服務。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md#supportedplatforms)中的＜支援的平台＞一節。
 
 > [!NOTE]
 > 根據預設，系統會在 SQL Server 巨量資料叢集上安裝機器學習服務。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)
@@ -34,8 +36,6 @@ ms.locfileid: "94870004"
 
 * 查看 Python 和 R 延伸模組的 SQL Server Linux 存放庫。 
   如果您已經為資料庫引擎安裝設定來源存放庫，您可以使用相同的存放庫登錄來執行 **mssql-mlservices** 套件安裝命令。
-
-  您可在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上安裝 SQL Server。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 安裝指引](sql-server-linux-setup.md#supportedplatforms)中的＜支援的平台＞一節。
 
 * (僅限 R) Microsoft R Open (MRO) 為 SQL Server 中的 R 功能提供基底 R 散發，且是使用 RevoScaleR、MicrosoftML 和其他隨機器學習服務所安裝 R 套件的必要條件。
     * 所需的版本為 MRO 3.5.2。

@@ -25,11 +25,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 973583b5c5dd32273312f6282e91d501659887fb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114895"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124861"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ DISTINCT
 指定 `COUNT` 傳回唯一非 Null 值的數目。
   
 *expression*  
-為任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**image**、**ntext** 或 **text** 除外)。 請注意，`COUNT` 不支援運算式中的彙總函數或子查詢。
+為任何類型的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**image**、**ntext** 或 **text** 除外)。 請注意，`COUNT` 不支援運算式中的彙總函數或子查詢。
   
 \*  
 指定 `COUNT` 應該計算所有資料列，以判斷要傳回的總資料表資料列計數。 `COUNT(*)` 不接受任何參數，而且不支援使用 DISTINCT。 `COUNT(*)` 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 `COUNT(*)` 會傳回指定資料表的資料列數，而且它會保留重複的資料列。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
@@ -79,7 +79,7 @@ COUNT(DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expr
   
 若傳回的值超過 2^31-1，`COUNT` 會傳回錯誤。 這些情況下，請改用 `COUNT_BIG`。
   
-***未搭配*** OVER 和 ORDER BY 子句使用時，`COUNT` 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+***不搭配** _ OVER 和 ORDER BY 子句時，`COUNT` 是決定性函數。 _*_搭配_*_ OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. 使用 COUNT(\*)  
+### <a name="b-using-count_"></a>B. 使用 COUNT(\_)  
 此範例會傳回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 員工總數。
   
 ```sql

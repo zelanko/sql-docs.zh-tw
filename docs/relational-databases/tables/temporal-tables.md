@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d45c26459b43fecaedf401bf98d0a5346da34dbb
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 76eb3c73bf93b3cc8f037f96737f491c5d473173
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130867"
 ---
 # <a name="temporal-tables"></a>暫存資料表
 
@@ -81,7 +81,7 @@ SQL Server 2016 開始支援時態表 (又稱為由系統控制版本的時態�
 
 ![顯示時態表運作方式的圖表。](../../relational-databases/tables/media/temporal-howworks.PNG "時態表運作方式")
 
-下列簡易範例說明在假設性的 HR 資料庫中「員工」資訊的案例：
+下列簡易範例說明假設性 HR 資料庫中的「員工」資訊案例：
 
 ```sql
 CREATE TABLE dbo.Employee
@@ -99,10 +99,10 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERT：** 在 **INSERT** 上，系統會根據系統時鐘將 **SysStartTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)，並將 **SysEndTime** 資料行的值指派至 9999-12-31 的最大值。 這會將資料列標示為開啟。
+- **INSERT：** 在 **INSERT** 上，系統會根據系統時鐘將 [SysStartTime] 資料行 (本例中為 [ValidFrom]) 其值設為目前交易的開始時間 (使用 UTC 時區)，並將 [SysEndTime] 資料行 (本例中為 [ValidTo]) 其值指派至 9999-12-31 此最大值。 這會將資料列標示為開啟。
 - **UPDATE：** 在 **UPDATE** 上，系統會將資料列的先前值儲存在記錄資料表中，並根據系統時鐘將 **SysEndTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 這會將資料列標示為關閉，並記錄資料列有效的期間。 在目前資料表中，系統會以資料列的新值更新記錄，並根據系統時鐘將 **SysStartTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 **SysEndTime** 資料行目前資料表中更新資料列的值保持為 9999-12-31 的最大值。
 - **DELETE：** 在 **DELETE** 上，系統會將資料列的先前值儲存在記錄資料表中，並根據系統時鐘將 **SysEndTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 這會將資料列標示為關閉，並記錄先前資料列有效的期間。 在目前資料表中，資料列受到移除。 目前資料表的查詢不會傳回此資料列。 只有處理歷程記錄資料的查詢會傳回資料列已關閉的資料。
-- **MERGE：** 在 **MERGE** 上，操作的執行方式就如同最多三個陳述式 ( **INSERT** 、 **UPDATE** 及/或 **DELETE** ) 一樣，視 **MERGE** 陳述式中指定為動作的內容而定。
+- **MERGE：** 在 **MERGE** 上，操作的執行方式就如同最多三個陳述式 (**INSERT**、**UPDATE** 及/或 **DELETE**) 一樣，視 **MERGE** 陳述式中指定為動作的內容而定。
 
 > [!IMPORTANT]
 > 系統 datetime2 資料行中所記錄的時間是依據交易本身的開始時間。 例如，在單一交易中插入的所有資料列，在資料行中都會記錄相同的 UTC 時間，且對應到 **SYSTEM_TIME** 。
@@ -123,7 +123,7 @@ SELECT * FROM Employee
 ```
 
 > [!NOTE]
-> **SYSTEM_TIME** 會篩選掉具有有效期間且持續時間為零的資料列 ( **SysStartTime** = **SysEndTime** )。
+> **SYSTEM_TIME** 會篩選掉具有有效期間且持續時間為零的資料列 (**SysStartTime** = **SysEndTime**)。
 > 如果您在相同交易內的相同主索引鍵上執行多個更新，這些資料列就會產生。
 > 在此情況下，Temporal 會查詢介面唯一資料列交易之前的版本，以及交易之後變為實際的版本。
 > 如果您需要在分析中加入這些資料列，請直接查詢記錄資料表。
@@ -132,14 +132,14 @@ SELECT * FROM Employee
 
 |運算是|查詢資料列|描述|
 |----------------|---------------------|-----------------|
-|**AS OF** <日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 系統會在內部進行時態表及其記錄資料表之間的聯集運算，並篩選結果，從而根據 *<date_time>* 參數所指定的有效時間點，傳回資料列中的值。 當 *system_start_time_column_name* 的值小於或等於 *<date_time>* 參數的值，且 *system_end_time_column_name* 的值大於 *<date_time>* 參數的值，資料列的值即視為有效。|
-|**FROM** <start_date_time> **TO** <end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *<start_date_time>* 參數值之前為作用中，或是在 TO 引數的 *<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|
-|**BETWEEN** <開始日期時間> **AND** <結束日期時間>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|如同上方 **FOR SYSTEM_TIME FROM** <開始日期時間> **TO** <結束日期時間> 中的描述，唯一的差別在於所傳回資料列的資料表內含的資料列，在 <結束日期時間> 端點所定義的範圍上限變為作用中。|
+|**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 系統會在內部進行時態表及其記錄資料表之間的聯集運算，並篩選結果，從而根據 *<date_time>* 參數所指定的有效時間點，傳回資料列中的值。 當 *system_start_time_column_name* 的值小於或等於 *<date_time>* 參數的值，且 *system_end_time_column_name* 的值大於 *<date_time>* 參數的值，資料列的值即視為有效。|
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *<start_date_time>* 參數值之前為作用中，或是在 TO 引數的 *<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|
+|**BETWEEN**<開始日期時間>**AND**<結束日期時間>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|如同上方 **FOR SYSTEM_TIME FROM**<開始日期時間>**TO**<結束日期時間> 中的描述，唯一的差別在於所傳回資料列的資料表內含的資料列，在 <結束日期時間> 端點所定義的範圍上限變為作用中。|
 |**CONTAINED IN** (<開始日期時間> , <結束日期時間>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|傳回資料表，其中內含所有資料列版本的值，該值在 CONTAINED IN 引數兩個日期時間值所定義的指定時間範圍內為開啟及關閉。 包含恰好在範圍下限變為作用中的資料列，或是恰好在範圍上限就不在作用中的資料列。|
 |**ALL**|所有資料列|傳回屬於目前和歷程記錄資料表的資料列聯集。|
 
 > [!NOTE]
-> 您可以選擇隱藏這些期間資料行，讓未明確參考這些期間資料行的查詢不會傳回這些資料行 ( **SELECT \* FROM** _\<table\>_ 案例)。 若要傳回隱藏的資料行，只需明確地參考查詢中的隱藏資料行。 同樣地， **INSERT** 和 **BULK INSERT** 陳述式將繼續進行，就如同這些新期間資料行不存在一般 (且資料行值將會自動填入)。 如需使用 **HIDDEN** 子句的詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)現在可加以支援。
+> 您可以選擇隱藏這些期間資料行，讓未明確參考這些期間資料行的查詢不會傳回這些資料行 (**SELECT \* FROM** _\<table\>_ 案例)。 若要傳回隱藏的資料行，只需明確地參考查詢中的隱藏資料行。 同樣地， **INSERT** 和 **BULK INSERT** 陳述式將繼續進行，就如同這些新期間資料行不存在一般 (且資料行值將會自動填入)。 如需使用 **HIDDEN** 子句的詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)現在可加以支援。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96a7bde8459edcc6e6fe4758167c35b95aaedfef
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: e89e825dc8b5fd2748dc380c8b065e0baac02821
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670581"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125860"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>從命令提示字元安裝更新
 
@@ -80,8 +80,8 @@ ms.locfileid: "91670581"
 |**/?**|顯示自動安裝命令提示字元說明。| 
 |**/action=Patch 或 /action=RemovePatch**|指定安裝動作：Patch 或 RemovePatch。| 
 |**/allinstances**|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新套用至所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用的非執行個體感知元件。| 
-|**/instancename=InstanceName***|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新套用至名為 InstanceName 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用的非執行個體感知元件。| 
-|**/InstanceID=Inst1**|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 執行個體以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用的非執行個體感知元件。| 
+|**/instancename=InstanceName** _|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新套用至名為 InstanceName 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用的非執行個體感知元件。| 
+|_ */InstanceID=Inst1**|將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 執行個體以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用的非執行個體感知元件。| 
 |**/quiet**|以自動安裝模式執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式。| 
 |**/qs**|只顯示進度 UI 對話方塊。| 
 |**/UpdateEnabled**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會包含找到的更新。| 

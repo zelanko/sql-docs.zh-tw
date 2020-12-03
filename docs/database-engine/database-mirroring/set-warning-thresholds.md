@@ -14,11 +14,11 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789636"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126149"
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85789636"
   
 ## <a name="options"></a>選項。  
  *伺服器執行個體及其連接狀態*  
- 以 *SYSTEM***\\***INSTANCE_NAME* 格式顯示的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
+ 格式為 *SYSTEM* **\\** _INSTANCE_NAME_ 的夥伴伺服器執行個體名稱。 如果是預設伺服器執行個體，則只會顯示系統名稱。  
   
  這個欄位也會指出監視器目前是否已連接到這個伺服器執行個體。 可能的連接狀態如下：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85789636"
 -   **已連線到** *server_instance_name*  
   
     > [!NOTE]  
-    >  如果您不是**系統管理員**固定伺服器角色的成員，則此狀態會是 [已連線到 *server_instance_name* (有限的權限)] 。  
+    >  如果您不是 **系統管理員** 固定伺服器角色的成員，則此狀態會是 [已連線到 *server_instance_name* (有限的權限)] 。  
   
  每個夥伴伺服器執行個體的名稱都會顯示在個別的 *[伺服器執行個體及其連接狀態]* 欄位中。 當監視器開始執行時，最上面的欄位便會列出主體伺服器。  
   

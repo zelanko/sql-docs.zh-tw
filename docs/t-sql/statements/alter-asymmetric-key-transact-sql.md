@@ -21,11 +21,11 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688693"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128156"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,10 +63,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  變更私密金鑰的保護。  
   
- ENCRYPTION BY PASSWORD **='***strongPassword***'**  
+ ENCRYPTION BY PASSWORD **='** _strongPassword_*_'_*  
  指定用來保護私密金鑰的新密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如果省略這個選項，則由資料庫主要金鑰加密此私密金鑰。  
   
- DECRYPTION BY PASSWORD **='***oldPassword***'**  
+ DECRYPTION BY PASSWORD **='** _oldPassword_*_'_*  
  指定目前用來保護私密金鑰的舊密碼。 如果是利用資料庫主要金鑰加密私密金鑰，則不需要這個選項。  
   
 ## <a name="remarks"></a>備註  

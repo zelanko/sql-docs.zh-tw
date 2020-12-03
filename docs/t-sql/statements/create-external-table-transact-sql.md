@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300633"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328028"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -62,7 +62,7 @@ ms.locfileid: "92300633"
 
 此命令會建立 PolyBase 的外部資料表來存取儲存在 Hadoop 叢集中的資料，或是參考儲存在 Hadoop 叢集或 Azure Blob 儲存體中資料的 Azure Blob 儲存體 PolyBase 外部資料表。
 
-**適用於** ：SQL Server 2016 (或更新版本)
+**適用於**：SQL Server 2016 (或更新版本)
 
 使用具備外部資料來源的外部資料表進行 PolyBase 查詢。 外部資料來源會用來建立連線能力，並支援這些主要使用案例：
 
@@ -102,11 +102,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，SQL 只會儲存資料表中繼資料，以及 Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 實際上不會有任何資料會移至或儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。
 
-LOCATION = ' *folder_or_filepath* ' 指定 Hadoop 或 Azure Blob 儲存體中實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始。 根資料夾是在外部資料來源中指定的資料位置。
+LOCATION = '*folder_or_filepath*' 指定 Hadoop 或 Azure Blob 儲存體中實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始。 根資料夾是在外部資料來源中指定的資料位置。
 
 在 SQL Server 中，CREATE EXTERNAL TABLE 陳述式會建立尚未存在的路徑和資料夾。 您接著可以使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 如需詳細資訊，請參閱 [PolyBase 查詢](../../relational-databases/polybase/polybase-queries.md)。
 
@@ -136,18 +136,18 @@ percentage 表示 REJECT_VALUE 是百分比，不是常值。 PolyBase 查詢會
 
 REJECT_VALUE = *reject_value* 指定在查詢失敗前可拒絕的資料列數目或百分比。
 
-針對 REJECT_TYPE = value， *reject_value* 必須為介於 0 和 2,147,483,647 的整數。
+針對 REJECT_TYPE = value，*reject_value* 必須為介於 0 和 2,147,483,647 的整數。
 
-針對 REJECT_TYPE = percentage， *reject_value* 必須為介於 0 和 100 的浮點數。
+針對 REJECT_TYPE = percentage，*reject_value* 必須為介於 0 和 100 的浮點數。
 
 REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentage 時，此屬性是必要項目。 它會決定在 PolyBase 重新計算被拒絕資料列的百分比之前，應嘗試擷取的資料列數目。
 
 *reject_sample_value* 參數必須是介於 0 和 2,147,483,647 的整數。
 
-例如，如果 REJECT_SAMPLE_VALUE = 1000，PolyBase 將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value* ，PolyBase 就會嘗試擷取另外 1000 個資料列。 它會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
+例如，如果 REJECT_SAMPLE_VALUE = 1000，PolyBase 將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value*，PolyBase 就會嘗試擷取另外 1000 個資料列。 它會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
 
 > [!NOTE]
-> 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value* 。
+> 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。
 
 範例：
 
@@ -163,7 +163,7 @@ SCHEMA_NAME：SCHEMA_NAME 子句能讓您將外部資料表定義對應至位於
 
 OBJECT_NAME：OBJECT_NAME 子句能讓您將外部資料表定義對應至位於遠端資料庫上具有不同名稱的資料表。 使用此子句來區分同時存在於本機和遠端資料庫上的物件名稱。
 
-DISTRIBUTION：選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需要這個引數。 這個引數能控制資料表是否會被視為分區資料表或複寫資料表。 使用 **SHARDED** ( *column name* ) 資料表，來自不同資料表的資料便不會彼此重疊。 **REPLICATED** 指定資料表在每個分區上都有相同的資料。 **ROUND_ROBIN** 指出系統會使用應用程式特定的方法來散發資料。
+DISTRIBUTION：選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需要這個引數。 這個引數能控制資料表是否會被視為分區資料表或複寫資料表。 使用 **SHARDED** (*column name*) 資料表，來自不同資料表的資料便不會彼此重疊。 **REPLICATED** 指定資料表在每個分區上都有相同的資料。 **ROUND_ROBIN** 指出系統會使用應用程式特定的方法來散發資料。
 
 ## <a name="permissions"></a>權限
 
@@ -196,7 +196,7 @@ PolyBase 可以將部分的查詢計算推送至 Hadoop 以改善查詢效能。
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 
-由於外部資料表的資料未直接受到 SQL Server 管理控制，因此其可以隨時由外部處理序變更或移除。 因此，針對外部資料表的查詢結果並不保證具有確定性。 相同的查詢在每次針對外部資料表執行時，都有可能傳回不同的結果。 同樣地，在移動或移除外部資料的情況下，查詢也有可能會失敗。
+因為外部資料表的資料不受 SQL Server 直接管理控制，所以可隨時由外部處理序變更或移除。 因此，針對外部資料表的查詢結果並不保證具有確定性。 相同的查詢在每次針對外部資料表執行時，都有可能傳回不同的結果。 同樣地，在移動或移除外部資料的情況下，查詢也有可能會失敗。
 
 您可以建立多個參考不同外部資料來源的外部資料表。 如果您同時針對不同的 Hadoop 資料來源執行查詢，則每個 Hadoop 來源都必須使用相同的「Hadoop 連線能力」伺服器組態設定。 例如，您不能同時針對 Cloudera Hadoop 叢集和 Hortonworks Hadoop 叢集執行查詢，因為這些叢集是使用不同的組態設定。 如需組態設定和支援的組合，請參閱 [PolyBase 連線能力設定](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
@@ -211,13 +211,26 @@ PolyBase 可以將部分的查詢計算推送至 Hadoop 以改善查詢效能。
 - 外部資料表資料行上的 DEFAULT 限制式
 - 刪除、插入及更新的資料操作語言 (DML) 作業
 
-查詢限制：
+### <a name="query-limitations"></a>查詢限制
 
 執行 32 個並行的 PolyBase 查詢時，PolyBase 每個資料夾可取用的檔案數目上限為 33000 個檔案。 這個上限數同時包含了每個 HDFS 資料夾中的檔案和子資料夾。 如果並行程度小於 32，使用者就可以針對 HDFS 中內含超過 33000 個檔案的資料夾執行 PolyBase 查詢。 我們建議您使用簡短的外部檔案路徑，且所使用的每個 HDFS 資料夾檔案數目不要超過 30000 個檔案。 參考太多檔案時，可能會發生 Java 虛擬機器 (JVM) 記憶體不足的例外狀況。
 
-資料表寬度限制：
+### <a name="table-width-limitations"></a>資料表寬度限制
 
 SQL Server 2016 中的 PolyBase 具有 32 KB 的資料列寬度限制，這是以依資料表定義的單一有效資料列大小上限為基礎。 若資料行結構描述的總和超過 32 KB，PolyBase 將無法查詢資料。
+
+### <a name="data-type-limitations"></a>資料類型限制
+
+下列資料類型不能用在 PolyBase 外部資料表中：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何使用者定義的類型
 
 ## <a name="locking"></a>鎖定
 
@@ -231,7 +244,7 @@ SCHEMARESOLUTION 物件上的共用鎖定。
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. 建立具有文字分隔格式資料的外部資料表
 
-此範例會示範建立將資料儲存為文字分隔檔案之外部資料表的所有步驟。 它會定義外部資料來源 *mydatasource* ，以及外部檔案格式 *myfileformat* 。 系統接著會在 CREATE EXTERNAL TABLE 陳述式中參考這些資料庫層級的物件。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+此範例會示範建立將資料儲存為文字分隔檔案之外部資料表的所有步驟。 它會定義外部資料來源 *mydatasource*，以及外部檔案格式 *myfileformat*。 系統接著會在 CREATE EXTERNAL TABLE 陳述式中參考這些資料庫層級的物件。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource
@@ -261,7 +274,7 @@ WITH (
 
 ### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. 建立具有 RCFile 格式資料的外部資料表
 
-此範例會示範建立將資料格式化為 RCFile 之外部資料表的所有步驟。 它會定義外部資料來源 *mydatasource_rc* ，以及外部檔案格式 *myfileformat_rc* 。 系統接著會在 CREATE EXTERNAL TABLE 陳述式中參考這些資料庫層級的物件。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
+此範例會示範建立將資料格式化為 RCFile 之外部資料表的所有步驟。 它會定義外部資料來源 *mydatasource_rc*，以及外部檔案格式 *myfileformat_rc*。 系統接著會在 CREATE EXTERNAL TABLE 陳述式中參考這些資料庫層級的物件。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource_rc
@@ -629,7 +642,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，SQL 只會儲存資料表中繼資料，以及 Azure SQL Database 中所參考檔案或資料夾的基本統計資料。 不會在 Azure SQL Database 中移動或儲存任何實際資料。
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 > [!NOTE]
 > Azure SQL Database 外部資料表中的資料行不支援 `Text`、`nText` 和 `XML` 資料類型。
@@ -700,6 +713,19 @@ DISTRIBUTION DISTRIBUTION 子句指定用於此資料表的資料散發。 查�
 
 外部資料表會實作為遠端查詢，因此，所傳回的估計資料列數目通常是 1000，根據篩選外部資料表所使用的述詞類型，還有其他規則。 它們是以規則為基礎的估計值，而不是根據外部資料表中的實際資料進行評估。 最佳化工具不會存取遠端資料源來取得更精確的估計值。
 
+### <a name="data-type-limitations"></a>資料類型限制
+
+下列資料類型不能用在 PolyBase 外部資料表中：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何使用者定義的類型
+
 ## <a name="locking"></a>鎖定
 
 SCHEMARESOLUTION 物件上的共用鎖定。
@@ -755,6 +781,7 @@ WITH
 
 ## <a name="syntax"></a>語法
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -777,22 +804,36 @@ column_name <data_type>
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
-  
 }  
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    ( <column_definition> [ ,...n ] )   
+    WITH ( 
+        LOCATION = 'folder_or_filepath',   
+        DATA_SOURCE = external_data_source_name,   
+        FILE_FORMAT = external_file_format_name   
+    )   
+[;]   
+<column_definition> ::= 
+column_name <data_type> 
+    [ COLLATE collation_name ] 
+```
+---
 
 ## <a name="arguments"></a>引數
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，只有資料表中繼資料，以及 Azure Data Lake、Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 建立外部資料表時，不會移動或儲存實際資料。
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 > [!NOTE]
 > Azure SQL 資料倉儲外部資料表中的資料行不支援 `Text`、`nText` 和 `XML` 資料類型。
 
 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。
 
-LOCATION = ' *folder_or_filepath* ' 指定 Azure Data Lake、Hadoop 或 Azure Blob 儲存體中實際資料的資料夾或檔案路徑及檔案名稱。 位置會從根資料夾開始。 根資料夾是在外部資料來源中指定的資料位置。 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 陳述式會建立路徑及資料夾 (若不存在的話)。 `CREATE EXTERNAL TABLE` 則不會建立路徑和資料夾。
+LOCATION = '*folder_or_filepath*' 指定 Azure Data Lake、Hadoop 或 Azure Blob 儲存體中實際資料的資料夾或檔案路徑及檔案名稱。 位置會從根資料夾開始。 根資料夾是在外部資料來源中指定的資料位置。 [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 陳述式會建立路徑及資料夾 (若不存在的話)。 `CREATE EXTERNAL TABLE` 則不會建立路徑和資料夾。
 
 若您將 LOCATION 指定為資料夾，會從外部資料表中選取的 PolyBase 查詢，將會從該資料夾及其所有子資料夾中擷取檔案。 PolyBase 和 Hadoop 相同，並不會傳回隱藏的資料夾。 它也不會傳回檔案名稱是以底線 (_) 或句號 (.) 開始的檔案。
 
@@ -820,18 +861,18 @@ percentage 表示 REJECT_VALUE 是百分比，不是常值。 PolyBase 查詢會
 
 REJECT_VALUE = *reject_value* 指定在查詢失敗前可拒絕的資料列數目或百分比。
 
-針對 REJECT_TYPE = value， *reject_value* 必須為介於 0 和 2,147,483,647 的整數。
+針對 REJECT_TYPE = value，*reject_value* 必須為介於 0 和 2,147,483,647 的整數。
 
-針對 REJECT_TYPE = percentage， *reject_value* 必須為介於 0 和 100 的浮點數。
+針對 REJECT_TYPE = percentage，*reject_value* 必須為介於 0 和 100 的浮點數。
 
 REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentage 時，此屬性是必要項目。 它會決定在 PolyBase 重新計算被拒絕資料列的百分比之前，應嘗試擷取的資料列數目。
 
 *reject_sample_value* 參數必須是介於 0 和 2,147,483,647 的整數。
 
-例如，如果 REJECT_SAMPLE_VALUE = 1000，PolyBase 將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value* ，PolyBase 就會嘗試擷取另外 1000 個資料列。 它會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
+例如，如果 REJECT_SAMPLE_VALUE = 1000，PolyBase 將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value*，PolyBase 就會嘗試擷取另外 1000 個資料列。 它會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
 
 > [!NOTE]
-> 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value* 。
+> 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。
 
 範例：
 
@@ -898,13 +939,26 @@ PolyBase 可以將部分的查詢計算推送至 Hadoop 以改善查詢效能。
 - 外部資料表資料行上的 DEFAULT 限制式
 - 刪除、插入及更新的資料操作語言 (DML) 作業
 
-查詢限制：
+### <a name="query-limitations"></a>查詢限制
 
 建議每個資料夾包含的檔案數不要超過 3 萬個。 參考太多檔案時，可能會發生 Java 虛擬機器 (JVM) 記憶體不足的例外狀況，或效能可能會變差。
 
-資料表寬度限制：
+### <a name="table-width-limitations"></a>資料表寬度限制
 
 Azure 資料倉儲中 PolyBase 具有 1 MB 的資料列寬度限制，這是以依資料表定義的單一有效資料列大小上限為基礎。 若資料行結構描述的總和超過 1 MB，PolyBase 便無法查詢資料。
+
+### <a name="data-type-limitations"></a>資料類型限制
+
+下列資料類型不能用在 PolyBase 外部資料表中：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何使用者定義的類型
 
 ## <a name="locking"></a>鎖定
 
@@ -1025,11 +1079,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 所要建立資料表的名稱，由一到三個部分組成。 針對外部資料表，Analytics Platform System 只會儲存資料表中繼資料，以及 Hadoop 或 Azure Blob 儲存體中所參考檔案或資料夾的基本統計資料。 不會在 Analytics Platform System 中移動或儲存任何實際資料。
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 支援設定資料行名稱、資料類型、可 NULL 性和定序功能。 您無法在外部資料表上使用 DEFAULT CONSTRAINT。
 
 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。
 
-LOCATION = ' *folder_or_filepath* ' 指定 Hadoop 或 Azure Blob 儲存體中實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始。 根資料夾是在外部資料來源中指定的資料位置。
+LOCATION = '*folder_or_filepath*' 指定 Hadoop 或 Azure Blob 儲存體中實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始。 根資料夾是在外部資料來源中指定的資料位置。
 
 在 Analytics Platform System 中，[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 陳述式會建立路徑和資料夾 (若不存在的話)。 `CREATE EXTERNAL TABLE` 則不會建立路徑和資料夾。
 
@@ -1059,18 +1113,18 @@ percentage 表示 REJECT_VALUE 是百分比，不是常值。 PolyBase 查詢會
 
 REJECT_VALUE = *reject_value* 指定在查詢失敗前可拒絕的資料列數目或百分比。
 
-針對 REJECT_TYPE = value， *reject_value* 必須為介於 0 和 2,147,483,647 的整數。
+針對 REJECT_TYPE = value，*reject_value* 必須為介於 0 和 2,147,483,647 的整數。
 
-針對 REJECT_TYPE = percentage， *reject_value* 必須為介於 0 和 100 的浮點數。
+針對 REJECT_TYPE = percentage，*reject_value* 必須為介於 0 和 100 的浮點數。
 
 REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentage 時，此屬性是必要項目。 它會決定在 PolyBase 重新計算被拒絕資料列的百分比之前，應嘗試擷取的資料列數目。
 
 *reject_sample_value* 參數必須是介於 0 和 2,147,483,647 的整數。
 
-例如，如果 REJECT_SAMPLE_VALUE = 1000，PolyBase 將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value* ，PolyBase 就會嘗試擷取另外 1000 個資料列。 它會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
+例如，如果 REJECT_SAMPLE_VALUE = 1000，PolyBase 將會在已嘗試從外部資料檔案匯入 1000 個資料列之後，計算失敗的資料列百分比。 如果失敗的資料列百分比小於 *reject_value*，PolyBase 就會嘗試擷取另外 1000 個資料列。 它會在嘗試匯入每個額外的 1000 個資料列之後，持續重新計算失敗的資料列百分比。
 
 > [!NOTE]
-> 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value* 。
+> 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。
 
 範例：
 
@@ -1128,15 +1182,28 @@ PolyBase 可以將部分的查詢計算推送至 Hadoop 以改善查詢效能。
 - 外部資料表資料行上的 DEFAULT 限制式
 - 刪除、插入及更新的資料操作語言 (DML) 作業
 
-查詢限制：
+### <a name="query-limitations"></a>查詢限制
 
 執行 32 個並行的 PolyBase 查詢時，PolyBase 每個資料夾可取用的檔案數目上限為 33000 個檔案。 這個上限數同時包含了每個 HDFS 資料夾中的檔案和子資料夾。 如果並行程度小於 32，使用者就可以針對 HDFS 中內含超過 33000 個檔案的資料夾執行 PolyBase 查詢。 我們建議您使用簡短的外部檔案路徑，且所使用的每個 HDFS 資料夾檔案數目不要超過 30000 個檔案。 參考太多檔案時，可能會發生 Java 虛擬機器 (JVM) 記憶體不足的例外狀況。
 
-資料表寬度限制：
+### <a name="table-width-limitations"></a>資料表寬度限制
 
 SQL Server 2016 中的 PolyBase 具有 32 KB 的資料列寬度限制，這是以依資料表定義的單一有效資料列大小上限為基礎。 若資料行結構描述的總和超過 32 KB，PolyBase 將無法查詢資料。
 
 在 Azure Synapse Analytics 中，這項限制已提高至 1 MB。
+
+### <a name="data-type-limitations"></a>資料類型限制
+
+下列資料類型不能用在 PolyBase 外部資料表中：
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- 任何使用者定義的類型
 
 ## <a name="locking"></a>鎖定
 

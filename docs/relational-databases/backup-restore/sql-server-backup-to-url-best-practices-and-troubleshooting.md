@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809174"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129036"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳做法和疑難排解
 
@@ -70,11 +70,11 @@ ms.locfileid: "91809174"
     , SECRET = '<storage access key>' ;  
     ```  
   
--   認證存在，但是用來執行 Backup 命令的登入帳戶沒有存取認證的權限。 請使用具備 **更改任何認證** 權限的 ***db_backupoperator*** 角色登入帳戶。  
+-   認證存在，但是用來執行 Backup 命令的登入帳戶沒有存取認證的權限。 請使用具備*「更改任何認證」_權限的 **db_backupoperator** 角色登入帳戶。  
   
 -   確認儲存體帳戶名稱與金鑰值。 儲存在認證中的資訊必須符合您在備份和還原作業中使用之 Azure 儲存體帳戶的屬性值。  
   
- **備份錯誤/失敗：**  
+ _ *備份錯誤/失敗：* *  
   
 -   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗]  錯誤。  
   

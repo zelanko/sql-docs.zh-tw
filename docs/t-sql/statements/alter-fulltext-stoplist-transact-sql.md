@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688370"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128094"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |格式|描述|  
 |------------|-----------------|  
-|String|*language_term* 會對應到 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視中的 **alias** 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
+|String|*language_term* 會對應到 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視中的 **alias** 資料行值。 字串必須以單引號括住，如下： **'** _language_term_*_'_*。|  
 |整數|*language_term* 是語言的 LCID。|  
 |十六進位|*language_term* 是 0x 後接 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。 如果這個值是雙位元組字集 (DBCS) 格式，SQL Server 會將它轉換成 Unicode。|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  將停用字詞新增到 LANGUAGE *language_term* 指定之語言的停用字詞表。  
   
  如果語言的關鍵字和 LCID 值的指定組合在 STOPLIST 中不是唯一的，將會傳回錯誤。  如果此 LCID 值未對應到註冊的語言，將會產生錯誤。  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  卸除停用字詞表中的停用字詞。  
   
  **'** *stopword* **'** LANGUAGE *language_term*  

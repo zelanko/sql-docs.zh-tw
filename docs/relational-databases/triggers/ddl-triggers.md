@@ -13,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e70bf690c7e236bbe52eae905730dec8f9ac48a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4e723b2ef95fa3b1916d972a5b911dda5201a3d
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418952"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328058"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88418952"
   
  DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 等函數無法用來查詢有關 DDL 觸發程序的中繼資料。 請改用目錄檢視。  
   
- 伺服器範圍的 DDL 觸發程序會出現在 SQL Server Management Studio 物件總管的 [觸發程序]**** 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則是出現在 [資料庫觸發程序] 資料夾。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
+ 伺服器範圍的 DDL 觸發程序會出現在 SQL Server Management Studio 物件總管的 [觸發程序] 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則是出現在 [資料庫觸發程序] 資料夾。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
   
 > [!IMPORTANT]  
 >  觸發程序內的惡意程式碼可能在擴大的權限下執行。 如需如何協助降低此威脅的詳細資訊，請參閱 [管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)。  
@@ -124,5 +124,5 @@ GO
  [DML 觸發程序](../../relational-databases/triggers/dml-triggers.md)   
  [登入觸發程序](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
+ [EVENT DATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

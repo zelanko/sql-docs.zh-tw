@@ -1,2 +1,2 @@
 > [!NOTE]
-> Azure Synapse Analytics 中的無伺服器 SQL 集區 (預覽) 不支援此語法。
+> Azure Synapse Analytics 的無伺服器 SQL 集區不支援此語法。

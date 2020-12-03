@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2e24711b7b67f19018b325da3c6b78dc954e6a31
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130289"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
@@ -46,7 +46,7 @@ ms.locfileid: "91869421"
 - 提供擴充事件的動態管理檢視 (DMV) 之間隱含的主索引鍵與外部索引鍵關聯性。
 - 描述可從相關文章了解的其他內容。
 
-部落格及其他非正式交談有時會以縮寫 *xevents*來指稱擴充事件。
+部落格及其他非正式交談有時會以縮寫 *xevents* 來指稱擴充事件。
 
 > [!NOTE]
 > 如需 Azure SQL Database 中擴充事件的相關資訊 (包括程式碼範例)，請參閱 [SQL Database 中的擴充事件](/azure/azure-sql/database/xevent-db-diff-from-svr) \(部分機器翻譯\)。
@@ -110,13 +110,16 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
    - 針對 [值]  ，輸入 **%SELECT%HAVING%** 。
 
    > [!NOTE]
-   > 在這個兩部分名稱中，*sqlserver* 是封裝名稱，而 *sql_text* 是欄位名稱。 我們稍早所選擇的事件 *sql_statement_completed* ，必須與所選擇的欄位在相同的封裝中。
+   > 在這個兩部分名稱中，*sqlserver* 是套件名稱，而 *sql_text* 是欄位名稱。 我們稍早所選的事件 *sql_statement_completed*，必須和我們選擇的欄位在同一套件中。
 
 9. 按一下左上方的 [資料存放區]  頁面。
 
 10. 在 [目標]  區域中，按一下 [按一下此處以新增目標]  。
     - 在 [類型]  下拉式清單中，選擇 **event_file**。
     - 這表示事件資料將會儲存在我們可以檢視的檔案中。
+    
+    > [!NOTE]
+    > 您無法使用 Azure Blob 儲存體作為 SQL Server 內部部署執行個體中的資料儲存體目標。
 
     ![[新增工作階段] > [資料存放區] > [目標] > [類型] > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
@@ -247,7 +250,7 @@ event_session_address  5
 event_session_id       5
 is_trigger_event       4
 trace_event_id         3
-***/
+**_/
 ```
 
 <a name="select-the-full-results-xml-37"/>
@@ -257,7 +260,7 @@ trace_event_id         3
 在 SSMS 中，執行下列 T-SQL SELECT 以傳回結果，其中每個資料列會提供一個事件項目的相關資料。 CAST AS XML 可讓您輕鬆地檢視結果。
 
 > [!NOTE]
-> 此事件系統一律會在您指定的 *.xel* event_file 檔案名稱前面附加長數字。 您必須複製系統指定的完整名稱並貼到 SELECT 中，才能從檔案執行下列 SELECT。
+> 事件系統一律會在所指定的 _.xel* event_file 檔案名稱後面附加一串長數字。 您必須複製系統指定的完整名稱並貼到 SELECT 中，才能從檔案執行下列 SELECT。
 
 ```sql
 SELECT
@@ -369,7 +372,7 @@ SELECT
 | :--- | :---------- |
 | 事件工作階段 | 目標為以一或多項事件為主的建構，加上支援的項目 (例如動作)。 CREATE EVENT SESSION 陳述式會建構每個事件工作階段。 您可以隨意 ALTER 事件工作階段，以開始和停止工作階段。 <br/> <br/> 如果內容釐清其表示「事件工作階段」  ，事件工作階段有時簡稱為「工作階段」  。 <br/> <br/> 如需事件工作階段的進一步詳細資訊，請參閱︰[SQL Server 擴充事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
 | event | 使用中的事件工作階段在系統中監看的特定項目。 <br/> <br/> 例如， *sql_statement_completed* 事件代表任何指定 T-SQL 陳述式完成的時間點。 此事件會報告其持續時間和其他資料。 |
-| 目標 | 從所擷取的事件接收輸出資料的項目。 此目標會向您顯示資料。 <br/> <br/> 範例包括 *event_file*，以及其好用的輕量型類似項目 *ring_buffer*記憶體。 較複雜的「長條圖」  目標會對您的資料先執行一些處理，再向您顯示。 <br/> <br/> 任何目標都可以用於任何事件工作階段。 如需詳細資訊，請參閱 [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)(SQL Server 的擴充事件目標)。 |
+| 目標 | 從所擷取的事件接收輸出資料的項目。 此目標會向您顯示資料。 <br/> <br/> 範例包括 *event_file*，以及其好用的輕量型類似項目 *ring_buffer* 記憶體。 較複雜的「長條圖」  目標會對您的資料先執行一些處理，再向您顯示。 <br/> <br/> 任何目標都可以用於任何事件工作階段。 如需詳細資訊，請參閱 [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)(SQL Server 的擴充事件目標)。 |
 | 動作 | 事件已知的欄位。 此欄位中的資料會傳送至目標。 [動作] 欄位與「述詞篩選條件」  密切相關。 |
 | 述詞篩選條件 | 事件欄位中的資料測試，以此方式使用時，只會將相關事件項目子集傳送至目標。 <br/> <br/> 例如，篩選可以只包含 *sql_statement_completed* 事件項目，其中 T-SQL 陳述式內含字串 *HAVING*。 |
 | 套件 | 附加至一組項目中每個項目的名稱限定詞，此限定詞是以事件核心為主。 <br/> <br/> 例如，封裝可能會有 T SQL 文字的相關事件。 一個事件可以與 GO 分隔批次中的所有 T-SQL 相關。 同時有另一個範圍較小的事件與個別 T-SQL 陳述式相關。 此外，任何一個 T-SQL 陳述式都會有開始和完成的事件。 <br/> <br/> 事件的適當欄位也會與事件一起封裝。 大多數目標會在 *package0* 中，並可搭配許多其他封裝中的事件使用。 |

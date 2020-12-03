@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006207"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297956"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 
@@ -27,12 +27,17 @@ ms.locfileid: "92006207"
 
 
 
-**Azure SQL DW 上傳工作**可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure Synapse Analytics (DW)。
+**Azure SQL DW 上傳工作** 可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure Synapse Analytics (DW)。
 該工作會利用 PolyBase 來改善效能，如 [Azure Synapse Analytics 載入模式及策略](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)一文所述。
 目前支援的來源資料檔案格式為使用 UTF8 編碼的分隔文字。
 從檔案系統複製時，資料會先上傳到 Azure Blob 儲存體暫存，再到 Azure SQL DW。 因此，會需要 Azure Blob 儲存體。
 
-**Azure SQL DW 上傳工作**是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
+> [!NOTE]
+> 不支援具有 Data Lake Gen2 服務類型的 Azure 儲存體連線管理員。
+>
+> 若要針對暫存或來源使用 Azure Data Lake Gen2，您可透過具有 Blob 儲存體服務類型的 Azure 儲存體連線管理員進行連線。
+
+**Azure SQL DW 上傳工作** 是 [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
 
 若要新增 **Azure SQL DW 上傳工作**，請將其從 SSIS 工具箱拖放到設計工具畫布，然後按兩下或在其上按一下滑鼠右鍵，再按一下 [編輯]  ，即可看到工作編輯器對話方塊。
 
@@ -63,8 +68,8 @@ CompressionType|指定在將檔案上傳到 Azure 儲存體時要使用的壓縮
 CompressionLevel|指定要用於壓縮格式的壓縮層級。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
 TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 **\<New Table ...>** 建立新的資料表。
-TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
-HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
+TableDistribution|指定新資料表的發佈方法。 如果為 **TableName** 指定了新的資料表名稱即適用。
+HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH** 即適用。
 
 ### <a name="blobstorage"></a>BlobStorage
 
@@ -78,8 +83,8 @@ ColumnDelimiter|指定一或多個標示各資料行結尾的字元。 例如 &#
 CompressionType|指定來源資料使用的壓縮格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
 TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 **\<New Table ...>** 建立新的資料表。
-TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
-HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
+TableDistribution|指定新資料表的發佈方法。 如果為 **TableName** 指定了新的資料表名稱即適用。
+HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH** 即適用。
 
 根據您複製到新資料表或現有資料表，看到的 [對應]  頁面會有所不同。
 如果是前者，請設定要對應哪些來源資料行，及其在要建立的目的資料表中對應名稱為何。

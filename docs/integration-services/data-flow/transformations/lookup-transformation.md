@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193211"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
@@ -91,9 +91,9 @@ ms.locfileid: "92193211"
   
  下列是將快取保存至檔案的其他優點：  
   
--   ***在多個封裝間共用快取檔案。如需詳細資訊，請參閱***  [使用快取連線管理員以完整快取模式實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
+-   ***在多個套件間共用快取檔案。如需詳細資訊，請參閱** _ [使用快取連線管理員以完整快取模式實作查閱轉換](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) _*_ 。 _*_  
   
--   使用封裝部署快取檔案， ***接著就可以在多部電腦上使用資料。*** 如需詳細資訊，請參閱 [針對查閱轉換來建立及部署快取](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
+-   使用封裝部署快取檔案， _*_接著就可以在多部電腦上使用資料。_*_ 如需詳細資訊，請參閱 [針對查閱轉換來建立及部署快取](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
 -   使用「原始檔案」來源從快取檔案讀取資料， 接著就可以使用其他的資料流程元件來轉換或移動資料。 如需相關資訊，請參閱 [Raw File Source](../../../integration-services/data-flow/raw-file-source.md)。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193211"
      如需安裝 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 產品範例和範例資料庫的資訊，請參閱 [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)(SQL Server Integration Services 產品範例)。  
   
 ## <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
-  使用 [查閱轉換編輯器] 對話方塊的 **[一般]** 頁面來選取快取模式、選取連接類型，及指定如何處理無相符項目的資料列。  
+  使用 [查閱轉換編輯器] 對話方塊的 [一般]_* 頁面來選取快取模式、選取連線類型，以及指定如何處理無相符項目的資料列。  
   
 ### <a name="options"></a>選項。  
  **完整快取**  
@@ -181,15 +181,15 @@ ms.locfileid: "92193211"
  當您在 **[查閱轉換編輯器]** 對話方塊的 [一般] 頁面上選取 **[完整快取]** 和 **[快取連接管理員]** 時，可使用下列選項：  
   
  **[完整快取]**  
- 從清單中選取現有的快取連線管理員，或按一下 [新增]**** 來建立新的連線。  
+ 從清單中選取現有的快取連線管理員，或按一下 [新增] 來建立新的連線。  
   
  **新增**  
- 使用 [快取連線管理員編輯器]**** 對話方塊來建立新的連線。  
+ 使用 [快取連線管理員編輯器] 對話方塊來建立新的連線。  
   
  當您在 **[查閱轉換編輯器]** 對話方塊的 [一般] 頁面上選取 **[完整快取]**、 **[部分快取]** 或 **[無快取]** 以及 **[OLE DB 連接管理員]** 時，可以使用下列選項。  
   
  **[無快取]**  
- 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增]**** 來建立新連線。  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
   
  **新增**  
  使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
@@ -207,7 +207,7 @@ ms.locfileid: "92193211"
  選擇此選項以瀏覽至預先存在的查詢、建立新查詢、檢查查詢語法，以及預覽查詢結果。  
   
  **建立查詢**  
- 使用 [查詢產生器]**** (用來以瀏覽資料的方式建立查詢的圖形化工具)，來建立要執行的 Transact-SQL 陳述式。  
+ 使用 [查詢產生器] (用來以瀏覽資料的方式建立查詢的圖形化工具)，來建立要執行的 Transact-SQL 陳述式。  
   
  **瀏覽**  
  使用此選項即可瀏覽至預先存在且已儲存為檔案的查詢。  
@@ -251,7 +251,7 @@ ms.locfileid: "92193211"
  輸入每個查閱資料行之輸出的別名。 預設是查閱資料行的名稱；但是，您可以選取任何唯一的描述性名稱。  
   
 ## <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
-  使用 [查閱轉換編輯器]**** 對話方塊的 [進階]**** 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  
+  使用 [查閱轉換編輯器] 對話方塊的 [進階] 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  
   
 ### <a name="options"></a>選項。  
  **快取大小 (32 位元)**  
@@ -270,10 +270,10 @@ ms.locfileid: "92193211"
  修改用來產生參考資料集的 SQL 陳述式。  
   
 > [!NOTE]  
->  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器]**** 的 [連接]**** 頁面上所指定的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;連接頁面&#41;]()＞。  
+>  在此頁面上所指定的選擇性 SQL 陳述式會覆寫並取代在 [查閱轉換編輯器] 的 [連接] 頁面上所指定的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;連接頁面&#41;]()＞。  
   
  **設定參數**  
- 使用 [設定查詢參數]**** 對話方塊，即可將輸入資料行對應至參數。  
+ 使用 [設定查詢參數] 對話方塊，即可將輸入資料行對應至參數。  
   
 ### <a name="external-resources"></a>外部資源  
  blogs.msdn.com 上的部落格文章： [查閱快取模式](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/)  

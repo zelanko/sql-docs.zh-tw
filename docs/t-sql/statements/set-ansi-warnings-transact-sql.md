@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d1dfea07a02effb5362b0f01ad496b536c646139
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300841"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328092"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,14 @@ ms.locfileid: "92300841"
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法
-  
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] 的語法
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] 的語法
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -59,7 +57,7 @@ SET ANSI_WARNINGS ON
   
 -   當設為 ON 時，如果彙總函式 (如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT) 中出現 Null 值，就會產生警告訊息。 當設為 OFF 時，不會產生警告訊息。  
   
--   當設為 ON 時，除以零和算術溢位錯誤會造成陳述式的回復，且會產生錯誤訊息。 當設為 OFF 時，除以零和算術溢位錯誤會造成傳回 Null 值。 如果在 **character** 、Unicode 或 **binary** 資料行中嘗試 INSERT 或 UPDATE，且新值長度超過資料行的大小上限時，除以零或算術溢位錯誤會造成傳回 Null 值。 如果 SET ANSI_WARNINGS 為 ON，INSERT 或 UPDATE 就會依 ISO 標準的指定加以取消。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
+-   當設為 ON 時，除以零和算術溢位錯誤會造成陳述式的回復，且會產生錯誤訊息。 當設為 OFF 時，除以零和算術溢位錯誤會造成傳回 Null 值。 如果在 **character**、Unicode 或 **binary** 資料行中嘗試 INSERT 或 UPDATE，且新值長度超過資料行的大小上限時，除以零或算術溢位錯誤會造成傳回 Null 值。 如果 SET ANSI_WARNINGS 為 ON，INSERT 或 UPDATE 就會依 ISO 標準的指定加以取消。 字元資料行尾端的空格會被忽略，二進位資料行尾端的 Null 也會被忽略。 當它是 OFF 時，便會將資料截斷成為資料行大小，陳述式會繼續作業。  
   
 > [!NOTE]  
 > 在來源或目標是 **binary** 或 **varbinary** 資料的任何轉換作業中，當發生截斷時，不論 SET 選項為何，都不會發出任何警告或錯誤。  

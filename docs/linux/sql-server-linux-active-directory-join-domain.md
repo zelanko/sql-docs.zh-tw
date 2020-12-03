@@ -2,19 +2,19 @@
 title: 將 Linux 上的 SQL Server 加入 Active Directory
 titleSuffix: SQL Server
 description: 本文提供將 SQL Server Linux 主機電腦加入 AD 網域的指引。 您可使用內建的 SSSD 套件，或使用協力廠商 AD 提供者。
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896974"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419840"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>將 Linux 主機上的 SQL Server 加入 Active Directory 網域
 
@@ -29,19 +29,27 @@ ms.locfileid: "85896974"
 > [!IMPORTANT]
 > 本文中所述的範例步驟僅為指導用途，並參考 Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x 和 SUSE Enterprise Linux (SLES) 12 作業系統。 根據整體環境的設定方式與作業系統版本而定，您環境中的實際步驟可能稍有不同。 例如，Ubuntu 18.04 使用 netplan，而 Red Hat Enterprise Linux (RHEL) 8.x 使用 nmcli 等其他工具來管理及設定網路。 建議連絡您的系統和網域管理員，以了解您環境的特定工具、設定、自訂並進行任何必要的疑難排解。
 
+### <a name="reverse-dns-rdns"></a>反向 DNS (RDNS)
+
+根據預設，當將執行 Windows Server 的電腦設定為網域控制站時，您可能沒有 RDNS 區域。 請確定網域控制站和將執行 SQL Server 的 Linux 電腦其 IP 位址都有所適用 RDNS 區域。
+
+另請確定也有指向網域控制站的 PTR 記錄。
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>檢查網域控制站的連線
 
-請確認您可以使用網域的簡短和完整名稱來與網域控制站連線：
+檢查是否可使用網域的簡短和完整名稱，以及使用網域控制站的主機名稱來與網域控制站連絡。 網域控制站其 IP 也應該可解析為網域控制站的 FQDN：
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
 > 本教學課程分別使用 **contoso.com** 和 **CONTOSO.COM** 作為範例網域和領域名稱。 它也會使用 **DC1.CONTOSO.COM** 作為網域控制站的完整網域名稱範例。 您必須以自有值來取代這些名稱。
 
-如果其中一項名稱檢查失敗，請更新您的網域搜尋清單。 下列各節分別提供適用於 Ubuntu、Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 的指示。
+如果這些名稱的任何一項檢查失敗，請更新網域搜尋清單。 下列各節分別提供適用於 Ubuntu、Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 的指示。
 
 ### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -62,6 +70,39 @@ ping contoso.com
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. 接下來，檢查 **/etc/resolv.conf** 檔案是否包含類似下列範例的程式碼行：
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. 請編輯 [sudo vi /etc/netplan/******.yaml] 檔案，讓 Active Directory 網域位於網域搜尋清單中：
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > 網路介面 `eth0` 可能會因不同電腦而有所不同。 若要找出您使用的是哪一個，請執行 **ifconfig**。 然後，複製具有 IP 位址並已傳送和接收位元組的介面。
+
+1. 編輯此檔案之後，請重新啟動網路服務：
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. 接下來，檢查 **/etc/resolv.conf** 檔案是否包含類似下列範例的程式碼行：
@@ -145,22 +186,41 @@ ping contoso.com
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE：**
+   
+   **SLES 12：**
+   
+   請注意，這些是唯一獲得正式支援的 SUSE for Linux 版本 SLES 12 其特定步驟。
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04：**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04：**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. 如果 Kerberos 用戶端套件安裝提示您提供領域名稱，請以大寫輸入您的網域名稱。
 
 1. 在您確認 DNS 設定無誤之後，請執行下列命令來加入網域。 您必須使用具有足夠 AD 權限的 AD 帳戶進行驗證，才能將新的電腦加入網域。 此命令會在 AD 中建立新的電腦帳戶、建立 **/etc/krb5.keytab** 主機 Keytab 檔、在 **/etc/sssd/sssd.conf** 中設定網域，以及更新 **/etc/krb5.conf**。
+
+   因為 **realmd** 發生問題，所以請先將電腦主機名稱設為 FQDN，而非電腦名稱。 否則，即使網域控制站支援動態 DNS 更新，**realmd** 也可能不會建立電腦所有必要的 SPN，且 DNS 項目也不會自動更新。
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   執行上述命令之後，/etc/hostname 檔案應該包含 <old hostname>.contoso.com。
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -197,7 +257,7 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - 如果**識別碼使用者\@contoso.com** 傳回 `No such user`，請執行 `sudo systemctl status sssd` 命令以確定成功啟動 SSSD 服務。 如果服務正在執行，但您仍然看到此錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件的 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting) (針對 SSSD 進行疑難排解)。
+   > - 如果 **識別碼使用者\@contoso.com** 傳回 `No such user`，請執行 `sudo systemctl status sssd` 命令以確定成功啟動 SSSD 服務。 如果服務正在執行，但您仍然看到此錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件的 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting) (針對 SSSD 進行疑難排解)。
    >
    > - 如果 **kinit 使用者\@CONTOSO.COM** 傳回 `KDC reply did not match expectations while getting initial credentials`，請確認您已指定大寫的領域。
 
@@ -210,7 +270,7 @@ ping contoso.com
 SQL Server 不會使用協力廠商整合器的程式碼或程式庫來進行任何 AD 相關查詢。 SQL Server 一律會直接在此安裝程式中使用 OpenLDAP 程式庫呼叫來查詢 AD。 系統只會使用協力廠商整合器來將 Linux 主機加入 AD 網域，而 SQL Server 與這些公用程式沒有任何直接的通訊。
 
 > [!IMPORTANT]
-> 如需使用 **mssql-conf** `network.disablesssd`設定選項的建議，請參閱[在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文中的**其他設定選項**區段。
+> 如需使用 **mssql-conf** `network.disablesssd`設定選項的建議，請參閱 [在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文中的 **其他設定選項** 區段。
 
 確認您已正確設定 **/etc/krb5.conf**。 大多數協力廠商 Active Directory 提供者都會自動完成此設定。 不過，請檢查 **/etc/krb5.conf** 的下列值，以防止任何後續問題：
 

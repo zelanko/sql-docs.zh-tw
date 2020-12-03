@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760446"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127848"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 
@@ -36,7 +36,7 @@ ms.locfileid: "85760446"
 
 ## <a name="whats-new-in-polybase-2019"></a>PolyBase 2019 中有哪些新功能？ 
 
-[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 中的 PolyBase 現在可以從更多不同的資料來源讀取資料。 這些外部資料來源的資料可以儲存為您 SQL Server 上的外部資料表。 PolyBase 也支援下推計算到這些外部資料來源，但不包括 ODBC 泛型型別。
+[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 中的 PolyBase 現在可以從更多不同的資料來源讀取資料。 這些外部資料來源的資料可儲存為 SQL Server 上外部資料表。 PolyBase 也支援下推計算到這些外部資料來源，但不包括 ODBC 泛型型別。
 
 ### <a name="compatible-data-sources"></a>相容的資料來源
 

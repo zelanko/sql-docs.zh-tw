@@ -14,11 +14,11 @@ ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 23bc66a0c782005a2426ee9fc4e35a237f49cb96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789650"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126152"
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85789650"
 |**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意:若要取消註冊資料庫，請關閉 [註冊鏡像資料庫] 對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作] 功能表中的 [取消註冊]。|  
 |**Database**|選取之伺服器執行個體上的鏡像資料庫名稱。|  
 |**目前的角色**|資料庫目前在選取之伺服器執行個體上的鏡像角色，可為 [主體] 或 [鏡像]。|  
-|**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 括號內會顯示 [主控台使用者的 Windows 驗證] 或 [登入 '***\<login name>***' 的 SQL Server 驗證]。 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  
+|**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 括弧內會顯示 **主控台使用者的 Windows 驗證，** 或 **登入 '** _\<login name>_ *_' 的 SQL Server 驗證_*。 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  
   
  **當我按一下確定時顯示管理伺服器連接對話方塊**  
  依預設，若是先前未給予認證的夥伴伺服器執行個體，「資料庫鏡像監視器」會使用「Windows 驗證」認證。 當您完成資料庫的註冊時，啟用此選項即可變更一個或多個伺服器執行個體的認證。  

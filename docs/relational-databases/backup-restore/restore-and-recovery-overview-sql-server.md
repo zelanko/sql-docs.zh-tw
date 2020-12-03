@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 - accelerated database recovery
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810695"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125558"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "91810695"
 |中的|在簡單復原模式下|在完整/大量記錄復原模式下|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |完整資料庫還原|這是基本還原策略。 完整資料庫還原可能只包括還原和復原完整資料庫備份。 此外，完整資料庫還原也可能包括還原完整資料庫備份，接著再還原和復原差異備份。<br /><br /> 如需詳細資訊，請參閱[完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)。|這是基本還原策略。 完整資料庫還原包括還原完整資料庫備份和選用的差異備份 (如果有的話)，然後依照順序還原所有後續的記錄備份。 復原最後一個記錄備份，並且加以還原 (RESTORE WITH RECOVERY)，即完成完整資料庫還原。<br /><br /> 如需詳細資訊，請參閱[完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|  
-|File restore **\***|還原一個或多個損毀的唯讀檔案，而不還原整個資料庫。 唯有當資料庫至少有一個唯讀檔案群組時，才能使用檔案還原。|還原一個或多個檔案，而不還原整個資料庫。 可以在資料庫離線時，或在資料庫仍在線上時 (適用於某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本) 執行檔案還原。 在檔案還原期間，包含正在還原中之檔案的檔案群組一律為離線狀態。|  
+|檔案還原 * *\** _|還原一個或多個損毀的唯讀檔案，而不還原整個資料庫。 唯有當資料庫至少有一個唯讀檔案群組時，才能使用檔案還原。|還原一個或多個檔案，而不還原整個資料庫。 可以在資料庫離線時，或在資料庫仍在線上時 (適用於某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本) 執行檔案還原。 在檔案還原期間，包含正在還原中之檔案的檔案群組一律為離線狀態。|  
 |分頁還原|不適用|還原一個或多個損毀的頁面。 可以在資料庫離線時，或在資料庫仍在線上時 (適用於某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本) 執行頁面還原。 在分頁還原期間，正在還原中的頁面一律為離線狀態。<br /><br /> 未中斷的記錄備份鏈結必須可用 (直到目前記錄檔)，且必須全部套用，才能使分頁與目前記錄檔保持一樣新。<br /><br /> 如需詳細資訊，請參閱[還原頁面 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)。|  
-|分次還原 **\***|在檔案群組層級上，從主要檔案群組開始，接著是所有讀取/寫入次要檔案群組，分階段還原和復原資料庫。|從主要檔案群組開始，在檔案群組層級上分階段還原和復原資料庫。<br /><br /> 如需詳細資訊，請參閱[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
+|分次還原 _*\**_|在檔案群組層級上，從主要檔案群組開始，接著是所有讀取/寫入次要檔案群組，分階段還原和復原資料庫。|從主要檔案群組開始，在檔案群組層級上分階段還原和復原資料庫。<br /><br /> 如需詳細資訊，請參閱[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
   
- **\*** 只有 Enterprise 版才支援線上還原。  
+ _*\**_ 只有 Enterprise Edition 支援線上還原。  
 
 ### <a name="steps-to-restore-a-database"></a>還原資料庫的步驟
 若要執行檔案還原，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會執行兩個步驟： 
@@ -87,15 +87,15 @@ ms.locfileid: "91810695"
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，還原檔案或頁面可以讓資料庫中的其他資料在還原作業期間維持線上狀態。  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 復原和交易記錄
-針對大多數的還原案例，必須套用交易記錄備份並允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行**復原流程**，資料庫才能上線。 復原是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的的流程，為的是讓每個資料庫都能以交易一致 (或正常) 狀態啟動。
+就大多數的還原案例而言，必須套用交易記錄備份並允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行_「復原流程」*，資料庫才能上線。 復原是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的的流程，為的是讓每個資料庫都能以交易一致 (或正常) 狀態啟動。
 
 在容錯移轉或其他不正常關機的情況下，資料庫可能會停留在緩衝區快取中有些修改尚未寫入資料檔，且未完成交易已在資料檔中作了一些修改的狀態。 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，其會執行每個資料庫的復原；這些復原都是以最後一個[資料庫檢查點](../../relational-databases/logs/database-checkpoints-sql-server.md)為基礎的三個階段所組成：
 
--   **分析階段**會分析交易記錄來判斷最後一個檢查點為何，並建立中途分頁資料表 (Dirty Page Table，DPT) 和使用中交易資料表 (Active Transaction Table，ATT)。 DPT 包含資料庫關機時已變更的分頁記錄。 ATT 包含資料庫不正常關機時仍在使用中的交易記錄。
+-   **分析階段** 會分析交易記錄來判斷最後一個檢查點為何，並建立中途分頁資料表 (Dirty Page Table，DPT) 和使用中交易資料表 (Active Transaction Table，ATT)。 DPT 包含資料庫關機時已變更的分頁記錄。 ATT 包含資料庫不正常關機時仍在使用中的交易記錄。
 
--   **重做階段**會向前復原資料庫關機時，記錄中每個已記錄且可能尚未寫入資料檔的修改內容。 其會在 DPT 中找到成功進行全資料庫復原時所需要的[最小記錄序號](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#minlsn) (minLSN)，並標記所有中途分頁上所需重做作業的開始。 在此階段，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將所有屬於已認可交易的中途分頁寫入磁碟。
+-   **重做階段** 會向前復原資料庫關機時，記錄中每個已記錄且可能尚未寫入資料檔的修改內容。 其會在 DPT 中找到成功進行全資料庫復原時所需要的[最小記錄序號](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#minlsn) (minLSN)，並標記所有中途分頁上所需重做作業的開始。 在此階段，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將所有屬於已認可交易的中途分頁寫入磁碟。
 
--   **復原階段**會復原 ATT 中找到的未完成交易，確保資料庫的完整性。 回復之後，資料庫會上線，而且不再有交易記錄備份可以套用到資料庫。
+-   **復原階段** 會復原 ATT 中找到的未完成交易，確保資料庫的完整性。 回復之後，資料庫會上線，而且不再有交易記錄備份可以套用到資料庫。
 
 每個資料庫復原階段進度的資訊都會記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [錯誤記錄檔](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)中。 資料庫復原進度也可以使用擴充事件進行追蹤。 如需詳細資訊，請參閱部落格文章[資料庫復原進度的新擴充事件](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)。
 
@@ -113,13 +113,13 @@ ms.locfileid: "91810695"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |資料復原|完整復原 (如果有記錄可以使用)。|有損失部分資料的風險。|自上次完整或差異備份之後的任何資料，都會遺失。|  
 |時間點還原|記錄備份涵蓋的任何時間。|如果記錄備份含有大量記錄變更，則不允許。|不支援。|  
-|File restore **\***|完整支援。|有時。 **\*\***|僅適用於唯讀的次要檔案。|  
-|Page restore **\***|完整支援。|有時。 **\*\***|無。|  
-|分次 (檔案群組-等級) 還原 **\***|完整支援。|有時。 **\*\***|僅適用於唯讀的次要檔案。|  
+|檔案還原 * *\** _|完整支援。|有時._ *\*\** *|僅適用於唯讀的次要檔案。|  
+|分頁還原 * *\** _|完整支援。|有時._ *\*\** *|無。|  
+|分次 (檔案群組層級) 還原 * *\** _|完整支援。|有時._ *\*\** *|僅適用於唯讀的次要檔案。|  
   
- **\*** 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ * *\** _ 僅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 提供  
   
- **\*\*** 如需了解必要條件，請參閱此主題稍後的 [簡單復原模式下的還原限制](#RMsimpleScenarios)。  
+ _ *\*\** * 如需必要條件，請參閱本主題稍後的[簡單復原模式下的還原限制](#RMsimpleScenarios)。  
   
 > [!IMPORTANT]  
 > 不論資料庫的復原模式為何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份都無法還原至比建立備份版本還舊的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本。  

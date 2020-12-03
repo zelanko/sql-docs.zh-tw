@@ -17,11 +17,11 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ce9659824a46615da6056928c81e6a8cc4b98b36
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116482"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128557"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,18 +40,18 @@ COMPRESS ( expression )
 *expression*  
 A
 
-* **binary(***n***)**
-* **char(***n***)**
-* **nchar(***n***)**
+* **binary(** _n_*_)_*
+* **char(** _n_*_)_*
+* **nchar(** _n_*_)_*
 * **nvarchar(max)**
-* **nvarchar(***n***)**
+* **nvarchar(** _n_*_)_*
 * **varbinary(max)**
-* **varbinary(***n***)**
+* **varbinary(** _n_*_)_*
 * **varchar(max)**
 
 或
 
-* **varchar(***n***)**
+* **varchar(** _n_*_)_*
 
 expression： 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
   
