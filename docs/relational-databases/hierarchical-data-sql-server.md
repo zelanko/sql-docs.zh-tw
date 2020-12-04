@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869058"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "91869058"
   
 -   極度壓縮  
   
-     代表樹狀目錄 (含有 *n* 個節點) 中之節點所需的平均位元數目會因平均扇出 (節點子系的平均數目) 而不同。 若為小型扇出 (0-7)，其大小大約是 6\*logA*n* 個位元，其中 A 是平均扇出。 在平均 fanout 為 6 個階層之 100,000 人員的組織階層中，節點會佔用大約 38 位元。 然後，這會四捨五入成 40 位元 (或 5 個位元組)，以便進行儲存。  
+     代表樹狀目錄 (含有 *n* 個節點) 中之節點所需的平均位元數目會因平均扇出 (節點子系的平均數目) 而不同。 若為小型扇出 (0-7)，其大小大約是 6\*logA *n* 個位元，其中 A 是平均扇出。 在平均 fanout 為 6 個階層之 100,000 人員的組織階層中，節點會佔用大約 38 位元。 然後，這會四捨五入成 40 位元 (或 5 個位元組)，以便進行儲存。  
   
 -   比較是按照深度優先順序  
   
@@ -99,13 +99,13 @@ GO
   
  比較父子式和 **hierarchyid** 的一般作業  
   
--   使用 **hierarchyid**進行子樹查詢時，速度明顯加快。  
+-   使用 **hierarchyid** 進行子樹查詢時，速度明顯加快。  
   
--   而使用 **hierarchyid**進行直接下階查詢時，速度則稍慢。  
+-   而使用 **hierarchyid** 進行直接下階查詢時，速度則稍慢。  
   
--   使用 **hierarchyid**移動非分葉節點時，速度比較慢。  
+-   使用 **hierarchyid** 移動非分葉節點時，速度比較慢。  
   
--   使用 **hierarchyid**插入非分葉節點與插入或移動分葉節點時，其複雜程度相同。  
+-   使用 **hierarchyid** 插入非分葉節點與插入或移動分葉節點時，其複雜程度相同。  
   
  下列狀況存在時，最好使用父子式：  
   
@@ -127,7 +127,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 文件是一個樹狀結構，因此，單一的 XML 資料類型執行個體可以代表一個完整的階層。 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML hierarchyid 函數dex is created, **hierarchyid** values are used hierarchyid 函數ternally to represent the position hierarchyid 函數 the hierarchy.  
+ XML 文件是一個樹狀結構，因此，單一的 XML 資料類型執行個體可以代表一個完整的階層。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 建立 XML 索引時，**hierarchyid** 值會用在內部，以表示在階層中的位置。  
   
  如果以下所有狀況成立，使用 XML 資料類型可能比較好：  
   
@@ -260,7 +260,7 @@ INSERT SimpleDemo
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
- 這會顯示更多可能的問題。 Kyoto 可插入為層級 `/1/3/1/` ，但卻沒有父層級 `/1/3/`。 而 London 和 Kyoto 的 **hierarchyid**值相同。 同樣地，使用者必須決定此階層類型是否適用，並封鎖不適用的值。  
+ 這會顯示更多可能的問題。 Kyoto 可插入為層級 `/1/3/1/` ，但卻沒有父層級 `/1/3/`。 而 London 和 Kyoto 的 **hierarchyid** 值相同。 同樣地，使用者必須決定此階層類型是否適用，並封鎖不適用的值。  
   
  此外，此資料表未使用階層 `'/'`的頂端。 由於所有大陸沒有共同的父系，因此已省略。 您可以加入整個地球，以加入一個父系。  
   
