@@ -2,7 +2,7 @@
 title: 資料列集屬性與行為 (OLE DB Driver)
 description: 這些是 OLE DB Driver for SQL Server 資料列集屬性，包括屬性名稱和說明。
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859995"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504725"
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這些是 OLE DB Driver for SQL Server 資料列集屬性。  
+  以下是 OLE DB Driver for SQL Server 資料列集屬性：
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859995"
 |DBPROP_BOOKMARKTYPE|R/W︰唯讀<br /><br /> 預設值：DBPROPVAL_BMK_NUMERIC<br /><br /> 描述：OLE DB Driver for SQL Server 只會實作數值書籤。 OLE DB Driver for SQL Server 書籤為 32 位元不帶正負號的整數，類型 DBTYPE_UI4。|  
 |DBPROP_CACHEDEFERRED|OLE DB Driver for SQL Server 不會實作此資料列集屬性。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：OLE DB Driver for SQL Server 支援在非循序的資料列集中進行反向擷取和捲動。 當 DBPROP_CANFETCHBACKWARDS 或 DBPROP_CANSCROLLBACKWARDS 為 VARIANT_TRUE 時，OLE DB Driver for SQL Server 會建立一個資料指標支援的資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
-|DBPROP_CANHOLDROWS|R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：根據預設，如果取用者嘗試在暫止的變更存在於目前在資料列集中的資料列時取得資料列集的其他資料列，OLE DB Driver for SQL Server 會傳回 DB_E_ROWSNOTRELEASED。 這個行為可以修改。<br /><br /> 將 DBPROP_CANHOLDROWS 和 DBPROP_IRowsetChange 同時設定為 VARIANT_TRUE 意味者加上書籤的資料列集。 如果兩個屬性都為 VARIANT_TRUE，在資料列集上會提供 **IRowsetLocate** 介面，而且 DBPROP_BOOKMARKS 和 DBPROP_LITERALBOOKMARKS 都為 VARIANT_TRUE。<br /><br /> 包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標支援之書籤的 OLE DB Driver for SQL Server 資料列集。|  
+|DBPROP_CANHOLDROWS|R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：根據預設，如果取用者嘗試在資料列集中目前的資料列上存在暫止的變更時取得資料列集的更多資料列，OLE DB Driver for SQL Server 會傳回 DB_E_ROWSNOTRELEASED。 這個行為可以修改。<br /><br /> 將 DBPROP_CANHOLDROWS 和 DBPROP_IRowsetChange 同時設定為 VARIANT_TRUE 意味者加上書籤的資料列集。 如果兩個屬性都為 VARIANT_TRUE，在資料列集上會提供 **IRowsetLocate** 介面，而且 DBPROP_BOOKMARKS 和 DBPROP_LITERALBOOKMARKS 都為 VARIANT_TRUE。<br /><br /> 包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標支援之書籤的 OLE DB Driver for SQL Server 資料列集。|  
 |DBPROP_CHANGEINSERTEDROWS|R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：如果資料列集使用的是索引鍵集驅動資料指標，僅能將此屬性設定為 VARIANT_TRUE。|  
 |DBPROP_COLUMNRESTRICT|R/W︰唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：當取用者無法變更資料列集中的資料行時，OLE DB Driver for SQL Server 會將屬性設定為 VARIANT_TRUE。 資料列集中的其他資料行可能可以更新，而且資料列本身可能會遭到刪除。<br /><br /> 當屬性為 VARIANT_TRUE 時，取用者會檢查 DBCOLUMNINFO 結構的 *dwFlags* 成員來判斷是否可寫入個別資料行的值。 對於可修改的資料行，*dwFlags* 會表現 DBCOLUMNFLAGS_WRITE。|  
 |DBPROP_COMMANDTIMEOUT|R/W︰讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：根據預設，OLE DB Driver for SQL Server 在 **ICommand::Execute** 方法上不會逾時。|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859995"
 |SSPROP_DEFERPREPARE|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：VARIANT_TRUE：在備妥的執行中，命令準備會延遲，直到呼叫 **ICommand::Execute**，或執行中繼屬性作業為止。 如果此屬性設定為<br /><br /> VARIANT_FALSE：執行 **ICommandPrepare::Prepare** 時，會準備陳述式。|  
 |SSPROP_IRowsetFastLoad|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：將此屬性設定為 VARIANT_TRUE 以便透過 **IOpenRowset::OpenRowset** 開啟快速載入資料列集。 您無法在 **ICommandProperties::SetProperties** 中設定此屬性。|  
 |SSPROP_ISSAsynchStatus|資料行：否。<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：將此屬性設定為 VARIANT_TRUE 以便使用 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 介面啟用非同步作業。|  
+|SSPROP_ISSDataClassification|R/W︰讀取/寫入<br /><br />  輸入：VT_BOOL<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：OLE DB Driver for SQL Server 支援使用 [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) 介面擷取敏感性分類資訊。|  
 |SSPROP_MAXBLOBLENGTH|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_I4<br /><br /> 預設值：提供者不會限制伺服器傳回的文字大小，而且屬性值會設定為其最大值。 例如，2147483647。<br /><br /> 描述：OLE DB Driver for SQL Server 會執行 SET TEXTSIZE 陳述式來限制在 SELECT 陳述式中傳回之二進位大型物件 (BLOB) 資料的長度。|  
 |SSPROP_NOCOUNT_STATUS|資料行：NoCount<br /><br /> R/W︰唯讀<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，代表 SET NOCOUNT ON/OFF 狀態的布林值：<br /><br /> VARIANT_TRUE：當 SET NOCOUNT ON 時<br /><br /> VARIANT_FALSE：當 SET NOCOUNT OFF 時|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BSTR (允許 1-2000 個字元)<br /><br /> 預設值：空字串<br /><br /> 描述：查詢通知的訊息文字。 這是使用者定義的，而且沒有定義的格式。|  

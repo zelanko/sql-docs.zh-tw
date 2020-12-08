@@ -1,7 +1,7 @@
 ---
 title: 報表檢視器控制項的版本資訊
 description: WebForms 和 WinForms 的報表檢視器控制項版本資訊，與 Reporting Services 有關。
-ms.date: 01/16/2020
+ms.date: 11/30/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 7edb40b44108ebf66c9462e8c909fbbd9f39510f
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80752878"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443010"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>SSRS WebForms 和 WinForms 的報表檢視器控制項版本資訊
 
 這些是 WebForms 和 WinForms 的報表檢視器控制項版本資訊，與 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 相關。
 
 如需 SSRS 的版本資訊，請參閱 [SQL Server Reporting Services (SSRS) 2017 和更新版本的版本資訊](../release-notes-reporting-services.md)。
+
+## <a name="15014270"></a>150.1427.0
+| 變更描述 | 詳細資料 |
+| :----------------- | :------ |
+| 錯誤修正 | 已修正連結在按一下之後不會顯示為已瀏覽的問題。 |
+|           | 已修正會影響部分地區設定的日期時間剖析問題。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014040"></a>150.1404.0
 | 變更描述 | 詳細資料 |

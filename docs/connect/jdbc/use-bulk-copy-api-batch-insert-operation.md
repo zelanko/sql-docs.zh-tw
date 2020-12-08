@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943017"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442595"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>範例
 
-以下範例程式碼示範針對兩種 (一般與大量複製 API) 情節，針對一千個資料列的 Azure Synapse Analytics (SQL DW) 進行批次插入作業的使用案例。
+以下範例程式碼會針對兩種 (一般與大量複製 API) 案例，示範針對一千個資料列的 Azure Synapse Analytics 進行批次插入作業的使用案例。
 
 ```java
     public static void main(String[] args) throws Exception

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 31510c4fbe4291168753809c227650951592e1e6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081767"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328038"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 驗證連線到 SQL Server
 
@@ -101,7 +101,7 @@ NTLM 通訊協定是舊的驗證通訊協定，具有各種弱點，因此會造
 - [使用 SSL 加密連線](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> 7\.4 版不支援**同時**啟用擴充保護和加密。
+> 7\.4 版不支援 **同時** 啟用擴充保護和加密。
 
 ## <a name="see-also"></a>另請參閱
 

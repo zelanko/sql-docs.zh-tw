@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: eb3fa0a07e9a0b5e7cf1bc1c7564fdb7b0d82a62
-ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
+ms.openlocfilehash: 4569c61552a03e928d01e47940ae02e7fee9dcec
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704193"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523081"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -56,12 +56,13 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 |----------|---------|------------|
 | Analysis Services | 透過 msmdpump.dll 連線到 SSAS 時發生錯誤。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)。 | N/A |
 | Analysis Services | 在罕見的情況下，使用升級安裝程式時，在升級 SSMS 後嘗試開啟 DAX 編輯器時可能會有「物件未設定成物件的執行個體」錯誤。 | 若要解決此問題，請將 SSMS 解除安裝，然後再重新安裝。 |
+| DAX 查詢編輯器 | 開啟 DAX 查詢編輯器會導致錯誤：「物件未設定至物件的執行個體」 | 將 SQL Server Management Studio 解除安裝並重新安裝。  如果無法透過重新安裝解決，請關閉所有 SSMS 執行個體、進行備份，然後移除 `%AppData%\Microsoft\SQL Server Management Studio` 與 `%LocalAppData%\Microsoft\SQL Server Management Studio`。 |
 | 一般 SSMS | [新的伺服器稽核規格] 對話方塊可能會導致 SSMS 損毀，並出現存取違規錯誤。 | N/A |
 | 一般 SSMS | 使用 SMO 的 SSMS 延伸模組應以新 SSMS 特定 SMO v161 套件為目標重新編譯。 您可在 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ 取得預覽版本 </br></br> 針對 Microsoft.SqlServer.SqlManagementObjects 套件 160 以前版本所編譯的延伸模組仍然會正常運作。 | N/A |
 | 產生指令碼精靈 | 嘗試列舉 SQL Server 2014 和較舊版本上的資料庫物件時，此精靈失敗。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 在 SQL 2014 和更舊版本的 [產生指令碼精靈] 中，使用 SSMS 18.6 來選取物件。 |
-| Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 因應措施：移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 | N/A |
-| Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 因應措施：在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些登錄區內，針對我們嘗試連線的特定 Integration Services 版本，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'得 | N/A |
-| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics SQL 隨選在 SSMS 中利用物件總管，您必須使用 SSMS 18.7 或更新版本。 |
+| Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 | 移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 |
+| Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 | 在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些登錄區內，針對我們嘗試連線的特定 Integration Services 版本，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'得 |
+| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics 無伺服器 SQL 集區](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics 無伺服器 SQL 集區利用 SSMS 中的物件總管，您必須使用 SSMS 18.7 或更新版本。 |
 
 針對其他已知問題，您可參考 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server)並為產品小組提供意見反應。
 
@@ -129,7 +130,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | 已修正嘗試連線到 Azure SQL DB 可能會需要數秒鐘時間的問題 (使用者資料庫中的 SQL 登入)。 |
 | 一般 SSMS | 已修正 SSMS 無法處理/顯示所擷取鎖死 (.xdl 檔案) 的問題。 |
 | 一般 SSMS | 已修正嘗試開啟 SQL Server 2008 R2 及更低版本的錯誤記錄檔設定時，會因找不到 ErrorLogSizeKb 屬性而失敗的問題。 |
-| 一般 SSMS | 針對 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)支援的一般修正和改善。 |
+| 一般 SSMS | 針對 [Azure Synapse Analytics 無伺服器 SQL 集區](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)支援的一般修正和改善。 |
 | 匯入一般檔案 | 已修正精靈偵測不到檔案可能正由另一個應用程式使用，而改為擲回錯誤的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/40761574) \(英文\)。 |
 | 匯入/匯出資料層應用程式 | 已將匯入 bacpac 時的預設服務層級修正為標準 S0 (與 Azure 入口網站和 SqlPackage.exe 行為相同)。 |
 | 匯入一般檔案 | 已修正精靈偵測不到檔案可能正由另一個應用程式使用，而改為擲回錯誤的問題。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035/suggestions/40761574) \(英文\)。 |
@@ -161,7 +162,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 產生指令碼精靈 | 嘗試列舉 SQL Server 2014 和較舊版本上的資料庫物件時，此精靈失敗。 請參閱 [SQL Server 使用者意見反應](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)。 | 在 SQL 2014 和更舊版本的 [產生指令碼精靈] 中，使用 SSMS 18.6 來選取物件。 |
 | Integration Services | 在 Integration Services 中匯入或匯出套件，或在 Azure-SSIS Integration Runtime 中匯出套件時，包含指令碼工作/元件的套件會遺失指令碼。 因應措施：移除資料夾 "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild"。 | N/A |
 | Integration Services | 從遠端連線至 Integration Services 的作業可能會失敗，並出現「指定的服務不是以已安裝的服務形式存在。」 (在較新的作業系統上)。 因應措施：在 Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID 下找出 Integration Services 的相關登錄位置，然後在這些登錄區內，針對我們嘗試連線的特定 Integration Services 版本，將名為 'LocalService' 的登錄機碼重新命名為 'LocalService_A'得 | N/A |
-| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics SQL 隨選](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics SQL 隨選在 SSMS 中利用物件總管，您需要 SSMS 18.7 或更新版本。 |
+| 物件總管 | 18.7 之前的 SSMS 版本在物件總管中有中斷性變更，其原因是與 [Azure Synapse Analytics 無伺服器 SQL 集區](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)相關的引擎變更。 | 若要繼續搭配 Azure Synapse Analytics 無伺服器 SQL 集區利用 SSMS 中的物件總管，您需要 SSMS 18.7 或更新版本。 |
 | 查詢存放區 | 查詢存放區的 [物件總管] 節點會在按一下滑鼠右鍵時擲回錯誤。 | 展開節點並以滑鼠右鍵按一下個別的子選項，可直接存取項目。 |
 
 ### <a name="186"></a>18.6
@@ -185,7 +186,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 匯入一般檔案 | 新增固定寬度檔案的支援以及 .csv/.tsv 檔案的檔案類型偵測，確保這些檔案會分別作為 csv/tsv 檔案剖析。 |
 | Integration Services | 新增 Azure SQL 受控執行個體代理程式作業，以執行 Azure SSIS IR 中封裝存放區的 SSIS 套件。 |
 | SMO/指令碼 | 新增在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (先前稱為 SQL Azure DW) 上撰寫動態資料遮罩指令碼的支援。 |
-| SMO/指令碼 | 新增在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (先前稱為 SQL DW) 上撰寫安全性原則指令碼的支援。 |
+| SMO/指令碼 | 已新增在 [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) 上撰寫安全性原則指令碼的支援。 |
 
 #### <a name="bug-fixes-in-186"></a>18.6 中的 Bug 修正
 
@@ -278,7 +279,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | 新的 DwMaterializedViewDistribution 屬性已新增至 View 物件。 |
 | SMO/指令碼 | 已移除 [功能限制]  的支援 (此預覽功能已從 SQL Azure 和內部部署 SQL 移除)。 |
 | SMO/指令碼 | 已將 [筆記本]  新增為 [產生指令碼] 精靈的目的地。 |
-| SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
+| SMO/指令碼 | 已新增對「Azure Synapse Analytics 無伺服器 SQL 集區」的支援。 |
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform、Name 和 engineEdition 欄位現在可以包含一般逗號分隔清單 (平台  ：\[*Windows*、*Linux*\])，而不只是規則運算式 (平台  ： *\/Windows\|Linux\/* )
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 13 個評定規則。 如需詳細資訊，請移至 [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api))。 |
 
@@ -301,9 +302,9 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | 更新 MSODBC 和 MSOLEDB 驅動程式的版本。 |
 | 一般 SSMS | 已解決 SSMS 中至少有兩個常見來源停止回應和當機。 |
 | 一般 SSMS | 已解決在選取 [瀏覽] 按鈕時，[還原]  對話方塊停止回應的情況。 |
-| 一般 SSMS | 已修正 SQL On Demand 的「新增資料庫 GUI」  。 |
-| 一般 SSMS | 已修正 SQL On Demand 的 [新增外部資料表...]  和 [新增外部資料來源...]  範本。 |
-| 一般 SSMS | 已修正資料庫屬性、連線屬性、隱藏報表，以及 SQL On Demand 的重新命名。 |
+| 一般 SSMS | 已修正適用於 Azure Synapse Analytics 無伺服器 SQL 集區的「新資料庫 GUI」。 |
+| 一般 SSMS | 已修正 Azure Synapse Analytics 無伺服器 SQL 集區的 [新增外部資料表] 與 [新增外部資料來源] 範本。 |
+| 一般 SSMS | 已修正適用於 Azure Synapse Analytics 無伺服器 SQL 集區的資料庫屬性、連線屬性、隱藏報表與重新命名。 |
 | 一般 SSMS | Always Encrypted：已修正在選取新的已啟用記憶體保護區金鑰時，金鑰名稱下拉式清單變為唯讀的問題。 |
 | 一般 SSMS | 已清除 [資料庫屬性選項]  格線，其中顯示兩個「其他類別」  。 |
 | 一般 SSMS | 已修正捲軸從「資料庫屬性選項」格線中間開始的問題。 |
@@ -330,7 +331,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | SQL Agent | 已修正 [作業步驟] 頁面上的索引標籤順序。 |
 | SQL Agent | 已調換 [作業步驟] 頁面上 [下一步] 和 [上一步] 按鈕的位置，以邏輯順序加以放置。 |
 | SQL Agent | 已調整 [作業排程] 視窗，以不裁剪 UI。 |
-| SMO/指令碼 | 已修正 SQL On Demand 的資料庫指令碼。 |
+| SMO/指令碼 | 已修正適用於 Azure Synapse Analytics 無伺服器 SQL 集區的資料庫指令碼撰寫。 |
 | SMO/指令碼 | 移除明確的 sqlvariant 強制轉換 (SqlOnDemand 不合法的 T-SQL 語法)，可修正 SqlOnDemand 的指令碼。 |
 | SMO/指令碼 | 已修正略過 SQL Azure 索引上 FILLFACTOR 的問題。 |
 | SMO/指令碼 | 已修正與指令碼外部物件有關的問題。 |
@@ -370,7 +371,7 @@ SSMS 18.7 是 SSMS 最新的正式發行 (GA) 版本。 如果您需要舊版 SS
 | 查詢存放區 | 已新增新自訂擷取原則的支援。 |
 | 查詢存放區 | 在 [查詢存放區]  的 [資料庫屬性]  選項中，新增了 [等候統計資料擷取模式]  。 |
 | SMO/指令碼 | 支援 SQL DW 中具體化檢視的指令碼。 |
-| SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
+| SMO/指令碼 | 已新增對「Azure Synapse Analytics 無伺服器 SQL 集區」的支援。 |
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
 | SMO/指令碼 | [SQL 評定 API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |

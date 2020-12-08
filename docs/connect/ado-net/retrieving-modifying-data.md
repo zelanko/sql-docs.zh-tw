@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126355"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419732"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中擷取及修改資料
 
@@ -27,13 +27,13 @@ ms.locfileid: "96126355"
 
 ## <a name="in-this-section"></a>本節內容
 
-[連線到資料來源](connecting-to-data-source.md) 描述如何建立資料來源的連線，以及如何使用連線事件。
+[連線到資料來源](connecting-to-data-source.md) 描述如何建立與資料來源的連線，以及如何使用連線事件。
 
 [連接字串](connection-strings.md) 包含描述使用、儲存及擷取連接字串 (包含連接字串關鍵字、安全性資訊) 之各種層面的主題。
 
 [連接共用](connection-pooling.md) 描述適用於 Microsoft SqlClient Data Provider for SQL Server 的連接共用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET 中的資料類型對應](data-type-mappings-ado-net.md)
 - [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)

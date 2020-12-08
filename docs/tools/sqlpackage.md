@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384497"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443070"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,7 @@ SqlPackage.exe 的 Extract 動作會建立從 SQL Server 或 Azure SQL Database 
 
 ### <a name="help-for-the-extract-action"></a>Extract 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -137,7 +137,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="help-for-publish-action"></a>Publish 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|發佈|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -245,7 +245,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 T-SQL 陳述式間之分號的差異。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定當您發佈至資料庫時，要忽略還是更新資料表分割區選項的差異。  此選項只適用於 Azure Synapse Analytics SQL 集區 (資料倉儲) 資料庫。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定當您發佈至資料庫時，要忽略還是更新資料表分割區選項的差異。  此選項只適用於 Azure Synapse Analytics 專用的 SQL 集區資料庫。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新使用者設定物件的差異。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定當您發行至資料庫時，將忽略或更新空白字元的差異。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新檢查條件約束之 WITH NOCHECK 子句值的差異。|
@@ -285,7 +285,7 @@ SqlPackage.exe 的 Export 動作會將即時資料庫從 SQL Server 或 Azure SQ
   
 ### <a name="help-for-export-action"></a>Export 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|匯出|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -326,7 +326,7 @@ SqlPackage.exe 的 Import 動作會將 BACPAC 套件 (.bacpac 檔案) 的結構�
   
 ### <a name="help-for-command-actions"></a>命令動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|匯入|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -368,7 +368,7 @@ Import 動作的特定屬性：
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -504,7 +504,7 @@ Import 動作的特定屬性：
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -531,7 +531,7 @@ Import 動作的特定屬性：
   
 ### <a name="help-for-the-script-action"></a>Script 動作的說明
 
-|參數|簡短形式|值|描述|
+|參數|簡短形式|值|說明|
 |---|---|---|---|
 |**/Action:**|**/a**|指令碼|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |

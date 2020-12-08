@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 7450ebddf94a4378313bb1793bcefe34a88407a5
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867240"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442942"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark 連接器：SQL Server 和 Azure SQL
 
@@ -44,7 +44,7 @@ ms.locfileid: "91867240"
 | Azure SQL Database                  | 支援                       |
 
 > [!NOTE]
-> 未進行將此連接器用於 Azure Synapse Analytics (Azure SQL DW) 的測試。 雖然或許可運作，但可能會產生非預期的結果。
+> 未進行將此連接器用於 Azure Synapse Analytics 的測試。 雖然或許可運作，但可能會產生非預期的結果。
 
 ### <a name="supported-options"></a>支援的選項
 適用於 SQL Server 和 Azure SQL 的 Apache Spark 連接器支援此處定義的選項：[SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)

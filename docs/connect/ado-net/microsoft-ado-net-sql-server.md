@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b3f1e0c518bf1b77c096999423c5e6d37e6051a
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f78760819e91a3f83e1a91208bdd96e7d1ec15ac
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123920"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442730"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -32,10 +32,10 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 Microsoft.Data.SqlC
 
 ## <a name="documentation"></a>文件
 * [ADO.NET 概觀](/dotnet/framework/data/adonet/) \(部分機器翻譯\)
-* [開始使用 SqlClient 驅動程式](get-started-sqlclient-driver.md)  
-* [SqlClient 驅動程式概觀](overview-sqlclient-driver.md)  
+* [開始使用 SqlClient 驅動程式](get-started-sqlclient-driver.md)
+* [SqlClient 驅動程式概觀](overview-sqlclient-driver.md)
 * [ADO.NET 中的資料類型對應](data-type-mappings-ado-net.md)
-* [在 ADO.NET 中傳送和修改資料](retrieving-modifying-data.md)
+* [在 ADO.NET 中擷取及修改資料](retrieving-modifying-data.md)
 * [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)
 
 ## <a name="community"></a>社群

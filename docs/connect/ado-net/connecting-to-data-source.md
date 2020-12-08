@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: ab6edc2a7090de85e970445cdb2b86d6ed5cb8f2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 26554deb5d8a3786efd1bd869a2692d368132531
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126428"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419809"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>連線到 ADO.NET 中的資料來源
 

@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631684"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442888"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -113,8 +113,10 @@ SQL Server 2019 的累積更新 6 (CU6) 版本。
 - [以 Active Directory 模式管理巨量資料叢集存取](manage-user-access.md)
 - [在 Active Directory 模式中部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deploy.md)
 - [在 AKS 上以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](active-directory-deployment-aks.md)
-- [部署具有高可用性的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-high-availability.md)
-- [設定 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
+- [使用 Azure Kubernetes Service (AKS) 私人叢集部署巨量資料叢集](private-deploy.md)
+- [限制 Azure Kubernetes Service (AKS) 私人叢集中巨量資料叢集 (BDC) 叢集的連出流量](private-restrict-egress-traffic.md)
+- [部署高可用性 SQL Server 巨量資料叢集](deployment-high-availability.md)
+- [設定 SQL Server 巨量資料叢集](configure-cluster.md)
 - [在巨量資料叢集中設定 Apache Spark 和 Apache Hadoop](configure-spark-hdfs.md)
 - [SQL Server 主要執行個體設定屬性](reference-config-master-instance.md)
 - [Apache Spark 與 Apache Hadoop (HDFS) 設定屬性](reference-config-spark-hadoop.md)

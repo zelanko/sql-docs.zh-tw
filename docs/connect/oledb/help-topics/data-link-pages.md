@@ -2,7 +2,7 @@
 title: 通用資料連結 (UDL) 設定 | Microsoft Docs
 description: 了解如何使用 [連線] 索引標籤，來指定如何使用 OLE DB Driver for SQL Server 連線到您的資料。
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727274"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504717"
 ---
 # <a name="universal-data-link-udl-configuration"></a>通用資料連結 (UDL) 設定
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91727274"
 |選項|描述|
 |---   |---        |
 |選取或輸入伺服器名稱|從下拉式清單中選取伺服器名稱，或是輸入您要存取之資料庫所在的伺服器位置。 在伺服器上選取資料庫是個別的動作。 按一下 [重新整理]，以更新此清單。
-|輸入要登入到伺服器的資訊|您可以從這個下拉式清單中選取下列驗證選項： <ul><li>`Windows Authentication:`使用目前登入之使用者的 Windows 帳戶認證來向 SQL Server 進行的驗證。</li><li>`SQL Server Authentication:`使用登入識別碼和密碼進行的驗證。</li><li>`Active Directory - Integrated:`以 Azure Active Directory 識別進行的整合式驗證。 此模式也可以用於向 SQL Server 進行的 Windows 驗證。</li><li>`Active Directory - Password:`以 Azure Active Directory 識別進行的使用者識別碼和密碼驗證。</li><li>`Active Directory - Universal with MFA support:`以 Azure Active Directory 識別進行的互動式驗證。 此模式支援 Azure Multi-Factor Authentication (MFA)。</li></ul>|
+|輸入要登入到伺服器的資訊|您可以從這個下拉式清單中選取下列驗證選項： <ul><li>`Windows Authentication:`使用目前登入之使用者的 Windows 帳戶認證來向 SQL Server 進行的驗證。</li><li>`SQL Server Authentication:`使用登入識別碼和密碼進行的驗證。</li><li>`Active Directory - Integrated:`以 Azure Active Directory 識別進行的整合式驗證。 此模式也可以用於向 SQL Server 進行的 Windows 驗證。</li><li>`Active Directory - Password:`以 Azure Active Directory 識別進行的使用者識別碼和密碼驗證。</li><li>`Active Directory - Universal with MFA support:`以 Azure Active Directory 識別進行的互動式驗證。 此模式支援 Azure Multi-Factor Authentication (MFA)。</li><li>`Active Directory - Service Principal:` 與 Azure Active Directory 服務主體進行驗證。 [使用者名稱] 應該要設定成應用程式 (用戶端) 識別碼。 [密碼] 應該要設定成應用程式 (用戶端) 祕密。</li></ul>|
 |伺服器 SPN|如果您使用了信任連接，就可以指定伺服器的服務主要名稱 (SPN)。|
 |[使用者名稱]|輸入當您登入到資料來源時要用來進行驗證的使用者識別碼。|
 |密碼|輸入當您登入到資料來源時要用來進行驗證的密碼。|
