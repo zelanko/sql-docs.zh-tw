@@ -14,14 +14,14 @@ helpviewer_keywords:
 - performance counters [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 176f7b9ba860e6ca7f72e35f6c6a87622948fc70
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892228"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505752"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本
 

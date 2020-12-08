@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: c1f79050a4bbabcfc8729ccdc270d47fe9055c29
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: faf3ccecd17ece2b66371d81a68589f184fe48a0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524063"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506404"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -109,8 +109,8 @@ GO
    ![[選取備份目的地] 對話方塊視窗的螢幕擷取畫面，其中已標註 [新增容器] 選項。](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. 選取 [登入] 以登入 Azure 入口網站，然後繼續完成登入程序。 
-1. 從下拉式清單選取您的 **訂用帳戶** 。 
-1. 從下拉式清單中選取您的 **儲存體帳戶** 。 
+1. 從下拉式清單選取您的 **訂用帳戶**。 
+1. 從下拉式清單中選取您的 **儲存體帳戶**。 
 1. 從下拉式清單選取您先前建立的容器。 
 1. 選取 [建立認證] 以產生您的 *共用存取簽章 (SAS)* 。  **儲存此值，因為您將需要它才能進行還原。**
 

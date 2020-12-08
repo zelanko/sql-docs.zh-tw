@@ -15,15 +15,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 519d66511b71cb0045623b239cc82d0e80791968
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88499351"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595074"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** 資料列集函數可將 JSON 文字轉換成一組資料列和資料行。 一旦您使用 **OPENJSON** 將 JSON 集合轉換成資料列集，即可在所傳回的資料上執行任何 SQL 查詢，或將其插入至 SQL Server 資料表。 
   

@@ -11,16 +11,16 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 342af018f28b52909adf59f830737036637ab589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 775e979eb8141f025cb787ac79d409b211945cbe
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499287"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595107"
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 本文描述如何將 JSON 檔案匯入 SQL Server 中。 目前，檔案中儲存有許多 JSON 文件。 應用程式記錄資訊儲存在 JSON 檔案中、感應器所產生的資訊儲存在 JSON 檔案中，以此類推。 請務必要能夠讀取檔案中所儲存的 JSON 資料、將資料載入至 SQL Server，以及對它進行分析。
 

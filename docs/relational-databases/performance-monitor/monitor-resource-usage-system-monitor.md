@@ -24,14 +24,14 @@ helpviewer_keywords:
 - tuning databases [SQL Server], resource usage
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: caddd3cf64fec46e6878daa6a46e6661346fd905
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9ba5319dcc0f7a039e6e37ced535c4600f92136d
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457990"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505989"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>監視資源使用狀況 (系統監視器)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

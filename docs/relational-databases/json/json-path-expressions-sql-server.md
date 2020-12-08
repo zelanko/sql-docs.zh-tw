@@ -14,15 +14,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 558f11fdac7b8475054500cf5d002bfec107cb7f
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88490941"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96594968"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
  請使用 JSON 路徑運算式來參考 JSON 物件的屬性。  
   

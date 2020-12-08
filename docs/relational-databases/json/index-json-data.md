@@ -14,22 +14,22 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: eb884b2a3e2114d86dda60fc63b528e11a6386c9
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439467"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595049"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 在 SQL Server 和 SQL Database 中，JSON 並非內建的資料類型，而且 SQL Server 並沒有自訂 JSON 索引。 不過，您可使用標準索引最佳化所有 JSON 文件的查詢。 
 
 資料庫索引可改善篩選和排序作業的效能。 若不使用索引，則 SQL Server 在您每次查詢資料時必須執行完整的資料表掃描。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>使用計算資料行的索引 JSON 屬性  
-將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」  來篩選或排序查詢結果。  
+將 JSON 資料儲存於 SQL Server 時，通常都要依 JSON 文件的一或多個「屬性」來篩選或排序查詢結果。  
 
 ### <a name="example"></a>範例 
 在此範例中，假設 AdventureWorks `SalesOrderHeader` 資料表含有 `Info` 資料行，其中包含關於銷售訂單的各種資訊 (JSON 格式)。 例如，它包含客戶、銷售人員、收件和帳單地址等相關資訊。 而您要使用資料行 `Info` 的值來篩選客戶的銷售訂單。

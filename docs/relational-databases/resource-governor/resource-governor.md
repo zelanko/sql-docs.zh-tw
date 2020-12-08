@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 29d63602d4e3553ee2e5f1cb9053e445265fd301
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457817"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506538"
 ---
 # <a name="resource-governor"></a>資源管理員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "86457817"
   
  在資源管理員的內容中，您可以將上述概念視為元件。 下圖將顯示這些元件以及它們在 Database Engine 環境中存在時，彼此的關聯性。 從處理的觀點而言，簡化的流程如下所示：  
   
--   工作階段 (工作階段 1，共 *n*個) 的內送連接已存在。  
+-   工作階段 (工作階段 1，共 *n* 個) 的內送連接已存在。  
   
 -   工作階段進行分類 (分類)。  
   

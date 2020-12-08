@@ -13,15 +13,15 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: ea35cef5c24a73ca8f0e08b055429097bf7d5179
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457045"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506512"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "86457045"
      針對統計資料物件中的所有索引鍵資料行計算之每個值的平均位元組數。  
   
      **String Index**  
-     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**或 **ntext**類型時於統計資料物件的第一個索引鍵資料行上建立。  
+     Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text** 或 **ntext** 類型時於統計資料物件的第一個索引鍵資料行上建立。  
   
      **篩選運算式**  
      包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 94e726a108c78ffec8715e80c4b14f2274656be0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458117"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505662"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server 的 Locks 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "86458117"
 |**Heap/BTree**|堆積或 BTree (HOBT)。 資料頁堆積的鎖定，或是索引之 BTree 結構的鎖定。|  
 |**索引鍵**|索引中之資料列的鎖定。|  
 |**中繼資料**|一項目錄資訊 (亦稱為中繼資料) 的鎖定。|  
-|**Object**|資料表、預存程序、檢視等 (包括所有資料和索引) 的鎖定。 物件可以是在 **sys.all_objects**中擁有項目的任何東西。|  
+|**Object**|資料表、預存程序、檢視等 (包括所有資料和索引) 的鎖定。 物件可以是在 **sys.all_objects** 中擁有項目的任何東西。|  
 |**頁面**|資料庫中 8 KB 分頁的鎖定。|  
 |**RID**|資料庫識別碼。 堆積中單一資料列的鎖定。|  
   

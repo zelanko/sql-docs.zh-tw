@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0c98d04b9b82feabe1c6ad96cc28faf828223e68
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457980"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505739"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86457980"
 |**Bulk Copy Rows/sec**|每秒大量複製 (Bulk Copy) 的資料列數。|  
 |**Bulk Copy Throughput/sec**|每秒大量複製的資料量 (以 KB 為單位)。|  
 |**Commit table entries**|資料庫認可資料表之記憶體內部部分的大小 (資料列計數)。 如需詳細資訊，請參閱 [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)。|  
-|**Data File(s) Size (KB)**|資料庫內的所有資料檔案總計大小 (以 KB 為單位)，包含任何自動的成長。 監視此計數器很有用，例如可決定 **tempdb**的正確大小。|  
+|**Data File(s) Size (KB)**|資料庫內的所有資料檔案總計大小 (以 KB 為單位)，包含任何自動的成長。 監視此計數器很有用，例如可決定 **tempdb** 的正確大小。|  
 |**DBCC Logical Scan Bytes/sec**|資料庫主控台命令 (DBCC) 每秒的邏輯讀取掃描位元組數。|  
 |**Group Commit Time/sec**|每秒的群組延遲時間 (百萬分之一秒)。|
 |**Log Bytes Received/sec**|轉存的記錄檔位元組總數。|  

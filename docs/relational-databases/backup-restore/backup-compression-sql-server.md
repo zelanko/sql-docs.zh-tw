@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c39b9520bebf08cf523bece5b2c9bab78675138d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 278ee9ecf44a90574d212e761089127342b2c9be
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129341"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563124"
 ---
 # <a name="backup-compression-sql-server"></a>備份壓縮 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主題會說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的組態及壓縮比率。  下列 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支援備份壓縮：Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
+  本主題會說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的組態及壓縮比率。  下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援備份壓縮：Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 優點  
