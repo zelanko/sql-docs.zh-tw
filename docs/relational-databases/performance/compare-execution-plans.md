@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 855d893ddde9c3eba9f9197c510ed0d03bc658ce
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4f3c78649a8934af4add9bf0696aaf91f017e687
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457368"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505352"
 ---
 # <a name="compare-execution-plans"></a>比較執行計畫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86457368"
 > [!TIP]
 > 計畫比較使用任何 *.sqlplan* 檔案，甚至是來自舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此外，此選項會啟用離線比較，因此不需連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
 
-比較兩個執行計畫時，**基本上執行相同動作**的計畫區域都會以相同的色彩和模式來反白顯示。 按一下某個計畫中的彩色區域，將使另一個計畫位於該計畫中相符節點的中心。 您仍然可以比較執行計畫中不相符的運算子和節點，但在此情況下，您必須手動選取要比較的運算子。
+比較兩個執行計畫時，**基本上執行相同動作** 的計畫區域都會以相同的色彩和模式來反白顯示。 按一下某個計畫中的彩色區域，將使另一個計畫位於該計畫中相符節點的中心。 您仍然可以比較執行計畫中不相符的運算子和節點，但在此情況下，您必須手動選取要比較的運算子。
 
 > [!IMPORTANT]
 > 只使用被視為要變更計畫圖形的節點來檢查相似之處。 因此，可能有一個節點不會在位於相同計畫子區段的兩個節點中間上色。 在此情況下缺乏色彩，表示在檢查區段是否相等時不會將節點納入考量。

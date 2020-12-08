@@ -14,15 +14,15 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4df3e14fc35abd0de05f87bb79d442e62df7dc1d
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5d14b528b1b5e0b0583b630644b8f174d3b58c9b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457590"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504952"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -492,7 +492,7 @@ GO
 ### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> UPDATE、DELETE 與 INSERT 陳述式中的子查詢
 子查詢可以巢狀於 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 資料操作 (DML) 陳述式中。    
 
-下列範例將 *Production.Product*資料表中 *ListPrice* 資料行的值加倍。 `WHERE` 子句中的子查詢會參考 *Purchasing.ProductVendor* 資料表，以將在 *Product* 資料表中更新的資料列限制為由 *BusinessEntity* 1540 所供應的資料列。
+下列範例將 *Production.Product* 資料表中 *ListPrice* 資料行的值加倍。 `WHERE` 子句中的子查詢會參考 *Purchasing.ProductVendor* 資料表，以將在 *Product* 資料表中更新的資料列限制為由 *BusinessEntity* 1540 所供應的資料列。
 
 ```sql
 USE AdventureWorks2016;

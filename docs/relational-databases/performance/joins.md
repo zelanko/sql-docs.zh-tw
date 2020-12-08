@@ -15,15 +15,15 @@ helpviewer_keywords:
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7dd500eb443af493403b64b652e047608d2a0dd1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726002"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505182"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91726002"
 -   FULL [ OUTER ] JOIN
 -   CROSS JOIN
 
-**內部聯結**可在 `FROM` 或 `WHERE` 子句中指定。 **外部聯結**和**交叉聯結**只能在 `FROM` 子句中指定。 聯結條件會與 `WHERE` 和 `HAVING` 搜尋條件結合，以控制從 `FROM` 子句所參考之基底資料表中選取的資料列。    
+**內部聯結** 可在 `FROM` 或 `WHERE` 子句中指定。 **外部聯結** 和 **交叉聯結** 只能在 `FROM` 子句中指定。 聯結條件會與 `WHERE` 和 `HAVING` 搜尋條件結合，以控制從 `FROM` 子句所參考之基底資料表中選取的資料列。    
 
 在 `FROM` 子句中指定聯結條件有助於將它們與 `WHERE` 子句中可能指定的任何其他搜尋條件分開，建議您以此方式指定聯結。 簡化的 ISO `FROM` 子句聯結語法為：
 
@@ -111,11 +111,11 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-聯結的 `SELECT` 清單可參考聯結資料表中的所有資料行，或資料行的任何子集。 若要包含聯結中每個資料表的資料行，您並不需要用到 `SELECT` 清單。 例如，在三個資料表的聯結中，一個資料表可作為第二個資料表與第三個資料表的橋樑，並且中間的資料表不需要有任何資料行參考於選取清單中。 這也稱為**反半聯結**。  
+聯結的 `SELECT` 清單可參考聯結資料表中的所有資料行，或資料行的任何子集。 若要包含聯結中每個資料表的資料行，您並不需要用到 `SELECT` 清單。 例如，在三個資料表的聯結中，一個資料表可作為第二個資料表與第三個資料表的橋樑，並且中間的資料表不需要有任何資料行參考於選取清單中。 這也稱為 **反半聯結**。  
 
 雖然聯結條件通常擁有相等比較 (=)，您也可以指定其他的比較或關聯式運算子，就如同其他述詞一樣。 如需詳細資訊，請參閱[比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) 和 [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)。  
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理聯結時，查詢最佳化工具將從多種可能性選擇最有效率的處理聯結方式。 這包括選擇最有效率的實體聯結類型、聯結資料表的順序，甚至使用無法以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法直接表示的邏輯聯結作業類型，例如**半聯結**以及**反半聯結**。 不同聯結的實際執行可能會使用許多不同的最佳化方式，因此無法可靠地預測。 如需半聯結和反半聯結的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)。  
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理聯結時，查詢最佳化工具將從多種可能性選擇最有效率的處理聯結方式。 這包括選擇最有效率的實體聯結類型、聯結資料表的順序，甚至使用無法以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法直接表示的邏輯聯結作業類型，例如 **半聯結** 以及 **反半聯結**。 不同聯結的實際執行可能會使用許多不同的最佳化方式，因此無法可靠地預測。 如需半聯結和反半聯結的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)。  
 
 用於聯結條件的資料行，並不需要擁有相同的名稱或相同的資料類型。 不過，若資料類型不一樣，則其必須是相容的類型，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可隱含轉換的類型。 若無法以隱含方式轉換資料類型，聯結條件就必須使用 `CAST` 函數來明確轉換資料類型。 如需有關隱含及明確轉換的詳細資訊，請參閱[資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。    
 
@@ -142,7 +142,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 合併聯結需要在合併資料行上將兩項輸入都加以排序，這是由聯結述詞的相等 (ON) 子句來定義的。 查詢最佳化工具通常會掃描索引 (如果適當的資料行集合建有索引的話)，或在合併聯結下放置排序運算子。 在極少的情況下，可以有多個相等子句，但只會從部份可用的相等子句中取得合併資料行。    
 
-因為每個輸入都會經過排序，所以**合併聯結**運算子會從每個輸入各取得一列資料列，然後加以比較。 例如，對於內部聯結作業，會傳回是否相等的資料列。 如果不相等，就丟棄數值較小的資料列，再從該輸入取得另一個資料列。 這個處理程序會一再重複，直到處理過所有資料列為止。    
+因為每個輸入都會經過排序，所以 **合併聯結** 運算子會從每個輸入各取得一列資料列，然後加以比較。 例如，對於內部聯結作業，會傳回是否相等的資料列。 如果不相等，就丟棄數值較小的資料列，再從該輸入取得另一個資料列。 這個處理程序會一再重複，直到處理過所有資料列為止。    
 
 合併聯結作業可能是一般的，也可能是多對多的作業。 多對多合併聯結會使用暫存資料表來儲存資料列。 如果每個輸入有重複的值，在處理其他輸入的每個重複項時，必須將輸入之一倒回重複項的開始。    
 
@@ -157,7 +157,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 雜湊聯結允許少使用反正規化。 反正規化一般是利用減少聯結作業，來達成較佳的效能，但它會有備援性的危險，例如不一致的更新。 雜湊聯結降低了反正規化的需要。 雜湊聯結讓垂直分割 (以不同的檔案或索引來呈現一個資料表中的資料行群組) 可以成為實體資料庫設計可實行的選項。     
 
-雜湊聯結有兩個輸入：**建置**輸入與**探查**輸入。 查詢最佳化工具會指派這些角色，使兩個輸入中比較小的一個做為建置輸入。    
+雜湊聯結有兩個輸入：**建置** 輸入與 **探查** 輸入。 查詢最佳化工具會指派這些角色，使兩個輸入中比較小的一個做為建置輸入。    
 
 雜湊聯結用於許多種集合比對作業：內部聯結；左方、右方與完整外部聯結；左方、右方半聯結；交集；聯合；與差異。 此外，雜湊聯結的變體還可以執行移除重複項及進行群組的作業，例如 `SUM(salary) GROUP BY department`。 這些修改方式只使用一個輸入，兼做組建與探查角色。   
 
@@ -191,7 +191,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 如需有關雜湊釋出的詳細資訊，請參閱[雜湊警告事件類別](../../relational-databases/event-classes/hash-warning-event-class.md)。    
 
 ## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> 了解自適性聯結
-[批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自適性聯結可讓選擇的[雜湊聯結](#hash)或[巢狀迴圈](#nested_loops)聯結方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，查詢計劃可在執行期間動態切換至較佳的聯結策略，而不需經過重新編譯。 
+[批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自適性聯結可讓選擇的 [雜湊聯結](#hash)或 [巢狀迴圈](#nested_loops)聯結方法，延後到已掃描的第一個輸入 **之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，查詢計劃可在執行期間動態切換至較佳的聯結策略，而不需經過重新編譯。 
 
 > [!TIP]
 > 經常在小型和大型聯結輸入掃描間變動的工作負載，由此功能獲益最大。

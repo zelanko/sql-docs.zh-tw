@@ -4,7 +4,7 @@ description: 了解查詢最佳化工具為 SQL Server 資料庫引擎所建立�
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fee5c2f4f1d8a286830f4e1fdefdb1043964a726
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126615"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505222"
 ---
 # <a name="execution-plans"></a>執行計劃
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "96126615"
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
 > -  **_[估計執行計畫](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _是已編譯的計畫，且是由查詢最佳化工具根據估計所產生。 這是儲存在計畫快取中的查詢計畫。        
-> -  _*_ [實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ 是已編譯的計畫加上其[執行內容](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 其在_*查詢執行完成之後**可供使用。 這包括實際的執行階段資訊 (例如執行警告)，在較新版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中則是執行期間所使用的耗用時間與 CPU 時間。         
+> -  _*_ [實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ 是已編譯的計畫加上其 [執行內容](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 其在_*查詢執行完成之後**可供使用。 這包括實際的執行階段資訊 (例如執行警告)，在較新版本的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中則是執行期間所使用的耗用時間與 CPU 時間。         
 > -  **_[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)_ *_是已編譯的計畫加上其執行內容。可供_* 執行中的查詢執行** 使用，且每秒更新一次。 這包括如流經[運算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的資料列實際數目、經過的時間，以及估計的查詢進度等執行階段資訊。
 
 > [!TIP]

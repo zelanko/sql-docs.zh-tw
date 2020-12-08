@@ -24,14 +24,14 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 87ecdbd39bb5773b114358ed4d22e8c560b77f87
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734671"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504892"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出
 
@@ -219,7 +219,7 @@ ms.locfileid: "92734671"
   
 6.  在 **[動作]** 功能表上，按一下 **[評估建議]** 。 Database Engine Tuning Advisor 會建立使用已編輯建議作為假設組態的新微調工作階段。 若要以 XML 檢視假設組態，請選擇 **[按一下此處以查看組態區段]** 。  
   
-7.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱** ，並且確保已指定正確的 **[工作負載]** 。  
+7.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱**，並且確保已指定正確的 **[工作負載]** 。  
   
 8.  在 **[微調選項]** 索引標籤上，您可以指定微調時間或任何 **[進階選項]** 。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "92734671"
   
 2.  在 **[動作]** 功能表上，按一下 **[複製工作階段]** 。  
   
-3.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱** ，並且確保已指定正確的 **[工作負載]** 。  
+3.  在 **[一般]** 索引標籤上，輸入 **工作階段名稱**，並且確保已指定正確的 **[工作負載]** 。  
   
 4.  在 **[微調選項]** 索引標籤上，您可以指定微調時間，Database Engine Tuning Advisor 應該考慮建立的實體設計結構，以及考慮應該在其建議中卸除的項目。  
   

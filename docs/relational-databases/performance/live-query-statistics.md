@@ -16,14 +16,14 @@ helpviewer_keywords:
 - lightweight query profiling
 - lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c45216331d940398c0d89e319c9f847d70faba0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890785"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505163"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91890785"
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>檢視某項查詢的即時查詢統計資料 
   
-1.  若要檢視即時查詢執行計劃，請在 [工具] 功能表上按一下**包含即時查詢統計資料**圖示。  
+1.  若要檢視即時查詢執行計劃，請在 [工具] 功能表上按一下 **包含即時查詢統計資料** 圖示。  
   
      ![工具列上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatstoolbar.png "工具列上的 [即時查詢統計資料] 按鈕")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "91890785"
 ## <a name="permissions"></a>權限  
 填入 [即時查詢統計資料] 結果頁面需要資料庫層級的 `SHOWPLAN` 權限，而執行查詢則需要任何必要權限。
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要伺服器層級的 `VIEW SERVER STATE` 權限才能查看即時統計資料。  
-在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層上，需要資料庫的 `VIEW DATABASE STATE` 權限才能查看即時統計資料。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 **Azure Active Directory 系統管理員**帳戶，才能查看即時統計資料。
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層上，需要資料庫的 `VIEW DATABASE STATE` 權限才能查看即時統計資料。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層上，需要 **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶，才能查看即時統計資料。
   
 ## <a name="see-also"></a>另請參閱  
  [執行計畫](../../relational-databases/performance/execution-plans.md)    

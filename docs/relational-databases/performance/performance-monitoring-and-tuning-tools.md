@@ -17,14 +17,14 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: dcdfba8947333b6856485848b5597b766f71edbe
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457654"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505084"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86457654"
 |[監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|「系統監視器」主要會追蹤資源使用量 (例如使用中的緩衝區管理員分頁要求的數目)，讓您可以使用預先定義的物件和計數器監視伺服器效能和活動，或使用者定義的計數器來監視事件。 「系統監視器」(Microsoft Windows NT 4.0 中的「效能監視器」) 收集關於事件的計數和比率而非資料 (例如：記憶體使用量、使用中交易的數目、被封鎖的鎖定數目或是 CPU 活動)。 您可以設定特定計數器的臨界值來產生提醒操作員的警示。<br /><br /> 「系統監視器」可在 Microsoft Windows Server 與 Windows 作業系統上運作。 它可以監視 (從遠端或本機) Windows NT 4.0 或更新版本上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 與「系統監視器」之間最主要的差異在於 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 監視 Database Engine 事件，而「系統監視器」則監視與伺服器處理序關聯的資源使用情形。|  
 |[開啟活動監視器 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「活動監視器」對於目前活動的特定檢視非常有用，並會以圖形方式顯示以下相關資訊：<br /><br />- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行的處理序<br />- 已封鎖的處理序<br />- 鎖定<br />- 使用者活動|  
 |[效能儀表板](../../relational-databases/performance/performance-dashboard.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [效能儀表板] 可協助您快速識別出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是否有任何目前的效能瓶頸。|  
-|[Query Tuning Assistant (查詢調整小幫手，QTA)](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|查詢調整小幫手 (QTA) 功能將引導使用者完成建議的工作流程，以便在升級到較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期間保持效能穩定性，如[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的*在升級至更新版 SQL Server 期間保持效能的穩定性*一節所述。 |  
+|[Query Tuning Assistant (查詢調整小幫手，QTA)](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|查詢調整小幫手 (QTA) 功能將引導使用者完成建議的工作流程，以便在升級到較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期間保持效能穩定性，如 [查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的 *在升級至更新版 SQL Server 期間保持效能的穩定性* 一節所述。 |  
 |[查詢存放區](../..//relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|查詢存放區功能可為您提供關於查詢計畫選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。|
 |[SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 建立、篩選和定義追蹤的預存程序：<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br />[sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br />[sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br />[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br />[sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 可以使用多部電腦重新執行追蹤資料，並模擬關鍵任務的工作負載。|  

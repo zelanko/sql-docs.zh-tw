@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890746"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504959"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "91890746"
  您也可以使用這些追蹤事件的 **Starting** 版本， 例如 **SQL:BatchStarting**。 不過，這些追蹤事件的 **Completed** 版本包含 **Duration** 資料行，能讓 Database Engine Tuning Advisor 更有效率地微調工作負載。 Database Engine Tuning Advisor 不會微調其他類型的追蹤事件。 如需這些追蹤事件的詳細資訊，請參閱＜ [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) ＞和＜ [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md)＞。 如需使用「SQL 追蹤」預存程序來建立追蹤檔案工作負載的資訊，請參閱[建立追蹤 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
 ### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>包含 LoginName 資料行的追蹤檔案或追蹤資料表工作負載  
- Database Engine Tuning Advisor 會在微調處理過程中送出「執行程序表」要求。 將包含 **LoginName** 資料行的追蹤資料表或檔案當作工作負載來使用時，Database Engine Tuning Advisor 會模擬 **LoginName**中指定的使用者。 如果此使用者沒有 SHOWPLAN 權限，無法為追蹤所包含的陳述式執行和產生「執行程序表」，Database Engine Tuning Advisor 就不會微調這些陳述式。  
+ Database Engine Tuning Advisor 會在微調處理過程中送出「執行程序表」要求。 將包含 **LoginName** 資料行的追蹤資料表或檔案當作工作負載來使用時，Database Engine Tuning Advisor 會模擬 **LoginName** 中指定的使用者。 如果此使用者沒有 SHOWPLAN 權限，無法為追蹤所包含的陳述式執行和產生「執行程序表」，Database Engine Tuning Advisor 就不會微調這些陳述式。  
   
 ##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>若要避免將 SHOWPLAN 權限授與追蹤之 LoginName 資料行所指定的每個使用者  
   
