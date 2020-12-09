@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235385"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443196"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -142,13 +142,13 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>引數
 
-*database_name* ：這是要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 > [!NOTE]
 > 自主資料庫無法使用這個選項。
 
 CURRENT   
-**適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 指定應該改變正在使用中的目前資料庫。
 
@@ -161,12 +161,12 @@ COLLATE *collation_name*
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法變更定序。
 
-使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主資料庫時，會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設定序 ( **Latin1_General_100_CI_AS_WS_KS_SC** ) 來維護內部的目錄資訊。
+使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主資料庫時，會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設定序 (**Latin1_General_100_CI_AS_WS_KS_SC**) 來維護內部的目錄資訊。
 
 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE](~/t-sql/statements/collations.md)。
 
 **\<delayed_durability_option> ::=**    
-**適用對象** ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
+**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
 
 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)及[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。
 
@@ -263,7 +263,7 @@ GO
 
 下列範例會使用 `testdb`S 定序來建立名為 `SQL_Latin1_General_CP1_CI_A` 的資料庫，然後將 `testdb` 資料庫的定序變更為 `COLLATE French_CI_AI`。
 
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 USE master;
@@ -470,13 +470,13 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |20 GB|N/A|√|√|√|√|
 |30 GB|N/A|√|√|√|√|
 |40 GB|N/A|√|√|√|√|
-|50 GB|N/A|√|√|√|√|
+|50 GB|N/A|√ (D)|√|√|√|
 |100 GB|N/A|√|√|√|√|
 |150 GB|N/A|√|√|√|√|
-|200 GB|N/A|√|√|√|√|
+|200 GB|N/A|√|√ (D)|√|√|
 |250 GB|N/A|√ (D)|√ (D)|√|√|
-|300 GB|N/A|√|√|√|√|
-|400 GB|N/A|√|√|√|√|
+|300 GB|N/A|√|√|√ (D)|√|
+|400 GB|不適用|√|√|√|√|
 |500 GB|N/A|√|√|√ (D)|√|
 |750 GB|N/A|√|√|√|√|
 |1024 GB|N/A|√|√|√|√ (D)|
@@ -950,7 +950,7 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="syntax"></a>語法
 
-### <a name="sql-pool"></a>[SQL 集區](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[專用 SQL 集區](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL 隨選 (預覽)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[無伺服器 SQL 集區](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 
@@ -1044,7 +1044,7 @@ SERVICE_OBJECTIVE
 
 ## <a name="general-remarks"></a>一般備註
 
-目前資料庫必須是與您變更的資料庫不同的資料庫，因此 **必須在連線至 master 資料庫時執行 ALTER** 。
+目前資料庫必須是與您變更的資料庫不同的資料庫，因此 **必須在連線至 master 資料庫時執行 ALTER**。
 
 SQL Analytics 中的 COMPATIBILITY_LEVEL 預設已設定為 130 且無法變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](./alter-database-transact-sql-compatibility-level.md)。
 
@@ -1063,7 +1063,7 @@ SQL Analytics 中的 COMPATIBILITY_LEVEL 預設已設定為 130 且無法變更�
 
 ## <a name="examples"></a>範例
 
-執行這些範例之前，請確定您要變更的資料庫不是目前資料庫。 目前資料庫必須是與您變更的資料庫不同的資料庫，因此 **必須在連線至 master 資料庫時執行 ALTER** 。
+執行這些範例之前，請確定您要變更的資料庫不是目前資料庫。 目前資料庫必須是與您變更的資料庫不同的資料庫，因此 **必須在連線至 master 資料庫時執行 ALTER**。
 
 ### <a name="a-change-the-name-of-the-database"></a>A. 變更資料庫的名稱
 
