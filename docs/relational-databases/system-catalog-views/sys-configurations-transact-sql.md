@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546820"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901051"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "89546820"
 sys.config的 urations 類別目錄檢視可用來決定 config_value (值資料行) 、run_value (value_in_use 資料行) ，以及設定選項為動態 (不需要重新開機伺服器引擎或 is_dynamic 資料行) 。
 
 > [!NOTE]
-> Sp_configure 結果集內的 config_value 相當於 [ **sys.configurations] 值** 資料行。 **Run_value**相當於**sys.configurations。 value_in_use**資料行。
+> Sp_configure 結果集內的 config_value 相當於 [ **sys.configurations] 值** 資料行。 **Run_value** 相當於 **sys.configurations.value_in_use** 資料行。
 
 下列查詢可用來判斷是否有任何未安裝的設定值：
 
@@ -65,11 +65,12 @@ select * from sys.configurations where value != value_in_use
 
 有些設定選項的值和 value_in_use 可能不相同，而且這是預期的行為。 例如：
 
-「最大伺服器記憶體 (MB) 」-預設設定的0值會顯示為 value_in_use = 2147483647 「最小伺服器記憶體 (MB) 」，預設值為0可能會顯示為 value_in_use = 8 (32 位) 或 16 (64 位) 。 
+「最大伺服器記憶體 (MB) 」-預設設定的值為0時，會顯示為 **value_in_use** = 2147483647<br>
 
-在某些情況下， **value_in_use** 將會是0。 在此情況下，「true」 **value_in_use** 是 8 (32 位) 或 16 (64 位) 
+"min server memory (MB) "-預設設定的值為0可能會顯示為 **value_in_use** = 8 (32 位) 或 16 (64 位) 。 在某些情況下， **value_in_use** 是0。 在此情況下，「true」 **value_in_use** 為 8 (32 位) 或 16 (64 位) 。
 
-**Is_dynamic**資料行可以用來判斷設定選項是否需要重新開機。 is_dynamic = 1 表示當執行重新設定 (T-sql) 命令時，新值會「立即」生效 (在某些情況下，伺服器引擎可能無法立即評估新值，但會在其執行) 的正常過程中這麼做。 is_dynamic = 0 表示變更的設定值在伺服器重新開機之前不會生效，即使已執行重新設定 (T-sql) 命令也一樣。
+
+**Is_dynamic** 資料行可以用來判斷設定選項是否需要重新開機。 is_dynamic = 1 表示當執行重新設定 (T-sql) 命令時，新值會「立即」生效 (在某些情況下，伺服器引擎可能無法立即評估新值，但會在其執行) 的正常過程中這麼做。 is_dynamic = 0 表示變更的設定值在伺服器重新開機之前不會生效，即使已執行重新設定 (T-sql) 命令也一樣。
 
 針對非動態的設定選項，無法分辨是否已執行重新設定 (T-sql) 命令，以執行安裝設定變更的第一個步驟。 在您重新開機 SQL Server 以安裝設定變更之前，請先執行重新設定 (T-sql) 命令，以確保所有設定變更將會在 SQL Server 重新開機之後生效。 
  

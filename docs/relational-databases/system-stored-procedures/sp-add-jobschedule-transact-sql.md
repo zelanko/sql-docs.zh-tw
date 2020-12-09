@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 910ee3433bfa4298412a10a58405fb27dad0b157
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753814"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900972"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,12 +58,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>引數  
 `[ @job_id = ] job_id` 要加入排程之作業的作業識別碼。 *job_id* 是 **uniqueidentifier**，沒有預設值。  
   
-`[ @job_name = ] 'job_name'` 要加入排程的作業名稱。 *job_name* 是 **Nvarchar (128) **，沒有預設值。  
+`[ @job_name = ] 'job_name'` 要加入排程的作業名稱。 *job_name* 是 **Nvarchar (128)**，沒有預設值。  
   
 > [!NOTE]  
 >  必須指定 *job_id* 或 *job_name* ，但不能同時指定兩者。  
   
-`[ @name = ] 'name'` 排程的名稱。 *名稱* 是 **Nvarchar (128) **，沒有預設值。  
+`[ @name = ] 'name'` 排程的名稱。 *名稱* 是 **Nvarchar (128)**，沒有預設值。  
   
 `[ @enabled = ] enabled_flag` 指出排程的目前狀態。 *enabled_flag* 是 **Tinyint**，預設值為 **1** (啟用) 。 如果是 **0**，則不會啟用排程。 停用排程時，就不會執行作業。  
   
@@ -86,22 +86,23 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1** (一次) |*frequency_interval* 未使用。|  
 |每日) **4** (|每 *frequency_interval* 天。|  
 |每週) **8** (|*frequency_interval* 是下列一或多個 (與或邏輯運算子) 結合：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 4 = 星期二<br /><br /> 8 = 星期三<br /><br /> 16 = 星期四<br /><br /> 32 = 星期五<br /><br /> 64 = 星期六|  
-|每月**16** () |在當月的 *frequency_interval* 日。|  
+|每月 **16** () |在當月的 *frequency_interval* 日。|  
 |**32** (每月相對) |*frequency_interval* 是下列其中一項：<br /><br /> 1 = 星期日<br /><br /> 2 = 星期一<br /><br /> 3 = 星期二<br /><br /> 4 = 星期三<br /><br /> 5 = 星期四<br /><br /> 6 = 星期五<br /><br /> 7 = 星期六<br /><br /> 8 = 日<br /><br /> 9 = 工作日<br /><br /> 10 = 週末|  
 |**64** ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務啟動時) |*frequency_interval* 未使用。|  
 |**128**|*frequency_interval* 未使用。|  
   
-`[ @freq_subday_type = ] frequency_subday_type` 指定 *frequency_subday_interval*的單位。 *frequency_subday_type* 是 **int**，沒有預設值，它可以是下列其中一個值：  
+`[ @freq_subday_type = ] frequency_subday_type` 指定 *frequency_subday_interval* 的單位。 *frequency_subday_type* 是 **int**，沒有預設值，它可以是下列其中一個值：  
   
 |值|描述 (單位)|  
 |-----------|--------------------------|  
 |**0x1**|在指定的時間|  
+|**0x2**|秒|  
 |**0x4**|分鐘|  
 |**0x8**|小時|  
   
 `[ @freq_subday_interval = ] frequency_subday_interval` 每次執行作業之間發生的 *frequency_subday_type* 期間數。 *frequency_subday_interval* 是 **int**，預設值是0。  
   
-`[ @freq_relative_interval = ] frequency_relative_interval`當*frequency_type*設定為**32** (每月相對) 時，進一步定義*frequency_interval* 。  
+`[ @freq_relative_interval = ] frequency_relative_interval`當 *frequency_type* 設定為 **32** (每月相對) 時，進一步定義 *frequency_interval* 。  
   
  *frequency_relative_interval* 是 **int**，沒有預設值，它可以是下列其中一個值：  
   
@@ -115,7 +116,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* 指出間隔的出現次數。 例如，如果 *frequency_relative_interval* 設定為 **2**， *frequency_type* 會設定為 **32**，而 *frequency_interval* 設定為 **3**，則排程工作會在每個月的第二個星期二進行。  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` 作業排程執行之間的周數或月數。 只有當*frequency_type*設定為**8**、 **16**或**32**時，才會使用*frequency_recurrence_factor* 。 *frequency_recurrence_factor* 是 **int**，預設值是0。  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` 作業排程執行之間的周數或月數。 只有當 *frequency_type* 設定為 **8**、 **16** 或 **32** 時，才會使用 *frequency_recurrence_factor* 。 *frequency_recurrence_factor* 是 **int**，預設值是0。  
   
 `[ @active_start_date = ] active_start_date` 作業執行可以開始的日期。 *active_start_date* 是 **int**，沒有預設值。 日期格式為 YYYYMMDD。 如果設定 *active_start_date* ，日期必須大於或等於19900101。  
   
@@ -123,13 +124,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @active_end_date = ] active_end_date` 作業執行可以停止的日期。 *active_end_date* 是 **int**，沒有預設值。 日期格式為 YYYYMMDD。  
   
-`[ @active_start_time = ] active_start_time`*Active_start_date*與*active_end_date*之間的任何一天開始執行作業的時間。 *active_start_time* 是 **int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
+`[ @active_start_time = ] active_start_time`*Active_start_date* 與 *active_end_date* 之間的任何一天開始執行作業的時間。 *active_start_time* 是 **int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
   
-`[ @active_end_time = active_end_time_`*Active_start_date*與*active_end_date*之間的任何一天時間，結束工作執行之間的時間。 *active_end_time* 是 **int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
+`[ @active_end_time = active_end_time_`*Active_start_date* 與 *active_end_date* 之間的任何一天時間，結束工作執行之間的時間。 *active_end_time* 是 **int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
   
-`[ @schedule_id = schedule_idOUTPUT` 若已成功建立排程，則指派給排程的排程識別碼。 *schedule_id* 是 **int**類型的輸出變數，沒有預設值。  
+`[ @schedule_id = schedule_idOUTPUT` 若已成功建立排程，則指派給排程的排程識別碼。 *schedule_id* 是 **int** 類型的輸出變數，沒有預設值。  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT` 排程的唯一識別碼。 *schedule_uid* 是 **uniqueidentifier**類型的變數。  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` 排程的唯一識別碼。 *schedule_uid* 是 **uniqueidentifier** 類型的變數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
