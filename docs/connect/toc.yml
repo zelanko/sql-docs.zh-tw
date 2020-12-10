@@ -93,6 +93,27 @@
                   href: ../connect/ado-net/update-data-inside-data-source.md
                 - name: 執行資料庫目錄作業
                   href: ../connect/ado-net/perform-catalog-operations.md
+        - name: DataAdapter 和 DataReader
+          href: ../connect/ado-net/dataadapters-datareaders.md
+          items:
+            - name: 由 DataReader 擷取的資料
+              href: ../connect/ado-net/retrieve-data-by-datareader.md
+            - name: 從 DataAdapter 擴展資料集
+              href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+            - name: DataAdapter 參數
+              href: ../connect/ado-net/dataadapter-parameters.md
+            - name: 將現有條件約束加入至資料集
+              href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+            - name: DataAdapter、DataTable 與 DataColumn 對應
+              href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+            - name: 逐頁查看查詢結果
+              href: ../connect/ado-net/paging-through-query-result.md
+            - name: 使用 DataAdapter 更新資料來源
+              href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+            - name: 處理 DataAdapter 事件
+              href: ../connect/ado-net/handle-dataadapter-events.md
+            - name: 使用 DataAdapter 執行批次作業
+              href: ../connect/ado-net/batch-operations-using-dataadapters.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
