@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 5d9138a5d02008cc173bc7f0b64d354d67112d3b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 9f6449c11c4033324b8f294449942b67425a737c
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364085"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900891"
 ---
 # <a name="create-a-jupyter-book-extension"></a>建立 Jupyter Book 延伸模組
 
@@ -50,14 +50,14 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
 - `$PATH` 中已安裝並可供使用的 [Node.js](https://nodejs.org)。 Node.js 包含 Node.js 套件管理員 [npm](https://www.npmjs.com/)，可用來安裝延伸模組產生器。
 - [Visual Studio Code](https://code.visualstudio.com)，以對延伸模組進行任何變更及針對延伸模組進行偵錯。
-- 確定 `azuredatastudio` 在您的 PATH 中。 針對 Windows，請務必選擇 setup.exe 中的 [新增至路徑] 選項。 若是 Mac 或 Linux，請執行 [Install 'azuredatastudio' command in PATH] \(在 PATH 中安裝 'azuredatastudio' 命令\)**** 選項。
+- 確定 `azuredatastudio` 在您的 PATH 中。 針對 Windows，請務必選擇 setup.exe 中的 [新增至路徑] 選項。 若是 Mac 或 Linux，請執行 [Install 'azuredatastudio' command in PATH] \(在 PATH 中安裝 'azuredatastudio' 命令\) 選項。
 
 ## <a name="install-the-extension-generator"></a>安裝延伸模組產生器
 
 為了簡化建立延伸模組的程序，我們使用 Yeoman 建置了[延伸模組產生器](https://www.npmjs.com/package/generator-azuredatastudio)。 若要安裝，請從命令提示字元執行下列命令：
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>建立您的延伸模組
@@ -151,7 +151,7 @@ export function activate(context: vscode.ExtensionContext) {
 若要與其他人共用，則需要將延伸模組封裝成單一檔案。 您的延伸模組可發佈到 Azure Data Studio 延伸模組市集，或與小組或社群共用。 若要執行此步驟，您必須從命令列安裝另一個 npm 套件。
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 依據您的喜好編輯 `README.md` 檔案。 然後，移至延伸模組的基底目錄，並執行 `vsce package`。 您可選擇將存放庫與延伸模組連結，或在不連結的情況下繼續。 若要新增，請將類似的一行新增到 `package.json` 檔案。

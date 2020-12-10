@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364095"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900871"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>建立 Azure Data Studio 儀表板延伸模組
 
@@ -37,14 +37,14 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 - `$PATH` 中已安裝並可供使用的 [Node.js](https://nodejs.org)。 Node.js 包含 Node.js 套件管理員 [npm](https://www.npmjs.com/)，可用來安裝延伸模組產生器。
 - 用來偵錯延伸模組的 [Visual Studio Code](https://code.visualstudio.com)。
 - Azure Data Studio [偵錯延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (選擇性)。 偵錯延伸模組讓您無須將延伸模組封裝並安裝到 Azure Data Studio 中，即可測試延伸模組。
-- 確定 `azuredatastudio` 在您的 PATH 中。 針對 Windows，請務必選擇 setup.exe 中的 [新增至路徑] 選項。 若是 Mac 或 Linux，請執行 [Install 'azuredatastudio' command in PATH] \(在 PATH 中安裝 'azuredatastudio' 命令\)**** 選項。
+- 確定 `azuredatastudio` 在您的 PATH 中。 針對 Windows，請務必選擇 setup.exe 中的 [新增至路徑] 選項。 若是 Mac 或 Linux，請執行 [Install 'azuredatastudio' command in PATH] \(在 PATH 中安裝 'azuredatastudio' 命令\) 選項。
 
 ## <a name="install-the-extension-generator"></a>安裝延伸模組產生器
 
 為了簡化建立延伸模組的程序，我們使用 Yeoman 建置了[延伸模組產生器](https://code.visualstudio.com/docs/extensions/yocode)。 若要安裝，請從命令提示字元執行下列命令：
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>建立儀表板延伸模組
@@ -53,7 +53,7 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
 Azure Data Studio 連線儀表板是一種強大的工具，其可摘要和提供使用者連線的見解。
 
-儀表板有兩種變化。 *伺服器儀表板*會摘要整個伺服器，*資料庫儀表板*則會摘要個別資料庫。 您可在 Azure Data Studio 的 [連線] Viewlet 中以滑鼠右鍵按一下伺服器或資料庫，並選取 [管理]，以存取其中一個儀表板。
+儀表板有兩種變化。 *伺服器儀表板* 會摘要整個伺服器，*資料庫儀表板* 則會摘要個別資料庫。 您可在 Azure Data Studio 的 [連線] Viewlet 中以滑鼠右鍵按一下伺服器或資料庫，並選取 [管理]，以存取其中一個儀表板。
 
 :::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="顯示儀表板簡介的螢幕擷取畫面。":::
 
@@ -108,7 +108,7 @@ Azure Data Studio 連線儀表板是一種強大的工具，其可摘要和提�
 若要與其他人共用，則需要將延伸模組封裝成單一檔案。 您的延伸模組可發佈到 Azure Data Studio 延伸模組市集，或與小組或社群共用。 若要執行此步驟，您必須從命令列安裝另一個 npm 套件。
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 依據您的喜好編輯 `README.md` 檔案。 然後，移至延伸模組的基底目錄，並執行 `vsce package`。 您可選擇將存放庫與延伸模組連結，或在不連結的情況下繼續。 若要新增，請將類似的一行新增到 `package.json` 檔案。

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428200"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761476"
 ---
 # <a name="using-commands-to-modify-data"></a>使用命令來修改資料
 
@@ -31,11 +31,14 @@ ms.locfileid: "96428200"
 
 ## <a name="in-this-section"></a>本節內容
 
-[更新資料來源中的資料](update-data-inside-data-source.md) 描述如何執行能修改資料庫中資料的命令或預存程序。
+[更新資料來源中的資料](update-data-inside-data-source.md)  
+說明如何執行修改資料庫資料的命令或預存程序。
 
-[執行目錄作業](perform-catalog-operations.md) 描述如何執行能修改資料庫結構描述的命令。
+[執行目錄作業](perform-catalog-operations.md)  
+說明如何執行修改資料庫結構描述的命令。
 
 ## <a name="see-also"></a>請參閱
 
 - [在 ADO.NET 中擷取及修改資料](retrieving-modifying-data.md)
 - [命令與參數](commands-parameters.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

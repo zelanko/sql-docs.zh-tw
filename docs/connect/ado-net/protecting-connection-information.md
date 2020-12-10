@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 87d8e2013693d2e8123adb97273309d6f22de03e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126352"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563094"
 ---
 # <a name="protecting-connection-information"></a>保護連線資訊
 
@@ -23,7 +23,7 @@ ms.locfileid: "96126352"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-保護應用程式時的最重要目標之一就是保護資料來源的存取。 連接字串如果沒有受到保護，就可能造成安全性漏洞。 以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。 內嵌於原始程式碼的連接字串可以使用 [Ildasm.exe (IL 反組譯工具)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) 進行讀取，進而檢視已編譯組件中的 Microsoft Intermediate Language (MSIL)。
+保護應用程式時的最重要目標之一就是保護資料來源的存取。 連接字串如果沒有受到保護，就可能造成安全性漏洞。 以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。 內嵌於原始程式碼的連接字串可以使用 [Ildasm.exe (IL 反組譯工具)](/dotnet/framework/tools/ildasm-exe-il-disassembler) 進行讀取，進而檢視已編譯組件中的 Microsoft Intermediate Language (MSIL)。
 
 涉及連接字串的安全性漏洞，可能會根據使用的驗證類型、連接字串在記憶體及磁碟中的保存方式，以及在執行階段用來建構連接字串的技巧而引發。
 

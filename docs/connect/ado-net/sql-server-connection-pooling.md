@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419731"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563075"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 
@@ -68,10 +68,10 @@ ms.locfileid: "96419731"
 連接共用器會藉由重新配置釋放回集區的連接，來滿足連接的請求。 如果已達到最大集區大小，但仍沒有可用的連接，則會將要求排入佇列。 然後，共用器會嘗試回收任何連線，直到達到逾時為止 (**預設值為 15 秒**)。 如果連接逾時之前共用器無法滿足要求，則會擲回例外狀況。
 
 > [!CAUTION]
-> 強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用 `Connection` 物件的 `Close` 或 `Dispose` 方法，或透過開啟 C# 中之 `using` 陳述式或 Visual Basic 中之 `Using` 陳述式內的所有連線來執行此動作。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱 [using 陳述式](/dotnet/docs/csharp/language-reference/keywords/using-statement.md)或[操作說明：處置系統資源](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) (Visual Basic)。
+> 強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用 `Connection` 物件的 `Close` 或 `Dispose` 方法，或透過開啟 C# 中之 `using` 陳述式或 Visual Basic 中之 `Using` 陳述式內的所有連線來執行此動作。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱 [using 陳述式](/dotnet/csharp/language-reference/keywords/using-statement)或[操作說明：處置系統資源](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) (Visual Basic)。
 
 > [!NOTE]
-> 請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[記憶體回收](/dotnet/docs/standard/garbage-collection/index.md)。
+> 請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[記憶體回收](/dotnet/standard/garbage-collection/index)。
 
 如需與開啟及關閉連線相關聯之事件的詳細資訊，請參閱 SQL Server 文件中的 [Audit Login 事件類別](/sql/relational-databases/event-classes/audit-login-event-class)與 [Audit Logout 事件類別](/sql/relational-databases/event-classes/audit-logout-event-class)。
 

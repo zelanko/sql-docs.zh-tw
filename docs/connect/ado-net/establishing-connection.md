@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419740"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563081"
 ---
 # <a name="establishing-connection"></a>建立連線
 
@@ -29,12 +29,12 @@ ms.locfileid: "96419740"
 
 ## <a name="closing-connections"></a>關閉連接
 
-建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 即使有未處理的例外狀況，Visual Basic 或 C# 中的 `Using` 區塊也會在程式碼結束該區塊時自動處理連接。 如需詳細資訊，請參閱 [using 陳述式](/dotnet/docs/csharp/language-reference/keywords/using-statement.md)與 [Using 陳述式](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md)。
+建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 即使有未處理的例外狀況，Visual Basic 或 C# 中的 `Using` 區塊也會在程式碼結束該區塊時自動處理連接。 如需詳細資訊，請參閱 [using 陳述式](/dotnet/csharp/language-reference/keywords/using-statement)與 [Using 陳述式](/dotnet/visual-basic/language-reference/statements/using-statement)。
 
 您也可以使用 Connection 物件的 `Close` 或 `Dispose` 方法。 可能不會將未明確關閉的連接加入或傳回集區。 例如，已離開範圍但尚未明確關閉的連接僅會在已達到最大集區大小，且連接仍然有效時，才會回到連接集區。
 
 > [!NOTE]
-> 請不要在類別之 `Finalize` 方法中的 **Connection**、**DataReader** 或任何其他受控物件上呼叫 `Close` 或 `Dispose`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[記憶體回收](/dotnet/docs/standard/garbage-collection/index.md)。
+> 請不要在類別之 `Finalize` 方法中的 **Connection**、**DataReader** 或任何其他受控物件上呼叫 `Close` 或 `Dispose`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[記憶體回收](/dotnet/standard/garbage-collection/index)。
 
 > [!NOTE]
 > 從連接集區中擷取連接或將連接傳回連接集區時，系統不會在伺服器上引發登入和登出事件，因為當連接傳回連接集區時，連接實際上並未關閉。 如需詳細資訊，請參閱 [SQL Server 連線共用 (ADO.NET)](sql-server-connection-pooling.md) \(機器翻譯\)。

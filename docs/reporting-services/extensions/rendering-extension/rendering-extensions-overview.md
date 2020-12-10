@@ -1,7 +1,7 @@
 ---
 title: 轉譯延伸模組概觀 | Microsoft Docs
 description: 了解 Reporting Services 包含哪些資料轉譯延伸模組。 了解如何新增自訂轉譯延伸模組來以其他格式產生報表。
-ms.date: 03/14/2017
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529424"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788297"
 ---
 # <a name="rendering-extensions-overview"></a>轉譯延伸模組概觀
   轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]包含七個轉譯延伸模組：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
@@ -54,8 +54,6 @@ ms.locfileid: "84529424"
 -   透過將 XSL 轉換 (XSLT) 與 XML 轉譯格式的輸出結合，加入自訂格式與簡報功能。  
   
  撰寫自訂轉譯延伸模組是很困難的。 轉譯延伸模組通常必須支援所有可能的報表元素結合，並需要您實作數百個類別、介面和屬性。 如果您必須使用不包括在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的格式來轉譯報表，並決定撰寫自己的轉譯延伸模組之 Managed 程式碼實作，則轉譯延伸模組程式碼必須實作報表伺服所需的 **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** 介面。  
-  
- 如需 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的補充文件與白皮書，請參閱 [Reporting Services 網站](https://go.microsoft.com/fwlink/?LinkId=19951)的最新技術資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作轉譯延伸模組](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

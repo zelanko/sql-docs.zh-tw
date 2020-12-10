@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126419"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563114"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串與組態檔
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126419"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。
+在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](/dotnet/framework/tools/ildasm-exe-il-disassembler) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。
 
 ## <a name="working-with-application-configuration-files"></a>使用應用程式組態檔
 
@@ -194,5 +194,5 @@ ASP.NET 2.0 導入一項稱為「受保護的組態」的新功能，可用於�
 - [連接字串產生器](connection-string-builders.md)
 - [保護連接資訊](protecting-connection-information.md)
 - [使用組態類別](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [設定應用程式](/dotnet/docs/framework/configure-apps/index.md)
+- [設定應用程式](/dotnet/framework/configure-apps/index)
 - [管理 ASP.NET 網站](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

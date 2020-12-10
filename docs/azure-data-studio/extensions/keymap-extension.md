@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364075"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900821"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>建立 Azure Data Studio 鍵盤對應延伸模組
 
@@ -37,14 +37,14 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 - `$PATH` 中已安裝並可供使用的 [Node.js](https://nodejs.org)。 Node.js 包含 Node.js 套件管理員 [npm](https://www.npmjs.com/)，可用來安裝延伸模組產生器。
 - 用來偵錯延伸模組的 [Visual Studio Code](https://code.visualstudio.com)。
 - Azure Data Studio [偵錯延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (選擇性)。 讓您不需要將延伸模組封裝並安裝到 Azure Data Studio 中，即可進行測試。
-- 確定 `azuredatastudio` 在您的 PATH 中。 若是 Windows，請務必選擇 setup.exe 中的 [`Add to Path`] 選項。 若是 Mac 或 Linux，請執行 [Install 'azuredatastudio' command in PATH] \(在 PATH 中安裝 'azuredatastudio' 命令\)** 選項。
+- 確定 `azuredatastudio` 在您的 PATH 中。 若是 Windows，請務必選擇 setup.exe 中的 [`Add to Path`] 選項。 若是 Mac 或 Linux，請執行 [Install 'azuredatastudio' command in PATH] \(在 PATH 中安裝 'azuredatastudio' 命令\) 選項。
 
 ## <a name="install-the-extension-generator"></a>安裝延伸模組產生器
 
 為了簡化建立延伸模組的程序，我們使用 Yeoman 建置了[延伸模組產生器](https://code.visualstudio.com/docs/extensions/yocode)。 若要加以安裝，請在命令提示字元中執行下列程式碼：
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>建立鍵盤對應延伸模組
@@ -55,7 +55,7 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 
    `yo azuredatastudio`
 
-2. 從延伸模組類型清單選擇 [New Keymap] \(新增按鍵對應\)****：
+2. 從延伸模組類型清單選擇 [New Keymap] \(新增按鍵對應\)：
 
    :::image type="content" source="media/keymap-extension/extension-generator.png" alt-text="延伸模組產生器":::
 
@@ -75,9 +75,9 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 - 以 **CTRL+SHIFT+E** 作為執行查詢的第二個方法。 使用者意見反應指出遺漏此項目。
 - 讓 **ALT+F1** 執行 `sp_help`。 我們已在 Azure Data Studio 中新增此項目，但因為該繫結關係已經在使用，所以我們改為對應至 **ALT+F2**。
 - 切換全螢幕 (**SHIFT+ALT+ENTER**)。
-- **F8** 顯示物件總管**** / [伺服器檢視]****。
+- **F8** 顯示物件總管 / [伺服器檢視]。
 
-尋找及取代這些按鍵繫結關係很容易。 執行 [開啟鍵盤快速鍵]**，在 Azure Data Studio 中顯示 [鍵盤快速鍵]**** 索引標籤，搜尋 *query*，然後選擇 [Change Key binding] \(變更按鍵繫結關係\)****。 完成變更按鍵繫結關係之後，您可以在 keybindings.json 檔案中查看更新的對應 (執行 [開啟鍵盤快速鍵]** 即可查看)。
+尋找及取代這些按鍵繫結關係很容易。 執行 [開啟鍵盤快速鍵]，在 Azure Data Studio 中顯示 [鍵盤快速鍵] 索引標籤，搜尋 *query*，然後選擇 [Change Key binding] \(變更按鍵繫結關係\)。 完成變更按鍵繫結關係之後，您可以在 keybindings.json 檔案中查看更新的對應 (執行 [開啟鍵盤快速鍵] 即可查看)。
 
 :::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="鍵盤快速鍵":::
 
@@ -137,7 +137,7 @@ Azure Data Studio 建置在與 Visual Studio Code 相同的架構上，因此 Az
 若要與其他人共用，則需要將延伸模組封裝成單一檔案。 此檔案可發佈到 Azure Data Studio 延伸模組 Marketplace，或在小組或社群分享。 若要執行這項操作，您必須從命令列安裝另一個 npm 套件：
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 巡覽至延伸模組的基底目錄，然後執行 `vsce package`。 我必須新增幾行額外的程式碼，以停止 *vsce* 工具回報問題：
