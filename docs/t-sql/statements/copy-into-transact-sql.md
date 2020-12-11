@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (預覽)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: 在 Azure Synapse Analytics 中使用 COPY 陳述式，從外部儲存體帳戶載入。
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300283"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787979"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "92300283"
 
 - [快速入門：使用 COPY 陳述式大量載入資料](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [快速入門：使用 COPY 陳述式和其支援驗證方法的範例](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [快速入門：使用豐富的 Synapse Studio UI 建立 COPY 陳述式 (工作區預覽)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [快速入門：使用豐富的 Synapse Studio UI 建立 COPY 陳述式](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>語法  
 
@@ -75,7 +75,7 @@ WITH
 ## <a name="arguments"></a>引數  
 
 *schema_name*  
-如果執行作業之使用者的預設結構描述是指定之資料表的結構描述，則是選擇性的。 如果未指定 *結構描述* ，且執行 COPY 作業之使用者的預設結構描述與指定的資料表不同，則會取消 COPY，而且會傳回錯誤訊息。  
+如果執行作業之使用者的預設結構描述是指定之資料表的結構描述，則是選擇性的。 如果未指定 *結構描述*，且執行 COPY 作業之使用者的預設結構描述與指定的資料表不同，則會取消 COPY，而且會傳回錯誤訊息。  
 
 *table_name*  
 這是要將資料 COPY 到其中之資料表的名稱。 目標資料表可以是臨時或永久資料表，而且必須已經存在於資料庫中。 
@@ -95,8 +95,8 @@ WITH
 *外部位置*</br>
 這是包含資料的檔案暫存之處。 目前支援 Azure Data Lake Storage (ADLS) Gen2 和 Azure Blob 儲存體：
 
-- Blob 儲存體的 *外部位置* ： https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2 的 *外部位置* ： https://<account>. dfs.core.windows.net/<container>/<path>
+- Blob 儲存體的 *外部位置*： https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2 的 *外部位置*： https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
 > Blob 端點也適用於 ADLS Gen2，且目前能夠執行最佳效能。 當驗證方法不需要 .dfs 時，請使用 .blob 端點。
@@ -141,9 +141,9 @@ WITH
 |  **Azure Blob 儲存體**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1：此驗證方法需要外部位置路徑中的 .blob 端點 ( **.blob** .core.windows.net)。
+1：此驗證方法需要外部位置路徑中的 .blob 端點 ( **.blob**.core.windows.net)。
 
-2：此驗證方法需要外部位置路徑中的 .dfs 端點 ( **.dfs** .core.windows.net)。
+2：此驗證方法需要外部位置路徑中的 .dfs 端點 ( **.dfs**.core.windows.net)。
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ WITH
   - 所需的最小 RBAC 角色：適用於 AAD 使用者的儲存體 Blob 資料參與者或儲存體 Blob 資料擁有者
 
 *ERRORFILE = 目錄位置*</br>
-*ERRORFILE* 僅適用於 CSV。 指定 COPY 陳述式內，已拒絕資料列和相應錯誤檔案應寫入的目錄。 您可以指定儲存體帳戶的完整路徑，或指定相對於容器的路徑。 如果指定的路徑不存在，則會代表您建立一個路徑。 會建立名稱為 " _rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 
+*ERRORFILE* 僅適用於 CSV。 指定 COPY 陳述式內，已拒絕資料列和相應錯誤檔案應寫入的目錄。 您可以指定儲存體帳戶的完整路徑，或指定相對於容器的路徑。 如果指定的路徑不存在，則會代表您建立一個路徑。 會建立名稱為 "_rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 
 
 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料夾中，寫入了兩種類型的檔案，分別是原因 (錯誤r) 檔案和資料 (資料列) 檔案，每個檔案都會預先附加 queryID、distributionID 和檔案 guid。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符首碼。
 
@@ -262,7 +262,7 @@ DATEFORMAT 僅適用於 CSV，而且會指定對應至 SQL Server 日期格式�
 *ENCODING* 僅適用於 CSV。 預設值為 UTF8。 指定 COPY 命令所載入之檔案的資料編碼標準。 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT 會指定所匯入資料檔案中的一或多個識別值是否要用於識別資料行。 如果 IDENTITY_INSERT 為 OFF (預設值)，則會驗證這個資料行的識別值，但不會匯入。 SQL DW 將會根據在資料表建立期間所指定的初始值及累加值，自動指派唯一的值。 請注意 COPY 命令的下列行為：
+IDENTITY_INSERT 會指定所匯入資料檔案中的一或多個識別值是否要用於識別資料行。 如果 IDENTITY_INSERT 為 OFF (預設值)，則會驗證這個資料行的識別值，但不會匯入。 Azure Synapse Analytics 將會根據在資料表建立期間所指定的種子值與累加值，自動指派唯一的值。 請注意 COPY 命令的下列行為：
 
 - 如果 IDENTITY_INSERT 為 OFF，且資料表具有識別資料行
   - 必須指定不會將輸入欄位對應到識別資料行的資料行清單。
@@ -433,17 +433,6 @@ COPY 命令是否會有更好的效能，需取決於您的工作負載。 為�
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>檔案的數目或大小是否有任何限制？
 檔案的數目或大小沒有限制，為了獲得最佳效能，我們建議檔案至少為 4MB。
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>使用 Synapse 工作區 (預覽)，是否有任何使用 COPY 的限制？
-
-COPY 陳述式或 PolyBase (包括在管線中使用時) 不支援使用受控識別 (MSI) 進行驗證。 您可能會遇到類似的錯誤訊息：
-
-com.microsoft.sqlserver.jdbc.SQLServerException: *受控服務識別尚未在此伺服器上啟用。* 請啟用受控服務識別並再試一次。
-
-當儲存體帳戶與 VNet 相關聯時，需要 MSI 驗證。 如果您的儲存體帳戶已附加至 VNet，則必須使用 BCP/Bulk Insert 來載入資料，而不是 COPY 或 PolyBase。
-
-此限制僅適用於屬於 Synapse 工作區 (預覽) 的 SQL 集區。 我們將在即將推出的版本中，於 Synapse 工作區中啟用 MSI 支援。 
-
-請將任何意見反應或問題傳送至下列通訊群組清單： sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>另請參閱  
 

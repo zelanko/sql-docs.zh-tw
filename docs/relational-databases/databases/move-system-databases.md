@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195001"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523057"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195001"
 >  如果您移動了系統資料庫，接著重建 master 資料庫，就必須再次移動系統資料庫，因為重建作業會將所有系統資料庫安裝到預設的位置。  
 
 > [!IMPORTANT]  
->  移動檔案之後， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服務帳戶必須具有權限來存取新檔案資料夾位置中的檔案。
+>  移動檔案之後，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服務帳戶必須具有存取新檔案資料夾位置中檔案的存取權。 如需詳細資訊，請參閱[設定資料庫引擎對檔案系統的存取權限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 計畫的重新放置與排程的磁碟維謢程序  

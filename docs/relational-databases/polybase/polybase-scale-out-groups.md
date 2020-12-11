@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523834"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535272"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 
@@ -35,11 +35,11 @@ ms.locfileid: "92523834"
   
 ## <a name="head-node"></a>前端節點  
 
-前端節點包含要提交 PolyBase 查詢的目標 SQL Server 執行個體。 每個 PolyBase 群組只能包含一個前端節點。 前端節點是 SQL Server 執行個體上 SQL Database Engine、PolyBase Engine 及 PolyBase Data Movement Service 的邏輯群組。
+前端節點包含要提交 PolyBase 查詢的目標 SQL Server 執行個體。 每個 PolyBase 群組只能包含一個前端節點。 前端節點是 SQL Server 執行個體上 SQL Server 資料庫引擎、PolyBase 引擎與 PolyBase 資料移動服務的邏輯群組。 使用 SQL Server 2017 與 SQL Server 2016 時，前端節點必須是 Enterprise 版本。 從 SQL Server 2019 開始，PolyBase 前端節點可以是 Enterprise 或 Standard 版本。
   
-## <a name="compute-node"></a>計算節點  
+## <a name="compute-node"></a>計算節點
 
-計算節點包含 SQL Server 執行個體，可協助處理外部資料上的向外延展查詢。 計算節點是 SQL Server 執行個體上 SQL Server 和 PolyBase Data Movement Service 的邏輯群組。 一個 PolyBase 群組可以有多個計算節點。 前端節點和計算節點全都必須執行同一個 SQL Server 版本。
+計算節點包含 SQL Server 執行個體，可協助處理外部資料上的向外延展查詢。 計算節點是 SQL Server 執行個體上 SQL Server 和 PolyBase Data Movement Service 的邏輯群組。 一個 PolyBase 群組可以有多個計算節點。 前端節點和計算節點全都必須執行同一個 SQL Server 版本。 SQL Server 2016 的初始版本允許計算節點為 Enterprise 或 Standard 版本。 從 SQL Server 2016 SP1 開始，所有版本的 SQL Server 都可以成為計算節點。
 
 ## <a name="scale-out-reads"></a>向外延展讀取
 

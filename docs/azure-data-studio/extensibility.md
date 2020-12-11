@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778437"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761506"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio 擴充性
 
@@ -32,6 +32,9 @@ Azure Data Studio 具有數個擴充性機制，可自訂使用者體驗，並�
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 擴充性 API
 
 由於核心 Azure Data Studio 平台是以 Visual Studio Code 為建置基礎，因此，您可以在 Visual Studio Code 網站的[延伸模組撰寫](https://code.visualstudio.com/docs/extensions/overview) \(英文\) 和[延伸模組 API](https://code.visualstudio.com/docs/extensionAPI/overview) \(英文\) 文件中，找到有關 Visual Studio Code 擴充性 API 的詳細資料。
+
+> [!NOTE]
+>  Azure Data Studio 版本會與最新版本的 VS Code 一致，不過所包含的 VS Code 引擎可能不會是最新的 VS Code 版本。 例如，在 2020 年 11 月版本中，Azure Data Studio 中的 VS Code 引擎為 1.48，而最新的 VS Code 版本則為 1.51。  在安裝延伸模組時出現的「無法安裝延伸模組 '<name>'，因為其與 VS Code <version> 不相容」錯誤訊息，是由所具有的 VS Code 引擎版本比套件資訊清單 (`package.json`) 中所定義的版本還要新的延伸模組所導致。 您可以透過 [說明] 功能表底下的 [關於] 來確認 Azure Data Studio 中的 VS Code 引擎版本。
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>管理儀表板索引標籤面板貢獻
 
@@ -272,8 +275,8 @@ Dashboard.tabs 會在儀表板頁面內建立索引標籤區段。 其中必須�
 
 |內容變數| description|
 |:---|:---|
-|`connectionProvider` | 目前連線提供者的識別碼字串。 例如 第 1 課：建立 Windows Azure 儲存體物件`connectionProvider == 'MSSQL'`。|
-|`serverName`|目前連線的伺服器名稱字串。 例如 第 1 課：建立 Windows Azure 儲存體物件`serverName == 'localhost'`。|
-|`databaseName` | 目前連線的資料庫名稱字串。 例如 第 1 課：建立 Windows Azure 儲存體物件`databaseName == 'master'`。|
+|`connectionProvider` | 目前連線提供者的識別碼字串。 例如 `connectionProvider == 'MSSQL'`.|
+|`serverName`|目前連線的伺服器名稱字串。 例如 `serverName == 'localhost'`.|
+|`databaseName` | 目前連線的資料庫名稱字串。 例如 `databaseName == 'master'`.|
 |`connection` | 目前連線的完整連線設定檔物件 (IConnectionProfile)|
 |`dashboardContext` | 目前所在的儀表板頁面內容字串。 可能是 'database' 或 'server'。 例如 `dashboardContext == 'database'`|

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669546"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535282"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -40,7 +40,7 @@ LocalDB 是您在安裝 SQL Server Express 期間選取的功能，而且可以�
 - [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
 - [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-或者，您可以透過 [Visual Studio 安裝程式](https://visualstudio.microsoft.com/downloads/)安裝 LocalDB，作為**資料儲存和處理**工作負載、**ASP.NET 與網頁程式開發**工作負載的一部分，或作為個別元件的一部分。
+或者，您可以透過 [Visual Studio 安裝程式](https://visualstudio.microsoft.com/downloads/)安裝 LocalDB，作為 **資料儲存和處理** 工作負載、**ASP.NET 與網頁程式開發** 工作負載的一部分，或作為個別元件的一部分。
 
 
 ## <a name="install-localdb"></a>安裝 LocalDB
@@ -64,6 +64,10 @@ LocalDB 安裝程式使用 `SqlLocalDB.msi` 程式在電腦上安裝必要的檔
 LocalDB 的執行個體定序是設定為 `SQL_Latin1_General_CP1_CI_AS`，而且無法變更。 通常支援資料庫層級、資料行層級和運算式層級定序。 自主資料庫遵循[自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)所定義的中繼資料和 `tempdb` 定序規則。
 
 ### <a name="restrictions"></a>限制
+
+- 無法對 LocalDB 進行超過 Service Pack 的修補。 CU 與安全性更新無法手動套用，而且不會透過 Windows Update、商務用 Windows Update 或其他方法套用。
+
+- LocalDB 無法透過 SQL Management Studio 以遠端方式管理。
 
 - LocalDB 不得為合併式複寫訂閱者。
 

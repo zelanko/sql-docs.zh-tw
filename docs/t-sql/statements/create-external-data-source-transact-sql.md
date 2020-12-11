@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417406"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443101"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "93417406"
 - 使用 [PolyBase][intro_pb] 來執行資料虛擬化和資料載入
 - 使用 `BULK INSERT` 或 `OPENROWSET` 的大量載入作業
 
-**適用於** ：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始
+**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始
 
 ## <a name="syntax"></a>語法
 
@@ -119,7 +119,7 @@ WITH
 - 透過 `ODBC` 連線時，請指定 `Driver={<Name of Driver>}`。
 - 針對存取 Azure 儲存體帳戶，`wasbs` 是選擇性的，但由於資料會使用安全的 TLS/SSL 連線傳送，因此建議使用。
 - 存取 Azure 儲存體帳戶時，不支援 `abfs` 或 `abfss` API。
-- 不支援 Azure 儲存體帳戶 (V2) 的 [階層式命名空間] 選項。 請確認此選項保持 **停用** 。
+- 不支援 Azure 儲存體帳戶 (V2) 的 [階層式命名空間] 選項。 請確認此選項保持 **停用**。
 - 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -732,7 +732,7 @@ WITH
 
 建立認證時的其他注意事項和指引：
 
-- 若要將資料從 Azure 儲存體或 Azure Data Lake Store (ADLS) Gen 2 載入 SQL DW，請使用 Azure 儲存體金鑰。
+- 若要將資料從 Azure 儲存體或 Azure Data Lake Store (ADLS) Gen 2 載入 Azure Synapse Analytics，請使用 Azure 儲存體金鑰。
 - 只有在資料受到保護時才需要 `CREDENTIAL`。 允許匿名存取的資料集不需要 `CREDENTIAL`。
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。

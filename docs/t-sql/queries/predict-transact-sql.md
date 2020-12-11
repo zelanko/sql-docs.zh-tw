@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116280"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523047"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ DATA 參數用來指定用於計分或預測的資料。 資料是以查詢中�
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> `RUNTIME = ONNX` 引數僅在 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/machine-learning-services-overview)和 [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) 中提供。
+> `RUNTIME = ONNX` 引數僅在 [Azure SQL 受控執行個體](/azure/azure-sql/managed-instance/machine-learning-services-overview)、[Azure SQL Edge](/azure/sql-database-edge/onnx-overview)，以及 [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is) 中提供。
 
-指出機器學習引擎是用於模型執行。 `RUNTIME` 參數值一律是 `ONNX`。 該參數為 Azure SQL Edge 的必要項目。 在 Azure SQL 受控執行個體上，該參數為選擇性，且只會在使用 ONNX 模型時使用。
+指出機器學習引擎是用於模型執行。 `RUNTIME` 參數值一律是 `ONNX`。 該參數為 Azure SQL Edge 與 Azure Synapse Analytics 的必要項目。 在 Azure SQL 受控執行個體上，該參數為選擇性，且只會在使用 ONNX 模型時使用。
 
 **WITH ( <result_set_definition> )**
 
@@ -186,14 +186,14 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
 
 `DATA` 參數中為資料表來源指定的別名 **d** 是用來參考屬於 `dbo.mytable` 的資料行。 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的資料行。
 
-- 模型會以 `varbinary(max)` 資料行的形式儲存在名為 **Models** 的資料表中。 如**識別碼**和**描述**的其他資訊會儲存在資料表中以識別模式。
+- 模型會以 `varbinary(max)` 資料行的形式儲存在名為 **Models** 的資料表中。 如 **識別碼** 和 **描述** 的其他資訊會儲存在資料表中以識別模式。
 - `DATA` 參數中為資料表來源指定的別名 **d** 是用來參考屬於 `dbo.mytable` 的資料行。 輸入資料資料行應該要符合模型的輸入名稱。
 - 為 `PREDICT` 函式指定的別名 **p** 是用來參考 `PREDICT` 函式所傳回的預測資料行。 資料行名稱應該要有和模型的輸出名稱相同的名稱。
 - 所有輸入資料資料行和預測資料行都可在 SELECT 陳述式中顯示。
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 預測的常見使用案例是為輸入資料產生分數，然後再將預測的值插入資料表。 下列範例假設呼叫應用程式是使用預存程序，將包含預測值的資料列插入資料表：
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - `PREDICT` 的結果會儲存在稱為 PredictionResults 的資料表中。 
 - 模型會以 `varbinary(max)` 資料行的形式儲存在名為 **Models** 的資料表中。 如識別碼和描述的其他資訊可以儲存在資料表中以識別模型。

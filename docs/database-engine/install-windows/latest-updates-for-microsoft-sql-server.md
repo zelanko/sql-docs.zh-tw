@@ -1,38 +1,31 @@
 ---
-description: 適用於 Microsoft SQL Server 的最新更新
-title: 適用於 Microsoft SQL Server 的最新更新
-TOCTitle: Latest updates for Microsoft SQL Server
-ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
-ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
-ms:contentKeyID: 31804705
-ms.date: 09/02/2020
+description: 適用於 Microsoft SQL Server 的最新累計更新與 Service Pack 清單，其中包含組建編號。
+title: 適用於 SQL Server 的最新更新
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-mtps_version: v=MSDN.10
-ms.openlocfilehash: 52db4b0919294929c393348ac64f8e854fd394c3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 148df97bf2c353e2cf12fe8f31ef2f85f6307b7d
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670558"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443081"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>適用於 Microsoft SQL Server 的最新更新
 
-在一個位置尋找及管理 SQL Server 產品的更新。 遵循 [SQL Server 發行部落格](https://aka.ms/sqlreleases)以接收更新的資訊並下載更新。
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-此頁面追蹤所有支援之 SQL Server 版本的最新更新。 
+此文章列出適用於 SQL Server 產品的最新更新。 遵循 [SQL Server 發行部落格](https://aka.ms/sqlreleases)以接收更新的資訊並下載更新。
 
-如需先前更新的資訊，請參閱 [SQL Server 組建部落格](https://sqlserverbuilds.blogspot.com/)。 
-
-如需有關支援哪個版本的詳細資訊，請參閱 [Microsoft 產品生命週期頁面](https://support.microsoft.com/lifecycle/)。 
+如需有關支援哪個版本的詳細資訊，請參閱 [Microsoft 產品生命週期頁面](/lifecycle/products/?terms=sql)。
 
 ## <a name="latest-updates"></a>最新的更新
 
-每個連結都提供有關此頁面之 [適用於] 區段中所有適用產品與技術的資訊。
+下列每個連結都會提供所有適用產品與技術的相關資訊。
 
 |產品版本   | 最新的 Service Pack |  最新的 GDR | 最新的累積更新 | CU 發行日期 | 一般指導方針  |
 |--|--|--|--|--|--|
@@ -53,25 +46,21 @@ ms.locfileid: "91670558"
 |SQL Server 2008 R2 |SP2 [(KB 2630458)](https://support.microsoft.com/kb/2630458)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 13 [(KB 2967540)](https://support.microsoft.com/kb/2967540)|2014/6/30|[SQL Server 2008 R2 SP2 安裝](https://www.microsoft.com/download/details.aspx?id=30437)|
 |SQL Server 2008 |SP4 [(KB 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|N/A|N/A|[SQL Server 2008 維護](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|SP3 [(KB 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 17 [(KB 2958696)](https://support.microsoft.com/kb/2958696)|2014/5/19|[SQL Server 2008 維護](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
-|SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/A|N/A|N/A|[SQL Server 2005 安裝](/previous-versions/sql/sql-server-2005/ms143516(v=sql.90))|
-|SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 安裝](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**了解如何測試更新：**  [測試及開發 ISV 應用程式的支援能力藍圖 (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**了解如何測試更新：** [測試及開發 ISV 應用程式的支援能力藍圖 (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf) \(英文\)
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
-### <a name="knowledge-base"></a>知識庫
+## <a name="knowledge-base"></a>知識庫
 
-  - KB 935897：[您可以從 SQL Server 小組取得增量維護模型以提供所回報問題的 Hotfix](https://support.microsoft.com/kb/935897)
-  - KB 824684：[用來描述 Microsoft 軟體更新的標準術語說明](https://support.microsoft.com/kb/824684)
-  - KB 822499：[Microsoft SQL Server 軟體更新套件的命名結構描述](https://support.microsoft.com/kb/822499)
-  - KB 321185：[如何判斷 SQL Server 與其元件的版本 (Version) 與版本 (Edition)](https://support.microsoft.com/kb/321185)
+- KB 935897：[您可以從 SQL Server 小組取得增量維護模型以提供所回報問題的 Hotfix](https://support.microsoft.com/kb/935897)
+- KB 824684：[用來描述 Microsoft 軟體更新的標準術語說明](https://support.microsoft.com/kb/824684)
+- KB 822499：[Microsoft SQL Server 軟體更新套件的命名結構描述](https://support.microsoft.com/kb/822499)
+- KB 321185：[如何判斷 SQL Server 與其元件的版本 (Version) 與版本 (Edition)](https://support.microsoft.com/kb/321185)
 
-### <a name="additional-resources"></a>其他資源
+## <a name="additional-resources"></a>其他資源
 
-  - [SQL 客戶諮詢小組網站](/archive/blogs/sqlcat/)
-  - [SQL Server 開發人員中心](../../sql-server/index.yml)
-  - [SQL Server TechCenter](../../sql-server/index.yml)
-  - [SQL Server 產品資訊中心](https://www.microsoft.com/sqlserver/default.aspx)
-  - [SQL Server 組建部落格](https://sqlserverbuilds.blogspot.com/)
-  - [SQL Server 發行部落格](https://aka.ms/sqlreleases)
+- [SQL Server 文件](../../sql-server/index.yml)
+- [SQL Server 產品資訊中心](https://www.microsoft.com/sqlserver/default.aspx)
+- [SQL Server 發行部落格](https://aka.ms/sqlreleases)
+- [如何判斷 SQL Server 及其元件的版本 (Version)、版本 (Edition) 及更新層級](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an) \(部分機器翻譯\)

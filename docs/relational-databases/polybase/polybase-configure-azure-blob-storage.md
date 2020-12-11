@@ -1,7 +1,7 @@
 ---
 title: 存取外部資料：Azure Blob 儲存體 - PolyBase
 description: 本文在 SQL Server 執行個體上使用 PolyBase 來處理 Azure Blob 儲存體。 PolyBase 適用於外部資料表的臨機操作查詢及資料匯入/匯出。
-ms.date: 12/13/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6621d01c9cb52d528f2d3578a128f0abada22db0
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215852"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563104"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
 
@@ -44,7 +44,7 @@ ms.locfileid: "80215852"
    GO
    ```  
 
-2. 您必須使用 **services.msc** 重新啟動 SQL Server。 重新啟動 SQL Server 時，會重新啟動下列服務︰  
+2. 使用 **services.msc** 重新啟動 SQL Server。 重新啟動 SQL Server 時，會重新啟動下列服務︰  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
@@ -55,7 +55,7 @@ ms.locfileid: "80215852"
 
 若要查詢 Hadoop 資料來源中的資料，您必須定義要在 Transact-SQL 查詢中使用的外部資料表。 下列步驟描述如何設定外部資料表。
 
-1. 在資料庫上建立主要金鑰。 這是加密認證祕密的必要項目。
+1. 在資料庫上建立主要金鑰。 將認證祕密加密時需要主要金鑰。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -125,9 +125,9 @@ ms.locfileid: "80215852"
 
 下列查詢會提供具有虛構車輛感應器資料的範例。
 
-### <a name="ad-hoc-queries"></a>臨機操作查詢  
+### <a name="ad-hoc-queries"></a>特定查詢  
 
-下列臨機操作查詢會聯結與 Hadoop 資料的關聯式。 它會選取開車速度超過 35 mph 的客戶，並聯結 SQL Server 中所儲存的結構化客戶資料與 Hadoop 中儲存的車輛感應器資料。  
+下列臨機操作查詢會聯結與 Hadoop 資料的關聯式。 其會選取開車速度超過 35 mph 的客戶，並聯結儲存在 SQL Server 中的結構化客戶資料與儲存在 Hadoop 中的車輛感應器資料。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -158,7 +158,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>匯出資料  
 
-下列查詢會將資料從 SQL Server 匯出至 Azure Blob 儲存體。 若要這樣做，您需要先啟用 PolyBase 匯出。 先建立目的地的外部資料表，再將資料匯出至其中。
+下列查詢會將資料從 SQL Server 匯出至 Azure Blob 儲存體。 先啟用 PolyBase 匯出。 接著建立適用於目的地的外部資料表，再將資料匯出至其中。
 
 ```sql
 -- Enable INSERT into external table  
@@ -187,9 +187,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
+使用此方法所進行的 PolyBase 匯出可能會建立多個檔案。
+
 ## <a name="view-polybase-objects-in-ssms"></a>在 SSMS 中檢視 PolyBase 物件  
 
-在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表]  中。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
+在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表] 中。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
   
 ![SSMS 中的 PolyBase 物件](media/polybase-management.png)  
 

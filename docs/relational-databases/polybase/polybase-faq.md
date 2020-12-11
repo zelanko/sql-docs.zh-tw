@@ -1,19 +1,19 @@
 ---
 title: PolyBase 中的常見問題集 | Microsoft Docs
-description: 比較 PolyBase 和連結的伺服器，並比較巨量資料叢集中 PolyBase 和獨立執行個體中的 PolyBase。 了解 PolyBase 2019 的新功能。
-ms.date: 04/23/2019
+description: 比較 PolyBase 與連結的伺服器，並比較巨量資料叢集中的 PolyBase 與獨立執行個體中的 PolyBase。 了解 PolyBase 2019 的新功能。
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127848"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563134"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 
@@ -55,13 +55,13 @@ ms.locfileid: "96127848"
 
 |功能 |巨量資料叢集|獨立執行個體|
 |--------------------------|--------------------------|---------|   
-|針對 SQL Server、Oracle、Teradata 和 Mongo DB 建立外部資料來源 |X|X |
+|針對 SQL Server、Oracle、Teradata 和 Mongo DB 建立外部資料來源 |X|X|
 |使用相容的協力廠商 ODBC 驅動程式建立外部資料來源 | | X|
 |針對 HADOOP 資料來源建立外部資料來源 | X| X|
 |針對 Azure Blob 儲存體建立外部資料來源 | X| X|
 |在 SQL Server 資料集區上建立外部資料表 | X| |
 |在 SQL Server 存放集區上建立外部資料表 | X| |
-|向外延展查詢執行 | X| X|
+|向外延展查詢執行 | X| X (僅限 Windows) |
 
 > [!NOTE]
 >此表格並未描述最新 [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP 中所提供的功能。 針對這些可用功能，請參閱版本資訊。 如需使用 ODBC 一般連接器之連線的詳細資訊，請瀏覽我們的[設定 ODBC 泛型型別的操作指南](polybase-configure-odbc-generic.md)。

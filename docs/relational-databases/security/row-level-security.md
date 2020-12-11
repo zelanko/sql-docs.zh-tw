@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867961"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442952"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
@@ -39,7 +39,7 @@ ms.locfileid: "91867961"
   
 使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)建立的述詞來實作 RLS。  
 
-**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](../../sql-server/what-s-new-in-sql-server-2016.md))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
+**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](../../sql-server/what-s-new-in-sql-server-2016.md))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
 > Azure Synapse 僅支援篩選述詞。 Azure Synpase 目前不支援封鎖述詞。
@@ -64,7 +64,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  篩選器述詞、Block 述詞及安全性原則皆具有下列行為：  
   
-- 您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 若在 `SCHEMABINDING = ON` (預設值) 的情況下建立安全性原則，則聯結或函式可從查詢存取並如預期般運作，而不需任何額外的權限檢查。 若在 `SCHEMABINDING = OFF` 的情況下建立安全性原則，則使用者需要有這些額外資料表與函式的 **SELECT** 權限，才能查詢目標資料表。 若述詞函式叫用 CLR 純量值函式，則還需要**執行**權限。
+- 您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 若在 `SCHEMABINDING = ON` (預設值) 的情況下建立安全性原則，則聯結或函式可從查詢存取並如預期般運作，而不需任何額外的權限檢查。 若在 `SCHEMABINDING = OFF` 的情況下建立安全性原則，則使用者需要有這些額外資料表與函式的 **SELECT** 權限，才能查詢目標資料表。 若述詞函式叫用 CLR 純量值函式，則還需要 **執行** 權限。
   
 - 可對己定義但停用安全性述詞的資料表發出查詢。 不會影響任何已篩選或封鎖的資料列。  
   
@@ -110,11 +110,11 @@ RLS 可支援兩種類型的安全性述詞。
   
  此外，每個加入的述詞還需要下列權限：  
   
-- 正做為述詞使用之函數**SELECT** 和 **REFERENCES** 權限。  
+- 正做為述詞使用之函數 **SELECT** 和 **REFERENCES** 權限。  
   
-- 正繫結至原則之目標資料表的**REFERENCES** 權限。  
+- 正繫結至原則之目標資料表的 **REFERENCES** 權限。  
   
-- 目標資料表中做為引數使用之每個資料行的**REFERENCES** 權限。  
+- 目標資料表中做為引數使用之每個資料行的 **REFERENCES** 權限。  
   
  安全性原則套用到所有使用者，包括資料庫中的 dbo 使用者。 Dbo 使用者可以改變或卸除安全性原則，不過可稽核的安全性原則變更。 若高特殊權限的使用者 (如系統管理員或 db_owner) 需要查看所有資料列，以進行疑難排解或驗證資料，則安全性原則必須撰寫為允許這麼做。  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  在資料表中填入六個資料列，每個銷售代表各顯示三個訂單。  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ DROP SCHEMA Security;
 
 ### <a name="prerequisites"></a>先決條件
 
-1. 您必須擁有 SQL 集區。 請參閱[建立 Synapse SQL 集區](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. 裝載 SQL 集區的伺服器必須向相同的 AAD 註冊，且必須擁有具備儲存體部落格參與者權限的 Azure 儲存體帳戶。 遵循[此處](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步驟。
+1. 您必須要有專用 SQL 集區。 請參閱[建立專用 SQL 集區](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. 裝載專用 SQL 集區的伺服器必須向 AAD 註冊，且您必須擁有具備儲存體 Blob 參與者權限的 Azure 儲存體帳戶。 遵循[此處](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps)的步驟。
 1. 為 Azure 儲存體帳戶建立檔案系統。 使用儲存體總管來檢視儲存體帳戶。 以滑鼠右鍵按一下容器，並選取 [建立檔案系統]。  
 
 在具備所有先決條件後，請建立三個將示範不同存取功能的使用者帳戶。
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 建立資料表來持有資料。  
@@ -493,7 +493,7 @@ AS
 GO  
 ```
 
-建立安全性原則，作為 `Sales`上的篩選述詞及 Block 篩選述詞新增此函數。 由於 **BEFORE UPDATE**及 **BEFORE DELETE** 皆已經過篩選，因此 Block 述詞只需要 **AFTER INSERT** ，且因為先前設定的資料行權限， **資料行無法更新為其他值，所以不需要** AFTER UPDATE `AppUserId` 。
+建立安全性原則，作為 `Sales`上的篩選述詞及 Block 篩選述詞新增此函數。 由於 **BEFORE UPDATE** 及 **BEFORE DELETE** 皆已經過篩選，因此 Block 述詞只需要 **AFTER INSERT** ，且因為先前設定的資料行權限， **資料行無法更新為其他值，所以不需要** AFTER UPDATE `AppUserId` 。
 
 ```sql
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -504,7 +504,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```
 
-在 `Sales` SESSION_CONTEXT **中設定不同的使用者識別碼之後，現在我們可以從**資料表中選取，以模擬連線篩選。 在實務上，開啟連線後，應用程式負責在 **SESSION_CONTEXT** 設定目前的使用者識別碼。
+在 `Sales` SESSION_CONTEXT **中設定不同的使用者識別碼之後，現在我們可以從** 資料表中選取，以模擬連線篩選。 在實務上，開啟連線後，應用程式負責在 **SESSION_CONTEXT** 設定目前的使用者識別碼。
 
 ```sql
 EXECUTE AS USER = 'AppUser';  

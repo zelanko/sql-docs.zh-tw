@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134866"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595139"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 智慧查詢處理 (IQP) 功能系列包含具有廣泛影響的功能，能夠以最少的實作投入量來採用，以改善現有工作負載的效能。 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 下表詳述了所有智慧查詢處理功能，以及這些功能對於資料庫相容性層級的任何要求。
 
-| **IQP 功能** | **Azure SQL Database 支援** | **SQL Server 支援** |**說明** |
-| --- | --- | --- |--- |
+| **IQP 功能** | **於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 與 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]中支援** | **於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援** |**說明** |
+| ---------------- | ------- | ------- | ---------------- |
 | [自適性聯結 (批次模式)](#batch-mode-adaptive-joins) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|自適性聯結會在執行階段，依據實際輸入列而機動選取聯結類型。|
 | [近似的相異計數](#approximate-query-processing) | 是| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|為巨量資料案例提供約略的 COUNT DISTINCT，享有高效能及低磁碟使用量的好處。 |
 | [資料列存放區上的批次模式](#batch-mode-on-rowstore) | 是，屬於相容性層級 150| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始屬於相容性層級 150|為耗用大量 CPU 的關聯式 DW 工作負載提供批次模式，而且不需要資料行存放區索引。  | 
@@ -52,7 +52,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [資料表變數延後編譯](#table-variable-deferred-compilation) | 是，屬於相容性層級 150| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始屬於相容性層級 150|使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
-批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**，方法是使用單一快取計畫。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
+批次模式自適性聯結功能可讓選擇的 [雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入 **之後**，方法是使用單一快取計畫。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
 
 如需詳細資訊，包括如何在不變更相容性層級的情況下停用自適性聯結，請參閱[了解自適性聯結](../../relational-databases/performance/joins.md#adaptive)。
 
@@ -85,7 +85,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ### <a name="memory-grant-feedback-caching"></a>記憶體授與意見反應快取
 意見反應可以儲存在快取計劃中供單次執行之用。 這是該陳述式的連續執行，但得益自記憶體授與意見反應的調整。 此功能適用於重複執行的陳述式。 記憶體授與意見反應僅會變更快取的計劃。 查詢存放區目前並未擷取變更。
-如已從快取收回計劃，則不保存意見反應。 如有容錯移轉，也會遺失意見反應。 使用 `OPTION (RECOMPILE)` 的陳述式會建立新的計劃，而不會對它進行快取。 因為它不是快取而來，所以不會產生記憶體授與意見反應，也不會儲存供編譯及執行。 不過，如果有快取並重複執行**沒有**使用 `OPTION (RECOMPILE)` 的對等陳述式 (亦即使用相同的查詢雜湊)，則連續的陳述式可得益於記憶體授與回饋。
+如已從快取收回計劃，則不保存意見反應。 如有容錯移轉，也會遺失意見反應。 使用 `OPTION (RECOMPILE)` 的陳述式會建立新的計劃，而不會對它進行快取。 因為它不是快取而來，所以不會產生記憶體授與意見反應，也不會儲存供編譯及執行。 不過，如果有快取並重複執行 **沒有** 使用 `OPTION (RECOMPILE)` 的對等陳述式 (亦即使用相同的查詢雜湊)，則連續的陳述式可得益於記憶體授與回饋。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>追蹤記憶體授與意見反應活動
 您可以使用 *memory_grant_updated_by_feedback* xEvent 來追蹤記憶體授與回饋事件。 此事件會追蹤目前的執行計數記錄、記憶體授與意見反應更新計劃的次數，以及記憶體授與意見反應修改快取計劃前後的理想額外記憶體授權。
@@ -136,7 +136,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 透過 **memory_grant_updated_by_feedback** XEvent 將可以看到資料列模式記憶體授與意見反應活動。 
 
-從資料列模式記憶體授與意見反應開始，針對實際執行後計畫將會顯示兩個新的查詢計畫屬性：***IsMemoryGrantFeedbackAdjusted*** 和 ***LastRequestedMemory***，它們會新增至 *MemoryGrantInfo* 查詢計畫 XML 元素。 
+從資料列模式記憶體授與回應開始，將會針對實際的執行後計劃，顯示兩個新的查詢計劃屬性：**_IsMemoryGrantFeedbackAdjusted_* _ 與 _*_LastRequestedMemory_*_，這兩個屬性會新增到 _MemoryGrantInfo* 查詢計劃 XML 元素中。 
 
 *LastRequestedMemory* 會在查詢執行之前，顯示授與的記憶體 (KB)。 *IsMemoryGrantFeedbackAdjusted* 屬性可讓您針對實際查詢執行計劃內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
@@ -174,7 +174,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 ## <a name="interleaved-execution-for-mstvfs"></a>MSTVF 交錯執行
 利用交錯執行，我們可以使用函式的實際資料列計數制定更明智的下游查詢計劃決策。 如需多重陳述式資料表值函式 (MSTVF) 的詳細資訊，請參閱[資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 
-交錯執行會變更單次查詢執行的最佳化和執行階段之間的單向界限，並讓計劃根據修改過的基數估計值調整。 在最佳化期間，如果我們遇到交錯執行的候選項目，目前是**多重陳述式資料表值函式 (MSTVF)** ，我們會暫停最佳化、執行適用的樹狀子目錄、擷取精確的基數估計值，然後繼續下游作業的最佳化。   
+交錯執行會變更單次查詢執行的最佳化和執行階段之間的單向界限，並讓計劃根據修改過的基數估計值調整。 在最佳化期間，如果我們遇到交錯執行的候選項目，目前是 **多重陳述式資料表值函式 (MSTVF)** ，我們會暫停最佳化、執行適用的樹狀子目錄、擷取精確的基數估計值，然後繼續下游作業的最佳化。   
 
 MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定的基數估計值 100，在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中則為 1。 交錯執行有利於處理因為這些固定基數估計值與 MSTVF 建立關聯而引起的工作負載效能問題。 如需 MSTVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 
@@ -281,15 +281,15 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 **適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-**資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個確切的資料列計數資訊接著將用於最佳化下游計畫作業。
+**資料表變數延遲編譯** 可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個確切的資料列計數資訊接著將用於最佳化下游計畫作業。
 
 使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 此延後編譯行為與暫存資料表的行為相同。 這項變更會導致使用實際基數，而不使用原始的單一資料列猜測。 
 
 若要啟用資料表變數延遲編譯，請在查詢執行時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
 
-資料表變數延遲編譯**不**會變更資料表變數的任何其他特性。 例如，此功能不會在資料表變數中新增資料行統計資料。
+資料表變數延遲編譯 **不** 會變更資料表變數的任何其他特性。 例如，此功能不會在資料表變數中新增資料行統計資料。
 
-資料表變數延遲編譯**不會增加重新編譯頻率**， 而是會在初始編譯的位置移位。 產生的快取計畫是根據初始延遲編譯資料表變數的資料列計數所產生。 快取計畫是由連續查詢重複使用。 將會重複使用計畫，直到該計畫被收回或重新編譯為止。 
+資料表變數延遲編譯 **不會增加重新編譯頻率**， 而是會在初始編譯的位置移位。 產生的快取計畫是根據初始延遲編譯資料表變數的資料列計數所產生。 快取計畫是由連續查詢重複使用。 將會重複使用計畫，直到該計畫被收回或重新編譯為止。 
 
 用於初始計畫編譯的資料表變數資料列計數，代表一個可能不同於固定資料列計數猜測的一般值。 如果不同，則下游作業將會受益。 若資料表變數資料列計數在每次執行時都大幅相異，則此功能可能無法改善效能。
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -355,8 +355,8 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 
 ### <a name="background"></a>背景
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進了新功能，可加速分析工作負載：資料行存放區索引。 我們已擴展使用案例，並改善每一個後續版本的資料行存放區索引效能。 到目前為止，我們已以單一功能的形式呈現及記載所有這些功能。 您在資料表上建立資料行存放區索引。 而且您的分析工作負載會更快。 但使用了兩種相關卻相異的技術：
-- 使用**資料行存放區**索引，分析查詢只存取其所需資料行中的資料。 使用資料行存放區格式的頁面壓縮，比傳統的**資料列存放區**索引壓縮更有效。 
-- 使用**批次模式**處理，查詢運算子處理資料更有效率。 它們會批次處理資料列，而不是一次處理一筆資料列。 其他數項延展性改善也與批次模式處理繫結。 如需批次模式的詳細資訊，請參閱[執行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
+- 使用 **資料行存放區** 索引，分析查詢只存取其所需資料行中的資料。 使用資料行存放區格式的頁面壓縮，比傳統的 **資料列存放區** 索引壓縮更有效。 
+- 使用 **批次模式** 處理，查詢運算子處理資料更有效率。 它們會批次處理資料列，而不是一次處理一筆資料列。 其他數項延展性改善也與批次模式處理繫結。 如需批次模式的詳細資訊，請參閱[執行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 這兩組功能一同使用，改善輸入/輸出 (I/O) 和 CPU 使用率：
 - 使用資料行存放區索引，可在記憶體中放置更多資料。 這會減少 I/O 工作負載。
@@ -392,8 +392,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 1. 對資料表大小、使用的運算子，以及輸入查詢中估計基數的初始檢查。
 2. 最佳化工具為查詢探索更便宜的新計劃時所帶來的額外檢查點。 若這些替代方案並未大量使用批次模式，則最佳化工具會停止探索批次模式的替代項目。
 
-
-如果使用資料列存放區上的批次模式，您在查詢計畫中看到的實際執行模式如同**批次模式**。 掃描運算子會使用批次模式處理磁碟上的堆積和 B 型樹狀結構索引。 此批次模式掃描可評估批次模式點陣圖篩選。 您也可能會在計畫中看到其他批次模式運算子。 例如雜湊聯結、雜湊式彙總、排序、Window 彙總、篩選、串連和計算純量運算子。
+如果使用資料列存放區上的批次模式，您在查詢計畫中看到的實際執行模式如同 **批次模式**。 掃描運算子會使用批次模式處理磁碟上的堆積和 B 型樹狀結構索引。 此批次模式掃描可評估批次模式點陣圖篩選。 您也可能會在計畫中看到其他批次模式運算子。 例如雜湊聯結、雜湊式彙總、排序、Window 彙總、篩選、串連和計算純量運算子。
 
 ### <a name="remarks"></a>備註
 

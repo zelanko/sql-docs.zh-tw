@@ -2,7 +2,7 @@
 title: 定義 XML 資料的序列化 | Microsoft 文件
 description: 了解在 SQL Server 中將 XML 資料序列化時所使用的規則。
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/07/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67201804cc1f93a9595ff46c02a57da7ea6e6109
+ms.sourcegitcommit: 68063a1857f40487e6a2028de25990728419e3a7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738443"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749700"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85738443"
   
  例如：  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  以下是結果：  
   
-```  
+```console
 0xFFFE3C0094032F003E00  
 ```  
   
@@ -49,13 +49,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  例如：  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  以下是結果：  
   
-```  
+```console
 <Δ/>  
 ```  
   
@@ -63,7 +63,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  例如：  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
@@ -77,21 +77,21 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>XML 字元在序列化期間的實體化  
  每一個已序列化的 XML 結構應該能夠加以重新剖析。 因此，有些字元必須以實體化方式來序列化，以透過 XML 剖析器的正規化階段保留字元的反覆存取功能。 不過，有些字元必須實體化，使文件能夠有完善的格式，以便加以剖析。 以下是在序列化期間所套用的實體化規則：  
   
--   若字元 &、\<, and > 是出現在屬性值或元素內容中，則一律會分別實體化成 &amp;、&lt; 和 &gt;。  
+-   若字元 &、\<, and > 是出現在屬性值或元素內容中，則一律會分別實體化成 `&amp;`、`&lt;` 和 `&gt;`。  
   
--   因為 SQL Server 使用引號 (U+0022) 來括住屬性值，所以屬性值中的引號會實體化成 &quot;。  
+-   因為 SQL Server 使用引號 (U+0022) 來括住屬性值，所以屬性值中的引號會實體化成 `&quot;`。  
   
--   只在伺服器上進行轉換時，Surrogate 字組會實體化成單一數字字元參考。 例如，Surrogate 字組 U+D800 U+DF00 會實體化成數字字元參考 &\#x00010300;。  
+-   只在伺服器上進行轉換時，Surrogate 字組會實體化成單一數字字元參考。 例如，代理字組 U+D800 U+DF00 會實體化成數字字元參考 `&#x00010300;`。  
   
--   為避免在剖析期間將定位字元 (U+0009) 和換行符號 (LF、U+000A) 正規化，已在屬性值內分別實體化成其數字字元參考 &\#x9; 和 &\#xA;。  
+-   為避免在剖析期間將定位字元 (U+0009) 與換行符號 (LF、U+000A) 正規化，會在屬性值內將其分別實體化成其數字字元參考 `&#x9;` 與 `&#xA;`。  
   
--   為避免在剖析期間將歸位字元 (CR、U+000D) 正規化，已在屬性值和元素內容內實體化成其數字字元參考 &\#xD;。  
+-   為避免在剖析期間將歸位字元 (CR、U+000D) 正規化，會在屬性值與元素內容內將其實體化成其數字字元參考 `&#xD;`。  
   
 -   為了保護只包含空格的文字節點，其中一個空格字元 (通常是最後一個) 會實體化為其數字字元參考。 如此一來，不論剖析期間的空格處理設定為何，重新剖析作業都會保留空格文字節點。  
   
  例如：  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,7 +100,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  以下是結果：  
   
-```  
+```console
 <a a="  
     𐌀>">     
 </a>  
@@ -108,13 +108,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  如果您不想套用最後一個空格的保護規則，您可以在從 **XML** 轉換成字串或二進位類型時，使用明確的 CONVERT 選項 1。 例如，若要避免實體化，您可以執行下列動作：  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  請注意， [query() 方法 (XML 資料類型)](../../t-sql/xml/query-method-xml-data-type.md) 會產生 XML 資料類型執行個體。 因此，轉換成字串或二進位類型的 **query()** 方法的任何結果，將根據前述規則而實體化。 如果您要取得未實體化的字串值，請改用 [value() 方法 (XML 資料類型)](../../t-sql/xml/value-method-xml-data-type.md) 。 以下是使用 **query()** 方法的範例：  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -122,19 +122,19 @@ select @x.query('/a/text()')
   
  以下是結果：  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
  以下是使用 **value()** 方法的範例：  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
  以下是結果：  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
@@ -143,7 +143,7 @@ This example contains an entitized char: <.
   
  例如，xs:double 值 1.34e1 序列化為 13.4，如下列範例所顯示：  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -153,6 +153,5 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 中的類型轉換規則](../../xquery/type-casting-rules-in-xquery.md)   
- [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+ [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+ 

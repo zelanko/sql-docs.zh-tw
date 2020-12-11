@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 309243b635cb42b3f4acc62422bdfd3eb4aff807
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257755"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443151"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (屬性)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -73,7 +73,7 @@ IDENTITY [ (seed , increment) ]
 -   **值的唯一性** - 必須使用 **PRIMARY KEY** 或 **UNIQUE** 條件約束或 **UNIQUE** 索引來強制執行唯一性。 - 
  
 > [!NOTE]
-> Azure Synapse Analytics 不支援 **PRIMARY KEY** 、 **UNIQUE** 條件約束或 **UNIQUE** 索引。 如需詳細資訊，請參閱[使用 IDENTITY 在 Synapse SQL 集區中建立 Surrogate 索引鍵](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)。
+> Azure Synapse Analytics 不支援 **PRIMARY KEY**、**UNIQUE** 條件約束或 **UNIQUE** 索引。 如需詳細資訊，請參閱[使用 IDENTITY 在 Synapse SQL 集區中建立 Surrogate 索引鍵](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)。
 
 -   **交易內的連續值** - 插入多個資料列的交易並不保證能夠取得資料列的連續值，因為其他並行插入可能會在資料表中發生。 如果值必須是連續的，則交易應該使用資料表的獨佔鎖定，或使用 **SERIALIZABLE** 隔離等級。  
   
