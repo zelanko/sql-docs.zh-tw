@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_optimizer_info (Transact-SQL)
-title: sys. dm_exec_query_optimizer_info (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9678d237863801b4ecad49167d1930a694859bae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 656655d56e7188cc92b92f22d0f0155f9a0166f1
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328943"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,22 +34,22 @@ ms.locfileid: "89546604"
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具作業的詳細統計資料。 您可以使用這個檢視來調整工作負載，找出查詢最佳化的問題或可供改善之處。 例如，您可以使用最佳化總數、經過時間值和最終成本值，比較目前工作負載的查詢最佳化以及調整過程中所觀察到的任何變化。 部分計數器只提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部診斷使用的相關資料。 這些計數器會標示「僅供內部使用」。  
   
 > [!NOTE]  
->  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_exec_query_optimizer_info**。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_exec_query_optimizer_info** 名稱。  
   
 |名稱|資料類型|描述|  
 |----------|---------------|-----------------|  
-|**計數器**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
+|**counter**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
 |**occurrence**|**bigint**|這個計數器最佳化事件的出現次數。|  
 |**value**|**float**|每一事件發生的平均屬性值。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
+|**pdw_node_id**|**int**|**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
     
 ## <a name="remarks"></a>備註  
- **sys. dm_exec_query_optimizer_info** 包含 (計數器) 的下列屬性。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 當判斷 dm_exec_query_optimizer_info 的變更時，會測量所有的查詢優化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括使用者和系統產生的查詢。 **dm_exec_query_optimizer_info** 執行已快取的計畫不會變更 **dm_exec_query_optimizer_info**中的值，只會有很大的優化。  
+ **sys.dm_exec_query_optimizer_info** 包含 (計數器) 的下列屬性。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 當判斷 dm_exec_query_optimizer_info 的變更時，會測量所有的查詢優化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括使用者和系統產生的查詢。  執行已快取的計畫不會變更 **dm_exec_query_optimizer_info** 中的值，只會有很大的優化。  
   
 |計數器|出現次數|值|  
 |-------------|----------------|-----------|  

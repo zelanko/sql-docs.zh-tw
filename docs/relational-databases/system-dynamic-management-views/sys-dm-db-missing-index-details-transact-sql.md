@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_details (Transact-SQL)
-title: sys. dm_db_missing_index_details (Transact-sql) |Microsoft Docs
+title: sys.dm_db_missing_index_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f88249c10b9e6c58e1ae68b598cfb92a876bf56a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bb253a26812d07a2527dc0a21a400906f1bb638a
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321883"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "89518575"
   >此 DMV 的結果集限制為600個數據列。 每個資料列都包含一個遺漏的索引。 如果您有超過600的遺漏索引，您應該解決現有的遺漏索引，以便您可以查看較新的索引。 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>在 CREATE INDEX 陳述式中使用遺漏索引資訊  
- 若要將 **sys. dm_db_missing_index_details** 傳回的資訊轉換成記憶體優化和以磁片為基礎之索引的 CREATE index 語句，應該將相等資料行放在不相等資料行之前，而且它們應該要建立索引的索引鍵。 您應該使用 INCLUDE 子句，將內含資料行加入 CREATE INDEX 陳述式中。 若要決定相等資料行的有效次序，請依據其選擇性排列這些資料行：將選擇性最高的資料行列在最前面 (資料行清單的最左邊)。  
+ 若要將 **sys.dm_db_missing_index_details** 傳回的資訊，轉換成記憶體優化和磁片型索引的 CREATE index 語句，應該將相等資料行放在不相等資料行之前，而且它們應該要建立索引的索引鍵。 您應該使用 INCLUDE 子句，將內含資料行加入 CREATE INDEX 陳述式中。 若要決定相等資料行的有效次序，請依據其選擇性排列這些資料行：將選擇性最高的資料行列在最前面 (資料行清單的最左邊)。  
   
- 如需記憶體優化索引的詳細資訊，請參閱 [記憶體優化資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。  
+ 如需記憶體優化索引的詳細資訊，請參閱 [Memory-Optimized 資料表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。  
   
 ## <a name="transaction-consistency"></a>交易一致性  
  如果交易建立或卸除資料表，便會從這個動態管理物件中移除包含有關已卸除物件之遺漏索引資訊的資料列，以維持交易的一致性。  
@@ -66,11 +66,11 @@ ms.locfileid: "89518575"
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
 
 ## <a name="see-also"></a>另請參閱  
- [sys. dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys. dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys. dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

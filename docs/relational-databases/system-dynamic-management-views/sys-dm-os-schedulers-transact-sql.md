@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_schedulers (Transact-SQL)
-title: sys. dm_os_schedulers (Transact-sql) |Microsoft Docs
+title: sys.dm_os_schedulers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffb03f426977b982c79df26ede26a777a9a98aeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b6055413a3ff32882e86c65dd69353e44b2353bb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543898"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332992"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "89543898"
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每個排程器，各傳回一個資料列，其中每個排程器都會對應至個別的處理器。 請利用這份檢視來監視排程器的狀況或識別失控的工作。 如需排程器的詳細資訊，請參閱 [執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。  
   
 > [!NOTE]  
->  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_os_schedulers**。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_os_schedulers** 名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|排程器的記憶體位址。 不可為 Null。|  
 |parent_node_id|**int**|排程器所屬節點 (也稱為父節點) 的識別碼。 這代表非統一記憶體存取 (NUMA) 節點。 不可為 Null。|  
 |scheduler_id|**int**|排程器的識別碼。 所有用來執行一般查詢的排程器，其識別碼都小於 1048576。 識別碼大於或等於 1048576 的排程器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部使用的排程器，例如專用管理員連接排程器。 不可為 Null。|  
-|cpu_id|**smallint**|指派給排程器的 CPU 識別碼。<br /><br /> 不可為 Null。<br /><br /> **注意：** 255 不表示與中的親和性相同 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 如需其他親和性資訊，請參閱 [sys. dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 。|  
+|cpu_id|**smallint**|指派給排程器的 CPU 識別碼。<br /><br /> 不可為 Null。<br /><br /> **注意：** 255 不表示與中的親和性相同 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 如需其他親和性資訊，請參閱 [sys.dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 。|  
 |status|**nvarchar(60)**|指出排程器的狀態。 可以是下列值之一：<br /><br /> -線上隱藏<br />-離線隱藏<br />-線上顯示<br />-離線顯示<br />-可見的線上 (DAC) <br />-HOT_ADDED<br /><br /> 不可為 Null。<br /><br /> HIDDEN 排程器用來處理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 內部的要求。 VISIBLE 排程器用來處理使用者要求。<br /><br /> OFFLINE 排程器對應到相似性遮罩中離線的處理器，因此不會用來處理任何要求。 ONLINE 排程器對應到相似性遮罩中上線的處理器，可以用來處理執行緒。<br /><br /> DAC 指出排程器正在專用管理員連接下執行。<br /><br /> HOT ADDED 表示已加入排程器來回應 Hot Add CPU 事件。|  
 |is_online|**bit**|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定成只使用伺服器上部分可用的處理器，這個組態可能表示部分排程器對應到不在相似性遮罩中的處理器。 如果是這種情況，這個資料行會傳回 0。 這個值表示排程器目前未用於處理查詢或批次。<br /><br /> 不可為 Null。|  
 |is_idle|**bit**|1 = 排程器閒置。 目前沒有任何工作者正在執行。 不可為 Null。|  
@@ -58,19 +58,19 @@ ms.locfileid: "89543898"
 |yield_count|**int**|用來表示這個排程器上進度的內部值。 排程器監視器使用這個值來判斷排程器上的工作者是否未準時讓給其他的工作者。 這個值不表示工作者或工作已轉換到新工作者。 不可為 Null。|  
 |last_timer_activity|**bigint**|在 CPU 刻度中，排程器上次檢查排程器計時器佇列的時間。 不可為 Null。|  
 |failed_to_create_worker|**bit**|如果新工作者無法建立在這個排程器上，則設成 1。 發生原因通常是記憶體條件約束。 可為 Null。|  
-|active_worker_address|**varbinary(8)**|目前使用中工作者的記憶體位址。 可為 Null。 如需詳細資訊，請參閱 [sys. dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|active_worker_address|**varbinary(8)**|目前使用中工作者的記憶體位址。 可為 Null。 如需詳細資訊，請參閱 [sys.dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
 |memory_object_address|**varbinary(8)**|排程器記憶體物件的記憶體位址。 不是 NULLABLE。|  
-|task_memory_object_address|**varbinary(8)**|工作記憶體物件的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱 [sys. dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
+|task_memory_object_address|**varbinary(8)**|工作記憶體物件的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱 [sys.dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 公開 SQLOS 所使用的排程器配量。|  
 | total_cpu_usage_ms |**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本 <br><br> 由非先占式工作者回報的此排程器所耗用的總 CPU。 不可為 Null。|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 指出根據 [服務等級目標](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)的節流，針對非 Azure 版本，一律會是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可為 Null。|
 |total_scheduler_delay_ms|**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本 <br><br> 一個背景工作切換的時間與另一個背景工作之間切換的時間。 可能是因為先占式工作者延遲下次非先占式工作者的排程，或由於作業系統排程執行緒來自其他進程所造成。 不可為 Null。|
 |ideal_workers_limit|**int**|**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本 <br><br> 最好在排程器上有多少背景工作。 如果目前的背景工作負載因為不平衡工作負載而超過限制，則在它們變成閒置狀態時，就會被修剪。 不可為 Null。|
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
+|pdw_node_id|**int**|**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="permissions"></a>權限
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
 
 ## <a name="examples"></a>範例  
   
@@ -146,7 +146,7 @@ active_workers_count work_queue_count
  下列查詢顯示負載沈重之非隱藏排程器的狀態，其中包含的要求數目大於可用工作者所能處理的上限。 在這個範例中，有 256 個工作者已被指派了工作。 某些工作正在等候對工作者的指派。 可執行計數偏低表示有多個工作正在等候資源。  
   
 > [!NOTE]  
->  您可以藉由查詢 sys.dm_os_workers 找出工作者的狀態。 如需詳細資訊，請參閱 [sys. dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。  
+>  您可以藉由查詢 sys.dm_os_workers 找出工作者的狀態。 如需詳細資訊，請參閱 [sys.dm_os_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。  
   
  查詢內容如下：  
   

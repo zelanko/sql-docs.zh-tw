@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_procedure_stats (Transact-SQL)
-title: sys. dm_exec_procedure_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_procedure_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 958167d816d50a32e11d45983c47f3e98c50a70a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70ee1a165c97c2af3a9a277f641f79ec0af4b69e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329863"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89546612"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，每個包含不屬於已連線租使用者之資料的資料列都會被篩選掉。  
   
 > [!NOTE]
-> **Sys. dm_exec_procedure_stats**的結果可能會隨著每次執行而有所不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。
-> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_exec_procedure_stats**。 
+> **Sys.dm_exec_procedure_stats** 的結果可能會隨著每次執行而有所不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。
+> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_exec_procedure_stats** 名稱。 
 
   
 |資料行名稱|資料類型|描述|  
@@ -46,8 +46,8 @@ ms.locfileid: "89546612"
 |object_id|**int**|預存程序的物件識別碼。|  
 |**type**|**char(2)**|物件的類型：<br /><br /> P = SQL 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> X = 擴充預存程序|  
 |**type_desc**|**nvarchar(60)**|物件類型的描述：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|這可以用來與 **sys. dm_exec_query_stats** 中從這個預存程式內執行的查詢相互關聯。|  
-|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 這個值可以與 **sys. dm_exec_cached_plans** 動態管理檢視一起使用。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
+|**sql_handle**|**varbinary(64)**|這可以用來與 **sys.dm_exec_query_stats** 中從這個預存程式內執行的查詢相互關聯。|  
+|**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 此值可搭配 **sys.dm_exec_cached_plans** 動態管理檢視使用。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
 |**cached_time**|**datetime**|在快取中加入預存程序的時間。|  
 |**last_execution_time**|**datetime**|上次執行預存程序的時間。|  
 |**execution_count**|**bigint**|自上次編譯預存程式以來，已執行的次數。|  
@@ -71,11 +71,11 @@ ms.locfileid: "89546612"
 |**last_elapsed_time**|**bigint**|這個預存程式最近完成執行的經過時間（以微秒為單位）。|  
 |**min_elapsed_time**|**bigint**|這個預存程式已完成執行的最小經過時間（以微秒為單位）。|  
 |**max_elapsed_time**|**bigint**|這個預存程式已完成執行的最大經過時間（以微秒為單位）。|  
-|**total_spills**|**bigint**|這個預存程式在編譯後的執行溢出的總頁數。<br /><br /> **適用**于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|上次執行預存程式時溢出的頁面數目。<br /><br /> **適用**于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|這個預存程式在單次執行期間已溢出的最小頁面數目。<br /><br /> **適用**于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|這個預存程式在單次執行期間已溢出的最大頁面數目。<br /><br /> **適用**于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|此散發所在之節點的識別碼。<br /><br />**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_spills**|**bigint**|這個預存程式在編譯後的執行溢出的總頁數。<br /><br /> **適用** 于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|上次執行預存程式時溢出的頁面數目。<br /><br /> **適用** 于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|這個預存程式在單次執行期間已溢出的最小頁面數目。<br /><br /> **適用** 于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|這個預存程式在單次執行期間已溢出的最大頁面數目。<br /><br /> **適用** 于：開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|此散發所在之節點的識別碼。<br /><br />**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|這個預存程式在編譯以來執行所執行的頁面伺服器讀取總數。<br /><br /> **適用于**： Azure SQL Database 超大規模|  
 |**last_page_server_reads**|**bigint**|上次執行預存程式時所執行的頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模|  
 |**min_page_server_reads**|**bigint**|這個預存程式在單次執行期間曾執行的最小頁面伺服器讀取數。<br /><br /> **適用于**： Azure SQL Database 超大規模|  
@@ -86,7 +86,7 @@ ms.locfileid: "89546612"
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
    
 ## <a name="remarks"></a>備註  
  預存程序執行完成時，就會更新檢視中的統計資料。  
@@ -105,10 +105,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>另請參閱  
 [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys.dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[sys.dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   

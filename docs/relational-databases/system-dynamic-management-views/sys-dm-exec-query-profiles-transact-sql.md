@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: sys. dm_exec_query_profiles (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330892"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89548584"
 |session_id|**smallint**|識別此查詢執行所在的工作階段。 參考 dm_exec_sessions.session_id。|  
 |request_id|**int**|識別目標要求。 參考 dm_exec_sessions.request_id。|  
 |sql_handle|**varbinary(64)**|這是可唯一識別查詢所屬批次或預存程式的 token。 參考 dm_exec_query_stats.sql_handle。|  
-|plan_handle|**varbinary(64)**|這是一種權杖，可唯一識別已執行之批次的查詢執行計畫，而且其計畫位於計畫快取或目前正在執行中。 參考 dm_exec_query_stats。 plan_handle。|  
+|plan_handle|**varbinary(64)**|這是一種權杖，可唯一識別已執行之批次的查詢執行計畫，而且其計畫位於計畫快取或目前正在執行中。 參考 dm_exec_query_stats. plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|實體運算子名稱。|  
 |node_id|**int**|識別查詢樹狀結構中的運算子節點。|  
 |thread_id|**int**|區分屬於相同查詢運算子節點的執行緒 (針對平行查詢)。|  
@@ -84,14 +84,14 @@ ms.locfileid: "89548584"
   
 -   如果有平行掃描，此 DMV 會針對掃描上運作的每個平行執行緒報告計數器。
  
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始， *標準的查詢執行統計資料分析基礎結構* 會與 *輕量查詢執行統計資料分析基礎結構*並存存在。 `SET STATISTICS XML ON` 而且 `SET STATISTICS PROFILE ON` 一律使用 *標準的查詢執行統計資料分析基礎結構*。 `sys.dm_exec_query_profiles`若要填入，必須啟用其中一個查詢分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。    
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始， *標準的查詢執行統計資料分析基礎結構* 會與 *輕量查詢執行統計資料分析基礎結構* 並存存在。 `SET STATISTICS XML ON` 而且 `SET STATISTICS PROFILE ON` 一律使用 *標準的查詢執行統計資料分析基礎結構*。 `sys.dm_exec_query_profiles`若要填入，必須啟用其中一個查詢分析基礎結構。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
 > 正在進行調查的查詢必須在啟用查詢分析基礎結構 **之後** 啟動，而在查詢開始之後啟用它將不會在中產生結果 `sys.dm_exec_query_profiles` 。 如需如何啟用查詢分析基礎結構的詳細資訊，請參閱 [查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ## <a name="permissions"></a>權限  
 在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 和 AZURE SQL 受控執行個體上，需要 `VIEW DATABASE STATE` 資料庫角色的許可權和成員資格 `db_owner` 。   
-在進階層中 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在進階層中 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
    
 ## <a name="examples"></a>範例  
  步驟1：登入您想要在其中執行您將流量分析的查詢之會話 `sys.dm_exec_query_profiles` 。 若要設定查詢以進行分析，請使用 `SET STATISTICS PROFILE ON` 。 在此相同工作階段中執行查詢。  

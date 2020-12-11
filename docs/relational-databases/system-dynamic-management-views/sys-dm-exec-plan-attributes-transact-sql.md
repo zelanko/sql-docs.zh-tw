@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_plan_attributes (Transact-SQL)
-title: sys. dm_exec_plan_attributes (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331992"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>引數  
  *plan_handle*  
-  用來唯一識別批次的查詢計畫，該批次已經執行且其計畫在計畫快取中。 *plan_handle* 是 **Varbinary (64) **。 您可以從 [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 動態管理檢視取得計畫控制碼。  
+  用來唯一識別批次的查詢計畫，該批次已經執行且其計畫在計畫快取中。 *plan_handle* 是 **Varbinary (64)**。 您可以從 [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 動態管理檢視取得計畫控制碼。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |屬性|**varchar(128)**|與這份計畫相關聯的屬性名稱。 下方的資料表會列出可能的屬性、其資料類型，以及其描述。|  
-|value|**sql_variant**|與這份計畫相關聯的屬性值。|  
+|值|**sql_variant**|與這份計畫相關聯的屬性值。|  
 |is_cache_key|**bit**|指出屬性是否作為計畫快取查閱金鑰的一部分使用。|  
 
 從上表中， **屬性** 可以具有下列值：
@@ -82,7 +82,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
 
 ## <a name="remarks"></a>備註  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_index_population (Transact-SQL)
-title: sys. dm_fts_index_population (Transact-sql) |Microsoft Docs
+title: sys.dm_fts_index_population (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd871a3f0de84d5a6a36eff7262f71062ace3a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdcae6d4efe36e8b69ae2a211616178bba8af5f3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323721"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88474940"
 |**is_clustered_index_scan**|**bit**|指出母體擴展是否涉及叢集索引上的掃描。|  
 |**range_count**|**int**|這個母體擴展平行處理的子範圍數目。|  
 |**completed_range_count**|**int**|完成處理的範圍數目。|  
-|**outstanding_batch_count**|**int**|目前此母體擴展未處理的批次數目。 如需詳細資訊，請參閱 [sys. dm_fts_outstanding_batches &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
+|**outstanding_batch_count**|**int**|目前此母體擴展未處理的批次數目。 如需詳細資訊，請參閱 [sys.dm_fts_outstanding_batches &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
 |**status**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 這個母體擴展的狀態。 注意：有些狀態是暫時性。 下列其中之一：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 例如，當自動合併正在進行時，就會發生這個狀態。<br /><br /> 11 = 母體擴展中止<br /><br /> 12 = 正在處理語意相似度擷取|  
 |**status_description**|**nvarchar(120)**|母體擴展狀態的描述。|  
 |**completion_type**|**int**|這個母體擴展如何完成的狀態。|  
@@ -61,7 +61,7 @@ ms.locfileid: "88474940"
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
   
 ## <a name="physical-joins"></a>實體聯結  
  ![這個動態管理檢視的重要聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "這個動態管理檢視的重要聯結")  

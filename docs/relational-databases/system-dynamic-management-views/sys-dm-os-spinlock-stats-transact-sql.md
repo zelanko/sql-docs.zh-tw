@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 05e8698484f9445de7a5fb3265d1e0e294dc65d7
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332078"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql) 
 
@@ -42,14 +42,14 @@ ms.locfileid: "91810104"
 |NAME|**nvarchar(256)**|Spinlock 類型的名稱。|  
 |碰撞|**bigint**|執行緒嘗試取得 spinlock 並遭到封鎖的次數，因為另一個執行緒目前保留 spinlock。|  
 |旋轉|**bigint**|執行緒在嘗試取得 spinlock 時執行迴圈的次數。|  
-|spins_per_collision|**real**|每次衝突的旋轉比例。|  
+|spins_per_collision|**real**|每次衝突的周旋比。|  
 |sleep_time|**bigint**|執行緒在輪詢時花費在睡眠狀態的時間量（以毫秒為單位）。|  
 |輪詢之外機率|**int**|「旋轉」執行緒無法取得 spinlock 並產生排程器的次數。|  
 
 
 ## <a name="permissions"></a>權限  
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。    
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。    
   
 ## <a name="remarks"></a>備註  
  
@@ -72,7 +72,7 @@ GO
    
  下表包含一些最常見的 spinlock 類型的簡短描述。  
   
-|Spinlock 類型|描述|  
+|Spinlock 類型|說明|  
 |-----------------|-----------------|  
 |ABR|僅供內部使用。|
 |ADB_CACHE|僅供內部使用。|

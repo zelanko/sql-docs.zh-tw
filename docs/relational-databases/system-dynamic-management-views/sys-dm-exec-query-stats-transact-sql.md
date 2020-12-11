@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_stats (Transact-SQL)
-title: sys. dm_exec_query_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_query_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3097ba3a920a049dd69b54a8a9f7b84638ff3fb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328087"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "89546578"
 傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中之快取查詢計劃的彙總效能統計資料。 在此檢視中，快取計畫內的每個查詢陳述式各包含一個資料列，而資料列的存留期取決於計畫本身。 從快取移除計畫時，對應的資料列也會從這個檢視中刪除。  
   
 > [!NOTE]
-> - **Sys. dm_exec_query_stats**的結果可能會隨著每次執行而有所不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。
-> - 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_exec_query_stats**。    
+> - **Sys.dm_exec_query_stats** 的結果可能會隨著每次執行而有所不同，因為資料只會反映完成的查詢，而不是仍在進行中的查詢。
+> - 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_exec_query_stats** 名稱。    
 
   
 |資料行名稱|資料類型|描述|  
@@ -72,8 +72,8 @@ ms.locfileid: "89546578"
 |**last_elapsed_time**|**bigint**|這個計畫最近完成所經歷的時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
 |**min_elapsed_time**|**bigint**|這個計畫的任何一次完成執行所經歷的最少時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
 |**max_elapsed_time**|**bigint**|這個計畫的任何一次完成執行所經歷的最多時間 (以毫秒為單位來報告，但是精確度只到毫秒)。|  
-|**query_hash**|**二元 (8) **|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
-|**query_plan_hash**|**二元 (8) **|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
+|**query_hash**|**二元 (8)**|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
+|**query_plan_hash**|**二元 (8)**|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
 |**total_rows**|**bigint**|查詢傳回的資料列總數。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
 |**last_rows**|**bigint**|上次執行查詢時所傳回的資料列數目。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
 |**min_rows**|**bigint**|在一次執行期間，查詢所傳回的資料列數目下限。 不可以是 null。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0。|  
@@ -104,19 +104,19 @@ ms.locfileid: "89546578"
 |**last_used_threads**|**bigint**|當此計畫最後一次執行時，所使用的平行線程數目。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 |**min_used_threads**|**bigint**|此計畫在一次執行期間曾使用的最小平行線程數目。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 |**max_used_threads**|**bigint**|此計畫在一次執行期間曾使用的最大平行線程數目。 查詢記憶體優化資料表時，一律為0。<br /><br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
-|**total_columnstore_segment_reads**|**bigint**|查詢讀取之資料行存放區區段的總總和。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**last_columnstore_segment_reads**|**bigint**|上次執行查詢時所讀取的資料行存放區區段數目。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**min_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目下限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**max_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目上限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**total_columnstore_segment_skips**|**bigint**|查詢略過資料行存放區區段的總和。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**last_columnstore_segment_skips**|**bigint**|上次執行查詢時所略過的資料行存放區區段數目。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**min_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目下限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
-|**max_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目上限。 不可以是 null。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|
-|**total_spills**|**bigint**|此查詢在編譯後的執行溢出的總頁數。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**last_spills**|**bigint**|上次執行查詢時溢出的頁面數目。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**min_spills**|**bigint**|此查詢在單次執行期間已溢出的最小頁面數目。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**max_spills**|**bigint**|此查詢在單次執行期間已溢出的最大頁面數目。<br /><br /> **適用**于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
-|**pdw_node_id**|**int**|此散發所在之節點的識別碼。<br /><br /> **適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|查詢讀取之資料行存放區區段的總總和。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**last_columnstore_segment_reads**|**bigint**|上次執行查詢時所讀取的資料行存放區區段數目。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**min_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目下限。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**max_columnstore_segment_reads**|**bigint**|查詢在一次執行期間所讀取的資料行存放區區段數目上限。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**total_columnstore_segment_skips**|**bigint**|查詢略過資料行存放區區段的總和。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**last_columnstore_segment_skips**|**bigint**|上次執行查詢時所略過的資料行存放區區段數目。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**min_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目下限。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|    
+|**max_columnstore_segment_skips**|**bigint**|查詢在一次執行期間略過的資料行存放區區段數目上限。 不可以是 null。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|
+|**total_spills**|**bigint**|此查詢在編譯後的執行溢出的總頁數。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**last_spills**|**bigint**|上次執行查詢時溢出的頁面數目。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**min_spills**|**bigint**|此查詢在單次執行期間已溢出的最小頁面數目。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**max_spills**|**bigint**|此查詢在單次執行期間已溢出的最大頁面數目。<br /><br /> **適用** 于：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始|  
+|**pdw_node_id**|**int**|此散發所在之節點的識別碼。<br /><br /> **適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|這個計畫在編譯以來執行所執行的遠端頁面伺服器讀取總數。<br /><br /> **適用于：** Azure SQL Database 超大規模 |  
 |**last_page_server_reads**|**bigint**|上次執行計畫時所執行的遠端頁面伺服器讀取數。<br /><br /> **適用于：** Azure SQL Database 超大規模 |  
 |**min_page_server_reads**|**bigint**|這個計畫在單次執行期間曾執行的最小遠端頁面伺服器讀取數。<br /><br /> **適用于：** Azure SQL Database 超大規模 |  
@@ -127,7 +127,7 @@ ms.locfileid: "89546578"
 ## <a name="permissions"></a>權限  
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
    
 ## <a name="remarks"></a>備註  
  完成查詢時，會更新檢視中的統計資料。  
@@ -174,12 +174,12 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[sys. dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
-[sys. dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[sys. dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
