@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 11/12/2020
-ms.openlocfilehash: 64cd6b3a60e07344dbe33287b23b2c3c77eaaa79
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.date: 12/9/2020
+ms.openlocfilehash: 3e0fd0a79a47f0feaf306fee02a3068ac470bfe2
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442677"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933990"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -26,9 +26,9 @@ Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程�
 
 | 平台 | 下載 | 發行日期 | 版本 |
 |----------|----------|--------------|---------|
-| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2148607)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2148907)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2148908) | 2020 年 11 月 12 日 | 1.24.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2148710) | 2020 年 11 月 12 日 | 1.24.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708) | 2020 年 11 月 12 日 | 1.24.0 |
+| Windows | [使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 2020 年 12 月 9 日 | 1.25.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 2020 年 12 月 9 日 | 1.25.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 2020 年 12 月 9 日 | 1.25.0 |
 
 **如需最新版本的詳細資訊，請參閱 [版本資訊](./release-notes-azure-data-studio.md)。**
 
@@ -42,32 +42,32 @@ Azure Data Studio 提供新式編輯器體驗，其中包含 IntelliSense、程�
 
 **使用者安裝程式** (建議)
 
-1. 下載並執行[適用於 Windows 的 Azure Data Studio 使用者安裝程式](https://go.microsoft.com/fwlink/?linkid=2148607)。
+1. 下載並執行[適用於 Windows 的 Azure Data Studio 使用者安裝程式](https://go.microsoft.com/fwlink/?linkid=2150927)。
 2. 啟動 Azure Data Studio 應用程式。
 
 **系統安裝程式**
 
-1. 下載並執行[適用於 Windows 的 Azure Data Studio 系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2148907)。
+1. 下載並執行[適用於 Windows 的 Azure Data Studio 系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2150928)。
 2. 啟動 Azure Data Studio 應用程式。
 
 **壓縮檔**
 
-1. 下載[適用於 Windows 的 Azure Data Studio .zip](https://go.microsoft.com/fwlink/?linkid=2148908)。
+1. 下載[適用於 Windows 的 Azure Data Studio .zip](https://go.microsoft.com/fwlink/?linkid=2151312)。
 2. 瀏覽至下載的檔案並解壓縮。
 3. `\azuredatastudio-windows\azuredatastudio.exe`執行
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[適用於 macOS 的 Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2148710)。
+1. 下載[適用於 macOS 的 Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2151311)。
 2. 若要展開壓縮檔的內容，請按兩下檔案。
 3. 若要在「啟動控制板」中提供 Azure Data Studio，請將 *Azure Data Studio.app* 拖曳至 [應用程式] 資料夾。
 
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
 1. 使用下列其中一種安裝程式或 tar.gz 封存，以下載適用於 Linux 的 Azure Data Studio：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508)
 1. 若要解壓縮檔案並啟動 Azure Data Studio，請開啟新的終端機視窗並鍵入下列命令：
 
    **Debian 安裝：**
