@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_stacks (Transact-SQL)
-title: sys. dm_os_stacks (Transact-sql) |Microsoft Docs
+title: sys.dm_os_stacks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83b694a70145637dce66e33ea417d1afc660af8e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 04f9fe453b2f3e74a96ebd20565d92038bff4bae
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325201"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "89542113"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|這項堆疊配置的唯一位址。 不可為 Null。|  
-|**frame_index**|**int**|每一行代表一個函式呼叫，當特定 **stack_address**的依框架索引以遞增順序排序時，會傳回完整的呼叫堆疊。 不可為 Null。|  
+|**frame_index**|**int**|每一行代表一個函式呼叫，當特定 **stack_address** 的依框架索引以遞增順序排序時，會傳回完整的呼叫堆疊。 不可為 Null。|  
 |**frame_address**|**varbinary(8)**|函數呼叫的位址。 不可為 Null。|  
   
 ## <a name="remarks"></a>備註  
- **sys. dm_os_stacks** 要求伺服器和其他元件的符號必須存在於伺服器上，才能正確顯示資訊。  
+ **sys.dm_os_stacks** 要求伺服器和其他元件的符號必須存在於伺服器上，才能正確顯示資訊。  
   
 ## <a name="permissions"></a>權限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 許可權。   
-在進階層中 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，需要 `VIEW DATABASE STATE` 資料庫中的許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層中，需要  **伺服器管理員** 或 **Azure Active Directory 系統管理員** 帳戶。   
+在 SQL Database Basic、S0 和 S1 服務目標上，以及針對彈性集區中的資料庫，則 `Server admin` `Azure Active Directory admin` 需要或帳戶。 在所有其他 SQL Database 服務目標上， `VIEW DATABASE STATE` 資料庫中都需要有許可權。   
 
 
 ## <a name="see-also"></a>另請參閱  
