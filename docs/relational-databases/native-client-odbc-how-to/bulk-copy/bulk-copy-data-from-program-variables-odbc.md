@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6d8e85f20ff85133da38b1b1bafa6b4c5f6fbed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ebaf54783b3141714a1cf23b4a1d5e3fd0ee7ef6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867081"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407085"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  這個範例會示範如何使用大量複製函數，將程式變數中的資料大量複製到使用 **bcp_bind** 和 **bcp_sendrow**的 SQL Server。 (為了簡化這個範例會移除錯誤檢查程式碼)。  
+  這個範例會示範如何使用大量複製函數，將程式變數中的資料大量複製到使用 **bcp_bind** 和 **bcp_sendrow** 的 SQL Server。 (為了簡化這個範例會移除錯誤檢查程式碼)。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "91867081"
   
 8.  傳送所有資料列之後，請呼叫 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 以完成作業。  
 
- 您可以藉由呼叫 [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 和 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)，在大量複製作業期間，變更程式變數的位置和長度。 使用 [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 來設定各種大量複製選項。 使用 [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 將區段中的 **text**、 **Ntext**和 **image** 資料傳送至伺服器。  
+ 您可以藉由呼叫 [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 和 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)，在大量複製作業期間，變更程式變數的位置和長度。 使用 [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 來設定各種大量複製選項。 使用 [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 將區段中的 **text**、 **Ntext** 和 **image** 資料傳送至伺服器。  
   
 ## <a name="example"></a>範例  
  IA64 不支援此範例。  

@@ -18,13 +18,13 @@ ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: dbe893e86824ad727b7eaca96b4e01e4ded971d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809857"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404994"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -33,22 +33,22 @@ ms.locfileid: "91809857"
   
 ||  
 |-|  
-|**適用**于：  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
+|**適用** 于：  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|指出15秒報告間隔開始的 UTC 時間。|  
 |**end_time**|**datetime2**|指出15秒報告間隔結束的 UTC 時間。|  
 |**elastic_pool_name**|**nvarchar(128)**|彈性資料庫集區的名稱。|  
-|**avg_cpu_percent**|**decimal (5，2) **|集區限制的平均計算使用量百分比。|  
-|**avg_data_io_percent**|**decimal (5，2) **|集區限制的平均 I/O 使用量百分比。|  
-|**avg_log_write_percent**|**decimal (5，2) **|集區限制的平均寫入資源使用量百分比。|  
-|**avg_storage_percent**|**decimal (5，2) **|集區儲存體限制的平均儲存體使用量百分比。|  
-|**max_worker_percent**|**decimal (5，2) **|集區限制的並行背景工作角色 (要求) 百分比。|  
-|**max_session_percent**|**decimal (5，2) **|集區限制的並行工作階段百分比。|  
+|**avg_cpu_percent**|**decimal (5，2)**|集區限制的平均計算使用量百分比。|  
+|**avg_data_io_percent**|**decimal (5，2)**|集區限制的平均 I/O 使用量百分比。|  
+|**avg_log_write_percent**|**decimal (5，2)**|集區限制的平均寫入資源使用量百分比。|  
+|**avg_storage_percent**|**decimal (5，2)**|集區儲存體限制的平均儲存體使用量百分比。|  
+|**max_worker_percent**|**decimal (5，2)**|集區限制的並行背景工作角色 (要求) 百分比。|  
+|**max_session_percent**|**decimal (5，2)**|集區限制的並行工作階段百分比。|  
 |**elastic_pool_dtu_limit**|**int**|間隔期間此彈性集區目前最大的彈性集區 DTU 設定。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|間隔期間此彈性集區目前最大的彈性集區儲存體限制設定 (MB)。|
-|**avg_allocated_storage_percent**|**decimal (5，2) **|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區資料大小上限的資料空間的比率。  如需詳細資訊，請參閱[SQL Database 中的檔案空間管理](/azure/sql-database/sql-database-file-space-management)。|  
+|**avg_allocated_storage_percent**|**decimal (5，2)**|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區資料大小上限的資料空間的比率。  如需詳細資訊，請參閱[SQL Database 中的檔案空間管理](/azure/sql-database/sql-database-file-space-management)。|  
   
 ## <a name="remarks"></a>備註
 

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74720a7919f9acace77a7f50fd38e7aa89f29794
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 30082fa8f4c3d85e59f4ea75602c34a5701d50cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406904"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,9 +59,9 @@ RETCODE bcp_colptr (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 當您將資料複製到具有[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)的 SQL Server 時， **bcp_colptr**函數可讓您變更特定資料行的來源資料位址。  
+ 當您將資料複製到具有 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)的 SQL Server 時， **bcp_colptr** 函數可讓您變更特定資料行的來源資料位址。  
   
- 一開始，使用者資料的指標是由對 **bcp_bind**的呼叫所設定。 如果程式變數資料位址在呼叫 **bcp_sendrow**之間變更，您可以呼叫 **bcp_colptr** 來重設資料的指標。 下一次呼叫 **bcp_sendrow** 會將呼叫所定址的資料傳送給 **bcp_colptr**。  
+ 一開始，使用者資料的指標是由對 **bcp_bind** 的呼叫所設定。 如果程式變數資料位址在呼叫 **bcp_sendrow** 之間變更，您可以呼叫 **bcp_colptr** 來重設資料的指標。 下一次呼叫 **bcp_sendrow** 會將呼叫所定址的資料傳送給 **bcp_colptr**。  
   
  您要修改其資料位址之資料表中的每個資料行都必須有個別的 **bcp_colptr** 呼叫。  
   

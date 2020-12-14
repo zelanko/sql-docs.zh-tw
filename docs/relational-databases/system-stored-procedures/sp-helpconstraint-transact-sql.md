@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af8424ad63c110f8c6c8b9814b384450ba2bc9cf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7199b56a0bf0c0eb397a061ca366534bdbf9c6ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404153"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'table'` 這是傳回哪些條件約束資訊的資料表。 指定的資料表必須是目前資料庫的本機資料表。 *資料表* 是 **Nvarchar (776) **，沒有預設值。  
+`[ @objname = ] 'table'` 這是傳回哪些條件約束資訊的資料表。 指定的資料表必須是目前資料庫的本機資料表。 *資料表* 是 **Nvarchar (776)**，沒有預設值。  
   
-`[ @nomsg = ] 'no_message'` 這是列印資料表名稱的選擇性參數。 *no_message* 是 **Varchar (5) **，預設值是 **msg**。 **nomsg** 會抑制列印。  
+`[ @nomsg = ] 'no_message'` 這是列印資料表名稱的選擇性參數。 *no_message* 是 **Varchar (5)**，預設值是 **msg**。 **nomsg** 會抑制列印。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -73,8 +73,8 @@ EXEC sp_helpconstraint 'Production.Product';
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys. check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys. default_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.default_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   
