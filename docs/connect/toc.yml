@@ -114,6 +114,28 @@
               href: ../connect/ado-net/handle-dataadapter-events.md
             - name: 使用 DataAdapter 執行批次作業
               href: ../connect/ado-net/batch-operations-using-dataadapters.md
+        - name: 異動和並行存取
+          href: ../connect/ado-net/transactions-and-concurrency.md
+          items:
+            - name: 本機交易
+              href: ../connect/ado-net/local-transactions.md
+            - name: 分散式交易
+              href: ../connect/ado-net/distributed-transactions.md
+            - name: System.Transactions 與 SQL Server 的整合
+              href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+            - name: 開放式並行存取
+              href: ../connect/ado-net/optimistic-concurrency.md
+        - name: 擷取資料庫結構描述資訊
+          href: ../connect/ado-net/retrieving-database-schema-information.md
+          items:
+            - name: GetSchema 與結構描述集合
+              href: ../connect/ado-net/getschema-and-schema-collections.md
+            - name: 結構描述限制
+              href: ../connect/ado-net/schema-restrictions.md
+            - name: 一般結構描述集合
+              href: ../connect/ado-net/common-schema-collections.md
+            - name: SQL Server 結構描述集合
+              href: ../connect/ado-net/sql-server-schema-collections.md
     - name: SQL Server 和 ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
