@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 06c5acb9480f52d0cadf84c54aa39bbc9bae12d9
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9cc46d90e27f70870e320c7815752351397b9c97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584932"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472749"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "94584932"
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|與節點相關聯的唯一數值識別碼。| 
 |**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 若為未規劃和已備妥的 SQL 語句，則為編譯語句的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
-|**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 若為特定和準備批次，這個資料行是 **Null** 。<br /><br /> 資料行可為 Null。|  
-|**number**|**smallint**|編號預存程序整數。 若為特定和準備批次，這個資料行是 **Null** 。<br /><br /> 資料行可為 Null。| 
+|**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。|  
+|**number**|**smallint**|編號預存程序整數。 若為特定和準備批次，這個資料行是 **Null**。<br /><br /> 資料行可為 Null。| 
 |**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
 |**query_plan**|**xml**|包含以 *plan_handle* 指定之查詢執行計畫的編譯階段顯示計畫標記法。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
   

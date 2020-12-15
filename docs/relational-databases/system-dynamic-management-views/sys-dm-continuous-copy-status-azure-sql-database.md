@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472889"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "91834273"
  若要取出資料，需要 **db_owner** 資料庫角色中的成員資格。 Dbo 使用者、 **dbmanager** 資料庫角色的成員和 sa 登入都可以同時查詢此視圖。  
   
 ## <a name="remarks"></a>備註  
- **Sys.dm_continuous_copy_status** view 會建立在**resource**資料庫中，而且會顯示在所有資料庫中，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
+ **Sys.dm_continuous_copy_status** view 會建立在 **resource** 資料庫中，而且會顯示在所有資料庫中，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
  如果資料庫上的連續複製關聯性終止， **sys.dm_continuous_copy_status** view 中該資料庫的資料列就會消失。  
   
- 如同 **sys.dm_database_copies** 視圖， **sys.dm_continuous_copy_status** 會反映連續複製關聯性的狀態，其中資料庫是主要或作用中的次要資料庫。 不同于 **sys.dm_database_copies**， **sys.dm_continuous_copy_status** 包含數個數據行，以提供有關作業和效能的詳細資料。 這些資料行包含 **last_replication**和 **replication_lag_sec**。  
+ 如同 **sys.dm_database_copies** 視圖， **sys.dm_continuous_copy_status** 會反映連續複製關聯性的狀態，其中資料庫是主要或作用中的次要資料庫。 不同于 **sys.dm_database_copies**， **sys.dm_continuous_copy_status** 包含數個數據行，以提供有關作業和效能的詳細資料。 這些資料行包含 **last_replication** 和 **replication_lag_sec**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [主動式異地複寫預存程式 &#40;Transact-sql&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Active Geo-Replication 預存程式 &#40;Transact-sql&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

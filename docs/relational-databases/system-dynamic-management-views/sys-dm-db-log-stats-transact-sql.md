@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_log_stats (Transact-SQL)
-title: sys. dm_db_log_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_log_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5ea85a212e33a3e26ef295cc4d38c84967560a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550295"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472829"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89550295"
 
 *database_id* |Null | **預設值**
 
-資料庫的識別碼。 `database_id` 為 `int`。 有效的輸入為資料庫、或的識別碼號碼 `NULL` `DEFAULT` 。 預設為 `NULL`。 `NULL` 和在 `DEFAULT` 目前資料庫的內容中是相等的值。  
+資料庫的識別碼。 `database_id` 為 `int`。 有效的輸入為資料庫、或的識別碼號碼 `NULL` `DEFAULT` 。 預設值為 `NULL`。 `NULL` 和在 `DEFAULT` 目前資料庫的內容中是相等的值。  
 可以指定內建函數 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 使用 `DB_ID` 但未指定資料庫名稱時，目前資料庫的相容性層級必須為90或更高。
 
   

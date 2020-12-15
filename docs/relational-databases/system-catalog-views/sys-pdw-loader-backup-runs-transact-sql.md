@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036976"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472909"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "92036976"
 |start_time|**datetime**|作業開始的時間。||  
 |end_time|**datetime**|作業已完成、失敗或已取消的時間。||  
 |total_elapsed_time|**int**|Start_time 和目前時間之間的總時間，或是已完成、已取消或失敗之執行的 start_time 和 end_time 之間的總時間。|如果 total_elapsed_time 超過整數 (24.8 天（以毫秒為單位）的最大值) ，則會造成具體化失敗，因為溢位。<br /><br /> 以毫秒為單位的最大值相當於24.8 天。|  
-|operation_type|**Nvarchar (16) **|載入類型。|「備份」、「載入」、「還原」|  
-|mode|**Nvarchar (16) **|執行類型內的模式。|針對 operation_type = **備份**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> For operation_type = **LOAD**<br />**附加**<br />**重新 載入**<br />**UPSERT**<br /><br /> 針對 operation_type = **RESTORE**<br />**資料庫**<br />**HEADER_ONLY**|  
+|operation_type|**Nvarchar (16)**|載入類型。|「備份」、「載入」、「還原」|  
+|mode|**Nvarchar (16)**|執行類型內的模式。|針對 operation_type = **備份**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> For operation_type = **LOAD**<br />**附加**<br />**重新 載入**<br />**UPSERT**<br /><br /> 針對 operation_type = **RESTORE**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|這項作業內容的資料庫名稱||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|要求操作之使用者的識別碼。||  
 |session_id|**nvarchar(32)**|執行作業之會話的識別碼。|請參閱 [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
 |request_id|**nvarchar(32)**|執行作業的要求識別碼。 若為載入，這是與此載入相關聯的目前或最後一個要求。|請參閱 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
-|status|**Nvarchar (16) **|執行的狀態。|「已取消」、「已完成」、「失敗」、「已排入佇列」、「正在執行」|  
+|status|**Nvarchar (16)**|執行的狀態。|「已取消」、「已完成」、「失敗」、「已排入佇列」、「正在執行」|  
 |progress|**int**|已完成的百分比。|0 到 100|  
 |命令|**nvarchar(4000)**|由使用者所提交之命令的完整文字。|如果超過4000個字元 (計算空間) ，則會截斷。|  
 |rows_processed|**bigint**|這項作業中處理的資料列數目。||  

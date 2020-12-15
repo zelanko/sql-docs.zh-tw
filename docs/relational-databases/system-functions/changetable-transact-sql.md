@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474688"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472779"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ CHANGETABLE (
   
 ## <a name="arguments"></a>引數  
  變更 *資料表* 、 *last_sync_version*  
- 傳回資料表的所有變更的追蹤資訊，這些變更是在 *last_sync_version*指定的版本之後發生的。  
+ 傳回資料表的所有變更的追蹤資訊，這些變更是在 *last_sync_version* 指定的版本之後發生的。  
   
  *table*  
  可取得其追蹤變更的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
@@ -56,7 +56,7 @@ CHANGETABLE (
  *last_sync_version*  
  當它取得變更時，呼叫的應用程式就必須指定需要變更的時間點。 last_sync_version 會指定該時間點。 此函數會傳回自從該版本以來已經變更之所有資料列的資訊。 此應用程式會進行查詢，以便接收版本大於 last_sync_version 的變更。  
   
- 一般來說，在取得變更之前，應用程式會呼叫 **CHANGE_TRACKING_CURRENT_VERSION ( # B1 ** 來取得下次需要變更時將使用的版本。 因此，這個應用程式不需要解譯或了解實際值。  
+ 一般來說，在取得變更之前，應用程式會呼叫 **CHANGE_TRACKING_CURRENT_VERSION ( # B1** 來取得下次需要變更時將使用的版本。 因此，這個應用程式不需要解譯或了解實際值。  
   
  由於 last_sync_version 是由呼叫的應用程式所取得，所以此應用程式必須保存這個值。 如果此應用程式遺失這個值，它就必須重新初始化資料。  
   
@@ -69,7 +69,7 @@ CHANGETABLE (
  版本 *資料表*、{<primary_key_values>}  
  針對指定的資料列傳回最新的變更追蹤資訊。 主索引鍵值必須識別資料列。 <primary_key_values> 會識別主鍵資料行並指定值。 您可以用任何順序指定主索引鍵資料行名稱。  
   
- *Table*  
+ *資料表*  
  可取得其變更追蹤資訊的使用者定義資料表。 您必須在資料表上啟用變更追蹤。 可以使用一部分、兩部分、三部分或四部分資料表名稱。 資料表名稱可以是資料表的同義字。  
   
  *column_name*  
@@ -214,7 +214,7 @@ WHERE
  [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

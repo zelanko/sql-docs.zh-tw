@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f4a3a7a16ed2f222a7d179cbae17b6bdfb2982f5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: ae71838bd9a384e616d0f1fe50d612535f840919
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472689"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -41,7 +41,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>引數  
  `[@name =] [N]'name'`  
- 要移除的資料庫層級防火牆設定的名稱。 *名稱* 是 **Nvarchar (128) ** 沒有預設值。 的 Unicode 識別碼 `N` 是選擇性的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
+ 要移除的資料庫層級防火牆設定的名稱。 *名稱* 是 **Nvarchar (128)** 沒有預設值。 的 Unicode 識別碼 `N` 是選擇性的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
   
 ## <a name="permissions"></a>權限  
  只有布建程式所建立的伺服器層級主體登入或指派為系統管理員 Azure Active Directory 主體，才能刪除資料庫層級的防火牆規則。  

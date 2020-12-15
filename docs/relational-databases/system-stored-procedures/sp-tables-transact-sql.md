@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dbbf927943b34c81ad1f0a49b831314803969d7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005559"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472649"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,15 +49,15 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @table_name = ] 'name'` 這是用來傳回目錄資訊的資料表。 *名稱* 是 **Nvarchar (384) **，預設值是 Null。 支援萬用字元的模式比對。  
+`[ @table_name = ] 'name'` 這是用來傳回目錄資訊的資料表。 *名稱* 是 **Nvarchar (384)**，預設值是 Null。 支援萬用字元的模式比對。  
   
-`[ @table_owner = ] 'owner'` 這是用來傳回目錄資訊之資料表的資料表擁有者。 *擁有* 者是 **Nvarchar (384) **，預設值是 Null。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
+`[ @table_owner = ] 'owner'` 這是用來傳回目錄資訊之資料表的資料表擁有者。 *擁有* 者是 **Nvarchar (384)**，預設值是 Null。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定擁有者，且目前使用者並未擁有指定之名稱的資料表，這個程序就會尋找資料庫擁有者所擁有之指定名稱的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
   
-`[ @table_qualifier = ] 'qualifier'` 這是資料表限定詞的名稱。 *限定詞* 是 **sysname**，預設值是 Null。 各種 DBMS 產品都支援資料表 (辨識_符號_的三部分命名 **。**_擁有_者 **。**) _名稱_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+`[ @table_qualifier = ] 'qualifier'` 這是資料表限定詞的名稱。 *限定詞* 是 **sysname**，預設值是 Null。 各種 DBMS 產品都支援資料表 (辨識 _符號_ 的三部分命名 **。**_擁有_ 者 **。**) _名稱_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` 這是以逗號分隔的值清單，可提供所指定資料表類型之所有資料表的相關資訊。 包括 **TABLE**、 **SYSTEMTABLE**和 **VIEW**。 *類型* 是 **Varchar (100) **，預設值是 Null。  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 這是以逗號分隔的值清單，可提供所指定資料表類型之所有資料表的相關資訊。 包括 **TABLE**、 **SYSTEMTABLE** 和 **VIEW**。 *類型* 是 **Varchar (100)**，預設值是 Null。  
   
 > [!NOTE]  
 >  每個資料表類型都必須用單引號括住，整個參數必須用雙引號括住。 資料表類型必須是大寫。 如果 SET QUOTED_IDENTIFIER 是 ON，每個單引號都必須變成兩個，整個參數必須用單引號括住。  
@@ -75,14 +75,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|資料表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個欄位一律會傳回值。|  
 |**TABLE_TYPE**|**varchar(32)**|資料表、系統資料表或檢視表。|  
-|**備註**|**Varchar (254) **|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**備註**|**Varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
   
 ## <a name="remarks"></a>備註  
  為取得最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準 SQL 模式比對 (% 和 _ 萬用字元)。  
   
- 不一定會檢查目前使用者對特定資料表之讀取或寫入權限的權限相關資訊。 因此，存取權並無保證。 這個結果集不只包括資料表和檢視表，它也包括支援這些類型之 DBMS 產品閘道的同義字和別名。 如果**sp_server_info**的結果集中，伺服器屬性**ACCESSIBLE_TABLES**為 Y，則只會傳回目前使用者可以存取的資料表。  
+ 不一定會檢查目前使用者對特定資料表之讀取或寫入權限的權限相關資訊。 因此，存取權並無保證。 這個結果集不只包括資料表和檢視表，它也包括支援這些類型之 DBMS 產品閘道的同義字和別名。 如果 **sp_server_info** 的結果集中，伺服器屬性 **ACCESSIBLE_TABLES** 為 Y，則只會傳回目前使用者可以存取的資料表。  
   
- **sp_tables** 相當於 ODBC 中的 **SQLTables** 。 傳回的結果會依 **TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**和 **TABLE_NAME**排序。  
+ **sp_tables** 相當於 ODBC 中的 **SQLTables** 。 傳回的結果會依 **TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER** 和 **TABLE_NAME** 排序。  
   
 ## <a name="permissions"></a>權限  
  需要結構描述的 SELECT 權限。  

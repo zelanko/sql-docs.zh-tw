@@ -23,13 +23,13 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - rank
-monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest'
+ms.openlocfilehash: 908151d19df364171063bffcd280786a354c2654
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006005"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472949"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006005"
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|識別存在分類之專案的類別。 一律會有代表資料行的值 1 () |  
-|**class_desc**|**Varchar (16) **|存在分類之專案類別的描述。 一律會有值 *OBJECT_OR_COLUMN*|  
+|**class_desc**|**Varchar (16)**|存在分類之專案類別的描述。 一律會有值 *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|表示包含已分類資料行之資料表的識別碼，對應于 sys. all _objects. object_id|  
 |**minor_id**|**int**|代表存在分類的資料行識別碼，對應于 sys. all _columns. column_id|   
 |**label**|**sysname**|指派給敏感度分類 (人類可讀取) 的標籤|  

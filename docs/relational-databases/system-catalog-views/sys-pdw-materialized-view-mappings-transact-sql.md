@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 60de1735c9a5a43ea58c5e9c8ccca03b69b310f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 645d4d722cadfb25453dd51400c05a8ca67c3c71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036938"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472899"
 ---
 # <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys.pdw_materialized_view_mappings (Transact-sql)   
 
@@ -30,7 +30,7 @@ Physical_name 和 object_id 的資料行會形成此目錄檢視的索引鍵。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|physical_name |**Nvarchar (36) **|具體化視圖的機構名稱。|  
+|physical_name |**Nvarchar (36)**|具體化視圖的機構名稱。|  
 |object_id  |**int**|具體化視圖的物件識別碼。 請參閱 [sys. objects (transact-sql) ](./sys-objects-transact-sql.md?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>權限

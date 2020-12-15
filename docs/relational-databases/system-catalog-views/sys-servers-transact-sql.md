@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 7ab227e9df241914cba5f242eed6a38cf35815b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809319"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472929"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "91809319"
  如果刪除預設登入對應，則只有已明確加入成為連結登入或遠端登入的使用者可以檢視他們所擁有之登入的連結伺服器或遠端伺服器。  您必須具備下列許可權，才能在預設登入對應之後，查看所有連結和遠端伺服器：  
   
 - `ALTER ANY LINKED SERVER` 或 `ALTER ANY LOGIN ON SERVER`  
-- **Setupadmin**或**系統管理員（sysadmin** ）固定伺服器角色中的成員資格  
+- **Setupadmin** 或 **系統管理員（sysadmin** ）固定伺服器角色中的成員資格  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 456197c4519ca4135cf4a5edbf38d58c6d9246a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834075"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472849"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91834075"
 |read_operation_count |**bigint**|自從建立工作物件之後，SQL Server 所發出之本機磁片上的讀取 IO 作業總數。 |
 |peak_process_memory_used_mb|**bigint**|在工作物件建立之後，已使用工作物件中的單一進程（例如 SQL Server）的尖峰記憶體量（以 MB 為單位）。| 
 |peak_job_memory_used_mb|**bigint**|工作物件中的所有進程在建立工作物件之後，已累積使用的記憶體尖峰數量（以 MB 為單位）。|
-|process_physical_affinity|**Nvarchar (3072) **|位元遮罩，描述 SQL Server 進程可在每個處理器群組中使用的邏輯處理器。 此資料行中的值是由一或多個值組所組成，每個值組都以大括弧括住。 在每個配對中，第一個值是處理器群組編號，而第二個值是該處理器群組的親和性位元遮罩。 例如，此值 `{{0,a}{1,2}}` 表示處理器群組的親和性遮罩 `0` 會 `a` `1010` 以二進位 (，表示會使用處理器2和 4) ，而處理器群組的親和性遮罩 `1` 會 `2` (`10` 二進位，表示) 使用處理器2。|
+|process_physical_affinity|**Nvarchar (3072)**|位元遮罩，描述 SQL Server 進程可在每個處理器群組中使用的邏輯處理器。 此資料行中的值是由一或多個值組所組成，每個值組都以大括弧括住。 在每個配對中，第一個值是處理器群組編號，而第二個值是該處理器群組的親和性位元遮罩。 例如，此值 `{{0,a}{1,2}}` 表示處理器群組的親和性遮罩 `0` 會 `a` `1010` 以二進位 (，表示會使用處理器2和 4) ，而處理器群組的親和性遮罩 `1` 會 `2` (`10` 二進位，表示) 使用處理器2。|
   
 ## <a name="permissions"></a>權限  
 在 SQL 受控執行個體上，需要 `VIEW SERVER STATE` 許可權。 在 SQL Database 上，資料庫需要 `VIEW DATABASE STATE` 權限。  

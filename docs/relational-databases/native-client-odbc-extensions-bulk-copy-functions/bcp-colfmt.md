@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2478558cdb8df2de852fcdd4654c90d51b8356a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455910"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473629"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt** 會將現有資料檔案的格式指定為大量複製到資料表中的資料來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當做目標格式使用時，會使用以 **bcp_colfmt**指定的資料行格式建立資料檔案。  
+  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt** 會將現有資料檔案的格式指定為大量複製到資料表中的資料來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 當做目標格式使用時，會使用以 **bcp_colfmt** 指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +58,7 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 在 *>euserdatatype* 參數中引進了 SQLXML 和 SQLUDT 資料類型標記的支援。  
   
- *>euserdatatype*參數是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli 中的資料類型標記所列舉，而不是 ODBC C 資料類型列舉值。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。  
+ *>euserdatatype* 參數是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli 中的資料類型標記所列舉，而不是 ODBC C 資料類型列舉值。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。  
   
  若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。  
   
@@ -113,7 +113,7 @@ RETCODE bcp_colfmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_colfmt**函數可讓您指定大量複製的使用者檔案格式。 針對大量複製，格式包含下列部分：  
+ **Bcp_colfmt** 函數可讓您指定大量複製的使用者檔案格式。 針對大量複製，格式包含下列部分：  
   
 -   從使用者檔案資料行對應至資料庫資料行。  
   
@@ -127,11 +127,11 @@ RETCODE bcp_colfmt (
   
 -   選擇性結束位元組順序的長度。  
   
- **Bcp_colfmt**的每個呼叫都會指定一個使用者檔案資料行的格式。 例如，若要在五個數據行的使用者資料檔案中變更三個數據行的預設值，請先呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) ** (5) **，然後呼叫**bcp_colfmt**五次，其中三次呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫，將 *>euserdatatype* 設定為0，並將 *cbIndicator*、 *cbUserData*和 *cbUserDataTerm* 分別設定為0、SQL_VARLEN_DATA 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
+ **Bcp_colfmt** 的每個呼叫都會指定一個使用者檔案資料行的格式。 例如，若要在五個數據行的使用者資料檔案中變更三個數據行的預設值，請先呼叫 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)**，然後呼叫 **bcp_colfmt** 五次，其中三次呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫，將 *>euserdatatype* 設定為0，並將 *cbIndicator*、 *cbUserData* 和 *cbUserDataTerm* 分別設定為0、SQL_VARLEN_DATA 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
  若為 *cbIndicator*，則值為8表示大數數值型別現在是有效的。 如果有針對其對應資料行是新最大類型的欄位指定前置詞，則僅能將該前置詞設定為 8。 如需詳細資訊，請參閱 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)。  
   
- **Bcp_columns**函數必須在呼叫**bcp_colfmt**之前呼叫。  
+ **Bcp_columns** 函數必須在呼叫 **bcp_colfmt** 之前呼叫。  
   
  您必須針對使用者檔案中的每個資料行呼叫 **bcp_colfmt** 一次。  
   
@@ -142,7 +142,7 @@ RETCODE bcp_colfmt (
  [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)函數可以用來保存格式規格。  
   
 ## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt 支援增強的日期和時間功能  
- 如需有關 *>euserdatatype* 參數的日期/時間類型所使用之類型的詳細資訊，請參閱 [&#40;OLE DB 和 ODBC&#41;的增強型日期和時間類型的大量複製變更 ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+ 如需有關 *>euserdatatype* 參數的日期/時間類型所使用之類型的詳細資訊，請參閱 [&#40;OLE DB 和 ODBC&#41;的增強型日期和時間類型的大量複製變更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
  如需詳細資訊，請參閱 [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

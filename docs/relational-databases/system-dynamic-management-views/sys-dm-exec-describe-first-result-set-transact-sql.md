@@ -18,13 +18,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 06/10/2016
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94773e515b4bb184b1ff669c2bddb05c5723e208
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 21b823aeaa319263a3e90a3ddd917e9605506c0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067349"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472859"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 
@@ -46,12 +46,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>引數  
  *\@tsql*  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *交易 SQL_batch* 可能是 **Nvarchar (** _n_ *_)_* 或 **Nvarchar (max)** 。  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *交易 SQL_batch* 可能是 **Nvarchar (** _n_ *_)_* 或 **Nvarchar (max)**。  
   
  *\@params*  
- \@params 提供批次參數的宣告字串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，類似于 sp_executesql。 參數可以是 **Nvarchar (n)** 或 **Nvarchar (max)** 。  
+ \@params 提供批次參數的宣告字串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，類似于 sp_executesql。 參數可以是 **Nvarchar (n)** 或 **Nvarchar (max)**。  
   
- 這是一個字串，其中包含已內嵌在 _batch 中之所有參數的定義 [!INCLUDE[tsql](../../includes/tsql-md.md)]  。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 在 stmt 中指定的每個參數都必須在 params 中定義 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中的語句或批次不包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在 _batch 中之所有參數的定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] **。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 在 stmt 中指定的每個參數都必須在 params 中定義 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中的語句或批次不包含參數， \@ 則不需要 params。 這個參數的預設值是 NULL。  
   
  *\@include_browse_information*  
  如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
@@ -59,7 +59,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>傳回的資料表  
  將這個通用中繼資料當做結果集傳回。 結果中繼資料中的每個資料行都會有一個資料列，每個資料列都會使用下表所示的格式來描述資料行的類型和 Null 屬性。 如果每個控制項路徑都沒有第一個陳述式，就會傳回具有零個資料列的結果集。  
   
-|欄名|資料類型|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定資料行是為了瀏覽和參考用途而加入的額外資料行，而不會實際顯示在結果集中。|  
 |**column_ordinal**|**int**|包含資料行在結果集中的序數位置。 第一個資料行的位置將會指定為 1。|  
@@ -67,7 +67,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|包含下列值：<br /><br /> 如果資料行允許 NULL，則為 1 值。<br /><br /> 如果資料行不允許 NULL，則為 0 值。<br /><br /> 如果無法判別資料行是否允許 NULL，則為 1 值。|  
 |**system_type_id**|**int**|包含 sys. 類型中所指定之資料行資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含名稱和引數 (例如長度、有效位數、小數位數)，已指定給資料行的資料類型。<br /><br /> 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。<br /><br /> 如果資料類型是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是 **Varchar (max)** 、 **Nvarchar (max)** 、 **Varbinary (max)** 或 **xml** 。<br /><br /> 若為 **文字** 資料行， **max_length** 值會是16或 **sp_tableoption ' text in row '** 所設定的值。|  
+|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是 **Varchar (max)**、 **Nvarchar (max)**、 **Varbinary (max)** 或 **xml**。<br /><br /> 若為 **文字** 資料行， **max_length** 值會是16或 **sp_tableoption ' text in row '** 所設定的值。|  
 |**有效位數**|**tinyint**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
@@ -95,7 +95,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_sparse_column_set**|**bit**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
 |**ordinal_in_order_by_list**|**smallint**|這個資料行在 ORDER BY 清單中的位置。 如果資料行不會顯示在 ORDER BY 清單中，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。|  
 |**order_by_list_length**|**smallint**|ORDER BY 清單的長度。 如果沒有 ORDER BY 清單，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。 請注意，對於由 sp_describe_first_result_set 傳回的所有資料列來說，這個值都是一樣的。|  
-|**order_by_is_descending**|**Smallint Null**|如果 ordinal_in_order_by_list 不是 NULL， **order_by_is_descending** 資料行會回報此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
+|**order_by_is_descending**|**Smallint Null**|如果 ordinal_in_order_by_list 不是 NULL，**order_by_is_descending** 資料行會回報此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
 |**error_number**|**int**|包含函數傳回的錯誤號碼。 如果未發生錯誤，則資料行會包含 NULL。|  
 |**error_severity**|**int**|包含函數傳回的嚴重性。 如果未發生錯誤，則資料行會包含 NULL。|  
 |**error_state**|**int**|包含函數傳回的 狀態訊息。 如果未發生錯誤，則資料行會包含 NULL。|  
@@ -128,7 +128,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  需要執行 \@ tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
- 您可以調整 sp_describe_first_result_set 主題中 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 的其他範例，以使用 **sys.dm_exec_describe_first_result_set** 。  
+ 您可以調整 sp_describe_first_result_set 主題中 [&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 的其他範例，以使用 **sys.dm_exec_describe_first_result_set**。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 傳回單一 Transact-SQL 陳述式的相關資訊  
  下列程式碼會傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結果的相關資訊。  

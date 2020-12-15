@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adf2a1eb88397acbbc8e092eb320e15f239ae8f2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834519"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472879"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_ \_ (transact-sql) 的 sys.dm db 微調 \_ 建議
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91834519"
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，每個包含不屬於已連線租使用者之資料的資料列都會被篩選掉。
 
-| **資料行名稱** | **Data type** | **描述** |
+| **資料行名稱** | **Data type** | **說明** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | 建議的唯一名稱。 |
 | **type** | **nvarchar(4000)** | 產生建議之自動調整選項的名稱，例如 `FORCE_LAST_GOOD_PLAN` |

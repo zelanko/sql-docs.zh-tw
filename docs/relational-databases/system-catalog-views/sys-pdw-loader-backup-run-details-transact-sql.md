@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 243bbff033bfa3b9327227da6fdbf200d28e1ee5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 3d87972ff03cadb35468e7cdb6e9d0943b055874
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034802"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472919"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92034802"
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|特定備份或還原執行的唯一識別碼。<br /><br /> run_id 並 pdw_node_id 形成此視圖的索引鍵。||  
 |pdw_node_id|**int**|此記錄包含詳細資料之設備節點的唯一識別碼。<br /><br /> run_id 並 pdw_node_id 形成此視圖的索引鍵。|請參閱 [sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id。|  
-|status|**Nvarchar (16) **|執行的目前狀態。|「已取消」、「已完成」、「失敗」、「已排入佇列」、「正在執行」|  
+|status|**Nvarchar (16)**|執行的目前狀態。|「已取消」、「已完成」、「失敗」、「已排入佇列」、「正在執行」|  
 |start_time|**datetime**|此特定節點上的作業開始時間。||  
 |end_time|**datetime**|此特定節點上作業結束的時間（如果有的話）。||  
 |total_elapsed_time|**int**|此特定節點上的作業執行的總時間。|如果 total_elapsed_time 超過整數 (24.8 天（以毫秒為單位）的最大值) ，則會造成具體化失敗，因為溢位。<br /><br /> 以毫秒為單位的最大值相當於24.8 天。|  

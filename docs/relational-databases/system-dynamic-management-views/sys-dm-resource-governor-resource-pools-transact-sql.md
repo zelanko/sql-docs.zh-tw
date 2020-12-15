@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_resource_pools (Transact-SQL)
-title: sys. dm_resource_governor_resource_pools (Transact-sql) |Microsoft Docs
+title: sys.dm_resource_governor_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2620e385d33711ba958471a942d3264f8050f32d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3d99aec61bb33b989a162d63c51f10465a3c9bf0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546496"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472789"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89546496"
   傳回目前資源集區狀態的相關資訊、資源集區的目前組態和資源集區統計資料。  
   
 > [!NOTE]  
->  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_resource_governor_resource_pools**。  
+>  若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_resource_governor_resource_pools** 名稱。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "89546496"
 |read_io_throttled_total|**int**|重設資源管理員統計資料之後節流的讀取 IO 總數。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
 |read_bytes_total|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 重設資源管理員統計資料之後讀取的總位元組數。 不可為 Null。|  
 |read_io_stall_total_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 讀取 IO 從抵達到完成的總時間 (以毫秒為單位)。 不可為 Null。 |  
-|read_io_stall_queued_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 讀取 IO 從抵達到發行的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。<br /><br /> 若要判斷集區的 IO 設定是否造成延遲，請從**read_io_stall_total_ms**減去**read_io_stall_queued_ms** 。|  
+|read_io_stall_queued_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 讀取 IO 從抵達到發行的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。<br /><br /> 若要判斷集區的 IO 設定是否造成延遲，請從 **read_io_stall_total_ms** 減去 **read_io_stall_queued_ms** 。|  
 |write_io_queued_total|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 重設資源管理員統計資料之後加入佇列的寫入 IO 總數。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
 |write_io_issued_total|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 重設資源管理員統計資料之後發出的寫入 IO 總數。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
 |write_io_completed_total|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 重設資源管理員統計資料之後完成的寫入 IO 總數。 不可為 Null|  
@@ -77,12 +77,12 @@ ms.locfileid: "89546496"
 |write_io_stall_queued_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 寫入 IO 從抵達到發行的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。<br /><br /> 這是 IO 資源管理導入的延遲。|  
 |io_issue_violations_total|**int**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> IO 發出違規總數。 也就是說，在 IO 發出率低於保留率時的次數。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
 |io_issue_delay_total_ms|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 排程發出 IO 到實際發出 IO 的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
+|pdw_node_id|**int**|**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  資源管理員工作負載群組和資源管理員資源集區擁有多對一的對應。 因此，許多資源集區統計資料會從工作負載群組統計資料衍生。  
   
- 這個動態管理檢視會顯示記憶體中組態。 若要查看儲存的設定中繼資料，請使用 sys. resource_governor_resource_pools 目錄檢視。  
+ 這個動態管理檢視會顯示記憶體中組態。 若要查看儲存的設定中繼資料，請使用 sys.resource_governor_resource_pools 目錄] 視圖。  
   
 ## <a name="permissions"></a>權限  
  需要 VIEW SERVER STATE 權限。  
@@ -90,7 +90,7 @@ ms.locfileid: "89546496"
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys. resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

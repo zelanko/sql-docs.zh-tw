@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b55ba95c05d75c384cc89bd55452a5663bbc959
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae2c238cb6e11293887211d3a72041ff06888fdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469539"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驅動程式效能資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868858"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理員記錄驅動程式效能資料  
   
-1.  在 **主控台**中，按兩下 [系統 **管理工具** ]，然後按兩下 [ **資料來源] ([ODBC) **。 或者，您可以叫用 odbcad32.exe。  
+1.  在 **主控台** 中，按兩下 [系統 **管理工具** ]，然後按兩下 [ **資料來源] ([ODBC)**。 或者，您可以叫用 odbcad32.exe。  
   
 2.  按一下 [ **使用者 dsn**]、[ **系統 dsn**] 或 [檔案 **DSN** ] 索引標籤。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "91868858"
   
 4.  按一下 [設定]  。  
   
-5.  在 [設定 DSN] Microsoft SQL Server 中，流覽至含有 **記錄檔 ODBC 驅動程式統計資料**的頁面至記錄檔。  
+5.  在 [設定 DSN] Microsoft SQL Server 中，流覽至含有 **記錄檔 ODBC 驅動程式統計資料** 的頁面至記錄檔。  
   
 6.  選取 **[記錄 ODBC 驅動程式統計資料至記錄檔]**。 在方塊中，放置應該記錄其統計資料之檔案的名稱。 （選擇性）按一下 **[流覽** ] 來流覽檔案系統中的統計資料記錄檔。  
   

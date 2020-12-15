@@ -19,13 +19,13 @@ ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88db4894b7d24599ccade131fdf2de7fd82d9b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 22edbde7dacf45c670c94d77e7cf48833445c346
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810305"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472699"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -44,7 +44,7 @@ sp_delete_firewall_rule [@name =] 'name'
  此預存程序的引數為：  
   
  [ @name =] '*name*'  
- 要移除的伺服器層級防火牆設定的名稱。 *名稱* 是 **Nvarchar (128) ** ，沒有預設值。  
+ 要移除的伺服器層級防火牆設定的名稱。 *名稱* 是 **Nvarchar (128)** ，沒有預設值。  
   
 ## <a name="remarks"></a>備註  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  

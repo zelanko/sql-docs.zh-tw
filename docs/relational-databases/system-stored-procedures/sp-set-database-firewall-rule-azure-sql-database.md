@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b6f9130a4250bdb6f9c250bacbcaaa3943eeef3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: edbe51dc6694a94fcf68b012153e065906ce2208
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810494"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472639"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  建立或更新您的資料庫層級防火牆規則 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 您可以針對 **master** 資料庫和使用者資料庫，設定資料庫防火牆規則 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 使用自主資料庫使用者時，資料庫防火牆規則特別有用。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+  建立或更新您的資料庫層級防火牆規則 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 您可以針對 **master** 資料庫和使用者資料庫，設定資料庫防火牆規則 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 使用自主資料庫使用者時，資料庫防火牆規則特別有用。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,11 +45,11 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] [N]'name'` 用來描述和區分資料庫層級防火牆設定的名稱。 *名稱* 是 **Nvarchar (128) ** 沒有預設值。 的 Unicode 識別碼 `N` 是選擇性的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
+`[ @name = ] [N]'name'` 用來描述和區分資料庫層級防火牆設定的名稱。 *名稱* 是 **Nvarchar (128)** 沒有預設值。 的 Unicode 識別碼 `N` 是選擇性的 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 。 
   
-`[ @start_ip_address = ] 'start_ip_address'` 資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。 *start_ip_address* 是 **Varchar (50) ** 沒有預設值。  
+`[ @start_ip_address = ] 'start_ip_address'` 資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。 *start_ip_address* 是 **Varchar (50)** 沒有預設值。  
   
-`[ @end_ip_address = ] 'end_ip_address'` 資料庫層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。 *end_ip_address* 是 **Varchar (50) ** 沒有預設值。  
+`[ @end_ip_address = ] 'end_ip_address'` 資料庫層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。 *end_ip_address* 是 **Varchar (50)** 沒有預設值。  
   
  下表示范中支援的引數和選項 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。  
   
