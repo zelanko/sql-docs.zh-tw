@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60254364eb7dd4151ee309258f75039bd59628a1
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 919e71894dbf01ce015bed8eb3cc801bbad29c4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006368"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415961"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92006368"
 ![CompoundCurve 範例](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 如果**CompoundCurve** 執行個體是空的執行個體或符合下列準則，系統就會接受此執行個體。  
+ 如果 **CompoundCurve** 執行個體是空的執行個體或符合下列準則，系統就會接受此執行個體。  
   
 1.  **CompoundCurve** 執行個體所包含的所有執行個體都是已接受的圓弧線段執行個體。 如需已接受之圓弧線段執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md) 和 [CircularString](../../relational-databases/spatial/circularstring.md)。  
   
