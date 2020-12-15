@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8c3f1c186774b803794315644c5c8aa9f8cef7ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0b9717a6c71d5aef31dae428a67de37e9d9188ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97416853"
 ---
 # <a name="compare-differences-between-replicated-tables-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "86918274"
   
     -   (選擇性) 針對 **-o** 指定檔案名稱和路徑，以將結果輸出至檔案。  
   
-    -   (選擇性) 指定訂閱資料庫中的資料表，以在其中插入 **-et**的結果。 如果該資料表已存在，請指定 **-dt** 先將該資料表卸除。  
+    -   (選擇性) 指定訂閱資料庫中的資料表，以在其中插入 **-et** 的結果。 如果該資料表已存在，請指定 **-dt** 先將該資料表卸除。  
   
     -   (選擇性) 使用 **-f** 可產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 檔案，以修正「訂閱者」端的資料，使其符合「發行者」端的資料。 使用 **-df** 可指定每個檔案中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式數目。  
   
