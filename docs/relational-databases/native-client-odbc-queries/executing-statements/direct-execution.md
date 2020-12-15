@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c55dd59c86c5a46ef409f607e109264859210f8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0fd85df31856668e4f3cafacbe8a90157b7310b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438381"
 ---
 # <a name="direct-execution"></a>直接執行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88486808"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會大幅改善在多使用者環境中經常執行之陳述式的直接執行效能，而且針對經常執行的 SQL 陳述式搭配參數標記使用 SQLExecDirect 可以讓已備妥的執行提高效率。  
   
- 當連接到的實例時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用 [Sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 來傳輸 **SQLExecDirect**上指定的 SQL 語句或批次。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有邏輯，可快速判斷使用 **sp_executesql** 執行的 SQL 語句或批次是否符合產生已存在於記憶體中之執行計畫的語句或批次。 如果兩者相符，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只會重複使用現有的計畫，而不是編譯新的計畫。 這表示，在具有許多使用者的系統中，以 **SQLExecDirect** 執行的一般執行 SQL 語句，將可受益于舊版中的預存程式所能使用的許多方案重複使用優勢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 當連接到的實例時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會使用 [Sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 來傳輸 **SQLExecDirect** 上指定的 SQL 語句或批次。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有邏輯，可快速判斷使用 **sp_executesql** 執行的 SQL 語句或批次是否符合產生已存在於記憶體中之執行計畫的語句或批次。 如果兩者相符，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只會重複使用現有的計畫，而不是編譯新的計畫。 這表示，在具有許多使用者的系統中，以 **SQLExecDirect** 執行的一般執行 SQL 語句，將可受益于舊版中的預存程式所能使用的許多方案重複使用優勢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  只有當幾位使用者正在執行相同的 SQL 陳述式或批次時，重複使用執行計畫的這項好處才有效。 請遵循編碼慣例來增加不同用戶端執行的 SQL 陳述式非常類似於能夠重複使用執行計畫的機率：  
   

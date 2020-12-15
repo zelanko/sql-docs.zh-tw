@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2205348e8b0ba913cdb12a990d88233c74dfe12
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8753d87fec58d948ccea67c139cc8b1d30861fe5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868352"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438531"
 ---
 # <a name="metadata---parameter-and-result"></a>中繼資料 - 參數和結果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91868352"
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_TYPE|SQL_TYPE_DATE|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|**date**|**time**|IRD 中的**Smalldatetime** ，IPD 中**datetime2**|IRD 中的**datetime** ，IPD 中的**datetime2**|**datetime2**|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|**date**|**time**|IRD 中的 **Smalldatetime** ，IPD 中 **datetime2**|IRD 中的 **datetime** ，IPD 中的 **datetime2**|**datetime2**|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
@@ -70,7 +70,7 @@ ms.locfileid: "91868352"
   
  當 SQL_CA_SS_SERVER_TYPE 是透過呼叫 SQLSetDescField 來設定時，其值必須是 SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 否則，系統就會傳回 SQL_ERROR 並且使用 SQLState HY092 和訊息「屬性/選項識別碼無效」來記錄診斷記錄。  
   
- SQL_CA_SS_SERVER_TYPE 屬性可供相依于 **datetime** 和 **Smalldatetime**所支援之功能的應用程式使用，但不能用於 **datetime2**。 例如， **datetime2** 需要使用 **dateadd** 和 **datediif** 函數，而 **datetime** 和 **Smalldatetime** 也會允許算術運算子。 大部分應用程式都不需要使用這個屬性，而且應該避免使用這個屬性。  
+ SQL_CA_SS_SERVER_TYPE 屬性可供相依于 **datetime** 和 **Smalldatetime** 所支援之功能的應用程式使用，但不能用於 **datetime2**。 例如， **datetime2** 需要使用 **dateadd** 和 **datediif** 函數，而 **datetime** 和 **Smalldatetime** 也會允許算術運算子。 大部分應用程式都不需要使用這個屬性，而且應該避免使用這個屬性。  
   
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 欄位中傳回的資訊  
  下列資訊會在 IRD 欄位中傳回：  

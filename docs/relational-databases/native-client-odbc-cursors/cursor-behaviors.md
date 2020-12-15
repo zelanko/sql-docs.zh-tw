@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95a2a323e3bdd772077bbd801a9f929774325cbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 91bc7286beb8b03f6e76698e84a8fcf3d8d3f11c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438661"
 ---
 # <a name="cursor-behaviors"></a>資料指標行為
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88423950"
  以版本為基礎的開放式平行存取需要基礎資料表中的 **時間戳記** 資料行。 如果在沒有 **時間戳記** 資料行的資料表上要求以版本為基礎的開放式並行存取控制，則伺服器會使用以值為基礎的開放式平行存取。  
   
 ## <a name="scrollability"></a>可捲動性  
- 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_SCROLLABLE 時，資料指標會針對[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的*FetchOrientation*參數支援所有不同的值。 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_NONSCROLLABLE 時，資料指標只支援 SQL_FETCH_NEXT 的 *FetchOrientation* 值。  
+ 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_SCROLLABLE 時，資料指標會針對 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的 *FetchOrientation* 參數支援所有不同的值。 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_NONSCROLLABLE 時，資料指標只支援 SQL_FETCH_NEXT 的 *FetchOrientation* 值。  
   
 ## <a name="sensitivity"></a>敏感度  
  當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_SENSITIVE 時，資料指標會將目前使用者所進行或其他使用者所認可的資料修改反映出來。 當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_INSENSITIVE 時，資料指標不會反映資料修改。  

@@ -1,6 +1,6 @@
 ---
 description: 快速順向資料指標 (ODBC)
-title: 僅向前快轉資料指標 (ODBC) |Microsoft Docs
+title: ODBC) 的快速 Forward-Only 資料指標 (|Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c365461cc7dc4874ae76978019da2c67e3b84fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef941028ffaf9c515b42d319bee522a03c928569
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423910"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438588"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>快速順向資料指標 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88423910"
   
 3.  將結果資料行系結至 *n* + 1 個元素的陣列 (如果有 *n* + 1 個數據列真的提取) ，就是安全的。  
   
-4.  使用 **SQLExecDirect** 或 **SQLExecute**來開啟資料指標。  
+4.  使用 **SQLExecDirect** 或 **SQLExecute** 來開啟資料指標。  
   
 5.  如果傳回狀態為 SQL_SUCCESS，則呼叫 **SQLFreeStmt** 或 **SQLCloseCursor** 以關閉資料指標。 資料列的所有資料都將位於繫結的程式變數中。  
   

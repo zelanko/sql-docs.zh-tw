@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420192"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439813"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88420192"
 
 **2.  其他授權要件及/或使用權利。**
 
-&nbsp;&nbsp;**可散發程式碼。**
+&nbsp;&nbsp;**的.   可散佈程式碼。**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. 使用和散發的權利。如果您遵守下列條款：**
 *   貴用戶得於所開發的程式中以目的碼形式複製與散布軟體 (以下稱「可散發程式碼」)；以及
@@ -86,9 +86,9 @@ ms.locfileid: "88420192"
 
 **10. 準據法。**
 
-&nbsp;&nbsp;**答：美國。** 若　貴用戶在美國境內取得軟體，本合約之解釋或任何違反本合約所衍生的訴訟，無論是否有法規衝突產生，均應以美國華盛頓州之法律做為準據法。 所有其他訴訟將以　貴用戶居住之州/省法律為準據法，包含違反州/省消費者保護法、不當競爭法和侵權行為的訴訟。
+&nbsp;&nbsp;**的.   美國。** 若　貴用戶在美國境內取得軟體，本合約之解釋或任何違反本合約所衍生的訴訟，無論是否有法規衝突產生，均應以美國華盛頓州之法律做為準據法。 所有其他訴訟將以　貴用戶居住之州/省法律為準據法，包含違反州/省消費者保護法、不當競爭法和侵權行為的訴訟。
 
-&nbsp;&nbsp;**b. 美國以外地區。** 若　貴用戶在美國以外的國家/地區取得軟體，則本合約應以　貴用戶所居住之國家/地區的法律為準據法。
+&nbsp;&nbsp;**B。   美國以外的地區。** 若　貴用戶在美國以外的國家/地區取得軟體，則本合約應以　貴用戶所居住之國家/地區的法律為準據法。
 
 **11. 法律效力。** 此合約敘述特定的法律權利。 貴用戶所在國家/地區的法律可能會提供　貴用戶其他權利。 此外，　貴用戶取得軟體的單位可能也會提供相關的權利。 如　貴用戶所在國家/地區法律不允許，則本合約無法改變　貴用戶所在國家/地區法律提供給　貴用戶的權利。
 

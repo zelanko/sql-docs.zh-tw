@@ -1,6 +1,6 @@
 ---
 description: 使用使用者定義的資料表
-title: 使用使用者定義的資料表 |Microsoft Docs
+title: 使用 User-Defined 資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58f244f5216a016633b2f186d04ef9789267b6e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c1dd77a0558b2f4506179a4d4ebe87eba078801
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439709"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  
   
-  物件具有  屬性，這個屬性會參考  物件。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>該集合中的每個物件都有一個資料**行**屬性，會參考 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
+  物件具有  屬性，這個屬性會參考  物件。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>該集合中的每個物件都有一個資料 **行** 屬性，會參考 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
   
  當您使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件定義新的使用者定義資料表時，需要根據其中一個資料行提供資料行和主要金鑰。  
   

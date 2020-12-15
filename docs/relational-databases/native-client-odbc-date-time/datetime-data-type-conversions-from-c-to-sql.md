@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6fa65cd3bdfd8b6054be31f91eef811d7db4aac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0a65be08afc1a8570c64f7ffabddcb6c2d2d51b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438551"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   本主題列出當您從 C 類型轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型時要考慮的問題。  
   
- 下表描述的轉換會套用到用戶端上進行的轉換。 如果用戶端針對參數指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，用戶端轉換可能會成功，但是在呼叫 **SQLExecute** 或 **SQLExecuteDirect** 時，伺服器會傳回錯誤。 尤其是，ODBC 會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行為則是四捨五入; 例如，當您從 **datetime2 (6) ** 到 **datetime2 (2) **時，就會進行四捨五入。 Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
+ 下表描述的轉換會套用到用戶端上進行的轉換。 如果用戶端針對參數指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，用戶端轉換可能會成功，但是在呼叫 **SQLExecute** 或 **SQLExecuteDirect** 時，伺服器會傳回錯誤。 尤其是，ODBC 會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行為則是四捨五入; 例如，當您從 **datetime2 (6)** 到 **datetime2 (2)** 時，就會進行四捨五入。 Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
   
 |   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
 | - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
@@ -81,7 +81,7 @@ ms.locfileid: "88420652"
   
     |   | 隱含的小數位數 | 隱含的小數位數 |
     | - | ------------- | ------------- |
-    | **型別** | 0 | 1. 9 |  
+    | **類型** | 0 | 1. 9 |  
     |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      不過對於 SQL_C_TYPE_TIMESTAMP，如果可以用三位數代表小數秒而不會造成資料遺失，而且資料行大小為 23 以上，則會產生完整的三位數小數秒。 此行為可確保使用舊版 ODBC 驅動程式所開發之應用程式的回溯相容性。  

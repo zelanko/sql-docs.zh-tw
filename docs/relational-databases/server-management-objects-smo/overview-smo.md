@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439831"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91868264"
   
  直接執行是常用的執行方法。 陳述式會在發生時直接傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 擷取執行是這項處理的替代方式。  
   
- 擷取執行可讓您擷取通常應該執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。 這樣會讓 SMO 程式設計人員延遲指令碼、將它儲存起來供稍後執行，或是提供使用者的預覽。 例如， **create database**、 **create table**和 **create index** 語句可以在一個批次中傳送，然後以三個順序的步驟執行。 這項功能是由使用者利用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 物件所控制。  
+ 擷取執行可讓您擷取通常應該執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。 這樣會讓 SMO 程式設計人員延遲指令碼、將它儲存起來供稍後執行，或是提供使用者的預覽。 例如， **create database**、 **create table** 和 **create index** 語句可以在一個批次中傳送，然後以三個順序的步驟執行。 這項功能是由使用者利用 <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 物件所控制。  
   
  **WMI 提供者**  
   
@@ -110,9 +110,9 @@ ms.locfileid: "91868264"
   
  **指令碼**  
   
- 在 SMO 中，腳本已增強並移至腳本 **類別中** 。 **腳本**類別可以探索相依性、瞭解物件之間的關聯性，並啟用相依性階層的操作。 主要的腳本物件是腳本**物件。** 也有幾個支援物件可處理相依性及回應進度或錯誤事件。  
+ 在 SMO 中，腳本已增強並移至腳本 **類別中** 。 **腳本** 類別可以探索相依性、瞭解物件之間的關聯性，並啟用相依性階層的操作。 主要的腳本物件是腳本 **物件。** 也有幾個支援物件可處理相依性及回應進度或錯誤事件。  
   
- **腳本**物件支援下列 advanced 腳本選項：  
+ **腳本** 物件支援下列 advanced 腳本選項：  
   
 -   簡單 1 階段指令碼 (會在一個步驟中建立指令碼)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "91868264"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 物件的 URN 可以藉由參考它的 URN 屬性來加以擷取。 腳本物件也會使用 Urn 作為參數，將物件參考傳遞給 **腳本** 物件的方法。 此外，也可以為**伺服器**物件的**GETSMOOBJECT**方法指定 URN。 這是用來建立 SMO 物件的執行個體。  
+ 物件的 URN 可以藉由參考它的 URN 屬性來加以擷取。 腳本物件也會使用 Urn 作為參數，將物件參考傳遞給 **腳本** 物件的方法。 此外，也可以為 **伺服器** 物件的 **GETSMOOBJECT** 方法指定 URN。 這是用來建立 SMO 物件的執行個體。  
   
 ## <a name="sql-server-features-represented-in-smo"></a>在 SMO 中表示的 SQL Server 功能  
  **資料表和索引資料分割**  

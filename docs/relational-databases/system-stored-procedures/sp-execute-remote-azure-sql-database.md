@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 2ab1c51c53282b5f245cf7da0d33cf4f797bf53a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810244"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439460"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,11 +44,11 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引數  
- [ \@ data_source_name =] *datasourcename*  
+ [ \@ data_source_name =]   
  識別執行語句的外部資料源。 請參閱 [CREATE EXTERNAL DATA SOURCE &#40;transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部資料源可以是 "RDBMS" 或 "SHARD_MAP_MANAGER" 類型。  
   
  [ \@ stmt =] *語句*  
- 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，則前面必須加上 **N**。例如，Unicode 常數 **N ' sp_who '** 有效，但字元常數 **' Sp_who '** 則否。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串的大小限制為 2 GB， **Nvarchar (max) **的大小上限。  
+ 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，則前面必須加上 **N**。例如，Unicode 常數 **N ' sp_who '** 有效，但字元常數 **' Sp_who '** 則否。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串的大小限制為 2 GB， **Nvarchar (max)** 的大小上限。  
   
 > [!NOTE]  
 >  \@stmt 可以包含具有和變數名稱相同形式的參數，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
@@ -76,7 +76,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>備註  
  `sp_execute_remote` 參數必須依照上述語法一節中所述的特定順序輸入。 如果未按順序輸入參數，就會出現錯誤訊息。  
   
- `sp_execute_remote` 的行為與 [EXECUTE &#40;transact-sql&#41;](../../t-sql/language-elements/execute-transact-sql.md) 的行為與批次和名稱範圍有關。 在執行 sp_execute_remote 語句之前，不會編譯 sp_execute_remote * \@ stmt*參數中的 transact-sql 語句或批次。  
+ `sp_execute_remote` 的行為與 [EXECUTE &#40;transact-sql&#41;](../../t-sql/language-elements/execute-transact-sql.md) 的行為與批次和名稱範圍有關。 在執行 sp_execute_remote 語句之前，不會編譯 sp_execute_remote *\@ stmt* 參數中的 transact-sql 語句或批次。  
   
  `sp_execute_remote` 將額外的資料行加入至名為 ' $ShardName ' 的結果集，其中包含產生資料列的遠端資料庫名稱。  
   

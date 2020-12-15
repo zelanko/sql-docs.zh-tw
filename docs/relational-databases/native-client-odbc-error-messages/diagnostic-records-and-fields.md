@@ -20,13 +20,13 @@ helpviewer_keywords:
 - status information [ODBC]
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5370b0730328466dbdf1c1602bb4bdb3140c040e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: db45018b22f974a64159a55da39b2fceda10e90b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420562"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438499"
 ---
 # <a name="diagnostic-records-and-fields"></a>診斷記錄和欄位
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "88420562"
   
  **SQLGetDiagRec** 會抓取單一診斷記錄及其 ODBC SQLSTATE、原生錯誤號碼，以及診斷訊息欄位。 這項功能與 ODBC 2 類似。_x_**SQLError** 函數。 ODBC 3 中最簡單的錯誤處理函式。*x* 是要重複呼叫 **SQLGetDiagRec** ，從 *RecNumber* 參數設定為1，然後將 *RecNumber* 遞增1，直到 **SQLGetDiagRec** 傳回 SQL_NO_DATA 為止。 這相當於 ODBC 2。*x* 應用程式呼叫 **SQLError** ，直到它傳回 SQL_NO_DATA_FOUND 為止。  
   
- ODBC 3。*x* 比 ODBC 2 支援更多的診斷資訊。*x*。 這項資訊會儲存在使用 **SQLGetDiagField**抓取之診斷記錄的其他欄位中。  
+ ODBC 3。*x* 比 ODBC 2 支援更多的診斷資訊。*x*。 這項資訊會儲存在使用 **SQLGetDiagField** 抓取之診斷記錄的其他欄位中。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式具有可使用**SQLGetDiagField**抓取的驅動程式專用診斷欄位。 這些驅動程式特定欄位的標籤會定義在 sqlncli.h 中。 請使用這些標籤來擷取與每個診斷記錄相關聯的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 狀態、嚴重性層級、伺服器名稱、程序名稱和行號。 此外，如果應用程式呼叫 **SQLGetDiagField** 並將 *以* 設定為 SQL_DIAG_DYNAMIC_FUNCTION_CODE，則 sqlncli 包含驅動程式用來識別 transact-sql 語句的程式碼定義。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式具有可使用 **SQLGetDiagField** 抓取的驅動程式專用診斷欄位。 這些驅動程式特定欄位的標籤會定義在 sqlncli.h 中。 請使用這些標籤來擷取與每個診斷記錄相關聯的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 狀態、嚴重性層級、伺服器名稱、程序名稱和行號。 此外，如果應用程式呼叫 **SQLGetDiagField** 並將 *以* 設定為 SQL_DIAG_DYNAMIC_FUNCTION_CODE，則 sqlncli 包含驅動程式用來識別 transact-sql 語句的程式碼定義。  
   
- ODBC 驅動程式管理員會使用從基礎驅動程式快取的錯誤資訊來處理**SQLGetDiagField** 。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 如果在成功連接完成之前呼叫它來取得驅動程式特定的診斷欄位， **SQLGetDiagField**會傳回 SQL_ERROR。 如果 ODBC 連接函數傳回 SQL_SUCCESS_WITH_INFO，則連接函數的驅動程式特定的診斷欄位就還不能使用。 只有在您于 connect 函式之後進行另一個 ODBC 函數呼叫之後，才可以開始呼叫驅動程式專用診斷欄位的 **SQLGetDiagField** 。  
+ ODBC 驅動程式管理員會使用從基礎驅動程式快取的錯誤資訊來處理 **SQLGetDiagField** 。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 如果在成功連接完成之前呼叫它來取得驅動程式特定的診斷欄位， **SQLGetDiagField** 會傳回 SQL_ERROR。 如果 ODBC 連接函數傳回 SQL_SUCCESS_WITH_INFO，則連接函數的驅動程式特定的診斷欄位就還不能使用。 只有在您于 connect 函式之後進行另一個 ODBC 函數呼叫之後，才可以開始呼叫驅動程式專用診斷欄位的 **SQLGetDiagField** 。  
   
- 您只能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **SQLGetDiagRec**傳回的資訊，有效診斷 Native Client ODBC 驅動程式所報告的大部分錯誤。 不過，在某些情況下，由驅動程式特定的診斷欄位所傳回的資訊對於診斷錯誤十分重要。 使用 Native Client ODBC 驅動程式為應用程式撰寫 ODBC 錯誤處理常式的程式碼時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，最好也使用 **SQLGetDiagField** 來取得至少 SQL_DIAG_SS_MSGSTATE，並 SQL_DIAG_SS_SEVERITY 驅動程式專用的欄位。 如果特定錯誤可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼中的數個位置引發，SQL_DIAG_SS_MSGSTATE 會向 Microsoft 支援工程師明確地指出引發錯誤的位址，這項功能有時可以協助診斷問題。  
+ 您只能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **SQLGetDiagRec** 傳回的資訊，有效診斷 Native Client ODBC 驅動程式所報告的大部分錯誤。 不過，在某些情況下，由驅動程式特定的診斷欄位所傳回的資訊對於診斷錯誤十分重要。 使用 Native Client ODBC 驅動程式為應用程式撰寫 ODBC 錯誤處理常式的程式碼時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，最好也使用 **SQLGetDiagField** 來取得至少 SQL_DIAG_SS_MSGSTATE，並 SQL_DIAG_SS_SEVERITY 驅動程式專用的欄位。 如果特定錯誤可能會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼中的數個位置引發，SQL_DIAG_SS_MSGSTATE 會向 Microsoft 支援工程師明確地指出引發錯誤的位址，這項功能有時可以協助診斷問題。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理錯誤與訊息](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

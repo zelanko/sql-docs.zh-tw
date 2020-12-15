@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc1836b2e36ac3e665119ba86888bc5e38eecb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d0d7570b35f3d65c9f092b346e81fc37556dc5f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420592"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438511"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>日期和時間類型的 sql_variant 支援
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,12 +52,12 @@ ms.locfileid: "88420592"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
 |SQL_C_UTINYINT|TINYINT|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
 |SQL_C_BINARY|varbinary|不會設定 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale 設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的*DecimalDigits*參數。|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale 設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的*DecimalDigits*參數。|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale 設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的 *DecimalDigits* 參數。|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale 設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的 *DecimalDigits* 參數。|  
 |SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略。|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Scale 設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的*DecimalDigits*參數。|  
-|SQL_C_NUMERIC|decimal|有效位數設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的*ColumnSize*參數。<br /><br /> 將擴展集設定為 SQL_DESC_SCALE (SQLBindParameter) 的 *DecimalDigits* 參數。|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|Scale 設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的 *DecimalDigits* 參數。|  
+|SQL_C_NUMERIC|decimal|有效位數設定為 SQL_DESC_PRECISION (**SQLBindParameter**) 的 *ColumnSize* 參數。<br /><br /> 將擴展集設定為 SQL_DESC_SCALE (SQLBindParameter) 的 *DecimalDigits* 參數。|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE 會被忽略|  
   
