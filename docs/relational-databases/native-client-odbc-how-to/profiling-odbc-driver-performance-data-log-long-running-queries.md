@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b5eb57bb4e88ebcad9a3ffdfdf9517a2f2576cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868889"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419358"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>分析 ODBC 驅動程式效能資料 - 記錄長時間執行的查詢
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868889"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理員記錄長時間執行的查詢  
   
-1.  在 **主控台**中，按兩下 [系統 **管理工具** ]，然後按兩下 [ **資料來源] ([ODBC) **。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
+1.  在 **主控台** 中，按兩下 [系統 **管理工具** ]，然後按兩下 [ **資料來源] ([ODBC)**。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
   
 2.  按一下 [ **使用者 dsn**]、[ **系統 dsn**] 或 [檔案 **DSN** ] 索引標籤。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "91868889"
   
 4.  按一下 [設定]  。  
   
-5.  在 [設定 DSN] Microsoft SQL Server 中，流覽至 [ **將長時間執行的查詢儲存到記錄**檔] 頁面。  
+5.  在 [設定 DSN] Microsoft SQL Server 中，流覽至 [ **將長時間執行的查詢儲存到記錄** 檔] 頁面。  
   
-6.  選取 **[將長時間執行的查詢儲存到記錄**檔]。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性）按一下 **[流覽** ] 來流覽檔案系統中的查詢記錄。  
+6.  選取 **[將長時間執行的查詢儲存到記錄** 檔]。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性）按一下 **[流覽** ] 來流覽檔案系統中的查詢記錄。  
   
-7.  在 [查詢 **時間長度] ([毫秒]) ** 方塊中，設定查詢逾時間隔（以毫秒為單位）。  
+7.  在 [查詢 **時間長度] ([毫秒])** 方塊中，設定查詢逾時間隔（以毫秒為單位）。  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以程式設計方式記錄長時間執行的查詢資料  
   

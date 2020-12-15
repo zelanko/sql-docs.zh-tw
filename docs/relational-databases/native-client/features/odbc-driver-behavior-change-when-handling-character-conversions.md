@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c2230327a92a560291aacbf802ae775b99fe8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5d74887afafcc4ab0c00881081bf8abf941ac551
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498885"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97418646"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>ODBC 驅動程式在處理字元轉換上的行為變更
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- 只能呼叫**SQLGetData**來取出實際資料的區塊。 不支援使用 **SQLGetData** 來取得資料的大小。  
+ 只能呼叫 **SQLGetData** 來取出實際資料的區塊。 不支援使用 **SQLGetData** 來取得資料的大小。  
   
  以下說明當您使用不正確的寫法時，驅動程式變更所造成的影響。 此應用程式會查詢 **Varchar** 資料行，並以 Unicode (SQL_UNICODE/SQL_WCHAR) 進行系結：  
   
@@ -106,7 +106,7 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
 ## <a name="performing-char-and-wchar-conversions"></a>執行 CHAR 和 WCHAR 轉換  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驅動程式提供了幾種方法來執行 CHAR 和 WCHAR 轉換。 邏輯類似于將 blob 操作 (Varchar (max) 、Nvarchar (max) 、... ) ：  
   
--   使用 **SQLBindCol** 或 **SQLBindParameter**系結時，資料會儲存或截斷至指定的緩衝區。  
+-   使用 **SQLBindCol** 或 **SQLBindParameter** 系結時，資料會儲存或截斷至指定的緩衝區。  
   
 -   如果您未系結，您可以使用 **SQLGetData** 和 **SQLParamData**，以區塊形式取出資料。  
   

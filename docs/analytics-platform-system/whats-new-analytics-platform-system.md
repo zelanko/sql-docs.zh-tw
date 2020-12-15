@@ -9,19 +9,19 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420165"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，擴充 MPP 資料倉儲
 請參閱 Microsoft Analytics Platform System (AP) 最新設備更新的新功能。 AP 是一個將 MPP SQL Server 平行處理資料倉儲的相應放大內部部署設備。 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
-## <a name="aps-cu77"></a>AP CU 7。7
+## <a name="aps-cu77"></a>APS CU7.7
 發行日期-2020 年11月
 
 ### <a name="scvmm2016"></a>SCVMM2016
@@ -147,10 +147,10 @@ AP 支援 T-sql [dbcc 命令](../t-sql/database-console-commands/dbcc-transact-s
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>以目錄物件取代某些中繼資料呼叫
 使用目錄物件進行中繼資料呼叫，而不使用 SMO，在 AP 中顯示效能改進。 從 CU 7.1 開始，其中有些中繼資料呼叫現在預設會使用目錄物件。 如果使用中繼資料查詢的客戶遇到任何問題，則 [功能切換](appliance-feature-switch.md) 可關閉此行為。
 
-### <a name="bug-fixes"></a>Bug 修正
+### <a name="bug-fixes"></a>錯誤修正
 我們已使用 AP CU 7.1 升級至 SQL Server 2016 SP2 CU2。 升級會修正以下所述的一些問題。
 
-| 標題 | 說明 |
+| 標題 | 描述 |
 |:---|:---|
 | **可能的元組移動器鎖死** |升級會修正分散式交易和元組移動背景執行緒中長期鎖死的可能性。 安裝 CU 7.1 之後，使用 TF634 來停止元組移動器的客戶，SQL Server 啟動參數或全域追蹤旗標，可以安全地將它移除。 | 
 | **某些延遲/潛在客戶查詢失敗** |在對 CCI 資料表具有可能發生錯誤之嵌套延遲/潛在客戶函式的特定查詢，現在已透過此升級來修正。 | 
@@ -179,7 +179,7 @@ AP AU7 引進 [Configuration Manager](launch-the-configuration-manager.md)中的
 Microsoft 建議所有客戶安裝 BIOS 更新。 Microsoft 已測量核心虛擬位址遮蔽 (KVAS) 、核心頁面資料表間接取值 (KPTI) 和間接分支預測風險降低 (IBP) 在各種環境中的各種 SQL 工作負載的影響。 度量發現某些工作負載的效能大幅降低。 根據結果，建議您先測試啟用 BIOS 更新的效能效果，再將它們部署在生產環境中。 請參閱 [此處](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)的 SQL Server 指引。
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 本節說明 AP 2016-AU6 的新功能。

@@ -1,6 +1,6 @@
 ---
-title: 通用子運算式
-description: 顯示分析平臺系統 CU 7.3 中引進的範例查詢改進
+title: 一般子運算式
+description: 顯示在 Analytics Platform System CU 7.3 中引進的範例查詢改進
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,17 +9,17 @@ ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>= aps-pdw-2016-au7'
+ms.openlocfilehash: 8dfadabcae27ff8705d86294b1c05851245d199c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420197"
 ---
-# <a name="common-subexpression-elimination-explained"></a>已說明常見的子運算式刪除
+# <a name="common-subexpression-elimination-explained"></a>常見的子運算式清除已說明
 
-透過在 SQL 查詢最佳化工具中使用常見的子運算式排除功能，AP CU 7.3 改善了查詢效能。 這項改進可透過兩種方式來改善查詢。 第一個優點是能夠識別並排除這類運算式，有助於減少 SQL 編譯時間。 第二個和更重要的優點是，這些多餘子運算式的資料移動作業會被排除，因此查詢的執行時間會變得更快。
+AP CU 7.3 利用 SQL 查詢最佳化工具中常見的子運算式消除來改善查詢效能。 改進以兩種方式改善查詢。 第一個優點是識別並消除這類運算式有助於減少 SQL 編譯時間的能力。 第二個和更重要的優點是，這些多餘子運算式的資料移動作業已被刪除，因此查詢的執行時間會變得更快。
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -55,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-請考慮來自 TPC-DS 基準測試工具的上述查詢。  在上述查詢中，子查詢是相同的，但是 order by 子句 with rank （） over 函數會以兩種不同的方式排序。 在 CU 7.3 之前，此子查詢將會進行評估並執行兩次，一次為遞增順序，一次為遞減順序，會產生兩個數據移動作業。 安裝了「AP CU 7.3」之後，會評估子查詢元件一次，因而減少資料移動並更快完成查詢。
+請考慮來自 TPC DS 基準測試工具的上述查詢。  在上述查詢中，子查詢相同，但 order by 子句的 rank ( # A1 over 函式是以兩種不同的方式排序。 在 CU 7.3 之前，此子查詢會進行評估並執行兩次，一次是遞增順序，而針對遞減順序，則會產生兩個數據移動作業。 在安裝了「AP CU 7.3」之後，子查詢部分將會被評估一次，藉此減少資料移動，並更快完成查詢。
 
-我們引進了稱為「OptimizeCommonSubExpressions」的[功能參數](appliance-feature-switch.md)，可讓您在升級至「ap cu 7.3」之後，測試此功能。 此功能預設為開啟，但可以關閉。 
+我們引進了稱為「OptimizeCommonSubExpressions」的 [功能交換器](appliance-feature-switch.md) ，即使在升級至「ap cu 7.3」之後，也能讓您測試此功能。 此功能預設為開啟，但可以關閉。 
 
 > [!NOTE] 
 > 功能切換值的變更需要重新開機服務。
 
-您可以在測試環境中建立下列資料表，並評估上述查詢的說明計畫，以嘗試範例查詢。 
+您可以藉由在測試環境中建立下列資料表來嘗試範例查詢，並評估上述查詢的說明計畫。 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -118,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-如果您看一下查詢的說明計畫，就會看到在 CU 7.3 之前（或當功能切換關閉時）查詢有17個總作業數，以及在 CU 7.3 之後（或開啟功能開關），相同的查詢會顯示9個總作業數。 如果您只計算資料移動作業，則會看到上一個計畫在新的方案中有四個移動作業與兩個移動作業。 新的查詢最佳化工具能夠藉由重複使用已建立的臨時表來減少兩個數據移動作業，進而減少查詢執行時間。 
+如果您查看查詢的說明計畫，您將會看到在 CU 7.3 (或功能切換關閉) 查詢有17個作業總數，以及在 CU 7.3 (或已開啟功能切換之後) 相同的查詢顯示9個作業總數。 如果您只計算資料移動作業，您將會看到先前的方案有四個移動作業，以及新方案中的兩個移動作業。 新的查詢最佳化工具可以減少兩個數據移動作業，方法是重複使用已使用新方案建立的臨時表，從而減少查詢執行時間。 
 
 
