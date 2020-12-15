@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e4afeb9f30040cf576a35b1b822bf5292752c148
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809144"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427146"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-sql) 
 
@@ -64,6 +64,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## <a name="next-steps"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
 [時態表保留原則](/azure/sql-database/sql-database-temporal-tables-retention-policy)
