@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 912a025e689343ffe3dce2ccc19dbec600576cd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7e51247bec904bbd4d735e5706814c2b60bdfed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97437935"
 ---
 # <a name="processing-results-odbc"></a>處理結果 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867273"
   
  GRANT 或 REVOKE 之類的 SQL 陳述式不會傳回結果集。 針對這些語句， **SQLExecute** 或 **SQLExecDirect** 的傳回碼通常是語句成功的唯一指示。  
   
- 每個 INSERT、UPDATE 和 DELETE 陳述式都會傳回只包含受到修改影響之資料列數目的結果集。 當應用程式呼叫 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)時，就可以使用此計數。 ODBC 3。*x* 應用程式必須呼叫 **SQLRowCount** 來取得結果集或 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ，才能將其取消。 當應用程式執行包含多個 INSERT、UPDATE 或 DELETE 子句的批次或預存程式時，必須使用 **SQLRowCount** 處理每個修改語句的結果集，或使用 **SQLMoreResults**來取消。 在批次或預存程序中加入 SET NOCOUNT ON 陳述式可以取消這些計數。  
+ 每個 INSERT、UPDATE 和 DELETE 陳述式都會傳回只包含受到修改影響之資料列數目的結果集。 當應用程式呼叫 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)時，就可以使用此計數。 ODBC 3。*x* 應用程式必須呼叫 **SQLRowCount** 來取得結果集或 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ，才能將其取消。 當應用程式執行包含多個 INSERT、UPDATE 或 DELETE 子句的批次或預存程式時，必須使用 **SQLRowCount** 處理每個修改語句的結果集，或使用 **SQLMoreResults** 來取消。 在批次或預存程序中加入 SET NOCOUNT ON 陳述式可以取消這些計數。  
   
  Transact-SQL 包括 SET NOCOUNT 陳述式。 當 NOCOUNT 選項設定為 on 時，SQL Server 不會傳回受語句影響的資料列計數，而 **SQLRowCount** 會傳回0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式版本引進了驅動程式專用的[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)選項 SQL_SOPT_SS_NOCOUNT_STATUS，以報告 NOCOUNT 選項是開啟或關閉。 每當 **SQLRowCount** 傳回0時，應用程式應該測試 SQL_SOPT_SS_NOCOUNT_STATUS。 如果傳回 SQL_NC_ON，則 **SQLRowCount** 中的0值只會指出 SQL Server 尚未傳回資料列計數。 如果傳回 SQL_NC_OFF，則表示 NOCOUNT 為 OFF，而 **SQLRowCount** 的值表示語句不會影響任何資料列。 SQL_NC_OFF SQL_SOPT_SS_NOCOUNT_STATUS 時，應用程式不應該顯示 **SQLRowCount** 的值。 大型批次或預存程序可能包含多個 SET NOCOUNT 陳述式，因此，程式設計人員無法假設 SQL_SOPT_SS_NOCOUNT_STATUS 仍為常數。 每次 **SQLRowCount** 傳回0時，應測試選項。  
   
