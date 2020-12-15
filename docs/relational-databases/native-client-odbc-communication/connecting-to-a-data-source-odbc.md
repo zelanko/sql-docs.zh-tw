@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7ad5c6c822bff351c09d264b25310e8ca51990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dabf2e0c4fe2f23ad5dee576c73a2bafdb67a8be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425130"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464949"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>連接至資料來源 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,12 +46,12 @@ ms.locfileid: "88425130"
  如需有關建立資料來源連接的詳細資訊，包括可用的各種連接字串選項，請參閱 [使用連接字串關鍵字搭配 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
- **SQLConnect** 是最簡單的連接函數。 它接受三種參數：資料來源名稱、使用者識別碼與密碼。 當這三個參數包含連接到資料庫所需的所有資訊時，請使用 **SQLConnect** 。 若要這樣做，請使用 **SQLDataSources**建立資料來源的清單。提示使用者提供資料來源、使用者識別碼和密碼;然後呼叫 **SQLConnect**。  
+ **SQLConnect** 是最簡單的連接函數。 它接受三種參數：資料來源名稱、使用者識別碼與密碼。 當這三個參數包含連接到資料庫所需的所有資訊時，請使用 **SQLConnect** 。 若要這樣做，請使用 **SQLDataSources** 建立資料來源的清單。提示使用者提供資料來源、使用者識別碼和密碼;然後呼叫 **SQLConnect**。  
   
  **SQLConnect** 會假設資料來源名稱、使用者識別碼和密碼都足以連接到資料來源，而且 odbc 資料來源包含 odbc 驅動程式建立連接所需的所有其他資訊。 不同于 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 和 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)， **SQLConnect** 不會使用連接字串。  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
- 當需要超過資料來源名稱、使用者識別碼和密碼的資訊時，就會使用**SQLDriverConnect** 。 其中一個要 **SQLDriverConnect** 的參數是包含驅動程式特定資訊的連接字串。 您可以使用 **SQLDriverConnect** 而非 **SQLConnect** ，原因如下：  
+ 當需要超過資料來源名稱、使用者識別碼和密碼的資訊時，就會使用 **SQLDriverConnect** 。 其中一個要 **SQLDriverConnect** 的參數是包含驅動程式特定資訊的連接字串。 您可以使用 **SQLDriverConnect** 而非 **SQLConnect** ，原因如下：  
   
 -   在連接階段指定驅動程式專屬的資訊。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "88425130"
   
 -   不使用 ODBC 資料來源連接。  
   
- **SQLDriverConnect**連接字串包含一系列的關鍵字-值配對，可指定 ODBC 驅動程式支援的所有連接資訊。 除了供驅動程式支援之所有連接資訊使用的驅動程式專屬關鍵字之外，每個驅動程式還支援標準 ODBC 關鍵字 (DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE)。 **SQLDriverConnect** 可以用來連接，而不需要資料來源。 例如，設計用來對實例進行「無 DSN」連接的應用程式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用定義登入識別碼、密碼、網路程式庫、要連接的伺服器名稱，以及要使用之預設資料庫的連接字串來呼叫 **SQLDriverConnect** 。  
+ **SQLDriverConnect** 連接字串包含一系列的關鍵字-值配對，可指定 ODBC 驅動程式支援的所有連接資訊。 除了供驅動程式支援之所有連接資訊使用的驅動程式專屬關鍵字之外，每個驅動程式還支援標準 ODBC 關鍵字 (DSN、FILEDSN、DRIVER、UID、PWD 和 SAVEFILE)。 **SQLDriverConnect** 可以用來連接，而不需要資料來源。 例如，設計用來對實例進行「無 DSN」連接的應用程式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用定義登入識別碼、密碼、網路程式庫、要連接的伺服器名稱，以及要使用之預設資料庫的連接字串來呼叫 **SQLDriverConnect** 。  
   
- 使用 **SQLDriverConnect**時，有兩個選項可提示使用者輸入任何所需的連接資訊：  
+ 使用 **SQLDriverConnect** 時，有兩個選項可提示使用者輸入任何所需的連接資訊：  
   
 -   應用程式對話方塊  
   
@@ -80,9 +80,9 @@ ms.locfileid: "88425130"
   
      例如，使用者介面可能會先瀏覽網路中的伺服器，然後在選擇伺服器之後，瀏覽伺服器中可由驅動程式存取的資料庫。  
   
- 當 **SQLBrowseConnect** 完成連接成功時，它會傳回一個連接字串，可用於後續的 **SQLDriverConnect**呼叫。  
+ 當 **SQLBrowseConnect** 完成連接成功時，它會傳回一個連接字串，可用於後續的 **SQLDriverConnect** 呼叫。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式永遠會在成功**SQLConnect**、 **SQLDriverConnect**或**SQLBrowseConnect**上傳回 SQL_SUCCESS_WITH_INFO。 當 ODBC 應用程式在取得 SQL_SUCCESS_WITH_INFO 之後呼叫 **SQLGetDiagRec** 時，可能會收到下列訊息：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式永遠會在成功 **SQLConnect**、 **SQLDriverConnect** 或 **SQLBrowseConnect** 上傳回 SQL_SUCCESS_WITH_INFO。 當 ODBC 應用程式在取得 SQL_SUCCESS_WITH_INFO 之後呼叫 **SQLGetDiagRec** 時，可能會收到下列訊息：  
   
  5701  
  表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將使用者的內容放入資料來源中定義的預設資料庫，或在資料來源沒有預設資料庫時，放入針對連接中所使用之登入識別碼所定義的預設資料庫中。  

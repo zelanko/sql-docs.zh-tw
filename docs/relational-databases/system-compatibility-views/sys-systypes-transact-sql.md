@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b5e4f2d0974889d0ce4158648b2fc44692926b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9bd2a68f151a136a5bb9de7efd170c7178d8001e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464669"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,16 +43,16 @@ ms.locfileid: "88375224"
 |**xtype**|**tinyint**|實體儲存類型。|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|擴充使用者類型。 如果資料類型的數目超過 32,767，則會造成溢位或傳回 NULL。|  
-|**length**|**smallint**|資料類型的實際長度。|  
+|**length** (長度)|**smallint**|資料類型的實際長度。|  
 |**xprec**|**tinyint**|符合伺服器所用的內部有效位數。 不會用在查詢中。|  
 |**xscale**|**tinyint**|符合伺服器所用的內部小數位數。 不會用在查詢中。|  
 |**tdefault**|**int**|包含這個資料類型之完整性檢查的預存處理序識別碼。|  
 |**域**|**int**|包含這個資料類型之完整性檢查的預存處理序識別碼。|  
-|**Uid**|**smallint**|類型擁有者的結構描述識別碼。<br /><br /> 如果是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級而來的資料庫，結構描述識別碼會等於擁有者的使用者識別碼。<br /><br /> ** \* \* 重要 \* 事項 \* ** ：如果您使用下列任何一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 語句，則必須使用[sys. 類型](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視，而不是**sys.sys類型**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
+|**Uid**|**smallint**|類型擁有者的結構描述識別碼。<br /><br /> 如果是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級而來的資料庫，結構描述識別碼會等於擁有者的使用者識別碼。<br /><br /> **\* \* 重要 \* 事項 \*** ：如果您使用下列任何一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL 語句，則必須使用 [sys. 類型](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視，而不是 **sys.sys類型**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
 |**保留**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|如果是以字元為基礎， **collationid** 是目前資料庫之定序的識別碼;否則，它會是 Null。|  
 |**usertype**|**smallint**|使用者類型識別碼。 如果資料類型的數目超過 32,767，則會造成溢位或傳回 NULL。|  
-|**變數**|**bit**|可變長度資料類型。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**variable**|**bit**|可變長度資料類型。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|指出這項資料類型的預設 Null 屬性。 如果使用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)來指定 null 屬性，就會覆寫這個預設值。|  
 |**type**|**tinyint**|實體儲存體資料類型。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

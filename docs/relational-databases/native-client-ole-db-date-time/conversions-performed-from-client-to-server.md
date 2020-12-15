@@ -13,13 +13,13 @@ ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bd997af611ec04a67d937752bde8318eb70ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2f618eebe85de63dbcff5c7fdfad4dc1331a614a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467659"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的 SQL Server Native Client 轉換
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88328014"
 |6|時間會設定為零。|  
 |7|日期會設定為目前的日期。|  
 |8|時間會轉換成 UTC。 如果此轉換期間發生錯誤，則會設定 DBSTATUS_E_CANTCONVERTVALUE。|  
-|9|此字串會剖析為 ISO 常值，並轉換為目標類型。 如果失敗，字串會剖析為 OLE 日期常值 (也有時間元件)，並從 OLE 日期 (DBTYPE_DATE) 轉換為目標類型。<br /><br /> 如果目標類型為 DBTIMESTAMP、 **smalldatetime**、 **datetime**或 **datetime2**，字串必須符合日期、時間或 **datetime2** 常值的語法，或者是 OLE 所識別的語法。 如果字串為日期常值，所有時間元件都會設定為零。 如果字串為時間常值，日期會設定目前的日期。<br /><br /> 對於其他所有目標類型，字串必須符合目標類型之常值的語法。|  
+|9|此字串會剖析為 ISO 常值，並轉換為目標類型。 如果失敗，字串會剖析為 OLE 日期常值 (也有時間元件)，並從 OLE 日期 (DBTYPE_DATE) 轉換為目標類型。<br /><br /> 如果目標類型為 DBTIMESTAMP、 **smalldatetime**、 **datetime** 或 **datetime2**，字串必須符合日期、時間或 **datetime2** 常值的語法，或者是 OLE 所識別的語法。 如果字串為日期常值，所有時間元件都會設定為零。 如果字串為時間常值，日期會設定目前的日期。<br /><br /> 對於其他所有目標類型，字串必須符合目標類型之常值的語法。|  
 |10|如果截斷的小數秒發生資料遺失，則會設定 DBSTATUS_E_DATAOVERFLOW。 對於字串轉換，只有在字串符合 ISO 語法時，才能進行溢位檢查。 如果字串為 OLE 日期常值，會捨去小數秒。<br /><br /> 若為從 DBTIMESTAMP (datetime) 到 smalldatetime 的轉換， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 將以無訊息的方式截斷秒數值，而非引發 DBSTATUS_E_DATAOVERFLOW 錯誤。|  
 |11|根據下表，小數秒的位數 (小數位數) 會從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> 不過，如果來源類型為 DBTIMESTAMP 而且小數秒為零，則不會產生任何小數秒位數或小數點。 此行為可確保使用舊版 OLE DB 提供者所開發之應用程式的回溯相容性。<br /><br /> 資料行大小 ~0 在 OLE DB 中隱含為大小無限制 (除非 DBTIMESTAMP 套用 3 位數規則，否則為 9 位數)。|  
 |12|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 小數秒會截斷到零。|  

@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ae867ff6291b9c11865c9fd0488d7ef0fb0572c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dab49c59b04c09dc550e9fa922ec6f40dbb3fd6d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542975"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466779"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  建立 **xp_cmdshell**的 proxy 認證。  
+  建立 **xp_cmdshell** 的 proxy 認證。  
   
 > [!NOTE]  
->  預設會停用**xp_cmdshell** 。 若要啟用 **xp_cmdshell**，請參閱 [Xp_cmdshell Server Configuration 選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  預設會停用 **xp_cmdshell** 。 若要啟用 **xp_cmdshell**，請參閱 [Xp_cmdshell Server Configuration 選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

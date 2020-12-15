@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b7bf378b184a019c45fe20fac4dae8f995f7009
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b03afedd01095ddfc233eca9722e9eecde8f840
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543248"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468359"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,9 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'table'` 這是目前資料庫中傳回觸發程式資訊的資料表名稱。 *資料表* 是 **Nvarchar (776) **，沒有預設值。  
+`[ @tabname = ] 'table'` 這是目前資料庫中傳回觸發程式資訊的資料表名稱。 *資料表* 是 **Nvarchar (776)**，沒有預設值。  
   
-`[ @triggertype = ] 'type'` 這是傳回相關資訊的 DML 觸發程式類型。 *類型* 是 **char (6) **，預設值是 Null，而且可以是下列值之一。  
+`[ @triggertype = ] 'type'` 這是傳回相關資訊的 DML 觸發程式類型。 *類型* 是 **char (6)**，預設值是 Null，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

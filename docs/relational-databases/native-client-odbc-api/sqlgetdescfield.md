@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e81ed53721914502d1a4c90aeff9c55808588c7f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 93d040ac1d32ad04eda08d86646202621b9254b6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810534"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465149"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "91810534"
   
  如需詳細資訊，請參閱 [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
- 從開始 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，如果您**的**應用程式使用 ODBC 3.8，SQLGetDescField 可以傳回**時間**類型**SQL_C_SS_TIME2** () 或**SQL_C_SS_TIMESTAMPOFFSET** (（而不是 **) **）。  
+ 從開始 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，如果您 **的** 應用程式使用 ODBC 3.8，SQLGetDescField 可以傳回 **時間** 類型 **SQL_C_SS_TIME2** () 或 **SQL_C_SS_TIMESTAMPOFFSET** (（而不是 **)**）。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLGetDescField 支援  
- **SQLGetDescField** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR 使用者自訂類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLGetDescField** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR User-Defined 類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>疏鬆資料行的 SQLGetDescField 支援  
  SQLGetDescField 可以用來查詢新的 IRD 欄位 SQL_CA_SS_IS_COLUMN_SET，以判斷資料行是否為 **column_set** 的資料行。  

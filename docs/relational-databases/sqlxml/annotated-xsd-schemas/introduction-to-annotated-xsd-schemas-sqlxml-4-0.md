@@ -1,6 +1,6 @@
 ---
-title: 批註式 XSD 架構簡介（SQLXML）
-description: 瞭解如何使用 XML 架構定義（XSD）語言（SQLXML 4.0）來建立關聯式資料的 XML 視圖。
+title: " (SQLXML) 批註式 XSD 架構簡介"
+description: 瞭解如何使用 XML 架構定義來建立關聯式資料的 XML 視圖 (XSD) 語言 (SQLXML 4.0) 。
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,13 +22,13 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6567b5dfa6a6b83298793c9e5f2962d9c1bdb878
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d82028477d11cb53034a8ea3f6e40fde17cf205e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467089"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85764827"
   
  XML 結構描述會描述 XML 文件的結構，而且也會描述文件中資料的各種條件約束。 針對結構描述指定 XPath 查詢時，傳回之 XML 文件的結構取決於執行 XPath 查詢所針對的結構描述。  
   
- 在 XSD 架構中， **\<xsd:schema>** 元素會括住整個架構; 所有元素宣告都必須包含在 **\<xsd:schema>** 元素內。 您可以描述定義架構所在之命名空間的屬性，以及在架構中用來做為元素屬性的命名空間 **\<xsd:schema>** 。  
+ 在 XSD 架構中， **\<xsd:schema>** 元素會括住整個架構，所有元素宣告都必須包含在 **\<xsd:schema>** 元素中。 您可以描述定義架構所在之命名空間的屬性，以及在架構中用來做為元素屬性的命名空間 **\<xsd:schema>** 。  
   
  有效的 XSD 架構必須包含定義如下的 **\<xsd:schema>** 元素：  
   
@@ -55,10 +55,10 @@ ms.locfileid: "85764827"
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中，XSD 結構描述語言支援 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 中註解式 XML-Data Reduced (XDR) 結構描述語言所導入的註解。 註解式 XDR 在 SQLXML 4.0 中已被取代。  
   
- 在關聯式資料庫的內容中，將任意的 XSD 結構描述對應到關聯式存放區相當實用。 封存的其中一種方式是為 XSD 結構描述註解。 具有批註的 XSD 架構稱為*對應架構*，它會提供有關如何將 XML 資料對應到關聯式存放區的資訊。 實際上，對應結構描述就是關聯式資料的 XML 檢視。 這些對應可用於擷取關聯式資料做為 XML 文件。  
+ 在關聯式資料庫的內容中，將任意的 XSD 結構描述對應到關聯式存放區相當實用。 封存的其中一種方式是為 XSD 結構描述註解。 具有批註的 XSD 架構稱為 *對應架構*，它會提供有關如何將 XML 資料對應到關聯式存放區的相關資訊。 實際上，對應結構描述就是關聯式資料的 XML 檢視。 這些對應可用於擷取關聯式資料做為 XML 文件。  
   
 ## <a name="namespace-for-annotations"></a>註解的命名空間  
- 在 XSD 架構中，批註是使用命名空間**urn：架構-microsoft-com：對應架構**來指定。 如下列範例所示，指定命名空間最簡單的方式，就是在標記中指定它 **\<xsd:schema>** 。  
+ 在 XSD 架構中，批註是使用命名空間 **urn：架構-microsoft-com：對應架構** 來指定。 如下列範例所示，指定命名空間最簡單的方式是在標記中指定它 **\<xsd:schema>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -67,10 +67,10 @@ ms.locfileid: "85764827"
 </xsd:schema>  
 ```  
   
- 所使用的命名空間前置詞是任意的。 在此檔中，會使用**sql**前置詞來表示批註命名空間，並區別此命名空間與其他命名空間中的批註。  
+ 所使用的命名空間前置詞是任意的。 在此檔中， **sql** 前置詞是用來表示批註命名空間，並區別此命名空間與其他命名空間中的注釋。  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>註解式 XSD 結構描述的範例  
- 在下列範例中，XSD 架構是由元素所組成 **\<Person.Contact>** 。 **\<Employee>** 元素具有**ContactID**屬性和 **\<FirstName>** 和 **\<LastName>** 子項目：  
+ 在下列範例中，XSD 架構是由元素所組成 **\<Person.Contact>** 。 **\<Employee>** 元素具有 **ContactID** 屬性和 **\<FirstName>** 和 **\<LastName>** 子項目：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,7 +111,7 @@ ms.locfileid: "85764827"
 </xsd:schema>  
 ```  
   
- 在對應架構中，專案 **\<Contact>** 會對應至範例 AdventureWorks 資料庫中的 Person. Contact 資料表，方法是使用**sql： relation**注釋。 ConID、FName 和 LName 屬性會對應至 Person 資料表中的 ContactID、FirstName 和 LastName 資料行，方法是使用**sql：欄位**注釋。  
+ 在對應架構中，專案 **\<Contact>** 會對應至範例 AdventureWorks 資料庫中的 Person 資料表（使用 **sql： relation** 注釋）。 ConID、FName 和 LName 屬性會使用 **sql：欄位** 批註，對應到 Person 資料表中的 ContactID、FirstName 和 LastName 資料行。  
   
  此註解式 XSD 結構描述會提供關聯式資料的 XML 檢視。 您可以使用 XPath 語言來查詢這個 XML 檢視。 XPath 查詢會傳回 XML 文件當做結果，而不是 SQL 查詢所傳回的資料列集。  
   
@@ -121,18 +121,18 @@ ms.locfileid: "85764827"
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 架構第0部分：入門、W3C 建議（https://www.w3.org/TR/xmlschema-0/)  
+-   XML 架構第0部分：入門、W3C 建議 (https://www.w3.org/TR/xmlschema-0/)  
   
--   XML 架構第1部分：結構、W3C 建議（https://www.w3.org/TR/xmlschema-1/)  
+-   XML 架構第1部分：結構，W3C 建議 (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML 架構第2部分：資料類型、W3C 建議（https://www.w3.org/TR/xmlschema-2/)  
+-   XML 架構第2部分：資料類型，W3C 建議 (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路徑語言（XPath）（https://www.w3.org/TR/xpath)  
+-   XML 路徑語言 (XPath)  (https://www.w3.org/TR/xpath)  
   
--   XSL 轉換（XSLT）（https://www.w3.org/TR/xslt)  
+-    (XSLT) 的 XSL 轉換 (https://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SQLXML 4.0&#41;的批註式架構安全性考慮](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [批註式 XDR 架構 &#40;在 SQLXML 4.0 中被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的批註式架構安全性考慮 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [&#40;在 SQLXML 4.0 中被取代的批註式 XDR 架構&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

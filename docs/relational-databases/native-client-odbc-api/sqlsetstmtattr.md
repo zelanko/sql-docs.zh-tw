@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868458"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465099"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91868458"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式也支援下列驅動程式專屬的陳述式屬性。  
   
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
- SQL_SOPT_SS_CURSOR 屬性會指定驅動程式是否會在資料指標上使用驅動程式專屬的效能選項。 設定這些選項時，不允許[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 預設值為 SQL_CO_OFF。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_CURSOR 屬性會指定驅動程式是否會在資料指標上使用驅動程式專屬的效能選項。 設定這些選項時，不允許[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 預設值為 SQL_CO_OFF。 *ValuePtr* 值的類型為 SQLLEN。  
   
 |*ValuePtr* 值|描述|  
 |----------------------|-----------------|  
@@ -60,10 +60,10 @@ ms.locfileid: "91868458"
   
  設定這些選項時，如果伺服器偵測到已經提取最後一個資料列，則會自動關閉資料指標。 應用程式仍然必須呼叫 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) 或 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)，但驅動程式不需要將關閉通知傳送至伺服器。  
   
- 如果選取清單包含 **text**、 **Ntext**或 **image** 資料行，則快速順向資料指標會轉換成動態資料指標，並允許 **SQLGetData** 。  
+ 如果選取清單包含 **text**、 **Ntext** 或 **image** 資料行，則快速順向資料指標會轉換成動態資料指標，並允許 **SQLGetData** 。  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
- SQL_SOPT_SS_DEFER_PREPARE 屬性會決定在執行 **SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 之前，語句是否立即準備或延後。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和先前版本中，會忽略此屬性 (沒有延遲準備)。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_DEFER_PREPARE 屬性會決定在執行 **SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 之前，語句是否立即準備或延後。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和先前版本中，會忽略此屬性 (沒有延遲準備)。 *ValuePtr* 值的類型為 SQLLEN。  
   
 |*ValuePtr* 值|描述|  
 |----------------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "91868458"
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
  SQL_SOPT_SS_REGIONALIZE 屬性用於決定陳述式層級的資料轉換。 將日期、時間和貨幣值轉換為字元字串時，此屬性會使驅動程式遵從用戶端的地區設定。 此轉換僅能從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型轉換成字元字串。  
   
- *ValuePtr*值的類型為 SQLLEN。  
+ *ValuePtr* 值的類型為 SQLLEN。  
   
 |*ValuePtr* 值|描述|  
 |----------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "91868458"
  變更資料來源的地區行為可能會導致應用程式失敗。 剖析日期字串並預期日期字串如 ODBC 定義之方式顯示的應用程式，可能會受到變更此值的負面影響。  
   
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
- SQL_SOPT_SS_TEXTPTR_LOGGING 屬性會在包含 **文字** 或 **影像** 資料的資料行上，切換作業的記錄。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_TEXTPTR_LOGGING 屬性會在包含 **文字** 或 **影像** 資料的資料行上，切換作業的記錄。 *ValuePtr* 值的類型為 SQLLEN。  
   
 |*ValuePtr* 值|描述|  
 |----------------------|-----------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "91868458"
 |SQL_TL_ON|預設值。 可記錄在 **文字** 和 **影像** 資料上執行的作業。|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
- SQL_SOPT_SS_HIDDEN_COLUMNS 屬性會在結果集中公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 陳述式內隱藏的資料行。 此驅動程式預設不會公開這些資料行。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_HIDDEN_COLUMNS 屬性會在結果集中公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 陳述式內隱藏的資料行。 此驅動程式預設不會公開這些資料行。 *ValuePtr* 值的類型為 SQLLEN。  
   
 |*ValuePtr* 值|描述|  
 |----------------------|-----------------|  
@@ -118,7 +118,7 @@ ms.locfileid: "91868458"
  `service=mySSBService;local database=mydb`  
   
 ### <a name="sql_sopt_ss_querynotification_timeout"></a>SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
- SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 屬性會指定查詢通知維持作用中的秒數。 預設值是 432000 秒 (5 天)。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 屬性會指定查詢通知維持作用中的秒數。 預設值是 432000 秒 (5 天)。 *ValuePtr* 值的類型為 SQLLEN。  
   
 ### <a name="sql_sopt_ss_param_focus"></a>SQL_SOPT_SS_PARAM_FOCUS  
  SQL_SOPT_SS_PARAM_FOCUS 屬性會指定後續 SQLBindParameter、SQLGetDescField、SQLSetDescField、SQLGetDescRec 和 SQLSetDescRec 呼叫的焦點。  
@@ -137,7 +137,7 @@ ms.locfileid: "91868458"
 |SQL_SS_NAME_SCOPE_TABLE|預設值。<br /><br /> 使用資料表值參數時，指出應該傳回實際資料表的中繼資料。<br /><br /> 使用「稀疏資料行」功能時，SQLColumns 只會傳回非「稀疏 **column_set**」成員的資料行。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|表示應用程式需要資料表類型 (而非實際資料表) 的中繼資料 (目錄函數應該傳回資料表類型的中繼資料)。 然後，應用程式會以 *TableName* 參數的形式傳遞資料表值參數的 TYPE_NAME。|  
 |SQL_SS_NAME_SCOPE_EXTENDED|使用「稀疏資料行」功能時，SQLColumns 會傳回所有資料行，不論 **column_set** 成員資格。|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|使用「稀疏資料行」功能時，SQLColumns 只會傳回屬於稀疏 **column_set**成員的資料行。|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|使用「稀疏資料行」功能時，SQLColumns 只會傳回屬於稀疏 **column_set** 成員的資料行。|  
 |SQL_SS_NAME_SCOPE_DEFAULT|等於 SQL_SS_NAME_SCOPE_TABLE。|  
   
  SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分別用於 *CatalogName* 和 *SchemaName* 參數，以識別資料表值參數的目錄和架構。 當應用程式完成擷取資料表值參數的中繼資料時，必須將 SQL_SOPT_SS_NAME_SCOPE 社回 SQL_SS_NAME_SCOPE_TABLE 的預設值。  

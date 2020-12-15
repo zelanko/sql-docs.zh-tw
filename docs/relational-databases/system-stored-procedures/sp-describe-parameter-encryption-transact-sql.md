@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646488"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466819"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-sql) 
 
@@ -43,12 +43,12 @@ sp_describe_parameter_encryption
   
 ## <a name="arguments"></a>引數  
  [ \@ tsql =] ' transact-sql SQL_batch '  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 交易 SQL_batch 可能是 Nvarchar (n) 或 Nvarchar (max) 。  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Transact-SQL_batch 可能是 Nvarchar (n) 或 Nvarchar (max) 。  
   
  [ \@ params =] N'parameters '  
- * \@ Params*提供 transact-sql 批次參數的宣告字串，類似于 sp_executesql。 參數可以是 Nvarchar (n) 或 Nvarchar (max) 。  
+ *\@ Params* 提供 transact-sql 批次參數的宣告字串，類似于 sp_executesql。 參數可以是 Nvarchar (n) 或 Nvarchar (max) 。  
   
- 這是一個字串，其中包含已內嵌在 _batch 中之所有參數的定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 語句中指定的每個參數都必須在* \@ params*中定義。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中的語句或批次不包含參數，則不需要* \@ params* 。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在 _batch 中之所有參數的定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 語句中指定的每個參數都必須在 *\@ params* 中定義。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中的語句或批次不包含參數，則不需要 *\@ params* 。 這個參數的預設值是 NULL。  
   
 ## <a name="return-value"></a>傳回值  
  0表示成功。 任何其他表示失敗的情況。  
@@ -66,9 +66,9 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|結果集中資料列的識別碼。|  
 |**database_id**|**int**|資料庫識別碼。|  
-|**column_encryption_key_id**|**int**|資料行加密金鑰識別碼。注意：此識別碼代表 [sys. column_encryption_keys 中 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 類別目錄檢視的資料列。|  
+|**column_encryption_key_id**|**int**|資料行加密金鑰識別碼。注意：此識別碼代表 [sys.column_encryption_keys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 類別目錄檢視中的資料列。|  
 |**column_encryption_key_version**|**int**|保留供未來使用。 目前，一律會包含1。|  
-|**column_encryption_key_metadata_version**|**二元 (8) **|表示資料行加密金鑰建立時間的時間戳記。|  
+|**column_encryption_key_metadata_version**|**二元 (8)**|表示資料行加密金鑰建立時間的時間戳記。|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|資料行加密金鑰的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含資料行主要金鑰之金鑰存放區的提供者名稱，用來產生資料行加密金鑰的加密值。|  
 |**column_master_key_path**|**nvarchar(4000)**|資料行主要金鑰的金鑰路徑，用來產生資料行加密金鑰的加密值。|  
@@ -79,14 +79,14 @@ sp_describe_parameter_encryption
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|結果集中資料列的識別碼。|  
-|**parameter_name**|**sysname**|* \@ Params*引數中指定的其中一個參數名稱。|  
+|**parameter_name**|**sysname**|*\@ Params* 引數中指定的其中一個參數名稱。|  
 |**column_encryption_algorithm**|**tinyint**|指出針對資料行所設定之加密演算法的程式碼，此參數對應至。 目前支援的值為：2表示 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
 |**column_encryption_type**|**tinyint**|指出針對資料行所設定之加密類型的代碼，此參數對應于。 支援的值為：<br /><br /> 0-純文字 (資料行未加密) <br /><br /> 1-隨機化加密<br /><br /> 2-具決定性的加密。|  
 |**column_encryption_key_ordinal**|**int**|第一個結果集內的資料列程式碼。 參考的資料列描述針對資料行所設定的資料行加密金鑰，此參數對應于。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|類型正規化演算法的版本號碼。|  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 Always Encrypted 的用戶端驅動程式會自動呼叫**sp_describe_parameter_encryption** ，以針對應用程式所發出的參數化查詢取得加密中繼資料。 接著，驅動程式會使用加密中繼資料來加密對應至受 Always Encrypted 保護之資料庫資料行的參數值，並以加密的參數值替代應用程式所提交的純文字參數值，然後再將查詢傳送至資料庫引擎。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 Always Encrypted 的用戶端驅動程式會自動呼叫 **sp_describe_parameter_encryption** ，以針對應用程式所發出的參數化查詢取得加密中繼資料。 接著，驅動程式會使用加密中繼資料來加密對應至受 Always Encrypted 保護之資料庫資料行的參數值，並以加密的參數值替代應用程式所提交的純文字參數值，然後再將查詢傳送至資料庫引擎。  
   
 ## <a name="permissions"></a>權限  
  需要 **VIEW ANY COLUMN ENCRYPTION KEY definition** ，並查看資料庫中的 **任何資料行主要金鑰定義** 許可權。  
@@ -157,7 +157,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@c1|1|1|  
+|1|\@低耗|1|1|  
   
   (結果繼續。 )   
   

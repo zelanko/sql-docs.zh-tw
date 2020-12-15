@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9806bc940e6065a0a4c68dda74fcdf9f8a1bc4b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7fe5f2711334f371831bc76d60b5b74ef6b9a417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475715"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467629"
 ---
 # <a name="sql-server-native-client-message-results"></a>SQL Server Native Client 訊息結果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88475715"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會傳回 S_OK，而且在執行許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或取用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者成員函式的取用者時，會有一或多個參考用訊息可供使用。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]無論傳回碼的值為何、傳回的**IRowset**或**IMultipleResults**介面參考是否存在，或受影響的資料列計數為何，允許動態指定查詢文字的原生 OLE DB 用戶端，都應該在每個成員函式執行之後檢查錯誤介面。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]無論傳回碼的值為何、傳回的 **IRowset** 或 **IMultipleResults** 介面參考是否存在，或受影響的資料列計數為何，允許動態指定查詢文字的原生 OLE DB 用戶端，都應該在每個成員函式執行之後檢查錯誤介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../relational-databases/native-client-ole-db-errors/errors.md)  

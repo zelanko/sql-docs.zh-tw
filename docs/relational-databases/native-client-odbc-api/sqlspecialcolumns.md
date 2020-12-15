@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66413b416482526b45c30e256751342487b005fe
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f1b5d2601c422f9d94f068b560d0e1a07a2f9ca9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465089"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   當 (*IdentifierType* SQL_BEST_ROWID) 要求資料列識別碼時， **SQLSpecialColumns** 會傳回空的結果集， () 以外任何要求範圍的資料列 SQL_SCOPE_CURROW。 產生的結果集表示資料行只有在這個範圍中才是有效的。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援識別碼的虛擬資料行。 **SQLSpecialColumns**結果集會將所有資料行識別為 SQL_PC_NOT_PSEUDO。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援識別碼的虛擬資料行。 **SQLSpecialColumns** 結果集會將所有資料行識別為 SQL_PC_NOT_PSEUDO。  
   
  **SQLSpecialColumns** 可以在靜態資料指標上執行。 嘗試在可更新的 (索引鍵集驅動或動態) 上執行 **SQLSpecialColumns** 時，會傳回 SQL_SUCCESS_WITH_INFO 表示資料指標類型已經變更。  
   

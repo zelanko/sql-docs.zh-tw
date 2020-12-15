@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31355856b10e0ec1213655b2968dfbf3ad511fe9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 44412d332bdf3c6c35740cfcca091ce73a84c66b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465129"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會針對**SQLGetDiagField**指定下列其他診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會針對 **SQLGetDiagField** 指定下列其他診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
   
 |診斷記錄欄位|描述|  
 |------------------------------|-----------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "91811012"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 陳述式|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 或 DUMP DATABASE 陳述式|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 陳述式|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 陳述式。 如果**chkpt 上的 trunc** ，也會傳回檢查點語句的。 資料庫選項為 on。|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 或 DUMP TRANSACTION 陳述式。 如果 **chkpt 上的 trunc** ，也會傳回檢查點語句的。 資料庫選項為 on。|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 流程控制陳述式|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 陳述式|  
 |SQL_DIAG_DFC_SS_KILL|KILL 陳述式|  

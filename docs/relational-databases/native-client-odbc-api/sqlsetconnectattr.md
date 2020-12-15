@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3b3c006da487774a8de01ccf9a9b8cd12d9ca15f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867810"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465119"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -133,7 +133,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbrowseserver"></a>
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
- 這個屬性是用來自訂 **SQLBrowseConnect**所傳回的結果集。 SQL_COPT_SS_BROWSE_SERVER 指定 **SQLBrowseConnect** 傳回信息的伺服器名稱。  
+ 這個屬性是用來自訂 **SQLBrowseConnect** 所傳回的結果集。 SQL_COPT_SS_BROWSE_SERVER 指定 **SQLBrowseConnect** 傳回信息的伺服器名稱。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -265,7 +265,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptssperfquerylog"></a>
 ## <a name="sql_copt_ss_perf_query_log"></a>SQL_COPT_SS_PERF_QUERY_LOG  
- SQL_COPT_SS_PERF_QUERY_LOG 會指派用於記錄長時間執行查詢資料之記錄檔的名稱。 此記錄檔名稱是以 Null 結束的 ANSI 或 Unicode 字串，端視應用程式編譯方式而定。 *StringLength*引數應該是 SQL_NTS 或字串的長度（以位元組為單位）。  
+ SQL_COPT_SS_PERF_QUERY_LOG 會指派用於記錄長時間執行查詢資料之記錄檔的名稱。 此記錄檔名稱是以 Null 結束的 ANSI 或 Unicode 字串，端視應用程式編譯方式而定。 *StringLength* 引數應該是 SQL_NTS 或字串的長度（以位元組為單位）。  
 
 <a name="sqlcoptsspreservecursors"></a>
 ## <a name="sql_copt_ss_preserve_cursors"></a>SQL_COPT_SS_PRESERVE_CURSORS  
@@ -273,8 +273,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
 |值|描述|  
 |-----------|-----------------|  
-|SQL_PC_OFF|預設值。 使用 **SQLEndTran**認可或回復交易時，會關閉資料指標。|  
-|SQL_PC_ON|使用 **SQLEndTran**認可或回復交易時，不會關閉資料指標，但在非同步模式中使用靜態或索引鍵集資料指標時除外。 如果您在資料指標的母體未完成時發出了回復，就會關閉資料指標。|  
+|SQL_PC_OFF|預設值。 使用 **SQLEndTran** 認可或回復交易時，會關閉資料指標。|  
+|SQL_PC_ON|使用 **SQLEndTran** 認可或回復交易時，不會關閉資料指標，但在非同步模式中使用靜態或索引鍵集資料指標時除外。 如果您在資料指標的母體未完成時發出了回復，就會關閉資料指標。|  
 
 <a name="sqlcoptssquotedident"></a>
 ## <a name="sql_copt_ss_quoted_ident"></a>SQL_COPT_SS_QUOTED_IDENT  
@@ -287,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE 會在交換 MBCS 資料時，讓驅動程式在用戶端與伺服器字碼頁之間轉譯字元。 屬性只會影響儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **Varchar**和**text**資料行中的資料。  
+ SQL_COPT_SS_TRANSLATE 會在交換 MBCS 資料時，讓驅動程式在用戶端與伺服器字碼頁之間轉譯字元。 屬性只會影響儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**、 **Varchar** 和 **text** 資料行中的資料。  
   
 |值|描述|  
 |-----------|-----------------|  

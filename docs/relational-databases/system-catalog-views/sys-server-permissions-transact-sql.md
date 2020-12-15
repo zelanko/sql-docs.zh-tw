@@ -1,6 +1,6 @@
 ---
 description: sys.server_permissions (Transact-SQL)
-title: sys. server_permissions (Transact-sql) |Microsoft Docs
+title: sys.server_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376934"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464659"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "88376934"
 |**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。|  
 |**grantee_principal_id**|**int**|獲授與權限的伺服器主體識別碼。|  
 |**grantor_principal_id**|**int**|這些權限之同意授權者的伺服器主體識別碼。|  
-|**type**|**char (4) **|伺服器權限類型。 如需權限類型的清單，請參閱下表。|  
+|**type**|**char (4)**|伺服器權限類型。 如需權限類型的清單，請參閱下表。|  
 |**permission_name**|**nvarchar(128)**|權限名稱。|  
-|**state**|**char (1) **|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
+|**state**|**char(1)**|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
 |**state_desc**|**nvarchar(60)**|權限狀態的描述：<br /><br /> 拒絕<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |權限類型|權限名稱|適用於安全性實體|  

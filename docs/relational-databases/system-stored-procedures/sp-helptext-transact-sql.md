@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4461c311c32c1f500a4481b36f4a17d0be0134bf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e6d2fbb2311392ee046b4aad84705b8ccd91a48c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547990"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468369"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'name'` 這是使用者定義之架構範圍物件的限定或非限定名稱。 只有在指定限定物件時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 這個物件必須在目前的資料庫中。 *名稱* 是 **Nvarchar (776) **，沒有預設值。  
+`[ @objname = ] 'name'` 這是使用者定義之架構範圍物件的限定或非限定名稱。 只有在指定限定物件時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 這個物件必須在目前的資料庫中。 *名稱* 是 **Nvarchar (776)**，沒有預設值。  
   
 `[ @columnname = ] 'computed_column_name'` 這是要顯示定義資訊之計算資料行的名稱。 包含資料行的資料表必須指定為 *名稱*。 *column_name* 是 **sysname**，沒有預設值。  
   
@@ -55,7 +55,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |**Text**|**nvarchar(255)**|物件定義|  
   
 ## <a name="remarks"></a>備註  
- sp_helptext 會顯示在多個資料列中建立物件所用的定義。 每一個資料列都包含 255 個字元的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義。 定義位於[sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視的**定義**資料行中。  
+ sp_helptext 會顯示在多個資料列中建立物件所用的定義。 每一個資料列都包含 255 個字元的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義。 定義位於 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視的 **定義** 資料行中。  
   
 ## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 凡具有下列任一權限的物件擁有者或承授者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  

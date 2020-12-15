@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f62b0fa0d27ed5db06f85b2c77e1ab381534d731
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b65b009d5dc88dc9d5a0cd5cc6f5592c8160c8bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891108"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467499"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,13 +48,13 @@ Native Client 中的 ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 
 -   C 資料類型擴充性。 如需詳細資訊，請參閱 [ODBC 中的 C 資料類型](../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
 
-     為了在 Native Client 中支援這項功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果您的應用程式使用 ODBC 3.8，SQLGetDescField 可以**datetimeoffset**傳回**時間**類型的**SQL_C_SS_TIME2** () 或**SQL_C_SS_TIMESTAMPOFFSET** (（而不是 **) **）。 如需詳細資訊，請參閱 [ODBC 日期和時間改善的資料類型支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
+     為了在 Native Client 中支援這項功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果您的應用程式使用 ODBC 3.8，SQLGetDescField 可以傳回 **時間** 類型的 **SQL_C_SS_TIME2** () 或 **SQL_C_SS_TIMESTAMPOFFSET** (（而不是 **)**）。 如需詳細資訊，請參閱 [ODBC 日期和時間改善的資料類型支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
 
 -   使用小型緩衝區多次呼叫 **SQLGetData** ，以取出大型參數值。 如需詳細資訊，請參閱 [使用 SQLGetData 來取出輸出參數](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
 
  下列主題描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 行為變更。  
 
--   呼叫 **ICommandWithParameters：： SetParameterInfo**時，傳遞給 *pwszName* 參數的值必須是有效的識別碼。 如需詳細資訊，請參閱 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)。  
+-   呼叫 **ICommandWithParameters：： SetParameterInfo** 時，傳遞給 *pwszName* 參數的值必須是有效的識別碼。 如需詳細資訊，請參閱 [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)。  
 
 -   **SQLDescribeParam** 會一致地傳回符合 ODBC 規格的值。 如需詳細資訊，請參閱 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)。  
 

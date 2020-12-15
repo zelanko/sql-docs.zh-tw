@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f988f8fa6b09a3efd895499bfa1a367e0bb44774
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810792"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465179"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可供 **SQLGetConnectAttr**使用，而函式會用來報告其目前的設定。 在連接完成或使用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)設定屬性之前，不保證針對這些屬性報告的值。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可供 **SQLGetConnectAttr** 使用，而函式會用來報告其目前的設定。 在連接完成或使用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)設定屬性之前，不保證針對這些屬性報告的值。  
   
  本主題將列出唯讀屬性。 如需其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式特定連接屬性的詳細資訊，請參閱 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "91810792"
 |SQL_SUCCESS|此連接已成功。 輸出緩衝區中將可以找到用戶端連接識別碼。|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 如果未啟用效能記錄， **SQLGetConnectAttr**會傳回 Null。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 每次需要重新整理效能統計資料時呼叫 **SQLGetConnectAttr** 。  
+ SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 如果未啟用效能記錄， **SQLGetConnectAttr** 會傳回 Null。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 每次需要重新整理效能統計資料時呼叫 **SQLGetConnectAttr** 。  
   
 |值|描述|  
 |-----------|-----------------|  

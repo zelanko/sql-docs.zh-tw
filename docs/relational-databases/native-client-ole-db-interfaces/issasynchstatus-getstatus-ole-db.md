@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7bd8db285c1c8d9801adb7d37d4f03a9103b444
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4dec7256e445ff41f5e8549e4dff4e6c5c341fe1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490810"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469379"
 ---
 # <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus：： GetStatus (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,9 +100,9 @@ HRESULT GetStatus(
  *hChapter* 參數錯誤。  
   
  E_UNEXPECTED  
- 在資料來源物件上呼叫**ISSAsynchStatus：： GetStatus** ，但尚未在資料來源物件上呼叫**IDBInitialize：： Initialize** 。  
+ 在資料來源物件上呼叫 **ISSAsynchStatus：： GetStatus** ，但尚未在資料來源物件上呼叫 **IDBInitialize：： Initialize** 。  
   
- 在資料列集上呼叫**ISSAsynchStatus：： GetStatus** ， **ITransaction：： Commit**或**ITransaction：： Abort**被呼叫，而物件處於廢止狀態。  
+ 在資料列集上呼叫 **ISSAsynchStatus：： GetStatus** ， **ITransaction：： Commit** 或 **ITransaction：： Abort** 被呼叫，而物件處於廢止狀態。  
   
  **ISSAsynchStatus：： GetStatus** 是在其初始化階段中以非同步方式取消的資料列集上呼叫。 此資料列集處於廢止狀態。  
   

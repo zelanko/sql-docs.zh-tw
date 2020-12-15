@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5a337408ef4cf1a2e4b72cbb20f9c64681efd0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 95b1ac8bbbcc07eb671a32f72e944b80fdb7e0d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650321"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467129"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>執行 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85650321"
   
 -   **對應結構描述**  
   
- 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 此架構具有 **\<Contacts>** 具有**ContactID**、 **FirstName**和**LastName**屬性的元素。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
+ 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 架構具有 **\<Contacts>** 具有 **ContactID**、 **FirstName** 和 **LastName** 屬性的元素。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -56,14 +56,14 @@ ms.locfileid: "85650321"
 </xsd:schema>  
 ```  
   
- 對應架構屬性會提供 XPath 查詢執行時所依據的對應架構。 此對應結構描述可能是 XSD 或 XDR 結構描述。 [基底路徑] 屬性會提供對應架構的檔案路徑。  
+ 對應架構屬性會提供執行 XPath 查詢的對應架構。 此對應結構描述可能是 XSD 或 XDR 結構描述。 [基底路徑] 屬性會提供對應架構的檔案路徑。  
   
  ClientSideXML 屬性設定為 True。 因此，XML 文件會在用戶端上產生。  
   
  在應用程式中，會直接指定 XPath 查詢。 因此，必須包含 XPath Dialect {ec2a4293-e898-11d2-b1b7-00c04f680c56}。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 [SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

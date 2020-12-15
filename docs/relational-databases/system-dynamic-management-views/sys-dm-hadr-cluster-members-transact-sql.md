@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_members (Transact-SQL)
-title: sys. dm_hadr_cluster_members (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c7e182c4b8efb2ecc882c0e81bb1c1863b310a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7c9f7b1145eec5d9c0c7f3644f18e8de7739b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546568"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468459"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  如果裝載已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本機執行個體的 WSFC 節點有 WSFC 仲裁，則針對構成仲裁的每個成員及其狀態各傳回一個資料列。 這包括叢集中的所有節點， (**Clusterenum** 函式所傳回的 CLUSTER_ENUM_NODE 類型) 和磁片或檔案共用見證（如果有的話）。 針對給定成員傳回的資料列包含有關該成員之狀態的資訊。 例如，針對具有多數節點仲裁的五個節點叢集，其中一個節點已關閉，當 **sys. dm_hadr_cluster_members** 是從在具有仲裁之節點上啟用的伺服器實例進行查詢時， [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] **sys. dm_hadr_cluster_members** 會將關閉節點的狀態反映為 "NODE_DOWN"。  
+  如果裝載已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本機執行個體的 WSFC 節點有 WSFC 仲裁，則針對構成仲裁的每個成員及其狀態各傳回一個資料列。 這包括叢集中的所有節點， (**Clusterenum** 函式所傳回的 CLUSTER_ENUM_NODE 類型) 和磁片或檔案共用見證（如果有的話）。 針對給定成員傳回的資料列包含有關該成員之狀態的資訊。 例如，針對具有多數節點仲裁的五個節點叢集，其中一個節點已關閉，當 **sys.dm_hadr_cluster_members** 從已啟用的伺服器實例（在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 具有仲裁的節點上）進行查詢時， **sys.dm_hadr_cluster_members** 會將關閉節點的狀態反映為 "NODE_DOWN"。  
   
  如果 WSFC 節點沒有仲裁，則不傳回任何資料列。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "89546568"
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|成員名稱，這可以是電腦名稱、磁碟機代號或檔案共用路徑。|  
 |**member_type**|**tinyint**|成員的類型，可為下列其中一個值：<br /><br /> 0 = WSFC 節點<br /><br /> 1 = 磁碟見證<br /><br /> 2 = 檔案共用見證<br /><br /> 3 = 雲端見證|  
-|**member_type_desc**|**nvarchar(50)**|**Member_type**的描述，下列其中一個：<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
+|**member_type_desc**|**nvarchar(50)**|**Member_type** 的描述，下列其中一個：<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|成員狀態，可為下列其中一個值：<br /><br /> 0 = 離線<br /><br /> 1 = 線上|  
-|**member_state_desc**|**nvarchar(60)**|**Member_state**的描述，下列其中一個：<br /><br /> UP<br /><br /> DOWN|  
+|**member_state_desc**|**nvarchar(60)**|**Member_state** 的描述，下列其中一個：<br /><br /> UP<br /><br /> DOWN|  
 |**number_of_quorum_votes**|**tinyint**|此仲裁成員擁有的仲裁投票數。 如果是「無多數：僅限磁碟」的仲裁，這個值預設為 0。 如果是其他仲裁類型，這個值預設為 1。|  
   
 ## <a name="permissions"></a>權限  

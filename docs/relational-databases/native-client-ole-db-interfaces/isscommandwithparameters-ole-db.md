@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab373afbe0805b95ddc1eb1601172e467c269459
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7924ee21c5bbf6184654303328952afb93fc97cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91865101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469319"
 ---
 # <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters (Native Client OLE DB 提供者) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **ISSCommandWithParameters** 會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (UDT) 的 XML 和使用者定義類型的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters**的三種方法; **GetParameterInfo**、 **MapParameterNames**和 **SetParameterInfo**; **ISSCommandWithParameters** 提供兩種用來處理伺服器特定資料類型的新方法。  
+  **ISSCommandWithParameters** 會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (UDT) 的 XML 和使用者定義類型的支援。 這是選擇性的介面，繼承自核心 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters** 的三種方法; **GetParameterInfo**、 **MapParameterNames** 和 **SetParameterInfo**; **ISSCommandWithParameters** 提供兩種用來處理伺服器特定資料類型的新方法。  
   
 > [!NOTE]  
 >  使用服務元件時，可以使用 **ISSCommandWithParameters** 介面，但服務元件本身將不會使用此介面。  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07485062d39e2fa547e524e2b0368b19e9b577
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548033"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468399"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548033"
   利用資料指標來傳回登錄了全文檢索索引的資料表清單。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用新的 **sys. fulltext_indexes** 目錄檢視。 如需詳細資訊，請參閱 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用新的 **sys.fulltext_indexes** 目錄檢視。 如需詳細資訊，請參閱 [sys.fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,11 +46,11 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @cursor_return = ] @cursor_variable OUTPUT` 這是 **cursor**類型的輸出變數。 這個資料指標是可捲動的唯讀動態資料指標。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 這是 **cursor** 類型的輸出變數。 這個資料指標是可捲動的唯讀動態資料指標。  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 這是全文檢索目錄的名稱。 *fulltext_catalog_name* 是 **sysname**，預設值是 Null。 如果省略 *fulltext_catalog_name* 或為 Null，則會傳回與資料庫相關聯的所有全文檢索索引資料表。 如果指定 *fulltext_catalog_name* ，但 *table_name* 省略或為 Null，則會針對與此目錄相關聯的每個全文檢索索引資料表抓取全文檢索索引資訊。 如果同時指定了 *fulltext_catalog_name* 和 *table_name* ，而且 *table_name* 與 *fulltext_catalog_name*相關聯，就會傳回一個資料列。否則，就會引發錯誤。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 這是全文檢索目錄的名稱。 *fulltext_catalog_name* 是 **sysname**，預設值是 Null。 如果省略 *fulltext_catalog_name* 或為 Null，則會傳回與資料庫相關聯的所有全文檢索索引資料表。 如果指定 *fulltext_catalog_name* ，但 *table_name* 省略或為 Null，則會針對與此目錄相關聯的每個全文檢索索引資料表抓取全文檢索索引資訊。 如果同時指定了 *fulltext_catalog_name* 和 *table_name* ，而且 *table_name* 與 *fulltext_catalog_name* 相關聯，就會傳回一個資料列。否則，就會引發錯誤。  
   
-`[ @table_name = ] 'table_name'` 這是所要求之全文檢索中繼資料的一或兩部分資料表名稱。 *table_name* 是 **Nvarchar (517) **，預設值是 Null。 如果只指定 *table_name* ，則只會傳回與 *table_name* 相關的資料列。  
+`[ @table_name = ] 'table_name'` 這是所要求之全文檢索中繼資料的一或兩部分資料表名稱。 *table_name* 是 **Nvarchar (517)**，預設值是 Null。 如果只指定 *table_name* ，則只會傳回與 *table_name* 相關的資料列。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536687"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466869"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89536687"
   
  當查詢執行時間很重要而且無法等候查詢最佳化工具產生單一資料行統計資料時，sp_createstats 對於效能評定等應用程式會很有用。 在大多數情況下，不需要使用 sp_createstats;當 **AUTO_CREATE_STATISTICS** 選項為 on 時，查詢最佳化工具會視需要產生單一資料行統計資料，以改善查詢計劃。  
   
- 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。 如需有關產生單一資料行統計資料的詳細資訊，請參閱[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)中的**AUTO_CREATE_STATISTICS**選項 &#40;transact-sql&#41;。  
+ 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。 如需有關產生單一資料行統計資料的詳細資訊，請參閱 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)中的 **AUTO_CREATE_STATISTICS** 選項 &#40;transact-sql&#41;。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @indexonly = ] 'indexonly'` 只在現有索引中的資料行上建立統計資料，而不是任何索引定義中的第一個資料行。 **indexonly** 是 **char (9) **。 預設值是 NO。  
+`[ @indexonly = ] 'indexonly'` 只在現有索引中的資料行上建立統計資料，而不是任何索引定義中的第一個資料行。 **indexonly** 是 **char (9)**。 預設值是 NO。  
   
-`[ @fullscan = ] 'fullscan'` 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 語句搭配 **FULLSCAN** 選項。 **fullscan** 是 **char (9) **。  預設值是 NO。  
+`[ @fullscan = ] 'fullscan'` 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 語句搭配 **FULLSCAN** 選項。 **fullscan** 是 **char (9)**。  預設值是 NO。  
   
-`[ @norecompute = ] 'norecompute'` 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 語句搭配 **NORECOMPUTE** 選項。 **norecompute** 是 **char (12) **。  預設值是 NO。  
+`[ @norecompute = ] 'norecompute'` 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 語句搭配 **NORECOMPUTE** 選項。 **norecompute** 是 **char (12)**。  預設值是 NO。  
   
-`[ @incremental = ] 'incremental'` 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 語句搭配 **遞增 = ON** 選項。 **增量** 是 **char (12) **。  預設值是 NO。  
+`[ @incremental = ] 'incremental'` 使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 語句搭配 **遞增 = ON** 選項。 **增量** 是 **char (12)**。  預設值是 NO。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

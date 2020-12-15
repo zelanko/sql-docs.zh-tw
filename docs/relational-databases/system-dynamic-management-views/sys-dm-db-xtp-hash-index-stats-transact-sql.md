@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542255"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468479"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "89542255"
 較長的鏈結長度可能對個別資料列上所有 DML 作業的效能造成相當大的影響，包括 SELECT 和 INSERT。 鏈結長度較短且空的值區計數較高時，表示 bucket_count 太高。 這樣會降低索引掃描的效能。  
   
 > [!WARNING]
-> **sys. dm_db_xtp_hash_index_stats** 會掃描整個資料表。 因此，如果您的資料庫中有大型資料表， **sys. dm_db_xtp_hash_index_stats** 可能會花很長的時間執行。  
+> **sys.dm_db_xtp_hash_index_stats** 會掃描整個資料表。 因此，如果您的資料庫中有大型資料表， **sys.dm_db_xtp_hash_index_stats** 可能會花很長的時間執行。  
   
-如需詳細資訊，請參閱 [記憶體優化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
+如需詳細資訊，請參閱 [Memory-Optimized 資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|欄名|類型|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父資料表的物件識別碼。|  
 |xtp_object_id|**bigint**|記憶體優化資料表的識別碼。|  
@@ -88,7 +88,7 @@ ms.locfileid: "89542255"
   ORDER BY [table], [index];  
 ``` 
 
-如需有關如何解讀此查詢結果的詳細資訊，請參閱 [針對記憶體優化資料表的雜湊索引進行疑難排解](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 。  
+如需有關如何解讀此查詢結果的詳細資訊，請參閱 [針對 Memory-Optimized 資料表的雜湊索引進行疑難排解](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 內部資料表的雜湊索引統計資料
 

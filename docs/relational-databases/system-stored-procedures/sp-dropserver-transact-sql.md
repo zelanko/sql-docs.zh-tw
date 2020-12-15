@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6bb8e372ffa6a9bea01052f4185040dd9942157
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e3caee2593f6b02688ab82fcfd72686670c493dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549801"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466809"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ sp_dropserver [ @server = ] 'server'
  這是要移除的伺服器。 *server* 是 **sysname**，沒有預設值。 *伺服器* 必須存在。  
   
  *droplogins*  
- 指出如果指定了**droplogins** ，也必須移除*伺服器*的相關遠端和連結伺服器登入。 **`@droplogins`** 是 **char (10) **，預設值是 Null。  
+ 指出如果指定了 **droplogins** ，也必須移除 *伺服器* 的相關遠端和連結伺服器登入。 **`@droplogins`** 是 **char (10)**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

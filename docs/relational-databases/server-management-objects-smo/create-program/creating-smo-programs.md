@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b55530e34a77878c551dc8ea4ff0fa2936325755
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 00ae0e27bb4d90c286ef1b199c200ab5b900f706
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467259"
 ---
 # <a name="creating-smo-programs"></a>建立 SMO 程式
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ee91975b31d16845c56f27e872998809fb252838
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834083"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468389"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-sql) 
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

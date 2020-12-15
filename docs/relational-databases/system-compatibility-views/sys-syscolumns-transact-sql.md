@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f16d1975d4e8ac872c8c8d625b935b738fbfdb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae2c5a8353b896e418f15744e7b4e527183a9e79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423362"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466959"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "88423362"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料行或程序參數的名稱。|  
 |**id**|**int**|這個資料行所屬資料表的物件識別碼，或這個參數相關聯預存程序的識別碼。|  
-|**xtype**|**tinyint**|**Sys. 類型**的實體儲存體類型。|  
+|**xtype**|**tinyint**|**Sys. 類型** 的實體儲存體類型。|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|擴充使用者自訂資料類型的識別碼。 如果資料類型的數目超過 32,767，則會造成溢位或傳回 NULL。|  
-|**length**|**smallint**|**Sys**. 的最大實體儲存體長度。**類型**。|  
+|**length** (長度)|**smallint**|**Sys**. 的最大實體儲存體長度。**類型**。|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|資料行或參數識別碼。|  
@@ -61,7 +61,7 @@ ms.locfileid: "88423362"
 |**collationid**|**int**|資料行定序的識別碼。 以非字元為基礎的資料行是 NULL。|  
 |**status**|**tinyint**|用來描述資料行或參數屬性的點陣圖：<br /><br /> 0x08 = 資料行允許 Null 值。<br /><br /> 0x10 = 加入 **Varchar** 或 **Varbinary** 資料行時，ANSI 填補生效。 會保留 **Varchar** 的尾端空白，而針對 **Varbinary** 資料行則保留尾端的零。<br /><br /> 0x40 = 參數是 OUTPUT 參數。<br /><br /> 0x80 = 資料行是一個識別欄位。|  
 |**type**|**tinyint**|**Sys**. 中的實體儲存體類型。**類型**。|  
-|**usertype**|**smallint**|**Sys. 類型**中使用者自訂資料類型的識別碼。 如果資料類型的數目超過 32,767，則會造成溢位或傳回 NULL。|  
+|**usertype**|**smallint**|**Sys. 類型** 中使用者自訂資料類型的識別碼。 如果資料類型的數目超過 32,767，則會造成溢位或傳回 NULL。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|這個資料行的有效位數層級。<br /><br /> -1 = **xml** 或大數數值型別。|  
 |**scale**|**int**|這個資料行的小數位數。<br /><br /> NULL = 資料類型是非數值。|  

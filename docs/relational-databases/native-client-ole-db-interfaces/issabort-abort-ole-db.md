@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16e72e33c4ddd618ab9753cb13e1073d9defe365
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 276378972110515ef1ab397a9a494c50d5532970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081577"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469409"
 ---
 # <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort：： Abort (Native Client OLE DB Provider) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92081577"
   
 在 Native Client OLE DB provider 中公開的 **ISSAbort** 介面 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 **ISSAbort：： Abort** 方法，可用來取消目前的資料列集，加上以初始產生資料列集的命令批次處理的任何命令，而且尚未完成執行。  
   
- **ISSAbort**是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端提供者特定介面，可透過**ICommand：： Execute**或**IOpenRowset：： OpenRowset**所傳回之**IMultipleResults**物件上的**QueryInterface**來使用。  
+ **ISSAbort** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端提供者特定介面，可透過 **ICommand：： Execute** 或 **IOpenRowset：： OpenRowset** 所傳回之 **IMultipleResults** 物件上的 **QueryInterface** 來使用。  
   
 ## <a name="syntax"></a>語法  
   

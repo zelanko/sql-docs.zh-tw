@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 39453e5f06b2702b171d639cc6989dd1d9aaf3b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490879"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469389"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus：： Abort (Native Client OLE DB Provider) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,14 +61,14 @@ HRESULT Abort(
  發生了提供者特定的錯誤。  
   
  E_INVALIDARG  
- *HChapter*參數不是 DB_Null_HCHAPTER 或*eOperation*不是 DBASYNCH_OPEN。  
+ *HChapter* 參數不是 DB_Null_HCHAPTER 或 *eOperation* 不是 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- 在未呼叫**IDBInitialize：： Initialize**或尚未完成的資料來源物件上呼叫**ISSAsynchStatus：： Abort** 。  
+ 在未呼叫 **IDBInitialize：： Initialize** 或尚未完成的資料來源物件上呼叫 **ISSAsynchStatus：： Abort** 。  
   
  已在呼叫 **IDBInitialize::Initialize** 的資料來源物件上呼叫 **ISSAsynchStatus::Abort**，但是接著在初始化之前將它取消，或是它已經逾時。此資料來源物件仍未初始化。  
   
- 在先前呼叫了**ITransaction：： Commit**或**ITransaction：： abort**的資料列集上呼叫**ISSAsynchStatus：： abort** ，而且資料列集未存留于認可或中止，且處於廢止狀態。  
+ 在先前呼叫了 **ITransaction：： Commit** 或 **ITransaction：： abort** 的資料列集上呼叫 **ISSAsynchStatus：： abort** ，而且資料列集未存留于認可或中止，且處於廢止狀態。  
   
  已在資料列集上呼叫 **ISSAsynchStatus::Abort**，這個資料列集已在其初始化階段非同步地取消。 此資料列集處於廢止狀態。  
   

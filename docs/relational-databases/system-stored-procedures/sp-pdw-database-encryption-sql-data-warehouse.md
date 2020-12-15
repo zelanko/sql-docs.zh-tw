@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258083"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468339"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -47,7 +47,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
  **0** (成功) 或 **1** (失敗)   
   
 ## <a name="remarks"></a>備註  
- 使用 **sp_pdw_database_encryption**啟用 TDE 時，會卸載 tempdb 資料庫、重新建立和加密。 基於這個理由，當使用 tempdb 的其他使用中會話時，無法在設備上啟用 TDE。 在設備上啟用或停用 TDE 是變更設備狀態的動作，在大部分情況下，預期會在設備存留期內執行一次，而且應該在設備上沒有流量時執行。  
+ 使用 **sp_pdw_database_encryption** 啟用 TDE 時，會卸載 tempdb 資料庫、重新建立和加密。 基於這個理由，當使用 tempdb 的其他使用中會話時，無法在設備上啟用 TDE。 在設備上啟用或停用 TDE 是變更設備狀態的動作，在大部分情況下，預期會在設備存留期內執行一次，而且應該在設備上沒有流量時執行。  
   
 ## <a name="permissions"></a>權限  
  需要 **系統管理員（sysadmin** ）固定資料庫角色中的成員資格或 **CONTROL SERVER** 許可權。  

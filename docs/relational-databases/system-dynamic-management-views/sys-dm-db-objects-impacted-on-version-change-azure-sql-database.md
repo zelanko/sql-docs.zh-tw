@@ -19,27 +19,27 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517642"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466849"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   這個資料庫範圍的系統檢視是設計成提供早期警告系統，以判斷會受到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的主要版本升級影響的物件。 您可以在升級前後使用此檢視，以取得受影響物件的完整列舉。 您需要在每個資料庫中查詢這個檢視，才能取得整個伺服器的完整計量資料。  
   
-|欄名|資料類型|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Class - 類別|**int** 非 Null|會受到影響的物件類別：<br /><br /> **1** = 條件約束<br /><br /> **7** = 索引和堆積|  
-|class_desc|**Nvarchar (60) ** 非 Null|類別的描述：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class_desc|**Nvarchar (60)** 非 Null|類別的描述：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** 非 Null|條件約束的物件識別碼，或包含索引或堆積之資料表的物件識別碼。|  
 |minor_id|**int** 空|**NULL** 代表條件約束<br /><br /> 索引和堆積的 Index_id|  
-|相依性|**Nvarchar (60) ** 非 Null|導致條件約束或索引受影響的相依性說明。 相同值也用於升級期間所產生的警告。<br /><br /> 範例：<br /><br /> **space** (用於內建功能)<br /><br /> **geometry** (用於系統 UDT)<br /><br /> **geography::Parse** (用於系統 UDT 方法)|  
+|相依性|**Nvarchar (60)** 非 Null|導致條件約束或索引受影響的相依性說明。 相同值也用於升級期間所產生的警告。<br /><br /> 範例：<br /><br /> **space** (用於內建功能)<br /><br /> **geometry** (用於系統 UDT)<br /><br /> **geography::Parse** (用於系統 UDT 方法)|  
   
 ## <a name="permissions"></a>權限  
  需要 VIEW DATABASE STATE 權限。  
@@ -66,9 +66,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>如何更新受影響的物件  
  以下的步驟順序說明了在六月即將發生的服務版本升級之後所要採取的更正動作。  
   
-|單|受影響的物件|更正動作|  
+|順序|受影響的物件|更正動作|  
 |-----------|---------------------|-----------------------|  
-|1|**索引數**|重建 **sys. dm_db_objects_impacted_on_version_change** 所識別的任何索引，例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
+|1|**索引數**|重建 **sys.dm_db_objects_impacted_on_version_change** 所識別的任何索引，例如：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Object**|在重新計算基礎資料表中的幾何和地理資料之後，必須重新驗證 **sys.dm_db_objects_impacted_on_version_change** 所識別的所有條件約束。 請針對條件約束使用 ALTER TABLE 重新驗證。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   
