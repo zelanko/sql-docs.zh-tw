@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86c5e6c9edb33147979c7df34386dc474529b18f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407555"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>使用 bcp 指定檔案儲存類型 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以依其資料庫資料表類型 (原生格式)、依其字元表示 (字元格式)，或者依支援隱含轉換的任何資料類型匯出至資料檔；例如，將 **smallint** 複製為 **int**。使用者自訂資料類型會依其基底類型匯出。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>檔案儲存類型的 bcp 提示  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w**或 **-N**)，此命令就會提示您輸入每個資料欄位的檔案儲存類型，如下所示：  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的檔案儲存類型，如下所示：  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "86003149"
   
      \*欄位長度、前置長度及結束字元的互動，可決定在資料檔案中配置給非字元資料的儲存空間數量，而此資料將匯出為 **char** 檔案儲存類型。  
   
-     \*\***的未來版本將會移除**ntext **、** text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
+     \*\***的未來版本將會移除** ntext **、** text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
 ## <a name="native-file-storage-types"></a>原生檔案儲存類型  
  每個原生檔案儲存類型都記錄於格式檔案內，做為對應的主機檔案資料類型。  
@@ -114,7 +114,7 @@ ms.locfileid: "86003149"
   
  \*以字元格式儲存的資料檔案會採用 **char** 作為檔案儲存類型。 因此，對於字元資料檔案，SQLCHAR 是唯一會出現在格式檔案中的資料類型。  
   
- \*\*您無法將資料大量匯入具有 DEFAULT 值的 **text**、 **ntext**及 **image** 資料行。  
+ \*\*您無法將資料大量匯入具有 DEFAULT 值的 **text**、 **ntext** 及 **image** 資料行。  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>檔案儲存類型的額外考量  
  當您將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料大量匯出到資料檔案時：  
@@ -123,7 +123,7 @@ ms.locfileid: "86003149"
   
 -   如果您輸入的檔案儲存類型代表無效的隱含轉換，則 **bcp** 會失敗；例如，雖然您可以針對 **smallint** 資料指定 **int** ，但如果您針對 **int** 資料指定 **smallint** ，將導致溢位錯誤。  
   
--   若 **float**、 **money**、 **datetime**或 **int** 等非字元資料類型儲存為其資料庫類型時，資料會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生格式寫入資料檔案中。  
+-   若 **float**、 **money**、 **datetime** 或 **int** 等非字元資料類型儲存為其資料庫類型時，資料會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生格式寫入資料檔案中。  
   
     > [!NOTE]  
     >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  

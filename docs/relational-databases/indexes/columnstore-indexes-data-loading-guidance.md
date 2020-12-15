@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3dd7431a208db3f0da1e2ee53522920319b40af0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482713"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407468"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 
@@ -48,7 +48,7 @@ ms.locfileid: "88482713"
 
 -   **縮減記錄：** 將資料直接載入壓縮資料列群組時，會導致記錄大小大幅減少。 例如，如果將資料壓縮 10 倍，則對應的交易記錄會大約縮小 10 倍，而不需要 TABLOCK 或大量記錄/簡單復原模式。 進入差異資料列群組的所有資料則會完整記錄。 這包括任何少於 102,400 個資料列的批次大小。  最佳做法是使用 batchsize >= 102400。 因為不需要 TABLOCK，所以您可以平行載入資料。 
 
--   **最低限度記錄：** 如果您遵循[最低限度記錄](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的必要條件，則可以進一步縮減記錄。 不過，與將資料載入資料列存放區不同的是，TABLOCK 會導致資料表的 X 鎖定，而不是 BU (大量更新) 鎖定，因此無法執行平行資料載入。 如需鎖定的詳細資訊，請參閱[鎖定和資料列版本設定](../sql-server-transaction-locking-and-row-versioning-guide.md)。
+-   **最低限度記錄：** 如果您遵循 [最低限度記錄](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的必要條件，則可以進一步縮減記錄。 不過，與將資料載入資料列存放區不同的是，TABLOCK 會導致資料表的 X 鎖定，而不是 BU (大量更新) 鎖定，因此無法執行平行資料載入。 如需鎖定的詳細資訊，請參閱[鎖定和資料列版本設定](../sql-server-transaction-locking-and-row-versioning-guide.md)。
 
 -   **鎖定最佳化：** 將資料載入壓縮資料列群組時，會自動取得資料列群組的 X 鎖定。 不過，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
