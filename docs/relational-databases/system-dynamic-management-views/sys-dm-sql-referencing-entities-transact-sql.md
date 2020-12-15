@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referencing_entities (Transact-SQL)
-title: sys. dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 517e6f8faaccf40091535b8a78d47d0fa8a43032
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550189"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484570"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對在目前資料庫中依據名稱參考其他使用者定義實體的每個實體，各傳回一個資料列。 在另一個實體（稱為*參考實體*）的保存 SQL 運算式*中，依*名稱顯示兩個實體之間的相依性時，會建立兩個實體之間的相依性。 例如，如果使用者定義型別 (UDT) 指定為受參考的實體，這個函數就會傳回在定義中依據名稱參考該類型的每個使用者自訂實體。 此函數不會傳回其他資料庫中可能參考指定實體的實體。 這個函數必須在 master 資料庫的內容中執行，以便傳回伺服器層級 DDL 觸發程序當做參考實體。  
+  針對在目前資料庫中依據名稱參考其他使用者定義實體的每個實體，各傳回一個資料列。 在另一個實體（稱為 *參考實體*）的保存 SQL 運算式 *中，依* 名稱顯示兩個實體之間的相依性時，會建立兩個實體之間的相依性。 例如，如果使用者定義型別 (UDT) 指定為受參考的實體，這個函數就會傳回在定義中依據名稱參考該類型的每個使用者自訂實體。 此函數不會傳回其他資料庫中可能參考指定實體的實體。 這個函數必須在 master 資料庫的內容中執行，以便傳回伺服器層級 DDL 觸發程序當做參考實體。  
   
  您可以使用這個動態管理函數來回報下列在目前資料庫中參考指定實體的實體類型：  
   
@@ -65,7 +65,7 @@ sys.dm_sql_referencing_entities (
   
  `schema_name` 是必要項目，但受參考類別為 PARTITION_FUNCTION 的情況除外。  
   
- `schema_name.referenced_entity_name` 是 **Nvarchar (517) **。  
+ `schema_name.referenced_entity_name` 是 **Nvarchar (517)**。  
   
  `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` 這是受參考實體的類別。 每個陳述式只能指定一個類別。  
   
@@ -127,7 +127,7 @@ sys.dm_sql_referencing_entities (
   
 -   需要所參考物件的 CONTROL 權限。 當受參考實體為資料分割函數時，便需要資料庫的 CONTROL 權限。  
   
--   需要 sys. dm_sql_referencing_entities 的 SELECT 許可權。 根據預設，SELECT 權限會授與 public。  
+-   需要 sys.dm_sql_referencing_entities 的 SELECT 許可權。 根據預設，SELECT 權限會授與 public。  
   
 ### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

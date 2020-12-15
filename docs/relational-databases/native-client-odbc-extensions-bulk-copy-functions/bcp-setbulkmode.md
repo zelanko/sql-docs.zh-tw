@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43302565cd49cc176b0ad3808398b28b86c57a39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e84a650e0cfec42129a7ab8ab972ecf2e0728092
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494081"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483309"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,9 +71,9 @@ RETCODE bcp_setbulkmode (
   
 |屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP.EXE 中的-c 選項，以及將 **BCP_FMT_TYPE** 屬性設定為 **SQLCHARACTER**bcp_setcolfmt。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP.EXE 中的-w 選項，以及 **BCP_FMT_TYPE** 屬性設定為 **SQLNCHAR**的 bcp_setcolfmt。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP.EXE 中的-N 選項 **，如果資料**行類型是字串 (預設值（如果不是字串) ，則為**BCP_FMT_TYPE** bcp_setcolfmt）。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP.EXE 中的-c 選項，以及將 **BCP_FMT_TYPE** 屬性設定為 **SQLCHARACTER** bcp_setcolfmt。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP.EXE 中的-w 選項，以及 **BCP_FMT_TYPE** 屬性設定為 **SQLNCHAR** 的 bcp_setcolfmt。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP.EXE 中的-N 選項 **，如果資料** 行類型是字串 (預設值（如果不是字串) ，則為 **BCP_FMT_TYPE** bcp_setcolfmt）。|  
 |BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP.EXE 中的-n 選項，以及 **BCP_FMT_TYPE** 屬性設為預設值的 bcp_setcolfmt。|  
   
  您不應該使用 bcp_setbulkmode 搭配包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫序列。 例如，您不應該呼叫 bcp_control (BCPTEXTFILE) 和 bcp_setbulkmode。  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae4c4e9d063d087c4018874a82631e2163c44ffd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1d365cf2e3120e1156267a49f0aec1607ce1efa3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483319"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,11 +53,11 @@ RETCODE bcp_readfmt (
 ## <a name="remarks"></a>備註  
  在 **bcp_readfmt** 讀取格式值之後，它會對 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 和 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)進行適當的呼叫。 您不需要剖析格式檔案，也不需要進行這些呼叫。  
   
- 若要保存格式檔案，請呼叫 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 **Bcp_readfmt**的呼叫可以參考已儲存的格式。 如需詳細資訊，請參閱 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
+ 若要保存格式檔案，請呼叫 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 **Bcp_readfmt** 的呼叫可以參考已儲存的格式。 如需詳細資訊，請參閱 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
- 或者，大量複製公用程式 (**bcp**) 可將使用者定義的資料格式儲存在可由 **bcp_readfmt**參考的檔案中。 如需 **bcp** 公用程式和 **bcp** 資料格式檔案結構的詳細資訊，請參閱將 [資料大量匯入和匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 或者，大量複製公用程式 (**bcp**) 可將使用者定義的資料格式儲存在可由 **bcp_readfmt** 參考的檔案中。 如需 **bcp** 公用程式和 **bcp** 資料格式檔案結構的詳細資訊，請參閱將 [資料大量匯入和匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
- [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)之*EOption*參數的**BCPDELAYREADFMT**值會修改 bcp_readfmt 的行為。  
+ [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)之 *EOption* 參數的 **BCPDELAYREADFMT** 值會修改 bcp_readfmt 的行為。  
   
 > [!NOTE]  
 >  格式檔案必須由 **bcp** 公用程式的4.2 版或更新版本所產生。  

@@ -1,6 +1,6 @@
 ---
-description: 'OLE DB SQL Server Native Client (方法中的資料表值參數類型支援) '
-title: 'OLE DB 資料表值參數類型 (方法) '
+description: 'SQL Server Native Client (方法中的 OLE DB Table-Valued 參數類型支援) '
+title: 'OLE DB Table-Valued 參數類型 (方法) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4552440a8c4b970fbbf95af4cf084dace53d17d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81fc48569ff6cc53b0c1003b96efc6095b0e6734
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484940"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-methods"></a>OLE DB SQL Server Native Client (方法中的資料表值參數類型支援) 
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-methods"></a>SQL Server Native Client (方法中的 OLE DB Table-Valued 參數類型支援) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   下列標準 OLE DB 方法支援資料表值參數：  

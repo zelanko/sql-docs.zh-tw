@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7717ba25c3df87dbb7400eff5b4b6d293541664
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1291d988e5fc5e7d4bd3e5f26fc58e048d96612b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868034"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485020"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLProcedureColumns** 會傳回一個資料列，報告所有預存程式的傳回值屬性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **SQLProcedureColumns** 會傳回值，SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或 *ColumnName* 參數的值是否存在。 當這些參數中使用無效值時， **SQLFetch**會傳回 SQL_NO_DATA。  
+ **SQLProcedureColumns** 會傳回值，SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName* 或 *ColumnName* 參數的值是否存在。 當這些參數中使用無效值時， **SQLFetch** 會傳回 SQL_NO_DATA。  
   
  **SQLProcedureColumns** 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 **SQLProcedureColumns** 時，將會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
   

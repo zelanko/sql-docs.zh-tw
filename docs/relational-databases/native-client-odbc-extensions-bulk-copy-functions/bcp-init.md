@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c32343c060eab0d70ba3bbc4419d30809ae745c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448565"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483339"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,17 +52,17 @@ Unicode 和 ANSI 名稱：
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *szTable*  
- 這是要來回複製之資料庫資料表的名稱。 此名稱也可以包含資料庫名稱或擁有者名稱。 例如， **gracie. 標題**、 **pubs。標題**、 **gracie**和 **標題** 都是合法的資料表名稱。  
+ 這是要來回複製之資料庫資料表的名稱。 此名稱也可以包含資料庫名稱或擁有者名稱。 例如， **gracie. 標題**、 **pubs。標題**、 **gracie** 和 **標題** 都是合法的資料表名稱。  
   
  如果 *eDirection* 是 DB_OUT， *szTable* 也可以是資料庫檢視的名稱。  
   
- 如果*eDirection*為 DB_OUT，且在呼叫[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)之前使用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)指定了 SELECT 語句，則**bcp_init** *szTable*必須設定為 Null。  
+ 如果 *eDirection* 為 DB_OUT，且在呼叫 [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)之前使用 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)指定了 SELECT 語句，則 **bcp_init** *szTable* 必須設定為 Null。  
   
  *szDataFile*  
  這是要來回複製之使用者檔案的名稱。 如果使用 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)直接從變數複製資料，請將 *SZDATAFILE* 設定為 Null。  
   
  *szErrorFile*  
- 這是錯誤檔案的名稱，該檔案會以進度訊息、錯誤訊息，以及因為任何原因而無法從使用者檔案複製到資料表之任何資料列的複本。 如果以 *szErrorFile*的形式傳遞 Null，則不會使用任何錯誤檔案。  
+ 這是錯誤檔案的名稱，該檔案會以進度訊息、錯誤訊息，以及因為任何原因而無法從使用者檔案複製到資料表之任何資料列的複本。 如果以 *szErrorFile* 的形式傳遞 Null，則不會使用任何錯誤檔案。  
   
  *eDirection*  
  這是複製的方向，DB_IN 或 DB_OUT。 DB_IN 表示從程式變數或使用者檔案複製到資料表。 DB_OUT 表示從資料庫資料表複製到使用者檔案。 您必須利用 DB_OUT 指定使用者檔案名稱。  
@@ -79,7 +79,7 @@ Unicode 和 ANSI 名稱：
   
 -   指定的資料類型為資料行在資料庫資料表、檢視或 SELECT 結果集中的資料類型。 資料類型會由 sqlncli.h 中所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型列舉。 資料本身會以其電腦格式表示。 也就是說， **整數** 資料類型資料行中的資料會以四個位元組的序清單示，這是根據建立資料檔案的電腦而大或小到小。  
   
--   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製函式 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 剖析資料列，該資料列必須要有資料檔中資料的長度，才能與資料庫資料表、VIEW 或 SELECT 資料行清單中指定的資料長度相同。 例如，定義為 **char (13) ** 的資料庫資料行資料，在檔案中的每個資料列都必須以13個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
+-   如果資料庫資料類型的長度是固定的，資料檔案資料的長度也是固定的。 處理資料的大量複製函式 (例如， [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) 剖析資料列，該資料列必須要有資料檔中資料的長度，才能與資料庫資料表、VIEW 或 SELECT 資料行清單中指定的資料長度相同。 例如，定義為 **char (13)** 的資料庫資料行資料，在檔案中的每個資料列都必須以13個字元表示。 如果資料庫資料行允許使用 Null 值，固定長度的資料前置詞可以是 Null 指標。  
   
 -   定義結束字元位元組順序時，結束字元位元組順序的長度會設定為 0。  
   
@@ -87,13 +87,13 @@ Unicode 和 ANSI 名稱：
   
 -   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從複製時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **bcp_exec** 會根據資料行在資料庫資料表中的序數位置來放置資料。  
   
--   如果資料庫資料類型的長度是變數 (例如， **Varbinary (22) **) 或如果資料庫資料行可以包含 null 值，則資料檔中的資料會加上長度/null 指標的前置詞。 指標的寬度會根據資料類型和大量複製的版本而改變。  
+-   如果資料庫資料類型的長度是變數 (例如， **Varbinary (22)**) 或如果資料庫資料行可以包含 null 值，則資料檔中的資料會加上長度/null 指標的前置詞。 指標的寬度會根據資料類型和大量複製的版本而改變。  
   
  若要變更為資料檔案指定的資料格式值，請呼叫 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 並 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大量複製可以針對不包含索引的資料表進行最佳化，方法是，將資料庫復原模式設定為 SIMPLE 或 BULK_LOGGED。 如需詳細資訊，請參閱大量匯入和[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)[中的基本記錄必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
- 如果沒有使用資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定每個資料行之資料的格式和位置，然後使用 bcp_sendrow 將資料列複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
+ 如果沒有使用資料檔案，您必須呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)來指定每個資料行之資料的格式和位置，然後使用 bcp_sendrow 將資料列複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
   
 ## <a name="example"></a>範例  
  此範例顯示如何利用格式檔案使用 ODBC bcp_init 函數。  

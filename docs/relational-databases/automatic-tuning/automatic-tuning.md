@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808414"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483650"
 ---
 # <a name="automatic-tuning"></a>自動微調
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 「自動調整」是一種資料庫功能，可深入探索潛在的查詢效能問題、建議解決方法，並且自動修正找到的問題。
 
-中導入的自動調整 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 會在每次偵測到潛在的效能問題時通知您，並可讓您套用矯正措施，或讓您 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自動修正效能問題。 自動調整可 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 讓您識別並修正 **查詢執行計畫選擇回歸**所造成的效能問題。 中的自動調整 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 也會建立必要的索引，並卸載未使用的索引。 如需查詢執行計畫的詳細資訊，請參閱 [執行計畫](../../relational-databases/performance/execution-plans.md)。
+中導入的自動調整 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 會在每次偵測到潛在的效能問題時通知您，並可讓您套用矯正措施，或讓您 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自動修正效能問題。 自動調整可 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 讓您識別並修正 **查詢執行計畫選擇回歸** 所造成的效能問題。 中的自動調整 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 也會建立必要的索引，並卸載未使用的索引。 如需查詢執行計畫的詳細資訊，請參閱 [執行計畫](../../relational-databases/performance/execution-plans.md)。
 
 會 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 監視在資料庫上執行的查詢，並自動改善工作負載的效能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有內建的智慧機制，可讓您以動態方式調整您工作負載的資料庫，以自動調整並改善您的查詢效能。 有兩個可用的自動調整功能：
 
@@ -101,7 +101,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在中 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ，您可以使用查詢存放區系統檢視來尋找計畫選擇回歸。 從開始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ， [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會偵測並顯示可能的計畫選擇回歸，以及應該套用在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中的建議動作。 DMV 會顯示問題的相關資訊、問題的重要性，以及詳細資料（例如識別的查詢）、回歸計畫的識別碼、做為比較基準的計畫識別碼，以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可執行以修正問題的語句。
 
-| type | description | Datetime | score | 詳細資料 | ... |
+| 類型 | description | Datetime | score | 詳細資料 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間從4毫秒變更為14毫秒 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間從37毫秒變更為84毫秒 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

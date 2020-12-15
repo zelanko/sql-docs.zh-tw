@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be359426c5ea5125b2fcec991f8ed06b1732e12f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9ccfce33bc58ea146c0e7383bba00625260740b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483329"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ RETCODE bcp_moretext (
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *cbData*  
- 這是要從 *.pdata*所參考的資料複製到 SQL Server 的資料位元組數目。 SQL_NULL_DATA 的值表示 NULL。  
+ 這是要從 *.pdata* 所參考的資料複製到 SQL Server 的資料位元組數目。 SQL_NULL_DATA 的值表示 NULL。  
   
  *.Pdata*  
  這是要傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之支援的長型、變動長度資料區塊的指標。  
@@ -55,9 +55,9 @@ RETCODE bcp_moretext (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 此函式可與 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 和 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 搭配使用，以將長、可變長度的資料值複製到數個較社區塊中的 SQL Server。 **bcp_moretext** 可以與具有下列 SQL Server 資料類型的資料行搭配使用： **text**、 **Ntext**、 **image**、 **Varchar (max) **、 **Nvarchar (max) **、 **VARBINARY (max) **、使用者定義型別 (UDT) 和 XML。 **bcp_moretext** 不支援資料轉換，則提供的資料必須符合目標資料行的資料類型。  
+ 此函式可與 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 和 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 搭配使用，以將長、可變長度的資料值複製到數個較社區塊中的 SQL Server。 **bcp_moretext** 可以與具有下列 SQL Server 資料類型的資料行搭配使用： **text**、 **Ntext**、 **image**、 **Varchar (max)**、 **Nvarchar (max)**、 **VARBINARY (max)**、使用者定義型別 (UDT) 和 XML。 **bcp_moretext** 不支援資料轉換，則提供的資料必須符合目標資料行的資料類型。  
   
- 如果針對**bcp_moretext**所支援的資料類型，使用非 Null 的 *.pdata*參數來呼叫**bcp_bind** ， **bcp_sendrow**會傳送整個資料值，而不論長度為何。 但是，如果 **bcp_bind** 針對支援的資料類型具有 Null *.pdata* 參數，則 **bcp_moretext** 可用來在成功從 **bcp_sendrow** （表示已處理具有資料的任何系結資料行）之後立即複製資料。  
+ 如果針對 **bcp_moretext** 所支援的資料類型，使用非 Null 的 *.pdata* 參數來呼叫 **bcp_bind** ， **bcp_sendrow** 會傳送整個資料值，而不論長度為何。 但是，如果 **bcp_bind** 針對支援的資料類型具有 Null *.pdata* 參數，則 **bcp_moretext** 可用來在成功從 **bcp_sendrow** （表示已處理具有資料的任何系結資料行）之後立即複製資料。  
   
  如果您使用 **bcp_moretext** 在資料列中傳送一個支援的資料類型資料行，也必須用它來傳送資料列中所有其他支援的資料類型資料行。 不能略過任何資料行。 支援的資料類型為 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果此資料行分別為 varchar(max)、nvarchar(max) 或 varbinary(max)，則 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也會列入這個類別目錄。  
   
@@ -65,7 +65,7 @@ RETCODE bcp_moretext (
   
  如果複製的資料列包含多個 long、可變長度的資料行， **bcp_moretext** 先將其資料傳送至最低序數編號資料行，後面接著下一個最低序數編號資料行，依此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
   
- 當使用 bcp_sendrow 和 bcp_moretext 將 **var (max) ** 值傳送到伺服器時，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，對於這些型別而言，值是藉由呼叫長度為零的 bcp_sendrow 來終止。  
+ 當使用 bcp_sendrow 和 bcp_moretext 將 **var (max)** 值傳送到伺服器時，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，對於這些型別而言，值是藉由呼叫長度為零的 bcp_sendrow 來終止。  
   
  應用程式通常會呼叫迴圈內的 **bcp_sendrow** 和 **bcp_moretext** ，以傳送一些資料列。 以下概述如何針對包含兩個 **文字** 資料行的資料表執行這項作業：  
   

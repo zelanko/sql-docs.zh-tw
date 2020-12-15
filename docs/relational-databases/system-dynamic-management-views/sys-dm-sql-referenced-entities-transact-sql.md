@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referenced_entities (Transact-SQL)
-title: sys. dm_sql_referenced_entities (Transact-sql) |Microsoft Docs
+title: sys.dm_sql_referenced_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de7e748e1e993d0e60bde500af1443707ee9020c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cd6c12416a4e1626b7439ace6921b5d1981f0051
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550204"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484600"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-針對中指定之參考實體的定義中的名稱所參考的每個使用者定義實體，各傳回一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在另一個使用者定義實體（稱為*參考實體*）的保存 SQL 運算式中 *，依*名稱顯示兩個實體之間的相依性時，會建立兩個實體之間的相依性。 例如，如果某個預存程序為指定的參考實體，這個函數就會傳回在預存程序中參考的所有使用者定義實體，例如資料表、檢視表、使用者定義型別 (UDT) 或其他預存程序。  
+針對中指定之參考實體的定義中的名稱所參考的每個使用者定義實體，各傳回一個資料列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在另一個使用者定義實體（稱為 *參考實體*）的保存 SQL 運算式中 *，依* 名稱顯示兩個實體之間的相依性時，會建立兩個實體之間的相依性。 例如，如果某個預存程序為指定的參考實體，這個函數就會傳回在預存程序中參考的所有使用者定義實體，例如資料表、檢視表、使用者定義型別 (UDT) 或其他預存程序。  
   
  您可以使用這個動態管理函數來回報下列由指定之參考實體所參考的實體類型：  
   
@@ -67,14 +67,14 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="arguments"></a>引數  
  [ *schema_name*。 ] *referencing_entity_name*  
- 這是參考實體的名稱。 當參考類別為 OBJECT 時，需要*schema_name* 。  
+ 這是參考實體的名稱。 當參考類別為 OBJECT 時，需要 *schema_name* 。  
   
- *schema_name。 referencing_entity_name* 是 **Nvarchar (517) **。  
+ *schema_name。 referencing_entity_name* 是 **Nvarchar (517)**。  
   
  *<referencing_class>* ：： = {OBJECT |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  這是指定之參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *<referencing_class>* 是 **Nvarchar (60) **。  
+ *<referencing_class>* 是 **Nvarchar (60)**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -91,7 +91,7 @@ sys.dm_sql_referenced_entities (
 |referenced_class|**tinyint**|受參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 6 = 類型<br /><br /> 10 = XML 結構描述集合<br /><br /> 21 = 資料分割函數|  
 |referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體的結構描述繫結。因此，實體識別碼的解析會相依於呼叫端的結構描述。 當受參考的實體為預存程序、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的使用者定義函數時，就會發生這個事件。<br /><br /> 1 = 受參考的實體是呼叫端相依，而且在執行階段解析。 在此情況下，referenced_id 是 NULL。<br /><br /> 0 = 受參考的實體識別碼不是呼叫端相依。 若為結構描述繫結參考，以及明確指定結構描述名稱的跨資料庫和跨伺服器參考，則一律是 0。 例如，採用 `EXEC MyDatabase.MySchema.MyProc` 格式的實體參考與呼叫端無關。 不過，採用 `EXEC MyDatabase..MyProc` 格式的參考即與呼叫端相關。|  
-|is_ambiguous|**bit**|指出參考不明確，而且可以在執行時間解析成使用者自訂函數、使用者定義型別 (UDT) ，或 **xml**類型之資料行的 xquery 參考。 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式是在預存程序中定義。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 使用者定義函數或資料行與使用者定義型別 (UDT) 方法的參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫函數時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，一律是 0。|  
+|is_ambiguous|**bit**|指出參考不明確，而且可以在執行時間解析成使用者自訂函數、使用者定義型別 (UDT) ，或 **xml** 類型之資料行的 xquery 參考。 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式是在預存程序中定義。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 使用者定義函數或資料行與使用者定義型別 (UDT) 方法的參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫函數時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，一律是 0。|  
 |is_selected|**bit**|1 = 選取物件或資料行。|  
 |is_updated|**bit**|1 = 修改物件或資料行。|  
 |is_select_all|**bit**|1 = 在 SELECT * 子句中使用此物件 (只限物件層級)。|  

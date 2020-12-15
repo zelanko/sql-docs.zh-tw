@@ -1,5 +1,5 @@
 ---
-title: 大量載入安全性考慮（SQLXML）
+title: '大量載入安全性考慮 (SQLXML) '
 description: 瞭解在 SQLXML 4.0 中使用 XML 大量載入的安全性指導方針。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43cf00aef7e1ce571f41c08d4d9033aee7bd43a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ec361c23bfd946aaf47e817030237f80cdc4a3ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775261"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482939"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大量載入安全性考量 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   下面是使用 XML 大量載入的安全性指導方針：  
   
--   當您指定要執行大量載入作業做為交易時，您可以使用**TempFilePath**屬性來指定要在其中建立暫存檔案的資料夾。  
+-   當您指定要以交易方式執行大量載入作業時，您可以使用 **TempFilePath** 屬性來指定要在其中建立暫存檔案的資料夾。  
   
      大量載入處理序會使用下列權限來建立這些暫存檔：  
   

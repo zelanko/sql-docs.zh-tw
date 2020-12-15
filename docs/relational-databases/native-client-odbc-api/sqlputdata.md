@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81b090ce7c0e7231fac2296149546b64f481b38f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483430"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91867481"
   
 -   參考的參數可以是 UPDATE 語句的 SET 子句中的 *運算式* 。  
   
- 在使用6.5 版或更早版本時，取消將區塊中的資料提供給執行之伺服器的一連串 SQLPutData 呼叫， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會造成資料行值的部分更新。 呼叫 SQLCancel 時參考的 **text**、 **Ntext**或 **image** 資料行，會設定為中繼預留位置值。  
+ 在使用6.5 版或更早版本時，取消將區塊中的資料提供給執行之伺服器的一連串 SQLPutData 呼叫， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會造成資料行值的部分更新。 呼叫 SQLCancel 時參考的 **text**、 **Ntext** 或 **image** 資料行，會設定為中繼預留位置值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更早版本。  
@@ -44,7 +44,7 @@ ms.locfileid: "91867481"
 |22026|字串資料，長度不符|如果應用程式已經指定要傳送的位元組長度（以位元組為單位），例如 SQL_LEN_DATA_AT_EXEC (*n*) 其中 *n* 大於0，則應用程式透過 SQLPutData 提供的位元組總數必須符合指定的長度。|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData 和資料表值參數  
- 使用具有資料表值參數的變數資料列系結時，應用程式會使用 SQLPutData。 *StrLen_Or_Ind*參數表示它已準備好供驅動程式收集資料表值參數資料的下一個資料列或資料列的資料，或沒有其他可用的資料列：  
+ 使用具有資料表值參數的變數資料列系結時，應用程式會使用 SQLPutData。 *StrLen_Or_Ind* 參數表示它已準備好供驅動程式收集資料表值參數資料的下一個資料列或資料列的資料，或沒有其他可用的資料列：  
   
 -   大於 0 的值表示有下一組資料列值。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91867481"
   
 -   小於 0 的任何值都是錯誤，而且會記錄 SQLState HY090 以及訊息「無效的字串或緩衝區長度」的診斷記錄。  
   
- *DataPtr*參數會被忽略，但必須設定為非 Null 值。 如需詳細資訊，請參閱 [Table-Valued 參數和資料行值之系結和資料傳輸](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)中的變數 TVP 資料列系結一節。  
+ *DataPtr* 參數會被忽略，但必須設定為非 Null 值。 如需詳細資訊，請參閱 [Table-Valued 參數和資料行值之系結和資料傳輸](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)中的變數 TVP 資料列系結一節。  
   
  如果 *StrLen_Or_Ind* 具有 SQL_DEFAULT_PARAM 以外的任何值或介於0和 SQL_PARAMSET_SIZE 之間的數位 (也就是 SQLBindParameter) 的 *ColumnSize* 參數，則會是錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR：SQLSTATE=HY090，表示「無效的字串或緩衝區長度」。  
   

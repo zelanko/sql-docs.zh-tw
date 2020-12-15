@@ -1,5 +1,5 @@
 ---
-description: 在 SQL Server Native Client 中建立資料表值參數資料列集
+description: 在 SQL Server Native Client 中建立 Table-Valued 參數資料列集
 title: '資料表值參數資料列集建立 (Native Client OLE DB 提供者) '
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65215eebf7a0e8dd91529f5a231f8597cadfda2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483139"
 ---
-# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>在 SQL Server Native Client 中建立資料表值參數資料列集
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>在 SQL Server Native Client 中建立 Table-Valued 參數資料列集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   雖然取用者可以提供資料表值參數的任何資料列集物件，但是一般的資料列集物件都會針對後端資料存放區來實作，因此所提供的效能會受到限制。 基於這個原因，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會讓取用者在記憶體中的資料之上建立特殊的資料列集物件。 這個特殊的記憶體內部資料列集物件是新的 COM 物件，稱為資料表值參數資料列集。 它會提供類似參數集的功能。  
@@ -35,7 +35,7 @@ ms.locfileid: "88482571"
   
  為了彙總，取用者會傳遞具有控制之 IUnknown 的 *pUnkOuter* 參數。  
   
- 資料表值參數資料列集物件屬性是唯讀的，因此取用者不應該在 *rgPropertySets*中設定任何屬性。  
+ 資料表值參數資料列集物件屬性是唯讀的，因此取用者不應該在 *rgPropertySets* 中設定任何屬性。  
   
  對於每一個 DBCOLUMNDESC 結構的 *rgPropertySets* 數目而言，取用者可以為每一個資料行指定其他屬性。 這些屬性屬於 DBPROPSET_SQLSERVERCOLUMN 屬性集， 它們可讓您針對每一個資料行指定計算和預設的設定， 它們也支援現有的資料行屬性，例如 Null 屬性和識別。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88482571"
   
  在此案例中，提供者會代表取用者包含來自伺服器之資料表值參數資料列集物件的相關類型資訊。  
   
- *pTableID* 和 *pUnkOuter* 參數的設定應該與靜態案例相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]然後，原生用戶端 OLE DB 提供者會從伺服器取得類型資訊 (資料行資訊和條件) 約束，並透過 *>pprowset*參數傳回資料表值參數資料列集物件。 這項作業需要與伺服器通訊，因此其效能不比靜態案例。 動態案例只適用於參數化程序呼叫。  
+ *pTableID* 和 *pUnkOuter* 參數的設定應該與靜態案例相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]然後，原生用戶端 OLE DB 提供者會從伺服器取得類型資訊 (資料行資訊和條件) 約束，並透過 *>pprowset* 參數傳回資料表值參數資料列集物件。 這項作業需要與伺服器通訊，因此其效能不比靜態案例。 動態案例只適用於參數化程序呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表值參數 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

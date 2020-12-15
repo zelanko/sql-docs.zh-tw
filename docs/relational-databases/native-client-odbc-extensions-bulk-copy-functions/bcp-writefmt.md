@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65a8fab194f57ed7c1e42f8fd17fa8900b7c4172
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0f1288057763d60154016524dcd62302498b8c71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420572"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483279"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,14 +51,14 @@ RETCODE bcp_writefmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 格式檔案會指定大量複製所建立之資料檔的資料格式。 [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的呼叫會定義資料檔案的格式。 **bcp_writefmt** 將此定義儲存在 *szformatfile 中*所參考的檔案中。 如需詳細資訊，請參閱 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
+ 格式檔案會指定大量複製所建立之資料檔的資料格式。 [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的呼叫會定義資料檔案的格式。 **bcp_writefmt** 將此定義儲存在 *szformatfile 中* 所參考的檔案中。 如需詳細資訊，請參閱 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
  如需 **bcp** 資料格式檔案結構的詳細資訊，請參閱 [使用 bcp 公用程式匯入和匯出大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
  若要載入已儲存的格式檔案，請使用 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)。  
   
 > [!NOTE]  
->  只有使用7.0 版和更新版本散發的**bcp**公用程式版本才支援**bcp_writefmt**所產生的格式檔案 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  只有使用7.0 版和更新版本散發的 **bcp** 公用程式版本才支援 **bcp_writefmt** 所產生的格式檔案 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="example"></a>範例  
   

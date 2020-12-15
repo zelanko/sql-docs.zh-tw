@@ -1,6 +1,6 @@
 ---
 description: 大型 CLR 使用者定義型別 (ODBC)
-title: " (ODBC) 的大型 CLR 使用者自訂類型 |Microsoft Docs"
+title: " (ODBC) 的大型 CLR User-Defined 類型 |Microsoft Docs"
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 52944d98e4e3141ffbe036b1166b083195ea7fb4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483159"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428160"
   
  如需顯示 ODBC 支援大型 CLR Udt 的範例，請參閱 [大型 udt 的支援](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 如需在 SQL Server Native Client 中支援大型 CLR Udt 的詳細資訊，請參閱 [大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
+ 如需 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱 [大型 clr User-Defined 類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>資料格式  
  SQL Server Native Client 會使用 SQL_SS_LENGTH_UNLIMITED 來表示大型物件 (LOB) 類型的資料行大小大於 8,000 個位元組。 從 SQL Server 2008 開始，當 CLR UDT 的值大於 8,000 個位元組時，將會針對 CLR UDT 使用相同的值。  
@@ -71,7 +71,7 @@ ms.locfileid: "88428160"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT 的名稱。|UDT 的名稱。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- 針對 UDT 參數，必須一律透過 **SQLSetDescField**設定 SQL_CA_SS_UDT_TYPE_NAME。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是選擇性的。  
+ 針對 UDT 參數，必須一律透過 **SQLSetDescField** 設定 SQL_CA_SS_UDT_TYPE_NAME。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是選擇性的。  
   
  如果在相同的資料庫中使用與資料表不同的結構描述來定義 UDT，必須要設定 SQL_CA_SS_UDT_SCHEMA_NAME。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88428160"
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DISPLAY_SIZE|2 *n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
@@ -214,7 +214,7 @@ ms.locfileid: "88428160"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  針對 UDT 傳回的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|精確度|調整|  
+|SQL 資料類型|類型|子類型|長度|Precision|調整|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -234,7 +234,7 @@ ms.locfileid: "88428160"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允許的值如下所示：  
   
-|SQL 資料類型|類型|子類型|長度|精確度|調整|  
+|SQL 資料類型|類型|子類型|長度|Precision|調整|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

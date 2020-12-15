@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3872736a1748dbd06e251a65d358522e7b92a630
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448567"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483370"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,44 +57,44 @@ RETCODE bcp_gettypename (
   
 |BCP 類型名稱|MaxType|輸出|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|之前或之後|**decimal**|  
-|**SQLNUMERIC**|之前或之後|**numeric**|  
-|**SQLINT1**|之前或之後|**tinyint**|  
-|**SQLINT2**|之前或之後|**smallint**|  
-|**SQLINT4**|之前或之後|**int**|  
-|**SQLMONEY**|之前或之後|**money**|  
-|**SQLFLT8**|之前或之後|**float**|  
-|**SQLDATETIME**|之前或之後|**datetime**|  
-|**SQLBITN**|之前或之後|**bit-null**|  
-|**SQLBIT**|之前或之後|**bit**|  
+|**SQLDECIMAL**|或|**decimal**|  
+|**SQLNUMERIC**|或|**numeric**|  
+|**SQLINT1**|或|**tinyint**|  
+|**SQLINT2**|或|**smallint**|  
+|**SQLINT4**|或|**int**|  
+|**SQLMONEY**|或|**money**|  
+|**SQLFLT8**|或|**float**|  
+|**SQLDATETIME**|或|**datetime**|  
+|**SQLBITN**|或|**bit-null**|  
+|**SQLBIT**|或|**bit**|  
 |**SQLBIGCHAR**|否|**char**|  
 |**SQLCHARACTER**|否|**char**|  
 |**SQLBIGVARCHAR**|否|**varchar**|  
 |**SQLVARCHAR**|否|**varchar**|  
-|**SQLTEXT**|之前或之後|**text**|  
+|**SQLTEXT**|或|**text**|  
 |**SQLBIGBINARY**|否|**binary**|  
 |**SQLBINARY**|否|**二進位**|  
 |**SQLBIGVARBINARY**|否|**長**|  
 |**SQLVARBINARY**|否|**長**|  
-|**SQLIMAGE**|之前或之後|**映像**|  
-|**SQLINTN**|之前或之後|**int-null**|  
-|**SQLDATETIMN**|之前或之後|**datetime-null**|  
-|**SQLMONEYN**|之前或之後|**money-null**|  
-|**SQLFLTN**|之前或之後|**float-null**|  
-|**SQLAOPSUM**|之前或之後|**Sum**|  
-|**SQLAOPAVG**|之前或之後|**Avg**|  
-|**SQLAOPCNT**|之前或之後|**Count**|  
-|**SQLAOPMIN**|之前或之後|**Min**|  
-|**SQLAOPMAX**|之前或之後|**Max**|  
-|**SQLDATETIM4**|之前或之後|**smalldatetime**|  
-|**SQLMONEY4**|之前或之後|**Smallmoney**|  
-|**SQLFLT4**|之前或之後|**真正**|  
-|**SQLUNIQUEID**|之前或之後|**uniqueidentifier**|  
+|**SQLIMAGE**|或|**影像**|  
+|**SQLINTN**|或|**int-null**|  
+|**SQLDATETIMN**|或|**datetime-null**|  
+|**SQLMONEYN**|或|**money-null**|  
+|**SQLFLTN**|或|**float-null**|  
+|**SQLAOPSUM**|或|**Sum**|  
+|**SQLAOPAVG**|或|**Avg**|  
+|**SQLAOPCNT**|或|**Count**|  
+|**SQLAOPMIN**|或|**Min**|  
+|**SQLAOPMAX**|或|**Max**|  
+|**SQLDATETIM4**|或|**smalldatetime**|  
+|**SQLMONEY4**|或|**Smallmoney**|  
+|**SQLFLT4**|或|**真正**|  
+|**SQLUNIQUEID**|或|**uniqueidentifier**|  
 |**SQLNCHAR**|否|**Nchar**|  
 |**SQLNVARCHAR**|否|**Nvarchar**|  
-|**SQLNTEXT**|之前或之後|**Ntext**|  
-|**SQLVARIANT**|之前或之後|**sql_variant**|  
-|**SQLINT8**|之前或之後|**Bigint**|  
+|**SQLNTEXT**|或|**Ntext**|  
+|**SQLVARIANT**|或|**sql_variant**|  
+|**SQLINT8**|或|**Bigint**|  
 |**SQLCHARACTER**|是|**varchar(max)**|  
 |**SQLBIGCHAR**|是|**varchar(max)**|  
 |**SQLBIGVARCHAR**|是|**varchar(max)**|  
@@ -106,7 +106,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|是|**nvarchar(max)**|  
 |**SQLNVARCHAR**|是|**nvarchar(max)**|  
 |**SQLXML**|是|**XML**|  
-|**SQLUDT**|之前或之後|**Udt**|  
+|**SQLUDT**|或|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 支援增強的日期和時間功能  
  日期/時間類型的權杖參數值會在資料表中的 "Type in sqlncli" 資料行中描述，以 [取得增強型日期和時間類型的大量複製變更 &#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  

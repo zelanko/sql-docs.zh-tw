@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e37533e1c57ccf55dfe8bb7b5cbc5aa3da60dd3f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 071146a14be3dbeff057845f0458de422617430f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890790"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483109"
 ---
 # <a name="performing-transactions-in-odbc"></a>在 ODBC 中執行交易
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "91890790"
   
 -   手動認可模式  
   
-     所有執行的語句都會包含在相同的交易中，直到透過呼叫 **SQLEndTran**來明確停止為止。  
+     所有執行的語句都會包含在相同的交易中，直到透過呼叫 **SQLEndTran** 來明確停止為止。  
   
- 自動認可模式是 ODBC 的預設交易模式。 建立連線時，會處於自動認可模式，直到呼叫 **SQLSetConnectAttr** 來切換至手動認可模式，方法是設定 [自動認可模式]。 當應用程式關閉自動認可時，傳送到資料庫的下一個陳述式會啟動交易。 然後，交易就會持續生效，直到應用程式使用 SQL_COMMIT 或 SQL_ROLLBACK 選項來呼叫 **SQLEndTran** 為止。 **SQLEndTran**開始下一個交易時，傳送至資料庫的命令。  
+ 自動認可模式是 ODBC 的預設交易模式。 建立連線時，會處於自動認可模式，直到呼叫 **SQLSetConnectAttr** 來切換至手動認可模式，方法是設定 [自動認可模式]。 當應用程式關閉自動認可時，傳送到資料庫的下一個陳述式會啟動交易。 然後，交易就會持續生效，直到應用程式使用 SQL_COMMIT 或 SQL_ROLLBACK 選項來呼叫 **SQLEndTran** 為止。 **SQLEndTran** 開始下一個交易時，傳送至資料庫的命令。  
   
  如果應用程式從手動認可模式切換到自動認可模式，驅動程式會認可目前在連接上開啟的所有交易。  
   
