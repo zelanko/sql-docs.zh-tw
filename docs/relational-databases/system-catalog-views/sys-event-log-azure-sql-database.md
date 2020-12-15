@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412899"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -44,10 +44,10 @@ ms.locfileid: "91892398"
 |**database_name**|**sysname**|資料庫的名稱。 如果連接失敗且使用者未指定資料庫名稱，則這個資料行會是空白。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 對於彙總的事件，這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 對於匯總的事件， **End_time** 一律會比同一資料列中對應的 **start_time** 晚5分鐘。 對於未匯總的事件， **start_time** 和 **end_time** 等於事件的實際 UTC 日期和時間。|  
-|**event_category**|**Nvarchar (64) **|產生這個事件的高階元件。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
-|**event_type**|**Nvarchar (64) **|事件的類型。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_category**|**Nvarchar (64)**|產生這個事件的高階元件。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_type**|**Nvarchar (64)**|事件的類型。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**event_subtype**|**int**|所發生事件的子類型。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
-|**event_subtype_desc**|**Nvarchar (64) **|事件子類型的描述。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
+|**event_subtype_desc**|**Nvarchar (64)**|事件子類型的描述。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
 |**severity**|**int**|錯誤的嚴重性。 可能的值包括：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
 |**event_count**|**int**|指定資料庫在指定的時間間隔內，針對指定的資料庫發生的次數 (**start_time** 和 **end_time**) 。|  
 |**description**|**nvarchar(max)**|事件的詳細描述。<br /><br /> 如需可能值的清單，請參閱 [事件種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 。|  
@@ -55,7 +55,7 @@ ms.locfileid: "91892398"
   
 ##  <a name="event-types"></a><a name="EventTypes"></a> 事件種類
 
- 此視圖中的每個資料列所記錄的事件都是由類別 (**event_category**) 、事件種類 (**event_type**) 和子類型** (event_subtype) 。** 下表列出這個檢視中所收集事件的類型。  
+ 此視圖中的每個資料列所記錄的事件都是由類別 (**event_category**) 、事件種類 (**event_type**) 和子類型 **(event_subtype) 。** 下表列出這個檢視中所收集事件的類型。  
   
  針對 [連線 **能力** ] 類別中的事件，sys.database_connection_stats 視圖提供摘要資訊。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "91892398"
 |**連接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱 [資源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
 |**連接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱 [資源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
 |**連接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：僅適用于 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱 [資源限制](/previous-versions/azure/dn338081(v=azure.100))。|  
-|**發動機**|**deadlock**|0|**deadlock**|2|發生死結。|  
+|**發動機**|**僵局**|0|**僵局**|2|發生死結。|  
   
 ## <a name="permissions"></a>權限
 
@@ -93,7 +93,7 @@ ms.locfileid: "91892398"
   
 ### <a name="event-aggregation"></a>事件彙總
 
- 這個檢視的事件資訊會在 5 分鐘間隔內收集和彙總。 **Event_count**資料行代表在給定時間間隔內，特定資料庫的特定**event_type**和**event_subtype**發生的次數。  
+ 這個檢視的事件資訊會在 5 分鐘間隔內收集和彙總。 **Event_count** 資料行代表在給定時間間隔內，特定資料庫的特定 **event_type** 和 **event_subtype** 發生的次數。  
   
 > [!NOTE]  
 > 某些事件不會彙總，像是死結。 對於這些事件， **event_count** 將會是1並 **start_time** ，而且 **end_time** 會等於事件發生時實際的 UTC 日期和時間。  
@@ -105,7 +105,7 @@ ms.locfileid: "91892398"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-start_time-and-end_time"></a>間隔的 start_time 和 end_time  
- 當事件發生在**start_time**之後，或_在_該間隔**end_time** _之前_，事件*就會包含*在匯總間隔內。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
+ 當事件發生在 **start_time** 之後，或 _在_ 該間隔 **end_time** _之前_，事件 *就會包含* 在匯總間隔內。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
   
 ```
 start_time                    end_time  

@@ -1,5 +1,5 @@
 ---
-title: 執行含有命名空間的 XPath 查詢（SQLXML）
+title: 使用命名空間 (SQLXML) 執行 XPath 查詢
 description: 瞭解如何在 SQLXML XPath 查詢中包含命名空間。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74f829c7db7ee5c4c0c848c69b9cc447c3bff506
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdd90998d87d2fbe278605785c72cb4cd4948d21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649387"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414137"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "85649387"
   
  由於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 不支援萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析前置詞，請使用 namespace 屬性來指定命名空間系結。  
   
- 在下列範例中，XPath 查詢會使用萬用字元（ \* ）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 此 XPath 查詢會傳回本機名稱為**Employee**的所有元素，而命名空間 URI 為**urn： myschema： Contacts**：  
+ 在下列範例中，XPath 查詢會使用萬用字元 (\*) 和本機名稱 ( # A3 和命名空間 uri ( # A5 XPath 函數來指定命名空間。 此 XPath 查詢會傳回本機名稱為 **Employee** 的所有元素，而命名空間 URI 為 **urn： myschema.xml： Contacts**：  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- 在 SQLXML 4.0 中，使用命名空間前置詞來指定這個 XPath 查詢。 例如， **x:Contact**，其中**x**是命名空間前置詞。 請考慮下列 XSD 結構描述：  
+ 在 SQLXML 4.0 中，使用命名空間前置詞來指定這個 XPath 查詢。 例如， **x:Contact**，其中 **x** 是命名空間前置詞。 請考慮下列 XSD 結構描述：  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  

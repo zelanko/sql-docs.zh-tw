@@ -16,13 +16,13 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059329"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412981"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92059329"
 |-----------------|---------------|-----------------|  
 |database_id|int|資料庫的識別碼，在 Azure SQL Database server 的實例內是唯一的。 Joinable 與 [sys. 資料庫 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |edition|sysname|資料庫或資料倉儲的服務層： **基本**、 **標準**、 **Premium** 或 **資料倉儲**。|  
-|service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，則會傳回 **ElasticPool**。<br /><br /> 在「 **基本** 」層上，傳回「 **基本**」。<br /><br /> **標準服務層級中的單一資料庫** 會傳回下列其中一項： S0、S1、S2、S3、S4、S6、S7、S9 或 S12。<br /><br /> 進階層**中的單一資料庫**會傳回下列各項： P1、P2、P4、P6、P11 或 P15。<br /><br /> **Azure Synapse Analytics** 透過 DW30000C 傳回 DW100。<br /><br /> 如需詳細資訊，請參閱[單一資料庫](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[彈性](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)集區、[資料](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)倉儲|  
+|service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，則會傳回 **ElasticPool**。<br /><br /> 在「 **基本** 」層上，傳回「 **基本**」。<br /><br /> **標準服務層級中的單一資料庫** 會傳回下列其中一項： S0、S1、S2、S3、S4、S6、S7、S9 或 S12。<br /><br /> 進階層 **中的單一資料庫** 會傳回下列各項： P1、P2、P4、P6、P11 或 P15。<br /><br /> **Azure Synapse Analytics** 透過 DW30000C 傳回 DW100。<br /><br /> 如需詳細資訊，請參閱[單一資料庫](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[彈性](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)集區、[資料](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)倉儲|  
 |elastic_pool_name|sysname|資料庫所屬 [彈性集](/azure/azure-sql/database/elastic-pool-overview) 區的名稱。 如果資料庫是單一資料庫或資料倉儲，則會傳回 **Null** 。|  
   
 ## <a name="permissions"></a>權限  

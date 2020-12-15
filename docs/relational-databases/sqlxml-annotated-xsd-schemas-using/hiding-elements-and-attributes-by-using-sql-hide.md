@@ -1,6 +1,6 @@
 ---
 title: 使用 sql:hide 來隱藏元素和屬性
-description: 瞭解如何在對 XSD 架構執行 XPath 查詢時，使用 sql： hide 注釋來隱藏元素和屬性。
+description: 瞭解如何在針對 XSD 架構執行 XPath 查詢時，使用 sql： hide 注釋來隱藏元素和屬性。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,27 +25,27 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 44f7bf464742b1863ebc62a5def3f484932b52c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750749"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415711"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 來隱藏元素和屬性
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  針對 XSD 結構描述執行 XPath 查詢時，產生的 XML 文件會具有在結構描述中指定的元素和屬性。 您可以使用**sql： hide**注釋，指定在架構中隱藏某些元素和屬性。 當查詢的選取準則需要結構描述中的特定元素或屬性，但是您不想要在產生的 XML 文件中傳回這些項目時，這樣做就很有用。  
+  針對 XSD 結構描述執行 XPath 查詢時，產生的 XML 文件會具有在結構描述中指定的元素和屬性。 您可以使用 **sql： hide** 注釋來指定在架構中隱藏一些元素和屬性。 當查詢的選取準則需要結構描述中的特定元素或屬性，但是您不想要在產生的 XML 文件中傳回這些項目時，這樣做就很有用。  
   
- **Sql： hide**批註接受布林值（0 = false，1 = true）。 可接受的值為 0、1、true 和 false。  
+ **Sql： hide** 批註接受布林值 (0 = false，1 = true) 。 可接受的值為 0、1、true 和 false。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 [執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 針對屬性指定 sql:hide  
- 此範例中的 XSD 架構是由 **\<Person.Contact>** 具有**ContactID**、 **FirstName**和**LastName**屬性的元素所組成。  
+ 此範例中的 XSD 架構是由 **\<Person.Contact>** 具有 **ContactID**、 **FirstName** 和 **LastName** 屬性的元素所組成。  
   
- **\<Person.Contact>** 元素屬於複雜類型，因此會對應至相同名稱的資料表（預設對應）。 元素的所有屬性 **\<Person.Contact>** 都是簡單類型，而且會對應至 AdventureWorks 資料庫中 Contacttable 的相同名稱的資料行。 在架構中，會在**ContactID**屬性上指定**sql： hide**注釋。 針對此架構指定 XPath 查詢時，XML 檔中不會傳回**ContactID** 。  
+ **\<Person.Contact>** 元素屬於複雜類型，因此會對應至相同名稱的資料表 (預設對應) 。 元素的所有屬性 **\<Person.Contact>** 都屬於簡單類型，而且會對應至 AdventureWorks 資料庫中 Contacttable 的相同名稱的資料行。 在架構中， **sql： hide** 批註是在 **ContactID** 屬性上指定。 針對此架構指定 XPath 查詢時，XML 檔中不會傳回 **ContactID** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,7 +82,7 @@ ms.locfileid: "85750749"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為結果集：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "85750749"
 </ROOT>  
 ```  
   
- 當在專案上指定**sql： hide**時，元素及其屬性或子專案不會出現在產生的 XML 檔中。 以下是在元素上指定**sql： hide**的另一個 XSD 架構 **\<OD>** ：  
+ 當在元素上指定 **sql： hide** 時，元素及其屬性或子專案不會出現在產生的 XML 檔中。 以下是在元素上指定 **sql： hide** 的另一個 XSD 架構 **\<OD>** ：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "85750749"
 </xsd:schema>  
 ```  
   
- `/Customers[@CID="1"]`針對此架構指定 XPath 查詢時，所產生的 XML 檔不會包含 **\<OD>** 元素和其子系，如下列部分結果所示：  
+ `/Customers[@CID="1"]`針對此架構指定 XPath 查詢 (例如) 時，所產生的 XML 檔不包含 **\<OD>** 元素和其子系，如此部分結果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

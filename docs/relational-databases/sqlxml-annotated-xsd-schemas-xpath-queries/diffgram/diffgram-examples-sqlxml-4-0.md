@@ -1,6 +1,6 @@
 ---
-title: DiffGram 範例（SQLXML）
-description: 在 SQLXML 4.0 中，diffgram 對資料庫執行插入、更新和刪除作業的範例。
+title: " (SQLXML) 的 DiffGram 範例"
+description: 在 SQLXML 4.0 中查看對資料庫執行插入、更新和刪除作業的 diffgram 範例。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,13 +16,13 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c4681c4babe25ec9c683d78e583ddd2c1a4d91fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650011"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415217"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 範例 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -102,11 +102,11 @@ ms.locfileid: "85650011"
 </ROOT>  
 ```  
   
- 在 **\<before>** 區塊中，有一個 **\<Order>** 元素（**diffgr： Id = "Order1"**）和一個 **\<Customer>** 元素（**diffgr： id = "Customer1"**）。 這些項目代表資料庫中的現有記錄。 **\<DataInstance>** 元素沒有對應的記錄（具有相同的**diffgr： id**）。 這表示刪除作業。  
+ 在 **\<before>** 區塊中，有一個 **\<Order>** 元素 (**diffgr： Id = "Order1"**) 和 **\<Customer>** (**diffgr： id = "Customer1"**) 的元素。 這些項目代表資料庫中的現有記錄。 **\<DataInstance>** 元素沒有對應的記錄 (具有相同的 **diffgr： id**) 。 這表示刪除作業。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
-1.  在**tempdb**資料庫中建立這些資料表。  
+1.  在 **tempdb** 資料庫中建立這些資料表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -142,7 +142,7 @@ ms.locfileid: "85650011"
   
 5.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 來執行 DiffGram。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. 使用 DiffGram 插入記錄  
  在此範例中，DiffGram 會在 Cust 資料表中插入記錄，並在 Ord 資料表中插入記錄。  
@@ -169,11 +169,11 @@ ms.locfileid: "85650011"
 </ROOT>  
 ```  
   
- 在這個 DiffGram 中， **\<before>** 未指定區塊（找不到任何現有的資料庫記錄）。 有兩個記錄實例（由 **\<Customer>** **\<Order>** 區塊中的和元素識別 **\<DataInstance>** ）分別對應至 [加入] 和 [Ord] 資料表。 這兩個元素都會指定**diffgr： hasChanges**屬性（**hasChanges = "已插入"**）。 這表示插入作業。 在這個 DiffGram 中，如果您指定**hasChanges = "modified"**，表示您想要修改不存在的記錄，這會導致錯誤。  
+ 在這個 DiffGram 中， **\<before>** 不會指定區塊 () 找不到任何現有的資料庫記錄。 有兩個記錄實例 (由 **\<Customer>** **\<Order>**) 區塊中的和元素所識別，而這些專案 **\<DataInstance>** 分別對應至 [加入] 和 [Ord] 資料表。 這兩個元素都會指定 **diffgr： hasChanges** 屬性 (**hasChanges = "插入"**) 。 這表示插入作業。 在這個 DiffGram 中，如果您指定 **hasChanges = "modified"**，就表示您想要修改不存在的記錄，這會導致錯誤。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
-1.  在**tempdb**資料庫中建立這些資料表。  
+1.  在 **tempdb** 資料庫中建立這些資料表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -209,7 +209,7 @@ ms.locfileid: "85650011"
   
 5.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 來執行 DiffGram。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. 使用 DiffGram 來更新現有的記錄  
  在此範例中，DiffGram 會更新客戶 ALFKI 的客戶資訊 (CompanyName 和 ContactName)。  
@@ -241,11 +241,11 @@ ms.locfileid: "85650011"
 </ROOT>  
 ```  
   
- **\<before>** 區塊包含 **\<Customer>** 元素（**diffgr： Id = "Customer1"**）。 **\<DataInstance>** 區塊包含 **\<Customer>** 具有相同**識別碼**的對應元素。**\<customer>** 中的元素 **\<NewDataSet>** 也會指定**diffgr： hasChanges = "modified"**。 這表示更新作業，而**customer 資料表中的客戶**記錄也會隨之更新。 請注意，如果未指定**diffgr： hasChanges**屬性，DiffGram 處理邏輯會忽略這個元素，而且不會執行任何更新。  
+ **\<before>** 區塊包含 **\<Customer>** 元素 (**diffgr： Id = "Customer1"**) 。 **\<DataInstance>** 區塊包含 **\<Customer>** 具有相同 **識別碼** 的對應元素。**\<customer>** 中的元素 **\<NewDataSet>** 也會指定 **diffgr： hasChanges = "modified"**。 這表示更新作業，而 **customer 資料表中的客戶** 記錄也會隨之更新。 請注意，如果未指定 **diffgr： hasChanges** 屬性，DiffGram 處理邏輯會忽略這個元素，而且不會執行任何更新。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
-1.  在**tempdb**資料庫中建立這些資料表。  
+1.  在 **tempdb** 資料庫中建立這些資料表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -281,7 +281,7 @@ ms.locfileid: "85650011"
   
 5.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 來執行 DiffGram。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. 使用 DiffGram 來插入、更新及刪除記錄  
  這個範例中會使用相對複雜的 DiffGram 來執行插入、更新和刪除作業。  
@@ -342,19 +342,19 @@ ms.locfileid: "85650011"
   
  DiffGram 邏輯會處理這個 DiffGram，如下所示：  
   
--   根據 DiffGram 處理邏輯，區塊中的所有最上層元素會 **\<before>** 對應到對應的資料表，如對應架構中所述。  
+-   根據 DiffGram 處理邏輯，區塊中的所有最上層元素都會 **\<before>** 對應至對應的資料表，如對應架構中所述。  
   
--   **\<before>** 區塊具有 **\<Order>** 元素（**dffgr： Id = "Order1"**）和 **\<Customer>** 元素（**diffgr： id = "Customer1"**），但在區塊中沒有對應的元素 **\<DataInstance>** （具有相同的識別碼）。 這表示刪除作業，而且會從 Cust 和 Ord 資料表中刪除記錄。  
+-   **\<before>** 區塊具有 **\<Order>** (**dffgr： Id = "Order1"**) 的元素，以及 **\<Customer>** (**diffgr： id = "Customer1"**) 的元素，但區塊 (中沒有對應的元素 **\<DataInstance>**) 具有相同的識別碼。 這表示刪除作業，而且會從 Cust 和 Ord 資料表中刪除記錄。  
   
--   **\<before>** 區塊具有 **\<Customer>** 元素（**diffgr： Id = "Customer2"**），其在區塊中有對應的 **\<Customer>** 元素 **\<DataInstance>** （具有相同的識別碼）。 區塊中的元素會 **\<DataInstance>** 指定**Diffgr： hasChanges = "modified"**。 這是更新作業，針對客戶 ANATR，系統會使用區塊中指定的值，在 customer 資料表中更新「公司名稱」和「連絡人」資訊 **\<DataInstance>** 。  
+-   **\<before>** 區塊具有 **\<Customer>** (**diffgr： Id = "Customer2"**) 的元素，而 **\<Customer>** 區塊 (中有對應的元素 **\<DataInstance>**) 具有相同的識別碼。 區塊中的元素會 **\<DataInstance>** 指定 **Diffgr： hasChanges = "modified"**。 這是針對客戶 ANATR 的更新作業，會使用在區塊中指定的值，在 customer 資料表中更新公司名稱和連絡人資訊 **\<DataInstance>** 。  
   
--   **\<DataInstance>** 區塊具有 **\<Customer>** 元素（**diffgr： Id = "Customer3"**）和 **\<Order>** 元素（**diffgr： id = "Order3"**）。 這兩個元素都不會指定**diffgr： hasChanges**屬性。 因此，DiffGram 處理邏輯會忽略這些元素。  
+-   **\<DataInstance>** 區塊具有 **\<Customer>** (**diffgr： Id = "Customer3"**) 的元素，以及 **\<Order>** (**diffgr： id = "Order3"**) 的元素。 這些元素都不會指定 **diffgr： hasChanges** 屬性。 因此，DiffGram 處理邏輯會忽略這些元素。  
   
--   **\<DataInstance>** 區塊具有 **\<Customer>** 元素（**diffgr： Id = "Customer4"**）和 **\<Order>** 元素（**diffgr： id = "Order4"**），但在區塊中沒有對應的元素 \<before> 。 區塊中的這些元素會 **\<DataInstance>** 指定**Diffgr： hasChanges = "已插入"**。 因此，新的記錄會加入 Cust 資料表和 Ord 資料表中。  
+-   **\<DataInstance>** 區塊具有 **\<Customer>** (**diffgr： Id = "Customer4"**) 的元素，以及 **\<Order>** (**diffgr： id = "Order4"**) 的元素，但區塊中沒有對應的元素 \<before> 。 區塊中的這些元素會 **\<DataInstance>** 指定 **Diffgr： hasChanges = "插入"**。 因此，新的記錄會加入 Cust 資料表和 Ord 資料表中。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
-1.  在**tempdb**資料庫中建立下列資料表。  
+1.  在 **tempdb** 資料庫中建立下列資料表。  
   
     ```  
     CREATE TABLE Cust(  
@@ -390,10 +390,10 @@ ms.locfileid: "85650011"
   
 5.  建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 來執行 DiffGram。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. 搭配 diffgr:parentID 註解使用 DiffGram 來套用更新  
- 這個範例說明如何使用 DiffGram 的區塊中指定的**parentID**注釋 **\<before>** 來套用更新。  
+ 此範例說明如何在套用 **\<before>** 更新時使用 DiffGram 的區塊中指定的 parentID 批註。  
   
 ```  
 <NewDataSet />  
@@ -414,6 +414,6 @@ ms.locfileid: "85650011"
 </diffgr:diffgram>  
 ```  
   
- 這個 DiffGram 會指定刪除作業，因為只有一個 **\<before>** 區塊。 在 DiffGram 中， **parentID**注釋是用來指定訂單和訂單詳細資料之間的父子式關聯性。 當 SQLXML 刪除記錄時，它會從這個關聯性所識別的子資料表中刪除記錄，然後從對應的父資料表中刪除記錄。  
+ 這項 DiffGram 會指定刪除作業，因為只有一個 **\<before>** 區塊。 在 DiffGram 中， **parentID** 批註是用來指定訂單與訂單詳細資料之間的父子式關聯性。 當 SQLXML 刪除記錄時，它會從這個關聯性所識別的子資料表中刪除記錄，然後從對應的父資料表中刪除記錄。  
   
   

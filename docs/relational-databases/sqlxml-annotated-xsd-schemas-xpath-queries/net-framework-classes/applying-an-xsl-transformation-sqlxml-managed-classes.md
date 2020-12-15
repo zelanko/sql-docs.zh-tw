@@ -1,6 +1,6 @@
 ---
-title: 套用 XSL 轉換（SQLXML）
-description: 使用 SQLXML Managed 類別中 SqlXmlCommand 物件的 XslPath 屬性，即可查看套用 XSL 轉換之 SQL 查詢的範例。
+title: " (SQLXML) 套用 XSL 轉換"
+description: 使用 SQLXML Managed 類別中 SqlXmlCommand 物件的 XslPath 屬性，查看套用 XSL 轉換的 SQL 查詢範例。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,19 +16,19 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ecdb718dec421703ffe97ec1b36617476b99ed3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03b33945a727cd7010800c9d78254733fb9f2d7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649717"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414547"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   在本範例中，SQL 查詢會針對 AdventureWorks 資料庫執行。 XSL 轉換會套用到查詢結果以產生員工名字和姓氏之兩個資料行的資料表。  
   
- SqlXmlCommand 物件的 XslPath 屬性是用來指定 XSL 檔案及其目錄路徑。  
+ SqlXmlCommand 物件的 XslPath 屬性是用來指定 XSL 檔案與其目錄路徑。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

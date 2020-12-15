@@ -1,6 +1,6 @@
 ---
-title: 在位置路徑中設定選擇述詞（SQLXML）
-description: 瞭解如何在 XPath （SQLXML 4.0）查詢的位置路徑運算式中指定選取述詞，以篩選正在查詢的節點集。
+title: '在位置路徑中設定選取述詞 (SQLXML) '
+description: 瞭解如何在 XPath 的位置路徑運算式中指定選取述詞 (SQLXML 4.0) 查詢篩選要查詢的節點集。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +18,13 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17f6ca29f9a91315eef11c39a884bf773cad6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c02a33e76fd478e77e2b5a743b5cc6e1d32f1ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649780"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414409"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路徑 (SQLXML 4.0) 中指定選取述詞
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,16 +33,16 @@ ms.locfileid: "85649780"
  XPath 也允許以位置為基礎的篩選。 評估為數字的述詞運算式會選取該序數節點。 例如，位置路徑 `Customer[3]` 會傳回第三客戶。 但是不支援這類數值述詞， 只支援傳回布林值的述詞運算式。  
   
 > [!NOTE]  
->  如需 XPath 的 xpath 實作為限制的詳細資訊，以及它與 W3C 規格之間的差異，請參閱[使用 XPath 查詢的簡介 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
+>  如需 XPath 實作為 XPath 的限制以及其與 W3C 規格之間差異的詳細資訊，請參閱 [使用 Xpath 查詢的簡介 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
-## <a name="selection-predicate-example-1"></a>選取述詞：範例1  
- 下列 XPath 運算式（位置路徑）會從目前的內容節點選取所有 **\<Customer>** 具有**CustomerID**屬性且值為 ALFKI 的元素子系：  
+## <a name="selection-predicate-example-1"></a>選取專案述詞：範例1  
+ 下列 XPath 運算式 (位置路徑) 從目前內容節點選取所有 **\<Customer>** 具有 **CustomerID** 屬性且值為 ALFKI 的元素子系：  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 在這個 XPath 查詢中，`child` 和 `attribute` 是軸的名稱。 `Customer`是節點測試（如果是，則為 TRUE `Customer` **\<element node>** ，因為 **\<element>** 是軸的主要節點類型 `child` ）。 `attribute::CustomerID="ALFKI"` 是述詞。 在述詞中， `attribute` 是軸而且 `CustomerID` 是節點測試（如果**CustomerID**是內容節點的屬性，則為 TRUE，因為 **\<attribute>** 是**屬性**軸的主要節點類型）。  
+ 在這個 XPath 查詢中，`child` 和 `attribute` 是軸的名稱。 `Customer` 如果是，則節點測試 (TRUE `Customer` **\<element node>** ，因為 **\<element>** 是軸) 的主要節點類型 `child` 。 `attribute::CustomerID="ALFKI"` 是述詞。 在述詞中， `attribute` 是軸，而且 `CustomerID` 如果 **CustomerID** 是內容節點的屬性，則為節點測試 (TRUE，因為 **\<attribute>** 是 **屬性** 軸的主要節點類型) 。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -50,8 +50,8 @@ ms.locfileid: "85649780"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>選取述詞：範例2  
- 下列 XPath 運算式（位置路徑）會從目前的內容節點選取所有 **\<Order>** 具有**SalesOrderID**屬性且值為1的孫系：  
+## <a name="selection-predicate-example-2"></a>選取專案述詞：範例2  
+ 下列 XPath 運算式 (位置路徑) 從目前內容節點選取所有 **\<Order>** 具有值1之 **SalesOrderID** 屬性的孫系：  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -65,18 +65,18 @@ ms.locfileid: "85649780"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>選取述詞：範例3  
- 下列 XPath 運算式（位置路徑）會從目前的內容節點中選取 **\<Customer>** 具有一或多個子系的所有子系 **\<ContactName>** ：  
+## <a name="selection-predicate-example-3"></a>選取專案述詞：範例3  
+ 下列 XPath 運算式 (位置路徑) 從目前的內容節點選取 **\<Customer>** 具有一個或多個子系的所有子系 **\<ContactName>** ：  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- 這個範例假設 **\<ContactName>** 是 XML 檔中專案的子專案 **\<Customer>** ，這在批註式 XSD 架構中稱為*元素中心對應*。  
+ 這個範例假設在 **\<ContactName>** XML 檔中是元素的子項目 **\<Customer>** ，在批註式 XSD 架構中，這稱為 *元素中心的對應* 。  
   
- 在這個 XPath 運算式中，`child` 是軸的名稱。 `Customer`是節點測試（如果 `Customer` 是節點，則為 TRUE **\<element>** ，因為 **\<element>** 是軸的主要節點類型 `child` ）。 `child::ContactName` 是述詞。 在述詞中， `child` 是軸而且 `ContactName` 是節點測試（如果 `ContactName` 是節點，則為 TRUE **\<element>** ）。  
+ 在這個 XPath 運算式中，`child` 是軸的名稱。 `Customer` 如果是節點，節點測試 (TRUE `Customer` **\<element>** ，因為 **\<element>** 是軸) 的主要節點類型 `child` 。 `child::ContactName` 是述詞。 在述詞中， `child` 是軸，而且是節點 `ContactName` 測試 (TRUE （如果 `ContactName` 是 **\<element>** 節點) ）。  
   
- 此運算式只會傳回 **\<Customer>** 具有元素子系之內容節點的元素子系 **\<ContactName>** 。  
+ 此運算式只會傳回 **\<Customer>** 具有專案子系的內容節點之元素子系 **\<ContactName>** 。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -84,16 +84,16 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>選取述詞：範例4  
- 下列 XPath 運算式會選取 **\<Customer>** 不具有專案子系之內容節點的元素子系 **\<ContactName>** ：  
+## <a name="selection-predicate-example-4"></a>選取專案述詞：範例4  
+ 下列 XPath 運算式會選取沒有 **\<Customer>** 元素子系的內容節點之元素子系 **\<ContactName>** ：  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- 這個範例假設 **\<ContactName>** 是 **\<Customer>** XML 檔中元素的子專案，而且資料庫中不需要 [連絡人] 欄位。  
+ 這個範例假設 **\<ContactName>** 是 XML 檔中專案的子專案 **\<Customer>** ，而且資料庫中不需要 [連絡人] 欄位。  
   
- 在此範例中，`child` 為軸。 `Customer`是節點測試（如果 `Customer` 是節點，則為 TRUE \<element> ）。 `not(child::ContactName)` 是述詞。 在述詞中， `child` 是軸而且 `ContactName` 是節點測試（如果 `ContactName` 是節點，則為 TRUE \<element> ）。  
+ 在此範例中，`child` 為軸。 `Customer` 如果 `Customer` 是節點) ，節點測試是否 (TRUE \<element> 。 `not(child::ContactName)` 是述詞。 在述詞中， `child` 是軸，而且是節點 `ContactName` 測試 (TRUE （如果 `ContactName` 是 \<element> 節點) ）。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   
@@ -101,14 +101,14 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>選取述詞：範例5  
- 下列 XPath 運算式會從目前的內容節點中選取所有 **\<Customer>** 具有**CustomerID**屬性的子系：  
+## <a name="selection-predicate-example-5"></a>選取專案述詞：範例5  
+ 下列 XPath 運算式會從目前內容節點選取 **\<Customer>** 具有 **CustomerID** 屬性的所有子系：  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- 在此範例中， `child` 是軸而且 `Customer` 是節點測試（如果 `Customer` 是節點，則為 TRUE \<element> ）。 `attribute::CustomerID` 是述詞。 在述詞中， `attribute` 是軸，而是述詞 `CustomerID` （如果是節點，則為 TRUE `CustomerID` **\<attribute>** ）。  
+ 在此範例中， `child` 是軸而且 `Customer` 是節點測試 (TRUE （如果 `Customer` 是 \<element> 節點) ）。 `attribute::CustomerID` 是述詞。 在述詞中， `attribute` 是軸，而且 `CustomerID` 如果 `CustomerID` 是節點) ，則為述詞 (TRUE **\<attribute>** 。  
   
  使用縮寫語法，XPath 查詢也可以指定為：  
   

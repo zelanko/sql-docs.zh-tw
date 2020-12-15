@@ -1,6 +1,6 @@
 ---
 title: 使用 CommandText 屬性執行範本檔案
-description: 如需如何使用 SQLXML CommandText 屬性來指定包含 SQL 或 XPath 查詢之範本檔案的名稱，請參閱範例。
+description: 觀看範例，瞭解如何使用 SQLXML CommandText 屬性來指定包含 SQL 或 XPath 查詢的範本檔案名。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +17,17 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 86cf0f5133adf3bbf1e8efa8ff0e93ff4bc98c66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414219"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  這個範例說明如何使用 CommandText 屬性來指定由 SQL 或 XPath 查詢所組成的範本檔案。 您可以指定檔案名做為值，而不是將 SQL 或 XPath 查詢指定為 CommandText 的值。 在下列範例中，CommandType 屬性指定為 SqlXmlCommandType. TemplateFile。  
+  此範例說明如何使用 CommandText 屬性來指定包含 SQL 或 XPath 查詢的範本檔案。 您可以指定檔案名作為值，而不是將 SQL 或 XPath 查詢指定為 CommandText 的值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType. TemplateFile。  
   
  此範例應用程式會執行此範本：  
   
@@ -94,7 +94,7 @@ class Test
   
 5.  在命令提示字元中，執行 DocSample.exe。  
 
- 如果您將參數傳遞至範本，參數名稱必須以 @ 符號開頭，例如，p.Name = " \@ ContactID"，其中 p 是 SqlXmlParameter 物件。  
+ 如果您將參數傳遞至範本，參數名稱必須以 @ 符號開頭 ( @ ) ;例如，p.Name = " \@ ContactID"，其中 p 是 SqlXmlParameter 物件。  
   
  這是採用一個參數的已更新範本。  
   

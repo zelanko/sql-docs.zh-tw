@@ -1,6 +1,6 @@
 ---
-title: 使用 sql： use-cdata 建立 CDATA 區段（SQLXML）
-description: 瞭解如何使用 sql： use-CDATA 注釋來將包含標記字元的文字區塊，建立在 SQLXML 4.0 中的 CDATA 區段。
+title: '使用 sql： use-cdata 建立 CDATA 區段 (SQLXML) '
+description: 瞭解如何使用 sql： use-CDATA 注釋，在 SQLXML 4.0 中建立 CDATA 區段，以針對包含標記字元的文字進行 escape 的區塊。
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,32 +20,32 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c7237148ffe168299ab20246261969c787a6179a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415852"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在 XML 中，CDATA 區段可用來逸出包含字元的文字區塊，否則這些字元會被辨識為標記字元。  
   
- Microsoft 中的資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有時可以包含 XML 剖析器被視為標記字元的字元; 例如，角括弧（< 和 >）、小於或等於符號（<=），而連字號（&）會被視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
+ Microsoft 中的資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有時候可能包含 XML 剖析器視為標記字元的字元; 例如，角括弧 ( # A0 和 >) 、小於或等於符號 ( # B2 =) ，以及將 & 符號 ( # A3) 視為標記字元。 但是，您可以將這類型的特殊字元包裝在 CDATA 區段內，以免被視為標記字元。 XML 剖析器會將 CDATA 區段內的文字視為純文字。  
   
- **Sql： use-cdata**注釋是用來指定所傳回的資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應包裝在 cdata 區段中（也就是，它會指出來自**sql： field**所指定之資料行的值是否應該包含在 cdata 區段中）。 只能在對應至資料庫資料行的元素上指定**sql： use-cdata**注釋。  
+ **Sql： use-cdata** 批註是用來指定所傳回的資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該包裝在 cdata 區段中 (也就是說，它會指出是否要在 cdata 區段) 中括住 **sql：欄位** 所指定之資料行的值。 **Sql： use-cdata** 注釋只能在對應至資料庫資料行的元素上指定。  
   
- **Sql： use-cdata**批註接受布林值（0 = false，1 = true）。 可接受的值為 0、1、true 和 false。  
+ **Sql： use-cdata** 批註接受布林值 (0 = false，1 = true) 。 可接受的值為 0、1、true 和 false。  
   
- 此注釋不能搭配**sql： url 編碼**或 ID、IDREF、IDREFS、NMTOKEN 和 NMTOKENS 屬性類型使用。  
+ 此注釋不能與 **sql： url 編碼** ，或是在 ID、IDREF、IDREFS、NMTOKEN 和 NMTOKENS 等屬性類型上使用。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 [執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在下列架構中，元素內的**sql： use-cdata**會設定為1（True） **\<AddressLine1>** **\<Address>** 。 因此，資料會在 CDATA 區段內傳回。  
+ 在下列架構中， **sql： use-cdata** 會設定為 1 (True) 在 **\<AddressLine1>** **\<Address>** 元素內。 因此，資料會在 CDATA 區段內傳回。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -86,7 +86,7 @@ ms.locfileid: "85750852"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是部分結果集：  
   

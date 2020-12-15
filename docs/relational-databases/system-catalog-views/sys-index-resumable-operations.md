@@ -1,6 +1,6 @@
 ---
-description: 'sys. index_resumable_operations (Transact-sql) '
-title: sys. index_resumable_operations (Transact-sql) |Microsoft Docs
+description: 'sys.index_resumable_operations (Transact-sql) '
+title: sys.index_resumable_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 97f0c09e20da61cce1904b17ae830e5ab24abb98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412699"
 ---
-# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql) 
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys.index_resumable_operations (Transact-sql) 
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
-**sys. index_resumable_operations** 是一種系統檢視，可監視和檢查目前的執行狀態，以取得可繼續的索引重建或建立。  
+**sys.index_resumable_operations** 是監視和檢查目前執行狀態以取得可繼續索引重建或建立的系統檢視。  
 **適用于**： SQL Server (2017 和更新版本的) ，以及 Azure SQL Database
   
 |資料行名稱|資料類型|描述|  

@@ -1,6 +1,6 @@
 ---
-title: 資料表/資料行的預設 XSD 對應（SQLXML）
-description: 瞭解 XSD 架構中的元素和屬性如何依預設對應至 SQLXML 4.0 中的資料表和資料行。
+title: " (SQLXML) 的資料表/資料行預設 XSD 對應"
+description: 瞭解 XSD 架構中的元素和屬性如何預設對應至 SQLXML 4.0 中的資料表和資料行。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,23 +27,23 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1820f99d5250d9687fb83c57f9f743e2e1b5c33b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fbe7cea458f317138f4ad63698c3ff68af0eacd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750802"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415729"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   根據預設，XSD 註解式結構描述中的複雜類型元素會對應到指定之資料庫中具有相同名稱的資料表 (檢視表)，而簡單類型的元素或屬性會對應到資料表中具有相同名稱的資料行。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 [執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定預設對應  
- 在這個範例的 XDR 結構描述中不會指定任何註解。 **\<Person.Contact>** 元素屬於複雜類型，因此預設會對應到 AdventureWorks 資料庫中的 Person 資料表。 元素的所有屬性（ContactID、FirstName、LastName） **\<Person.Contact>** 都是簡單類型，而且預設會對應至 Person 資料表中具有相同名稱的資料行。  
+ 在這個範例的 XDR 結構描述中不會指定任何註解。 **\<Person.Contact>** 元素屬於複雜類型，因此，預設會對應到 AdventureWorks 資料庫中的 Person 資料表。 專案 (ContactID、FirstName、LastName) 的所有屬性 **\<Person.Contact>** 都屬於簡單類型，而且預設會對應到 Person 資料表中具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -80,7 +80,7 @@ ms.locfileid: "85750802"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "85750802"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 將 XML 元素對應至資料庫資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Person.Contact>** 元素屬於複雜型別，而且會對應至資料庫中具有相同名稱的資料表。 元素 **\<FirstName>** 和的 [專案名稱] **\<LastName>** 屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 **EmployeeID** 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Person.Contact>** 元素屬於複雜類型，而且會對應至資料庫中具有相同名稱的資料表。 專案和 [擁有者] **\<FirstName>** **\<LastName>** 屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。  此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -133,7 +133,7 @@ ms.locfileid: "85750802"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   
@@ -148,7 +148,7 @@ ms.locfileid: "85750802"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 將 XML 元素對應至 XML 資料類型資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel>** 元素屬於複雜型別，而且會對應至資料庫中具有相同名稱的資料表。 **ProductModelID**屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 這個專案與先前的範例唯一的差別在於，專案 **\<Instructions>** 是使用**Xsd： anyType**類型對應到使用**xml**資料類型的資料行。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel>** 元素屬於複雜類型，而且會對應至資料庫中具有相同名稱的資料表。 **ProductModelID** 屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 這與先前範例之間的唯一差異在於， **\<Instructions>** 元素會使用 **Xsd： anyType** 類型，對應至使用 **xml** 資料類型的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -164,7 +164,7 @@ ms.locfileid: "85750802"
 </xsd:schema>  
 ```  
   
- **Xml**資料類型是在中引進 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+ **Xml** 資料類型是在中引進 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   
@@ -188,7 +188,7 @@ ms.locfileid: "85750802"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   
@@ -207,7 +207,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SQLXML 4.0&#41;的批註式架構安全性考慮](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的批註式架構安全性考慮 ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [xml 資料類型在 SQLXML 4.0 中的支援](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
