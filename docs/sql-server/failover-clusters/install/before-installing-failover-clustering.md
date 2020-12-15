@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127673"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999239"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127673"
   
 -   遠端管理必須已啟用。  
   
--   針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通訊埠，請使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員來檢查您想要解除封鎖之執行個體 TCP/IP 通訊協定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 網路組態。 如果您想要在安裝之後使用 TCP 來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，就必須啟用 IPALL 的 TCP 通訊埠。 根據預設，SQL Browser 會接聽 UDP 通訊埠 1434。  
+- 針對使用非預設連接埠的 SQL Server 執行個體，請使用 SQL Server 組態管理員的網路組態，來為您要解除封鎖的 SQL Server 執行個體決定要使用的連接埠。 如果您想要使用 [SQL Server Browser 服務](../../../tools/configuration-manager/sql-server-browser-service.md) (使用不同於叢集執行個體與 UDP 連接埠 1434 的 IP 位址) 連線到 SQL Server 執行個體，請在防火牆中為 IPALL 啟用 TCP 連接埠。 
   
 -   容錯移轉叢集安裝程式作業包括檢查網路連結順序的規則。 雖然連結順序看起來可能是正確的，但是您可能已停用或「準刪除」系統上的 NIC 組態。 「準刪除」NIC 組態可能會影響連結順序，而且會導致連結順序規則發出警告。 若要避免這種情況，請使用下列步驟來識別並移除已停用的網路介面卡：  
   

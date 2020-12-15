@@ -2,7 +2,7 @@
 title: 了解並行控制
 description: 了解並行控制，以及如何在使用 JDBC Driver for SQL Server 開發多使用者應用程式時保留資料庫完整性。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435299"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900941"
 ---
 # <a name="understanding-concurrency-control"></a>了解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435299"
   並行控制意指多個使用者同時更新資料列時，用於保留資料庫完整性的各種技術。 並行不正確可能導致的問題包括中途讀取、虛設項目讀取，以及不可重複讀取。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供介面給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的所有並行技術來解決這些問題。  
   
 > [!NOTE]  
->  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並行的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜管理並行資料存取＞。  
+>  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並行的詳細資訊，請參閱[＜管理並行資料存取＞](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access)。  
   
 ## <a name="remarks"></a>備註  
  JDBC 驅動程式支援下列並行類型：  

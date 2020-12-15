@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 支援的資料來源 | Microsoft Docs
 description: 了解 Reporting Services 支援的各種資料來源，包括 Microsoft SQL Server、Oracle 和 ODBC。
-ms.date: 05/21/2020
+ms.date: 11/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 34d5618950a96fd275a334dd78d914ee7e036c2f
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328563"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788375"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -172,6 +172,8 @@ ms.locfileid: "93328563"
  此資料提供者使用 ADOMD.NET 物件模型來建立使用 XML for Analysis (XMLA) 1.1 版的查詢。 這些結果會當做扁平化資料列集傳回。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)、[DMX 的 Analysis Services 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)、[Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)和 [Analysis Services DMX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。 
  
  針對 Azure Analysis Services 和 Power BI Premium 資料集資料來源，請注意您必須針對用來連線至該資料來源的認證停用多重要素驗證。 如果環境需要啟用多重要素驗證，請檢閱作為選項的 <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory 條件式存取</a>，以針對資料來源中所用認證來停用多重要素驗證。
+  
+ 當您使用 Power BI Premium 資料集作為資料來源時，則僅支援匯入模式與 DirectQuery。
   
  連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組會支援多重值的參數，且會將資料格與成員屬性對應至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援的擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   

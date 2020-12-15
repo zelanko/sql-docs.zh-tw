@@ -2,7 +2,7 @@
 description: 了解資料列鎖定
 title: 了解資料列鎖定 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b04db86ce8784f5f346a4ac0d19b2bedd0e456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5305f3feaa80d0a83dd1e7bfd97088492608ae5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488011"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901056"
 ---
 # <a name="understanding-row-locking"></a>了解資料列鎖定
 
@@ -30,7 +30,7 @@ ms.locfileid: "88488011"
 鎖定的使用是為確保交易完整性與資料庫一致性。 鎖定可防止使用者讀取由其他使用者變更的資料，以及防止多個使用者同時變更相同的資料。 如果沒有使用鎖定，資料庫中的資料可能會變成邏輯上不正確，而且根據該資料執行的查詢可能會產生非預期的結果。
 
 > [!NOTE]  
-> 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之資料列鎖定的詳細資訊，請參閱 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 線上叢書中的＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的鎖定＞。
+> 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料列鎖定的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書：[＜[!INCLUDE[ssDE](../../includes/ssde_md.md)] 中的鎖定＞](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)。
 
 ## <a name="see-also"></a>另請參閱
 
