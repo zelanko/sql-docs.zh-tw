@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726298"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489515"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 來執行 SQL Server 移轉評估
 
@@ -29,7 +29,7 @@ ms.locfileid: "91726298"
    > [!NOTE]
    > Data Migration Assistant 5.0 版引進了在應用程式程式碼中分析資料庫連接和內嵌 SQL 查詢的支援。 如需詳細資訊，請參閱使用 Data Migration Assistant 的 blog 文章 [來評估應用程式的資料存取層](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)。
 
-## <a name="create-an-assessment"></a>建立評估
+## <a name="create-an-assessment"></a>建立評定
 
 1. 選取 **新** 的 (+) ] 圖示，然後選取 [ **評定** ] 專案類型。
 
@@ -37,9 +37,9 @@ ms.locfileid: "91726298"
 
     如果您要將內部部署 SQL Server 實例升級到新式內部部署 SQL Server 實例或裝載于 Azure VM 上的 SQL Server，請將來源和目標伺服器類型設定為 **SQL Server**。 如果您要遷移至 Azure SQL Database，請改為將目標伺服器類型設定為 **Azure SQL Database**。
 
-3. 按一下 [建立]。
+3. 按一下頁面底部的 [新增]  。
 
-   ![建立評估](../dma/media/dma-assesssqlonprem/new-assessment.png)
+   ![建立評定](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
 ## <a name="choose-assessment-options"></a>選擇評量選項
 
@@ -110,12 +110,12 @@ ms.locfileid: "91726298"
         go
     ```
 
-5. 按 [下一步]**** 開始進行評估。
+5. 按 [下一步] 開始進行評估。
 
     ![新增來源並開始評量](../dma/media/dma-assesssqlonprem/select-database1.png)
 
 > [!NOTE]
-> 您可以同時執行多個評估，並開啟 [所有評估]**** 頁面來檢視這些評估的狀態。
+> 您可以同時執行多個評估，並開啟 [所有評估] 頁面來檢視這些評估的狀態。
 
 ## <a name="view-results"></a>檢視結果
 
@@ -125,23 +125,23 @@ ms.locfileid: "91726298"
 
 2. 檢查您在 [ **選項** ] 頁面上選取之目標 SQL Server 版本所支援之所有相容性層級的相容性問題。
 
-您可以藉由分析受影響的物件、其詳細資料，以及可能會修正 **中斷變更**、 **行為變更**和已 **淘汰功能**所識別的每個問題，來查看相容性問題。
+您可以藉由分析受影響的物件、其詳細資料，以及可能會修正 **中斷變更**、 **行為變更** 和已 **淘汰功能** 所識別的每個問題，來查看相容性問題。
 
 ![查看評量結果](../dma/media/dma-assesssqlonprem/review-results.png)
 
-同樣地，您可以跨 **效能**、 **儲存體**和 **安全性** 區域查看功能建議。
+同樣地，您可以跨 **效能**、 **儲存體** 和 **安全性** 區域查看功能建議。
 
-功能建議涵蓋各種不同的功能，例如記憶體內部 OLTP、資料行存放區、Stretch Database、Always Encrypted、動態資料遮罩和透明資料加密。
+功能建議涵蓋各種不同的功能，例如 In-Memory OLTP、資料行存放區、Stretch Database、Always Encrypted、動態資料遮罩和透明資料加密。
 
 ![查看功能建議](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-針對 Azure SQL Database，評量可提供遷移封鎖問題和功能同位問題。選取特定選項來檢查這兩個類別的結果。
+針對 Azure SQL Database，評量可提供遷移封鎖問題和功能同位問題。 選取特定選項來檢查這兩個類別的結果。
 
-- **SQL Server 功能**同位分類提供一組完整的建議、Azure 中可用的替代方法，以及緩和步驟。 它可協助您在遷移專案中規劃這項工作。
+- **SQL Server 功能** 同位分類提供一組完整的建議、Azure 中可用的替代方法，以及緩和步驟。 它可協助您在遷移專案中規劃這項工作。
 
   ![查看 SQL Server 功能同位的資訊](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- **相容性問題**類別提供部分支援或不支援的功能，以防止將內部部署 SQL Server 資料庫移轉至 Azure SQL 資料庫。接著，它會提供建議來協助您解決這些問題。
+- **相容性問題** 類別提供部分支援或不支援的功能，以防止將內部部署 SQL Server 資料庫移轉至 Azure SQL 資料庫。 接著，它會提供建議來協助您解決這些問題。
 
   ![查看相容性問題](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -151,7 +151,7 @@ ms.locfileid: "91726298"
 
 這樣做可讓您在 Azure Migrate 中樞專案上查看合併的結果。
 
-您可以 [在這裡](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017)找到目標就緒程度評定的詳細逐步指引。
+您可以 [在這裡](./dma-assess-sql-data-estate-to-sqldb.md)找到目標就緒程度評定的詳細逐步指引。
 
    ![將結果上傳至 Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

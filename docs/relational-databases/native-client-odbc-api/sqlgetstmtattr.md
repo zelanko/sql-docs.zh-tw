@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ec97baa1cfa8f1d891c3c0950e530f52294a434
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b2f1b73944d3e25ac967495e0da3236963dca82d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811002"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485100"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "91811002"
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 會列出同時為讀取和寫入的語句屬性。 本主題將列出唯讀的陳述式屬性。  
   
 ## <a name="sql_sopt_ss_current_command"></a>SQL_SOPT_SS_CURRENT_COMMAND  
- SQL_SOPT_SS_CURRENT_COMMAND 屬性會公開命令批次的目前命令。 傳回值是一個整數，可指定此命令在批次中的位置。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_CURRENT_COMMAND 屬性會公開命令批次的目前命令。 傳回值是一個整數，可指定此命令在批次中的位置。 *ValuePtr* 值的類型為 SQLLEN。  
   
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- SQL_SOPT_SS_NOCOUNT_STATUS 屬性工作表示 NOCOUNT 選項的目前設定，可控制是否要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在呼叫 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) 時報告受語句影響的資料列數目。 *ValuePtr*值的類型為 SQLLEN。  
+ SQL_SOPT_SS_NOCOUNT_STATUS 屬性工作表示 NOCOUNT 選項的目前設定，可控制是否要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在呼叫 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) 時報告受語句影響的資料列數目。 *ValuePtr* 值的類型為 SQLLEN。  
   
 |值|描述|  
 |-----------|-----------------|  

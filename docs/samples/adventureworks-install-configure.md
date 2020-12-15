@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 1b275826c20944d11fb7e88266a882b3834fbfac
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523943"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490088"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks 範例資料庫
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "92523943"
 
 如需範例的詳細資訊，請參閱 [範例 GitHub 存放庫](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) 或 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) 或 [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
@@ -35,12 +35,12 @@ ms.locfileid: "92523943"
 使用這些連結可針對您的案例下載適當的範例資料庫。 
 
 - **OLTP** 資料適用于最常見的線上交易處理工作負載。 
-- **資料倉儲 (DW) ** 資料適用于資料倉儲工作負載。 
-- **輕量 (LT) ** 資料是 **OLTP** 範例的輕量且精簡的低版本。 
+- **資料倉儲 (DW)** 資料適用于資料倉儲工作負載。 
+- **輕量 (LT)** 資料是 **OLTP** 範例的輕量且精簡的低版本。 
 
 如果您不確定所需的專案，請從符合您 SQL Server 版本的 OLTP 版本開始。 
 
-|**OLTP** |**資料倉儲 (data warehouse)** |**輕量型**|
+|**OLTP** |**資料倉儲** |**輕量型**|
 |---------|---------|---------|
 |[AdventureWorks2019 .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019 .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019 .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017 .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017 .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017 .bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
@@ -73,18 +73,18 @@ ms.locfileid: "92523943"
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
 
 3. 開啟 SQL Server Management Studio (SSMS) 並連接到中的 SQL Server。 
-4. 以滑鼠右鍵**按一下****物件總管**  >  **還原資料庫**] 中的 [資料庫]，以啟動 [**還原資料庫**]。 
+4. 以滑鼠右鍵 **按一下****物件總管**  >  **還原資料庫**] 中的 [資料庫]，以啟動 [**還原資料庫**]。 
 
    :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
 
 
-1. 選取 [ **裝置** ]，然後選取省略號 ** ( ... ) ** 選擇裝置。 
+1. 選取 [ **裝置** ]，然後選取省略號 **( ... )** 選擇裝置。 
 1. 選取 [ **新增** ]，然後選擇 `.bak` 您最近移至這個位置的檔案。 如果您將檔案移到這個位置，但卻無法在嚮導中看到它，這通常表示許可權問題-SQL Server 或登入 SQL Server 的使用者沒有此資料夾中此檔案的許可權。 
 1. 選取 **[確定]** 以確認您的資料庫備份選項，然後關閉 [ **選取備份裝置** ] 視窗。 
-1. 核取 [**檔案] 索引**標籤，在 [**還原資料庫**] 嚮導中確認**還原**的位置和檔案名符合您預期的位置和檔案名。 
+1. 核取 [**檔案] 索引** 標籤，在 [**還原資料庫**] 嚮導中確認 **還原** 的位置和檔案名符合您預期的位置和檔案名。 
 1. 選取 [確定] 以還原您的資料庫。 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="顯示 [還原資料庫] 視窗的螢幕擷取畫面，其中已醒目提示要還原的備份組，並已呼叫 [確定] 選項。":::
 
 如需還原 SQL Server 資料庫的詳細資訊，請參閱 [使用 SSMS 還原資料庫備份](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。
 
@@ -92,7 +92,8 @@ ms.locfileid: "92523943"
 
 您可以使用 Transact-sql (T-sql) 來還原範例資料庫。 以下提供還原 AdventureWorks2019 的範例，但資料庫名稱和安裝檔案路徑可能會根據您的環境而有所不同。 
 
-若要還原 AdventureWorks2019，請將值修改為適合您環境的值，然後執行下列 Transact-sql (T-sql) 命令：
+若要將 AdventureWorks2019 還原至 **Windows**，請適當地修改環境的值，然後執行下列 Transact-sql (t-sql) 命令：
+
 
 ```sql
 USE [master]
@@ -101,6 +102,19 @@ FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\B
 WITH  FILE = 1,  NOUNLOAD,  STATS = 5
 GO
 
+```
+
+若要將 AdventureWorks2019 還原至 **linux**，請將 Windows 檔案系統路徑變更為 linux，然後執行下列 Transact-sql (t-sql) 命令： 
+
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019]
+FROM DISK = '/var/opt/mssql/backup/AdventureWorks2019.bak'
+WITH MOVE 'AdventureWorks2017' TO '/var/opt/mssql/data/AdventureWorks2019.mdf',
+MOVE 'AdventureWorks2017_log' TO '/var/opt/mssql/data/AdventureWorks2019_log.ldf',
+FILE = 1,  NOUNLOAD,  STATS = 5
+GO
 ```
 
 # <a name="azure-data-studio"></a>[Azure Data Studio](#tab/data-studio)
@@ -117,25 +131,25 @@ GO
 1. 開啟 Azure Data Studio Studio，然後連接到您的 SQL Server 實例。
 1. 以滑鼠右鍵按一下您的伺服器，然後選取 [ **管理**]。
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="顯示 Azure Data Studio 醒目提示和呼叫 [管理] 選項的螢幕擷取畫面。":::
 
 1. 選取 **還原**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="從頂端功能表中選取 [還原]，以還原您的資料庫。":::
 
 1. 在 [ **一般** ] 索引標籤上，填入 [ **來源**] 底下列出的值。
     1. 在 [ **還原來源**] 底下，選取 [ *備份檔案*]。
     1. 在 [ **備份檔案路徑**] 下，選取您儲存 .bak 檔案的位置。 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="選取您的備份檔案路徑":::
     
     這會自動填入其餘的欄位，例如 **資料庫**、 **目標資料庫** 和 **還原至**。 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="當您選擇備份檔案路徑之後，其餘的欄位自動填入":::
 
 1. 選取 [ **還原** ] 以還原您的資料庫。 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="當您準備好時，請選取 [還原] 以還原您的資料庫。":::
 
 ---
 
@@ -157,7 +171,7 @@ GO
 1. 填寫要求的資訊以建立您的資料庫。 
 1. 在 [ **其他設定** ] 索引標籤上，選擇 [ **範例** ] 作為 [ **資料來源**] 底下的現有資料： 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="當您建立 Azure SQL Database 時，請在 Azure 入口網站的 [其他設定] 索引標籤上選擇 [範例] 作為資料來源":::
 
 1. 選取 [ **建立** ] 以建立新的 SQL Database，也就是 AdventureWorksLT 資料庫的還原複本。 
 
@@ -170,9 +184,9 @@ SQL Server Management Studio 能讓您直接將資料庫部署到 Azure SQL Data
 
 1. 在 SQL Server Management Studio 中連接到您的 SQL Server。 
 1. 如果您尚未這麼做，請將 [範例資料庫還原至 SQL Server](#restore-to-sql-server)。 
-1. 以滑鼠右鍵按一下您在 [ **Object Explorer**將  >  **Tasks**  >  **資料庫部署到 Microsoft Azure SQL Database**...] 物件總管工作中還原的資料庫。 
+1. 以滑鼠右鍵按一下您在 [ 將  >    >  **資料庫部署到 Microsoft Azure SQL Database**...] 物件總管工作中還原的資料庫。 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="顯示如何選擇以滑鼠右鍵按一下 [資料庫] 物件總管然後選取 [還原資料庫] 來還原資料庫的螢幕擷取畫面。":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="選擇以滑鼠右鍵按一下您的資料庫，然後選取 [工作]，將資料庫部署到 Microsoft Azure SQL Database":::
 
 1. 依照嚮導連接到 Azure SQL Database 並部署您的資料庫。 
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947928"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489494"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>為您的內部部署資料庫識別正確的 Azure SQL Database/受控執行個體 SKU
 
@@ -44,7 +44,7 @@ ms.locfileid: "94947928"
 - 確定您的電腦具有 [PowerShell 5.1 版](https://www.microsoft.com/download/details.aspx?id=54616) 或更新版本，才能執行所有腳本。 如需如何找出電腦上所安裝之 PowerShell 版本的相關資訊，請參閱 [下載並安裝 Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)。
   > [!NOTE]
   > 為了收集電腦資訊，資料收集腳本會使用已在 PowerShell 6 中淘汰的 Get-WmiObject Cmdlet。 若要在 PowerShell 6 或7中執行此腳本，您必須使用較新的 CIM Cmdlet 來取代 WMI Cmdlet。
-- 確定您的電腦已安裝 Azure Powershell 模組。 如需詳細資訊，請參閱 [安裝 Azure PowerShell 課程模組](/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
+- 確定您的電腦已安裝 Azure Powershell 模組。 如需詳細資訊，請參閱 [安裝 Azure PowerShell 課程模組](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true)一文。
 - 確認收集效能計數器所需的 PowerShell 檔案 **SkuRecommendationDataCollectionScript.ps1** 已安裝在 [DMA] 資料夾中。
 - 確定您要執行此程式的電腦具有裝載資料庫之電腦的系統管理員許可權。
 
@@ -239,4 +239,4 @@ HTML 檔案以圖形格式包含這項資訊。 它提供了方便使用的方�
 
 ## <a name="next-step"></a>後續步驟
 
-- 如需從 CLI 執行 DMA 的完整命令清單，請參閱 [從命令列執行 Data Migration Assistant](./dma-commandline.md?view=sql-server-2017)一文。
+- 如需從 CLI 執行 DMA 的完整命令清單，請參閱 [從命令列執行 Data Migration Assistant](./dma-commandline.md)一文。

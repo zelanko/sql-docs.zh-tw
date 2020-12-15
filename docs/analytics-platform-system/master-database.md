@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 526f7c7bea8d7ed1e7499649d929f6c732ab07a3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766737"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489678"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 資料庫-平行處理資料倉儲
 SQL Server PDW master 資料庫會儲存設備層級的登入資訊和資料庫目錄。 它是位於控制節點上的 SQL Server master 資料庫。 因此，它提供了類似的功能，可 SQL Server PDW 作為主要提供給 SQL Server。  
@@ -44,7 +44,7 @@ SQL Server PDW master 資料庫會儲存設備層級的登入資訊和資料庫�
   
 |Task|描述|  
 |--------|---------------|  
-|建立 master 的完整備份。|範例：<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />如需詳細資訊，請參閱 [備份資料庫](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)。|  
+|建立 master 的完整備份。|範例：<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />如需詳細資訊，請參閱 [備份資料庫](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)。|  
 |還原 master 資料庫|若要還原 master 資料庫，請使用 Configuration Manager 工具中的 [ [還原 Master 資料庫](restore-the-master-database.md) ] 頁面。|  
 |查看資料庫目錄資訊。|`SELECT * FROM master.sys.databases;`|  
 |查看全系統登入和許可權資訊。|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

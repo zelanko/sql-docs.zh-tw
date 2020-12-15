@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461499"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489526"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -58,13 +58,13 @@ sp_rxPredict  ( @model, @input )
 若要允許使用預存程式，必須在實例上啟用 SQLCLR。
 
 > [!NOTE]
-> 啟用此選項有安全性含意。 如果無法在您的伺服器上啟用 SQLCLR，請使用替代的執行，例如 [TRANSACT-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) 函數。
+> 啟用此選項有安全性含意。 如果無法在您的伺服器上啟用 SQLCLR，請使用替代的執行，例如 [TRANSACT-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) 函數。
 
 使用者需要 `EXECUTE` 資料庫的許可權。
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-若要建立和定型模型，請使用其中一個支援的 R 或 Python 演算法（由 [SQL Server Machine Learning Services (r 或 python) ](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md)、 [SQL Server Machine Learning Server (獨立)  (R 或 Python) ](../../machine-learning/r/r-server-standalone.md)，或 SQL Server [2016 R Server (獨立) ](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016)。
+若要建立和定型模型，請使用其中一個支援的 R 或 Python 演算法（由 [SQL Server Machine Learning Services (r 或 python) ](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md)、 [SQL Server Machine Learning Server (獨立)  (R 或 Python) ](../../machine-learning/r/r-server-standalone.md)，或 SQL Server [2016 R Server (獨立) ](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true)。
 
 #### <a name="r-revoscaler-models"></a>R： RevoScaleR 模型
 

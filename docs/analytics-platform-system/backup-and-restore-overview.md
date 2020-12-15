@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd52db9d34519f2b09cbaba880806c17509c84c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767207"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489708"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
@@ -24,7 +24,7 @@ ms.locfileid: "88767207"
 
 PDW *資料庫備份* 是以格式儲存的設備資料庫複本，可用來將原始資料庫還原至設備。  
   
-您可以使用 [BACKUP database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) t-sql 語句來建立 PDW 資料庫備份，並格式化以搭配 [RESTORE database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) 語句使用;它無法用於任何其他用途。 備份只能還原至具有相同數目或更多計算節點數目的設備。  
+您可以使用 [BACKUP database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) t-sql 語句來建立 PDW 資料庫備份，並格式化以搭配 [RESTORE database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) 語句使用;它無法用於任何其他用途。 備份只能還原至具有相同數目或更多計算節點數目的設備。  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -104,7 +104,7 @@ PDW 使用 SQL Server 備份技術來備份及還原設備資料庫。 SQL Serve
   
 1.  您可以在非設備備份伺服器上的 Windows 檔案共用上，取得要還原的資料庫備份。 為了達到最佳效能，此伺服器會連線到設備未經過網路。  
   
-2.  使用者將 [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) tsql 語句提交至控制項節點。  
+2.  使用者將 [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) tsql 語句提交至控制項節點。  
   
     -   還原可能是完整還原或標頭還原。 完整還原會還原完整備份，然後選擇性地還原差異備份。  
   
@@ -133,8 +133,8 @@ PDW 使用 SQL Server 備份技術來備份及還原設備資料庫。 SQL Serve
 |備份與還原工作|描述|  
 |---------------------------|---------------|  
 |準備伺服器做為備份伺服器。|[取得並設定備份伺服器](acquire-and-configure-backup-server.md)|  
-|備份資料庫。|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
-|還原資料庫。|[還原資料庫](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
+|備份資料庫。|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  
+|還原資料庫。|[還原資料庫](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|    
 
 <!-- MISSING LINKS
 

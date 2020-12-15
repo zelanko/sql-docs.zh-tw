@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420165"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489605"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，擴充 MPP 資料倉儲
 請參閱 Microsoft Analytics Platform System (AP) 最新設備更新的新功能。 AP 是一個將 MPP SQL Server 平行處理資料倉儲的相應放大內部部署設備。 
@@ -45,13 +45,13 @@ AP CU 7.7 軟體將 VMM VM 升級至 Windows Server 2016 並安裝 SCVMM2016。 
 發行日期-2019 年9月
 
 ### <a name="alter-external-data-source"></a>Alter External Data Source
-客戶將能夠使用 CU 7.5 更新來改變外部資料源定義。 具有 Hadoop 名稱節點高可用性的客戶現在可以改變數據源，以便在發生容錯移轉時變更引數。 若為 AP，則只能變更位置、RESOURCE_MANAGER_LOCATION 和認證。 如需詳細資訊，請參閱 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) 。
+客戶將能夠使用 CU 7.5 更新來改變外部資料源定義。 具有 Hadoop 名稱節點高可用性的客戶現在可以改變數據源，以便在發生容錯移轉時變更引數。 若為 AP，則只能變更位置、RESOURCE_MANAGER_LOCATION 和認證。 如需詳細資訊，請參閱 [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) 。
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>PolyBase 的 CDH 5.15 和5.16 支援
 具有 CU 7.5 更新之 AP 上的 PolyBase 現在支援從 Cloudera CDH 5.15 和5.16 版的 Hadoop 散發套件。 針對 CDH 5.x 版本，請使用選項6。 
 
 ### <a name="try_convert-and-try_cast-support"></a>Try_Convert 與 Try_Cast 支援
-CU 7.5 AP 現在支援 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) 和 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql 函數。 如果轉換成功，則這兩個函式都會傳回轉換成指定之資料類型的值;否則，會傳回 null。
+CU 7.5 AP 現在支援 [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) 和 [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) tsql 函數。 如果轉換成功，則這兩個函式都會傳回轉換成指定之資料類型的值;否則，會傳回 null。
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4

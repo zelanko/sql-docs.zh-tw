@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523875"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489552"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant 來評估 SQL Server 資料資產遷移至 Azure SQL Database 的就緒程度
 
 將數百個 SQL Server 實例和數千個資料庫移轉至 Azure SQL Database，我們的平臺即服務 (PaaS) 供應專案，是相當重要的工作。 若要盡可能簡化此程式，您必須安心地瞭解遷移的相對就緒程度。 找出低度的水果（包括已完全就緒或需要最少努力的伺服器和資料庫，以準備進行遷移），簡化並加速您的工作。
 
-本文提供逐步指示，說明如何利用 [Data Migration Assistant](./dma-overview.md?view=sql-server-2017) 摘要就緒結果，並在 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 中樞呈現這些結果。
+本文提供逐步指示，說明如何利用 [Data Migration Assistant](./dma-overview.md) 摘要就緒結果，並在 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) 中樞呈現這些結果。
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -46,7 +46,7 @@ Azure Migrate 專案可用來儲存從您評估或遷移的環境中收集到的
 
    ![Azure Migrate-起始評量](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-hub-assess.png)
 
-4. 在 [ **資料庫**] 的 **[開始使用] 底下，選取**[ **新增工具 (s]) **。
+4. 在 [ **資料庫**] 的 **[開始使用] 底下，選取**[ **新增工具 (s])**。
 
    ![Azure Migrate-新增工具](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
@@ -59,7 +59,7 @@ Azure Migrate 專案可用來儲存從您評估或遷移的環境中收集到的
 
     | **地理位置**  | **儲存體位置區域** |
     | ------------- | ------------- |
-    | Asia | 東南亞或東亞 |
+    | 亞洲 | 東南亞或東亞 |
     | 歐洲 | 歐洲南部或西歐 |
     | United Kingdom | 英國南部或英國西部 |
     | 美國 | 美國中部或美國西部 2 |
@@ -94,7 +94,7 @@ Azure Migrate 專案可用來儲存從您評估或遷移的環境中收集到的
 1. 使用提供的連結下載 Data Migration Assistant，然後將它安裝在可存取來源 SQL Server 實例的電腦上。
 2. 啟動 [Data Migration Assistant]。
 
-### <a name="create-an-assessment"></a>建立評估
+### <a name="create-an-assessment"></a>建立評定
 
 1. 選取左側的 **+** 圖示，然後選取 [評定] **專案類型**
 2. 指定專案名稱，然後選取來源伺服器和目標伺服器類型。

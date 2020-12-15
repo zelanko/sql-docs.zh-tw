@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d1ef030815e701f0b1b7cdeac02c4827641ff2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99a4ffe7fc4b5ac47abdf8891ab694ef20abc845
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809884"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485090"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  您可以使用 **SQLColAttribute** ，針對已備妥或已執行的 ODBC 語句，取得結果集資料行的屬性。 在備妥的語句上呼叫 **SQLColAttribute** 會導致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在語句執行過程中接收結果集資料行資料，因此在**SQLExecute**或**SQLExecDirect**完成後呼叫**SQLColAttribute** ，不牽涉到伺服器往返。  
+  您可以使用 **SQLColAttribute** ，針對已備妥或已執行的 ODBC 語句，取得結果集資料行的屬性。 在備妥的語句上呼叫 **SQLColAttribute** 會導致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會在語句執行過程中接收結果集資料行資料，因此在 **SQLExecute** 或 **SQLExecDirect** 完成後呼叫 **SQLColAttribute** ，不牽涉到伺服器往返。  
   
 > [!NOTE]  
 >  ODBC 資料行識別碼屬性並非在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結果集上都有提供。  
@@ -57,7 +57,7 @@ ms.locfileid: "91809884"
   
  對於所有版本，當已備妥的 SQL 陳述式批次產生多個結果集時，只有第一個結果集會報告資料行屬性。  
   
- 下列資料行屬性是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式所公開的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會傳回*NumericAttrPtr*參數中的所有值。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
+ 下列資料行屬性是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式所公開的延伸模組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會傳回 *NumericAttrPtr* 參數中的所有值。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
   
 |欄位識別碼|傳回的值|  
 |----------------------|--------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "91809884"
  如需詳細資訊，請參閱 [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLColAttribute 支援  
- **SQLColAttribute** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR 使用者自訂類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColAttribute** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR User-Defined 類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>疏鬆資料行的 SQLColAttribute 支援  
  SQLColAttribute 會查詢新的實資料列描述項 (IRD) 欄位 SQL_CA_SS_IS_COLUMN_SET），以判斷資料行是否為 **column_set** 的資料行。  

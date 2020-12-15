@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636168"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489542"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>在資料庫測試助理中重新執行追蹤
 
@@ -31,7 +31,7 @@ ms.locfileid: "91636168"
 
 首先，您需要對目標1執行追蹤重新執行，這代表您現有的生產環境。
 
-1. 在 DEA 的左側導覽列中，選取箭號圖示，然後在 [ **所有** 重新執行] 頁面上，選取 [ **新增**重新執行]。
+1. 在 DEA 的左側導覽列中，選取箭號圖示，然後在 [ **所有** 重新執行] 頁面上，選取 [ **新增** 重新執行]。
 
     ![在 DEA 中建立重新執行](./media/database-experimentation-assistant-replay-trace/dea-create-replay.png)
 
@@ -40,17 +40,17 @@ ms.locfileid: "91636168"
 
 2. 在 [ **新** 的重新執行] 頁面的 [重新執行 **詳細資料**] 下，輸入或選取下列資訊：
 
-    - 重新執行**名稱**：輸入追蹤重新執行的名稱。
+    - 重新執行 **名稱**：輸入追蹤重新執行的名稱。
     - **來源追蹤格式**：指定來源追蹤檔案 (追蹤或 XEvents) 的格式。
     - **來源檔案的完整路徑**：指定來源追蹤檔案的完整路徑。 如果使用 DReplay，則檔案必須存在於做為 DReplay 控制器的電腦上，而且使用者帳戶需要存取檔案和資料夾。
-    - 重新執行**工具**：指定重新執行工具 (DReplay 或內建) 。
+    - 重新執行 **工具**：指定重新執行工具 (DReplay 或內建) 。
     - **控制器電腦名稱稱**：指定做為 Distributed Replay 控制器的電腦名稱稱。
-    - 重新執行**追蹤位置**：指定儲存追蹤檔/XEvents 與追蹤重新執行相關聯的路徑。
+    - 重新執行 **追蹤位置**：指定儲存追蹤檔/XEvents 與追蹤重新執行相關聯的路徑。
 
         > [!NOTE]
         > 針對 Azure SQL Database 或 Azure SQL 受控執行個體，您需要提供 Azure blob 儲存體帳戶的 SAS URI。
 
-3. 選取 [ **是，我已手動還原資料庫 () ] ** 核取方塊，以確認您已將資料庫 (s) 還原。
+3. 選取 [ **是，我已手動還原資料庫 () ]** 核取方塊，以確認您已將資料庫 (s) 還原。
 
 4. 在 [ **SQL Server 連接詳細資料**] 底下，輸入或選取下列資訊：
 
@@ -98,7 +98,7 @@ ms.locfileid: "91636168"
 
 **問：我可以平行方式啟動一個以上的重新執行嗎？**
 
-是，但不是使用 **控制器 Plus 用戶端**中選取的同一組電腦。 控制器和用戶端將會忙碌。 在 [ **控制器 Plus 用戶端** ] 下設定一組不同的電腦，以啟動平行重新執行。
+是，但不是使用 **控制器 Plus 用戶端** 中選取的同一組電腦。 控制器和用戶端將會忙碌。 在 [ **控制器 Plus 用戶端** ] 下設定一組不同的電腦，以啟動平行重新執行。
 
 **問：重新執行通常需要多久的時間才能完成？**
 
@@ -139,7 +139,7 @@ DEA 會捕捉包含效能相關資訊的追蹤事件。 Capture 設定位於 Sta
 
 - 確認控制器電腦上正在執行 Distributed Replay 控制器服務。 若要確認，請使用 Distributed Replay 管理工具 (執行命令 `dreplay.exe status -f 1`) 。
 - 如果從遠端啟動重新執行：
-  - 確認執行 DEA 的電腦可以成功 ping 控制器。 確認 [設定重新執行 **環境** ] 頁面上的 [防火牆設定允許每個指示的連接]。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017)的文章。
+  - 確認執行 DEA 的電腦可以成功 ping 控制器。 確認 [設定重新執行 **環境** ] 頁面上的 [防火牆設定允許每個指示的連接]。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)的文章。
   - 請確定 Distributed Replay 控制器的使用者可以使用 DCOM 遠端啟動和遠端啟用。
   - 請確定 Distributed Replay 控制器的使用者可以使用 DCOM 遠端存取使用者權限。
 
