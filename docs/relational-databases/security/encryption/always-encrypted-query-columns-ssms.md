@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679037"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405970"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "92679037"
 除了上述權限，若要將任何查詢結果解密或加密任何查詢參數 (透過參數化 Transact-SQL 變數來產生)，您還需要權限來存取保護目標資料行的資料行主要金鑰：
 
 - **憑證存放區 - 本機電腦** 您必須具有當成資料行主要金鑰使用之憑證的 `Read` 權限，或為電腦上的系統管理員。   
-- **Azure Key Vault** ：您需要包含資料行主要金鑰的保存庫 `get`、`unwrapKey` 和 `verify` 權限。
+- **Azure Key Vault**：您需要包含資料行主要金鑰的保存庫 `get`、`unwrapKey` 和 `verify` 權限。
 - **金鑰存放區提供者 (KSP)** ：必要權限和認證 (您在使用金鑰存放區或金鑰時可能收到提示) 取決於存放區和 KSP 設定。   
 - **密碼編譯服務提供者 (CSP)** ：必要權限和認證 (您在使用金鑰存放區或金鑰時可能會收到提示) 取決於存放區和 CSP 設定。
 
@@ -99,7 +99,7 @@ ms.locfileid: "92679037"
 1. 如果您使用 SSMS 17 或更舊版本：
     1. 選取 [其他屬性] 索引標籤。
     1. 若要啟用 Always Encrypted，請鍵入 `Column Encryption Setting = Enabled`。 若要停用 Always Encrypted，請指定 `Column Encryption Setting = Disabled`，或從 [其他屬性] 索引標籤中移除 [資料行加密設定] 的設定 (預設值為 [停用])。   
- 1. 按一下 [ **連接** ]。
+ 1. 按一下 [ **連接**]。
 
 > [!TIP]
 > 在已針對現有的 [查詢編輯器] 視窗啟用和停用的 Always Encrypted 之間進行切換：   

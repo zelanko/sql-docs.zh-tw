@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba51bed39dc07ce130e22c6e701c8ada754e4f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d789a0e3a4584043081cd446a2ea0542fdff232
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402185"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集特定資料分割的特定排序值百分位數。 針對指定的百分位數值 *P*，PERCENTILE_DISC 會在 ORDER BY 子句中排序運算式值。 接著傳回大於或等於*P* 所指定最小 CUME_DIST 值的值 (相對於相同的排序規格)。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會根據資料行值的離散分布計算百分位數。 結果等於某個特定的資料行值。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集特定資料分割的特定排序值百分位數。 針對指定的百分位數值 *P*，PERCENTILE_DISC 會在 ORDER BY 子句中排序運算式值。 接著傳回大於或等於 *P* 所指定最小 CUME_DIST 值的值 (相對於相同的排序規格)。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會根據資料行值的離散分布計算百分位數。 結果等於某個特定的資料行值。  
   
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

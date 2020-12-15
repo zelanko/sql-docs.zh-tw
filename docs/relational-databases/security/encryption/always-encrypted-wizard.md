@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866682"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405850"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>使用 [Always Encrypted 精靈] 設定資料行加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91866682"
 > [!NOTE]
 > 執行密碼編譯作業可能需要很長的時間。 在這段期間，資料庫無法寫入交易。 PowerShell 是在較大資料表上進行密碼編譯作業時的建議工具。 請參閱[使用 Always Encrypted 與 PowerShell 設定資料行加密](configure-column-encryption-using-powershell.md)。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 且 SQL Server 執行個體是以安全記憶體保護區進行設定，您可以就地執行密碼編譯作業，而不需要將資料移出資料庫。 請參閱[使用具有安全記憶體保護區的 Always Encrypted 就地設定資料行加密](always-encrypted-enclaves-configure-encryption.md)。 請注意，此精靈不支援就地加密。

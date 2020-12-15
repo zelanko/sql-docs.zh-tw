@@ -11,13 +11,13 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 62e047a11d62e8c634f0188746a0f901ab26efdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882281"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406394"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "85882281"
 
 ### <a name="steps-to-take"></a>需採取的步驟
 1. 使用複寫監視器來找出複寫發生錯誤的時間點 (哪個代理程式？)：
-   - 如果在**發行者到散發者**區段中發生錯誤，則問題出自記錄讀取器代理程式。 
-   - 如果在**散發者到訂閱者**區段中發生錯誤，則問題出自散發代理程式。  
+   - 如果在 **發行者到散發者** 區段中發生錯誤，則問題出自記錄讀取器代理程式。 
+   - 如果在 **散發者到訂閱者** 區段中發生錯誤，則問題出自散發代理程式。  
 2. 查看該代理程式在 [作業活動監視器] 中的作業記錄，以找出錯誤的詳細資料。 如果作業記錄未顯示足夠的詳細資料，您可以在該特定代理程式上[啟用詳細資訊記錄](#enable-verbose-logging-on-any-agent)。
 3. 嘗試判斷適用於該錯誤的解決方案。
 
@@ -155,7 +155,7 @@ ms.locfileid: "85882281"
 散發代理程式會在散發資料庫中尋找資料，然後將它套用到訂閱者。 
 
 1. 連線至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者。 展開伺服器節點，再以滑鼠右鍵按一下 [複寫]  資料夾，然後選取 [啟動複寫監視器]  。  
-2. 在**複寫監視器**中選取 [AdvWorksProductTrans]  發行集，然後選取 [所有訂閱]  索引標籤。以滑鼠右鍵按一下訂閱並選取 [檢視詳細資料]  ：
+2. 在 **複寫監視器** 中選取 [AdvWorksProductTrans]  發行集，然後選取 [所有訂閱]  索引標籤。以滑鼠右鍵按一下訂閱並選取 [檢視詳細資料]  ：
 
     ![捷徑功能表上的 [檢視詳細資料] 命令](media/troubleshooting-tran-repl-errors/view-details.png)
 
@@ -172,7 +172,7 @@ ms.locfileid: "85882281"
 
     a. 展開 [物件總管] 中的 [SQL Server Agent]  > [作業活動監視器]  。 
     
-    b. 依**分類**排序作業。 
+    b. 依 **分類** 排序作業。 
 
     c. 依分類 **REPL-Distribution** 找出散發代理程式。 以滑鼠右鍵按一下代理程式，然後選取 [檢視記錄]  。
 
@@ -193,7 +193,7 @@ ms.locfileid: "85882281"
     
     b. 以滑鼠右鍵按一下訂閱 > [屬性]  。
     
-    c. 選取**代理程式處理帳戶**旁的省略符號 (...) 並修改密碼。
+    c. 選取 **代理程式處理帳戶** 旁的省略符號 (...) 並修改密碼。
 
     ![修改散發代理程式之密碼的選取項目](media/troubleshooting-tran-repl-errors/dist-agent-pw-change.png)
 
@@ -216,7 +216,7 @@ ms.locfileid: "85882281"
     
     如果您看到這個錯誤，則表示訂閱者缺少登入。 若要解決這個錯誤，請參閱[複寫的權限](../../relational-databases/replication/security/security-role-requirements-for-replication.md)。
 
-9. 登入錯誤解決之後，請再次檢查複寫監視器。 如果所有問題都獲得解決，您應該會在**發行集名稱**旁看到一個綠色箭號，而且 [所有訂閱]  下的狀態為 [執行中]  。 
+9. 登入錯誤解決之後，請再次檢查複寫監視器。 如果所有問題都獲得解決，您應該會在 **發行集名稱** 旁看到一個綠色箭號，而且 [所有訂閱]  下的狀態為 [執行中]  。 
 
     再以滑鼠右鍵按一下訂閱，以啟動 [散發者到訂閱者]  記錄，確認是否成功。 如果這是散發代理程式第一次執行，您會看到快照集已大量複製到訂閱者： 
 
