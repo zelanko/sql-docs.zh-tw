@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83aa956f8a9a9421cdbc411856be78af272f1fa6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753767"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482514"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  這是 SELECT 語句之 [from 子句](../../t-sql/queries/from-transact-sql.md) 中使用的函數 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，可在包含以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元為基礎之資料類型的全文檢索索引資料行上執行全文檢索搜尋。 此函數會傳回零個、一個或多個資料列的資料表，這些資料行包含的值符合指定之 *freetext_string*中文字的意義，而不只是確切的用語。 FREETEXTTABLE 參考方式就如同一般資料表名稱一樣。  
+  這是 SELECT 語句之 [from 子句](../../t-sql/queries/from-transact-sql.md) 中使用的函數 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，可在包含以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元為基礎之資料類型的全文檢索索引資料行上執行全文檢索搜尋。 此函數會傳回零個、一個或多個資料列的資料表，這些資料行包含的值符合指定之 *freetext_string* 中文字的意義，而不只是確切的用語。 FREETEXTTABLE 參考方式就如同一般資料表名稱一樣。  
   
  FREETEXTTABLE 適用于與 [FREETEXT &#40;transact-sql&#41;](../../t-sql/queries/freetext-transact-sql.md)相同的比對類型，  
   
@@ -58,7 +58,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>引數  
  *table*  
- 這是已標示全文檢索查詢的資料表名稱。 *資料表* 或 *視圖*可以是一個、兩個或三部分的資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
+ 這是已標示全文檢索查詢的資料表名稱。 *資料表* 或 *視圖* 可以是一個、兩個或三部分的資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
   
  *資料表* 不能指定伺服器名稱，也不能在針對連結伺服器的查詢中使用。  
   
@@ -90,14 +90,14 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
  *top_n_by_rank*  
- 指定只傳回 *n*個最高等級的相符專案（以遞減順序）。 只有在指定了整數值 *n*時才適用。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank* 可讓您只重新叫用最相關的叫用來提高查詢效能。  
+ 指定只傳回 *n* 個最高等級的相符專案（以遞減順序）。 只有在指定了整數值 *n* 時才適用。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank* 可讓您只重新叫用最相關的叫用來提高查詢效能。  
   
 ## <a name="remarks"></a>備註  
  全文檢索述詞與函數會在 FROM 述詞中隱含的單一資料表上處理。 若要在多個資料表上進行搜尋，請使用 FROM 子句中聯結的資料表，在兩個或多個資料表之產品的結果集上進行搜尋。  
   
  FREETEXTTABLE 使用與 FREETEXT 述詞相同的搜尋條件。  
   
- 如同 CONTAINSTABLE，傳回的資料表具有名為 **KEY** 和 **RANK**的資料行，這些資料行會在查詢中參考以取得適當的資料列，並使用資料列的排名值。  
+ 如同 CONTAINSTABLE，傳回的資料表具有名為 **KEY** 和 **RANK** 的資料行，這些資料行會在查詢中參考以取得適當的資料列，並使用資料列的排名值。  
   
 ## <a name="permissions"></a>權限  
  使用者必須具備指定的資料表或資料表中被參考的資料行之適當 SELECT 權限，才能叫用 FREETEXTTABLE。  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 指定語言和最高等級的相符項目  
- 下列範例完全相同，並顯示 `LANGUAGE` *language_term*和*top_n_by_rank*參數的用法。  
+ 下列範例完全相同，並顯示 `LANGUAGE` *language_term* 和 *top_n_by_rank* 參數的用法。  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,7 +163,7 @@ GO
 ```  
   
 > [!NOTE]
->  使用*top_n_by_rank*參數不需要 LANGUAGE *language_term*參數。  
+>  使用 *top_n_by_rank* 參數不需要 LANGUAGE *language_term* 參數。  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   

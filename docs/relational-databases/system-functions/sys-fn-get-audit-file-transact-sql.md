@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753740"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478989"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -46,17 +46,17 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>引數  
  *file_pattern*  
- 針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 類型為 **Nvarchar (260) **。 
+ 針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 類型為 **Nvarchar (260)**。 
  
- - SQL Server****：
+ - SQL Server：
     
     這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 您可以使用單一星號 ( * ) 來從審核檔案集合收集多個檔案。 例如：  
   
-    -   **\<path>\\\*** -收集指定位置中的所有審核檔案。  
+    -   **\<path>\\\** _-收集指定位置中的所有審核檔。  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-收集具有指定之名稱和 GUID 配對的所有審核檔。  
+    -   _* \<path> \LoginsAudit_{GUID} * * _-收集具有指定之名稱和 GUID 配對的所有審核檔。  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -收集特定的審核檔。  
+    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *-收集特定的審核檔。  
   
  - **Azure SQL Database**：
  
@@ -64,22 +64,22 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -收集特定資料庫 (blob) 的所有審核檔。    
       
-      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> xel** -收集 (blob) 的特定審核檔。
+      - **\<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> xel** -收集 (blob) 的特定審核檔。
   
 > [!NOTE]  
 >  如果傳遞路徑而沒有包含檔案名稱模式，則會產生錯誤。  
   
  *initial_file_name*  
- 指定稽核檔案集合中要開始讀取稽核記錄之特定檔案的路徑和名稱。 類型為 **Nvarchar (260) **。  
+ 指定稽核檔案集合中要開始讀取稽核記錄之特定檔案的路徑和名稱。 類型為 **Nvarchar (260)**。  
   
 > [!NOTE]  
->  *Initial_file_name*引數必須包含有效的專案，或必須包含預設值 |Null 值。  
+>  *Initial_file_name* 引數必須包含有效的專案，或必須包含預設值 |Null 值。  
   
  *audit_record_offset*  
  指定包含為 initial_file_name 指定之檔案的已知位置。 當使用這個引數時，此函數會開始讀取緩衝區內緊接在指定的位移之後的第一筆記錄。  
   
 > [!NOTE]  
->  *Audit_record_offset*引數必須包含有效的專案，或必須包含預設值 |Null 值。 類型為 **Bigint**。  
+>  *Audit_record_offset* 引數必須包含有效的專案，或必須包含預設值 |Null 值。 類型為 **Bigint**。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  
@@ -124,12 +124,12 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | 動作的目標登入。 可為 Null。 如果不適用則傳回 NULL。 |  
 | target_server_principal_sid | **varbinary** | 目標登入的 SID。 可為 Null。 如果不適用則傳回 NULL。 |  
 | transaction_id | **bigint** | **適用于**：僅 SQL Server 從2016開始 () <br /><br /> 在單一交易中識別多個審核事件的唯一識別碼 |  
-| user_defined_event_id | **smallint** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控執行個體<br /><br /> 以引數形式傳遞給 **sp_audit_write**的使用者定義事件識別碼。 系統事件的**Null** (預設值) ，而使用者定義的事件則為非零。 如需詳細資訊，請參閱 [sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
+| user_defined_event_id | **smallint** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控執行個體<br /><br /> 以引數形式傳遞給 **sp_audit_write** 的使用者定義事件識別碼。 系統事件的 **Null** (預設值) ，而使用者定義的事件則為非零。 如需詳細資訊，請參閱 [sp_audit_write &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
 | user_defined_information | **nvarchar(4000)** | **適用于**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本、Azure SQL Database 和 SQL 受控執行個體<br /><br /> 用來記錄使用者想要使用 **sp_audit_write** 預存程式，在 audit 記錄檔中記錄的任何額外資訊。 |  
 
   
 ## <a name="remarks"></a>備註  
- 如果傳遞至**fn_get_audit_file**的*file_pattern*引數參考不存在的路徑或檔案，或如果檔案不是 audit 檔案，則會傳回**MSG_INVALID_AUDIT_FILE**錯誤訊息。  
+ 如果傳遞至 **fn_get_audit_file** 的 *file_pattern* 引數參考不存在的路徑或檔案，或如果檔案不是 audit 檔案，則會傳回 **MSG_INVALID_AUDIT_FILE** 錯誤訊息。  
   
 ## <a name="permissions"></a>權限
 
@@ -159,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  此範例會讀取上述相同檔案，但使用額外的 T-sql 子句 (**TOP**、 **ORDER BY**和 **WHERE** 子句，以篩選函式所傳回的審核記錄) ：
+  此範例會讀取上述相同檔案，但使用額外的 T-sql 子句 (**TOP**、 **ORDER BY** 和 **WHERE** 子句，以篩選函式所傳回的審核記錄) ：
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)

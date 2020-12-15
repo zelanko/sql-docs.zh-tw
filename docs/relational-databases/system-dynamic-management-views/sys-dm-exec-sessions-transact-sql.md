@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: sys. dm_exec_sessions (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539430"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482789"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上經過驗證的各個工作階段傳回一個資料列。 sys.dm_exec_sessions 是伺服器範圍檢視表，會顯示所有作用中使用者連接和內部工作的相關資訊。 這些資訊包括用戶端版本、用戶端程式名稱、用戶端登入時間、登入使用者、目前工作階段設定等。 請先使用 sys.dm_exec_sessions 檢視目前系統負載和找出所需的工作階段，然後再使用其他動態管理檢視或動態管理函數，取得該工作階段的更多資訊。  
   
- Sys. dm_exec_connections、sys. dm_exec_sessions 和 sys. dm_exec_requests 動態管理檢視會對應到 [sys.sys進程](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 系統資料表。  
+ Sys.dm_exec_connections、sys.dm_exec_sessions 和 sys.dm_exec_requests 動態管理檢視會對應到 [sys.sys進程](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 系統資料表。  
   
-> **注意：** 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用名稱 **sys. dm_pdw_nodes_exec_sessions**。  
+> **注意：** 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_exec_sessions** 名稱。  
   
 |資料行名稱|資料類型|描述與版本特定資訊|  
 |-----------------|---------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "89539430"
 |is_user_process|**bit**|如果工作階段是系統工作階段，便是 0。 否則，便為 1。 不可為 Null。|  
 |text_size|**int**|工作階段的 TEXTSIZE 設定。 不可為 Null。|  
 |語言|**nvarchar(128)**|工作階段的 LANGUAGE 設定。 可為 Null。|  
-|date_format|**Nvarchar (3) **|工作階段的 DATEFORMAT 設定。 可為 Null。|  
+|date_format|**Nvarchar (3)**|工作階段的 DATEFORMAT 設定。 可為 Null。|  
 |date_first|**smallint**|工作階段的 DATEFIRST 設定。 不可為 Null。|  
 |quoted_identifier|**bit**|工作階段的 QUOTED_IDENTIFIER 設定。 不可為 Null。|  
 |arithabort|**bit**|工作階段的 ARITHABORT 設定。 不可為 Null。|  
@@ -89,13 +89,13 @@ ms.locfileid: "89539430"
 |database_id|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 每個工作階段之目前資料庫的識別碼。|  
 |authenticating_database_id|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 驗證主體之資料庫的識別碼。 如果是登入，此值會是 0。 如果是自主資料庫使用者，此值會是自主資料庫的資料庫識別碼。|  
 |open_transaction_count|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 每個工作階段的開啟交易數目。|  
-|pdw_node_id|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
+|pdw_node_id|**int**|**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
 |page_server_reads|**bigint**|**適用于**： Azure SQL Database 超大規模<br /><br /> 在此會話期間，此會話中的要求所執行的頁面伺服器讀取數。 不可為 Null。|  
   
 ## <a name="permissions"></a>權限  
 每個人都可以看到自己的會話資訊。  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ：** 需要的 `VIEW SERVER STATE` 許可權 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，才能查看伺服器上的所有會話。  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ：** 需要 `VIEW DATABASE STATE` 查看目前資料庫的所有連接。 `VIEW DATABASE STATE` 無法在資料庫中授與 `master` 。 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ：** 需要的 `VIEW SERVER STATE` 許可權 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，才能查看伺服器上的所有會話。  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ：** 需要 `VIEW DATABASE STATE` 查看目前資料庫的所有連接。 `VIEW DATABASE STATE` 無法在資料庫中授與 `master` 。 
   
   
 ## <a name="remarks"></a>備註  
@@ -120,7 +120,7 @@ ms.locfileid: "89539430"
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|一對零或一對多|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|一對零或一對多|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|一對零或一對多|  
-|sys.dm_exec_sessions|[sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md) (session_id &#124; 0) |session_id CROSS APPLY<br /><br /> OUTER APPLY|一對零或一對多|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md) (session_id &#124; 0) |session_id CROSS APPLY<br /><br /> OUTER APPLY|一對零或一對多|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|一對一|  
   
 ## <a name="examples"></a>範例  

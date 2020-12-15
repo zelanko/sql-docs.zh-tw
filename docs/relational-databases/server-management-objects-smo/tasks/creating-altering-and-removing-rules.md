@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3fcf4dca6ec2cc56ddab8a847afd87c96811e96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9fabc5778f17ae1f2d5456eb0c0fc39e570ebbd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420242"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480839"
 ---
 # <a name="creating-altering-and-removing-rules"></a>建立、改變和移除規則
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88420242"
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- **Dim** <xref:Microsoft.SqlServer.Management.Smo.Rule> 系統會以完整的元件路徑指定物件的 Dim 語句，以避免對 system.string <xref:Microsoft.SqlServer.Management.Smo.Rule> 元件中的物件造成混淆。  
+  <xref:Microsoft.SqlServer.Management.Smo.Rule> 系統會以完整的元件路徑指定物件的 Dim 語句，以避免對 system.string <xref:Microsoft.SqlServer.Management.Smo.Rule> 元件中的物件造成混淆。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -66,7 +66,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>在 Visual C# 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- **Dim** <xref:Microsoft.SqlServer.Management.Smo.Rule> 系統會以完整的元件路徑指定物件的 Dim 語句，以避免對 system.string <xref:Microsoft.SqlServer.Management.Smo.Rule> 元件中的物件造成混淆。  
+  <xref:Microsoft.SqlServer.Management.Smo.Rule> 系統會以完整的元件路徑指定物件的 Dim 語句，以避免對 system.string <xref:Microsoft.SqlServer.Management.Smo.Rule> 元件中的物件造成混淆。  
   
 ```csharp  
 {  
@@ -99,7 +99,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>在 PowerShell 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- **Dim** <xref:Microsoft.SqlServer.Management.Smo.Rule> 系統會以完整的元件路徑指定物件的 Dim 語句，以避免對 system.string <xref:Microsoft.SqlServer.Management.Smo.Rule> 元件中的物件造成混淆。  
+  <xref:Microsoft.SqlServer.Management.Smo.Rule> 系統會以完整的元件路徑指定物件的 Dim 語句，以避免對 system.string <xref:Microsoft.SqlServer.Management.Smo.Rule> 元件中的物件造成混淆。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

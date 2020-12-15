@@ -1,6 +1,6 @@
 ---
 description: sys.assembly_types (Transact-SQL)
-title: sys. assembly_types (Transact-sql) |Microsoft Docs
+title: sys.assembly_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06eb2eb4fe6b0983b798ea38fa98057be73af77a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 006495335ab8a6bfa48adf8d840b3b96a0c936d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545064"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479089"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  針對由 CLR 組件所定義的每個使用者定義型別，各包含一個資料列。 下列**sys. assembly_types**會出現在繼承的資料行清單中 (在 **) **之後，請參閱[sys. 類型 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) rule_object_id。  
+  針對由 CLR 組件所定義的每個使用者定義型別，各包含一個資料列。 下列 **sys.assembly_types** 會出現在繼承的資料行清單中 (在 **)** 之後，請參閱 [sys. 類型 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) rule_object_id。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

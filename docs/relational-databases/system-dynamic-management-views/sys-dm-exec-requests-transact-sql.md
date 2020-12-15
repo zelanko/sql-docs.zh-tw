@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_requests (Transact-SQL)
-title: sys. dm_exec_requests (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c9ac32f202766e118f7e44d3cf7c0d7fafdb6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482799"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88489954"
 |user_id|**int**|提交要求之使用者的識別碼。 不可為 Null。|  
 |connection_id|**uniqueidentifier**|要求到達所用連接的識別碼。 可為 Null。|  
 |blocking_session_id|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 Null 或等於0，則不會封鎖要求，或封鎖會話的會話資訊 (無法使用或無法) 識別。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，目前無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
-|wait_type|**nvarchar(60)**|若要求目前被封鎖，這個資料行會傳回等候的類型。 可為 Null。<br /><br /> 如需等候類型的詳細資訊，請參閱 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
+|wait_type|**nvarchar(60)**|若要求目前被封鎖，這個資料行會傳回等候的類型。 可為 Null。<br /><br /> 如需等候類型的詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
 |wait_time|**int**|若要求目前被封鎖，這個資料行會傳回目前等候的持續時間 (以毫秒為單位)。 不可為 Null。|  
 |last_wait_type|**nvarchar(60)**|如果這個要求先前被封鎖，這個資料行會傳回上次等候的類型。 不可為 Null。|  
 |wait_resource|**nvarchar(256)**|若要求目前被封鎖，這個資料行會傳回要求目前等候的資源。 不可為 Null。|  
@@ -68,7 +68,7 @@ ms.locfileid: "88489954"
 |logical_reads|**bigint**|這項要求所執行的邏輯讀取數。 不可為 Null。|  
 |text_size|**int**|這項要求的 TEXTSIZE 設定。 不可為 Null。|  
 |語言|**nvarchar(128)**|這項要求的語言設定。 可為 Null。|  
-|date_format|**Nvarchar (3) **|這項要求的 DATEFORMAT 設定。 可為 Null。|  
+|date_format|**Nvarchar (3)**|這項要求的 DATEFORMAT 設定。 可為 Null。|  
 |date_first|**smallint**|這項要求的 DATEFIRST 設定。 不可為 Null。|  
 |quoted_identifier|**bit**|1 = 這項要求的 QUOTED_IDENTIFIER 是 ON。 否則，它是0。<br /><br /> 不可為 Null。|  
 |arithabort|**bit**|1 = 這項要求的 ARITHABORT 設定是 ON。 否則，它是0。<br /><br /> 不可為 Null。|  
@@ -87,27 +87,27 @@ ms.locfileid: "88489954"
 |granted_query_memory|**int**|配置給這項要求之查詢執行的頁數。 不可為 Null。|  
 |executing_managed_code|**bit**|指出特定要求目前是否正在執行 Common Language Runtime 物件 (如常式、類型和觸發程序)。 這是為 Common Language Runtime 物件在堆疊上的完全時間所設定，即使是從 Common Language Runtime 內部執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 也是如此。 不可為 Null。|  
 |group_id|**int**|這個查詢所屬工作負載群組的識別碼。 不可為 Null。|  
-|query_hash|**二元 (8) **|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
-|query_plan_hash|**二元 (8) **|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。|  
+|query_hash|**二元 (8)**|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
+|query_plan_hash|**二元 (8)**|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。|  
 |statement_sql_handle|**varbinary(64)**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 個別查詢的 SQL 控制碼。<br /><br />如果未針對資料庫啟用查詢存放區，則這個資料行是 Null。 |  
-|statement_context_id|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> Sys. query_coNtext_settings 的選擇性外鍵。<br /><br />如果未針對資料庫啟用查詢存放區，則這個資料行是 Null。 |  
+|statement_context_id|**bigint**|**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。<br /><br /> 要 sys.query_coNtext_settings 的選擇性外鍵。<br /><br />如果未針對資料庫啟用查詢存放區，則這個資料行是 Null。 |  
 |dop |**int** |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 查詢的平行處理原則程度。 |  
 |parallel_worker_count |**int** |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 如果這是平行查詢，則為保留的平行背景工作數目。  |  
 |external_script_request_id |**uniqueidentifier** |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。<br /><br /> 與目前要求相關聯的外部腳本要求識別碼。 |  
 |is_resumable |**bit** |**適用對象**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更新版本。<br /><br /> 指出要求是否為可繼續的索引作業。 |  
-|page_resource |**二元 (8) ** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果資料行包含頁面，則為頁面資源的8位元組十六進位標記法 `wait_resource` 。 如需詳細資訊，請參閱 [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
+|page_resource |**二元 (8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果資料行包含頁面，則為頁面資源的8位元組十六進位標記法 `wait_resource` 。 如需詳細資訊，請參閱 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**適用于**： Azure SQL Database 超大規模<br /><br /> 此要求所執行的頁面伺服器讀取數。 不可為 Null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>備註 
 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。
 
-以資料 [列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)執行平行要求時，會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派工作者執行緒來協調負責完成指派給它們之工作的工作者執行緒。 在此 DMV 中，只會顯示要求的協調器執行緒。 協調器執行緒**不會更新**資料行的**讀取**、**寫入**、 **logical_reads**和**row_count** 。 **只有**協調器執行緒會更新資料行**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory** 。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+以資料 [列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)執行平行要求時，會 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派工作者執行緒來協調負責完成指派給它們之工作的工作者執行緒。 在此 DMV 中，只會顯示要求的協調器執行緒。 協調器執行緒 **不會更新** 資料行的 **讀取**、**寫入**、 **logical_reads** 和 **row_count** 。 **只有** 協調器執行緒會更新資料行 **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource** 和 **granted_query_memory** 。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
 
 ## <a name="permissions"></a>權限
 如果使用者具有 `VIEW SERVER STATE` 伺服器的許可權，使用者將會在實例上看到所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否則，使用者只會看到目前的會話。 `VIEW SERVER STATE` 無法在 Azure SQL Database 中授與，因此 `sys.dm_exec_requests` 一律會限制為目前的連接。
 
-在 Always On 案例中，如果次要複本設定為 **唯讀意圖**，則與次要複本的連接必須藉由新增來指定其在連接字串參數中的應用程式意圖 `applicationintent=readonly` 。 否則， `sys.dm_exec_requests` 不會對可用性群組中的資料庫傳遞存取檢查，即使 `VIEW SERVER STATE` 有許可權存在也一樣。
+在 Always-On 案例中，如果次要複本設定為 **唯讀意圖**，則與次要複本的連接必須藉由新增來指定其在連接字串參數中的應用程式意圖 `applicationintent=readonly` 。 否則， `sys.dm_exec_requests` 不會對可用性群組中的資料庫傳遞存取檢查，即使 `VIEW SERVER STATE` 有許可權存在也一樣。
 
   
 ## <a name="examples"></a>範例  
@@ -130,14 +130,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 尋找執行中批次持有的所有鎖定
 
-下列範例會查詢 **sys. dm_exec_requests** 以尋找感興趣的批次，並 `transaction_id` 從輸出中複製它。
+下列範例會查詢 **sys.dm_exec_requests** 尋找有趣的批次，並 `transaction_id` 從輸出中複製它。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-然後，若要尋找鎖定資訊，請使用 `transaction_id` 與系統函數 **sys. dm_tran_locks**一起複製的。  
+然後，若要尋找鎖定資訊，請使用 `transaction_id` 系統函數所複製的 **sys.dm_tran_locks**。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -148,7 +148,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. 尋找所有目前封鎖的要求
 
-下列範例會查詢 **sys. dm_exec_requests** ，以尋找已封鎖要求的相關資訊。  
+下列範例會查詢 **sys.dm_exec_requests** ，以尋找已封鎖要求的相關資訊。  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -190,11 +190,11 @@ GO
 ## <a name="see-also"></a>另請參閱
 [動態管理檢視和函式](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [執行相關的動態管理檢視和函數](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
-[sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
-[sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
-[sys. dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
-[sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+[sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server，SQL Statistics 物件](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)    

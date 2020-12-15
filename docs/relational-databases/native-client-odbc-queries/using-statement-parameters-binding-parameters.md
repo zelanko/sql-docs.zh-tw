@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95cf24fb9cfa226708c4d628110c295f35e1fe4d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a1ddbcb0f19cb62310e748da4f710b196357acbc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478069"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用陳述式參數 - 繫結參數
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "91869343"
   
  參數標記可以在執行陳述式之前的任何時候繫結或重新繫結。 在發生下列其中一個事件之前，參數繫結都會持續有效：  
   
--   將*Option*參數設定為 SQL_RESET_PARAMS 的呼叫[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)會釋出系結至語句控制碼的所有參數。  
+-   將 *Option* 參數設定為 SQL_RESET_PARAMS 的呼叫 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)會釋出系結至語句控制碼的所有參數。  
   
--   將*ParameterNumber*設定為系結參數標記之序數的**SQLBindParameter**呼叫會自動釋放先前的系結。  
+-   將 *ParameterNumber* 設定為系結參數標記之序數的 **SQLBindParameter** 呼叫會自動釋放先前的系結。  
   
  應用程式也可以將參數繫結到程式變數的陣列，以批次的方式處理 SQL 陳述式。 陣列繫結有兩種類型：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "91869343"
   
      藉由呼叫 **SQLSetStmtAttr** ，並將 *屬性* 設定為 SQL_ATTR_PARAM_BIND_TYPE，並將 *ValuePtr* 設定為保留程式變數的結構大小，即可指定資料列取向系結。  
   
- 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式傳送字元或二進位字串參數給伺服器時，會將值填補到 **SQLBindParameter** *ColumnSize* 參數中指定的長度。 如果 ODBC 2.x 應用程式為 *ColumnSize*指定0，驅動程式會將參數值填補至資料類型的有效位數。 當連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器時，有效位數為 8000，連接至舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時則為 255。 Variant 資料行的*ColumnSize*是以位元組為單位。  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驅動程式傳送字元或二進位字串參數給伺服器時，會將值填補到 **SQLBindParameter** *ColumnSize* 參數中指定的長度。 如果 ODBC 2.x 應用程式為 *ColumnSize* 指定0，驅動程式會將參數值填補至資料類型的有效位數。 當連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器時，有效位數為 8000，連接至舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時則為 255。 Variant 資料行的 *ColumnSize* 是以位元組為單位。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援定義預存程序參數的名稱。 ODBC 3.5 也導入了對呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序時所使用之具名參數的支援。 這項支援可用來：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "91869343"
   
  只有在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **execute** 語句或 ODBC CALL escape 順序來執行預存程式時，才支援具名引數。  
   
- 如果針對預存程式參數設定 **SQL_DESC_NAME** ，則查詢中的所有預存程式參數也都應該設定 **SQL_DESC_NAME**。  如果在預存程序呼叫中使用常值，其中參數已設定**SQL_DESC_NAME** ，則常值應使用格式 *' name* = *value*'，其中*NAME*是預存程式參數名稱 (例如 @p1) 。 如需詳細資訊，請參閱 [ (具名引數的名稱系結參數) ](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)。  
+ 如果針對預存程式參數設定 **SQL_DESC_NAME** ，則查詢中的所有預存程式參數也都應該設定 **SQL_DESC_NAME**。  如果在預存程序呼叫中使用常值，其中參數已設定 **SQL_DESC_NAME** ，則常值應使用格式 *' name* = *value*'，其中 *NAME* 是預存程式參數名稱 (例如 @p1) 。 如需詳細資訊，請參閱 [ (具名引數的名稱系結參數) ](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用陳述式參數](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

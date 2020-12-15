@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aacea1639acd400334c19922588f0e9fc1298631
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4765b8955b47d67fb9e324cd019b7103d448bb6f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482472"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "91753847"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**Nvarchar (** 128 **) **|檢視限定詞。|  
-|**VIEW_SCHEMA**|**Nvarchar (** 128 **) **|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
+|**VIEW_CATALOG**|**Nvarchar (** 128 **)**|檢視限定詞。|  
+|**VIEW_SCHEMA**|**Nvarchar (** 128 **)**|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
 |**VIEW_NAME**|**sysname**|檢視名稱。|  
-|**TABLE_CATALOG**|**Nvarchar (** 128 **) **|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar (** 128 **) **|包含資料表的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|基底資料表。|  
 |**COLUMN_NAME**|**sysname**|資料行名稱。|  
   

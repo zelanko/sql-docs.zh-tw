@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20f675d11a58af2f5a1a433b8fdba41d07d4b01b
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a21ae902a796e5d8864fc9a72a9d0fe01992285b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753567"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482443"
 ---
 # <a name="domain_constraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "91753567"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **) **|規則所在的資料庫。|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **) **|包含條件約束之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|規則所在的資料庫。|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|規則名稱。|  
-|**DOMAIN_CATALOG**|**Nvarchar (** 128 **) **|別名資料類型所在的資料庫。|  
-|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **) **|包含別名資料類型之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷資料類型的架構。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
+|**DOMAIN_CATALOG**|**Nvarchar (** 128 **)**|別名資料類型所在的資料庫。|  
+|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **)**|包含別名資料類型之結構描述的名稱。<br /><br /> <strong> \* \* 重要 \* 事項 \* ：</strong>請勿使用 INFORMATION_SCHEMA views 來判斷資料類型的架構。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
 |**DOMAIN_NAME**|**sysname**|別名資料類型。|  
-|**IS_DEFERRABLE**|**Varchar (** 2 **) **|指定條件約束檢查是否可以延後。 一律傳回 NO。|  
-|**INITIALLY_DEFERRED**|**Varchar (** 2 **) **|指定一開始時是否延遲條件約束檢查。 一律傳回 NO。|  
+|**IS_DEFERRABLE**|**Varchar (** 2 **)**|指定條件約束檢查是否可以延後。 一律傳回 NO。|  
+|**INITIALLY_DEFERRED**|**Varchar (** 2 **)**|指定一開始時是否延遲條件約束檢查。 一律傳回 NO。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   

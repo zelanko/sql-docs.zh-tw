@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753700"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482517"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -133,14 +133,14 @@ CONTAINSTABLE
   
  如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定 *LANGUAGE**language_term* 可以增加完全相符的機率。  
   
- 當指定為字串時， *language_term*對應到[sys.sys語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視中的**alias**資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串時， *language_term* 對應到 [sys.sys語言](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視中的 **alias** 資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
  如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其轉換成 Unicode。  
   
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
  *top_n_by_rank*  
- 指定只傳回 *n* 個最高等級的相符專案（以遞減順序）。 只有在指定了整數值 *n*時才適用。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank* 可讓您只重新叫用最相關的叫用來提高查詢效能。  
+ 指定只傳回 *n* 個最高等級的相符專案（以遞減順序）。 只有在指定了整數值 *n* 時才適用。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank* 可讓您只重新叫用最相關的叫用來提高查詢效能。  
   
  <contains_search_condition>  
  指定要在 *column_name* 中搜尋的文字，以及要比對的條件。 如需搜尋條件的詳細資訊，請參閱 [CONTAINS &#40;transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)。  
@@ -159,7 +159,7 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- CONTAINSTABLE 所產生的資料表包含一個名為 **RANK**的資料行。 **RANK**資料行是一個值 (從0到1000的) ，分別指出資料列符合選取準則的程度。 SELECT 陳述式通常利用下列其中一種方法來使用這個等級值：  
+ CONTAINSTABLE 所產生的資料表包含一個名為 **RANK** 的資料行。 **RANK** 資料行是一個值 (從0到1000的) ，分別指出資料列符合選取準則的程度。 SELECT 陳述式通常利用下列其中一種方法來使用這個等級值：  
   
 -   在 ORDER BY 子句中，傳回等級最高的資料列做為資料表中前面的資料列。  
   

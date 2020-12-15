@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 650fb3320266a192312c50c8679cd0d5adc1934c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b6eefdafded71a89497fe0e875d0a214ce607a26
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753608"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478919"
 ---
 # <a name="constraint_column_usage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "91753608"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**Nvarchar (** 128 **) **|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar (** 128 **) **|包含資料表擁有者之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**TABLE_NAME**|**Nvarchar (** 128 **) **|資料表名稱。|  
-|**COLUMN_NAME**|**Nvarchar (** 128 **) **|資料行名稱。|  
-|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **) **|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **) **|包含條件約束之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**CONSTRAINT_NAME**|**Nvarchar (** 128 **) **|條件約束名稱。|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|包含資料表擁有者之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_NAME**|**Nvarchar (** 128 **)**|資料表名稱。|  
+|**COLUMN_NAME**|**Nvarchar (** 128 **)**|資料行名稱。|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|條件約束限定詞。|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_NAME**|**Nvarchar (** 128 **)**|條件約束名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   

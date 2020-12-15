@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534784"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482380"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,14 +45,14 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (成功) 或 1 (失敗)  
   
 ## <a name="arguments"></a>引數  
-`[ @resample = ] 'resample'` 指定 **sp_updatestats** 將使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 語句的重新取樣選項。 如果未指定「重新 **取樣** 」， **sp_updatestats** 會使用預設取樣來更新統計資料。 重新**取樣**是**Varchar (8) **預設值為 NO。  
+`[ @resample = ] 'resample'` 指定 **sp_updatestats** 將使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 語句的重新取樣選項。 如果未指定「重新 **取樣** 」， **sp_updatestats** 會使用預設取樣來更新統計資料。 重新 **取樣** 是 **Varchar (8)** 預設值為 NO。  
   
 ## <a name="remarks"></a>備註  
  **sp_updatestats** 會 `UPDATE STATISTICS` `ALL` 在資料庫中的所有使用者定義和內部資料表上指定關鍵字來執行。 sp_updatestats 顯示指出其進度的訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  
   
 **sp_updatestats** 更新已停用之非叢集索引的統計資料，而且不會更新已停用之叢集索引的統計資料  
   
-若是以磁片為基礎的資料表， **sp_updatestats**會根據**sys. dm_db_stats_properties**目錄檢視中的**modification_counter**資訊更新統計資料，以更新至少一個資料列已修改的統計資料。 執行 **sp_updatestats**時，一定會更新記憶體優化資料表的統計資料。 因此，不需要執行 **sp_updatestats** 。  
+若是以磁片為基礎的資料表， **sp_updatestats** 會根據 **sys.dm_db_stats_properties** 類別目錄檢視中 **modification_counter** 資訊更新統計資料，以更新至少一個資料列已修改的統計資料。 執行 **sp_updatestats** 時，一定會更新記憶體優化資料表的統計資料。 因此，不需要執行 **sp_updatestats** 。  
   
 **sp_updatestats** 可以觸發預存程式或其他已編譯器代碼的重新編譯。 不過，如果參考的資料表和索引上的索引只有一個查詢計劃， **sp_updatestats** 可能不會造成重新編譯。 在這些情況下，重新編譯是不必要的，即使已更新統計資料也一樣。  
   

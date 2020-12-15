@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412551"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934019"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>R 教學課程：定型和儲存模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "92412551"
 
 1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，開啟新的 [查詢] 視窗。
 
-2. 執行下列陳述式來建立預存程序 **RTrainLogitModel** 。 這個預存程序會定義輸入資料，並使用 **glm** 建立羅吉斯迴歸模型。
+2. 執行下列陳述式來建立預存程序 **RTrainLogitModel**。 這個預存程序會定義輸入資料，並使用 **glm** 建立羅吉斯迴歸模型。
 
    ```sql
    CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -79,7 +79,7 @@ ms.locfileid: "92412551"
   
    + R 指令碼呼叫 R 函數 **glm** 來建立羅吉斯迴歸模型。
   
-     二進位變數 _tipped_ 可做為「標籤」或結果資料行，而模型則是使用下列功能資料行進行調整︰ _passenger_count_ 、 _trip_distance_ 、 _trip_time_in_secs_ 和 _direct_distance_ 。
+     二進位變數 _tipped_ 可做為「標籤」或結果資料行，而模型則是使用下列功能資料行進行調整︰_passenger_count_、_trip_distance_、_trip_time_in_secs_ 和 _direct_distance_。
   
    + 儲存在 R 變數 `logitObj` 中的定型模型會被序列化並作為輸出參數返回。
 
@@ -99,9 +99,9 @@ ms.locfileid: "92412551"
 
    STDOUT message(s) from external script:Rows Read:1193025, Total Rows Processed:1193025, Total Chunk Time:0.093 seconds"
 
-3. 當陳述式完成時，開啟資料表 *nyc_taxi_models* 。 資料處理和模型調整可能需要一些時間。
+3. 當陳述式完成時，開啟資料表 *nyc_taxi_models*。 資料處理和模型調整可能需要一些時間。
 
-   您可以看到新增了一個新的資料列，其中 _model_ 資料行包含序列化模型，且 _name_ 資料行包含模型名稱 **TrainLog_model** 。
+   您可以看到當中已新增一個新的資料列，其 _model_ 資料行中包含序列化的模型，以及 _name_ 資料行中的模型名稱 **RTrainLogit_model**。
 
    ```text
    model                        name

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf53d8d1ae8787ee8cff12ea944398f90707d7ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2c81bb5c02b11753fa98024cfd4d3861b2768d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482589"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92035391"
 |dms_step_index|**int**|此背景工作正在執行之 DMS 計畫中的步驟。<br /><br /> request_id、step_index 和 dms_step_index 會形成此視圖的索引鍵。||  
 |pdw_node_id|**int**|正在執行背景工作的節點。|請參閱 [sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)中的 node_id。|  
 |distribution_id|**整數**|背景工作執行所在的散發（如果有的話）。|請參閱 [sys.pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)中的 distribution_id。|  
-|type|**nvarchar(32)**|此專案代表的 DMS 工作者執行緒類型。|「DIRECT_CONVERTER」、「DIRECT_READER」、「FILE_READER」、「HASH_CONVERTER」、「HASH_READER」、「ROUNDROBIN_CONVERTER」、「EXPORT_READER」、「EXTERNAL_READER」、「EXTERNAL_WRITER」、「PARALLEL_COPY_READER」、「REJECT_WRITER」、「寫入器」|  
+|類型|**nvarchar(32)**|此專案代表的 DMS 工作者執行緒類型。|「DIRECT_CONVERTER」、「DIRECT_READER」、「FILE_READER」、「HASH_CONVERTER」、「HASH_READER」、「ROUNDROBIN_CONVERTER」、「EXPORT_READER」、「EXTERNAL_READER」、「EXTERNAL_WRITER」、「PARALLEL_COPY_READER」、「REJECT_WRITER」、「寫入器」|  
 |status|**nvarchar(32)**|DMS 背景工作角色的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|最後一秒的讀取或寫入輸送量。|大於或等於0。 如果查詢在背景工作角色可以執行之前取消或失敗，則為 Null。|  
 |bytes_processed|**bigint**|此背景工作所處理的總位元組數。|大於或等於0。 如果查詢在背景工作角色可以執行之前取消或失敗，則為 Null。|  
@@ -45,7 +45,7 @@ ms.locfileid: "92035391"
 |buffers_available|**int**|未使用的緩衝區數目。| 如果查詢在背景工作角色可以執行之前取消或失敗，則為 Null。|  
 |sql_spid|**int**|SQL Server 實例上執行此 DMS 工作者工作的會話識別碼。||  
 |dms_cpid|**int**|實際執行之執行緒的處理序識別碼。||  
-|error_id|**Nvarchar (36) **|在此背景工作執行期間發生之錯誤的唯一識別碼（如果有的話）。|請參閱 [sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 error_id。|  
+|error_id|**Nvarchar (36)**|在此背景工作執行期間發生之錯誤的唯一識別碼（如果有的話）。|請參閱 [sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)中的 error_id。|  
 |source_info|**nvarchar(4000)**|針對讀取器，指定來源資料表和資料行的規格。||  
 |destination_info|**nvarchar(4000)**|若為寫入器，則為目的地資料表的規格。||  
   

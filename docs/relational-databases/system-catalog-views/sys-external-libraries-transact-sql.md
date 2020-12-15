@@ -1,6 +1,6 @@
 ---
 description: sys.external_libraries (Transact-SQL)
-title: sys. external_libraries (Transact-sql) |Microsoft Docs
+title: sys.external_libraries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dcc1b8f7cddc785203dc2430c2f1a4dce4b4d39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 540420eee8f6de671df54ace8af9fbe1fe0c501d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477499"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88377574"
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-目錄檢視 sys. external_libraries 會針對已上傳至資料庫的每個外部程式庫，列出一個資料列。
+目錄檢視 sys.external_libraries 會針對已上傳至資料庫的每個外部程式庫，列出一個資料列。
 
 |資料行名稱 |資料類型 | 描述|
 |------|------|------|

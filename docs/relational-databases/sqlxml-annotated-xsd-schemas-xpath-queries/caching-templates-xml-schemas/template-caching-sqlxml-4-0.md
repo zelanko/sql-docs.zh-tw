@@ -1,6 +1,6 @@
 ---
-title: 範本快取（SQLXML）
-description: 瞭解如何使用 SQLXML 4.0 中的範本快取，在執行範本時大幅改善效能。
+title: " (SQLXML) 的範本快取"
+description: 瞭解如何在 SQLXML 4.0 中使用範本快取，在執行範本時大幅改善效能。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,13 +15,13 @@ ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a0e8247eb85296be0dccd3b68621f3f42f25388
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5b8bb4225d5c977cb516de8a17037c92e22658b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650474"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479309"
 ---
 # <a name="template-caching-sqlxml-40"></a>範本快取 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,9 +36,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- 範本大小應該根據可用的記憶體以及您要使用的範本數目來設定。 **TemplateCacheSize**大小的預設值為31。 如果範本存取速度似乎緩慢，您可以增加快取大小，或者如果記憶體不足，則減少快取大小。  
+ 範本大小應該根據可用的記憶體以及您要使用的範本數目來設定。 **TemplateCacheSize** 大小的預設值為31。 如果範本存取速度似乎緩慢，您可以增加快取大小，或者如果記憶體不足，則減少快取大小。  
   
- 為獲得較佳的效能，建議您將**TemplateCacheSize**設定為高於您通常使用的範本數目。 如果**TemlateCacheSize**小於您擁有的範本數目，效能會隨著範本數目的增加而降低。 **TemplateCacheSize**可以設定為最大值128。  
+ 為了獲得更好的效能，建議您將 **TemplateCacheSize** 設定為高於通常使用的範本數目。 如果 **TemlateCacheSize** 小於您擁有的範本數目，當範本數目增加時，效能就會降低。 **TemplateCacheSize** 可以設定為最大值128。  
   
  每次使用快取的範本時，就會檢查範本檔的修改時間以查看該範本檔是否需要重新整理。 這是因為磁碟副本比快取副本新的緣故。  
   

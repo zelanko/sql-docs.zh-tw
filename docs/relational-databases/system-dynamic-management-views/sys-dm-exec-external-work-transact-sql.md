@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5559a1f1ce7ebc4a231a24022c9642d598d81f73
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d373e5900cfebca38c6305bbe9e8cac3d36cb22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834418"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477289"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "91834418"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|相關聯 PolyBase 查詢的唯一識別碼。|請參閱[sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*request_ID* 。|  
-|step_index|`int`|此背景工作正在執行的要求。|請參閱[sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的*step_index* 。|  
+|execution_id|`nvarchar(32)`|相關聯 PolyBase 查詢的唯一識別碼。|請參閱 [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的 *request_ID* 。|  
+|step_index|`int`|此背景工作正在執行的要求。|請參閱 [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的 *step_index* 。|  
 |dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱 [sys.dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
 |compute_node_id|`int`|正在執行背景工作的節點。|請參閱 [sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
+|類型|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
 |work_id|`int`|實際分割的識別碼。|大於或等於0。|  
 |input_name|`nvarchar(4000)`|要讀取之輸入的名稱|使用 Hadoop 時的檔案名。|  
 |read_location|`bigint`|位移或讀取位置。|要讀取的檔案位移。|  

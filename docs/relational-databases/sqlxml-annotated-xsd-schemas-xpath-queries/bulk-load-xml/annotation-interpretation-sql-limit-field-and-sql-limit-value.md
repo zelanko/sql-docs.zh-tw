@@ -1,6 +1,6 @@
 ---
-title: sql： limit-field 和 sql： limit-value （SQLXML）
-description: 瞭解如何使用 SQLXML 注釋 sql： limit-field 和 sql： limit-value 來篩選使用 XML 大量載入時的資料。
+title: 'sql： limit-field 和 sql： limit-value (SQLXML) '
+description: 瞭解如何在使用 XML 大量載入時，使用 SQLXML 注釋 sql： limit-field 和 sql： limit-value 來篩選資料。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,17 +18,17 @@ ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 211e14cbc8f965a660a087346a437d814489b7c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68f0044df7beb39d11caa828f7c873d574a03a89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479289"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>註解解譯 - sql:limit-field 和 sql:limit-value
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  XML 大量載入會根據其定義來處理**sql： limit-field**和**sql： limit 值**注釋。 如需詳細資訊，請參閱[使用 sql： limit-field 和 sql： limit-value 來篩選值 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
+  XML 大量載入會根據其定義處理 **sql： limit 欄位** 和 **sql： limit 值** 附注。 如需詳細資訊，請參閱 [使用 sql： limit-field 和 sql： limit-value &#40;SQLXML 4.0&#41;篩選值 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
   
  例如，假設資料庫包含下列資料表：  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea021b39d01af931a989c55233a7f1cd8fa2cb82
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a55bcdd0df9f288daa22c5f4f1454b14305ec6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004798"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478939"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,10 +49,10 @@ sp_pkeys [ @table_name = ] 'name'
  [ @table_owner =] '*owner*'  
  指定已指定資料表的資料表擁有者。 *owner* 是 **sysname**，預設值是 Null。 不支援萬用字元的模式比對。 如果未指定 *owner* ，則適用基礎 DBMS 的預設資料表可見度規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定 *擁有* 者，且目前的使用者未擁有具有指定 *名稱*的資料表，這個程式就會尋找資料庫擁有者所擁有之指定 *名稱* 的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定 *擁有* 者，且目前的使用者未擁有具有指定 *名稱* 的資料表，這個程式就會尋找資料庫擁有者所擁有之指定 *名稱* 的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
   
  [ @table_qualifier =] '*限定詞*'  
- 這是資料表限定詞。 *限定詞* 是 **sysname**，預設值是 Null。 各種 DBMS 產品都支援資料表 (辨識_符號_的三部分命名 **。**_擁有_者 **。**) _名稱_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表限定詞。 *限定詞* 是 **sysname**，預設值是 Null。 各種 DBMS 產品都支援資料表 (辨識 _符號_ 的三部分命名 **。**_擁有_ 者 **。**) _名稱_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無  

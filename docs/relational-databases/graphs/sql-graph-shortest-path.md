@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475836"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480179"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql) 
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ FOR PATH 必須與 FROM 子句中的任何節點或邊緣資料表名稱一起�
 這種模式包括必須重複進行的節點和邊緣，直到到達所需的節點，或直到符合模式指定的最大反覆運算數目為止。 每次執行查詢時，執行這個模式的結果將會是節點的已排序集合，以及從開始節點到結束節點的路徑。 這是正則運算式樣式語法模式，並支援下列兩個模式數量詞：
 
 * **' + '**：重複模式1次或多次。 在找到最短路徑後立即終止。
-* **{1，n}**：將模式1重複為 ' n ' 次。 一旦找到最短，就會終止。
+* **{1,n}** ：重複模式 1 至 'n' 次。 一旦找到最短，就會終止。
 
 ## <a name="last_node"></a>LAST_NODE
 LAST_NODE ( # A1 函數可讓兩個任意長度的遍歷模式連結。 它可以用於下列情況：    
@@ -103,10 +103,10 @@ STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串
 ### <a name="avg"></a>平均
 傳回所提供之節點/邊緣屬性值的平均值，或出現在已被遍歷路徑中的運算式。
 
-### <a name="min"></a>MIN
+### <a name="min"></a>最小值
 從提供的節點/邊緣屬性值或出現在已進行路徑中的運算式傳回最小值。
 
-### <a name="max"></a>MAX
+### <a name="max"></a>最大值
 從提供的節點/邊緣屬性值或出現在已進行路徑中的運算式傳回最大值。
 
 ## <a name="remarks"></a>備註  
@@ -213,6 +213,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>另請參閱  
  [ (SQL Graph) 相符 ](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [插入 (SQL Graph) ](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017 的圖表處理](../../relational-databases/graphs/sql-graph-overview.md)     
  

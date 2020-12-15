@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482416"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,16 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @defname = ] 'default'` 這是 CREATE DEFAULT 所建立之預設值的名稱。 *預設值* 為 **Nvarchar (776) **，沒有預設值。  
+`[ @defname = ] 'default'` 這是 CREATE DEFAULT 所建立之預設值的名稱。 *預設值* 為 **Nvarchar (776)**，沒有預設值。  
   
-`[ @objname = ] 'object_name'` 這是要系結預設值之資料表和資料行的名稱，或是別名資料類型。 *object_name* 是 **Nvarchar (776) ** 沒有預設值。 *object_name* 不能以 **Varchar (max) **、 **Nvarchar (max) **、 **VARBINARY (max) **、 **xml**或 CLR 使用者定義型別來定義。  
+`[ @objname = ] 'object_name'` 這是要系結預設值之資料表和資料行的名稱，或是別名資料類型。 *object_name* 是 **Nvarchar (776)** 沒有預設值。 *object_name* 不能以 **Varchar (max)**、 **Nvarchar (max)**、 **VARBINARY (max)**、 **xml** 或 CLR 使用者定義型別來定義。  
   
- 如果 *object_name* 是一個部分的名稱，則會解析為別名資料類型。 如果它是兩部份或三部份的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 除非預設值直接系結到資料行，否則，別名資料類型的現有資料行會繼承 *預設值*。 預設值不能系結到 **text**、 **Ntext**、 **image**、 **Varchar (max) **、 **Nvarchar (max) **、 **Varbinary (max) **、 **XML**、 **timestamp**或 CLR 使用者定義型別資料行、具有 IDENTITY 屬性的資料行、計算資料行，或已經有 default 條件約束的資料行。  
+ 如果 *object_name* 是一個部分的名稱，則會解析為別名資料類型。 如果它是兩部份或三部份的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 除非預設值直接系結到資料行，否則，別名資料類型的現有資料行會繼承 *預設值*。 預設值不能系結到 **text**、 **Ntext**、 **image**、 **Varchar (max)**、 **Nvarchar (max)**、 **Varbinary (max)**、 **XML**、 **timestamp** 或 CLR 使用者定義型別資料行、具有 IDENTITY 屬性的資料行、計算資料行，或已經有 default 條件約束的資料行。  
   
 > [!NOTE]  
 >  *object_name* 可以包含方括弧 **[]** 作為分隔的識別碼。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
-`[ @futureonly = ] 'futureonly_flag'` 只有將預設值系結到別名資料類型時，才會使用。 *futureonly_flag* 是 **Varchar (15) ** ，預設值是 Null。 當這個參數設定為 **futureonly**時，該資料類型的現有資料行就無法繼承新的預設值。 當預設值繫結到資料行時，永遠不會使用這個參數。 如果 *futureonly_flag* 為 Null，則新的預設值會系結至目前沒有預設值或使用別名資料類型之現有預設值的任何別名資料類型資料行。  
+`[ @futureonly = ] 'futureonly_flag'` 只有將預設值系結到別名資料類型時，才會使用。 *futureonly_flag* 是 **Varchar (15)** ，預設值是 Null。 當這個參數設定為 **futureonly** 時，該資料類型的現有資料行就無法繼承新的預設值。 當預設值繫結到資料行時，永遠不會使用這個參數。 如果 *futureonly_flag* 為 Null，則新的預設值會系結至目前沒有預設值或使用別名資料類型之現有預設值的任何別名資料類型資料行。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -82,7 +82,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. 將預設值繫結到別名資料類型  
- 名稱為 `def_ssn` 的預設值和名稱為 `ssn` 的別名資料類型已經存在。 下列範例會將 `def_ssn` 預設值繫結到 `ssn`。 當建立資料表時，所有指派了別名資料類型 `ssn` 的資料行都會繼承預設值。 除非針對*futureonly_flag*值指定**futureonly** ，或是資料行的預設系結直接系結，否則**ssn**類型的現有資料行也會繼承預設**def_ssn**。 繫結到資料行的預設值，一律優先於繫結到資料類型的預設值。  
+ 名稱為 `def_ssn` 的預設值和名稱為 `ssn` 的別名資料類型已經存在。 下列範例會將 `def_ssn` 預設值繫結到 `ssn`。 當建立資料表時，所有指派了別名資料類型 `ssn` 的資料行都會繼承預設值。 除非針對 *futureonly_flag* 值指定 **futureonly** ，或是資料行的預設系結直接系結，否則 **ssn** 類型的現有資料行也會繼承預設 **def_ssn**。 繫結到資料行的預設值，一律優先於繫結到資料類型的預設值。  
   
 ```  
 USE master;  
@@ -100,7 +100,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 使用分隔識別碼  
- 下列範例示範如何 `[t.1]` 在 *object_name*中使用分隔識別碼。  
+ 下列範例示範如何 `[t.1]` 在 *object_name* 中使用分隔識別碼。  
   
 ```  
 USE master;  

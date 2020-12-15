@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_exec_input_buffer (Transact-sql) '
-title: sys. dm_exec_input_buffer (Transact-sql) |Microsoft Docs
+description: 'sys.dm_exec_input_buffer (Transact-sql) '
+title: sys.dm_exec_input_buffer (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477259"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-sql) 
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-sql) 
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -42,13 +42,13 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="arguments"></a>引數
 
-*session_id* 這是執行要查閱之批次的會話識別碼。 *session_id* 為 **Smallint**。 您可以從下列動態管理物件中取得*session_id* ：
+*session_id* 這是執行要查閱之批次的會話識別碼。 *session_id* 為 **Smallint**。 您可以從下列動態管理物件中取得 *session_id* ：
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id*[Sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的 request_id。 *request_id* 為 **int**。
+*request_id*[Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)的 request_id。 *request_id* 為 **int**。
 
 ## <a name="table-returned"></a>傳回的資料表
 
@@ -72,7 +72,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="remarks"></a>備註
 
-這個動態管理函數可以搭配 sys. dm_exec_sessions 或 sys. dm_exec_requests，方法是執行 **CROSS APPLY**。
+這項動態管理函式可搭配 sys.dm_exec_sessions 或 sys.dm_exec_requests，藉由執行 **CROSS APPLY** 來使用。
 
 ## <a name="examples"></a>範例
 

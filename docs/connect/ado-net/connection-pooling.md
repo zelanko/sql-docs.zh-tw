@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126420"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761496"
 ---
 # <a name="connection-pooling"></a>連線共用
 
@@ -27,8 +27,10 @@ ms.locfileid: "96126420"
 
 ## <a name="in-this-section"></a>本節內容  
 
-[SQL Server 連接共用 (ADO.NET)](sql-server-connection-pooling.md) 提供連接共用的概觀，並描述連接共用如何在 SQL Server 中運作。
+[SQL Server 連接共用 (ADO.NET)](sql-server-connection-pooling.md)  
+提供連接共用的概觀並描述連接共用如何在 SQL Server 中運作。
 
 ## <a name="see-also"></a>另請參閱
 
 - [在 ADO.NET 中傳送和修改資料](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

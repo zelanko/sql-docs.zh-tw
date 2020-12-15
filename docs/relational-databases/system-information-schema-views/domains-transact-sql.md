@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c7237d75abfcc67dc1045896cd095cea4f78123
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1621d12ef0382f4df071d41a8bc3f84b447c8b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753592"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482449"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,23 +36,23 @@ ms.locfileid: "91753592"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**Nvarchar (** 128 **) **|別名資料類型所在的資料庫。|  
-|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **) **|包含別名資料類型之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷資料類型的架構。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
+|**DOMAIN_CATALOG**|**Nvarchar (** 128 **)**|別名資料類型所在的資料庫。|  
+|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **)**|包含別名資料類型之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷資料類型的架構。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
 |**DOMAIN_NAME**|**sysname**|別名資料類型。|  
 |**DATA_TYPE**|**sysname**|系統提供的資料類型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。<br /><br /> -1 適用于 **xml** 和大數數值型別的資料。 否則，就傳回 NULL。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。<br /><br /> -1 適用于 **xml** 和大數數值型別的資料。 否則，就傳回 NULL。|  
-|**COLLATION_CATALOG**|**Varchar (** 6 **) **|一律傳回 NULL。|  
-|**COLLATION_SCHEMA**|**Varchar (** 3 **) **|一律傳回 NULL。|  
-|**COLLATION_NAME**|**Nvarchar (** 128 **) **|如果資料行是字元資料或 **文字** 資料類型，則傳回排序次序的唯一名稱。 否則，就傳回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**Varchar (** 6 **) **|傳回 **master**。 如果資料行是字元資料或 **文字** 資料類型，這會指出字元集所在的資料庫。 否則，就傳回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**Varchar (** 3 **) **|一律傳回 NULL。|  
-|**CHARACTER_SET_NAME**|**Nvarchar (** 128 **) **|如果此資料行是字元資料或 **文字** 資料類型，則傳回字元集的唯一名稱。 否則，就傳回 NULL。|  
+|**COLLATION_CATALOG**|**Varchar (** 6 **)**|一律傳回 NULL。|  
+|**COLLATION_SCHEMA**|**Varchar (** 3 **)**|一律傳回 NULL。|  
+|**COLLATION_NAME**|**Nvarchar (** 128 **)**|如果資料行是字元資料或 **文字** 資料類型，則傳回排序次序的唯一名稱。 否則，就傳回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**Varchar (** 6 **)**|傳回 **master**。 如果資料行是字元資料或 **文字** 資料類型，這會指出字元集所在的資料庫。 否則，就傳回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**Varchar (** 3 **)**|一律傳回 NULL。|  
+|**CHARACTER_SET_NAME**|**Nvarchar (** 128 **)**|如果此資料行是字元資料或 **文字** 資料類型，則傳回字元集的唯一名稱。 否則，就傳回 NULL。|  
 |**NUMERIC_PRECISION**|**tinyint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，就傳回 NULL。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，就傳回 NULL。|  
 |**NUMERIC_SCALE**|**tinyint**|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，就傳回 NULL。|  
-|**DATETIME_PRECISION**|**smallint**|**Datetime**和 ISO **interval**資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
-|**DOMAIN_DEFAULT**|**Nvarchar (** 4000 **) **|定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的實際文字。|  
+|**DATETIME_PRECISION**|**smallint**|**Datetime** 和 ISO **interval** 資料類型的子類型代碼。 其他資料類型的這個資料行都會傳回 NULL。|  
+|**DOMAIN_DEFAULT**|**Nvarchar (** 4000 **)**|定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的實際文字。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   

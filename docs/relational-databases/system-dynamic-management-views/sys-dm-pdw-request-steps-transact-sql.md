@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1d2672b9539770dd257b3db1bbce7af9c8a96c4e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035231"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482505"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92035231"
 |distribution_type|**nvarchar(32)**|此步驟將會進行的散發類型。|' >allnodes '、' AllDistributions '、' AllComputeNodes '、' ComputeNode '、' 散發 '、' SubsetNodes '、' SubsetDistributions '、' 未指定 '|  
 |location_type|**nvarchar(32)**|步驟執行所在的位置。|「計算」、「控制」、「DMS」|  
 |status|**nvarchar(32)**|此步驟的狀態。|暫止、執行中、完成、失敗、UndoFailed、PendingCancel、取消、復原、已中止|  
-|error_id|**Nvarchar (36) **|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱 [sys.dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)的 error_id。 如果未發生任何錯誤，則為 Null。|  
+|error_id|**Nvarchar (36)**|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）。|請參閱 [sys.dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)的 error_id。 如果未發生任何錯誤，則為 Null。|  
 |start_time|**datetime**|步驟開始執行的時間。|小於或等於目前的時間，而且大於或等於這個步驟所屬查詢的 end_compile_time。 如需查詢的詳細資訊，請參閱 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |end_time|**datetime**|此步驟完成執行、已取消或失敗的時間。|小於或等於目前時間，大於或等於 start_time。 針對目前執行中或已排入佇列的步驟，將設定為 Null。|  
 |total_elapsed_time|**int**|查詢步驟執行的總時間量（以毫秒為單位）。|介於0和 end_time 與 start_time 之間的差異。 0表示已排入佇列的步驟。<br /><br /> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 將會繼續成為最大值。 這種狀況會產生「已超過最大值」的警告。<br /><br /> 以毫秒為單位的最大值相當於24.8 天。|  

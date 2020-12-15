@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bb73d0374426e3210da14bdb38c5e34cbbcf357
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2fa0f779726303ac30cfd235394bf7c8f5d09c44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005635"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479039"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "92005635"
 |**plan_group_id**|**bigint**|方案群組的識別碼。 資料指標查詢通常需要多個 (填入和提取) 計畫。 填入和提取一起編譯的計畫會在相同的群組中。<br /><br /> 0表示方案不在群組中。|  
 |**engine_version**|**nvarchar(32)**|用來以 **' 主要.** ........................。|  
 |**compatibility_level**|**smallint**|查詢中所參考資料庫的資料庫相容性層級。|  
-|**query_plan_hash**|**二元 (8) **|個別計畫的 MD5 雜湊。|  
+|**query_plan_hash**|**二元 (8)**|個別計畫的 MD5 雜湊。|  
 |**query_plan**|**nvarchar(max)**|查詢計劃的執行程式表 XML。|  
 |**is_online_index_plan**|**bit**|在線上索引建立期間使用了方案。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**is_trivial_plan**|**bit**|計畫是查詢最佳化工具) 第0階段的簡單計畫 (輸出。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**is_parallel_plan**|**bit**|計畫為平行。 <br/>**注意：** Azure Synapse Analytics 一律會傳回一個 (1) 。|  
-|**is_forced_plan**|**bit**|當使用者執行預存程式 **sys.sp_query_store_force_plan**時，計畫會標示為強制。 強制機制 *無法保證* **query_id**所參考的查詢都將使用此計畫。 強制執行計畫會重新編譯查詢，而且通常會對 **plan_id**所參考的計畫產生完全相同或類似的計畫。 如果強制執行計畫失敗， **force_failure_count** 會遞增，而 **last_force_failure_reason** 會填入失敗原因。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
+|**is_forced_plan**|**bit**|當使用者執行預存程式 **sys.sp_query_store_force_plan** 時，計畫會標示為強制。 強制機制 *無法保證* **query_id** 所參考的查詢都將使用此計畫。 強制執行計畫會重新編譯查詢，而且通常會對 **plan_id** 所參考的計畫產生完全相同或類似的計畫。 如果強制執行計畫失敗， **force_failure_count** 會遞增，而 **last_force_failure_reason** 會填入失敗原因。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**is_natively_compiled**|**bit**|方案包含原生編譯的記憶體優化程式。  (0 = FALSE，1 = TRUE) 。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
-|**force_failure_count**|**bigint**|強制執行此計畫的次數已失敗。 它只有在重新編譯查詢時才會遞增 (*不會在每次執行*) 。 每次 **is_plan_forced** 從 **FALSE** 變更為 **TRUE**時，它就會重設為0。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
+|**force_failure_count**|**bigint**|強制執行此計畫的次數已失敗。 它只有在重新編譯查詢時才會遞增 (*不會在每次執行*) 。 每次 **is_plan_forced** 從 **FALSE** 變更為 **TRUE** 時，它就會重設為0。 <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**last_force_failure_reason**|**int**|強制執行計畫失敗的原因。<br /><br /> 0：沒有失敗，否則造成強制失敗的錯誤錯誤號碼<br /><br /> 8637： ONLINE_INDEX_BUILD<br /><br /> 8683： INVALID_STARJOIN<br /><br /> 8684： TIME_OUT<br /><br /> 8689： NO_DB<br /><br /> 8690： HINT_CONFLICT<br /><br /> 8691： SETOPT_CONFLICT<br /><br /> 8694： DQ_NO_FORCING_SUPPORTED<br /><br /> 8698： NO_PLAN<br /><br /> 8712： NO_INDEX<br /><br /> 8713： VIEW_COMPILE_FAILED<br /><br /> \<other value>： GENERAL_FAILURE <br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文字描述。<br /><br /> ONLINE_INDEX_BUILD：查詢嘗試修改資料，而目標資料表具有正在線上建立的索引<br /><br /> INVALID_STARJOIN：方案包含不正確 StarJoin 規格<br /><br /> TIME_OUT：在搜尋強制計畫所指定的計畫時，優化工具超過允許的作業數目<br /><br /> NO_DB：方案中指定的資料庫不存在<br /><br /> HINT_CONFLICT：無法編譯查詢，因為計畫與查詢提示衝突<br /><br /> DQ_NO_FORCING_SUPPORTED：無法執行查詢，因為計畫與分散式查詢或全文檢索作業的使用發生衝突。<br /><br /> NO_PLAN：查詢處理器無法產生查詢計劃，因為無法驗證強制計畫是否適用于查詢<br /><br /> NO_INDEX：在方案中指定的索引已不存在<br /><br /> VIEW_COMPILE_FAILED：無法強制執行查詢計劃，因為計畫中參考的索引視圖有問題<br /><br /> GENERAL_FAILURE：未涵蓋上述原因的一般強制錯誤 ()  <br/>**注意：** Azure Synapse Analytics 一律會傳回 *NONE*。|  
 |**count_compiles**|**bigint**|規劃編譯統計資料。|  

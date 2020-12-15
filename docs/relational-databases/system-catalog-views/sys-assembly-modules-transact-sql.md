@@ -1,6 +1,6 @@
 ---
 description: sys.assembly_modules (Transact-SQL)
-title: sys. assembly_modules (Transact-sql) |Microsoft Docs
+title: sys.assembly_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33599443948e52ca21eba59afd86eb6a67c58fae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 333aa642ee0d644377e8f3d665f793bedf810b3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479079"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  針對由 Common Language Runtime (CLR) 組件定義的每個函數、程序或觸發程序，各傳回一個資料列。 這個目錄檢視會將 CLR 預存程序、CLR 觸發程序或 CLR 函數對應至它們的基本實作。 TA、AF、PC、FS 和 FT 類型的物件，各有相關聯的組件模組。 若要找出物件與組件之間的關聯，可以將這個目錄檢視合併到其他目錄檢視。 例如，當您建立 CLR 預存程式時，它會以 **sys. objects**中的一個資料清單示、 **sys. 程式** 中的一個資料列， (繼承自 **sys.databases**) ，以及 **sys. assembly_modules**中的一個資料列。 預存程式本身是以 **sys. objects** 和 **sys. 程式**中的中繼資料來表示。 在 **sys. assembly_modules**中，可以找到程式基礎 CLR 實作為的參考。  
+  針對由 Common Language Runtime (CLR) 組件定義的每個函數、程序或觸發程序，各傳回一個資料列。 這個目錄檢視會將 CLR 預存程序、CLR 觸發程序或 CLR 函數對應至它們的基本實作。 TA、AF、PC、FS 和 FT 類型的物件，各有相關聯的組件模組。 若要找出物件與組件之間的關聯，可以將這個目錄檢視合併到其他目錄檢視。 例如，當您建立 CLR 預存程式時，它會以 **sys. objects** 中的一個資料清單示、 **sys. 程式** 中的一個資料列， (繼承自 **sys.databases**) ，以及 **sys.assembly_modules** 中的一個資料列。 預存程式本身是以 **sys. objects** 和 **sys. 程式** 中的中繼資料來表示。 在 **sys.assembly_modules** 中，可以找到程式基礎 CLR 執行的參考。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "89551523"
 |**assembly_class**|**sysname**|定義這個模組之組件內的類別名稱。|  
 |**assembly_method**|**sysname**|定義此模組的 **assembly_class** 內的方法名稱。<br /><br /> 如果是彙總函式 (AF)，則為 NULL。|  
 |**null_on_null_input**|**bit**|模組宣告的目的不是為了因應任何 NULL 輸入而產生 NULL 輸出。|  
-|**execute_as_principal_id**|**int**|執行內容所用的資料庫主體識別碼，由 CLR 函數、預存程序或觸發程序的 EXECUTE AS 子句所指定。<br /><br /> NULL = EXECUTE AS CALLER。 此為預設值。<br /><br /> 指定之資料庫主體的識別碼 = EXECUTE AS SELF、EXECUTE AS *user_name*或 execute as *login_name*。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|執行內容所用的資料庫主體識別碼，由 CLR 函數、預存程序或觸發程序的 EXECUTE AS 子句所指定。<br /><br /> NULL = EXECUTE AS CALLER。 此為預設值。<br /><br /> 指定之資料庫主體的識別碼 = EXECUTE AS SELF、EXECUTE AS *user_name* 或 execute as *login_name*。<br /><br /> -2 = EXECUTE AS OWNER。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

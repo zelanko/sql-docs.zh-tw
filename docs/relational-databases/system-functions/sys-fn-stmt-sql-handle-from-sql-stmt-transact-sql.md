@@ -1,6 +1,6 @@
 ---
 description: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-title: sys. fn_stmt_sql_handle_from_sql_stmt (Transact-sql) |Microsoft Docs
+title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5008d433757351e6d4be65d6db9c3ba8e0deb10f
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a46c5b4d9fa9f5bdf5db52e9ee2c0610ef7ba2a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646498"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482460"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  取得指定**stmt_sql_handle**之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參數型別 (simple 或強制) 之語句的 stmt_sql_handle。 如此一來，當您知道查詢中的文字時，就可以使用它們的 **stmt_sql_handle** 來參考儲存在查詢存放區中的查詢。  
+  取得指定之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參數型別 (simple 或強制) 之語句的 stmt_sql_handle。 如此一來，當您知道查詢中的文字時，就可以使用它們的 **stmt_sql_handle** 來參考儲存在查詢存放區中的查詢。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引數  
  *query_sql_text*  
- 這是您想要其控制碼之查詢存放區中的查詢文字。 *query_sql_text* 是 **Nvarchar (max) **，沒有預設值。  
+ 這是您想要其控制碼之查詢存放區中的查詢文字。 *query_sql_text* 是 **Nvarchar (max)**，沒有預設值。  
   
  *query_param_type*  
  這是查詢的參數類型。 *query_param_type* 是 **Tinyint**。 可能的值包括：  
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3-強制  
   
 ## <a name="columns-returned"></a>傳回的資料行  
- 下表列出 sys. fn_stmt_sql_handle_from_sql_stmt 傳回的資料行。  
+ 下表列出 sys.fn_stmt_sql_handle_from_sql_stmt 傳回的資料行。  
   
 |資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  

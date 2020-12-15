@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: de46fc1078b4a8a7d3898fbb034aa147cec157e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: f89d6ce4c8a385906856dde4c71e97d8a6e24ad2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035371"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482580"
 ---
 # <a name="sysdm_pdw_errors-transact-sql"></a>sys.dm_pdw_errors (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "92035371"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**Nvarchar (36) **|此視圖的索引鍵。<br /><br /> 與錯誤相關聯的唯一數值識別碼。|在系統的所有查詢錯誤中都是唯一的。|  
-|source|**Nvarchar (64) **|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|type|**nvarchar(4000)**|發生的錯誤類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|error_id|**Nvarchar (36)**|此視圖的索引鍵。<br /><br /> 與錯誤相關聯的唯一數值識別碼。|在系統的所有查詢錯誤中都是唯一的。|  
+|source|**Nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|類型|**nvarchar(4000)**|發生的錯誤類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|發生錯誤的時間。|小於或等於目前時間。|  
 |pwd_node_id|**int**|相關特定節點的識別碼（如果有的話）。 如需節點識別碼的詳細資訊，請參閱 [sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。||  
 |session_id|**nvarchar(32)**|相關會話的識別碼（如果有的話）。 如需會話識別碼的詳細資訊，請參閱  [sys.dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
