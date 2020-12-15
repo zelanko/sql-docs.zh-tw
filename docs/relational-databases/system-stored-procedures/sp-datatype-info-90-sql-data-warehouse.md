@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 8a859571ef9f4682c4c8556038247dc21d47eb50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474609"
 ---
 # <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -52,12 +52,12 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
-|LITERAL_PREFIX|**Varchar (** 32 **) **|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
-|LITERAL_SUFFIX|**Varchar (** 32 **) **|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而不是二進位引號。|  
-|CREATE_PARAMS|**Varchar (** 32 **) **|這個資料類型之建立參數的描述。 例如， **decimal** 為 "precision，scale"， **float** 為 Null，且 **Varchar** 為 "max_length"。|  
+|LITERAL_PREFIX|**Varchar (** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
+|LITERAL_SUFFIX|**Varchar (** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而不是二進位引號。|  
+|CREATE_PARAMS|**Varchar (** 32 **)**|這個資料類型之建立參數的描述。 例如， **decimal** 為 "precision，scale"， **float** 為 Null，且 **Varchar** 為 "max_length"。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  
-|SEARCHABLE|**smallint**|指定資料行類型的搜尋功能：<br /><br /> 1 = 無法搜尋。<br /><br /> 2 = 可使用 LIKE 搜尋。<br /><br /> 3 = 可使用 WHERE 搜尋。<br /><br /> 4 = 可使用 WHERE 或 LIKE 搜尋。|  
+|可搜尋|**smallint**|指定資料行類型的搜尋功能：<br /><br /> 1 = 無法搜尋。<br /><br /> 2 = 可使用 LIKE 搜尋。<br /><br /> 3 = 可使用 WHERE 搜尋。<br /><br /> 4 = 可使用 WHERE 或 LIKE 搜尋。|  
 |UNSIGNED_ATTRIBUTE|**smallint**|指定資料類型的正負號。<br /><br /> 1 = 資料類型不帶正負號。<br /><br /> 0 = 資料類型帶正負號。|  
 |MONEY|**smallint**|指定 **money** 資料類型。<br /><br /> 1 = **money** 資料類型。<br /><br /> 0 = 不是 **money** 資料類型。|  
 |AUTO_INCREMENT|**smallint**|指定自動累加。<br /><br /> 1 = 自動累加。<br /><br /> 0 = 不自動累加。<br /><br /> NULL = 屬性不適用。<br /><br /> 應用程式可以將值插入包含這個屬性的資料行中，但應用程式不能更新這個資料行中的值。 除了 **bit** 資料類型之外，AUTO_INCREMENT 僅適用于屬於精確數值和近似數值資料類型類別目錄的資料類型。|  
@@ -65,10 +65,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |MINIMUM_SCALE|**smallint**|資料來源的資料類型最小小數位數。 如果資料類型有固定的小數位數，MINIMUM_SCALE 和 MAXIMUM_SCALE 資料行都包含這個值。 當小數位數不適用時，會傳回 NULL。|  
 |MAXIMUM_SCALE|**smallint**|資料來源的資料類型最大小數位數。 如果未在資料來源上個別定義最大小數位數，而是定義成與最大有效位數相同，這個資料行會包含與 PRECISION 資料行相同的值。|  
 |SQL_DATA_TYPE|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 除了 **datetime** 和 ANSI **interval** 資料類型以外，這個資料行與 DATA_TYPE 資料行相同。 這個欄位一律會傳回值。|  
-|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值是 SQL_DATETIME 或 SQL_INTERVAL，則為**日期時間**或 ANSI**間隔**子代碼。 若為 **datetime** 和 ANSI **間隔**以外的資料類型，此欄位為 Null。|  
+|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值是 SQL_DATETIME 或 SQL_INTERVAL，則為 **日期時間** 或 ANSI **間隔** 子代碼。 若為 **datetime** 和 ANSI **間隔** 以外的資料類型，此欄位為 Null。|  
 |NUM_PREC_RADIX|**int**|用來計算資料行所能保留的最大數字之位元或位數數目。 如果資料類型是近似數值資料類型，這個資料行會包含 2 這個值來表示多個位元。 如果是精確數值類型，這個資料行會包含 10 這個值來表示多個十進位數。 否則，這個資料行就是 NULL。 藉由組合有效位數和基數，應用程式可以計算資料行所能保留的最大數目。|  
 |INTERVAL_PRECISION|**smallint**|如果 *data_type* 為 **間隔**，則為間隔前置精確度的值;否則為 Null。|  
-|USERTYPE|**smallint**|從 systypes 資料表**usertype**值。|  
+|USERTYPE|**smallint**|從 systypes 資料表 **usertype** 值。|  
   
 ## <a name="remarks"></a>備註  
  sp_datatype_info 相當於 ODBC 中的 SQLGetTypeInfo。 傳回的結果是依 DATA_TYPE 排序，之後，再依資料類型與對應的 ODBC SQL 資料類型的對應緊密程度來排序。  
@@ -77,7 +77,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  需要 public 角色中的成員資格。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會藉由指定的*data_type*值，來取得**sysname**和**Nvarchar**資料類型的資訊 `-9` 。  
+ 下列範例會藉由指定的 *data_type* 值，來取得 **sysname** 和 **Nvarchar** 資料類型的資訊 `-9` 。  
   
 ```sql  
 USE master;  

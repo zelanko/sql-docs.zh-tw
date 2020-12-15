@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d35829670cee1b9890488b8cda8543a1eaef9a5a
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58b7d89f41135843bae357a7be3db5d6c5c65509
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753671"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474779"
 ---
 # <a name="check_constraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "91753671"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **) **|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **) **|條件約束所屬的結構描述名稱。<br /><br /> &#42;&#42; 重要 &#42;&#42; 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|條件約束限定詞。|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|條件約束所屬的結構描述名稱。<br /><br /> &#42;&#42; 重要 &#42;&#42; 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|條件約束名稱。|  
-|**CHECK_CLAUSE**|**Nvarchar (** 4000 **) **|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義陳述式的實際內文。|  
+|**CHECK_CLAUSE**|**Nvarchar (** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義陳述式的實際內文。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   

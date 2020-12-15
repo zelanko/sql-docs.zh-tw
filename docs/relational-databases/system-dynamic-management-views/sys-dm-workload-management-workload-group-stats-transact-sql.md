@@ -11,13 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 89daf919af43c130c23477596e34d6a19654fd12
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035175"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474759"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "92035175"
 |total_request_execution_timeouts|**bigint**|在工作負載群組中，根據 query_execution_timeout_sec 設定在完成前完成的要求累計計數。||
 |effective_min_percentage_resource|**tinyint**|有效的 min_percentage_resource 設定，可考慮服務層級和工作負載群組設定。 有效的 min_percentage_resource 可以在較低的服務層級上調整。  例如，在 DW100c 上，允許的最低 min_percentage_resource 為25%。  如果無法在服務層級授與值，min_percentage_resource 會調整為0%。  例如 min_percentage_resource，在 DW6000c 設定為10% 時，在相應縮小為 DW100c 時，會有0% 的 effective_min_percentage_resource。||
 |effective_cap_percentage_resource|**tinyint**|工作負載群組的有效 cap_percentage_resource。  如果有其他工作負載群組的 min_percentage_resource > 0，則會按比例減少 effective_cap_percentage_resource。||
-|effective_request_min_resource_grant_percent|**decimal (5，2) **|工作負載群組 request_min_resource_grant_percent 的有效運行時間值。 考慮服務層級的有效值，以及工作負載群組的設定方式。  如果因為服務層級而調整 min_percentage_resource，effective_request_min_resource_grant_percent 會據以調整。||
-|effective_request_max_resource_grant_percent|**decimal (5，2) **|工作負載群組 request_max_resource_grant_percent 的有效運行時間值（考慮所有工作負載群組的設定）。||
+|effective_request_min_resource_grant_percent|**decimal (5，2)**|工作負載群組 request_min_resource_grant_percent 的有效運行時間值。 考慮服務層級的有效值，以及工作負載群組的設定方式。  如果因為服務層級而調整 min_percentage_resource，effective_request_min_resource_grant_percent 會據以調整。||
+|effective_request_max_resource_grant_percent|**decimal (5，2)**|工作負載群組 request_max_resource_grant_percent 的有效運行時間值（考慮所有工作負載群組的設定）。||
 |||||
 
 ## <a name="see-also"></a>另請參閱

@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73bdc833b31251e3cf0747aca19371ad2b0cb839
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810594"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473769"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLColumns** 會傳回值，SQL_SUCCESS *CatalogName*、 *TableName*或 *ColumnName* 參數的值是否存在。 當這些參數中使用無效值時， **SQLFetch**會傳回 SQL_NO_DATA。  
+  **SQLColumns** 會傳回值，SQL_SUCCESS *CatalogName*、 *TableName* 或 *ColumnName* 參數的值是否存在。 當這些參數中使用無效值時， **SQLFetch** 會傳回 SQL_NO_DATA。  
   
 > [!NOTE]  
 >  若是大數值類型，將會傳回包含 SQL_SS_LENGTH_UNLIMITED 值的所有長度參數。  
   
  **SQLColumns** 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 **SQLColumns** 時，將會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
   
- > Native Client ODBC 驅動程式會藉由接受*CatalogName*參數的兩部分名稱，來支援連結伺服器上資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
+ > Native Client ODBC 驅動程式會藉由接受 *CatalogName* 參數的兩部分名稱，來支援連結伺服器上資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
   
- 適用于 ODBC 2。*x* 應用程式不在 *TableName*中使用萬用字元， **SQLColumns** 會傳回其名稱符合 *TableName* 且由目前使用者所擁有之任何資料表的相關資訊。 如果目前使用者沒有任何資料表的名稱符合 *tablename* 參數， **SQLColumns** 會傳回其他使用者所擁有之資料表的相關資訊，其中資料表名稱符合 *tablename* 參數。 適用于 ODBC 2。使用萬用字元的*x* 應用程式， **SQLColumns** 會傳回其名稱符合 *TableName*的所有資料表。 適用于 ODBC 3。*x* 應用程式 **SQLColumns** 會傳回其名稱符合 *TableName* 的所有資料表（不論擁有者或是否使用萬用字元）。  
+ 適用于 ODBC 2。*x* 應用程式不在 *TableName* 中使用萬用字元， **SQLColumns** 會傳回其名稱符合 *TableName* 且由目前使用者所擁有之任何資料表的相關資訊。 如果目前使用者沒有任何資料表的名稱符合 *tablename* 參數， **SQLColumns** 會傳回其他使用者所擁有之資料表的相關資訊，其中資料表名稱符合 *tablename* 參數。 適用于 ODBC 2。使用萬用字元的 *x* 應用程式， **SQLColumns** 會傳回其名稱符合 *TableName* 的所有資料表。 適用于 ODBC 3。*x* 應用程式 **SQLColumns** 會傳回其名稱符合 *TableName* 的所有資料表（不論擁有者或是否使用萬用字元）。  
   
  下表列出結果集傳回的資料行：  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
-|DATA_TYPE|傳回 **VARCHAR (max) ** 資料類型的 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
-|TYPE_NAME|傳回 "Varchar"、"Varbinary" 或 "Nvarchar" （適用于 **Varchar (max) **、 **Varbinary (max) **和 **Nvarchar (max) ** 資料類型。|  
-|COLUMN_SIZE|傳回 **Varchar (max) ** 資料類型的 SQL_SS_LENGTH_UNLIMITED，表示資料行的大小不受限制。|  
-|BUFFER_LENGTH|傳回 **Varchar (max) ** 資料類型的 SQL_SS_LENGTH_UNLIMITED，表示緩衝區的大小不受限制。|  
-|SQL_DATA_TYPE|傳回 **VARCHAR (max) ** 資料類型的 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
+|DATA_TYPE|傳回 **VARCHAR (max)** 資料類型的 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
+|TYPE_NAME|傳回 "Varchar"、"Varbinary" 或 "Nvarchar" （適用于 **Varchar (max)**、 **Varbinary (max)** 和 **Nvarchar (max)** 資料類型。|  
+|COLUMN_SIZE|傳回 **Varchar (max)** 資料類型的 SQL_SS_LENGTH_UNLIMITED，表示資料行的大小不受限制。|  
+|BUFFER_LENGTH|傳回 **Varchar (max)** 資料類型的 SQL_SS_LENGTH_UNLIMITED，表示緩衝區的大小不受限制。|  
+|SQL_DATA_TYPE|傳回 **VARCHAR (max)** 資料類型的 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
 |CHAR_OCTET_LENGTH|傳回 char 或 binary 資料行的最大長度。 傳回 0 表示大小不受限制。|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|傳回定義 XML 結構描述集合名稱所在目錄的名稱。 如果找不到目錄名稱，則此變數包含空字串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|傳回定義 XML 結構描述集合名稱所在結構描述的名稱。 如果找不到結構描述名稱，則此變數包含空字串。|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810594"
  如需詳細資訊，請參閱 [&#40;ODBC&#41;的日期和時間改進 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLColumns 支援  
- **SQLColumns** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR 使用者自訂類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColumns** 支援)  (udt 的大型 CLR 使用者自訂類型。 如需詳細資訊，請參閱 [&#40;ODBC&#41;的大型 CLR User-Defined 類型 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>疏鬆資料行的 SQLColumns 支援  
  已將兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定資料行新增至 SQLColumns 的結果集：  

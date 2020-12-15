@@ -17,13 +17,13 @@ ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e6a14687e8210133e2a80c0f678aebe7c9b31194
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: f4597a05c6f1376a39d98894d6e510b7928a450d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474659"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a> (Azure SQL Database 的防火牆規則預存程式) 
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]

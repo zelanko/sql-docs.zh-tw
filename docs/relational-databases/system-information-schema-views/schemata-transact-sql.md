@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b060b0d22b3fa4eb5557b6903164974874f5d30
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 847e046c89a11ec8d26db47d33f6f605c24cef28
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474709"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "91753927"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|目前資料庫的名稱|  
-|**SCHEMA_NAME**|**Nvarchar (** 128 **) **|傳回結構描述的名稱。|  
-|**SCHEMA_OWNER**|**Nvarchar (** 128 **) **|結構描述擁有者名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
-|**DEFAULT_CHARACTER_SET_CATALOG**|**Varchar (** 6 **) **|一律傳回 NULL。|  
-|**DEFAULT_CHARACTER_SET_SCHEMA**|**Varchar (** 3 **) **|一律傳回 NULL。|  
+|**SCHEMA_NAME**|**Nvarchar (** 128 **)**|傳回結構描述的名稱。|  
+|**SCHEMA_OWNER**|**Nvarchar (** 128 **)**|結構描述擁有者名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 請勿使用 INFORMATION_SCHEMA views 來判斷物件的架構。 INFORMATION_SCHEMA views 只代表物件的中繼資料子集。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**DEFAULT_CHARACTER_SET_CATALOG**|**Varchar (** 6 **)**|一律傳回 NULL。|  
+|**DEFAULT_CHARACTER_SET_SCHEMA**|**Varchar (** 3 **)**|一律傳回 NULL。|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|傳回預設字元集的名稱。|  
 
 **範例**  

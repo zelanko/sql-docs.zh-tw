@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e6cf5401a48623df1a5b0c2338cf9d1c7287231
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 520452d4886d009777de62af55047ef3cd47caaf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833792"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474959"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   包含上次重新啟動資料庫之後收集的統計資料。  
   
- 如需詳細資訊，請參閱記憶體內部 [OLTP &#40;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 記憶體優化的&#41;以及在 [記憶體優化資料表上使用索引的指導方針](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130))。  
+ 如需詳細資訊，請參閱 [記憶體內部 OLTP &#40;In-Memory 優化&#41;以及在 ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) [Memory-Optimized 資料表上使用索引的指導方針](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130))。  
 
   
 |資料行名稱|資料類型|描述|  
