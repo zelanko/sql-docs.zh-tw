@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955859"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427341"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -67,7 +67,7 @@ RECONFIGURE
   
 `[ @configvalue = ] 'value'` 是新的設定。 *value* 是 **int**，預設值是 NULL。 最大值會隨著個別選項而不同。  
   
- 若要查看每個選項的最大值，請參閱**sys.configurations**目錄檢視的 [**最大**值] 資料行。  
+ 若要查看每個選項的最大值，請參閱 **sys.configurations** 目錄檢視的 [**最大** 值] 資料行。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -75,14 +75,14 @@ RECONFIGURE
 ## <a name="result-sets"></a>結果集  
  如果執行時沒有參數， **sp_configure** 會傳回含有五個數據行的結果集，並以遞增順序排序選項，如下表所示。  
   
- **Config_value**和**run_value**的值不會自動相等。 使用 **sp_configure**更新設定設定之後，系統管理員必須使用 [重新設定] 或 [重新設定為覆寫] 來更新執行中的設定值。 如需詳細資訊，請參閱＜備註＞一節。  
+ **Config_value** 和 **run_value** 的值不會自動相等。 使用 **sp_configure** 更新設定設定之後，系統管理員必須使用 [重新設定] 或 [重新設定為覆寫] 來更新執行中的設定值。 如需詳細資訊，請參閱＜備註＞一節。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
 |**minimum**|**int**|組態選項的最小值。|  
 |**maximum**|**int**|組態選項的最大值。|  
-|**config_value**|**int**|設定選項的設定值，這個值會在**sys.configurations**中使用**sp_configure** (值) 。 如需這些選項的詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 和 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**config_value**|**int**|設定選項的設定值，這個值會在 **sys.configurations** 中使用 **sp_configure** (值) 。 如需這些選項的詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 和 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|目前正在執行設定選項的值 (**sys.configurations.value_in_use**) 中的值。<br /><br /> 如需詳細資訊，請參閱 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>備註  
@@ -93,7 +93,7 @@ RECONFIGURE
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="updating-the-running-configuration-value"></a>更新執行中的組態值  
- 當您指定*選項*的新*值*時，結果集會在**config_value**資料行中顯示這個值。 此值一開始與 **run_value** 資料行中的值不同，它會顯示目前正在執行的設定值。 若要更新 **run_value** 資料行中的執行中設定值，系統管理員必須執行 [重新設定] 或 [重新設定為覆寫]。  
+ 當您指定 *選項* 的新 *值* 時，結果集會在 **config_value** 資料行中顯示這個值。 此值一開始與 **run_value** 資料行中的值不同，它會顯示目前正在執行的設定值。 若要更新 **run_value** 資料行中的執行中設定值，系統管理員必須執行 [重新設定] 或 [重新設定為覆寫]。  
   
  RECONFIGURE 和 RECONFIGURE WITH OVERRIDE 都會使用每個組態選項。 不過，基本 RECONFIGURE 陳述式會拒絕在合理範圍之外或可能造成選項衝突的任何選項值。 例如，如果復原 **間隔** 值大於60分鐘或 **親** 和性遮罩值與 **親和性 i/o 遮罩** 值重迭，則重新設定會產生錯誤。 相對地，RECONFIGURE WITH OVERRIDE 會接受任何資料類型正確的選項值，且會強迫利用指定的值來重設組態。  
   
@@ -102,7 +102,7 @@ RECONFIGURE
   
  RECONFIGURE 陳述式會動態更新某些選項；其他選項則需要伺服器停止再重新啟動。 例如，[ **最小伺服器記憶體** ] 和 [ **最大伺服器** 記憶體] 伺服器記憶體選項會在中動態更新， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因此您可以變更它們，而不需要重新開機伺服器。 相反地，重新設定 **填滿因數** 選項的執行值，需要重新開機 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
- 在設定選項上執行重新設定之後，您可以藉由執行 **sp_configure '***option_name***'**，來查看選項是否已動態更新。 在 [ **run_value** ] 和 [ **config_value** ] 資料行中的值應該符合動態更新的選項。 您也可以查看**sys.configurations**類別目錄檢視的 [ **is_dynamic** ] 資料行，以查看哪些選項是動態的。  
+ 在設定選項上執行重新設定之後，您可以藉由執行 **sp_configure '**_option_name_*_'_*，來查看選項是否已動態更新。 在 [ **run_value** ] 和 [ **config_value** ] 資料行中的值應該符合動態更新的選項。 您也可以查看 **sys.configurations** 類別目錄檢視的 [ **is_dynamic** ] 資料行，以查看哪些選項是動態的。  
  
  這項變更也會寫入 SQL Server 錯誤記錄檔中。
   
@@ -161,7 +161,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果會傳回選項名稱，後面接著選項的最小值和最大值。 **Config_value**是重新設定 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 完成時將使用的值。 **run_value** 是目前正在使用的值。 除非正在變更值，否則 **config_value** 和 **run_value** 通常會一樣。  
+ 結果會傳回選項名稱，後面接著選項的最小值和最大值。 **Config_value** 是重新設定 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 完成時將使用的值。 **run_value** 是目前正在使用的值。 除非正在變更值，否則 **config_value** 和 **run_value** 通常會一樣。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 列出某一個組態名稱的組態設定  
   

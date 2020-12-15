@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查詢中指定 XPath 變數（SQLXML）
+title: '在 XPath 查詢中指定 XPath 變數 (SQLXML) '
 description: 查看如何在 SQLXML 4.0 XPath 查詢中指定 XPath 變數的範例。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 624062a1ef50f4610e3b91d2197901219113fe53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bb2dabcffeadafa94626269ac6329c024774f9a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430391"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  下列範例示範如何在 XPath 查詢中傳遞 XPath 變數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例示範如何在 XPath 查詢中傳遞 XPath 變數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱 [XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85733666"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例架構程式碼](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，並將它貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製 [範例架構程式碼](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，並將其貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (XPathVariables.xml)，並將其儲存在目錄中，其中：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85733666"
     mapping-schema="C:\MyDir\SampleSchema1.xml"  
     ```  
   
-3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。 如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。 如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 > [!NOTE]  
 >  在這個範例中，不會傳遞任何參數。 因此，系統會使用預設的參數值。  

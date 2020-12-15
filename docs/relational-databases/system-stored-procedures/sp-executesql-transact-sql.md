@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427857"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>引數  
  [ \@ stmt =] *語句*  
- 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，則前面必須加上 **N**。例如，Unicode 常數 **N ' sp_who '** 有效，但字元常數 **' Sp_who '** 則否。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串的大小限制為 2 GB， **Nvarchar (max) **的大小上限。  
+ 這是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句或批次的 Unicode 字串。 \@stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，則前面必須加上 **N**。例如，Unicode 常數 **N ' sp_who '** 有效，但字元常數 **' Sp_who '** 則否。 字串大小只受到可用資料庫伺服器記憶體的限制。 在64位伺服器上，字串的大小限制為 2 GB， **Nvarchar (max)** 的大小上限。  
   
 > [!NOTE]  
 >  \@stmt 可以包含具有和變數名稱相同形式的參數，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 在 stmt 中包含的每個參數都必須提供參數值 \@ 。如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的語句或批次沒有參數，則不需要這些值 \@ 。  
   
  [ OUT | OUTPUT ]  
- 指出這個參數是輸出參數。 除非程式是 common language runtime (CLR) 程式，否則**text**、 **Ntext**和**image**參數可以當做 OUTPUT 參數使用。 除非此程序是一個 CLR 程序，否則使用 OUTPUT 關鍵字的輸出參數可以是資料指標預留位置。  
+ 指出這個參數是輸出參數。 除非程式是 common language runtime (CLR) 程式，否則 **text**、 **Ntext** 和 **image** 參數可以當做 OUTPUT 參數使用。 除非此程序是一個 CLR 程序，否則使用 OUTPUT 關鍵字的輸出參數可以是資料指標預留位置。  
   
  *n*  
  這是其他參數值的預留位置。 這些值只能是常數或變數。 這些值不能是比較複雜的運算式，如函數或利用運算子來建立的運算式。  

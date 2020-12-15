@@ -1,6 +1,6 @@
 ---
 description: sys.sql_modules (Transact-SQL)
-title: sys. sql_modules (Transact-sql) |Microsoft Docs
+title: sys.sql_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: acf5f7195a3ee997590d9625615038577779fd14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551359"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429341"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  針對中為 SQL 語言定義模組的每個物件，各傳回一個資料列，包括原生編譯的純量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數。 類型 P、RF、V、TR、FN、IF、TF 和 R 的物件，各有一個相關聯的 SQL 模組。 獨立預設值，即類型 D 的物件，在這份檢視中也有 SQL 模組定義。 如需這些類型的描述，請參閱[sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視中的**type**資料行。  
+  針對中為 SQL 語言定義模組的每個物件，各傳回一個資料列，包括原生編譯的純量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數。 類型 P、RF、V、TR、FN、IF、TF 和 R 的物件，各有一個相關聯的 SQL 模組。 獨立預設值，即類型 D 的物件，在這份檢視中也有 SQL 模組定義。 如需這些類型的描述，請參閱 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視中的 **type** 資料行。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "89551359"
 
   
 ## <a name="remarks"></a>備註  
- 預設條件約束（類型 D 的物件）的 SQL 運算式可在 [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) 目錄檢視中找到。 CHECK 條件約束的 SQL 運算式是 C 類型的物件，在 [sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) 目錄檢視中找到。  
+ 預設條件約束（類型 D 的物件）的 SQL 運算式可在 [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) 目錄檢視中找到。 CHECK 條件約束的 SQL 運算式（類型為 C 的物件）可在 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) 類別目錄檢視中找到。  
   
- 這項資訊也會在 [sys. dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)中加以說明。  
+ [Sys.dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)也會說明這項資訊。  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

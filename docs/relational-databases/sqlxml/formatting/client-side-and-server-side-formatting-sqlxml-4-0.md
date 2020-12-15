@@ -1,5 +1,5 @@
 ---
-title: 用戶端和伺服器端格式（SQLXML）
+title: '用戶端和伺服器端的格式設定 (SQLXML) '
 description: 瞭解針對 Microsoft SQL Server 資料庫執行的 SQLXML 4.0 查詢所產生之檔的用戶端和伺服器端 XML 格式。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7daefff6e4b43496acf218c1af3399b56b0b957
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d9cb0ece6c89de0ae8ca4271b78b98e3a5d424c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430706"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>用戶端和伺服器端格式 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "85751758"
   
 -   用戶端格式  
   
- 本節包含在用戶端或伺服器端，從針對資料庫執行之查詢所產生之資料列集的 XML 檔案格式設定資訊 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ 本章節包含在用戶端或伺服器端上，從針對資料庫執行之查詢所產生的資料列集格式化 XML 檔的相關資訊 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [用戶端和伺服器端 XML 格式的架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
  提供架構圖表，並描述 SQLXML 中用戶端和伺服器端格式架構的基本概念。  
   
- [伺服器端 XML 格式 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [伺服器端 XML 格式化 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
  描述伺服器端 XML 格式。  
   
  [用戶端 XML 格式 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  

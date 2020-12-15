@@ -16,23 +16,23 @@ ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d101190cc30aaed21126be336436ff655b5bf1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4557f0e19b3515c7a8a652ba06bde82e6bdd0685
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431380"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   此範例顯示：  
   
--   如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Sqlxml Managed 類別（Microsoft 資料 sqlxml） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 .NET Framework 環境中存取 Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+-   如何使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Sqlxml Managed 類別 (microsoft. SQLXML) ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 .NET Framework 環境中存取 microsoft。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
 -   在 .NET Framework 環境中產生的 DiffGrams 如何將資料更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   
- 在此應用程式中，XPath 查詢會根據 XSD 結構描述執行。 執行 XPath 查詢會傳回由連絡人資料（**FirstName**、 **LastName**）組成的 XML 檔。 應用程式會將 XML 文件載入到 .NET Framework 環境的資料集中。 資料集中的資料已修改：連絡人的名字會變更為 "Susan"，成為資料集中的第一個連絡人。 DiffGram 會從資料集產生，然後會將 DiffGram (員工名字的變更) 中指定的更新套用到 Person.Contact 資料表。  
+ 在此應用程式中，XPath 查詢會根據 XSD 結構描述執行。 XPath 查詢的執行會傳回 XML 檔，其中包含連絡人資料 (**FirstName**、 **LastName**) 。 應用程式會將 XML 文件載入到 .NET Framework 環境的資料集中。 資料集中的資料已修改：連絡人的名字會變更為 "Susan"，成為資料集中的第一個連絡人。 DiffGram 會從資料集產生，然後會將 DiffGram (員工名字的變更) 中指定的更新套用到 Person.Contact 資料表。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

@@ -1,6 +1,6 @@
 ---
-title: 在用戶端上處理 XML （SQLXML）
-description: 瞭解如何使用 SQLXML Managed 類別中 SqlXmlCommand 物件的 ClientSideXml 屬性來處理用戶端上的 XML。
+title: '在用戶端上處理 XML (SQLXML) '
+description: 瞭解如何在 SQLXML Managed 類別中使用 SqlXmlCommand 物件的 ClientSideXml 屬性，在用戶端上處理 XML。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,19 +17,19 @@ ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b7b8a42c4e58b6d43de9ffc48d5dbce9c3eee1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 42f55477c59b85945ccb1f0b776f9ab8ac2125b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649327"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430862"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>在用戶端上處理 XML (SQLXML Managed 類別)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  這個範例說明如何使用 ClientSideXml 屬性。 應用程式會在伺服器上執行預存程序。 預存程序的結果 (兩個資料行的資料列集) 會在用戶端上進行處理以產生 XML 文件。  
+  此範例說明如何使用 ClientSideXml 屬性。 應用程式會在伺服器上執行預存程序。 預存程序的結果 (兩個資料行的資料列集) 會在用戶端上進行處理以產生 XML 文件。  
   
- 下列 GetContacts 預存程式會傳回 AdventureWorks 資料庫之 Person 資料表中員工的**FirstName**和**LastName** 。  
+ 下列 GetContacts 預存程式會在 AdventureWorks 資料庫的 Person 資料表中，傳回員工的 **FirstName** 和 **LastName** 。  
   
 ```  
 USE AdventureWorks  
@@ -41,7 +41,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- 這個 c # 應用程式會執行預存程式，並在指定 CommandText 值時指定 FOR XML AUTO 選項。 在應用程式中，SqlXmlCommand 物件的 ClientSideXml 屬性會設定為 true。 這可讓您執行預先存在的預存程序以傳回資料列集，並在用戶端上，將 XML 轉換套用到該資料列集。  
+ 此 c # 應用程式會執行預存程式，並在指定 CommandText 值時指定 FOR XML AUTO 選項。 在應用程式中，SqlXmlCommand 物件的 ClientSideXml 屬性會設定為 true。 這可讓您執行預先存在的預存程序以傳回資料列集，並在用戶端上，將 XML 轉換套用到該資料列集。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

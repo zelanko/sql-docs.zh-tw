@@ -1,6 +1,6 @@
 ---
-title: 在 XPath 查詢中使用關聯式運算子（SQLXML）
-description: 瞭解如何在 SQLXML 4.0 XPath 查詢中使用關係運算子。
+title: '在 XPath 查詢中使用關聯式運算子 (SQLXML) '
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中使用關聯式運算子。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,30 +16,30 @@ ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33b15785471f475876439988f950ffe8882bab2c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dfc120a7cacea4d8eb9908d441cb1a47fa986acb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430380"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  下列範例示範如何在 XPath 查詢中指定關係運算子。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例示範如何在 XPath 查詢中指定關係運算子。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱 [XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定關係運算子  
- 這個 XPath 查詢會傳回元素的子項目 **\<Customer>** ，其中**CustomerID**屬性值為 "1"，而任何子 **\<Order>** 元素包含 **\<OrderDetail>** 具有值大於3之**OrderQty**屬性的子系：  
+ 此 XPath 查詢 **\<Customer>** 會傳回 **CustomerID** 屬性值為 "1" 之元素的子項目，而其中任何子 **\<Order>** 元素包含 **\<OrderDetail>** 具有值大於3之 **OrderQty** 屬性的子系：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 括弧中指定的述詞會篩選 **\<Customer>** 元素。 只 **\<Customer>** 會傳回至少有一個 **\<OrderDetail>** 具有大於3之 OrderQty 屬性值的孫元素。  
+ 括弧中指定的述詞會篩選 **\<Customer>** 元素。 只 **\<Customer>** 會傳回至少具有一個 **\<OrderDetail>** OrderQty 屬性值大於3之孫元素的元素。  
   
- **子**軸是預設值。 因此，此查詢可以指定為：  
+ **子** 軸是預設值。 因此，此查詢可以指定為：  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -47,7 +47,7 @@ ms.locfileid: "85771668"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例架構程式碼](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，並將它貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製 [範例架構程式碼](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，並將其貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (SpecifyRelationalA.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "85771668"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
 
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的結果集：  
   
@@ -82,24 +82,24 @@ ms.locfileid: "85771668"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查詢中指定關係運算子並使用布林函數來比較結果  
- 此查詢 **\<Order>** 會傳回內容節點的所有元素子系，其**SalesPersonID**屬性值小於270：  
+ 此查詢 **\<Order>** 會傳回內容節點的所有元素子系，其 **SalesPersonID** 屬性值小於270：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- 您可以指定**屬性**軸（@）的快捷方式，而且因為**子**軸是預設值，所以可以從查詢中省略：  
+ 您可以指定 **屬性** 軸 ( @ ) 的快捷方式，而且因為 **子** 軸是預設值，所以可以從查詢中省略：  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
 ```  
   
 > [!NOTE]  
->  在範本中指定此查詢時，< 字元必須是實體編碼，因為 < 字元在 XML 檔中具有特殊意義。 在範本中，使用 `<` 來指定 < 字元。  
+>  在範本中指定這個查詢時，< 字元必須是實體編碼，因為 < 字元在 XML 檔中具有特殊意義。 在範本中，使用 `<` 指定 < 字元。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例架構程式碼](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)，並將它貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製 [範例架構程式碼](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) ，並將其貼到文字檔中。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (SpecifyRelationalB.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "85771668"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   

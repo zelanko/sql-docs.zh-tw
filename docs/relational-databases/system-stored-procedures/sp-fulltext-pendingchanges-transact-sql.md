@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6befa1abf7f427ab59c851fac9e51933ecc97bb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa2b81ce294183b005aa59de141d78945f6b3f04
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538895"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427339"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ sp_fulltext_pendingchanges table_id
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**索引鍵**|*|這是來自指定資料表的全文檢索索引鍵值。|  
+|**金鑰**|*|這是來自指定資料表的全文檢索索引鍵值。|  
 |**DocId**|**bigint**|這是對應至索引鍵值的內部文件識別碼 (DocId) 資料行。|  
 |**狀態**|**int**|0 = 資料列會從全文檢索索引中移除。<br /><br /> 1 = 資料列會被編製成全文檢索索引。<br /><br /> 2 = 資料列是最新的。<br /><br /> -1 = 資料列是處於過渡 (批次，但未認可) 狀態，或是錯誤狀態。|  
 |**DocState**|**tinyint**|這是內部文件識別碼 (DocId) 對應狀態資料行的原始傾印。|  
@@ -61,7 +61,7 @@ sp_fulltext_pendingchanges table_id
 ## <a name="remarks"></a>備註  
  如果沒有任何變更可以處理，就會傳回空的資料列集。  
   
- 全文檢索搜尋查詢不會傳回 **Status** 值為0的資料列。 這是因為資料列已經從基底資料表中刪除，並且正在等候從全文檢索索引中刪除。  
+ Full-Text 搜尋查詢不會傳回 **Status** 值為0的資料列。 這是因為資料列已經從基底資料表中刪除，並且正在等候從全文檢索索引中刪除。  
   
  若要找出特定資料表有多少變更暫止，請使用 OBJECTPROPERTYEX 函數的 **TableFullTextPendingChanges** 屬性。  
   

@@ -1,6 +1,6 @@
 ---
-title: 指定軸（SQLXML）
-description: 瞭解如何在 SQLXML 4.0 XPath 查詢中指定軸在位置步驟所選取的節點與內容節點之間指定樹狀結構關聯性。
+title: 指定 (SQLXML) 的軸
+description: 瞭解如何在 SQLXML 4.0 XPath 查詢中指定軸，以指定位置步驟所選取的節點與內容節點之間的樹狀結構關聯性。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,22 +21,22 @@ ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df40d531bcb9c1fddcad5d78cd76ca98831834ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03c0fff271ef3774116eb9c97025b1f602f7852c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431156"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
     
--   軸會指定位置步驟與內容節點所選取之節點間的樹狀結構關聯性。 支援下列座標軸：**子**系  
+-   軸會指定位置步驟與內容節點所選取之節點間的樹狀結構關聯性。 支援下列座標軸：**子** 系  
   
      包含內容節點的子系。  
   
-     下列 XPath 運算式（位置路徑）會從目前的內容節點中選取所有 **\<Customer>** 子系：  
+     下列 XPath 運算式 (位置路徑) 從目前內容節點選取所有 **\<Customer>** 子系：  
   
     ```  
     child::Customer  
@@ -44,7 +44,7 @@ ms.locfileid: "85649723"
   
      在下列 XPath 查詢中，`child` 為軸。 `Customer` 為節點測試。  
   
--   **父**  
+-   **parent**  
   
      包含內容節點的父系。  
   
@@ -56,21 +56,21 @@ ms.locfileid: "85649723"
   
      這與指定 `child::Customer` 相同。 在此 XPath 查詢中，`child` 和 `parent` 為軸。 `Customer` 和 `Order` 為節點測試。  
   
--   **特性**  
+-   **屬性**  
   
      包含內容節點的屬性。  
   
-     下列 XPath 運算式會選取內容節點的**CustomerID**屬性：  
+     下列 XPath 運算式會選取內容節點的 **CustomerID** 屬性：  
   
     ```  
     attribute::CustomerID  
     ```  
   
--   **供電**  
+-   **自我**  
   
      包含內容節點本身。  
   
-     下列 XPath 運算式會選取目前的節點（如果它是 **\<Order>** 節點）：  
+     下列 XPath 運算式會選取目前的節點（如果它是 **\<Order>** 節點的話）：  
   
     ```  
     self::Order  

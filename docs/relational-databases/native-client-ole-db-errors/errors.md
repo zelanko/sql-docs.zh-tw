@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f31e215a92ac3c72da4cdd62dbe1b63b43848c5c
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 081840769704810709a1c6445d167e5bb6a51328
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081987"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97433377"
 ---
 # <a name="sql-server-native-client-errors"></a>SQL Server Native Client 錯誤
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92081987"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以傳回多個錯誤。 應用程式可以呼叫與 ISQLErrorInfo 和 IErrorRecords 結合的 [IMultipleResults::GetResult](/previous-versions/windows/desktop/ms721289(v=vs.85))，一次擷取一個伺服器錯誤。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會公開 OLE DB 記錄增強的**IErrorInfo**、自訂**ISQLErrorInfo**，以及提供者特定的[ISQLServerErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)錯誤物件介面。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會公開 OLE DB 記錄增強的 **IErrorInfo**、自訂 **ISQLErrorInfo**，以及提供者特定的 [ISQLServerErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)錯誤物件介面。  
   
  如需追蹤錯誤的資訊，請參閱 [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)) (資料存取追蹤)。 如需有關 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中加入之錯誤追蹤增強功能的詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   

@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3461f2f9b46d5933f92782151d2debdc3189711
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7fab86d3cb05a7b2ce30b6be589c3e7ac1290eb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545108"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429557"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表、索引和索引檢視表的每個統計資料物件，各包含一個資料列。 每個索引都會有一個具有相同名稱和識別碼 (**index_id**stats_id) 的對應統計資料列  =  **stats_id** ，但並非每個統計資料列都有對應的索引。  
+  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中資料表、索引和索引檢視表的每個統計資料物件，各包含一個資料列。 每個索引都會有一個具有相同名稱和識別碼 (**index_id** stats_id) 的對應統計資料列  =   ，但並非每個統計資料列都有對應的索引。  
   
- 目錄檢視 [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 會提供資料庫中每個資料行的統計資料資訊。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+ 目錄檢視 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 提供資料庫中每個資料行的統計資料資訊。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這些統計資料所屬物件的識別碼。|  
 |**name**|**sysname**|統計資料的名稱。 在物件中，這是唯一的。|  
-|**stats_id**|**int**|統計資料的識別碼。 在物件中，這是唯一的。<br /><br />如果統計資料對應到索引，則*stats_id*值與[sys. 索引](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視中的*index_id*值相同。|  
+|**stats_id**|**int**|統計資料的識別碼。 在物件中，這是唯一的。<br /><br />如果統計資料對應到索引，則 *stats_id* 值與 [sys. 索引](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目錄檢視中的 *index_id* 值相同。|  
 |**auto_created**|**bit**|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否自動建立統計資料。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未自動建立統計資料。<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動建立統計資料。|  
 |**user_created**|**bit**|指出使用者是否建立統計資料。<br /><br /> 0 = 使用者未建立統計資料。<br /><br /> 1 = 使用者建立統計資料。|  
 |**no_recompute**|**bit**|指出是否使用 **NORECOMPUTE** 選項建立統計資料。<br /><br /> 0 = 未使用 **NORECOMPUTE** 選項建立統計資料。<br /><br /> 1 = 統計資料是使用 **NORECOMPUTE** 選項所建立。|  
@@ -74,7 +74,7 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
  [查詢 SQL Server 系統目錄常見問題](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [統計資料](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys. dm_db_stats_histogram &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

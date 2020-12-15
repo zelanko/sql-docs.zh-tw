@@ -11,13 +11,13 @@ ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b58fe4128d8df7b01d30b0a5ad11ce41881973ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 80cc09a529a1ec59354270dc7b33de3043abcd41
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88327884"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97433411"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "88327884"
   
 |OLE DB 用戶端類型|SQL Server 2005 類型|SQL Server 2008 (或更新版本) 類型|結果轉換 (伺服器到用戶端)|參數轉換 (用戶端到伺服器)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|確定|確定|  
+|DBTYPE_DBDATE|Datetime|Date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|確定|確定|  
+|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
 |DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|確定|  
 |DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|確定|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3) |確定|確定|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7) |確定|確定|  
-|DBTYPE_DBDATE|Smalldatetime|Date|確定|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3) |[確定]|[確定]|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7) |[確定]|[確定]|  
+|DBTYPE_DBDATE|Smalldatetime|Date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果 time 欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|確定|確定|  
+|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|確定|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|[確定]|[確定]|  
   
  OK 表示，如果它使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則應該繼續使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88327884"
   
 -   切換為 **datetime2** ，因為這是日期和時間的慣用資料類型。  
   
- 使用透過 ICommandWithParameters：： GetParameterInfo 或架構資料列集取得之伺服器中繼資料的應用程式，若要透過 ICommandWithParameters：： SetParameterInfo 來設定參數類型資訊，則在用戶端轉換期間，來源類型的字串表示大於目的地類型的字串標記法時，將會失敗。 例如，如果用戶端系結使用 DBTYPE_DBTIMESTAMP 而伺服器資料行是日期，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 會將值轉換為 "yyyy-mm-dd hh： mm： ss"，但是伺服器中繼資料會以 **Nvarchar (10) **傳回。 產生的溢位會造成 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 資料轉換會引發類似的問題，因為資料列集中繼資料是從 resultset 中繼資料設定。  
+ 使用透過 ICommandWithParameters：： GetParameterInfo 或架構資料列集取得之伺服器中繼資料的應用程式，若要透過 ICommandWithParameters：： SetParameterInfo 來設定參數類型資訊，則在用戶端轉換期間，來源類型的字串表示大於目的地類型的字串標記法時，將會失敗。 例如，如果用戶端系結使用 DBTYPE_DBTIMESTAMP 而伺服器資料行是日期，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 會將值轉換為 "yyyy-mm-dd hh： mm： ss"，但是伺服器中繼資料會以 **Nvarchar (10)** 傳回。 產生的溢位會造成 DBSTATUS_E_CATCONVERTVALUE。 IRowsetChange 資料轉換會引發類似的問題，因為資料列集中繼資料是從 resultset 中繼資料設定。  
   
 ### <a name="parameter-and-rowset-metadata"></a>參數和資料列集中繼資料  
  本節針對使用早于之 Native Client 版本編譯的用戶端，描述參數、結果資料行和架構資料列集的中繼資料 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。  
@@ -140,7 +140,7 @@ ms.locfileid: "88327884"
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|可搜尋|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
+|SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

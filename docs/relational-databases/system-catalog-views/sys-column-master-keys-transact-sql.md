@@ -1,6 +1,6 @@
 ---
 description: sys.column_master_keys (Transact-SQL)
-title: sys. column_master_keys (Transact-sql) |Microsoft Docs
+title: sys.column_master_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a49dd0832e0319f078d91c44708e8ab821ad107
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b62a54ec2ab17d76f5f726dbd26f28a60d79afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429580"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88646718"
 |**key_store_provider_name**|**sysname**|包含 CMK 之資料行主要金鑰存放區的提供者名稱。 允許的值包括：<br /><br /> MSSQL_CERTIFICATE_STORE-如果資料行主要金鑰存放區為憑證存放區。<br /><br /> 如果資料行主要金鑰存放區是自訂類型，則為使用者定義值。|  
 |**key_path**|**nvarchar(4000)**|金鑰的資料行主要金鑰存放區特定路徑。 路徑的格式取決於資料行主要金鑰存放區類型。 範例：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 若為自訂資料行主要金鑰存放區，開發人員必須負責定義自訂資料行主要金鑰存放區的金鑰路徑。|  
 |**allow_enclave_computations**|**bit**|表示資料行主要金鑰是否記憶體保護區啟用， (如果資料行加密金鑰（使用此主要金鑰加密）可以用於伺服器端安全記憶體保護區) 內的計算。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
-|**簽章**|**varbinary(max)**|使用**key_path**所參考的資料行主要金鑰所產生**key_path**和**allow_enclave_computations**的數位簽章。|
+|**簽章**|**varbinary(max)**|使用 **key_path** 所參考的資料行主要金鑰所產生 **key_path** 和 **allow_enclave_computations** 的數位簽章。|
 
 
   

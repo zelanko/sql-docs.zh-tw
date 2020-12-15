@@ -1,5 +1,5 @@
 ---
-title: 執行 XPath 查詢（SQLXML）
+title: " (SQLXML) 執行 XPath 查詢"
 description: 瞭解如何使用 SQLXML Managed 類別，針對對應架構執行 XPath 查詢。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 139ebeadb8ea481180aa97df600bfc9d3280d20f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3c5a94292359a21c65c707adf200ea1b1273c362
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649353"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430863"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>執行 XPath 查詢 (SQLXML Managed 類別)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

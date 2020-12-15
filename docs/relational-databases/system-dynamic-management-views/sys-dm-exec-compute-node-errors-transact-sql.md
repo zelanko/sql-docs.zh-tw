@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8259a8a2f80bc96c52f0059cedef3036ce29cde9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833566"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428146"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-sql) 
 
@@ -40,7 +40,7 @@ ms.locfileid: "91833566"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|與錯誤相關聯的唯一數值識別碼。|在系統的所有查詢錯誤中都是唯一的|  
 |source|`nvarchar(255)`|來源執行緒或進程描述||  
-|type|`nvarchar(255)`|錯誤的類型。||  
+|類型|`nvarchar(255)`|錯誤的類型。||  
 |create_time|`datetime`|發生錯誤的時間||  
 |compute_node_id|`int`|特定計算節點的識別碼|請參閱[sys.dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)的 compute_node_id&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 查詢的識別碼（如果有的話）。||  

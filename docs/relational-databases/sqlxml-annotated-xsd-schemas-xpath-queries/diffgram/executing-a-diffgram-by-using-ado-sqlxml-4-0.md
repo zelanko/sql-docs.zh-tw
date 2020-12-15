@@ -1,6 +1,6 @@
 ---
-title: 使用 ADO 執行 DiffGram （SQLXML）
-description: 瞭解如何在 Microsoft Visual Basic 應用程式中使用 ADO 執行 DiffGram 檔案（SQLXML 4.0），以建立 Microsoft SQL Server 實例的連接。
+title: '使用 ADO 執行 DiffGram (SQLXML) '
+description: 瞭解如何在 Microsoft Visual Basic 的應用程式中執行 DiffGram 檔案，方法是使用 ADO (SQLXML 4.0) 建立與 Microsoft SQL Server 實例的連接。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,31 +17,31 @@ ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a6e50a1e7a770ad8be9777d37b84bc328248159
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a28fe03f8e52d58f0e31c2e7d3cabebfd8a6113c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431416"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 DiffGram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用[DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)中所述的任何 diffgram （和相關聯的 XSD 架構）。  
+  這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用任何 Diffgram (以及相關聯的 XSD 架構) 如 [DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)中所述。  
   
  這是範例應用程式的程序：  
   
--   **Conn**物件（**ADODB。連接**）會建立與特定伺服器上 SQL Server 之執行中實例的連接。  
+-   **Conn** 物件 (**ADODB。連接**) 會在特定的伺服器上建立與執行中的 SQL Server 實例的連接。  
   
--   **Cmd**物件（**ADODB**）會在已建立的連接上執行。  
+-   **Cmd** 物件 (ADODB 會在已建立的連接上執行) **。**  
   
 -   命令用語會設定為 DBGUID_MSSQLXML。  
   
--   DiffGram 會從檔案複製到命令資料流程（**字串分 text.append**）。  
+-   DiffGram 會從檔案複製到命令資料流程 (**字串分 text.append**) 。  
   
--   命令的輸出資料流程會設定為**StrmOut**物件（**ADODB。資料流程**）接收任何傳回的資料。  
+-   命令的輸出資料流程會設定為 **StrmOut** 物件 (**ADODB。串流**) 接收任何傳回的資料。  
   
--   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要使用 Sqlxml4.dll 搭配 SQLOLEDB 提供者，必須在 SQLOLEDB 提供者**連接**物件上，將**sqlxml Version**屬性設定為**sqlxml. 4.0。**  
+-   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配 SQLOLEDB 提供者使用 Sqlxml4.dll， **Sqlxml Version** 屬性必須在 Sqloledb 提供者 **連接** 物件上設定為 **sqlxml. 4.0。**  
   
 -   執行命令 (DiffGram)。  
   
@@ -87,7 +87,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
-1.  如果您是電腦上的資料夾，請從[DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)中的其中一個範例複製其中一個 diffgram 和對應的 XSD 架構。  
+1.  在您電腦上的資料夾中，從 [DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)中的其中一個範例複製任何 diffgram 和對應的 XSD 架構。  
   
 2.  開啟 Visual Basic，然後建立一個標準的 EXE 專案。  
   
@@ -97,7 +97,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  在 [工具箱] 中，按一下 [**命令**]，然後在表單上繪製一個按鈕。  
+4.  在 [工具箱] 中，按一下 [ **命令命令**]，然後在表單上繪製按鈕。  
   
 5.  按兩下該按鈕來編輯程式碼，然後加入主題中提供之應用程式的程式碼。  
   

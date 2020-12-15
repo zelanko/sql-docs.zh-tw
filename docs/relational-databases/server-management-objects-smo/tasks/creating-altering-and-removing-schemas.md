@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d2d9b43b70f77989a0dd0a3439449bff40deaaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 114bb00bbbd4303cbda03cdee669d35764fb944d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498486"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431636"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>建立、改變和移除結構描述
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

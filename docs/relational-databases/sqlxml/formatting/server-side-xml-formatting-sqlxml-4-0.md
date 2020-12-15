@@ -1,5 +1,5 @@
 ---
-title: 伺服器端 XML 格式（SQLXML）
+title: '伺服器端 XML 格式化 (SQLXML) '
 description: 瞭解針對 Microsoft SQL Server 資料庫執行的 SQLXML 4.0 查詢所產生之檔的伺服器端 XML 格式。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96cfbb4c3a767ea5b899a1410385303272a56a1c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 629221cc127011e63e58c5044ef9375001b68df3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666161"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429900"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85666161"
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，您可以將 XML 文件儲存到資料庫資料表中，以及從資料庫資料表中擷取 XML 文件。 若要擷取 XML 文件，請在 SELECT 查詢中使用 FOR XML 查詢延伸模組。  
   
- 例如，假設用戶端應用程式對執行的命令是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 由下列查詢所組成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ：  
+ 例如，假設用戶端應用程式執行的命令是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 由下列查詢所組成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ：  
   
 ```  
 SELECT FirstName, LastName  
@@ -53,7 +53,7 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- 如需 FOR XML 子句的詳細資訊，請參閱[使用 FOR XML 來建立 xml](../../../relational-databases/xml/for-xml-sql-server.md)。  
+ 如需 FOR XML 子句的詳細資訊，請參閱 [使用 FOR XML 來建立 xml](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [用戶端和伺服器端 XML 格式的架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   

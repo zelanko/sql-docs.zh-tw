@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b533a4bd4f2b404975e8315f36aba9b31e3b51ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6f39b3bff2073475c9bd0d969efa3901ff055edb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545361"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428696"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對每個 TR 或 TA 類型的觸發程序物件，各包含一個資料列。 DML 觸發程式名稱是以架構為範圍，因此在 **sys. 物件**中是可見的。 而 DDL 觸發程序名稱是由父實體來限定範圍，因此只會顯示在這份檢視中。  
+  針對每個 TR 或 TA 類型的觸發程序物件，各包含一個資料列。 DML 觸發程式名稱是以架構為範圍，因此在 **sys. 物件** 中是可見的。 而 DDL 觸發程序名稱是由父實體來限定範圍，因此只會顯示在這份檢視中。  
   
- **Parent_class**和**名稱**資料行可唯一識別資料庫中的觸發程式。  
+ **Parent_class** 和 **名稱** 資料行可唯一識別資料庫中的觸發程式。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
