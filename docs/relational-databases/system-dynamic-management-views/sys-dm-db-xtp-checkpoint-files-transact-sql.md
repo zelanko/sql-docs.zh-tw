@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 010b043bbaab3a5ce1712d32b1e94f800fa630d3
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8efd90743e84db69dfddef113942a02e51a5386f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412663"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474979"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92412663"
 |file_size_in_bytes|**bigint**|磁片上的檔案大小。|  
 |file_size_used_in_bytes|**bigint**|針對仍在擴展的檢查點檔案組，這個資料行會在下一個檢查點之後更新。|  
 |logical_row_count|**bigint**|針對資料，插入的資料列數目。<br /><br /> 若為 Delta，則為捨棄資料表之後刪除的資料列數目。<br /><br /> 若為 Root，則為 Null。|  
-|狀態|**smallint**|0-預先建立<br /><br /> 1-下建設<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 8-等候記錄截斷|  
+|state|**smallint**|0-預先建立<br /><br /> 1-下建設<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 8-等候記錄截斷|  
 |state_desc|**nvarchar(60)**|預先建立-預先配置的一些檢查點檔案可將任何等候配置新檔案的等候降至最低或刪除，因為正在執行交易。 這些預先建立檔的大小可能會有所不同，視工作負載的預估需求而定，但不包含任何資料。 這是具有 MEMORY_OPTIMIZED_DATA 檔案群組之資料庫的儲存空間額外負荷。<br /><br /> 在 [結構] 下，這些檢查點檔案是在結構中，這表示它們會根據資料庫所產生的記錄檔記錄進行填入，而且還不是檢查點的一部分。<br /><br /> 使用中-這些包含先前關閉的檢查點所插入/刪除的資料列。 在資料庫重新開機時套用交易記錄的使用中部分之前，這些資料表會包含區域讀入記憶體中的資料表內容。 我們預期這些檢查點檔案的大小大約是記憶體優化資料表的記憶體中大小的2倍，假設合併作業跟上交易工作負載。<br /><br /> 合併目標-合併作業的目標-這些檢查點檔案會儲存合併原則所識別的來源檔案中的合併資料列。 一旦安裝合併之後，「合併目標」就會轉換為「使用中」狀態。<br /><br /> 等候記錄截斷-在安裝合併且合併目標 CFP 是永久性檢查點的一部分之後，合併來源檢查點檔案會轉換為此狀態。 具有記憶體優化資料表之資料庫的操作正確性需要此狀態的檔案。  例如，若要從持久性檢查點復原來回到過去。|  
 |lower_bound_tsn|**bigint**|檔案中交易的下限：如果狀態不在 (1，3) ，則為 null。|  
 |upper_bound_tsn|**bigint**|檔案中交易的上限;如果狀態不在 (1，3) ，則為 null。|  
@@ -85,14 +85,14 @@ ms.locfileid: "92412663"
 |inserted_row_count|**bigint**|資料檔案中的資料列數。|  
 |deleted_row_count|**bigint**|差異檔案中已刪除的資料列數。|  
 |drop_table_deleted_row_count|**bigint**|資料檔案中受到卸除資料表影響的資料列數目。 當 state 資料行等於 1 時，適用於資料檔案。<br /><br /> 顯示已卸除的資料表中刪除的資料列計數。 在完成已卸除之資料表中資料列的記憶體回收及取得檢查點之後，就會編譯 drop_table_deleted_row_count 統計資料。 如果您在卸除資料表統計資料反映於這個資料行之前重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，統計資料將會在復原期間更新。 復原程序不會從已卸除的資料表中載入資料列。 載入階段會編譯已卸除之資料表的統計資料，並在復原完成時於這個資料行中報告。|  
-|狀態|**int**|0-預先建立<br /><br /> 1-下建設<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 4-合併來源<br /><br /> 5-備份/HA 需要<br /><br /> 6-轉換成標記<br /><br /> 7-標記|  
+|state|**int**|0-預先建立<br /><br /> 1-下建設<br /><br /> 2 - 使用中<br /><br /> 3-合併目標<br /><br /> 4-合併來源<br /><br /> 5-備份/HA 需要<br /><br /> 6-轉換成標記<br /><br /> 7-標記|  
 |state_desc|**nvarchar(60)**|預先建立-一組較小的資料和差異檔案組（也稱為成對的檢查點檔案組） (Cfp) 會保留預先配置，以最小化或消除在執行交易時，配置新檔案的任何等候。 其為配置全額，即資料檔案大小為 128MB 且差異檔案大小為 8 MB 但不含資料。 CFP 數目是依邏輯處理器或排程器的數目來計算 (每個核心一個，無上限)，最少為 8 個。 這是具有記憶體最佳化資料表的資料庫固定的儲存負擔。<br /><br /> 在 Cfp 中，會在最後一個檢查點之後儲存剛插入且可能已刪除的資料列集。<br /><br /> 使用中 - 包含來自先前已關閉之檢查點的已插入和刪除的資料列。 這些 CFP 包含了在資料庫重新啟動時套用交易記錄的使用中部分之前所需的所有已插入和刪除的資料列。 這些 CFP 的大小大約是記憶體最佳化資料表的記憶體中大小的兩倍，前提是合併作業透過交易式工作負載維持在最新狀態。<br /><br /> 合併目標-CFP 會儲存合併原則所識別之 CFP (s) 的合併資料列。 一旦安裝合併之後，「合併目標」就會轉換為「使用中」狀態。<br /><br /> 合併來源-安裝合併作業之後，來源 Cfp 會標示為合併來源。 請注意，合併原則評估工具可識別多個合併，但是 CFP 只能參與一個合併作業。<br /><br /> 備份/HA 的必要項-在安裝合併且合併目標 CFP 是永久性檢查點的一部分時，合併來源 Cfp 會轉換為此狀態。 包含記憶體最佳化資料表的資料庫需要這個狀態下的 CFP 來確定其作業的正確性。  例如，若要從持久性檢查點復原來回到過去。 CFP 要等到記錄截斷點移出其交易範圍後才可標示為記憶體回收。<br /><br /> 在轉換成標記時，In-Memory OLTP 引擎不需要這些 Cfp，而且可以進行垃圾收集。 此狀態表示這些 CFP 正在等候背景執行緒將其轉換到下一個狀態，也就是「標記」。<br /><br /> 標記-這些 Cfp 正在等候 filestream 垃圾收集行程進行垃圾收集。  ([sp_filestream_force_garbage_collection &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)) |  
 |lower_bound_tsn|**bigint**|檔案中包含之交易的下限。 如果 state 資料行不是 2、3 或 4 則為 Null。|  
 |upper_bound_tsn|**bigint**|檔案中包含之交易的上限。 如果 state 資料行不是 2、3 或 4 則為 Null。|  
 |last_backup_page_count|**int**|上一次備份所決定的邏輯頁計數。 當 state 資料行設定為 2、3、4 或 5 時適用。 如果頁面計數未知則為 NULL。|  
 |delta_watermark_tsn|**int**|寫入至這個差異檔案之上一次檢查點的交易。 這是差異檔案的標準。|  
-|last_checkpoint_recovery_lsn|**Nvarchar (23) **|仍然需要此檔案之上一次檢查點的復原記錄序號 (LSN)。|  
-|tombstone_operation_lsn|**Nvarchar (23) **|一旦 tombstone_operation_lsn 落後記錄截斷記錄檔序號，這個檔案就會遭到刪除。|  
+|last_checkpoint_recovery_lsn|**Nvarchar (23)**|仍然需要此檔案之上一次檢查點的復原記錄序號 (LSN)。|  
+|tombstone_operation_lsn|**Nvarchar (23)**|一旦 tombstone_operation_lsn 落後記錄截斷記錄檔序號，這個檔案就會遭到刪除。|  
 |logical_deletion_log_block_id|**bigint**|僅適用於狀態 5。|  
   
 ## <a name="permissions"></a>權限  

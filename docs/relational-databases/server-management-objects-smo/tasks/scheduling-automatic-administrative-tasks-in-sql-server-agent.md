@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ca351a2e3a6104a4bcc5c8fb7192d0f00ea6a56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b777b9f7343a0014d01da34b7681ef382e4821d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88325610"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475449"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -169,7 +169,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>因為**運算子**是關鍵字，所以類型需要使用方括弧 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 。  
+ 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>因為 **運算子** 是關鍵字，所以類型需要使用方括弧 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 。  
   
 ```csharp  
 {  
@@ -202,7 +202,7 @@ $jbsch.Create();
   
  **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>因為**運算子**是關鍵字，所以類型需要使用方括弧 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 。  
+ 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>因為 **運算子** 是關鍵字，所以類型需要使用方括弧 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

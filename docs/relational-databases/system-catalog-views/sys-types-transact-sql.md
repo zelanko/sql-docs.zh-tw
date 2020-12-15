@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8400701be6e002701da112294bbfbf7c11b7da18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09a7add1433bc9eb8184843f24d113e3706a4c36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537334"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475089"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "89537334"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|類型的名稱。 在結構描述中，這是唯一的。|  
 |**system_type_id**|**tinyint**|類型的內部系統類型識別碼。|  
-|**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 若為系統資料類型，請**user_type_id**  =  **system_type_id**。|  
+|**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 若為系統資料類型，請 **user_type_id**  =  **system_type_id**。|  
 |**schema_id**|**int**|類型所屬的結構描述識別碼。|  
 |**principal_id**|**int**|個別擁有者的識別碼 (如果與結構描述擁有者不同的話)。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定替代的擁有者。<br /><br /> NULL (如果沒有替代的個別擁有者)。|  
-|**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是 **Varchar (max) **、 **Nvarchar (max) **、 **Varbinary (max) **或 **xml**。<br /><br /> 若為 **文字** 資料行， **max_length** 值將會是16。|  
+|**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是 **Varchar (max)**、 **Nvarchar (max)**、 **Varbinary (max)** 或 **xml**。<br /><br /> 若為 **文字** 資料行， **max_length** 值將會是16。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是類型的最大有效位數；否則，便是 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是類型的最大小數位數；否則，便是 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是類型的定序名稱；否則，便是 NULL。|  

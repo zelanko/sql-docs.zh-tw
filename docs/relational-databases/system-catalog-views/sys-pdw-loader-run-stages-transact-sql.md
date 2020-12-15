@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 288810d6143bcdb98e7bf3257f5958b2cf5f91ee
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: ee8eb27964a7fc26d5af6c8f7a13293720ca7821
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475149"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>sys.pdw_loader_run_stages (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92036731"
 |run_id|**int**|載入器執行的唯一識別碼。||  
 |stage (階段)|**nvarchar(30)**|執行的目前階段。|「CREATE_STAGING」、「DMS_LOAD」、「LOAD_INSERT」、「LOAD_CLEANUP」|  
 |request_id|**nvarchar(32)**|執行此階段之要求的識別碼。||  
-|status|**Nvarchar (16) **|此階段的狀態。||  
+|status|**Nvarchar (16)**|此階段的狀態。||  
 |start_time|**datetime**|階段的開始時間。||  
 |end_time|**datetime**|階段結束的時間（如果有的話）。|如果未啟動或進行中，則為 Null。|  
 |total_elapsed_time|**int**|這個階段花費在執行 (或花費到目前為止的總時間) 。|如果 total_elapsed_time 超過整數 (24.8 天（以毫秒為單位）的最大值) ，則會造成具體化失敗，因為溢位。<br /><br /> 以毫秒為單位的最大值相當於24.8 天。|  

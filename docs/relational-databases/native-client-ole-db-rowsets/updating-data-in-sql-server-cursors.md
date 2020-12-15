@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e00bf48c991d496e4425e665206b22a0ac3d32a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c2bbfb0b4aeac91e4a2c6ddcccaeddfce76857
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448320"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476029"
 ---
 # <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>更新 SQL Server Native Client SQL Server 資料指標中的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88448320"
   
  在任一種模式下，當資料列集沒有開啟任何交易物件時，往返代表不同的交易。  
   
- 當您使用 **IRowsetUpdate：： Update**時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試處理每個指定的資料列。 因為任何資料列的資料、長度或狀態值無效而發生錯誤，不會停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者處理。 參與更新的其他所有資料列或沒有任何資料列可能會遭到修改。 當*prgRowStatus* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider 傳回 DB_S_ERRORSOCCURRED 時，取用者必須檢查傳回的 prgRowStatus 陣列，以判斷任何特定資料列的失敗。  
+ 當您使用 **IRowsetUpdate：： Update** 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會嘗試處理每個指定的資料列。 因為任何資料列的資料、長度或狀態值無效而發生錯誤，不會停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者處理。 參與更新的其他所有資料列或沒有任何資料列可能會遭到修改。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider 傳回 DB_S_ERRORSOCCURRED 時，取用者必須檢查傳回的 prgRowStatus 陣列，以判斷任何特定資料列的失敗。  
   
  取用者不應該假設資料列會以任何特定順序處理。 如果取用者需要透過一個以上的單一資料列進行資料修改的排序處理，取用者應該以應用程式邏輯建立該順序，並開啟交易來包含程序。  
   

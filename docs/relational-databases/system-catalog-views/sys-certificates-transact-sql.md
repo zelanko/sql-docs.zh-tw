@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475259"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "88486516"
 |**pvt_key_encryption_type**|**char(2)**|如何為私密金鑰加密。<br /><br /> NA = 憑證沒有私密金鑰<br /><br /> MK = 私密金鑰是由主要金鑰加密<br /><br /> PW = 私密金鑰是由使用者自訂密碼加密<br /><br /> SK = 私密金鑰是由服務主要金鑰加密。|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|私密金鑰加密方式的描述。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|如果是 1，則這個憑證是用來起始加密的服務對話。|  
-|**issuer_name**|**Nvarchar (442) **|憑證簽發者的名稱。|  
-|**cert_serial_number**|**Nvarchar (64) **|憑證的序號。|  
-|**希**|**Varbinary (85) **|這個憑證的登入 SID。|  
+|**issuer_name**|**Nvarchar (442)**|憑證簽發者的名稱。|  
+|**cert_serial_number**|**Nvarchar (64)**|憑證的序號。|  
+|**希**|**varbinary(85)**|這個憑證的登入 SID。|  
 |**string_sid**|**nvarchar(128)**|這個憑證登入 SID 的字串表示法|  
 |**subject**|**nvarchar(4000)**|這個憑證的主旨。|  
 |**expiry_date**|**datetime**|當憑證逾期時。|  
 |**start_date**|**datetime**|當憑證生效時。|  
-|**指紋**|**varbinary(32)**|憑證的 SHA-1 雜湊。 SHA-1 雜湊在全域範圍內是唯一的。|  
+|**thumbprint**|**varbinary(32)**|憑證的 SHA-1 雜湊。 SHA-1 雜湊在全域範圍內是唯一的。|  
 |**attested_by**|**nvarchar(260)**|僅供系統使用。|  
 |**pvt_key_last_backup_date**|**datetime**|上次匯出憑證私密金鑰的日期和時間。|  
   

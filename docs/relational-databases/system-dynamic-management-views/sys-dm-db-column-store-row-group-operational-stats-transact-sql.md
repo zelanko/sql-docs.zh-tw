@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_db_column_store_row_group_operational_stats (Transact-sql) '
-title: sys. dm_db_column_store_row_group_operational_stats (Transact-sql) |Microsoft Docs
+description: 'sys.dm_db_column_store_row_group_operational_stats (Transact-sql) '
+title: sys.dm_db_column_store_row_group_operational_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -13,19 +13,19 @@ dev_langs:
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d384029cb8a226dfed01d14360247d00cb998cd8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aa29c7c3eed19871479e116d8d8969d71c38641d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475019"
 ---
-# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql) 
+# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-sql) 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  針對資料行存放區索引中的壓縮資料列群組，傳回目前的資料列層級 i/o、鎖定和存取方法活動。 使用 **sys. dm_db_column_store_row_group_operational_stats** 來追蹤使用者查詢必須等候讀取或寫入資料行存放區索引之壓縮資料列群組或資料分割的時間長度，並找出遇到大量 i/o 活動或作用點的資料列群組。  
+  針對資料行存放區索引中的壓縮資料列群組，傳回目前的資料列層級 i/o、鎖定和存取方法活動。 使用 **sys.dm_db_column_store_row_group_operational_stats** 來追蹤使用者查詢必須等候讀取或寫入資料行存放區索引之壓縮資料列群組或資料分割的時間長度，並找出遇到大量 i/o 活動或作用點的資料列群組。  
   
  記憶體內部資料行存放區索引不會出現在這個 DMV 中。  
  
@@ -61,9 +61,9 @@ ms.locfileid: "89537603"
  [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys. dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [sys. dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

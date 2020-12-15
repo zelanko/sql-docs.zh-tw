@@ -1,6 +1,6 @@
 ---
-title: 資料列集（Native Client OLE DB 提供者）
-description: 讓所有資料提供者以表格形式公開結果集資料。 在 OLE DB 中，使用資料列集功能，這是一組包含資料行的資料列。
+title: " (Native Client OLE DB 提供者) 的資料列集"
+description: 讓所有資料提供者以表格形式公開結果集資料。 在 OLE DB 中，使用資料列集功能，這是包含資料行的資料列集。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1af4116ce0318a4a88c66fc4560b4158b7501bc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476069"
 ---
-# <a name="rowsets-native-client-ole-db-provider"></a>資料列集（Native Client OLE DB 提供者）
+# <a name="rowsets-native-client-ole-db-provider"></a> (Native Client OLE DB 提供者) 的資料列集
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
   
- 取用者使用 **IDBCreateSession::CreateSession** 方法建立工作階段之後，就可以使用工作階段上的 **IOpenRowset** 或 **IDBCreateCommand** 介面建立資料列集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者同時支援這兩個介面。 此處描述這兩種方法。  
+ 取用者使用 **IDBCreateSession::CreateSession** 方法建立工作階段之後，就可以使用工作階段上的 **IOpenRowset** 或 **IDBCreateCommand** 介面建立資料列集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者同時支援這兩種介面。 此處描述這兩種方法。  
   
 -   呼叫 **IOpenRowset::OpenRowset** 方法來建立資料列集。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "87246827"
   
 -   [擷取資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [使用 IRow 來提取單一資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [使用 IRow 擷取單一資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
--   [Bookmarks](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
+-   [書籤](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   
--   [更新資料列集內的資料](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
+-   [更新資料列集中的資料](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

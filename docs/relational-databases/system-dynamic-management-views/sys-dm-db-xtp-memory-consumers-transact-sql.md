@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
-title: sys. dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
+title: sys.dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542228"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474969"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "89542228"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|記憶體取用者的識別碼 (內部)。|  
 |memory_consumer_type|**int**|記憶體取用者的類型：<br /><br /> 0=彙總。 (彙總兩個以上取用者的記憶體使用量。 它不應該顯示)。<br /><br /> 2=VARHEAP (追蹤可變長度堆積的記憶體耗用量)。<br /><br /> 3=HASH (追蹤索引的記憶體耗用量)。<br /><br /> 5=資料庫分頁集區 (追蹤用於執行階段作業之資料庫分頁集區的記憶體耗用量。 例如，資料表變數和一些可序列化的掃描。 每個資料庫只有一個這種類型的記憶體取用者)。|  
-|memory_consumer_type_desc|**Nvarchar (64) **|記憶體取用者的類型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0- (不應顯示。 ) <br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**Nvarchar (64) **|記憶體取用者執行個體的描述：<br /><br /> VARHEAP <br />資料庫堆積。 用來配置資料庫的使用者資料 (資料列)。<br />資料庫系統堆積。 用來配置將包含在記憶體傾印中而且不包含使用者資料的資料庫資料。<br />範圍索引堆積。 範圍索引為了配置 BW 頁面所使用的私密堆積。<br /><br /> 雜湊：由於 object_id 指出資料表和雜湊索引本身 index_id，因此沒有描述。<br /><br /> PGPOOL：針對資料庫，只有一個分頁集區資料庫64K 頁面集區。|  
+|memory_consumer_type_desc|**Nvarchar (64)**|記憶體取用者的類型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0- (不應顯示。 ) <br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**Nvarchar (64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP <br />資料庫堆積。 用來配置資料庫的使用者資料 (資料列)。<br />資料庫系統堆積。 用來配置將包含在記憶體傾印中而且不包含使用者資料的資料庫資料。<br />範圍索引堆積。 範圍索引為了配置 BW 頁面所使用的私密堆積。<br /><br /> 雜湊：由於 object_id 指出資料表和雜湊索引本身 index_id，因此沒有描述。<br /><br /> PGPOOL：針對資料庫，只有一個分頁集區資料庫64K 頁面集區。|  
 |object_id|**bigint**|配置的記憶體所歸屬的物件識別碼。 系統物件的負值。|  
 |xtp_object_id|**bigint**|記憶體優化資料表的物件識別碼。|  
 |index_id|**int**|取用者的索引識別碼 (如果有的話)。 基底資料表的 NULL。|  
@@ -65,7 +65,7 @@ ms.locfileid: "89542228"
  只針對具有 VIEW DATABASE STATE 權限的使用者傳回系統資料表。  
   
 ## <a name="general-remarks"></a>一般備註  
- 當記憶體優化的資料表有資料行存放區索引時，系統會使用部分內部資料表（會耗用一些記憶體）來追蹤資料行存放區索引的資料。 如需這些內部資料表和範例查詢的詳細資料，顯示其記憶體耗用量，請參閱 [sys. memory_optimized_tables_internal_attributes (transact-sql) ](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
+ 當記憶體優化的資料表有資料行存放區索引時，系統會使用部分內部資料表（會耗用一些記憶體）來追蹤資料行存放區索引的資料。 如需這些內部資料表和範例查詢的詳細資料，顯示其記憶體耗用量，請參閱 [sys.memory_optimized_tables_internal_attributes (transact-sql) ](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
  
   
 ## <a name="examples"></a>範例  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- 此 DMV 所配置和使用的記憶體總計與 [sys. dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)中的物件層級相同。  
+ 從這個 DMV 配置和使用的記憶體總計與 [sys.dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)中的物件層級相同。  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
