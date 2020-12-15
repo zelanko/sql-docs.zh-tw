@@ -11,13 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19a5132bd78b3cc1cca48be193b34126a9f83c3e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 76b5f9ec684b4733934a8cdd703942f12cf1b541
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036892"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404450"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92036892"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|資料表的物件識別碼。 請參閱 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **object_id** 是此視圖的索引鍵。||  
-|狀態|**nvarchar(40)**|此資料表的複寫資料表快取狀態。|' NotReady '、' Ready '|  
+|state|**nvarchar(40)**|此資料表的複寫資料表快取狀態。|' NotReady '、' Ready '|  
   
 ## <a name="example"></a>範例
 此範例會聯結 sys.pdw_replicated_table_cache_state 與 sys. 資料表，以抓取資料表名稱和複寫資料表快取的狀態。

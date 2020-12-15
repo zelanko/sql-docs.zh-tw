@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7779e96727eed170d8869af8c21fe68c9d1455
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e44d5cb6911336180b1d90701ce78cf19d0b2a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535094"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410855"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89535094"
   傳回指定資料表之資料行和索引的統計資料資訊。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 若要取得統計資料的相關資訊，請查詢 [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 和 [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目錄查看。  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 若要取得統計資料的相關資訊，請查詢 [sys. 統計](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 資料和 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目錄檢視。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'object_name'` 指定要提供統計資料資訊的資料表。 *object_name* 是 **Nvarchar (520) ** 且不能是 null。 可以指定一部分名稱或兩部分名稱。  
+`[ @objname = ] 'object_name'` 指定要提供統計資料資訊的資料表。 *object_name* 是 **Nvarchar (520)** 且不能是 null。 可以指定一部分名稱或兩部分名稱。  
   
-`[ @results = ] 'value'` 指定要提供的資訊範圍。 有效的專案包括 **全部** 和 **統計**資料。 **所有** 索引都列出所有索引的統計資料，以及在其上建立統計資料的資料行; **STATS** 只會列出與索引無關的統計資料。 *值* 為 **Nvarchar (5) ** ，預設值是 STATS。  
+`[ @results = ] 'value'` 指定要提供的資訊範圍。 有效的專案包括 **全部** 和 **統計** 資料。 **所有** 索引都列出所有索引的統計資料，以及在其上建立統計資料的資料行; **STATS** 只會列出與索引無關的統計資料。 *值* 為 **Nvarchar (5)** ，預設值是 STATS。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -58,7 +58,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |**statistics_name**|統計資料的名稱。 傳回 **sysname** ，而且不能是 null。|  
-|**statistics_keys**|統計資料的基礎索引鍵。 傳回 **Nvarchar (2078) ** 且不能是 null。|  
+|**statistics_keys**|統計資料的基礎索引鍵。 傳回 **Nvarchar (2078)** 且不能是 null。|  
   
 ## <a name="remarks"></a>備註  
  請利用 DBCC SHOW_STATISTICS 來顯示任何特定索引或統計資料的詳細統計資訊。 如需詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 和 [sp_helpindex &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  

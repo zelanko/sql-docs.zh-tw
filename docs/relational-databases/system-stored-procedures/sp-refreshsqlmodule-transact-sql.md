@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5265d2b38f8d41be321a63b701bb286b3b793e1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dc3be80416180b8e87cacc848a4322e013ce368a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410466"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,20 +63,20 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 
 * DATABASE_DDL_TRIGGER
 
-* SERVER_DDL_TRIGGER- **適用**于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。
+* SERVER_DDL_TRIGGER- **適用** 于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。
 
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 當對模組的基礎物件進行變更時，應執行**sp_refreshsqlmodule** ，以影響其定義。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理視圖，您可以使用 **sp_refreshsqlmodule** 或 **sp_refreshview** 具有相同的結果。  
+ 當對模組的基礎物件進行變更時，應執行 **sp_refreshsqlmodule** ，以影響其定義。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理視圖，您可以使用 **sp_refreshsqlmodule** 或 **sp_refreshview** 具有相同的結果。  
   
  **sp_refreshsqlmodule** 不會影響與物件相關聯的任何許可權、擴充屬性或 SET 選項。  
   
  若要重新整理伺服器層級 DDL 觸發程序，請從任何資料庫的內容執行此預存程序。  
   
 > [!NOTE]  
->  當您執行 **sp_refreshsqlmodule**時，會卸載與物件相關聯的任何簽章。  
+>  當您執行 **sp_refreshsqlmodule** 時，會卸載與物件相關聯的任何簽章。  
   
 ## <a name="permissions"></a>權限  
  需要模組的 ALTER 權限，以及物件所參考之任何 CLR 使用者自訂型別和 XML 結構描述集合的 REFERENCES 權限。 當指定的模組是資料庫層級 DDL 觸發程序時，便需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。 當指定的模組是伺服器層級 DDL 觸發程序時，便需要 CONTROL SERVER 權限。  

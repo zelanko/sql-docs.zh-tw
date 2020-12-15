@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ab6d2bb6b1abff0eb2d6a4d30e29464bf7485f8
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 184092b29a8837d8a7759d63428864978d7146d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97411115"
 ---
 # <a name="view_table_usage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "91753550"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**Nvarchar (** 128 **) **|檢視限定詞。|  
-|**VIEW_SCHEMA**|**Nvarchar (** 128 **) **|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
+|**VIEW_CATALOG**|**Nvarchar (** 128 **)**|檢視限定詞。|  
+|**VIEW_SCHEMA**|**Nvarchar (** 128 **)**|包含檢視的結構描述名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
 |**VIEW_NAME**|**sysname**|檢視名稱。|  
-|**TABLE_CATALOG**|**Nvarchar (** 128 **) **|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar (** 128 **) **|包含基底資料表之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|包含基底資料表之結構描述的名稱。<br /><br /> **&#42;&#42; 重要 &#42;&#42;**  只有可靠的方法可尋找物件的架構，就是查詢 sys. objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|作為檢視基礎的基底資料表。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,6 +1,6 @@
 ---
-description: 'sys. query_store_runtime_stats (Transact-sql) '
-title: sys. query_store_runtime_stats (Transact-sql) |Microsoft Docs
+description: 'sys.query_store_runtime_stats (Transact-sql) '
+title: sys.query_store_runtime_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,24 +21,24 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbd5012eeb5f790daf733b3db23a6f62fa12e26f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ebcb684b424bf7ca3de384ad57b82c0c48b538f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542469"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404340"
 ---
-# <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql) 
+# <a name="sysquery_store_runtime_stats-transact-sql"></a>sys.query_store_runtime_stats (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   包含有關查詢執行時間執行統計資料資訊的資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|代表 **plan_id**、 **execution_type** 和 **runtime_stats_interval_id**之執行時間執行統計資料之資料列的識別碼。 它只有過去的執行時間統計資料間隔才是唯一的。 針對目前使用中的間隔，可能會有多個資料列代表 **plan_id**所參考之計畫的執行時間統計資料，並以 **execution_type**表示的執行類型。 一般而言，一個資料列代表排清至磁片的執行時間統計資料，而其他 (s) 表示記憶體內部狀態。 因此，若要取得每個間隔的實際狀態，您需要匯總計量、依 **plan_id**分組 **execution_type** 和 **runtime_stats_interval_id**。<br/>**注意：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 一律會傳回零 (0) 。|
-|**plan_id**|**bigint**|外鍵。 聯結至 [sys. query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
-|**runtime_stats_interval_id**|**bigint**|外鍵。 聯結至 [sys. query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
+|**runtime_stats_id**|**bigint**|代表 **plan_id**、 **execution_type** 和 **runtime_stats_interval_id** 之執行時間執行統計資料之資料列的識別碼。 它只有過去的執行時間統計資料間隔才是唯一的。 針對目前使用中的間隔，可能會有多個資料列代表 **plan_id** 所參考之計畫的執行時間統計資料，並以 **execution_type** 表示的執行類型。 一般而言，一個資料列代表排清至磁片的執行時間統計資料，而其他 (s) 表示記憶體內部狀態。 因此，若要取得每個間隔的實際狀態，您需要匯總計量、依 **plan_id** 分組 **execution_type** 和 **runtime_stats_interval_id**。<br/>**注意：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 一律會傳回零 (0) 。|
+|**plan_id**|**bigint**|外鍵。 [Sys.query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)的聯結。|  
+|**runtime_stats_interval_id**|**bigint**|外鍵。 [Sys.query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)的聯結。|  
 |**execution_type**|**tinyint**|決定查詢執行的類型：<br /><br /> 0-定期執行 (成功完成) <br /><br /> 3-用戶端起始的已中止執行<br /><br /> 4-例外狀況已中止執行|  
 |**execution_type_desc**|**nvarchar(128)**|執行類型欄位的文字描述：<br /><br /> 0-一般<br /><br /> 3-已中止<br /><br /> 4-例外狀況|  
 |**first_execution_time**|**datetimeoffset**|匯總間隔內查詢計劃的首次執行時間。 這指的是查詢執行的結束時間。|  
@@ -109,13 +109,13 @@ ms.locfileid: "89542469"
 需要 `VIEW DATABASE STATE` 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. query_coNtext_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys. query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_coNtext_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
