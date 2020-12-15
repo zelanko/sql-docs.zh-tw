@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5e8a399d58c4ffa4f61e9509bd243f7e9c71275e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 4d4249026f091765df63d71f9e7d7b46963ccbfb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037721"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440808"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92037721"
 |modify_date|**datetime**|顯示修改加密金鑰的日期。|  
 |set_date|**datetime**|顯示加密金鑰套用到資料庫的日期。|  
 |opened_date|**datetime**|顯示上次開啟資料庫索引鍵的日期。|  
-|key_algorithm|**Varchar (？ ) **|顯示用於金鑰的演算法。|  
+|key_algorithm|**Varchar (？ )**|顯示用於金鑰的演算法。|  
 |key_length|**int**|顯示金鑰的長度。|  
 |encryptor_thumbprint|**varbin**|顯示加密程式的指模。|  
 |percent_complete|**real**|資料庫加密狀態變更的完成百分比。 如果沒有狀態變更，這將會是 0。|  

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: ddc12f05-edeb-4848-b6d7-e851684cf044
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d62376e67c8da60a3d42510abb2835c09e7731fa
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: ab7974ad344765d567d7b7fdb62d6e1b71d20892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035249"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440753"
 ---
 # <a name="sysdm_pdw_os_threads-transact-sql"></a>sys.dm_pdw_os_threads (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92035249"
 |NAME|**nvarchar(255)**|||  
 |priority|**int**|||  
 |start_time|**datetime**|||  
-|狀態|**nvarchar(32)**|||  
+|state|**nvarchar(32)**|||  
 |wait_reason|**nvarchar(32)**|||  
 |total_processor_elapsed_time|**bigint**|執行緒使用的核心時間總計。||  
 |total_user_elapsed_time|**bigint**|執行緒使用的總使用者時間||  

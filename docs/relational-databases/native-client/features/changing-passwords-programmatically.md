@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a356ea0603d096fc339495f028b1e4f86af81f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892008"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463379"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>以程式設計方式變更 SQL Server Native Client 密碼
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "91892008"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者可透過使用者介面和程式設計的方式，支援密碼到期。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 使用者介面密碼逾期  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者可透過對**SQL Server 登**入對話方塊所做的變更，來支援密碼到期。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者可透過對 **SQL Server 登** 入對話方塊所做的變更，來支援密碼到期。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
   
  如果 DBPROP_INIT_PROMPT 已設定為其他任何值，不管密碼是否到期，使用者都會看到 [SQL Server 登入]  對話方塊。 使用者可以按一下 [選項]  按鈕，然後核取 [變更密碼]  來變更密碼。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "91892008"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者可透過使用者介面和程式設計的方式，支援密碼到期。  
   
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC 使用者介面密碼逾期  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會透過對**SQL Server 登**入對話方塊所做的變更，來支援密碼到期。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會透過對 **SQL Server 登** 入對話方塊所做的變更，來支援密碼到期。  
   
- 如果呼叫 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) ，且 **DriverCompletion** 的值設定為 SQL_DRIVER_NOPROMPT，則如果密碼已過期，初始連接嘗試就會失敗。 後續呼叫 **SQLError** 或 **SQLGetDiagRec**時，會傳回 SQLSTATE 值28000和原生錯誤碼值18487。  
+ 如果呼叫 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) ，且 **DriverCompletion** 的值設定為 SQL_DRIVER_NOPROMPT，則如果密碼已過期，初始連接嘗試就會失敗。 後續呼叫 **SQLError** 或 **SQLGetDiagRec** 時，會傳回 SQLSTATE 值28000和原生錯誤碼值18487。  
   
  如果 **DriverCompletion** 已設定為任何其他值，無論密碼是否過期，使用者都會看到 **SQL Server 登** 入對話方塊。 使用者可以按一下 [選項]  按鈕，然後核取 [變更密碼]  來變更密碼。  
   

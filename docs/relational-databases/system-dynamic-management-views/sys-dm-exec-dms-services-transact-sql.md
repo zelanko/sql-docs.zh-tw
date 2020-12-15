@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11c2b3a3212d803356a543bea84de4ef7d3a68d2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6eb6b91b09ea23bb0e89dc0cdc42e17b3d78bbfa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464579"
 ---
 # <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-sql) 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91834550"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|與 DMS 核心相關聯的唯一數值識別碼。 此視圖的索引鍵。|唯一識別碼。|  
-|compute_node_id|`int`|此 DMS 服務執行所在的節點識別碼|請參閱[sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的*compute_node_id* 。|  
+|compute_node_id|`int`|此 DMS 服務執行所在的節點識別碼|請參閱 [sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的 *compute_node_id* 。|  
 |status|`nvarchar(32)`|DMS 服務的目前狀態||
 |compute_pool_id|`int`|集區的唯一識別碼。|
 

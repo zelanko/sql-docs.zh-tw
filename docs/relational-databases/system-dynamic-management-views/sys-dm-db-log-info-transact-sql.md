@@ -1,6 +1,6 @@
 ---
-description: 'sys. dm_db_log_info (Transact-sql) '
-title: sys. dm_db_log_info (Transact-sql) |Microsoft Docs
+description: 'sys.dm_db_log_info (Transact-sql) '
+title: sys.dm_db_log_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447660"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440823"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-sql) 
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-sql) 
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 傳回交易記錄檔 [ (VLF) 資訊的虛擬記錄 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 檔。 請注意，所有交易記錄檔都會合並在資料表輸出中。 輸出中的每個資料列都代表交易記錄中的 VLF，並在記錄檔中提供與該 VLF 相關的資訊。
@@ -59,8 +59,8 @@ sys.dm_db_log_info ( database_id )
 |vlf_active|**bit** |指出 [ (VLF) 的虛擬記錄 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 檔是否正在使用中。 <br />0-VLF 不在使用中。<br />1-VLF 為作用中。|
 |vlf_status|**int** |虛擬記錄檔的狀態 [ (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。 可能的值包括 <br />0-VLF 非使用中 <br />1-VLF 已初始化但未使用 <br /> 2-VLF 為作用中。|
 |vlf_parity|**tinyint** |[虛擬記錄檔 (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的同位檢查。在內部用來判斷 VLF 中的記錄結尾。|
-|vlf_first_lsn|**Nvarchar (48) ** |[ () ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 虛擬記錄檔中第一筆記錄的記錄序號， [ (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
-|vlf_create_lsn|**Nvarchar (48) ** |[ (VLF) 建立虛擬記錄](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)檔之記錄檔記錄[ (LSN) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的記錄序號。|
+|vlf_first_lsn|**Nvarchar (48)** |[ () ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 虛擬記錄檔中第一筆記錄的記錄序號， [ (VLF) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_create_lsn|**Nvarchar (48)** |[ (VLF) 建立虛擬記錄](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)檔之記錄檔記錄[ (LSN) ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的記錄序號。|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **適用對象：** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 如果使用 [透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md)加密 VLF，則顯示 VLF 的加密程式指紋，否則為 Null。 |
 
 ## <a name="remarks"></a>備註

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c87ba11d6a38b69c63839db9b918fe44dbca2641
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006017"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97444269"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "92006017"
   針對目前資料庫中的每個資料分割，各傳回其頁面和資料列計數資訊。  
   
 > [!NOTE]  
-> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_db_partition_stats**名稱。 Sys.dm_pdw_nodes_db_partition_stats 中的 partition_id 與 Azure Synapse Analytics 之 sys. 分割目錄檢視中的 partition_id 不同。
+> 若要從或呼叫這個 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，請使用 **sys.dm_pdw_nodes_db_partition_stats** 名稱。 Sys.dm_pdw_nodes_db_partition_stats 中的 partition_id 與 Azure Synapse Analytics 之 sys. 分割目錄檢視中的 partition_id 不同。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與**sys.** 分割目錄檢視中的**partition_id**值相同，但 Azure Synapse Analytics 除外。|  
+|**partition_id**|**bigint**|資料分割的識別碼。 在資料庫中，這是唯一的。 這與 **sys.** 分割目錄檢視中的 **partition_id** 值相同，但 Azure Synapse Analytics 除外。|  
 |object_id|**int**|資料分割所屬資料表或索引檢視的物件識別碼。|  
 |**index_id**|**int**|資料分割所屬之堆積或索引的識別碼。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引。<br /><br /> > 1 = 非叢集索引|  
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|  
@@ -49,11 +49,11 @@ ms.locfileid: "92006017"
 |**lob_reserved_page_count**|**bigint**|資料分割中為儲存和管理 out-of-row **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 保留在資料分割中儲存和管理資料行存放區索引的 LOB 總數。|  
 |**row_overflow_used_page_count**|**bigint**|資料分割中用來儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行的頁數。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
 |**row_overflow_reserved_page_count**|**bigint**|資料分割中為儲存管理資料列溢位 **varchar**、**nvarchar**、**varbinary** 和 **sql_variant** 資料行所保留的頁數，不管這些頁面是否正在使用中。 IAM 頁數包括在內。<br /><br /> 永遠是 0，表示資料行存放區索引。|  
-|**used_page_count**|**bigint**|資料分割的總使用頁數。 計算為**in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
-|**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算為**in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
+|**used_page_count**|**bigint**|資料分割的總使用頁數。 計算為 **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**。|  
+|**reserved_page_count**|**bigint**|資料分割的總保留頁數。 計算為 **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|此資料分割中大約的資料列數目。|  
-|**pdw_node_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
-|**distribution_id**|**int**|**適用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
+|**pdw_node_id**|**int**|**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此散發所在之節點的識別碼。|  
+|**distribution_id**|**int**|**適用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與散發相關聯的唯一數值識別碼。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_partition_stats** 顯示資料庫中所有資料分割用來儲存和管理同資料列資料、LOB 資料和資料列溢位資料的空間相關資訊。 每個資料分割顯示一個資料列。  

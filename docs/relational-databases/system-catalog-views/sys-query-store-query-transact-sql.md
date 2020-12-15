@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1099243569f74cc5c50c90de1ec7bf35a5c53d51
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2cef670429ad9a086916e49049b7e28d03ad424f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005822"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462799"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys.query_store_query (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92005822"
 |**coNtext_settings_id**|**bigint**|外鍵。 [Sys.query_coNtext_settings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)的聯結。<br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |object_id|**bigint**|查詢屬於 (預存程式、觸發程式、CLR UDF/UDAgg 等 ) 之資料庫物件的識別碼。 0：如果查詢未以資料庫物件的一部分執行， (臨機操作查詢) 。<br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**batch_sql_handle**|**varbinary(64)**|查詢所屬的語句批次識別碼。 只有在查詢參考臨時表或資料表變數時才會填入。<br/>**注意：** Azure Synapse Analytics 一律會傳回 *Null*。|  
-|**query_hash**|**二元 (8) **|根據邏輯查詢樹狀結構之個別查詢的 MD5 雜湊。 包含優化工具提示。|  
+|**query_hash**|**二元 (8)**|根據邏輯查詢樹狀結構之個別查詢的 MD5 雜湊。 包含優化工具提示。|  
 |**is_internal_query**|**bit**|查詢是在內部產生的。<br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**query_parameterization_type**|**tinyint**|參數化的種類：<br /><br /> 0 - 無<br /><br /> 1-使用者<br /><br /> 2-簡單<br /><br /> 3-強制<br/>**注意：** Azure Synapse Analytics 一律會傳回零 (0) 。|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|參數型別的文字描述。<br/>**注意：** Azure Synapse Analytics 一律會傳回 *None*。|  

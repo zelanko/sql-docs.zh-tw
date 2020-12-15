@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458477"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91833866"
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定資料表或檢視之資料和索引的大小和片段資訊。 如果是索引，則針對每個分割區中每個層級的 B 型樹狀目錄，各傳回一個資料列。 如果是堆積，則針對每個分割區中的 IN_ROW_DATA 配置單位，各傳回一個資料列。 如果是大型物件 (LOB) 資料，則針對每個分割區中的 LOB_DATA 配置單位，各傳回一個資料列。 如果資料表中有資料列溢位資料，則針對每個分割區中的 ROW_OVERFLOW_DATA 配置單位，各傳回一個資料列。 不傳回 xVelocity 記憶體最佳化資料行存放區索引的相關資訊。  
   
 > [!IMPORTANT]
-> 如果您在裝載 Always On[可讀取次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)的伺服器實例上查詢**sys.dm_db_index_physical_stats** ，您可能會遇到重做封鎖問題。 這是因為此動態管理檢視會取得指定使用者資料表或檢視表的 IS 鎖定，並因此而封鎖了對該使用者資料表或檢視表之 X 鎖定的 REDO 執行緒要求。  
+> 如果您在裝載 Always On [可讀取次要複本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)的伺服器實例上查詢 **sys.dm_db_index_physical_stats** ，您可能會遇到重做封鎖問題。 這是因為此動態管理檢視會取得指定使用者資料表或檢視表的 IS 鎖定，並因此而封鎖了對該使用者資料表或檢視表之 X 鎖定的 REDO 執行緒要求。  
   
  **sys.dm_db_index_physical_stats** 不會傳回記憶體優化索引的相關資訊。 如需記憶體優化索引使用的詳細資訊，請參閱 [sys.dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
   
@@ -59,7 +59,7 @@ sys.dm_db_index_physical_stats (
  *database_id* \| Null \| 0 \| 預設值  
  資料庫的識別碼。 *database_id* 為 **Smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
- 請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 Null 做為 *database_id*，您也必須針對 *object_id*、 *index_id*和 *partition_number*指定 null。  
+ 請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 Null 做為 *database_id*，您也必須針對 *object_id*、 *index_id* 和 *partition_number* 指定 null。  
   
  可以指定內建函數 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 在不指定資料庫名稱的情況下使用 DB_ID 時，目前資料庫的相容性層級必須是 90 或 90 以上。  
   
@@ -68,12 +68,12 @@ sys.dm_db_index_physical_stats (
   
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ，有效的輸入也包含 service broker 佇列名稱或佇列內部資料表名稱。 套用預設參數時 (也就是所有物件、所有索引等) ，都會將所有佇列的片段資訊都包含在結果集中。  
   
- 請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的相關資訊。 如果您指定 Null 做為 *object_id*，您也必須為 *index_id* 和 *partition_number*指定 null。  
+ 請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的相關資訊。 如果您指定 Null 做為 *object_id*，您也必須為 *index_id* 和 *partition_number* 指定 null。  
   
  *index_id* \| 0 \| Null \| -1 \| 預設值  
  這是索引的識別碼。 *index_id* 為 **int**。有效的輸入為索引的識別碼、0（如果 *object_id* 是堆積、Null、-1 或預設值）。 預設值為 -1。 Null、-1 和 DEFAULT 是這個內容中的相同值。  
   
- 請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您指定 Null 做為 *index_id*，您也必須為 *partition_number*指定 null。  
+ 請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您指定 Null 做為 *index_id*，您也必須為 *partition_number* 指定 null。  
   
  *partition_number* \| Null \| 0 \| 預設值  
  這是物件的分割區編號。 *partition_number* 為 **int**。有效的輸入為索引或堆積的 *partion_number* 、Null、0或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
@@ -95,7 +95,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|在主控物件內，以 1 為基底的分割區編號；資料表、檢視表或索引。<br /><br /> 1 = 非分割區的索引或堆積。|  
 |index_type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br />  (內部) 的資料行存放區對應索引<br /><br />  (內部) 的資料行存放區 DELETEBUFFER 索引<br /><br />  (內部) 的資料行存放區 DELETEBITMAP 索引|  
 |hobt_id|**bigint**|索引或資料分割的堆積或 B 型樹狀目錄識別碼。<br /><br /> 除了傳回使用者定義索引的 hobt_id，這也會傳回內部資料行存放區索引的 hobt_id。|  
-|alloc_unit_type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 配置單位包含儲存在 **text**、 **Ntext**、 **image**、 **Varchar (max) **、 **Nvarchar (max) **、 **Varbinary (max) **和 **xml**類型之資料行中的資料。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在 **Varchar (n) **、 **Nvarchar (n) **、 **Varbinary (n) **的資料行中的資料，以及已推入非資料列的 **SQL_variant** 。|  
+|alloc_unit_type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 配置單位包含儲存在 **text**、 **Ntext**、 **image**、 **Varchar (max)**、 **Nvarchar (max)**、 **Varbinary (max)** 和 **xml** 類型之資料行中的資料。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在 **Varchar (n)**、 **Nvarchar (n)**、 **Varbinary (n)** 的資料行中的資料，以及已推入非資料列的 **SQL_variant** 。|  
 |index_depth|**tinyint**|索引層級的數目。<br /><br /> 1 = 堆積，或 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位。|  
 |index_level|**tinyint**|索引的目前層級。<br /><br /> 如果是索引分葉層級、堆積和 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為 0。<br /><br /> 如果是非分葉索引層級，則大於 0。 *index_level* 會在索引的根層級最高。<br /><br /> 只有當 *mode* = 詳細時，才會處理索引的非分葉層級。|  
 |avg_fragmentation_in_percent|**float**|IN_ROW_DATA 配置單位中，索引的邏輯片段或是堆積的範圍片段。<br /><br /> 其值以百分比表示，而且會考量多個檔案。 如需邏輯和範圍片段的定義，請參閱＜備註＞一節。<br /><br /> 如果是 LOB_DATA 和 ROW_OVERFLOW_DATA 配置單位，則為 0。<br /><br /> 當 *mode* = 取樣時，堆積的 Null。|  
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  
   
 ## <a name="scanning-modes"></a>掃描模式  
- 執行該函數的模式決定了取得該函數所用之統計資料所執行的掃描層級。 *模式* 已指定為 [有限]、[已取樣] 或 [詳細]。 此函數會周遊構成資料表或索引之指定分割區的配置單位頁面鏈結。 sys.dm_db_index_physical_stats 只需要意圖共用 () 表鎖，而不論其執行的模式為何。  
+ 執行該函數的模式決定了取得該函數所用之統計資料所執行的掃描層級。 *模式* 已指定為 [有限]、[已取樣] 或 [詳細]。 此函數會周遊構成資料表或索引之指定分割區的配置單位頁面鏈結。 sys.dm_db_index_physical_stats 只需要 Intent-Shared (是) 表鎖，而不論其執行的模式為何。  
   
  LIMITED 模式是最快的模式，而且可以掃描最少的頁數。 若是索引，僅會掃描 B 型樹狀目錄的父層級頁 (亦即分葉層級上面的頁面)。 若是堆積，則會檢查相關聯的 PFS 和 IAM 頁面，並以 LIMITED 模式掃描堆積的資料頁面。  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系統函數指定參數值  
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 和 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 的函數來指定 *database_id* 和 *object_id* 參數的值。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 例如，如果找不到資料庫或物件名稱 (因為不存在或是拼法不正確)，這兩個函數都會傳回 NULL。 sys.dm_db_index_physical_stats 函數會將 NULL 解譯為萬用字元值，指定所有的資料庫或物件。  
   
- 此外，OBJECT_ID 函數會在呼叫 sys.dm_db_index_physical_stats 函數之前進行處理，因此會在目前資料庫的內容中進行評估，而不是在 *database_id*中指定的資料庫。 這個行為可能會讓 OBJECT_ID 函數傳回 NULL 值；如果物件名稱同時存在於目前的資料庫內容和指定的資料庫中，則可能會傳回錯誤訊息。 下列範例示範這些意料之外的結果。  
+ 此外，OBJECT_ID 函數會在呼叫 sys.dm_db_index_physical_stats 函數之前進行處理，因此會在目前資料庫的內容中進行評估，而不是在 *database_id* 中指定的資料庫。 這個行為可能會讓 OBJECT_ID 函數傳回 NULL 值；如果物件名稱同時存在於目前的資料庫內容和指定的資料庫中，則可能會傳回錯誤訊息。 下列範例示範這些意料之外的結果。  
   
 ```  
 USE master;  

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b758dafadc743ffc6c51c6d1c94ab3a5ea597e2d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 28c2f14eebfecd386cc49678a1429b678a428239
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037681"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440773"
 ---
 # <a name="sysdm_pdw_nodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "92037681"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。<br /><br /> 此視圖的索引鍵。|無論何種類型，在設備間都是唯一的。|  
-|type|**nvarchar(32)**|節點的類型。|「計算」、「控制」、「管理」|  
+|類型|**nvarchar(32)**|節點的類型。|「計算」、「控制」、「管理」|  
 |NAME|**nvarchar(32)**|節點的邏輯名稱。|適當長度的任何字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|格式為 [0-255]。[0-255]。[0-255]。[0-255]。|  
 |is_passive|**int**|指出執行節點的虛擬機器是否正在指派的伺服器上執行，或已容錯移轉至待命伺服器。|0-節點 VM 正在源伺服器上執行。<br /><br /> 1-節點 VM 正在待命伺服器上執行。|  

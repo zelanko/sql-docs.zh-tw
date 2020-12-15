@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c774b419283ea0d4799ef89c8628095424f169bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e1961dec1f32006d7a4b3d91b7b8763f34ce3514
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498173"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440611"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |1|指定的資料行位於 *change_columns* 清單中。|  
   
 ## <a name="remarks"></a>備註  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK 不會執行任何檢查以驗證*column_id*值，或從取得*column_id*的資料表取得*change_columns*參數。  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK 不會執行任何檢查以驗證 *column_id* 值，或從取得 *column_id* 的資料表取得 *change_columns* 參數。  
   
 ## <a name="examples"></a>範例  
  下列範例可判斷是否更新 `Salary` 資料表的 `Employees` 資料行。 函數會傳回資料 `COLUMNPROPERTY` 行的資料行識別碼 `Salary` 。 `@change_columns` 區域變數必須使用 CHANGETABLE 設定為查詢結果，做為資料來源。  
@@ -73,7 +73,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
   
 ## <a name="see-also"></a>另請參閱  
  [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

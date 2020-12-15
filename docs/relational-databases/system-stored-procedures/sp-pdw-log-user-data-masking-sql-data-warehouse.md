@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2d2b3de8cf86e7597c944b827326dd070bc2ffce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255606"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461549"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "92255606"
   使用 **sp_pdw_log_user_data_masking** 來啟用活動記錄中的使用者資料遮罩 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 使用者資料遮罩會影響設備上所有資料庫上的語句。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]受**sp_pdw_log_user_data_masking**影響的活動記錄是特定的 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄。 **sp_pdw_log_user_data_masking** 不會影響資料庫交易記錄檔或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。  
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]受 **sp_pdw_log_user_data_masking** 影響的活動記錄是特定的 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄。 **sp_pdw_log_user_data_masking** 不會影響資料庫交易記錄檔或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。  
   
- **背景：** 在預設的設定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄中包含完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的語句，而且在某些情況下，可能會包含包含在作業中的使用者資料，例如 **INSERT**、 **UPDATE**和 **SELECT** 語句。 如果設備發生問題，這允許分析造成問題的狀況，而不需要重現問題。 為了防止使用者資料寫入 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄，客戶可以選擇使用此預存程式來開啟使用者資料遮罩。 這些語句仍會寫入至 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄，但是語句中可能包含使用者資料的所有常值都會被遮罩，並取代為一些預先定義的常數值。  
+ **背景：** 在預設的設定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄中包含完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的語句，而且在某些情況下，可能會包含包含在作業中的使用者資料，例如 **INSERT**、 **UPDATE** 和 **SELECT** 語句。 如果設備發生問題，這允許分析造成問題的狀況，而不需要重現問題。 為了防止使用者資料寫入 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄，客戶可以選擇使用此預存程式來開啟使用者資料遮罩。 這些語句仍會寫入至 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 活動記錄，但是語句中可能包含使用者資料的所有常值都會被遮罩，並取代為一些預先定義的常數值。  
   
  在設備上啟用透明資料加密時，會 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 自動開啟活動記錄中的使用者資料遮罩。  
   

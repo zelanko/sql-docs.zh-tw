@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba692ae14a1632a59c3a56c0f7ac68072dee7eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a011e8f19650dad1c52b4a88e81edf28eb0bfc47
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462689"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'name'` 這是使用者定義資料表或視圖的限定或非限定名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *名稱* 是 **Nvarchar (776) **，沒有預設值。  
+`[ @objname = ] 'name'` 這是使用者定義資料表或視圖的限定或非限定名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *名稱* 是 **Nvarchar (776)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,8 +51,8 @@ sp_helpindex [ @objname = ] 'name'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|索引名稱。|  
-|**index_description**|**Varchar (210) **|索引描述，其中包括所在的檔案群組。|  
-|**index_keys**|**Nvarchar (2078) **|建立索引的資料表或檢視資料行。|  
+|**index_description**|**Varchar (210)**|索引描述，其中包括所在的檔案群組。|  
+|**index_keys**|**Nvarchar (2078)**|建立索引的資料表或檢視資料行。|  
   
  遞減索引資料行會列在結果集中，名稱後面會有一個減號 (-)；預設值是遞增索引資料行，會單獨列出名稱。  
   

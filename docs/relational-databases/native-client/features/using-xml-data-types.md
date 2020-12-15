@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b095eace82538b8d10efd0c628b467560ef36edf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76b24491df72773fb45b0513720151ed9a9c6585
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428210"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461959"
 ---
 # <a name="using-xml-data-types-in-sql-server-native-clients"></a>在 SQL Server 的原生用戶端中使用 XML 資料類型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88428210"
 -   **ISequentialStream**  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者不包含 SAX 讀取器，但**ISequentialStream**可以輕鬆地傳遞到 MSXML 中的 sax 和 DOM 物件。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者不包含 SAX 讀取器，但 **ISequentialStream** 可以輕鬆地傳遞到 MSXML 中的 sax 和 DOM 物件。  
   
  **ISequentialStream** 應該用於抓取大型 XML 檔。 用於其他大數值類型的相同技術也適用於 XML。 如需詳細資訊，請參閱[使用大數值類型](../../../relational-databases/native-client/features/using-large-value-types.md)。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88428210"
 |DBTYPE_WSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|沒有問題<sup>6, 9, 10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|透過 **ISequentialStream** 的位元組資料流<sup>7</sup>|N/A <sup>2</sup>|透過 **ISequentialStream** 的位元組資料流<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|透過 **ISequentialStream** 的位元組資料流 <sup>7</sup>|N/A <sup>2</sup>|透過 **ISequentialStream** 的位元組資料流 <sup>11</sup>|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>3</sup>|N/A <sup>2</sup>|  
   
@@ -191,7 +191,7 @@ ms.locfileid: "88428210"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將新的值或變更加入到許多核心 OLE DB 介面。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 介面  
- 為了透過 OLE DB 支援 **xml** 資料類型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會執行一些變更，包括加入 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters**的三種方法; **GetParameterInfo**、 **MapParameterNames**和 **SetParameterInfo**; **ISSCommandWithParameters** 提供用來處理伺服器特定資料類型的 [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法。  
+ 為了透過 OLE DB 支援 **xml** 資料類型， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會執行一些變更，包括加入 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters** 的三種方法; **GetParameterInfo**、 **MapParameterNames** 和 **SetParameterInfo**; **ISSCommandWithParameters** 提供用來處理伺服器特定資料類型的 [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  
@@ -244,12 +244,12 @@ ms.locfileid: "88428210"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]當資料行大小無法在[SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)函式中判斷時，Native Client ODBC 驅動程式會報告 SQL_SS_LENGTH_UNLIMITED。  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將 SQL_SS_LENGTH_UNLIMITED 報告為[SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)函數中**xml**資料類型的最大 COLUMN_SIZE。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將 SQL_SS_LENGTH_UNLIMITED 報告為 [SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)函數中 **xml** 資料類型的最大 COLUMN_SIZE。  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
- [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)函式與**SQLColumns**函數具有相同的資料行新增專案。  
+ [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)函式與 **SQLColumns** 函數具有相同的資料行新增專案。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將 SQL_SS_LENGTH_UNLIMITED 報告為**xml**資料類型的最大 COLUMN_SIZE。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驅動程式會將 SQL_SS_LENGTH_UNLIMITED 報告為 **xml** 資料類型的最大 COLUMN_SIZE。  
   
 ### <a name="supported-conversions"></a>支援的轉換  
  從 SQL 轉換成 C 資料類型時，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 全都可以轉換成 SQL_SS_XML，其條件如下：  

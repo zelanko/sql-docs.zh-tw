@@ -1,6 +1,6 @@
 ---
 description: sys.partition_parameters (Transact-SQL)
-title: sys. partition_parameters (Transact-sql) |Microsoft Docs
+title: sys.partition_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0231c80c4c122703bd3ede4315e13362e49c34
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 50aac8964e9b18922f88e33dce2c2b99c14b0348
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462849"
 ---
 # <a name="syspartition_parameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "89542510"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|這個參數所屬資料分割函數的識別碼。|  
 |**parameter_id**|**int**|參數的識別碼。 它在資料分割函數中是唯一的，以 1 為開頭。|  
-|**system_type_id**|**tinyint**|參數系統類型的識別碼。 對應于**sys. 類型**目錄檢視的**system_type_id**資料行。|  
+|**system_type_id**|**tinyint**|參數系統類型的識別碼。 對應于 **sys. 類型** 目錄檢視的 **system_type_id** 資料行。|  
 |**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是參數的有效位數；否則，便是 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是參數的定序名稱；否則，便是 NULL。|  
-|**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 若為系統資料類型，請**user_type_id**  =  **system_type_id**。|  
+|**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 若為系統資料類型，請 **user_type_id**  =  **system_type_id**。|  
   
 ## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

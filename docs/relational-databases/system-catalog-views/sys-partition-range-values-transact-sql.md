@@ -1,6 +1,6 @@
 ---
 description: sys.partition_range_values (Transact-SQL)
-title: sys. partition_range_values (Transact-sql) |Microsoft Docs
+title: sys.partition_range_values (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924640e4f30a47ecacb911567ab8f6d766bf4182
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0617f01056af48341e616f10fca1cadabdf98299
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551468"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458495"
 ---
 # <a name="syspartition_range_values-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89551468"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|這個範圍界限值的資料分割函數識別碼。|  
 |**boundary_id**|**int**|界限值 Tuple 的識別碼 (以 1 為基底的序數)，最左邊的界限是以識別碼 1 開始。|  
-|**parameter_id**|**int**|這個值對應之函數的參數識別碼。 此資料行中的值會對應至任何特定**function_id**的**sys. partition_parameters**目錄檢視之**parameter_id**資料行中的值。|  
+|**parameter_id**|**int**|這個值對應之函數的參數識別碼。 此資料行中的值會對應至任何特定 **function_id** 之 **sys.partition_parameters** 目錄檢視的 [ **parameter_id** ] 資料行中的值。|  
 |**value**|**sql_variant**|實際的界限值。|  
   
 ## <a name="permissions"></a>權限  

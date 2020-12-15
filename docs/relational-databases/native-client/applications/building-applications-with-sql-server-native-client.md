@@ -1,6 +1,6 @@
 ---
 title: 建置應用程式
-description: 瞭解如何使用 SQL Server Native Client 程式庫來建立應用程式，並從 MDAC、標頭檔和程式庫檔案，以及連接字串進行升級。
+description: 利用 SQL Server Native Client 程式庫，瞭解如何建立應用程式，並從 MDAC、標頭檔和程式庫檔案，以及連接字串升級。
 ms.custom: ''
 ms.date: 12/16/2019
 ms.prod: sql
@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efb4fea164129627f846571a8a2913afc7097260
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e837d1e74df620964dea8bedc7aebe2a5298eee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012928"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462089"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

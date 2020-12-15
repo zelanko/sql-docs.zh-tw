@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 author: markingmyname
 ms.author: maghan
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2a5715df9f95f6f2090ba4a25ddc22329bb4160
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 67a0bf0b52b0fc4d31400bf009476d76fdc1b1f5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035246"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440759"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys.dm_pdw_os_performance_counters (Transact-sql) 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "92035246"
 |counter_name|**nvarchar(255)**|Windows 效能計數器的名稱。||  
 |counter_category|**nvarchar(255)**|Windows 效能計數器類別的名稱。||  
 |instance_name|**nvarchar(255)**|計數器的特定執行個體名稱。||  
-|counter_value|**Decimal (38，10) **|計數器的目前值。||  
-|last_update_time|**Datetime2 (3) **|上次更新值的時間戳記。||  
+|counter_value|**Decimal (38，10)**|計數器的目前值。||  
+|last_update_time|**Datetime2 (3)**|上次更新值的時間戳記。||  
   
 ## <a name="see-also"></a>另請參閱  
  [Azure Synapse Analytics 和平行處理資料倉儲動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

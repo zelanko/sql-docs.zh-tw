@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2a97a7ac060e22ee352324a454f321e1c7d1f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8a80a3d63339afd700b324bee7588c69a77e58
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498809"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463309"
 ---
 # <a name="stored-procedures---calling-in-sql-server-native-client"></a>預存程式-在 SQL Server Native Client 中呼叫
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "88498809"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**？ =**]**呼叫**_procedure_name_[** (**[*參數*] [**，**[*參數*]] .。。**) **]}  
+ {[**？ =**]**呼叫**_procedure_name_[**(**[*參數*] [**，**[*參數*]] .。。**)**]}  
   
  例如：  
   

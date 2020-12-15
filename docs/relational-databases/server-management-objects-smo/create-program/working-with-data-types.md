@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1939f6608b6175463103fce2a69a3d5936346605
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420302"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462999"
 ---
 # <a name="working-with-data-types"></a>使用資料類型
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88420302"
   
 -   使用類別的其中一個靜態成員 <xref:Microsoft.SqlServer.Management.Smo.DataType> ，例如 **Int**。這實際上會傳回物件的實例 <xref:Microsoft.SqlServer.Management.Smo.DataType> 。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DataType> 物件有好幾個屬性會定義資料的類型。 例如，<xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 屬性會指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型的常數值會列在 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 列舉中。 這是指像是 **varchar**、 **nchar**、 **currency**、 **integer**、 **float**和 **datetime**等資料類型。  
+ <xref:Microsoft.SqlServer.Management.Smo.DataType> 物件有好幾個屬性會定義資料的類型。 例如，<xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 屬性會指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型的常數值會列在 <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> 列舉中。 這是指像是 **varchar**、 **nchar**、 **currency**、 **integer**、 **float** 和 **datetime** 等資料類型。  
   
  當建立該資料類型時，必須為資料設定特定的屬性。 例如，如果它是 **nchar** 類型，字串資料的長度必須在 **Length** 屬性中設定。 這同樣適用於數值，您必須為數值指定有效位數及小數位數。  
   

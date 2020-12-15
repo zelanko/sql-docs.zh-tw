@@ -1,6 +1,6 @@
 ---
 description: sys.computed_columns (Transact-SQL)
-title: sys. computed_columns (Transact-sql) |Microsoft Docs
+title: sys.computed_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daf06e478668d41320e6db1f5e4f410f099c5a8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b0f6f74e61ce938afcacffb3304cf40365cd4dc0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542639"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459902"
 ---
 # <a name="syscomputed_columns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89542639"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<Inherited columns>**||**Sys. computed_columns** view 會傳回**sys. columns**視圖中的所有資料行。 另外亦將傳回以下所述的其他資料行。 如需 **sys. computed_columns** view 繼承自 **sys.** 資料行的描述，請參閱 [sys. columns &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 在**sys. computed_columns**視圖中， **is_computed**資料行的值一律設定為1。|  
+|**\<Inherited columns>**||**Sys.computed_columns** view 會傳回 **sys. columns** 視圖中的所有資料行。 另外亦將傳回以下所述的其他資料行。 如需 **sys.computed_columns** view 繼承自 **sys.** 資料行的描述，請參閱 [sys. columns &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 在 **sys.computed_columns** 視圖中， **is_computed** 資料行的值一律設定為1。|  
 |**definition**|**nvarchar(max)**|定義這個計算資料行的 SQL 文字。|  
 |**uses_database_collation**|**bit**|1 = 資料行定義須依據資料庫的預設定序進行正確評估；否則為 0。 這種相依性可以防止資料庫預設定序變更。|  
 |**is_persisted**|**bit**|計算資料行是保存計算資料行。|  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_columns (Transact-SQL)
-title: sys. dm_db_missing_index_columns (Transact-sql) |Microsoft Docs
+title: sys.dm_db_missing_index_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd142eba7a56351c3d0825b4d3e9679987c8fa52
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7402f7a1104c327b0d0a8fb24c5d5793b0a044a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518195"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462789"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  傳回有關遺漏索引 (不包括空間索引) 之資料庫表格資料行的資訊。 **sys. dm_db_missing_index_columns** 是動態管理函數。  
+  傳回有關遺漏索引 (不包括空間索引) 之資料庫表格資料行的資訊。 **sys.dm_db_missing_index_columns** 是動態管理函數。  
 
 ## <a name="syntax"></a>語法  
   
@@ -45,9 +45,9 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  唯一識別遺漏索引的整數。 您可以從下列動態管理物件中取得：  
   
- [sys. dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys. dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -55,7 +55,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|資料行的識別碼。|  
 |**column_name**|**sysname**|資料表資料行的名稱。|  
-|**column_usage**|**Varchar (20) **|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 相等：資料行提供給表示相等的述詞，其格式如下： <br />                        *資料表。資料行*  = *constant_value*<br /><br /> 不等：資料行提供給表示不相等的述詞，例如，下列形式的述詞：*資料表. 資料行*  >  *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> INCLUDE：資料行不是用來評估述詞，而是用於其他原因，例如，用來涵蓋查詢。|  
+|**column_usage**|**Varchar (20)**|查詢使用資料行的方式。 可能的值和其描述如下：<br /><br /> 相等：資料行提供給表示相等的述詞，其格式如下： <br />                        *資料表。資料行*  = *constant_value*<br /><br /> 不等：資料行提供給表示不相等的述詞，例如，下列形式的述詞：*資料表. 資料行*  >  *constant_value*。 "=" 以外的其他任何比較運算子都可表示不相等。<br /><br /> INCLUDE：資料行不是用來評估述詞，而是用於其他原因，例如，用來涵蓋查詢。|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_db_missing_index_columns** 傳回的資訊會在查詢最佳化工具最佳化查詢時更新，而不會一直保存。 遺漏索引資訊只會保留到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動為止。 如果資料庫管理員想要在伺服器回收之後保留遺漏索引資訊，應該定期製作該項資訊的備份副本。  
@@ -86,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys. dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys. dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys. dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

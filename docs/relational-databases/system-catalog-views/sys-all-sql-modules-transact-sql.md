@@ -1,6 +1,6 @@
 ---
 description: sys.all_sql_modules (Transact-SQL)
-title: sys. all_sql_modules (Transact-sql) |Microsoft Docs
+title: sys.all_sql_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b0d0afbeb727adece2ef961552f3b1b7972722b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 031c6e5e270fed4b198b4248dc2864cd3c6aedb7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546918"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461699"
 ---
 # <a name="sysall_sql_modules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  傳回 **sys. sql_modules** 和 **sys.system_sql_modules**的聯集。  
+  傳回 **sys.sql_modules** 和 **sys.system_sql_modules** 的聯集。  
   
  此視圖會針對每個原生編譯的純量使用者定義函數，各傳回一個資料列。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   

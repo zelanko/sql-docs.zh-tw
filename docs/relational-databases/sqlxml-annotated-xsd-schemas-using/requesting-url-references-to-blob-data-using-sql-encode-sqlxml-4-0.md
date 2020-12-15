@@ -1,5 +1,5 @@
 ---
-title: 使用 sql：編碼取得 BLOB 資料的 URL 參考（SQLXML）
+title: 使用 sql：編碼 (SQLXML) 來取得 BLOB 資料的 URL 參考
 description: 瞭解如何在 SQLXML 4.0 中指定 sql：編碼注釋，以要求 BLOB 資料的 URL 參考。
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,34 +20,34 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1434cedf98b23cda736e9b956e6df0890b8f41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 432b1b888392b345038d14bb18909ba90b4d86a7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764916"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461749"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 要求指向 BLOB 資料的 URL 參考 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   在註解式 XSD 結構描述中，當屬性 (或元素) 對應到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 BLOB 資料行時，將會以 XML 中的 Base 64 編碼格式傳回資料。  
   
- 如果您想要傳回資料的參考（URI），以供稍後用來以二進位格式抓取 BLOB 資料，請指定**sql：編碼**注釋。 您可以在屬性或簡單類型的元素上指定**sql：編碼**。  
+ 如果您想要傳回資料 () 傳回的 URI，以便稍後用來取得二進位格式的 BLOB 資料，請指定 **sql：編碼** 注釋。 您可以在簡單類型的屬性或元素上指定 **sql：編碼** 。  
   
- 指定 [ **sql：編碼**] 注釋，表示應該傳回欄位的 URL，而不是欄位的值。 **sql：編碼**取決於主鍵，以產生 URL 中的單一選取。 主鍵可以使用 [ **sql：索引鍵-欄位**] 注釋來指定。  
+ 指定 [ **sql：編碼** ] 注釋，表示應該傳回欄位的 URL，而不是欄位的值。 **sql：編碼** 取決於主鍵，以產生 URL 中的單一選取。 您可以使用 **sql：索引鍵欄位** 注釋來指定主鍵。  
   
- **Sql：編碼**批註可以指派 "url" 或 "default" 值。 "default" 值會傳回 Base 64 編碼格式的資料。  
+ 您可以將 "url" 或 "default" 值指派給 **sql：編碼** 注釋。 "default" 值會傳回 Base 64 編碼格式的資料。  
   
- **Sql：編碼**注釋不能與**sql： use-cdata**或 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 屬性類型搭配使用。 它也不能與 XSD **fixed**屬性一起使用。  
+ **Sql：編碼** 注釋不能搭配 **sql： use-CDATA** 或在 ID、IDREF、IDREFS、NMTOKEN 或 NMTOKENS 屬性類型上使用。 它也不能與 XSD **fixed** 屬性搭配使用。  
   
 > [!NOTE]  
 >  BLOB 類型的資料行不能當做索引鍵或外部索引鍵的一部分使用。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 [執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. 指定 sql:encode 來取得指向 BLOB 資料的 URL 參考  
- 在此範例中，對應架構會在**LargePhoto**屬性上指定**sql：編碼**，以抓取特定產品相片的 URI 參考（而不是以 Base 64 編碼格式來抓取二進位資料）。  
+ 在此範例中，對應架構會在 **LargePhoto** 屬性上指定 **sql：編碼**，以抓取特定產品相片 (的 URI 參考，而不是以基底64編碼格式) 來取得二進位資料。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -85,7 +85,7 @@ ms.locfileid: "85764916"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   

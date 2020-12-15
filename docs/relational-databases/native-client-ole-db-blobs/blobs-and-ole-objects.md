@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9ab95bece59c6ecb2ed3c2df4aeb0b90ec52605
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7661a35eae2a178df57a1c83f1e0912044f4b1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381196"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439959"
 ---
 # <a name="blobs-and-ole-objects-in-sql-server-native-client"></a>SQL Server Native Client 中的 Blob 與 OLE 物件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**、 **text**、 **image**、 **Varchar (max) **、 **Nvarchar (max) **、 **Varbinary (max) **和 xml 資料類型做為二進位大型物件 (blob) 。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會公開 **ISequentialStream** 介面，以支援取用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**、 **text**、 **image**、 **Varchar (max)**、 **Nvarchar (max)**、 **Varbinary (max)** 和 xml 資料類型做為二進位大型物件 (blob) 。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
  如需示範此功能的範例，請參閱[設定大型資料 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當取用者在針對資料修改所系結的存取子中提供介面指標時，Native Client OLE DB 提供者可以使用取用者實**IStorage**介面。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當取用者在針對資料修改所系結的存取子中提供介面指標時，Native Client OLE DB 提供者可以使用取用者實 **IStorage** 介面。  
   
- 若為大數值資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在 **IROWSET** 和 DDL 介面中檢查類型大小假設。 具有 **Varchar**、 **Nvarchar**和 **Varbinary** 資料類型的資料行，且大小上限設為 [無限制]，將會透過傳回資料行資料類型的架構資料列集和介面，以 ISLONG 的方式呈現。  
+ 若為大數值資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在 **IROWSET** 和 DDL 介面中檢查類型大小假設。 具有 **Varchar**、 **Nvarchar** 和 **Varbinary** 資料類型的資料行，且大小上限設為 [無限制]，將會透過傳回資料行資料類型的架構資料列集和介面，以 ISLONG 的方式呈現。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會公開**Varchar (max) **、 **Varbinary (max) **和**Nvarchar (最大**) 類型 DBTYPE_STR DBTYPE_BYTES、DBTYPE_WSTR 和。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者會公開 **Varchar (max)**、 **Varbinary (max)** 和 **Nvarchar (最大**) 類型 DBTYPE_STR DBTYPE_BYTES、DBTYPE_WSTR 和。  
   
  為了使用這些類型，應用程式具有下列選項：  
   

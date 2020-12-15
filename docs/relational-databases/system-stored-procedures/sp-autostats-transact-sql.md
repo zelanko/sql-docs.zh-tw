@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b3ccfa642b98165dcbdad57adac38f300063ccdb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989931"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462759"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tblname = ] 'table_or_indexed_view_name'` 這是要在其上顯示 AUTO_UPDATE_STATISTICS 選項之資料表或索引視圖的名稱。 *table_or_indexed_view_name* 是 **Nvarchar (776) **，沒有預設值。  
+`[ @tblname = ] 'table_or_indexed_view_name'` 這是要在其上顯示 AUTO_UPDATE_STATISTICS 選項之資料表或索引視圖的名稱。 *table_or_indexed_view_name* 是 **Nvarchar (776)**，沒有預設值。  
   
 `[ @flagc = ] 'stats_flag'` 將 AUTO_UPDATE_STATISTICS 選項更新為下列其中一個值：  
   
@@ -53,7 +53,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- 未指定 *stats_flag* 時，會顯示目前的 AUTO_UPDATE_STATISTICS 設定。 *stats_flag* 是 **Varchar (10) **，預設值是 Null。  
+ 未指定 *stats_flag* 時，會顯示目前的 AUTO_UPDATE_STATISTICS 設定。 *stats_flag* 是 **Varchar (10)**，預設值是 Null。  
   
 `[ @indname = ] 'statistics_name'` 這是要顯示或更新 AUTO_UPDATE_STATISTICS 選項的統計資料名稱。 若要顯示索引的統計資料，您可以使用索引的名稱。索引及其對應的統計資料物件會具有相同的名稱。  
   
@@ -70,7 +70,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**Index Name**|**sysname**|索引或統計資料的名稱。|  
-|**AUTOSTATS**|**Varchar (3) **|AUTO_UPDATE_STATISTICS 選項的目前值。|  
+|**AUTOSTATS**|**Varchar (3)**|AUTO_UPDATE_STATISTICS 選項的目前值。|  
 |**上次更新**|**datetime**|最近更新統計資料的日期。|  
   
  資料表或索引視圖的結果集會包含為索引建立的統計資料、使用 AUTO_CREATE_STATISTICS 選項產生的單一資料行統計資料，以及使用 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md) 語句所建立的統計資料。  
@@ -81,7 +81,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  如果是記憶體最佳化的資料表，AUTO_UPDATE_STATISTICS 永遠都是 OFF。  
   
 ## <a name="permissions"></a>權限  
- 若要變更 AUTO_UPDATE_STATISTICS 選項，需要 **db_owner** 固定資料庫角色的成員資格，或 *table_name*的 ALTER 許可權。若要顯示 AUTO_UPDATE_STATISTICS 選項需要 **public** 角色中的成員資格。  
+ 若要變更 AUTO_UPDATE_STATISTICS 選項，需要 **db_owner** 固定資料庫角色的成員資格，或 *table_name* 的 ALTER 許可權。若要顯示 AUTO_UPDATE_STATISTICS 選項需要 **public** 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   

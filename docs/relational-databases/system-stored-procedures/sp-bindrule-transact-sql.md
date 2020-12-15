@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7355f421701c5eb24da58dec5037b5fb1b8317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0616ed8334665f1c6226ad8bd28ed3e968a04be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548302"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462719"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,11 +46,11 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rulename = ] 'rule'` 這是 CREATE RULE 語句所建立之規則的名稱。 *規則* 是 **Nvarchar (776) **，沒有預設值。  
+`[ @rulename = ] 'rule'` 這是 CREATE RULE 語句所建立之規則的名稱。 *規則* 是 **Nvarchar (776)**，沒有預設值。  
   
 `[ @objname = ] 'object_name'` 這是要系結規則的資料表和資料行或別名資料類型。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
- *object_name* 是 **Nvarchar (776) ** 沒有預設值。 如果 *object_name* 是一個部分的名稱，則會解析為別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，除非規則直接系結至資料行，否則，別名資料類型的現有資料行會繼承 *規則* 。  
+ *object_name* 是 **Nvarchar (776)** 沒有預設值。 如果 *object_name* 是一個部分的名稱，則會解析為別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，除非規則直接系結至資料行，否則，別名資料類型的現有資料行會繼承 *規則* 。  
   
 > [!NOTE]  
 >  *object_name* 可以包含方括弧 **[** 和 **]** 字元作為分隔識別碼字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
@@ -58,7 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  雖然在使用別名資料類型的運算式上建立的規則可以繫結到資料行或別名資料類型，但在參考它們時，會無法編譯它們。 請避免使用在別名資料類型上建立的規則。  
   
-`[ @futureonly = ] 'futureonly_flag'` 只有將規則系結到別名資料類型時，才會使用。 *future_only_flag* 是 **Varchar (15) ** ，預設值是 Null。 當設定為 **futureonly** 時，這個參數會防止別名資料類型的現有資料行繼承新的規則。 如果 *futureonly_flag* 為 Null，則新規則會系結到別名資料類型的任何資料行，該資料類型目前沒有任何規則或使用別名資料類型的現有規則。  
+`[ @futureonly = ] 'futureonly_flag'` 只有將規則系結到別名資料類型時，才會使用。 *future_only_flag* 是 **Varchar (15)** ，預設值是 Null。 當設定為 **futureonly** 時，這個參數會防止別名資料類型的現有資料行繼承新的規則。 如果 *futureonly_flag* 為 Null，則新規則會系結到別名資料類型的任何資料行，該資料類型目前沒有任何規則或使用別名資料類型的現有規則。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -87,7 +87,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 將規則繫結到別名資料類型  
- 假設有一個名稱為 `rule_ssn` 的規則及名稱為 `ssn` 別名資料類型存在，下列範例會將 `rule_ssn` 繫結到 `ssn`。 在 CREATE TABLE 陳述式中，`ssn` 類型的資料行會繼承 `rule_ssn` 規則。 `ssn` `rule_ssn` 除非針對*futureonly_flag*指定**futureonly** ，或直接系結規則，否則類型的現有資料行也會繼承規則 `ssn` 。 繫結到資料行的規則，一律優先於繫結到資料類型的規則。  
+ 假設有一個名稱為 `rule_ssn` 的規則及名稱為 `ssn` 別名資料類型存在，下列範例會將 `rule_ssn` 繫結到 `ssn`。 在 CREATE TABLE 陳述式中，`ssn` 類型的資料行會繼承 `rule_ssn` 規則。 `ssn` `rule_ssn` 除非針對 *futureonly_flag* 指定 **futureonly** ，或直接系結規則，否則類型的現有資料行也會繼承規則 `ssn` 。 繫結到資料行的規則，一律優先於繫結到資料類型的規則。  
   
 ```  
 USE master;  

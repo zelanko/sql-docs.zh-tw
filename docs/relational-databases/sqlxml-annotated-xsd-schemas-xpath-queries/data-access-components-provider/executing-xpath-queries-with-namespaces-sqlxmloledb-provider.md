@@ -1,5 +1,5 @@
 ---
-title: 使用命名空間執行 XPath 查詢（SQLXMLOLEDB）
+title: 使用命名空間 (SQLXMLOLEDB) 執行 XPath 查詢
 description: 瞭解如何在使用 SQLXMLOLEDB 提供者執行 XPath 查詢時，在 SQLXML 4.0 中指定命名空間。
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd51dccee8f6b0b42001951fb096400182197deb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ee24d16dce8ae60ccf51a866a274b15b2737ca89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650353"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462909"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "85650353"
   
  由於 SQLXML 4.0 不支援使用萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，請使用 namespace 屬性來指定命名空間系結。  
   
- 在下列範例中，XPath 查詢會使用萬用字元（ \* ）和本機名稱（）和命名空間 uri （） xpath 函數來指定命名空間。 此 XPath 查詢會傳回本機名稱為**Contact**的所有元素，而命名空間 URI 為**urn： myschema： Contacts**。  
+ 在下列範例中，XPath 查詢會使用萬用字元 (\*) 和本機名稱 ( # A3 和命名空間 uri ( # A5 XPath 函數來指定命名空間。 此 XPath 查詢會傳回本機名稱為 **Contact** 且命名空間 URI 為 **urn： myschema.xml： contact** 的所有元素。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- 在 SQLXML 4.0 中，您必須使用命名空間前置詞來指定這個 XPath 查詢。 例如， **x:Contact**，其中**x**是命名空間前置詞。 請考慮下列 XSD 結構描述：  
+ 在 SQLXML 4.0 中，您必須使用命名空間前置詞來指定這個 XPath 查詢。 例如， **x:Contact**，其中 **x** 是命名空間前置詞。 請考慮下列 XSD 結構描述：  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -56,10 +56,10 @@ ms.locfileid: "85650353"
   
  由於這個結構描述會定義目標命名空間，所以針對此結構描述進行的 XPath 查詢 (例如 "Employee") 必須包含該命名空間。  
   
- 這是針對上述 XSD 結構描述執行 XPath 查詢 (x:Employee) 的範例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式。 若要解析前置詞，命名空間系結是使用 namespace 屬性所指定。  
+ 這是針對上述 XSD 結構描述執行 XPath 查詢 (x:Employee) 的範例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式。 為了解析前置詞，命名空間系結是使用 namespace 屬性來指定。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 [SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

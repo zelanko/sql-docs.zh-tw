@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_properties (Transact-SQL)
-title: sys. dm_db_stats_properties (Transact-sql) |Microsoft Docs
+title: sys.dm_db_stats_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1039850e4322003ddfedd5407d18ab6170077c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f412097e74c8230ee7fe9941e48f39b034c2ebca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537023"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462739"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表或索引檢視表) 傳回統計資料的屬性。 若為數據分割資料表，請參閱類似的 [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)。 
+  針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表或索引檢視表) 傳回統計資料的屬性。 針對資料分割資料表，請參閱類似的 [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)。 
  
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
  這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *object_id* 為 **int**。  
   
  *stats_id*  
- 這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  
+ 這是指定 *object_id* 之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -61,14 +61,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |persisted_sample_percent|**float**|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用範圍：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 備註  
- **sys. dm_db_stats_properties** 會在下列任何情況下傳回空的資料列集：  
+ **sys.dm_db_stats_properties** 在下列任何情況下，都會傳回空的資料列集：  
   
 -   **object_id** 或 **stats_id** 為 Null。    
 -   找不到指定的物件，或者該物件沒有對應至資料表或索引檢視表。    
 -   指定的統計資料識別碼沒有對應至指定之物件識別碼的現有統計資料。    
 -   目前的使用者沒有檢視統計資料物件的權限。  
   
- 此行為可讓 **sys. dm_db_stats_properties** 的安全使用，當交叉套用至如 **sys. objects** 和 **sys.databases**等視圖中的資料列時。  
+ 這種行為可讓您在跨應用程式的資料列（例如 **sys. objects** 和 **sys.databases**）之間，使用 **sys.dm_db_stats_properties** 的安全使用。  
  
 統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計資料 blob、無法使用日期，而且 *last_updated* 資料行是 Null。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
   

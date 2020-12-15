@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464599"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database) 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91809315"
  此視圖適用于具有連接到 **master** 資料庫之許可權的所有使用者角色。  
   
 ## <a name="remarks"></a>備註  
- **Sys.server_resource_stats**所傳回的資料會以位元組或 mb (中所述的資料行名稱來表示，) 除了 avg_cpu 以外的資料行名稱中所述，這是以您正在執行之服務層級/效能層級的最大允許限制百分比表示。  
+ **Sys.server_resource_stats** 所傳回的資料會以位元組或 mb (中所述的資料行名稱來表示，) 除了 avg_cpu 以外的資料行名稱中所述，這是以您正在執行之服務層級/效能層級的最大允許限制百分比表示。  
  
 ## <a name="examples"></a>範例  
  下列範例會傳回上一週平均至少為 80% 運算使用率的所有資料庫。  

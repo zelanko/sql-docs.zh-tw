@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462669"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系統預存程序 (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810294"
   
 |類別|描述|  
 |--------------|-----------------|  
-|[主動式異地複寫預存程式]()|用來管理 Azure SQL Database 中的主動式異地複寫設定|  
+|[Active Geo-Replication 預存程式]()|用來管理，以管理 Azure SQL Database 中的 Active Geo-Replication 設定|  
 |[目錄預存程序](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用來實作 ODBC 資料字典功能，以及隔離 ODBC 應用程式，不讓基礎系統資料表受到變更。|  
 |[異動資料擷取預存程序](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|用來啟用、停用或報告異動資料擷取物件。|  
 |[資料指標預存程序](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|用來實作游標變數功能。|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810294"
 ## <a name="api-system-stored-procedures"></a>API 系統預存程序  
  對 ADO、OLE DB 和 ODBC 應用程式執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的使用者，可能會注意到這些使用系統預存程序的應用程式沒有涵蓋在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生用戶端 OLE DB 提供者和 NATIVE client ODBC 驅動程式會使用這些預存程式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來執行資料庫 API 的功能。 這些預存程序只是提供者或驅動程式將使用者要求傳給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所用的機制。 它們只做為提供者或驅動程式內部使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支援從應用程式明確呼叫它們。  
   
- Sp_createorphan 和 sp_droporphans 預存程式用於 ODBC **Ntext**、 **text**和 **image** 處理。  
+ Sp_createorphan 和 sp_droporphans 預存程式用於 ODBC **Ntext**、 **text** 和 **image** 處理。  
   
  sp_reset_connection 預存程序是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來支援交易中的遠端預存程序呼叫。 當重複使用連接集區中的連接時，這個預存程序也會引發 Audit Login 和 Audit Logout 事件。  
   

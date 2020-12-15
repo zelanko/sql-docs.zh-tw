@@ -17,13 +17,13 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 365b91660769cbb189b23366671486271177e6e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440589"
 ---
 # <a name="sequences-transact-sql"></a> (Transact-sql) 的順序
 
@@ -31,14 +31,14 @@ ms.locfileid: "89546325"
 
 針對目前資料庫中目前使用者所能存取的每個序列，各傳回一個資料列。
 
-若要從這些視圖中取出資訊，請指定**INFORMATION_SCHEMA**的完整名稱 _。 view_name_。
+若要從這些視圖中取出資訊，請指定 **INFORMATION_SCHEMA**_.view_name_ 的完整名稱。
 
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|
 |**SEQUENCE_CATALOG**|**nvarchar(128)**|順序辨識符號|
 |**SEQUENCE_SCHEMA**|**Nvarchar (** 128) * *|包含順序的架構名稱|
 |**SEQUENCE_NAME**|**nvarchar(128)**|順序名稱|
-|**DATA_TYPE**|**Nvarchar (** 128 **) **|Sequence 資料類型|
+|**DATA_TYPE**|**Nvarchar (** 128 **)**|Sequence 資料類型|
 |**NUMERIC_PRECISION**|**tinyint**|順序的有效位數|
 |**NUMERIC_PRECISION_RADIX**|**smallint**|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，就傳回 NULL。|
 |**NUMERIC_SCALE**|**int**|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，就傳回 NULL。|

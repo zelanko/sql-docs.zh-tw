@@ -1,6 +1,6 @@
 ---
-title: 在範例 ASP 應用程式中使用 Updategram （SQLXML）
-description: 請參閱在 Active Server Pages （ASP）應用程式中使用 SQLXML updategram 的範例。
+title: 在 (SQLXML) 範例 ASP 應用程式中使用 Updategram
+description: 查看使用 (ASP) 應用程式之 Active Server Pages 中的 SQLXML updategram 的範例。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,13 +15,13 @@ ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61ad2bae525acfe7b461e2e89bf9477ff73513ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f3cb1db0f03b911f695b85c6efed8a43240d8258
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459954"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85733641"
   
  然後，使用者就可以更新連絡資訊，但無法更新連絡識別碼 (因為 ContactID 是主索引鍵)。 在使用者提交資訊之後，系統就會執行 Updategram 並且將所有表單參數傳遞給 Updategram。  
   
- 下列範本是第一個範本 (GetContact.xml)。 將此範本儲存在與**範本**類型的虛擬名稱相關聯的目錄中。  
+ 下列範本是第一個範本 (GetContact.xml)。 將此範本儲存在與 **範本** 類型的虛擬名稱相關聯的目錄中。  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -51,7 +51,7 @@ ms.locfileid: "85733641"
 </root>  
 ```  
   
- 下列範本是第二個範本 (UpdateContact.xml)。 將此範本儲存在與**範本**類型的虛擬名稱相關聯的目錄中。  
+ 下列範本是第二個範本 (UpdateContact.xml)。 將此範本儲存在與 **範本** 類型的虛擬名稱相關聯的目錄中。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -162,6 +162,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;SQLXML 4.0&#41;的 Updategram 安全性考慮](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram &#40;SQLXML 4.0&#41;的安全性考慮 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

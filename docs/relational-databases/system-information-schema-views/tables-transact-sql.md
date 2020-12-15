@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 244be615f5748a480a224f3cc7b1eb41cbc13a2f
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e94fe84e47f40cfc85af1cc002fced981c01706
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753568"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440579"
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "91753568"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**Nvarchar (** 128 **) **|資料表限定詞。|  
-|**TABLE_SCHEMA**|**Nvarchar (** 128 **) **|包含資料表的結構描述名稱。<br /><br /> 重要的是，若要尋找物件的架構，唯一的可靠方式就是查詢 sys. objects 目錄檢視。 <strong> \* \* \* \* </strong> INFORMATION_SCHEMA 檢視可能不完整，因為這些檢視並未針對所有新功能更新。|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|資料表限定詞。|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|包含資料表的結構描述名稱。<br /><br /> 重要的是，若要尋找物件的架構，唯一的可靠方式就是查詢 sys. objects 目錄檢視。 <strong> \* \* \* \* </strong> INFORMATION_SCHEMA 檢視可能不完整，因為這些檢視並未針對所有新功能更新。|  
 |**TABLE_NAME**|**sysname**|資料表或檢視表名稱。|  
-|**TABLE_TYPE**|**Varchar (** 10 **) **|資料表的類型。 可以是 VIEW 或 BASE TABLE。|  
+|**TABLE_TYPE**|**Varchar (** 10 **)**|資料表的類型。 可以是 VIEW 或 BASE TABLE。|  
   
 ## <a name="see-also"></a>另請參閱  
  [&#40;Transact-sql&#41;的系統檢視 ](../../t-sql/language-reference.md)   

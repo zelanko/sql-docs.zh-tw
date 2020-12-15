@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e98180b877fb81c5d32f908a2f8e9cdc131a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7d556721c3fcd0b52e202f17bd07eb1781b58867
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868614"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463039"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>從 SQL Server 的執行個體中斷連接
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91868614"
   您並不需要以手動方式關閉和中斷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件的連接。 連接會視需要開啟和關閉。  
   
 ## <a name="connection-pooling"></a>連接共用  
- 呼叫 [Connect](/previous-versions/sql/sql-server-2014/ms199449(v=sql.120)) 方法時，不會自動釋放連接。 必須明確呼叫 [中斷](/previous-versions/sql/sql-server-2014/ms199428(v=sql.120)) 連接方法，才能釋放連接集區的連接。 此外，您也可以要求非共用連接。 您可以藉由設定[NonPooledConnection](/previous-versions/sql/sql-server-2014/ms214357(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 參考[ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))物件之屬性的 NonPooledConnection 屬性來完成這項作業。  
+ 呼叫 [Connect](/previous-versions/sql/sql-server-2014/ms199449(v=sql.120)) 方法時，不會自動釋放連接。 必須明確呼叫 [中斷](/previous-versions/sql/sql-server-2014/ms199428(v=sql.120)) 連接方法，才能釋放連接集區的連接。 此外，您也可以要求非共用連接。 您可以藉由設定[](/previous-versions/sql/sql-server-2014/ms214357(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 參考[ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))物件之屬性的 NonPooledConnection 屬性來完成這項作業。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>從 RMO 的 SQL Server 執行個體中斷連接  
  在使用 RMO 進行程式開發時關閉伺服器連接，與使用 SMO 時稍有不同。  

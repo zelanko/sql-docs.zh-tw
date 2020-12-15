@@ -1,5 +1,5 @@
 ---
-description: 在 SQL Server Native Client 中使用使用者定義的類型
+description: 在 SQL Server Native Client 中使用 User-Defined 類型
 title: 使用使用者定義型別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2808e712491271fe5738ba4d20ad3e7e2133a451
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448223"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461949"
 ---
-# <a name="using-user-defined-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用使用者定義的類型
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>在 SQL Server Native Client 中使用 User-Defined 類型
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 UDT 會擴充 SQL 類型系統，其方式是允許您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual C#<sup>®</sup> 和 Visual Basic<sup>®</sup> .NET。 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  
@@ -174,7 +174,7 @@ ms.locfileid: "88448223"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將新的值或變更加入到許多核心 OLE DB 介面。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 介面  
- 為了透過 OLE DB 支援 Udt， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會執行一些變更，包括加入 **ISSCommandWithParameters** 介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters**的三種方法; **GetParameterInfo**、 **MapParameterNames**和 **SetParameterInfo**; **ISSCommandWithParameters** 提供用來處理伺服器特定資料類型的 **GetParameterProperties** 和 **SetParameterProperties** 方法。  
+ 為了透過 OLE DB 支援 Udt， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會執行一些變更，包括加入 **ISSCommandWithParameters** 介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters** 的三種方法; **GetParameterInfo**、 **MapParameterNames** 和 **SetParameterInfo**; **ISSCommandWithParameters** 提供用來處理伺服器特定資料類型的 **GetParameterProperties** 和 **SetParameterProperties** 方法。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  

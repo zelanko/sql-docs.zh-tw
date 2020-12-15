@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0947a58b607d781b05eb5633b0664d7f0da4d107
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 889b96df7adaff39f3f032a272c319e62d1e8e51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546733"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461669"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89546733"
 |hobt_id|**bigint**|指出包含此資料分割之資料列的資料堆積或 B 型樹狀結構 (HoBT) 的識別碼。|  
 |rows|**bigint**|指出這個資料分割中的近似資料列數。|  
 |filestream_filegroup_id|**smallint**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指出儲存在這個資料分割上之 FILESTREAM 檔案群組的識別碼。|  
-|data_compression|**tinyint**|表示每個資料分割的壓縮狀態：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 資料行存放區： **適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br />4 = COLUMNSTORE_ARCHIVE： **適用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本<br /><br /> **注意：** 全文檢索索引將會在任何版本中壓縮 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|data_compression|**tinyint**|表示每個資料分割的壓縮狀態：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 資料行存放區： **適用** 于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本<br />4 = COLUMNSTORE_ARCHIVE： **適用** 于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本<br /><br /> **注意：** 全文檢索索引將會在任何版本中壓縮 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |data_compression_desc|**nvarchar(60)**|表示每個資料分割的壓縮狀態。 資料列存放區資料表的可能值為 NONE、ROW 和 PAGE。 資料行存放區資料表的可能值為 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
   
 ## <a name="permissions"></a>權限  
