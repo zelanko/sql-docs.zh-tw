@@ -42,13 +42,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 674cbddc59ae95fcf51276acebf5e6868e0c760b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6f0302c5807a93fdac826bb67a85c8e4e3e4abb5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915824"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468969"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "86915824"
 ## <a name="publishing-views"></a>發行檢視表  
  所有類型的複寫都可讓您複寫檢視。 檢視 (及其隨附的索引，如果它是索引檢視表的話) 可被複製到「訂閱者」，但必須同時複寫基底資料表。  
   
- 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 *\@type* 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+ 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 *\@type* 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="publishing-user-defined-functions"></a>發行使用者自訂函數  
  CLR 函數和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數的 CREATE FUNCTION 陳述式會複製到每一個訂閱者。 如果使用 CLR 函數，還將複製相關組件。 對函數所作的變更會被複寫到「訂閱者」；而對相關組件所作的變更則不會。  

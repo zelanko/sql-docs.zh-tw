@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468999"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "86918478"
   
 -   在已發行的資料表上執行 DDL 時，讀取未認可不是一個支援的隔離等級。  
   
--   如果針對已發行的物件執行結構描述變更，就不應該使用**SET CONTEXT_INFO** 來修改交易的內容。  
+-   如果針對已發行的物件執行結構描述變更，就不應該使用 **SET CONTEXT_INFO** 來修改交易的內容。  
   
 #### <a name="adding-columns"></a>新增資料行  
   
@@ -151,7 +151,7 @@ ms.locfileid: "86918478"
         |**hierarchyid**|允許變更|封鎖變更|封鎖變更|  
         |**geography** 及 **geometry**|允許變更|允許變更*|封鎖變更|  
         |**檔案資料流**|允許變更|封鎖變更|封鎖變更|  
-        |**date**、 **time**、 **datetime2**和 **datetimeoffset**|允許變更|允許變更*|封鎖變更|  
+        |**date**、 **time**、 **datetime2** 和 **datetimeoffset**|允許變更|允許變更*|封鎖變更|  
   
          \* SQL Server Compact 訂閱者會在訂閱者上轉換這些資料類型。  
   

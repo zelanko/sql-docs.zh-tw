@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1473f9f603f85e0e03fb4d7c23f4367daf63bf7b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: acc3ce53ae8da54ab89c2a54e2cc8ea6d3708756
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468949"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
