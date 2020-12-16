@@ -14,13 +14,13 @@ ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7fdbda79c36c8ddf939477db9ea197c22507b64
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 3481a3d5252752e1cf952375d1c35c1c4b9939f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96126047"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438828"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
 

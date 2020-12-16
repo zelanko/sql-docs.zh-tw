@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f28ea2b3ce9520eca770b0808738a53073d70316
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868788"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438731"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "91868788"
 |功能|執行 CREATE 陳述式之前，請先執行|僅支援執行原生編譯預存程序和使用者定義函數。|  
 |功能|使用者定義彙總|使用者定義彙總函式不可在原生編譯預存程序中使用。 請從程序中移除函式的參考。|  
 |功能|瀏覽模式中繼資料|原生編譯預存程序不支援瀏覽模式中繼資料。 請確定工作階段選項 **NO_BROWSETABLE** 設為 OFF。|  
-|功能|FROM 子句中的 DELETE|原生編譯預存程序中具有資料表來源的 **FROM** 陳述式不支援 **DELETE** 子句。<br /><br /> 支援搭配使用**DELETE** 和 **FROM** 子句來指定要刪除的資料表來源。|  
+|功能|FROM 子句中的 DELETE|原生編譯預存程序中具有資料表來源的 **FROM** 陳述式不支援 **DELETE** 子句。<br /><br /> 支援搭配使用 **DELETE** 和 **FROM** 子句來指定要刪除的資料表來源。|  
 |功能|FROM 子句中的 UPDATE|原生編譯預存程序中的 **FROM** 陳述式不支援 **UPDATE** 子句。| 
 |功能|暫存程序|不可對暫存預存程序進行原生編譯。 請建立永久的原生編譯預存程序，或暫存的解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。|  
 |隔離等級|READ UNCOMMITTED|原生編譯預存程序中不支援隔離等級 READ UNCOMMITTED。 請使用支援的隔離等級，例如 SNAPSHOT。|  

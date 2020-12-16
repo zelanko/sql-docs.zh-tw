@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5287bb37b779775edb3375d545c1745c6ed63e93
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005682"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438744"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 
@@ -188,7 +188,7 @@ ALTER DATABASE CURRENT
 ## <a name="2-elevate-to-snapshot"></a>2.提升至 SNAPSHOT  
   
   
-當交易涉及磁碟資料表和記憶體最佳化資料表時，我們稱之為*跨容器交易*。 在這樣的交易中，很重要的一點是交易的記憶體最佳化部分需在名為 SNAPSHOT 的交易隔離等級中執行。  
+當交易涉及磁碟資料表和記憶體最佳化資料表時，我們稱之為 *跨容器交易*。 在這樣的交易中，很重要的一點是交易的記憶體最佳化部分需在名為 SNAPSHOT 的交易隔離等級中執行。  
   
 若要在跨容器交易中針對記憶體最佳化資料表可靠地強制執行此等級，請透過執行以下 T-SQL 來[修改您的資料庫設定](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   

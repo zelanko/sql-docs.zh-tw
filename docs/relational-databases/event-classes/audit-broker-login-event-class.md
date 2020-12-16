@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c94dd09b37a0648f65f1d74d0b95abbb518a96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e66774aca955e7282716a83a4b37949df40f6a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448674"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440109"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88448674"
 |**ObjectName**|**nvarchar**|用於此連接的連接字串。|34|否|  
 |**OwnerName**|**nvarchar**|在本機 Broker 結束點上設定的支援驗證方法。 可用的方法超過一種時，接受 (目標) 端點會判斷要先嘗試哪種方法。 可能的值包括：<br /><br /> **None**： 未設定任何驗證方法。<br /><br /> **NTLM**。 需要 NTLM 驗證。<br /><br /> **KERBEROS**。 需要 Kerberos 驗證。<br /><br /> **NEGOTIATE**。 Windows 會交涉驗證方法。<br /><br /> **CERTIFICATE**。 需要為端點設定的憑證，它是儲存在 **master** 資料庫中。<br /><br /> **NTLM、CERTIFICATE**。 接受 NTLM 或 TLS/SSL 憑證驗證。<br /><br /> **KERBEROS、CERTIFICATE**。 接受 Kerberos 或結束點憑證驗證。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 交涉要使用的驗證方法，或可以使用端點憑證來進行驗證。<br /><br /> **CERTIFICATE、NTLM**。 接受結束點憑證或供 NTLM 驗證之用。<br /><br /> **CERTIFICATE、KERBEROS**。 接受使用端點憑證或 Kerberos 來進行驗證。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受用以驗證的結束點憑證或由 Windows 交涉驗證方法。|37|否|  
 |**ProviderName**|**nvarchar**|此連接所使用的驗證方法|46|否|  
-|**RoleName**|**nvarchar**|連接的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
+|**RoleName**|**nvarchar**|連接的角色。 為 **initiator** 或 **target** 其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|被追蹤的 SQL Server 執行個體名稱。|26|否|  
 |**SPID**|**int**|由 SQL Server 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  

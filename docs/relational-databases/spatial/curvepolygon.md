@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006329"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459984"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -77,7 +77,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
 3.  每個環形至少必須包含四個點。  
 4.  每個環形都必須是可接受的曲線類型。  
   
-根據**CurvePolygon** 執行個體是 **geometry** 或 **geography** 資料類型而定，其也必須符合特定準則。  
+根據 **CurvePolygon** 執行個體是 **geometry** 或 **geography** 資料類型而定，其也必須符合特定準則。  
   
 #### <a name="geometry-data-type"></a>Geometry 資料類型  
 有效的 **geometryCurvePolygon** 執行個體必須具有下列屬性：  
@@ -131,7 +131,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. 使用 CurvePolygon 來具現化 Geography 執行個體  
- 這個程式碼片段會示範如何在相同的陳述式中使用 **CurvePolygon** 來宣告 **geography**執行個體並將其初始化：  
+ 這個程式碼片段會示範如何在相同的陳述式中使用 **CurvePolygon** 來宣告 **geography** 執行個體並將其初始化：  
   
 ```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

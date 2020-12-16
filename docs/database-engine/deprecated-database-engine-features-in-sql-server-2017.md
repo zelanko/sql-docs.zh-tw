@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438841"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 中已淘汰的功能
 
-下列 SQL Server 資料庫引擎功能將在下一版的 SQL Server 中淘汰。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱**值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。
+下列 SQL Server 資料庫引擎功能將在下一版的 SQL Server 中淘汰。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 **功能名稱** 值會作為 ObjectName 出現在追蹤事件中，並在效能計數器與 `sys.dm_os_performance_counters` 中作為執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。
 
 ### <a name="back-up-and-restore"></a>備份與還原
 
@@ -89,7 +89,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 已被取代的功能 | 取代 | 功能名稱 | 功能識別碼 |
 |--------------------|-------------|--------------|------------|
-| 用於**SET ROWCOUNT** 、 **INSERT**, **UPDATE**陳述式的 **DELETE** | TOP 關鍵字 | SET ROWCOUNT | 109 |
+| 用於 **SET ROWCOUNT** 、 **INSERT**, **UPDATE** 陳述式的 **DELETE** | TOP 關鍵字 | SET ROWCOUNT | 109 |
 | 沒有括號的 HOLDLOCK 資料表提示。 | 請使用有括號的 HOLDLOCK。 | 沒有括號的 HOLDLOCK 資料表提示。 | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本中已淘汰的功能
@@ -329,7 +329,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 | 三部分和四部分資料行參考。 | 兩部分名稱是符合標準的行為。|兩部分以上的資料行名稱 |
 | 加上引號的字串，在 SELECT 清單中當做運算式的資料行別名使用：<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | 當做資料行別名的字串常值 |
 | 編號程序。 | 無。 請勿使用。 | ProcNums |
-| DROP INDEX 中的*table_name.index_name* 語法|DROP INDEX 中的*index_name* ON *table_name* 語法。|具有兩部分名稱的 DROP INDEX |
+| DROP INDEX 中的 *table_name.index_name* 語法|DROP INDEX 中的 *index_name* ON *table_name* 語法。|具有兩部分名稱的 DROP INDEX |
 | 不是以分號結束 Transact-SQL 陳述式。|以分號 ( ; ) 結束 Transact-SQL 陳述式。 | None |
 | GROUP BY ALL|搭配 UNION 或衍生資料表使用自訂的依案例方案。 | GROUP BY ALL |
 | 當做 DML 陳述式中之資料行名稱的 ROWGUIDCOL。|使用 $rowguid。|ROWGUIDCOL |

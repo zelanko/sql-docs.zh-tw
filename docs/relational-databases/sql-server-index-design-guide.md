@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235535"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459977"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,14 +118,14 @@ ms.locfileid: "93235535"
   
 -   評估查詢類型，以及查詢中如何使用資料行。 例如，在完全相符查詢類型中使用的資料行，就很適合當作非叢集或叢集索引。
 
-<a name="sargable"></a><sup>1</sup> 在關聯式資料庫中，SARGable 一詞是指 **S** earch **ARG** ument- **able** 述詞，它可以利用索引加快查詢的執行速度。
+<a name="sargable"></a><sup>1</sup> 在關聯式資料庫中，SARGable 一詞是指 **S** earch **ARG** ument-**able** 述詞，它可以利用索引加快查詢的執行速度。
   
 ### <a name="column-considerations"></a>資料行注意事項  
  當您設計索引時，請考慮下列資料行指導方針：  
   
 -   讓叢集索引保持短小的索引鍵。 此外，對唯一或非 Null 資料行建立叢集索引，會有幫助。  
   
--   **ntext** 、 **text** 、 **image** 、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
+-   **ntext**、 **text**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
   
 -   **xml** 資料類型只可以是 XML 索引的索引鍵資料行。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 導入了新的 XML 索引類型，稱為「選擇性 XML 索引」。 這個新索引可改善 SQL Server 中儲存為 XML 之資料的查詢效能，讓大型 XML 資料工作負載的索引編製更快速，並透過降低索引本身的儲存成本，改善延展性。 如需詳細資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -476,11 +476,11 @@ INCLUDE (FileName);
   
 -   非索引鍵之索引資料行僅能定義於資料表或索引檢視的非叢集索引上。  
   
--   允許所有的資料類型，除了 **text** 、 **ntext** 和 **image** 以外。  
+-   允許所有的資料類型，除了 **text**、 **ntext** 和 **image** 以外。  
   
 -   具決定性之精確或非精確的計算資料行都可以當做內含資料行。 如需詳細資訊，請參閱 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
--   如同索引鍵資料行，只要計算資料行資料類型可以作為無索引鍵索引資料行，則從 **image** 、 **ntext** 與 **text** 衍生的計算資料行即可以是非索引鍵之索引資料行。  
+-   如同索引鍵資料行，只要計算資料行資料類型可以作為無索引鍵索引資料行，則從 **image**、 **ntext** 與 **text** 衍生的計算資料行即可以是非索引鍵之索引資料行。  
   
 -   資料行名稱無法同時指定於 INCLUDE 清單與索引鍵資料行清單兩者中。  
   
@@ -503,7 +503,7 @@ INCLUDE (FileName);
   
     -   將資料行的 Null 屬性從 NOT NULL 變更為 NULL。  
   
-    -   增加 **varchar** 、 **nvarchar** 或 **varbinary** 資料行的長度。  
+    -   增加 **varchar**、 **nvarchar** 或 **varbinary** 資料行的長度。  
   
         > [!NOTE]  
         >  這些資料行修改限制也適用索引鍵資料行。  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 篩選索引設計指導方針  
  篩選索引是最佳化的非叢集索引，特別適合用來處理會從定義完善之資料子集進行選取的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本，並降低索引儲存成本。  
   
-**適用於** ： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+**適用於**： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
   
  篩選索引可以提供全資料表索引所不及的下列優勢：  
   
@@ -733,7 +733,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>作業是在資料列群組和資料行區段上執行
 
-資料行存放區索引會將資料列分組成可管理的單位。 每個單位稱為 **資料列群組** 。 為了達到最佳效能，資料列群組中的資料列數量必須多到足以改善壓縮率，並且少到足以獲益於記憶體內部作業。
+資料行存放區索引會將資料列分組成可管理的單位。 每個單位稱為 **資料列群組**。 為了達到最佳效能，資料列群組中的資料列數量必須多到足以改善壓縮率，並且少到足以獲益於記憶體內部作業。
 
 例如，資料行存放區索引會對資料列群組執行下列作業：
 
@@ -742,7 +742,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 * 在 `ALTER INDEX ... REBUILD` 作業期間建立新的資料列群組。
 * 在動態管理檢視 (DMV) 中報告資料列群組健全狀況和片段。
 
-差異存放區是由一或多個資料列群組所組成，稱為 **差異資料列群組** 。 每個差異資料列群組都是叢集 B 型樹狀目錄索引，其會儲存小型的大量載入和插入，直到資料列群組包含 1,048,576 個資料列為止，此時稱為 **Tuple Mover** 的處理序會自動將已關閉的資料列群組壓縮到資料行存放區。 
+差異存放區是由一或多個資料列群組所組成，稱為 **差異資料列群組**。 每個差異資料列群組都是叢集 B 型樹狀目錄索引，其會儲存小型的大量載入和插入，直到資料列群組包含 1,048,576 個資料列為止，此時稱為 **Tuple Mover** 的處理序會自動將已關閉的資料列群組壓縮到資料行存放區。 
 
 如需有關資料列群組狀態的詳細資訊，請參閱 [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)。 
 
@@ -752,7 +752,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 > [!NOTE]
 > 從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。      
 
-在每個資料列群組中，每個資料行都有一些資料行值。 這些值稱為 **資料行區段** 。 每一個資料列群組會針對資料表中的每一個資料行包含一個資料行區段。 在每個資料列群組中，每個資料行都有一個資料行區段。
+在每個資料列群組中，每個資料行都有一些資料行值。 這些值稱為 **資料行區段**。 每一個資料列群組會針對資料表中的每一個資料行包含一個資料行區段。 在每個資料列群組中，每個資料行都有一個資料行區段。
 
 ![資料行區段](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "資料行區段") 
  
@@ -799,9 +799,9 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>您可以合併相同資料表上的資料行存放區索引和資料列存放區索引
 非叢集索引包含基礎資料表中部分或所有資料列和資料行的複本。 此索引會定義為資料表的一或多個資料行，並具有篩選資料列的選用條件。 
 
-從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，您可以 **在資料列存放區資料表上建立可更新的非叢集資料行存放區索引** 。 資料行存放區索引會儲存資料的複本，因此您需要額外的儲存空間。 不過，資料行存放區索引中資料的壓縮大小比資料列存放區資料表所需大小還要小。  如此一來，您就可以同時在資料行存放區索引上執行分析，並在資料列存放區索引上執行交易。 當資料列存放區資料表中的資料變更時，會更新資料行存放區，讓兩個索引會針對相同的資料執行。  
+從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，您可以 **在資料列存放區資料表上建立可更新的非叢集資料行存放區索引**。 資料行存放區索引會儲存資料的複本，因此您需要額外的儲存空間。 不過，資料行存放區索引中資料的壓縮大小比資料列存放區資料表所需大小還要小。  如此一來，您就可以同時在資料行存放區索引上執行分析，並在資料列存放區索引上執行交易。 當資料列存放區資料表中的資料變更時，會更新資料行存放區，讓兩個索引會針對相同的資料執行。  
   
-從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，您可以 **在資料行存放區索引上有一或多個非叢集資料列存放區索引** 。 如此一來，您就可以對基礎資料行存放區執行有效率的資料表搜尋。 其他選項現在也可以使用。 例如，您可以在資料列存放區資料表上使用 UNIQUE 條件約束，強制執行主索引鍵條件約束。 由於非唯一的值將無法插入資料列存放區資料表中，因此 SQL Server 無法將值插入資料行存放區中。  
+從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，您可以 **在資料行存放區索引上有一或多個非叢集資料列存放區索引**。 如此一來，您就可以對基礎資料行存放區執行有效率的資料表搜尋。 其他選項現在也可以使用。 例如，您可以在資料列存放區資料表上使用 UNIQUE 條件約束，強制執行主索引鍵條件約束。 由於非唯一的值將無法插入資料列存放區資料表中，因此 SQL Server 無法將值插入資料行存放區中。  
  
 ### <a name="performance-considerations"></a>效能考量 
 
@@ -821,7 +821,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 雜湊索引是記憶體最佳化資料表中可能有的索引類型之一。 如需詳細資訊，請參閱[記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
-**適用於** ： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+**適用於**： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
 
 ### <a name="hash-index-architecture"></a>雜湊索引架構
 雜湊索引由指標陣列組成，而陣列的每個項目稱為雜湊值區。
@@ -845,7 +845,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 - 多個索引鍵可能對應至相同的雜湊值區。
 - 平衡雜湊函數，表示索引鍵值在雜湊值區上的分配通常會遵循波氏或常態分佈，不是線性分佈。
 - 波氏分配不是平均分配。 索引鍵值不會平均分佈在雜湊值區中。
-- 如果兩個索引鍵對應到相同雜湊值區，就會發生 *雜湊衝突* 。 大量的雜湊衝突可能會對讀取作業產生效能影響。 實際目標是包含兩個不同索引鍵值之值區的 30%。
+- 如果兩個索引鍵對應到相同雜湊值區，就會發生 *雜湊衝突*。 大量的雜湊衝突可能會對讀取作業產生效能影響。 實際目標是包含兩個不同索引鍵值之值區的 30%。
   
 下圖摘要說明雜湊索引和值區的相互作用。  
   
@@ -913,7 +913,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 非叢集索引是記憶體最佳化資料表中可能有的索引類型之一。 如需詳細資訊，請參閱[記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
-**適用於** ： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+**適用於**： [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>記憶體內部非叢集索引架構
 

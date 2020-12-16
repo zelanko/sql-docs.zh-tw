@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e67547c75424708ca0e934175cc0183afb0bd37d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344909"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439074"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92344909"
   
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ]](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  您可在查詢之間使用 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)、[EXCEPT 及 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) 運算子來將其結果結合成單一結果集或加以比較。  
   
@@ -187,7 +187,7 @@ SELECT <select_criteria>
 > [!WARNING]
 > 通常會按照上述順序。 不過，在一些不常見的情況下，順序可能會有不同。
 >
-> 例如，假設您在檢視表上有叢集索引，而該檢視表排除某些資料表資料列，且檢視表的 SELECT 資料行清單使用 CONVERT 將資料類型從 *varchar* 變更為 *integer* 。 在此情況下，CONVERT 的執行順序可能會在 WHERE 子句之前。 這確實是不常見的情況。 如果在您的案例中順序相當重要，通常可以修改您的檢視表來避免順序不同。 
+> 例如，假設您在檢視表上有叢集索引，而該檢視表排除某些資料表資料列，且檢視表的 SELECT 資料行清單使用 CONVERT 將資料類型從 *varchar* 變更為 *integer*。 在此情況下，CONVERT 的執行順序可能會在 WHERE 子句之前。 這確實是不常見的情況。 如果在您的案例中順序相當重要，通常可以修改您的檢視表來避免順序不同。 
 
 ## <a name="permissions"></a>權限  
  選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 或是需要 **db_datareader** 或 **db_owner** 固定資料庫角色中的成員資格，或 **sysadmin** 固定伺服器角色中的成員資格。 使用 **SELECTINTO** 來建立新資料表也需要 **CREATE TABLE** 權限，以及擁有新資料表結構描述上的 **ALTERSCHEMA** 權限。  

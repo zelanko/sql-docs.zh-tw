@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 71ac57d30ac4509bc146645ee3a70cbd2e609137
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: = azure-sqldw-latest
+ms.openlocfilehash: 92da44a02b829515876b0f91b107d8a615e9ed9b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196772"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439093"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
@@ -88,7 +88,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 |RND_ID|`<identifier>`:所建立物件的識別碼。|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- **EXPLAIN** 只能套用至*可最佳化*的查詢，也就是可根據 **EXPLAIN** 命令的結果改善或修改的查詢。 支援的 **EXPLAIN** 命令列在上面。 嘗試使用 **EXPLAIN** 搭配不支援的查詢類型，將會傳回錯誤或回應查詢。  
+ **EXPLAIN** 只能套用至 *可最佳化* 的查詢，也就是可根據 **EXPLAIN** 命令的結果改善或修改的查詢。 支援的 **EXPLAIN** 命令列在上面。 嘗試使用 **EXPLAIN** 搭配不支援的查詢類型，將會傳回錯誤或回應查詢。  
   
  使用者交易中不支援 **EXPLAIN**。  
   

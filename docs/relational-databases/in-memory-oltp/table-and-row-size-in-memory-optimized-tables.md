@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e16ef746dd970926e61098eb66e8f8ddf6a98b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866630"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438743"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -117,11 +117,11 @@ ms.locfileid: "91866630"
   
 資料列主體大小有兩種不同的計算方式，也就是計算的大小和實際大小：  
   
--   計算的大小以*計算的資料列主體大小*為代表，用以判斷是否超過資料列的大小限制 8,060 位元組。  
+-   計算的大小以 *計算的資料列主體大小* 為代表，用以判斷是否超過資料列的大小限制 8,060 位元組。  
   
--   實際大小以*實際的資料列主體大小*為代表，為記憶體內部及檢查點檔案的實際資料列主體儲存體大小。  
+-   實際大小以 *實際的資料列主體大小* 為代表，為記憶體內部及檢查點檔案的實際資料列主體儲存體大小。  
   
-*計算的資料列主體大小*及*實際的資料列主體大小*計算方式相似。 唯一的差異在於 (n)varchar(i) 和 varbinary(i) 資料行大小的計算，如下列資料表底部所反映。 計算的資料列主體大小使用宣告的大小 *i* 作為資料行的大小，而實際的資料列主體大小使用實際的資料大小。  
+*計算的資料列主體大小* 及 *實際的資料列主體大小* 計算方式相似。 唯一的差異在於 (n)varchar(i) 和 varbinary(i) 資料行大小的計算，如下列資料表底部所反映。 計算的資料列主體大小使用宣告的大小 *i* 作為資料行的大小，而實際的資料列主體大小使用實際的資料大小。  
   
 下表描述資料列主體大小的計算，指定為 [實際資料列主體大小] = SUM([淺層類型的大小]) + 2 + 2 * [深層類型資料行數目]。  
   

@@ -9,14 +9,14 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d934e6f1c5457297e385fbe8d42c2709ed2c0f88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868806"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438781"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91868806"
 您可以使用 BCP 命令列公用程式匯入和匯出資料。 如需詳細資訊，請參閱[使用 bcp 公用程式匯入及匯出大量資料](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。
 
 ### <a name="use-the-import-flat-file-wizard"></a>使用「匯入一般檔案精靈」
-如果您不需要使用「匯入及匯出精靈」和其他工具中的所有設定選項，則可以使用 SQL Server Management Studio (SSMS) 中的**匯入一般檔案精靈**將文字檔匯入 SQL Server。 如需詳細資訊，請參閱下列文章：
+如果您不需要使用「匯入及匯出精靈」和其他工具中的所有設定選項，則可以使用 SQL Server Management Studio (SSMS) 中的 **匯入一般檔案精靈** 將文字檔匯入 SQL Server。 如需詳細資訊，請參閱下列文章：
 - [將一般檔案匯入 SQL 精靈](import-flat-file-wizard.md)
 - [What's new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (SQL Server Management Studio 17.3 的新功能)
 - [在 SSMS 17.3 中新推出的「匯入一般檔案精靈」簡介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) \(英文\)

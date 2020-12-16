@@ -22,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a0f2d13c26e6b19b30e551560d11be58ff71e48
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 2b4cd2af87ec181766ab98c9d1483ee6425e51e6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990051"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438993"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 建立外部集區，以定義外部處理序的資源。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體和 CPU) 子集。 Resource Governor 可在資源集區間散發伺服器資源，最多可達 64 個集區。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 若是 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部集區會控管 `rterm.exe`、`python.exe`、`BxlServer.exe` 及其所繁衍的其他處理序。
 ::: moniker-end
   
@@ -47,7 +47,7 @@ ms.locfileid: "90990051"
  
 
 ## <a name="syntax"></a>語法  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
@@ -64,7 +64,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ```  
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -93,21 +93,21 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 *pool_name*  
 這是外部資源集區的使用者定義名稱。 *pool_name* 為英數字元，最多可有 128 個字元。 此引數在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，且必須滿足[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 MAX_CPU_PERCENT =*value*  
-出現 CPU 爭用時，外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+出現 CPU 爭用時，外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 
 MAX_MEMORY_PERCENT =*value*  
-指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 MAX_PROCESSES =*value*  
 允許外部資源集區使用的處理序數目上限。 0 = 集區的閾值沒有限制，這在之後只會受電腦資源約束。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 MAX_CPU_PERCENT =*value*  
-出現 CPU 爭用時，外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+出現 CPU 爭用時，外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} 將外部資源集區附加到指定的 CPU。
 
@@ -116,7 +116,7 @@ AFFINITY CPU = **(** <CPU_range_spec> **)** 會將外部資源集區對應到給
 當您使用 AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)** 時，外部資源集區會與對應到指定 NUMA 節點或節點範圍的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實體 CPU 同質化。 
 
 MAX_MEMORY_PERCENT =*value*  
-指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 MAX_PROCESSES =*value*  
 允許外部資源集區使用的處理序數目上限。 0 = 集區的閾值沒有限制，這在之後只會受電腦資源約束。
@@ -138,7 +138,7 @@ MAX_PROCESSES =*value*
 
 外部集區的 CPU 使用率限制為百分之 75。 記憶體的最大值為電腦上可用記憶體的百分之 30。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -151,7 +151,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  

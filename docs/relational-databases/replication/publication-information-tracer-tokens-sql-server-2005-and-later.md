@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 60d826f519af20e51bc23e8a503975e8222da1bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: a3b273e574b1a21c2f495b684063c525ccc7f362
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720948"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460181"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>發行集資訊、追蹤 Token (SQL Server 2005 和更新版本)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

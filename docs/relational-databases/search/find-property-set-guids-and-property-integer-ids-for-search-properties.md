@@ -13,14 +13,14 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 518d5479b1b07c13ab0613aaf2dc68f1431cb16b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867454"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460051"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "91867454"
 -   針對 32 位版本，請查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`。  
   
 ##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> 從 Windows 屬性描述尋找搜尋屬性的值  
- 若為已知的 Windows 搜尋屬性 (Property)，您可以從屬性 (Property) 描述 ( **propertyDescription** ) 的 **formatID** 和**propID**屬性 (Attribute) 取得您需要的這項資訊。  
+ 若為已知的 Windows 搜尋屬性 (Property)，您可以從屬性 (Property) 描述 ( **propertyDescription** ) 的 **formatID** 和 **propID** 屬性 (Attribute) 取得您需要的這項資訊。  
   
  下列範例將顯示一般 Microsoft 屬性描述的相關部分 (以 `System.Author` 屬性為例)。 `formatID` 屬性 (Attribute) 會指定屬性 (Property) 集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，而 `propID` 屬性 (Attribute) 會指定屬性 (Property) 整數識別碼 `4.` 。請注意， `name` 屬性 (Attribute) 會指定 Windows 正式屬性 (Property) 名稱 `System.Author` (這個範例省略了屬性描述中不相關的部分)。  
   

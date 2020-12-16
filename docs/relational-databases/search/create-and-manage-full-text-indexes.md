@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493845"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460091"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -182,7 +182,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="index-xml-data"></a>索引 xml 資料  
  **xml** 資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選會用於這些文件。 因此，類型資料行是不必要的。 在 **xml** 資料行上，全文檢索索引會建立 XML 元素內容的索引，但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
   
- 如需編製索引和查詢 **xml** 資料行的詳細資訊，請參閱[使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
+ 如需編製索引和查詢 **xml** 資料行的詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
   
 ##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> 停用或重新啟用資料表的全文檢索索引   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，所有使用者建立的資料庫預設都會啟用全文檢索。 此外，個別資料表也會在建立全文檢索索引並將資料行加入索引中後，立即自動啟用全文檢索索引。 從全文檢索索引中卸除最後一個資料行之後，資料表便會自動停用全文檢索索引。  

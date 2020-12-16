@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2b795f2fc65cade53dac533795d41ae8013e90cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809292"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439387"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 
@@ -170,7 +170,7 @@ ALTER TABLE InsurancePolicy
   - 開始資料行的預設值會指定您認為現有資料列有效的時間點。 它不能指定為未來的日期時間點。
   - 結束時間必須指定為所指定 datetime2 精確度的最大值，例如 `9999-12-31 23:59:59` 或 `9999-12-31 23:59:59.9999999`。
 - 加入時段時，系統會執行目前資料表的資料一致性檢查，以確定時段資料行的預設值為有效。
-- 在啟用 **SYSTEM_VERSIONING**時指定現有的記錄資料表，系統會對目前的資料表和記錄資料表執行資料一致性檢查。 如果您將 **DATA_CONSISTENCY_CHECK = OFF** 指定為額外的參數，即可略過此檢查。
+- 在啟用 **SYSTEM_VERSIONING** 時指定現有的記錄資料表，系統會對目前的資料表和記錄資料表執行資料一致性檢查。 如果您將 **DATA_CONSISTENCY_CHECK = OFF** 指定為額外的參數，即可略過此檢查。
 
 ### <a name="migrate-existing-tables-to-built-in-support"></a>將現有的資料表移轉至內建支援
 

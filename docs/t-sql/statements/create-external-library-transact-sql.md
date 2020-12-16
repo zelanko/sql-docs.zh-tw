@@ -19,32 +19,32 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a408cfb25f40ee58c1aeb521c11938026d9241cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439013"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 將 R、Python 或 Java 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員針對 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支援的任何新外部語言執行階段和 OS 平台，上傳所需的成品。 
 
 > [!NOTE]
 > 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 和更新版本支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 將 R 或 Python 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可以作為資料庫管理員上傳所需成品的一般機制。 
 
 > [!NOTE]
 > 在 Azure SQL 受控執行個體中，您可使用 **sqlmlutils** 來安裝程式庫。 如需詳細資料，請參閱[使用 sqlmlutils 安裝 Python 套件](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)和[使用 sqlmlutils 安裝新的 R 套件](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
 
 ```syntaxsql
@@ -86,7 +86,7 @@ WITH ( LANGUAGE = <language> )
 
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 ## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 的語法
 
 ```syntaxsql
@@ -115,7 +115,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 ## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 受控執行個體的語法
 
 ```syntaxsql
@@ -162,7 +162,7 @@ WITH ( LANGUAGE = <language> )
 
 當使用者 **RUser1** 執行外部指令碼時，`libPath` 的值可能包含多個路徑。 第一個路徑一律是資料庫擁有者所建立之共用程式庫的路徑。 `libPath` 的第二個部分會指定包含 **RUser1** 個別上傳之套件的路徑。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 **file_spec**
 
 指定適用於特定平台的套件內容。 只支援每個平台一個檔案成品。
@@ -180,33 +180,33 @@ WITH ( LANGUAGE = <language> )
 
 如果您必須建立程式庫或更改現有的程式庫 (並且具備執行此操作所需的權限)，但伺服器上的檔案系統受到限制，而您無法將程式庫檔案複製到伺服器能夠存取的位置，此選項會相當有用。
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 **PLATFORM = WINDOWS**
 
 指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。
 在 SQL Server 2017 中，Windows 是唯一支援的平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **平台**
 
 指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。
 在 SQL Server 2019 中，支援 Windows 和 Linux 平台。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 **LANGUAGE = 'R'**
 
 指定套件的語言。 SQL Server 2017 支援 R。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 **language**
 
 指定套件的語言。 在 Azure SQL 受控執行個體中，這個值可以是 `R` 或 `Python`。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **language**
 
 指定套件的語言。 此值可以是 `R`、`Python` 或外部語言的名稱 (請參閱[建立外部語言](create-external-language-transact-sql.md))。
@@ -216,12 +216,12 @@ WITH ( LANGUAGE = <language> )
 
 ## <a name="remarks"></a>備註
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 
 在 SQL Server 2017 中僅支援 Windows 平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 針對 R 語言，在使用檔案時，必須以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。  
 
 針對 Python 語言，.whl 或 .zip 檔案套件必須以壓縮封存檔案的型式準備。 若套件已經是 .zip 檔案，它必須包含在新的 .zip 檔案中。 目前不支援直接上傳 .whl 或 .zip 檔案的套件。
@@ -237,7 +237,7 @@ SQL 執行個體中已預先安裝一些套件 (稱為「系統套件」)。 使
 
 需要 `CREATE EXTERNAL LIBRARY` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員的使用者，都有建立外部程式庫的權限。 對於其他所有使用者，您必須使用 [GRANT](./grant-database-permissions-transact-sql.md) 陳述式指定 CREATE EXTERNAL LIBRARY 做為權限，以明確授予權限給他們。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在 SQL Server 2019 中，除了 'CREATE EXTERNAL LIBRARY' 權限外，使用者也需要有外部語言的參考權限才能建立該外部語言的外部程式庫。
 
 ```sql
@@ -253,7 +253,7 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ## <a name="examples"></a>範例
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 ### <a name="add-an-external-library-to-a-database"></a>將外部程式庫新增至資料庫  
 
 下列範例會將名為 `customPackage` 的外部程式庫新增至資料庫。
@@ -272,7 +272,7 @@ EXEC sp_execute_external_script
 ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
 ::: moniker-end
 
@@ -287,11 +287,11 @@ EXEC sp_execute_external_script
 
 若要成功安裝 `packageA`，您必須在將 `packageA` 新增至 SQL Server 時，為 `packageB` 和 `packageC` 建立程式庫。 請務必一併檢查所需的套件版本。
 
-實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如， **ggplot2** 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供的額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
+實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如，**ggplot2** 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供的額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
 
 由於只從查看套件資訊清單很難判斷所有相依性，因此建議您使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 之類的套件，以識別成功完成安裝可能需要的所有套件。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 
 + 上傳目標套件及其相依性。 所有檔案都必須位於伺服器能夠存取的一個資料夾中。
 
@@ -328,7 +328,7 @@ EXEC sp_execute_external_script
     ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
 ::: moniker-end
 
@@ -340,7 +340,7 @@ EXEC sp_execute_external_script
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 **'R'** 替換成 **'Python'** 即可正常運作。
 ::: moniker-end
 
@@ -353,7 +353,7 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAG
 
 如需詳細資訊，請參閱 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ### <a name="add-a-java-jar-file-to-a-database"></a>將 Java.jar 檔案新增至資料庫  
 
 下列範例會將稱為 `customJar` 的外部 Jar 檔案新增至資料庫。

@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62166f813bee655bda939c1f230d02a1a5b0afbc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e4ad904176abdc4f714980cf1e242bd620632a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195613"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440212"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "92195613"
  如果 DAC 或包含的使用者中不支援資料庫的物件，則無法匯出資料庫。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))＞。  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> 權限  
- 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。
+ 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies** 的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。
  
-在 Azure SQL Database 上，您需要**針對每個資料庫**授與所有資料表或特定資料表的 VIEW DEFINITION 與 SELECT 權限
+在 Azure SQL Database 上，您需要 **針對每個資料庫** 授與所有資料表或特定資料表的 VIEW DEFINITION 與 SELECT 權限
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> 使用匯出資料層應用程式精靈  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 9cc9c07d69be1b08a887ddf4a7ac071647a4d89a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125970"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440229"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -49,7 +49,7 @@ ms.locfileid: "96125970"
 > [!NOTE]  
 > 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2017"
 
 ###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求
 
@@ -221,7 +221,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 ## <a name="to-install-sql-server-2019"></a>安裝 SQL Server 2019 
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 **Setup.exe**。 若要從網路共用執行安裝，請找出共用上的根資料夾，然後按兩下 **Setup.exe**。  

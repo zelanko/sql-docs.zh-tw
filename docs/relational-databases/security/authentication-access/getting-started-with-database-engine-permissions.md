@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460064"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864481"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>若連接的人員僅會連接至單一資料庫  
   
-1.  針對 Windows 群組建立登入。 (若使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，請略過 Active Directory 步驟，並在此處建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入。)  
+1.  在使用者資料庫中，針對 Windows 群組建立自主資料庫。 (若使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，請略過 Active Directory 步驟，並在此處建立自主資料庫使用者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。)  
   
-2.  在使用者資料庫中，針對 Windows 群組建立自主資料庫。 (若使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，請略過 Active Directory 步驟，並在此處建立自主資料庫使用者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。)  
+1.  在使用者資料庫中，建立一或多個使用者定義資料庫角色，每個角色皆代表類似的職務。 例如財務分析師和銷售分析師。  
   
-3.  在使用者資料庫中，建立一或多個使用者定義資料庫角色，每個角色皆代表類似的職務。 例如財務分析師和銷售分析師。  
+1.  將資料庫使用者新增至一或多個使用者定義資料庫角色。  
   
-4.  將資料庫使用者新增至一或多個使用者定義資料庫角色。  
-  
-5.  授與權限至使用者定義資料庫角色。  
+1.  授與權限至使用者定義資料庫角色。  
   
  此時顯示的結果，通常會是屬於 Windows 群組成員的 Windows 使用者。 Windows 群組在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中具有登入。 登入會對應至使用者資料庫中的使用者身分識別。 使用者是資料庫角色的成員。 現在您必須新增權限至角色。  
   
