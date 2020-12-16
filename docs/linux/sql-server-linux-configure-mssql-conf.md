@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 0274f6f2a0acccb20f9a9682d16b35ef5009d1b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471599"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
 
@@ -50,7 +50,7 @@ ms.locfileid: "92115701"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 **mssql-conf** 是一個設定指令碼，會使用適用於 Red Hat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 的 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 進行安裝。 您可以使用此公用程式來設定下列參數：
 
@@ -559,7 +559,7 @@ sudo systemctl restart mssql-server
 | distributedtransaction.tracefilepath | 應在其中儲存追蹤檔案的資料夾 |
 | distributedtransaction.turnoffrpcsecurity | 啟用或停用分散式交易的 RPC 安全性 |
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> 接受 MLServices EULA
 
@@ -589,7 +589,7 @@ accepteula = Y
 accepteulaml = Y
 ```
 :::moniker-end
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> 啟用輸出網路存取
 
@@ -673,7 +673,7 @@ outboundnetworkaccess = 1
 
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 啟用/停用追蹤旗標
 
-這個**追蹤旗標**選項會啟用或停用啟動 SQL Server 服務的追蹤旗標。 若要啟用/停用追蹤旗標，請使用下列命令：
+這個 **追蹤旗標** 選項會啟用或停用啟動 SQL Server 服務的追蹤旗標。 若要啟用/停用追蹤旗標，請使用下列命令：
 
 1. 使用下列命令來啟用追蹤旗標。 例如，針對追蹤旗標 1234：
 
@@ -783,7 +783,7 @@ traceflag = 3456
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ```ini
 [EULA]

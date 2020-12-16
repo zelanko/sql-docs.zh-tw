@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b7821fed8b960d98c2ef070ef21103b0d727207
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 05e7b42b321a3e6fbca6d1f52a7f39084492a87e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494428"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469879"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88494428"
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**BinaryData**|**image**|結果的資料指標類型。 值為：<br /><br /> 1 = 索引鍵集<br /><br /> 2 = 動態<br /><br /> 4 = 順向<br /><br /> 8 = 靜態<br /><br /> 16 = 向前快轉|2|是|  
 |**ClientProcessID**|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
-|**DatabaseID**|**int**|由 *database* 陳述式所指定的資料庫識別碼；如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|**DatabaseID**|**int**|由 *database* 陳述式所指定的資料庫識別碼；如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |**EventClass**|**int**|記錄的事件類型 = 76。|27|否|  
 |**EventSequence**|**int**|批次中之 **CursorClose** 事件類別的順序。|51|否|  

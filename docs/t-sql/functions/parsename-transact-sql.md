@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047b760e2b3e7101cd471a4e1a8c65cbc970c023
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 02227b388b7c2a50d96aa329fa49c796434f8680
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459648"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472019"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ PARSENAME ('object_name' , object_piece )
 *'object_name'* ：此參數存放為了擷取指定物件部分的物件名稱。 這個參數是一個選擇性限定的物件名稱。 若限定了物件名稱的所有部分，則此名稱會有四個部分：伺服器名稱、資料庫名稱、結構描述名稱及物件名稱。  ' Object_name ' 字串的每個部分都是 *sysname* 類型，這相當於 Nvarchar (128) 或 256 個位元組。 若字串的任何部分超過 256 個位元組，則 PARSENAME 會針對該部分傳回 Null，因為其不是有效的 sysname。
   
 *object_piece*  
-這是要傳回的物件部分。 *object_piece* 的類型是 **int**它可以有下列這些值：  
+這是要傳回的物件部分。 *object_piece* 的類型是 **int** 它可以有下列這些值：  
     1 = 物件名稱  
     2 = 結構描述名稱  
     3 = 資料庫名稱  

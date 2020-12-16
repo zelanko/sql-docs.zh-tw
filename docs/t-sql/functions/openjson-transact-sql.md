@@ -17,13 +17,13 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 93113a42ca267f9d5c241636dfbf49aa8e75ae90
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: b3f0ea1a5a1260699fa4bbc0a2fbf84930b1c07e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117073"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472009"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -225,7 +225,7 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
 1. 當您使用預設結構描述呼叫 OPENJSON 時 (即您沒有在 WITH 子句中指定明確的結構描述時)，函式會傳回具有下列資料行的資料表：  
     1.  **索引鍵**。 包含指定屬性名稱或指定陣列中項目索引的 nvarchar(4000) 值。 索引鍵資料行具有 BIN2 定序。  
     2.  **值**。 包含屬性值的 nvarchar(max) 值。 「值」資料行會從 *jsonExpression* 繼承其定序。
-    3.  **類型**。 包含值類型的 int 值。 只有在您使用預設結構描述使用 OPENJSON 時，才會傳回**類型**資料行。 「類型」資料行有下列其中一個值：  
+    3.  **類型**。 包含值類型的 int 值。 只有在您使用預設結構描述使用 OPENJSON 時，才會傳回 **類型** 資料行。 「類型」資料行有下列其中一個值：  
   
         |「類型」資料行的值|JSON 資料類型|  
         |------------------------------|--------------------|  
@@ -291,7 +291,7 @@ WHERE product.productTypeID IN (1,2,3,4)
   
 ### <a name="example-2---merge-properties-from-two-json-objects"></a>範例 2 - 合併來自兩個 JSON 物件的屬性
 
-下列範例會選取兩個 JSON 物件的集合聯集。 兩個物件具有重複的 *name*屬性。 範例使用索引鍵值來從結果中排除重複的資料列。  
+下列範例會選取兩個 JSON 物件的集合聯集。 兩個物件具有重複的 *name* 屬性。 範例使用索引鍵值來從結果中排除重複的資料列。  
   
 ```sql  
 DECLARE @json1 NVARCHAR(MAX),@json2 NVARCHAR(MAX)

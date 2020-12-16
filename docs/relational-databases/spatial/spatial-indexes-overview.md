@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473139"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "92006273"
 >  當資料庫相容性層級設定為 100 以下時，空間索引的方格密度會顯示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 資料行中。 **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** 鑲嵌式配置選項不會填入這些資料行。 使用自動方格選項時，sys.spatial_index_tessellations 目錄檢視的這些資料行會包含 **NULL** 值。  
   
 ###  <a name="tessellation"></a><a name="tessellation"></a> 鑲嵌  
- 將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，透過的方式是將此物件與它所接觸的一組方格資料格 (「接觸的資料格」**(Touched Cell)) 建立關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。  
+ 將索引空間分解成方格階層之後，空間索引會從空間資料行讀取資料 (逐列讀取)。 在讀取空間物件 (或執行個體) 的資料之後，空間索引會針對該物件執行 *「鑲嵌程序」* (Tessellation Process)。 鑲嵌程序會將此物件納入方格階層中，透過的方式是將此物件與它所接觸的一組方格資料格 (「接觸的資料格」(Touched Cell)) 建立關聯。 從方格階層的層級 1 開始，鑲嵌程序就會跨越此層級繼續進行 *「廣度優先」* (Breadth First)。 此程序可能繼續到所有的四個層級 (一次一個層級)。  
   
  鑲嵌程序的輸出是一組接觸的資料格，這些資料格會記錄在物件的空間索引內。 藉由參考這些記錄的資料格，空間索引就可以在同時儲存於索引內的空間資料行中，在相對於其他物件的空間內找出此物件。  
   

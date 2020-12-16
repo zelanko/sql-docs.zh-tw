@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44d9306d08d1e75f1d0f0477e0c58c207bd70e8
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a3c1a21e36d379bca1875ee96865f9affe2151ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471919"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -139,21 +139,21 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  WITH \<common_table_expression>  
  指定定義在 INSERT 陳述式範圍內的暫存具名結果集，也稱為通用資料表運算式。 這個結果集是從 SELECT 陳述式衍生而來。 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP ( *expression* ) [ PERCENT ]  
+ TOP (*expression*) [ PERCENT ]  
  指定將插入的隨機資料列數或百分比。 *expression* 可以是一個數字，也可以是資料列的百分比。 如需詳細資訊，請參閱 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
   
  INTO  
  這是一個選擇性的關鍵字，您可以在 INSERT 和目標資料表之間使用它。  
   
  *server_name*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  這是資料表或檢視表所在之連結伺服器的名稱。 您可將 *server_name* 指定為 [連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名稱，或使用 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函式來指定。  
   
- 若將 *server_name* 指定為連結的伺服器， *database_name* 和 *schema_name* 都為必要項目。 若使用 OPENDATASOURCE 來指定 *server_name* ， *database_name* 和 *schema_name* 可能無法套用至所有資料來源，並會受限於存取遠端物件之 OLE DB 提供者的功能。  
+ 若將 *server_name* 指定為連結的伺服器，*database_name* 和 *schema_name* 都為必要項目。 若使用 OPENDATASOURCE 來指定 *server_name*，*database_name* 和 *schema_name* 可能無法套用至所有資料來源，並會受限於存取遠端物件之 OLE DB 提供者的功能。  
   
  *database_name*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  這是資料庫的名稱。  
   
@@ -168,7 +168,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *table_or_view_name* 所參考的檢視必須能夠更新，而且只能參考該檢視 FROM 子句中的單一基底資料表。 例如，在多資料表檢視中使用 INSERT 時，其使用的 *column_list* 只能參考單一基底資料表的各個資料行。 如需可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
  *rowset_function_limited*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  這是 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函式。 這些函數的使用方式受限於存取遠端物件之 OLE DB 提供者的功能。  
   
@@ -182,7 +182,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  指定 INSERT 陳述式目標資料表之 TABLOCK 提示的效果，與指定 TABLOCKX 提示相同。 獨佔鎖定是在資料表上取得的。  
   
- ( *column_list* )  
+ (*column_list*)  
  這是要插入資料的一個或多個資料行所組成的清單。 *column_list* 必須以括弧括住，並以逗號分隔。  
   
  如果資料行不在 *column_list* 中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須能夠依據資料行定義來提供值；否則，便無法載入這個資料列。 如果資料行符合下列條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動提供資料行值：  
@@ -197,7 +197,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
 -   是計算資料行。 使用計算的值。  
   
-當您將明確的值插入識別欄位時，必須使用 *column_list* ，而且資料表的 SET IDENTITY_INSERT 選項必須是 ON。  
+當您將明確的值插入識別欄位時，必須使用 *column_list*，而且資料表的 SET IDENTITY_INSERT 選項必須是 ON。  
   
 OUTPUT 子句  
  在插入作業中，傳回插入的資料列。 這些結果可以傳回給處理應用程式或插入資料表或資料表變數，以便進一步處理。  
@@ -217,7 +217,7 @@ OUTPUT 子句
  *expression*  
  這是一個常數、變數或運算式。 此運算式不能包含 EXECUTE 陳述式。  
   
- 參考 Unicode 字元資料類型 **nchar** 、 **nvarchar** 及 **ntext** 時，' *expression* ' 的前面應該要有大寫字母 'N'。 如果沒有指定 'N'，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將字串轉換成對應至資料庫預設定序或資料行的字碼頁。 在此字碼頁中找不到的任何字元都會遺失。  
+ 參考 Unicode 字元資料類型 **nchar**、**nvarchar** 及 **ntext** 時，'*expression*' 的前面應該要有大寫字母 'N'。 如果沒有指定 'N'，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將字串轉換成對應至資料庫預設定序或資料行的字碼頁。 在此字碼頁中找不到的任何字元都會遺失。  
   
  *derived_table*  
  這是傳回要載入資料表之資料列的任何有效 SELECT 陳述式。 SELECT 陳述式不能包含通用資料表運算式 (CTE)。  
@@ -229,7 +229,7 @@ OUTPUT 子句
   
  如果搭配使用 *execute_statement* 與 INSERT，則每個結果集都必須相容於資料表或 *column_list* 中的資料行。  
   
- 您可以使用 *execute_statement* ，以在相同伺服器或遠端伺服器中執行預存程序。 執行遠端伺服器中的程序，而且結果集會傳回本機伺服器，且載入本機伺服器的資料表中。 在分散式交易中，如果連線已啟用 Multiple Active Result Set (MARS)，即無法對回送的連結伺服器發出 *execute_statement* 。  
+ 您可以使用 *execute_statement*，以在相同伺服器或遠端伺服器中執行預存程序。 執行遠端伺服器中的程序，而且結果集會傳回本機伺服器，且載入本機伺服器的資料表中。 在分散式交易中，如果連線已啟用 Multiple Active Result Set (MARS)，即無法對回送的連結伺服器發出 *execute_statement*。  
   
  如果 *execute_statement* 要以 READTEXT 陳述式傳回資料，則每個 READTEXT 陳述式最多可以傳回 1 MB (1024 KB) 的資料。 *execute_statement* 也可搭配擴充程序使用。 *execute_statement* 會插入擴充程序主要執行緒所傳回的資料；但不會插入主要執行緒以外之執行緒的輸出。  
   
@@ -263,35 +263,35 @@ OUTPUT 子句
  這是包含有效 \<search_condition> 的任何 WHERE 子句，可篩選 \<dml_statement_with_output_clause> 傳回的資料列。 如需詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。 當 \<search_condition> 用於此內容時，其不能包含子查詢、可執行資料存取的純量使用者定義函式、彙總函式、TEXTPTR 或是全文檢索搜尋述詞。 
   
  DEFAULT VALUES  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  強制新的資料列包含定義給每個資料行的預設值。  
   
  BULK  
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  由外部工具用來上傳二進位資料流。 這個選項無法與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQLCMD 或 OSQL 等工具或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 等資料存取應用程式開發介面搭配使用。  
   
  FIRE_TRIGGERS  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定在二進位資料流上傳作業期間，執行目的地資料表上所定義的任何插入觸發程序。 如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
  CHECK_CONSTRAINTS  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定在二進位資料流上傳作業期間，必須檢查目標資料表或檢視表的所有條件約束。 如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
  KEEPNULLS  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定在二進位資料流上傳作業期間，空白資料行應該保留 Null 值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
  以 *kilobytes_per_batch* 指定每一批資料的大約 KB 數。 如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
- ROWS_PER_BATCH = *rows_per_batch*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ ROWS_PER_BATCH =*rows_per_batch*  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指出二進位資料流中大約的資料列數。 如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
@@ -347,7 +347,7 @@ OUTPUT 子句
 ## <a name="data-types"></a>資料類型  
  當您插入資料列時，請考量以下資料類型行為：  
   
--   如果要將值載入 **char** 、 **varchar** 或 **varbinary** 資料類型的資料行，系統會依據建立資料表時為資料行定義的 SET ANSI_PADDING 設定，來決定填補或截斷尾端空白 ( **char** 和 **varchar** 是空格， **varbinary** 是零)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
+-   如果要將值載入 **char**、**varchar** 或 **varbinary** 資料類型的資料行，系統會依據建立資料表時為資料行定義的 SET ANSI_PADDING 設定，來決定填補或截斷尾端空白 (**char** 和 **varchar** 是空格，**varbinary** 是零)。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
      下表顯示 SET ANSI_PADDING OFF 的預設作業。  
   
@@ -361,7 +361,7 @@ OUTPUT 子句
   
 -   將 Null 值插入 **text** 或 **image** 資料行時，並不會建立有效的文字指標，也不會預先配置 8 KB 文字頁面。  
   
--   若是以 **uniqueidentifier** 資料類型建立的資料行，其會儲存特殊格式的 16 位元組二進位值。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會自動為 **uniqueidentifier** 資料類型的資料行產生值。 在插入作業期間， **uniqueidentifier** 資料行可以使用 **uniqueidentifier** 資料類型的變數以及 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 格式的字串常數 (36 個字元，包括連字號；其中 *x* 是 0-9 或 a-f 範圍內的十六進位數字)。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 即為 **uniqueidentifier** 變數或資料行的有效值。 請使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函式來取得全域唯一識別碼 (GUID)。  
+-   若是以 **uniqueidentifier** 資料類型建立的資料行，其會儲存特殊格式的 16 位元組二進位值。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會自動為 **uniqueidentifier** 資料類型的資料行產生值。 在插入作業期間，**uniqueidentifier** 資料行可以使用 **uniqueidentifier** 資料類型的變數以及 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 格式的字串常數 (36 個字元，包括連字號；其中 *x* 是 0-9 或 a-f 範圍內的十六進位數字)。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 即為 **uniqueidentifier** 變數或資料行的有效值。 請使用 [NEWID()](../../t-sql/functions/newid-transact-sql.md) 函式來取得全域唯一識別碼 (GUID)。  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>將值插入使用者定義型別資料行  
  您可以利用下列方式，在使用者定義型別資料行中插入值：  
@@ -463,7 +463,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 ```  
   
 ###  <a name="handling-column-values"></a><a name="ColumnValues"></a> 處理資料行值  
- 本節中的範例會示範將值插入至資料行的方法，這些資料行定義了 IDENTITY 屬性、DEFAULT 值、 **uniqueidentifier** 資料類型，或使用者定義類型的資料行。  
+ 本節中的範例會示範將值插入至資料行的方法，這些資料行定義了 IDENTITY 屬性、DEFAULT 值、**uniqueidentifier** 資料類型，或使用者定義類型的資料行。  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 將資料插入包含有預設值之資料行的資料表  
  下列範例會顯示如何將資料列插入含有自動產生值或有預設值的資料行之資料表中。 `Column_1` 是一個計算資料行，它會將字串與插入 `column_2` 的值串連起來，自動產生某個值。 `Column_2` 會使用預設條件約束來定義。 如果此資料行並未指定值，就會使用預設值。 `Column_3` 定義了 **rowversion** 資料類型，該資料類型會自動產生唯一的遞增二進位數字。 `Column_4` 不會自動產生值。 如果未指定這個資料行的值，就會插入 NULL。 INSERT 陳述式會插入包含部分 (而非全部) 資料行值的資料列。 在最後一個 INSERT 陳述式中，並未指定任何資料行，只會使用 DEFAULT VALUES 子句插入預設值。  
@@ -726,7 +726,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. 使用連結的伺服器將資料插入遠端資料表  
  下列範例會將資料列插入遠端資料表。 此範例一開始會使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 建立遠端資料來源的連結。 接下來，會將連結的伺服器名稱 `MyLinkServer` 指定為 *server.catalog.schema.object* 格式之四部分物件名稱的一部分。  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql
 USE master;  
@@ -755,7 +755,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. 使用 OPENQUERY 函數將資料插入遠端資料表  
  下列範例會指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函式，以將資料列插入至遠端資料表。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -768,7 +768,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. 使用 OPENDATASOURCE 函數將資料插入遠端資料表  
  下列範例會指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 資料列集函式，以將資料列插入至遠端資料表。 使用 *server_name* 或 *server_name\instance_name* 格式，為資料來源指定有效的伺服器名稱。  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. 插入至以 PolyBase 建立的外部資料表  
  將資料從 SQL Server 匯出至 Hadoop 或 Azure 儲存體。 首先，建立指向目的地檔案或目錄的外部資料表。 然後，使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 如果目的地檔案或目錄不存在，INSERT INTO 陳述式會加以建立，並將 SELECT 陳述式的結果以指定檔案格式匯出至指定位置。  如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/polybase-guide.md)。  
   
-**適用於** ： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用於**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```sql
 -- Create an external table.   
@@ -861,7 +861,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. 搭配 BULK 使用 OPENROWSET 函數，將資料大量載入資料表  
  下列範例會藉由指定 OPENROWSET 函數，將資料檔案中的資料列插入資料表。 將會指定 IGNORE_TRIGGERS 資料表提示來讓效能最佳化。 如需其他範例，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 來匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -881,7 +881,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S. 使用 TABLOCK 提示指定鎖定方法  
  下列範例指定在 Production.Location 資料表上採用獨佔 (X) 鎖定，並且將鎖定保留到 INSERT 陳述式結束為止。  
   
-**適用於** ：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
 ```sql
 INSERT INTO Production.Location WITH (XLOCK)  

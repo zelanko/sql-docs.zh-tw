@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471399"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>設定 Linux 上 SQL Server 的使用狀況與診斷資料收集
 
@@ -83,7 +83,7 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 在主機目錄中新增具有 `[telemetry]` 和 `customerfeedback = false` 這二行的 `mssql.conf` 檔案：
 
@@ -176,7 +176,7 @@ Microsoft SQL Server 2017 包含一些啟用網際網路的功能，而這些功
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 新本機稽核記錄的目標目錄會位於容器中。 在您電腦上的主機目錄中，為新的本機稽核記錄建立目標目錄。 下列範例會建立新的 **/audit** 目錄：
 

@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 156668084a475f71cea6c18ac050bf45eead6f06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3583f0f780df284dc16e54eda6b2406ff8737911
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754552"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473849"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85754552"
 ##  <a name="overview"></a><a name="Overview"></a> 概觀   
 基於效能的考量，[!INCLUDE[ssDE](../../includes/ssde-md.md)]會在緩衝區快取的記憶體內修改資料庫頁面，但並不會在每次變更之後都將這些頁面寫入磁碟中。 而是由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期在每一個資料庫上發出檢查點。 「檢查點」會將目前記憶體內部已修改的頁面 (稱為「中途分頁」) 和交易記錄資訊從記憶體寫入至磁碟，也會在交易記錄中記錄該資訊。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援幾種類型的檢查點：自動、間接、手動和內部。 下表彙總 **檢查點**的類型：
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援幾種類型的檢查點：自動、間接、手動和內部。 下表彙總 **檢查點** 的類型：
   
 |名稱|[!INCLUDE[tsql](../../includes/tsql-md.md)] 介面|描述|  
 |----------|----------------------------------|-----------------|  
@@ -98,7 +98,7 @@ ms.locfileid: "85754552"
   
 -   設定間接檢查點的資料庫線上交易式工作負載可能會導致效能降低。 間接檢查點可確定中途分頁的數目，低於特定臨界值，如此即可在目標復原時間內完成資料庫的復原。 
 
-  相對於使用中途分頁數目的**間接檢查點**，**復原間隔**設定選項會使用交易數目來判斷復原時間。 在收到大量 DML 作業的資料庫上啟用間接檢查點時，背景寫入器可開始積極排清磁碟的中途緩衝區，以確保執行復原所需的時間，落在資料庫所設的目標復原時間內。 如此會在某些系統上造成額外的 I/O 活動，而若磁碟子系統的運作超過或接近 I/O 臨界值，就會形成效能瓶頸。  
+  相對於使用中途分頁數目的 **間接檢查點**，**復原間隔** 設定選項會使用交易數目來判斷復原時間。 在收到大量 DML 作業的資料庫上啟用間接檢查點時，背景寫入器可開始積極排清磁碟的中途緩衝區，以確保執行復原所需的時間，落在資料庫所設的目標復原時間內。 如此會在某些系統上造成額外的 I/O 活動，而若磁碟子系統的運作超過或接近 I/O 臨界值，就會形成效能瓶頸。  
   
 -   間接檢查點可讓您考量 REDO 期間的隨機 I/O 成本來可靠控制資料庫復原時間。 如此可讓伺服器執行個體維持在指定資料庫的復原時間上限內 (除非長時間執行的交易造成過多的復原次數)。  
   

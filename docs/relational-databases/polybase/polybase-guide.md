@@ -18,13 +18,13 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest'
+ms.openlocfilehash: 43d5d214f1720513955c27c45349da74afe3888e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473359"
 ---
 # <a name="what-is-polybase"></a>什麼是 PolyBase？
 
@@ -44,7 +44,7 @@ PolyBase 將某些計算推送到 Hadoop 節點以最佳化整體查詢。 不�
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 PolyBase 可讓您的 SQL Server 執行個體處理會從外部資料來源讀取資料的 Transact-SQL 查詢。 SQL Server 2016 和更新版本可以存取 Hadoop 和 Azure Blob 儲存體中的外部資料。 從 SQL Server 2019 開始，您現在可以使用 PolyBase 來存取 [SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md) 和 [MongoDB](polybase-configure-mongodb.md) 中的外部資料。
 
@@ -109,7 +109,7 @@ PolyBase 可在 SQL Server 中啟用下列情節：
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15"
 
 ## <a name="next-steps"></a>後續步驟
 

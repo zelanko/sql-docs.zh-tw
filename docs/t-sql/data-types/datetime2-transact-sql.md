@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 02b3ff30a15e642fec7afb3a2646037d081a651f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472209"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 

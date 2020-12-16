@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473869"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91868569"
   
  如果主索引鍵不存在，而且資料表正移轉至非持久性資料表，這個畫面將不會出現。  
   
- 對於文字資料行 ( **char**、 **nchar**、 **varchar**和 **nvarchar**類型的資料行)，您必須選取適當的定序。 記憶體中 OLTP 只支援記憶體最佳化資料表上的資料行之 BIN2 定序，而不支援附帶補充字元的定序。 如需支援的定序及定序變更之潛在影響的詳細資訊，請參閱＜ [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) ＞。  
+ 對於文字資料行 ( **char**、 **nchar**、 **varchar** 和 **nvarchar** 類型的資料行)，您必須選取適當的定序。 記憶體中 OLTP 只支援記憶體最佳化資料表上的資料行之 BIN2 定序，而不支援附帶補充字元的定序。 如需支援的定序及定序變更之潛在影響的詳細資訊，請參閱＜ [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) ＞。  
   
  您可以為主索引鍵設定下列參數：  
   

@@ -11,13 +11,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 54eb732e45515176f7fd1e8b258310e7de2b535c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785055"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471509"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上設定 SQL Server 複寫
 
@@ -73,9 +73,9 @@ ms.locfileid: "91785055"
 
 1. 在 SSMS 的物件總管中，連線到您的 SQL Server 執行個體。
 
-1. 以滑鼠右鍵按一下 [複寫]****，然後按一下 [設定散發...]****。
+1. 以滑鼠右鍵按一下 [複寫]，然後按一下 [設定散發...]。
 
-1. 依照「設定散發精靈」**** 的指示進行。
+1. 依照「設定散發精靈」的指示進行。
 
 ### <a name="create-publication-and-articles"></a>建立發行集和發行項
 
@@ -83,7 +83,7 @@ ms.locfileid: "91785055"
 
 1. 在物件總管中，按一下 [複寫] > [本機發行集]> [新增發行集...]。
 
-1. 依照「新增發行集精靈」**** 的指示設定複寫類型，以及屬於發行集的發行項。
+1. 依照「新增發行集精靈」的指示設定複寫類型，以及屬於發行集的發行項。
 
 ### <a name="configure-the-subscription"></a>設定訂閱
 
@@ -93,7 +93,7 @@ ms.locfileid: "91785055"
 
 使用複寫監視器，監視複寫作業。
 
-在物件總管中，以滑鼠右鍵按一下 [複寫]****，然後按一下 [啟動複寫監視器]****。
+在物件總管中，以滑鼠右鍵按一下 [複寫]，然後按一下 [啟動複寫監視器]。
 
 ## <a name="next-steps"></a>後續步驟
 

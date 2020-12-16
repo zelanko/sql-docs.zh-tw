@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5529412dd1c575f25fb372aba3428edcce55431a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f8487b4246a349169891f68e4068ad233f78d21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900088"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471629"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上搭配 SQL Server 使用分散式交易
 
@@ -55,7 +55,7 @@ docker run `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 下列範例示範如何使用這些環境變數來提取並執行針對 MSDTC 所設定的單一 SQL Server 2019 容器。 這可讓其與任何主機上的任何應用程式通訊。
 
@@ -80,7 +80,7 @@ docker run `
 > [!IMPORTANT]
 > 上一個命令僅適用於在 Linux 上執行的 Docker。 針對 Windows 上的 Docker，Windows 主機已接聽連接埠 135。 您可以移除 Windows 上 Docker 的 `-p 135:135` 參數，但有一些限制。 產生的容器，即無法用於與主機相關的分散式交易，而只能參與主機上 Docker 容器之間的分散式交易。
 
-在此命令中，**RPC 端點對應程式服務**已繫結至連接埠 135，而 **MSDTC** 服務則已繫結至 Docker 虛擬網路內的連接埠 51000。 SQL Server TDS 通訊會發生在 Docker 虛擬網路中的連接埠 1433 上。 這些連接埠已作為 TDS 連接埠 51433、RPC 端點對應程式連接埠 135 和 MSDTC 連接埠 51000 對外公開給主機。
+在此命令中，**RPC 端點對應程式服務** 已繫結至連接埠 135，而 **MSDTC** 服務則已繫結至 Docker 虛擬網路內的連接埠 51000。 SQL Server TDS 通訊會發生在 Docker 虛擬網路中的連接埠 1433 上。 這些連接埠已作為 TDS 連接埠 51433、RPC 端點對應程式連接埠 135 和 MSDTC 連接埠 51000 對外公開給主機。
 
 > [!NOTE]
 > RPC 端點對應程式和 MSDTC 連接埠在主機和容器上不一定要相同。 因此，雖然 RPC 端點對應程式連接埠在容器上設定為 135，但可能會對應到連接埠 13501 或主機伺服器上任何其他可用的連接埠。

@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471419"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中還原 SQL Server 資料庫
 
@@ -26,7 +26,7 @@ ms.locfileid: "92115861"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 本教學課程說明如何將 SQL Server 備份檔案移動及還原至執行於 Docker 上的 SQL Server 2019 Linux 容器映像中。
 
@@ -97,7 +97,7 @@ ms.locfileid: "92115861"
    docker ps -a
    ```
 
-1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
+1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱 [設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
 
   ```bash
   $ sudo docker ps -a
@@ -108,7 +108,7 @@ ms.locfileid: "92115861"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 在 Linux/Mac 上開啟 Bash 終端機，或在 Windows 上開啟已提高權限的 PowerShell 工作階段。
 
@@ -153,7 +153,7 @@ ms.locfileid: "92115861"
    docker ps -a
    ```
 
-1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
+1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱 [設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
 
    ```bash
    $ sudo docker ps -a
@@ -465,7 +465,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. 停止 **sql1** 容器。
 
@@ -529,7 +529,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2019 的 Linux 伺服器。 您已了解如何︰
 
@@ -538,7 +538,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 > [!div class="checklist"]
 > * 建立 SQL Server Linux 容器映像。
 > * 將 SQL Server 資料庫備份複製到容器中。
-> * 使用 **sqlcmd**在容器內執行 Transact-SQL 陳述式。
+> * 使用 **sqlcmd** 在容器內執行 Transact-SQL 陳述式。
 > * 從容器建立並擷取備份檔案。
 > * 使用 Docker 中的資料磁碟區容器來保存 SQL Server 資料。
 

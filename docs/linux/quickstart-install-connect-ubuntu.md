@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fd314ea1723786e514b6eb8320b373216de70aa8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115956"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471659"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：在 Ubuntu 上安裝 SQL Server 並建立資料庫
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92115956"
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 您會在本快速入門中，了解如何在 Ubuntu 18.04 上安裝 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
 
@@ -45,7 +45,7 @@ ms.locfileid: "92115956"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
+Ubuntu 16.04 或 18.04 機器必須 **至少有 2 GB** 的記憶體。
 
 若要在自己的機器上安裝 Ubuntu 18.04，請前往 <http://releases.ubuntu.com/bionic/>。 您也可以在 Azure 中建立 Ubuntu 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](/azure/virtual-machines/linux/tutorial-manage-vm)。
 
@@ -62,9 +62,9 @@ Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
+Ubuntu 16.04 或 18.04 機器必須 **至少有 2 GB** 的記憶體。
 
 若要在自己的機器上安裝 Ubuntu 18.04，請前往 <http://releases.ubuntu.com/bionic/>。 您也可以在 Azure 中建立 Ubuntu 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](/azure/virtual-machines/linux/tutorial-manage-vm)。
 
@@ -136,7 +136,7 @@ Ubuntu 16.04 或 18.04 機器必須**至少有 2 GB** 的記憶體。
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 

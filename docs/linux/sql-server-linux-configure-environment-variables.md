@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 737004c651ff7cb335557cbbfe61e9df516e2f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115524"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471619"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用環境變數在 Linux 上設定 SQL Server 設定
 
@@ -27,7 +27,7 @@ ms.locfileid: "92115524"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 您可以使用數個不同的環境變數來設定 Linux 上的 SQL Server 2019。 在下列兩種案例中會使用這些變數：
 
@@ -46,7 +46,7 @@ ms.locfileid: "92115524"
 
 | 環境變數 | 描述 |
 |-----|-----|
-| **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
+| **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受 [終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
 | **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**評估**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
 | **MSSQL_LCID** | 為 SQL Server 設定要使用的語言識別碼。 例如 1036 是法文。 |
@@ -66,11 +66,11 @@ ms.locfileid: "92115524"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 | 環境變數 | 描述 |
 |-----|-----|
-| **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
+| **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受 [終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
 | **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**評估**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
 | **MSSQL_LCID** | 為 SQL Server 設定要使用的語言識別碼。 例如 1036 是法文。 |
@@ -97,7 +97,7 @@ ms.locfileid: "92115524"
 - **ACCEPT_EULA** 會接受使用者授權合約。
 - **MSSQL_PID** 會指定自由授權的 SQL Server Developer Edition 供非生產環境使用。
 - **MSSQL_SA_PASSWORD** 會設定強式密碼。
-- **MSSQL_TCP_PORT**會將 SQL Server 進行接聽的 TCP 連接埠設定成 1234。
+- **MSSQL_TCP_PORT** 會將 SQL Server 進行接聽的 TCP 連接埠設定成 1234。
 
 ```bash
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
@@ -110,7 +110,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 - **ACCEPT_EULA** 會接受使用者授權合約。
 - **MSSQL_PID** 會指定自由授權的 SQL Server Developer Edition 供非生產環境使用。
 - **MSSQL_SA_PASSWORD** 會設定強式密碼。
-- **MSSQL_TCP_PORT**會將 SQL Server 進行接聽的 TCP 連接埠設定成 1234。 這意謂著在此範例中，必須使用 `-p 1234:1234` 命令來對應自訂 TCP 連接埠，而不是將連接埠 1433 (預設值) 對應至主機連接埠。
+- **MSSQL_TCP_PORT** 會將 SQL Server 進行接聽的 TCP 連接埠設定成 1234。 這意謂著在此範例中，必須使用 `-p 1234:1234` 命令來對應自訂 TCP 連接埠，而不是將連接埠 1433 (預設值) 對應至主機連接埠。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -132,7 +132,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 如果您是在 Linux/macOS 上執行 Docker，請搭配單引號使用下列語法：
 
