@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cad1def690f9ebf0803f25e83300d3790d6ef4c9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7007db1b4be0abc75e8a20cf5874b6157b63b399
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426400"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "91809374"
 [第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 在這一課，您將學會如何從第二部電腦連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，包括啟用通訊協定、設定通訊埠及設定防火牆設定。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
 本教學課程沒有知識方面的必要條件。  
   
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  

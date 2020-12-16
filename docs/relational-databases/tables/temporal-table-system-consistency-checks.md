@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8df54961057d12191e732fc4f3ec287f9bd32ef9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 31aaceb646bf735731317177f579df638da1b5c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426576"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>時態表系統一致性檢查
 
@@ -29,7 +29,7 @@ ms.locfileid: "89523478"
 
 ## <a name="system-consistency-checks"></a>系統一致性檢查
 
-在 **SYSTEM_VERSIONING** 設為 **ON**之前，會在歷程記錄資料表和目前的資料表上執行一組檢查。 這些檢查會集結到結構描述檢查和資料檢查中 (如果記錄資料表不是空的)。 此外，系統也會執行執行階段一致性檢查。
+在 **SYSTEM_VERSIONING** 設為 **ON** 之前，會在歷程記錄資料表和目前的資料表上執行一組檢查。 這些檢查會集結到結構描述檢查和資料檢查中 (如果記錄資料表不是空的)。 此外，系統也會執行執行階段一致性檢查。
 
 ### <a name="schema-check"></a>結構描述檢查
 

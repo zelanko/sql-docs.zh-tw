@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8aae425506ebc8a2a17aadb2fa9c2d4485fe8f85
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809646"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426731"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91809646"
 [第 2 課：在階層式資料表中建立與管理資料](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 在本課程中，您可以使用 **hierarchyid** 資料類型建立資料表來代表階層結構。 然後，您可以使用階層式方法操作資料表中的資料。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
 另外，系統必須有安裝下列程式：  
   
 -   任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本或更新版本。  
