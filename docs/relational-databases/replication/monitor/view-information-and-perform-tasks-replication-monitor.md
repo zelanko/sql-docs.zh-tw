@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b359aff3a8164c9d25782b0b10c05f1b68ac5230
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3628c3a508aed473604bcc0b3f1d3d7f2b8e5264
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432211"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用複寫監視器來檢視資訊及執行工作
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "86908881"
 「複寫監視器」提供下列顯示所選取「發行者」之資訊的索引標籤：   
 -   **發行集** - 顯示與所選「發行者」的所有發行集相關的資訊。   
 -   **訂閱監看清單** - 顯示與所選「發行者」之所有可用發行集內有錯誤、警告或效能最差的訂閱相關的資訊。 執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前版本的散發者不會顯示這個索引標籤。    
--   **代理程式**索引標籤 - 顯示與所有複寫類型所使用的代理程式和作業相關的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。 若要檢視每一索引標籤上選項的詳細資訊，請按一下右窗格中的索引標籤，然後按一下功能表列上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+-   **代理程式** 索引標籤 - 顯示與所有複寫類型所使用的代理程式和作業相關的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。 若要檢視每一索引標籤上選項的詳細資訊，請按一下右窗格中的索引標籤，然後按一下功能表列上的 **[說明]** 。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="perform-tasks"></a>執行工作
   

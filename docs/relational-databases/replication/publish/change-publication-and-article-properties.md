@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b11e768bac90b70174c736ae828c39a9a78b3bb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 49a92b0caf261b812e83a4a888930c8533d7cdf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470157"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432169"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "88470157"
 |新增聯結篩選或邏輯記錄。|**sp_addmergefilter**|所有參數。|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |卸除聯結篩選或邏輯記錄。|**sp_dropmergefilter**|所有參數。|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更聯結篩選或邏輯記錄。|**sp_changemergefilter**|`@property`<br /><br /> `@value`|新增快照集<br /><br /> 重新初始化訂閱。|  
-|停用參數化篩選 (啟用參數化篩選不需要執行任何特殊動作)。|**sp_changemergepublication**|**false** 的 **false**值|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|停用參數化篩選 (啟用參數化篩選不需要執行任何特殊動作)。|**sp_changemergepublication**|**false** 的 **false** 值|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |啟用或停用預先計算的資料分割。|**sp_changemergepublication**|**use_partition_groups**|新的快照集。|  
 |啟用或停用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 資料分割最佳化。|**sp_changemergepublication**|**keep_partition_changes**|重新初始化訂閱。|  
 |啟用或停用「訂閱者」資料分割驗證。|**sp_changemergepublication**|**validate_subscriber_info**|重新初始化訂閱。|  
@@ -90,9 +90,9 @@ ms.locfileid: "88470157"
 |包括先前未發行的資料行篩選。|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |新增、卸除或變更資料列篩選。|**sp_changemergearticle**|**subset_filterclause**|新的快照集。<br /><br /> 重新初始化訂閱。<br /><br /> 如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。<br /><br /> 如果發行項與所有聯結篩選無關，您可以卸除發行項，然後再使用不同的資料列篩選將其新增，這並不需要重新初始化整個訂閱。 如需新增及卸除發行項的詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |變更結構描述選項。|**sp_changemergearticle**|**schema_option**|新的快照集。|  
-|將追蹤從資料行層級變更為資料列層級 (從資料列層級追蹤變更為資料行追蹤不需要執行任何特殊動作)。|**sp_changemergearticle**|**false** 的 **false**值|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|將追蹤從資料行層級變更為資料列層級 (從資料列層級追蹤變更為資料行追蹤不需要執行任何特殊動作)。|**sp_changemergearticle**|**false** 的 **false** 值|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更在將「訂閱者」端所進行的陳述式套用至「發行者」之前是否要檢查權限。|**sp_changemergearticle**|**check_permissions**|新的快照集。<br /><br /> 重新初始化訂閱。|  
-|啟用或停用僅限下載的訂閱 (與其他上傳選項相關的變更不需要執行任何特殊動作)。|**sp_changemergearticle**|將 **2** 的值在 **2**和其他值之間進行變更|重新初始化訂閱。|  
+|啟用或停用僅限下載的訂閱 (與其他上傳選項相關的變更不需要執行任何特殊動作)。|**sp_changemergearticle**|將 **2** 的值在 **2** 和其他值之間進行變更|重新初始化訂閱。|  
 |變更目的地資料表擁有者。|**sp_changemergearticle**|**destination_owner**|新的快照集。<br /><br /> 重新初始化訂閱。|  
   
 ## <a name="see-also"></a>另請參閱  
