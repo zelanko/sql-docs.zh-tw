@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4cb894ef393f767d85af5c43b50bffce87f3a6fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005993"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480039"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92005993"
 將分割區函數的資料分割對應至一組檔案群組的資料庫物件。 將分割區放在不同檔案群組的主要理由是可以確保能夠對分割區獨立執行備份作業。 這是因為您可以對個別檔案群組執行備份。  
   
 ### <a name="partitioning-column"></a>資料分割資料行  
-分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 **timestamp**除外。 無法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
+分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 **timestamp** 除外。 無法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
   
 ### <a name="aligned-index"></a>對齊的索引  
 在與對應資料表相同的分割區配置上建立的索引。 資料表與其索引對齊時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在維護資料表及其索引的資料分割結構的同時，可快速且有效地切換資料分割。 索引不需要參與相同的具名分割區函數，即可對齊其基底資料表。 因為下列原因，索引與基底資料表的資料分割函式在本質上必然相同：
@@ -137,5 +137,5 @@ ms.locfileid: "92005993"
 -   [大量載入至資料分割資料表](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
 -   [Project REAL:Data Lifecycle - Partitioning](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10)) (專案 REAL：資料生命週期 - 資料分割)    
 -   [分割資料表和索引上的查詢處理增強功能](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
--   [建立大規模關聯式資料倉儲的前 10 大最佳作法](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf)，位於 _SQLCAT 指南：關聯式工程_中
+-   [建立大規模關聯式資料倉儲的前 10 大最佳作法](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf)，位於 _SQLCAT 指南：關聯式工程_ 中
   

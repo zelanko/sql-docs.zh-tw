@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7e4f4589fa5d6c4e2758a2b259ff8e6129904f7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 843ce787a060481f933376470ef431c6c8e8df08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869078"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479739"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -339,13 +339,13 @@ ms.locfileid: "91869078"
   
 3.  針對以下變更的每一個安全性屬性重複步驟 2：  
   
-    -   若要變更代理程式執行時所用的 Windows 帳戶，或只要變更此帳戶的密碼，請針對 `@property` 指定 **merge_job_password** 的值，並針對 `@value` 指定新的密碼。 當變更此帳戶本身時，請重複步驟 2，針對 `@property` 指定**merge_job_login** 的值，並針對 `@value` 指定新的 Windows 帳戶。  
+    -   若要變更代理程式執行時所用的 Windows 帳戶，或只要變更此帳戶的密碼，請針對 `@property` 指定 **merge_job_password** 的值，並針對 `@value` 指定新的密碼。 當變更此帳戶本身時，請重複步驟 2，針對 `@property` 指定 **merge_job_login** 的值，並針對 `@value` 指定新的 Windows 帳戶。  
   
     -   若要變更在連接到訂閱者時所用的安全性模式，請針對 `@property` 指定 **subscriber_security_mode** 的值，並針對 `@value` 指定 **1** (Windows 整合式驗證) 或 **0** (SQL Server 驗證)。  
   
     -   將訂閱者所用的安全性模式變更為 SQL Server 驗證，或變更 SQL Server 驗證的登入資訊時，請針對 `@property` 指定 **subscriber_password** 的值，並針對 `@value` 指定新的密碼。 重複步驟 2，針對 `@property` 指定 **subscriber_login** 的值，並針對 `@value` 指定新的登入。  
   
-    -   若要變更在連接到發行者時所用的安全性模式，請針對 `@property` 指定 **publisher_security_mode** 的值，並針對 `@value` 指定 **1** (Windows 整合式驗證) 或**0** (SQL Server 驗證) 的值。  
+    -   若要變更在連接到發行者時所用的安全性模式，請針對 `@property` 指定 **publisher_security_mode** 的值，並針對 `@value` 指定 **1** (Windows 整合式驗證) 或 **0** (SQL Server 驗證) 的值。  
   
     -   將發行者所用的安全性模式變更為 SQL Server 驗證，或變更 SQL Server 驗證的登入資訊時，請針對 `@property` 指定 **publisher_password** 的值，並針對 `@value` 指定新的密碼。 重複步驟 2，針對 `@property` 指定 **publisher_login** 的值，並針對 `@value` 指定新的登入。  
   
@@ -363,13 +363,13 @@ ms.locfileid: "91869078"
   
 3.  針對以下變更的每一個安全性屬性重複步驟 2：  
   
-    -   若要變更代理程式執行時所用的 Windows 帳戶，或只要變更此帳戶的密碼，請針對 `@property` 指定 **merge_job_password** 的值，並針對 `@value` 指定新的密碼。 當變更此帳戶本身時，請重複步驟 2，針對 `@property` 指定**merge_job_login** 的值，並針對 `@value` 指定新的 Windows 帳戶。  
+    -   若要變更代理程式執行時所用的 Windows 帳戶，或只要變更此帳戶的密碼，請針對 `@property` 指定 **merge_job_password** 的值，並針對 `@value` 指定新的密碼。 當變更此帳戶本身時，請重複步驟 2，針對 `@property` 指定 **merge_job_login** 的值，並針對 `@value` 指定新的 Windows 帳戶。  
   
     -   若要變更在連接到散發者時所用的安全性模式，請針對 `@property` 指定 **distributor_security_mode** 的值，並針對 `@value` 指定 **1** (Windows 整合式驗證) 或 **0** (SQL Server 驗證) 的值。  
   
     -   將散發者所用的安全性模式變更為 SQL Server 驗證，或變更 SQL Server 驗證的登入資訊時，請針對 `@property` 指定 **distributor_password** 的值，並針對 `@value` 指定新的密碼。 重複步驟 2，針對 `@property` 指定 **distributor_login** 的值，並針對 `@value` 指定新的登入。  
   
-    -   若要變更在連接到發行者時所用的安全性模式，請針對 `@property` 指定 **publisher_security_mode** 的值，並針對 `@value` 指定 **1** (Windows 整合式驗證) 或**0** (SQL Server 驗證) 的值。  
+    -   若要變更在連接到發行者時所用的安全性模式，請針對 `@property` 指定 **publisher_security_mode** 的值，並針對 `@value` 指定 **1** (Windows 整合式驗證) 或 **0** (SQL Server 驗證) 的值。  
   
     -   將發行者所用的安全性模式變更為 SQL Server 驗證，或變更 SQL Server 驗證的登入資訊時，請針對 `@property` 指定 **publisher_password** 的值，並針對 `@value` 指定新的密碼。 重複步驟 2，針對 `@property` 指定 **publisher_login** 的值，並針對 `@value` 指定新的登入。  
   

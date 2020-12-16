@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479359"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>建立及儲存 Always Encrypted 的資料行主要金鑰
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -134,7 +134,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 
 使用 Azure Key Vault 金鑰作為資料行主要金鑰時，您的應用程式必須向 Azure 驗證，且應用程式的身分識別必須對金鑰保存庫有下列權限︰*get*、*unwrapKey* 和 *verify*。 
 
-若要佈建由儲存在 Azure 金鑰保存庫中之資料行主要金鑰所保護的資料行加密金鑰，您需要 *get*、 *unwrapKey*、 *wrapKey*、 *sign*和 *verify* 權限。 此外，若要在 Azure 金鑰保存庫中建立新的金鑰，您需要 *create* 權限；若要列出金鑰保存庫的內容，您需要 *list* 權限。
+若要佈建由儲存在 Azure 金鑰保存庫中之資料行主要金鑰所保護的資料行加密金鑰，您需要 *get*、 *unwrapKey*、 *wrapKey*、 *sign* 和 *verify* 權限。 此外，若要在 Azure 金鑰保存庫中建立新的金鑰，您需要 *create* 權限；若要列出金鑰保存庫的內容，您需要 *list* 權限。
 
 #### <a name="using-powershell"></a>使用 PowerShell
 

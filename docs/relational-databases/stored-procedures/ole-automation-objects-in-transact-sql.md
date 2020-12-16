@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c144b9e26ca8f6471bc5b07c7abfcc1f2ed41cc
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e20fc91b1276a2a7bd8e263c18d6a9da1786ba9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482949"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL 中的 OLE Automation 物件
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "87332574"
   
 -   **sp_OAGetErrorInfo** 取得最近的錯誤資訊。  
   
- 當您不再需要物件時，可呼叫 **sp_OADestroy** 來將使用 **sp_OACreate**所建立的物件執行個體取消配置。  
+ 當您不再需要物件時，可呼叫 **sp_OADestroy** 來將使用 **sp_OACreate** 所建立的物件執行個體取消配置。  
   
  OLE Automation 物件會透過屬性值和方法傳回資料。 **sp_OAGetProperty** 和 **sp_OAMethod** 會以結果集形式傳回這些資料值。  
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480049"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "88408264"
   
 -   非索引鍵資料行只能在非叢集索引上定義。  
   
--   除了 **text**、 **ntext**和 **image** ，所有資料類型都可以用做非索引鍵資料行。  
+-   除了 **text**、 **ntext** 和 **image** ，所有資料類型都可以用做非索引鍵資料行。  
   
 -   具決定性之精確或非精確的計算資料行都可以當做非索引鍵資料行。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
--   只要計算資料行資料類型允許非索引鍵索引資料行，從 **image**、 **ntext**和 **text** 資料類型衍生的計算資料行就可以是非索引鍵資料行。  
+-   只要計算資料行資料類型允許非索引鍵索引資料行，從 **image**、 **ntext** 和 **text** 資料類型衍生的計算資料行就可以是非索引鍵資料行。  
   
 -   必須先卸除資料表的索引，才能從資料表卸除非索引鍵資料行。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408264"
   
     -   將資料行的 Null 屬性從 NOT NULL 變更為 NULL。  
   
-    -   增加 **varchar**、 **nvarchar**或 **varbinary** 資料行的長度。  
+    -   增加 **varchar**、 **nvarchar** 或 **varbinary** 資料行的長度。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

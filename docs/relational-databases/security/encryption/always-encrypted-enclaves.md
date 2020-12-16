@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: a3da2dbe104b0a02ef9b973521ef14e5959a832c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679025"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480879"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -57,7 +57,7 @@ Always Encrypted 會使用安全記憶體保護區，如下圖所示：
 
 SQL Server 引擎內部的安全記憶體保護區能夠以純文字形式存取加密資料庫資料行中儲存的敏感性資料與對應的資料行加密金鑰。 將涉及記憶體保護區計算的查詢提交給 SQL Server 之前，應用程式內部的用戶端驅動程式必須確認安全記憶體保護區是根據指定技術 (例如 VBS) 的真正記憶體保護區，而且已簽署在記憶體保護區內部執行的程式碼，以便在記憶體保護區內部執行。 
 
-驗證記憶體保護區的處理序稱為 **記憶體保護區證明** ，它會同時涉及應用程式內的用戶端驅動程式，以及與外部證明服務連絡的 SQL Server。 證明處理序的細節取決於記憶體保護區技術和證明服務。
+驗證記憶體保護區的處理序稱為 **記憶體保護區證明**，它會同時涉及應用程式內的用戶端驅動程式，以及與外部證明服務連絡的 SQL Server。 證明處理序的細節取決於記憶體保護區技術和證明服務。
 
 SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中支援 VBS 安全記憶體保護區的證明處理序是 Windows Defender 系統防護執行階段證明，它會使用主機守護者服務 (HGS) 作為證明服務。 您需要在環境中設定 HGS，並在 HGS 中註冊裝載 SQL Server 執行個體的電腦。 您還必須使用 HGS 證明來設定用戶端應用程式或工具 (例如 SQL Server Management Studio)。
 
@@ -123,7 +123,7 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 若 SQL Server 的執行個體失敗，其資料庫可能會處於資料檔案仍包含交易中修改項目未完成的狀態。 執行個體啟動時，它會執行稱為[資料庫復原](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started)的處理序，該處理序會涉及復原交易記錄中所找到的每個未完成交易，確保資料庫的完整性能獲得保留。 若未完成的交易更動了索引，那些變更也必須要復原。 例如，索引中的某些索引鍵值可能需要移除或重新插入。
 
 > [!IMPORTANT]
-> Microsoft 強烈建議先為您的資料庫啟用 [高速資料庫復原 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)， **再** 使用隨機加密進行加密，以在啟用記憶體保護區的資料行上建立第一個索引。
+> Microsoft 強烈建議先為您的資料庫啟用 [高速資料庫復原 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，**再** 使用隨機加密進行加密，以在啟用記憶體保護區的資料行上建立第一個索引。
 
 若透過[傳統式資料庫復原處理序](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (遵循 [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)) 復原對索引進行的變更，SQL Server 必須等待應用程式將資料行的資料行加密金鑰提供給記憶體保護區，這可能會花費很長的時間。 ADR 可大幅減少因為無法在記憶體保護區內的快取中取得資料行加密金鑰，而需延遲的復原作業數。 因此，它可以透過將封鎖新交易的機會降至最低，來大幅增加資料庫的可用性。 啟用 ADR 後，雖然 SQL Server 仍需要資料行加密金鑰來完成清理舊的資料版本，但它會以背景工作的形式進行，不會影響資料庫的可用性或使用者交易。 但是，您仍然可能會在錯誤記錄中看到錯誤訊息，指出因缺少資料行加密金鑰而無法完成清理作業。
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e662c2fe2037725785b7c7caeeff1c52f45c34d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480139"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 
@@ -38,7 +38,7 @@ ms.locfileid: "93036106"
     
 -   **運用資料表分割。** 您可以分割資料行存放區索引，然後使用分割區刪除來減少可掃描之資料列群組的數量。 例如，一個事實資料表儲存客戶的購物記錄，及按季尋找特定客戶購物記錄的一般查詢模式，您可以將插入順序與自訂資料行上的分割區結合。 每個資料分割都會包含特定客戶按時間排序的資料列。 此外，如果需要從資料行存放區移除資料，請考慮使用資料表分割。 退出並截斷不再需要的資料分割是一個有效率的策略，可刪除資料，而不會產生較小的資料列群組所引進的片段。    
 
--   **避免刪除大量資料** 。 從資料列群組移除已壓縮的資料列不是同步作業。 解壓縮資料列群組、刪除資料列然後將其重新壓縮，會十分昂貴。 因此，如果您刪除已壓縮資料列群組中的資料，仍會針對這些資料列群組進行掃描，即使其傳回較少的資料列也一樣。 如果數個資料列群組的已刪除資料列數目夠大，而足以合併到較少的資料列群組，則重新組織資料行存放區會增加索引品質，並改善查詢效能。 如果您的資料刪除程序通常會清空整個資料列群組，請考慮使用資料表分割、退出不再需要的資料分割，並將其截斷，而不是刪除資料列。 
+-   **避免刪除大量資料**。 從資料列群組移除已壓縮的資料列不是同步作業。 解壓縮資料列群組、刪除資料列然後將其重新壓縮，會十分昂貴。 因此，如果您刪除已壓縮資料列群組中的資料，仍會針對這些資料列群組進行掃描，即使其傳回較少的資料列也一樣。 如果數個資料列群組的已刪除資料列數目夠大，而足以合併到較少的資料列群組，則重新組織資料行存放區會增加索引品質，並改善查詢效能。 如果您的資料刪除程序通常會清空整個資料列群組，請考慮使用資料表分割、退出不再需要的資料分割，並將其截斷，而不是刪除資料列。 
 
     > [!NOTE]
     > 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Tuple Mover 會由背景合併工作協助，該工作會自動壓縮已存在一段時間的較小 OPEN 差異資料列群組 (由內部閾值決定)，或合併已刪除大量資料列的 COMPRESSED 資料列群組。 這可改善一段時間的資料行存放區索引品質。   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 83c9ffd0daca07588bc1b559c7fa3a16acb115e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b8eab851e7bde95fa0ab6aaf2ee75ae0ffc6d0a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498710"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481009"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88498710"
 ## <a name="explanation"></a>說明  
  如果下列條件中的一或兩條成立，則會發生此錯誤：  
   
--   **msdb..MSdistributiondbs**中遺失指定散發資料庫的項目。  
+-   **msdb..MSdistributiondbs** 中遺失指定散發資料庫的項目。  
   
 -   **master** 資料庫中沒有本機伺服器的項目，或者該項目不正確。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88498710"
   
      如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，則必須使用叢集管理員變更名稱。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 在確認「散發者」執行個體已正確註冊之後，請確認散發資料庫是否列在 **msdb..MSdistributiondbs**中。 如果其沒有列在其中：  
+ 在確認「散發者」執行個體已正確註冊之後，請確認散發資料庫是否列在 **msdb..MSdistributiondbs** 中。 如果其沒有列在其中：  
   
 1.  為散發組態編寫指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)。  
   

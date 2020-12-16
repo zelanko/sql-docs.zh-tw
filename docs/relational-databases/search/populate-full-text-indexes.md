@@ -24,13 +24,13 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac09b96cf93144ebf2b615bbd73db36c673eb5ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404134"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479459"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "88404134"
   
 ##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 全文檢索索引支援下列類型的母體擴展：
--   **完整**母體擴展
--   以**變更追蹤**為基礎的自動或手動母體擴展
--   以**時間戳記**為基礎的累加母體擴展
+-   **完整** 母體擴展
+-   以 **變更追蹤** 為基礎的自動或手動母體擴展
+-   以 **時間戳記** 為基礎的累加母體擴展
   
 ## <a name="full-population"></a>完整母體擴展  
  在完整母體擴展期間，系統會針對資料表或索引檢視表的所有資料列建立索引項目。 全文檢索索引的完整母體擴展會針對基底資料表或索引檢視表的所有資料列建立索引項目。  
@@ -191,21 +191,21 @@ ALTER FULLTEXT INDEX ON Production.Document
 
      選項如下：  
   
-    -   若要**建立**新的排程，請按一下 [新增]。  
+    -   若要 **建立** 新的排程，請按一下 [新增]。  
   
         這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]。  
   
         > [!IMPORTANT]  
         >  在您結束 [全文檢索索引屬性] 對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>.<資料表名稱> 啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對相同的全文檢索索引建立多個排程，它們都會使用相同的作業。  
   
-    -   若要**變更**現有排程，請選取現有排程，然後按一下 [編輯]。  
+    -   若要 **變更** 現有排程，請選取現有排程，然後按一下 [編輯]。  
   
          這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您修改排程。  
   
         > [!NOTE]  
         >  如需修改 SQL Server Agent 作業的資訊，請參閱[修改作業](../../ssms/agent/modify-a-job.md)。  
   
-    -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]。  
+    -   若要 **移除** 現有排程，請選取現有排程，然後按一下 [刪除]。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 345c02a175643967a509900ab415b90708a3d9e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195552"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478299"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -251,7 +251,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
 ```
 
-若伺服器在您啟用經記憶體最佳化的 `tempdb` 中繼資料後因任何原因而無法啟動，則您可以透過 **-f** 啟動選項，以[最低組態](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)啟動 SQL Server 執行個體來略過此功能。 您接著可以停用此功能，然後以一般模式重新啟動 SQL Server。
+若伺服器在您啟用經記憶體最佳化的 `tempdb` 中繼資料後因任何原因而無法啟動，則您可以透過 **-f** 啟動選項，以 [最低組態](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)啟動 SQL Server 執行個體來略過此功能。 您接著可以停用此功能，然後以一般模式重新啟動 SQL Server。
 
 若要防止伺服器發生記憶體不足的狀況，您可以將 `tempdb` 繫結至[資源集區](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)。 此作業須透過 [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) 命令來完成，而非執行您將資源集區繫結至資料庫時通常會遵循的步驟。
 

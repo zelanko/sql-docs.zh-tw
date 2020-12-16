@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479419"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -364,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 權限檢查演算法的摘要  
- 檢查權限可能很複雜。 權限檢查演算法包含重疊的群組成員資格和擁有權鏈結 (明確和隱含權限)，而且可能會受到包含安全性實體之安全性實體類別的權限影響。 此演算法的一般程序是收集所有相關的權限。 如果找不到任何封鎖的 DENY，此演算法就會搜尋提供足夠存取權的 GRANT。 此演算法包含三個基本元素： **安全性內容** 、 **權限空間** 和 **必要權限** 。  
+ 檢查權限可能很複雜。 權限檢查演算法包含重疊的群組成員資格和擁有權鏈結 (明確和隱含權限)，而且可能會受到包含安全性實體之安全性實體類別的權限影響。 此演算法的一般程序是收集所有相關的權限。 如果找不到任何封鎖的 DENY，此演算法就會搜尋提供足夠存取權的 GRANT。 此演算法包含三個基本元素： **安全性內容**、 **權限空間** 和 **必要權限**。  
   
 > [!NOTE]  
 >  您無法授與、拒絕或撤銷 sa、dbo、實體擁有者、information_schema、sys 或自己的權限。  
@@ -404,16 +404,16 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 2.  如果擁有權鏈結適用，而且先前鏈結中的物件存取權檢查通過了安全性檢查，就會允許存取。  
   
-3.  彙總與呼叫者相關聯的伺服器層級、資料庫層級和簽署模組識別，以便建立 **安全性內容** 。  
+3.  彙總與呼叫者相關聯的伺服器層級、資料庫層級和簽署模組識別，以便建立 **安全性內容**。  
   
-4.  針對該 **安全性內容** ，收集授與或拒絕 **權限空間** 的所有權限。 您可以將權限明確陳述為 GRANT、GRANT WITH GRANT 或 DENY，否則這些權限可能是隱含或涵蓋的權限 GRANT 或 DENY。 例如，結構描述的 CONTROL 權限隱含資料表的 CONTROL， 而且資料表的 CONTROL 隱含 SELECT。 因此，如果您已授與結構描述的 CONTROL，就會授與資料表的 SELECT。 如果您已拒絕資料表的 CONTROL，就會拒絕資料表的 SELECT。  
+4.  針對該 **安全性內容**，收集授與或拒絕 **權限空間** 的所有權限。 您可以將權限明確陳述為 GRANT、GRANT WITH GRANT 或 DENY，否則這些權限可能是隱含或涵蓋的權限 GRANT 或 DENY。 例如，結構描述的 CONTROL 權限隱含資料表的 CONTROL， 而且資料表的 CONTROL 隱含 SELECT。 因此，如果您已授與結構描述的 CONTROL，就會授與資料表的 SELECT。 如果您已拒絕資料表的 CONTROL，就會拒絕資料表的 SELECT。  
   
     > [!NOTE]  
     >  資料行層級權限的 GRANT 會覆寫物件層級的 DENY。  
   
-5.  識別 **必要權限** 。  
+5.  識別 **必要權限**。  
   
-6.  如果您在 **權限空間** 中針對物件 **安全性內容** 的任何識別直接或隱含拒絕 **必要權限** ，權限檢查就會失敗。  
+6.  如果您在 **權限空間** 中針對物件 **安全性內容** 的任何識別直接或隱含拒絕 **必要權限**，權限檢查就會失敗。  
   
 7.  如果您沒有拒絕 **必要權限** ，而且 **必要權限** 包含 **權限空間** 中任何物件 **安全性內容** 之任何識別的直接或隱含 GRANT 或 GRANT WITH GRANT 權限，就會通過權限檢查。  
 

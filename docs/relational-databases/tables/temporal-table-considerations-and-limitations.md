@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e2c218d9f474638c7d0d8c390f79bf42ca3679
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548868"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482352"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 
@@ -39,17 +39,17 @@ ms.locfileid: "89548868"
 - 時態表支援 Blob 資料類型 (例如 **(n)varchar(max)** 、**varbinary(max)** 、 **(n)text** 和 **image**)，但會產生龐大的儲存成本，且其大小會影響效能。 因此您在設計系統時，應小心使用這些資料類型。
 - 歷程記錄資料表必須建立於與目前資料表相同的資料庫中。 不支援針對 **Linked Server** 的時態查詢。
 - 歷程記錄資料表不可具有條件約束 (主索引鍵、外部索引鍵、資料表或資料行條件約束)。
-- 時態性查詢 (使用 **FOR SYSTEM_TIME**子句的查詢) 不支援索引檢視。
+- 時態性查詢 (使用 **FOR SYSTEM_TIME** 子句的查詢) 不支援索引檢視。
 - 若為系統版本設定時態表，ONLINE 選項 (**WITH (ONLINE = ON**) 對 **ALTER TABLE ALTER COLUMN** 無效。 無論針對 ONLINE 選項指定何值，都不會以線上方式執行 ALTER 資料行。
 - **INSERT** 和 **UPDATE** 陳述式無法參考 SYSTEM_TIME 期間資料行。 若嘗試將值直接插入這些資料行，則會遭到系統封鎖。
-- 當**TRUNCATE TABLE** 為 **TRUNCATE TABLE** 時，不支援 **TRUNCATE TABLE**。
+- 當 **TRUNCATE TABLE** 為 **TRUNCATE TABLE** 時，不支援 **TRUNCATE TABLE**。
 - 不允許直接修改歷程記錄資料表中的資料。
 - **ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 不得位於目前資料表。 換言之，若時態表參考外部索引鍵關係中的資料表 (對應至 sys.foreign_keys 中的 *parent_object_id* )，則不允許 CASCADE 選項。 若要因應這項限制，請使用應用程式邏輯或 after 觸發程序來維持主索引鍵資料表 (對應到 sys.foreign_keys 中的 *referenced_object_id*) 中刪除時的一致性。 若主索引鍵資料表屬於時態性，而且參考資料表屬於非時態性，則沒有這類限制。
 
   > [!NOTE]
   > 這項限制僅適用於 SQL Server 2016。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 2.0 開始) 支援 CASCADE 選項。
 
-- 目前或歷程記錄資料表不允許使用**INSTEAD OF** 觸發程序，以避免使 DML 邏輯無效。 **AFTER** 觸發程序僅允許針對目前的資料表使用。 這些觸發程序在歷程記錄資料表上會遭到封鎖，以避免使 DML 邏輯無效。
+- 目前或歷程記錄資料表不允許使用 **INSTEAD OF** 觸發程序，以避免使 DML 邏輯無效。 **AFTER** 觸發程序僅允許針對目前的資料表使用。 這些觸發程序在歷程記錄資料表上會遭到封鎖，以避免使 DML 邏輯無效。
 - 能使用的複寫技術有限：
 
   - **Always On：** 完全支援

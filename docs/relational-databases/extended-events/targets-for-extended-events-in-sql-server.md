@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868773"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481339"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 
@@ -151,7 +151,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 - 系統會使用您選擇的檔案名稱作為附加日期時間型 long 整數的前置詞，並且後接 .xel 副檔名。
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > Azure SQL Database 只支援在 Azure Blob 儲存體上存放 `xel` 檔案。 
@@ -252,7 +252,7 @@ SELECT f.*
 #### <a name="data-stored-in-the-event_file-target"></a>event_file 目標中所儲存的資料
 
 
-接下來是 SQL Server 2016 中從 **sys.fn_xe_file_target_read_file**中進行選取的報表。
+接下來是 SQL Server 2016 中從 **sys.fn_xe_file_target_read_file** 中進行選取的報表。
 
 
 ```

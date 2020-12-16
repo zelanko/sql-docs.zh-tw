@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b3e66bbfa13af7c6f06e39346c68273c9f7a58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f4c10ff531c0a687bebb270c118c451ce489786a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783130"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480969"
 ---
 # <a name="snapshot-replication"></a>快照式複寫
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85783130"
  ![快照式複寫元件和資料流程](../../relational-databases/replication/media/snapshot.gif "快照式複寫元件和資料流程")  
   
 ##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照集代理程式  
- 針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync**的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication**時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
+ 針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync** 的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication** 時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
   
  「快照集代理程式」會執行下列步驟：  
   
@@ -104,6 +104,6 @@ ms.locfileid: "85783130"
   
 2.  檢查「散發者」上的 **sysmergeschemachange** 資料表，並判斷是否存在應在「訂閱者」端套用的新快照集。  
   
-3.  如果存在新快照集，「合併代理程式」會從 **sysmergeschemachange**中指定的位置將快照集檔案套用至訂閱資料庫。  
+3.  如果存在新快照集，「合併代理程式」會從 **sysmergeschemachange** 中指定的位置將快照集檔案套用至訂閱資料庫。  
   
   

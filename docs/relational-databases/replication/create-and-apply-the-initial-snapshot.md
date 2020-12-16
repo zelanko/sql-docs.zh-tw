@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e297a985ef1a6ffb0eb3c407f089cbd9a360c42b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868292"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479989"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91868292"
 -   在排程時間產生。 在「新增發行集精靈」的 **[快照集代理程式]** 頁面上指定排程，或在使用預存程序或 Replication Management Objects (RMO) 時指定排程。    
 -   手動。 在命令提示下或從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行「快照集代理程式」。 如需執行代理程式的詳細資訊，請參閱[複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)和[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
-針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync**的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication**時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
+針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync** 的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication** 時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
   
 依預設，快照集產生後會儲存在「散發者」上的預設快照集資料夾中。 您也可以將快照集檔案儲存於抽取式媒體，例如卸除式磁碟機、CD-ROM 或預設快照集資料夾之外的位置。 此外，您可以壓縮檔案，使它們更易儲存和傳送，還可以在快照集套用至「訂閱者」端前後執行指令碼。 如需這些選項的詳細資訊，請參閱 [Snapshot Options](../../relational-databases/replication/snapshot-options.md)。  
   
@@ -186,7 +186,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法來啟動代理程式作業，以針對這個發行集產生快照集。  
   
-6.  (選擇性) 當 <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 的值是 **true**時，表示快照集可供訂閱者使用。  
+6.  (選擇性) 當 <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 的值是 **true** 時，表示快照集可供訂閱者使用。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>執行快照集代理程式 (同步) 來針對快照式或交易式發行集產生初始快照集  
   
@@ -220,7 +220,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法來啟動代理程式作業，以針對這個發行集產生快照集。  
   
-6.  (選擇性) 當 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值是 **true**時，表示快照集可供訂閱者使用。  
+6.  (選擇性) 當 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值是 **true** 時，表示快照集可供訂閱者使用。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>執行快照集代理程式 (同步) 來針對合併式發行集產生初始快照集  
   

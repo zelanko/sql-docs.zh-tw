@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1225f99547dd143b4284f6415df761bdca5c0c38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480849"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 將大量的加密資料載入資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "92679266"
 
 1.  針對使用者將選項設為 ON。  
  
-2.  使用者執行連接至資料庫的應用程式。 應用程式使用大量 API，將純文字值插入加密的資料行。 應用程式預期已啟用「永遠加密」的用戶端驅動程式會在插入時加密資料。 不過，由於應用程式設定錯誤，因此，它最終會使用不支援「永遠加密」的驅動程式，或者連接字串未包含 **column encryption setting=enabled** 。  
+2.  使用者執行連接至資料庫的應用程式。 應用程式使用大量 API，將純文字值插入加密的資料行。 應用程式預期已啟用「永遠加密」的用戶端驅動程式會在插入時加密資料。 不過，由於應用程式設定錯誤，因此，它最終會使用不支援「永遠加密」的驅動程式，或者連接字串未包含 **column encryption setting=enabled**。  
 
 3.  應用程式會將純文字值傳送到伺服器。 針對使用者在伺服器中停用密碼編譯中繼資料檢查時，伺服器會將不正確的資料 (純文字，而不是正確加密的加密文字) 插入加密的資料行。  
  

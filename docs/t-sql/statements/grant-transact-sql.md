@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 424ff170c28087d0d6d43e153b92583d517baae1
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e759727e998cde4d867454a0dec34f0e29350eec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226796"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481809"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 
@@ -120,7 +120,7 @@ GRANT OPTION
 AS *principal*  
 您可使用 AS principal 子句，來表示記錄為權限授與者的主體應為陳述式執行人員以外的主體。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 執行 `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`。現在，即使實際執行陳述式的是使用者 13 (Mary)，sys。 .database_permissions 資料表仍會指出 grantor_prinicpal_id 是 15 (Raul)。  
 
-通常不建議使用 AS 子句，除非您需要明確定義權限鏈結。 如需詳細資訊，請參閱[權限 (資料庫引擎)](../../relational-databases/security/permissions-database-engine.md) 的**權限檢查演算法的摘要**一節。
+通常不建議使用 AS 子句，除非您需要明確定義權限鏈結。 如需詳細資訊，請參閱 [權限 (資料庫引擎)](../../relational-databases/security/permissions-database-engine.md) 的 **權限檢查演算法的摘要** 一節。
 
 在此陳述式中使用 AS 不代表能模擬其他使用者。
 

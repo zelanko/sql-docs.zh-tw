@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: decbd12174f6000a44a3cfd95b145c70de10740c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9215ac429ff45d80a2ba1ea7d913a63ab49e34e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004671"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480949"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 
@@ -114,7 +114,7 @@ WHERE name='Test'
   
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，必須對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體啟用自主資料庫使用者。 如需詳細資訊，請參閱[自主資料庫驗證伺服器組態選項](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)。  
 - 自主的資料庫使用者與登入具有非重疊的名稱，可以共存於您的應用程式。  
-- 若以 **name1** 名稱在 master 資料庫中登入，並且您建立了名為 **name1**的自主資料庫使用者，當連接字串中提供資料庫名稱時，連接到資料庫時會優先挑選資料庫使用者的內容，而非登入內容。 也就是說，自主資料庫使用者的優先順序將高於具有相同名稱的登入。  
+- 若以 **name1** 名稱在 master 資料庫中登入，並且您建立了名為 **name1** 的自主資料庫使用者，當連接字串中提供資料庫名稱時，連接到資料庫時會優先挑選資料庫使用者的內容，而非登入內容。 也就是說，自主資料庫使用者的優先順序將高於具有相同名稱的登入。  
 - 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，自主的資料庫使用者名稱不能同於伺服器系統管理員帳戶的名稱。  
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器系統管理員帳戶不可以是自主的資料庫使用者。 伺服器管理員有足夠的權限來建立及管理自主的資料庫使用者。 伺服器管理員可以授與權限給使用者資料庫上的自主資料庫使用者。  
 - 因為自主資料庫使用者是資料庫層級主體，所以您必須在每個您想要使用的資料庫，建立自主的資料庫使用者。 身分識別會侷限於資料庫，並且在所有層面都獨立於在相同伺服器中的另一個資料庫具有相同名稱和相同密碼的使用者。  

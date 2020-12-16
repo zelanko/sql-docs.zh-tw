@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756339"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481429"
 ---
 # <a name="contained-databases"></a>自主資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85756339"
  跨資料庫界限的元素。  
   
  非自主資料庫  
- 內含項目設定為 **NONE**的資料庫。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的版本中，所有資料庫都是非自主資料庫。 根據預設，所有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本的資料庫都會將內含項目設定為 **NONE**。  
+ 內含項目設定為 **NONE** 的資料庫。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的版本中，所有資料庫都是非自主資料庫。 根據預設，所有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本的資料庫都會將內含項目設定為 **NONE**。  
   
  部分自主資料庫  
  部分自主資料庫就是允許跨越資料庫界限之某些功能的自主資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含判斷何時跨越內含項目界限的功能。  
@@ -80,9 +80,9 @@ ms.locfileid: "85756339"
  資料庫界限  
  因為部分自主資料庫會分隔資料庫功能與執行個體功能，所以兩個元素之間有一條明確定義的線，稱為 *「資料庫界限」* (Database Boundary)。  
   
- *「資料庫模型」* (Database Model) 位於資料庫界限內部，其中進行資料庫的開發和管理作業。 位於資料庫內部的實體範例包括 **sys.tables**等系統資料表、具有密碼之自主資料庫使用者，以及目前資料庫中由兩部分名稱所參考的使用者資料表。  
+ *「資料庫模型」* (Database Model) 位於資料庫界限內部，其中進行資料庫的開發和管理作業。 位於資料庫內部的實體範例包括 **sys.tables** 等系統資料表、具有密碼之自主資料庫使用者，以及目前資料庫中由兩部分名稱所參考的使用者資料表。  
   
- *「管理模型」* (Management Model) 位於資料庫界限外部，它與執行個體層級功能和管理有關。 位於資料庫界限外部的實體範例包括 **sys.endpoints**等系統資料表、對應至登入的使用者，以及另一個資料庫中由三部分名稱所參考的使用者資料表。  
+ *「管理模型」* (Management Model) 位於資料庫界限外部，它與執行個體層級功能和管理有關。 位於資料庫界限外部的實體範例包括 **sys.endpoints** 等系統資料表、對應至登入的使用者，以及另一個資料庫中由三部分名稱所參考的使用者資料表。  
   
 ##  <a name="containment"></a><a name="containment"></a> 內含項目  
  完全位於資料庫內部的使用者實體會被視為 *「自主」* (Contained)。 位於資料庫外部或仰賴與資料庫外部之功能互動的任何實體會被視為 *「非內含性」* (Uncontained)。  

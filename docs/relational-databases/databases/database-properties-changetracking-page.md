@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7129094815add7f3f49aaa5e99b353b3f656a848
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe6b46da2124235f4f2e62e70e13ec486f1b6c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193008"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480299"
 ---
 # <a name="database-properties-changetracking-page"></a>資料庫屬性 (變更追蹤頁面)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92193008"
  您也可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)設定變更追蹤。  
   
  **保留週期**  
- 指定在資料庫中保存變更追蹤資訊的最小週期。 只有當**自動清除**值為 **True** 時，才會移除資料。  
+ 指定在資料庫中保存變更追蹤資訊的最小週期。 只有當 **自動清除** 值為 **True** 時，才會移除資料。  
   
  預設值為 2。  
   

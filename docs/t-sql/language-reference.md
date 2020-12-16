@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422ab559997e5dc33a0d8155c198cb23cba5698b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1af7b24a5a28861b30fba01dba60f5b85d2809b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035891"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481839"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "92035891"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
-在某些情形下，主題適用於某產品或服務，但卻不支援所有引數。 在此情況下，就會在主題本文中適當的引數描述中，插入額外的 **適用於**一節。  
+在某些情形下，主題適用於某產品或服務，但卻不支援所有引數。 在此情況下，就會在主題本文中適當的引數描述中，插入額外的 **適用於** 一節。  
  
 ## <a name="get-help-from-microsoft-q--a"></a>透過 Microsoft 問答集求助  
 如需線上說明，請參閱 [Microsoft 問答集 Transact-SQL 論壇](/answers/topics/sql-server-transact-sql.html)。  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 05a4e96b263c2849e793ccc0056f17893cf00ba0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866557"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480339"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 
 [!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引進 Always On 可用性群組的*次要到主要複本讀取/寫入連線重新導向*。 任何作業系統平台上都可以使用讀取/寫入連線重新導向。 它允許將用戶端應用程式連線導向至主要複本，而不論連接字串中指定的目標伺服器為何。 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引進 Always On 可用性群組的 *次要到主要複本讀取/寫入連線重新導向*。 任何作業系統平台上都可以使用讀取/寫入連線重新導向。 它允許將用戶端應用程式連線導向至主要複本，而不論連接字串中指定的目標伺服器為何。 
 
 例如，連接字串可以將目標設為次要複本。 根據可用性群組 (AG) 複本的設定以及連接字串中的設定，可以將連線自動重新導向至主要複本。 
 

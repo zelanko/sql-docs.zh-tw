@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0f339c2be8c7424134ba76fabbed1105d447a621
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479589"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在異動複寫中發行預存程序執行
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ EXEC give_raise
 -   複寫 Transact-SQL 程式設計：執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，並指定值 'serializable proc exec' (建議) 或針對 `@type` 參數指定 'proc exec'。 如需定義發行項的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>在訂閱者端修改程序  
- 根據預設值，「發行者」的預存程序定義會傳播到各個「訂閱者」。 但是，您也可以在「訂閱者」端修改預存程序。 若您想在「發行者」和「訂閱者」執行不同的邏輯，這個方式就非常有幫助。 例如，考慮 **sp_big_delete**這個「發行者」的預存程序有兩個功能：它會從複寫資料表 **big_table1** 刪除 1,000,000 個資料列，然後更新非複寫的資料表 **big_table2**。 若要降低網路資源的需求，您應該透過發行 **sp_big_delete**，將一百萬個資料列刪除做為預存程序傳播。 在「訂閱者」端，您可以將 **sp_big_delete** 修改為只刪除一百萬個資料列，並且不執行後續對 **big_table2**的更新。  
+ 根據預設值，「發行者」的預存程序定義會傳播到各個「訂閱者」。 但是，您也可以在「訂閱者」端修改預存程序。 若您想在「發行者」和「訂閱者」執行不同的邏輯，這個方式就非常有幫助。 例如，考慮 **sp_big_delete** 這個「發行者」的預存程序有兩個功能：它會從複寫資料表 **big_table1** 刪除 1,000,000 個資料列，然後更新非複寫的資料表 **big_table2**。 若要降低網路資源的需求，您應該透過發行 **sp_big_delete**，將一百萬個資料列刪除做為預存程序傳播。 在「訂閱者」端，您可以將 **sp_big_delete** 修改為只刪除一百萬個資料列，並且不執行後續對 **big_table2** 的更新。  
   
 > [!NOTE]  
 >  依預設，使用 ALTER PROCEDURE 在「發行者」上所作的任何變更都將傳播到「訂閱者」。 若要防止發生這種情況，請在執行 ALTER PROCEDURE 之前停用結構描述變更的傳播。 如需結構描述變更的資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  

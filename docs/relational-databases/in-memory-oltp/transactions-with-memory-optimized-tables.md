@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cef950e416d811133f1c12b524222c7caefc0db6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480099"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
   
 SQL Server 有下列交易初始模式：  
   
-- **自動認可** ：簡單查詢或 DML 陳述式一開始會隱含開啟交易，而陳述式的結尾會隱含認可交易。 **自動認可**是預設值。  
+- **自動認可** ：簡單查詢或 DML 陳述式一開始會隱含開啟交易，而陳述式的結尾會隱含認可交易。 **自動認可** 是預設值。  
   - 在自動認可模式中，您通常不需要使用 FROM 子句撰寫記憶體最佳化資料表交易隔離等級的資料表提示程式碼。  
   
 - **明確** - 您的 Transact-SQL 包含程式碼 BEGIN TRANSACTION，以及最終的 COMMIT TRANSACTION。 相同交易中可以包含二或多個陳述式。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b89a8841bd679b9100e43b0b8d7d79dc6bb8165
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 034142392069443993c5d987b8aed80231c229fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868584"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481329"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
 
@@ -39,7 +39,7 @@ ms.locfileid: "91868584"
   
  您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，在 PS SQLSERVER:\XEvent\\伺服器名稱  \\執行個體名稱  > 路徑中，如果您輸入 **cd sessions**、按 ENTER、輸入 **dir**，然後按 ENTER，就可以查看儲存在該執行個體上的工作階段清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
   
- 若要檢視與工作階段相關聯的事件、其述詞和目標，您可以將目錄變更為工作階段名稱，然後檢視 events 或 targets 資料夾。 例如，若要檢視與預設系統健康情況工作階段相關聯的事件及其述詞，請在 PS SQLSERVER:\XEvent\\伺服器名稱  \\伺服器名稱*執行個體名稱*\Sessions> 路徑中，輸入 **cd system_health\events**、按 ENTER、輸入 **dir**，然後按 ENTER。  
+ 若要檢視與工作階段相關聯的事件、其述詞和目標，您可以將目錄變更為工作階段名稱，然後檢視 events 或 targets 資料夾。 例如，若要檢視與預設系統健康情況工作階段相關聯的事件及其述詞，請在 PS SQLSERVER:\XEvent\\伺服器名稱  \\伺服器名稱 *執行個體名稱*\Sessions> 路徑中，輸入 **cd system_health\events**、按 ENTER、輸入 **dir**，然後按 ENTER。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者是一項功能強大的工具，可讓您用來建立、改變和管理擴充事件工作階段。 下列章節將提供使用 PowerShell 指令碼搭配擴充事件的一些基本範例。  
   

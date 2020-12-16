@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f41013db7cbd871ef132c3c0a3bad8a772511022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344054"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480779"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 
@@ -86,7 +86,7 @@ ms.locfileid: "92344054"
  在大多數情況下都避免使用鎖定擴大， 但並非完全不允許資料表層級的鎖定。 例如，當您在可序列化隔離層級下掃描沒有任何叢集索引的資料表時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須採用資料表鎖定以保護資料的完整性。  
   
  **資料表有複寫**  
- 指出何時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫，將資料表複寫到另一個資料庫。 可能的值為 **True** 或 **False** 。  
+ 指出何時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫，將資料表複寫到另一個資料庫。 可能的值為 **True** 或 **False**。  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> 變更追蹤頁面  
  **變更追蹤**  
@@ -111,7 +111,7 @@ ms.locfileid: "92344054"
  FileTable 的根資料夾。  
   
  **已啟用 FileTable 命名空間**  
- 當為 **True** 時，這個值表示資料表為 FileTable。 如果您將這個值變更為 **False** ，您會將 FileTable 變更為一般使用者資料表。 如果您之後想要將資料表變更回 FileTable，此資料表必須先通過 FileTable 一致性檢查才會轉換成功。  
+ 當為 **True** 時，這個值表示資料表為 FileTable。 如果您將這個值變更為 **False**，您會將 FileTable 變更為一般使用者資料表。 如果您之後想要將資料表變更回 FileTable，此資料表必須先通過 FileTable 一致性檢查才會轉換成功。  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> 儲存體頁面  
  顯示選取之資料表的儲存體相關屬性。  
@@ -137,7 +137,7 @@ ms.locfileid: "92344054"
  資料表所在的檔案群組的名稱。  
   
  **資料表已經分割**  
- 可能的值為 **True** 和 **False** 。  
+ 可能的值為 **True** 和 **False**。  
   
  **檔案資料流檔案群組**  
  如果資料表擁有具有 FILESTREAM 屬性的 **varbinary(max)** 資料行，則指定 FILESTREAM 資料檔案群組的名稱。 預設值為預設的 FILESTREAM 資料檔案群組。  
@@ -146,7 +146,7 @@ ms.locfileid: "92344054"
   
 ### <a name="general"></a>一般  
  **Vardecimal 儲存格式已啟用**  
- 如果是 **True** ，這個唯讀值表示 **decimal** 和 **numeric** 資料類型會使用 vardecimal 儲存格式來儲存。 若要變更這個選項，請使用 **sp_tableoption** 的 [vardecimal storage format](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)選項。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
+ 如果是 **True**，這個唯讀值表示 **decimal** 和 **numeric** 資料類型會使用 vardecimal 儲存格式來儲存。 若要變更這個選項，請使用 **sp_tableoption** 的 [vardecimal storage format](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)選項。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
   
  **索引空間**  
  顯示索引在資料表中所佔的空間量 (以 MB 表示)。 這個值不包括資料表的 XML 索引空間使用量。 如果 XML 索引屬於此資料表，請改用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 。  

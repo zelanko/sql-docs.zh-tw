@@ -17,13 +17,13 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868072"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479499"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "91868072"
   
  `F = 8*10*8=640`  
   
- 下一個計算會取得**最大伺服器記憶體**-*M* 的最佳值。 此系統上可用的實體記憶體總計-*T* (以 MB 為單位) 為 `8192`。  
+ 下一個計算會取得 **最大伺服器記憶體**-*M* 的最佳值。 此系統上可用的實體記憶體總計-*T* (以 MB 為單位) 為 `8192`。  
   
  `M = 8192-640-500=7052`  
   
