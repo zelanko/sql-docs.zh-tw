@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 91d1cd485341bcd5bd267aca606f6c12c562918e
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: bdabf31b5963201014bc6f48f26136d820ef0b7a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670341"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483710"
 ---
 # <a name="breaking-changes-to-database-engine-in-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] 資料庫引擎的重大變更
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]

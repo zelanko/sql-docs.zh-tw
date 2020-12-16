@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: fe0e101311bf8fc1b790be423322b4deaca3923e
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+monikerRange: '>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: 58b68bdf2996446ed08a37297e0c9776c2274832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942399"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483660"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only.md)]
@@ -85,7 +85,7 @@ FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案
 您可以藉由使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來插入、更新和刪除 FILESTREAM 資料：  
 
 - 您可以使用插入作業，在 FILESTREAM 欄位中預先填入 null 值、空白值，或是相當簡短的內嵌資料。 但是，將大量的資料當做資料流處理成使用 Win32 介面的檔案時，會比較有效率。  
-- 當您更新 FILESTREAM 欄位時，您會修改檔案系統中的基礎 BLOB 資料。 當 FILESTREAM 欄位設定為 NULL 時，與此欄位有關聯的 BLOB 資料會遭到刪除。 您無法使用實作為 UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] .**Write() 的**區塊更新來執行資料的部分更新。 
+- 當您更新 FILESTREAM 欄位時，您會修改檔案系統中的基礎 BLOB 資料。 當 FILESTREAM 欄位設定為 NULL 時，與此欄位有關聯的 BLOB 資料會遭到刪除。 您無法使用實作為 UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] .**Write() 的** 區塊更新來執行資料的部分更新。 
 - 當您刪除資料列，或是刪除或截斷包含 FILESTREAM 資料的資料表時，您會刪除檔案系統中的基礎 BLOB 資料。
 
 ### <a name="file-system-streaming-access"></a>檔案系統資料流存取

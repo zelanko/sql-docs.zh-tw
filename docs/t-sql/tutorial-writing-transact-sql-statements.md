@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1f2f4ddc1c090e7a7f8497f419590f906584a7f9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036829"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483820"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "92036829"
 [課程 3：刪除資料庫物件](../t-sql/lesson-3-deleting-database-objects.md)  
 在這一課，您會移除資料的存取、從資料表中刪除資料、刪除資料表，最後刪除資料庫。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
 為了完成本教學課程，您並不需要精通 SQL 語言，但必須了解基本資料庫概念 (如資料表)。 在進行本教學課程期間，您將建立資料庫以及建立 Windows 使用者。 這些工作需要高層權限，因此您必須以系統管理員的身份登入電腦。  
   
 另外，系統必須有安裝下列程式：  
