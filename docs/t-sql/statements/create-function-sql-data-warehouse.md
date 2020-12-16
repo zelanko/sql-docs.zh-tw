@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067377"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476619"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,7 +106,7 @@ RETURNS TABLE
  *parameter_data_type*  
  參數資料類型。 針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中支援的所有純量資料類型皆允許。 時間戳記 (rowversion) 資料類型是不支援的類型。  
   
- [ = *default* ]  
+ [ =*default* ]  
  這是參數的預設值。 如果已定義 *default* 值，則不需為該參數指定值，即可執行函式。  
   
  如果函數的參數有預設值，則必須在呼叫函數來擷取該預設值時指定關鍵字 DEFAULT。 這個行為與使用預存程序中具有預設值的參數不一樣，因為在預存程序中，省略參數也意味著使用預設值。  
@@ -117,16 +117,16 @@ RETURNS TABLE
  *function_body*  
  一連串的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  function_body 無法包含 SELECT 陳述式，且無法參考資料庫資料。  function_body 無法參考資料表或檢視。 函式主體可以呼叫其他具決定性的函式，但是無法呼叫非決定性函式。 
   
- 在純量函式中， *function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
+ 在純量函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
   
  *scalar_expression*  
  指定純量函數傳回的純量值。  
 
- *select_stmt* **適用於** ：Azure Synapse Analytics  
+ *select_stmt* **適用於**：Azure Synapse Analytics  
  這是單一 SELECT 陳述式，可定義內嵌資料表值函式 (預覽) 的傳回值。
 
- TABLE **適用於** ：Azure Synapse Analytics  
- 指定資料表值函式 (TVF) 的傳回值是資料表。 只有常數和 @ *local_variables* 才能傳遞給 TVF。
+ TABLE **適用於**：Azure Synapse Analytics  
+ 指定資料表值函式 (TVF) 的傳回值是資料表。 只有常數和 @*local_variables* 才能傳遞給 TVF。
 
  在內嵌 TVF (預覽) 中，TABLE 傳回值是透過單一 SELECT 陳述式定義。 內嵌函數沒有相關聯的傳回變數。
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-接著可以使用下列內容呼叫函式，以傳回所有檢視 ( **V** ) 物件：
+接著可以使用下列內容呼叫函式，以傳回所有檢視 (**V**) 物件：
 ```sql
 select * from dbo.ModulesByType('V');
 ```

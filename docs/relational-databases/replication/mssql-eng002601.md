@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 703b8dc32bf2dfb1c67191466cd56c5333c94222
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 50892f2cdefcbab8fe29aea732cc839c128dc11a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88380254"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475849"
 ---
 # <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88380254"
   
 -   已使用具有識別欄位的資料表，但並未適當管理資料行。  
   
--   在合併式複寫中，插入系統資料表 **MSmerge_contents**期間也可以發生此錯誤；引發的錯誤與以下類似：無法以唯一索引 'ucl1SycContents' 在物件 'MSmerge_contents' 中插入重複的索引鍵資料列。  
+-   在合併式複寫中，插入系統資料表 **MSmerge_contents** 期間也可以發生此錯誤；引發的錯誤與以下類似：無法以唯一索引 'ucl1SycContents' 在物件 'MSmerge_contents' 中插入重複的索引鍵資料列。  
   
 ## <a name="user-action"></a>使用者動作  
  必須依照錯誤產生的原因採取動作：  
@@ -61,9 +61,9 @@ ms.locfileid: "88380254"
   
      針對合併式複寫以及有可更新訂閱的異動複寫，應由複寫來自動管理識別欄位。 點對點異動複寫必須手動管理。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
--   在插入系統資料表 **MSmerge_contents**期間會發生此錯誤。  
+-   在插入系統資料表 **MSmerge_contents** 期間會發生此錯誤。  
   
-     發生此錯誤是因為聯結篩選屬性 **join_unique_key**的值不正確。 只有在父資料表中的聯結資料行為唯一時，此屬性才應設定為 TRUE。 如果屬性設定為 TRUE，但是資料行不是唯一的，則會引發此錯誤。 如需有關設定此屬性的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
+     發生此錯誤是因為聯結篩選屬性 **join_unique_key** 的值不正確。 只有在父資料表中的聯結資料行為唯一時，此屬性才應設定為 TRUE。 如果屬性設定為 TRUE，但是資料行不是唯一的，則會引發此錯誤。 如需有關設定此屬性的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

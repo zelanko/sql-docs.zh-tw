@@ -24,18 +24,18 @@ helpviewer_keywords:
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 885f9c2e87fb81beaa28f2bdf7e46c16a9c844b6
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4aab6a90874f95f9f93059b9867dd3adeb03f126
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476549"
 ---
 # <a name="set-ansi_null_dflt_on-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  當資料庫的 **ANSI Null 預設值**選項是 **false** 時，修改工作階段的行為來覆寫新資料行的預設 Null 屬性。 如需設定 **ANSI Null 預設值**這個值的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+  當資料庫的 **ANSI Null 預設值** 選項是 **false** 時，修改工作階段的行為來覆寫新資料行的預設 Null 屬性。 如需設定 **ANSI Null 預設值** 這個值的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,7 +83,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會顯示含有兩種 **ANSI Null 預設值**資料庫選項設定之 `SET ANSI_NULL_DFLT_ON` 的效果。  
+ 下列範例會顯示含有兩種 **ANSI Null 預設值** 資料庫選項設定之 `SET ANSI_NULL_DFLT_ON` 的效果。  
   
 ```sql  
 USE AdventureWorks2012;  

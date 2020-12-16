@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679045"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477609"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>搭配 Azure Data Studio 使用 Always Encrypted 查詢資料行
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "92679045"
 除了上述權限，若要將任何查詢結果解密或加密任何查詢參數 (透過參數化 Transact-SQL 變數來產生)，您還需要權限來存取保護目標資料行的資料行主要金鑰：
 
 - **憑證存放區 - 本機電腦：** 您必須有憑證 (當成資料行主要金鑰使用) 的 **讀取** 權，或為電腦上的系統管理員。   
-- **Azure Key Vault：** 您需要有包含資料行主要金鑰的金鑰保存庫 **get** 、 **unwrapKey** 和 **verify** 權限。
+- **Azure Key Vault：** 您需要有包含資料行主要金鑰的金鑰保存庫 **get**、**unwrapKey** 和 **verify** 權限。
 
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 

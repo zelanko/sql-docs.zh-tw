@@ -10,13 +10,13 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4028d7fb2054a5f60d978fc0f3bdd6acbf293c37
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473959"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
 
@@ -190,7 +190,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 在 Excel 中，選取 [檔案 | 另存新檔]  ，然後選取 [文字檔 (Tab 字元分隔) (\*.txt)]  或 [CSV (逗號分隔) (\*.csv)]  作為目的地檔案類型。
 
-如果您想要從活頁簿匯出多個工作表，請選取每個工作表，然後重複此程序。 **另存新檔**命令只會匯出使用中工作表。
+如果您想要從活頁簿匯出多個工作表，請選取每個工作表，然後重複此程序。 **另存新檔** 命令只會匯出使用中工作表。
 
 > [!TIP]
 > 若要取得資料匯入工具的最佳結果，請儲存僅包含資料行標題和包含資料之資料列的工作表。 如果儲存的資料包含頁面標題、空白行、註解和其他內容，您稍後在匯入資料時可能會看到非預期的結果。

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10b0edeac4c84d11eb1bafe43ef884b76734f784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 123936b94066af78dce6cd9c2f8a4cdeec7f2fbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470201"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475699"
 ---
 # <a name="mssql_repl027183"></a>MSSQL_REPL027183
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88470201"
   
 -   資料行上索引片段已用於篩選。  
   
--   大型合併中繼資料表，例如 **MSmerge_tombstone**、 **MSmerge_contents**和 **MSmerge_genhistory**。  
+-   大型合併中繼資料表，例如 **MSmerge_tombstone**、 **MSmerge_contents** 和 **MSmerge_genhistory**。  
   
 -   已篩選資料表未聯結在唯一索引鍵上，並且聯結包含大量資料表的篩選。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88470201"
   
 -   為發行集保留期限指定可能的最低設定，因為只有在達到保留期限時，複寫才可以清除發行集與訂閱資料庫中的中繼資料。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
--   做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+-   做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings** 和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   確定用於篩選的資料行索引正確，並在需要時重建這些索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   

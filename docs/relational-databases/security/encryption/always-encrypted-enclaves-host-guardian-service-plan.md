@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ed376fd4fe0f3c38d9996157c30722c24b27e8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869164"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477639"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>規劃主機守護者服務證明
 
@@ -66,9 +66,9 @@ HGS 支援兩種證明模式，可搭配 [!INCLUDE [ssnoversion-md](../../../inc
 
 一般來說，以下是我們的建議：
 
-- 針對**實體生產伺服器**，建議使用 TPM 證明來取得它所提供的其他保證。
-- 針對**虛擬生產伺服器**，建議使用主機金鑰證明，因為大部分的虛擬機器都沒有虛擬 TPM 或安全開機。 如果您使用增強安全性的 VM (例如[內部部署受防護的 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node))，您可以選擇使用 TPM 模式。 在所有虛擬化部署中，證明程序只會分析您的 VM 環境，而不是 VM 底下的虛擬化平台。
-- 針對**開發/測試案例**，建議使用主機金鑰證明，因為它較容易設定。
+- 針對 **實體生產伺服器**，建議使用 TPM 證明來取得它所提供的其他保證。
+- 針對 **虛擬生產伺服器**，建議使用主機金鑰證明，因為大部分的虛擬機器都沒有虛擬 TPM 或安全開機。 如果您使用增強安全性的 VM (例如[內部部署受防護的 VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node))，您可以選擇使用 TPM 模式。 在所有虛擬化部署中，證明程序只會分析您的 VM 環境，而不是 VM 底下的虛擬化平台。
+- 針對 **開發/測試案例**，建議使用主機金鑰證明，因為它較容易設定。
 
 ### <a name="trust-model"></a>信任模型
 

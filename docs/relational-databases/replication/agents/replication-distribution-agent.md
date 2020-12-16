@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475939"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -191,7 +191,7 @@ distrib [-?]
  這是登入逾時之前的秒數。 預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為 **2**乘以處理器的數目，最大值是 8。 當使用並行快照集選項來套用在發行者端產生的快照集時，系統會使用單一執行緒，不論您針對 **MaxBcpThreads**指定的數目為何都一樣。  
+ 指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為 **2** 乘以處理器的數目，最大值是 8。 當使用並行快照集選項來套用在發行者端產生的快照集時，系統會使用單一執行緒，不論您針對 **MaxBcpThreads** 指定的數目為何都一樣。  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  這是在單一同步處理作業中套用至訂閱者的最大發送或提取交易數目。 值為 0 表示最大值是無限個交易。 訂閱者可以使用其他值來縮短從發行者提取之同步處理作業的持續時間。  
@@ -222,7 +222,7 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  這是封包大小 (以位元組為單位)。 預設值是 4096 (位元組)。  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_ _  
  這是針對複寫交易查詢散發資料庫的頻率 (以秒為單位)。 預設值是 5 秒。  
   
  **-ProfileName** _profile_name_  
@@ -268,7 +268,7 @@ distrib [-?]
 >  如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
   
 > [!IMPORTANT]  
->  當您針對 **-SubscriptionStreams**指定 2 以上的值時，在訂閱者端收到交易的順序可能會與在發行者端建立交易的順序不同。 如果這個行為在同步處理期間導致條件約束違規，您就應該使用 NOT FOR REPLICATION 選項來停用同步處理期間的條件約束強制執行。 如需詳細資訊，請參閱[在同步處理期間控制觸發程序和條件約束的行為 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
+>  當您針對 **-SubscriptionStreams** 指定 2 以上的值時，在訂閱者端收到交易的順序可能會與在發行者端建立交易的順序不同。 如果這個行為在同步處理期間導致條件約束違規，您就應該使用 NOT FOR REPLICATION 選項來停用同步處理期間的條件約束強制執行。 如需詳細資訊，請參閱[在同步處理期間控制觸發程序和條件約束的行為 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]Subscriptionstreams 不適用於設定為傳遞  的發行項。 若要使用 subscriptionstreams，請改將發行項設定為傳遞預存程序呼叫。  
@@ -280,7 +280,7 @@ distrib [-?]
  指定散發的訂閱類型。 值為 **0** 表示發送訂閱、值為 **1** 表示提取訂閱，而值為 2 則表示匿名訂閱。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
+ 指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  必須針對允許資料轉換的發行集指定為參數。  

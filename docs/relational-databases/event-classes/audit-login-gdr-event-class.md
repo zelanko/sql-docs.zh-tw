@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a0d0eb1272e93b08d9dbe84608199cf26ebd3df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8dfc9dbbeee6f03dc1d4c8b7053bb669107c6037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476349"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  只要加入或移除 **Windows 登入權限，就會發生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件類別。 此事件類別供 **sp_grantlogin**、 **sp_revokelogin**和 **sp_denylogin** 預存程序使用。  
+  只要加入或移除 **Windows 登入權限，就會發生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件類別。 此事件類別供 **sp_grantlogin**、 **sp_revokelogin** 和 **sp_denylogin** 預存程序使用。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本可能會移除這個事件類別。 建議您改用 **Audit Server Principal Management** 事件類別。  
   

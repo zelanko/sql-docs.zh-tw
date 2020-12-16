@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74149cdcf8dd12280103c592c5a8662dddf4e750
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: cf739bc33c505de3edac3869f4e5b095b651ed8a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470090"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477569"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

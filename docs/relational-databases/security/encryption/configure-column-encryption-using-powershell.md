@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f03f5dc54c525e850c7654c5860fb56d35ad75c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475599"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>使用 Always Encrypted 與 PowerShell 設定資料行加密
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 本文逐步說明如何使用 [SqlServer](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) PowerShell 模組中的 *Set-SqlColumnEncryption* Cmdlet，為資料庫資料行設定目標永遠加密組態。 **Set-SqlColumnEncryption** Cmdlet 會同時修改目標資料庫的結構描述及儲存在所選資料行中的資料。 您可以根據資料行的指定目標加密設定和目前的加密組態，對儲存在資料行中的資料進行加密、重新加密或解密。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 如果您使用 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 且 SQL Server 執行個體是以安全記憶體保護區進行設定，您可以就地執行密碼編譯作業，而不需要將資料移出資料庫。 請參閱[使用具有安全記憶體保護區的 Always Encrypted 就地設定資料行加密](always-encrypted-enclaves-configure-encryption.md)。 請注意，PowerShell 不支援就地加密。

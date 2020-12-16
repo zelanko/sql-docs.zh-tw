@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 828791161e2ca6dd493941e3759284510c2c3bb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7d3096ecd47192b56743bc3cd9eb925a34aa1784
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486986"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476189"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 事件類別
 
@@ -49,7 +49,7 @@ ms.locfileid: "88486986"
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|對話的交談控制代碼。|34|否|  
-|**RoleName**|**nvarchar**|交談控制代碼的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
+|**RoleName**|**nvarchar**|交談控制代碼的角色。 為 **initiator** 或 **target** 其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**嚴重性**|**int**|事件中文字的嚴重性編號。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  

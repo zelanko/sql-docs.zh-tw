@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1b40afe7f9e7e74fb70f7b08a1c7532e5a65c715
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b21d42777d4561685e714eeb72c07bb1e6fd405b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482493"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475869"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -225,7 +225,7 @@ ms.locfileid: "88482493"
 3.  從命令提示字元啟動代理程式時，在 **-ProfileName** 命令列參數之後指定在步驟 1 中取得的 **profile_name** 值。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
- 此範例會針對名為 **custom_merge**的合併代理程式建立自訂的設定檔、變更 **-UploadReadChangesPerBatch** 參數的值、加入新的 **-ExchangeType** 參數，並傳回所建立之設定檔的相關資訊。  
+ 此範例會針對名為 **custom_merge** 的合併代理程式建立自訂的設定檔、變更 **-UploadReadChangesPerBatch** 參數的值、加入新的 **-ExchangeType** 參數，並傳回所建立之設定檔的相關資訊。  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
@@ -253,7 +253,7 @@ ms.locfileid: "88482493"
   
 5.  在伺服器上建立設定檔之後，就可以藉由加入、移除或變更複寫代理程式參數的值來加以自訂。  
   
-6.  若要將設定檔指派給現有的複寫代理程式作業，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID*傳遞作業識別碼。  
+6.  若要將設定檔指派給現有的複寫代理程式作業，請呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 請針對 *distributionDBName* 傳遞散發資料庫的名稱，而針對 *agentID* 傳遞作業識別碼。  
   
 ###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> 若要修改現有的代理程式設定檔  
   

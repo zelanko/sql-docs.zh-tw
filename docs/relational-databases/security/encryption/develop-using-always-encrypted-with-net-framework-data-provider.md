@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477579"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>搭配 .NET Framework Data Provider for SQL Server 使用 [永遠加密]
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -408,11 +408,11 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 若要控制個別查詢的 [永遠加密] 行為，您需要使用 [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) 和 [SqlCommandColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)的這個建構函式。 以下是一些實用的方針：
 - 如果用戶端應用程式透過資料庫連接傳送的大多數查詢都會存取加密資料行：
-    - 將**資料行加密設定**連接字串關鍵字設為 [啟用]  。
+    - 將 **資料行加密設定** 連接字串關鍵字設為 [啟用]  。
     - 對不會存取任何加密資料行的個別查詢設定 **SqlCommandColumnEncryptionSetting.Disabled** 。 這會停用呼叫 sys.sp_describe_parameter_encryption 以及嘗試解密結果集內的任何值。
     - 對沒有任何參數要求加密，但會從加密資料行擷取資料的個別查詢設定 **SqlCommandColumnEncryptionSetting.ResultSet** 。 這會停用呼叫 sys.sp_describe_parameter_encryption 和參數加密。 查詢將能夠解密來自加密資料行的結果。
 - 如果用戶端應用程式透過資料庫連接傳送的大多數查詢都不會存取加密資料行：
-    - 將**資料行加密設定**連接字串關鍵字設為 [停用]  。
+    - 將 **資料行加密設定** 連接字串關鍵字設為 [停用]  。
     - 對有任何參數需要加密的個別查詢設定 **SqlCommandColumnEncryptionSetting.Enabled** 。 這可以呼叫 sys.sp_describe_parameter_encryption 以及解密擷取自加密資料行的任何查詢結果。
     - 對沒有任何參數要求加密，但會從加密資料行擷取資料的查詢設定 **SqlCommandColumnEncryptionSetting.ResultSet** 。 這會停用呼叫 sys.sp_describe_parameter_encryption 和參數加密。 查詢將能夠解密來自加密資料行的結果。
 

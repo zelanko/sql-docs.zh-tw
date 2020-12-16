@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c52250061e78f663e4046d53b5c101f13367407d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 8d2bb044d0a75c4809cfe987bea6d0c2efc7d743
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423432"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477749"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88423432"
   
  ![資料列篩選](../../../relational-databases/replication/publish/media/repl-16.gif "資料列篩選")  
   
- 靜態資料列篩選使用 WHERE 子句選取要發行的適當資料；您可以指定 WHERE 子句的最後部份。 請考慮 Adventure Works 範例資料庫中的 **Product 資料表** ，其中包含 **ProductLine**資料行。 若要只發行包含山地自行車相關產品之資料的資料列，請指定 `ProductLine = 'M'`。  
+ 靜態資料列篩選使用 WHERE 子句選取要發行的適當資料；您可以指定 WHERE 子句的最後部份。 請考慮 Adventure Works 範例資料庫中的 **Product 資料表** ，其中包含 **ProductLine** 資料行。 若要只發行包含山地自行車相關產品之資料的資料列，請指定 `ProductLine = 'M'`。  
   
  靜態資料列篩選會導致每個發行集只有一個資料集。 在上例中，所有「訂閱者」只會收到包含山地自行車相關產品之資料的資料列。 如果有另一「訂閱者」需要只包含公路自行車相關產品之資料的資料列：  
   
@@ -132,7 +132,7 @@ ms.locfileid: "88423432"
   
 -   異動複寫可讓您將索引檢視複寫為檢視或資料表。 如果將檢視複寫為資料表，則無法從資料表篩選資料行。  
   
- 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 **sp_replcmds** (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (**dbo**)。 **dbo** 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)， **sp_replcmds** 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性考量， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會限制這個邏輯的執行範圍，讓惡意 **dbo** 無法劫持這個執行路徑。 例如，惡意 **dbo** 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 **sp_replcmds**的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 **dbo** 可能會提高其權限。  
+ 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 **sp_replcmds** (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (**dbo**)。 **dbo** 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)， **sp_replcmds** 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性考量， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會限制這個邏輯的執行範圍，讓惡意 **dbo** 無法劫持這個執行路徑。 例如，惡意 **dbo** 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 **sp_replcmds** 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 **dbo** 可能會提高其權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

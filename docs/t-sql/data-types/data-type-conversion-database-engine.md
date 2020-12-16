@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38ffa83b86097e8789c61b26f161d6021f5ee79b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f879b6e749f3797a51970708be59b3b68920cb26
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036881"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474239"
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92036881"
 ## <a name="implicit-and-explicit-conversion"></a>隱含及明確轉換
 資料類型可以隱含或明確地轉換。
   
-使用者看不到隱含轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動將資料從一種類型轉換成其他資料類型。 例如，如果將 **smallint** 與 **int**做比較，會先將 **smallint** 隱含轉換成 **int**再繼續比較。
+使用者看不到隱含轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動將資料從一種類型轉換成其他資料類型。 例如，如果將 **smallint** 與 **int** 做比較，會先將 **smallint** 隱含轉換成 **int** 再繼續比較。
   
 **GETDATE()** 會隱含轉換成日期樣式 0。 **SYSDATETIME()** 會隱含轉換成日期樣式 21。
   

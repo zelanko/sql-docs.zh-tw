@@ -12,13 +12,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a9b6cb32af496b70a48ef4d32f3692b7b863b28
-ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ff06a77af1592bf9bf2386742a53033ade76aecd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595105"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478119"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "96595105"
 |類別|SQL Server 資料類型|JSON 資料類型|  
 |--------------|--------------|---------------|  
 |字元和字串類型|char、nchar、varchar、nvarchar|字串|  
-|數值類型|int、bigint、float、decimal、numeric|數目|  
+|數值類型|int、bigint、float、decimal、numeric|number|  
 |位元類型|bit|布林值 (true 或 false)|  
 |日期和時間類型|date、datetime、datetime2、time、datetimeoffset|字串|  
 |二進位類型|varbinary、binary、image、timestamp、rowversion|BASE64 編碼字串|  

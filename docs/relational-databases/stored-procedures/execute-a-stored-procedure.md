@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332610"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475299"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "87332610"
   
 -   自動執行預存程序  
   
-     標記為自動執行的程序會在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行，且 **master** 資料庫會在該啟動處理序期間復原。 設定自動執行程序在執行資料庫維護作業或讓程序做為背景處理序連續執行時相當實用。 自動執行的另一個用處就是讓程序執行 **tempdb**中的系統或維護工作，如建立全域的暫存資料表。 這樣可確保在 **啟動期間重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，這個暫存資料表一定會存在。  
+     標記為自動執行的程序會在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行，且 **master** 資料庫會在該啟動處理序期間復原。 設定自動執行程序在執行資料庫維護作業或讓程序做為背景處理序連續執行時相當實用。 自動執行的另一個用處就是讓程序執行 **tempdb** 中的系統或維護工作，如建立全域的暫存資料表。 這樣可確保在 **啟動期間重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，這個暫存資料表一定會存在。  
   
      自動執行的程序運作時所使用的權限與 **sysadmin** (系統管理員) 固定伺服器角色的成員相同。 程序所產生的任何錯誤訊息都會寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "87332610"
   
 -   設定、清除和控制自動執行  
   
-     只有系統管理員 (**sa**) 可以將程序標示為自動執行。 此外，該程序必須位於 **master** 資料庫中，由 **sa**所擁有，並且不能有輸入或輸出參數。  
+     只有系統管理員 (**sa**) 可以將程序標示為自動執行。 此外，該程序必須位於 **master** 資料庫中，由 **sa** 所擁有，並且不能有輸入或輸出參數。  
   
      使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 可以：  
   

@@ -21,14 +21,14 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 ms.date: 09/25/2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4afac2fde54524d5440d33d8ff2bf4cdc9062521
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715401"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473969"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 將資料匯入 SQL Server
 
@@ -89,7 +89,7 @@ INSERT ...SELECT * FROM OPENROWSET(BULK...)
 
 例如，有個使用者使用 Windows 驗證登入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果這個使用者要用 BULK INSERT 或 OPENROWSET 從資料檔案匯入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，則使用者帳戶必須具有資料檔案的讀取權限。 有了資料檔案的存取權之後，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序沒有權限存取檔案，使用者還是可以將檔案中的資料匯入到資料表。 使用者不需要將檔案存取權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」或「委派」。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B**上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的**執行個體，然後存取 **Computer_B**上的資料檔案，並從該檔案大量匯入資料到 **Computer_C**上的資料表。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 可以設定為，透過轉送已驗證 Windows 使用者的認證，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此設置也稱為「模擬」或「委派」。 當您使用 BULK INSERT 或 OPENROWSET 時，請務必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本如何處理使用者模擬的安全性。 使用者模擬允許資料檔案位於和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序或使用者不同的電腦上。 例如，如果位於 **Computer_A** 的使用者可以存取 **Computer_B** 上的資料檔案，且已適當設定認證委派，則使用者可以連接到執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **上的** 執行個體，然後存取 **Computer_B** 上的資料檔案，並從該檔案大量匯入資料到 **Computer_C** 上的資料表。
 
 ## <a name="bulk-importing-to-sql-server-from-a-remote-data-file"></a>從遠端資料檔案大量匯入至 SQL Server
 
@@ -167,13 +167,13 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]

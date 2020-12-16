@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1774e2b2a27b2b1f0c36b298f98c916318fd1543
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868907"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477649"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>向主機守護者服務註冊電腦
 

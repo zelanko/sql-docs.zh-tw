@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810456"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474569"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系統版本設定時態表與記憶體最佳化資料表
 
@@ -44,12 +44,12 @@ ms.locfileid: "91810456"
 - 只有持久的記憶體最佳化資料表可以是系統建立版本 (**DURABILITY = SCHEMA_AND_DATA**)。
 - 記憶體最佳化系統建立版本資料表的歷程記錄資料表，必須是以磁碟為基礎，無論它是由使用者或系統建立。
 - 只有影響目前資料表 (記憶體內部) 的查詢可用於 [原生編譯的 T-SQL 模組](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)。 原生編譯的模組不支援使用 FOR SYSTEM TIME 子句的暫時查詢。 支援在特定查詢和非原生模組中搭配使用 FOR SYSTEM TIME 子句和記憶體最佳化資料表。
-- 當 **SYSTEM_VERSIONING = ON**時，內部記憶體最佳化暫存資料表會自動建立，以接受最近的系統控制版本變更，該變更是在記憶體最佳化目前資料表上更新與刪除作業的結果。
+- 當 **SYSTEM_VERSIONING = ON** 時，內部記憶體最佳化暫存資料表會自動建立，以接受最近的系統控制版本變更，該變更是在記憶體最佳化目前資料表上更新與刪除作業的結果。
 - 內部記憶體最佳化暫存資料表的資料，會透過非同步資料排清工作定期移動至磁碟歷程記錄資料表。 此資料排清機制的目標，是將它們父物件的內部記憶體緩衝區耗用量維持低於 10%。 您可以藉由查詢 [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) 並從內部記憶體最佳化暫存資料表和目前時態表摘要資料，追蹤記憶體最佳化系統版本設定時態表的總記憶體耗用量。
 - 您可以叫用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)來強制執行資料排清。
 - 當 **SYSTEM_VERSIONING = OFF** 或系統版本設定資料表的結構描述因為新增、卸除或改變資料行而修改時，整個內部暫存緩衝區的內容會移至磁碟記錄資料表。
 - 在 SNAPSHOT 層級下可有效查詢記錄資料，並會永遠傳回記憶體內部暫存緩衝區與以磁碟為基礎之資料表間的 union，而不重複。
-- 在內部變更資料表結構描述的**ALTER TABLE** 作業必須執行資料排清，這可能會延長作業的期間。
+- 在內部變更資料表結構描述的 **ALTER TABLE** 作業必須執行資料排清，這可能會延長作業的期間。
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>內部記憶體最佳化暫存資料表
 

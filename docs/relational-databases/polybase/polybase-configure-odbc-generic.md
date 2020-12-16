@@ -9,13 +9,13 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
+ms.openlocfilehash: ac4fa22e2d0aea57f25aaa9ef2d8c570f8bb130b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216692"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475929"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>設定 PolyBase 以存取具有 ODBC 泛型型別的外部資料
 
@@ -36,14 +36,14 @@ SQL Server 2019 中的 PolyBase 可讓您使用 ODBC 連接器連線到 ODBC 相
 
 ## <a name="install-the-odbc-driver"></a>安裝 ODBC 驅動程式
 
-下載並安裝您要在每個 PolyBase 節點上連線之資料來源的 ODBC 驅動程式。 正確安裝好驅動程式之後，您就可以從 **ODBC 資料來源管理員**檢視及測試驅動程式。
+下載並安裝您要在每個 PolyBase 節點上連線之資料來源的 ODBC 驅動程式。 正確安裝好驅動程式之後，您就可以從 **ODBC 資料來源管理員** 檢視及測試驅動程式。
 
 ![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
 上例中的驅動程式名稱會以紅圈圈起。 當您建立外部資料來源時，請使用此名稱。
 
 > [!IMPORTANT]
-> 為改善查詢效能，請啟用連接共用。 這可在 **ODBC 資料來源管理員**中完成。
+> 為改善查詢效能，請啟用連接共用。 這可在 **ODBC 資料來源管理員** 中完成。
 
 ## <a name="create-dependent-objects-in-sql-server"></a>在 SQL Server 中建立相依物件
 

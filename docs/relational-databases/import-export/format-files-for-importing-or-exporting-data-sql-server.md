@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473999"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化匯入和匯出資料的檔案 (SQL Server)
 
@@ -106,7 +106,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 - 資料檔的資料行之間，有不同的終止字元或前置長度。
 
 > [!NOTE]
-> 在沒有格式檔案的情況下，如果 **bcp** 命令指定資料格式參數 ( **-n**、 **-c**、 **-w**或 **-N**)，或 BULK INSERT 作業指定 DATAFILETYPE 選項，則會採用指定的資料格式來做為解譯資料檔欄位的預設方法。
+> 在沒有格式檔案的情況下，如果 **bcp** 命令指定資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，或 BULK INSERT 作業指定 DATAFILETYPE 選項，則會採用指定的資料格式來做為解譯資料檔欄位的預設方法。
 
 ## <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作
 

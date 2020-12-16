@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 867f902376778b298ff6f099747c9344f8a055e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364235"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475879"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

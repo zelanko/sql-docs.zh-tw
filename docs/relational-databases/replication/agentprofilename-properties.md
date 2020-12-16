@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 92d6f1e266dfee1964eca8d260cbf9b7ed5d998c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: babf773a83101f73b0967ed3cdb94c93af5f6391
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482490"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475889"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;代理程式設定檔名稱&gt; 屬性
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-   使用 [代理程式設定檔屬性]**** 對話方塊，即可檢視設定檔中每一個代理程式參數所指定的值，以及修改使用者定義設定檔的值。  
+   使用 [代理程式設定檔屬性] 對話方塊，即可檢視設定檔中每一個代理程式參數所指定的值，以及修改使用者定義設定檔的值。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

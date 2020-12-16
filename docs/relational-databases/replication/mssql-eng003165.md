@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e0ac70ecaddb16dd22f1e97ed56ff7ca47488019
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 778661a1ff29f8813a000606d4d49be3c7105643
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379844"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475829"
 ---
 # <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88379844"
   
 -   如果將備份還原至不同的資料庫或伺服器，此錯誤表示複寫設定無法正確移除 (依預設，如果資料庫或伺服器不同，將移除複寫設定)。  
   
- 此錯誤可能是由於，還原的資料庫與包含複寫中繼資料的一個或多個系統資料庫 ( **msdb**、 **master**或散發資料庫) 之間狀態不符而導致。  
+ 此錯誤可能是由於，還原的資料庫與包含複寫中繼資料的一個或多個系統資料庫 ( **msdb**、 **master** 或散發資料庫) 之間狀態不符而導致。  
   
 ## <a name="user-action"></a>使用者動作  
  若要解決此問題：  

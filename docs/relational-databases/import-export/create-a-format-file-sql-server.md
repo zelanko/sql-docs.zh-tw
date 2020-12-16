@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009924"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474059"
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -267,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  如需本格式檔案語法的相關資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。 如需如何使用原生資料的相關資訊，請參閱[使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>將資料欄位對應至資料表資料行  
- 格式檔案由 **bcp**建立後，便會依序描述所有的資料表資料行。 您可以修改格式檔案，重新排列或省略資料表資料列。 這可讓您針對欄位未直接對應至資料表資料行的資料檔來自訂格式檔案。 如需詳細資訊，請參閱下列主題：  
+ 格式檔案由 **bcp** 建立後，便會依序描述所有的資料表資料行。 您可以修改格式檔案，重新排列或省略資料表資料列。 這可讓您針對欄位未直接對應至資料表資料行的資料檔來自訂格式檔案。 如需詳細資訊，請參閱下列主題：  
   
 -   [使用格式檔案略過資料表資料行 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: de9860fdf161d9ed43a1ae2c63e1210dd2079e42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91863695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477709"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>使用具有安全記憶體保護區的 Always Encrypted 就地設定資料行加密 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "91863695"
 
 就地加密可讓您使用 [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) 陳述式觸發密碼編譯作業，這在沒有記憶體保護區的情況下是不可能的。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 所支援密碼編譯作業及針對作業所需要使用資料行加密金鑰的需求如下：
 - 加密純文字資料行。 用來加密資料行的資料行加密金鑰必須已啟用記憶體保護區。
 - 使用新加密類型和/或新的資料行加密金鑰重新加密已加密的資料行。 目前的資料行加密金鑰和新資料行加密金鑰 (若與目前的金鑰不同) 都必須已啟用記憶體保護區。

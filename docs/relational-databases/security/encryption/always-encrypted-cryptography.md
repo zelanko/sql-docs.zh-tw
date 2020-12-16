@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 630732f9f1d56292a72ddd180ee536008c4ecf83
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866912"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475589"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted 密碼編譯
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91866912"
  **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用下列步驟，來計算指定純文字值的加密文字值。  
   
 ### <a name="step-1-generating-the-initialization-vector-iv"></a>步驟 1:產生初始化向量 (IV)  
- 「永遠加密」支援 **AEAD_AES_256_CBC_HMAC_SHA_256**的兩種變化：  
+ 「永遠加密」支援 **AEAD_AES_256_CBC_HMAC_SHA_256** 的兩種變化：  
   
 -   隨機化  
   

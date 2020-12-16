@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dc93e307fb7e9b7afab3717d32dd4be58a1ec818
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 86c78b601c8a6ac9b62c84c81ba695c61d7e4a81
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892148"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475909"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

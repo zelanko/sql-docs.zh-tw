@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 3c23c10d99ab16e3da138a03eac14b48d2468909
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130915"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477669"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>為現有加密資料行啟用具有安全記憶體保護區的 Always Encrypted 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

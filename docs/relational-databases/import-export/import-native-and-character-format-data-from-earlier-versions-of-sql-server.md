@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868740"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473949"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868740"
 ## <a name="interpretation-of-data-types"></a>資料類型的解譯  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新的版本支援一些新的類型。 如果您想要將新的資料類型匯入舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您必須以舊版 **bcp** 用戶端可讀取的格式儲存該資料類型。 下表摘述如何轉換新資料類型，以便與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相容。  
   
-|SQL Server 2005 的新資料類型|與 6*x*版相容的資料類型|與 70 版相容的資料類型|與 80 版相容的資料類型|  
+|SQL Server 2005 的新資料類型|與 6 *x* 版相容的資料類型|與 70 版相容的資料類型|與 80 版相容的資料類型|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
@@ -63,7 +63,7 @@ ms.locfileid: "91868740"
  **bcp** 命令會針對 **datetime** 和 **smalldatetime** 值使用 ODBC 預設格式來匯出字元格式資料檔案。 例如，包含日期 **的** datetime `12 Aug 1998` 資料行會以字元字串 `1998-08-12 00:00:00.000`大量複製到資料檔案。  
   
 > [!IMPORTANT]  
->  使用 **bcp** 將資料匯入 **smalldatetime**欄位時，請確定秒數值是 00.000；否則作業將會失敗。 **smalldatetime** 資料類型只會保留最接近分鐘數的數值。 BULK INSERT 及 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在這個案例中將不會失敗，但會截斷秒數值。  
+>  使用 **bcp** 將資料匯入 **smalldatetime** 欄位時，請確定秒數值是 00.000；否則作業將會失敗。 **smalldatetime** 資料類型只會保留最接近分鐘數的數值。 BULK INSERT 及 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在這個案例中將不會失敗，但會截斷秒數值。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用大量匯入或大量匯出的資料格式**  

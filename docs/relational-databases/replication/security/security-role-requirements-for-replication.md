@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 85c71b94355aa845dcc15903552bbf77b6e8b206
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 4c715601699b689a41765633a079b9d6a99da8b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914324"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475639"
 ---
 # <a name="security-role-requirements-for-replication"></a>複寫的安全性角色需求
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,25 +31,25 @@ ms.locfileid: "86914324"
   
 |設定工作|成員需求|  
 |----------------|----------------------------|  
-|啟用「散發者」、「發行者」或「訂閱者」。|發行者上的**系統管理員 (sysadmin)** 伺服器角色。|  
-|啟用資料庫進行複寫|發行者上的**系統管理員 (sysadmin)** 伺服器角色。|  
-|建立發行集。|發行者之發行集資料庫上的**db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|啟用「散發者」、「發行者」或「訂閱者」。|發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|啟用資料庫進行複寫|發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|建立發行集。|發行者之發行集資料庫上的 **db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
 |檢視發行集屬性。|「發行者」端的 PAL 成員，「發行者」端發行集資料庫上的 **db_owner** 資料庫角色，或「發行者」上的 **系統管理員 (sysadmin)** 伺服器角色。|  
-|建立訂閱。|發行者之發行集資料庫上的**db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。<br /><br /> 發行者之訂閱資料庫上的**db_owner** 資料庫角色，或訂閱者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
-|設定代理程式設定檔。|「散發者」上的**系統管理員 (sysadmin)** 伺服器角色。|  
+|建立訂閱。|發行者之發行集資料庫上的 **db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。<br /><br /> 發行者之訂閱資料庫上的 **db_owner** 資料庫角色，或訂閱者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|設定代理程式設定檔。|「散發者」上的 **系統管理員 (sysadmin)** 伺服器角色。|  
   
 ## <a name="security-role-requirements-for-replication-maintenance"></a>複寫維護的安全性角色需求  
  下表摘要描述了一般複寫維護工作所需的驗證層級：  
   
 |維護工作|成員需求|  
 |----------------------|----------------------------|  
-|修改或卸除「散發者」、「發行者」或「訂閱者」。|適當伺服器上的**系統管理員 (sysadmin)** 伺服器角色。|  
-|修改或卸除發行集。|發行者之發行集資料庫上的**db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
-|在「發行者」端修改或卸除訂閱。|發行者之發行集資料庫上的**db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
-|在「訂閱者」端修改或卸除訂閱。|發行者之訂閱資料庫上的**db_owner** 資料庫角色，或訂閱者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|修改或卸除「散發者」、「發行者」或「訂閱者」。|適當伺服器上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|修改或卸除發行集。|發行者之發行集資料庫上的 **db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|在「發行者」端修改或卸除訂閱。|發行者之發行集資料庫上的 **db_owner** 資料庫角色，或發行者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|在「訂閱者」端修改或卸除訂閱。|發行者之訂閱資料庫上的 **db_owner** 資料庫角色，或訂閱者上的 **系統管理員 (sysadmin)** 伺服器角色。|  
 |標記訂閱以便重新初始化。|發送訂閱：「發行者」端之發行集資料庫中的 **db_owner** 資料庫角色，或在「發行者」上的 **系統管理員 (sysadmin)** 伺服器角色。<br /><br /> 提取訂閱：「訂閱者」端之訂閱資料庫中的 **db_owner** 資料庫角色，或在「訂閱者」上的 **系統管理員 (sysadmin)** 伺服器角色。|  
-|使用「複寫監視器」來檢視複寫活動、錯誤與記錄。 除非使用者是 **系統管理員 (sysadmin)** 伺服器角色的成員，否則使用者無法修改代理程式設定檔、排程等等。|「散發者」端之散發資料庫上的**replmonitor** 資料庫角色，或「散發者」上的 **系統管理員 (sysadmin)** 伺服器角色。|  
-|維護複寫代理程式。|適當資料庫中的**db_owner** 資料庫角色，或在適當伺服器上的 **系統管理員 (sysadmin)** 伺服器角色。<br /><br /> 如果由 **系統管理員 (sysadmin)** 角色的使用者建立了代理程式，且尚未為代理程式指定 Proxy 帳戶，則代理程式會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 帳戶的內容下執行。 在此狀況下， **db_owner** 角色的使用者無法修改與代理程式相關聯的作業。|  
+|使用「複寫監視器」來檢視複寫活動、錯誤與記錄。 除非使用者是 **系統管理員 (sysadmin)** 伺服器角色的成員，否則使用者無法修改代理程式設定檔、排程等等。|「散發者」端之散發資料庫上的 **replmonitor** 資料庫角色，或「散發者」上的 **系統管理員 (sysadmin)** 伺服器角色。|  
+|維護複寫代理程式。|適當資料庫中的 **db_owner** 資料庫角色，或在適當伺服器上的 **系統管理員 (sysadmin)** 伺服器角色。<br /><br /> 如果由 **系統管理員 (sysadmin)** 角色的使用者建立了代理程式，且尚未為代理程式指定 Proxy 帳戶，則代理程式會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 帳戶的內容下執行。 在此狀況下， **db_owner** 角色的使用者無法修改與代理程式相關聯的作業。|  
 |啟動或停止複寫代理程式。|代理程式作業的擁有者或適當伺服器上的 **系統管理員 (sysadmin)** 伺服器角色。|  
   
 ## <a name="see-also"></a>另請參閱  
