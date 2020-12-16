@@ -7,18 +7,18 @@ ms.date: 01/25/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9734b1315aa782f83f8f02cfb9d0d78da52460d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92195752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470729"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>為 SQLRUserGroup 建立登入
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-當指令碼中的 [回送連線](../../relational-databases/security/authentication-access/create-a-login.md)指定 [信任連線](../concepts/security.md#sqlrusergroup)，而且用來執行包含程式碼之物件的身分識別是 Windows 使用者帳戶時，為 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) 建立 *SQL Server 中的登入* 。
+當指令碼中的 [回送連線](../../relational-databases/security/authentication-access/create-a-login.md)指定 [信任連線](../concepts/security.md#sqlrusergroup)，而且用來執行包含程式碼之物件的身分識別是 Windows 使用者帳戶時，為 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) 建立 *SQL Server 中的登入*。
 
 信任連線是在連接字串中有 `Trusted_Connection=True` 的連線。 當 SQL Server 收到指定信任連線的要求時，它會檢查目前 Windows 使用者的身分識別是否有登入。 對於以背景工作帳戶執行的外部處理序 (例如來自 **SQLRUserGroup** 的 MSSQLSERVER01)，要求會失敗，因為這些帳戶預設沒有登入。
 
@@ -49,8 +49,8 @@ ms.locfileid: "92195752"
 
 5. 瀏覽伺服器上的群組帳戶清單，直到您找到一個開頭為 `SQLRUserGroup` 的清單為止。
     
-    + 不論您安裝的是 R、Python 還是兩者，與 _預設執行個體_ 的啟動控制板服務相關聯之群組的名稱一律是 **SQLRUserGroup** 。 僅針對預設執行個體選取此帳戶。
-    + 如果您使用的是 _具名執行個體_ ，執行個體名稱會附加至預設背景工作群組名稱 `SQLRUserGroup` 的名稱。 例如，如果您的執行個體名稱為 "MLTEST"，則此執行個體的預設使用者群組名稱會是 **SQLRUserGroupMLTest** 。
+    + 不論您安裝的是 R、Python 還是兩者，與 _預設執行個體_ 的啟動控制板服務相關聯之群組的名稱一律是 **SQLRUserGroup**。 僅針對預設執行個體選取此帳戶。
+    + 如果您使用的是 _具名執行個體_，執行個體名稱會附加至預設背景工作群組名稱 `SQLRUserGroup` 的名稱。 例如，如果您的執行個體名稱為 "MLTEST"，則此執行個體的預設使用者群組名稱會是 **SQLRUserGroupMLTest**。
  
     ![伺服器上群組的範例](media/implied-auth-login5.png "伺服器上群組的範例")
    
