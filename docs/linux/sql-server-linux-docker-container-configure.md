@@ -9,14 +9,14 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 53bfe3652df7136b0358590f6d9be51f36907b2d
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: fbae468dfd0f68f2765dc781ad710e9b8525aeaf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511564"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489888"
 ---
 # <a name="configure-and-customize-sql-server-docker-containers"></a>設定和自訂 SQL Server Docker 容器
 
@@ -36,7 +36,7 @@ ms.locfileid: "89511564"
 
 ## <a name="persist-your-data"></a><a id="persist"></a> 保存您的資料
 
-您的 SQL Server 設定變更和資料庫檔案都會保存於容器中，即使您使用 `docker stop` 和 `docker start` 來將容器重新啟動也一樣。 不過，如果您使用 `docker rm` 來移除容器，則會刪除容器中的所有項目，包括 SQL Server 和您的資料庫。 下一節將說明如何使用**資料磁碟區**來保存您的資料庫檔案，即使已刪除相關聯的容器也一樣。
+您的 SQL Server 設定變更和資料庫檔案都會保存於容器中，即使您使用 `docker stop` 和 `docker start` 來將容器重新啟動也一樣。 不過，如果您使用 `docker rm` 來移除容器，則會刪除容器中的所有項目，包括 SQL Server 和您的資料庫。 下一節將說明如何使用 **資料磁碟區** 來保存您的資料庫檔案，即使已刪除相關聯的容器也一樣。
 
 > [!IMPORTANT]
 > 針對 SQL Server，請務必瞭解 Docker 中的資料持續性。 除了本節的討論，另請參閱 Docker 文件，以了解[如何管理 Docker 容器中的資料](https://docs.docker.com/engine/tutorials/dockervolumes/) \(英文\)。
@@ -69,7 +69,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -125,7 +125,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -281,7 +281,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -340,7 +340,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -367,12 +367,12 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- 透過此[快速入門](quickstart-install-connect-docker.md?view=sql-server-2017)，開始使用 Docker 上的 SQL Server 2017 容器映像
+- 透過此[快速入門](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)，開始使用 Docker 上的 SQL Server 2017 容器映像
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - 透過此[快速入門](quickstart-install-connect-docker.md?view=sql-server-ver15)，開始使用 Docker 上的 SQL Server 2019 容器映像
 

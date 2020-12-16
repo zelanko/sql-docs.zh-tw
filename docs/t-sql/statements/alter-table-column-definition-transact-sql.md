@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547785"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489451"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  這是用來作為資料行預設值的常值、NULL 或系統函數。 如果結合定義為 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別的資料行來使用，類型的實作必須支援將 *constant_expression* 隱含轉換成使用者定義型別。  
   
 WITH VALUES   
- 當新增資料行和 (AND) DEFAULT 條件約束時，如果資料行允許使用 WITH VALUES NULLS，則對於現有的資料列，會將新資料行的值設定為 DEFAULT *constant_expression* 中提供的值。 如果新增的資料行不允許 NULLS，則對於現有的資料列，會一律將該資料行的值設定為 DEFAULT *constant expression* 中提供的值。 從 SQL Server 2012 中開始，這可以是中繼資料作業 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+ 當新增資料行和 (AND) DEFAULT 條件約束時，如果資料行允許使用 WITH VALUES NULLS，則對於現有的資料列，會將新資料行的值設定為 DEFAULT *constant_expression* 中提供的值。 如果新增的資料行不允許 NULLS，則對於現有的資料列，會一律將該資料行的值設定為 DEFAULT *constant expression* 中提供的值。 從 SQL Server 2012 中開始，這可以是中繼資料作業 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation)。
 如果在相關資料行沒有一起新增的情況下使用此方法，則它沒有作用。
  
  指定將 DEFAULT *constant_expression* 中所提供的值，儲存在要新增至現有資料列的新資料行。 如果加入的資料行允許 Null 值，且指定了 WITH VALUES，就會將預設值儲存在加入現有資料列的新資料行中。 如果允許 Null 的資料行沒有指定 WITH VALUES，就會將 NULL 值儲存在現有資料列的新資料行中。 如果新資料行不允許 NULL，就會將預設值儲存在新資料列中，不論是否指定了 WITH VALUES，都是如此。  

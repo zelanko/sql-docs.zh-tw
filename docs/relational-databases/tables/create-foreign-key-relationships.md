@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea3a7bec04dcd7e584d541cf4fa4ccee3cf48915
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645840"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484510"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 
@@ -58,7 +58,7 @@ ms.locfileid: "88645840"
 
 1. 在物件總管中，以滑鼠右鍵按一下位於關聯性之外部索引鍵端上的資料表，然後按一下 [設計]。
 
-   資料表會在[**資料表設計工具**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)中開啟。
+   資料表會在 [**資料表設計工具**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)中開啟。
 2. 從 **[資料表設計工具]** 功能表中，按一下 **[關聯性]** 。
 3. 在 [外部索引鍵關聯性] 對話方塊中，按一下 [加入]。
 
@@ -70,7 +70,7 @@ ms.locfileid: "88645840"
 
    **[資料表設計工具]** 會提供關聯性的建議名稱。 若要變更這個名稱，請編輯 **[關聯性名稱]** 文字方塊的內容。
 8. 選擇 **[確定]** 建立關聯性。
-9. 關閉資料表設計工具視窗，並**儲存**您所做的變更，外部索引鍵關聯性變更才會生效。
+9. 關閉資料表設計工具視窗，並 **儲存** 您所做的變更，外部索引鍵關聯性變更才會生效。
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>在新的資料表建立外部索引鍵
 

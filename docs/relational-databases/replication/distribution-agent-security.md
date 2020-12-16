@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dfad45eb3d0fcbf67e88c6ffbf5a120e1d179c16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 5cfa887d79c8ecc2e4c0fa5b0fbea498bae176c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498799"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484890"
 ---
 # <a name="distribution-agent-security"></a>散發代理程式安全性
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **[散發代理程式安全性]** 對話方塊，可以讓您指定散發代理程式執行用的 Windows 帳戶。 若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶亦稱為 *處理帳戶*，因為代理程式處理序會以此帳戶執行。 對話方塊中其他可用的選項會視您存取的方式而定：  
   
@@ -105,7 +105,7 @@ Persist Security Info=False;Connection Pooling=True;
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
 ::: moniker-end
   
-::: monikerRange="azuresqldb-mi-current"
+::: moniker range="azuresqldb-mi-current"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 [散發代理程式安全性]  對話方塊可以讓您指定用來執行散發代理程式的 SQL 驗證帳戶。 若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。  對話方塊中其他可用的選項會視您存取的方式而定：  
   

@@ -9,14 +9,14 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 0a58ad0e4271833c7aef24333b14a61ef80a16c9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 051dbe0d44cbd798653632df114beb6727f1c9af
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511567"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489818"
 ---
 # <a name="troubleshooting-sql-server-docker-containers"></a>針對 SQL Server Docker 容器進行疑難排解
 
@@ -73,7 +73,7 @@ sudo systemctl start docker
     ::: moniker-end
     
     <!--SQL Server 2019 on Linux-->
-    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
     
     ::: zone pivot="cs1-bash"
     ```bash
@@ -142,7 +142,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -200,7 +200,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 - 對應用於複本通訊的連接埠 (預設值為 5022)。 例如，指定 `-p 5022:5022` 作為 `docker run` 命令的一部分。
 
-- 使用 `docker run` 命令的 `-h YOURHOSTNAME` 參數，明確設定容器主機名稱。 當您設定可用性群組時，會使用此主機名稱。 若沒有使用 `-h` 進行指定，則其預設為**容器識別碼**。
+- 使用 `docker run` 命令的 `-h YOURHOSTNAME` 參數，明確設定容器主機名稱。 當您設定可用性群組時，會使用此主機名稱。 若沒有使用 `-h` 進行指定，則其預設為 **容器識別碼**。
 
 ## <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> SQL Server 設定和錯誤記錄檔
 
@@ -220,7 +220,7 @@ cat errorlog
 ```
 
 > [!TIP]
-> 如果您已在建立容器時將主機目錄裝載至 **/var/opt/mssql**，則可改為查看主機中對應路徑上的**記錄**子目錄。
+> 如果您已在建立容器時將主機目錄裝載至 **/var/opt/mssql**，則可改為查看主機中對應路徑上的 **記錄** 子目錄。
 
 ## <a name="execute-commands-in-a-container"></a>在容器中執行命令
 
@@ -245,12 +245,12 @@ docker exec -it <Container ID> /bin/bash
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- 透過此[快速入門](quickstart-install-connect-docker.md?view=sql-server-2017)，開始使用 Docker 上的 SQL Server 2017 容器映像。
+- 透過此[快速入門](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)，開始使用 Docker 上的 SQL Server 2017 容器映像。
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - 透過此[快速入門](quickstart-install-connect-docker.md?view=sql-server-ver15)，開始使用 Docker 上的 SQL Server 2019 容器映像。
 

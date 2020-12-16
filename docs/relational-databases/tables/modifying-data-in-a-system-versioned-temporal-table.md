@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7acb5296f5cfcefd5c39c9ceb643a1076c11bfbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484470"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改系統建立版本時態表中的資料
 
@@ -191,7 +191,7 @@ AND Department.DeptID = 10 ;
 
 ## <a name="deleting-data"></a>刪除資料
 
-您可以利用一般的 **DELETE** 陳述式，來刪除目前資料表中的資料。 已刪除資料列的結束期間資料行將填入基礎交易的開始時間。 當 **SYSTEM_VERSIONING = ON**時，您無法從記錄資料表直接刪除資料列。 設定 **SYSTEM_VERSIONING = OFF** 並從目前和記錄資料表刪除資料列，但請注意，這樣一來，系統將不會保留變更的記錄。 當**SWITCH PARTITION IN**, **TRUNCATE** 、 **SWITCH PARTITION OUT** 和 **SWITCH PARTITION IN**記錄資料表。
+您可以利用一般的 **DELETE** 陳述式，來刪除目前資料表中的資料。 已刪除資料列的結束期間資料行將填入基礎交易的開始時間。 當 **SYSTEM_VERSIONING = ON** 時，您無法從記錄資料表直接刪除資料列。 設定 **SYSTEM_VERSIONING = OFF** 並從目前和記錄資料表刪除資料列，但請注意，這樣一來，系統將不會保留變更的記錄。 當 **SWITCH PARTITION IN**, **TRUNCATE** 、 **SWITCH PARTITION OUT** 和 **SWITCH PARTITION IN** 記錄資料表。
 
 ## <a name="using-merge-to-modify-data-in-temporal-table"></a>使用 MERGE 修改時態表中的資料
 

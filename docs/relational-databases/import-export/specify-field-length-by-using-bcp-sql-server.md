@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3a7e42033f677837cf7d4a21fadcb9ac348621b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000386"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485340"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86000386"
 -   如果是非字元的檔案儲存類型， **bcp** 命令就不會提示輸入欄位長度。 該資料會以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料表示法 (原生格式) 儲存。  
   
 ## <a name="using-default-field-lengths"></a>使用預設的欄位長度  
- 一般而言， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受 **bcp**所建議的欄位長度預設值。 已建立字元模式資料檔案時，使用預設的欄位長度可確定不會截斷資料，而且不會發生數值溢位錯誤。  
+ 一般而言， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受 **bcp** 所建議的欄位長度預設值。 已建立字元模式資料檔案時，使用預設的欄位長度可確定不會截斷資料，而且不會發生數值溢位錯誤。  
   
  如果指定不正確的欄位長度，就會發生問題。 例如，如果複製數值資料，而對該資料來說指定的欄位長度太短， **bcp** 公用程式就會印出溢位訊息，而且不會複製該資料。 此外，若要匯出 **datetime** 資料，而且指定給字元字串的欄位長度少於 26 個位元組，則 **bcp** 公用程式會直接截斷資料而不會發出錯誤訊息。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "86000386"
 |UDT|使用者自訂術語 (UDT) 資料行的長度|  
 |XML|0|  
   
- \*如需**小數點**和**數值**資料類型的詳細資訊，請參閱[小數點和數值 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
+ \*如需 **小數點** 和 **數值** 資料類型的詳細資訊，請參閱 [小數點和數值 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
 > [!NOTE]  
 >  **tinyint** 類型的資料行可包含 0 到 255 的數值；因此代表該範圍內任意數值所需的最大字元數為 3 (代表數值 100 到 255)。  
@@ -119,7 +119,7 @@ ms.locfileid: "86000386"
 |**uniqueidentifier**|16|  
 |**timestamp**|8|  
   
- \*如需**小數點**和**數值**資料類型的詳細資訊，請參閱[小數點和數值 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
+ \*如需 **小數點** 和 **數值** 資料類型的詳細資訊，請參閱 [小數點和數值 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  在先前的所有案例中，若要建立一個資料檔案，之後重新載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以將所佔用的儲存空間保持在最低，請搭配預設的檔案儲存類型與預設的欄位長度和長度前置詞一起使用。  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867185"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485310"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91867185"
  若您在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或[下載 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 時，選取 [管理工具 - 基本] 或 [管理工具 - 進階]，則會安裝交易效能分析報表和移轉建議程式作為 SQL Server Management Studio (SSMS) 的一部分。    
   
 ## <a name="transaction-performance-analysis-reports"></a>交易效能分析報表  
- 若要在**物件總管**中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]、[標準報表] 和 [交易效能分析概觀]。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
+ 若要在 **物件總管** 中產生交易效能分析報表，請以滑鼠右鍵按一下資料庫，依序選取 [報表]、[標準報表] 和 [交易效能分析概觀]。 資料庫必須具有作用中的工作負載或是最近執行的工作負載，以產生有意義的分析報表。  
   
 ### <a name="tables"></a>資料表
   
@@ -108,7 +108,7 @@ ms.locfileid: "91867185"
   
 **使用 UI 命令產生移轉檢查清單**  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 [工作]，然後按一下 [產生記憶體內 OLTP 移轉檢查清單]。  
+1.  在 **物件總管** 中，以滑鼠右鍵按一下非系統資料庫的資料庫，按一下 [工作]，然後按一下 [產生記憶體內 OLTP 移轉檢查清單]。  
   
 2.  在 [產生記憶體內 OLTP 移轉檢查清單] 對話方塊中，按一下 [下一步] 巡覽至 [設定檢查清單產生選項] 頁面。 在頁面上執行下列動作。  
   

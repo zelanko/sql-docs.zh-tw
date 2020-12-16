@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243599"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484490"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統建立版本之時態表中的歷程記錄資料保留
 
@@ -332,7 +332,7 @@ COMMIT TRANSACTION
 - RANGE LEFT 案例：在 RANGE LEFT 案例中，最低的分割區界限屬於分割區 1，由於該分割區是空的 (在分割區切換移出後)，所以 MERGE RANGE 不會引發任何資料移動。
 - RANGE RIGHT 案例：在 RANGE RIGHT 案例中，最低的分割區界限屬於分割區 2，由於我們假設切換移出已將分割區 1 清空，因此分割區 2 不是空的。在該案例中，MERGE RANGE 將會引發資料移動 (資料分割 2 的資料將移動到資料分割 1)。 若要避免資料移動，滑動視窗案例中的 RANGE RIGHT 需要隨時保持清空的資料分割 1。 相較於 RANGE LEFT 案例，這表示如果我們使用 RANGE RIGHT，應該要建立及維護一個額外的資料分割，。
 
-**結論** ：在滑動資料分割中使用 RANGE LEFT 的管理作業較為簡單，也能避免資料移動。 不過，定義 RANGE RIGHT 的資料分割界限則稍微簡單一些，因為您不需要應付日期時間的對時問題。
+**結論**：在滑動資料分割中使用 RANGE LEFT 的管理作業較為簡單，也能避免資料移動。 不過，定義 RANGE RIGHT 的資料分割界限則稍微簡單一些，因為您不需要應付日期時間的對時問題。
 
 ## <a name="using-custom-cleanup-script-approach"></a>使用自訂清除指令碼方法
 
@@ -494,7 +494,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database 如何刪除過時資料列？
 
-清除處理序取決於歷程記錄資料表的索引配置。 請務必注意 *只有包含叢集索引 (B 型樹狀目錄或資料行存放區）的歷程記錄資料表可以設定有限的保留原則* 。 建立的背景工作可利用有限的保留期間為所有時態表執行過時資料清除。 資料列存放區 (B 型樹狀目錄) 叢集索引的清除邏輯會刪除較小區塊 (最多 10 K) 中的過時資料列，最大限度地減輕資料庫記錄和 I/O 子系統的壓力。 雖然清除邏輯會利用必要的 B 型樹狀目錄索引，但無法絶對保證早於保留期間之資料列的刪除順序。 因此， *請勿在應用程式中對清除順序採用任何相依性* 。
+清除處理序取決於歷程記錄資料表的索引配置。 請務必注意 *只有包含叢集索引 (B 型樹狀目錄或資料行存放區）的歷程記錄資料表可以設定有限的保留原則*。 建立的背景工作可利用有限的保留期間為所有時態表執行過時資料清除。 資料列存放區 (B 型樹狀目錄) 叢集索引的清除邏輯會刪除較小區塊 (最多 10 K) 中的過時資料列，最大限度地減輕資料庫記錄和 I/O 子系統的壓力。 雖然清除邏輯會利用必要的 B 型樹狀目錄索引，但無法絶對保證早於保留期間之資料列的刪除順序。 因此，*請勿在應用程式中對清除順序採用任何相依性*。
 
 叢集資料行存放區清除工作可一次移除整個資料列群組 (每個通常包含 1 百萬個資料列)，這是非常有效率的方法，特別是在高速產生歷程記錄資料時。
 

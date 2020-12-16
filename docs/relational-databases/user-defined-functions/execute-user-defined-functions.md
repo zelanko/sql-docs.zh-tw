@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a11e341e5eff031e7c6b2e8f83e58b77253a39e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dc0904609ba680ae25c26e529fb49d328d310a77
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485291"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484390"
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88485291"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
- 在 Transact-SQL 中，您可以使用 *value* 或 @*parameter_name*=*value*來提供參數。 來提供參數。參數不是交易的一部分；因此，如果交易中的參數變更之後再回復，參數值並不會還原為之前的值。 傳回呼叫端的值一定是模組傳回時的值。  
+ 在 Transact-SQL 中，您可以使用 *value* 或 @*parameter_name*=*value* 來提供參數。 來提供參數。參數不是交易的一部分；因此，如果交易中的參數變更之後再回復，參數值並不會還原為之前的值。 傳回呼叫端的值一定是模組傳回時的值。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

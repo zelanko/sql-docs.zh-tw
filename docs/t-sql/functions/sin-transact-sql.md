@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98cda2eaebc8dba22cf1784f3f4a4ae1845ce018
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 11a72f782629319450afce97386581b3359e7464
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380583"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484160"
 ---
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>引數
  *float_expression*  
- 為 **float** 類型或能夠隱含轉換成 float 類型 (弧度) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
+ 為 **float** 類型或能夠隱含轉換成 float 類型 (弧度) 的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回型別  
  **float**  

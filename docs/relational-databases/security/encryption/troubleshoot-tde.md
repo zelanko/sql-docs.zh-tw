@@ -13,13 +13,13 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 2328cb73bbd101af12074620d0f755209e6dd185
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679256"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489838"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
@@ -34,7 +34,7 @@ ms.locfileid: "92679256"
 
 如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。 除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的其他所有動作。 當使用客戶管理金鑰加密的資料庫無法存取時，也無法將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
 
-在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如， [容錯移轉群組](/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤 **都會遺失** 。 因此，建議使用[動作群組](/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
+在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如，[容錯移轉群組](/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤 **都會遺失**。 因此，建議使用[動作群組](/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>導致資料庫變得無法存取的常見錯誤
 
@@ -70,7 +70,7 @@ ms.locfileid: "92679256"
 
 - Azure PowerShell：[Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) \(英文\) 
 
-- Azure CLI：[az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show) \(英文\)
+- Azure CLI：[az-sql-server-show](/cli/azure/sql/server#az-sql-server-show) \(英文\)
 
 **風險降低**
 
@@ -78,7 +78,7 @@ ms.locfileid: "92679256"
 
 - Azure PowerShell：具有 `-AssignIdentity` 選項的 [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) \(英文\)。
 
-- Azure CLI：具有 `--assign_identity` 選項的 [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) \(英文\)。
+- Azure CLI：具有 `--assign_identity` 選項的 [az sql server update](/cli/azure/sql/server#az-sql-server-update) \(英文\)。
 
 在 Azure 入口網站中，移至金鑰保存庫，然後移至 [存取原則]  。 完成下列步驟： 
 
@@ -105,7 +105,7 @@ ms.locfileid: "92679256"
 
     - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) \(英文\) 
+    - Azure CLI：[az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) \(英文\) 
 
 1. 使用金鑰 URI 來識別金鑰保存庫：
 

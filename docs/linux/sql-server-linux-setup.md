@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 363eca526099396001f8df688657e50be32a9c79
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: de619ed83ca42f853a528ad280f49b4f256b18ea
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115613"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490048"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安裝指引
 
@@ -55,7 +55,7 @@ Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 及 Ubuntu
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 [!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
@@ -79,7 +79,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 | **處理器核心數** | 2 個核心 |
 | **處理器類型** | 僅相容 x64 |
 
-如果您在生產環境中使用**網路檔案系統 (NFS)** 遠端共用，請注意下列支援需求：
+如果您在生產環境中使用 **網路檔案系統 (NFS)** 遠端共用，請注意下列支援需求：
 
 - 使用 NFS 版本 **4.2 或更新的版本**。 舊版的 NFS 不支援新式檔案系統常用的必要功能，例如 fallocate 和疏鬆檔案建立。
 - 僅尋找 NFS 掛接上的 **/var/opt/mssql** 目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔案。
@@ -95,10 +95,10 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 
 | 平台 | 安裝快速入門 |
 |---|---|
-| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
-| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
-| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
-| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
 
 您也可以在 Azure 虛擬機器的 Linux 上執行 SQL Server。 如需詳細資訊，請參閱[在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)。
 
@@ -116,7 +116,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 
 這些命令會下載最新的套件，並取代位於 `/opt/mssql/` 底下的二進位檔。 使用者產生的資料庫和系統資料庫不會受到這項作業的影響。
 
-若要升級 SQL Server，請先[變更您設定的存放庫](sql-server-linux-change-repo.md)，將其設為所需的 SQL Server 版本。 然後使用相同的**升級**命令來升級 SQL Server 版本。 只有在兩個存放庫之間支援升級路徑時，才會發生這種情況。
+若要升級 SQL Server，請先[變更您設定的存放庫](sql-server-linux-change-repo.md)，將其設為所需的 SQL Server 版本。 然後使用相同的 **升級** 命令來升級 SQL Server 版本。 只有在兩個存放庫之間支援升級路徑時，才會發生這種情況。
 
 ## <a name="rollback-sql-server"></a><a id="rollback"></a> 復原 SQL Server
 

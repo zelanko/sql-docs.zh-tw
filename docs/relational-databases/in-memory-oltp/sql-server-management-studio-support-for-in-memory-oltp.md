@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8684764c0386513c0890b10dee8bfa3582c1cf59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867489"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485170"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

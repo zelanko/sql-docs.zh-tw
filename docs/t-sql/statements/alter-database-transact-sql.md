@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: bacad46304c0795a5401238fec32a636426e56dd
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443196"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489918"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "96443196"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -280,7 +280,7 @@ GO
 
 ## <a name="see-also"></a>另請參閱
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
@@ -296,11 +296,11 @@ GO
 - [系統資料庫](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -470,12 +470,12 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |20 GB|N/A|√|√|√|√|
 |30 GB|N/A|√|√|√|√|
 |40 GB|N/A|√|√|√|√|
-|50 GB|N/A|√ (D)|√|√|√|
+|50 GB|N/A|√|√|√|√|
 |100 GB|N/A|√|√|√|√|
 |150 GB|N/A|√|√|√|√|
-|200 GB|N/A|√|√ (D)|√|√|
+|200 GB|N/A|√|√|√|√|
 |250 GB|N/A|√ (D)|√ (D)|√|√|
-|300 GB|N/A|√|√|√ (D)|√|
+|300 GB|N/A|√|√|√|√|
 |400 GB|不適用|√|√|√|√|
 |500 GB|N/A|√|√|√ (D)|√|
 |750 GB|N/A|√|√|√|√|
@@ -775,11 +775,11 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 - [系統資料庫](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -917,11 +917,11 @@ ALTER DATABASE WideWorldImporters
 - [系統資料庫](../../relational-databases/databases/system-databases.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -1096,11 +1096,11 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 - [Azure Synapse Analytics 參考文章清單](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements) \(部分機器翻譯\)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)

@@ -60,13 +60,13 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aff544048da8bb09a2fd488d26a7bd1f69cf8f56
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521185"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489584"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -785,7 +785,7 @@ SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_nam
 
 如果您指定 *partition_scheme_name*，則會套用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 的規則。 請確保資料表已針對資料列資料進行分割，且其資料分割配置所使用的資料分割函數和資料行與 FILESTREAM 資料分割配置相同。
 
-*filestream_filegroup_name* 會指定 FILESTREAM 檔案群組的名稱。 檔案群組必須要有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。
+*filestream_filegroup_name* 會指定 FILESTREAM 檔案群組的名稱。 檔案群組必須要有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。
 
 **"** default **"** 會使用 DEFAULT 屬性集指定 FILESTREAM 檔案群組。 如果沒有任何 FILESTREAM 檔案群組，就會引發錯誤。
 

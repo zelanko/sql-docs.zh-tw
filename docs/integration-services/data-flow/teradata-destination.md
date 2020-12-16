@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 158184ea961aa8938bb0eb2b6f94890dd1eddbfa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194710"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489868"
 ---
 # <a name="teradata-destination"></a>Teradata 目的地
 
@@ -223,7 +223,7 @@ Teradata 目的地可以透過程式設計的方式或 SSIS 設計工具來設�
 
 選取 Teradata 目的地應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。
 
-**相關主題**：[資料中的錯誤處理](./error-handling-in-data.md?view=sql-server-2017)
+**相關主題**：[資料中的錯誤處理](./error-handling-in-data.md)
 
 **截斷**
 

@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
+ms.openlocfilehash: d1146d2b937c542a46ad0bf8cc473854e40800b2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496887"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489748"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -58,7 +58,7 @@ ms.locfileid: "92496887"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -336,7 +336,7 @@ RESTORE LOG 可以包括一份檔案清單，讓您在向前復原期間建立�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每一個版本都會使用與舊版不同的預設路徑。 因此，若要還原在舊版備份之預設位置中所建立的資料庫，就必須使用 MOVE 選項。 如需有關新預設路徑的資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
-將舊版資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級過程就會根據 **upgrade_option** 伺服器屬性的設定來匯入、重設或重建這些索引。 如果升級選項設定為匯入 ( **upgrade_option** = 2) 或重建 ( **upgrade_option** = 0)，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 若要變更 **upgrade_option** 伺服器屬性的設定，請使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
+將舊版資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級過程就會根據 **upgrade_option** 伺服器屬性的設定來匯入、重設或重建這些索引。 如果升級選項設定為匯入 (**upgrade_option** = 2) 或重建 (**upgrade_option** = 0)，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 若要變更 **upgrade_option** 伺服器屬性的設定，請使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。
 
 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。
 
@@ -733,7 +733,7 @@ RESTORE DATABASE Sales
 [備份記錄與標頭資訊](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -880,11 +880,11 @@ WHERE r.command = 'RESTORE DATABASE'
 > 此檢視可能會顯示兩個還原要求。 一個是由用戶端傳送的原始 RESTORE 陳述式，另一個則是即便用戶端連線失敗，也會持續執行的背景 RESTORE 陳述式。
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL 受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
@@ -933,7 +933,7 @@ RESTORE DATABASE *database_name* 指定將使用者資料庫還原至名為 *dat
 
 還原使用者資料庫時，會將完整資料庫備份及視需要將差異備份還原至應用裝置。 還原使用者資料庫時，會包括還原資料庫使用者和資料庫角色。
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 還原備份檔案的來源網路路徑及目錄。 例如 FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
+FROM DISK = '\\\\*UNC_path*\\*backup_directory*' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 還原備份檔案的來源網路路徑及目錄。 例如 FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
 
 *_directory* 指定包含完整或差異備份的目錄名稱。 例如，您可以在完整或差異備份上執行 RESTORE HEADERONLY 作業。
 

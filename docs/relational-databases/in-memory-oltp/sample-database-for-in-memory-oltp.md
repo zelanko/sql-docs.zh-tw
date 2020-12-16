@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 919b3126a47fb0f71efb41e645e0443c309f643e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d581d8dcf038b56a6b3df5b5ecc67a9a32b4255f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867564"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485230"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

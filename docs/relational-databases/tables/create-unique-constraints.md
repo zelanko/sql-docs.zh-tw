@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06f465d3c4ff6086d74c155c4f810730eca50742
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809647"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484480"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
 
@@ -57,11 +57,11 @@ ms.locfileid: "91809647"
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]****。  
+1.  在 **物件總管** 中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]。  
   
 2.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-3.  在 [索引/索引鍵]**** 對話方塊中，按一下 [加入]****。  
+3.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
   
 4.  在 [一般] 底下的方格中，按一下 [類型]、從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]，然後按一下 [關閉]。  
   

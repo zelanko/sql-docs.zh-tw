@@ -10,17 +10,17 @@ ms.technology: install
 ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 7fb3e4847bef4b14fe7ce68b800b9cc8e95a5a64
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671061"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489562"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>透過 PowerShell Desired State Configuration 安裝 SQL Server
 
-您是否曾在完成 SQL Server 安裝介面時，不經思索即直接選取相同的按鈕，然後輸入相同的資訊？ 安裝已完成，但您忘了在**系統管理員**角色中指定 DBA 群組。 於是，您必須執行下列事項：
+您是否曾在完成 SQL Server 安裝介面時，不經思索即直接選取相同的按鈕，然後輸入相同的資訊？ 安裝已完成，但您忘了在 **系統管理員** 角色中指定 DBA 群組。 於是，您必須執行下列事項：
 * 進入單一使用者模式。
 * 新增適當的使用者或群組。
 * 以多使用者模式重新啟動 SQL Server。
@@ -44,10 +44,10 @@ ms.locfileid: "91671061"
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>安裝 SqlServerDsc DSC 資源
 
-使用 [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) Cmdlet，從 [PowerShell 資源庫](https://www.powershellgallery.com/)下載 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 資源。 
+使用 [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true) Cmdlet，從 [PowerShell 資源庫](https://www.powershellgallery.com/)下載 [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC 資源。 
 
 > [!NOTE]
-> 請確保 PowerShell 以**系統管理員身分**執行，以便安裝模組。
+> 請確保 PowerShell 以 **系統管理員身分** 執行，以便安裝模組。
 
 ```PowerShell
 Install-Module -Name SqlServerDsc
@@ -107,14 +107,14 @@ WindowsFeature 'NetFramework45'
 - **InstanceName**。 執行個體的名稱。 針對預設執行個體，請使用 **MSSQLSERVER**。
 - **Features**。 要安裝的功能。 在此範例中，我們只會安裝 **SQLEngine** 功能。
 - **SourcePath**。 SQL 安裝媒體的路徑。 在此範例中，我們已將 SQL 安裝媒體儲存在 `C:\SQL2017`。 網路共用可將伺服器上所使用的空間降到最低。
-- **SQLSysAdminAccounts**。 要成為**系統管理員**角色成員的使用者或群組。 在此範例中，我們會將**系統管理員**存取權授與本機系統管理員群組。 
+- **SQLSysAdminAccounts**。 要成為 **系統管理員** 角色成員的使用者或群組。 在此範例中，我們會將 **系統管理員** 存取權授與本機系統管理員群組。 
 
 > [!NOTE]
 > 不建議您在高安全性環境中使用此設定。
 
 [SqlServerDsc GitHub 存放庫](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup)提供 **SqlSetup** 上可用參數的完整清單和描述。
 
-**SqlSetup** 資源只會安裝 SQL Server，且**不會**維護所套用的設定。 例如，若在安裝期間指定 **SQLSysAdminAccounts**。 系統管理員可以在**系統管理員**角色中新增或移除登入。 但是 **SqlSetup** 資源不會受到影響。 如果您想要 DSC 強制執行**系統管理員**角色的成員資格，請使用 [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) 資源。
+**SqlSetup** 資源只會安裝 SQL Server，且 **不會** 維護所套用的設定。 例如，若在安裝期間指定 **SQLSysAdminAccounts**。 系統管理員可以在 **系統管理員** 角色中新增或移除登入。 但是 **SqlSetup** 資源不會受到影響。 如果您想要 DSC 強制執行 **系統管理員** 角色的成員資格，請使用 [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) 資源。
 
 #### <a name="finish-configuration"></a>完成設定
 

@@ -11,14 +11,14 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 94ca368b7eaf9b9ad37107c01eb84e239d5fb3c0
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115661"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490028"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "92115661"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2017 容器映像，[mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server)。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
+在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2017 容器映像，[mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server)。 然後與 **sqlcmd** 連線來建立您的第一個資料庫並執行查詢。
 
 > [!TIP]
 > 如果您想要執行 SQL Server 2019 容器，請參閱[本文的 SQL Server 2019 版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > 從 SQL Server 2019 CU3 開始支援 Ubuntu 18.04。
 
-在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2019 容器映像 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
+在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2019 容器映像 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)。 然後與 **sqlcmd** 連線來建立您的第一個資料庫並執行查詢。
 
 > [!TIP]
-> 本快速入門會建立 SQL Server 2019 容器。 如果您想要建立 SQL Server 2017 容器，請參閱[本文的 SQL Server 2017 版本。](quickstart-install-connect-docker.md?view=sql-server-linux-2017)
+> 本快速入門會建立 SQL Server 2019 容器。 如果您想要建立 SQL Server 2017 容器，請參閱[本文的 SQL Server 2017 版本。](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true)
 
 ::: moniker-end
 
@@ -138,7 +138,7 @@ any changes to one section should be duplicated in the other-->
 
    | 參數 | 描述 |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?linkid=857698)。 此為 SQL Server 映像的必要設定。 |
+   | **-e "ACCEPT_EULA=Y"** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受 [終端使用者授權合約](https://go.microsoft.com/fwlink/?linkid=857698)。 此為 SQL Server 映像的必要設定。 |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 連接埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在本範例中，SQL Server 正在接聽容器中的 TCP 1433 且對主機上的連接埠 1433 公開。 |
    | **--name sql1** | 為容器指定自訂名稱，而不使用隨機產生的名稱。 若您執行數個容器，就無法使用此相同名稱。 |
@@ -171,7 +171,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
+4. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱 [設定指南的＜疑難排解＞一節](./sql-server-linux-docker-container-troubleshooting.md)。
 
 以上討論的 `-h` (主機名稱) 參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 
@@ -190,7 +190,7 @@ SELECT @@SERVERNAME,
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="pull-and-run-the-2019-container-image"></a><a id="pullandrun2019"></a> 提取和執行 2019 容器映像
 
@@ -221,7 +221,7 @@ SELECT @@SERVERNAME,
    ::: zone-end
 
    > [!TIP]
-   > 本快速入門使用 SQL Server 2019 Docker 映像。 如果您想要試用 SQL Server 2017 映像，請參閱[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
+   > 本快速入門使用 SQL Server 2019 Docker 映像。 如果您想要試用 SQL Server 2017 映像，請參閱[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017)。
 
    先前的命令會提取以 Ubuntu 為基礎的 SQL Server 2019 容器映像。 若要改為使用以 RedHat 為基礎的容器映像，請參閱[執行 RHEL 型的容器映像](./sql-server-linux-docker-container-deployment.md#rhel)。 若要查看所有可用的映像，請參閱 [mssql-server-linux Docker Hub 頁面](https://hub.docker.com/_/microsoft-mssql-server)。
 
@@ -264,7 +264,7 @@ SELECT @@SERVERNAME,
 
    | 參數 | 描述 |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
+   | **-e "ACCEPT_EULA=Y"** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受 [終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 連接埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在本範例中，SQL Server 正在接聽容器中的 TCP 1433 且對主機上的連接埠 1433 公開。 |
    | **--name sql1** | 為容器指定自訂名稱，而不使用隨機產生的名稱。 若您執行數個容器，就無法使用此相同名稱。 |
@@ -295,7 +295,7 @@ SELECT @@SERVERNAME,
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 資料行顯示 **Exited**，請參閱[針對 SQL Server Docker 容器進行疑難排解](sql-server-linux-docker-container-troubleshooting.md)。
+4. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 資料行顯示 **Exited**，請參閱 [針對 SQL Server Docker 容器進行疑難排解](sql-server-linux-docker-container-troubleshooting.md)。
 
 以上討論的 `-h` (主機名稱) 參數可將容器的內部名稱變更為自訂值。 此參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 
@@ -472,7 +472,7 @@ SELECT @@SERVERNAME,
 
 下列步驟在您容器的外部使用了 **sqlcmd** 以連線至容器中執行的 SQL Server。 這些步驟會假設您已經在容器外部安裝 SQL Server 命令列工具。 使用其他工具時亦適用相同原則，但各工具的連線程序不盡相同。
 
-1. 找出裝載您容器之電腦的 IP 位址。 在 Linux 上，使用**ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
+1. 找出裝載您容器之電腦的 IP 位址。 在 Linux 上，使用 **ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
 
 1. 針對此範例，請在您的用戶端電腦上安裝 **sqlcmd** 工具。 如需詳細資訊，請參閱[在 Windows 上安裝 sqlcmd](../tools/sqlcmd-utility.md) 或[在 Linux 上安裝 sqlcmd](sql-server-linux-setup-tools.md)。
 

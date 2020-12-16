@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dc115153671a4cd8aed490205b19f4a21c9e8949
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126209"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489488"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -153,7 +153,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>B. 其他範例
 
-如需使用 **COLLATE** 的其他範例，請參閱 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 範例 **G. 建立資料庫並指定定序名稱和選項** 與 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 範例 **V. 變更資料行定序**。
+如需使用 **COLLATE** 的其他範例，請參閱 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md#examples) 範例 **G. 建立資料庫並指定定序名稱和選項** 與 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 範例 **V. 變更資料行定序**。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -161,7 +161,7 @@ Chiapas
 - [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)
 - [定序優先順序](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [常數](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [資料表資料類型](../../t-sql/data-types/table-transact-sql.md)

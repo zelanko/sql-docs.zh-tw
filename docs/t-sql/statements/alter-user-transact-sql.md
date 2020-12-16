@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f2a00a567282eb4a2d5990360b630817d1950c6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496974"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489471"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "92496974"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ ms.locfileid: "92496974"
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -93,28 +93,28 @@ NAME = newUserName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } 指定當伺服器解析這個使用者的物件名稱時，將搜尋的第一個結構描述。 當預設結構描述設為 NULL 時，會從 Windows 群組移除預設結構描述。 NULL 選項不可用於 Windows 使用者。
 
- PASSWORD **=** ' *password* '  **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ PASSWORD **=** '*password*'  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  指定正在變更之使用者的密碼。 密碼會區分大小寫。
 
 > [!NOTE]
 > 只有包含的使用者能夠使用此選項。 如需詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。
 
- OLD_PASSWORD **=** _'oldpassword'_ **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
- 目前的使用者密碼，將由 ' *password* ' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。
+ 目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。
 
 > [!NOTE]
 > 只有包含的使用者能夠使用此選項。
 
- DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本。
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本。
 
  指定要指派給使用者的預設語言。 如果這個選項設為 NONE，預設語言將設為資料庫的目前預設語言。 如果稍後變更了資料庫的預設語言，使用者的預設語言會保持不變。 *DEFAULT_LANGUAGE* 可以是本機識別碼 (lcid)、語言名稱或語言別名。
 
 > [!NOTE]
 > 這個選項只能指定在自主資料庫中，而且只適用於包含的使用者。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這會讓使用者得以在資料表或資料庫間大量複製加密資料，而無須解密資料。 預設值為 OFF。
 
@@ -196,7 +196,7 @@ GO
 
  下列範例會在一個陳述式中變更自主資料庫使用者的數個選項。
 
-**適用對象** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 ```sql
 ALTER USER Philip
@@ -216,11 +216,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -232,7 +232,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -288,21 +288,21 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } 指定當伺服器解析這個使用者的物件名稱時，將搜尋的第一個結構描述。 當預設結構描述設為 NULL 時，會從 Windows 群組移除預設結構描述。 NULL 選項不可用於 Windows 使用者。
 
- PASSWORD **=** ' *password* '  **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ PASSWORD **=** '*password*'  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
  指定正在變更之使用者的密碼。 密碼會區分大小寫。
 
 > [!NOTE]
 > 只有包含的使用者能夠使用此選項。 如需詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。
 
- OLD_PASSWORD **=** _'oldpassword'_ **適用於** ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+ OLD_PASSWORD **=** _'oldpassword'_ **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
- 目前的使用者密碼，將由 ' *password* ' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。
+ 目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。
 
 > [!NOTE]
 > 只有包含的使用者能夠使用此選項。
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **適用於** ：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
 
  在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這會讓使用者得以在資料表或資料庫間大量複製加密資料，而無須解密資料。 預設值為 OFF。
 
@@ -401,11 +401,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -417,7 +417,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -476,7 +476,7 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } 指定當伺服器解析這個使用者的物件名稱時，將搜尋的第一個結構描述。 當預設結構描述設為 NULL 時，會從 Windows 群組移除預設結構描述。 NULL 選項不可用於 Windows 使用者。
 
- PASSWORD **=** ' *password* '
+ PASSWORD **=** '*password*'
 
  指定正在變更之使用者的密碼。 密碼會區分大小寫。
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- 目前的使用者密碼，將由 ' *password* ' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。
+ 目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。
 
 > [!NOTE]
 > 只有包含的使用者能夠使用此選項。
@@ -557,13 +557,13 @@ ALTER USER userName
 - 在所有移轉案例中，Windows 使用者或群組的角色和權限將會自動傳輸到新 Azure AD 使用者或群組。
 - 新語法延伸模組 **FROM EXTERNAL PROVIDER** 可用來將 SQL 內部部署的 Windows 使用者和群組更改成 Azure AD 使用者和群組。 Windows 網域必須與 Azure AD 同盟，且在使用此延伸模組時，所有 Windows 網域成員都必須存在於 Azure AD 中。 **FROM EXTERNAL PROVIDER** 語法適用於 Azure SQL 受控執行個體，且應在 Windows 使用者於原始 SQL 執行個體上不具有登入，且需要對應到獨立 Azure AD 資料庫使用者時使用。
 - 在此情況下，允許的 userName 可以是：
-- Windows 使用者 ( _domain\user_ )。
-- Windows 群組 ( _MyWindowsGroup_ )。
-- Windows 別名 ( _MyWindowAlias_ )。
+- Windows 使用者 (_domain\user_)。
+- Windows 群組 (_MyWindowsGroup_)。
+- Windows 別名 (_MyWindowAlias_)。
 - ALTER 命令結果會根據舊 userName 的原始 SID，使用在 Azure AD 中所找到對應名稱來取代舊的 userName。 更改後名稱會遭到替換並儲存在資料庫的中繼資料內：
-- ( _domain\user_ ) 將會替換成 Azure AD user@domain.com。
-- ( _domain\\MyWindowsGroup_ ) 將會替換成 Azure AD 群組。
-- ( _MyWindowsAlias_ ) 將會維持不變，但會在 Azure AD 中檢查此使用者的 SID。
+- (_domain\user_) 將會替換成 Azure AD user@domain.com。
+- (_domain\\MyWindowsGroup_) 將會替換成 Azure AD 群組。
+- (_MyWindowsAlias_) 將會維持不變，但會在 Azure AD 中檢查此使用者的 SID。
 
 > [!NOTE]
 > 若無法在 Azure AD 中找到原始使用者 SID 轉換成的 objectID，則 ALTER USER 命令將會失敗。
@@ -669,11 +669,11 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [教學課程：使用 T-SQL DDL 語法將 SQL Server 內部部署 Windows 使用者與群組移轉至 SQL 受控執行個體](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -685,7 +685,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -794,11 +794,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)

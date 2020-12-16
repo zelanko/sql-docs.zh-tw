@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0af4a041580d59cc77d5605dc1df72ca8b823f0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83180bde505a156c5a6fd5832916e578fb73c52c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484450"
 ---
 # <a name="partitioning-with-temporal-tables"></a>對時態表進行資料分割
 
@@ -32,13 +32,13 @@ ms.locfileid: "89548848"
 
 - **目前的資料表：**
 
-  - 當**SWITCH IN** 為 **SWITCH IN** 時， **SWITCH IN**目前的資料表可用來加速資料載入和查詢
+  - 當 **SWITCH IN** 為 **SWITCH IN** 時， **SWITCH IN** 目前的資料表可用來加速資料載入和查詢
   - **SYSTEM_VERSIONING** 為 **ON** 時不允許 **SWITCH OUT**
 
 - **記錄資料表：**
 
-  - 當**SWITCH OUT** 為 **SWITCH OUT** 時，可執行從記錄資料表 **SWITCH OUT** to purge portions of h時，可執行從記錄資料表tory data that 時，可執行從記錄資料表 no longer relevant.
-  - 當**SWITCH IN** 為 **SWITCH IN** 時，不允許 **SWITCH IN** since it can invalidate temporal data cons時，不允許tency.
+  - 當 **SWITCH OUT** 為 **SWITCH OUT** 時，可執行從記錄資料表 **SWITCH OUT** to purge portions of h時，可執行從記錄資料表tory data that 時，可執行從記錄資料表 no longer relevant.
+  - 當 **SWITCH IN** 為 **SWITCH IN** 時，不允許 **SWITCH IN** since it can invalidate temporal data cons時，不允許tency.
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dea62262cf7a9d5f8965dd4eeff6f412776fbc32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679177"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484090"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DECLARE
  此為變數的名稱。 變數名稱的開頭必須是 at (@) 符號。 區域變數名稱必須遵循[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
 *data_type*  
- 這是任何系統提供的 Common Language Runtime (CLR) 使用者定義資料表類型或別名資料類型。 變數的資料類型不可以是 **text** 、 **ntext** 或 **image** 。  
+ 這是任何系統提供的 Common Language Runtime (CLR) 使用者定義資料表類型或別名資料類型。 變數的資料類型不可以是 **text**、**ntext** 或 **image**。  
   
  如需系統資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。 如需有關 CLR 使用者自訂類型或別名資料類型的詳細資訊，請參閱 [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
@@ -111,7 +111,7 @@ CURSOR
 \<table_type_definiton> 是在 CREATE TABLE 中用來定義資料表的部分資訊。 這裡包括元素和必要定義。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
  *n*  
- 這是一個預留位置，表示可以指定多個變數，且可以指派這些變數的值。 當宣告 **table** 變數時， **table** 變數必須是 DECLARE 陳述式所宣告的唯一變數。  
+ 這是一個預留位置，表示可以指定多個變數，且可以指派這些變數的值。 當宣告 **table** 變數時，**table** 變數必須是 DECLARE 陳述式所宣告的唯一變數。  
   
  *column_name*  
  這是資料表中之資料行的名稱。  
@@ -120,10 +120,10 @@ CURSOR
  指定資料行是一種純量資料類型。  
   
  *computed_column_expression*  
- 這是定義計算資料行值的運算式。 它是從運算式中，利用相同資料表中其他資料行計算而得。 例如，計算資料行的定義可以是 **cost** AS **price \* qty** 。運算式可以是非計算的資料行名稱、常數、內建函式、變數，或這些項目由一或多個運算子連接的任何組合。 運算式不能是子查詢或使用者定義函數。 運算式不能參考 CLR 使用者定義類型。  
+ 這是定義計算資料行值的運算式。 它是從運算式中，利用相同資料表中其他資料行計算而得。 例如，計算資料行的定義可以是 **cost** AS **price \* qty**。運算式可以是非計算的資料行名稱、常數、內建函式、變數，或這些項目由一或多個運算子連接的任何組合。 運算式不能是子查詢或使用者定義函數。 運算式不能參考 CLR 使用者定義類型。  
   
- [ COLLATE *collation_name* ]  
- 指定資料行的定序。 *collation_name* 可以是 Windows 定序名稱，也可以是 SQL 定序名稱，而且只適用於 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 和 **ntext** 等資料類型的資料行。 若未指定，便會將使用者定義資料類型的定序指派給這個資料行 (如果資料行是使用者定義資料類型)，否則，便會指派目前資料庫的定序。  
+ [ COLLATE *collation_name*]  
+ 指定資料行的定序。 *collation_name* 可以是 Windows 定序名稱，也可以是 SQL 定序名稱，而且只適用於 **char**、**varchar**、**text**、**nchar**、**nvarchar** 和 **ntext** 等資料類型的資料行。 若未指定，便會將使用者定義資料類型的定序指派給這個資料行 (如果資料行是使用者定義資料類型)，否則，便會指派目前資料庫的定序。  
   
  如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)。  
   
@@ -134,7 +134,7 @@ CURSOR
  這是用來當做資料行預設值的常數、NULL 或系統函數。  
   
  IDENTITY  
- 指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來結合 PRIMARY KEY 條件約束一起使用，當做資料表的唯一資料列識別碼。 可以將 IDENTITY 屬性指派給 **tinyint** 、 **smallint** 、 **int** 、 **decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
+ 指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來結合 PRIMARY KEY 條件約束一起使用，當做資料表的唯一資料列識別碼。 可以將 IDENTITY 屬性指派給 **tinyint**、**smallint**、**int**、**decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
   
  *seed*  
  這是載入資料表的第一個資料列所用的值。  
