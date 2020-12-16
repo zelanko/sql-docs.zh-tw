@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521141"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490078"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -420,7 +420,7 @@ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **�
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 陳述式會將堆積轉換成叢集索引。 在此情況中，您就可以指定不同的 FILESTREAM 檔案群組、分割區配置或 NULL。
 - [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 陳述式會將叢集索引轉換成堆積。 在此情況中，您就可以指定不同的 FILESTREAM 檔案群組、分割區配置或 **"default"** 。
 
-`FILESTREAM_ON <filegroup>` 子句中的檔案群組或在分割區配置中指定的每個 FILESTREAM 檔案群組都必須具有一個針對該檔案群組定義的檔案。 您必須使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來定義這個檔案。否則，就會引發錯誤。
+`FILESTREAM_ON <filegroup>` 子句中的檔案群組或在分割區配置中指定的每個 FILESTREAM 檔案群組都必須具有一個針對該檔案群組定義的檔案。 您必須使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來定義這個檔案。否則，就會引發錯誤。
 
 如需相關的 FILESTREAM 主題，請參閱[二進位大型物件 - Blob 資料](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。
 

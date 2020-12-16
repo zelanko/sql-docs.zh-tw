@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d6177d289eb46f839d8b1e742d2daf2cff73f5e3
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474849"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515362"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -39,7 +39,7 @@ ms.locfileid: "97474849"
 |partner_database|**sysname**|連結的 SQL Database 伺服器上所連結資料庫的名稱。|  
 |last_replication|**datetimeoffset**|根據主資料庫時鐘，次要複本最後一個交易的認可時間戳記。 此值僅適用于主資料庫。|  
 |replication_lag_sec|**int**|以主資料庫時鐘為基礎，在主資料庫上的 last_replication 值和時間戳記之間的時間差異（以秒為單位）。  此值僅適用于主資料庫。|  
-|replication_state|**tinyint**|此資料庫的異地複寫狀態，其中一個：。<br /><br /> 1 = 植入。 正在植入異地複寫目標，但兩個資料庫尚未同步處理。 在植入完成之前，您無法連接到次要資料庫。 從主資料庫移除次要資料庫會取消植入作業。<br /><br /> 2 = 趕上。 次要資料庫處於交易一致的狀態，而且會持續與主資料庫同步處理。<br /><br /> 4 = 已暫止。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
+|replication_state|**tinyint**|此資料庫的異地複寫狀態，其中一個：<br /><br /> 1 = 植入。 正在植入異地複寫目標，但兩個資料庫尚未同步處理。 在植入完成之前，您無法連接到次要資料庫。 從主資料庫移除次要資料庫會取消植入作業。<br /><br /> 2 = 趕上。 次要資料庫處於交易一致的狀態，而且會持續與主資料庫同步處理。<br /><br /> 4 = 已暫止。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |角色 (role)|**tinyint**|異地複寫角色，下列其中一個角色：<br /><br /> 0 = 主要。 Database_id 指的是「異地複寫」合作關係中的主資料庫。<br /><br /> 1 = 次要。  Database_id 指的是「異地複寫」合作關係中的主資料庫。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  

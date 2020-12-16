@@ -16,13 +16,13 @@ helpviewer_keywords:
 - SQL Graph
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 6f1075c6128ae040b3f2b0cb80c167d77aca89e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: c74b5d0f91e1a6bdcf54df1bf00e60d4ff7a72cd
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419022"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490098"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
 
@@ -343,5 +343,4 @@ WHERE EC.parent_object_id = object_id('bought');
 [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
 
-如需 SQL Server 中圖形技術的相關資訊，請參閱 [SQL Server 和 Azure SQL Database 的圖表處理](../graphs/sql-graph-overview.md?view=sql-server-2017)。
-
+如需 SQL Server 中圖形技術的相關資訊，請參閱 [SQL Server 和 Azure SQL Database 的圖表處理](../graphs/sql-graph-overview.md)。

@@ -43,13 +43,13 @@ helpviewer_keywords:
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: ec951a21f6d228fad6104faadb767e379e4efcec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496865"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490018"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
 
@@ -59,7 +59,7 @@ ms.locfileid: "92496865"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -126,7 +126,7 @@ ALTER DATABASE database_name
 
 指定要新增、移除或修改的檔案。
 
-*database_name* ：這是要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 ADD FILE 將檔案新增至資料庫。
 
@@ -139,7 +139,7 @@ REMOVE FILE *logical_file_name* 從 [!INCLUDE[ssNoVersion](../../includes/ssnove
 *logical_file_name* 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。
 
 > [!WARNING]
-> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
+> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Microsoft Azure Blob 儲存體服務](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 MODIFY FILE 指定應該修改的檔案。 每次只能變更一個 \<filespec> 屬性。 您必須在 \<filespec> 中指定 NAME，以識別要修改的檔案。 如果指定了 SIZE，新的大小必須大於目前檔案大小。
 
@@ -189,7 +189,7 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'**
 
 除非檔案是唯讀的次要檔案，或資料庫是唯讀的，否則，不應將資料檔放在壓縮的檔案系統中。 記錄檔永遠不應放在壓縮的檔案系統中。
 
-如果檔案在原始磁碟分割中， *os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區只能放置一個檔案。
+如果檔案在原始磁碟分割中，*os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區只能放置一個檔案。
 
 **'** *filestream_path* **'** 針對 FILESTREAM 檔案群組，FILENAME 會參考將儲存 FILESTREAM 資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyFilestreamData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyFilestreamData` 資料夾不得存在。
 
@@ -209,7 +209,7 @@ SIZE *size* 指定檔案大小。 SIZE 不會套用到 FILESTREAM 檔案群組�
 
 *size* 這是檔案的大小。
 
-當使用 ADD FILE 來指定時， *size* 是檔案的起始大小。 當使用 MODIFY FILE 來指定時， *size* 是檔案的新大小，且必須大於目前的檔案大小。
+當使用 ADD FILE 來指定時，*size* 是檔案的起始大小。 當使用 MODIFY FILE 來指定時，*size* 是檔案的新大小，且必須大於目前的檔案大小。
 
 當 *size* 未提供主要檔案的大小時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **model** 資料庫中的主要檔案大小。 當已指定次要資料檔或記錄檔，但未指定檔案的 *size* 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會讓檔案的大小變成 1 MB。
 
@@ -221,9 +221,9 @@ SIZE *size* 指定檔案大小。 SIZE 不會套用到 FILESTREAM 檔案群組�
 > - 為檔案指定 UNC 路徑時
 > - 若為 `FILESTREAM` 與 `MEMORY_OPTIMIZED_DATA` 檔案群組
 
-MAXSIZE { *max_size* | UNLIMITED } 指定檔案所能成長的檔案大小上限。
+MAXSIZE { *max_size*| UNLIMITED } 指定檔案所能成長的檔案大小上限。
 
-*max_size* 這是檔案大小上限。 您可以利用 KB、MB、GB 和 TB 後置詞來指定千位元組、百萬位元組、十億位元組或兆位元組。 預設值是 MB。 請指定不包括小數的整數。 如果未指定 *max_size* ，檔案大小會增加到磁碟已滿。
+*max_size* 這是檔案大小上限。 您可以利用 KB、MB、GB 和 TB 後置詞來指定千位元組、百萬位元組、十億位元組或兆位元組。 預設值是 MB。 請指定不包括小數的整數。 如果未指定 *max_size*，檔案大小會增加到磁碟已滿。
 
 UNLIMITED 指定檔案可成長直到磁碟已滿。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定為無限成長的記錄檔，大小上限是 2 TB，資料檔案的大小上限是 16 TB。 為 FILESTREAM 容器指定這個選項時沒有最大大小。 它會繼續成長，直到磁碟已滿。
 
@@ -269,11 +269,11 @@ CONTAINS FILESTREAM 指定檔案群組會將 FILESTREAM 二進位大型物件 (B
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
 
 指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP - 記憶體內部最佳化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 `MEMORY_OPTIMIZED_DATA` 檔案群組。 若要建立記憶體最佳化的資料表，檔案群組不能空白。 至少必須有一個檔案。 *filegroup_name* 參考至路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。
 
-REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name* "。
+REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name*"。
 
 > [!NOTE]
 > 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則移除 FILESTREAM 容器的 `ALTER DATABASE REMOVE FILE` 作業會失敗並傳回錯誤訊息。 請參閱本主題稍後的[移除 FILESTREAM 容器](#removing-a-filestream-container)一節。
@@ -282,17 +282,17 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 
 \<filegroup_updatability_option> 會將檔案群組的屬性設成唯讀或讀取/寫入。
 
-DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name* 。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
+DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
 
-NAME = *new_filegroup_name* 將檔案群組名稱變更為 *new_filegroup_name* 。
+NAME = *new_filegroup_name* 將檔案群組名稱變更為 *new_filegroup_name*。
 
-AUTOGROW_SINGLE_FILE **適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
+AUTOGROW_SINGLE_FILE **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 當檔案群組中的某個檔案達到自動成長閾值時，只有該檔案會成長。 這是預設值。
 
 AUTOGROW_ALL_FILES
 
-**適用於** ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 當檔案群組中的某個檔案達到自動成長閾值時，檔案群組中的所有檔案都會成長。
 
@@ -664,7 +664,7 @@ GO
 
 ## <a name="see-also"></a>另請參閱
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
@@ -679,11 +679,11 @@ GO
 - [資料庫檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL 受控執行個體\*_**<br />&nbsp;
@@ -746,7 +746,7 @@ ALTER DATABASE database_name
 
 指定要新增、移除或修改的檔案。
 
-*database_name* ：這是要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 ADD FILE 將檔案新增至資料庫。
 
@@ -774,15 +774,15 @@ SIZE *size* 指定檔案大小。
 
 *size* 這是檔案的大小。
 
-當使用 ADD FILE 來指定時， *size* 是檔案的起始大小。 當使用 MODIFY FILE 來指定時， *size* 是檔案的新大小，且必須大於目前的檔案大小。
+當使用 ADD FILE 來指定時，*size* 是檔案的起始大小。 當使用 MODIFY FILE 來指定時，*size* 是檔案的新大小，且必須大於目前的檔案大小。
 
 當 *size* 未提供主要檔案的大小時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **model** 資料庫中的主要檔案大小。 當已指定次要資料檔或記錄檔，但未指定檔案的 *size* 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會讓檔案的大小變成 1 MB。
 
 您可以利用 KB、MB、GB 和 TB 後置詞來指定千位元組、百萬位元組、十億位元組或兆位元組。 預設值是 MB。 請指定不包括小數的整數。 若要指定 MB 的小數，請將數字乘以 1024，以便將值轉換成 KB。 例如，請指定 1536 KB，而不要指定 1.5 MB (1.5 x 1024 = 1536)。
 
-MAXSIZE { *max_size* | UNLIMITED } 指定檔案所能成長的檔案大小上限。
+MAXSIZE { *max_size*| UNLIMITED } 指定檔案所能成長的檔案大小上限。
 
-*max_size* 這是檔案大小上限。 您可以利用 KB、MB、GB 和 TB 後置詞來指定千位元組、百萬位元組、十億位元組或兆位元組。 預設值是 MB。 請指定不包括小數的整數。 如果未指定 *max_size* ，檔案大小會增加到磁碟已滿。
+*max_size* 這是檔案大小上限。 您可以利用 KB、MB、GB 和 TB 後置詞來指定千位元組、百萬位元組、十億位元組或兆位元組。 預設值是 MB。 請指定不包括小數的整數。 如果未指定 *max_size*，檔案大小會增加到磁碟已滿。
 
 UNLIMITED 指定檔案可成長直到磁碟已滿。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定為無限成長的記錄檔，大小上限是 2 TB，資料檔案的大小上限是 16 TB。
 
@@ -813,15 +813,15 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name* "。
+REMOVE FILEGROUP *filegroup_name* 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name*"。
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。
 
 \<filegroup_updatability_option> 會將檔案群組的屬性設成唯讀或讀取/寫入。
 
-DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name* 。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
+DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫中只能有一個檔案群組是預設檔案群組。 如需相關資訊，請參閱 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
 
-NAME = *new_filegroup_name* 將檔案群組名稱變更為 *new_filegroup_name* 。
+NAME = *new_filegroup_name* 將檔案群組名稱變更為 *new_filegroup_name*。
 
 AUTOGROW_SINGLE_FILE
 

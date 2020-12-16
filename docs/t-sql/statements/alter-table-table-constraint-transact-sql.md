@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426860"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490068"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426860"
  指定關聯於資料表層級 DEFAULT 定義的資料行。  
   
  WITH VALUES  
- 當新增資料行和 (AND) DEFAULT 條件約束時，如果資料行允許使用 WITH VALUES NULLS，則對於現有的資料列，會將新資料行的值設定為 DEFAULT *constant_expression* 中提供的值。 如果新增的資料行不允許 NULLS，則對於現有的資料列，會一律將該資料行的值設定為 DEFAULT *constant expression* 中提供的值。 從 SQL Server 2012 中開始，這可以是中繼資料作業 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+ 當新增資料行和 (AND) DEFAULT 條件約束時，如果資料行允許使用 WITH VALUES NULLS，則對於現有的資料列，會將新資料行的值設定為 DEFAULT *constant_expression* 中提供的值。 如果新增的資料行不允許 NULLS，則對於現有的資料列，會一律將該資料行的值設定為 DEFAULT *constant expression* 中提供的值。 從 SQL Server 2012 中開始，這可以是中繼資料作業 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation)。
 如果在相關資料行沒有一起新增的情況下使用此方法，則它沒有作用。 
   
  CHECK  

@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440649"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515370"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -34,12 +34,12 @@ ms.locfileid: "97440649"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Sys. 資料庫檢視中目前資料庫的識別碼。|  
-|start_date|**datetimeoffset**|起始資料庫複寫時，區域 SQL Database 資料中心的 UTC 時間|  
-|modify_date|**datetimeoffset**|資料庫異地複寫完成時，區域 SQL Database datacenter 的 UTC 時間。 此時，新的資料庫會與主資料庫同步處理。 .|  
+|start_date|**datetimeoffset**|起始資料庫複寫時，區域 SQL Database 資料中心的 UTC 時間。|  
+|modify_date|**datetimeoffset**|資料庫異地複寫完成時，區域 SQL Database datacenter 的 UTC 時間。 此時，新的資料庫會與主資料庫同步處理。|  
 |link_guid|**uniqueidentifier**|異地複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含異地複寫資料庫的 SQL Database 伺服器名稱。|  
 |partner_database|**sysname**|連結的 SQL Database 伺服器上之異地複寫資料庫的名稱。|  
-|replication_state|**tinyint**|此資料庫的異地複寫狀態，其中一個：。<br /><br /> 0 = 暫止。 已排程建立作用中次要資料庫，但必要的準備步驟尚未完成。<br /><br /> 1 = 植入。 正在植入異地複寫目標，但兩個資料庫尚未同步處理。 在植入完成之前，您無法連接到次要資料庫。 從主資料庫移除次要資料庫會取消植入作業。<br /><br /> 2 = 趕上。 次要資料庫處於交易一致的狀態，而且會持續與主資料庫同步處理。|  
+|replication_state|**tinyint**|此資料庫的異地複寫狀態，其中一個：<br /><br /> 0 = 暫止。 已排程建立作用中次要資料庫，但必要的準備步驟尚未完成。<br /><br /> 1 = 植入。 正在植入異地複寫目標，但兩個資料庫尚未同步處理。 在植入完成之前，您無法連接到次要資料庫。 從主資料庫移除次要資料庫會取消植入作業。<br /><br /> 2 = 趕上。 次要資料庫處於交易一致的狀態，而且會持續與主資料庫同步處理。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |角色 (role)|**tinyint**|異地複寫角色，下列其中一個角色：<br /><br /> 0 = 主要。 Database_id 指的是「異地複寫」合作關係中的主資料庫。<br /><br /> 1 = 次要。  Database_id 指的是「異地複寫」合作關係中的主資料庫。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
