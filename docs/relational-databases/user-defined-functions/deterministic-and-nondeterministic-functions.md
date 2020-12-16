@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466709"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "88485297"
 |函式|註解|  
 |--------------|--------------|  
 |所有彙總函式|除非為 OVER 與 ORDER BY 子句所指定，否則所有彙總函式都具有決定性。 如需這些函數的清單，請參閱[彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。|  
-|CAST|除非搭配使用 **datetime**、 **smalldatetime**或 **sql_variant**，否則為決定性函數。|  
+|CAST|除非搭配使用 **datetime**、 **smalldatetime** 或 **sql_variant**，否則為決定性函數。|  
 |CONVERT|除非存在這些條件之一，否則為具決定性函數：<br /><br /> <br /><br /> 來源類型為 **sql_variant**。<br /><br /> 目標類型為 **sql_variant** ，且其來源類型為非決定性函數。<br /><br /> 來源或目標類型為 **datetime** 或 **smalldatetime**；其他來源或目標類型為字元字串，而且指定了非決定性的樣式。 若要具有決定性，樣式參數必須是常數。 此外，小於或等於 100 的樣式不具決定性，但樣式 20 和 21 除外。 大於 100 的樣式具決定性，但樣式 106、107、109 和 113 除外。|  
 |CHECKSUM|具決定性，但 CHECKSUM(*) 除外。|  
 |ISDATE|若與 CONVERT 函數一併使用，只有在指定 CONVERT 樣式參數，且樣式不等於 0、100、9 或 109 時，才是具決定性的。|  

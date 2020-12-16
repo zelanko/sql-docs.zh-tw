@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9e6746847d202448b9953cbb9b65e769375645ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: bd6ae5ed3072af96c64ba69e7346e8e2b2f03cbe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467479"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "86918264"
   
 -   如果交易式發行集支援佇列更新訂閱，則複寫會將 **msrepl_tran_version** 資料行加入每份資料表中。 如果從發行集中卸除資料表，將不會移除 **msrepl_tran_version** 資料行。  
   
--   篩選不得包含複寫識別資料列所使用的 **rowguidcol** 。 根據預設，這是在您設定合併式複寫時加入，且名稱為 **rowguid**的資料行。  
+-   篩選不得包含複寫識別資料列所使用的 **rowguidcol** 。 根據預設，這是在您設定合併式複寫時加入，且名稱為 **rowguid** 的資料行。  
   
 ### <a name="how-do-i-manage-constraints-on-published-tables"></a>如何管理已發行資料表中的條件約束？  
  針對已發行資料表中的條件約束需要考慮許多問題：  

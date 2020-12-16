@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 2cbdcfca40f1fa2fd51e669aeefcf317a958c687
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467429"
 ---
 # <a name="type-mapping-with-polybase"></a>使用 PolyBase 進行類型對應
 
@@ -57,7 +57,7 @@ ms.locfileid: "91624725"
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | 適用於 Hive 0.11 及更新版本。 |
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 ## <a name="oracle-type-mapping-reference"></a>Oracle 類型對應參考
 

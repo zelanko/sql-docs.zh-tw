@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f77b2cff9793f7e6be200423dd6bc23377814635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468019"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
 
@@ -32,7 +32,7 @@ ms.locfileid: "88410224"
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
-|**DatabaseID**|**int**|USE *database* 陳述式指定之資料庫的識別碼。 如果未發出 USE *database*陳述式，則為預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 **DB_ID** 函數判斷資料庫的值。|3|是|  
+|**DatabaseID**|**int**|USE *database* 陳述式指定之資料庫的識別碼。 如果未發出 USE *database* 陳述式，則為預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 **DB_ID** 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 **Broker:Conversation** 永遠為 **124**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
 |**EventSubClass**|**nvarchar**|事件子類別的類型。 這會提供有關每一個事件類別的詳細資訊。|21|是|  
@@ -45,7 +45,7 @@ ms.locfileid: "88410224"
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|對話的交談控制代碼。|34|否|  
 |**優先順序**|**int**|交談的優先權等級。|5|是|  
-|**RoleName**|**nvarchar**|交談控制代碼的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
+|**RoleName**|**nvarchar**|交談控制代碼的角色。 為 **initiator** 或 **target** 其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|所追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|26|否|  
 |**嚴重性**|**int**|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  

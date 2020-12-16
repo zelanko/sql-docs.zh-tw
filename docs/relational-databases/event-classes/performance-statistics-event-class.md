@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88c0c8d1365d91489a7485e6eabed759b0515716
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 41f86301a0520201fb0316de6d4d3379d27c37d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428440"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467869"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88428440"
 |DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
-|EventSubClass|**int**|事件子類別的類型。<br /><br /> 1 = 預存程序內的已編譯查詢。<br /><br /> 預存程序的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的預存程序：<br /><br /> 數目為*n* 的類型 1|21|是|  
+|EventSubClass|**int**|事件子類別的類型。<br /><br /> 1 = 預存程序內的已編譯查詢。<br /><br /> 預存程序的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的預存程序：<br /><br /> 數目為 *n* 的類型 1|21|是|  
 |IntegerData2|**int**|預存程序內的陳述式結尾。<br /><br /> -1 代表預存程序的結尾。|55|是|  
 |ObjectID|**int**|系統指派給物件的識別碼。|22|是|  
 |Offset|**int**|預存程序或批次內之陳述式的起始位移。|61|是|  
@@ -79,7 +79,7 @@ ms.locfileid: "88428440"
 |DatabaseID|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
 |SessionLoginName|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
-|EventSubClass|**int**|事件子類別的類型。<br /><br /> 2 = 特定 SQL 陳述式內的已編譯查詢。<br /><br /> 特定批次的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的隨選批次：<br /><br /> 數目為*n* 的類型 2|21|是|  
+|EventSubClass|**int**|事件子類別的類型。<br /><br /> 2 = 特定 SQL 陳述式內的已編譯查詢。<br /><br /> 特定批次的追蹤會產生下列 EventSubClass 類型。<br /><br /> 針對查詢數目為 *n* 的隨選批次：<br /><br /> 數目為 *n* 的類型 2|21|是|  
 |IntegerData2|**int**|批次內的陳述式結尾。<br /><br /> -1 代表批次的結尾。|55|是|  
 |ObjectID|**int**|N/A|22|是|  
 |Offset|**int**|批次內的陳述式起始位移。<br /><br /> 0 代表批次的開頭。|61|是|  

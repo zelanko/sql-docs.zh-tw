@@ -22,13 +22,13 @@ helpviewer_keywords:
 - rank
 ms.custom: ''
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+ms.openlocfilehash: a9654a26ff748afa039ac5b0d2088135eea6a796
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784784"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466029"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "91784784"
 
 將有關敏感度分類的中繼資料新增至一或多個資料庫資料行。 分類可包含敏感度標籤和資訊類型。
 
-若是 SQL Server，則此為在 SQL Server 2012 中導入。
+若是 SQL Server，這是在 SQL Server 2019 中導入的。
 
 將資料庫環境中的機密資料分類，可協助達到擴充可見度和更佳的防護。 [開始使用 SQL 資訊保護](https://aka.ms/sqlip)中可以找到其他資訊
 
@@ -117,7 +117,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ### <a name="b-classifying-only-a-label"></a>B. 僅分類標籤
 
-下列範例以**Confidential** 標籤與標籤識別碼 **643f7acd-776a-438d-890c-79c3f2a520d6**，將**dbo.customer.comments** 資料行分類。 此資料行的資訊類型並未分類。
+下列範例以 **Confidential** 標籤與標籤識別碼 **643f7acd-776a-438d-890c-79c3f2a520d6**，將 **dbo.customer.comments** 資料行分類。 此資料行的資訊類型並未分類。
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO

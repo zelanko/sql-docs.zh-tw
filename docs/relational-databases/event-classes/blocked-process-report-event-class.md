@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 677e19c19ce569af91af282ef2a280c69161c9f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5bd315448e0c00f9fc628ee7d7c3d56a977f4423
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763045"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468079"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85763045"
   
  若要設定產生報告的臨界值和頻率，請使用 **sp_configure** 命令來設定 [已封鎖的處理序臨界值] 選項。 預設不會針對已封鎖的處理序產生任何報告。 如需設定 [已封鎖的處理序臨界值] 選項的詳細資訊，請參閱[已封鎖的處理序臨界值伺服器組態選項](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
- 如需篩選 **Blocked Process Report** 事件類別所傳回資料的詳細資訊，請參閱[篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)、[設定追蹤篩選 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) 或 [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
+ 如需篩選 **Blocked Process Report** 事件類別所傳回資料的詳細資訊，請參閱 [篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)、[設定追蹤篩選 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) 或 [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Blocked Process Report 事件類別資料行  
   

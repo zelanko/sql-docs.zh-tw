@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a00105749ac9ce600f5972e539dc8664472e9dd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e8cc97df3b1a574e0ef7816d2b6cf44ee5288620
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193292"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466059"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減法) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ expression - expression
 
 ## <a name="arguments"></a>引數
  *expression*  
- 這是數值資料類型類別目錄中任何一個資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **bit** 資料類型除外。 不能與 **date**、**time**、**datetime2** 或 **datetimeoffset** 資料類型搭配使用。  
+ 這是數值資料類型類別目錄中任何一個資料類型的任何有效 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **bit** 資料類型除外。 不能與 **date**、**time**、**datetime2** 或 **datetimeoffset** 資料類型搭配使用。  
   
 ## <a name="result-types"></a>結果類型  
  傳回優先順序較高之引數的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108422"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467399"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -141,7 +141,7 @@ ms.locfileid: "87108422"
   
     2.  使用 [tablediff 公用程式](../../../tools/tablediff-utility.md) 或其他工具來手動同步化發行者與訂閱者。 如此可讓您從訂閱資料庫中，復原沒有包含在發行集資料庫備份中的資料。 移至步驟 c。  
   
-         如需 **tablediff** 公用程式的詳細資訊，請參閱[比較複寫資料表的差異 &#40;複寫程式設計&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
+         如需 **tablediff** 公用程式的詳細資訊，請參閱 [比較複寫資料表的差異 &#40;複寫程式設計&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
   
     3.  還原的備份是否完整且為最新狀態？ 該備份是否包含所有發行集和訂閱的最新組態？ 若為是，請執行 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 預存程序，以重新同步處理「發行者」中繼資料資料與「散發者」中繼資料。 還原即可完成。 若為否，請移至步驟 d。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "87108422"
   
     2.  使用 [tablediff Utility](../../../tools/tablediff-utility.md) 或其他工具來手動同步化發行者與訂閱者。 如此可讓您從訂閱資料庫中，復原沒有包含在發行集資料庫備份中的資料。 移至步驟 c。  
   
-         如需 **tablediff** 公用程式的詳細資訊，請參閱[比較複寫資料表的差異 &#40;複寫程式設計&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
+         如需 **tablediff** 公用程式的詳細資訊，請參閱 [比較複寫資料表的差異 &#40;複寫程式設計&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)。  
   
     3.  還原的備份是否完整且為最新狀態？ 該備份是否包含所有發行集和訂閱的最新組態？ 若為是，請執行 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 預存程序，以重新同步處理「發行者」中繼資料資料與「散發者」中繼資料。 還原即可完成。 若為否，請移至步驟 d。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "87108422"
          如需有關如何指定訂閱者已經擁有該資料的詳細資訊，請參閱＜ [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)＞。  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>發行集資料庫：@loopback_detection  
- 在下列步驟中，發行集資料庫 **A**、 **B**和 **C** 在點對點異動複寫拓撲中。 資料庫 **A** 和 **C** 在線上並正常運作；資料庫 **B** 則是要還原的資料庫。 此處所述的程序 (尤其是步驟 7、10 和 11)，與在點對點拓撲中加入節點的程序非常類似。 執行這些步驟最直接的方法是使用「設定點對點拓撲精靈」，但是您也可以使用預存程序。  
+ 在下列步驟中，發行集資料庫 **A**、 **B** 和 **C** 在點對點異動複寫拓撲中。 資料庫 **A** 和 **C** 在線上並正常運作；資料庫 **B** 則是要還原的資料庫。 此處所述的程序 (尤其是步驟 7、10 和 11)，與在點對點拓撲中加入節點的程序非常類似。 執行這些步驟最直接的方法是使用「設定點對點拓撲精靈」，但是您也可以使用預存程序。  
   
 1.  執行散發代理程式，以便同步處理資料庫 **A** 和 **C** 中的訂閱。移至步驟 2。  
   
@@ -238,17 +238,17 @@ ms.locfileid: "87108422"
   
     4.  執行 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)，提供步驟 b 中所擷取的 `@request_id` 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 e。  
   
-    5.  重新建立資料庫 **C** 的發行集之資料庫 **B**的訂閱，指定「訂閱者」已具有資料。 移至步驟 b。  
+    5.  重新建立資料庫 **C** 的發行集之資料庫 **B** 的訂閱，指定「訂閱者」已具有資料。 移至步驟 b。  
   
-    6.  重新建立資料庫 **B** 的發行集之資料庫 **C**的訂閱，指定「訂閱者」已具有資料。 移至步驟 13。  
+    6.  重新建立資料庫 **B** 的發行集之資料庫 **C** 的訂閱，指定「訂閱者」已具有資料。 移至步驟 13。  
   
-12. 重新建立資料庫 **B** 和 **C**之間的訂閱：  
+12. 重新建立資料庫 **B** 和 **C** 之間的訂閱：  
   
-    1.  在資料庫 **B**中查詢 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 資料表，以擷取資料庫 **B** 已從資料庫 **C**所接收之最新交易的記錄序號。  
+    1.  在資料庫 **B** 中查詢 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 資料表，以擷取資料庫 **B** 已從資料庫 **C** 所接收之最新交易的記錄序號。  
   
     2.  重新建立資料庫 **B** 的發行集至資料庫 **C** 的訂閱，指定該訂閱應依據 LSN ( [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 之 `@sync_type` 參數的 **initialize with backup** 值) 來初始化。 移至步驟 b。  
   
-    3.  重新建立資料庫 **B** 的發行集之資料庫 **C**的訂閱，指定「訂閱者」已具有資料。 移至步驟 13。  
+    3.  重新建立資料庫 **B** 的發行集之資料庫 **C** 的訂閱，指定「訂閱者」已具有資料。 移至步驟 13。  
   
 13. 執行散發代理程式，以便同步處理資料庫 **B** 和 **C** 中的訂閱。還原即可完成。  
   

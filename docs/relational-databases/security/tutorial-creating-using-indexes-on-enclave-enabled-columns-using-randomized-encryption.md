@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: d8d3b67a8909867760b7ab01ebf860dd2f8dfe48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279277"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467219"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "86279277"
 Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加密於已啟用記憶體保護區的資料行上建立第一個索引。 請參閱[具有安全記憶體保護區的 Always Encrypted](./encryption/always-encrypted-enclaves.md) 中的[＜資料庫復原＞](./encryption/always-encrypted-enclaves.md#database-recovery)一節。
 
 1. 關閉您在上一個教學課程中所使用的任何 SSMS 執行個體。 這將會關閉您已開啟的資料庫連接；此為啟用 ADR 的必要條件。
-1. 開啟新的 SSMS 執行個體，並在**未**針對資料庫連接啟用 Always Encrypted 的情況下，以 sysadmin 身分連線到 SQL Server 執行個體。
+1. 開啟新的 SSMS 執行個體，並在 **未** 針對資料庫連接啟用 Always Encrypted 的情況下，以 sysadmin 身分連線到 SQL Server 執行個體。
     1. 啟動 SSMS。
     1. 在 [連線到伺服器]  對話方塊中指定您的伺服器名稱，選取驗證方法，然後指定認證。
     1. 按一下 [選項 >>]  ，然後選取 [Always Encrypted]  索引標籤。
-    1. 請確定**未**選取 [啟用 Always Encrypted (資料行加密)]  核取方塊。
+    1. 請確定 **未** 選取 [啟用 Always Encrypted (資料行加密)]  核取方塊。
     1. 選取 [連接]  。
 1. 開啟新的查詢視窗並執行下列陳述式以啟用 ADR。
 
@@ -53,7 +53,7 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
 
 在此步驟中，您將會建立並測試已加密資料行上的索引。 您將會以擔任 DBA、管理資料庫，以及具有保護資料之金鑰的資料擁有者等角色的單一使用者身分執行。
 
-1. 開啟新的 SSMS 執行個體，並在**已**針對資料庫連接啟用 Always Encrypted 的情況下連線到 SQL Server 執行個體。
+1. 開啟新的 SSMS 執行個體，並在 **已** 針對資料庫連接啟用 Always Encrypted 的情況下連線到 SQL Server 執行個體。
    1. 啟動新的 SSMS 執行個體。
    1. 在 [連線到伺服器]  對話方塊中指定您的伺服器名稱，選取驗證方法，然後指定認證。
    1. 按一下 [選項 >>]  ，然後選取 [Always Encrypted]  索引標籤。
@@ -109,7 +109,7 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
 
 在此步驟中，您將會在已加密的資料行上建立索引，並扮演兩個不同的使用者。 一個使用者是 DBA，其需要建立索引，但不具備金鑰的存取權。 另一個使用者是資料擁有者，其具備金鑰存取權。
 
-1. 在**未**啟用 Always Encrypted 的情況下使用 SSMS 執行個體來執行下列陳述式，以在 **LastName** 資料行上放置索引。
+1. 在 **未** 啟用 Always Encrypted 的情況下使用 SSMS 執行個體來執行下列陳述式，以在 **LastName** 資料行上放置索引。
 
    ```sql
    USE [ContosoHR];
@@ -122,9 +122,9 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
 1. 以資料擁有者的身分 (或是能存取金鑰的應用程式)，以 **CEK1** 填入記憶體保護區內的快取。
 
    > [!NOTE]
-   > 除非您在**步驟 2：在未隔離角色的情況下建立並測試索引**之後曾重新啟動 SQL Server 執行個體，否則此步驟是不必要的，因為 **CEK1** 已經位於快取之中。 我們加入它的原因是為了示範資料擁有者如何在金鑰尚未存在於記憶體保護區中的情況下為它提供金鑰。
+   > 除非您在 **步驟 2：在未隔離角色的情況下建立並測試索引** 之後曾重新啟動 SQL Server 執行個體，否則此步驟是不必要的，因為 **CEK1** 已經位於快取之中。 我們加入它的原因是為了示範資料擁有者如何在金鑰尚未存在於記憶體保護區中的情況下為它提供金鑰。
 
-   1. 在**已**啟用 Always Encrypted 的 SSMS 執行個體中，於查詢視窗中執行下列陳述式。 該陳述式會將所有已啟用記憶體保護區之資料行的加密金鑰傳送到記憶體保護區。 請參閱 [sp_enclave_send_keys](../system-stored-procedures/sp-enclave-send-keys-sql.md) 以取得詳細資料。
+   1. 在 **已** 啟用 Always Encrypted 的 SSMS 執行個體中，於查詢視窗中執行下列陳述式。 該陳述式會將所有已啟用記憶體保護區之資料行的加密金鑰傳送到記憶體保護區。 請參閱 [sp_enclave_send_keys](../system-stored-procedures/sp-enclave-send-keys-sql.md) 以取得詳細資料。
 
         ```sql
         USE [ContosoHR];
@@ -146,7 +146,7 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
         ```
 
 1. 以 DBA 的身分建立索引。
-    1. 在**未**啟用 Always Encrypted 的 SSMS 執行個體中，於查詢視窗中執行下列陳述式。
+    1. 在 **未** 啟用 Always Encrypted 的 SSMS 執行個體中，於查詢視窗中執行下列陳述式。
 
         ```sql
         USE [ContosoHR];
@@ -158,7 +158,7 @@ Microsoft 強烈建議先在您的資料庫中啟用 ADR，再使用隨機化加
         ```
 
 1. 以資料擁有者的身分，在 **LastName** 資料行上執行豐富查詢，並確認 SQL Server 在執行查詢時會使用該索引。
-   1. 在**已**啟用 Always Encrypted 的 SSMS 執行個體中，選取現有的查詢視窗或開啟新的查詢視窗，並確定工具列上的 [包含即時查詢統計資料]  按鈕已經開啟。
+   1. 在 **已** 啟用 Always Encrypted 的 SSMS 執行個體中，選取現有的查詢視窗或開啟新的查詢視窗，並確定工具列上的 [包含即時查詢統計資料]  按鈕已經開啟。
    1. 執行下列查詢。 
 
         ```sql

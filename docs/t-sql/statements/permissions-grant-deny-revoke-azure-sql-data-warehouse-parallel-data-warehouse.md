@@ -14,18 +14,18 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e384304e5e3e67b0768c0cd145a0427877c4ce89
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 14eb63bde72a10be3c58af17510030ad6610e33b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465869"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure Synapse Analytics、平行處理資料倉儲)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  使用 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 **GRANT** 和 **DENY** 陳述式，以針對安全性主體 (登入、資料庫使用者或資料庫角色) 授與或拒絕對安全性實體 (例如資料庫、資料表、檢視等) 的權限 (例如 **UPDATE** )。 使用 **REVOKE** 來移除某個權限的授與或拒絕。  
+  使用 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 **GRANT** 和 **DENY** 陳述式，以針對安全性主體 (登入、資料庫使用者或資料庫角色) 授與或拒絕對安全性實體 (例如資料庫、資料表、檢視等) 的權限 (例如 **UPDATE**)。 使用 **REVOKE** 來移除某個權限的授與或拒絕。  
   
  伺服器層級權限會套用至登入。 資料庫層級權限會套用至資料庫使用者和資料庫角色。  
   
@@ -79,20 +79,20 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>引數  
- \<permission>[ **,** ... *n* ]  
+ \<permission>[ **,** ...*n* ]  
  一或多個要授與、拒絕或撤銷的權限。  
   
  ON [ \<class_type> :: ] *securable* The **ON** 子句描述要對其授與、拒絕或撤銷權限的安全性實體參數。  
   
- \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN** 、 **DATABASE** 、 **OBJECT** 、 **SCHEMA** 、 **ROLE** 或 **USER** 。 您也可以將權限授與 **SERVER**_class\_type_ ，但針對這些權限不需指定 **SERVER** 。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE** ) 時，不需指定 **DATABASE** 。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT** 。  
+ \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE** 或 **USER**。 您也可以將權限授與 **SERVER**_class\_type_，但針對這些權限不需指定 **SERVER**。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE**) 時，不需指定 **DATABASE**。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT**。  
   
  *securable*  
  要作為授與、拒絕或撤銷權限時之執行對象的登入、資料庫、資料表、檢視、結構描述、程序、角色或使用者的名稱。 指定物件名稱時，可以使用 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)中所述的三部分命名規則來指定。  
   
- TO *principal* [ **,** ... *n* ]  
+ TO *principal* [ **,** ...*n* ]  
  一或多個被授與、拒絕或撤銷權限的主體。 主體是登入、資料庫使用者或資料庫角色的名稱。  
   
- FROM *principal* [ **,** ... *n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  一或多個要撤銷權限的主體。  主體是登入、資料庫使用者或資料庫角色的名稱。 **FROM** 只能與 **REVOKE** 陳述式搭配使用。 **TO** 可以與 **GRANT** **DENY** 或 **REVOKE** 搭配使用。  
   
  WITH GRANT OPTION  
@@ -241,7 +241,7 @@ REVOKE
  如需了解每一種權限的定義，請參閱[權限 (資料庫引擎)](../../relational-databases/security/permissions-database-engine.md)。  
   
 ### <a name="chart-of-permissions"></a>權限圖表  
- 這張海報以圖形方式顯示所有權限。 這是了解權限巢狀階層的最簡單方式。 例如， **ALTER ON LOGIN** 權限可藉由本身授與，但如果登入被授與該登入的 **CONTROL** 權限，或如果登入被授與 **ALTER ANY LOGIN** 權限，則也會包含此權限。  
+ 這張海報以圖形方式顯示所有權限。 這是了解權限巢狀階層的最簡單方式。 例如，**ALTER ON LOGIN** 權限可藉由本身授與，但如果登入被授與該登入的 **CONTROL** 權限，或如果登入被授與 **ALTER ANY LOGIN** 權限，則也會包含此權限。  
   
  ![APS 安全性權限海報](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性權限海報")  
   
@@ -258,9 +258,9 @@ REVOKE
   
 -   所有主體 (包括 **public** 角色) 預設都沒有任何明確或隱含的權限。  
   
--   當登入或使用者成為資料庫或物件的擁有者時，登入或使用者一律會擁有該資料庫或物件的所有權限。 擁有權權限無法變更，且會作為隱含權限而不會顯示。 **GRANT** 、 **DENY** 及 **REVOKE** 陳述式對擁有者沒有任何作用。  
+-   當登入或使用者成為資料庫或物件的擁有者時，登入或使用者一律會擁有該資料庫或物件的所有權限。 擁有權權限無法變更，且會作為隱含權限而不會顯示。 **GRANT**、**DENY** 及 **REVOKE** 陳述式對擁有者沒有任何作用。  
   
--   **sa** 登入具有應用裝置的所有權限。 類似於擁有權權限， **sa** 權限無法變更，且會作為隱含權限而不會顯示。 **GRANT** 、 **DENY** 及 **REVOKE** 陳述式對 **sa** 登入沒有任何作用。 您無法將 **sa** 登入重新命名。  
+-   **sa** 登入具有應用裝置的所有權限。 類似於擁有權權限，**sa** 權限無法變更，且會作為隱含權限而不會顯示。 **GRANT**、**DENY** 及 **REVOKE** 陳述式對 **sa** 登入沒有任何作用。 您無法將 **sa** 登入重新命名。  
   
 -   **USE** 陳述式不需要權限。 所有主體都可以在任何資料庫上執行 **USE** 陳述式。  
   

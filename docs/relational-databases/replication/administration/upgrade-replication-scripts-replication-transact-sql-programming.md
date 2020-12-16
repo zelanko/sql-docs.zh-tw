@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2a75dec86a197a5a0c4f4029a947ad801b1f2271
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364684"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467389"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升級複寫指令碼 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "93364684"
   
  這些安全性改進會影響現有指令碼中的下列預存程序，讓您可以明確地指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帳戶，並在這些帳戶下執行複寫代理程式工作，對權限可以有更多的控制：  
   
--   **sp_addpublication_snapshot** :  
+-   **sp_addpublication_snapshot**:  
   
      現在當您執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 時，應該以 `@job_login` 和 `@job_password` 提供 Windows 認證，以建立散發者端執行快照集代理程式的作業。  
   
--   **sp_addpushsubscription_agent** ：  
+-   **sp_addpushsubscription_agent**：  
   
      現在應該執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 以明確地新增作業並提供 Windows 認證 (`@job_login` 和 `@job_password`)，藉此在散發者端執行散發代理程式作業。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
   
--   **sp_addmergepushsubscription_agent** ：  
+-   **sp_addmergepushsubscription_agent**：  
   
      現在應該執行 [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 以明確地新增作業並提供 Windows 認證 (`@job_login` 和 `@job_password`)，藉此在散發者端執行合併代理程式作業。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立發送訂閱時自動完成。  
   
--   **sp_addpullsubscription_agent** ：  
+-   **sp_addpullsubscription_agent**：  
   
      現在當您執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 時，應該以 `@job_login` 和 `@job_password` 提供 Windows 認證，以建立在訂閱者端執行散發代理程式的作業。  
   
--   **sp_addmergepullsubscription_agent** ：  
+-   **sp_addmergepullsubscription_agent**：  
   
      現在當您執行 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 時，應該以 `@job_login` 和 `@job_password` 提供 Windows 認證，以建立在訂閱者端執行合併代理程式的作業。  
   
--   **sp_addlogreader_agent** ：  
+-   **sp_addlogreader_agent**：  
   
      現在應該執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 以手動新增作業並提供 Windows 認證，藉此在散發者端執行記錄讀取器代理程式。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立交易式發行集時自動完成。  
   
--   **sp_addqreader_agent** ：  
+-   **sp_addqreader_agent**：  
   
      現在應該執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) 以手動新增作業並提供 Windows 認證，藉此在散發者端執行佇列讀取器代理程式。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，這項作業會在建立支援佇列更新的交易式發行集時自動完成。  
   

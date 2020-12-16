@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7070e1aa45101022073d4ce21cf7943cfca31d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866906"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468709"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "91866906"
   
 >[!NOTE]
 > - 相差兩個版本以上的 SQL Server 執行個體不支援複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫拓撲中支援的 SQL Server 版本)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](../security/authentication-access/server-level-roles.md)。  
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是 **系統管理員** 固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](../security/authentication-access/server-level-roles.md)。  
   
   
 **完成此教學課程的估計時間：60 分鐘**  
@@ -91,7 +91,7 @@ ms.locfileid: "91866906"
    >
    > 如果您使用的組建早於 SQL Server 2017，畫面底部會出現訊息，通知您在雙向複寫中使用此資料行可能會遺失資料。 為達到本教學課程的目的，您可以忽略此訊息。 不過，除非您使用的是受支援的組建，否則不應該在生產環境中複寫此資料類型。
    > 
-   > 如需複寫 **hierarchyid** 資料類型的詳細資訊，請參閱[在複寫中使用 hierarchyid 資料行](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables)。
+   > 如需複寫 **hierarchyid** 資料類型的詳細資訊，請參閱 [在複寫中使用 hierarchyid 資料行](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables)。
     
   
 7. 在 [篩選資料表的資料列]  頁面上，選取 [新增]  ，然後選取 [新增篩選]  。  
@@ -217,7 +217,7 @@ ms.locfileid: "91866906"
 
    ![第一次同步處理時初始化訂閱的選項](media/tutorial-replicating-data-with-mobile-clients/firstsync.png)
 
-10. 在 [HOST_NAME 值]  頁面的 [HOST_NAME 值]  方塊中，輸入 **adventure-works\pamela0**值。 然後選取 [完成]  。  
+10. 在 [HOST_NAME 值]  頁面的 [HOST_NAME 值]  方塊中，輸入 **adventure-works\pamela0** 值。 然後選取 [完成]  。  
 
     ![[HOST_NAME 值] 頁面](media/tutorial-replicating-data-with-mobile-clients/hostname.png)
   

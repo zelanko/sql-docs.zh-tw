@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78da6d646d810462b01718523c4917705f533229
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e9ab885eb9d908ff0094916a03266d696d7e60f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646679"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466769"
 ---
 # <a name="change-column-order-in-a-table"></a>變更資料表中的資料行順序
 
@@ -43,7 +43,7 @@ ms.locfileid: "88646679"
   
 #### <a name="to-change-the-column-order"></a>若要變更資料行順序  
   
-1.  在 [物件總管]**** 中，以滑鼠右鍵按一下包含要重新排序之資料行的資料表，然後按一下 [設計]****。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下包含要重新排序之資料行的資料表，然後按一下 [設計]。  
   
 2.  選取要重排順序之資料行名稱左邊的方塊。  
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 16477e0e469ef67b0dbbceb04d5760b7edc6730a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92187535"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468089"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -77,13 +77,13 @@ END
 
 ## <a name="arguments"></a>引數  
  *input_expression*  
- 這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression* 是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是使用簡單的 CASE 格式時，所評估的運算式。 *input_expression* 是任何有效的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  WHEN *when_expression*  
  這是使用簡單的 CASE 格式時，要與 *input_expression* 進行比較的簡單運算式。 *when_expression* 是任何有效的運算式。 *input_expression* 和每個 *when_expression* 的資料類型都必須相同，或必須能夠進行隱含轉換。  
   
  THEN *result_expression*  
- 這是當 *input_expression* 等於 *when_expression* 評估為 TRUE，或 *Boolean_expression* 評估為 TRUE 時所傳回的運算式。 *result expression* 是任何有效的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是當 *input_expression* 等於 *when_expression* 評估為 TRUE，或 *Boolean_expression* 評估為 TRUE 時所傳回的運算式。 *result expression* 是任何有效的 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  ELSE *else_result_expression*  
  這是沒有比較運算的評估結果是 TRUE 時，所傳回的運算式。 如果省略這個引數，且沒有比較運算得出 TRUE，CASE 就會傳回 NULL。 *else_result_expression* 是任何有效的運算式。 *else_result_expression* 和任何 *result_expression* 的資料類型都必須相同，或必須能夠進行隱含轉換。  

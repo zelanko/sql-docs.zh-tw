@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a3b117495e9b9ae6886b8f99345923217d46a32e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 83b1d20afdc123359f3b34de90875e7977d7b541
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923629"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468889"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "86923629"
 1.  執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，在 **\@property** 參數中指定要變更的發行集屬性，並在 **\@value** 參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須為 **\@force_invalidate_snapshot** 指定 **1** 值；如果此變更將需要重新初始化訂閱者，則您必須為 **\@force_reinit_subscription** 指定 **1** 值。如需變更時需要新快照集或重新初始化的屬性詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須為 **\@force_invalidate_snapshot** 指定 **1** 值；如果此變更將需要重新初始化訂閱者，則您必須為 **\@force_reinit_subscription** 指定 **1** 值。如需變更時需要新快照集或重新初始化的屬性詳細資訊，請參閱 [變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>檢視快照集的屬性  
   

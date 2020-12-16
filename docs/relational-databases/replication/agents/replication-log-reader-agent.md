@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467349"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -191,7 +191,7 @@ logread [-?]
  這是要從交易記錄中讀取的複寫命令數目，然後散發代理程式便將這些命令發送至訂閱者。 預設值是 0。 如果沒有指定這個參數，記錄讀取器代理程式將讀取至記錄結尾或 **-ReadBatchSize** (交易數目) 中指定的數目。  
   
  **-RecoverFromDataErrors**  
- 指定當記錄讀取器代理程式在非 SQL Server 發行者發行的資料行資料中遇到錯誤時，它會繼續執行。 根據預設，這類錯誤會導致記錄讀取器代理程式失敗。 當您使用 **-RecoverFromDataErrors**時，錯誤的資料行資料就會複寫成 NULL 或適當的非 Null 值，而且系統會在 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 資料表中記錄警告訊息。 這個參數僅支援 Oracle 發行者。  
+ 指定當記錄讀取器代理程式在非 SQL Server 發行者發行的資料行資料中遇到錯誤時，它會繼續執行。 根據預設，這類錯誤會導致記錄讀取器代理程式失敗。 當您使用 **-RecoverFromDataErrors** 時，錯誤的資料行資料就會複寫成 NULL 或適當的非 Null 值，而且系統會在 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 資料表中記錄警告訊息。 這個參數僅支援 Oracle 發行者。  
   
 ## <a name="remarks"></a>備註  
   

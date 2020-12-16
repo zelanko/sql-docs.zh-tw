@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ea9a185b1f7a00c8e6ea7e6d848cf2b4e88319f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: be8431723e70b85f006f24aa81f8ba51bec8360f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467049"
 ---
 # <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "91809624"
  您可以在使用者定義的資料庫或所有系統資料庫 ( **Resource** 資料庫除外) 中，建立使用者定義的程序。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法作為參照的形式來建立程序。  
   
  **暫存**  
- 暫存程序是一種使用者定義的程序。 暫存程序與永久程序類似，只不過暫存程序是儲存於 **tempdb**中。 暫存程序有兩種：本機與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存程序是以單一數字符號 (#) 做為名稱的第一個字元；只有目前使用者連接才能看見，當連接中斷時，會將其刪除。 全域暫存程序是以兩個數字符號 (#) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見，只有當使用程序的最後一個工作階段結束時，才會將其刪除。  
+ 暫存程序是一種使用者定義的程序。 暫存程序與永久程序類似，只不過暫存程序是儲存於 **tempdb** 中。 暫存程序有兩種：本機與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存程序是以單一數字符號 (#) 做為名稱的第一個字元；只有目前使用者連接才能看見，當連接中斷時，會將其刪除。 全域暫存程序是以兩個數字符號 (#) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見，只有當使用程序的最後一個工作階段結束時，才會將其刪除。  
   
  **系統**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括系統程序。 它們實際上是儲存在內部隱藏的 **Resource** 資料庫中，但邏輯上會出現在每個系統和使用者定義資料庫的 **sys** 結構描述中。 此外， **msdb** 資料庫也包含 **dbo** 結構描述中用於排程警示和作業的系統預存程序。 因為系統程序會以 **sp_** 作為前置詞開頭，因此建議您命名使用者定義的程序時不要使用此前置詞。 如需系統程序的完整清單，請參閱[系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)。  

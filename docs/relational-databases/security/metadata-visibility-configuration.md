@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f5317580647f0d8795277722e44382c2a77cdafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332037"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467289"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -131,7 +131,7 @@ GO
   
  下列的中繼資料不會被強制洩漏：  
   
--   **sys.servers** 的 **provider_string**資料行中儲存的值。 沒有 ALTER ANY LINKED SERVER 權限的使用者在資料行中只會看見 NULL 值。  
+-   **sys.servers** 的 **provider_string** 資料行中儲存的值。 沒有 ALTER ANY LINKED SERVER 權限的使用者在資料行中只會看見 NULL 值。  
   
 -   使用者自訂物件 (例如預存程序或觸發程序) 的來源定義。 只有下列任一狀況屬實時，才能看見原始程式碼：  
   
@@ -164,7 +164,7 @@ GO
 
 -   OBJECT_DEFINITION() 函數  
   
--   **sys.sql_logins**的 password_hash 資料行中儲存的值。  沒有 CONTROL SERVER 權限的使用者將在此資料行中看到 NULL 值。  
+-   **sys.sql_logins** 的 password_hash 資料行中儲存的值。  沒有 CONTROL SERVER 權限的使用者將在此資料行中看到 NULL 值。  
   
 > [!NOTE]  
 >  內建系統程序和函數的 SQL 定義，可經由 **sys.system_sql_modules** 目錄檢視、 **sp_helptext** 預存程序和 OBJECT_DEFINITION() 函數公開檢視。  

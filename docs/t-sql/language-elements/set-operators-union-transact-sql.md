@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40bf24d7e1a5bcbc32307b5d5731907fb5f8463d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eee4538e96bdc4452091daf1a78302d56aedc09d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459323"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466069"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set 運算子 - UNION (Transact-SQL)
 
@@ -320,7 +320,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 利用三個 SELECT 陳述式的 UNION 來顯示 ALL 和括號的作用效果  
-下列範例使用 `UNION` 來合併**同一個資料表**的結果，以示範在使用 `UNION` 時 ALL 和括弧的效果。  
+下列範例使用 `UNION` 來合併 **同一個資料表** 的結果，以示範在使用 `UNION` 時 ALL 和括弧的效果。  
   
 第一個範例使用 `UNION ALL` 顯示重複的記錄，並將來源資料表中的每個資料列都傳回三次。 第二個範例使用不含 `ALL` 的 `UNION`，以排除三個 `SELECT` 陳述式的結合結果中的重複資料列，並只傳回來源資料表中未重複的資料列。  
   

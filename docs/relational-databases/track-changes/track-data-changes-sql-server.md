@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466749"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "91810725"
  若要存取與擷取執行個體相關聯的變更資料，使用者必須被授與相關聯來源資料表之所有擷取資料行的選取存取權。 此外，如果建立擷取執行個體時指定了控制角色，呼叫端也必須是指定之控制角色的成員。 雖然傳回中繼資料的存取權通常也會使用基礎來源資料表的選取存取權控制，以及任何已定義之控制角色的成員資格控制，但是所有資料庫使用者都可以透過 Public 角色存取用以存取中繼資料的其他一般異動資料擷取函數。  
   
  **啟用異動資料擷取之來源資料表的 DDL 作業**  
- 當某份資料表啟用異動資料擷取時，只有固定伺服器角色 **sysadmin**的成員、 **database role db_owner**的成員或 **database role db_ddladmin**的成員能夠將 DDL 作業套用至此資料表。 如果擁有針對資料表執行 DDL 作業之明確授與權限的使用者嘗試執行這些作業，就會收到錯誤 22914。  
+ 當某份資料表啟用異動資料擷取時，只有固定伺服器角色 **sysadmin** 的成員、 **database role db_owner** 的成員或 **database role db_ddladmin** 的成員能夠將 DDL 作業套用至此資料表。 如果擁有針對資料表執行 DDL 作業之明確授與權限的使用者嘗試執行這些作業，就會收到錯誤 22914。  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>異動資料擷取的資料類型考量  
  異動資料擷取支援所有基礎資料行類型。 下表將列出許多資料行類型的行為與限制。  

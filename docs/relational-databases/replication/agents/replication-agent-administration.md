@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 206bf3691786007fe4ab8ac8b446af13604341a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 76c793758fa9886f0f8246c5d6c4aa7ec27fa707
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467329"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "86923424"
   
     -   佇列讀取器代理程式  
   
-     透過 **[代理程式]** 索引標籤，存取與這些代理程式相關聯的資訊和工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過 **[代理程式]** 索引標籤，存取與這些代理程式相關聯的資訊和工作。如需詳細資訊，請參閱 [使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   下列代理程式與複寫監視器中的訂閱相關聯：  
   

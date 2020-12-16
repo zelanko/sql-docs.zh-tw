@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193498"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465669"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -577,7 +577,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 <a name="ctp23"></a>
 
 ## <a name="utf-8-support"></a><a name="utf8"></a> UTF-8 支援
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始完整支援將廣泛使用的 UTF-8 字元編碼作為匯入或匯出編碼，和作為字串資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 **char** 和 **varchar** 資料類型，且會在您建立物件定序或將其變更為具有 *UTF8* 尾碼的定序時啟用。 例如，**LATIN1_GENERAL_100_CI_AS_SC**至 **LATIN1_GENERAL_100_CI_AS_SC_UTF8**。 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始完整支援將廣泛使用的 UTF-8 字元編碼作為匯入或匯出編碼，和作為字串資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 **char** 和 **varchar** 資料類型，且會在您建立物件定序或將其變更為具有 *UTF8* 尾碼的定序時啟用。 例如，**LATIN1_GENERAL_100_CI_AS_SC** 至 **LATIN1_GENERAL_100_CI_AS_SC_UTF8**。 
 
 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中推出。 **nchar** 和 **nvarchar** 資料類型只允許 UCS-2 或 UTF-16 編碼，沒有產生任何變更。
 
